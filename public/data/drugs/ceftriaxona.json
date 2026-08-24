@@ -391,5 +391,60 @@
         "sourceModule": "antimicrobianos.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "ceftriaxona",
+    "stage_a_batch": "05",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Infusão IV",
+            "text": "Administrar por infusão intravenosa ao longo de 30 minutos; em neonatos, utilizar 60 minutos conforme a rotulagem da apresentação."
+          },
+          {
+            "label": "Cálcio — incompatibilidade",
+            "text": "Não reconstituir nem diluir com soluções contendo cálcio, como Ringer ou Hartmann. Não administrar simultaneamente com soluções IV contendo cálcio na mesma linha; em pacientes não neonatais, uso sequencial requer lavagem completa da linha com fluido compatível."
+          }
+        ],
+        "es": [
+          {
+            "label": "Infusión IV",
+            "text": "Administrar mediante infusión intravenosa durante 30 minutos; en neonatos, utilizar 60 minutos según el rotulado de la presentación."
+          },
+          {
+            "label": "Calcio — incompatibilidad",
+            "text": "No reconstituir ni diluir con soluciones que contengan calcio, como Ringer o Hartmann. No administrar simultáneamente con soluciones IV que contengan calcio por la misma línea; en pacientes no neonatales, el uso secuencial requiere lavado completo de la línea con un fluido compatible."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Ceftriaxone Sodium for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-01-22."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Ceftriaxone Sodium for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-01-22."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_ceftriaxone_128bb292",
+        "title": "DailyMed — Ceftriaxone Sodium for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=128bb292-d174-4769-b3e6-9f16617f31e3",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-01-22"
+      }
+    ]
+  }
 }

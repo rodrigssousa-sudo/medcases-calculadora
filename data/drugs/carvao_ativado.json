@@ -22,5 +22,60 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "carvao_ativado",
+    "stage_a_batch": "05",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via oral",
+            "text": "Agitar bem antes do uso. Administrar por via oral ou por dispositivo enteral apropriado quando indicado e com via aérea protegida; não utilizar em paciente sem plena consciência sem avaliação profissional."
+          },
+          {
+            "label": "Preparo",
+            "text": "A apresentação em suspensão é pronta para uso; quando administrada para beber, pode ser colocada em recipiente com líquido adicional conforme as instruções da apresentação."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía oral",
+            "text": "Agitar bien antes de usar. Administrar por vía oral o mediante un dispositivo enteral apropiado cuando esté indicado y con la vía aérea protegida; no utilizar en pacientes sin plena conciencia sin evaluación profesional."
+          },
+          {
+            "label": "Preparación",
+            "text": "La presentación en suspensión está lista para usar; cuando se administra para beber, puede colocarse en un recipiente con líquido adicional según las instrucciones de la presentación."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — ACTIDOSE AQUA (activated charcoal suspension)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-07-28."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — ACTIDOSE AQUA (activated charcoal suspension)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-07-28."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_actidose_aqua_c85dc235",
+        "title": "DailyMed — ACTIDOSE AQUA (activated charcoal suspension)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c85dc235-3f42-4361-9bd2-1aaff798ad75",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-07-28"
+      }
+    ]
+  }
 }

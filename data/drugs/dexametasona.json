@@ -21,5 +21,60 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "imuno_corticoide.js"
+  "sourceModule": "imuno_corticoide.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "dexametasona",
+    "stage_a_batch": "05",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via parenteral",
+            "text": "A apresentação injetável de fosfato sódico de dexametasona pode ser administrada por via intravenosa ou intramuscular conforme a indicação e a apresentação."
+          },
+          {
+            "label": "Inspeção",
+            "text": "Antes da administração parenteral, inspecionar visualmente a solução e utilizar apenas se estiver adequada à apresentação, sem partículas ou alteração incompatível com a rotulagem."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía parenteral",
+            "text": "La presentación inyectable de fosfato sódico de dexametasona puede administrarse por vía intravenosa o intramuscular según la indicación y la presentación."
+          },
+          {
+            "label": "Inspección",
+            "text": "Antes de la administración parenteral, inspeccionar visualmente la solución y utilizarla solo si es adecuada para la presentación, sin partículas ni cambios incompatibles con el rotulado."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Dexamethasone Sodium Phosphate Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-01-22."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Dexamethasone Sodium Phosphate Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-01-22."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_dexamethasone_0277cc0a",
+        "title": "DailyMed — Dexamethasone Sodium Phosphate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0277cc0a-2fd4-4605-a310-b613be84ee26",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-01-22"
+      }
+    ]
+  }
 }

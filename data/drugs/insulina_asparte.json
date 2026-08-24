@@ -22,5 +22,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "endocrino.js"
+  "sourceModule": "endocrino.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "insulina_asparte",
+    "stage_a_batch": "05",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "SC / refeições",
+            "text": "Administrar por via subcutânea em abdome, nádega, coxa ou braço, geralmente imediatamente antes da refeição. Alternar os pontos dentro da mesma região para reduzir lipodistrofia."
+          },
+          {
+            "label": "Bomba de insulina",
+            "text": "Pode ser usada em infusão subcutânea contínua por bomba compatível; não usar insulina diluída na bomba e seguir as instruções específicas do dispositivo."
+          },
+          {
+            "label": "Uso IV",
+            "text": "Pode ser administrada por via intravenosa sob supervisão médica, com monitorização estreita de glicemia e potássio. Para uso IV, a rotulagem descreve concentrações de 0,05–1,0 U/mL em sistemas de infusão apropriados."
+          }
+        ],
+        "es": [
+          {
+            "label": "SC / comidas",
+            "text": "Administrar por vía subcutánea en abdomen, glúteo, muslo o brazo, generalmente inmediatamente antes de la comida. Alternar los puntos dentro de la misma región para reducir la lipodistrofia."
+          },
+          {
+            "label": "Bomba de insulina",
+            "text": "Puede utilizarse en infusión subcutánea continua mediante una bomba compatible; no usar insulina diluida en la bomba y seguir las instrucciones específicas del dispositivo."
+          },
+          {
+            "label": "Uso IV",
+            "text": "Puede administrarse por vía intravenosa bajo supervisión médica, con monitorización estrecha de glucemia y potasio. Para uso IV, el rotulado describe concentraciones de 0,05–1,0 U/mL en sistemas de infusión apropiados."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — NOVOLOG (insulin aspart)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — NOVOLOG (insulin aspart)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_novolog_cd88e313",
+        "title": "DailyMed — NOVOLOG (insulin aspart)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd88e313-6193-4413-beff-7d955580060d",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

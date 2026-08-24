@@ -21,5 +21,59 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "endocrino.js"
+  "sourceModule": "endocrino.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "glucagon",
+    "stage_a_batch": "05",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir com o diluente fornecido no kit ou com 1 mL de Água Estéril para Injeção, conforme a apresentação. Agitar suavemente até dissolução completa; a solução final deve estar límpida e incolor, sem partículas."
+          },
+          {
+            "label": "Administração",
+            "text": "Após reconstituição, administrar imediatamente por via subcutânea ou intramuscular; profissionais de saúde também podem administrar por via intravenosa. Descartar qualquer porção não utilizada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir con el diluyente suministrado en el kit o con 1 mL de Agua Estéril para Inyección, según la presentación. Agitar suavemente hasta la disolución completa; la solución final debe ser límpida e incolora, sin partículas."
+          },
+          {
+            "label": "Administración",
+            "text": "Después de reconstituir, administrar inmediatamente por vía subcutánea o intramuscular; los profesionales de salud también pueden administrarlo por vía intravenosa. Desechar cualquier porción no utilizada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Glucagon for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Glucagon for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_glucagon_e4be1c0e",
+        "title": "DailyMed — Glucagon for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e4be1c0e-0fe6-45a0-9229-5cde98434b84",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

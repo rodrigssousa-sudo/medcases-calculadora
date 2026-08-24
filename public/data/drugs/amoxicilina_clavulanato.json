@@ -399,5 +399,60 @@
         "sourceModule": "antimicrobianos.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "amoxicilina_clavulanato",
+    "stage_a_batch": "05",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Com alimento",
+            "text": "Administrar preferencialmente no início de uma refeição para melhorar a absorção do clavulanato e reduzir intolerância gastrointestinal."
+          },
+          {
+            "label": "Suspensão oral",
+            "text": "Após reconstituição da suspensão oral, agitar bem antes de cada uso, conservar sob refrigeração e descartar após 10 dias. O volume de água de reconstituição depende da apresentação e deve seguir a rotulagem específica do frasco."
+          }
+        ],
+        "es": [
+          {
+            "label": "Con alimento",
+            "text": "Administrar preferentemente al inicio de una comida para mejorar la absorción del clavulanato y reducir la intolerancia gastrointestinal."
+          },
+          {
+            "label": "Suspensión oral",
+            "text": "Después de reconstituir la suspensión oral, agitar bien antes de cada uso, conservar refrigerada y desechar después de 10 días. El volumen de agua para reconstitución depende de la presentación y debe seguir el rotulado específico del frasco."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Amoxicillin and Clavulanate Potassium",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-03-03."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Amoxicillin and Clavulanate Potassium",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-03-03."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_amox_clav_1b8a6312",
+        "title": "DailyMed — Amoxicillin and Clavulanate Potassium",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b8a6312-ae47-45fb-ba5e-eedbc176afa0",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-03-03"
+      }
+    ]
+  }
 }

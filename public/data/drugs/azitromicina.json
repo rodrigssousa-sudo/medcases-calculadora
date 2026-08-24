@@ -351,5 +351,84 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "azitromicina",
+    "stage_a_batch": "05",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "VO",
+            "text": "Os comprimidos podem ser administrados com ou sem alimentos."
+          },
+          {
+            "label": "IV — reconstituição",
+            "text": "Para o frasco de 500 mg, reconstituir com 4,8 mL de Água Estéril para Injeção, obtendo 100 mg/mL, e posteriormente diluir para concentração final de 1–2 mg/mL conforme a solução compatível."
+          },
+          {
+            "label": "IV — infusão",
+            "text": "Não administrar por bólus nem por via intramuscular. Infundir 2 mg/mL em 1 hora ou 1 mg/mL em 3 horas. Não adicionar outros medicamentos à mesma solução nem infundir simultaneamente pela mesma linha."
+          }
+        ],
+        "es": [
+          {
+            "label": "VO",
+            "text": "Los comprimidos pueden administrarse con o sin alimentos."
+          },
+          {
+            "label": "IV — reconstitución",
+            "text": "Para el vial de 500 mg, reconstituir con 4,8 mL de Agua Estéril para Inyección, obteniendo 100 mg/mL, y posteriormente diluir a una concentración final de 1–2 mg/mL según la solución compatible."
+          },
+          {
+            "label": "IV — infusión",
+            "text": "No administrar en bolo ni por vía intramuscular. Infundir 2 mg/mL en 1 hora o 1 mg/mL en 3 horas. No agregar otros medicamentos a la misma solución ni infundirlos simultáneamente por la misma línea."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Azithromycin Tablets",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-06-16."
+          },
+          {
+            "label": "DailyMed — Azithromycin for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-07-27."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Azithromycin Tablets",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-06-16."
+          },
+          {
+            "label": "DailyMed — Azithromycin for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-07-27."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_azithro_oral_661ff7a6",
+        "title": "DailyMed — Azithromycin Tablets",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=661ff7a6-6394-493d-a307-a1f607e5d117",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-06-16"
+      },
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_azithro_iv_7b81436e",
+        "title": "DailyMed — Azithromycin for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b81436e-d14a-4353-a22d-253f45e2e576",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-07-27"
+      }
+    ]
+  }
 }

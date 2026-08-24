@@ -21,5 +21,59 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "flumazenil",
+    "stage_a_batch": "05",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via IV",
+            "text": "Administrar exclusivamente por via intravenosa. Garantir previamente suporte de via aérea, ventilação e acesso IV adequados."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "É compatível com dextrose 5%, Ringer lactato e solução fisiológica. Se aspirado para seringa ou misturado a uma dessas soluções, descartar após 24 horas; manter no frasco até imediatamente antes do uso para melhor esterilidade."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía IV",
+            "text": "Administrar exclusivamente por vía intravenosa. Asegurar previamente soporte adecuado de vía aérea, ventilación y acceso IV."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "Es compatible con dextrosa al 5%, Ringer lactato y solución fisiológica. Si se carga en una jeringa o se mezcla con alguna de estas soluciones, desechar después de 24 horas; mantener en el vial hasta inmediatamente antes del uso para una mejor esterilidad."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Flumazenil Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Flumazenil Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_flumazenil_442ed32b",
+        "title": "DailyMed — Flumazenil Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=442ed32b-b508-40cc-9915-ff05674566da",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

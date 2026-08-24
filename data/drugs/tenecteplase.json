@@ -62,5 +62,59 @@
         "sourceModule": "analgesicos.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "tenecteplase",
+    "stage_a_batch": "05",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir exclusivamente com a Água Estéril para Injeção fornecida no kit. A concentração final da apresentação reconstituída é 5 mg/mL; preparar imediatamente antes do uso e descartar a porção não utilizada."
+          },
+          {
+            "label": "Administração IV",
+            "text": "Administrar exclusivamente por via intravenosa como bólus único durante 5 segundos. Se a solução reconstituída não for usada imediatamente, refrigerar entre 2–8 °C e utilizar dentro de 8 horas."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir exclusivamente con el Agua Estéril para Inyección suministrada en el kit. La concentración final de la presentación reconstituida es 5 mg/mL; preparar inmediatamente antes del uso y desechar la porción no utilizada."
+          },
+          {
+            "label": "Administración IV",
+            "text": "Administrar exclusivamente por vía intravenosa como bolo único durante 5 segundos. Si la solución reconstituida no se usa de inmediato, refrigerar entre 2–8 °C y utilizar dentro de 8 horas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — TNKase (tenecteplase)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — TNKase (tenecteplase)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH05",
+        "id": "dailymed_tnkase_e647640d",
+        "title": "DailyMed — TNKase (tenecteplase)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e647640d-c395-4b4b-a0be-1162f9c21d84",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }
