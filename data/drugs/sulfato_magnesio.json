@@ -22,5 +22,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "sulfato_magnesio",
+    "stage_a_batch": "06",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Concentrado 50%",
+            "text": "A solução concentrada a 50% deve ser diluída antes da administração intravenosa."
+          },
+          {
+            "label": "Vias",
+            "text": "Dependendo da indicação e apresentação, pode ser administrado por via intravenosa ou intramuscular; para infusão IV utilizar controle adequado de velocidade."
+          },
+          {
+            "label": "Inspeção / compatibilidade",
+            "text": "Inspecionar a solução antes do uso e evitar administração simultânea com medicamentos incompatíveis na mesma linha."
+          }
+        ],
+        "es": [
+          {
+            "label": "Concentrado 50%",
+            "text": "La solución concentrada al 50% debe diluirse antes de la administración intravenosa."
+          },
+          {
+            "label": "Vías",
+            "text": "Según la indicación y la presentación, puede administrarse por vía intravenosa o intramuscular; para infusión IV utilizar un control adecuado de la velocidad."
+          },
+          {
+            "label": "Inspección / compatibilidad",
+            "text": "Inspeccionar la solución antes del uso y evitar la administración simultánea con medicamentos incompatibles por la misma línea."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Magnesium Sulfate Injection 50%",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Magnesium Sulfate Injection 50%",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH06",
+        "id": "dailymed_magnesium_e175d329",
+        "title": "DailyMed — Magnesium Sulfate Injection 50%",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e175d329-315f-4f3b-bb4c-06ad4e042967",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-02-12"
+      }
+    ]
+  }
 }

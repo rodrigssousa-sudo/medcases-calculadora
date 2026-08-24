@@ -22,5 +22,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "endocrino.js"
+  "sourceModule": "endocrino.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "insulina_nph",
+    "stage_a_batch": "06",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Homogeneização",
+            "text": "Antes da aplicação, rolar suavemente o frasco ou a caneta entre as mãos 10 vezes e inverter 10 vezes. Após a homogeneização, a suspensão deve ficar uniformemente branca e turva; não usar se permanecer límpida ou apresentar grumos/partículas."
+          },
+          {
+            "label": "Via SC",
+            "text": "Administrar somente por via subcutânea em abdome, coxa, braço ou nádega, realizando rodízio dos locais de injeção."
+          },
+          {
+            "label": "Evitar IV / bomba",
+            "text": "Não administrar por via intravenosa e não utilizar em bomba de infusão de insulina."
+          }
+        ],
+        "es": [
+          {
+            "label": "Homogeneización",
+            "text": "Antes de la aplicación, hacer rodar suavemente el vial o la pluma entre las manos 10 veces e invertir 10 veces. Después de homogeneizar, la suspensión debe quedar uniformemente blanca y turbia; no usar si permanece límpida o presenta grumos/partículas."
+          },
+          {
+            "label": "Vía SC",
+            "text": "Administrar solo por vía subcutánea en abdomen, muslo, brazo o glúteo, rotando los sitios de inyección."
+          },
+          {
+            "label": "Evitar IV / bomba",
+            "text": "No administrar por vía intravenosa y no utilizar en bomba de infusión de insulina."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — HUMULIN N (insulin isophane human)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — HUMULIN N (insulin isophane human)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH06",
+        "id": "dailymed_humulin_n_f6edd793",
+        "title": "DailyMed — HUMULIN N (insulin isophane human)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6edd793-440b-40c2-96b5-c16133b7a921",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-12-19"
+      }
+    ]
+  }
 }

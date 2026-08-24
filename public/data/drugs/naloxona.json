@@ -21,5 +21,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "naloxona",
+    "stage_a_batch": "06",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Vias",
+            "text": "A apresentação injetável pode ser administrada por via intravenosa, intramuscular ou subcutânea."
+          },
+          {
+            "label": "Seringa / técnica",
+            "text": "Usar técnica asséptica, expelir o ar da seringa quando aplicável e evitar tocar a ponta estéril antes da administração."
+          },
+          {
+            "label": "Dose única",
+            "text": "Apresentações de dose única não contêm conservante; descartar qualquer porção não utilizada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vías",
+            "text": "La presentación inyectable puede administrarse por vía intravenosa, intramuscular o subcutánea."
+          },
+          {
+            "label": "Jeringa / técnica",
+            "text": "Usar técnica aséptica, expulsar el aire de la jeringa cuando corresponda y evitar tocar la punta estéril antes de administrar."
+          },
+          {
+            "label": "Dosis única",
+            "text": "Las presentaciones de dosis única no contienen conservante; desechar cualquier porción no utilizada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Naloxone Hydrochloride Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Naloxone Hydrochloride Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH06",
+        "id": "dailymed_naloxone_53ed164c",
+        "title": "DailyMed — Naloxone Hydrochloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53ed164c-dd09-4ea4-e063-6294a90a2434",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-06-10"
+      }
+    ]
+  }
 }

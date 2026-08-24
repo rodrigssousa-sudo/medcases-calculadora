@@ -368,5 +368,68 @@
         "sourceModule": "antimicrobianos.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "piperacilina_tazobactam",
+    "stage_a_batch": "06",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição IV",
+            "text": "Após reconstituição, diluir a dose em solução intravenosa compatível; para apresentações de pharmacy bulk, a rotulagem descreve volume final recomendado de 50–150 mL por dose."
+          },
+          {
+            "label": "Infusão",
+            "text": "Administrar por infusão intravenosa durante pelo menos 30 minutos."
+          },
+          {
+            "label": "Linha de infusão",
+            "text": "Durante a infusão, é desejável interromper temporariamente a solução IV primária conforme a rotulagem da apresentação."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución IV",
+            "text": "Después de la reconstitución, diluir la dosis en una solución intravenosa compatible; para presentaciones pharmacy bulk, el rotulado describe un volumen final recomendado de 50–150 mL por dosis."
+          },
+          {
+            "label": "Infusión",
+            "text": "Administrar mediante infusión intravenosa durante al menos 30 minutos."
+          },
+          {
+            "label": "Línea de infusión",
+            "text": "Durante la infusión, es conveniente interrumpir temporalmente la solución IV primaria según el rotulado de la presentación."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Piperacillin and Tazobactam for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Piperacillin and Tazobactam for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH06",
+        "id": "dailymed_piptazo_17a400ae",
+        "title": "DailyMed — Piperacillin and Tazobactam for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=17a400ae-cbaa-4d07-95f4-c6917dfc0585",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-06-24"
+      }
+    ]
+  }
 }

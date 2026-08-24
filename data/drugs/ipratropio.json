@@ -22,5 +22,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "pneumologia.js"
+  "sourceModule": "pneumologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "ipratropio",
+    "stage_a_batch": "06",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Uso inalatório",
+            "text": "Administrar por inalação oral com nebulizador. A solução para nebulização é de uso respiratório e não deve ser injetada."
+          },
+          {
+            "label": "Ampola de dose única",
+            "text": "Abrir a ampola apenas no momento do uso e transferir o conteúdo ao reservatório do nebulizador conforme as instruções do dispositivo."
+          },
+          {
+            "label": "Conservação",
+            "text": "Proteger da luz e manter as ampolas não utilizadas na embalagem protetora até o momento do uso."
+          }
+        ],
+        "es": [
+          {
+            "label": "Uso inhalatorio",
+            "text": "Administrar por inhalación oral mediante nebulizador. La solución para nebulización es de uso respiratorio y no debe inyectarse."
+          },
+          {
+            "label": "Ampolla de dosis única",
+            "text": "Abrir la ampolla solo en el momento del uso y transferir el contenido al reservorio del nebulizador según las instrucciones del dispositivo."
+          },
+          {
+            "label": "Conservación",
+            "text": "Proteger de la luz y mantener las ampollas no utilizadas en el envase protector hasta el momento del uso."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Ipratropium Bromide Inhalation Solution",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Ipratropium Bromide Inhalation Solution",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH06",
+        "id": "dailymed_ipratropium_3249aea8",
+        "title": "DailyMed — Ipratropium Bromide Inhalation Solution",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-07-16"
+      }
+    ]
+  }
 }

@@ -22,5 +22,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "pneumologia.js"
+  "sourceModule": "pneumologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "salbutamol",
+    "stage_a_batch": "06",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Uso inalatório",
+            "text": "Administrar exclusivamente por inalação com nebulizador; a solução não deve ser injetada."
+          },
+          {
+            "label": "Ampola unitária",
+            "text": "Abrir a ampola de dose unitária e espremer o conteúdo no reservatório do nebulizador; conectar ao bocal ou máscara e ao compressor conforme as instruções do equipamento."
+          },
+          {
+            "label": "Conservação / inspeção",
+            "text": "Manter as ampolas na embalagem protetora até o uso, proteger de luz e calor excessivo e descartar se a solução não estiver incolor."
+          }
+        ],
+        "es": [
+          {
+            "label": "Uso inhalatorio",
+            "text": "Administrar exclusivamente por inhalación mediante nebulizador; la solución no debe inyectarse."
+          },
+          {
+            "label": "Ampolla unitaria",
+            "text": "Abrir la ampolla de dosis unitaria y vaciar el contenido en el reservorio del nebulizador; conectar a la boquilla o mascarilla y al compresor según las instrucciones del equipo."
+          },
+          {
+            "label": "Conservación / inspección",
+            "text": "Mantener las ampollas en el envase protector hasta el uso, proteger de la luz y del calor excesivo y desechar si la solución no está incolora."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Albuterol Sulfate Inhalation Solution",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Albuterol Sulfate Inhalation Solution",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH06",
+        "id": "dailymed_albuterol_d4c532be",
+        "title": "DailyMed — Albuterol Sulfate Inhalation Solution",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d4c532be-1f41-60d3-e053-2995a90a98be",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-04-30"
+      }
+    ]
+  }
 }

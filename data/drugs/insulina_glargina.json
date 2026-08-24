@@ -22,5 +22,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "endocrino.js"
+  "sourceModule": "endocrino.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "insulina_glargina",
+    "stage_a_batch": "06",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via SC",
+            "text": "Administrar exclusivamente por via subcutânea no abdome, coxa ou braço, mantendo horário consistente e realizando rodízio dos pontos de aplicação dentro da mesma região."
+          },
+          {
+            "label": "Não misturar / não diluir",
+            "text": "Não administrar por via intravenosa nem em bomba de insulina. Não misturar ou diluir com outras insulinas ou soluções, pois isso pode alterar o perfil de ação."
+          },
+          {
+            "label": "Inspeção",
+            "text": "Usar somente se a solução estiver límpida, incolor e sem partículas visíveis."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía SC",
+            "text": "Administrar exclusivamente por vía subcutánea en abdomen, muslo o brazo, manteniendo un horario consistente y rotando los puntos de aplicación dentro de la misma región."
+          },
+          {
+            "label": "No mezclar / no diluir",
+            "text": "No administrar por vía intravenosa ni mediante bomba de insulina. No mezclar ni diluir con otras insulinas o soluciones, ya que puede alterarse el perfil de acción."
+          },
+          {
+            "label": "Inspección",
+            "text": "Usar solo si la solución está límpida, incolora y sin partículas visibles."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — LANTUS (insulin glargine)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — LANTUS (insulin glargine)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH06",
+        "id": "dailymed_lantus_d5e07a0c",
+        "title": "DailyMed — LANTUS (insulin glargine)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d5e07a0c-7e14-4756-9152-9fea485d654a",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-06-02"
+      }
+    ]
+  }
 }

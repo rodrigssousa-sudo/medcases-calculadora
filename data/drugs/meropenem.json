@@ -374,5 +374,68 @@
         "sourceModule": "antimicrobianos.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "meropenem",
+    "stage_a_batch": "06",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Bólus IV — reconstituição",
+            "text": "Para bólus IV, reconstituir 500 mg com 10 mL e 1 g com 20 mL de Água Estéril para Injeção, obtendo aproximadamente 50 mg/mL; agitar até dissolver e aguardar solução límpida."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Para infusão, o frasco pode ser reconstituído diretamente com fluido de infusão compatível ou reconstituído e depois transferido para recipiente IV para diluição adicional."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Não misturar nem adicionar fisicamente meropenem a soluções contendo outros medicamentos. Inspecionar partículas e descoloração antes da administração."
+          }
+        ],
+        "es": [
+          {
+            "label": "Bolo IV — reconstitución",
+            "text": "Para bolo IV, reconstituir 500 mg con 10 mL y 1 g con 20 mL de Agua Estéril para Inyección, obteniendo aproximadamente 50 mg/mL; agitar hasta disolver y dejar reposar hasta que la solución esté límpida."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Para infusión, el vial puede reconstituirse directamente con un fluido de infusión compatible o reconstituirse y luego transferirse a un recipiente IV para dilución adicional."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "No mezclar ni agregar físicamente meropenem a soluciones que contengan otros medicamentos. Inspeccionar partículas y decoloración antes de administrar."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Meropenem for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Meropenem for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH06",
+        "id": "dailymed_meropenem_58e165b7",
+        "title": "DailyMed — Meropenem for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58e165b7-e230-4459-abf9-06d5ca1dd7b2",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-07-31"
+      }
+    ]
+  }
 }

@@ -345,5 +345,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "metronidazol",
+    "stage_a_batch": "06",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Infusão IV",
+            "text": "A apresentação premisturada de 500 mg/100 mL (5 mg/mL) é destinada exclusivamente à infusão intravenosa lenta, contínua ou intermitente."
+          },
+          {
+            "label": "Não adicionar medicamentos",
+            "text": "Não introduzir aditivos na bolsa e evitar misturas IV contendo metronidazol com outros fármacos."
+          },
+          {
+            "label": "Linha primária",
+            "text": "Quando utilizada em sistema com fluido IV primário, interromper a solução primária durante a infusão do metronidazol conforme a rotulagem da apresentação."
+          }
+        ],
+        "es": [
+          {
+            "label": "Infusión IV",
+            "text": "La presentación premezclada de 500 mg/100 mL (5 mg/mL) está destinada exclusivamente a infusión intravenosa lenta, continua o intermitente."
+          },
+          {
+            "label": "No agregar medicamentos",
+            "text": "No introducir aditivos en la bolsa y evitar mezclas IV que contengan metronidazol con otros fármacos."
+          },
+          {
+            "label": "Línea primaria",
+            "text": "Cuando se utilice en un sistema con fluido IV primario, interrumpir la solución primaria durante la infusión de metronidazol según el rotulado de la presentación."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Metronidazole Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Metronidazole Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH06",
+        "id": "dailymed_metronidazole_74cf111a",
+        "title": "DailyMed — Metronidazole Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=74cf111a-9b83-4f93-b0e8-bc252d471d43",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-05-15"
+      }
+    ]
+  }
 }
