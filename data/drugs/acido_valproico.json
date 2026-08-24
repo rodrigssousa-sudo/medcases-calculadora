@@ -232,4 +232,57 @@
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "neurologia.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "acido_valproico",
+    "reviewed_at": "2026-08-24",
+    "source_policy": "current_official_or_regulatory_label_stage_a_admin_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "VO",
+            "text": "As cápsulas devem ser engolidas inteiras, sem mastigar, para reduzir irritação local de boca e garganta. Administrar diariamente conforme prescrito; não duplicar a próxima dose após uma dose omitida."
+          },
+          {
+            "label": "Tolerabilidade gastrointestinal",
+            "text": "Se houver irritação gastrointestinal, a administração com alimentos pode melhorar a tolerabilidade; a titulação gradual a partir de dose baixa também pode ajudar."
+          }
+        ],
+        "es": [
+          {
+            "label": "VO",
+            "text": "Las cápsulas deben tragarse enteras, sin masticar, para reducir la irritación local de boca y garganta. Administrar diariamente según prescripción; no duplicar la siguiente dosis después de una dosis omitida."
+          },
+          {
+            "label": "Tolerabilidad gastrointestinal",
+            "text": "Si existe irritación gastrointestinal, la administración con alimentos puede mejorar la tolerabilidad; la titulación gradual desde una dosis baja también puede ayudar."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Valproic Acid Capsules, Prescribing Information",
+            "text": "Fonte regulatória/rotulagem atual consultada em 24/08/2026 para administração e preparação; atualização da fonte: 2026-06-02."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Valproic Acid Capsules, Prescribing Information",
+            "text": "Fuente regulatoria/rotulado actual consultada el 24/08/2026 para administración y preparación; actualización de la fuente: 2026-06-02."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_valproic_acid_2026_06_02",
+        "title": "DailyMed — Valproic Acid Capsules, Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=cef3e335-5891-412f-89c4-79fcd2f145b7",
+        "updated": "2026-06-02"
+      }
+    ]
+  }
 }

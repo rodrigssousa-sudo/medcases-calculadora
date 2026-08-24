@@ -372,4 +372,57 @@
   "schema": "premium-v1",
   "source": "medcases-calculadora",
   "sourceModule": "neurologia.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "carbamazepina",
+    "reviewed_at": "2026-08-24",
+    "source_policy": "current_official_or_regulatory_label_stage_a_admin_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "VO / refeições",
+            "text": "Administrar com as refeições. Iniciar com dose diária baixa e aumentar gradualmente conforme resposta e tolerabilidade."
+          },
+          {
+            "label": "Monitorização",
+            "text": "Individualizar a dose. A monitorização de níveis séricos pode aumentar a segurança e a eficácia em situações selecionadas e é especialmente útil diante de interações ou suspeita de toxicidade."
+          }
+        ],
+        "es": [
+          {
+            "label": "VO / comidas",
+            "text": "Administrar con las comidas. Iniciar con una dosis diaria baja y aumentar gradualmente según respuesta y tolerabilidad."
+          },
+          {
+            "label": "Monitorización",
+            "text": "Individualizar la dosis. La monitorización de niveles séricos puede mejorar la seguridad y la eficacia en situaciones seleccionadas y es especialmente útil ante interacciones o sospecha de toxicidad."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Carbamazepine Tablets, Prescribing Information",
+            "text": "Fonte regulatória/rotulagem atual consultada em 24/08/2026 para administração e preparação; atualização da fonte: 2026-06."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Carbamazepine Tablets, Prescribing Information",
+            "text": "Fuente regulatoria/rotulado actual consultada el 24/08/2026 para administración y preparación; actualización de la fuente: 2026-06."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_carbamazepine_2026_06",
+        "title": "DailyMed — Carbamazepine Tablets, Prescribing Information",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f3465f71-8931-43b6-baea-eac7046a4400",
+        "updated": "2026-06"
+      }
+    ]
+  }
 }

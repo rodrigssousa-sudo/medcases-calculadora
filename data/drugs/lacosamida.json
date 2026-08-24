@@ -203,4 +203,57 @@
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "neurologia.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "lacosamida",
+    "reviewed_at": "2026-08-24",
+    "source_policy": "current_official_or_regulatory_label_stage_a_admin_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "VO",
+            "text": "Pode ser administrada com ou sem alimentos. Engolir os comprimidos inteiros com líquido; não dividir/cortar os comprimidos."
+          },
+          {
+            "label": "Suspensão",
+            "text": "Não suspender abruptamente em pacientes com epilepsia. Quando for necessário interromper, realizar retirada gradual conforme a informação de prescrição."
+          }
+        ],
+        "es": [
+          {
+            "label": "VO",
+            "text": "Puede administrarse con o sin alimentos. Tragar los comprimidos enteros con líquido; no dividir/cortar los comprimidos."
+          },
+          {
+            "label": "Suspensión",
+            "text": "No suspender bruscamente en pacientes con epilepsia. Cuando sea necesario interrumpir el tratamiento, realizar una retirada gradual según la información de prescripción."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Lacosamide Tablets, Prescribing Information",
+            "text": "Fonte regulatória/rotulagem atual consultada em 24/08/2026 para administração e preparação; atualização da fonte: 2026-06-29."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Lacosamide Tablets, Prescribing Information",
+            "text": "Fuente regulatoria/rotulado actual consultada el 24/08/2026 para administración y preparación; actualización de la fuente: 2026-06-29."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_lacosamide_2026_06_29",
+        "title": "DailyMed — Lacosamide Tablets, Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6140b3f1-ff60-427c-91d7-15af99fd78f1&version=7",
+        "updated": "2026-06-29"
+      }
+    ]
+  }
 }

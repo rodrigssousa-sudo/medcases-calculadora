@@ -204,4 +204,57 @@
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "neurologia.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "levetiracetam",
+    "reviewed_at": "2026-08-24",
+    "source_policy": "current_official_or_regulatory_label_stage_a_admin_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "VO",
+            "text": "Pode ser administrado com ou sem alimentos. Os comprimidos devem ser engolidos inteiros e não devem ser mastigados ou triturados."
+          },
+          {
+            "label": "Solução oral / pediatria",
+            "text": "Para pacientes pediátricos com peso ≤20 kg, preferir solução oral. Usar dispositivo de medida calibrado; não utilizar colher doméstica."
+          }
+        ],
+        "es": [
+          {
+            "label": "VO",
+            "text": "Puede administrarse con o sin alimentos. Los comprimidos deben tragarse enteros y no deben masticarse ni triturarse."
+          },
+          {
+            "label": "Solución oral / pediatría",
+            "text": "Para pacientes pediátricos con peso ≤20 kg, preferir solución oral. Usar un dispositivo de medición calibrado; no utilizar cucharas domésticas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Levetiracetam Tablets USP, Prescribing Information",
+            "text": "Fonte regulatória/rotulagem atual consultada em 24/08/2026 para administração e preparação; atualização da fonte: 2026-07-02."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Levetiracetam Tablets USP, Prescribing Information",
+            "text": "Fuente regulatoria/rotulado actual consultada el 24/08/2026 para administración y preparación; actualización de la fuente: 2026-07-02."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_levetiracetam_2026_07_02",
+        "title": "DailyMed — Levetiracetam Tablets USP, Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c26c0ad-9d37-45c5-9091-849509f4fc01",
+        "updated": "2026-07-02"
+      }
+    ]
+  }
 }

@@ -209,4 +209,57 @@
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "neurologia.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "fenobarbital",
+    "reviewed_at": "2026-08-24",
+    "source_policy": "current_official_or_regulatory_label_stage_a_admin_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "VO / individualização",
+            "text": "Uso oral; individualizar a dose considerando idade, peso e condição clínica. Quando necessário, usar níveis séricos como apoio à monitorização anticonvulsivante."
+          },
+          {
+            "label": "Retirada",
+            "text": "Evitar suspensão abrupta após uso continuado: a abstinência de barbitúricos pode ser grave, incluindo convulsões e delirium. Realizar retirada cautelosa e gradual quando indicada."
+          }
+        ],
+        "es": [
+          {
+            "label": "VO / individualización",
+            "text": "Uso oral; individualizar la dosis considerando edad, peso y condición clínica. Cuando sea necesario, utilizar niveles séricos como apoyo a la monitorización anticonvulsivante."
+          },
+          {
+            "label": "Retirada",
+            "text": "Evitar la suspensión brusca tras uso continuado: la abstinencia de barbitúricos puede ser grave, incluyendo convulsiones y delirium. Realizar una retirada cautelosa y gradual cuando esté indicada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Phenobarbital Tablets, Human Drug Label",
+            "text": "Fonte regulatória/rotulagem atual consultada em 24/08/2026 para administração e preparação; atualização da fonte: 2026-06-15. Observação: DailyMed listing identifies this product as unapproved drug other; Stage B requires guideline cross-check for dosing."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Phenobarbital Tablets, Human Drug Label",
+            "text": "Fuente regulatoria/rotulado actual consultada el 24/08/2026 para administración y preparación; actualización de la fuente: 2026-06-15. Observación: DailyMed listing identifies this product as unapproved drug other; Stage B requires guideline cross-check for dosing."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_phenobarbital_2026_06_15",
+        "title": "DailyMed — Phenobarbital Tablets, Human Drug Label",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=324fde5b-961f-438b-8d9c-b679511dd907&version=1",
+        "updated": "2026-06-15"
+      }
+    ]
+  }
 }

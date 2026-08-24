@@ -214,4 +214,65 @@
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "neurologia.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "fenitoina",
+    "reviewed_at": "2026-08-24",
+    "source_policy": "current_official_or_regulatory_label_stage_a_admin_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Formulação / níveis",
+            "text": "Evitar trocas não monitoradas entre formulações ou marcas, pois diferenças de dissolução e entre sal sódico/forma ácida podem alterar a exposição. Se houver troca, considerar ajuste e monitorização de níveis séricos."
+          },
+          {
+            "label": "Dose única diária",
+            "text": "O esquema de 300 mg uma vez ao dia é aplicável apenas a cápsulas de fenitoína sódica de liberação prolongada em pacientes já controlados com 300 mg/dia em doses divididas; não extrapolar para outras formulações."
+          },
+          {
+            "label": "Nutrição enteral",
+            "text": "Preparações de alimentação enteral podem reduzir os níveis de fenitoína. Evitar administração concomitante e considerar monitorização sérica mais frequente quando houver nutrição enteral."
+          }
+        ],
+        "es": [
+          {
+            "label": "Formulación / niveles",
+            "text": "Evitar cambios no monitorizados entre formulaciones o marcas, ya que diferencias de disolución y entre sal sódica/forma ácida pueden modificar la exposición. Si se cambia la formulación, considerar ajuste y monitorización de niveles séricos."
+          },
+          {
+            "label": "Dosis única diaria",
+            "text": "El esquema de 300 mg una vez al día se aplica solo a cápsulas de fenitoína sódica de liberación prolongada en pacientes ya controlados con 300 mg/día en dosis divididas; no extrapolar a otras formulaciones."
+          },
+          {
+            "label": "Nutrición enteral",
+            "text": "Las preparaciones de alimentación enteral pueden reducir los niveles de fenitoína. Evitar la administración concomitante y considerar monitorización sérica más frecuente cuando exista nutrición enteral."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Extended Phenytoin Sodium Capsules, Prescribing Information",
+            "text": "Fonte regulatória/rotulagem atual consultada em 24/08/2026 para administração e preparação; atualização da fonte: 2026-05-26."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Extended Phenytoin Sodium Capsules, Prescribing Information",
+            "text": "Fuente regulatoria/rotulado actual consultada el 24/08/2026 para administración y preparación; actualización de la fuente: 2026-05-26."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_extended_phenytoin_2026_05_26",
+        "title": "DailyMed — Extended Phenytoin Sodium Capsules, Prescribing Information",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e467c02-49a0-4b62-b537-430fdfa4f10e",
+        "updated": "2026-05-26"
+      }
+    ]
+  }
 }

@@ -218,4 +218,57 @@
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "neurologia.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "lamotrigina",
+    "reviewed_at": "2026-08-24",
+    "source_policy": "current_official_or_regulatory_label_stage_a_admin_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Titulação / reinício",
+            "text": "Seguir rigorosamente a dose inicial e a velocidade de escalonamento conforme indicação, idade e medicamentos concomitantes; exceder a titulação recomendada aumenta o risco de rash grave. Após interrupção relevante, avaliar necessidade de reiniciar pelo esquema inicial."
+          },
+          {
+            "label": "Suspensão",
+            "text": "Quando clinicamente possível, retirar gradualmente por pelo menos 2 semanas, com redução aproximada de 50% da dose por semana."
+          }
+        ],
+        "es": [
+          {
+            "label": "Titulación / reinicio",
+            "text": "Seguir estrictamente la dosis inicial y la velocidad de escalamiento según indicación, edad y medicamentos concomitantes; exceder la titulación recomendada aumenta el riesgo de erupción grave. Tras una interrupción relevante, valorar la necesidad de reiniciar desde el esquema inicial."
+          },
+          {
+            "label": "Suspensión",
+            "text": "Cuando sea clínicamente posible, retirar gradualmente durante al menos 2 semanas, con reducción aproximada del 50% de la dosis por semana."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Lamotrigine Tablets, Prescribing Information",
+            "text": "Fonte regulatória/rotulagem atual consultada em 24/08/2026 para administração e preparação; atualização da fonte: 2026-07-28."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Lamotrigine Tablets, Prescribing Information",
+            "text": "Fuente regulatoria/rotulado actual consultada el 24/08/2026 para administración y preparación; actualización de la fuente: 2026-07-28."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_lamotrigine_2026_07_28",
+        "title": "DailyMed — Lamotrigine Tablets, Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d7c2d52-a78e-4508-8853-ba306cdeeaba",
+        "updated": "2026-07-28"
+      }
+    ]
+  }
 }

@@ -198,4 +198,57 @@
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "neurologia.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "brivaracetam",
+    "reviewed_at": "2026-08-24",
+    "source_policy": "current_official_or_regulatory_label_stage_a_admin_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "VO",
+            "text": "Comprimidos e solução oral podem ser administrados com ou sem alimentos. Os comprimidos devem ser engolidos inteiros com líquido e não devem ser mastigados ou triturados."
+          },
+          {
+            "label": "Solução oral",
+            "text": "Medir a solução oral com dispositivo de dosagem apropriado; não usar colher doméstica. A formulação injetável é alternativa intravenosa quando prescrita."
+          }
+        ],
+        "es": [
+          {
+            "label": "VO",
+            "text": "Los comprimidos y la solución oral pueden administrarse con o sin alimentos. Los comprimidos deben tragarse enteros con líquido y no deben masticarse ni triturarse."
+          },
+          {
+            "label": "Solución oral",
+            "text": "Medir la solución oral con un dispositivo de dosificación apropiado; no usar cucharas domésticas. La formulación inyectable es una alternativa intravenosa cuando está prescrita."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — BRIVIACT (brivaracetam), Prescribing Information",
+            "text": "Fonte regulatória/rotulagem atual consultada em 24/08/2026 para administração e preparação; atualização da fonte: 2026-05-13."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — BRIVIACT (brivaracetam), Prescribing Information",
+            "text": "Fuente regulatoria/rotulado actual consultada el 24/08/2026 para administración y preparación; actualización de la fuente: 2026-05-13."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_briviact_2026_05_13",
+        "title": "DailyMed — BRIVIACT (brivaracetam), Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3cf2f439-0e97-443e-8e33-25ecef616f6c",
+        "updated": "2026-05-13"
+      }
+    ]
+  }
 }

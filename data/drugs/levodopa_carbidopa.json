@@ -210,4 +210,57 @@
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "neurologia.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "levodopa_carbidopa",
+    "reviewed_at": "2026-08-24",
+    "source_policy": "current_official_or_regulatory_label_stage_a_admin_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Dieta / absorção",
+            "text": "Levodopa compete com aminoácidos pelo transporte intestinal; dieta rica em proteínas pode atrasar/reduzir a absorção e diminuir a resposta clínica. Considerar esse fator quando houver flutuação de efeito após mudanças alimentares."
+          },
+          {
+            "label": "Ferro",
+            "text": "Sais de ferro e multivitamínicos com ferro podem formar quelatos com levodopa/carbidopa e reduzir a biodisponibilidade; usar concomitantemente com cautela e avaliar impacto clínico."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dieta / absorción",
+            "text": "Levodopa compite con aminoácidos por el transporte intestinal; una dieta rica en proteínas puede retrasar/reducir la absorción y disminuir la respuesta clínica. Considerar este factor cuando existan fluctuaciones de efecto tras cambios dietarios."
+          },
+          {
+            "label": "Hierro",
+            "text": "Las sales de hierro y los multivitamínicos con hierro pueden formar quelatos con levodopa/carbidopa y reducir la biodisponibilidad; usar concomitantemente con precaución y valorar el impacto clínico."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Carbidopa and Levodopa Tablets, Human Prescription Drug Label",
+            "text": "Fonte regulatória/rotulagem atual consultada em 24/08/2026 para administração e preparação; atualização da fonte: 2026-05-12."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Carbidopa and Levodopa Tablets, Human Prescription Drug Label",
+            "text": "Fuente regulatoria/rotulado actual consultada el 24/08/2026 para administración y preparación; actualización de la fuente: 2026-05-12."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_carbidopa_levodopa_2026_05_12",
+        "title": "DailyMed — Carbidopa and Levodopa Tablets, Human Prescription Drug Label",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9e3c796b-2e68-4bcc-b927-18a58bea4703",
+        "updated": "2026-05-12"
+      }
+    ]
+  }
 }
