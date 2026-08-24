@@ -283,5 +283,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "penicilina_g",
+    "stage_a_batch": "09",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "A penicilina G potássica é altamente solúvel em água e pode ser dissolvida em Água para Injeção ou solução isotônica estéril de cloreto de sódio conforme a apresentação."
+          },
+          {
+            "label": "Via IV",
+            "text": "Pode ser administrada por infusão IV contínua; a apresentação de 20 milhões de unidades é destinada exclusivamente à infusão intravenosa."
+          },
+          {
+            "label": "Administração em altas doses",
+            "text": "Doses intravenosas altas devem ser administradas lentamente, considerando a carga de potássio da formulação e a necessidade de monitorização clínica apropriada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "La penicilina G potásica es altamente soluble en agua y puede disolverse en Agua para Inyección o solución isotónica estéril de cloruro de sodio según la presentación."
+          },
+          {
+            "label": "Vía IV",
+            "text": "Puede administrarse mediante infusión IV continua; la presentación de 20 millones de unidades está destinada exclusivamente a infusión intravenosa."
+          },
+          {
+            "label": "Administración en dosis altas",
+            "text": "Las dosis intravenosas altas deben administrarse lentamente, considerando la carga de potasio de la formulación y la necesidad de monitorización clínica apropiada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Penicillin G Potassium for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Penicillin G Potassium for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH09",
+        "id": "dailymed_penicillin_g_91950983",
+        "title": "DailyMed — Penicillin G Potassium for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=91950983-4884-40d1-abd8-bcc953d61b7f",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

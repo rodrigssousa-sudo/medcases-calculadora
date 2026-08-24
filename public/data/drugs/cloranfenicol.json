@@ -361,5 +361,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "cloranfenicol",
+    "stage_a_batch": "08",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Preparar solução a 10% (100 mg/mL) adicionando 10 mL de diluente aquoso, como Água para Injeção ou dextrose 5%, conforme a apresentação consultada."
+          },
+          {
+            "label": "Via IV",
+            "text": "Administrar por via intravenosa; a rotulagem consultada recomenda injetar a solução durante intervalo de pelo menos 1 minuto."
+          },
+          {
+            "label": "Transição",
+            "text": "Quando clinicamente viável, substituir por formulação oral de outro antibiótico apropriado conforme orientação terapêutica."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Preparar una solución al 10% (100 mg/mL) añadiendo 10 mL de diluyente acuoso, como Agua para Inyección o dextrosa al 5%, según la presentación consultada."
+          },
+          {
+            "label": "Vía IV",
+            "text": "Administrar por vía intravenosa; el rotulado consultado recomienda inyectar la solución durante un intervalo de al menos 1 minuto."
+          },
+          {
+            "label": "Transición",
+            "text": "Cuando sea clínicamente posible, sustituir por una formulación oral de otro antibiótico apropiado según la orientación terapéutica."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Chloramphenicol Sodium Succinate for Injection, USP",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Chloramphenicol Sodium Succinate for Injection, USP",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH08",
+        "id": "dailymed_chloramphenicol_aed29594",
+        "title": "DailyMed — Chloramphenicol Sodium Succinate for Injection, USP",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=aed29594-211d-49ef-813f-131975a8d0e3",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

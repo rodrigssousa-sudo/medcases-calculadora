@@ -332,5 +332,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "fosfomicina",
+    "stage_a_batch": "09",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "A apresentação IV consultada deve ser reconstituída com 30 mL de Água Estéril para Injeção usando técnica asséptica e mistura suave até dissolução completa."
+          },
+          {
+            "label": "Diluição obrigatória",
+            "text": "A solução reconstituída não é para injeção direta e deve ser imediatamente diluída adicionalmente em Água Estéril para Injeção conforme o volume final definido para a dose."
+          },
+          {
+            "label": "Inspeção",
+            "text": "Antes da infusão, verificar se a solução está límpida, incolor e sem partículas visíveis; descartar a porção não utilizada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "La presentación IV consultada debe reconstituirse con 30 mL de Agua Estéril para Inyección utilizando técnica aséptica y mezcla suave hasta la disolución completa."
+          },
+          {
+            "label": "Dilución obligatoria",
+            "text": "La solución reconstituida no es para inyección directa y debe diluirse inmediatamente de forma adicional en Agua Estéril para Inyección según el volumen final definido para la dosis."
+          },
+          {
+            "label": "Inspección",
+            "text": "Antes de la infusión, comprobar que la solución esté límpida, incolora y sin partículas visibles; desechar la porción no utilizada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — CONTEPO (fosfomycin disodium)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-10-30."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — CONTEPO (fosfomycin disodium)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-10-30."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH09",
+        "id": "dailymed_contepo_855574f2",
+        "title": "DailyMed — CONTEPO (fosfomycin disodium)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=855574f2-39f8-43bc-a3d2-79dbb578cb94",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-10-30"
+      }
+    ]
+  }
 }

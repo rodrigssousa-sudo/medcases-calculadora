@@ -454,5 +454,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "ciprofloxacino",
+    "stage_a_batch": "10",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_or_official_health_system_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Bolsa premisturada",
+            "text": "A apresentação IV consultada é solução premisturada a 0,2% em dextrose 5% e não requer diluição adicional."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Administrar por infusão intravenosa durante 60 minutos; a infusão lenta em veia de maior calibre reduz desconforto e irritação venosa."
+          },
+          {
+            "label": "Inspeção",
+            "text": "Utilizar apenas se a solução estiver límpida e o recipiente íntegro; descartar se houver vazamento ou comprometimento da embalagem."
+          }
+        ],
+        "es": [
+          {
+            "label": "Bolsa premezclada",
+            "text": "La presentación IV consultada es una solución premezclada al 0,2% en dextrosa al 5% y no requiere dilución adicional."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Administrar mediante infusión intravenosa durante 60 minutos; la infusión lenta en una vena de mayor calibre reduce molestias e irritación venosa."
+          },
+          {
+            "label": "Inspección",
+            "text": "Utilizar solo si la solución está límpida y el recipiente íntegro; desechar si existe fuga o compromiso del envase."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Ciprofloxacin Injection in Dextrose",
+            "text": "Fonte regulatória/oficial consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Ciprofloxacin Injection in Dextrose",
+            "text": "Fuente regulatoria/oficial consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH10",
+        "id": "dailymed_ciprofloxacin_cbbbf939",
+        "title": "DailyMed — Ciprofloxacin Injection in Dextrose",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cbbbf939-3219-4515-a48e-ca264daa4d07",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

@@ -338,5 +338,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "eritromicina",
+    "stage_a_batch": "09",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir o frasco de 500 mg com 10 mL de Água Estéril para Injeção, obtendo 50 mg/mL. Não utilizar outro diluente nessa etapa, pois pode ocorrer precipitação."
+          },
+          {
+            "label": "Diluição",
+            "text": "Após reconstituição, diluir em SF 0,9%, Ringer lactato ou Normosol-R. Para infusão contínua, preparar concentração final de 1 mg/mL; para infusão intermitente, 1–5 mg/mL."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Não administrar por IV push. Na infusão intermitente, administrar em 20–60 minutos; a solução final diluída deve ser utilizada em até 8 horas."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir el vial de 500 mg con 10 mL de Agua Estéril para Inyección, obteniendo 50 mg/mL. No utilizar otro diluyente en esta etapa, ya que puede producirse precipitación."
+          },
+          {
+            "label": "Dilución",
+            "text": "Después de reconstituir, diluir en SF 0,9%, Ringer lactato o Normosol-R. Para infusión continua, preparar una concentración final de 1 mg/mL; para infusión intermitente, 1–5 mg/mL."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "No administrar mediante IV push. En infusión intermitente, administrar durante 20–60 minutos; la solución final diluida debe utilizarse dentro de 8 horas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — ERYTHROCIN LACTOBIONATE (erythromycin lactobionate)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-10-30."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — ERYTHROCIN LACTOBIONATE (erythromycin lactobionate)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-10-30."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH09",
+        "id": "dailymed_erythrocin_a96c405f",
+        "title": "DailyMed — ERYTHROCIN LACTOBIONATE (erythromycin lactobionate)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a96c405f-bd70-4bb4-719e-ac6a79dcc213",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-10-30"
+      }
+    ]
+  }
 }

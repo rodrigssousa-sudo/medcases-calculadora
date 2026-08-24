@@ -355,5 +355,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "minociclina",
+    "stage_a_batch": "09",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir cada frasco de 100 mg com 5 mL de Água Estéril para Injeção."
+          },
+          {
+            "label": "Diluição",
+            "text": "Diluir imediatamente a solução reconstituída em 100–1.000 mL de SF 0,9%, dextrose ou dextrose com SF; Ringer lactato pode ser usado em volume de 250–1.000 mL. Evitar outras soluções contendo cálcio."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Administrar por infusão intravenosa; a rotulagem consultada descreve 100 mg durante 60 minutos."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir cada vial de 100 mg con 5 mL de Agua Estéril para Inyección."
+          },
+          {
+            "label": "Dilución",
+            "text": "Diluir inmediatamente la solución reconstituida en 100–1.000 mL de SF 0,9%, dextrosa o dextrosa con SF; Ringer lactato puede utilizarse en un volumen de 250–1.000 mL. Evitar otras soluciones que contengan calcio."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Administrar mediante infusión intravenosa; el rotulado consultado describe 100 mg durante 60 minutos."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — MINOCIN (minocycline) for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-09-11."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — MINOCIN (minocycline) for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-09-11."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH09",
+        "id": "dailymed_minocin_e415c323",
+        "title": "DailyMed — MINOCIN (minocycline) for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e415c323-8219-464b-9e3e-72c5a796cdaa",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-09-11"
+      }
+    ]
+  }
 }

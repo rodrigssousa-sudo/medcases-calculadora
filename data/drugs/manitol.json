@@ -270,5 +270,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "manitol",
+    "stage_a_batch": "10",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_or_official_health_system_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Filtro obrigatório",
+            "text": "Administrar por via intravenosa utilizando equipo com filtro final em linha, devido ao risco de formação de cristais de manitol."
+          },
+          {
+            "label": "Cristalização",
+            "text": "Inspecionar a solução antes do uso. Se houver cristais, redissolver por aquecimento conforme as instruções específicas da apresentação, resfriar até temperatura corporal ou inferior e reinspecionar; descartar se os cristais não se dissolverem completamente."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Não é recomendada a mistura com outros medicamentos. A apresentação é de uso único e a porção não utilizada deve ser descartada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Filtro obligatorio",
+            "text": "Administrar por vía intravenosa utilizando un equipo con filtro final en línea, debido al riesgo de formación de cristales de manitol."
+          },
+          {
+            "label": "Cristalización",
+            "text": "Inspeccionar la solución antes del uso. Si hay cristales, redisolver mediante calentamiento según las instrucciones específicas de la presentación, enfriar hasta temperatura corporal o inferior y reinspeccionar; desechar si los cristales no se disuelven completamente."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "No se recomienda mezclar con otros medicamentos. La presentación es de uso único y debe desecharse la porción no utilizada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Mannitol Injection",
+            "text": "Fonte regulatória/oficial consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Mannitol Injection",
+            "text": "Fuente regulatoria/oficial consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH10",
+        "id": "dailymed_mannitol_ba7bf864",
+        "title": "DailyMed — Mannitol Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba7bf864-8a4d-4262-8fd1-00174fa2f9d1",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

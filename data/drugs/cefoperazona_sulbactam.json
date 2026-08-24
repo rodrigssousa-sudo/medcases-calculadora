@@ -253,5 +253,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "cefoperazona_sulbactam",
+    "stage_a_batch": "10",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_or_official_health_system_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "No protocolo oficial consultado para a apresentação de 1 g, reconstituir com 3,4 mL de Água para Injeção, dextrose 5% ou SF 0,9%."
+          },
+          {
+            "label": "IV — diluição e tempo",
+            "text": "Para infusão IV, diluir até 20 mL com o mesmo diluente e administrar em 15–60 minutos. Para bólus IV lento, administrar durante pelo menos 3 minutos."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Não misturar diretamente com aminoglicosídeos. Quando ambos forem necessários, administrar sequencialmente com linhas separadas ou lavagem adequada da linha entre os medicamentos."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "En el protocolo oficial consultado para la presentación de 1 g, reconstituir con 3,4 mL de Agua para Inyección, dextrosa al 5% o SF 0,9%."
+          },
+          {
+            "label": "IV — dilución y tiempo",
+            "text": "Para infusión IV, diluir hasta 20 mL con el mismo diluyente y administrar durante 15–60 minutos. Para bolo IV lento, administrar durante al menos 3 minutos."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "No mezclar directamente con aminoglucósidos. Cuando ambos sean necesarios, administrar de forma secuencial con líneas separadas o lavado adecuado de la línea entre los medicamentos."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "Ministry of Health Malaysia — Dilution Protocol: Cefoperazone/Sulbactam",
+            "text": "Fonte regulatória/oficial consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "Ministry of Health Malaysia — Dilution Protocol: Cefoperazone/Sulbactam",
+            "text": "Fuente regulatoria/oficial consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH10",
+        "id": "moh_selangor_cefoperazone_sulbactam",
+        "title": "Ministry of Health Malaysia — Dilution Protocol: Cefoperazone/Sulbactam",
+        "url": "https://jknselangor.moh.gov.my/htar/images/pdf/Dilution_Protocol_BPF_JKNS.pdf",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

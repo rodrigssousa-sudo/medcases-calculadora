@@ -371,5 +371,67 @@
         "sourceModule": "antimicrobianos.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "dalbavancina",
+    "stage_a_batch": "08",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir cada frasco de 500 mg com 25 mL de Água Estéril para Injeção ou dextrose 5%. Alternar movimentos suaves de rotação e inversão até dissolver; não agitar."
+          },
+          {
+            "label": "Diluição",
+            "text": "Diluir posteriormente apenas em dextrose 5%, obtendo concentração final entre 1 e 5 mg/mL. Soluções salinas podem causar precipitação e não devem ser usadas para a diluição final."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Administrar por infusão intravenosa durante 30 minutos. Não co-infusar com outros medicamentos ou eletrólitos; se a linha for compartilhada, lavar antes e depois com dextrose 5%."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir cada vial de 500 mg con 25 mL de Agua Estéril para Inyección o dextrosa al 5%. Alternar movimientos suaves de rotación e inversión hasta disolver; no agitar."
+          },
+          {
+            "label": "Dilución",
+            "text": "Diluir posteriormente solo en dextrosa al 5%, obteniendo una concentración final de 1 a 5 mg/mL. Las soluciones salinas pueden causar precipitación y no deben usarse para la dilución final."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Administrar mediante infusión intravenosa durante 30 minutos. No co-infundir con otros medicamentos o electrolitos; si se comparte la línea, lavar antes y después con dextrosa al 5%."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — DALVANCE (dalbavancin)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — DALVANCE (dalbavancin)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH08",
+        "id": "dailymed_dalvance_4b4674d8",
+        "title": "DailyMed — DALVANCE (dalbavancin)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=4b4674d8-4d1e-4728-8465-d42ada33fa5c&type=pdf",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

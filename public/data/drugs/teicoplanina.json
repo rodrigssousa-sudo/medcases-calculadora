@@ -433,5 +433,68 @@
         "sourceModule": "antimicrobianos.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "teicoplanina",
+    "stage_a_batch": "09",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Adicionar lentamente todo o diluente fornecido ao frasco e girar até completa dissolução, evitando formação de espuma. Se houver espuma, aguardar cerca de 15 minutos; utilizar apenas solução límpida."
+          },
+          {
+            "label": "IV / IM",
+            "text": "Pode ser administrada por via intravenosa ou intramuscular. A injeção IV pode ser feita como bólus em 3–5 minutos ou como infusão de 30 minutos; em neonatos, utilizar apenas infusão."
+          },
+          {
+            "label": "Diluição para infusão",
+            "text": "A solução reconstituída pode ser diluída em SF 0,9%, Ringer, Ringer lactato, glicose 5% ou 10% e outras soluções compatíveis descritas na rotulagem."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Añadir lentamente todo el diluyente suministrado al vial y girar hasta la disolución completa, evitando la formación de espuma. Si aparece espuma, esperar unos 15 minutos; utilizar solo una solución límpida."
+          },
+          {
+            "label": "IV / IM",
+            "text": "Puede administrarse por vía intravenosa o intramuscular. La inyección IV puede realizarse como bolo durante 3–5 minutos o como infusión de 30 minutos; en neonatos, utilizar únicamente infusión."
+          },
+          {
+            "label": "Dilución para infusión",
+            "text": "La solución reconstituida puede diluirse en SF 0,9%, Ringer, Ringer lactato, glucosa al 5% o 10% y otras soluciones compatibles descritas en el rotulado."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "emc SmPC — Teicoplanin 400 mg powder and solvent for solution",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-03."
+          }
+        ],
+        "es": [
+          {
+            "label": "emc SmPC — Teicoplanin 400 mg powder and solvent for solution",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-03."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH09",
+        "id": "emc_teicoplanin_101957",
+        "title": "emc SmPC — Teicoplanin 400 mg powder and solvent for solution",
+        "url": "https://www.medicines.org.uk/emc/product/101957/smpc",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-03"
+      }
+    ]
+  }
 }

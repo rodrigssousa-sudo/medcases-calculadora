@@ -380,5 +380,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "linezolida",
+    "stage_a_batch": "09",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Pronta para uso",
+            "text": "A apresentação IV em bolsa é de dose única e pronta para uso. Não introduzir aditivos e não conectar bolsas em série."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Administrar por infusão intravenosa durante 30–120 minutos."
+          },
+          {
+            "label": "Linha compartilhada",
+            "text": "Se a mesma linha IV for usada sequencialmente para outros medicamentos, lavar antes e depois da linezolida com solução compatível; administrar medicamentos concomitantes separadamente."
+          }
+        ],
+        "es": [
+          {
+            "label": "Lista para usar",
+            "text": "La presentación IV en bolsa es de dosis única y está lista para usar. No introducir aditivos ni conectar bolsas en serie."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Administrar mediante infusión intravenosa durante 30–120 minutos."
+          },
+          {
+            "label": "Línea compartida",
+            "text": "Si la misma línea IV se utiliza secuencialmente para otros medicamentos, lavar antes y después de linezolid con una solución compatible; administrar los medicamentos concomitantes por separado."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Linezolid Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Linezolid Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH09",
+        "id": "dailymed_linezolid_b721756c",
+        "title": "DailyMed — Linezolid Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b721756c-3b5e-456d-a2f6-0d8a56cc7f35",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

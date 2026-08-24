@@ -286,5 +286,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "ceftolozano_tazobactam",
+    "stage_a_batch": "08",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir cada frasco com 10 mL de Água Estéril para Injeção ou SF 0,9% e agitar suavemente até dissolução completa. A solução reconstituída não é para injeção direta."
+          },
+          {
+            "label": "Diluição",
+            "text": "Retirar o volume necessário da solução reconstituída e adicionar a bolsa com 100 mL de SF 0,9% ou dextrose 5%; descartar a porção não utilizada."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Em adultos, administrar as doses por infusão intravenosa durante 1 hora."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir cada vial con 10 mL de Agua Estéril para Inyección o SF 0,9% y agitar suavemente hasta la disolución completa. La solución reconstituida no es para inyección directa."
+          },
+          {
+            "label": "Dilución",
+            "text": "Retirar el volumen necesario de la solución reconstituida y añadirlo a una bolsa con 100 mL de SF 0,9% o dextrosa al 5%; desechar la porción no utilizada."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "En adultos, administrar las dosis mediante infusión intravenosa durante 1 hora."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — ZERBAXA (ceftolozane and tazobactam)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — ZERBAXA (ceftolozane and tazobactam)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH08",
+        "id": "dailymed_zerbaxa_70ac1d90",
+        "title": "DailyMed — ZERBAXA (ceftolozane and tazobactam)",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f&type=pdf",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

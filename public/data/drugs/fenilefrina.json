@@ -287,5 +287,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "fenilefrina",
+    "stage_a_batch": "10",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_or_official_health_system_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição obrigatória",
+            "text": "A apresentação concentrada de 10 mg/mL deve ser diluída antes do uso, tanto para bólus IV quanto para infusão IV contínua."
+          },
+          {
+            "label": "Bólus — preparo",
+            "text": "Para concentração final de 100 mcg/mL, retirar 1 mL da solução 10 mg/mL e diluir com 99 mL de SF 0,9% ou dextrose 5%."
+          },
+          {
+            "label": "Estabilidade",
+            "text": "A solução diluída não deve permanecer por mais de 4 horas em temperatura ambiente ou 24 horas sob refrigeração; descartar a porção não utilizada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución obligatoria",
+            "text": "La presentación concentrada de 10 mg/mL debe diluirse antes del uso, tanto para bolo IV como para infusión IV continua."
+          },
+          {
+            "label": "Bolo — preparación",
+            "text": "Para una concentración final de 100 mcg/mL, retirar 1 mL de la solución de 10 mg/mL y diluir con 99 mL de SF 0,9% o dextrosa al 5%."
+          },
+          {
+            "label": "Estabilidad",
+            "text": "La solución diluida no debe mantenerse más de 4 horas a temperatura ambiente ni 24 horas refrigerada; desechar la porción no utilizada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Phenylephrine Hydrochloride Injection",
+            "text": "Fonte regulatória/oficial consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Phenylephrine Hydrochloride Injection",
+            "text": "Fuente regulatoria/oficial consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH10",
+        "id": "dailymed_phenylephrine_16c02d53",
+        "title": "DailyMed — Phenylephrine Hydrochloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=16c02d53-fd3f-4fd7-abbe-f1358ea0891f",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

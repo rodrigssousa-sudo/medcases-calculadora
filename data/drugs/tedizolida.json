@@ -291,5 +291,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "tedizolida",
+    "stage_a_batch": "09",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir o frasco de 200 mg com 4 mL de Água Estéril para Injeção, obtendo 50 mg/mL. Misturar suavemente e evitar agitação vigorosa para reduzir formação de espuma."
+          },
+          {
+            "label": "Diluição",
+            "text": "Após reconstituição, diluir em SF 0,9% ou dextrose 5% conforme a apresentação atual; inspecionar partículas antes do uso."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Administrar exclusivamente por infusão intravenosa durante 1 hora. Não administrar por IV push ou bólus e não misturar com outros medicamentos na mesma infusão."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir el vial de 200 mg con 4 mL de Agua Estéril para Inyección, obteniendo 50 mg/mL. Mezclar suavemente y evitar la agitación vigorosa para reducir la formación de espuma."
+          },
+          {
+            "label": "Dilución",
+            "text": "Después de reconstituir, diluir en SF 0,9% o dextrosa al 5% según la presentación actual; inspeccionar partículas antes del uso."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Administrar exclusivamente mediante infusión intravenosa durante 1 hora. No administrar mediante IV push o bolo y no mezclar con otros medicamentos en la misma infusión."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — SIVEXTRO (tedizolid phosphate)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-02-27."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — SIVEXTRO (tedizolid phosphate)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-02-27."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH09",
+        "id": "dailymed_sivextro_75672079",
+        "title": "DailyMed — SIVEXTRO (tedizolid phosphate)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75672079-589f-451a-bdbf-eaebcfcc80a9",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-02-27"
+      }
+    ]
+  }
 }

@@ -247,5 +247,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "efedrina",
+    "stage_a_batch": "08",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via IV",
+            "text": "A apresentação consultada é destinada à injeção intravenosa em bólus."
+          },
+          {
+            "label": "Pronta para uso",
+            "text": "A formulação consultada é pronta para uso e não deve ser diluída antes da administração."
+          },
+          {
+            "label": "Inspeção",
+            "text": "Inspecionar visualmente a solução antes da administração e utilizar técnica asséptica."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía IV",
+            "text": "La presentación consultada está destinada a inyección intravenosa en bolo."
+          },
+          {
+            "label": "Lista para usar",
+            "text": "La formulación consultada está lista para usar y no debe diluirse antes de la administración."
+          },
+          {
+            "label": "Inspección",
+            "text": "Inspeccionar visualmente la solución antes de administrar y utilizar técnica aséptica."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Ephedrine Sulfate Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Ephedrine Sulfate Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH08",
+        "id": "dailymed_ephedrine_c021fe1b",
+        "title": "DailyMed — Ephedrine Sulfate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=c021fe1b-3ac3-4577-b780-f6a3070908a1",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

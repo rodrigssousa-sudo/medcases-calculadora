@@ -763,5 +763,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "propranolol",
+    "stage_a_batch": "08",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via IV",
+            "text": "A apresentação injetável consultada é exclusivamente para uso intravenoso e deve ser administrada lentamente sob monitorização."
+          },
+          {
+            "label": "Velocidade",
+            "text": "A velocidade de administração não deve exceder 1 mg por minuto na apresentação de 1 mg/mL."
+          },
+          {
+            "label": "Monitorização",
+            "text": "Monitorar ECG, frequência cardíaca e pressão arterial durante a administração; inspecionar visualmente a solução antes do uso."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía IV",
+            "text": "La presentación inyectable consultada es exclusivamente para uso intravenoso y debe administrarse lentamente bajo monitorización."
+          },
+          {
+            "label": "Velocidad",
+            "text": "La velocidad de administración no debe exceder 1 mg por minuto en la presentación de 1 mg/mL."
+          },
+          {
+            "label": "Monitorización",
+            "text": "Monitorizar ECG, frecuencia cardíaca y presión arterial durante la administración; inspeccionar visualmente la solución antes de usar."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Propranolol Hydrochloride Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Propranolol Hydrochloride Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH08",
+        "id": "dailymed_propranolol_91f2ff1d",
+        "title": "DailyMed — Propranolol Hydrochloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=91f2ff1d-68d8-4e83-a2db-618f0410ead7",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

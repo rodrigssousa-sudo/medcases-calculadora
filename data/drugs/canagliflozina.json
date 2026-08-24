@@ -483,5 +483,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "canagliflozina",
+    "stage_a_batch": "10",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_or_official_health_system_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via oral",
+            "text": "Administrar por via oral uma vez ao dia."
+          },
+          {
+            "label": "Relação com alimento",
+            "text": "Para controle glicêmico, a rotulagem recomenda administração antes da primeira refeição do dia."
+          },
+          {
+            "label": "Antes de iniciar",
+            "text": "Avaliar função renal e corrigir depleção volêmica antes do início, conforme a rotulagem."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía oral",
+            "text": "Administrar por vía oral una vez al día."
+          },
+          {
+            "label": "Relación con alimentos",
+            "text": "Para control glucémico, el rotulado recomienda administrar antes de la primera comida del día."
+          },
+          {
+            "label": "Antes de iniciar",
+            "text": "Evaluar la función renal y corregir la depleción de volumen antes de iniciar, según el rotulado."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — INVOKANA (canagliflozin)",
+            "text": "Fonte regulatória/oficial consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-06-11."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — INVOKANA (canagliflozin)",
+            "text": "Fuente regulatoria/oficial consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-06-11."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH10",
+        "id": "dailymed_invokana_b9057d3b",
+        "title": "DailyMed — INVOKANA (canagliflozin)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b9057d3b-b104-4f09-8a61-c61ef9d4a3f3",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-06-11"
+      }
+    ]
+  }
 }

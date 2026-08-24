@@ -349,5 +349,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "sulfametoxazol_trimetoprim",
+    "stage_a_batch": "09",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição obrigatória",
+            "text": "Diluir obrigatoriamente a apresentação concentrada em dextrose 5% em água antes da administração."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Administrar por infusão intravenosa durante 60–90 minutos. Evitar infusão rápida ou injeção em bólus."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Não misturar sulfametoxazol + trimetoprima com outros medicamentos ou outras soluções na mesma preparação."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución obligatoria",
+            "text": "Diluir obligatoriamente la presentación concentrada en dextrosa al 5% en agua antes de la administración."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Administrar mediante infusión intravenosa durante 60–90 minutos. Evitar infusión rápida o inyección en bolo."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "No mezclar sulfametoxazol + trimetoprima con otros medicamentos ni con otras soluciones en la misma preparación."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Sulfamethoxazole and Trimethoprim Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2023-10-17."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Sulfamethoxazole and Trimethoprim Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2023-10-17."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH09",
+        "id": "dailymed_tmp_smx_793c75eb",
+        "title": "DailyMed — Sulfamethoxazole and Trimethoprim Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=793c75eb-dd65-4b6d-ac46-6e57ce1334f7",
+        "reviewed_at": "2026-08-24",
+        "updated": "2023-10-17"
+      }
+    ]
+  }
 }

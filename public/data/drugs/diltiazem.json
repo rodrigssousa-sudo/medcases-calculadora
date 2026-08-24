@@ -372,5 +372,67 @@
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "diltiazem",
+    "stage_a_batch": "10",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_or_official_health_system_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Infusão contínua",
+            "text": "Para infusão IV contínua, transferir assepticamente a quantidade necessária de diltiazem para SF 0,9%, dextrose 5% ou dextrose 5%/NaCl 0,45%, conforme a concentração final desejada."
+          },
+          {
+            "label": "Preparo",
+            "text": "Misturar completamente após a diluição. A rotulagem consultada descreve concentrações usuais aproximadas entre 0,45 e 1 mg/mL conforme o volume preparado."
+          },
+          {
+            "label": "Estabilidade",
+            "text": "Utilizar a solução diluída em até 24 horas e manter refrigerada até o uso, conforme a apresentação consultada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Infusión continua",
+            "text": "Para infusión IV continua, transferir asépticamente la cantidad necesaria de diltiazem a SF 0,9%, dextrosa al 5% o dextrosa al 5%/NaCl 0,45%, según la concentración final deseada."
+          },
+          {
+            "label": "Preparación",
+            "text": "Mezclar completamente después de la dilución. El rotulado consultado describe concentraciones habituales aproximadas entre 0,45 y 1 mg/mL según el volumen preparado."
+          },
+          {
+            "label": "Estabilidad",
+            "text": "Utilizar la solución diluida dentro de 24 horas y mantener refrigerada hasta el uso, según la presentación consultada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Diltiazem Hydrochloride Injection",
+            "text": "Fonte regulatória/oficial consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Diltiazem Hydrochloride Injection",
+            "text": "Fuente regulatoria/oficial consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH10",
+        "id": "dailymed_diltiazem_734beeef",
+        "title": "DailyMed — Diltiazem Hydrochloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=734beeef-3968-4137-af2c-276e8a9317df",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

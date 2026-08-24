@@ -432,5 +432,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "empagliflozina",
+    "stage_a_batch": "10",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_or_official_health_system_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via oral",
+            "text": "Administrar por via oral uma vez ao dia, preferencialmente pela manhã."
+          },
+          {
+            "label": "Alimentação",
+            "text": "Pode ser administrada com ou sem alimentos."
+          },
+          {
+            "label": "Antes de iniciar",
+            "text": "Avaliar função renal e corrigir depleção volêmica antes do início, conforme a rotulagem."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía oral",
+            "text": "Administrar por vía oral una vez al día, preferentemente por la mañana."
+          },
+          {
+            "label": "Alimentación",
+            "text": "Puede administrarse con o sin alimentos."
+          },
+          {
+            "label": "Antes de iniciar",
+            "text": "Evaluar la función renal y corregir la depleción de volumen antes de iniciar, según el rotulado."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — JARDIANCE (empagliflozin)",
+            "text": "Fonte regulatória/oficial consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — JARDIANCE (empagliflozin)",
+            "text": "Fuente regulatoria/oficial consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH10",
+        "id": "dailymed_jardiance_1782b947",
+        "title": "DailyMed — JARDIANCE (empagliflozin)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1782b947-4a72-4feb-a488-1469d9af82bd",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

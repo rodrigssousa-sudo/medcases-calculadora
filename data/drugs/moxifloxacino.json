@@ -304,5 +304,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "moxifloxacino",
+    "stage_a_batch": "09",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Infusão IV",
+            "text": "Administrar exclusivamente por infusão intravenosa durante 60 minutos. Evitar infusão rápida ou bólus IV."
+          },
+          {
+            "label": "Bolsa premisturada",
+            "text": "A apresentação consultada é premisturada e de dose única; inspecionar partículas e alteração de cor antes do uso e descartar a porção não utilizada."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Não adicionar outros medicamentos à bolsa nem infundir simultaneamente pela mesma linha. Se a linha for compartilhada sequencialmente, lavar antes e depois com solução compatível."
+          }
+        ],
+        "es": [
+          {
+            "label": "Infusión IV",
+            "text": "Administrar exclusivamente mediante infusión intravenosa durante 60 minutos. Evitar infusión rápida o bolo IV."
+          },
+          {
+            "label": "Bolsa premezclada",
+            "text": "La presentación consultada es premezclada y de dosis única; inspeccionar partículas y cambios de color antes del uso y desechar la porción no utilizada."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "No agregar otros medicamentos a la bolsa ni infundir simultáneamente por la misma línea. Si la línea se comparte de forma secuencial, lavar antes y después con una solución compatible."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Moxifloxacin Hydrochloride in Sodium Chloride Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-03-16."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Moxifloxacin Hydrochloride in Sodium Chloride Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-03-16."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH09",
+        "id": "dailymed_moxifloxacin_c6fa4129",
+        "title": "DailyMed — Moxifloxacin Hydrochloride in Sodium Chloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6fa4129-2f92-4179-ac5d-bb7b4a538789",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-03-16"
+      }
+    ]
+  }
 }
