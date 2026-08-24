@@ -176,5 +176,51 @@
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "adenosina",
+    "stage_a_batch": "02",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Bólus IV rápido",
+            "text": "Administrar por via intravenosa periférica em bólus rápido, diretamente em uma veia ou pelo acesso/porto IV o mais próximo possível do paciente; imediatamente após, realizar flush rápido com solução salina."
+          }
+        ],
+        "es": [
+          {
+            "label": "Bolo IV rápido",
+            "text": "Administrar por vía intravenosa periférica en bolo rápido, directamente en una vena o por el acceso/puerto IV lo más cerca posible del paciente; inmediatamente después, realizar un flush rápido con solución salina."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Adenosine Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Adenosine Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH02",
+        "id": "dailymed_adenosine_c1c149fe",
+        "title": "DailyMed — Adenosine Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1c149fe-9095-4b2a-a21f-7af3212e0254",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

@@ -326,5 +326,51 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "digoxina",
+    "stage_a_batch": "02",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Alimentos / absorção",
+            "text": "A administração após refeições pode retardar a velocidade de absorção sem alterar, em geral, a quantidade total absorvida. Refeições ricas em farelo/fibra podem reduzir a absorção oral e devem ser consideradas quando houver variação inesperada de resposta."
+          }
+        ],
+        "es": [
+          {
+            "label": "Alimentos / absorción",
+            "text": "La administración después de las comidas puede enlentecer la velocidad de absorción sin modificar, en general, la cantidad total absorbida. Las comidas ricas en salvado/fibra pueden reducir la absorción oral y deben considerarse ante variaciones inesperadas de respuesta."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Digoxin Tablets, Prescribing Information",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Digoxin Tablets, Prescribing Information",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH02",
+        "id": "dailymed_digoxin_42d079a7",
+        "title": "DailyMed — Digoxin Tablets, Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=42d079a7-def1-4220-b71f-db2651966ffe",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

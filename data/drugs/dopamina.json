@@ -22,5 +22,60 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "dopamina",
+    "stage_a_batch": "02",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição / infusão",
+            "text": "A dopamina concentrada deve ser diluída em solução parenteral compatível antes da administração. Administrar exclusivamente por infusão intravenosa, preferencialmente em veia calibrosa e com bomba de infusão."
+          },
+          {
+            "label": "Incompatibilidade alcalina",
+            "text": "Não adicionar a bicarbonato de sódio nem a outras soluções IV alcalinas, pois a dopamina é inativada em meio alcalino. Inspecionar a solução e não administrar se estiver escurecida ou descolorida."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución / infusión",
+            "text": "La dopamina concentrada debe diluirse en una solución parenteral compatible antes de administrarse. Administrar exclusivamente por infusión intravenosa, preferentemente en una vena de buen calibre y con bomba de infusión."
+          },
+          {
+            "label": "Incompatibilidad alcalina",
+            "text": "No agregar a bicarbonato de sodio ni a otras soluciones IV alcalinas, ya que la dopamina se inactiva en medio alcalino. Inspeccionar la solución y no administrarla si está oscurecida o decolorada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Dopamine Hydrochloride Injection, Prescribing Information",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-10-30."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Dopamine Hydrochloride Injection, Prescribing Information",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización de la fuente informada: 2025-10-30."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH02",
+        "id": "dailymed_dopamine_fc1eb709",
+        "title": "DailyMed — Dopamine Hydrochloride Injection, Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fc1eb709-ce72-413e-9043-8e463ef0fd36",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-10-30"
+      }
+    ]
+  }
 }

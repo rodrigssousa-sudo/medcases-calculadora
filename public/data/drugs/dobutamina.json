@@ -22,5 +22,59 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "dobutamina",
+    "stage_a_batch": "02",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição IV",
+            "text": "A dobutamina concentrada deve ser diluída antes da administração em recipiente IV, utilizando solução compatível conforme a rotulagem. A solução intravenosa diluída deve ser utilizada dentro de 24 horas."
+          },
+          {
+            "label": "Incompatibilidades",
+            "text": "Não adicionar a bicarbonato de sódio 5% nem a outras soluções fortemente alcalinas. Devido a incompatibilidades físicas, evitar misturar dobutamina com outros fármacos na mesma solução."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución IV",
+            "text": "La dobutamina concentrada debe diluirse antes de la administración en un recipiente IV, utilizando una solución compatible según el rotulado. La solución intravenosa diluida debe utilizarse dentro de 24 horas."
+          },
+          {
+            "label": "Incompatibilidades",
+            "text": "No agregar a bicarbonato de sodio al 5% ni a otras soluciones fuertemente alcalinas. Debido a incompatibilidades físicas, evitar mezclar dobutamina con otros fármacos en la misma solución."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Dobutamine Injection, Prescribing Information",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Dobutamine Injection, Prescribing Information",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH02",
+        "id": "dailymed_dobutamine_74ba9408",
+        "title": "DailyMed — Dobutamine Injection, Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=74ba9408-17d3-48ac-be0b-a4fee9e7a1a5",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

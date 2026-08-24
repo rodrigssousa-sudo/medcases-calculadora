@@ -21,5 +21,59 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "atropina",
+    "stage_a_batch": "02",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração IV",
+            "text": "A apresentação consultada é destinada à administração intravenosa. Antes do uso, inspecionar visualmente quanto a partículas e descoloração; não administrar se a solução não estiver límpida ou se o lacre estiver comprometido."
+          },
+          {
+            "label": "Seringa de dose única",
+            "text": "A seringa é de dose única; descartar qualquer porção não utilizada. Durante a administração, titular conforme frequência cardíaca, intervalo PR, pressão arterial e sintomas, de acordo com a indicação clínica."
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración IV",
+            "text": "La presentación consultada está destinada a administración intravenosa. Antes de usar, inspeccionar visualmente partículas y decoloración; no administrar si la solución no está límpida o si el sello está comprometido."
+          },
+          {
+            "label": "Jeringa de dosis única",
+            "text": "La jeringa es de dosis única; descartar cualquier porción no utilizada. Durante la administración, titular según frecuencia cardíaca, intervalo PR, presión arterial y síntomas, de acuerdo con la indicación clínica."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Atropine Sulfate Injection, Prescribing Information",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Atropine Sulfate Injection, Prescribing Information",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH02",
+        "id": "dailymed_atropine_80a31286",
+        "title": "DailyMed — Atropine Sulfate Injection, Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=80a31286-a741-4440-b200-290c08925d06",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

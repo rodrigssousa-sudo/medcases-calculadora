@@ -160,5 +160,67 @@
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "amiodarona",
+    "stage_a_batch": "02",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição / bomba",
+            "text": "Para a formulação intravenosa, preparar em dextrose 5% e administrar por bomba volumétrica de infusão. Utilizar filtro em linha durante a administração."
+          },
+          {
+            "label": "Acesso venoso",
+            "text": "Sempre que possível, administrar por cateter venoso central dedicado. Em infusões por mais de 1 hora, não exceder 2 mg/mL em acesso periférico; concentrações superiores requerem acesso central conforme a rotulagem."
+          },
+          {
+            "label": "Recipiente / compatibilidade",
+            "text": "Infusões com duração superior a 2 horas devem ser administradas em recipientes de vidro ou poliolefina com dextrose 5%. Verificar incompatibilidades em Y-site e usar linha separada quando necessário."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución / bomba",
+            "text": "Para la formulación intravenosa, preparar en dextrosa al 5% y administrar mediante bomba volumétrica de infusión. Utilizar filtro en línea durante la administración."
+          },
+          {
+            "label": "Acceso venoso",
+            "text": "Siempre que sea posible, administrar por catéter venoso central dedicado. En infusiones de más de 1 hora, no superar 2 mg/mL por acceso periférico; concentraciones mayores requieren acceso central según el rotulado."
+          },
+          {
+            "label": "Recipiente / compatibilidad",
+            "text": "Las infusiones de más de 2 horas deben administrarse en recipientes de vidrio o poliolefina con dextrosa al 5%. Verificar incompatibilidades en Y-site y usar una línea separada cuando sea necesario."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Amiodarone Hydrochloride Injection, Prescribing Information",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Amiodarone Hydrochloride Injection, Prescribing Information",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH02",
+        "id": "dailymed_amiodarone_e9151c1b",
+        "title": "DailyMed — Amiodarone Hydrochloride Injection, Prescribing Information",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9151c1b-b70c-477b-868a-fffdc5c51830",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

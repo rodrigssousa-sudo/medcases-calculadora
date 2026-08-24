@@ -396,5 +396,52 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "enalapril",
+    "stage_a_batch": "02",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "VO / alimentos",
+            "text": "Uso oral. A absorção do enalapril não é influenciada pela presença de alimentos no trato gastrointestinal; pode ser administrado independentemente das refeições."
+          }
+        ],
+        "es": [
+          {
+            "label": "VO / alimentos",
+            "text": "Uso oral. La absorción de enalapril no se ve influida por la presencia de alimentos en el tracto gastrointestinal; puede administrarse independientemente de las comidas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Enalapril Maleate Tablets, Prescribing Information",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-06-25."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Enalapril Maleate Tablets, Prescribing Information",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización de la fuente informada: 2026-06-25."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH02",
+        "id": "dailymed_enalapril_63187a94",
+        "title": "DailyMed — Enalapril Maleate Tablets, Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=63187a94-9ac7-4320-ac70-0631e08c2b8d",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-06-25"
+      }
+    ]
+  }
 }

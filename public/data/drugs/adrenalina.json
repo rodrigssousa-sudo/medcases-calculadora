@@ -22,5 +22,60 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "adrenalina",
+    "stage_a_batch": "02",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Anafilaxia",
+            "text": "Na anafilaxia, a rotulagem prevê administração intramuscular ou subcutânea na face anterolateral da coxa. Confirmar cuidadosamente a concentração da apresentação antes da administração para evitar erros de concentração/rota."
+          },
+          {
+            "label": "Infusão IV",
+            "text": "Para infusão intravenosa em choque séptico, diluir previamente em solução de dextrose e administrar em veia calibrosa, com titulação e monitorização contínuas conforme o protocolo clínico."
+          }
+        ],
+        "es": [
+          {
+            "label": "Anafilaxia",
+            "text": "En anafilaxia, el rotulado contempla administración intramuscular o subcutánea en la cara anterolateral del muslo. Confirmar cuidadosamente la concentración de la presentación antes de administrar para evitar errores de concentración/vía."
+          },
+          {
+            "label": "Infusión IV",
+            "text": "Para infusión intravenosa en shock séptico, diluir previamente en solución de dextrosa y administrar en una vena de buen calibre, con titulación y monitorización continuas según el protocolo clínico."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Epinephrine Injection, Prescribing Information",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-07-15."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Epinephrine Injection, Prescribing Information",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización de la fuente informada: 2026-07-15."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH02",
+        "id": "dailymed_epinephrine_4f83895f",
+        "title": "DailyMed — Epinephrine Injection, Prescribing Information",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f83895f-638c-4515-af03-7c41ae60a42e",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-07-15"
+      }
+    ]
+  }
 }

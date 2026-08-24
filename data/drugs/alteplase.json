@@ -62,5 +62,60 @@
         "sourceModule": "analgesicos.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "alteplase",
+    "stage_a_batch": "02",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir assepticamente apenas com Água Estéril para Injeção sem conservantes; não usar água bacteriostática. Misturar por rotação suave e/ou inversão lenta; não agitar."
+          },
+          {
+            "label": "Administração IV",
+            "text": "Uso intravenoso. Não adicionar outros medicamentos à solução contendo alteplase. Após reconstituição, inspecionar quanto a partículas/descoloração e utilizar dentro da janela de estabilidade descrita na rotulagem."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir asépticamente solo con Agua Estéril para Inyección sin conservantes; no usar agua bacteriostática. Mezclar mediante giro suave y/o inversión lenta; no agitar."
+          },
+          {
+            "label": "Administración IV",
+            "text": "Uso intravenoso. No agregar otros medicamentos a la solución que contiene alteplasa. Tras la reconstitución, inspeccionar partículas/decoloración y utilizar dentro de la ventana de estabilidad indicada en el rotulado."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Activase (alteplase), Prescribing Information",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-01-20."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Activase (alteplase), Prescribing Information",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización de la fuente informada: 2026-01-20."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH02",
+        "id": "dailymed_activase_c669f77c",
+        "title": "DailyMed — Activase (alteplase), Prescribing Information",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-01-20"
+      }
+    ]
+  }
 }
