@@ -22,5 +22,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "ketamina",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Inspeção / via",
+            "text": "Solução injetável para uso IV ou IM. Inspecionar visualmente partículas e descoloração antes da administração; descartar se houver alteração."
+          },
+          {
+            "label": "Diluição para indução",
+            "text": "Não administrar IV a concentração de 100 mg/mL sem diluição apropriada. Para indução, pode ser diluída em volume igual de Água Estéril para Injeção, SF 0,9% ou dextrose 5%, conforme a rotulagem; usar imediatamente após diluição."
+          },
+          {
+            "label": "Infusão",
+            "text": "Para manutenção por infusão, a rotulagem descreve preparo em dextrose 5% ou SF 0,9% e uso imediato após a diluição. Ajustar a concentração ao contexto clínico e ao volume permitido."
+          }
+        ],
+        "es": [
+          {
+            "label": "Inspección / vía",
+            "text": "Solución inyectable para uso IV o IM. Inspeccionar visualmente partículas y decoloración antes de administrar; descartar si presenta alteraciones."
+          },
+          {
+            "label": "Dilución para inducción",
+            "text": "No administrar por vía IV la concentración de 100 mg/mL sin dilución adecuada. Para inducción, puede diluirse con igual volumen de Agua Estéril para Inyección, SF 0,9% o dextrosa 5%, según el rotulado; usar inmediatamente tras la dilución."
+          },
+          {
+            "label": "Infusión",
+            "text": "Para mantenimiento mediante infusión, el rotulado describe preparación en dextrosa 5% o SF 0,9% y uso inmediato tras la dilución. Ajustar la concentración al contexto clínico y al volumen permitido."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Ketamine Hydrochloride Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Ketamine Hydrochloride Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_ketamine_902c3785",
+        "title": "DailyMed — Ketamine Hydrochloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=902c3785-a3cb-472b-ac15-394ac646271d",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

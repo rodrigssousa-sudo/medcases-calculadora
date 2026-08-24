@@ -21,5 +21,59 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "neurologia.js"
+  "sourceModule": "neurologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "lasmiditana",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração VO",
+            "text": "Administrar o comprimido inteiro por via oral, com ou sem alimentos. Não partir, triturar ou mastigar."
+          },
+          {
+            "label": "Após a tomada",
+            "text": "Orientar o paciente a não dirigir nem operar máquinas por pelo menos 8 horas após cada dose, mesmo que se sinta apto."
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración VO",
+            "text": "Administrar el comprimido entero por vía oral, con o sin alimentos. No partir, triturar ni masticar."
+          },
+          {
+            "label": "Después de la toma",
+            "text": "Indicar al paciente que no conduzca ni opere maquinaria durante al menos 8 horas después de cada dosis, aunque se sienta capacitado."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — REYVOW (lasmiditan)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — REYVOW (lasmiditan)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_reyvow_aea3358c",
+        "title": "DailyMed — REYVOW (lasmiditan)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aea3358c-ff41-4490-9e6d-c7bf7b3de13f",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

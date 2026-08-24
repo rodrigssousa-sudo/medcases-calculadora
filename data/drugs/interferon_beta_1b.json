@@ -22,5 +22,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "neurologia.js"
+  "sourceModule": "neurologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "interferon_beta_1b",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Reconstituir o pó liofilizado com 1,2 mL do diluente fornecido (cloreto de sódio 0,54%) usando o adaptador do frasco. Injetar o diluente lentamente e girar suavemente até dissolução; não agitar."
+          },
+          {
+            "label": "Via SC / inspeção",
+            "text": "Uso exclusivamente subcutâneo. Antes de administrar, inspecionar a solução reconstituída e descartar se houver partículas ou alteração de cor; alternar os locais de aplicação."
+          },
+          {
+            "label": "Após reconstituição",
+            "text": "Se não for usada imediatamente, refrigerar a solução reconstituída entre 2–8 °C e utilizar dentro de 3 horas. Não congelar e descartar porções não utilizadas."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Reconstituir el polvo liofilizado con 1,2 mL del diluyente suministrado (cloruro de sodio 0,54%) utilizando el adaptador del vial. Inyectar el diluyente lentamente y girar suavemente hasta disolver; no agitar."
+          },
+          {
+            "label": "Vía SC / inspección",
+            "text": "Uso exclusivamente subcutáneo. Antes de administrar, inspeccionar la solución reconstituida y descartar si presenta partículas o cambio de color; alternar los sitios de aplicación."
+          },
+          {
+            "label": "Después de reconstituir",
+            "text": "Si no se usa de inmediato, refrigerar la solución reconstituida entre 2–8 °C y utilizar dentro de 3 horas. No congelar y descartar las porciones no utilizadas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — BETASERON (interferon beta-1b)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — BETASERON (interferon beta-1b)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_betaseron_66311f74",
+        "title": "DailyMed — BETASERON (interferon beta-1b)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=66311f74-0472-4fa3-848a-06002ca0def5",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

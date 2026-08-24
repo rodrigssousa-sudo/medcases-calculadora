@@ -21,5 +21,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "neurologia.js"
+  "sourceModule": "neurologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "lecanemabe",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição IV",
+            "text": "Para infusão IV, diluir a dose calculada em bolsa contendo 250 mL de SF 0,9% com técnica asséptica. Misturar por inversão suave; não agitar."
+          },
+          {
+            "label": "Infusão",
+            "text": "Administrar o volume total por via IV durante aproximadamente 1 hora, utilizando linha com filtro terminal em linha de baixa ligação proteica de 0,2 micra. Ao final, lavar a linha para assegurar administração completa."
+          },
+          {
+            "label": "Estabilidade / inspeção",
+            "text": "Uso imediato após diluição é preferível. Se necessário, a solução diluída pode ser mantida por até 4 horas refrigerada entre 2–8 °C ou em temperatura ambiente até 30 °C; não congelar. Inspecionar partículas e descoloração antes do uso."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución IV",
+            "text": "Para infusión IV, diluir la dosis calculada en una bolsa con 250 mL de SF 0,9% usando técnica aséptica. Mezclar mediante inversión suave; no agitar."
+          },
+          {
+            "label": "Infusión",
+            "text": "Administrar el volumen total por vía IV durante aproximadamente 1 hora, utilizando una línea con filtro terminal en línea de baja unión proteica de 0,2 micras. Al finalizar, lavar la línea para asegurar la administración completa."
+          },
+          {
+            "label": "Estabilidad / inspección",
+            "text": "Se prefiere el uso inmediato tras la dilución. Si es necesario, la solución diluida puede mantenerse hasta 4 horas refrigerada entre 2–8 °C o a temperatura ambiente hasta 30 °C; no congelar. Inspeccionar partículas y decoloración antes del uso."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — LEQEMBI (lecanemab-irmb)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — LEQEMBI (lecanemab-irmb)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_leqembi_9d1ff786",
+        "title": "DailyMed — LEQEMBI (lecanemab-irmb)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=9d1ff786-e577-410a-a273-c4d7d0e4e975",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

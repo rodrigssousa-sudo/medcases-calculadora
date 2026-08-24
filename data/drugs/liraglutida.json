@@ -21,5 +21,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "endocrino_glp1.js"
+  "sourceModule": "endocrino_glp1.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "liraglutida",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via SC",
+            "text": "Administrar por via subcutânea uma vez ao dia, independentemente das refeições, no abdome, coxa ou braço. Inspecionar a solução antes de cada aplicação e usar apenas se estiver límpida, incolor e sem partículas."
+          },
+          {
+            "label": "Rodízio / insulina",
+            "text": "Alternar os pontos de aplicação dentro da mesma região. Quando usada com insulina, administrar em injeções separadas; não misturar. Podem ser aplicadas na mesma região corporal, mas não em pontos adjacentes."
+          },
+          {
+            "label": "Caneta",
+            "text": "Utilizar a caneta e agulha conforme as instruções específicas do dispositivo e não compartilhar a caneta entre pacientes, mesmo com troca de agulha."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía SC",
+            "text": "Administrar por vía subcutánea una vez al día, independientemente de las comidas, en abdomen, muslo o brazo. Inspeccionar la solución antes de cada aplicación y usar solo si está límpida, incolora y sin partículas."
+          },
+          {
+            "label": "Rotación / insulina",
+            "text": "Alternar los puntos de aplicación dentro de la misma región. Cuando se use con insulina, administrar en inyecciones separadas; no mezclar. Pueden aplicarse en la misma región corporal, pero no en puntos adyacentes."
+          },
+          {
+            "label": "Pluma",
+            "text": "Utilizar la pluma y la aguja según las instrucciones específicas del dispositivo y no compartir la pluma entre pacientes, incluso si se cambia la aguja."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — VICTOZA (liraglutide)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — VICTOZA (liraglutide)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_victoza_5a9ef4ea",
+        "title": "DailyMed — VICTOZA (liraglutide)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a9ef4ea-c76a-4d34-a604-27c5b505f5a4",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

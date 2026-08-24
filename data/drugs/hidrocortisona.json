@@ -22,5 +22,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "imuno_corticoide.js"
+  "sourceModule": "imuno_corticoide.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "hidrocortisona",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Reconstituição",
+            "text": "Para hidrocortisona succinato sódico 100 mg em frasco-ampola, reconstituir assepticamente com até 2 mL de Água Estéril para Injeção quando for necessário diluente sem conservante. Inspecionar partículas e descoloração antes do uso."
+          },
+          {
+            "label": "IV / IM",
+            "text": "Pode ser administrada por injeção IV, infusão IV ou IM; em emergência, a via IV é a preferida. Para infusão, após reconstituição, pode ser adicionada a solução compatível conforme a rotulagem da apresentação."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Respeitar as instruções específicas da apresentação quanto a compatibilidade e estabilidade; não misturar indiscriminadamente com outros fármacos ou soluções devido ao risco de incompatibilidade física."
+          }
+        ],
+        "es": [
+          {
+            "label": "Reconstitución",
+            "text": "Para hidrocortisona succinato sódico 100 mg en vial, reconstituir asépticamente con hasta 2 mL de Agua Estéril para Inyección cuando se requiera diluyente sin conservante. Inspeccionar partículas y decoloración antes del uso."
+          },
+          {
+            "label": "IV / IM",
+            "text": "Puede administrarse por inyección IV, infusión IV o IM; en emergencias, la vía IV es la preferida. Para infusión, después de la reconstitución, puede agregarse a una solución compatible según el rotulado de la presentación."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "Respetar las instrucciones específicas de la presentación sobre compatibilidad y estabilidad; no mezclar indiscriminadamente con otros fármacos o soluciones por riesgo de incompatibilidad física."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Hydrocortisone Sodium Succinate for Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Hydrocortisone Sodium Succinate for Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_hydrocortisone_bfe185a6",
+        "title": "DailyMed — Hydrocortisone Sodium Succinate for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bfe185a6-b657-2fbb-4ac2-e085373f15f3",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

@@ -22,5 +22,82 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "neurologia.js"
+  "sourceModule": "neurologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "interferon_beta_1a",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Confirmar apresentação",
+            "text": "A via depende da formulação comercial: apresentações como REBIF são subcutâneas, enquanto AVONEX é intramuscular. Não intercambiar técnica, dispositivo ou via sem confirmar a apresentação prescrita."
+          },
+          {
+            "label": "SC — quando aplicável",
+            "text": "Nas apresentações subcutâneas, alternar os locais de injeção e utilizar técnica asséptica conforme as instruções do dispositivo. Aplicações em dias programados devem manter o intervalo mínimo definido na rotulagem."
+          },
+          {
+            "label": "IM — quando aplicável",
+            "text": "Nas apresentações intramusculares, seguir as instruções específicas da seringa/autoinjetor e do local de aplicação. Analgésico ou antitérmico em dias de tratamento pode ser considerado conforme orientação clínica para sintomas gripais."
+          }
+        ],
+        "es": [
+          {
+            "label": "Confirmar presentación",
+            "text": "La vía depende de la formulación comercial: presentaciones como REBIF son subcutáneas, mientras que AVONEX es intramuscular. No intercambiar técnica, dispositivo o vía sin confirmar la presentación prescrita."
+          },
+          {
+            "label": "SC — cuando corresponda",
+            "text": "En las presentaciones subcutáneas, alternar los sitios de inyección y utilizar técnica aséptica según las instrucciones del dispositivo. Las aplicaciones en días programados deben mantener el intervalo mínimo definido en el rotulado."
+          },
+          {
+            "label": "IM — cuando corresponda",
+            "text": "En las presentaciones intramusculares, seguir las instrucciones específicas de la jeringa/autoinyector y del sitio de aplicación. Puede considerarse analgésico o antipirético en los días de tratamiento según orientación clínica para síntomas seudogripales."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — REBIF (interferon beta-1a)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          },
+          {
+            "label": "DailyMed — AVONEX (interferon beta-1a)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — REBIF (interferon beta-1a)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          },
+          {
+            "label": "DailyMed — AVONEX (interferon beta-1a)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_rebif_c6fcb5d2",
+        "title": "DailyMed — REBIF (interferon beta-1a)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6fcb5d2-8fcd-44fa-a838-b84ee5f44f0f",
+        "reviewed_at": "2026-08-24"
+      },
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_avonex_d70a39cc",
+        "title": "DailyMed — AVONEX (interferon beta-1a)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=d70a39cc-de15-4c12-a1ec-8063b69ea0e1",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

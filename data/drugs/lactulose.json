@@ -21,5 +21,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "gastro.js"
+  "sourceModule": "gastro.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "lactulose",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via oral",
+            "text": "A solução pode ser administrada por via oral; ajustar a administração ao objetivo clínico e à tolerância gastrointestinal, evitando excesso que produza diarreia persistente."
+          },
+          {
+            "label": "Via retal — encefalopatia",
+            "text": "Quando houver risco de aspiração ou impossibilidade de uso oral na encefalopatia portossistêmica, pode ser usada como enema de retenção: misturar 300 mL de lactulose com 700 mL de água ou solução fisiológica e reter por 30–60 minutos, conforme a rotulagem."
+          },
+          {
+            "label": "Cuidados no enema",
+            "text": "Não utilizar enemas de limpeza com sabão ou outros agentes alcalinos. A via oral deve ser retomada antes da suspensão completa dos enemas quando o estado clínico permitir."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía oral",
+            "text": "La solución puede administrarse por vía oral; ajustar la administración al objetivo clínico y a la tolerancia gastrointestinal, evitando exceso que produzca diarrea persistente."
+          },
+          {
+            "label": "Vía rectal — encefalopatía",
+            "text": "Cuando exista riesgo de aspiración o imposibilidad de uso oral en la encefalopatía portosistémica, puede utilizarse como enema de retención: mezclar 300 mL de lactulosa con 700 mL de agua o solución fisiológica y retener durante 30–60 minutos, según el rotulado."
+          },
+          {
+            "label": "Cuidados del enema",
+            "text": "No utilizar enemas de limpieza con jabón ni otros agentes alcalinos. La vía oral debe reiniciarse antes de suspender completamente los enemas cuando el estado clínico lo permita."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Lactulose Solution USP",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Lactulose Solution USP",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_lactulose_a8af7389",
+        "title": "DailyMed — Lactulose Solution USP",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8af7389-3699-4873-b05a-509af7e8eaab",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

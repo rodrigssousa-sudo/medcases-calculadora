@@ -22,5 +22,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "neurologia.js"
+  "sourceModule": "neurologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "glatiramer",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via SC / técnica",
+            "text": "Administrar exclusivamente por via subcutânea conforme a apresentação. A primeira aplicação deve ser realizada sob supervisão de profissional de saúde; usar técnica asséptica e não reutilizar agulhas ou seringas."
+          },
+          {
+            "label": "Rodízio de locais",
+            "text": "Alternar áreas e pontos de injeção a cada aplicação para reduzir lipoatrofia, necrose e outras reações locais. Confirmar compatibilidade do autoinjetor com a apresentação utilizada."
+          },
+          {
+            "label": "Conservação",
+            "text": "Conservar preferencialmente refrigerado entre 2–8 °C. Quando necessário, pode permanecer entre 15–30 °C por até 1 mês; proteger de calor intenso e luz e não congelar."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía SC / técnica",
+            "text": "Administrar exclusivamente por vía subcutánea según la presentación. La primera aplicación debe realizarse bajo supervisión de un profesional de salud; usar técnica aséptica y no reutilizar agujas ni jeringas."
+          },
+          {
+            "label": "Rotación de sitios",
+            "text": "Alternar áreas y puntos de inyección en cada aplicación para reducir lipoatrofia, necrosis y otras reacciones locales. Confirmar la compatibilidad del autoinyector con la presentación utilizada."
+          },
+          {
+            "label": "Conservación",
+            "text": "Conservar preferentemente refrigerado entre 2–8 °C. Cuando sea necesario, puede permanecer entre 15–30 °C hasta 1 mes; proteger del calor intenso y la luz y no congelar."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Glatiramer Acetate Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Glatiramer Acetate Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_glatiramer_707a64ef",
+        "title": "DailyMed — Glatiramer Acetate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=707a64ef-964e-44a3-8a0f-fcc2eb5b1af2",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

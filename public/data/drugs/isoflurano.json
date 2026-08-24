@@ -21,5 +21,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "isoflurano",
+    "stage_a_batch": "03",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração inalatória",
+            "text": "Administrar apenas por profissional treinado em anestesia geral, em ambiente com capacidade de manejo de via aérea, ventilação e reanimação."
+          },
+          {
+            "label": "Vaporizador específico",
+            "text": "O isoflurano líquido deve ser administrado somente por vaporizador especificamente projetado e identificado para isoflurano, permitindo controle preciso da concentração inspirada."
+          },
+          {
+            "label": "Titulação",
+            "text": "Individualizar e titular a concentração administrada conforme idade, condição clínica e resposta anestésica; monitorização fisiológica contínua é necessária durante a anestesia."
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración inhalatoria",
+            "text": "Administrar solo por profesionales entrenados en anestesia general, en un entorno con capacidad para manejo de vía aérea, ventilación y reanimación."
+          },
+          {
+            "label": "Vaporizador específico",
+            "text": "El isoflurano líquido debe administrarse únicamente mediante un vaporizador específicamente diseñado e identificado para isoflurano, permitiendo un control preciso de la concentración inspirada."
+          },
+          {
+            "label": "Titulación",
+            "text": "Individualizar y titular la concentración administrada según edad, condición clínica y respuesta anestésica; se requiere monitorización fisiológica continua durante la anestesia."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Isoflurane USP liquid for inhalation",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Isoflurane USP liquid for inhalation",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH03",
+        "id": "dailymed_isoflurane_525a2467",
+        "title": "DailyMed — Isoflurane USP liquid for inhalation",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=525a2467-548d-4b10-b181-91b90e99ae1b",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }
