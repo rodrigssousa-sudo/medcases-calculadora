@@ -62,5 +62,67 @@
         "sourceModule": "hematologia.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "rivaroxabana",
+    "stage_a_batch": "04",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Comprimido triturado",
+            "text": "Quando necessário, os comprimidos podem ser triturados e misturados com purê de maçã imediatamente antes da administração oral. Após comprimidos triturados de 15 mg ou 20 mg, administrar alimento imediatamente; isso não é necessário para 2,5 mg ou 10 mg."
+          },
+          {
+            "label": "Sonda gástrica",
+            "text": "Após confirmar posicionamento gástrico, o comprimido triturado pode ser suspenso em 50 mL de água e administrado por sonda nasogástrica ou sonda de alimentação gástrica. Evitar administração distal ao estômago."
+          },
+          {
+            "label": "Após sonda / estabilidade",
+            "text": "Após 15 mg ou 20 mg triturados por sonda, seguir imediatamente com alimentação enteral. Comprimidos triturados permanecem estáveis em água ou purê de maçã por até 4 horas."
+          }
+        ],
+        "es": [
+          {
+            "label": "Comprimido triturado",
+            "text": "Cuando sea necesario, los comprimidos pueden triturarse y mezclarse con puré de manzana inmediatamente antes de la administración oral. Tras comprimidos triturados de 15 mg o 20 mg, administrar alimento inmediatamente; esto no es necesario para 2,5 mg o 10 mg."
+          },
+          {
+            "label": "Sonda gástrica",
+            "text": "Después de confirmar la posición gástrica, el comprimido triturado puede suspenderse en 50 mL de agua y administrarse por sonda nasogástrica o sonda de alimentación gástrica. Evitar la administración distal al estómago."
+          },
+          {
+            "label": "Después de sonda / estabilidad",
+            "text": "Tras 15 mg o 20 mg triturados por sonda, continuar inmediatamente con alimentación enteral. Los comprimidos triturados permanecen estables en agua o puré de manzana hasta 4 horas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — XARELTO (rivaroxaban)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — XARELTO (rivaroxaban)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH04",
+        "id": "dailymed_xarelto_10db92f9",
+        "title": "DailyMed — XARELTO (rivaroxaban)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }

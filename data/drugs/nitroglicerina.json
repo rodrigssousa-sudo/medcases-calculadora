@@ -22,5 +22,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "cardiologia.js"
+  "sourceModule": "cardiologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "nitroglicerina",
+    "stage_a_batch": "04",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição obrigatória",
+            "text": "Uso intravenoso apenas após diluição. Não administrar a solução concentrada diretamente por via IV; diluir previamente em dextrose 5% ou solução de cloreto de sódio 0,9%."
+          },
+          {
+            "label": "Linha de infusão",
+            "text": "Utilizar, quando disponível, equipo/tubulação de baixa adsorção e preferencialmente não-PVC, pois a nitroglicerina pode ser adsorvida por PVC e reduzir a quantidade efetivamente entregue ao paciente."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Não misturar nitroglicerina com outros medicamentos na mesma solução. Evitar filtros IV em linha que possam adsorver nitroglicerina."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución obligatoria",
+            "text": "Uso intravenoso únicamente después de dilución. No administrar la solución concentrada directamente por vía IV; diluir previamente en dextrosa al 5% o solución de cloruro de sodio al 0,9%."
+          },
+          {
+            "label": "Línea de infusión",
+            "text": "Utilizar, cuando esté disponible, un equipo/tubuladura de baja adsorción y preferentemente no-PVC, ya que la nitroglicerina puede adsorberse al PVC y reducir la cantidad efectivamente administrada al paciente."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "No mezclar nitroglicerina con otros medicamentos en la misma solución. Evitar filtros IV en línea que puedan adsorber nitroglicerina."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Nitroglycerin Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2021-07-22."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Nitroglycerin Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2021-07-22."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH04",
+        "id": "dailymed_nitroglycerin_8c52cdf6",
+        "title": "DailyMed — Nitroglycerin Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8c52cdf6-87be-4719-b105-f08be096d462",
+        "reviewed_at": "2026-08-24",
+        "updated": "2021-07-22"
+      }
+    ]
+  }
 }

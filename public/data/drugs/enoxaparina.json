@@ -63,5 +63,68 @@
         "sourceModule": "hematologia.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "enoxaparina",
+    "stage_a_batch": "04",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Técnica SC",
+            "text": "Administrar por injeção subcutânea profunda conforme a apresentação. Para a aplicação subcutânea, manter o paciente em decúbito e utilizar técnica apropriada no tecido adiposo abdominal."
+          },
+          {
+            "label": "Seringa pré-cheia",
+            "text": "Não expulsar a bolha de ar da seringa pré-cheia antes da injeção, para evitar perda de medicamento. Não aplicar sobre áreas com equimoses ou cicatrizes e não injetar através da roupa."
+          },
+          {
+            "label": "Rodízio de sítios",
+            "text": "Alternar os locais de aplicação entre as paredes abdominal anterolateral e posterolateral, à direita e à esquerda."
+          }
+        ],
+        "es": [
+          {
+            "label": "Técnica SC",
+            "text": "Administrar mediante inyección subcutánea profunda según la presentación. Para la aplicación subcutánea, mantener al paciente en decúbito y utilizar una técnica adecuada en el tejido adiposo abdominal."
+          },
+          {
+            "label": "Jeringa precargada",
+            "text": "No expulsar la burbuja de aire de la jeringa precargada antes de la inyección, para evitar pérdida del medicamento. No aplicar sobre zonas con equimosis o cicatrices y no inyectar a través de la ropa."
+          },
+          {
+            "label": "Rotación de sitios",
+            "text": "Alternar los sitios de aplicación entre las paredes abdominales anterolateral y posterolateral, derecha e izquierda."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — LOVENOX (enoxaparin sodium injection)",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-05-28."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — LOVENOX (enoxaparin sodium injection)",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-05-28."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH04",
+        "id": "dailymed_lovenox_5017a927",
+        "title": "DailyMed — LOVENOX (enoxaparin sodium injection)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5017a927-2a24-4f27-89f9-27c805bf7d59",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-05-28"
+      }
+    ]
+  }
 }

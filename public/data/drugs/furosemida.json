@@ -368,5 +368,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "furosemida",
+    "stage_a_batch": "04",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via parenteral",
+            "text": "A apresentação injetável pode ser administrada por via intravenosa ou intramuscular. Quando se deseja início rápido de diurese, como no edema pulmonar agudo, a via intravenosa é a preferida."
+          },
+          {
+            "label": "Infusão IV controlada",
+            "text": "Quando for necessária terapia parenteral em dose alta, preferir infusão intravenosa controlada; em adultos, a rotulagem descreve velocidade de infusão não superior a 4 mg/min."
+          },
+          {
+            "label": "Uso parenteral transitório",
+            "text": "Quando a via oral voltar a ser viável, substituir a terapia parenteral por furosemida oral assim que for clinicamente apropriado."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía parenteral",
+            "text": "La presentación inyectable puede administrarse por vía intravenosa o intramuscular. Cuando se desea un inicio rápido de la diuresis, como en edema pulmonar agudo, se prefiere la vía intravenosa."
+          },
+          {
+            "label": "Infusión IV controlada",
+            "text": "Cuando se requiera terapia parenteral en dosis altas, preferir infusión intravenosa controlada; en adultos, el rotulado describe una velocidad de infusión no superior a 4 mg/min."
+          },
+          {
+            "label": "Uso parenteral transitorio",
+            "text": "Cuando la vía oral vuelva a ser viable, sustituir la terapia parenteral por furosemida oral tan pronto como sea clínicamente apropiado."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Furosemide Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-11-11."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Furosemide Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-11-11."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH04",
+        "id": "dailymed_furosemide_421aa6d5",
+        "title": "DailyMed — Furosemide Injection",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=421aa6d5-623b-4dc2-abd5-bb9e7765bf37",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-11-11"
+      }
+    ]
+  }
 }

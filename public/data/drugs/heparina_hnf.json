@@ -64,5 +64,68 @@
         "sourceModule": "hematologia.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "heparina_hnf",
+    "stage_a_batch": "04",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Vias permitidas",
+            "text": "Administrar por injeção intravenosa intermitente, infusão intravenosa ou injeção subcutânea profunda no tecido adiposo, conforme a indicação e a apresentação."
+          },
+          {
+            "label": "Evitar IM",
+            "text": "Não administrar por via intramuscular devido ao risco de hematoma no local da injeção."
+          },
+          {
+            "label": "Concentração / apresentação",
+            "text": "Confirmar cuidadosamente a concentração e a apresentação antes do preparo e da administração, pois há múltiplas concentrações comerciais de heparina sódica."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vías permitidas",
+            "text": "Administrar mediante inyección intravenosa intermitente, infusión intravenosa o inyección subcutánea profunda en tejido adiposo, según la indicación y la presentación."
+          },
+          {
+            "label": "Evitar IM",
+            "text": "No administrar por vía intramuscular debido al riesgo de hematoma en el sitio de inyección."
+          },
+          {
+            "label": "Concentración / presentación",
+            "text": "Confirmar cuidadosamente la concentración y la presentación antes de preparar y administrar, ya que existen múltiples concentraciones comerciales de heparina sódica."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Heparin Sodium Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-06-25."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Heparin Sodium Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-06-25."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH04",
+        "id": "dailymed_heparin_e0cc5f44",
+        "title": "DailyMed — Heparin Sodium Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e0cc5f44-9a67-4274-a48a-d6118e96d391",
+        "reviewed_at": "2026-08-24",
+        "updated": "2026-06-25"
+      }
+    ]
+  }
 }

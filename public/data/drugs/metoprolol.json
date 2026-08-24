@@ -830,5 +830,68 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "metoprolol",
+    "stage_a_batch": "04",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via IV",
+            "text": "A apresentação injetável consultada é destinada exclusivamente ao uso intravenoso."
+          },
+          {
+            "label": "Monitorização",
+            "text": "Durante a administração intravenosa, monitorar pressão arterial, frequência cardíaca e eletrocardiograma, especialmente quando forem administrados bólus seriados."
+          },
+          {
+            "label": "Frasco de dose única",
+            "text": "A apresentação é fornecida em frasco de dose única; descartar a porção não utilizada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía IV",
+            "text": "La presentación inyectable consultada está destinada exclusivamente al uso intravenoso."
+          },
+          {
+            "label": "Monitorización",
+            "text": "Durante la administración intravenosa, monitorizar presión arterial, frecuencia cardíaca y electrocardiograma, especialmente cuando se administren bolos seriados."
+          },
+          {
+            "label": "Vial de dosis única",
+            "text": "La presentación se suministra en vial de dosis única; desechar la porción no utilizada."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Metoprolol Tartrate Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2025-03-26."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Metoprolol Tartrate Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2025-03-26."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH04",
+        "id": "dailymed_metoprolol_c7ec36bb",
+        "title": "DailyMed — Metoprolol Tartrate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c7ec36bb-bc6f-42de-9974-a50ac13e9410",
+        "reviewed_at": "2026-08-24",
+        "updated": "2025-03-26"
+      }
+    ]
+  }
 }

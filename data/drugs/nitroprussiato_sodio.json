@@ -22,5 +22,67 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "cardiologia.js"
+  "sourceModule": "cardiologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "nitroprussiato_sodio",
+    "stage_a_batch": "04",
+    "stage_a_reviewed_at": "2026-08-24",
+    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Diluição",
+            "text": "Para infusão, a solução contendo 50 mg de nitroprussiato de sódio deve ser posteriormente diluída em 250 a 1000 mL de dextrose 5%, conforme a concentração desejada."
+          },
+          {
+            "label": "Proteção da luz",
+            "text": "Proteger a solução diluída da luz com capa opaca, papel-alumínio ou outro material opaco. Não é necessário cobrir a câmara de gotejamento nem a tubulação."
+          },
+          {
+            "label": "Inspeção / estabilidade",
+            "text": "Não utilizar solução com coloração azul, verde ou vermelha, nem com partículas visíveis. Quando adequadamente protegida da luz, a solução recém-diluída mantém estabilidade por 24 horas."
+          }
+        ],
+        "es": [
+          {
+            "label": "Dilución",
+            "text": "Para infusión, la solución que contiene 50 mg de nitroprusiato de sodio debe diluirse posteriormente en 250 a 1000 mL de dextrosa al 5%, según la concentración deseada."
+          },
+          {
+            "label": "Protección de la luz",
+            "text": "Proteger la solución diluida de la luz con funda opaca, papel de aluminio u otro material opaco. No es necesario cubrir la cámara de goteo ni la tubuladura."
+          },
+          {
+            "label": "Inspección / estabilidad",
+            "text": "No utilizar soluciones de color azul, verde o rojo ni con partículas visibles. Cuando está adecuadamente protegida de la luz, la solución recién diluida mantiene estabilidad durante 24 horas."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Sodium Nitroprusside Injection",
+            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Sodium Nitroprusside Injection",
+            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "stage": "A_BATCH04",
+        "id": "dailymed_nitroprusside_5a599880",
+        "title": "DailyMed — Sodium Nitroprusside Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5a599880-c133-44ef-a9f2-bd1b681563be&version=7",
+        "reviewed_at": "2026-08-24"
+      }
+    ]
+  }
 }
