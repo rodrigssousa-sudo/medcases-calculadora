@@ -348,4 +348,271 @@
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"
+,
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "clindamicina",
+    "reviewed_at": "2026-08-23",
+    "source_policy": "official_prescribing_information",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "VO",
+            "text": "Cápsulas: administrar com 200–250 mL de água e evitar deitar por pelo menos 30 minutos após a dose para reduzir irritação esofágica."
+          },
+          {
+            "label": "EV — diluição",
+            "text": "Diluir antes da infusão. A concentração final não deve exceder 18 mg/mL."
+          },
+          {
+            "label": "EV — velocidade",
+            "text": "Não exceder 30 mg/min. Referência: 300 mg em 50 mL/10 min; 600 mg em 50 mL/20 min; 900 mg em 50–100 mL/30 min; 1200 mg em 100 mL/40 min. Não se recomenda >1200 mg em uma única infusão de 1 hora."
+          },
+          {
+            "label": "Compatibilidade",
+            "text": "Evitar mistura física com ampicilina sódica, fenitoína sódica, barbitúricos, aminofilina, gluconato de cálcio e sulfato de magnésio."
+          }
+        ],
+        "es": [
+          {
+            "label": "VO",
+            "text": "Cápsulas: administrar con 200–250 mL de agua y evitar acostarse durante al menos 30 minutos después de la dosis para reducir la irritación esofágica."
+          },
+          {
+            "label": "EV — dilución",
+            "text": "Diluir antes de la infusión. La concentración final no debe superar 18 mg/mL."
+          },
+          {
+            "label": "EV — velocidad",
+            "text": "No superar 30 mg/min. Referencia: 300 mg en 50 mL/10 min; 600 mg en 50 mL/20 min; 900 mg en 50–100 mL/30 min; 1200 mg en 100 mL/40 min. No se recomienda >1200 mg en una única infusión de 1 hora."
+          },
+          {
+            "label": "Compatibilidad",
+            "text": "Evitar mezcla física con ampicilina sódica, fenitoína sódica, barbitúricos, aminofilina, gluconato de calcio y sulfato de magnesio."
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "CDAD/colite",
+            "severity": "critical",
+            "text": "Há alerta importante para diarreia e colite associadas a Clostridioides difficile, que podem surgir durante ou após o tratamento e variar de quadros leves a fatais."
+          },
+          {
+            "label": "Hipersensibilidade grave",
+            "severity": "critical",
+            "text": "Anafilaxia e reações cutâneas graves, incluindo SJS, TEN e DRESS, foram relatadas. Suspender definitivamente diante de reação anafilática ou hipersensibilidade grave e tratar de forma apropriada."
+          },
+          {
+            "label": "Nefrotoxicidade",
+            "severity": "warning",
+            "text": "Há relatos de lesão renal aguda. Considerar monitorização da função renal, especialmente em doença renal prévia ou uso concomitante de nefrotóxicos."
+          },
+          {
+            "label": "Infusão EV rápida",
+            "severity": "warning",
+            "text": "Administração intravenosa excessivamente rápida foi associada a hipotensão e parada cardiopulmonar; respeitar diluição e velocidade de infusão."
+          }
+        ],
+        "es": [
+          {
+            "label": "CDAD/colitis",
+            "severity": "critical",
+            "text": "Existe una advertencia importante por diarrea y colitis asociadas a Clostridioides difficile, que pueden aparecer durante o después del tratamiento y variar desde cuadros leves hasta fatales."
+          },
+          {
+            "label": "Hipersensibilidad grave",
+            "severity": "critical",
+            "text": "Se han descrito anafilaxia y reacciones cutáneas graves, incluyendo SJS, TEN y DRESS. Suspender definitivamente ante una reacción anafiláctica o hipersensibilidad grave e iniciar el tratamiento apropiado."
+          },
+          {
+            "label": "Nefrotoxicidad",
+            "severity": "warning",
+            "text": "Se han comunicado casos de lesión renal aguda. Considerar monitorización de la función renal, especialmente con enfermedad renal previa o uso concomitante de nefrotóxicos."
+          },
+          {
+            "label": "Infusión EV rápida",
+            "severity": "warning",
+            "text": "La administración intravenosa excesivamente rápida se ha asociado a hipotensión y paro cardiopulmonar; respetar la dilución y la velocidad de infusión."
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Gestação",
+            "text": "Dados clínicos disponíveis não mostraram aumento de malformações maiores com uso sistêmico no 2º e 3º trimestres. No 1º trimestre, os dados são limitados; utilizar quando clinicamente necessário após avaliação risco–benefício."
+          },
+          {
+            "label": "Lactação",
+            "text": "A clindamicina passa para o leite materno. O uso materno não exige necessariamente interromper a amamentação, porém deve-se observar o lactente para diarreia, candidíase ou, raramente, sangue nas fezes."
+          },
+          {
+            "label": "Idosos",
+            "text": "Vigiar especialmente diarreia/colite associada a antibióticos, que pode ser mais frequente e grave em pacientes idosos."
+          },
+          {
+            "label": "Tratamento prolongado",
+            "text": "Em terapia prolongada, realizar periodicamente hemograma e provas de função hepática e renal."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo",
+            "text": "Los datos clínicos disponibles no mostraron aumento de malformaciones mayores con uso sistémico durante el 2.º y 3.º trimestre. En el 1.º trimestre los datos son limitados; utilizar cuando sea clínicamente necesario tras valorar riesgo–beneficio."
+          },
+          {
+            "label": "Lactancia",
+            "text": "La clindamicina pasa a la leche materna. El uso materno no obliga necesariamente a suspender la lactancia, pero se debe vigilar al lactante por diarrea, candidiasis o, raramente, sangre en las heces."
+          },
+          {
+            "label": "Adultos mayores",
+            "text": "Vigilar especialmente diarrea/colitis asociada a antibióticos, que puede ser más frecuente y grave en pacientes de mayor edad."
+          },
+          {
+            "label": "Tratamiento prolongado",
+            "text": "Durante tratamientos prolongados, realizar periódicamente hemograma y pruebas de función hepática y renal."
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Bloqueadores neuromusculares",
+            "text": "Pode potencializar o bloqueio neuromuscular. Usar com cautela/evitar associação quando apropriado e monitorar o efeito clínico."
+          },
+          {
+            "label": "Inibidores CYP3A4/3A5",
+            "text": "Inibidores fortes podem aumentar a exposição à clindamicina; monitorar reações adversas."
+          },
+          {
+            "label": "Indutores CYP3A4/3A5",
+            "text": "Indutores fortes podem reduzir a exposição e a eficácia; com rifampicina, monitorar perda de resposta clínica."
+          },
+          {
+            "label": "Eritromicina",
+            "text": "Há antagonismo in vitro entre clindamicina e eritromicina; devido à possível relevância clínica, evitar administração concomitante."
+          }
+        ],
+        "es": [
+          {
+            "label": "Bloqueantes neuromusculares",
+            "text": "Puede potenciar el bloqueo neuromuscular. Usar con precaución/evitar la asociación cuando corresponda y monitorizar el efecto clínico."
+          },
+          {
+            "label": "Inhibidores CYP3A4/3A5",
+            "text": "Los inhibidores potentes pueden aumentar la exposición a clindamicina; monitorizar reacciones adversas."
+          },
+          {
+            "label": "Inductores CYP3A4/3A5",
+            "text": "Los inductores potentes pueden reducir la exposición y la eficacia; con rifampicina, monitorizar pérdida de respuesta clínica."
+          },
+          {
+            "label": "Eritromicina",
+            "text": "Existe antagonismo in vitro entre clindamicina y eritromicina; por su posible relevancia clínica, evitar la administración concomitante."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Mecanismo",
+            "text": "Lincosamida bacteriostática: inibe a síntese proteica bacteriana ao ligar-se ao RNA 23S da subunidade ribossomal 50S."
+          },
+          {
+            "label": "Absorção/distribuição",
+            "text": "Biodisponibilidade oral próxima de 90%; alimentos não alteram de modo relevante a concentração sérica. Distribui-se amplamente em tecidos e fluidos, incluindo osso, mas atinge concentrações pouco significativas no LCR."
+          },
+          {
+            "label": "Metabolismo",
+            "text": "Metabolizada predominantemente por CYP3A4 e, em menor grau, CYP3A5, formando principalmente clindamicina sulfóxido e N-desmetilclindamicina."
+          },
+          {
+            "label": "Eliminação",
+            "text": "Meia-vida biológica média aproximada de 2,4 h. Cerca de 10% da bioatividade é eliminada na urina e 3,6% nas fezes; o restante é eliminado como metabólitos inativos."
+          },
+          {
+            "label": "Resistência",
+            "text": "A resistência ocorre frequentemente por modificação do 23S rRNA. Resistência induzível por macrolídeos pode ocorrer; estafilococos e estreptococos beta-hemolíticos resistentes a macrolídeos devem ser avaliados para resistência induzível à clindamicina (teste D)."
+          }
+        ],
+        "es": [
+          {
+            "label": "Mecanismo",
+            "text": "Lincosamida bacteriostática: inhibe la síntesis proteica bacteriana al unirse al RNA 23S de la subunidad ribosomal 50S."
+          },
+          {
+            "label": "Absorción/distribución",
+            "text": "Biodisponibilidad oral cercana al 90%; los alimentos no modifican de forma relevante la concentración sérica. Se distribuye ampliamente en tejidos y fluidos, incluido el hueso, pero alcanza concentraciones poco significativas en LCR."
+          },
+          {
+            "label": "Metabolismo",
+            "text": "Se metaboliza principalmente por CYP3A4 y, en menor grado, CYP3A5, formando sobre todo sulfóxido de clindamicina y N-desmetilclindamicina."
+          },
+          {
+            "label": "Eliminación",
+            "text": "Vida media biológica promedio aproximada de 2,4 h. Cerca del 10% de la bioactividad se elimina por orina y 3,6% por heces; el resto se elimina como metabolitos inactivos."
+          },
+          {
+            "label": "Resistencia",
+            "text": "La resistencia suele producirse por modificación del 23S rRNA. Puede existir resistencia inducible por macrólidos; los aislamientos de estafilococos y estreptococos beta-hemolíticos resistentes a macrólidos deben evaluarse para resistencia inducible a clindamicina (prueba D)."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Clindamycin Hydrochloride Capsules",
+            "text": "Informação oficial de prescrição: administração oral, farmacologia clínica, interações, lactação e monitorização. Atualizações 2026."
+          },
+          {
+            "label": "DailyMed — Clindamycin Phosphate Injection",
+            "text": "Informação oficial de prescrição: diluição/infusão EV, incompatibilidades, alertas graves e nefrotoxicidade. Revisão 2026."
+          },
+          {
+            "label": "FDA / rotulagem oficial",
+            "text": "Fonte complementar para confirmar interações CYP3A4/3A5, bloqueio neuromuscular e populações especiais."
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Clindamycin Hydrochloride Capsules",
+            "text": "Información oficial de prescripción: administración oral, farmacología clínica, interacciones, lactancia y monitorización. Actualizaciones 2026."
+          },
+          {
+            "label": "DailyMed — Clindamycin Phosphate Injection",
+            "text": "Información oficial de prescripción: dilución/infusión EV, incompatibilidades, alertas graves y nefrotoxicidad. Revisión 2026."
+          },
+          {
+            "label": "FDA / ficha oficial",
+            "text": "Fuente complementaria para confirmar interacciones CYP3A4/3A5, bloqueo neuromuscular y poblaciones especiales."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_clindamycin_hcl_capsules_2026",
+        "title": "DailyMed — Clindamycin Hydrochloride Capsules, USP",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24595bb3-07ea-4d5f-9bb3-2c2332a1fc62"
+      },
+      {
+        "id": "dailymed_clindamycin_phosphate_injection_2026",
+        "title": "DailyMed — Clindamycin Phosphate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=78832ac6-04c5-45e0-ae4d-f56d7920dda9"
+      },
+      {
+        "id": "dailymed_clindamycin_phosphate_sodium_chloride_2026",
+        "title": "DailyMed — Clindamycin Phosphate in Sodium Chloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0"
+      },
+      {
+        "id": "fda_clindamycin_interactions",
+        "title": "FDA — Clindamycin Prescribing Information",
+        "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/050162s098s099lbl.pdf"
+      }
+    ]
+  }
 }

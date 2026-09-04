@@ -31,7 +31,7 @@
     "dose": {
       "adulto": "Epilepsia: iniciar 500 mg VO/EV 12/12h; titular conforme resposta.",
       "manutencao": "Dose usual: 1000–3000 mg/dia divididos em 2 tomadas.",
-      "pediatrica": "700–2100 mg por dose 12/12h, conforme idade e protocolo.",
+      "pediatrica": "Pediatria: iniciar 10 mg/kg/dose 12/12h; titular até 30 mg/kg/dose 12/12h conforme resposta.",
       "maxDose": "Dose máxima usual: 3000 mg/dia."
     },
     "doseKg": {
@@ -122,7 +122,7 @@
     "dose": {
       "adulto": "Epilepsia: iniciar 500 mg VO/IV cada 12 h; titular según respuesta.",
       "manutencao": "Dosis habitual: 1000–3000 mg/día divididos en 2 tomas.",
-      "pediatrica": "700–2100 mg por dosis cada 12 h, según edad y protocolo.",
+      "pediatrica": "Pediatría: iniciar 10 mg/kg/dosis cada 12 h; titular hasta 30 mg/kg/dosis cada 12 h según respuesta.",
       "maxDose": "Dosis máxima habitual: 3000 mg/día."
     },
     "doseKg": {
@@ -203,8 +203,7 @@
   "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "neurologia.js"
-,
+  "sourceModule": "neurologia.js",
   "mc_clinical_enrichment_v1": {
     "schema": "medcases.clinical-enrichment.v1",
     "drug_key": "levetiracetam",

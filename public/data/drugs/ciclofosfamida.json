@@ -28,11 +28,15 @@
   "color": null,
   "colorTxt": null,
   "commercialNames": {
-    "ar": [
-      "Endoxan"
-    ],
     "br": [
       "Genuxal"
+    ],
+    "ar": [
+      "Ciclofosfamida Filaxis",
+      "Ciclofosfamida Kemex",
+      "Ciclofosfamida LKM",
+      "Ciclofosfamida Microsules",
+      "Ciclofosfamida Lafedar"
     ]
   },
   "commonAdverseEffects": {
@@ -101,7 +105,426 @@
     }
   },
   "es": {
-    "name": "Ciclofosfamida"
+    "name": "Ciclofosfamida",
+    "dose": {
+      "adultoPadrao": "Enfermedades malignas (referencia oral de ficha técnica): 1–5 mg/kg/día VO 1 vez/día; ajustar según actividad antitumoral, mielosupresión y otras toxicidades.",
+      "pediatricaPadrao": "Enfermedades malignas (referencia oral de ficha técnica): 1–5 mg/kg/día VO 1 vez/día; ajustar según actividad antitumoral, mielosupresión y otras toxicidades.",
+      "porIndicacao": {
+        "enfermedadesMalignasVO": {
+          "titulo": "Enfermedades malignas — vía oral",
+          "regime": [
+            "Adultos y pediatría: 1–5 mg/kg/día VO 1 vez/día para dosis inicial y de mantenimiento.",
+            "Ajustar la dosis según actividad antitumoral, mielosupresión y otras reacciones adversas.",
+            "Cuando se usa en esquemas combinados puede ser necesario reducir la dosis de ciclofosfamida y/o de los demás citotóxicos."
+          ]
+        },
+        "enfermedadesMalignasIV": {
+          "titulo": "Enfermedades malignas — vía intravenosa",
+          "regime": [
+            "Curso inicial sin deficiencia hematológica: 40–50 mg/kg IV en dosis divididas durante 2–5 días.",
+            "Regímenes alternativos descritos en ficha técnica: 10–15 mg/kg IV cada 7–10 días o 3–5 mg/kg IV 2 veces/semana.",
+            "La dosis debe individualizarse según respuesta y toxicidad."
+          ]
+        },
+        "sindromeNefroticoCambiosMinimosPediatrico": {
+          "titulo": "Síndrome nefrótico por cambios mínimos — pediatría",
+          "regime": [
+            "2 mg/kg/día VO 1 vez/día durante 8–12 semanas.",
+            "Dosis acumulativa máxima: 168 mg/kg.",
+            "Indicación de ficha técnica para pacientes pediátricos con síndrome nefrótico por cambios mínimos comprobado por biopsia que no respondieron adecuadamente o no toleran corticosteroides."
+          ]
+        },
+        "nefritisLupicaClaseIIIIV": {
+          "titulo": "Nefritis lúpica activa Clase III/IV (± V)",
+          "regime": [
+            "Régimen IV de baja dosis (Euro-Lupus): 500 mg IV cada 2 semanas × 6 dosis.",
+            "Alternativa IV: 0,5–1,0 g/m² IV mensual × 6 dosis.",
+            "Alternativa VO: 1,0–1,5 mg/kg/día durante 3 meses.",
+            "KDIGO 2024 y ACR 2024/2025 favorecen una menor exposición a ciclofosfamida cuando es apropiado; la elección depende del contexto clínico y del régimen inmunosupresor completo."
+          ]
+        }
+      }
+    },
+    "references": [
+      "DailyMed — Cyclophosphamide Tablets, USP (Baxter). Full Prescribing Information. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=769ded74-6186-40a8-8e44-ceff67287451",
+      "DailyMed — Cyclophosphamide for Injection, powder for solution. Etiquetado vigente publicado en 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fdaa7d15-7c06-44ab-b1d5-9d2b3e8ffd28",
+      "DailyMed — Cyclophosphamide Injection, ready-to-dilute solution (Nevakar). https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9895cdbd-79cc-4bce-8e16-1c2e045e2592",
+      "Cancer Care Ontario — Cyclophosphamide Drug Monograph. Actualizado en mayo de 2026. https://www.cancercareontario.ca/en/drugformulary/drugs/cyclophosphamide",
+      "KDIGO — 2024 Clinical Practice Guideline for the Management of Lupus Nephritis. https://kdigo.org/wp-content/uploads/2024/01/KDIGO-2024-Lupus-Nephritis-Guideline.pdf",
+      "American College of Rheumatology — 2024 Guideline for Screening, Treatment, and Management of Lupus Nephritis; publicado en 2025. DOI 10.1002/art.43212. https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/art.43212",
+      "American College of Rheumatology / Vasculitis Foundation — 2021 ANCA-Associated Vasculitis Guideline. https://rheumatology.org/vasculitis-guideline",
+      "ANVISA — Voto CD 0318/2026; registro válido de GENUXAL/ciclofosfamida monohidratada en Brasil. https://www.gov.br/anvisa/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria/votos-dos-circuitos-deliberativos-1/2026-1/cd-0318-2026-voto.pdf/@@download/file",
+      "Grupo Alfa Beta Argentina — Vademécum de Ciclofosfamida, actualización 10/08/2026. https://www.alfabeta.net/medicamento/ciclofosfamida-microsules.vademecum"
+    ],
+    "className": "Agente alquilante del grupo de las mostazas nitrogenadas; antineoplásico e inmunosupresor.",
+    "drugClass": "Agente alquilante del grupo de las mostazas nitrogenadas; antineoplásico e inmunosupresor.",
+    "renalDose": [
+      {
+        "title": "Principio clínico",
+        "items": [
+          "La exposición sistémica a ciclofosfamida aumenta a medida que disminuye la función renal; vigilar toxicidad especialmente en insuficiencia renal moderada a grave.",
+          "La ciclofosfamida y sus metabolitos son dializables."
+        ]
+      },
+      {
+        "title": "ClCr > 50 mL/min",
+        "items": [
+          "En protocolos oncológicos habituales suele mantenerse el 100% de la dosis planificada."
+        ]
+      },
+      {
+        "title": "ClCr 30–50 mL/min",
+        "items": [
+          "Puede considerarse aproximadamente 75% de la dosis planificada según protocolo, intensidad del esquema y toxicidad.",
+          "Controlar hemograma, función renal y signos de toxicidad con mayor frecuencia."
+        ]
+      },
+      {
+        "title": "ClCr 10–29 mL/min",
+        "items": [
+          "Mayor riesgo de exposición y toxicidad. En protocolos oncológicos pueden utilizarse reducciones aproximadas a 50–75%; individualizar según el esquema.",
+          "La ficha técnica destaca vigilancia estrecha especialmente cuando la ClCr está entre 10 y 24 mL/min."
+        ]
+      },
+      {
+        "title": "ClCr < 10 mL/min / hemodiálisis",
+        "items": [
+          "Usar con extrema precaución; algunos protocolos utilizan aproximadamente 50% de la dosis.",
+          "Como la ciclofosfamida es dializable, mantener un intervalo consistente entre la administración y la hemodiálisis; referencias oncológicas suelen indicar administrarla después de la sesión."
+        ]
+      },
+      {
+        "title": "Nota de seguridad",
+        "items": [
+          "El ajuste renal no es universal: seguir el protocolo específico de la indicación y del esquema combinado. No extrapolar automáticamente porcentajes entre protocolos."
+        ]
+      }
+    ],
+    "hepaticDose": [
+      {
+        "title": "Insuficiencia hepática",
+        "items": [
+          "No existe un ajuste numérico universal establecido en ficha técnica.",
+          "La insuficiencia hepática grave reduce la conversión de ciclofosfamida al metabolito activo 4-hidroxiciclofosfamida y puede reducir la eficacia.",
+          "El aclaramiento corporal total puede disminuir y la vida media aumentar en insuficiencia hepática grave."
+        ]
+      },
+      {
+        "title": "Práctica oncológica",
+        "items": [
+          "Cancer Care Ontario indica que en muchos protocolos una bilirrubina de 1–2× el límite superior normal no exige reducción; por encima de 2× requiere precaución e individualización.",
+          "Ajustar siempre según protocolo, transaminasas, bilirrubina, función sintética, toxicidad y objetivo terapéutico."
+        ]
+      }
+    ],
+    "indications": [
+      {
+        "title": "Indicaciones oncológicas descritas en ficha técnica",
+        "items": [
+          "Linfomas malignos, incluyendo enfermedad de Hodgkin, linfomas linfocíticos, mixtos, histiocíticos y linfoma de Burkitt.",
+          "Mieloma múltiple.",
+          "Leucemias, incluyendo formas linfocíticas, granulocíticas/mieloides y linfoblásticas según contexto y esquema.",
+          "Micosis fungoide avanzada.",
+          "Neuroblastoma diseminado.",
+          "Adenocarcinoma de ovario.",
+          "Retinoblastoma.",
+          "Carcinoma de mama."
+        ]
+      },
+      {
+        "title": "Nefrología pediátrica",
+        "items": [
+          "Síndrome nefrótico por cambios mínimos comprobado por biopsia en pacientes pediátricos que no respondieron adecuadamente o no toleran corticosteroides."
+        ]
+      },
+      {
+        "title": "Inmunosupresión guiada por guías",
+        "items": [
+          "Nefritis lúpica proliferativa Clase III/IV (± V) en esquemas seleccionados; KDIGO 2024 y ACR 2024/2025 incluyen ciclofosfamida como opción dentro de tratamientos inmunosupresores combinados.",
+          "Vasculitis asociadas a ANCA con enfermedad grave pueden utilizar ciclofosfamida como agente de inducción según guías ACR/Vasculitis Foundation y protocolo local.",
+          "Los usos inmunológicos pueden ser off-label según país, producto e indicación; confirmar guía y regulación local."
+        ]
+      }
+    ],
+    "contraindications": [
+      {
+        "title": "Contraindicaciones formales",
+        "items": [
+          "Antecedente de hipersensibilidad grave a ciclofosfamida, sus metabolitos o componentes de la formulación.",
+          "Obstrucción del flujo urinario."
+        ]
+      },
+      {
+        "title": "Situaciones que requieren suspensión, demora o evaluación especializada",
+        "items": [
+          "Infección grave activa o inmunosupresión profunda.",
+          "Mielosupresión importante. La ficha técnica indica no administrar con neutrófilos ≤1.500/mm³ y plaquetas <50.000/mm³ salvo decisión protocolizada especializada.",
+          "Cistitis hemorrágica grave: interrumpir el tratamiento.",
+          "Embarazo: riesgo embriofetal importante; valorar sólo circunstancias excepcionales de necesidad materna con especialistas."
+        ]
+      }
+    ],
+    "adverseEffects": [
+      {
+        "title": "Frecuentes",
+        "items": [
+          "Neutropenia y otras citopenias.",
+          "Neutropenia febril e infecciones.",
+          "Fiebre.",
+          "Náuseas y vómitos.",
+          "Diarrea, anorexia y molestias gastrointestinales.",
+          "Alopecia.",
+          "Fatiga y mucositis/estomatitis."
+        ]
+      },
+      {
+        "title": "Urológicos y renales",
+        "items": [
+          "Cistitis hemorrágica, hematuria, pielitis y ureteritis.",
+          "Fibrosis, necrosis o contractura vesical en casos graves.",
+          "Nefrotoxicidad e insuficiencia renal."
+        ]
+      },
+      {
+        "title": "Graves / potencialmente mortales",
+        "items": [
+          "Mielosupresión profunda, fallo medular, sepsis y shock séptico.",
+          "Miocarditis, miopericarditis, insuficiencia cardíaca, derrame pericárdico/taponamiento y arritmias, sobre todo con dosis altas o factores de riesgo.",
+          "Neumonitis, fibrosis pulmonar, enfermedad venooclusiva pulmonar e insuficiencia respiratoria.",
+          "Enfermedad venooclusiva hepática/síndrome de obstrucción sinusoidal.",
+          "Hiponatremia, intoxicación hídrica y síndrome similar a SIADH.",
+          "Síndrome de lisis tumoral e hiperuricemia.",
+          "Encefalopatía, convulsiones y síndrome de encefalopatía posterior reversible descritos en farmacovigilancia.",
+          "Síndrome de Stevens-Johnson y necrólisis epidérmica tóxica descritos en poscomercialización."
+        ]
+      },
+      {
+        "title": "Toxicidad tardía",
+        "items": [
+          "Infertilidad masculina y femenina, potencialmente irreversible y relacionada con la dosis acumulada.",
+          "Fallo ovárico, amenorrea, oligospermia o azoospermia.",
+          "Neoplasias secundarias, incluyendo cáncer vesical, síndrome mielodisplásico, leucemias agudas, linfomas y otros tumores."
+        ]
+      }
+    ],
+    "interactions": [
+      {
+        "title": "Metabolismo / exposición",
+        "items": [
+          "La ciclofosfamida es una profármaco activada por citocromos P450; las interacciones que alteran su bioactivación pueden modificar eficacia y toxicidad.",
+          "Los inhibidores de proteasa pueden aumentar la concentración de metabolitos citotóxicos y se asociaron con mayor incidencia de infección y neutropenia en algunos esquemas."
+        ]
+      },
+      {
+        "title": "Mielosupresión / inmunosupresión aditiva",
+        "items": [
+          "Otros citotóxicos y radioterapia pueden potenciar la mielosupresión.",
+          "Paclitaxel administrado antes de ciclofosfamida se asoció con aumento de hematotoxicidad.",
+          "Zidovudina, natalizumab, diuréticos tiazídicos y otros agentes mielosupresores requieren vigilancia aumentada."
+        ]
+      },
+      {
+        "title": "Cardiopulmonar y órganos diana",
+        "items": [
+          "Antraciclinas, citarabina, pentostatina, trastuzumab y radioterapia cardíaca pueden aumentar cardiotoxicidad.",
+          "Amiodarona y factores estimulantes de colonias (G-CSF/GM-CSF) se asociaron con mayor riesgo de toxicidad pulmonar en determinados contextos.",
+          "Anfotericina B puede aumentar nefrotoxicidad.",
+          "Busulfán puede aumentar enfermedad venooclusiva hepática y mucositis."
+        ]
+      },
+      {
+        "title": "Interacciones clínicas relevantes",
+        "items": [
+          "Indometacina: existe reporte de intoxicación hídrica aguda.",
+          "Tamoxifeno asociado a quimioterapia puede aumentar el riesgo tromboembólico.",
+          "Warfarina/cumarínicos: se describieron tanto aumento como reducción del efecto anticoagulante; controlar INR.",
+          "Ciclosporina: se describieron concentraciones séricas más bajas en uso combinado.",
+          "Succinilcolina y otros bloqueantes neuromusculares despolarizantes: la inhibición de colinesterasa puede prolongar la apnea; informar a anestesiología si se utilizó ciclofosfamida en los 10 días previos.",
+          "Etanercept asociado al tratamiento de granulomatosis con poliangeítis que incluía ciclofosfamida se relacionó con mayor incidencia de tumores sólidos no cutáneos y no debe utilizarse como estrategia adyuvante rutinaria."
+        ]
+      }
+    ],
+    "monitoring": [
+      {
+        "title": "Antes de iniciar",
+        "items": [
+          "Hemograma completo con diferencial y plaquetas.",
+          "Creatinina, estimación de función renal, electrolitos y función hepática.",
+          "Orina completa/sedimento y evaluación de hematuria; excluir o corregir obstrucción urinaria.",
+          "Buscar infección activa y revisar riesgo de reactivación infecciosa según grado de inmunosupresión.",
+          "Prueba de embarazo en pacientes con potencial reproductivo.",
+          "Evaluar fertilidad y discutir preservación gonadal cuando sea apropiado.",
+          "Evaluar riesgo cardiovascular y pulmonar si se planifican dosis altas o existe enfermedad previa."
+        ]
+      },
+      {
+        "title": "Durante el tratamiento",
+        "items": [
+          "Hemograma seriado; el nadir de leucocitos y plaquetas suele presentarse en semanas 1–2, con recuperación alrededor de 20 días en muchos pacientes.",
+          "Según ficha técnica, no administrar con neutrófilos ≤1.500/mm³ y plaquetas <50.000/mm³ salvo decisión protocolizada especializada.",
+          "Función renal y hepática periódicamente y antes de ciclos según régimen.",
+          "Orina/sedimento para eritrocitos y síntomas urinarios; investigar hematuria inmediatamente.",
+          "Sodio sérico y balance hídrico si existe riesgo de hiponatremia/intoxicación hídrica.",
+          "Temperatura y signos de infección; la fiebre neutropénica es una emergencia.",
+          "Síntomas respiratorios nuevos o progresivos.",
+          "Signos de cardiotoxicidad, especialmente con dosis altas o combinación con agentes cardiotóxicos.",
+          "Signos de síndrome de lisis tumoral en neoplasias con alta carga/proliferación."
+        ]
+      },
+      {
+        "title": "Toxicidad acumulada",
+        "items": [
+          "Registrar dosis acumulada, duración del tratamiento, toxicidad gonadal y riesgo de neoplasia secundaria.",
+          "Reevaluar necesidad de uroprotección e hidratación en cada protocolo."
+        ]
+      }
+    ],
+    "administration": [
+      {
+        "title": "Vía oral",
+        "items": [
+          "Administrar preferentemente por la mañana.",
+          "Asegurar ingesta adecuada de líquidos durante o inmediatamente después para favorecer diuresis y reducir urotoxicidad.",
+          "Tragar los comprimidos enteros; no cortar, masticar ni triturar.",
+          "La ciclofosfamida es citotóxica: evitar contacto con comprimidos rotos y seguir precauciones de manipulación."
+        ]
+      },
+      {
+        "title": "Polvo para solución inyectable — reconstitución",
+        "items": [
+          "Para inyección IV directa de presentaciones liofilizadas: reconstituir con NaCl 0,9% hasta 20 mg/mL. Ejemplos de ficha técnica: 500 mg + 25 mL; 1 g + 50 mL; 2 g + 100 mL.",
+          "No utilizar agua estéril para inyección como único diluyente si la solución será administrada directamente IV, porque la solución resultante es hipotónica.",
+          "Para preparación destinada a infusión IV, la reconstitución puede realizarse con NaCl 0,9% o agua estéril según la ficha específica del fabricante, manteniendo concentración inicial de 20 mg/mL."
+        ]
+      },
+      {
+        "title": "Dilución para infusión IV",
+        "items": [
+          "Después de reconstituir, diluir adicionalmente hasta concentración mínima de 2 mg/mL con solución compatible según fabricante; fichas actuales incluyen NaCl 0,45%, glucosa 5% o glucosa 5% + NaCl 0,9%.",
+          "Administrar lentamente; reacciones como edema facial, cefalea, congestión nasal y sensación de quemazón en cuero cabelludo pueden relacionarse con la velocidad.",
+          "Inspeccionar visualmente solución y vial antes de administrar; no usar si hay partículas, alteración importante o signos de fusión del polvo."
+        ]
+      },
+      {
+        "title": "Hidratación y uroprotección",
+        "items": [
+          "Hidratación adecuada, diuresis y vaciamiento frecuente de vejiga reducen la urotoxicidad.",
+          "Mesna puede utilizarse para prevenir toxicidad vesical grave según dosis, protocolo y riesgo individual."
+        ]
+      },
+      {
+        "title": "Seguridad de manipulación",
+        "items": [
+          "Medicamento peligroso/citotóxico: utilizar técnica aséptica, EPP adecuado y procedimientos institucionales de manipulación y descarte.",
+          "La estabilidad tras reconstitución/dilución depende del producto y fabricante; seguir la ficha de la presentación utilizada."
+        ]
+      }
+    ],
+    "pharmacology": [
+      {
+        "title": "Mecanismo de acción",
+        "items": [
+          "Profármaco alquilante relacionado con las mostazas nitrogenadas.",
+          "Sus metabolitos activos producen enlaces cruzados en el ADN, interfieren con la replicación y provocan muerte de células susceptibles, especialmente de rápida proliferación.",
+          "Además del efecto antineoplásico produce inmunosupresión clínicamente relevante."
+        ]
+      },
+      {
+        "title": "Bioactivación",
+        "items": [
+          "La activación ocurre principalmente en hígado mediante CYP2A6, CYP2B6, CYP3A4/3A5, CYP2C9, CYP2C18 y CYP2C19; CYP2B6 presenta alta actividad de 4-hidroxilación.",
+          "Forma 4-hidroxiciclofosfamida/aldofosfamida; la aldofosfamida genera mostaza fosforamida, metabolito citotóxico, y acroleína, importante en la urotoxicidad."
+        ]
+      },
+      {
+        "title": "Farmacocinética",
+        "items": [
+          "Tras administración oral, el pico plasmático ocurre aproximadamente a 1 hora.",
+          "La exposición oral es cercana a la IV en estudios farmacocinéticos, con relación AUC oral:IV aproximadamente 0,87–0,96.",
+          "Unión proteica de ciclofosfamida alrededor de 20%; algunos metabolitos presentan mayor unión.",
+          "Volumen de distribución aproximado de 30–50 L."
+        ]
+      },
+      {
+        "title": "Eliminación",
+        "items": [
+          "Se elimina principalmente como metabolitos; aproximadamente 10–20% puede excretarse sin cambios por orina tras administración IV y una pequeña fracción por bilis.",
+          "Puede existir autoinducción metabólica con administraciones repetidas.",
+          "La hemodiálisis elimina una cantidad clínicamente relevante de ciclofosfamida; en un estudio farmacocinético se eliminó aproximadamente 37% de la dosis."
+        ]
+      }
+    ],
+    "specialPopulations": [
+      {
+        "title": "Embarazo",
+        "items": [
+          "Puede causar daño fetal, malformaciones, aborto, restricción del crecimiento y toxicidad neonatal.",
+          "Confirmar estado gestacional antes del tratamiento en pacientes con potencial reproductivo."
+        ]
+      },
+      {
+        "title": "Anticoncepción y fertilidad",
+        "items": [
+          "Mujeres con potencial reproductivo: anticoncepción eficaz durante el tratamiento y hasta 1 año después de la última dosis según ficha técnica.",
+          "Varones con parejas con potencial reproductivo: anticoncepción eficaz durante el tratamiento y al menos 4 meses después de la última dosis.",
+          "Puede causar amenorrea, fallo ovárico, menopausia precoz, oligospermia, azoospermia e infertilidad potencialmente irreversible.",
+          "Considerar preservación de fertilidad antes de exposición acumulada significativa cuando sea clínicamente posible."
+        ]
+      },
+      {
+        "title": "Lactancia",
+        "items": [
+          "La ciclofosfamida está presente en leche materna y puede causar toxicidad hematológica en el lactante.",
+          "No amamantar durante el tratamiento ni durante 1 semana después de la última dosis según ficha técnica."
+        ]
+      },
+      {
+        "title": "Pediatría",
+        "items": [
+          "La ficha técnica incluye uso en varias neoplasias y en síndrome nefrótico por cambios mínimos bajo las condiciones específicas descritas.",
+          "Debe considerarse toxicidad gonadal tardía en niños y adolescentes."
+        ]
+      },
+      {
+        "title": "Adulto mayor",
+        "items": [
+          "Los datos comparativos son limitados; seleccionar dosis con cautela, a menudo hacia el extremo inferior del rango cuando corresponda, considerando mayor frecuencia de disfunción renal, hepática y cardíaca y polifarmacia."
+        ]
+      },
+      {
+        "title": "Insuficiencia renal y hepática",
+        "items": [
+          "La insuficiencia renal aumenta exposición y toxicidad; ver Ajuste renal.",
+          "La insuficiencia hepática grave puede reducir bioactivación y eficacia; ver Ajuste hepático."
+        ]
+      }
+    ],
+    "presentations": [
+      {
+        "title": "Argentina",
+        "items": [
+          "En el mercado argentino se encuentran, según fabricante, comprimidos recubiertos de 50 mg y presentaciones inyectables/liofilizadas de 200 mg, 500 mg y 1 g.",
+          "Productos comercializados incluyen presentaciones de Filaxis, Kemex, LKM, Microsules y Lafedar; disponibilidad y registro deben verificarse localmente."
+        ]
+      },
+      {
+        "title": "Referencia internacional / formulaciones",
+        "items": [
+          "Existen comprimidos de 25 mg y 50 mg en fichas internacionales.",
+          "El polvo para solución inyectable puede presentarse en 500 mg, 1 g y 2 g según fabricante.",
+          "También existen formulaciones listas para diluir de 200 mg/mL en algunos mercados."
+        ]
+      }
+    ],
+    "commercialNames": {
+      "ar": [
+        "Ciclofosfamida Filaxis",
+        "Ciclofosfamida Kemex",
+        "Ciclofosfamida LKM",
+        "Ciclofosfamida Microsules",
+        "Ciclofosfamida Lafedar"
+      ]
+    }
   },
   "hepaticAdjustment": {
     "message": {
@@ -146,7 +569,422 @@
     ]
   },
   "pt": {
-    "name": "Ciclofosfamida"
+    "name": "Ciclofosfamida",
+    "dose": {
+      "adultoPadrao": "Doenças malignas (referência oral da bula): 1–5 mg/kg/dia VO 1x/dia; ajustar conforme atividade antitumoral, mielossupressão e outras toxicidades.",
+      "pediatricaPadrao": "Doenças malignas (referência oral da bula): 1–5 mg/kg/dia VO 1x/dia; ajustar conforme atividade antitumoral, mielossupressão e outras toxicidades.",
+      "porIndicacao": {
+        "doencasMalignasVO": {
+          "titulo": "Doenças malignas — via oral",
+          "regime": [
+            "Adultos e pediatria: 1–5 mg/kg/dia VO 1x/dia para dose inicial e de manutenção.",
+            "Ajustar a dose conforme atividade antitumoral, mielossupressão e outras reações adversas.",
+            "Quando usada em esquemas combinados, pode ser necessário reduzir a dose da ciclofosfamida e/ou dos demais citotóxicos."
+          ]
+        },
+        "doencasMalignasIV": {
+          "titulo": "Doenças malignas — via intravenosa",
+          "regime": [
+            "Curso inicial sem deficiência hematológica: 40–50 mg/kg IV em doses divididas ao longo de 2–5 dias.",
+            "Regimes alternativos descritos em bula: 10–15 mg/kg IV a cada 7–10 dias ou 3–5 mg/kg IV 2x/semana.",
+            "A dose deve ser individualizada conforme resposta e toxicidade."
+          ]
+        },
+        "sindromeNefroticaMudancasMinimasPediatrica": {
+          "titulo": "Síndrome nefrótica por lesão mínima — pediatria",
+          "regime": [
+            "2 mg/kg/dia VO 1x/dia por 8–12 semanas.",
+            "Dose cumulativa máxima: 168 mg/kg.",
+            "Indicação de bula para pacientes pediátricos com síndrome nefrótica por lesão mínima comprovada por biópsia que não responderam adequadamente ou não toleram corticosteroides."
+          ]
+        },
+        "nefriteLupicaClasseIIIIV": {
+          "titulo": "Nefrite lúpica ativa Classe III/IV (± V)",
+          "regime": [
+            "Regime IV de baixa dose (Euro-Lupus): 500 mg IV a cada 2 semanas × 6 doses.",
+            "Alternativa IV: 0,5–1,0 g/m² IV mensal × 6 doses.",
+            "Alternativa VO: 1,0–1,5 mg/kg/dia por 3 meses.",
+            "KDIGO 2024 e ACR 2024/2025 favorecem menor exposição à ciclofosfamida quando apropriado; a escolha depende do contexto clínico e do regime imunossupressor completo."
+          ]
+        }
+      }
+    },
+    "references": [
+      "DailyMed — Cyclophosphamide Tablets, USP (Baxter). Full Prescribing Information. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=769ded74-6186-40a8-8e44-ceff67287451",
+      "DailyMed — Cyclophosphamide for Injection, powder for solution. Current labeling published in 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fdaa7d15-7c06-44ab-b1d5-9d2b3e8ffd28",
+      "DailyMed — Cyclophosphamide Injection, ready-to-dilute solution (Nevakar). https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9895cdbd-79cc-4bce-8e16-1c2e045e2592",
+      "Cancer Care Ontario — Cyclophosphamide Drug Monograph. Atualizado em maio de 2026. https://www.cancercareontario.ca/en/drugformulary/drugs/cyclophosphamide",
+      "KDIGO — 2024 Clinical Practice Guideline for the Management of Lupus Nephritis. https://kdigo.org/wp-content/uploads/2024/01/KDIGO-2024-Lupus-Nephritis-Guideline.pdf",
+      "American College of Rheumatology — 2024 Guideline for Screening, Treatment, and Management of Lupus Nephritis; publicado em 2025. DOI 10.1002/art.43212. https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/art.43212",
+      "American College of Rheumatology / Vasculitis Foundation — 2021 ANCA-Associated Vasculitis Guideline. https://rheumatology.org/vasculitis-guideline",
+      "ANVISA — Voto CD 0318/2026; registro válido de GENUXAL/ciclofosfamida monoidratada no Brasil. https://www.gov.br/anvisa/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria/votos-dos-circuitos-deliberativos-1/2026-1/cd-0318-2026-voto.pdf/@@download/file",
+      "Grupo Alfa Beta Argentina — Vademécum de Ciclofosfamida, atualização de 10/08/2026. https://www.alfabeta.net/medicamento/ciclofosfamida-microsules.vademecum"
+    ],
+    "className": "Agente alquilante do grupo das mostardas nitrogenadas; antineoplásico e imunossupressor.",
+    "drugClass": "Agente alquilante do grupo das mostardas nitrogenadas; antineoplásico e imunossupressor.",
+    "renalDose": [
+      {
+        "title": "Princípio clínico",
+        "items": [
+          "A exposição sistêmica à ciclofosfamida aumenta à medida que a função renal diminui; monitorar toxicidade com atenção especial na insuficiência renal moderada a grave.",
+          "A ciclofosfamida e seus metabólitos são dialisáveis."
+        ]
+      },
+      {
+        "title": "ClCr > 50 mL/min",
+        "items": [
+          "Em protocolos oncológicos usuais, 100% da dose planejada é geralmente mantida."
+        ]
+      },
+      {
+        "title": "ClCr 30–50 mL/min",
+        "items": [
+          "Pode-se considerar cerca de 75% da dose planejada conforme protocolo, intensidade do regime e toxicidade.",
+          "Monitorar hemograma, função renal e sinais de toxicidade com maior frequência."
+        ]
+      },
+      {
+        "title": "ClCr 10–29 mL/min",
+        "items": [
+          "Maior risco de exposição e toxicidade. Em protocolos oncológicos, reduções para aproximadamente 50–75% podem ser utilizadas; individualizar pelo protocolo.",
+          "A bula destaca monitorização estreita especialmente quando ClCr está entre 10 e 24 mL/min."
+        ]
+      },
+      {
+        "title": "ClCr < 10 mL/min / hemodiálise",
+        "items": [
+          "Usar com cautela extrema; alguns protocolos utilizam aproximadamente 50% da dose.",
+          "Como a ciclofosfamida é dialisável, manter um intervalo consistente entre a administração e a hemodiálise; referências oncológicas frequentemente orientam administrar após a sessão."
+        ]
+      },
+      {
+        "title": "Nota de segurança",
+        "items": [
+          "O ajuste renal não é universal: seguir o protocolo específico da indicação e do regime combinatório. Não extrapolar automaticamente percentuais entre protocolos."
+        ]
+      }
+    ],
+    "hepaticDose": [
+      {
+        "title": "Insuficiência hepática",
+        "items": [
+          "Não existe um ajuste numérico universal estabelecido em bula.",
+          "Insuficiência hepática grave reduz a conversão da ciclofosfamida ao metabólito ativo 4-hidroxiciclofosfamida e pode reduzir a eficácia.",
+          "A depuração corporal total pode cair e a meia-vida pode aumentar na insuficiência hepática grave."
+        ]
+      },
+      {
+        "title": "Prática oncológica",
+        "items": [
+          "Cancer Care Ontario indica que, em muitos protocolos, bilirrubina de 1–2× o limite superior da normalidade não exige redução; acima de 2× requer cautela e individualização.",
+          "Ajustar sempre conforme o protocolo, transaminases, bilirrubina, função sintética, toxicidade e objetivo terapêutico."
+        ]
+      }
+    ],
+    "indications": [
+      {
+        "title": "Indicações oncológicas descritas em bula",
+        "items": [
+          "Linfomas malignos, incluindo doença de Hodgkin, linfomas linfocíticos, mistos, histiocíticos e linfoma de Burkitt.",
+          "Mieloma múltiplo.",
+          "Leucemias, incluindo formas linfocíticas, granulocíticas/mieloides e linfoblásticas conforme contexto e esquema.",
+          "Micose fungoide avançada.",
+          "Neuroblastoma disseminado.",
+          "Adenocarcinoma de ovário.",
+          "Retinoblastoma.",
+          "Carcinoma de mama."
+        ]
+      },
+      {
+        "title": "Nefrologia pediátrica",
+        "items": [
+          "Síndrome nefrótica por lesão mínima comprovada por biópsia em pacientes pediátricos que não responderam adequadamente ou não toleram corticosteroides."
+        ]
+      },
+      {
+        "title": "Imunossupressão guiada por diretrizes",
+        "items": [
+          "Nefrite lúpica proliferativa Classe III/IV (± V) em regimes selecionados; KDIGO 2024 e ACR 2024/2025 incluem ciclofosfamida como opção dentro de esquemas imunossupressores combinados.",
+          "Vasculites associadas ao ANCA com doença grave podem utilizar ciclofosfamida como agente de indução conforme diretrizes ACR/Vasculitis Foundation e protocolo local.",
+          "Usos imunológicos podem ser off-label conforme país, produto e indicação; confirmar diretriz e regulamentação local."
+        ]
+      }
+    ],
+    "contraindications": [
+      {
+        "title": "Contraindicações formais",
+        "items": [
+          "Hipersensibilidade grave prévia à ciclofosfamida, a seus metabólitos ou a componentes da formulação.",
+          "Obstrução do fluxo urinário."
+        ]
+      },
+      {
+        "title": "Situações que exigem suspensão, adiamento ou avaliação especializada",
+        "items": [
+          "Infecção grave ativa ou imunossupressão profunda.",
+          "Mielossupressão importante. A bula orienta não administrar quando neutrófilos ≤1.500/mm³ e plaquetas <50.000/mm³, salvo decisão protocolar especializada.",
+          "Cistite hemorrágica grave: interromper o tratamento.",
+          "Gravidez: risco embriofetal importante; ponderar apenas situações excepcionais de necessidade materna conforme especialista."
+        ]
+      }
+    ],
+    "adverseEffects": [
+      {
+        "title": "Frequentes",
+        "items": [
+          "Neutropenia e outras citopenias.",
+          "Neutropenia febril e infecções.",
+          "Febre.",
+          "Náuseas e vômitos.",
+          "Diarreia, anorexia e desconforto gastrointestinal.",
+          "Alopecia.",
+          "Fadiga e mucosite/estomatite."
+        ]
+      },
+      {
+        "title": "Urológicos e renais",
+        "items": [
+          "Cistite hemorrágica, hematúria, pielite e ureterite.",
+          "Fibrose, necrose ou contratura vesical em casos graves.",
+          "Nefrotoxicidade e insuficiência renal."
+        ]
+      },
+      {
+        "title": "Graves / potencialmente fatais",
+        "items": [
+          "Mielossupressão profunda, falência medular, sepse e choque séptico.",
+          "Miocardite, miopericardite, insuficiência cardíaca, derrame pericárdico/tamponamento e arritmias, sobretudo com doses altas ou fatores de risco.",
+          "Pneumonite, fibrose pulmonar, doença veno-oclusiva pulmonar e insuficiência respiratória.",
+          "Doença veno-oclusiva hepática/síndrome de obstrução sinusoidal.",
+          "Hiponatremia, intoxicação hídrica e síndrome semelhante à SIADH.",
+          "Síndrome de lise tumoral e hiperuricemia.",
+          "Encefalopatia, convulsões e síndrome de encefalopatia posterior reversível descritas em farmacovigilância.",
+          "Síndrome de Stevens-Johnson e necrólise epidérmica tóxica descritas no pós-comercialização."
+        ]
+      },
+      {
+        "title": "Toxicidade tardia",
+        "items": [
+          "Infertilidade masculina e feminina, potencialmente irreversível e relacionada à dose cumulativa.",
+          "Falência ovariana, amenorreia, oligospermia ou azoospermia.",
+          "Neoplasias secundárias, incluindo câncer de bexiga, síndrome mielodisplásica, leucemias agudas, linfomas e outros tumores."
+        ]
+      }
+    ],
+    "interactions": [
+      {
+        "title": "Metabolismo / exposição",
+        "items": [
+          "A ciclofosfamida é uma pró-droga ativada por citocromos P450; interações que alteram sua bioativação podem modificar eficácia e toxicidade.",
+          "Inibidores de protease podem aumentar a concentração de metabólitos citotóxicos e foram associados a maior incidência de infecção e neutropenia em alguns esquemas."
+        ]
+      },
+      {
+        "title": "Mielossupressão / imunossupressão aditiva",
+        "items": [
+          "Outros citotóxicos e radioterapia podem potencializar mielossupressão.",
+          "Paclitaxel administrado antes da ciclofosfamida foi associado a aumento da hematotoxicidade.",
+          "Zidovudina, natalizumabe, diuréticos tiazídicos e outros agentes mielossupressores exigem vigilância aumentada."
+        ]
+      },
+      {
+        "title": "Cardiopulmonar e órgãos-alvo",
+        "items": [
+          "Antraciclinas, citarabina, pentostatina, trastuzumabe e radioterapia cardíaca podem aumentar cardiotoxicidade.",
+          "Amiodarona e fatores estimuladores de colônias (G-CSF/GM-CSF) foram associados a maior risco de toxicidade pulmonar em determinados contextos.",
+          "Anfotericina B pode aumentar nefrotoxicidade.",
+          "Busulfano pode aumentar doença veno-oclusiva hepática e mucosite."
+        ]
+      },
+      {
+        "title": "Interações clínicas relevantes",
+        "items": [
+          "Indometacina: há relato de intoxicação hídrica aguda.",
+          "Tamoxifeno associado à quimioterapia pode aumentar risco tromboembólico.",
+          "Varfarina/cumarínicos: foram descritos tanto aumento quanto redução do efeito anticoagulante; monitorar INR.",
+          "Ciclosporina: concentrações séricas mais baixas foram descritas em uso combinado.",
+          "Succinilcolina e outros bloqueadores neuromusculares despolarizantes: inibição de colinesterase pode prolongar apneia; avisar anestesiologia se ciclofosfamida foi utilizada nos 10 dias anteriores.",
+          "Etanercepte associado a tratamento de granulomatose com poliangiite contendo ciclofosfamida foi relacionado a maior incidência de tumores sólidos não cutâneos e não deve ser usado como estratégia adjuvante rotineira."
+        ]
+      }
+    ],
+    "monitoring": [
+      {
+        "title": "Antes de iniciar",
+        "items": [
+          "Hemograma completo com diferencial e plaquetas.",
+          "Creatinina, estimativa de função renal, eletrólitos e função hepática.",
+          "Urina tipo I/sedimento e avaliação de hematúria; excluir ou corrigir obstrução urinária.",
+          "Pesquisar infecção ativa e revisar risco de reativação infecciosa conforme grau de imunossupressão.",
+          "Teste de gravidez em pacientes com potencial reprodutivo.",
+          "Avaliar fertilidade e discutir preservação gonadal quando apropriado.",
+          "Avaliar risco cardiovascular e pulmonar quando se planejam doses altas ou quando há doença prévia."
+        ]
+      },
+      {
+        "title": "Durante o tratamento",
+        "items": [
+          "Hemograma seriado; o nadir de leucócitos e plaquetas costuma ocorrer nas semanas 1–2, com recuperação em aproximadamente 20 dias em muitos pacientes.",
+          "Não administrar segundo a bula quando neutrófilos ≤1.500/mm³ e plaquetas <50.000/mm³, salvo decisão protocolar especializada.",
+          "Função renal e hepática periodicamente e antes de ciclos conforme regime.",
+          "Urina/sedimento para eritrócitos e sintomas urinários; investigar hematúria imediatamente.",
+          "Sódio sérico e balanço hídrico quando houver risco de hiponatremia/intoxicação hídrica.",
+          "Temperatura e sinais de infecção; febre neutropênica é emergência.",
+          "Sintomas respiratórios novos ou progressivos.",
+          "Sinais de cardiotoxicidade, especialmente em doses altas ou combinação com agentes cardiotóxicos.",
+          "Sinais de síndrome de lise tumoral em neoplasias de alta carga/proliferação."
+        ]
+      },
+      {
+        "title": "Toxicidade cumulativa",
+        "items": [
+          "Registrar dose cumulativa, duração do tratamento, toxicidade gonadal e risco de neoplasia secundária.",
+          "Reavaliar necessidade de uroproteção e hidratação em cada protocolo."
+        ]
+      }
+    ],
+    "administration": [
+      {
+        "title": "Via oral",
+        "items": [
+          "Administrar preferencialmente pela manhã.",
+          "Ingerir quantidade adequada de líquidos durante ou imediatamente após a dose para promover diurese e reduzir urotoxicidade.",
+          "Engolir comprimidos inteiros; não cortar, mastigar ou triturar.",
+          "Ciclofosfamida é citotóxica: evitar contato com comprimidos quebrados e seguir precauções de manuseio."
+        ]
+      },
+      {
+        "title": "Pó para solução injetável — reconstituição",
+        "items": [
+          "Para injeção IV direta de apresentações liofilizadas: reconstituir com SF 0,9% até 20 mg/mL. Exemplos de bula: 500 mg + 25 mL; 1 g + 50 mL; 2 g + 100 mL.",
+          "Não usar água estéril para injeção como único diluente quando a solução será aplicada diretamente IV, pois a solução resultante é hipotônica.",
+          "Para preparação destinada à infusão IV, a reconstituição pode ser feita com SF 0,9% ou água estéril conforme a bula específica do fabricante, mantendo concentração inicial de 20 mg/mL."
+        ]
+      },
+      {
+        "title": "Diluição para infusão IV",
+        "items": [
+          "Após reconstituição, diluir adicionalmente para concentração mínima de 2 mg/mL com solução compatível conforme fabricante; bulas atuais incluem NaCl 0,45%, SG 5% ou SG 5% + NaCl 0,9%.",
+          "Administrar lentamente; reações como edema facial, cefaleia, congestão nasal e sensação de queimação no couro cabeludo podem ser relacionadas à velocidade.",
+          "Inspecionar visualmente solução e frasco antes da administração; não utilizar se houver partículas, alteração importante ou sinais de fusão do pó."
+        ]
+      },
+      {
+        "title": "Hidratação e uroproteção",
+        "items": [
+          "Hidratação adequada, diurese e esvaziamento frequente da bexiga reduzem a urotoxicidade.",
+          "Mesna pode ser utilizada para prevenção de toxicidade vesical grave conforme dose, protocolo e risco individual."
+        ]
+      },
+      {
+        "title": "Segurança de manipulação",
+        "items": [
+          "Medicamento perigoso/citotóxico: usar técnica asséptica, EPI adequado e procedimentos institucionais de manipulação e descarte.",
+          "Estabilidade após reconstituição/diluição é dependente do produto e do fabricante; seguir a bula da apresentação utilizada."
+        ]
+      }
+    ],
+    "pharmacology": [
+      {
+        "title": "Mecanismo de ação",
+        "items": [
+          "Pró-droga alquilante relacionada às mostardas nitrogenadas.",
+          "Seus metabólitos ativos formam ligações cruzadas no DNA, interferindo na replicação e levando à morte de células suscetíveis, especialmente células de rápida proliferação.",
+          "Além do efeito antineoplásico, produz imunossupressão relevante."
+        ]
+      },
+      {
+        "title": "Bioativação",
+        "items": [
+          "A ativação ocorre principalmente no fígado por CYP2A6, CYP2B6, CYP3A4/3A5, CYP2C9, CYP2C18 e CYP2C19; CYP2B6 apresenta alta atividade de 4-hidroxilação.",
+          "Forma 4-hidroxiciclofosfamida/aldofosfamida; a aldofosfamida gera mostarda fosforamida, metabólito citotóxico, e acroleína, importante na urotoxicidade."
+        ]
+      },
+      {
+        "title": "Farmacocinética",
+        "items": [
+          "Após administração oral, o pico plasmático ocorre em aproximadamente 1 hora.",
+          "A exposição oral é próxima à IV em estudos farmacocinéticos, com razão AUC oral:IV de aproximadamente 0,87–0,96.",
+          "Ligação proteica da ciclofosfamida em torno de 20%; alguns metabólitos apresentam ligação maior.",
+          "Volume de distribuição aproximado de 30–50 L."
+        ]
+      },
+      {
+        "title": "Eliminação",
+        "items": [
+          "É eliminada principalmente como metabólitos; cerca de 10–20% pode ser excretada inalterada na urina após administração IV e pequena fração pela bile.",
+          "Pode ocorrer autoindução metabólica com administrações repetidas.",
+          "Hemodiálise remove quantidade clinicamente relevante de ciclofosfamida; em um estudo farmacocinético aproximadamente 37% da dose foi removida."
+        ]
+      }
+    ],
+    "specialPopulations": [
+      {
+        "title": "Gravidez",
+        "items": [
+          "Pode causar dano fetal, malformações, aborto, restrição de crescimento e toxicidade neonatal.",
+          "Confirmar estado gestacional antes do tratamento em pacientes com potencial reprodutivo."
+        ]
+      },
+      {
+        "title": "Contracepção e fertilidade",
+        "items": [
+          "Mulheres com potencial reprodutivo: contracepção eficaz durante o tratamento e por até 1 ano após a última dose conforme bula.",
+          "Homens com parceiras com potencial reprodutivo: contracepção eficaz durante o tratamento e por pelo menos 4 meses após a última dose.",
+          "Pode causar amenorreia, falência ovariana, menopausa precoce, oligospermia, azoospermia e infertilidade potencialmente irreversível.",
+          "Considerar preservação de fertilidade antes de exposição cumulativa significativa quando clinicamente possível."
+        ]
+      },
+      {
+        "title": "Lactação",
+        "items": [
+          "A ciclofosfamida está presente no leite materno e pode causar toxicidade hematológica no lactente.",
+          "Não amamentar durante o tratamento e por 1 semana após a última dose conforme bula."
+        ]
+      },
+      {
+        "title": "Pediatria",
+        "items": [
+          "A bula inclui uso em várias neoplasias e em síndrome nefrótica por lesão mínima nas condições específicas descritas.",
+          "Toxicidade gonadal tardia deve ser considerada em crianças e adolescentes."
+        ]
+      },
+      {
+        "title": "Idosos",
+        "items": [
+          "Dados comparativos são limitados; iniciar de forma cautelosa, frequentemente na extremidade inferior da faixa quando apropriado, considerando maior frequência de disfunção renal, hepática e cardíaca e polifarmácia."
+        ]
+      },
+      {
+        "title": "Insuficiência renal e hepática",
+        "items": [
+          "Insuficiência renal aumenta a exposição e a toxicidade; ver Ajuste renal.",
+          "Insuficiência hepática grave pode reduzir a bioativação e a eficácia; ver Ajuste hepático."
+        ]
+      }
+    ],
+    "presentations": [
+      {
+        "title": "Brasil",
+        "items": [
+          "ANVISA identificou em 2026 registro válido de GENUXAL (ciclofosfamida monoidratada), incluindo comprimido revestido 50 mg e pó para solução injetável IV 1.000 mg.",
+          "Apresentações disponíveis podem variar ao longo do tempo; confirmar registro e estoque local."
+        ]
+      },
+      {
+        "title": "Referência internacional / formulações",
+        "items": [
+          "Comprimidos de 25 mg e 50 mg existem em bulas internacionais.",
+          "Pó para solução injetável pode existir em 500 mg, 1 g e 2 g conforme fabricante.",
+          "Também existem formulações prontas para diluição de 200 mg/mL em alguns mercados."
+        ]
+      }
+    ],
+    "commercialNames": {
+      "br": [
+        "Genuxal"
+      ]
+    }
   },
   "renalAdjustment": {
     "message": {
@@ -168,5 +1006,12 @@
   },
   "schema": "legacy-v1",
   "source": "medcases-calculadora",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "canonicalClinicalModel": {
+    "version": "r10-deep-2026-09-03",
+    "localePolicy": "active-locale-only",
+    "displayNamePolicy": "spanish-primary",
+    "representative": "cyclophosphamide-multi-indication",
+    "clinicalPoints": 16
+  }
 }
