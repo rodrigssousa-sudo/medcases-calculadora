@@ -88,6 +88,11 @@ const OUT_DRUGS = path.join(
   'drugs'
 );
 
+const PUBLISHED_DRUGS_DIR = path.join(
+  FINAL_OUT_DIR,
+  'drugs'
+);
+
 const BACKUP_DIR_PREFIX =
   '.clinical-data-backup-';
 
@@ -2948,6 +2953,98 @@ async function main() {
   const drugsIndex = [];
   const emittedIds = new Set();
 
+
+/*
+ * Enrichment-Preserving Export (Fase 4B)
+ *
+ * READ-BEFORE-WRITE + VALIDATE + FAIL-CLOSED + PRESERVE
+ *
+ * Le o JSON publicado existente (data/drugs/<id>.json) e reanexa
+ * mc_clinical_enrichment_v1 ao objeto canonico recem-gerado.
+ *
+ * - Sem JSON existente ou sem enrichment: retorna null
+ *   (comportamento identico ao export original).
+ * - Enrichment presente mas qualquer validacao falhar: ABORTA o export.
+ *
+ * NUNCA: warn + overwrite. NUNCA: skip enrichment + continue.
+ */
+function readExistingEnrichment(safeId) {
+  const publishedPath = path.join(
+    PUBLISHED_DRUGS_DIR,
+    `${safeId}.json`
+  );
+
+  if (!fs.existsSync(publishedPath)) {
+    return null;
+  }
+
+  let existing;
+  try {
+    existing = JSON.parse(
+      fs.readFileSync(publishedPath, 'utf8')
+    );
+  } catch (error) {
+    throw new Error(
+      `CLINICAL_ENRICHMENT_PRESERVATION_ABORT: ` +
+      `JSON existente invalido para "${safeId}": ` +
+      `${error.message}`
+    );
+  }
+
+  const enrichment =
+    existing.mc_clinical_enrichment_v1;
+
+  if (enrichment === undefined) {
+    return null;
+  }
+
+  if (
+    enrichment === null ||
+    typeof enrichment !== 'object' ||
+    Array.isArray(enrichment)
+  ) {
+    throw new Error(
+      `CLINICAL_ENRICHMENT_PRESERVATION_ABORT: ` +
+      `enrichment invalido (nao-objeto) para "${safeId}"`
+    );
+  }
+
+  if (existing.id !== safeId) {
+    throw new Error(
+      `CLINICAL_ENRICHMENT_PRESERVATION_ABORT: ` +
+      `identidade divergente para "${safeId}" ` +
+      `(JSON existente id="${existing.id}")`
+    );
+  }
+
+  if (
+    enrichment.sections !== undefined &&
+    (
+      enrichment.sections === null ||
+      typeof enrichment.sections !== 'object' ||
+      Array.isArray(enrichment.sections)
+    )
+  ) {
+    throw new Error(
+      `CLINICAL_ENRICHMENT_PRESERVATION_ABORT: ` +
+      `sections invalidas para "${safeId}"`
+    );
+  }
+
+  if (
+    enrichment.schema !== undefined &&
+    enrichment.schema !== 'medcases.clinical-enrichment.v1'
+  ) {
+    throw new Error(
+      `CLINICAL_ENRICHMENT_PRESERVATION_ABORT: ` +
+      `schema de enrichment nao suportado para "${safeId}": ` +
+      `${enrichment.schema}`
+    );
+  }
+
+  return enrichment;
+}
+
   let totalDrugs = 0;
   let totalErrors = 0;
   let totalContextVariants = 0;
@@ -3001,6 +3098,14 @@ async function main() {
             preparedEntry,
             collisionPolicy
           );
+
+        const preservedEnrichment =
+          readExistingEnrichment(safeId);
+
+        if (preservedEnrichment) {
+          drugJson.mc_clinical_enrichment_v1 =
+            preservedEnrichment;
+        }
 
         const outPath = path.join(
           OUT_DRUGS,
