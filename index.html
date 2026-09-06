@@ -27579,14 +27579,62 @@ window.MedCasesBridge = {
     );
   };
 
+  // MC-CALC-CACHE-ACTIVE-SESSION-NO-URL-MUTATION-FINAL-V1-B-R0
+  let userSessionInteracted = false;
+
+  const markInteractiveSession = () => {
+    userSessionInteracted = true;
+  };
+
+  ['pointerdown', 'touchstart', 'keydown'].forEach(type => {
+    document.addEventListener(
+      type,
+      markInteractiveSession,
+      { capture: true, passive: true }
+    );
+  });
+
+  const hasInteractiveSurface = () => {
+    const body = document.body;
+    const projected =
+      document.querySelector('.mc-overlay-projected-card');
+    const activeOverlay =
+      document.querySelector('#calculator-overlay-container.is-active');
+
+    return (
+      userSessionInteracted ||
+      !!projected ||
+      !!activeOverlay ||
+      !!(body && body.classList.contains('calc-overlay-open'))
+    );
+  };
+
+  const cacheVersionUrl = remoteVersion => {
+    const url = new URL(window.location.href);
+    url.searchParams.set('_mc_cache', remoteVersion);
+    return url;
+  };
+
+  const deferReloadForInteractiveSession = remoteVersion => {
+    window.__MC_CACHE_RELOAD_DEFERRED = {
+      version: remoteVersion,
+      reason: 'interactive-session-no-url-mutation',
+      timestamp: Date.now()
+    };
+  };
+
   const reloadForVersionOnce = remoteVersion => {
     const guardKey = 'medcases-cache-reload-' + remoteVersion;
 
     if (sessionStorage.getItem(guardKey) === '1') return;
     sessionStorage.setItem(guardKey, '1');
 
-    const url = new URL(window.location.href);
-    url.searchParams.set('_mc_cache', remoteVersion);
+    if (hasInteractiveSurface()) {
+      deferReloadForInteractiveSession(remoteVersion);
+      return;
+    }
+
+    const url = cacheVersionUrl(remoteVersion);
     window.location.replace(url.toString());
   };
 
@@ -30460,6 +30508,33 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
       try { window.__MC_FARMACOS_V2_OBSERVER.disconnect(); } catch (_) {}
     }
     window.__MC_FARMACOS_V2_OBSERVER = null;
+
+    // MC-CALC-FARMACOS-V2-MISSING-HUB-OPEN-EMITTER-BRIDGE-V1-B-R0
+    // Restore the declared event-driven lifecycle without creating a new owner.
+    if (!window.__MC_FARMACOS_V2_TRIGGER_EVENT_BRIDGE_BOUND) {
+      window.__MC_FARMACOS_V2_TRIGGER_EVENT_BRIDGE_BOUND = true;
+
+      document.addEventListener("click", function (event) {
+        var target = event && event.target;
+        var trigger =
+          target && target.closest
+            ? target.closest("#hub-card-farmacos > .hub-card-trigger")
+            : null;
+
+        if (!trigger) return;
+
+        window.setTimeout(function () {
+          document.dispatchEvent(
+            new CustomEvent("mc:hub-open", {
+              detail: {
+                id: "farmacos",
+                source: "hub-card-trigger-event-bridge"
+              }
+            })
+          );
+        }, 0);
+      });
+    }
 
     if (!window.__MC_FARMACOS_V2_HUB_OPEN_BOUND) {
       window.__MC_FARMACOS_V2_HUB_OPEN_BOUND = true;

@@ -140,6 +140,9 @@ self.addEventListener('activate', (event) => {
     await pruneOldCaches();
     await self.clients.claim();
 
+    // MC-CALC-SW-NO-ACTIVATE-CLIENT-NAVIGATE-V1-B-R0
+    // clients.claim() is sufficient to hand control to the new worker.
+    // Never navigate an already-open interactive document from activate.
     const clients = await self.clients.matchAll({
       type: 'window',
       includeUncontrolled: true
@@ -148,28 +151,13 @@ self.addEventListener('activate', (event) => {
     await Promise.all(
       clients.map((client) => {
         try {
-          const url = new URL(client.url);
+          client.postMessage({
+            type: 'MEDCASES_CACHE_VERSION_ACTIVE',
+            version: CACHE_VERSION
+          });
+        } catch (_) {}
 
-          if (url.origin !== self.location.origin) {
-            return Promise.resolve();
-          }
-
-          if (
-            url.searchParams.get('_mc_cache') ===
-            CACHE_VERSION
-          ) {
-            return Promise.resolve();
-          }
-
-          url.searchParams.set(
-            '_mc_cache',
-            CACHE_VERSION
-          );
-
-          return client.navigate(url.toString());
-        } catch (_) {
-          return Promise.resolve();
-        }
+        return Promise.resolve();
       })
     );
   })());
