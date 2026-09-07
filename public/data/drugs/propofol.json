@@ -17,9 +17,160 @@
   "keywords": [
     "propofol"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8971307309e3457c",
+  "clinicalContentSha256": "8971307309e3457c216ea650e1d9475ee1c8277aec5b2d1c2c60bd27a9f90523",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "sedacao.js"
+  "sourceModule": "sedacao.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "propofol",
+    "clinical_batch": "LOT001_SEDACAO_INDUCAO_BNM",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_plus_current_guideline_when_explicitly_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar técnica asséptica estrita; emulsão lipídica favorece contaminação. Iniciar administração prontamente e concluir/descartar produto e equipo conforme rotulagem, em até 12 h após abertura. Administrar apenas por pessoal treinado em via aérea e ressuscitação."
+          },
+          {
+            "label": "Apresentação",
+            "text": "Emulsão injetável IV; apresentação de referência 10 mg/mL"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar técnica aséptica estricta; la emulsión lipídica favorece contaminación. Iniciar la administración prontamente y completar/desechar producto y equipo según rotulado, dentro de 12 h de la apertura. Administrar solo por personal entrenado en vía aérea y reanimación."
+          },
+          {
+            "label": "Presentación",
+            "text": "Emulsión inyectable IV; presentación de referencia 10 mg/mL"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Propofol pode causar perda rápida de consciência, apneia e hipotensão e não é analgésico. Sedação pediátrica em UTI não é indicação aprovada na rotulagem de referência."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depressão cardiovascular grave; Bradicardia, assistolia ou parada cardíaca; Síndrome de infusão do propofol (PRIS); Hipertrigliceridemia/pancreatite"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade ao propofol ou componentes; História de anafilaxia a ovo ou soja conforme a rotulagem de referência"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Propofol puede causar pérdida rápida de conciencia, apnea e hipotensión y no es analgésico. La sedación pediátrica en UCI no es una indicación aprobada en el rotulado de referencia."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión cardiovascular grave; Bradicardia, asistolia o paro cardíaco; Síndrome de infusión de propofol (PRIS); Hipertrigliceridemia/pancreatitis"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a propofol o componentes; Antecedente de anafilaxia a huevo o soja según el rotulado de referencia"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Indução em adulto saudável <65 anos: 2–2,5 mg/kg IV titulados. Sedação em UTI: iniciar 5 mcg/kg/min e titular em incrementos de 5–10 mcg/kg/min; manutenção usual 5–50 mcg/kg/min. Evitar escalada desnecessária; doses >4 mg/kg/h exigem avaliação rigorosa de risco/benefício."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Indução 3–16 anos: 2,5–3,5 mg/kg IV. Manutenção de anestesia ≥2 meses: aproximadamente 125–300 mcg/kg/min, titulada. Sedação MAC pediátrica não é recomendada e sedação pediátrica em UTI não é indicada na rotulagem."
+          },
+          {
+            "label": "Rim",
+            "text": "Não há ajuste renal fixo estabelecido; titular à resposta clínica e hemodinâmica."
+          },
+          {
+            "label": "Fígado",
+            "text": "Não há ajuste hepático fixo universal; titular à resposta, especialmente em pacientes frágeis ou com alteração hemodinâmica."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Inducción en adulto sano <65 años: 2–2,5 mg/kg IV titulados. Sedación en UCI: iniciar 5 mcg/kg/min y titular en incrementos de 5–10 mcg/kg/min; mantenimiento habitual 5–50 mcg/kg/min. Evitar escalada innecesaria; dosis >4 mg/kg/h requieren evaluación rigurosa de riesgo/beneficio."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Inducción 3–16 años: 2,5–3,5 mg/kg IV. Mantenimiento de anestesia ≥2 meses: aproximadamente 125–300 mcg/kg/min, titulado. La sedación MAC pediátrica no está recomendada y la sedación pediátrica en UCI no está indicada en el rotulado."
+          },
+          {
+            "label": "Riñón",
+            "text": "No hay ajuste renal fijo establecido; titular según respuesta clínica y hemodinámica."
+          },
+          {
+            "label": "Hígado",
+            "text": "No hay ajuste hepático fijo universal; titular según respuesta, especialmente en pacientes frágiles o con alteración hemodinámica."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Anestésico geral intravenoso e sedativo-hipnótico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Potencializa a neurotransmissão inibitória mediada por GABA-A, produzindo hipnose de início rápido. Não fornece analgesia clinicamente adequada como agente isolado."
+          },
+          {
+            "label": "Indicações",
+            "text": "Indução de anestesia geral em pacientes ≥3 anos; Manutenção de anestesia geral em pacientes ≥2 meses; Sedação MAC em adultos; Sedação em UTI de adultos intubados e ventilados mecanicamente"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Anestésico general intravenoso y sedante-hipnótico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Potencia la neurotransmisión inhibitoria mediada por GABA-A, produciendo hipnosis de inicio rápido. No aporta analgesia clínicamente adecuada como agente aislado."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Inducción de anestesia general en pacientes ≥3 años; Mantenimiento de anestesia general en pacientes ≥2 meses; Sedación MAC en adultos; Sedación en UCI de adultos intubados y ventilados mecánicamente"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Propofol Injectable Emulsion",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=28d7ba00-f824-4e55-139a-03f509c099db"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Propofol Injectable Emulsion",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=28d7ba00-f824-4e55-139a-03f509c099db"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_propofol",
+        "title": "DailyMed — Propofol Injectable Emulsion",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=28d7ba00-f824-4e55-139a-03f509c099db",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

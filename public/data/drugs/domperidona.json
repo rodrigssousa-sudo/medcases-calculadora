@@ -1,6 +1,6 @@
 {
   "id": "domperidona",
-  "category": "gastroenterologia",
+  "category": "gastro",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,182 @@
   "keywords": [
     "domperidona"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-75849ac54fec5559",
+  "clinicalContentSha256": "75849ac54fec55594fa7dc193ba84d22e32c864f169e99d58b5ac059290fd0c8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "gastroenterologia.js"
+  "sourceModule": "gastroenterologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "domperidona",
+    "clinical_batch": "LOT004_ANTIEMETICOS_GASTROPROCINETICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_and_guideline",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar menor dose efetiva pelo menor tempo"
+          },
+          {
+            "label": "Administração",
+            "text": "Evitar combinação com fármacos que prolongam QT ou inibidores potentes de CYP3A4"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar la menor dosis efectiva durante el menor tiempo"
+          },
+          {
+            "label": "Administración",
+            "text": "Evitar combinación con fármacos que prolongan QT o inhibidores potentes de CYP3A4"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "O risco cardíaco aumenta com >60 anos, doses >30 mg/dia, QT-prolongadores e inibidores CYP3A4."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Prolongamento de QT; Torsades/arrítmia ventricular; Morte súbita cardíaca rara"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "QT prolongado/distúrbio de condução significativo; Doença cardíaca subjacente relevante como IC; Distúrbios eletrolíticos importantes/bradicardia; Insuficiência hepática moderada/grave; Uso de fármacos que prolongam QT ou inibidores potentes de CYP3A4"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "El riesgo cardíaco aumenta con >60 años, dosis >30 mg/día, prolongadores de QT e inhibidores CYP3A4."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Prolongación de QT; Torsades/arritmia ventricular; Muerte súbita cardíaca rara"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "QT prolongado/trastorno de conducción significativo; Cardiopatía subyacente relevante como IC; Trastornos electrolíticos importantes/bradicardia; Insuficiencia hepática moderada/grave; Uso de fármacos que prolongan QT o inhibidores potentes de CYP3A4"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "EMA: 10 mg VO até 3x/dia; máximo 30 mg/dia. Em geral, não usar por mais de 1 semana."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Onde produto pediátrico é autorizado: 0,25 mg/kg VO até 3x/dia, com dispositivo de medida apropriado."
+          },
+          {
+            "label": "Rim",
+            "text": "Em insuficiência renal grave, reduzir frequência de administração em uso repetido conforme resposta clínica."
+          },
+          {
+            "label": "Fígado",
+            "text": "Contraindicada em insuficiência hepática moderada ou grave segundo EMA."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "EMA: 10 mg VO hasta 3x/día; máximo 30 mg/día. En general, no usar por más de 1 semana."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Donde el producto pediátrico esté autorizado: 0,25 mg/kg VO hasta 3x/día, con dispositivo de medición apropiado."
+          },
+          {
+            "label": "Riñón",
+            "text": "En insuficiencia renal grave, reducir frecuencia de administración en uso repetido según respuesta clínica."
+          },
+          {
+            "label": "Hígado",
+            "text": "Contraindicada en insuficiencia hepática moderada o grave según EMA."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Antagonista dopaminérgico D2 periférico/procinético"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagoniza receptores D2 predominantemente periféricos e aumenta motilidade gastrointestinal; menor penetração no SNC que metoclopramida."
+          },
+          {
+            "label": "Indicações",
+            "text": "Alívio de náuseas e vômitos onde autorizada"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antagonista dopaminérgico D2 periférico/procinético"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagoniza receptores D2 predominantemente periféricos y aumenta motilidad gastrointestinal; menor penetración al SNC que metoclopramida."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Alivio de náuseas y vómitos donde esté autorizada"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "QT",
+            "text": "Evitar empilhar fármacos que prolongam QT quando possível; corrigir eletrólitos e monitorar pacientes de risco."
+          },
+          {
+            "label": "CYP3A4",
+            "text": "Inibidores potentes de CYP3A4 são contraindicados pelo aumento de exposição e risco arrítmico."
+          }
+        ],
+        "es": [
+          {
+            "label": "QT",
+            "text": "Evitar acumular fármacos que prolongan QT cuando sea posible; corregir electrolitos y monitorizar pacientes de riesgo."
+          },
+          {
+            "label": "CYP3A4",
+            "text": "Los inhibidores potentes de CYP3A4 están contraindicados por aumento de exposición y riesgo arrítmico."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "EMA Domperidone referral",
+            "text": "Fonte revisada em 2026-09-05. https://www.ema.europa.eu/en/medicines/human/referrals/domperidone-containing-medicines"
+          }
+        ],
+        "es": [
+          {
+            "label": "EMA Domperidone referral",
+            "text": "Fuente revisada el 2026-09-05. https://www.ema.europa.eu/en/medicines/human/referrals/domperidone-containing-medicines"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "domperidona_1",
+        "title": "EMA Domperidone referral",
+        "url": "https://www.ema.europa.eu/en/medicines/human/referrals/domperidone-containing-medicines",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

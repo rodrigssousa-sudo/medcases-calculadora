@@ -1,6 +1,6 @@
 {
   "id": "bilastina",
-  "category": "alergia_imunologia",
+  "category": "alergia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,174 @@
   "keywords": [
     "bilastina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-9ef937dca1e379d1",
+  "clinicalContentSha256": "9ef937dca1e379d1744c935ea24743c3c0123248e799aedbf898bf7245b99b40",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "alergia_imunologia.js"
+  "sourceModule": "alergia_imunologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "bilastina",
+    "clinical_batch": "LOT005_ANTIALERGICOS_ANTIHISTAMINICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_regulatory_smpc",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Tomar 1 hora antes ou 2 horas após alimento"
+          },
+          {
+            "label": "Administração",
+            "text": "Tomar 1 hora antes ou 2 horas após suco de frutas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Tomar 1 hora antes o 2 horas después de alimentos"
+          },
+          {
+            "label": "Administración",
+            "text": "Tomar 1 hora antes o 2 horas después de jugo de frutas"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Alimentos e sucos de frutas reduzem a biodisponibilidade da bilastina; respeitar jejum relativo."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hipersensibilidade rara"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Alimentos y jugos de frutas reducen la biodisponibilidad de bilastina; respetar ayuno relativo."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hipersensibilidad rara"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Adultos e adolescentes ≥12 anos: 20 mg VO 1x/dia."
+          },
+          {
+            "label": "Pediatria",
+            "text": "O comprimido de 20 mg é indicado a partir de 12 anos; idades menores dependem de apresentação pediátrica autorizada localmente."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem ajuste rotineiro em insuficiência renal isolada; evitar combinações que elevem exposição em insuficiência renal moderada/grave conforme SmPC."
+          },
+          {
+            "label": "Fígado",
+            "text": "Sem ajuste hepático rotineiro segundo SmPC."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Adultos y adolescentes ≥12 años: 20 mg VO 1 vez/día."
+          },
+          {
+            "label": "Pediatría",
+            "text": "El comprimido de 20 mg está indicado desde 12 años; edades menores dependen de presentación pediátrica autorizada localmente."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin ajuste rutinario en insuficiencia renal aislada; evitar combinaciones que aumenten exposición en insuficiencia renal moderada/grave según SmPC."
+          },
+          {
+            "label": "Hígado",
+            "text": "Sin ajuste hepático rutinario según SmPC."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Anti-histamínico H1 de segunda geração"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista/inverso agonista seletivo periférico H1, com baixa sedação nas doses usuais."
+          },
+          {
+            "label": "Indicações",
+            "text": "Rinoconjuntivite alérgica; Urticária"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antihistamínico H1 de segunda generación"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista/agonista inverso selectivo periférico H1, con baja sedación a dosis habituales."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Rinoconjuntivitis alérgica; Urticaria"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Alimento/suco",
+            "text": "Alimento e suco de frutas reduzem biodisponibilidade; respeitar 1 h antes ou 2 h depois."
+          }
+        ],
+        "es": [
+          {
+            "label": "Alimento/jugo",
+            "text": "Alimentos y jugos reducen biodisponibilidad; respetar 1 h antes o 2 h después."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "Bilastine SmPC",
+            "text": "Fonte revisada em 2026-09-05. https://www.medicines.org.uk/emc/product/101237/smpc"
+          }
+        ],
+        "es": [
+          {
+            "label": "Bilastine SmPC",
+            "text": "Fuente revisada el 2026-09-05. https://www.medicines.org.uk/emc/product/101237/smpc"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "bilastina_1",
+        "title": "Bilastine SmPC",
+        "url": "https://www.medicines.org.uk/emc/product/101237/smpc",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

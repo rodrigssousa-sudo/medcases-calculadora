@@ -17,9 +17,202 @@
   "keywords": [
     "aminofilina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8db7dcf02f286792",
+  "clinicalContentSha256": "8db7dcf02f28679298b4aaa03b3d571d60c10a0f69b0f08fdac051f4119818d8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "pneumologia.js"
+  "sourceModule": "pneumologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "aminofilina",
+    "clinical_batch": "LOT006_BRONCODILATADORES_ASMA_DPOC",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "GINA_2026_GOLD_2026_OFFICIAL_LABELS",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Administração IV lenta/diluída conforme produto"
+          },
+          {
+            "label": "Administração",
+            "text": "Verificar uso recente de teofilina antes de dose de ataque"
+          },
+          {
+            "label": "Administração",
+            "text": "Monitorar ECG e níveis séricos em uso relevante"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Administración IV lenta/diluida según producto"
+          },
+          {
+            "label": "Administración",
+            "text": "Verificar uso reciente de teofilina antes de dosis de carga"
+          },
+          {
+            "label": "Administración",
+            "text": "Monitorizar ECG y niveles séricos en uso relevante"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Aminofilina IV tem estreita janela terapêutica. Dose deve considerar teofilina sérica e uso prévio; infusão rápida aumenta toxicidade."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Arritmias; Convulsões; Hipotensão com infusão rápida; Toxicidade fatal"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Aminofilina IV tiene estrecho margen terapéutico. La dosis debe considerar teofilina sérica y uso previo; la infusión rápida aumenta toxicidad."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Arritmias; Convulsiones; Hipotensión con infusión rápida; Toxicidad fatal"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Aminofilina IV deve ser dosada com base em teofilina equivalente, nível sérico prévio, idade e depuração. Infusão lenta; não usar carga sem conhecer uso recente de teofilina."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Uso pediátrico exige protocolo de dose por peso e monitorização sérica contínua; não extrapolar dose adulta."
+          },
+          {
+            "label": "Rim",
+            "text": "Ajuste guiado por nível sérico e fatores clínicos, não por fórmula renal isolada."
+          },
+          {
+            "label": "Fígado",
+            "text": "Reduzir manutenção em hepatopatia/IC/febre prolongada e monitorar nível sérico."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Aminofilina IV debe dosificarse en base a teofilina equivalente, nivel sérico previo, edad y depuración. Infusión lenta; no usar carga sin conocer uso reciente de teofilina."
+          },
+          {
+            "label": "Pediatría",
+            "text": "El uso pediátrico requiere protocolo por peso y monitorización sérica continua; no extrapolar dosis adulta."
+          },
+          {
+            "label": "Riñón",
+            "text": "Ajuste guiado por nivel sérico y factores clínicos, no por fórmula renal aislada."
+          },
+          {
+            "label": "Hígado",
+            "text": "Reducir mantenimiento en hepatopatía/IC/fiebre prolongada y monitorizar nivel sérico."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Complexo de teofilina/etilenodiamina; metilxantina IV"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Libera teofilina; promove broncodilatação por mecanismos de metilxantina."
+          },
+          {
+            "label": "Indicações",
+            "text": "Broncodilatação IV em situações selecionadas quando terapias inalatórias adequadas não são suficientes/possíveis"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Complejo de teofilina/etilendiamina; metilxantina IV"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Libera teofilina; produce broncodilatación por mecanismos de metilxantina."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Broncodilatación IV en situaciones seleccionadas cuando terapias inhaladas adecuadas no son suficientes/posibles"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, eletrólitos e inibidores/indutores metabólicos conforme o fármaco."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, electrolitos e inhibidores/inductores metabólicos según el fármaco."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fonte revisada em 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "GOLD 2026 Report and Pocket Guide",
+            "text": "Fonte revisada em 2026-09-05. https://goldcopd.org/2026-gold-report-and-pocket-guide/"
+          },
+          {
+            "label": "DailyMed Aminophylline injection 2026",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=52bbc6cd-4baf-7859-e063-6394a90ac87d"
+          }
+        ],
+        "es": [
+          {
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fuente revisada el 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "GOLD 2026 Report and Pocket Guide",
+            "text": "Fuente revisada el 2026-09-05. https://goldcopd.org/2026-gold-report-and-pocket-guide/"
+          },
+          {
+            "label": "DailyMed Aminophylline injection 2026",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=52bbc6cd-4baf-7859-e063-6394a90ac87d"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "aminofilina_1",
+        "title": "GINA 2026 Strategy Report",
+        "url": "https://ginasthma.org/2026-gina-strategy-report/",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "aminofilina_2",
+        "title": "GOLD 2026 Report and Pocket Guide",
+        "url": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "aminofilina_3",
+        "title": "DailyMed Aminophylline injection 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=52bbc6cd-4baf-7859-e063-6394a90ac87d",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

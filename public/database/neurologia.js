@@ -3638,44 +3638,111 @@ function _mcNeurologiaT(lang, pt, es) {
 
     /* ── MECLIZINA ────────────────────────────────────────────────────── */
     "meclizina": {
-      name: { pt: 'Meclizina', es: 'Meclozina' },
-      category: 'otorrinolaringologia',
-      icon: '👂',
-      color: '#0D9488',
-      colorTxt: '#ffffff',
-      class: { pt: 'Anti-histamínico H1 com atividade Anticolinérgica', es: 'Antihistamínico H1 con actividad Anticolinérgica' },
-      indications: {
-        pt: ['Cinetose (Enjoo de movimento ao viajar de barco, carro ou avião)', 'Tratamento profilático e sintomático da Vertigem aguda (Labirintites)'],
-        es: ['Cinetosis (Mareo por movimiento al viajar en barco, coche o avión)', 'Tratamiento profiláctico y sintomático del Vértigo agudo (Laberintitis)']
+      "name": {
+        "pt": "Meclizina",
+        "es": "Meclizina"
       },
-      commercialNames: { br: ['Meclin', 'Navicalm'], ar: ['Bonamine (Histórico)'] },
-      presentation: { pt: ['Comprimidos 25 mg e 50 mg'], es: ['Comprimidos 25 mg y 50 mg'] },
-      mechanism: {
-        pt: 'O "Isolador de Enjoo". Como um anti-histamínico de primeira geração com potentes propriedades anticolinérgicas, a Meclizina atua diminuindo a excitabilidade do labirinto no ouvido interno e bloqueando a condução nas vias do nervo vestibular-cerebelar. Ela literalmente "desconecta" a comunicação entre o ouvido (que sente o balanço do barco) e o centro do vômito no cérebro.',
-        es: 'El "Aislador de Mareo". Es un antihistamínico con potentes propiedades anticolinérgicas. Actúa disminuyendo la excitabilidad del laberinto en el oído interno y bloqueando la conducción nerviosa vestibular. Literalmente "desconecta" la comunicación entre el oído (que siente el balanceo) y el centro del vómito.'
+      "category": "neurologia",
+      "class": {
+        "pt": "Anti-histamínico H1 com efeito anticolinérgico",
+        "es": "Antihistamínico H1 con efecto anticolinérgico"
       },
-      dose: {
-        adult: {
-          pt: 'Vertigem/Labirintite: 25 a 100 mg ao dia (divididos a cada 12 ou 24 horas). Cinetose (Viagem): 25 mg, tomar 1 hora ANTES da viagem (Pode repetir a cada 24h).',
-          es: 'Vértigo/Laberintitis: 25 a 100 mg al día (divididos cada 12 o 24 horas). Cinetosis (Viaje): 25 mg, tomar 1 hora ANTES del viaje (Puede repetir cada 24h).'
+      "indications": {
+        "pt": [
+          "Vertigem associada a doenças do sistema vestibular em adultos"
+        ],
+        "es": [
+          "Vértigo asociado a enfermedades del sistema vestibular en adultos"
+        ]
+      },
+      "mechanism": {
+        "pt": "O mecanismo exato não é definido; presume-se antagonismo H1 com supressão vestibular.",
+        "es": "El mecanismo exacto no está definido; se presume antagonismo H1 con supresión vestibular."
+      },
+      "dose": {
+        "adult": {
+          "pt": "25–100 mg/dia VO em doses divididas conforme resposta clínica.",
+          "es": "25–100 mg/día VO en dosis divididas según respuesta clínica."
         },
-        pediatric: {
-          pt: 'Não é rotineiramente aprovada para crianças < 12 anos. O Dramin (Dimenidrinato) é preferido na pediatria.',
-          es: 'No es rutinariamente aprobada para niños < 12 años.'
+        "pediatric": {
+          "pt": "A rotulagem atual citada é para adultos; não extrapolar automaticamente para pediatria.",
+          "es": "El rotulado actual citado es para adultos; no extrapolar automáticamente a pediatría."
         }
       },
-      administration: { pt: ['Pode ser tomado com leite ou alimentos para evitar desconforto gástrico.'], es: ['Puede tomarse con leche o alimentos para evitar malestar gástrico.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito.', es: 'Sin necesidad de ajuste estricto.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Usar com grande cautela. Metabolização massiva hepática.', es: 'Usar con gran cautela. Metabolización masiva hepática.' } },
-      commonAdverseEffects: { pt: ['Sonolência intensa (Embora menor que o Dimenidrinato, ainda dá muito sono)', 'Boca e mucosas extremamente secas', 'Visão turva temporária'], es: ['Somnolencia intensa (Aunque menor que el Dimenhidrinato, aún da sueño)', 'Boca y mucosas extremadamente secas', 'Visión borrosa temporal'] },
-      dangerousAdverseEffects: { pt: ['Retenção Urinária Aguda (Globo vesical) em Idosos', 'Delirium anticolinérgico'], es: ['Retención Urinaria Aguda (Globo vesical) en Ancianos', 'Delirium anticolinérgico'] },
-      contraindications: {
-        absolute: { pt: ['Idosos com demência e quadro agudo de delirium', 'Crise aguda de asma brônquica'], es: ['Ancianos con demencia y cuadro agudo de delirium', 'Crisis aguda de asma bronquial'] },
-        relative: { pt: ['Glaucoma de ângulo fechado', 'Hiperplasia benigna da próstata (Risco de travar a urina)'], es: ['Glaucoma de ángulo cerrado', 'Hiperplasia benigna de próstata'] }
+      "administration": {
+        "pt": [
+          "VO; comprimido mastigável deve ser mastigado ou triturado antes de engolir",
+          "Evitar dirigir/operar máquinas se houver sedação"
+        ],
+        "es": [
+          "VO; el comprimido masticable debe masticarse o triturarse antes de tragar",
+          "Evitar conducir/operar maquinaria si produce sedación"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'A DEMORA DA VIAGEM: O maior erro dos pacientes é tomar a Meclizina quando JÁ ESTÃO no barco passando mal e vomitando. A droga leva 1 hora para fazer efeito profilático. Deve ser engolida enquanto o paciente ainda está em solo firme, antes de embarcar.', es: 'LA DEMORA DEL VIAJE: El mayor error de los pacientes es tomarla cuando YA ESTÁN en el barco vomitando. La droga lleva 1 hora para hacer efecto. Debe ser tragada estando aún en suelo firme, antes de embarcar.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela em insuficiência renal por possível acúmulo de metabólitos; não há esquema fixo bem estabelecido.",
+          "es": "Usar precaución en insuficiencia renal por posible acumulación de metabolitos; no hay esquema fijo bien establecido."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela em insuficiência hepática; dados de ajuste são limitados.",
+          "es": "Usar precaución en insuficiencia hepática; los datos de ajuste son limitados."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Sonolência",
+          "Boca seca",
+          "Cefaleia"
+        ],
+        "es": [
+          "Somnolencia",
+          "Boca seca",
+          "Cefalea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Sedação importante",
+          "Retenção urinária/confusão anticolinérgica em suscetíveis"
+        ],
+        "es": [
+          "Sedación importante",
+          "Retención urinaria/confusión anticolinérgica en susceptibles"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Glaucoma, hiperplasia prostática, idosos, uso de álcool/sedativos"
+          ],
+          "es": [
+            "Glaucoma, hiperplasia prostática, adultos mayores, uso de alcohol/sedantes"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Pode causar sonolência e efeitos anticolinérgicos; álcool e outros depressores do SNC potencializam sedação.",
+          "es": "Puede causar somnolencia y efectos anticolinérgicos; alcohol y otros depresores del SNC potencian la sedación."
+        }
       }
     }
 

@@ -632,78 +632,117 @@ window.GASTRO_DRUGS_DB = [
      Antagonista 5-HT3 · NVIQ · NVPO · Emergência
   ══════════════════════════════════════════════════════════════ */
   {
-    id: 'ondansetrona',
-    name:     { pt: 'Ondansetrona', es: 'Ondansetrón' },
-    category: 'gastro',
-    class:    { pt: 'Antiemético (Antagonista do Receptor 5-HT3)', es: 'Antiemético (Antagonista del Receptor 5-HT3)' },
-    icon: '🤢',
-    color:    'rgba(168,85,247,0.12)',
-    colorTxt: '#7C3AED',
-
-    indications: {
-      pt: ['Prevenção e tratamento de Náuseas e Vômitos Induzidos por Quimioterapia (NVIQ) ou Radioterapia', 'Náuseas e vômitos agudos no Pós-Operatório (NVPO)', 'Vômitos incontroláveis na emergência clínica e pediatria'],
-      es: ['Prevención y tratamiento de Náuseas y Vómitos Inducidos por Quimioterapia (NVIQ) o Radioterapia', 'Náuseas y vómitos agudos en el Posoperatorio (NVPO)', 'Vómitos incontrolables en urgencias clínica y pediatría']
+    "id": "ondansetrona",
+    "name": {
+      "pt": "Ondansetrona",
+      "es": "Ondansetrón"
     },
-
-    commercialNames: { br: ['Vonau', 'Nausedron', 'Zofran'], ar: ['Zofran', 'Ondansetron'] },
-
-    presentation: {
-      pt: ['Ampolas IV/IM 2 mg/mL (2 e 4 mL)', 'Comprimidos ODT (Orodispersíveis) 4 mg e 8 mg'],
-      es: ['Ampollas IV/IM 2 mg/mL (2 y 4 mL)', 'Comprimidos ODT (Orodispersables) 4 mg y 8 mg']
+    "category": "gastro",
+    "class": {
+      "pt": "Antagonista seletivo 5-HT3",
+      "es": "Antagonista selectivo 5-HT3"
     },
-
-    mechanism: {
-      pt: 'Bloqueador altamente seletivo dos receptores de serotonina 5-HT3 localizados nas terminações nervosas do nervo vago (trato gastrointestinal) e na Zona de Gatilho Quimiorreceptora (tronco cerebral). Desliga quase inteiramente a via química do vômito gerada por lesão gástrica, radiação ou toxinas. Não afeta receptores de dopamina — por isso não causa sintomas extrapiramidais como a metoclopramida.',
-      es: 'Bloqueador altamente selectivo de los receptores de serotonina 5-HT3 localizados en las terminaciones nerviosas del nervio vago (tracto gastrointestinal) y en la Zona Gatillo Quimiorreceptora (tronco cerebral). Apaga casi por completo la vía química del vómito generada por lesión gástrica, radiación o toxinas. No afecta receptores de dopamina — por eso no causa síntomas extrapiramidales como la metoclopramida.'
+    "indications": {
+      "pt": [
+        "Prevenção de náuseas e vômitos por quimioterapia emetogênica",
+        "Prevenção de náuseas e vômitos pós-operatórios"
+      ],
+      "es": [
+        "Prevención de náuseas y vómitos por quimioterapia emetógena",
+        "Prevención de náuseas y vómitos posoperatorios"
+      ]
     },
-
-    dose: {
-      adult: {
-        pt: 'Geral: 4 a 8 mg IV, IM ou VO (podendo repetir a cada 8 horas). Quimioterapia altamente emetogênica: até 16 a 24 mg em infusão profilática.',
-        es: 'General: 4 a 8 mg IV, IM o VO (pudiendo repetir cada 8 horas). Quimioterapia altamente emetogénica: hasta 16 a 24 mg en infusión profiláctica.'
+    "mechanism": {
+      "pt": "Bloqueia receptores 5-HT3 periféricos e centrais envolvidos no reflexo emético.",
+      "es": "Bloquea receptores 5-HT3 periféricos y centrales implicados en el reflejo emético."
+    },
+    "dose": {
+      "adult": {
+        "pt": "CINV IV: 0,15 mg/kg por dose (máx. 16 mg/dose) em 3 doses; PONV adulto: dose única de 4 mg IV/IM conforme rotulagem.",
+        "es": "CINV IV: 0,15 mg/kg por dosis (máx. 16 mg/dosis) en 3 dosis; PONV adulto: dosis única de 4 mg IV/IM según rotulado."
       },
-      pediatric: {
-        pt: 'Gastroenterite com vômitos: peso 8-15 kg → 2 mg ODT; 15-30 kg → 4 mg ODT. Dose IV: 0,15 mg/kg.',
-        es: 'Gastroenteritis con vómitos: peso 8-15 kg → 2 mg ODT; 15-30 kg → 4 mg ODT. Dosis IV: 0,15 mg/kg.'
+      "pediatric": {
+        "pt": "CINV ≥6 meses: 0,15 mg/kg IV por dose (máx. 16 mg/dose) em 3 doses. PONV ≥1 mês: dose única conforme peso/rotulagem.",
+        "es": "CINV ≥6 meses: 0,15 mg/kg IV por dosis (máx. 16 mg/dosis) en 3 dosis. PONV ≥1 mes: dosis única según peso/rotulado."
       }
     },
-
-    administration: {
-      pt: ['Comprimidos ODT devem derreter sobre a língua (não engolir com água — ideal para quem está vomitando).', 'Injeção IV deve ser lenta (em pelo menos 2 a 5 minutos) para evitar cefaleia intensa vascular.'],
-      es: ['Comprimidos ODT deben derretirse sobre la lengua (no tragar con agua — ideal para quien está vomitando).', 'Inyección IV debe ser lenta (en al menos 2 a 5 minutos) para evitar cefalea intensa vascular.']
+    "administration": {
+      "pt": [
+        "CINV: infundir em 15 min; iniciar 30 min antes da quimioterapia",
+        "Corrigir hipocalemia/hipomagnesemia quando possível antes de usar em pacientes de risco para QT"
+      ],
+      "es": [
+        "CINV: infundir en 15 min; iniciar 30 min antes de la quimioterapia",
+        "Corregir hipopotasemia/hipomagnesemia cuando sea posible antes de usar en pacientes con riesgo de QT"
+      ]
     },
-
-    renalAdjustment: {
-      required: false,
-      message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' }
+    "renalAdjustment": {
+      "required": false,
+      "message": {
+        "pt": "Sem ajuste renal rotineiro.",
+        "es": "Sin ajuste renal rutinario."
+      }
     },
-
-    hepaticAdjustment: {
-      required: true,
-      message: { pt: 'Pacientes com falência hepática grave (Child-Pugh C) não devem ultrapassar 8 mg/dia (droga se acumula).', es: 'Pacientes con falla hepática grave (Child-Pugh C) no deben superar 8 mg/día (la droga se acumula).' }
+    "hepaticAdjustment": {
+      "required": true,
+      "message": {
+        "pt": "Insuficiência hepática grave (Child-Pugh ≥10): não exceder 8 mg/dia.",
+        "es": "Insuficiencia hepática grave (Child-Pugh ≥10): no exceder 8 mg/día."
+      }
     },
-
-    commonAdverseEffects: {
-      pt: ['Cefaleia marcante e calor facial', 'Constipação intestinal intensa (retarda o trânsito gastrointestinal)'],
-      es: ['Cefalea marcada y calor facial', 'Constipación intestinal intensa (retarda el tránsito gastrointestinal)']
+    "commonAdverseEffects": {
+      "pt": [
+        "Cefaleia",
+        "Constipação"
+      ],
+      "es": [
+        "Cefalea",
+        "Estreñimiento"
+      ]
     },
-
-    dangerousAdverseEffects: {
-      pt: ['Prolongamento do intervalo QT (arritmias tipo Torsades de Pointes)', 'Síndrome Serotoninérgica em associação com ISRSs'],
-      es: ['Prolongación del intervalo QT (arritmias tipo Torsades de Pointes)', 'Síndrome Serotoninérgico en asociación con ISRSs']
+    "dangerousAdverseEffects": {
+      "pt": [
+        "Prolongamento de QT/Torsades",
+        "Síndrome serotoninérgica rara",
+        "Isquemia miocárdica rara associada à administração"
+      ],
+      "es": [
+        "Prolongación de QT/Torsades",
+        "Síndrome serotoninérgico raro",
+        "Isquemia miocárdica rara asociada a la administración"
+      ]
     },
-
-    contraindications: {
-      absolute: { pt: ['Uso associado de Apomorfina (causa perda de consciência abrupta)', 'Síndrome do QT Longo congênito'], es: ['Uso asociado de Apomorfina (causa pérdida de consciencia abrupta)', 'Síndrome del QT Largo congénito'] },
-      relative: { pt: ['Primeiro trimestre de gravidez (possível associação com fenda palatina em alguns protocolos)'], es: ['Primer trimestre de embarazo (posible asociación con paladar hendido en algunos protocolos)'] }
+    "contraindications": {
+      "absolute": {
+        "pt": [
+          "Uso concomitante de apomorfina",
+          "Hipersensibilidade"
+        ],
+        "es": [
+          "Uso concomitante de apomorfina",
+          "Hipersensibilidad"
+        ]
+      },
+      "relative": {
+        "pt": [
+          "QT longo, bradiarritmia, IC, distúrbios eletrolíticos"
+        ],
+        "es": [
+          "QT largo, bradiarritmia, IC, trastornos electrolíticos"
+        ]
+      }
     },
-
-    safetyFlags: {
-      bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
-      warning: { pt: 'Evite administrar 8 mg em bolus rápido no pronto-socorro para náusea simples sem eletrocardiograma prévio. O risco de arritmia é real. 4 mg são frequentemente suficientes.', es: 'Evite administrar 8 mg en bolo rápido en urgencias para náusea simple sin electrocardiograma previo. El riesgo de arritmia es real. 4 mg son frecuentemente suficientes.' }
-    },
-
-    ref: 'Rojas C & Bhavsar JD. Curr Opin Support Palliat Care 2014 · FDA Label Zofran · Janicki PK et al. Anesth Analg 2011 · Lexicomp 2026'
+    "safetyFlags": {
+      "bleedingRisk": false,
+      "renalHighRisk": false,
+      "hepaticCaution": true,
+      "antidoteAvailable": false,
+      "highAlertMedication": false,
+      "warning": {
+        "pt": "Ondansetrona prolonga QT de forma dose-dependente; ECG é recomendado em pacientes com fatores de risco.",
+        "es": "Ondansetrón prolonga QT de forma dependiente de la dosis; se recomienda ECG en pacientes con factores de riesgo."
+      }
+    }
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -711,78 +750,131 @@ window.GASTRO_DRUGS_DB = [
      Antagonista D2 / Pró-cinético · Gastroparesia · NVPO
   ══════════════════════════════════════════════════════════════ */
   {
-    id: 'metoclopramida',
-    name:     { pt: 'Metoclopramida', es: 'Metoclopramida' },
-    category: 'gastro',
-    class:    { pt: 'Antiemético / Pró-Cinético (Antagonista Dopaminérgico D2)', es: 'Antiemético / Procinético (Antagonista Dopaminérgico D2)' },
-    icon: '🔄',
-    color:    'rgba(249,115,22,0.12)',
-    colorTxt: '#C2410C',
-
-    indications: {
-      pt: ['Náuseas e vômitos generalizados e na enxaqueca', 'Gastroparesia diabética (esvaziamento gástrico muito lento)', 'Refluxo gastroesofágico e facilitação de intubação gástrica e endoscopias'],
-      es: ['Náuseas y vómitos generalizados y en la migraña', 'Gastroparesia diabética (vaciamiento gástrico muy lento)', 'Reflujo gastroesofágico y facilitación de intubación gástrica y endoscopias']
+    "id": "metoclopramida",
+    "name": {
+      "pt": "Metoclopramida",
+      "es": "Metoclopramida"
     },
-
-    commercialNames: { br: ['Plasil'], ar: ['Reliveran'] },
-
-    presentation: {
-      pt: ['Ampolas IV/IM 5 mg/mL (2 mL = 10 mg)', 'Comprimidos 10 mg', 'Gotas orais'],
-      es: ['Ampollas IV/IM 5 mg/mL (2 mL = 10 mg)', 'Comprimidos 10 mg', 'Gotas orales']
+    "category": "gastro",
+    "class": {
+      "pt": "Antagonista dopaminérgico D2; agonismo 5-HT4 procinético",
+      "es": "Antagonista dopaminérgico D2; agonismo 5-HT4 procinético"
     },
-
-    mechanism: {
-      pt: 'Ação dupla. Central: bloqueia os receptores de dopamina D2 na zona de gatilho do cérebro, suprimindo a náusea (mecanismo semelhante ao haloperidol). Periférica: sensibiliza o trato gastrointestinal à acetilcolina, aumentando o tônus do esfíncter esofágico e acelerando o esvaziamento gástrico em direção ao intestino delgado. É um pró-cinético, ao contrário da ondansetrona que retarda o trânsito.',
-      es: 'Acción doble. Central: bloquea los receptores de dopamina D2 en la zona gatillo del cerebro, suprimiendo la náusea (mecanismo similar al haloperidol). Periférica: sensibiliza el tracto gastrointestinal a la acetilcolina, aumentando el tono del esfínter esofágico y acelerando el vaciamiento gástrico hacia el intestino delgado. Es un procinético, a diferencia del ondansetrón que retarda el tránsito.'
+    "indications": {
+      "pt": [
+        "Gastroparesia diabética aguda/recorrente em adultos",
+        "DRGE sintomática documentada refratária em adultos",
+        "Uso antiemético agudo em contextos selecionados conforme protocolo"
+      ],
+      "es": [
+        "Gastroparesia diabética aguda/recurrente en adultos",
+        "ERGE sintomática documentada refractaria en adultos",
+        "Uso antiemético agudo en contextos seleccionados según protocolo"
+      ]
     },
-
-    dose: {
-      adult: {
-        pt: '10 mg IV, IM ou VO a cada 8 horas (30 minutos antes das refeições na gastroparesia).',
-        es: '10 mg IV, IM o VO cada 8 horas (30 minutos antes de las comidas en la gastroparesia).'
+    "mechanism": {
+      "pt": "Antagonismo D2 na zona gatilho quimiorreceptora e aumento da motilidade gastrointestinal proximal por ação procinética.",
+      "es": "Antagonismo D2 en la zona gatillo quimiorreceptora y aumento de la motilidad gastrointestinal proximal por acción procinética."
+    },
+    "dose": {
+      "adult": {
+        "pt": "Gastroparesia diabética: 10 mg VO 30 min antes de cada refeição e ao deitar, máx. 40 mg/dia por 2–8 semanas. DRGE: 10–15 mg VO 4x/dia, máx. 60 mg/dia, até 12 semanas.",
+        "es": "Gastroparesia diabética: 10 mg VO 30 min antes de cada comida y al acostarse, máx. 40 mg/día por 2–8 semanas. ERGE: 10–15 mg VO 4x/día, máx. 60 mg/día, hasta 12 semanas."
       },
-      pediatric: {
-        pt: '0,1 a 0,15 mg/kg por dose. Máximo de 0,5 mg/kg/dia (alto risco de distonia em crianças).',
-        es: '0,1 a 0,15 mg/kg por dosis. Máximo de 0,5 mg/kg/día (alto riesgo de distonía en niños).'
+      "pediatric": {
+        "pt": "Rotulagem oral atual dos EUA não recomenda uso pediátrico devido a discinesia tardia/EPS e risco de metemoglobinemia em neonatos.",
+        "es": "El rotulado oral actual de EE. UU. no recomienda uso pediátrico por discinesia tardía/EPS y riesgo de metahemoglobinemia en neonatos."
       }
     },
-
-    administration: {
-      pt: ['INJEÇÃO VENOSA MUITO LENTA. A ampola pura em bolus imediato gera acatisia (desespero neurológico incontrolável). Dilua em 10 mL de soro e empurre devagar em 3 a 5 minutos.'],
-      es: ['INYECCIÓN VENOSA MUY LENTA. La ampolla pura en bolo inmediato genera acatisia (desesperación neurológica incontrolable). Diluya en 10 mL de suero y empuje despacio en 3 a 5 minutos.']
+    "administration": {
+      "pt": [
+        "Usar pelo menor tempo possível",
+        "Evitar duração >12 semanas",
+        "Suspender imediatamente diante de discinesia tardia"
+      ],
+      "es": [
+        "Usar durante el menor tiempo posible",
+        "Evitar duración >12 semanas",
+        "Suspender inmediatamente ante discinesia tardía"
+      ]
     },
-
-    renalAdjustment: {
-      required: true,
-      message: { pt: 'Depurado pelos rins. ClCr < 40 mL/min: cortar a dose pela metade (5 mg) para evitar neurotoxicidade e parkinsonismo iatrogênico.', es: 'Depurado por los riñones. ClCr < 40 mL/min: cortar la dosis a la mitad (5 mg) para evitar neurotoxicidad y parkinsonismo iatrogénico.' }
+    "renalAdjustment": {
+      "required": true,
+      "message": {
+        "pt": "Reduzir dose em insuficiência renal moderada/grave conforme indicação e ClCr; maior exposição aumenta risco de reações neurológicas.",
+        "es": "Reducir dosis en insuficiencia renal moderada/grave según indicación y ClCr; mayor exposición aumenta riesgo de reacciones neurológicas."
+      }
     },
-
-    hepaticAdjustment: {
-      required: true,
-      message: { pt: 'Uso cauteloso. Reduzir dose em cirrose severa pela metabolização parcial hepática.', es: 'Uso cauteloso. Reducir dosis en cirrosis severa por la metabolización parcial hepática.' }
+    "hepaticAdjustment": {
+      "required": true,
+      "message": {
+        "pt": "Reduzir dose em insuficiência hepática moderada/grave conforme rotulagem.",
+        "es": "Reducir dosis en insuficiencia hepática moderada/grave según rotulado."
+      }
     },
-
-    commonAdverseEffects: {
-      pt: ['Sonolência e fadiga profundas', 'Diarreia (pelo aumento do trânsito gastrointestinal)'],
-      es: ['Somnolencia y fatiga profundas', 'Diarrea (por el aumento del tránsito gastrointestinal)']
+    "commonAdverseEffects": {
+      "pt": [
+        "Sonolência",
+        "Inquietação",
+        "Fadiga",
+        "Diarreia"
+      ],
+      "es": [
+        "Somnolencia",
+        "Inquietud",
+        "Fatiga",
+        "Diarrea"
+      ]
     },
-
-    dangerousAdverseEffects: {
-      pt: ['Reações extrapiramidais (distonia cervical, acatisia, parkinsonismo medicamentoso)', 'Discinesia tardia (danos no SNC por uso prolongado acima de 12 semanas — pode ser IRREVERSÍVEL)', 'Aumento de prolactina e galactorreia'],
-      es: ['Reacciones extrapiramidales (distonía cervical, acatisia, parkinsonismo medicamentoso)', 'Discinesia tardía (daños en el SNC por uso prolongado superior a 12 semanas — puede ser IRREVERSIBLE)', 'Aumento de prolactina y galactorrea']
+    "dangerousAdverseEffects": {
+      "pt": [
+        "Discinesia tardia",
+        "Distonia/EPS",
+        "Síndrome neuroléptica maligna",
+        "Depressão"
+      ],
+      "es": [
+        "Discinesia tardía",
+        "Distonía/EPS",
+        "Síndrome neuroléptico maligno",
+        "Depresión"
+      ]
     },
-
-    contraindications: {
-      absolute: { pt: ['Obstrução mecânica, perfuração ou hemorragia gastrointestinal', 'Doença de Parkinson ou história de convulsão', 'Feocromocitoma'], es: ['Obstrucción mecánica, perforación o hemorragia gastrointestinal', 'Enfermedad de Parkinson o historia de convulsión', 'Feocromocitoma'] },
-      relative: { pt: ['Crianças menores de 1 ano', 'Uso concomitante com antipsicóticos'], es: ['Niños menores de 1 año', 'Uso concomitante con antipsicóticos'] }
+    "contraindications": {
+      "absolute": {
+        "pt": [
+          "História de discinesia tardia/distonia por metoclopramida",
+          "Obstrução, perfuração ou hemorragia GI quando estimulação da motilidade é perigosa",
+          "Feocromocitoma",
+          "Epilepsia"
+        ],
+        "es": [
+          "Antecedente de discinesia tardía/distonía por metoclopramida",
+          "Obstrucción, perforación o hemorragia GI cuando estimular la motilidad sea peligroso",
+          "Feocromocitoma",
+          "Epilepsia"
+        ]
+      },
+      "relative": {
+        "pt": [
+          "Parkinsonismo, uso de antipsicóticos, idosos"
+        ],
+        "es": [
+          "Parkinsonismo, uso de antipsicóticos, adultos mayores"
+        ]
+      }
     },
-
-    safetyFlags: {
-      bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: false,
-      warning: { pt: 'RESGATE DA DISTONIA: se o paciente torcer o pescoço e a mandíbula de forma involuntária (crise distônica) após o Plasil, não é convulsão. Administre prometazina (Fenergan) ou biperideno intramuscular para reverter imediatamente.', es: 'RESCATE DE LA DISTONÍA: si el paciente tuerce el cuello y la mandíbula de forma involuntaria (crisis distónica) tras el Plasil, no es convulsión. Administre prometazina (Fenergan) o biperideno intramuscular para revertir inmediatamente.' }
-    },
-
-    ref: 'FDA Drug Safety Communication Metoclopramide 2009 · Bateman DN. Aliment Pharmacol Ther 1999 · Pasricha PJ et al. Gastroenterology 2015 · Lexicomp 2026'
+    "safetyFlags": {
+      "bleedingRisk": false,
+      "renalHighRisk": true,
+      "hepaticCaution": true,
+      "antidoteAvailable": false,
+      "highAlertMedication": false,
+      "warning": {
+        "pt": "Discinesia tardia pode ser irreversível; o risco aumenta com duração e dose cumulativa. Evitar >12 semanas.",
+        "es": "La discinesia tardía puede ser irreversible; el riesgo aumenta con duración y dosis acumulada. Evitar >12 semanas."
+      }
+    }
   }
 
 ]; /* fim window.GASTRO_DRUGS_DB */

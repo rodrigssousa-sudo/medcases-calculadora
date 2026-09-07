@@ -1,6 +1,6 @@
 {
   "id": "morfina",
-  "category": "analgesia",
+  "category": "emergencia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,174 @@
   "keywords": [
     "morfina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "morfina",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via/Preparo",
+            "text": "Diluir conforme produto/protocolo para infusão contínua"
+          },
+          {
+            "label": "Monitorização",
+            "text": "Titular à analgesia com monitorização de sedação, FR, SpO₂, PA e sinais de toxicidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía/Preparación",
+            "text": "Diluir según producto/protocolo para infusión continua"
+          },
+          {
+            "label": "Monitorización",
+            "text": "Titular a la analgesia con monitorización de sedación, FR, SpO₂, PA y signos de toxicidad"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Insuficiência renal altera a farmacocinética e favorece acúmulo de M3G/M6G; reduzir a dose inicial e titular lentamente."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depressão respiratória; Hipotensão grave; Íleo"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Depressão respiratória significativa; Asma aguda/grave sem monitorização adequada; Obstrução gastrointestinal conhecida ou suspeita"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "La insuficiencia renal altera la farmacocinética y favorece la acumulación de M3G/M6G; reducir la dosis inicial y titular lentamente."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión respiratoria; Hipotensión grave; Íleo"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Depresión respiratoria significativa; Asma aguda/grave sin monitorización adecuada; Obstrucción gastrointestinal conocida o sospechada"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Infusão IV contínua: iniciar 0,02–0,1 mg/kg/h e titular. Em pacientes sem tolerância a opioides, a rotulagem limita a taxa inicial máxima a 10 mg/h."
+          },
+          {
+            "label": "Pediatria",
+            "text": "1–<17 anos: se <50 kg, iniciar 0,02–0,03 mg/kg/h; ≥50 kg: 1,5 mg/h. <1 ano: iniciar 0,005–0,01 mg/kg/h, com monitorização cardiorrespiratória rigorosa."
+          },
+          {
+            "label": "Rim",
+            "text": "Na insuficiência renal, iniciar com dose menor que a usual e titular lentamente; M3G/M6G podem acumular."
+          },
+          {
+            "label": "Fígado",
+            "text": "Usar dose inicial menor e titular lentamente na disfunção hepática, monitorando sedação e depressão respiratória."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Infusión IV continua: iniciar 0,02–0,1 mg/kg/h y titular. En pacientes sin tolerancia a opioides, el rotulado limita la velocidad inicial máxima a 10 mg/h."
+          },
+          {
+            "label": "Pediatría",
+            "text": "1–<17 años: si <50 kg, iniciar 0,02–0,03 mg/kg/h; ≥50 kg: 1,5 mg/h. <1 año: iniciar 0,005–0,01 mg/kg/h, con monitorización cardiorrespiratoria estricta."
+          },
+          {
+            "label": "Riñón",
+            "text": "En insuficiencia renal, iniciar con una dosis menor que la habitual y titular lentamente; M3G/M6G pueden acumularse."
+          },
+          {
+            "label": "Hígado",
+            "text": "Usar una dosis inicial menor y titular lentamente en disfunción hepática, monitorizando sedación y depresión respiratoria."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Agonista opioide μ"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista opioide μ. A morfina é glucuronidada a M3G e M6G; a insuficiência renal aumenta exposição e pode favorecer acúmulo dos metabólitos."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor intensa que requer opioide e não responde adequadamente a alternativas; Infusão IV contínua em adultos e pediatria quando clinicamente indicada"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Agonista opioide μ"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista opioide μ. La morfina se glucuronida a M3G y M6G; la insuficiencia renal aumenta la exposición y puede favorecer la acumulación de metabolitos."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor intenso que requiere opioide y no responde adecuadamente a alternativas; Infusión IV continua en adultos y pediatría cuando está clínicamente indicada"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Morphine Sulfate Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ee8057d1-ed12-4e18-9efa-d83504abf612"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Morphine Sulfate Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ee8057d1-ed12-4e18-9efa-d83504abf612"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Benzodiazepínicos, álcool e outros sedativos aumentam risco de sedação profunda e depressão respiratória."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Benzodiazepinas, alcohol y otros sedantes aumentan el riesgo de sedación profunda y depresión respiratoria."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_morfina_2026",
+        "title": "DailyMed — Morphine Sulfate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ee8057d1-ed12-4e18-9efa-d83504abf612",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

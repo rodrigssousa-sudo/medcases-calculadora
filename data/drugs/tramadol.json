@@ -17,9 +17,182 @@
   "keywords": [
     "tramadol"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "tramadol",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via/Preparo",
+            "text": "Usar menor dose efetiva pelo menor tempo necessário"
+          },
+          {
+            "label": "Monitorização",
+            "text": "Evitar interrupção abrupta após uso prolongado/dependência física"
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía/Preparación",
+            "text": "Usar la menor dosis efectiva durante el menor tiempo necesario"
+          },
+          {
+            "label": "Monitorización",
+            "text": "Evitar suspensión abrupta después de uso prolongado/dependencia física"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Risco de convulsões e síndrome serotoninérgica, especialmente com fármacos serotonérgicos; contraindicado com IMAO."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depressão respiratória; Convulsões; Síndrome serotoninérgica"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "<12 anos; Pós-tonsilectomia/adenoidectomia em <18 anos; Uso de IMAO atual ou nos últimos 14 dias; Depressão respiratória significativa"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Riesgo de convulsiones y síndrome serotoninérgico, especialmente con fármacos serotoninérgicos; contraindicado con IMAO."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión respiratoria; Convulsiones; Síndrome serotoninérgico"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "<12 años; Posamigdalectomía/adenoidectomía en <18 años; Uso actual de IMAO o en los últimos 14 días; Depresión respiratoria significativa"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Após titulação, 50–100 mg VO a cada 4–6 h conforme necessidade; máximo 400 mg/dia."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Contraindicado em <12 anos e para dor pós-tonsilectomia/adenoidectomia em <18 anos."
+          },
+          {
+            "label": "Rim",
+            "text": "ClCr <30 mL/min: aumentar intervalo para 12 h; máximo 200 mg/dia."
+          },
+          {
+            "label": "Fígado",
+            "text": "Insuficiência hepática grave: 50 mg a cada 12 h."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Después de titulación, 50–100 mg VO cada 4–6 h según necesidad; máximo 400 mg/día."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Contraindicado en <12 años y para dolor posamigdalectomía/adenoidectomía en <18 años."
+          },
+          {
+            "label": "Riñón",
+            "text": "ClCr <30 mL/min: aumentar intervalo a 12 h; máximo 200 mg/día."
+          },
+          {
+            "label": "Hígado",
+            "text": "Insuficiencia hepática grave: 50 mg cada 12 h."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Opioide atípico; agonista μ + inibidor de recaptação de serotonina/noradrenalina"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonismo μ combinado à inibição de recaptação de serotonina e noradrenalina. O metabólito ativo depende parcialmente de CYP2D6."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor intensa o suficiente para requerer opioide quando alternativas são inadequadas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Opioide atípico; agonista μ + inhibidor de recaptación de serotonina/noradrenalina"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonismo μ combinado con inhibición de recaptación de serotonina y noradrenalina. El metabolito activo depende parcialmente de CYP2D6."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor suficientemente intenso para requerir opioide cuando las alternativas son inadecuadas"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Tramadol Hydrochloride Tablets",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=professional&setid=54d74939-301b-e603-e063-6394a90a3b03"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Tramadol Hydrochloride Tablets",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=professional&setid=54d74939-301b-e603-e063-6394a90a3b03"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Benzodiazepínicos, álcool e outros sedativos aumentam risco de sedação profunda e depressão respiratória."
+          },
+          {
+            "label": "Serotonina/convulsões",
+            "text": "ISRS/ISRN, IMAO, linezolida e outros serotonérgicos aumentam risco de síndrome serotoninérgica; vários fármacos também reduzem limiar convulsivo."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Benzodiazepinas, alcohol y otros sedantes aumentan el riesgo de sedación profunda y depresión respiratoria."
+          },
+          {
+            "label": "Serotonina/convulsiones",
+            "text": "ISRS/IRSN, IMAO, linezolid y otros serotoninérgicos aumentan el riesgo de síndrome serotoninérgico; varios fármacos también reducen el umbral convulsivo."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_tramadol_2026",
+        "title": "DailyMed — Tramadol Hydrochloride Tablets",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=professional&setid=54d74939-301b-e603-e063-6394a90a3b03",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

@@ -1,6 +1,6 @@
 {
   "id": "fexofenadina",
-  "category": "alergia_imunologia",
+  "category": "alergia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,182 @@
   "keywords": [
     "fexofenadina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-9ef937dca1e379d1",
+  "clinicalContentSha256": "9ef937dca1e379d1744c935ea24743c3c0123248e799aedbf898bf7245b99b40",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "alergia_imunologia.js"
+  "sourceModule": "alergia_imunologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "fexofenadina",
+    "clinical_batch": "LOT005_ANTIALERGICOS_ANTIHISTAMINICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_regulatory_smpc",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Tomar com água"
+          },
+          {
+            "label": "Administração",
+            "text": "Não tomar com sucos de frutas"
+          },
+          {
+            "label": "Administração",
+            "text": "Não administrar ao mesmo tempo que antiácidos com alumínio ou magnésio"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Tomar con agua"
+          },
+          {
+            "label": "Administración",
+            "text": "No tomar con jugos de frutas"
+          },
+          {
+            "label": "Administración",
+            "text": "No administrar al mismo tiempo que antiácidos con aluminio o magnesio"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Sucos de frutas reduzem a absorção da fexofenadina; antiácidos com alumínio/magnésio também interferem."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hipersensibilidade rara"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Los jugos de frutas reducen la absorción de fexofenadina; los antiácidos con aluminio/magnesio también interfieren."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hipersensibilidad rara"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Adultos e ≥12 anos: 60 mg VO a cada 12 h ou 180 mg 1x/dia conforme produto."
+          },
+          {
+            "label": "Pediatria",
+            "text": "6–11 anos: 30 mg VO a cada 12 h conforme produto; idades menores usam formulações específicas."
+          },
+          {
+            "label": "Rim",
+            "text": "Doença renal pode exigir dose menor; rotulagem OTC orienta avaliação médica antes do uso."
+          },
+          {
+            "label": "Fígado",
+            "text": "Sem ajuste hepático rotineiro relevante em hepatopatia isolada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Adultos y ≥12 años: 60 mg VO cada 12 h o 180 mg 1 vez/día según producto."
+          },
+          {
+            "label": "Pediatría",
+            "text": "6–11 años: 30 mg VO cada 12 h según producto; edades menores usan formulaciones específicas."
+          },
+          {
+            "label": "Riñón",
+            "text": "La enfermedad renal puede requerir dosis menor; el rotulado OTC indica evaluación médica antes del uso."
+          },
+          {
+            "label": "Hígado",
+            "text": "Sin ajuste hepático rutinario relevante en hepatopatía aislada."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Anti-histamínico H1 de segunda geração pouco sedativo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista/inverso agonista periférico H1 com baixa penetração no SNC."
+          },
+          {
+            "label": "Indicações",
+            "text": "Rinite alérgica; Urticária"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antihistamínico H1 de segunda generación poco sedante"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista/agonista inverso periférico H1 con baja penetración al SNC."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Rinitis alérgica; Urticaria"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Absorção",
+            "text": "Sucos de frutas e antiácidos com alumínio/magnésio reduzem absorção."
+          }
+        ],
+        "es": [
+          {
+            "label": "Absorción",
+            "text": "Jugos de frutas y antiácidos con aluminio/magnesio reducen absorción."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed Fexofenadine 2026",
+            "text": "Fonte revisada em 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81c1dcbb-28b3-4ad5-9f3d-9ccc16ddd173"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed Fexofenadine 2026",
+            "text": "Fuente revisada el 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81c1dcbb-28b3-4ad5-9f3d-9ccc16ddd173"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "fexofenadina_1",
+        "title": "DailyMed Fexofenadine 2026",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81c1dcbb-28b3-4ad5-9f3d-9ccc16ddd173",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

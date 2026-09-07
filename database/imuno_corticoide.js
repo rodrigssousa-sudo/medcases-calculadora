@@ -18,56 +18,123 @@ window.IMUNO_CORTICOIDE_DRUGS_DB = [
      Corticoide Ação Longa / Alta Potência — Edema Cerebral · COVID-19 · Crupe
   ══════════════════════════════════════════════════════════════ */
   {
-    id: 'dexametasona',
-    name: { pt: 'Dexametasona', es: 'Dexametasona' },
-    category: 'imuno_corticoide',
-    class: { pt: 'Corticosteroide Sistêmico (Ação Longa / Alta Potência)', es: 'Corticosteroide Sistémico (Acción Larga / Alta Potencia)' },
-    indications: {
-      pt: ['Edema cerebral secundário a tumores', 'COVID-19 grave (pacientes necessitando de O2)', 'Profilaxia de náuseas e vômitos induzidos por quimioterapia', 'Crupe / Laringite estridulosa pediátrica aguda'],
-      es: ['Edema cerebral secundario a tumores', 'COVID-19 grave (pacientes necesitando O2)', 'Profilaxis de náuseas y vómitos inducidos por quimioterapia', 'Crup / Laringitis estridulosa pediátrica aguda']
+    "id": "dexametasona",
+    "name": {
+      "pt": "Dexametasona",
+      "es": "Dexametasona"
     },
-    commercialNames: { br: ['Decadron'], ar: ['Decadron', 'Dexametasona'] },
-    presentation: {
-      pt: ['Comprimidos 0,5 mg, 0,75 mg, 4 mg', 'Elixir 0,1 mg/mL', 'Ampolas IV/IM/IA 4 mg/mL, 2 mg/mL'],
-      es: ['Comprimidos 0,5 mg, 0,75 mg, 4 mg', 'Elixir 0,1 mg/mL', 'Ampollas IV/IM/IA 4 mg/mL, 2 mg/mL']
+    "category": "imunologia",
+    "class": {
+      "pt": "Corticosteroide glicocorticoide de longa ação",
+      "es": "Corticosteroide glucocorticoide de acción prolongada"
     },
-    mechanism: {
-      pt: 'Glicocorticoide sintético de ação longa e altíssima potência (25 a 30 vezes mais anti-inflamatório que a hidrocortisona). Sua principal característica é ter ZERO atividade mineralocorticoide (não retém sódio/água), sendo o esteroide de escolha para tratar edema cerebral e neurocirurgias. Suprime profundamente o eixo HPA.',
-      es: 'Glucocorticoide sintético de acción larga y altísima potencia (25 a 30 veces más antiinflamatorio que la hidrocortisona). Su principal característica es tener CERO actividad mineralocorticoide (no retiene sodio/agua), siendo el esteroide de elección para tratar edema cerebral y neurocirugías. Suprime profundamente el eje HPA.'
+    "indications": {
+      "pt": [
+        "Componente de profilaxia antiemética em quimioterapia conforme risco emetogênico",
+        "Múltiplas indicações inflamatórias/imunológicas conforme rotulagem"
+      ],
+      "es": [
+        "Componente de profilaxis antiemética en quimioterapia según riesgo emetógeno",
+        "Múltiples indicaciones inflamatorias/inmunológicas según rotulado"
+      ]
     },
-    dose: {
-      adult: {
-        pt: 'Edema Cerebral: Bolus IV inicial de 10 mg, seguido de 4 mg IV a cada 6h. COVID-19 grave: 6 mg IV/VO 1x/dia por 10 dias. Antiemético: 4 a 8 mg IV.',
-        es: 'Edema Cerebral: Bolo IV inicial de 10 mg, seguido de 4 mg IV cada 6h. COVID-19 grave: 6 mg IV/VO 1 vez/día por 10 días. Antiemético: 4 a 8 mg IV.'
+    "mechanism": {
+      "pt": "Agonista do receptor glicocorticoide. O mecanismo antiemético é multifatorial e não completamente definido.",
+      "es": "Agonista del receptor glucocorticoide. El mecanismo antiemético es multifactorial y no está completamente definido."
+    },
+    "dose": {
+      "adult": {
+        "pt": "Como antiemético em oncologia, a dose depende do risco emetogênico e dos fármacos associados (5-HT3/NK1/olanzapina). Seguir protocolo ASCO/MASCC-ESMO; não existe dose universal.",
+        "es": "Como antiemético en oncología, la dosis depende del riesgo emetógeno y de los fármacos asociados (5-HT3/NK1/olanzapina). Seguir protocolo ASCO/MASCC-ESMO; no existe dosis universal."
       },
-      pediatric: {
-        pt: 'Crupe: 0,15 a 0,6 mg/kg (máx 16 mg) dose ÚNICA oral ou IM.',
-        es: 'Crup: 0,15 a 0,6 mg/kg (máx 16 mg) dosis ÚNICA oral o IM.'
+      "pediatric": {
+        "pt": "Posologia antiemética pediátrica depende do protocolo oncológico e do esquema quimioterápico.",
+        "es": "La posología antiemética pediátrica depende del protocolo oncológico y del esquema de quimioterapia."
       }
     },
-    administration: {
-      pt: ['Administrar a dose oral preferencialmente de manhã (para mimetizar ciclo circadiano e evitar insônia).'],
-      es: ['Administrar la dosis oral preferentemente por la mañana (para mimetizar ciclo circadiano y evitar insomnio).']
+    "administration": {
+      "pt": [
+        "Na profilaxia antiemética, ajustar duração ao risco e protocolo; evitar prolongamento desnecessário",
+        "Monitorar glicemia, infecção e efeitos psiquiátricos quando doses repetidas"
+      ],
+      "es": [
+        "En profilaxis antiemética, ajustar duración al riesgo y protocolo; evitar prolongación innecesaria",
+        "Monitorizar glucemia, infección y efectos psiquiátricos cuando se usan dosis repetidas"
+      ]
     },
-    renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em falência renal.', es: 'Sin necesidad de ajuste en falla renal.' } },
-    hepaticAdjustment: { required: true, message: { pt: 'Metabolismo hepático. Efeito pode estar aumentado na cirrose severa.', es: 'Metabolismo hepático. Efecto puede estar aumentado en cirrosis severa.' } },
-    commonAdverseEffects: {
-      pt: ['Insônia e hiperatividade (agitação)', 'Aumento abrupto do apetite', 'Hiperglicemia'],
-      es: ['Insomnio e hiperactividad (agitación)', 'Aumento abrupto del apetito', 'Hiperglucemia']
+    "renalAdjustment": {
+      "required": false,
+      "message": {
+        "pt": "Sem ajuste renal rotineiro específico.",
+        "es": "Sin ajuste renal rutinario específico."
+      }
     },
-    dangerousAdverseEffects: {
-      pt: ['Miopatia esteroide proximal', 'Psicose esteroide grave', 'Supressão prolongada do eixo HPA'],
-      es: ['Miopatía esteroidea proximal', 'Psicosis esteroidea grave', 'Supresión prolongada del eje HPA']
+    "hepaticAdjustment": {
+      "required": false,
+      "message": {
+        "pt": "Sem fator fixo universal; monitorar efeitos sistêmicos em hepatopatia.",
+        "es": "Sin factor fijo universal; monitorizar efectos sistémicos en hepatopatía."
+      }
     },
-    contraindications: {
-      absolute: { pt: ['Infecções fúngicas sistêmicas não tratadas', 'Malária cerebral (comprovado aumento de mortalidade)'], es: ['Infecciones fúngicas sistémicas no tratadas', 'Malaria cerebral (comprobado aumento de mortalidad)'] },
-      relative: { pt: ['Glaucoma de ângulo aberto', 'Diabetes lábil'], es: ['Glaucoma de ángulo abierto', 'Diabetes lábil'] }
+    "commonAdverseEffects": {
+      "pt": [
+        "Hiperglicemia",
+        "Insônia",
+        "Dispepsia",
+        "Alteração de humor"
+      ],
+      "es": [
+        "Hiperglucemia",
+        "Insomnio",
+        "Dispepsia",
+        "Cambio de ánimo"
+      ]
     },
-    safetyFlags: {
-      bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-      warning: { pt: 'A dexametasona é um INDUTOR leve a moderado do citocromo CYP3A4, podendo reduzir a eficácia de medicamentos dependentes desta via. Não causa edema/retenção de líquidos.', es: 'La dexametasona es un INDUCTOR leve a moderado del citocromo CYP3A4, pudiendo reducir la eficacia de medicamentos dependientes de esta vía. No causa edema/retención de líquidos.' }
+    "dangerousAdverseEffects": {
+      "pt": [
+        "Infecção",
+        "Psicose/mania",
+        "Sangramento GI em contexto de risco",
+        "Supressão adrenal com uso prolongado"
+      ],
+      "es": [
+        "Infección",
+        "Psicosis/manía",
+        "Sangrado GI en contexto de riesgo",
+        "Supresión adrenal con uso prolongado"
+      ]
     },
-    ref: 'RECOVERY Collaborative Group. N Engl J Med 2021 · Kaal EC & Vecht CJ. Curr Opin Oncol 2004 · Cetinkaya F et al. Pediatr Pulmonol 2004 · Lexicomp 2026'
+    "contraindications": {
+      "absolute": {
+        "pt": [
+          "Infecção fúngica sistêmica sem tratamento apropriado",
+          "Hipersensibilidade"
+        ],
+        "es": [
+          "Infección fúngica sistémica sin tratamiento apropiado",
+          "Hipersensibilidad"
+        ]
+      },
+      "relative": {
+        "pt": [
+          "Diabetes, infecção ativa, psicose/mania, úlcera"
+        ],
+        "es": [
+          "Diabetes, infección activa, psicosis/manía, úlcera"
+        ]
+      }
+    },
+    "safetyFlags": {
+      "bleedingRisk": false,
+      "renalHighRisk": false,
+      "hepaticCaution": false,
+      "antidoteAvailable": false,
+      "highAlertMedication": false,
+      "warning": {
+        "pt": "Na antiemese oncológica, dexametasona é componente do esquema; dose e número de dias devem seguir risco emetogênico e combinação usada.",
+        "es": "En antiemesis oncológica, dexametasona es componente del esquema; dosis y número de días deben seguir riesgo emetógeno y combinación utilizada."
+      }
+    }
   },
 
   /* ══════════════════════════════════════════════════════════════

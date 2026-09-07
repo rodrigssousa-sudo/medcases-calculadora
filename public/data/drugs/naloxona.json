@@ -1,6 +1,6 @@
 {
   "id": "naloxona",
-  "category": "analgesia",
+  "category": "toxicologia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,45 +17,135 @@
   "keywords": [
     "naloxona"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "analgesicos.js",
   "mc_clinical_enrichment_v1": {
     "schema": "medcases.clinical-enrichment.v1",
     "drug_key": "naloxona",
-    "stage_a_batch": "06",
-    "stage_a_reviewed_at": "2026-08-24",
-    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
     "sections": {
       "administracao_preparo": {
         "pt": [
           {
-            "label": "Vias",
-            "text": "A apresentação injetável pode ser administrada por via intravenosa, intramuscular ou subcutânea."
+            "label": "Via/Preparo",
+            "text": "IV tem início mais rápido; IM/SC podem ser usados quando IV não disponível"
           },
           {
-            "label": "Seringa / técnica",
-            "text": "Usar técnica asséptica, expelir o ar da seringa quando aplicável e evitar tocar a ponta estéril antes da administração."
-          },
-          {
-            "label": "Dose única",
-            "text": "Apresentações de dose única não contêm conservante; descartar qualquer porção não utilizada."
+            "label": "Monitorização",
+            "text": "Como alguns opioides duram mais que a naloxona, manter vigilância e repetir doses conforme necessário"
           }
         ],
         "es": [
           {
-            "label": "Vías",
-            "text": "La presentación inyectable puede administrarse por vía intravenosa, intramuscular o subcutánea."
+            "label": "Vía/Preparación",
+            "text": "IV tiene inicio más rápido; IM/SC pueden usarse cuando IV no está disponible"
           },
           {
-            "label": "Jeringa / técnica",
-            "text": "Usar técnica aséptica, expulsar el aire de la jeringa cuando corresponda y evitar tocar la punta estéril antes de administrar."
+            "label": "Monitorización",
+            "text": "Como algunos opioides duran más que la naloxona, mantener vigilancia y repetir dosis según necesidad"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Objetivo é restaurar ventilação adequada, não necessariamente despertar completamente; doses excessivas podem precipitar abstinência e dor intensa."
           },
           {
-            "label": "Dosis única",
-            "text": "Las presentaciones de dosis única no contienen conservante; desechar cualquier porción no utilizada."
+            "label": "Eventos graves",
+            "text": "Abstinência precipitada; Hipertensão/taquicardia; Edema pulmonar raro"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade à naloxona"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "El objetivo es restaurar ventilación adecuada, no necesariamente despertar completamente; dosis excesivas pueden precipitar abstinencia y dolor intenso."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Abstinencia precipitada; Hipertensión/taquicardia; Edema pulmonar raro"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a naloxona"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Overdose: 0,4–2 mg IV; repetir a cada 2–3 min conforme ventilação. Reversão pós-operatória parcial: 0,1–0,2 mg IV a cada 2–3 min até ventilação adequada, evitando reversão excessiva."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Overdose: 0,01 mg/kg IV; se resposta insuficiente, 0,1 mg/kg. Neonatos com depressão induzida por opioide: 0,01 mg/kg IV/IM/SC."
+          },
+          {
+            "label": "Rim",
+            "text": "Não há ajuste renal rotineiro estabelecido para reversão aguda; titular à resposta clínica."
+          },
+          {
+            "label": "Fígado",
+            "text": "Não há ajuste hepático rotineiro estabelecido para reversão aguda; titular à resposta clínica."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Sobredosis: 0,4–2 mg IV; repetir cada 2–3 min según ventilación. Reversión posoperatoria parcial: 0,1–0,2 mg IV cada 2–3 min hasta ventilación adecuada, evitando reversión excesiva."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Sobredosis: 0,01 mg/kg IV; si la respuesta es insuficiente, 0,1 mg/kg. Neonatos con depresión inducida por opioide: 0,01 mg/kg IV/IM/SC."
+          },
+          {
+            "label": "Riñón",
+            "text": "No existe ajuste renal rutinario establecido para reversión aguda; titular según respuesta clínica."
+          },
+          {
+            "label": "Hígado",
+            "text": "No existe ajuste hepático rutinario establecido para reversión aguda; titular según respuesta clínica."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Antagonista competitivo de receptores opioides"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagoniza rapidamente receptores opioides, revertendo depressão respiratória e sedação; pode precipitar abstinência em pacientes dependentes."
+          },
+          {
+            "label": "Indicações",
+            "text": "Reversão de depressão respiratória por opioides; Overdose conhecida ou suspeita por opioides"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antagonista competitivo de receptores opioides"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagoniza rápidamente receptores opioides, revirtiendo depresión respiratoria y sedación; puede precipitar abstinencia en pacientes dependientes."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Reversión de depresión respiratoria por opioides; Sobredosis conocida o sospechada por opioides"
           }
         ]
       },
@@ -63,25 +153,37 @@
         "pt": [
           {
             "label": "DailyMed — Naloxone Hydrochloride Injection",
-            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21d20dff-6efe-481e-a5a0-9c80ded73ca9"
           }
         ],
         "es": [
           {
             "label": "DailyMed — Naloxone Hydrochloride Injection",
-            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21d20dff-6efe-481e-a5a0-9c80ded73ca9"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Agonistas opioides",
+            "text": "Antagoniza opioides e pode precipitar abstinência; titular ao objetivo de ventilação adequada."
+          }
+        ],
+        "es": [
+          {
+            "label": "Agonistas opioides",
+            "text": "Antagoniza opioides y puede precipitar abstinencia; titular al objetivo de ventilación adecuada."
           }
         ]
       }
     },
     "sources": [
       {
-        "stage": "A_BATCH06",
-        "id": "dailymed_naloxone_53ed164c",
+        "id": "dailymed_naloxona_2026",
         "title": "DailyMed — Naloxone Hydrochloride Injection",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53ed164c-dd09-4ea4-e063-6294a90a2434",
-        "reviewed_at": "2026-08-24",
-        "updated": "2026-06-10"
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21d20dff-6efe-481e-a5a0-9c80ded73ca9",
+        "reviewed_at": "2026-09-05"
       }
     ]
   }

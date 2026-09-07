@@ -17,9 +17,180 @@
   "keywords": [
     "budesonida"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8db7dcf02f286792",
+  "clinicalContentSha256": "8db7dcf02f28679298b4aaa03b3d571d60c10a0f69b0f08fdac051f4119818d8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "pneumologia.js"
+  "sourceModule": "pneumologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "budesonida",
+    "clinical_batch": "LOT006_BRONCODILATADORES_ASMA_DPOC",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "GINA_2026_GOLD_2026_OFFICIAL_LABELS",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Enxaguar a boca e cuspir após uso"
+          },
+          {
+            "label": "Administração",
+            "text": "Nebulização: usar nebulizador compatível conforme produto"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Enjuagar la boca y escupir después del uso"
+          },
+          {
+            "label": "Administración",
+            "text": "Nebulización: usar nebulizador compatible según producto"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "ICS é terapia controladora fundamental na asma. Enxaguar a boca após inalação para reduzir candidíase."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Supressão adrenal em altas doses; Redução de crescimento pediátrico; Broncoespasmo paradoxal"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "ICS es terapia controladora fundamental en asma. Enjuagar la boca después de inhalar para reducir candidiasis."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Supresión adrenal a dosis altas; Reducción del crecimiento pediátrico; Broncoespasmo paradójico"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Dose inalatória depende do dispositivo e gravidade; usar a menor dose eficaz. Não é medicação de resgate isoladamente."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Suspensão nebulizada é rotulada para manutenção da asma em crianças de 12 meses a 8 anos; dose depende do tratamento prévio e controle."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem ajuste renal rotineiro."
+          },
+          {
+            "label": "Fígado",
+            "text": "Hepatopatia grave pode aumentar exposição sistêmica; monitorar efeitos corticosteroides."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "La dosis inhalada depende del dispositivo y gravedad; usar la menor dosis eficaz. No es medicación de rescate por sí sola."
+          },
+          {
+            "label": "Pediatría",
+            "text": "La suspensión nebulizada está indicada para mantenimiento del asma en niños de 12 meses a 8 años; la dosis depende del tratamiento previo y control."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin ajuste renal rutinario."
+          },
+          {
+            "label": "Hígado",
+            "text": "La hepatopatía grave puede aumentar exposición sistémica; monitorizar efectos corticosteroides."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Corticosteroide inalatório (ICS)"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Atividade glicocorticoide local reduz inflamação das vias aéreas e hiperresponsividade."
+          },
+          {
+            "label": "Indicações",
+            "text": "Manutenção/profilaxia da asma; Com formoterol, pode integrar regimes AIR/MART conforme GINA 2026 e produto"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Corticosteroide inhalado (ICS)"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Actividad glucocorticoide local reduce inflamación de vías aéreas e hiperreactividad."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Mantenimiento/profilaxis del asma; Con formoterol, puede integrar regímenes AIR/MART según GINA 2026 y producto"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, eletrólitos e inibidores/indutores metabólicos conforme o fármaco."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, electrolitos e inhibidores/inductores metabólicos según el fármaco."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fonte revisada em 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "DailyMed Budesonide inhalation 2026",
+            "text": "Fonte revisada em 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8ef9489-83a2-4817-b21c-ea3fecd8c8dd"
+          }
+        ],
+        "es": [
+          {
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fuente revisada el 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "DailyMed Budesonide inhalation 2026",
+            "text": "Fuente revisada el 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8ef9489-83a2-4817-b21c-ea3fecd8c8dd"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "budesonida_1",
+        "title": "GINA 2026 Strategy Report",
+        "url": "https://ginasthma.org/2026-gina-strategy-report/",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "budesonida_2",
+        "title": "DailyMed Budesonide inhalation 2026",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8ef9489-83a2-4817-b21c-ea3fecd8c8dd",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

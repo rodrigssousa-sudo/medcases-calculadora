@@ -1,6 +1,6 @@
 {
   "id": "cetirizina",
-  "category": "alergia_imunologia",
+  "category": "alergia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,196 @@
   "keywords": [
     "cetirizina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-9ef937dca1e379d1",
+  "clinicalContentSha256": "9ef937dca1e379d1744c935ea24743c3c0123248e799aedbf898bf7245b99b40",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "alergia_imunologia.js"
+  "sourceModule": "alergia_imunologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "cetirizina",
+    "clinical_batch": "LOT005_ANTIALERGICOS_ANTIHISTAMINICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_regulatory_smpc",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "VO com ou sem alimento"
+          },
+          {
+            "label": "Administração",
+            "text": "Pode causar sonolência em parte dos pacientes"
+          },
+          {
+            "label": "Administração",
+            "text": "Após uso diário prolongado, orientar sobre risco raro de prurido intenso após suspensão"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "VO con o sin alimento"
+          },
+          {
+            "label": "Administración",
+            "text": "Puede causar somnolencia en algunos pacientes"
+          },
+          {
+            "label": "Administración",
+            "text": "Tras uso diario prolongado, advertir sobre riesgo raro de prurito intenso al suspender"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "FDA adicionou alerta para prurido raro porém potencialmente grave após interromper uso prolongado de cetirizina."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Prurido intenso raro após suspensão de uso prolongado; Reação de hipersensibilidade rara"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade à cetirizina/hidroxizina"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "FDA añadió advertencia por prurito raro pero potencialmente grave tras interrumpir uso prolongado de cetirizina."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Prurito intenso raro tras suspensión de uso prolongado; Reacción de hipersensibilidad rara"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a cetirizina/hidroxizina"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Adultos e ≥6 anos: 5–10 mg VO 1x/dia conforme resposta e produto; máximo usual 10 mg/dia."
+          },
+          {
+            "label": "Pediatria",
+            "text": "2–5 anos: formulação líquida, usualmente 2,5 mg 1x/dia, podendo chegar a 5 mg/dia conforme produto/indicação; <2 anos exige formulação/rotulagem específica."
+          },
+          {
+            "label": "Rim",
+            "text": "Doença renal pode exigir dose menor; em OTC, encaminhar para ajuste médico. Evitar extrapolar 10 mg/dia em insuficiência renal sem avaliação."
+          },
+          {
+            "label": "Fígado",
+            "text": "Hepatopatia pode exigir redução de dose conforme produto; individualizar."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Adultos y ≥6 años: 5–10 mg VO 1 vez/día según respuesta y producto; máximo habitual 10 mg/día."
+          },
+          {
+            "label": "Pediatría",
+            "text": "2–5 años: formulación líquida, usualmente 2,5 mg 1 vez/día, pudiendo llegar a 5 mg/día según producto/indicación; <2 años requiere formulación/rotulado específico."
+          },
+          {
+            "label": "Riñón",
+            "text": "La enfermedad renal puede requerir dosis menor; en OTC, derivar para ajuste médico. Evitar extrapolar 10 mg/día en insuficiencia renal sin evaluación."
+          },
+          {
+            "label": "Hígado",
+            "text": "La hepatopatía puede requerir reducción de dosis según producto; individualizar."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Anti-histamínico H1 de segunda geração"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista/inverso agonista periférico de receptores H1, com menor penetração no SNC que anti-histamínicos de primeira geração."
+          },
+          {
+            "label": "Indicações",
+            "text": "Rinite alérgica; Urticária crônica"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antihistamínico H1 de segunda generación"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista/agonista inverso periférico de receptores H1, con menor penetración al SNC que antihistamínicos de primera generación."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Rinitis alérgica; Urticaria crónica"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar sedativos e outras medicações conforme perfil do paciente."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar sedantes y otras medicaciones según perfil del paciente."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed Cetirizine 2026",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=652b0c65-a3f2-4454-9cf2-51a3389282cc&version=14"
+          },
+          {
+            "label": "FDA pruritus warning",
+            "text": "Fonte revisada em 2026-09-05. https://www.fda.gov/drugs/drug-safety-communications/fda-requires-warning-about-rare-severe-itching-after-stopping-long-term-use-oral-allergy-medicines"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed Cetirizine 2026",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=652b0c65-a3f2-4454-9cf2-51a3389282cc&version=14"
+          },
+          {
+            "label": "FDA pruritus warning",
+            "text": "Fuente revisada el 2026-09-05. https://www.fda.gov/drugs/drug-safety-communications/fda-requires-warning-about-rare-severe-itching-after-stopping-long-term-use-oral-allergy-medicines"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "cetirizina_1",
+        "title": "DailyMed Cetirizine 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=652b0c65-a3f2-4454-9cf2-51a3389282cc&version=14",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "cetirizina_2",
+        "title": "FDA pruritus warning",
+        "url": "https://www.fda.gov/drugs/drug-safety-communications/fda-requires-warning-about-rare-severe-itching-after-stopping-long-term-use-oral-allergy-medicines",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

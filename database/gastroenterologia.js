@@ -79,36 +79,119 @@
 
     /* ── PROCLORPERAZINA ────────────────────────────────────────────────── */
     "proclorperazina": {
-      id: 'proclorperazina',
-      name: { pt: 'Proclorperazina', es: 'Proclorperazina' },
-      category: 'gastroenterologia',
-      class: { pt: 'Antiemético e Antipsicótico Típico (Fenotiazínico)', es: 'Antiemético y Antipsicótico Típico (Fenotiazínico)' },
-      indications: {
-        pt: ['Náuseas e vômitos severos (Pós-operatório, Câncer ou Vertigem intensa)', 'Tratamento agudo de Enxaqueca no Pronto-Socorro', 'Esquizofrenia e mania aguda'],
-        es: ['Náuseas y vómitos severos (Posoperatorio, Cáncer o Vértigo intenso)', 'Tratamiento agudo de Migraña en Urgencias', 'Esquizofrenia y manía aguda']
+      "name": {
+        "pt": "Proclorperazina",
+        "es": "Proclorperazina"
       },
-      commercialNames: { br: ['Compazine (EUA/Importado)', 'Stemetil (Descontinuado em várias regiões, mas classe vital)'], ar: ['Stemetil'] },
-      presentation: { pt: ['Comprimidos 5 mg e 10 mg', 'Ampolas IV/IM 5 mg/mL', 'Supositórios 25 mg'], es: ['Comprimidos 5 mg y 10 mg', 'Ampollas IV/IM 5 mg/mL', 'Supositorios 25 mg'] },
-      mechanism: {
-        pt: 'Drogas fenotiazínicas bloqueiam potentemente os receptores D2 (Dopamina) diretamente na Zona de Gatilho Quimiorreceptora no cérebro (o centro do vômito). Ao travar a dopamina, o paciente para de vomitar imediatamente. Na emergência, atua desinflamando a cascata da enxaqueca grave, muitas vezes curando a dor quando os analgésicos falham.',
-        es: 'Bloquea potentemente los receptores D2 (Dopamina) directamente en la Zona Gatillo Quimiorreceptora en el cerebro (el centro del vómito). Al frenar la dopamina, el paciente deja de vomitar de inmediato. En urgencias, cura el dolor de migraña grave cuando fallan los analgésicos.'
+      "category": "gastro",
+      "class": {
+        "pt": "Fenotiazina antagonista D2",
+        "es": "Fenotiazina antagonista D2"
       },
-      dose: {
-        adult: { pt: 'Náusea: 5 a 10 mg via oral a cada 6-8 horas. Emergência/Enxaqueca: 10 mg Intramuscular profundo (ou IV muito lento).', es: 'Náusea: 5 a 10 mg vía oral cada 6-8 horas. Emergencia/Migraña: 10 mg Intramuscular profundo (o IV muy lento).' },
-        pediatric: { pt: 'Geralmente contraindicado em crianças < 2 anos ou < 9 kg (risco letal de depressão respiratória e distonia).', es: 'Generalmente contraindicado en niños < 2 años o < 9 kg (riesgo letal de depresión respiratoria y distonía).' }
+      "indications": {
+        "pt": [
+          "Náuseas e vômitos graves"
+        ],
+        "es": [
+          "Náuseas y vómitos graves"
+        ]
       },
-      administration: { pt: ['A via Intravenosa requer diluição e administração extremamente lenta devido ao risco de hipotensão severa e colapso cardíaco.'], es: ['La vía Intravenosa requiere dilución y administración extremadamente lenta debido al riesgo de hipotensión severa y colapso cardíaco.'] },
-      renalAdjustment: { required: false, message: { pt: 'Não há ajuste formal, mas monitorar metabólitos.', es: 'No hay ajuste formal, pero monitorizar metabolitos.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo hepático extenso. Contraindicado em falência hepática grave (Risco de coma hepático).', es: 'Metabolismo hepático extenso. Contraindicado en falla hepática grave (Riesgo de coma hepático).' } },
-      commonAdverseEffects: { pt: ['Sonolência pesada e letargia', 'Acatisia (Incapacidade angustiante de ficar parado - o paciente "pula" da maca do PS)', 'Boca seca e visão turva (efeito anticolinérgico)'], es: ['Somnolencia pesada y letargo', 'Acatisia (Incapacidad angustiante de quedarse quieto)', 'Boca seca y visión borrosa (efecto anticolinérgico)'] },
-      dangerousAdverseEffects: { pt: ['Reação Distônica Aguda (O pescoço "trava" olhando pra cima e a língua enrola)', 'Síndrome Neuroléptica Maligna (Febre de 41ºC, rigidez de cano de chumbo, morte)', 'Agranulocitose e Prolongamento QT'], es: ['Reacción Distónica Aguda (El cuello "se traba" y la lengua se enrolla)', 'Síndrome Neuroléptico Maligno (Fiebre de 41ºC, rigidez extrema, muerte)', 'Agranulocitosis y Prolongación QT'] },
-      contraindications: {
-        absolute: { pt: ['Depressão grave do Sistema Nervoso ou Coma', 'Crianças < 2 anos', 'Doença de Parkinson (Piora o tremor brutalmente)'], es: ['Depresión grave del Sistema Nervioso o Coma', 'Niños < 2 años', 'Enfermedad de Parkinson (Empeora el temblor brutalmente)'] },
-        relative: { pt: ['Idosos com demência (Aumenta risco de morte súbita, alerta Black Box)'], es: ['Ancianos con demencia (Aumenta riesgo de muerte súbita, alerta Black Box)'] }
+      "mechanism": {
+        "pt": "Antagoniza receptores dopaminérgicos D2 na zona gatilho quimiorreceptora, com atividade antiemética e risco de EPS.",
+        "es": "Antagoniza receptores dopaminérgicos D2 en la zona gatillo quimiorreceptora, con actividad antiemética y riesgo de EPS."
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'O ANTÍDOTO DA DISTONIA: Se o paciente receber Proclorperazina IV e a cabeça dele "entortar e travar" subitamente olhando para trás (Crise Oculógira/Distonia), aplique imediatamente Biperideno IV ou Prometazina IM. O paciente relaxa e volta ao normal na frente dos seus olhos.', es: 'EL ANTÍDOTO DE LA DISTONÍA: Si el paciente recibe Proclorperazina IV y su cabeza "se tuerce y traba" súbitamente mirando hacia atrás (Crisis Oculógira), aplique inmediatamente Biperideno IV o Prometazina IM. El paciente se relaja de inmediato.' }
+      "dose": {
+        "adult": {
+          "pt": "VO para náuseas/vômitos graves: 5–10 mg 3–4x/dia conforme resposta e produto; usar a menor dose efetiva.",
+          "es": "VO para náuseas/vómitos graves: 5–10 mg 3–4x/día según respuesta y producto; usar la menor dosis efectiva."
+        },
+        "pediatric": {
+          "pt": "Uso pediátrico antiemético exige dose por peso/idade e cautela elevada para EPS; não extrapolar esquema adulto.",
+          "es": "El uso pediátrico antiemético exige dosis por peso/edad y gran precaución por EPS; no extrapolar el esquema adulto."
+        }
+      },
+      "administration": {
+        "pt": [
+          "Usar pelo menor tempo necessário",
+          "Monitorar distonia, acatisia e sedação"
+        ],
+        "es": [
+          "Usar durante el menor tiempo necesario",
+          "Monitorizar distonía, acatisia y sedación"
+        ]
+      },
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal fixo bem estabelecido; titular com cautela.",
+          "es": "Sin ajuste renal fijo bien establecido; titular con precaución."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela em hepatopatia; fenotiazinas podem causar lesão hepática/colestase.",
+          "es": "Usar precaución en hepatopatía; las fenotiazinas pueden causar lesión hepática/colestasis."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Sonolência",
+          "Hipotensão",
+          "Boca seca",
+          "Acatisia"
+        ],
+        "es": [
+          "Somnolencia",
+          "Hipotensión",
+          "Boca seca",
+          "Acatisia"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Distonia/EPS",
+          "Síndrome neuroléptica maligna",
+          "Discinesia tardia",
+          "Prolongamento de QT"
+        ],
+        "es": [
+          "Distonía/EPS",
+          "Síndrome neuroléptico maligno",
+          "Discinesia tardía",
+          "Prolongación de QT"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Coma/depressão importante do SNC",
+            "Hipersensibilidade a fenotiazinas"
+          ],
+          "es": [
+            "Coma/depresión importante del SNC",
+            "Hipersensibilidad a fenotiazinas"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Parkinsonismo, idosos, QT longo, antipsicóticos concomitantes"
+          ],
+          "es": [
+            "Parkinsonismo, adultos mayores, QT largo, antipsicóticos concomitantes"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Fenotiazina antiemética: vigiar EPS, sedação, hipotensão e QT; evitar duplicação com outros antagonistas dopaminérgicos sem indicação clara.",
+          "es": "Fenotiazina antiemética: vigilar EPS, sedación, hipotensión y QT; evitar duplicación con otros antagonistas dopaminérgicos sin indicación clara."
+        }
       }
     }
 
@@ -438,45 +521,121 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
 
 /* ── DOMPERIDONA ────────────────────────────────────────────────────── */
     "domperidona": {
-      name: { pt: 'Domperidona', es: 'Domperidona' },
-      category: 'gastroenterologia',
-      class: { pt: 'Antagonista Dopaminérgico D2 Periférico / Procinético e Antiemético', es: 'Antagonista Dopaminérgico D2 Periférico / Proquinético y Antiemético' },
-      indications: {
-        pt: ['Gastroparesia diabética ou idiopática (retardo do esvaziamento gástrico)', 'Manejo de náuseas e vômitos induzidos por agonistas dopaminérgicos na Doença de Parkinson (Droga de escolha absoluta — não causa sintomas extrapiramidais)', 'Síndromes dispépticas com saciedade precoce e empachamento pós-prandial'],
-        es: ['Gastroparesia diabética o idiopática (retraso del vaciamiento gástrico)', 'Náuseas y vómitos inducidos por agonistas dopaminérgicos en la Enfermedad de Parkinson (Elección absoluta — no causa síntomas extrapiramidales)', 'Dispepsia con saciedad precoz y plenitud posprandial']
+      "name": {
+        "pt": "Domperidona",
+        "es": "Domperidona"
       },
-      commercialNames: { br: ['Motilium', 'Peridal', 'Domperix'], ar: ['Motilium', 'Gastrozole', 'Euciton'] },
-      presentation: { pt: ['Comprimidos de 10 mg', 'Suspensão oral 1 mg/mL'], es: ['Comprimidos de 10 mg', 'Suspensión oral 1 mg/mL'] },
-      mechanism: {
-        pt: 'O Procinético sem Bloqueio Cerebral. Bloqueia os receptores de dopamina D2 na periferia do trato gastrointestinal e na Zona Gatilho Quimioreceptora (área postrema do cérebro — fora da barreira hematoencefálica). Ao travar a dopamina (que relaxa o estômago), aumenta a pressão do esfíncter esofágico inferior e dispara contrações coordenadas do antro e duodeno acelerando o esvaziamento gástrico. GRANDE VANTAGEM sobre Metoclopramida e Bromoprida: NÃO atravessa a Barreira Hematoencefálica, sendo incapaz de causar tremores, rigidez ou crises extrapiramidais — tornando-a a única opção segura em pacientes com Doença de Parkinson.',
-        es: 'Antagonista selectivo de los receptores dopaminérgicos D2 periféricos. Actúa sobre el tracto GI y la zona gatillo quimiorreceptora (área postrema — exterior a la barrera hematoencefálica). Aumenta el peristaltismo gástrico acelerando el vaciamiento y eleva el tono del esfínter esofágico inferior. Al no cruzar la barrera hematoencefálica, carece completamente de los efectos extrapiramidales (temblores, discinesia) de la metoclopramida.'
+      "category": "gastro",
+      "class": {
+        "pt": "Antagonista dopaminérgico D2 periférico/procinético",
+        "es": "Antagonista dopaminérgico D2 periférico/procinético"
       },
-      dose: {
-        adult: {
-          pt: '10 mg via oral, até TRÊS vezes ao dia (teto estrito máximo de 30 mg/dia conforme diretrizes EMA/PRAC 2025 para proteção cardíaca). Administrar pelo menor tempo necessário.',
-          es: '10 mg vía oral, hasta TRES veces al día (techo máximo estricto de 30 mg al día por seguridad cardiovascular — EMA/PRAC 2025). Usar el menor tiempo posible.'
+      "indications": {
+        "pt": [
+          "Alívio de náuseas e vômitos onde autorizada"
+        ],
+        "es": [
+          "Alivio de náuseas y vómitos donde esté autorizada"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagoniza receptores D2 predominantemente periféricos e aumenta motilidade gastrointestinal; menor penetração no SNC que metoclopramida.",
+        "es": "Antagoniza receptores D2 predominantemente periféricos y aumenta motilidad gastrointestinal; menor penetración al SNC que metoclopramida."
+      },
+      "dose": {
+        "adult": {
+          "pt": "EMA: 10 mg VO até 3x/dia; máximo 30 mg/dia. Em geral, não usar por mais de 1 semana.",
+          "es": "EMA: 10 mg VO hasta 3x/día; máximo 30 mg/día. En general, no usar por más de 1 semana."
         },
-        pediatric: {
-          pt: '0,25 mg/kg por dose, via oral, até 3 vezes ao dia (máximo 0,75 mg/kg/dia). Usar preferencialmente suspensão oral. Contraindicado em menores de 35 kg na formulação comprimido.',
-          es: '0,25 mg/kg por toma, vía oral, hasta 3 veces al día (máximo 0,75 mg/kg/día). Preferir suspensión oral.'
+        "pediatric": {
+          "pt": "Onde produto pediátrico é autorizado: 0,25 mg/kg VO até 3x/dia, com dispositivo de medida apropriado.",
+          "es": "Donde el producto pediátrico esté autorizado: 0,25 mg/kg VO hasta 3x/día, con dispositivo de medición apropiado."
         }
       },
-      administration: { pt: ['ADMINISTRAR 15 A 30 MINUTOS ANTES DAS REFEIÇÕES. Se tomado após a comida, a absorção diminui em até 40% e o efeito procinético falha clinicamente.'], es: ['ADMINISTRAR 15 A 30 MINUTOS ANTES DE LAS COMIDAS. Si se toma con alimentos, la absorción se reduce hasta un 40% y el efecto procinético falla.'] },
-      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min: reduzir a frequência para 1 a 2 vezes ao dia conforme tolerabilidade e monitorar ECG basal.', es: 'En ClCr < 30 mL/min: reducir la frecuencia a 1 o 2 veces al día y monitorizar ECG basal.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'ABSOLUTAMENTE CONTRAINDICADA em insuficiência hepática moderada a grave (Child-Pugh B e C) devido ao risco de acúmulo sistêmico e toxicidade cardíaca fatal.', es: 'ABSOLUTAMENTE CONTRAINDICADA en insuficiencia hepática moderada a grave (Child-Pugh B y C).' } },
-      commonAdverseEffects: { pt: ['Boca seca (Xerostomia)', 'Hiperprolactinemia (ginecomastia em homens, galactorreia e amenorreia em mulheres — dose-dependente)'], es: ['Boca seca (Xerostomía)', 'Hiperprolactinemia (ginecomastia en hombres, galactorrea y amenorrea en mujeres — dosis-dependiente)'] },
-      dangerousAdverseEffects: { pt: ['PROLONGAMENTO DO INTERVALO QT NO ECG — risco de Torsades de Pointes letal', 'Morte súbita cardíaca por arritmia ventricular (risco aumentado em idosos > 60 anos e doses > 30 mg/dia)'], es: ['PROLONGACIÓN DEL INTERVALO QT — riesgo de Torsades de Pointes', 'Muerte súbita cardíaca por arritmia ventricular (riesgo aumentado en > 60 años y dosis > 30 mg/día)'] },
-      contraindications: {
-        absolute: { pt: ['Uso concomitante com inibidores potentes do CYP3A4 (cetoconazol, itraconazol, claritromicina, eritromicina)', 'Uso concomitante com outros prolongadores do QT (amiodarona, quinidina, haloperidol, metadona)', 'Prolactinoma (tumor hipofisário prolactina-secretor)', 'Sangramento gastrointestinal ativo, obstrução mecânica ou perfuração', 'Insuficiência hepática moderada a grave (Child-Pugh B/C)'], es: ['Uso concomitante con inhibidores potentes de CYP3A4 (ketoconazol, claritromicina)', 'Uso concomitante con prolongadores de QT (amiodarona, quinidina, haloperidol)', 'Prolactinoma', 'Hemorragia digestiva activa, obstrucción mecánica o perforación', 'Insuficiencia hepática moderada a grave'] },
-        relative: { pt: ['Idosos > 60 anos frágeis (exige ECG basal e monitoramento periódico)', 'Cardiopatia estrutural pré-existente com QTc prolongado'], es: ['Ancianos > 60 años frágiles (exige ECG basal)', 'Cardiopatía estructural preexistente con QTc prolongado'] }
+      "administration": {
+        "pt": [
+          "Usar menor dose efetiva pelo menor tempo",
+          "Evitar combinação com fármacos que prolongam QT ou inibidores potentes de CYP3A4"
+        ],
+        "es": [
+          "Usar la menor dosis efectiva durante el menor tiempo",
+          "Evitar combinación con fármacos que prolongan QT o inhibidores potentes de CYP3A4"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'O RISCO CARDÍACO OCULTO DO PROCINÉTICO SEGURO: O FDA proibiu a venda de Domperidona nos EUA. O PRAC Europeu limitou para 30 mg/dia (2025). O motivo: bloqueia os canais de potássio hERG do coração em idosos, esticando o intervalo QT e causando morte súbita por Torsades de Pointes. NUNCA associar com macrólideos, azólicos ou amiodarona. NUNCA exceder 3 comprimidos por dia.', es: 'EL RIESGO CARDÍACO OCULTO DEL PROCINÉTICO SEGURO: El FDA prohibió la Domperidona en EE.UU. El PRAC europeo la limitó a 30 mg/día (2025) por bloqueo de canales hERG cardíacos con prolongación del QT y muerte súbita por Torsades de Pointes. NUNCA asociar con macrólidos, azólicos o amiodarona. NUNCA superar 3 comprimidos al día.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Em insuficiência renal grave, reduzir frequência de administração em uso repetido conforme resposta clínica.",
+          "es": "En insuficiencia renal grave, reducir frecuencia de administración en uso repetido según respuesta clínica."
+        }
       },
-      references: {
-        pt: 'EMA PRAC Safety Review Domperidona 2025; Bula Motilium Cellera/Anvisa 2024; Camilleri M et al., Gastroenterology 2013 (Gastroparesia Management); UpToDate Prokinetics in Parkinson Disease.',
-        es: 'EMA PRAC Safety Review 2025; Guías de Gastroparesia WGO; Camilleri M et al., Gastroenterology 2013; Ficha Técnica CIMA Domperidona; UpToDate Procinéticos en Parkinson.'
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Contraindicada em insuficiência hepática moderada ou grave segundo EMA.",
+          "es": "Contraindicada en insuficiencia hepática moderada o grave según EMA."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Boca seca",
+          "Cefaleia"
+        ],
+        "es": [
+          "Boca seca",
+          "Cefalea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Prolongamento de QT",
+          "Torsades/arrítmia ventricular",
+          "Morte súbita cardíaca rara"
+        ],
+        "es": [
+          "Prolongación de QT",
+          "Torsades/arritmia ventricular",
+          "Muerte súbita cardíaca rara"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "QT prolongado/distúrbio de condução significativo",
+            "Doença cardíaca subjacente relevante como IC",
+            "Distúrbios eletrolíticos importantes/bradicardia",
+            "Insuficiência hepática moderada/grave",
+            "Uso de fármacos que prolongam QT ou inibidores potentes de CYP3A4"
+          ],
+          "es": [
+            "QT prolongado/trastorno de conducción significativo",
+            "Cardiopatía subyacente relevante como IC",
+            "Trastornos electrolíticos importantes/bradicardia",
+            "Insuficiencia hepática moderada/grave",
+            "Uso de fármacos que prolongan QT o inhibidores potentes de CYP3A4"
+          ]
+        },
+        "relative": {
+          "pt": [
+            ">60 anos",
+            "Dose >30 mg/dia"
+          ],
+          "es": [
+            ">60 años",
+            "Dosis >30 mg/día"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "O risco cardíaco aumenta com >60 anos, doses >30 mg/dia, QT-prolongadores e inibidores CYP3A4.",
+          "es": "El riesgo cardíaco aumenta con >60 años, dosis >30 mg/día, prolongadores de QT e inhibidores CYP3A4."
+        }
       }
     }
 

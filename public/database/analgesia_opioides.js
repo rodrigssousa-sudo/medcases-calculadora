@@ -7,41 +7,143 @@
 
 /* ── DIPIRONA (METAMIZOL) ───────────────────────────────────────────── */
     "dipirona": {
-      name: { pt: 'Dipirona (Metamizol)', es: 'Metamizol (Dipirona)' },
-      category: 'analgesia',
-      class: { pt: 'Analgésico Não-Opióide e Antitérmico (Espasmolítico)', es: 'Analgésico No Opioide y Antipirético (Espasmolítico)' },
-      indications: {
-        pt: ['Febre de qualquer etiologia', 'Dor aguda leve a intensa (frequentemente poupador de opioide pós-operatório)', 'Cólica renal e biliar (efeito espasmolítico)'],
-        es: ['Fiebre de cualquier etiología', 'Dolor agudo leve a intenso (frecuentemente ahorrador de opioide posoperatorio)', 'Cólico renal y biliar (efecto espasmolítico)']
+      "name": {
+        "pt": "Dipirona (Metamizol)",
+        "es": "Metamizol (Dipirona)"
       },
-      commercialNames: { br: ['Novalgina', 'Lisador'], ar: ['Novalgina'] },
-      presentation: { pt: ['Ampolas IV/IM 500 mg/mL (2 mL = 1g)', 'Gotas 500 mg/mL', 'Comprimidos 500 mg e 1g'], es: ['Ampollas IV/IM 500 mg/mL (2 mL = 1g)', 'Gotas 500 mg/mL', 'Comprimidos 500 mg y 1g'] },
-      mechanism: {
-        pt: 'Mecanismo exato ainda não 100% definido. Acredita-se que iniba a via das ciclooxigenases (possivelmente a variante COX-3 central) e ative sistemas inibitórios descendentes e endocanabinoides no Sistema Nervoso Central. Difere dos AINEs clássicos por não irritar o estômago e não causar toxicidade renal isquêmica severa. Relaxa a musculatura lisa espasmada (vias urinárias).',
-        es: 'Mecanismo exacto aún no 100% definido. Se cree que inhibe la vía de las ciclooxigenasas (posiblemente la variante COX-3 central) y activa sistemas inhibitorios descendentes y endocannabinoides en el Sistema Nervioso Central. Difiere de los AINEs clásicos por no irritar el estómago y no causar toxicidad renal isquémica severa. Relaja la musculatura lisa espasmódica (vías urinarias).'
+      "category": "analgesia",
+      "class": {
+        "pt": "Analgésico, antitérmico e antiespasmódico pirazolônico",
+        "es": "Analgésico, antipirético y antiespasmódico pirazolónico"
       },
-      dose: {
-        adult: {
-          pt: 'Dor/Febre: 1g IV, IM ou VO a cada 6 horas. Dose máxima: 4 g/dia.',
-          es: 'Dolor/Fiebre: 1g IV, IM o VO cada 6 horas. Dosis máxima: 4 g/día.'
+      "indications": {
+        "pt": [
+          "Dor aguda moderada a intensa, incluindo pós-operatória/pós-traumática e cólica",
+          "Febre alta que não responde a outras medidas"
+        ],
+        "es": [
+          "Dolor agudo moderado a intenso, incluido posoperatorio/postraumático y cólico",
+          "Fiebre alta que no responde a otras medidas"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Novalgina",
+          "Dipirona"
+        ],
+        "ar": [
+          "Novalgina",
+          "Metamizol"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Comprimidos/cápsulas, gotas/solução oral e solução IV/IM; apresentações variam por mercado"
+        ],
+        "es": [
+          "Comprimidos/cápsulas, gotas/solución oral y solución IV/IM; presentaciones variables según mercado"
+        ]
+      },
+      "mechanism": {
+        "pt": "O mecanismo não é completamente esclarecido. Há evidência de modulação central e periférica da síntese de prostaglandinas e efeitos sobre vias nociceptivas; não deve ser descrito como inibidor comprovado de 'COX-3'.",
+        "es": "El mecanismo no está completamente aclarado. Existe evidencia de modulación central y periférica de la síntesis de prostaglandinas y efectos sobre vías nociceptivas; no debe describirse como inhibidor comprobado de 'COX-3'."
+      },
+      "dose": {
+        "adult": {
+          "pt": "≥15 anos e >53 kg: VO 500–1.000 mg por dose, até 4x/dia, máximo 4.000 mg/dia. Parenteral: 500–1.000 mg por dose em intervalos de 6–8 h; informação harmonizada da EMA permite máximo diário parenteral de 5.000 mg.",
+          "es": "≥15 años y >53 kg: VO 500–1.000 mg por dosis, hasta 4x/día, máximo 4.000 mg/día. Parenteral: 500–1.000 mg por dosis en intervalos de 6–8 h; la información armonizada de EMA permite máximo diario parenteral de 5.000 mg."
         },
-        pediatric: {
-          pt: '10 a 25 mg/kg por dose, até 4 vezes ao dia (Máximo de 1g/dose).',
-          es: '10 a 25 mg/kg por dosis, hasta 4 veces al día (Máximo de 1g/dosis).'
+        "pediatric": {
+          "pt": "Crianças/adolescentes até 14 anos: 8–16 mg/kg por dose; para febre, 10 mg/kg costuma ser suficiente. Usar formulação apropriada ao peso.",
+          "es": "Niños/adolescentes hasta 14 años: 8–16 mg/kg por dosis; para fiebre, 10 mg/kg suele ser suficiente. Usar formulación apropiada al peso."
         }
       },
-      administration: { pt: ['A injeção IV rápida causa queda abrupta e profunda da pressão arterial. Obrigatório diluir a ampola (ex: em 10 mL de SF) e empurrar LENTAMENTE (3 a 5 min).'], es: ['La inyección IV rápida causa caída abrupta y profunda de la presión arterial. Obligatorio diluir la ampolla (ej: en 10 mL de SF) y empujar LENTAMENTE (3 a 5 min).'] },
-      renalAdjustment: { required: false, message: { pt: 'Segura na doença renal, diferentemente dos AINEs, mas evitar altas doses prolongadas no ClCr severamente baixo.', es: 'Segura en la enfermedad renal, a diferencia de los AINEs, pero evitar altas dosis prolongadas en ClCr severamente bajo.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste estrito agudo.', es: 'Sin necesidad de ajuste estricto agudo.' } },
-      commonAdverseEffects: { pt: ['Hipotensão arterial sintomática (na injeção IV rápida)'], es: ['Hipotensión arterial sintomática (en la inyección IV rápida)'] },
-      dangerousAdverseEffects: { pt: ['Agranulocitose idiopática imuno-mediada (destruição dos leucócitos da medula óssea - raro, 1:1.000.000, mas letal e motivo pelo qual é proibida nos EUA/Reino Unido)', 'Choque anafilático grave'], es: ['Agranulocitosis idiopática inmunomediada (destrucción de leucocitos de la médula ósea - raro, 1:1.000.000, pero letal y motivo por el cual está prohibida en EE.UU./Reino Unido)', 'Choque anafiláctico grave'] },
-      contraindications: {
-        absolute: { pt: ['Histórico de reações alérgicas ou asma induzida por analgésicos', 'Porfiria hepática aguda'], es: ['Historial de reacciones alérgicas o asma inducida por analgésicos', 'Porfiria hepática aguda'] },
-        relative: { pt: ['Hipotensão prévia severa (na via venosa)'], es: ['Hipotensión previa severa (en la vía venosa)'] }
+      "administration": {
+        "pt": [
+          "Usar a menor dose que controle dor/febre",
+          "Administração parenteral deve ser lenta e com monitorização hemodinâmica devido ao risco de hipotensão",
+          "Se houver febre, calafrios, odinofagia ou lesões mucosas durante ou logo após uso, suspender imediatamente e colher hemograma com diferencial"
+        ],
+        "es": [
+          "Usar la menor dosis que controle dolor/fiebre",
+          "La administración parenteral debe ser lenta y con monitorización hemodinámica por riesgo de hipotensión",
+          "Si aparecen fiebre, escalofríos, odinofagia o lesiones mucosas durante o poco después del uso, suspender inmediatamente y obtener hemograma con diferencial"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'CULTURA LATINO-AMERICANA: Apesar de proscrita na América do Norte, a Dipirona é o medicamento de primeira escolha absoluto em toda a América Latina e parte da Europa. É incrivelmente superior ao paracetamol no controle da febre refratária em adultos e UTIs.', es: 'CULTURA LATINOAMERICANA: A pesar de proscrita en América del Norte, el Metamizol es el medicamento de primera elección absoluto en toda América Latina y parte de Europa. Es increíblemente superior al paracetamol en el control de la fiebre refractaria en adultos y UCIs.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Evitar doses altas repetidas em disfunção renal importante; não há fator agudo universal. Titular à menor dose eficaz.",
+          "es": "Evitar dosis altas repetidas en disfunción renal importante; no existe un factor agudo universal. Titular a la menor dosis eficaz."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Evitar doses altas repetidas em disfunção hepática importante; usar menor dose eficaz e ampliar intervalo conforme clínica.",
+          "es": "Evitar dosis altas repetidas en disfunción hepática importante; usar la menor dosis eficaz y ampliar intervalo según clínica."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Hipotensão, especialmente com administração IV rápida",
+          "Náusea",
+          "Reações cutâneas"
+        ],
+        "es": [
+          "Hipotensión, especialmente con administración IV rápida",
+          "Náuseas",
+          "Reacciones cutáneas"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Agranulocitose",
+          "Anafilaxia/choque",
+          "Reações cutâneas graves"
+        ],
+        "es": [
+          "Agranulocitosis",
+          "Anafilaxia/shock",
+          "Reacciones cutáneas graves"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Agranulocitose prévia por metamizol ou outra pirazolona/pirazolidina",
+            "Disfunção de medula óssea ou doença hematopoética relevante",
+            "Hipersensibilidade ao metamizol/pirazolonas",
+            "Terceiro trimestre da gestação"
+          ],
+          "es": [
+            "Agranulocitosis previa por metamizol u otra pirazolona/pirazolidina",
+            "Disfunción de médula ósea o enfermedad hematopoyética relevante",
+            "Hipersensibilidad a metamizol/pirazolonas",
+            "Tercer trimestre del embarazo"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Hipotensão/instabilidade hemodinâmica",
+            "Disfunção renal ou hepática importante"
+          ],
+          "es": [
+            "Hipotensión/inestabilidad hemodinámica",
+            "Disfunción renal o hepática importante"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "A agranulocitose não é dose-dependente, pode surgir durante ou logo após o tratamento e pode ocorrer mesmo após usos prévios sem problemas. Hemograma de rotina não demonstrou benefício; investigar imediatamente se houver sintomas.",
+          "es": "La agranulocitosis no depende de la dosis, puede aparecer durante o poco después del tratamiento y puede ocurrir incluso tras usos previos sin problemas. El hemograma rutinario no demostró beneficio; investigar de inmediato si hay síntomas."
+        }
       }
     },
 

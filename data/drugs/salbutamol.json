@@ -5,21 +5,20 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Salbutamol (Albuterol)"
+    "name": "Salbutamol"
   },
   "es": {
-    "name": "Salbutamol (Albuterol)"
+    "name": "Salbutamol"
   },
   "name": {
-    "pt": "Salbutamol (Albuterol)",
-    "es": "Salbutamol (Albuterol)"
+    "pt": "Salbutamol",
+    "es": "Salbutamol"
   },
   "keywords": [
-    "salbutamol",
-    "salbutamol (albuterol)"
+    "salbutamol"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8db7dcf02f286792",
+  "clinicalContentSha256": "8db7dcf02f28679298b4aaa03b3d571d60c10a0f69b0f08fdac051f4119818d8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "pneumologia.js",
@@ -33,44 +32,156 @@
       "administracao_preparo": {
         "pt": [
           {
-            "label": "Uso inalatório",
-            "text": "Administrar exclusivamente por inalação com nebulizador; a solução não deve ser injetada."
+            "label": "Administração",
+            "text": "Somente por inalação"
           },
           {
-            "label": "Ampola unitária",
-            "text": "Abrir a ampola de dose unitária e espremer o conteúdo no reservatório do nebulizador; conectar ao bocal ou máscara e ao compressor conforme as instruções do equipamento."
+            "label": "Administração",
+            "text": "Necessidade crescente de SABA sugere pior controle e exige reavaliação"
           },
           {
-            "label": "Conservação / inspeção",
-            "text": "Manter as ampolas na embalagem protetora até o uso, proteger de luz e calor excessivo e descartar se a solução não estiver incolor."
+            "label": "Administração",
+            "text": "Na asma, não usar SABA isolado como estratégia de manutenção; GINA 2026 prefere tratamento contendo ICS"
           }
         ],
         "es": [
           {
-            "label": "Uso inhalatorio",
-            "text": "Administrar exclusivamente por inhalación mediante nebulizador; la solución no debe inyectarse."
+            "label": "Administración",
+            "text": "Solo por inhalación"
           },
           {
-            "label": "Ampolla unitaria",
-            "text": "Abrir la ampolla de dosis unitaria y vaciar el contenido en el reservorio del nebulizador; conectar a la boquilla o mascarilla y al compresor según las instrucciones del equipo."
+            "label": "Administración",
+            "text": "Necesidad creciente de SABA sugiere peor control y requiere reevaluación"
           },
           {
-            "label": "Conservación / inspección",
-            "text": "Mantener las ampollas en el envase protector hasta el uso, proteger de la luz y del calor excesivo y desechar si la solución no está incolora."
+            "label": "Administración",
+            "text": "En asma, no usar SABA aislado como estrategia de mantenimiento; GINA 2026 prefiere tratamiento que contenga ICS"
           }
         ]
       },
       "referencias": {
         "pt": [
           {
-            "label": "DailyMed — Albuterol Sulfate Inhalation Solution",
-            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fonte revisada em 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "DailyMed Albuterol inhalation 2026",
+            "text": "Fonte revisada em 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d"
           }
         ],
         "es": [
           {
-            "label": "DailyMed — Albuterol Sulfate Inhalation Solution",
-            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fuente revisada el 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "DailyMed Albuterol inhalation 2026",
+            "text": "Fuente revisada el 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Uso excessivo de SABA é marcador de risco. Na asma, garantir terapia contendo corticosteroide inalatório."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hipocalemia; Taquiarritmia; Broncoespasmo paradoxal"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "El uso excesivo de SABA es marcador de riesgo. En asma, asegurar terapia que contenga corticosteroide inhalado."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hipopotasemia; Taquiarritmia; Broncoespasmo paradójico"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "MDI: 2 jatos (90 mcg/jato) a cada 4–6 h conforme necessidade; exercício: 2 jatos 15–30 min antes. Nebulização: 2,5 mg por dose conforme produto/protocolo."
+          },
+          {
+            "label": "Pediatria",
+            "text": "≥4 anos MDI: 2 jatos a cada 4–6 h conforme necessidade; nebulização pediátrica depende de idade/peso e formulação."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem ajuste renal rotineiro."
+          },
+          {
+            "label": "Fígado",
+            "text": "Sem ajuste hepático rotineiro."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "MDI: 2 inhalaciones (90 mcg/inhalación) cada 4–6 h según necesidad; ejercicio: 2 inhalaciones 15–30 min antes. Nebulización: 2,5 mg por dosis según producto/protocolo."
+          },
+          {
+            "label": "Pediatría",
+            "text": "≥4 años MDI: 2 inhalaciones cada 4–6 h según necesidad; nebulización pediátrica depende de edad/peso y formulación."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin ajuste renal rutinario."
+          },
+          {
+            "label": "Hígado",
+            "text": "Sin ajuste hepático rutinario."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Agonista β2 de curta ação (SABA)"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonismo β2 relaxa músculo liso brônquico e produz broncodilatação rápida."
+          },
+          {
+            "label": "Indicações",
+            "text": "Broncoespasmo agudo; Prevenção de broncoespasmo induzido por exercício"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Agonista β2 de acción corta (SABA)"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "El agonismo β2 relaja músculo liso bronquial y produce broncodilatación rápida."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Broncoespasmo agudo; Prevención de broncoespasmo inducido por ejercicio"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, eletrólitos e inibidores/indutores metabólicos conforme o fármaco."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, electrolitos e inhibidores/inductores metabólicos según el fármaco."
           }
         ]
       }
@@ -83,7 +194,22 @@
         "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d4c532be-1f41-60d3-e053-2995a90a98be",
         "reviewed_at": "2026-08-24",
         "updated": "2026-04-30"
+      },
+      {
+        "id": "salbutamol_1",
+        "title": "GINA 2026 Strategy Report",
+        "url": "https://ginasthma.org/2026-gina-strategy-report/",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "salbutamol_2",
+        "title": "DailyMed Albuterol inhalation 2026",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d",
+        "reviewed_at": "2026-09-05"
       }
-    ]
+    ],
+    "clinical_batch": "LOT006_BRONCODILATADORES_ASMA_DPOC",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "GINA_2026_GOLD_2026_OFFICIAL_LABELS"
   }
 }

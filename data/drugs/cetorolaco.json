@@ -8,17 +8,17 @@
     "name": "Cetorolaco"
   },
   "es": {
-    "name": "Ketorolac"
+    "name": "Ketorolaco"
   },
   "name": {
     "pt": "Cetorolaco",
-    "es": "Ketorolac"
+    "es": "Ketorolaco"
   },
   "keywords": [
     "cetorolaco"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-c613ef861d440511",
+  "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "analgesicos.js",
@@ -56,12 +56,231 @@
           "cetorolaco",
           "cetorolaco (trometamol cetorolaco)"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-c613ef861d440511",
+        "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
         "source": "medcases-calculadora",
         "schema": "legacy-v1",
         "sourceModule": "analgesia_opioides.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "cetorolaco",
+    "clinical_batch": "LOT003_ANALGESICOS_NAO_OPIOIDES_COANALGESICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_or_regulatory_referral",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Uso sistêmico total máximo de 5 dias"
+          },
+          {
+            "label": "Administração",
+            "text": "Não associar a AAS ou outro AINE"
+          },
+          {
+            "label": "Administração",
+            "text": "Corrigir hipovolemia antes de usar"
+          },
+          {
+            "label": "Administração",
+            "text": "Evitar uso neuraxial da formulação injetável"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Uso sistémico total máximo de 5 días"
+          },
+          {
+            "label": "Administración",
+            "text": "No asociar con AAS u otro AINE"
+          },
+          {
+            "label": "Administración",
+            "text": "Corregir hipovolemia antes de usar"
+          },
+          {
+            "label": "Administración",
+            "text": "Evitar uso neuraxial de la formulación inyectable"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Cetorolaco é para uso agudo e curto: a soma das vias sistêmicas não pode ultrapassar 5 dias."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Sangramento GI; Sangramento por inibição plaquetária; Lesão renal aguda; Eventos trombóticos CV"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Doença renal avançada/risco por hipovolemia; Sangramento ativo ou alto risco hemorrágico; Úlcera péptica/sangramento GI ativo ou prévio relevante; Uso concomitante de AAS/outro AINE; CABG; Trabalho de parto"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Ketorolaco es para uso agudo y corto: la suma de las vías sistémicas no puede superar 5 días."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Sangrado GI; Sangrado por inhibición plaquetaria; Lesión renal aguda; Eventos trombóticos CV"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Enfermedad renal avanzada/riesgo por hipovolemia; Sangrado activo o alto riesgo hemorrágico; Úlcera péptica/sangrado GI activo o previo relevante; Uso concomitante de AAS/otro AINE; CABG; Trabajo de parto"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "<65 anos: 30 mg IV/IM a cada 6 h, máximo 120 mg/dia. ≥65 anos, insuficiência renal ou <50 kg: 15 mg IV/IM a cada 6 h, máximo 60 mg/dia. Duração total combinada IV/IM + VO ≤5 dias."
+          },
+          {
+            "label": "Pediatria",
+            "text": "A rotulagem atual dos EUA não indica cetorolaco para uso pediátrico rotineiro; não extrapolar o regime adulto."
+          },
+          {
+            "label": "Rim",
+            "text": "Contraindicado em insuficiência renal avançada ou risco de falência renal por depleção volêmica. Em insuficiência renal menos grave, usar 15 mg a cada 6 h e máximo 60 mg/dia conforme rotulagem."
+          },
+          {
+            "label": "Fígado",
+            "text": "Usar cautela em hepatopatia; interromper se houver sinais de lesão hepática significativa."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "<65 años: 30 mg IV/IM cada 6 h, máximo 120 mg/día. ≥65 años, insuficiencia renal o <50 kg: 15 mg IV/IM cada 6 h, máximo 60 mg/día. Duración total combinada IV/IM + VO ≤5 días."
+          },
+          {
+            "label": "Pediatría",
+            "text": "El rotulado actual de EE. UU. no indica ketorolaco para uso pediátrico rutinario; no extrapolar el régimen adulto."
+          },
+          {
+            "label": "Riñón",
+            "text": "Contraindicado en insuficiencia renal avanzada o riesgo de fallo renal por depleción de volumen. En insuficiencia renal menos grave, usar 15 mg cada 6 h y máximo 60 mg/día según rotulado."
+          },
+          {
+            "label": "Hígado",
+            "text": "Usar precaución en hepatopatía; suspender si aparecen signos de lesión hepática significativa."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "AINE potente para analgesia aguda de curto prazo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "AINE inibidor de COX com potente efeito analgésico. Inibe função plaquetária e pode causar toxicidade GI e renal importante."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor aguda moderadamente intensa que requer analgesia em nível opioide, por curto prazo"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "AINE potente para analgesia aguda de corto plazo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "AINE inhibidor de COX con potente efecto analgésico. Inhibe la función plaquetaria y puede causar toxicidad GI y renal importante."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor agudo moderadamente intenso que requiere analgesia de nivel opioide, a corto plazo"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentam risco de sangramento; avaliar risco-benefício e monitorar."
+          },
+          {
+            "label": "IECA/ARB/diuréticos",
+            "text": "Pode reduzir efeito anti-hipertensivo e aumentar risco de lesão renal, sobretudo com hipovolemia/DRC."
+          },
+          {
+            "label": "Outros AINEs",
+            "text": "Evitar associação sistêmica rotineira por toxicidade GI/renal sem benefício proporcional."
+          },
+          {
+            "label": "Lítio/metotrexato",
+            "text": "AINEs podem aumentar exposição; monitorar quando aplicável."
+          }
+        ],
+        "es": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentan riesgo de sangrado; evaluar riesgo-beneficio y monitorizar."
+          },
+          {
+            "label": "IECA/ARA-II/diuréticos",
+            "text": "Puede reducir efecto antihipertensivo y aumentar riesgo de lesión renal, especialmente con hipovolemia/ERC."
+          },
+          {
+            "label": "Otros AINE",
+            "text": "Evitar asociación sistémica rutinaria por toxicidad GI/renal sin beneficio proporcional."
+          },
+          {
+            "label": "Litio/metotrexato",
+            "text": "Los AINE pueden aumentar la exposición; monitorizar cuando corresponda."
+          }
+        ]
+      },
+      "gravidez_lactacao": {
+        "pt": [
+          {
+            "label": "Gestação/Lactação",
+            "text": "AINE sistêmico: evitar a partir de cerca de 30 semanas de gestação; entre 20–30 semanas, usar somente se necessário, na menor dose e pelo menor tempo, devido a risco renal fetal/oligoâmnio. Avaliar lactação conforme fármaco e duração."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo/Lactancia",
+            "text": "AINE sistémico: evitar desde aproximadamente 30 semanas de gestación; entre 20–30 semanas, usar solo si es necesario, a la menor dosis y por el menor tiempo, por riesgo renal fetal/oligohidramnios. Evaluar lactancia según fármaco y duración."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Ketorolac tromethamine injection, 2026",
+            "text": "Fonte oficial revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f335a030-ffa8-4f42-8166-2f06e036b40d"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Ketorolac tromethamine injection, 2026",
+            "text": "Fuente oficial revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f335a030-ffa8-4f42-8166-2f06e036b40d"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "cetorolaco_source_1",
+        "title": "DailyMed — Ketorolac tromethamine injection, 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f335a030-ffa8-4f42-8166-2f06e036b40d",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

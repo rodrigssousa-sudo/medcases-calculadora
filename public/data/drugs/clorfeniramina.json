@@ -1,6 +1,6 @@
 {
   "id": "clorfeniramina",
-  "category": "alergia_imunologia",
+  "category": "alergia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,182 @@
   "keywords": [
     "clorfeniramina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-9ef937dca1e379d1",
+  "clinicalContentSha256": "9ef937dca1e379d1744c935ea24743c3c0123248e799aedbf898bf7245b99b40",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "alergia_imunologia.js"
+  "sourceModule": "alergia_imunologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "clorfeniramina",
+    "clinical_batch": "LOT005_ANTIALERGICOS_ANTIHISTAMINICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_regulatory_smpc",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Evitar álcool, sedativos e tranquilizantes"
+          },
+          {
+            "label": "Administração",
+            "text": "Cautela ao dirigir/operar máquinas"
+          },
+          {
+            "label": "Administração",
+            "text": "Em crianças pode ocorrer excitação paradoxal"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Evitar alcohol, sedantes y tranquilizantes"
+          },
+          {
+            "label": "Administración",
+            "text": "Precaución al conducir/operar maquinaria"
+          },
+          {
+            "label": "Administración",
+            "text": "En niños puede aparecer excitación paradójica"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Anti-histamínico sedativo: álcool, sedativos e tranquilizantes aumentam sonolência; em crianças pode haver excitação paradoxal."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Delirium anticolinérgico; Retenção urinária; Sedação importante"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Antihistamínico sedante: alcohol, sedantes y tranquilizantes aumentan somnolencia; en niños puede haber excitación paradójica."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Delirium anticolinérgico; Retención urinaria; Sedación importante"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Adultos e ≥12 anos: 4 mg VO a cada 4–6 h; máximo 24 mg/dia."
+          },
+          {
+            "label": "Pediatria",
+            "text": "6–11 anos: 2 mg VO a cada 4–6 h; máximo 12 mg/dia. OTC: <6 anos não usar sem orientação específica."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem ajuste renal fixo bem estabelecido; usar cautela em idosos/DRC avançada."
+          },
+          {
+            "label": "Fígado",
+            "text": "Usar cautela em hepatopatia importante."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Adultos y ≥12 años: 4 mg VO cada 4–6 h; máximo 24 mg/día."
+          },
+          {
+            "label": "Pediatría",
+            "text": "6–11 años: 2 mg VO cada 4–6 h; máximo 12 mg/día. OTC: <6 años no usar sin indicación específica."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin ajuste renal fijo bien establecido; usar precaución en adultos mayores/ERC avanzada."
+          },
+          {
+            "label": "Hígado",
+            "text": "Usar precaución en hepatopatía importante."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Anti-histamínico H1 de primeira geração"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonismo H1 com efeitos sedativos e anticolinérgicos típicos de primeira geração."
+          },
+          {
+            "label": "Indicações",
+            "text": "Sintomas de rinite/alergia respiratória"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antihistamínico H1 de primera generación"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonismo H1 con efectos sedantes y anticolinérgicos típicos de primera generación."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Síntomas de rinitis/alergia respiratoria"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Álcool, opioides e outros sedativos podem intensificar sonolência e comprometimento psicomotor."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Alcohol, opioides y otros sedantes pueden intensificar somnolencia y deterioro psicomotor."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed Chlorpheniramine 2026",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7a3452a2-930f-48b1-8c59-dbceb10b9c78"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed Chlorpheniramine 2026",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7a3452a2-930f-48b1-8c59-dbceb10b9c78"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "clorfeniramina_1",
+        "title": "DailyMed Chlorpheniramine 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7a3452a2-930f-48b1-8c59-dbceb10b9c78",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

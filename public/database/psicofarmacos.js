@@ -28,99 +28,126 @@
 
     // ── ANTIPSICÓTICOS TÍPICOS (PRIMEIRA GERAÇÃO) ──
 
-    haloperidol: {
-      name: { pt: "Haloperidol", es: "Haloperidol" },
-      category: "antipsicotico",
-      calculate: (paciente, lang = "pt") => {
-        const idade = Number(paciente.idade || 0);
-        const gestante = Boolean(paciente.gestante);
-        const lactante = Boolean(paciente.lactante);
-        const hepatopatia = Boolean(paciente.hepatopatia);
-        return {
-          name: t(lang, "Haloperidol", "Haloperidol"),
-          class: t(lang, "Antipsicótico típico de alta potência", "Antipsicótico típico de alta potencia"),
-          category: "antipsicotico",
-          commercialNames: {
-            br: ["Haldol", "Haloperidol Cristália", "Haloperidol União Química"],
-            ar: ["Haldol", "Haloperidol Klonal", "Haloperidol Richmond"]
-          },
-          presentation: [
-            t(lang, "Comprimido 1 mg", "Comprimido 1 mg"),
-            t(lang, "Comprimido 5 mg", "Comprimido 5 mg"),
-            t(lang, "Gotas 2 mg/mL", "Gotas 2 mg/mL"),
-            t(lang, "Ampola 5 mg/mL", "Ampolla 5 mg/mL"),
-            t(lang, "Decanoato 50 mg/mL", "Decanoato 50 mg/mL")
+    "haloperidol": {
+      "name": {
+        "pt": "Haloperidol",
+        "es": "Haloperidol"
+      },
+      "category": "psiquiatria",
+      "class": {
+        "pt": "Antipsicótico típico; antagonista D2",
+        "es": "Antipsicótico típico; antagonista D2"
+      },
+      "indications": {
+        "pt": [
+          "Agitação/psicose conforme rotulagem",
+          "Uso antiemético off-label em cenários selecionados (ex.: cuidados paliativos/breakthrough)"
+        ],
+        "es": [
+          "Agitación/psicosis según rotulado",
+          "Uso antiemético off-label en escenarios seleccionados (p. ej., cuidados paliativos/breakthrough)"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagonismo D2 central. O efeito antiemético off-label decorre do bloqueio dopaminérgico na zona gatilho quimiorreceptora.",
+        "es": "Antagonismo D2 central. El efecto antiemético off-label deriva del bloqueo dopaminérgico en la zona gatillo quimiorreceptora."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Para uso antiemético, não existe posologia FDA padronizada: seguir protocolo específico e usar doses menores que as usadas para agitação quando apropriado. Não extrapolar dose psiquiátrica.",
+          "es": "Para uso antiemético no existe posología FDA estandarizada: seguir protocolo específico y usar dosis menores que las de agitación cuando corresponda. No extrapolar dosis psiquiátrica."
+        },
+        "pediatric": {
+          "pt": "Uso antiemético pediátrico não é uma indicação rotulada; requer protocolo especializado.",
+          "es": "El uso antiemético pediátrico no es una indicación rotulada; requiere protocolo especializado."
+        }
+      },
+      "administration": {
+        "pt": [
+          "Avaliar QT, eletrólitos e risco de EPS",
+          "Uso IV é off-label e exige política institucional/monitorização apropriada"
+        ],
+        "es": [
+          "Evaluar QT, electrolitos y riesgo de EPS",
+          "El uso IV es off-label y exige política institucional/monitorización apropiada"
+        ]
+      },
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro definido.",
+          "es": "Sin ajuste renal rutinario definido."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Metabolismo hepático; iniciar baixo e titular com cautela em hepatopatia.",
+          "es": "Metabolismo hepático; iniciar bajo y titular con precaución en hepatopatía."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Acatisia",
+          "Distonia",
+          "Sedação",
+          "Hipotensão"
+        ],
+        "es": [
+          "Acatisia",
+          "Distonía",
+          "Sedación",
+          "Hipotensión"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "QT/Torsades",
+          "Síndrome neuroléptica maligna",
+          "Discinesia tardia",
+          "Mortalidade aumentada em idosos com psicose relacionada à demência"
+        ],
+        "es": [
+          "QT/Torsades",
+          "Síndrome neuroléptico maligno",
+          "Discinesia tardía",
+          "Mayor mortalidad en adultos mayores con psicosis relacionada con demencia"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Doença de Parkinson",
+            "Demência com corpos de Lewy",
+            "Coma/depressão grave do SNC",
+            "Hipersensibilidade"
           ],
-          dose: {
-            adulto: t(lang, "Psicose/agitação: 0,5–5 mg VO/IM, repetir conforme resposta e protocolo.", "Psicosis/agitación: 0,5–5 mg VO/IM, repetir según respuesta y protocolo."),
-            manutencao: t(lang, "Manutenção: 1–15 mg/dia VO, dividido em 1–2 tomadas.", "Mantenimiento: 1–15 mg/día VO, dividido en 1–2 tomas."),
-            maxDose: t(lang, "Dose máxima depende da indicação e monitorização; evitar doses altas sem ECG e controle clínico.", "La dosis máxima depende de indicación y monitorización; evitar dosis altas sin ECG y control clínico.")
-          },
-          indications: [
-            t(lang, "Esquizofrenia", "Esquizofrenia"),
-            t(lang, "Agitação psicomotora aguda", "Agitación psicomotora aguda"),
-            t(lang, "Delirium hiperativo", "Delirium hiperactivo"),
-            t(lang, "Mania aguda", "Manía aguda"),
-            t(lang, "Psicose aguda", "Psicosis aguda"),
-            t(lang, "Síndrome de Tourette", "Síndrome de Tourette"),
-            t(lang, "Náuseas e vômitos refratários em contexto selecionado", "Náuseas y vómitos refractarios en contexto seleccionado")
-          ],
-          renalAdjustment: t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
-          hepaticAdjustment: hepatopatia ? t(lang, "Hepatopatia: iniciar com dose menor e titular cautelosamente.", "Hepatopatía: iniciar con dosis menor y titular con cautela.") : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
-          mechanism: t(lang, "Antagonista dopaminérgico D2 potente na via mesolímbica; alta potência antipsicótica e maior risco extrapiramidal.", "Antagonista dopaminérgico D2 potente en la vía mesolímbica; alta potencia antipsicótica y mayor riesgo extrapiramidal."),
-          onset: t(lang, "IM: início em 20–30 minutos; VO: início clínico em horas a dias; efeito antipsicótico pleno em dias a semanas.", "IM: inicio en 20–30 minutos; VO: inicio clínico en horas a días; efecto antipsicótico pleno en días a semanas."),
-          halfLife: t(lang, "Vida média aproximada: 14–37 horas; decanoato tem duração prolongada.", "Vida media aproximada: 14–37 horas; decanoato tiene duración prolongada."),
-          commonAdverseEffects: [
-            t(lang, "Acatisia", "Acatisia"),
-            t(lang, "Distonia aguda", "Distonía aguda"),
-            t(lang, "Parkinsonismo medicamentoso", "Parkinsonismo medicamentoso"),
-            t(lang, "Sonolência", "Somnolencia"),
-            t(lang, "Rigidez", "Rigidez"),
-            t(lang, "Hiperprolactinemia", "Hiperprolactinemia")
-          ],
-          dangerousAdverseEffects: [
-            t(lang, "Síndrome neuroléptica maligna", "Síndrome neuroléptico maligno"),
-            t(lang, "Prolongamento QT e torsades de pointes", "Prolongación QT y torsades de pointes"),
-            t(lang, "Discinesia tardia", "Discinesia tardía"),
-            t(lang, "Convulsões em predispostos", "Convulsiones en predispuestos"),
-            t(lang, "Reação distônica laríngea rara", "Reacción distónica laríngea rara")
-          ],
-          risksByPatient: [
-            idade >= 65 ? t(lang, "Idoso: maior risco de sintomas extrapiramidais, QT prolongado, quedas e mortalidade em demência.", "Adulto mayor: mayor riesgo de síntomas extrapiramidales, QT prolongado, caídas y mortalidad en demencia.") : null,
-            gestante ? t(lang, "Gestação: avaliar risco-benefício; monitorar sintomas extrapiramidais/neonatais se uso no fim da gestação.", "Embarazo: evaluar riesgo-beneficio; monitorizar síntomas extrapiramidales/neonatales si se usa al final del embarazo.") : null,
-            lactante ? t(lang, "Lactação: pode passar ao leite; monitorar sedação e sintomas extrapiramidais no lactente.", "Lactancia: puede pasar a la leche; monitorizar sedación y síntomas extrapiramidales en el lactante.") : null,
-            hepatopatia ? t(lang, "Hepatopatia: maior risco de acúmulo; iniciar baixo.", "Hepatopatía: mayor riesgo de acumulación; iniciar bajo.") : null
-          ].filter(Boolean),
-          contraindications: [
-            t(lang, "Hipersensibilidade ao haloperidol", "Hipersensibilidad al haloperidol"),
-            t(lang, "Doença de Parkinson grave", "Enfermedad de Parkinson grave"),
-            t(lang, "Depressão importante do SNC", "Depresión importante del SNC"),
-            t(lang, "QT longo congênito ou arritmia ventricular grave", "QT largo congénito o arritmia ventricular grave"),
-            t(lang, "Demência com corpos de Lewy, salvo extrema necessidade", "Demencia con cuerpos de Lewy, salvo extrema necesidad")
-          ],
-          interactions: [
-            t(lang, "Fármacos que prolongam QT", "Fármacos que prolongan QT"),
-            t(lang, "Macrolídeos, quinolonas e antiarrítmicos", "Macrólidos, quinolonas y antiarrítmicos"),
-            t(lang, "Lítio: risco de neurotoxicidade", "Litio: riesgo de neurotoxicidad"),
-            t(lang, "Levodopa e agonistas dopaminérgicos: antagonismo de efeito", "Levodopa y agonistas dopaminérgicos: antagonismo de efecto"),
-            t(lang, "Álcool e depressores do SNC", "Alcohol y depresores del SNC")
-          ],
-          alerts: [
-            t(lang, "Monitorar sintomas extrapiramidais.", "Monitorizar síntomas extrapiramidales."),
-            t(lang, "Considerar ECG em pacientes de risco ou doses altas.", "Considerar ECG en pacientes de riesgo o dosis altas."),
-            t(lang, "Cuidado com hipocalemia e hipomagnesemia.", "Cuidado con hipopotasemia e hipomagnesemia."),
-            t(lang, "Evitar uso rotineiro em psicose associada à demência.", "Evitar uso rutinario en psicosis asociada a demencia."),
-            t(lang, "Ter anticolinérgico disponível se risco de distonia aguda.", "Tener anticolinérgico disponible si hay riesgo de distonía aguda.")
-          ],
-          ref: [
-            "Goodman & Gilman 14ª Ed.",
-            "Stahl's Essential Psychopharmacology",
-            "FDA/DailyMed Haloperidol Prescribing Information",
-            "Lexicomp",
-            "Micromedex",
-            "UpToDate"
+          "es": [
+            "Enfermedad de Parkinson",
+            "Demencia con cuerpos de Lewy",
+            "Coma/depresión grave del SNC",
+            "Hipersensibilidad"
           ]
-        };
+        },
+        "relative": {
+          "pt": [
+            "QT longo, hipocalemia/hipomagnesemia, uso de outros antagonistas D2"
+          ],
+          "es": [
+            "QT largo, hipopotasemia/hipomagnesemia, uso de otros antagonistas D2"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "O uso antiemético é off-label. Não confundir dose de agitação/psicose com dose antiemética; avaliar QT e EPS.",
+          "es": "El uso antiemético es off-label. No confundir dosis de agitación/psicosis con dosis antiemética; evaluar QT y EPS."
+        }
       }
     },
 
@@ -970,99 +997,120 @@
       }
     },
 
-    olanzapina: {
-      name: { pt: "Olanzapina", es: "Olanzapina" },
-      category: "antipsicotico",
-      calculate: (paciente, lang = "pt") => {
-        const idade = Number(paciente.idade || 0);
-        const gestante = Boolean(paciente.gestante);
-        const lactante = Boolean(paciente.lactante);
-        const hepatopatia = Boolean(paciente.hepatopatia);
-        return {
-          name: t(lang, "Olanzapina", "Olanzapina"),
-          class: t(lang, "Antipsicótico atípico", "Antipsicótico atípico"),
-          category: "antipsicotico",
-          commercialNames: { br: ["Zyprexa", "Zopix", "Olanzapina EMS", "Olanzapina Eurofarma"], ar: ["Zyprexa", "Midax", "Olanzapina Bagó", "Olanzapina Gador"] },
-          presentation: [
-            t(lang, "Comprimido 2,5 mg", "Comprimido 2,5 mg"),
-            t(lang, "Comprimido 5 mg", "Comprimido 5 mg"),
-            t(lang, "Comprimido 10 mg", "Comprimido 10 mg"),
-            t(lang, "Comprimido 15 mg", "Comprimido 15 mg"),
-            t(lang, "Comprimido 20 mg", "Comprimido 20 mg"),
-            t(lang, "Comprimido orodispersível", "Comprimido bucodispersable"),
-            t(lang, "Ampola IM 10 mg", "Ampolla IM 10 mg")
+    "olanzapina": {
+      "name": {
+        "pt": "Olanzapina",
+        "es": "Olanzapina"
+      },
+      "category": "psiquiatria",
+      "class": {
+        "pt": "Antipsicótico atípico multirreceptor",
+        "es": "Antipsicótico atípico multirreceptor"
+      },
+      "indications": {
+        "pt": [
+          "Esquizofrenia/transtorno bipolar conforme rotulagem",
+          "Profilaxia e tratamento de náuseas/vômitos por quimioterapia como uso guideline-based/off-label"
+        ],
+        "es": [
+          "Esquizofrenia/trastorno bipolar según rotulado",
+          "Profilaxis y tratamiento de náuseas/vómitos por quimioterapia como uso basado en guías/off-label"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagoniza múltiplos receptores, incluindo dopaminérgicos D2 e serotoninérgicos 5-HT2/5-HT3, contribuindo para efeito antiemético.",
+        "es": "Antagoniza múltiples receptores, incluidos dopaminérgicos D2 y serotoninérgicos 5-HT2/5-HT3, contribuyendo al efecto antiemético."
+      },
+      "dose": {
+        "adult": {
+          "pt": "CINV: diretrizes ASCO/MASCC-ESMO incluem olanzapina em esquemas de alto risco; 5 mg é opção para adultos, com duração tipicamente dias 1–4 conforme protocolo. Breakthrough: diretrizes também apoiam olanzapina se não usada profilaticamente.",
+          "es": "CINV: guías ASCO/MASCC-ESMO incluyen olanzapina en esquemas de alto riesgo; 5 mg es una opción en adultos, típicamente días 1–4 según protocolo. Breakthrough: las guías también apoyan olanzapina si no se usó profilácticamente."
+        },
+        "pediatric": {
+          "pt": "Uso antiemético pediátrico deve seguir protocolo oncológico especializado; não extrapolar automaticamente o esquema adulto.",
+          "es": "El uso antiemético pediátrico debe seguir protocolo oncológico especializado; no extrapolar automáticamente el esquema adulto."
+        }
+      },
+      "administration": {
+        "pt": [
+          "Preferir administração noturna quando sedação for relevante",
+          "Monitorar sedação, ortostase e glicemia em pacientes de risco"
+        ],
+        "es": [
+          "Preferir administración nocturna cuando la sedación sea relevante",
+          "Monitorizar sedación, ortostatismo y glucemia en pacientes de riesgo"
+        ]
+      },
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro.",
+          "es": "Sin ajuste renal rutinario."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela em hepatopatia e iniciar baixo quando houver maior vulnerabilidade.",
+          "es": "Usar precaución en hepatopatía e iniciar bajo cuando exista mayor vulnerabilidad."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Sedação",
+          "Aumento de apetite",
+          "Ganho de peso",
+          "Boca seca"
+        ],
+        "es": [
+          "Sedación",
+          "Aumento del apetito",
+          "Aumento de peso",
+          "Boca seca"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Hiperglicemia grave",
+          "Síndrome neuroléptica maligna",
+          "Discinesia tardia",
+          "Mortalidade aumentada em idosos com psicose relacionada à demência"
+        ],
+        "es": [
+          "Hiperglucemia grave",
+          "Síndrome neuroléptico maligno",
+          "Discinesia tardía",
+          "Mayor mortalidad en adultos mayores con psicosis relacionada con demencia"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
           ],
-          dose: {
-            adulto: t(lang, "Esquizofrenia: iniciar 5–10 mg VO 1x/dia; usual 10–20 mg/dia.", "Esquizofrenia: iniciar 5–10 mg VO 1 vez/día; habitual 10–20 mg/día."),
-            mania: t(lang, "Mania aguda: 10–15 mg VO 1x/dia; titular conforme resposta.", "Manía aguda: 10–15 mg VO 1 vez/día; titular según respuesta."),
-            agitacao: t(lang, "Agitação aguda: 5–10 mg IM conforme protocolo, com monitorização.", "Agitación aguda: 5–10 mg IM según protocolo, con monitorización."),
-            maxDose: t(lang, "Dose máxima usual: 20 mg/dia.", "Dosis máxima habitual: 20 mg/día.")
-          },
-          indications: [
-            t(lang, "Esquizofrenia", "Esquizofrenia"),
-            t(lang, "Transtorno bipolar — mania aguda", "Trastorno bipolar — manía aguda"),
-            t(lang, "Manutenção no transtorno bipolar", "Mantenimiento en trastorno bipolar"),
-            t(lang, "Depressão bipolar em combinação com fluoxetina em alguns protocolos", "Depresión bipolar en combinación con fluoxetina en algunos protocolos"),
-            t(lang, "Agitação psicótica aguda", "Agitación psicótica aguda"),
-            t(lang, "Transtorno esquizoafetivo", "Trastorno esquizoafectivo"),
-            t(lang, "Náuseas/vômitos refratários em oncologia ou cuidados paliativos off-label", "Náuseas/vómitos refractarios en oncología o cuidados paliativos off-label")
-          ],
-          renalAdjustment: t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
-          hepaticAdjustment: hepatopatia ? t(lang, "Hepatopatia: iniciar com dose menor e monitorar transaminases/sedação.", "Hepatopatía: iniciar con dosis menor y monitorizar transaminasas/sedación.") : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
-          mechanism: t(lang, "Antagonista 5HT2A e D2, com bloqueio H1, muscarínico e alfa-1; alta eficácia, porém elevado risco metabólico.", "Antagonista 5HT2A y D2, con bloqueo H1, muscarínico y alfa-1; alta eficacia, pero elevado riesgo metabólico."),
-          onset: t(lang, "Sedação e redução de agitação podem ocorrer em horas; efeito antipsicótico pleno geralmente em 2–6 semanas.", "Sedación y reducción de agitación pueden ocurrir en horas; efecto antipsicótico pleno generalmente en 2–6 semanas."),
-          halfLife: t(lang, "Vida média aproximada: 21–54 horas.", "Vida media aproximada: 21–54 horas."),
-          commonAdverseEffects: [
-            t(lang, "Ganho de peso importante", "Aumento de peso importante"),
-            t(lang, "Sonolência", "Somnolencia"),
-            t(lang, "Aumento do apetite", "Aumento del apetito"),
-            t(lang, "Boca seca", "Boca seca"),
-            t(lang, "Constipação", "Estreñimiento"),
-            t(lang, "Dislipidemia", "Dislipidemia"),
-            t(lang, "Hiperglicemia", "Hiperglucemia")
-          ],
-          dangerousAdverseEffects: [
-            t(lang, "Síndrome metabólica", "Síndrome metabólico"),
-            t(lang, "Diabetes mellitus ou descompensação glicêmica", "Diabetes mellitus o descompensación glucémica"),
-            t(lang, "Síndrome neuroléptica maligna", "Síndrome neuroléptico maligno"),
-            t(lang, "Discinesia tardia", "Discinesia tardía"),
-            t(lang, "Convulsões em predispostos", "Convulsiones en predispuestos"),
-            t(lang, "Hipotensão/sedação intensa se associada a benzodiazepínicos IM", "Hipotensión/sedación intensa si se asocia a benzodiacepinas IM")
-          ],
-          risksByPatient: [
-            idade >= 65 ? t(lang, "Idoso: maior risco de sedação, quedas, eventos cerebrovasculares e mortalidade em demência.", "Adulto mayor: mayor riesgo de sedación, caídas, eventos cerebrovasculares y mortalidad en demencia.") : null,
-            gestante ? t(lang, "Gestação: avaliar risco-benefício; monitorar ganho ponderal e glicemia.", "Embarazo: evaluar riesgo-beneficio; monitorizar aumento ponderal y glucemia.") : null,
-            lactante ? t(lang, "Lactação: monitorar sonolência, irritabilidade e alimentação do lactente.", "Lactancia: monitorizar somnolencia, irritabilidad y alimentación del lactante.") : null,
-            hepatopatia ? t(lang, "Hepatopatia: monitorar enzimas hepáticas e sedação.", "Hepatopatía: monitorizar enzimas hepáticas y sedación.") : null
-          ].filter(Boolean),
-          contraindications: [
-            t(lang, "Hipersensibilidade à olanzapina", "Hipersensibilidad a olanzapina"),
-            t(lang, "Uso IM concomitante ou muito próximo de benzodiazepínico parenteral", "Uso IM concomitante o muy cercano a benzodiacepina parenteral"),
-            t(lang, "Demência com corpos de Lewy ou Parkinson grave, salvo extrema necessidade", "Demencia con cuerpos de Lewy o Parkinson grave, salvo extrema necesidad")
-          ],
-          interactions: [
-            t(lang, "Álcool e depressores do SNC: maior sedação", "Alcohol y depresores del SNC: mayor sedación"),
-            t(lang, "Benzodiazepínicos IM: risco de hipotensão e depressão respiratória", "Benzodiacepinas IM: riesgo de hipotensión y depresión respiratoria"),
-            t(lang, "Tabagismo: pode reduzir níveis por indução CYP1A2", "Tabaquismo: puede reducir niveles por inducción CYP1A2"),
-            t(lang, "Fluvoxamina/ciprofloxacino: podem aumentar níveis por CYP1A2", "Fluvoxamina/ciprofloxacino: pueden aumentar niveles por CYP1A2"),
-            t(lang, "Levodopa e agonistas dopaminérgicos: antagonismo", "Levodopa y agonistas dopaminérgicos: antagonismo")
-          ],
-          alerts: [
-            t(lang, "Alto risco de ganho de peso e síndrome metabólica.", "Alto riesgo de aumento de peso y síndrome metabólico."),
-            t(lang, "Monitorar peso, cintura, glicemia/HbA1c, lipídios e pressão arterial.", "Monitorizar peso, cintura, glucemia/HbA1c, lípidos y presión arterial."),
-            t(lang, "Evitar associação IM com benzodiazepínico parenteral.", "Evitar asociación IM con benzodiacepina parenteral."),
-            t(lang, "Cuidado em diabéticos ou pacientes com obesidade/dislipidemia.", "Cuidado en diabéticos o pacientes con obesidad/dislipidemia."),
-            t(lang, "Ajustar expectativa: sedação é comum no início.", "Ajustar expectativa: la sedación es común al inicio.")
-          ],
-          ref: [
-            "Goodman & Gilman 14ª Ed.",
-            "Stahl's Essential Psychopharmacology",
-            "FDA/DailyMed Olanzapine Prescribing Information",
-            "Lexicomp",
-            "Micromedex",
-            "UpToDate"
+          "es": [
+            "Hipersensibilidad"
           ]
-        };
+        },
+        "relative": {
+          "pt": [
+            "Diabetes, obesidade, sedação importante, idosos com demência"
+          ],
+          "es": [
+            "Diabetes, obesidad, sedación importante, adultos mayores con demencia"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Uso antiemético em CINV é guideline-based/off-label; sedação é frequente e deve orientar dose/horário.",
+          "es": "El uso antiemético en CINV es basado en guías/off-label; la sedación es frecuente y debe orientar dosis/horario."
+        }
       }
     },
 

@@ -18,9 +18,160 @@
     "vecuronio",
     "vecurônio"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8971307309e3457c",
+  "clinicalContentSha256": "8971307309e3457c216ea650e1d9475ee1c8277aec5b2d1c2c60bd27a9f90523",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "vecuronio",
+    "clinical_batch": "LOT001_SEDACAO_INDUCAO_BNM",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_plus_current_guideline_when_explicitly_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Reconstituir conforme a apresentação específica e administrar IV. Usar estimulador de nervo periférico/TOF para redose e recuperação. Infusão deve iniciar somente após sinais precoces de recuperação da dose de intubação."
+          },
+          {
+            "label": "Apresentação",
+            "text": "Frasco liofilizado IV; apresentações de 4 mg e 10 mg podem existir conforme mercado"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Reconstituir según la presentación específica y administrar IV. Usar estimulador de nervio periférico/TOF para redosis y recuperación. La infusión debe iniciarse solo tras signos precoces de recuperación de la dosis de intubación."
+          },
+          {
+            "label": "Presentación",
+            "text": "Vial liofilizado IV; pueden existir presentaciones de 4 mg y 10 mg según mercado"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Não possui sedação nem analgesia. A rotulagem não sustenta recomendar uma taxa fixa para infusão prolongada em UTI; usar apenas com monitorização neuromuscular e objetivos clínicos definidos."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Anafilaxia; Apneia/bloqueio prolongado; Fraqueza neuromuscular em uso prolongado em críticos"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade ao vecurônio/brometo ou componentes"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "No posee sedación ni analgesia. El rotulado no respalda recomendar una tasa fija para infusión prolongada en UCI; usar solo con monitorización neuromuscular y objetivos clínicos definidos."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Anafilaxia; Apnea/bloqueo prolongado; Debilidad neuromuscular con uso prolongado en críticos"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a vecuronio/bromuro o componentes"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Dose inicial 0,08–0,10 mg/kg IV. Manutenção 0,01–0,015 mg/kg. Infusão: iniciar aproximadamente 1 mcg/kg/min após recuperação precoce do bolus e titular por TOF; média 0,8–1,2 mcg/kg/min. Infusão prolongada em UTI não tem evidência suficiente para recomendações firmes de dose."
+          },
+          {
+            "label": "Pediatria",
+            "text": "10–16 anos: em geral mesma dose por kg do adulto. 1–10 anos podem necessitar dose inicial ligeiramente maior e manutenção mais frequente. 7 semanas–1 ano: maior sensibilidade e recuperação mais lenta. <7 semanas: dados insuficientes para recomendar dose."
+          },
+          {
+            "label": "Rim",
+            "text": "Em pacientes anéfricos ou insuficiência renal importante, o bloqueio pode prolongar-se; considerar menor dose inicial e titular por TOF, especialmente em situações de emergência."
+          },
+          {
+            "label": "Fígado",
+            "text": "Cirrose/colestase podem prolongar a recuperação, em alguns estudos aproximadamente dobrando o tempo; não há fator universal de ajuste. Titular por TOF."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Dosis inicial 0,08–0,10 mg/kg IV. Mantenimiento 0,01–0,015 mg/kg. Infusión: iniciar aproximadamente 1 mcg/kg/min tras recuperación precoz del bolo y titular por TOF; promedio 0,8–1,2 mcg/kg/min. La infusión prolongada en UCI no tiene evidencia suficiente para recomendaciones firmes de dosis."
+          },
+          {
+            "label": "Pediatría",
+            "text": "10–16 años: en general misma dosis por kg que el adulto. 1–10 años pueden requerir dosis inicial ligeramente mayor y mantenimiento más frecuente. 7 semanas–1 año: mayor sensibilidad y recuperación más lenta. <7 semanas: datos insuficientes para recomendar dosis."
+          },
+          {
+            "label": "Riñón",
+            "text": "En pacientes anéfricos o con insuficiencia renal importante, el bloqueo puede prolongarse; considerar menor dosis inicial y titular por TOF, especialmente en situaciones de emergencia."
+          },
+          {
+            "label": "Hígado",
+            "text": "La cirrosis/colestasis pueden prolongar la recuperación, en algunos estudios aproximadamente duplicando el tiempo; no hay un factor universal de ajuste. Titular por TOF."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Bloqueador neuromuscular não despolarizante aminosteroide"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueador competitivo nicotínico não despolarizante aminosteroide, de duração intermediária. Não produz sedação ou analgesia."
+          },
+          {
+            "label": "Indicações",
+            "text": "Facilitar intubação não emergencial; Relaxamento muscular durante cirurgia; Bloqueio neuromuscular por infusão em situações selecionadas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Bloqueador neuromuscular no despolarizante aminoesteroideo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueador competitivo nicotínico no despolarizante aminoesteroideo, de duración intermedia. No produce sedación ni analgesia."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Facilitar intubación no emergente; Relajación muscular durante cirugía; Bloqueo neuromuscular por infusión en situaciones seleccionadas"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Vecuronium Bromide for Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b012b1b1-9e59-4525-8f4d-dae98344d15f"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Vecuronium Bromide for Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b012b1b1-9e59-4525-8f4d-dae98344d15f"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_vecuronium_2026",
+        "title": "DailyMed — Vecuronium Bromide for Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b012b1b1-9e59-4525-8f4d-dae98344d15f",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

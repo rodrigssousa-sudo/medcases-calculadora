@@ -17,9 +17,174 @@
   "keywords": [
     "hidromorfona"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "hidromorfona",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via/Preparo",
+            "text": "IV lento em ≥2–3 min; IM/SC também existem conforme formulação"
+          },
+          {
+            "label": "Monitorização",
+            "text": "Confirmar concentração antes de aspirar para evitar erro de dose"
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía/Preparación",
+            "text": "IV lento en ≥2–3 min; IM/SC también existen según formulación"
+          },
+          {
+            "label": "Monitorización",
+            "text": "Confirmar la concentración antes de preparar para evitar errores de dosis"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Existem várias concentrações injetáveis; confirmar concentração e reduzir dose inicial em insuficiência renal/hepática."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depressão respiratória; Hipotensão grave; Sedação profunda"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Depressão respiratória significativa; Asma aguda/grave sem monitorização adequada; Obstrução gastrointestinal conhecida ou suspeita"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Existen varias concentraciones inyectables; confirmar concentración y reducir dosis inicial en insuficiencia renal/hepática."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión respiratoria; Hipotensión grave; Sedación profunda"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Depresión respiratoria significativa; Asma aguda/grave sin monitorización adecuada; Obstrucción gastrointestinal conocida o sospechada"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "IV: 0,2–1 mg a cada 2–3 h conforme necessidade; administrar lentamente em pelo menos 2–3 min e titular ao efeito."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Segurança e eficácia da injeção não estabelecidas em pacientes pediátricos na rotulagem dos EUA."
+          },
+          {
+            "label": "Rim",
+            "text": "Iniciar com 1/4 a 1/2 da dose inicial habitual conforme grau de insuficiência renal e titular lentamente."
+          },
+          {
+            "label": "Fígado",
+            "text": "Iniciar com 1/4 a 1/2 da dose inicial habitual na disfunção hepática moderada; titular cuidadosamente."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "IV: 0,2–1 mg cada 2–3 h según necesidad; administrar lentamente durante al menos 2–3 min y titular al efecto."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Seguridad y eficacia de la inyección no establecidas en pacientes pediátricos en el rotulado de EE. UU."
+          },
+          {
+            "label": "Riñón",
+            "text": "Iniciar con 1/4 a 1/2 de la dosis inicial habitual según el grado de insuficiencia renal y titular lentamente."
+          },
+          {
+            "label": "Hígado",
+            "text": "Iniciar con 1/4 a 1/2 de la dosis inicial habitual en disfunción hepática moderada; titular cuidadosamente."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Agonista opioide μ"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista opioide μ potente, com analgesia e depressão respiratória dose-dependente."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor intensa que requer opioide quando alternativas são inadequadas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Agonista opioide μ"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista opioide μ potente, con analgesia y depresión respiratoria dependiente de la dosis."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor intenso que requiere opioide cuando las alternativas son inadecuadas"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Hydromorphone Hydrochloride Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e9c9ef18-7dfc-4322-b2fc-29b934c30f8b"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Hydromorphone Hydrochloride Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e9c9ef18-7dfc-4322-b2fc-29b934c30f8b"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Benzodiazepínicos, álcool e outros sedativos aumentam risco de sedação profunda e depressão respiratória."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Benzodiazepinas, alcohol y otros sedantes aumentan el riesgo de sedación profunda y depresión respiratoria."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_hidromorfona_2026",
+        "title": "DailyMed — Hydromorphone Hydrochloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e9c9ef18-7dfc-4322-b2fc-29b934c30f8b",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

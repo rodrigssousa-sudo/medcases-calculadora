@@ -17,9 +17,220 @@
   "keywords": [
     "celecoxibe"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-c613ef861d440511",
+  "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "celecoxibe",
+    "clinical_batch": "LOT003_ANALGESICOS_NAO_OPIOIDES_COANALGESICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_or_regulatory_referral",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar menor dose efetiva pelo menor tempo"
+          },
+          {
+            "label": "Administração",
+            "text": "Pode ser administrado com ou sem alimento nas doses usuais"
+          },
+          {
+            "label": "Administração",
+            "text": "Evitar associação rotineira com outro AINE"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar la menor dosis efectiva durante el menor tiempo"
+          },
+          {
+            "label": "Administración",
+            "text": "Puede administrarse con o sin alimento a dosis habituales"
+          },
+          {
+            "label": "Administración",
+            "text": "Evitar asociación rutinaria con otro AINE"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Seletividade COX-2 não elimina boxed warning cardiovascular e gastrointestinal."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Eventos trombóticos CV; Sangramento GI; Lesão renal; Reações cutâneas graves"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade ao celecoxibe; Reação alérgica a sulfonamidas conforme rotulagem; Asma/urticária após AAS/AINE; CABG perioperatório"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "La selectividad COX-2 no elimina el boxed warning cardiovascular y gastrointestinal."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Eventos trombóticos CV; Sangrado GI; Lesión renal; Reacciones cutáneas graves"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a celecoxib; Reacción alérgica a sulfonamidas según rotulado; Asma/urticaria tras AAS/AINE; CABG perioperatorio"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "OA: 200 mg/dia (200 mg 1x/dia ou 100 mg 2x/dia). Dor aguda/dismenorreia: 400 mg inicialmente, podendo acrescentar 200 mg no primeiro dia; depois 200 mg 2x/dia conforme necessidade."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Artrite idiopática juvenil: 10–25 kg, 50 mg 2x/dia; >25 kg, 100 mg 2x/dia, conforme indicação/rotulagem."
+          },
+          {
+            "label": "Rim",
+            "text": "Não recomendado em insuficiência renal grave; monitorar função renal em pacientes com DRC, IC, hipovolemia ou uso de IECA/ARB/diurético."
+          },
+          {
+            "label": "Fígado",
+            "text": "Child-Pugh B: reduzir dose diária em 50%. Insuficiência hepática grave: evitar."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "OA: 200 mg/día (200 mg 1x/día o 100 mg 2x/día). Dolor agudo/dismenorrea: 400 mg inicialmente, pudiendo añadir 200 mg el primer día; luego 200 mg 2x/día según necesidad."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Artritis idiopática juvenil: 10–25 kg, 50 mg 2x/día; >25 kg, 100 mg 2x/día, según indicación/rotulado."
+          },
+          {
+            "label": "Riñón",
+            "text": "No recomendado en insuficiencia renal grave; monitorizar función renal en pacientes con ERC, IC, hipovolemia o uso de IECA/ARA-II/diurético."
+          },
+          {
+            "label": "Hígado",
+            "text": "Child-Pugh B: reducir dosis diaria 50%. Insuficiencia hepática grave: evitar."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "AINE seletivo COX-2"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Inibe preferencialmente COX-2 em doses terapêuticas. Reduz inflamação/dor com menor efeito plaquetário que AINEs não seletivos, mas não elimina risco GI, renal ou cardiovascular."
+          },
+          {
+            "label": "Indicações",
+            "text": "Osteoartrite; Artrite reumatoide; Espondilite anquilosante; Dor aguda em adultos; Dismenorreia primária"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "AINE selectivo COX-2"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Inhibe preferentemente COX-2 a dosis terapéuticas. Reduce inflamación/dolor con menor efecto plaquetario que AINE no selectivos, pero no elimina riesgo GI, renal ni cardiovascular."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Osteoartritis; Artritis reumatoide; Espondilitis anquilosante; Dolor agudo en adultos; Dismenorrea primaria"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentam risco de sangramento; avaliar risco-benefício e monitorar."
+          },
+          {
+            "label": "IECA/ARB/diuréticos",
+            "text": "Pode reduzir efeito anti-hipertensivo e aumentar risco de lesão renal, sobretudo com hipovolemia/DRC."
+          },
+          {
+            "label": "Outros AINEs",
+            "text": "Evitar associação sistêmica rotineira por toxicidade GI/renal sem benefício proporcional."
+          },
+          {
+            "label": "Lítio/metotrexato",
+            "text": "AINEs podem aumentar exposição; monitorar quando aplicável."
+          }
+        ],
+        "es": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentan riesgo de sangrado; evaluar riesgo-beneficio y monitorizar."
+          },
+          {
+            "label": "IECA/ARA-II/diuréticos",
+            "text": "Puede reducir efecto antihipertensivo y aumentar riesgo de lesión renal, especialmente con hipovolemia/ERC."
+          },
+          {
+            "label": "Otros AINE",
+            "text": "Evitar asociación sistémica rutinaria por toxicidad GI/renal sin beneficio proporcional."
+          },
+          {
+            "label": "Litio/metotrexato",
+            "text": "Los AINE pueden aumentar la exposición; monitorizar cuando corresponda."
+          }
+        ]
+      },
+      "gravidez_lactacao": {
+        "pt": [
+          {
+            "label": "Gestação/Lactação",
+            "text": "AINE sistêmico: evitar a partir de cerca de 30 semanas de gestação; entre 20–30 semanas, usar somente se necessário, na menor dose e pelo menor tempo, devido a risco renal fetal/oligoâmnio. Avaliar lactação conforme fármaco e duração."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo/Lactancia",
+            "text": "AINE sistémico: evitar desde aproximadamente 30 semanas de gestación; entre 20–30 semanas, usar solo si es necesario, a la menor dosis y por el menor tiempo, por riesgo renal fetal/oligohidramnios. Evaluar lactancia según fármaco y duración."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Celecoxib capsules, 2026",
+            "text": "Fonte oficial revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d94849a7-1831-4319-982c-c6b20dc42038"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Celecoxib capsules, 2026",
+            "text": "Fuente oficial revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d94849a7-1831-4319-982c-c6b20dc42038"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "celecoxibe_source_1",
+        "title": "DailyMed — Celecoxib capsules, 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d94849a7-1831-4319-982c-c6b20dc42038",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

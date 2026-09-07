@@ -17,9 +17,174 @@
   "keywords": [
     "dexmedetomidina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8971307309e3457c",
+  "clinicalContentSha256": "8971307309e3457c216ea650e1d9475ee1c8277aec5b2d1c2c60bd27a9f90523",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "sedacao.js"
+  "sourceModule": "sedacao.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "dexmedetomidina",
+    "clinical_batch": "LOT001_SEDACAO_INDUCAO_BNM",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_plus_current_guideline_when_explicitly_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Administrar com dispositivo de infusão controlada. Para frasco 200 mcg/2 mL (100 mcg/mL), diluir em SF 0,9% até concentração de 4 mcg/mL conforme rotulagem. Evitar administração IV rápida; monitorizar continuamente frequência cardíaca e pressão arterial."
+          },
+          {
+            "label": "Apresentação",
+            "text": "Concentrado 100 mcg/mL para diluição; também existem apresentações prontas para uso conforme fabricante"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Administrar con dispositivo de infusión controlada. Para vial 200 mcg/2 mL (100 mcg/mL), diluir en SF 0,9% hasta 4 mcg/mL según rotulado. Evitar administración IV rápida; monitorizar continuamente frecuencia cardíaca y presión arterial."
+          },
+          {
+            "label": "Presentación",
+            "text": "Concentrado 100 mcg/mL para dilución; también existen presentaciones listas para usar según fabricante"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Pode ser mantida durante extubação em adultos quando clinicamente apropriado, mas isso não elimina a necessidade de monitorização respiratória e hemodinâmica. A rotulagem atual não lista contraindicações formais."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Bradicardia grave ou parada sinusal; Hipotensão clinicamente importante; Eventos respiratórios podem ocorrer e exigem monitorização"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Sem contraindicação formal específica na rotulagem de referência; avaliar advertências e precauções."
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Puede mantenerse durante la extubación en adultos cuando sea clínicamente apropiado, pero esto no elimina la necesidad de monitorización respiratoria y hemodinámica. El rotulado actual no enumera contraindicaciones formales."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Bradicardia grave o paro sinusal; Hipotensión clínicamente importante; Pueden ocurrir eventos respiratorios y requieren monitorización"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Sin contraindicación formal específica en el rotulado de referencia; evaluar advertencias y precauciones."
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "UTI adulto: carga 1 mcg/kg em 10 min quando indicada, seguida de 0,2–0,7 mcg/kg/h; ao trocar de outro sedativo, a carga pode não ser necessária. Procedural adulto: carga 1 mcg/kg em 10 min e manutenção 0,2–1 mcg/kg/h, frequentemente iniciada em 0,6 mcg/kg/h."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Procedimentos não invasivos: 1 mês–<2 anos, carga 1,5 mcg/kg em 10 min; 2–<18 anos, carga 2 mcg/kg em 10 min. Manutenção inicial 1,5 mcg/kg/h, titulada entre 0,5–1,5 mcg/kg/h. Segurança/eficácia para sedação pediátrica em UTI não estabelecidas."
+          },
+          {
+            "label": "Rim",
+            "text": "Farmacocinética não mostrou diferença relevante em insuficiência renal grave; não há ajuste renal fixo na rotulagem, mas titular clinicamente."
+          },
+          {
+            "label": "Fígado",
+            "text": "O clearance diminui com a gravidade da disfunção hepática; considerar redução de dose e titulação mais lenta."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "UCI adulto: carga 1 mcg/kg en 10 min cuando esté indicada, seguida de 0,2–0,7 mcg/kg/h; al cambiar desde otro sedante, la carga puede no ser necesaria. Procedimental adulto: carga 1 mcg/kg en 10 min y mantenimiento 0,2–1 mcg/kg/h, frecuentemente iniciado en 0,6 mcg/kg/h."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Procedimientos no invasivos: 1 mes–<2 años, carga 1,5 mcg/kg en 10 min; 2–<18 años, carga 2 mcg/kg en 10 min. Mantenimiento inicial 1,5 mcg/kg/h, titulado entre 0,5–1,5 mcg/kg/h. Seguridad/eficacia para sedación pediátrica en UCI no establecidas."
+          },
+          {
+            "label": "Riñón",
+            "text": "La farmacocinética no mostró diferencia relevante en insuficiencia renal grave; no hay ajuste renal fijo en el rotulado, pero debe titularse clínicamente."
+          },
+          {
+            "label": "Hígado",
+            "text": "El clearance disminuye con la gravedad de la disfunción hepática; considerar reducción de dosis y titulación más lenta."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Agonista seletivo alfa-2 adrenérgico; sedativo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonismo alfa-2 central reduz liberação de noradrenalina e produz sedação com relativa preservação da responsividade. Pode causar bradicardia, hipotensão e, durante dose de ataque, hipertensão transitória."
+          },
+          {
+            "label": "Indicações",
+            "text": "Sedação de adultos inicialmente intubados e ventilados mecanicamente em UTI; Sedação procedural de adultos não intubados; Sedação de pacientes pediátricos de 1 mês a <18 anos durante procedimentos não invasivos"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Agonista selectivo alfa-2 adrenérgico; sedante"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "El agonismo alfa-2 central reduce la liberación de noradrenalina y produce sedación con relativa preservación de la respuesta. Puede causar bradicardia, hipotensión y, durante la dosis de carga, hipertensión transitoria."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Sedación de adultos inicialmente intubados y ventilados mecánicamente en UCI; Sedación procedimental de adultos no intubados; Sedación de pacientes pediátricos de 1 mes a <18 años durante procedimientos no invasivos"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Dexmedetomidine Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=714cc0d2-8a4c-40c0-8ef0-dcfde4c46989"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Dexmedetomidine Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=714cc0d2-8a4c-40c0-8ef0-dcfde4c46989"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Cronotrópicos negativos",
+            "text": "Fármacos que reduzem frequência cardíaca ou condução podem aumentar bradicardia/hipotensão; monitorizar e titular."
+          }
+        ],
+        "es": [
+          {
+            "label": "Cronotrópicos negativos",
+            "text": "Los fármacos que reducen frecuencia cardíaca o conducción pueden aumentar bradicardia/hipotensión; monitorizar y titular."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_dexmedetomidine_2026",
+        "title": "DailyMed — Dexmedetomidine Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=714cc0d2-8a4c-40c0-8ef0-dcfde4c46989",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

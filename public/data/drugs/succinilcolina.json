@@ -18,9 +18,196 @@
     "succinilcolina",
     "succinilcolina (cloreto de suxametônio)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8971307309e3457c",
+  "clinicalContentSha256": "8971307309e3457c216ea650e1d9475ee1c8277aec5b2d1c2c60bd27a9f90523",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "succinilcolina",
+    "clinical_batch": "LOT001_SEDACAO_INDUCAO_BNM",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_plus_current_guideline_when_explicitly_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Bolus IV/IM conforme formulação. Para infusão, a rotulagem descreve diluição para 1–2 mg/mL em dextrose 5% ou SF 0,9%. Monitorizar função neuromuscular se usada em infusão. Não misturar com soluções alcalinas."
+          },
+          {
+            "label": "Apresentação",
+            "text": "Solução/frasco injetável IV/IM; apresentações variam por mercado"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Bolo IV/IM según formulación. Para infusión, el rotulado describe dilución a 1–2 mg/mL en dextrosa 5% o SF 0,9%. Monitorizar función neuromuscular si se usa en infusión. No mezclar con soluciones alcalinas."
+          },
+          {
+            "label": "Presentación",
+            "text": "Solución/vial inyectable IV/IM; presentaciones varían según mercado"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Não possui sedação nem analgesia. Em crianças, existe boxed warning para rabdomiólise hipercalêmica com disritmia, parada cardíaca e morte; reservar o uso para situações em que a via aérea precise ser assegurada imediatamente."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Rabdomiólise hipercalêmica com arritmia/parada cardíaca, especialmente em miopatias pediátricas ocultas; Hipertermia maligna; Hipercalemia grave; Bradicardia/assistolia"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Miopatias esqueléticas; Após fase aguda de grandes queimaduras, trauma múltiplo, desnervação extensa ou lesão de neurônio motor superior; História pessoal ou familiar de hipertermia maligna; Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "No posee sedación ni analgesia. En niños existe boxed warning por rabdomiólisis hiperpotasémica con disritmia, paro cardíaco y muerte; reservar el uso para situaciones en que la vía aérea deba asegurarse inmediatamente."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Rabdomiólisis hiperpotasémica con arritmia/paro cardíaco, especialmente en miopatías pediátricas ocultas; Hipertermia maligna; Hiperpotasemia grave; Bradicardia/asistolia"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Miopatías esqueléticas; Tras la fase aguda de grandes quemaduras, trauma múltiple, denervación extensa o lesión de neurona motora superior; Antecedente personal o familiar de hipertermia maligna; Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Intubação de emergência em adulto: dose frequentemente usada 1–1,5 mg/kg IV conforme protocolo; a rotulagem também descreve 0,6 mg/kg como dose adulta usual para bloqueio. Titular ao objetivo e não usar como sedativo."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Emergência: lactentes/crianças pequenas 2 mg/kg IV; crianças maiores/adolescentes 1 mg/kg IV. Se não houver acesso venoso, IM até 3–4 mg/kg; dose IM total máx. 150 mg. Uso pediátrico deve ser reservado para necessidade imediata de via aérea."
+          },
+          {
+            "label": "Rim",
+            "text": "Insuficiência renal/anúria isoladamente não consta como contraindicação formal. Avaliar potássio e condições associadas à hipercalemia; evitar em hipercalemia significativa ou situações de alto risco para elevação abrupta de K+."
+          },
+          {
+            "label": "Fígado",
+            "text": "Redução de butirilcolinesterase, inclusive em doença hepática grave, pode prolongar o bloqueio/apneia; garantir ventilação até recuperação."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Intubación de emergencia en adulto: dosis frecuentemente utilizada 1–1,5 mg/kg IV según protocolo; el rotulado también describe 0,6 mg/kg como dosis adulta habitual para bloqueo. Titular al objetivo y no usar como sedante."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Emergencia: lactantes/niños pequeños 2 mg/kg IV; niños mayores/adolescentes 1 mg/kg IV. Si no hay acceso venoso, IM hasta 3–4 mg/kg; dosis IM total máx. 150 mg. El uso pediátrico debe reservarse para necesidad inmediata de vía aérea."
+          },
+          {
+            "label": "Riñón",
+            "text": "La insuficiencia renal/anuria aislada no figura como contraindicación formal. Evaluar potasio y condiciones asociadas a hiperpotasemia; evitar con hiperpotasemia significativa o situaciones de alto riesgo de aumento brusco de K+."
+          },
+          {
+            "label": "Hígado",
+            "text": "La reducción de butirilcolinesterasa, incluso en enfermedad hepática grave, puede prolongar el bloqueo/apnea; garantizar ventilación hasta la recuperación."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Bloqueador neuromuscular despolarizante"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista nicotínico despolarizante que produz despolarização sustentada da placa motora, seguida de paralisia. É hidrolisada principalmente pela butirilcolinesterase plasmática."
+          },
+          {
+            "label": "Indicações",
+            "text": "Facilitar intubação traqueal; Relaxamento muscular durante cirurgia ou ventilação mecânica; Em pediatria, reservar para intubação de emergência/necessidade imediata de via aérea ou IM quando não há acesso venoso adequado"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Bloqueador neuromuscular despolarizante"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista nicotínico despolarizante que produce despolarización sostenida de la placa motora, seguida de parálisis. Se hidroliza principalmente por butirilcolinesterasa plasmática."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Facilitar intubación traqueal; Relajación muscular durante cirugía o ventilación mecánica; En pediatría, reservar para intubación de emergencia/necesidad inmediata de vía aérea o IM cuando no hay acceso venoso adecuado"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Succinylcholine Chloride Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d4302db-a0d5-d0e8-e063-6294a90a22f8"
+          },
+          {
+            "label": "SCCM — Rapid Sequence Intubation in the Critically Ill Adult Patient",
+            "text": "Fonte revisada em 2026-09-05. https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-rapid-sequence-intubation"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Succinylcholine Chloride Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d4302db-a0d5-d0e8-e063-6294a90a22f8"
+          },
+          {
+            "label": "SCCM — Rapid Sequence Intubation in the Critically Ill Adult Patient",
+            "text": "Fuente revisada el 2026-09-05. https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-rapid-sequence-intubation"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Anestésicos inalatórios",
+            "text": "Em pessoas suscetíveis, succinilcolina e anestésicos voláteis são gatilhos de hipertermia maligna."
+          },
+          {
+            "label": "Anticolinesterásicos",
+            "text": "Na fase I do bloqueio despolarizante, anticolinesterásicos podem prolongar o bloqueio em vez de revertê-lo."
+          }
+        ],
+        "es": [
+          {
+            "label": "Anestésicos inhalatorios",
+            "text": "En personas susceptibles, succinilcolina y anestésicos volátiles son desencadenantes de hipertermia maligna."
+          },
+          {
+            "label": "Anticolinesterásicos",
+            "text": "En la fase I del bloqueo despolarizante, los anticolinesterásicos pueden prolongar el bloqueo en lugar de revertirlo."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_succinylcholine_2026",
+        "title": "DailyMed — Succinylcholine Chloride Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d4302db-a0d5-d0e8-e063-6294a90a22f8",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "sccm_rsi_2023",
+        "title": "SCCM — Rapid Sequence Intubation in the Critically Ill Adult Patient",
+        "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-rapid-sequence-intubation",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

@@ -17,9 +17,190 @@
   "keywords": [
     "metadona"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "metadona",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via/Preparo",
+            "text": "Não usar como analgésico PRN"
+          },
+          {
+            "label": "Monitorização",
+            "text": "Reavaliar sedação 2–4 h após dose durante indução de TUS; acúmulo ocorre ao longo de vários dias"
+          },
+          {
+            "label": "Administração",
+            "text": "ECG e eletrólitos quando houver fatores de risco para QT prolongado"
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía/Preparación",
+            "text": "No usar como analgésico PRN"
+          },
+          {
+            "label": "Monitorización",
+            "text": "Reevaluar sedación 2–4 h después de la dosis durante inducción de TUS; la acumulación ocurre durante varios días"
+          },
+          {
+            "label": "Administración",
+            "text": "ECG y electrolitos cuando existan factores de riesgo para QT prolongado"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "A duração da depressão respiratória pode superar a duração da analgesia; a titulação rápida aumenta risco de acúmulo e morte."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depressão respiratória tardia; Prolongamento de QT/Torsades; Overdose por acúmulo"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Depressão respiratória significativa; Asma aguda/grave sem monitorização adequada; Obstrução gastrointestinal conhecida ou suspeita"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "La duración de la depresión respiratoria puede superar la duración de la analgesia; la titulación rápida aumenta el riesgo de acumulación y muerte."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión respiratoria tardía; Prolongación de QT/Torsades; Sobredosis por acumulación"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Depresión respiratoria significativa; Asma aguda/grave sin monitorización adecuada; Obstrucción gastrointestinal conocida o sospechada"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Dor em paciente sem uso prévio de opioide: 2,5 mg VO a cada 8–12 h, com titulação lenta por profissional experiente. TUS: dose inicial supervisionada 20–30 mg; não exceder 30 mg na primeira dose e, em geral, 40 mg no primeiro dia."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Não usar esquemas adultos por extrapolação. Uso pediátrico requer indicação especializada e protocolo específico."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem esquema único; iniciar baixo, titular lentamente e aumentar intervalo conforme clínica em insuficiência renal importante."
+          },
+          {
+            "label": "Fígado",
+            "text": "Metabolismo hepático e meia-vida variável; iniciar com cautela e titular lentamente em hepatopatia."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Dolor en paciente sin uso previo de opioides: 2,5 mg VO cada 8–12 h, con titulación lenta por profesional experto. TUS: dosis inicial supervisada 20–30 mg; no exceder 30 mg en la primera dosis y, en general, 40 mg el primer día."
+          },
+          {
+            "label": "Pediatría",
+            "text": "No usar esquemas de adultos por extrapolación. El uso pediátrico requiere indicación especializada y protocolo específico."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin esquema único; iniciar bajo, titular lentamente y aumentar el intervalo según clínica en insuficiencia renal importante."
+          },
+          {
+            "label": "Hígado",
+            "text": "Metabolismo hepático y vida media variable; iniciar con precaución y titular lentamente en hepatopatía."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Agonista opioide μ de longa duração; antagonismo NMDA secundário"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista μ com meia-vida longa e variável; acumula durante os primeiros dias. Pode prolongar QT e causar depressão respiratória tardia."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor intensa e persistente em situações selecionadas; Desintoxicação e manutenção do transtorno por uso de opioides em programas regulamentados"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Agonista opioide μ de larga duración; antagonismo NMDA secundario"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista μ con vida media larga y variable; se acumula durante los primeros días. Puede prolongar QT y causar depresión respiratoria tardía."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor intenso y persistente en situaciones seleccionadas; Desintoxicación y mantenimiento del trastorno por uso de opioides en programas regulados"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Methadone Hydrochloride Tablets",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=db52fdc0-765a-4fad-a8f9-ef98c6e4b898"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Methadone Hydrochloride Tablets",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=db52fdc0-765a-4fad-a8f9-ef98c6e4b898"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Benzodiazepínicos, álcool e outros sedativos aumentam risco de sedação profunda e depressão respiratória."
+          },
+          {
+            "label": "QT",
+            "text": "Somar outros prolongadores de QT e distúrbios eletrolíticos aumenta risco de Torsades de Pointes."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Benzodiazepinas, alcohol y otros sedantes aumentan el riesgo de sedación profunda y depresión respiratoria."
+          },
+          {
+            "label": "QT",
+            "text": "Sumar otros prolongadores de QT y trastornos electrolíticos aumenta el riesgo de Torsades de Pointes."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_metadona_2026",
+        "title": "DailyMed — Methadone Hydrochloride Tablets",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=db52fdc0-765a-4fad-a8f9-ef98c6e4b898",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

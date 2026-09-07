@@ -17,9 +17,196 @@
   "keywords": [
     "gabapentina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-c613ef861d440511",
+  "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "gabapentina",
+    "clinical_batch": "LOT003_ANALGESICOS_NAO_OPIOIDES_COANALGESICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_or_regulatory_referral",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "VO; manter intervalos regulares"
+          },
+          {
+            "label": "Administração",
+            "text": "Retirar gradualmente, não abruptamente"
+          },
+          {
+            "label": "Administração",
+            "text": "Monitorar sedação, tontura e risco de quedas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "VO; mantener intervalos regulares"
+          },
+          {
+            "label": "Administración",
+            "text": "Retirar gradualmente, no de forma abrupta"
+          },
+          {
+            "label": "Administración",
+            "text": "Monitorizar sedación, mareo y riesgo de caídas"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "A dose deve ser ajustada à função renal. Associação com opioides e outros depressores do SNC aumenta risco de depressão respiratória."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depressão respiratória com opioides/outros depressores do SNC; Ideação/comportamento suicida; Convulsões/abstinência se retirada abrupta"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "La dosis debe ajustarse a la función renal. La asociación con opioides y otros depresores del SNC aumenta el riesgo de depresión respiratoria."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión respiratoria con opioides/otros depresores del SNC; Ideación/conducta suicida; Convulsiones/abstinencia si suspensión brusca"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Neuralgia pós-herpética: 300 mg no dia 1, 300 mg 2x/dia no dia 2, 300 mg 3x/dia no dia 3; titular conforme resposta. Faixa efetiva usual 900–1.800 mg/dia; rotulagem permite até 3.600 mg/dia em indicações selecionadas."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Para epilepsia, existem esquemas pediátricos por idade; para dor neuropática pediátrica a evidência/rotulagem é diferente e não deve ser extrapolada automaticamente."
+          },
+          {
+            "label": "Rim",
+            "text": "Ajuste obrigatório por ClCr: ≥60 mL/min 900–3.600 mg/dia; 30–59: 400–1.400 mg/dia; 15–29: 200–700 mg/dia; ≈15: 100–300 mg/dia; <15 reduzir proporcionalmente. Hemodiálise requer dose suplementar pós-sessão."
+          },
+          {
+            "label": "Fígado",
+            "text": "Não sofre metabolismo hepático relevante; não há ajuste hepático rotineiro."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Neuralgia posherpética: 300 mg día 1, 300 mg 2x/día día 2, 300 mg 3x/día día 3; titular según respuesta. Rango efectivo habitual 900–1.800 mg/día; el rotulado permite hasta 3.600 mg/día en indicaciones seleccionadas."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Para epilepsia existen esquemas pediátricos por edad; para dolor neuropático pediátrico la evidencia/rotulado es diferente y no debe extrapolarse automáticamente."
+          },
+          {
+            "label": "Riñón",
+            "text": "Ajuste obligatorio por ClCr: ≥60 mL/min 900–3.600 mg/día; 30–59: 400–1.400 mg/día; 15–29: 200–700 mg/día; ≈15: 100–300 mg/día; <15 reducir proporcionalmente. Hemodiálisis requiere dosis suplementaria pos-sesión."
+          },
+          {
+            "label": "Hígado",
+            "text": "No sufre metabolismo hepático relevante; no hay ajuste hepático rutinario."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Gabapentinoide; ligante α2δ de canais de cálcio"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Liga-se à subunidade α2δ dos canais de cálcio voltagem-dependentes, reduzindo liberação de neurotransmissores excitatórios. Não atua diretamente como agonista GABA."
+          },
+          {
+            "label": "Indicações",
+            "text": "Neuralgia pós-herpética em adultos; Adjuvante em crises epilépticas focais; Uso em dor neuropática conforme indicação clínica"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Gabapentinoide; ligando α2δ de canales de calcio"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Se une a la subunidad α2δ de los canales de calcio dependientes de voltaje, reduciendo liberación de neurotransmisores excitatorios. No actúa directamente como agonista GABA."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Neuralgia posherpética en adultos; Adyuvante en crisis epilépticas focales; Uso en dolor neuropático según indicación clínica"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Opioides/depressores do SNC",
+            "text": "Aumentam sedação e risco de depressão respiratória; iniciar/titular com cautela."
+          }
+        ],
+        "es": [
+          {
+            "label": "Opioides/depresores del SNC",
+            "text": "Aumentan sedación y riesgo de depresión respiratoria; iniciar/titular con precaución."
+          }
+        ]
+      },
+      "gravidez_lactacao": {
+        "pt": [
+          {
+            "label": "Gestação/Lactação",
+            "text": "Usar na gestação/lactação somente após avaliação individual de benefício-risco; evitar extrapolar segurança entre gabapentinoides."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo/Lactancia",
+            "text": "Usar en embarazo/lactancia solo tras evaluación individual de beneficio-riesgo; evitar extrapolar seguridad entre gabapentinoides."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Gabapentin capsules, 2026",
+            "text": "Fonte oficial revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41844c21-9e2a-4332-a8ff-9b71ae9032b0"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Gabapentin capsules, 2026",
+            "text": "Fuente oficial revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41844c21-9e2a-4332-a8ff-9b71ae9032b0"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "gabapentina_source_1",
+        "title": "DailyMed — Gabapentin capsules, 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41844c21-9e2a-4332-a8ff-9b71ae9032b0",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

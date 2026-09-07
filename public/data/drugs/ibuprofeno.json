@@ -17,8 +17,8 @@
   "keywords": [
     "ibuprofeno"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-c613ef861d440511",
+  "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "analgesicos.js",
@@ -55,12 +55,237 @@
         "keywords": [
           "ibuprofeno"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-c613ef861d440511",
+        "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
         "source": "medcases-calculadora",
         "schema": "legacy-v1",
         "sourceModule": "analgesia_opioides.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "ibuprofeno",
+    "clinical_batch": "LOT003_ANALGESICOS_NAO_OPIOIDES_COANALGESICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_or_regulatory_referral",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar menor dose efetiva pelo menor tempo"
+          },
+          {
+            "label": "Administração",
+            "text": "Evitar associação com outro AINE sistêmico"
+          },
+          {
+            "label": "Administração",
+            "text": "Avaliar hidratação, função renal e risco GI/CV"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar la menor dosis efectiva durante el menor tiempo"
+          },
+          {
+            "label": "Administración",
+            "text": "Evitar asociación con otro AINE sistémico"
+          },
+          {
+            "label": "Administración",
+            "text": "Evaluar hidratación, función renal y riesgo GI/CV"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "AINEs aumentam risco de eventos trombóticos CV graves e sangramento/ulceração/perfuração GI; o risco pode surgir cedo."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Sangramento/úlcera/perfuração GI; Lesão renal aguda; IAM/AVC trombótico; Anafilaxia/broncoespasmo em suscetíveis"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade a AINEs; Asma/urticária após AAS ou outro AINE; Período perioperatório de CABG"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Los AINE aumentan el riesgo de eventos trombóticos CV graves y sangrado/ulceración/perforación GI; el riesgo puede aparecer precozmente."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Sangrado/úlcera/perforación GI; Lesión renal aguda; IAM/ACV trombótico; Anafilaxia/broncoespasmo en susceptibles"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a AINEs; Asma/urticaria tras AAS u otro AINE; Período perioperatorio de CABG"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Dor/dismenorreia: 400 mg VO a cada 4–6 h conforme necessidade. Em doenças inflamatórias, doses prescritas podem chegar a 3.200 mg/dia; usar a menor dose efetiva pelo menor tempo."
+          },
+          {
+            "label": "Pediatria",
+            "text": "≥6 meses, analgesia: 10 mg/kg VO a cada 6–8 h; máximo 40 mg/kg/dia. Para febre, 5–10 mg/kg conforme temperatura e produto."
+          },
+          {
+            "label": "Rim",
+            "text": "Evitar ou usar com grande cautela na doença renal avançada, hipovolemia ou situações de baixa perfusão renal; não há fator universal de redução."
+          },
+          {
+            "label": "Fígado",
+            "text": "Usar menor dose e monitorar em hepatopatia; suspender se houver lesão hepática clinicamente relevante."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Dolor/dismenorrea: 400 mg VO cada 4–6 h según necesidad. En enfermedades inflamatorias, dosis prescritas pueden llegar a 3.200 mg/día; usar la menor dosis efectiva durante el menor tiempo."
+          },
+          {
+            "label": "Pediatría",
+            "text": "≥6 meses, analgesia: 10 mg/kg VO cada 6–8 h; máximo 40 mg/kg/día. Para fiebre, 5–10 mg/kg según temperatura y producto."
+          },
+          {
+            "label": "Riñón",
+            "text": "Evitar o usar con gran precaución en enfermedad renal avanzada, hipovolemia o situaciones de baja perfusión renal; no existe un factor universal de reducción."
+          },
+          {
+            "label": "Hígado",
+            "text": "Usar menor dosis y monitorizar en hepatopatía; suspender si aparece lesión hepática clínicamente relevante."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "AINE não seletivo COX-1/COX-2"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Inibe reversivelmente COX-1 e COX-2, reduzindo síntese de prostaglandinas. Isso explica analgesia/anti-inflamação e também riscos gastrointestinal, renal e cardiovascular."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor leve a moderada; Dismenorreia; Febre; Doenças inflamatórias musculoesqueléticas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "AINE no selectivo COX-1/COX-2"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Inhibe reversiblemente COX-1 y COX-2, reduciendo la síntesis de prostaglandinas. Esto explica analgesia/antiinflamación y también riesgos gastrointestinal, renal y cardiovascular."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor leve a moderado; Dismenorrea; Fiebre; Enfermedades inflamatorias musculoesqueléticas"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentam risco de sangramento; avaliar risco-benefício e monitorar."
+          },
+          {
+            "label": "IECA/ARB/diuréticos",
+            "text": "Pode reduzir efeito anti-hipertensivo e aumentar risco de lesão renal, sobretudo com hipovolemia/DRC."
+          },
+          {
+            "label": "Outros AINEs",
+            "text": "Evitar associação sistêmica rotineira por toxicidade GI/renal sem benefício proporcional."
+          },
+          {
+            "label": "Lítio/metotrexato",
+            "text": "AINEs podem aumentar exposição; monitorar quando aplicável."
+          }
+        ],
+        "es": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentan riesgo de sangrado; evaluar riesgo-beneficio y monitorizar."
+          },
+          {
+            "label": "IECA/ARA-II/diuréticos",
+            "text": "Puede reducir efecto antihipertensivo y aumentar riesgo de lesión renal, especialmente con hipovolemia/ERC."
+          },
+          {
+            "label": "Otros AINE",
+            "text": "Evitar asociación sistémica rutinaria por toxicidad GI/renal sin beneficio proporcional."
+          },
+          {
+            "label": "Litio/metotrexato",
+            "text": "Los AINE pueden aumentar la exposición; monitorizar cuando corresponda."
+          }
+        ]
+      },
+      "gravidez_lactacao": {
+        "pt": [
+          {
+            "label": "Gestação/Lactação",
+            "text": "AINE sistêmico: evitar a partir de cerca de 30 semanas de gestação; entre 20–30 semanas, usar somente se necessário, na menor dose e pelo menor tempo, devido a risco renal fetal/oligoâmnio. Avaliar lactação conforme fármaco e duração."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo/Lactancia",
+            "text": "AINE sistémico: evitar desde aproximadamente 30 semanas de gestación; entre 20–30 semanas, usar solo si es necesario, a la menor dosis y por el menor tiempo, por riesgo renal fetal/oligohidramnios. Evaluar lactancia según fármaco y duración."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Ibuprofen tablets, 2026",
+            "text": "Fonte oficial revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bbf4821d-f9fc-9f6e-e053-2a95a90a5253"
+          },
+          {
+            "label": "DailyMed — Ibuprofen oral suspension",
+            "text": "Fonte oficial revisada em 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=758eeb45-e599-4c1a-969d-8fa33f27bf14"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Ibuprofen tablets, 2026",
+            "text": "Fuente oficial revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bbf4821d-f9fc-9f6e-e053-2a95a90a5253"
+          },
+          {
+            "label": "DailyMed — Ibuprofen oral suspension",
+            "text": "Fuente oficial revisada el 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=758eeb45-e599-4c1a-969d-8fa33f27bf14"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "ibuprofeno_source_1",
+        "title": "DailyMed — Ibuprofen tablets, 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bbf4821d-f9fc-9f6e-e053-2a95a90a5253",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "ibuprofeno_source_2",
+        "title": "DailyMed — Ibuprofen oral suspension",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=758eeb45-e599-4c1a-969d-8fa33f27bf14",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

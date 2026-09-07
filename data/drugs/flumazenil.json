@@ -17,37 +17,143 @@
   "keywords": [
     "flumazenil"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "emergencia.js",
   "mc_clinical_enrichment_v1": {
     "schema": "medcases.clinical-enrichment.v1",
     "drug_key": "flumazenil",
-    "stage_a_batch": "05",
-    "stage_a_reviewed_at": "2026-08-24",
-    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
     "sections": {
       "administracao_preparo": {
         "pt": [
           {
-            "label": "Via IV",
-            "text": "Administrar exclusivamente por via intravenosa. Garantir previamente suporte de via aérea, ventilação e acesso IV adequados."
+            "label": "Via/Preparo",
+            "text": "Somente IV"
           },
           {
-            "label": "Compatibilidade",
-            "text": "É compatível com dextrose 5%, Ringer lactato e solução fisiológica. Se aspirado para seringa ou misturado a uma dessas soluções, descartar após 24 horas; manter no frasco até imediatamente antes do uso para melhor esterilidade."
+            "label": "Monitorização",
+            "text": "Garantir via aérea, ventilação e acesso IV antes da administração"
+          },
+          {
+            "label": "Administração",
+            "text": "Monitorar re-sedação e convulsões"
           }
         ],
         "es": [
           {
-            "label": "Vía IV",
-            "text": "Administrar exclusivamente por vía intravenosa. Asegurar previamente soporte adecuado de vía aérea, ventilación y acceso IV."
+            "label": "Vía/Preparación",
+            "text": "Solo IV"
           },
           {
-            "label": "Compatibilidad",
-            "text": "Es compatible con dextrosa al 5%, Ringer lactato y solución fisiológica. Si se carga en una jeringa o se mezcla con alguna de estas soluciones, desechar después de 24 horas; mantener en el vial hasta inmediatamente antes del uso para una mejor esterilidad."
+            "label": "Monitorización",
+            "text": "Asegurar vía aérea, ventilación y acceso IV antes de administrar"
+          },
+          {
+            "label": "Administración",
+            "text": "Monitorizar resedación y convulsiones"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Não substituir suporte de via aérea. O risco de convulsão é maior em dependência crônica de benzodiazepínicos e overdose por antidepressivos cíclicos/mista."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Convulsões; Abstinência aguda de benzodiazepínicos; Arritmias em overdose mista"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Benzodiazepínico usado para controlar condição potencialmente fatal, como status epilepticus; Sinais de intoxicação grave por antidepressivo tricíclico"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "No sustituye el soporte de vía aérea. El riesgo de convulsión es mayor en dependencia crónica de benzodiazepinas y sobredosis por antidepresivos cíclicos/mixta."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Convulsiones; Abstinencia aguda de benzodiazepinas; Arritmias en sobredosis mixta"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Benzodiazepina usada para controlar una condición potencialmente mortal, como status epilepticus; Signos de intoxicación grave por antidepresivo tricíclico"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Reversão de sedação: 0,2 mg IV em 15 s; repetir 0,2 mg em intervalos de 60 s até máximo total 1 mg. Overdose: 0,2 mg IV em 30 s, depois 0,3 mg; seguir com 0,5 mg a cada 1 min até 3 mg; raramente até 5 mg."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Uso pediátrico depende da indicação e experiência específica; não extrapolar automaticamente o esquema de overdose adulto."
+          },
+          {
+            "label": "Rim",
+            "text": "Não há ajuste renal rotineiro estabelecido."
+          },
+          {
+            "label": "Fígado",
+            "text": "Clearance pode diminuir em disfunção hepática; titular cuidadosamente e considerar menor necessidade de redose."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Reversión de sedación: 0,2 mg IV en 15 s; repetir 0,2 mg a intervalos de 60 s hasta máximo total 1 mg. Sobredosis: 0,2 mg IV en 30 s, luego 0,3 mg; seguir con 0,5 mg cada 1 min hasta 3 mg; raramente hasta 5 mg."
+          },
+          {
+            "label": "Pediatría",
+            "text": "El uso pediátrico depende de la indicación y experiencia específica; no extrapolar automáticamente el esquema de sobredosis del adulto."
+          },
+          {
+            "label": "Riñón",
+            "text": "No existe ajuste renal rutinario establecido."
+          },
+          {
+            "label": "Hígado",
+            "text": "El clearance puede disminuir en disfunción hepática; titular cuidadosamente y considerar menor necesidad de redosis."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Antagonista do sítio benzodiazepínico do receptor GABA-A"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista competitivo no sítio benzodiazepínico do receptor GABA-A. Reverte sedação por benzodiazepínicos, mas pode precipitar abstinência e convulsões."
+          },
+          {
+            "label": "Indicações",
+            "text": "Reversão completa ou parcial de sedação por benzodiazepínicos; Manejo selecionado de overdose conhecida ou suspeita por benzodiazepínico"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antagonista del sitio benzodiazepínico del receptor GABA-A"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista competitivo en el sitio benzodiazepínico del receptor GABA-A. Revierte sedación por benzodiazepinas, pero puede precipitar abstinencia y convulsiones."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Reversión completa o parcial de sedación por benzodiazepinas; Manejo seleccionado de sobredosis conocida o sospechada por benzodiazepinas"
           }
         ]
       },
@@ -55,24 +161,37 @@
         "pt": [
           {
             "label": "DailyMed — Flumazenil Injection",
-            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53d9144a-b7ee-b52a-e063-6294a90a09c5"
           }
         ],
         "es": [
           {
             "label": "DailyMed — Flumazenil Injection",
-            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53d9144a-b7ee-b52a-e063-6294a90a09c5"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Overdose mista",
+            "text": "Evitar em intoxicação desconhecida ou com antidepressivos tricíclicos/proconvulsivantes quando houver risco de convulsão."
+          }
+        ],
+        "es": [
+          {
+            "label": "Sobredosis mixta",
+            "text": "Evitar en intoxicación desconocida o con antidepresivos tricíclicos/proconvulsivantes cuando exista riesgo de convulsión."
           }
         ]
       }
     },
     "sources": [
       {
-        "stage": "A_BATCH05",
-        "id": "dailymed_flumazenil_442ed32b",
+        "id": "dailymed_flumazenil_2026",
         "title": "DailyMed — Flumazenil Injection",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=442ed32b-b508-40cc-9915-ff05674566da",
-        "reviewed_at": "2026-08-24"
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53d9144a-b7ee-b52a-e063-6294a90a09c5",
+        "reviewed_at": "2026-09-05"
       }
     ]
   }

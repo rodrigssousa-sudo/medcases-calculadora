@@ -18,9 +18,160 @@
     "atracurio",
     "atracúrio"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8971307309e3457c",
+  "clinicalContentSha256": "8971307309e3457c216ea650e1d9475ee1c8277aec5b2d1c2c60bd27a9f90523",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "atracurio",
+    "clinical_batch": "LOT001_SEDACAO_INDUCAO_BNM",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_plus_current_guideline_when_explicitly_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar monitorização neuromuscular/TOF. Em doença cardiovascular significativa ou maior risco de liberação de histamina, considerar 0,3–0,4 mg/kg administrados lentamente ou em doses divididas durante 1 min. Infusão contínua deve ser titulada individualmente."
+          },
+          {
+            "label": "Apresentação",
+            "text": "Solução IV 10 mg/mL"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar monitorización neuromuscular/TOF. En enfermedad cardiovascular significativa o mayor riesgo de liberación de histamina, considerar 0,3–0,4 mg/kg administrados lentamente o en dosis divididas durante 1 min. La infusión continua debe titularse individualmente."
+          },
+          {
+            "label": "Presentación",
+            "text": "Solución IV 10 mg/mL"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Não possui sedação nem analgesia. A laudanosina é um metabólito potencialmente excitador do SNC, mas relatos de convulsões em UTI não provam causalidade direta; evitar afirmações de convulsão inevitável por insuficiência renal."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Broncoespasmo; Anafilaxia/reação alérgica grave; Bloqueio residual; Convulsões foram relatadas em uso prolongado em UTI, com causalidade pelo atracúrio/laudanosina não estabelecida"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade ao atracúrio"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "No posee sedación ni analgesia. La laudanosina es un metabolito potencialmente excitador del SNC, pero los reportes de convulsiones en UCI no prueban causalidad directa; evitar afirmar convulsiones inevitables por insuficiencia renal."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Broncoespasmo; Anafilaxia/reacción alérgica grave; Bloqueo residual; Se han reportado convulsiones con uso prolongado en UCI, sin causalidad establecida por atracurio/laudanosina"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a atracurio"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Dose inicial usual 0,4–0,5 mg/kg IV. Manutenção em bolus 0,08–0,10 mg/kg. Infusão após recuperação inicial: pode iniciar 9–10 mcg/kg/min e geralmente manter 5–9 mcg/kg/min em anestesia balanceada; titular por TOF."
+          },
+          {
+            "label": "Pediatria",
+            "text": "≥2 anos: em geral não requer ajuste da dose inicial do adulto. 1 mês–2 anos sob halotano: 0,3–0,4 mg/kg IV. Manutenção pode ser necessária com maior frequência."
+          },
+          {
+            "label": "Rim",
+            "text": "A rotulagem não exige ajuste de dose em doença renal; ainda assim, monitorizar TOF e recuperação."
+          },
+          {
+            "label": "Fígado",
+            "text": "Não há ajuste hepático fixo requerido pela rotulagem; monitorizar a resposta e recuperação."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Dosis inicial habitual 0,4–0,5 mg/kg IV. Mantenimiento en bolos 0,08–0,10 mg/kg. Infusión tras recuperación inicial: puede iniciar 9–10 mcg/kg/min y generalmente mantener 5–9 mcg/kg/min en anestesia balanceada; titular por TOF."
+          },
+          {
+            "label": "Pediatría",
+            "text": "≥2 años: en general no requiere ajuste de la dosis inicial del adulto. 1 mes–2 años bajo halotano: 0,3–0,4 mg/kg IV. El mantenimiento puede ser necesario con mayor frecuencia."
+          },
+          {
+            "label": "Riñón",
+            "text": "El rotulado no exige ajuste de dosis en enfermedad renal; aun así, monitorizar TOF y recuperación."
+          },
+          {
+            "label": "Hígado",
+            "text": "No hay ajuste hepático fijo requerido por el rotulado; monitorizar respuesta y recuperación."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Bloqueador neuromuscular não despolarizante benzilisoquinolínico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueador competitivo nicotínico não despolarizante. Sofre degradação de Hofmann e hidrólise por esterases; pode causar liberação de histamina, particularmente com doses maiores ou administração rápida."
+          },
+          {
+            "label": "Indicações",
+            "text": "Facilitar intubação não emergencial; Relaxamento muscular durante cirurgia; Bloqueio neuromuscular por infusão em pacientes selecionados sob ventilação mecânica"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Bloqueador neuromuscular no despolarizante bencilisoquinolínico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueador competitivo nicotínico no despolarizante. Sufre degradación de Hofmann e hidrólisis por esterasas; puede causar liberación de histamina, especialmente con dosis mayores o administración rápida."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Facilitar intubación no emergente; Relajación muscular durante cirugía; Bloqueo neuromuscular por infusión en pacientes seleccionados con ventilación mecánica"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Atracurium Besylate Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efe90ee2-fe9e-421f-9e54-2961085d3b12"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Atracurium Besylate Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efe90ee2-fe9e-421f-9e54-2961085d3b12"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_atracurium",
+        "title": "DailyMed — Atracurium Besylate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efe90ee2-fe9e-421f-9e54-2961085d3b12",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

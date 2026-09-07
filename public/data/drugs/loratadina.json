@@ -1,6 +1,6 @@
 {
   "id": "loratadina",
-  "category": "alergia_imunologia",
+  "category": "alergia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,174 @@
   "keywords": [
     "loratadina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-9ef937dca1e379d1",
+  "clinicalContentSha256": "9ef937dca1e379d1744c935ea24743c3c0123248e799aedbf898bf7245b99b40",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "pneumologia.js"
+  "sourceModule": "pneumologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "loratadina",
+    "clinical_batch": "LOT005_ANTIALERGICOS_ANTIHISTAMINICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_regulatory_smpc",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "VO 1x/dia"
+          },
+          {
+            "label": "Administração",
+            "text": "Não exceder a dose; doses acima do recomendado podem causar sonolência"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "VO 1 vez/día"
+          },
+          {
+            "label": "Administración",
+            "text": "No exceder la dosis; dosis superiores a la recomendada pueden causar somnolencia"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Em doença renal ou hepática, a dose/intervalo pode precisar de ajuste; evitar automedicação acima de 10 mg/dia."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Reação de hipersensibilidade rara"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "En enfermedad renal o hepática, la dosis/intervalo puede requerir ajuste; evitar automedicación por encima de 10 mg/día."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Reacción de hipersensibilidad rara"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Adultos e ≥6 anos: 10 mg VO 1x/dia."
+          },
+          {
+            "label": "Pediatria",
+            "text": "2–5 anos: 5 mg VO 1x/dia em formulação pediátrica; <2 anos depende de produto/indicação."
+          },
+          {
+            "label": "Rim",
+            "text": "Doença renal pode exigir intervalo/dose diferente; individualizar conforme produto e gravidade."
+          },
+          {
+            "label": "Fígado",
+            "text": "Hepatopatia pode exigir intervalo/dose diferente; individualizar."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Adultos y ≥6 años: 10 mg VO 1 vez/día."
+          },
+          {
+            "label": "Pediatría",
+            "text": "2–5 años: 5 mg VO 1 vez/día en formulación pediátrica; <2 años depende de producto/indicación."
+          },
+          {
+            "label": "Riñón",
+            "text": "La enfermedad renal puede requerir intervalo/dosis diferente; individualizar según producto y gravedad."
+          },
+          {
+            "label": "Hígado",
+            "text": "La hepatopatía puede requerir intervalo/dosis diferente; individualizar."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Anti-histamínico H1 de segunda geração"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista/inverso agonista periférico H1, geralmente pouco sedativo em doses usuais."
+          },
+          {
+            "label": "Indicações",
+            "text": "Rinite alérgica; Sintomas de alergia respiratória"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antihistamínico H1 de segunda generación"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista/agonista inverso periférico H1, generalmente poco sedante a dosis habituales."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Rinitis alérgica; Síntomas de alergia respiratoria"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar sedativos e outras medicações conforme perfil do paciente."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar sedantes y otras medicaciones según perfil del paciente."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed Loratadine 2026",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=569a35be-d653-181c-e063-6294a90a6eb9&version=1"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed Loratadine 2026",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=569a35be-d653-181c-e063-6294a90a6eb9&version=1"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "loratadina_1",
+        "title": "DailyMed Loratadine 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=569a35be-d653-181c-e063-6294a90a6eb9&version=1",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

@@ -5,22 +5,194 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Prometazina (Fenergan)"
+    "name": "Prometazina"
   },
   "es": {
     "name": "Prometazina"
   },
   "name": {
-    "pt": "Prometazina (Fenergan)",
+    "pt": "Prometazina",
     "es": "Prometazina"
   },
   "keywords": [
-    "prometazina",
-    "prometazina (fenergan)"
+    "prometazina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-75849ac54fec5559",
+  "clinicalContentSha256": "75849ac54fec55594fa7dc193ba84d22e32c864f169e99d58b5ac059290fd0c8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "prometazina",
+    "clinical_batch": "LOT004_ANTIEMETICOS_GASTROPROCINETICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_and_guideline",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Via parenteral preferida: IM profunda"
+          },
+          {
+            "label": "Administração",
+            "text": "SC e intra-arterial são contraindicadas"
+          },
+          {
+            "label": "Administração",
+            "text": "Se IV for necessária, usar diluição/concentração e acesso venoso conforme rotulagem atual; interromper imediatamente se houver dor/queimação"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Vía parenteral preferida: IM profunda"
+          },
+          {
+            "label": "Administración",
+            "text": "SC e intraarterial están contraindicadas"
+          },
+          {
+            "label": "Administración",
+            "text": "Si IV es necesaria, usar dilución/concentración y acceso venoso según rotulado actual; suspender inmediatamente ante dolor/ardor"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Prometazina injetável pode causar necrose e gangrena. IM profunda é a via parenteral preferida; SC e intra-arterial são contraindicadas."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Lesão tecidual grave/gangrena parenteral; Depressão respiratória; Delirium/EPS raros"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "<2 anos; Injeção intra-arterial; Injeção subcutânea; IV em concentração acima do limite da rotulagem"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "La prometazina inyectable puede causar necrosis y gangrena. IM profunda es la vía parenteral preferida; SC e intraarterial están contraindicadas."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Lesión tisular grave/gangrena parenteral; Depresión respiratoria; Delirium/EPS raros"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "<2 años; Inyección intraarterial; Inyección subcutánea; IV en concentración superior al límite del rotulado"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Náuseas/vômitos: 12,5–25 mg por dose; não repetir com intervalo menor que 4 horas."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Contraindicada <2 anos. Em ≥2 anos, usar a menor dose apropriada e extrema cautela por risco de depressão respiratória."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem ajuste renal fixo rotineiro; titular clinicamente."
+          },
+          {
+            "label": "Fígado",
+            "text": "Usar cautela em hepatopatia e reduzir exposição conforme sedação/efeitos adversos."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Náuseas/vómitos: 12,5–25 mg por dosis; no repetir con intervalo menor de 4 horas."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Contraindicada <2 años. En ≥2 años, usar la menor dosis apropiada y extrema precaución por riesgo de depresión respiratoria."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin ajuste renal fijo rutinario; titular clínicamente."
+          },
+          {
+            "label": "Hígado",
+            "text": "Usar precaución en hepatopatía y reducir exposición según sedación/efectos adversos."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Fenotiazina anti-histamínica H1 com efeitos anticolinérgicos/antieméticos"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonismo H1 e ações anticolinérgicas/antidopaminérgicas contribuem para o efeito antiemético e sedativo."
+          },
+          {
+            "label": "Indicações",
+            "text": "Controle de náuseas e vômitos; Prevenção/controle de náusea e vômito relacionados a anestesia/cirurgia"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Fenotiazina antihistamínica H1 con efectos anticolinérgicos/antieméticos"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "El antagonismo H1 y acciones anticolinérgicas/antidopaminérgicas contribuyen al efecto antiemético y sedante."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Control de náuseas y vómitos; Prevención/control de náusea y vómito relacionados con anestesia/cirugía"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Álcool, opioides e outros sedativos potencializam sonolência e depressão do SNC."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Alcohol, opioides y otros sedantes potencian somnolencia y depresión del SNC."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed Promethazine Injection",
+            "text": "Fonte revisada em 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d02d52b-84bb-4e81-b352-125029eb39f6"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed Promethazine Injection",
+            "text": "Fuente revisada el 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d02d52b-84bb-4e81-b352-125029eb39f6"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "prometazina_1",
+        "title": "DailyMed Promethazine Injection",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d02d52b-84bb-4e81-b352-125029eb39f6",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

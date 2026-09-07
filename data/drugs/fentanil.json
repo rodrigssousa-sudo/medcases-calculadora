@@ -1,6 +1,6 @@
 {
   "id": "fentanil",
-  "category": "analgesia",
+  "category": "emergencia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,182 @@
   "keywords": [
     "fentanil"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "fentanil",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via/Preparo",
+            "text": "IV ou IM; titular lentamente ao efeito"
+          },
+          {
+            "label": "Monitorização",
+            "text": "Monitorização contínua de ventilação, oxigenação e hemodinâmica; equipamento de via aérea e naloxona devem estar disponíveis"
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía/Preparación",
+            "text": "IV o IM; titular lentamente al efecto"
+          },
+          {
+            "label": "Monitorización",
+            "text": "Monitorización continua de ventilación, oxigenación y hemodinámica; equipo de vía aérea y naloxona deben estar disponibles"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Depressão respiratória potencialmente fatal. Benzodiazepínicos/outros depressores do SNC e inibidores de CYP3A4 podem aumentar ou prolongar toxicidade."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depressão respiratória/apneia; Rigidez muscular; Hipotensão grave"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade ao fentanil"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Depresión respiratoria potencialmente fatal. Benzodiazepinas/otros depresores del SNC e inhibidores de CYP3A4 pueden aumentar o prolongar la toxicidad."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión respiratoria/apnea; Rigidez muscular; Hipotensión grave"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad al fentanilo"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Rotulagem anestésica: dose baixa 2 mcg/kg; dose moderada 2–20 mcg/kg; doses maiores 20–50 mcg/kg em anestesia selecionada. Manutenção: 25–100 mcg IV/IM conforme resposta e contexto anestésico."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Segurança e eficácia não estabelecidas em menores de 2 anos na rotulagem dos EUA; em ≥2 anos, dose deve seguir contexto anestésico/protocolo pediátrico e titulação clínica."
+          },
+          {
+            "label": "Rim",
+            "text": "Usar cautela e titular a partir de doses menores em disfunção renal; não há fator fixo universal de redução."
+          },
+          {
+            "label": "Fígado",
+            "text": "Metabolismo hepático predominante; usar cautela e titular lentamente na disfunção hepática."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Rotulado anestésico: dosis baja 2 mcg/kg; dosis moderada 2–20 mcg/kg; dosis mayores 20–50 mcg/kg en anestesia seleccionada. Mantenimiento: 25–100 mcg IV/IM según respuesta y contexto anestésico."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Seguridad y eficacia no establecidas en menores de 2 años en el rotulado de EE. UU.; en ≥2 años, la dosis debe seguir el contexto anestésico/protocolo pediátrico y titulación clínica."
+          },
+          {
+            "label": "Riñón",
+            "text": "Usar precaución y titular desde dosis menores en disfunción renal; no existe un factor fijo universal de reducción."
+          },
+          {
+            "label": "Hígado",
+            "text": "Metabolismo hepático predominante; usar precaución y titular lentamente en disfunción hepática."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Agonista opioide μ potente"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista de receptores opioides μ. Produz analgesia e sedação, mas também depressão respiratória dose-dependente, bradicardia e rigidez muscular, especialmente com doses altas ou administração rápida."
+          },
+          {
+            "label": "Indicações",
+            "text": "Componente analgésico de anestesia geral; Analgesia perioperatória sob monitorização e suporte de via aérea"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Agonista opioide μ potente"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista de receptores opioides μ. Produce analgesia y sedación, pero también depresión respiratoria dependiente de la dosis, bradicardia y rigidez muscular, especialmente con dosis altas o administración rápida."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Componente analgésico de anestesia general; Analgesia perioperatoria bajo monitorización y soporte de vía aérea"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Fentanyl Citrate Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1ed25b2c-334e-4021-ada1-3396f07630dc&version=17"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Fentanyl Citrate Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1ed25b2c-334e-4021-ada1-3396f07630dc&version=17"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Benzodiazepínicos, álcool e outros sedativos aumentam risco de sedação profunda e depressão respiratória."
+          },
+          {
+            "label": "CYP3A4",
+            "text": "Inibidores potentes de CYP3A4 podem aumentar exposição e prolongar depressão respiratória."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Benzodiazepinas, alcohol y otros sedantes aumentan el riesgo de sedación profunda y depresión respiratoria."
+          },
+          {
+            "label": "CYP3A4",
+            "text": "Inhibidores potentes de CYP3A4 pueden aumentar la exposición y prolongar la depresión respiratoria."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_fentanil_2026",
+        "title": "DailyMed — Fentanyl Citrate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1ed25b2c-334e-4021-ada1-3396f07630dc&version=17",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

@@ -18,9 +18,160 @@
     "cisatracurio",
     "cisatracúrio"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8971307309e3457c",
+  "clinicalContentSha256": "8971307309e3457c216ea650e1d9475ee1c8277aec5b2d1c2c60bd27a9f90523",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "cisatracurio",
+    "clinical_batch": "LOT001_SEDACAO_INDUCAO_BNM",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_plus_current_guideline_when_explicitly_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar estimulador de nervo periférico para avaliar bloqueio, necessidade de redose e recuperação. Não usar para RSI quando a rapidez de início necessária exceder a esperada para cisatracúrio. Administrar apenas com capacidade de ventilação e sedação adequadas."
+          },
+          {
+            "label": "Apresentação",
+            "text": "Solução IV; concentrações variam por fabricante"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar estimulador de nervio periférico para evaluar bloqueo, necesidad de redosis y recuperación. No usar para RSI cuando la rapidez de inicio necesaria exceda la esperada para cisatracurio. Administrar solo con capacidad de ventilación y sedación adecuadas."
+          },
+          {
+            "label": "Presentación",
+            "text": "Solución IV; concentraciones varían según fabricante"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Não possui sedação nem analgesia. A eliminação predominantemente organoindependente não significa ausência total de influência clínica de função orgânica, temperatura, pH ou duração da infusão."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Anafilaxia; Bloqueio prolongado/apneia se superdosado ou em maior sensibilidade; Miopatia/fraqueza no contexto de bloqueio prolongado em críticos"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade ao cisatracúrio"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "No posee sedación ni analgesia. La eliminación predominantemente independiente de órganos no significa ausencia total de influencia clínica de función orgánica, temperatura, pH o duración de la infusión."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Anafilaxia; Bloqueo prolongado/apnea si hay sobredosis o mayor sensibilidad; Miopatía/debilidad en el contexto de bloqueo prolongado en críticos"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a cisatracurio"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Intubação em adulto: 0,15–0,20 mg/kg IV. Doses de manutenção/infusão devem ser individualizadas por estimulador de nervo periférico e resposta clínica."
+          },
+          {
+            "label": "Pediatria",
+            "text": "1–23 meses: 0,15 mg/kg IV em 5–10 s. 2–12 anos: 0,10–0,15 mg/kg IV em 5–10 s. <1 mês: segurança/eficácia não estabelecidas."
+          },
+          {
+            "label": "Rim",
+            "text": "Em doença renal terminal, a recuperação clínica nas doses estudadas não foi significativamente alterada, embora o início possa ser discretamente mais lento; titular por TOF."
+          },
+          {
+            "label": "Fígado",
+            "text": "Em hepatopatia, diferenças farmacocinéticas foram pequenas e não produziram alteração clinicamente importante da recuperação nas doses estudadas; titular por TOF."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Intubación en adulto: 0,15–0,20 mg/kg IV. Las dosis de mantenimiento/infusión deben individualizarse mediante estimulador de nervio periférico y respuesta clínica."
+          },
+          {
+            "label": "Pediatría",
+            "text": "1–23 meses: 0,15 mg/kg IV en 5–10 s. 2–12 años: 0,10–0,15 mg/kg IV en 5–10 s. <1 mes: seguridad/eficacia no establecidas."
+          },
+          {
+            "label": "Riñón",
+            "text": "En enfermedad renal terminal, la recuperación clínica con las dosis estudiadas no se alteró significativamente, aunque el inicio puede ser discretamente más lento; titular por TOF."
+          },
+          {
+            "label": "Hígado",
+            "text": "En hepatopatía, las diferencias farmacocinéticas fueron pequeñas y no produjeron cambios clínicamente importantes en la recuperación con las dosis estudiadas; titular por TOF."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Bloqueador neuromuscular não despolarizante benzilisoquinolínico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueador competitivo nicotínico não despolarizante. A eliminação de Hofmann é via predominante e reduz dependência de órgãos para o fármaco-mãe, mas metabólitos podem acumular com administração prolongada."
+          },
+          {
+            "label": "Indicações",
+            "text": "Facilitar intubação traqueal em anestesia geral; Relaxamento muscular durante cirurgia; Bloqueio neuromuscular em pacientes sob ventilação mecânica quando indicado"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Bloqueador neuromuscular no despolarizante bencilisoquinolínico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueador competitivo nicotínico no despolarizante. La eliminación de Hofmann es la vía predominante y reduce la dependencia de órganos para el fármaco original, pero los metabolitos pueden acumularse con administración prolongada."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Facilitar intubación traqueal en anestesia general; Relajación muscular durante cirugía; Bloqueo neuromuscular en pacientes con ventilación mecánica cuando esté indicado"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Cisatracurium Besylate Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=46c815f6-7a3d-43a3-b470-3377b126ba09"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Cisatracurium Besylate Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=46c815f6-7a3d-43a3-b470-3377b126ba09"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_cisatracurium",
+        "title": "DailyMed — Cisatracurium Besylate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=46c815f6-7a3d-43a3-b470-3377b126ba09",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

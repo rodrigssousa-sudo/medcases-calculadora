@@ -13,41 +13,112 @@
 
     /* ── SALBUTAMOL (ALBUTEROL) ─────────────────────────────────────────── */
     "salbutamol": {
-      name: { pt: 'Salbutamol (Albuterol)', es: 'Salbutamol (Albuterol)' },
-      category: 'pneumologia',
-      class: { pt: 'Agonista Beta-2 Adrenérgico de Curta Duração (SABA)', es: 'Agonista Beta-2 Adrenérgico de Corta Duración (SABA)' },
-      indications: {
-        pt: ['Alívio imediato do broncoespasmo na Asma Aguda e DPOC (Droga de resgate)', 'Prevenção de asma induzida por exercício', 'Tratamento de emergência da Hipercalemia severa (para jogar o potássio para dentro da célula)'],
-        es: ['Alivio inmediato del broncoespasmo en el Asma Aguda y EPOC (Droga de rescate)', 'Prevención de asma inducida por ejercicio', 'Tratamiento de emergencia de la Hiperpotasemia severa (para empujar el potasio hacia dentro de la célula)']
+      "name": {
+        "pt": "Salbutamol",
+        "es": "Salbutamol"
       },
-      commercialNames: { br: ['Aerolin'], ar: ['Ventolin', 'Salbutral'] },
-      presentation: { pt: ['Spray Inalatório (Aerossol) 100 mcg/dose', 'Solução para nebulização 5 mg/mL', 'Ampolas IV 0,5 mg/mL'], es: ['Spray Inhalatorio (Aerosol) 100 mcg/dosis', 'Solución para nebulización 5 mg/mL', 'Ampollas IV 0,5 mg/mL'] },
-      mechanism: {
-        pt: 'Estimula seletivamente os receptores Beta-2 no músculo liso brônquico, ativando a adenilciclase e aumentando o AMPc intracelular. Isso causa um relaxamento rápido (em < 5 minutos) da musculatura das vias aéreas apertadas. Além disso, a estimulação Beta-2 liga a bomba Na+/K+ ATPase nas células musculares do corpo inteiro, "sugando" o potássio do sangue para dentro das células.',
-        es: 'Estimula selectivamente los receptores Beta-2 en el músculo liso bronquial, activando la adenilciclasa y aumentando el AMPc intracelular. Esto causa una relajación rápida (en < 5 minutos) de la musculatura de las vías respiratorias apretadas. Además, la estimulación Beta-2 enciende la bomba Na+/K+ ATPasa en las células musculares de todo el cuerpo, "succionando" el potasio de la sangre hacia dentro de las células.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Agonista β2 de curta ação (SABA)",
+        "es": "Agonista β2 de acción corta (SABA)"
       },
-      dose: {
-        adult: {
-          pt: 'Crise de Asma (Spray): 4 a 10 jatos (100mcg/jato) com espaçador a cada 20 min por 1 hora. Nebulização: 2,5 a 5 mg (0,5 a 1 mL) diluído em SF. Hipercalemia: 10 a 20 mg em nebulização contínua.',
-          es: 'Crisis de Asma (Spray): 4 a 10 puffs (100mcg/puff) con espaciador cada 20 min por 1 hora. Nebulización: 2,5 a 5 mg (0,5 a 1 mL) diluido en SF. Hiperpotasemia: 10 a 20 mg en nebulización continua.'
+      "indications": {
+        "pt": [
+          "Broncoespasmo agudo",
+          "Prevenção de broncoespasmo induzido por exercício"
+        ],
+        "es": [
+          "Broncoespasmo agudo",
+          "Prevención de broncoespasmo inducido por ejercicio"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonismo β2 relaxa músculo liso brônquico e produz broncodilatação rápida.",
+        "es": "El agonismo β2 relaja músculo liso bronquial y produce broncodilatación rápida."
+      },
+      "dose": {
+        "adult": {
+          "pt": "MDI: 2 jatos (90 mcg/jato) a cada 4–6 h conforme necessidade; exercício: 2 jatos 15–30 min antes. Nebulização: 2,5 mg por dose conforme produto/protocolo.",
+          "es": "MDI: 2 inhalaciones (90 mcg/inhalación) cada 4–6 h según necesidad; ejercicio: 2 inhalaciones 15–30 min antes. Nebulización: 2,5 mg por dosis según producto/protocolo."
         },
-        pediatric: {
-          pt: 'Spray: 2 a 6 jatos a cada 20 min (ataque). Nebulização: 0,15 mg/kg (mín 1,25 mg, máx 5 mg).',
-          es: 'Spray: 2 a 6 puffs cada 20 min (ataque). Nebulización: 0,15 mg/kg (mín 1,25 mg, máx 5 mg).'
+        "pediatric": {
+          "pt": "≥4 anos MDI: 2 jatos a cada 4–6 h conforme necessidade; nebulização pediátrica depende de idade/peso e formulação.",
+          "es": "≥4 años MDI: 2 inhalaciones cada 4–6 h según necesidad; nebulización pediátrica depende de edad/peso y formulación."
         }
       },
-      administration: { pt: ['O uso de Spray Inalatório COM ESPAÇADOR é cientificamente superior à nebulização no Pronto-Socorro (menor efeito colateral e maior deposição pulmonar).', 'A via endovenosa é reservada para asma quase fatal na UTI.'], es: ['El uso de Spray Inhalatorio CON ESPACIADOR es científicamente superior a la nebulización en Urgencias (menor efecto colateral y mayor deposición pulmonar).', 'La vía endovenosa se reserva para asma casi fatal en la UCI.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico agudo.', es: 'Sin necesidad de ajuste clínico agudo.' } },
-      commonAdverseEffects: { pt: ['Tremores finos de extremidades (Mãos trêmulas)', 'Taquicardia sinusal e palpitações', 'Ansiedade e insônia'], es: ['Temblores finos de extremidades (Manos temblorosas)', 'Taquicardia sinusal y palpitaciones', 'Ansiedad e insomnio'] },
-      dangerousAdverseEffects: { pt: ['Hipocalemia grave (Queda abrupta de potássio se doses repetidas maciças)', 'Arritmias cardíacas em pacientes predispostos', 'Broncoespasmo paradoxal (raro, pela excipiente do spray)'], es: ['Hipopotasemia grave (Caída abrupta de potasio si dosis repetidas masivas)', 'Arritmias cardíacas en pacientes predispuestos', 'Broncoespasmo paradójico (raro, por el excipiente del spray)'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade grave aos componentes da fórmula'], es: ['Hipersensibilidad grave a los componentes de la fórmula'] },
-        relative: { pt: ['Pacientes com arritmias taquicárdicas não controladas', 'Cardiopatia isquêmica grave'], es: ['Pacientes con arritmias taquicárdicas no controladas', 'Cardiopatía isquémica grave'] }
+      "administration": {
+        "pt": [
+          "Somente por inalação",
+          "Necessidade crescente de SABA sugere pior controle e exige reavaliação",
+          "Na asma, não usar SABA isolado como estratégia de manutenção; GINA 2026 prefere tratamento contendo ICS"
+        ],
+        "es": [
+          "Solo por inhalación",
+          "Necesidad creciente de SABA sugiere peor control y requiere reevaluación",
+          "En asma, no usar SABA aislado como estrategia de mantenimiento; GINA 2026 prefiere tratamiento que contenga ICS"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'Se um paciente asmático precisar usar seu inalador de Salbutamol mais de 2 vezes por semana para alívio de sintomas, sua asma está DESCONTROLADA e ele corre risco de vida. O tratamento anti-inflamatório (Corticoide Inalatório) deve ser introduzido imediatamente.', es: 'Si un paciente asmático necesita usar su inhalador de Salbutamol más de 2 veces por semana para alivio, su asma está DESCONTROLADA y corre riesgo de vida. El tratamiento antiinflamatorio debe introducirse inmediatamente.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro.",
+          "es": "Sin ajuste renal rutinario."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste hepático rotineiro.",
+          "es": "Sin ajuste hepático rutinario."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Tremor",
+          "Taquicardia",
+          "Nervosismo"
+        ],
+        "es": [
+          "Temblor",
+          "Taquicardia",
+          "Nerviosismo"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Hipocalemia",
+          "Taquiarritmia",
+          "Broncoespasmo paradoxal"
+        ],
+        "es": [
+          "Hipopotasemia",
+          "Taquiarritmia",
+          "Broncoespasmo paradójico"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Taquiarritmia, cardiopatia, hipocalemia"
+          ],
+          "es": [
+            "Taquiarritmia, cardiopatía, hipopotasemia"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "Uso excessivo de SABA é marcador de risco. Na asma, garantir terapia contendo corticosteroide inalatório.",
+          "es": "El uso excesivo de SABA es marcador de riesgo. En asma, asegurar terapia que contenga corticosteroide inhalado."
+        }
       }
     },
 
@@ -133,81 +204,219 @@
 
     /* ── SALMETEROL ─────────────────────────────────────────────────────── */
     "salmeterol": {
-      name: { pt: 'Salmeterol', es: 'Salmeterol' },
-      category: 'pneumologia',
-      class: { pt: 'Agonista Beta-2 Adrenérgico de Longa Duração (LABA)', es: 'Agonista Beta-2 Adrenérgico de Larga Duración (LABA)' },
-      indications: {
-        pt: ['Tratamento de MANUTENÇÃO da Asma (Obrigatório junto com corticoides inalatórios)', 'Tratamento de manutenção da Doença Pulmonar Obstrutiva Crônica (DPOC)'],
-        es: ['Tratamiento de MANTENIMIENTO del Asma (Obligatorio junto con corticoides inhalatorios)', 'Tratamiento de mantenimiento de la Enfermedad Pulmonar Obstructiva Crónica (EPOC)']
+      "name": {
+        "pt": "Salmeterol",
+        "es": "Salmeterol"
       },
-      commercialNames: { br: ['Serevent'], ar: ['Serevent'] },
-      presentation: { pt: ['Spray ou pó inalatório 25 a 50 mcg/dose (frequentemente associado à Fluticasona)'], es: ['Spray o polvo inhalatorio 25 a 50 mcg/dosis (frecuentemente asociado a Fluticasona)'] },
-      mechanism: {
-        pt: 'A molécula do salmeterol possui uma cauda lateral longa e muito lipofílica. Ela se "ancora" fortemente na membrana celular perto do receptor Beta-2 e fica estimulando o receptor continuamente de forma prolongada (até 12 horas). O problema: a molécula demora muito para começar a agir (início de ação em 15 a 30 minutos). Portanto, NÃO SERVE PARA RESGATAR UMA CRISE AGUDA DE ASFIXIA.',
-        es: 'La molécula del salmeterol posee una cola lateral larga y muy lipofílica. Se "ancla" fuertemente en la membrana celular cerca del receptor Beta-2 y estimula el receptor continuamente de forma prolongada (hasta 12 horas). El problema: la molécula tarda mucho en comenzar a actuar (inicio de acción en 15 a 30 minutos). Por lo tanto, NO SIRVE PARA RESCATAR UNA CRISIS AGUDA DE ASFIXIA.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Agonista β2 de longa ação (LABA)",
+        "es": "Agonista β2 de acción prolongada (LABA)"
       },
-      dose: {
-        adult: {
-          pt: '1 inalação de 50 mcg a cada 12 horas (sempre uso contínuo, nunca por necessidade).',
-          es: '1 inhalación de 50 mcg cada 12 horas (siempre uso continuo, nunca por necesidad).'
+      "indications": {
+        "pt": [
+          "Manutenção da DPOC",
+          "Asma somente em combinação com ICS"
+        ],
+        "es": [
+          "Mantenimiento de EPOC",
+          "Asma solo en combinación con ICS"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonismo β2 prolongado produz broncodilatação por aproximadamente 12 h.",
+        "es": "Agonismo β2 prolongado produce broncodilatación por aproximadamente 12 h."
+      },
+      "dose": {
+        "adult": {
+          "pt": "50 mcg por inalação a cada 12 h conforme produto. Não usar para broncoespasmo agudo.",
+          "es": "50 mcg por inhalación cada 12 h según producto. No usar para broncoespasmo agudo."
         },
-        pediatric: {
-          pt: 'Acima de 4 anos: 50 mcg a cada 12 horas.',
-          es: 'Por encima de 4 años: 50 mcg cada 12 horas.'
+        "pediatric": {
+          "pt": "Asma pediátrica: somente com ICS e conforme idade/dispositivo autorizados.",
+          "es": "Asma pediátrica: solo con ICS y según edad/dispositivo autorizados."
         }
       },
-      administration: { pt: ['Inalatório. Lavar a boca após o uso se estiver associado a corticoide (Seretide) para evitar candidíase oral.'], es: ['Inhalatorio. Lavar la boca tras el uso si está asociado a corticoide (Seretide) para evitar candidiasis oral.'] },
-      renalAdjustment: { required: false, message: { pt: 'Ação predominantemente local e depuração fecal.', es: 'Acción predominantemente local y depuración fecal.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Ação inalatória local profunda.', es: 'Acción inhalatoria local profunda.' } },
-      commonAdverseEffects: { pt: ['Cefaleia', 'Tremores e cãibras musculares', 'Irritação na garganta'], es: ['Cefalea', 'Temblores y calambres musculares', 'Irritación en la garganta'] },
-      dangerousAdverseEffects: { pt: ['Aumento paradoxal da morbimortalidade asmática (Se usado sozinho sem corticoide)'], es: ['Aumento paradójico de la morbimortalidad asmática (Si se usa solo sin corticoide)'] },
-      contraindications: {
-        absolute: { pt: ['Monoterapia em pacientes com Asma (NUNCA usar LABA sozinho na asma, pois ele oculta a inflamação, não trata a causa e resulta em intubação e morte súbita)', 'Uso como medicação de resgate em crise de broncoespasmo agudo'], es: ['Monoterapia en pacientes con Asma (NUNCA usar LABA solo en el asma, pues oculta la inflamación, no trata la causa y resulta en intubación y muerte súbita)', 'Uso como medicación de rescate en crisis de broncoespasmo agudo'] },
-        relative: { pt: ['Arritmias graves'], es: ['Arritmias graves'] }
+      "administration": {
+        "pt": [
+          "Não é broncodilatador de resgate",
+          "Na asma, nunca usar sem ICS"
+        ],
+        "es": [
+          "No es broncodilatador de rescate",
+          "En asma, nunca usar sin ICS"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'BLACK BOX WARNING DA FDA: Uso de medicamentos como Salmeterol sem um corticosteroide inalatório de controle AUMENTA o risco de mortes relacionadas à asma. Eles broncodilatam tão bem que o paciente esquece da doença, mas o pulmão continua inflamando silenciosamente até colapsar num broncoespasmo irreversível.', es: 'BLACK BOX WARNING DE LA FDA: El uso de Salmeterol sin un corticosteroide inhalatorio de control AUMENTA el riesgo de muertes relacionadas al asma. Broncodilatan tan bien que el paciente olvida la enfermedad, pero el pulmón se inflama silenciosamente hasta el colapso.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro.",
+          "es": "Sin ajuste renal rutinario."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste hepático rotineiro definido.",
+          "es": "Sin ajuste hepático rutinario definido."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Cefaleia",
+          "Tremor",
+          "Palpitações"
+        ],
+        "es": [
+          "Cefalea",
+          "Temblor",
+          "Palpitaciones"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Eventos graves relacionados à asma quando usado sem ICS",
+          "Taquiarritmia",
+          "Hipocalemia"
+        ],
+        "es": [
+          "Eventos graves relacionados con asma cuando se usa sin ICS",
+          "Taquiarritmia",
+          "Hipopotasemia"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Monoterapia da asma"
+          ],
+          "es": [
+            "Monoterapia del asma"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Cardiopatia, arritmia, hipocalemia"
+          ],
+          "es": [
+            "Cardiopatía, arritmia, hipopotasemia"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "Salmeterol não serve como resgate. Na asma, usar sempre junto a ICS.",
+          "es": "Salmeterol no sirve como rescate. En asma, usar siempre junto a ICS."
+        }
       }
     },
 
     /* ── FORMOTEROL ─────────────────────────────────────────────────────── */
     "formoterol": {
-      name: { pt: 'Formoterol', es: 'Formoterol' },
-      category: 'pneumologia',
-      class: { pt: 'Agonista Beta-2 Adrenérgico de Longa Duração (LABA) de Ação Rápida', es: 'Agonista Beta-2 Adrenérgico de Larga Duración (LABA) de Acción Rápida' },
-      indications: {
-        pt: ['Estratégia MART (Maintenance and Reliever Therapy) para tratamento e resgate imediato da asma (associado à Budesonida)', 'Manutenção de Asma e DPOC'],
-        es: ['Estrategia MART (Maintenance and Reliever Therapy) para tratamiento y rescate inmediato del asma (asociado a Budesonida)', 'Mantenimiento de Asma y EPOC']
+      "name": {
+        "pt": "Formoterol",
+        "es": "Formoterol"
       },
-      commercialNames: { br: ['Foradil', 'Alenia (Assoc)', 'Symbicort (Assoc)'], ar: ['Foradil', 'Symbicort'] },
-      presentation: { pt: ['Cápsulas para inalação ou Spray 12 mcg/dose'], es: ['Cápsulas para inhalación o Spray 12 mcg/dosis'] },
-      mechanism: {
-        pt: 'É a revolução dos broncodilatadores. Ele é um LABA (Longa duração, garantindo brônquio aberto por 12 horas igual ao salmeterol), PORÉM, possui um início de ação fulminante, quase idêntico ao do salbutamol (1 a 3 minutos). Isso permite que ele seja usado não apenas para manter a asma prevenida o dia todo, mas TAMBÉM para curar o sufocamento na hora da crise aguda.',
-        es: 'Es la revolución de los broncodilatadores. Es un LABA (Larga duración, garantizando bronquio abierto por 12 horas igual al salmeterol), PERO posee un inicio de acción fulminante, casi idéntico al del salbutamol (1 a 3 minutos). Esto permite que sea usado no solo para mantener el asma prevenida todo el día, sino TAMBIÉN para curar la asfixia en el momento de la crisis aguda.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Agonista β2 de longa ação (LABA) de início rápido",
+        "es": "Agonista β2 de acción prolongada (LABA) de inicio rápido"
       },
-      dose: {
-        adult: {
-          pt: 'Manutenção (Asma/DPOC): 12 mcg a cada 12 horas. Resgate (Estratégia MART, sempre associado a corticoide): 1 inalação sob demanda na crise (Máx 48 a 72 mcg/dia).',
-          es: 'Mantenimiento (Asma/EPOC): 12 mcg cada 12 horas. Rescate (Estrategia MART, siempre asociado a corticoide): 1 inhalación a demanda en la crisis (Máx 48 a 72 mcg/día).'
+      "indications": {
+        "pt": [
+          "Manutenção da DPOC",
+          "Em asma, somente em combinação com ICS; ICS-formoterol pode ser usado em regimes AIR/MART conforme GINA 2026 e produto"
+        ],
+        "es": [
+          "Mantenimiento de EPOC",
+          "En asma, solo en combinación con ICS; ICS-formoterol puede usarse en regímenes AIR/MART según GINA 2026 y producto"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonismo β2 prolongado relaxa músculo liso brônquico; início relativamente rápido.",
+        "es": "Agonismo β2 prolongado relaja músculo liso bronquial; inicio relativamente rápido."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Solução inalatória para DPOC: 20 mcg por nebulização a cada 12 h. Em asma, dose depende da combinação ICS-formoterol e do regime prescrito.",
+          "es": "Solución inhalatoria para EPOC: 20 mcg por nebulización cada 12 h. En asma, la dosis depende de la combinación ICS-formoterol y del régimen prescrito."
         },
-        pediatric: {
-          pt: 'Acima de 6 anos: 12 mcg a cada 12 horas.',
-          es: 'Por encima de 6 años: 12 mcg cada 12 horas.'
+        "pediatric": {
+          "pt": "Uso em asma pediátrica deve seguir a combinação ICS-formoterol, idade e dispositivo autorizados.",
+          "es": "Uso en asma pediátrica debe seguir combinación ICS-formoterol, edad y dispositivo autorizados."
         }
       },
-      administration: { pt: ['Uso inalatório (pó seco ou spray). Enxaguar a boca sempre que estiver na formulação conjugada com corticoide (Budesonida/Formoterol).'], es: ['Uso inhalatorio (polvo seco o spray). Enjuagar la boca siempre que esté en formulación conjugada con corticoide (Budesonida/Formoterol).'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Metabolismo hepático menor, sem ajuste.', es: 'Metabolismo hepático menor, sin ajuste.' } },
-      commonAdverseEffects: { pt: ['Palpitações leves', 'Tremores e cefaleia', 'Boca seca'], es: ['Palpitaciones leves', 'Temblores y cefalea', 'Boca seca'] },
-      dangerousAdverseEffects: { pt: ['Hipocalemia induzida', 'Aumento de intervalo QT (se usado com outros fármacos arritmogênicos)'], es: ['Hipopotasemia inducida', 'Aumento del intervalo QT (si se usa con otros fármacos arritmogénicos)'] },
-      contraindications: {
-        absolute: { pt: ['Uso como MONOTERAPIA para tratamento da Asma (Mesma regra do Salmeterol, LABA mata se não tiver corticoide associado)'], es: ['Uso como MONOTERAPIA para el tratamiento del Asma (Misma regla del Salmeterol, LABA mata si no tiene corticoide asociado)'] },
-        relative: { pt: ['Estenose subaórtica ou taquicardia severa basal'], es: ['Estenosis subaórtica o taquicardia severa basal'] }
+      "administration": {
+        "pt": [
+          "LABA isolado é contraindicado como tratamento de asma",
+          "Não exceder frequência prescrita"
+        ],
+        "es": [
+          "LABA solo está contraindicado como tratamiento de asma",
+          "No exceder frecuencia prescrita"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'A Nova Era da Asma (GINA): As diretrizes mundiais mais recentes aboliram o Salbutamol sozinho para resgate de asma. O Ouro agora é a estratégia MART: O paciente usa o mesmo inalador (Budesonida + Formoterol) para manutenção diária e para resgate na hora da falta de ar, recebendo broncodilatação rápida e tratamento da inflamação simultaneamente.', es: 'La Nueva Era del Asma (GINA): Las directrices mundiales abolieron el Salbutamol solo para rescate de asma. El Oro ahora es la estrategia MART: El paciente usa el mismo inhalador (Budesonida + Formoterol) para mantenimiento y para rescate, recibiendo broncodilatación rápida y tratamiento de la inflamación simultáneamente.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro.",
+          "es": "Sin ajuste renal rutinario."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste hepático rotineiro definido.",
+          "es": "Sin ajuste hepático rutinario definido."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Tremor",
+          "Palpitações",
+          "Cefaleia"
+        ],
+        "es": [
+          "Temblor",
+          "Palpitaciones",
+          "Cefalea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Taquiarritmia",
+          "Hipocalemia",
+          "Broncoespasmo paradoxal"
+        ],
+        "es": [
+          "Taquiarritmia",
+          "Hipopotasemia",
+          "Broncoespasmo paradójico"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Uso como monoterapia na asma"
+          ],
+          "es": [
+            "Uso como monoterapia en asma"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Arritmias, QT longo, hipocalemia"
+          ],
+          "es": [
+            "Arritmias, QT largo, hipopotasemia"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "Na asma, formoterol deve estar associado a ICS. O uso de LABA sem ICS aumenta risco de eventos graves.",
+          "es": "En asma, formoterol debe asociarse a ICS. El uso de LABA sin ICS aumenta riesgo de eventos graves."
+        }
       }
     },
 
@@ -333,81 +542,217 @@
 
     /* ── BROMETO DE IPRATRÓPIO (ATROVENT) ───────────────────────────────── */
     "ipratropio": {
-      name: { pt: 'Brometo de Ipratrópio', es: 'Bromuro de Ipratropio' },
-      category: 'pneumologia',
-      class: { pt: 'Antagonista Muscarínico de Curta Duração (SAMA) / Anticolinérgico', es: 'Antagonista Muscarínico de Corta Duración (SAMA) / Anticolinérgico' },
-      indications: {
-        pt: ['Resgate e Alívio da Asma Aguda Severa no Pronto-Socorro (Associado OBRIGATORIAMENTE ao Salbutamol/Fenoterol)', 'Resgate de exacerbação de DPOC', 'Rinorreia (Coriza líquida excessiva) em sprays nasais'],
-        es: ['Rescate y Alivio del Asma Aguda Severa en Urgencias (Asociado OBLIGATORIAMENTE al Salbutamol/Fenoterol)', 'Rescate de exacerbación de EPOC', 'Rinorrea (Coriza líquida excesiva) en sprays nasales']
+      "name": {
+        "pt": "Ipratrópio",
+        "es": "Ipratropio"
       },
-      commercialNames: { br: ['Atrovent'], ar: ['Atrovent'] },
-      presentation: { pt: ['Solução gotas para inalação 0,25 mg/mL', 'Spray Inalatório 20 mcg/dose'], es: ['Solución gotas para inhalación 0,25 mg/mL', 'Spray Inhalatorio 20 mcg/dosis'] },
-      mechanism: {
-        pt: 'Muda a chave de Beta para Muscarínico. O pulmão tem receptores M3 controlados pelo nervo vago (parassimpático) que mandam os brônquios apertarem e secretarem muco. O Ipratrópio bloqueia esses receptores. O nervo vago "desliga", o brônquio relaxa e o pulmão para de jorrar catarro. Início de ação em 15 minutos, duração de 4 a 6 horas.',
-        es: 'Cambia la llave de Beta a Muscarínico. El pulmón tiene receptores M3 controlados por el nervio vago que mandan a los bronquios a apretarse y secretar moco. El Ipratropio bloquea esos receptores. El nervio vago "se apaga", el bronquio se relaja y el pulmón deja de chorrear flema. Inicio de acción en 15 minutos, duración de 4 a 6 horas.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Antagonista muscarínico de curta ação (SAMA)",
+        "es": "Antagonista muscarínico de acción corta (SAMA)"
       },
-      dose: {
-        adult: {
-          pt: 'Crise/Nebulização: 40 gotas (0,5 mg) junto com o broncodilatador, a cada 20 min no PS, depois a cada 6h. Spray: 2 jatos a cada 6 horas.',
-          es: 'Crisis/Nebulización: 40 gotas (0,5 mg) junto con el broncodilatador, cada 20 min en Urgencias, luego cada 6h. Spray: 2 puffs cada 6 horas.'
+      "indications": {
+        "pt": [
+          "Broncodilatação de manutenção na DPOC",
+          "Adjuvante em exacerbação aguda de asma junto a SABA"
+        ],
+        "es": [
+          "Broncodilatación de mantenimiento en EPOC",
+          "Adyuvante en exacerbación aguda de asma junto con SABA"
+        ]
+      },
+      "mechanism": {
+        "pt": "Bloqueio muscarínico M3 reduz broncoconstrição vagal.",
+        "es": "El bloqueo muscarínico M3 reduce broncoconstricción vagal."
+      },
+      "dose": {
+        "adult": {
+          "pt": "MDI: 2 jatos (17 mcg/jato) 4x/dia, podendo usar doses adicionais conforme rotulagem; nebulização em exacerbação conforme protocolo.",
+          "es": "MDI: 2 inhalaciones (17 mcg/inhalación) 4 veces/día, pudiendo usar dosis adicionales según rotulado; nebulización en exacerbación según protocolo."
         },
-        pediatric: {
-          pt: 'Nebulização na crise: Lactentes (10 gotas), Crianças (20 gotas) junto com a medicação beta-2 a cada 20 minutos.',
-          es: 'Nebulización en crisis: Lactantes (10 gotas), Niños (20 gotas) junto con la medicación beta-2 cada 20 minutos.'
+        "pediatric": {
+          "pt": "Em asma aguda pediátrica, uso é adjuvante e protocolar; não extrapolar esquema crônico adulto.",
+          "es": "En asma aguda pediátrica, el uso es adyuvante y protocolar; no extrapolar esquema crónico adulto."
         }
       },
-      administration: { pt: ['Pode (e deve) ser misturado no mesmo copinho do nebulizador com Salbutamol ou Fenoterol + Soro Fisiológico na sala de emergência.'], es: ['Puede (y debe) ser mezclado en el mismo vasito del nebulizador con Salbutamol o Fenoterol + Suero Fisiológico en la sala de emergencias.'] },
-      renalAdjustment: { required: false, message: { pt: 'Absorção sistêmica nula ou mínima.', es: 'Absorción sistémica nula o mínima.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Ação puramente local/tópica.', es: 'Acción puramente local/tópica.' } },
-      commonAdverseEffects: { pt: ['Boca muito seca (xerostomia)', 'Gosto amargo', 'Tosse irritativa'], es: ['Boca muy seca (xerostomía)', 'Sabor amargo', 'Tos irritativa'] },
-      dangerousAdverseEffects: { pt: ['Crise de Glaucoma Agudo de Ângulo Fechado (Se a névoa escapar da máscara e entrar no olho)', 'Retenção urinária aguda no paciente com próstata aumentada'], es: ['Crisis de Glaucoma Agudo de Ángulo Cerrado (Si la niebla escapa de la máscara y entra al ojo)', 'Retención urinaria aguda en el paciente con próstata aumentada'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade grave à atropina ou seus derivados'], es: ['Hipersensibilidad grave a la atropina o sus derivados'] },
-        relative: { pt: ['Glaucoma de ângulo estreito instável', 'Hipertrofia prostática severa sem sonda (vai travar a urina se houver absorção)'], es: ['Glaucoma de ángulo estrecho inestable', 'Hipertrofia prostática severa sin sonda (va a trabar la orina si hay absorción)'] }
+      "administration": {
+        "pt": [
+          "Evitar contato do aerossol/nebulização com os olhos",
+          "Não é substituto de terapia controladora na asma"
+        ],
+        "es": [
+          "Evitar contacto del aerosol/nebulización con los ojos",
+          "No sustituye terapia controladora en asma"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'MÁSCARA VEDADA: A crise de Glaucoma Agudo causada pelo Atrovent na emergência é um erro iatrogênico bizarro. Ocorre porque a máscara de nebulização fica "frouxa" no idoso, a fumaça de atrovent escapa para cima e atinge diretamente os olhos, paralisando a pupila e aumentando a pressão do olho até a cegueira. A máscara deve estar APERTADA no rosto.', es: 'MÁSCARA SELLADA: La crisis de Glaucoma Agudo causada por Atrovent es un error iatrogénico bizarro. Ocurre porque la máscara de nebulización queda "suelta" en el anciano, el humo escapa y golpea los ojos, paralizando la pupila y aumentando la presión del ojo hasta la ceguera.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro.",
+          "es": "Sin ajuste renal rutinario."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste hepático rotineiro.",
+          "es": "Sin ajuste hepático rutinario."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Boca seca",
+          "Tosse",
+          "Irritação faríngea"
+        ],
+        "es": [
+          "Boca seca",
+          "Tos",
+          "Irritación faríngea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Broncoespasmo paradoxal",
+          "Glaucoma agudo por exposição ocular",
+          "Retenção urinária"
+        ],
+        "es": [
+          "Broncoespasmo paradójico",
+          "Glaucoma agudo por exposición ocular",
+          "Retención urinaria"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade ao ipratrópio/atropínicos"
+          ],
+          "es": [
+            "Hipersensibilidad a ipratropio/atropínicos"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Glaucoma de ângulo fechado, retenção urinária/HBP"
+          ],
+          "es": [
+            "Glaucoma de ángulo cerrado, retención urinaria/HBP"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "Na exacerbação asmática, ipratrópio é adjuvante ao SABA; não substitui ICS nem broncodilatador de resgate de ação rápida.",
+          "es": "En exacerbación asmática, ipratropio es adyuvante del SABA; no sustituye ICS ni broncodilatador de rescate de acción rápida."
+        }
       }
     },
 
     /* ── BROMETO DE TIOTRÓPIO (SPIRIVA) ─────────────────────────────────── */
     "tiotropio": {
-      name: { pt: 'Brometo de Tiotrópio', es: 'Bromuro de Tiotropio' },
-      category: 'pneumologia',
-      class: { pt: 'Antagonista Muscarínico de Longa Duração (LAMA)', es: 'Antagonista Muscarínico de Larga Duración (LAMA)' },
-      indications: {
-        pt: ['Droga de Ouro de MANUTENÇÃO para Doença Pulmonar Obstrutiva Crônica (DPOC)', 'Manutenção de Asma grave e refratária de base (step 4 e 5)'],
-        es: ['Droga de Oro de MANTENIMIENTO para Enfermedad Pulmonar Obstructiva Crónica (EPOC)', 'Mantenimiento de Asma grave y refractaria de base (step 4 y 5)']
+      "name": {
+        "pt": "Tiotrópio",
+        "es": "Tiotropio"
       },
-      commercialNames: { br: ['Spiriva Respimat', 'Spiriva HandiHaler'], ar: ['Spiriva'] },
-      presentation: { pt: ['Cápsulas inalatórias (HandiHaler) 18 mcg', 'Solução Inalante (Respimat) 2,5 mcg/dose'], es: ['Cápsulas inhalatorias (HandiHaler) 18 mcg', 'Solución Inhalante (Respimat) 2,5 mcg/dosis'] },
-      mechanism: {
-        pt: 'Diferente do Ipratrópio, que bloqueia todos os receptores muscarínicos rapidamente, o Tiotrópio tem seletividade cinética gigantesca para o receptor M3. Ele "morde" o receptor M3 e demora MAIS DE 24 HORAS para soltar. Isso mantém os brônquios do DPOC permanentemente relaxados e sem excesso de muco com apenas uma inalação matinal.',
-        es: 'A diferencia del Ipratropio, que bloquea todos los receptores rápidamente, el Tiotropio tiene selectividad cinética gigantesca para el receptor M3. Él "muerde" el receptor M3 y tarda MÁS DE 24 HORAS en soltar. Esto mantiene los bronquios del EPOC permanentemente relajados y sin exceso de moco con solo una inhalación matinal.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Antagonista muscarínico de longa ação (LAMA)",
+        "es": "Antagonista muscarínico de acción prolongada (LAMA)"
       },
-      dose: {
-        adult: {
-          pt: 'Pó Seco (Cápsulas 18 mcg): Inalar 1 cápsula UMA VEZ ao dia. Solução (Respimat 2,5 mcg): 2 jatos seguidos UMA VEZ ao dia.',
-          es: 'Polvo Seco (Cápsulas 18 mcg): Inhalar 1 cápsula UNA VEZ al día. Solución (Respimat 2,5 mcg): 2 puffs seguidos UNA VEZ al día.'
+      "indications": {
+        "pt": [
+          "Manutenção da DPOC",
+          "Add-on em asma selecionada conforme idade/formulação"
+        ],
+        "es": [
+          "Mantenimiento de EPOC",
+          "Add-on en asma seleccionada según edad/formulación"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagonismo muscarínico prolongado, principalmente M3, reduz broncoconstrição vagal.",
+        "es": "Antagonismo muscarínico prolongado, principalmente M3, reduce broncoconstricción vagal."
+      },
+      "dose": {
+        "adult": {
+          "pt": "HandiHaler: conteúdo de 1 cápsula de 18 mcg inalado 1x/dia; Respimat: 2 inalações 1x/dia conforme indicação/formulação.",
+          "es": "HandiHaler: contenido de 1 cápsula de 18 mcg inhalado 1 vez/día; Respimat: 2 inhalaciones 1 vez/día según indicación/formulación."
         },
-        pediatric: {
-          pt: 'Não é rotina. Em casos muito graves de asma a partir de 6 anos: 2 inalações do Respimat (5 mcg total) 1x ao dia off-label ou por especialistas.',
-          es: 'No es rutina. En casos muy graves de asma a partir de 6 años: 2 inhalaciones del Respimat (5 mcg total) 1x al día por especialistas.'
+        "pediatric": {
+          "pt": "Asma: uso depende da formulação e idade autorizada; seguir rotulagem local, não usar cápsula por via oral.",
+          "es": "Asma: uso depende de formulación y edad autorizada; seguir rotulado local, no ingerir cápsula por vía oral."
         }
       },
-      administration: { pt: ['O paciente DEVE ser instruído a NÃO engolir a cápsula (HandiHaler). A cápsula vai dentro do aparelho furador e é aspirada.', 'Inalação lenta e profunda no Handihaler, ou lenta e normal no Respimat.'], es: ['El paciente DEBE ser instruido a NO tragar la cápsula (HandiHaler). La cápsula va dentro del aparato perforador y es aspirada.', 'Inhalación lenta y profunda en el Handihaler, o lenta y normal en el Respimat.'] },
-      renalAdjustment: { required: false, message: { pt: 'Depuração renal (74%), porém, como a absorção sistêmica é mínima e o uso é tópico inalatório, não há recomendação de redução de dose na falência renal.', es: 'Depuración renal (74%), pero, como la absorción sistémica es mínima y el uso es tópico, no hay recomendación de reducción de dosis en falla renal.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Nenhum ajuste necessário.', es: 'Ningún ajuste necesario.' } },
-      commonAdverseEffects: { pt: ['Boca seca crônica (efeito adverso #1, ocorre em 15% dos usuários e geralmente causa abandono)', 'Prisão de ventre (constipação leve)', 'Cefaleia'], es: ['Boca seca crónica (efecto adverso #1, ocurre en 15% de los usuarios y causa abandono)', 'Estreñimiento (constipación leve)', 'Cefalea'] },
-      dangerousAdverseEffects: { pt: ['Obstrução urinária grave aguda em idosos prostáticos', 'Piora aguda de glaucoma preexistente'], es: ['Obstrucción urinaria grave aguda en ancianos prostáticos', 'Empeoramiento agudo de glaucoma preexistente'] },
-      contraindications: {
-        absolute: { pt: ['Tratamento inicial de resgate na crise aguda de broncoespasmo (demora para agir e não tira do sufocamento).'], es: ['Tratamiento inicial de rescate en la crisis aguda de broncoespasmo (tarda en actuar y no saca del sofocamiento).'] },
-        relative: { pt: ['Uso associado com outros anticolinérgicos orais para bexiga hiperativa (oxibutinina, tolterodina) por somação de retenção urinária.'], es: ['Uso asociado con otros anticolinérgicos orales para vejiga hiperactiva (oxibutinina, tolterodina) por suma de retención urinaria.'] }
+      "administration": {
+        "pt": [
+          "Não usar para alívio de broncoespasmo agudo",
+          "Cápsulas HandiHaler são somente para inalação"
+        ],
+        "es": [
+          "No usar para alivio de broncoespasmo agudo",
+          "Cápsulas HandiHaler son solo para inhalación"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O SALVADOR DO DPOC: Enquanto os asmáticos dependem da vida e da morte de Corticoides, os pacientes com DPOC (fumantes graves crônicos) não respondem bem aos corticoides. O Tiotrópio (LAMA) é a principal droga capaz de abrir o brônquio cicatrizado do fumante, devendo ser a base do tratamento do enfisema.', es: 'EL SALVADOR DEL EPOC: Mientras los asmáticos dependen de los Corticoides, los pacientes con EPOC (fumadores crónicos) no responden bien a los corticoides. El Tiotropio (LAMA) es la principal droga capaz de abrir el bronquio cicatrizado del fumador, debiendo ser la base del tratamiento del enfisema.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "ClCr <60 mL/min: monitorar mais de perto efeitos anticolinérgicos.",
+          "es": "ClCr <60 mL/min: monitorizar más estrechamente efectos anticolinérgicos."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste hepático rotineiro.",
+          "es": "Sin ajuste hepático rutinario."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Boca seca",
+          "Faringite"
+        ],
+        "es": [
+          "Boca seca",
+          "Faringitis"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Broncoespasmo paradoxal",
+          "Glaucoma agudo",
+          "Retenção urinária"
+        ],
+        "es": [
+          "Broncoespasmo paradójico",
+          "Glaucoma agudo",
+          "Retención urinaria"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Glaucoma de ângulo fechado, HBP/retenção urinária, DRC"
+          ],
+          "es": [
+            "Glaucoma de ángulo cerrado, HBP/retención urinaria, ERC"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "LAMA é manutenção, não resgate. Em asma deve ser add-on a tratamento contendo ICS.",
+          "es": "LAMA es mantenimiento, no rescate. En asma debe ser add-on a tratamiento con ICS."
+        }
       }
     },
 
@@ -533,121 +878,324 @@
 
     /* ── BECLOMETASONA ──────────────────────────────────────────────────── */
     "beclometasona": {
-      name: { pt: 'Beclometasona (Dipropionato)', es: 'Beclometasona (Dipropionato)' },
-      category: 'pneumologia',
-      class: { pt: 'Corticosteroide Inalatório (ICS)', es: 'Corticosteroide Inhalatorio (ICS)' },
-      indications: {
-        pt: ['Tratamento de base (manutenção) da ASMA brônquica em todos os degraus', 'Profilaxia de Rinite Alérgica (spray nasal)'],
-        es: ['Tratamiento de base (mantenimiento) del ASMA bronquial en todos los escalones', 'Profilaxis de Rinitis Alérgica (spray nasal)']
+      "name": {
+        "pt": "Beclometasona",
+        "es": "Beclometasona"
       },
-      commercialNames: { br: ['Clenil', 'Fostair (Assoc)'], ar: ['Beclometasona'] },
-      presentation: { pt: ['Spray inalatório HFA 50, 200 e 250 mcg/dose', 'Spray Nasal 50 mcg/jato'], es: ['Spray inhalatorio HFA 50, 200 y 250 mcg/dosis', 'Spray Nasal 50 mcg/puff'] },
-      mechanism: {
-        pt: 'Anti-inflamatório esteroidal tópico. É um pró-fármaco ativado pelas enzimas do pulmão. Uma vez inalado, desliga a transcrição de citocinas inflamatórias, bloqueia a migração de eosinófilos e reduz o edema crônico da parede do brônquio. É o "extintor de incêndio" que apaga a inflamação basal da asma. Diferente do corticoide oral/venoso, a absorção para a corrente sanguínea é mínima, tornando o uso diário seguro por anos.',
-        es: 'Antiinflamatorio esteroideo tópico. Es un profármaco activado por las enzimas del pulmón. Una vez inhalado, apaga la transcripción de citocinas inflamatorias, bloquea la migración de eosinófilos y reduce el edema crónico de la pared bronquial. A diferencia del corticoide oral/venoso, la absorción a la sangre es mínima, haciendo el uso diario seguro por años.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Corticosteroide inalatório (ICS)",
+        "es": "Corticosteroide inhalado (ICS)"
       },
-      dose: {
-        adult: {
-          pt: 'Asma (Inalatório): 200 a 800 mcg/dia (dividido em 2 doses).',
-          es: 'Asma (Inhalatorio): 200 a 800 mcg/día (dividido en 2 dosis).'
+      "indications": {
+        "pt": [
+          "Manutenção da asma",
+          "Em combinação beclometasona-formoterol, regimes MART conforme formulação/GINA"
+        ],
+        "es": [
+          "Mantenimiento del asma",
+          "En combinación beclometasona-formoterol, regímenes MART según formulación/GINA"
+        ]
+      },
+      "mechanism": {
+        "pt": "Glicocorticoide inalatório reduz inflamação e hiperresponsividade brônquica.",
+        "es": "Glucocorticoide inhalado reduce inflamación e hiperreactividad bronquial."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dose depende da formulação/dispositivo; titular à menor dose eficaz de controle.",
+          "es": "La dosis depende de formulación/dispositivo; titular a la menor dosis eficaz de control."
         },
-        pediatric: {
-          pt: '100 a 400 mcg/dia (dividido em 2 doses).',
-          es: '100 a 400 mcg/día (dividido en 2 dosis).'
+        "pediatric": {
+          "pt": "Uso pediátrico depende da formulação, idade e dispositivo; monitorar crescimento.",
+          "es": "Uso pediátrico depende de formulación, edad y dispositivo; monitorizar crecimiento."
         }
       },
-      administration: { pt: ['MANDATÓRIO: O paciente DEVE lavar a boca, escovar os dentes ou gargarejar rigorosamente LOGO APÓS usar a bombinha. O pó que fica na garganta baixa a imunidade local e causa proliferação de fungos.', 'Usar espaçador aumenta em 40% a chegada da droga no pulmão e diminui o risco de candidíase.'], es: ['OBLIGATORIO: El paciente DEBE lavar la boca, cepillarse los dientes o hacer gárgaras rigurosamente JUSTO DESPUÉS de usar el inhalador.', 'Usar espaciador aumenta en 40% la llegada al pulmón.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Cuidado em cirróticos apenas em doses maciças inalatórias prolongadas (risco de supressão adrenal leve).', es: 'Cuidado en cirróticos solo en dosis masivas inhalatorias prolongadas (riesgo de supresión adrenal leve).' } },
-      commonAdverseEffects: { pt: ['Candidíase orofaríngea (Sapinho)', 'Disfonia (Rouquidão persistente por miopatia das cordas vocais induzida pelo corticoide)', 'Tosse seca na aplicação'], es: ['Candidiasis orofaríngea (Muguet)', 'Disfonía (Ronquera persistente por miopatía de las cuerdas vocales inducida por el corticoide)', 'Tos seca en la aplicación'] },
-      dangerousAdverseEffects: { pt: ['Supressão do Eixo Hipotálamo-Hipófise-Adrenal (em altas doses diárias prolongadas)', 'Retardo no crescimento estatural de crianças (discutível e milimétrico, mas monitorado)'], es: ['Supresión del Eje Hipotálamo-Hipófisis-Adrenal (en altas dosis diarias prolongadas)', 'Retraso en el crecimiento estatural de niños (discutible y milimétrico, pero monitoreado)'] },
-      contraindications: {
-        absolute: { pt: ['Tratamento agudo de crise asmática severa se usado isoladamente (pois demora 1 semana para fazer o efeito anti-inflamatório máximo).'], es: ['Tratamiento agudo de crisis asmática severa si se usa aisladamente (pues tarda 1 semana para hacer el efecto antiinflamatorio máximo).'] },
-        relative: { pt: ['Infecções fúngicas ou tuberculosas ativas não tratadas no pulmão'], es: ['Infecciones fúngicas o tuberculosas activas no tratadas en el pulmón'] }
+      "administration": {
+        "pt": [
+          "Enxaguar a boca após uso",
+          "Não usar como resgate isolado"
+        ],
+        "es": [
+          "Enjuagar la boca después del uso",
+          "No usar como rescate aislado"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'MUDANÇA DE CONDUTA GINA: O asmático leve não usa mais "só salbutamol" na crise. Ele agora deve inalar a Beclometasona JUNTO com o Salbutamol na hora da falta de ar, provando que tratar a inflamação é mais vital que apenas abrir o brônquio temporariamente.', es: 'CAMBIO DE CONDUCTA GINA: El asmático leve ya no usa "solo salbutamol" en la crisis. Ahora debe inhalar Beclometasona JUNTO con Salbutamol en el momento de asfixia, probando que tratar la inflamación es más vital que solo abrir el bronquio.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro.",
+          "es": "Sin ajuste renal rutinario."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste hepático fixo; monitorar exposição sistêmica em doses altas.",
+          "es": "Sin ajuste hepático fijo; monitorizar exposición sistémica a dosis altas."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Candidíase oral",
+          "Disfonia"
+        ],
+        "es": [
+          "Candidiasis oral",
+          "Disfonía"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Supressão adrenal",
+          "Redução do crescimento",
+          "Glaucoma/catarata em exposição prolongada"
+        ],
+        "es": [
+          "Supresión adrenal",
+          "Reducción del crecimiento",
+          "Glaucoma/catarata con exposición prolongada"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Broncoespasmo agudo como única terapia"
+          ],
+          "es": [
+            "Broncoespasmo agudo como única terapia"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Infecções não tratadas"
+          ],
+          "es": [
+            "Infecciones no tratadas"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "Controlador anti-inflamatório; não substitui broncodilatador de resgate em crise aguda.",
+          "es": "Controlador antiinflamatorio; no sustituye broncodilatador de rescate en crisis aguda."
+        }
       }
     },
 
     /* ── BUDESONIDA ─────────────────────────────────────────────────────── */
     "budesonida": {
-      name: { pt: 'Budesonida', es: 'Budesonida' },
-      category: 'pneumologia',
-      class: { pt: 'Corticosteroide Inalatório / Tópico', es: 'Corticosteroide Inhalatorio / Tópico' },
-      indications: {
-        pt: ['Asma brônquica crônica e exacerbações', 'Crupe Viral / Laringotraqueobronquite em Pediatria (Nebulização de resgate para inflamação de via aérea alta)', 'Rinite Alérgica (Nasal)', 'Doença de Crohn (Cápsulas orais)'],
-        es: ['Asma bronquial crónica y exacerbaciones', 'Crup Viral / Laringotraqueobronquitis en Pediatría (Nebulización de rescate para inflamación de vía aérea alta)', 'Rinitis Alérgica (Nasal)', 'Enfermedad de Crohn (Cápsulas orales)']
+      "name": {
+        "pt": "Budesonida",
+        "es": "Budesonida"
       },
-      commercialNames: { br: ['Busonid', 'Pulmicort', 'Alenia (Assoc)'], ar: ['Neumocort', 'Budesonide'] },
-      presentation: { pt: ['Spray Inalatório 50 e 200 mcg/dose', 'Suspensão para nebulização (Gotas ou Flaconetes) 0,25 e 0,5 mg/mL', 'Cápsulas gastro-resistentes 3mg'], es: ['Spray Inhalatorio 50 y 200 mcg/dosis', 'Suspensión para nebulización 0,25 y 0,5 mg/mL', 'Cápsulas gastrorresistentes 3mg'] },
-      mechanism: {
-        pt: 'Potentíssimo anti-inflamatório local. O "Truque de Mestre" da Budesonida é que, mesmo se o paciente não lavar a boca e engolir o remédio, ele passa pelo fígado e sofre um Metabolismo de Primeira Passagem de 90%. O fígado destrói a droga engolida antes dela atingir o corpo inteiro. Isso garante que a Budesonida seja absurdamente potente no pulmão, mas virtualmente sem efeitos sistêmicos (não engorda, não causa diabetes).',
-        es: 'Potentísimo antiinflamatorio local. El "Truco Maestro" de la Budesonida es que, incluso si el paciente no se lava la boca y traga el remedio, pasa por el hígado y sufre un Metabolismo de Primera Pasada del 90%. El hígado destruye la droga tragada antes de que alcance el cuerpo entero. Esto garantiza que sea absurdamente potente en el pulmón, pero sin efectos sistémicos.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Corticosteroide inalatório (ICS)",
+        "es": "Corticosteroide inhalado (ICS)"
       },
-      dose: {
-        adult: {
-          pt: 'Asma (Inalatório): 400 a 800 mcg/dia (dividido em 2x). Estratégia MART (junto c/ formoterol): Inalar em cada crise. Cápsula (Crohn): 9 mg/dia.',
-          es: 'Asma (Inhalatorio): 400 a 800 mcg/día (dividido en 2x). Estrategia MART (junto c/ formoterol): Inhalar en cada crisis. Cápsula (Crohn): 9 mg/día.'
+      "indications": {
+        "pt": [
+          "Manutenção/profilaxia da asma",
+          "Com formoterol, pode integrar regimes AIR/MART conforme GINA 2026 e produto"
+        ],
+        "es": [
+          "Mantenimiento/profilaxis del asma",
+          "Con formoterol, puede integrar regímenes AIR/MART según GINA 2026 y producto"
+        ]
+      },
+      "mechanism": {
+        "pt": "Atividade glicocorticoide local reduz inflamação das vias aéreas e hiperresponsividade.",
+        "es": "Actividad glucocorticoide local reduce inflamación de vías aéreas e hiperreactividad."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dose inalatória depende do dispositivo e gravidade; usar a menor dose eficaz. Não é medicação de resgate isoladamente.",
+          "es": "La dosis inhalada depende del dispositivo y gravedad; usar la menor dosis eficaz. No es medicación de rescate por sí sola."
         },
-        pediatric: {
-          pt: 'Crupe (Estridor em bebês): 2 miligramas (Nebulização Maciça de Resgate no PS em dose única ou 2x de 1mg). Asma profilaxia: 100-200 mcg 2x/dia.',
-          es: 'Crup (Estridor en bebés): 2 miligramos (Nebulización Masiva de Rescate en Urgencias en dosis única o 2x de 1mg). Asma profilaxis: 100-200 mcg 2x/día.'
+        "pediatric": {
+          "pt": "Suspensão nebulizada é rotulada para manutenção da asma em crianças de 12 meses a 8 anos; dose depende do tratamento prévio e controle.",
+          "es": "La suspensión nebulizada está indicada para mantenimiento del asma en niños de 12 meses a 8 años; la dosis depende del tratamiento previo y control."
         }
       },
-      administration: { pt: ['As gotas/flaconetes para nebulização devem ser usadas com O2 e máscara. Pode demorar de 10 a 15 min para nebulizar todo o volume.', 'Obrigatório lavar o rosto do bebê após a nebulização, pois o corticoide que fica na pele da máscara afina e irrita o rosto da criança.'], es: ['Las gotas/viales para nebulización deben usarse con O2 y máscara. Puede tardar de 10 a 15 min en nebulizar.', 'Obligatorio lavar la cara del bebé tras la nebulización, pues el corticoide que queda en la piel de la máscara afina e irrita la cara del niño.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem ajuste.', es: 'Sin ajuste.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Em cirrose hepática severa, aquele metabolismo de "90% destruído" falha, e a droga atinge o sangue do paciente com força de corticoide sistêmico.', es: 'En cirrosis hepática severa, ese metabolismo de "90% destruido" falla, y la droga alcanza la sangre del paciente con fuerza de corticoide sistémico.' } },
-      commonAdverseEffects: { pt: ['Candidíase oral e Irritação da faringe', 'Rouquidão', 'Sangramento nasal (quando usado spray nasal)'], es: ['Candidiasis oral e Irritación de la faringe', 'Ronquera', 'Sangrado nasal (cuando se usa spray nasal)'] },
-      dangerousAdverseEffects: { pt: ['Síndrome de Cushing Iatrogênica (apenas se houver superdosagem maciça crônica ou interação hepática)'], es: ['Síndrome de Cushing Iatrogénico (solo si hay sobredosis masiva crónica o interacción hepática)'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade grave', 'Tuberculose pulmonar ativa não tratada'], es: ['Hipersensibilidad grave', 'Tuberculosis pulmonar activa no tratada'] },
-        relative: { pt: ['Herpes simplex ocular'], es: ['Herpes simplex ocular'] }
+      "administration": {
+        "pt": [
+          "Enxaguar a boca e cuspir após uso",
+          "Nebulização: usar nebulizador compatível conforme produto"
+        ],
+        "es": [
+          "Enjuagar la boca y escupir después del uso",
+          "Nebulización: usar nebulizador compatible según producto"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'A SALVAÇÃO DA PEDIATRIA: Bebês com "Crupe" (Laringite Estridulosa) chegam de madrugada no PS tossindo feito "cachorro" e asfixiando por edema de traqueia. A nebulização em dose alta de Budesonida (2mg) reduz o inchaço quase como mágica, evitando a intubação na sala vermelha.', es: 'LA SALVACIÓN DE LA PEDIATRÍA: Bebés con "Crup" llegan de madrugada tosiendo como "perro" y asfixiándose por edema de tráquea. La nebulización en dosis alta de Budesonida (2mg) reduce la hinchazón casi como magia, evitando la intubación.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro.",
+          "es": "Sin ajuste renal rutinario."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Hepatopatia grave pode aumentar exposição sistêmica; monitorar efeitos corticosteroides.",
+          "es": "La hepatopatía grave puede aumentar exposición sistémica; monitorizar efectos corticosteroides."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Candidíase oral",
+          "Disfonia",
+          "Tosse"
+        ],
+        "es": [
+          "Candidiasis oral",
+          "Disfonía",
+          "Tos"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Supressão adrenal em altas doses",
+          "Redução de crescimento pediátrico",
+          "Broncoespasmo paradoxal"
+        ],
+        "es": [
+          "Supresión adrenal a dosis altas",
+          "Reducción del crecimiento pediátrico",
+          "Broncoespasmo paradójico"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Tratamento primário de status asmático/broncoespasmo agudo"
+          ],
+          "es": [
+            "Tratamiento primario de status asmático/broncoespasmo agudo"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Infecções não tratadas, uso de inibidores potentes CYP3A4"
+          ],
+          "es": [
+            "Infecciones no tratadas, uso de inhibidores potentes CYP3A4"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "ICS é terapia controladora fundamental na asma. Enxaguar a boca após inalação para reduzir candidíase.",
+          "es": "ICS es terapia controladora fundamental en asma. Enjuagar la boca después de inhalar para reducir candidiasis."
+        }
       }
     },
 
     /* ── FLUTICASONA ────────────────────────────────────────────────────── */
     "fluticasona": {
-      name: { pt: 'Fluticasona (Propionato / Furoato)', es: 'Fluticasona (Propionato / Furoato)' },
-      category: 'pneumologia',
-      class: { pt: 'Corticosteroide Inalatório / Nasal', es: 'Corticosteroide Inhalatorio / Nasal' },
-      indications: {
-        pt: ['Tratamento de manutenção profilática da Asma severa', 'Doença Pulmonar Obstrutiva Crônica (DPOC) em terapias combinadas', 'Rinite alérgica grave (uso nasal)'],
-        es: ['Tratamiento de mantenimiento profiláctico del Asma severa', 'Enfermedad Pulmonar Obstructiva Crónica (EPOC) en terapias combinadas', 'Rinitis alérgica grave (uso nasal)']
+      "name": {
+        "pt": "Fluticasona",
+        "es": "Fluticasona"
       },
-      commercialNames: { br: ['Flixotide', 'Seretide (Assoc)', 'Avamys'], ar: ['Flixotide', 'Seretide'] },
-      presentation: { pt: ['Spray Inalatório HFA 50 e 250 mcg/dose', 'Pó Inalatório (Diskus) 50, 100 e 250 mcg', 'Spray Nasal'], es: ['Spray Inhalatorio HFA 50 y 250 mcg/dosis', 'Polvo Inhalatorio (Diskus) 50, 100 y 250 mcg', 'Spray Nasal'] },
-      mechanism: {
-        pt: 'Glicocorticoide sintético de potência anti-inflamatória altíssima (muito superior à beclometasona). Possui uma afinidade extrema pelos receptores de glicocorticoides no pulmão. Sua lipofilicidade faz com que ele "grude" no tecido pulmonar e fique agindo por longos períodos. O que é engolido sofre metabolismo de primeira passagem quase total (99%) no fígado, minimizando efeitos no resto do corpo.',
-        es: 'Glucocorticoide sintético de potencia antiinflamatoria altísima. Posee una afinidad extrema por los receptores de glucocorticoides en el pulmón. Su lipofilicidad hace que se "pegue" al tejido pulmonar y actúe por largos períodos. Lo que se traga sufre metabolismo de primera pasada casi total (99%) en el hígado, minimizando efectos en el resto del cuerpo.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Corticosteroide inalatório (ICS)",
+        "es": "Corticosteroide inhalado (ICS)"
       },
-      dose: {
-        adult: {
-          pt: 'Asma: 100 a 500 mcg a cada 12 horas. (Geralmente prescrito em inaladores combinados com Salmeterol ou Vilanterol).',
-          es: 'Asma: 100 a 500 mcg cada 12 horas. (Generalmente prescrito en inhaladores combinados con Salmeterol o Vilanterol).'
+      "indications": {
+        "pt": [
+          "Manutenção/profilaxia da asma"
+        ],
+        "es": [
+          "Mantenimiento/profilaxis del asma"
+        ]
+      },
+      "mechanism": {
+        "pt": "Glicocorticoide inalatório de alta afinidade reduz mediadores inflamatórios das vias aéreas.",
+        "es": "Glucocorticoide inhalado de alta afinidad reduce mediadores inflamatorios de las vías aéreas."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dose depende do dispositivo e tratamento prévio; usar a menor dose eficaz.",
+          "es": "La dosis depende del dispositivo y tratamiento previo; usar la menor dosis eficaz."
         },
-        pediatric: {
-          pt: '50 a 100 mcg a cada 12 horas (Acima de 4 anos).',
-          es: '50 a 100 mcg cada 12 horas (Por encima de 4 años).'
+        "pediatric": {
+          "pt": "Propionato HFA é rotulado para manutenção da asma a partir de 4 anos em formulações específicas.",
+          "es": "Propionato HFA está indicado para mantenimiento del asma desde 4 años en formulaciones específicas."
         }
       },
-      administration: { pt: ['Mandatório lavar a boca ou escovar os dentes imediatamente após o uso para não desenvolver fungos na orofaringe.'], es: ['Obligatorio lavar la boca o cepillarse los dientes inmediatamente después del uso para no desarrollar hongos en la orofaringe.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste clínico.', es: 'Sin necesidad de ajuste clínico.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Em cirrose severa, o remédio que é engolido não é destruído e cai no sangue, causando síndrome de Cushing metabólica iatrogênica.', es: 'En cirrosis severa, el remedio que se traga no es destruido y cae en la sangre, causando síndrome de Cushing metabólico iatrogénico.' } },
-      commonAdverseEffects: { pt: ['Candidíase oral (incidência muito alta se não usar espaçador/lavar a boca)', 'Rouquidão (Miopatia vocal)'], es: ['Candidiasis oral (incidencia muy alta si no se usa espaciador/lavar la boca)', 'Ronquera (Miopatía vocal)'] },
-      dangerousAdverseEffects: { pt: ['Pneumonia adquirida na comunidade (Em pacientes com DPOC avançada que usam altas doses diárias)', 'Supressão Adrenal aguda se interrompido abruptamente'], es: ['Neumonía adquirida en la comunidad (En pacientes con EPOC avanzada que usan altas dosis diarias)', 'Supresión Adrenal aguda si se interrumpe abruptamente'] },
-      contraindications: {
-        absolute: { pt: ['Tratamento de crise aguda de asma/broncoespasmo como droga isolada de alívio'], es: ['Tratamiento de crisis aguda de asma/broncoespasmo como droga aislada de alivio'] },
-        relative: { pt: ['Infecção não controlada no trato respiratório'], es: ['Infección no controlada en el tracto respiratorio'] }
+      "administration": {
+        "pt": [
+          "Enxaguar a boca e cuspir após uso",
+          "Não usar como resgate"
+        ],
+        "es": [
+          "Enjuagar la boca y escupir después del uso",
+          "No usar como rescate"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'A fluticasona é o corticoide inalatório MAIS SUSCETÍVEL à interação medicamentosa letal com inibidores do HIV (Ritonavir) e antifúngicos (Itraconazol). O uso associado trava o fígado e inunda o corpo com corticoide em níveis tóxicos fulminantes.', es: 'La fluticasona es el corticoide inhalatorio MÁS SUSCEPTIBLE a la interacción medicamentosa letal con inhibidores del VIH (Ritonavir) y antifúngicos. El uso asociado traba el hígado e inunda el cuerpo con corticoide en niveles tóxicos.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro.",
+          "es": "Sin ajuste renal rutinario."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Hepatopatia pode aumentar exposição; monitorar efeitos sistêmicos.",
+          "es": "La hepatopatía puede aumentar exposición; monitorizar efectos sistémicos."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Candidíase oral",
+          "Disfonia",
+          "Faringite"
+        ],
+        "es": [
+          "Candidiasis oral",
+          "Disfonía",
+          "Faringitis"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Supressão adrenal",
+          "Redução de crescimento",
+          "Interação importante com inibidores fortes CYP3A4"
+        ],
+        "es": [
+          "Supresión adrenal",
+          "Reducción del crecimiento",
+          "Interacción importante con inhibidores potentes CYP3A4"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Tratamento primário de status asmático"
+          ],
+          "es": [
+            "Tratamiento primario de status asmático"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Uso de ritonavir/cobicistat ou outros inibidores fortes CYP3A4"
+          ],
+          "es": [
+            "Uso de ritonavir/cobicistat u otros inhibidores potentes CYP3A4"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "Inibidores potentes de CYP3A4 podem aumentar muito a exposição sistêmica à fluticasona e causar supressão adrenal.",
+          "es": "Inhibidores potentes de CYP3A4 pueden aumentar mucho la exposición sistémica a fluticasona y causar supresión adrenal."
+        }
       }
     },
 
@@ -813,81 +1361,223 @@
 
     /* ── TEOFILINA ──────────────────────────────────────────────────────── */
     "teofilina": {
-      name: { pt: 'Teofilina', es: 'Teofilina' },
-      category: 'pneumologia',
-      class: { pt: 'Broncodilatador Metilxantina', es: 'Broncodilatador Metilxantina' },
-      indications: {
-        pt: ['Asma crônica grave (como terapia adjuvante de 3ª linha)', 'Doença Pulmonar Obstrutiva Crônica (DPOC) refratária'],
-        es: ['Asma crónica grave (como terapia adyuvante de 3ª línea)', 'Enfermedad Pulmonar Obstructiva Crónica (EPOC) refractaria']
+      "name": {
+        "pt": "Teofilina",
+        "es": "Teofilina"
       },
-      commercialNames: { br: ['Talofilina', 'Teolong'], ar: ['Teofilina'] },
-      presentation: { pt: ['Cápsulas/Comprimidos de liberação prolongada 100 mg, 200 mg, 300 mg', 'Xarope'], es: ['Cápsulas/Comprimidos de liberación prolongada 100 mg, 200 mg, 300 mg', 'Jarabe'] },
-      mechanism: {
-        pt: 'Ação dupla e complexa: Inibe a enzima Fosfodiesterase (PDE), causando acúmulo de AMPc e GMPc (o que gera relaxamento do brônquio). Simultaneamente, é um forte ANTAGONISTA dos receptores de Adenosina no corpo. Esse bloqueio da adenosina estimula violentamente o Sistema Nervoso Central (como uma super-dose de cafeína) e acelera o coração. A janela entre a dose que cura a asma e a dose que mata é minúscula.',
-        es: 'Acción doble y compleja: Inhibe la enzima Fosfodiesterasa (PDE), causando acumulación de AMPc y GMPc (lo que genera relajación del bronquio). Simultáneamente, es un fuerte ANTAGONISTA de los receptores de Adenosina. Este bloqueo de la adenosina estimula violentamente el Sistema Nervioso Central y acelera el corazón. La ventana entre la dosis que cura y la que mata es minúscula.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Metilxantina broncodilatadora de estreita janela terapêutica",
+        "es": "Metilxantina broncodilatadora de estrecho margen terapéutico"
       },
-      dose: {
-        adult: {
-          pt: 'Manutenção: 300 a 600 mg/dia divididos a cada 12 horas. (Exige exame de sangue constante "Teofilinemia", o nível deve ficar entre 10 e 15 mcg/mL).',
-          es: 'Mantenimiento: 300 a 600 mg/día divididos cada 12 horas. (Exige examen de sangre constante "Teofilinemia", el nivel debe quedar entre 10 y 15 mcg/mL).'
+      "indications": {
+        "pt": [
+          "Broncoespasmo crônico em contextos selecionados quando alternativas são inadequadas"
+        ],
+        "es": [
+          "Broncoespasmo crónico en contextos seleccionados cuando alternativas son inadecuadas"
+        ]
+      },
+      "mechanism": {
+        "pt": "Relaxamento de músculo liso e efeitos não broncodilatadores por mecanismos envolvendo inibição de fosfodiesterase/antagonismo de adenosina.",
+        "es": "Relajación del músculo liso y efectos no broncodilatadores por mecanismos que incluyen inhibición de fosfodiesterasa/antagonismo de adenosina."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dose deve ser individualizada por nível sérico, idade, tabagismo, comorbidades e interações. Não titular apenas por sintomas.",
+          "es": "La dosis debe individualizarse por nivel sérico, edad, tabaquismo, comorbilidades e interacciones. No titular solo por síntomas."
         },
-        pediatric: {
-          pt: 'Acima de 1 ano: 10 a 16 mg/kg/dia divididos a cada 12h. (Maior risco de intoxicação infantil).',
-          es: 'Por encima de 1 año: 10 a 16 mg/kg/día divididos cada 12h. (Mayor riesgo de intoxicación infantil).'
+        "pediatric": {
+          "pt": "Dose pediátrica é individualizada por idade/peso e monitorização sérica; exige protocolo específico.",
+          "es": "La dosis pediátrica se individualiza por edad/peso y monitorización sérica; requiere protocolo específico."
         }
       },
-      administration: { pt: ['Comprimidos de liberação lenta não devem ser partidos ou mastigados.', 'Evitar consumo excessivo de café ou energéticos (potencializam a toxicidade).'], es: ['Comprimidos de liberación lenta no deben ser partidos o masticados.', 'Evitar consumo excesivo de café o energéticos (potencian la toxicidad).'] },
-      renalAdjustment: { required: false, message: { pt: 'Depuração hepática dominante.', es: 'Depuración hepática dominante.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Atenção máxima. Se o fígado falhar, a teofilina não é destruída e o paciente entra em convulsão. Reduzir dose na cirrose.', es: 'Atención máxima. Si el hígado falla, la teofilina no es destruida y el paciente entra en convulsión. Reducir dosis en cirrosis.' } },
-      commonAdverseEffects: { pt: ['Náuseas severas e vômitos incontroláveis (sinal precoce de toxicidade)', 'Insônia e agitação extrema', 'Taquicardia'], es: ['Náuseas severas y vómitos incontrolables (signo precoz de toxicidad)', 'Insomnio y agitación extrema', 'Taquicardia'] },
-      dangerousAdverseEffects: { pt: ['CONVULSÕES REFRATÁRIAS AO DIAZEPAM (Se nível sanguíneo > 20 mcg/mL)', 'Arritmias Ventriculares e Fibrilação'], es: ['CONVULSIONES REFRACTARIAS AL DIAZEPAM (Si nivel sanguíneo > 20 mcg/mL)', 'Arritmias Ventriculares y Fibrilación'] },
-      contraindications: {
-        absolute: { pt: ['Úlcera péptica ativa severa', 'Arritmias não controladas'], es: ['Úlcera péptica activa severa', 'Arritmias no controladas'] },
-        relative: { pt: ['Epilepsia preexistente'], es: ['Epilepsia preexistente'] }
+      "administration": {
+        "pt": [
+          "Monitorar concentração sérica após mudanças de dose, doença febril, tabagismo ou interações",
+          "Evitar escalada em exacerbação aguda sem nível sérico"
+        ],
+        "es": [
+          "Monitorizar concentración sérica tras cambios de dosis, enfermedad febril, tabaquismo o interacciones",
+          "Evitar aumento en exacerbación aguda sin nivel sérico"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'A DROGA DE JANELA ESTREITA: A teofilina foi quase abandonada pela medicina moderna pelo seu risco. Qualquer virose, febre ou introdução de um antibiótico novo no paciente faz o nível da droga explodir no sangue, causando vômitos em jato seguidos de convulsão e morte cerebral.', es: 'LA DROGA DE VENTANA ESTRECHA: La teofilina fue casi abandonada por la medicina moderna por su riesgo. Cualquier virosis, fiebre o introducción de un antibiótico nuevo hace que el nivel de la droga explote en la sangre, causando vómitos en chorro y convulsión.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Em adultos, depuração é predominantemente hepática; ajustar por níveis e contexto clínico.",
+          "es": "En adultos, la depuración es predominantemente hepática; ajustar por niveles y contexto clínico."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Hepatopatia reduz depuração e exige redução de dose/monitorização sérica estreita.",
+          "es": "La hepatopatía reduce depuración y exige reducción de dosis/monitorización sérica estrecha."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Tremor",
+          "Insônia",
+          "Cefaleia"
+        ],
+        "es": [
+          "Náuseas",
+          "Temblor",
+          "Insomnio",
+          "Cefalea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Convulsões",
+          "Taquiarritmias",
+          "Toxicidade potencialmente fatal"
+        ],
+        "es": [
+          "Convulsiones",
+          "Taquiarritmias",
+          "Toxicidad potencialmente fatal"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Arritmias, epilepsia, hepatopatia, interações CYP"
+          ],
+          "es": [
+            "Arritmias, epilepsia, hepatopatía, interacciones CYP"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "Estreita janela terapêutica e muitas interações. GINA não recomenda teofilina oral rotineiramente para asma por maior risco de efeitos adversos.",
+          "es": "Estrecho margen terapéutico y muchas interacciones. GINA no recomienda teofilina oral rutinariamente para asma por mayor riesgo de efectos adversos."
+        }
       }
     },
 
     /* ── AMINOFILINA ────────────────────────────────────────────────────── */
     "aminofilina": {
-      name: { pt: 'Aminofilina', es: 'Aminofilina' },
-      category: 'pneumologia',
-      class: { pt: 'Broncodilatador Metilxantina Endovenoso', es: 'Broncodilatador Metilxantina Endovenoso' },
-      indications: {
-        pt: ['Asma aguda grave e Status Asthmaticus na UTI (Resgate de última linha quando inaladores e corticoide falharam)', 'Tratamento de apneia da prematuridade em UTIN'],
-        es: ['Asma aguda grave y Status Asthmaticus en UCI (Rescate de última línea cuando inhaladores y corticoide fallaron)', 'Tratamiento de apnea de la prematuridad en UCIN']
+      "name": {
+        "pt": "Aminofilina",
+        "es": "Aminofilina"
       },
-      commercialNames: { br: ['Aminofilina Ampolas'], ar: ['Aminofilina'] },
-      presentation: { pt: ['Ampolas IV 24 mg/mL (10 mL = 240 mg)'], es: ['Ampollas IV 24 mg/mL (10 mL = 240 mg)'] },
-      mechanism: {
-        pt: 'É um complexo salino que contém cerca de 80% de Teofilina Pura misturada com etilenodiamina (que a torna solúvel em água para injeção na veia). Na corrente sanguínea, ela solta a Teofilina livre, bloqueando receptores de adenosina e forçando o brônquio travado a relaxar sob força bruta sistêmica. Aumenta diretamente o drive e a força do músculo diafragma.',
-        es: 'Es un complejo salino que contiene un 80% de Teofilina Pura mezclada con etilendiamina (que la hace soluble en agua para inyección). En la sangre, suelta la Teofilina libre, bloqueando receptores de adenosina y forzando el bronquio a relajarse. Aumenta directamente la fuerza del músculo diafragma.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Complexo de teofilina/etilenodiamina; metilxantina IV",
+        "es": "Complejo de teofilina/etilendiamina; metilxantina IV"
       },
-      dose: {
-        adult: {
-          pt: 'Ataque: 5 a 6 mg/kg IV (LENTO, correr em 30 min). Manutenção: Infusão contínua de 0,5 mg/kg/hora. (Reduzir a dose de ataque se paciente já usar teofilina oral em casa!).',
-          es: 'Ataque: 5 a 6 mg/kg IV (LENTO, correr en 30 min). Mantenimiento: Infusión continua de 0,5 mg/kg/hora. (¡Reducir dosis si paciente usa teofilina oral!).'
+      "indications": {
+        "pt": [
+          "Broncodilatação IV em situações selecionadas quando terapias inalatórias adequadas não são suficientes/possíveis"
+        ],
+        "es": [
+          "Broncodilatación IV en situaciones seleccionadas cuando terapias inhaladas adecuadas no son suficientes/posibles"
+        ]
+      },
+      "mechanism": {
+        "pt": "Libera teofilina; promove broncodilatação por mecanismos de metilxantina.",
+        "es": "Libera teofilina; produce broncodilatación por mecanismos de metilxantina."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Aminofilina IV deve ser dosada com base em teofilina equivalente, nível sérico prévio, idade e depuração. Infusão lenta; não usar carga sem conhecer uso recente de teofilina.",
+          "es": "Aminofilina IV debe dosificarse en base a teofilina equivalente, nivel sérico previo, edad y depuración. Infusión lenta; no usar carga sin conocer uso reciente de teofilina."
         },
-        pediatric: {
-          pt: 'Apneia Neonatal: 5 a 6 mg/kg IV ataque, seguido de manutenção.',
-          es: 'Apnea Neonatal: 5 a 6 mg/kg IV ataque, seguido de mantenimiento.'
+        "pediatric": {
+          "pt": "Uso pediátrico exige protocolo de dose por peso e monitorização sérica contínua; não extrapolar dose adulta.",
+          "es": "El uso pediátrico requiere protocolo por peso y monitorización sérica continua; no extrapolar dosis adulta."
         }
       },
-      administration: { pt: ['NUNCA FAZER EM BOLUS RÁPIDO. O paciente terá uma parada cardíaca súbita e convulsão na mesa. A dose de ataque deve correr na bomba ou microgotas por no mínimo 30 minutos.'], es: ['NUNCA HACER EN BOLO RÁPIDO. El paciente tendrá un paro cardíaco súbito y convulsión en la mesa. La dosis de ataque debe correr en bomba por al menos 30 minutos.'] },
-      renalAdjustment: { required: false, message: { pt: 'O metabolismo é hepático, sem ajuste direto na DRC.', es: 'Metabolismo es hepático, sin ajuste directo en la ERC.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Pacientes com Cor Pulmonale severo (DPOC) frequentemente têm fígado congestionado. A dose de manutenção deve ser reduzida pela metade para não matar o paciente intoxicado.', es: 'Pacientes con Cor Pulmonale severo (EPOC) frecuentemente tienen hígado congestionado. La dosis de mantenimiento debe reducirse a la mitad para no matar al paciente.' } },
-      commonAdverseEffects: { pt: ['Rubor e sensação de calor na injeção', 'Agitação e confusão mental', 'Taquicardia sinusal'], es: ['Rubor y sensación de calor en la inyección', 'Agitación y confusión mental', 'Taquicardia sinusal'] },
-      dangerousAdverseEffects: { pt: ['Estado de Mal Epiléptico induzido (Status Epilepticus)', 'Taquicardia Ventricular / Fibrilação Ventricular', 'Vômitos em borra de café (Isquemia mucosa)'], es: ['Estado de Mal Epiléptico inducido', 'Taquicardia Ventricular / Fibrilación Ventricular', 'Vómitos en posos de café (Isquemia mucosa)'] },
-      contraindications: {
-        absolute: { pt: ['Uso associado a bloqueadores Beta-1/Beta-2 não seletivos (antagonismo fatal)'], es: ['Uso asociado a bloqueadores Beta-1/Beta-2 no selectivos (antagonismo fatal)'] },
-        relative: { pt: ['Infarto Agudo do Miocárdio ativo (o coração vai consumir muito oxigênio e necrosar)'], es: ['Infarto Agudo de Miocardio activo (el corazón consumirá mucho oxígeno y se necrosará)'] }
+      "administration": {
+        "pt": [
+          "Administração IV lenta/diluída conforme produto",
+          "Verificar uso recente de teofilina antes de dose de ataque",
+          "Monitorar ECG e níveis séricos em uso relevante"
+        ],
+        "es": [
+          "Administración IV lenta/diluida según producto",
+          "Verificar uso reciente de teofilina antes de dosis de carga",
+          "Monitorizar ECG y niveles séricos en uso relevante"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'O INIMIGO DA ADENOSINA: Se o paciente na UTI desenvolvendo taquicardia por Aminofilina sofrer uma arritmia SVT (Supraventricular) e o médico aplicar Adenosina para "resetar" o coração, a adenosina NÃO FARÁ EFEITO. A Aminofilina blinda os receptores do coração, inutilizando a adenosina.', es: 'EL ENEMIGO DE LA ADENOSINA: Si el paciente en la UCI hace taquicardia por Aminofilina y sufre una SVT, y el médico aplica Adenosina para "resetear", la adenosina NO HARÁ EFECTO. La Aminofilina blinda los receptores.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Ajuste guiado por nível sérico e fatores clínicos, não por fórmula renal isolada.",
+          "es": "Ajuste guiado por nivel sérico y factores clínicos, no por fórmula renal aislada."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Reduzir manutenção em hepatopatia/IC/febre prolongada e monitorar nível sérico.",
+          "es": "Reducir mantenimiento en hepatopatía/IC/fiebre prolongada y monitorizar nivel sérico."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Vômitos",
+          "Tremor",
+          "Taquicardia"
+        ],
+        "es": [
+          "Náuseas",
+          "Vómitos",
+          "Temblor",
+          "Taquicardia"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Arritmias",
+          "Convulsões",
+          "Hipotensão com infusão rápida",
+          "Toxicidade fatal"
+        ],
+        "es": [
+          "Arritmias",
+          "Convulsiones",
+          "Hipotensión con infusión rápida",
+          "Toxicidad fatal"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade a xantinas/etilenodiamina"
+          ],
+          "es": [
+            "Hipersensibilidad a xantinas/etilendiamina"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Arritmias, epilepsia, hepatopatia, uso recente de teofilina"
+          ],
+          "es": [
+            "Arritmias, epilepsia, hepatopatía, uso reciente de teofilina"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "Aminofilina IV tem estreita janela terapêutica. Dose deve considerar teofilina sérica e uso prévio; infusão rápida aumenta toxicidade.",
+          "es": "Aminofilina IV tiene estrecho margen terapéutico. La dosis debe considerar teofilina sérica y uso previo; la infusión rápida aumenta toxicidad."
+        }
       }
     },
 
@@ -1573,41 +2263,109 @@
 
     /* ── LORATADINA ─────────────────────────────────────────────────────── */
     "loratadina": {
-      name: { pt: 'Loratadina', es: 'Loratadina' },
-      category: 'alergia_imunologia',
-      class: { pt: 'Anti-histamínico H1 de 2ª Geração (Não Sedativo)', es: 'Antihistamínico H1 de 2ª Generación (No Sedante)' },
-      indications: {
-        pt: ['Rinite alérgica sazonal e perene', 'Urticária crônica idiopática', 'Alívio rápido de coceira, espirros e coriza nasal'],
-        es: ['Rinitis alérgica estacional y perenne', 'Urticaria crónica idiopática', 'Alivio rápido de picor, estornudos y secreción nasal']
+      "name": {
+        "pt": "Loratadina",
+        "es": "Loratadina"
       },
-      commercialNames: { br: ['Claritin', 'Loratamed'], ar: ['Aerotina'] },
-      presentation: { pt: ['Comprimidos 10 mg', 'Xarope 1 mg/mL'], es: ['Comprimidos 10 mg', 'Jarabe 1 mg/mL'] },
-      mechanism: {
-        pt: 'Bloqueador potente, de longa duração e EXTREMAMENTE SELETIVO dos receptores periféricos de Histamina (H1). Como a molécula foi desenhada para ser "gorda e grande", ela NÃO CONSEGUE atravessar a Barreira Hematoencefálica. Ou seja, ela bloqueia a alergia na pele, nariz e pulmão, mas não atinge o cérebro (logo, não dá sono na esmagadora maioria dos pacientes).',
-        es: 'Bloqueador potente, de larga duración y EXTREMADAMENTE SELECTIVO de los receptores periféricos de Histamina (H1). Como la molécula fue diseñada para ser "gorda y grande", NO LOGRA atravesar la Barrera Hematoencefálica. Es decir, bloquea la alergia, pero no alcanza el cerebro (no da sueño en la mayoría de los pacientes).'
+      "category": "alergia",
+      "class": {
+        "pt": "Anti-histamínico H1 de segunda geração",
+        "es": "Antihistamínico H1 de segunda generación"
       },
-      dose: {
-        adult: {
-          pt: '10 mg via oral UMA VEZ ao dia.',
-          es: '10 mg vía oral UNA VEZ al día.'
+      "indications": {
+        "pt": [
+          "Rinite alérgica",
+          "Sintomas de alergia respiratória"
+        ],
+        "es": [
+          "Rinitis alérgica",
+          "Síntomas de alergia respiratoria"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagonista/inverso agonista periférico H1, geralmente pouco sedativo em doses usuais.",
+        "es": "Antagonista/agonista inverso periférico H1, generalmente poco sedante a dosis habituales."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Adultos e ≥6 anos: 10 mg VO 1x/dia.",
+          "es": "Adultos y ≥6 años: 10 mg VO 1 vez/día."
         },
-        pediatric: {
-          pt: '2 a 12 anos (< 30 kg): 5 mg (5 mL) 1x ao dia. Acima de 30 kg: 10 mg (10 mL) 1x ao dia.',
-          es: '2 a 12 años (< 30 kg): 5 mg (5 mL) 1x al día. Por encima de 30 kg: 10 mg (10 mL) 1x al día.'
+        "pediatric": {
+          "pt": "2–5 anos: 5 mg VO 1x/dia em formulação pediátrica; <2 anos depende de produto/indicação.",
+          "es": "2–5 años: 5 mg VO 1 vez/día en formulación pediátrica; <2 años depende de producto/indicación."
         }
       },
-      administration: { pt: ['Pode ser tomado com ou sem alimentos. Efeito dura 24 horas.'], es: ['Puede ser tomado con o sin alimentos. Efecto dura 24 horas.'] },
-      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min: Dar a dose de 10 mg em dias alternados (1 dia sim, 1 dia não).', es: 'Si ClCr < 30 mL/min: Dar la dosis de 10 mg en días alternos (1 día sí, 1 día no).' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Em insuficiência hepática grave, usar 10 mg em dias alternados.', es: 'En insuficiencia hepática grave, usar 10 mg en días alternos.' } },
-      commonAdverseEffects: { pt: ['Cefaleia', 'Boca seca leve (xerostomia)', 'Fadiga residual (em menos de 4% dos pacientes)'], es: ['Cefalea', 'Boca seca leve (xerostomía)', 'Fatiga residual (en menos de 4% de los pacientes)'] },
-      dangerousAdverseEffects: { pt: ['Nenhum efeito sistêmico vital comum. Muito segura em sobredosagem acidental.'], es: ['Ningún efecto sistémico vital común. Muy segura en sobredosis accidental.'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade grave aos componentes da fórmula'], es: ['Hipersensibilidad grave a los componentes de la fórmula'] },
-        relative: { pt: ['Uso associado com inibidores potentes do CYP3A4 (Pode aumentar o nível da loratadina, embora sem consequências fatais como nos de 1ª geração)'], es: ['Uso asociado con inhibidores potentes del CYP3A4 (Puede aumentar el nivel de la loratadina, aunque sin consecuencias fatales)'] }
+      "administration": {
+        "pt": [
+          "VO 1x/dia",
+          "Não exceder a dose; doses acima do recomendado podem causar sonolência"
+        ],
+        "es": [
+          "VO 1 vez/día",
+          "No exceder la dosis; dosis superiores a la recomendada pueden causar somnolencia"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'FIM DO SONO: É o antialérgico ideal para motoristas, pilotos e trabalhadores diurnos. Diferente da Prometazina ou Dexclorfeniramina (Polaramine) que "desmaiam" o paciente de sono, a Loratadina permite a cura da coriza mantendo a vigilância intacta.', es: 'FIN DEL SUEÑO: Es el antialérgico ideal para conductores y trabajadores. A diferencia de la Prometazina que "desmaya" al paciente de sueño, la Loratadina permite curar la coriza manteniendo la vigilancia intacta.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Doença renal pode exigir intervalo/dose diferente; individualizar conforme produto e gravidade.",
+          "es": "La enfermedad renal puede requerir intervalo/dosis diferente; individualizar según producto y gravedad."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Hepatopatia pode exigir intervalo/dose diferente; individualizar.",
+          "es": "La hepatopatía puede requerir intervalo/dosis diferente; individualizar."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Cefaleia",
+          "Sonolência ocasional"
+        ],
+        "es": [
+          "Cefalea",
+          "Somnolencia ocasional"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Reação de hipersensibilidade rara"
+        ],
+        "es": [
+          "Reacción de hipersensibilidad rara"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "DRC, hepatopatia"
+          ],
+          "es": [
+            "ERC, hepatopatía"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Em doença renal ou hepática, a dose/intervalo pode precisar de ajuste; evitar automedicação acima de 10 mg/dia.",
+          "es": "En enfermedad renal o hepática, la dosis/intervalo puede requerir ajuste; evitar automedicación por encima de 10 mg/día."
+        }
       }
     },
 
@@ -2049,41 +2807,115 @@
 
 /* ── MONTELUCASTE ────────────────────────────────────────────────────── */
     "montelucaste": {
-      name: { pt: 'Montelucaste', es: 'Montelukast' },
-      category: 'pneumologia',
-      class: { pt: 'Antileucotrieno (Antagonista do Receptor de Cisteinil-Leucotrieno — ARLT)', es: 'Antileucotrieno (Antagonista del Receptor de Cisteinil-Leucotrieno — ARLT)' },
-      indications: {
-        pt: ['Profilaxia e tratamento crônico da Asma leve a moderada (2ª linha, adjuvante ao ICS)', 'Rinite Alérgica Sazonal e Perene em adultos e crianças', 'Prevenção de Broncoespasmo induzido por exercício'],
-        es: ['Profilaxis y tratamiento crónico del Asma leve a moderada (2ª línea, adyuvante al ICS)', 'Rinitis Alérgica Estacional y Perenne en adultos y niños', 'Prevención de Broncoespasmo inducido por ejercicio']
+      "name": {
+        "pt": "Montelucaste",
+        "es": "Montelukast"
       },
-      commercialNames: { br: ['Singulair', 'Brondilat', 'Montelair'], ar: ['Singulair', 'Montelukast Genérico'] },
-      presentation: { pt: ['Comprimidos mastigáveis 4 mg (2–5 anos) e 5 mg (6–14 anos)', 'Comprimidos revestidos 10 mg (adultos)', 'Sachê granulado 4 mg (6 meses – 5 anos)'], es: ['Comprimidos masticables 4 mg (2-5 años) y 5 mg (6-14 años)', 'Comprimidos recubiertos 10 mg (adultos)', 'Sobre granulado 4 mg (6 meses – 5 años)'] },
-      mechanism: {
-        pt: 'Os leucotrienos (LTC4, LTD4, LTE4) são os "bombeiros incendiários" da Asma: ao mesmo tempo em que chegam para combater o alérgeno, eles contraem o músculo brônquico, produzem muco em excesso e inflamam as paredes das vias aéreas. O Montelucaste bloqueia seletivamente o receptor CysLT1, impedindo que esses leucotrienos se "encaixem" e disparem essa cascata. Resultado: brônquios mais abertos, menos secreção e menos inflamação — especialmente em Asma alérgica e na Asma por AINEs.',
-        es: 'Los leucotrienos son los "bomberos incendiarios" del Asma: contraen el músculo bronquial, producen moco en exceso e inflaman las paredes. El Montelukast bloquea selectivamente el receptor CysLT1, impidiendo que los leucotrienos disparen la cascada. Resultado: bronquios más abiertos, menos moco, menos inflamación.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Antagonista do receptor de leucotrieno CysLT1",
+        "es": "Antagonista del receptor de leucotrieno CysLT1"
       },
-      dose: {
-        adult: {
-          pt: '10 mg por via oral, UMA VEZ ao dia, preferencialmente à noite.',
-          es: '10 mg por vía oral, UNA VEZ al día, preferentemente por la noche.'
+      "indications": {
+        "pt": [
+          "Profilaxia e tratamento crônico da asma",
+          "Prevenção de broncoconstrição induzida por exercício",
+          "Rinite alérgica apenas quando alternativas são inadequadas/intoleradas"
+        ],
+        "es": [
+          "Profilaxis y tratamiento crónico del asma",
+          "Prevención de broncoconstricción inducida por ejercicio",
+          "Rinitis alérgica solo cuando alternativas son inadecuadas/no toleradas"
+        ]
+      },
+      "mechanism": {
+        "pt": "Bloqueia receptores CysLT1 e reduz efeitos dos leucotrienos cisteinílicos em vias aéreas e mucosa nasal.",
+        "es": "Bloquea receptores CysLT1 y reduce efectos de leucotrienos cisteinílicos en vías aéreas y mucosa nasal."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Adultos e ≥15 anos: 10 mg VO 1x/dia; para asma, geralmente à noite. Não usar dose extra para crise aguda.",
+          "es": "Adultos y ≥15 años: 10 mg VO 1 vez/día; para asma, generalmente por la noche. No usar dosis extra para crisis aguda."
         },
-        pediatric: {
-          pt: '6 meses–5 anos: 4 mg/dia (granulado ou mastigável). 6–14 anos: 5 mg/dia (mastigável). ≥ 15 anos: 10 mg/dia (comprimido adulto).',
-          es: '6 meses-5 años: 4 mg/día (granulado o masticable). 6-14 años: 5 mg/día (masticable). ≥ 15 años: 10 mg/día (comprimido adulto).'
+        "pediatric": {
+          "pt": "6–14 anos: 5 mg 1x/dia; 2–5 anos: 4 mg 1x/dia; 6–23 meses: 4 mg granulado para indicações autorizadas por idade.",
+          "es": "6–14 años: 5 mg 1 vez/día; 2–5 años: 4 mg 1 vez/día; 6–23 meses: 4 mg granulado para indicaciones autorizadas por edad."
         }
       },
-      administration: { pt: ['Pode ser tomado com ou sem alimento.', 'Preferir a dose noturna porque a broncoconstrição noturna é o padrão mais comum na asma.'], es: ['Puede tomarse con o sin alimento.', 'Preferir la dosis nocturna porque la broncoconstricción nocturna es el patrón más común.'] },
-      renalAdjustment: { required: false, message: { pt: 'Não requer ajuste. Eliminação biliar predominante.', es: 'No requiere ajuste. Eliminación biliar predominante.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Cirrose leve a moderada: usar com cautela. Cirrose grave (Child-Pugh C): evitar.', es: 'Cirrosis leve a moderada: usar con cautela. Cirrosis grave (Child-Pugh C): evitar.' } },
-      commonAdverseEffects: { pt: ['Cefaleia', 'Infecção de vias aéreas superiores', 'Dor abdominal (especialmente em crianças)'], es: ['Cefalea', 'Infección de vías aéreas superiores', 'Dolor abdominal (especialmente en niños)'] },
-      dangerousAdverseEffects: { pt: ['Neuropsiquiátricos graves (FDA Black Box Warning): ideação suicida, agressividade, alucinações, sonambulismo, pesadelos — especialmente em crianças e adolescentes', 'Síndrome de Churg-Strauss (vasculite eosinofílica — ao reduzir corticoide sistêmico)'], es: ['Neuropsiquiátricos graves (FDA Black Box Warning): ideación suicida, agresividad, alucinaciones, sonambulismo — especialmente en niños', 'Síndrome de Churg-Strauss (vasculitis eosinofílica — al reducir corticoide sistémico)'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade ao Montelucaste'], es: ['Hipersensibilidad al Montelukast'] },
-        relative: { pt: ['Pacientes com histórico de transtornos neuropsiquiátricos (depressão, transtorno bipolar, psicose) — revisão obrigatória do risco/benefício', 'Fenilcetonúria (comprimidos mastigáveis contêm aspartame)'], es: ['Pacientes con historial de trastornos neuropsiquiátricos — revisión obligatoria del riesgo/beneficio', 'Fenilcetonuria (comprimidos masticables contienen aspartamo)'] }
+      "administration": {
+        "pt": [
+          "Não serve como broncodilatador de resgate",
+          "Manter medicação de resgate para crise aguda",
+          "Antes de iniciar, discutir risco neuropsiquiátrico; interromper e procurar avaliação se surgirem sintomas"
+        ],
+        "es": [
+          "No sirve como broncodilatador de rescate",
+          "Mantener medicación de rescate para crisis aguda",
+          "Antes de iniciar, discutir riesgo neuropsiquiátrico; suspender y buscar evaluación si aparecen síntomas"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O ALERTA NEUROPSIQUIÁTRICO INVISÍVEL: O Montelucaste tem um Black Box Warning da FDA para eventos neuropsiquiátricos. O problema é que a maioria dos médicos no Brasil nunca avisa o paciente. A mãe que percebe que o filho começou a ter pesadelos intensos, comportamento agressivo ou falar em morte desde que iniciou o "remedinho do pulmão" DEVE comunicar imediatamente e suspender o Montelucaste.', es: 'LA ADVERTENCIA NEUROPSIQUIÁTRICA INVISIBLE: El Montelukast tiene un Black Box Warning de la FDA. La mayoría de los médicos nunca avisa al paciente. La madre que nota pesadillas intensas, agresividad o pensamientos de muerte desde el "remedito del pulmón" DEBE comunicar y suspender el Montelukast.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal rotineiro.",
+          "es": "Sin ajuste renal rutinario."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste em insuficiência hepática leve a moderada; dados são limitados em insuficiência grave.",
+          "es": "Sin ajuste en insuficiencia hepática leve a moderada; datos limitados en insuficiencia grave."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Cefaleia",
+          "Dor abdominal"
+        ],
+        "es": [
+          "Cefalea",
+          "Dolor abdominal"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Eventos neuropsiquiátricos graves, incluindo ideação/comportamento suicida",
+          "Reações de hipersensibilidade raras"
+        ],
+        "es": [
+          "Eventos neuropsiquiátricos graves, incluida ideación/conducta suicida",
+          "Reacciones de hipersensibilidad raras"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "História de sintomas neuropsiquiátricos requer avaliação de risco-benefício"
+          ],
+          "es": [
+            "Antecedente de síntomas neuropsiquiátricos requiere evaluación riesgo-beneficio"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": false,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Boxed Warning FDA: eventos neuropsiquiátricos graves. Para rinite alérgica, reservar a pacientes sem resposta adequada ou intolerantes a alternativas.",
+          "es": "Boxed Warning FDA: eventos neuropsiquiátricos graves. Para rinitis alérgica, reservar para pacientes sin respuesta adecuada o intolerantes a alternativas."
+        }
       }
     },
 
@@ -2129,41 +2961,110 @@
 
 /* ── TEOFILINA ────────────────────────────────────────────────────────── */
     "teofilina": {
-      name: { pt: 'Teofilina', es: 'Teofilina' },
-      category: 'pneumologia',
-      class: { pt: 'Xantina (Broncodilatador + Anti-inflamatório leve)', es: 'Xantina (Broncodilatador + Antiinflamatorio leve)' },
-      indications: {
-        pt: ['Asma brônquica persistente — uso oral crônico de baixa dose como adjuvante (fármaco de 3ª linha)', 'DPOC moderada a grave — quando LABAs e LAMAs são insuficientes', 'Asma grave com status asmático (uso EV hospitalar — aminofilina)'],
-        es: ['Asma bronquial persistente — uso oral crónico de baja dosis como adyuvante (fármaco de 3ª línea)', 'EPOC moderada a grave — cuando LABAs y LAMAs son insuficientes', 'Asma grave con status asmático (uso EV hospitalario — aminofilina)']
+      "name": {
+        "pt": "Teofilina",
+        "es": "Teofilina"
       },
-      commercialNames: { br: ['Euphyllin', 'Teolong', 'Unifiland'], ar: ['Euphyllin', 'Theolan'] },
-      presentation: { pt: ['Comprimidos de liberação prolongada 100 mg, 200 mg e 300 mg', 'Solução oral (xarope) para crianças', 'Aminofilina EV: ampola 240 mg/10 mL (uso hospitalar)'], es: ['Comprimidos de liberación prolongada 100 mg, 200 mg y 300 mg', 'Solución oral (jarabe) para niños', 'Aminofilina EV: ampolla 240 mg/10 mL (uso hospitalario)'] },
-      mechanism: {
-        pt: 'A Teofilina tem um mecanismo duplo e elegante: (1) Inibe as Fosfodiesterases (PDEs), impedindo a degradação do AMPc intracelular — mais AMPc → o músculo brônquico relaxa e dilata. (2) Antagoniza os receptores de Adenosina A1/A2, que normalmente provocam broncoconstrição. Em baixas doses (nível sérico 5–10 mg/L), também ativa histonas deacetilases (HDAC2) e tem efeito anti-inflamatório que reverte parcialmente a resistência ao corticoide no pulmão do tabagista com DPOC.',
-        es: 'La Teofilina tiene un mecanismo doble: (1) Inhibe las Fosfodiesterasas (PDEs), impidiendo la degradación del AMPc — más AMPc → el músculo bronquial se relaja. (2) Antagoniza los receptores de Adenosina A1/A2. En bajas dosis (nivel sérico 5-10 mg/L), activa HDAC2 y tiene efecto antiinflamatorio que revierte parcialmente la resistencia al corticoide.'
+      "category": "pneumologia",
+      "class": {
+        "pt": "Metilxantina broncodilatadora de estreita janela terapêutica",
+        "es": "Metilxantina broncodilatadora de estrecho margen terapéutico"
       },
-      dose: {
-        adult: {
-          pt: 'Dose individualizada por nível sérico. Início: 200–300 mg/dia VO (liberação prolongada). Dose-alvo (nível terapêutico 5–15 mg/L): geralmente 400–800 mg/dia divididos a cada 12 horas. NUNCA ultrapassar 900 mg/dia sem monitorização sérica.',
-          es: 'Dosis individualizada por nivel sérico. Inicio: 200-300 mg/día VO (liberación prolongada). Dosis-objetivo (nivel terapéutico 5-15 mg/L): generalmente 400-800 mg/día divididos cada 12 horas. NUNCA superar 900 mg/día sin monitorización sérica.'
+      "indications": {
+        "pt": [
+          "Broncoespasmo crônico em contextos selecionados quando alternativas são inadequadas"
+        ],
+        "es": [
+          "Broncoespasmo crónico en contextos seleccionados cuando alternativas son inadecuadas"
+        ]
+      },
+      "mechanism": {
+        "pt": "Relaxamento de músculo liso e efeitos não broncodilatadores por mecanismos envolvendo inibição de fosfodiesterase/antagonismo de adenosina.",
+        "es": "Relajación del músculo liso y efectos no broncodilatadores por mecanismos que incluyen inhibición de fosfodiesterasa/antagonismo de adenosina."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dose deve ser individualizada por nível sérico, idade, tabagismo, comorbidades e interações. Não titular apenas por sintomas.",
+          "es": "La dosis debe individualizarse por nivel sérico, edad, tabaquismo, comorbilidades e interacciones. No titular solo por síntomas."
         },
-        pediatric: {
-          pt: '1–9 anos: 12–14 mg/kg/dia (máx. 300 mg/dia). 9–16 anos: 18 mg/kg/dia (máx. 400 mg/dia). Monitoração sérica obrigatória.',
-          es: '1-9 años: 12-14 mg/kg/día (máx. 300 mg/día). 9-16 años: 18 mg/kg/día (máx. 400 mg/día). Monitorización sérica obligatoria.'
+        "pediatric": {
+          "pt": "Dose pediátrica é individualizada por idade/peso e monitorização sérica; exige protocolo específico.",
+          "es": "La dosis pediátrica se individualiza por edad/peso y monitorización sérica; requiere protocolo específico."
         }
       },
-      administration: { pt: ['Comprimidos de liberação prolongada: engolir inteiro, não partir ou triturar.', 'Tomar preferencialmente com alimentos para reduzir irritação gástrica.', 'Monitorar nível sérico: colher amostra 5–6 horas após dose matinal (estado estacionário).'], es: ['Comprimidos de liberación prolongada: tragar entero, no partir ni triturar.', 'Tomar preferentemente con alimentos para reducir irritación gástrica.', 'Monitorar nivel sérico: extraer muestra 5-6 horas después de la dosis matinal.'] },
-      renalAdjustment: { required: false, message: { pt: 'Metabolismo hepático (CYP1A2). Insuficiência renal isolada não requer ajuste, mas monitorar nível sérico.', es: 'Metabolismo hepático (CYP1A2). Insuficiencia renal aislada no requiere ajuste, pero monitorar nivel sérico.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Cirrose ou hepatite grave reduz clearance drasticamente — doses usuais provocam toxicidade. Reduzir 25–50% e monitorar de perto.', es: 'Cirrosis o hepatitis grave reducen el clearance drásticamente. Reducir 25-50% y monitorar de cerca.' } },
-      commonAdverseEffects: { pt: ['Náuseas, vômitos e dor epigástrica (nível sérico > 10 mg/L)', 'Cefaleia e nervosismo', 'Taquicardia sinusal', 'Insônia e tremores finos'], es: ['Náuseas, vómitos y dolor epigástrico (nivel sérico > 10 mg/L)', 'Cefalea y nerviosismo', 'Taquicardia sinusal', 'Insomnio y temblores finos'] },
-      dangerousAdverseEffects: { pt: ['TOXICIDADE GRAVE (nível > 20 mg/L): Convulsões refratárias, taquicardia ventricular, Fibrilação Ventricular, Encefalopatia', 'Hipocalemia severa (potencializada por Beta-2 agonistas)'], es: ['TOXICIDAD GRAVE (nivel > 20 mg/L): Convulsiones refractarias, taquicardia ventricular, Fibrilación Ventricular, Encefalopatía', 'Hipocalemia severa (potenciada por Beta-2 agonistas)'] },
-      contraindications: {
-        absolute: { pt: ['Arritmias cardíacas ativas sem tratamento', 'Úlcera péptica ativa não tratada'], es: ['Arritmias cardíacas activas sin tratamiento', 'Úlcera péptica activa no tratada'] },
-        relative: { pt: ['Tabagismo ativo (aumenta o clearance da teofilina — necessita doses maiores)', 'Epilepsia (reduz limiar convulsivo)', 'Hipotireoidismo (reduz clearance — risco de intoxicação)'], es: ['Tabaquismo activo (aumenta el clearance — necesita dosis mayores)', 'Epilepsia (reduce umbral convulsivo)', 'Hipotiroidismo (reduce clearance — riesgo de intoxicación)'] }
+      "administration": {
+        "pt": [
+          "Monitorar concentração sérica após mudanças de dose, doença febril, tabagismo ou interações",
+          "Evitar escalada em exacerbação aguda sem nível sérico"
+        ],
+        "es": [
+          "Monitorizar concentración sérica tras cambios de dosis, enfermedad febril, tabaquismo o interacciones",
+          "Evitar aumento en exacerbación aguda sin nivel sérico"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'ÍNDICE TERAPÊUTICO ESTREITÍSSIMO: A janela entre a dose que funciona (nível 5–15 mg/L) e a dose que mata (nível > 20 mg/L) é pequena. O problema é que DEZENAS de medicamentos e condições clínicas alteram o nível: Eritromicina e Ciprofloxacino (inibidores de CYP1A2) DOBRAM o nível. O tabagismo REDUZ o nível à metade. Se o seu paciente parar de fumar enquanto toma Teofilina sem ajustar a dose, você tem uma intoxicação esperando para acontecer.', es: 'ÍNDICE TERAPÉUTICO ESTRECHO: La ventana entre la dosis que funciona (5-15 mg/L) y la que mata (> 20 mg/L) es pequeña. Eritromicina y Ciprofloxacino (inhibidores CYP1A2) DOBLAN el nivel. El tabaco REDUCE el nivel a la mitad. Si el paciente deja de fumar sin ajustar la dosis, tiene una intoxicación esperando.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Em adultos, depuração é predominantemente hepática; ajustar por níveis e contexto clínico.",
+          "es": "En adultos, la depuración es predominantemente hepática; ajustar por niveles y contexto clínico."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Hepatopatia reduz depuração e exige redução de dose/monitorização sérica estreita.",
+          "es": "La hepatopatía reduce depuración y exige reducción de dosis/monitorización sérica estrecha."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Tremor",
+          "Insônia",
+          "Cefaleia"
+        ],
+        "es": [
+          "Náuseas",
+          "Temblor",
+          "Insomnio",
+          "Cefalea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Convulsões",
+          "Taquiarritmias",
+          "Toxicidade potencialmente fatal"
+        ],
+        "es": [
+          "Convulsiones",
+          "Taquiarritmias",
+          "Toxicidad potencialmente fatal"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Arritmias, epilepsia, hepatopatia, interações CYP"
+          ],
+          "es": [
+            "Arritmias, epilepsia, hepatopatía, interacciones CYP"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "warning": {
+          "pt": "Estreita janela terapêutica e muitas interações. GINA não recomenda teofilina oral rotineiramente para asma por maior risco de efeitos adversos.",
+          "es": "Estrecho margen terapéutico y muchas interacciones. GINA no recomienda teofilina oral rutinariamente para asma por mayor riesgo de efectos adversos."
+        }
       }
     },
 

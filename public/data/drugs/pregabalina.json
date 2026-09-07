@@ -17,9 +17,196 @@
   "keywords": [
     "pregabalina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-c613ef861d440511",
+  "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "pregabalina",
+    "clinical_batch": "LOT003_ANALGESICOS_NAO_OPIOIDES_COANALGESICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_or_regulatory_referral",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "VO com ou sem alimento"
+          },
+          {
+            "label": "Administração",
+            "text": "Retirar gradualmente por pelo menos 1 semana"
+          },
+          {
+            "label": "Administração",
+            "text": "Monitorar sedação, edema, ganho de peso e risco de quedas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "VO con o sin alimento"
+          },
+          {
+            "label": "Administración",
+            "text": "Retirar gradualmente durante al menos 1 semana"
+          },
+          {
+            "label": "Administración",
+            "text": "Monitorizar sedación, edema, aumento de peso y riesgo de caídas"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Ajuste renal é obrigatório. Reduzir/titular com cautela quando combinada a opioides ou outros depressores do SNC."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depressão respiratória com depressores do SNC; Angioedema; Ideação/comportamento suicida; Abstinência se retirada abrupta"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "El ajuste renal es obligatorio. Reducir/titular con precaución cuando se combina con opioides u otros depresores del SNC."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión respiratoria con depresores del SNC; Angioedema; Ideación/conducta suicida; Abstinencia si suspensión brusca"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Dor neuropática diabética: iniciar 50 mg 3x/dia (150 mg/dia), podendo aumentar até 300 mg/dia em 1 semana conforme tolerância. Neuralgia pós-herpética: 75 mg 2x/dia ou 50 mg 3x/dia; pode titular a 300 mg/dia e, em casos selecionados, até 600 mg/dia."
+          },
+          {
+            "label": "Pediatria",
+            "text": "As indicações analgésicas principais são de adultos; para epilepsia existem esquemas pediátricos específicos. Não extrapolar doses adultas de dor."
+          },
+          {
+            "label": "Rim",
+            "text": "Ajustar por ClCr. ≥60: faixas usuais 150–600 mg/dia conforme indicação; 30–60: 75–300 mg/dia; 15–30: 25–150 mg/dia; <15: 25–75 mg/dia. Hemodiálise requer dose suplementar pós-sessão."
+          },
+          {
+            "label": "Fígado",
+            "text": "Não há ajuste hepático rotineiro porque o fármaco é eliminado principalmente pelos rins."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Dolor neuropático diabético: iniciar 50 mg 3x/día (150 mg/día), pudiendo aumentar hasta 300 mg/día en 1 semana según tolerancia. Neuralgia posherpética: 75 mg 2x/día o 50 mg 3x/día; puede titularse a 300 mg/día y, en casos seleccionados, hasta 600 mg/día."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Las principales indicaciones analgésicas son de adultos; para epilepsia existen esquemas pediátricos específicos. No extrapolar dosis adultas de dolor."
+          },
+          {
+            "label": "Riñón",
+            "text": "Ajustar por ClCr. ≥60: rangos habituales 150–600 mg/día según indicación; 30–60: 75–300 mg/día; 15–30: 25–150 mg/día; <15: 25–75 mg/día. Hemodiálisis requiere dosis suplementaria pos-sesión."
+          },
+          {
+            "label": "Hígado",
+            "text": "No hay ajuste hepático rutinario porque el fármaco se elimina principalmente por los riñones."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Gabapentinoide; ligante α2δ de canais de cálcio"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Liga-se à subunidade α2δ dos canais de cálcio voltagem-dependentes, reduzindo neurotransmissão excitatória. A eliminação é predominantemente renal."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor neuropática periférica diabética em adultos; Neuralgia pós-herpética; Fibromialgia; Dor neuropática associada à lesão medular; Adjuvante em crises focais"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Gabapentinoide; ligando α2δ de canales de calcio"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Se une a la subunidad α2δ de los canales de calcio dependientes de voltaje, reduciendo neurotransmisión excitatoria. La eliminación es predominantemente renal."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor neuropático periférico diabético en adultos; Neuralgia posherpética; Fibromialgia; Dolor neuropático asociado a lesión medular; Adyuvante en crisis focales"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Opioides/depressores do SNC",
+            "text": "Aumentam sedação e risco de depressão respiratória; iniciar/titular com cautela."
+          }
+        ],
+        "es": [
+          {
+            "label": "Opioides/depresores del SNC",
+            "text": "Aumentan sedación y riesgo de depresión respiratoria; iniciar/titular con precaución."
+          }
+        ]
+      },
+      "gravidez_lactacao": {
+        "pt": [
+          {
+            "label": "Gestação/Lactação",
+            "text": "Usar na gestação/lactação somente após avaliação individual de benefício-risco; evitar extrapolar segurança entre gabapentinoides."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo/Lactancia",
+            "text": "Usar en embarazo/lactancia solo tras evaluación individual de beneficio-riesgo; evitar extrapolar seguridad entre gabapentinoides."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Pregabalin capsules, 2026",
+            "text": "Fonte oficial revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d095accf-9cea-4948-b43d-ae1b8fbce7c2"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Pregabalin capsules, 2026",
+            "text": "Fuente oficial revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d095accf-9cea-4948-b43d-ae1b8fbce7c2"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "pregabalina_source_1",
+        "title": "DailyMed — Pregabalin capsules, 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d095accf-9cea-4948-b43d-ae1b8fbce7c2",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

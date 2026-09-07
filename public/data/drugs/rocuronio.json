@@ -18,9 +18,174 @@
     "rocuronio",
     "rocurônio"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8971307309e3457c",
+  "clinicalContentSha256": "8971307309e3457c216ea650e1d9475ee1c8277aec5b2d1c2c60bd27a9f90523",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "rocuronio",
+    "clinical_batch": "LOT001_SEDACAO_INDUCAO_BNM",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_plus_current_guideline_when_explicitly_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Administrar IV por profissional capaz de ventilação e manejo de via aérea. Usar estimulador de nervo periférico/TOF para manutenção e recuperação. Infusão contínua deve iniciar apenas após evidência de recuperação espontânea da dose de intubação."
+          },
+          {
+            "label": "Apresentação",
+            "text": "Solução IV 10 mg/mL"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Administrar IV por profesional capaz de ventilación y manejo de vía aérea. Usar estimulador de nervio periférico/TOF para mantenimiento y recuperación. La infusión continua debe iniciarse solo tras evidencia de recuperación espontánea de la dosis de intubación."
+          },
+          {
+            "label": "Presentación",
+            "text": "Solución IV 10 mg/mL"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Não possui efeito sedativo nem analgésico. Deve ser administrado após sedativo-hipnótico adequado para intubação e com ventilação imediatamente disponível. Reversão com sugamadex é possível em bloqueio por rocurônio, conforme profundidade e protocolo."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Anafilaxia; Bloqueio neuromuscular residual/prolongado; Compromisso ventilatório se recuperação for incompleta"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade ao rocurônio ou brometos/componentes"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "No posee efecto sedante ni analgésico. Debe administrarse después de un sedante-hipnótico adecuado para intubación y con ventilación inmediatamente disponible. La reversión con sugammadex es posible en bloqueo por rocuronio, según profundidad y protocolo."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Anafilaxia; Bloqueo neuromuscular residual/prolongado; Compromiso ventilatorio si la recuperación es incompleta"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a rocuronio o bromuros/componentes"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Intubação: 0,6 mg/kg IV. RSI adulto: 0,6–1,2 mg/kg IV. Infusão: iniciar 10–12 mcg/kg/min somente após sinais precoces de recuperação; titular por TOF, com faixas estudadas de 4–16 mcg/kg/min."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Dose inicial recomendada para intubação: 0,6 mg/kg IV; 0,45 mg/kg pode ser usada conforme idade e técnica anestésica. Manutenção sob anestesia: 0,15 mg/kg quando reaparece T3; infusão pediátrica deve ser titulada por monitorização neuromuscular."
+          },
+          {
+            "label": "Rim",
+            "text": "Na insuficiência renal, a duração pode ser mais variável; não aplicar fator fixo de redução. Titular por resposta/TOF e assegurar recuperação adequada antes da extubação."
+          },
+          {
+            "label": "Fígado",
+            "text": "Doença hepática pode prolongar significativamente a duração do bloqueio; individualizar dose e intervalo e monitorizar TOF."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Intubación: 0,6 mg/kg IV. RSI adulto: 0,6–1,2 mg/kg IV. Infusión: iniciar 10–12 mcg/kg/min solo tras signos precoces de recuperación; titular por TOF, con rangos estudiados de 4–16 mcg/kg/min."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Dosis inicial recomendada para intubación: 0,6 mg/kg IV; 0,45 mg/kg puede usarse según edad y técnica anestésica. Mantenimiento bajo anestesia: 0,15 mg/kg al reaparecer T3; la infusión pediátrica debe titularse por monitorización neuromuscular."
+          },
+          {
+            "label": "Riñón",
+            "text": "En insuficiencia renal, la duración puede ser más variable; no aplicar un factor fijo de reducción. Titular por respuesta/TOF y asegurar recuperación adecuada antes de la extubación."
+          },
+          {
+            "label": "Hígado",
+            "text": "La enfermedad hepática puede prolongar significativamente la duración del bloqueo; individualizar dosis e intervalo y monitorizar TOF."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Bloqueador neuromuscular não despolarizante aminosteroide"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista competitivo dos receptores nicotínicos de acetilcolina na junção neuromuscular. Produz paralisia flácida sem sedação ou analgesia."
+          },
+          {
+            "label": "Indicações",
+            "text": "Facilitar intubação traqueal; Bloqueio neuromuscular durante cirurgia e ventilação mecânica; Intubação de sequência rápida em adultos adequadamente anestesiados"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Bloqueador neuromuscular no despolarizante aminoesteroideo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonista competitivo de los receptores nicotínicos de acetilcolina en la unión neuromuscular. Produce parálisis flácida sin sedación ni analgesia."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Facilitar intubación traqueal; Bloqueo neuromuscular durante cirugía y ventilación mecánica; Intubación de secuencia rápida en adultos adecuadamente anestesiados"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Rocuronium Bromide Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a54a79f7-5207-43d8-a139-7d57557caa50"
+          },
+          {
+            "label": "SCCM — Rapid Sequence Intubation in the Critically Ill Adult Patient",
+            "text": "Fonte revisada em 2026-09-05. https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-rapid-sequence-intubation"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Rocuronium Bromide Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a54a79f7-5207-43d8-a139-7d57557caa50"
+          },
+          {
+            "label": "SCCM — Rapid Sequence Intubation in the Critically Ill Adult Patient",
+            "text": "Fuente revisada el 2026-09-05. https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-rapid-sequence-intubation"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_rocuronium",
+        "title": "DailyMed — Rocuronium Bromide Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a54a79f7-5207-43d8-a139-7d57557caa50",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "sccm_rsi_2023",
+        "title": "SCCM — Rapid Sequence Intubation in the Critically Ill Adult Patient",
+        "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-rapid-sequence-intubation",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

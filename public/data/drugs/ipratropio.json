@@ -5,21 +5,21 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Brometo de Ipratrópio"
+    "name": "Ipratrópio"
   },
   "es": {
-    "name": "Bromuro de Ipratropio"
+    "name": "Ipratropio"
   },
   "name": {
-    "pt": "Brometo de Ipratrópio",
-    "es": "Bromuro de Ipratropio"
+    "pt": "Ipratrópio",
+    "es": "Ipratropio"
   },
   "keywords": [
     "ipratropio",
-    "brometo de ipratrópio"
+    "ipratrópio"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8db7dcf02f286792",
+  "clinicalContentSha256": "8db7dcf02f28679298b4aaa03b3d571d60c10a0f69b0f08fdac051f4119818d8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "pneumologia.js",
@@ -33,44 +33,148 @@
       "administracao_preparo": {
         "pt": [
           {
-            "label": "Uso inalatório",
-            "text": "Administrar por inalação oral com nebulizador. A solução para nebulização é de uso respiratório e não deve ser injetada."
+            "label": "Administração",
+            "text": "Evitar contato do aerossol/nebulização com os olhos"
           },
           {
-            "label": "Ampola de dose única",
-            "text": "Abrir a ampola apenas no momento do uso e transferir o conteúdo ao reservatório do nebulizador conforme as instruções do dispositivo."
-          },
-          {
-            "label": "Conservação",
-            "text": "Proteger da luz e manter as ampolas não utilizadas na embalagem protetora até o momento do uso."
+            "label": "Administração",
+            "text": "Não é substituto de terapia controladora na asma"
           }
         ],
         "es": [
           {
-            "label": "Uso inhalatorio",
-            "text": "Administrar por inhalación oral mediante nebulizador. La solución para nebulización es de uso respiratorio y no debe inyectarse."
+            "label": "Administración",
+            "text": "Evitar contacto del aerosol/nebulización con los ojos"
           },
           {
-            "label": "Ampolla de dosis única",
-            "text": "Abrir la ampolla solo en el momento del uso y transferir el contenido al reservorio del nebulizador según las instrucciones del dispositivo."
-          },
-          {
-            "label": "Conservación",
-            "text": "Proteger de la luz y mantener las ampollas no utilizadas en el envase protector hasta el momento del uso."
+            "label": "Administración",
+            "text": "No sustituye terapia controladora en asma"
           }
         ]
       },
       "referencias": {
         "pt": [
           {
-            "label": "DailyMed — Ipratropium Bromide Inhalation Solution",
-            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fonte revisada em 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "GOLD 2026 Report and Pocket Guide",
+            "text": "Fonte revisada em 2026-09-05. https://goldcopd.org/2026-gold-report-and-pocket-guide/"
           }
         ],
         "es": [
           {
-            "label": "DailyMed — Ipratropium Bromide Inhalation Solution",
-            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fuente revisada el 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "GOLD 2026 Report and Pocket Guide",
+            "text": "Fuente revisada el 2026-09-05. https://goldcopd.org/2026-gold-report-and-pocket-guide/"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Na exacerbação asmática, ipratrópio é adjuvante ao SABA; não substitui ICS nem broncodilatador de resgate de ação rápida."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Broncoespasmo paradoxal; Glaucoma agudo por exposição ocular; Retenção urinária"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "En exacerbación asmática, ipratropio es adyuvante del SABA; no sustituye ICS ni broncodilatador de rescate de acción rápida."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Broncoespasmo paradójico; Glaucoma agudo por exposición ocular; Retención urinaria"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "MDI: 2 jatos (17 mcg/jato) 4x/dia, podendo usar doses adicionais conforme rotulagem; nebulização em exacerbação conforme protocolo."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Em asma aguda pediátrica, uso é adjuvante e protocolar; não extrapolar esquema crônico adulto."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem ajuste renal rotineiro."
+          },
+          {
+            "label": "Fígado",
+            "text": "Sem ajuste hepático rotineiro."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "MDI: 2 inhalaciones (17 mcg/inhalación) 4 veces/día, pudiendo usar dosis adicionales según rotulado; nebulización en exacerbación según protocolo."
+          },
+          {
+            "label": "Pediatría",
+            "text": "En asma aguda pediátrica, el uso es adyuvante y protocolar; no extrapolar esquema crónico adulto."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin ajuste renal rutinario."
+          },
+          {
+            "label": "Hígado",
+            "text": "Sin ajuste hepático rutinario."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Antagonista muscarínico de curta ação (SAMA)"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueio muscarínico M3 reduz broncoconstrição vagal."
+          },
+          {
+            "label": "Indicações",
+            "text": "Broncodilatação de manutenção na DPOC; Adjuvante em exacerbação aguda de asma junto a SABA"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antagonista muscarínico de acción corta (SAMA)"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "El bloqueo muscarínico M3 reduce broncoconstricción vagal."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Broncodilatación de mantenimiento en EPOC; Adyuvante en exacerbación aguda de asma junto con SABA"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, eletrólitos e inibidores/indutores metabólicos conforme o fármaco."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, electrolitos e inhibidores/inductores metabólicos según el fármaco."
           }
         ]
       }
@@ -83,7 +187,22 @@
         "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b",
         "reviewed_at": "2026-08-24",
         "updated": "2026-07-16"
+      },
+      {
+        "id": "ipratropio_1",
+        "title": "GINA 2026 Strategy Report",
+        "url": "https://ginasthma.org/2026-gina-strategy-report/",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "ipratropio_2",
+        "title": "GOLD 2026 Report and Pocket Guide",
+        "url": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+        "reviewed_at": "2026-09-05"
       }
-    ]
+    ],
+    "clinical_batch": "LOT006_BRONCODILATADORES_ASMA_DPOC",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "GINA_2026_GOLD_2026_OFFICIAL_LABELS"
   }
 }

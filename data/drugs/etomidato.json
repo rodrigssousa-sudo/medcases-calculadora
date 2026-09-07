@@ -17,9 +17,174 @@
   "keywords": [
     "etomidato"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8971307309e3457c",
+  "clinicalContentSha256": "8971307309e3457c216ea650e1d9475ee1c8277aec5b2d1c2c60bd27a9f90523",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "etomidato",
+    "clinical_batch": "LOT001_SEDACAO_INDUCAO_BNM",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_plus_current_guideline_when_explicitly_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Uso exclusivamente IV. Administrar a dose de indução em 30–60 s. Não utilizar como infusão prolongada para sedação: há supressão de cortisol e aldosterona."
+          },
+          {
+            "label": "Apresentação",
+            "text": "Solução IV 2 mg/mL"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Uso exclusivamente IV. Administrar la dosis de inducción en 30–60 s. No utilizar como infusión prolongada para sedación: existe supresión de cortisol y aldosterona."
+          },
+          {
+            "label": "Presentación",
+            "text": "Solución IV 2 mg/mL"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Etomidato não fornece analgesia. Não administrar corticosteroide rotineiramente apenas para neutralizar a supressão adrenal de uma dose de RSI; tratar choque refratário conforme indicação clínica própria."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Supressão adrenal transitória; Hipotensão, sobretudo com administração rápida ou vulnerabilidade hemodinâmica; Apneia/depressão respiratória pode ocorrer"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade ao etomidato ou componentes"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Etomidato no aporta analgesia. No administrar corticosteroide de rutina solo para contrarrestar la supresión adrenal de una dosis de RSI; tratar el shock refractario según su indicación clínica propia."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Supresión adrenal transitoria; Hipotensión, sobre todo con administración rápida o vulnerabilidad hemodinámica; Apnea/depresión respiratoria puede ocurrir"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a etomidato o componentes"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Indução: 0,2–0,6 mg/kg IV individualizados; dose usual 0,3 mg/kg administrada em 30–60 s."
+          },
+          {
+            "label": "Pediatria",
+            "text": ">10 anos: mesma faixa de 0,2–0,6 mg/kg IV, usual 0,3 mg/kg. <10 anos: dados insuficientes para recomendar dose de indução na rotulagem de referência."
+          },
+          {
+            "label": "Rim",
+            "text": "Não há ajuste renal fixo para a dose única de indução na rotulagem; individualizar conforme condição clínica."
+          },
+          {
+            "label": "Fígado",
+            "text": "Não há ajuste hepático fixo definido para dose única; individualizar e considerar maior sensibilidade em pacientes frágeis."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Inducción: 0,2–0,6 mg/kg IV individualizados; dosis habitual 0,3 mg/kg administrada en 30–60 s."
+          },
+          {
+            "label": "Pediatría",
+            "text": ">10 años: mismo rango de 0,2–0,6 mg/kg IV, habitual 0,3 mg/kg. <10 años: datos insuficientes para recomendar dosis de inducción en el rotulado de referencia."
+          },
+          {
+            "label": "Riñón",
+            "text": "No hay ajuste renal fijo para la dosis única de inducción en el rotulado; individualizar según condición clínica."
+          },
+          {
+            "label": "Hígado",
+            "text": "No hay ajuste hepático fijo definido para dosis única; individualizar y considerar mayor sensibilidad en pacientes frágiles."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Hipnótico intravenoso não barbitúrico para indução anestésica"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Modula positivamente receptores GABA-A e produz hipnose rápida sem analgesia. Em geral causa menor depressão cardiovascular que vários outros indutores, mas hipotensão e outras alterações hemodinâmicas podem ocorrer. Inibe transitoriamente a síntese adrenal de cortisol/aldosterona."
+          },
+          {
+            "label": "Indicações",
+            "text": "Indução de anestesia geral em adultos e pacientes pediátricos >10 anos"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Hipnótico intravenoso no barbitúrico para inducción anestésica"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Modula positivamente receptores GABA-A y produce hipnosis rápida sin analgesia. En general causa menor depresión cardiovascular que varios otros inductores, pero pueden ocurrir hipotensión y otros cambios hemodinámicos. Inhibe transitoriamente la síntesis adrenal de cortisol/aldosterona."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Inducción de anestesia general en adultos y pacientes pediátricos >10 años"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Etomidate Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=9c2d0014-9e74-40b2-b452-255016c81cc1&type=pdf"
+          },
+          {
+            "label": "SCCM — Rapid Sequence Intubation in the Critically Ill Adult Patient",
+            "text": "Fonte revisada em 2026-09-05. https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-rapid-sequence-intubation"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Etomidate Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=9c2d0014-9e74-40b2-b452-255016c81cc1&type=pdf"
+          },
+          {
+            "label": "SCCM — Rapid Sequence Intubation in the Critically Ill Adult Patient",
+            "text": "Fuente revisada el 2026-09-05. https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-rapid-sequence-intubation"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_etomidate",
+        "title": "DailyMed — Etomidate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=9c2d0014-9e74-40b2-b452-255016c81cc1&type=pdf",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "sccm_rsi_2023",
+        "title": "SCCM — Rapid Sequence Intubation in the Critically Ill Adult Patient",
+        "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-rapid-sequence-intubation",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

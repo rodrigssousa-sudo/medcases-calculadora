@@ -17,8 +17,8 @@
   "keywords": [
     "cetoprofeno"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-c613ef861d440511",
+  "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "analgesicos.js",
@@ -55,12 +55,223 @@
         "keywords": [
           "cetoprofeno"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-c613ef861d440511",
+        "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
         "source": "medcases-calculadora",
         "schema": "legacy-v1",
         "sourceModule": "analgesia_opioides.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "cetoprofeno",
+    "clinical_batch": "LOT003_ANALGESICOS_NAO_OPIOIDES_COANALGESICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_or_regulatory_referral",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar menor dose efetiva pelo menor tempo"
+          },
+          {
+            "label": "Administração",
+            "text": "Pode ser administrado com alimento/leite se houver sintomas GI, reconhecendo possível atraso de absorção"
+          },
+          {
+            "label": "Administração",
+            "text": "Não associar outro AINE sistêmico"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar la menor dosis efectiva durante el menor tiempo"
+          },
+          {
+            "label": "Administración",
+            "text": "Puede administrarse con alimento/leche si hay síntomas GI, reconociendo posible retraso de absorción"
+          },
+          {
+            "label": "Administración",
+            "text": "No asociar otro AINE sistémico"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Não combinar com outro AINE sistêmico; o aumento de dose eleva toxicidade sem garantir melhor analgesia."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Sangramento GI; Lesão renal aguda; Eventos trombóticos CV; Reações cutâneas graves"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade/AINE-asthma; CABG perioperatório"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "No combinar con otro AINE sistémico; aumentar la dosis eleva toxicidad sin garantizar mejor analgesia."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Sangrado GI; Lesión renal aguda; Eventos trombóticos CV; Reacciones cutáneas graves"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad/asma por AINE; CABG perioperatorio"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Dor/dismenorreia: 25–50 mg VO a cada 6–8 h conforme necessidade. Doses únicas acima de 75 mg não demonstraram benefício analgésico adicional; doses diárias >300 mg não são recomendadas."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Segurança e posologia pediátrica sistêmica dependem do produto/mercado; não extrapolar o regime adulto."
+          },
+          {
+            "label": "Rim",
+            "text": "Usar dose inicial menor em doença renal e evitar em doença renal avançada quando possível; monitorar creatinina e volume."
+          },
+          {
+            "label": "Fígado",
+            "text": "Usar dose inicial menor em hepatopatia e monitorar em uso sistêmico prolongado."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Dolor/dismenorrea: 25–50 mg VO cada 6–8 h según necesidad. Dosis únicas >75 mg no demostraron beneficio analgésico adicional; dosis diarias >300 mg no se recomiendan."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Seguridad y posología pediátrica sistémica dependen del producto/mercado; no extrapolar el régimen adulto."
+          },
+          {
+            "label": "Riñón",
+            "text": "Usar dosis inicial menor en enfermedad renal y evitar en enfermedad renal avanzada cuando sea posible; monitorizar creatinina y volumen."
+          },
+          {
+            "label": "Hígado",
+            "text": "Usar dosis inicial menor en hepatopatía y monitorizar en uso sistémico prolongado."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "AINE não seletivo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Inibe COX e síntese de prostaglandinas. Compartilha riscos de classe gastrointestinal, renal e cardiovascular."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor leve a moderada; Dismenorreia; Doenças inflamatórias musculoesqueléticas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "AINE no selectivo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Inhibe COX y síntesis de prostaglandinas. Comparte riesgos de clase gastrointestinal, renal y cardiovascular."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor leve a moderado; Dismenorrea; Enfermedades inflamatorias musculoesqueléticas"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentam risco de sangramento; avaliar risco-benefício e monitorar."
+          },
+          {
+            "label": "IECA/ARB/diuréticos",
+            "text": "Pode reduzir efeito anti-hipertensivo e aumentar risco de lesão renal, sobretudo com hipovolemia/DRC."
+          },
+          {
+            "label": "Outros AINEs",
+            "text": "Evitar associação sistêmica rotineira por toxicidade GI/renal sem benefício proporcional."
+          },
+          {
+            "label": "Lítio/metotrexato",
+            "text": "AINEs podem aumentar exposição; monitorar quando aplicável."
+          }
+        ],
+        "es": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentan riesgo de sangrado; evaluar riesgo-beneficio y monitorizar."
+          },
+          {
+            "label": "IECA/ARA-II/diuréticos",
+            "text": "Puede reducir efecto antihipertensivo y aumentar riesgo de lesión renal, especialmente con hipovolemia/ERC."
+          },
+          {
+            "label": "Otros AINE",
+            "text": "Evitar asociación sistémica rutinaria por toxicidad GI/renal sin beneficio proporcional."
+          },
+          {
+            "label": "Litio/metotrexato",
+            "text": "Los AINE pueden aumentar la exposición; monitorizar cuando corresponda."
+          }
+        ]
+      },
+      "gravidez_lactacao": {
+        "pt": [
+          {
+            "label": "Gestação/Lactação",
+            "text": "AINE sistêmico: evitar a partir de cerca de 30 semanas de gestação; entre 20–30 semanas, usar somente se necessário, na menor dose e pelo menor tempo, devido a risco renal fetal/oligoâmnio. Avaliar lactação conforme fármaco e duração."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo/Lactancia",
+            "text": "AINE sistémico: evitar desde aproximadamente 30 semanas de gestación; entre 20–30 semanas, usar solo si es necesario, a la menor dosis y por el menor tiempo, por riesgo renal fetal/oligohidramnios. Evaluar lactancia según fármaco y duración."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Ketoprofen capsules, 2026",
+            "text": "Fonte oficial revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=492de5dc-7c1b-47be-8510-43be4e1fd4ed"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Ketoprofen capsules, 2026",
+            "text": "Fuente oficial revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=492de5dc-7c1b-47be-8510-43be4e1fd4ed"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "cetoprofeno_source_1",
+        "title": "DailyMed — Ketoprofen capsules, 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=492de5dc-7c1b-47be-8510-43be4e1fd4ed",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

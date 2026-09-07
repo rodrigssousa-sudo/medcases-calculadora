@@ -79,41 +79,139 @@
 
 /* ── LIDOCAÍNA IV (ANTIARRÍTMICO) ───────────────────────────────────── */
     "lidocaina_iv": {
-      name: { pt: 'Lidocaína (Uso Sistêmico IV)', es: 'Lidocaína (Uso Sistémico IV)' },
-      category: 'cardiologia',
-      class: { pt: 'Antiarrítmico Classe IB / Anestésico Local', es: 'Antiarrítmico Clase IB / Anestésico Local' },
-      indications: {
-        pt: ['Alternativa à Amiodarona na Parada Cardíaca (FV/TV sem pulso)', 'Tratamento de arritmias ventriculares refratárias pós-infarto'],
-        es: ['Alternativa a la Amiodarona en el Paro Cardíaco (FV/TV sin pulso)', 'Tratamiento de arritmias ventriculares refractarias posinfarto']
+      "name": {
+        "pt": "Lidocaína (Uso Sistêmico IV)",
+        "es": "Lidocaína (Uso Sistémico IV)"
       },
-      commercialNames: { br: ['Xylestesin (Sem Vasoconstritor)'], ar: ['Xylocaina'] },
-      presentation: { pt: ['Frasco-ampola IV 1% ou 2% SEM vasoconstritor'], es: ['Vial IV 1% o 2% SIN vasoconstrictor'] },
-      mechanism: {
-        pt: 'Age bloqueando fortemente os canais de sódio no estado inativo ou aberto, encurtando o potencial de ação (Fase 0) nas células ventriculares. Sua ação é extremamente focada no ventrículo isquêmico (onde o pH é mais ácido), "acalmando" os focos anômalos que causam a Taquicardia Ventricular. Tem baixíssima eficácia em arritmias atriais.',
-        es: 'Actúa bloqueando fuertemente los canales de sodio en estado inactivo o abierto, acortando el potencial de acción (Fase 0) en las células ventriculares. Su acción es extremadamente enfocada en el ventrículo isquémico (donde el pH es más ácido), "calmando" los focos anómalos que causan la Taquicardia Ventricular. Tiene bajísima eficacia en arritmias auriculares.'
+      "category": "cardiologia",
+      "class": {
+        "pt": "Antiarrítmico Classe IB",
+        "es": "Antiarrítmico Clase IB"
       },
-      dose: {
-        adult: {
-          pt: 'PCR: Bolus IV inicial de 1 a 1,5 mg/kg. Manutenção: Infusão contínua de 1 a 4 mg/minuto.',
-          es: 'RCP: Bolo IV inicial de 1 a 1,5 mg/kg. Mantenimiento: Infusión continua de 1 a 4 mg/minuto.'
+      "indications": {
+        "pt": [
+          "FV/TV sem pulso refratária à desfibrilação como alternativa à amiodarona",
+          "Arritmias ventriculares agudas selecionadas"
+        ],
+        "es": [
+          "FV/TV sin pulso refractaria a desfibrilación como alternativa a amiodarona",
+          "Arritmias ventriculares agudas seleccionadas"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Lidocaína IV sem vasoconstritor"
+        ],
+        "ar": [
+          "Lidocaína IV sin vasoconstrictor"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução IV antiarrítmica; concentrações 1% ou 2% podem existir. Não usar formulações com epinefrina para uso IV antiarrítmico."
+        ],
+        "es": [
+          "Solución IV antiarrítmica; pueden existir concentraciones 1% o 2%. No usar formulaciones con epinefrina para uso IV antiarrítmico."
+        ]
+      },
+      "mechanism": {
+        "pt": "Bloqueia canais rápidos de sódio em tecido ventricular, reduzindo automatismo e atividade ventricular ectópica. É metabolizada principalmente no fígado e depende do fluxo hepático.",
+        "es": "Bloquea canales rápidos de sodio en tejido ventricular, reduciendo automatismo y actividad ectópica ventricular. Se metaboliza principalmente en el hígado y depende del flujo hepático."
+      },
+      "dose": {
+        "adult": {
+          "pt": "PCR por FV/TV sem pulso refratária: 1–1,5 mg/kg IV/IO; segunda dose 0,5–0,75 mg/kg. Para arritmias ventriculares com pulso, bolus e infusão devem seguir protocolo/monitorização; infusão usual 1–4 mg/min.",
+          "es": "PCR por FV/TV sin pulso refractaria: 1–1,5 mg/kg IV/IO; segunda dosis 0,5–0,75 mg/kg. Para arritmias ventriculares con pulso, bolo e infusión deben seguir protocolo/monitorización; infusión habitual 1–4 mg/min."
         },
-        pediatric: {
-          pt: 'PCR: Bolus 1 mg/kg IV.',
-          es: 'RCP: Bolo 1 mg/kg IV.'
+        "pediatric": {
+          "pt": "Doses pediátricas devem seguir algoritmo PALS/protocolo pediátrico vigente; não extrapolar automaticamente o esquema adulto.",
+          "es": "Las dosis pediátricas deben seguir algoritmo PALS/protocolo pediátrico vigente; no extrapolar automáticamente el esquema adulto."
         }
       },
-      administration: { pt: ['É ESTRITAMENTE PROIBIDO usar frascos de Lidocaína que contenham Epinefrina (vasoconstritor) para uso intravenoso antiarrítmico.', 'Requer monitorização contínua na UTI para manutenção.'], es: ['ES ESTRICTAMENTE PROHIBIDO usar viales de Lidocaína que contengan Epinefrina (vasoconstrictor) para uso intravenoso antiarrítmico.', 'Requiere monitorización continua en la UCI para mantenimiento.'] },
-      renalAdjustment: { required: false, message: { pt: 'Os metabólitos inativos podem se acumular, mas raramente exigem ajuste agudo.', es: 'Los metabolitos inactivos pueden acumularse, pero raramente exigen ajuste agudo.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Totalmente dependente do fluxo e enzimas hepáticas. Na insuficiência cardíaca (baixo débito) ou cirrose hepática, o clearance cai 50%. A dose de manutenção DEVE ser cortada pela metade.', es: 'Totalmente dependiente del flujo y enzimas hepáticas. En la insuficiencia cardíaca (bajo gasto) o cirrosis hepática, el clearance cae 50%. La dosis de mantenimiento DEBE cortarse a la mitad.' } },
-      commonAdverseEffects: { pt: ['Dormência perioral (formigamento na boca)', 'Zumbido e tontura', 'Sabor metálico'], es: ['Adormecimiento perioral (hormigueo en la boca)', 'Zumbido y mareo', 'Sabor metálico'] },
-      dangerousAdverseEffects: { pt: ['TOXICIDADE NEUROLÓGICA DA LIDOCAÍNA: Convulsões generalizadas refratárias, depressão respiratória e Coma', 'Bloqueio cardíaco grave em altas doses'], es: ['TOXICIDAD NEUROLÓGICA DE LA LIDOCAÍNA: Convulsiones generalizadas refractarias, depresión respiratoria y Coma', 'Bloqueo cardíaco grave en altas dosis'] },
-      contraindications: {
-        absolute: { pt: ['Bloqueio sinoatrial, Bloqueio AV avançado', 'Alergia a anestésicos tipo Amida'], es: ['Bloqueo sinoauricular, Bloqueo AV avanzado', 'Alergia a anestésicos tipo Amida'] },
-        relative: { pt: ['Síndrome de Wolff-Parkinson-White', 'Pacientes com função hepática muito comprometida'], es: ['Síndrome de Wolff-Parkinson-White', 'Pacientes con función hepática muy comprometida'] }
+      "administration": {
+        "pt": [
+          "ECG contínuo e monitorização hemodinâmica",
+          "Usar somente apresentação destinada a uso IV, sem vasoconstritor",
+          "Vigiar sinais neurológicos precoces de toxicidade"
+        ],
+        "es": [
+          "ECG continuo y monitorización hemodinámica",
+          "Usar solo presentación destinada a uso IV, sin vasoconstrictor",
+          "Vigilar signos neurológicos precoces de toxicidad"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'O cérebro avisa antes da convulsão. Se o paciente recebendo infusão de lidocaína na UTI começar a falar embolado (disartria), ficar confuso ou reclamar de formigamento nos lábios, PARE a bomba. Ele está a minutos de convulsionar.', es: 'El cerebro avisa antes de la convulsión. Si el paciente recibiendo infusión de lidocaína en la UCI empieza a hablar confuso (disartria), se confunde o se queja de hormigueo en los labios, PARE la bomba. Está a minutos de convulsionar.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há ajuste agudo fixo apenas pela função renal; metabólitos podem acumular em infusões prolongadas.",
+          "es": "No existe ajuste agudo fijo solo por función renal; los metabolitos pueden acumularse en infusiones prolongadas."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Reduzir exposição/taxa de manutenção em disfunção hepática, choque ou baixo débito, pois o clearance depende do fluxo e metabolismo hepáticos.",
+          "es": "Reducir exposición/velocidad de mantenimiento en disfunción hepática, shock o bajo gasto, porque el clearance depende del flujo y metabolismo hepáticos."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Parestesias",
+          "Tontura",
+          "Sonolência",
+          "Náusea"
+        ],
+        "es": [
+          "Parestesias",
+          "Mareo",
+          "Somnolencia",
+          "Náuseas"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Convulsões",
+          "Depressão do SNC",
+          "Bradicardia/BAV",
+          "Colapso cardiovascular"
+        ],
+        "es": [
+          "Convulsiones",
+          "Depresión del SNC",
+          "Bradicardia/BAV",
+          "Colapso cardiovascular"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade a anestésicos locais do tipo amida",
+            "Bloqueio cardíaco grave sem marcapasso em situações apropriadas"
+          ],
+          "es": [
+            "Hipersensibilidad a anestésicos locales tipo amida",
+            "Bloqueo cardíaco grave sin marcapasos en situaciones apropiadas"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Doença hepática grave, choque/baixo débito, idosos, uso concomitante de outros antiarrítmicos"
+          ],
+          "es": [
+            "Enfermedad hepática grave, shock/bajo gasto, adultos mayores, uso concomitante de otros antiarrítmicos"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Esta ficha é exclusivamente do uso sistêmico IV antiarrítmico. Não misturar com o owner canônico de lidocaína tópica/local.",
+          "es": "Esta ficha es exclusivamente para uso sistémico IV antiarrítmico. No mezclar con el owner canónico de lidocaína tópica/local."
+        }
       }
     }, // vírgula adicionada; BUILD 356 blocos seguem
 

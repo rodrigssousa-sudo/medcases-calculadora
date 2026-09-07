@@ -1,6 +1,6 @@
 {
   "id": "difenidramina",
-  "category": "alergia_imunologia",
+  "category": "alergia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,182 @@
   "keywords": [
     "difenidramina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-9ef937dca1e379d1",
+  "clinicalContentSha256": "9ef937dca1e379d1744c935ea24743c3c0123248e799aedbf898bf7245b99b40",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "alergia_imunologia.js"
+  "sourceModule": "alergia_imunologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "difenidramina",
+    "clinical_batch": "LOT005_ANTIALERGICOS_ANTIHISTAMINICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_regulatory_smpc",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Evitar álcool e outros sedativos"
+          },
+          {
+            "label": "Administração",
+            "text": "Não usar para fazer uma criança dormir"
+          },
+          {
+            "label": "Administração",
+            "text": "Não duplicar com outros produtos contendo difenidramina, inclusive tópicos"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Evitar alcohol y otros sedantes"
+          },
+          {
+            "label": "Administración",
+            "text": "No usar para hacer dormir a un niño"
+          },
+          {
+            "label": "Administración",
+            "text": "No duplicar con otros productos que contengan difenhidramina, incluso tópicos"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Anti-histamínico de primeira geração: sedação e carga anticolinérgica são clinicamente relevantes; nunca substituir adrenalina na anafilaxia."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Delirium/toxicidade anticolinérgica; Arritmias e convulsões em superdose; Depressão do SNC"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Antihistamínico de primera generación: sedación y carga anticolinérgica son clínicamente relevantes; nunca sustituir adrenalina en anafilaxia."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Delirium/toxicidad anticolinérgica; Arritmias y convulsiones en sobredosis; Depresión del SNC"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "25–50 mg VO a cada 4–6 h conforme necessidade; respeitar limite do produto."
+          },
+          {
+            "label": "Pediatria",
+            "text": "6–11 anos: 12,5–25 mg a cada 4–6 h conforme produto. OTC oral: <6 anos não usar sem orientação específica."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem esquema renal fixo rotineiro; maior cautela em idosos e pacientes vulneráveis."
+          },
+          {
+            "label": "Fígado",
+            "text": "Usar cautela em hepatopatia significativa por maior risco de sedação/acúmulo."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "25–50 mg VO cada 4–6 h según necesidad; respetar límite del producto."
+          },
+          {
+            "label": "Pediatría",
+            "text": "6–11 años: 12,5–25 mg cada 4–6 h según producto. OTC oral: <6 años no usar sin indicación específica."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin esquema renal fijo rutinario; mayor precaución en adultos mayores y pacientes vulnerables."
+          },
+          {
+            "label": "Hígado",
+            "text": "Usar precaución en hepatopatía significativa por mayor riesgo de sedación/acumulación."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Anti-histamínico H1 de primeira geração; anticolinérgico sedativo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueio H1 central e periférico com importante atividade anticolinérgica e sedativa."
+          },
+          {
+            "label": "Indicações",
+            "text": "Sintomas alérgicos; Adjuvante em reações alérgicas; não substitui adrenalina na anafilaxia"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antihistamínico H1 de primera generación; anticolinérgico sedante"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueo H1 central y periférico con importante actividad anticolinérgica y sedante."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Síntomas alérgicos; Adyuvante en reacciones alérgicas; no sustituye adrenalina en anafilaxia"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Álcool, opioides e outros sedativos podem intensificar sonolência e comprometimento psicomotor."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Alcohol, opioides y otros sedantes pueden intensificar somnolencia y deterioro psicomotor."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed Diphenhydramine 2026",
+            "text": "Fonte revisada em 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=519c86dd-fa86-5de2-e063-6394a90a462b"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed Diphenhydramine 2026",
+            "text": "Fuente revisada el 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=519c86dd-fa86-5de2-e063-6394a90a462b"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "difenidramina_1",
+        "title": "DailyMed Diphenhydramine 2026",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=519c86dd-fa86-5de2-e063-6394a90a462b",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

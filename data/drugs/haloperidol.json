@@ -1,202 +1,26 @@
 {
   "id": "haloperidol",
-  "category": "antipsicotico",
+  "category": "psiquiatria",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Haloperidol",
-    "class": "Antipsicótico típico de alta potência",
-    "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Haldol",
-        "Haloperidol Cristália",
-        "Haloperidol União Química"
-      ],
-      "ar": [
-        "Haldol",
-        "Haloperidol Klonal",
-        "Haloperidol Richmond"
-      ]
-    },
-    "presentation": [
-      "Comprimido 1 mg",
-      "Comprimido 5 mg",
-      "Gotas 2 mg/mL",
-      "Ampola 5 mg/mL",
-      "Decanoato 50 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Psicose/agitação: 0,5–5 mg VO/IM, repetir conforme resposta e protocolo.",
-      "manutencao": "Manutenção: 1–15 mg/dia VO, dividido em 1–2 tomadas.",
-      "maxDose": "Dose máxima depende da indicação e monitorização; evitar doses altas sem ECG e controle clínico."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Agitação psicomotora aguda",
-      "Delirium hiperativo",
-      "Mania aguda",
-      "Psicose aguda",
-      "Síndrome de Tourette",
-      "Náuseas e vômitos refratários em contexto selecionado"
-    ],
-    "renalAdjustment": "Sem ajuste renal habitual.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Antagonista dopaminérgico D2 potente na via mesolímbica; alta potência antipsicótica e maior risco extrapiramidal.",
-    "onset": "IM: início em 20–30 minutos; VO: início clínico em horas a dias; efeito antipsicótico pleno em dias a semanas.",
-    "halfLife": "Vida média aproximada: 14–37 horas; decanoato tem duração prolongada.",
-    "commonAdverseEffects": [
-      "Acatisia",
-      "Distonia aguda",
-      "Parkinsonismo medicamentoso",
-      "Sonolência",
-      "Rigidez",
-      "Hiperprolactinemia"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptica maligna",
-      "Prolongamento QT e torsades de pointes",
-      "Discinesia tardia",
-      "Convulsões em predispostos",
-      "Reação distônica laríngea rara"
-    ],
-    "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade ao haloperidol",
-      "Doença de Parkinson grave",
-      "Depressão importante do SNC",
-      "QT longo congênito ou arritmia ventricular grave",
-      "Demência com corpos de Lewy, salvo extrema necessidade"
-    ],
-    "interactions": [
-      "Fármacos que prolongam QT",
-      "Macrolídeos, quinolonas e antiarrítmicos",
-      "Lítio: risco de neurotoxicidade",
-      "Levodopa e agonistas dopaminérgicos: antagonismo de efeito",
-      "Álcool e depressores do SNC"
-    ],
-    "alerts": [
-      "Monitorar sintomas extrapiramidais.",
-      "Considerar ECG em pacientes de risco ou doses altas.",
-      "Cuidado com hipocalemia e hipomagnesemia.",
-      "Evitar uso rotineiro em psicose associada à demência.",
-      "Ter anticolinérgico disponível se risco de distonia aguda."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Haloperidol Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+    "name": "Haloperidol"
   },
   "es": {
-    "name": "Haloperidol",
-    "class": "Antipsicótico típico de alta potencia",
-    "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Haldol",
-        "Haloperidol Cristália",
-        "Haloperidol União Química"
-      ],
-      "ar": [
-        "Haldol",
-        "Haloperidol Klonal",
-        "Haloperidol Richmond"
-      ]
-    },
-    "presentation": [
-      "Comprimido 1 mg",
-      "Comprimido 5 mg",
-      "Gotas 2 mg/mL",
-      "Ampolla 5 mg/mL",
-      "Decanoato 50 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Psicosis/agitación: 0,5–5 mg VO/IM, repetir según respuesta y protocolo.",
-      "manutencao": "Mantenimiento: 1–15 mg/día VO, dividido en 1–2 tomas.",
-      "maxDose": "La dosis máxima depende de indicación y monitorización; evitar dosis altas sin ECG y control clínico."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Agitación psicomotora aguda",
-      "Delirium hiperactivo",
-      "Manía aguda",
-      "Psicosis aguda",
-      "Síndrome de Tourette",
-      "Náuseas y vómitos refractarios en contexto seleccionado"
-    ],
-    "renalAdjustment": "Sin ajuste renal habitual.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Antagonista dopaminérgico D2 potente en la vía mesolímbica; alta potencia antipsicótica y mayor riesgo extrapiramidal.",
-    "onset": "IM: inicio en 20–30 minutos; VO: inicio clínico en horas a días; efecto antipsicótico pleno en días a semanas.",
-    "halfLife": "Vida media aproximada: 14–37 horas; decanoato tiene duración prolongada.",
-    "commonAdverseEffects": [
-      "Acatisia",
-      "Distonía aguda",
-      "Parkinsonismo medicamentoso",
-      "Somnolencia",
-      "Rigidez",
-      "Hiperprolactinemia"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptico maligno",
-      "Prolongación QT y torsades de pointes",
-      "Discinesia tardía",
-      "Convulsiones en predispuestos",
-      "Reacción distónica laríngea rara"
-    ],
-    "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad al haloperidol",
-      "Enfermedad de Parkinson grave",
-      "Depresión importante del SNC",
-      "QT largo congénito o arritmia ventricular grave",
-      "Demencia con cuerpos de Lewy, salvo extrema necesidad"
-    ],
-    "interactions": [
-      "Fármacos que prolongan QT",
-      "Macrólidos, quinolonas y antiarrítmicos",
-      "Litio: riesgo de neurotoxicidad",
-      "Levodopa y agonistas dopaminérgicos: antagonismo de efecto",
-      "Alcohol y depresores del SNC"
-    ],
-    "alerts": [
-      "Monitorizar síntomas extrapiramidales.",
-      "Considerar ECG en pacientes de riesgo o dosis altas.",
-      "Cuidado con hipopotasemia e hipomagnesemia.",
-      "Evitar uso rutinario en psicosis asociada a demencia.",
-      "Tener anticolinérgico disponible si hay riesgo de distonía aguda."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Haloperidol Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+    "name": "Haloperidol"
   },
   "name": {
     "pt": "Haloperidol",
     "es": "Haloperidol"
   },
   "keywords": [
-    "haloperidol",
-    "haldol",
-    "haloperidol cristalia",
-    "haloperidol uniao quimica",
-    "haloperidol klonal",
-    "haloperidol richmond",
-    "antipsicotico tipico de alta potencia"
+    "haloperidol"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-75849ac54fec5559",
+  "clinicalContentSha256": "75849ac54fec55594fa7dc193ba84d22e32c864f169e99d58b5ac059290fd0c8",
   "source": "medcases-calculadora",
-  "schema": "premium-v1",
+  "schema": "legacy-v1",
   "sourceModule": "psicofarmacos.js",
   "clinicalCollision": {
     "policySchema": "clinical-collision-policy-v1",
@@ -231,12 +55,199 @@
         "keywords": [
           "haloperidol"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-75849ac54fec5559",
+        "clinicalContentSha256": "75849ac54fec55594fa7dc193ba84d22e32c864f169e99d58b5ac059290fd0c8",
         "source": "medcases-calculadora",
         "schema": "legacy-v1",
         "sourceModule": "sedacao.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "haloperidol",
+    "clinical_batch": "LOT004_ANTIEMETICOS_GASTROPROCINETICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_and_guideline",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Avaliar QT, eletrólitos e risco de EPS"
+          },
+          {
+            "label": "Administração",
+            "text": "Uso IV é off-label e exige política institucional/monitorização apropriada"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Evaluar QT, electrolitos y riesgo de EPS"
+          },
+          {
+            "label": "Administración",
+            "text": "El uso IV es off-label y exige política institucional/monitorización apropiada"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "O uso antiemético é off-label. Não confundir dose de agitação/psicose com dose antiemética; avaliar QT e EPS."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "QT/Torsades; Síndrome neuroléptica maligna; Discinesia tardia; Mortalidade aumentada em idosos com psicose relacionada à demência"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Doença de Parkinson; Demência com corpos de Lewy; Coma/depressão grave do SNC; Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "El uso antiemético es off-label. No confundir dosis de agitación/psicosis con dosis antiemética; evaluar QT y EPS."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "QT/Torsades; Síndrome neuroléptico maligno; Discinesia tardía; Mayor mortalidad en adultos mayores con psicosis relacionada con demencia"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Enfermedad de Parkinson; Demencia con cuerpos de Lewy; Coma/depresión grave del SNC; Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Para uso antiemético, não existe posologia FDA padronizada: seguir protocolo específico e usar doses menores que as usadas para agitação quando apropriado. Não extrapolar dose psiquiátrica."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Uso antiemético pediátrico não é uma indicação rotulada; requer protocolo especializado."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem ajuste renal rotineiro definido."
+          },
+          {
+            "label": "Fígado",
+            "text": "Metabolismo hepático; iniciar baixo e titular com cautela em hepatopatia."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Para uso antiemético no existe posología FDA estandarizada: seguir protocolo específico y usar dosis menores que las de agitación cuando corresponda. No extrapolar dosis psiquiátrica."
+          },
+          {
+            "label": "Pediatría",
+            "text": "El uso antiemético pediátrico no es una indicación rotulada; requiere protocolo especializado."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin ajuste renal rutinario definido."
+          },
+          {
+            "label": "Hígado",
+            "text": "Metabolismo hepático; iniciar bajo y titular con precaución en hepatopatía."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Antipsicótico típico; antagonista D2"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonismo D2 central. O efeito antiemético off-label decorre do bloqueio dopaminérgico na zona gatilho quimiorreceptora."
+          },
+          {
+            "label": "Indicações",
+            "text": "Agitação/psicose conforme rotulagem; Uso antiemético off-label em cenários selecionados (ex.: cuidados paliativos/breakthrough)"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antipsicótico típico; antagonista D2"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonismo D2 central. El efecto antiemético off-label deriva del bloqueo dopaminérgico en la zona gatillo quimiorreceptora."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Agitación/psicosis según rotulado; Uso antiemético off-label en escenarios seleccionados (p. ej., cuidados paliativos/breakthrough)"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "QT",
+            "text": "Evitar empilhar fármacos que prolongam QT quando possível; corrigir eletrólitos e monitorar pacientes de risco."
+          },
+          {
+            "label": "Antagonistas D2",
+            "text": "Associação aumenta risco de distonia, acatisia, parkinsonismo e síndrome neuroléptica maligna."
+          }
+        ],
+        "es": [
+          {
+            "label": "QT",
+            "text": "Evitar acumular fármacos que prolongan QT cuando sea posible; corregir electrolitos y monitorizar pacientes de riesgo."
+          },
+          {
+            "label": "Antagonistas D2",
+            "text": "La asociación aumenta riesgo de distonía, acatisia, parkinsonismo y síndrome neuroléptico maligno."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed Haloperidol Injection 2026",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e2eed126-cb82-42b1-9b48-9cbeb6873b50"
+          },
+          {
+            "label": "ASCO Antiemetics Guideline",
+            "text": "Fonte revisada em 2026-09-05. https://ascopubs.org/doi/10.1200/JCO.20.01296"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed Haloperidol Injection 2026",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e2eed126-cb82-42b1-9b48-9cbeb6873b50"
+          },
+          {
+            "label": "ASCO Antiemetics Guideline",
+            "text": "Fuente revisada el 2026-09-05. https://ascopubs.org/doi/10.1200/JCO.20.01296"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "haloperidol_1",
+        "title": "DailyMed Haloperidol Injection 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e2eed126-cb82-42b1-9b48-9cbeb6873b50",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "haloperidol_2",
+        "title": "ASCO Antiemetics Guideline",
+        "url": "https://ascopubs.org/doi/10.1200/JCO.20.01296",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

@@ -18,45 +18,135 @@
     "ketamina",
     "cetamina (ketamina)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8971307309e3457c",
+  "clinicalContentSha256": "8971307309e3457c216ea650e1d9475ee1c8277aec5b2d1c2c60bd27a9f90523",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "emergencia.js",
   "mc_clinical_enrichment_v1": {
     "schema": "medcases.clinical-enrichment.v1",
     "drug_key": "ketamina",
-    "stage_a_batch": "03",
-    "stage_a_reviewed_at": "2026-08-24",
-    "stage_a_source_policy": "official_regulatory_label_admin_preparation_references",
+    "clinical_batch": "LOT001_SEDACAO_INDUCAO_BNM",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_plus_current_guideline_when_explicitly_identified",
     "sections": {
       "administracao_preparo": {
         "pt": [
           {
-            "label": "Inspeção / via",
-            "text": "Solução injetável para uso IV ou IM. Inspecionar visualmente partículas e descoloração antes da administração; descartar se houver alteração."
+            "label": "Administração",
+            "text": "Administrar IV lentamente; a injeção rápida aumenta risco de depressão respiratória e resposta pressora. A concentração de 100 mg/mL é concentrada e deve ser diluída antes do uso IV conforme a rotulagem do produto. Monitorização cardiorrespiratória e capacidade imediata de manejo de via aérea são obrigatórias durante sedação/anestesia."
           },
           {
-            "label": "Diluição para indução",
-            "text": "Não administrar IV a concentração de 100 mg/mL sem diluição apropriada. Para indução, pode ser diluída em volume igual de Água Estéril para Injeção, SF 0,9% ou dextrose 5%, conforme a rotulagem; usar imediatamente após diluição."
-          },
-          {
-            "label": "Infusão",
-            "text": "Para manutenção por infusão, a rotulagem descreve preparo em dextrose 5% ou SF 0,9% e uso imediato após a diluição. Ajustar a concentração ao contexto clínico e ao volume permitido."
+            "label": "Apresentação",
+            "text": "Solução injetável IV/IM; concentrações de 10, 50 e 100 mg/mL podem existir conforme fabricante/mercado"
           }
         ],
         "es": [
           {
-            "label": "Inspección / vía",
-            "text": "Solución inyectable para uso IV o IM. Inspeccionar visualmente partículas y decoloración antes de administrar; descartar si presenta alteraciones."
+            "label": "Administración",
+            "text": "Administrar IV lentamente; la inyección rápida aumenta el riesgo de depresión respiratoria y respuesta presora. La concentración de 100 mg/mL es concentrada y debe diluirse antes del uso IV según el rotulado del producto. Se requiere monitorización cardiorrespiratoria y capacidad inmediata para manejo de la vía aérea durante sedación/anestesia."
           },
           {
-            "label": "Dilución para inducción",
-            "text": "No administrar por vía IV la concentración de 100 mg/mL sin dilución adecuada. Para inducción, puede diluirse con igual volumen de Agua Estéril para Inyección, SF 0,9% o dextrosa 5%, según el rotulado; usar inmediatamente tras la dilución."
+            "label": "Presentación",
+            "text": "Solución inyectable IV/IM; pueden existir concentraciones de 10, 50 y 100 mg/mL según fabricante/mercado"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "A preservação de reflexos de via aérea não elimina risco de obstrução, laringoespasmo ou apneia. Benzodiazepínico não é obrigatório de rotina; pode ser usado quando clinicamente indicado para manifestações de emergência."
           },
           {
-            "label": "Infusión",
-            "text": "Para mantenimiento mediante infusión, el rotulado describe preparación en dextrosa 5% o SF 0,9% y uso inmediato tras la dilución. Ajustar la concentración al contexto clínico y al volumen permitido."
+            "label": "Eventos graves",
+            "text": "Depressão respiratória/apneia, sobretudo com administração rápida ou dose excessiva; Laringoespasmo; Instabilidade hemodinâmica; Lesão hepática com uso recorrente"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade à cetamina ou excipientes; Situação em que elevação importante da pressão arterial represente risco grave"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "La preservación de reflejos de la vía aérea no elimina el riesgo de obstrucción, laringoespasmo o apnea. Una benzodiazepina no es obligatoria de rutina; puede usarse cuando esté clínicamente indicada para manifestaciones de emergencia."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión respiratoria/apnea, sobre todo con administración rápida o dosis excesiva; Laringoespasmo; Inestabilidad hemodinámica; Lesión hepática con uso repetido"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a ketamina o excipientes; Situación en la que una elevación importante de la presión arterial represente un riesgo grave"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Indução: 1–4,5 mg/kg IV lentamente em 60 s; alternativa 1–2 mg/kg a 0,5 mg/kg/min. IM: 6,5–13 mg/kg. Titular ao efeito e ao contexto anestésico."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Rotulagem dos EUA: segurança/eficácia <16 anos não estabelecidas. Em sedação procedural pediátrica por protocolo: 1–1,5 mg/kg IV, com incrementos de 0,25–0,5 mg/kg; IM 4 mg/kg, podendo repetir 2 mg/kg após 10 min (máx. 6 mg/kg)."
+          },
+          {
+            "label": "Rim",
+            "text": "A rotulagem não estabelece ajuste renal fixo para indução; titular clinicamente."
+          },
+          {
+            "label": "Fígado",
+            "text": "Não há ajuste único definido para dose de indução. Uso recorrente foi associado a lesão hepática; considerar função hepática basal e periódica quando houver plano de administrações repetidas."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Inducción: 1–4,5 mg/kg IV lentamente en 60 s; alternativa 1–2 mg/kg a 0,5 mg/kg/min. IM: 6,5–13 mg/kg. Titular al efecto y al contexto anestésico."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Rotulado de EE. UU.: seguridad/eficacia <16 años no establecidas. En sedación procedimental pediátrica por protocolo: 1–1,5 mg/kg IV, con incrementos de 0,25–0,5 mg/kg; IM 4 mg/kg, pudiendo repetir 2 mg/kg a los 10 min (máx. 6 mg/kg)."
+          },
+          {
+            "label": "Riñón",
+            "text": "El rotulado no establece un ajuste renal fijo para inducción; titular clínicamente."
+          },
+          {
+            "label": "Hígado",
+            "text": "No hay un ajuste único definido para la dosis de inducción. El uso repetido se ha asociado a lesión hepática; considerar función hepática basal y periódica cuando se planifiquen administraciones repetidas."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Anestésico dissociativo; antagonista não competitivo de receptores NMDA"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagoniza receptores NMDA e produz anestesia dissociativa com analgesia e amnésia. Em muitos pacientes aumenta pressão arterial e frequência cardíaca por estimulação simpática, mas hipotensão e bradicardia também podem ocorrer, especialmente em depleção de catecolaminas."
+          },
+          {
+            "label": "Indicações",
+            "text": "Indução de anestesia geral; Anestesia como agente único em procedimentos que não exigem relaxamento muscular; Suplemento a outros agentes anestésicos; Sedação procedural pediátrica em emergência — uso fora da rotulagem dos EUA, conforme protocolo institucional"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Anestésico disociativo; antagonista no competitivo de receptores NMDA"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagoniza receptores NMDA y produce anestesia disociativa con analgesia y amnesia. En muchos pacientes aumenta la presión arterial y la frecuencia cardíaca por estimulación simpática, pero también pueden ocurrir hipotensión y bradicardia, especialmente con depleción de catecolaminas."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Inducción de anestesia general; Anestesia como agente único en procedimientos que no requieren relajación muscular; Suplemento de otros agentes anestésicos; Sedación procedimental pediátrica en urgencias — uso fuera del rotulado de EE. UU., según protocolo institucional"
           }
         ]
       },
@@ -64,24 +154,37 @@
         "pt": [
           {
             "label": "DailyMed — Ketamine Hydrochloride Injection",
-            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo."
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b96a0a23-3ca0-4a92-bd8b-1e9921931772"
+          },
+          {
+            "label": "Royal Children's Hospital — Ketamine use for procedural sedation",
+            "text": "Fonte revisada em 2026-09-05. https://www.rch.org.au/clinicalguide/guideline_index/Ketamine_use_for_procedural_sedation/"
           }
         ],
         "es": [
           {
             "label": "DailyMed — Ketamine Hydrochloride Injection",
-            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación."
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b96a0a23-3ca0-4a92-bd8b-1e9921931772"
+          },
+          {
+            "label": "Royal Children's Hospital — Ketamine use for procedural sedation",
+            "text": "Fuente revisada el 2026-09-05. https://www.rch.org.au/clinicalguide/guideline_index/Ketamine_use_for_procedural_sedation/"
           }
         ]
       }
     },
     "sources": [
       {
-        "stage": "A_BATCH03",
-        "id": "dailymed_ketamine_902c3785",
+        "id": "dailymed_ketamine_2026",
         "title": "DailyMed — Ketamine Hydrochloride Injection",
-        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=902c3785-a3cb-472b-ac15-394ac646271d",
-        "reviewed_at": "2026-08-24"
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b96a0a23-3ca0-4a92-bd8b-1e9921931772",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "rch_ketamine_procedural_sedation",
+        "title": "Royal Children's Hospital — Ketamine use for procedural sedation",
+        "url": "https://www.rch.org.au/clinicalguide/guideline_index/Ketamine_use_for_procedural_sedation/",
+        "reviewed_at": "2026-09-05"
       }
     ]
   }

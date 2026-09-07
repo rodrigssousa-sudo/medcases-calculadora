@@ -1,6 +1,6 @@
 {
   "id": "desloratadina",
-  "category": "alergia_imunologia",
+  "category": "alergia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,174 @@
   "keywords": [
     "desloratadina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-9ef937dca1e379d1",
+  "clinicalContentSha256": "9ef937dca1e379d1744c935ea24743c3c0123248e799aedbf898bf7245b99b40",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "alergia_imunologia.js"
+  "sourceModule": "alergia_imunologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "desloratadina",
+    "clinical_batch": "LOT005_ANTIALERGICOS_ANTIHISTAMINICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_regulatory_smpc",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "VO com ou sem alimento"
+          },
+          {
+            "label": "Administração",
+            "text": "Usar dispositivo de medida apropriado nas formulações líquidas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "VO con o sin alimento"
+          },
+          {
+            "label": "Administración",
+            "text": "Usar dispositivo de medición apropiado en formulaciones líquidas"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Na insuficiência renal ou hepática em adultos/adolescentes, a rotulagem recomenda iniciar 5 mg em dias alternados."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hipersensibilidade/anafilaxia rara"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade à desloratadina/loratadina"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "En insuficiencia renal o hepática en adultos/adolescentes, el rotulado recomienda iniciar 5 mg en días alternos."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hipersensibilidad/anafilaxia rara"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a desloratadina/loratadina"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Adultos e ≥12 anos: 5 mg VO 1x/dia."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Solução oral: 6–11 anos 2,5 mg/dia; 1–5 anos 1,25 mg/dia; 6–11 meses 1 mg/dia conforme indicação/rotulagem."
+          },
+          {
+            "label": "Rim",
+            "text": "Adultos/adolescentes com insuficiência renal: dose inicial de 5 mg em dias alternados conforme rotulagem; pediatria com insuficiência renal requer avaliação individual."
+          },
+          {
+            "label": "Fígado",
+            "text": "Adultos/adolescentes com insuficiência hepática: dose inicial de 5 mg em dias alternados conforme rotulagem."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Adultos y ≥12 años: 5 mg VO 1 vez/día."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Solución oral: 6–11 años 2,5 mg/día; 1–5 años 1,25 mg/día; 6–11 meses 1 mg/día según indicación/rotulado."
+          },
+          {
+            "label": "Riñón",
+            "text": "Adultos/adolescentes con insuficiencia renal: dosis inicial de 5 mg en días alternos según rotulado; pediatría con insuficiencia renal requiere evaluación individual."
+          },
+          {
+            "label": "Hígado",
+            "text": "Adultos/adolescentes con insuficiencia hepática: dosis inicial de 5 mg en días alternos según rotulado."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Anti-histamínico H1 de segunda geração"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Metabólito ativo da loratadina; antagonista/inverso agonista H1 periférico de longa ação."
+          },
+          {
+            "label": "Indicações",
+            "text": "Rinite alérgica sazonal/perene; Urticária crônica idiopática"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antihistamínico H1 de segunda generación"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Metabolito activo de loratadina; antagonista/agonista inverso H1 periférico de acción prolongada."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Rinitis alérgica estacional/perenne; Urticaria crónica idiopática"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar sedativos e outras medicações conforme perfil do paciente."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar sedantes y otras medicaciones según perfil del paciente."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed Desloratadine 2026",
+            "text": "Fonte revisada em 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21174c0f-9204-4c75-b6e6-2f9ada5b535d"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed Desloratadine 2026",
+            "text": "Fuente revisada el 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21174c0f-9204-4c75-b6e6-2f9ada5b535d"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "desloratadina_1",
+        "title": "DailyMed Desloratadine 2026",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21174c0f-9204-4c75-b6e6-2f9ada5b535d",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

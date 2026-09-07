@@ -1,6 +1,6 @@
 {
   "id": "dexametasona",
-  "category": "imuno_corticoide",
+  "category": "imunologia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,8 +17,8 @@
   "keywords": [
     "dexametasona"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-75849ac54fec5559",
+  "clinicalContentSha256": "75849ac54fec55594fa7dc193ba84d22e32c864f169e99d58b5ac059290fd0c8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "imuno_corticoide.js",
@@ -32,36 +32,156 @@
       "administracao_preparo": {
         "pt": [
           {
-            "label": "Via parenteral",
-            "text": "A apresentação injetável de fosfato sódico de dexametasona pode ser administrada por via intravenosa ou intramuscular conforme a indicação e a apresentação."
+            "label": "Administração",
+            "text": "Na profilaxia antiemética, ajustar duração ao risco e protocolo; evitar prolongamento desnecessário"
           },
           {
-            "label": "Inspeção",
-            "text": "Antes da administração parenteral, inspecionar visualmente a solução e utilizar apenas se estiver adequada à apresentação, sem partículas ou alteração incompatível com a rotulagem."
+            "label": "Administração",
+            "text": "Monitorar glicemia, infecção e efeitos psiquiátricos quando doses repetidas"
           }
         ],
         "es": [
           {
-            "label": "Vía parenteral",
-            "text": "La presentación inyectable de fosfato sódico de dexametasona puede administrarse por vía intravenosa o intramuscular según la indicación y la presentación."
+            "label": "Administración",
+            "text": "En profilaxis antiemética, ajustar duración al riesgo y protocolo; evitar prolongación innecesaria"
           },
           {
-            "label": "Inspección",
-            "text": "Antes de la administración parenteral, inspeccionar visualmente la solución y utilizarla solo si es adecuada para la presentación, sin partículas ni cambios incompatibles con el rotulado."
+            "label": "Administración",
+            "text": "Monitorizar glucemia, infección y efectos psiquiátricos cuando se usan dosis repetidas"
           }
         ]
       },
       "referencias": {
         "pt": [
           {
-            "label": "DailyMed — Dexamethasone Sodium Phosphate Injection",
-            "text": "Fonte oficial/regulatória consultada em 24/08/2026 para Administração/Preparo. Atualização da fonte informada: 2026-01-22."
+            "label": "ASCO Antiemetics Guideline",
+            "text": "Fonte revisada em 2026-09-05. https://ascopubs.org/doi/10.1200/JCO.20.01296"
+          },
+          {
+            "label": "MASCC/ESMO 2023 HEC",
+            "text": "Fonte revisada em 2026-09-05. https://pubmed.ncbi.nlm.nih.gov/38127246/"
           }
         ],
         "es": [
           {
-            "label": "DailyMed — Dexamethasone Sodium Phosphate Injection",
-            "text": "Fuente oficial/regulatoria consultada el 24/08/2026 para Administración/Preparación. Actualización informada de la fuente: 2026-01-22."
+            "label": "ASCO Antiemetics Guideline",
+            "text": "Fuente revisada el 2026-09-05. https://ascopubs.org/doi/10.1200/JCO.20.01296"
+          },
+          {
+            "label": "MASCC/ESMO 2023 HEC",
+            "text": "Fuente revisada el 2026-09-05. https://pubmed.ncbi.nlm.nih.gov/38127246/"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Na antiemese oncológica, dexametasona é componente do esquema; dose e número de dias devem seguir risco emetogênico e combinação usada."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Infecção; Psicose/mania; Sangramento GI em contexto de risco; Supressão adrenal com uso prolongado"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Infecção fúngica sistêmica sem tratamento apropriado; Hipersensibilidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "En antiemesis oncológica, dexametasona es componente del esquema; dosis y número de días deben seguir riesgo emetógeno y combinación utilizada."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Infección; Psicosis/manía; Sangrado GI en contexto de riesgo; Supresión adrenal con uso prolongado"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Infección fúngica sistémica sin tratamiento apropiado; Hipersensibilidad"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Como antiemético em oncologia, a dose depende do risco emetogênico e dos fármacos associados (5-HT3/NK1/olanzapina). Seguir protocolo ASCO/MASCC-ESMO; não existe dose universal."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Posologia antiemética pediátrica depende do protocolo oncológico e do esquema quimioterápico."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem ajuste renal rotineiro específico."
+          },
+          {
+            "label": "Fígado",
+            "text": "Sem fator fixo universal; monitorar efeitos sistêmicos em hepatopatia."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Como antiemético en oncología, la dosis depende del riesgo emetógeno y de los fármacos asociados (5-HT3/NK1/olanzapina). Seguir protocolo ASCO/MASCC-ESMO; no existe dosis universal."
+          },
+          {
+            "label": "Pediatría",
+            "text": "La posología antiemética pediátrica depende del protocolo oncológico y del esquema de quimioterapia."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin ajuste renal rutinario específico."
+          },
+          {
+            "label": "Hígado",
+            "text": "Sin factor fijo universal; monitorizar efectos sistémicos en hepatopatía."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Corticosteroide glicocorticoide de longa ação"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista do receptor glicocorticoide. O mecanismo antiemético é multifatorial e não completamente definido."
+          },
+          {
+            "label": "Indicações",
+            "text": "Componente de profilaxia antiemética em quimioterapia conforme risco emetogênico; Múltiplas indicações inflamatórias/imunológicas conforme rotulagem"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Corticosteroide glucocorticoide de acción prolongada"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista del receptor glucocorticoide. El mecanismo antiemético es multifactorial y no está completamente definido."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Componente de profilaxis antiemética en quimioterapia según riesgo emetógeno; Múltiples indicaciones inflamatorias/inmunológicas según rotulado"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar interações específicas conforme contexto clínico e medicações concomitantes."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar interacciones específicas según contexto clínico y medicación concomitante."
           }
         ]
       }
@@ -74,7 +194,22 @@
         "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0277cc0a-2fd4-4605-a310-b613be84ee26",
         "reviewed_at": "2026-08-24",
         "updated": "2026-01-22"
+      },
+      {
+        "id": "dexametasona_1",
+        "title": "ASCO Antiemetics Guideline",
+        "url": "https://ascopubs.org/doi/10.1200/JCO.20.01296",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "dexametasona_2",
+        "title": "MASCC/ESMO 2023 HEC",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38127246/",
+        "reviewed_at": "2026-09-05"
       }
-    ]
+    ],
+    "clinical_batch": "LOT004_ANTIEMETICOS_GASTROPROCINETICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_and_guideline"
   }
 }

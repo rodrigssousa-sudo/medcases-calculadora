@@ -3,7 +3,7 @@
  * MedCases — Fase 4B: Enrichment-Preserving Export — Teste de integração
  *
  * Executa o export corrigido em cópias isoladas (/tmp) e valida os gates:
- *  101/101 preservados · hash parity · 737 sem enrichment · idempotência
+ *  baseline dinâmico preservado · hash parity integral · idempotência
  *  root/public parity · invalid enrichment ABORT · wrong drug ABORT
  *  novo drug sem JSON → comportamento normal
  *
@@ -28,6 +28,66 @@ function canon(o) {
   return JSON.stringify(o);
 }
 function h(o) { return crypto.createHash('sha256').update(canon(o)).digest('hex').slice(0, 16); }
+
+function fileDigest(filePath) {
+  return crypto
+    .createHash('sha256')
+    .update(fs.readFileSync(filePath))
+    .digest('hex');
+}
+
+function treeDigest(root) {
+  if (!fs.existsSync(root)) return 'MISSING';
+
+  const rows = [];
+
+  function walk(dir, base) {
+    const entries = fs
+      .readdirSync(dir, { withFileTypes: true })
+      .sort((a, b) => a.name.localeCompare(b.name));
+
+    for (const entry of entries) {
+      const absolute = path.join(dir, entry.name);
+      const relative = path
+        .relative(base, absolute)
+        .split(path.sep)
+        .join('/');
+
+      if (entry.isDirectory()) {
+        walk(absolute, base);
+      } else if (entry.isFile()) {
+        rows.push(
+          relative + '\0' + fileDigest(absolute)
+        );
+      } else {
+        throw new Error(
+          `TEST_TREE_ENTRY_INVALID: ${absolute}`
+        );
+      }
+    }
+  }
+
+  walk(root, root);
+
+  return crypto
+    .createHash('sha256')
+    .update(rows.join('\n'))
+    .digest('hex');
+}
+
+function managedParity(sb) {
+  const data = path.join(sb, 'data');
+  const pub = path.join(sb, 'public', 'data');
+
+  return (
+    treeDigest(path.join(data, 'drugs')) ===
+      treeDigest(path.join(pub, 'drugs')) &&
+    fileDigest(path.join(data, 'drugs_index.json')) ===
+      fileDigest(path.join(pub, 'drugs_index.json')) &&
+    fileDigest(path.join(data, 'manifest.json')) ===
+      fileDigest(path.join(pub, 'manifest.json'))
+  );
+}
 function makeSandbox() {
   const sb = fs.mkdtempSync(path.join(os.tmpdir(), 'mc-preserve-test-'));
   for (const d of ['database', 'config', 'scripts', 'data', 'public']) {
@@ -42,8 +102,60 @@ function runExportExpectFail(sb) {
   catch (e) { return (e.stdout || '').toString() + (e.stderr || '').toString(); }
 }
 
-// ── TEST 1/2/3: sandbox principal, run1 preserva 101 ──
+// ── TEST 1/2/3: sandbox principal, baseline de enrichments dinâmico ──
 const sb = makeSandbox();
+
+const clinicalKnowledgePath =
+  path.join(sb, 'data', 'clinical-knowledge');
+const aiRootPath =
+  path.join(sb, 'data', 'ai-drug-data');
+const aiPublicPath =
+  path.join(sb, 'public', 'data', 'ai-drug-data');
+
+const clinicalKnowledgeBefore =
+  treeDigest(clinicalKnowledgePath);
+const aiRootBefore =
+  treeDigest(aiRootPath);
+const aiPublicBefore =
+  treeDigest(aiPublicPath);
+
+const rootOnlySentinel =
+  path.join(
+    sb,
+    'data',
+    '__unmanaged-root-only__',
+    'sentinel.txt'
+  );
+
+const publicOnlySentinel =
+  path.join(
+    sb,
+    'public',
+    'data',
+    '__unmanaged-public-only__',
+    'sentinel.txt'
+  );
+
+fs.mkdirSync(
+  path.dirname(rootOnlySentinel),
+  { recursive: true }
+);
+fs.mkdirSync(
+  path.dirname(publicOnlySentinel),
+  { recursive: true }
+);
+
+fs.writeFileSync(
+  rootOnlySentinel,
+  'ROOT_ONLY_SENTINEL_V1',
+  'utf8'
+);
+fs.writeFileSync(
+  publicOnlySentinel,
+  'PUBLIC_ONLY_SENTINEL_V1',
+  'utf8'
+);
+
 const drugsDir = path.join(sb, 'data', 'drugs');
 const drugFiles = fs.readdirSync(drugsDir).filter(f => f.endsWith('.json'));
 const pre = new Map();
@@ -51,7 +163,7 @@ for (const f of drugFiles) {
   const j = JSON.parse(fs.readFileSync(path.join(drugsDir, f), 'utf8'));
   if (j.mc_clinical_enrichment_v1) pre.set(f, h(j.mc_clinical_enrichment_v1));
 }
-check('PRE_ENRICHMENT_COUNT=101', pre.size === 101, String(pre.size));
+check(`PRE_ENRICHMENT_COUNT=${pre.size}`, pre.size > 0, String(pre.size));
 runExport(sb);
 let post = 0, lost = 0, newE = 0, mismatch = 0, parity = 0;
 for (const f of fs.readdirSync(drugsDir).filter(x => x.endsWith('.json'))) {
@@ -64,12 +176,69 @@ for (const f of fs.readdirSync(drugsDir).filter(x => x.endsWith('.json'))) {
     else newE++;
   } else if (pre.has(f)) { lost++; }
 }
-check('POST_ENRICHMENT_COUNT=101', post === 101, String(post));
+check('POST_ENRICHMENT_COUNT_MATCHES_PRE', post === pre.size, post + '/' + pre.size);
 check('LOST_ENRICHMENTS=0', lost === 0, String(lost));
 check('UNEXPECTED_NEW_ENRICHMENTS=0', newE === 0, String(newE));
 check('MISMATCHED_ENRICHMENTS=0', mismatch === 0, String(mismatch));
-check('ENRICHMENT_HASH_PARITY=101/101', parity === 101, parity + '/101');
+check('ENRICHMENT_HASH_PARITY=ALL_PRE', parity === pre.size, parity + '/' + pre.size);
 check('NEW_SYNTHETIC_ENRICHMENTS=0', newE === 0);
+
+check(
+  'CLINICAL_KNOWLEDGE_PRESERVED=PASS',
+  treeDigest(clinicalKnowledgePath) ===
+    clinicalKnowledgeBefore
+);
+
+check(
+  'CLINICAL_KNOWLEDGE_NOT_PUBLISHED=PASS',
+  !fs.existsSync(
+    path.join(
+      sb,
+      'public',
+      'data',
+      'clinical-knowledge'
+    )
+  )
+);
+
+check(
+  'AI_DRUG_DATA_ROOT_PRESERVED=PASS',
+  treeDigest(aiRootPath) === aiRootBefore
+);
+
+check(
+  'AI_DRUG_DATA_PUBLIC_PRESERVED=PASS',
+  treeDigest(aiPublicPath) === aiPublicBefore
+);
+
+check(
+  'ROOT_ONLY_UNMANAGED_PRESERVED=PASS',
+  fs.existsSync(rootOnlySentinel) &&
+    fs.readFileSync(rootOnlySentinel, 'utf8') ===
+      'ROOT_ONLY_SENTINEL_V1' &&
+    !fs.existsSync(
+      path.join(
+        sb,
+        'public',
+        'data',
+        '__unmanaged-root-only__'
+      )
+    )
+);
+
+check(
+  'PUBLIC_ONLY_UNMANAGED_PRESERVED=PASS',
+  fs.existsSync(publicOnlySentinel) &&
+    fs.readFileSync(publicOnlySentinel, 'utf8') ===
+      'PUBLIC_ONLY_SENTINEL_V1' &&
+    !fs.existsSync(
+      path.join(
+        sb,
+        'data',
+        '__unmanaged-public-only__'
+      )
+    )
+);
 
 // ── TEST 4: idempotência ──
 fs.cpSync(path.join(sb, 'data'), path.join(sb, 'data_run1'), { recursive: true });
@@ -77,9 +246,11 @@ runExport(sb);
 const idemOut = execFileSync('diff', ['-rq', path.join(sb, 'data_run1'), path.join(sb, 'data')], { stdio: 'pipe' }).toString();
 check('IDEMPOTENCE=RUN2_ZERO_DIFF', idemOut === '', idemOut.slice(0, 200));
 
-// ── TEST 5: root/public parity ──
-const parOut = execFileSync('diff', ['-rq', path.join(sb, 'data'), path.join(sb, 'public', 'data')], { stdio: 'pipe' }).toString();
-check('ROOT_PUBLIC_DRUG_PARITY=PASS', parOut === '', parOut.slice(0, 200));
+// ── TEST 5: exporter-owned root/public parity only ──
+check(
+  'MANAGED_ROOT_PUBLIC_PARITY=PASS',
+  managedParity(sb)
+);
 
 // ── TEST 7: invalid enrichment → ABORT (sandbox fresco, corrompe data+public) ──
 const sb7 = makeSandbox();

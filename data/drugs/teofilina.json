@@ -17,9 +17,194 @@
   "keywords": [
     "teofilina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8db7dcf02f286792",
+  "clinicalContentSha256": "8db7dcf02f28679298b4aaa03b3d571d60c10a0f69b0f08fdac051f4119818d8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "pneumologia.js"
+  "sourceModule": "pneumologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "teofilina",
+    "clinical_batch": "LOT006_BRONCODILATADORES_ASMA_DPOC",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "GINA_2026_GOLD_2026_OFFICIAL_LABELS",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Monitorar concentração sérica após mudanças de dose, doença febril, tabagismo ou interações"
+          },
+          {
+            "label": "Administração",
+            "text": "Evitar escalada em exacerbação aguda sem nível sérico"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Monitorizar concentración sérica tras cambios de dosis, enfermedad febril, tabaquismo o interacciones"
+          },
+          {
+            "label": "Administración",
+            "text": "Evitar aumento en exacerbación aguda sin nivel sérico"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Estreita janela terapêutica e muitas interações. GINA não recomenda teofilina oral rotineiramente para asma por maior risco de efeitos adversos."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Convulsões; Taquiarritmias; Toxicidade potencialmente fatal"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Estrecho margen terapéutico y muchas interacciones. GINA no recomienda teofilina oral rutinariamente para asma por mayor riesgo de efectos adversos."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Convulsiones; Taquiarritmias; Toxicidad potencialmente fatal"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Dose deve ser individualizada por nível sérico, idade, tabagismo, comorbidades e interações. Não titular apenas por sintomas."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Dose pediátrica é individualizada por idade/peso e monitorização sérica; exige protocolo específico."
+          },
+          {
+            "label": "Rim",
+            "text": "Em adultos, depuração é predominantemente hepática; ajustar por níveis e contexto clínico."
+          },
+          {
+            "label": "Fígado",
+            "text": "Hepatopatia reduz depuração e exige redução de dose/monitorização sérica estreita."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "La dosis debe individualizarse por nivel sérico, edad, tabaquismo, comorbilidades e interacciones. No titular solo por síntomas."
+          },
+          {
+            "label": "Pediatría",
+            "text": "La dosis pediátrica se individualiza por edad/peso y monitorización sérica; requiere protocolo específico."
+          },
+          {
+            "label": "Riñón",
+            "text": "En adultos, la depuración es predominantemente hepática; ajustar por niveles y contexto clínico."
+          },
+          {
+            "label": "Hígado",
+            "text": "La hepatopatía reduce depuración y exige reducción de dosis/monitorización sérica estrecha."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Metilxantina broncodilatadora de estreita janela terapêutica"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Relaxamento de músculo liso e efeitos não broncodilatadores por mecanismos envolvendo inibição de fosfodiesterase/antagonismo de adenosina."
+          },
+          {
+            "label": "Indicações",
+            "text": "Broncoespasmo crônico em contextos selecionados quando alternativas são inadequadas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Metilxantina broncodilatadora de estrecho margen terapéutico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Relajación del músculo liso y efectos no broncodilatadores por mecanismos que incluyen inhibición de fosfodiesterasa/antagonismo de adenosina."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Broncoespasmo crónico en contextos seleccionados cuando alternativas son inadecuadas"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, eletrólitos e inibidores/indutores metabólicos conforme o fármaco."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, electrolitos e inhibidores/inductores metabólicos según el fármaco."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fonte revisada em 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "GOLD 2026 Report and Pocket Guide",
+            "text": "Fonte revisada em 2026-09-05. https://goldcopd.org/2026-gold-report-and-pocket-guide/"
+          },
+          {
+            "label": "DailyMed Theophylline ER 2026",
+            "text": "Fonte revisada em 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b7a90ccf-9c32-40cc-9008-7e55b3da4dfd"
+          }
+        ],
+        "es": [
+          {
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fuente revisada el 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "GOLD 2026 Report and Pocket Guide",
+            "text": "Fuente revisada el 2026-09-05. https://goldcopd.org/2026-gold-report-and-pocket-guide/"
+          },
+          {
+            "label": "DailyMed Theophylline ER 2026",
+            "text": "Fuente revisada el 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b7a90ccf-9c32-40cc-9008-7e55b3da4dfd"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "teofilina_1",
+        "title": "GINA 2026 Strategy Report",
+        "url": "https://ginasthma.org/2026-gina-strategy-report/",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "teofilina_2",
+        "title": "GOLD 2026 Report and Pocket Guide",
+        "url": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "teofilina_3",
+        "title": "DailyMed Theophylline ER 2026",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b7a90ccf-9c32-40cc-9008-7e55b3da4dfd",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

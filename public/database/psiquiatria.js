@@ -3460,110 +3460,122 @@
       }
     },
 
-    lorazepam: {
-      name: { pt: "Lorazepam", es: "Lorazepam" },
-      category: "ansiolitico",
-
-      calculate: (paciente, lang = "pt") => {
-        const idade = Number(paciente.idade || 0);
-        const gestante = Boolean(paciente.gestante);
-        const lactante = Boolean(paciente.lactante);
-        const hepatopatia = Boolean(paciente.hepatopatia);
-        const insuficienciaRenal = Number(paciente.clcr || 100) < 60;
-
-        return {
-          name: t(lang, "Lorazepam", "Lorazepam"),
-          class: t(lang, "Benzodiazepínico de ação intermediária", "Benzodiacepina de acción intermedia"),
-          category: "ansiolitico",
-          commercialNames: {
-            br: ["Lorax", "Lorazepam EMS", "Lorazepam Medley"],
-            ar: ["Trapax", "Emotival", "Lorazepam Bagó", "Lorazepam Denver Farma"]
-          },
-          presentation: [
-            t(lang, "Comprimido 1 mg", "Comprimido 1 mg"),
-            t(lang, "Comprimido 2 mg", "Comprimido 2 mg"),
-            t(lang, "Ampola 4 mg/mL", "Ampolla 4 mg/mL")
+    "lorazepam": {
+      "name": {
+        "pt": "Lorazepam",
+        "es": "Lorazepam"
+      },
+      "category": "psiquiatria",
+      "class": {
+        "pt": "Benzodiazepínico",
+        "es": "Benzodiazepina"
+      },
+      "indications": {
+        "pt": [
+          "Ansiedade/status epilepticus conforme formulação e rotulagem",
+          "Adjuvante, não monoterapia antiemética, para náusea antecipatória/breakthrough em oncologia conforme diretrizes"
+        ],
+        "es": [
+          "Ansiedad/status epiléptico según formulación y rotulado",
+          "Adyuvante, no monoterapia antiemética, para náusea anticipatoria/breakthrough en oncología según guías"
+        ]
+      },
+      "mechanism": {
+        "pt": "Modulador alostérico positivo do receptor GABA-A. Reduz ansiedade condicionada e componente antecipatório da náusea, mas não bloqueia primariamente vias eméticas.",
+        "es": "Modulador alostérico positivo del receptor GABA-A. Reduce ansiedad condicionada y componente anticipatorio de la náusea, pero no bloquea primariamente vías eméticas."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Como adjuvante antiemético/ansiólise em oncologia, usar dose baixa conforme protocolo; não há posologia FDA antiemética específica. Não usar como único antiemético em regimes emetogênicos.",
+          "es": "Como adyuvante antiemético/ansiolítico en oncología, usar dosis baja según protocolo; no existe posología FDA antiemética específica. No usar como único antiemético en regímenes emetógenos."
+        },
+        "pediatric": {
+          "pt": "Uso antiemético pediátrico é adjuvante e protocolar; evitar extrapolação do esquema adulto.",
+          "es": "El uso antiemético pediátrico es adyuvante y protocolar; evitar extrapolación del esquema adulto."
+        }
+      },
+      "administration": {
+        "pt": [
+          "Somente como adjuvante quando ansiedade/antecipação contribuem para sintomas",
+          "Evitar associação desnecessária com opioides e outros depressores do SNC",
+          "Retirada gradual após uso repetido/prolongado"
+        ],
+        "es": [
+          "Solo como adyuvante cuando ansiedad/anticipación contribuyen a los síntomas",
+          "Evitar asociación innecesaria con opioides y otros depresores del SNC",
+          "Retirada gradual tras uso repetido/prolongado"
+        ]
+      },
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela em disfunção renal, especialmente via IV/repetida, e titular à sedação.",
+          "es": "Usar precaución en disfunción renal, especialmente vía IV/repetida, y titular según sedación."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar dose menor/titulação cautelosa em hepatopatia grave ou maior sensibilidade.",
+          "es": "Usar dosis menor/titulación cautelosa en hepatopatía grave o mayor sensibilidad."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Sedação",
+          "Tontura",
+          "Fraqueza",
+          "Amnésia"
+        ],
+        "es": [
+          "Sedación",
+          "Mareo",
+          "Debilidad",
+          "Amnesia"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória, especialmente com opioides",
+          "Dependência/abstinência",
+          "Delirium/quedas"
+        ],
+        "es": [
+          "Depresión respiratoria, especialmente con opioides",
+          "Dependencia/abstinencia",
+          "Delirium/caídas"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade a benzodiazepínicos",
+            "Glaucoma agudo de ângulo fechado em formulações pertinentes"
           ],
-          dose: {
-            adulto: t(lang, "Ansiedade: 1–2 mg VO 2–3x/dia.", "Ansiedad: 1–2 mg VO 2–3 veces/día."),
-            insonia: t(lang, "Insônia associada à ansiedade: 1–2 mg VO ao deitar.", "Insomnio asociado a ansiedad: 1–2 mg VO al acostarse."),
-            agitacao: t(lang, "Agitação aguda: 1–2 mg VO/IM/EV conforme protocolo e monitorização.", "Agitación aguda: 1–2 mg VO/IM/IV según protocolo y monitorización."),
-            maxDose: t(lang, "Dose máxima usual: 10 mg/dia.", "Dosis máxima habitual: 10 mg/día.")
-          },
-          doseKg: {
-            standard: t(lang, "Não se utiliza cálculo rotineiro por kg em adultos.", "No se utiliza cálculo rutinario por kg en adultos."),
-            pediatric: t(lang, "Pediatria: uso especializado conforme indicação.", "Pediatría: uso especializado según indicación."),
-            maxDose: t(lang, "10 mg/dia", "10 mg/día")
-          },
-          indications: [
-            t(lang, "Transtorno de ansiedade generalizada", "Trastorno de ansiedad generalizada"),
-            t(lang, "Crises de ansiedade aguda", "Crisis de ansiedad aguda"),
-            t(lang, "Insônia associada à ansiedade", "Insomnio asociado a ansiedad"),
-            t(lang, "Agitação psicomotora", "Agitación psicomotora"),
-            t(lang, "Catatonia", "Catatonía"),
-            t(lang, "Estado de mal epiléptico", "Estado epiléptico"),
-            t(lang, "Sedação pré-procedimento", "Sedación preprocedimiento"),
-            t(lang, "Abstinência alcoólica, especialmente em hepatopatia", "Abstinencia alcohólica, especialmente en hepatopatía")
-          ],
-          renalAdjustment: insuficienciaRenal
-            ? t(lang, "Geralmente sem ajuste VO; cautela com formulações EV em insuficiência renal importante.", "Generalmente sin ajuste VO; cautela con formulaciones IV en insuficiencia renal importante.")
-            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
-          hepaticAdjustment: hepatopatia
-            ? t(lang, "Preferível a diazepam em hepatopatia por não ter metabólitos ativos; ainda assim usar menor dose.", "Preferible a diazepam en hepatopatía por no tener metabolitos activos; aun así usar menor dosis.")
-            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
-          mechanism: t(lang, "Potencializa o GABA no receptor GABA-A, aumentando frequência de abertura dos canais de cloro.", "Potencia el GABA en el receptor GABA-A, aumentando la frecuencia de apertura de los canales de cloro."),
-          onset: t(lang, "VO: 30–60 min; EV: 1–5 min; IM: 15–30 min.", "VO: 30–60 min; IV: 1–5 min; IM: 15–30 min."),
-          halfLife: t(lang, "Vida média aproximada: 10–20 horas.", "Vida media aproximada: 10–20 horas."),
-          commonAdverseEffects: [
-            t(lang, "Sonolência", "Somnolencia"),
-            t(lang, "Tontura", "Mareos"),
-            t(lang, "Ataxia", "Ataxia"),
-            t(lang, "Confusão", "Confusión"),
-            t(lang, "Amnésia anterógrada", "Amnesia anterógrada"),
-            t(lang, "Fraqueza muscular", "Debilidad muscular")
-          ],
-          dangerousAdverseEffects: [
-            t(lang, "Depressão respiratória", "Depresión respiratoria"),
-            t(lang, "Dependência física", "Dependencia física"),
-            t(lang, "Síndrome de abstinência", "Síndrome de abstinencia"),
-            t(lang, "Quedas e fraturas em idosos", "Caídas y fracturas en adultos mayores"),
-            t(lang, "Coma quando associado a depressores do SNC", "Coma cuando se asocia a depresores del SNC")
-          ],
-          risksByPatient: [
-            idade >= 65 ? t(lang, "Idoso: maior risco de sedação, delirium, quedas e fraturas.", "Adulto mayor: mayor riesgo de sedación, delirium, caídas y fracturas.") : null,
-            gestante ? t(lang, "Gestação: avaliar risco-benefício; evitar uso crônico.", "Embarazo: evaluar riesgo-beneficio; evitar uso crónico.") : null,
-            lactante ? t(lang, "Lactação: monitorar sedação e dificuldade de sucção no lactente.", "Lactancia: monitorizar sedación y dificultad de succión en el lactante.") : null,
-            hepatopatia ? t(lang, "Hepatopatia: opção relativamente mais segura que diazepam, mas usar menor dose.", "Hepatopatía: opción relativamente más segura que diazepam, pero usar dosis menor.") : null
-          ].filter(Boolean),
-          contraindications: [
-            t(lang, "Hipersensibilidade a benzodiazepínicos", "Hipersensibilidad a benzodiacepinas"),
-            t(lang, "Miastenia gravis", "Miastenia gravis"),
-            t(lang, "Insuficiência respiratória grave", "Insuficiencia respiratoria grave"),
-            t(lang, "Apneia do sono grave", "Apnea del sueño grave"),
-            t(lang, "Intoxicação aguda por álcool ou depressores do SNC", "Intoxicación aguda por alcohol o depresores del SNC")
-          ],
-          interactions: [
-            t(lang, "Álcool", "Alcohol"),
-            t(lang, "Opioides", "Opioides"),
-            t(lang, "Barbitúricos", "Barbitúricos"),
-            t(lang, "Antipsicóticos sedativos", "Antipsicóticos sedativos"),
-            t(lang, "Anti-histamínicos sedativos", "Antihistamínicos sedantes")
-          ],
-          alerts: [
-            t(lang, "Não suspender abruptamente após uso prolongado.", "No suspender abruptamente tras uso prolongado."),
-            t(lang, "Evitar associação com opioides e álcool.", "Evitar asociación con opioides y alcohol."),
-            t(lang, "Útil em abstinência alcoólica quando há hepatopatia.", "Útil en abstinencia alcohólica cuando hay hepatopatía."),
-            t(lang, "Monitorar ventilação se uso EV.", "Monitorizar ventilación si uso IV.")
-          ],
-          ref: [
-            "Goodman & Gilman 14ª Ed.",
-            "Stahl's Essential Psychopharmacology",
-            "FDA/DailyMed Lorazepam Prescribing Information",
-            "Lexicomp",
-            "Micromedex",
-            "UpToDate"
+          "es": [
+            "Hipersensibilidad a benzodiazepinas",
+            "Glaucoma agudo de ángulo cerrado en formulaciones pertinentes"
           ]
-        };
+        },
+        "relative": {
+          "pt": [
+            "DPOC/apneia do sono, idosos, opioides, história de dependência"
+          ],
+          "es": [
+            "EPOC/apnea del sueño, adultos mayores, opioides, antecedente de dependencia"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Lorazepam é apenas adjuvante antiemético. Com opioides pode causar sedação profunda, depressão respiratória, coma e morte.",
+          "es": "Lorazepam es solo adyuvante antiemético. Con opioides puede causar sedación profunda, depresión respiratoria, coma y muerte."
+        }
       }
     },
 
@@ -4839,122 +4851,122 @@
       }
     },
 
-    hidroxizina: {
-      name: { pt: "Hidroxizina", es: "Hidroxicina" },
-      category: "ansiolitico",
-
-      calculate: (paciente, lang = "pt") => {
-        const idade = Number(paciente.idade || 0);
-        const peso = Number(paciente.peso || 0);
-        const clcr = Number(paciente.clcr || 100);
-        const gestante = Boolean(paciente.gestante);
-        const lactante = Boolean(paciente.lactante);
-        const hepatopatia = Boolean(paciente.hepatopatia);
-        const insuficienciaRenal = clcr < 60;
-
-        const dosePediatricaMin = peso * 0.5;
-        const dosePediatricaMax = peso * 1;
-
-        return {
-          name: t(lang, "Hidroxizina", "Hidroxicina"),
-          class: t(lang, "Anti-histamínico H1 de primeira geração com ação ansiolítica", "Antihistamínico H1 de primera generación con acción ansiolítica"),
-          category: "ansiolitico",
-          commercialNames: {
-            br: ["Hixizine", "Prurizin", "Hidroxizina EMS"],
-            ar: ["Atarax", "Hidroxicina", "Hidroxicina Denver Farma"]
-          },
-          presentation: [
-            t(lang, "Comprimido 25 mg", "Comprimido 25 mg"),
-            t(lang, "Comprimido 50 mg", "Comprimido 50 mg"),
-            t(lang, "Xarope 2 mg/mL", "Jarabe 2 mg/mL"),
-            t(lang, "Solução oral 10 mg/5 mL", "Solución oral 10 mg/5 mL")
+    "hidroxizina": {
+      "name": {
+        "pt": "Hidroxizina",
+        "es": "Hidroxicina"
+      },
+      "category": "alergia",
+      "class": {
+        "pt": "Anti-histamínico H1 de primeira geração, sedativo e anticolinérgico",
+        "es": "Antihistamínico H1 de primera generación, sedante y anticolinérgico"
+      },
+      "indications": {
+        "pt": [
+          "Prurido associado a condições alérgicas onde autorizado",
+          "Ansiedade em algumas apresentações/mercados"
+        ],
+        "es": [
+          "Prurito asociado a condiciones alérgicas donde esté autorizado",
+          "Ansiedad en algunas presentaciones/mercados"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagonismo H1 central/periférico; também possui propriedades sedativas e anticolinérgicas. Pode bloquear canais cardíacos hERG.",
+        "es": "Antagonismo H1 central/periférico; también posee propiedades sedantes y anticolinérgicas. Puede bloquear canales cardíacos hERG."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Usar a menor dose eficaz pelo menor tempo. EMA: máximo total 100 mg/dia em adultos; se inevitável em idosos, máximo 50 mg/dia.",
+          "es": "Usar la menor dosis eficaz durante el menor tiempo. EMA: máximo total 100 mg/día en adultos; si es inevitable en adultos mayores, máximo 50 mg/día."
+        },
+        "pediatric": {
+          "pt": "Crianças ≤40 kg onde autorizado: máximo 2 mg/kg/dia; >40 kg usar limites de adulto.",
+          "es": "Niños ≤40 kg donde esté autorizado: máximo 2 mg/kg/día; >40 kg usar límites de adulto."
+        }
+      },
+      "administration": {
+        "pt": [
+          "Menor dose eficaz e menor duração possível",
+          "Evitar álcool e outros depressores do SNC",
+          "Avaliar QT, eletrólitos e fármacos concomitantes em pacientes de risco"
+        ],
+        "es": [
+          "Menor dosis eficaz y menor duración posible",
+          "Evitar alcohol y otros depresores del SNC",
+          "Evaluar QT, electrolitos y fármacos concomitantes en pacientes de riesgo"
+        ]
+      },
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela e considerar redução em disfunção renal, especialmente em idosos; individualizar.",
+          "es": "Usar precaución y considerar reducción en disfunción renal, especialmente en adultos mayores; individualizar."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela e considerar redução em hepatopatia.",
+          "es": "Usar precaución y considerar reducción en hepatopatía."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Sonolência",
+          "Boca seca",
+          "Tontura"
+        ],
+        "es": [
+          "Somnolencia",
+          "Boca seca",
+          "Mareo"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Prolongamento de QT/Torsades",
+          "Sedação excessiva",
+          "Delirium anticolinérgico"
+        ],
+        "es": [
+          "Prolongación de QT/Torsades",
+          "Sedación excesiva",
+          "Delirium anticolinérgico"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "QT longo conhecido ou fatores relevantes de risco para QT/TdP",
+            "Uso concomitante de fármacos que prolongam QT quando contraindicado",
+            "Hipersensibilidade"
           ],
-          dose: {
-            adulto: t(lang, "Ansiedade: 25–50 mg VO até 3–4x/dia conforme necessidade.", "Ansiedad: 25–50 mg VO hasta 3–4 veces/día según necesidad."),
-            prurido: t(lang, "Prurido/alergia: 25 mg VO à noite ou 25 mg 3–4x/dia conforme gravidade.", "Prurito/alergia: 25 mg VO por la noche o 25 mg 3–4 veces/día según gravedad."),
-            pediatrica: peso > 0
-              ? t(lang, `${dosePediatricaMin.toFixed(0)}–${dosePediatricaMax.toFixed(0)} mg/dia divididos, conforme indicação.`, `${dosePediatricaMin.toFixed(0)}–${dosePediatricaMax.toFixed(0)} mg/día divididos, según indicación.`)
-              : t(lang, "0,5–1 mg/kg/dia dividido conforme indicação.", "0,5–1 mg/kg/día dividido según indicación."),
-            maxDose: t(lang, "Dose máxima usual: 100 mg/dia para minimizar risco de QT e sedação.", "Dosis máxima habitual: 100 mg/día para minimizar riesgo de QT y sedación.")
-          },
-          doseKg: {
-            standard: t(lang, "Pediatria: 0,5–1 mg/kg/dia dividido conforme indicação.", "Pediatría: 0,5–1 mg/kg/día dividido según indicación."),
-            severe: t(lang, "Evitar doses altas em idosos, cardiopatas ou pacientes com risco de QT.", "Evitar dosis altas en adultos mayores, cardiópatas o pacientes con riesgo de QT."),
-            maxDose: t(lang, "100 mg/dia em adultos", "100 mg/día en adultos")
-          },
-          indications: [
-            t(lang, "Ansiedade leve a moderada", "Ansiedad leve a moderada"),
-            t(lang, "Crises de ansiedade quando se deseja evitar benzodiazepínicos", "Crisis de ansiedad cuando se desea evitar benzodiacepinas"),
-            t(lang, "Insônia associada à ansiedade", "Insomnio asociado a ansiedad"),
-            t(lang, "Prurido alérgico", "Prurito alérgico"),
-            t(lang, "Urticária", "Urticaria"),
-            t(lang, "Dermatites pruriginosas", "Dermatitis pruriginosas"),
-            t(lang, "Sedação pré-procedimento em casos selecionados", "Sedación preprocedimiento en casos seleccionados")
-          ],
-          renalAdjustment: insuficienciaRenal
-            ? t(lang, "Insuficiência renal: considerar reduzir dose e monitorar sedação/confusão.", "Insuficiencia renal: considerar reducir dosis y monitorizar sedación/confusión.")
-            : t(lang, "Sem ajuste renal habitual.", "Sin ajuste renal habitual."),
-          hepaticAdjustment: hepatopatia
-            ? t(lang, "Hepatopatia: considerar reduzir dose e monitorar sedação prolongada.", "Hepatopatía: considerar reducir dosis y monitorizar sedación prolongada.")
-            : t(lang, "Sem ajuste hepático habitual.", "Sin ajuste hepático habitual."),
-          mechanism: t(lang, "Antagonista/inverso H1 central e periférico; possui efeito sedativo, antipruriginoso, antiemético leve e ansiolítico.", "Antagonista/inverso H1 central y periférico; posee efecto sedativo, antipruriginoso, antiemético leve y ansiolítico."),
-          onset: t(lang, "Início de ação geralmente em 15–60 minutos.", "Inicio de acción generalmente en 15–60 minutos."),
-          halfLife: t(lang, "Vida média aproximada: 14–25 horas em adultos; pode prolongar em idosos.", "Vida media aproximada: 14–25 horas en adultos; puede prolongarse en adultos mayores."),
-          commonAdverseEffects: [
-            t(lang, "Sonolência", "Somnolencia"),
-            t(lang, "Boca seca", "Boca seca"),
-            t(lang, "Tontura", "Mareos"),
-            t(lang, "Fadiga", "Fatiga"),
-            t(lang, "Visão turva", "Visión borrosa"),
-            t(lang, "Constipação", "Estreñimiento")
-          ],
-          dangerousAdverseEffects: [
-            t(lang, "Prolongamento do intervalo QT", "Prolongación del intervalo QT"),
-            t(lang, "Torsades de pointes em pacientes predispostos", "Torsades de pointes en pacientes predispuestos"),
-            t(lang, "Depressão do SNC em associação com sedativos", "Depresión del SNC en asociación con sedantes"),
-            t(lang, "Delirium anticolinérgico em idosos", "Delirium anticolinérgico en adultos mayores"),
-            t(lang, "Retenção urinária", "Retención urinaria"),
-            t(lang, "Convulsões raras em predispostos", "Convulsiones raras en predispuestos")
-          ],
-          risksByPatient: [
-            idade >= 65 ? t(lang, "Idoso: evitar quando possível; risco de sedação, quedas, confusão e efeitos anticolinérgicos.", "Adulto mayor: evitar cuando sea posible; riesgo de sedación, caídas, confusión y efectos anticolinérgicos.") : null,
-            gestante ? t(lang, "Gestação: avaliar risco-benefício; evitar automedicação.", "Embarazo: evaluar riesgo-beneficio; evitar automedicación.") : null,
-            lactante ? t(lang, "Lactação: pode causar sedação no lactente e reduzir produção de leite; monitorar ou evitar.", "Lactancia: puede causar sedación en el lactante y reducir producción de leche; monitorizar o evitar.") : null,
-            hepatopatia ? t(lang, "Hepatopatia: maior risco de sedação prolongada.", "Hepatopatía: mayor riesgo de sedación prolongada.") : null,
-            insuficienciaRenal ? t(lang, "Insuficiência renal: monitorar acúmulo, sedação e confusão.", "Insuficiencia renal: monitorizar acumulación, sedación y confusión.") : null
-          ].filter(Boolean),
-          contraindications: [
-            t(lang, "Hipersensibilidade à hidroxizina ou cetirizina", "Hipersensibilidad a hidroxicina o cetirizina"),
-            t(lang, "QT longo congênito ou adquirido", "QT largo congénito o adquirido"),
-            t(lang, "Arritmias graves ou risco elevado de torsades", "Arritmias graves o riesgo elevado de torsades"),
-            t(lang, "Uso concomitante com fármacos que prolongam QT em pacientes de risco", "Uso concomitante con fármacos que prolongan QT en pacientes de riesgo"),
-            t(lang, "Retenção urinária importante ou glaucoma de ângulo fechado não controlado", "Retención urinaria importante o glaucoma de ángulo cerrado no controlado")
-          ],
-          interactions: [
-            t(lang, "Álcool", "Alcohol"),
-            t(lang, "Benzodiazepínicos", "Benzodiacepinas"),
-            t(lang, "Opioides", "Opioides"),
-            t(lang, "Antipsicóticos sedativos", "Antipsicóticos sedativos"),
-            t(lang, "Antidepressivos tricíclicos", "Antidepresivos tricíclicos"),
-            t(lang, "Fármacos que prolongam QT como macrolídeos, quinolonas, antiarrítmicos e alguns antipsicóticos", "Fármacos que prolongan QT como macrólidos, quinolonas, antiarrítmicos y algunos antipsicóticos")
-          ],
-          alerts: [
-            t(lang, "Pode ser alternativa aos benzodiazepínicos quando se quer evitar dependência.", "Puede ser alternativa a benzodiacepinas cuando se quiere evitar dependencia."),
-            t(lang, "Não é isenta de risco: atenção a sedação, quedas e QT prolongado.", "No está exenta de riesgo: atención a sedación, caídas y QT prolongado."),
-            t(lang, "Evitar em idosos frágeis quando possível.", "Evitar en adultos mayores frágiles cuando sea posible."),
-            t(lang, "Evitar associação com álcool e outros sedativos.", "Evitar asociación con alcohol y otros sedantes."),
-            t(lang, "Considerar ECG se paciente tem risco de QT ou usa múltiplos fármacos pró-arrítmicos.", "Considerar ECG si el paciente tiene riesgo de QT o usa múltiples fármacos proarrítmicos.")
-          ],
-          ref: [
-            "Goodman & Gilman 14ª Ed.",
-            "Stahl's Essential Psychopharmacology",
-            "FDA/DailyMed Hydroxyzine Prescribing Information",
-            "EMA Hydroxyzine safety communication",
-            "Lexicomp",
-            "Micromedex",
-            "UpToDate"
+          "es": [
+            "QT largo conocido o factores relevantes de riesgo para QT/TdP",
+            "Uso concomitante de fármacos que prolongan QT cuando esté contraindicado",
+            "Hipersensibilidad"
           ]
-        };
+        },
+        "relative": {
+          "pt": [
+            "Idosos, bradicardia, hipocalemia/hipomagnesemia, IC"
+          ],
+          "es": [
+            "Adultos mayores, bradicardia, hipopotasemia/hipomagnesemia, IC"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Hidroxizina pode prolongar QT e causar Torsades. EMA limita adulto a 100 mg/dia e recomenda evitar em pacientes de maior risco.",
+          "es": "Hidroxicina puede prolongar QT y causar Torsades. EMA limita adultos a 100 mg/día y recomienda evitarla en pacientes de mayor riesgo."
+        }
       }
     },
 

@@ -18,9 +18,218 @@
     "metamizol",
     "dipirona"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-c613ef861d440511",
+  "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "metamizol",
+    "clinical_batch": "LOT003_ANALGESICOS_NAO_OPIOIDES_COANALGESICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_or_regulatory_referral",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar a menor dose que controle dor/febre"
+          },
+          {
+            "label": "Administração",
+            "text": "Administração parenteral deve ser lenta e com monitorização hemodinâmica devido ao risco de hipotensão"
+          },
+          {
+            "label": "Administração",
+            "text": "Se houver febre, calafrios, odinofagia ou lesões mucosas durante ou logo após uso, suspender imediatamente e colher hemograma com diferencial"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar la menor dosis que controle dolor/fiebre"
+          },
+          {
+            "label": "Administración",
+            "text": "La administración parenteral debe ser lenta y con monitorización hemodinámica por riesgo de hipotensión"
+          },
+          {
+            "label": "Administración",
+            "text": "Si aparecen fiebre, escalofríos, odinofagia o lesiones mucosas durante o poco después del uso, suspender inmediatamente y obtener hemograma con diferencial"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "A agranulocitose não é dose-dependente, pode surgir durante ou logo após o tratamento e pode ocorrer mesmo após usos prévios sem problemas. Hemograma de rotina não demonstrou benefício; investigar imediatamente se houver sintomas."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Agranulocitose; Anafilaxia/choque; Reações cutâneas graves"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Agranulocitose prévia por metamizol ou outra pirazolona/pirazolidina; Disfunção de medula óssea ou doença hematopoética relevante; Hipersensibilidade ao metamizol/pirazolonas; Terceiro trimestre da gestação"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "La agranulocitosis no depende de la dosis, puede aparecer durante o poco después del tratamiento y puede ocurrir incluso tras usos previos sin problemas. El hemograma rutinario no demostró beneficio; investigar de inmediato si hay síntomas."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Agranulocitosis; Anafilaxia/shock; Reacciones cutáneas graves"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Agranulocitosis previa por metamizol u otra pirazolona/pirazolidina; Disfunción de médula ósea o enfermedad hematopoyética relevante; Hipersensibilidad a metamizol/pirazolonas; Tercer trimestre del embarazo"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "≥15 anos e >53 kg: VO 500–1.000 mg por dose, até 4x/dia, máximo 4.000 mg/dia. Parenteral: 500–1.000 mg por dose em intervalos de 6–8 h; informação harmonizada da EMA permite máximo diário parenteral de 5.000 mg."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Crianças/adolescentes até 14 anos: 8–16 mg/kg por dose; para febre, 10 mg/kg costuma ser suficiente. Usar formulação apropriada ao peso."
+          },
+          {
+            "label": "Rim",
+            "text": "Evitar doses altas repetidas em disfunção renal importante; não há fator agudo universal. Titular à menor dose eficaz."
+          },
+          {
+            "label": "Fígado",
+            "text": "Evitar doses altas repetidas em disfunção hepática importante; usar menor dose eficaz e ampliar intervalo conforme clínica."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "≥15 años y >53 kg: VO 500–1.000 mg por dosis, hasta 4x/día, máximo 4.000 mg/día. Parenteral: 500–1.000 mg por dosis en intervalos de 6–8 h; la información armonizada de EMA permite máximo diario parenteral de 5.000 mg."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Niños/adolescentes hasta 14 años: 8–16 mg/kg por dosis; para fiebre, 10 mg/kg suele ser suficiente. Usar formulación apropiada al peso."
+          },
+          {
+            "label": "Riñón",
+            "text": "Evitar dosis altas repetidas en disfunción renal importante; no existe un factor agudo universal. Titular a la menor dosis eficaz."
+          },
+          {
+            "label": "Hígado",
+            "text": "Evitar dosis altas repetidas en disfunción hepática importante; usar la menor dosis eficaz y ampliar intervalo según clínica."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Analgésico, antitérmico e antiespasmódico pirazolônico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "O mecanismo não é completamente esclarecido. Há evidência de modulação central e periférica da síntese de prostaglandinas e efeitos sobre vias nociceptivas; não deve ser descrito como inibidor comprovado de 'COX-3'."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor aguda moderada a intensa, incluindo pós-operatória/pós-traumática e cólica; Febre alta que não responde a outras medidas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Analgésico, antipirético y antiespasmódico pirazolónico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "El mecanismo no está completamente aclarado. Existe evidencia de modulación central y periférica de la síntesis de prostaglandinas y efectos sobre vías nociceptivas; no debe describirse como inhibidor comprobado de 'COX-3'."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor agudo moderado a intenso, incluido posoperatorio/postraumático y cólico; Fiebre alta que no responde a otras medidas"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Antibióticos",
+            "text": "Podem mascarar sinais de agranulocitose; manter vigilância clínica."
+          },
+          {
+            "label": "AAS em baixa dose",
+            "text": "Metamizol pode interferir com o efeito antiplaquetário do AAS; considerar separação temporal/protocolo local."
+          }
+        ],
+        "es": [
+          {
+            "label": "Antibióticos",
+            "text": "Pueden enmascarar signos de agranulocitosis; mantener vigilancia clínica."
+          },
+          {
+            "label": "AAS a baja dosis",
+            "text": "Metamizol puede interferir con el efecto antiagregante del AAS; considerar separación temporal/protocolo local."
+          }
+        ]
+      },
+      "gravidez_lactacao": {
+        "pt": [
+          {
+            "label": "Gestação/Lactação",
+            "text": "Metamizol: não usar no terceiro trimestre. Nas fases anteriores, apenas quando alternativas adequadas não puderem ser usadas e após avaliação individual. EMA recomenda evitar durante amamentação."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo/Lactancia",
+            "text": "Metamizol: no usar en el tercer trimestre. En fases anteriores, solo cuando no puedan usarse alternativas adecuadas y tras evaluación individual. EMA recomienda evitar durante lactancia."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "EMA — Metamizole safety referral 2024",
+            "text": "Fonte oficial revisada em 2026-09-05. https://www.ema.europa.eu/en/medicines/human/referrals/metamizole-containing-medicinal-products-0"
+          },
+          {
+            "label": "EMA — Metamizole dose harmonisation",
+            "text": "Fonte oficial revisada em 2026-09-05. https://www.ema.europa.eu/en/medicines/human/referrals/metamizole-containing-medicinal-products"
+          }
+        ],
+        "es": [
+          {
+            "label": "EMA — Metamizole safety referral 2024",
+            "text": "Fuente oficial revisada el 2026-09-05. https://www.ema.europa.eu/en/medicines/human/referrals/metamizole-containing-medicinal-products-0"
+          },
+          {
+            "label": "EMA — Metamizole dose harmonisation",
+            "text": "Fuente oficial revisada el 2026-09-05. https://www.ema.europa.eu/en/medicines/human/referrals/metamizole-containing-medicinal-products"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "metamizol_source_1",
+        "title": "EMA — Metamizole safety referral 2024",
+        "url": "https://www.ema.europa.eu/en/medicines/human/referrals/metamizole-containing-medicinal-products-0",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "metamizol_source_2",
+        "title": "EMA — Metamizole dose harmonisation",
+        "url": "https://www.ema.europa.eu/en/medicines/human/referrals/metamizole-containing-medicinal-products",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

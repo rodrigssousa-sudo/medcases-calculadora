@@ -1,6 +1,6 @@
 {
   "id": "sufentanil",
-  "category": "uti",
+  "category": "anestesia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,182 @@
   "keywords": [
     "sufentanil"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "gastro_imuno.js"
+  "sourceModule": "gastro_imuno.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "sufentanil",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via/Preparo",
+            "text": "IV por injeção lenta ou infusão; epidural apenas por equipe treinada"
+          },
+          {
+            "label": "Monitorização",
+            "text": "Altas doses exigem intubação, ventilação e capacidade de tratar depressão respiratória prolongada"
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía/Preparación",
+            "text": "IV por inyección lenta o infusión; epidural solo por equipo entrenado"
+          },
+          {
+            "label": "Monitorización",
+            "text": "Las dosis altas requieren intubación, ventilación y capacidad para tratar depresión respiratoria prolongada"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Pode causar depressão respiratória potencialmente fatal, rigidez muscular e toxicidade aumentada com inibidores de CYP3A4."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depressão respiratória/apneia; Rigidez muscular; Depressão cardiovascular grave"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade ao sufentanil"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Puede causar depresión respiratoria potencialmente fatal, rigidez muscular y toxicidad aumentada con inhibidores de CYP3A4."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Depresión respiratoria/apnea; Rigidez muscular; Depresión cardiovascular grave"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad al sufentanilo"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Adjuvante de anestesia geral IV: 1–2 mcg/kg para procedimentos de 1–2 h; 2–8 mcg/kg para 2–8 h; manutenção incremental 10–25 ou 10–50 mcg conforme contexto, mantendo total aproximado ≤1 mcg/kg/h de tempo cirúrgico. Epidural no parto: 10–15 mcg com bupivacaína 0,125%, podendo repetir até 2 vezes com intervalo ≥1 h."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Em crianças <12 anos submetidas a cirurgia cardiovascular, a rotulagem descreve 10–25 mcg/kg com O₂ a 100%; experiência neonatal existe, mas clearance é menor e exige titulação especializada."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem fator fixo universal; usar titulação cautelosa e monitorização prolongada em disfunção renal importante."
+          },
+          {
+            "label": "Fígado",
+            "text": "Metabolismo hepático; titular com cautela em disfunção hepática e reduzir exposição conforme resposta clínica."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Adyuvante de anestesia general IV: 1–2 mcg/kg para procedimientos de 1–2 h; 2–8 mcg/kg para 2–8 h; mantenimiento incremental 10–25 o 10–50 mcg según contexto, manteniendo un total aproximado ≤1 mcg/kg/h de tiempo quirúrgico. Epidural en parto: 10–15 mcg con bupivacaína 0,125%, pudiendo repetir hasta 2 veces con intervalo ≥1 h."
+          },
+          {
+            "label": "Pediatría",
+            "text": "En niños <12 años sometidos a cirugía cardiovascular, el rotulado describe 10–25 mcg/kg con O₂ al 100%; existe experiencia neonatal, pero el clearance es menor y exige titulación especializada."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin factor fijo universal; usar titulación cautelosa y monitorización prolongada en disfunción renal importante."
+          },
+          {
+            "label": "Hígado",
+            "text": "Metabolismo hepático; titular con cautela en disfunción hepática y reducir la exposición según respuesta clínica."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Agonista opioide μ de alta potência"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista opioide μ muito potente. Produz analgesia profunda e depressão respiratória dose-dependente; pode causar rigidez muscular e depressão cardiovascular."
+          },
+          {
+            "label": "Indicações",
+            "text": "Adjuvante analgésico na anestesia geral balanceada em pacientes intubados e ventilados; Agente anestésico primário em grandes cirurgias selecionadas; Analgesia epidural no trabalho de parto em combinação com bupivacaína"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Agonista opioide μ de alta potencia"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista opioide μ muy potente. Produce analgesia profunda y depresión respiratoria dependiente de la dosis; puede causar rigidez muscular y depresión cardiovascular."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Adyuvante analgésico en anestesia general balanceada en pacientes intubados y ventilados; Agente anestésico primario en cirugías mayores seleccionadas; Analgesia epidural en trabajo de parto en combinación con bupivacaína"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Sufentanil Citrate Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20293943-46ff-4345-1aa4-929b4e017a25"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Sufentanil Citrate Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20293943-46ff-4345-1aa4-929b4e017a25"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Benzodiazepínicos, álcool e outros sedativos aumentam risco de sedação profunda e depressão respiratória."
+          },
+          {
+            "label": "CYP3A4",
+            "text": "Inibidores potentes de CYP3A4 podem aumentar exposição e prolongar depressão respiratória."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Benzodiazepinas, alcohol y otros sedantes aumentan el riesgo de sedación profunda y depresión respiratoria."
+          },
+          {
+            "label": "CYP3A4",
+            "text": "Inhibidores potentes de CYP3A4 pueden aumentar la exposición y prolongar la depresión respiratoria."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_sufentanil_2026",
+        "title": "DailyMed — Sufentanil Citrate Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20293943-46ff-4345-1aa4-929b4e017a25",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

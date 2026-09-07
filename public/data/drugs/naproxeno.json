@@ -17,9 +17,220 @@
   "keywords": [
     "naproxeno"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-c613ef861d440511",
+  "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "analgesicos.js"
+  "sourceModule": "analgesicos.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "naproxeno",
+    "clinical_batch": "LOT003_ANALGESICOS_NAO_OPIOIDES_COANALGESICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_or_regulatory_referral",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar menor dose efetiva pelo menor tempo"
+          },
+          {
+            "label": "Administração",
+            "text": "Naproxeno e naproxeno sódico não são intercambiáveis mg por mg sem considerar formulação"
+          },
+          {
+            "label": "Administração",
+            "text": "Evitar outro AINE concomitante"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar la menor dosis efectiva durante el menor tiempo"
+          },
+          {
+            "label": "Administración",
+            "text": "Naproxeno y naproxeno sódico no son intercambiables mg por mg sin considerar formulación"
+          },
+          {
+            "label": "Administración",
+            "text": "Evitar otro AINE concomitante"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Mesmo sendo um AINE de uso comum, mantém boxed warning para eventos trombóticos CV e sangramento/ulceração/perfuração GI."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Sangramento GI; Lesão renal aguda; Eventos trombóticos CV; Reações cutâneas graves"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade/AINE-asthma; CABG perioperatório"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Aunque es un AINE de uso común, mantiene boxed warning por eventos trombóticos CV y sangrado/ulceración/perforación GI."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Sangrado GI; Lesión renal aguda; Eventos trombóticos CV; Reacciones cutáneas graves"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad/asma por AINE; CABG perioperatorio"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Dor/dismenorreia/tendinite/bursite: 500 mg VO inicialmente, depois 250 mg a cada 6–8 h conforme necessidade; máximo 1.250 mg/dia de naproxeno."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Artrite idiopática juvenil poliarticular: aproximadamente 10 mg/kg/dia em 2 doses. Formulação líquida pode ser preferível para ajuste por peso."
+          },
+          {
+            "label": "Rim",
+            "text": "Evitar em insuficiência renal grave/baixa perfusão; monitorar rim e volume em pacientes de risco."
+          },
+          {
+            "label": "Fígado",
+            "text": "Usar cautela e menor dose em hepatopatia significativa."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Dolor/dismenorrea/tendinitis/bursitis: 500 mg VO inicialmente, luego 250 mg cada 6–8 h según necesidad; máximo 1.250 mg/día de naproxeno."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Artritis idiopática juvenil poliarticular: aproximadamente 10 mg/kg/día en 2 dosis. La formulación líquida puede ser preferible para ajuste por peso."
+          },
+          {
+            "label": "Riñón",
+            "text": "Evitar en insuficiencia renal grave/baja perfusión; monitorizar riñón y volumen en pacientes de riesgo."
+          },
+          {
+            "label": "Hígado",
+            "text": "Usar precaución y menor dosis en hepatopatía significativa."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "AINE não seletivo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Inibe COX-1/COX-2 e síntese de prostaglandinas, com analgesia e anti-inflamação e riscos GI/renal/CV de classe."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor aguda; Dismenorreia; Tendinite/bursite; Gota aguda; Doenças inflamatórias articulares"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "AINE no selectivo"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Inhibe COX-1/COX-2 y síntesis de prostaglandinas, con analgesia y antiinflamación y riesgos GI/renal/CV de clase."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor agudo; Dismenorrea; Tendinitis/bursitis; Gota aguda; Enfermedades inflamatorias articulares"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentam risco de sangramento; avaliar risco-benefício e monitorar."
+          },
+          {
+            "label": "IECA/ARB/diuréticos",
+            "text": "Pode reduzir efeito anti-hipertensivo e aumentar risco de lesão renal, sobretudo com hipovolemia/DRC."
+          },
+          {
+            "label": "Outros AINEs",
+            "text": "Evitar associação sistêmica rotineira por toxicidade GI/renal sem benefício proporcional."
+          },
+          {
+            "label": "Lítio/metotrexato",
+            "text": "AINEs podem aumentar exposição; monitorar quando aplicável."
+          }
+        ],
+        "es": [
+          {
+            "label": "Anticoagulantes/antiagregantes",
+            "text": "Aumentan riesgo de sangrado; evaluar riesgo-beneficio y monitorizar."
+          },
+          {
+            "label": "IECA/ARA-II/diuréticos",
+            "text": "Puede reducir efecto antihipertensivo y aumentar riesgo de lesión renal, especialmente con hipovolemia/ERC."
+          },
+          {
+            "label": "Otros AINE",
+            "text": "Evitar asociación sistémica rutinaria por toxicidad GI/renal sin beneficio proporcional."
+          },
+          {
+            "label": "Litio/metotrexato",
+            "text": "Los AINE pueden aumentar la exposición; monitorizar cuando corresponda."
+          }
+        ]
+      },
+      "gravidez_lactacao": {
+        "pt": [
+          {
+            "label": "Gestação/Lactação",
+            "text": "AINE sistêmico: evitar a partir de cerca de 30 semanas de gestação; entre 20–30 semanas, usar somente se necessário, na menor dose e pelo menor tempo, devido a risco renal fetal/oligoâmnio. Avaliar lactação conforme fármaco e duração."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo/Lactancia",
+            "text": "AINE sistémico: evitar desde aproximadamente 30 semanas de gestación; entre 20–30 semanas, usar solo si es necesario, a la menor dosis y por el menor tiempo, por riesgo renal fetal/oligohidramnios. Evaluar lactancia según fármaco y duración."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Naproxen tablets, 2026",
+            "text": "Fonte oficial revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ccd95dfc-9236-4707-a715-6a12c91519ff"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Naproxen tablets, 2026",
+            "text": "Fuente oficial revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ccd95dfc-9236-4707-a715-6a12c91519ff"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "naproxeno_source_1",
+        "title": "DailyMed — Naproxen tablets, 2026",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ccd95dfc-9236-4707-a715-6a12c91519ff",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

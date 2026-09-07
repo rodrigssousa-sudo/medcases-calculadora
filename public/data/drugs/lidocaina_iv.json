@@ -18,9 +18,196 @@
     "lidocaina_iv",
     "lidocaína (uso sistêmico iv)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "cardiologia.js"
+  "sourceModule": "cardiologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "lidocaina_iv",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via/Preparo",
+            "text": "ECG contínuo e monitorização hemodinâmica"
+          },
+          {
+            "label": "Monitorização",
+            "text": "Usar somente apresentação destinada a uso IV, sem vasoconstritor"
+          },
+          {
+            "label": "Administração",
+            "text": "Vigiar sinais neurológicos precoces de toxicidade"
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía/Preparación",
+            "text": "ECG continuo y monitorización hemodinámica"
+          },
+          {
+            "label": "Monitorización",
+            "text": "Usar solo presentación destinada a uso IV, sin vasoconstrictor"
+          },
+          {
+            "label": "Administración",
+            "text": "Vigilar signos neurológicos precoces de toxicidad"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Esta ficha é exclusivamente do uso sistêmico IV antiarrítmico. Não misturar com o owner canônico de lidocaína tópica/local."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Convulsões; Depressão do SNC; Bradicardia/BAV; Colapso cardiovascular"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade a anestésicos locais do tipo amida; Bloqueio cardíaco grave sem marcapasso em situações apropriadas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Esta ficha es exclusivamente para uso sistémico IV antiarrítmico. No mezclar con el owner canónico de lidocaína tópica/local."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Convulsiones; Depresión del SNC; Bradicardia/BAV; Colapso cardiovascular"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad a anestésicos locales tipo amida; Bloqueo cardíaco grave sin marcapasos en situaciones apropiadas"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "PCR por FV/TV sem pulso refratária: 1–1,5 mg/kg IV/IO; segunda dose 0,5–0,75 mg/kg. Para arritmias ventriculares com pulso, bolus e infusão devem seguir protocolo/monitorização; infusão usual 1–4 mg/min."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Doses pediátricas devem seguir algoritmo PALS/protocolo pediátrico vigente; não extrapolar automaticamente o esquema adulto."
+          },
+          {
+            "label": "Rim",
+            "text": "Não há ajuste agudo fixo apenas pela função renal; metabólitos podem acumular em infusões prolongadas."
+          },
+          {
+            "label": "Fígado",
+            "text": "Reduzir exposição/taxa de manutenção em disfunção hepática, choque ou baixo débito, pois o clearance depende do fluxo e metabolismo hepáticos."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "PCR por FV/TV sin pulso refractaria: 1–1,5 mg/kg IV/IO; segunda dosis 0,5–0,75 mg/kg. Para arritmias ventriculares con pulso, bolo e infusión deben seguir protocolo/monitorización; infusión habitual 1–4 mg/min."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Las dosis pediátricas deben seguir algoritmo PALS/protocolo pediátrico vigente; no extrapolar automáticamente el esquema adulto."
+          },
+          {
+            "label": "Riñón",
+            "text": "No existe ajuste agudo fijo solo por función renal; los metabolitos pueden acumularse en infusiones prolongadas."
+          },
+          {
+            "label": "Hígado",
+            "text": "Reducir exposición/velocidad de mantenimiento en disfunción hepática, shock o bajo gasto, porque el clearance depende del flujo y metabolismo hepáticos."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Antiarrítmico Classe IB"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloqueia canais rápidos de sódio em tecido ventricular, reduzindo automatismo e atividade ventricular ectópica. É metabolizada principalmente no fígado e depende do fluxo hepático."
+          },
+          {
+            "label": "Indicações",
+            "text": "FV/TV sem pulso refratária à desfibrilação como alternativa à amiodarona; Arritmias ventriculares agudas selecionadas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antiarrítmico Clase IB"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Bloquea canales rápidos de sodio en tejido ventricular, reduciendo automatismo y actividad ectópica ventricular. Se metaboliza principalmente en el hígado y depende del flujo hepático."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "FV/TV sin pulso refractaria a desfibrilación como alternativa a amiodarona; Arritmias ventriculares agudas seleccionadas"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Lidocaine Hydrochloride and Dextrose Injection",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0"
+          },
+          {
+            "label": "AHA 2025 Adult Advanced Life Support",
+            "text": "Fonte revisada em 2026-09-05. https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Lidocaine Hydrochloride and Dextrose Injection",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0"
+          },
+          {
+            "label": "AHA 2025 Adult Advanced Life Support",
+            "text": "Fuente revisada el 2026-09-05. https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Antiarrítmicos/fluxo hepático",
+            "text": "Outros antiarrítmicos e fármacos/condições que reduzem fluxo ou metabolismo hepático podem aumentar toxicidade."
+          }
+        ],
+        "es": [
+          {
+            "label": "Antiarrítmicos/flujo hepático",
+            "text": "Otros antiarrítmicos y fármacos/condiciones que reducen flujo o metabolismo hepático pueden aumentar la toxicidad."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_lidocaina_iv_2026",
+        "title": "DailyMed — Lidocaine Hydrochloride and Dextrose Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "aha_2025_als_lidocaine",
+        "title": "AHA 2025 Adult Advanced Life Support",
+        "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

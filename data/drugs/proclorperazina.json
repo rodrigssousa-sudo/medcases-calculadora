@@ -1,6 +1,6 @@
 {
   "id": "proclorperazina",
-  "category": "gastroenterologia",
+  "category": "gastro",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,182 @@
   "keywords": [
     "proclorperazina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-75849ac54fec5559",
+  "clinicalContentSha256": "75849ac54fec55594fa7dc193ba84d22e32c864f169e99d58b5ac059290fd0c8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "gastroenterologia.js"
+  "sourceModule": "gastroenterologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "proclorperazina",
+    "clinical_batch": "LOT004_ANTIEMETICOS_GASTROPROCINETICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_label_and_guideline",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Usar pelo menor tempo necessário"
+          },
+          {
+            "label": "Administração",
+            "text": "Monitorar distonia, acatisia e sedação"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Usar durante el menor tiempo necesario"
+          },
+          {
+            "label": "Administración",
+            "text": "Monitorizar distonía, acatisia y sedación"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "Fenotiazina antiemética: vigiar EPS, sedação, hipotensão e QT; evitar duplicação com outros antagonistas dopaminérgicos sem indicação clara."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Distonia/EPS; Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento de QT"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Coma/depressão importante do SNC; Hipersensibilidade a fenotiazinas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "Fenotiazina antiemética: vigilar EPS, sedación, hipotensión y QT; evitar duplicación con otros antagonistas dopaminérgicos sin indicación clara."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Distonía/EPS; Síndrome neuroléptico maligno; Discinesia tardía; Prolongación de QT"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Coma/depresión importante del SNC; Hipersensibilidad a fenotiazinas"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "VO para náuseas/vômitos graves: 5–10 mg 3–4x/dia conforme resposta e produto; usar a menor dose efetiva."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Uso pediátrico antiemético exige dose por peso/idade e cautela elevada para EPS; não extrapolar esquema adulto."
+          },
+          {
+            "label": "Rim",
+            "text": "Sem ajuste renal fixo bem estabelecido; titular com cautela."
+          },
+          {
+            "label": "Fígado",
+            "text": "Usar cautela em hepatopatia; fenotiazinas podem causar lesão hepática/colestase."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "VO para náuseas/vómitos graves: 5–10 mg 3–4x/día según respuesta y producto; usar la menor dosis efectiva."
+          },
+          {
+            "label": "Pediatría",
+            "text": "El uso pediátrico antiemético exige dosis por peso/edad y gran precaución por EPS; no extrapolar el esquema adulto."
+          },
+          {
+            "label": "Riñón",
+            "text": "Sin ajuste renal fijo bien establecido; titular con precaución."
+          },
+          {
+            "label": "Hígado",
+            "text": "Usar precaución en hepatopatía; las fenotiazinas pueden causar lesión hepática/colestasis."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Fenotiazina antagonista D2"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagoniza receptores dopaminérgicos D2 na zona gatilho quimiorreceptora, com atividade antiemética e risco de EPS."
+          },
+          {
+            "label": "Indicações",
+            "text": "Náuseas e vômitos graves"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Fenotiazina antagonista D2"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagoniza receptores dopaminérgicos D2 en la zona gatillo quimiorreceptora, con actividad antiemética y riesgo de EPS."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Náuseas y vómitos graves"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "QT",
+            "text": "Evitar empilhar fármacos que prolongam QT quando possível; corrigir eletrólitos e monitorar pacientes de risco."
+          },
+          {
+            "label": "Antagonistas D2",
+            "text": "Associação aumenta risco de distonia, acatisia, parkinsonismo e síndrome neuroléptica maligna."
+          }
+        ],
+        "es": [
+          {
+            "label": "QT",
+            "text": "Evitar acumular fármacos que prolongan QT cuando sea posible; corregir electrolitos y monitorizar pacientes de riesgo."
+          },
+          {
+            "label": "Antagonistas D2",
+            "text": "La asociación aumenta riesgo de distonía, acatisia, parkinsonismo y síndrome neuroléptico maligno."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed Prochlorperazine search",
+            "text": "Fonte revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prochlorperazine"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed Prochlorperazine search",
+            "text": "Fuente revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prochlorperazine"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "proclorperazina_1",
+        "title": "DailyMed Prochlorperazine search",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prochlorperazine",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

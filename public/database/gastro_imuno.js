@@ -75,53 +75,135 @@ window.GASTRO_IMUNO_DRUGS_DB = [
      Opioide Sintético Ultra-Potente — Sedoanalgesia UTI · Anestesia
   ══════════════════════════════════════════════════════════════ */
   {
-    id: 'sufentanil',
-    name: { pt: 'Sufentanil', es: 'Sufentanilo' },
-    category: 'uti',
-    class: { pt: 'Analgésico Opioide Sintético Fortíssimo', es: 'Analgésico Opioide Sintético Fortísimo' },
-    indications: {
-      pt: ['Sedação e analgesia prolongada em UTI', 'Anestesia geral (indução e manutenção)', 'Analgesia peridural/espinhal em obstetrícia'],
-      es: ['Sedación y analgesia prolongada en UCI', 'Anestesia general (inducción y mantenimiento)', 'Analgesia epidural/espinal en obstetricia']
+    "id": "sufentanil",
+    "name": {
+      "pt": "Sufentanil",
+      "es": "Sufentanilo"
     },
-    commercialNames: { br: ['Fastfen', 'Sufenta'], ar: ['Sufentanilo'] },
-    presentation: { pt: ['Ampolas IV/Epidural 50 mcg/mL (1 mL)', 'Ampolas IV/Epidural 50 mcg/mL (5 mL)'], es: ['Ampollas IV/Epidural 50 mcg/mL (1 mL)', 'Ampollas IV/Epidural 50 mcg/mL (5 mL)'] },
-    mechanism: {
-      pt: 'Agonista ultra-potente e altamente seletivo dos receptores opioides mu (μ) no SNC. É de 5 a 10 vezes MAIS POTENTE que o fentanil, e 500 a 1000 vezes mais potente que a morfina. Oferece profunda analgesia, estabilidade hemodinâmica (não libera histamina) e depressão respiratória acentuada. Por ser extremamente lipofílico, acumula-se no tecido adiposo em infusões longas de UTI.',
-      es: 'Agonista ultra potente y altamente selectivo de los receptores opioides mu (μ) en el SNC. Es de 5 a 10 veces MÁS POTENTE que el fentanilo, y 500 a 1000 veces más potente que la morfina. Ofrece profunda analgesia, estabilidad hemodinámica (no libera histamina) y depresión respiratoria acentuada. Al ser extremadamente lipofílico, se acumula en el tejido adiposo en infusiones largas de UCI.'
+    "category": "anestesia",
+    "class": {
+      "pt": "Agonista opioide μ de alta potência",
+      "es": "Agonista opioide μ de alta potencia"
     },
-    dose: {
-      adult: {
-        pt: 'Analgesia/Sedação UTI: Infusão contínua de 0,1 a 0,5 mcg/kg/hora. Anestesia: 1 a 8 mcg/kg IV (dependendo da duração e suporte ventilatório).',
-        es: 'Analgesia/Sedación UCI: Infusión continua de 0,1 a 0,5 mcg/kg/hora. Anestesia: 1 a 8 mcg/kg IV (dependiendo de la duración y soporte ventilatorio).'
+    "indications": {
+      "pt": [
+        "Adjuvante analgésico na anestesia geral balanceada em pacientes intubados e ventilados",
+        "Agente anestésico primário em grandes cirurgias selecionadas",
+        "Analgesia epidural no trabalho de parto em combinação com bupivacaína"
+      ],
+      "es": [
+        "Adyuvante analgésico en anestesia general balanceada en pacientes intubados y ventilados",
+        "Agente anestésico primario en cirugías mayores seleccionadas",
+        "Analgesia epidural en trabajo de parto en combinación con bupivacaína"
+      ]
+    },
+    "commercialNames": {
+      "br": [
+        "Sufentanil"
+      ],
+      "ar": [
+        "Sufentanilo"
+      ]
+    },
+    "presentation": {
+      "pt": [
+        "Solução injetável 50 mcg/mL"
+      ],
+      "es": [
+        "Solución inyectable 50 mcg/mL"
+      ]
+    },
+    "mechanism": {
+      "pt": "Agonista opioide μ muito potente. Produz analgesia profunda e depressão respiratória dose-dependente; pode causar rigidez muscular e depressão cardiovascular.",
+      "es": "Agonista opioide μ muy potente. Produce analgesia profunda y depresión respiratoria dependiente de la dosis; puede causar rigidez muscular y depresión cardiovascular."
+    },
+    "dose": {
+      "adult": {
+        "pt": "Adjuvante de anestesia geral IV: 1–2 mcg/kg para procedimentos de 1–2 h; 2–8 mcg/kg para 2–8 h; manutenção incremental 10–25 ou 10–50 mcg conforme contexto, mantendo total aproximado ≤1 mcg/kg/h de tempo cirúrgico. Epidural no parto: 10–15 mcg com bupivacaína 0,125%, podendo repetir até 2 vezes com intervalo ≥1 h.",
+        "es": "Adyuvante de anestesia general IV: 1–2 mcg/kg para procedimientos de 1–2 h; 2–8 mcg/kg para 2–8 h; mantenimiento incremental 10–25 o 10–50 mcg según contexto, manteniendo un total aproximado ≤1 mcg/kg/h de tiempo quirúrgico. Epidural en parto: 10–15 mcg con bupivacaína 0,125%, pudiendo repetir hasta 2 veces con intervalo ≥1 h."
       },
-      pediatric: {
-        pt: 'Anestesia: 10 a 25 mcg/kg (casos selecionados e monitorizados).',
-        es: 'Anestesia: 10 a 25 mcg/kg (casos seleccionados y monitorizados).'
+      "pediatric": {
+        "pt": "Em crianças <12 anos submetidas a cirurgia cardiovascular, a rotulagem descreve 10–25 mcg/kg com O₂ a 100%; experiência neonatal existe, mas clearance é menor e exige titulação especializada.",
+        "es": "En niños <12 años sometidos a cirugía cardiovascular, el rotulado describe 10–25 mcg/kg con O₂ al 100%; existe experiencia neonatal, pero el clearance es menor y exige titulación especializada."
       }
     },
-    administration: {
-      pt: ['Exige suporte ventilatório mecânico pronto ou em andamento.', 'Doses em bolus muito rápidas causam rigidez torácica (tórax de madeira).'],
-      es: ['Exige soporte ventilatorio mecánico listo o en curso.', 'Dosis en bolo muy rápidas causan rigidez torácica (tórax de madera).']
+    "administration": {
+      "pt": [
+        "IV por injeção lenta ou infusão; epidural apenas por equipe treinada",
+        "Altas doses exigem intubação, ventilação e capacidade de tratar depressão respiratória prolongada"
+      ],
+      "es": [
+        "IV por inyección lenta o infusión; epidural solo por equipo entrenado",
+        "Las dosis altas requieren intubación, ventilación y capacidad para tratar depresión respiratoria prolongada"
+      ]
     },
-    renalAdjustment: { required: false, message: { pt: 'Sem metabólitos ativos significativos. Seguro na falência renal.', es: 'Sin metabolitos activos significativos. Seguro en falla renal.' } },
-    hepaticAdjustment: { required: true, message: { pt: 'Extensamente metabolizado pelo fígado. Reduzir dose e titular lentamente na cirrose.', es: 'Extensamente metabolizado por el hígado. Reducir dosis y titular lentamente en cirrosis.' } },
-    commonAdverseEffects: {
-      pt: ['Hipotensão leve', 'Bradicardia vagal', 'Náuseas e vômitos no despertar', 'Retenção urinária'],
-      es: ['Hipotensión leve', 'Bradicardia vagal', 'Náuseas y vómitos al despertar', 'Retención urinaria']
+    "renalAdjustment": {
+      "required": true,
+      "message": {
+        "pt": "Sem fator fixo universal; usar titulação cautelosa e monitorização prolongada em disfunção renal importante.",
+        "es": "Sin factor fijo universal; usar titulación cautelosa y monitorización prolongada en disfunción renal importante."
+      }
     },
-    dangerousAdverseEffects: {
-      pt: ['Depressão respiratória fatal (apneia severa e prolongada)', 'Rigidez muscular torácica severa (impede a ventilação)'],
-      es: ['Depresión respiratoria fatal (apnea severa y prolongada)', 'Rigidez muscular torácica severa (impide la ventilación)']
+    "hepaticAdjustment": {
+      "required": true,
+      "message": {
+        "pt": "Metabolismo hepático; titular com cautela em disfunção hepática e reduzir exposição conforme resposta clínica.",
+        "es": "Metabolismo hepático; titular con cautela en disfunción hepática y reducir la exposición según respuesta clínica."
+      }
     },
-    contraindications: {
-      absolute: { pt: ['Ausência de suporte ventilatório avançado', 'Hipersensibilidade aos análogos do fentanil'], es: ['Ausencia de soporte ventilatorio avanzado', 'Hipersensibilidad a los análogos del fentanilo'] },
-      relative: { pt: ['Hipertensão intracraniana não controlada (se a hipoventilação elevar o CO2)'], es: ['Hipertensión intracraneal no controlada (si la hipoventilación eleva el CO2)'] }
+    "commonAdverseEffects": {
+      "pt": [
+        "Náusea",
+        "Sedação",
+        "Bradicardia"
+      ],
+      "es": [
+        "Náuseas",
+        "Sedación",
+        "Bradicardia"
+      ]
     },
-    safetyFlags: {
-      bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-      warning: { pt: 'MEDICAMENTO DE ALTO ALERTA: Potência extrema. O antídoto é a Naloxona. O "context-sensitive half-time" (tempo para acordar após desligar a bomba) aumenta exponencialmente após infusões de UTI maiores que 24-48 horas devido ao acúmulo na gordura.', es: 'MEDICAMENTO DE ALTA ALERTA: Potencia extrema. El antídoto es la Naloxona. El "context-sensitive half-time" (tiempo para despertar tras apagar la bomba) aumenta exponencialmente tras infusiones de UCI mayores a 24-48 horas debido a la acumulación en la grasa.' }
+    "dangerousAdverseEffects": {
+      "pt": [
+        "Depressão respiratória/apneia",
+        "Rigidez muscular",
+        "Depressão cardiovascular grave"
+      ],
+      "es": [
+        "Depresión respiratoria/apnea",
+        "Rigidez muscular",
+        "Depresión cardiovascular grave"
+      ]
     },
-    ref: 'Devlin JW et al. (PADIS Guidelines) Crit Care Med 2018 · Patel SB & Kress JP. Crit Care Med 2012 · Sneyd JR. Br J Anaesth 2004 · Lexicomp 2026'
+    "contraindications": {
+      "absolute": {
+        "pt": [
+          "Hipersensibilidade ao sufentanil"
+        ],
+        "es": [
+          "Hipersensibilidad al sufentanilo"
+        ]
+      },
+      "relative": {
+        "pt": [
+          "Doença pulmonar grave, idosos/frágeis, associação com depressores do SNC ou inibidores de CYP3A4"
+        ],
+        "es": [
+          "Enfermedad pulmonar grave, adultos mayores/frágiles, asociación con depresores del SNC o inhibidores de CYP3A4"
+        ]
+      }
+    },
+    "safetyFlags": {
+      "bleedingRisk": false,
+      "renalHighRisk": false,
+      "hepaticCaution": true,
+      "antidoteAvailable": true,
+      "highAlertMedication": true,
+      "warning": {
+        "pt": "Pode causar depressão respiratória potencialmente fatal, rigidez muscular e toxicidade aumentada com inibidores de CYP3A4.",
+        "es": "Puede causar depresión respiratoria potencialmente fatal, rigidez muscular y toxicidad aumentada con inhibidores de CYP3A4."
+      }
+    }
   },
 
   /* ══════════════════════════════════════════════════════════════

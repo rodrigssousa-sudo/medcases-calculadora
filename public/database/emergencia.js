@@ -16,241 +16,842 @@
 
 /* ── CETAMINA / KETAMINA ────────────────────────────────────────────── */
     "cetamina": {
-      name: { pt: 'Cetamina / Ketamina', es: 'Ketamina' },
-      category: 'emergencia',
-      class: { pt: 'Anestésico Dissociativo (Antagonista NMDA)', es: 'Anestésico Disociativo (Antagonista NMDA)' },
-      indications: {
-        pt: ['Indução anestésica na Intubação de Sequência Rápida (ISR)', 'Sedação para procedimentos dolorosos curtos (redução de fraturas, drenagens)', 'Dor aguda refratária', 'Depressão maior refratária / Risco de suicídio agudo'],
-        es: ['Inducción anestésica en la Intubación de Secuencia Rápida (ISR)', 'Sedación para procedimientos dolorosos cortos (reducción de fracturas, drenajes)', 'Dolor agudo refractario', 'Depresión mayor refractaria / Riesgo de suicidio agudo']
+      "name": {
+        "pt": "Cetamina / Ketamina",
+        "es": "Ketamina"
       },
-      commercialNames: { br: ['Ketamin', 'Ketalar'], ar: ['Ketamina', 'Ketalar'] },
-      presentation: { pt: ['Frasco-ampola IV/IM 50 mg/mL (10 mL)'], es: ['Vial IV/IM 50 mg/mL (10 mL)'] },
-      mechanism: {
-        pt: 'Antagonista não-competitivo dos receptores NMDA (bloqueia o glutamato). Interrompe as vias de associação cerebral, gerando um estado de "transe cataléptico" (anestesia dissociativa) onde o paciente fica profundamente analgésico e amnésico, mantendo os olhos abertos. O ÚNICO INDUTOR que estimula o sistema nervoso simpático, promovendo liberação maciça de catecolaminas (AUMENTA pressão arterial e frequência cardíaca) e atuando como broncodilatador severo.',
-        es: 'Antagonista no competitivo de los receptores NMDA (bloquea el glutamato). Interrumpe las vías de asociación cerebral, generando un estado de "trance cataléptico" (anestesia disociativa) donde el paciente queda profundamente analgésico y amnésico, manteniendo los ojos abiertos. EL ÚNICO INDUCTOR que estimula el sistema nervioso simpático, promoviendo liberación masiva de catecolaminas (AUMENTA presión arterial y frecuencia cardíaca) y actuando como broncodilatador severo.'
+      "category": "emergencia",
+      "class": {
+        "pt": "Anestésico dissociativo; antagonista não competitivo de receptores NMDA",
+        "es": "Anestésico disociativo; antagonista no competitivo de receptores NMDA"
       },
-      dose: {
-        adult: {
-          pt: 'Indução/ISR: 1 a 2 mg/kg IV (início de ação em 30 seg). Analgesia Subdissociativa (Dor): 0,1 a 0,3 mg/kg IV lento. Procedimentos: 1 mg/kg IV ou 4 mg/kg IM.',
-          es: 'Inducción/ISR: 1 a 2 mg/kg IV (inicio de acción en 30 seg). Analgesia Subdisociativa (Dolor): 0,1 a 0,3 mg/kg IV lento. Procedimientos: 1 mg/kg IV o 4 mg/kg IM.'
+      "indications": {
+        "pt": [
+          "Indução de anestesia geral",
+          "Anestesia como agente único em procedimentos que não exigem relaxamento muscular",
+          "Suplemento a outros agentes anestésicos",
+          "Sedação procedural pediátrica em emergência — uso fora da rotulagem dos EUA, conforme protocolo institucional"
+        ],
+        "es": [
+          "Inducción de anestesia general",
+          "Anestesia como agente único en procedimientos que no requieren relajación muscular",
+          "Suplemento de otros agentes anestésicos",
+          "Sedación procedimental pediátrica en urgencias — uso fuera del rotulado de EE. UU., según protocolo institucional"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Ketalar",
+          "Ketamin"
+        ],
+        "ar": [
+          "Ketamina",
+          "Ketalar"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução injetável IV/IM; concentrações de 10, 50 e 100 mg/mL podem existir conforme fabricante/mercado"
+        ],
+        "es": [
+          "Solución inyectable IV/IM; pueden existir concentraciones de 10, 50 y 100 mg/mL según fabricante/mercado"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagoniza receptores NMDA e produz anestesia dissociativa com analgesia e amnésia. Em muitos pacientes aumenta pressão arterial e frequência cardíaca por estimulação simpática, mas hipotensão e bradicardia também podem ocorrer, especialmente em depleção de catecolaminas.",
+        "es": "Antagoniza receptores NMDA y produce anestesia disociativa con analgesia y amnesia. En muchos pacientes aumenta la presión arterial y la frecuencia cardíaca por estimulación simpática, pero también pueden ocurrir hipotensión y bradicardia, especialmente con depleción de catecolaminas."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Indução: 1–4,5 mg/kg IV lentamente em 60 s; alternativa 1–2 mg/kg a 0,5 mg/kg/min. IM: 6,5–13 mg/kg. Titular ao efeito e ao contexto anestésico.",
+          "es": "Inducción: 1–4,5 mg/kg IV lentamente en 60 s; alternativa 1–2 mg/kg a 0,5 mg/kg/min. IM: 6,5–13 mg/kg. Titular al efecto y al contexto anestésico."
         },
-        pediatric: {
-          pt: 'Sedação p/ procedimentos: 1 a 2 mg/kg IV ou 4 a 5 mg/kg IM.',
-          es: 'Sedación p/ procedimientos: 1 a 2 mg/kg IV o 4 a 5 mg/kg IM.'
+        "pediatric": {
+          "pt": "Rotulagem dos EUA: segurança/eficácia <16 anos não estabelecidas. Em sedação procedural pediátrica por protocolo: 1–1,5 mg/kg IV, com incrementos de 0,25–0,5 mg/kg; IM 4 mg/kg, podendo repetir 2 mg/kg após 10 min (máx. 6 mg/kg).",
+          "es": "Rotulado de EE. UU.: seguridad/eficacia <16 años no establecidas. En sedación procedimental pediátrica por protocolo: 1–1,5 mg/kg IV, con incrementos de 0,25–0,5 mg/kg; IM 4 mg/kg, pudiendo repetir 2 mg/kg a los 10 min (máx. 6 mg/kg)."
         }
       },
-      administration: { pt: ['IV direto lento (em 1 minuto). Injeções rápidas demais podem causar apneia ou laringoespasmo transitório.'], es: ['IV directo lento (en 1 minuto). Inyecciones demasiado rápidas pueden causar apnea o laringoespasmo transitorio.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste para doses em bolus de emergência.', es: 'Sin necesidad de ajuste para dosis en bolo de emergencia.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade no uso emergencial (se uso crônico em dor, o metabolismo hepático exigiria cautela).', es: 'Sin necesidad en el uso de emergencia (si uso crónico en dolor, el metabolismo hepático exigiría precaución).' } },
-      commonAdverseEffects: { pt: ['Alucinações / Delirium de emergência (sonhos aterrorizantes ao acordar)', 'Sialorreia (excesso de salivação)', 'Aumento da Pressão Arterial e Taquicardia'], es: ['Alucinaciones / Delirium de emergencia (sueños aterrorizantes al despertar)', 'Sialorrea (exceso de salivación)', 'Aumento de la Presión Arterial y Taquicardia'] },
-      dangerousAdverseEffects: { pt: ['Laringoespasmo (especialmente em crianças com via aérea hiper-reativa)', 'Crise Hipertensiva aguda', 'Aumento da Pressão Intraocular'], es: ['Laringoespasmo (especialmente en niños con vía aérea hiperreactiva)', 'Crisis Hipertensiva aguda', 'Aumento de la Presión Intraocular'] },
-      contraindications: {
-        absolute: { pt: ['Esquizofrenia ou psicoses graves em crise', 'Dissecção aguda de aorta ou crise hipertensiva fatal (>180/120)', 'Hipertireoidismo grave não tratado'], es: ['Esquizofrenia o psicosis graves en crisis', 'Disección aguda de aorta o crisis hipertensiva fatal (>180/120)', 'Hipertiroidismo grave no tratado'] },
-        relative: { pt: ['Hipertensão Intracraniana (Historicamente contraindicada, mas evidências recentes mostram que não aumenta a PIC clinicamente significativa se o paciente estiver bem ventilado)'], es: ['Hipertensión Intracraneal (Históricamente contraindicada, pero evidencias recientes muestran que no aumenta la PIC clínicamente significativa si el paciente está bien ventilado)'] }
+      "administration": {
+        "pt": [
+          "Administrar IV lentamente; a injeção rápida aumenta risco de depressão respiratória e resposta pressora.",
+          "A concentração de 100 mg/mL é concentrada e deve ser diluída antes do uso IV conforme a rotulagem do produto.",
+          "Monitorização cardiorrespiratória e capacidade imediata de manejo de via aérea são obrigatórias durante sedação/anestesia."
+        ],
+        "es": [
+          "Administrar IV lentamente; la inyección rápida aumenta el riesgo de depresión respiratoria y respuesta presora.",
+          "La concentración de 100 mg/mL es concentrada y debe diluirse antes del uso IV según el rotulado del producto.",
+          "Se requiere monitorización cardiorrespiratoria y capacidad inmediata para manejo de la vía aérea durante sedación/anestesia."
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'É O INDUTOR DE ESCOLHA NO CHOQUE SÉPTICO E ASMA GRAVE. A cetamina protege a pressão arterial (ação simpática) e promove broncodilatação extrema. Para evitar o "delirium" ao acordar, geralmente associa-se uma dose baixa de Midazolam (1-2mg).', es: 'ES EL INDUCTOR DE ELECCIÓN EN EL CHOQUE SÉPTICO Y ASMA GRAVE. La ketamina protege la presión arterial (acción simpática) y promueve broncodilatación extrema. Para evitar el "delirium" al despertar, generalmente se asocia una dosis baja de Midazolam (1-2mg).' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "A rotulagem não estabelece ajuste renal fixo para indução; titular clinicamente.",
+          "es": "El rotulado no establece un ajuste renal fijo para inducción; titular clínicamente."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Não há ajuste único definido para dose de indução. Uso recorrente foi associado a lesão hepática; considerar função hepática basal e periódica quando houver plano de administrações repetidas.",
+          "es": "No hay un ajuste único definido para la dosis de inducción. El uso repetido se ha asociado a lesión hepática; considerar función hepática basal y periódica cuando se planifiquen administraciones repetidas."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea/vômito",
+          "Nistagmo",
+          "Hipersecreção salivar",
+          "Reações de emergência",
+          "Aumento de pressão arterial e frequência cardíaca"
+        ],
+        "es": [
+          "Náuseas/vómitos",
+          "Nistagmo",
+          "Hipersalivación",
+          "Reacciones de emergencia",
+          "Aumento de presión arterial y frecuencia cardíaca"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória/apneia, sobretudo com administração rápida ou dose excessiva",
+          "Laringoespasmo",
+          "Instabilidade hemodinâmica",
+          "Lesão hepática com uso recorrente"
+        ],
+        "es": [
+          "Depresión respiratoria/apnea, sobre todo con administración rápida o dosis excesiva",
+          "Laringoespasmo",
+          "Inestabilidad hemodinámica",
+          "Lesión hepática con uso repetido"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade à cetamina ou excipientes",
+            "Situação em que elevação importante da pressão arterial represente risco grave"
+          ],
+          "es": [
+            "Hipersensibilidad a ketamina o excipientes",
+            "Situación en la que una elevación importante de la presión arterial represente un riesgo grave"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Pressão intracraniana elevada: usar em ambiente monitorizado",
+            "Procedimentos de faringe/laringe/árvore brônquica exigem estratégia adicional de via aérea/anestesia",
+            "Uso recorrente em hepatopatia"
+          ],
+          "es": [
+            "Presión intracraneal elevada: usar en ambiente monitorizado",
+            "Procedimientos de faringe/laringe/árbol bronquial requieren estrategia adicional de vía aérea/anestesia",
+            "Uso repetido en hepatopatía"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "A preservação de reflexos de via aérea não elimina risco de obstrução, laringoespasmo ou apneia. Benzodiazepínico não é obrigatório de rotina; pode ser usado quando clinicamente indicado para manifestações de emergência.",
+          "es": "La preservación de reflejos de la vía aérea no elimina el riesgo de obstrucción, laringoespasmo o apnea. Una benzodiazepina no es obligatoria de rutina; puede usarse cuando esté clínicamente indicada para manifestaciones de emergencia."
+        }
       }
     },  // end cetamina
 
 /* ── ETOMIDATO ──────────────────────────────────────────────────────── */
     "etomidato": {
-      name: { pt: 'Etomidato', es: 'Etomidato' },
-      category: 'emergencia',
-      class: { pt: 'Anestésico Geral / Hipnótico não barbitúrico', es: 'Anestésico General / Hipnótico no barbitúrico' },
-      indications: {
-        pt: ['Indução anestésica na Intubação de Sequência Rápida (ISR)', 'Indução em pacientes hemodinamicamente instáveis (trauma, cardiopatas graves)'],
-        es: ['Inducción anestésica en la Intubación de Secuencia Rápida (ISR)', 'Inducción en pacientes hemodinámicamente inestables (trauma, cardiópatas graves)']
+      "name": {
+        "pt": "Etomidato",
+        "es": "Etomidato"
       },
-      commercialNames: { br: ['Hypnomidate'], ar: ['Etomidato'] },
-      presentation: { pt: ['Ampolas IV 2 mg/mL (10 mL)'], es: ['Ampollas IV 2 mg/mL (10 mL)'] },
-      mechanism: {
-        pt: 'Modulador alostérico positivo do receptor GABA-A (aumenta o fluxo de cloro, inibindo o SNC). Provoca hipnose profunda em apenas 10 a 15 segundos. O seu grande trunfo é a TOTAL ESTABILIDADE HEMODINÂMICA: não deprime o miocárdio, não altera a resistência vascular sistêmica e não causa taquicardia. Reduz a pressão intracraniana e o consumo de oxigênio cerebral. NÃO possui qualquer efeito analgésico.',
-        es: 'Modulador alostérico positivo del receptor GABA-A (aumenta el flujo de cloro, inhibiendo el SNC). Provoca hipnosis profunda en solo 10 a 15 segundos. Su gran ventaja es la TOTAL ESTABILIDAD HEMODINÁMICA: no deprime el miocardio, no altera la resistencia vascular sistémica y no causa taquicardia. Reduce la presión intracraneal y el consumo de oxígeno cerebral. NO posee ningún efecto analgésico.'
+      "category": "emergencia",
+      "class": {
+        "pt": "Hipnótico intravenoso não barbitúrico para indução anestésica",
+        "es": "Hipnótico intravenoso no barbitúrico para inducción anestésica"
       },
-      dose: {
-        adult: {
-          pt: 'Indução (ISR): 0,3 mg/kg IV em bolus único (geralmente 1 ampola de 20mg para adulto médio).',
-          es: 'Inducción (ISR): 0,3 mg/kg IV en bolo único (generalmente 1 ampolla de 20mg para adulto promedio).'
+      "indications": {
+        "pt": [
+          "Indução de anestesia geral em adultos e pacientes pediátricos >10 anos"
+        ],
+        "es": [
+          "Inducción de anestesia general en adultos y pacientes pediátricos >10 años"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Hypnomidate"
+        ],
+        "ar": [
+          "Etomidato"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução IV 2 mg/mL"
+        ],
+        "es": [
+          "Solución IV 2 mg/mL"
+        ]
+      },
+      "mechanism": {
+        "pt": "Modula positivamente receptores GABA-A e produz hipnose rápida sem analgesia. Em geral causa menor depressão cardiovascular que vários outros indutores, mas hipotensão e outras alterações hemodinâmicas podem ocorrer. Inibe transitoriamente a síntese adrenal de cortisol/aldosterona.",
+        "es": "Modula positivamente receptores GABA-A y produce hipnosis rápida sin analgesia. En general causa menor depresión cardiovascular que varios otros inductores, pero pueden ocurrir hipotensión y otros cambios hemodinámicos. Inhibe transitoriamente la síntesis adrenal de cortisol/aldosterona."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Indução: 0,2–0,6 mg/kg IV individualizados; dose usual 0,3 mg/kg administrada em 30–60 s.",
+          "es": "Inducción: 0,2–0,6 mg/kg IV individualizados; dosis habitual 0,3 mg/kg administrada en 30–60 s."
         },
-        pediatric: {
-          pt: 'Indução (ISR): 0,3 mg/kg IV.',
-          es: 'Inducción (ISR): 0,3 mg/kg IV.'
+        "pediatric": {
+          "pt": ">10 anos: mesma faixa de 0,2–0,6 mg/kg IV, usual 0,3 mg/kg. <10 anos: dados insuficientes para recomendar dose de indução na rotulagem de referência.",
+          "es": ">10 años: mismo rango de 0,2–0,6 mg/kg IV, habitual 0,3 mg/kg. <10 años: datos insuficientes para recomendar dosis de inducción en el rotulado de referencia."
         }
       },
-      administration: { pt: ['Injeção IV direta ao longo de 30 a 60 segundos.', 'A injeção é extremamente dolorosa na veia; a formulação em propilenoglicol é irritante.'], es: ['Inyección IV directa a lo largo de 30 a 60 segundos.', 'La inyección es extremadamente dolorosa en la vena; la formulación en propilenglicol es irritante.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em dose única.', es: 'Sin necesidad de ajuste en dosis única.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em emergência.', es: 'Sin necesidad de ajuste en emergencia.' } },
-      commonAdverseEffects: { pt: ['Mioclonia severa na indução (espasmos musculares que parecem convulsão)', 'Dor intensa no local de injeção', 'Náuseas e Vômitos intensos no pós-operatório (PONV)'], es: ['Mioclonía severa en la inducción (espasmos musculares que parecen convulsión)', 'Dolor intenso en el sitio de inyección', 'Náuseas y Vómitos intensos en el posoperatorio (PONV)'] },
-      dangerousAdverseEffects: { pt: ['Supressão adrenal aguda e reversível (inibe a enzima 11-beta-hidroxilase)', 'Tromboflebite'], es: ['Supresión adrenal aguda y reversible (inhibe la enzima 11-beta-hidroxilasa)', 'Tromboflebitis'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade ao fármaco', 'Infusão contínua para sedação prolongada em UTI (mortalidade altíssima por falência adrenal)'], es: ['Hipersensibilidad al fármaco', 'Infusión continua para sedación prolongada en UCI (mortalidad altísima por falla adrenal)'] },
-        relative: { pt: ['Choque Séptico em fase inicial (discutível: alguns autores evitam etomidato na sepse pelo risco de bloqueio das suprarrenais no momento que o paciente mais precisa do cortisol natural; prefere-se cetamina)'], es: ['Choque Séptico en fase inicial (discutible: algunos autores evitan etomidato en sepsis por el riesgo de bloqueo de las suprarrenales en el momento que el paciente más necesita el cortisol natural; se prefiere ketamina)'] }
+      "administration": {
+        "pt": [
+          "Uso exclusivamente IV.",
+          "Administrar a dose de indução em 30–60 s.",
+          "Não utilizar como infusão prolongada para sedação: há supressão de cortisol e aldosterona."
+        ],
+        "es": [
+          "Uso exclusivamente IV.",
+          "Administrar la dosis de inducción en 30–60 s.",
+          "No utilizar como infusión prolongada para sedación: existe supresión de cortisol y aldosterona."
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'É o indutor de excelência no paciente chocado/traumatizado (hipovolêmico) ou com falência cardíaca prévia. LEMBRETE: O Etomidato NÃO tira a dor, apenas "desliga" a consciência. Para a intubação, deve SEMPRE ser associado a um bloqueador neuromuscular e, preferencialmente, um opioide (fentanil) prévio.', es: 'Es el inductor de excelencia en el paciente chocado/traumatizado (hipovolémico) o con falla cardíaca previa. RECORDATORIO: El Etomidato NO quita el dolor, solo "apaga" la consciencia. Para la intubación, debe SIEMPRE asociarse a un bloqueador neuromuscular y, preferentemente, un opioide (fentanilo) previo.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há ajuste renal fixo para a dose única de indução na rotulagem; individualizar conforme condição clínica.",
+          "es": "No hay ajuste renal fijo para la dosis única de inducción en el rotulado; individualizar según condición clínica."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há ajuste hepático fixo definido para dose única; individualizar e considerar maior sensibilidade em pacientes frágeis.",
+          "es": "No hay ajuste hepático fijo definido para dosis única; individualizar y considerar mayor sensibilidad en pacientes frágiles."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Mioclonia",
+          "Dor à injeção",
+          "Náuseas e vômitos"
+        ],
+        "es": [
+          "Mioclonía",
+          "Dolor a la inyección",
+          "Náuseas y vómitos"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Supressão adrenal transitória",
+          "Hipotensão, sobretudo com administração rápida ou vulnerabilidade hemodinâmica",
+          "Apneia/depressão respiratória pode ocorrer"
+        ],
+        "es": [
+          "Supresión adrenal transitoria",
+          "Hipotensión, sobre todo con administración rápida o vulnerabilidad hemodinámica",
+          "Apnea/depresión respiratoria puede ocurrir"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade ao etomidato ou componentes"
+          ],
+          "es": [
+            "Hipersensibilidad a etomidato o componentes"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Sepse/choque: considerar o contexto clínico; diretriz SCCM não demonstra diferença de mortalidade ou hipotensão versus outros indutores",
+            "Idosos podem necessitar doses menores"
+          ],
+          "es": [
+            "Sepsis/shock: considerar el contexto clínico; la guía SCCM no demuestra diferencia de mortalidad o hipotensión frente a otros inductores",
+            "Adultos mayores pueden requerir dosis menores"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": false,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Etomidato não fornece analgesia. Não administrar corticosteroide rotineiramente apenas para neutralizar a supressão adrenal de uma dose de RSI; tratar choque refratário conforme indicação clínica própria.",
+          "es": "Etomidato no aporta analgesia. No administrar corticosteroide de rutina solo para contrarrestar la supresión adrenal de una dosis de RSI; tratar el shock refractario según su indicación clínica propia."
+        }
       }
     },  // end etomidato
 
 /* ── ROCURÔNIO ──────────────────────────────────────────────────────── */
     "rocuronio": {
-      name: { pt: 'Rocurônio', es: 'Rocuronio' },
-      category: 'emergencia',
-      class: { pt: 'Bloqueador Neuromuscular Adespolarizante (Aminosteroide)', es: 'Bloqueador Neuromuscular No Despolarizante (Aminosteroide)' },
-      indications: {
-        pt: ['Intubação de Sequência Rápida (ISR) - Alternativa à Succinilcolina', 'Manutenção do bloqueio neuromuscular em UTI (SDRA grave)'],
-        es: ['Intubación de Secuencia Rápida (ISR) - Alternativa a la Succinilcolina', 'Mantenimiento del bloqueo neuromuscular en UCI (SDRA grave)']
+      "name": {
+        "pt": "Rocurônio",
+        "es": "Rocuronio"
       },
-      commercialNames: { br: ['Esmeron', 'Roculim'], ar: ['Esmeron'] },
-      presentation: { pt: ['Frasco-ampola IV 10 mg/mL (5 mL)'], es: ['Vial IV 10 mg/mL (5 mL)'] },
-      mechanism: {
-        pt: 'Antagonista competitivo puro dos receptores colinérgicos nicotínicos na placa motora. Impede a ligação da acetilcolina, causando paralisia flácida em todo o músculo esquelético. Possui o início de ação mais rápido entre os adespolarizantes (45 a 60 segundos), tornando-o ideal para ISR. Duração clínica de 30 a 40 minutos em dose padrão.',
-        es: 'Antagonista competitivo puro de los receptores colinérgicos nicotínicos en la placa motora. Impide la unión de la acetilcolina, causando parálisis flácida en todo el músculo esquelético. Posee el inicio de acción más rápido entre los no despolarizantes (45 a 60 segundos), haciéndolo ideal para ISR. Duración clínica de 30 a 40 minutos en dosis estándar.'
+      "category": "emergencia",
+      "class": {
+        "pt": "Bloqueador neuromuscular não despolarizante aminosteroide",
+        "es": "Bloqueador neuromuscular no despolarizante aminoesteroideo"
       },
-      dose: {
-        adult: {
-          pt: 'Intubação (ISR): 1,0 a 1,2 mg/kg IV. Manutenção UTI: Infusão contínua de 0,3 a 0,6 mg/kg/h.',
-          es: 'Intubación (ISR): 1,0 a 1,2 mg/kg IV. Mantenimiento UCI: Infusión continua de 0,3 a 0,6 mg/kg/h.'
+      "indications": {
+        "pt": [
+          "Facilitar intubação traqueal",
+          "Bloqueio neuromuscular durante cirurgia e ventilação mecânica",
+          "Intubação de sequência rápida em adultos adequadamente anestesiados"
+        ],
+        "es": [
+          "Facilitar intubación traqueal",
+          "Bloqueo neuromuscular durante cirugía y ventilación mecánica",
+          "Intubación de secuencia rápida en adultos adecuadamente anestesiados"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Esmeron",
+          "Roculim"
+        ],
+        "ar": [
+          "Esmeron"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução IV 10 mg/mL"
+        ],
+        "es": [
+          "Solución IV 10 mg/mL"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagonista competitivo dos receptores nicotínicos de acetilcolina na junção neuromuscular. Produz paralisia flácida sem sedação ou analgesia.",
+        "es": "Antagonista competitivo de los receptores nicotínicos de acetilcolina en la unión neuromuscular. Produce parálisis flácida sin sedación ni analgesia."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Intubação: 0,6 mg/kg IV. RSI adulto: 0,6–1,2 mg/kg IV. Infusão: iniciar 10–12 mcg/kg/min somente após sinais precoces de recuperação; titular por TOF, com faixas estudadas de 4–16 mcg/kg/min.",
+          "es": "Intubación: 0,6 mg/kg IV. RSI adulto: 0,6–1,2 mg/kg IV. Infusión: iniciar 10–12 mcg/kg/min solo tras signos precoces de recuperación; titular por TOF, con rangos estudiados de 4–16 mcg/kg/min."
         },
-        pediatric: {
-          pt: 'Intubação (ISR): 1,0 a 1,2 mg/kg IV. (Uso seguro em pediatria).',
-          es: 'Intubación (ISR): 1,0 a 1,2 mg/kg IV. (Uso seguro en pediatría).'
+        "pediatric": {
+          "pt": "Dose inicial recomendada para intubação: 0,6 mg/kg IV; 0,45 mg/kg pode ser usada conforme idade e técnica anestésica. Manutenção sob anestesia: 0,15 mg/kg quando reaparece T3; infusão pediátrica deve ser titulada por monitorização neuromuscular.",
+          "es": "Dosis inicial recomendada para intubación: 0,6 mg/kg IV; 0,45 mg/kg puede usarse según edad y técnica anestésica. Mantenimiento bajo anestesia: 0,15 mg/kg al reaparecer T3; la infusión pediátrica debe titularse por monitorización neuromuscular."
         }
       },
-      administration: { pt: ['Bolus IV direto rápido para intubação.', 'Armazenar em refrigeração (2 a 8°C). Após aberto em temperatura ambiente, validade curta.'], es: ['Bolo IV directo rápido para intubación.', 'Almacenar en refrigeración (2 a 8°C). Una vez abierto a temperatura ambiente, validez corta.'] },
-      renalAdjustment: { required: false, message: { pt: 'Depuração parcialmente renal. Em falência renal severa, a meia-vida pode dobrar de tempo (bloqueio residual).', es: 'Depuración parcialmente renal. En falla renal severa, la vida media puede duplicar su tiempo (bloqueo residual).' } },
-      hepaticAdjustment: { required: true, message: { pt: 'O fígado é a via primária de eliminação (bílis). Cirróticos terão aumento dramático do tempo de paralisia.', es: 'El hígado es la vía primaria de eliminación (bilis). Los cirróticos tendrán un aumento dramático del tiempo de parálisis.' } },
-      commonAdverseEffects: { pt: ['Aumento transitório e leve da frequência cardíaca', 'Dor à injeção'], es: ['Aumento transitorio y leve de la frecuencia cardíaca', 'Dolor a la inyección'] },
-      dangerousAdverseEffects: { pt: ['Anafilaxia (BNMs são uma das principais causas de choque anafilático perioperatório)', 'Paralisia residual prolongada (hipoventilação pós-extubação)'], es: ['Anafilaxia (los BNMs son una de las principales causas de choque anafiláctico perioperatorio)', 'Parálisis residual prolongada (hipoventilación pos-extubación)'] },
-      contraindications: {
-        absolute: { pt: ['Falta de material de reanimação ou inabilidade em intubar/ventilar o paciente'], es: ['Falta de material de reanimación o inhabilidad para intubar/ventilar al paciente'] },
-        relative: { pt: ['Miastenia Gravis (extrema sensibilidade ao bloqueio)'], es: ['Miastenia Gravis (extrema sensibilidad al bloqueo)'] }
+      "administration": {
+        "pt": [
+          "Administrar IV por profissional capaz de ventilação e manejo de via aérea.",
+          "Usar estimulador de nervo periférico/TOF para manutenção e recuperação.",
+          "Infusão contínua deve iniciar apenas após evidência de recuperação espontânea da dose de intubação."
+        ],
+        "es": [
+          "Administrar IV por profesional capaz de ventilación y manejo de vía aérea.",
+          "Usar estimulador de nervio periférico/TOF para mantenimiento y recuperación.",
+          "La infusión continua debe iniciarse solo tras evidencia de recuperación espontánea de la dosis de intubación."
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'NÃO POSSUI EFEITO SEDATIVO NEM ANALGÉSICO. É tortura paralisar um paciente consciente. SEMPRE administrar indutor (Etomidato/Cetamina) e opioide ANTES de injetar o Rocurônio. Antídoto ultra-rápido: Sugamadex.', es: 'NO POSEE EFECTO SEDANTE NI ANALGÉSICO. Es tortura paralizar a un paciente consciente. SIEMPRE administrar inductor (Etomidato/Ketamina) y opioide ANTES de inyectar el Rocuronio. Antídoto ultra-rápido: Sugamadex.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Na insuficiência renal, a duração pode ser mais variável; não aplicar fator fixo de redução. Titular por resposta/TOF e assegurar recuperação adequada antes da extubação.",
+          "es": "En insuficiencia renal, la duración puede ser más variable; no aplicar un factor fijo de reducción. Titular por respuesta/TOF y asegurar recuperación adecuada antes de la extubación."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Doença hepática pode prolongar significativamente a duração do bloqueio; individualizar dose e intervalo e monitorizar TOF.",
+          "es": "La enfermedad hepática puede prolongar significativamente la duración del bloqueo; individualizar dosis e intervalo y monitorizar TOF."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Dor à injeção",
+          "Alterações transitórias de frequência cardíaca"
+        ],
+        "es": [
+          "Dolor a la inyección",
+          "Cambios transitorios de frecuencia cardíaca"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Anafilaxia",
+          "Bloqueio neuromuscular residual/prolongado",
+          "Compromisso ventilatório se recuperação for incompleta"
+        ],
+        "es": [
+          "Anafilaxia",
+          "Bloqueo neuromuscular residual/prolongado",
+          "Compromiso ventilatorio si la recuperación es incompleta"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade ao rocurônio ou brometos/componentes"
+          ],
+          "es": [
+            "Hipersensibilidad a rocuronio o bromuros/componentes"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Doenças neuromusculares podem alterar intensamente a resposta",
+            "Disfunção renal ou hepática pode prolongar/variabilizar o efeito"
+          ],
+          "es": [
+            "Las enfermedades neuromusculares pueden alterar intensamente la respuesta",
+            "La disfunción renal o hepática puede prolongar/variabilizar el efecto"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Não possui efeito sedativo nem analgésico. Deve ser administrado após sedativo-hipnótico adequado para intubação e com ventilação imediatamente disponível. Reversão com sugamadex é possível em bloqueio por rocurônio, conforme profundidade e protocolo.",
+          "es": "No posee efecto sedante ni analgésico. Debe administrarse después de un sedante-hipnótico adecuado para intubación y con ventilación inmediatamente disponible. La reversión con sugammadex es posible en bloqueo por rocuronio, según profundidad y protocolo."
+        }
       }
     },  // end rocuronio
 
 /* ── SUCCINILCOLINA ─────────────────────────────────────────────────── */
     "succinilcolina": {
-      name: { pt: 'Succinilcolina (Cloreto de Suxametônio)', es: 'Succinilcolina (Cloruro de Suxametonio)' },
-      category: 'emergencia',
-      class: { pt: 'Bloqueador Neuromuscular Despolarizante', es: 'Bloqueador Neuromuscular Despolarizante' },
-      indications: {
-        pt: ['Intubação de Sequência Rápida (ISR) - Padrão histórico', 'Laringoespasmo refratário'],
-        es: ['Intubación de Secuencia Rápida (ISR) - Estándar histórico', 'Laringoespasmo refractario']
+      "name": {
+        "pt": "Succinilcolina (Cloreto de Suxametônio)",
+        "es": "Succinilcolina (Cloruro de Suxametonio)"
       },
-      commercialNames: { br: ['Quelicin'], ar: ['Succinilcolina'] },
-      presentation: { pt: ['Frasco-ampola liofilizado 100 mg', '500 mg'], es: ['Vial liofilizado 100 mg', '500 mg'] },
-      mechanism: {
-        pt: 'Agonista dos receptores nicotínicos (age como se fossem duas moléculas de acetilcolina unidas). Liga-se ao receptor e causa uma despolarização muscular sustentada e ininterrupta (o que se manifesta visivelmente como "fasciculações" musculares agudas). A placa motora não consegue se repolarizar, resultando em paralisia flácida em seguida. Duração ultra-curta (3 a 5 minutos) por ser degradada rapidamente no sangue pela enzima pseudocolinesterase plasmática.',
-        es: 'Agonista de los receptores nicotínicos (actúa como si fueran dos moléculas de acetilcolina unidas). Se une al receptor y causa una despolarización muscular sostenida e ininterrumpida (lo que se manifiesta visiblemente como "fasciculaciones" musculares agudas). La placa motora no logra repolarizarse, resultando en parálisis flácida luego. Duración ultra-corta (3 a 5 minutos) por ser degradada rápidamente en la sangre por la enzima pseudocolinesterasa plasmática.'
+      "category": "emergencia",
+      "class": {
+        "pt": "Bloqueador neuromuscular despolarizante",
+        "es": "Bloqueador neuromuscular despolarizante"
       },
-      dose: {
-        adult: {
-          pt: 'ISR: 1,0 a 1,5 mg/kg IV (máx 150 mg). Início de ação em 45 segundos.',
-          es: 'ISR: 1,0 a 1,5 mg/kg IV (máx 150 mg). Inicio de acción en 45 segundos.'
+      "indications": {
+        "pt": [
+          "Facilitar intubação traqueal",
+          "Relaxamento muscular durante cirurgia ou ventilação mecânica",
+          "Em pediatria, reservar para intubação de emergência/necessidade imediata de via aérea ou IM quando não há acesso venoso adequado"
+        ],
+        "es": [
+          "Facilitar intubación traqueal",
+          "Relajación muscular durante cirugía o ventilación mecánica",
+          "En pediatría, reservar para intubación de emergencia/necesidad inmediata de vía aérea o IM cuando no hay acceso venoso adecuado"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Quelicin"
+        ],
+        "ar": [
+          "Succinilcolina"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução/frasco injetável IV/IM; apresentações variam por mercado"
+        ],
+        "es": [
+          "Solución/vial inyectable IV/IM; presentaciones varían según mercado"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonista nicotínico despolarizante que produz despolarização sustentada da placa motora, seguida de paralisia. É hidrolisada principalmente pela butirilcolinesterase plasmática.",
+        "es": "Agonista nicotínico despolarizante que produce despolarización sostenida de la placa motora, seguida de parálisis. Se hidroliza principalmente por butirilcolinesterasa plasmática."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Intubação de emergência em adulto: dose frequentemente usada 1–1,5 mg/kg IV conforme protocolo; a rotulagem também descreve 0,6 mg/kg como dose adulta usual para bloqueio. Titular ao objetivo e não usar como sedativo.",
+          "es": "Intubación de emergencia en adulto: dosis frecuentemente utilizada 1–1,5 mg/kg IV según protocolo; el rotulado también describe 0,6 mg/kg como dosis adulta habitual para bloqueo. Titular al objetivo y no usar como sedante."
         },
-        pediatric: {
-          pt: 'Infantes e crianças pequenas necessitam de dose maior (2 mg/kg IV). Risco elevado de bradicardia em pediatria.',
-          es: 'Infantes y niños pequeños necesitan mayor dosis (2 mg/kg IV). Riesgo elevado de bradicardia en pediatría.'
+        "pediatric": {
+          "pt": "Emergência: lactentes/crianças pequenas 2 mg/kg IV; crianças maiores/adolescentes 1 mg/kg IV. Se não houver acesso venoso, IM até 3–4 mg/kg; dose IM total máx. 150 mg. Uso pediátrico deve ser reservado para necessidade imediata de via aérea.",
+          "es": "Emergencia: lactantes/niños pequeños 2 mg/kg IV; niños mayores/adolescentes 1 mg/kg IV. Si no hay acceso venoso, IM hasta 3–4 mg/kg; dosis IM total máx. 150 mg. El uso pediátrico debe reservarse para necesidad inmediata de vía aérea."
         }
       },
-      administration: { pt: ['Bolus IV direto imediato.'], es: ['Bolo IV directo inmediato.'] },
-      renalAdjustment: { required: false, message: { pt: 'Contraindicado em insuficiência renal aguda ou anúricos por risco de hipercalemia fatal.', es: 'Contraindicado en insuficiencia renal aguda o anúricos por riesgo de hiperpotasemia fatal.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Pacientes com falência hepática produzem pouca pseudocolinesterase. A succinilcolina pode durar horas (bloqueio prolongado).', es: 'Pacientes con falla hepática producen poca pseudocolinesterasa. La succinilcolina puede durar horas (bloqueo prolongado).' } },
-      commonAdverseEffects: { pt: ['Fasciculações musculares vigorosas pré-paralisia', 'Mialgia difusa grave no pós-operatório', 'Aumento transitório de pressão intragástrica e intraocular'], es: ['Fasciculaciones musculares vigorosas pre-parálisis', 'Mialgia difusa grave en el posoperatorio', 'Aumento transitorio de presión intragástrica e intraocular'] },
-      dangerousAdverseEffects: { pt: ['Hipercalemia fatal (o canal de despolarização expulsa muito potássio da célula)', 'Hipertermia Maligna (um dos principais gatilhos)', 'Bradicardia profunda ou assistolia (em segundas doses ou em crianças)'], es: ['Hiperpotasemia fatal (el canal de despolarización expulsa mucho potasio de la célula)', 'Hipertermia Maligna (uno de los principales gatillos)', 'Bradicardia profunda o asistolia (en segundas dosis o en niños)'] },
-      contraindications: {
-        absolute: { pt: ['Grandes queimados (> 48h de lesão)', 'Trauma raquimedular / Paraplegia (> 48h)', 'Doenças desmielinizantes / Rabdomiólise / Miopatias', 'Histórico familiar de Hipertermia Maligna', 'Hipercalemia basal conhecida (> 5.5)'], es: ['Grandes quemados (> 48h de lesión)', 'Trauma raquimedular / Paraplejía (> 48h)', 'Enfermedades desmielinizantes / Rabdomiólisis / Miopatías', 'Historial familiar de Hipertermia Maligna', 'Hiperpotasemia basal conocida (> 5.5)'] },
-        relative: { pt: ['Crianças sem acesso venoso prévio (pode causar bradicardia súbita)'], es: ['Niños sin acceso venoso previo (puede causar bradicardia súbita)'] }
+      "administration": {
+        "pt": [
+          "Bolus IV/IM conforme formulação. Para infusão, a rotulagem descreve diluição para 1–2 mg/mL em dextrose 5% ou SF 0,9%.",
+          "Monitorizar função neuromuscular se usada em infusão.",
+          "Não misturar com soluções alcalinas."
+        ],
+        "es": [
+          "Bolo IV/IM según formulación. Para infusión, el rotulado describe dilución a 1–2 mg/mL en dextrosa 5% o SF 0,9%.",
+          "Monitorizar función neuromuscular si se usa en infusión.",
+          "No mezclar con soluciones alcalinas."
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'NÃO POSSUI ANTÍDOTO. Em pacientes com "up-regulation" de receptores (queimados/acamados), a succinilcolina causa um efluxo letal de potássio, gerando parada cardíaca em assistolia quase imediata.', es: 'NO POSEE ANTÍDOTO. En pacientes con "up-regulation" de receptores (quemados/encamados), la succinilcolina causa un eflujo letal de potasio, generando paro cardíaco en asistolia casi inmediata.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Insuficiência renal/anúria isoladamente não consta como contraindicação formal. Avaliar potássio e condições associadas à hipercalemia; evitar em hipercalemia significativa ou situações de alto risco para elevação abrupta de K+.",
+          "es": "La insuficiencia renal/anuria aislada no figura como contraindicación formal. Evaluar potasio y condiciones asociadas a hiperpotasemia; evitar con hiperpotasemia significativa o situaciones de alto riesgo de aumento brusco de K+."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Redução de butirilcolinesterase, inclusive em doença hepática grave, pode prolongar o bloqueio/apneia; garantir ventilação até recuperação.",
+          "es": "La reducción de butirilcolinesterasa, incluso en enfermedad hepática grave, puede prolongar el bloqueo/apnea; garantizar ventilación hasta la recuperación."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Fasciculações",
+          "Mialgia",
+          "Bradicardia, especialmente em crianças ou doses repetidas",
+          "Aumento transitório do potássio"
+        ],
+        "es": [
+          "Fasciculaciones",
+          "Mialgia",
+          "Bradicardia, especialmente en niños o dosis repetidas",
+          "Aumento transitorio del potasio"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Rabdomiólise hipercalêmica com arritmia/parada cardíaca, especialmente em miopatias pediátricas ocultas",
+          "Hipertermia maligna",
+          "Hipercalemia grave",
+          "Bradicardia/assistolia"
+        ],
+        "es": [
+          "Rabdomiólisis hiperpotasémica con arritmia/paro cardíaco, especialmente en miopatías pediátricas ocultas",
+          "Hipertermia maligna",
+          "Hiperpotasemia grave",
+          "Bradicardia/asistolia"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Miopatias esqueléticas",
+            "Após fase aguda de grandes queimaduras, trauma múltiplo, desnervação extensa ou lesão de neurônio motor superior",
+            "História pessoal ou familiar de hipertermia maligna",
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Miopatías esqueléticas",
+            "Tras la fase aguda de grandes quemaduras, trauma múltiple, denervación extensa o lesión de neurona motora superior",
+            "Antecedente personal o familiar de hipertermia maligna",
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Hipercalemia prévia ou alto risco de hipercalemia",
+            "Deficiência/atividade reduzida de butirilcolinesterase",
+            "Doses repetidas aumentam risco de bradicardia"
+          ],
+          "es": [
+            "Hiperpotasemia previa o alto riesgo de hiperpotasemia",
+            "Deficiencia/actividad reducida de butirilcolinesterasa",
+            "Dosis repetidas aumentan el riesgo de bradicardia"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Não possui sedação nem analgesia. Em crianças, existe boxed warning para rabdomiólise hipercalêmica com disritmia, parada cardíaca e morte; reservar o uso para situações em que a via aérea precise ser assegurada imediatamente.",
+          "es": "No posee sedación ni analgesia. En niños existe boxed warning por rabdomiólisis hiperpotasémica con disritmia, paro cardíaco y muerte; reservar el uso para situaciones en que la vía aérea deba asegurarse inmediatamente."
+        }
       }
     },  // end succinilcolina
 
 /* ── CISATRACÚRIO ───────────────────────────────────────────────────── */
     "cisatracurio": {
-      name: { pt: 'Cisatracúrio', es: 'Cisatracurio' },
-      category: 'emergencia',
-      class: { pt: 'Bloqueador Neuromuscular Adespolarizante (Benzilisoquinolínico)', es: 'Bloqueador Neuromuscular No Despolarizante (Bencilisoquinolínico)' },
-      indications: {
-        pt: ['Ouro padrão para infusão contínua em UTI (pacientes com SDRA grave)', 'Anestesia geral com falência de múltiplos órgãos'],
-        es: ['Estándar de oro para infusión continua en UCI (pacientes con SDRA grave)', 'Anestesia general con fallo de múltiples órganos']
+      "name": {
+        "pt": "Cisatracúrio",
+        "es": "Cisatracurio"
       },
-      commercialNames: { br: ['Nimbium'], ar: ['Nimbium'] },
-      presentation: { pt: ['Ampolas IV 2 mg/mL (5 mL)'], es: ['Ampollas IV 2 mg/mL (5 mL)'] },
-      mechanism: {
-        pt: 'Antagonista competitivo da acetilcolina na placa motora. Seu aspecto brilhante e único (frente a todos os outros BNMs) é o seu metabolismo: Ele sofre "Eliminação de Hofmann". Isso significa que a molécula se desintegra espontaneamente no plasma dependendo apenas do pH e da temperatura corporal normal, INDEPENDENTE do fígado ou dos rins. É extremamente seguro para disfunção orgânica múltipla.',
-        es: 'Antagonista competitivo de la acetilcolina en la placa motora. Su aspecto brillante y único (frente a todos los otros BNMs) es su metabolismo: Sufre "Eliminación de Hofmann". Esto significa que la molécula se desintegra espontáneamente en el plasma dependiendo solo del pH y la temperatura corporal normal, INDEPENDIENTEMENTE del hígado o los riñones. Es extremadamente seguro para disfunción orgánica múltiple.'
+      "category": "emergencia",
+      "class": {
+        "pt": "Bloqueador neuromuscular não despolarizante benzilisoquinolínico",
+        "es": "Bloqueador neuromuscular no despolarizante bencilisoquinolínico"
       },
-      dose: {
-        adult: {
-          pt: 'Intubação: 0,15 a 0,2 mg/kg IV. Manutenção UTI (Infusão): 1 a 3 mcg/kg/min (ou 0,06 a 0,18 mg/kg/h).',
-          es: 'Intubación: 0,15 a 0,2 mg/kg IV. Mantenimiento UCI (Infusión): 1 a 3 mcg/kg/min (o 0,06 a 0,18 mg/kg/h).'
+      "indications": {
+        "pt": [
+          "Facilitar intubação traqueal em anestesia geral",
+          "Relaxamento muscular durante cirurgia",
+          "Bloqueio neuromuscular em pacientes sob ventilação mecânica quando indicado"
+        ],
+        "es": [
+          "Facilitar intubación traqueal en anestesia general",
+          "Relajación muscular durante cirugía",
+          "Bloqueo neuromuscular en pacientes con ventilación mecánica cuando esté indicado"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Nimbium"
+        ],
+        "ar": [
+          "Nimbium"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução IV; concentrações variam por fabricante"
+        ],
+        "es": [
+          "Solución IV; concentraciones varían según fabricante"
+        ]
+      },
+      "mechanism": {
+        "pt": "Bloqueador competitivo nicotínico não despolarizante. A eliminação de Hofmann é via predominante e reduz dependência de órgãos para o fármaco-mãe, mas metabólitos podem acumular com administração prolongada.",
+        "es": "Bloqueador competitivo nicotínico no despolarizante. La eliminación de Hofmann es la vía predominante y reduce la dependencia de órganos para el fármaco original, pero los metabolitos pueden acumularse con administración prolongada."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Intubação em adulto: 0,15–0,20 mg/kg IV. Doses de manutenção/infusão devem ser individualizadas por estimulador de nervo periférico e resposta clínica.",
+          "es": "Intubación en adulto: 0,15–0,20 mg/kg IV. Las dosis de mantenimiento/infusión deben individualizarse mediante estimulador de nervio periférico y respuesta clínica."
         },
-        pediatric: {
-          pt: 'Seguro, dose semelhante ao adulto (0,15 mg/kg).',
-          es: 'Seguro, dosis similar al adulto (0,15 mg/kg).'
+        "pediatric": {
+          "pt": "1–23 meses: 0,15 mg/kg IV em 5–10 s. 2–12 anos: 0,10–0,15 mg/kg IV em 5–10 s. <1 mês: segurança/eficácia não estabelecidas.",
+          "es": "1–23 meses: 0,15 mg/kg IV en 5–10 s. 2–12 años: 0,10–0,15 mg/kg IV en 5–10 s. <1 mes: seguridad/eficacia no establecidas."
         }
       },
-      administration: { pt: ['A injeção para intubação demora um pouco mais para fazer efeito do que o rocurônio (cerca de 2 a 3 minutos), não sendo o ideal para Sequência Rápida urgente.'], es: ['La inyección para intubación tarda un poco más en hacer efecto que el rocuronio (cerca de 2 a 3 minutos), no siendo lo ideal para Secuencia Rápida urgente.'] },
-      renalAdjustment: { required: false, message: { pt: 'Totalmente independente da via renal (Eliminação de Hofmann). O FÁRMACO DE ESCOLHA em anúricos.', es: 'Totalmente independiente de la vía renal (Eliminación de Hofmann). EL FÁRMACO DE ELECCIÓN en anúricos.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Totalmente independente do fígado. O FÁRMACO DE ESCOLHA na cirrose/insuficiência hepática.', es: 'Totalmente independiente del hígado. EL FÁRMACO DE ELECCIÓN en cirrosis/insuficiencia hepática.' } },
-      commonAdverseEffects: { pt: ['Quase isento de efeitos hemodinâmicos sistêmicos.', 'Bloqueio residual se monitorização TOF não for adequada.'], es: ['Casi exento de efectos hemodinámicos sistémicos.', 'Bloqueo residual si la monitorización TOF no es adecuada.'] },
-      dangerousAdverseEffects: { pt: ['Anafilaxia (comum a todos os BNMs)', 'Miopatia do doente crítico (se usado por muitos dias seguidos em UTI)'], es: ['Anafilaxia (común a todos los BNMs)', 'Miopatía del enfermo crítico (si se usa por muchos días seguidos en UCI)'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade'], es: ['Hipersensibilidad'] },
-        relative: { pt: ['Hipotermia grave (a degradação da droga desacelera, prolongando o bloqueio)', 'Acidose severa (pH < 7.1 atrasa a degradação de Hofmann)'], es: ['Hipotermia grave (la degradación de la droga desacelera, prolongando el bloqueo)', 'Acidosis severa (pH < 7.1 retrasa la degradación de Hofmann)'] }
+      "administration": {
+        "pt": [
+          "Usar estimulador de nervo periférico para avaliar bloqueio, necessidade de redose e recuperação.",
+          "Não usar para RSI quando a rapidez de início necessária exceder a esperada para cisatracúrio.",
+          "Administrar apenas com capacidade de ventilação e sedação adequadas."
+        ],
+        "es": [
+          "Usar estimulador de nervio periférico para evaluar bloqueo, necesidad de redosis y recuperación.",
+          "No usar para RSI cuando la rapidez de inicio necesaria exceda la esperada para cisatracurio.",
+          "Administrar solo con capacidad de ventilación y sedación adecuadas."
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'Ao contrário de seu "irmão mais velho" Atracúrio, o Cisatracúrio NÃO libera histamina (não causa broncoespasmo nem hipotensão) e acumula níveis insignificantes de laudanosina. Extremamente seguro e limpo.', es: 'A diferencia de su "hermano mayor" Atracurio, el Cisatracurio NO libera histamina (no causa broncoespasmo ni hipotensión) y acumula niveles insignificantes de laudanosina. Extremadamente seguro y limpio.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Em doença renal terminal, a recuperação clínica nas doses estudadas não foi significativamente alterada, embora o início possa ser discretamente mais lento; titular por TOF.",
+          "es": "En enfermedad renal terminal, la recuperación clínica con las dosis estudiadas no se alteró significativamente, aunque el inicio puede ser discretamente más lento; titular por TOF."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Em hepatopatia, diferenças farmacocinéticas foram pequenas e não produziram alteração clinicamente importante da recuperação nas doses estudadas; titular por TOF.",
+          "es": "En hepatopatía, las diferencias farmacocinéticas fueron pequeñas y no produjeron cambios clínicamente importantes en la recuperación con las dosis estudiadas; titular por TOF."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Bloqueio neuromuscular residual",
+          "Bradicardia/hipotensão podem ocorrer",
+          "Reações no local de injeção"
+        ],
+        "es": [
+          "Bloqueo neuromuscular residual",
+          "Pueden ocurrir bradicardia/hipotensión",
+          "Reacciones en el sitio de inyección"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Anafilaxia",
+          "Bloqueio prolongado/apneia se superdosado ou em maior sensibilidade",
+          "Miopatia/fraqueza no contexto de bloqueio prolongado em críticos"
+        ],
+        "es": [
+          "Anafilaxia",
+          "Bloqueo prolongado/apnea si hay sobredosis o mayor sensibilidad",
+          "Miopatía/debilidad en el contexto de bloqueo prolongado en críticos"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade ao cisatracúrio"
+          ],
+          "es": [
+            "Hipersensibilidad a cisatracurio"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Doenças neuromusculares podem aumentar a sensibilidade",
+            "Hipotermia e alterações de pH podem modificar a degradação de Hofmann"
+          ],
+          "es": [
+            "Las enfermedades neuromusculares pueden aumentar la sensibilidad",
+            "La hipotermia y alteraciones del pH pueden modificar la degradación de Hofmann"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": false,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Não possui sedação nem analgesia. A eliminação predominantemente organoindependente não significa ausência total de influência clínica de função orgânica, temperatura, pH ou duração da infusão.",
+          "es": "No posee sedación ni analgesia. La eliminación predominantemente independiente de órganos no significa ausencia total de influencia clínica de función orgánica, temperatura, pH o duración de la infusión."
+        }
       }
     },  // end cisatracurio
 
 /* ── ATRACÚRIO ──────────────────────────────────────────────────────── */
     "atracurio": {
-      name: { pt: 'Atracúrio', es: 'Atracurio' },
-      category: 'emergencia',
-      class: { pt: 'Bloqueador Neuromuscular Adespolarizante (Benzilisoquinolínico)', es: 'Bloqueador Neuromuscular No Despolarizante (Bencilisoquinolínico)' },
-      indications: {
-        pt: ['Relaxamento muscular em anestesia cirúrgica e UTI (quando o cisatracúrio não está disponível)'],
-        es: ['Relajación muscular en anestesia quirúrgica y UCI (cuando el cisatracurio no está disponible)']
+      "name": {
+        "pt": "Atracúrio",
+        "es": "Atracurio"
       },
-      commercialNames: { br: ['Tracrium'], ar: ['Tracrium'] },
-      presentation: { pt: ['Ampolas IV 10 mg/mL (2,5 mL ou 5 mL)'], es: ['Ampollas IV 10 mg/mL (2,5 mL o 5 mL)'] },
-      mechanism: {
-        pt: 'Adespolarizante que bloqueia competitivamente a placa motora. Semelhante ao cisatracúrio, sofre Degradação de Hofmann (1/3) e hidrólise de esterases no plasma (2/3), independente de fígado/rim. No entanto, sua molécula é muito mais propensa a estimular os mastócitos, gerando liberação direta e maciça de HISTAMINA.',
-        es: 'No despolarizante que bloquea competitivamente la placa motora. Similar al cisatracurio, sufre Degradación de Hofmann (1/3) e hidrólisis de esterasas en plasma (2/3), independiente de hígado/riñón. Sin embargo, su molécula es mucho más propensa a estimular los mastocitos, generando liberación directa y masiva de HISTAMINA.'
+      "category": "emergencia",
+      "class": {
+        "pt": "Bloqueador neuromuscular não despolarizante benzilisoquinolínico",
+        "es": "Bloqueador neuromuscular no despolarizante bencilisoquinolínico"
       },
-      dose: {
-        adult: {
-          pt: 'Indução: 0,4 a 0,5 mg/kg IV. Manutenção: Infusão de 5 a 10 mcg/kg/min.',
-          es: 'Inducción: 0,4 a 0,5 mg/kg IV. Mantenimiento: Infusión de 5 a 10 mcg/kg/min.'
+      "indications": {
+        "pt": [
+          "Facilitar intubação não emergencial",
+          "Relaxamento muscular durante cirurgia",
+          "Bloqueio neuromuscular por infusão em pacientes selecionados sob ventilação mecânica"
+        ],
+        "es": [
+          "Facilitar intubación no emergente",
+          "Relajación muscular durante cirugía",
+          "Bloqueo neuromuscular por infusión en pacientes seleccionados con ventilación mecánica"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Tracrium"
+        ],
+        "ar": [
+          "Tracrium"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução IV 10 mg/mL"
+        ],
+        "es": [
+          "Solución IV 10 mg/mL"
+        ]
+      },
+      "mechanism": {
+        "pt": "Bloqueador competitivo nicotínico não despolarizante. Sofre degradação de Hofmann e hidrólise por esterases; pode causar liberação de histamina, particularmente com doses maiores ou administração rápida.",
+        "es": "Bloqueador competitivo nicotínico no despolarizante. Sufre degradación de Hofmann e hidrólisis por esterasas; puede causar liberación de histamina, especialmente con dosis mayores o administración rápida."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dose inicial usual 0,4–0,5 mg/kg IV. Manutenção em bolus 0,08–0,10 mg/kg. Infusão após recuperação inicial: pode iniciar 9–10 mcg/kg/min e geralmente manter 5–9 mcg/kg/min em anestesia balanceada; titular por TOF.",
+          "es": "Dosis inicial habitual 0,4–0,5 mg/kg IV. Mantenimiento en bolos 0,08–0,10 mg/kg. Infusión tras recuperación inicial: puede iniciar 9–10 mcg/kg/min y generalmente mantener 5–9 mcg/kg/min en anestesia balanceada; titular por TOF."
         },
-        pediatric: {
-          pt: '0,4 a 0,5 mg/kg IV (precaução com instabilidade).',
-          es: '0,4 a 0,5 mg/kg IV (precaución con inestabilidad).'
+        "pediatric": {
+          "pt": "≥2 anos: em geral não requer ajuste da dose inicial do adulto. 1 mês–2 anos sob halotano: 0,3–0,4 mg/kg IV. Manutenção pode ser necessária com maior frequência.",
+          "es": "≥2 años: en general no requiere ajuste de la dosis inicial del adulto. 1 mes–2 años bajo halotano: 0,3–0,4 mg/kg IV. El mantenimiento puede ser necesario con mayor frecuencia."
         }
       },
-      administration: { pt: ['Injetar LENTAMENTE (em 1 a 2 min) para evitar pico de liberação de histamina.'], es: ['Inyectar LENTAMENTE (en 1 a 2 min) para evitar pico de liberación de histamina.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste para a droga-mãe. Mas atenção aos metabólitos na diálise.', es: 'Sin necesidad de ajuste para la droga madre. Pero atención a los metabolitos en diálisis.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
-      commonAdverseEffects: { pt: ['Eritema/Rubor facial e no pescoço (devido à histamina)', 'Hipotensão transitória', 'Taquicardia'], es: ['Eritema/Rubor facial y en el cuello (debido a la histamina)', 'Hipotensión transitoria', 'Taquicardia'] },
-      dangerousAdverseEffects: { pt: ['Broncoespasmo agudo (devido à histamina)', 'Choque anafilactoide severo', 'Convulsões centrais'], es: ['Broncoespasmo agudo (debido a la histamina)', 'Choque anafilactoide severo', 'Convulsiones centrales'] },
-      contraindications: {
-        absolute: { pt: ['Histórico de reações anafiláticas a BNMs'], es: ['Historial de reacciones anafilácticas a BNMs'] },
-        relative: { pt: ['Pacientes asmáticos severos (risco de broncoespasmo pela histamina)', 'Hipotensão basal severa'], es: ['Pacientes asmáticos severos (riesgo de broncoespasmo por la histamina)', 'Hipotensión basal severa'] }
+      "administration": {
+        "pt": [
+          "Usar monitorização neuromuscular/TOF.",
+          "Em doença cardiovascular significativa ou maior risco de liberação de histamina, considerar 0,3–0,4 mg/kg administrados lentamente ou em doses divididas durante 1 min.",
+          "Infusão contínua deve ser titulada individualmente."
+        ],
+        "es": [
+          "Usar monitorización neuromuscular/TOF.",
+          "En enfermedad cardiovascular significativa o mayor riesgo de liberación de histamina, considerar 0,3–0,4 mg/kg administrados lentamente o en dosis divididas durante 1 min.",
+          "La infusión continua debe titularse individualmente."
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'A degradação do Atracúrio gera um metabólito chamado LAUDANOSINA. Esse metabólito excita o SNC e tem clearance puramente renal. Em UTI, se o atracúrio for infundido por muitos dias num doente renal, a laudanosina acumula e causa CONVULSÕES intratáveis.', es: 'La degradación del Atracurio genera un metabolito llamado LAUDANOSINA. Este metabolito excita el SNC y tiene clearance puramente renal. En UCI, si el atracurio se infunde por muchos días en un enfermo renal, la laudanosina se acumula y causa CONVULSIONES intratables.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "A rotulagem não exige ajuste de dose em doença renal; ainda assim, monitorizar TOF e recuperação.",
+          "es": "El rotulado no exige ajuste de dosis en enfermedad renal; aun así, monitorizar TOF y recuperación."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há ajuste hepático fixo requerido pela rotulagem; monitorizar a resposta e recuperação.",
+          "es": "No hay ajuste hepático fijo requerido por el rotulado; monitorizar respuesta y recuperación."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Rubor",
+          "Hipotensão transitória",
+          "Taquicardia",
+          "Reações relacionadas à histamina"
+        ],
+        "es": [
+          "Rubor",
+          "Hipotensión transitoria",
+          "Taquicardia",
+          "Reacciones relacionadas con histamina"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Broncoespasmo",
+          "Anafilaxia/reação alérgica grave",
+          "Bloqueio residual",
+          "Convulsões foram relatadas em uso prolongado em UTI, com causalidade pelo atracúrio/laudanosina não estabelecida"
+        ],
+        "es": [
+          "Broncoespasmo",
+          "Anafilaxia/reacción alérgica grave",
+          "Bloqueo residual",
+          "Se han reportado convulsiones con uso prolongado en UCI, sin causalidad establecida por atracurio/laudanosina"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade ao atracúrio"
+          ],
+          "es": [
+            "Hipersensibilidad a atracurio"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Asma ou história de reação anafilactoide: maior cautela com liberação de histamina",
+            "Doenças neuromusculares e distúrbios eletrolíticos podem potencializar bloqueio"
+          ],
+          "es": [
+            "Asma o antecedente de reacción anafilactoide: mayor cautela por liberación de histamina",
+            "Enfermedades neuromusculares y trastornos electrolíticos pueden potenciar el bloqueo"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": false,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Não possui sedação nem analgesia. A laudanosina é um metabólito potencialmente excitador do SNC, mas relatos de convulsões em UTI não provam causalidade direta; evitar afirmações de convulsão inevitável por insuficiência renal.",
+          "es": "No posee sedación ni analgesia. La laudanosina es un metabolito potencialmente excitador del SNC, pero los reportes de convulsiones en UCI no prueban causalidad directa; evitar afirmar convulsiones inevitables por insuficiencia renal."
+        }
       }
     },  // end atracurio
 
@@ -296,41 +897,139 @@
 
 /* ── VECURÔNIO ──────────────────────────────────────────────────────── */
     "vecuronio": {
-      name: { pt: 'Vecurônio', es: 'Vecuronio' },
-      category: 'emergencia',
-      class: { pt: 'Bloqueador Neuromuscular Adespolarizante (Aminosteroide)', es: 'Bloqueador Neuromuscular No Despolarizante (Aminosteroide)' },
-      indications: {
-        pt: ['Relaxamento muscular em cirurgias de média e longa duração', 'Manutenção do bloqueio neuromuscular em UTI'],
-        es: ['Relajación muscular en cirugías de media y larga duración', 'Mantenimiento del bloqueo neuromuscular en UCI']
+      "name": {
+        "pt": "Vecurônio",
+        "es": "Vecuronio"
       },
-      commercialNames: { br: ['Norcuron'], ar: ['Norcuron'] },
-      presentation: { pt: ['Frasco-ampola liofilizado 10 mg', '4 mg'], es: ['Vial liofilizado 10 mg', '4 mg'] },
-      mechanism: {
-        pt: 'Aminosteroide como o rocurônio, atua competindo pelos receptores colinérgicos nicotínicos na placa motora. Diferente do pancurônio, não possui efeito vagolítico significativo (não causa taquicardia) e não libera histamina de forma relevante. Sua duração é intermediária (30 a 40 minutos por bolus), mas o início de ação é mais lento (2 a 3 minutos), não sendo o ideal para Intubação de Sequência Rápida (ISR).',
-        es: 'Aminosteroide como el rocuronio, actúa compitiendo por los receptores colinérgicos nicotínicos en la placa motora. A diferencia del pancuronio, no posee efecto vagolítico significativo (no causa taquicardia) y no libera histamina de forma relevante. Su duración es intermedia (30 a 40 minutos por bolo), pero el inicio de acción es más lento (2 a 3 minutos), no siendo el ideal para Intubación de Secuencia Rápida (ISR).'
+      "category": "emergencia",
+      "class": {
+        "pt": "Bloqueador neuromuscular não despolarizante aminosteroide",
+        "es": "Bloqueador neuromuscular no despolarizante aminoesteroideo"
       },
-      dose: {
-        adult: {
-          pt: 'Intubação Eletiva: 0,08 a 0,1 mg/kg IV. Manutenção em UTI: Infusão de 0,8 a 1,2 mcg/kg/min.',
-          es: 'Intubación Electiva: 0,08 a 0,1 mg/kg IV. Mantenimiento en UCI: Infusión de 0,8 a 1,2 mcg/kg/min.'
+      "indications": {
+        "pt": [
+          "Facilitar intubação não emergencial",
+          "Relaxamento muscular durante cirurgia",
+          "Bloqueio neuromuscular por infusão em situações selecionadas"
+        ],
+        "es": [
+          "Facilitar intubación no emergente",
+          "Relajación muscular durante cirugía",
+          "Bloqueo neuromuscular por infusión en situaciones seleccionadas"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Norcuron"
+        ],
+        "ar": [
+          "Norcuron"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Frasco liofilizado IV; apresentações de 4 mg e 10 mg podem existir conforme mercado"
+        ],
+        "es": [
+          "Vial liofilizado IV; pueden existir presentaciones de 4 mg y 10 mg según mercado"
+        ]
+      },
+      "mechanism": {
+        "pt": "Bloqueador competitivo nicotínico não despolarizante aminosteroide, de duração intermediária. Não produz sedação ou analgesia.",
+        "es": "Bloqueador competitivo nicotínico no despolarizante aminoesteroideo, de duración intermedia. No produce sedación ni analgesia."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dose inicial 0,08–0,10 mg/kg IV. Manutenção 0,01–0,015 mg/kg. Infusão: iniciar aproximadamente 1 mcg/kg/min após recuperação precoce do bolus e titular por TOF; média 0,8–1,2 mcg/kg/min. Infusão prolongada em UTI não tem evidência suficiente para recomendações firmes de dose.",
+          "es": "Dosis inicial 0,08–0,10 mg/kg IV. Mantenimiento 0,01–0,015 mg/kg. Infusión: iniciar aproximadamente 1 mcg/kg/min tras recuperación precoz del bolo y titular por TOF; promedio 0,8–1,2 mcg/kg/min. La infusión prolongada en UCI no tiene evidencia suficiente para recomendaciones firmes de dosis."
         },
-        pediatric: {
-          pt: '0,1 mg/kg IV.',
-          es: '0,1 mg/kg IV.'
+        "pediatric": {
+          "pt": "10–16 anos: em geral mesma dose por kg do adulto. 1–10 anos podem necessitar dose inicial ligeiramente maior e manutenção mais frequente. 7 semanas–1 ano: maior sensibilidade e recuperação mais lenta. <7 semanas: dados insuficientes para recomendar dose.",
+          "es": "10–16 años: en general misma dosis por kg que el adulto. 1–10 años pueden requerir dosis inicial ligeramente mayor y mantenimiento más frecuente. 7 semanas–1 año: mayor sensibilidad y recuperación más lenta. <7 semanas: datos insuficientes para recomendar dosis."
         }
       },
-      administration: { pt: ['Reconstituição do liofilizado com água destilada. Injeção IV em bolus.'], es: ['Reconstitución del liofilizado con agua destilada. Inyección IV en bolo.'] },
-      renalAdjustment: { required: true, message: { pt: 'Cerca de 30% da eliminação é renal. Em DRC, a duração do bloqueio é prolongada. Reduzir infusões de manutenção.', es: 'Cerca del 30% de la eliminación es renal. En ERC, la duración del bloqueo es prolongada. Reducir infusiones de mantenimiento.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Eliminação primariamente biliar/hepática. Acumula rapidamente na cirrose, exigindo doses de manutenção menores.', es: 'Eliminación primariamente biliar/hepática. Se acumula rápidamente en cirrosis, exigiendo dosis de mantenimiento menores.' } },
-      commonAdverseEffects: { pt: ['Recuperação prolongada do bloqueio (hipoventilação pós-operatória)'], es: ['Recuperación prolongada del bloqueo (hipoventilación posoperatoria)'] },
-      dangerousAdverseEffects: { pt: ['Anafilaxia', 'Miopatia aguda do doente crítico (se uso crônico em UTI associado a corticoides)'], es: ['Anafilaxia', 'Miopatía aguda del enfermo crítico (si uso crónico en UCI asociado a corticoides)'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade a brometo de vecurônio'], es: ['Hipersensibilidad a bromuro de vecuronio'] },
-        relative: { pt: ['Doenças neuromusculares (Miastenia Gravis, Síndrome de Eaton-Lambert)'], es: ['Enfermedades neuromusculares (Miastenia Gravis, Síndrome de Eaton-Lambert)'] }
+      "administration": {
+        "pt": [
+          "Reconstituir conforme a apresentação específica e administrar IV.",
+          "Usar estimulador de nervo periférico/TOF para redose e recuperação.",
+          "Infusão deve iniciar somente após sinais precoces de recuperação da dose de intubação."
+        ],
+        "es": [
+          "Reconstituir según la presentación específica y administrar IV.",
+          "Usar estimulador de nervio periférico/TOF para redosis y recuperación.",
+          "La infusión debe iniciarse solo tras signos precoces de recuperación de la dosis de intubación."
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'O vecurônio tende a se depositar no tecido adiposo e muscular após infusões de vários dias na UTI, o que pode causar paralisia residual refratária de vários dias após desligar a bomba.', es: 'El vecuronio tiende a depositarse en el tejido adiposo y muscular tras infusiones de varios días en la UCI, lo que puede causar parálisis residual refractaria de varios días tras apagar la bomba.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Em pacientes anéfricos ou insuficiência renal importante, o bloqueio pode prolongar-se; considerar menor dose inicial e titular por TOF, especialmente em situações de emergência.",
+          "es": "En pacientes anéfricos o con insuficiencia renal importante, el bloqueo puede prolongarse; considerar menor dosis inicial y titular por TOF, especialmente en situaciones de emergencia."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Cirrose/colestase podem prolongar a recuperação, em alguns estudos aproximadamente dobrando o tempo; não há fator universal de ajuste. Titular por TOF.",
+          "es": "La cirrosis/colestasis pueden prolongar la recuperación, en algunos estudios aproximadamente duplicando el tiempo; no hay un factor universal de ajuste. Titular por TOF."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Bloqueio residual",
+          "Recuperação prolongada"
+        ],
+        "es": [
+          "Bloqueo residual",
+          "Recuperación prolongada"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Anafilaxia",
+          "Apneia/bloqueio prolongado",
+          "Fraqueza neuromuscular em uso prolongado em críticos"
+        ],
+        "es": [
+          "Anafilaxia",
+          "Apnea/bloqueo prolongado",
+          "Debilidad neuromuscular con uso prolongado en críticos"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade ao vecurônio/brometo ou componentes"
+          ],
+          "es": [
+            "Hipersensibilidad a vecuronio/bromuro o componentes"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Doenças neuromusculares",
+            "Insuficiência renal",
+            "Cirrose/colestase",
+            "Uso prolongado em UTI"
+          ],
+          "es": [
+            "Enfermedades neuromusculares",
+            "Insuficiencia renal",
+            "Cirrosis/colestasis",
+            "Uso prolongado en UCI"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Não possui sedação nem analgesia. A rotulagem não sustenta recomendar uma taxa fixa para infusão prolongada em UTI; usar apenas com monitorização neuromuscular e objetivos clínicos definidos.",
+          "es": "No posee sedación ni analgesia. El rotulado no respalda recomendar una tasa fija para infusión prolongada en UCI; usar solo con monitorización neuromuscular y objetivos clínicos definidos."
+        }
       }
     },  // end vecuronio
 
@@ -772,161 +1471,539 @@
 
 /* ── FENTANIL ───────────────────────────────────────────────────────── */
     "fentanil": {
-      name: { pt: 'Fentanil', es: 'Fentanilo' },
-      category: 'analgesia',
-      class: { pt: 'Analgésico Opioide Forte Sintético (Agonista Mu)', es: 'Analgésico Opioide Fuerte Sintético (Agonista Mu)' },
-      indications: {
-        pt: ['Analgesia e sedação profunda em pacientes sob ventilação mecânica (UTI)', 'Indução e manutenção de anestesia geral', 'Manejo de dor aguda extrema severa'],
-        es: ['Analgesia y sedación profunda en pacientes bajo ventilación mecánica (UCI)', 'Inducción y mantenimiento de anestesia general', 'Manejo de dolor agudo extremo severo']
+      "name": {
+        "pt": "Fentanil",
+        "es": "Fentanilo"
       },
-      commercialNames: { br: ['Fentanil', 'Fentanyl'], ar: ['Fentanilo'] },
-      presentation: { pt: ['Ampolas IV/IM/Epidural 50 mcg/mL (2 mL, 5 mL e 10 mL)', 'Adesivos transdérmicos (Durogesic)'], es: ['Ampollas IV/IM/Epidural 50 mcg/mL (2 mL, 5 mL y 10 mL)', 'Parches transdérmicos (Durogesic)'] },
-      mechanism: {
-        pt: 'Agonista altamente seletivo e potente dos receptores opioides Mu no cérebro e na medula espinhal. É aproximadamente 100 vezes mais potente que a morfina. Graças à sua altíssima lipofilicidade, atravessa a barreira hematoencefálica em segundos, provendo um início de ação fulminante (1 a 2 minutos). Ao contrário da morfina, NÃO libera histamina, garantindo estabilidade hemodinâmica (não causa hipotensão significativa).',
-        es: 'Agonista altamente selectivo y potente de los receptores opioides Mu en el cerebro y en la médula espinal. Es aproximadamente 100 veces más potente que la morfina. Gracias a su altísima lipofilicidad, atraviesa la barrera hematoencefálica en segundos, proveyendo un inicio de acción fulminante (1 a 2 minutos). A diferencia de la morfina, NO libera histamina, garantizando estabilidad hemodinámica (no causa hipotensión significativa).'
+      "category": "emergencia",
+      "class": {
+        "pt": "Agonista opioide μ potente",
+        "es": "Agonista opioide μ potente"
       },
-      dose: {
-        adult: {
-          pt: 'Bolus Analgésico: 1 a 2 mcg/kg IV (início ISR). Infusão em UTI: 1 a 5 mcg/kg/hora. Anestesia Geral: 2 a 50 mcg/kg (dependendo do procedimento).',
-          es: 'Bolo Analgésico: 1 a 2 mcg/kg IV (inicio ISR). Infusión en UCI: 1 a 5 mcg/kg/hora. Anestesia General: 2 a 50 mcg/kg (dependiendo del procedimiento).'
+      "indications": {
+        "pt": [
+          "Componente analgésico de anestesia geral",
+          "Analgesia perioperatória sob monitorização e suporte de via aérea"
+        ],
+        "es": [
+          "Componente analgésico de anestesia general",
+          "Analgesia perioperatoria bajo monitorización y soporte de vía aérea"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Fentanil"
+        ],
+        "ar": [
+          "Fentanilo"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução injetável 50 mcg/mL"
+        ],
+        "es": [
+          "Solución inyectable 50 mcg/mL"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonista de receptores opioides μ. Produz analgesia e sedação, mas também depressão respiratória dose-dependente, bradicardia e rigidez muscular, especialmente com doses altas ou administração rápida.",
+        "es": "Agonista de receptores opioides μ. Produce analgesia y sedación, pero también depresión respiratoria dependiente de la dosis, bradicardia y rigidez muscular, especialmente con dosis altas o administración rápida."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Rotulagem anestésica: dose baixa 2 mcg/kg; dose moderada 2–20 mcg/kg; doses maiores 20–50 mcg/kg em anestesia selecionada. Manutenção: 25–100 mcg IV/IM conforme resposta e contexto anestésico.",
+          "es": "Rotulado anestésico: dosis baja 2 mcg/kg; dosis moderada 2–20 mcg/kg; dosis mayores 20–50 mcg/kg en anestesia seleccionada. Mantenimiento: 25–100 mcg IV/IM según respuesta y contexto anestésico."
         },
-        pediatric: {
-          pt: 'Analgesia/Sedação: 1 a 2 mcg/kg IV. Infusão: 1 a 3 mcg/kg/h.',
-          es: 'Analgesia/Sedación: 1 a 2 mcg/kg IV. Infusión: 1 a 3 mcg/kg/h.'
+        "pediatric": {
+          "pt": "Segurança e eficácia não estabelecidas em menores de 2 anos na rotulagem dos EUA; em ≥2 anos, dose deve seguir contexto anestésico/protocolo pediátrico e titulação clínica.",
+          "es": "Seguridad y eficacia no establecidas en menores de 2 años en el rotulado de EE. UU.; en ≥2 años, la dosis debe seguir el contexto anestésico/protocolo pediátrico y titulación clínica."
         }
       },
-      administration: { pt: ['A injeção em bolus direto deve ser feita lentamente. Injeções em bolus ultra-rápidas disparam rigidez da musculatura torácica.'], es: ['La inyección en bolo directo debe hacerse lentamente. Inyecciones en bolo ultra-rápidas disparan rigidez de la musculatura torácica.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem metabólitos ativos clinicamente relevantes. Mais seguro que a morfina na DRC.', es: 'Sin metabolitos activos clínicamente relevantes. Más seguro que la morfina en ERC.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Extensamente metabolizado pelo CYP3A4. Cirróticos acumularão a droga de forma prolongada.', es: 'Extensamente metabolizado por el CYP3A4. Cirróticos acumularán la droga de forma prolongada.' } },
-      commonAdverseEffects: { pt: ['Náusea e vômitos pós-operatórios', 'Íleo paralítico / Constipação grave', 'Prurido facial (coceira no nariz/rosto)'], es: ['Náusea y vómitos posoperatorios', 'Íleo paralítico / Constipación grave', 'Prurito facial (picazón en la nariz/cara)'] },
-      dangerousAdverseEffects: { pt: ['Depressão respiratória grave (apneia induzida)', 'Rigidez Torácica de Madeira (impede a ventilação do paciente pelo ambu, exigindo uso de bloqueador neuromuscular para salvar a vida)', 'Bradicardia vagal'], es: ['Depresión respiratoria grave (apnea inducida)', 'Rigidez Torácica de Madera (impide la ventilación del paciente por el ambú, exigiendo uso de bloqueador neuromuscular para salvar la vida)', 'Bradicardia vagal'] },
-      contraindications: {
-        absolute: { pt: ['Uso sem acesso à via aérea definitiva (intubação/ambu)', 'Depressão respiratória não tratada'], es: ['Uso sin acceso a vía aérea definitiva (intubación/ambú)', 'Depresión respiratoria no tratada'] },
-        relative: { pt: ['Hipotensão extrema (embora mais seguro que morfina)', 'Hipertensão intracraniana se o paciente estiver hipoventilando (acumula CO2 e piora a PIC)'], es: ['Hipotensión extrema (aunque más seguro que morfina)', 'Hipertensión intracraneal si el paciente está hipoventilando (acumula CO2 y empeora la PIC)'] }
+      "administration": {
+        "pt": [
+          "IV ou IM; titular lentamente ao efeito",
+          "Monitorização contínua de ventilação, oxigenação e hemodinâmica; equipamento de via aérea e naloxona devem estar disponíveis"
+        ],
+        "es": [
+          "IV o IM; titular lentamente al efecto",
+          "Monitorización continua de ventilación, oxigenación y hemodinámica; equipo de vía aérea y naloxona deben estar disponibles"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'O Fentanil sofre REDISTRIBUIÇÃO. Se a bomba de infusão da UTI ficar ligada por mais de 24h, a droga satura a gordura corporal. Ao desligar a bomba, o fentanil sai da gordura para o sangue, mantendo o paciente em coma sedado por DIAS. Requer planejamento de desmame.', es: 'El Fentanilo sufre REDISTRIBUCIÓN. Si la bomba de infusión de la UCI queda encendida por más de 24h, la droga satura la grasa corporal. Al apagar la bomba, el fentanilo sale de la grasa hacia la sangre, manteniendo al paciente en coma sedado por DÍAS. Requiere planificación de destete.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela e titular a partir de doses menores em disfunção renal; não há fator fixo universal de redução.",
+          "es": "Usar precaución y titular desde dosis menores en disfunción renal; no existe un factor fijo universal de reducción."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Metabolismo hepático predominante; usar cautela e titular lentamente na disfunção hepática.",
+          "es": "Metabolismo hepático predominante; usar precaución y titular lentamente en disfunción hepática."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Sedação",
+          "Bradicardia",
+          "Prurido"
+        ],
+        "es": [
+          "Náuseas",
+          "Sedación",
+          "Bradicardia",
+          "Prurito"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória/apneia",
+          "Rigidez muscular",
+          "Hipotensão grave"
+        ],
+        "es": [
+          "Depresión respiratoria/apnea",
+          "Rigidez muscular",
+          "Hipotensión grave"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade ao fentanil"
+          ],
+          "es": [
+            "Hipersensibilidad al fentanilo"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Doença pulmonar grave, idosos/frágeis, uso concomitante de depressores do SNC"
+          ],
+          "es": [
+            "Enfermedad pulmonar grave, adultos mayores/frágiles, uso concomitante de depresores del SNC"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Depressão respiratória potencialmente fatal. Benzodiazepínicos/outros depressores do SNC e inibidores de CYP3A4 podem aumentar ou prolongar toxicidade.",
+          "es": "Depresión respiratoria potencialmente fatal. Benzodiazepinas/otros depresores del SNC e inhibidores de CYP3A4 pueden aumentar o prolongar la toxicidad."
+        }
       }
     },  // end fentanil
 
 /* ── REMIFENTANIL ───────────────────────────────────────────────────── */
     "remifentanil": {
-      name: { pt: 'Remifentanil', es: 'Remifentanilo' },
-      category: 'analgesia',
-      class: { pt: 'Analgésico Opioide Ultra-Curto', es: 'Analgésico Opioide Ultra-Corto' },
-      indications: {
-        pt: ['Anestesia Venosa Total (TIVA)', 'Sedação para procedimentos curtos com necessidade de despertar neurológico imediato (ex: Neurocirurgias)'],
-        es: ['Anestesia Venosa Total (TIVA)', 'Sedación para procedimientos cortos con necesidad de despertar neurológico inmediato (ej: Neurocirugías)']
+      "name": {
+        "pt": "Remifentanil",
+        "es": "Remifentanilo"
       },
-      commercialNames: { br: ['Ultiva'], ar: ['Ultiva'] },
-      presentation: { pt: ['Frasco-ampola liofilizado 2 mg, 5 mg'], es: ['Vial liofilizado 2 mg, 5 mg'] },
-      mechanism: {
-        pt: 'Mecanismo revolucionário. Possui a mesma potência anestésica no receptor Mu que o Fentanil, PORÉM possui uma ligação éster na sua molécula. Essa ligação faz com que o remifentanil seja DESTRUÍDO POR ESTERASES DO SANGUE E DOS TECIDOS em apenas 3 a 5 minutos, INDEPENDENTE do fígado ou dos rins. Não importa se a bomba correu por 1 hora ou por 10 dias, o paciente acorda sem dor em exatos 5 minutos após desligar.',
-        es: 'Mecanismo revolucionario. Posee la misma potencia anestésica en el receptor Mu que el Fentanilo, PERO posee un enlace éster en su molécula. Este enlace hace que el remifentanilo sea DESTRUIDO POR ESTERASAS DE LA SANGRE Y DE LOS TEJIDOS en solo 3 a 5 minutos, INDEPENDIENTEMENTE del hígado o los riñones. No importa si la bomba corrió por 1 hora o por 10 días, el paciente despierta sin dolor en exactos 5 minutos tras apagarla.'
+      "category": "emergencia",
+      "class": {
+        "pt": "Agonista opioide μ ultracurto",
+        "es": "Agonista opioide μ ultracorto"
       },
-      dose: {
-        adult: {
-          pt: 'Infusão contínua: 0,1 a 0,5 mcg/kg/min (Notar que a dose é por MINUTO, diferente do fentanil que é por HORA).',
-          es: 'Infusión continua: 0,1 a 0,5 mcg/kg/min (Notar que la dosis es por MINUTO, a diferencia del fentanilo que es por HORA).'
+      "indications": {
+        "pt": [
+          "Analgesia durante indução e manutenção de anestesia geral",
+          "Analgesia no pós-operatório imediato sob supervisão direta de anestesia",
+          "Componente analgésico de monitored anesthesia care em adultos"
+        ],
+        "es": [
+          "Analgesia durante inducción y mantenimiento de anestesia general",
+          "Analgesia en el posoperatorio inmediato bajo supervisión directa de anestesia",
+          "Componente analgésico de monitored anesthesia care en adultos"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Remifentanil"
+        ],
+        "ar": [
+          "Remifentanilo"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Frasco liofilizado 1 mg, 2 mg ou 5 mg para reconstituição IV"
+        ],
+        "es": [
+          "Vial liofilizado de 1 mg, 2 mg o 5 mg para reconstitución IV"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonista μ metabolizado rapidamente por esterases inespecíficas do sangue e tecidos. O efeito desaparece em poucos minutos após reduzir ou interromper a infusão, portanto analgesia de transição deve ser planejada antes do término.",
+        "es": "Agonista μ metabolizado rápidamente por esterasas inespecíficas de sangre y tejidos. El efecto desaparece en pocos minutos tras reducir o suspender la infusión, por lo que debe planificarse analgesia de transición antes de finalizar."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Indução: infusão 0,5–1 mcg/kg/min; pode-se usar bolus 1 mcg/kg em 30–60 s em situações selecionadas. Manutenção: tipicamente 0,05–2 mcg/kg/min conforme anestésico concomitante. Pós-operatório imediato: iniciar 0,1 mcg/kg/min e titular 0,025–0,2.",
+          "es": "Inducción: infusión 0,5–1 mcg/kg/min; puede usarse bolo de 1 mcg/kg en 30–60 s en situaciones seleccionadas. Mantenimiento: típicamente 0,05–2 mcg/kg/min según anestésico concomitante. Posoperatorio inmediato: iniciar 0,1 mcg/kg/min y titular 0,025–0,2."
         },
-        pediatric: {
-          pt: '0,05 a 0,3 mcg/kg/min IV.',
-          es: '0,05 a 0,3 mcg/kg/min IV.'
+        "pediatric": {
+          "pt": "Doses pediátricas variam com idade e procedimento; a rotulagem inclui esquemas de anestesia geral em pacientes pediátricos, mas não há estudo para analgesia pós-operatória nem monitored anesthesia care pediátrica.",
+          "es": "Las dosis pediátricas varían con edad y procedimiento; el rotulado incluye esquemas de anestesia general en pacientes pediátricos, pero no hay estudio para analgesia posoperatoria ni monitored anesthesia care pediátrica."
         }
       },
-      administration: { pt: ['Apenas uso IV contínuo em Bomba de Infusão. Incompatível em bolus puros no paciente acordado devido à potência letal.'], es: ['Solo uso IV continuo en Bomba de Infusión. Incompatible en bolos puros en el paciente despierto debido a la potencia letal.'] },
-      renalAdjustment: { required: false, message: { pt: 'Totalmente independente dos rins (degradado no sangue).', es: 'Totalmente independiente de los riñones (degradado en la sangre).' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Totalmente independente do fígado.', es: 'Totalmente independiente del hígado.' } },
-      commonAdverseEffects: { pt: ['Hipotensão arterial frequente (mais que o fentanil)', 'Bradicardia', 'Náusea / Vômitos'], es: ['Hipotensión arterial frecuente (más que el fentanilo)', 'Bradicardia', 'Náusea / Vómitos'] },
-      dangerousAdverseEffects: { pt: ['Depressão respiratória massiva em segundos', 'Hiperalgesia Aguda Induzida por Opioide (ao desligar a bomba, o paciente acorda berrando com a "pior dor da vida" se não tiver sido medicado previamente com outro analgésico de longa duração)'], es: ['Depresión respiratoria masiva en segundos', 'Hiperalgesia Aguda Inducida por Opioide (al apagar la bomba, el paciente despierta gritando con el "peor dolor de su vida" si no ha sido medicado previamente con otro analgésico de larga duración)'] },
-      contraindications: {
-        absolute: { pt: ['Uso peridural ou intratecal (a formulação contém glicina, que é neurotóxica na espinha)'], es: ['Uso epidural o intratecal (la formulación contiene glicina, que es neurotóxica en la espina)'] },
-        relative: { pt: ['Ausência de suporte ventilatório'], es: ['Ausencia de soporte ventilatorio'] }
+      "administration": {
+        "pt": [
+          "Somente IV após reconstituição/diluição conforme produto",
+          "Não administrar como infusão prolongada fora de ambiente com pessoal de anestesia e suporte de ventilação"
+        ],
+        "es": [
+          "Solo IV tras reconstitución/dilución según producto",
+          "No administrar como infusión prolongada fuera de un entorno con personal de anestesia y soporte ventilatorio"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'Atenção às unidades: Fentanil é prescrito em mcg/kg/HORA. Remifentanil é prescrito em mcg/kg/MINUTO (a bomba gira 60 vezes mais rápido numérico). O paciente precisa receber morfina ou dipirona 20 min ANTES de desligar o remifentanil, senão a dor no despertar será insuportável.', es: 'Atención a las unidades: Fentanilo se prescribe en mcg/kg/HORA. Remifentanilo se prescribe en mcg/kg/MINUTO (la bomba gira 60 veces más rápido numérico). El paciente necesita recibir morfina o dipirona 20 min ANTES de apagar el remifentanilo, de lo contrario el dolor al despertar será insoportable.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "A depuração do remifentanil é amplamente independente da função renal; metabólito inativo pode acumular sem prolongar de forma relevante o efeito opioide em uso habitual.",
+          "es": "La depuración de remifentanilo es ampliamente independiente de la función renal; el metabolito inactivo puede acumularse sin prolongar de forma relevante el efecto opioide en el uso habitual."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há ajuste fixo rotineiro apenas por função hepática; titular ao efeito e à resposta hemodinâmica.",
+          "es": "No existe un ajuste fijo rutinario solo por función hepática; titular al efecto y a la respuesta hemodinámica."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Hipotensão",
+          "Bradicardia",
+          "Náusea"
+        ],
+        "es": [
+          "Hipotensión",
+          "Bradicardia",
+          "Náuseas"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Apneia/depressão respiratória",
+          "Rigidez muscular",
+          "Bradicardia grave"
+        ],
+        "es": [
+          "Apnea/depresión respiratoria",
+          "Rigidez muscular",
+          "Bradicardia grave"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Administração epidural ou intratecal da formulação que contém glicina",
+            "Hipersensibilidade ao remifentanil"
+          ],
+          "es": [
+            "Administración epidural o intratecal de la formulación que contiene glicina",
+            "Hipersensibilidad al remifentanilo"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Pacientes frágeis/idosos, associação com outros depressores do SNC"
+          ],
+          "es": [
+            "Pacientes frágiles/adultos mayores, asociación con otros depresores del SNC"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": false,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "O efeito analgésico termina rapidamente após suspensão. Planejar analgesia de transição antes de desligar a infusão.",
+          "es": "El efecto analgésico termina rápidamente tras la suspensión. Planificar analgesia de transición antes de detener la infusión."
+        }
       }
     },  // end remifentanil
 
 /* ── MORFINA ────────────────────────────────────────────────────────── */
     "morfina": {
-      name: { pt: 'Morfina', es: 'Morfina' },
-      category: 'analgesia',
-      class: { pt: 'Analgésico Opioide Forte Natural', es: 'Analgésico Opioide Fuerte Natural' },
-      indications: {
-        pt: ['Dor aguda e crônica intensa', 'Infarto Agudo do Miocárdio (reduz a dor, a ansiedade e a pré-carga cardíaca)', 'Edema Agudo de Pulmão', 'Cuidados Paliativos oncológicos'],
-        es: ['Dolor agudo y crónico intenso', 'Infarto Agudo de Miocardio (reduce el dolor, la ansiedad y la precarga cardíaca)', 'Edema Agudo de Pulmón', 'Cuidados Paliativos oncológicos']
+      "name": {
+        "pt": "Morfina",
+        "es": "Morfina"
       },
-      commercialNames: { br: ['Dimorf'], ar: ['Morfina'] },
-      presentation: { pt: ['Ampolas IV/IM/SC 10 mg/mL, 2 mg/mL', 'Comprimidos e Cápsulas LC 10 mg, 30 mg'], es: ['Ampollas IV/IM/SC 10 mg/mL, 2 mg/mL', 'Comprimidos y Cápsulas LC 10 mg, 30 mg'] },
-      mechanism: {
-        pt: 'Alcaloide primário do ópio. Agonista Mu e Kappa. Reduz a transmissão do estímulo doloroso bloqueando canais de cálcio pré-sinápticos e abrindo canais de potássio pós-sinápticos. Peculiaridade: a Morfina induz liberação endógena de HISTAMINA pelos mastócitos, o que causa franca VENODILATAÇÃO (excelente no edema agudo de pulmão para diminuir a água voltando ao coração) mas pode causar broncoespasmo e prurido (coceira).',
-        es: 'Alcaloide primario del opio. Agonista Mu y Kappa. Reduce la transmisión del estímulo doloroso bloqueando canales de calcio presinápticos y abriendo canales de potasio postsinápticos. Peculiaridad: la Morfina induce liberación endógena de HISTAMINA por los mastocitos, lo que causa franca VENODILATACIÓN (excelente en el edema agudo de pulmón para disminuir el agua volviendo al corazón) pero puede causar broncoespasmo y prurito (picazón).'
+      "category": "emergencia",
+      "class": {
+        "pt": "Agonista opioide μ",
+        "es": "Agonista opioide μ"
       },
-      dose: {
-        adult: {
-          pt: 'Dor aguda: 2 a 10 mg IV (diluído, lento a cada 4 horas). Via oral crônica: 10 a 30 mg a cada 4 horas (a dose oral é muito maior que a IV devido ao grande metabolismo de primeira passagem no fígado).',
-          es: 'Dolor agudo: 2 a 10 mg IV (diluido, lento cada 4 horas). Vía oral crónica: 10 a 30 mg cada 4 horas (la dosis oral es mucho mayor que la IV debido al gran metabolismo de primer paso en el hígado).'
+      "indications": {
+        "pt": [
+          "Dor intensa que requer opioide e não responde adequadamente a alternativas",
+          "Infusão IV contínua em adultos e pediatria quando clinicamente indicada"
+        ],
+        "es": [
+          "Dolor intenso que requiere opioide y no responde adecuadamente a alternativas",
+          "Infusión IV continua en adultos y pediatría cuando está clínicamente indicada"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Morfina"
+        ],
+        "ar": [
+          "Morfina"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução injetável; concentrações variam por fabricante"
+        ],
+        "es": [
+          "Solución inyectable; las concentraciones varían según fabricante"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonista opioide μ. A morfina é glucuronidada a M3G e M6G; a insuficiência renal aumenta exposição e pode favorecer acúmulo dos metabólitos.",
+        "es": "Agonista opioide μ. La morfina se glucuronida a M3G y M6G; la insuficiencia renal aumenta la exposición y puede favorecer la acumulación de metabolitos."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Infusão IV contínua: iniciar 0,02–0,1 mg/kg/h e titular. Em pacientes sem tolerância a opioides, a rotulagem limita a taxa inicial máxima a 10 mg/h.",
+          "es": "Infusión IV continua: iniciar 0,02–0,1 mg/kg/h y titular. En pacientes sin tolerancia a opioides, el rotulado limita la velocidad inicial máxima a 10 mg/h."
         },
-        pediatric: {
-          pt: '0,1 a 0,2 mg/kg IV ou SC a cada 4 horas (máx 10 a 15 mg).',
-          es: '0,1 a 0,2 mg/kg IV o SC cada 4 horas (máx 10 a 15 mg).'
+        "pediatric": {
+          "pt": "1–<17 anos: se <50 kg, iniciar 0,02–0,03 mg/kg/h; ≥50 kg: 1,5 mg/h. <1 ano: iniciar 0,005–0,01 mg/kg/h, com monitorização cardiorrespiratória rigorosa.",
+          "es": "1–<17 años: si <50 kg, iniciar 0,02–0,03 mg/kg/h; ≥50 kg: 1,5 mg/h. <1 año: iniciar 0,005–0,01 mg/kg/h, con monitorización cardiorrespiratoria estricta."
         }
       },
-      administration: { pt: ['IV diluído em 9 mL de SF0,9% administrado em 2 a 4 minutos.', 'Pode ser infundida via subcutânea em cuidados paliativos (hipodermóclise).'], es: ['IV diluido en 9 mL de SF0,9% administrado en 2 a 4 minutos.', 'Puede ser infundida vía subcutánea en cuidados paliativos (hipodermoclisis).'] },
-      renalAdjustment: { required: true, message: { pt: 'O metabólito Morfina-6-Glicuronídeo (M6G) é tão potente quanto a morfina e tem clearance puramente renal. Em doentes renais, ele se acumula rapidamente causando coma letal. Preferir Fentanil ou Metadona.', es: 'El metabolito Morfina-6-Glucurónido (M6G) es tan potente como la morfina y tiene clearance puramente renal. En enfermos renales, se acumula rápidamente causando coma letal. Preferir Fentanilo o Metadona.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Necessário redução de dose na cirrose grave.', es: 'Necesaria reducción de dosis en cirrosis grave.' } },
-      commonAdverseEffects: { pt: ['Constipação (efeito que NUNCA gera tolerância, persiste pro resto da vida)', 'Prurido / Urticária no tronco e face (pela histamina)', 'Náuseas / Êmese (estimula a zona de gatilho quimiorreceptora no tronco encefálico)'], es: ['Constipación (efecto que NUNCA genera tolerancia, persiste de por vida)', 'Prurito / Urticaria en el tronco y cara (por la histamina)', 'Náuseas / Émesis (estimula la zona gatillo quimiorreceptora en el tronco encefálico)'] },
-      dangerousAdverseEffects: { pt: ['Depressão respiratória grave (reduz o drive do tronco cerebral para o CO2)', 'Hipotensão sistêmica', 'Retenção urinária aguda'], es: ['Depresión respiratoria grave (reduce el drive del tronco cerebral hacia el CO2)', 'Hipotensión sistémica', 'Retención urinaria aguda'] },
-      contraindications: {
-        absolute: { pt: ['Depressão respiratória não controlada', 'Asma brônquica aguda (a histamina piora a crise)'], es: ['Depresión respiratoria no controlada', 'Asma bronquial aguda (la histamina empeora la crisis)'] },
-        relative: { pt: ['Traumatismo cranioencefálico / Hipertensão intracraniana (aumenta PCO2 e PIC)', 'Insuficiência renal grave (ClCr < 30)'], es: ['Traumatismo craneoencefálico / Hipertensión intracraneal (aumenta PCO2 y PIC)', 'Insuficiencia renal grave (ClCr < 30)'] }
+      "administration": {
+        "pt": [
+          "Diluir conforme produto/protocolo para infusão contínua",
+          "Titular à analgesia com monitorização de sedação, FR, SpO₂, PA e sinais de toxicidade"
+        ],
+        "es": [
+          "Diluir según producto/protocolo para infusión continua",
+          "Titular a la analgesia con monitorización de sedación, FR, SpO₂, PA y signos de toxicidad"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'Sempre co-prescrever um laxante forte (como Bisacodil) se o paciente for utilizar a morfina por mais de 3 dias, pois o íleo paralítico é garantido. Antídoto direto é a Naloxona.', es: 'Siempre coprescribir un laxante fuerte (como Bisacodilo) si el paciente va a utilizar la morfina por más de 3 días, pues el íleo paralítico está garantizado. Antídoto directo es la Naloxona.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Na insuficiência renal, iniciar com dose menor que a usual e titular lentamente; M3G/M6G podem acumular.",
+          "es": "En insuficiencia renal, iniciar con una dosis menor que la habitual y titular lentamente; M3G/M6G pueden acumularse."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar dose inicial menor e titular lentamente na disfunção hepática, monitorando sedação e depressão respiratória.",
+          "es": "Usar una dosis inicial menor y titular lentamente en disfunción hepática, monitorizando sedación y depresión respiratoria."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Constipação",
+          "Sedação",
+          "Prurido"
+        ],
+        "es": [
+          "Náuseas",
+          "Estreñimiento",
+          "Sedación",
+          "Prurito"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória",
+          "Hipotensão grave",
+          "Íleo"
+        ],
+        "es": [
+          "Depresión respiratoria",
+          "Hipotensión grave",
+          "Íleo"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Depressão respiratória significativa",
+            "Asma aguda/grave sem monitorização adequada",
+            "Obstrução gastrointestinal conhecida ou suspeita"
+          ],
+          "es": [
+            "Depresión respiratoria significativa",
+            "Asma aguda/grave sin monitorización adecuada",
+            "Obstrucción gastrointestinal conocida o sospechada"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Insuficiência renal, hepática, idosos ou frágeis"
+          ],
+          "es": [
+            "Insuficiencia renal, hepática, adultos mayores o frágiles"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Insuficiência renal altera a farmacocinética e favorece acúmulo de M3G/M6G; reduzir a dose inicial e titular lentamente.",
+          "es": "La insuficiencia renal altera la farmacocinética y favorece la acumulación de M3G/M6G; reducir la dosis inicial y titular lentamente."
+        }
       }
     },  // end morfina
 
 /* ── FLUMAZENIL ─────────────────────────────────────────────────────── */
     "flumazenil": {
-      name: { pt: 'Flumazenil', es: 'Flumazenilo' },
-      category: 'emergencia',
-      class: { pt: 'Antídoto / Antagonista de Receptor GABA-A', es: 'Antídoto / Antagonista de Receptor GABA-A' },
-      indications: {
-        pt: ['Reversão de sedação por Benzodiazepínicos em procedimentos (ex: endoscopias)', 'Intoxicação aguda EXCLUSIVAMENTE por Benzodiazepínicos em pacientes "naïve" (não usuários crônicos)'],
-        es: ['Reversión de sedación por Benzodiazepinas en procedimientos (ej: endoscopias)', 'Intoxicación aguda EXCLUSIVAMENTE por Benzodiazepinas en pacientes "naïve" (no usuarios crónicos)']
+      "name": {
+        "pt": "Flumazenil",
+        "es": "Flumazenilo"
       },
-      commercialNames: { br: ['Lanexat'], ar: ['Lanexat'] },
-      presentation: { pt: ['Ampolas IV 0,1 mg/mL (5 mL)'], es: ['Ampollas IV 0,1 mg/mL (5 mL)'] },
-      mechanism: {
-        pt: 'Antagonista competitivo puro dos receptores benzodiazepínicos no complexo GABA-A do sistema nervoso central. Ele "expulsa" o benzodiazepínico do receptor e bloqueia seu efeito inibitório, restaurando a consciência e o drive respiratório em 1 a 2 minutos. Possui meia-vida muito curta (cerca de 40 a 80 minutos).',
-        es: 'Antagonista competitivo puro de los receptores benzodiazepínicos en el complejo GABA-A del sistema nervioso central. "Expulsa" la benzodiazepina del receptor y bloquea su efecto inhibitorio, restaurando la consciencia y el drive respiratorio en 1 a 2 minutos. Posee vida media muy corta (cerca de 40 a 80 minutos).'
+      "category": "emergencia",
+      "class": {
+        "pt": "Antagonista do sítio benzodiazepínico do receptor GABA-A",
+        "es": "Antagonista del sitio benzodiazepínico del receptor GABA-A"
       },
-      dose: {
-        adult: {
-          pt: '0,2 mg IV em 15 segundos. Se não acordar, repetir 0,1 mg a 0,2 mg a cada minuto, até o máximo de 1 mg (em sedações) ou 3 mg (em overdoses absolutas).',
-          es: '0,2 mg IV en 15 segundos. Si no despierta, repetir 0,1 mg a 0,2 mg cada minuto, hasta un máximo de 1 mg (en sedaciones) o 3 mg (en sobredosis absolutas).'
+      "indications": {
+        "pt": [
+          "Reversão completa ou parcial de sedação por benzodiazepínicos",
+          "Manejo selecionado de overdose conhecida ou suspeita por benzodiazepínico"
+        ],
+        "es": [
+          "Reversión completa o parcial de sedación por benzodiazepinas",
+          "Manejo seleccionado de sobredosis conocida o sospechada por benzodiazepinas"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Flumazenil"
+        ],
+        "ar": [
+          "Flumazenilo"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução injetável IV, tipicamente 0,1 mg/mL"
+        ],
+        "es": [
+          "Solución inyectable IV, típicamente 0,1 mg/mL"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagonista competitivo no sítio benzodiazepínico do receptor GABA-A. Reverte sedação por benzodiazepínicos, mas pode precipitar abstinência e convulsões.",
+        "es": "Antagonista competitivo en el sitio benzodiazepínico del receptor GABA-A. Revierte sedación por benzodiazepinas, pero puede precipitar abstinencia y convulsiones."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Reversão de sedação: 0,2 mg IV em 15 s; repetir 0,2 mg em intervalos de 60 s até máximo total 1 mg. Overdose: 0,2 mg IV em 30 s, depois 0,3 mg; seguir com 0,5 mg a cada 1 min até 3 mg; raramente até 5 mg.",
+          "es": "Reversión de sedación: 0,2 mg IV en 15 s; repetir 0,2 mg a intervalos de 60 s hasta máximo total 1 mg. Sobredosis: 0,2 mg IV en 30 s, luego 0,3 mg; seguir con 0,5 mg cada 1 min hasta 3 mg; raramente hasta 5 mg."
         },
-        pediatric: {
-          pt: '0,01 mg/kg IV (máx 0,2 mg/dose), repetido a cada minuto se necessário.',
-          es: '0,01 mg/kg IV (máx 0,2 mg/dosis), repetido cada minuto si es necesario.'
+        "pediatric": {
+          "pt": "Uso pediátrico depende da indicação e experiência específica; não extrapolar automaticamente o esquema de overdose adulto.",
+          "es": "El uso pediátrico depende de la indicación y experiencia específica; no extrapolar automáticamente el esquema de sobredosis del adulto."
         }
       },
-      administration: { pt: ['Administrar em bolus IV direto.', 'Se o paciente não responder após 3 mg a 5 mg totais, a causa do coma NÃO É benzodiazepínico.'], es: ['Administrar en bolo IV directo.', 'Si el paciente no responde tras 3 mg a 5 mg totales, la causa del coma NO ES benzodiazepina.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste na emergência.', es: 'Sin necesidad de ajuste en la emergencia.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'A depuração é reduzida em hepatopatas graves, prolongando o efeito.', es: 'El aclaramiento se reduce en hepatópatas graves, prolongando el efecto.' } },
-      commonAdverseEffects: { pt: ['Agitação psicomotora súbita', 'Náuseas e vômitos ao acordar', 'Tontura'], es: ['Agitación psicomotora súbita', 'Náuseas y vómitos al despertar', 'Mareo'] },
-      dangerousAdverseEffects: { pt: ['CONVULSÕES INTRACTÁVEIS E STATUS EPILEPTICUS (se administrado em usuários crônicos de benzodiazepínicos ou dependentes)', 'Arritmias cardíacas'], es: ['CONVULSIONES INTRATABLES Y STATUS EPILEPTICUS (si administrado en usuarios crónicos de benzodiazepinas o dependientes)', 'Arritmias cardíacas'] },
-      contraindications: {
-        absolute: { pt: ['Pacientes em uso crônico de Benzodiazepínicos para controle de Epilepsia', 'Co-intoxicação com Antidepressivos Tricíclicos (desencadeará convulsão letal imediata)'], es: ['Pacientes en uso crónico de Benzodiazepinas para control de Epilepsia', 'Cointoxicación con Antidepresivos Tricíclicos (desencadenará convulsión letal inmediata)'] },
-        relative: { pt: ['Hipertensão craniana severa'], es: ['Hipertensión craneal severa'] }
+      "administration": {
+        "pt": [
+          "Somente IV",
+          "Garantir via aérea, ventilação e acesso IV antes da administração",
+          "Monitorar re-sedação e convulsões"
+        ],
+        "es": [
+          "Solo IV",
+          "Asegurar vía aérea, ventilación y acceso IV antes de administrar",
+          "Monitorizar resedación y convulsiones"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'FENÔMENO DE RE-SEDAÇÃO: A meia-vida do flumazenil (1h) é MUITO MAIS CURTA que a do Diazepam (até 48h). O paciente vai acordar e, 2 horas depois, entrará em coma respiratório novamente quando o antídoto perder o efeito. Vigilância intensiva obrigatória.', es: 'FENÓMENO DE RESEDACIÓN: La vida media del flumazenilo (1h) es MUCHO MÁS CORTA que la del Diazepam (hasta 48h). El paciente despertará y, 2 horas después, entrará en coma respiratorio nuevamente cuando el antídoto pierda el efecto. Vigilancia intensiva obligatoria.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há ajuste renal rotineiro estabelecido.",
+          "es": "No existe ajuste renal rutinario establecido."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Clearance pode diminuir em disfunção hepática; titular cuidadosamente e considerar menor necessidade de redose.",
+          "es": "El clearance puede disminuir en disfunción hepática; titular cuidadosamente y considerar menor necesidad de redosis."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Tontura",
+          "Agitação",
+          "Cefaleia"
+        ],
+        "es": [
+          "Náuseas",
+          "Mareo",
+          "Agitación",
+          "Cefalea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Convulsões",
+          "Abstinência aguda de benzodiazepínicos",
+          "Arritmias em overdose mista"
+        ],
+        "es": [
+          "Convulsiones",
+          "Abstinencia aguda de benzodiazepinas",
+          "Arritmias en sobredosis mixta"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Benzodiazepínico usado para controlar condição potencialmente fatal, como status epilepticus",
+            "Sinais de intoxicação grave por antidepressivo tricíclico"
+          ],
+          "es": [
+            "Benzodiazepina usada para controlar una condición potencialmente mortal, como status epilepticus",
+            "Signos de intoxicación grave por antidepresivo tricíclico"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Uso crônico/dependência de benzodiazepínicos, epilepsia, overdose mista ou agente desconhecido"
+          ],
+          "es": [
+            "Uso crónico/dependencia de benzodiazepinas, epilepsia, sobredosis mixta o agente desconocido"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Não substituir suporte de via aérea. O risco de convulsão é maior em dependência crônica de benzodiazepínicos e overdose por antidepressivos cíclicos/mista.",
+          "es": "No sustituye el soporte de vía aérea. El riesgo de convulsión es mayor en dependencia crónica de benzodiazepinas y sobredosis por antidepresivos cíclicos/mixta."
+        }
       }
     },
 
@@ -1172,41 +2249,123 @@
 
 /* ── PROMETAZINA (FENERGAN) ─────────────────────────────────────────── */
     "prometazina": {
-      name: { pt: 'Prometazina (Fenergan)', es: 'Prometazina' },
-      category: 'emergencia',
-      class: { pt: 'Anti-histamínico H1 / Fenotiazina (Antiemético e Sedativo)', es: 'Antihistamínico H1 / Fenotiazina (Antiemético y Sedante)' },
-      indications: {
-        pt: ['Reações alérgicas severas (como coadjuvante na anafilaxia)', 'Tratamento imediato de DISTONIA AGUDA (Reações extrapiramidais causadas por Plasil ou Haldol)', 'Vômitos e Enjoos de movimento (Cinose)'],
-        es: ['Reacciones alérgicas severas (como coadyuvante en la anafilaxia)', 'Tratamiento inmediato de DISTONÍA AGUDA (Reacciones extrapiramidales causadas por Plasil o Haldol)', 'Vómitos y Mareos de movimiento']
+      "name": {
+        "pt": "Prometazina",
+        "es": "Prometazina"
       },
-      commercialNames: { br: ['Fenergan'], ar: ['Fenergan'] },
-      presentation: { pt: ['Ampolas IM (exclusivo) 25 mg/mL (2 mL = 50 mg)', 'Comprimidos 25 mg'], es: ['Ampollas IM (exclusivo) 25 mg/mL (2 mL = 50 mg)', 'Comprimidos 25 mg'] },
-      mechanism: {
-        pt: 'Bloqueia competitivamente os receptores de Histamina (H1), impedindo o inchaço, coceira e vasodilatação da alergia. Também cruza fortemente a barreira hematoencefálica com poderosa ação Anticolinérgica (que reequilibra a via do movimento travada pelos antipsicóticos, curando a distonia). Gera forte bloqueio dopaminérgico leve e sedação alfa-adrenérgica profunda.',
-        es: 'Bloquea competitivamente los receptores de Histamina (H1), impidiendo hinchazón y picor de la alergia. También cruza fuertemente la barrera hematoencefálica con poderosa acción Anticolinérgica (que reequilibra la vía del movimiento trabada por los antipsicóticos, curando la distonía). Genera sedación profunda.'
+      "category": "emergencia",
+      "class": {
+        "pt": "Fenotiazina anti-histamínica H1 com efeitos anticolinérgicos/antieméticos",
+        "es": "Fenotiazina antihistamínica H1 con efectos anticolinérgicos/antieméticos"
       },
-      dose: {
-        adult: {
-          pt: 'Alergia/Distonia: 25 a 50 mg INTRAMUSCULAR profundo. Dose oral: 25 mg a cada 8h ou 12h.',
-          es: 'Alergia/Distonía: 25 a 50 mg INTRAMUSCULAR profundo. Dosis oral: 25 mg cada 8h o 12h.'
+      "indications": {
+        "pt": [
+          "Controle de náuseas e vômitos",
+          "Prevenção/controle de náusea e vômito relacionados a anestesia/cirurgia"
+        ],
+        "es": [
+          "Control de náuseas y vómitos",
+          "Prevención/control de náusea y vómito relacionados con anestesia/cirugía"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagonismo H1 e ações anticolinérgicas/antidopaminérgicas contribuem para o efeito antiemético e sedativo.",
+        "es": "El antagonismo H1 y acciones anticolinérgicas/antidopaminérgicas contribuyen al efecto antiemético y sedante."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Náuseas/vômitos: 12,5–25 mg por dose; não repetir com intervalo menor que 4 horas.",
+          "es": "Náuseas/vómitos: 12,5–25 mg por dosis; no repetir con intervalo menor de 4 horas."
         },
-        pediatric: {
-          pt: 'Contraindicado em < 2 anos (risco de parada respiratória fatal). Acima de 2 anos: 0,1 mg/kg/dose IM.',
-          es: 'Contraindicado en < 2 años (riesgo de paro respiratorio fatal). Por encima de 2 años: 0,1 mg/kg/dosis IM.'
+        "pediatric": {
+          "pt": "Contraindicada <2 anos. Em ≥2 anos, usar a menor dose apropriada e extrema cautela por risco de depressão respiratória.",
+          "es": "Contraindicada <2 años. En ≥2 años, usar la menor dosis apropiada y extrema precaución por riesgo de depresión respiratoria."
         }
       },
-      administration: { pt: ['A injeção é ESTRITAMENTE INTRAMUSCULAR (profunda no glúteo).', 'NUNCA administrar via Subcutânea ou Intra-Arterial (Gera gangrena imediata do membro e amputação). A via IV é fortemente desaconselhada pela FDA pelos danos teciduais severos.'], es: ['La inyección es ESTRICTAMENTE INTRAMUSCULAR (profunda en el glúteo).', 'NUNCA administrar vía Subcutánea o Intraarterial (Genera gangrena inmediata del miembro y amputación). La vía IV está fuertemente desaconsejada por la FDA.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo hepático intenso, usar menores doses na cirrose grave.', es: 'Metabolismo hepático intenso, usar menores dosis en la cirrosis grave.' } },
-      commonAdverseEffects: { pt: ['Sedação e Sonolência extremas (o paciente "capota" no PS)', 'Boca seca e visão borrada', 'Hipotensão'], es: ['Sedación y Somnolencia extremas (el paciente se desploma en Urgencias)', 'Boca seca y visión borrosa', 'Hipotensión'] },
-      dangerousAdverseEffects: { pt: ['Necrose de tecidos por injeção intravascular errada', 'Depressão respiratória severa em crianças', 'Síndrome Neuroléptica Maligna'], es: ['Necrosis de tejidos por inyección intravascular errónea', 'Depresión respiratoria severa en niños', 'Síndrome Neuroléptico Maligno'] },
-      contraindications: {
-        absolute: { pt: ['Crianças menores de 2 anos de idade (Risco de apneia súbita infantil)', 'Injeção subcutânea'], es: ['Niños menores de 2 años de edad (Riesgo de apnea súbita infantil)', 'Inyección subcutánea'] },
-        relative: { pt: ['Glaucoma de ângulo fechado', 'Retenção urinária severa (Hiperplasia Prostática)'], es: ['Glaucoma de ángulo cerrado', 'Retención urinaria severa (Hiperplasia Prostática)'] }
+      "administration": {
+        "pt": [
+          "Via parenteral preferida: IM profunda",
+          "SC e intra-arterial são contraindicadas",
+          "Se IV for necessária, usar diluição/concentração e acesso venoso conforme rotulagem atual; interromper imediatamente se houver dor/queimação"
+        ],
+        "es": [
+          "Vía parenteral preferida: IM profunda",
+          "SC e intraarterial están contraindicadas",
+          "Si IV es necesaria, usar dilución/concentración y acceso venoso según rotulado actual; suspender inmediatamente ante dolor/ardor"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'RESGATE ABSOLUTO: Se você prescrever Plasil (Metoclopramida) ou Haldol na veia, e o paciente repentinamente contorcer a mandíbula, virar os olhos para cima e não conseguir falar (Crise Oculógira / Distonia), injete Fenergan IM. A crise cede magicamente em 5 a 10 minutos.', es: 'RESCATE ABSOLUTO: Si prescribe Plasil o Haldol en la vena, y el paciente repentinamente contuerce la mandíbula, gira los ojos hacia arriba y no puede hablar (Crisis Oculógira / Distonía), inyecte Fenergan IM. La crisis cede mágicamente en 5 a 10 minutos.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Sem ajuste renal fixo rotineiro; titular clinicamente.",
+          "es": "Sin ajuste renal fijo rutinario; titular clínicamente."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela em hepatopatia e reduzir exposição conforme sedação/efeitos adversos.",
+          "es": "Usar precaución en hepatopatía y reducir exposición según sedación/efectos adversos."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Sedação",
+          "Boca seca",
+          "Tontura"
+        ],
+        "es": [
+          "Sedación",
+          "Boca seca",
+          "Mareo"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Lesão tecidual grave/gangrena parenteral",
+          "Depressão respiratória",
+          "Delirium/EPS raros"
+        ],
+        "es": [
+          "Lesión tisular grave/gangrena parenteral",
+          "Depresión respiratoria",
+          "Delirium/EPS raros"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "<2 anos",
+            "Injeção intra-arterial",
+            "Injeção subcutânea",
+            "IV em concentração acima do limite da rotulagem"
+          ],
+          "es": [
+            "<2 años",
+            "Inyección intraarterial",
+            "Inyección subcutánea",
+            "IV en concentración superior al límite del rotulado"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "DPOC/apneia do sono, idosos, sedativos/opioides"
+          ],
+          "es": [
+            "EPOC/apnea del sueño, adultos mayores, sedantes/opioides"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Prometazina injetável pode causar necrose e gangrena. IM profunda é a via parenteral preferida; SC e intra-arterial são contraindicadas.",
+          "es": "La prometazina inyectable puede causar necrosis y gangrena. IM profunda es la vía parenteral preferida; SC e intraarterial están contraindicadas."
+        }
       }
     },
 
@@ -1214,42 +2373,152 @@
 
 /* ── KETAMINA ───────────────────────────────────────────────────────── */
     "ketamina": {
-      id: 'ketamina',
-      name: { pt: 'Cetamina (Ketamina)', es: 'Ketamina' },
-      category: 'emergencia',
-      class: { pt: 'Anestésico Dissociativo (Antagonista de Receptores NMDA)', es: 'Anestésico Disociativo (Antagonista de Receptores NMDA)' },
-      indications: {
-        pt: ['Indução anestésica em pacientes com CHOQUE HEMORRÁGICO ou trauma grave', 'Sedação para procedimentos dolorosos em crianças (Redução de fraturas, queimaduras)', 'Status Asthmaticus na UTI (Indução e broncodilatação)', 'Depressão refratária com risco de suicídio eminente (off-label psiquiátrico)'],
-        es: ['Inducción anestésica en pacientes con CHOQUE HEMORRÁGICO o trauma grave', 'Sedación para procedimientos dolorosos en niños', 'Status Asthmaticus en la UCI (Inducción y broncodilatación)', 'Depresión refractaria con riesgo de suicidio (off-label)']
+      "id": "ketamina",
+      "name": {
+        "pt": "Cetamina (Ketamina)",
+        "es": "Ketamina"
       },
-      commercialNames: { br: ['Ketalar', 'Ketamin'], ar: ['Ketolar'] },
-      presentation: { pt: ['Ampolas Injetáveis 50 mg/mL (10 mL) - Exige restrição e guarda de psicotrópico'], es: ['Ampollas Inyectables 50 mg/mL (10 mL) - Exige restricción'] },
-      mechanism: {
-        pt: 'A "Droga do Transe". Ao bloquear o receptor NMDA (glutamato) no cérebro, ela "dissocia" (corta os fios) entre o Tálamo (centro das sensações) e o Córtex Límbico (centro da consciência e memória). O paciente parece acordado: fica de olhos abertos, engole saliva e respira SOZINHO, mas está em "transe cósmico" (catalepsia), totalmente incapaz de sentir a faca cortando a perna. É a ÚNICA droga anestésica que AUMENTA a pressão arterial e a frequência cardíaca (liberando noradrenalina), o que a torna a salvadora da pátria para anestesiar o paciente politraumatizado sangrando.',
-        es: 'La "Droga del Trance". Al bloquear el receptor NMDA, "disocia" el Tálamo del Córtex. El paciente parece despierto: ojos abiertos, respira SOLO, pero está en "trance cósmico" (catalepsia), incapaz de sentir el bisturí. Es la ÚNICA droga anestésica que AUMENTA la presión arterial, salvando al paciente politraumatizado.'
+      "category": "emergencia",
+      "class": {
+        "pt": "Anestésico dissociativo; antagonista não competitivo de receptores NMDA",
+        "es": "Anestésico disociativo; antagonista no competitivo de receptores NMDA"
       },
-      dose: {
-        adult: {
-          pt: 'Indução IV: 1 a 2 mg/kg (Ação em 30 a 60 segundos). Sedação e Analgesia (PS): 0,1 a 0,3 mg/kg IV.',
-          es: 'Inducción IV: 1 a 2 mg/kg (Acción en 30 a 60 segundos). Sedación y Analgesia (Urgencias): 0,1 a 0,3 mg/kg IV.'
+      "indications": {
+        "pt": [
+          "Indução de anestesia geral",
+          "Anestesia como agente único em procedimentos que não exigem relaxamento muscular",
+          "Suplemento a outros agentes anestésicos",
+          "Sedação procedural pediátrica em emergência — uso fora da rotulagem dos EUA, conforme protocolo institucional"
+        ],
+        "es": [
+          "Inducción de anestesia general",
+          "Anestesia como agente único en procedimientos que no requieren relajación muscular",
+          "Suplemento de otros agentes anestésicos",
+          "Sedación procedimental pediátrica en urgencias — uso fuera del rotulado de EE. UU., según protocolo institucional"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Ketalar",
+          "Ketamin"
+        ],
+        "ar": [
+          "Ketamina",
+          "Ketalar"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução injetável IV/IM; concentrações de 10, 50 e 100 mg/mL podem existir conforme fabricante/mercado"
+        ],
+        "es": [
+          "Solución inyectable IV/IM; pueden existir concentraciones de 10, 50 y 100 mg/mL según fabricante/mercado"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagoniza receptores NMDA e produz anestesia dissociativa com analgesia e amnésia. Em muitos pacientes aumenta pressão arterial e frequência cardíaca por estimulação simpática, mas hipotensão e bradicardia também podem ocorrer, especialmente em depleção de catecolaminas.",
+        "es": "Antagoniza receptores NMDA y produce anestesia disociativa con analgesia y amnesia. En muchos pacientes aumenta la presión arterial y la frecuencia cardíaca por estimulación simpática, pero también pueden ocurrir hipotensión y bradicardia, especialmente con depleción de catecolaminas."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Indução: 1–4,5 mg/kg IV lentamente em 60 s; alternativa 1–2 mg/kg a 0,5 mg/kg/min. IM: 6,5–13 mg/kg. Titular ao efeito e ao contexto anestésico.",
+          "es": "Inducción: 1–4,5 mg/kg IV lentamente en 60 s; alternativa 1–2 mg/kg a 0,5 mg/kg/min. IM: 6,5–13 mg/kg. Titular al efecto y al contexto anestésico."
         },
-        pediatric: {
-          pt: 'Sedação profunda para procedimento: 1 a 2 mg/kg IV (frequentemente com midazolam).',
-          es: 'Sedación profunda para procedimiento: 1 a 2 mg/kg IV (frecuentemente con midazolam).'
+        "pediatric": {
+          "pt": "Rotulagem dos EUA: segurança/eficácia <16 anos não estabelecidas. Em sedação procedural pediátrica por protocolo: 1–1,5 mg/kg IV, com incrementos de 0,25–0,5 mg/kg; IM 4 mg/kg, podendo repetir 2 mg/kg após 10 min (máx. 6 mg/kg).",
+          "es": "Rotulado de EE. UU.: seguridad/eficacia <16 años no establecidas. En sedación procedimental pediátrica por protocolo: 1–1,5 mg/kg IV, con incrementos de 0,25–0,5 mg/kg; IM 4 mg/kg, pudiendo repetir 2 mg/kg a los 10 min (máx. 6 mg/kg)."
         }
       },
-      administration: { pt: ['Intravenosa ou Intramuscular (Dose IM é muito maior, 4 a 10 mg/kg, ideal para criança incontrolável sem acesso venoso). Pode causar aumento de secreção (sialorreia), exigir atropina prévia.'], es: ['Intravenosa o Intramuscular. Puede causar aumento de secreción (sialorrea), exigir atropina previa.'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade no uso em bólus.', es: 'Sin necesidad en uso en bolo.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Metabolizada no fígado em norketamina. Reduzir dose em disfunção severa.', es: 'Metabolizada en hígado en norketamina. Reducir dosis en disfunción severa.' } },
-      commonAdverseEffects: { pt: ['Taquicardia maciça e Hipertensão', 'Nistagmo (Olhos tremendo de um lado pro outro)', 'Sialorreia (Salivação abundante que pode engasgar)'], es: ['Taquicardia masiva e Hipertensión', 'Nistagmo (Ojos temblando rápido)', 'Sialorrea (Salivación abundante)'] },
-      dangerousAdverseEffects: { pt: ['DELÍRIO DE EMERGÊNCIA (Ao acordar da anestesia, o paciente adulto sofre alucinações aterrorizantes, gritos, pânico de morte iminente e distorção da realidade. Afeta até 30% dos adultos)', 'Aumento da Pressão Intracraniana e Intraocular', 'Laringoespasmo (se muito catarro no fundo da garganta)'], es: ['DELIRIO DE EMERGENCIA (Al despertar, el paciente adulto sufre alucinaciones aterradoras, gritos y pánico)', 'Aumento de Presión Intracraneal e Intraocular', 'Laringoespasmo'] },
-      contraindications: {
-        absolute: { pt: ['Doenças onde aumento de pressão arterial seja fatal (Aneurismas não rotos, Dissecção de Aorta)', 'Glaucoma, Traumas Oculares Perfurantes (A pressão do olho estoura)', 'Esquizofrenia ativa'], es: ['Enfermedades donde aumento de presión sea fatal (Aneurismas, Disección de Aorta)', 'Glaucoma, Traumas Oculares Perforantes', 'Esquizofrenia activa'] },
-        relative: { pt: ['Trauma cranioencefálico grave com aumento agudo da PIC (Embora literaturas novas venham mitigando essa regra, na prova é risco)'], es: ['Trauma craneoencefálico grave con aumento de PIC'] }
+      "administration": {
+        "pt": [
+          "Administrar IV lentamente; a injeção rápida aumenta risco de depressão respiratória e resposta pressora.",
+          "A concentração de 100 mg/mL é concentrada e deve ser diluída antes do uso IV conforme a rotulagem do produto.",
+          "Monitorização cardiorrespiratória e capacidade imediata de manejo de via aérea são obrigatórias durante sedação/anestesia."
+        ],
+        "es": [
+          "Administrar IV lentamente; la inyección rápida aumenta el riesgo de depresión respiratoria y respuesta presora.",
+          "La concentración de 100 mg/mL es concentrada y debe diluirse antes del uso IV según el rotulado del producto.",
+          "Se requiere monitorización cardiorrespiratoria y capacidad inmediata para manejo de la vía aérea durante sedación/anestesia."
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'O PROTOCOLO DO TERROR: Para evitar que o adulto acorde da Ketamina lutando com demônios imaginários (Delírio de Emergência), é OBRIGATÓRIO na anestesia aplicar 1 ou 2 mg de Midazolam (Benzodiazepínico) na mesma seringa. O Midazolam apaga a memória da alucinação do cérebro límbico.', es: 'EL PROTOCOLO DEL TERROR: Para evitar que el adulto despierte de la Ketamina luchando con demonios imaginarios, es OBLIGATORIO aplicar 1 o 2 mg de Midazolam en la misma jeringa para borrar la memoria de la alucinación.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "A rotulagem não estabelece ajuste renal fixo para indução; titular clinicamente.",
+          "es": "El rotulado no establece un ajuste renal fijo para inducción; titular clínicamente."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Não há ajuste único definido para dose de indução. Uso recorrente foi associado a lesão hepática; considerar função hepática basal e periódica quando houver plano de administrações repetidas.",
+          "es": "No hay un ajuste único definido para la dosis de inducción. El uso repetido se ha asociado a lesión hepática; considerar función hepática basal y periódica cuando se planifiquen administraciones repetidas."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea/vômito",
+          "Nistagmo",
+          "Hipersecreção salivar",
+          "Reações de emergência",
+          "Aumento de pressão arterial e frequência cardíaca"
+        ],
+        "es": [
+          "Náuseas/vómitos",
+          "Nistagmo",
+          "Hipersalivación",
+          "Reacciones de emergencia",
+          "Aumento de presión arterial y frecuencia cardíaca"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória/apneia, sobretudo com administração rápida ou dose excessiva",
+          "Laringoespasmo",
+          "Instabilidade hemodinâmica",
+          "Lesão hepática com uso recorrente"
+        ],
+        "es": [
+          "Depresión respiratoria/apnea, sobre todo con administración rápida o dosis excesiva",
+          "Laringoespasmo",
+          "Inestabilidad hemodinámica",
+          "Lesión hepática con uso repetido"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade à cetamina ou excipientes",
+            "Situação em que elevação importante da pressão arterial represente risco grave"
+          ],
+          "es": [
+            "Hipersensibilidad a ketamina o excipientes",
+            "Situación en la que una elevación importante de la presión arterial represente un riesgo grave"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Pressão intracraniana elevada: usar em ambiente monitorizado",
+            "Procedimentos de faringe/laringe/árvore brônquica exigem estratégia adicional de via aérea/anestesia",
+            "Uso recorrente em hepatopatia"
+          ],
+          "es": [
+            "Presión intracraneal elevada: usar en ambiente monitorizado",
+            "Procedimientos de faringe/laringe/árbol bronquial requieren estrategia adicional de vía aérea/anestesia",
+            "Uso repetido en hepatopatía"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "A preservação de reflexos de via aérea não elimina risco de obstrução, laringoespasmo ou apneia. Benzodiazepínico não é obrigatório de rotina; pode ser usado quando clinicamente indicado para manifestações de emergência.",
+          "es": "La preservación de reflejos de la vía aérea no elimina el riesgo de obstrucción, laringoespasmo o apnea. Una benzodiazepina no es obligatoria de rutina; puede usarse cuando esté clínicamente indicada para manifestaciones de emergencia."
+        }
       }
     },
 

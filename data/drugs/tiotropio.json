@@ -5,22 +5,193 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Brometo de Tiotrópio"
+    "name": "Tiotrópio"
   },
   "es": {
-    "name": "Bromuro de Tiotropio"
+    "name": "Tiotropio"
   },
   "name": {
-    "pt": "Brometo de Tiotrópio",
-    "es": "Bromuro de Tiotropio"
+    "pt": "Tiotrópio",
+    "es": "Tiotropio"
   },
   "keywords": [
     "tiotropio",
-    "brometo de tiotrópio"
+    "tiotrópio"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8db7dcf02f286792",
+  "clinicalContentSha256": "8db7dcf02f28679298b4aaa03b3d571d60c10a0f69b0f08fdac051f4119818d8",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "pneumologia.js"
+  "sourceModule": "pneumologia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "tiotropio",
+    "clinical_batch": "LOT006_BRONCODILATADORES_ASMA_DPOC",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "GINA_2026_GOLD_2026_OFFICIAL_LABELS",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Não usar para alívio de broncoespasmo agudo"
+          },
+          {
+            "label": "Administração",
+            "text": "Cápsulas HandiHaler são somente para inalação"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "No usar para alivio de broncoespasmo agudo"
+          },
+          {
+            "label": "Administración",
+            "text": "Cápsulas HandiHaler son solo para inhalación"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "LAMA é manutenção, não resgate. Em asma deve ser add-on a tratamento contendo ICS."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Broncoespasmo paradoxal; Glaucoma agudo; Retenção urinária"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "LAMA es mantenimiento, no rescate. En asma debe ser add-on a tratamiento con ICS."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Broncoespasmo paradójico; Glaucoma agudo; Retención urinaria"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "HandiHaler: conteúdo de 1 cápsula de 18 mcg inalado 1x/dia; Respimat: 2 inalações 1x/dia conforme indicação/formulação."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Asma: uso depende da formulação e idade autorizada; seguir rotulagem local, não usar cápsula por via oral."
+          },
+          {
+            "label": "Rim",
+            "text": "ClCr <60 mL/min: monitorar mais de perto efeitos anticolinérgicos."
+          },
+          {
+            "label": "Fígado",
+            "text": "Sem ajuste hepático rotineiro."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "HandiHaler: contenido de 1 cápsula de 18 mcg inhalado 1 vez/día; Respimat: 2 inhalaciones 1 vez/día según indicación/formulación."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Asma: uso depende de formulación y edad autorizada; seguir rotulado local, no ingerir cápsula por vía oral."
+          },
+          {
+            "label": "Riñón",
+            "text": "ClCr <60 mL/min: monitorizar más estrechamente efectos anticolinérgicos."
+          },
+          {
+            "label": "Hígado",
+            "text": "Sin ajuste hepático rutinario."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Antagonista muscarínico de longa ação (LAMA)"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonismo muscarínico prolongado, principalmente M3, reduz broncoconstrição vagal."
+          },
+          {
+            "label": "Indicações",
+            "text": "Manutenção da DPOC; Add-on em asma selecionada conforme idade/formulação"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Antagonista muscarínico de acción prolongada (LAMA)"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Antagonismo muscarínico prolongado, principalmente M3, reduce broncoconstricción vagal."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Mantenimiento de EPOC; Add-on en asma seleccionada según edad/formulación"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Interações",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, eletrólitos e inibidores/indutores metabólicos conforme o fármaco."
+          }
+        ],
+        "es": [
+          {
+            "label": "Interacciones",
+            "text": "Revisar broncodilatadores adrenérgicos, anticolinérgicos, electrolitos e inhibidores/inductores metabólicos según el fármaco."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fonte revisada em 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "GOLD 2026 Report and Pocket Guide",
+            "text": "Fonte revisada em 2026-09-05. https://goldcopd.org/2026-gold-report-and-pocket-guide/"
+          }
+        ],
+        "es": [
+          {
+            "label": "GINA 2026 Strategy Report",
+            "text": "Fuente revisada el 2026-09-05. https://ginasthma.org/2026-gina-strategy-report/"
+          },
+          {
+            "label": "GOLD 2026 Report and Pocket Guide",
+            "text": "Fuente revisada el 2026-09-05. https://goldcopd.org/2026-gold-report-and-pocket-guide/"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "tiotropio_1",
+        "title": "GINA 2026 Strategy Report",
+        "url": "https://ginasthma.org/2026-gina-strategy-report/",
+        "reviewed_at": "2026-09-05"
+      },
+      {
+        "id": "tiotropio_2",
+        "title": "GOLD 2026 Report and Pocket Guide",
+        "url": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

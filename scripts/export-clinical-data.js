@@ -93,6 +93,33 @@ const PUBLISHED_DRUGS_DIR = path.join(
   'drugs'
 );
 
+/*
+ * Ownership boundary for this exporter.
+ *
+ * data/ and public/data/ contain sibling trees owned by other pipelines
+ * (for example ai-drug-data and root-only clinical-knowledge).
+ *
+ * This exporter owns ONLY:
+ *   drugs/
+ *   drugs_index.json
+ *   manifest.json
+ *
+ * All parity, staging and publication logic below must preserve every
+ * sibling outside this list byte-for-byte and must never publish a
+ * root-only sibling merely because it exists under data/.
+ */
+const CLINICAL_MANAGED_OUTPUT_NAMES =
+  Object.freeze([
+    'drugs',
+    'drugs_index.json',
+    'manifest.json',
+  ]);
+
+const CLINICAL_MANAGED_OUTPUT_NAME_SET =
+  new Set(
+    CLINICAL_MANAGED_OUTPUT_NAMES
+  );
+
 const BACKUP_DIR_PREFIX =
   '.clinical-data-backup-';
 
@@ -574,7 +601,7 @@ function cleanupStagingOutput() {
   }
 }
 
-function listClinicalOutputFiles(
+function listOutputFilesRecursive(
   directory,
   baseDirectory = directory
 ) {
@@ -609,7 +636,7 @@ function listClinicalOutputFiles(
 
     if (entry.isDirectory()) {
       files.push(
-        ...listClinicalOutputFiles(
+        ...listOutputFilesRecursive(
           absolutePath,
           baseDirectory
         )
@@ -639,6 +666,90 @@ function listClinicalOutputFiles(
   return files;
 }
 
+function listClinicalOutputFiles(
+  directory
+) {
+  if (!fs.existsSync(directory)) {
+    throw new Error(
+      `CLINICAL_OUTPUT_DIRECTORY_MISSING: ${directory}`
+    );
+  }
+
+  const files = [];
+
+  for (
+    const outputName of
+      CLINICAL_MANAGED_OUTPUT_NAMES
+  ) {
+    const absolutePath = path.join(
+      directory,
+      outputName
+    );
+
+    if (!fs.existsSync(absolutePath)) {
+      throw new Error(
+        `CLINICAL_MANAGED_OUTPUT_MISSING: ${absolutePath}`
+      );
+    }
+
+    const stat = fs.statSync(
+      absolutePath
+    );
+
+    if (stat.isDirectory()) {
+      files.push(
+        ...listOutputFilesRecursive(
+          absolutePath,
+          directory
+        )
+      );
+      continue;
+    }
+
+    if (!stat.isFile()) {
+      throw new Error(
+        `CLINICAL_OUTPUT_ENTRY_INVALID: ${absolutePath}`
+      );
+    }
+
+    files.push({
+      absolutePath,
+      relativePath: outputName,
+    });
+  }
+
+  return files.sort(
+    (left, right) =>
+      compareStableText(
+        left.relativePath,
+        right.relativePath
+      )
+  );
+}
+
+function listClinicalUnmanagedOutputFiles(
+  directory
+) {
+  if (!fs.existsSync(directory)) {
+    return [];
+  }
+
+  return listOutputFilesRecursive(
+    directory
+  ).filter(
+    entry => {
+      const topLevelName =
+        entry.relativePath
+          .split('/')[0];
+
+      return (
+        !CLINICAL_MANAGED_OUTPUT_NAME_SET
+          .has(topLevelName)
+      );
+    }
+  );
+}
+
 function hashClinicalOutputFile(
   filePath
 ) {
@@ -648,6 +759,72 @@ function hashClinicalOutputFile(
       fs.readFileSync(filePath)
     )
     .digest('hex');
+}
+
+function assertClinicalUnmanagedSnapshotPreserved(
+  finalDirectory,
+  stagingDirectory,
+  label
+) {
+  const finalFiles =
+    listClinicalUnmanagedOutputFiles(
+      finalDirectory
+    );
+
+  const stagingFiles =
+    listClinicalUnmanagedOutputFiles(
+      stagingDirectory
+    );
+
+  if (
+    finalFiles.length !==
+    stagingFiles.length
+  ) {
+    throw new Error(
+      `CLINICAL_UNMANAGED_OUTPUT_COUNT_CHANGED: ` +
+      `${label}: ${finalFiles.length} != ` +
+      `${stagingFiles.length}`
+    );
+  }
+
+  for (
+    let index = 0;
+    index < finalFiles.length;
+    index++
+  ) {
+    const finalFile =
+      finalFiles[index];
+
+    const stagingFile =
+      stagingFiles[index];
+
+    if (
+      finalFile.relativePath !==
+      stagingFile.relativePath
+    ) {
+      throw new Error(
+        `CLINICAL_UNMANAGED_OUTPUT_PATH_CHANGED: ` +
+        `${label}: ${finalFile.relativePath} != ` +
+        `${stagingFile.relativePath}`
+      );
+    }
+
+    if (
+      hashClinicalOutputFile(
+        finalFile.absolutePath
+      ) !==
+      hashClinicalOutputFile(
+        stagingFile.absolutePath
+      )
+    ) {
+      throw new Error(
+        `CLINICAL_UNMANAGED_OUTPUT_CONTENT_CHANGED: ` +
+        `${label}: ${finalFile.relativePath}`
+      );
+    }
+  }
+
+  return finalFiles.length;
 }
 
 function assertClinicalOutputsByteIdentical(
@@ -713,6 +890,46 @@ function assertClinicalOutputsByteIdentical(
   return firstFiles.length;
 }
 
+function removeClinicalManagedOutputs(
+  directory
+) {
+  if (!fs.existsSync(directory)) {
+    return;
+  }
+
+  for (
+    const outputName of
+      CLINICAL_MANAGED_OUTPUT_NAMES
+  ) {
+    const targetPath = path.join(
+      directory,
+      outputName
+    );
+
+    if (!fs.existsSync(targetPath)) {
+      continue;
+    }
+
+    const stat = fs.lstatSync(
+      targetPath
+    );
+
+    if (stat.isDirectory()) {
+      removeDirectoryIfExists(
+        targetPath
+      );
+      continue;
+    }
+
+    fs.rmSync(
+      targetPath,
+      {
+        force: true,
+      }
+    );
+  }
+}
+
 function preparePublicStagingOutput() {
   if (!fs.existsSync(OUT_DIR)) {
     throw new Error(
@@ -724,25 +941,88 @@ function preparePublicStagingOutput() {
     PUBLIC_OUT_DIR
   );
 
-  try {
-    fs.cpSync(
-      OUT_DIR,
+  if (
+    fs.existsSync(
+      PUBLIC_FINAL_OUT_DIR
+    )
+  ) {
+    try {
+      fs.cpSync(
+        PUBLIC_FINAL_OUT_DIR,
+        PUBLIC_OUT_DIR,
+        {
+          recursive: true,
+          force: false,
+          errorOnExist: true,
+        }
+      );
+    } catch (error) {
+      removeDirectoryIfExists(
+        PUBLIC_OUT_DIR
+      );
+
+      throw new Error(
+        `CLINICAL_PUBLIC_STAGING_SNAPSHOT_FAILURE: ` +
+        `${error.message}`
+      );
+    }
+  } else {
+    fs.mkdirSync(
       PUBLIC_OUT_DIR,
       {
         recursive: true,
-        force: false,
-        errorOnExist: true,
       }
     );
-  } catch (error) {
-    removeDirectoryIfExists(
-      PUBLIC_OUT_DIR
+  }
+
+  removeClinicalManagedOutputs(
+    PUBLIC_OUT_DIR
+  );
+
+  for (
+    const outputName of
+      CLINICAL_MANAGED_OUTPUT_NAMES
+  ) {
+    const sourcePath = path.join(
+      OUT_DIR,
+      outputName
     );
 
-    throw new Error(
-      `CLINICAL_PUBLIC_STAGING_COPY_FAILURE: ` +
-      `${error.message}`
+    const targetPath = path.join(
+      PUBLIC_OUT_DIR,
+      outputName
     );
+
+    if (!fs.existsSync(sourcePath)) {
+      throw new Error(
+        `CLINICAL_MANAGED_OUTPUT_MISSING: ${sourcePath}`
+      );
+    }
+
+    const stat = fs.statSync(
+      sourcePath
+    );
+
+    if (stat.isDirectory()) {
+      fs.cpSync(
+        sourcePath,
+        targetPath,
+        {
+          recursive: true,
+          force: false,
+          errorOnExist: true,
+        }
+      );
+    } else if (stat.isFile()) {
+      fs.copyFileSync(
+        sourcePath,
+        targetPath
+      );
+    } else {
+      throw new Error(
+        `CLINICAL_OUTPUT_ENTRY_INVALID: ${sourcePath}`
+      );
+    }
   }
 
   const fileCount =
@@ -753,7 +1033,8 @@ function preparePublicStagingOutput() {
 
   console.log(
     `🪞 Staging público validado: ` +
-    `${fileCount} arquivos byte a byte idênticos`
+    `${fileCount} arquivos clínicos gerenciados ` +
+    `byte a byte idênticos`
   );
 
   return fileCount;
@@ -1264,6 +1545,25 @@ function publishStagedOutput() {
 
   recoverInterruptedPublication();
 
+  /*
+   * The transaction swaps the container directories, but it may only
+   * mutate the exporter-owned children. Prove every unowned sibling is
+   * still identical to the snapshot that will be published. If another
+   * pipeline changed a sibling while this export was running, abort
+   * instead of overwriting that work.
+   */
+  assertClinicalUnmanagedSnapshotPreserved(
+    FINAL_OUT_DIR,
+    OUT_DIR,
+    'data'
+  );
+
+  assertClinicalUnmanagedSnapshotPreserved(
+    PUBLIC_FINAL_OUT_DIR,
+    PUBLIC_OUT_DIR,
+    'public/data'
+  );
+
   if (
     fs.existsSync(BACKUP_OUT_DIR) ||
     fs.existsSync(PUBLIC_BACKUP_OUT_DIR)
@@ -1404,7 +1704,7 @@ function publishStagedOutput() {
 
     console.log(
       `🚀 Publicação dupla concluída: ` +
-      `${fileCount} arquivos idênticos em ` +
+      `${fileCount} arquivos clínicos gerenciados idênticos em ` +
       `data/ e public/data/`
     );
   } catch (error) {
@@ -2938,9 +3238,33 @@ async function main() {
    */
   cleanupStagingOutput();
 
-  fs.mkdirSync(OUT_DIR, {
-    recursive: true,
-  });
+  /*
+   * Snapshot data/ first so root-only/unmanaged sibling trees survive
+   * the container-level atomic swap. Then clear ONLY the outputs owned
+   * by this exporter before regenerating them.
+   */
+  if (fs.existsSync(FINAL_OUT_DIR)) {
+    fs.cpSync(
+      FINAL_OUT_DIR,
+      OUT_DIR,
+      {
+        recursive: true,
+        force: false,
+        errorOnExist: true,
+      }
+    );
+  } else {
+    fs.mkdirSync(
+      OUT_DIR,
+      {
+        recursive: true,
+      }
+    );
+  }
+
+  removeClinicalManagedOutputs(
+    OUT_DIR
+  );
 
   fs.mkdirSync(OUT_DRUGS, {
     recursive: true,

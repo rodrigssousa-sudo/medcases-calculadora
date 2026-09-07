@@ -51,89 +51,278 @@
 
     /* ── PARACETAMOL / ACETAMINOFÉN ─────────────────────────────────────── */
     "paracetamol": {
-      name: { pt: 'Paracetamol', es: 'Paracetamol / Acetaminofén' },
-      category: 'analgesia',
-      class: { pt: 'Analgésico e Antipirético Não Opioide', es: 'Analgésico y Antipirético No Opioide' },
-      indications: {
-        pt: ['Dor leve a moderada', 'Febre', 'Primeira linha em osteoartrite e dor musculoesquelética'],
-        es: ['Dolor leve a moderado', 'Fiebre', 'Primera línea en osteoartritis y dolor musculoesquelético']
+      "name": {
+        "pt": "Paracetamol",
+        "es": "Paracetamol"
       },
-      commercialNames: { br: ['Tylenol', 'Tylemax'], ar: ['Tafirol', 'Tylenol'] },
-      presentation: { pt: ['Comprimidos 500 mg', '750 mg', 'Solução oral 200 mg/mL', 'Frasco-ampola IV 10 mg/mL'], es: ['Comprimidos 500 mg', '750 mg', 'Solución oral 200 mg/mL', 'Vial IV 10 mg/mL'] },
-      mechanism: {
-        pt: 'Inibe a síntese de prostaglandinas predominantemente no Sistema Nervoso Central (via inibição da enzima COX-3 e interações com o sistema serotoninérgico descendente). Quase desprovido de efeito anti-inflamatório periférico.',
-        es: 'Inhibe la síntesis de prostaglandinas predominantemente en el Sistema Nervioso Central (vía inhibición de la enzima COX-3 e interacciones con el sistema serotoninérgico descendente). Casi desprovisto de efecto antiinflamatorio periférico.'
+      "category": "analgesia",
+      "class": {
+        "pt": "Analgésico não opioide e antitérmico",
+        "es": "Analgésico no opioide y antipirético"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: 'VO: 500 a 1000 mg a cada 6 ou 8 horas. Dose máxima diária: 4000 mg (4g) em adultos hígidos. (Limitar a 3g/dia em idosos crônicos). IV: 1000 mg a cada 6h.',
-            es: 'VO: 500 a 1000 mg cada 6 u 8 horas. Dosis máxima diaria: 4000 mg (4g) en adultos sanos. (Limitar a 3g/día en ancianos crónicos). IV: 1000 mg cada 6h.'
-          }
+      "indications": {
+        "pt": [
+          "Dor leve a moderada",
+          "Febre",
+          "Componente de analgesia multimodal"
+        ],
+        "es": [
+          "Dolor leve a moderado",
+          "Fiebre",
+          "Componente de analgesia multimodal"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Tylenol",
+          "Paracetamol"
+        ],
+        "ar": [
+          "Paracetamol"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Comprimidos, solução/gotas e formulação IV; concentrações variam por produto"
+        ],
+        "es": [
+          "Comprimidos, solución/gotas y formulación IV; concentraciones variables según producto"
+        ]
+      },
+      "mechanism": {
+        "pt": "O mecanismo analgésico/antitérmico não é completamente definido; envolve modulação central da síntese de prostaglandinas e vias descendentes de dor. Tem pouca atividade anti-inflamatória periférica nas doses usuais.",
+        "es": "El mecanismo analgésico/antipirético no está completamente definido; implica modulación central de la síntesis de prostaglandinas y vías descendentes del dolor. Tiene poca actividad antiinflamatoria periférica a dosis habituales."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Referência IV: ≥50 kg, 1.000 mg a cada 6 h ou 650 mg a cada 4 h; máximo 4.000 mg/dia somando todas as vias. <50 kg: 15 mg/kg a cada 6 h ou 12,5 mg/kg a cada 4 h; máximo 75 mg/kg/dia, até 3.750 mg/dia.",
+          "es": "Referencia IV: ≥50 kg, 1.000 mg cada 6 h o 650 mg cada 4 h; máximo 4.000 mg/día sumando todas las vías. <50 kg: 15 mg/kg cada 6 h o 12,5 mg/kg cada 4 h; máximo 75 mg/kg/día, hasta 3.750 mg/día."
         },
-        pediatric: {
-          standard: {
-            pt: '10 a 15 mg/kg/dose a cada 6 horas. Dose máxima: 75 mg/kg/dia.',
-            es: '10 a 15 mg/kg/dosis cada 6 horas. Dosis máxima: 75 mg/kg/día.'
-          }
+        "pediatric": {
+          "pt": "2–12 anos, referência IV: 15 mg/kg a cada 6 h ou 12,5 mg/kg a cada 4 h; máximo 75 mg/kg/dia. Neonatos e lactentes exigem esquemas específicos por idade gestacional/cronológica.",
+          "es": "2–12 años, referencia IV: 15 mg/kg cada 6 h o 12,5 mg/kg cada 4 h; máximo 75 mg/kg/día. Neonatos y lactantes requieren esquemas específicos según edad gestacional/cronológica."
         }
       },
-      administration: { pt: ['Infusão IV deve ser feita em 15 minutos.', 'Atenção às formulações combinadas (ex: Tylex, Paco) para não exceder a dose diária.'], es: ['Infusión IV debe realizarse en 15 minutos.', 'Atención a formulaciones combinadas (ej: Tylex, Paco) para no exceder la dosis diaria.'] },
-      renalAdjustment: { required: true, message: { pt: 'ClCr 10-50 mL/min: intervalo a cada 6h. ClCr < 10 mL/min: aumentar intervalo para 8h.', es: 'ClCr 10-50 mL/min: intervalo cada 6h. ClCr < 10 mL/min: aumentar intervalo a 8h.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Disfunção hepática crônica/alcoolismo: Limitar dose máxima a 2g/dia. Contraindicado em insuficiência hepática aguda ou descompensada.', es: 'Disfunción hepática crónica/alcoholismo: Limitar dosis máxima a 2g/día. Contraindicado en insuficiencia hepática aguda o descompensada.' } },
-      commonAdverseEffects: { pt: ['Geralmente muito bem tolerado', 'Náusea leve (VO)', 'Hipotensão transitória (se IV rápido)'], es: ['Generalmente muy bien tolerado', 'Náusea leve (VO)', 'Hipotensión transitoria (si IV rápido)'] },
-      dangerousAdverseEffects: { pt: ['Hepatotoxicidade fulminante (necrose hepática por acúmulo do metabólito tóxico NAPQI em superdosagem)'], es: ['Hepatotoxicidad fulminante (necrosis hepática por acumulación del metabolito tóxico NAPQI en sobredosis)'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade grave', 'Insuficiência hepática grave ou aguda'], es: ['Hipersensibilidad grave', 'Insuficiencia hepática grave o aguda'] },
-        relative: { pt: ['Alcoolismo crônico', 'Desnutrição severa crônica (depleção de glutationa)'], es: ['Alcoholismo crónico', 'Desnutrición severa crónica (depleción de glutatión)'] }
+      "administration": {
+        "pt": [
+          "Somar todas as fontes de paracetamol para o limite diário",
+          "IV: infundir em 15 minutos conforme rotulagem do produto",
+          "Usar menor dose efetiva quando houver fatores de risco hepático"
+        ],
+        "es": [
+          "Sumar todas las fuentes de paracetamol para el límite diario",
+          "IV: infundir en 15 minutos según rotulado del producto",
+          "Usar la menor dosis efectiva cuando existan factores de riesgo hepático"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: false,
-        warning: { pt: 'ANTÍDOTO: N-acetilcisteína (NAC). Superdosagem (>7,5g a 10g em adultos) satura a via de glucuronidação e acumula NAPQI. O Nomograma de Rumack-Matthew guia o tratamento.', es: 'ANTÍDOTO: N-acetilcisteína (NAC). Sobredosis (>7,5g a 10g en adultos) satura la vía de glucuronidación y acumula NAPQI. El Nomograma de Rumack-Matthew guía el tratamiento.' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há redução fixa rotineira em função renal normal a moderadamente reduzida; em insuficiência renal grave pode ser necessário aumentar o intervalo conforme formulação/protocolo.",
+          "es": "No existe reducción fija rutinaria con función renal normal a moderadamente reducida; en insuficiencia renal grave puede ser necesario aumentar el intervalo según formulación/protocolo."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Evitar em insuficiência hepática grave/doença hepática ativa importante; usar teto diário menor e cautela em hepatopatia, desnutrição ou uso crônico de álcool.",
+          "es": "Evitar en insuficiencia hepática grave/enfermedad hepática activa importante; usar un techo diario menor y precaución en hepatopatía, desnutrición o consumo crónico de alcohol."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Elevação transitória de transaminases"
+        ],
+        "es": [
+          "Náuseas",
+          "Elevación transitoria de transaminasas"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Hepatotoxicidade por superdose ou exposição excessiva",
+          "Reações cutâneas graves raras",
+          "Anafilaxia rara"
+        ],
+        "es": [
+          "Hepatotoxicidad por sobredosis o exposición excesiva",
+          "Reacciones cutáneas graves raras",
+          "Anafilaxia rara"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade",
+            "Insuficiência hepática grave/doença hepática ativa grave para formulações sistêmicas"
+          ],
+          "es": [
+            "Hipersensibilidad",
+            "Insuficiencia hepática grave/enfermedad hepática activa grave para formulaciones sistémicas"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Uso crônico de álcool, desnutrição, hepatopatia"
+          ],
+          "es": [
+            "Consumo crónico de alcohol, desnutrición, hepatopatía"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": true,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "A principal prevenção de toxicidade é somar todas as formulações contendo paracetamol e respeitar o limite diário total.",
+          "es": "La principal prevención de toxicidad es sumar todas las formulaciones que contienen paracetamol y respetar el límite diario total."
+        }
       }
     },
 
     /* ── METAMIZOL / DIPIRONA ───────────────────────────────────────────── */
     "metamizol": {
-      name: { pt: 'Dipirona', es: 'Metamizol' },
-      category: 'analgesia',
-      class: { pt: 'Analgésico, Antipirético e Antiespasmódico (Derivado Pirazolônico)', es: 'Analgésico, Antipirético y Antiespasmódico (Derivado Pirazolónico)' },
-      indications: {
-        pt: ['Dor moderada a intensa', 'Febre refratária a outros antipiréticos', 'Cólicas viscerais (renal, biliar)'],
-        es: ['Dolor moderado a intenso', 'Fiebre refractaria a otros antipiréticos', 'Cólicos viscerales (renal, biliar)']
+      "name": {
+        "pt": "Dipirona",
+        "es": "Metamizol"
       },
-      commercialNames: { br: ['Novalgina', 'Lisador'], ar: ['Novalgina', 'Buscapina Compositum (asociado)'] },
-      presentation: { pt: ['Comprimidos 500 mg', '1 g', 'Solução oral gotas 500 mg/mL', 'Ampolas IV/IM 500 mg/mL'], es: ['Comprimidos 500 mg', '1 g', 'Solución oral gotas 500 mg/mL', 'Ampollas IV/IM 500 mg/mL'] },
-      mechanism: {
-        pt: 'Mecanismo complexo: inibição de COX central e periférica (variante da COX-3), ativação de sistemas opioides e canabinoides endógenos e inibição da liberação de Ca2+ intracelular promovendo efeito antiespasmódico sobre a musculatura lisa.',
-        es: 'Mecanismo complejo: inhibición de COX central y periférica (variante de la COX-3), activación de sistemas opioides y cannabinoides endógenos e inhibición de la liberación de Ca2+ intracelular promoviendo efecto antiespasmódico sobre la musculatura lisa.'
+      "category": "analgesia",
+      "class": {
+        "pt": "Analgésico, antitérmico e antiespasmódico pirazolônico",
+        "es": "Analgésico, antipirético y antiespasmódico pirazolónico"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: 'VO: 500 mg a 1000 mg a cada 6 ou 8 horas. Dose máxima: 4g/dia. IV/IM: 1 a 2 g a cada 6 ou 8 horas (lento).',
-            es: 'VO: 500 mg a 1000 mg cada 6 u 8 horas. Dosis máxima: 4g/día. IV/IM: 1 a 2 g cada 6 u 8 horas (lento).'
-          }
+      "indications": {
+        "pt": [
+          "Dor aguda moderada a intensa, incluindo pós-operatória/pós-traumática e cólica",
+          "Febre alta que não responde a outras medidas"
+        ],
+        "es": [
+          "Dolor agudo moderado a intenso, incluido posoperatorio/postraumático y cólico",
+          "Fiebre alta que no responde a otras medidas"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Novalgina",
+          "Dipirona"
+        ],
+        "ar": [
+          "Novalgina",
+          "Metamizol"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Comprimidos/cápsulas, gotas/solução oral e solução IV/IM; apresentações variam por mercado"
+        ],
+        "es": [
+          "Comprimidos/cápsulas, gotas/solución oral y solución IV/IM; presentaciones variables según mercado"
+        ]
+      },
+      "mechanism": {
+        "pt": "O mecanismo não é completamente esclarecido. Há evidência de modulação central e periférica da síntese de prostaglandinas e efeitos sobre vias nociceptivas; não deve ser descrito como inibidor comprovado de 'COX-3'.",
+        "es": "El mecanismo no está completamente aclarado. Existe evidencia de modulación central y periférica de la síntesis de prostaglandinas y efectos sobre vías nociceptivas; no debe describirse como inhibidor comprobado de 'COX-3'."
+      },
+      "dose": {
+        "adult": {
+          "pt": "≥15 anos e >53 kg: VO 500–1.000 mg por dose, até 4x/dia, máximo 4.000 mg/dia. Parenteral: 500–1.000 mg por dose em intervalos de 6–8 h; informação harmonizada da EMA permite máximo diário parenteral de 5.000 mg.",
+          "es": "≥15 años y >53 kg: VO 500–1.000 mg por dosis, hasta 4x/día, máximo 4.000 mg/día. Parenteral: 500–1.000 mg por dosis en intervalos de 6–8 h; la información armonizada de EMA permite máximo diario parenteral de 5.000 mg."
         },
-        pediatric: {
-          standard: {
-            pt: '10 a 25 mg/kg/dose a cada 6 horas.',
-            es: '10 a 25 mg/kg/dosis cada 6 horas.'
-          }
+        "pediatric": {
+          "pt": "Crianças/adolescentes até 14 anos: 8–16 mg/kg por dose; para febre, 10 mg/kg costuma ser suficiente. Usar formulação apropriada ao peso.",
+          "es": "Niños/adolescentes hasta 14 años: 8–16 mg/kg por dosis; para fiebre, 10 mg/kg suele ser suficiente. Usar formulación apropiada al peso."
         }
       },
-      administration: { pt: ['Infusão IV DEVE SER LENTA (não mais que 1 mL/minuto) para evitar hipotensão grave.', 'A injeção IM pode ser dolorosa.'], es: ['La infusión IV DEBE SER LENTA (no más de 1 mL/minuto) para evitar hipotensión grave.', 'La inyección IM puede ser dolorosa.'] },
-      renalAdjustment: { required: true, message: { pt: 'Evitar doses elevadas prolongadas no ClCr < 30 mL/min, pois os metabólitos ativos têm excreção renal.', es: 'Evitar dosis elevadas prolongadas en ClCr < 30 mL/min, pues los metabolitos activos tienen excreción renal.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Evitar altas doses. Aumentar intervalo.', es: 'Evitar altas dosis. Aumentar intervalo.' } },
-      commonAdverseEffects: { pt: ['Hipotensão (se injeção rápida)', 'Cromatúria (urina avermelhada - inofensivo)'], es: ['Hipotensión (si inyección rápida)', 'Cromaturia (orina rojiza - inofensivo)'] },
-      dangerousAdverseEffects: { pt: ['Agranulocitose fatal (incidência muito rara, mas motivou proibição nos EUA)', 'Choque anafilático', 'Síndrome de Kounis (vasoespasmo coronariano alérgico)'], es: ['Agranulocitosis fatal (incidencia muy rara, pero motivó prohibición en EE.UU.)', 'Choque anafiláctico', 'Síndrome de Kounis (vasoespasmo coronario alérgico)'] },
-      contraindications: {
-        absolute: { pt: ['Porfiria hepática aguda intermitente', 'Deficiência de G6PD (risco de hemólise)', 'Histórico de agranulocitose induzida por medicamentos', 'Terceiro trimestre de gestação (fechamento prematuro do ducto arterioso)'], es: ['Porfiria hepática aguda intermitente', 'Deficiencia de G6PD (riesgo de hemólisis)', 'Historial de agranulocitosis inducida por medicamentos', 'Tercer trimestre de embarazo (cierre prematuro del ductus arterioso)'] },
-        relative: { pt: ['Hipotensão arterial preexistente ou instabilidade hemodinâmica'], es: ['Hipotensión arterial preexistente o inestabilidad hemodinámica'] }
+      "administration": {
+        "pt": [
+          "Usar a menor dose que controle dor/febre",
+          "Administração parenteral deve ser lenta e com monitorização hemodinâmica devido ao risco de hipotensão",
+          "Se houver febre, calafrios, odinofagia ou lesões mucosas durante ou logo após uso, suspender imediatamente e colher hemograma com diferencial"
+        ],
+        "es": [
+          "Usar la menor dosis que controle dolor/fiebre",
+          "La administración parenteral debe ser lenta y con monitorización hemodinámica por riesgo de hipotensión",
+          "Si aparecen fiebre, escalofríos, odinofagia o lesiones mucosas durante o poco después del uso, suspender inmediatamente y obtener hemograma con diferencial"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'Em caso de febre alta inexplicada, calafrios, dor de garganta ou lesões orais durante o uso, suspender imediatamente e realizar hemograma (suspeita de agranulocitose).', es: 'En caso de fiebre alta inexplicada, escalofríos, dolor de garganta o lesiones orales durante el uso, suspender inmediatamente y realizar hemograma (sospecha de agranulocitosis).' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Evitar doses altas repetidas em disfunção renal importante; não há fator agudo universal. Titular à menor dose eficaz.",
+          "es": "Evitar dosis altas repetidas en disfunción renal importante; no existe un factor agudo universal. Titular a la menor dosis eficaz."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Evitar doses altas repetidas em disfunção hepática importante; usar menor dose eficaz e ampliar intervalo conforme clínica.",
+          "es": "Evitar dosis altas repetidas en disfunción hepática importante; usar la menor dosis eficaz y ampliar intervalo según clínica."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Hipotensão, especialmente com administração IV rápida",
+          "Náusea",
+          "Reações cutâneas"
+        ],
+        "es": [
+          "Hipotensión, especialmente con administración IV rápida",
+          "Náuseas",
+          "Reacciones cutáneas"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Agranulocitose",
+          "Anafilaxia/choque",
+          "Reações cutâneas graves"
+        ],
+        "es": [
+          "Agranulocitosis",
+          "Anafilaxia/shock",
+          "Reacciones cutáneas graves"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Agranulocitose prévia por metamizol ou outra pirazolona/pirazolidina",
+            "Disfunção de medula óssea ou doença hematopoética relevante",
+            "Hipersensibilidade ao metamizol/pirazolonas",
+            "Terceiro trimestre da gestação"
+          ],
+          "es": [
+            "Agranulocitosis previa por metamizol u otra pirazolona/pirazolidina",
+            "Disfunción de médula ósea o enfermedad hematopoyética relevante",
+            "Hipersensibilidad a metamizol/pirazolonas",
+            "Tercer trimestre del embarazo"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Hipotensão/instabilidade hemodinâmica",
+            "Disfunção renal ou hepática importante"
+          ],
+          "es": [
+            "Hipotensión/inestabilidad hemodinámica",
+            "Disfunción renal o hepática importante"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "A agranulocitose não é dose-dependente, pode surgir durante ou logo após o tratamento e pode ocorrer mesmo após usos prévios sem problemas. Hemograma de rotina não demonstrou benefício; investigar imediatamente se houver sintomas.",
+          "es": "La agranulocitosis no depende de la dosis, puede aparecer durante o poco después del tratamiento y puede ocurrir incluso tras usos previos sin problemas. El hemograma rutinario no demostró beneficio; investigar de inmediato si hay síntomas."
+        }
       }
     }
 
@@ -169,45 +358,147 @@
 
     /* ── IBUPROFENO (ativo) ────────────────────────────────────────────── */
     "ibuprofeno": {
-      name: { pt: 'Ibuprofeno', es: 'Ibuprofeno' },
-      category: 'analgesia',
-      class: { pt: 'AINE derivado do ácido propiônico', es: 'AINE derivado del ácido propiónico' },
-      indications: {
-        pt: ['Dor leve a moderada', 'Febre', 'Dismenorreia primária', 'Doenças inflamatórias musculoesqueléticas (Artrite reumatoide, Osteoartrite)'],
-        es: ['Dolor leve a moderado', 'Fiebre', 'Dismenorrea primaria', 'Enfermedades inflamatorias musculoesqueléticas (Artritis reumatoide, Osteoartritis)']
+      "name": {
+        "pt": "Ibuprofeno",
+        "es": "Ibuprofeno"
       },
-      commercialNames: { br: ['Alivium', 'Advil', 'Buscofem', 'Ibuprofeno'], ar: ['Ibupirac', 'Actron'] },
-      presentation: { pt: ['Comprimidos/Cápsulas moles 200, 400 e 600 mg', 'Suspensão oral 50 mg/mL ou 100 mg/mL'], es: ['Comprimidos/Cápsulas blandas 200, 400 y 600 mg', 'Suspensión oral 50 mg/mL o 100 mg/mL'] },
-      mechanism: {
-        pt: 'Inibição REVERSÍVEL e não seletiva das enzimas ciclooxigenases (COX-1 e COX-2). Reduz a síntese de prostaglandinas e tromboxanos em todo o corpo, promovendo analgesia, redução da inflamação e antipirese.',
-        es: 'Inhibición REVERSIBLE y no selectiva de las enzimas ciclooxigenasas (COX-1 y COX-2). Reduce la síntesis de prostaglandinas y tromboxanos en todo el cuerpo, promoviendo analgesia, reducción de la inflamación y antipiresis.'
+      "category": "analgesia",
+      "class": {
+        "pt": "AINE não seletivo COX-1/COX-2",
+        "es": "AINE no selectivo COX-1/COX-2"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: '200 a 600 mg VO a cada 6 ou 8 horas. Dose máxima diária: 3200 mg (Dose habitual OTC: 1200 mg/dia).',
-            es: '200 a 600 mg VO cada 6 u 8 horas. Dosis máxima diaria: 3200 mg (Dosis habitual OTC: 1200 mg/día).'
-          }
+      "indications": {
+        "pt": [
+          "Dor leve a moderada",
+          "Dismenorreia",
+          "Febre",
+          "Doenças inflamatórias musculoesqueléticas"
+        ],
+        "es": [
+          "Dolor leve a moderado",
+          "Dismenorrea",
+          "Fiebre",
+          "Enfermedades inflamatorias musculoesqueléticas"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Ibuprofeno",
+          "Advil",
+          "Alivium"
+        ],
+        "ar": [
+          "Ibuprofeno"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Comprimidos/cápsulas e suspensão oral"
+        ],
+        "es": [
+          "Comprimidos/cápsulas y suspensión oral"
+        ]
+      },
+      "mechanism": {
+        "pt": "Inibe reversivelmente COX-1 e COX-2, reduzindo síntese de prostaglandinas. Isso explica analgesia/anti-inflamação e também riscos gastrointestinal, renal e cardiovascular.",
+        "es": "Inhibe reversiblemente COX-1 y COX-2, reduciendo la síntesis de prostaglandinas. Esto explica analgesia/antiinflamación y también riesgos gastrointestinal, renal y cardiovascular."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dor/dismenorreia: 400 mg VO a cada 4–6 h conforme necessidade. Em doenças inflamatórias, doses prescritas podem chegar a 3.200 mg/dia; usar a menor dose efetiva pelo menor tempo.",
+          "es": "Dolor/dismenorrea: 400 mg VO cada 4–6 h según necesidad. En enfermedades inflamatorias, dosis prescritas pueden llegar a 3.200 mg/día; usar la menor dosis efectiva durante el menor tiempo."
         },
-        pediatric: {
-          standard: {
-            pt: '5 a 10 mg/kg/dose a cada 6 a 8 horas. Dose máxima: 40 mg/kg/dia.',
-            es: '5 a 10 mg/kg/dosis cada 6 a 8 horas. Dosis máxima: 40 mg/kg/día.'
-          }
+        "pediatric": {
+          "pt": "≥6 meses, analgesia: 10 mg/kg VO a cada 6–8 h; máximo 40 mg/kg/dia. Para febre, 5–10 mg/kg conforme temperatura e produto.",
+          "es": "≥6 meses, analgesia: 10 mg/kg VO cada 6–8 h; máximo 40 mg/kg/día. Para fiebre, 5–10 mg/kg según temperatura y producto."
         }
       },
-      administration: { pt: ['Tomar junto com alimentos ou leite para minimizar irritação gástrica.'], es: ['Tomar junto con alimentos o leche para minimizar irritación gástrica.'] },
-      renalAdjustment: { required: true, message: { pt: 'EVITAR uso se ClCr < 30 mL/min. As prostaglandinas renais são vitais para a perfusão; inibi-las causa lesão renal aguda (LRA) prérrenal grave.', es: 'EVITAR uso si ClCr < 30 mL/min. Las prostaglandinas renales son vitales para la perfusión; inhibirlas causa lesión renal aguda (LRA) prerrenal grave.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Cautela na insuficiência hepática moderada. Evitar na severa.', es: 'Precaución en insuficiencia hepática moderada. Evitar en severa.' } },
-      commonAdverseEffects: { pt: ['Dispepsia', 'Azia', 'Náusea', 'Retenção de fluidos (edema leve)'], es: ['Dispepsia', 'Pirosis', 'Náusea', 'Retención de fluidos (edema leve)'] },
-      dangerousAdverseEffects: { pt: ['Hemorragia/Úlcera gastrointestinal', 'Lesão Renal Aguda (LRA)', 'Aumento do risco cardiovascular (IAM e AVC em uso crônico de altas doses)', 'Piora da IC congestiva'], es: ['Hemorragia/Úlcera gastrointestinal', 'Lesión Renal Aguda (LRA)', 'Aumento del riesgo cardiovascular (IAM y ACV en uso crónico de altas dosis)', 'Empeoramiento de la IC congestiva'] },
-      contraindications: {
-        absolute: { pt: ['Úlcera péptica ativa ou sangramento GI', 'Cirurgia de revascularização miocárdica (CABG) recente', 'Terceiro trimestre de gravidez (fechamento do ducto arterioso)'], es: ['Úlcera péptica activa o sangrado GI', 'Cirugía de revascularización miocárdica (CABG) reciente', 'Tercer trimestre de embarazo (cierre del ductus arterioso)'] },
-        relative: { pt: ['Insuficiência cardíaca', 'Hipertensão arterial não controlada', 'Uso concomitante de anticoagulantes'], es: ['Insuficiencia cardíaca', 'Hipertensión arterial no controlada', 'Uso concomitante de anticoagulantes'] }
+      "administration": {
+        "pt": [
+          "Usar menor dose efetiva pelo menor tempo",
+          "Evitar associação com outro AINE sistêmico",
+          "Avaliar hidratação, função renal e risco GI/CV"
+        ],
+        "es": [
+          "Usar la menor dosis efectiva durante el menor tiempo",
+          "Evitar asociación con otro AINE sistémico",
+          "Evaluar hidratación, función renal y riesgo GI/CV"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O ibuprofeno possui Efeito de Classe dos AINEs: aumenta o risco de eventos trombóticos cardiovasculares e gastrointestinais. Eleva a PA e antagoniza o efeito de quase todos os anti-hipertensivos.', es: 'El ibuprofeno posee Efecto de Clase de los AINEs: aumenta el riesgo de eventos trombóticos cardiovasculares y gastrointestinales. Eleva la PA y antagoniza el efecto de casi todos los antihipertensivos.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Evitar ou usar com grande cautela na doença renal avançada, hipovolemia ou situações de baixa perfusão renal; não há fator universal de redução.",
+          "es": "Evitar o usar con gran precaución en enfermedad renal avanzada, hipovolemia o situaciones de baja perfusión renal; no existe un factor universal de reducción."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar menor dose e monitorar em hepatopatia; suspender se houver lesão hepática clinicamente relevante.",
+          "es": "Usar menor dosis y monitorizar en hepatopatía; suspender si aparece lesión hepática clínicamente relevante."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Dispepsia",
+          "Náusea",
+          "Edema",
+          "Elevação da pressão arterial"
+        ],
+        "es": [
+          "Dispepsia",
+          "Náuseas",
+          "Edema",
+          "Elevación de la presión arterial"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Sangramento/úlcera/perfuração GI",
+          "Lesão renal aguda",
+          "IAM/AVC trombótico",
+          "Anafilaxia/broncoespasmo em suscetíveis"
+        ],
+        "es": [
+          "Sangrado/úlcera/perforación GI",
+          "Lesión renal aguda",
+          "IAM/ACV trombótico",
+          "Anafilaxia/broncoespasmo en susceptibles"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade a AINEs",
+            "Asma/urticária após AAS ou outro AINE",
+            "Período perioperatório de CABG"
+          ],
+          "es": [
+            "Hipersensibilidad a AINEs",
+            "Asma/urticaria tras AAS u otro AINE",
+            "Período perioperatorio de CABG"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "DRC, hipovolemia, insuficiência cardíaca, anticoagulação, história de úlcera"
+          ],
+          "es": [
+            "ERC, hipovolemia, insuficiencia cardíaca, anticoagulación, antecedente de úlcera"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": true,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "AINEs aumentam risco de eventos trombóticos CV graves e sangramento/ulceração/perfuração GI; o risco pode surgir cedo.",
+          "es": "Los AINE aumentan el riesgo de eventos trombóticos CV graves y sangrado/ulceración/perforación GI; el riesgo puede aparecer precozmente."
+        }
       }
     }
 
@@ -241,89 +532,290 @@
 
     /* ── NAPROXENO ─────────────────────────────────────────────────────── */
     "naproxeno": {
-      name: { pt: 'Naproxeno', es: 'Naproxeno' },
-      category: 'analgesia',
-      class: { pt: 'AINE derivado do ácido propiônico', es: 'AINE derivado del ácido propiónico' },
-      indications: {
-        pt: ['Dor leve a moderada', 'Febre', 'Dismenorreia primária', 'Doenças inflamatórias musculoesqueléticas (Artrite reumatoide, Osteoartrite, Espondilite anquilosante)', 'Gota aguda'],
-        es: ['Dolor leve a moderado', 'Fiebre', 'Dismenorrea primaria', 'Enfermedades inflamatorias musculoesqueléticas (Artritis reumatoide, Osteoartritis, Espondilitis anquilosante)', 'Gota aguda']
+      "name": {
+        "pt": "Naproxeno",
+        "es": "Naproxeno"
       },
-      commercialNames: { br: ['Flanax', 'Naprosyn', 'Naprix'], ar: ['Flanax', 'Naxen'] },
-      presentation: { pt: ['Comprimidos 250, 500 e 550 mg', 'Suspensão oral 25 mg/mL'], es: ['Comprimidos 250, 500 y 550 mg', 'Suspensión oral 25 mg/mL'] },
-      mechanism: {
-        pt: 'Inibição REVERSÍVEL e não seletiva das enzimas ciclooxigenases (COX-1 e COX-2), reduzindo a síntese de prostaglandinas e tromboxanos. Possui meia-vida plasmática longa (12-17h), permitindo posologia de 2x/dia, e é considerado um dos AINEs não seletivos com perfil cardiovascular relativamente mais favorável (menor risco trombótico que coxibes e diclofenaco em estudos observacionais).',
-        es: 'Inhibición REVERSIBLE y no selectiva de las enzimas ciclooxigenasas (COX-1 y COX-2), reduciendo la síntesis de prostaglandinas y tromboxanos. Posee vida media plasmática larga (12-17h), permitiendo posología de 2 veces/día, y es considerado uno de los AINEs no selectivos con perfil cardiovascular relativamente más favorable (menor riesgo trombótico que coxibes y diclofenaco en estudios observacionales).'
+      "category": "analgesia",
+      "class": {
+        "pt": "AINE não seletivo",
+        "es": "AINE no selectivo"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: '250 a 500 mg VO a cada 12 horas. Dose máxima diária: 1250 mg (crise aguda) ou 1000 mg (manutenção). Gota aguda: 750 mg dose inicial, seguido de 250 mg a cada 8h.',
-            es: '250 a 500 mg VO cada 12 horas. Dosis máxima diaria: 1250 mg (crisis aguda) o 1000 mg (mantenimiento). Gota aguda: 750 mg dosis inicial, seguido de 250 mg cada 8h.'
-          }
+      "indications": {
+        "pt": [
+          "Dor aguda",
+          "Dismenorreia",
+          "Tendinite/bursite",
+          "Gota aguda",
+          "Doenças inflamatórias articulares"
+        ],
+        "es": [
+          "Dolor agudo",
+          "Dismenorrea",
+          "Tendinitis/bursitis",
+          "Gota aguda",
+          "Enfermedades inflamatorias articulares"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Flanax",
+          "Naproxeno"
+        ],
+        "ar": [
+          "Naproxeno"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Comprimidos 250/375/500 mg; naproxeno sódico possui forças/formulações próprias"
+        ],
+        "es": [
+          "Comprimidos 250/375/500 mg; naproxeno sódico posee concentraciones/formulaciones propias"
+        ]
+      },
+      "mechanism": {
+        "pt": "Inibe COX-1/COX-2 e síntese de prostaglandinas, com analgesia e anti-inflamação e riscos GI/renal/CV de classe.",
+        "es": "Inhibe COX-1/COX-2 y síntesis de prostaglandinas, con analgesia y antiinflamación y riesgos GI/renal/CV de clase."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dor/dismenorreia/tendinite/bursite: 500 mg VO inicialmente, depois 250 mg a cada 6–8 h conforme necessidade; máximo 1.250 mg/dia de naproxeno.",
+          "es": "Dolor/dismenorrea/tendinitis/bursitis: 500 mg VO inicialmente, luego 250 mg cada 6–8 h según necesidad; máximo 1.250 mg/día de naproxeno."
         },
-        pediatric: {
-          standard: {
-            pt: '5 a 7 mg/kg/dose a cada 8 a 12 horas (crianças > 2 anos). Dose máxima: 15 mg/kg/dia.',
-            es: '5 a 7 mg/kg/dosis cada 8 a 12 horas (niños > 2 años). Dosis máxima: 15 mg/kg/día.'
-          }
+        "pediatric": {
+          "pt": "Artrite idiopática juvenil poliarticular: aproximadamente 10 mg/kg/dia em 2 doses. Formulação líquida pode ser preferível para ajuste por peso.",
+          "es": "Artritis idiopática juvenil poliarticular: aproximadamente 10 mg/kg/día en 2 dosis. La formulación líquida puede ser preferible para ajuste por peso."
         }
       },
-      administration: { pt: ['Tomar junto com alimentos ou leite para minimizar irritação gástrica.', 'Manter hidratação adequada durante o tratamento.'], es: ['Tomar junto con alimentos o leche para minimizar irritación gástrica.', 'Mantener hidratación adecuada durante el tratamiento.'] },
-      renalAdjustment: { required: true, message: { pt: 'EVITAR uso se ClCr < 30 mL/min. As prostaglandinas renais são vitais para a perfusão; inibi-las causa lesão renal aguda (LRA) prérrenal grave.', es: 'EVITAR uso si ClCr < 30 mL/min. Las prostaglandinas renales son vitales para la perfusión; inhibirlas causa lesión renal aguda (LRA) prerrenal grave.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Cautela na insuficiência hepática moderada. Evitar na severa.', es: 'Precaución en insuficiencia hepática moderada. Evitar en severa.' } },
-      commonAdverseEffects: { pt: ['Dispepsia', 'Azia', 'Náusea', 'Cefaleia', 'Tontura'], es: ['Dispepsia', 'Pirosis', 'Náusea', 'Cefalea', 'Mareo'] },
-      dangerousAdverseEffects: { pt: ['Hemorragia/Úlcera gastrointestinal', 'Lesão Renal Aguda (LRA)', 'Aumento do risco cardiovascular (IAM e AVC em uso crônico de altas doses, embora com perfil relativamente mais favorável que outros AINEs)', 'Piora da IC congestiva'], es: ['Hemorragia/Úlcera gastrointestinal', 'Lesión Renal Aguda (LRA)', 'Aumento del riesgo cardiovascular (IAM y ACV en uso crónico de altas dosis, aunque con perfil relativamente más favorable que otros AINEs)', 'Empeoramiento de la IC congestiva'] },
-      contraindications: {
-        absolute: { pt: ['Úlcera péptica ativa ou sangramento GI', 'Cirurgia de revascularização miocárdica (CABG) recente', 'Terceiro trimestre de gravidez (fechamento do ducto arterioso)'], es: ['Úlcera péptica activa o sangrado GI', 'Cirugía de revascularización miocárdica (CABG) reciente', 'Tercer trimestre de embarazo (cierre del ductus arterioso)'] },
-        relative: { pt: ['Insuficiência cardíaca', 'Hipertensão arterial não controlada', 'Uso concomitante de anticoagulantes'], es: ['Insuficiencia cardíaca', 'Hipertensión arterial no controlada', 'Uso concomitante de anticoagulantes'] }
+      "administration": {
+        "pt": [
+          "Usar menor dose efetiva pelo menor tempo",
+          "Naproxeno e naproxeno sódico não são intercambiáveis mg por mg sem considerar formulação",
+          "Evitar outro AINE concomitante"
+        ],
+        "es": [
+          "Usar la menor dosis efectiva durante el menor tiempo",
+          "Naproxeno y naproxeno sódico no son intercambiables mg por mg sin considerar formulación",
+          "Evitar otro AINE concomitante"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O naproxeno possui Efeito de Classe dos AINEs: aumenta o risco de eventos trombóticos cardiovasculares e gastrointestinais, embora com perfil cardiovascular relativamente mais favorável entre os AINEs não seletivos. Eleva a PA e antagoniza o efeito de quase todos os anti-hipertensivos.', es: 'El naproxeno posee Efecto de Clase de los AINEs: aumenta el riesgo de eventos trombóticos cardiovasculares y gastrointestinales, aunque con perfil cardiovascular relativamente más favorable entre los AINEs no selectivos. Eleva la PA y antagoniza el efecto de casi todos los antihipertensivos.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Evitar em insuficiência renal grave/baixa perfusão; monitorar rim e volume em pacientes de risco.",
+          "es": "Evitar en insuficiencia renal grave/baja perfusión; monitorizar riñón y volumen en pacientes de riesgo."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela e menor dose em hepatopatia significativa.",
+          "es": "Usar precaución y menor dosis en hepatopatía significativa."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Dispepsia",
+          "Náusea",
+          "Edema",
+          "Cefaleia"
+        ],
+        "es": [
+          "Dispepsia",
+          "Náuseas",
+          "Edema",
+          "Cefalea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Sangramento GI",
+          "Lesão renal aguda",
+          "Eventos trombóticos CV",
+          "Reações cutâneas graves"
+        ],
+        "es": [
+          "Sangrado GI",
+          "Lesión renal aguda",
+          "Eventos trombóticos CV",
+          "Reacciones cutáneas graves"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade/AINE-asthma",
+            "CABG perioperatório"
+          ],
+          "es": [
+            "Hipersensibilidad/asma por AINE",
+            "CABG perioperatorio"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "DRC, IC, anticoagulação, úlcera prévia"
+          ],
+          "es": [
+            "ERC, IC, anticoagulación, úlcera previa"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": true,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Mesmo sendo um AINE de uso comum, mantém boxed warning para eventos trombóticos CV e sangramento/ulceração/perfuração GI.",
+          "es": "Aunque es un AINE de uso común, mantiene boxed warning por eventos trombóticos CV y sangrado/ulceración/perforación GI."
+        }
       }
     },
 
     /* ── DICLOFENACO ───────────────────────────────────────────────────── */
     "diclofenaco": {
-      name: { pt: 'Diclofenaco', es: 'Diclofenaco' },
-      category: 'analgesia',
-      class: { pt: 'AINE derivado do ácido fenilacético', es: 'AINE derivado del ácido fenilacético' },
-      indications: {
-        pt: ['Dor leve a moderada', 'Doenças inflamatórias musculoesqueléticas (Artrite reumatoide, Osteoartrite, Espondilite anquilosante)', 'Cólica renal', 'Dismenorreia primária', 'Uso tópico em dor musculoesquelética localizada'],
-        es: ['Dolor leve a moderado', 'Enfermedades inflamatorias musculoesqueléticas (Artritis reumatoide, Osteoartritis, Espondilitis anquilosante)', 'Cólico renal', 'Dismenorrea primaria', 'Uso tópico en dolor musculoesquelético localizado']
+      "name": {
+        "pt": "Diclofenaco",
+        "es": "Diclofenaco"
       },
-      commercialNames: { br: ['Voltaren', 'Cataflam', 'Diclofen'], ar: ['Voltaren', 'Flogoril'] },
-      presentation: { pt: ['Comprimidos 50 mg (potássico/Cataflam) e 50-100 mg (sódico/Voltaren)', 'Ampolas IM 75 mg/3mL', 'Gel tópico 1%'], es: ['Comprimidos 50 mg (potásico/Cataflam) y 50-100 mg (sódico/Voltaren)', 'Ampollas IM 75 mg/3mL', 'Gel tópico 1%'] },
-      mechanism: {
-        pt: 'Inibição REVERSÍVEL e não seletiva das enzimas ciclooxigenases (COX-1 e COX-2), com discreta preferência pela COX-2. Reduz a síntese de prostaglandinas e tromboxanos. Possui, entre os AINEs não seletivos, o maior risco cardiovascular relativo (trombótico) documentado em metanálises, comparável a alguns coxibes.',
-        es: 'Inhibición REVERSIBLE y no selectiva de las enzimas ciclooxigenasas (COX-1 y COX-2), con discreta preferencia por la COX-2. Reduce la síntesis de prostaglandinas y tromboxanos. Posee, entre los AINEs no selectivos, el mayor riesgo cardiovascular relativo (trombótico) documentado en metaanálisis, comparable a algunos coxibes.'
+      "category": "analgesia",
+      "class": {
+        "pt": "AINE não seletivo com preferência relativa por COX-2",
+        "es": "AINE no selectivo con preferencia relativa por COX-2"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: '50 mg VO a cada 8 horas ou 75 mg a cada 12 horas. Dose máxima diária: 150 mg. IM: 75 mg 1x/dia (máx 2 dias consecutivos).',
-            es: '50 mg VO cada 8 horas o 75 mg cada 12 horas. Dosis máxima diaria: 150 mg. IM: 75 mg 1 vez/día (máx 2 días consecutivos).'
-          }
+      "indications": {
+        "pt": [
+          "Osteoartrite",
+          "Artrite reumatoide",
+          "Espondilite anquilosante",
+          "Dor inflamatória conforme formulação"
+        ],
+        "es": [
+          "Osteoartritis",
+          "Artritis reumatoide",
+          "Espondilitis anquilosante",
+          "Dolor inflamatorio según formulación"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Voltaren",
+          "Cataflam"
+        ],
+        "ar": [
+          "Diclofenac",
+          "Voltaren"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Comprimidos de liberação imediata/retardada, gel e injetável conforme mercado"
+        ],
+        "es": [
+          "Comprimidos de liberación inmediata/retardada, gel e inyectable según mercado"
+        ]
+      },
+      "mechanism": {
+        "pt": "Inibe COX e síntese de prostaglandinas. O benefício anti-inflamatório acompanha riscos de classe GI, renal, cardiovascular e hepático.",
+        "es": "Inhibe COX y síntesis de prostaglandinas. El beneficio antiinflamatorio se acompaña de riesgos de clase GI, renal, cardiovascular y hepático."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Comprimido de liberação retardada: osteoartrite 100–150 mg/dia em doses divididas (50 mg 2–3x/dia ou 75 mg 2x/dia). Artrite reumatoide: 150–200 mg/dia em doses divididas.",
+          "es": "Comprimido de liberación retardada: osteoartritis 100–150 mg/día en dosis divididas (50 mg 2–3x/día o 75 mg 2x/día). Artritis reumatoide: 150–200 mg/día en dosis divididas."
         },
-        pediatric: {
-          standard: {
-            pt: '0,5 a 2 mg/kg/dia divididos em 2 a 3 doses (crianças > 1 ano). Dose máxima: 3 mg/kg/dia.',
-            es: '0,5 a 2 mg/kg/día divididos en 2 a 3 dosis (niños > 1 año). Dosis máxima: 3 mg/kg/día.'
-          }
+        "pediatric": {
+          "pt": "A dose pediátrica depende da indicação e formulação; não extrapolar o esquema adulto de comprimidos de liberação retardada.",
+          "es": "La dosis pediátrica depende de la indicación y formulación; no extrapolar el esquema adulto de comprimidos de liberación retardada."
         }
       },
-      administration: { pt: ['Tomar junto com alimentos para minimizar irritação gástrica.', 'Comprimidos de revestimento entérico não devem ser partidos/mastigados.'], es: ['Tomar junto con alimentos para minimizar irritación gástrica.', 'Comprimidos de cubierta entérica no deben partirse/masticarse.'] },
-      renalAdjustment: { required: true, message: { pt: 'EVITAR uso se ClCr < 30 mL/min. As prostaglandinas renais são vitais para a perfusão; inibi-las causa lesão renal aguda (LRA) prérrenal grave.', es: 'EVITAR uso si ClCr < 30 mL/min. Las prostaglandinas renales son vitales para la perfusión; inhibirlas causa lesión renal aguda (LRA) prerrenal grave.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Risco de hepatotoxicidade idiossincrática (transaminases elevadas). Cautela na insuficiência hepática moderada. Evitar na severa.', es: 'Riesgo de hepatotoxicidad idiosincrática (transaminasas elevadas). Precaución en insuficiencia hepática moderada. Evitar en severa.' } },
-      commonAdverseEffects: { pt: ['Dispepsia', 'Azia', 'Náusea', 'Cefaleia', 'Elevação transitória de transaminases'], es: ['Dispepsia', 'Pirosis', 'Náusea', 'Cefalea', 'Elevación transitoria de transaminasas'] },
-      dangerousAdverseEffects: { pt: ['Hemorragia/Úlcera gastrointestinal', 'Lesão Renal Aguda (LRA)', 'Maior risco cardiovascular (IAM e AVC) entre os AINEs não seletivos', 'Hepatotoxicidade idiossincrática grave', 'Piora da IC congestiva'], es: ['Hemorragia/Úlcera gastrointestinal', 'Lesión Renal Aguda (LRA)', 'Mayor riesgo cardiovascular (IAM y ACV) entre los AINEs no selectivos', 'Hepatotoxicidad idiosincrática grave', 'Empeoramiento de la IC congestiva'] },
-      contraindications: {
-        absolute: { pt: ['Úlcera péptica ativa ou sangramento GI', 'Cirurgia de revascularização miocárdica (CABG) recente', 'Terceiro trimestre de gravidez (fechamento do ducto arterioso)', 'Insuficiência cardíaca grave (NYHA II-IV)'], es: ['Úlcera péptica activa o sangrado GI', 'Cirugía de revascularización miocárdica (CABG) reciente', 'Tercer trimestre de embarazo (cierre del ductus arterioso)', 'Insuficiencia cardíaca grave (NYHA II-IV)'] },
-        relative: { pt: ['Insuficiência cardíaca leve/moderada', 'Hipertensão arterial não controlada', 'Uso concomitante de anticoagulantes', 'Doença hepática preexistente'], es: ['Insuficiencia cardíaca leve/moderada', 'Hipertensión arterial no controlada', 'Uso concomitante de anticoagulantes', 'Enfermedad hepática preexistente'] }
+      "administration": {
+        "pt": [
+          "Usar a menor dose efetiva pelo menor tempo",
+          "Não intercambiar formulações apenas por equivalência em mg sem confirmar farmacocinética",
+          "Monitorar PA, rim, GI e enzimas hepáticas quando uso prolongado"
+        ],
+        "es": [
+          "Usar la menor dosis efectiva durante el menor tiempo",
+          "No intercambiar formulaciones solo por equivalencia en mg sin confirmar farmacocinética",
+          "Monitorizar PA, riñón, GI y enzimas hepáticas en uso prolongado"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: true, renalHighRisk: true, hepaticCaution: true, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'O diclofenaco possui o MAIOR risco cardiovascular trombótico entre os AINEs não seletivos (comparável a coxibes em metanálises), além de risco de hepatotoxicidade idiossincrática. Eleva a PA e antagoniza o efeito de quase todos os anti-hipertensivos.', es: 'El diclofenaco posee el MAYOR riesgo cardiovascular trombótico entre los AINEs no selectivos (comparable a coxibes en metaanálisis), además de riesgo de hepatotoxicidad idiosincrática. Eleva la PA y antagoniza el efecto de casi todos los antihipertensivos.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Evitar doença renal avançada quando possível; corrigir hipovolemia e monitorar função renal.",
+          "es": "Evitar enfermedad renal avanzada cuando sea posible; corregir hipovolemia y monitorizar función renal."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Pode causar hepatotoxicidade. Usar cautela, considerar transaminases em uso prolongado e suspender diante de lesão hepática clinicamente relevante.",
+          "es": "Puede causar hepatotoxicidad. Usar precaución, considerar transaminasas en uso prolongado y suspender ante lesión hepática clínicamente relevante."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Dispepsia",
+          "Náusea",
+          "Edema",
+          "Cefaleia"
+        ],
+        "es": [
+          "Dispepsia",
+          "Náuseas",
+          "Edema",
+          "Cefalea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Sangramento GI",
+          "Lesão renal aguda",
+          "Eventos trombóticos CV",
+          "Hepatotoxicidade grave"
+        ],
+        "es": [
+          "Sangrado GI",
+          "Lesión renal aguda",
+          "Eventos trombóticos CV",
+          "Hepatotoxicidad grave"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade/AINE-asthma",
+            "CABG perioperatório"
+          ],
+          "es": [
+            "Hipersensibilidad/asma por AINE",
+            "CABG perioperatorio"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "DRC, IC, hepatopatia, anticoagulação, úlcera prévia"
+          ],
+          "es": [
+            "ERC, IC, hepatopatía, anticoagulación, úlcera previa"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": true,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Além dos riscos GI/renal/CV de classe, diclofenaco merece atenção específica a hepatotoxicidade em uso sistêmico.",
+          "es": "Además de los riesgos GI/renal/CV de clase, diclofenac requiere atención específica a hepatotoxicidad en uso sistémico."
+        }
       }
     }
 
@@ -358,89 +850,289 @@
 
     /* ── CETOROLACO / KETOROLAC ─────────────────────────────────────────── */
     "cetorolaco": {
-      name: { pt: 'Cetorolaco', es: 'Ketorolac' },
-      category: 'analgesia',
-      class: { pt: 'AINE (Elevada potência analgésica)', es: 'AINE (Elevada potencia analgésica)' },
-      indications: {
-        pt: ['Dor aguda de moderada a severa (intensidade comparável a opioides)', 'Cólica renal', 'Dor pós-operatória aguda'],
-        es: ['Dolor agudo de moderado a severo (intensidad comparable a opioides)', 'Cólico renal', 'Dolor posoperatorio agudo']
+      "name": {
+        "pt": "Cetorolaco",
+        "es": "Ketorolaco"
       },
-      commercialNames: { br: ['Toragesic', 'Deocil'], ar: ['Sinalgia', 'Ketorolac'] },
-      presentation: { pt: ['Comprimidos sublinguais 10 mg', 'Ampolas IM/IV 30 mg/mL'], es: ['Comprimidos sublinguales 10 mg', 'Ampollas IM/IV 30 mg/mL'] },
-      mechanism: {
-        pt: 'Inibidor potente e não seletivo da COX, com excelente atividade analgésica e moderada atividade anti-inflamatória. Seu poder analgésico equipara-se ao da morfina para dores somáticas, mas com teto terapêutico e sem efeitos depressores do SNC.',
-        es: 'Inhibidor potente y no selectivo de la COX, con excelente actividad analgésica y moderada actividad antiinflamatoria. Su poder analgésico se equipara al de la morfina para dolores somáticos, pero con techo terapéutico y sin efectos depresores del SNC.'
+      "category": "analgesia",
+      "class": {
+        "pt": "AINE potente para analgesia aguda de curto prazo",
+        "es": "AINE potente para analgesia aguda de corto plazo"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: 'Sublingual (SL): 10 a 20 mg inicial, depois 10 mg a cada 6-8h. Máximo: 90 mg/dia (adultos hígidos) ou 60 mg/dia (idosos > 65 anos ou peso < 50kg). IV/IM: 30 mg a cada 8h.',
-            es: 'Sublingual (SL): 10 a 20 mg inicial, luego 10 mg cada 6-8h. Máximo: 90 mg/día (adultos sanos) o 60 mg/día (ancianos > 65 años o peso < 50kg). IV/IM: 30 mg cada 8h.'
-          }
+      "indications": {
+        "pt": [
+          "Dor aguda moderadamente intensa que requer analgesia em nível opioide, por curto prazo"
+        ],
+        "es": [
+          "Dolor agudo moderadamente intenso que requiere analgesia de nivel opioide, a corto plazo"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Toragesic",
+          "Cetorolaco"
+        ],
+        "ar": [
+          "Ketorolac"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução IV/IM e comprimidos; a terapia total sistêmica é limitada a 5 dias"
+        ],
+        "es": [
+          "Solución IV/IM y comprimidos; la terapia sistémica total está limitada a 5 días"
+        ]
+      },
+      "mechanism": {
+        "pt": "AINE inibidor de COX com potente efeito analgésico. Inibe função plaquetária e pode causar toxicidade GI e renal importante.",
+        "es": "AINE inhibidor de COX con potente efecto analgésico. Inhibe la función plaquetaria y puede causar toxicidad GI y renal importante."
+      },
+      "dose": {
+        "adult": {
+          "pt": "<65 anos: 30 mg IV/IM a cada 6 h, máximo 120 mg/dia. ≥65 anos, insuficiência renal ou <50 kg: 15 mg IV/IM a cada 6 h, máximo 60 mg/dia. Duração total combinada IV/IM + VO ≤5 dias.",
+          "es": "<65 años: 30 mg IV/IM cada 6 h, máximo 120 mg/día. ≥65 años, insuficiencia renal o <50 kg: 15 mg IV/IM cada 6 h, máximo 60 mg/día. Duración total combinada IV/IM + VO ≤5 días."
         },
-        pediatric: {
-          standard: {
-            pt: '0,5 mg/kg/dose IV/IM (máximo 15 mg). Não recomendado uso rotineiro sem supervisão especialista.',
-            es: '0,5 mg/kg/dosis IV/IM (máximo 15 mg). No recomendado uso rutinario sin supervisión de especialista.'
-          }
+        "pediatric": {
+          "pt": "A rotulagem atual dos EUA não indica cetorolaco para uso pediátrico rotineiro; não extrapolar o regime adulto.",
+          "es": "El rotulado actual de EE. UU. no indica ketorolaco para uso pediátrico rutinario; no extrapolar el régimen adulto."
         }
       },
-      administration: { pt: ['Uso LIMITADO A NO MÁXIMO 5 DIAS, independentemente da via (risco extremo de sangramento GI e lesão renal).'], es: ['Uso LIMITADO A UN MÁXIMO DE 5 DÍAS, independientemente de la vía (riesgo extremo de sangrado GI y lesión renal).'] },
-      renalAdjustment: { required: true, message: { pt: 'Evitar se ClCr < 50 mL/min. Contraindicado em falência renal. Se ClCr 50-89, reduzir a dose diária máxima para 60 mg.', es: 'Evitar si ClCr < 50 mL/min. Contraindicado en falla renal. Si ClCr 50-89, reducir la dosis diaria máxima a 60 mg.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Evitar em cirrose avançada (risco hemorrágico altíssimo).', es: 'Evitar en cirrosis avanzada (riesgo hemorrágico altísimo).' } },
-      commonAdverseEffects: { pt: ['Dispepsia aguda', 'Náusea', 'Dor no local da injeção IM', 'Tontura'], es: ['Dispepsia aguda', 'Náusea', 'Dolor en el sitio de inyección IM', 'Mareos'] },
-      dangerousAdverseEffects: { pt: ['Hemorragia digestiva maciça', 'Falência renal aguda (rápida instalação)', 'Hemorragia pós-operatória'], es: ['Hemorragia digestiva masiva', 'Falla renal aguda (rápida instalación)', 'Hemorragia posoperatoria'] },
-      contraindications: {
-        absolute: { pt: ['Uso profilático pré-cirúrgico (sangramento)', 'Histórico de úlcera péptica ou perfuração', 'Suspeita ou risco de sangramento intracraniano (AVEh)'], es: ['Uso profiláctico precirúrgico (sangrado)', 'Historial de úlcera péptica o perforación', 'Sospecha o riesgo de sangrado intracraneal (ACVh)'] },
-        relative: { pt: ['Uso simultâneo de outros AINEs', 'Asma (Tríade de Samter)'], es: ['Uso simultáneo de otros AINEs', 'Asma (Tríada de Samter)'] }
+      "administration": {
+        "pt": [
+          "Uso sistêmico total máximo de 5 dias",
+          "Não associar a AAS ou outro AINE",
+          "Corrigir hipovolemia antes de usar",
+          "Evitar uso neuraxial da formulação injetável"
+        ],
+        "es": [
+          "Uso sistémico total máximo de 5 días",
+          "No asociar con AAS u otro AINE",
+          "Corregir hipovolemia antes de usar",
+          "Evitar uso neuraxial de la formulación inyectable"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'REGRA DOS 5 DIAS: Jamais ultrapassar 5 dias de tratamento. O risco de nefrotoxicidade e sangramento fatal aumenta exponencialmente após este período.', es: 'REGLA DE LOS 5 DÍAS: Jamás superar 5 días de tratamiento. El riesgo de nefrotoxicidad y sangrado fatal aumenta exponencialmente tras este período.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Contraindicado em insuficiência renal avançada ou risco de falência renal por depleção volêmica. Em insuficiência renal menos grave, usar 15 mg a cada 6 h e máximo 60 mg/dia conforme rotulagem.",
+          "es": "Contraindicado en insuficiencia renal avanzada o riesgo de fallo renal por depleción de volumen. En insuficiencia renal menos grave, usar 15 mg cada 6 h y máximo 60 mg/día según rotulado."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar cautela em hepatopatia; interromper se houver sinais de lesão hepática significativa.",
+          "es": "Usar precaución en hepatopatía; suspender si aparecen signos de lesión hepática significativa."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Dispepsia",
+          "Cefaleia",
+          "Dor no local da injeção"
+        ],
+        "es": [
+          "Náuseas",
+          "Dispepsia",
+          "Cefalea",
+          "Dolor en el sitio de inyección"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Sangramento GI",
+          "Sangramento por inibição plaquetária",
+          "Lesão renal aguda",
+          "Eventos trombóticos CV"
+        ],
+        "es": [
+          "Sangrado GI",
+          "Sangrado por inhibición plaquetaria",
+          "Lesión renal aguda",
+          "Eventos trombóticos CV"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Doença renal avançada/risco por hipovolemia",
+            "Sangramento ativo ou alto risco hemorrágico",
+            "Úlcera péptica/sangramento GI ativo ou prévio relevante",
+            "Uso concomitante de AAS/outro AINE",
+            "CABG",
+            "Trabalho de parto"
+          ],
+          "es": [
+            "Enfermedad renal avanzada/riesgo por hipovolemia",
+            "Sangrado activo o alto riesgo hemorrágico",
+            "Úlcera péptica/sangrado GI activo o previo relevante",
+            "Uso concomitante de AAS/otro AINE",
+            "CABG",
+            "Trabajo de parto"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Idoso, baixo peso, anticoagulação"
+          ],
+          "es": [
+            "Adulto mayor, bajo peso, anticoagulación"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": true,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Cetorolaco é para uso agudo e curto: a soma das vias sistêmicas não pode ultrapassar 5 dias.",
+          "es": "Ketorolaco es para uso agudo y corto: la suma de las vías sistémicas no puede superar 5 días."
+        }
       }
     },
 
     /* ── CETOPROFENO / KETOPROFENO ──────────────────────────────────────── */
     "cetoprofeno": {
-      name: { pt: 'Cetoprofeno', es: 'Ketoprofeno' },
-      category: 'analgesia',
-      class: { pt: 'AINE derivado do ácido propiônico', es: 'AINE derivado del ácido propiónico' },
-      indications: {
-        pt: ['Processos inflamatórios musculoesqueléticos agudos (bursite, tendinite)', 'Artrite', 'Traumas e contusões', 'Dismenorreia'],
-        es: ['Procesos inflamatorios musculoesqueléticos agudos (bursitis, tendinitis)', 'Artritis', 'Traumas y contusiones', 'Dismenorrea']
+      "name": {
+        "pt": "Cetoprofeno",
+        "es": "Ketoprofeno"
       },
-      commercialNames: { br: ['Profenid', 'Biprofenid'], ar: ['Profenid'] },
-      presentation: { pt: ['Comprimidos 50 mg, 100 mg', 'Comprimidos liberação prolongada 150 mg, 200 mg', 'Solução injetável IM 100 mg', 'IV liofilizado 100 mg'], es: ['Comprimidos 50 mg, 100 mg', 'Comprimidos liberación prolongada 150 mg, 200 mg', 'Solución inyectable IM 100 mg', 'IV liofilizado 100 mg'] },
-      mechanism: {
-        pt: 'Inibidor de COX-1 e COX-2. Adicionalmente, possui propriedades inibitórias sobre a via da lipoxigenase (reduzindo leucotrienos) e antagoniza os efeitos da bradicinina, conferindo-lhe um perfil anti-inflamatório muito robusto.',
-        es: 'Inhibidor de COX-1 y COX-2. Adicionalmente, posee propiedades inhibitorias sobre la vía de la lipoxigenasa (reduciendo leucotrienos) y antagoniza los efectos de la bradicinina, confiriéndole un perfil antiinflamatorio muy robusto.'
+      "category": "analgesia",
+      "class": {
+        "pt": "AINE não seletivo",
+        "es": "AINE no selectivo"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: 'VO: 50 mg a cada 8h ou 100 a 200 mg 1x/dia (ação prolongada). IM/IV: 100 mg a cada 12h. Dose máxima diária: 200 a 300 mg.',
-            es: 'VO: 50 mg cada 8h o 100 a 200 mg 1 vez/día (acción prolongada). IM/IV: 100 mg cada 12h. Dosis máxima diaria: 200 a 300 mg.'
-          }
+      "indications": {
+        "pt": [
+          "Dor leve a moderada",
+          "Dismenorreia",
+          "Doenças inflamatórias musculoesqueléticas"
+        ],
+        "es": [
+          "Dolor leve a moderado",
+          "Dismenorrea",
+          "Enfermedades inflamatorias musculoesqueléticas"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Profenid",
+          "Cetoprofeno"
+        ],
+        "ar": [
+          "Ketoprofeno"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Cápsulas de liberação imediata; outras formulações variam por mercado"
+        ],
+        "es": [
+          "Cápsulas de liberación inmediata; otras formulaciones varían según mercado"
+        ]
+      },
+      "mechanism": {
+        "pt": "Inibe COX e síntese de prostaglandinas. Compartilha riscos de classe gastrointestinal, renal e cardiovascular.",
+        "es": "Inhibe COX y síntesis de prostaglandinas. Comparte riesgos de clase gastrointestinal, renal y cardiovascular."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dor/dismenorreia: 25–50 mg VO a cada 6–8 h conforme necessidade. Doses únicas acima de 75 mg não demonstraram benefício analgésico adicional; doses diárias >300 mg não são recomendadas.",
+          "es": "Dolor/dismenorrea: 25–50 mg VO cada 6–8 h según necesidad. Dosis únicas >75 mg no demostraron beneficio analgésico adicional; dosis diarias >300 mg no se recomiendan."
         },
-        pediatric: {
-          standard: {
-            pt: 'Geralmente não recomendado para crianças < 15 anos na prática diária, salvo indicação reumatológica estrita.',
-            es: 'Generalmente no recomendado para niños < 15 años en la práctica diaria, salvo indicación reumatológica estricta.'
-          }
+        "pediatric": {
+          "pt": "Segurança e posologia pediátrica sistêmica dependem do produto/mercado; não extrapolar o regime adulto.",
+          "es": "Seguridad y posología pediátrica sistémica dependen del producto/mercado; no extrapolar el régimen adulto."
         }
       },
-      administration: { pt: ['Tomar VO com refeições.', 'IV requer diluição em 100 mL de SF ou SG e infusão em 20-30 min. Proteja da luz.'], es: ['Tomar VO con comidas.', 'IV requiere dilución en 100 mL de SF o SG e infusión en 20-30 min. Proteger de la luz.'] },
-      renalAdjustment: { required: true, message: { pt: 'Reduzir dose pela metade em disfunção renal leve a moderada. Contraindicado em ClCr < 30 mL/min.', es: 'Reducir dosis a la mitad en disfunción renal leve a moderada. Contraindicado en ClCr < 30 mL/min.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Evitar ou usar dose mínima com monitoramento na insuficiência hepática grave.', es: 'Evitar o usar dosis mínima con monitorización en insuficiencia hepática grave.' } },
-      commonAdverseEffects: { pt: ['Gastrite / Dor epigástrica (alta frequência)', 'Cefaleia', 'Sonolência'], es: ['Gastritis / Dolor epigástrico (alta frecuencia)', 'Cefalea', 'Somnolencia'] },
-      dangerousAdverseEffects: { pt: ['Hemorragia gastrointestinal (risco maior que ibuprofeno)', 'Crise de asma', 'Falência renal aguda'], es: ['Hemorragia gastrointestinal (riesgo mayor que ibuprofeno)', 'Crisis de asma', 'Falla renal aguda'] },
-      contraindications: {
-        absolute: { pt: ['Úlcera péptica ativa', 'Terceiro trimestre de gravidez', 'Insuficiência cardíaca descompensada', 'Alergia a AAS ou AINEs'], es: ['Úlcera péptica activa', 'Tercer trimestre de embarazo', 'Insuficiencia cardíaca descompensada', 'Alergia a AAS o AINEs'] },
-        relative: { pt: ['Asma brônquica (risco de broncoespasmo)'], es: ['Asma bronquial (riesgo de broncoespasmo)'] }
+      "administration": {
+        "pt": [
+          "Usar menor dose efetiva pelo menor tempo",
+          "Pode ser administrado com alimento/leite se houver sintomas GI, reconhecendo possível atraso de absorção",
+          "Não associar outro AINE sistêmico"
+        ],
+        "es": [
+          "Usar la menor dosis efectiva durante el menor tiempo",
+          "Puede administrarse con alimento/leche si hay síntomas GI, reconociendo posible retraso de absorción",
+          "No asociar otro AINE sistémico"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: true, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'Alto risco gastrointestinal, justificando prescrição conjunta de IBP em idosos. A formulação IV é fotossensível.', es: 'Alto riesgo gastrointestinal, justificando prescripción conjunta de IBP en ancianos. La formulación IV es fotosensible.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar dose inicial menor em doença renal e evitar em doença renal avançada quando possível; monitorar creatinina e volume.",
+          "es": "Usar dosis inicial menor en enfermedad renal y evitar en enfermedad renal avanzada cuando sea posible; monitorizar creatinina y volumen."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Usar dose inicial menor em hepatopatia e monitorar em uso sistêmico prolongado.",
+          "es": "Usar dosis inicial menor en hepatopatía y monitorizar en uso sistémico prolongado."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Dispepsia",
+          "Náusea",
+          "Dor abdominal",
+          "Edema"
+        ],
+        "es": [
+          "Dispepsia",
+          "Náuseas",
+          "Dolor abdominal",
+          "Edema"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Sangramento GI",
+          "Lesão renal aguda",
+          "Eventos trombóticos CV",
+          "Reações cutâneas graves"
+        ],
+        "es": [
+          "Sangrado GI",
+          "Lesión renal aguda",
+          "Eventos trombóticos CV",
+          "Reacciones cutáneas graves"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade/AINE-asthma",
+            "CABG perioperatório"
+          ],
+          "es": [
+            "Hipersensibilidad/asma por AINE",
+            "CABG perioperatorio"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "DRC, IC, anticoagulação, úlcera prévia"
+          ],
+          "es": [
+            "ERC, IC, anticoagulación, úlcera previa"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": true,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Não combinar com outro AINE sistêmico; o aumento de dose eleva toxicidade sem garantir melhor analgesia.",
+          "es": "No combinar con otro AINE sistémico; aumentar la dosis eleva toxicidad sin garantizar mejor analgesia."
+        }
       }
     },
 
@@ -697,45 +1389,150 @@
 
     /* ── CELECOXIBE (submissão original: "celecoxib") ─────────────────────── */
     "celecoxibe": {
-      name: { pt: 'Celecoxibe', es: 'Celecoxib' },
-      category: 'analgesia',
-      class: { pt: 'AINE Coxibe (Inibidor Seletivo da COX-2)', es: 'AINE Coxib (Inhibidor Selectivo de la COX-2)' },
-      indications: {
-        pt: ['Osteoartrite', 'Artrite Reumatoide', 'Espondilite Anquilosante', 'Manejo da dor aguda'],
-        es: ['Osteoartritis', 'Artritis Reumatoide', 'Espondilitis Anquilosante', 'Manejo del dolor agudo']
+      "name": {
+        "pt": "Celecoxibe",
+        "es": "Celecoxib"
       },
-      commercialNames: { br: ['Celebra'], ar: ['Celebrex', 'Celecoxib'] },
-      presentation: { pt: ['Cápsulas 100 mg', '200 mg'], es: ['Cápsulas 100 mg', '200 mg'] },
-      mechanism: {
-        pt: 'Inibe seletivamente a COX-2, reduzindo a dor e a inflamação com menor agressão gastrintestinal e sem bloqueio plaquetário. Contém um grupamento estrutural sulfonamida. Diferente do rofecoxibe (retirado do mercado) e etoricoxibe, o celecoxibe demonstrou em grandes estudos (PRECISION) ter um risco cardiovascular não inferior ao ibuprofeno e naproxeno em dosagens moderadas (200mg/dia).',
-        es: 'Inhibe selectivamente la COX-2, reduciendo el dolor y la inflamación con menor agresión gastrointestinal y sin bloqueo plaquetario. Contiene un grupo estructural sulfonamida. A diferencia del rofecoxib (retirado del mercado) y etoricoxib, el celecoxib demostró en grandes estudios (PRECISION) tener un riesgo cardiovascular no inferior al ibuprofeno y naproxeno en dosis moderadas (200mg/día).'
+      "category": "analgesia",
+      "class": {
+        "pt": "AINE seletivo COX-2",
+        "es": "AINE selectivo COX-2"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: '200 mg VO 1x/dia ou 100 mg 12/12h. Pode-se aumentar para 400 mg/dia em dor aguda ou artrite severa.',
-            es: '200 mg VO 1 vez/día o 100 mg cada 12h. Se puede aumentar a 400 mg/día en dolor agudo o artritis severa.'
-          }
+      "indications": {
+        "pt": [
+          "Osteoartrite",
+          "Artrite reumatoide",
+          "Espondilite anquilosante",
+          "Dor aguda em adultos",
+          "Dismenorreia primária"
+        ],
+        "es": [
+          "Osteoartritis",
+          "Artritis reumatoide",
+          "Espondilitis anquilosante",
+          "Dolor agudo en adultos",
+          "Dismenorrea primaria"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Celebra",
+          "Celecoxibe"
+        ],
+        "ar": [
+          "Celecoxib"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Cápsulas 50, 100, 200 e 400 mg conforme produto"
+        ],
+        "es": [
+          "Cápsulas 50, 100, 200 y 400 mg según producto"
+        ]
+      },
+      "mechanism": {
+        "pt": "Inibe preferencialmente COX-2 em doses terapêuticas. Reduz inflamação/dor com menor efeito plaquetário que AINEs não seletivos, mas não elimina risco GI, renal ou cardiovascular.",
+        "es": "Inhibe preferentemente COX-2 a dosis terapéuticas. Reduce inflamación/dolor con menor efecto plaquetario que AINE no selectivos, pero no elimina riesgo GI, renal ni cardiovascular."
+      },
+      "dose": {
+        "adult": {
+          "pt": "OA: 200 mg/dia (200 mg 1x/dia ou 100 mg 2x/dia). Dor aguda/dismenorreia: 400 mg inicialmente, podendo acrescentar 200 mg no primeiro dia; depois 200 mg 2x/dia conforme necessidade.",
+          "es": "OA: 200 mg/día (200 mg 1x/día o 100 mg 2x/día). Dolor agudo/dismenorrea: 400 mg inicialmente, pudiendo añadir 200 mg el primer día; luego 200 mg 2x/día según necesidad."
         },
-        pediatric: {
-          standard: {
-            pt: 'Aprovado para Artrite Idiopática Juvenil em crianças > 2 anos (50 a 100 mg 12/12h baseado no peso).',
-            es: 'Aprobado para Artritis Idiopática Juvenil en niños > 2 años (50 a 100 mg cada 12h basado en el peso).'
-          }
+        "pediatric": {
+          "pt": "Artrite idiopática juvenil: 10–25 kg, 50 mg 2x/dia; >25 kg, 100 mg 2x/dia, conforme indicação/rotulagem.",
+          "es": "Artritis idiopática juvenil: 10–25 kg, 50 mg 2x/día; >25 kg, 100 mg 2x/día, según indicación/rotulado."
         }
       },
-      administration: { pt: ['Com ou sem alimentos. Pode abrir a cápsula e misturar em compota de maçã para dificuldade de deglutição.'], es: ['Con o sin alimentos. Se puede abrir la cápsula y mezclar en puré de manzana para dificultad de deglución.'] },
-      renalAdjustment: { required: true, message: { pt: 'Evitar na insuficiência renal grave (ClCr < 30 mL/min).', es: 'Evitar en insuficiencia renal grave (ClCr < 30 mL/min).' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Disfunção hepática moderada (Child B): Reduzir a dose diária em 50%.', es: 'Disfunción hepática moderada (Child B): Reducir la dosis diaria en 50%.' } },
-      commonAdverseEffects: { pt: ['Dispepsia (embora muito menor que AINEs tradicionais)', 'Edema periférico', 'Hipertensão leve', 'Diarreia'], es: ['Dispepsia (aunque mucho menor que AINEs tradicionales)', 'Edema periférico', 'Hipertensión leve', 'Diarrea'] },
-      dangerousAdverseEffects: { pt: ['Eventos aterotrombóticos (IAM, AVC) em altas doses', 'Anafilaxia cruzada com sulfas', 'Necrose papilar renal'], es: ['Eventos aterotrombóticos (IAM, ACV) en altas dosis', 'Anafilaxia cruzada con sulfas', 'Necrosis papilar renal'] },
-      contraindications: {
-        absolute: { pt: ['Alergia conhecida a SULFONAMIDAS (ex: sulfametoxazol)', 'Pós-operatório de Cirurgia de Revascularização Miocárdica (CABG)', 'Úlcera ativa / Sangramento GI'], es: ['Alergia conocida a SULFONAMIDAS (ej: sulfametoxazol)', 'Posoperatorio de Cirugía de Revascularización Miocárdica (CABG)', 'Úlcera activa / Sangrado GI'] },
-        relative: { pt: ['Doença isquêmica cardíaca prévia', 'Asma sensível a aspirina'], es: ['Enfermedad isquémica cardíaca previa', 'Asma sensible a aspirina'] }
+      "administration": {
+        "pt": [
+          "Usar menor dose efetiva pelo menor tempo",
+          "Pode ser administrado com ou sem alimento nas doses usuais",
+          "Evitar associação rotineira com outro AINE"
+        ],
+        "es": [
+          "Usar la menor dosis efectiva durante el menor tiempo",
+          "Puede administrarse con o sin alimento a dosis habituales",
+          "Evitar asociación rutinaria con otro AINE"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: false,
-        warning: { pt: 'Atenção à alergia cruzada a SULFAS. Inibidor enzimático: o celecoxibe inibe a enzima CYP2D6, podendo aumentar perigosamente níveis de betabloqueadores e antidepressivos.', es: 'Atención a la alergia cruzada a SULFAS. Inhibidor enzimático: el celecoxib inhibe la enzima CYP2D6, pudiendo aumentar peligrosamente niveles de betabloqueantes y antidepresivos.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Não recomendado em insuficiência renal grave; monitorar função renal em pacientes com DRC, IC, hipovolemia ou uso de IECA/ARB/diurético.",
+          "es": "No recomendado en insuficiencia renal grave; monitorizar función renal en pacientes con ERC, IC, hipovolemia o uso de IECA/ARA-II/diurético."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Child-Pugh B: reduzir dose diária em 50%. Insuficiência hepática grave: evitar.",
+          "es": "Child-Pugh B: reducir dosis diaria 50%. Insuficiencia hepática grave: evitar."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Dispepsia",
+          "Edema",
+          "Hipertensão",
+          "Diarreia"
+        ],
+        "es": [
+          "Dispepsia",
+          "Edema",
+          "Hipertensión",
+          "Diarrea"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Eventos trombóticos CV",
+          "Sangramento GI",
+          "Lesão renal",
+          "Reações cutâneas graves"
+        ],
+        "es": [
+          "Eventos trombóticos CV",
+          "Sangrado GI",
+          "Lesión renal",
+          "Reacciones cutáneas graves"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade ao celecoxibe",
+            "Reação alérgica a sulfonamidas conforme rotulagem",
+            "Asma/urticária após AAS/AINE",
+            "CABG perioperatório"
+          ],
+          "es": [
+            "Hipersensibilidad a celecoxib",
+            "Reacción alérgica a sulfonamidas según rotulado",
+            "Asma/urticaria tras AAS/AINE",
+            "CABG perioperatorio"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "DRC, IC, alto risco CV/GI"
+          ],
+          "es": [
+            "ERC, IC, alto riesgo CV/GI"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": true,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Seletividade COX-2 não elimina boxed warning cardiovascular e gastrointestinal.",
+          "es": "La selectividad COX-2 no elimina el boxed warning cardiovascular y gastrointestinal."
+        }
       }
     }
 
@@ -808,89 +1605,283 @@
 
     /* ── GABAPENTINA ────────────────────────────────────────────────────── */
     "gabapentina": {
-      name: { pt: 'Gabapentina', es: 'Gabapentina' },
-      category: 'analgesia',
-      class: { pt: 'Neuromodulador / Anticonvulsivante (Ligante alfa-2-delta)', es: 'Neuromodulador / Anticonvulsivante (Ligando alfa-2-delta)' },
-      indications: {
-        pt: ['Dor neuropática (neuropatia diabética, neuralgia pós-herpética)', 'Crises focais de epilepsia', 'Síndrome das pernas inquietas'],
-        es: ['Dolor neuropático (neuropatía diabética, neuralgia posherpética)', 'Crisis focales de epilepsia', 'Síndrome de las piernas inquietas']
+      "name": {
+        "pt": "Gabapentina",
+        "es": "Gabapentina"
       },
-      commercialNames: { br: ['Neurontin'], ar: ['Neurontin', 'Gabapentina'] },
-      presentation: { pt: ['Cápsulas 300 mg, 400 mg', 'Comprimidos 600 mg, 800 mg'], es: ['Cápsulas 300 mg, 400 mg', 'Comprimidos 600 mg, 800 mg'] },
-      mechanism: {
-        pt: 'Apesar do nome, não se liga aos receptores GABA. Liga-se à subunidade alfa-2-delta dos canais de cálcio voltagem-dependentes no Sistema Nervoso Central, reduzindo o influxo de cálcio e, consequentemente, inibindo a liberação de neurotransmissores excitatórios (glutamato, substância P).',
-        es: 'A pesar del nombre, no se une a los receptores GABA. Se une a la subunidad alfa-2-delta de los canales de calcio dependientes de voltaje en el Sistema Nervioso Central, reduciendo el influjo de calcio y, consecuentemente, inhibiendo la liberación de neurotransmisores excitatorios (glutamato, sustancia P).'
+      "category": "analgesia",
+      "class": {
+        "pt": "Gabapentinoide; ligante α2δ de canais de cálcio",
+        "es": "Gabapentinoide; ligando α2δ de canales de calcio"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: 'Dor neuropática: Iniciar 300 mg 1x/dia, escalonando +300 mg/dia até 300 mg 3x/dia (900mg/dia). Manutenção entre 900 a 3600 mg/dia, divididos em 3 tomadas.',
-            es: 'Dolor neuropático: Iniciar 300 mg 1 vez/día, escalonando +300 mg/día hasta 300 mg 3 veces/día (900mg/día). Mantenimiento entre 900 a 3600 mg/día, divididos en 3 tomas.'
-          }
+      "indications": {
+        "pt": [
+          "Neuralgia pós-herpética em adultos",
+          "Adjuvante em crises epilépticas focais",
+          "Uso em dor neuropática conforme indicação clínica"
+        ],
+        "es": [
+          "Neuralgia posherpética en adultos",
+          "Adyuvante en crisis epilépticas focales",
+          "Uso en dolor neuropático según indicación clínica"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Neurontin",
+          "Gabapentina"
+        ],
+        "ar": [
+          "Gabapentina"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Cápsulas/comprimidos e solução oral; forças variam"
+        ],
+        "es": [
+          "Cápsulas/comprimidos y solución oral; concentraciones variables"
+        ]
+      },
+      "mechanism": {
+        "pt": "Liga-se à subunidade α2δ dos canais de cálcio voltagem-dependentes, reduzindo liberação de neurotransmissores excitatórios. Não atua diretamente como agonista GABA.",
+        "es": "Se une a la subunidad α2δ de los canales de calcio dependientes de voltaje, reduciendo liberación de neurotransmisores excitatorios. No actúa directamente como agonista GABA."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Neuralgia pós-herpética: 300 mg no dia 1, 300 mg 2x/dia no dia 2, 300 mg 3x/dia no dia 3; titular conforme resposta. Faixa efetiva usual 900–1.800 mg/dia; rotulagem permite até 3.600 mg/dia em indicações selecionadas.",
+          "es": "Neuralgia posherpética: 300 mg día 1, 300 mg 2x/día día 2, 300 mg 3x/día día 3; titular según respuesta. Rango efectivo habitual 900–1.800 mg/día; el rotulado permite hasta 3.600 mg/día en indicaciones seleccionadas."
         },
-        pediatric: {
-          standard: {
-            pt: 'Epilepsia (3 a 12 anos): 10 a 15 mg/kg/dia inicial, titular até 25 a 35 mg/kg/dia divididos em 3 doses.',
-            es: 'Epilepsia (3 a 12 años): 10 a 15 mg/kg/día inicial, titular hasta 25 a 35 mg/kg/día divididos en 3 dosis.'
-          }
+        "pediatric": {
+          "pt": "Para epilepsia, existem esquemas pediátricos por idade; para dor neuropática pediátrica a evidência/rotulagem é diferente e não deve ser extrapolada automaticamente.",
+          "es": "Para epilepsia existen esquemas pediátricos por edad; para dolor neuropático pediátrico la evidencia/rotulado es diferente y no debe extrapolarse automáticamente."
         }
       },
-      administration: { pt: ['Pode ser tomado com ou sem alimentos.', 'O intervalo máximo entre as doses não deve exceder 12 horas para evitar crises rebote (em epilepsia).'], es: ['Puede tomarse con o sin alimentos.', 'El intervalo máximo entre las dosis no debe exceder las 12 horas para evitar crisis rebote (en epilepsia).'] },
-      renalAdjustment: { required: true, message: { pt: 'Fármaco 100% de excreção renal. ClCr 30-59: 400-1400 mg/dia. ClCr 15-29: 200-700 mg/dia. ClCr < 15: 100-300 mg/dia.', es: 'Fármaco 100% de excreción renal. ClCr 30-59: 400-1400 mg/día. ClCr 15-29: 200-700 mg/día. ClCr < 15: 100-300 mg/día.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Não sofre metabolismo hepático. Sem necessidade de ajuste.', es: 'No sufre metabolismo hepático. Sin necesidad de ajuste.' } },
-      commonAdverseEffects: { pt: ['Sonolência', 'Tontura / Ataxia', 'Edema periférico', 'Ganho de peso'], es: ['Somnolencia', 'Mareos / Ataxia', 'Edema periférico', 'Ganancia de peso'] },
-      dangerousAdverseEffects: { pt: ['Depressão respiratória grave (especialmente se combinada com opioides ou em idosos)', 'Ideação suicida (alerta de classe)'], es: ['Depresión respiratoria grave (especialmente si combinada con opioides o en ancianos)', 'Ideación suicida (alerta de clase)'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade conhecida à gabapentina'], es: ['Hipersensibilidad conocida a la gabapentina'] },
-        relative: { pt: ['Idosos frágeis (risco de queda por ataxia/sedação)'], es: ['Ancianos frágiles (riesgo de caída por ataxia/sedación)'] }
+      "administration": {
+        "pt": [
+          "VO; manter intervalos regulares",
+          "Retirar gradualmente, não abruptamente",
+          "Monitorar sedação, tontura e risco de quedas"
+        ],
+        "es": [
+          "VO; mantener intervalos regulares",
+          "Retirar gradualmente, no de forma abrupta",
+          "Monitorizar sedación, mareo y riesgo de caídas"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'Atenção à FDA Warning: Risco de depressão respiratória fatal em pacientes idosos, com DPOC ou em uso associado de opioides/depressores do SNC.', es: 'Atención a la FDA Warning: Riesgo de depresión respiratoria fatal en pacientes ancianos, con EPOC o en uso asociado de opioides/depresores del SNC.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Ajuste obrigatório por ClCr: ≥60 mL/min 900–3.600 mg/dia; 30–59: 400–1.400 mg/dia; 15–29: 200–700 mg/dia; ≈15: 100–300 mg/dia; <15 reduzir proporcionalmente. Hemodiálise requer dose suplementar pós-sessão.",
+          "es": "Ajuste obligatorio por ClCr: ≥60 mL/min 900–3.600 mg/día; 30–59: 400–1.400 mg/día; 15–29: 200–700 mg/día; ≈15: 100–300 mg/día; <15 reducir proporcionalmente. Hemodiálisis requiere dosis suplementaria pos-sesión."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não sofre metabolismo hepático relevante; não há ajuste hepático rotineiro.",
+          "es": "No sufre metabolismo hepático relevante; no hay ajuste hepático rutinario."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Tontura",
+          "Sonolência",
+          "Ataxia",
+          "Edema periférico"
+        ],
+        "es": [
+          "Mareo",
+          "Somnolencia",
+          "Ataxia",
+          "Edema periférico"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória com opioides/outros depressores do SNC",
+          "Ideação/comportamento suicida",
+          "Convulsões/abstinência se retirada abrupta"
+        ],
+        "es": [
+          "Depresión respiratoria con opioides/otros depresores del SNC",
+          "Ideación/conducta suicida",
+          "Convulsiones/abstinencia si suspensión brusca"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Insuficiência renal, idosos, uso concomitante de opioides/sedativos"
+          ],
+          "es": [
+            "Insuficiencia renal, adultos mayores, uso concomitante de opioides/sedantes"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": true,
+        "hepaticCaution": false,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "A dose deve ser ajustada à função renal. Associação com opioides e outros depressores do SNC aumenta risco de depressão respiratória.",
+          "es": "La dosis debe ajustarse a la función renal. La asociación con opioides y otros depresores del SNC aumenta el riesgo de depresión respiratoria."
+        }
       }
     },
 
     /* ── PREGABALINA ────────────────────────────────────────────────────── */
     "pregabalina": {
-      name: { pt: 'Pregabalina', es: 'Pregabalina' },
-      category: 'analgesia',
-      class: { pt: 'Neuromodulador / Anticonvulsivante (Ligante alfa-2-delta)', es: 'Neuromodulador / Anticonvulsivante (Ligando alfa-2-delta)' },
-      indications: {
-        pt: ['Dor neuropática', 'Fibromialgia', 'Transtorno de Ansiedade Generalizada (TAG)', 'Crises epilépticas parciais'],
-        es: ['Dolor neuropático', 'Fibromialgia', 'Trastorno de Ansiedad Generalizada (TAG)', 'Crisis epilépticas parciales']
+      "name": {
+        "pt": "Pregabalina",
+        "es": "Pregabalina"
       },
-      commercialNames: { br: ['Lyrica', 'Prebictal'], ar: ['Lyrica', 'Pregabalina'] },
-      presentation: { pt: ['Cápsulas 75 mg, 150 mg', 'Cápsulas 50 mg, 300 mg'], es: ['Cápsulas 75 mg, 150 mg', 'Cápsulas 50 mg, 300 mg'] },
-      mechanism: {
-        pt: 'Sucessor estrutural da gabapentina. Liga-se também à subunidade alfa-2-delta dos canais de cálcio voltagem-dependentes pré-sinápticos. Possui farmacocinética linear, maior biodisponibilidade e afinidade 6 vezes maior pelo receptor do que a gabapentina, resultando em titulação mais rápida e potente.',
-        es: 'Sucesor estructural de la gabapentina. Se une también a la subunidad alfa-2-delta de los canales de calcio dependientes de voltaje presinápticos. Posee farmacocinética lineal, mayor biodisponibilidad y afinidad 6 veces mayor por el receptor que la gabapentina, resultando en titulación más rápida y potente.'
+      "category": "analgesia",
+      "class": {
+        "pt": "Gabapentinoide; ligante α2δ de canais de cálcio",
+        "es": "Gabapentinoide; ligando α2δ de canales de calcio"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: 'Dor neuropática/Fibromialgia: 75 mg 2x/dia inicial (150 mg/dia). Pode ser aumentada para 300 mg/dia após 1 semana, até o máximo de 600 mg/dia.',
-            es: 'Dolor neuropático/Fibromialgia: 75 mg 2 veces/día inicial (150 mg/día). Puede aumentarse a 300 mg/día tras 1 semana, hasta el máximo de 600 mg/día.'
-          }
+      "indications": {
+        "pt": [
+          "Dor neuropática periférica diabética em adultos",
+          "Neuralgia pós-herpética",
+          "Fibromialgia",
+          "Dor neuropática associada à lesão medular",
+          "Adjuvante em crises focais"
+        ],
+        "es": [
+          "Dolor neuropático periférico diabético en adultos",
+          "Neuralgia posherpética",
+          "Fibromialgia",
+          "Dolor neuropático asociado a lesión medular",
+          "Adyuvante en crisis focales"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Lyrica",
+          "Pregabalina"
+        ],
+        "ar": [
+          "Pregabalina"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Cápsulas em múltiplas forças; solução oral em alguns mercados"
+        ],
+        "es": [
+          "Cápsulas en múltiples concentraciones; solución oral en algunos mercados"
+        ]
+      },
+      "mechanism": {
+        "pt": "Liga-se à subunidade α2δ dos canais de cálcio voltagem-dependentes, reduzindo neurotransmissão excitatória. A eliminação é predominantemente renal.",
+        "es": "Se une a la subunidad α2δ de los canales de calcio dependientes de voltaje, reduciendo neurotransmisión excitatoria. La eliminación es predominantemente renal."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dor neuropática diabética: iniciar 50 mg 3x/dia (150 mg/dia), podendo aumentar até 300 mg/dia em 1 semana conforme tolerância. Neuralgia pós-herpética: 75 mg 2x/dia ou 50 mg 3x/dia; pode titular a 300 mg/dia e, em casos selecionados, até 600 mg/dia.",
+          "es": "Dolor neuropático diabético: iniciar 50 mg 3x/día (150 mg/día), pudiendo aumentar hasta 300 mg/día en 1 semana según tolerancia. Neuralgia posherpética: 75 mg 2x/día o 50 mg 3x/día; puede titularse a 300 mg/día y, en casos seleccionados, hasta 600 mg/día."
         },
-        pediatric: {
-          standard: {
-            pt: 'Não aprovada rotineiramente para dor crônica em pediatria (aprovada para epilepsia parcial em >1 mês, ajuste por peso).',
-            es: 'No aprobada rutinariamente para dolor crónico en pediatría (aprobada para epilepsia parcial en >1 mes, ajuste por peso).'
-          }
+        "pediatric": {
+          "pt": "As indicações analgésicas principais são de adultos; para epilepsia existem esquemas pediátricos específicos. Não extrapolar doses adultas de dor.",
+          "es": "Las principales indicaciones analgésicas son de adultos; para epilepsia existen esquemas pediátricos específicos. No extrapolar dosis adultas de dolor."
         }
       },
-      administration: { pt: ['Retirada deve ser gradual (desmame ao longo de no mínimo 1 semana) para evitar sintomas de abstinência e rebote.', 'Com ou sem alimentos.'], es: ['Retirada debe ser gradual (destete a lo largo de al menos 1 semana) para evitar síntomas de abstinencia y rebote.', 'Con o sin alimentos.'] },
-      renalAdjustment: { required: true, message: { pt: 'ClCr 30-60: Reduzir dose em 50%. ClCr 15-30: Reduzir em 75% (máximo 150mg/dia). ClCr < 15: máximo 75mg/dia.', es: 'ClCr 30-60: Reducir dosis en 50%. ClCr 15-30: Reducir en 75% (máximo 150mg/día). ClCr < 15: máximo 75mg/día.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste.', es: 'Sin necesidad de ajuste.' } },
-      commonAdverseEffects: { pt: ['Tontura (muito comum)', 'Sonolência', 'Aumento de peso', 'Edema periférico', 'Boca seca'], es: ['Mareos (muy común)', 'Somnolencia', 'Aumento de peso', 'Edema periférico', 'Boca seca'] },
-      dangerousAdverseEffects: { pt: ['Depressão respiratória', 'Insuficiência cardíaca exacerbada pelo edema', 'Angioedema'], es: ['Depresión respiratoria', 'Insuficiencia cardíaca exacerbada por el edema', 'Angioedema'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade ao fármaco'], es: ['Hipersensibilidad al fármaco'] },
-        relative: { pt: ['Pacientes com história de insuficiência cardíaca (risco de edema/sobrecarga)', 'Abuso de substâncias'], es: ['Pacientes con historia de insuficiencia cardíaca (riesgo de edema/sobrecarga)', 'Abuso de sustancias'] }
+      "administration": {
+        "pt": [
+          "VO com ou sem alimento",
+          "Retirar gradualmente por pelo menos 1 semana",
+          "Monitorar sedação, edema, ganho de peso e risco de quedas"
+        ],
+        "es": [
+          "VO con o sin alimento",
+          "Retirar gradualmente durante al menos 1 semana",
+          "Monitorizar sedación, edema, aumento de peso y riesgo de caídas"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: true, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'Potencial de Abuso: É droga controlada devido ao risco de dependência/abuso e sintomas de abstinência. Extremo risco respiratório se unida a opioides.', es: 'Potencial de Abuso: Es droga controlada debido al riesgo de dependencia/abuso y síntomas de abstinencia. Extremo riesgo respiratorio si se une a opioides.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Ajustar por ClCr. ≥60: faixas usuais 150–600 mg/dia conforme indicação; 30–60: 75–300 mg/dia; 15–30: 25–150 mg/dia; <15: 25–75 mg/dia. Hemodiálise requer dose suplementar pós-sessão.",
+          "es": "Ajustar por ClCr. ≥60: rangos habituales 150–600 mg/día según indicación; 30–60: 75–300 mg/día; 15–30: 25–150 mg/día; <15: 25–75 mg/día. Hemodiálisis requiere dosis suplementaria pos-sesión."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há ajuste hepático rotineiro porque o fármaco é eliminado principalmente pelos rins.",
+          "es": "No hay ajuste hepático rutinario porque el fármaco se elimina principalmente por los riñones."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Tontura",
+          "Sonolência",
+          "Edema periférico",
+          "Ganho de peso",
+          "Visão borrada"
+        ],
+        "es": [
+          "Mareo",
+          "Somnolencia",
+          "Edema periférico",
+          "Aumento de peso",
+          "Visión borrosa"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória com depressores do SNC",
+          "Angioedema",
+          "Ideação/comportamento suicida",
+          "Abstinência se retirada abrupta"
+        ],
+        "es": [
+          "Depresión respiratoria con depresores del SNC",
+          "Angioedema",
+          "Ideación/conducta suicida",
+          "Abstinencia si suspensión brusca"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade"
+          ],
+          "es": [
+            "Hipersensibilidad"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Insuficiência renal, IC/edema, idosos, opioides/sedativos"
+          ],
+          "es": [
+            "Insuficiencia renal, IC/edema, adultos mayores, opioides/sedantes"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": true,
+        "hepaticCaution": false,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Ajuste renal é obrigatório. Reduzir/titular com cautela quando combinada a opioides ou outros depressores do SNC.",
+          "es": "El ajuste renal es obligatorio. Reducir/titular con precaución cuando se combina con opioides u otros depresores del SNC."
+        }
       }
     },
 
@@ -1148,45 +2139,133 @@
 
     /* ── NALOXONA ───────────────────────────────────────────────────────── */
     "naloxona": {
-      name: { pt: 'Naloxona', es: 'Naloxona' },
-      category: 'analgesia',
-      class: { pt: 'Antagonista Opioide (Antídoto)', es: 'Antagonista Opioide (Antídoto)' },
-      indications: {
-        pt: ['Reversão de depressão respiratória e sistema nervoso central induzida por opioides (intoxicação/overdose)', 'Reversão de analgesia opioide pós-operatória excessiva'],
-        es: ['Reversión de depresión respiratoria y sistema nervioso central inducida por opioides (intoxicación/sobredosis)', 'Reversión de analgesia opioide posoperatoria excesiva']
+      "name": {
+        "pt": "Naloxona",
+        "es": "Naloxona"
       },
-      commercialNames: { br: ['Narcan'], ar: ['Naloxona'] },
-      presentation: { pt: ['Ampolas IV/IM/SC 0,4 mg/mL', 'Spray nasal (alguns mercados)'], es: ['Ampollas IV/IM/SC 0,4 mg/mL', 'Spray nasal (algunos mercados)'] },
-      mechanism: {
-        pt: 'Antagonista competitivo puro dos receptores opioides (mu, kappa, delta), com altíssima afinidade pelo receptor mu. Desloca os agonistas opioides dos receptores em segundos a minutos, revertendo instantaneamente a analgesia, depressão respiratória, miose e sedação.',
-        es: 'Antagonista competitivo puro de los receptores opioides (mu, kappa, delta), con altísima afinidad por el receptor mu. Desplaza los agonistas opioides de los receptores en segundos a minutos, revirtiendo instantáneamente la analgesia, depresión respiratoria, miosis y sedación.'
+      "category": "toxicologia",
+      "class": {
+        "pt": "Antagonista competitivo de receptores opioides",
+        "es": "Antagonista competitivo de receptores opioides"
       },
-      dose: {
-        adult: {
-          standard: {
-            pt: 'Overdose (Parada/Depressão grave): 0,4 a 2 mg IV direto a cada 2 a 3 minutos até resposta. Reversão pós-operatória: 0,04 a 0,2 mg IV titulado lentamente.',
-            es: 'Sobredosis (Paro/Depresión grave): 0,4 a 2 mg IV directo cada 2 a 3 minutos hasta respuesta. Reversión posoperatoria: 0,04 a 0,2 mg IV titulado lentamente.'
-          }
+      "indications": {
+        "pt": [
+          "Reversão de depressão respiratória por opioides",
+          "Overdose conhecida ou suspeita por opioides"
+        ],
+        "es": [
+          "Reversión de depresión respiratoria por opioides",
+          "Sobredosis conocida o sospechada por opioides"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Naloxona"
+        ],
+        "ar": [
+          "Naloxona"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução injetável 0,4 mg/mL; outras apresentações podem existir"
+        ],
+        "es": [
+          "Solución inyectable 0,4 mg/mL; pueden existir otras presentaciones"
+        ]
+      },
+      "mechanism": {
+        "pt": "Antagoniza rapidamente receptores opioides, revertendo depressão respiratória e sedação; pode precipitar abstinência em pacientes dependentes.",
+        "es": "Antagoniza rápidamente receptores opioides, revirtiendo depresión respiratoria y sedación; puede precipitar abstinencia en pacientes dependientes."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Overdose: 0,4–2 mg IV; repetir a cada 2–3 min conforme ventilação. Reversão pós-operatória parcial: 0,1–0,2 mg IV a cada 2–3 min até ventilação adequada, evitando reversão excessiva.",
+          "es": "Sobredosis: 0,4–2 mg IV; repetir cada 2–3 min según ventilación. Reversión posoperatoria parcial: 0,1–0,2 mg IV cada 2–3 min hasta ventilación adecuada, evitando reversión excesiva."
         },
-        pediatric: {
-          standard: {
-            pt: '0,01 a 0,1 mg/kg IV a cada 2 a 3 minutos.',
-            es: '0,01 a 0,1 mg/kg IV cada 2 a 3 minutos.'
-          }
+        "pediatric": {
+          "pt": "Overdose: 0,01 mg/kg IV; se resposta insuficiente, 0,1 mg/kg. Neonatos com depressão induzida por opioide: 0,01 mg/kg IV/IM/SC.",
+          "es": "Sobredosis: 0,01 mg/kg IV; si la respuesta es insuficiente, 0,1 mg/kg. Neonatos con depresión inducida por opioide: 0,01 mg/kg IV/IM/SC."
         }
       },
-      administration: { pt: ['IV (rápida ação em 1-2 min), IM ou SC (ação em 5-10 min).', 'Pode ser infundida de forma contínua em overdoses por opioides de meia-vida muito longa (ex: metadona).'], es: ['IV (rápida acción en 1-2 min), IM o SC (acción en 5-10 min).', 'Puede ser infundida de forma continua en sobredosis por opioides de vida media muy larga (ej: metadona).'] },
-      renalAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em emergências.', es: 'Sin necesidad de ajuste en emergencias.' } },
-      hepaticAdjustment: { required: false, message: { pt: 'Sem necessidade de ajuste em emergências.', es: 'Sin necesidad de ajuste en emergencias.' } },
-      commonAdverseEffects: { pt: ['Síndrome de abstinência aguda (sudorese, agitação, tremores)', 'Náusea e vômito em jato', 'Taquicardia'], es: ['Síndrome de abstinencia aguda (sudoración, agitación, temblores)', 'Náusea y vómito en chorro', 'Taquicardia'] },
-      dangerousAdverseEffects: { pt: ['Edema agudo de pulmão não cardiogênico', 'Fibrilação ventricular e parada cardíaca (devido à tempestade simpática pela dor súbita e abstinência)', 'Crise hipertensiva'], es: ['Edema agudo de pulmón no cardiogénico', 'Fibrilación ventricular y paro cardíaco (debido a la tormenta simpática por el dolor súbito y abstinencia)', 'Crisis hipertensiva'] },
-      contraindications: {
-        absolute: { pt: ['Hipersensibilidade documentada à naloxona (Raro) - Na emergência de risco de morte (overdose), não há contraindicações absolutas.'], es: ['Hipersensibilidad documentada a la naloxona (Raro) - En la emergencia con riesgo vital (sobredosis), no hay contraindicaciones absolutas.'] },
-        relative: { pt: ['Doença cardiovascular severa (o despertar doloroso hiper-simpático pode infartar o paciente)'], es: ['Enfermedad cardiovascular severa (el despertar doloroso hiper-simpático puede infartar al paciente)'] }
+      "administration": {
+        "pt": [
+          "IV tem início mais rápido; IM/SC podem ser usados quando IV não disponível",
+          "Como alguns opioides duram mais que a naloxona, manter vigilância e repetir doses conforme necessário"
+        ],
+        "es": [
+          "IV tiene inicio más rápido; IM/SC pueden usarse cuando IV no está disponible",
+          "Como algunos opioides duran más que la naloxona, mantener vigilancia y repetir dosis según necesidad"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: false, antidoteAvailable: false, highAlertMedication: true,
-        warning: { pt: 'Atenção à MEIA-VIDA: A meia-vida da naloxona (30-80 min) é MENOR que a da maioria dos opioides (como morfina, oxicodona, metadona). O paciente pode acordar, respirar e depois voltar a re-narcotizar (parada respiratória rebote).', es: 'Atención a la VIDA MEDIA: La vida media de la naloxona (30-80 min) es MENOR que la de la mayoría de los opioides (como morfina, oxicodona, metadona). El paciente puede despertar, respirar y luego volver a renarcotizar (paro respiratorio rebote).' }
+      "renalAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há ajuste renal rotineiro estabelecido para reversão aguda; titular à resposta clínica.",
+          "es": "No existe ajuste renal rutinario establecido para reversión aguda; titular según respuesta clínica."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": false,
+        "message": {
+          "pt": "Não há ajuste hepático rotineiro estabelecido para reversão aguda; titular à resposta clínica.",
+          "es": "No existe ajuste hepático rutinario establecido para reversión aguda; titular según respuesta clínica."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Vômitos",
+          "Sudorese",
+          "Dor por reversão da analgesia"
+        ],
+        "es": [
+          "Náuseas",
+          "Vómitos",
+          "Sudoración",
+          "Dolor por reversión de la analgesia"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Abstinência precipitada",
+          "Hipertensão/taquicardia",
+          "Edema pulmonar raro"
+        ],
+        "es": [
+          "Abstinencia precipitada",
+          "Hipertensión/taquicardia",
+          "Edema pulmonar raro"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Hipersensibilidade à naloxona"
+          ],
+          "es": [
+            "Hipersensibilidad a naloxona"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Dependência física de opioides: titular apenas até restaurar ventilação quando possível"
+          ],
+          "es": [
+            "Dependencia física de opioides: titular solo hasta restaurar ventilación cuando sea posible"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": false,
+        "antidoteAvailable": false,
+        "highAlertMedication": false,
+        "warning": {
+          "pt": "Objetivo é restaurar ventilação adequada, não necessariamente despertar completamente; doses excessivas podem precipitar abstinência e dor intensa.",
+          "es": "El objetivo es restaurar ventilación adecuada, no necesariamente despertar completamente; dosis excesivas pueden precipitar abstinencia y dolor intenso."
+        }
       }
     },
 
@@ -1947,41 +3026,139 @@
 
 /* ── METADONA ───────────────────────────────────────────────────────── */
     "metadona": {
-      name: { pt: 'Metadona', es: 'Metadona' },
-      category: 'analgesia',
-      class: { pt: 'Analgésico Opioide Forte Sintético (Agonista Mu / Antagonista NMDA)', es: 'Analgésico Opioide Fuerte Sintético (Agonista Mu / Antagonista NMDA)' },
-      indications: {
-        pt: ['Dor crônica refratária severa e dor oncológica', 'Dor neuropática (devido à ação NMDA)', 'Desmame de opioides na UTI e tratamento de dependência química'],
-        es: ['Dolor crónico refractario severo y dolor oncológico', 'Dolor neuropático (debido a la acción NMDA)', 'Destete de opioides en la UCI y tratamiento de dependencia química']
+      "name": {
+        "pt": "Metadona",
+        "es": "Metadona"
       },
-      commercialNames: { br: ['Mythedone'], ar: ['Metadona'] },
-      presentation: { pt: ['Comprimidos 5 mg, 10 mg', 'Ampolas IV/SC 10 mg/mL'], es: ['Comprimidos 5 mg, 10 mg', 'Ampollas IV/SC 10 mg/mL'] },
-      mechanism: {
-        pt: 'Mecanismo triplo excepcional: 1) Agonista potente dos receptores Mu; 2) Antagonista do receptor NMDA (bloqueia o glutamato, o que reduz a tolerância ao opioide e alivia dor neuropática); 3) Inibe a recaptação de serotonina e noradrenalina. Possui uma meia-vida plasmática brutalmente longa e imprevisível (15 a 60 horas), que não coincide com sua analgesia (que dura apenas 6 a 8 horas).',
-        es: 'Mecanismo triple excepcional: 1) Agonista potente de los receptores Mu; 2) Antagonista del receptor NMDA (bloquea el glutamato, lo que reduce la tolerancia al opioide y alivia dolor neuropático); 3) Inhibe la recaptación de serotonina y noradrenalina. Posee una vida media plasmática brutalmente larga e impredecible (15 a 60 horas), que no coincide con su analgesia (que dura solo 6 a 8 horas).'
+      "category": "analgesia",
+      "class": {
+        "pt": "Agonista opioide μ de longa duração; antagonismo NMDA secundário",
+        "es": "Agonista opioide μ de larga duración; antagonismo NMDA secundario"
       },
-      dose: {
-        adult: {
-          pt: 'Dor: 2,5 a 10 mg VO a cada 8h ou 12h. A titulação deve ser EXTREMAMENTE LENTA (aguardar 5 a 7 dias para ajustar a dose, tempo para atingir o steady-state).',
-          es: 'Dolor: 2,5 a 10 mg VO cada 8h o 12h. La titulación debe ser EXTREMADAMENTE LENTA (esperar 5 a 7 días para ajustar la dosis, tiempo para alcanzar el steady-state).'
+      "indications": {
+        "pt": [
+          "Dor intensa e persistente em situações selecionadas",
+          "Desintoxicação e manutenção do transtorno por uso de opioides em programas regulamentados"
+        ],
+        "es": [
+          "Dolor intenso y persistente en situaciones seleccionadas",
+          "Desintoxicación y mantenimiento del trastorno por uso de opioides en programas regulados"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Metadona"
+        ],
+        "ar": [
+          "Metadona"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Comprimidos e soluções orais; apresentações variam por mercado"
+        ],
+        "es": [
+          "Comprimidos y soluciones orales; las presentaciones varían según mercado"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonista μ com meia-vida longa e variável; acumula durante os primeiros dias. Pode prolongar QT e causar depressão respiratória tardia.",
+        "es": "Agonista μ con vida media larga y variable; se acumula durante los primeros días. Puede prolongar QT y causar depresión respiratoria tardía."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Dor em paciente sem uso prévio de opioide: 2,5 mg VO a cada 8–12 h, com titulação lenta por profissional experiente. TUS: dose inicial supervisionada 20–30 mg; não exceder 30 mg na primeira dose e, em geral, 40 mg no primeiro dia.",
+          "es": "Dolor en paciente sin uso previo de opioides: 2,5 mg VO cada 8–12 h, con titulación lenta por profesional experto. TUS: dosis inicial supervisada 20–30 mg; no exceder 30 mg en la primera dosis y, en general, 40 mg el primer día."
         },
-        pediatric: {
-          pt: 'Uso complexo. Desmame em UTI pediátrica guiado por especialista (geralmente 0,05 a 0,1 mg/kg/dose).',
-          es: 'Uso complejo. Destete en UCI pediátrica guiado por especialista (generalmente 0,05 a 0,1 mg/kg/dosis).'
+        "pediatric": {
+          "pt": "Não usar esquemas adultos por extrapolação. Uso pediátrico requer indicação especializada e protocolo específico.",
+          "es": "No usar esquemas de adultos por extrapolación. El uso pediátrico requiere indicación especializada y protocolo específico."
         }
       },
-      administration: { pt: ['Via Oral tem altíssima biodisponibilidade (quase 80%).', 'Evitar uso endovenoso intermitente rápido pelo risco de arritmias.'], es: ['Vía Oral tiene altísima biodisponibilidad (casi 80%).', 'Evitar uso endovenoso intermitente rápido por el riesgo de arritmias.'] },
-      renalAdjustment: { required: false, message: { pt: 'O opioide forte mais SEGURO na Doença Renal Crônica avançada, pois é depurado quase exclusivamente pelas fezes.', es: 'El opioide fuerte más SEGURO en la Enfermedad Renal Crónica avanzada, pues se depura casi exclusivamente por las heces.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Metabolismo hepático intenso (CYP3A4/CYP2B6). Evitar em insuficiência hepática grave.', es: 'Metabolismo hepático intenso (CYP3A4/CYP2B6). Evitar en insuficiencia hepática grave.' } },
-      commonAdverseEffects: { pt: ['Constipação (menos grave que a morfina)', 'Sudorese excessiva', 'Tontura e Sedação inicial'], es: ['Constipación (menos grave que la morfina)', 'Sudoración excesiva', 'Mareo y Sedación inicial'] },
-      dangerousAdverseEffects: { pt: ['Prolongamento do Intervalo QT (risco de Torsades de Pointes / morte súbita)', 'Depressão respiratória de início TARDIO (o acúmulo ocorre após dias de uso)'], es: ['Prolongación del Intervalo QT (riesgo de Torsades de Pointes / muerte súbita)', 'Depresión respiratoria de inicio TARDÍO (la acumulación ocurre tras días de uso)'] },
-      contraindications: {
-        absolute: { pt: ['Prolongamento do QT basal (> 500 ms)'], es: ['Prolongación del QT basal (> 500 ms)'] },
-        relative: { pt: ['Histórico de arritmias ventriculares', 'Asma brônquica aguda'], es: ['Historial de arritmias ventriculares', 'Asma bronquial aguda'] }
+      "administration": {
+        "pt": [
+          "Não usar como analgésico PRN",
+          "Reavaliar sedação 2–4 h após dose durante indução de TUS; acúmulo ocorre ao longo de vários dias",
+          "ECG e eletrólitos quando houver fatores de risco para QT prolongado"
+        ],
+        "es": [
+          "No usar como analgésico PRN",
+          "Reevaluar sedación 2–4 h después de la dosis durante inducción de TUS; la acumulación ocurre durante varios días",
+          "ECG y electrolitos cuando existan factores de riesgo para QT prolongado"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'CUIDADO: A analgesia da metadona passa em 8 horas, mas o efeito depressor respiratório dura mais de 30 horas. Pacientes frequentemente pedem mais doses por dor e evoluem para parada respiratória noturna por acúmulo sistêmico.', es: 'CUIDADO: La analgesia de la metadona pasa en 8 horas, pero el efecto depresor respiratorio dura más de 30 horas. Pacientes frecuentemente piden más dosis por dolor y evolucionan a paro respiratorio nocturno por acumulación sistémica.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Sem esquema único; iniciar baixo, titular lentamente e aumentar intervalo conforme clínica em insuficiência renal importante.",
+          "es": "Sin esquema único; iniciar bajo, titular lentamente y aumentar el intervalo según clínica en insuficiencia renal importante."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Metabolismo hepático e meia-vida variável; iniciar com cautela e titular lentamente em hepatopatia.",
+          "es": "Metabolismo hepático y vida media variable; iniciar con precaución y titular lentamente en hepatopatía."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Constipação",
+          "Sedação",
+          "Náusea",
+          "Sudorese"
+        ],
+        "es": [
+          "Estreñimiento",
+          "Sedación",
+          "Náuseas",
+          "Sudoración"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória tardia",
+          "Prolongamento de QT/Torsades",
+          "Overdose por acúmulo"
+        ],
+        "es": [
+          "Depresión respiratoria tardía",
+          "Prolongación de QT/Torsades",
+          "Sobredosis por acumulación"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Depressão respiratória significativa",
+            "Asma aguda/grave sem monitorização adequada",
+            "Obstrução gastrointestinal conhecida ou suspeita"
+          ],
+          "es": [
+            "Depresión respiratoria significativa",
+            "Asma aguda/grave sin monitorización adecuada",
+            "Obstrucción gastrointestinal conocida o sospechada"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "QT prolongado, hipocalemia/hipomagnesemia, uso de outros fármacos que prolongam QT ou alteram CYP"
+          ],
+          "es": [
+            "QT prolongado, hipopotasemia/hipomagnesemia, uso de otros fármacos que prolongan QT o alteran CYP"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": false,
+        "hepaticCaution": true,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "A duração da depressão respiratória pode superar a duração da analgesia; a titulação rápida aumenta risco de acúmulo e morte.",
+          "es": "La duración de la depresión respiratoria puede superar la duración de la analgesia; la titulación rápida aumenta el riesgo de acumulación y muerte."
+        }
       }
     },
 
@@ -2027,41 +3204,137 @@
 
 /* ── TRAMADOL ───────────────────────────────────────────────────────── */
     "tramadol": {
-      name: { pt: 'Tramadol', es: 'Tramadol' },
-      category: 'analgesia',
-      class: { pt: 'Analgésico Opioide Fraco (Atípico)', es: 'Analgésico Opioide Débil (Atípico)' },
-      indications: {
-        pt: ['Dor aguda ou crônica de intensidade moderada a severa', 'Dores neuropáticas (adjuvante)'],
-        es: ['Dolor agudo o crónico de intensidad moderada a severa', 'Dolores neuropáticos (adyuvante)']
+      "name": {
+        "pt": "Tramadol",
+        "es": "Tramadol"
       },
-      commercialNames: { br: ['Tramal', 'Sylador'], ar: ['Calmador', 'Tramadol'] },
-      presentation: { pt: ['Ampolas IV/IM/SC 50 mg/mL', 'Cápsulas/Comprimidos 50 mg, 100 mg'], es: ['Ampollas IV/IM/SC 50 mg/mL', 'Cápsulas/Comprimidos 50 mg, 100 mg'] },
-      mechanism: {
-        pt: 'Mecanismo duplo central: 1) Agonista fraco do receptor opioide Mu (a droga-mãe é fraca, mas seu metabólito hepático O-desmetiltramadol é 6 vezes mais potente); 2) Inibe a recaptação neuronal de Serotonina e Noradrenalina nas vias descendentes da dor na medula espinhal, bloqueando a transmissão do sinal doloroso. Possui menor risco de depressão respiratória que a morfina.',
-        es: 'Mecanismo doble central: 1) Agonista débil del receptor opioide Mu (la droga madre es débil, pero su metabolito hepático O-desmetiltramadol es 6 veces más potente); 2) Inhibe la recaptación neuronal de Serotonina y Noradrenalina en las vías descendentes del dolor en la médula espinal, bloqueando la transmisión de la señal dolorosa. Posee menor riesgo de depresión respiratoria que la morfina.'
+      "category": "analgesia",
+      "class": {
+        "pt": "Opioide atípico; agonista μ + inibidor de recaptação de serotonina/noradrenalina",
+        "es": "Opioide atípico; agonista μ + inhibidor de recaptación de serotonina/noradrenalina"
       },
-      dose: {
-        adult: {
-          pt: '50 a 100 mg VO, IV ou IM a cada 6h ou 8h (Máximo 400 mg/dia).',
-          es: '50 a 100 mg VO, IV o IM cada 6h o 8h (Máximo 400 mg/día).'
+      "indications": {
+        "pt": [
+          "Dor intensa o suficiente para requerer opioide quando alternativas são inadequadas"
+        ],
+        "es": [
+          "Dolor suficientemente intenso para requerir opioide cuando las alternativas son inadecuadas"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Tramadol"
+        ],
+        "ar": [
+          "Tramadol"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Comprimidos de liberação imediata; apresentações variam por fabricante"
+        ],
+        "es": [
+          "Comprimidos de liberación inmediata; presentaciones variables según fabricante"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonismo μ combinado à inibição de recaptação de serotonina e noradrenalina. O metabólito ativo depende parcialmente de CYP2D6.",
+        "es": "Agonismo μ combinado con inhibición de recaptación de serotonina y noradrenalina. El metabolito activo depende parcialmente de CYP2D6."
+      },
+      "dose": {
+        "adult": {
+          "pt": "Após titulação, 50–100 mg VO a cada 4–6 h conforme necessidade; máximo 400 mg/dia.",
+          "es": "Después de titulación, 50–100 mg VO cada 4–6 h según necesidad; máximo 400 mg/día."
         },
-        pediatric: {
-          pt: 'Contraindicado para < 12 anos. Excepcionalmente 1 a 2 mg/kg/dose > 12 anos.',
-          es: 'Contraindicado para < 12 años. Excepcionalmente 1 a 2 mg/kg/dosis > 12 años.'
+        "pediatric": {
+          "pt": "Contraindicado em <12 anos e para dor pós-tonsilectomia/adenoidectomia em <18 anos.",
+          "es": "Contraindicado en <12 años y para dolor posamigdalectomía/adenoidectomía en <18 años."
         }
       },
-      administration: { pt: ['A injeção IV deve ser feita LENTAMENTE (em 2 a 3 minutos). A injeção rápida causa vômito em jato quase instantâneo.'], es: ['La inyección IV debe hacerse LENTAMENTE (en 2 a 3 minutos). La inyección rápida causa vómito en chorro casi instantáneo.'] },
-      renalAdjustment: { required: true, message: { pt: 'Se ClCr < 30 mL/min, aumentar intervalo para 12h e limitar a 200 mg/dia.', es: 'Si ClCr < 30 mL/min, aumentar intervalo a 12h y limitar a 200 mg/día.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Evitar em cirrose grave; dependente da conversão hepática para analgesia real.', es: 'Evitar en cirrosis grave; dependiente de la conversión hepática para analgesia real.' } },
-      commonAdverseEffects: { pt: ['Náusea extrema e vômitos (muito comum)', 'Tontura e vertigem', 'Constipação e boca seca'], es: ['Náusea extrema y vómitos (muy común)', 'Mareo y vértigo', 'Constipación y boca seca'] },
-      dangerousAdverseEffects: { pt: ['Convulsões epilépticas (especialmente se limite de dose for excedido)', 'Síndrome Serotoninérgica'], es: ['Convulsiones epilépticas (especialmente si se excede el límite de dosis)', 'Síndrome Serotoninérgico'] },
-      contraindications: {
-        absolute: { pt: ['Pacientes com Epilepsia não controlada', 'Uso concomitante ou recente (14 dias) de Inibidores da MAO'], es: ['Pacientes con Epilepsia no controlada', 'Uso concomitante o reciente (14 días) de Inhibidores de la MAO'] },
-        relative: { pt: ['Uso associado com antidepressivos (risco serotoninérgico)'], es: ['Uso asociado con antidepresivos (riesgo serotoninérgico)'] }
+      "administration": {
+        "pt": [
+          "Usar menor dose efetiva pelo menor tempo necessário",
+          "Evitar interrupção abrupta após uso prolongado/dependência física"
+        ],
+        "es": [
+          "Usar la menor dosis efectiva durante el menor tiempo necesario",
+          "Evitar suspensión abrupta después de uso prolongado/dependencia física"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: false,
-        warning: { pt: 'O Tramadol BAIXA O LIMIAR CONVULSIVO da via cerebral. Nunca associe a outras drogas que também causem isso (ex: Bupropiona) sem cautela.', es: 'El Tramadol BAJA EL UMBRAL CONVULSIVO de la vía cerebral. Nunca asocie a otras drogas que también causen esto (ej: Bupropión) sin precaución.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "ClCr <30 mL/min: aumentar intervalo para 12 h; máximo 200 mg/dia.",
+          "es": "ClCr <30 mL/min: aumentar intervalo a 12 h; máximo 200 mg/día."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Insuficiência hepática grave: 50 mg a cada 12 h.",
+          "es": "Insuficiencia hepática grave: 50 mg cada 12 h."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Tontura",
+          "Constipação",
+          "Sonolência"
+        ],
+        "es": [
+          "Náuseas",
+          "Mareo",
+          "Estreñimiento",
+          "Somnolencia"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória",
+          "Convulsões",
+          "Síndrome serotoninérgica"
+        ],
+        "es": [
+          "Depresión respiratoria",
+          "Convulsiones",
+          "Síndrome serotoninérgico"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "<12 anos",
+            "Pós-tonsilectomia/adenoidectomia em <18 anos",
+            "Uso de IMAO atual ou nos últimos 14 dias",
+            "Depressão respiratória significativa"
+          ],
+          "es": [
+            "<12 años",
+            "Posamigdalectomía/adenoidectomía en <18 años",
+            "Uso actual de IMAO o en los últimos 14 días",
+            "Depresión respiratoria significativa"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Epilepsia/risco convulsivo, uso de serotonérgicos, inibidores de CYP2D6"
+          ],
+          "es": [
+            "Epilepsia/riesgo convulsivo, uso de serotoninérgicos, inhibidores de CYP2D6"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Risco de convulsões e síndrome serotoninérgica, especialmente com fármacos serotonérgicos; contraindicado com IMAO.",
+          "es": "Riesgo de convulsiones y síndrome serotoninérgico, especialmente con fármacos serotoninérgicos; contraindicado con IMAO."
+        }
       }
     },
 
@@ -2162,41 +3435,133 @@
 
 /* ── HIDROMORFONA ───────────────────────────────────────────────────── */
     "hidromorfona": {
-      name: { pt: 'Hidromorfona', es: 'Hidromorfona' },
-      category: 'analgesia',
-      class: { pt: 'Analgésico Opioide Forte Sintético', es: 'Analgésico Opioide Fuerte Sintético' },
-      indications: {
-        pt: ['Dor aguda ou crônica de forte intensidade', 'Alternativa direta à Morfina em pacientes com Doença Renal Crônica', 'Manejo de dor oncológica severa'],
-        es: ['Dolor agudo o crónico de fuerte intensidad', 'Alternativa directa a la Morfina en pacientes con Enfermedad Renal Crónica', 'Manejo de dolor oncológico severo']
+      "name": {
+        "pt": "Hidromorfona",
+        "es": "Hidromorfona"
       },
-      commercialNames: { br: ['Jurnista'], ar: ['Jurnista'] },
-      presentation: { pt: ['Ampolas IV/IM/SC 2 mg/mL', 'Comprimidos OROS (liberação prolongada) 8 mg, 16 mg, 32 mg'], es: ['Ampollas IV/IM/SC 2 mg/mL', 'Comprimidos OROS (liberación prolongada) 8 mg, 16 mg, 32 mg'] },
-      mechanism: {
-        pt: 'Agonista opioide Mu puro, derivado semissintético da morfina. É cerca de 5 a 7 vezes mais potente que a morfina (1 mg de hidromorfona IV = 7 mg de morfina IV). Sua grande vantagem é que seu metabolismo hepático não gera metabólitos ativos significativos (como o M6G da morfina), tornando-a muito mais segura em pacientes idosos e com falência renal, sem o risco de acúmulo neurotóxico.',
-        es: 'Agonista opioide Mu puro, derivado semisintético de la morfina. Es cerca de 5 a 7 veces más potente que la morfina (1 mg de hidromorfona IV = 7 mg de morfina IV). Su gran ventaja es que su metabolismo hepático no genera metabolitos activos significativos (como el M6G de la morfina), haciéndola mucho más segura en pacientes ancianos y con fallo renal, sin el riesgo de acumulación neurotóxica.'
+      "category": "analgesia",
+      "class": {
+        "pt": "Agonista opioide μ",
+        "es": "Agonista opioide μ"
       },
-      dose: {
-        adult: {
-          pt: 'Dor aguda: 0,2 a 1 mg IV a cada 2-3 horas (titulado conforme resposta). Uso oral (comprimido OROS): 8 mg a cada 24 horas (nunca partir o comprimido).',
-          es: 'Dolor agudo: 0,2 a 1 mg IV cada 2-3 horas (titulado según respuesta). Uso oral (comprimido OROS): 8 mg cada 24 horas (nunca partir el comprimido).'
+      "indications": {
+        "pt": [
+          "Dor intensa que requer opioide quando alternativas são inadequadas"
+        ],
+        "es": [
+          "Dolor intenso que requiere opioide cuando las alternativas son inadecuadas"
+        ]
+      },
+      "commercialNames": {
+        "br": [
+          "Hidromorfona"
+        ],
+        "ar": [
+          "Hidromorfona"
+        ]
+      },
+      "presentation": {
+        "pt": [
+          "Solução injetável em múltiplas concentrações; conferir produto antes de administrar"
+        ],
+        "es": [
+          "Solución inyectable en múltiples concentraciones; verificar el producto antes de administrar"
+        ]
+      },
+      "mechanism": {
+        "pt": "Agonista opioide μ potente, com analgesia e depressão respiratória dose-dependente.",
+        "es": "Agonista opioide μ potente, con analgesia y depresión respiratoria dependiente de la dosis."
+      },
+      "dose": {
+        "adult": {
+          "pt": "IV: 0,2–1 mg a cada 2–3 h conforme necessidade; administrar lentamente em pelo menos 2–3 min e titular ao efeito.",
+          "es": "IV: 0,2–1 mg cada 2–3 h según necesidad; administrar lentamente durante al menos 2–3 min y titular al efecto."
         },
-        pediatric: {
-          pt: '0,015 mg/kg IV a cada 4 horas.',
-          es: '0,015 mg/kg IV cada 4 horas.'
+        "pediatric": {
+          "pt": "Segurança e eficácia da injeção não estabelecidas em pacientes pediátricos na rotulagem dos EUA.",
+          "es": "Seguridad y eficacia de la inyección no establecidas en pacientes pediátricos en el rotulado de EE. UU."
         }
       },
-      administration: { pt: ['Injeção IV muito lenta (2 a 3 minutos).', 'Os comprimidos de liberação osmótica (OROS) são rígidos e a casca é eliminada intacta nas fezes (avisar o paciente).'], es: ['Inyección IV muy lenta (2 a 3 minutos).', 'Los comprimidos de liberación osmótica (OROS) son rígidos y la cáscara se elimina intacta en las heces (avisar al paciente).'] },
-      renalAdjustment: { required: false, message: { pt: 'Opioide de escolha (junto com fentanil/metadona) na DRC, pois não acumula metabólitos ativos. Ajustes leves apenas por precaução.', es: 'Opioide de elección (junto con fentanilo/metadona) en ERC, pues no acumula metabolitos activos. Ajustes leves solo por precaución.' } },
-      hepaticAdjustment: { required: true, message: { pt: 'Reduzir a dose em insuficiência hepática moderada a grave.', es: 'Reducir la dosis en insuficiencia hepática moderada a grave.' } },
-      commonAdverseEffects: { pt: ['Constipação (menos náusea e prurido que a morfina)', 'Sonolência'], es: ['Constipación (menos náusea y prurito que la morfina)', 'Somnolencia'] },
-      dangerousAdverseEffects: { pt: ['Depressão respiratória grave e apneia', 'Hipotensão severa se injetado rapidamente em pacientes hipovolêmicos'], es: ['Depresión respiratoria grave y apnea', 'Hipotensión severa si se inyecta rápidamente en pacientes hipovolémicos'] },
-      contraindications: {
-        absolute: { pt: ['Depressão respiratória não monitorada', 'Asma aguda severa'], es: ['Depresión respiratoria no monitorizada', 'Asma aguda severa'] },
-        relative: { pt: ['Traumatismo craniano (aumento da PIC associado ao aumento de CO2)'], es: ['Traumatismo craneal (aumento de la PIC asociado al aumento de CO2)'] }
+      "administration": {
+        "pt": [
+          "IV lento em ≥2–3 min; IM/SC também existem conforme formulação",
+          "Confirmar concentração antes de aspirar para evitar erro de dose"
+        ],
+        "es": [
+          "IV lento en ≥2–3 min; IM/SC también existen según formulación",
+          "Confirmar la concentración antes de preparar para evitar errores de dosis"
+        ]
       },
-      safetyFlags: {
-        bleedingRisk: false, renalHighRisk: false, hepaticCaution: true, antidoteAvailable: true, highAlertMedication: true,
-        warning: { pt: 'Devido à sua extrema potência em doses numericamente pequenas, erros de prescrição (confundir dose de morfina com hidromorfona) resultam em morte imediata por overdose.', es: 'Debido a su extrema potencia en dosis numéricamente pequeñas, errores de prescripción (confundir dosis de morfina con hidromorfona) resultan en muerte inmediata por sobredosis.' }
+      "renalAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Iniciar com 1/4 a 1/2 da dose inicial habitual conforme grau de insuficiência renal e titular lentamente.",
+          "es": "Iniciar con 1/4 a 1/2 de la dosis inicial habitual según el grado de insuficiencia renal y titular lentamente."
+        }
+      },
+      "hepaticAdjustment": {
+        "required": true,
+        "message": {
+          "pt": "Iniciar com 1/4 a 1/2 da dose inicial habitual na disfunção hepática moderada; titular cuidadosamente.",
+          "es": "Iniciar con 1/4 a 1/2 de la dosis inicial habitual en disfunción hepática moderada; titular cuidadosamente."
+        }
+      },
+      "commonAdverseEffects": {
+        "pt": [
+          "Náusea",
+          "Sedação",
+          "Constipação"
+        ],
+        "es": [
+          "Náuseas",
+          "Sedación",
+          "Estreñimiento"
+        ]
+      },
+      "dangerousAdverseEffects": {
+        "pt": [
+          "Depressão respiratória",
+          "Hipotensão grave",
+          "Sedação profunda"
+        ],
+        "es": [
+          "Depresión respiratoria",
+          "Hipotensión grave",
+          "Sedación profunda"
+        ]
+      },
+      "contraindications": {
+        "absolute": {
+          "pt": [
+            "Depressão respiratória significativa",
+            "Asma aguda/grave sem monitorização adequada",
+            "Obstrução gastrointestinal conhecida ou suspeita"
+          ],
+          "es": [
+            "Depresión respiratoria significativa",
+            "Asma aguda/grave sin monitorización adecuada",
+            "Obstrucción gastrointestinal conocida o sospechada"
+          ]
+        },
+        "relative": {
+          "pt": [
+            "Insuficiência renal/hepática, idosos ou debilitados"
+          ],
+          "es": [
+            "Insuficiencia renal/hepática, adultos mayores o debilitados"
+          ]
+        }
+      },
+      "safetyFlags": {
+        "bleedingRisk": false,
+        "renalHighRisk": true,
+        "hepaticCaution": true,
+        "antidoteAvailable": true,
+        "highAlertMedication": true,
+        "warning": {
+          "pt": "Existem várias concentrações injetáveis; confirmar concentração e reduzir dose inicial em insuficiência renal/hepática.",
+          "es": "Existen varias concentraciones inyectables; confirmar concentración y reducir dosis inicial en insuficiencia renal/hepática."
+        }
       }
     },
 

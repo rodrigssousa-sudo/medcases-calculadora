@@ -8,17 +8,17 @@
     "name": "Paracetamol"
   },
   "es": {
-    "name": "Paracetamol / Acetaminofén"
+    "name": "Paracetamol"
   },
   "name": {
     "pt": "Paracetamol",
-    "es": "Paracetamol / Acetaminofén"
+    "es": "Paracetamol"
   },
   "keywords": [
     "paracetamol"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-c613ef861d440511",
+  "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "analgesicos.js",
@@ -56,12 +56,207 @@
           "paracetamol",
           "paracetamol (acetaminofeno)"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-c613ef861d440511",
+        "clinicalContentSha256": "c613ef861d4405110b1c3b293c6a4c6f3130609733f4c55426c5fccae018fb2d",
         "source": "medcases-calculadora",
         "schema": "legacy-v1",
         "sourceModule": "analgesia_opioides.js"
       }
     }
-  ]
+  ],
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "paracetamol",
+    "clinical_batch": "LOT003_ANALGESICOS_NAO_OPIOIDES_COANALGESICOS",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_or_regulatory_referral",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Administração",
+            "text": "Somar todas as fontes de paracetamol para o limite diário"
+          },
+          {
+            "label": "Administração",
+            "text": "IV: infundir em 15 minutos conforme rotulagem do produto"
+          },
+          {
+            "label": "Administração",
+            "text": "Usar menor dose efetiva quando houver fatores de risco hepático"
+          }
+        ],
+        "es": [
+          {
+            "label": "Administración",
+            "text": "Sumar todas las fuentes de paracetamol para el límite diario"
+          },
+          {
+            "label": "Administración",
+            "text": "IV: infundir en 15 minutos según rotulado del producto"
+          },
+          {
+            "label": "Administración",
+            "text": "Usar la menor dosis efectiva cuando existan factores de riesgo hepático"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "A principal prevenção de toxicidade é somar todas as formulações contendo paracetamol e respeitar o limite diário total."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hepatotoxicidade por superdose ou exposição excessiva; Reações cutâneas graves raras; Anafilaxia rara"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Hipersensibilidade; Insuficiência hepática grave/doença hepática ativa grave para formulações sistêmicas"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "La principal prevención de toxicidad es sumar todas las formulaciones que contienen paracetamol y respetar el límite diario total."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Hepatotoxicidad por sobredosis o exposición excesiva; Reacciones cutáneas graves raras; Anafilaxia rara"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Hipersensibilidad; Insuficiencia hepática grave/enfermedad hepática activa grave para formulaciones sistémicas"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Referência IV: ≥50 kg, 1.000 mg a cada 6 h ou 650 mg a cada 4 h; máximo 4.000 mg/dia somando todas as vias. <50 kg: 15 mg/kg a cada 6 h ou 12,5 mg/kg a cada 4 h; máximo 75 mg/kg/dia, até 3.750 mg/dia."
+          },
+          {
+            "label": "Pediatria",
+            "text": "2–12 anos, referência IV: 15 mg/kg a cada 6 h ou 12,5 mg/kg a cada 4 h; máximo 75 mg/kg/dia. Neonatos e lactentes exigem esquemas específicos por idade gestacional/cronológica."
+          },
+          {
+            "label": "Rim",
+            "text": "Não há redução fixa rotineira em função renal normal a moderadamente reduzida; em insuficiência renal grave pode ser necessário aumentar o intervalo conforme formulação/protocolo."
+          },
+          {
+            "label": "Fígado",
+            "text": "Evitar em insuficiência hepática grave/doença hepática ativa importante; usar teto diário menor e cautela em hepatopatia, desnutrição ou uso crônico de álcool."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Referencia IV: ≥50 kg, 1.000 mg cada 6 h o 650 mg cada 4 h; máximo 4.000 mg/día sumando todas las vías. <50 kg: 15 mg/kg cada 6 h o 12,5 mg/kg cada 4 h; máximo 75 mg/kg/día, hasta 3.750 mg/día."
+          },
+          {
+            "label": "Pediatría",
+            "text": "2–12 años, referencia IV: 15 mg/kg cada 6 h o 12,5 mg/kg cada 4 h; máximo 75 mg/kg/día. Neonatos y lactantes requieren esquemas específicos según edad gestacional/cronológica."
+          },
+          {
+            "label": "Riñón",
+            "text": "No existe reducción fija rutinaria con función renal normal a moderadamente reducida; en insuficiencia renal grave puede ser necesario aumentar el intervalo según formulación/protocolo."
+          },
+          {
+            "label": "Hígado",
+            "text": "Evitar en insuficiencia hepática grave/enfermedad hepática activa importante; usar un techo diario menor y precaución en hepatopatía, desnutrición o consumo crónico de alcohol."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Analgésico não opioide e antitérmico"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "O mecanismo analgésico/antitérmico não é completamente definido; envolve modulação central da síntese de prostaglandinas e vias descendentes de dor. Tem pouca atividade anti-inflamatória periférica nas doses usuais."
+          },
+          {
+            "label": "Indicações",
+            "text": "Dor leve a moderada; Febre; Componente de analgesia multimodal"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Analgésico no opioide y antipirético"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "El mecanismo analgésico/antipirético no está completamente definido; implica modulación central de la síntesis de prostaglandinas y vías descendentes del dolor. Tiene poca actividad antiinflamatoria periférica a dosis habituales."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Dolor leve a moderado; Fiebre; Componente de analgesia multimodal"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Álcool/hepatotóxicos",
+            "text": "Exposição crônica a álcool ou outros fatores hepatotóxicos pode reduzir a margem de segurança do paracetamol."
+          },
+          {
+            "label": "Varfarina",
+            "text": "Uso repetido em doses altas pode aumentar INR em alguns pacientes; monitorar se uso prolongado."
+          }
+        ],
+        "es": [
+          {
+            "label": "Alcohol/hepatotóxicos",
+            "text": "La exposición crónica a alcohol u otros factores hepatotóxicos puede reducir el margen de seguridad del paracetamol."
+          },
+          {
+            "label": "Warfarina",
+            "text": "Uso repetido a dosis altas puede aumentar INR en algunos pacientes; monitorizar si uso prolongado."
+          }
+        ]
+      },
+      "gravidez_lactacao": {
+        "pt": [
+          {
+            "label": "Gestação/Lactação",
+            "text": "Em geral é uma opção analgésica/antitérmica frequentemente utilizada na gestação quando clinicamente indicada; usar a menor dose efetiva pelo menor tempo. Avaliar dose total e fatores hepáticos."
+          }
+        ],
+        "es": [
+          {
+            "label": "Embarazo/Lactancia",
+            "text": "En general es una opción analgésica/antipirética frecuentemente utilizada en el embarazo cuando está clínicamente indicada; usar la menor dosis efectiva durante el menor tiempo. Evaluar dosis total y factores hepáticos."
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — Acetaminophen Injection",
+            "text": "Fonte oficial revisada em 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=88c29438-3648-4b09-bd43-70ad7a35bcb5"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — Acetaminophen Injection",
+            "text": "Fuente oficial revisada el 2026-09-05. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=88c29438-3648-4b09-bd43-70ad7a35bcb5"
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "paracetamol_source_1",
+        "title": "DailyMed — Acetaminophen Injection",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=88c29438-3648-4b09-bd43-70ad7a35bcb5",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }

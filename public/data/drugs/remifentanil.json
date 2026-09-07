@@ -1,6 +1,6 @@
 {
   "id": "remifentanil",
-  "category": "analgesia",
+  "category": "emergencia",
   "icon": "💊",
   "color": null,
   "colorTxt": null,
@@ -17,9 +17,174 @@
   "keywords": [
     "remifentanil"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-70c5f1e26c2e1230",
+  "clinicalContentSha256": "70c5f1e26c2e1230cebb9bd68dcf1728386acf5c41e17f6178194746209c5e64",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "emergencia.js"
+  "sourceModule": "emergencia.js",
+  "mc_clinical_enrichment_v1": {
+    "schema": "medcases.clinical-enrichment.v1",
+    "drug_key": "remifentanil",
+    "clinical_batch": "LOT002_ANALGESIA_OPIOIDES_REVERSORES",
+    "reviewed_at": "2026-09-05",
+    "source_policy": "official_regulatory_label_and_guideline_when_identified",
+    "sections": {
+      "administracao_preparo": {
+        "pt": [
+          {
+            "label": "Via/Preparo",
+            "text": "Somente IV após reconstituição/diluição conforme produto"
+          },
+          {
+            "label": "Monitorização",
+            "text": "Não administrar como infusão prolongada fora de ambiente com pessoal de anestesia e suporte de ventilação"
+          }
+        ],
+        "es": [
+          {
+            "label": "Vía/Preparación",
+            "text": "Solo IV tras reconstitución/dilución según producto"
+          },
+          {
+            "label": "Monitorización",
+            "text": "No administrar como infusión prolongada fuera de un entorno con personal de anestesia y soporte ventilatorio"
+          }
+        ]
+      },
+      "alertas_criticos": {
+        "pt": [
+          {
+            "label": "Alerta principal",
+            "text": "O efeito analgésico termina rapidamente após suspensão. Planejar analgesia de transição antes de desligar a infusão."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Apneia/depressão respiratória; Rigidez muscular; Bradicardia grave"
+          },
+          {
+            "label": "Contraindicações",
+            "text": "Administração epidural ou intratecal da formulação que contém glicina; Hipersensibilidade ao remifentanil"
+          }
+        ],
+        "es": [
+          {
+            "label": "Alerta principal",
+            "text": "El efecto analgésico termina rápidamente tras la suspensión. Planificar analgesia de transición antes de detener la infusión."
+          },
+          {
+            "label": "Eventos graves",
+            "text": "Apnea/depresión respiratoria; Rigidez muscular; Bradicardia grave"
+          },
+          {
+            "label": "Contraindicaciones",
+            "text": "Administración epidural o intratecal de la formulación que contiene glicina; Hipersensibilidad al remifentanilo"
+          }
+        ]
+      },
+      "usos_especiais": {
+        "pt": [
+          {
+            "label": "Adulto",
+            "text": "Indução: infusão 0,5–1 mcg/kg/min; pode-se usar bolus 1 mcg/kg em 30–60 s em situações selecionadas. Manutenção: tipicamente 0,05–2 mcg/kg/min conforme anestésico concomitante. Pós-operatório imediato: iniciar 0,1 mcg/kg/min e titular 0,025–0,2."
+          },
+          {
+            "label": "Pediatria",
+            "text": "Doses pediátricas variam com idade e procedimento; a rotulagem inclui esquemas de anestesia geral em pacientes pediátricos, mas não há estudo para analgesia pós-operatória nem monitored anesthesia care pediátrica."
+          },
+          {
+            "label": "Rim",
+            "text": "A depuração do remifentanil é amplamente independente da função renal; metabólito inativo pode acumular sem prolongar de forma relevante o efeito opioide em uso habitual."
+          },
+          {
+            "label": "Fígado",
+            "text": "Não há ajuste fixo rotineiro apenas por função hepática; titular ao efeito e à resposta hemodinâmica."
+          }
+        ],
+        "es": [
+          {
+            "label": "Adulto",
+            "text": "Inducción: infusión 0,5–1 mcg/kg/min; puede usarse bolo de 1 mcg/kg en 30–60 s en situaciones seleccionadas. Mantenimiento: típicamente 0,05–2 mcg/kg/min según anestésico concomitante. Posoperatorio inmediato: iniciar 0,1 mcg/kg/min y titular 0,025–0,2."
+          },
+          {
+            "label": "Pediatría",
+            "text": "Las dosis pediátricas varían con edad y procedimiento; el rotulado incluye esquemas de anestesia general en pacientes pediátricos, pero no hay estudio para analgesia posoperatoria ni monitored anesthesia care pediátrica."
+          },
+          {
+            "label": "Riñón",
+            "text": "La depuración de remifentanilo es ampliamente independiente de la función renal; el metabolito inactivo puede acumularse sin prolongar de forma relevante el efecto opioide en el uso habitual."
+          },
+          {
+            "label": "Hígado",
+            "text": "No existe un ajuste fijo rutinario solo por función hepática; titular al efecto y a la respuesta hemodinámica."
+          }
+        ]
+      },
+      "dados_farmacologicos": {
+        "pt": [
+          {
+            "label": "Classe",
+            "text": "Agonista opioide μ ultracurto"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista μ metabolizado rapidamente por esterases inespecíficas do sangue e tecidos. O efeito desaparece em poucos minutos após reduzir ou interromper a infusão, portanto analgesia de transição deve ser planejada antes do término."
+          },
+          {
+            "label": "Indicações",
+            "text": "Analgesia durante indução e manutenção de anestesia geral; Analgesia no pós-operatório imediato sob supervisão direta de anestesia; Componente analgésico de monitored anesthesia care em adultos"
+          }
+        ],
+        "es": [
+          {
+            "label": "Clase",
+            "text": "Agonista opioide μ ultracorto"
+          },
+          {
+            "label": "Mecanismo",
+            "text": "Agonista μ metabolizado rápidamente por esterasas inespecíficas de sangre y tejidos. El efecto desaparece en pocos minutos tras reducir o suspender la infusión, por lo que debe planificarse analgesia de transición antes de finalizar."
+          },
+          {
+            "label": "Indicaciones",
+            "text": "Analgesia durante inducción y mantenimiento de anestesia general; Analgesia en el posoperatorio inmediato bajo supervisión directa de anestesia; Componente analgésico de monitored anesthesia care en adultos"
+          }
+        ]
+      },
+      "referencias": {
+        "pt": [
+          {
+            "label": "DailyMed — ULTIVA (remifentanil)",
+            "text": "Fonte revisada em 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b4c8696-e23e-4c51-a4d2-babab5bd945a"
+          }
+        ],
+        "es": [
+          {
+            "label": "DailyMed — ULTIVA (remifentanil)",
+            "text": "Fuente revisada el 2026-09-05. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b4c8696-e23e-4c51-a4d2-babab5bd945a"
+          }
+        ]
+      },
+      "interacoes_medicamentosas": {
+        "pt": [
+          {
+            "label": "Depressores do SNC",
+            "text": "Benzodiazepínicos, álcool e outros sedativos aumentam risco de sedação profunda e depressão respiratória."
+          }
+        ],
+        "es": [
+          {
+            "label": "Depresores del SNC",
+            "text": "Benzodiazepinas, alcohol y otros sedantes aumentan el riesgo de sedación profunda y depresión respiratoria."
+          }
+        ]
+      }
+    },
+    "sources": [
+      {
+        "id": "dailymed_remifentanil_2026",
+        "title": "DailyMed — ULTIVA (remifentanil)",
+        "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b4c8696-e23e-4c51-a4d2-babab5bd945a",
+        "reviewed_at": "2026-09-05"
+      }
+    ]
+  }
 }
