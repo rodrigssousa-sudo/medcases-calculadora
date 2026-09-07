@@ -29736,7 +29736,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
        Reutiliza o renderer canônico já existente.
        Sem segundo renderer, observer, polling ou timer. */
     setMode("az", elements, shell);
-    renderCanonicalAz(shell, elements, true);
+    renderCanonicalAz(shell, elements, false);
 
     return shell;
   }
@@ -29825,6 +29825,18 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     return true;
   }
 
+  function releaseCanonicalAzMaterialization(shell) {
+    if (!shell) return false;
+    var panel=shell.querySelector('[data-farmacos-panel="az"]');
+    var host=panel && panel.querySelector(".farmacos-v2-az-all-list");
+    if (!host) return false;
+    if (!host.children.length) return false;
+    host.textContent="";
+    host.removeAttribute("data-mc-farm-canonical-az-signature");
+    host.removeAttribute("data-mc-farm-canonical-az-count");
+    return true;
+  }
+
   function setCanonicalAzPhase(shell, elements, searching) {
     if (!shell || !elements) return;
 
@@ -29840,6 +29852,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     if (!panel || !allHost || !nativeHost) return;
 
     if (searching) {
+      releaseCanonicalAzMaterialization(shell);
       allHost.style.display="none";
       nativeHost.style.display="block";
       nativeList.style.removeProperty("display");
@@ -29874,6 +29887,17 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     var panel=shell.querySelector('[data-farmacos-panel="az"]');
     var host=panel && panel.querySelector(".farmacos-v2-az-all-list");
     if (!host) return false;
+
+    if (!host.__mcCanonicalAzDelegated) {
+      host.__mcCanonicalAzDelegated=true;
+      host.addEventListener("click",function (event) {
+        var target=event.target && event.target.closest
+          ? event.target.closest("[data-mc-farm-canonical-drug]")
+          : null;
+        if (!target || !host.contains(target)) return;
+        openCanonicalAzDrug(target.getAttribute("data-mc-farm-canonical-drug"));
+      });
+    }
 
     var source=getDrugDb();
     var seen=Object.create(null);
@@ -29958,12 +29982,6 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
 
       button.appendChild(main);
       button.appendChild(chevron);
-
-      button.addEventListener("click",(function (drugId) {
-        return function () {
-          openCanonicalAzDrug(drugId);
-        };
-      })(row.id));
 
       fragment.appendChild(button);
     });
@@ -30175,7 +30193,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
       currentMode === "az" &&
       !String(elements.input.value || "").trim()
     ) {
-      renderCanonicalAz(shell, elements, true);
+      renderCanonicalAz(shell, elements, false);
     }
   }
 
@@ -30336,7 +30354,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
             setCanonicalAzPhase(shell,elements,true);
             elements.input.dispatchEvent(new Event("input", { bubbles: true }));
           } else {
-            renderCanonicalAz(shell, elements, true);
+            renderCanonicalAz(shell, elements, false);
           }
         }
       });
@@ -30354,10 +30372,29 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
         if (currentMode === "groups") renderGroups(currentShell, currentElements, getDrugDb(), lang, text);
         if (currentMode === "az") {
           var query=String(currentElements.input.value || "").trim();
-          setCanonicalAzPhase(currentShell,currentElements,Boolean(query));
-          if (!query) {
-            renderCanonicalAz(currentShell,currentElements,true);
+          var inputFocused=document.activeElement===currentElements.input;
+          setCanonicalAzPhase(currentShell,currentElements,Boolean(query) || inputFocused);
+          if (!query && !inputFocused) {
+            renderCanonicalAz(currentShell,currentElements, false);
           }
+        }
+      });
+
+      elements.input.addEventListener("focus", function () {
+        var currentShell=document.getElementById("farmacos-v2-shell");
+        var currentElements=mountedElements;
+        if (!currentShell || !currentElements || currentElements.input !== elements.input) return;
+        if (currentMode !== "az") return;
+        setCanonicalAzPhase(currentShell,currentElements,true);
+      });
+
+      elements.input.addEventListener("blur", function () {
+        var currentShell=document.getElementById("farmacos-v2-shell");
+        var currentElements=mountedElements;
+        if (!currentShell || !currentElements || currentElements.input !== elements.input) return;
+        if (currentMode !== "az") return;
+        if (!String(currentElements.input.value || "").trim()) {
+          renderCanonicalAz(currentShell,currentElements,false);
         }
       });
     }
@@ -30379,21 +30416,8 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     setMode(currentMode || "az", elements, shell);
 
     if (!String(elements.input.value || "").trim()) {
-      renderCanonicalAz(shell, elements, true);
+      renderCanonicalAz(shell, elements, false);
     }
-
-    [180,500,1000,1800,3200,5200].forEach(function (delay) {
-      window.setTimeout(function () {
-        if (
-          shell.isConnected &&
-          mountedElements === elements &&
-          currentMode === "az" &&
-          !String(elements.input.value || "").trim()
-        ) {
-          renderCanonicalAz(shell, elements, true);
-        }
-      },delay);
-    });
   }
 
   function mountVisibleSurface(reason) {
