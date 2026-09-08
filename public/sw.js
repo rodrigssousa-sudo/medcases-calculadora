@@ -227,7 +227,7 @@ self.addEventListener('fetch', (event) => {
 ============================================================ */
 async function staleWhileRevalidate(request) {
   const cache        = await caches.open(CACHE_NAME);
-  const cachedResponse = await cache.match(request);
+  const cachedResponse = await /* MC-SW-NAV-CACHE-IGNORE-SEARCH-V1-B-R0 */ cache.match(request, { ignoreSearch: request.mode === 'navigate' });
 
   /* ── Dispara atualização em segundo plano (não-bloqueante) ── */
   const networkUpdatePromise = fetch(request.clone())

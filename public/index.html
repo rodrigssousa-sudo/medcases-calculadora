@@ -17747,7 +17747,67 @@ function _fdRenderCanonicalCalculatedResult(body, hero, patient, lang) {
 window._fdRenderCanonicalCalculatedResult=_fdRenderCanonicalCalculatedResult;
 
 
+
+/* MC-ROOTCAUSE-CLOSURE-V1-B-R0
+   Canonical drug-detail lifecycle epoch.
+   Purpose: late async detail callbacks must not mutate a closed/replaced detail surface. */
+(function(){
+  if (window.__mcDrugDetailLifecycleV1) return;
+  const state = {
+    epoch: 0,
+    open: false,
+    timers: new Set()
+  };
+  const nativeSetTimeout = window.setTimeout.bind(window);
+  const nativeClearTimeout = window.clearTimeout.bind(window);
+
+  function invalidate(reason){
+    state.epoch += 1;
+    state.open = false;
+    for (const id of Array.from(state.timers)) {
+      try { nativeClearTimeout(id); } catch (_) {}
+    }
+    state.timers.clear();
+    try {
+      document.documentElement.setAttribute('data-mc-drug-epoch', String(state.epoch));
+    } catch (_) {}
+    return state.epoch;
+  }
+
+  function begin(){
+    invalidate('open-replace');
+    state.open = true;
+    return state.epoch;
+  }
+
+  function schedule(fn, delay){
+    const epoch = state.epoch;
+    const id = nativeSetTimeout(function(){
+      state.timers.delete(id);
+      if (!state.open || epoch !== state.epoch) return;
+      return fn();
+    }, delay);
+    state.timers.add(id);
+    return id;
+  }
+
+  function isCurrent(epoch){
+    return !!state.open && epoch === state.epoch;
+  }
+
+  window.__mcDrugDetailLifecycleV1 = {
+    state, begin, invalidate, schedule, isCurrent,
+    currentEpoch: () => state.epoch,
+    isOpen: () => !!state.open
+  };
+})();
+
 async function openFarmacoDetail(id) {
+  /* MC-ROOTCAUSE-CLOSURE-V1-B-R0: lifecycle begin */
+  if (window.__mcDrugDetailLifecycleV1) {
+    window.__mcDrugDetailLifecycleV1.begin();
+  }
+
   /* REQ-5: registra o drug ativo para o botão "Calcular Dose" */
   window._fdActiveDrugId = id;
 
@@ -18943,6 +19003,11 @@ async function openFarmacoDetail(id) {
 
 /* Fecha o modal de detalhe */
 function closeFarmacoDetail() {
+  /* MC-ROOTCAUSE-CLOSURE-V1-B-R0: lifecycle invalidate */
+  if (window.__mcDrugDetailLifecycleV1) {
+    window.__mcDrugDetailLifecycleV1.invalidate('closeFarmacoDetail');
+  }
+
   const overlay     = document.getElementById('fd-modal-overlay');
   const modal       = document.getElementById('fd-modal');
   const floatClose  = document.getElementById('fd-floating-close');
@@ -27809,6 +27874,9 @@ window.MedCasesBridge = {
    * PWA standalone também usa comportamento de WebView para teclado.
    */
   function isIOSWebView() {
+  /* MC-IOS-WKWEBVIEW-MESSAGEHANDLER-GUARD-V1-B-R0 */
+  if (window.webkit && window.webkit.messageHandlers) return true;
+
     var ua = navigator.userAgent || '';
     var isIOS = /iPhone|iPad|iPod/.test(ua);
     if (!isIOS) return false;
@@ -27817,15 +27885,44 @@ window.MedCasesBridge = {
     return !isSafari || isStandalone;
   }
 
+/* MC-KEYBOARD-EDITABLE-FOCUS-GUARD-V1-B-R0
+   Never retain keyboard-open when visualViewport ~= innerHeight and there is no editable focus. */
+(function(){
+  if (window.__mcKeyboardEditableFocusGuardV1) return;
+  window.__mcKeyboardEditableFocusGuardV1 = true;
+  function editableFocused(){
+    const el=document.activeElement;
+    if (!el) return false;
+    if (el.isContentEditable) return true;
+    return /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName || '');
+  }
+  function reconcile(){
+    const vv=window.visualViewport;
+    const sameViewport=!vv || Math.abs(vv.height-window.innerHeight) <= 8;
+    if (!editableFocused() && sameViewport) {
+      document.documentElement.classList.remove('keyboard-open');
+      if (document.body) document.body.classList.remove('keyboard-open');
+    }
+  }
+  window.addEventListener('pageshow', reconcile, {passive:true});
+  window.addEventListener('focusout', function(){ setTimeout(reconcile, 0); }, true);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', reconcile, {passive:true});
+  }
+  reconcile();
+})();
+
+
+
   /**
    * getKeyboardHeight()
    * Altura estimada do teclado em pixels.
-   * Usa visualViewport.height vs screen.height quando possível.
+   * Usa visualViewport.height vs (window.visualViewport ? window.visualViewport.height : window.innerHeight) quando possível.
    */
   function getKeyboardHeight() {
     if (window.visualViewport) {
       var vvH    = window.visualViewport.height;
-      var winH   = window.screen.height || window.innerHeight;
+      var winH   = (window.visualViewport ? window.visualViewport.height : window.innerHeight) || window.innerHeight;
       var offset = window.visualViewport.offsetTop || 0;
       var diff   = (winH - offset) - vvH;
       return diff > 0 ? diff : 0;
@@ -27921,10 +28018,10 @@ window.MedCasesBridge = {
     _debounceTimer = setTimeout(function () {
       var vv       = window.visualViewport;
       var vvHeight = vv ? vv.height : window.innerHeight;
-      /* Usa a baseline mais alta — garante que screen.height não engane */
+      /* Usa a baseline mais alta — garante que (window.visualViewport ? window.visualViewport.height : window.innerHeight) não engane */
       var base     = Math.max(
         _baseVVHeight,
-        window.screen.height || _baseVVHeight
+        (window.visualViewport ? window.visualViewport.height : window.innerHeight) || _baseVVHeight
       );
       var diff = base - vvHeight;
 
@@ -31271,7 +31368,10 @@ function flatten(v,out,prefix){out=out||[];prefix=prefix||"";v=local(v);if(!usef
 function uniq(a){var seen={};return(a||[]).filter(function(x){var k=norm(x);if(!k||seen[k])return false;seen[k]=1;return true})}
 function activeId(){var m=document.getElementById("fd-modal");return slug(window._fdActiveDrugId||(m&&m.dataset.currentDrugId)||"")}
 function panel(name){return document.querySelector('#fd-body .fd-tab-panel[data-fd-panel="'+name+'"]')||document.querySelector('.fd-tab-panel[data-fd-panel="'+name+'"]')}
-function nativeText(p){return norm(Array.from(p.children).filter(function(c){return!c.classList.contains("fd-meta-merge")}).map(function(c){return c.innerText||""}).join(" "))}
+function nativeText(p){
+  /* MC-ROOTCAUSE-CLOSURE-V1-B-R0: null-safe detached DOM guard */
+  if (!p || !p.children) return '';
+return norm(Array.from(p.children).filter(function(c){return!c.classList.contains("fd-meta-merge")}).map(function(c){return c.innerText||""}).join(" "))}
 function diffItems(items,p){var n=nativeText(p);return uniq(items).filter(function(x){var k=norm(x);return k&&n.indexOf(k)<0})}
 function add(out,key,val){val=local(val);if(!useful(val))return;if(!out[key])out[key]=[];out[key].push(val)}
 function rawSources(id){var arr=[];Object.keys(window).forEach(function(k){if(!/_DRUGS_DB$/.test(k))return;var db;try{db=window[k]}catch(e){return}if(!db)return;var entry;if(Array.isArray(db))entry=db.find(function(x){return x&&slug(x.id||x.key||x.name)===id});else if(typeof db==="object")entry=db[id];if(entry&&typeof entry==="object")arr.push(entry)});return arr}
@@ -54709,6 +54809,34 @@ body.calc-overlay-open #fd-modal.open #fd-body :where(.mc-canon-adult-ref,.mc-ca
   };
 
   const functionalLoadDrugJson=async file=>{
+  /* MC-ROOTCAUSE-CLOSURE-V1-B-R0: canonical drug identity guard */
+  const __mcRequestedDrugIdentity = String(file == null ? '' : file).trim();
+  if (__mcRequestedDrugIdentity) {
+    const __mcNorm = __mcRequestedDrugIdentity
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/[^a-z0-9_-]+/g, '_')
+      .replace(/^_+|_+$/g, '');
+    const __mcDb = window.DRUG_DB && typeof window.DRUG_DB === 'object' ? window.DRUG_DB : null;
+    if (__mcDb && Object.keys(__mcDb).length) {
+      const __mcValid = Object.prototype.hasOwnProperty.call(__mcDb, __mcRequestedDrugIdentity)
+        || Object.prototype.hasOwnProperty.call(__mcDb, __mcNorm)
+        || Object.values(__mcDb).some(function(d){
+          if (!d || typeof d !== 'object') return false;
+          const vals=[d.id,d.key,d.slug,d.nome,d.name,d.nome_es,d.nome_pt];
+          return vals.some(function(v){
+            if (v == null) return false;
+            const n=String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+              .toLowerCase().replace(/[^a-z0-9_-]+/g,'_').replace(/^_+|_+$/g,'');
+            return n === __mcNorm;
+          });
+        });
+      if (!__mcValid) {
+        console.warn('[MC-ROOTCAUSE-CLOSURE-V1-B-R0] blocked non-canonical drug identity', __mcRequestedDrugIdentity);
+        return null;
+      }
+    }
+  }
+
     if(!file)return null;
     const mcFunctionalLoadAliasKey=String(file)
       .replace(/\.json$/i,'')
