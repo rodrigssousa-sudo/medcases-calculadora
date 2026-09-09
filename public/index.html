@@ -8169,10 +8169,14 @@ body.calc-overlay-open .grid-card-clcr {
 #hub-card-farmacos.mc-overlay-projected-card
 > #hub-body-farmacos
 > .hub-card-inner{
+  /* MEDCASES_CALC_FARMACOS_HEADER_SEARCH_GAP_1PX_V1_B_R0
+     Collapse only the vertical transition between the projected Fármacos
+     header and the canonical browser/search surface. Horizontal gutter stays 10px. */
   width:100%!important;
   max-width:none!important;
   margin-left:0!important;
   margin-right:0!important;
+  padding-top:1px!important;
   padding-left:10px!important;
   padding-right:10px!important;
   box-sizing:border-box!important;
@@ -8322,7 +8326,7 @@ body.light #hub-card-farmacos.mc-overlay-projected-card{
   height:44px!important;
   min-height:44px!important;
   max-height:44px!important;
-  margin:10px 0 12px!important;
+  margin:0 0 12px!important;
   padding:0 12px!important;
   display:flex!important;
   align-items:center!important;
