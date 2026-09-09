@@ -68022,6 +68022,22 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
     return String(d.id||d.key||d.slug||d.drugId||'').trim();
   };
 
+
+  /* MEDCASES_FARMACOS_AZ_ACTIVE_LOCALE_ROWS_R2 */
+  const resolveObjectClass=(d,lang)=>{
+    if(!d || typeof d!=='object') return '';
+    const direct=[
+      d.class && typeof d.class==='object' ? d.class[lang] : '',
+      d[lang] && typeof d[lang]==='object' ? d[lang].class : '',
+      d.drugClass && typeof d.drugClass==='object' ? d.drugClass[lang] : '',
+      d.therapeuticClass && typeof d.therapeuticClass==='object' ? d.therapeuticClass[lang] : '',
+      lang==='es' ? d.classEs : d.classPt,
+      lang==='es' ? d.clase : d.classe
+    ];
+    for(const v of direct){if(typeof v==='string'&&v.trim())return v.trim();}
+    return '';
+  };
+
   const findDrug=value=>{
     if(value && typeof value==='object') return value.ref&&typeof value.ref==='object'?value.ref:value;
     const key=norm(value);
@@ -68039,7 +68055,7 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
 
   const idFromRow=row=>{
     if(!row) return '';
-    for(const attr of ['data-drug-id','data-id','data-drug','data-drug-key','data-canonical','data-med-id']){
+    for(const attr of ['data-drug-id','data-id','data-drug','data-drug-key','data-canonical','data-med-id','data-farmaco-id','data-farmacos-drug-id','data-mc-drug-id','data-mc-farm-drug-id','data-key','data-slug']){
       const v=row.getAttribute?.(attr);
       if(v) return v;
     }
@@ -68066,14 +68082,16 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
     const rowSelector=[
       '.hm-drug-item','.farmacos-row','.drug-list-row',
       '.farmacos-v2-module-row','.farmacos-v2-context-row',
-      '.farmacos-v2-group-row','.mc-fnav-drug-row',
-      '.mc-farm-render-only-row'
+      '.farmacos-v2-group-row','.farmacos-v2-row','.farmacos-v2-drug-row',
+      '.mc-fnav-drug-row','.mc-farm-render-only-row',
+      '[data-drug-id]','[data-mc-drug-id]','[data-mc-farm-drug-id]','[data-farmaco-id]'
     ].join(',');
 
     const nameSelector=[
       '.hm-drug-name','.farmacos-row-name','.drug-card-name',
-      '.farmacos-v2-row-title','.mc-fnav-drug-name',
-      '.mc-farm-render-only-title'
+      '.farmacos-v2-row-title','.farmacos-v2-drug-name',
+      '.mc-fnav-drug-name','.mc-farm-drug-name',
+      '.mc-farm-render-only-title','[data-drug-name]','[data-mc-farm-name]'
     ].join(',');
 
     let changed=0;
@@ -68092,6 +68110,17 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
         if(!localized) continue;
         if(target.textContent!==localized){
           target.textContent=localized;
+          changed++;
+        }
+        const classTarget=row.querySelector([
+          '.hm-drug-class','.farmacos-row-class','.drug-card-class',
+          '.farmacos-v2-row-subtitle','.farmacos-v2-drug-class',
+          '.mc-fnav-drug-class','.mc-farm-drug-class',
+          '.mc-farm-render-only-subtitle','[data-drug-class]','[data-mc-farm-class]'
+        ].join(','));
+        const localizedClass=resolveObjectClass(drug,lang);
+        if(classTarget&&localizedClass&&classTarget.textContent!==localizedClass){
+          classTarget.textContent=localizedClass;
           changed++;
         }
         row.dataset.mcDisplayLang=lang;
@@ -68217,16 +68246,24 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
         rows:rows.length,
         localizedRows:rows.filter(r=>r.dataset.mcDisplayLang===lang).length,
         detailLang:document.getElementById('mc-drug-detail-page-v21')?.dataset.mcLang||null,
-        cleanroomLocalePaths:true
+        cleanroomLocalePaths:true,
+        azRowLocaleR2:true,
+        classLocaleResolver:true
       };
     }
   };
 
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',scheduleOnce,{once:true});
-  }else{
+  const browserV2LocaleHandshake=()=>{
     scheduleOnce();
+    setTimeout(scheduleOnce,160);
+    setTimeout(scheduleOnce,520);
+  };
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',browserV2LocaleHandshake,{once:true});
+  }else{
+    browserV2LocaleHandshake();
   }
+  window.addEventListener('load',scheduleOnce,{once:true});
 
   console.log('['+BUILD+'] INSTALLED',{
     policy:'ACTIVE_LOCALE_SEARCH_AND_DISPLAY',
