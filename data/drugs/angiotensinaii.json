@@ -1,12 +1,25 @@
 {
   "id": "angiotensinaii",
   "category": "cardio",
-  "icon": "🩸",
+  "icon": "",
   "color": "rgba(190,24,93,0.13)",
   "colorTxt": "#9D174D",
   "pt": {
     "name": "Angiotensina II",
     "class": "Vasopressor — agonista do receptor AT1 da angiotensina II",
+    "pharmacologicClass": "Vasoconstritor peptídico; agonista AT1 da angiotensina II.",
+    "mechanism": "A angiotensina II aumenta a pressão arterial por vasoconstrição e aumento da liberação de aldosterona. A ação vascular direta ocorre principalmente por ligação ao receptor AT1 acoplado à proteína G no músculo liso vascular, estimulando a fosforilação de miosina dependente de Ca²⁺/calmodulina e a contração do músculo liso.",
+    "pharmacodynamics": [
+      "Vasoconstrição sistêmica rápida com aumento da resistência vascular e da PA.",
+      "Meia-vida plasmática <1 min permite titulação rápida."
+    ],
+    "pharmacokinetics": [
+      "Meia-vida plasmática da angiotensina II intravenosa: inferior a 1 minuto.",
+      "Metabolizada por aminopeptidase A a angiotensina III e por ECA2 a angiotensina-(1-7), no plasma, eritrócitos e diversos órgãos.",
+      "A depuração não depende da função renal ou hepática.",
+      "Não foram demonstradas diferenças farmacocinéticas clinicamente significativas por idade (<65 versus ≥65 anos) ou sexo no ATHOS-3.",
+      "Não foram realizados estudos específicos de distribuição."
+    ],
     "indications": [
       "Tratamento da hipotensão refratária em adultos com choque séptico ou outro choque distributivo que permanecem hipotensos apesar de reposição volêmica adequada e uso de catecolaminas e/ou outros vasopressores disponíveis.",
       "Uso hospitalar em contexto de choque distributivo; não extrapolar para choque não distributivo sem indicação baseada em evidência."
@@ -22,43 +35,21 @@
     "presentation": [
       "Frasco-ampola 2,5 mg/mL (1 mL ou 2 mL) — concentrado para diluição"
     ],
-    "mechanism": "A angiotensina II aumenta a pressão arterial por vasoconstrição e aumento da liberação de aldosterona. A ação vascular direta ocorre principalmente por ligação ao receptor AT1 acoplado à proteína G no músculo liso vascular, estimulando a fosforilação de miosina dependente de Ca²⁺/calmodulina e a contração do músculo liso.",
-    "pharmacokinetics": [
-      "Meia-vida plasmática da angiotensina II intravenosa: inferior a 1 minuto.",
-      "Metabolizada por aminopeptidase A a angiotensina III e por ECA2 a angiotensina-(1-7), no plasma, eritrócitos e diversos órgãos.",
-      "A depuração não depende da função renal ou hepática.",
-      "Não foram demonstradas diferenças farmacocinéticas clinicamente significativas por idade (<65 versus ≥65 anos) ou sexo no ATHOS-3.",
-      "Não foram realizados estudos específicos de distribuição."
+    "presentations": [
+      "GIAPREZA 2,5 mg/mL: frasco-ampola de dose única de 1 mL contendo 2,5 mg de angiotensina II.",
+      "GIAPREZA 0,5 mg/mL: frasco-ampola de dose única de 1 mL contendo 0,5 mg de angiotensina II.",
+      "Solução aquosa límpida para diluição e infusão intravenosa."
     ],
     "dose": {
-      "adult": [
-        "Dose inicial: 20 ng/kg/min por infusão intravenosa contínua.",
-        "Titular a resposta pressórica até a cada 5 minutos, em incrementos de até 15 ng/kg/min.",
-        "Não exceder 80 ng/kg/min durante as primeiras 3 horas de tratamento.",
-        "Dose de manutenção: não exceder 40 ng/kg/min.",
-        "Podem ser utilizadas doses tão baixas quanto 1,25 ng/kg/min.",
-        "Após melhora suficiente do choque subjacente, reduzir progressivamente a cada 5–15 minutos, em decrementos de até 15 ng/kg/min, conforme a pressão arterial.",
-        "A EMA descreve PAM alvo habitual de 65–75 mmHg em doentes críticos; individualizar conforme contexto clínico e perfusão."
-      ],
-      "pediatric": [
-        "Segurança e eficácia em menores de 18 anos não estabelecidas; não existe dose pediátrica aprovada."
-      ]
+      "Início": "20 ng/kg/min IV contínuo.",
+      "Titulação": "A cada 5 min, incrementar até 15 ng/kg/min conforme PA.",
+      "Máximo primeiras 3 h": "80 ng/kg/min.",
+      "Manutenção": "Máximo 40 ng/kg/min.",
+      "Desmame": "Reduzir a cada 5–15 min; doses até 1,25 ng/kg/min podem ser usadas."
     },
-    "doseKg": {
-      "padrao": "20 ng/kg/min IV — dose inicial",
-      "grave": "Até 40 ng/kg/min IV — manutenção habitual",
-      "meningite": null,
-      "doseMaxima": "80 ng/kg/min (limitado às primeiras 3 horas de infusão)"
-    },
-    "infusionCalc": "Informe doseAtual (ng/kg/min) e peso para calcular velocidade. Concentração padrão: 2,5 mg/500 mL SF 0,9% → 5.000 ng/mL (ou 10.000 ng/mL conforme protocolo).",
-    "administration": [
-      "Administrar exclusivamente por infusão intravenosa contínua.",
-      "Recomenda-se acesso venoso central.",
-      "Titular pela resposta pressórica; a administração deve ocorrer sob monitorização hemodinâmica e da perfusão de órgãos.",
-      "Após melhora do choque, reduzir progressivamente em vez de interromper abruptamente."
-    ],
-    "dilution": "Bomba de infusão obrigatória com acesso venoso central. Concentração padrão: 2,5 mg em 500 mL SF 0,9% → 5.000 ng/mL.",
-    "speed": "Iniciar 20 ng/kg/min; titular a cada 5 min em incrementos de até 15 ng/kg/min conforme PAM alvo. Não infundir em bolus.",
+    "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas.",
+    "renalDose": "Sem ajuste específico estabelecido; titular pela resposta hemodinâmica.",
+    "hepaticDose": "Sem ajuste específico estabelecido; titular pela resposta hemodinâmica.",
     "commonAdverseEffects": [
       "Trombocitopenia",
       "Taquicardia",
@@ -70,7 +61,18 @@
       "Isquemia periférica",
       "Delírio"
     ],
-    "risksByPatient": [],
+    "adverseEffects": [
+      "Eventos trombóticos e tromboembólicos arteriais/venosos: 12,9% com angiotensina II versus 5,1% com placebo no ATHOS-3.",
+      "Trombose venosa profunda: 4,3% versus 0%.",
+      "Trombocitopenia: 9,8% versus 7,0%.",
+      "Taquicardia: 8,6% versus 5,7%.",
+      "Infecção fúngica: 6,1% versus 1,3%.",
+      "Delirium: 5,5% versus 0,6%.",
+      "Acidose: 5,5% versus 0,6%.",
+      "Hiperglicemia: 4,3% versus 2,5%.",
+      "Isquemia periférica: 4,3% versus 2,5%.",
+      "Hipertensão transitória pode ocorrer durante titulação; reduzir a dose conforme resposta."
+    ],
     "contraindications": {
       "EMA": [
         "Hipersensibilidade à substância ativa ou a qualquer excipiente da formulação."
@@ -85,16 +87,6 @@
       "Outros vasopressores podem ter efeito aditivo sobre a pressão arterial média; pode ser necessário reduzir doses dos vasopressores concomitantes.",
       "Não foram realizados estudos formais de interação medicamentosa específicos para GIAPREZA."
     ],
-    "renalAdjustment": [
-      "Não é necessário ajuste especial de dose na insuficiência renal.",
-      "A depuração da angiotensina II não depende da função renal.",
-      "Monitorizar atentamente a resposta pressórica e titular a dose ao efeito."
-    ],
-    "hepaticAdjustment": [
-      "Não é necessário ajuste especial de dose no compromisso hepático.",
-      "A depuração da angiotensina II não depende da função hepática.",
-      "Monitorizar atentamente a resposta pressórica e titular a dose ao efeito."
-    ],
     "monitoring": [
       "Monitorização hemodinâmica contínua, com atenção à pressão arterial média e à perfusão de órgãos.",
       "Reavaliar a resposta pressórica durante a titulação, que pode ocorrer a cada 5 minutos.",
@@ -102,6 +94,30 @@
       "Vigiar sinais e sintomas de trombose venosa e arterial.",
       "Considerar parâmetros de perfusão tecidual e evolução do choque para reduzir vasopressores concomitantes quando possível."
     ],
+    "administration": [
+      "Administrar exclusivamente por infusão intravenosa contínua.",
+      "Recomenda-se acesso venoso central.",
+      "Titular pela resposta pressórica; a administração deve ocorrer sob monitorização hemodinâmica e da perfusão de órgãos.",
+      "Após melhora do choque, reduzir progressivamente em vez de interromper abruptamente."
+    ],
+    "preparation": [
+      "Inspecionar visualmente a solução antes do uso quanto a partículas e alteração de cor.",
+      "Diluir em cloreto de sódio 0,9% antes da administração.",
+      "Preparar concentração final de 5.000 ng/mL ou 10.000 ng/mL.",
+      "Para 5.000 ng/mL: 1 mL de 2,5 mg/mL em bolsa de 500 mL de NaCl 0,9%.",
+      "Para 10.000 ng/mL em restrição de volume: 1 mL de 2,5 mg/mL em bolsa de 250 mL de NaCl 0,9%.",
+      "Descartar o frasco e qualquer porção não utilizada após o preparo.",
+      "A solução diluída pode permanecer em temperatura ambiente ou refrigerada; descartar após 24 horas.",
+      "Frascos não diluídos: conservar refrigerados entre 2 °C e 8 °C."
+    ],
+    "infusionProtocol": {
+      "Via": "Infusão IV contínua; acesso central recomendado.",
+      "Diluição": "NaCl 0,9% para 5.000 ou 10.000 ng/mL.",
+      "Estabilidade": "Descartar após 24 h.",
+      "Limites": "80 ng/kg/min nas primeiras 3 h; manutenção ≤40 ng/kg/min."
+    },
+    "pregnancy": "Choque distributivo é emergência; não atrasar tratamento necessário por gestação. Dados específicos são limitados.",
+    "lactation": "Não se sabe se está presente no leite humano; não há dados de efeitos no lactente.",
     "specialPopulations": {
       "pregnancy": [
         "Dados publicados em gestantes são insuficientes para definir risco de desenvolvimento associado ao medicamento.",
@@ -130,6 +146,17 @@
         "Não existem dados clínicos adequados sobre efeitos na fertilidade humana."
       ]
     },
+    "patientEducation": [
+      "Uso exclusivamente hospitalar; explicar objetivo pressórico e monitorização intensiva."
+    ],
+    "clinicalPearls": [
+      "Risco trombótico é central; usar profilaxia de TEV concomitante salvo contraindicação.",
+      "IECA podem aumentar resposta; BRA podem reduzi-la.",
+      "Meia-vida <1 min favorece titulação/desmame rápidos."
+    ],
+    "guidelineRecommendations": [
+      "Indicação de bula: elevar PA em adultos com choque séptico ou outro choque distributivo; integra estratégia multimodal de vasopressores."
+    ],
     "safetyFlags": {
       "highAlertMedication": true,
       "vasopressor": true,
@@ -140,59 +167,32 @@
       "hospitalUseOnly": true,
       "warning": "ALTO RISCO TROMBÓTICO. A profilaxia concomitante para tromboembolismo venoso (TEV) é OBRIGATÓRIA durante a infusão, salvo contraindicação. Administração exclusiva por CVC, sem bolus."
     },
-    "auditNotes": {
-      "status": "vasopressor_angiotensina_ii_master_template"
-    },
-    "ref": [
-      "Surviving Sepsis Campaign Guidelines",
-      "ATHOS-3 Trial (Angiotensin II for the Treatment of High-Output Shock)",
-      "FDA Labeling Information — Giapreza (Angiotensin II)"
-    ],
-    "adverseEffects": [
-      "Eventos trombóticos e tromboembólicos arteriais/venosos: 12,9% com angiotensina II versus 5,1% com placebo no ATHOS-3.",
-      "Trombose venosa profunda: 4,3% versus 0%.",
-      "Trombocitopenia: 9,8% versus 7,0%.",
-      "Taquicardia: 8,6% versus 5,7%.",
-      "Infecção fúngica: 6,1% versus 1,3%.",
-      "Delirium: 5,5% versus 0,6%.",
-      "Acidose: 5,5% versus 0,6%.",
-      "Hiperglicemia: 4,3% versus 2,5%.",
-      "Isquemia periférica: 4,3% versus 2,5%.",
-      "Hipertensão transitória pode ocorrer durante titulação; reduzir a dose conforme resposta."
-    ],
-    "presentations": [
-      "GIAPREZA 2,5 mg/mL: frasco-ampola de dose única de 1 mL contendo 2,5 mg de angiotensina II.",
-      "GIAPREZA 0,5 mg/mL: frasco-ampola de dose única de 1 mL contendo 0,5 mg de angiotensina II.",
-      "Solução aquosa límpida para diluição e infusão intravenosa."
+    "alerts": [
+      "Profilaxia de TEV concomitante.",
+      "Monitorar PA e sinais de isquemia/trombose.",
+      "Não exceder os limites de dose de bula."
     ],
     "references": [
-      "European Medicines Agency (EMA). Giapreza (angiotensin II) — Product Information / EPAR. Product information updated 25 Sep 2024. https://www.ema.europa.eu/en/medicines/human/EPAR/giapreza",
-      "European Medicines Agency (EMA). Giapreza — Product Information. https://www.ema.europa.eu/en/documents/product-information/giapreza-epar-product-information_en.pdf",
-      "DailyMed. GIAPREZA (angiotensin II) Injection for Intravenous Infusion — Full Prescribing Information. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c265d69a-3efe-4107-9a9e-e6fd3d531c48",
-      "DailyMed. Angiotensin II Injection for Intravenous Infusion — Full Prescribing Information. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=727d1102-fc46-46f8-b78e-fd13f0738fe4",
-      "Khanna A, English SW, Wang XS, et al.; ATHOS-3 Investigators. Angiotensin II for the Treatment of Vasodilatory Shock. N Engl J Med. 2017;377:419-430. doi:10.1056/NEJMoa1704154"
+      "DailyMed GIAPREZA/angiotensin II current label"
     ],
-    "alerts": [
-      "Usar profilaxia concomitante para tromboembolismo venoso, salvo contraindicação.",
-      "Administrar a menor dose compatível com pressão arterial e perfusão adequadas.",
-      "Evitar interrupção abrupta: redução gradual diminui risco de hipotensão ou piora do choque.",
-      "A experiência clínica é em choque séptico ou outro choque distributivo; a EMA não recomenda uso em outros tipos de choque, como choque cardiogênico.",
-      "Superdosagem pode causar hipertensão; monitorizar e fornecer suporte. Os efeitos tendem a ser breves devido à meia-vida plasmática inferior a 1 minuto."
-    ],
-    "preparation": [
-      "Inspecionar visualmente a solução antes do uso quanto a partículas e alteração de cor.",
-      "Diluir em cloreto de sódio 0,9% antes da administração.",
-      "Preparar concentração final de 5.000 ng/mL ou 10.000 ng/mL.",
-      "Para 5.000 ng/mL: 1 mL de 2,5 mg/mL em bolsa de 500 mL de NaCl 0,9%.",
-      "Para 10.000 ng/mL em restrição de volume: 1 mL de 2,5 mg/mL em bolsa de 250 mL de NaCl 0,9%.",
-      "Descartar o frasco e qualquer porção não utilizada após o preparo.",
-      "A solução diluída pode permanecer em temperatura ambiente ou refrigerada; descartar após 24 horas.",
-      "Frascos não diluídos: conservar refrigerados entre 2 °C e 8 °C."
-    ]
+    "ref": "DailyMed GIAPREZA/angiotensin II."
   },
   "es": {
     "name": "Angiotensina II",
     "class": "Vasopresor — agonista del receptor AT1 de la angiotensina II",
+    "pharmacologicClass": "Vasoconstrictor peptídico; agonista AT1 de angiotensina II.",
+    "mechanism": "La angiotensina II aumenta la presión arterial mediante vasoconstricción y aumento de la liberación de aldosterona. La acción vascular directa ocurre principalmente por unión al receptor AT1 acoplado a proteína G en el músculo liso vascular, estimulando la fosforilación de miosina dependiente de Ca²⁺/calmodulina y la contracción del músculo liso.",
+    "pharmacodynamics": [
+      "Vasoconstricción sistémica rápida con aumento de resistencia vascular y PA.",
+      "Semivida plasmática <1 min permite titulación rápida."
+    ],
+    "pharmacokinetics": [
+      "Vida media plasmática de la angiotensina II intravenosa: inferior a 1 minuto.",
+      "Se metaboliza por aminopeptidasa A a angiotensina III y por ECA2 a angiotensina-(1-7), en plasma, eritrocitos y múltiples órganos.",
+      "El aclaramiento no depende de la función renal ni hepática.",
+      "No se demostraron diferencias farmacocinéticas clínicamente significativas por edad (<65 frente a ≥65 años) o sexo en ATHOS-3.",
+      "No se realizaron estudios específicos de distribución."
+    ],
     "indications": [
       "Tratamiento de la hipotensión refractaria en adultos con shock séptico u otro shock distributivo que permanecen hipotensos a pesar de reposición de volumen adecuada y uso de catecolaminas y/u otros vasopresores disponibles.",
       "Uso hospitalario en contexto de shock distributivo; no extrapolar a shock no distributivo sin una indicación basada en evidencia."
@@ -208,43 +208,21 @@
     "presentation": [
       "Vial 2,5 mg/mL (1 mL o 2 mL) — concentrado para dilución"
     ],
-    "mechanism": "La angiotensina II aumenta la presión arterial mediante vasoconstricción y aumento de la liberación de aldosterona. La acción vascular directa ocurre principalmente por unión al receptor AT1 acoplado a proteína G en el músculo liso vascular, estimulando la fosforilación de miosina dependiente de Ca²⁺/calmodulina y la contracción del músculo liso.",
-    "pharmacokinetics": [
-      "Vida media plasmática de la angiotensina II intravenosa: inferior a 1 minuto.",
-      "Se metaboliza por aminopeptidasa A a angiotensina III y por ECA2 a angiotensina-(1-7), en plasma, eritrocitos y múltiples órganos.",
-      "El aclaramiento no depende de la función renal ni hepática.",
-      "No se demostraron diferencias farmacocinéticas clínicamente significativas por edad (<65 frente a ≥65 años) o sexo en ATHOS-3.",
-      "No se realizaron estudios específicos de distribución."
+    "presentations": [
+      "GIAPREZA 2,5 mg/mL: vial monodosis de 1 mL con 2,5 mg de angiotensina II.",
+      "GIAPREZA 0,5 mg/mL: vial monodosis de 1 mL con 0,5 mg de angiotensina II.",
+      "Solución acuosa transparente para dilución e infusión intravenosa."
     ],
     "dose": {
-      "adult": [
-        "Dosis inicial: 20 ng/kg/min mediante infusión intravenosa continua.",
-        "Titular según la respuesta de presión arterial hasta cada 5 minutos, en incrementos de hasta 15 ng/kg/min.",
-        "No exceder 80 ng/kg/min durante las primeras 3 horas de tratamiento.",
-        "Dosis de mantenimiento: no exceder 40 ng/kg/min.",
-        "Pueden utilizarse dosis tan bajas como 1,25 ng/kg/min.",
-        "Cuando el shock subyacente haya mejorado lo suficiente, reducir progresivamente cada 5–15 minutos en decrementos de hasta 15 ng/kg/min según la presión arterial.",
-        "La EMA describe una PAM objetivo habitual de 65–75 mmHg en pacientes críticos; individualizar según el contexto clínico y la perfusión."
-      ],
-      "pediatric": [
-        "Seguridad y eficacia en menores de 18 años no establecidas; no existe una dosis pediátrica aprobada."
-      ]
+      "Inicio": "20 ng/kg/min IV continuo.",
+      "Titulación": "Cada 5 min, incrementar hasta 15 ng/kg/min según PA.",
+      "Máximo primeras 3 h": "80 ng/kg/min.",
+      "Mantenimiento": "Máximo 40 ng/kg/min.",
+      "Descenso": "Reducir cada 5–15 min; pueden usarse dosis de 1,25 ng/kg/min."
     },
-    "doseKg": {
-      "padrao": "20 ng/kg/min IV — dosis inicial",
-      "grave": "Hasta 40 ng/kg/min IV — mantenimiento habitual",
-      "meningite": null,
-      "doseMaxima": "80 ng/kg/min (limitado a las primeras 3 horas de infusión)"
-    },
-    "infusionCalc": "Informe doseAtual (ng/kg/min) y peso para calcular velocidad. Concentración estándar: 2,5 mg/500 mL SF 0,9% → 5.000 ng/mL (o 10.000 ng/mL según protocolo).",
-    "administration": [
-      "Administrar exclusivamente mediante infusión intravenosa continua.",
-      "Se recomienda acceso venoso central.",
-      "Titular según la respuesta de presión arterial; administrar con monitorización hemodinámica y de la perfusión de órganos.",
-      "Cuando mejore el shock, reducir progresivamente en lugar de suspender de forma brusca."
-    ],
-    "dilution": "Bomba de infusión obligatoria con acceso venoso central. Concentración estándar: 2,5 mg en 500 mL SF 0,9% → 5.000 ng/mL.",
-    "speed": "Iniciar 20 ng/kg/min; titular cada 5 min en incrementos de hasta 15 ng/kg/min según PAM objetivo. No infundir en bolo.",
+    "pediatricDose": "Seguridad y eficacia pediátricas no establecidas.",
+    "renalDose": "Sin ajuste específico establecido; titular por respuesta hemodinámica.",
+    "hepaticDose": "Sin ajuste específico establecido; titular por respuesta hemodinámica.",
     "commonAdverseEffects": [
       "Trombocitopenia",
       "Taquicardia",
@@ -256,7 +234,18 @@
       "Isquemia periférica",
       "Delirio"
     ],
-    "risksByPatient": [],
+    "adverseEffects": [
+      "Eventos trombóticos y tromboembólicos arteriales/venosos: 12,9% con angiotensina II frente a 5,1% con placebo en ATHOS-3.",
+      "Trombosis venosa profunda: 4,3% frente a 0%.",
+      "Trombocitopenia: 9,8% frente a 7,0%.",
+      "Taquicardia: 8,6% frente a 5,7%.",
+      "Infección fúngica: 6,1% frente a 1,3%.",
+      "Delirium: 5,5% frente a 0,6%.",
+      "Acidosis: 5,5% frente a 0,6%.",
+      "Hiperglucemia: 4,3% frente a 2,5%.",
+      "Isquemia periférica: 4,3% frente a 2,5%.",
+      "Puede ocurrir hipertensión transitoria durante la titulación; reducir la dosis según la respuesta."
+    ],
     "contraindications": {
       "EMA": [
         "Hipersensibilidad al principio activo o a cualquiera de los excipientes de la formulación."
@@ -271,16 +260,6 @@
       "Otros vasopresores pueden tener un efecto aditivo sobre la presión arterial media; puede ser necesario reducir las dosis de vasopresores concomitantes.",
       "No se realizaron estudios formales específicos de interacciones farmacológicas con GIAPREZA."
     ],
-    "renalAdjustment": [
-      "No se requiere un ajuste especial de dosis en insuficiencia renal.",
-      "El aclaramiento de angiotensina II no depende de la función renal.",
-      "Monitorizar estrechamente la respuesta de presión arterial y titular la dosis al efecto."
-    ],
-    "hepaticAdjustment": [
-      "No se requiere un ajuste especial de dosis en insuficiencia hepática.",
-      "El aclaramiento de angiotensina II no depende de la función hepática.",
-      "Monitorizar estrechamente la respuesta de presión arterial y titular la dosis al efecto."
-    ],
     "monitoring": [
       "Monitorización hemodinámica continua, con atención a la presión arterial media y a la perfusión de órganos.",
       "Reevaluar la respuesta de presión arterial durante la titulación, que puede realizarse cada 5 minutos.",
@@ -288,6 +267,30 @@
       "Vigilar signos y síntomas de trombosis venosa y arterial.",
       "Considerar parámetros de perfusión tisular y evolución del shock para reducir vasopresores concomitantes cuando sea posible."
     ],
+    "administration": [
+      "Administrar exclusivamente mediante infusión intravenosa continua.",
+      "Se recomienda acceso venoso central.",
+      "Titular según la respuesta de presión arterial; administrar con monitorización hemodinámica y de la perfusión de órganos.",
+      "Cuando mejore el shock, reducir progresivamente en lugar de suspender de forma brusca."
+    ],
+    "preparation": [
+      "Inspeccionar visualmente la solución antes de usarla para detectar partículas o cambios de color.",
+      "Diluir en cloruro de sodio al 0,9% antes de la administración.",
+      "Preparar una concentración final de 5.000 ng/mL o 10.000 ng/mL.",
+      "Para 5.000 ng/mL: 1 mL de 2,5 mg/mL en una bolsa de 500 mL de NaCl al 0,9%.",
+      "Para 10.000 ng/mL con restricción de volumen: 1 mL de 2,5 mg/mL en una bolsa de 250 mL de NaCl al 0,9%.",
+      "Desechar el vial y cualquier porción no utilizada después de la preparación.",
+      "La solución diluida puede conservarse a temperatura ambiente o refrigerada; desechar después de 24 horas.",
+      "Viales sin diluir: conservar refrigerados entre 2 °C y 8 °C."
+    ],
+    "infusionProtocol": {
+      "Vía": "Infusión IV continua; acceso central recomendado.",
+      "Dilución": "NaCl 0,9% a 5.000 o 10.000 ng/mL.",
+      "Estabilidad": "Desechar tras 24 h.",
+      "Límites": "80 ng/kg/min primeras 3 h; mantenimiento ≤40 ng/kg/min."
+    },
+    "pregnancy": "Shock distributivo es una emergencia; no retrasar tratamiento necesario por embarazo. Datos específicos limitados.",
+    "lactation": "Se desconoce si está presente en leche humana; no hay datos de efectos en lactante.",
     "specialPopulations": {
       "pregnancy": [
         "Los datos publicados en embarazadas son insuficientes para definir un riesgo de desarrollo asociado al medicamento.",
@@ -316,6 +319,17 @@
         "No existen datos clínicos adecuados sobre efectos en la fertilidad humana."
       ]
     },
+    "patientEducation": [
+      "Uso exclusivamente hospitalario; explicar objetivo de presión y monitorización intensiva."
+    ],
+    "clinicalPearls": [
+      "Riesgo trombótico central; usar profilaxis de TEV concomitante salvo contraindicación.",
+      "IECA pueden aumentar respuesta; ARA-II pueden reducirla.",
+      "Semivida <1 min favorece titulación/descenso rápidos."
+    ],
+    "guidelineRecommendations": [
+      "Indicación de ficha: elevar PA en adultos con shock séptico u otro shock distributivo; integra estrategia multimodal de vasopresores."
+    ],
     "safetyFlags": {
       "highAlertMedication": true,
       "vasopressor": true,
@@ -326,55 +340,15 @@
       "hospitalUseOnly": true,
       "warning": "ALTO RIESGO TROMBÓTICO. La profilaxis concomitante para tromboembolismo venoso (TEV) es OBLIGATORIA durante la infusión, salvo contraindicación. Administración exclusiva por CVC, sin bolo."
     },
-    "auditNotes": {
-      "status": "vasopressor_angiotensina_ii_master_template"
-    },
-    "ref": [
-      "Surviving Sepsis Campaign Guidelines",
-      "ATHOS-3 Trial (Angiotensin II for the Treatment of High-Output Shock)",
-      "FDA Labeling Information — Giapreza (Angiotensin II)"
-    ],
-    "adverseEffects": [
-      "Eventos trombóticos y tromboembólicos arteriales/venosos: 12,9% con angiotensina II frente a 5,1% con placebo en ATHOS-3.",
-      "Trombosis venosa profunda: 4,3% frente a 0%.",
-      "Trombocitopenia: 9,8% frente a 7,0%.",
-      "Taquicardia: 8,6% frente a 5,7%.",
-      "Infección fúngica: 6,1% frente a 1,3%.",
-      "Delirium: 5,5% frente a 0,6%.",
-      "Acidosis: 5,5% frente a 0,6%.",
-      "Hiperglucemia: 4,3% frente a 2,5%.",
-      "Isquemia periférica: 4,3% frente a 2,5%.",
-      "Puede ocurrir hipertensión transitoria durante la titulación; reducir la dosis según la respuesta."
-    ],
-    "presentations": [
-      "GIAPREZA 2,5 mg/mL: vial monodosis de 1 mL con 2,5 mg de angiotensina II.",
-      "GIAPREZA 0,5 mg/mL: vial monodosis de 1 mL con 0,5 mg de angiotensina II.",
-      "Solución acuosa transparente para dilución e infusión intravenosa."
+    "alerts": [
+      "Profilaxis de TEV concomitante.",
+      "Monitorizar PA y signos de isquemia/trombosis.",
+      "No exceder límites de dosis de ficha."
     ],
     "references": [
-      "European Medicines Agency (EMA). Giapreza (angiotensin II) — Product Information / EPAR. Product information updated 25 Sep 2024. https://www.ema.europa.eu/en/medicines/human/EPAR/giapreza",
-      "European Medicines Agency (EMA). Giapreza — Product Information. https://www.ema.europa.eu/en/documents/product-information/giapreza-epar-product-information_en.pdf",
-      "DailyMed. GIAPREZA (angiotensin II) Injection for Intravenous Infusion — Full Prescribing Information. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c265d69a-3efe-4107-9a9e-e6fd3d531c48",
-      "DailyMed. Angiotensin II Injection for Intravenous Infusion — Full Prescribing Information. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=727d1102-fc46-46f8-b78e-fd13f0738fe4",
-      "Khanna A, English SW, Wang XS, et al.; ATHOS-3 Investigators. Angiotensin II for the Treatment of Vasodilatory Shock. N Engl J Med. 2017;377:419-430. doi:10.1056/NEJMoa1704154"
+      "DailyMed GIAPREZA/angiotensin II current label"
     ],
-    "alerts": [
-      "Utilizar profilaxis concomitante para tromboembolismo venoso, salvo contraindicación.",
-      "Administrar la menor dosis compatible con presión arterial y perfusión adecuadas.",
-      "Evitar la interrupción brusca: la reducción gradual disminuye el riesgo de hipotensión o empeoramiento del shock.",
-      "La experiencia clínica corresponde a shock séptico u otro shock distributivo; la EMA no recomienda su uso en otros tipos de shock, como shock cardiogénico.",
-      "La sobredosis puede producir hipertensión; monitorizar y proporcionar soporte. Los efectos suelen ser breves por una vida media plasmática inferior a 1 minuto."
-    ],
-    "preparation": [
-      "Inspeccionar visualmente la solución antes de usarla para detectar partículas o cambios de color.",
-      "Diluir en cloruro de sodio al 0,9% antes de la administración.",
-      "Preparar una concentración final de 5.000 ng/mL o 10.000 ng/mL.",
-      "Para 5.000 ng/mL: 1 mL de 2,5 mg/mL en una bolsa de 500 mL de NaCl al 0,9%.",
-      "Para 10.000 ng/mL con restricción de volumen: 1 mL de 2,5 mg/mL en una bolsa de 250 mL de NaCl al 0,9%.",
-      "Desechar el vial y cualquier porción no utilizada después de la preparación.",
-      "La solución diluida puede conservarse a temperatura ambiente o refrigerada; desechar después de 24 horas.",
-      "Viales sin diluir: conservar refrigerados entre 2 °C y 8 °C."
-    ]
+    "ref": "DailyMed GIAPREZA/angiotensin II."
   },
   "name": {
     "pt": "Angiotensina II",
@@ -386,8 +360,8 @@
     "giapreza",
     "vasopressor — agonista do receptor at1 da angiotensina ii"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-94eb725226171058",
+  "clinicalContentSha256": "94eb7252261710584e8fe39f84a402b33183af6ebf5cd4858d2bb29f822370fe",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -452,5 +426,15 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "angiotensinaII.mcGoldClinicalV1",
+    "group": "GOLD_GROUP02_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "bebfa974a12c910f81e445d9e5404497ecd2cac1b8d6466caadb7100515b8c3a",
+    "physicalHomologation": "DEFERRED"
   }
 }

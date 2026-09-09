@@ -9005,6 +9005,37 @@ body > #mc-drug-detail-page-v21 a{
 
 
 
+<style id="mc-gold-zero-markers-v1">
+body > #mc-drug-detail-page-v21 .mcd-body ul,
+body > #mc-drug-detail-page-v21 .mcd-body ol,
+body > #mc-drug-detail-page-v21 .mcd-r5-clinical-list,
+body > #mc-drug-detail-page-v21 .mcd-r9-list,
+body > #mc-drug-detail-page-v21 .mcd-r10-list,
+body > #mc-drug-detail-page-v21 .mcd-r11-commercial-list,
+body > #mc-drug-detail-page-v21 .mcd-locale-commercial-list{
+  list-style:none!important;
+  list-style-type:none!important;
+  margin-left:0!important;
+  padding-left:0!important;
+}
+body > #mc-drug-detail-page-v21 .mcd-body li{
+  list-style:none!important;
+  padding-left:0!important;
+}
+body > #mc-drug-detail-page-v21 .mcd-body li::marker{
+  content:""!important;
+  font-size:0!important;
+}
+body > #mc-drug-detail-page-v21 .mcd-body li::before{
+  content:none!important;
+  display:none!important;
+}
+body > #mc-drug-detail-page-v21 .mcd-body :where(
+  .fd-cl-dot,.fdm6-dot,.fd-list-dot,.fd-bullet,.fd-safe-dot
+){
+  display:none!important;
+}
+</style>
 </head>
 <body>
 <div id="app">
@@ -11559,7 +11590,7 @@ body > #mc-drug-detail-page-v21 a{
     <div class="fd-handle" onclick="closeFarmacoDetail()"></div>
 
     <div class="fd-header">
-      <div class="fd-header-icon" id="fd-header-icon">💊</div>
+      <div class="fd-header-icon" id="fd-header-icon"></div>
       <div class="fd-header-text">
         <div class="fd-header-name" id="fd-header-name">—</div>
         <div class="fd-header-class" id="fd-header-class">—</div>
@@ -15313,7 +15344,7 @@ function addPatientMed(drugId) {
   const resolvedMedClass = typeof drug.class === 'object'
     ? (drug.class[currentLang] || drug.class.pt || '')
     : (drug.class || '');
-  window.patientMeds.push({ id: drug.id, name: resolvedMedName, icon: drug.icon||'💊', class: resolvedMedClass });
+  window.patientMeds.push({ id: drug.id, name: resolvedMedName, icon: drug.icon || '', class: resolvedMedClass });
   renderMedsTags();
   closeMedsAutocomplete();
 }
@@ -17892,7 +17923,7 @@ async function openFarmacoDetail(id) {
   const nameEl  = document.getElementById('fd-header-name');
   const classEl = document.getElementById('fd-header-class');
   if (iconEl) {
-    iconEl.textContent       = drug.icon || '💊';
+    iconEl.textContent       = drug.icon || '';
     iconEl.style.background  = drug.color    || 'rgba(56,189,248,0.15)';
     iconEl.style.color       = drug.colorTxt || '#38BDF8';
   }
@@ -18846,7 +18877,7 @@ async function openFarmacoDetail(id) {
     const items = common.filter(Boolean);
     htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-triangle-exclamation" style="color:#F0A842;"></i> ${isES?'EF. ADVERSOS COMUNES':'EF. ADVERSOS COMUNS'} <span style="font-weight:400;color:var(--text-muted);font-size:9.5px;">(${items.length})</span></div>
-      <ul class="fd-clean-list fd-clean-list--warn">${items.map(e=>`<li><span class="fd-cl-dot">●</span><span>${e}</span></li>`).join('')}</ul>
+      <ul class="fd-clean-list fd-clean-list--warn">${items.map(e=>`<li><span class="fd-cl-dot"></span><span>${e}</span></li>`).join('')}</ul>
     </div>`;
   }
 
@@ -18857,7 +18888,7 @@ async function openFarmacoDetail(id) {
     const items = danger.filter(Boolean);
     htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-circle-exclamation" style="color:#E05C6B;"></i> ${isES?'EF. ADVERSOS GRAVES':'EF. ADVERSOS GRAVES'} <span style="font-weight:400;color:var(--text-muted);font-size:9.5px;">(${items.length})</span></div>
-      <ul class="fd-clean-list fd-clean-list--danger">${items.map(e=>`<li><span class="fd-cl-dot">●</span><span>${e}</span></li>`).join('')}</ul>
+      <ul class="fd-clean-list fd-clean-list--danger">${items.map(e=>`<li><span class="fd-cl-dot"></span><span>${e}</span></li>`).join('')}</ul>
     </div>`;
   }
 
@@ -18884,7 +18915,7 @@ async function openFarmacoDetail(id) {
     const items = contra.filter(Boolean);
     htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-ban" style="color:#E05C6B;"></i> ${isES?'CONTRAINDICACIONES':'CONTRAINDICAÇÕES'}</div>
-      <ul class="fd-clean-list fd-clean-list--danger">${items.map(e=>`<li><span class="fd-cl-dot" style="color:#F87171;">&#x25A0;</span><span>${e}</span></li>`).join('')}</ul>
+      <ul class="fd-clean-list fd-clean-list--danger">${items.map(e=>`<li><span class="fd-cl-dot" style="color:#F87171;"></span><span>${e}</span></li>`).join('')}</ul>
     </div>`;
   }
 
@@ -18895,7 +18926,7 @@ async function openFarmacoDetail(id) {
     const items = risks.filter(Boolean);
     htmlSafety += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-shield-halved" style="color:#A78BFA;"></i> ${isES?'ALERTAS CLÍNICOS':'ALERTAS CLÍNICOS'}</div>
-      <ul class="fd-clean-list fd-clean-list--warn">${items.map(r=>`<li><span class="fd-cl-dot" style="color:#A78BFA;">●</span><span>${r}</span></li>`).join('')}</ul>
+      <ul class="fd-clean-list fd-clean-list--warn">${items.map(r=>`<li><span class="fd-cl-dot" style="color:#A78BFA;"></span><span>${r}</span></li>`).join('')}</ul>
     </div>`;
   }
 
@@ -18906,7 +18937,7 @@ async function openFarmacoDetail(id) {
     const items = presentation.filter(Boolean);
     htmlPharma += `<div class="fd-section">
       <div class="fd-section-label"><i class="fa-solid fa-box" style="color:#38BDF8;"></i> ${isES?'PRESENTACIONES':'APRESENTAÇÕES'}</div>
-      <ul class="fd-clean-list fd-clean-list--safe">${items.map(p=>`<li><span class="fd-cl-dot">●</span><span>${p}</span></li>`).join('')}</ul>
+      <ul class="fd-clean-list fd-clean-list--safe">${items.map(p=>`<li><span class="fd-cl-dot"></span><span>${p}</span></li>`).join('')}</ul>
     </div>`;
   }
 
@@ -20073,7 +20104,7 @@ function calcShowInlineResult(drugId) {
     : (drug.name || drugId);
 
   const drugClass    = _fdResolveClass(drug);
-  const drugIcon     = drug.icon    || '💊';
+  const drugIcon     = drug.icon || '';
   const drugColor    = drug.color   || 'rgba(56,189,248,0.15)';
   const drugColorTxt = drug.colorTxt || '#38BDF8';
 
@@ -20750,7 +20781,7 @@ function calcDrugDose(id) {
       <div class="dose-panel" style="padding:0;margin-bottom:0;">
         <div class="dose-hero-header">
           <div class="dose-hero-icon" style="background:${drug.color||'rgba(56,189,248,0.12)'};color:${drug.colorTxt||'#38BDF8'};">
-            ${drug.icon || '💊'}
+            ${drug.icon || ''}
           </div>
           <div style="flex:1;min-width:0;">
             <div class="dose-hero-name">${dName}</div>
@@ -25079,7 +25110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       : (drug.name || drugId);
 
     const drugClass = _fdResolveClass(drug);
-    const drugIcon  = drug.icon  || '💊';
+    const drugIcon  = drug.icon || '';
     const drugColor = drug.color || 'rgba(56,189,248,0.15)';
     const drugColorTxt = drug.colorTxt || '#38BDF8';
 
@@ -61309,7 +61340,7 @@ const active=()=>{const fd=document.getElementById('fd-modal');return String(fd?
 const path=(o,p)=>{let c=o;for(const k of p.split('.')){if(!c||typeof c!=='object'||!(k in c))return;c=c[k]}return c};const first=(o,ps)=>{for(const p of ps){const v=path(o,p);if(has(v))return v}};
 const L={pt:{eye:'Fármaco',age:'Idade',weight:'Peso',result:'Resultado calculado',calculate:'Calcular dose',loading:'Carregando ficha do fármaco…',dose:'POSOLOGIA DE REFERÊNCIA',renal:'AJUSTE RENAL',hepatic:'AJUSTE HEPÁTICO',indications:'INDICAÇÕES',contraindications:'CONTRAINDICAÇÕES',adverse:'EFEITOS ADVERSOS',interactions:'INTERAÇÕES MEDICAMENTOSAS',monitoring:'MONITORIZAÇÃO E ALERTAS',admin:'ADMINISTRAÇÃO / RECONSTITUIÇÃO / DILUIÇÃO',pharmacology:'FARMACOLOGIA',special:'POPULAÇÕES ESPECIAIS',presentations:'APRESENTAÇÕES',commercialNames:'NOMES COMERCIAIS',references:'REFERÊNCIAS'},es:{eye:'Fármaco',age:'Edad',weight:'Peso',result:'Resultado calculado',calculate:'Calcular dosis',loading:'Cargando ficha del fármaco…',dose:'DOSIS DE REFERENCIA',renal:'AJUSTE RENAL',hepatic:'AJUSTE HEPÁTICO',indications:'INDICACIONES',contraindications:'CONTRAINDICACIONES',adverse:'EFECTOS ADVERSOS',interactions:'INTERACCIONES MEDICAMENTOSAS',monitoring:'MONITORIZACIÓN Y ALERTAS',admin:'ADMINISTRACIÓN / RECONSTITUCIÓN / DILUCIÓN',pharmacology:'FARMACOLOGÍA',special:'POBLACIONES ESPECIALES',presentations:'PRESENTACIONES',commercialNames:'NOMBRES COMERCIALES',references:'REFERENCIAS'}};
 const pretty=(k,l)=>({pt:{adult:'Adulto',pediatric:'Pediátrico',initial:'Dose inicial',initialDose:'Dose inicial',maintenance:'Manutenção',maxDose:'Dose máxima',titration:'Titulação',pregnancy:'Gestação',lactation:'Lactação',elderly:'Idoso',geriatrics:'Geriatria',mechanism:'Mecanismo de ação',pharmacokinetics:'Farmacocinética',monitoring:'Monitorização',alerts:'Alertas',administration:'Administração',preparation:'Preparo'},es:{adult:'Adulto',pediatric:'Pediátrico',initial:'Dosis inicial',initialDose:'Dosis inicial',maintenance:'Mantenimiento',maxDose:'Dosis máxima',titration:'Titulación',pregnancy:'Embarazo',lactation:'Lactancia',elderly:'Adulto mayor',geriatrics:'Geriatría',mechanism:'Mecanismo de acción',pharmacokinetics:'Farmacocinética',monitoring:'Monitorización',alerts:'Alertas',administration:'Administración',preparation:'Preparación'}}[l]?.[k]||String(k).replace(/([a-z])([A-Z])/g,'$1 $2').replace(/[_-]+/g,' ').replace(/\b\w/g,m=>m.toUpperCase()));
-const P=l=>({name:['es.name','es.displayName','nameEs','displayNameEs','name'],klass:['es.class','es.drugClass','es.therapeuticClass','pharmacologicClass','class','drugClass'],dose:[`${l}.dose`,'dose'],renal:[`${l}.renalAdjustment`,`${l}.renalDose`,'renalAdjustment','renalDose'],hepatic:[`${l}.hepaticAdjustment`,'hepaticAdjustment'],indications:[`${l}.indications`,'indications'],contraindications:[`${l}.contraindications`,'contraindications'],adverse:[`${l}.adverseEffects`,`${l}.adverseReactions`,'adverseEffects','adverseReactions'],interactions:[`${l}.interactions`,'interactions'],monitoring:[`${l}.monitoring`,'monitoring'],alerts:[`${l}.alerts`,'alerts'],administration:[`${l}.administration`,'administration'],preparation:[`${l}.preparation`,`${l}.reconstitution`,`${l}.dilution`,'preparation','reconstitution','dilution'],mechanism:[`${l}.mechanism`,`${l}.mechanismOfAction`,'mechanism','mechanismOfAction'],pk:[`${l}.pharmacokinetics`,'pharmacokinetics'],special:[`${l}.specialPopulations`,'specialPopulations'],presentations:[`${l}.presentations`,'presentations'],commercialNames:[`${l}.commercialNames`,`${l}.brandNames`,`${l}.tradeNames`],references:[`${l}.references`,'references']});
+const P=l=>({name:[`${l}.name`,`${l}.displayName`,l==='es'?'nameEs':'namePt',l==='es'?'displayNameEs':'displayNamePt','name'],klass:[`${l}.class`,`${l}.drugClass`,`${l}.therapeuticClass`,'pharmacologicClass','class','drugClass'],dose:[`${l}.dose`,'dose'],renal:[`${l}.renalAdjustment`,`${l}.renalDose`,'renalAdjustment','renalDose'],hepatic:[`${l}.hepaticDose`,`${l}.hepaticAdjustment`,'hepaticDose','hepaticAdjustment'],indications:[`${l}.indications`,'indications'],contraindications:[`${l}.contraindications`,'contraindications'],adverse:[`${l}.adverseEffects`,`${l}.adverseReactions`,'adverseEffects','adverseReactions'],interactions:[`${l}.interactions`,'interactions'],monitoring:[`${l}.monitoring`,'monitoring'],alerts:[`${l}.alerts`,'alerts'],administration:[`${l}.administration`,'administration'],preparation:[`${l}.preparation`,`${l}.reconstitution`,`${l}.dilution`,'preparation','reconstitution','dilution'],mechanism:[`${l}.mechanism`,`${l}.mechanismOfAction`,'mechanism','mechanismOfAction'],pk:[`${l}.pharmacokinetics`,'pharmacokinetics'],special:[`${l}.specialPopulations`,'specialPopulations'],presentations:[`${l}.presentations`,'presentations'],commercialNames:[`${l}.commercialNames`,`${l}.brandNames`,`${l}.tradeNames`],references:[`${l}.references`,'references']});
 const commercialFor=(data,l)=>{
   const market=l==='es'?'ar':'br';
   const candidates=[
@@ -62184,10 +62215,6 @@ const result=()=>{
   const cleaned=raw.replace(/^(?:RESULTADO\s+CALCULADO\s*){1,}/i,'').trim();
   u.rt.textContent=cleaned||'—';
 };
-const EMPTY={
-pt:'Informação ainda não disponível na base. Este bloco será preenchido automaticamente quando o conteúdo for enriquecido.',
-es:'Información aún no disponible en la base. Este bloque se completará automáticamente cuando se enriquezca el contenido.'
-};
 const sec=(k,title,direct,fallback,l)=>{
   const s=document.querySelector(`#${PAGE_ID} .mcd-sec[data-mc-category="${k}"]`);
   const h=s?.querySelector('.mcd-head');
@@ -62213,10 +62240,11 @@ const sec=(k,title,direct,fallback,l)=>{
 
   if(!realContent){
     b.replaceChildren();
-    const p=mk('p','mcd-empty',EMPTY[l]||EMPTY.pt);
-    p.setAttribute('data-mc-placeholder','true');
-    b.appendChild(p);
-    source='PLACEHOLDER_NO_CONTENT';
+    s.hidden=true;
+    s.setAttribute('hidden','');
+    s.style.removeProperty('display');
+    s.dataset.mcContentSource='EMPTY_HIDDEN';
+    return{k,source:'EMPTY_HIDDEN'};
   }
 
   s.hidden=false;
@@ -62313,18 +62341,20 @@ const secCommercial=(title,names,l)=>{
     b.dataset.mcCommercialOwner='cleanroom-market-exclusive';
     b.dataset.mcCommercialCount=String(names.length);
   }else{
-    const p=mk('p','mcd-empty',EMPTY[l]||EMPTY.pt);
-    p.setAttribute('data-mc-placeholder','true');
-    b.appendChild(p);
+    s.hidden=true;
+    s.setAttribute('hidden','');
+    s.style.removeProperty('display');
+    s.dataset.mcContentSource='EMPTY_HIDDEN';
+    return{k:'commercialNames',source:'EMPTY_HIDDEN'};
   }
   s.hidden=false;
   s.removeAttribute('hidden');
   s.style.setProperty('display','block','important');
-  s.dataset.mcContentSource=names.length?'DIRECT_MARKET_EXCLUSIVE':'PLACEHOLDER_NO_CONTENT';
+  s.dataset.mcContentSource='DIRECT_MARKET_EXCLUSIVE';
   return{k:'commercialNames',source:s.dataset.mcContentSource};
 };
 /* __MC_CLEANROOM_DIRECT_JSON_FIRST_PAINT_RENDER_MODE_V1_B_R0__ */
-const render=async(drug,why,directOnly=false)=>{if(S.busy)return;const fd=document.getElementById('fd-modal');if((!directOnly&&!fd?.classList.contains('open'))||!drug)return;S.busy=true;try{const l=lang(),drugText=String(drug),rawFile=/\.json$/i.test(drugText)?drugText:drugText+'.json',aliasBase=drugText.replace(/\.json$/i,''),aliasKey=aliasBase.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,''),aliasMap=(typeof MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP==='object'&&MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP)||null,file=(aliasMap&&aliasMap[aliasKey])||rawFile;let data=S.cache.get(file);if(!data){try{const r=await fetch('data/drugs/'+encodeURIComponent(file),{cache:'default'});if(r.ok){data=await r.json();S.cache.set(file,data)}}catch{}}if(!data){loading();return}const u=ensure(),p=P(l),lab=L[l],display=first(data,p.name)||drug,klass=first(data,p.klass)||'';u.loading.hidden=true;u.eye.textContent=lab.eye;u.name.textContent=display;u.tt.textContent=display;u.klass.textContent=klass;u.al.textContent=lab.age;u.wl.textContent=lab.weight;u.cb.textContent=lab.calculate;u.rl.textContent=lab.result;const a=[];a.push(sec('dose',lab.dose,first(data,p.dose),(directOnly?undefined:provider('dose')),l));a.push(sec('renal',lab.renal,first(data,p.renal),(directOnly?undefined:provider('renal')),l));a.push(sec('hepatic',lab.hepatic,first(data,p.hepatic),(directOnly?undefined:provider('hepatic')),l));a.push(sec('indications',lab.indications,first(data,p.indications),(directOnly?undefined:provider('indications')),l));a.push(sec('contraindications',lab.contraindications,first(data,p.contraindications),(directOnly?undefined:provider('contraindications')),l));a.push(sec('adverse',lab.adverse,first(data,p.adverse),(directOnly?undefined:provider('adverse')),l));a.push(sec('interactions',lab.interactions,first(data,p.interactions),(directOnly?undefined:provider('interactions')),l));const mon=first(data,p.monitoring),alerts=first(data,p.alerts);a.push(sec('monitoring',lab.monitoring,has(mon)||has(alerts)?{monitoring:mon,alerts}:undefined,(directOnly?undefined:provider('monitoring')),l));const adm=first(data,p.administration),prep=first(data,p.preparation);a.push(sec('admin',lab.admin,has(adm)||has(prep)?{administration:adm,preparation:prep}:undefined,(directOnly?undefined:provider('admin')),l));const mech=first(data,p.mechanism),pk=first(data,p.pk);a.push(sec('pharmacology',lab.pharmacology,has(mech)||has(pk)?{mechanism:mech,pharmacokinetics:pk}:undefined,(directOnly?undefined:provider('pharmacology')),l));a.push(sec('special',lab.special,first(data,p.special),(directOnly?undefined:provider('special')),l));a.push(sec('presentations',lab.presentations,first(data,p.presentations),(directOnly?undefined:provider('presentations')),l));a.push(secCommercial(lab.commercialNames,commercialFor(data,l),l));a.push(sec('references',lab.references,first(data,p.references),(directOnly?undefined:provider('references')),l));u.page.dataset.mcDrugId=drug;u.page.dataset.mcLang=l;u.page.dataset.mcVisibleOrder=ORDER.join(',');u.page.dataset.mcCanonicalStructure='v26-r1-16-point-lock';u.page.dataset.mcEmptySectionPolicy='visible-localized-placeholder';S.id=drug;S.lang=l;S.data=data;S.sig=sig();if(!directOnly){bridge();result()}show();polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug);setTimeout(()=>{polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},120);setTimeout(()=>{polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},320);console.log('['+BUILD+'] RENDERED',{why,id:drug,lang:l,displayName:display,parent:u.page.parentElement===document.body?'BODY':'NOT_BODY',visible:[...u.page.querySelectorAll('.mcd-sec')].filter(s=>!s.hidden).map(s=>s.dataset.mcBlock),audit:a})}finally{S.busy=false}};
+const render=async(drug,why,directOnly=false)=>{if(S.busy)return;const fd=document.getElementById('fd-modal');if((!directOnly&&!fd?.classList.contains('open'))||!drug)return;S.busy=true;try{const l=lang(),drugText=String(drug),rawFile=/\.json$/i.test(drugText)?drugText:drugText+'.json',aliasBase=drugText.replace(/\.json$/i,''),aliasKey=aliasBase.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,''),aliasMap=(typeof MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP==='object'&&MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP)||null,file=(aliasMap&&aliasMap[aliasKey])||rawFile;let data=S.cache.get(file);if(!data){try{const r=await fetch('data/drugs/'+encodeURIComponent(file),{cache:'default'});if(r.ok){data=await r.json();S.cache.set(file,data)}}catch{}}if(!data){loading();return}const u=ensure(),p=P(l),lab=L[l],display=first(data,p.name)||drug,klass=first(data,p.klass)||'';u.loading.hidden=true;u.eye.textContent=lab.eye;u.name.textContent=display;u.tt.textContent=display;u.klass.textContent=klass;u.al.textContent=lab.age;u.wl.textContent=lab.weight;u.cb.textContent=lab.calculate;u.rl.textContent=lab.result;const a=[];a.push(sec('dose',lab.dose,first(data,p.dose),(directOnly?undefined:provider('dose')),l));a.push(sec('renal',lab.renal,first(data,p.renal),(directOnly?undefined:provider('renal')),l));a.push(sec('hepatic',lab.hepatic,first(data,p.hepatic),(directOnly?undefined:provider('hepatic')),l));a.push(sec('indications',lab.indications,first(data,p.indications),(directOnly?undefined:provider('indications')),l));a.push(sec('contraindications',lab.contraindications,first(data,p.contraindications),(directOnly?undefined:provider('contraindications')),l));a.push(sec('adverse',lab.adverse,first(data,p.adverse),(directOnly?undefined:provider('adverse')),l));a.push(sec('interactions',lab.interactions,first(data,p.interactions),(directOnly?undefined:provider('interactions')),l));const mon=first(data,p.monitoring),alerts=first(data,p.alerts);a.push(sec('monitoring',lab.monitoring,has(mon)||has(alerts)?{monitoring:mon,alerts}:undefined,(directOnly?undefined:provider('monitoring')),l));const adm=first(data,p.administration),prep=first(data,p.preparation);a.push(sec('admin',lab.admin,has(adm)||has(prep)?{administration:adm,preparation:prep}:undefined,(directOnly?undefined:provider('admin')),l));const mech=first(data,p.mechanism),pk=first(data,p.pk);a.push(sec('pharmacology',lab.pharmacology,has(mech)||has(pk)?{mechanism:mech,pharmacokinetics:pk}:undefined,(directOnly?undefined:provider('pharmacology')),l));a.push(sec('special',lab.special,first(data,p.special),(directOnly?undefined:provider('special')),l));a.push(sec('presentations',lab.presentations,first(data,p.presentations),(directOnly?undefined:provider('presentations')),l));a.push(secCommercial(lab.commercialNames,commercialFor(data,l),l));a.push(sec('references',lab.references,first(data,p.references),(directOnly?undefined:provider('references')),l));u.page.dataset.mcDrugId=drug;u.page.dataset.mcLang=l;u.page.dataset.mcVisibleOrder=ORDER.join(',');u.page.dataset.mcCanonicalStructure='v26-r1-16-point-lock';u.page.dataset.mcEmptySectionPolicy='hidden-empty';S.id=drug;S.lang=l;S.data=data;S.sig=sig();if(!directOnly){bridge();result()}show();polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug);setTimeout(()=>{polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},120);setTimeout(()=>{polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},320);console.log('['+BUILD+'] RENDERED',{why,id:drug,lang:l,displayName:display,parent:u.page.parentElement===document.body?'BODY':'NOT_BODY',visible:[...u.page.querySelectorAll('.mcd-sec')].filter(s=>!s.hidden).map(s=>s.dataset.mcBlock),audit:a})}finally{S.busy=false}};
 const reconcile=(why,force=false)=>{const fd=document.getElementById('fd-modal');if(!fd?.classList.contains('open')){hide();S.id=S.lang=S.sig='';return}show();const drug=active();if(!drug){loading();return}bridge();result();const l=lang(),sg=sig();if(force||S.id!==drug||S.lang!==l||S.sig!==sg)render(drug,why)};
 const schedule=(why,force=false)=>[0,80,220].forEach(ms=>setTimeout(()=>reconcile(why+'@'+ms,force&&ms===0),ms));
 document.addEventListener('click',e=>{const t=e.target instanceof Element?e.target:null;if(t?.closest('#'+PAGE_ID))return;schedule('external-click')},true);
@@ -67897,5 +67927,317 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
 <script id="mc-drug-detail-v27-mb4-r1-locale-commercial-performance-single-owner-runtime">
 /* MC-DRUG-V27-MB4-R2-R1-TRUE-OWNER-PERFORMANCE-CONVERGENCE-CANDIDATE-GATE-FIX-V1-B-R1 :: COMPAT_NOOP :: temporary single-owner layer merged into true cleanroom owner */
 </script>
+
+<script>
+/* MEDCASES_DRUG_LOCALE_NAME_GLOBAL_V1 START */
+(function(){
+  'use strict';
+
+  const BUILD='MEDCASES_DRUG_LOCALE_NAME_GLOBAL_FIX_V1_B_R0';
+  if(window.__MC_DRUG_LOCALE_NAME_GLOBAL_V1?.installed) return;
+
+  const norm=s=>String(s??'')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+
+  const activeLang=()=>{
+    const raw=String(
+      window.currentLang ||
+      document.documentElement?.getAttribute('lang') ||
+      document.body?.dataset?.lang ||
+      'pt'
+    ).toLowerCase();
+    return raw.startsWith('es')?'es':'pt';
+  };
+
+  let cache=null;
+
+  const addDrug=(d,byId,byName)=>{
+    if(!d || typeof d!=='object') return;
+    const id=String(d.id||d.key||d.slug||d.drugId||'').trim();
+    if(id) byId.set(norm(id),d);
+
+    const candidates=[];
+    if(d.name && typeof d.name==='object'){
+      if(typeof d.name.pt==='string') candidates.push(d.name.pt);
+      if(typeof d.name.es==='string') candidates.push(d.name.es);
+    }
+    if(d.pt && typeof d.pt.name==='string') candidates.push(d.pt.name);
+    if(d.es && typeof d.es.name==='string') candidates.push(d.es.name);
+    for(const k of ['namePt','nameEs','nomePt','nomeEs','nombre','nome','genericName','generic_name']){
+      if(typeof d[k]==='string') candidates.push(d[k]);
+    }
+    for(const n of candidates){
+      const key=norm(n);
+      if(key && !byName.has(key)) byName.set(key,d);
+    }
+  };
+
+  const collect=(source,byId,byName)=>{
+    if(!source) return;
+    if(Array.isArray(source)){
+      for(const x of source) addDrug(x?.ref&&typeof x.ref==='object'?x.ref:x,byId,byName);
+      return;
+    }
+    if(source instanceof Map){
+      for(const x of source.values()) addDrug(x?.ref&&typeof x.ref==='object'?x.ref:x,byId,byName);
+      return;
+    }
+    if(typeof source==='object'){
+      if(source.id||source.name||source.pt||source.es){
+        addDrug(source,byId,byName);
+      }else{
+        for(const x of Object.values(source)){
+          addDrug(x?.ref&&typeof x.ref==='object'?x.ref:x,byId,byName);
+        }
+      }
+    }
+  };
+
+  const getCache=()=>{
+    if(cache) return cache;
+    const byId=new Map(),byName=new Map();
+    collect(window.DRUG_DB,byId,byName);
+    collect(window.ALL_DRUGS_DB,byId,byName);
+    collect(window.DRUGS,byId,byName);
+    collect(window.allDrugs,byId,byName);
+    collect(window._searchIndex,byId,byName);
+    cache={byId,byName};
+    return cache;
+  };
+
+  const resolveObjectName=(d,lang)=>{
+    if(!d || typeof d!=='object') return '';
+    const direct=[
+      d.name && typeof d.name==='object' ? d.name[lang] : '',
+      d[lang] && typeof d[lang]==='object' ? d[lang].name : '',
+      lang==='es' ? d.nameEs : d.namePt,
+      lang==='es' ? d.nomeEs : d.nomePt,
+      lang==='es' ? d.nombre : d.nome
+    ];
+    for(const v of direct){
+      if(typeof v==='string' && v.trim()) return v.trim();
+    }
+    /* Fail closed: never leak the opposite language as display fallback. */
+    return String(d.id||d.key||d.slug||d.drugId||'').trim();
+  };
+
+  const findDrug=value=>{
+    if(value && typeof value==='object') return value.ref&&typeof value.ref==='object'?value.ref:value;
+    const key=norm(value);
+    if(!key) return null;
+    const c=getCache();
+    return c.byId.get(key)||c.byName.get(key)||null;
+  };
+
+  const resolveName=(value,forcedLang)=>{
+    const lang=(forcedLang==='es'||forcedLang==='pt')?forcedLang:activeLang();
+    const d=findDrug(value);
+    if(!d) return '';
+    return resolveObjectName(d,lang);
+  };
+
+  const idFromRow=row=>{
+    if(!row) return '';
+    for(const attr of ['data-drug-id','data-id','data-drug','data-drug-key','data-canonical','data-med-id']){
+      const v=row.getAttribute?.(attr);
+      if(v) return v;
+    }
+    const clickable=row.matches?.('[onclick]')?row:row.querySelector?.('[onclick]');
+    const oc=clickable?.getAttribute?.('onclick')||'';
+    const m=oc.match(/(?:openFarmacoDetail|openFarmaco|selectDrug|selectFarmaco|showDrug|abrirFarmaco)\s*\(\s*['"]([^'"]+)['"]/i);
+    if(m) return m[1];
+    const href=row.querySelector?.('a[href]')?.getAttribute?.('href')||'';
+    const hm=href.match(/[?&#](?:drug|farmaco|id)=([^&#]+)/i);
+    if(hm){
+      try{return decodeURIComponent(hm[1])}catch(_){return hm[1]}
+    }
+    return '';
+  };
+
+  const localizeVisible=()=>{
+    const lang=activeLang();
+    const roots=[
+      document.getElementById('hub-card-farmacos'),
+      document.querySelector('#calculator-overlay-container.mc-farmacos-app-subpage-active'),
+      document.querySelector('#page-farmacos')
+    ].filter(Boolean);
+
+    const rowSelector=[
+      '.hm-drug-item','.farmacos-row','.drug-list-row',
+      '.farmacos-v2-module-row','.farmacos-v2-context-row',
+      '.farmacos-v2-group-row','.mc-fnav-drug-row',
+      '.mc-farm-render-only-row'
+    ].join(',');
+
+    const nameSelector=[
+      '.hm-drug-name','.farmacos-row-name','.drug-card-name',
+      '.farmacos-v2-row-title','.mc-fnav-drug-name',
+      '.mc-farm-render-only-title'
+    ].join(',');
+
+    let changed=0;
+    for(const root of roots){
+      for(const row of root.querySelectorAll(rowSelector)){
+        const target=row.querySelector(nameSelector);
+        if(!target) continue;
+
+        let drug=findDrug(idFromRow(row));
+        if(!drug){
+          drug=findDrug(target.textContent||'');
+        }
+        if(!drug) continue;
+
+        const localized=resolveObjectName(drug,lang);
+        if(!localized) continue;
+        if(target.textContent!==localized){
+          target.textContent=localized;
+          changed++;
+        }
+        row.dataset.mcDisplayLang=lang;
+      }
+    }
+
+    const page=document.getElementById('mc-drug-detail-page-v21');
+    if(page && page.dataset.open==='true'){
+      const d=findDrug(page.dataset.mcDrugId||'');
+      const localized=resolveObjectName(d,lang);
+      if(localized){
+        const n=page.querySelector('.mcd-name');
+        const t=page.querySelector('.mcd-title');
+        if(n) n.textContent=localized;
+        if(t) t.textContent=localized;
+      }
+      page.dataset.mcLang=lang;
+    }
+    return changed;
+  };
+
+  const scheduleOnce=()=>{
+    if(typeof queueMicrotask==='function') queueMicrotask(localizeVisible);
+    else Promise.resolve().then(localizeVisible);
+    if(typeof requestAnimationFrame==='function') requestAnimationFrame(localizeVisible);
+  };
+
+  const wrap=(name)=>{
+    const fn=window[name];
+    if(typeof fn!=='function'||fn.__mcDrugLocaleWrapped) return false;
+    const wrapped=function(){
+      const result=fn.apply(this,arguments);
+      scheduleOnce();
+      if(result && typeof result.then==='function'){
+        result.then(scheduleOnce,scheduleOnce);
+      }
+      return result;
+    };
+    Object.defineProperty(wrapped,'__mcDrugLocaleWrapped',{value:true});
+    window[name]=wrapped;
+    return true;
+  };
+
+  /* Explicit active-locale search: ES searches ES fields, PT searches PT fields. */
+  const originalSearch=window._searchIndexFilter;
+  if(typeof originalSearch==='function'){
+    const localizedSearch=function(qNorm){
+      const idx=window._searchIndex;
+      if(!Array.isArray(idx)) return originalSearch.apply(this,arguments);
+      const lang=activeLang();
+      const q=norm(qNorm);
+      if(!q) return idx.map(e=>e?.ref||e).filter(Boolean);
+
+      const out=[];
+      for(const e of idx){
+        const bucket=e?.[lang]||{};
+        const fields=[
+          bucket.name,bucket.display,bucket.norm,
+          bucket.class,bucket.klass,bucket.cat,bucket.category
+        ].map(norm).filter(Boolean);
+
+        /* If an older index lacks a locale bucket, derive only the ACTIVE locale. */
+        if(!fields.length){
+          const d=e?.ref||e;
+          fields.push(norm(resolveObjectName(d,lang)));
+          const c=d?.class;
+          if(c && typeof c==='object') fields.push(norm(c[lang]));
+          else if(typeof c==='string') fields.push(norm(c));
+          const category=d?.category;
+          if(category && typeof category==='object') fields.push(norm(category[lang]));
+          else if(typeof category==='string') fields.push(norm(category));
+        }
+
+        if(fields.some(v=>v.includes(q))) out.push(e?.ref||e);
+      }
+      return out;
+    };
+    Object.defineProperty(localizedSearch,'__mcDrugLocaleWrapped',{value:true});
+    window._searchIndexFilter=localizedSearch;
+  }
+
+  for(const name of [
+    'hmFilterDrugs','renderFarmacosList','_renderFarmacosListImpl',
+    'filterDrugs','renderDrugList','filterMedsAutocomplete'
+  ]) wrap(name);
+
+  const oldSetLang=window.setLang;
+  if(typeof oldSetLang==='function'&&!oldSetLang.__mcDrugLocaleWrapped){
+    const setLangWrapped=function(){
+      const r=oldSetLang.apply(this,arguments);
+      cache=null;
+      scheduleOnce();
+      return r;
+    };
+    Object.defineProperty(setLangWrapped,'__mcDrugLocaleWrapped',{value:true});
+    window.setLang=setLangWrapped;
+  }
+
+  const oldAppend=window._appendSearchIndex;
+  if(typeof oldAppend==='function'&&!oldAppend.__mcDrugLocaleWrapped){
+    const appendWrapped=function(){
+      const r=oldAppend.apply(this,arguments);
+      cache=null;
+      return r;
+    };
+    Object.defineProperty(appendWrapped,'__mcDrugLocaleWrapped',{value:true});
+    window._appendSearchIndex=appendWrapped;
+  }
+
+  window.__MC_DRUG_LOCALE_NAME_GLOBAL_V1={
+    installed:true,
+    build:BUILD,
+    activeLang,
+    resolveName,
+    localizeVisible,
+    invalidate:()=>{cache=null},
+    audit:()=>{
+      const lang=activeLang();
+      const rows=[...document.querySelectorAll('#hub-card-farmacos .hm-drug-item')];
+      return{
+        installed:true,
+        lang,
+        rows:rows.length,
+        localizedRows:rows.filter(r=>r.dataset.mcDisplayLang===lang).length,
+        detailLang:document.getElementById('mc-drug-detail-page-v21')?.dataset.mcLang||null,
+        cleanroomLocalePaths:true
+      };
+    }
+  };
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',scheduleOnce,{once:true});
+  }else{
+    scheduleOnce();
+  }
+
+  console.log('['+BUILD+'] INSTALLED',{
+    policy:'ACTIVE_LOCALE_SEARCH_AND_DISPLAY',
+    es:'SEARCH_ES_DISPLAY_ES',
+    pt:'SEARCH_PT_DISPLAY_PT',
+    crossLanguageDisplayFallback:false,
+    mutationObserver:false
+  });
+})();
+/* MEDCASES_DRUG_LOCALE_NAME_GLOBAL_V1 END */
+</script>
+
 </body>
 </html>

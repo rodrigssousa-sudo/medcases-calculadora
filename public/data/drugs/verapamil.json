@@ -1,30 +1,37 @@
 {
   "id": "verapamil",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "id": "verapamil",
     "name": "Verapamil",
-    "class": "Bloqueador dos canais de cálcio não diidropiridínico",
+    "class": "Bloqueador dos canais de cálcio não diidropiridínico · antiarrítmico classe IV",
     "category": "cardio",
     "commercialNames": [
       "Dilacoron",
       "Isoptin",
+      "Calan",
+      "Verelan",
       "Verapamil genérico"
     ],
     "presentation": [
-      "Comprimidos 40 mg · 80 mg · 120 mg",
-      "Comprimidos LP 180 mg · 240 mg",
-      "Ampolas IV 5 mg/2 mL"
+      "Comprimidos de liberação imediata 40 mg, 80 mg e 120 mg; apresentações variam por país.",
+      "Formulações de liberação prolongada, incluindo 180 mg e 240 mg, conforme produto.",
+      "Solução injetável 2,5 mg/mL; apresentação frequente 5 mg/2 mL."
     ],
-    "mechanism": "Bloqueia canais de cálcio tipo L no nó sinoatrial, nó AV e miocárdio. Reduz condução AV, frequência cardíaca e contratilidade cardíaca (efeito inotrópico negativo). Também promove vasodilatação arterial. Diferencial dos BCC DHP: efeito cronotrópico e dromiotrópico negativo significativos.",
+    "mechanism": "Bloqueia canais de cálcio tipo L em músculo liso arterial, células miocárdicas e tecido de condução. Reduz condução e prolonga refratariedade do nó AV, diminui frequência e contratilidade e produz vasodilatação arterial. Em taquicardias dependentes do nó AV pode interromper o circuito de reentrada.",
     "halfLife": "4–12 horas",
     "onset": "3–5 min IV · 1–2h VO",
     "dose": {
-      "adultoPadrao": "VO: 80 mg 8/8h (IR) ou 120–180 mg LP 1x/dia. IV: 5–10 mg em bolus lento 2–3 min (com monitorização contínua).",
-      "adultoGrave": "Manutenção VO: 240–480 mg/dia. Dose máxima: 480 mg/dia."
+      "Hipertensão — VO": "Inicial habitual 80 mg 3x/dia (240 mg/dia); considerar 40 mg 3x/dia em idosos ou maior sensibilidade. Titular individualmente. Segurança acima de 480 mg/dia não estabelecida.",
+      "Angina — VO": "80–120 mg 3x/dia; 40 mg 3x/dia pode ser apropriado em maior sensibilidade ou disfunção hepática.",
+      "FA/flutter crônicos — VO": "240–320 mg/dia em 3–4 tomadas quando indicado e sem via acessória.",
+      "Profilaxia de TSVP — VO": "240–480 mg/dia em 3–4 tomadas, individualizando eficácia e tolerabilidade.",
+      "TSVP/taquicardia estreita — IV adulto": "5–10 mg (0,075–0,15 mg/kg) IV em pelo menos 2 min, com ECG e PA contínuos. Se resposta inadequada, 10 mg (0,15 mg/kg) podem ser repetidos após 30 min.",
+      "Idoso — IV": "Administrar a dose IV em pelo menos 3 min para reduzir eventos adversos.",
+      "Pediatria — IV": "0–1 ano: 0,1–0,2 mg/kg (0,75–2 mg). 1–15 anos: 0,1–0,3 mg/kg (2–5 mg), máximo inicial 5 mg. Administrar em pelo menos 2 min com ECG contínuo; repetição após 30 min conforme resposta e protocolo."
     },
     "risksByPatient": [
       "IC-FEr (FEVE < 40%): CONTRAINDICADO.",
@@ -35,104 +42,31 @@
       "Insuficiência hepática: metabolismo hepático intenso — reduzir doses."
     ],
     "commonAdverseEffects": [
-      "Constipação (mais frequente que diltiazem)",
-      "Bradicardia",
-      "Hipotensão",
-      "Tontura",
-      "Fadiga",
-      "Edema periférico",
-      "Náuseas"
+      "Constipação, especialmente no uso oral.",
+      "Tontura e cefaleia.",
+      "Náusea.",
+      "Edema periférico e rubor.",
+      "Bradicardia e hipotensão.",
+      "Fadiga."
     ],
     "dangerousAdverseEffects": [
-      "Bloqueio AV avançado (2º/3º grau)",
-      "Assistolia",
-      "Choque cardiogênico",
-      "Insuficiência cardíaca aguda",
-      "Bradicardia grave",
-      "Colapso hemodinâmico"
+      "Hipotensão sintomática ou choque.",
+      "Bloqueio AV de alto grau, bradicardia extrema, parada sinusal ou assistolia.",
+      "Piora aguda de insuficiência cardíaca/edema pulmonar por efeito inotrópico negativo.",
+      "Fibrilação ventricular/deterioração hemodinâmica em FA/flutter com via acessória ou em taquicardia de QRS largo tratada inadequadamente.",
+      "Lesão hepatocelular e elevação de transaminases, rara porém clinicamente relevante."
     ],
     "alerts": [
-      "CONTRAINDICADO em IC com fração de ejeção reduzida significativa — pode precipitar descompensação grave.",
-      "Interação CRÍTICA: betabloqueadores IV — risco de bloqueio AV completo, bradicardia grave e choque cardiogênico. NUNCA associar IV.",
-      "Digoxina: verapamil aumenta os níveis séricos da digoxina em ~50–75% — reduzir dose da digoxina.",
-      "Monitorar ECG: intervalo PR — bloqueio AV de 1º grau é comum; suspender em BAV 2º/3º grau.",
-      "Constipação é efeito adverso frequente — mais comum que com diltiazem."
+      "NÃO usar empiricamente em taquicardia de QRS largo/TV.",
+      "NÃO usar em FA/flutter com WPW ou outra via acessória.",
+      "Verapamil IV + betabloqueador IV em proximidade temporal é contraindicado.",
+      "Monitorar ECG e PA continuamente durante uso IV."
     ],
-    "ref": "ESC Atrial Fibrillation Guidelines · ESC Supraventricular Tachycardia Guidelines · AHA/ACC Arrhythmia Guidelines · Lexicomp · UpToDate · FDA Label",
+    "ref": "DailyMed Verapamil IV (rev. 2026-05-01); DailyMed Verapamil oral; AHA 2025 Adult ALS; LactMed 2025; MotherToBaby 2025.",
     "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Geralmente não requer ajuste renal significativo. Metabolismo hepático predominante.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "80–120 mg",
-          "intervalo": "8/8h (IR) ou 240 mg LP 1x/dia",
-          "doseMaxima": "480 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "5–10 mg",
-          "intervalo": "bolus lento 2–3 min (monitorização contínua)",
-          "doseMaxima": "20 mg/episódio",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Dose habitual. Monitorar FC e ECG."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "80 mg",
-          "intervalo": "8/8h ou LP 180 mg 1x/dia",
-          "doseMaxima": "360 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "5 mg",
-          "intervalo": "bolus lento (cautela)",
-          "doseMaxima": "10 mg/episódio",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Sem ajuste renal específico. Monitorar FC, PA e ECG."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "40–80 mg",
-          "intervalo": "8/8h (cautela)",
-          "doseMaxima": "240 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "5 mg",
-          "intervalo": "bolus lento (supervisão intensiva)",
-          "doseMaxima": "5 mg/episódio",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Sem ajuste renal formal; usar dose menor por cautela. Monitorização contínua obrigatória."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "8/8h (cautela máxima)",
-          "doseMaxima": "120 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dados limitados. Usar somente se imprescindível, com monitorização intensiva."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "40–80 mg",
-          "intervalo": "8/8h (cautela)",
-          "doseMaxima": "240 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Não dialisável. Pode manter VO com monitorização cuidadosa de FC e ECG."
-      }
+      "Ajuste": "Não há redução rotineira baseada em TFG. Usar com cautela em disfunção renal e monitorar efeito farmacológico excessivo, especialmente PR, FC e PA.",
+      "Hemodiálise": "Verapamil não é removido por hemodiálise; não indicar dose suplementar pós-diálise apenas por depuração dialítica.",
+      "IV repetido": "Insuficiência renal importante pode prolongar o efeito de doses IV repetidas; evitar múltiplas injeções quando possível e usar doses de repetição menores se imprescindíveis."
     },
     "safetyFlags": {
       "hypotensionRisk": true,
@@ -143,44 +77,152 @@
       "heartFailureRisk": true,
       "digoxinInteractionRisk": true,
       "betaBlockerInteractionRisk": true,
+      "accessoryPathwayRisk": true,
+      "wideComplexTachycardiaRisk": true,
+      "cyp3a4InteractionRisk": true,
       "pregnancyCaution": true,
-      "infusionDrug": true,
-      "warning": "Verapamil CONTRAINDICADO em IC-FEr significativa. Risco de bloqueio AV grave com betabloqueadores IV — NUNCA associar. Aumenta níveis séricos de digoxina (~50–75%) — reduzir dose da digoxina."
+      "ivUseHighRisk": true,
+      "continuousEcgIv": true
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ESC Atrial Fibrillation Guidelines 2020/2023",
-        "ESC Supraventricular Tachycardia Guidelines 2019",
-        "AHA/ACC Arrhythmia Guidelines 2023",
-        "Lexicomp 2026",
-        "UpToDate",
-        "FDA Label"
+    "auditNotes": "PADRÃO OURO 2026: conteúdo reconstruído a partir de bula IV 2026, bula oral, AHA 2025 e fontes de gestação/lactação. Removido ajuste renal artificial por faixas de TFG.",
+    "pharmacologicClass": "Antagonista dos canais de cálcio tipo L, não diidropiridínico, com efeito predominante no nó AV e miocárdio.",
+    "pharmacodynamics": [
+      "Cronotropismo, dromotropismo e inotropismo negativos; prolonga o intervalo PR e reduz a resposta ventricular em arritmias supraventriculares.",
+      "Vasodilatação arterial reduz pós-carga e consumo miocárdico de oxigênio; também inibe espasmo coronariano.",
+      "Efeito IV máximo ocorre em poucos minutos; hipotensão, bradicardia e bloqueio AV são efeitos farmacodinâmicos dose-dependentes relevantes."
+    ],
+    "pharmacokinetics": {
+      "Metabolismo": "Extenso metabolismo hepático; CYP3A4 é via clinicamente importante, além de CYP1A2, CYP2C8, CYP2C9 e CYP2C18.",
+      "Meia-vida": "IV: fase terminal aproximadamente 2–5 h. Uso oral repetido pode prolongar a meia-vida; disfunção hepática grave prolonga significativamente a eliminação.",
+      "Eliminação": "Aproximadamente 70% da dose é excretada na urina principalmente como metabólitos; cerca de 3–4% permanece inalterada. Não é removido por hemodiálise."
+    },
+    "indications": [
+      "Taquicardia regular de complexo estreito hemodinamicamente estável: verapamil IV pode ser usado quando apropriado; AHA 2025 o considera opção efetiva após avaliação do ritmo e do paciente.",
+      "Conversão rápida de taquicardia supraventricular paroxística e controle temporário da resposta ventricular rápida em flutter/fibrilação atrial SEM via acessória.",
+      "Via oral: hipertensão arterial, angina estável/vasoespástica e profilaxia de TSVP recorrente; controle de frequência em FA/flutter crônicos sem via acessória."
+    ],
+    "presentations": [
+      "Comprimidos IR 40/80/120 mg.",
+      "Comprimidos/cápsulas de liberação prolongada conforme produto, frequentemente 180/240 mg.",
+      "Injetável 2,5 mg/mL, frequentemente 5 mg/2 mL."
+    ],
+    "pediatricDose": {
+      "0–1 ano": "0,1–0,2 mg/kg IV; dose única usual 0,75–2 mg; pelo menos 2 min com ECG contínuo.",
+      "1–15 anos": "0,1–0,3 mg/kg IV; dose única usual 2–5 mg; máximo inicial 5 mg; pelo menos 2 min com ECG contínuo."
+    },
+    "hepaticDose": {
+      "Disfunção hepática grave": "Via oral: usar aproximadamente 30% da dose administrada a pacientes com função hepática normal e titular pela resposta.",
+      "Monitorização": "Monitorar intervalo PR, FC, PA e sinais de efeito farmacológico excessivo; a meia-vida pode prolongar para aproximadamente 14–16 h.",
+      "IV repetido": "Evitar doses IV repetidas quando possível em insuficiência hepática significativa; se indispensáveis, usar repetição menor com monitorização estreita."
+    },
+    "adverseEffects": {
+      "Comuns": [
+        "Constipação, tontura, náusea, cefaleia, edema, fadiga, bradicardia e hipotensão."
       ],
-      "note": "BCC não-DHP fundamental para controle de FC em FA/flutter e reversão de TSVP. Diferencial: efeito cronotrópico e dromiotrópico negativo potentes. CONTRAINDICADO em IC-FEr e com betabloqueadores IV."
-    }
+      "Graves": [
+        "Bloqueio AV avançado, assistolia, choque/hipotensão grave, piora de insuficiência cardíaca, fibrilação ventricular em via acessória/QRS largo e hepatotoxicidade."
+      ]
+    },
+    "contraindications": [
+      "Hipotensão grave ou choque cardiogênico.",
+      "Bloqueio AV de 2º ou 3º grau sem marcapasso ventricular funcionante.",
+      "Síndrome do nó sinusal sem marcapasso ventricular funcionante.",
+      "Disfunção ventricular esquerda grave/insuficiência cardíaca grave, conforme formulação e contexto.",
+      "Uso de betabloqueador intravenoso em proximidade temporal de verapamil IV.",
+      "Flutter ou fibrilação atrial com via acessória, incluindo WPW/Lown-Ganong-Levine.",
+      "Taquicardia ventricular ou taquicardia de complexo largo/QRS ≥0,12 s sem diagnóstico seguro.",
+      "Hipersensibilidade conhecida ao verapamil."
+    ],
+    "interactions": [
+      "Betabloqueadores: efeitos aditivos sobre FC, condução AV e contratilidade. Betabloqueador IV e verapamil IV não devem ser administrados próximos entre si; combinação pode causar bloqueio AV, hipotensão e depressão miocárdica graves.",
+      "Digoxina: uso crônico de verapamil pode elevar níveis séricos de digoxina em aproximadamente 50–75% na primeira semana; reavaliar dose e monitorar toxicidade.",
+      "CYP3A4: inibidores como eritromicina/ritonavir podem aumentar exposição ao verapamil; indutores como rifampicina podem reduzi-la.",
+      "Sinvastatina: limitar a 10 mg/dia quando associada a verapamil; lovastatina a 40 mg/dia. Avaliar doses menores de outros substratos CYP3A4.",
+      "Ivabradina: evitar associação por aumento de exposição e risco de bradicardia/distúrbios de condução.",
+      "Disopiramida: evitar entre 48 h antes e 24 h após verapamil conforme informação de bula; quinidina pode acentuar hipotensão.",
+      "Toranja/grapefruit pode aumentar níveis de verapamil."
+    ],
+    "monitoring": [
+      "ECG contínuo e pressão arterial durante administração IV; observar PR, QRS, FC e desenvolvimento de bloqueio AV.",
+      "Avaliar sinais de insuficiência cardíaca, edema pulmonar, hipotensão e bradicardia.",
+      "No uso prolongado, considerar monitorização periódica de função hepática; o rótulo descreve elevações de transaminases e casos de lesão hepatocelular.",
+      "Se associado a digoxina, monitorar concentração/efeitos clínicos e ajustar conforme necessidade.",
+      "Em insuficiência renal/hepática, intensificar vigilância por efeito prolongado/acúmulo em doses repetidas."
+    ],
+    "administration": [
+      "IV: administrar exclusivamente como injeção lenta em pelo menos 2 min, com ECG e PA contínuos; em idosos, pelo menos 3 min.",
+      "Uso IV inicial deve ocorrer, se possível, em ambiente com monitorização e capacidade imediata de ressuscitação/cardioversão.",
+      "Confirmar que a taquicardia é supraventricular/complexo estreito antes do verapamil IV; não usar empiricamente em taquicardia de QRS largo.",
+      "Formulações orais IR e de liberação prolongada não são intercambiáveis automaticamente; seguir a apresentação específica e titular pela resposta."
+    ],
+    "preparation": [
+      "Injetável usual 2,5 mg/mL: confirmar concentração e dose total antes da administração. Não converter a injeção lenta em IV push rápido.",
+      "Não há protocolo rotineiro de infusão contínua para as indicações rotuladas de TSVP; seguir o produto/local para compatibilidade e preparo."
+    ],
+    "infusionProtocol": [
+      "Verapamil IV é administrado como bolus lento, não como bolus rápido: ≥2 min em adultos e ≥3 min em idosos, sempre sob ECG/PA contínuos.",
+      "Se a resposta inicial for inadequada, a bula permite uma dose de repetição após 30 min; não estabelecer infusão contínua empírica."
+    ],
+    "pregnancy": "Verapamil atravessa a placenta. Dados humanos disponíveis não demonstram sinal consistente de aumento de malformações, porém a evidência é limitada; usar quando o benefício materno justificar o risco e monitorar hemodinâmica materno-fetal conforme contexto.",
+    "lactation": "LactMed 2025: doses maternas até 360 mg/dia produzem níveis baixos no leite e não se esperam efeitos adversos relevantes, especialmente em lactentes >2 meses. A bula tradicional é mais restritiva; individualizar benefício-risco e monitorar o lactente.",
+    "specialPopulations": {
+      "Pediatria": "Para uso IV, empregar doses específicas por peso/idade e monitorização ECG contínua; não extrapolar automaticamente esquemas orais adultos.",
+      "Idosos": "Maior sensibilidade e eliminação mais lenta podem ocorrer; considerar doses orais iniciais menores e administrar IV em pelo menos 3 min.",
+      "Disfunção renal": "Sem ajuste fixo por TFG; cautela, monitorização e evitar doses IV repetidas desnecessárias. Não dialisável.",
+      "Disfunção hepática": "Metabolismo hepático intenso; em comprometimento grave usar cerca de 30% da dose oral usual e titular cuidadosamente.",
+      "Gravidez": "Usar após avaliação benefício-risco; atravessa a placenta.",
+      "Lactação": "Exposição pelo leite é baixa segundo LactMed; individualizar e monitorar o lactente."
+    },
+    "patientEducation": [
+      "Não interromper nem duplicar doses por conta própria; formulações de liberação prolongada devem ser usadas exatamente conforme a apresentação prescrita.",
+      "Procurar avaliação se houver síncope, dispneia nova, edema importante, bradicardia sintomática ou palpitações persistentes.",
+      "Informar uso de betabloqueadores, digoxina, estatinas e outros antiarrítmicos antes de iniciar ou ajustar verapamil."
+    ],
+    "clinicalPearls": [
+      "Verapamil é excelente para ritmos dependentes do nó AV, mas pode ser perigoso quando o diagnóstico de taquicardia de complexo largo é incerto.",
+      "Em FA/flutter com WPW ou outra via acessória, bloquear o nó AV com verapamil pode acelerar a condução pela via acessória e precipitar fibrilação ventricular.",
+      "O ajuste renal artificial por faixas de TFG foi removido: a bula não estabelece reduções rotineiras por TFG; a conduta é cautela e monitorização."
+    ],
+    "guidelineRecommendations": [
+      "AHA 2025: diltiazem ou verapamil IV podem ser efetivos em adultos com taquicardia regular de complexo estreito hemodinamicamente estável.",
+      "Não usar verapamil IV em taquicardia ventricular/complexo largo sem diagnóstico seguro; a bula 2026 alerta para deterioração hemodinâmica e fibrilação ventricular."
+    ],
+    "references": [
+      "DailyMed — Verapamil Hydrochloride Injection, label revisado 2026-05-01: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c89764e-ff07-4077-a40f-91eb1c179af2",
+      "DailyMed — Verapamil Hydrochloride Tablets: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ebc9a09a-7b5f-4df6-ace7-31185d469b28",
+      "AHA 2025 Adult Advanced Life Support — Regular Narrow-Complex Tachycardia: https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+      "LactMed — Verapamil, revisão 2025-08-15: https://www.ncbi.nlm.nih.gov/books/NBK501135/",
+      "MotherToBaby — Verapamil, revisão 2025-05-01: https://mothertobaby.org/fact-sheets/verapamil/"
+    ]
   },
   "es": {
     "id": "verapamil",
     "name": "Verapamil",
-    "class": "Bloqueador de los canales de calcio no dihidropiridínico",
+    "class": "Bloqueador de los canales de calcio no dihidropiridínico · antiarrítmico clase IV",
     "category": "cardio",
     "commercialNames": [
       "Dilacoron",
       "Isoptin",
+      "Calan",
+      "Verelan",
       "Verapamil genérico"
     ],
     "presentation": [
-      "Comprimidos 40 mg · 80 mg · 120 mg",
-      "Comprimidos LP 180 mg · 240 mg",
-      "Ampollas IV 5 mg/2 mL"
+      "Comprimidos de liberación inmediata 40 mg, 80 mg y 120 mg; las presentaciones varían según país.",
+      "Formulaciones de liberación prolongada, incluidas 180 mg y 240 mg, según producto.",
+      "Solución inyectable 2,5 mg/mL; presentación frecuente 5 mg/2 mL."
     ],
-    "mechanism": "Bloquea canales de calcio tipo L en el nodo sinusal, nodo AV y miocardio. Reduce conducción AV, frecuencia cardíaca y contractilidad cardíaca (efecto inotrópico negativo). También produce vasodilatación arterial. Diferencial de los BCC DHP: efecto cronotrópico y dromotrópico negativo significativos.",
+    "mechanism": "Bloquea canales de calcio tipo L en músculo liso arterial, células miocárdicas y tejido de conducción. Reduce la conducción y prolonga la refractariedad del nodo AV, disminuye frecuencia y contractilidad y produce vasodilatación arterial. En taquicardias dependientes del nodo AV puede interrumpir el circuito de reentrada.",
     "halfLife": "4–12 horas",
     "onset": "3–5 min IV · 1–2h VO",
     "dose": {
-      "adultoPadrao": "VO: 80 mg cada 8h (IR) o 120–180 mg LP 1 vez/día. IV: 5–10 mg en bolo lento 2–3 min (con monitorización continua).",
-      "adultoGrave": "Mantenimiento VO: 240–480 mg/día. Dosis máxima: 480 mg/día."
+      "Hipertensión — VO": "Inicial habitual 80 mg 3 veces/día (240 mg/día); considerar 40 mg 3 veces/día en mayores o mayor sensibilidad. Titular individualmente. Seguridad por encima de 480 mg/día no establecida.",
+      "Angina — VO": "80–120 mg 3 veces/día; 40 mg 3 veces/día puede ser apropiado con mayor sensibilidad o disfunción hepática.",
+      "FA/flutter crónicos — VO": "240–320 mg/día en 3–4 tomas cuando esté indicado y sin vía accesoria.",
+      "Profilaxis de TSVP — VO": "240–480 mg/día en 3–4 tomas, individualizando eficacia y tolerabilidad.",
+      "TSVP/taquicardia estrecha — IV adulto": "5–10 mg (0,075–0,15 mg/kg) IV en al menos 2 min, con ECG y PA continuos. Si la respuesta es inadecuada, pueden repetirse 10 mg (0,15 mg/kg) tras 30 min.",
+      "Adulto mayor — IV": "Administrar la dosis IV en al menos 3 min para reducir eventos adversos.",
+      "Pediatría — IV": "0–1 año: 0,1–0,2 mg/kg (0,75–2 mg). 1–15 años: 0,1–0,3 mg/kg (2–5 mg), máximo inicial 5 mg. Administrar en al menos 2 min con ECG continuo; repetir tras 30 min según respuesta y protocolo."
     },
     "risksByPatient": [
       "IC-FEr (FEVI < 40%): CONTRAINDICADO.",
@@ -191,104 +233,31 @@
       "Insuficiencia hepática: metabolismo hepático intenso — reducir dosis."
     ],
     "commonAdverseEffects": [
-      "Estreñimiento (más frecuente que diltiazem)",
-      "Bradicardia",
-      "Hipotensión",
-      "Mareos",
-      "Fatiga",
-      "Edema periférico",
-      "Náuseas"
+      "Estreñimiento, especialmente con uso oral.",
+      "Mareo y cefalea.",
+      "Náuseas.",
+      "Edema periférico y rubor.",
+      "Bradicardia e hipotensión.",
+      "Fatiga."
     ],
     "dangerousAdverseEffects": [
-      "Bloqueo AV avanzado (2º/3er grado)",
-      "Asistolia",
-      "Shock cardiogénico",
-      "Insuficiencia cardíaca aguda",
-      "Bradicardia grave",
-      "Colapso hemodinámico"
+      "Hipotensión sintomática o shock.",
+      "Bloqueo AV de alto grado, bradicardia extrema, paro sinusal o asistolia.",
+      "Empeoramiento agudo de insuficiencia cardíaca/edema pulmonar por efecto inotrópico negativo.",
+      "Fibrilación ventricular/deterioro hemodinámico en FA/flutter con vía accesoria o en taquicardia de QRS ancho tratada inapropiadamente.",
+      "Lesión hepatocelular y elevación de transaminasas, rara pero clínicamente relevante."
     ],
     "alerts": [
-      "CONTRAINDICADO en IC con fracción de eyección reducida significativa — puede precipitar descompensación grave.",
-      "Interacción CRÍTICA: betabloqueadores IV — riesgo de bloqueo AV completo, bradicardia grave y shock cardiogénico. NUNCA asociar IV.",
-      "Digoxina: verapamilo aumenta los niveles séricos de digoxina en ~50–75% — reducir dosis de digoxina.",
-      "Monitorizar ECG: intervalo PR — bloqueo AV de 1er grado es común; suspender en BAV 2º/3er grado.",
-      "El estreñimiento es efecto adverso frecuente — más común que con diltiazem."
+      "NO usar empíricamente en taquicardia de QRS ancho/TV.",
+      "NO usar en FA/flutter con WPW u otra vía accesoria.",
+      "Verapamilo IV + betabloqueante IV en proximidad temporal está contraindicado.",
+      "Monitorizar ECG y PA continuamente durante uso IV."
     ],
-    "ref": "ESC Atrial Fibrillation Guidelines · ESC Supraventricular Tachycardia Guidelines · AHA/ACC Arrhythmia Guidelines · Lexicomp · UpToDate · FDA Label",
+    "ref": "DailyMed Verapamilo IV (rev. 2026-05-01); DailyMed Verapamilo oral; AHA 2025 Adult ALS; LactMed 2025; MotherToBaby 2025.",
     "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Generalmente no requiere ajuste renal significativo. Metabolismo hepático predominante.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "80–120 mg",
-          "intervalo": "8/8h (IR) ou 240 mg LP 1x/dia",
-          "doseMaxima": "480 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "5–10 mg",
-          "intervalo": "bolus lento 2–3 min (monitorização contínua)",
-          "doseMaxima": "20 mg/episódio",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Dosis habitual. Monitorizar FC y ECG."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "80 mg",
-          "intervalo": "8/8h ou LP 180 mg 1x/dia",
-          "doseMaxima": "360 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "5 mg",
-          "intervalo": "bolus lento (cautela)",
-          "doseMaxima": "10 mg/episódio",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Sin ajuste renal específico. Monitorizar FC, PA y ECG."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "40–80 mg",
-          "intervalo": "8/8h (cautela)",
-          "doseMaxima": "240 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "5 mg",
-          "intervalo": "bolus lento (supervisão intensiva)",
-          "doseMaxima": "5 mg/episódio",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Sin ajuste renal formal; usar dosis menor por precaución. Monitorización continua obligatoria."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "8/8h (cautela máxima)",
-          "doseMaxima": "120 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Datos limitados. Usar solo si imprescindible, con monitorización intensiva."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "40–80 mg",
-          "intervalo": "8/8h (cautela)",
-          "doseMaxima": "240 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "No dializable. Puede mantener VO con monitorización cuidadosa de FC y ECG."
-      }
+      "Ajuste": "No hay reducción rutinaria basada en TFG. Usar con precaución en disfunción renal y monitorizar efecto farmacológico excesivo, especialmente PR, FC y PA.",
+      "Hemodiálisis": "Verapamilo no se elimina por hemodiálisis; no indicar dosis suplementaria posdiálisis solo por depuración dialítica.",
+      "IV repetido": "La insuficiencia renal importante puede prolongar el efecto de dosis IV repetidas; evitar múltiples inyecciones cuando sea posible y usar dosis repetidas menores si son imprescindibles."
     },
     "safetyFlags": {
       "hypotensionRisk": true,
@@ -299,22 +268,123 @@
       "heartFailureRisk": true,
       "digoxinInteractionRisk": true,
       "betaBlockerInteractionRisk": true,
+      "accessoryPathwayRisk": true,
+      "wideComplexTachycardiaRisk": true,
+      "cyp3a4InteractionRisk": true,
       "pregnancyCaution": true,
-      "infusionDrug": true,
-      "warning": "Verapamilo CONTRAINDICADO en IC-FEr significativa. Riesgo de bloqueo AV grave con betabloqueadores IV — NUNCA asociar. Aumenta niveles séricos de digoxina (~50–75%) — reducir dosis de digoxina."
+      "ivUseHighRisk": true,
+      "continuousEcgIv": true
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ESC Atrial Fibrillation Guidelines 2020/2023",
-        "ESC Supraventricular Tachycardia Guidelines 2019",
-        "AHA/ACC Arrhythmia Guidelines 2023",
-        "Lexicomp 2026",
-        "UpToDate",
-        "FDA Label"
+    "auditNotes": "PATRÓN ORO 2026: contenido reconstruido a partir de ficha IV 2026, ficha oral, AHA 2025 y fuentes de embarazo/lactancia. Eliminado ajuste renal artificial por rangos de TFG.",
+    "pharmacologicClass": "Antagonista de los canales de calcio tipo L, no dihidropiridínico, con efecto predominante en nodo AV y miocardio.",
+    "pharmacodynamics": [
+      "Cronotropismo, dromotropismo e inotropismo negativos; prolonga el intervalo PR y reduce la respuesta ventricular en arritmias supraventriculares.",
+      "La vasodilatación arterial reduce poscarga y consumo miocárdico de oxígeno; también inhibe el espasmo coronario.",
+      "El efecto IV máximo ocurre en pocos minutos; hipotensión, bradicardia y bloqueo AV son efectos farmacodinámicos relevantes y dependientes de dosis."
+    ],
+    "pharmacokinetics": {
+      "Metabolismo": "Metabolismo hepático extenso; CYP3A4 es una vía clínicamente importante, además de CYP1A2, CYP2C8, CYP2C9 y CYP2C18.",
+      "Semivida": "IV: fase terminal aproximadamente 2–5 h. El uso oral repetido puede prolongar la semivida; la disfunción hepática grave prolonga significativamente la eliminación.",
+      "Eliminación": "Aproximadamente 70% de la dosis se excreta por orina principalmente como metabolitos; cerca de 3–4% permanece sin cambios. No se elimina por hemodiálisis."
+    },
+    "indications": [
+      "Taquicardia regular de complejo estrecho hemodinámicamente estable: verapamilo IV puede utilizarse cuando corresponde; AHA 2025 lo considera una opción efectiva tras evaluar ritmo y paciente.",
+      "Conversión rápida de taquicardia supraventricular paroxística y control temporal de respuesta ventricular rápida en flutter/fibrilación auricular SIN vía accesoria.",
+      "Vía oral: hipertensión arterial, angina estable/vasoespástica y profilaxis de TSVP recurrente; control de frecuencia en FA/flutter crónicos sin vía accesoria."
+    ],
+    "presentations": [
+      "Comprimidos IR 40/80/120 mg.",
+      "Comprimidos/cápsulas de liberación prolongada según producto, frecuentemente 180/240 mg.",
+      "Inyectable 2,5 mg/mL, frecuentemente 5 mg/2 mL."
+    ],
+    "pediatricDose": {
+      "0–1 año": "0,1–0,2 mg/kg IV; dosis única habitual 0,75–2 mg; al menos 2 min con ECG continuo.",
+      "1–15 años": "0,1–0,3 mg/kg IV; dosis única habitual 2–5 mg; máximo inicial 5 mg; al menos 2 min con ECG continuo."
+    },
+    "hepaticDose": {
+      "Disfunción hepática grave": "Vía oral: utilizar aproximadamente 30% de la dosis administrada a pacientes con función hepática normal y titular según respuesta.",
+      "Monitorización": "Monitorizar intervalo PR, FC, PA y signos de efecto farmacológico excesivo; la semivida puede prolongarse aproximadamente a 14–16 h.",
+      "IV repetido": "Evitar dosis IV repetidas cuando sea posible en insuficiencia hepática significativa; si son imprescindibles, usar repetición menor con monitorización estrecha."
+    },
+    "adverseEffects": {
+      "Frecuentes": [
+        "Estreñimiento, mareo, náuseas, cefalea, edema, fatiga, bradicardia e hipotensión."
       ],
-      "note": "BCC no-DHP fundamental para control de FC en FA/flutter y reversión de TSVP. Diferencial: efecto cronotrópico y dromotrópico negativo potentes. CONTRAINDICADO en IC-FEr y con betabloqueadores IV."
-    }
+      "Graves": [
+        "Bloqueo AV avanzado, asistolia, shock/hipotensión grave, empeoramiento de insuficiencia cardíaca, fibrilación ventricular en vía accesoria/QRS ancho y hepatotoxicidad."
+      ]
+    },
+    "contraindications": [
+      "Hipotensión grave o shock cardiogénico.",
+      "Bloqueo AV de 2º o 3º grado sin marcapasos ventricular funcionante.",
+      "Síndrome del nodo sinusal sin marcapasos ventricular funcionante.",
+      "Disfunción ventricular izquierda grave/insuficiencia cardíaca grave, según formulación y contexto.",
+      "Uso de betabloqueante intravenoso en proximidad temporal de verapamilo IV.",
+      "Flutter o fibrilación auricular con vía accesoria, incluido WPW/Lown-Ganong-Levine.",
+      "Taquicardia ventricular o taquicardia de complejo ancho/QRS ≥0,12 s sin diagnóstico seguro.",
+      "Hipersensibilidad conocida al verapamilo."
+    ],
+    "interactions": [
+      "Betabloqueantes: efectos aditivos sobre FC, conducción AV y contractilidad. Betabloqueante IV y verapamilo IV no deben administrarse próximos entre sí; la combinación puede causar bloqueo AV, hipotensión y depresión miocárdica graves.",
+      "Digoxina: el uso crónico de verapamilo puede aumentar niveles séricos de digoxina aproximadamente 50–75% durante la primera semana; reevaluar dosis y monitorizar toxicidad.",
+      "CYP3A4: inhibidores como eritromicina/ritonavir pueden aumentar la exposición a verapamilo; inductores como rifampicina pueden reducirla.",
+      "Simvastatina: limitar a 10 mg/día cuando se asocia a verapamilo; lovastatina a 40 mg/día. Evaluar dosis menores de otros sustratos CYP3A4.",
+      "Ivabradina: evitar asociación por aumento de exposición y riesgo de bradicardia/trastornos de conducción.",
+      "Disopiramida: evitar entre 48 h antes y 24 h después de verapamilo según ficha técnica; quinidina puede acentuar hipotensión.",
+      "Pomelo/grapefruit puede aumentar niveles de verapamilo."
+    ],
+    "monitoring": [
+      "ECG continuo y presión arterial durante administración IV; vigilar PR, QRS, FC y desarrollo de bloqueo AV.",
+      "Evaluar signos de insuficiencia cardíaca, edema pulmonar, hipotensión y bradicardia.",
+      "En uso prolongado, considerar monitorización periódica de función hepática; la etiqueta describe elevación de transaminasas y casos de lesión hepatocelular.",
+      "Si se asocia a digoxina, monitorizar concentración/efectos clínicos y ajustar según necesidad.",
+      "En insuficiencia renal/hepática, intensificar vigilancia por efecto prolongado/acumulación con dosis repetidas."
+    ],
+    "administration": [
+      "IV: administrar exclusivamente como inyección lenta en al menos 2 min, con ECG y PA continuos; en mayores, al menos 3 min.",
+      "El uso IV inicial debe realizarse, si es posible, en un entorno con monitorización y capacidad inmediata de reanimación/cardioversión.",
+      "Confirmar que la taquicardia es supraventricular/complejo estrecho antes de verapamilo IV; no usar empíricamente en taquicardia de QRS ancho.",
+      "Las formulaciones orales IR y de liberación prolongada no son automáticamente intercambiables; seguir la presentación específica y titular según respuesta."
+    ],
+    "preparation": [
+      "Inyectable habitual 2,5 mg/mL: confirmar concentración y dosis total antes de administrar. No convertir la inyección lenta en IV push rápido.",
+      "No existe protocolo rutinario de infusión continua para las indicaciones de TSVP de ficha técnica; seguir producto/protocolo local para compatibilidad y preparación."
+    ],
+    "infusionProtocol": [
+      "Verapamilo IV se administra como bolo lento, no como bolo rápido: ≥2 min en adultos y ≥3 min en mayores, siempre con ECG/PA continuos.",
+      "Si la respuesta inicial es inadecuada, la ficha técnica permite una dosis repetida tras 30 min; no establecer infusión continua empírica."
+    ],
+    "pregnancy": "Verapamilo atraviesa la placenta. Los datos humanos disponibles no muestran una señal consistente de aumento de malformaciones, pero la evidencia es limitada; usar cuando el beneficio materno justifique el riesgo y monitorizar hemodinámica materno-fetal según contexto.",
+    "lactation": "LactMed 2025: dosis maternas hasta 360 mg/día producen niveles bajos en leche y no se esperan efectos adversos relevantes, especialmente en lactantes >2 meses. La ficha técnica tradicional es más restrictiva; individualizar beneficio-riesgo y monitorizar al lactante.",
+    "specialPopulations": {
+      "Pediatría": "Para uso IV, emplear dosis específicas por peso/edad y monitorización ECG continua; no extrapolar automáticamente esquemas orales de adultos.",
+      "Adultos mayores": "Puede haber mayor sensibilidad y eliminación más lenta; considerar dosis orales iniciales menores y administrar IV en al menos 3 min.",
+      "Disfunción renal": "Sin ajuste fijo por TFG; precaución, monitorización y evitar dosis IV repetidas innecesarias. No dializable.",
+      "Disfunción hepática": "Metabolismo hepático intenso; en compromiso grave usar alrededor del 30% de la dosis oral habitual y titular cuidadosamente.",
+      "Embarazo": "Usar tras evaluación beneficio-riesgo; atraviesa la placenta.",
+      "Lactancia": "La exposición por leche es baja según LactMed; individualizar y monitorizar al lactante."
+    },
+    "patientEducation": [
+      "No suspender ni duplicar dosis por cuenta propia; las formulaciones de liberación prolongada deben usarse exactamente según la presentación prescrita.",
+      "Buscar evaluación si aparece síncope, disnea nueva, edema importante, bradicardia sintomática o palpitaciones persistentes.",
+      "Informar uso de betabloqueantes, digoxina, estatinas y otros antiarrítmicos antes de iniciar o ajustar verapamilo."
+    ],
+    "clinicalPearls": [
+      "Verapamilo es muy útil para ritmos dependientes del nodo AV, pero puede ser peligroso cuando el diagnóstico de taquicardia de complejo ancho es incierto.",
+      "En FA/flutter con WPW u otra vía accesoria, bloquear el nodo AV con verapamilo puede acelerar la conducción por la vía accesoria y precipitar fibrilación ventricular.",
+      "Se eliminó el ajuste renal artificial por rangos de TFG: la ficha técnica no establece reducciones rutinarias por TFG; la conducta es precaución y monitorización."
+    ],
+    "guidelineRecommendations": [
+      "AHA 2025: diltiazem o verapamilo IV pueden ser efectivos en adultos con taquicardia regular de complejo estrecho hemodinámicamente estable.",
+      "No usar verapamilo IV en taquicardia ventricular/complejo ancho sin diagnóstico seguro; la ficha técnica 2026 advierte deterioro hemodinámico y fibrilación ventricular."
+    ],
+    "references": [
+      "DailyMed — Verapamil Hydrochloride Injection, label revisado 2026-05-01: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c89764e-ff07-4077-a40f-91eb1c179af2",
+      "DailyMed — Verapamil Hydrochloride Tablets: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ebc9a09a-7b5f-4df6-ace7-31185d469b28",
+      "AHA 2025 Adult Advanced Life Support — Regular Narrow-Complex Tachycardia: https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+      "LactMed — Verapamil, revisão 2025-08-15: https://www.ncbi.nlm.nih.gov/books/NBK501135/",
+      "MotherToBaby — Verapamil, revisão 2025-05-01: https://mothertobaby.org/fact-sheets/verapamil/"
+    ]
   },
   "name": {
     "pt": "Verapamil",
@@ -322,11 +392,28 @@
   },
   "keywords": [
     "verapamil",
-    "bloqueador dos canais de calcio nao diidropiridinico"
+    "bloqueador dos canais de calcio nao diidropiridinico · antiarritmico classe iv"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-183d71f98221b3d5",
+  "clinicalContentSha256": "183d71f98221b3d510a4238b690d3ae0b0345d232ca987f86a3a928c4bc64a5c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "candidate_build1",
+    "reviewed_at": "2026-09-08",
+    "audits_completed": 2,
+    "build": 1,
+    "clinical_sources": [
+      "DailyMed Verapamil Injection 2026-05-01",
+      "DailyMed Verapamil oral label",
+      "AHA 2025 Adult Advanced Life Support",
+      "LactMed 2025-08-15",
+      "MotherToBaby 2025-05-01"
+    ],
+    "zero_placeholder": true,
+    "zero_decorative_prefix_marker": true,
+    "renal_strategy": "no_artificial_egfr_bands",
+    "pt_es_required": true
+  }
 }
