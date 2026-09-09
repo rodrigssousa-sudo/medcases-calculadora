@@ -60744,6 +60744,90 @@ html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 > .mcd-scroll{
   max-width:none!important;height:auto!important;min-height:0!important;overflow-x:hidden!important;overflow-y:auto!important;
   transform:none!important;zoom:1!important;
 }
+
+/* MEDCASES_CALC_FARMACOS_CLINICAL_NAME_ROW_CLOSE_BUTTON_V1_B_R1
+   Visible close action belongs to the clinical identity row, not to a topbar.
+   It reuses the canonical closeFn lifecycle owner. */
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 .mcd-id > .mcd-name-row{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 36px!important;
+  align-items:center!important;
+  gap:12px!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0!important;
+}
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 .mcd-id > .mcd-name-row > .mcd-name{
+  min-width:0!important;
+  max-width:none!important;
+  margin:0!important;
+}
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 .mcd-id > .mcd-name-row > .mcd-id-close{
+  -webkit-appearance:none!important;
+  appearance:none!important;
+  display:grid!important;
+  place-items:center!important;
+  justify-self:end!important;
+  width:36px!important;
+  min-width:36px!important;
+  max-width:36px!important;
+  height:36px!important;
+  min-height:36px!important;
+  max-height:36px!important;
+  margin:0!important;
+  padding:0!important;
+  border:1px solid #4B5563!important;
+  border-radius:8px!important;
+  background:transparent!important;
+  color:#C7CDD4!important;
+  -webkit-text-fill-color:currentColor!important;
+  box-shadow:none!important;
+  font-family:inherit!important;
+  font-size:22px!important;
+  line-height:1!important;
+  font-weight:500!important;
+  cursor:pointer!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  touch-action:manipulation!important;
+}
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 .mcd-id > .mcd-name-row > .mcd-id-close:hover{
+  background:#2B3038!important;
+  border-color:#6B7280!important;
+  color:#F3F4F6!important;
+}
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 .mcd-id > .mcd-name-row > .mcd-id-close:active{
+  transform:scale(.96)!important;
+}
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-mc-detail-theme="light"] .mcd-id > .mcd-name-row > .mcd-id-close{
+  border-color:#D1D5DB!important;
+  background:transparent!important;
+  color:#4B5563!important;
+}
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-mc-detail-theme="light"] .mcd-id > .mcd-name-row > .mcd-id-close:hover{
+  background:#F3F4F6!important;
+  border-color:#9CA3AF!important;
+  color:#17202A!important;
+}
+@media(max-width:700px){
+  html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 .mcd-id > .mcd-name-row{
+    grid-template-columns:minmax(0,1fr) 34px!important;
+    gap:10px!important;
+  }
+  html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 .mcd-id > .mcd-name-row > .mcd-id-close{
+    width:34px!important;
+    min-width:34px!important;
+    max-width:34px!important;
+    height:34px!important;
+    min-height:34px!important;
+    max-height:34px!important;
+    font-size:21px!important;
+  }
+}
+
 html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-mc-r5-geometry="canonical"] .mcd-shell{
   display:block!important;width:min(1120px,calc(100vw - 48px))!important;min-width:0!important;max-width:1120px!important;
   margin:0 auto!important;padding:18px 0 56px!important;box-sizing:border-box!important;transform:none!important;zoom:1!important;
@@ -62003,7 +62087,7 @@ page.dataset.mcR6EnalaprilVisual='clean';
   return true;
 };
 
-const makePage=()=>{const p=mk('div');p.id=PAGE_ID;p.dataset.open='false';p.dataset.mcCanonicalSlotCount='16';p.dataset.mcCanonicalStructure='v26-r1-16-point-lock';const top=mk('header','mcd-top'),back=mk('button','mcd-back','‹'),tt=mk('div','mcd-title','Fármaco'),close=mk('button','mcd-close','×');back.type=close.type='button';top.append(back,tt,close);const scroll=mk('main','mcd-scroll'),shell=mk('div','mcd-shell'),ident=mk('section','mcd-id'),eye=mk('div','mcd-eye','Fármaco'),name=mk('h1','mcd-name','—'),klass=mk('div','mcd-class');ident.dataset.mcBlock='1';ident.append(eye,name,klass);const patient=mk('section','mcd-patient');patient.dataset.mcBlock='2';const af=mk('label','mcd-field'),al=mk('span','mcd-lab'),ai=mk('input');ai.type='number';af.append(al,ai);const wf=mk('label','mcd-field'),wl=mk('span','mcd-lab'),wi=mk('input');wi.type='number';wi.step='.1';wf.append(wl,wi);const ca=mk('div','mcd-calc-action'),cb=mk('button','mcd-calc-btn','Calcular dose');cb.type='button';ca.appendChild(cb);const rr=mk('div','mcd-result'),rl=mk('span','mcd-lab'),rt=mk('div','mcd-result-text','—');rr.append(rl,rt);patient.append(af,wf,ca,rr);const loading=mk('div','mcd-loading');loading.hidden=true;const secs=mk('div','mcd-sections');for(const[o,k]of[['3','dose'],['4','renal'],['5','hepatic'],['6','indications'],['7','contraindications'],['8','adverse'],['9','interactions'],['10','monitoring'],['11','admin'],['12','pharmacology'],['13','special'],['14','presentations'],['15','commercialNames'],['16','references']]){const s=mk('section','mcd-sec'),h=mk('h2','mcd-head'),b=mk('div','mcd-body');s.dataset.mcBlock=o;s.dataset.mcCategory=k;s.hidden=true;s.append(h,b);secs.appendChild(s)}shell.append(ident,patient,loading,secs);scroll.appendChild(shell);p.append(top,scroll);const closeFn=()=>{try{window.closeFarmacoDetail?.()}catch{}hide()};back.onclick=close.onclick=closeFn;if(!cb.dataset.bound){cb.dataset.bound='1';cb.addEventListener('click',()=>{bridge();const x=underlying();for(const[v,sr]of[[ai,x.age],[wi,x.weight]]){if(!v||!sr)continue;sr.value=v.value;sr.dispatchEvent(new Event('input',{bubbles:true}));sr.dispatchEvent(new Event('change',{bubbles:true}))}setTimeout(()=>result(),0);setTimeout(()=>result(),80);setTimeout(()=>result(),220)})}document.body.appendChild(p);return{page:p,tt,eye,name,klass,al,ai,wl,wi,cb,rl,rt,loading}};
+const makePage=()=>{const p=mk('div');p.id=PAGE_ID;p.dataset.open='false';p.dataset.mcCanonicalSlotCount='16';p.dataset.mcCanonicalStructure='v26-r1-16-point-lock';const top=mk('header','mcd-top'),back=mk('button','mcd-back','‹'),tt=mk('div','mcd-title','Fármaco'),close=mk('button','mcd-close','×');back.type=close.type='button';top.append(back,tt,close);const scroll=mk('main','mcd-scroll'),shell=mk('div','mcd-shell'),ident=mk('section','mcd-id'),eye=mk('div','mcd-eye','Fármaco'),nameRow=mk('div','mcd-name-row'),name=mk('h1','mcd-name','—'),idClose=mk('button','mcd-id-close','×'),klass=mk('div','mcd-class');idClose.type='button';const idCloseLabel=String(document.documentElement.lang||'').toLowerCase().startsWith('es')?'Cerrar fármaco':'Fechar fármaco';idClose.setAttribute('aria-label',idCloseLabel);idClose.title=idCloseLabel;ident.dataset.mcBlock='1';nameRow.append(name,idClose);ident.append(eye,nameRow,klass);const patient=mk('section','mcd-patient');patient.dataset.mcBlock='2';const af=mk('label','mcd-field'),al=mk('span','mcd-lab'),ai=mk('input');ai.type='number';af.append(al,ai);const wf=mk('label','mcd-field'),wl=mk('span','mcd-lab'),wi=mk('input');wi.type='number';wi.step='.1';wf.append(wl,wi);const ca=mk('div','mcd-calc-action'),cb=mk('button','mcd-calc-btn','Calcular dose');cb.type='button';ca.appendChild(cb);const rr=mk('div','mcd-result'),rl=mk('span','mcd-lab'),rt=mk('div','mcd-result-text','—');rr.append(rl,rt);patient.append(af,wf,ca,rr);const loading=mk('div','mcd-loading');loading.hidden=true;const secs=mk('div','mcd-sections');for(const[o,k]of[['3','dose'],['4','renal'],['5','hepatic'],['6','indications'],['7','contraindications'],['8','adverse'],['9','interactions'],['10','monitoring'],['11','admin'],['12','pharmacology'],['13','special'],['14','presentations'],['15','commercialNames'],['16','references']]){const s=mk('section','mcd-sec'),h=mk('h2','mcd-head'),b=mk('div','mcd-body');s.dataset.mcBlock=o;s.dataset.mcCategory=k;s.hidden=true;s.append(h,b);secs.appendChild(s)}shell.append(ident,patient,loading,secs);scroll.appendChild(shell);p.append(top,scroll);const closeFn=()=>{try{window.closeFarmacoDetail?.()}catch{}hide()};back.onclick=close.onclick=idClose.onclick=closeFn;if(!cb.dataset.bound){cb.dataset.bound='1';cb.addEventListener('click',()=>{bridge();const x=underlying();for(const[v,sr]of[[ai,x.age],[wi,x.weight]]){if(!v||!sr)continue;sr.value=v.value;sr.dispatchEvent(new Event('input',{bubbles:true}));sr.dispatchEvent(new Event('change',{bubbles:true}))}setTimeout(()=>result(),0);setTimeout(()=>result(),80);setTimeout(()=>result(),220)})}document.body.appendChild(p);return{page:p,tt,eye,name,klass,al,ai,wl,wi,cb,rl,rt,loading}};
 const ensure=()=>{let p=document.getElementById(PAGE_ID);if(!p)return S.ui=makePage();if(!S.ui)S.ui={page:p,tt:p.querySelector('.mcd-title'),eye:p.querySelector('.mcd-eye'),name:p.querySelector('.mcd-name'),klass:p.querySelector('.mcd-class'),al:p.querySelector('.mcd-field:nth-child(1) .mcd-lab'),ai:p.querySelector('.mcd-field:nth-child(1) input'),wl:p.querySelector('.mcd-field:nth-child(2) .mcd-lab'),wi:p.querySelector('.mcd-field:nth-child(2) input'),cb:p.querySelector('.mcd-calc-btn'),rl:p.querySelector('.mcd-result .mcd-lab'),rt:p.querySelector('.mcd-result-text'),loading:p.querySelector('.mcd-loading')};return S.ui};
 function show(){const u=ensure();u.page.dataset.open='true';u.page.style.setProperty('display','grid','important');u.page.style.setProperty('visibility','visible','important');u.page.style.setProperty('opacity','1','important');document.documentElement.classList.add('mc-drug-cleanroom-open');document.body.classList.add('mc-drug-cleanroom-open')}
 function hide(){const p=document.getElementById(PAGE_ID);if(p){p.dataset.open='false';p.style.setProperty('display','none','important');p.style.setProperty('visibility','hidden','important');p.style.setProperty('opacity','0','important')}document.documentElement.classList.remove('mc-drug-cleanroom-open');document.body.classList.remove('mc-drug-cleanroom-open')}
