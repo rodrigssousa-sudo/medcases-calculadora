@@ -43411,7 +43411,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 (() => {
   'use strict';
 
-  const BUILD='CALC-FARMACOS-GLOBAL-SEARCH-INSTANT-INPUT-MOBILE-V1-B-R0';
+  const BUILD='CALC-FARMACOS-GLOBAL-SEARCH-INSTANT-INPUT-MOBILE-V1-B-R1-SINGLE-PASS';
   if (window.__mcFarmacosGlobalSearchInstantInputMobileV1BR0) return;
 
   const state={
@@ -43966,7 +43966,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
     }
 
     const now=Date.now();
-    if (state.lastRouteQuery===query && now-state.lastRouteAt<70) return false;
+    if (state.lastRouteQuery===query && now-state.lastRouteAt<120) return false;
     state.lastRouteQuery=query;
     state.lastRouteAt=now;
 
@@ -43980,30 +43980,37 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
       state.routing=false;
     }
 
-    const refire=() => {
-      const live=searchInput() || input;
-      if (!live || !live.isConnected) return;
+    /*
+      MEDCASES_IOS_FARMACOS_SEARCH_SINGLE_PASS_V1_B_R0
 
+      O evento físico `input` continua seu fluxo normal até o próprio input
+      (`oninput="hmFilterDrugs(this.value)"`). Portanto não existe motivo para
+      sintetizar 4 novas ondas de `input`/`change` após trocar para A-Z.
+
+      No owner anterior, cada primeira tecla fora de A-Z podia gerar:
+        physical input
+        + microtask(refire)
+        + double-rAF(refire)
+        + 60ms(refire)
+        + 140ms(refire)
+      e cada refire ainda tentava focar novamente o campo. Em WKWebView isso
+      amplificava listeners, debounce, MutationObservers, foco/viewport e reflow.
+
+      Aqui a troca de aba é single-pass. Preservamos somente uma restauração
+      assíncrona de foco, sem synthetic input/change.
+    */
+    const live=searchInput() || input;
+    if (live && live.isConnected) {
       if (live.value!==query) live.value=query;
 
       if (hadFocus && document.activeElement!==live) {
-        try { live.focus({preventScroll:true}); }
-        catch (_) { try { live.focus(); } catch (_) {} }
+        requestAnimationFrame(() => {
+          if (!live.isConnected) return;
+          try { live.focus({preventScroll:true}); }
+          catch (_) { try { live.focus(); } catch (_) {} }
+        });
       }
-
-      state.routing=true;
-      try {
-        live.dispatchEvent(new Event('input',{bubbles:true}));
-        live.dispatchEvent(new Event('change',{bubbles:true}));
-      } finally {
-        queueMicrotask(() => { state.routing=false; });
-      }
-    };
-
-    queueMicrotask(refire);
-    requestAnimationFrame(() => requestAnimationFrame(refire));
-    setTimeout(refire,60);
-    setTimeout(refire,140);
+    }
 
     console.info('['+BUILD+'] SEARCH_ROUTED',{
       query,
@@ -44011,7 +44018,9 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
       to:'A-Z',
       reason,
       immediate:true,
-      enterRequired:false
+      enterRequired:false,
+      singlePass:true,
+      syntheticReplayCount:0
     });
 
     return true;
@@ -44036,41 +44045,34 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
     input.setAttribute('enterkeyhint','search');
   },true);
 
-  document.addEventListener('beforeinput',event => {
-    const input=event.target;
-    if (!isSearchInput(input)) return;
-    setTimeout(() => {
-      if (String(input.value || '').trim()) routeSearchToAZ(input,'beforeinput');
-    },0);
-  },true);
-
   document.addEventListener('input',event => {
     const input=event.target;
     if (!isSearchInput(input)) return;
+    if (event.isComposing) return;
+
     if (String(input.value || '').trim()) {
       routeSearchToAZ(input,'input');
     }
   },true);
 
+  /*
+    IME/composição: durante composição não mudamos de aba. No final,
+    roteamos uma única vez. Paste já produz `input`, então não recebe owner
+    paralelo. O evento `search` e Enter ficam apenas como fallbacks seguros.
+  */
   document.addEventListener('compositionend',event => {
     const input=event.target;
     if (!isSearchInput(input)) return;
+
     if (String(input.value || '').trim()) {
       routeSearchToAZ(input,'compositionend');
     }
   },true);
 
-  document.addEventListener('paste',event => {
-    const input=event.target;
-    if (!isSearchInput(input)) return;
-    setTimeout(() => {
-      if (String(input.value || '').trim()) routeSearchToAZ(input,'paste');
-    },0);
-  },true);
-
   document.addEventListener('search',event => {
     const input=event.target;
     if (!isSearchInput(input)) return;
+
     if (String(input.value || '').trim()) {
       routeSearchToAZ(input,'search-event');
     }
@@ -44079,6 +44081,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   document.addEventListener('keydown',event => {
     const input=event.target;
     if (!isSearchInput(input)) return;
+
     if (event.key==='Enter' && String(input.value || '').trim()) {
       routeSearchToAZ(input,'enter-fallback');
     }
