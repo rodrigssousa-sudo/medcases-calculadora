@@ -27999,11 +27999,80 @@ window.MedCasesBridge = {
     return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
   }
 
+  /* CALC-FARMACOS-WKWEBVIEW-ROOT-SEARCH-KEYBOARD-SINGLE-OWNER-V1-B-R2
+     In the MedCases embedded WebView, the app/native bridge is the sole
+     keyboard and viewport owner for the root Fármacos search fields.
+
+     Search/filter ownership is intentionally unchanged:
+       hm-drug-search        -> hmFilterDrugs()
+       farmacos-search-input -> _renderFarmacosListDebounced()
+
+     This cutover changes keyboard geometry ownership only. */
+  function _isAppOwnedFarmacosRootSearch(el) {
+    if (!el) return false;
+
+    var id = String(el.id || '');
+
+    if (
+      id !== 'hm-drug-search' &&
+      id !== 'farmacos-search-input'
+    ) {
+      return false;
+    }
+
+    /*
+     * Ownership is granted only after the MedCases iOS R15 native
+     * root-search keyboard owner has actually been installed.
+     *
+     * This deliberately does NOT infer ownership from a generic JS
+     * bridge such as a generic diagnostic bridge, because such a bridge may also exist
+     * on other embedded platforms.
+     *
+     * Fail-safe:
+     *   R15 flag present -> native owner wins.
+     *   R15 flag absent  -> legacy BUILD 232 behavior is preserved.
+     */
+    return (
+      window.__MC_FARMACOS_ROOT_SEARCH_NATIVE_KB_R15_R1_BOUND === true
+    );
+  }
+
+  function _releaseLegacyFarmacosRootSearchKeyboardOwner(reason) {
+    /*
+     * True ownership handoff:
+     * do not write keyboard-open, viewport CSS vars, padding or scroll
+     * geometry here. The installed iOS R15 owner is solely responsible
+     * for those mutations.
+     */
+    _kbOpen = false;
+
+    window.__MC_FARMACOS_WKWEBVIEW_ROOT_SEARCH_KB_OWNER_CUTOVER_V1 = {
+      build:
+        'CALC-FARMACOS-WKWEBVIEW-ROOT-SEARCH-KEYBOARD-SINGLE-OWNER-V1-B-R2',
+      legacyKeyboardOwner: false,
+      appNativeKeyboardOwner: true,
+      r15OwnerInstalled:
+        window.__MC_FARMACOS_ROOT_SEARCH_NATIVE_KB_R15_R1_BOUND === true,
+      input: document.activeElement
+        ? String(document.activeElement.id || '')
+        : '',
+      reason: String(reason || ''),
+      timestamp: Date.now()
+    };
+  }
+
   /* ─────────────────────────────────────────────────────────────
      ABRIR / ATUALIZAR — chamado ao abrir e ao TROCAR de campo
      v1.0 tinha if(_kbOpen)return, o que impedia re-ajuste ao trocar
   ───────────────────────────────────────────────────────────── */
   function _openOrUpdateKeyboard(kbHeight, focusedEl) {
+    if (_isAppOwnedFarmacosRootSearch(focusedEl)) {
+      _releaseLegacyFarmacosRootSearchKeyboardOwner(
+        'open-or-update-bypass'
+      );
+      return;
+    }
+
     _kbOpen = true;
     document.body.classList.add('keyboard-open');
     applyKeyboardSafePadding(kbHeight, focusedEl);
@@ -28049,6 +28118,19 @@ window.MedCasesBridge = {
      durante a troca de campo (evita flicker de _close/_open)
   ───────────────────────────────────────────────────────────── */
   function _onViewportResize() {
+    if (
+      _isAppOwnedFarmacosRootSearch(document.activeElement) ||
+      _isAppOwnedFarmacosRootSearch(_lastFocused)
+    ) {
+      clearTimeout(_debounceTimer);
+      _debounceTimer = null;
+
+      _releaseLegacyFarmacosRootSearchKeyboardOwner(
+        'visual-viewport-bypass'
+      );
+      return;
+    }
+
     clearTimeout(_debounceTimer);
     _debounceTimer = setTimeout(function () {
       var vv       = window.visualViewport;
@@ -28077,6 +28159,18 @@ window.MedCasesBridge = {
   ───────────────────────────────────────────────────────────── */
   document.addEventListener('focusin', function (e) {
     if (!_isInput(e.target)) return;
+
+    if (_isAppOwnedFarmacosRootSearch(e.target)) {
+      _lastFocused = e.target;
+
+      clearTimeout(_debounceTimer);
+      _debounceTimer = null;
+
+      _releaseLegacyFarmacosRootSearchKeyboardOwner(
+        'focusin-bypass'
+      );
+      return;
+    }
 
     var prev      = _lastFocused;
     _lastFocused  = e.target;
@@ -28114,6 +28208,17 @@ window.MedCasesBridge = {
   ───────────────────────────────────────────────────────────── */
   document.addEventListener('focusout', function (e) {
     if (!_isInput(e.target)) return;
+
+    if (_isAppOwnedFarmacosRootSearch(e.target)) {
+      setTimeout(function () {
+        if (!_isInput(document.activeElement)) {
+          _lastFocused = null;
+        }
+      }, 0);
+
+      return;
+    }
+
     setTimeout(function () {
       var ae = document.activeElement;
       if (!_isInput(ae)) {
