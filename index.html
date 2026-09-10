@@ -68615,5 +68615,123 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
 /* MEDCASES_DRUG_LOCALE_NAME_GLOBAL_V1 END */
 </script>
 
+
+<style id="medcases-farmacos-r4b-root-density-duplicate-close-v1-b-r0">
+/* MEDCASES_FARMACOS_R4B_ROOT_DENSITY_DUPLICATE_CLOSE_V1_B_R0
+   VISUAL ONLY.
+
+   Root:
+   - projected legacy trigger reserves no vertical space;
+   - body/inner become the sole root content geometry owner;
+   - search remains 44px;
+   - search -> tabs gap is compact;
+   - dynamic shell margin is neutralized only inside projected Fármacos.
+
+   Detail:
+   - canonical topbar .mcd-close remains untouched;
+   - redundant identity-row .mcd-id-close is visually removed and its
+     grid column is collapsed;
+   - close lifecycle JS is untouched.
+*/
+
+/* The projected card already has a real overlay topbar.
+   Keep the original Home trigger in DOM for lifecycle/state, but let it
+   reserve zero pixels in projected mode. */
+html body #hub-card-farmacos.mc-overlay-projected-card > .hub-card-trigger{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  width:0!important;
+  min-width:0!important;
+  max-width:0!important;
+  height:0!important;
+  min-height:0!important;
+  max-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  overflow:hidden!important;
+  pointer-events:none!important;
+}
+
+/* Root content begins immediately below the real overlay topbar. */
+html body #hub-card-farmacos.mc-overlay-projected-card > #hub-body-farmacos{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+}
+
+html body #hub-card-farmacos.mc-overlay-projected-card
+> #hub-body-farmacos
+> .hub-card-inner{
+  margin:0!important;
+  padding-top:8px!important;
+}
+
+/* Preserve 44px search height; compact only the vertical transition. */
+html body #hub-card-farmacos.mc-overlay-projected-card
+[data-farmacos-v2-search-wrapper]{
+  margin-top:0!important;
+  margin-bottom:6px!important;
+}
+
+/* Runtime style can assign 8/12px shell margins.
+   In the projected Fármacos root the search already owns the spacing. */
+html body #hub-card-farmacos.mc-overlay-projected-card #farmacos-v2-shell,
+html body #hub-card-farmacos.mc-overlay-projected-card #farmacos-v2-shell[data-farmacos-owner="drug-visible-surface"],
+html body #hub-card-farmacos.mc-overlay-projected-card #farmacos-v2-shell[data-farmacos-mount-strategy="stable-after-search"],
+html body #hub-card-farmacos.mc-overlay-projected-card #farmacos-v2-shell[data-farmacos-mount-strategy="visible-overlay-after-search"]{
+  margin-top:0!important;
+}
+
+/* Keep touch target contract while removing extra vertical drift. */
+html body #hub-card-farmacos.mc-overlay-projected-card
+#farmacos-v2-shell .farmacos-v2-tabs{
+  margin-top:0!important;
+  margin-bottom:0!important;
+  min-height:44px!important;
+}
+
+html body #hub-card-farmacos.mc-overlay-projected-card
+#farmacos-v2-shell [data-farmacos-panel="az"]{
+  margin-top:0!important;
+  padding-top:0!important;
+}
+
+/* Canonical close owner is the topbar .mcd-close.
+   Collapse only the redundant identity-row close slot. */
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21
+.mcd-id > .mcd-name-row{
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:0!important;
+}
+
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21
+.mcd-id > .mcd-name-row > .mcd-id-close{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  width:0!important;
+  min-width:0!important;
+  max-width:0!important;
+  height:0!important;
+  min-height:0!important;
+  max-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  overflow:hidden!important;
+  pointer-events:none!important;
+}
+
+@media(max-width:700px){
+  html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21
+  .mcd-id > .mcd-name-row{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:0!important;
+  }
+}
+</style>
+
 </body>
 </html>
