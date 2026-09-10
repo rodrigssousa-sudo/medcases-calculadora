@@ -16943,7 +16943,8 @@ window.renderFarmacosList = renderFarmacosList;
 /* Versão exclusiva para o evento de digitação (oninput/keyup) da busca —
    agrupa chamadas sucessivas de tecla e executa apenas a última após
    ~150ms de silêncio. NÃO deve ser usada em nenhum outro fluxo. */
-const _renderFarmacosListDebounced = _hmDebounce(_renderFarmacosListImpl, 150);
+/* MEDCASES_FARMACOS_R4A_SECONDARY_SEARCH_DEBOUNCE_FAST_PATH */
+const _renderFarmacosListDebounced = _hmDebounce(_renderFarmacosListImpl, 60);
 window._renderFarmacosListDebounced = _renderFarmacosListDebounced;
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -26092,7 +26093,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* BUILD 252 — hmFilterDrugs público agora é a versão debounced
      (~150ms) de _hmFilterDrugsImpl. Mesma precisão/resultado, apenas
      agrupa chamadas sucessivas de keystroke e executa só a última. */
-  window.hmFilterDrugs = _hmDebounce(_hmFilterDrugsImpl, 150);
+  /* MEDCASES_FARMACOS_R4A_SEARCH_DEBOUNCE_FAST_PATH */
+  window.hmFilterDrugs = _hmDebounce(_hmFilterDrugsImpl, 60);
 
   /* ─────────────────────────────────────────────
      hmOpenDrug(id)
@@ -30089,7 +30091,10 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     if (!panel || !allHost || !nativeHost) return;
 
     if (searching) {
-      releaseCanonicalAzMaterialization(shell);
+      /* MEDCASES_FARMACOS_R4A_AZ_MATERIALIZATION_CACHE_FAST_PATH
+         Keep the already-built canonical A-Z DOM cached while hidden.
+         Avoid hundreds of synchronous removals on focus/first keystroke
+         and avoid the resulting MutationObserver cascade. */
       allHost.style.display="none";
       nativeHost.style.display="block";
       nativeList.style.removeProperty("display");
@@ -31032,12 +31037,27 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     if(!root || boundCard===root)return !!root;
     boundCard=root;
 
-    root.addEventListener("input",schedule,true);
-    root.addEventListener("change",schedule,true);
-    root.addEventListener("focusin",schedule,true);
-    root.addEventListener("focusout",schedule,true);
-    root.addEventListener("click",schedule,true);
-    root.addEventListener("pointerup",schedule,true);
+    /* MEDCASES_FARMACOS_R4A_LIST_EVENT_FAST_PATH */
+    function scheduleFromEvent(event){
+      var target=event&&event.target;
+      if(
+        target &&
+        (
+          target.id==="hm-drug-search" ||
+          target.id==="farmacos-search-input"
+        )
+      ){
+        return
+      }
+      schedule()
+    }
+
+    root.addEventListener("input",scheduleFromEvent,true);
+    root.addEventListener("change",scheduleFromEvent,true);
+    root.addEventListener("focusin",scheduleFromEvent,true);
+    root.addEventListener("focusout",scheduleFromEvent,true);
+    root.addEventListener("click",scheduleFromEvent,true);
+    root.addEventListener("pointerup",scheduleFromEvent,true);
 
     return true
   }
@@ -36026,7 +36046,11 @@ html[data-theme="light"] .mc-intx-m1-slot[data-selected="true"] .mc-intx-m1-fiel
   });
 
   document.addEventListener("click",schedule,true);
-  document.addEventListener("focusin",schedule,true);
+  document.addEventListener("focusin",function(event){
+    var target=event&&event.target;
+    if(target&&(target.id==="hm-drug-search"||target.id==="farmacos-search-input"))return;
+    schedule();
+  },true); /* MEDCASES_FARMACOS_R4A_GLOBAL_FOCUS_FAST_PATH */
   window.addEventListener("pageshow",schedule);
   window.addEventListener("load",schedule);
 
@@ -36380,7 +36404,11 @@ body[data-mc-intx-v2-m3-r2-isolation="true"] .mc-intx-m1-slots{
     });
   }
 
-  document.addEventListener("focusin",schedule,true);
+  document.addEventListener("focusin",function(event){
+    var target=event&&event.target;
+    if(target&&(target.id==="hm-drug-search"||target.id==="farmacos-search-input"))return;
+    schedule();
+  },true); /* MEDCASES_FARMACOS_R4A_GLOBAL_FOCUS_FAST_PATH */
   document.addEventListener("click",schedule,true);
   window.addEventListener("pageshow",schedule);
   window.addEventListener("load",schedule);
@@ -36719,10 +36747,18 @@ body[data-mc-intx-v2-m3-r3="true"] .mc-intx-m3-r3-note[data-visible="true"]{
     ]
   });
 
-  document.addEventListener("input",schedule,true);
+  document.addEventListener("input",function(event){
+    var target=event&&event.target;
+    if(target&&(target.id==="hm-drug-search"||target.id==="farmacos-search-input"))return;
+    schedule();
+  },true); /* MEDCASES_FARMACOS_R4A_GLOBAL_INPUT_FAST_PATH */
   document.addEventListener("change",schedule,true);
   document.addEventListener("click",schedule,true);
-  document.addEventListener("focusin",schedule,true);
+  document.addEventListener("focusin",function(event){
+    var target=event&&event.target;
+    if(target&&(target.id==="hm-drug-search"||target.id==="farmacos-search-input"))return;
+    schedule();
+  },true); /* MEDCASES_FARMACOS_R4A_GLOBAL_FOCUS_FAST_PATH */
   window.addEventListener("pageshow",schedule);
   window.addEventListener("load",schedule);
 
@@ -37434,10 +37470,18 @@ html.light-mode [data-mc-intx-m4-result-final="true"]{
     ]
   });
 
-  document.addEventListener("input",schedule,true);
+  document.addEventListener("input",function(event){
+    var target=event&&event.target;
+    if(target&&(target.id==="hm-drug-search"||target.id==="farmacos-search-input"))return;
+    schedule();
+  },true); /* MEDCASES_FARMACOS_R4A_GLOBAL_INPUT_FAST_PATH */
   document.addEventListener("change",schedule,true);
   document.addEventListener("click",schedule,true);
-  document.addEventListener("focusin",schedule,true);
+  document.addEventListener("focusin",function(event){
+    var target=event&&event.target;
+    if(target&&(target.id==="hm-drug-search"||target.id==="farmacos-search-input"))return;
+    schedule();
+  },true); /* MEDCASES_FARMACOS_R4A_GLOBAL_FOCUS_FAST_PATH */
   window.addEventListener("pageshow",schedule);
   window.addEventListener("load",schedule);
 
@@ -37644,10 +37688,18 @@ body[data-mc-intx-v2-m4-r2="true"]
     ]
   });
 
-  document.addEventListener("input",schedule,true);
+  document.addEventListener("input",function(event){
+    var target=event&&event.target;
+    if(target&&(target.id==="hm-drug-search"||target.id==="farmacos-search-input"))return;
+    schedule();
+  },true); /* MEDCASES_FARMACOS_R4A_GLOBAL_INPUT_FAST_PATH */
   document.addEventListener("change",schedule,true);
   document.addEventListener("click",schedule,true);
-  document.addEventListener("focusin",schedule,true);
+  document.addEventListener("focusin",function(event){
+    var target=event&&event.target;
+    if(target&&(target.id==="hm-drug-search"||target.id==="farmacos-search-input"))return;
+    schedule();
+  },true); /* MEDCASES_FARMACOS_R4A_GLOBAL_FOCUS_FAST_PATH */
   window.addEventListener("pageshow",schedule);
   window.addEventListener("load",schedule);
 
@@ -66525,7 +66577,11 @@ body > #mc-drug-detail-page-v21 [data-mc-r10-class-owner="true"]{
   );
 
   document.addEventListener('click',schedule,true);
-  document.addEventListener('input',schedule,true);
+  document.addEventListener('input',function(event){
+    var target=event&&event.target;
+    if(target&&(target.id==='hm-drug-search'||target.id==='farmacos-search-input'))return;
+    schedule();
+  },true); /* MEDCASES_FARMACOS_R4A_DETAIL_INPUT_FAST_PATH */
 
   /* MC-DRUG-V27-MB4-R2-R1-TRUE-OWNER-PERFORMANCE-CONVERGENCE-CANDIDATE-GATE-FIX-V1-B-R1 :: PERIODIC_POLLING_REMOVED */
   schedule();
