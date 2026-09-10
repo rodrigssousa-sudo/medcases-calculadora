@@ -1,252 +1,224 @@
 {
   "id": "indapamida",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "id": "indapamida",
+    "pharmacologicClass": "Diurético tiazídico ou tipo tiazida; inibidor funcional do cotransportador Na/Cl do túbulo distal",
+    "mechanism": "Reduz reabsorção de sódio e cloro no túbulo contornado distal, aumentando natriurese e diurese e reduzindo volume extracelular e resistência vascular no longo prazo.",
+    "pharmacodynamics": "Reduz pressão arterial e aumenta excreção de sódio e potássio; pode elevar cálcio sérico, ácido úrico e glicose e causar hiponatremia.",
+    "commonAdverseEffects": [
+      "hiponatremia",
+      "hipocalemia",
+      "tontura",
+      "hiperuricemia",
+      "hiperglicemia"
+    ],
+    "dangerousAdverseEffects": [
+      "hiponatremia grave",
+      "hipocalemia grave",
+      "arritmia secundária a distúrbio eletrolítico",
+      "lesão renal por depleção volêmica"
+    ],
+    "contraindications": [
+      "Anúria",
+      "hipersensibilidade ao fármaco; revisar história de reação a sulfonamidas não antibióticas com critério clínico"
+    ],
+    "interactions": [
+      "Lítio pode acumular",
+      "AINEs podem reduzir efeito anti-hipertensivo e diurético",
+      "Digoxina: hipocalemia aumenta risco de arritmia",
+      "Outros anti-hipertensivos podem potencializar hipotensão"
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "sódio e potássio",
+      "creatinina/eTFG",
+      "magnésio",
+      "ácido úrico",
+      "glicose conforme risco"
+    ],
+    "administration": "Administrar preferencialmente pela manhã; titular para a menor dose eficaz.",
+    "preparation": "Comprimidos não exigem reconstituição.",
+    "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+    "pregnancy": "Diuréticos não são usados para tratar edema fisiológico da gestação; usar apenas se houver indicação materna clara.",
+    "lactation": "Pode reduzir produção de leite com diurese intensa; individualizar conforme dose e situação clínica.",
+    "specialPopulations": {
+      "elderly": "Maior risco de hiponatremia e depleção volêmica.",
+      "gout": "Pode aumentar ácido úrico e precipitar gota.",
+      "diabetes": "Pode piorar glicemia em alguns pacientes."
+    },
+    "patientEducation": [
+      "Tomar cedo para reduzir noctúria",
+      "procurar avaliação por fraqueza, cãibras, confusão ou tontura intensa",
+      "manter controles de eletrólitos e função renal"
+    ],
+    "clinicalPearls": [
+      "A resposta anti-hipertensiva deve ser avaliada junto com sódio, potássio, função renal e ácido úrico."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: diuréticos tiazídicos/tiazídico-like são tratamento de primeira linha para hipertensão; clortalidona tem maior meia-vida e potência mg por mg que hidroclorotiazida."
+    ],
+    "safetyFlags": [
+      "SODIO",
+      "POTASSIO",
+      "FUNCAO_RENAL",
+      "ACIDO_URICO"
+    ],
+    "alerts": [
+      "Corrigir distúrbios eletrolíticos relevantes",
+      "Evitar sobrediurese e revisar AINEs concomitantes."
+    ],
     "name": "Indapamida",
     "class": "Diurético tiazídico-like",
-    "category": "cardio",
+    "pharmacokinetics": "Absorção oral alta; metabolismo hepático importante e eliminação renal e fecal de metabólitos. Efeito anti-hipertensivo sustentado com dose uma vez ao dia.",
+    "indications": [
+      "Hipertensão",
+      "edema associado à insuficiência cardíaca congestiva conforme bula"
+    ],
     "commercialNames": [
-      "Natrilix",
-      "Fludex",
-      "Indapamida genérica"
+      "Lozol"
     ],
-    "presentation": [
-      "Comprimidos 1,5 mg LP",
-      "Comprimidos 2,5 mg"
+    "presentation": "Comprimidos orais.",
+    "presentations": [
+      "Comprimidos 1,25 e 2,5 mg; algumas apresentações 5 mg"
     ],
-    "mechanism": "Inibe reabsorção de sódio no túbulo distal. Possui também efeito vasodilatador arterial direto, reduzindo resistência vascular periférica. Menor impacto metabólico que hidroclorotiazida e clortalidona.",
-    "halfLife": "14–25 horas",
-    "onset": "1–2 horas",
     "dose": {
-      "adultoPadrao": "1,5 mg LP VO 1x/dia (preferencial) ou 2,5 mg VO 1x/dia. Reavaliar em 2–4 semanas.",
-      "adultoGrave": "Dose máxima: 2,5 mg/dia para HAS. Preferir associação com IECA, BRA ou BCC ao invés de escalar dose."
+      "hypertension": "1,25 mg uma vez ao dia pela manhã; se resposta insuficiente após 4 semanas, 2,5 mg/dia; se ainda insuficiente após 4 semanas, 5 mg/dia, considerando preferencialmente adicionar outro anti-hipertensivo.",
+      "heartFailureEdema": "2,5 mg uma vez ao dia; se resposta insuficiente após 1 semana, 5 mg/dia."
     },
-    "risksByPatient": [
-      "Gestante: não recomendada como tratamento rotineiro da hipertensão gestacional.",
-      "Lactante: dados limitados — utilizar com cautela.",
-      "Idoso (40 anos): excelente evidência (HYVET), porém monitorar Na⁺, K⁺ e risco de quedas."
-    ],
-    "commonAdverseEffects": [
-      "Hipocalemia",
-      "Hiponatremia",
-      "Tontura",
-      "Cefaleia",
-      "Fadiga",
-      "Poliúria",
-      "Hipotensão"
-    ],
-    "dangerousAdverseEffects": [
-      "Hiponatremia grave",
-      "Hipocalemia grave",
-      "Arritmias ventriculares por distúrbio eletrolítico",
-      "Lesão renal aguda",
-      "Síncope",
-      "Encefalopatia hepática em predispostos"
-    ],
-    "alerts": [
-      "Monitorar Na⁺, K⁺, Mg²⁺ e creatinina periodicamente — risco de hiponatremia e hipocalemia.",
-      "Interação importante: digoxina — hipocalemia aumenta risco de toxicidade digitálica.",
-      "Menor impacto metabólico sobre glicemia e perfil lipídico comparado a hidroclorotiazida e clortalidona.",
-      "HYVET Trial: reduziu AVC, eventos cardiovasculares e mortalidade em idosos ≥ 80 anos.",
-      "ADVANCE Trial: reduziu eventos macro e microvasculares em diabéticos tipo 2."
-    ],
-    "ref": "HYVET Trial · ADVANCE Trial · ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · Lexicomp · FDA/EMA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não requer ajuste renal habitual acima de 30 mL/min. Monitorar eletrólitos.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "1,5 mg LP",
-          "intervalo": "1x/dia",
-          "doseMaxima": "2,5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dose habitual. Prefira formulação LP 1,5 mg."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "1,5 mg LP",
-          "intervalo": "1x/dia (cautela)",
-          "doseMaxima": "2,5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr 30–50 mL/min: pode usar com cautela. Monitorar eletrólitos e função renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr 10–30 mL/min: perde eficácia diurética. Substituir por diurético de alça."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr < 10 mL/min / anúria: ineficaz. Usar diurético de alça."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálise: ineficaz. Diurético de alça é a escolha, se ainda houver diurese residual."
-      }
-    },
-    "safetyFlags": {
-      "hypotensionRisk": true,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "hyperuricemiaRisk": true,
-      "diabetesRisk": false,
-      "electrolyteRisk": true,
-      "renalHighRisk": false,
-      "qtRisk": false,
-      "pregnancyCaution": true,
-      "elderlyEvidence": true,
-      "warning": "Possui menor impacto metabólico que outras tiazidas, porém mantém risco significativo de hiponatremia e hipocalemia. Excelente evidência em idosos (HYVET) e diabéticos (ADVANCE)."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "HYVET Trial",
-        "ADVANCE Trial",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC Hypertension Guidelines 2023",
-        "Lexicomp 2026",
-        "FDA/EMA label"
+    "pediatricDose": "Segurança e eficácia não estabelecidas em pacientes pediátricos.",
+    "renalDose": "Pode ser usada em função renal reduzida selecionada, mas perde eficácia na insuficiência renal avançada; monitorar creatinina e eletrólitos e evitar se houver anúria.",
+    "hepaticDose": "Usar com cautela; alterações de líquidos/eletrólitos podem precipitar encefalopatia em hepatopatia avançada.",
+    "adverseEffects": {
+      "common": [
+        "hiponatremia",
+        "hipocalemia",
+        "tontura",
+        "hiperuricemia",
+        "hiperglicemia"
       ],
-      "note": "Fármaco com excelente evidência em idosos e diabéticos, associado à redução de AVC e eventos cardiovasculares. Tiazídico-like com perfil metabólico mais favorável."
-    }
+      "dangerous": [
+        "hiponatremia grave",
+        "hipocalemia grave",
+        "arritmia secundária a distúrbio eletrolítico",
+        "lesão renal por depleção volêmica"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392"
   },
   "es": {
-    "id": "indapamida",
-    "name": "Indapamida",
-    "class": "Diurético tipo tiazida",
-    "category": "cardio",
-    "commercialNames": [
-      "Natrilix",
-      "Fludex",
-      "Indapamida genérica"
-    ],
-    "presentation": [
-      "Comprimidos 1,5 mg LP",
-      "Comprimidos 2,5 mg"
-    ],
-    "mechanism": "Inhibe la reabsorción de sodio en el túbulo distal. También posee efecto vasodilatador arterial directo, reduciendo la resistencia vascular periférica. Menor impacto metabólico que hidroclorotiazida y clortalidona.",
-    "halfLife": "14–25 horas",
-    "onset": "1–2 horas",
-    "dose": {
-      "adultoPadrao": "1,5 mg LP VO 1 vez/día (preferencial) o 2,5 mg VO 1 vez/día. Reevaluar en 2–4 semanas.",
-      "adultoGrave": "Dosis máxima: 2,5 mg/día para HTA. Preferir asociación con IECA, ARA-II o BCC en lugar de escalar dosis."
-    },
-    "risksByPatient": [
-      "Gestante: no recomendada como tratamiento rutinario de la hipertensión gestacional.",
-      "Lactante: datos limitados — utilizar con precaución.",
-      "Anciano (40 años): excelente evidencia (HYVET), pero monitorizar Na⁺, K⁺ y riesgo de caídas."
-    ],
+    "pharmacologicClass": "Diurético tiazídico o tipo tiazida; inhibidor funcional del cotransportador Na/Cl del túbulo distal",
+    "mechanism": "Reduce reabsorción de sodio y cloro en el túbulo contorneado distal, aumentando natriuresis y diuresis y reduciendo volumen extracelular y resistencia vascular a largo plazo.",
+    "pharmacodynamics": "Disminuye presión arterial y favorece excreción de sodio y potasio; puede aumentar calcio sérico, ácido úrico y glucosa y causar hiponatremia.",
     "commonAdverseEffects": [
-      "Hipocalemia",
-      "Hiponatremia",
-      "Mareos",
-      "Cefalea",
-      "Fatiga",
-      "Poliuria",
-      "Hipotensión"
+      "hiponatremia",
+      "hipopotasemia",
+      "mareo",
+      "hiperuricemia",
+      "hiperglucemia"
     ],
     "dangerousAdverseEffects": [
-      "Hiponatremia grave",
-      "Hipocalemia grave",
-      "Arritmias ventriculares por trastorno electrolítico",
-      "Lesión renal aguda",
-      "Síncope",
-      "Encefalopatía hepática en predispuestos"
+      "hiponatremia grave",
+      "hipopotasemia grave",
+      "arritmia secundaria a trastorno electrolítico",
+      "lesión renal por depleción de volumen"
+    ],
+    "contraindications": [
+      "Anuria",
+      "hipersensibilidad al fármaco; revisar antecedentes de reacción a sulfonamidas no antibióticas con criterio clínico"
+    ],
+    "interactions": [
+      "Litio puede acumularse",
+      "AINE pueden reducir efecto antihipertensivo y diurético",
+      "Digoxina: hipopotasemia aumenta riesgo de arritmia",
+      "Otros antihipertensivos pueden potenciar hipotensión"
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "sodio y potasio",
+      "creatinina/eGFR",
+      "magnesio",
+      "ácido úrico",
+      "glucosa según riesgo"
+    ],
+    "administration": "Administrar preferentemente por la mañana; titular a la menor dosis eficaz.",
+    "preparation": "Tabletas no requieren reconstitución.",
+    "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+    "pregnancy": "Los diuréticos no se usan para tratar edema fisiológico del embarazo; usar solo si existe indicación materna clara.",
+    "lactation": "Puede reducir producción de leche con diuresis intensa; individualizar por dosis y situación clínica.",
+    "specialPopulations": {
+      "elderly": "Mayor riesgo de hiponatremia y depleción de volumen.",
+      "gout": "Puede aumentar ácido úrico y precipitar gota.",
+      "diabetes": "Puede empeorar glucemia en algunos pacientes."
+    },
+    "patientEducation": [
+      "Tomar temprano para reducir nocturia",
+      "consultar por debilidad, calambres, confusión o mareo intenso",
+      "mantener controles de electrolitos y función renal"
+    ],
+    "clinicalPearls": [
+      "La respuesta antihipertensiva debe valorarse junto con sodio, potasio, función renal y ácido úrico."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: diuréticos tipo tiazida son tratamiento de primera línea para hipertensión; clortalidona tiene mayor vida media y potencia mg por mg que hidroclorotiazida."
+    ],
+    "safetyFlags": [
+      "SODIO",
+      "POTASIO",
+      "FUNCION_RENAL",
+      "ACIDO_URICO"
     ],
     "alerts": [
-      "Monitorizar Na⁺, K⁺, Mg²⁺ y creatinina periódicamente — riesgo de hiponatremia e hipocalemia.",
-      "Interacción importante: digoxina — hipocalemia aumenta riesgo de toxicidad digitálica.",
-      "Menor impacto metabólico sobre glucemia y perfil lipídico comparado con hidroclorotiazida y clortalidona.",
-      "HYVET Trial: redujo ACV, eventos cardiovasculares y mortalidad en ancianos ≥ 80 años.",
-      "ADVANCE Trial: redujo eventos macro y microvasculares en diabéticos tipo 2."
+      "Corregir alteraciones electrolíticas relevantes",
+      "Evitar sobre-diuresis y revisar AINE concomitantes."
     ],
-    "ref": "HYVET Trial · ADVANCE Trial · ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · Lexicomp · FDA/EMA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual por encima de 30 mL/min. Monitorizar electrolitos.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "1,5 mg LP",
-          "intervalo": "1x/dia",
-          "doseMaxima": "2,5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dosis habitual. Prefiera formulación LP 1,5 mg."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "1,5 mg LP",
-          "intervalo": "1x/dia (cautela)",
-          "doseMaxima": "2,5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr 30–50 mL/min: puede usarse con precaución. Monitorizar electrolitos y función renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr 10–30 mL/min: pierde eficacia diurética. Sustituir por diurético de asa."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr < 10 mL/min / anuria: ineficaz. Usar diurético de asa."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálisis: ineficaz. Diurético de asa es la elección si aún hay diuresis residual."
-      }
+    "name": "Indapamida",
+    "class": "Diurético tipo tiazida",
+    "pharmacokinetics": "Absorción oral alta; metabolismo hepático importante y eliminación renal y fecal de metabolitos. Efecto antihipertensivo sostenido con dosis una vez al día.",
+    "indications": [
+      "Hipertensión",
+      "edema asociado a insuficiencia cardíaca congestiva según ficha"
+    ],
+    "commercialNames": [
+      "Lozol"
+    ],
+    "presentation": "Tabletas orales.",
+    "presentations": [
+      "Tabletas 1.25 y 2.5 mg; algunas presentaciones 5 mg"
+    ],
+    "dose": {
+      "hypertension": "1.25 mg una vez al día por la mañana; si respuesta insuficiente tras 4 semanas, 2.5 mg/día; si aún insuficiente tras 4 semanas, 5 mg/día, considerando preferentemente añadir otro antihipertensivo.",
+      "heartFailureEdema": "2.5 mg una vez al día; si respuesta insuficiente tras 1 semana, 5 mg/día."
     },
-    "safetyFlags": {
-      "hypotensionRisk": true,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "hyperuricemiaRisk": true,
-      "diabetesRisk": false,
-      "electrolyteRisk": true,
-      "renalHighRisk": false,
-      "qtRisk": false,
-      "pregnancyCaution": true,
-      "elderlyEvidence": true,
-      "warning": "Posee menor impacto metabólico que otras tiazidas, pero mantiene riesgo significativo de hiponatremia e hipocalemia. Excelente evidencia en ancianos (HYVET) y diabéticos (ADVANCE)."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "HYVET Trial",
-        "ADVANCE Trial",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC Hypertension Guidelines 2023",
-        "Lexicomp 2026",
-        "FDA/EMA label"
+    "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos.",
+    "renalDose": "Puede usarse con función renal reducida seleccionada, pero pierde eficacia en insuficiencia renal avanzada; vigilar creatinina y electrolitos y evitar si existe anuria.",
+    "hepaticDose": "Usar con cautela; alteraciones de líquidos/electrolitos pueden precipitar encefalopatía en hepatopatía avanzada.",
+    "adverseEffects": {
+      "common": [
+        "hiponatremia",
+        "hipopotasemia",
+        "mareo",
+        "hiperuricemia",
+        "hiperglucemia"
       ],
-      "note": "Fármaco con excelente evidencia en ancianos y diabéticos, asociado a reducción de ACV y eventos cardiovasculares. Tiazídico-like con perfil metabólico más favorable."
-    }
+      "dangerous": [
+        "hiponatremia grave",
+        "hipopotasemia grave",
+        "arritmia secundaria a trastorno electrolítico",
+        "lesión renal por depleción de volumen"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392"
   },
   "name": {
     "pt": "Indapamida",
@@ -256,9 +228,19 @@
     "indapamida",
     "diuretico tiazidico-like"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-08b9648aa55fe977",
+  "clinicalContentSha256": "08b9648aa55fe9778b43ee806de0b8f0eaf5f6422a9ff82ed29ac061bad30083",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "indapamida.mcGoldClinicalV1",
+    "group": "GOLD_GROUP06_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "f52f8601831c81173aca76e9f9ac76cdf6645ea1a5c397066eb4893f617ec6bb",
+    "physicalHomologation": "DEFERRED"
+  }
 }

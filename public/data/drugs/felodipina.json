@@ -1,14 +1,210 @@
 {
   "id": "felodipina",
   "category": "cardiologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Felodipina"
+    "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico de ação predominantemente vascular",
+    "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, produzindo vasodilatação e redução da resistência vascular sistêmica.",
+    "pharmacodynamics": "Reduz pressão arterial com pouco efeito direto sobre condução AV em doses terapêuticas; pode causar edema periférico, rubor e cefaleia por vasodilatação.",
+    "commonAdverseEffects": [
+      "edema periférico",
+      "cefaleia",
+      "rubor",
+      "tontura",
+      "palpitações"
+    ],
+    "dangerousAdverseEffects": [
+      "hipotensão sintomática",
+      "piora de angina no início ou aumento de dose em doença coronariana grave",
+      "reação de hipersensibilidade rara"
+    ],
+    "contraindications": [
+      "Hipersensibilidade ao fármaco; avaliar hipotensão grave individualmente"
+    ],
+    "interactions": [
+      "Outros anti-hipertensivos aumentam hipotensão",
+      "Inibidores de CYP3A4 podem aumentar exposição",
+      "Indutores de CYP3A4 podem reduzir exposição",
+      "Grapefruit é clinicamente relevante especialmente para nifedipino e felodipino"
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "edema periférico",
+      "frequência cardíaca",
+      "sintomas de angina após início ou titulação",
+      "função hepática se houver hepatopatia"
+    ],
+    "administration": "Tomar regularmente em jejum ou com refeição leve; engolir inteira e não triturar nem mastigar.",
+    "preparation": "Não triturar a formulação ER.",
+    "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+    "pregnancy": "Usar quando o benefício materno justificar a exposição; escolher agente e formulação conforme indicação obstétrica.",
+    "lactation": "Individualizar; considerar dados específicos do fármaco e idade do lactente.",
+    "specialPopulations": {
+      "elderly": "Titular a partir de doses baixas quando aplicável.",
+      "hepatic": "A exposição pode aumentar; iniciar baixo e titular lentamente.",
+      "aorticStenosis": "Monitorar hipotensão na estenose aórtica grave."
+    },
+    "patientEducation": [
+      "Não triturar formulações de liberação prolongada",
+      "procurar avaliação por edema importante, síncope ou piora de angina",
+      "tomar em horário consistente"
+    ],
+    "clinicalPearls": [
+      "Doses >10 mg/dia aumentam de forma importante edema e outros efeitos vasodilatadores sem relação benefício-risco favorável."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: bloqueadores de canal de cálcio di-hidropiridínicos de longa ação são opção de primeira linha para hipertensão."
+    ],
+    "safetyFlags": [
+      "HIPOTENSAO",
+      "EDEMA_PERIFERICO",
+      "CYP3A4"
+    ],
+    "alerts": [
+      "Evitar trocas não equivalentes entre formulações de liberação imediata e prolongada",
+      "Titular lentamente em hepatopatia importante."
+    ],
+    "name": "Felodipina",
+    "class": "Bloqueador de canais de cálcio di-hidropiridínico de liberação prolongada",
+    "pharmacokinetics": "Metabolismo hepático extenso por CYP3A4 com alta extração de primeira passagem. A formulação ER permite dose diária; idosos e hepatopatia podem apresentar maior exposição.",
+    "indications": [
+      "Hipertensão arterial em adultos"
+    ],
+    "commercialNames": [
+      "Plendil"
+    ],
+    "presentation": "Comprimidos de liberação prolongada.",
+    "presentations": [
+      "ER 2,5, 5 e 10 mg"
+    ],
+    "dose": {
+      "hypertension": "Início 5 mg uma vez ao dia; conforme resposta reduzir para 2,5 mg ou aumentar para 10 mg uma vez ao dia, com intervalos de pelo menos 2 semanas."
+    },
+    "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
+    "renalDose": "Em geral não requer ajuste de dose na insuficiência renal; titular conforme pressão e tolerância.",
+    "hepaticDose": "Na insuficiência hepática a exposição pode aumentar; considerar 2,5 mg/dia como início e titular lentamente.",
+    "adverseEffects": {
+      "common": [
+        "edema periférico",
+        "cefaleia",
+        "rubor",
+        "tontura",
+        "palpitações"
+      ],
+      "dangerous": [
+        "hipotensão sintomática",
+        "piora de angina no início ou aumento de dose em doença coronariana grave",
+        "reação de hipersensibilidade rara"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd39c559-5c5d-4d3b-9228-c44085e1699f",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd39c559-5c5d-4d3b-9228-c44085e1699f"
   },
   "es": {
-    "name": "Felodipino"
+    "pharmacologicClass": "Bloqueante de canales de calcio dihidropiridínico de acción predominantemente vascular",
+    "mechanism": "Bloquea canales de calcio tipo L en músculo liso arterial, produciendo vasodilatación y reducción de resistencia vascular sistémica.",
+    "pharmacodynamics": "Reduce presión arterial con poco efecto directo sobre conducción AV a dosis terapéuticas; puede causar edema periférico, rubor y cefalea por vasodilatación.",
+    "commonAdverseEffects": [
+      "edema periférico",
+      "cefalea",
+      "rubor",
+      "mareo",
+      "palpitaciones"
+    ],
+    "dangerousAdverseEffects": [
+      "hipotensión sintomática",
+      "empeoramiento de angina al inicio o aumento de dosis en enfermedad coronaria grave",
+      "reacción de hipersensibilidad rara"
+    ],
+    "contraindications": [
+      "Hipersensibilidad al fármaco; valorar hipotensión grave individualmente"
+    ],
+    "interactions": [
+      "Otros antihipertensivos aumentan hipotensión",
+      "Inhibidores CYP3A4 pueden aumentar exposición",
+      "Inductores CYP3A4 pueden reducir exposición",
+      "Pomelo es clínicamente relevante especialmente para nifedipino y felodipino"
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "edema periférico",
+      "frecuencia cardíaca",
+      "síntomas de angina tras inicio o titulación",
+      "función hepática si existe hepatopatía"
+    ],
+    "administration": "Tomar regularmente en ayunas o con comida ligera; tragar entera y no triturar ni masticar.",
+    "preparation": "No triturar la formulación ER.",
+    "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+    "pregnancy": "Usar cuando el beneficio materno justifique la exposición; elegir agente y formulación según indicación obstétrica.",
+    "lactation": "Individualizar; considerar datos específicos del fármaco y edad del lactante.",
+    "specialPopulations": {
+      "elderly": "Titular desde dosis bajas cuando corresponda.",
+      "hepatic": "La exposición puede aumentar; iniciar bajo y titular lentamente.",
+      "aorticStenosis": "Vigilar hipotensión en estenosis aórtica grave."
+    },
+    "patientEducation": [
+      "No triturar formulaciones de liberación prolongada",
+      "consultar por edema marcado, síncope o empeoramiento de angina",
+      "tomar a horario consistente"
+    ],
+    "clinicalPearls": [
+      "Dosis >10 mg/día aumentan marcadamente edema y otros efectos vasodilatadores sin una relación beneficio-riesgo favorable."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: los CCB dihidropiridínicos de acción prolongada son una opción de primera línea para hipertensión."
+    ],
+    "safetyFlags": [
+      "HIPOTENSION",
+      "EDEMA_PERIFERICO",
+      "CYP3A4"
+    ],
+    "alerts": [
+      "Evitar cambios no equivalentes entre formulaciones de liberación inmediata y prolongada",
+      "Titular lentamente en hepatopatía importante."
+    ],
+    "name": "Felodipino",
+    "class": "Bloqueante de canales de calcio dihidropiridínico de liberación prolongada",
+    "pharmacokinetics": "Metabolismo hepático extenso por CYP3A4 con alta extracción de primer paso. La formulación ER permite una dosis diaria; ancianos y hepatopatía pueden presentar mayor exposición.",
+    "indications": [
+      "Hipertensión arterial en adultos"
+    ],
+    "commercialNames": [
+      "Plendil"
+    ],
+    "presentation": "Tabletas de liberación prolongada.",
+    "presentations": [
+      "ER 2.5, 5 y 10 mg"
+    ],
+    "dose": {
+      "hypertension": "Inicio 5 mg una vez al día; según respuesta reducir a 2.5 mg o aumentar a 10 mg una vez al día, con intervalos de al menos 2 semanas."
+    },
+    "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
+    "renalDose": "No suele requerir ajuste de dosis en insuficiencia renal; titular según presión y tolerancia.",
+    "hepaticDose": "En insuficiencia hepática la exposición puede aumentar; considerar 2.5 mg/día como inicio y titular lentamente.",
+    "adverseEffects": {
+      "common": [
+        "edema periférico",
+        "cefalea",
+        "rubor",
+        "mareo",
+        "palpitaciones"
+      ],
+      "dangerous": [
+        "hipotensión sintomática",
+        "empeoramiento de angina al inicio o aumento de dosis en enfermedad coronaria grave",
+        "reacción de hipersensibilidad rara"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd39c559-5c5d-4d3b-9228-c44085e1699f",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd39c559-5c5d-4d3b-9228-c44085e1699f"
   },
   "name": {
     "pt": "Felodipina",
@@ -17,8 +213,8 @@
   "keywords": [
     "felodipina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-08b9648aa55fe977",
+  "clinicalContentSha256": "08b9648aa55fe9778b43ee806de0b8f0eaf5f6422a9ff82ed29ac061bad30083",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardiologia.js",
@@ -312,12 +508,22 @@
           "felodipina",
           "bloqueador dos canais de calcio diidropiridinico"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-08b9648aa55fe977",
+        "clinicalContentSha256": "08b9648aa55fe9778b43ee806de0b8f0eaf5f6422a9ff82ed29ac061bad30083",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "felodipina.mcGoldClinicalV1",
+    "group": "GOLD_GROUP06_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "28f000e2f87011dd28a47a701e1645e518bc387407e96031a551daa2db7c9988",
+    "physicalHomologation": "DEFERRED"
+  }
 }

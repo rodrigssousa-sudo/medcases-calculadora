@@ -1,14 +1,192 @@
 {
   "id": "lidocaina",
   "category": "analgesia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Lidocaína"
+    "name": "Lidocaína",
+    "class": "Antiarrítmico classe IB; anestésico local do tipo amida",
+    "pharmacologicClass": "Bloqueador de canais rápidos de sódio dependente de uso",
+    "mechanism": "Bloqueia canais de sódio voltagem-dependentes, com maior afinidade por canais abertos ou inativados. No miocárdio ventricular e fibras de Purkinje reduz a automaticidade e encurta o potencial de ação.",
+    "pharmacodynamics": "Reduz a velocidade da fase 0 e a automaticidade ventricular, sobretudo em tecido isquêmico. Em concentrações elevadas pode deprimir condução, contratilidade e sistema nervoso central.",
+    "pharmacokinetics": "Início IV em segundos. Metabolismo hepático extenso, principalmente CYP1A2 e CYP3A4, com metabólitos ativos. Meia-vida aproximada de 1,5 a 2 horas, prolongada em insuficiência hepática, baixo débito e infusão prolongada.",
+    "indications": [
+      "FV/TV sem pulso refratária à desfibrilação como opção antiarrítmica",
+      "Arritmias ventriculares agudas e recorrentes",
+      "Recorrência de TV polimórfica sem QT prolongado, conforme contexto clínico"
+    ],
+    "commercialNames": [
+      "Xylocaína",
+      "Lidocaína genérica"
+    ],
+    "presentation": "Solução injetável para bolus IV e soluções prontas para infusão; concentrações dependem do fabricante.",
+    "presentations": [
+      "Solução injetável 10 mg/mL ou 20 mg/mL conforme produto",
+      "Bolsas pré-misturadas em dextrose 4 mg/mL ou 8 mg/mL em alguns mercados"
+    ],
+    "dose": {
+      "PCR FV/TVsp": "1 a 1,5 mg/kg IV/IO; segunda dose 0,5 a 0,75 mg/kg conforme algoritmo AHA",
+      "Arritmia ventricular com pulso": "Bolus 1 a 1,5 mg/kg IV a 25 a 50 mg/min; repetir conforme resposta dentro do limite recomendado",
+      "Infusão": "1 a 4 mg/min após controle inicial; individualizar por resposta e depuração"
+    },
+    "pediatricDose": "Em ressuscitação pediátrica, seguir PALS vigente; esquemas usuais utilizam 1 mg/kg IV/IO para arritmia ventricular e infusão titulada. Confirmar protocolo institucional.",
+    "renalDose": "Em geral não exige ajuste inicial apenas pela função renal; metabólitos ativos podem acumular em insuficiência renal grave ou infusão prolongada, exigindo vigilância.",
+    "hepaticDose": "Reduzir manutenção em insuficiência hepática importante, choque ou baixo débito, pois a depuração é predominantemente hepática; titular por resposta e toxicidade.",
+    "commonAdverseEffects": [
+      "Parestesia perioral",
+      "Tontura",
+      "Sonolência",
+      "Náusea",
+      "Hipotensão",
+      "Bradicardia"
+    ],
+    "dangerousAdverseEffects": [
+      "Convulsões",
+      "Depressão respiratória",
+      "Bloqueio cardíaco",
+      "Arritmias graves",
+      "Colapso cardiovascular",
+      "Parada cardíaca"
+    ],
+    "adverseEffects": "Toxicidade sistêmica é concentração-dependente e costuma iniciar com manifestações neurológicas, podendo evoluir para depressão cardiovascular grave.",
+    "contraindications": [
+      "Hipersensibilidade à lidocaína ou anestésicos locais do tipo amida",
+      "Bloqueio sinoatrial, atrioventricular ou intraventricular grave sem marcapasso, conforme formulação e contexto"
+    ],
+    "interactions": [
+      "Betabloqueadores e fármacos que reduzem fluxo hepático podem diminuir depuração",
+      "Cimetidina pode elevar concentrações",
+      "Outros antiarrítmicos e depressores de condução somam efeitos eletrofisiológicos",
+      "Amiodarona pode aumentar exposição e toxicidade"
+    ],
+    "monitoring": [
+      "ECG contínuo",
+      "Pressão arterial",
+      "Frequência cardíaca",
+      "Estado neurológico",
+      "Sinais de toxicidade como parestesia perioral, zumbido, confusão ou convulsões"
+    ],
+    "administration": "Administrar IV/IO sob monitorização contínua. Bolus deve respeitar velocidade indicada; manter desfibrilador disponível.",
+    "preparation": "Para infusão, usar solução compatível e concentração padronizada institucional. Bolsas prontas com 4 mg/mL ou 8 mg/mL podem estar disponíveis; conferir rotulagem.",
+    "infusionProtocol": "Após bolus eficaz, infundir 1 a 4 mg/min. Em infusões prolongadas, especialmente após 24 horas, reduzir a velocidade conforme depuração e sinais de acúmulo.",
+    "pregnancy": "Atravessa a placenta. Pode ser usada quando clinicamente necessária; em arritmia materna grave, o benefício do tratamento pode superar risco potencial.",
+    "lactation": "Passa para o leite em pequenas quantidades. Exposição do lactente costuma ser baixa, mas uso antiarrítmico sistêmico requer avaliação individual.",
+    "specialPopulations": "Idosos, insuficiência cardíaca, choque, doença hepática e baixo débito podem apresentar depuração reduzida; usar doses menores ou titulação mais conservadora.",
+    "patientEducation": "Durante infusão, comunicar imediatamente gosto metálico, zumbido, dormência ao redor da boca, tontura intensa, confusão ou palpitações.",
+    "clinicalPearls": [
+      "Classe IB favorece tecido ventricular isquêmico",
+      "Toxicidade neurológica pode preceder cardiotoxicidade",
+      "Na PCR, amiodarona ou lidocaína podem ser consideradas para FV/TV sem pulso refratária"
+    ],
+    "guidelineRecommendations": "AHA 2025: amiodarona ou lidocaína podem ser consideradas em FV/TV sem pulso não responsiva à desfibrilação; lidocaína também pode ser considerada em recorrência de TV polimórfica sem QT prolongado.",
+    "safetyFlags": [
+      "Janela terapêutica estreita",
+      "Monitorização ECG obrigatória",
+      "Reduzir exposição em baixo débito ou insuficiência hepática",
+      "Risco de neurotoxicidade e cardiotoxicidade"
+    ],
+    "alerts": [
+      "Não confundir doses antiarrítmicas com doses de anestesia local",
+      "Interromper ou reduzir diante de toxicidade neurológica ou cardiovascular progressiva"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0",
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+    ],
+    "ref": "DailyMed Lidocaine IV; AHA Adult Advanced Life Support 2025"
   },
   "es": {
-    "name": "Lidocaína"
+    "name": "Lidocaína",
+    "class": "Antiarrítmico clase IB; anestésico local tipo amida",
+    "pharmacologicClass": "Bloqueador de canales rápidos de sodio dependiente del uso",
+    "mechanism": "Bloquea canales de sodio dependientes de voltaje con mayor afinidad por canales abiertos o inactivados. En miocardio ventricular y fibras de Purkinje reduce automatismo y acorta el potencial de acción.",
+    "pharmacodynamics": "Reduce la velocidad de fase 0 y el automatismo ventricular, especialmente en tejido isquémico. A concentraciones altas puede deprimir conducción, contractilidad y sistema nervioso central.",
+    "pharmacokinetics": "Inicio IV en segundos. Metabolismo hepático extenso, principalmente CYP1A2 y CYP3A4, con metabolitos activos. Vida media aproximada de 1,5 a 2 horas, prolongada en insuficiencia hepática, bajo gasto e infusión prolongada.",
+    "indications": [
+      "FV/TV sin pulso refractaria a desfibrilación como opción antiarrítmica",
+      "Arritmias ventriculares agudas y recurrentes",
+      "Recurrencia de TV polimórfica sin QT prolongado según contexto clínico"
+    ],
+    "commercialNames": [
+      "Xylocaine",
+      "Lidocaína genérica"
+    ],
+    "presentation": "Solución inyectable para bolo IV y soluciones preparadas para infusión; las concentraciones dependen del fabricante.",
+    "presentations": [
+      "Solución inyectable 10 mg/mL o 20 mg/mL según producto",
+      "Bolsas premezcladas en dextrosa 4 mg/mL u 8 mg/mL en algunos mercados"
+    ],
+    "dose": {
+      "PCR FV/TVsp": "1 a 1,5 mg/kg IV/IO; segunda dosis 0,5 a 0,75 mg/kg según algoritmo AHA",
+      "Arritmia ventricular con pulso": "Bolo 1 a 1,5 mg/kg IV a 25 a 50 mg/min; repetir según respuesta dentro del límite recomendado",
+      "Infusión": "1 a 4 mg/min luego del control inicial; individualizar según respuesta y depuración"
+    },
+    "pediatricDose": "En reanimación pediátrica seguir PALS vigente; esquemas habituales utilizan 1 mg/kg IV/IO para arritmia ventricular y una infusión titulada. Confirmar protocolo institucional.",
+    "renalDose": "En general no requiere ajuste inicial solo por función renal; metabolitos activos pueden acumularse en insuficiencia renal grave o infusión prolongada, por lo que se requiere vigilancia.",
+    "hepaticDose": "Reducir mantenimiento en insuficiencia hepática importante, shock o bajo gasto porque la depuración es predominantemente hepática; titular según respuesta y toxicidad.",
+    "commonAdverseEffects": [
+      "Parestesia perioral",
+      "Mareo",
+      "Somnolencia",
+      "Náuseas",
+      "Hipotensión",
+      "Bradicardia"
+    ],
+    "dangerousAdverseEffects": [
+      "Convulsiones",
+      "Depresión respiratoria",
+      "Bloqueo cardíaco",
+      "Arritmias graves",
+      "Colapso cardiovascular",
+      "Paro cardíaco"
+    ],
+    "adverseEffects": "La toxicidad sistémica depende de la concentración y suele comenzar con manifestaciones neurológicas, pudiendo progresar a depresión cardiovascular grave.",
+    "contraindications": [
+      "Hipersensibilidad a lidocaína o anestésicos locales tipo amida",
+      "Bloqueo sinoauricular, auriculoventricular o intraventricular grave sin marcapasos según formulación y contexto"
+    ],
+    "interactions": [
+      "Betabloqueantes y fármacos que reducen flujo hepático pueden disminuir depuración",
+      "Cimetidina puede elevar concentraciones",
+      "Otros antiarrítmicos y depresores de conducción suman efectos electrofisiológicos",
+      "Amiodarona puede aumentar exposición y toxicidad"
+    ],
+    "monitoring": [
+      "ECG continuo",
+      "Presión arterial",
+      "Frecuencia cardíaca",
+      "Estado neurológico",
+      "Signos de toxicidad como parestesia perioral, tinnitus, confusión o convulsiones"
+    ],
+    "administration": "Administrar IV/IO con monitorización continua. El bolo debe respetar la velocidad indicada; mantener desfibrilador disponible.",
+    "preparation": "Para infusión usar solución compatible y concentración institucional estandarizada. Pueden existir bolsas listas de 4 mg/mL u 8 mg/mL; verificar rótulo.",
+    "infusionProtocol": "Después de un bolo eficaz, infundir 1 a 4 mg/min. En infusiones prolongadas, especialmente tras 24 horas, reducir velocidad según depuración y signos de acumulación.",
+    "pregnancy": "Cruza la placenta. Puede usarse cuando sea clínicamente necesario; en arritmia materna grave el beneficio puede superar el riesgo potencial.",
+    "lactation": "Pasa a leche en pequeñas cantidades. La exposición del lactante suele ser baja, pero el uso antiarrítmico sistémico requiere evaluación individual.",
+    "specialPopulations": "Ancianos, insuficiencia cardíaca, shock, hepatopatía y bajo gasto pueden tener depuración reducida; considerar dosis menores o titulación más conservadora.",
+    "patientEducation": "Durante la infusión avisar de inmediato si aparece sabor metálico, tinnitus, adormecimiento perioral, mareo intenso, confusión o palpitaciones.",
+    "clinicalPearls": [
+      "Clase IB con preferencia por tejido ventricular isquémico",
+      "La neurotoxicidad puede preceder cardiotoxicidad",
+      "En PCR, amiodarona o lidocaína pueden considerarse para FV/TV sin pulso refractaria"
+    ],
+    "guidelineRecommendations": "AHA 2025: amiodarona o lidocaína pueden considerarse en FV/TV sin pulso no respondiente a desfibrilación; lidocaína también puede considerarse en recurrencia de TV polimórfica sin QT prolongado.",
+    "safetyFlags": [
+      "Ventana terapéutica estrecha",
+      "Monitorización ECG obligatoria",
+      "Reducir exposición en bajo gasto o insuficiencia hepática",
+      "Riesgo de neurotoxicidad y cardiotoxicidad"
+    ],
+    "alerts": [
+      "No confundir dosis antiarrítmicas con dosis de anestesia local",
+      "Suspender o reducir ante toxicidad neurológica o cardiovascular progresiva"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0",
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+    ],
+    "ref": "DailyMed Lidocaine IV; AHA Adult Advanced Life Support 2025"
   },
   "name": {
     "pt": "Lidocaína",
@@ -18,8 +196,8 @@
     "lidocaina",
     "lidocaína"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+  "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "analgesicos.js",
@@ -65,11 +243,11 @@
             "Náuseas",
             "Confusão",
             "Disartria",
-            "⚠️ Convulsões",
-            "⚠️ Coma",
-            "⚠️ Depressão respiratória",
-            "⚠️ Bradicardia/BAV",
-            "⚠️ Colapso CV"
+            " Convulsões",
+            " Coma",
+            " Depressão respiratória",
+            " Bradicardia/BAV",
+            " Colapso CV"
           ],
           "monitoramento": [
             "ECG contínuo",
@@ -112,11 +290,11 @@
             "Náuseas",
             "Confusión",
             "Disartria",
-            "⚠️ Convulsiones",
-            "⚠️ Coma",
-            "⚠️ Depresión respiratoria",
-            "⚠️ Bradicardia/BAV",
-            "⚠️ Colapso CV"
+            " Convulsiones",
+            " Coma",
+            " Depresión respiratoria",
+            " Bradicardia/BAV",
+            " Colapso CV"
           ],
           "monitoramento": [
             "ECG continuo",
@@ -144,12 +322,22 @@
         "keywords": [
           "lidocaina"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+        "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "lidocaina.mcGoldClinicalV1",
+    "group": "GOLD_GROUP03_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "ab1063a10fa9a6abdeb0732b4e51efa0e432a508dec07fc49d304fdb359431c1",
+    "physicalHomologation": "DEFERRED"
+  }
 }

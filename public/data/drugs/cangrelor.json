@@ -1,14 +1,170 @@
 {
   "id": "cangrelor",
   "category": "anticoag",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Cangrelor (Tetrafosfato de)"
+    "name": "Cangrelor (Tetrafosfato de)",
+    "class": "Antiagregante plaquetário intravenoso",
+    "pharmacologicClass": "Antagonista direto e reversível do receptor P2Y12",
+    "mechanism": "Bloqueia diretamente o receptor plaquetário P2Y12 sem necessidade de ativação metabólica. A ligação é reversível e a inibição cessa rapidamente após suspensão.",
+    "pharmacodynamics": "Início de inibição plaquetária em minutos, com recuperação funcional aproximadamente dentro de 1 hora após interromper a infusão.",
+    "pharmacokinetics": "Uso exclusivamente IV. Meia-vida de poucos minutos por desfosforilação rápida; metabolismo não depende de fígado ou rim de forma clinicamente relevante.",
+    "indications": [
+      "Adjuvante à PCI para reduzir IAM periprocedimento, nova revascularização e trombose de stent em pacientes não tratados com P2Y12 oral e sem uso concomitante de inibidor GP IIb/IIIa"
+    ],
+    "commercialNames": [
+      "Kengreal",
+      "Cangrelor genérico"
+    ],
+    "presentation": "Frasco-ampola liofilizado de 50 mg para reconstituição e posterior diluição.",
+    "presentations": [
+      "Frasco 50 mg em 10 mL para reconstituição"
+    ],
+    "dose": {
+      "PCI": "Bolus 30 mcg/kg IV antes da PCI, seguido imediatamente por 4 mcg/kg/min",
+      "Duração": "Manter pelo menos 2 horas ou durante toda a PCI, o que for mais longo",
+      "Transição": "Ticagrelor 180 mg pode ser dado durante ou imediatamente após; prasugrel 60 mg e clopidogrel 600 mg devem ser administrados imediatamente após interromper cangrelor"
+    },
+    "pediatricDose": "Segurança e eficácia não estabelecidas em pacientes pediátricos.",
+    "renalDose": "Não requer ajuste de dose em insuficiência renal segundo a bula.",
+    "hepaticDose": "Não requer ajuste de dose em insuficiência hepática segundo a bula.",
+    "commonAdverseEffects": [
+      "Sangramento leve",
+      "Hematoma no acesso vascular"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia maior",
+      "Hemorragia intracraniana",
+      "Sangramento com comprometimento hemodinâmico",
+      "Anafilaxia rara"
+    ],
+    "adverseEffects": "O evento adverso predominante é sangramento; a curta meia-vida permite rápida reversão funcional após suspensão.",
+    "contraindications": [
+      "Sangramento ativo significativo",
+      "Hipersensibilidade conhecida ao cangrelor"
+    ],
+    "interactions": [
+      "Clopidogrel e prasugrel administrados durante a infusão têm efeito atenuado; dar após interrupção",
+      "Ticagrelor pode ser administrado durante ou imediatamente após a infusão",
+      "Outros antitrombóticos aumentam risco de sangramento"
+    ],
+    "monitoring": [
+      "Sangramento no sítio de acesso",
+      "Hemoglobina e parâmetros clínicos quando indicado",
+      "Estado hemodinâmico",
+      "Momento correto da transição para P2Y12 oral"
+    ],
+    "administration": "Administrar por linha IV dedicada. O bolus deve ser dado rapidamente em menos de 1 minuto e a infusão deve iniciar imediatamente, antes da PCI.",
+    "preparation": "Reconstituir cada frasco de 50 mg com 5 mL de água estéril. Diluir o conteúdo reconstituído em 250 mL de SF 0,9% ou SG 5%, obtendo 200 mcg/mL. Misturar suavemente e inspecionar.",
+    "infusionProtocol": "Bolus 30 mcg/kg a partir da solução diluída, seguido de 4 mcg/kg/min por pelo menos 2 horas ou durante a PCI. Solução diluída é estável por até 12 h em SG 5% e 24 h em SF 0,9% à temperatura ambiente, conforme bula.",
+    "pregnancy": "Dados em gestantes são limitados; usar apenas se claramente necessário, ponderando risco hemorrágico materno-fetal.",
+    "lactation": "Não há dados clínicos adequados sobre excreção no leite; considerar necessidade materna e curta meia-vida.",
+    "specialPopulations": "Não requer ajuste por idade, função renal ou hepática apenas com base nesses fatores, mas risco hemorrágico global deve orientar decisão.",
+    "patientEducation": "Explicar que é terapia IV temporária durante PCI e que um antiagregante oral será necessário para manter proteção após a infusão.",
+    "clinicalPearls": [
+      "Início e reversão muito rápidos",
+      "Transição para clopidogrel ou prasugrel deve ocorrer após suspender cangrelor",
+      "Ticagrelor pode ser administrado durante a infusão"
+    ],
+    "guidelineRecommendations": "Em PCI selecionada sem pré-tratamento efetivo com P2Y12 oral, cangrelor oferece inibição imediata; a estratégia deve integrar transição correta para um P2Y12 oral.",
+    "safetyFlags": [
+      "Risco de sangramento",
+      "Linha IV dedicada",
+      "Transição medicamentosa dependente do P2Y12 escolhido",
+      "Efeito antiplaquetário desaparece rapidamente após suspensão"
+    ],
+    "alerts": [
+      "Não administrar clopidogrel ou prasugrel como transição antes de finalizar a infusão",
+      "Confirmar diluição final 200 mcg/mL e peso do paciente"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c86264c2-ef49-4524-b6af-edb7a6279faa",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+    ],
+    "ref": "DailyMed Cangrelor; ACC/AHA ACS Guideline 2025"
   },
   "es": {
-    "name": "Cangrelor (Tetrafosfato de)"
+    "name": "Cangrelor (Tetrafosfato de)",
+    "class": "Antiagregante plaquetario intravenoso",
+    "pharmacologicClass": "Antagonista directo y reversible del receptor P2Y12",
+    "mechanism": "Bloquea directamente el receptor plaquetario P2Y12 sin requerir activación metabólica. La unión es reversible y la inhibición desaparece rápidamente al suspender la infusión.",
+    "pharmacodynamics": "Inicio de inhibición plaquetaria en minutos, con recuperación funcional aproximadamente dentro de 1 hora tras detener la infusión.",
+    "pharmacokinetics": "Uso exclusivamente IV. Vida media de pocos minutos por desfosforilación rápida; el metabolismo no depende de hígado o riñón de forma clínicamente relevante.",
+    "indications": [
+      "Adyuvante a PCI para reducir IAM periprocedimiento, nueva revascularización y trombosis de stent en pacientes no tratados con P2Y12 oral y sin uso concomitante de inhibidor GP IIb/IIIa"
+    ],
+    "commercialNames": [
+      "Kengreal",
+      "Cangrelor genérico"
+    ],
+    "presentation": "Vial liofilizado de 50 mg para reconstitución y posterior dilución.",
+    "presentations": [
+      "Vial 50 mg en 10 mL para reconstitución"
+    ],
+    "dose": {
+      "PCI": "Bolo 30 mcg/kg IV antes de PCI, seguido inmediatamente de 4 mcg/kg/min",
+      "Duración": "Mantener al menos 2 horas o durante toda la PCI, lo que sea más largo",
+      "Transición": "Ticagrelor 180 mg puede darse durante o inmediatamente después; prasugrel 60 mg y clopidogrel 600 mg deben darse inmediatamente tras suspender cangrelor"
+    },
+    "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos.",
+    "renalDose": "No requiere ajuste de dosis en insuficiencia renal según ficha.",
+    "hepaticDose": "No requiere ajuste de dosis en insuficiencia hepática según ficha.",
+    "commonAdverseEffects": [
+      "Sangrado leve",
+      "Hematoma en acceso vascular"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia mayor",
+      "Hemorragia intracraneal",
+      "Sangrado con compromiso hemodinámico",
+      "Anafilaxia rara"
+    ],
+    "adverseEffects": "El evento adverso predominante es el sangrado; la corta vida media permite rápida reversión funcional tras suspender.",
+    "contraindications": [
+      "Sangrado activo significativo",
+      "Hipersensibilidad conocida a cangrelor"
+    ],
+    "interactions": [
+      "Clopidogrel y prasugrel administrados durante la infusión tienen efecto atenuado; dar tras suspender",
+      "Ticagrelor puede administrarse durante o inmediatamente después",
+      "Otros antitrombóticos aumentan riesgo de sangrado"
+    ],
+    "monitoring": [
+      "Sangrado en acceso vascular",
+      "Hemoglobina y parámetros clínicos cuando corresponda",
+      "Estado hemodinámico",
+      "Momento correcto de transición a P2Y12 oral"
+    ],
+    "administration": "Administrar por línea IV dedicada. El bolo debe darse rápidamente en menos de 1 minuto y la infusión comenzar de inmediato, antes de PCI.",
+    "preparation": "Reconstituir cada vial de 50 mg con 5 mL de agua estéril. Diluir el contenido en 250 mL de SSN 0,9% o dextrosa 5%, obteniendo 200 mcg/mL. Mezclar suavemente e inspeccionar.",
+    "infusionProtocol": "Bolo 30 mcg/kg desde la solución diluida, seguido de 4 mcg/kg/min por al menos 2 horas o durante PCI. La solución diluida es estable hasta 12 h en dextrosa 5% y 24 h en SSN 0,9% a temperatura ambiente, según ficha.",
+    "pregnancy": "Datos limitados en gestantes; usar solo si es claramente necesario, valorando riesgo hemorrágico materno-fetal.",
+    "lactation": "No hay datos clínicos adecuados sobre excreción en leche; considerar necesidad materna y corta vida media.",
+    "specialPopulations": "No requiere ajuste por edad, función renal o hepática solo por esos factores, pero el riesgo hemorrágico global debe guiar la decisión.",
+    "patientEducation": "Explicar que es una terapia IV temporal durante PCI y que se necesitará un antiagregante oral para mantener protección después.",
+    "clinicalPearls": [
+      "Inicio y reversión muy rápidos",
+      "La transición a clopidogrel o prasugrel debe hacerse tras suspender cangrelor",
+      "Ticagrelor puede administrarse durante la infusión"
+    ],
+    "guidelineRecommendations": "En PCI seleccionada sin pretratamiento efectivo con P2Y12 oral, cangrelor ofrece inhibición inmediata; la estrategia debe integrar transición correcta a un P2Y12 oral.",
+    "safetyFlags": [
+      "Riesgo de sangrado",
+      "Línea IV dedicada",
+      "Transición dependiente del P2Y12 elegido",
+      "El efecto antiplaquetario desaparece rápidamente al suspender"
+    ],
+    "alerts": [
+      "No administrar clopidogrel o prasugrel como transición antes de terminar la infusión",
+      "Confirmar concentración final 200 mcg/mL y peso del paciente"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c86264c2-ef49-4524-b6af-edb7a6279faa",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+    ],
+    "ref": "DailyMed Cangrelor; ACC/AHA ACS Guideline 2025"
   },
   "name": {
     "pt": "Cangrelor (Tetrafosfato de)",
@@ -18,8 +174,8 @@
     "cangrelor",
     "cangrelor (tetrafosfato de)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+  "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "anticoag.js",
@@ -40,7 +196,7 @@
       "record": {
         "id": "cangrelor",
         "category": "cardio",
-        "icon": "💉",
+        "icon": "💊",
         "color": "rgba(239,68,68,0.13)",
         "colorTxt": "#B91C1C",
         "pt": {
@@ -164,8 +320,8 @@
           "kengreal",
           "antiagregante plaquetario intravenoso ultrarrapido — antagonista reversivel p2y12 (iv)"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+        "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
@@ -234,5 +390,15 @@
         "updated": "2025-05-21"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "cangrelor.mcGoldClinicalV1",
+    "group": "GOLD_GROUP03_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "df9453fd3b90db2b2f391a8577e915f9b2084297149c91d6384ffe239c97f496",
+    "physicalHomologation": "DEFERRED"
   }
 }

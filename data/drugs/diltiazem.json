@@ -1,25 +1,263 @@
 {
   "id": "diltiazem",
   "category": "cardiologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Diltiazem (Cloridrato de)"
+    "commonAdverseEffects": [
+      "edema periférico",
+      "bradicardia",
+      "cefaleia",
+      "tontura",
+      "fadiga",
+      "bloqueio AV de primeiro grau"
+    ],
+    "monitoring": [
+      "ECG de 12 derivações",
+      "frequência cardíaca",
+      "pressão arterial",
+      "função renal e eletrólitos quando aplicável",
+      "sintomas de pró-arritmia"
+    ],
+    "preparation": "Para infusão IV seguir diluição da bula ou usar produto premix; confirmar concentração antes de programar a bomba.",
+    "patientEducation": [
+      "Não duplicar doses esquecidas",
+      "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
+      "informar todos os fármacos pelo risco de interações e pró-arritmia"
+    ],
+    "name": "Diltiazem",
+    "class": "Bloqueador de canais de cálcio não di-hidropiridínico",
+    "pharmacologicClass": "Antagonista de canais de cálcio tipo L com efeitos vasculares e nodais AV",
+    "mechanism": "Reduz entrada de cálcio no músculo liso vascular e miocárdio; diminui condução e prolonga refratariedade do nó AV, além de produzir vasodilatação.",
+    "pharmacodynamics": "Reduz frequência ventricular na FA/flutter e pressão arterial; pode causar bradicardia, bloqueio AV e inotropismo negativo.",
+    "pharmacokinetics": "Metabolismo hepático extenso, principalmente CYP3A4; diltiazem também inibe CYP3A4 e P-gp. Formulações ER permitem dose diária.",
+    "indications": [
+      "Hipertensão",
+      "angina crônica estável",
+      "controle agudo da frequência na fibrilação atrial ou flutter por via IV em pacientes apropriados"
+    ],
+    "commercialNames": [
+      "Cardizem",
+      "Tiazac"
+    ],
+    "presentation": "Comprimidos/cápsulas de liberação prolongada e formulação IV.",
+    "presentations": [
+      "ER 120, 180, 240, 300, 360 e 420 mg",
+      "Injeção IV conforme produto"
+    ],
+    "dose": {
+      "hypertensionER": "180-240 mg uma vez ao dia; titular conforme resposta até 540 mg/dia segundo o comprimido ER citado.",
+      "anginaER": "180 mg uma vez ao dia; aumentar a cada 7-14 dias até máximo 360 mg/dia.",
+      "AFIV": "0,25 mg/kg IV em 2 min; se resposta insuficiente após 15 min, 0,35 mg/kg IV em 2 min. Depois infusão 5-15 mg/h por até 24 h."
+    },
+    "pediatricDose": "Segurança e eficácia não estabelecidas de forma geral nas bulas adultas citadas; usar protocolo pediátrico especializado quando aplicável.",
+    "renalDose": "Não há ajuste fixo por insuficiência renal para as formulações citadas; monitorar resposta, pressão, frequência e efeitos adversos.",
+    "hepaticDose": "Usar com cautela na hepatopatia; o metabolismo é hepático e a exposição pode aumentar. Titular lentamente.",
+    "dangerousAdverseEffects": [
+      "bradicardia grave",
+      "bloqueio AV avançado",
+      "hipotensão",
+      "piora de insuficiência cardíaca",
+      "lesão hepática aguda rara"
+    ],
+    "contraindications": [
+      "Síndrome do nó sinusal sem marcapasso",
+      "bloqueio AV de segundo ou terceiro grau sem marcapasso",
+      "PAS <90 mmHg",
+      "hipersensibilidade",
+      "para IV: FA/flutter com via acessória ou taquicardia ventricular",
+      "uso IV concomitante próximo com betabloqueador IV"
+    ],
+    "interactions": [
+      "Betabloqueadores e digoxina aumentam bradicardia e bloqueio AV",
+      "Diltiazem inibe CYP3A4 e pode aumentar concentrações de substratos sensíveis",
+      "Estatinas metabolizadas por CYP3A4 podem exigir ajuste",
+      "Ivabradina com diltiazem deve ser evitada"
+    ],
+    "administration": "ER: engolir inteira conforme formulação. IV: administrar com ECG contínuo e controle frequente da pressão.",
+    "infusionProtocol": "Após bolus efetivo, iniciar 5-10 mg/h e titular em incrementos de 5 mg/h até máximo 15 mg/h; não exceder 24 h de infusão conforme bula.",
+    "pregnancy": "Usar apenas se o benefício justificar o risco; dados humanos não permitem excluir risco.",
+    "lactation": "Diltiazem é excretado no leite; individualizar e considerar alternativa ou interrupção conforme necessidade materna.",
+    "specialPopulations": {
+      "HFrEF": "Evitar para controle de frequência se FEVE <40% pelo risco de piora da IC.",
+      "WPW": "Não usar IV em FA/flutter com via acessória.",
+      "elderly": "Titular pela resposta e condução."
+    },
+    "clinicalPearls": [
+      "Na FA com FEVE <40% diltiazem não deve ser usado para controle crônico da frequência",
+      "Na FA pré-excitada o bloqueio nodal AV pode acelerar condução pela via acessória."
+    ],
+    "guidelineRecommendations": [
+      "Diretriz FA 2023: diltiazem ou verapamil são recomendados para controle de frequência quando FEVE >40%; não devem ser administrados se FEVE <40%."
+    ],
+    "safetyFlags": [
+      "BRADICARDIA",
+      "BLOQUEIO_AV",
+      "HFrEF",
+      "VIA_ACESSORIA",
+      "CYP3A4"
+    ],
+    "alerts": [
+      "Monitorização contínua durante uso IV",
+      "Não ultrapassar 15 mg/h nem 24 h de infusão conforme bula."
+    ],
+    "adverseEffects": {
+      "common": [
+        "edema periférico",
+        "bradicardia",
+        "cefaleia",
+        "tontura",
+        "fadiga",
+        "bloqueio AV de primeiro grau"
+      ],
+      "dangerous": [
+        "bradicardia grave",
+        "bloqueio AV avançado",
+        "hipotensão",
+        "piora de insuficiência cardíaca",
+        "lesão hepática aguda rara"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=734beeef-3968-4137-af2c-276e8a9317df",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95"
   },
   "es": {
-    "name": "Diltiazem (Clorhidrato de)"
+    "commonAdverseEffects": [
+      "edema periférico",
+      "bradicardia",
+      "cefalea",
+      "mareo",
+      "fatiga",
+      "bloqueo AV de primer grado"
+    ],
+    "monitoring": [
+      "ECG de 12 derivaciones",
+      "frecuencia cardíaca",
+      "presión arterial",
+      "función renal y electrolitos cuando corresponda",
+      "síntomas de proarritmia"
+    ],
+    "preparation": "Para infusión IV seguir dilución de la ficha o usar producto premix; confirmar concentración antes de programar la bomba.",
+    "patientEducation": [
+      "No duplicar dosis omitidas",
+      "consultar por síncope, palpitaciones sostenidas o disnea nueva",
+      "informar todos los fármacos por riesgo de interacciones y proarritmia"
+    ],
+    "name": "Diltiazem",
+    "class": "Bloqueante de canales de calcio no dihidropiridínico",
+    "pharmacologicClass": "Antagonista de canales de calcio tipo L con efectos vasculares y nodales AV",
+    "mechanism": "Reduce entrada de calcio en músculo liso vascular y miocardio; disminuye conducción y prolonga refractariedad del nodo AV, además de producir vasodilatación.",
+    "pharmacodynamics": "Reduce frecuencia ventricular en FA/flutter y presión arterial; puede causar bradicardia, bloqueo AV e inotropismo negativo.",
+    "pharmacokinetics": "Metabolismo hepático extenso, principalmente CYP3A4; diltiazem también inhibe CYP3A4 y P-gp. Formulaciones ER permiten dosificación diaria.",
+    "indications": [
+      "Hipertensión",
+      "angina crónica estable",
+      "control agudo de frecuencia en fibrilación auricular o flutter por vía IV en pacientes apropiados"
+    ],
+    "commercialNames": [
+      "Cardizem",
+      "Tiazac"
+    ],
+    "presentation": "Tabletas/cápsulas de liberación prolongada y formulación IV.",
+    "presentations": [
+      "ER 120, 180, 240, 300, 360 y 420 mg",
+      "Inyección IV según producto"
+    ],
+    "dose": {
+      "hypertensionER": "180-240 mg una vez al día; titular según respuesta hasta 540 mg/día según la tableta ER citada.",
+      "anginaER": "180 mg una vez al día; aumentar cada 7-14 días hasta máximo 360 mg/día.",
+      "AFIV": "0.25 mg/kg IV en 2 min; si respuesta insuficiente a los 15 min, 0.35 mg/kg IV en 2 min. Luego infusión 5-15 mg/h hasta 24 h."
+    },
+    "pediatricDose": "Seguridad y eficacia no establecidas de forma general en las fichas adultas citadas; usar protocolo pediátrico especializado cuando corresponda.",
+    "renalDose": "No existe ajuste fijo por insuficiencia renal para las formulaciones citadas; monitorizar respuesta, presión, frecuencia y efectos adversos.",
+    "hepaticDose": "Usar con cautela en hepatopatía; el metabolismo es hepático y la exposición puede aumentar. Titular lentamente.",
+    "dangerousAdverseEffects": [
+      "bradicardia grave",
+      "bloqueo AV avanzado",
+      "hipotensión",
+      "empeoramiento de insuficiencia cardíaca",
+      "lesión hepática aguda rara"
+    ],
+    "contraindications": [
+      "Síndrome del nodo enfermo sin marcapasos",
+      "bloqueo AV de segundo o tercer grado sin marcapasos",
+      "PAS <90 mmHg",
+      "hipersensibilidad",
+      "para IV: FA/flutter con vía accesoria o taquicardia ventricular",
+      "uso IV concomitante cercano con betabloqueante IV"
+    ],
+    "interactions": [
+      "Betabloqueantes y digoxina aumentan bradicardia y bloqueo AV",
+      "Diltiazem inhibe CYP3A4 y puede aumentar concentraciones de sustratos sensibles",
+      "Estatinas metabolizadas por CYP3A4 pueden requerir ajuste",
+      "Ivabradina con diltiazem debe evitarse"
+    ],
+    "administration": "ER: tragar entera según formulación. IV: administrar con ECG continuo y control frecuente de presión.",
+    "infusionProtocol": "Tras bolo efectivo, iniciar 5-10 mg/h y titular en incrementos de 5 mg/h hasta máximo 15 mg/h; no exceder 24 h de infusión según ficha.",
+    "pregnancy": "Usar solo si el beneficio justifica el riesgo; datos humanos no permiten excluir riesgo.",
+    "lactation": "Diltiazem se excreta en leche; individualizar y considerar alternativa o interrupción según necesidad materna.",
+    "specialPopulations": {
+      "HFrEF": "Evitar para control de frecuencia si LVEF <40% por riesgo de empeoramiento de HF.",
+      "WPW": "No usar IV en FA/flutter con vía accesoria.",
+      "elderly": "Titular por respuesta y conducción."
+    },
+    "clinicalPearls": [
+      "En FA con LVEF <40% no debe usarse diltiazem para control crónico de frecuencia",
+      "En FA preexcitada el bloqueo nodal AV puede acelerar conducción por la vía accesoria."
+    ],
+    "guidelineRecommendations": [
+      "Guía AF 2023: diltiazem o verapamilo se recomiendan para control de frecuencia cuando LVEF >40%; no deben administrarse si LVEF <40%."
+    ],
+    "safetyFlags": [
+      "BRADICARDIA",
+      "BLOQUEO_AV",
+      "HFrEF",
+      "VIA_ACCESORIA",
+      "CYP3A4"
+    ],
+    "alerts": [
+      "Monitorización continua durante uso IV",
+      "No superar 15 mg/h ni 24 h de infusión según ficha."
+    ],
+    "adverseEffects": {
+      "common": [
+        "edema periférico",
+        "bradicardia",
+        "cefalea",
+        "mareo",
+        "fatiga",
+        "bloqueo AV de primer grado"
+      ],
+      "dangerous": [
+        "bradicardia grave",
+        "bloqueo AV avanzado",
+        "hipotensión",
+        "empeoramiento de insuficiencia cardíaca",
+        "lesión hepática aguda rara"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=734beeef-3968-4137-af2c-276e8a9317df",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95"
   },
   "name": {
-    "pt": "Diltiazem (Cloridrato de)",
-    "es": "Diltiazem (Clorhidrato de)"
+    "pt": "Diltiazem",
+    "es": "Diltiazem"
   },
   "keywords": [
     "diltiazem",
     "diltiazem (cloridrato de)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-82b2d389c757ebce",
+  "clinicalContentSha256": "82b2d389c757ebcea8e01418bdf257fe6a59bd2f742704a930d5fd7ce7f44183",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardiologia.js",
@@ -365,8 +603,8 @@
           "diltiazem",
           "bloqueador dos canais de calcio nao diidropiridinico"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-82b2d389c757ebce",
+        "clinicalContentSha256": "82b2d389c757ebcea8e01418bdf257fe6a59bd2f742704a930d5fd7ce7f44183",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
@@ -434,5 +672,15 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "diltiazem.mcGoldClinicalV1",
+    "group": "GOLD_GROUP07_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "7ce570f24cae7a221ff6eed584d0a2092b0526bdee497509c1c11e4591f9209f",
+    "physicalHomologation": "DEFERRED"
   }
 }

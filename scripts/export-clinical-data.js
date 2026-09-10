@@ -3369,6 +3369,278 @@ function readExistingEnrichment(safeId) {
   return enrichment;
 }
 
+
+  /*
+   * Gold Clinical Source Projection
+   *
+   * Source authority:
+   *   database/*.js::<drug>.mcGoldClinicalV1
+   *
+   * Fail-closed behavior:
+   * - if a source Gold block exists, its 33 canonical PT/ES fields own the
+   *   derived clinical payload;
+   * - legacy extra locale fields already present in published JSON are
+   *   preserved, but the canonical 33 fields are overwritten from source;
+   * - mc_gold_standard_v1 metadata is preserved when already present;
+   * - verapamil remains the single explicit legacy SHA-authority exception.
+   */
+  const MC_GOLD_REQUIRED_FIELDS = [
+    'name','class','pharmacologicClass','mechanism','pharmacodynamics',
+    'pharmacokinetics','indications','commercialNames','presentation',
+    'presentations','dose','pediatricDose','renalDose','hepaticDose',
+    'commonAdverseEffects','dangerousAdverseEffects','adverseEffects',
+    'contraindications','interactions','monitoring','administration',
+    'preparation','infusionProtocol','pregnancy','lactation',
+    'specialPopulations','patientEducation','clinicalPearls',
+    'guidelineRecommendations','safetyFlags','alerts','references','ref'
+  ];
+
+  function mcGoldClone(value) {
+    return JSON.parse(JSON.stringify(value));
+  }
+
+  function mcGoldMeaningful(value) {
+    if (value === null || value === undefined) return false;
+    if (typeof value === 'string') return value.trim().length > 0;
+    if (Array.isArray(value)) return value.length > 0;
+    if (typeof value === 'object') return Object.keys(value).length > 0;
+    return true;
+  }
+
+  function readExistingGoldDocument(safeId) {
+    const publishedPath = path.join(
+      PUBLISHED_DRUGS_DIR,
+      `${safeId}.json`
+    );
+
+    if (!fs.existsSync(publishedPath)) {
+      return null;
+    }
+
+    let existing;
+    try {
+      existing = JSON.parse(
+        fs.readFileSync(publishedPath, 'utf8')
+      );
+    } catch (error) {
+      throw new Error(
+        `GOLD_EXPORT_PRESERVATION_ABORT: JSON existente invalido para "${safeId}": ${error.message}`
+      );
+    }
+
+    if (existing.id !== safeId) {
+      throw new Error(
+        `GOLD_EXPORT_PRESERVATION_ABORT: identidade divergente para "${safeId}" (id="${existing.id}")`
+      );
+    }
+
+    return existing;
+  }
+
+  function findSourceGoldClinicalV1(preparedEntry) {
+    const seen = new Set();
+    const candidates = new Map();
+
+    function walk(value, depth) {
+      if (
+        value === null ||
+        typeof value !== 'object' ||
+        depth > 10 ||
+        seen.has(value)
+      ) {
+        return;
+      }
+
+      seen.add(value);
+
+      if (
+        Object.prototype.hasOwnProperty.call(
+          value,
+          'mcGoldClinicalV1'
+        )
+      ) {
+        const gold = value.mcGoldClinicalV1;
+
+        if (
+          gold === null ||
+          typeof gold !== 'object' ||
+          Array.isArray(gold)
+        ) {
+          throw new Error(
+            'GOLD_EXPORT_SOURCE_ABORT: mcGoldClinicalV1 nao e objeto'
+          );
+        }
+
+        const signature = JSON.stringify(gold);
+        candidates.set(signature, gold);
+      }
+
+      for (const key of Object.keys(value)) {
+        if (key === 'mcGoldClinicalV1') continue;
+        const child = value[key];
+        if (child && typeof child === 'object') {
+          walk(child, depth + 1);
+        }
+      }
+    }
+
+    walk(preparedEntry, 0);
+
+    if (candidates.size > 1) {
+      throw new Error(
+        `GOLD_EXPORT_SOURCE_ABORT: mais de um mcGoldClinicalV1 divergente para ${preparedEntry.safeId}`
+      );
+    }
+
+    if (candidates.size === 0) {
+      return null;
+    }
+
+    return candidates.values().next().value;
+  }
+
+  function validateSourceGoldClinicalV1(
+    safeId,
+    gold
+  ) {
+    for (const lang of ['pt', 'es']) {
+      const locale = gold[lang];
+
+      if (
+        locale === null ||
+        typeof locale !== 'object' ||
+        Array.isArray(locale)
+      ) {
+        throw new Error(
+          `GOLD_EXPORT_SOURCE_ABORT: ${safeId}/${lang} ausente ou invalido`
+        );
+      }
+
+      for (const field of MC_GOLD_REQUIRED_FIELDS) {
+        if (
+          !Object.prototype.hasOwnProperty.call(
+            locale,
+            field
+          ) ||
+          !mcGoldMeaningful(locale[field])
+        ) {
+          throw new Error(
+            `GOLD_EXPORT_SOURCE_ABORT: ${safeId}/${lang}/${field} ausente ou vazio`
+          );
+        }
+      }
+    }
+  }
+
+  function applyGoldClinicalProjection(
+    drugJson,
+    preparedEntry,
+    safeId
+  ) {
+    const existing = readExistingGoldDocument(
+      safeId
+    );
+    const sourceGold =
+      findSourceGoldClinicalV1(preparedEntry);
+
+    if (sourceGold) {
+      validateSourceGoldClinicalV1(
+        safeId,
+        sourceGold
+      );
+
+      for (const lang of ['pt', 'es']) {
+        const previousLocale =
+          existing &&
+          existing[lang] &&
+          typeof existing[lang] === 'object' &&
+          !Array.isArray(existing[lang])
+            ? mcGoldClone(existing[lang])
+            : {};
+
+        drugJson[lang] = Object.assign(
+          previousLocale,
+          mcGoldClone(sourceGold[lang])
+        );
+      }
+
+      drugJson.name = {
+        pt: sourceGold.pt.name,
+        es: sourceGold.es.name,
+      };
+
+      drugJson.icon = '';
+
+      if (
+        existing &&
+        existing.mc_gold_standard_v1 !== undefined
+      ) {
+        drugJson.mc_gold_standard_v1 =
+          mcGoldClone(
+            existing.mc_gold_standard_v1
+          );
+      }
+
+      return 'SOURCE_GOLD';
+    }
+
+    if (safeId === 'verapamil') {
+      if (!existing) {
+        throw new Error(
+          'GOLD_EXPORT_LEGACY_ABORT: verapamil publicado ausente'
+        );
+      }
+
+      for (const lang of ['pt', 'es']) {
+        if (
+          !existing[lang] ||
+          typeof existing[lang] !== 'object' ||
+          Array.isArray(existing[lang])
+        ) {
+          throw new Error(
+            `GOLD_EXPORT_LEGACY_ABORT: verapamil/${lang} invalido`
+          );
+        }
+
+        for (const field of MC_GOLD_REQUIRED_FIELDS) {
+          if (
+            !Object.prototype.hasOwnProperty.call(
+              existing[lang],
+              field
+            ) ||
+            !mcGoldMeaningful(
+              existing[lang][field]
+            )
+          ) {
+            throw new Error(
+              `GOLD_EXPORT_LEGACY_ABORT: verapamil/${lang}/${field} ausente ou vazio`
+            );
+          }
+        }
+
+        drugJson[lang] =
+          mcGoldClone(existing[lang]);
+      }
+
+      drugJson.name =
+        mcGoldClone(existing.name);
+      drugJson.icon = existing.icon;
+
+      if (
+        existing.mc_gold_standard_v1 !== undefined
+      ) {
+        drugJson.mc_gold_standard_v1 =
+          mcGoldClone(
+            existing.mc_gold_standard_v1
+          );
+      }
+
+      return 'LEGACY_VERAPAMIL';
+    }
+
+    return null;
+  }
+
   let totalDrugs = 0;
   let totalErrors = 0;
   let totalContextVariants = 0;
@@ -3429,6 +3701,19 @@ function readExistingEnrichment(safeId) {
         if (preservedEnrichment) {
           drugJson.mc_clinical_enrichment_v1 =
             preservedEnrichment;
+        }
+
+        const goldProjectionMode =
+          applyGoldClinicalProjection(
+            drugJson,
+            preparedEntry,
+            safeId
+          );
+
+        if (goldProjectionMode) {
+          console.log(
+            `[GOLD EXPORT] ${safeId}: ${goldProjectionMode}`
+          );
         }
 
         const outPath = path.join(
@@ -3574,6 +3859,7 @@ function readExistingEnrichment(safeId) {
       optionalFields: [
         'clinicalCollision',
         'clinicalContextVariants',
+        'mc_gold_standard_v1',
       ],
     },
   };

@@ -1,14 +1,192 @@
 {
   "id": "mexiletina",
   "category": "cardiologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Mexiletina"
+    "name": "Mexiletina",
+    "class": "Antiarrítmico classe IB oral",
+    "pharmacologicClass": "Bloqueador de canais rápidos de sódio, análogo oral da lidocaína",
+    "mechanism": "Bloqueia canais rápidos de sódio em estado aberto ou inativado, reduzindo velocidade de fase 0 e automaticidade ventricular com dependência de uso.",
+    "pharmacodynamics": "Encurta duração do potencial de ação em fibras de Purkinje e miocárdio ventricular. Pode suprimir ectopia e taquicardia ventricular, mas também causar pró-arritmia.",
+    "pharmacokinetics": "Boa absorção oral. Metabolismo predominantemente hepático por CYP2D6 e CYP1A2. Meia-vida usual em torno de 10 a 12 horas, prolongada em doença hepática e baixo débito.",
+    "indications": [
+      "Arritmias ventriculares documentadas potencialmente fatais, como taquicardia ventricular sustentada",
+      "Uso especializado como antiarrítmico oral classe IB quando o benefício supera o risco pró-arrítmico"
+    ],
+    "commercialNames": [
+      "Mexitil",
+      "Mexiletina genérica"
+    ],
+    "presentation": "Cápsulas de liberação imediata para uso oral.",
+    "presentations": [
+      "Cápsulas 150 mg",
+      "Cápsulas 200 mg",
+      "Cápsulas 250 mg conforme mercado"
+    ],
+    "dose": {
+      "Inicial": "200 mg VO a cada 8 horas quando não é necessário controle imediato",
+      "Faixa habitual": "200 a 300 mg VO a cada 8 horas com alimento ou antiácido",
+      "Máximo": "1200 mg/dia",
+      "Carga quando necessário": "400 mg VO, seguidos por 200 mg após 8 horas"
+    },
+    "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas para tratamento rotineiro de arritmias ventriculares; uso pediátrico deve ser especializado.",
+    "renalDose": "Em insuficiência renal, em geral usam-se doses usuais; titular por eficácia e toxicidade.",
+    "hepaticDose": "Doença hepática grave pode exigir dose menor e monitorização estreita. Insuficiência cardíaca direita importante também pode reduzir metabolismo hepático.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Vômitos",
+      "Pirose",
+      "Tremor",
+      "Tontura",
+      "Ataxia"
+    ],
+    "dangerousAdverseEffects": [
+      "Pró-arritmia",
+      "Bloqueio de condução",
+      "Convulsões",
+      "Hepatotoxicidade",
+      "Agravamento de insuficiência cardíaca"
+    ],
+    "adverseEffects": "Efeitos gastrointestinais e neurológicos são dose-dependentes e frequentemente limitam tratamento. Toxicidade aumenta com concentrações elevadas ou depuração hepática reduzida.",
+    "contraindications": [
+      "Choque cardiogênico",
+      "Bloqueio AV de segundo ou terceiro grau sem marcapasso",
+      "Hipersensibilidade ao fármaco"
+    ],
+    "interactions": [
+      "Inibidores de CYP2D6 ou CYP1A2 podem elevar níveis",
+      "Indutores enzimáticos podem reduzir exposição",
+      "Fármacos pró-arrítmicos ou depressores de condução podem somar risco",
+      "Teofilina e cafeína podem apresentar interação metabólica"
+    ],
+    "monitoring": [
+      "ECG e intervalo QRS",
+      "Carga de arritmia ou Holter quando indicado",
+      "Sintomas neurológicos",
+      "Função hepática",
+      "Sinais de insuficiência cardíaca"
+    ],
+    "administration": "Administrar com alimento ou antiácido para reduzir intolerância gastrointestinal. Ajustes devem ser espaçados em pelo menos 2 a 3 dias quando possível.",
+    "preparation": "Uso oral; cápsulas devem ser administradas conforme apresentação. Não há preparo para infusão.",
+    "infusionProtocol": "Não se aplica à mexiletina oral; para arritmia ventricular aguda que exija terapia IV escolher agente apropriado.",
+    "pregnancy": "Dados humanos são limitados. Usar apenas quando o benefício clínico justificar risco potencial, com decisão especializada em arritmia grave.",
+    "lactation": "Mexiletina é excretada no leite. Avaliar risco para o lactente e necessidade materna antes de manter amamentação.",
+    "specialPopulations": "Doença hepática, insuficiência cardíaca direita, idosos e pacientes com distúrbios de condução exigem titulação mais lenta e vigilância mais estreita.",
+    "patientEducation": "Tomar com alimento, não dobrar dose esquecida e relatar síncope, palpitações piores, tremor intenso, ataxia, icterícia ou convulsões.",
+    "clinicalPearls": [
+      "É o análogo oral funcional da lidocaína",
+      "Não usar para extrassístoles ventriculares assintomáticas",
+      "Resposta e tolerabilidade são dose-dependentes"
+    ],
+    "guidelineRecommendations": "A bula reserva o uso para arritmias ventriculares documentadas potencialmente fatais; tratamento deve ser iniciado e acompanhado por equipe com experiência em antiarrítmicos.",
+    "safetyFlags": [
+      "Pró-arritmia",
+      "Efeitos neurológicos dose-limitantes",
+      "Metabolismo hepático relevante",
+      "Necessidade de ECG durante titulação"
+    ],
+    "alerts": [
+      "Evitar uso para arritmias ventriculares benignas ou assintomáticas",
+      "Dose total diária não deve exceder 1200 mg segundo a bula consultada"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17c65cba-f56f-4cad-a9e2-d31f62e95849"
+    ],
+    "ref": "DailyMed Mexiletine Hydrochloride Capsules"
   },
   "es": {
-    "name": "Mexiletina"
+    "name": "Mexiletina",
+    "class": "Antiarrítmico clase IB oral",
+    "pharmacologicClass": "Bloqueador de canales rápidos de sodio, análogo oral de lidocaína",
+    "mechanism": "Bloquea canales rápidos de sodio en estado abierto o inactivado, reduciendo velocidad de fase 0 y automatismo ventricular con dependencia del uso.",
+    "pharmacodynamics": "Acorta la duración del potencial de acción en fibras de Purkinje y miocardio ventricular. Puede suprimir ectopia y taquicardia ventricular, pero también producir proarritmia.",
+    "pharmacokinetics": "Buena absorción oral. Metabolismo principalmente hepático por CYP2D6 y CYP1A2. Vida media habitual cercana a 10 a 12 horas, prolongada en hepatopatía y bajo gasto.",
+    "indications": [
+      "Arritmias ventriculares documentadas potencialmente mortales, como taquicardia ventricular sostenida",
+      "Uso especializado como antiarrítmico oral clase IB cuando el beneficio supera el riesgo proarrítmico"
+    ],
+    "commercialNames": [
+      "Mexitil",
+      "Mexiletina genérica"
+    ],
+    "presentation": "Cápsulas de liberación inmediata para uso oral.",
+    "presentations": [
+      "Cápsulas 150 mg",
+      "Cápsulas 200 mg",
+      "Cápsulas 250 mg según mercado"
+    ],
+    "dose": {
+      "Inicial": "200 mg VO cada 8 horas cuando no se requiere control inmediato",
+      "Rango habitual": "200 a 300 mg VO cada 8 horas con alimento o antiácido",
+      "Máximo": "1200 mg/día",
+      "Carga cuando se requiere": "400 mg VO, seguidos de 200 mg a las 8 horas"
+    },
+    "pediatricDose": "Seguridad y eficacia pediátricas no establecidas para el tratamiento rutinario de arritmias ventriculares; uso pediátrico debe ser especializado.",
+    "renalDose": "En insuficiencia renal generalmente se utilizan dosis habituales; titular por eficacia y toxicidad.",
+    "hepaticDose": "Enfermedad hepática grave puede requerir dosis menor y monitorización estrecha. Insuficiencia cardíaca derecha marcada también puede reducir metabolismo hepático.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Vómitos",
+      "Pirosis",
+      "Temblor",
+      "Mareo",
+      "Ataxia"
+    ],
+    "dangerousAdverseEffects": [
+      "Proarritmia",
+      "Bloqueo de conducción",
+      "Convulsiones",
+      "Hepatotoxicidad",
+      "Empeoramiento de insuficiencia cardíaca"
+    ],
+    "adverseEffects": "Los efectos gastrointestinales y neurológicos son dependientes de dosis y con frecuencia limitan el tratamiento. La toxicidad aumenta con niveles altos o depuración hepática reducida.",
+    "contraindications": [
+      "Shock cardiogénico",
+      "Bloqueo AV de segundo o tercer grado sin marcapasos",
+      "Hipersensibilidad al fármaco"
+    ],
+    "interactions": [
+      "Inhibidores de CYP2D6 o CYP1A2 pueden elevar niveles",
+      "Inductores enzimáticos pueden reducir exposición",
+      "Fármacos proarrítmicos o depresores de conducción pueden sumar riesgo",
+      "Teofilina y cafeína pueden presentar interacción metabólica"
+    ],
+    "monitoring": [
+      "ECG e intervalo QRS",
+      "Carga arrítmica o Holter cuando corresponda",
+      "Síntomas neurológicos",
+      "Función hepática",
+      "Signos de insuficiencia cardíaca"
+    ],
+    "administration": "Administrar con alimento o antiácido para reducir intolerancia gastrointestinal. Los ajustes deben espaciarse al menos 2 a 3 días cuando sea posible.",
+    "preparation": "Uso oral; administrar cápsulas según presentación. No existe preparación para infusión.",
+    "infusionProtocol": "No se aplica a mexiletina oral; para arritmia ventricular aguda que requiera terapia IV elegir un agente apropiado.",
+    "pregnancy": "Datos humanos limitados. Usar solo cuando el beneficio clínico justifique riesgo potencial, con decisión especializada en arritmia grave.",
+    "lactation": "Mexiletina se excreta en leche. Evaluar riesgo para el lactante y necesidad materna antes de continuar lactancia.",
+    "specialPopulations": "Hepatopatía, insuficiencia cardíaca derecha, ancianos y pacientes con trastornos de conducción requieren titulación más lenta y vigilancia más estrecha.",
+    "patientEducation": "Tomar con alimento, no duplicar dosis olvidada y comunicar síncope, empeoramiento de palpitaciones, temblor intenso, ataxia, ictericia o convulsiones.",
+    "clinicalPearls": [
+      "Es el análogo oral funcional de lidocaína",
+      "No usar para extrasístoles ventriculares asintomáticas",
+      "Respuesta y tolerabilidad dependen de la dosis"
+    ],
+    "guidelineRecommendations": "La ficha técnica reserva su uso para arritmias ventriculares documentadas potencialmente mortales; iniciar y seguir por un equipo con experiencia en antiarrítmicos.",
+    "safetyFlags": [
+      "Proarritmia",
+      "Efectos neurológicos limitantes de dosis",
+      "Metabolismo hepático relevante",
+      "Necesidad de ECG durante titulación"
+    ],
+    "alerts": [
+      "Evitar uso en arritmias ventriculares benignas o asintomáticas",
+      "La dosis total diaria no debe superar 1200 mg según la ficha consultada"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17c65cba-f56f-4cad-a9e2-d31f62e95849"
+    ],
+    "ref": "DailyMed Mexiletine Hydrochloride Capsules"
   },
   "name": {
     "pt": "Mexiletina",
@@ -17,8 +195,8 @@
   "keywords": [
     "mexiletina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+  "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "analgesicos.js",
@@ -63,10 +241,10 @@
             "Tontura",
             "Ataxia",
             "Visão turva",
-            "⚠️ Pró-arritmia ventricular",
-            "⚠️ Convulsões",
-            "⚠️ Hepatotoxicidade",
-            "⚠️ Leucopenia rara"
+            " Pró-arritmia ventricular",
+            " Convulsões",
+            " Hepatotoxicidade",
+            " Leucopenia rara"
           ],
           "monitoramento": [
             "ECG basal + periódico (QRS + PR)",
@@ -87,15 +265,15 @@
           "alerts": [
             {
               "tipo": "warning",
-              "msg": "⚠️ Mexiletina reservada para TV sustentada documentada ou EV potencialmente fatal. Não usar para EV assintomáticas/benignas — pode aumentar mortalidade."
+              "msg": " Mexiletina reservada para TV sustentada documentada ou EV potencialmente fatal. Não usar para EV assintomáticas/benignas — pode aumentar mortalidade."
             },
             {
               "tipo": "info",
-              "msg": "🍽️ Tomar SEMPRE com alimentos — reduz significativamente náuseas e efeitos GI."
+              "msg": " Tomar SEMPRE com alimentos — reduz significativamente náuseas e efeitos GI."
             },
             {
               "tipo": "danger",
-              "msg": "📦 BLACK BOX: Antiarrítmicos podem aumentar mortalidade em arritmias não ameaçadoras à vida. Reservar para TV/EV documentadas e potencialmente fatais."
+              "msg": " BLACK BOX: Antiarrítmicos podem aumentar mortalidade em arritmias não ameaçadoras à vida. Reservar para TV/EV documentadas e potencialmente fatais."
             }
           ]
         },
@@ -120,10 +298,10 @@
             "Mareos",
             "Ataxia",
             "Visión borrosa",
-            "⚠️ Proarritmia ventricular",
-            "⚠️ Convulsiones",
-            "⚠️ Hepatotoxicidad",
-            "⚠️ Leucopenia rara"
+            " Proarritmia ventricular",
+            " Convulsiones",
+            " Hepatotoxicidad",
+            " Leucopenia rara"
           ],
           "monitoramento": [
             "ECG basal + periódico (QRS + PR)",
@@ -144,15 +322,15 @@
           "alerts": [
             {
               "tipo": "warning",
-              "msg": "⚠️ Mexiletina reservada para TV sostenida documentada o EV potencialmente fatal. No usar para EV asintomáticas/benignas — puede aumentar mortalidad."
+              "msg": " Mexiletina reservada para TV sostenida documentada o EV potencialmente fatal. No usar para EV asintomáticas/benignas — puede aumentar mortalidad."
             },
             {
               "tipo": "info",
-              "msg": "🍽️ Tomar SIEMPRE con alimentos — reduce significativamente náuseas y efectos GI."
+              "msg": " Tomar SIEMPRE con alimentos — reduce significativamente náuseas y efectos GI."
             },
             {
               "tipo": "danger",
-              "msg": "📦 BLACK BOX: Antiarrítmicos pueden aumentar mortalidad en arritmias no amenazantes para la vida. Reservar para TV/EV documentadas y potencialmente fatales."
+              "msg": " BLACK BOX: Antiarrítmicos pueden aumentar mortalidad en arritmias no amenazantes para la vida. Reservar para TV/EV documentadas y potencialmente fatales."
             }
           ]
         },
@@ -163,12 +341,22 @@
         "keywords": [
           "mexiletina"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+        "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "mexiletina.mcGoldClinicalV1",
+    "group": "GOLD_GROUP03_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "b6df2f72f1b38eefbaa5752ad6f5b03eb77da2c83570e3c7dac363425da8b86b",
+    "physicalHomologation": "DEFERRED"
+  }
 }

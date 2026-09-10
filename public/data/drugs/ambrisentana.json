@@ -1,14 +1,226 @@
 {
   "id": "ambrisentana",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Ambrisentana"
+    "pharmacologicClass": "Antagonista do receptor de endotelina para hipertensão arterial pulmonar",
+    "mechanism": "Antagoniza preferencialmente ETA e reduz vasoconstrição e proliferação vascular pulmonar mediadas pela endotelina-1.",
+    "pharmacodynamics": "Reduz resistência vascular pulmonar; pode causar retenção hídrica, edema e queda da hemoglobina.",
+    "commonAdverseEffects": [
+      "edema periférico",
+      "cefaleia",
+      "congestão nasal",
+      "rubor",
+      "anemia"
+    ],
+    "dangerousAdverseEffects": [
+      "toxicidade embriofetal",
+      "retenção hídrica com insuficiência cardíaca",
+      "anemia significativa",
+      "edema pulmonar se houver doença veno-oclusiva pulmonar"
+    ],
+    "monitoring": [
+      "Hemoglobina antes do início, em 1 mês e periodicamente",
+      "peso e edema",
+      "sintomas da HAP e sinais de PVOD",
+      "função hepática se surgirem sintomas ou alterações",
+      "teste de gestação antes e durante quando aplicável"
+    ],
+    "administration": "5 ou 10 mg uma vez ao dia; engolir o comprimido inteiro, não partir, triturar nem mastigar.",
+    "preparation": "Não requer reconstituição.",
+    "infusionProtocol": "Não se aplica: tratamento oral.",
+    "patientEducation": [
+      "Evitar gestação e cumprir controles indicados",
+      "procurar avaliação por ganho rápido de peso, edema ou dispneia",
+      "não suspender nem modificar tratamento da HAP sem especialista"
+    ],
+    "safetyFlags": [
+      "EMBRIOFETAL",
+      "ANEMIA",
+      "RETENCAO_HIDRICA",
+      "PVOD",
+      "HEPATICA"
+    ],
+    "name": "Ambrisentana",
+    "class": "Antagonista seletivo do receptor de endotelina ETA",
+    "pharmacokinetics": "Administração uma vez ao dia; metabolismo por glucuronidação e oxidação com participação de CYP3A e outros transportadores. Ciclosporina aumenta exposição.",
+    "indications": [
+      "HAP WHO grupo 1 para melhorar capacidade de exercício e retardar piora clínica",
+      "em combinação com tadalafil para reduzir progressão e hospitalização por piora da HAP"
+    ],
+    "commercialNames": [
+      "Letairis"
+    ],
+    "presentation": "Comprimidos revestidos.",
+    "presentations": [
+      "5 mg",
+      "10 mg"
+    ],
+    "dose": {
+      "adult": "5 mg uma vez ao dia, com ou sem tadalafil 20 mg uma vez ao dia. Em intervalos de 4 semanas pode aumentar ambrisentana para 10 mg e tadalafil para 40 mg conforme necessidade e tolerância."
+    },
+    "pediatricDose": "Segurança e eficácia não estabelecidas em pacientes pediátricos conforme a bula atual.",
+    "renalDose": "Insuficiência renal leve-moderada (ClCr 20-150 mL/min em dados populacionais): não requer ajuste. Dados insuficientes na insuficiência renal grave ou hemodiálise.",
+    "hepaticDose": "Não recomendado na insuficiência hepática moderada-grave. Se desenvolver ALT/AST >5×LSN ou elevação com bilirrubina >2×LSN/sintomas, investigar e suspender conforme bula.",
+    "contraindications": [
+      "Gestação",
+      "fibrose pulmonar idiopática",
+      "hipersensibilidade"
+    ],
+    "interactions": [
+      "Ciclosporina aumenta exposição; limitar ambrisentana a 5 mg uma vez ao dia",
+      "Com tadalafil aumenta edema periférico, mas é combinação terapêutica respaldada",
+      "Revisar outros fármacos que favorecem retenção hídrica"
+    ],
+    "pregnancy": "Contraindicado por toxicidade embriofetal. Excluir gestação antes do início e usar contracepção eficaz durante o tratamento e por pelo menos 1 mês após.",
+    "lactation": "Escolher entre ambrisentana e amamentação; não se recomenda manter ambos pelo potencial de reações graves.",
+    "specialPopulations": {
+      "renal": "Sem ajuste na insuficiência leve-moderada; grave não estudada.",
+      "hepatic": "Não recomendado na moderada-grave.",
+      "elderly": "Edema periférico é mais frequente."
+    },
+    "clinicalPearls": [
+      "A combinação inicial com tadalafil tem evidência para reduzir progressão clínica em HAP selecionada",
+      "Controlar hemoglobina no início, em 1 mês e depois periodicamente."
+    ],
+    "guidelineRecommendations": [
+      "ESC/ERS: ERA como ambrisentana faz parte de esquemas dirigidos da HAP; a combinação com inibidor de PDE5 é usada conforme estratificação de risco e fenótipo."
+    ],
+    "alerts": [
+      "Limitar a 5 mg/dia com ciclosporina",
+      "Não iniciar se houver anemia clinicamente significativa sem avaliação."
+    ],
+    "adverseEffects": {
+      "common": [
+        "edema periférico",
+        "cefaleia",
+        "congestão nasal",
+        "rubor",
+        "anemia"
+      ],
+      "dangerous": [
+        "toxicidade embriofetal",
+        "retenção hídrica com insuficiência cardíaca",
+        "anemia significativa",
+        "edema pulmonar se houver doença veno-oclusiva pulmonar"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725d4e73-6c83-477a-adc6-0ae4a133a844",
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/pulmonary-hypertension/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725d4e73-6c83-477a-adc6-0ae4a133a844"
   },
   "es": {
-    "name": "Ambrisentán"
+    "pharmacologicClass": "Antagonista del receptor de endotelina para hipertensión arterial pulmonar",
+    "mechanism": "Antagoniza preferentemente ETA y reduce vasoconstricción y proliferación vascular pulmonar mediadas por endotelina-1.",
+    "pharmacodynamics": "Reduce resistencia vascular pulmonar; puede causar retención de líquidos, edema y descenso de hemoglobina.",
+    "commonAdverseEffects": [
+      "edema periférico",
+      "cefalea",
+      "congestión nasal",
+      "rubor",
+      "anemia"
+    ],
+    "dangerousAdverseEffects": [
+      "toxicidad embriofetal",
+      "retención de líquidos con insuficiencia cardíaca",
+      "anemia significativa",
+      "edema pulmonar si existe enfermedad venooclusiva pulmonar"
+    ],
+    "monitoring": [
+      "Hemoglobina antes de iniciar, al mes y periódicamente",
+      "peso y edema",
+      "síntomas de PAH y signos de PVOD",
+      "función hepática si aparecen síntomas o alteraciones",
+      "prueba de embarazo antes y durante cuando corresponda"
+    ],
+    "administration": "5 o 10 mg una vez al día; tragar tableta entera, no partir, triturar ni masticar.",
+    "preparation": "No requiere reconstitución.",
+    "infusionProtocol": "No aplica: tratamiento oral.",
+    "patientEducation": [
+      "Evitar embarazo y cumplir controles indicados",
+      "consultar por aumento rápido de peso, edema o disnea",
+      "no suspender ni modificar tratamiento de PAH sin especialista"
+    ],
+    "safetyFlags": [
+      "EMBRIOFETAL",
+      "ANEMIA",
+      "RETENCION_LIQUIDOS",
+      "PVOD",
+      "HEPATICA"
+    ],
+    "name": "Ambrisentán",
+    "class": "Antagonista selectivo del receptor de endotelina ETA",
+    "pharmacokinetics": "Administración una vez al día; metabolismo por glucuronidación y oxidación con participación de CYP3A y otros transportadores. Ciclosporina aumenta exposición.",
+    "indications": [
+      "PAH WHO grupo 1 para mejorar capacidad de ejercicio y retrasar empeoramiento clínico",
+      "en combinación con tadalafil para reducir progresión y hospitalización por empeoramiento de PAH"
+    ],
+    "commercialNames": [
+      "Letairis"
+    ],
+    "presentation": "Tabletas recubiertas.",
+    "presentations": [
+      "5 mg",
+      "10 mg"
+    ],
+    "dose": {
+      "adult": "5 mg una vez al día, con o sin tadalafil 20 mg una vez al día. A intervalos de 4 semanas puede aumentarse ambrisentán a 10 mg y tadalafil a 40 mg según necesidad y tolerancia."
+    },
+    "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos según la ficha actual.",
+    "renalDose": "Insuficiencia renal leve-moderada (CrCl 20-150 mL/min en datos poblacionales): no requiere ajuste. Datos insuficientes en insuficiencia renal grave o hemodiálisis.",
+    "hepaticDose": "No recomendado en insuficiencia hepática moderada-grave. Si desarrolla ALT/AST >5×ULN o elevación con bilirrubina >2×ULN/síntomas, investigar y suspender según ficha.",
+    "contraindications": [
+      "Embarazo",
+      "fibrosis pulmonar idiopática",
+      "hipersensibilidad"
+    ],
+    "interactions": [
+      "Ciclosporina aumenta exposición; limitar ambrisentán a 5 mg una vez al día",
+      "Con tadalafil aumenta edema periférico pero es combinación terapéutica respaldada",
+      "Revisar otros fármacos que favorecen retención de líquidos"
+    ],
+    "pregnancy": "Contraindicado por toxicidad embriofetal. Excluir embarazo antes de iniciar y usar anticoncepción eficaz durante tratamiento y por al menos 1 mes después.",
+    "lactation": "Elegir entre ambrisentán y lactancia; no se recomienda mantener ambos por potencial de reacciones graves.",
+    "specialPopulations": {
+      "renal": "Sin ajuste en insuficiencia leve-moderada; grave no estudiada.",
+      "hepatic": "No recomendado en moderada-grave.",
+      "elderly": "Edema periférico es más frecuente."
+    },
+    "clinicalPearls": [
+      "La combinación inicial con tadalafil tiene evidencia para reducir progresión clínica en PAH seleccionada",
+      "Controlar hemoglobina al inicio, al mes y después periódicamente."
+    ],
+    "guidelineRecommendations": [
+      "ESC/ERS: ERA como ambrisentán forma parte de esquemas dirigidos de PAH; la combinación con inhibidor PDE5 se usa según estratificación de riesgo y fenotipo."
+    ],
+    "alerts": [
+      "Limitar a 5 mg/día con ciclosporina",
+      "No iniciar si existe anemia clínicamente significativa sin evaluación."
+    ],
+    "adverseEffects": {
+      "common": [
+        "edema periférico",
+        "cefalea",
+        "congestión nasal",
+        "rubor",
+        "anemia"
+      ],
+      "dangerous": [
+        "toxicidad embriofetal",
+        "retención de líquidos con insuficiencia cardíaca",
+        "anemia significativa",
+        "edema pulmonar si existe enfermedad venooclusiva pulmonar"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725d4e73-6c83-477a-adc6-0ae4a133a844",
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/pulmonary-hypertension/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725d4e73-6c83-477a-adc6-0ae4a133a844"
   },
   "name": {
     "pt": "Ambrisentana",
@@ -17,9 +229,19 @@
   "keywords": [
     "ambrisentana"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-82b2d389c757ebce",
+  "clinicalContentSha256": "82b2d389c757ebcea8e01418bdf257fe6a59bd2f742704a930d5fd7ce7f44183",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "ambrisentana.mcGoldClinicalV1",
+    "group": "GOLD_GROUP07_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "5ebfd360c7cb30bf28d5224603f2e50423f93415eb216b8c3cfe47d5ec795b36",
+    "physicalHomologation": "DEFERRED"
+  }
 }

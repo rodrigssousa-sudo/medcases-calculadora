@@ -1,14 +1,188 @@
 {
   "id": "adenosina",
   "category": "cardiologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Adenosina"
+    "name": "Adenosina",
+    "class": "Antiarrítmico de ação ultracurta",
+    "pharmacologicClass": "Agonista de receptores de adenosina, principalmente A1 no nó AV",
+    "mechanism": "Ativa receptores A1 cardíacos, aumentando efluxo de potássio e reduzindo influxo de cálcio, causando bloqueio transitório da condução pelo nó AV.",
+    "pharmacodynamics": "Produz bloqueio AV transitório em segundos, terminando taquicardias reentrantes dependentes do nó AV e permitindo diagnóstico de alguns ritmos atriais.",
+    "pharmacokinetics": "Meia-vida plasmática inferior a 10 segundos devido à captação rápida por hemácias e células endoteliais e metabolismo intracelular. Função renal e hepática têm pouca influência clínica.",
+    "indications": [
+      "Conversão de taquicardia supraventricular paroxística regular dependente do nó AV",
+      "Auxílio diagnóstico em taquicardia regular monomórfica de complexo largo estável quando a origem é incerta, conforme AHA"
+    ],
+    "commercialNames": [
+      "Adenocard",
+      "Adenosina genérica"
+    ],
+    "presentation": "Solução injetável IV de administração rápida.",
+    "presentations": [
+      "Seringas ou frascos 3 mg/mL em vários volumes, conforme fabricante"
+    ],
+    "dose": {
+      "Adulto TSVP": "6 mg IV em bolus rápido de 1 a 2 segundos, seguido de flush de SF; se não converter em 1 a 2 min, 12 mg; pode repetir 12 mg uma vez",
+      "Acesso central ou transplante cardíaco": "Pode ocorrer resposta exagerada; considerar dose inicial menor conforme protocolo especializado"
+    },
+    "pediatricDose": "Seguir PALS vigente. Esquema comum: 0,1 mg/kg IV/IO rápido, máximo 6 mg; segunda dose 0,2 mg/kg, máximo 12 mg, sempre seguida de flush.",
+    "renalDose": "Não requer ajuste posológico por insuficiência renal devido à meia-vida extremamente curta e metabolismo celular rápido.",
+    "hepaticDose": "Não requer ajuste posológico por insuficiência hepática na maioria dos pacientes.",
+    "commonAdverseEffects": [
+      "Rubor",
+      "Pressão ou dor torácica",
+      "Dispneia",
+      "Náusea",
+      "Sensação de morte iminente",
+      "Cefaleia"
+    ],
+    "dangerousAdverseEffects": [
+      "Broncoespasmo grave",
+      "Assistolia prolongada",
+      "Bloqueio AV persistente",
+      "Fibrilação atrial com condução rápida por via acessória",
+      "FV rara"
+    ],
+    "adverseEffects": "Os sintomas costumam ser intensos, porém muito breves devido à meia-vida de segundos. Bloqueio AV e pausas transitórias são esperados durante efeito terapêutico.",
+    "contraindications": [
+      "Bloqueio AV de segundo ou terceiro grau sem marcapasso",
+      "Doença do nó sinusal sintomática sem marcapasso",
+      "Asma ou broncoespasmo ativo importante",
+      "Hipersensibilidade"
+    ],
+    "interactions": [
+      "Cafeína e teofilina antagonizam o efeito e podem exigir maior exposição",
+      "Dipiridamol potencializa adenosina e pode exigir dose menor",
+      "Carbamazepina pode aumentar bloqueio AV",
+      "Acesso central e transplante cardíaco aumentam sensibilidade"
+    ],
+    "monitoring": [
+      "ECG contínuo",
+      "Pressão arterial",
+      "Ritmo antes e durante o bolus",
+      "Disponibilidade imediata de cardioversão",
+      "Sintomas respiratórios"
+    ],
+    "administration": "Usar acesso IV o mais proximal possível. Administrar bolus muito rápido em 1 a 2 segundos, seguido imediatamente de flush vigoroso de SF.",
+    "preparation": "Não diluir para o bolus adulto de rotina quando a apresentação permite dose exata. Preparar flush de SF antes de administrar.",
+    "infusionProtocol": "Não é infusão contínua para TSVP: administrar bolus rápido, flush e reavaliar em 1 a 2 minutos antes de repetir dose.",
+    "pregnancy": "A meia-vida é extremamente curta e a exposição fetal sustentada é improvável. Pode ser usada em TSVP materna quando indicada, com monitorização.",
+    "lactation": "Devido à meia-vida de segundos e metabolismo rápido, exposição do lactente é mínima; não se espera necessidade de interrupção prolongada da amamentação.",
+    "specialPopulations": "Pacientes transplantados cardíacos e aqueles com acesso central podem responder a doses muito menores. Pacientes com asma têm risco de broncoespasmo.",
+    "patientEducation": "Avisar que podem ocorrer por alguns segundos rubor, falta de ar, pressão no peito e sensação intensa de mal-estar, geralmente desaparecendo rapidamente.",
+    "clinicalPearls": [
+      "É diagnóstica e terapêutica em taquicardias dependentes do nó AV",
+      "Não termina fibrilação ou flutter atrial, mas pode revelar atividade atrial",
+      "Evitar em taquicardia de complexo largo irregular ou polimórfica"
+    ],
+    "guidelineRecommendations": "AHA 2025: adenosina pode ser considerada em taquicardia regular monomórfica de complexo largo estável para tratamento ou diagnóstico; não deve ser usada em taquicardia de complexo largo instável, irregularmente irregular ou polimórfica. Em TSV regular estreita, é terapia padrão após manobras vagais.",
+    "safetyFlags": [
+      "Bolus extremamente rápido obrigatório",
+      "Risco de broncoespasmo",
+      "Cuidado em via acessória",
+      "Resposta exagerada em transplante cardíaco ou acesso central"
+    ],
+    "alerts": [
+      "Não usar em taquicardia de complexo largo irregular ou polimórfica",
+      "Ter cardioversão disponível antes de administrar em ritmo de diagnóstico incerto"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1c149fe-9095-4b2a-a21f-7af3212e0254",
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+    ],
+    "ref": "DailyMed Adenosine; AHA Adult Advanced Life Support 2025"
   },
   "es": {
-    "name": "Adenosina"
+    "name": "Adenosina",
+    "class": "Antiarrítmico de acción ultracorta",
+    "pharmacologicClass": "Agonista de receptores de adenosina, principalmente A1 en nodo AV",
+    "mechanism": "Activa receptores A1 cardíacos, aumentando eflujo de potasio y reduciendo entrada de calcio, produciendo bloqueo transitorio de conducción por nodo AV.",
+    "pharmacodynamics": "Produce bloqueo AV transitorio en segundos, terminando taquicardias reentrantes dependientes del nodo AV y permitiendo diagnóstico de algunos ritmos auriculares.",
+    "pharmacokinetics": "Vida media plasmática inferior a 10 segundos por captación rápida por eritrocitos y células endoteliales y metabolismo intracelular. Función renal y hepática tienen poca influencia clínica.",
+    "indications": [
+      "Conversión de taquicardia supraventricular paroxística regular dependiente del nodo AV",
+      "Ayuda diagnóstica en taquicardia regular monomórfica de complejo ancho estable cuando el origen es incierto, según AHA"
+    ],
+    "commercialNames": [
+      "Adenocard",
+      "Adenosina genérica"
+    ],
+    "presentation": "Solución inyectable IV para administración rápida.",
+    "presentations": [
+      "Jeringas o viales 3 mg/mL en varios volúmenes según fabricante"
+    ],
+    "dose": {
+      "Adulto TSVP": "6 mg IV en bolo rápido de 1 a 2 segundos, seguido de flush con SSN; si no convierte en 1 a 2 min, 12 mg; puede repetirse 12 mg una vez",
+      "Acceso central o trasplante cardíaco": "Puede haber respuesta exagerada; considerar dosis inicial menor según protocolo especializado"
+    },
+    "pediatricDose": "Seguir PALS vigente. Esquema común: 0,1 mg/kg IV/IO rápido, máximo 6 mg; segunda dosis 0,2 mg/kg, máximo 12 mg, siempre seguida de flush.",
+    "renalDose": "No requiere ajuste por insuficiencia renal debido a vida media extremadamente corta y metabolismo celular rápido.",
+    "hepaticDose": "No requiere ajuste por insuficiencia hepática en la mayoría de pacientes.",
+    "commonAdverseEffects": [
+      "Rubor",
+      "Presión o dolor torácico",
+      "Disnea",
+      "Náuseas",
+      "Sensación de muerte inminente",
+      "Cefalea"
+    ],
+    "dangerousAdverseEffects": [
+      "Broncoespasmo grave",
+      "Asistolia prolongada",
+      "Bloqueo AV persistente",
+      "Fibrilación auricular con conducción rápida por vía accesoria",
+      "FV rara"
+    ],
+    "adverseEffects": "Los síntomas suelen ser intensos pero muy breves debido a una vida media de segundos. Bloqueo AV y pausas transitorias son esperables durante el efecto terapéutico.",
+    "contraindications": [
+      "Bloqueo AV de segundo o tercer grado sin marcapasos",
+      "Enfermedad sintomática del nodo sinusal sin marcapasos",
+      "Asma o broncoespasmo activo importante",
+      "Hipersensibilidad"
+    ],
+    "interactions": [
+      "Cafeína y teofilina antagonizan el efecto y pueden requerir mayor exposición",
+      "Dipiridamol potencia adenosina y puede requerir dosis menor",
+      "Carbamazepina puede aumentar bloqueo AV",
+      "Acceso central y trasplante cardíaco aumentan sensibilidad"
+    ],
+    "monitoring": [
+      "ECG continuo",
+      "Presión arterial",
+      "Ritmo antes y durante el bolo",
+      "Disponibilidad inmediata de cardioversión",
+      "Síntomas respiratorios"
+    ],
+    "administration": "Usar acceso IV lo más proximal posible. Administrar bolo muy rápido en 1 a 2 segundos, seguido de inmediato por flush vigoroso con SSN.",
+    "preparation": "No diluir para el bolo adulto rutinario cuando la presentación permite dosis exacta. Preparar el flush antes de administrar.",
+    "infusionProtocol": "No es una infusión continua para TSVP: administrar bolo rápido, flush y reevaluar en 1 a 2 minutos antes de repetir.",
+    "pregnancy": "La vida media es extremadamente corta y la exposición fetal sostenida es improbable. Puede usarse en TSVP materna cuando está indicada, con monitorización.",
+    "lactation": "Por su vida media de segundos y metabolismo rápido, la exposición del lactante es mínima; no se espera necesidad de suspender lactancia de forma prolongada.",
+    "specialPopulations": "Pacientes con trasplante cardíaco y aquellos con acceso central pueden responder a dosis mucho menores. Pacientes con asma tienen riesgo de broncoespasmo.",
+    "patientEducation": "Avisar que durante algunos segundos pueden aparecer rubor, disnea, presión en el pecho y sensación intensa de malestar, generalmente de resolución rápida.",
+    "clinicalPearls": [
+      "Es diagnóstica y terapéutica en taquicardias dependientes del nodo AV",
+      "No termina fibrilación o flutter auricular, pero puede revelar actividad auricular",
+      "Evitar en taquicardia de complejo ancho irregular o polimórfica"
+    ],
+    "guidelineRecommendations": "AHA 2025: adenosina puede considerarse en taquicardia regular monomórfica de complejo ancho estable para tratamiento o diagnóstico; no debe usarse en taquicardia de complejo ancho inestable, irregularmente irregular o polimórfica. En TSV regular estrecha es terapia estándar tras maniobras vagales.",
+    "safetyFlags": [
+      "Bolo extremadamente rápido obligatorio",
+      "Riesgo de broncoespasmo",
+      "Precaución con vía accesoria",
+      "Respuesta exagerada en trasplante cardíaco o acceso central"
+    ],
+    "alerts": [
+      "No usar en taquicardia de complejo ancho irregular o polimórfica",
+      "Tener cardioversión disponible antes de administrar si el diagnóstico del ritmo es incierto"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1c149fe-9095-4b2a-a21f-7af3212e0254",
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+    ],
+    "ref": "DailyMed Adenosine; AHA Adult Advanced Life Support 2025"
   },
   "name": {
     "pt": "Adenosina",
@@ -17,8 +191,8 @@
   "keywords": [
     "adenosina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+  "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardiologia.js",
@@ -61,10 +235,10 @@
             "Náuseas",
             "Tontura",
             "Cefaleia",
-            "⚠️ Broncoespasmo",
-            "⚠️ Bloqueio AV prolongado",
-            "⚠️ FA transitória",
-            "⚠️ Assistolia breve"
+            " Broncoespasmo",
+            " Bloqueio AV prolongado",
+            " FA transitória",
+            " Assistolia breve"
           ],
           "contraindicacoes": [
             "Bloqueio AV 2º/3º sem marcapasso",
@@ -98,7 +272,7 @@
           "alerts": [
             {
               "tipo": "info",
-              "msg": "📋 ECG contínuo obrigatório. Preparar desfibrilador. Registrar traçado durante administração. Flush imediato 20 mL SF após bolus."
+              "msg": " ECG contínuo obrigatório. Preparar desfibrilador. Registrar traçado durante administração. Flush imediato 20 mL SF após bolus."
             }
           ]
         },
@@ -121,10 +295,10 @@
             "Náuseas",
             "Mareos",
             "Cefalea",
-            "⚠️ Broncoespasmo",
-            "⚠️ Bloqueo AV prolongado",
-            "⚠️ FA transitoria",
-            "⚠️ Asistolia breve"
+            " Broncoespasmo",
+            " Bloqueo AV prolongado",
+            " FA transitoria",
+            " Asistolia breve"
           ],
           "contraindicacoes": [
             "Bloqueo AV 2º/3º sin marcapasos",
@@ -158,7 +332,7 @@
           "alerts": [
             {
               "tipo": "info",
-              "msg": "📋 ECG continuo obligatorio. Preparar desfibrilador. Registrar trazado durante administración. Flush inmediato 20 mL SF tras bolo."
+              "msg": " ECG continuo obligatorio. Preparar desfibrilador. Registrar trazado durante administración. Flush inmediato 20 mL SF tras bolo."
             }
           ]
         },
@@ -169,8 +343,8 @@
         "keywords": [
           "adenosina"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+        "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
@@ -222,5 +396,15 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "adenosina.mcGoldClinicalV1",
+    "group": "GOLD_GROUP03_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "666e4ed46d8158c35fc9efe2b5465ac898b9e53977e883e15d48d736b810d0dd",
+    "physicalHomologation": "DEFERRED"
   }
 }

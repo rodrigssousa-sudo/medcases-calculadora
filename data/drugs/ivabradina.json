@@ -1,288 +1,236 @@
 {
   "id": "ivabradina",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(16,185,129,0.13)",
   "colorTxt": "#065F46",
   "pt": {
     "name": "Ivabradina",
-    "class": "Bradicardizante seletivo — Inibidor da corrente If do nó sinusal (sem efeito inotrópico negativo)",
-    "commercialNames": {
-      "br": [
-        "Procoralan",
-        "Corlentor",
-        "Ivabradina genérica"
-      ],
-      "ar": [
-        "Procoralan",
-        "Ivabradina genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 2,5 mg",
-      "Comprimidos 5 mg",
-      "Comprimidos 7,5 mg"
+    "class": "Inibidor seletivo da corrente If do nó sinusal",
+    "pharmacologicClass": "Bloqueador de canal HCN, redutor seletivo da frequência sem efeito inotrópico negativo direto",
+    "mechanism": "Inibe a corrente If nas células marcapasso do nó sinusal, desacelerando a despolarização diastólica e reduzindo a frequência cardíaca sem bloqueio beta nem efeito inotrópico negativo direto.",
+    "pharmacodynamics": "Reduz frequência em ritmo sinusal de forma dose-dependente. Pode causar bradicardia e fenômenos luminosos transitórios; aumenta risco de fibrilação atrial.",
+    "pharmacokinetics": "Metabolismo por CYP3A4. Meia-vida efetiva aproximada de 6 h, com metabólitos ativos. A exposição aumenta com inibidores de CYP3A4 e hepatopatia.",
+    "indications": [
+      "Reduzir hospitalização por piora de insuficiência cardíaca em adultos com HFrEF crônica estável sintomática, ritmo sinusal e frequência elevada apesar de betabloqueio máximo tolerado ou contraindicação",
+      "insuficiência cardíaca sintomática estável por cardiomiopatia dilatada em pacientes pediátricos com 6 meses ou mais"
+    ],
+    "commercialNames": [
+      "Corlanor"
+    ],
+    "presentation": "Comprimidos e solução oral.",
+    "presentations": [
+      "Comprimidos 5 e 7,5 mg",
+      "Solução oral 5 mg/5 mL, 1 mg/mL"
     ],
     "dose": {
-      "adultoPadrao": "5 mg VO 12/12h com alimentos; titular para 7,5 mg 12/12h após 2–4 semanas se FC > 60 bpm e tolerado.",
-      "adultoGrave": "Idoso frágil ou FC limítrofe: iniciar 2,5 mg 12/12h e titular cuidadosamente. Objetivo FC repouso 50–60 bpm.",
-      "pediatricaPadrao": "Não estabelecido rotineiramente em adultos jovens/pediatria. Uso requer avaliação especializada.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
+      "adult": "5 mg duas vezes ao dia com alimentos; 2,5 mg duas vezes ao dia em adultos vulneráveis. Ajustar após 2 semanas pela frequência; máximo 7,5 mg duas vezes ao dia."
     },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "7,5 mg VO 12/12h"
-    },
-    "therapeuticRange": "FC repouso 50–60 bpm em ICFEr; redução de hospitalizações; manutenção de FEVE",
-    "dilution": "Uso exclusivo via oral com alimentos. Não diluir.",
-    "speed": "Reavaliação de FC e tolerância após 2–4 semanas de cada ajuste. Não alterar dose sem nova avaliação clínica.",
+    "pediatricDose": "Menos de 40 kg: iniciar 0,05 mg/kg duas vezes ao dia com alimentos; ajustar a cada 2 semanas. Máximo 0,2 mg/kg entre 6 meses e <1 ano ou 0,3 mg/kg a partir de 1 ano, sem ultrapassar 7,5 mg duas vezes ao dia. Acima de 40 kg: esquema conforme bula com início de 2,5 mg duas vezes ao dia.",
+    "renalDose": "Não requer ajuste entre ClCr 15-60 mL/min segundo farmacocinética; dados limitados abaixo de 15 mL/min. Titular pela frequência e tolerância.",
+    "hepaticDose": "Não requer ajuste na hepatopatia leve ou moderada; contraindicado na insuficiência hepática grave.",
     "commonAdverseEffects": [
-      "Bradicardia",
-      "Fosfenos (fenômenos luminosos visuais)",
-      "Tontura",
-      "Cefaleia",
-      "Fadiga",
-      "Visão borrada transitória"
+      "bradicardia",
+      "hipertensão",
+      "fibrilação atrial",
+      "fenômenos luminosos ou fosfenos"
     ],
     "dangerousAdverseEffects": [
-      "Bradicardia grave (FC < 40 bpm)",
-      "Síncope",
-      "Fibrilação atrial",
-      "Bloqueio sinoatrial",
-      "Parada sinusal"
+      "bradicardia sintomática",
+      "bloqueio de condução",
+      "fibrilação atrial",
+      "toxicidade fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Insuficiência cardíaca aguda descompensada",
+      "hipotensão clinicamente significativa",
+      "síndrome do nó sinusal ou bloqueio SA/AV avançado sem marcapasso",
+      "bradicardia clinicamente significativa",
+      "insuficiência hepática grave",
+      "dependência exclusiva de marcapasso",
+      "inibidores fortes de CYP3A4"
+    ],
+    "interactions": [
+      "Inibidores fortes de CYP3A4 são contraindicados",
+      "Diltiazem e verapamil aumentam exposição e bradicardia e devem ser evitados",
+      "Indutores de CYP3A4 reduzem exposição",
+      "Outros cronotrópicos negativos aumentam risco de bradicardia"
+    ],
+    "monitoring": [
+      "Frequência cardíaca",
+      "ritmo e surgimento de fibrilação atrial",
+      "pressão arterial",
+      "sintomas de bradicardia",
+      "fenômenos visuais"
+    ],
+    "administration": "Administrar duas vezes ao dia com alimentos. A solução oral deve ser medida com seringa ou dispositivo adequado.",
+    "preparation": "Solução oral 1 mg/mL pronta para uso; não confundir mg com mL.",
+    "infusionProtocol": "Não se aplica: ivabradina é oral.",
+    "pregnancy": "Pode causar toxicidade fetal conforme mecanismo e dados animais; evitar gestação e usar contracepção eficaz quando aplicável.",
+    "lactation": "Amamentação não é recomendada durante o tratamento pelo potencial de reações adversas graves e ausência de dados humanos adequados.",
+    "specialPopulations": {
+      "sinusRhythm": "Requer ritmo sinusal para o efeito sobre o nó sinusal.",
+      "CYP3A4": "Evitar inibidores fortes e verapamil/diltiazem.",
+      "pediatrics": "Indicação aprovada a partir de 6 meses em cardiomiopatia dilatada sintomática estável."
+    },
+    "patientEducation": [
+      "Tomar com alimentos",
+      "procurar avaliação por pulso muito lento, síncope ou palpitações irregulares",
+      "fenômenos luminosos costumam ser transitórios",
+      "evitar grapefruit e medicamentos CYP3A4 sem revisão clínica"
+    ],
+    "clinicalPearls": [
+      "Não substitui betabloqueio quando este é tolerado; é usada em pacientes selecionados com HFrEF e ritmo sinusal",
+      "A eficácia depende da frequência sinusal; não serve para controle de frequência na fibrilação atrial."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC/HFSA: em HFrEF sintomática estável, FEVE <=35%, ritmo sinusal e FC >=70 bpm apesar de betabloqueio máximo tolerado, ivabradina pode reduzir hospitalizações por insuficiência cardíaca."
+    ],
+    "safetyFlags": [
+      "BRADICARDIA",
+      "FIBRILACAO_ATRIAL",
+      "CYP3A4",
+      "TOXICIDADE_FETAL"
+    ],
     "alerts": [
-      "CONTRAINDICADA em FA/flutter — atua apenas em ritmo sinusal. Verificar ritmo antes de iniciar.",
-      "CONTRAINDICADA com inibidores potentes do CYP3A4: cetoconazol, itraconazol, ritonavir, claritromicina — risco de bradicardia grave.",
-      "Suspender se FC < 50 bpm, bradicardia sintomática, síncope ou aparecimento de FA.",
-      "Fosfenos (sensações luminosas transitórias) ocorrem em ~15% — tranquilizar paciente; geralmente reversíveis.",
-      "Não substituir betabloqueador — ivabradina é complementar ou para intolerância ao betabloqueador."
+      "Não usar em insuficiência cardíaca aguda descompensada",
+      "Evitar verapamil e diltiazem",
+      "Revisar ritmo se surgirem palpitações irregulares."
     ],
-    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · SHIFT Trial · Goodman & Gilman · Lexicomp · EMA/FDA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Ivabradina é metabolizada pelo CYP3A4 hepático. Sem ajuste renal formal em IR leve/moderada. Cautela em IR grave (dados limitados).",
-      "fgMaior50": {
-        "vo": {
-          "dose": "5–7,5 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "7,5 mg 12/12h",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dose e intervalo habituais. Sem ajuste renal necessário."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "5 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "7,5 mg 12/12h",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR moderada: sem ajuste formal necessário. Monitorar FC e tolerância clínica."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2,5–5 mg",
-          "intervalo": "12/12h (cautela)",
-          "doseMaxima": "5 mg 12/12h",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: dados limitados — usar dose mínima e monitorar FC. Considerar risco-benefício."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "12/12h (avaliar individualmente)",
-          "doseMaxima": "2,5 mg 12/12h",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muito grave: uso com cautela extrema — dados insuficientes. Monitoração rigorosa de FC obrigatória."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Ivabradina não é significativamente removida por hemodiálise. Metabolismo hepático predominante. Avaliar individualmente."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": false,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": false,
-      "bradycardiaRisk": true,
-      "avBlockRisk": false,
-      "atrialFibrillationRisk": true,
-      "pregnancyCaution": true,
-      "warning": "Ivabradina só é eficaz em RITMO SINUSAL. Monitorar FC e aparecimento de FA durante tratamento. CONTRAINDICADA em FC < 60 bpm antes do início, FA ativa, hepatopatia grave e com inibidores potentes de CYP3A4."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ESC Heart Failure Guidelines 2021/2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "SHIFT Trial (Lancet 2010)",
-        "Goodman & Gilman",
-        "Lexicomp 2026",
-        "EMA/FDA label"
+    "adverseEffects": {
+      "common": [
+        "bradicardia",
+        "hipertensão",
+        "fibrilação atrial",
+        "fenômenos luminosos ou fosfenos"
       ],
-      "note": "Único bradicardizante seletivo do nó sinusal sem efeito inotrópico negativo. Indicado em ICFEr com ritmo sinusal e FC ≥ 70 bpm apesar de betabloqueador otimizado (SHIFT Trial). CONTRAINDICADO em FA — sem eficácia e risco de bradicardia paradoxal."
-    }
+      "dangerous": [
+        "bradicardia sintomática",
+        "bloqueio de condução",
+        "fibrilação atrial",
+        "toxicidade fetal"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5157767b-16d5-4a69-b6bd-95d360d19fda",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=92018a65-38f6-45f7-91d4-a34921b81d0d",
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5157767b-16d5-4a69-b6bd-95d360d19fda"
   },
   "es": {
     "name": "Ivabradina",
-    "class": "Bradicardizante selectivo — Inhibidor de la corriente If del nodo sinusal (sin efecto inotrópico negativo)",
-    "commercialNames": {
-      "br": [
-        "Procoralan",
-        "Corlentor",
-        "Ivabradina genérica"
-      ],
-      "ar": [
-        "Procoralan",
-        "Ivabradina genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 2,5 mg",
-      "Comprimidos 5 mg",
-      "Comprimidos 7,5 mg"
+    "class": "Inhibidor selectivo de la corriente If del nodo sinusal",
+    "pharmacologicClass": "Bloqueador de canal HCN, reductor selectivo de frecuencia sin efecto inotrópico negativo directo",
+    "mechanism": "Inhibe la corriente If en células marcapasos del nodo sinusal, enlenteciendo la despolarización diastólica y reduciendo frecuencia cardíaca sin bloqueo beta ni efecto inotrópico negativo directo.",
+    "pharmacodynamics": "Reduce frecuencia en ritmo sinusal de manera dosis-dependiente. Puede producir bradicardia y fenómenos luminosos transitorios; aumenta riesgo de fibrilación auricular.",
+    "pharmacokinetics": "Metabolismo por CYP3A4. Vida media efectiva aproximada de 6 h, con metabolitos activos. Exposición aumenta con inhibidores CYP3A4 y hepatopatía.",
+    "indications": [
+      "Reducir hospitalización por empeoramiento de insuficiencia cardíaca en adultos con HFrEF crónica estable sintomática, ritmo sinusal y frecuencia elevada pese a betabloqueo máximo tolerado o contraindicación",
+      "insuficiencia cardíaca sintomática estable por miocardiopatía dilatada en pacientes pediátricos de 6 meses o más"
+    ],
+    "commercialNames": [
+      "Corlanor"
+    ],
+    "presentation": "Tabletas y solución oral.",
+    "presentations": [
+      "Tabletas 5 y 7.5 mg",
+      "Solución oral 5 mg/5 mL, 1 mg/mL"
     ],
     "dose": {
-      "adultoPadrao": "5 mg VO cada 12h con alimentos; titular a 7,5 mg cada 12h tras 2–4 semanas si FC > 60 lpm y tolerado.",
-      "adultoGrave": "Anciano frágil o FC limítrofe: iniciar 2,5 mg cada 12h y titular cuidadosamente. Objetivo FC reposo 50–60 lpm.",
-      "pediatricaPadrao": "No establecido de forma rutinaria en adultos jóvenes/pediatría. El uso requiere evaluación especializada.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
+      "adult": "5 mg dos veces al día con alimentos; 2.5 mg dos veces al día en adultos vulnerables. Ajustar después de 2 semanas por frecuencia; máximo 7.5 mg dos veces al día."
     },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "7,5 mg VO cada 12h"
-    },
-    "therapeuticRange": "FC reposo 50–60 lpm en ICFEr; reducción de hospitalizaciones; mantenimiento de FEVI",
-    "dilution": "Uso exclusivo vía oral con alimentos. No diluir.",
-    "speed": "Reevaluación de FC y tolerancia tras 2–4 semanas de cada ajuste. No modificar dosis sin nueva evaluación clínica.",
+    "pediatricDose": "Menos de 40 kg: iniciar 0.05 mg/kg dos veces al día con alimentos; ajustar cada 2 semanas. Máximo 0.2 mg/kg en 6 meses a <1 año o 0.3 mg/kg desde 1 año, sin superar 7.5 mg dos veces al día. Más de 40 kg: esquema según ficha con inicio 2.5 mg dos veces al día.",
+    "renalDose": "No se requiere ajuste entre CrCl 15-60 mL/min según farmacocinética; datos limitados por debajo de 15 mL/min. Titular por frecuencia y tolerancia.",
+    "hepaticDose": "No requiere ajuste en hepatopatía leve o moderada; contraindicado en insuficiencia hepática grave.",
     "commonAdverseEffects": [
-      "Bradicardia",
-      "Fosfenos (fenómenos luminosos visuales)",
-      "Mareos",
-      "Cefalea",
-      "Fatiga",
-      "Visión borrosa transitoria"
+      "bradicardia",
+      "hipertensión",
+      "fibrilación auricular",
+      "fenómenos luminosos o fosfenos"
     ],
     "dangerousAdverseEffects": [
-      "Bradicardia grave (FC < 40 lpm)",
-      "Síncope",
-      "Fibrilación auricular",
-      "Bloqueo sinoauricular",
-      "Parada sinusal"
+      "bradicardia sintomática",
+      "bloqueo de conducción",
+      "fibrilación auricular",
+      "toxicidad fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Insuficiencia cardíaca aguda descompensada",
+      "hipotensión clínicamente significativa",
+      "síndrome del nodo enfermo o bloqueo SA/AV avanzado sin marcapasos",
+      "bradicardia clínicamente significativa",
+      "insuficiencia hepática grave",
+      "dependencia exclusiva de marcapasos",
+      "inhibidores fuertes de CYP3A4"
+    ],
+    "interactions": [
+      "Inhibidores fuertes CYP3A4 están contraindicados",
+      "Diltiazem y verapamilo aumentan exposición y bradicardia y deben evitarse",
+      "Inductores CYP3A4 reducen exposición",
+      "Otros cronotrópicos negativos aumentan riesgo de bradicardia"
+    ],
+    "monitoring": [
+      "Frecuencia cardíaca",
+      "ritmo y aparición de fibrilación auricular",
+      "presión arterial",
+      "síntomas de bradicardia",
+      "fenómenos visuales"
+    ],
+    "administration": "Administrar dos veces al día con alimentos. La solución oral debe medirse con jeringa o dispositivo adecuado.",
+    "preparation": "Solución oral 1 mg/mL lista para uso; no confundir mg con mL.",
+    "infusionProtocol": "No aplica: ivabradina es oral.",
+    "pregnancy": "Puede causar toxicidad fetal según mecanismo y datos animales; evitar embarazo y usar anticoncepción eficaz cuando corresponda.",
+    "lactation": "No se recomienda lactancia durante tratamiento por potencial de reacciones adversas graves y ausencia de datos humanos adecuados.",
+    "specialPopulations": {
+      "sinusRhythm": "Requiere ritmo sinusal para el efecto sobre nodo sinusal.",
+      "CYP3A4": "Evitar inhibidores fuertes y verapamilo/diltiazem.",
+      "pediatrics": "Indicación aprobada desde 6 meses en miocardiopatía dilatada sintomática estable."
+    },
+    "patientEducation": [
+      "Tomar con alimentos",
+      "consultar por pulso muy lento, síncope o palpitaciones irregulares",
+      "los fenómenos luminosos suelen ser transitorios",
+      "evitar pomelo y medicamentos CYP3A4 sin revisión clínica"
+    ],
+    "clinicalPearls": [
+      "No sustituye betabloqueo cuando este es tolerado; se usa en pacientes seleccionados con HFrEF y ritmo sinusal",
+      "La eficacia depende de frecuencia sinusal; no sirve para control de frecuencia en fibrilación auricular."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC/HFSA: en HFrEF sintomática estable, LVEF <=35%, ritmo sinusal y FC >=70 lpm pese a beta-bloqueo máximo tolerado, ivabradina puede reducir hospitalizaciones por insuficiencia cardíaca."
+    ],
+    "safetyFlags": [
+      "BRADICARDIA",
+      "FIBRILACION_AURICULAR",
+      "CYP3A4",
+      "TOXICIDAD_FETAL"
+    ],
     "alerts": [
-      "CONTRAINDICADA en FA/flutter — actúa solo en ritmo sinusal. Verificar ritmo antes de iniciar.",
-      "CONTRAINDICADA con inhibidores potentes de CYP3A4: ketoconazol, itraconazol, ritonavir, claritromicina — riesgo de bradicardia grave.",
-      "Suspender si FC < 50 lpm, bradicardia sintomática, síncope o aparición de FA.",
-      "Fosfenos (sensaciones luminosas transitorias) ocurren en ~15% — tranquilizar al paciente; generalmente reversibles.",
-      "No sustituir al betabloqueante — la ivabradina es complementaria o para intolerancia al betabloqueante."
+      "No usar en insuficiencia cardíaca aguda descompensada",
+      "Evitar verapamilo y diltiazem",
+      "Revisar ritmo si aparecen palpitaciones irregulares."
     ],
-    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · SHIFT Trial · Goodman & Gilman · Lexicomp · EMA/FDA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Ivabradina se metaboliza por CYP3A4 hepático. Sin ajuste renal formal en IR leve/moderada. Precaución en IR grave (datos limitados).",
-      "fgMaior50": {
-        "vo": {
-          "dose": "5–7,5 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "7,5 mg 12/12h",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dosis e intervalo habituales. Sin ajuste renal necesario."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "5 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "7,5 mg 12/12h",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR moderada: sin ajuste formal necesario. Monitorizar FC y tolerancia clínica."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2,5–5 mg",
-          "intervalo": "12/12h (cautela)",
-          "doseMaxima": "5 mg 12/12h",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: datos limitados — usar dosis mínima y monitorizar FC. Considerar riesgo-beneficio."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "12/12h (avaliar individualmente)",
-          "doseMaxima": "2,5 mg 12/12h",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muy grave: uso con extrema precaución — datos insuficientes. Monitorización rigurosa de FC obligatoria."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Ivabradina no se elimina significativamente por hemodiálisis. Metabolismo hepático predominante. Evaluar individualmente."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": false,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": false,
-      "bradycardiaRisk": true,
-      "avBlockRisk": false,
-      "atrialFibrillationRisk": true,
-      "pregnancyCaution": true,
-      "warning": "Ivabradina solo es eficaz en RITMO SINUSAL. Monitorizar FC y aparición de FA durante el tratamiento. CONTRAINDICADA con FC < 60 lpm antes del inicio, FA activa, hepatopatía grave e inhibidores potentes de CYP3A4."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ESC Heart Failure Guidelines 2021/2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "SHIFT Trial (Lancet 2010)",
-        "Goodman & Gilman",
-        "Lexicomp 2026",
-        "EMA/FDA label"
+    "adverseEffects": {
+      "common": [
+        "bradicardia",
+        "hipertensión",
+        "fibrilación auricular",
+        "fenómenos luminosos o fosfenos"
       ],
-      "note": "Único bradicardizante selectivo del nodo sinusal sin efecto inotrópico negativo. Indicado en ICFEr con ritmo sinusal y FC ≥ 70 lpm a pesar de betabloqueante optimizado (SHIFT Trial). CONTRAINDICADO en FA — sin eficacia y riesgo de bradicardia paradójica."
-    }
+      "dangerous": [
+        "bradicardia sintomática",
+        "bloqueo de conducción",
+        "fibrilación auricular",
+        "toxicidad fetal"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5157767b-16d5-4a69-b6bd-95d360d19fda",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=92018a65-38f6-45f7-91d4-a34921b81d0d",
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5157767b-16d5-4a69-b6bd-95d360d19fda"
   },
   "name": {
     "pt": "Ivabradina",
@@ -295,9 +243,19 @@
     "ivabradina generica",
     "bradicardizante seletivo — inibidor da corrente if do no sinusal (sem efeito inotropico negativo)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-fc8f7aad4a91b82e",
+  "clinicalContentSha256": "fc8f7aad4a91b82ecb41dbbfd442168c085c5fe7dc1434c1927512f43759bc58",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "ivabradina.mcGoldClinicalV1",
+    "group": "GOLD_GROUP05_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "aec9a7c9d8f51968a33791a5c70a9e757b27379c369d23e9a12ab9012e59da84",
+    "physicalHomologation": "DEFERRED"
+  }
 }

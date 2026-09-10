@@ -1,288 +1,230 @@
 {
   "id": "metolazona",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "id": "metolazona",
+    "pharmacologicClass": "Diurético tiazídico ou tipo tiazida; inibidor funcional do cotransportador Na/Cl do túbulo distal",
+    "mechanism": "Reduz reabsorção de sódio e cloro no túbulo contornado distal, aumentando natriurese e diurese e reduzindo volume extracelular e resistência vascular no longo prazo.",
+    "pharmacodynamics": "Reduz pressão arterial e aumenta excreção de sódio e potássio; pode elevar cálcio sérico, ácido úrico e glicose e causar hiponatremia.",
+    "commonAdverseEffects": [
+      "hiponatremia",
+      "hipocalemia",
+      "tontura",
+      "hiperuricemia",
+      "hiperglicemia"
+    ],
+    "dangerousAdverseEffects": [
+      "hiponatremia grave",
+      "hipocalemia grave",
+      "arritmia secundária a distúrbio eletrolítico",
+      "lesão renal por depleção volêmica"
+    ],
+    "contraindications": [
+      "Anúria",
+      "hipersensibilidade ao fármaco; revisar história de reação a sulfonamidas não antibióticas com critério clínico"
+    ],
+    "interactions": [
+      "Lítio pode acumular",
+      "AINEs podem reduzir efeito anti-hipertensivo e diurético",
+      "Digoxina: hipocalemia aumenta risco de arritmia",
+      "Outros anti-hipertensivos podem potencializar hipotensão",
+      "Combinação com diurético de alça pode causar diurese intensa e distúrbios eletrolíticos; exige monitorização estreita."
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "sódio e potássio",
+      "creatinina/eTFG",
+      "magnésio",
+      "ácido úrico",
+      "glicose conforme risco"
+    ],
+    "administration": "Administrar preferencialmente pela manhã; titular para a menor dose eficaz.",
+    "preparation": "Comprimidos não exigem reconstituição.",
+    "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+    "pregnancy": "Diuréticos não são usados para tratar edema fisiológico da gestação; usar apenas se houver indicação materna clara.",
+    "lactation": "Pode reduzir produção de leite com diurese intensa; individualizar conforme dose e situação clínica.",
+    "specialPopulations": {
+      "elderly": "Maior risco de hiponatremia e depleção volêmica.",
+      "gout": "Pode aumentar ácido úrico e precipitar gota.",
+      "diabetes": "Pode piorar glicemia em alguns pacientes."
+    },
+    "patientEducation": [
+      "Tomar cedo para reduzir noctúria",
+      "procurar avaliação por fraqueza, cãibras, confusão ou tontura intensa",
+      "manter controles de eletrólitos e função renal"
+    ],
+    "clinicalPearls": [
+      "Pode potencializar diurese com diurético de alça na resistência diurética, mas aumenta muito o risco de hipovolemia, hiponatremia e hipocalemia."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: diuréticos tiazídicos/tiazídico-like são tratamento de primeira linha para hipertensão; clortalidona tem maior meia-vida e potência mg por mg que hidroclorotiazida."
+    ],
+    "safetyFlags": [
+      "SODIO",
+      "POTASSIO",
+      "FUNCAO_RENAL",
+      "ACIDO_URICO"
+    ],
+    "alerts": [
+      "Corrigir distúrbios eletrolíticos relevantes",
+      "Evitar sobrediurese e revisar AINEs concomitantes."
+    ],
     "name": "Metolazona",
     "class": "Diurético tiazídico-like de alta potência",
-    "category": "cardio",
+    "pharmacokinetics": "Absorção oral variável e efeito diurético prolongado, com salurese que pode persistir 24 h ou mais. É eliminada em parte pelos rins.",
+    "indications": [
+      "Edema da insuficiência cardíaca",
+      "edema por doença renal, incluindo síndrome nefrótica",
+      "hipertensão leve a moderada"
+    ],
     "commercialNames": [
-      "Zaroxolyn",
-      "Metolazona importada"
+      "Zaroxolyn"
     ],
-    "presentation": [
-      "Comprimidos 2,5 mg",
-      "Comprimidos 5 mg",
-      "Comprimidos 10 mg"
+    "presentation": "Comprimidos orais.",
+    "presentations": [
+      "Comprimidos 2,5, 5 e 10 mg conforme produto"
     ],
-    "mechanism": "Inibe reabsorção de sódio no túbulo contornado distal. Quando associada a diuréticos de alça promove bloqueio sequencial do néfron, aumentando intensamente natriurese e diurese. Mantém eficácia mesmo em DRC avançada.",
-    "halfLife": "12–24 horas",
-    "onset": "~1 hora",
     "dose": {
-      "adultoPadrao": "2,5 mg VO 1x/dia, administrar 30–60 min antes do diurético de alça.",
-      "adultoGrave": "2,5–10 mg VO/dia. Dose máxima: 20 mg/dia sob monitorização especializada."
+      "cardiacEdema": "5-20 mg uma vez ao dia.",
+      "renalEdema": "5-20 mg uma vez ao dia.",
+      "hypertension": "2,5-5 mg uma vez ao dia."
     },
-    "risksByPatient": [
-      "Gestante: utilizar apenas quando claramente necessário e sob supervisão especializada.",
-      "Lactante: dados limitados — utilizar com cautela.",
-      "Idoso (40 anos): risco extremamente elevado de hiponatremia, hipocalemia, hipotensão e insuficiência renal. Monitorização intensiva."
-    ],
-    "commonAdverseEffects": [
-      "Poliúria intensa",
-      "Hipotensão",
-      "Tontura",
-      "Fraqueza",
-      "Hipocalemia",
-      "Hiponatremia",
-      "Hipomagnesemia",
-      "Desidratação"
-    ],
-    "dangerousAdverseEffects": [
-      "Hipocalemia grave",
-      "Hiponatremia grave",
-      "Arritmias ventriculares",
-      "Torsades de Pointes por distúrbio eletrolítico",
-      "Lesão renal aguda",
-      "Choque hipovolêmico",
-      "Síncope",
-      "Alcalose metabólica grave"
-    ],
-    "alerts": [
-      "Metolazona é um dos diuréticos mais potentes — pode causar depleção volêmica rápida, hipocalemia grave e lesão renal aguda.",
-      "Administrar 30–60 min antes do diurético de alça para potencializar bloqueio sequencial do néfron.",
-      "Monitorar peso diário, balanço hídrico, creatinina, sódio, potássio e magnésio durante uso.",
-      "Interação grave: digoxina — hipocalemia aumenta expressivamente risco de toxicidade digitálica.",
-      "Diferencial: mantém eficácia diurética mesmo em DRC avançada (distingue-se dos tiazídicos clássicos)."
-    ],
-    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · UpToDate",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não requer ajuste renal habitual. Monitorizar eletrólitos rigorosamente.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "2,5–5 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dose habitual. Administrar 30–60 min antes do diurético de alça."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "1x/dia (cautela)",
-          "doseMaxima": "5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr 30–50 mL/min: iniciar com dose mínima. Monitorar eletrólitos e função renal frequentemente."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "1x/dia (máx 2–3x/semana — supervisão especializada)",
-          "doseMaxima": "5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr 10–30 mL/min: diferencial — mantém alguma eficácia. Uso restrito a especialistas. Monitorização intensiva diária."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "sob supervisão intensiva",
-          "doseMaxima": "2,5 mg/uso",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr < 10 mL/min: uso somente em ambiente hospitalar sob supervisão especializada. Risco extremo."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "individualizado",
-          "intervalo": "somente em ambiente hospitalar",
-          "doseMaxima": null,
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálise: uso possível em contexto especializado para controle de sobrecarga volêmica refratária. Monitorização contínua."
-      }
-    },
-    "safetyFlags": {
-      "hypotensionRisk": true,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "electrolyteRisk": true,
-      "hyperuricemiaRisk": true,
-      "diabetesRisk": true,
-      "renalHighRisk": true,
-      "qtRisk": true,
-      "hospitalizationLevelDrug": true,
-      "pregnancyCaution": true,
-      "warning": "Metolazona é um dos diuréticos mais potentes utilizados em IC avançada. Pode causar rápida depleção volêmica, hipocalemia grave, hiponatremia grave e insuficiência renal aguda. Uso hospitalar preferencial."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ESC Heart Failure Guidelines 2021/2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "KDIGO Guidelines",
-        "Goodman & Gilman",
-        "Lexicomp 2026",
-        "UpToDate"
+    "pediatricDose": "Não estabelecida em ensaios controlados; experiência limitada usa 0,05-0,1 mg/kg uma vez ao dia por poucos dias, com risco de hipovolemia e hipocalemia. Apenas sob protocolo pediátrico especializado.",
+    "renalDose": "Pode manter efeito com função renal reduzida e é usada em edema renal; não há redução fixa. Titular pela resposta com monitorização estreita de volemia, creatinina, sódio e potássio.",
+    "hepaticDose": "Usar com extrema cautela em cirrose ou hepatopatia avançada pelo risco de distúrbios eletrolíticos e encefalopatia.",
+    "adverseEffects": {
+      "common": [
+        "hiponatremia",
+        "hipocalemia",
+        "tontura",
+        "hiperuricemia",
+        "hiperglicemia"
       ],
-      "note": "Fármaco utilizado principalmente em IC avançada com resistência diurética. Principal agente para bloqueio sequencial do néfron. Diferencial: mantém eficácia em DRC avançada, ao contrário dos tiazídicos clássicos."
-    }
+      "dangerous": [
+        "hiponatremia grave",
+        "hipocalemia grave",
+        "arritmia secundária a distúrbio eletrolítico",
+        "lesão renal por depleção volêmica"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89201e19-d0e8-4192-b2a1-150e9d2c104d",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89201e19-d0e8-4192-b2a1-150e9d2c104d"
   },
   "es": {
-    "id": "metolazona",
-    "name": "Metolazona",
-    "class": "Diurético tipo tiazida de alta potencia",
-    "category": "cardio",
-    "commercialNames": [
-      "Zaroxolyn",
-      "Metolazona importada"
-    ],
-    "presentation": [
-      "Comprimidos 2,5 mg",
-      "Comprimidos 5 mg",
-      "Comprimidos 10 mg"
-    ],
-    "mechanism": "Inhibe la reabsorción de sodio en el túbulo contorneado distal. Cuando se asocia a diuréticos de asa produce bloqueo secuencial del nefrón, aumentando intensamente la natriuresis y la diuresis. Mantiene eficacia incluso en ERC avanzada.",
-    "halfLife": "12–24 horas",
-    "onset": "~1 hora",
-    "dose": {
-      "adultoPadrao": "2,5 mg VO 1 vez/día, administrar 30–60 min antes del diurético de asa.",
-      "adultoGrave": "2,5–10 mg VO/día. Dosis máxima: 20 mg/día bajo monitorización especializada."
-    },
-    "risksByPatient": [
-      "Gestante: utilizar solo cuando sea claramente necesario y bajo supervisión especializada.",
-      "Lactante: datos limitados — utilizar con precaución.",
-      "Anciano (40 años): riesgo extremadamente elevado de hiponatremia, hipocalemia, hipotensión e insuficiencia renal. Monitorización intensiva."
-    ],
+    "pharmacologicClass": "Diurético tiazídico o tipo tiazida; inhibidor funcional del cotransportador Na/Cl del túbulo distal",
+    "mechanism": "Reduce reabsorción de sodio y cloro en el túbulo contorneado distal, aumentando natriuresis y diuresis y reduciendo volumen extracelular y resistencia vascular a largo plazo.",
+    "pharmacodynamics": "Disminuye presión arterial y favorece excreción de sodio y potasio; puede aumentar calcio sérico, ácido úrico y glucosa y causar hiponatremia.",
     "commonAdverseEffects": [
-      "Poliuria intensa",
-      "Hipotensión",
-      "Mareos",
-      "Debilidad",
-      "Hipocalemia",
-      "Hiponatremia",
-      "Hipomagnesemia",
-      "Deshidratación"
+      "hiponatremia",
+      "hipopotasemia",
+      "mareo",
+      "hiperuricemia",
+      "hiperglucemia"
     ],
     "dangerousAdverseEffects": [
-      "Hipocalemia grave",
-      "Hiponatremia grave",
-      "Arritmias ventriculares",
-      "Torsades de Pointes por trastorno electrolítico",
-      "Lesión renal aguda",
-      "Shock hipovolémico",
-      "Síncope",
-      "Alcalosis metabólica grave"
+      "hiponatremia grave",
+      "hipopotasemia grave",
+      "arritmia secundaria a trastorno electrolítico",
+      "lesión renal por depleción de volumen"
+    ],
+    "contraindications": [
+      "Anuria",
+      "hipersensibilidad al fármaco; revisar antecedentes de reacción a sulfonamidas no antibióticas con criterio clínico"
+    ],
+    "interactions": [
+      "Litio puede acumularse",
+      "AINE pueden reducir efecto antihipertensivo y diurético",
+      "Digoxina: hipopotasemia aumenta riesgo de arritmia",
+      "Otros antihipertensivos pueden potenciar hipotensión",
+      "Combinación con diurético de asa puede producir diuresis intensa y alteraciones electrolíticas; requiere monitorización estrecha."
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "sodio y potasio",
+      "creatinina/eGFR",
+      "magnesio",
+      "ácido úrico",
+      "glucosa según riesgo"
+    ],
+    "administration": "Administrar preferentemente por la mañana; titular a la menor dosis eficaz.",
+    "preparation": "Tabletas no requieren reconstitución.",
+    "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+    "pregnancy": "Los diuréticos no se usan para tratar edema fisiológico del embarazo; usar solo si existe indicación materna clara.",
+    "lactation": "Puede reducir producción de leche con diuresis intensa; individualizar por dosis y situación clínica.",
+    "specialPopulations": {
+      "elderly": "Mayor riesgo de hiponatremia y depleción de volumen.",
+      "gout": "Puede aumentar ácido úrico y precipitar gota.",
+      "diabetes": "Puede empeorar glucemia en algunos pacientes."
+    },
+    "patientEducation": [
+      "Tomar temprano para reducir nocturia",
+      "consultar por debilidad, calambres, confusión o mareo intenso",
+      "mantener controles de electrolitos y función renal"
+    ],
+    "clinicalPearls": [
+      "Puede potenciar diuresis junto con un diurético de asa en resistencia diurética, pero aumenta mucho el riesgo de hipovolemia, hiponatremia e hipopotasemia."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: diuréticos tipo tiazida son tratamiento de primera línea para hipertensión; clortalidona tiene mayor vida media y potencia mg por mg que hidroclorotiazida."
+    ],
+    "safetyFlags": [
+      "SODIO",
+      "POTASIO",
+      "FUNCION_RENAL",
+      "ACIDO_URICO"
     ],
     "alerts": [
-      "Metolazona es uno de los diuréticos más potentes — puede causar depleción de volumen rápida, hipocalemia grave y lesión renal aguda.",
-      "Administrar 30–60 min antes del diurético de asa para potenciar el bloqueo secuencial del nefrón.",
-      "Monitorizar peso diario, balance hídrico, creatinina, sodio, potasio y magnesio durante el uso.",
-      "Interacción grave: digoxina — hipocalemia aumenta expresivamente el riesgo de toxicidad digitálica.",
-      "Diferencial: mantiene eficacia diurética incluso en ERC avanzada (se diferencia de las tiazidas clásicas)."
+      "Corregir alteraciones electrolíticas relevantes",
+      "Evitar sobre-diuresis y revisar AINE concomitantes."
     ],
-    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · UpToDate",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual. Monitorizar electrolitos rigurosamente.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "2,5–5 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dosis habitual. Administrar 30–60 min antes del diurético de asa."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "1x/dia (cautela)",
-          "doseMaxima": "5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr 30–50 mL/min: iniciar con dosis mínima. Monitorizar electrolitos y función renal frecuentemente."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "1x/dia (máx 2–3x/semana — supervisão especializada)",
-          "doseMaxima": "5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr 10–30 mL/min: diferencial — mantiene cierta eficacia. Uso restringido a especialistas. Monitorización intensiva diaria."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "sob supervisão intensiva",
-          "doseMaxima": "2,5 mg/uso",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr < 10 mL/min: uso solo en ambiente hospitalario bajo supervisión especializada. Riesgo extremo."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "individualizado",
-          "intervalo": "somente em ambiente hospitalar",
-          "doseMaxima": null,
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálisis: uso posible en contexto especializado para control de sobrecarga de volumen refractaria. Monitorización continua."
-      }
+    "name": "Metolazona",
+    "class": "Diurético tipo tiazida de alta potencia",
+    "pharmacokinetics": "Absorción oral variable y efecto diurético prolongado, con saluresis que puede persistir 24 h o más. Se elimina en parte por riñón.",
+    "indications": [
+      "Edema de insuficiencia cardíaca",
+      "edema por enfermedad renal, incluido síndrome nefrótico",
+      "hipertensión leve a moderada"
+    ],
+    "commercialNames": [
+      "Zaroxolyn"
+    ],
+    "presentation": "Tabletas orales.",
+    "presentations": [
+      "Tabletas 2.5, 5 y 10 mg según producto"
+    ],
+    "dose": {
+      "cardiacEdema": "5-20 mg una vez al día.",
+      "renalEdema": "5-20 mg una vez al día.",
+      "hypertension": "2.5-5 mg una vez al día."
     },
-    "safetyFlags": {
-      "hypotensionRisk": true,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "electrolyteRisk": true,
-      "hyperuricemiaRisk": true,
-      "diabetesRisk": true,
-      "renalHighRisk": true,
-      "qtRisk": true,
-      "hospitalizationLevelDrug": true,
-      "pregnancyCaution": true,
-      "warning": "La metolazona es uno de los diuréticos más potentes utilizados en IC avanzada. Puede causar rápida depleción de volumen, hipocalemia grave, hiponatremia grave e insuficiencia renal aguda. Uso hospitalario preferencial."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ESC Heart Failure Guidelines 2021/2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "KDIGO Guidelines",
-        "Goodman & Gilman",
-        "Lexicomp 2026",
-        "UpToDate"
+    "pediatricDose": "No establecida en ensayos controlados; experiencia limitada usa 0.05-0.1 mg/kg una vez al día por pocos días, con riesgo de hipovolemia e hipopotasemia. Solo bajo protocolo pediátrico especializado.",
+    "renalDose": "Puede conservar efecto con función renal reducida y se usa en edema renal; no existe reducción fija. Titular por respuesta con vigilancia estrecha de volumen, creatinina, sodio y potasio.",
+    "hepaticDose": "Usar con extrema cautela en cirrosis o hepatopatía avanzada por riesgo de alteraciones electrolíticas y encefalopatía.",
+    "adverseEffects": {
+      "common": [
+        "hiponatremia",
+        "hipopotasemia",
+        "mareo",
+        "hiperuricemia",
+        "hiperglucemia"
       ],
-      "note": "Fármaco utilizado principalmente en IC avanzada con resistencia diurética. Principal agente para bloqueo secuencial del nefrón. Diferencial: mantiene eficacia en ERC avanzada, a diferencia de las tiazidas clásicas."
-    }
+      "dangerous": [
+        "hiponatremia grave",
+        "hipopotasemia grave",
+        "arritmia secundaria a trastorno electrolítico",
+        "lesión renal por depleción de volumen"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89201e19-d0e8-4192-b2a1-150e9d2c104d",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89201e19-d0e8-4192-b2a1-150e9d2c104d"
   },
   "name": {
     "pt": "Metolazona",
@@ -292,9 +234,19 @@
     "metolazona",
     "diuretico tiazidico-like de alta potencia"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-08b9648aa55fe977",
+  "clinicalContentSha256": "08b9648aa55fe9778b43ee806de0b8f0eaf5f6422a9ff82ed29ac061bad30083",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "metolazona.mcGoldClinicalV1",
+    "group": "GOLD_GROUP06_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "50870a9a545ee54677ca1afa21444f3654c566a407093b7528525c814133bd66",
+    "physicalHomologation": "DEFERRED"
+  }
 }

@@ -1,14 +1,188 @@
 {
   "id": "clopidogrel",
   "category": "anticoag",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Clopidogrel (Bissulfato de)"
+    "name": "Clopidogrel (Bissulfato de)",
+    "class": "Antiagregante plaquetário tienopiridínico",
+    "pharmacologicClass": "Pró-fármaco inibidor irreversível do receptor plaquetário P2Y12",
+    "mechanism": "Após bioativação hepática, o metabólito ativo liga-se de forma irreversível ao receptor P2Y12 do ADP, inibindo ativação e agregação plaquetária por toda a vida da plaqueta.",
+    "pharmacodynamics": "A inibição plaquetária começa em horas após dose de ataque e se acumula com uso diário. Recuperação funcional depende da produção de novas plaquetas.",
+    "pharmacokinetics": "Pró-fármaco com ativação em duas etapas, relevante pelo CYP2C19. Metabolizadores pobres têm menor exposição ao metabólito ativo e menor inibição plaquetária. Ligação proteica elevada; metabólitos eliminados por urina e fezes.",
+    "indications": [
+      "Síndrome coronariana aguda em combinação com aspirina",
+      "Prevenção secundária após IAM ou AVC isquêmico recente",
+      "Doença arterial periférica estabelecida",
+      "Componente de dupla antiagregação após PCI quando indicado"
+    ],
+    "commercialNames": [
+      "Plavix",
+      "Clopidogrel genérico"
+    ],
+    "presentation": "Comprimidos revestidos para uso oral.",
+    "presentations": [
+      "Comprimidos 75 mg",
+      "Comprimidos 300 mg em algumas apresentações"
+    ],
+    "dose": {
+      "SCA com necessidade de efeito rápido": "Ataque 300 mg VO, seguido de 75 mg VO uma vez ao dia segundo bula; estratégias de PCI podem usar carga maior conforme protocolo especializado",
+      "IAM/AVC recente ou DAP": "75 mg VO uma vez ao dia sem dose de ataque",
+      "Pós-PCI": "Manutenção usual 75 mg/dia associada à aspirina, duração conforme risco isquêmico e hemorrágico"
+    },
+    "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas para uso cardiovascular rotineiro; utilizar apenas sob protocolo especializado.",
+    "renalDose": "Não há ajuste posológico rotineiro específico apenas pela função renal; insuficiência renal avançada aumenta risco hemorrágico e exige avaliação individual.",
+    "hepaticDose": "Sem ajuste rotineiro em comprometimento leve a moderado; em hepatopatia grave ou coagulopatia, ponderar risco hemorrágico e capacidade de ativação metabólica.",
+    "commonAdverseEffects": [
+      "Equimoses",
+      "Epistaxe",
+      "Sangramento gastrointestinal",
+      "Diarreia",
+      "Rash"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia intracraniana",
+      "Hemorragia gastrointestinal maior",
+      "Púrpura trombocitopênica trombótica",
+      "Neutropenia rara",
+      "Reação alérgica grave"
+    ],
+    "adverseEffects": "O principal risco é sangramento. TTP pode ocorrer raramente, inclusive nas primeiras semanas, e exige reconhecimento e tratamento urgentes.",
+    "contraindications": [
+      "Sangramento patológico ativo, como úlcera hemorrágica ou hemorragia intracraniana",
+      "Hipersensibilidade ao clopidogrel"
+    ],
+    "interactions": [
+      "Omeprazol e esomeprazol podem reduzir formação do metabólito ativo via CYP2C19 e devem ser evitados",
+      "Anticoagulantes, AINEs e outros antiagregantes aumentam risco de sangramento",
+      "Inibidores fortes de CYP2C19 podem reduzir efeito antiplaquetário"
+    ],
+    "monitoring": [
+      "Sinais clínicos de sangramento",
+      "Hemograma quando clinicamente indicado",
+      "Adesão após PCI",
+      "Interações com inibidores de CYP2C19",
+      "Considerar farmacogenética em falha terapêutica ou cenários selecionados"
+    ],
+    "administration": "Administrar com ou sem alimento. Não interromper precocemente após stent sem discussão com cardiologia, devido ao risco de trombose do stent.",
+    "preparation": "Uso oral; comprimidos podem ser administrados inteiros. Se houver necessidade de via enteral, seguir política institucional e dados da formulação.",
+    "infusionProtocol": "Não se aplica: clopidogrel é administrado por via oral.",
+    "pregnancy": "Dados humanos disponíveis não demonstram sinal claro de grande teratogenicidade, mas uso deve ser guiado por indicação materna e risco de sangramento periparto.",
+    "lactation": "Não se sabe com precisão a exposição clínica do lactente; avaliar necessidade materna, risco hemorrágico e alternativas.",
+    "specialPopulations": "Metabolizadores pobres CYP2C19 podem ter menor resposta. Em pacientes que necessitam anticoagulação crônica após PCI, clopidogrel é frequentemente o P2Y12 preferido por estratégias de redução de sangramento.",
+    "patientEducation": "Informar sobre hematomas e sangramento, avisar dentista ou cirurgião e não interromper o tratamento por conta própria após SCA ou stent.",
+    "clinicalPearls": [
+      "É um pró-fármaco dependente de CYP2C19",
+      "Omeprazol e esomeprazol podem reduzir ativação",
+      "Prasugrel ou ticagrelor são preferidos ao clopidogrel em muitos pacientes com SCA submetidos a PCI, quando não há contraindicação"
+    ],
+    "guidelineRecommendations": "ACC/AHA 2025 para SCA: ticagrelor ou prasugrel são preferidos ao clopidogrel em NSTE-SCA e STEMI submetidos a PCI; DAPT por pelo menos 12 meses é estratégia padrão em pacientes sem alto risco hemorrágico. Quando anticoagulação crônica é necessária, clopidogrel é o P2Y12 preferido.",
+    "safetyFlags": [
+      "Risco de sangramento",
+      "Resposta reduzida em metabolizador pobre CYP2C19",
+      "Não interromper precocemente após PCI",
+      "Evitar omeprazol ou esomeprazol"
+    ],
+    "alerts": [
+      "Planejar suspensão antes de cirurgia eletiva de alto risco hemorrágico conforme protocolo; a bula cita 5 dias",
+      "Suspeitar TTP diante de trombocitopenia, anemia hemolítica, alterações neurológicas ou renais"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c03a895c-2d74-4d7f-891f-b752ce409b68",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+    ],
+    "ref": "DailyMed Clopidogrel; ACC/AHA ACS Guideline 2025"
   },
   "es": {
-    "name": "Clopidogrel (Bisulfato de)"
+    "name": "Clopidogrel (Bisulfato de)",
+    "class": "Antiagregante plaquetario tienopiridínico",
+    "pharmacologicClass": "Profármaco inhibidor irreversible del receptor plaquetario P2Y12",
+    "mechanism": "Tras bioactivación hepática, el metabolito activo se une de forma irreversible al receptor P2Y12 de ADP, inhibiendo activación y agregación plaquetaria durante la vida de la plaqueta.",
+    "pharmacodynamics": "La inhibición plaquetaria comienza en horas tras una dosis de carga y se acumula con el uso diario. La recuperación funcional depende de la producción de nuevas plaquetas.",
+    "pharmacokinetics": "Profármaco con activación en dos etapas, con papel relevante de CYP2C19. Metabolizadores pobres presentan menor exposición al metabolito activo y menor inhibición plaquetaria. Alta unión a proteínas; metabolitos eliminados por orina y heces.",
+    "indications": [
+      "Síndrome coronario agudo en combinación con aspirina",
+      "Prevención secundaria tras IAM o ACV isquémico reciente",
+      "Enfermedad arterial periférica establecida",
+      "Componente de doble antiagregación tras PCI cuando está indicado"
+    ],
+    "commercialNames": [
+      "Plavix",
+      "Clopidogrel genérico"
+    ],
+    "presentation": "Comprimidos recubiertos para uso oral.",
+    "presentations": [
+      "Comprimidos 75 mg",
+      "Comprimidos 300 mg en algunas presentaciones"
+    ],
+    "dose": {
+      "SCA con necesidad de efecto rápido": "Carga 300 mg VO, seguida de 75 mg VO una vez al día según ficha; estrategias de PCI pueden usar una carga mayor según protocolo especializado",
+      "IAM/ACV reciente o EAP": "75 mg VO una vez al día sin carga",
+      "Post-PCI": "Mantenimiento habitual 75 mg/día asociado a aspirina, duración según riesgo isquémico y hemorrágico"
+    },
+    "pediatricDose": "Seguridad y eficacia pediátricas no establecidas para uso cardiovascular rutinario; utilizar solo bajo protocolo especializado.",
+    "renalDose": "No requiere ajuste rutinario específico solo por función renal; la insuficiencia renal avanzada aumenta el riesgo hemorrágico y exige evaluación individual.",
+    "hepaticDose": "Sin ajuste rutinario en compromiso leve a moderado; en hepatopatía grave o coagulopatía valorar riesgo hemorrágico y capacidad de activación metabólica.",
+    "commonAdverseEffects": [
+      "Equimosis",
+      "Epistaxis",
+      "Sangrado gastrointestinal",
+      "Diarrea",
+      "Exantema"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia intracraneal",
+      "Hemorragia gastrointestinal mayor",
+      "Púrpura trombótica trombocitopénica",
+      "Neutropenia rara",
+      "Reacción alérgica grave"
+    ],
+    "adverseEffects": "El principal riesgo es el sangrado. La PTT puede aparecer raramente, incluso en las primeras semanas, y requiere reconocimiento y tratamiento urgentes.",
+    "contraindications": [
+      "Sangrado patológico activo, como úlcera hemorrágica o hemorragia intracraneal",
+      "Hipersensibilidad a clopidogrel"
+    ],
+    "interactions": [
+      "Omeprazol y esomeprazol pueden reducir la formación del metabolito activo por CYP2C19 y deben evitarse",
+      "Anticoagulantes, AINE y otros antiagregantes aumentan riesgo de sangrado",
+      "Inhibidores potentes de CYP2C19 pueden reducir efecto antiplaquetario"
+    ],
+    "monitoring": [
+      "Signos clínicos de sangrado",
+      "Hemograma cuando esté indicado",
+      "Adherencia tras PCI",
+      "Interacciones con inhibidores CYP2C19",
+      "Considerar farmacogenética en fracaso terapéutico o escenarios seleccionados"
+    ],
+    "administration": "Administrar con o sin alimentos. No suspender precozmente tras stent sin discutirlo con cardiología por el riesgo de trombosis del stent.",
+    "preparation": "Uso oral; administrar comprimidos enteros. Si se necesita vía enteral, seguir política institucional y datos de la formulación.",
+    "infusionProtocol": "No se aplica: clopidogrel se administra por vía oral.",
+    "pregnancy": "Los datos humanos disponibles no muestran una señal clara de gran teratogenicidad, pero el uso debe guiarse por indicación materna y riesgo de sangrado periparto.",
+    "lactation": "La exposición clínica del lactante no está bien definida; valorar necesidad materna, riesgo hemorrágico y alternativas.",
+    "specialPopulations": "Metabolizadores pobres CYP2C19 pueden responder menos. En pacientes que requieren anticoagulación crónica tras PCI, clopidogrel suele ser el P2Y12 preferido en estrategias de reducción de sangrado.",
+    "patientEducation": "Informar sobre hematomas y sangrado, avisar al dentista o cirujano y no suspender por cuenta propia tras SCA o stent.",
+    "clinicalPearls": [
+      "Es un profármaco dependiente de CYP2C19",
+      "Omeprazol y esomeprazol pueden reducir activación",
+      "Prasugrel o ticagrelor son preferidos a clopidogrel en muchos pacientes con SCA sometidos a PCI cuando no están contraindicados"
+    ],
+    "guidelineRecommendations": "ACC/AHA 2025 para SCA: ticagrelor o prasugrel se prefieren a clopidogrel en NSTE-SCA y STEMI sometidos a PCI; DAPT por al menos 12 meses es estrategia por defecto sin alto riesgo hemorrágico. Si se requiere anticoagulación crónica, clopidogrel es el P2Y12 preferido.",
+    "safetyFlags": [
+      "Riesgo de sangrado",
+      "Respuesta reducida en metabolizador pobre CYP2C19",
+      "No suspender precozmente tras PCI",
+      "Evitar omeprazol o esomeprazol"
+    ],
+    "alerts": [
+      "Planificar suspensión antes de cirugía electiva de alto riesgo hemorrágico según protocolo; la ficha cita 5 días",
+      "Sospechar PTT ante trombocitopenia, anemia hemolítica, alteraciones neurológicas o renales"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c03a895c-2d74-4d7f-891f-b752ce409b68",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+    ],
+    "ref": "DailyMed Clopidogrel; ACC/AHA ACS Guideline 2025"
   },
   "name": {
     "pt": "Clopidogrel (Bissulfato de)",
@@ -18,8 +192,8 @@
     "clopidogrel",
     "clopidogrel (bissulfato de)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+  "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "anticoag.js",
@@ -40,7 +214,7 @@
       "record": {
         "id": "clopidogrel",
         "category": "cardio",
-        "icon": "🩸",
+        "icon": "💊",
         "color": "rgba(239,68,68,0.13)",
         "colorTxt": "#B91C1C",
         "pt": {
@@ -174,12 +348,22 @@
           "nogreg",
           "antiagregante plaquetario — antagonista irreversivel p2y12"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+        "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "clopidogrel.mcGoldClinicalV1",
+    "group": "GOLD_GROUP03_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "5531d045a0796f18791d19828db17da60349bb8fc9dde0db028e007210c62a50",
+    "physicalHomologation": "DEFERRED"
+  }
 }

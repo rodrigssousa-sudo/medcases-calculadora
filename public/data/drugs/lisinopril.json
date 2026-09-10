@@ -1,314 +1,258 @@
 {
   "id": "lisinopril",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(59,130,246,0.13)",
   "colorTxt": "#1E3A8A",
   "pt": {
-    "name": "Lisinopril",
-    "class": "Inibidor da Enzima Conversora de Angiotensina (IECA) — Forma ativa (não pró-fármaco)",
-    "commercialNames": {
-      "br": [
-        "Zestril",
-        "Prinivil",
-        "Lisinopril Genérico"
-      ],
-      "ar": [
-        "Zestril",
-        "Lisinopril Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 2,5 mg, 5 mg, 10 mg, 20 mg, 40 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 10 mg VO 1x/dia inicial. Manutenção: 10–40 mg/dia 1x/dia. Máximo: 40 mg/dia.",
-      "adultoGrave": "ICC: iniciar 2,5–5 mg VO 1x/dia. Titular até 20–40 mg/dia. Pós-IAM: 5 mg nas primeiras 24h, 5 mg após 24h, 10 mg após 48h, então 10 mg/dia.",
-      "pediatricaPadrao": "4.9 mg VO 1x/dia (0,07 mg/kg/dia inicial em HTA pediátrica ≥ 6 anos).",
-      "pediatricaGrave": "Titular até 40 mg/dia (0,6 mg/kg/dia ou 40 mg — o menor).",
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "0,07 mg/kg/dia VO 1x/dia (HTA pediátrica ≥ 6 anos, FDA-aprovado)",
-      "grave": "Até 0,6 mg/kg/dia ou 40 mg/dia (o menor)",
-      "meningite": null,
-      "doseMaxima": "Adultos: 40 mg/dia | Pediatria: 40 mg/dia ou 0,6 mg/kg/dia"
-    },
-    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. ICC: alvo 20–40 mg/dia 1x/dia. Não requer níveis séricos — monitorar por resposta clínica, PA, creatinina e K⁺.",
-    "dilution": "Apenas formulação oral disponível. Lisinopril é a forma ativa — sem necessidade de conversão hepática.",
-    "speed": "VO: tomar 1x/dia no mesmo horário, com ou sem alimento.",
+    "class": "Inibidor da enzima conversora de angiotensina (IECA)",
+    "pharmacologicClass": "Modulador do sistema renina-angiotensina; inibidor da ECA",
+    "mechanism": "Inibe a ECA, reduz a formação de angiotensina II e a secreção de aldosterona e aumenta bradicinina. O resultado é vasodilatação e redução de pós-carga e pré-carga.",
+    "pharmacodynamics": "Reduz pressão arterial e resistência vascular sistêmica sem taquicardia reflexa importante. Na insuficiência cardíaca reduz pós-carga; pode elevar potássio e creatinina pelo bloqueio do SRAA.",
     "commonAdverseEffects": [
-      "Tosse seca (efeito de classe IECA)",
-      "Tontura / hipotensão",
-      "Hipercalemia",
-      "Elevação de creatinina",
-      "Cefaleia"
+      "tosse seca",
+      "tontura",
+      "hipotensão",
+      "hipercalemia",
+      "aumento de creatinina"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (contraindicar IECA permanentemente após episódio)",
-      "Insuficiência Renal Aguda",
-      "Hipercalemia grave (K⁺ > 6 mEq/L)",
-      "Hipotensão grave na primeira dose"
+      "angioedema",
+      "lesão renal aguda",
+      "hipercalemia grave",
+      "hipotensão sintomática",
+      "toxicidade fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "História de angioedema relacionado a IECA",
+      "angioedema hereditário ou idiopático",
+      "uso concomitante de alisquireno em diabetes",
+      "uso dentro de 36 h de sacubitril/valsartana",
+      "hipersensibilidade ao fármaco"
+    ],
+    "interactions": [
+      "Suplementos de potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+      "AINEs podem reduzir efeito anti-hipertensivo e aumentar lesão renal",
+      "Lítio pode acumular",
+      "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
+      "Sacubitril/valsartana exige intervalo de 36 h"
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "creatinina/eTFG e potássio antes de iniciar e após titulação",
+      "sintomas de hipotensão",
+      "angioedema",
+      "gestação quando aplicável"
+    ],
+    "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+    "patientEducation": [
+      "Evitar gestação durante o tratamento",
+      "procurar urgência diante de edema de face, lábios ou língua",
+      "não usar suplementos de potássio ou sal com potássio sem orientação",
+      "levantar lentamente se houver tontura"
+    ],
+    "clinicalPearls": [
+      "Elevação de creatinina exige avaliar volume, AINE, estenose de artéria renal e outros fatores; KDIGO orienta revisar se o aumento superar 30% em até 4 semanas",
+      "A tosse é mediada em parte por bradicinina e costuma resolver com troca para BRA"
+    ],
+    "guidelineRecommendations": [
+      "Diretriz AHA/ACC 2025: IECAs são uma das classes de primeira linha para hipertensão quando indicados",
+      "KDIGO 2024: IECA ou BRA são priorizados na DRC com albuminúria e titulados à maior dose tolerada",
+      "AHA/ACC/HFSA: em HFrEF usa-se IECA quando ARNI não é viável"
+    ],
+    "safetyFlags": [
+      "TOXICIDADE_FETAL",
+      "ANGIOEDEMA",
+      "HIPERCALEMIA",
+      "FUNCAO_RENAL",
+      "INTERVALO_ARNI_36H"
+    ],
     "alerts": [
-      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação. Aumento de creatinina ≤ 30% é esperado e aceitável.",
-      "Diferencial farmacológico: lisinopril é forma ativa (não pró-fármaco) — biodisponibilidade não depende de conversão hepática.",
-      "Sacubitril/Valsartana: washout obrigatório de 36h antes de iniciar Lisinopril (risco de angioedema).",
-      "Aprovado pela FDA em pediatria ≥ 6 anos para HTA — único IECA com aprovação pediátrica formal."
+      "Não combinar rotineiramente IECA e BRA",
+      "Corrigir depleção de volume quando possível antes de iniciar",
+      "Suspender e tratar imediatamente se ocorrer angioedema"
     ],
-    "ref": "FDA Zestril (lisinopril) label 2023 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não requer ajuste formal para ClCr ≥ 30 mL/min.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "5–10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,07 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose padrão. Lisinopril eliminado integralmente por via renal — função renal normal não requer ajuste."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "5 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,04 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "IR moderada: sem ajuste obrigatório nas diretrizes, mas preferir dose inicial de 5 mg e monitorar K⁺/creatinina."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2,5–5 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,02 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "IR grave: iniciar com 2,5 mg/dia. Acúmulo significativo — risco aumentado de hipotensão e hipercalemia."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muito grave: dose máxima 2,5 mg/dia. Avaliação cuidadosa de risco-benefício. Risco de hipercalemia potencialmente fatal."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "Pós-HD",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Lisinopril é dialisável (~50% removido em 4h de HD). Administrar dose após sessão para evitar hipotensão intradialítica."
-      }
+    "specialPopulations": {
+      "elderly": "Titular conforme pressão, função renal e estado volêmico.",
+      "renalArteryStenosis": "Maior risco de deterioração renal; monitorar de perto.",
+      "blackPatients": "A resposta anti-hipertensiva em monoterapia pode ser menor; o risco de angioedema é maior."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. Único IECA aprovado em pediatria ≥ 6 anos. Forma ativa — sem conversão hepática. Ajuste renal em ClCr < 30."
+    "name": "Lisinopril",
+    "pharmacokinetics": "Não é pró-fármaco e não sofre metabolismo significativo. É eliminado inalterado pelos rins; meia-vida efetiva aproximada de 12 h e exposição aumenta na insuficiência renal.",
+    "indications": [
+      "Hipertensão em adultos e crianças >=6 anos",
+      "tratamento adjuvante da insuficiência cardíaca sistólica",
+      "tratamento precoce após infarto agudo do miocárdio em paciente hemodinamicamente estável"
+    ],
+    "commercialNames": [
+      "Zestril",
+      "Prinivil"
+    ],
+    "presentation": "Comprimidos orais.",
+    "presentations": [
+      "Comprimidos 2,5, 5, 10, 20, 30 e 40 mg conforme fabricante"
+    ],
+    "dose": {
+      "hypertension": "10 mg uma vez ao dia; se em diurético, considerar 5 mg; titular até 40 mg/dia.",
+      "heartFailure": "5 mg uma vez ao dia; em hiponatremia pode-se iniciar 2,5 mg; titular até 40 mg/dia.",
+      "acuteMI": "5 mg dentro de 24 h do IAM, 5 mg após 24 h, 10 mg após 48 h e então 10 mg/dia se tolerado; ajustar à hemodinâmica."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "FDA Zestril (lisinopril) label 2023",
-        "EMA Zestril SmPC 2024",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "ESC Hypertension Guidelines 2023",
-        "UpToDate 2025",
-        "Lexicomp Online 2026",
-        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+    "pediatricDose": "Hipertensão >=6 anos e eTFG >30 mL/min/1,73 m²: 0,07 mg/kg uma vez ao dia, máximo inicial 5 mg; máximo estudado 0,61 mg/kg ou 40 mg/dia. Não recomendado <6 anos ou eTFG <30.",
+    "renalDose": "ClCr 10-30 mL/min: usar metade da dose inicial habitual. ClCr <10 mL/min ou hemodiálise: iniciar 2,5 mg uma vez ao dia; titular com pressão, creatinina e potássio.",
+    "hepaticDose": "Não requer ajuste específico baseado apenas em função hepática porque não é metabolizado de forma relevante; titular pela resposta e tolerância.",
+    "administration": "Administrar uma vez ao dia, com ou sem alimentos, em horário consistente.",
+    "preparation": "Comprimidos não exigem preparo; usar formulação adequada se houver dificuldade de deglutição.",
+    "infusionProtocol": "Não se aplica: lisinopril deste registro é oral.",
+    "lactation": "Dados humanos são limitados; individualizar e considerar alternativa com maior experiência em lactentes muito jovens, monitorando hipotensão e função renal se houver exposição.",
+    "adverseEffects": {
+      "common": [
+        "tosse seca",
+        "tontura",
+        "hipotensão",
+        "hipercalemia",
+        "aumento de creatinina"
       ],
-      "note": "Único IECA que é forma ativa (não pró-fármaco). Eliminação renal > 90%. Aprovado em pediatria ≥ 6 anos. Dialisável ~50% — dose pós-HD. Ajuste obrigatório em ClCr < 30."
-    }
+      "dangerous": [
+        "angioedema",
+        "lesão renal aguda",
+        "hipercalemia grave",
+        "hipotensão sintomática",
+        "toxicidade fetal"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e6364a4-6d66-4151-8197-d45e2a762895",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e6364a4-6d66-4151-8197-d45e2a762895"
   },
   "es": {
-    "name": "Lisinopril",
-    "class": "Inhibidor de la Enzima Convertidora de Angiotensina (IECA) — Forma activa (no profármaco)",
-    "commercialNames": {
-      "br": [
-        "Zestril",
-        "Prinivil",
-        "Lisinopril Genérico"
-      ],
-      "ar": [
-        "Zestril",
-        "Lisinopril Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 2,5 mg, 5 mg, 10 mg, 20 mg, 40 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 10 mg VO 1 vez/día inicial. Mantenimiento: 10–40 mg/día 1 vez/día. Máximo: 40 mg/día.",
-      "adultoGrave": "ICC: iniciar 2,5–5 mg VO 1 vez/día. Titular hasta 20–40 mg/día. Post-IAM: 5 mg en las primeras 24h, 5 mg a las 24h, 10 mg a las 48h, luego 10 mg/día.",
-      "pediatricaPadrao": "4.9 mg VO 1 vez/día (0,07 mg/kg/día inicial en HTA pediátrica ≥ 6 años).",
-      "pediatricaGrave": "Titular hasta 40 mg/día (0,6 mg/kg/día o 40 mg — el menor).",
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "0,07 mg/kg/día VO 1 vez/día (HTA pediátrica ≥ 6 años, FDA-aprobado)",
-      "grave": "Hasta 0,6 mg/kg/día o 40 mg/día (el menor)",
-      "meningite": null,
-      "doseMaxima": "Adultos: 40 mg/día | Pediatría: 40 mg/día o 0,6 mg/kg/día"
-    },
-    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. ICC: objetivo 20–40 mg/día 1 vez/día. No requiere niveles séricos — monitorizar por respuesta clínica, PA, creatinina y K⁺.",
-    "dilution": "Solo formulación oral disponible. Lisinopril es la forma activa — sin necesidad de conversión hepática.",
-    "speed": "VO: tomar 1 vez/día a la misma hora, con o sin alimento.",
+    "class": "Inhibidor de la enzima convertidora de angiotensina (IECA)",
+    "pharmacologicClass": "Modulador del sistema renina-angiotensina; inhibidor de la ECA",
+    "mechanism": "Inhibe la ECA, reduce la formación de angiotensina II y la secreción de aldosterona, y aumenta bradicinina. El resultado es vasodilatación y menor poscarga y precarga.",
+    "pharmacodynamics": "Reduce la presión arterial y la resistencia vascular sistémica sin taquicardia refleja importante. En insuficiencia cardíaca reduce poscarga; puede aumentar potasio y creatinina por bloqueo del SRAA.",
     "commonAdverseEffects": [
-      "Tos seca (efecto de clase IECA)",
-      "Mareos / hipotensión",
-      "Hiperpotasemia",
-      "Elevación de creatinina",
-      "Cefalea"
+      "tos seca",
+      "mareo",
+      "hipotensión",
+      "hiperpotasemia",
+      "aumento de creatinina"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (contraindicar IECA permanentemente tras episodio)",
-      "Insuficiencia Renal Aguda",
-      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
-      "Hipotensión grave en la primera dosis"
+      "angioedema",
+      "lesión renal aguda",
+      "hiperpotasemia grave",
+      "hipotensión sintomática",
+      "toxicidad fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Antecedente de angioedema relacionado con IECA",
+      "angioedema hereditario o idiopático",
+      "uso concomitante de aliskireno en diabetes",
+      "uso dentro de las 36 h de sacubitrilo/valsartán",
+      "hipersensibilidad al fármaco"
+    ],
+    "interactions": [
+      "Suplementos de potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+      "AINE pueden reducir efecto antihipertensivo y aumentar lesión renal",
+      "Litio puede acumularse",
+      "Doble bloqueo SRAA aumenta hipotensión, hiperpotasemia y lesión renal",
+      "Sacubitrilo/valsartán requiere separación de 36 h"
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "creatinina/eGFR y potasio antes de iniciar y tras titulación",
+      "síntomas de hipotensión",
+      "angioedema",
+      "embarazo cuando corresponda"
+    ],
+    "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+    "patientEducation": [
+      "Evitar embarazo durante el tratamiento",
+      "consultar de urgencia ante edema de cara, labios o lengua",
+      "no usar suplementos de potasio o sal con potasio sin indicación",
+      "levantarse lentamente si hay mareo"
+    ],
+    "clinicalPearls": [
+      "Una elevación de creatinina obliga a evaluar volumen, AINE, estenosis de arteria renal y otros factores; KDIGO aconseja revisar si el aumento supera 30% dentro de 4 semanas",
+      "La tos es mediada en parte por bradicinina y suele resolverse al cambiar a un ARA-II"
+    ],
+    "guidelineRecommendations": [
+      "Guía AHA/ACC 2025: IECA son una de las clases de primera línea para hipertensión cuando están indicados",
+      "KDIGO 2024: IECA o ARA-II se priorizan en ERC con albuminuria y se titulan a dosis máxima tolerada",
+      "AHA/ACC/HFSA: en HFrEF se usa IECA cuando ARNI no es factible"
+    ],
+    "safetyFlags": [
+      "TOXICIDAD_FETAL",
+      "ANGIOEDEMA",
+      "HIPERPOTASEMIA",
+      "FUNCION_RENAL",
+      "INTERVALO_ARNI_36H"
+    ],
     "alerts": [
-      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación. Aumento de creatinina ≤ 30% es esperado y aceptable.",
-      "Diferencial farmacológico: lisinopril es forma activa (no profármaco) — biodisponibilidad no depende de conversión hepática.",
-      "Sacubitril/Valsartán: washout obligatorio de 36h antes de iniciar Lisinopril (riesgo de angioedema).",
-      "Aprobado por FDA en pediatría ≥ 6 años para HTA — único IECA con aprobación pediátrica formal."
+      "No combinar rutinariamente IECA y ARA-II",
+      "Corregir depleción de volumen si es posible antes de iniciar",
+      "Suspender y tratar de inmediato si aparece angioedema"
     ],
-    "ref": "FDA Zestril (lisinopril) label 2023 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste formal para ClCr ≥ 30 mL/min.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "5–10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,07 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis estándar. Lisinopril eliminado íntegramente por vía renal — función renal normal no requiere ajuste."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "5 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,04 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "IR moderada: sin ajuste obligatorio en guías, pero preferir dosis inicial de 5 mg y monitorizar K⁺/creatinina."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2,5–5 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,02 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "IR grave: iniciar con 2,5 mg/día. Acumulación significativa — riesgo aumentado de hipotensión e hiperpotasemia."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muy grave: dosis máxima 2,5 mg/día. Evaluación cuidadosa de riesgo-beneficio. Riesgo de hiperpotasemia potencialmente fatal."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "2,5 mg",
-          "intervalo": "Pós-HD",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Lisinopril es dializable (~50% removido en 4h de HD). Administrar dosis después de la sesión para evitar hipotensión intradialítica."
-      }
+    "specialPopulations": {
+      "elderly": "Titular según presión, función renal y volumen.",
+      "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar estrechamente.",
+      "blackPatients": "La respuesta antihipertensiva como monoterapia puede ser menor; el riesgo de angioedema es mayor."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. Único IECA aprobado en pediatría ≥ 6 años. Forma activa — sin conversión hepática. Ajuste renal en ClCr < 30."
+    "name": "Lisinopril",
+    "pharmacokinetics": "No es profármaco y no sufre metabolismo significativo. Se elimina sin cambios por riñón; vida media efectiva cercana a 12 h y la exposición aumenta en insuficiencia renal.",
+    "indications": [
+      "Hipertensión en adultos y niños >=6 años",
+      "tratamiento adyuvante de insuficiencia cardíaca sistólica",
+      "tratamiento precoz tras infarto agudo de miocardio en paciente hemodinámicamente estable"
+    ],
+    "commercialNames": [
+      "Zestril",
+      "Prinivil"
+    ],
+    "presentation": "Tabletas orales.",
+    "presentations": [
+      "Tabletas 2.5, 5, 10, 20, 30 y 40 mg según fabricante"
+    ],
+    "dose": {
+      "hypertension": "10 mg una vez al día; si usa diurético, considerar 5 mg; titular hasta 40 mg/día.",
+      "heartFailure": "5 mg una vez al día; con hiponatremia puede iniciarse 2.5 mg; titular hasta 40 mg/día.",
+      "acuteMI": "5 mg dentro de 24 h del IAM, 5 mg a las 24 h, 10 mg a las 48 h y luego 10 mg/día si se tolera; ajustar a hemodinámica."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "FDA Zestril (lisinopril) label 2023",
-        "EMA Zestril SmPC 2024",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "ESC Hypertension Guidelines 2023",
-        "UpToDate 2025",
-        "Lexicomp Online 2026",
-        "Goodman & Gilman Pharmacological Basis of Therapeutics 14ª ed."
+    "pediatricDose": "Hipertensión >=6 años y eGFR >30 mL/min/1.73 m²: 0.07 mg/kg una vez al día, máximo inicial 5 mg; máximo estudiado 0.61 mg/kg o 40 mg/día. No recomendado <6 años o eGFR <30.",
+    "renalDose": "ClCr 10-30 mL/min: usar la mitad de la dosis inicial habitual. ClCr <10 mL/min o hemodiálisis: iniciar 2.5 mg una vez al día; titular con presión, creatinina y potasio.",
+    "hepaticDose": "No requiere ajuste específico basado solo en función hepática porque no se metaboliza de forma relevante; titular por respuesta y tolerancia.",
+    "administration": "Administrar una vez al día, con o sin alimentos, a horario consistente.",
+    "preparation": "Las tabletas no requieren preparación; usar formulación adecuada si existe dificultad para deglutir.",
+    "infusionProtocol": "No aplica: lisinopril de este registro es oral.",
+    "lactation": "Datos humanos son limitados; individualizar y considerar alternativa con mayor experiencia en lactantes muy pequeños, vigilando hipotensión y función renal si existe exposición.",
+    "adverseEffects": {
+      "common": [
+        "tos seca",
+        "mareo",
+        "hipotensión",
+        "hiperpotasemia",
+        "aumento de creatinina"
       ],
-      "note": "Único IECA que es forma activa (no profármaco). Eliminación renal > 90%. Aprobado en pediatría ≥ 6 años. Dializable ~50% — dosis post-HD. Ajuste obligatorio en ClCr < 30."
-    }
+      "dangerous": [
+        "angioedema",
+        "lesión renal aguda",
+        "hiperpotasemia grave",
+        "hipotensión sintomática",
+        "toxicidad fetal"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e6364a4-6d66-4151-8197-d45e2a762895",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e6364a4-6d66-4151-8197-d45e2a762895"
   },
   "name": {
     "pt": "Lisinopril",
@@ -321,9 +265,19 @@
     "lisinopril generico",
     "inibidor da enzima conversora de angiotensina (ieca) — forma ativa (nao pro-farmaco)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-60dc1dc928da29df",
+  "clinicalContentSha256": "60dc1dc928da29dfe8470026c8d2c7e9d57bd938d428296362e253d00632f05e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "lisinopril.mcGoldClinicalV1",
+    "group": "GOLD_GROUP04_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "416df9a612dbc769cc4f8629fc1ae049ae92029572ab1cf7fddacb423548b9ee",
+    "physicalHomologation": "DEFERRED"
+  }
 }

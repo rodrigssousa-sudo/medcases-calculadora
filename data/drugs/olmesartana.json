@@ -1,304 +1,244 @@
 {
   "id": "olmesartana",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(16,185,129,0.13)",
   "colorTxt": "#15803D",
   "pt": {
-    "name": "Olmesartana Medoxomila",
-    "class": "Bloqueador do Receptor de Angiotensina II (BRA/ARB) — Pró-fármaco (olmesartana ativa)",
-    "commercialNames": {
-      "br": [
-        "Benicar",
-        "Olmetec",
-        "Olmesartana genérica"
-      ],
-      "ar": [
-        "Olmetec",
-        "Olmesartán genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 10 mg, 20 mg, 40 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 20 mg VO 1x/dia inicial. Manutenção: 20–40 mg/dia. Máximo: 40 mg/dia. Considerar 10 mg/dia em idosos frágeis, hipovolemia ou risco de hipotensão.",
-      "adultoGrave": "Controle pressórico em terapia combinada (BRA + BCC ± tiazídico): 20–40 mg/dia. Ajustar conforme PA-alvo e tolerância.",
-      "pediatricaPadrao": "HTA pediátrica ≥ 6 anos (FDA-aprovado): 2,5–5 mg/dia VO (peso 20–<35 kg) ou 5–10 mg/dia (peso ≥35 kg). Máx 20 mg/dia.",
-      "pediatricaGrave": "Titular conforme resposta pressórica e tolerância. Monitorar PA, creatinina e K⁺ rigorosamente.",
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "Pediatria ≥ 6 anos: 2,5–10 mg/dia por faixa de peso (FDA-aprovado)",
-      "grave": "Adultos: 20–40 mg/dia (dose fixa — sem cálculo por kg)",
-      "meningite": null,
-      "doseMaxima": "Adultos: 40 mg/dia | Pediatria: 20 mg/dia"
-    },
-    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. Monitorar por PA, creatinina e K⁺ — sem nível sérico-alvo.",
-    "dilution": "Apenas formulação oral. Olmesartana medoxomila é pró-fármaco convertido em olmesartana (ativa) no trato GI.",
-    "speed": "VO: tomar 1x/dia no mesmo horário, com ou sem alimento.",
+    "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+    "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+    "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
     "commonAdverseEffects": [
-      "Tontura / hipotensão",
-      "Hipercalemia",
-      "Elevação de creatinina",
-      "Cefaleia",
-      "Sintomas gastrointestinais (náusea, diarreia leve)"
+      "tontura",
+      "hipotensão",
+      "hipercalemia",
+      "aumento de creatinina",
+      "fadiga"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (raro)",
-      "Hipercalemia grave (K⁺ > 6 mEq/L)",
-      "Insuficiência Renal Aguda",
-      "Hipotensão grave",
-      "ENTEROPATIA SPRUE-LIKE: diarreia crônica grave, perda de peso, má absorção — pode surgir anos após início (FDA Safety Communication 2013)"
+      "lesão renal aguda",
+      "hipercalemia grave",
+      "hipotensão sintomática",
+      "toxicidade fetal",
+      "enteropatia tipo espru com perda de peso"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Gestação: suspender quando detectada",
+      "uso concomitante de alisquireno em pacientes com diabetes",
+      "hipersensibilidade ao fármaco"
+    ],
+    "interactions": [
+      "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+      "AINEs podem reduzir efeito e aumentar risco renal",
+      "Lítio pode acumular",
+      "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "creatinina/eTFG e potássio antes de iniciar e após mudanças de dose",
+      "estado volêmico",
+      "gestação quando aplicável"
+    ],
+    "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+    "lactation": "Dados humanos insuficientes; preferir alternativa com maior experiência quando a amamentação de recém-nascido precisa ser mantida.",
+    "patientEducation": [
+      "Evitar gestação durante o tratamento",
+      "não usar suplementos de potássio ou substitutos de sal sem orientação",
+      "manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados",
+      "levantar lentamente se houver tontura"
+    ],
+    "clinicalPearls": [
+      "Investigar olmesartana em diarreia crônica inexplicada com perda ponderal",
+      "Doses acima de 40 mg/dia não mostram benefício anti-hipertensivo adicional claro",
+      "Uso pediátrico >=6 anos é baseado em peso."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: BRA é primeira linha para hipertensão quando indicado",
+      "KDIGO 2024: RASi em DRC albuminúrica com monitorização de potássio e função renal."
+    ],
+    "safetyFlags": [
+      "TOXICIDADE_FETAL",
+      "HIPERCALEMIA",
+      "FUNCAO_RENAL",
+      "HIPOTENSAO",
+      "DUPLO_BLOQUEIO_SRAA"
+    ],
     "alerts": [
-      "ALERTA EXCLUSIVO — Enteropatia sprue-like: olmesartana é o único BRA associado a síndrome de má absorção grave (diarreia severa, perda de peso, atrofia de vilosidades em biópsia). Pode surgir meses a anos após início. Suspender se diarreia crônica inexplicada ou perda de peso significativa.",
-      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação. Elevação ≤ 30% de creatinina é aceitável.",
-      "Evitar dupla inibição do SRAA (BRA + IECA): sem benefício adicional e risco aumentado de hipotensão, hipercalemia e lesão renal.",
-      "AINEs reduzem efeito anti-hipertensivo e aumentam risco de lesão renal aguda."
+      "Corrigir depleção de volume quando possível antes de iniciar",
+      "Reavaliar função renal e potássio após titulação",
+      "Não associar rotineiramente a IECA ou alisquireno"
     ],
-    "ref": "FDA Benicar (olmesartan) label 2023 · FDA Safety Communication — olmesartan and sprue-like enteropathy (July 2013) · EMA Olmetec SmPC 2024 · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Ajuste renal formal não necessário para ClCr ≥ 30 mL/min. Monitorar K⁺ e creatinina.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "20 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "2,5–10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/dia",
-          "unidade": "mg"
-        },
-        "obs": "Dose padrão. HTA: 20–40 mg/dia 1x/dia. Pediatria ≥ 6 anos: 2,5–5 mg (20–<35 kg) ou 5–10 mg (≥35 kg)."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "10–20 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR moderada: sem ajuste obrigatório. Preferir dose inicial de 10–20 mg. Monitorar K⁺ e creatinina."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: iniciar com 10 mg/dia. Risco elevado de hipercalemia. Monitoramento intensivo de K⁺ e creatinina."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muito grave/anúria: dose máxima 10 mg/dia. Avaliar risco-benefício cuidadosamente. Monitorar K⁺ rigorosamente."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Olmesartana não é removida significativamente por hemodiálise. Manter dose reduzida sem suplementação pós-HD."
-      }
+    "specialPopulations": {
+      "elderly": "Não ajustar apenas pela idade; titular por resposta e tolerância.",
+      "renalArteryStenosis": "Maior risco de deterioração renal; monitorar.",
+      "volumeDepletion": "Maior risco de hipotensão inicial.",
+      "enteropathy": "Pode causar enteropatia tipo espru com diarreia crônica e perda de peso, inclusive meses ou anos após início; suspender se não houver outra causa."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. ALERTA EXCLUSIVO: enteropatia sprue-like rara — suspender se diarreia crônica grave ou perda de peso inexplicada. Aprovado em pediatria ≥ 6 anos."
+    "name": "Olmesartana Medoxomila",
+    "pharmacokinetics": "Pró-fármaco rapidamente convertido a olmesartana durante a absorção. Meia-vida terminal aproximadamente 13 h; eliminação renal e biliar, com pouca participação de CYP.",
+    "indications": [
+      "Hipertensão em adultos",
+      "hipertensão em crianças >=6 anos"
+    ],
+    "commercialNames": [
+      "Benicar"
+    ],
+    "presentation": "Comprimidos revestidos orais.",
+    "presentations": [
+      "Comprimidos 5, 20 e 40 mg"
+    ],
+    "dose": {
+      "hypertension": "20 mg uma vez ao dia em adulto não hipovolêmico; após 2 semanas pode aumentar para 40 mg uma vez ao dia. Doses >40 mg e esquema 2x/dia não oferecem benefício adicional demonstrado."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "FDA Benicar (olmesartan medoxomil) label 2023",
-        "FDA Drug Safety Communication — olmesartan and sprue-like enteropathy (July 2013)",
-        "EMA Olmetec SmPC 2024",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC Hypertension Guidance 2022",
-        "UpToDate 2025",
-        "Lexicomp Online 2026"
+    "pediatricDose": ">=6 anos: 20 a <35 kg, iniciar 10 mg/dia e máximo 20 mg/dia; >=35 kg, iniciar 20 mg/dia e máximo 40 mg/dia.",
+    "renalDose": "A exposição aumenta na insuficiência renal, inclusive grave; a bula não exige ajuste inicial rotineiro, mas requer monitorização estreita de função renal, potássio e pressão.",
+    "hepaticDose": "A exposição aumenta na insuficiência hepática moderada; a bula não exige ajuste inicial rotineiro em moderada, mas dados são limitados em grave.",
+    "administration": "Administrar uma vez ao dia, com ou sem alimentos.",
+    "preparation": "Comprimidos não exigem preparo.",
+    "infusionProtocol": "Não se aplica: olmesartana é oral.",
+    "adverseEffects": {
+      "common": [
+        "tontura",
+        "hipotensão",
+        "hipercalemia",
+        "aumento de creatinina",
+        "fadiga"
       ],
-      "note": "Pró-fármaco (conversão no TGI). Único BRA associado à enteropatia sprue-like (FDA 2013) — suspender se má absorção/diarreia crônica. Aprovado em pediatria ≥ 6 anos. Sem ajuste renal formal em IR leve/moderada."
-    }
+      "dangerous": [
+        "lesão renal aguda",
+        "hipercalemia grave",
+        "hipotensão sintomática",
+        "toxicidade fetal",
+        "enteropatia tipo espru com perda de peso"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=812d2d57-14d6-48a9-9687-85c2d125197e",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=812d2d57-14d6-48a9-9687-85c2d125197e"
   },
   "es": {
-    "name": "Olmesartán Medoxomilo",
-    "class": "Bloqueante del Receptor de Angiotensina II (BRA/ARA-II) — Profármaco (olmesartán activo)",
-    "commercialNames": {
-      "br": [
-        "Benicar",
-        "Olmetec",
-        "Olmesartana genérica"
-      ],
-      "ar": [
-        "Olmetec",
-        "Olmesartán genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 10 mg, 20 mg, 40 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 20 mg VO 1 vez/día inicial. Mantenimiento: 20–40 mg/día. Máximo: 40 mg/día. Considerar 10 mg/día en ancianos frágiles, hipovolemia o riesgo de hipotensión.",
-      "adultoGrave": "Control tensional en terapia combinada (ARA-II + BCC ± tiazídico): 20–40 mg/día. Ajustar según PA objetivo y tolerancia.",
-      "pediatricaPadrao": "HTA pediátrica ≥ 6 años (FDA-aprobado): 2,5–5 mg/día VO (peso 20–<35 kg) o 5–10 mg/día (peso ≥35 kg). Máx 20 mg/día.",
-      "pediatricaGrave": "Titular según respuesta tensional y tolerancia. Monitorizar PA, creatinina y K⁺ rigurosamente.",
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "Pediatría ≥ 6 años: 2,5–10 mg/día por rango de peso (FDA-aprobado)",
-      "grave": "Adultos: 20–40 mg/día (dosis fija — sin cálculo por kg)",
-      "meningite": null,
-      "doseMaxima": "Adultos: 40 mg/día | Pediatría: 20 mg/día"
-    },
-    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. Monitorizar por PA, creatinina y K⁺ — sin nivel sérico objetivo.",
-    "dilution": "Solo formulación oral. Olmesartán medoxomilo es profármaco convertido en olmesartán (activo) en el tracto GI.",
-    "speed": "VO: tomar 1 vez/día a la misma hora, con o sin alimento.",
+    "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+    "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+    "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
     "commonAdverseEffects": [
-      "Mareos / hipotensión",
-      "Hiperpotasemia",
-      "Elevación de creatinina",
-      "Cefalea",
-      "Síntomas gastrointestinales (náuseas, diarrea leve)"
+      "mareo",
+      "hipotensión",
+      "hiperpotasemia",
+      "aumento de creatinina",
+      "fatiga"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (raro)",
-      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
-      "Insuficiencia Renal Aguda",
-      "Hipotensión grave",
-      "ENTEROPATÍA TIPO SPRUE: diarrea crónica grave, pérdida de peso, malabsorción — puede aparecer años después del inicio (FDA Safety Communication 2013)"
+      "lesión renal aguda",
+      "hiperpotasemia grave",
+      "hipotensión sintomática",
+      "toxicidad fetal",
+      "enteropatía tipo esprúe con pérdida de peso"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Embarazo: suspender cuando se detecte",
+      "uso concomitante de aliskireno en pacientes con diabetes",
+      "hipersensibilidad al fármaco"
+    ],
+    "interactions": [
+      "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+      "AINE pueden reducir efecto y aumentar riesgo renal",
+      "Litio puede acumularse",
+      "Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis",
+      "estado de volumen",
+      "embarazo cuando corresponda"
+    ],
+    "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+    "lactation": "Datos humanos insuficientes; preferir alternativa con mayor experiencia cuando deba mantenerse lactancia de un recién nacido.",
+    "patientEducation": [
+      "Evitar embarazo durante el tratamiento",
+      "no usar suplementos de potasio o sustitutos de sal sin indicación",
+      "mantener hidratación y consultar si hay vómitos o diarrea prolongados",
+      "levantarse lentamente si hay mareo"
+    ],
+    "clinicalPearls": [
+      "Considerar olmesartán en diarrea crónica inexplicada con pérdida ponderal",
+      "Dosis >40 mg/día no muestran beneficio antihipertensivo adicional claro",
+      "Uso pediátrico >=6 años se basa en peso."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: ARA-II es primera línea para hipertensión cuando está indicado",
+      "KDIGO 2024: RASi en ERC albuminúrica con vigilancia de potasio y función renal."
+    ],
+    "safetyFlags": [
+      "TOXICIDAD_FETAL",
+      "HIPERPOTASEMIA",
+      "FUNCION_RENAL",
+      "HIPOTENSION",
+      "DOBLE_BLOQUEO_SRAA"
+    ],
     "alerts": [
-      "ALERTA EXCLUSIVO — Enteropatía tipo sprue: olmesartán es el único ARA-II asociado a síndrome de malabsorción grave (diarrea severa, pérdida de peso, atrofia de vellosidades en biopsia). Puede aparecer meses a años tras el inicio. Suspender si diarrea crónica inexplicada o pérdida de peso significativa.",
-      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación. Aumento ≤ 30% de creatinina es aceptable.",
-      "Evitar doble inhibición del SRAA (ARA-II + IECA): sin beneficio adicional y riesgo aumentado de hipotensión, hiperpotasemia y lesión renal.",
-      "AINEs reducen efecto antihipertensivo y aumentan riesgo de lesión renal aguda."
+      "Corregir depleción de volumen si es posible antes de iniciar",
+      "Reevaluar función renal y potasio tras titulación",
+      "No asociar de rutina con IECA o aliskireno"
     ],
-    "ref": "FDA Benicar (olmesartan) label 2023 · FDA Safety Communication — olmesartan and sprue-like enteropathy (July 2013) · EMA Olmetec SmPC 2024 · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Ajuste renal formal no necesario para ClCr ≥ 30 mL/min. Monitorizar K⁺ y creatinina.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "20 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "2,5–10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/dia",
-          "unidade": "mg"
-        },
-        "obs": "Dosis estándar. HTA: 20–40 mg/día 1 vez/día. Pediatría ≥ 6 años: 2,5–5 mg (20–<35 kg) o 5–10 mg (≥35 kg)."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "10–20 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "40 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR moderada: sin ajuste obligatorio. Preferir dosis inicial de 10–20 mg. Monitorizar K⁺ y creatinina."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: iniciar con 10 mg/día. Riesgo elevado de hiperpotasemia. Monitorización intensiva de K⁺ y creatinina."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muy grave/anuria: dosis máxima 10 mg/día. Evaluar riesgo-beneficio cuidadosamente. Monitorizar K⁺ rigurosamente."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Olmesartán no es removido significativamente por hemodiálisis. Mantener dosis reducida sin suplementación post-HD."
-      }
+    "specialPopulations": {
+      "elderly": "No ajustar solo por edad; titular por respuesta y tolerancia.",
+      "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar.",
+      "volumeDepletion": "Mayor riesgo de hipotensión inicial.",
+      "enteropathy": "Puede causar enteropatía tipo esprúe con diarrea crónica y pérdida de peso, incluso meses o años tras inicio; suspender si no hay otra causa."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. ALERTA EXCLUSIVO: enteropatía tipo sprue rara — suspender si diarrea crónica grave o pérdida de peso inexplicada. Aprobado en pediatría ≥ 6 años."
+    "name": "Olmesartán Medoxomilo",
+    "pharmacokinetics": "Profármaco convertido rápidamente a olmesartán durante la absorción. Vida media terminal cercana a 13 h; eliminación renal y biliar, con poca participación de CYP.",
+    "indications": [
+      "Hipertensión en adultos",
+      "hipertensión en niños >=6 años"
+    ],
+    "commercialNames": [
+      "Benicar"
+    ],
+    "presentation": "Tabletas recubiertas orales.",
+    "presentations": [
+      "Tabletas 5, 20 y 40 mg"
+    ],
+    "dose": {
+      "hypertension": "20 mg una vez al día en adulto no hipovolémico; después de 2 semanas puede aumentarse a 40 mg una vez al día. Dosis >40 mg y esquema 2 veces/día no ofrecen beneficio adicional demostrado."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "FDA Benicar (olmesartan medoxomil) label 2023",
-        "FDA Drug Safety Communication — olmesartan and sprue-like enteropathy (July 2013)",
-        "EMA Olmetec SmPC 2024",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC Hypertension Guidance 2022",
-        "UpToDate 2025",
-        "Lexicomp Online 2026"
+    "pediatricDose": ">=6 años: 20 a <35 kg, iniciar 10 mg/día y máximo 20 mg/día; >=35 kg, iniciar 20 mg/día y máximo 40 mg/día.",
+    "renalDose": "La exposición aumenta en insuficiencia renal, incluso grave; la ficha no exige ajuste inicial rutinario, pero requiere vigilancia estrecha de función renal, potasio y presión.",
+    "hepaticDose": "La exposición aumenta en insuficiencia hepática moderada; la ficha no exige ajuste inicial rutinario en moderada, pero hay datos limitados en grave.",
+    "administration": "Administrar una vez al día, con o sin alimentos.",
+    "preparation": "Las tabletas no requieren preparación.",
+    "infusionProtocol": "No aplica: olmesartán es oral.",
+    "adverseEffects": {
+      "common": [
+        "mareo",
+        "hipotensión",
+        "hiperpotasemia",
+        "aumento de creatinina",
+        "fatiga"
       ],
-      "note": "Profármaco (conversión en TGI). Único ARA-II asociado a enteropatía tipo sprue (FDA 2013) — suspender si malabsorción/diarrea crónica. Aprobado en pediatría ≥ 6 años. Sin ajuste renal formal en IR leve/moderada."
-    }
+      "dangerous": [
+        "lesión renal aguda",
+        "hiperpotasemia grave",
+        "hipotensión sintomática",
+        "toxicidad fetal",
+        "enteropatía tipo esprúe con pérdida de peso"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=812d2d57-14d6-48a9-9687-85c2d125197e",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=812d2d57-14d6-48a9-9687-85c2d125197e"
   },
   "name": {
-    "pt": "Olmesartana",
-    "es": "Olmesartán"
+    "pt": "Olmesartana Medoxomila",
+    "es": "Olmesartán Medoxomilo"
   },
   "keywords": [
     "olmesartana",
@@ -309,9 +249,19 @@
     "olmesartan generico",
     "bloqueador do receptor de angiotensina ii (bra/arb) — pro-farmaco (olmesartana ativa)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-60dc1dc928da29df",
+  "clinicalContentSha256": "60dc1dc928da29dfe8470026c8d2c7e9d57bd938d428296362e253d00632f05e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "olmesartana.mcGoldClinicalV1",
+    "group": "GOLD_GROUP04_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "adbfd90b4c2d95fac5b99776b0242284d49018affb70be596f9ab00f60982f0d",
+    "physicalHomologation": "DEFERRED"
+  }
 }

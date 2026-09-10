@@ -1,14 +1,198 @@
 {
   "id": "ticagrelor",
   "category": "anticoag",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Ticagrelor"
+    "name": "Ticagrelor",
+    "class": "Antiagregante plaquetário não tienopiridínico",
+    "pharmacologicClass": "Antagonista direto, reversível e oral do receptor P2Y12",
+    "mechanism": "Liga-se de forma reversível a sítio alostérico do receptor P2Y12, impedindo sinalização mediada por ADP sem necessidade de bioativação.",
+    "pharmacodynamics": "Inibição plaquetária rápida após carga de 180 mg, mais intensa e previsível que clopidogrel. O efeito diminui progressivamente após suspensão.",
+    "pharmacokinetics": "Absorção oral rápida. Metabolismo principalmente por CYP3A4 para metabólito ativo. Ticagrelor e metabólito são substratos de P-gp. Eliminação predominantemente fecal.",
+    "indications": [
+      "SCA e prevenção de eventos após IAM",
+      "Doença coronariana selecionada de alto risco",
+      "AVC isquêmico leve ou AIT de alto risco em esquema de curta duração com aspirina"
+    ],
+    "commercialNames": [
+      "Brilinta",
+      "Brilique",
+      "Ticagrelor genérico"
+    ],
+    "presentation": "Comprimidos revestidos para uso oral.",
+    "presentations": [
+      "Comprimidos 60 mg",
+      "Comprimidos 90 mg"
+    ],
+    "dose": {
+      "SCA ou IAM": "Ataque 180 mg VO; depois 90 mg VO duas vezes ao dia durante o primeiro ano; após 1 ano, 60 mg duas vezes ao dia",
+      "DAC sem IAM ou AVC prévios em indicação selecionada": "60 mg VO duas vezes ao dia",
+      "AVC isquêmico leve ou AIT de alto risco": "Ataque 180 mg, depois 90 mg duas vezes ao dia por até 30 dias",
+      "Aspirina": "Manutenção usual 75 a 100 mg/dia quando combinada"
+    },
+    "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas para estas indicações cardiovasculares.",
+    "renalDose": "Não requer ajuste de dose rotineiro por função renal. Em doença renal terminal, benefício e risco devem ser individualizados.",
+    "hepaticDose": "Evitar em insuficiência hepática grave; em comprometimento moderado usar cautela por maior exposição e risco hemorrágico.",
+    "commonAdverseEffects": [
+      "Sangramento",
+      "Dispneia",
+      "Equimoses",
+      "Epistaxe",
+      "Aumento de ácido úrico"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia intracraniana",
+      "Sangramento fatal",
+      "Bradiarritmia clinicamente significativa",
+      "Pausa ventricular",
+      "Reação de hipersensibilidade"
+    ],
+    "adverseEffects": "Dispneia é característica e geralmente transitória, mas deve ser diferenciada de insuficiência cardíaca ou isquemia. Sangramento é o principal evento grave.",
+    "contraindications": [
+      "História de hemorragia intracraniana",
+      "Sangramento patológico ativo",
+      "Hipersensibilidade ao ticagrelor"
+    ],
+    "interactions": [
+      "Evitar inibidores fortes de CYP3A",
+      "Evitar indutores fortes de CYP3A",
+      "Monitorar digoxina ao iniciar ou modificar ticagrelor",
+      "Evitar doses de manutenção de aspirina acima do recomendado",
+      "Não associar a outro P2Y12 oral"
+    ],
+    "monitoring": [
+      "Sinais de sangramento",
+      "Dispneia",
+      "Frequência cardíaca e pausas em pacientes suscetíveis",
+      "Função renal quando clinicamente indicada",
+      "Ácido úrico em pacientes predispostos",
+      "Interações CYP3A"
+    ],
+    "administration": "Administrar duas vezes ao dia com ou sem alimento. Comprimidos podem ser triturados e administrados com água ou por sonda nasogástrica conforme bula.",
+    "preparation": "Uso oral; se triturado, dispersar completamente em água e administrar imediatamente, lavando o recipiente ou sonda.",
+    "infusionProtocol": "Não se aplica: ticagrelor é administrado por via oral.",
+    "pregnancy": "Dados humanos são limitados; usar apenas se benefício materno justificar risco potencial.",
+    "lactation": "Dados clínicos são insuficientes; avaliar interrupção da amamentação ou do fármaco conforme necessidade materna.",
+    "specialPopulations": "História de hemorragia intracraniana contraindica uso. Em bradicardia significativa ou doença de condução sem marcapasso, usar cautela.",
+    "patientEducation": "Tomar duas vezes ao dia, não dobrar dose esquecida, relatar sangramento e dispneia importante e não interromper após PCI sem orientação.",
+    "clinicalPearls": [
+      "Não precisa de ativação metabólica para agir",
+      "Dispneia é um efeito característico",
+      "Aspirina de manutenção deve permanecer em dose baixa quando combinada, salvo indicação específica"
+    ],
+    "guidelineRecommendations": "ACC/AHA 2025: ticagrelor ou prasugrel são preferidos ao clopidogrel em SCA submetida a PCI. Em pacientes que toleraram DAPT com ticagrelor, transição para monoterapia com ticagrelor a partir de 1 mês pós-PCI é uma estratégia recomendada para reduzir sangramento em cenários selecionados.",
+    "safetyFlags": [
+      "História de hemorragia intracraniana é contraindicação",
+      "Risco de sangramento",
+      "Interações CYP3A",
+      "Bradiarritmia e dispneia"
+    ],
+    "alerts": [
+      "Evitar aspirina de manutenção acima de 100 mg/dia salvo indicação excepcional",
+      "Não administrar com outro inibidor oral P2Y12"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f73a4db-2c7f-4e42-a914-87aedc2780fb",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+    ],
+    "ref": "DailyMed Ticagrelor 2026; ACC/AHA ACS Guideline 2025"
   },
   "es": {
-    "name": "Ticagrelor"
+    "name": "Ticagrelor",
+    "class": "Antiagregante plaquetario no tienopiridínico",
+    "pharmacologicClass": "Antagonista directo, reversible y oral del receptor P2Y12",
+    "mechanism": "Se une de forma reversible a un sitio alostérico del receptor P2Y12, bloqueando señalización mediada por ADP sin requerir bioactivación.",
+    "pharmacodynamics": "Inhibición plaquetaria rápida tras carga de 180 mg, más intensa y predecible que clopidogrel. El efecto disminuye progresivamente tras suspenderlo.",
+    "pharmacokinetics": "Absorción oral rápida. Metabolismo principalmente por CYP3A4 a metabolito activo. Ticagrelor y metabolito son sustratos de P-gp. Eliminación predominantemente fecal.",
+    "indications": [
+      "SCA y prevención de eventos tras IAM",
+      "Enfermedad coronaria seleccionada de alto riesgo",
+      "ACV isquémico leve o AIT de alto riesgo en esquema corto con aspirina"
+    ],
+    "commercialNames": [
+      "Brilinta",
+      "Brilique",
+      "Ticagrelor genérico"
+    ],
+    "presentation": "Comprimidos recubiertos para uso oral.",
+    "presentations": [
+      "Comprimidos 60 mg",
+      "Comprimidos 90 mg"
+    ],
+    "dose": {
+      "SCA o IAM": "Carga 180 mg VO; luego 90 mg VO dos veces al día durante el primer año; después de 1 año, 60 mg dos veces al día",
+      "EC estable sin IAM ni ACV previo en indicación seleccionada": "60 mg VO dos veces al día",
+      "ACV isquémico leve o AIT de alto riesgo": "Carga 180 mg, luego 90 mg dos veces al día hasta 30 días",
+      "Aspirina": "Mantenimiento habitual 75 a 100 mg/día cuando se combina"
+    },
+    "pediatricDose": "Seguridad y eficacia pediátricas no establecidas para estas indicaciones cardiovasculares.",
+    "renalDose": "No requiere ajuste rutinario por función renal. En enfermedad renal terminal, individualizar beneficio y riesgo.",
+    "hepaticDose": "Evitar en insuficiencia hepática grave; en compromiso moderado usar con cautela por mayor exposición y riesgo hemorrágico.",
+    "commonAdverseEffects": [
+      "Sangrado",
+      "Disnea",
+      "Equimosis",
+      "Epistaxis",
+      "Aumento de ácido úrico"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia intracraneal",
+      "Sangrado fatal",
+      "Bradiarritmia clínicamente significativa",
+      "Pausa ventricular",
+      "Hipersensibilidad grave"
+    ],
+    "adverseEffects": "La disnea es característica y suele ser transitoria, pero debe diferenciarse de insuficiencia cardíaca o isquemia. El sangrado es el principal evento grave.",
+    "contraindications": [
+      "Antecedente de hemorragia intracraneal",
+      "Sangrado patológico activo",
+      "Hipersensibilidad a ticagrelor"
+    ],
+    "interactions": [
+      "Evitar inhibidores potentes de CYP3A",
+      "Evitar inductores potentes de CYP3A",
+      "Monitorizar digoxina al iniciar o modificar ticagrelor",
+      "Evitar dosis de mantenimiento de aspirina por encima de lo recomendado",
+      "No asociar otro P2Y12 oral"
+    ],
+    "monitoring": [
+      "Signos de sangrado",
+      "Disnea",
+      "Frecuencia cardíaca y pausas en susceptibles",
+      "Función renal cuando corresponda",
+      "Ácido úrico en predispuestos",
+      "Interacciones CYP3A"
+    ],
+    "administration": "Administrar dos veces al día con o sin alimentos. Los comprimidos pueden triturarse y administrarse con agua o por sonda nasogástrica según ficha.",
+    "preparation": "Uso oral; si se tritura, dispersar por completo en agua y administrar de inmediato, enjuagando recipiente o sonda.",
+    "infusionProtocol": "No se aplica: ticagrelor se administra por vía oral.",
+    "pregnancy": "Datos humanos limitados; usar solo si el beneficio materno justifica riesgo potencial.",
+    "lactation": "Datos clínicos insuficientes; valorar interrupción de lactancia o del fármaco según necesidad materna.",
+    "specialPopulations": "Antecedente de hemorragia intracraneal contraindica el uso. En bradicardia significativa o trastorno de conducción sin marcapasos, usar con cautela.",
+    "patientEducation": "Tomar dos veces al día, no duplicar dosis olvidada, comunicar sangrado o disnea importante y no suspender tras PCI sin indicación.",
+    "clinicalPearls": [
+      "No requiere activación metabólica para actuar",
+      "La disnea es un efecto característico",
+      "La aspirina de mantenimiento debe permanecer en dosis baja cuando se combina, salvo indicación específica"
+    ],
+    "guidelineRecommendations": "ACC/AHA 2025: ticagrelor o prasugrel se prefieren a clopidogrel en SCA sometido a PCI. En pacientes que toleraron DAPT con ticagrelor, transición a monoterapia con ticagrelor desde 1 mes post-PCI es una estrategia recomendada en escenarios seleccionados para reducir sangrado.",
+    "safetyFlags": [
+      "Antecedente de hemorragia intracraneal es contraindicación",
+      "Riesgo de sangrado",
+      "Interacciones CYP3A",
+      "Bradiarritmia y disnea"
+    ],
+    "alerts": [
+      "Evitar aspirina de mantenimiento por encima de 100 mg/día salvo indicación excepcional",
+      "No administrar con otro inhibidor oral P2Y12"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f73a4db-2c7f-4e42-a914-87aedc2780fb",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+    ],
+    "ref": "DailyMed Ticagrelor 2026; ACC/AHA ACS Guideline 2025"
   },
   "name": {
     "pt": "Ticagrelor",
@@ -17,8 +201,8 @@
   "keywords": [
     "ticagrelor"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+  "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "anticoag.js",
@@ -39,7 +223,7 @@
       "record": {
         "id": "ticagrelor",
         "category": "cardio",
-        "icon": "🩸",
+        "icon": "💊",
         "color": "rgba(239,68,68,0.13)",
         "colorTxt": "#B91C1C",
         "pt": {
@@ -167,12 +351,22 @@
           "brilinta",
           "antiagregante plaquetario de alta potencia — bloqueador reversivel p2y12 (cptp)"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+        "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "ticagrelor.mcGoldClinicalV1",
+    "group": "GOLD_GROUP03_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "b4900ceed63b184366e4ddd6cbcabde429ff29917b3fb6c4d0a0b1626dda0041",
+    "physicalHomologation": "DEFERRED"
+  }
 }

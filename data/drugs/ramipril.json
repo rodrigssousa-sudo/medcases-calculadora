@@ -1,284 +1,254 @@
 {
   "id": "ramipril",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(59,130,246,0.13)",
   "colorTxt": "#1D4ED8",
   "pt": {
-    "name": "Ramipril",
-    "class": "Inibidor da Enzima Conversora de Angiotensina (IECA) — Pró-fármaco (ramiprilat ativo)",
-    "commercialNames": {
-      "br": [
-        "Triatec",
-        "Naprix",
-        "Ramipril Genérico"
-      ],
-      "ar": [
-        "Triatec",
-        "Ramipril Genérico"
-      ]
-    },
-    "presentation": [
-      "Cápsulas/Comprimidos: 1,25 mg, 2,5 mg, 5 mg, 10 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 2,5 mg VO 1x/dia inicial. Manutenção: 5–10 mg/dia 1x/dia. Máximo: 10 mg/dia.",
-      "adultoGrave": "IC pós-IAM: 2,5 mg 2x/dia inicial; titular para 5 mg 2x/dia. Alto risco CV (HOPE): 10 mg 1x/dia ou 5 mg 2x/dia.",
-      "pediatricaPadrao": "Uso pediátrico não aprovado formalmente. Dados clínicos limitados.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "Adultos: 2,5–10 mg/dia (dose fixa — sem cálculo por kg aprovado)",
-      "grave": "IC/Pós-IAM: 2,5–5 mg 2x/dia | Alto risco CV: 10 mg/dia",
-      "meningite": null,
-      "doseMaxima": "Adultos: 10 mg/dia"
-    },
-    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. IC/Pós-IAM: dose-alvo 5 mg 2x/dia. HOPE: 10 mg/dia reduziu eventos CV em 22%. Monitorar por PA, creatinina e K⁺.",
-    "dilution": "Apenas formulação oral. Ramipril é pró-fármaco convertido em ramiprilat (ativo) no fígado e na parede intestinal.",
-    "speed": "VO: tomar 1x/dia (ou 2x/dia em IC), com ou sem alimento.",
+    "class": "Inibidor da enzima conversora de angiotensina (IECA)",
+    "pharmacologicClass": "Modulador do sistema renina-angiotensina; inibidor da ECA",
+    "mechanism": "Inibe a ECA, reduz a formação de angiotensina II e a secreção de aldosterona e aumenta bradicinina. O resultado é vasodilatação e redução de pós-carga e pré-carga.",
+    "pharmacodynamics": "Reduz pressão arterial e resistência vascular sistêmica sem taquicardia reflexa importante. Na insuficiência cardíaca reduz pós-carga; pode elevar potássio e creatinina pelo bloqueio do SRAA.",
     "commonAdverseEffects": [
-      "Tosse seca (efeito de classe IECA)",
-      "Tontura / hipotensão",
-      "Hipercalemia",
-      "Elevação de creatinina",
-      "Fadiga"
+      "tosse seca",
+      "tontura",
+      "hipotensão",
+      "hipercalemia",
+      "aumento de creatinina"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (histórico de IECA contraindica uso permanente)",
-      "Insuficiência Renal Aguda",
-      "Hipercalemia grave",
-      "Hipotensão grave — especialmente na 1ª dose em hipovolêmicos"
+      "angioedema",
+      "lesão renal aguda",
+      "hipercalemia grave",
+      "hipotensão sintomática",
+      "toxicidade fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "História de angioedema relacionado a IECA",
+      "angioedema hereditário ou idiopático",
+      "uso concomitante de alisquireno em diabetes",
+      "uso dentro de 36 h de sacubitril/valsartana",
+      "hipersensibilidade ao fármaco"
+    ],
+    "interactions": [
+      "Suplementos de potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+      "AINEs podem reduzir efeito anti-hipertensivo e aumentar lesão renal",
+      "Lítio pode acumular",
+      "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
+      "Sacubitril/valsartana exige intervalo de 36 h"
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "creatinina/eTFG e potássio antes de iniciar e após titulação",
+      "sintomas de hipotensão",
+      "angioedema",
+      "gestação quando aplicável"
+    ],
+    "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+    "patientEducation": [
+      "Evitar gestação durante o tratamento",
+      "procurar urgência diante de edema de face, lábios ou língua",
+      "não usar suplementos de potássio ou sal com potássio sem orientação",
+      "levantar lentamente se houver tontura"
+    ],
+    "clinicalPearls": [
+      "Elevação de creatinina exige avaliar volume, AINE, estenose de artéria renal e outros fatores; KDIGO orienta revisar se o aumento superar 30% em até 4 semanas",
+      "A tosse é mediada em parte por bradicinina e costuma resolver com troca para BRA"
+    ],
+    "guidelineRecommendations": [
+      "Diretriz AHA/ACC 2025: IECAs são uma das classes de primeira linha para hipertensão quando indicados",
+      "KDIGO 2024: IECA ou BRA são priorizados na DRC com albuminúria e titulados à maior dose tolerada",
+      "AHA/ACC/HFSA: em HFrEF usa-se IECA quando ARNI não é viável"
+    ],
+    "safetyFlags": [
+      "TOXICIDADE_FETAL",
+      "ANGIOEDEMA",
+      "HIPERCALEMIA",
+      "FUNCAO_RENAL",
+      "INTERVALO_ARNI_36H"
+    ],
     "alerts": [
-      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação.",
-      "Ramipril é pró-fármaco — cautela em insuficiência hepática significativa (ativação hepática prejudicada).",
-      "Evidência do estudo HOPE: 10 mg/dia reduziu IAM, AVC e morte CV em 22% em pacientes de alto risco.",
-      "Sacubitril/Valsartana: washout de 36h obrigatório antes de iniciar ramipril."
+      "Não combinar rotineiramente IECA e BRA",
+      "Corrigir depleção de volume quando possível antes de iniciar",
+      "Suspender e tratar imediatamente se ocorrer angioedema"
     ],
-    "ref": "EMA Triatec (ramipril) SmPC 2024 · HOPE Trial (NEJM 2000) · ESC Hypertension Guidelines 2023 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não requer ajuste renal para ClCr ≥ 30 mL/min.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "2,5–10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dose padrão. HTA: 2,5–10 mg/dia. IC pós-IAM: 2,5 mg 2x/dia → 5 mg 2x/dia. HOPE: 10 mg/dia."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "1,25–5 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR leve-moderada: não requer ajuste formal, mas preferir doses menores. Monitorar K⁺ e creatinina."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "1,25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: iniciar com 1,25 mg/dia. Dose máxima 5 mg/dia. Risco elevado de acúmulo de ramiprilat e hipercalemia."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "1,25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2,5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muito grave: dose máxima 2,5 mg/dia. Monitoração intensiva obrigatória. Considerar alternativas se anúria ou K⁺ > 5,5 mEq/L."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "1,25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2,5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Ramiprilat não é removido significativamente por hemodiálise. Manter dose reduzida (máx. 2,5 mg/dia). Sem dose suplementar pós-HD necessária."
-      }
+    "specialPopulations": {
+      "elderly": "Titular conforme pressão, função renal e estado volêmico.",
+      "renalArteryStenosis": "Maior risco de deterioração renal; monitorar de perto.",
+      "blackPatients": "A resposta anti-hipertensiva em monoterapia pode ser menor; o risco de angioedema é maior."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": true,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. Pró-fármaco: cautela em hepatopatia. Ajuste renal em ClCr < 30 (máx. 5 mg/dia). Monitorar K⁺ e creatinina."
+    "name": "Ramipril",
+    "pharmacokinetics": "Pró-fármaco convertido por esterases em ramiprilato ativo. Metabolismo hepático e eliminação renal/biliar; a exposição ao ramiprilato aumenta na insuficiência renal.",
+    "indications": [
+      "Hipertensão",
+      "redução de risco de IAM, AVC e morte cardiovascular em adultos de alto risco selecionados",
+      "insuficiência cardíaca após IAM com sinais clínicos de congestão"
+    ],
+    "commercialNames": [
+      "Altace"
+    ],
+    "presentation": "Cápsulas orais.",
+    "presentations": [
+      "Cápsulas 1,25, 2,5, 5 e 10 mg"
+    ],
+    "dose": {
+      "hypertension": "2,5 mg uma vez ao dia; manutenção 2,5-20 mg/dia em 1-2 tomadas.",
+      "cvRiskReduction": "2,5 mg/dia por 1 semana, 5 mg/dia nas 3 semanas seguintes e então 10 mg/dia se tolerado.",
+      "postMIHF": "2,5 mg duas vezes ao dia; se hipotensão, 1,25 mg duas vezes ao dia; titular em direção a 5 mg duas vezes ao dia."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "EMA Triatec (ramipril) SmPC 2024",
-        "HOPE Trial — Yusuf S et al. (NEJM 2000)",
-        "AIRE Trial — Hall AS et al. (Lancet 1993)",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "UpToDate 2025",
-        "Lexicomp Online 2026"
+    "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
+    "renalDose": "ClCr >40 mL/min: esquema usual. Disfunção renal mais importante: hipertensão iniciar 1,25 mg/dia, máximo 5 mg/dia; IC pós-IAM iniciar 1,25 mg/dia e titular até 2,5 mg duas vezes ao dia.",
+    "hepaticDose": "Usar com cautela e titular lentamente; a conversão para ramiprilato pode ser alterada na doença hepática. Não há algoritmo universal de dose apenas por Child-Pugh.",
+    "administration": "Engolir a cápsula inteira; em produtos cuja bula permita, o conteúdo pode ser misturado em pequena quantidade de alimento ou líquido e consumido integralmente.",
+    "preparation": "Não requer reconstituição para cápsulas. Se abrir cápsula conforme bula do produto, manter toda a dose e respeitar condições de armazenamento descritas.",
+    "infusionProtocol": "Não se aplica: ramipril é administrado por via oral.",
+    "lactation": "A evidência em lactação é limitada; avaliar necessidade materna e considerar alternativa com maior experiência, especialmente em recém-nascidos ou prematuros.",
+    "adverseEffects": {
+      "common": [
+        "tosse seca",
+        "tontura",
+        "hipotensão",
+        "hipercalemia",
+        "aumento de creatinina"
       ],
-      "note": "Pró-fármaco (ramiprilat ativo, conversão hepática). Cautela em hepatopatia grave. Evidência HOPE para prevenção CV em alto risco. Ajuste renal em ClCr < 30 (máx. 5 mg/dia). Não dialisável."
-    }
+      "dangerous": [
+        "angioedema",
+        "lesão renal aguda",
+        "hipercalemia grave",
+        "hipotensão sintomática",
+        "toxicidade fetal"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07"
   },
   "es": {
-    "name": "Ramipril",
-    "class": "Inhibidor de la Enzima Convertidora de Angiotensina (IECA) — Profármaco (ramiprilat activo)",
-    "commercialNames": {
-      "br": [
-        "Triatec",
-        "Naprix",
-        "Ramipril Genérico"
-      ],
-      "ar": [
-        "Triatec",
-        "Ramipril Genérico"
-      ]
-    },
-    "presentation": [
-      "Cápsulas/Comprimidos: 1,25 mg, 2,5 mg, 5 mg, 10 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 2,5 mg VO 1 vez/día inicial. Mantenimiento: 5–10 mg/día 1 vez/día. Máximo: 10 mg/día.",
-      "adultoGrave": "IC post-IAM: 2,5 mg 2 veces/día inicial; titular hasta 5 mg 2 veces/día. Alto riesgo CV (HOPE): 10 mg 1 vez/día o 5 mg 2 veces/día.",
-      "pediatricaPadrao": "Uso pediátrico no aprobado formalmente. Datos clínicos limitados.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "Adultos: 2,5–10 mg/día (dosis fija — sin cálculo por kg aprobado)",
-      "grave": "IC/Post-IAM: 2,5–5 mg 2 veces/día | Alto riesgo CV: 10 mg/día",
-      "meningite": null,
-      "doseMaxima": "Adultos: 10 mg/día"
-    },
-    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. IC/Post-IAM: dosis objetivo 5 mg 2 veces/día. HOPE: 10 mg/día redujo eventos CV en 22%. Monitorizar por PA, creatinina y K⁺.",
-    "dilution": "Solo formulación oral. Ramipril es profármaco convertido en ramiprilat (activo) en el hígado y en la pared intestinal.",
-    "speed": "VO: tomar 1 vez/día (o 2 veces/día en IC), con o sin alimento.",
+    "class": "Inhibidor de la enzima convertidora de angiotensina (IECA)",
+    "pharmacologicClass": "Modulador del sistema renina-angiotensina; inhibidor de la ECA",
+    "mechanism": "Inhibe la ECA, reduce la formación de angiotensina II y la secreción de aldosterona, y aumenta bradicinina. El resultado es vasodilatación y menor poscarga y precarga.",
+    "pharmacodynamics": "Reduce la presión arterial y la resistencia vascular sistémica sin taquicardia refleja importante. En insuficiencia cardíaca reduce poscarga; puede aumentar potasio y creatinina por bloqueo del SRAA.",
     "commonAdverseEffects": [
-      "Tos seca (efecto de clase IECA)",
-      "Mareos / hipotensión",
-      "Hiperpotasemia",
-      "Elevación de creatinina",
-      "Fatiga"
+      "tos seca",
+      "mareo",
+      "hipotensión",
+      "hiperpotasemia",
+      "aumento de creatinina"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (historial de IECA contraindica uso permanente)",
-      "Insuficiencia Renal Aguda",
-      "Hiperpotasemia grave",
-      "Hipotensión grave — especialmente en 1ª dosis en hipovolémicos"
+      "angioedema",
+      "lesión renal aguda",
+      "hiperpotasemia grave",
+      "hipotensión sintomática",
+      "toxicidad fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Antecedente de angioedema relacionado con IECA",
+      "angioedema hereditario o idiopático",
+      "uso concomitante de aliskireno en diabetes",
+      "uso dentro de las 36 h de sacubitrilo/valsartán",
+      "hipersensibilidad al fármaco"
+    ],
+    "interactions": [
+      "Suplementos de potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+      "AINE pueden reducir efecto antihipertensivo y aumentar lesión renal",
+      "Litio puede acumularse",
+      "Doble bloqueo SRAA aumenta hipotensión, hiperpotasemia y lesión renal",
+      "Sacubitrilo/valsartán requiere separación de 36 h"
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "creatinina/eGFR y potasio antes de iniciar y tras titulación",
+      "síntomas de hipotensión",
+      "angioedema",
+      "embarazo cuando corresponda"
+    ],
+    "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+    "patientEducation": [
+      "Evitar embarazo durante el tratamiento",
+      "consultar de urgencia ante edema de cara, labios o lengua",
+      "no usar suplementos de potasio o sal con potasio sin indicación",
+      "levantarse lentamente si hay mareo"
+    ],
+    "clinicalPearls": [
+      "Una elevación de creatinina obliga a evaluar volumen, AINE, estenosis de arteria renal y otros factores; KDIGO aconseja revisar si el aumento supera 30% dentro de 4 semanas",
+      "La tos es mediada en parte por bradicinina y suele resolverse al cambiar a un ARA-II"
+    ],
+    "guidelineRecommendations": [
+      "Guía AHA/ACC 2025: IECA son una de las clases de primera línea para hipertensión cuando están indicados",
+      "KDIGO 2024: IECA o ARA-II se priorizan en ERC con albuminuria y se titulan a dosis máxima tolerada",
+      "AHA/ACC/HFSA: en HFrEF se usa IECA cuando ARNI no es factible"
+    ],
+    "safetyFlags": [
+      "TOXICIDAD_FETAL",
+      "ANGIOEDEMA",
+      "HIPERPOTASEMIA",
+      "FUNCION_RENAL",
+      "INTERVALO_ARNI_36H"
+    ],
     "alerts": [
-      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación.",
-      "Ramipril es profármaco — precaución en insuficiencia hepática significativa (activación hepática deteriorada).",
-      "Evidencia del estudio HOPE: 10 mg/día redujo IAM, ACV y muerte CV en 22% en pacientes de alto riesgo.",
-      "Sacubitril/Valsartán: washout de 36h obligatorio antes de iniciar ramipril."
+      "No combinar rutinariamente IECA y ARA-II",
+      "Corregir depleción de volumen si es posible antes de iniciar",
+      "Suspender y tratar de inmediato si aparece angioedema"
     ],
-    "ref": "EMA Triatec (ramipril) SmPC 2024 · HOPE Trial (NEJM 2000) · ESC Hypertension Guidelines 2023 · AHA/ACC/HFSA Heart Failure Guidelines 2022 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal para ClCr ≥ 30 mL/min.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "2,5–10 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "10 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dosis estándar. HTA: 2,5–10 mg/día. IC post-IAM: 2,5 mg 2 veces/día → 5 mg 2 veces/día. HOPE: 10 mg/día."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "1,25–5 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR leve-moderada: sin ajuste formal necesario, pero preferir dosis menores. Monitorizar K⁺ y creatinina."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "1,25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: iniciar con 1,25 mg/día. Dosis máxima 5 mg/día. Riesgo elevado de acumulación de ramiprilat e hiperpotasemia."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "1,25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2,5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muy grave: dosis máxima 2,5 mg/día. Monitorización intensiva obligatoria. Considerar alternativas si anuria o K⁺ > 5,5 mEq/L."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "1,25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2,5 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Ramiprilat no es removido significativamente por hemodiálisis. Mantener dosis reducida (máx. 2,5 mg/día). Sin dosis suplementaria post-HD necesaria."
-      }
+    "specialPopulations": {
+      "elderly": "Titular según presión, función renal y volumen.",
+      "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar estrechamente.",
+      "blackPatients": "La respuesta antihipertensiva como monoterapia puede ser menor; el riesgo de angioedema es mayor."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": true,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. Profármaco: precaución en hepatopatía. Ajuste renal en ClCr < 30 (máx. 5 mg/día). Monitorizar K⁺ y creatinina."
+    "name": "Ramipril",
+    "pharmacokinetics": "Profármaco convertido por esterasas a ramiprilato activo. Metabolismo hepático y eliminación renal/biliar; la exposición a ramiprilato aumenta en insuficiencia renal.",
+    "indications": [
+      "Hipertensión",
+      "reducción de riesgo de IAM, ACV y muerte cardiovascular en adultos de alto riesgo seleccionados",
+      "insuficiencia cardíaca post-IAM con signos clínicos de congestión"
+    ],
+    "commercialNames": [
+      "Altace"
+    ],
+    "presentation": "Cápsulas orales.",
+    "presentations": [
+      "Cápsulas 1.25, 2.5, 5 y 10 mg"
+    ],
+    "dose": {
+      "hypertension": "2.5 mg una vez al día; mantenimiento 2.5-20 mg/día en 1-2 tomas.",
+      "cvRiskReduction": "2.5 mg/día por 1 semana, 5 mg/día durante las 3 semanas siguientes y luego 10 mg/día si se tolera.",
+      "postMIHF": "2.5 mg dos veces al día; si hipotensión, 1.25 mg dos veces al día; titular hacia 5 mg dos veces al día."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "EMA Triatec (ramipril) SmPC 2024",
-        "HOPE Trial — Yusuf S et al. (NEJM 2000)",
-        "AIRE Trial — Hall AS et al. (Lancet 1993)",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "UpToDate 2025",
-        "Lexicomp Online 2026"
+    "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
+    "renalDose": "ClCr >40 mL/min: esquema habitual. Disfunción renal mayor: hipertensión iniciar 1.25 mg/día, máximo 5 mg/día; IC post-IAM iniciar 1.25 mg/día y titular hasta 2.5 mg dos veces al día.",
+    "hepaticDose": "Usar con cautela y titular lentamente; la conversión a ramiprilato puede alterarse en enfermedad hepática. No existe un algoritmo universal de dosis solo por Child-Pugh.",
+    "administration": "Tragar la cápsula entera; en productos cuya ficha lo permita, el contenido puede mezclarse con pequeña cantidad de alimento o líquido y consumirse por completo.",
+    "preparation": "No requiere reconstitución para cápsulas. Si se abre la cápsula según ficha del producto, conservar toda la dosis y respetar las condiciones de almacenamiento descritas.",
+    "infusionProtocol": "No aplica: ramipril se administra por vía oral.",
+    "lactation": "La evidencia en lactancia es limitada; valorar necesidad materna y considerar alternativa con mayor experiencia, especialmente en recién nacidos o prematuros.",
+    "adverseEffects": {
+      "common": [
+        "tos seca",
+        "mareo",
+        "hipotensión",
+        "hiperpotasemia",
+        "aumento de creatinina"
       ],
-      "note": "Profármaco (ramiprilat activo, conversión hepática). Precaución en hepatopatía grave. Evidencia HOPE para prevención CV en alto riesgo. Ajuste renal en ClCr < 30 (máx. 5 mg/día). No dializable."
-    }
+      "dangerous": [
+        "angioedema",
+        "lesión renal aguda",
+        "hiperpotasemia grave",
+        "hipotensión sintomática",
+        "toxicidad fetal"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07"
   },
   "name": {
     "pt": "Ramipril",
@@ -291,9 +261,19 @@
     "ramipril generico",
     "inibidor da enzima conversora de angiotensina (ieca) — pro-farmaco (ramiprilat ativo)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-60dc1dc928da29df",
+  "clinicalContentSha256": "60dc1dc928da29dfe8470026c8d2c7e9d57bd938d428296362e253d00632f05e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "ramipril.mcGoldClinicalV1",
+    "group": "GOLD_GROUP04_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "88af5827773aea2f5198f2725e9082ee5e5f472dd6d709895987b9b73e943d74",
+    "physicalHomologation": "DEFERRED"
+  }
 }

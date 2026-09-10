@@ -1,280 +1,224 @@
 {
   "id": "hidroclorotiazida",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(100,116,139,0.12)",
   "colorTxt": "#1E293B",
   "pt": {
-    "name": "Hidroclorotiazida",
-    "class": "Diurético tiazídico — Inibidor do cotransportador Na+/Cl- (NCC) no túbulo contornado distal",
-    "commercialNames": {
-      "br": [
-        "Clorana",
-        "Hidroclorotiazida genérica",
-        "Diversas combinações fixas (IECA, BRA, betabloqueadores)"
-      ],
-      "ar": [
-        "Hidroclorotiazida genérica",
-        "Diversas asociaciones con IECA y ARA-II"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 12,5 mg",
-      "Comprimidos 25 mg",
-      "Comprimidos 50 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HAS: iniciar 12,5 mg VO 1x/dia; manutenção 12,5–25 mg/dia. Edema leve: 25–50 mg/dia. Doses > 50 mg raramente aumentam eficácia e elevam eventos adversos.",
-      "adultoGrave": "DRC moderada/grave (eTFG < 30): PERDE EFICÁCIA — considerar diurético de alça. Em idosos ou diabetes: iniciar 12,5 mg e monitorar sódio, K⁺ e glicemia.",
-      "pediatricaPadrao": "Uso pediátrico estabelecido. Consultar protocolo por peso e indicação.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "50 mg/dia. Doses maiores raramente aumentam eficácia — só elevam eventos adversos."
-    },
-    "therapeuticRange": "Controle pressórico; redução de edema; prevenção de cálculos por hipercalciúria; redução de eventos cardiovasculares",
-    "dilution": "Uso exclusivo via oral. Não diluir.",
-    "speed": "Administrar pela manhã para evitar poliúria noturna. Reavaliação de eletrólitos em 2–4 semanas após início.",
+    "pharmacologicClass": "Diurético tiazídico ou tipo tiazida; inibidor funcional do cotransportador Na/Cl do túbulo distal",
+    "mechanism": "Reduz reabsorção de sódio e cloro no túbulo contornado distal, aumentando natriurese e diurese e reduzindo volume extracelular e resistência vascular no longo prazo.",
+    "pharmacodynamics": "Reduz pressão arterial e aumenta excreção de sódio e potássio; pode elevar cálcio sérico, ácido úrico e glicose e causar hiponatremia.",
     "commonAdverseEffects": [
-      "Hipocalemia",
-      "Hiponatremia",
-      "Hipomagnesemia",
-      "Tontura",
-      "Hipotensão",
-      "Poliúria",
-      "Cefaleia",
-      "Fraqueza"
+      "hiponatremia",
+      "hipocalemia",
+      "tontura",
+      "hiperuricemia",
+      "hiperglicemia"
     ],
     "dangerousAdverseEffects": [
-      "Hiponatremia grave",
-      "Hipocalemia grave com arritmias",
-      "Alcalose metabólica",
-      "Lesão renal aguda",
-      "Crise de gota",
-      "Pancreatite aguda (rara)",
-      "Reações cutâneas graves (rara)"
+      "hiponatremia grave",
+      "hipocalemia grave",
+      "arritmia secundária a distúrbio eletrolítico",
+      "lesão renal por depleção volêmica"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Anúria",
+      "hipersensibilidade ao fármaco; revisar história de reação a sulfonamidas não antibióticas com critério clínico"
+    ],
+    "interactions": [
+      "Lítio pode acumular",
+      "AINEs podem reduzir efeito anti-hipertensivo e diurético",
+      "Digoxina: hipocalemia aumenta risco de arritmia",
+      "Outros anti-hipertensivos podem potencializar hipotensão"
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "sódio e potássio",
+      "creatinina/eTFG",
+      "magnésio",
+      "ácido úrico",
+      "glicose conforme risco"
+    ],
+    "administration": "Administrar preferencialmente pela manhã; titular para a menor dose eficaz.",
+    "preparation": "Comprimidos não exigem reconstituição.",
+    "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+    "pregnancy": "Diuréticos não são usados para tratar edema fisiológico da gestação; usar apenas se houver indicação materna clara.",
+    "lactation": "Pode reduzir produção de leite com diurese intensa; individualizar conforme dose e situação clínica.",
+    "specialPopulations": {
+      "elderly": "Maior risco de hiponatremia e depleção volêmica.",
+      "gout": "Pode aumentar ácido úrico e precipitar gota.",
+      "diabetes": "Pode piorar glicemia em alguns pacientes."
+    },
+    "patientEducation": [
+      "Tomar cedo para reduzir noctúria",
+      "procurar avaliação por fraqueza, cãibras, confusão ou tontura intensa",
+      "manter controles de eletrólitos e função renal"
+    ],
+    "clinicalPearls": [
+      "A resposta anti-hipertensiva deve ser avaliada junto com sódio, potássio, função renal e ácido úrico."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: diuréticos tiazídicos/tiazídico-like são tratamento de primeira linha para hipertensão; clortalidona tem maior meia-vida e potência mg por mg que hidroclorotiazida."
+    ],
+    "safetyFlags": [
+      "SODIO",
+      "POTASSIO",
+      "FUNCAO_RENAL",
+      "ACIDO_URICO"
+    ],
     "alerts": [
-      "Perde eficácia diurética em DRC grave (eTFG < 30 mL/min) — substituir por diurético de alça.",
-      "Interações graves: digoxina (hipocalemia amplifica toxicidade); lítio (aumenta toxicidade); antiarrítmicos (arritmia por hipocalemia).",
-      "Efeitos metabólicos: hiperuricemia (gota), hiperglicemia, aumento de TG e LDL — considerar em pacientes com esses fatores.",
-      "AINEs reduzem efeito anti-hipertensivo — evitar associação."
+      "Corrigir distúrbios eletrolíticos relevantes",
+      "Evitar sobrediurese e revisar AINEs concomitantes."
     ],
-    "ref": "ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · ALLHAT Trial · KDIGO Guidelines · Lexicomp · FDA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Sem ajuste formal em eTFG ≥ 30 mL/min, mas monitorar eletrólitos e eficácia diurética.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "12,5–25 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dose habitual. Monitorar K⁺, Na⁺, ácido úrico e glicemia periodicamente."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "12,5–25 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "25 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "DRC moderada: eficácia reduzida — usar dose mínima e monitorar K⁺, Na⁺ e creatinina frequentemente."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "eTFG < 30 mL/min: hidroclorotiazida geralmente INEFICAZ. Substituir por furosemida ou torsemida."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "eTFG < 10 mL/min / anúria: CONTRAINDICADA — sem eficácia e risco de efeitos adversos sem benefício diurético."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálise: sem indicação. Pacientes dialíticos devem usar diuréticos de alça se houver diurese residual."
-      }
+    "name": "Hidroclorotiazida",
+    "class": "Diurético tiazídico",
+    "pharmacokinetics": "Absorção oral com eliminação renal predominantemente inalterada; a meia-vida aumenta quando a função renal diminui.",
+    "indications": [
+      "Hipertensão",
+      "edema associado a insuficiência cardíaca, cirrose, doença renal ou tratamento com corticosteroides/estrogênios conforme bula"
+    ],
+    "commercialNames": [
+      "Microzide"
+    ],
+    "presentation": "Comprimidos ou cápsulas orais conforme produto.",
+    "presentations": [
+      "Comprimidos 12,5, 25 e 50 mg conforme produto"
+    ],
+    "dose": {
+      "hypertension": "25 mg uma vez ao dia; pode aumentar para 50 mg/dia em uma ou duas tomadas. Doses >50 mg aumentam hipocalemia e raramente são necessárias.",
+      "edema": "25-100 mg/dia em uma ou duas tomadas; alguns pacientes respondem a uso intermitente."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "hyperuricemiaRisk": true,
-      "diabetesRisk": true,
-      "pregnancyCaution": true,
-      "warning": "Principal risco: hiponatremia (especialmente em idosas) e hipocalemia. Perde eficácia em DRC grave (eTFG < 30). Efeitos metabólicos: hiperuricemia, hiperglicemia, dislipidemia."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ALLHAT Trial (JAMA 2002)",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC Hypertension Guidelines 2023",
-        "KDIGO Guidelines",
-        "Lexicomp 2026",
-        "FDA label"
+    "pediatricDose": "1-2 mg/kg/dia em uma ou duas tomadas; máximo 37,5 mg/dia até 2 anos e 100 mg/dia entre 2 e 12 anos. Menores de 6 meses podem necessitar até 3 mg/kg/dia divididos conforme bula.",
+    "renalDose": "A eficácia diminui na insuficiência renal avançada; evitar em anúria. Monitorar creatinina, sódio e potássio e suspender se houver azotemia progressiva clinicamente relevante.",
+    "hepaticDose": "Usar com cautela na hepatopatia ou cirrose pelo risco de alterações de volemia e eletrólitos que podem precipitar encefalopatia.",
+    "adverseEffects": {
+      "common": [
+        "hiponatremia",
+        "hipocalemia",
+        "tontura",
+        "hiperuricemia",
+        "hiperglicemia"
       ],
-      "note": "Tiazídico mais prescrito mundialmente. Base de inúmeras combinações fixas cardiovasculares. Perde eficácia em DRC grave (eTFG < 30). Efeitos metabólicos clinicamente relevantes: gota, hiperglicemia, dislipidemia. Clortalidona é considerada superior para eventos cardiovasculares."
-    }
+      "dangerous": [
+        "hiponatremia grave",
+        "hipocalemia grave",
+        "arritmia secundária a distúrbio eletrolítico",
+        "lesão renal por depleção volêmica"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c59c4230-7cea-4259-9f2f-6a568716fedf",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c59c4230-7cea-4259-9f2f-6a568716fedf"
   },
   "es": {
-    "name": "Hidroclorotiazida",
-    "class": "Diurético tiazídico — Inhibidor del cotransportador Na+/Cl- (NCC) en el túbulo contorneado distal",
-    "commercialNames": {
-      "br": [
-        "Clorana",
-        "Hidroclorotiazida genérica",
-        "Diversas combinações fixas (IECA, BRA, betabloqueadores)"
-      ],
-      "ar": [
-        "Hidroclorotiazida genérica",
-        "Diversas asociaciones con IECA y ARA-II"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 12,5 mg",
-      "Comprimidos 25 mg",
-      "Comprimidos 50 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: iniciar 12,5 mg VO 1 vez/día; mantenimiento 12,5–25 mg/día. Edema leve: 25–50 mg/día. Dosis > 50 mg raramente aumentan eficacia y elevan eventos adversos.",
-      "adultoGrave": "ERC moderada/grave (TFGe < 30): PIERDE EFICACIA — considerar diurético de asa. En ancianos o diabéticos: iniciar 12,5 mg y monitorizar sodio, K⁺ y glucemia.",
-      "pediatricaPadrao": "Uso pediátrico establecido. Consultar protocolo por peso e indicación.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "50 mg/día. Dosis mayores raramente aumentan eficacia — solo elevan eventos adversos."
-    },
-    "therapeuticRange": "Control tensional; reducción de edema; prevención de cálculos por hipercalciuria; reducción de eventos cardiovasculares",
-    "dilution": "Uso exclusivo vía oral. No diluir.",
-    "speed": "Administrar por la mañana para evitar poliuria nocturna. Reevaluación de electrolitos en 2–4 semanas tras inicio.",
+    "pharmacologicClass": "Diurético tiazídico o tipo tiazida; inhibidor funcional del cotransportador Na/Cl del túbulo distal",
+    "mechanism": "Reduce reabsorción de sodio y cloro en el túbulo contorneado distal, aumentando natriuresis y diuresis y reduciendo volumen extracelular y resistencia vascular a largo plazo.",
+    "pharmacodynamics": "Disminuye presión arterial y favorece excreción de sodio y potasio; puede aumentar calcio sérico, ácido úrico y glucosa y causar hiponatremia.",
     "commonAdverseEffects": [
-      "Hipocalemia",
-      "Hiponatremia",
-      "Hipomagnesemia",
-      "Mareos",
-      "Hipotensión",
-      "Poliuria",
-      "Cefalea",
-      "Debilidad"
+      "hiponatremia",
+      "hipopotasemia",
+      "mareo",
+      "hiperuricemia",
+      "hiperglucemia"
     ],
     "dangerousAdverseEffects": [
-      "Hiponatremia grave",
-      "Hipocalemia grave con arritmias",
-      "Alcalosis metabólica",
-      "Lesión renal aguda",
-      "Crisis de gota",
-      "Pancreatitis aguda (rara)",
-      "Reacciones cutáneas graves (rara)"
+      "hiponatremia grave",
+      "hipopotasemia grave",
+      "arritmia secundaria a trastorno electrolítico",
+      "lesión renal por depleción de volumen"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Anuria",
+      "hipersensibilidad al fármaco; revisar antecedentes de reacción a sulfonamidas no antibióticas con criterio clínico"
+    ],
+    "interactions": [
+      "Litio puede acumularse",
+      "AINE pueden reducir efecto antihipertensivo y diurético",
+      "Digoxina: hipopotasemia aumenta riesgo de arritmia",
+      "Otros antihipertensivos pueden potenciar hipotensión"
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "sodio y potasio",
+      "creatinina/eGFR",
+      "magnesio",
+      "ácido úrico",
+      "glucosa según riesgo"
+    ],
+    "administration": "Administrar preferentemente por la mañana; titular a la menor dosis eficaz.",
+    "preparation": "Tabletas no requieren reconstitución.",
+    "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+    "pregnancy": "Los diuréticos no se usan para tratar edema fisiológico del embarazo; usar solo si existe indicación materna clara.",
+    "lactation": "Puede reducir producción de leche con diuresis intensa; individualizar por dosis y situación clínica.",
+    "specialPopulations": {
+      "elderly": "Mayor riesgo de hiponatremia y depleción de volumen.",
+      "gout": "Puede aumentar ácido úrico y precipitar gota.",
+      "diabetes": "Puede empeorar glucemia en algunos pacientes."
+    },
+    "patientEducation": [
+      "Tomar temprano para reducir nocturia",
+      "consultar por debilidad, calambres, confusión o mareo intenso",
+      "mantener controles de electrolitos y función renal"
+    ],
+    "clinicalPearls": [
+      "La respuesta antihipertensiva debe valorarse junto con sodio, potasio, función renal y ácido úrico."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: diuréticos tipo tiazida son tratamiento de primera línea para hipertensión; clortalidona tiene mayor vida media y potencia mg por mg que hidroclorotiazida."
+    ],
+    "safetyFlags": [
+      "SODIO",
+      "POTASIO",
+      "FUNCION_RENAL",
+      "ACIDO_URICO"
+    ],
     "alerts": [
-      "Pierde eficacia diurética en ERC grave (TFGe < 30 mL/min) — sustituir por diurético de asa.",
-      "Interacciones graves: digoxina (hipocalemia amplifica toxicidad); litio (aumenta toxicidad); antiarrítmicos (arritmia por hipocalemia).",
-      "Efectos metabólicos: hiperuricemia (gota), hiperglucemia, aumento de TG y LDL — considerar en pacientes con estos factores.",
-      "AINEs reducen efecto antihipertensivo — evitar asociación."
+      "Corregir alteraciones electrolíticas relevantes",
+      "Evitar sobre-diuresis y revisar AINE concomitantes."
     ],
-    "ref": "ESC Hypertension Guidelines · AHA/ACC Hypertension Guidelines · ALLHAT Trial · KDIGO Guidelines · Lexicomp · FDA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Sin ajuste formal con TFGe ≥ 30 mL/min, pero monitorizar electrolitos y eficacia diurética.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "12,5–25 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dosis habitual. Monitorizar K⁺, Na⁺, ácido úrico y glucemia periódicamente."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "12,5–25 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "25 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ERC moderada: eficacia reducida — usar dosis mínima y monitorizar K⁺, Na⁺ y creatinina frecuentemente."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "TFGe < 30 mL/min: hidroclorotiazida generalmente INEFICAZ. Sustituir por furosemida o torasemida."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "TFGe < 10 mL/min / anuria: CONTRAINDICADA — sin eficacia y riesgo de efectos adversos sin beneficio diurético."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálisis: sin indicación. Pacientes dializados deben usar diuréticos de asa si hay diuresis residual."
-      }
+    "name": "Hidroclorotiazida",
+    "class": "Diurético tiazídico",
+    "pharmacokinetics": "Absorción oral con eliminación renal predominantemente sin cambios; la vida media aumenta cuando disminuye la función renal.",
+    "indications": [
+      "Hipertensión",
+      "edema asociado a insuficiencia cardíaca, cirrosis, enfermedad renal o tratamiento con corticosteroides/estrógenos según ficha"
+    ],
+    "commercialNames": [
+      "Microzide"
+    ],
+    "presentation": "Tabletas o cápsulas orales según producto.",
+    "presentations": [
+      "Tabletas 12.5, 25 y 50 mg según producto"
+    ],
+    "dose": {
+      "hypertension": "25 mg una vez al día; puede aumentarse a 50 mg/día en una o dos tomas. Dosis >50 mg aumentan hipopotasemia y rara vez son necesarias.",
+      "edema": "25-100 mg/día en una o dos tomas; algunos pacientes responden a uso intermitente."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "hyperuricemiaRisk": true,
-      "diabetesRisk": true,
-      "pregnancyCaution": true,
-      "warning": "Principal riesgo: hiponatremia (especialmente en ancianas) e hipocalemia. Pierde eficacia en ERC grave (TFGe < 30). Efectos metabólicos: hiperuricemia, hiperglucemia, dislipidemia."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ALLHAT Trial (JAMA 2002)",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC Hypertension Guidelines 2023",
-        "KDIGO Guidelines",
-        "Lexicomp 2026",
-        "FDA label"
+    "pediatricDose": "1-2 mg/kg/día en una o dos tomas; máximo 37.5 mg/día hasta 2 años y 100 mg/día entre 2 y 12 años. Menores de 6 meses pueden requerir hasta 3 mg/kg/día divididos según ficha.",
+    "renalDose": "La eficacia disminuye con insuficiencia renal avanzada; evitar en anuria. Vigilar creatinina, sodio y potasio y suspender si se desarrolla azotemia progresiva clínicamente relevante.",
+    "hepaticDose": "Usar con cautela en hepatopatía o cirrosis por riesgo de cambios de volumen y electrolitos que pueden precipitar encefalopatía.",
+    "adverseEffects": {
+      "common": [
+        "hiponatremia",
+        "hipopotasemia",
+        "mareo",
+        "hiperuricemia",
+        "hiperglucemia"
       ],
-      "note": "Tiazídico más prescrito mundialmente. Base de numerosas combinaciones fijas cardiovasculares. Pierde eficacia en ERC grave (TFGe < 30). Efectos metabólicos clínicamente relevantes: gota, hiperglucemia, dislipidemia. Clortalidona se considera superior para eventos cardiovasculares."
-    }
+      "dangerous": [
+        "hiponatremia grave",
+        "hipopotasemia grave",
+        "arritmia secundaria a trastorno electrolítico",
+        "lesión renal por depleción de volumen"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c59c4230-7cea-4259-9f2f-6a568716fedf",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c59c4230-7cea-4259-9f2f-6a568716fedf"
   },
   "name": {
     "pt": "Hidroclorotiazida",
@@ -288,9 +232,19 @@
     "diversas asociaciones con ieca y ara-ii",
     "diuretico tiazidico — inibidor do cotransportador na+/cl- (ncc) no tubulo contornado distal"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-08b9648aa55fe977",
+  "clinicalContentSha256": "08b9648aa55fe9778b43ee806de0b8f0eaf5f6422a9ff82ed29ac061bad30083",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "hidroclorotiazida.mcGoldClinicalV1",
+    "group": "GOLD_GROUP06_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "2f88464dab53fd3c79d79ee63a2bad7e4c7d05c1a1706a2b552a0970f1f915e6",
+    "physicalHomologation": "DEFERRED"
+  }
 }

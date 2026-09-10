@@ -1,314 +1,250 @@
 {
   "id": "torsemida",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(59,130,246,0.10)",
   "colorTxt": "#1E3A8A",
   "pt": {
-    "name": "Torsemida",
-    "class": "Diurético de alça — Inibidor do NKCC2 com biodisponibilidade oral superior e ação prolongada (1x/dia)",
-    "commercialNames": {
-      "br": [
-        "Demadex",
-        "Torsemida genérica"
-      ],
-      "ar": [
-        "Toradiur",
-        "Torasemida genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 5 mg",
-      "Comprimidos 10 mg",
-      "Comprimidos 20 mg",
-      "Comprimidos 100 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "IC: 10–20 mg VO 1x/dia; HTA/edema leve: 5–10 mg VO 1x/dia. Titular conforme congestão e resposta diurética. Equiv: 20 mg torsemida ≈ 40 mg furosemida VO.",
-      "adultoGrave": "IC avançada ou resistência diurética: 40–100 mg VO 1x/dia. Máx 200 mg/dia em edema grave refratário sob monitorização.",
-      "pediatricaPadrao": "Uso pediátrico não estabelecido rotineiramente. Consultar especialista.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "200 mg/dia em edema grave refratário sob monitorização. Equivalência: 20 mg ≈ 40 mg furosemida VO ≈ 1 mg bumetanida."
-    },
-    "therapeuticRange": "Redução de congestão; controle crônico estável da volemia; balanço hídrico negativo quando indicado",
-    "dilution": "Uso exclusivo via oral. Não diluir.",
-    "speed": "Administrar 1x/dia pela manhã. Biodisponibilidade oral ~80% — menos variável que furosemida (~50–70%).",
+    "pharmacologicClass": "Diurético de alça; inibidor do cotransportador NKCC2",
+    "mechanism": "Inibe o cotransportador Na-K-2Cl no ramo ascendente espesso da alça de Henle, aumentando excreção de sódio, cloro e água e favorecendo perdas de potássio, cálcio e magnésio.",
+    "pharmacodynamics": "Produz natriurese e diurese, reduz congestão e pressões de enchimento. A resposta depende da dose, perfusão renal, absorção oral e grau de resistência diurética.",
     "commonAdverseEffects": [
-      "Poliúria",
-      "Tontura",
-      "Hipotensão",
-      "Hipocalemia",
-      "Hipomagnesemia",
-      "Hiponatremia",
-      "Aumento de creatinina",
-      "Cãibras musculares"
+      "poliúria",
+      "tontura",
+      "hipotensão",
+      "hipocalemia",
+      "hiponatremia",
+      "hipomagnesemia"
     ],
     "dangerousAdverseEffects": [
-      "Desidratação grave",
-      "Lesão renal aguda",
-      "Hipocalemia grave com arritmias",
-      "Hiponatremia grave",
-      "Alcalose metabólica",
-      "Ototoxicidade (rara com torsemida)",
-      "Encefalopatia hepática em cirrose vulnerável"
+      "depleção volêmica profunda",
+      "lesão renal aguda",
+      "distúrbios eletrolíticos graves",
+      "ototoxicidade",
+      "reações cutâneas graves raras"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Anúria",
+      "hipersensibilidade ao fármaco"
+    ],
+    "interactions": [
+      "AINEs podem reduzir resposta diurética e aumentar risco renal",
+      "Aminoglicosídeos ou outros ototóxicos podem aumentar ototoxicidade",
+      "Lítio pode acumular",
+      "Digoxina: hipocalemia aumenta toxicidade",
+      "Outros anti-hipertensivos aumentam hipotensão"
+    ],
+    "monitoring": [
+      "Peso e balanço hídrico",
+      "pressão arterial",
+      "creatinina/eTFG",
+      "sódio, potássio e magnésio",
+      "sinais de desidratação",
+      "audição em doses IV altas ou fatores de risco"
+    ],
+    "pregnancy": "Usar na gestação apenas se clinicamente necessário; monitorar crescimento fetal e perfusão materna quando houver necessidade de diurese sustentada.",
+    "lactation": "Individualizar; doses altas ou diurese intensa podem reduzir produção de leite. Observar hidratação e peso do lactente.",
+    "patientEducation": [
+      "Tomar preferencialmente cedo para reduzir noctúria",
+      "controlar peso se orientado",
+      "procurar avaliação por tontura intensa, cãibras, pouca urina ou sede importante",
+      "não usar AINE cronicamente sem orientação"
+    ],
+    "clinicalPearls": [
+      "A biodisponibilidade oral costuma ser mais previsível que a da furosemida",
+      "Não assumir superioridade clínica de mortalidade frente a outros diuréticos de alça; o objetivo principal é descongestão e controle de sintomas."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC/HFSA: diuréticos são recomendados em pacientes com insuficiência cardíaca e retenção de líquidos para aliviar congestão e sintomas."
+    ],
+    "safetyFlags": [
+      "VOLEMIA",
+      "ELETROLITOS",
+      "FUNCAO_RENAL",
+      "OTOTOXICIDADE"
+    ],
     "alerts": [
-      "Equivalência: 20 mg torsemida VO ≈ 40 mg furosemida VO ≈ 1 mg bumetanida — atenção ao converter doses.",
-      "Biodisponibilidade oral superior (~80%) e mais estável que furosemida — útil em baixa absorção intestinal ou edema de alça.",
-      "Interações graves: digoxina (hipocalemia amplifica toxicidade); aminoglicosídeos (ototoxicidade); lítio (toxicidade).",
-      "AINEs reduzem efeito diurético e aumentam risco renal — evitar associação.",
-      "Cirrose: cautela — risco de hipovolemia, hiponatremia e encefalopatia hepática."
+      "Evitar diurese excessivamente rápida sem indicação",
+      "Corrigir distúrbios eletrolíticos relevantes",
+      "Ajustar conforme resposta clínica e função renal."
     ],
-    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Sem ajuste renal obrigatório em ClCr ≥ 30 mL/min. Monitorar eletrólitos e função renal periodicamente.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "10–40 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "200 mg/dia (em congestão grave)",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dose habitual. Monitorar eletrólitos e peso diário."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "20–40 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "DRC moderada: doses habituais ou levemente maiores. Monitorar K⁺, Na⁺, Mg²⁺ e creatinina."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "40–100 mg",
-          "intervalo": "1x/dia (titulada)",
-          "doseMaxima": "Conforme resposta diurética",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "DRC grave: doses escalonadas por resistência diurética. Monitoração intensiva obrigatória."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "100–200 mg",
-          "intervalo": "1x/dia (individualizado)",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "DRC muito grave: resistência diurética extrema. Avaliar necessidade de terapia de substituição renal."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "20 mg",
-          "intervalo": "Se diurese residual presente",
-          "doseMaxima": "Conforme resposta",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Torsemida é parcialmente removida por hemodiálise. Em pacientes anúricos raramente eficaz. Manter apenas com diurese residual documentada."
-      }
+    "name": "Torsemida",
+    "class": "Diurético de alça de administração oral uma vez ao dia",
+    "pharmacokinetics": "Biodisponibilidade oral alta e relativamente consistente, com meia-vida próxima de 3,5 h. Metabolismo principalmente hepático por CYP2C9 e eliminação renal de uma fração da dose.",
+    "indications": [
+      "Edema associado à insuficiência cardíaca",
+      "edema associado à doença renal",
+      "edema associado à doença hepática",
+      "hipertensão"
+    ],
+    "commercialNames": [
+      "Demadex"
+    ],
+    "presentation": "Comprimidos orais.",
+    "presentations": [
+      "Comprimidos 5, 10, 20 e 100 mg conforme produto"
+    ],
+    "dose": {
+      "heartFailureEdema": "10 ou 20 mg uma vez ao dia; dobrar conforme resposta; doses >200 mg não estudadas.",
+      "renalEdema": "20 mg uma vez ao dia; dobrar conforme resposta; doses >200 mg não estudadas.",
+      "cirrhosisEdema": "5 ou 10 mg uma vez ao dia; titular dobrando; doses >40 mg não estudadas.",
+      "hypertension": "5 mg uma vez ao dia; se necessário após 4-6 semanas aumentar para 10 mg uma vez ao dia."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "electrolyteRisk": true,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "ototoxicityRisk": true,
-      "pregnancyCaution": true,
-      "warning": "Torsemida tem biodisponibilidade oral mais estável e ação mais prolongada que furosemida (20 mg ≈ 40 mg furosemida VO). Mantém riscos de hipovolemia, hipocalemia, hiponatremia e lesão renal aguda."
+    "pediatricDose": "Segurança e eficácia não estabelecidas em pacientes pediátricos pela bula atual.",
+    "renalDose": "Edema por doença renal: início 20 mg uma vez ao dia e dobrar conforme resposta; não reduzir automaticamente apenas pela eTFG. Em anúria é contraindicado.",
+    "hepaticDose": "Cirrose: iniciar 5-10 mg uma vez ao dia, em geral junto de antagonista de aldosterona ou diurético poupador de potássio conforme plano; doses >40 mg não estudadas nesta indicação.",
+    "administration": "Uma vez ao dia, preferencialmente pela manhã; pode ser tomada com ou sem alimentos.",
+    "preparation": "Não requer reconstituição.",
+    "infusionProtocol": "Não se aplica: este registro corresponde à torsemida oral.",
+    "specialPopulations": {
+      "renal": "A dose é titulada à resposta; anúria é contraindicação.",
+      "cirrhosis": "Maior risco de distúrbios hidroeletrolíticos e encefalopatia.",
+      "elderly": "Monitorar volemia, pressão, rim e eletrólitos."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ESC Heart Failure Guidelines 2021/2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "TRANSFORM-HF Trial (JAMA 2023)",
-        "KDIGO Guidelines",
-        "Goodman & Gilman",
-        "Lexicomp 2026",
-        "FDA/EMA label"
+    "adverseEffects": {
+      "common": [
+        "poliúria",
+        "tontura",
+        "hipotensão",
+        "hipocalemia",
+        "hiponatremia",
+        "hipomagnesemia"
       ],
-      "note": "Diurético de alça com biodisponibilidade oral ~80% e ação 1x/dia — vantagens sobre furosemida em manejo crônico de IC. TRANSFORM-HF: não superior à furosemida em mortalidade, mas com melhor perfil de absorção oral. Equivalência: 20 mg ≈ 40 mg furosemida VO."
-    }
+      "dangerous": [
+        "depleção volêmica profunda",
+        "lesão renal aguda",
+        "distúrbios eletrolíticos graves",
+        "ototoxicidade",
+        "reações cutâneas graves raras"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c755d94-b846-4336-a968-aa1b92dc0ac0",
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c755d94-b846-4336-a968-aa1b92dc0ac0"
   },
   "es": {
-    "name": "Torasemida",
-    "class": "Diurético de asa — Inhibidor del NKCC2 con biodisponibilidad oral superior y acción prolongada (1 vez/día)",
-    "commercialNames": {
-      "br": [
-        "Demadex",
-        "Torsemida genérica"
-      ],
-      "ar": [
-        "Toradiur",
-        "Torasemida genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 5 mg",
-      "Comprimidos 10 mg",
-      "Comprimidos 20 mg",
-      "Comprimidos 100 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "IC: 10–20 mg VO 1 vez/día; HTA/edema leve: 5–10 mg VO 1 vez/día. Titular según congestión y respuesta diurética. Equiv: 20 mg torasemida ≈ 40 mg furosemida VO.",
-      "adultoGrave": "IC avanzada o resistencia diurética: 40–100 mg VO 1 vez/día. Máx 200 mg/día en edema grave refractario bajo monitorización.",
-      "pediatricaPadrao": "Uso pediátrico no establecido de forma rutinaria. Consultar especialista.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "200 mg/día en edema grave refractario bajo monitorización. Equivalencia: 20 mg ≈ 40 mg furosemida VO ≈ 1 mg bumetanida."
-    },
-    "therapeuticRange": "Reducción de congestión; control crónico estable de volemia; balance hídrico negativo cuando indicado",
-    "dilution": "Uso exclusivo vía oral. No diluir.",
-    "speed": "Administrar 1 vez/día por la mañana. Biodisponibilidad oral ~80% — menos variable que furosemida (~50–70%).",
+    "pharmacologicClass": "Diurético de asa; inhibidor del cotransportador NKCC2",
+    "mechanism": "Inhibe el cotransportador Na-K-2Cl en la rama ascendente gruesa del asa de Henle, aumentando excreción de sodio, cloro y agua y favoreciendo pérdidas de potasio, calcio y magnesio.",
+    "pharmacodynamics": "Produce natriuresis y diuresis, reduce congestión y presión de llenado. La respuesta depende de dosis, perfusión renal, absorción oral y grado de resistencia diurética.",
     "commonAdverseEffects": [
-      "Poliuria",
-      "Mareos",
-      "Hipotensión",
-      "Hipocalemia",
-      "Hipomagnesemia",
-      "Hiponatremia",
-      "Aumento de creatinina",
-      "Calambres musculares"
+      "poliuria",
+      "mareo",
+      "hipotensión",
+      "hipopotasemia",
+      "hiponatremia",
+      "hipomagnesemia"
     ],
     "dangerousAdverseEffects": [
-      "Deshidratación grave",
-      "Lesión renal aguda",
-      "Hipocalemia grave con arritmias",
-      "Hiponatremia grave",
-      "Alcalosis metabólica",
-      "Ototoxicidad (rara con torasemida)",
-      "Encefalopatía hepática en cirrosis vulnerable"
+      "depleción profunda de volumen",
+      "lesión renal aguda",
+      "alteraciones electrolíticas graves",
+      "ototoxicidad",
+      "reacciones cutáneas graves raras"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Anuria",
+      "hipersensibilidad al fármaco"
+    ],
+    "interactions": [
+      "AINE pueden reducir respuesta diurética y aumentar riesgo renal",
+      "Aminoglucósidos u otros ototóxicos pueden aumentar ototoxicidad",
+      "Litio puede acumularse",
+      "Digoxina: hipopotasemia aumenta toxicidad",
+      "Otros antihipertensivos aumentan hipotensión"
+    ],
+    "monitoring": [
+      "Peso y balance hídrico",
+      "presión arterial",
+      "creatinina/eGFR",
+      "sodio, potasio y magnesio",
+      "signos de deshidratación",
+      "audición si dosis IV altas o factores de riesgo"
+    ],
+    "pregnancy": "Usar durante embarazo solo si es clínicamente necesario; monitorizar crecimiento fetal y perfusión materna cuando se requiera diuresis sostenida.",
+    "lactation": "Individualizar; dosis altas o diuresis intensa pueden reducir producción de leche. Vigilar hidratación y peso del lactante.",
+    "patientEducation": [
+      "Tomar preferentemente temprano para reducir nocturia",
+      "controlar peso si fue indicado",
+      "consultar por mareo intenso, calambres, poca orina o sed marcada",
+      "no usar AINE de forma crónica sin consultar"
+    ],
+    "clinicalPearls": [
+      "La biodisponibilidad oral suele ser más predecible que la de furosemida",
+      "No asumir superioridad clínica de mortalidad frente a otros diuréticos de asa; el objetivo principal es descongestión y control de síntomas."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC/HFSA: los diuréticos se recomiendan en pacientes con insuficiencia cardíaca y retención de líquidos para aliviar congestión y síntomas."
+    ],
+    "safetyFlags": [
+      "VOLUMEN",
+      "ELECTROLITOS",
+      "FUNCION_RENAL",
+      "OTOTOXICIDAD"
+    ],
     "alerts": [
-      "Equivalencia: 20 mg torasemida VO ≈ 40 mg furosemida VO ≈ 1 mg bumetanida — atención al convertir dosis.",
-      "Biodisponibilidad oral superior (~80%) y más estable que furosemida — útil en baja absorción intestinal o edema de asa.",
-      "Interacciones graves: digoxina (hipocalemia amplifica toxicidad); aminoglucósidos (ototoxicidad); litio (toxicidad).",
-      "AINEs reducen efecto diurético y aumentan riesgo renal — evitar asociación.",
-      "Cirrosis: precaución — riesgo de hipovolemia, hiponatremia y encefalopatía hepática."
+      "Evitar diuresis excesivamente rápida sin indicación",
+      "Corregir alteraciones electrolíticas relevantes",
+      "Ajustar según respuesta clínica y función renal."
     ],
-    "ref": "ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · KDIGO Guidelines · Goodman & Gilman · Lexicomp · FDA/EMA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Sin ajuste renal obligatorio con ClCr ≥ 30 mL/min. Monitorizar electrolitos y función renal periódicamente.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "10–40 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "200 mg/dia (em congestão grave)",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dosis habitual. Monitorizar electrolitos y peso diario."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "20–40 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ERC moderada: dosis habituales o ligeramente mayores. Monitorizar K⁺, Na⁺, Mg²⁺ y creatinina."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "40–100 mg",
-          "intervalo": "1x/dia (titulada)",
-          "doseMaxima": "Conforme resposta diurética",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ERC grave: dosis escaladas por resistencia diurética. Monitorización intensiva obligatoria."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "100–200 mg",
-          "intervalo": "1x/dia (individualizado)",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ERC muy grave: resistencia diurética extrema. Evaluar necesidad de terapia de sustitución renal."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "20 mg",
-          "intervalo": "Se diurese residual presente",
-          "doseMaxima": "Conforme resposta",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Torasemida es parcialmente removida por hemodiálisis. En pacientes anúricos raramente eficaz. Mantener solo con diuresis residual documentada."
-      }
+    "name": "Torasemida",
+    "class": "Diurético de asa de administración oral una vez al día",
+    "pharmacokinetics": "Biodisponibilidad oral alta y relativamente consistente, con vida media cercana a 3.5 h. Metabolismo principalmente hepático por CYP2C9 y eliminación renal de una fracción de la dosis.",
+    "indications": [
+      "Edema asociado a insuficiencia cardíaca",
+      "edema asociado a enfermedad renal",
+      "edema asociado a enfermedad hepática",
+      "hipertensión"
+    ],
+    "commercialNames": [
+      "Demadex"
+    ],
+    "presentation": "Tabletas orales.",
+    "presentations": [
+      "Tabletas 5, 10, 20 y 100 mg según producto"
+    ],
+    "dose": {
+      "heartFailureEdema": "10 o 20 mg una vez al día; duplicar según respuesta; dosis >200 mg no estudiadas.",
+      "renalEdema": "20 mg una vez al día; duplicar según respuesta; dosis >200 mg no estudiadas.",
+      "cirrhosisEdema": "5 o 10 mg una vez al día; titular por duplicación; dosis >40 mg no estudiadas.",
+      "hypertension": "5 mg una vez al día; si es necesario tras 4-6 semanas aumentar a 10 mg una vez al día."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "electrolyteRisk": true,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "ototoxicityRisk": true,
-      "pregnancyCaution": true,
-      "warning": "Torasemida tiene biodisponibilidad oral más estable y acción más prolongada que furosemida (20 mg ≈ 40 mg furosemida VO). Mantiene riesgos de hipovolemia, hipocalemia, hiponatremia y lesión renal aguda."
+    "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos por la ficha actual.",
+    "renalDose": "Edema por enfermedad renal: inicio 20 mg una vez al día y duplicar según respuesta; no reducir automáticamente solo por eGFR. En anuria está contraindicado.",
+    "hepaticDose": "Cirrosis: iniciar 5-10 mg una vez al día, en general junto con antagonista de aldosterona o diurético ahorrador de potasio según plan; dosis >40 mg no estudiadas en esta indicación.",
+    "administration": "Una vez al día, preferentemente por la mañana; puede tomarse con o sin alimentos.",
+    "preparation": "No requiere reconstitución.",
+    "infusionProtocol": "No aplica: este registro corresponde a torsemida oral.",
+    "specialPopulations": {
+      "renal": "La dosis se titula a respuesta; anuria es contraindicación.",
+      "cirrhosis": "Mayor riesgo de alteraciones hidroelectrolíticas y encefalopatía.",
+      "elderly": "Vigilar volumen, presión, riñón y electrolitos."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "ESC Heart Failure Guidelines 2021/2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "TRANSFORM-HF Trial (JAMA 2023)",
-        "KDIGO Guidelines",
-        "Goodman & Gilman",
-        "Lexicomp 2026",
-        "FDA/EMA label"
+    "adverseEffects": {
+      "common": [
+        "poliuria",
+        "mareo",
+        "hipotensión",
+        "hipopotasemia",
+        "hiponatremia",
+        "hipomagnesemia"
       ],
-      "note": "Diurético de asa con biodisponibilidad oral ~80% y acción 1 vez/día — ventajas sobre furosemida en manejo crónico de IC. TRANSFORM-HF: no superior a furosemida en mortalidad, pero con mejor perfil de absorción oral. Equivalencia: 20 mg ≈ 40 mg furosemida VO."
-    }
+      "dangerous": [
+        "depleción profunda de volumen",
+        "lesión renal aguda",
+        "alteraciones electrolíticas graves",
+        "ototoxicidad",
+        "reacciones cutáneas graves raras"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c755d94-b846-4336-a968-aa1b92dc0ac0",
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c755d94-b846-4336-a968-aa1b92dc0ac0"
   },
   "name": {
     "pt": "Torsemida",
@@ -323,9 +259,19 @@
     "torasemida generica",
     "diuretico de alca — inibidor do nkcc2 com biodisponibilidade oral superior e acao prolongada (1x/dia)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-fc8f7aad4a91b82e",
+  "clinicalContentSha256": "fc8f7aad4a91b82ecb41dbbfd442168c085c5fe7dc1434c1927512f43759bc58",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "torsemida.mcGoldClinicalV1",
+    "group": "GOLD_GROUP05_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "b06de31aaf2e3e4b3ad83c53c4243c967c0a2f3f4bed02f8dd6a9cfe08b3e6c2",
+    "physicalHomologation": "DEFERRED"
+  }
 }

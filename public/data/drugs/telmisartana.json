@@ -1,286 +1,242 @@
 {
   "id": "telmisartana",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(16,185,129,0.13)",
   "colorTxt": "#166534",
   "pt": {
-    "name": "Telmisartana",
-    "class": "Bloqueador do Receptor de Angiotensina II (BRA/ARB) — Maior meia-vida da classe (~24h)",
-    "commercialNames": {
-      "br": [
-        "Micardis",
-        "Telmisartana genérica"
-      ],
-      "ar": [
-        "Micardis",
-        "Telmisartán genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 20 mg, 40 mg, 80 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 40 mg VO 1x/dia inicial. Manutenção: 40–80 mg/dia. Máximo: 80 mg/dia. Considerar 20 mg/dia em idosos frágeis ou risco de hipotensão.",
-      "adultoGrave": "Redução de risco CV em pacientes de alto risco sem IC (ONTARGET/TRANSCEND): 80 mg 1x/dia. Alternativa ao ramipril com melhor tolerância (sem tosse).",
-      "pediatricaPadrao": "Uso pediátrico não aprovado formalmente. Dados clínicos muito limitados.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "Adultos: 40–80 mg/dia (dose fixa — sem cálculo por kg aprovado)",
-      "grave": "Alto risco CV: 80 mg/dia (ONTARGET)",
-      "meningite": null,
-      "doseMaxima": "Adultos: 80 mg/dia"
-    },
-    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. Meia-vida longa (~24h) garante cobertura pressórica de 24 horas com dose única. Monitorar K⁺ e creatinina — sem nível sérico-alvo.",
-    "dilution": "Apenas formulação oral disponível. Sem apresentação EV.",
-    "speed": "VO: tomar 1x/dia no mesmo horário, com ou sem alimento. Meia-vida longa (~24h) — dose única suficiente.",
+    "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+    "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+    "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
     "commonAdverseEffects": [
-      "Tontura / hipotensão",
-      "Hipercalemia",
-      "Elevação de creatinina",
-      "Fadiga",
-      "Diarréia (leve)"
+      "tontura",
+      "hipotensão",
+      "hipercalemia",
+      "aumento de creatinina",
+      "fadiga"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (raro)",
-      "Hipercalemia grave (K⁺ > 6 mEq/L)",
-      "Insuficiência Renal Aguda",
-      "Hipotensão grave — especialmente na 1ª dose"
+      "lesão renal aguda",
+      "hipercalemia grave",
+      "hipotensão sintomática",
+      "angioedema raro",
+      "toxicidade fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Gestação: suspender quando detectada",
+      "uso concomitante de alisquireno em pacientes com diabetes",
+      "hipersensibilidade ao fármaco"
+    ],
+    "interactions": [
+      "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+      "AINEs podem reduzir efeito e aumentar risco renal",
+      "Lítio pode acumular",
+      "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "creatinina/eTFG e potássio antes de iniciar e após mudanças de dose",
+      "estado volêmico",
+      "gestação quando aplicável"
+    ],
+    "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+    "lactation": "Dados humanos insuficientes; evitar ou preferir alternativa com maior experiência em lactentes muito jovens.",
+    "patientEducation": [
+      "Evitar gestação durante o tratamento",
+      "não usar suplementos de potássio ou substitutos de sal sem orientação",
+      "manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados",
+      "levantar lentamente se houver tontura"
+    ],
+    "clinicalPearls": [
+      "Meia-vida longa favorece cobertura de 24 h",
+      "Não é removida por hemodiálise",
+      "A indicação de redução de risco CV usa 80 mg/dia na bula norte-americana."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: BRA é classe de primeira linha para hipertensão quando indicado",
+      "KDIGO 2024: RASi em DRC albuminúrica; monitorar função renal e potássio."
+    ],
+    "safetyFlags": [
+      "TOXICIDADE_FETAL",
+      "HIPERCALEMIA",
+      "FUNCAO_RENAL",
+      "HIPOTENSAO",
+      "DUPLO_BLOQUEIO_SRAA"
+    ],
     "alerts": [
-      "DIFERENCIAL ÚNICO: Telmisartana é eliminada quase exclusivamente por via biliar/fecal (~98%) — é o único BRA que NÃO requer ajuste de dose por função renal, inclusive em ClCr < 30 mL/min e hemodiálise.",
-      "CONTRAINDICADA em colestase e obstrução biliar importante — eliminação biliar exclusiva torna estas condições contraindicações específicas desta classe.",
-      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação — mesmo sem ajuste renal obrigatório.",
-      "ONTARGET: não inferior ao ramipril na redução de eventos CV em pacientes de alto risco, com melhor tolerabilidade (sem tosse)."
+      "Corrigir depleção de volume quando possível antes de iniciar",
+      "Reavaliar função renal e potássio após titulação",
+      "Não associar rotineiramente a IECA ou alisquireno"
     ],
-    "ref": "FDA Micardis (telmisartan) label 2023 · ONTARGET Trial (NEJM 2008) · TRANSCEND Trial (Lancet 2008) · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Eliminação biliar ~98% — NÃO requer ajuste renal em nenhum grau de IR (único BRA nesta categoria). Monitorar K⁺ e creatinina.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dose padrão. HTA: 40–80 mg 1x/dia. Alto risco CV: 80 mg/dia (ONTARGET)."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Sem ajuste necessário. Dose padrão mantida. Monitorar K⁺ e PA."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: dose padrão mantida (eliminação biliar). Monitorar K⁺ e creatinina com atenção."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muito grave: manter dose sem ajuste. Única BRA nesta situação. Monitorar K⁺ rigorosamente."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Telmisartana não é removida por hemodiálise. Sem necessidade de dose suplementar pós-HD. Dose mantida normalmente."
-      }
+    "specialPopulations": {
+      "elderly": "Não ajustar apenas pela idade; titular por resposta e tolerância.",
+      "renalArteryStenosis": "Maior risco de deterioração renal; monitorar.",
+      "volumeDepletion": "Maior risco de hipotensão inicial.",
+      "biliaryDisease": "Depuração pode reduzir em obstrução biliar ou insuficiência hepática; iniciar baixo e titular lentamente."
     },
-    "safetyFlags": {
-      "renalHighRisk": false,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": true,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez e em colestase/obstrução biliar. Único BRA sem ajuste renal — eliminação biliar ~98%. Monitorar K⁺ e PA."
+    "name": "Telmisartana",
+    "pharmacokinetics": "Meia-vida terminal longa, cerca de 24 h. Metabolizada principalmente por conjugação a glucuronídeo inativo e eliminada quase totalmente por via biliar/fecal; não é dialisável.",
+    "indications": [
+      "Hipertensão",
+      "redução de risco cardiovascular em pacientes selecionados com alto risco que não podem usar IECA, conforme bula"
+    ],
+    "commercialNames": [
+      "Micardis"
+    ],
+    "presentation": "Comprimidos orais.",
+    "presentations": [
+      "Comprimidos 20, 40 e 80 mg"
+    ],
+    "dose": {
+      "hypertension": "40 mg uma vez ao dia; resposta é dose-dependente entre 20-80 mg, com faixa usual 40-80 mg/dia.",
+      "cvRiskReduction": "80 mg uma vez ao dia na indicação de redução de risco cardiovascular da bula."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "FDA Micardis (telmisartan) label 2023",
-        "EMA Micardis SmPC 2024",
-        "ONTARGET Trial — Yusuf S et al. (NEJM 2008)",
-        "TRANSCEND Trial (Lancet 2008)",
-        "ESC Hypertension Guidelines 2023",
-        "UpToDate 2025",
-        "Lexicomp Online 2026"
+    "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
+    "renalDose": "Sem ajuste inicial necessário em redução da função renal, inclusive hemodiálise; não é dialisável. Monitorar pressão, creatinina e potássio.",
+    "hepaticDose": "Eliminação biliar predominante; em hepatopatia ou obstrução biliar iniciar em dose baixa e titular lentamente. Usar cautela importante em comprometimento grave.",
+    "administration": "Uma vez ao dia, com ou sem alimentos.",
+    "preparation": "Comprimidos não exigem preparo; manter na embalagem conforme orientação do fabricante até o uso quando aplicável.",
+    "infusionProtocol": "Não se aplica: telmisartana é oral.",
+    "adverseEffects": {
+      "common": [
+        "tontura",
+        "hipotensão",
+        "hipercalemia",
+        "aumento de creatinina",
+        "fadiga"
       ],
-      "note": "Único BRA sem necessidade de ajuste renal (eliminação biliar ~98%). Meia-vida mais longa da classe (~24h). Contraindicada em colestase. Evidência ONTARGET — não inferior ao ramipril em alto risco CV."
-    }
+      "dangerous": [
+        "lesão renal aguda",
+        "hipercalemia grave",
+        "hipotensão sintomática",
+        "angioedema raro",
+        "toxicidade fetal"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31"
   },
   "es": {
-    "name": "Telmisartán",
-    "class": "Bloqueante del Receptor de Angiotensina II (BRA/ARA-II) — Mayor vida media de la clase (~24h)",
-    "commercialNames": {
-      "br": [
-        "Micardis",
-        "Telmisartana genérica"
-      ],
-      "ar": [
-        "Micardis",
-        "Telmisartán genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 20 mg, 40 mg, 80 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 40 mg VO 1 vez/día inicial. Mantenimiento: 40–80 mg/día. Máximo: 80 mg/día. Considerar 20 mg/día en ancianos frágiles o riesgo de hipotensión.",
-      "adultoGrave": "Reducción de riesgo CV en pacientes de alto riesgo sin IC (ONTARGET/TRANSCEND): 80 mg 1 vez/día. Alternativa al ramipril con mejor tolerancia (sin tos).",
-      "pediatricaPadrao": "Uso pediátrico no aprobado formalmente. Datos clínicos muy limitados.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "Adultos: 40–80 mg/día (dosis fija — sin cálculo por kg aprobado)",
-      "grave": "Alto riesgo CV: 80 mg/día (ONTARGET)",
-      "meningite": null,
-      "doseMaxima": "Adultos: 80 mg/día"
-    },
-    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. Vida media larga (~24h) asegura cobertura tensional de 24 horas con dosis única. Monitorizar K⁺ y creatinina — sin nivel sérico objetivo.",
-    "dilution": "Solo formulación oral disponible. Sin presentación EV.",
-    "speed": "VO: tomar 1 vez/día a la misma hora, con o sin alimento. Vida media larga (~24h) — dosis única suficiente.",
+    "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+    "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+    "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
     "commonAdverseEffects": [
-      "Mareos / hipotensión",
-      "Hiperpotasemia",
-      "Elevación de creatinina",
-      "Fatiga",
-      "Diarrea (leve)"
+      "mareo",
+      "hipotensión",
+      "hiperpotasemia",
+      "aumento de creatinina",
+      "fatiga"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (raro)",
-      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
-      "Insuficiencia Renal Aguda",
-      "Hipotensión grave — especialmente en 1ª dosis"
+      "lesión renal aguda",
+      "hiperpotasemia grave",
+      "hipotensión sintomática",
+      "angioedema raro",
+      "toxicidad fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Embarazo: suspender cuando se detecte",
+      "uso concomitante de aliskireno en pacientes con diabetes",
+      "hipersensibilidad al fármaco"
+    ],
+    "interactions": [
+      "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+      "AINE pueden reducir efecto y aumentar riesgo renal",
+      "Litio puede acumularse",
+      "Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis",
+      "estado de volumen",
+      "embarazo cuando corresponda"
+    ],
+    "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+    "lactation": "Datos humanos insuficientes; evitar o preferir alternativa con mayor experiencia en lactantes muy pequeños.",
+    "patientEducation": [
+      "Evitar embarazo durante el tratamiento",
+      "no usar suplementos de potasio o sustitutos de sal sin indicación",
+      "mantener hidratación y consultar si hay vómitos o diarrea prolongados",
+      "levantarse lentamente si hay mareo"
+    ],
+    "clinicalPearls": [
+      "Vida media larga favorece cobertura de 24 h",
+      "No se elimina por hemodiálisis",
+      "La indicación de reducción de riesgo CV usa 80 mg/día en la ficha estadounidense."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: ARA-II es clase de primera línea para hipertensión cuando está indicado",
+      "KDIGO 2024: RASi en ERC albuminúrica; vigilar función renal y potasio."
+    ],
+    "safetyFlags": [
+      "TOXICIDAD_FETAL",
+      "HIPERPOTASEMIA",
+      "FUNCION_RENAL",
+      "HIPOTENSION",
+      "DOBLE_BLOQUEO_SRAA"
+    ],
     "alerts": [
-      "DIFERENCIAL ÚNICO: Telmisartán es eliminado casi exclusivamente por vía biliar/fecal (~98%) — es el único ARA-II que NO requiere ajuste de dosis por función renal, incluso en ClCr < 30 mL/min y hemodiálisis.",
-      "CONTRAINDICADA en colestasis y obstrucción biliar importante — eliminación biliar exclusiva hace de estas condiciones contraindicaciones específicas de esta clase.",
-      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación — aunque no se requiera ajuste renal.",
-      "ONTARGET: no inferior a ramipril en reducción de eventos CV en pacientes de alto riesgo, con mejor tolerabilidad (sin tos)."
+      "Corregir depleción de volumen si es posible antes de iniciar",
+      "Reevaluar función renal y potasio tras titulación",
+      "No asociar de rutina con IECA o aliskireno"
     ],
-    "ref": "FDA Micardis (telmisartan) label 2023 · ONTARGET Trial (NEJM 2008) · TRANSCEND Trial (Lancet 2008) · ESC Hypertension Guidelines 2023 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Eliminación biliar ~98% — NO requiere ajuste renal en ningún grado de IR (único ARA-II en esta categoría). Monitorizar K⁺ y creatinina.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dosis estándar. HTA: 40–80 mg 1 vez/día. Alto riesgo CV: 80 mg/día (ONTARGET)."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Sin ajuste necesario. Dosis estándar mantenida. Monitorizar K⁺ y PA."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: dosis estándar mantenida (eliminación biliar). Monitorizar K⁺ y creatinina con atención."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muy grave: mantener dosis sin ajuste. Único ARA-II en esta situación. Monitorizar K⁺ rigurosamente."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "40 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "80 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Telmisartán no es removido por hemodiálisis. Sin necesidad de dosis suplementaria post-HD. Dosis mantenida normalmente."
-      }
+    "specialPopulations": {
+      "elderly": "No ajustar solo por edad; titular por respuesta y tolerancia.",
+      "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar.",
+      "volumeDepletion": "Mayor riesgo de hipotensión inicial.",
+      "biliaryDisease": "El aclaramiento puede disminuir en obstrucción biliar o insuficiencia hepática; iniciar bajo y titular lentamente."
     },
-    "safetyFlags": {
-      "renalHighRisk": false,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": true,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo y en colestasis/obstrucción biliar. Único ARA-II sin ajuste renal — eliminación biliar ~98%. Monitorizar K⁺ y PA."
+    "name": "Telmisartán",
+    "pharmacokinetics": "Vida media terminal larga, cercana a 24 h. Se metaboliza principalmente por conjugación a glucurónido inactivo y se elimina casi por completo por vía biliar/fecal; no es dializable.",
+    "indications": [
+      "Hipertensión",
+      "reducción de riesgo cardiovascular en pacientes seleccionados de alto riesgo que no pueden usar IECA, según ficha"
+    ],
+    "commercialNames": [
+      "Micardis"
+    ],
+    "presentation": "Tabletas orales.",
+    "presentations": [
+      "Tabletas 20, 40 y 80 mg"
+    ],
+    "dose": {
+      "hypertension": "40 mg una vez al día; la respuesta es dosis-dependiente entre 20-80 mg, con rango habitual 40-80 mg/día.",
+      "cvRiskReduction": "80 mg una vez al día en la indicación de reducción de riesgo cardiovascular de la ficha."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "FDA Micardis (telmisartan) label 2023",
-        "EMA Micardis SmPC 2024",
-        "ONTARGET Trial — Yusuf S et al. (NEJM 2008)",
-        "TRANSCEND Trial (Lancet 2008)",
-        "ESC Hypertension Guidelines 2023",
-        "UpToDate 2025",
-        "Lexicomp Online 2026"
+    "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
+    "renalDose": "Sin ajuste inicial necesario en reducción de función renal, incluso hemodiálisis; no es dializable. Vigilar presión, creatinina y potasio.",
+    "hepaticDose": "Eliminación biliar predominante; en hepatopatía u obstrucción biliar iniciar con dosis baja y titular lentamente. Mucha cautela en deterioro grave.",
+    "administration": "Una vez al día, con o sin alimentos.",
+    "preparation": "Las tabletas no requieren preparación; mantener en el envase según indicación del fabricante hasta usar cuando corresponda.",
+    "infusionProtocol": "No aplica: telmisartán es oral.",
+    "adverseEffects": {
+      "common": [
+        "mareo",
+        "hipotensión",
+        "hiperpotasemia",
+        "aumento de creatinina",
+        "fatiga"
       ],
-      "note": "Único ARA-II sin necesidad de ajuste renal (eliminación biliar ~98%). Vida media más larga de la clase (~24h). Contraindicada en colestasis. Evidencia ONTARGET — no inferior a ramipril en alto riesgo CV."
-    }
+      "dangerous": [
+        "lesión renal aguda",
+        "hiperpotasemia grave",
+        "hipotensión sintomática",
+        "angioedema raro",
+        "toxicidad fetal"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31"
   },
   "name": {
     "pt": "Telmisartana",
@@ -294,9 +250,19 @@
     "telmisartan generico",
     "bloqueador do receptor de angiotensina ii (bra/arb) — maior meia-vida da classe (~24h)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-60dc1dc928da29df",
+  "clinicalContentSha256": "60dc1dc928da29dfe8470026c8d2c7e9d57bd938d428296362e253d00632f05e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "telmisartana.mcGoldClinicalV1",
+    "group": "GOLD_GROUP04_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "00881ef9b2dc373435148b6a9529565fd3989f7288e65a88a158a4d8abcc4361",
+    "physicalHomologation": "DEFERRED"
+  }
 }

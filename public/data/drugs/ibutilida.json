@@ -1,135 +1,237 @@
 {
   "id": "ibutilida",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "dose": "1 mg IV em 10 min",
-    "doseRepetir": "Pode repetir 1 mg IV após 10 min se FA/flutter persistir",
-    "doseTotalMax": "2 mg total",
-    "esquemaDose": "≥60 kg: 1 mg IV em 10 min | <60 kg: 0,01 mg/kg IV em 10 min. Repetir 1× se necessário após 10 min.",
-    "apresentacao": "Ampola IV 1 mg/10 mL (0,1 mg/mL)",
-    "classe": "Antiarrítmico Classe III IV | Bloqueador IKr + corrente lenta Na⁺ | t½ ~6 h",
-    "indicacoes": [
-      "FA recente (<48 h ou anticoagulada) — conversão farmacológica",
-      "Flutter atrial — alta taxa de conversão (~60–70%)",
-      "Flutter pós-operatório selecionado"
+    "commonAdverseEffects": [
+      "náuseas",
+      "cefaleia",
+      "hipotensão",
+      "extrassístoles ventriculares"
     ],
-    "ajusteRenal": "Sem ajuste formal; cautela em DRC",
-    "efeitosAdversos": [
-      "Cefaleia",
-      "Náuseas",
-      "Tontura",
-      "Palpitações",
-      "Extrassístoles",
-      "⚠️ Torsades de Pointes",
-      "⚠️ TV/FV",
-      "⚠️ QT prolongado grave",
-      "⚠️ Morte súbita arrítmica"
+    "monitoring": [
+      "ECG contínuo durante e após a infusão",
+      "QT/QTc",
+      "potássio e magnésio",
+      "pressão arterial",
+      "disponibilidade imediata de desfibrilação e ressuscitação"
     ],
-    "contraindicacoes": [
-      "QTc >440 ms basal",
-      "Torsades de Pointes prévia",
-      "Hipocalemia/hipomagnesemia não corrigidas",
-      "Antiarrítmicos Classe IA ou III concomitantes",
-      "IC descompensada",
-      "Instabilidade hemodinâmica (PAS <90)"
+    "preparation": "Concentração 0,1 mg/mL; pode ser administrada sem diluir ou diluída conforme técnica asséptica e compatibilidade da bula.",
+    "patientEducation": [
+      "Não duplicar doses esquecidas",
+      "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
+      "informar todos os fármacos pelo risco de interações e pró-arritmia"
     ],
-    "monitoramento": [
-      "ECG contínuo durante e ≥4 h após",
-      "QTc basal + seriado",
-      "K⁺ e Mg²⁺ corrigidos antes",
-      "PA + FC",
-      "Desfibrilador à beira-leito",
-      "Vigiar Torsades de Pointes"
+    "name": "Ibutilida",
+    "class": "Antiarrítmico intravenoso classe III",
+    "pharmacologicClass": "Prolongador da repolarização com ativação de corrente lenta de sódio e bloqueio de potássio",
+    "mechanism": "Prolonga o potencial de ação e a refratariedade principalmente pela ativação de uma corrente lenta de sódio e efeitos sobre correntes de potássio.",
+    "pharmacodynamics": "Pode converter rapidamente FA ou flutter, mas prolonga QT e pode provocar torsades ou taquicardia ventricular polimórfica.",
+    "pharmacokinetics": "Administração IV com distribuição rápida e eliminação metabólica; a experiência para ajuste renal ou hepático específico é limitada.",
+    "indications": [
+      "Conversão rápida para ritmo sinusal de fibrilação atrial ou flutter de início recente"
     ],
-    "refs": [
-      "ESC AF Guidelines",
-      "AHA/ACC/HRS AF Guidelines",
-      "Goodman & Gilman",
-      "Lexicomp",
-      "FDA Corvert label"
+    "commercialNames": [
+      "Corvert"
+    ],
+    "presentation": "Solução IV 0,1 mg/mL em frasco de 10 mL.",
+    "presentations": [
+      "1 mg/10 mL, 0,1 mg/mL"
+    ],
+    "dose": {
+      "weight60OrMore": "1 mg IV em 10 min; se a arritmia persistir, pode repetir uma segunda dose igual 10 min após terminar a primeira.",
+      "under60kg": "0,01 mg/kg IV em 10 min; pode repetir uma segunda dose igual uma vez."
+    },
+    "pediatricDose": "Segurança e eficácia não estabelecidas em menores de 18 anos.",
+    "renalDose": "Não há algoritmo de ajuste renal estabelecido na bula; usar com monitorização intensiva e corrigir eletrólitos.",
+    "hepaticDose": "Não há algoritmo de ajuste hepático estabelecido; individualizar e monitorar de perto.",
+    "dangerousAdverseEffects": [
+      "torsades de pointes",
+      "taquicardia ventricular polimórfica sustentada",
+      "fibrilação ventricular",
+      "bloqueio ou bradicardia significativa"
+    ],
+    "contraindications": [
+      "Hipersensibilidade; a bula enfatiza seleção rigorosa mais do que lista ampla de contraindicações absolutas"
+    ],
+    "interactions": [
+      "Evitar outros fármacos que prolongam QT quando possível",
+      "Corrigir hipocalemia e hipomagnesemia",
+      "Não administrar simultaneamente outros antiarrítmicos classe Ia ou III sem critério especializado"
+    ],
+    "administration": "Infundir exclusivamente IV em 10 minutos em ambiente com monitorização contínua e capacidade de tratar arritmias ventriculares.",
+    "infusionProtocol": "Monitorar ECG por pelo menos 4 h após a infusão ou até QTc retornar ao basal, o que for mais prolongado; mais tempo se houver arritmia.",
+    "pregnancy": "Usar apenas se o benefício justificar o risco; dados humanos insuficientes.",
+    "lactation": "Dados insuficientes; individualizar e considerar evitar amamentação durante exposição aguda.",
+    "specialPopulations": {
+      "heartFailure": "Risco pró-arrítmico maior em pacientes com insuficiência cardíaca ou FEVE baixa.",
+      "electrolytes": "Corrigir K e Mg antes do uso.",
+      "QT": "Evitar se QT estiver muito prolongado."
+    },
+    "clinicalPearls": [
+      "A dose é definida pelo peso com limiar de 60 kg",
+      "A vigilância não termina ao final da infusão: manter ECG por pelo menos 4 h."
+    ],
+    "guidelineRecommendations": [
+      "Diretriz FA 2023: ibutilida IV é opção para cardioversão farmacológica em pacientes selecionados, com vigilância pelo risco de torsades."
+    ],
+    "safetyFlags": [
+      "QT",
+      "TORSADES",
+      "ECG_4_HORAS",
+      "K_MG",
+      "RESSUSCITACAO_DISPONIVEL"
     ],
     "alerts": [
-      {
-        "tipo": "danger",
-        "msg": "📋 MONITORIZAÇÃO: ECG contínuo durante infusão + 4 horas pós-dose (ou até QTc normalizar). Desfibrilador disponível obrigatório."
-      },
-      {
-        "tipo": "danger",
-        "msg": "📦 BLACK BOX: Risco de Torsades de Pointes potencialmente fatal. Uso exclusivamente hospitalar monitorizado."
-      }
-    ]
+      "Não administrar sem monitorização contínua",
+      "Corrigir K e Mg antes da infusão."
+    ],
+    "adverseEffects": {
+      "common": [
+        "náuseas",
+        "cefaleia",
+        "hipotensão",
+        "extrassístoles ventriculares"
+      ],
+      "dangerous": [
+        "torsades de pointes",
+        "taquicardia ventricular polimórfica sustentada",
+        "fibrilação ventricular",
+        "bloqueio ou bradicardia significativa"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2428969a-7431-4e94-9503-ad5c680e2ea4",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2428969a-7431-4e94-9503-ad5c680e2ea4"
   },
   "es": {
-    "dose": "1 mg IV em 10 min",
-    "doseRepetir": "Pode repetir 1 mg IV após 10 min se FA/flutter persistir",
-    "doseTotalMax": "2 mg total",
-    "esquemaDose": "≥60 kg: 1 mg IV en 10 min | <60 kg: 0,01 mg/kg IV en 10 min. Repetir 1× si necesario tras 10 min.",
-    "apresentacao": "Ampolla IV 1 mg/10 mL (0,1 mg/mL)",
-    "classe": "Antiarrítmico Clase III IV | Bloqueador IKr + corriente lenta Na⁺ | t½ ~6 h",
-    "indicacoes": [
-      "FA reciente (<48 h o anticoagulada) — conversión farmacológica",
-      "Flutter auricular — alta tasa de conversión (~60–70%)",
-      "Flutter postoperatorio seleccionado"
+    "commonAdverseEffects": [
+      "náuseas",
+      "cefalea",
+      "hipotensión",
+      "extrasístoles ventriculares"
     ],
-    "ajusteRenal": "Sin ajuste formal; precaución en ERC",
-    "efeitosAdversos": [
-      "Cefalea",
-      "Náuseas",
-      "Mareos",
-      "Palpitaciones",
-      "Extrasístoles",
-      "⚠️ Torsades de Pointes",
-      "⚠️ TV/FV",
-      "⚠️ QT prolongado grave",
-      "⚠️ Muerte súbita arrítmica"
+    "monitoring": [
+      "ECG continuo durante y después de la infusión",
+      "QT/QTc",
+      "potasio y magnesio",
+      "presión arterial",
+      "disponibilidad inmediata de desfibrilación y reanimación"
     ],
-    "contraindicacoes": [
-      "QTc >440 ms basal",
-      "Torsades de Pointes previa",
-      "Hipocalemia/hipomagnesemia no corregidas",
-      "Antiarrítmicos Clase IA o III concomitantes",
-      "IC descompensada",
-      "Inestabilidad hemodinámica (PAS <90)"
+    "preparation": "Concentración 0.1 mg/mL; puede administrarse sin diluir o diluirse según técnica aséptica y compatibilidad de la ficha.",
+    "patientEducation": [
+      "No duplicar dosis omitidas",
+      "consultar por síncope, palpitaciones sostenidas o disnea nueva",
+      "informar todos los fármacos por riesgo de interacciones y proarritmia"
     ],
-    "monitoramento": [
-      "ECG continuo durante y ≥4 h tras",
-      "QTc basal + seriado",
-      "K⁺ y Mg²⁺ corregidos antes",
-      "PA + FC",
-      "Desfibrilador a la cabecera",
-      "Vigilar Torsades de Pointes"
+    "name": "Ibutilida",
+    "class": "Antiarrítmico intravenoso clase III",
+    "pharmacologicClass": "Prolongador de repolarización con activación de corriente lenta de sodio y bloqueo de potasio",
+    "mechanism": "Prolonga el potencial de acción y la refractariedad principalmente mediante activación de una corriente lenta de sodio y efectos sobre corrientes de potasio.",
+    "pharmacodynamics": "Puede convertir rápidamente FA o flutter, pero prolonga QT y puede provocar torsades o taquicardia ventricular polimórfica.",
+    "pharmacokinetics": "Administración IV con distribución rápida y eliminación metabólica; la experiencia para ajuste renal o hepático específico es limitada.",
+    "indications": [
+      "Conversión rápida a ritmo sinusal de fibrilación auricular o flutter de inicio reciente"
     ],
-    "refs": [
-      "ESC AF Guidelines",
-      "AHA/ACC/HRS AF Guidelines",
-      "Goodman & Gilman",
-      "Lexicomp",
-      "FDA Corvert label"
+    "commercialNames": [
+      "Corvert"
+    ],
+    "presentation": "Solución IV 0.1 mg/mL en vial de 10 mL.",
+    "presentations": [
+      "1 mg/10 mL, 0.1 mg/mL"
+    ],
+    "dose": {
+      "weight60OrMore": "1 mg IV durante 10 min; si la arritmia persiste, puede repetirse una segunda dosis igual 10 min después de finalizar la primera.",
+      "under60kg": "0.01 mg/kg IV durante 10 min; puede repetirse una segunda dosis igual una vez."
+    },
+    "pediatricDose": "Seguridad y eficacia no establecidas en menores de 18 años.",
+    "renalDose": "No existe algoritmo de ajuste renal establecido en la ficha; usar con monitorización intensiva y corregir electrolitos.",
+    "hepaticDose": "No existe algoritmo de ajuste hepático establecido; individualizar y monitorizar estrechamente.",
+    "dangerousAdverseEffects": [
+      "torsades de pointes",
+      "taquicardia ventricular polimórfica sostenida",
+      "fibrilación ventricular",
+      "bloqueo o bradicardia significativa"
+    ],
+    "contraindications": [
+      "Hipersensibilidad; la ficha enfatiza selección estricta más que una lista amplia de contraindicaciones absolutas"
+    ],
+    "interactions": [
+      "Evitar otros fármacos que prolongan QT cuando sea posible",
+      "Corregir hipopotasemia e hipomagnesemia",
+      "No administrar simultáneamente otros antiarrítmicos clase Ia o III sin criterio especializado"
+    ],
+    "administration": "Infundir exclusivamente IV durante 10 minutos en entorno con monitorización continua y capacidad de tratar arritmias ventriculares.",
+    "infusionProtocol": "Monitorizar ECG al menos 4 h después de la infusión o hasta que QTc vuelva a basal, lo que sea más prolongado; más tiempo si existe arritmia.",
+    "pregnancy": "Usar solo si el beneficio justifica el riesgo; datos humanos insuficientes.",
+    "lactation": "Datos insuficientes; individualizar y considerar evitar lactancia durante exposición aguda.",
+    "specialPopulations": {
+      "heartFailure": "Riesgo proarrítmico mayor en pacientes con insuficiencia cardíaca o baja LVEF.",
+      "electrolytes": "Corregir K y Mg antes de uso.",
+      "QT": "Evitar si QT está marcadamente prolongado."
+    },
+    "clinicalPearls": [
+      "La dosis se define por peso con umbral de 60 kg",
+      "La vigilancia no termina al finalizar la infusión: mantener ECG por al menos 4 h."
+    ],
+    "guidelineRecommendations": [
+      "Guía AF 2023: ibutilida IV es una opción para cardioversión farmacológica en pacientes seleccionados, con vigilancia por riesgo de torsades."
+    ],
+    "safetyFlags": [
+      "QT",
+      "TORSADES",
+      "ECG_4_HORAS",
+      "K_MG",
+      "REANIMACION_DISPONIBLE"
     ],
     "alerts": [
-      {
-        "tipo": "danger",
-        "msg": "📋 MONITORIZACIÓN: ECG continuo durante infusión + 4 horas post-dosis (o hasta normalizar QTc). Desfibrilador disponible obligatorio."
-      },
-      {
-        "tipo": "danger",
-        "msg": "📦 BLACK BOX: Riesgo de Torsades de Pointes potencialmente fatal. Uso exclusivamente hospitalario monitorizado."
-      }
-    ]
+      "No administrar sin monitorización continua",
+      "Corregir K y Mg antes de la infusión."
+    ],
+    "adverseEffects": {
+      "common": [
+        "náuseas",
+        "cefalea",
+        "hipotensión",
+        "extrasístoles ventriculares"
+      ],
+      "dangerous": [
+        "torsades de pointes",
+        "taquicardia ventricular polimórfica sostenida",
+        "fibrilación ventricular",
+        "bloqueo o bradicardia significativa"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2428969a-7431-4e94-9503-ad5c680e2ea4",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2428969a-7431-4e94-9503-ad5c680e2ea4"
   },
   "name": {
-    "pt": "ibutilida",
-    "es": "ibutilida"
+    "pt": "Ibutilida",
+    "es": "Ibutilida"
   },
   "keywords": [
     "ibutilida"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-82b2d389c757ebce",
+  "clinicalContentSha256": "82b2d389c757ebcea8e01418bdf257fe6a59bd2f742704a930d5fd7ce7f44183",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "ibutilida.mcGoldClinicalV1",
+    "group": "GOLD_GROUP07_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "e5569f362b02bd5b33e16164544a863c981a5f338f8771944b8c4ba88b62a0e5",
+    "physicalHomologation": "DEFERRED"
+  }
 }

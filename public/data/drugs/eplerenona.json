@@ -1,260 +1,224 @@
 {
   "id": "eplerenona",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(16,185,129,0.10)",
   "colorTxt": "#065F46",
   "pt": {
-    "name": "Eplerenona",
-    "class": "Antagonista seletivo do receptor mineralocorticoide (MRA) — menor toxicidade endócrina que espironolactona",
-    "commercialNames": {
-      "br": [
-        "Inspra",
-        "Eplerenona genérica"
-      ],
-      "ar": [
-        "Inspra",
-        "Eplerenona genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 25 mg",
-      "Comprimidos 50 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "ICFEr: iniciar 25 mg VO 1x/dia; manutenção 25–50 mg/dia. HAS: 50 mg 1–2x/dia.",
-      "adultoGrave": "DRC ou K⁺ > 4,5 mEq/L: iniciar 12,5–25 mg com monitoração rigorosa de K⁺ em 3–7 dias. Evitar se K⁺ > 5,0 ou eTFG < 30.",
-      "pediatricaPadrao": "Uso pediátrico não estabelecido. Consultar especialista.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "50 mg/dia em ICFEr; 50 mg 2x/dia em HAS selecionada (sob supervisão)."
-    },
-    "therapeuticRange": "Redução de mortalidade cardiovascular; K⁺ 4,0–5,0 mEq/L; controle pressórico",
-    "dilution": "Uso exclusivo via oral. Não diluir.",
-    "speed": "Pode ser tomado com ou sem alimentos. Reavaliar K⁺ e creatinina em 3–7 dias após início ou ajuste.",
+    "pharmacologicClass": "Antagonista do receptor mineralocorticoide, diurético poupador de potássio",
+    "mechanism": "Bloqueia a ação da aldosterona no receptor mineralocorticoide, reduzindo reabsorção de sódio e remodelamento cardiovascular e diminuindo a excreção de potássio.",
+    "pharmacodynamics": "Produz natriurese modesta e retenção de potássio; em HFrEF reduz remodelamento, hospitalização e mortalidade quando usado em pacientes elegíveis.",
     "commonAdverseEffects": [
-      "Hipercalemia",
-      "Tontura",
-      "Hipotensão",
-      "Fadiga",
-      "Náuseas",
-      "Aumento de creatinina"
+      "hipercalemia",
+      "tontura",
+      "hipotensão",
+      "aumento de creatinina"
     ],
     "dangerousAdverseEffects": [
-      "Hipercalemia grave (arritmias fatais)",
-      "Parada cardíaca por hipercalemia",
-      "Lesão renal aguda"
+      "hipercalemia grave",
+      "lesão renal aguda",
+      "hipotensão sintomática"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "K >5,5 mEq/L no início",
+      "ClCr <=30 mL/min",
+      "uso concomitante de inibidores fortes de CYP3A4",
+      "para hipertensão: restrições renais e de potássio adicionais conforme bula",
+      "hipersensibilidade"
+    ],
+    "interactions": [
+      "Inibidores fortes de CYP3A4 são contraindicados",
+      "IECA/BRA/ARNI e potássio aumentam hipercalemia",
+      "AINEs podem deteriorar função renal",
+      "Grapefruit pode aumentar exposição"
+    ],
+    "monitoring": [
+      "Potássio sérico",
+      "creatinina/eTFG",
+      "pressão arterial",
+      "estado volêmico",
+      "medicamentos concomitantes"
+    ],
+    "administration": "Via oral, em horário consistente; pode ser administrado com ou sem alimentos conforme produto.",
+    "preparation": "Não requer reconstituição para comprimidos.",
+    "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+    "pregnancy": "Evitar uso rotineiro na gestação salvo indicação especializada e avaliação benefício-risco.",
+    "lactation": "Individualizar conforme fármaco, dose, idade do lactente e necessidade materna.",
+    "specialPopulations": {
+      "renal": "Maior risco de hipercalemia; ajustar ou evitar conforme eTFG e bula.",
+      "elderly": "Monitorar função renal e potássio de perto.",
+      "diabetes": "O risco de hipercalemia aumenta com DRC e bloqueio concomitante do SRAA."
+    },
+    "patientEducation": [
+      "Evitar suplementos de potássio ou sal com potássio sem orientação",
+      "realizar controles laboratoriais",
+      "procurar avaliação por fraqueza intensa, palpitações ou síncope"
+    ],
+    "clinicalPearls": [
+      "É mais seletiva que espironolactona e causa menos ginecomastia",
+      "Em HFrEF o potássio orienta redução, suspensão e reinício."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC/HFSA: MRA é recomendado em HFrEF NYHA II-IV se eTFG >30 mL/min/1,73 m2 e K <5,0 mEq/L; suspender se K não puder ser mantido <5,5 mEq/L."
+    ],
+    "safetyFlags": [
+      "HIPERCALEMIA",
+      "FUNCAO_RENAL",
+      "MONITORIZACAO_ELETROLITOS"
+    ],
     "alerts": [
-      "HIPERCALEMIA é o principal risco — monitorar K⁺ em 3–7 dias após início ou aumento de dose.",
-      "CONTRAINDICADA com inibidores potentes do CYP3A4: cetoconazol, itraconazol, ritonavir — risco de acúmulo.",
-      "Interações graves: IECA, BRA, ARNI, suplementos de K⁺ — risco de hipercalemia potencialmente fatal.",
-      "Vantagem sobre espironolactona: muito menor incidência de ginecomastia, disfunção sexual e irregularidade menstrual."
+      "Não iniciar MRA para HFrEF se eTFG <=30 ou K >=5,0 mEq/L",
+      "Revisar potássio e função renal após início e titulação."
     ],
-    "ref": "EPHESUS Trial · EMPHASIS-HF Trial · ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · Lexicomp · FDA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Sem ajuste renal obrigatório em eTFG ≥ 50 mL/min. Monitorar K⁺ e creatinina.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "25–50 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dose habitual. Monitorar K⁺ e creatinina periodicamente."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "25 mg",
-          "intervalo": "Dias alternados (cautela extrema)",
-          "doseMaxima": "25 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "eTFG 30–50 mL/min: dose mínima em dias alternados. Monitorar K⁺ em 3–7 dias. Risco elevado de hipercalemia."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "eTFG < 30 mL/min: CONTRAINDICADA. Evitar completamente."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "eTFG < 10 mL/min / anúria: CONTRAINDICADA. Risco de hipercalemia fatal."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálise: CONTRAINDICADA. Risco de hipercalemia entre sessões."
-      }
+    "name": "Eplerenona",
+    "class": "Antagonista seletivo do receptor mineralocorticoide",
+    "pharmacokinetics": "Metabolismo hepático principalmente por CYP3A4; meia-vida aproximada de 4-6 h. Metabólitos não contribuem de forma importante ao efeito.",
+    "indications": [
+      "HFrEF pós-IAM em pacientes selecionados",
+      "hipertensão arterial em adultos",
+      "HFrEF sintomática como MRA conforme diretriz em pacientes elegíveis"
+    ],
+    "commercialNames": [
+      "Inspra"
+    ],
+    "presentation": "Comprimidos orais.",
+    "presentations": [
+      "Comprimidos 25 e 50 mg"
+    ],
+    "dose": {
+      "postMIHFrEF": "25 mg uma vez ao dia; titular para 50 mg uma vez ao dia em até 4 semanas conforme K e tolerância.",
+      "hypertension": "50 mg uma vez ao dia; se resposta insuficiente, 50 mg duas vezes ao dia. Doses maiores não recomendadas."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "hyperkalemiaRisk": true,
-      "endocrineEffects": false,
-      "pregnancyCaution": true,
-      "warning": "MRA seletivo com muito menor toxicidade endócrina que espironolactona. Principal risco: HIPERCALEMIA — monitorar K⁺ 3–7 dias após início. CONTRAINDICADO em eTFG < 30 e K⁺ > 5,0 mEq/L."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "EPHESUS Trial (NEJM 2003)",
-        "EMPHASIS-HF Trial (NEJM 2011)",
-        "ESC Heart Failure Guidelines 2021/2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "Lexicomp 2026",
-        "FDA label"
+    "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro nestas indicações.",
+    "renalDose": "Contraindicado se ClCr <=30 mL/min. Para hipertensão há restrições adicionais com ClCr <50 mL/min; em HFrEF seguir ajuste por K e função renal.",
+    "hepaticDose": "Não requer ajuste na insuficiência hepática leve-moderada; dados insuficientes na grave. Monitorar potássio e exposição por interações CYP3A4.",
+    "adverseEffects": {
+      "common": [
+        "hipercalemia",
+        "tontura",
+        "hipotensão",
+        "aumento de creatinina"
       ],
-      "note": "MRA seletivo — pilar da ICFEr (EMPHASIS-HF) e pós-IAM com disfunção VE (EPHESUS). Metabolizado por CYP3A4 — interações com inibidores potentes. Muito menor incidência de ginecomastia vs espironolactona."
-    }
+      "dangerous": [
+        "hipercalemia grave",
+        "lesão renal aguda",
+        "hipotensão sintomática"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2a51c12-bdc2-4b3b-8e9e-bf363c2817ed",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2a51c12-bdc2-4b3b-8e9e-bf363c2817ed"
   },
   "es": {
-    "name": "Eplerenona",
-    "class": "Antagonista selectivo del receptor mineralocorticoide (MRA) — menor toxicidad endocrina que espironolactona",
-    "commercialNames": {
-      "br": [
-        "Inspra",
-        "Eplerenona genérica"
-      ],
-      "ar": [
-        "Inspra",
-        "Eplerenona genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 25 mg",
-      "Comprimidos 50 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "ICFEr: iniciar 25 mg VO 1 vez/día; mantenimiento 25–50 mg/día. HTA: 50 mg 1–2 veces/día.",
-      "adultoGrave": "ERC o K⁺ > 4,5 mEq/L: iniciar 12,5–25 mg con monitorización rigurosa de K⁺ en 3–7 días. Evitar si K⁺ > 5,0 o TFGe < 30.",
-      "pediatricaPadrao": "Uso pediátrico no establecido. Consultar especialista.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": null,
-      "grave": null,
-      "meningite": null,
-      "doseMaxima": "50 mg/día en ICFEr; 50 mg 2 veces/día en HTA seleccionada (bajo supervisión)."
-    },
-    "therapeuticRange": "Reducción de mortalidad cardiovascular; K⁺ 4,0–5,0 mEq/L; control tensional",
-    "dilution": "Uso exclusivo vía oral. No diluir.",
-    "speed": "Puede tomarse con o sin alimentos. Reevaluar K⁺ y creatinina en 3–7 días tras inicio o ajuste.",
+    "pharmacologicClass": "Antagonista del receptor mineralocorticoide, diurético ahorrador de potasio",
+    "mechanism": "Bloquea la acción de aldosterona en el receptor mineralocorticoide, reduciendo reabsorción de sodio y remodelado cardiovascular y disminuyendo excreción de potasio.",
+    "pharmacodynamics": "Produce natriuresis modesta y retención de potasio; en HFrEF reduce remodelado, hospitalización y mortalidad cuando se usa en pacientes elegibles.",
     "commonAdverseEffects": [
-      "Hiperpotasemia",
-      "Mareos",
-      "Hipotensión",
-      "Fatiga",
-      "Náuseas",
-      "Aumento de creatinina"
+      "hiperpotasemia",
+      "mareo",
+      "hipotensión",
+      "aumento de creatinina"
     ],
     "dangerousAdverseEffects": [
-      "Hiperpotasemia grave (arritmias fatales)",
-      "Paro cardíaco por hiperpotasemia",
-      "Lesión renal aguda"
+      "hiperpotasemia grave",
+      "lesión renal aguda",
+      "hipotensión sintomática"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "K >5.5 mEq/L al inicio",
+      "CrCl <=30 mL/min",
+      "uso concomitante de inhibidores fuertes CYP3A4",
+      "para hipertensión: restricciones renales y de potasio adicionales según ficha",
+      "hipersensibilidad"
+    ],
+    "interactions": [
+      "Inhibidores fuertes CYP3A4 están contraindicados",
+      "ACEi/ARA-II/ARNI y potasio aumentan hiperpotasemia",
+      "AINE pueden deteriorar función renal",
+      "Pomelo puede aumentar exposición"
+    ],
+    "monitoring": [
+      "Potasio sérico",
+      "creatinina/eGFR",
+      "presión arterial",
+      "estado de volumen",
+      "medicamentos concomitantes"
+    ],
+    "administration": "Vía oral, a horario consistente; puede administrarse con o sin alimentos según producto.",
+    "preparation": "No requiere reconstitución para tabletas.",
+    "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+    "pregnancy": "Evitar uso rutinario durante embarazo salvo indicación especializada y balance beneficio-riesgo.",
+    "lactation": "Individualizar según fármaco, dosis, edad del lactante y necesidad materna.",
+    "specialPopulations": {
+      "renal": "Mayor riesgo de hiperpotasemia; ajustar o evitar según eGFR y ficha.",
+      "elderly": "Vigilar función renal y potasio estrechamente.",
+      "diabetes": "El riesgo de hiperpotasemia aumenta con ERC y bloqueo concomitante del SRAA."
+    },
+    "patientEducation": [
+      "Evitar suplementos de potasio o sal con potasio sin indicación",
+      "realizar controles de laboratorio",
+      "consultar por debilidad intensa, palpitaciones o síncope"
+    ],
+    "clinicalPearls": [
+      "Es más selectiva que espironolactona y causa menos ginecomastia",
+      "En HFrEF el potasio guía reducción, suspensión y reinicio."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC/HFSA: MRA se recomienda en HFrEF NYHA II-IV si eGFR >30 mL/min/1.73 m2 y K <5.0 mEq/L; suspender si K no puede mantenerse <5.5 mEq/L."
+    ],
+    "safetyFlags": [
+      "HIPERPOTASEMIA",
+      "FUNCION_RENAL",
+      "MONITORIZACION_ELECTROLITOS"
+    ],
     "alerts": [
-      "HIPERPOTASEMIA es el principal riesgo — monitorizar K⁺ en 3–7 días tras inicio o aumento de dosis.",
-      "CONTRAINDICADA con inhibidores potentes de CYP3A4: ketoconazol, itraconazol, ritonavir — riesgo de acumulación.",
-      "Interacciones graves: IECA, ARA-II, ARNI, suplementos de K⁺ — riesgo de hiperpotasemia potencialmente fatal.",
-      "Ventaja sobre espironolactona: mucho menor incidencia de ginecomastia, disfunción sexual e irregularidad menstrual."
+      "No iniciar MRA para HFrEF si eGFR <=30 o K >=5.0 mEq/L",
+      "Revisar potasio y función renal tras inicio y titulación."
     ],
-    "ref": "EPHESUS Trial · EMPHASIS-HF Trial · ESC Heart Failure Guidelines · AHA/ACC/HFSA Heart Failure Guidelines · Lexicomp · FDA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Sin ajuste renal obligatorio con TFGe ≥ 50 mL/min. Monitorizar K⁺ y creatinina.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "25–50 mg",
-          "intervalo": "1x/dia",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dosis habitual. Monitorizar K⁺ y creatinina periódicamente."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "25 mg",
-          "intervalo": "Dias alternados (cautela extrema)",
-          "doseMaxima": "25 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "TFGe 30–50 mL/min: dosis mínima en días alternos. Monitorizar K⁺ en 3–7 días. Riesgo elevado de hiperpotasemia."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "TFGe < 30 mL/min: CONTRAINDICADA. Evitar completamente."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "TFGe < 10 mL/min / anuria: CONTRAINDICADA. Riesgo de hiperpotasemia fatal."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálisis: CONTRAINDICADA. Riesgo de hiperpotasemia entre sesiones."
-      }
+    "name": "Eplerenona",
+    "class": "Antagonista selectivo del receptor mineralocorticoide",
+    "pharmacokinetics": "Metabolismo hepático principalmente por CYP3A4; vida media aproximada 4-6 h. Metabolitos no contribuyen de forma importante al efecto.",
+    "indications": [
+      "HFrEF post-IAM en pacientes seleccionados",
+      "hipertensión arterial en adultos",
+      "HFrEF sintomática como MRA según guía en pacientes elegibles"
+    ],
+    "commercialNames": [
+      "Inspra"
+    ],
+    "presentation": "Tabletas orales.",
+    "presentations": [
+      "Tabletas 25 y 50 mg"
+    ],
+    "dose": {
+      "postMIHFrEF": "25 mg una vez al día; titular a 50 mg una vez al día dentro de 4 semanas según K y tolerancia.",
+      "hypertension": "50 mg una vez al día; si respuesta insuficiente, 50 mg dos veces al día. Dosis mayores no recomendadas."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "hyperkalemiaRisk": true,
-      "endocrineEffects": false,
-      "pregnancyCaution": true,
-      "warning": "MRA selectivo con mucho menor toxicidad endocrina que espironolactona. Principal riesgo: HIPERPOTASEMIA — monitorizar K⁺ 3–7 días tras inicio. CONTRAINDICADO con TFGe < 30 y K⁺ > 5,0 mEq/L."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "EPHESUS Trial (NEJM 2003)",
-        "EMPHASIS-HF Trial (NEJM 2011)",
-        "ESC Heart Failure Guidelines 2021/2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "Lexicomp 2026",
-        "FDA label"
+    "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario en estas indicaciones.",
+    "renalDose": "Contraindicado si CrCl <=30 mL/min. Para hipertensión existen restricciones adicionales con CrCl <50 mL/min; en HFrEF seguir ajuste por K y función renal.",
+    "hepaticDose": "No requiere ajuste en insuficiencia hepática leve-moderada; datos insuficientes en grave. Vigilar potasio y exposición por interacciones CYP3A4.",
+    "adverseEffects": {
+      "common": [
+        "hiperpotasemia",
+        "mareo",
+        "hipotensión",
+        "aumento de creatinina"
       ],
-      "note": "MRA selectivo — pilar de la ICFEr (EMPHASIS-HF) y post-IAM con disfunción VI (EPHESUS). Metabolizado por CYP3A4 — interacciones con inhibidores potentes. Mucho menor incidencia de ginecomastia vs espironolactona."
-    }
+      "dangerous": [
+        "hiperpotasemia grave",
+        "lesión renal aguda",
+        "hipotensión sintomática"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2a51c12-bdc2-4b3b-8e9e-bf363c2817ed",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2a51c12-bdc2-4b3b-8e9e-bf363c2817ed"
   },
   "name": {
     "pt": "Eplerenona",
@@ -266,9 +230,19 @@
     "eplerenona generica",
     "antagonista seletivo do receptor mineralocorticoide (mra) — menor toxicidade endocrina que espironolactona"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-08b9648aa55fe977",
+  "clinicalContentSha256": "08b9648aa55fe9778b43ee806de0b8f0eaf5f6422a9ff82ed29ac061bad30083",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "eplerenona.mcGoldClinicalV1",
+    "group": "GOLD_GROUP06_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "46bdb70f6b2653be9fa58d32ba390a748f64632058c34fc4efc7661ea2f42bc1",
+    "physicalHomologation": "DEFERRED"
+  }
 }

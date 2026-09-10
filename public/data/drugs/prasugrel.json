@@ -1,14 +1,180 @@
 {
   "id": "prasugrel",
   "category": "anticoag",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Prasugrel (Cloridrato de)"
+    "name": "Prasugrel (Cloridrato de)",
+    "class": "Antiagregante plaquetário tienopiridínico",
+    "pharmacologicClass": "Pró-fármaco inibidor irreversível do receptor P2Y12",
+    "mechanism": "É convertido a metabólito ativo que se liga irreversivelmente ao receptor P2Y12, bloqueando ativação e agregação plaquetária mediadas por ADP.",
+    "pharmacodynamics": "Produz inibição plaquetária rápida e potente após carga de 60 mg, com efeito mantido por toda a vida da plaqueta.",
+    "pharmacokinetics": "Pró-fármaco rapidamente hidrolisado e depois oxidado a metabólito ativo. Metabolização envolve CYP3A e CYP2B6, entre outros. A resposta é menos dependente de CYP2C19 do que clopidogrel.",
+    "indications": [
+      "Redução de eventos trombóticos em pacientes com SCA submetidos a PCI, em associação com aspirina"
+    ],
+    "commercialNames": [
+      "Effient",
+      "Prasugrel genérico"
+    ],
+    "presentation": "Comprimidos revestidos para uso oral.",
+    "presentations": [
+      "Comprimidos 5 mg",
+      "Comprimidos 10 mg"
+    ],
+    "dose": {
+      "Ataque": "60 mg VO uma vez",
+      "Manutenção": "10 mg VO uma vez ao dia",
+      "Peso menor que 60 kg": "Considerar 5 mg VO uma vez ao dia",
+      "Associação": "Usar com aspirina conforme protocolo"
+    },
+    "pediatricDose": "Segurança e eficácia não estabelecidas para uso cardiovascular pediátrico; não utilizar rotineiramente.",
+    "renalDose": "Não há ajuste posológico de rotina, inclusive na insuficiência renal, mas risco de sangramento pode ser maior em doença renal avançada.",
+    "hepaticDose": "Sem ajuste em disfunção hepática leve a moderada; uso em doença hepática grave é pouco estudado e requer cautela pelo risco hemorrágico.",
+    "commonAdverseEffects": [
+      "Equimoses",
+      "Epistaxe",
+      "Sangramento gastrointestinal",
+      "Anemia"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia fatal",
+      "Hemorragia intracraniana",
+      "Sangramento perioperatório importante",
+      "TTP rara"
+    ],
+    "adverseEffects": "O risco dominante é hemorrágico e aumenta em idosos, baixo peso, cirurgia e associação com outros antitrombóticos.",
+    "contraindications": [
+      "Sangramento patológico ativo",
+      "História de AVC ou AIT",
+      "Hipersensibilidade ao prasugrel"
+    ],
+    "interactions": [
+      "Anticoagulantes, AINEs e outros antiagregantes aumentam risco de sangramento",
+      "Não administrar dose de carga antes de anatomia coronária estar definida em cenários em que cirurgia urgente é provável, conforme estratégia de SCA"
+    ],
+    "monitoring": [
+      "Sinais de sangramento",
+      "Hemograma quando indicado",
+      "Peso corporal",
+      "História de AVC/AIT",
+      "Necessidade de cirurgia"
+    ],
+    "administration": "Administrar com ou sem alimento. Em SCA invasiva, coordenar momento da carga com estratégia de cateterismo.",
+    "preparation": "Uso oral; comprimidos devem ser administrados conforme apresentação prescrita.",
+    "infusionProtocol": "Não se aplica: prasugrel é administrado por via oral.",
+    "pregnancy": "Dados humanos são limitados. Usar somente se o benefício materno justificar risco potencial, considerando risco de sangramento.",
+    "lactation": "Dados clínicos são insuficientes; ponderar necessidade materna e possível risco ao lactente.",
+    "specialPopulations": "Em pacientes com 75 anos ou mais, geralmente não é recomendado pelo aumento de sangramento fatal e intracraniano, exceto situações de alto risco como diabetes ou IAM prévio. Em peso menor que 60 kg, considerar 5 mg/dia.",
+    "patientEducation": "Não interromper sem orientação após PCI. Informar sangramentos, quedas importantes e qualquer história prévia de AVC ou AIT.",
+    "clinicalPearls": [
+      "Contraindicado se houver AVC ou AIT prévios",
+      "É mais potente e previsível que clopidogrel, porém com maior risco hemorrágico em grupos vulneráveis",
+      "Baixo peso e idade avançada mudam a decisão de uso"
+    ],
+    "guidelineRecommendations": "ACC/AHA 2025: prasugrel ou ticagrelor são preferidos ao clopidogrel em pacientes com SCA submetidos a PCI quando apropriado. DAPT por pelo menos 12 meses é padrão em ausência de alto risco hemorrágico.",
+    "safetyFlags": [
+      "Contraindicado após AVC/AIT",
+      "Cautela importante em idade igual ou superior a 75 anos",
+      "Considerar 5 mg/dia se peso menor que 60 kg",
+      "Alto risco hemorrágico"
+    ],
+    "alerts": [
+      "Evitar iniciar em paciente com alta probabilidade de CABG urgente",
+      "Quando possível, suspender pelo menos 7 dias antes de cirurgia segundo a bula"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b67ca60-d7e4-4c04-bbc6-dae86a7c7675",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+    ],
+    "ref": "DailyMed Prasugrel; ACC/AHA ACS Guideline 2025"
   },
   "es": {
-    "name": "Prasugrel (Clorhidrato de)"
+    "name": "Prasugrel (Clorhidrato de)",
+    "class": "Antiagregante plaquetario tienopiridínico",
+    "pharmacologicClass": "Profármaco inhibidor irreversible del receptor P2Y12",
+    "mechanism": "Se convierte en un metabolito activo que se une irreversiblemente al receptor P2Y12, bloqueando activación y agregación plaquetaria mediadas por ADP.",
+    "pharmacodynamics": "Produce inhibición plaquetaria rápida y potente tras carga de 60 mg, con efecto durante la vida de la plaqueta.",
+    "pharmacokinetics": "Profármaco rápidamente hidrolizado y luego oxidado a metabolito activo. Intervienen CYP3A y CYP2B6, entre otros. La respuesta depende menos de CYP2C19 que con clopidogrel.",
+    "indications": [
+      "Reducción de eventos trombóticos en pacientes con SCA sometidos a PCI, asociado a aspirina"
+    ],
+    "commercialNames": [
+      "Effient",
+      "Prasugrel genérico"
+    ],
+    "presentation": "Comprimidos recubiertos para uso oral.",
+    "presentations": [
+      "Comprimidos 5 mg",
+      "Comprimidos 10 mg"
+    ],
+    "dose": {
+      "Carga": "60 mg VO una vez",
+      "Mantenimiento": "10 mg VO una vez al día",
+      "Peso menor de 60 kg": "Considerar 5 mg VO una vez al día",
+      "Asociación": "Usar con aspirina según protocolo"
+    },
+    "pediatricDose": "Seguridad y eficacia no establecidas para uso cardiovascular pediátrico; no utilizar de rutina.",
+    "renalDose": "No requiere ajuste rutinario, incluso con insuficiencia renal, aunque el riesgo hemorrágico puede aumentar en enfermedad renal avanzada.",
+    "hepaticDose": "Sin ajuste en disfunción hepática leve a moderada; la enfermedad hepática grave está poco estudiada y exige cautela por sangrado.",
+    "commonAdverseEffects": [
+      "Equimosis",
+      "Epistaxis",
+      "Sangrado gastrointestinal",
+      "Anemia"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia fatal",
+      "Hemorragia intracraneal",
+      "Sangrado perioperatorio importante",
+      "PTT rara"
+    ],
+    "adverseEffects": "El riesgo dominante es hemorrágico y aumenta en ancianos, bajo peso, cirugía y asociación con otros antitrombóticos.",
+    "contraindications": [
+      "Sangrado patológico activo",
+      "Antecedente de ACV o AIT",
+      "Hipersensibilidad a prasugrel"
+    ],
+    "interactions": [
+      "Anticoagulantes, AINE y otros antiagregantes aumentan riesgo de sangrado",
+      "No administrar carga antes de definir anatomía coronaria cuando es probable una cirugía urgente, según estrategia de SCA"
+    ],
+    "monitoring": [
+      "Signos de sangrado",
+      "Hemograma cuando esté indicado",
+      "Peso corporal",
+      "Antecedente de ACV/AIT",
+      "Necesidad de cirugía"
+    ],
+    "administration": "Administrar con o sin alimentos. En SCA invasivo coordinar la carga con la estrategia de cateterismo.",
+    "preparation": "Uso oral; administrar comprimidos según la presentación indicada.",
+    "infusionProtocol": "No se aplica: prasugrel se administra por vía oral.",
+    "pregnancy": "Datos humanos limitados. Usar solo si el beneficio materno justifica riesgo potencial, considerando riesgo hemorrágico.",
+    "lactation": "Datos clínicos insuficientes; valorar necesidad materna y posible riesgo para el lactante.",
+    "specialPopulations": "En pacientes de 75 años o más generalmente no se recomienda por aumento de sangrado fatal e intracraneal, salvo situaciones de alto riesgo como diabetes o IAM previo. Con peso menor de 60 kg considerar 5 mg/día.",
+    "patientEducation": "No suspender sin indicación tras PCI. Informar sangrados, caídas importantes y cualquier antecedente de ACV o AIT.",
+    "clinicalPearls": [
+      "Contraindicado con ACV o AIT previos",
+      "Más potente y predecible que clopidogrel, pero con mayor riesgo hemorrágico en grupos vulnerables",
+      "Bajo peso y edad avanzada modifican la decisión de uso"
+    ],
+    "guidelineRecommendations": "ACC/AHA 2025: prasugrel o ticagrelor se prefieren a clopidogrel en pacientes con SCA sometidos a PCI cuando corresponda. DAPT por al menos 12 meses es estrategia estándar sin alto riesgo hemorrágico.",
+    "safetyFlags": [
+      "Contraindicado tras ACV/AIT",
+      "Precaución importante en edad igual o mayor a 75 años",
+      "Considerar 5 mg/día si peso menor de 60 kg",
+      "Alto riesgo hemorrágico"
+    ],
+    "alerts": [
+      "Evitar iniciar si existe alta probabilidad de CABG urgente",
+      "Cuando sea posible suspender al menos 7 días antes de cirugía según ficha"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b67ca60-d7e4-4c04-bbc6-dae86a7c7675",
+      "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+    ],
+    "ref": "DailyMed Prasugrel; ACC/AHA ACS Guideline 2025"
   },
   "name": {
     "pt": "Prasugrel (Cloridrato de)",
@@ -18,8 +184,8 @@
     "prasugrel",
     "prasugrel (cloridrato de)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+  "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "anticoag.js",
@@ -40,7 +206,7 @@
       "record": {
         "id": "prasugrel",
         "category": "cardio",
-        "icon": "🩸",
+        "icon": "💊",
         "color": "rgba(239,68,68,0.13)",
         "colorTxt": "#B91C1C",
         "pt": {
@@ -164,12 +330,22 @@
           "effient",
           "antiagregante plaquetario de alta potencia — tienopiridina p2y12"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+        "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "prasugrel.mcGoldClinicalV1",
+    "group": "GOLD_GROUP03_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "c6ca1d18ab75a619e78b9bfcbf44f70f12deb92dc6259e6276251dbb6b415435",
+    "physicalHomologation": "DEFERRED"
+  }
 }

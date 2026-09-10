@@ -1,316 +1,252 @@
 {
   "id": "losartana",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(16,185,129,0.13)",
   "colorTxt": "#065F46",
   "pt": {
-    "name": "Losartana Potássica",
-    "class": "Bloqueador do Receptor de Angiotensina II (BRA/ARB)",
-    "commercialNames": {
-      "br": [
-        "Cozaar",
-        "Aradois",
-        "Losartana genérica"
-      ],
-      "ar": [
-        "Cozaarex",
-        "Losacor",
-        "Losartán genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 25 mg, 50 mg, 100 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 50 mg VO 1x/dia. Pode usar 25 mg/dia inicial em hipovolemia, cirrose ou idosos. Máximo: 100 mg/dia.",
-      "adultoGrave": "Nefroproteção em DM2 (RENAAL): 50 mg/dia → 100 mg/dia. IC quando IECA não tolerado: 25–50 mg/dia → 50–100 mg/dia.",
-      "pediatricaPadrao": "HTA pediátrica ≥ 6 anos: 0,7 mg/kg/dia VO 1x/dia (máx. 50 mg/dia). Aprovado FDA em crianças.",
-      "pediatricaGrave": "Titular até 1,4 mg/kg/dia ou 100 mg/dia (o menor). Monitorar PA, creatinina e K⁺.",
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "0,7 mg/kg/dia VO 1x/dia (HTA pediátrica ≥ 6 anos, FDA-aprovado)",
-      "grave": "Até 1,4 mg/kg/dia ou 100 mg/dia (o menor)",
-      "meningite": null,
-      "doseMaxima": "Adultos: 100 mg/dia | Pediatria: 100 mg/dia ou 1,4 mg/kg/dia"
-    },
-    "therapeuticRange": "HTA: PA-alvo < 130/80 mmHg. Nefroproteção: alvo de redução de proteinúria e estabilização de TFG. Sem nível sérico-alvo — monitorar por resposta clínica, PA, creatinina e K⁺.",
-    "dilution": "Apenas formulação oral disponível. Sem apresentação EV.",
-    "speed": "VO: tomar 1x/dia no mesmo horário, com ou sem alimento.",
+    "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+    "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+    "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
     "commonAdverseEffects": [
-      "Tontura / hipotensão",
-      "Hipercalemia (↑ potássio)",
-      "Elevação de creatinina",
-      "Fadiga",
-      "Cefaleia"
+      "tontura",
+      "hipotensão",
+      "hipercalemia",
+      "aumento de creatinina",
+      "fadiga"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (raro — risco menor que IECAs, mas possível)",
-      "Insuficiência Renal Aguda (especialmente em estenose bilateral de artéria renal)",
-      "Hipercalemia grave (K⁺ > 6 mEq/L)",
-      "Hipotensão grave — especialmente na 1ª dose em hipovolêmicos ou cirrose"
+      "lesão renal aguda",
+      "hipercalemia grave",
+      "hipotensão sintomática",
+      "angioedema raro",
+      "toxicidade fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Gestação: suspender quando detectada",
+      "uso concomitante de alisquireno em pacientes com diabetes",
+      "hipersensibilidade ao fármaco"
+    ],
+    "interactions": [
+      "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+      "AINEs podem reduzir efeito e aumentar risco renal",
+      "Lítio pode acumular",
+      "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "creatinina/eTFG e potássio antes de iniciar e após mudanças de dose",
+      "estado volêmico",
+      "gestação quando aplicável"
+    ],
+    "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+    "lactation": "Não há dados humanos robustos; avaliar alternativa com maior experiência durante amamentação, especialmente em recém-nascidos.",
+    "patientEducation": [
+      "Evitar gestação durante o tratamento",
+      "não usar suplementos de potássio ou substitutos de sal sem orientação",
+      "manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados",
+      "levantar lentamente se houver tontura"
+    ],
+    "clinicalPearls": [
+      "Metabólito E-3174 contribui de forma importante ao efeito",
+      "Efeito uricosúrico é uma característica relativamente distinta dentro da classe",
+      "Monitorar creatinina e potássio após iniciar ou titular."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: BRA é classe de primeira linha para hipertensão quando indicado",
+      "KDIGO 2024: RASi em DRC com albuminúria; losartana tem evidência histórica em nefropatia diabética",
+      "Evitar duplo bloqueio do SRAA."
+    ],
+    "safetyFlags": [
+      "TOXICIDADE_FETAL",
+      "HIPERCALEMIA",
+      "FUNCAO_RENAL",
+      "HIPOTENSAO",
+      "DUPLO_BLOQUEIO_SRAA"
+    ],
     "alerts": [
-      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou aumento de dose. Elevação de creatinina ≤ 30% é esperada e aceitável.",
-      "Diferencial vs. IECA: NÃO causa tosse — alternativa preferencial em pacientes intolerantes a IECA. Angioedema raro, mas possível.",
-      "Evitar dupla inibição do SRAA (BRA + IECA + alisquireno): aumenta risco de hipotensão, hipercalemia e insuficiência renal sem benefício CV adicional.",
-      "AINEs reduzem efeito anti-hipertensivo e aumentam risco de lesão renal aguda. Orientar paciente a evitar ibuprofeno/diclofenaco.",
-      "Losartana tem propriedade uricosúrica adicional (leve) — pode ser preferida em hipertensos com gota vs. outras BRAs."
+      "Corrigir depleção de volume quando possível antes de iniciar",
+      "Reavaliar função renal e potássio após titulação",
+      "Não associar rotineiramente a IECA ou alisquireno"
     ],
-    "ref": "FDA Cozaar (losartan) label 2023 · RENAAL Trial (NEJM 2001) · LIFE Trial (Lancet 2002) · ESC Hypertension Guidelines 2023 · AHA/ACC/HFSA HF Guidelines 2022 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Ajuste renal formal não necessário para ClCr ≥ 30 mL/min. Monitorar K⁺ e creatinina.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "25–50 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,7 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose padrão. HTA: 50 mg 1x/dia. Nefroproteção DM2: titular até 100 mg/dia. Monitorar PA, creatinina e K⁺."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "25–50 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,5 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "IR moderada: sem ajuste obrigatório. Preferir dose inicial de 25–50 mg. Monitorar K⁺ e creatinina com atenção redobrada."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: iniciar com 25 mg/dia. Risco elevado de hipercalemia e piora renal. Monitoramento intensivo de K⁺ e creatinina."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "25 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muito grave/anúria: dose máxima 25 mg/dia. Avaliar risco-benefício. Risco de hipercalemia potencialmente fatal — monitorar K⁺ rigorosamente."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "25 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Losartana não é removida significativamente por hemodiálise. Manter dose reduzida sem suplementação pós-HD. Monitorar hipotensão intradialítica."
-      }
+    "specialPopulations": {
+      "elderly": "Não ajustar apenas pela idade; titular por resposta e tolerância.",
+      "renalArteryStenosis": "Maior risco de deterioração renal; monitorar.",
+      "volumeDepletion": "Maior risco de hipotensão inicial.",
+      "uricAcid": "Losartana possui efeito uricosúrico modesto, mas não substitui terapia específica para gota."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez (como todos os BRAs). Não causa tosse. Monitorar K⁺ e creatinina. Único BRA com propriedade uricosúrica."
+    "name": "Losartana Potássica",
+    "pharmacokinetics": "Absorção oral com metabolismo hepático por CYP2C9/CYP3A4 para metabólito ativo E-3174, mais potente e de maior duração. Losartana e metabólito são eliminados por urina e fezes.",
+    "indications": [
+      "Hipertensão em adultos e crianças >=6 anos",
+      "redução de risco de AVC em hipertensão com hipertrofia ventricular esquerda, conforme perfil estudado",
+      "nefropatia diabética em diabetes tipo 2 com hipertensão e proteinúria"
+    ],
+    "commercialNames": [
+      "Cozaar"
+    ],
+    "presentation": "Comprimidos revestidos orais.",
+    "presentations": [
+      "Comprimidos 25, 50 e 100 mg"
+    ],
+    "dose": {
+      "hypertension": "50 mg uma vez ao dia; pode aumentar para 100 mg/dia. Em depleção de volume ou hepatopatia considerar início menor.",
+      "LVH": "50 mg uma vez ao dia; titular para 100 mg/dia e associar tiazídico conforme resposta.",
+      "diabeticNephropathy": "50 mg uma vez ao dia; aumentar para 100 mg/dia conforme pressão."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "FDA Cozaar (losartan potassium) label 2023",
-        "RENAAL Trial — Brenner BM et al. (NEJM 2001)",
-        "LIFE Trial — Dahlöf B et al. (Lancet 2002)",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "UpToDate 2025",
-        "Lexicomp Online 2026"
+    "pediatricDose": "Hipertensão >=6 anos: 0,7 mg/kg uma vez ao dia, máximo inicial 50 mg; doses >1,4 mg/kg ou >100 mg/dia não estudadas. Não recomendado <6 anos ou eTFG <30 mL/min/1,73 m².",
+    "renalDose": "Sem ajuste inicial rotineiro por insuficiência renal isolada; monitorar creatinina e potássio. Não é removida de forma relevante por hemodiálise.",
+    "hepaticDose": "Comprometimento hepático leve a moderado: considerar 25 mg uma vez ao dia como início. Não estudada adequadamente em hepatopatia grave.",
+    "administration": "Administrar uma vez ao dia com ou sem alimentos.",
+    "preparation": "Comprimidos não exigem preparo. Suspensão extemporânea pediátrica deve seguir fórmula validada da bula quando necessária.",
+    "infusionProtocol": "Não se aplica: losartana é oral.",
+    "adverseEffects": {
+      "common": [
+        "tontura",
+        "hipotensão",
+        "hipercalemia",
+        "aumento de creatinina",
+        "fadiga"
       ],
-      "note": "Primeiro BRA comercializado. Não causa tosse (diferencial vs. IECA). Metabolismo hepático — sem ajuste renal formal obrigatório. Propriedade uricosúrica. Aprovado em pediatria ≥ 6 anos. CONTRAINDICADO na gravidez."
-    }
+      "dangerous": [
+        "lesão renal aguda",
+        "hipercalemia grave",
+        "hipotensão sintomática",
+        "angioedema raro",
+        "toxicidade fetal"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393"
   },
   "es": {
-    "name": "Losartán Potásico",
-    "class": "Bloqueante del Receptor de Angiotensina II (BRA/ARA-II)",
-    "commercialNames": {
-      "br": [
-        "Cozaar",
-        "Aradois",
-        "Losartana genérica"
-      ],
-      "ar": [
-        "Cozaarex",
-        "Losacor",
-        "Losartán genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 25 mg, 50 mg, 100 mg"
-    ],
-    "dose": {
-      "adultoPadrao": "HTA: 50 mg VO 1 vez/día. Puede usarse 25 mg/día inicial en hipovolemia, cirrosis o ancianos. Máximo: 100 mg/día.",
-      "adultoGrave": "Nefroprotección en DM2 (RENAAL): 50 mg/día → 100 mg/día. IC cuando IECA no tolerado: 25–50 mg/día → 50–100 mg/día.",
-      "pediatricaPadrao": "HTA pediátrica ≥ 6 años: 0,7 mg/kg/día VO 1 vez/día (máx. 50 mg/día). Aprobado FDA en niños.",
-      "pediatricaGrave": "Titular hasta 1,4 mg/kg/día o 100 mg/día (el menor). Monitorizar PA, creatinina y K⁺.",
-      "pediatricaMeningite": null
-    },
-    "doseKg": {
-      "padrao": "0,7 mg/kg/día VO 1 vez/día (HTA pediátrica ≥ 6 años, FDA-aprobado)",
-      "grave": "Hasta 1,4 mg/kg/día o 100 mg/día (el menor)",
-      "meningite": null,
-      "doseMaxima": "Adultos: 100 mg/día | Pediatría: 100 mg/día o 1,4 mg/kg/día"
-    },
-    "therapeuticRange": "HTA: PA objetivo < 130/80 mmHg. Nefroprotección: objetivo de reducción de proteinuria y estabilización de TFG. Sin nivel sérico objetivo — monitorizar por respuesta clínica, PA, creatinina y K⁺.",
-    "dilution": "Solo formulación oral disponible. Sin presentación EV.",
-    "speed": "VO: tomar 1 vez/día a la misma hora, con o sin alimento.",
+    "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+    "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+    "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
     "commonAdverseEffects": [
-      "Mareos / hipotensión",
-      "Hiperpotasemia (↑ potasio)",
-      "Elevación de creatinina",
-      "Fatiga",
-      "Cefalea"
+      "mareo",
+      "hipotensión",
+      "hiperpotasemia",
+      "aumento de creatinina",
+      "fatiga"
     ],
     "dangerousAdverseEffects": [
-      "Angioedema (raro — riesgo menor que IECAs, pero posible)",
-      "Insuficiencia Renal Aguda (especialmente en estenosis bilateral de arteria renal)",
-      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
-      "Hipotensión grave — especialmente en 1ª dosis en hipovolémicos o cirrosis"
+      "lesión renal aguda",
+      "hiperpotasemia grave",
+      "hipotensión sintomática",
+      "angioedema raro",
+      "toxicidad fetal"
     ],
-    "risksByPatient": [],
+    "contraindications": [
+      "Embarazo: suspender cuando se detecte",
+      "uso concomitante de aliskireno en pacientes con diabetes",
+      "hipersensibilidad al fármaco"
+    ],
+    "interactions": [
+      "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+      "AINE pueden reducir efecto y aumentar riesgo renal",
+      "Litio puede acumularse",
+      "Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis",
+      "estado de volumen",
+      "embarazo cuando corresponda"
+    ],
+    "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+    "lactation": "No hay datos humanos robustos; valorar alternativa con mayor experiencia durante lactancia, especialmente en recién nacidos.",
+    "patientEducation": [
+      "Evitar embarazo durante el tratamiento",
+      "no usar suplementos de potasio o sustitutos de sal sin indicación",
+      "mantener hidratación y consultar si hay vómitos o diarrea prolongados",
+      "levantarse lentamente si hay mareo"
+    ],
+    "clinicalPearls": [
+      "El metabolito E-3174 contribuye de forma importante al efecto",
+      "El efecto uricosúrico es una característica relativamente distintiva de la clase",
+      "Controlar creatinina y potasio tras iniciar o titular."
+    ],
+    "guidelineRecommendations": [
+      "AHA/ACC 2025: ARA-II es clase de primera línea para hipertensión cuando está indicado",
+      "KDIGO 2024: RASi en ERC con albuminuria; losartán tiene evidencia histórica en nefropatía diabética",
+      "Evitar doble bloqueo del SRAA."
+    ],
+    "safetyFlags": [
+      "TOXICIDAD_FETAL",
+      "HIPERPOTASEMIA",
+      "FUNCION_RENAL",
+      "HIPOTENSION",
+      "DOBLE_BLOQUEO_SRAA"
+    ],
     "alerts": [
-      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o aumento de dosis. Aumento de creatinina ≤ 30% es esperado y aceptable.",
-      "Diferencial vs. IECA: NO causa tos — alternativa preferencial en pacientes intolerantes a IECA. Angioedema raro, pero posible.",
-      "Evitar doble inhibición del SRAA (ARA-II + IECA + aliskirén): aumenta riesgo de hipotensión, hiperpotasemia e insuficiencia renal sin beneficio CV adicional.",
-      "AINEs reducen efecto antihipertensivo y aumentan riesgo de lesión renal aguda. Orientar al paciente a evitar ibuprofeno/diclofenaco.",
-      "Losartán tiene propiedad uricosúrica adicional (leve) — puede preferirse en hipertensos con gota vs. otros ARA-II."
+      "Corregir depleción de volumen si es posible antes de iniciar",
+      "Reevaluar función renal y potasio tras titulación",
+      "No asociar de rutina con IECA o aliskireno"
     ],
-    "ref": "FDA Cozaar (losartan) label 2023 · RENAAL Trial (NEJM 2001) · LIFE Trial (Lancet 2002) · ESC Hypertension Guidelines 2023 · AHA/ACC/HFSA HF Guidelines 2022 · Lexicomp 2026",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Ajuste renal formal no necesario para ClCr ≥ 30 mL/min. Monitorizar K⁺ y creatinina.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "25–50 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,7 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis estándar. HTA: 50 mg 1 vez/día. Nefroprotección DM2: titular hasta 100 mg/día. Monitorizar PA, creatinina y K⁺."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "25–50 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "0,5 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "IR moderada: sin ajuste obligatorio. Preferir dosis inicial de 25–50 mg. Monitorizar K⁺ y creatinina con atención reforzada."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR grave: iniciar con 25 mg/día. Riesgo elevado de hiperpotasemia y deterioro renal. Monitorización intensiva de K⁺ y creatinina."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "25 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "IR muy grave/anuria: dosis máxima 25 mg/día. Evaluar riesgo-beneficio. Riesgo de hiperpotasemia potencialmente fatal — monitorizar K⁺ rigurosamente."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "25 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "25 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Losartán no es removido significativamente por hemodiálisis. Mantener dosis reducida sin suplementación post-HD. Monitorizar hipotensión intradialítica."
-      }
+    "specialPopulations": {
+      "elderly": "No ajustar solo por edad; titular por respuesta y tolerancia.",
+      "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar.",
+      "volumeDepletion": "Mayor riesgo de hipotensión inicial.",
+      "uricAcid": "Losartán tiene efecto uricosúrico modesto, pero no sustituye tratamiento específico de gota."
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo (como todos los ARA-II). No causa tos. Monitorizar K⁺ y creatinina. Único ARA-II con propiedad uricosúrica."
+    "name": "Losartán Potásico",
+    "pharmacokinetics": "Absorción oral con metabolismo hepático por CYP2C9/CYP3A4 a metabolito activo E-3174, más potente y duradero. Losartán y metabolito se eliminan por orina y heces.",
+    "indications": [
+      "Hipertensión en adultos y niños >=6 años",
+      "reducción del riesgo de ACV en hipertensión con hipertrofia ventricular izquierda, según población estudiada",
+      "nefropatía diabética en diabetes tipo 2 con hipertensión y proteinuria"
+    ],
+    "commercialNames": [
+      "Cozaar"
+    ],
+    "presentation": "Tabletas recubiertas orales.",
+    "presentations": [
+      "Tabletas 25, 50 y 100 mg"
+    ],
+    "dose": {
+      "hypertension": "50 mg una vez al día; puede aumentarse a 100 mg/día. En depleción de volumen o hepatopatía considerar inicio menor.",
+      "LVH": "50 mg una vez al día; titular a 100 mg/día y añadir tiazida según respuesta.",
+      "diabeticNephropathy": "50 mg una vez al día; aumentar a 100 mg/día según presión."
     },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "FDA Cozaar (losartan potassium) label 2023",
-        "RENAAL Trial — Brenner BM et al. (NEJM 2001)",
-        "LIFE Trial — Dahlöf B et al. (Lancet 2002)",
-        "ESC Hypertension Guidelines 2023",
-        "AHA/ACC/HFSA Heart Failure Guidelines 2022",
-        "UpToDate 2025",
-        "Lexicomp Online 2026"
+    "pediatricDose": "Hipertensión >=6 años: 0.7 mg/kg una vez al día, máximo inicial 50 mg; dosis >1.4 mg/kg o >100 mg/día no estudiadas. No recomendado <6 años o eGFR <30 mL/min/1.73 m².",
+    "renalDose": "Sin ajuste inicial rutinario por insuficiencia renal aislada; monitorizar creatinina y potasio. No se elimina de forma relevante por hemodiálisis.",
+    "hepaticDose": "Deterioro hepático leve a moderado: considerar 25 mg una vez al día como inicio. No estudiado adecuadamente en hepatopatía grave.",
+    "administration": "Administrar una vez al día con o sin alimentos.",
+    "preparation": "Las tabletas no requieren preparación. La suspensión extemporánea pediátrica debe seguir fórmula validada de la ficha cuando sea necesaria.",
+    "infusionProtocol": "No aplica: losartán es oral.",
+    "adverseEffects": {
+      "common": [
+        "mareo",
+        "hipotensión",
+        "hiperpotasemia",
+        "aumento de creatinina",
+        "fatiga"
       ],
-      "note": "Primer ARA-II comercializado. No causa tos (diferencial vs. IECA). Metabolismo hepático — sin ajuste renal formal obligatorio. Propiedad uricosúrica. Aprobado en pediatría ≥ 6 años. CONTRAINDICADO en embarazo."
-    }
+      "dangerous": [
+        "lesión renal aguda",
+        "hiperpotasemia grave",
+        "hipotensión sintomática",
+        "angioedema raro",
+        "toxicidad fetal"
+      ]
+    },
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393",
+      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393"
   },
   "name": {
-    "pt": "Losartana",
-    "es": "Losartán"
+    "pt": "Losartana Potássica",
+    "es": "Losartán Potásico"
   },
   "keywords": [
     "losartana",
@@ -323,8 +259,8 @@
     "losartan generico",
     "bloqueador do receptor de angiotensina ii (bra/arb)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-60dc1dc928da29df",
+  "clinicalContentSha256": "60dc1dc928da29dfe8470026c8d2c7e9d57bd938d428296362e253d00632f05e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -373,5 +309,15 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "losartana.mcGoldClinicalV1",
+    "group": "GOLD_GROUP04_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "3857e6ae5e480651d799488d6fb8e9f773a090ce02a4b7efc749b69a7a516c62",
+    "physicalHomologation": "DEFERRED"
   }
 }

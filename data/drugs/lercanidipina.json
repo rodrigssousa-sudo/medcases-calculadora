@@ -1,25 +1,239 @@
 {
   "id": "lercanidipina",
   "category": "cardiologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Lercanidipina (Cloridrato de)"
+    "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico de ação vascular",
+    "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica e pressão arterial.",
+    "pharmacodynamics": "Produz vasodilatação arterial com pouco efeito direto sobre condução AV em doses terapêuticas. Pode causar cefaleia, rubor, palpitações, hipotensão e edema periférico.",
+    "commonAdverseEffects": [
+      "cefaleia",
+      "rubor",
+      "edema periférico",
+      "tontura",
+      "palpitações"
+    ],
+    "dangerousAdverseEffects": [
+      "hipotensão sintomática",
+      "piora de angina em pacientes suscetíveis",
+      "reação de hipersensibilidade rara"
+    ],
+    "interactions": [
+      "Inibidores de CYP3A4 podem aumentar exposição",
+      "Indutores de CYP3A4 podem reduzir exposição",
+      "Outros anti-hipertensivos aumentam hipotensão",
+      "Grapefruit pode aumentar exposição em di-hidropiridinas sensíveis a CYP3A4"
+    ],
+    "monitoring": [
+      "Pressão arterial",
+      "edema periférico",
+      "frequência cardíaca",
+      "sintomas de angina ou hipotensão",
+      "função renal e hepática quando houver comorbidades"
+    ],
+    "preparation": "Comprimidos não exigem reconstituição.",
+    "infusionProtocol": "Não se aplica: formulação oral.",
+    "patientEducation": [
+      "Tomar exatamente conforme horário e relação com alimentos indicada para o produto",
+      "procurar avaliação por síncope, edema importante ou piora de angina",
+      "evitar grapefruit quando a bula indicar"
+    ],
+    "safetyFlags": [
+      "HIPOTENSAO",
+      "EDEMA_PERIFERICO",
+      "CYP3A4"
+    ],
+    "name": "Lercanidipina (Cloridrato)",
+    "class": "Bloqueador de canais de cálcio di-hidropiridínico de longa ação",
+    "pharmacokinetics": "Metabolismo extenso por CYP3A4, alta ligação a proteínas e efeito prolongado apesar de meia-vida plasmática relativamente curta. A disponibilidade aumenta de forma importante com refeições ricas em gordura.",
+    "indications": [
+      "Hipertensão essencial leve a moderada em adultos"
+    ],
+    "commercialNames": [
+      "Zanidip"
+    ],
+    "presentation": "Comprimidos revestidos de 10 e 20 mg.",
+    "presentations": [
+      "10 mg",
+      "20 mg"
+    ],
+    "dose": {
+      "hypertension": "10 mg uma vez ao dia pelo menos 15 minutos antes do café da manhã; pode aumentar para 20 mg conforme resposta. O efeito máximo pode levar cerca de 2 semanas."
+    },
+    "pediatricDose": "Segurança e eficácia não estabelecidas em menores de 18 anos.",
+    "renalDose": "Insuficiência leve-moderada: iniciar com cautela e ter cuidado especial ao aumentar de 10 para 20 mg. Contraindicado com eTFG <30 mL/min ou diálise.",
+    "hepaticDose": "Insuficiência moderada pode aumentar o efeito; considerar ajuste. Contraindicado na insuficiência hepática grave.",
+    "contraindications": [
+      "Obstrução da via de saída do ventrículo esquerdo",
+      "insuficiência cardíaca congestiva não tratada",
+      "angina instável ou IAM no último mês",
+      "insuficiência hepática grave",
+      "eTFG <30 mL/min ou diálise",
+      "inibidores fortes de CYP3A4",
+      "ciclosporina",
+      "grapefruit"
+    ],
+    "administration": "Preferencialmente pela manhã, pelo menos 15 minutos antes do café da manhã. Não administrar com grapefruit.",
+    "pregnancy": "Não recomendada durante a gestação nem em mulheres com possibilidade de gestação sem contracepção eficaz.",
+    "lactation": "Não deve ser usada durante a amamentação porque a excreção no leite é desconhecida e não se pode excluir risco ao lactente.",
+    "specialPopulations": {
+      "elderly": "Não exige ajuste automático, mas iniciar com cuidado especial.",
+      "peritonealDialysis": "Pode associar-se a efluente peritoneal turvo não infeccioso.",
+      "ischemicHeartDisease": "Usar com cautela."
+    },
+    "clinicalPearls": [
+      "Refeição rica em gordura aumenta de forma importante a exposição; respeitar administração antes das refeições",
+      "Não associar com grapefruit, ciclosporina ou inibidores fortes de CYP3A4."
+    ],
+    "guidelineRecommendations": [
+      "Diretrizes contemporâneas de hipertensão consideram bloqueadores de canais de cálcio de longa ação uma classe de primeira linha; a escolha da lercanidipina depende da disponibilidade e autorização regional."
+    ],
+    "alerts": [
+      "Não exceder 20 mg/dia rotineiramente",
+      "Não usar em insuficiência renal ou hepática grave."
+    ],
+    "adverseEffects": {
+      "common": [
+        "cefaleia",
+        "rubor",
+        "edema periférico",
+        "tontura",
+        "palpitações"
+      ],
+      "dangerous": [
+        "hipotensão sintomática",
+        "piora de angina em pacientes suscetíveis",
+        "reação de hipersensibilidade rara"
+      ]
+    },
+    "references": [
+      "https://www.medicines.org.uk/emc/product/102168/smpc",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/102168/smpc"
   },
   "es": {
-    "name": "Lercanidipino (Clorhidrato de)"
+    "pharmacologicClass": "Bloqueante de canales de calcio dihidropiridínico de acción vascular",
+    "mechanism": "Bloquea canales de calcio tipo L en músculo liso arterial, reduciendo entrada de calcio, resistencia vascular sistémica y presión arterial.",
+    "pharmacodynamics": "Produce vasodilatación arterial con escaso efecto directo sobre conducción AV a dosis terapéuticas. Puede causar cefalea, rubor, palpitaciones, hipotensión y edema periférico.",
+    "commonAdverseEffects": [
+      "cefalea",
+      "rubor",
+      "edema periférico",
+      "mareo",
+      "palpitaciones"
+    ],
+    "dangerousAdverseEffects": [
+      "hipotensión sintomática",
+      "empeoramiento de angina en pacientes susceptibles",
+      "reacción de hipersensibilidad rara"
+    ],
+    "interactions": [
+      "Inhibidores CYP3A4 pueden aumentar exposición",
+      "Inductores CYP3A4 pueden reducir exposición",
+      "Otros antihipertensivos aumentan hipotensión",
+      "Pomelo puede aumentar exposición en dihidropiridinas sensibles a CYP3A4"
+    ],
+    "monitoring": [
+      "Presión arterial",
+      "edema periférico",
+      "frecuencia cardíaca",
+      "síntomas de angina o hipotensión",
+      "función renal y hepática cuando existan comorbilidades"
+    ],
+    "preparation": "Tabletas no requieren reconstitución.",
+    "infusionProtocol": "No aplica: formulación oral.",
+    "patientEducation": [
+      "Tomar exactamente según horario y relación con alimentos indicada para el producto",
+      "consultar por síncope, edema marcado o empeoramiento de angina",
+      "evitar pomelo cuando la ficha lo indique"
+    ],
+    "safetyFlags": [
+      "HIPOTENSION",
+      "EDEMA_PERIFERICO",
+      "CYP3A4"
+    ],
+    "name": "Lercanidipino (Clorhidrato)",
+    "class": "Bloqueante de canales de calcio dihidropiridínico de larga acción",
+    "pharmacokinetics": "Metabolismo extenso por CYP3A4, elevada unión a proteínas y efecto prolongado pese a vida media plasmática relativamente corta. La disponibilidad aumenta de forma marcada con comidas ricas en grasa.",
+    "indications": [
+      "Hipertensión esencial leve a moderada en adultos"
+    ],
+    "commercialNames": [
+      "Zanidip"
+    ],
+    "presentation": "Tabletas recubiertas de 10 y 20 mg.",
+    "presentations": [
+      "10 mg",
+      "20 mg"
+    ],
+    "dose": {
+      "hypertension": "10 mg una vez al día al menos 15 minutos antes del desayuno; puede aumentarse a 20 mg según respuesta. El efecto máximo puede tardar unas 2 semanas."
+    },
+    "pediatricDose": "Seguridad y eficacia no establecidas en menores de 18 años.",
+    "renalDose": "Insuficiencia leve-moderada: iniciar con cautela y extremar cuidado al aumentar de 10 a 20 mg. Contraindicado con GFR <30 mL/min o diálisis.",
+    "hepaticDose": "Insuficiencia moderada puede aumentar el efecto; considerar ajuste. Contraindicado en insuficiencia hepática grave.",
+    "contraindications": [
+      "Obstrucción del tracto de salida del ventrículo izquierdo",
+      "insuficiencia cardíaca congestiva no tratada",
+      "angina inestable o IAM en el último mes",
+      "insuficiencia hepática grave",
+      "GFR <30 mL/min o diálisis",
+      "inhibidores fuertes CYP3A4",
+      "ciclosporina",
+      "pomelo"
+    ],
+    "administration": "Preferentemente por la mañana, al menos 15 minutos antes del desayuno. No administrar con pomelo.",
+    "pregnancy": "No recomendada durante embarazo ni en mujeres con posibilidad de embarazo sin anticoncepción eficaz.",
+    "lactation": "No debe usarse durante lactancia porque se desconoce la excreción en leche y no puede excluirse riesgo al lactante.",
+    "specialPopulations": {
+      "elderly": "No exige ajuste automático, pero iniciar con especial cuidado.",
+      "peritonealDialysis": "Puede asociarse con efluente peritoneal turbio no infeccioso.",
+      "ischemicHeartDisease": "Usar con cautela."
+    },
+    "clinicalPearls": [
+      "La comida rica en grasa aumenta marcadamente la exposición; respetar administración antes de comidas",
+      "No asociar con pomelo, ciclosporina o inhibidores fuertes CYP3A4."
+    ],
+    "guidelineRecommendations": [
+      "Las guías contemporáneas de hipertensión consideran los bloqueantes de canales de calcio de acción prolongada una clase de primera línea; la elección de lercanidipino depende de disponibilidad y autorización regional."
+    ],
+    "alerts": [
+      "No exceder 20 mg/día de rutina",
+      "No usar en insuficiencia renal o hepática grave."
+    ],
+    "adverseEffects": {
+      "common": [
+        "cefalea",
+        "rubor",
+        "edema periférico",
+        "mareo",
+        "palpitaciones"
+      ],
+      "dangerous": [
+        "hipotensión sintomática",
+        "empeoramiento de angina en pacientes susceptibles",
+        "reacción de hipersensibilidad rara"
+      ]
+    },
+    "references": [
+      "https://www.medicines.org.uk/emc/product/102168/smpc",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/102168/smpc"
   },
   "name": {
-    "pt": "Lercanidipina (Cloridrato de)",
-    "es": "Lercanidipino (Clorhidrato de)"
+    "pt": "Lercanidipina (Cloridrato)",
+    "es": "Lercanidipino (Clorhidrato)"
   },
   "keywords": [
     "lercanidipina",
     "lercanidipina (cloridrato de)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-82b2d389c757ebce",
+  "clinicalContentSha256": "82b2d389c757ebcea8e01418bdf257fe6a59bd2f742704a930d5fd7ce7f44183",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardiologia.js",
@@ -313,12 +527,22 @@
           "lercanidipina",
           "bloqueador dos canais de calcio diidropiridinico de terceira geracao"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-82b2d389c757ebce",
+        "clinicalContentSha256": "82b2d389c757ebcea8e01418bdf257fe6a59bd2f742704a930d5fd7ce7f44183",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
       }
     }
-  ]
+  ],
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "lercanidipina.mcGoldClinicalV1",
+    "group": "GOLD_GROUP07_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "ed687508b6e2289f5296bc17d7bfcbb5b0ddf55e49308940087ce127df53947b",
+    "physicalHomologation": "DEFERRED"
+  }
 }

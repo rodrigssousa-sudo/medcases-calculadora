@@ -1,14 +1,180 @@
 {
   "id": "tenecteplase",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Tenecteplase"
+    "name": "Tenecteplase",
+    "class": "Trombolítico fibrinolítico",
+    "pharmacologicClass": "Ativador de plasminogênio modificado, fibrinoespecífico",
+    "mechanism": "Versão modificada do tPA com maior especificidade por fibrina e maior resistência ao inibidor do ativador de plasminogênio, permitindo administração em bolus único.",
+    "pharmacodynamics": "Promove conversão de plasminogênio em plasmina predominantemente no trombo rico em fibrina. Produz fibrinólise rápida com risco de hemorragia sistêmica e intracraniana.",
+    "pharmacokinetics": "Administração IV em bolus. Meia-vida maior que alteplase, permitindo dose única. Depuração predominantemente hepática.",
+    "indications": [
+      "AVC isquêmico agudo em adultos elegíveis",
+      "IAM com supra de ST para fibrinólise quando PCI imediata não é possível ou não é a estratégia escolhida"
+    ],
+    "commercialNames": [
+      "TNKase",
+      "Metalyse em alguns mercados"
+    ],
+    "presentation": "Pó liofilizado para reconstituição e bolus IV.",
+    "presentations": [
+      "Frasco para reconstituição com dose total compatível com 25 mg para AVC ou até 50 mg para IAM, conforme apresentação comercial"
+    ],
+    "dose": {
+      "AVC isquêmico": "0,25 mg/kg IV em bolus único, máximo 25 mg; a bula dos EUA usa faixas de peso equivalentes",
+      "IAM com supra": "Bolus único por peso, 30 a 50 mg, máximo 50 mg, conforme bula e protocolo"
+    },
+    "pediatricDose": "Segurança e eficácia não estabelecidas para AVC ou IAM pediátricos de rotina; uso pediátrico deve ser especializado.",
+    "renalDose": "Não há ajuste padronizado apenas por função renal; insuficiência renal avançada aumenta risco hemorrágico e deve integrar seleção do paciente.",
+    "hepaticDose": "Sem ajuste padronizado; doença hepática grave ou coagulopatia pode contraindicar fibrinólise pelo risco hemorrágico.",
+    "commonAdverseEffects": [
+      "Sangramento em sítios de punção",
+      "Equimoses",
+      "Náusea"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia intracraniana",
+      "Hemorragia interna grave",
+      "Choque hemorrágico",
+      "Reação de hipersensibilidade rara"
+    ],
+    "adverseEffects": "A toxicidade principal é hemorrágica. A administração em bolus simplifica logística, mas não reduz a necessidade de seleção rigorosa e monitorização.",
+    "contraindications": [
+      "Sangramento interno ativo",
+      "Hemorragia intracraniana ou subaracnoide atual",
+      "Condições intracranianas com alto risco de sangramento",
+      "Trauma craniano ou cirurgia intracraniana recente",
+      "Hipertensão grave não controlada e outras contraindicações específicas da indicação"
+    ],
+    "interactions": [
+      "Anticoagulantes, antiagregantes e outros fibrinolíticos aumentam risco de sangramento",
+      "Procedimentos invasivos próximos à trombólise aumentam risco hemorrágico"
+    ],
+    "monitoring": [
+      "Exame neurológico seriado no AVC",
+      "Pressão arterial",
+      "Sinais de sangramento",
+      "Hemoglobina e coagulação quando indicado",
+      "Reperfusão e arritmias no IAM"
+    ],
+    "administration": "Administrar IV como bolus único após reconstituição correta. No AVC, iniciar o mais rapidamente possível após confirmar elegibilidade.",
+    "preparation": "Reconstituir com o diluente fornecido pelo fabricante, misturando suavemente até solução límpida. Confirmar concentração final e volume correspondente ao peso antes do bolus.",
+    "infusionProtocol": "Não há infusão de manutenção: administrar como bolus IV único, geralmente em cerca de 5 segundos, conforme bula. Dose depende do peso e da indicação.",
+    "pregnancy": "Dados são limitados; usar apenas em situação trombótica grave quando benefício materno superar risco hemorrágico.",
+    "lactation": "Não há dados adequados sobre excreção no leite; devido à natureza proteica e curta exposição, absorção oral do lactente tende a ser baixa, mas individualizar.",
+    "specialPopulations": "Idade avançada, hipertensão, baixo peso, anticoagulação e doença renal ou hepática aumentam risco de sangramento e exigem avaliação rigorosa.",
+    "patientEducation": "Explicar que é um trombolítico de dose única e que sangramento, cefaleia súbita ou piora neurológica requerem comunicação imediata.",
+    "clinicalPearls": [
+      "Bolus único simplifica tratamento comparado à alteplase",
+      "No AVC a dose recomendada por diretriz é 0,25 mg/kg, máximo 25 mg",
+      "Não confundir esquema de AVC com esquema de IAM"
+    ],
+    "guidelineRecommendations": "AHA/ASA 2026: tenecteplase 0,25 mg/kg até máximo 25 mg ou alteplase 0,9 mg/kg são recomendadas para adultos elegíveis à trombólise IV dentro de 4,5 horas.",
+    "safetyFlags": [
+      "Alto risco hemorrágico",
+      "Bolus único por peso",
+      "Dose diferente para AVC e IAM",
+      "Exige exclusão de hemorragia intracraniana no AVC"
+    ],
+    "alerts": [
+      "Conferir indicação antes de calcular dose",
+      "Nunca usar a dose de IAM para AVC",
+      "Investigar imediatamente piora neurológica após administração"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e647640d-c395-4b4b-a0be-1162f9c21d84",
+      "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513"
+    ],
+    "ref": "DailyMed TNKase 2025; AHA/ASA Acute Ischemic Stroke Guideline 2026"
   },
   "es": {
-    "name": "Tenecteplasa"
+    "name": "Tenecteplasa",
+    "class": "Trombolítico fibrinolítico",
+    "pharmacologicClass": "Activador de plasminógeno modificado y fibrinoespecífico",
+    "mechanism": "Versión modificada del tPA con mayor especificidad por fibrina y mayor resistencia al inhibidor del activador de plasminógeno, permitiendo administración en bolo único.",
+    "pharmacodynamics": "Promueve conversión de plasminógeno en plasmina predominantemente en el trombo rico en fibrina. Produce fibrinólisis rápida con riesgo de hemorragia sistémica e intracraneal.",
+    "pharmacokinetics": "Administración IV en bolo. Vida media mayor que alteplasa, permitiendo dosis única. Depuración predominantemente hepática.",
+    "indications": [
+      "ACV isquémico agudo en adultos elegibles",
+      "IAM con elevación del ST para fibrinólisis cuando PCI inmediata no es posible o no es la estrategia elegida"
+    ],
+    "commercialNames": [
+      "TNKase",
+      "Metalyse en algunos mercados"
+    ],
+    "presentation": "Polvo liofilizado para reconstitución y bolo IV.",
+    "presentations": [
+      "Vial para reconstitución con dosis total compatible con 25 mg para ACV o hasta 50 mg para IAM según presentación comercial"
+    ],
+    "dose": {
+      "ACV isquémico": "0,25 mg/kg IV en bolo único, máximo 25 mg; la ficha de EE.UU. usa bandas de peso equivalentes",
+      "IAM con elevación ST": "Bolo único por peso, 30 a 50 mg, máximo 50 mg, según ficha y protocolo"
+    },
+    "pediatricDose": "Seguridad y eficacia no establecidas para ACV o IAM pediátricos de rutina; uso pediátrico debe ser especializado.",
+    "renalDose": "No existe ajuste estandarizado solo por función renal; insuficiencia renal avanzada aumenta riesgo hemorrágico y debe integrarse a selección.",
+    "hepaticDose": "Sin ajuste estandarizado; hepatopatía grave o coagulopatía puede contraindicar fibrinólisis por riesgo hemorrágico.",
+    "commonAdverseEffects": [
+      "Sangrado en sitios de punción",
+      "Equimosis",
+      "Náuseas"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia intracraneal",
+      "Hemorragia interna grave",
+      "Shock hemorrágico",
+      "Hipersensibilidad rara"
+    ],
+    "adverseEffects": "La toxicidad principal es hemorrágica. El bolo simplifica logística, pero no reduce la necesidad de selección rigurosa y monitorización.",
+    "contraindications": [
+      "Sangrado interno activo",
+      "Hemorragia intracraneal o subaracnoidea actual",
+      "Condiciones intracraneales con alto riesgo de sangrado",
+      "Trauma craneal o cirugía intracraneal reciente",
+      "Hipertensión grave no controlada y otras contraindicaciones específicas"
+    ],
+    "interactions": [
+      "Anticoagulantes, antiagregantes y otros fibrinolíticos aumentan riesgo de sangrado",
+      "Procedimientos invasivos cercanos a trombólisis aumentan riesgo hemorrágico"
+    ],
+    "monitoring": [
+      "Examen neurológico seriado en ACV",
+      "Presión arterial",
+      "Signos de sangrado",
+      "Hemoglobina y coagulación cuando corresponda",
+      "Reperfusión y arritmias en IAM"
+    ],
+    "administration": "Administrar IV como bolo único tras reconstitución correcta. En ACV iniciar lo antes posible tras confirmar elegibilidad.",
+    "preparation": "Reconstituir con el diluyente del fabricante, mezclando suavemente hasta solución clara. Confirmar concentración final y volumen según peso antes del bolo.",
+    "infusionProtocol": "No existe infusión de mantenimiento: administrar como bolo IV único, generalmente en unos 5 segundos, según ficha. La dosis depende del peso y la indicación.",
+    "pregnancy": "Datos limitados; usar solo en situación trombótica grave cuando el beneficio materno supere el riesgo hemorrágico.",
+    "lactation": "No hay datos adecuados de excreción en leche; por su naturaleza proteica y breve exposición, la absorción oral del lactante sería baja, pero individualizar.",
+    "specialPopulations": "Edad avanzada, hipertensión, bajo peso, anticoagulación y enfermedad renal o hepática aumentan riesgo hemorrágico y requieren evaluación rigurosa.",
+    "patientEducation": "Explicar que es un trombolítico de dosis única y que sangrado, cefalea súbita o empeoramiento neurológico deben comunicarse de inmediato.",
+    "clinicalPearls": [
+      "Bolo único simplifica tratamiento frente a alteplasa",
+      "En ACV la dosis recomendada por guía es 0,25 mg/kg, máximo 25 mg",
+      "No confundir esquema de ACV con esquema de IAM"
+    ],
+    "guidelineRecommendations": "AHA/ASA 2026: tenecteplasa 0,25 mg/kg hasta máximo 25 mg o alteplasa 0,9 mg/kg son recomendadas en adultos elegibles para trombólisis IV dentro de 4,5 horas.",
+    "safetyFlags": [
+      "Alto riesgo hemorrágico",
+      "Bolo único por peso",
+      "Dosis diferente para ACV e IAM",
+      "Requiere excluir hemorragia intracraneal en ACV"
+    ],
+    "alerts": [
+      "Confirmar indicación antes de calcular dosis",
+      "Nunca usar dosis de IAM para ACV",
+      "Investigar de inmediato empeoramiento neurológico tras administración"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e647640d-c395-4b4b-a0be-1162f9c21d84",
+      "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513"
+    ],
+    "ref": "DailyMed TNKase 2025; AHA/ASA Acute Ischemic Stroke Guideline 2026"
   },
   "name": {
     "pt": "Tenecteplase",
@@ -17,8 +183,8 @@
   "keywords": [
     "tenecteplase"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+  "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardio.js",
@@ -55,8 +221,8 @@
         "keywords": [
           "tenecteplase"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+        "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
         "source": "medcases-calculadora",
         "schema": "legacy-v1",
         "sourceModule": "analgesicos.js"
@@ -116,5 +282,15 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "tenecteplase.mcGoldClinicalV1",
+    "group": "GOLD_GROUP03_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "1b6f70c1c933b810e5ed31ef91d5f4dcdf4b970b4a91fa20beb82ce8f67326aa",
+    "physicalHomologation": "DEFERRED"
   }
 }

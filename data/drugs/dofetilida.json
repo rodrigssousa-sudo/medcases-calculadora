@@ -1,141 +1,265 @@
 {
   "id": "dofetilida",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "dose": "500 mcg VO 12/12h",
-    "doseObs": "ClCr estimado: 90 mL/min — dose plena",
-    "clcrEstimado": "90 mL/min",
-    "escalonamentoRenal": "ClCr >60: 500 mcg 12/12h | ClCr 40–60: 250 mcg 12/12h | ClCr 20–39: 125 mcg 12/12h | ClCr <20: CONTRAINDICADO",
-    "apresentacao": "Cápsulas 125 mcg / 250 mcg / 500 mcg (Tikosyn)",
-    "classe": "Antiarrítmico Classe III puro — bloqueador IKr | Meia-vida ~10 h",
-    "indicacoes": [
-      "FA — manutenção ritmo sinusal",
-      "Flutter atrial",
-      "Conversão FA em selecionados",
-      "FA em cardiopatia estrutural selecionada (DIAMOND Trial)"
+    "commonAdverseEffects": [
+      "cefaleia",
+      "dor torácica",
+      "tontura",
+      "náuseas"
     ],
-    "efeitosAdversos": [
-      "Cefaleia",
-      "Tontura",
-      "Náuseas",
-      "Dor torácica",
-      "Dispneia",
-      "⚠️ Torsades de Pointes",
-      "⚠️ TV/FV",
-      "⚠️ QT prolongado grave",
-      "⚠️ Morte súbita"
+    "monitoring": [
+      "Internação mínima de 3 dias para início ou reinício",
+      "ECG contínuo",
+      "QTc 2-3 h após cada uma das primeiras doses",
+      "ClCr",
+      "potássio e magnésio"
     ],
-    "contraindicacoesAbsolutas": [
-      "QTc >440 ms",
+    "preparation": "Confirmar formulação e concentração antes de administrar.",
+    "patientEducation": [
+      "Não duplicar doses esquecidas",
+      "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
+      "informar todos os fármacos pelo risco de interações e pró-arritmia"
+    ],
+    "name": "Dofetilida",
+    "class": "Antiarrítmico classe III, bloqueador seletivo de IKr",
+    "pharmacologicClass": "Bloqueador do canal rápido de potássio IKr com prolongamento da repolarização",
+    "mechanism": "Bloqueia IKr e prolonga potencial de ação e período refratário atrial/ventricular sem efeito importante sobre condução.",
+    "pharmacodynamics": "Prolonga QT de forma relacionada à concentração; o principal risco é torsades de pointes, especialmente com dose excessiva ou insuficiência renal.",
+    "pharmacokinetics": "Biodisponibilidade oral alta; eliminação renal importante por filtração e secreção catiônica. A dose depende da ClCr.",
+    "indications": [
+      "Conversão de fibrilação atrial/flutter para ritmo sinusal",
+      "manutenção do ritmo sinusal em FA/flutter sintomáticos selecionados"
+    ],
+    "commercialNames": [
+      "Tikosyn"
+    ],
+    "presentation": "Cápsulas orais.",
+    "presentations": [
+      "125 mcg",
+      "250 mcg",
+      "500 mcg"
+    ],
+    "dose": {
+      "CrClOver60": "500 mcg duas vezes ao dia.",
+      "CrCl40to60": "250 mcg duas vezes ao dia.",
+      "CrCl20to39": "125 mcg duas vezes ao dia.",
+      "CrClUnder20": "Contraindicado."
+    },
+    "pediatricDose": "Segurança e eficácia não estabelecidas na população pediátrica.",
+    "renalDose": "ClCr >60: 500 mcg BID; 40-60: 250 mcg BID; 20 a <40: 125 mcg BID; <20 mL/min contraindicado. Recalcular com mudanças renais.",
+    "hepaticDose": "Sem ajuste adicional na insuficiência hepática leve-moderada após seleção pela ClCr; dados limitados em doença hepática grave.",
+    "dangerousAdverseEffects": [
+      "torsades de pointes",
+      "taquicardia ventricular",
+      "prolongamento importante do QT",
+      "morte arrítmica"
+    ],
+    "contraindications": [
+      "QT/QTc basal >440 ms ou >500 ms com distúrbio de condução",
+      "síndrome de QT longo",
       "ClCr <20 mL/min",
-      "Hipocalemia não corrigida",
-      "Verapamil",
-      "Cimetidina",
-      "Trimetoprim/SMX",
-      "Cetoconazol",
-      "Hidroclorotiazida"
+      "verapamil",
+      "cimetidina",
+      "trimetoprima com ou sem sulfametoxazol",
+      "cetoconazol",
+      "hidroclorotiazida",
+      "hipersensibilidade"
     ],
-    "monitoramento": [
-      "ECG + QTc basal",
-      "QTc 2–3 h após 1ª, 2ª, 3ª dose",
-      "Telemetria ≥3 dias (hospitalar)",
-      "ClCr antes e periodicamente",
-      "K⁺ e Mg²⁺ periódico",
-      "Sintomas arrítmicos"
+    "interactions": [
+      "Hidroclorotiazida é contraindicada pelo aumento importante do efeito sobre QT",
+      "Verapamil, cimetidina, trimetoprima e cetoconazol são contraindicados",
+      "Outros fármacos que prolongam QT aumentam pró-arritmia",
+      "Corrigir hipocalemia e hipomagnesemia antes de iniciar"
     ],
-    "refs": [
-      "FDA Tikosyn Label",
-      "ESC AF Guidelines",
-      "AHA/ACC/HRS AF Guidelines",
-      "DIAMOND Trial",
-      "Goodman & Gilman",
-      "Lexicomp"
+    "administration": "Início ou reinício apenas em hospital com cálculo de ClCr, ECG contínuo e capacidade de ressuscitação por pelo menos 3 dias.",
+    "infusionProtocol": "Não se aplica: dofetilida é oral.",
+    "pregnancy": "Usar apenas se o benefício materno justificar o risco; dados humanos são limitados.",
+    "lactation": "Evitar amamentação durante o tratamento pela ausência de dados suficientes e potencial de reações graves.",
+    "specialPopulations": {
+      "HFrEF": "É opção para manutenção de ritmo em HFrEF selecionada pela diretriz, com início hospitalar.",
+      "renal": "A função renal determina a dose.",
+      "QT": "Suspender ou reduzir conforme algoritmo se QT prolongar."
+    },
+    "clinicalPearls": [
+      "Não há início ambulatorial seguro aprovado",
+      "A dose máxima recomendada com ClCr >60 é 500 mcg BID; doses maiores aumentam torsades."
+    ],
+    "guidelineRecommendations": [
+      "Diretriz FA 2023: dofetilida é razoável para manutenção do ritmo em HFrEF e em pacientes sem QT prolongado ou alterações de K/Mg, com seleção pela função renal e monitorização estreita."
+    ],
+    "safetyFlags": [
+      "QT",
+      "TORSADES",
+      "INTERNACAO_3_DIAS",
+      "FUNCAO_RENAL",
+      "INTERACOES_CONTRAINDICADAS"
     ],
     "alerts": [
-      {
-        "tipo": "danger",
-        "msg": "🏥 INÍCIO/REINÍCIO HOSPITALAR OBRIGATÓRIO: telemetria contínua ≥3 dias. QTc 2–3 h após cada dose inicial. Apenas com equipe treinada em arritmias."
-      },
-      {
-        "tipo": "danger",
-        "msg": "📦 BLACK BOX: Risco de Torsades de Pointes potencialmente fatal. Início e reinício apenas sob monitorização hospitalar contínua."
-      }
-    ]
+      "Não iniciar se QTc ultrapassar o limite da bula",
+      "Não duplicar dose esquecida."
+    ],
+    "adverseEffects": {
+      "common": [
+        "cefaleia",
+        "dor torácica",
+        "tontura",
+        "náuseas"
+      ],
+      "dangerous": [
+        "torsades de pointes",
+        "taquicardia ventricular",
+        "prolongamento importante do QT",
+        "morte arrítmica"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02438044-d6a3-49e9-a1ac-3aad21ef2c8c",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02438044-d6a3-49e9-a1ac-3aad21ef2c8c"
   },
   "es": {
-    "dose": "500 mcg VO 12/12h",
-    "doseObs": "ClCr estimado: 90 mL/min — dosis plena",
-    "clcrEstimado": "90 mL/min",
-    "escalonamentoRenal": "ClCr >60: 500 mcg c/12h | ClCr 40–60: 250 mcg c/12h | ClCr 20–39: 125 mcg c/12h | ClCr <20: CONTRAINDICADO",
-    "apresentacao": "Cápsulas 125 mcg / 250 mcg / 500 mcg (Tikosyn)",
-    "classe": "Antiarrítmico Clase III puro — bloqueador IKr | Vida media ~10 h",
-    "indicacoes": [
-      "FA — mantenimiento ritmo sinusal",
-      "Flutter auricular",
-      "Conversión FA en seleccionados",
-      "FA en cardiopatía estructural seleccionada (DIAMOND Trial)"
+    "commonAdverseEffects": [
+      "cefalea",
+      "dolor torácico",
+      "mareo",
+      "náuseas"
     ],
-    "efeitosAdversos": [
-      "Cefalea",
-      "Mareos",
-      "Náuseas",
-      "Dolor torácico",
-      "Disnea",
-      "⚠️ Torsades de Pointes",
-      "⚠️ TV/FV",
-      "⚠️ QT prolongado grave",
-      "⚠️ Muerte súbita"
+    "monitoring": [
+      "Ingreso mínimo de 3 días para inicio o reinicio",
+      "ECG continuo",
+      "QTc 2-3 h después de cada una de las primeras dosis",
+      "CrCl",
+      "potasio y magnesio"
     ],
-    "contraindicacoesAbsolutas": [
-      "QTc >440 ms",
-      "ClCr <20 mL/min",
-      "Hipocalemia no corregida",
-      "Verapamilo",
-      "Cimetidina",
-      "Trimetoprim/SMX",
-      "Ketoconazol",
-      "Hidroclorotiazida"
+    "preparation": "Verificar formulación y concentración antes de administrar.",
+    "patientEducation": [
+      "No duplicar dosis omitidas",
+      "consultar por síncope, palpitaciones sostenidas o disnea nueva",
+      "informar todos los fármacos por riesgo de interacciones y proarritmia"
     ],
-    "monitoramento": [
-      "ECG + QTc basal",
-      "QTc 2–3 h tras 1ª, 2ª, 3ª dosis",
-      "Telemetría ≥3 días (hospitalario)",
-      "ClCr antes y periódicamente",
-      "K⁺ y Mg²⁺ periódico",
-      "Síntomas arrítmicos"
+    "name": "Dofetilida",
+    "class": "Antiarrítmico clase III, bloqueador selectivo IKr",
+    "pharmacologicClass": "Bloqueador del canal rápido de potasio IKr con prolongación de repolarización",
+    "mechanism": "Bloquea IKr y prolonga potencial de acción y período refractario auricular/ventricular sin efecto importante sobre conducción.",
+    "pharmacodynamics": "Prolonga QT de forma relacionada con concentración; el riesgo principal es torsades de pointes, especialmente con dosis excesiva o insuficiencia renal.",
+    "pharmacokinetics": "Biodisponibilidad oral alta; eliminación renal importante por filtración y secreción catiónica. La dosis depende de CrCl.",
+    "indications": [
+      "Conversión de fibrilación auricular/flutter a ritmo sinusal",
+      "mantenimiento de ritmo sinusal en FA/flutter sintomáticos seleccionados"
     ],
-    "refs": [
-      "FDA Tikosyn Label",
-      "ESC AF Guidelines",
-      "AHA/ACC/HRS AF Guidelines",
-      "DIAMOND Trial",
-      "Goodman & Gilman",
-      "Lexicomp"
+    "commercialNames": [
+      "Tikosyn"
+    ],
+    "presentation": "Cápsulas orales.",
+    "presentations": [
+      "125 mcg",
+      "250 mcg",
+      "500 mcg"
+    ],
+    "dose": {
+      "CrClOver60": "500 mcg dos veces al día.",
+      "CrCl40to60": "250 mcg dos veces al día.",
+      "CrCl20to39": "125 mcg dos veces al día.",
+      "CrClUnder20": "Contraindicado."
+    },
+    "pediatricDose": "Seguridad y eficacia no establecidas en población pediátrica.",
+    "renalDose": "CrCl >60: 500 mcg BID; 40-60: 250 mcg BID; 20 a <40: 125 mcg BID; <20 mL/min contraindicado. Recalcular con cambios renales.",
+    "hepaticDose": "No ajuste adicional en insuficiencia hepática leve-moderada después de seleccionar por CrCl; datos limitados en enfermedad hepática grave.",
+    "dangerousAdverseEffects": [
+      "torsades de pointes",
+      "taquicardia ventricular",
+      "prolongación marcada del QT",
+      "muerte arrítmica"
+    ],
+    "contraindications": [
+      "QT/QTc basal >440 ms o >500 ms con trastorno de conducción",
+      "síndrome de QT largo",
+      "CrCl <20 mL/min",
+      "verapamilo",
+      "cimetidina",
+      "trimetoprim con o sin sulfametoxazol",
+      "ketoconazol",
+      "hidroclorotiazida",
+      "hipersensibilidad"
+    ],
+    "interactions": [
+      "Hidroclorotiazida está contraindicada por aumento marcado del efecto sobre QT",
+      "Verapamilo, cimetidina, trimetoprim y ketoconazol están contraindicados",
+      "Otros fármacos que prolongan QT aumentan proarritmia",
+      "Corregir hipopotasemia e hipomagnesemia antes de iniciar"
+    ],
+    "administration": "Inicio o reinicio solo en hospital con cálculo de CrCl, ECG continuo y capacidad de reanimación durante al menos 3 días.",
+    "infusionProtocol": "No aplica: dofetilida es oral.",
+    "pregnancy": "Usar solo si el beneficio materno justifica el riesgo; datos humanos son limitados.",
+    "lactation": "Evitar lactancia durante tratamiento por ausencia de datos suficientes y potencial de reacciones graves.",
+    "specialPopulations": {
+      "HFrEF": "Es una opción de mantenimiento de ritmo en HFrEF seleccionada por guía, con inicio hospitalario.",
+      "renal": "La función renal determina la dosis.",
+      "QT": "Suspender o reducir según algoritmo si QT se prolonga."
+    },
+    "clinicalPearls": [
+      "No existe inicio ambulatorio seguro aprobado",
+      "La dosis máxima recomendada con CrCl >60 es 500 mcg BID; dosis mayores aumentan torsades."
+    ],
+    "guidelineRecommendations": [
+      "Guía AF 2023: dofetilida es razonable para mantenimiento de ritmo en HFrEF y en pacientes sin QT prolongado o alteraciones de K/Mg, con selección por función renal y monitorización estrecha."
+    ],
+    "safetyFlags": [
+      "QT",
+      "TORSADES",
+      "INGRESO_3_DIAS",
+      "FUNCION_RENAL",
+      "INTERACCIONES_CONTRAINDICADAS"
     ],
     "alerts": [
-      {
-        "tipo": "danger",
-        "msg": "🏥 INICIO/REINICIO HOSPITALARIO OBLIGATORIO: telemetría continua ≥3 días. QTc 2–3 h tras cada dosis inicial. Solo con equipo entrenado en arritmias."
-      },
-      {
-        "tipo": "danger",
-        "msg": "📦 BLACK BOX: Riesgo de Torsades de Pointes potencialmente fatal. Inicio y reinicio solo bajo monitorización hospitalaria continua."
-      }
-    ]
+      "No iniciar si QTc supera el umbral de la ficha",
+      "No duplicar una dosis omitida."
+    ],
+    "adverseEffects": {
+      "common": [
+        "cefalea",
+        "dolor torácico",
+        "mareo",
+        "náuseas"
+      ],
+      "dangerous": [
+        "torsades de pointes",
+        "taquicardia ventricular",
+        "prolongación marcada del QT",
+        "muerte arrítmica"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02438044-d6a3-49e9-a1ac-3aad21ef2c8c",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02438044-d6a3-49e9-a1ac-3aad21ef2c8c"
   },
   "name": {
-    "pt": "dofetilida",
-    "es": "dofetilida"
+    "pt": "Dofetilida",
+    "es": "Dofetilida"
   },
   "keywords": [
     "dofetilida"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-82b2d389c757ebce",
+  "clinicalContentSha256": "82b2d389c757ebcea8e01418bdf257fe6a59bd2f742704a930d5fd7ce7f44183",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "dofetilida.mcGoldClinicalV1",
+    "group": "GOLD_GROUP07_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "2e9cd010225911eaf107925133bb20ef95b2b6af8bf055f54578f4eb5f876136",
+    "physicalHomologation": "DEFERRED"
+  }
 }

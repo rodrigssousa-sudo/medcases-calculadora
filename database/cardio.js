@@ -21,7 +21,7 @@
     metoprolol: {
       name:     { pt: 'Metoprolol', es: 'Metoprolol' },
       category: 'cardio',
-      icon:     '🫀',
+      icon: '',
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#B91C1C',
 
@@ -600,6 +600,270 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Antagonista beta-adrenérgico com predomínio beta-1 em doses terapêuticas",
+          "pharmacodynamics": "Reduz frequência cardíaca, contratilidade, condução AV e liberação de renina. A seletividade beta-1 diminui em doses altas; a resposta deve ser individualizada.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fadiga",
+            "tontura",
+            "hipotensão",
+            "extremidades frias"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueio AV",
+            "descompensação de insuficiência cardíaca",
+            "broncoespasmo",
+            "bradicardia grave",
+            "mascaramento de hipoglicemia"
+          ],
+          "interactions": [
+            "Verapamil ou diltiazem aumentam risco de bradicardia, bloqueio AV e hipotensão",
+            "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
+            "Inibidores de CYP2D6 podem elevar exposição de alguns betabloqueadores",
+            "Retirada de clonidina exige planejamento para evitar rebote hipertensivo",
+            "Insulina e secretagogos: pode mascarar sintomas adrenérgicos de hipoglicemia"
+          ],
+          "monitoring": [
+            "Frequência cardíaca e pressão arterial",
+            "sinais de congestão ou piora de insuficiência cardíaca",
+            "ECG se houver distúrbio de condução",
+            "sintomas de broncoespasmo",
+            "glicemia em pacientes de risco"
+          ],
+          "pregnancy": "Usar apenas quando o benefício materno justificar o risco fetal. Exposição próxima ao parto pode associar-se a bradicardia, hipotensão ou hipoglicemia neonatal; monitorar o recém-nascido se houve exposição relevante.",
+          "lactation": "Individualizar conforme dose, farmacocinética e idade do lactente; observar bradicardia, dificuldade de alimentação ou letargia, especialmente em recém-nascidos.",
+          "patientEducation": [
+            "Não suspender abruptamente sem orientação",
+            "controlar pulso se orientado",
+            "procurar avaliação por síncope, nova dispneia ou piora de edema",
+            "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
+          ],
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEIO_AV",
+            "RETIRADA_GRADUAL",
+            "INSUFICIENCIA_CARDIACA",
+            "HIPOGLICEMIA_MASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensão abrupta em doença coronariana",
+            "Não iniciar ou titular agressivamente durante insuficiência cardíaca descompensada",
+            "Usar com cautela em doença broncoespástica"
+          ],
+          "name": "Succinato / Tartarato de Metoprolol",
+          "class": "Betabloqueador beta-1 seletivo",
+          "mechanism": "Bloqueia preferencialmente receptores beta-1 cardíacos, reduzindo frequência, contratilidade, condução AV e liberação de renina. A seletividade diminui com doses crescentes.",
+          "pharmacokinetics": "Metabolismo hepático importante por CYP2D6. A meia-vida do metoprolol é de poucas horas; o succinato de liberação prolongada mantém exposição ao longo de 24 h. O tartarato é de liberação imediata.",
+          "indications": [
+            "Hipertensão",
+            "angina estável",
+            "insuficiência cardíaca estável com fração de ejeção reduzida: usar succinato de liberação prolongada",
+            "pós-infarto/hemodinamicamente estável conforme formulação e protocolo"
+          ],
+          "commercialNames": [
+            "Toprol-XL",
+            "Lopressor"
+          ],
+          "presentation": "Comprimidos de tartarato de liberação imediata e succinato de liberação prolongada em várias concentrações.",
+          "presentations": [
+            "Tartarato: comprimidos 25, 50 e 100 mg, com outras concentrações conforme fabricante",
+            "Succinato ER: comprimidos de liberação prolongada 25, 50, 100 e 200 mg equivalentes"
+          ],
+          "dose": {
+            "hypertension": "Tartarato: início habitual 100 mg/dia em 1-2 tomadas. Succinato ER: individualizar, habitualmente 25-100 mg uma vez ao dia.",
+            "angina": "Succinato ER: 100 mg uma vez ao dia, titular semanalmente; doses >400 mg/dia não foram estudadas.",
+            "hfrEF": "Succinato ER: 12,5 mg/dia em IC mais grave ou 25 mg/dia em NYHA II; dobrar a cada 2 semanas até 200 mg/dia ou máxima tolerada.",
+            "postMI": "Tartarato: em pacientes estáveis, o esquema oral depende da tolerância à fase IV; algumas bulas usam 50 mg a cada 6 h após a fase IV."
+          },
+          "pediatricDose": "Succinato ER em hipertensão a partir de 6 anos: iniciar 1 mg/kg uma vez ao dia; doses >2 mg/kg ou >200 mg/dia não foram estudadas. Ajustar à resposta.",
+          "renalDose": "Não requer ajuste por insuficiência renal isolada; titular pela resposta clínica.",
+          "hepaticDose": "A exposição aumenta com disfunção hepática; iniciar com doses menores e titular gradualmente.",
+          "contraindications": [
+            "Bradicardia grave",
+            "bloqueio AV de segundo ou terceiro grau sem marcapasso",
+            "síndrome do nó sinusal sem marcapasso",
+            "choque cardiogênico",
+            "insuficiência cardíaca descompensada exigindo suporte inotrópico",
+            "hipersensibilidade"
+          ],
+          "administration": "Distinguir estritamente tartarato de liberação imediata e succinato ER. Succinato ER é administrado uma vez ao dia; pode ser dividido se sulcado, mas não triturar nem mastigar.",
+          "preparation": "Não requer reconstituição nas apresentações orais. Confirmar sal e formulação antes de converter doses.",
+          "infusionProtocol": "Este registro cobre as formulações orais. Não extrapolar dose oral para metoprolol IV; o esquema IV exige protocolo específico.",
+          "specialPopulations": {
+            "CYP2D6": "Metabolizadores lentos ou inibidores potentes de CYP2D6 podem aumentar exposição.",
+            "diabetes": "Pode mascarar taquicardia da hipoglicemia.",
+            "bronchospasm": "Usar a menor dose efetiva e observar broncoespasmo."
+          },
+          "clinicalPearls": [
+            "Em HFrEF a formulação com evidência prognóstica é metoprolol succinato de liberação prolongada; não trocar automaticamente por tartarato",
+            "A retirada deve ser gradual por 1-2 semanas quando possível"
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: metoprolol succinato ER é um dos betabloqueadores com benefício de mortalidade em HFrEF",
+            "Diretriz ACS 2025: usar betabloqueio quando indicado e sem contraindicação; individualizar conforme hemodinâmica",
+            "Não é primeira escolha para hipertensão não complicada sem indicação adicional"
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fadiga",
+              "tontura",
+              "hipotensão",
+              "extremidades frias"
+            ],
+            "dangerous": [
+              "bloqueio AV",
+              "descompensação de insuficiência cardíaca",
+              "broncoespasmo",
+              "bradicardia grave",
+              "mascaramento de hipoglicemia"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24c87741-ee0a-738e-2c5a-5ce80ca2f48b",
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5987a15b-e86f-4fd7-a377-35a917c0e3fe",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24c87741-ee0a-738e-2c5a-5ce80ca2f48b"
+        },
+        "es": {
+          "pharmacologicClass": "Antagonista beta-adrenérgico con predominio beta-1 a dosis terapéuticas",
+          "pharmacodynamics": "Disminuye frecuencia cardíaca, contractilidad, conducción AV y liberación de renina. La selectividad beta-1 disminuye a dosis altas; la respuesta debe individualizarse.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fatiga",
+            "mareo",
+            "hipotensión",
+            "frialdad de extremidades"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueo AV",
+            "descompensación de insuficiencia cardíaca",
+            "broncoespasmo",
+            "bradicardia grave",
+            "enmascaramiento de hipoglucemia"
+          ],
+          "interactions": [
+            "Verapamilo o diltiazem aumentan riesgo de bradicardia, bloqueo AV e hipotensión",
+            "Digoxina y otros cronotrópicos negativos potencian bradicardia",
+            "Inhibidores CYP2D6 pueden elevar exposición de algunos betabloqueantes",
+            "Retirada de clonidina requiere planificación para evitar rebote hipertensivo",
+            "Insulina y secretagogos: puede enmascarar síntomas adrenérgicos de hipoglucemia"
+          ],
+          "monitoring": [
+            "Frecuencia cardíaca y presión arterial",
+            "signos de congestión o empeoramiento de insuficiencia cardíaca",
+            "ECG si hay trastorno de conducción",
+            "síntomas de broncoespasmo",
+            "glucemia en pacientes de riesgo"
+          ],
+          "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo fetal. La exposición cerca del parto puede asociarse a bradicardia, hipotensión o hipoglucemia neonatal; monitorizar al recién nacido si hubo exposición relevante.",
+          "lactation": "Individualizar según dosis, farmacocinética y edad del lactante; vigilar bradicardia, mala alimentación o letargo, especialmente en recién nacidos.",
+          "patientEducation": [
+            "No suspender bruscamente sin indicación",
+            "controlar pulso si fue orientado",
+            "consultar por síncope, disnea nueva o empeoramiento de edema",
+            "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
+          ],
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEO_AV",
+            "RETIRADA_GRADUAL",
+            "INSUFICIENCIA_CARDIACA",
+            "HIPOGLUCEMIA_ENMASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensión abrupta en enfermedad coronaria",
+            "No iniciar o titular agresivamente durante insuficiencia cardíaca descompensada",
+            "Usar con cautela en enfermedad broncoespástica"
+          ],
+          "name": "Succinato / Tartrato de Metoprolol",
+          "class": "Betabloqueante beta-1 selectivo",
+          "mechanism": "Bloquea preferentemente receptores beta-1 cardíacos, reduciendo frecuencia, contractilidad, conducción AV y liberación de renina. La selectividad disminuye con dosis crecientes.",
+          "pharmacokinetics": "Metabolismo hepático importante por CYP2D6. La vida media del metoprolol es de pocas horas; la formulación succinato de liberación prolongada mantiene exposición durante 24 h. El tartrato es de liberación inmediata.",
+          "indications": [
+            "Hipertensión",
+            "angina estable",
+            "insuficiencia cardíaca estable con fracción de eyección reducida: usar succinato de liberación prolongada",
+            "post-infarto/hemodinámicamente estable según formulación y protocolo"
+          ],
+          "commercialNames": [
+            "Toprol-XL",
+            "Lopressor"
+          ],
+          "presentation": "Tabletas de tartrato de liberación inmediata y succinato de liberación prolongada en varias concentraciones.",
+          "presentations": [
+            "Tartrato: tabletas 25, 50 y 100 mg, con otras concentraciones según fabricante",
+            "Succinato ER: tabletas de liberación prolongada 25, 50, 100 y 200 mg equivalentes"
+          ],
+          "dose": {
+            "hypertension": "Tartrato: inicio habitual 100 mg/día en 1-2 tomas. Succinato ER: individualizar, habitualmente 25-100 mg una vez al día.",
+            "angina": "Succinato ER: 100 mg una vez al día, titular semanalmente; dosis >400 mg/día no estudiadas.",
+            "hfrEF": "Succinato ER: 12.5 mg/día en IC más grave o 25 mg/día en NYHA II; duplicar cada 2 semanas hasta 200 mg/día o máxima tolerada.",
+            "postMI": "Tartrato: en pacientes estables, la pauta oral depende de tolerancia al esquema IV; algunas etiquetas usan 50 mg cada 6 h tras fase IV."
+          },
+          "pediatricDose": "Succinato ER en hipertensión desde 6 años: iniciar 1 mg/kg una vez al día; no se estudiaron dosis >2 mg/kg o >200 mg/día. Ajustar a respuesta.",
+          "renalDose": "No se requiere ajuste por insuficiencia renal aislada; titular por respuesta clínica.",
+          "hepaticDose": "La exposición aumenta con deterioro hepático; iniciar con dosis más bajas y titular gradualmente.",
+          "contraindications": [
+            "Bradicardia grave",
+            "bloqueo AV de segundo o tercer grado sin marcapasos",
+            "síndrome del nodo enfermo sin marcapasos",
+            "shock cardiogénico",
+            "insuficiencia cardíaca descompensada que requiere soporte inotrópico",
+            "hipersensibilidad"
+          ],
+          "administration": "Distinguir estrictamente tartrato de liberación inmediata y succinato ER. Succinato ER se administra una vez al día; puede dividirse si está ranurado, pero no triturar ni masticar.",
+          "preparation": "No requiere reconstitución para las presentaciones orales. Verificar sal y formulación antes de convertir dosis.",
+          "infusionProtocol": "Este registro cubre las formulaciones orales. No extrapolar la dosis oral a metoprolol IV; el esquema IV requiere protocolo específico.",
+          "specialPopulations": {
+            "CYP2D6": "Metabolizadores lentos o inhibidores potentes de CYP2D6 pueden aumentar exposición.",
+            "diabetes": "Puede enmascarar taquicardia de hipoglucemia.",
+            "bronchospasm": "Usar la menor dosis efectiva y vigilar broncoespasmo."
+          },
+          "clinicalPearls": [
+            "En HFrEF la formulación con evidencia pronóstica es metoprolol succinato de liberación prolongada, no intercambiar automáticamente con tartrato",
+            "La retirada debe ser gradual durante 1-2 semanas cuando sea posible"
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: metoprolol succinato ER es uno de los betabloqueantes con beneficio de mortalidad en HFrEF",
+            "Guía ACS 2025: usar betabloqueo cuando exista indicación y no haya contraindicación; individualizar según hemodinámica",
+            "No es primera elección para hipertensión no complicada sin indicación adicional"
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fatiga",
+              "mareo",
+              "hipotensión",
+              "frialdad de extremidades"
+            ],
+            "dangerous": [
+              "bloqueo AV",
+              "descompensación de insuficiencia cardíaca",
+              "broncoespasmo",
+              "bradicardia grave",
+              "enmascaramiento de hipoglucemia"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24c87741-ee0a-738e-2c5a-5ce80ca2f48b",
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5987a15b-e86f-4fd7-a377-35a917c0e3fe",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24c87741-ee0a-738e-2c5a-5ce80ca2f48b"
+        }
       }
     },
 
@@ -1553,7 +1817,7 @@
     nebivolol: {
       name:     { pt: 'Nebivolol', es: 'Nebivolol' },
       category: 'cardio',
-      icon:     '🫀',
+      icon: '',
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#7F1D1D',
 
@@ -2083,6 +2347,248 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Antagonista beta-adrenérgico com predomínio beta-1 em doses terapêuticas",
+          "pharmacodynamics": "Reduz frequência cardíaca, contratilidade, condução AV e liberação de renina. A seletividade beta-1 diminui em doses altas; a resposta deve ser individualizada.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fadiga",
+            "tontura",
+            "hipotensão",
+            "extremidades frias"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueio AV",
+            "descompensação de insuficiência cardíaca",
+            "broncoespasmo",
+            "bradicardia grave",
+            "mascaramento de hipoglicemia"
+          ],
+          "interactions": [
+            "Verapamil ou diltiazem aumentam risco de bradicardia, bloqueio AV e hipotensão",
+            "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
+            "Inibidores de CYP2D6 podem elevar exposição de alguns betabloqueadores",
+            "Retirada de clonidina exige planejamento para evitar rebote hipertensivo",
+            "Insulina e secretagogos: pode mascarar sintomas adrenérgicos de hipoglicemia"
+          ],
+          "monitoring": [
+            "Frequência cardíaca e pressão arterial",
+            "sinais de congestão ou piora de insuficiência cardíaca",
+            "ECG se houver distúrbio de condução",
+            "sintomas de broncoespasmo",
+            "glicemia em pacientes de risco"
+          ],
+          "pregnancy": "Usar apenas quando o benefício materno justificar o risco fetal. Exposição próxima ao parto pode associar-se a bradicardia, hipotensão ou hipoglicemia neonatal; monitorar o recém-nascido se houve exposição relevante.",
+          "lactation": "Individualizar conforme dose, farmacocinética e idade do lactente; observar bradicardia, dificuldade de alimentação ou letargia, especialmente em recém-nascidos.",
+          "patientEducation": [
+            "Não suspender abruptamente sem orientação",
+            "controlar pulso se orientado",
+            "procurar avaliação por síncope, nova dispneia ou piora de edema",
+            "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
+          ],
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEIO_AV",
+            "RETIRADA_GRADUAL",
+            "INSUFICIENCIA_CARDIACA",
+            "HIPOGLICEMIA_MASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensão abrupta em doença coronariana",
+            "Não iniciar ou titular agressivamente durante insuficiência cardíaca descompensada",
+            "Usar com cautela em doença broncoespástica"
+          ],
+          "name": "Cloridrato de Nebivolol",
+          "class": "Betabloqueador beta-1 seletivo com vasodilatação mediada por óxido nítrico",
+          "mechanism": "Bloqueio beta-1 seletivo em doses terapêuticas e aumento da vasodilatação endotelial mediada por óxido nítrico; reduz frequência, contratilidade e renina.",
+          "pharmacokinetics": "Metabolismo hepático principalmente por CYP2D6 com metabólitos ativos. A exposição é maior em metabolizadores lentos de CYP2D6 e em insuficiência hepática ou renal grave.",
+          "indications": [
+            "Hipertensão arterial em adultos"
+          ],
+          "commercialNames": [
+            "Bystolic"
+          ],
+          "presentation": "Comprimidos para uso oral.",
+          "presentations": [
+            "Comprimidos 2,5, 5, 10 e 20 mg"
+          ],
+          "dose": {
+            "hypertension": "Início habitual 5 mg uma vez ao dia, com ou sem alimentos. Se necessário, aumentar em intervalos de pelo menos 2 semanas até 40 mg uma vez ao dia."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas em população pediátrica.",
+          "renalDose": "Insuficiência renal grave, ClCr <30 mL/min: iniciar 2,5 mg uma vez ao dia e titular lentamente. Não adequadamente estudado em diálise.",
+          "hepaticDose": "Insuficiência hepática moderada: iniciar 2,5 mg uma vez ao dia e titular lentamente. Não recomendado em insuficiência hepática grave.",
+          "contraindications": [
+            "Bradicardia grave",
+            "bloqueio cardíaco maior que primeiro grau",
+            "choque cardiogênico",
+            "insuficiência cardíaca descompensada",
+            "síndrome do nó sinusal sem marcapasso",
+            "insuficiência hepática grave",
+            "hipersensibilidade"
+          ],
+          "administration": "Administrar uma vez ao dia com ou sem alimentos, em horário consistente.",
+          "preparation": "Não requer reconstituição. Confirmar concentração do comprimido antes de titular.",
+          "infusionProtocol": "Não se aplica: nebivolol deste registro é oral; não há conversão IV equivalente.",
+          "specialPopulations": {
+            "CYP2D6": "Inibidores ou fenótipo metabolizador lento aumentam exposição.",
+            "renal": "Reduzir dose inicial em ClCr <30 mL/min.",
+            "hepatic": "Reduzir dose inicial na insuficiência moderada e evitar na grave."
+          },
+          "clinicalPearls": [
+            "Não confundir sua vasodilatação mediada por NO com indicação específica para HFrEF na diretriz norte-americana",
+            "Maior frequência de doses não oferece benefício anti-hipertensivo demonstrado"
+          ],
+          "guidelineRecommendations": [
+            "Na hipertensão, reservar betabloqueadores principalmente para indicações concomitantes; a diretriz AHA/ACC 2025 prioriza outras classes como primeira linha na hipertensão não complicada"
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fadiga",
+              "tontura",
+              "hipotensão",
+              "extremidades frias"
+            ],
+            "dangerous": [
+              "bloqueio AV",
+              "descompensação de insuficiência cardíaca",
+              "broncoespasmo",
+              "bradicardia grave",
+              "mascaramento de hipoglicemia"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=51d3f12f-94cc-4f58-94d3-61990e16adfc",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=51d3f12f-94cc-4f58-94d3-61990e16adfc"
+        },
+        "es": {
+          "pharmacologicClass": "Antagonista beta-adrenérgico con predominio beta-1 a dosis terapéuticas",
+          "pharmacodynamics": "Disminuye frecuencia cardíaca, contractilidad, conducción AV y liberación de renina. La selectividad beta-1 disminuye a dosis altas; la respuesta debe individualizarse.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fatiga",
+            "mareo",
+            "hipotensión",
+            "frialdad de extremidades"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueo AV",
+            "descompensación de insuficiencia cardíaca",
+            "broncoespasmo",
+            "bradicardia grave",
+            "enmascaramiento de hipoglucemia"
+          ],
+          "interactions": [
+            "Verapamilo o diltiazem aumentan riesgo de bradicardia, bloqueo AV e hipotensión",
+            "Digoxina y otros cronotrópicos negativos potencian bradicardia",
+            "Inhibidores CYP2D6 pueden elevar exposición de algunos betabloqueantes",
+            "Retirada de clonidina requiere planificación para evitar rebote hipertensivo",
+            "Insulina y secretagogos: puede enmascarar síntomas adrenérgicos de hipoglucemia"
+          ],
+          "monitoring": [
+            "Frecuencia cardíaca y presión arterial",
+            "signos de congestión o empeoramiento de insuficiencia cardíaca",
+            "ECG si hay trastorno de conducción",
+            "síntomas de broncoespasmo",
+            "glucemia en pacientes de riesgo"
+          ],
+          "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo fetal. La exposición cerca del parto puede asociarse a bradicardia, hipotensión o hipoglucemia neonatal; monitorizar al recién nacido si hubo exposición relevante.",
+          "lactation": "Individualizar según dosis, farmacocinética y edad del lactante; vigilar bradicardia, mala alimentación o letargo, especialmente en recién nacidos.",
+          "patientEducation": [
+            "No suspender bruscamente sin indicación",
+            "controlar pulso si fue orientado",
+            "consultar por síncope, disnea nueva o empeoramiento de edema",
+            "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
+          ],
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEO_AV",
+            "RETIRADA_GRADUAL",
+            "INSUFICIENCIA_CARDIACA",
+            "HIPOGLUCEMIA_ENMASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensión abrupta en enfermedad coronaria",
+            "No iniciar o titular agresivamente durante insuficiencia cardíaca descompensada",
+            "Usar con cautela en enfermedad broncoespástica"
+          ],
+          "name": "Clorhidrato de Nebivolol",
+          "class": "Betabloqueante beta-1 selectivo con vasodilatación mediada por óxido nítrico",
+          "mechanism": "Bloqueo beta-1 selectivo a dosis terapéuticas y aumento de vasodilatación endotelial mediada por óxido nítrico; reduce frecuencia, contractilidad y renina.",
+          "pharmacokinetics": "Metabolismo hepático principalmente por CYP2D6 con metabolitos activos. La exposición es mayor en metabolizadores lentos de CYP2D6 y en insuficiencia hepática o renal grave.",
+          "indications": [
+            "Hipertensión arterial en adultos"
+          ],
+          "commercialNames": [
+            "Bystolic"
+          ],
+          "presentation": "Tabletas para uso oral.",
+          "presentations": [
+            "Tabletas 2.5, 5, 10 y 20 mg"
+          ],
+          "dose": {
+            "hypertension": "Inicio habitual 5 mg una vez al día, con o sin alimentos. Si es necesario, aumentar a intervalos de al menos 2 semanas hasta 40 mg una vez al día."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas en población pediátrica.",
+          "renalDose": "Insuficiencia renal grave, ClCr <30 mL/min: iniciar 2.5 mg una vez al día y titular lentamente. No estudiado adecuadamente en diálisis.",
+          "hepaticDose": "Insuficiencia hepática moderada: iniciar 2.5 mg una vez al día y titular lentamente. No recomendado en insuficiencia hepática grave.",
+          "contraindications": [
+            "Bradicardia grave",
+            "bloqueo cardíaco mayor que primer grado",
+            "shock cardiogénico",
+            "insuficiencia cardíaca descompensada",
+            "síndrome del nodo enfermo sin marcapasos",
+            "insuficiencia hepática grave",
+            "hipersensibilidad"
+          ],
+          "administration": "Administrar una vez al día con o sin alimentos, a horario consistente.",
+          "preparation": "No requiere reconstitución. Confirmar concentración del comprimido antes de titular.",
+          "infusionProtocol": "No aplica: nebivolol de este registro es oral; no existe conversión IV equivalente.",
+          "specialPopulations": {
+            "CYP2D6": "Inhibidores o fenotipo metabolizador lento aumentan exposición.",
+            "renal": "Reducir inicio en ClCr <30 mL/min.",
+            "hepatic": "Reducir inicio en insuficiencia moderada y evitar en grave."
+          },
+          "clinicalPearls": [
+            "No confundir su vasodilatación mediada por NO con una indicación específica de HFrEF en la guía estadounidense",
+            "Más frecuencia de dosis no aporta beneficio antihipertensivo demostrado"
+          ],
+          "guidelineRecommendations": [
+            "En hipertensión, reservar betabloqueantes principalmente para indicaciones concomitantes; la guía AHA/ACC 2025 prioriza otras clases como primera línea en hipertensión no complicada"
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fatiga",
+              "mareo",
+              "hipotensión",
+              "frialdad de extremidades"
+            ],
+            "dangerous": [
+              "bloqueo AV",
+              "descompensación de insuficiencia cardíaca",
+              "broncoespasmo",
+              "bradicardia grave",
+              "enmascaramiento de hipoglucemia"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=51d3f12f-94cc-4f58-94d3-61990e16adfc",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=51d3f12f-94cc-4f58-94d3-61990e16adfc"
+        }
       }
     }
 
@@ -2101,7 +2607,7 @@
     enalapril: {
       name:     { pt: 'Enalapril', es: 'Enalapril' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(59,130,246,0.13)',
       colorTxt: '#1E40AF',
 
@@ -2341,7 +2847,263 @@
         };
       },
       /* CALC-FARMACOS-BATCH2-CLINICAL-10-PATHOLOGY-DOSE-SAFETY-V1-B-R0 */
-      clinicalEnrichment: {"commonAdverseEffects":{"es":["Mareo","Hipotensión","Tos seca","Cefalea","Astenia"],"pt":["Tontura","Hipotensão","Tosse seca","Cefaleia","Astenia"]},"contraindications":{"es":{"absolute":["Hipersensibilidad a enalapril","Antecedente de angioedema asociado a IECA","Angioedema hereditario o idiopático","Uso concomitante con inhibidor de neprilisina (p. ej., sacubitrilo); respetar intervalo de 36 h","Aliskireno concomitante en paciente con diabetes"],"relative":["Embarazo: no usar; suspender al detectarlo por toxicidad fetal","Depleción de volumen, hiperpotasemia o función renal inestable requieren corrección/monitorización antes de titular"]},"pt":{"absolute":["Hipersensibilidade ao enalapril","História de angioedema associado a IECA","Angioedema hereditário ou idiopático","Uso concomitante com inibidor de neprilisina (ex.: sacubitril); respeitar intervalo de 36 h","Aliscireno concomitante em paciente com diabetes"],"relative":["Gestação: não usar; suspender assim que detectada devido à toxicidade fetal","Depleção de volume, hipercalemia ou função renal instável exigem correção/monitorização antes da titulação"]}},"dangerousAdverseEffects":{"es":["Angioedema de cara/lengua/glotis con obstrucción de vía aérea","Hiperpotasemia grave","Lesión renal aguda","Hipotensión grave/síncope","Toxicidad fetal durante el embarazo"],"pt":["Angioedema de face/língua/glote com obstrução de via aérea","Hipercalemia grave","Lesão renal aguda","Hipotensão grave/síncope","Toxicidade fetal quando usado na gestação"]},"doseByIndication":{"es":[{"indication":"Hipertensión — adulto","rows":[{"dose":"5 mg VO 1 vez/día.","label":"Inicial"},{"dose":"10–40 mg/día en 1–2 tomas; máx. 40 mg/día.","label":"Rango usual/máximo"},{"dose":"Si no puede suspenderse el diurético, iniciar 2,5 mg bajo supervisión.","label":"Con diurético"}]},{"indication":"Insuficiencia cardíaca sintomática","rows":[{"dose":"2,5 mg VO cada 12 h.","label":"Inicial"},{"dose":"Hasta 20 mg VO cada 12 h según tolerancia; máx. 40 mg/día.","label":"Titulación"},{"dose":"Iniciar 2,5 mg VO 1 vez/día bajo supervisión estrecha.","label":"Na <130 o creatinina >1,6 mg/dL"}]},{"indication":"Disfunción ventricular izquierda asintomática","rows":[{"dose":"2,5 mg VO cada 12 h.","label":"Inicial"},{"dose":"10 mg VO cada 12 h según tolerancia.","label":"Objetivo"}]},{"indication":"Hipertensión — pediatría >1 mes","note":"No recomendado en neonatos ni en pediatría con TFG <30 mL/min/1,73 m².","rows":[{"dose":"0,08 mg/kg VO 1 vez/día (máx. 5 mg en la dosis inicial).","label":"Inicial"},{"dose":"Dosis >0,58 mg/kg/día o >40 mg/día no fueron estudiadas.","label":"Límite estudiado"}]}],"pt":[{"indication":"Hipertensão — adulto","rows":[{"dose":"5 mg VO 1x/dia.","label":"Inicial"},{"dose":"10–40 mg/dia em 1–2 tomadas; máx. 40 mg/dia.","label":"Faixa usual/máxima"},{"dose":"Se o diurético não puder ser suspenso, iniciar 2,5 mg sob supervisão.","label":"Em uso de diurético"}]},{"indication":"Insuficiência cardíaca sintomática","rows":[{"dose":"2,5 mg VO 12/12 h.","label":"Inicial"},{"dose":"Até 20 mg VO 12/12 h conforme tolerância; máx. 40 mg/dia.","label":"Titulação"},{"dose":"Iniciar 2,5 mg VO 1x/dia sob supervisão estreita.","label":"Na <130 ou creatinina >1,6 mg/dL"}]},{"indication":"Disfunção ventricular esquerda assintomática","rows":[{"dose":"2,5 mg VO 12/12 h.","label":"Inicial"},{"dose":"10 mg VO 12/12 h conforme tolerância.","label":"Alvo"}]},{"indication":"Hipertensão — pediatria >1 mês","note":"Não recomendado em neonatos nem em pediatria com TFG <30 mL/min/1,73 m².","rows":[{"dose":"0,08 mg/kg VO 1x/dia (máx. 5 mg na dose inicial).","label":"Inicial"},{"dose":"Doses >0,58 mg/kg/dia ou >40 mg/dia não foram estudadas.","label":"Limite estudado"}]}]},"indications":{"es":["Hipertensión arterial en adultos y niños >1 mes","Insuficiencia cardíaca sintomática","Disfunción ventricular izquierda asintomática con fracción de eyección ≤35%"],"pt":["Hipertensão arterial em adultos e crianças >1 mês","Insuficiência cardíaca sintomática","Disfunção ventricular esquerda assintomática com fração de ejeção ≤35%"]},"references":["DailyMed — Enalapril Maleate Tablets, prescribing information (2025/2026)"]}
+      clinicalEnrichment: {"commonAdverseEffects":{"es":["Mareo","Hipotensión","Tos seca","Cefalea","Astenia"],"pt":["Tontura","Hipotensão","Tosse seca","Cefaleia","Astenia"]},"contraindications":{"es":{"absolute":["Hipersensibilidad a enalapril","Antecedente de angioedema asociado a IECA","Angioedema hereditario o idiopático","Uso concomitante con inhibidor de neprilisina (p. ej., sacubitrilo); respetar intervalo de 36 h","Aliskireno concomitante en paciente con diabetes"],"relative":["Embarazo: no usar; suspender al detectarlo por toxicidad fetal","Depleción de volumen, hiperpotasemia o función renal inestable requieren corrección/monitorización antes de titular"]},"pt":{"absolute":["Hipersensibilidade ao enalapril","História de angioedema associado a IECA","Angioedema hereditário ou idiopático","Uso concomitante com inibidor de neprilisina (ex.: sacubitril); respeitar intervalo de 36 h","Aliscireno concomitante em paciente com diabetes"],"relative":["Gestação: não usar; suspender assim que detectada devido à toxicidade fetal","Depleção de volume, hipercalemia ou função renal instável exigem correção/monitorização antes da titulação"]}},"dangerousAdverseEffects":{"es":["Angioedema de cara/lengua/glotis con obstrucción de vía aérea","Hiperpotasemia grave","Lesión renal aguda","Hipotensión grave/síncope","Toxicidad fetal durante el embarazo"],"pt":["Angioedema de face/língua/glote com obstrução de via aérea","Hipercalemia grave","Lesão renal aguda","Hipotensão grave/síncope","Toxicidade fetal quando usado na gestação"]},"doseByIndication":{"es":[{"indication":"Hipertensión — adulto","rows":[{"dose":"5 mg VO 1 vez/día.","label":"Inicial"},{"dose":"10–40 mg/día en 1–2 tomas; máx. 40 mg/día.","label":"Rango usual/máximo"},{"dose":"Si no puede suspenderse el diurético, iniciar 2,5 mg bajo supervisión.","label":"Con diurético"}]},{"indication":"Insuficiencia cardíaca sintomática","rows":[{"dose":"2,5 mg VO cada 12 h.","label":"Inicial"},{"dose":"Hasta 20 mg VO cada 12 h según tolerancia; máx. 40 mg/día.","label":"Titulación"},{"dose":"Iniciar 2,5 mg VO 1 vez/día bajo supervisión estrecha.","label":"Na <130 o creatinina >1,6 mg/dL"}]},{"indication":"Disfunción ventricular izquierda asintomática","rows":[{"dose":"2,5 mg VO cada 12 h.","label":"Inicial"},{"dose":"10 mg VO cada 12 h según tolerancia.","label":"Objetivo"}]},{"indication":"Hipertensión — pediatría >1 mes","note":"No recomendado en neonatos ni en pediatría con TFG <30 mL/min/1,73 m².","rows":[{"dose":"0,08 mg/kg VO 1 vez/día (máx. 5 mg en la dosis inicial).","label":"Inicial"},{"dose":"Dosis >0,58 mg/kg/día o >40 mg/día no fueron estudiadas.","label":"Límite estudiado"}]}],"pt":[{"indication":"Hipertensão — adulto","rows":[{"dose":"5 mg VO 1x/dia.","label":"Inicial"},{"dose":"10–40 mg/dia em 1–2 tomadas; máx. 40 mg/dia.","label":"Faixa usual/máxima"},{"dose":"Se o diurético não puder ser suspenso, iniciar 2,5 mg sob supervisão.","label":"Em uso de diurético"}]},{"indication":"Insuficiência cardíaca sintomática","rows":[{"dose":"2,5 mg VO 12/12 h.","label":"Inicial"},{"dose":"Até 20 mg VO 12/12 h conforme tolerância; máx. 40 mg/dia.","label":"Titulação"},{"dose":"Iniciar 2,5 mg VO 1x/dia sob supervisão estreita.","label":"Na <130 ou creatinina >1,6 mg/dL"}]},{"indication":"Disfunção ventricular esquerda assintomática","rows":[{"dose":"2,5 mg VO 12/12 h.","label":"Inicial"},{"dose":"10 mg VO 12/12 h conforme tolerância.","label":"Alvo"}]},{"indication":"Hipertensão — pediatria >1 mês","note":"Não recomendado em neonatos nem em pediatria com TFG <30 mL/min/1,73 m².","rows":[{"dose":"0,08 mg/kg VO 1x/dia (máx. 5 mg na dose inicial).","label":"Inicial"},{"dose":"Doses >0,58 mg/kg/dia ou >40 mg/dia não foram estudadas.","label":"Limite estudado"}]}]},"indications":{"es":["Hipertensión arterial en adultos y niños >1 mes","Insuficiencia cardíaca sintomática","Disfunción ventricular izquierda asintomática con fracción de eyección ≤35%"],"pt":["Hipertensão arterial em adultos e crianças >1 mês","Insuficiência cardíaca sintomática","Disfunção ventricular esquerda assintomática com fração de ejeção ≤35%"]},"references":["DailyMed — Enalapril Maleate Tablets, prescribing information (2025/2026)"]},
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "class": "Inibidor da enzima conversora de angiotensina (IECA)",
+          "pharmacologicClass": "Modulador do sistema renina-angiotensina; inibidor da ECA",
+          "mechanism": "Inibe a ECA, reduz a formação de angiotensina II e a secreção de aldosterona e aumenta bradicinina. O resultado é vasodilatação e redução de pós-carga e pré-carga.",
+          "pharmacodynamics": "Reduz pressão arterial e resistência vascular sistêmica sem taquicardia reflexa importante. Na insuficiência cardíaca reduz pós-carga; pode elevar potássio e creatinina pelo bloqueio do SRAA.",
+          "commonAdverseEffects": [
+            "tosse seca",
+            "tontura",
+            "hipotensão",
+            "hipercalemia",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "angioedema",
+            "lesão renal aguda",
+            "hipercalemia grave",
+            "hipotensão sintomática",
+            "toxicidade fetal"
+          ],
+          "contraindications": [
+            "História de angioedema relacionado a IECA",
+            "angioedema hereditário ou idiopático",
+            "uso concomitante de alisquireno em diabetes",
+            "uso dentro de 36 h de sacubitril/valsartana",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "Suplementos de potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+            "AINEs podem reduzir efeito anti-hipertensivo e aumentar lesão renal",
+            "Lítio pode acumular",
+            "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
+            "Sacubitril/valsartana exige intervalo de 36 h"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "creatinina/eTFG e potássio antes de iniciar e após titulação",
+            "sintomas de hipotensão",
+            "angioedema",
+            "gestação quando aplicável"
+          ],
+          "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+          "patientEducation": [
+            "Evitar gestação durante o tratamento",
+            "procurar urgência diante de edema de face, lábios ou língua",
+            "não usar suplementos de potássio ou sal com potássio sem orientação",
+            "levantar lentamente se houver tontura"
+          ],
+          "clinicalPearls": [
+            "Elevação de creatinina exige avaliar volume, AINE, estenose de artéria renal e outros fatores; KDIGO orienta revisar se o aumento superar 30% em até 4 semanas",
+            "A tosse é mediada em parte por bradicinina e costuma resolver com troca para BRA"
+          ],
+          "guidelineRecommendations": [
+            "Diretriz AHA/ACC 2025: IECAs são uma das classes de primeira linha para hipertensão quando indicados",
+            "KDIGO 2024: IECA ou BRA são priorizados na DRC com albuminúria e titulados à maior dose tolerada",
+            "AHA/ACC/HFSA: em HFrEF usa-se IECA quando ARNI não é viável"
+          ],
+          "safetyFlags": [
+            "TOXICIDADE_FETAL",
+            "ANGIOEDEMA",
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "INTERVALO_ARNI_36H"
+          ],
+          "alerts": [
+            "Não combinar rotineiramente IECA e BRA",
+            "Corrigir depleção de volume quando possível antes de iniciar",
+            "Suspender e tratar imediatamente se ocorrer angioedema"
+          ],
+          "specialPopulations": {
+            "elderly": "Titular conforme pressão, função renal e estado volêmico.",
+            "renalArteryStenosis": "Maior risco de deterioração renal; monitorar de perto.",
+            "blackPatients": "A resposta anti-hipertensiva em monoterapia pode ser menor; o risco de angioedema é maior."
+          },
+          "name": "Maleato de Enalapril",
+          "pharmacokinetics": "Pró-fármaco hidrolisado a enalaprilato ativo. Eliminação predominantemente renal; a meia-vida efetiva de acumulação do enalaprilato é prolongada, permitindo 1-2 tomadas ao dia.",
+          "indications": [
+            "Hipertensão em adultos e crianças >1 mês",
+            "insuficiência cardíaca sintomática",
+            "disfunção ventricular esquerda assintomática"
+          ],
+          "commercialNames": [
+            "Vasotec"
+          ],
+          "presentation": "Comprimidos orais; solução oral em apresentações específicas.",
+          "presentations": [
+            "Comprimidos 2,5, 5, 10 e 20 mg",
+            "Solução oral 1 mg/mL em produtos específicos"
+          ],
+          "dose": {
+            "hypertension": "Início habitual 5 mg uma vez ao dia; máximo 40 mg/dia. Se uso de diurético ou risco de hipotensão, considerar 2,5 mg/dia.",
+            "heartFailure": "2,5 mg duas vezes ao dia; titular conforme tolerância até 20 mg duas vezes ao dia.",
+            "asymptomaticLV": "2,5 mg duas vezes ao dia; alvo até 10 mg duas vezes ao dia."
+          },
+          "pediatricDose": "Crianças >1 mês com hipertensão: 0,08 mg/kg uma vez ao dia, máximo inicial 5 mg; doses >0,58 mg/kg ou >40 mg/dia não estudadas. Não recomendado em neonatos ou eTFG <30 mL/min/1,73 m².",
+          "renalDose": "ClCr >30 mL/min: dose inicial usual 5 mg/dia. ClCr <=30 mL/min: iniciar 2,5 mg/dia. Hemodiálise: 2,5 mg nos dias de diálise e ajustar nos demais conforme pressão.",
+          "hepaticDose": "Sem algoritmo rotineiro de ajuste; hepatotoxicidade colestática/hepatocelular é rara. Suspender e investigar se ocorrer icterícia ou elevação importante de enzimas.",
+          "administration": "Via oral com ou sem alimentos. Em alto risco de hipotensão, primeira dose e titulação exigem monitorização mais próxima.",
+          "preparation": "Comprimidos não exigem preparo. Solução oral pronta deve ser medida com dispositivo dosador; não improvisar concentração.",
+          "infusionProtocol": "Este registro é do enalapril oral. Não converter para enalaprilato IV sem protocolo específico.",
+          "lactation": "Enalapril/enalaprilato podem aparecer em baixa concentração no leite; avaliar idade do lactente, dose materna e bula local. Maior cautela em prematuros e recém-nascidos.",
+          "adverseEffects": {
+            "common": [
+              "tosse seca",
+              "tontura",
+              "hipotensão",
+              "hipercalemia",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "angioedema",
+              "lesão renal aguda",
+              "hipercalemia grave",
+              "hipotensão sintomática",
+              "toxicidade fetal"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f103b9f9-e081-419d-a2d8-b86acda834dd",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f103b9f9-e081-419d-a2d8-b86acda834dd"
+        },
+        "es": {
+          "class": "Inhibidor de la enzima convertidora de angiotensina (IECA)",
+          "pharmacologicClass": "Modulador del sistema renina-angiotensina; inhibidor de la ECA",
+          "mechanism": "Inhibe la ECA, reduce la formación de angiotensina II y la secreción de aldosterona, y aumenta bradicinina. El resultado es vasodilatación y menor poscarga y precarga.",
+          "pharmacodynamics": "Reduce la presión arterial y la resistencia vascular sistémica sin taquicardia refleja importante. En insuficiencia cardíaca reduce poscarga; puede aumentar potasio y creatinina por bloqueo del SRAA.",
+          "commonAdverseEffects": [
+            "tos seca",
+            "mareo",
+            "hipotensión",
+            "hiperpotasemia",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "angioedema",
+            "lesión renal aguda",
+            "hiperpotasemia grave",
+            "hipotensión sintomática",
+            "toxicidad fetal"
+          ],
+          "contraindications": [
+            "Antecedente de angioedema relacionado con IECA",
+            "angioedema hereditario o idiopático",
+            "uso concomitante de aliskireno en diabetes",
+            "uso dentro de las 36 h de sacubitrilo/valsartán",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "Suplementos de potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+            "AINE pueden reducir efecto antihipertensivo y aumentar lesión renal",
+            "Litio puede acumularse",
+            "Doble bloqueo SRAA aumenta hipotensión, hiperpotasemia y lesión renal",
+            "Sacubitrilo/valsartán requiere separación de 36 h"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "creatinina/eGFR y potasio antes de iniciar y tras titulación",
+            "síntomas de hipotensión",
+            "angioedema",
+            "embarazo cuando corresponda"
+          ],
+          "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+          "patientEducation": [
+            "Evitar embarazo durante el tratamiento",
+            "consultar de urgencia ante edema de cara, labios o lengua",
+            "no usar suplementos de potasio o sal con potasio sin indicación",
+            "levantarse lentamente si hay mareo"
+          ],
+          "clinicalPearls": [
+            "Una elevación de creatinina obliga a evaluar volumen, AINE, estenosis de arteria renal y otros factores; KDIGO aconseja revisar si el aumento supera 30% dentro de 4 semanas",
+            "La tos es mediada en parte por bradicinina y suele resolverse al cambiar a un ARA-II"
+          ],
+          "guidelineRecommendations": [
+            "Guía AHA/ACC 2025: IECA son una de las clases de primera línea para hipertensión cuando están indicados",
+            "KDIGO 2024: IECA o ARA-II se priorizan en ERC con albuminuria y se titulan a dosis máxima tolerada",
+            "AHA/ACC/HFSA: en HFrEF se usa IECA cuando ARNI no es factible"
+          ],
+          "safetyFlags": [
+            "TOXICIDAD_FETAL",
+            "ANGIOEDEMA",
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "INTERVALO_ARNI_36H"
+          ],
+          "alerts": [
+            "No combinar rutinariamente IECA y ARA-II",
+            "Corregir depleción de volumen si es posible antes de iniciar",
+            "Suspender y tratar de inmediato si aparece angioedema"
+          ],
+          "specialPopulations": {
+            "elderly": "Titular según presión, función renal y volumen.",
+            "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar estrechamente.",
+            "blackPatients": "La respuesta antihipertensiva como monoterapia puede ser menor; el riesgo de angioedema es mayor."
+          },
+          "name": "Maleato de Enalapril",
+          "pharmacokinetics": "Profármaco hidrolizado a enalaprilato activo. Eliminación predominantemente renal; la vida media efectiva de acumulación de enalaprilato es prolongada y permite 1-2 tomas diarias.",
+          "indications": [
+            "Hipertensión en adultos y niños >1 mes",
+            "insuficiencia cardíaca sintomática",
+            "disfunción ventricular izquierda asintomática"
+          ],
+          "commercialNames": [
+            "Vasotec"
+          ],
+          "presentation": "Tabletas orales; solución oral en presentaciones específicas.",
+          "presentations": [
+            "Tabletas 2.5, 5, 10 y 20 mg",
+            "Solución oral 1 mg/mL en productos específicos"
+          ],
+          "dose": {
+            "hypertension": "Inicio habitual 5 mg una vez al día; máximo 40 mg/día. Con diurético o riesgo de hipotensión, considerar 2.5 mg/día.",
+            "heartFailure": "2.5 mg dos veces al día; titular según tolerancia hasta 20 mg dos veces al día.",
+            "asymptomaticLV": "2.5 mg dos veces al día; objetivo hasta 10 mg dos veces al día."
+          },
+          "pediatricDose": "Niños >1 mes con hipertensión: 0.08 mg/kg una vez al día, máximo inicial 5 mg; dosis >0.58 mg/kg o >40 mg/día no estudiadas. No recomendado en neonatos o eGFR <30 mL/min/1.73 m².",
+          "renalDose": "ClCr >30 mL/min: dosis inicial habitual 5 mg/día. ClCr <=30 mL/min: iniciar 2.5 mg/día. Hemodiálisis: 2.5 mg en días de diálisis y ajustar los otros días según presión.",
+          "hepaticDose": "Sin algoritmo rutinario de ajuste; hepatotoxicidad colestásica/hepatocelular es rara. Suspender e investigar si aparece ictericia o elevación importante de enzimas.",
+          "administration": "Vía oral con o sin alimentos. En alto riesgo de hipotensión, primera dosis y titulación requieren vigilancia más estrecha.",
+          "preparation": "Las tabletas no requieren preparación. La solución oral lista para usar debe medirse con dispositivo dosificador; no improvisar concentraciones.",
+          "infusionProtocol": "Este registro corresponde a enalapril oral. No convertir a enalaprilato IV sin protocolo específico.",
+          "lactation": "Enalapril/enalaprilato pueden aparecer en baja concentración en leche; valorar edad del lactante, dosis materna y ficha local. Mayor cautela en prematuros y recién nacidos.",
+          "adverseEffects": {
+            "common": [
+              "tos seca",
+              "mareo",
+              "hipotensión",
+              "hiperpotasemia",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "angioedema",
+              "lesión renal aguda",
+              "hiperpotasemia grave",
+              "hipotensión sintomática",
+              "toxicidad fetal"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f103b9f9-e081-419d-a2d8-b86acda834dd",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f103b9f9-e081-419d-a2d8-b86acda834dd"
+        }
+      }
     },
 
     /* ══════════════════════════════════════════════════════════════
@@ -2351,7 +3113,7 @@
     lisinopril: {
       name:     { pt: 'Lisinopril', es: 'Lisinopril' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(59,130,246,0.13)',
       colorTxt: '#1E3A8A',
 
@@ -2589,6 +3351,264 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "class": "Inibidor da enzima conversora de angiotensina (IECA)",
+          "pharmacologicClass": "Modulador do sistema renina-angiotensina; inibidor da ECA",
+          "mechanism": "Inibe a ECA, reduz a formação de angiotensina II e a secreção de aldosterona e aumenta bradicinina. O resultado é vasodilatação e redução de pós-carga e pré-carga.",
+          "pharmacodynamics": "Reduz pressão arterial e resistência vascular sistêmica sem taquicardia reflexa importante. Na insuficiência cardíaca reduz pós-carga; pode elevar potássio e creatinina pelo bloqueio do SRAA.",
+          "commonAdverseEffects": [
+            "tosse seca",
+            "tontura",
+            "hipotensão",
+            "hipercalemia",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "angioedema",
+            "lesão renal aguda",
+            "hipercalemia grave",
+            "hipotensão sintomática",
+            "toxicidade fetal"
+          ],
+          "contraindications": [
+            "História de angioedema relacionado a IECA",
+            "angioedema hereditário ou idiopático",
+            "uso concomitante de alisquireno em diabetes",
+            "uso dentro de 36 h de sacubitril/valsartana",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "Suplementos de potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+            "AINEs podem reduzir efeito anti-hipertensivo e aumentar lesão renal",
+            "Lítio pode acumular",
+            "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
+            "Sacubitril/valsartana exige intervalo de 36 h"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "creatinina/eTFG e potássio antes de iniciar e após titulação",
+            "sintomas de hipotensão",
+            "angioedema",
+            "gestação quando aplicável"
+          ],
+          "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+          "patientEducation": [
+            "Evitar gestação durante o tratamento",
+            "procurar urgência diante de edema de face, lábios ou língua",
+            "não usar suplementos de potássio ou sal com potássio sem orientação",
+            "levantar lentamente se houver tontura"
+          ],
+          "clinicalPearls": [
+            "Elevação de creatinina exige avaliar volume, AINE, estenose de artéria renal e outros fatores; KDIGO orienta revisar se o aumento superar 30% em até 4 semanas",
+            "A tosse é mediada em parte por bradicinina e costuma resolver com troca para BRA"
+          ],
+          "guidelineRecommendations": [
+            "Diretriz AHA/ACC 2025: IECAs são uma das classes de primeira linha para hipertensão quando indicados",
+            "KDIGO 2024: IECA ou BRA são priorizados na DRC com albuminúria e titulados à maior dose tolerada",
+            "AHA/ACC/HFSA: em HFrEF usa-se IECA quando ARNI não é viável"
+          ],
+          "safetyFlags": [
+            "TOXICIDADE_FETAL",
+            "ANGIOEDEMA",
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "INTERVALO_ARNI_36H"
+          ],
+          "alerts": [
+            "Não combinar rotineiramente IECA e BRA",
+            "Corrigir depleção de volume quando possível antes de iniciar",
+            "Suspender e tratar imediatamente se ocorrer angioedema"
+          ],
+          "specialPopulations": {
+            "elderly": "Titular conforme pressão, função renal e estado volêmico.",
+            "renalArteryStenosis": "Maior risco de deterioração renal; monitorar de perto.",
+            "blackPatients": "A resposta anti-hipertensiva em monoterapia pode ser menor; o risco de angioedema é maior."
+          },
+          "name": "Lisinopril",
+          "pharmacokinetics": "Não é pró-fármaco e não sofre metabolismo significativo. É eliminado inalterado pelos rins; meia-vida efetiva aproximada de 12 h e exposição aumenta na insuficiência renal.",
+          "indications": [
+            "Hipertensão em adultos e crianças >=6 anos",
+            "tratamento adjuvante da insuficiência cardíaca sistólica",
+            "tratamento precoce após infarto agudo do miocárdio em paciente hemodinamicamente estável"
+          ],
+          "commercialNames": [
+            "Zestril",
+            "Prinivil"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 2,5, 5, 10, 20, 30 e 40 mg conforme fabricante"
+          ],
+          "dose": {
+            "hypertension": "10 mg uma vez ao dia; se em diurético, considerar 5 mg; titular até 40 mg/dia.",
+            "heartFailure": "5 mg uma vez ao dia; em hiponatremia pode-se iniciar 2,5 mg; titular até 40 mg/dia.",
+            "acuteMI": "5 mg dentro de 24 h do IAM, 5 mg após 24 h, 10 mg após 48 h e então 10 mg/dia se tolerado; ajustar à hemodinâmica."
+          },
+          "pediatricDose": "Hipertensão >=6 anos e eTFG >30 mL/min/1,73 m²: 0,07 mg/kg uma vez ao dia, máximo inicial 5 mg; máximo estudado 0,61 mg/kg ou 40 mg/dia. Não recomendado <6 anos ou eTFG <30.",
+          "renalDose": "ClCr 10-30 mL/min: usar metade da dose inicial habitual. ClCr <10 mL/min ou hemodiálise: iniciar 2,5 mg uma vez ao dia; titular com pressão, creatinina e potássio.",
+          "hepaticDose": "Não requer ajuste específico baseado apenas em função hepática porque não é metabolizado de forma relevante; titular pela resposta e tolerância.",
+          "administration": "Administrar uma vez ao dia, com ou sem alimentos, em horário consistente.",
+          "preparation": "Comprimidos não exigem preparo; usar formulação adequada se houver dificuldade de deglutição.",
+          "infusionProtocol": "Não se aplica: lisinopril deste registro é oral.",
+          "lactation": "Dados humanos são limitados; individualizar e considerar alternativa com maior experiência em lactentes muito jovens, monitorando hipotensão e função renal se houver exposição.",
+          "adverseEffects": {
+            "common": [
+              "tosse seca",
+              "tontura",
+              "hipotensão",
+              "hipercalemia",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "angioedema",
+              "lesão renal aguda",
+              "hipercalemia grave",
+              "hipotensão sintomática",
+              "toxicidade fetal"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e6364a4-6d66-4151-8197-d45e2a762895",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e6364a4-6d66-4151-8197-d45e2a762895"
+        },
+        "es": {
+          "class": "Inhibidor de la enzima convertidora de angiotensina (IECA)",
+          "pharmacologicClass": "Modulador del sistema renina-angiotensina; inhibidor de la ECA",
+          "mechanism": "Inhibe la ECA, reduce la formación de angiotensina II y la secreción de aldosterona, y aumenta bradicinina. El resultado es vasodilatación y menor poscarga y precarga.",
+          "pharmacodynamics": "Reduce la presión arterial y la resistencia vascular sistémica sin taquicardia refleja importante. En insuficiencia cardíaca reduce poscarga; puede aumentar potasio y creatinina por bloqueo del SRAA.",
+          "commonAdverseEffects": [
+            "tos seca",
+            "mareo",
+            "hipotensión",
+            "hiperpotasemia",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "angioedema",
+            "lesión renal aguda",
+            "hiperpotasemia grave",
+            "hipotensión sintomática",
+            "toxicidad fetal"
+          ],
+          "contraindications": [
+            "Antecedente de angioedema relacionado con IECA",
+            "angioedema hereditario o idiopático",
+            "uso concomitante de aliskireno en diabetes",
+            "uso dentro de las 36 h de sacubitrilo/valsartán",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "Suplementos de potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+            "AINE pueden reducir efecto antihipertensivo y aumentar lesión renal",
+            "Litio puede acumularse",
+            "Doble bloqueo SRAA aumenta hipotensión, hiperpotasemia y lesión renal",
+            "Sacubitrilo/valsartán requiere separación de 36 h"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "creatinina/eGFR y potasio antes de iniciar y tras titulación",
+            "síntomas de hipotensión",
+            "angioedema",
+            "embarazo cuando corresponda"
+          ],
+          "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+          "patientEducation": [
+            "Evitar embarazo durante el tratamiento",
+            "consultar de urgencia ante edema de cara, labios o lengua",
+            "no usar suplementos de potasio o sal con potasio sin indicación",
+            "levantarse lentamente si hay mareo"
+          ],
+          "clinicalPearls": [
+            "Una elevación de creatinina obliga a evaluar volumen, AINE, estenosis de arteria renal y otros factores; KDIGO aconseja revisar si el aumento supera 30% dentro de 4 semanas",
+            "La tos es mediada en parte por bradicinina y suele resolverse al cambiar a un ARA-II"
+          ],
+          "guidelineRecommendations": [
+            "Guía AHA/ACC 2025: IECA son una de las clases de primera línea para hipertensión cuando están indicados",
+            "KDIGO 2024: IECA o ARA-II se priorizan en ERC con albuminuria y se titulan a dosis máxima tolerada",
+            "AHA/ACC/HFSA: en HFrEF se usa IECA cuando ARNI no es factible"
+          ],
+          "safetyFlags": [
+            "TOXICIDAD_FETAL",
+            "ANGIOEDEMA",
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "INTERVALO_ARNI_36H"
+          ],
+          "alerts": [
+            "No combinar rutinariamente IECA y ARA-II",
+            "Corregir depleción de volumen si es posible antes de iniciar",
+            "Suspender y tratar de inmediato si aparece angioedema"
+          ],
+          "specialPopulations": {
+            "elderly": "Titular según presión, función renal y volumen.",
+            "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar estrechamente.",
+            "blackPatients": "La respuesta antihipertensiva como monoterapia puede ser menor; el riesgo de angioedema es mayor."
+          },
+          "name": "Lisinopril",
+          "pharmacokinetics": "No es profármaco y no sufre metabolismo significativo. Se elimina sin cambios por riñón; vida media efectiva cercana a 12 h y la exposición aumenta en insuficiencia renal.",
+          "indications": [
+            "Hipertensión en adultos y niños >=6 años",
+            "tratamiento adyuvante de insuficiencia cardíaca sistólica",
+            "tratamiento precoz tras infarto agudo de miocardio en paciente hemodinámicamente estable"
+          ],
+          "commercialNames": [
+            "Zestril",
+            "Prinivil"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 2.5, 5, 10, 20, 30 y 40 mg según fabricante"
+          ],
+          "dose": {
+            "hypertension": "10 mg una vez al día; si usa diurético, considerar 5 mg; titular hasta 40 mg/día.",
+            "heartFailure": "5 mg una vez al día; con hiponatremia puede iniciarse 2.5 mg; titular hasta 40 mg/día.",
+            "acuteMI": "5 mg dentro de 24 h del IAM, 5 mg a las 24 h, 10 mg a las 48 h y luego 10 mg/día si se tolera; ajustar a hemodinámica."
+          },
+          "pediatricDose": "Hipertensión >=6 años y eGFR >30 mL/min/1.73 m²: 0.07 mg/kg una vez al día, máximo inicial 5 mg; máximo estudiado 0.61 mg/kg o 40 mg/día. No recomendado <6 años o eGFR <30.",
+          "renalDose": "ClCr 10-30 mL/min: usar la mitad de la dosis inicial habitual. ClCr <10 mL/min o hemodiálisis: iniciar 2.5 mg una vez al día; titular con presión, creatinina y potasio.",
+          "hepaticDose": "No requiere ajuste específico basado solo en función hepática porque no se metaboliza de forma relevante; titular por respuesta y tolerancia.",
+          "administration": "Administrar una vez al día, con o sin alimentos, a horario consistente.",
+          "preparation": "Las tabletas no requieren preparación; usar formulación adecuada si existe dificultad para deglutir.",
+          "infusionProtocol": "No aplica: lisinopril de este registro es oral.",
+          "lactation": "Datos humanos son limitados; individualizar y considerar alternativa con mayor experiencia en lactantes muy pequeños, vigilando hipotensión y función renal si existe exposición.",
+          "adverseEffects": {
+            "common": [
+              "tos seca",
+              "mareo",
+              "hipotensión",
+              "hiperpotasemia",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "angioedema",
+              "lesión renal aguda",
+              "hiperpotasemia grave",
+              "hipotensión sintomática",
+              "toxicidad fetal"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e6364a4-6d66-4151-8197-d45e2a762895",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e6364a4-6d66-4151-8197-d45e2a762895"
+        }
       }
     },
 
@@ -2599,7 +3619,7 @@
     ramipril: {
       name:     { pt: 'Ramipril', es: 'Ramipril' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(59,130,246,0.13)',
       colorTxt: '#1D4ED8',
 
@@ -2830,6 +3850,260 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "class": "Inibidor da enzima conversora de angiotensina (IECA)",
+          "pharmacologicClass": "Modulador do sistema renina-angiotensina; inibidor da ECA",
+          "mechanism": "Inibe a ECA, reduz a formação de angiotensina II e a secreção de aldosterona e aumenta bradicinina. O resultado é vasodilatação e redução de pós-carga e pré-carga.",
+          "pharmacodynamics": "Reduz pressão arterial e resistência vascular sistêmica sem taquicardia reflexa importante. Na insuficiência cardíaca reduz pós-carga; pode elevar potássio e creatinina pelo bloqueio do SRAA.",
+          "commonAdverseEffects": [
+            "tosse seca",
+            "tontura",
+            "hipotensão",
+            "hipercalemia",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "angioedema",
+            "lesão renal aguda",
+            "hipercalemia grave",
+            "hipotensão sintomática",
+            "toxicidade fetal"
+          ],
+          "contraindications": [
+            "História de angioedema relacionado a IECA",
+            "angioedema hereditário ou idiopático",
+            "uso concomitante de alisquireno em diabetes",
+            "uso dentro de 36 h de sacubitril/valsartana",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "Suplementos de potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+            "AINEs podem reduzir efeito anti-hipertensivo e aumentar lesão renal",
+            "Lítio pode acumular",
+            "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
+            "Sacubitril/valsartana exige intervalo de 36 h"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "creatinina/eTFG e potássio antes de iniciar e após titulação",
+            "sintomas de hipotensão",
+            "angioedema",
+            "gestação quando aplicável"
+          ],
+          "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+          "patientEducation": [
+            "Evitar gestação durante o tratamento",
+            "procurar urgência diante de edema de face, lábios ou língua",
+            "não usar suplementos de potássio ou sal com potássio sem orientação",
+            "levantar lentamente se houver tontura"
+          ],
+          "clinicalPearls": [
+            "Elevação de creatinina exige avaliar volume, AINE, estenose de artéria renal e outros fatores; KDIGO orienta revisar se o aumento superar 30% em até 4 semanas",
+            "A tosse é mediada em parte por bradicinina e costuma resolver com troca para BRA"
+          ],
+          "guidelineRecommendations": [
+            "Diretriz AHA/ACC 2025: IECAs são uma das classes de primeira linha para hipertensão quando indicados",
+            "KDIGO 2024: IECA ou BRA são priorizados na DRC com albuminúria e titulados à maior dose tolerada",
+            "AHA/ACC/HFSA: em HFrEF usa-se IECA quando ARNI não é viável"
+          ],
+          "safetyFlags": [
+            "TOXICIDADE_FETAL",
+            "ANGIOEDEMA",
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "INTERVALO_ARNI_36H"
+          ],
+          "alerts": [
+            "Não combinar rotineiramente IECA e BRA",
+            "Corrigir depleção de volume quando possível antes de iniciar",
+            "Suspender e tratar imediatamente se ocorrer angioedema"
+          ],
+          "specialPopulations": {
+            "elderly": "Titular conforme pressão, função renal e estado volêmico.",
+            "renalArteryStenosis": "Maior risco de deterioração renal; monitorar de perto.",
+            "blackPatients": "A resposta anti-hipertensiva em monoterapia pode ser menor; o risco de angioedema é maior."
+          },
+          "name": "Ramipril",
+          "pharmacokinetics": "Pró-fármaco convertido por esterases em ramiprilato ativo. Metabolismo hepático e eliminação renal/biliar; a exposição ao ramiprilato aumenta na insuficiência renal.",
+          "indications": [
+            "Hipertensão",
+            "redução de risco de IAM, AVC e morte cardiovascular em adultos de alto risco selecionados",
+            "insuficiência cardíaca após IAM com sinais clínicos de congestão"
+          ],
+          "commercialNames": [
+            "Altace"
+          ],
+          "presentation": "Cápsulas orais.",
+          "presentations": [
+            "Cápsulas 1,25, 2,5, 5 e 10 mg"
+          ],
+          "dose": {
+            "hypertension": "2,5 mg uma vez ao dia; manutenção 2,5-20 mg/dia em 1-2 tomadas.",
+            "cvRiskReduction": "2,5 mg/dia por 1 semana, 5 mg/dia nas 3 semanas seguintes e então 10 mg/dia se tolerado.",
+            "postMIHF": "2,5 mg duas vezes ao dia; se hipotensão, 1,25 mg duas vezes ao dia; titular em direção a 5 mg duas vezes ao dia."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
+          "renalDose": "ClCr >40 mL/min: esquema usual. Disfunção renal mais importante: hipertensão iniciar 1,25 mg/dia, máximo 5 mg/dia; IC pós-IAM iniciar 1,25 mg/dia e titular até 2,5 mg duas vezes ao dia.",
+          "hepaticDose": "Usar com cautela e titular lentamente; a conversão para ramiprilato pode ser alterada na doença hepática. Não há algoritmo universal de dose apenas por Child-Pugh.",
+          "administration": "Engolir a cápsula inteira; em produtos cuja bula permita, o conteúdo pode ser misturado em pequena quantidade de alimento ou líquido e consumido integralmente.",
+          "preparation": "Não requer reconstituição para cápsulas. Se abrir cápsula conforme bula do produto, manter toda a dose e respeitar condições de armazenamento descritas.",
+          "infusionProtocol": "Não se aplica: ramipril é administrado por via oral.",
+          "lactation": "A evidência em lactação é limitada; avaliar necessidade materna e considerar alternativa com maior experiência, especialmente em recém-nascidos ou prematuros.",
+          "adverseEffects": {
+            "common": [
+              "tosse seca",
+              "tontura",
+              "hipotensão",
+              "hipercalemia",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "angioedema",
+              "lesão renal aguda",
+              "hipercalemia grave",
+              "hipotensão sintomática",
+              "toxicidade fetal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07"
+        },
+        "es": {
+          "class": "Inhibidor de la enzima convertidora de angiotensina (IECA)",
+          "pharmacologicClass": "Modulador del sistema renina-angiotensina; inhibidor de la ECA",
+          "mechanism": "Inhibe la ECA, reduce la formación de angiotensina II y la secreción de aldosterona, y aumenta bradicinina. El resultado es vasodilatación y menor poscarga y precarga.",
+          "pharmacodynamics": "Reduce la presión arterial y la resistencia vascular sistémica sin taquicardia refleja importante. En insuficiencia cardíaca reduce poscarga; puede aumentar potasio y creatinina por bloqueo del SRAA.",
+          "commonAdverseEffects": [
+            "tos seca",
+            "mareo",
+            "hipotensión",
+            "hiperpotasemia",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "angioedema",
+            "lesión renal aguda",
+            "hiperpotasemia grave",
+            "hipotensión sintomática",
+            "toxicidad fetal"
+          ],
+          "contraindications": [
+            "Antecedente de angioedema relacionado con IECA",
+            "angioedema hereditario o idiopático",
+            "uso concomitante de aliskireno en diabetes",
+            "uso dentro de las 36 h de sacubitrilo/valsartán",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "Suplementos de potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+            "AINE pueden reducir efecto antihipertensivo y aumentar lesión renal",
+            "Litio puede acumularse",
+            "Doble bloqueo SRAA aumenta hipotensión, hiperpotasemia y lesión renal",
+            "Sacubitrilo/valsartán requiere separación de 36 h"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "creatinina/eGFR y potasio antes de iniciar y tras titulación",
+            "síntomas de hipotensión",
+            "angioedema",
+            "embarazo cuando corresponda"
+          ],
+          "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+          "patientEducation": [
+            "Evitar embarazo durante el tratamiento",
+            "consultar de urgencia ante edema de cara, labios o lengua",
+            "no usar suplementos de potasio o sal con potasio sin indicación",
+            "levantarse lentamente si hay mareo"
+          ],
+          "clinicalPearls": [
+            "Una elevación de creatinina obliga a evaluar volumen, AINE, estenosis de arteria renal y otros factores; KDIGO aconseja revisar si el aumento supera 30% dentro de 4 semanas",
+            "La tos es mediada en parte por bradicinina y suele resolverse al cambiar a un ARA-II"
+          ],
+          "guidelineRecommendations": [
+            "Guía AHA/ACC 2025: IECA son una de las clases de primera línea para hipertensión cuando están indicados",
+            "KDIGO 2024: IECA o ARA-II se priorizan en ERC con albuminuria y se titulan a dosis máxima tolerada",
+            "AHA/ACC/HFSA: en HFrEF se usa IECA cuando ARNI no es factible"
+          ],
+          "safetyFlags": [
+            "TOXICIDAD_FETAL",
+            "ANGIOEDEMA",
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "INTERVALO_ARNI_36H"
+          ],
+          "alerts": [
+            "No combinar rutinariamente IECA y ARA-II",
+            "Corregir depleción de volumen si es posible antes de iniciar",
+            "Suspender y tratar de inmediato si aparece angioedema"
+          ],
+          "specialPopulations": {
+            "elderly": "Titular según presión, función renal y volumen.",
+            "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar estrechamente.",
+            "blackPatients": "La respuesta antihipertensiva como monoterapia puede ser menor; el riesgo de angioedema es mayor."
+          },
+          "name": "Ramipril",
+          "pharmacokinetics": "Profármaco convertido por esterasas a ramiprilato activo. Metabolismo hepático y eliminación renal/biliar; la exposición a ramiprilato aumenta en insuficiencia renal.",
+          "indications": [
+            "Hipertensión",
+            "reducción de riesgo de IAM, ACV y muerte cardiovascular en adultos de alto riesgo seleccionados",
+            "insuficiencia cardíaca post-IAM con signos clínicos de congestión"
+          ],
+          "commercialNames": [
+            "Altace"
+          ],
+          "presentation": "Cápsulas orales.",
+          "presentations": [
+            "Cápsulas 1.25, 2.5, 5 y 10 mg"
+          ],
+          "dose": {
+            "hypertension": "2.5 mg una vez al día; mantenimiento 2.5-20 mg/día en 1-2 tomas.",
+            "cvRiskReduction": "2.5 mg/día por 1 semana, 5 mg/día durante las 3 semanas siguientes y luego 10 mg/día si se tolera.",
+            "postMIHF": "2.5 mg dos veces al día; si hipotensión, 1.25 mg dos veces al día; titular hacia 5 mg dos veces al día."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
+          "renalDose": "ClCr >40 mL/min: esquema habitual. Disfunción renal mayor: hipertensión iniciar 1.25 mg/día, máximo 5 mg/día; IC post-IAM iniciar 1.25 mg/día y titular hasta 2.5 mg dos veces al día.",
+          "hepaticDose": "Usar con cautela y titular lentamente; la conversión a ramiprilato puede alterarse en enfermedad hepática. No existe un algoritmo universal de dosis solo por Child-Pugh.",
+          "administration": "Tragar la cápsula entera; en productos cuya ficha lo permita, el contenido puede mezclarse con pequeña cantidad de alimento o líquido y consumirse por completo.",
+          "preparation": "No requiere reconstitución para cápsulas. Si se abre la cápsula según ficha del producto, conservar toda la dosis y respetar las condiciones de almacenamiento descritas.",
+          "infusionProtocol": "No aplica: ramipril se administra por vía oral.",
+          "lactation": "La evidencia en lactancia es limitada; valorar necesidad materna y considerar alternativa con mayor experiencia, especialmente en recién nacidos o prematuros.",
+          "adverseEffects": {
+            "common": [
+              "tos seca",
+              "mareo",
+              "hipotensión",
+              "hiperpotasemia",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "angioedema",
+              "lesión renal aguda",
+              "hiperpotasemia grave",
+              "hipotensión sintomática",
+              "toxicidad fetal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07"
+        }
       }
     }
 
@@ -2848,7 +4122,7 @@
     losartana: {
       name:     { pt: 'Losartana', es: 'Losartán' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(16,185,129,0.13)',
       colorTxt: '#065F46',
 
@@ -3090,6 +4364,254 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+          "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+          "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
+          "commonAdverseEffects": [
+            "tontura",
+            "hipotensão",
+            "hipercalemia",
+            "aumento de creatinina",
+            "fadiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesão renal aguda",
+            "hipercalemia grave",
+            "hipotensão sintomática",
+            "angioedema raro",
+            "toxicidade fetal"
+          ],
+          "contraindications": [
+            "Gestação: suspender quando detectada",
+            "uso concomitante de alisquireno em pacientes com diabetes",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+            "AINEs podem reduzir efeito e aumentar risco renal",
+            "Lítio pode acumular",
+            "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "creatinina/eTFG e potássio antes de iniciar e após mudanças de dose",
+            "estado volêmico",
+            "gestação quando aplicável"
+          ],
+          "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+          "lactation": "Não há dados humanos robustos; avaliar alternativa com maior experiência durante amamentação, especialmente em recém-nascidos.",
+          "patientEducation": [
+            "Evitar gestação durante o tratamento",
+            "não usar suplementos de potássio ou substitutos de sal sem orientação",
+            "manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados",
+            "levantar lentamente se houver tontura"
+          ],
+          "clinicalPearls": [
+            "Metabólito E-3174 contribui de forma importante ao efeito",
+            "Efeito uricosúrico é uma característica relativamente distinta dentro da classe",
+            "Monitorar creatinina e potássio após iniciar ou titular."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: BRA é classe de primeira linha para hipertensão quando indicado",
+            "KDIGO 2024: RASi em DRC com albuminúria; losartana tem evidência histórica em nefropatia diabética",
+            "Evitar duplo bloqueio do SRAA."
+          ],
+          "safetyFlags": [
+            "TOXICIDADE_FETAL",
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "HIPOTENSAO",
+            "DUPLO_BLOQUEIO_SRAA"
+          ],
+          "alerts": [
+            "Corrigir depleção de volume quando possível antes de iniciar",
+            "Reavaliar função renal e potássio após titulação",
+            "Não associar rotineiramente a IECA ou alisquireno"
+          ],
+          "specialPopulations": {
+            "elderly": "Não ajustar apenas pela idade; titular por resposta e tolerância.",
+            "renalArteryStenosis": "Maior risco de deterioração renal; monitorar.",
+            "volumeDepletion": "Maior risco de hipotensão inicial.",
+            "uricAcid": "Losartana possui efeito uricosúrico modesto, mas não substitui terapia específica para gota."
+          },
+          "name": "Losartana Potássica",
+          "pharmacokinetics": "Absorção oral com metabolismo hepático por CYP2C9/CYP3A4 para metabólito ativo E-3174, mais potente e de maior duração. Losartana e metabólito são eliminados por urina e fezes.",
+          "indications": [
+            "Hipertensão em adultos e crianças >=6 anos",
+            "redução de risco de AVC em hipertensão com hipertrofia ventricular esquerda, conforme perfil estudado",
+            "nefropatia diabética em diabetes tipo 2 com hipertensão e proteinúria"
+          ],
+          "commercialNames": [
+            "Cozaar"
+          ],
+          "presentation": "Comprimidos revestidos orais.",
+          "presentations": [
+            "Comprimidos 25, 50 e 100 mg"
+          ],
+          "dose": {
+            "hypertension": "50 mg uma vez ao dia; pode aumentar para 100 mg/dia. Em depleção de volume ou hepatopatia considerar início menor.",
+            "LVH": "50 mg uma vez ao dia; titular para 100 mg/dia e associar tiazídico conforme resposta.",
+            "diabeticNephropathy": "50 mg uma vez ao dia; aumentar para 100 mg/dia conforme pressão."
+          },
+          "pediatricDose": "Hipertensão >=6 anos: 0,7 mg/kg uma vez ao dia, máximo inicial 50 mg; doses >1,4 mg/kg ou >100 mg/dia não estudadas. Não recomendado <6 anos ou eTFG <30 mL/min/1,73 m².",
+          "renalDose": "Sem ajuste inicial rotineiro por insuficiência renal isolada; monitorar creatinina e potássio. Não é removida de forma relevante por hemodiálise.",
+          "hepaticDose": "Comprometimento hepático leve a moderado: considerar 25 mg uma vez ao dia como início. Não estudada adequadamente em hepatopatia grave.",
+          "administration": "Administrar uma vez ao dia com ou sem alimentos.",
+          "preparation": "Comprimidos não exigem preparo. Suspensão extemporânea pediátrica deve seguir fórmula validada da bula quando necessária.",
+          "infusionProtocol": "Não se aplica: losartana é oral.",
+          "adverseEffects": {
+            "common": [
+              "tontura",
+              "hipotensão",
+              "hipercalemia",
+              "aumento de creatinina",
+              "fadiga"
+            ],
+            "dangerous": [
+              "lesão renal aguda",
+              "hipercalemia grave",
+              "hipotensão sintomática",
+              "angioedema raro",
+              "toxicidade fetal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393"
+        },
+        "es": {
+          "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+          "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+          "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
+          "commonAdverseEffects": [
+            "mareo",
+            "hipotensión",
+            "hiperpotasemia",
+            "aumento de creatinina",
+            "fatiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesión renal aguda",
+            "hiperpotasemia grave",
+            "hipotensión sintomática",
+            "angioedema raro",
+            "toxicidad fetal"
+          ],
+          "contraindications": [
+            "Embarazo: suspender cuando se detecte",
+            "uso concomitante de aliskireno en pacientes con diabetes",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+            "AINE pueden reducir efecto y aumentar riesgo renal",
+            "Litio puede acumularse",
+            "Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis",
+            "estado de volumen",
+            "embarazo cuando corresponda"
+          ],
+          "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+          "lactation": "No hay datos humanos robustos; valorar alternativa con mayor experiencia durante lactancia, especialmente en recién nacidos.",
+          "patientEducation": [
+            "Evitar embarazo durante el tratamiento",
+            "no usar suplementos de potasio o sustitutos de sal sin indicación",
+            "mantener hidratación y consultar si hay vómitos o diarrea prolongados",
+            "levantarse lentamente si hay mareo"
+          ],
+          "clinicalPearls": [
+            "El metabolito E-3174 contribuye de forma importante al efecto",
+            "El efecto uricosúrico es una característica relativamente distintiva de la clase",
+            "Controlar creatinina y potasio tras iniciar o titular."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: ARA-II es clase de primera línea para hipertensión cuando está indicado",
+            "KDIGO 2024: RASi en ERC con albuminuria; losartán tiene evidencia histórica en nefropatía diabética",
+            "Evitar doble bloqueo del SRAA."
+          ],
+          "safetyFlags": [
+            "TOXICIDAD_FETAL",
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "HIPOTENSION",
+            "DOBLE_BLOQUEO_SRAA"
+          ],
+          "alerts": [
+            "Corregir depleción de volumen si es posible antes de iniciar",
+            "Reevaluar función renal y potasio tras titulación",
+            "No asociar de rutina con IECA o aliskireno"
+          ],
+          "specialPopulations": {
+            "elderly": "No ajustar solo por edad; titular por respuesta y tolerancia.",
+            "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar.",
+            "volumeDepletion": "Mayor riesgo de hipotensión inicial.",
+            "uricAcid": "Losartán tiene efecto uricosúrico modesto, pero no sustituye tratamiento específico de gota."
+          },
+          "name": "Losartán Potásico",
+          "pharmacokinetics": "Absorción oral con metabolismo hepático por CYP2C9/CYP3A4 a metabolito activo E-3174, más potente y duradero. Losartán y metabolito se eliminan por orina y heces.",
+          "indications": [
+            "Hipertensión en adultos y niños >=6 años",
+            "reducción del riesgo de ACV en hipertensión con hipertrofia ventricular izquierda, según población estudiada",
+            "nefropatía diabética en diabetes tipo 2 con hipertensión y proteinuria"
+          ],
+          "commercialNames": [
+            "Cozaar"
+          ],
+          "presentation": "Tabletas recubiertas orales.",
+          "presentations": [
+            "Tabletas 25, 50 y 100 mg"
+          ],
+          "dose": {
+            "hypertension": "50 mg una vez al día; puede aumentarse a 100 mg/día. En depleción de volumen o hepatopatía considerar inicio menor.",
+            "LVH": "50 mg una vez al día; titular a 100 mg/día y añadir tiazida según respuesta.",
+            "diabeticNephropathy": "50 mg una vez al día; aumentar a 100 mg/día según presión."
+          },
+          "pediatricDose": "Hipertensión >=6 años: 0.7 mg/kg una vez al día, máximo inicial 50 mg; dosis >1.4 mg/kg o >100 mg/día no estudiadas. No recomendado <6 años o eGFR <30 mL/min/1.73 m².",
+          "renalDose": "Sin ajuste inicial rutinario por insuficiencia renal aislada; monitorizar creatinina y potasio. No se elimina de forma relevante por hemodiálisis.",
+          "hepaticDose": "Deterioro hepático leve a moderado: considerar 25 mg una vez al día como inicio. No estudiado adecuadamente en hepatopatía grave.",
+          "administration": "Administrar una vez al día con o sin alimentos.",
+          "preparation": "Las tabletas no requieren preparación. La suspensión extemporánea pediátrica debe seguir fórmula validada de la ficha cuando sea necesaria.",
+          "infusionProtocol": "No aplica: losartán es oral.",
+          "adverseEffects": {
+            "common": [
+              "mareo",
+              "hipotensión",
+              "hiperpotasemia",
+              "aumento de creatinina",
+              "fatiga"
+            ],
+            "dangerous": [
+              "lesión renal aguda",
+              "hiperpotasemia grave",
+              "hipotensión sintomática",
+              "angioedema raro",
+              "toxicidad fetal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393"
+        }
       }
     },
 
@@ -3100,7 +4622,7 @@
     valsartana: {
       name:     { pt: 'Valsartana', es: 'Valsartán' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(16,185,129,0.13)',
       colorTxt: '#064E3B',
 
@@ -3339,6 +4861,258 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+          "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+          "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
+          "commonAdverseEffects": [
+            "tontura",
+            "hipotensão",
+            "hipercalemia",
+            "aumento de creatinina",
+            "fadiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesão renal aguda",
+            "hipercalemia grave",
+            "hipotensão sintomática",
+            "angioedema raro",
+            "toxicidade fetal"
+          ],
+          "contraindications": [
+            "Gestação: suspender quando detectada",
+            "uso concomitante de alisquireno em pacientes com diabetes",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+            "AINEs podem reduzir efeito e aumentar risco renal",
+            "Lítio pode acumular",
+            "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "creatinina/eTFG e potássio antes de iniciar e após mudanças de dose",
+            "estado volêmico",
+            "gestação quando aplicável"
+          ],
+          "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+          "lactation": "Dados humanos são insuficientes; preferir alternativa com maior experiência se houver necessidade de tratamento durante amamentação de recém-nascido.",
+          "patientEducation": [
+            "Evitar gestação durante o tratamento",
+            "não usar suplementos de potássio ou substitutos de sal sem orientação",
+            "manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados",
+            "levantar lentamente se houver tontura"
+          ],
+          "clinicalPearls": [
+            "Na HFrEF, ARNI é preferido quando viável; valsartana isolada é opção quando ARNI/IECA não são adequados",
+            "No pós-IAM, titular conforme pressão, função renal e potássio",
+            "Não somar rotineiramente BRA a dose adequada de IECA na IC."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: BRA é primeira linha para hipertensão quando indicado",
+            "AHA/ACC/HFSA: BRA é alternativa em HFrEF quando IECA não é tolerado e ARNI não é viável",
+            "KDIGO 2024: RASi em DRC com albuminúria."
+          ],
+          "safetyFlags": [
+            "TOXICIDADE_FETAL",
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "HIPOTENSAO",
+            "DUPLO_BLOQUEIO_SRAA"
+          ],
+          "alerts": [
+            "Corrigir depleção de volume quando possível antes de iniciar",
+            "Reavaliar função renal e potássio após titulação",
+            "Não associar rotineiramente a IECA ou alisquireno"
+          ],
+          "specialPopulations": {
+            "elderly": "Não ajustar apenas pela idade; titular por resposta e tolerância.",
+            "renalArteryStenosis": "Maior risco de deterioração renal; monitorar.",
+            "volumeDepletion": "Maior risco de hipotensão inicial."
+          },
+          "name": "Valsartana",
+          "pharmacokinetics": "Biodisponibilidade oral moderada, ligação proteica elevada e meia-vida aproximada de 6 h. Metabolismo é limitado e a eliminação ocorre predominantemente pelas fezes; não é removida de forma relevante por hemodiálise.",
+          "indications": [
+            "Hipertensão em adultos e crianças 1-16 anos conforme bula",
+            "insuficiência cardíaca em adultos",
+            "pós-IAM em adultos clinicamente estáveis com disfunção ou insuficiência ventricular esquerda"
+          ],
+          "commercialNames": [
+            "Diovan"
+          ],
+          "presentation": "Comprimidos orais; suspensão oral em produtos específicos.",
+          "presentations": [
+            "Comprimidos 40, 80, 160 e 320 mg",
+            "Suspensão oral em formulações específicas; não é mg-por-mg intercambiável com comprimidos"
+          ],
+          "dose": {
+            "hypertension": "80-160 mg uma vez ao dia; faixa 80-320 mg uma vez ao dia.",
+            "heartFailure": "40 mg duas vezes ao dia; titular para 80-160 mg duas vezes ao dia, máximo 320 mg/dia.",
+            "postMI": "20 mg duas vezes ao dia, podendo iniciar a partir de 12 h após IAM em paciente estável; titular até 160 mg duas vezes ao dia conforme tolerância."
+          },
+          "pediatricDose": "Hipertensão de 1-16 anos conforme bula atual: iniciar 1 mg/kg uma vez ao dia, máximo inicial 40 mg; faixa 1-4 mg/kg/dia, máximo 160 mg/dia. Não recomendada <1 ano; dados limitados em eTFG <30.",
+          "renalDose": "Leve a moderada (eTFG 30-90): sem ajuste inicial. Segurança/eficácia não estabelecidas de forma robusta em disfunção renal grave <30; usar cautela e monitorização estreita.",
+          "hepaticDose": "Hepatopatia leve a moderada: sem ajuste inicial rotineiro. Não há recomendação bem estabelecida para doença hepática grave.",
+          "administration": "Pode ser administrada com ou sem alimentos. Comprimido e suspensão não são intercambiáveis mg por mg.",
+          "preparation": "Usar a formulação oral correta; suspensão deve ser preparada e medida conforme bula específica.",
+          "infusionProtocol": "Não se aplica: valsartana isolada é oral.",
+          "adverseEffects": {
+            "common": [
+              "tontura",
+              "hipotensão",
+              "hipercalemia",
+              "aumento de creatinina",
+              "fadiga"
+            ],
+            "dangerous": [
+              "lesão renal aguda",
+              "hipercalemia grave",
+              "hipotensão sintomática",
+              "angioedema raro",
+              "toxicidade fetal"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9402b022-5809-4251-dfef-54f6ef5723fe",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9402b022-5809-4251-dfef-54f6ef5723fe"
+        },
+        "es": {
+          "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+          "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+          "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
+          "commonAdverseEffects": [
+            "mareo",
+            "hipotensión",
+            "hiperpotasemia",
+            "aumento de creatinina",
+            "fatiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesión renal aguda",
+            "hiperpotasemia grave",
+            "hipotensión sintomática",
+            "angioedema raro",
+            "toxicidad fetal"
+          ],
+          "contraindications": [
+            "Embarazo: suspender cuando se detecte",
+            "uso concomitante de aliskireno en pacientes con diabetes",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+            "AINE pueden reducir efecto y aumentar riesgo renal",
+            "Litio puede acumularse",
+            "Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis",
+            "estado de volumen",
+            "embarazo cuando corresponda"
+          ],
+          "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+          "lactation": "Datos humanos insuficientes; preferir alternativa con mayor experiencia si se requiere tratamiento durante lactancia de un recién nacido.",
+          "patientEducation": [
+            "Evitar embarazo durante el tratamiento",
+            "no usar suplementos de potasio o sustitutos de sal sin indicación",
+            "mantener hidratación y consultar si hay vómitos o diarrea prolongados",
+            "levantarse lentamente si hay mareo"
+          ],
+          "clinicalPearls": [
+            "En HFrEF, ARNI es preferido cuando es factible; valsartán solo es opción cuando ARNI/IECA no son adecuados",
+            "Post-IAM, titular según presión, función renal y potasio",
+            "No añadir rutinariamente ARA-II a dosis adecuada de IECA en IC."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: ARA-II es primera línea para hipertensión cuando está indicado",
+            "AHA/ACC/HFSA: ARA-II es alternativa en HFrEF cuando IECA no se tolera y ARNI no es factible",
+            "KDIGO 2024: RASi en ERC con albuminuria."
+          ],
+          "safetyFlags": [
+            "TOXICIDAD_FETAL",
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "HIPOTENSION",
+            "DOBLE_BLOQUEO_SRAA"
+          ],
+          "alerts": [
+            "Corregir depleción de volumen si es posible antes de iniciar",
+            "Reevaluar función renal y potasio tras titulación",
+            "No asociar de rutina con IECA o aliskireno"
+          ],
+          "specialPopulations": {
+            "elderly": "No ajustar solo por edad; titular por respuesta y tolerancia.",
+            "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar.",
+            "volumeDepletion": "Mayor riesgo de hipotensión inicial."
+          },
+          "name": "Valsartán",
+          "pharmacokinetics": "Biodisponibilidad oral moderada, alta unión a proteínas y vida media cercana a 6 h. El metabolismo es limitado y la eliminación es predominantemente fecal; no se elimina de forma relevante por hemodiálisis.",
+          "indications": [
+            "Hipertensión en adultos y niños 1-16 años según ficha",
+            "insuficiencia cardíaca en adultos",
+            "post-IAM en adultos clínicamente estables con disfunción o insuficiencia ventricular izquierda"
+          ],
+          "commercialNames": [
+            "Diovan"
+          ],
+          "presentation": "Tabletas orales; suspensión oral en productos específicos.",
+          "presentations": [
+            "Tabletas 40, 80, 160 y 320 mg",
+            "Suspensión oral en formulaciones específicas; no es intercambiable mg por mg con tabletas"
+          ],
+          "dose": {
+            "hypertension": "80-160 mg una vez al día; rango 80-320 mg una vez al día.",
+            "heartFailure": "40 mg dos veces al día; titular a 80-160 mg dos veces al día, máximo 320 mg/día.",
+            "postMI": "20 mg dos veces al día, pudiendo iniciarse desde 12 h post-IAM en paciente estable; titular hasta 160 mg dos veces al día según tolerancia."
+          },
+          "pediatricDose": "Hipertensión de 1-16 años según ficha actual: iniciar 1 mg/kg una vez al día, máximo inicial 40 mg; rango 1-4 mg/kg/día, máximo 160 mg/día. No recomendada <1 año; datos limitados con eGFR <30.",
+          "renalDose": "Leve a moderada (eGFR 30-90): sin ajuste inicial. Seguridad/eficacia no establecidas de forma robusta en deterioro renal grave <30; usar cautela y vigilancia estrecha.",
+          "hepaticDose": "Hepatopatía leve a moderada: sin ajuste inicial rutinario. No hay recomendación bien establecida para enfermedad hepática grave.",
+          "administration": "Puede administrarse con o sin alimentos. Tableta y suspensión no son intercambiables mg por mg.",
+          "preparation": "Usar la formulación oral correcta; la suspensión debe prepararse y medirse según ficha específica.",
+          "infusionProtocol": "No aplica: valsartán aislado es oral.",
+          "adverseEffects": {
+            "common": [
+              "mareo",
+              "hipotensión",
+              "hiperpotasemia",
+              "aumento de creatinina",
+              "fatiga"
+            ],
+            "dangerous": [
+              "lesión renal aguda",
+              "hiperpotasemia grave",
+              "hipotensión sintomática",
+              "angioedema raro",
+              "toxicidad fetal"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9402b022-5809-4251-dfef-54f6ef5723fe",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9402b022-5809-4251-dfef-54f6ef5723fe"
+        }
       }
     },
 
@@ -4013,7 +5787,7 @@
     irbesartana: {
       name:     { pt: 'Irbesartana', es: 'Irbesartán' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(16,185,129,0.13)',
       colorTxt: '#14532D',
 
@@ -4249,6 +6023,246 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+          "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+          "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
+          "commonAdverseEffects": [
+            "tontura",
+            "hipotensão",
+            "hipercalemia",
+            "aumento de creatinina",
+            "fadiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesão renal aguda",
+            "hipercalemia grave",
+            "hipotensão sintomática",
+            "angioedema raro",
+            "toxicidade fetal"
+          ],
+          "contraindications": [
+            "Gestação: suspender quando detectada",
+            "uso concomitante de alisquireno em pacientes com diabetes",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+            "AINEs podem reduzir efeito e aumentar risco renal",
+            "Lítio pode acumular",
+            "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "creatinina/eTFG e potássio antes de iniciar e após mudanças de dose",
+            "estado volêmico",
+            "gestação quando aplicável"
+          ],
+          "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+          "lactation": "Dados humanos insuficientes; considerar alternativa com maior experiência, principalmente em lactente jovem.",
+          "patientEducation": [
+            "Evitar gestação durante o tratamento",
+            "não usar suplementos de potássio ou substitutos de sal sem orientação",
+            "manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados",
+            "levantar lentamente se houver tontura"
+          ],
+          "clinicalPearls": [
+            "Não é removida por hemodiálise",
+            "Dose de 300 mg/dia é a dose alvo da indicação de nefropatia diabética."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: BRA é classe de primeira linha para hipertensão quando indicado",
+            "KDIGO 2024: bloquear SRAA com IECA ou BRA em DRC albuminúrica e titular à maior dose tolerada."
+          ],
+          "safetyFlags": [
+            "TOXICIDADE_FETAL",
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "HIPOTENSAO",
+            "DUPLO_BLOQUEIO_SRAA"
+          ],
+          "alerts": [
+            "Corrigir depleção de volume quando possível antes de iniciar",
+            "Reavaliar função renal e potássio após titulação",
+            "Não associar rotineiramente a IECA ou alisquireno"
+          ],
+          "specialPopulations": {
+            "elderly": "Não ajustar apenas pela idade; titular por resposta e tolerância.",
+            "renalArteryStenosis": "Maior risco de deterioração renal; monitorar.",
+            "volumeDepletion": "Maior risco de hipotensão inicial.",
+            "diabeticNephropathy": "Possui indicação específica em nefropatia diabética com hipertensão, T2D e proteinúria."
+          },
+          "name": "Irbesartana",
+          "pharmacokinetics": "Biodisponibilidade oral cerca de 60-80%, pico em 1,5-2 h e meia-vida terminal aproximadamente 11-15 h. Metabolização por glucuronidação e CYP2C9; não é removida por hemodiálise.",
+          "indications": [
+            "Hipertensão",
+            "nefropatia diabética em pacientes hipertensos com diabetes tipo 2, creatinina elevada e proteinúria"
+          ],
+          "commercialNames": [
+            "Avapro"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 75, 150 e 300 mg"
+          ],
+          "dose": {
+            "hypertension": "150 mg uma vez ao dia; pode aumentar para 300 mg uma vez ao dia.",
+            "diabeticNephropathy": "300 mg uma vez ao dia."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para indicação pediátrica rotineira.",
+          "renalDose": "Não requer ajuste de dose na insuficiência renal leve a grave ou hemodiálise, exceto que depleção volêmica aumenta risco de hipotensão e exige correção/individualização.",
+          "hepaticDose": "Sem ajuste necessário em insuficiência hepática leve a moderada segundo farmacocinética da bula; dados limitados em hepatopatia grave.",
+          "administration": "Administrar uma vez ao dia, com ou sem alimentos.",
+          "preparation": "Comprimidos não exigem preparo.",
+          "infusionProtocol": "Não se aplica: irbesartana é oral.",
+          "adverseEffects": {
+            "common": [
+              "tontura",
+              "hipotensão",
+              "hipercalemia",
+              "aumento de creatinina",
+              "fadiga"
+            ],
+            "dangerous": [
+              "lesão renal aguda",
+              "hipercalemia grave",
+              "hipotensão sintomática",
+              "angioedema raro",
+              "toxicidade fetal"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8635a1c-ae06-4e23-99f7-e704f91d6f43",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8635a1c-ae06-4e23-99f7-e704f91d6f43"
+        },
+        "es": {
+          "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+          "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+          "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
+          "commonAdverseEffects": [
+            "mareo",
+            "hipotensión",
+            "hiperpotasemia",
+            "aumento de creatinina",
+            "fatiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesión renal aguda",
+            "hiperpotasemia grave",
+            "hipotensión sintomática",
+            "angioedema raro",
+            "toxicidad fetal"
+          ],
+          "contraindications": [
+            "Embarazo: suspender cuando se detecte",
+            "uso concomitante de aliskireno en pacientes con diabetes",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+            "AINE pueden reducir efecto y aumentar riesgo renal",
+            "Litio puede acumularse",
+            "Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis",
+            "estado de volumen",
+            "embarazo cuando corresponda"
+          ],
+          "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+          "lactation": "Datos humanos insuficientes; considerar alternativa con mayor experiencia, principalmente en lactante pequeño.",
+          "patientEducation": [
+            "Evitar embarazo durante el tratamiento",
+            "no usar suplementos de potasio o sustitutos de sal sin indicación",
+            "mantener hidratación y consultar si hay vómitos o diarrea prolongados",
+            "levantarse lentamente si hay mareo"
+          ],
+          "clinicalPearls": [
+            "No se elimina por hemodiálisis",
+            "300 mg/día es la dosis objetivo de la indicación de nefropatía diabética."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: ARA-II es clase de primera línea para hipertensión cuando está indicado",
+            "KDIGO 2024: bloquear SRAA con IECA o ARA-II en ERC albuminúrica y titular a máxima dosis tolerada."
+          ],
+          "safetyFlags": [
+            "TOXICIDAD_FETAL",
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "HIPOTENSION",
+            "DOBLE_BLOQUEO_SRAA"
+          ],
+          "alerts": [
+            "Corregir depleción de volumen si es posible antes de iniciar",
+            "Reevaluar función renal y potasio tras titulación",
+            "No asociar de rutina con IECA o aliskireno"
+          ],
+          "specialPopulations": {
+            "elderly": "No ajustar solo por edad; titular por respuesta y tolerancia.",
+            "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar.",
+            "volumeDepletion": "Mayor riesgo de hipotensión inicial.",
+            "diabeticNephropathy": "Tiene indicación específica en nefropatía diabética con hipertensión, T2D y proteinuria."
+          },
+          "name": "Irbesartán",
+          "pharmacokinetics": "Biodisponibilidad oral de aproximadamente 60-80%, pico a 1.5-2 h y vida media terminal de 11-15 h. Metabolismo por glucuronidación y CYP2C9; no se elimina por hemodiálisis.",
+          "indications": [
+            "Hipertensión",
+            "nefropatía diabética en pacientes hipertensos con diabetes tipo 2, creatinina elevada y proteinuria"
+          ],
+          "commercialNames": [
+            "Avapro"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 75, 150 y 300 mg"
+          ],
+          "dose": {
+            "hypertension": "150 mg una vez al día; puede aumentarse a 300 mg una vez al día.",
+            "diabeticNephropathy": "300 mg una vez al día."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para indicación pediátrica rutinaria.",
+          "renalDose": "No requiere ajuste de dosis en insuficiencia renal leve a grave ni hemodiálisis, excepto que la depleción de volumen aumenta riesgo de hipotensión y exige corrección/individualización.",
+          "hepaticDose": "Sin ajuste necesario en insuficiencia hepática leve a moderada según farmacocinética de ficha; datos limitados en hepatopatía grave.",
+          "administration": "Administrar una vez al día, con o sin alimentos.",
+          "preparation": "Las tabletas no requieren preparación.",
+          "infusionProtocol": "No aplica: irbesartán es oral.",
+          "adverseEffects": {
+            "common": [
+              "mareo",
+              "hipotensión",
+              "hiperpotasemia",
+              "aumento de creatinina",
+              "fatiga"
+            ],
+            "dangerous": [
+              "lesión renal aguda",
+              "hiperpotasemia grave",
+              "hipotensión sintomática",
+              "angioedema raro",
+              "toxicidad fetal"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8635a1c-ae06-4e23-99f7-e704f91d6f43",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8635a1c-ae06-4e23-99f7-e704f91d6f43"
+        }
       }
     },
 
@@ -4261,7 +6275,7 @@
     telmisartana: {
       name:     { pt: 'Telmisartana', es: 'Telmisartán' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(16,185,129,0.13)',
       colorTxt: '#166534',
 
@@ -4491,6 +6505,248 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+          "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+          "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
+          "commonAdverseEffects": [
+            "tontura",
+            "hipotensão",
+            "hipercalemia",
+            "aumento de creatinina",
+            "fadiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesão renal aguda",
+            "hipercalemia grave",
+            "hipotensão sintomática",
+            "angioedema raro",
+            "toxicidade fetal"
+          ],
+          "contraindications": [
+            "Gestação: suspender quando detectada",
+            "uso concomitante de alisquireno em pacientes com diabetes",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+            "AINEs podem reduzir efeito e aumentar risco renal",
+            "Lítio pode acumular",
+            "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "creatinina/eTFG e potássio antes de iniciar e após mudanças de dose",
+            "estado volêmico",
+            "gestação quando aplicável"
+          ],
+          "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+          "lactation": "Dados humanos insuficientes; evitar ou preferir alternativa com maior experiência em lactentes muito jovens.",
+          "patientEducation": [
+            "Evitar gestação durante o tratamento",
+            "não usar suplementos de potássio ou substitutos de sal sem orientação",
+            "manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados",
+            "levantar lentamente se houver tontura"
+          ],
+          "clinicalPearls": [
+            "Meia-vida longa favorece cobertura de 24 h",
+            "Não é removida por hemodiálise",
+            "A indicação de redução de risco CV usa 80 mg/dia na bula norte-americana."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: BRA é classe de primeira linha para hipertensão quando indicado",
+            "KDIGO 2024: RASi em DRC albuminúrica; monitorar função renal e potássio."
+          ],
+          "safetyFlags": [
+            "TOXICIDADE_FETAL",
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "HIPOTENSAO",
+            "DUPLO_BLOQUEIO_SRAA"
+          ],
+          "alerts": [
+            "Corrigir depleção de volume quando possível antes de iniciar",
+            "Reavaliar função renal e potássio após titulação",
+            "Não associar rotineiramente a IECA ou alisquireno"
+          ],
+          "specialPopulations": {
+            "elderly": "Não ajustar apenas pela idade; titular por resposta e tolerância.",
+            "renalArteryStenosis": "Maior risco de deterioração renal; monitorar.",
+            "volumeDepletion": "Maior risco de hipotensão inicial.",
+            "biliaryDisease": "Depuração pode reduzir em obstrução biliar ou insuficiência hepática; iniciar baixo e titular lentamente."
+          },
+          "name": "Telmisartana",
+          "pharmacokinetics": "Meia-vida terminal longa, cerca de 24 h. Metabolizada principalmente por conjugação a glucuronídeo inativo e eliminada quase totalmente por via biliar/fecal; não é dialisável.",
+          "indications": [
+            "Hipertensão",
+            "redução de risco cardiovascular em pacientes selecionados com alto risco que não podem usar IECA, conforme bula"
+          ],
+          "commercialNames": [
+            "Micardis"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 20, 40 e 80 mg"
+          ],
+          "dose": {
+            "hypertension": "40 mg uma vez ao dia; resposta é dose-dependente entre 20-80 mg, com faixa usual 40-80 mg/dia.",
+            "cvRiskReduction": "80 mg uma vez ao dia na indicação de redução de risco cardiovascular da bula."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
+          "renalDose": "Sem ajuste inicial necessário em redução da função renal, inclusive hemodiálise; não é dialisável. Monitorar pressão, creatinina e potássio.",
+          "hepaticDose": "Eliminação biliar predominante; em hepatopatia ou obstrução biliar iniciar em dose baixa e titular lentamente. Usar cautela importante em comprometimento grave.",
+          "administration": "Uma vez ao dia, com ou sem alimentos.",
+          "preparation": "Comprimidos não exigem preparo; manter na embalagem conforme orientação do fabricante até o uso quando aplicável.",
+          "infusionProtocol": "Não se aplica: telmisartana é oral.",
+          "adverseEffects": {
+            "common": [
+              "tontura",
+              "hipotensão",
+              "hipercalemia",
+              "aumento de creatinina",
+              "fadiga"
+            ],
+            "dangerous": [
+              "lesão renal aguda",
+              "hipercalemia grave",
+              "hipotensão sintomática",
+              "angioedema raro",
+              "toxicidade fetal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31"
+        },
+        "es": {
+          "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+          "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+          "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
+          "commonAdverseEffects": [
+            "mareo",
+            "hipotensión",
+            "hiperpotasemia",
+            "aumento de creatinina",
+            "fatiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesión renal aguda",
+            "hiperpotasemia grave",
+            "hipotensión sintomática",
+            "angioedema raro",
+            "toxicidad fetal"
+          ],
+          "contraindications": [
+            "Embarazo: suspender cuando se detecte",
+            "uso concomitante de aliskireno en pacientes con diabetes",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+            "AINE pueden reducir efecto y aumentar riesgo renal",
+            "Litio puede acumularse",
+            "Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis",
+            "estado de volumen",
+            "embarazo cuando corresponda"
+          ],
+          "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+          "lactation": "Datos humanos insuficientes; evitar o preferir alternativa con mayor experiencia en lactantes muy pequeños.",
+          "patientEducation": [
+            "Evitar embarazo durante el tratamiento",
+            "no usar suplementos de potasio o sustitutos de sal sin indicación",
+            "mantener hidratación y consultar si hay vómitos o diarrea prolongados",
+            "levantarse lentamente si hay mareo"
+          ],
+          "clinicalPearls": [
+            "Vida media larga favorece cobertura de 24 h",
+            "No se elimina por hemodiálisis",
+            "La indicación de reducción de riesgo CV usa 80 mg/día en la ficha estadounidense."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: ARA-II es clase de primera línea para hipertensión cuando está indicado",
+            "KDIGO 2024: RASi en ERC albuminúrica; vigilar función renal y potasio."
+          ],
+          "safetyFlags": [
+            "TOXICIDAD_FETAL",
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "HIPOTENSION",
+            "DOBLE_BLOQUEO_SRAA"
+          ],
+          "alerts": [
+            "Corregir depleción de volumen si es posible antes de iniciar",
+            "Reevaluar función renal y potasio tras titulación",
+            "No asociar de rutina con IECA o aliskireno"
+          ],
+          "specialPopulations": {
+            "elderly": "No ajustar solo por edad; titular por respuesta y tolerancia.",
+            "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar.",
+            "volumeDepletion": "Mayor riesgo de hipotensión inicial.",
+            "biliaryDisease": "El aclaramiento puede disminuir en obstrucción biliar o insuficiencia hepática; iniciar bajo y titular lentamente."
+          },
+          "name": "Telmisartán",
+          "pharmacokinetics": "Vida media terminal larga, cercana a 24 h. Se metaboliza principalmente por conjugación a glucurónido inactivo y se elimina casi por completo por vía biliar/fecal; no es dializable.",
+          "indications": [
+            "Hipertensión",
+            "reducción de riesgo cardiovascular en pacientes seleccionados de alto riesgo que no pueden usar IECA, según ficha"
+          ],
+          "commercialNames": [
+            "Micardis"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 20, 40 y 80 mg"
+          ],
+          "dose": {
+            "hypertension": "40 mg una vez al día; la respuesta es dosis-dependiente entre 20-80 mg, con rango habitual 40-80 mg/día.",
+            "cvRiskReduction": "80 mg una vez al día en la indicación de reducción de riesgo cardiovascular de la ficha."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
+          "renalDose": "Sin ajuste inicial necesario en reducción de función renal, incluso hemodiálisis; no es dializable. Vigilar presión, creatinina y potasio.",
+          "hepaticDose": "Eliminación biliar predominante; en hepatopatía u obstrucción biliar iniciar con dosis baja y titular lentamente. Mucha cautela en deterioro grave.",
+          "administration": "Una vez al día, con o sin alimentos.",
+          "preparation": "Las tabletas no requieren preparación; mantener en el envase según indicación del fabricante hasta usar cuando corresponda.",
+          "infusionProtocol": "No aplica: telmisartán es oral.",
+          "adverseEffects": {
+            "common": [
+              "mareo",
+              "hipotensión",
+              "hiperpotasemia",
+              "aumento de creatinina",
+              "fatiga"
+            ],
+            "dangerous": [
+              "lesión renal aguda",
+              "hiperpotasemia grave",
+              "hipotensión sintomática",
+              "angioedema raro",
+              "toxicidad fetal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31"
+        }
       }
     },
 
@@ -4502,7 +6758,7 @@
     olmesartana: {
       name:     { pt: 'Olmesartana', es: 'Olmesartán' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(16,185,129,0.13)',
       colorTxt: '#15803D',
 
@@ -4741,6 +6997,246 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP04_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+          "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+          "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
+          "commonAdverseEffects": [
+            "tontura",
+            "hipotensão",
+            "hipercalemia",
+            "aumento de creatinina",
+            "fadiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesão renal aguda",
+            "hipercalemia grave",
+            "hipotensão sintomática",
+            "toxicidade fetal",
+            "enteropatia tipo espru com perda de peso"
+          ],
+          "contraindications": [
+            "Gestação: suspender quando detectada",
+            "uso concomitante de alisquireno em pacientes com diabetes",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
+            "AINEs podem reduzir efeito e aumentar risco renal",
+            "Lítio pode acumular",
+            "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "creatinina/eTFG e potássio antes de iniciar e após mudanças de dose",
+            "estado volêmico",
+            "gestação quando aplicável"
+          ],
+          "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+          "lactation": "Dados humanos insuficientes; preferir alternativa com maior experiência quando a amamentação de recém-nascido precisa ser mantida.",
+          "patientEducation": [
+            "Evitar gestação durante o tratamento",
+            "não usar suplementos de potássio ou substitutos de sal sem orientação",
+            "manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados",
+            "levantar lentamente se houver tontura"
+          ],
+          "clinicalPearls": [
+            "Investigar olmesartana em diarreia crônica inexplicada com perda ponderal",
+            "Doses acima de 40 mg/dia não mostram benefício anti-hipertensivo adicional claro",
+            "Uso pediátrico >=6 anos é baseado em peso."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: BRA é primeira linha para hipertensão quando indicado",
+            "KDIGO 2024: RASi em DRC albuminúrica com monitorização de potássio e função renal."
+          ],
+          "safetyFlags": [
+            "TOXICIDADE_FETAL",
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "HIPOTENSAO",
+            "DUPLO_BLOQUEIO_SRAA"
+          ],
+          "alerts": [
+            "Corrigir depleção de volume quando possível antes de iniciar",
+            "Reavaliar função renal e potássio após titulação",
+            "Não associar rotineiramente a IECA ou alisquireno"
+          ],
+          "specialPopulations": {
+            "elderly": "Não ajustar apenas pela idade; titular por resposta e tolerância.",
+            "renalArteryStenosis": "Maior risco de deterioração renal; monitorar.",
+            "volumeDepletion": "Maior risco de hipotensão inicial.",
+            "enteropathy": "Pode causar enteropatia tipo espru com diarreia crônica e perda de peso, inclusive meses ou anos após início; suspender se não houver outra causa."
+          },
+          "name": "Olmesartana Medoxomila",
+          "pharmacokinetics": "Pró-fármaco rapidamente convertido a olmesartana durante a absorção. Meia-vida terminal aproximadamente 13 h; eliminação renal e biliar, com pouca participação de CYP.",
+          "indications": [
+            "Hipertensão em adultos",
+            "hipertensão em crianças >=6 anos"
+          ],
+          "commercialNames": [
+            "Benicar"
+          ],
+          "presentation": "Comprimidos revestidos orais.",
+          "presentations": [
+            "Comprimidos 5, 20 e 40 mg"
+          ],
+          "dose": {
+            "hypertension": "20 mg uma vez ao dia em adulto não hipovolêmico; após 2 semanas pode aumentar para 40 mg uma vez ao dia. Doses >40 mg e esquema 2x/dia não oferecem benefício adicional demonstrado."
+          },
+          "pediatricDose": ">=6 anos: 20 a <35 kg, iniciar 10 mg/dia e máximo 20 mg/dia; >=35 kg, iniciar 20 mg/dia e máximo 40 mg/dia.",
+          "renalDose": "A exposição aumenta na insuficiência renal, inclusive grave; a bula não exige ajuste inicial rotineiro, mas requer monitorização estreita de função renal, potássio e pressão.",
+          "hepaticDose": "A exposição aumenta na insuficiência hepática moderada; a bula não exige ajuste inicial rotineiro em moderada, mas dados são limitados em grave.",
+          "administration": "Administrar uma vez ao dia, com ou sem alimentos.",
+          "preparation": "Comprimidos não exigem preparo.",
+          "infusionProtocol": "Não se aplica: olmesartana é oral.",
+          "adverseEffects": {
+            "common": [
+              "tontura",
+              "hipotensão",
+              "hipercalemia",
+              "aumento de creatinina",
+              "fadiga"
+            ],
+            "dangerous": [
+              "lesão renal aguda",
+              "hipercalemia grave",
+              "hipotensão sintomática",
+              "toxicidade fetal",
+              "enteropatia tipo espru com perda de peso"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=812d2d57-14d6-48a9-9687-85c2d125197e",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=812d2d57-14d6-48a9-9687-85c2d125197e"
+        },
+        "es": {
+          "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+          "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+          "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
+          "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
+          "commonAdverseEffects": [
+            "mareo",
+            "hipotensión",
+            "hiperpotasemia",
+            "aumento de creatinina",
+            "fatiga"
+          ],
+          "dangerousAdverseEffects": [
+            "lesión renal aguda",
+            "hiperpotasemia grave",
+            "hipotensión sintomática",
+            "toxicidad fetal",
+            "enteropatía tipo esprúe con pérdida de peso"
+          ],
+          "contraindications": [
+            "Embarazo: suspender cuando se detecte",
+            "uso concomitante de aliskireno en pacientes con diabetes",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+            "AINE pueden reducir efecto y aumentar riesgo renal",
+            "Litio puede acumularse",
+            "Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis",
+            "estado de volumen",
+            "embarazo cuando corresponda"
+          ],
+          "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+          "lactation": "Datos humanos insuficientes; preferir alternativa con mayor experiencia cuando deba mantenerse lactancia de un recién nacido.",
+          "patientEducation": [
+            "Evitar embarazo durante el tratamiento",
+            "no usar suplementos de potasio o sustitutos de sal sin indicación",
+            "mantener hidratación y consultar si hay vómitos o diarrea prolongados",
+            "levantarse lentamente si hay mareo"
+          ],
+          "clinicalPearls": [
+            "Considerar olmesartán en diarrea crónica inexplicada con pérdida ponderal",
+            "Dosis >40 mg/día no muestran beneficio antihipertensivo adicional claro",
+            "Uso pediátrico >=6 años se basa en peso."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: ARA-II es primera línea para hipertensión cuando está indicado",
+            "KDIGO 2024: RASi en ERC albuminúrica con vigilancia de potasio y función renal."
+          ],
+          "safetyFlags": [
+            "TOXICIDAD_FETAL",
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "HIPOTENSION",
+            "DOBLE_BLOQUEO_SRAA"
+          ],
+          "alerts": [
+            "Corregir depleción de volumen si es posible antes de iniciar",
+            "Reevaluar función renal y potasio tras titulación",
+            "No asociar de rutina con IECA o aliskireno"
+          ],
+          "specialPopulations": {
+            "elderly": "No ajustar solo por edad; titular por respuesta y tolerancia.",
+            "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar.",
+            "volumeDepletion": "Mayor riesgo de hipotensión inicial.",
+            "enteropathy": "Puede causar enteropatía tipo esprúe con diarrea crónica y pérdida de peso, incluso meses o años tras inicio; suspender si no hay otra causa."
+          },
+          "name": "Olmesartán Medoxomilo",
+          "pharmacokinetics": "Profármaco convertido rápidamente a olmesartán durante la absorción. Vida media terminal cercana a 13 h; eliminación renal y biliar, con poca participación de CYP.",
+          "indications": [
+            "Hipertensión en adultos",
+            "hipertensión en niños >=6 años"
+          ],
+          "commercialNames": [
+            "Benicar"
+          ],
+          "presentation": "Tabletas recubiertas orales.",
+          "presentations": [
+            "Tabletas 5, 20 y 40 mg"
+          ],
+          "dose": {
+            "hypertension": "20 mg una vez al día en adulto no hipovolémico; después de 2 semanas puede aumentarse a 40 mg una vez al día. Dosis >40 mg y esquema 2 veces/día no ofrecen beneficio adicional demostrado."
+          },
+          "pediatricDose": ">=6 años: 20 a <35 kg, iniciar 10 mg/día y máximo 20 mg/día; >=35 kg, iniciar 20 mg/día y máximo 40 mg/día.",
+          "renalDose": "La exposición aumenta en insuficiencia renal, incluso grave; la ficha no exige ajuste inicial rutinario, pero requiere vigilancia estrecha de función renal, potasio y presión.",
+          "hepaticDose": "La exposición aumenta en insuficiencia hepática moderada; la ficha no exige ajuste inicial rutinario en moderada, pero hay datos limitados en grave.",
+          "administration": "Administrar una vez al día, con o sin alimentos.",
+          "preparation": "Las tabletas no requieren preparación.",
+          "infusionProtocol": "No aplica: olmesartán es oral.",
+          "adverseEffects": {
+            "common": [
+              "mareo",
+              "hipotensión",
+              "hiperpotasemia",
+              "aumento de creatinina",
+              "fatiga"
+            ],
+            "dangerous": [
+              "lesión renal aguda",
+              "hiperpotasemia grave",
+              "hipotensión sintomática",
+              "toxicidad fetal",
+              "enteropatía tipo esprúe con pérdida de peso"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=812d2d57-14d6-48a9-9687-85c2d125197e",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=812d2d57-14d6-48a9-9687-85c2d125197e"
+        }
       }
     }
 
@@ -4759,7 +7255,7 @@
     eprosartana: {
       name:     { pt: 'Eprosartana', es: 'Eprosartán' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(16,185,129,0.13)',
       colorTxt: '#064E3B',
 
@@ -4994,6 +7490,234 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+          "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+          "mechanism": "Bloqueia seletivamente o receptor AT1 e inibe vasoconstrição, secreção de aldosterona e retenção de sódio mediadas pela angiotensina II, sem inibir diretamente a ECA.",
+          "pharmacodynamics": "Reduz resistência vascular e pressão arterial. Pode elevar potássio e creatinina, especialmente em hipovolemia, estenose de artéria renal ou doença renal avançada.",
+          "commonAdverseEffects": [
+            "tontura",
+            "hipotensão",
+            "hipercalemia",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "lesão renal aguda",
+            "hipercalemia grave",
+            "hipotensão sintomática",
+            "angioedema raro",
+            "toxicidade fetal"
+          ],
+          "contraindications": [
+            "Gestação: suspender quando detectada",
+            "hipersensibilidade",
+            "evitar duplo bloqueio rotineiro do SRAA"
+          ],
+          "interactions": [
+            "Potássio e diuréticos poupadores de potássio aumentam hipercalemia",
+            "AINEs podem reduzir efeito e aumentar risco renal",
+            "Lítio pode acumular",
+            "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "creatinina/eTFG",
+            "potássio",
+            "estado volêmico",
+            "gestação quando aplicável"
+          ],
+          "pregnancy": "Toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+          "lactation": "Dados humanos limitados; individualizar e preferir alternativas com maior experiência em lactentes muito jovens.",
+          "patientEducation": [
+            "Evitar gestação",
+            "não usar potássio ou substitutos de sal sem orientação",
+            "manter hidratação",
+            "procurar avaliação por tontura intensa ou síncope"
+          ],
+          "clinicalPearls": [
+            "BRAs são alternativa quando IECA causa tosse",
+            "Controlar creatinina e potássio após início ou titulação."
+          ],
+          "guidelineRecommendations": [
+            "Diretriz AHA/ACC 2025: BRAs são fármacos de primeira linha para hipertensão quando indicados."
+          ],
+          "safetyFlags": [
+            "TOXICIDADE_FETAL",
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "HIPOTENSAO"
+          ],
+          "alerts": [
+            "Corrigir depleção de volume quando possível",
+            "Revisar creatinina e potássio após mudanças de dose",
+            "Não associar rotineiramente a IECA."
+          ],
+          "name": "Eprosartana Mesilato",
+          "pharmacokinetics": "Biodisponibilidade oral baixa a moderada; não exige biotransformação para metabólito ativo. É eliminada por vias biliar/fecal e renal. A exposição aumenta na insuficiência renal.",
+          "indications": [
+            "Hipertensão essencial em adultos"
+          ],
+          "commercialNames": [
+            "Teveten"
+          ],
+          "presentation": "Comprimidos revestidos de mesilato de eprosartana equivalentes a 600 mg de eprosartana.",
+          "presentations": [
+            "Comprimidos 600 mg"
+          ],
+          "dose": {
+            "hypertension": "600 mg uma vez ao dia; o efeito máximo pode levar 2-3 semanas."
+          },
+          "pediatricDose": "Não recomendada em crianças e adolescentes por falta de dados suficientes de segurança e eficácia.",
+          "renalDose": "ClCr <60 mL/min: a dose diária não deve exceder 600 mg segundo SmPC vigente. Monitorar creatinina e potássio.",
+          "hepaticDose": "Experiência limitada na insuficiência hepática; usar com cautela e monitorar resposta.",
+          "administration": "Administrar uma vez ao dia com ou sem alimentos.",
+          "preparation": "Não requer reconstituição.",
+          "infusionProtocol": "Não se aplica: eprosartana é oral.",
+          "specialPopulations": {
+            "elderly": "Não requer ajuste apenas por idade.",
+            "renal": "Limitar a 600 mg/dia se ClCr <60 mL/min.",
+            "hepatic": "Experiência limitada."
+          },
+          "adverseEffects": {
+            "common": [
+              "tontura",
+              "hipotensão",
+              "hipercalemia",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "lesão renal aguda",
+              "hipercalemia grave",
+              "hipotensão sintomática",
+              "angioedema raro",
+              "toxicidade fetal"
+            ]
+          },
+          "references": [
+            "https://www.medicines.org.uk/emc/product/1346/smpc",
+            "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Eprosartan",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://www.medicines.org.uk/emc/product/1346/smpc"
+        },
+        "es": {
+          "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+          "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+          "mechanism": "Bloquea selectivamente el receptor AT1 e inhibe vasoconstricción, secreción de aldosterona y retención de sodio mediadas por angiotensina II, sin inhibir directamente la ECA.",
+          "pharmacodynamics": "Reduce resistencia vascular y presión arterial. Puede aumentar potasio y creatinina, especialmente con hipovolemia, estenosis de arteria renal o enfermedad renal avanzada.",
+          "commonAdverseEffects": [
+            "mareo",
+            "hipotensión",
+            "hiperpotasemia",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "lesión renal aguda",
+            "hiperpotasemia grave",
+            "hipotensión sintomática",
+            "angioedema raro",
+            "toxicidad fetal"
+          ],
+          "contraindications": [
+            "Embarazo: suspender cuando se detecte",
+            "hipersensibilidad",
+            "evitar doble bloqueo del SRAA de rutina"
+          ],
+          "interactions": [
+            "Potasio y diuréticos ahorradores de potasio aumentan hiperpotasemia",
+            "AINE pueden reducir efecto y aumentar riesgo renal",
+            "Litio puede acumularse",
+            "Doble bloqueo SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "creatinina/eGFR",
+            "potasio",
+            "estado de volumen",
+            "embarazo cuando corresponda"
+          ],
+          "pregnancy": "Toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+          "lactation": "Datos humanos limitados; individualizar y preferir alternativas con mayor experiencia en lactantes muy pequeños.",
+          "patientEducation": [
+            "Evitar embarazo",
+            "no usar potasio o sustitutos de sal sin indicación",
+            "mantener hidratación",
+            "consultar por mareo intenso o síncope"
+          ],
+          "clinicalPearls": [
+            "ARA-II son alternativa cuando IECA causa tos",
+            "Controlar creatinina y potasio tras inicio o titulación."
+          ],
+          "guidelineRecommendations": [
+            "Guía AHA/ACC 2025: los ARA-II son fármacos de primera línea para hipertensión cuando están indicados."
+          ],
+          "safetyFlags": [
+            "TOXICIDAD_FETAL",
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "HIPOTENSION"
+          ],
+          "alerts": [
+            "Corregir depleción de volumen si es posible",
+            "Revisar creatinina y potasio tras cambios de dosis",
+            "No asociar rutinariamente con IECA."
+          ],
+          "name": "Eprosartán Mesilato",
+          "pharmacokinetics": "Biodisponibilidad oral baja a moderada; no requiere biotransformación a un metabolito activo. Se elimina por vía biliar/fecal y renal. La exposición aumenta con insuficiencia renal.",
+          "indications": [
+            "Hipertensión esencial en adultos"
+          ],
+          "commercialNames": [
+            "Teveten"
+          ],
+          "presentation": "Tabletas recubiertas de eprosartán mesilato equivalentes a 600 mg de eprosartán.",
+          "presentations": [
+            "Tabletas 600 mg"
+          ],
+          "dose": {
+            "hypertension": "600 mg una vez al día; el efecto máximo puede tardar 2-3 semanas."
+          },
+          "pediatricDose": "No recomendada en niños y adolescentes por falta de datos suficientes de seguridad y eficacia.",
+          "renalDose": "CrCl <60 mL/min: la dosis diaria no debe exceder 600 mg según SmPC vigente. Vigilar creatinina y potasio.",
+          "hepaticDose": "Experiencia limitada en insuficiencia hepática; usar con cautela y monitorizar respuesta.",
+          "administration": "Administrar una vez al día con o sin alimentos.",
+          "preparation": "No requiere reconstitución.",
+          "infusionProtocol": "No aplica: eprosartán es oral.",
+          "specialPopulations": {
+            "elderly": "No requiere ajuste solo por edad.",
+            "renal": "Limitar a 600 mg/día si CrCl <60 mL/min.",
+            "hepatic": "Experiencia limitada."
+          },
+          "adverseEffects": {
+            "common": [
+              "mareo",
+              "hipotensión",
+              "hiperpotasemia",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "lesión renal aguda",
+              "hiperpotasemia grave",
+              "hipotensión sintomática",
+              "angioedema raro",
+              "toxicidad fetal"
+            ]
+          },
+          "references": [
+            "https://www.medicines.org.uk/emc/product/1346/smpc",
+            "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Eprosartan",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://www.medicines.org.uk/emc/product/1346/smpc"
+        }
       }
     },
 
@@ -6670,7 +9394,7 @@
     propranolol: {
       name:     { pt: 'Propranolol', es: 'Propranolol' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#991B1B',
 
@@ -7233,6 +9957,270 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacodynamics": "Reduz frequência cardíaca, contratilidade e condução nodal AV, com redução da demanda miocárdica de oxigênio. O efeito depende da dose, seletividade do agente e tônus simpático.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fadiga",
+            "tontura",
+            "hipotensão",
+            "extremidades frias"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueio AV",
+            "broncoespasmo",
+            "bradicardia grave",
+            "choque ou piora de insuficiência cardíaca",
+            "mascaramento de hipoglicemia"
+          ],
+          "interactions": [
+            "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão",
+            "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
+            "Clonidina exige retirada planejada para evitar hipertensão rebote",
+            "Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia"
+          ],
+          "monitoring": [
+            "Frequência cardíaca",
+            "pressão arterial",
+            "ECG se houver distúrbio de condução ou arritmia",
+            "sinais de insuficiência cardíaca",
+            "broncoespasmo e glicemia em pacientes de risco"
+          ],
+          "patientEducation": [
+            "Não suspender abruptamente sem orientação",
+            "controlar pulso se orientado",
+            "procurar avaliação por síncope, nova dispneia ou piora de edema",
+            "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
+          ],
+          "pregnancy": "Usar apenas quando o benefício materno justificar o risco; próximo ao parto pode causar bradicardia, hipotensão ou hipoglicemia neonatal conforme exposição e agente.",
+          "lactation": "Individualizar conforme agente, dose e idade do lactente; observar bradicardia, letargia ou dificuldade de alimentação quando a exposição for clinicamente relevante.",
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEIO_AV",
+            "BRONCOESPASMO",
+            "RETIRADA_GRADUAL",
+            "HIPOGLICEMIA_MASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensão abrupta em doença coronariana",
+            "Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada",
+            "Usar com cautela em doença broncoespástica"
+          ],
+          "name": "Propranolol",
+          "class": "Betabloqueador não seletivo",
+          "pharmacologicClass": "Antagonista competitivo beta-1 e beta-2 adrenérgico",
+          "mechanism": "Bloqueia receptores beta-1 e beta-2, reduzindo frequência, contratilidade, condução AV e liberação de renina; também reduz manifestações adrenérgicas periféricas como tremor.",
+          "pharmacokinetics": "Alta extração hepática e metabolismo de primeira passagem; metabolismo por CYP2D6, CYP1A2 e CYP2C19. A exposição pode aumentar na hepatopatia.",
+          "indications": [
+            "Hipertensão",
+            "angina",
+            "controle da frequência ventricular na fibrilação atrial",
+            "pós-infarto em paciente estável",
+            "profilaxia de migrânea",
+            "tremor essencial",
+            "miocardiopatia hipertrófica obstrutiva sintomática",
+            "feocromocitoma apenas após bloqueio alfa adequado"
+          ],
+          "commercialNames": [
+            "Inderal"
+          ],
+          "presentation": "Comprimidos orais de liberação imediata em múltiplas concentrações.",
+          "presentations": [
+            "Comprimidos 10, 20, 40, 60 e 80 mg"
+          ],
+          "dose": {
+            "hypertension": "40 mg duas vezes ao dia; manutenção habitual 120-240 mg/dia, individualizada.",
+            "angina": "80-320 mg/dia divididos em 2-4 tomadas.",
+            "atrialFibrillation": "10-30 mg três ou quatro vezes ao dia.",
+            "postMI": "180-240 mg/dia em doses divididas.",
+            "migraine": "Início 80 mg/dia dividido; faixa efetiva habitual 160-240 mg/dia."
+          },
+          "pediatricDose": "A bula adulta não estabelece esquema pediátrico universal para estas indicações. Não extrapolar dose de adulto; usar protocolo pediátrico específico por indicação e peso quando aplicável.",
+          "renalDose": "Não há ajuste fixo validado por função renal isolada; individualizar conforme resposta, frequência cardíaca e comorbidades.",
+          "hepaticDose": "Na hepatopatia a exposição pode aumentar por menor metabolismo de primeira passagem; iniciar baixo e titular com monitorização estreita.",
+          "contraindications": [
+            "Choque cardiogênico",
+            "bradicardia sinusal",
+            "bloqueio maior que primeiro grau",
+            "asma brônquica",
+            "hipersensibilidade"
+          ],
+          "administration": "Administrar de forma consistente em relação às refeições. Não suspender abruptamente, especialmente em doença coronariana.",
+          "preparation": "Comprimidos não exigem preparo. Confirmar formulação antes de converter a partir de apresentações de liberação prolongada.",
+          "infusionProtocol": "Este registro se concentra na formulação oral; não extrapolar para propranolol IV.",
+          "specialPopulations": {
+            "asthma": "Contraindicado na asma brônquica por bloqueio beta-2.",
+            "hepatic": "Pode haver maior exposição; titular lentamente.",
+            "diabetes": "Pode mascarar taquicardia da hipoglicemia."
+          },
+          "clinicalPearls": [
+            "No feocromocitoma nunca usar betabloqueio antes de bloqueio alfa adequado",
+            "Retirada abrupta pode exacerbar angina ou precipitar infarto",
+            "Na FA serve para controle de frequência, não para anticoagulação nem redução de risco embólico."
+          ],
+          "guidelineRecommendations": [
+            "Diretriz FA 2023: betabloqueadores são recomendados para controle de frequência de longo prazo conforme substrato e comorbidades.",
+            "Diretriz AHA/ACC 2025: betabloqueadores não são primeira linha para hipertensão não complicada sem indicação concomitante."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fadiga",
+              "tontura",
+              "hipotensão",
+              "extremidades frias"
+            ],
+            "dangerous": [
+              "bloqueio AV",
+              "broncoespasmo",
+              "bradicardia grave",
+              "choque ou piora de insuficiência cardíaca",
+              "mascaramento de hipoglicemia"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d027f39e-7648-44c8-a8dc-b26b4cdd81be",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d027f39e-7648-44c8-a8dc-b26b4cdd81be"
+        },
+        "es": {
+          "pharmacodynamics": "Reduce la frecuencia cardíaca, la contractilidad y la conducción nodal AV, con disminución de la demanda miocárdica de oxígeno. El efecto depende de dosis, selectividad del agente y tono simpático.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fatiga",
+            "mareo",
+            "hipotensión",
+            "extremidades frías"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueo AV",
+            "broncoespasmo",
+            "bradicardia grave",
+            "shock o empeoramiento de insuficiencia cardíaca",
+            "enmascaramiento de hipoglucemia"
+          ],
+          "interactions": [
+            "Verapamilo o diltiazem aumentan bradicardia, bloqueo AV e hipotensión",
+            "Digoxina y otros cronotrópicos negativos potencian bradicardia",
+            "Clonidina requiere retirada planificada para evitar hipertensión de rebote",
+            "Insulina y secretagogos: puede atenuar síntomas adrenérgicos de hipoglucemia"
+          ],
+          "monitoring": [
+            "Frecuencia cardíaca",
+            "presión arterial",
+            "ECG si existe trastorno de conducción o arritmia",
+            "signos de insuficiencia cardíaca",
+            "broncoespasmo y glucemia en pacientes de riesgo"
+          ],
+          "patientEducation": [
+            "No suspender bruscamente sin indicación",
+            "controlar pulso si fue orientado",
+            "consultar por síncope, disnea nueva o empeoramiento de edema",
+            "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
+          ],
+          "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo; cerca del parto puede producir bradicardia, hipotensión o hipoglucemia neonatal según exposición y agente.",
+          "lactation": "Individualizar según el agente, dosis y edad del lactante; vigilar bradicardia, letargo o mala alimentación cuando la exposición sea clínicamente relevante.",
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEO_AV",
+            "BRONCOESPASMO",
+            "RETIRADA_GRADUAL",
+            "HIPOGLUCEMIA_ENMASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensión abrupta en enfermedad coronaria",
+            "No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada",
+            "Usar con cautela en enfermedad broncoespástica"
+          ],
+          "name": "Propranolol",
+          "class": "Betabloqueante no selectivo",
+          "pharmacologicClass": "Antagonista competitivo beta-1 y beta-2 adrenérgico",
+          "mechanism": "Bloquea receptores beta-1 y beta-2, reduciendo frecuencia, contractilidad, conducción AV y liberación de renina; también reduce manifestaciones periféricas adrenérgicas como temblor.",
+          "pharmacokinetics": "Alta extracción hepática y metabolismo de primer paso; metabolismo por CYP2D6, CYP1A2 y CYP2C19. La exposición puede aumentar con hepatopatía.",
+          "indications": [
+            "Hipertensión",
+            "angina de pecho",
+            "control de frecuencia ventricular en fibrilación auricular",
+            "post-infarto en paciente estable",
+            "profilaxis de migraña",
+            "temblor esencial",
+            "miocardiopatía hipertrófica obstructiva sintomática",
+            "feocromocitoma solo después de bloqueo alfa adecuado"
+          ],
+          "commercialNames": [
+            "Inderal"
+          ],
+          "presentation": "Tabletas orales de liberación inmediata en múltiples concentraciones.",
+          "presentations": [
+            "Tabletas 10, 20, 40, 60 y 80 mg"
+          ],
+          "dose": {
+            "hypertension": "40 mg dos veces al día; mantenimiento habitual 120-240 mg/día, individualizado.",
+            "angina": "80-320 mg/día divididos en 2-4 tomas.",
+            "atrialFibrillation": "10-30 mg tres o cuatro veces al día.",
+            "postMI": "180-240 mg/día en dosis divididas.",
+            "migraine": "Inicio 80 mg/día dividido; rango efectivo habitual 160-240 mg/día."
+          },
+          "pediatricDose": "La ficha adulta no establece un esquema pediátrico universal para estas indicaciones. No extrapolar dosis de adulto; usar protocolo pediátrico específico por indicación y peso cuando corresponda.",
+          "renalDose": "No existe ajuste fijo validado por función renal aislada; individualizar según respuesta, frecuencia cardíaca y comorbilidades.",
+          "hepaticDose": "En hepatopatía puede aumentar la exposición por menor metabolismo de primer paso; iniciar bajo y titular con monitorización estrecha.",
+          "contraindications": [
+            "Shock cardiogénico",
+            "bradicardia sinusal",
+            "bloqueo mayor de primer grado",
+            "asma bronquial",
+            "hipersensibilidad"
+          ],
+          "administration": "Administrar de forma consistente respecto de comidas. No suspender abruptamente, especialmente en enfermedad coronaria.",
+          "preparation": "Tabletas no requieren preparación. Confirmar formulación antes de convertir desde presentaciones de liberación prolongada.",
+          "infusionProtocol": "Este registro se centra en formulación oral; no extrapolar a propranolol IV.",
+          "specialPopulations": {
+            "asthma": "Contraindicado en asma bronquial por bloqueo beta-2.",
+            "hepatic": "Mayor exposición posible; titular lentamente.",
+            "diabetes": "Puede enmascarar taquicardia de hipoglucemia."
+          },
+          "clinicalPearls": [
+            "En feocromocitoma nunca usar beta-bloqueo antes de un bloqueo alfa adecuado",
+            "La retirada abrupta puede exacerbar angina o precipitar infarto",
+            "En AF sirve para control de frecuencia, no para anticoagulación ni reducción de riesgo embólico."
+          ],
+          "guidelineRecommendations": [
+            "Guía AF 2023: los betabloqueantes son recomendados para control de frecuencia a largo plazo según sustrato y comorbilidades.",
+            "Guía AHA/ACC 2025: los betabloqueantes no son primera línea para hipertensión no complicada sin indicación concomitante."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fatiga",
+              "mareo",
+              "hipotensión",
+              "extremidades frías"
+            ],
+            "dangerous": [
+              "bloqueo AV",
+              "broncoespasmo",
+              "bradicardia grave",
+              "shock o empeoramiento de insuficiencia cardíaca",
+              "enmascaramiento de hipoglucemia"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d027f39e-7648-44c8-a8dc-b26b4cdd81be",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+            "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d027f39e-7648-44c8-a8dc-b26b4cdd81be"
+        }
       }
     },
 
@@ -7243,7 +10231,7 @@
     esmolol: {
       name:     { pt: 'Esmolol', es: 'Esmolol' },
       category: 'cardio',
-      icon:     '💉',
+      icon: '',
       color:    'rgba(220,38,38,0.15)',
       colorTxt: '#7F1D1D',
 
@@ -7757,6 +10745,256 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacodynamics": "Reduz frequência cardíaca, contratilidade e condução nodal AV, com redução da demanda miocárdica de oxigênio. O efeito depende da dose, seletividade do agente e tônus simpático.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fadiga",
+            "tontura",
+            "hipotensão",
+            "extremidades frias"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueio AV",
+            "broncoespasmo",
+            "bradicardia grave",
+            "choque ou piora de insuficiência cardíaca",
+            "mascaramento de hipoglicemia"
+          ],
+          "interactions": [
+            "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão",
+            "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
+            "Clonidina exige retirada planejada para evitar hipertensão rebote",
+            "Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia"
+          ],
+          "monitoring": [
+            "Frequência cardíaca",
+            "pressão arterial",
+            "ECG se houver distúrbio de condução ou arritmia",
+            "sinais de insuficiência cardíaca",
+            "broncoespasmo e glicemia em pacientes de risco"
+          ],
+          "patientEducation": [
+            "Não suspender abruptamente sem orientação",
+            "controlar pulso se orientado",
+            "procurar avaliação por síncope, nova dispneia ou piora de edema",
+            "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
+          ],
+          "pregnancy": "Usar apenas quando o benefício materno justificar o risco; próximo ao parto pode causar bradicardia, hipotensão ou hipoglicemia neonatal conforme exposição e agente.",
+          "lactation": "Individualizar conforme agente, dose e idade do lactente; observar bradicardia, letargia ou dificuldade de alimentação quando a exposição for clinicamente relevante.",
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEIO_AV",
+            "BRONCOESPASMO",
+            "RETIRADA_GRADUAL",
+            "HIPOGLICEMIA_MASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensão abrupta em doença coronariana",
+            "Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada",
+            "Usar com cautela em doença broncoespástica"
+          ],
+          "name": "Esmolol",
+          "class": "Betabloqueador beta-1 seletivo de ação ultracurta, intravenoso",
+          "pharmacologicClass": "Antagonista beta-1 adrenérgico de meia-vida ultracurta",
+          "mechanism": "Bloqueia preferencialmente receptores beta-1 cardíacos. Seu metabolismo rápido por esterases eritrocitárias permite titulação minuto a minuto e reversão rápida após suspensão.",
+          "pharmacokinetics": "Início rápido e meia-vida de eliminação próxima de 9 minutos. Metabolizado por esterases eritrocitárias a metabólito ácido de baixa atividade; o metabólito é eliminado pelos rins.",
+          "indications": [
+            "Controle de curto prazo da frequência ventricular em taquicardia supraventricular, fibrilação atrial ou flutter",
+            "taquicardia sinusal não compensatória",
+            "taquicardia e hipertensão perioperatórias"
+          ],
+          "commercialNames": [
+            "Brevibloc"
+          ],
+          "presentation": "Solução intravenosa pronta para uso em bolsas premix.",
+          "presentations": [
+            "2500 mg/250 mL, 10 mg/mL",
+            "2000 mg/100 mL, 20 mg/mL"
+          ],
+          "dose": {
+            "svt": "Carga opcional 500 mcg/kg em 1 minuto, depois 50 mcg/kg/min por 4 minutos; titular até 200 mcg/kg/min.",
+            "perioperative": "Controle gradual: 500 mcg/kg em 1 minuto seguido de 50 mcg/kg/min; ajustar até 200 mcg/kg/min para taquicardia ou 300 mcg/kg/min para hipertensão. Controle imediato: 1 mg/kg em 30 segundos seguido de 150 mcg/kg/min."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas pela bula para uso pediátrico rotineiro; não extrapolar o esquema adulto sem protocolo pediátrico.",
+          "renalDose": "Esmolol é metabolizado rapidamente fora do rim, mas seu metabólito ácido acumula na insuficiência renal. Em geral não requer ajuste inicial do esmolol; monitorar em infusões prolongadas.",
+          "hepaticDose": "Não requer ajuste específico por hepatopatia isolada devido ao metabolismo por esterases eritrocitárias.",
+          "contraindications": [
+            "Bradicardia sinusal grave",
+            "bloqueio maior que primeiro grau",
+            "síndrome do nó sinusal",
+            "insuficiência cardíaca descompensada",
+            "choque cardiogênico",
+            "administração próxima a verapamil IV",
+            "hipertensão pulmonar",
+            "hipersensibilidade"
+          ],
+          "administration": "Apenas IV por bomba de infusão. Monitorar ECG, frequência e pressão durante titulação.",
+          "preparation": "Usar premix na concentração rotulada; não confundir 10 mg/mL com 20 mg/mL. Inspecionar partículas e cor.",
+          "infusionProtocol": "Carga e manutenção devem ser calculadas por peso. Reavaliar cada etapa antes de aumentar; reduzir ou suspender diante de hipotensão ou bradicardia.",
+          "specialPopulations": {
+            "renal": "Metabólito ácido acumula; cautela em infusão prolongada.",
+            "perioperative": "Permite controle rápido e reversível.",
+            "diabetes": "Pode mascarar sinais adrenérgicos de hipoglicemia."
+          },
+          "clinicalPearls": [
+            "A meia-vida próxima de 9 minutos permite teste terapêutico controlável",
+            "Não confundir a concentração de 10 mg/mL com 20 mg/mL ao programar a bomba."
+          ],
+          "guidelineRecommendations": [
+            "No controle agudo de frequência, betabloqueadores IV são opção quando a situação hemodinâmica e as comorbidades permitem."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fadiga",
+              "tontura",
+              "hipotensão",
+              "extremidades frias"
+            ],
+            "dangerous": [
+              "bloqueio AV",
+              "broncoespasmo",
+              "bradicardia grave",
+              "choque ou piora de insuficiência cardíaca",
+              "mascaramento de hipoglicemia"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=01ad7942-99c3-40ee-9cfb-272fb6c44e2b",
+            "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=01ad7942-99c3-40ee-9cfb-272fb6c44e2b"
+        },
+        "es": {
+          "pharmacodynamics": "Reduce la frecuencia cardíaca, la contractilidad y la conducción nodal AV, con disminución de la demanda miocárdica de oxígeno. El efecto depende de dosis, selectividad del agente y tono simpático.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fatiga",
+            "mareo",
+            "hipotensión",
+            "extremidades frías"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueo AV",
+            "broncoespasmo",
+            "bradicardia grave",
+            "shock o empeoramiento de insuficiencia cardíaca",
+            "enmascaramiento de hipoglucemia"
+          ],
+          "interactions": [
+            "Verapamilo o diltiazem aumentan bradicardia, bloqueo AV e hipotensión",
+            "Digoxina y otros cronotrópicos negativos potencian bradicardia",
+            "Clonidina requiere retirada planificada para evitar hipertensión de rebote",
+            "Insulina y secretagogos: puede atenuar síntomas adrenérgicos de hipoglucemia"
+          ],
+          "monitoring": [
+            "Frecuencia cardíaca",
+            "presión arterial",
+            "ECG si existe trastorno de conducción o arritmia",
+            "signos de insuficiencia cardíaca",
+            "broncoespasmo y glucemia en pacientes de riesgo"
+          ],
+          "patientEducation": [
+            "No suspender bruscamente sin indicación",
+            "controlar pulso si fue orientado",
+            "consultar por síncope, disnea nueva o empeoramiento de edema",
+            "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
+          ],
+          "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo; cerca del parto puede producir bradicardia, hipotensión o hipoglucemia neonatal según exposición y agente.",
+          "lactation": "Individualizar según el agente, dosis y edad del lactante; vigilar bradicardia, letargo o mala alimentación cuando la exposición sea clínicamente relevante.",
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEO_AV",
+            "BRONCOESPASMO",
+            "RETIRADA_GRADUAL",
+            "HIPOGLUCEMIA_ENMASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensión abrupta en enfermedad coronaria",
+            "No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada",
+            "Usar con cautela en enfermedad broncoespástica"
+          ],
+          "name": "Esmolol",
+          "class": "Betabloqueante beta-1 selectivo de acción ultracorta, intravenoso",
+          "pharmacologicClass": "Antagonista beta-1 adrenérgico de vida media ultracorta",
+          "mechanism": "Bloquea preferentemente receptores beta-1 cardíacos. Su metabolismo rápido por esterasas de eritrocitos permite titulación minuto a minuto y reversión rápida tras suspender.",
+          "pharmacokinetics": "Inicio rápido y vida media de eliminación cercana a 9 minutos. Metabolizado por esterasas eritrocitarias a un metabolito ácido de baja actividad; el metabolito se elimina por riñón.",
+          "indications": [
+            "Control a corto plazo de frecuencia ventricular en taquicardia supraventricular, fibrilación auricular o flutter",
+            "taquicardia sinusal no compensatoria",
+            "taquicardia e hipertensión perioperatorias"
+          ],
+          "commercialNames": [
+            "Brevibloc"
+          ],
+          "presentation": "Solución intravenosa lista para usar en bolsas premix.",
+          "presentations": [
+            "2500 mg/250 mL, 10 mg/mL",
+            "2000 mg/100 mL, 20 mg/mL"
+          ],
+          "dose": {
+            "svt": "Carga opcional 500 mcg/kg en 1 minuto, luego 50 mcg/kg/min por 4 minutos; titular hasta 200 mcg/kg/min.",
+            "perioperative": "Control gradual: 500 mcg/kg en 1 minuto seguido de 50 mcg/kg/min; ajustar hasta 200 mcg/kg/min para taquicardia o 300 mcg/kg/min para hipertensión. Control inmediato: 1 mg/kg en 30 segundos seguido de 150 mcg/kg/min."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas por la ficha para uso pediátrico rutinario; no extrapolar el esquema adulto sin protocolo pediátrico.",
+          "renalDose": "El esmolol se metaboliza rápidamente fuera del riñón, pero su metabolito ácido se acumula en insuficiencia renal. No suele requerir ajuste inicial del esmolol; vigilar en infusiones prolongadas.",
+          "hepaticDose": "No requiere ajuste específico por hepatopatía aislada debido a metabolismo por esterasas eritrocitarias.",
+          "contraindications": [
+            "Bradicardia sinusal grave",
+            "bloqueo mayor de primer grado",
+            "síndrome del nodo enfermo",
+            "insuficiencia cardíaca descompensada",
+            "shock cardiogénico",
+            "administración cercana a verapamilo IV",
+            "hipertensión pulmonar",
+            "hipersensibilidad"
+          ],
+          "administration": "Solo IV mediante bomba de infusión. Monitorizar ECG, frecuencia y presión durante titulación.",
+          "preparation": "Usar premix en concentración rotulada; no confundir 10 mg/mL con 20 mg/mL. Inspeccionar partículas y color.",
+          "infusionProtocol": "Carga y mantenimiento deben calcularse por peso. Reevaluar cada escalón antes de aumentar; reducir o suspender ante hipotensión o bradicardia.",
+          "specialPopulations": {
+            "renal": "Metabolito ácido se acumula; cautela en infusión prolongada.",
+            "perioperative": "Permite control rápido y reversible.",
+            "diabetes": "Puede enmascarar signos adrenérgicos de hipoglucemia."
+          },
+          "clinicalPearls": [
+            "La vida media cercana a 9 minutos permite un ensayo terapéutico controlable",
+            "No mezclar la concentración de 10 mg/mL con la de 20 mg/mL al programar la bomba."
+          ],
+          "guidelineRecommendations": [
+            "En control agudo de frecuencia, los betabloqueantes IV son una opción cuando la situación hemodinámica y comorbilidades lo permiten."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fatiga",
+              "mareo",
+              "hipotensión",
+              "extremidades frías"
+            ],
+            "dangerous": [
+              "bloqueo AV",
+              "broncoespasmo",
+              "bradicardia grave",
+              "shock o empeoramiento de insuficiencia cardíaca",
+              "enmascaramiento de hipoglucemia"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=01ad7942-99c3-40ee-9cfb-272fb6c44e2b",
+            "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=01ad7942-99c3-40ee-9cfb-272fb6c44e2b"
+        }
       }
     },
 
@@ -7767,7 +11005,7 @@
     nadolol: {
       name:     { pt: 'Nadolol', es: 'Nadolol' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#7C2D12',
 
@@ -8309,6 +11547,248 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacodynamics": "Reduz frequência cardíaca, contratilidade e condução nodal AV, com redução da demanda miocárdica de oxigênio. O efeito depende da dose, seletividade do agente e tônus simpático.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fadiga",
+            "tontura",
+            "hipotensão",
+            "extremidades frias"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueio AV",
+            "broncoespasmo",
+            "bradicardia grave",
+            "choque ou piora de insuficiência cardíaca",
+            "mascaramento de hipoglicemia"
+          ],
+          "interactions": [
+            "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão",
+            "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
+            "Clonidina exige retirada planejada para evitar hipertensão rebote",
+            "Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia"
+          ],
+          "monitoring": [
+            "Frequência cardíaca",
+            "pressão arterial",
+            "ECG se houver distúrbio de condução ou arritmia",
+            "sinais de insuficiência cardíaca",
+            "broncoespasmo e glicemia em pacientes de risco"
+          ],
+          "patientEducation": [
+            "Não suspender abruptamente sem orientação",
+            "controlar pulso se orientado",
+            "procurar avaliação por síncope, nova dispneia ou piora de edema",
+            "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
+          ],
+          "pregnancy": "Usar apenas quando o benefício materno justificar o risco; próximo ao parto pode causar bradicardia, hipotensão ou hipoglicemia neonatal conforme exposição e agente.",
+          "lactation": "Individualizar conforme agente, dose e idade do lactente; observar bradicardia, letargia ou dificuldade de alimentação quando a exposição for clinicamente relevante.",
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEIO_AV",
+            "BRONCOESPASMO",
+            "RETIRADA_GRADUAL",
+            "HIPOGLICEMIA_MASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensão abrupta em doença coronariana",
+            "Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada",
+            "Usar com cautela em doença broncoespástica"
+          ],
+          "name": "Nadolol",
+          "class": "Betabloqueador não seletivo de longa duração",
+          "pharmacologicClass": "Antagonista beta-1 e beta-2 adrenérgico não seletivo",
+          "mechanism": "Bloqueia receptores beta-1 e beta-2, reduzindo frequência, contratilidade e liberação de renina.",
+          "pharmacokinetics": "Não sofre metabolismo significativo e é excretado principalmente inalterado pelos rins. Meia-vida longa permite uma tomada diária; a meia-vida aumenta muito na insuficiência renal.",
+          "indications": [
+            "Hipertensão",
+            "angina crônica estável"
+          ],
+          "commercialNames": [
+            "Corgard"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 20, 40 e 80 mg"
+          ],
+          "dose": {
+            "hypertension": "Início 40 mg uma vez ao dia; manutenção habitual 40-80 mg/dia; podem ser necessários até 240-320 mg/dia.",
+            "angina": "Início 40 mg uma vez ao dia; manutenção habitual 40-80 mg/dia; até 160-240 mg/dia em alguns pacientes."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro na bula atual.",
+          "renalDose": "Ajustar intervalo: ClCr >50, a cada 24 h; 31-50, a cada 24-36 h; 10-30, a cada 24-48 h; <10 mL/min/1,73 m2, a cada 40-60 h.",
+          "hepaticDose": "Não requer ajuste específico por hepatopatia isolada porque o metabolismo hepático é mínimo; ajustar por resposta e função renal.",
+          "contraindications": [
+            "Asma brônquica",
+            "bradicardia sinusal",
+            "bloqueio maior que primeiro grau",
+            "choque cardiogênico",
+            "insuficiência cardíaca manifesta não controlada",
+            "hipersensibilidade"
+          ],
+          "administration": "Administrar uma vez ao dia, com ou sem alimentos. Se suspenso após uso crônico, reduzir gradualmente por 1-2 semanas.",
+          "preparation": "Não requer preparo.",
+          "infusionProtocol": "Não se aplica: nadolol é oral.",
+          "specialPopulations": {
+            "renal": "A função renal determina o intervalo entre doses.",
+            "asthma": "Contraindicado na asma brônquica.",
+            "elderly": "Revisar função renal antes de titular."
+          },
+          "clinicalPearls": [
+            "A meia-vida longa permite uma tomada diária",
+            "Na insuficiência renal o ajuste principal é prolongar o intervalo, não apenas reduzir miligramas."
+          ],
+          "guidelineRecommendations": [
+            "Na hipertensão não complicada, a diretriz AHA/ACC 2025 prioriza outras classes salvo indicação concomitante para betabloqueio."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fadiga",
+              "tontura",
+              "hipotensão",
+              "extremidades frias"
+            ],
+            "dangerous": [
+              "bloqueio AV",
+              "broncoespasmo",
+              "bradicardia grave",
+              "choque ou piora de insuficiência cardíaca",
+              "mascaramento de hipoglicemia"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=64a788d0-b7f0-4f39-8adb-ab68870ecfa5",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=64a788d0-b7f0-4f39-8adb-ab68870ecfa5"
+        },
+        "es": {
+          "pharmacodynamics": "Reduce la frecuencia cardíaca, la contractilidad y la conducción nodal AV, con disminución de la demanda miocárdica de oxígeno. El efecto depende de dosis, selectividad del agente y tono simpático.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fatiga",
+            "mareo",
+            "hipotensión",
+            "extremidades frías"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueo AV",
+            "broncoespasmo",
+            "bradicardia grave",
+            "shock o empeoramiento de insuficiencia cardíaca",
+            "enmascaramiento de hipoglucemia"
+          ],
+          "interactions": [
+            "Verapamilo o diltiazem aumentan bradicardia, bloqueo AV e hipotensión",
+            "Digoxina y otros cronotrópicos negativos potencian bradicardia",
+            "Clonidina requiere retirada planificada para evitar hipertensión de rebote",
+            "Insulina y secretagogos: puede atenuar síntomas adrenérgicos de hipoglucemia"
+          ],
+          "monitoring": [
+            "Frecuencia cardíaca",
+            "presión arterial",
+            "ECG si existe trastorno de conducción o arritmia",
+            "signos de insuficiencia cardíaca",
+            "broncoespasmo y glucemia en pacientes de riesgo"
+          ],
+          "patientEducation": [
+            "No suspender bruscamente sin indicación",
+            "controlar pulso si fue orientado",
+            "consultar por síncope, disnea nueva o empeoramiento de edema",
+            "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
+          ],
+          "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo; cerca del parto puede producir bradicardia, hipotensión o hipoglucemia neonatal según exposición y agente.",
+          "lactation": "Individualizar según el agente, dosis y edad del lactante; vigilar bradicardia, letargo o mala alimentación cuando la exposición sea clínicamente relevante.",
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEO_AV",
+            "BRONCOESPASMO",
+            "RETIRADA_GRADUAL",
+            "HIPOGLUCEMIA_ENMASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensión abrupta en enfermedad coronaria",
+            "No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada",
+            "Usar con cautela en enfermedad broncoespástica"
+          ],
+          "name": "Nadolol",
+          "class": "Betabloqueante no selectivo de larga duración",
+          "pharmacologicClass": "Antagonista beta-1 y beta-2 adrenérgico no selectivo",
+          "mechanism": "Bloquea receptores beta-1 y beta-2, reduciendo frecuencia, contractilidad y liberación de renina.",
+          "pharmacokinetics": "No se metaboliza de forma significativa y se excreta principalmente sin cambios por riñón. Vida media larga que permite una toma diaria; la semivida aumenta mucho con insuficiencia renal.",
+          "indications": [
+            "Hipertensión",
+            "angina de pecho crónica estable"
+          ],
+          "commercialNames": [
+            "Corgard"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 20, 40 y 80 mg"
+          ],
+          "dose": {
+            "hypertension": "Inicio 40 mg una vez al día; mantenimiento habitual 40-80 mg/día; pueden requerirse hasta 240-320 mg/día.",
+            "angina": "Inicio 40 mg una vez al día; mantenimiento habitual 40-80 mg/día; hasta 160-240 mg/día en algunos pacientes."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario en la ficha actual.",
+          "renalDose": "Ajustar intervalo: CrCl >50, cada 24 h; 31-50, cada 24-36 h; 10-30, cada 24-48 h; <10 mL/min/1.73 m2, cada 40-60 h.",
+          "hepaticDose": "No requiere ajuste específico por hepatopatía aislada porque el metabolismo hepático es mínimo; ajustar por respuesta y función renal.",
+          "contraindications": [
+            "Asma bronquial",
+            "bradicardia sinusal",
+            "bloqueo mayor de primer grado",
+            "shock cardiogénico",
+            "insuficiencia cardíaca manifiesta no controlada",
+            "hipersensibilidad"
+          ],
+          "administration": "Administrar una vez al día, con o sin alimentos. Si se suspende tras uso crónico, reducir gradualmente durante 1-2 semanas.",
+          "preparation": "No requiere preparación.",
+          "infusionProtocol": "No aplica: nadolol es oral.",
+          "specialPopulations": {
+            "renal": "La función renal determina el intervalo de dosis.",
+            "asthma": "Contraindicado en asma bronquial.",
+            "elderly": "Revisar función renal antes de titular."
+          },
+          "clinicalPearls": [
+            "La vida media larga permite una toma diaria",
+            "En insuficiencia renal el ajuste principal es prolongar el intervalo, no solo reducir miligramos."
+          ],
+          "guidelineRecommendations": [
+            "En hipertensión no complicada, la guía AHA/ACC 2025 prioriza otras clases salvo indicación concomitante para betabloqueo."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fatiga",
+              "mareo",
+              "hipotensión",
+              "extremidades frías"
+            ],
+            "dangerous": [
+              "bloqueo AV",
+              "broncoespasmo",
+              "bradicardia grave",
+              "shock o empeoramiento de insuficiencia cardíaca",
+              "enmascaramiento de hipoglucemia"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=64a788d0-b7f0-4f39-8adb-ab68870ecfa5",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=64a788d0-b7f0-4f39-8adb-ab68870ecfa5"
+        }
       }
     }
 
@@ -8329,7 +11809,7 @@
     sotalol: {
       name:     { pt: 'Sotalol', es: 'Sotalol' },
       category: 'cardio',
-      icon:     '⚡',
+      icon: '',
       color:    'rgba(234,179,8,0.13)',
       colorTxt: '#78350F',
 
@@ -8976,6 +12456,262 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Sotalol",
+          "class": "Antiarrítmico classe III com atividade betabloqueadora não seletiva",
+          "pharmacologicClass": "Betabloqueador não seletivo e bloqueador de corrente de potássio com prolongamento da repolarização",
+          "mechanism": "Combina bloqueio beta não seletivo com prolongamento do potencial de ação e do período refratário por bloqueio de correntes de potássio, aumentando QT.",
+          "pharmacodynamics": "Reduz frequência e condução AV e prolonga QT de forma dose-dependente. O risco de torsades aumenta com dose, bradicardia, sexo feminino, distúrbios eletrolíticos e redução da depuração renal.",
+          "pharmacokinetics": "Biodisponibilidade oral alta, metabolismo mínimo e eliminação principalmente renal inalterada. Meia-vida próxima de 12 h com função renal normal e muito mais prolongada na insuficiência renal.",
+          "indications": [
+            "Arritmias ventriculares documentadas potencialmente fatais",
+            "manutenção do ritmo sinusal em fibrilação atrial ou flutter sintomáticos selecionados"
+          ],
+          "commercialNames": [
+            "Betapace",
+            "Betapace AF",
+            "Sorine"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 80, 120, 160 e 240 mg conforme produto"
+          ],
+          "dose": {
+            "ventricularArrhythmia": "Início 80 mg duas vezes ao dia com intervalo ajustado à função renal; aumentar 80 mg/dia a cada 3 dias se QTc <500 ms. Resposta habitual 160-320 mg/dia.",
+            "AF": "Início 80 mg duas vezes ao dia se ClCr >60 mL/min; pode aumentar a cada 3 dias com monitorização; muitos pacientes respondem a 120 mg duas vezes ao dia."
+          },
+          "pediatricDose": "Existe posologia pediátrica específica por superfície corporal e idade na bula; não extrapolar dose de adulto. Exige ECG, QT e ajuste renal especializado.",
+          "renalDose": "Arritmia ventricular: ClCr >60 a cada 12 h; 30-59 a cada 24 h; 10-29 a cada 36-48 h; <10 individualizar. FA/flutter: >60 a cada 12 h; 40-59 a cada 24 h; <40 mL/min contraindicado.",
+          "hepaticDose": "Não requer ajuste específico por insuficiência hepática isolada; a eliminação é principalmente renal.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fadiga",
+            "tontura",
+            "dispneia",
+            "náuseas"
+          ],
+          "dangerousAdverseEffects": [
+            "torsades de pointes",
+            "taquicardia ventricular",
+            "prolongamento importante de QT",
+            "bradicardia grave",
+            "descompensação de insuficiência cardíaca",
+            "broncoespasmo"
+          ],
+          "contraindications": [
+            "QT longo congênito ou adquirido",
+            "bradicardia ou bloqueio AV avançado sem marcapasso",
+            "choque cardiogênico ou insuficiência cardíaca descompensada",
+            "potássio sérico <4 mEq/L",
+            "asma ou broncoespasmo",
+            "para FA/flutter: QT basal >450 ms ou ClCr <40 mL/min"
+          ],
+          "interactions": [
+            "Outros fármacos que prolongam QT aumentam risco de torsades",
+            "Diuréticos que causam hipocalemia ou hipomagnesemia aumentam pró-arritmia",
+            "Digoxina, verapamil e diltiazem aumentam bradicardia ou bloqueio",
+            "Outros betabloqueadores somam efeitos cronotrópicos negativos"
+          ],
+          "monitoring": [
+            "ECG contínuo ao iniciar ou reiniciar",
+            "QTc 2-4 h após cada dose durante titulação",
+            "creatinina e ClCr",
+            "potássio e magnésio",
+            "frequência cardíaca",
+            "sinais de insuficiência cardíaca"
+          ],
+          "administration": "Iniciar ou reiniciar em unidade com ressuscitação e monitorização ECG contínua. Manter intervalos conforme função renal.",
+          "preparation": "Comprimidos não exigem preparo. Confirmar que o paciente não esteja recebendo outra formulação com sotalol duplicada.",
+          "infusionProtocol": "Não se aplica a esta ficha oral; não converter para formulação IV sem protocolo específico.",
+          "pregnancy": "Usar quando o benefício justificar o risco; atravessa placenta e pode causar bradicardia fetal/neonatal.",
+          "lactation": "É excretado no leite em quantidades clinicamente relevantes; individualizar e observar bradicardia do lactente se usado.",
+          "specialPopulations": {
+            "renal": "A função renal determina o intervalo.",
+            "electrolytes": "Corrigir hipocalemia e hipomagnesemia antes de iniciar.",
+            "HFrEF": "Em geral evitar para manutenção de ritmo por tolerabilidade e pró-arritmia salvo seleção especializada."
+          },
+          "patientEducation": [
+            "Não modificar nem omitir doses sem orientação",
+            "procurar avaliação por síncope, palpitações ou tontura intensa",
+            "evitar novos fármacos que prolonguem QT sem revisão",
+            "manter hidratação e informar diarreia prolongada"
+          ],
+          "clinicalPearls": [
+            "QT >=500 ms exige reduzir dose, prolongar intervalo ou suspender",
+            "Para FA/flutter, ClCr <40 mL/min é contraindicação para início",
+            "O risco de torsades aumenta quando se combinam insuficiência renal, bradicardia e distúrbios eletrolíticos."
+          ],
+          "guidelineRecommendations": [
+            "Diretriz FA 2023: sotalol pode ser considerado para manutenção do ritmo em pacientes selecionados sem QT prolongado, hipocalemia, hipomagnesemia ou bradicardia, com ajuste renal e monitorização estreita."
+          ],
+          "safetyFlags": [
+            "QT",
+            "TORSADES",
+            "INICIO_MONITORIZADO",
+            "FUNCAO_RENAL",
+            "ELETROLITOS",
+            "BRADICARDIA"
+          ],
+          "alerts": [
+            "Se QT atingir 500 ms ou mais, reduzir dose, prolongar intervalo ou suspender",
+            "Corrigir potássio e magnésio antes de iniciar",
+            "Evitar associação com outros prolongadores de QT quando possível."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fadiga",
+              "tontura",
+              "dispneia",
+              "náuseas"
+            ],
+            "dangerous": [
+              "torsades de pointes",
+              "taquicardia ventricular",
+              "prolongamento importante de QT",
+              "bradicardia grave",
+              "descompensação de insuficiência cardíaca",
+              "broncoespasmo"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bcbc1624-283e-732f-e053-2995a90a8f11",
+            "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bcbc1624-283e-732f-e053-2995a90a8f11"
+        },
+        "es": {
+          "name": "Sotalol",
+          "class": "Antiarrítmico clase III con actividad betabloqueante no selectiva",
+          "pharmacologicClass": "Bloqueador beta no selectivo y bloqueador de corriente de potasio con prolongación de repolarización",
+          "mechanism": "Combina bloqueo beta no selectivo con prolongación del potencial de acción y del período refractario por bloqueo de corrientes de potasio, aumentando QT.",
+          "pharmacodynamics": "Reduce frecuencia y conducción AV y prolonga QT de forma dosis-dependiente. El riesgo de torsades aumenta con dosis, bradicardia, sexo femenino, alteraciones electrolíticas y reducción del aclaramiento renal.",
+          "pharmacokinetics": "Biodisponibilidad oral alta, metabolismo mínimo y eliminación principalmente renal sin cambios. Vida media cerca de 12 h con función renal normal y mucho más prolongada en insuficiencia renal.",
+          "indications": [
+            "Arritmias ventriculares documentadas potencialmente mortales",
+            "mantenimiento del ritmo sinusal en fibrilación auricular o flutter sintomáticos seleccionados"
+          ],
+          "commercialNames": [
+            "Betapace",
+            "Betapace AF",
+            "Sorine"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 80, 120, 160 y 240 mg según producto"
+          ],
+          "dose": {
+            "ventricularArrhythmia": "Inicio 80 mg dos veces al día con intervalo ajustado a función renal; aumentar 80 mg/día cada 3 días si QTc <500 ms. Respuesta habitual 160-320 mg/día.",
+            "AF": "Inicio 80 mg dos veces al día si CrCl >60 mL/min; puede aumentar cada 3 días con monitorización; muchos pacientes responden a 120 mg dos veces al día."
+          },
+          "pediatricDose": "Existe dosificación pediátrica específica por superficie corporal y edad en la ficha; no extrapolar dosis de adulto. Requiere ECG, QT y ajuste renal especializado.",
+          "renalDose": "Arritmia ventricular: CrCl >60 cada 12 h; 30-59 cada 24 h; 10-29 cada 36-48 h; <10 individualizar. FA/flutter: >60 cada 12 h; 40-59 cada 24 h; <40 mL/min contraindicado.",
+          "hepaticDose": "No requiere ajuste específico por insuficiencia hepática aislada; la eliminación es principalmente renal.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fatiga",
+            "mareo",
+            "disnea",
+            "náuseas"
+          ],
+          "dangerousAdverseEffects": [
+            "torsades de pointes",
+            "taquicardia ventricular",
+            "prolongación marcada de QT",
+            "bradicardia grave",
+            "descompensación de insuficiencia cardíaca",
+            "broncoespasmo"
+          ],
+          "contraindications": [
+            "QT largo congénito o adquirido",
+            "bradicardia o bloqueo AV avanzado sin marcapasos",
+            "shock cardiogénico o insuficiencia cardíaca descompensada",
+            "potasio sérico <4 mEq/L",
+            "asma o broncoespasmo",
+            "para FA/flutter: QT basal >450 ms o CrCl <40 mL/min"
+          ],
+          "interactions": [
+            "Otros fármacos que prolongan QT aumentan riesgo de torsades",
+            "Diuréticos que causan hipopotasemia o hipomagnesemia aumentan proarritmia",
+            "Digoxina, verapamilo y diltiazem aumentan bradicardia o bloqueo",
+            "Otros betabloqueantes suman efectos cronotrópicos negativos"
+          ],
+          "monitoring": [
+            "ECG continuo al iniciar o reiniciar",
+            "QTc 2-4 h después de cada dosis durante titulación",
+            "creatinina y CrCl",
+            "potasio y magnesio",
+            "frecuencia cardíaca",
+            "signos de insuficiencia cardíaca"
+          ],
+          "administration": "Iniciar o reiniciar en una instalación con reanimación y monitorización ECG continua. Mantener intervalos según función renal.",
+          "preparation": "Tabletas no requieren preparación. Verificar que el paciente no reciba otra formulación con sotalol duplicada.",
+          "infusionProtocol": "No aplica a esta ficha oral; no convertir a formulación IV sin protocolo específico.",
+          "pregnancy": "Usar cuando el beneficio justifique el riesgo; atraviesa placenta y puede causar bradicardia fetal/neonatal.",
+          "lactation": "Se excreta en leche en cantidades clínicamente relevantes; individualizar y vigilar bradicardia del lactante si se usa.",
+          "specialPopulations": {
+            "renal": "La función renal determina el intervalo.",
+            "electrolytes": "Corregir hipopotasemia e hipomagnesemia antes de iniciar.",
+            "HFrEF": "Evitar de forma general para mantenimiento de ritmo por tolerabilidad y proarritmia salvo selección especializada."
+          },
+          "patientEducation": [
+            "No modificar ni omitir dosis sin indicación",
+            "consultar por síncope, palpitaciones o mareo intenso",
+            "evitar fármacos nuevos que prolonguen QT sin revisión",
+            "mantener hidratación y comunicar diarrea prolongada"
+          ],
+          "clinicalPearls": [
+            "QT >=500 ms obliga a reducir dosis, prolongar intervalo o suspender",
+            "Para FA/flutter, CrCl <40 mL/min es contraindicación de inicio",
+            "El riesgo de torsades aumenta cuando se combinan insuficiencia renal, bradicardia y alteraciones electrolíticas."
+          ],
+          "guidelineRecommendations": [
+            "Guía AF 2023: sotalol puede considerarse para mantenimiento de ritmo en pacientes seleccionados sin QT prolongado, hipopotasemia, hipomagnesemia o bradicardia, con ajuste renal y monitorización estrecha."
+          ],
+          "safetyFlags": [
+            "QT",
+            "TORSADES",
+            "INICIO_MONITORIZADO",
+            "FUNCION_RENAL",
+            "ELECTROLITOS",
+            "BRADICARDIA"
+          ],
+          "alerts": [
+            "Si QT alcanza 500 ms o más, reducir dosis, prolongar intervalo o suspender",
+            "Corregir potasio y magnesio antes de iniciar",
+            "Evitar asociación con otros prolongadores de QT cuando sea posible."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fatiga",
+              "mareo",
+              "disnea",
+              "náuseas"
+            ],
+            "dangerous": [
+              "torsades de pointes",
+              "taquicardia ventricular",
+              "prolongación marcada de QT",
+              "bradicardia grave",
+              "descompensación de insuficiencia cardíaca",
+              "broncoespasmo"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bcbc1624-283e-732f-e053-2995a90a8f11",
+            "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bcbc1624-283e-732f-e053-2995a90a8f11"
+        }
       }
     }
 
@@ -8995,7 +12731,7 @@
     labetalol: {
       name:     { pt: 'Labetalol', es: 'Labetalol' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#7C2D12',
 
@@ -9555,6 +13291,256 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacodynamics": "Reduz frequência cardíaca, contratilidade e condução nodal AV, com redução da demanda miocárdica de oxigênio. O efeito depende da dose, seletividade do agente e tônus simpático.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fadiga",
+            "tontura",
+            "hipotensão",
+            "extremidades frias"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueio AV",
+            "broncoespasmo",
+            "bradicardia grave",
+            "choque ou piora de insuficiência cardíaca",
+            "mascaramento de hipoglicemia"
+          ],
+          "interactions": [
+            "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão",
+            "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
+            "Clonidina exige retirada planejada para evitar hipertensão rebote",
+            "Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia"
+          ],
+          "monitoring": [
+            "Frequência cardíaca",
+            "pressão arterial",
+            "ECG se houver distúrbio de condução ou arritmia",
+            "sinais de insuficiência cardíaca",
+            "broncoespasmo e glicemia em pacientes de risco"
+          ],
+          "patientEducation": [
+            "Não suspender abruptamente sem orientação",
+            "controlar pulso se orientado",
+            "procurar avaliação por síncope, nova dispneia ou piora de edema",
+            "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
+          ],
+          "pregnancy": "Usar apenas quando o benefício materno justificar o risco; próximo ao parto pode causar bradicardia, hipotensão ou hipoglicemia neonatal conforme exposição e agente.",
+          "lactation": "Individualizar conforme agente, dose e idade do lactente; observar bradicardia, letargia ou dificuldade de alimentação quando a exposição for clinicamente relevante.",
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEIO_AV",
+            "BRONCOESPASMO",
+            "RETIRADA_GRADUAL",
+            "HIPOGLICEMIA_MASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensão abrupta em doença coronariana",
+            "Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada",
+            "Usar com cautela em doença broncoespástica"
+          ],
+          "name": "Labetalol",
+          "class": "Bloqueador alfa-1 e beta-adrenérgico",
+          "pharmacologicClass": "Antagonista alfa-1 seletivo e beta-1/beta-2 não seletivo",
+          "mechanism": "Bloqueia receptores alfa-1 vasculares e beta-1/beta-2, reduzindo resistência vascular e resposta simpática com menor taquicardia reflexa que um vasodilatador puro.",
+          "pharmacokinetics": "Metabolismo hepático extenso, principalmente por glucuronidação. Meia-vida de várias horas; a biodisponibilidade oral aumenta na hepatopatia por menor primeira passagem.",
+          "indications": [
+            "Hipertensão por via oral",
+            "hipertensão grave que requer tratamento IV"
+          ],
+          "commercialNames": [
+            "Trandate",
+            "Normodyne"
+          ],
+          "presentation": "Comprimidos orais e soluções intravenosas.",
+          "presentations": [
+            "Comprimidos 100, 200 e 300 mg",
+            "Injeção 5 mg/mL",
+            "Bolsas premix 1 mg/mL conforme produto"
+          ],
+          "dose": {
+            "oralHypertension": "100 mg duas vezes ao dia; titular a cada 2-3 dias. Manutenção frequente 200-400 mg duas vezes ao dia; alguns pacientes com hipertensão grave necessitam até 2400 mg/dia.",
+            "IVHypertension": "0,25 mg/kg até máximo 20 mg IV em 2 minutos; depois 40 mg ou 80 mg a cada 10 minutos conforme resposta, ou infusão 2 mg/min. Máximo acumulado habitual 300 mg no esquema de bolus."
+          },
+          "pediatricDose": "A bula atual não estabelece esquema pediátrico universal; usar protocolo pediátrico especializado se a indicação exigir.",
+          "renalDose": "Não requer ajuste fixo por insuficiência renal isolada; titular por pressão, frequência e tolerância.",
+          "hepaticDose": "A exposição oral pode aumentar na hepatopatia; iniciar com cautela e titular lentamente. Suspender diante de lesão hepática clinicamente significativa.",
+          "contraindications": [
+            "Asma brônquica",
+            "insuficiência cardíaca manifesta",
+            "bloqueio cardíaco maior que primeiro grau",
+            "choque cardiogênico",
+            "bradicardia grave",
+            "hipersensibilidade"
+          ],
+          "administration": "Oral: administrar de forma consistente. IV: manter o paciente em decúbito durante administração e confirmar tolerância ao ortostatismo antes de deambular.",
+          "preparation": "Para bolsas premix usar concentração rotulada. Frascos de 5 mg/mL podem exigir diluição para infusão conforme protocolo; inspecionar partículas e cor.",
+          "infusionProtocol": "Infusão contínua 2 mg/min conforme bula até resposta; para bolus usar máximo inicial de 20 mg, depois 40-80 mg a cada 10 minutos, com pressão e frequência monitoradas.",
+          "specialPopulations": {
+            "pregnancy": "É um dos anti-hipertensivos com ampla experiência clínica durante a gestação; escolher dose conforme urgência e protocolo obstétrico.",
+            "hepatic": "Pode haver maior exposição oral.",
+            "orthostasis": "Risco importante após administração IV."
+          },
+          "clinicalPearls": [
+            "A combinação de bloqueio alfa-1 mais beta reduz pressão com menor taquicardia reflexa",
+            "Após IV, não permitir deambulação até confirmar tolerância ortostática."
+          ],
+          "guidelineRecommendations": [
+            "A diretriz AHA/ACC 2025 inclui recomendações específicas para hipertensão na gestação; labetalol continua sendo opção de uso estabelecido quando não há contraindicação."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fadiga",
+              "tontura",
+              "hipotensão",
+              "extremidades frias"
+            ],
+            "dangerous": [
+              "bloqueio AV",
+              "broncoespasmo",
+              "bradicardia grave",
+              "choque ou piora de insuficiência cardíaca",
+              "mascaramento de hipoglicemia"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc",
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bf84ebae-3c91-4448-b1db-8e5ed3053866",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc"
+        },
+        "es": {
+          "pharmacodynamics": "Reduce la frecuencia cardíaca, la contractilidad y la conducción nodal AV, con disminución de la demanda miocárdica de oxígeno. El efecto depende de dosis, selectividad del agente y tono simpático.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "fatiga",
+            "mareo",
+            "hipotensión",
+            "extremidades frías"
+          ],
+          "dangerousAdverseEffects": [
+            "bloqueo AV",
+            "broncoespasmo",
+            "bradicardia grave",
+            "shock o empeoramiento de insuficiencia cardíaca",
+            "enmascaramiento de hipoglucemia"
+          ],
+          "interactions": [
+            "Verapamilo o diltiazem aumentan bradicardia, bloqueo AV e hipotensión",
+            "Digoxina y otros cronotrópicos negativos potencian bradicardia",
+            "Clonidina requiere retirada planificada para evitar hipertensión de rebote",
+            "Insulina y secretagogos: puede atenuar síntomas adrenérgicos de hipoglucemia"
+          ],
+          "monitoring": [
+            "Frecuencia cardíaca",
+            "presión arterial",
+            "ECG si existe trastorno de conducción o arritmia",
+            "signos de insuficiencia cardíaca",
+            "broncoespasmo y glucemia en pacientes de riesgo"
+          ],
+          "patientEducation": [
+            "No suspender bruscamente sin indicación",
+            "controlar pulso si fue orientado",
+            "consultar por síncope, disnea nueva o empeoramiento de edema",
+            "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
+          ],
+          "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo; cerca del parto puede producir bradicardia, hipotensión o hipoglucemia neonatal según exposición y agente.",
+          "lactation": "Individualizar según el agente, dosis y edad del lactante; vigilar bradicardia, letargo o mala alimentación cuando la exposición sea clínicamente relevante.",
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEO_AV",
+            "BRONCOESPASMO",
+            "RETIRADA_GRADUAL",
+            "HIPOGLUCEMIA_ENMASCARADA"
+          ],
+          "alerts": [
+            "Evitar suspensión abrupta en enfermedad coronaria",
+            "No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada",
+            "Usar con cautela en enfermedad broncoespástica"
+          ],
+          "name": "Labetalol",
+          "class": "Bloqueante alfa-1 y beta adrenérgico",
+          "pharmacologicClass": "Antagonista alfa-1 selectivo y beta-1/beta-2 no selectivo",
+          "mechanism": "Bloquea receptores alfa-1 vasculares y beta-1/beta-2, reduciendo resistencia vascular y respuesta simpática con menor taquicardia refleja que un vasodilatador puro.",
+          "pharmacokinetics": "Metabolismo hepático extenso, principalmente por glucuronidación. Vida media de varias horas; la biodisponibilidad oral aumenta en hepatopatía por menor primer paso.",
+          "indications": [
+            "Hipertensión por vía oral",
+            "hipertensión grave que requiere tratamiento IV"
+          ],
+          "commercialNames": [
+            "Trandate",
+            "Normodyne"
+          ],
+          "presentation": "Tabletas orales y soluciones intravenosas.",
+          "presentations": [
+            "Tabletas 100, 200 y 300 mg",
+            "Inyección 5 mg/mL",
+            "Bolsas premix 1 mg/mL según producto"
+          ],
+          "dose": {
+            "oralHypertension": "100 mg dos veces al día; titular cada 2-3 días. Mantenimiento frecuente 200-400 mg dos veces al día; algunos pacientes con hipertensión grave requieren hasta 2400 mg/día.",
+            "IVHypertension": "0.25 mg/kg hasta máximo 20 mg IV en 2 minutos; luego 40 mg u 80 mg cada 10 minutos según respuesta, o infusión 2 mg/min. Máximo acumulado habitual 300 mg en el esquema de bolos."
+          },
+          "pediatricDose": "La ficha actual no establece un esquema pediátrico universal; usar protocolo pediátrico especializado si la indicación lo requiere.",
+          "renalDose": "No requiere ajuste fijo por insuficiencia renal aislada; titular por presión, frecuencia y tolerancia.",
+          "hepaticDose": "La exposición oral puede aumentar en hepatopatía; iniciar con cautela y titular lentamente. Suspender ante lesión hepática clínica significativa.",
+          "contraindications": [
+            "Asma bronquial",
+            "insuficiencia cardíaca manifiesta",
+            "bloqueo cardíaco mayor de primer grado",
+            "shock cardiogénico",
+            "bradicardia grave",
+            "hipersensibilidad"
+          ],
+          "administration": "Oral: administrar de forma consistente. IV: mantener al paciente en decúbito durante administración y comprobar tolerancia al ortostatismo antes de deambular.",
+          "preparation": "Para bolsas premix usar concentración rotulada. Viales de 5 mg/mL pueden requerir dilución para infusión según protocolo; inspeccionar partículas y color.",
+          "infusionProtocol": "Infusión continua 2 mg/min según ficha hasta respuesta; para bolos usar 20 mg máximo inicial, luego 40-80 mg cada 10 minutos, con presión y frecuencia monitorizadas.",
+          "specialPopulations": {
+            "pregnancy": "Es uno de los antihipertensivos con amplia experiencia clínica durante embarazo; elegir dosis según urgencia y protocolo obstétrico.",
+            "hepatic": "Mayor exposición oral posible.",
+            "orthostasis": "Riesgo marcado después de administración IV."
+          },
+          "clinicalPearls": [
+            "La combinación alfa-1 más beta bloqueo reduce presión con menor taquicardia refleja",
+            "Después de IV, no permitir deambulación hasta comprobar tolerancia ortostática."
+          ],
+          "guidelineRecommendations": [
+            "La guía AHA/ACC 2025 incluye recomendaciones específicas para hipertensión en embarazo; labetalol continúa siendo una opción de uso establecido cuando no hay contraindicación."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "fatiga",
+              "mareo",
+              "hipotensión",
+              "extremidades frías"
+            ],
+            "dangerous": [
+              "bloqueo AV",
+              "broncoespasmo",
+              "bradicardia grave",
+              "shock o empeoramiento de insuficiencia cardíaca",
+              "enmascaramiento de hipoglucemia"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc",
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bf84ebae-3c91-4448-b1db-8e5ed3053866",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc"
+        }
       }
     },
 
@@ -9566,7 +13552,7 @@
     ivabradina: {
       name:     { pt: 'Ivabradina', es: 'Ivabradina' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(16,185,129,0.13)',
       colorTxt: '#065F46',
 
@@ -9781,6 +13767,242 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Ivabradina",
+          "class": "Inibidor seletivo da corrente If do nó sinusal",
+          "pharmacologicClass": "Bloqueador de canal HCN, redutor seletivo da frequência sem efeito inotrópico negativo direto",
+          "mechanism": "Inibe a corrente If nas células marcapasso do nó sinusal, desacelerando a despolarização diastólica e reduzindo a frequência cardíaca sem bloqueio beta nem efeito inotrópico negativo direto.",
+          "pharmacodynamics": "Reduz frequência em ritmo sinusal de forma dose-dependente. Pode causar bradicardia e fenômenos luminosos transitórios; aumenta risco de fibrilação atrial.",
+          "pharmacokinetics": "Metabolismo por CYP3A4. Meia-vida efetiva aproximada de 6 h, com metabólitos ativos. A exposição aumenta com inibidores de CYP3A4 e hepatopatia.",
+          "indications": [
+            "Reduzir hospitalização por piora de insuficiência cardíaca em adultos com HFrEF crônica estável sintomática, ritmo sinusal e frequência elevada apesar de betabloqueio máximo tolerado ou contraindicação",
+            "insuficiência cardíaca sintomática estável por cardiomiopatia dilatada em pacientes pediátricos com 6 meses ou mais"
+          ],
+          "commercialNames": [
+            "Corlanor"
+          ],
+          "presentation": "Comprimidos e solução oral.",
+          "presentations": [
+            "Comprimidos 5 e 7,5 mg",
+            "Solução oral 5 mg/5 mL, 1 mg/mL"
+          ],
+          "dose": {
+            "adult": "5 mg duas vezes ao dia com alimentos; 2,5 mg duas vezes ao dia em adultos vulneráveis. Ajustar após 2 semanas pela frequência; máximo 7,5 mg duas vezes ao dia."
+          },
+          "pediatricDose": "Menos de 40 kg: iniciar 0,05 mg/kg duas vezes ao dia com alimentos; ajustar a cada 2 semanas. Máximo 0,2 mg/kg entre 6 meses e <1 ano ou 0,3 mg/kg a partir de 1 ano, sem ultrapassar 7,5 mg duas vezes ao dia. Acima de 40 kg: esquema conforme bula com início de 2,5 mg duas vezes ao dia.",
+          "renalDose": "Não requer ajuste entre ClCr 15-60 mL/min segundo farmacocinética; dados limitados abaixo de 15 mL/min. Titular pela frequência e tolerância.",
+          "hepaticDose": "Não requer ajuste na hepatopatia leve ou moderada; contraindicado na insuficiência hepática grave.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "hipertensão",
+            "fibrilação atrial",
+            "fenômenos luminosos ou fosfenos"
+          ],
+          "dangerousAdverseEffects": [
+            "bradicardia sintomática",
+            "bloqueio de condução",
+            "fibrilação atrial",
+            "toxicidade fetal"
+          ],
+          "contraindications": [
+            "Insuficiência cardíaca aguda descompensada",
+            "hipotensão clinicamente significativa",
+            "síndrome do nó sinusal ou bloqueio SA/AV avançado sem marcapasso",
+            "bradicardia clinicamente significativa",
+            "insuficiência hepática grave",
+            "dependência exclusiva de marcapasso",
+            "inibidores fortes de CYP3A4"
+          ],
+          "interactions": [
+            "Inibidores fortes de CYP3A4 são contraindicados",
+            "Diltiazem e verapamil aumentam exposição e bradicardia e devem ser evitados",
+            "Indutores de CYP3A4 reduzem exposição",
+            "Outros cronotrópicos negativos aumentam risco de bradicardia"
+          ],
+          "monitoring": [
+            "Frequência cardíaca",
+            "ritmo e surgimento de fibrilação atrial",
+            "pressão arterial",
+            "sintomas de bradicardia",
+            "fenômenos visuais"
+          ],
+          "administration": "Administrar duas vezes ao dia com alimentos. A solução oral deve ser medida com seringa ou dispositivo adequado.",
+          "preparation": "Solução oral 1 mg/mL pronta para uso; não confundir mg com mL.",
+          "infusionProtocol": "Não se aplica: ivabradina é oral.",
+          "pregnancy": "Pode causar toxicidade fetal conforme mecanismo e dados animais; evitar gestação e usar contracepção eficaz quando aplicável.",
+          "lactation": "Amamentação não é recomendada durante o tratamento pelo potencial de reações adversas graves e ausência de dados humanos adequados.",
+          "specialPopulations": {
+            "sinusRhythm": "Requer ritmo sinusal para o efeito sobre o nó sinusal.",
+            "CYP3A4": "Evitar inibidores fortes e verapamil/diltiazem.",
+            "pediatrics": "Indicação aprovada a partir de 6 meses em cardiomiopatia dilatada sintomática estável."
+          },
+          "patientEducation": [
+            "Tomar com alimentos",
+            "procurar avaliação por pulso muito lento, síncope ou palpitações irregulares",
+            "fenômenos luminosos costumam ser transitórios",
+            "evitar grapefruit e medicamentos CYP3A4 sem revisão clínica"
+          ],
+          "clinicalPearls": [
+            "Não substitui betabloqueio quando este é tolerado; é usada em pacientes selecionados com HFrEF e ritmo sinusal",
+            "A eficácia depende da frequência sinusal; não serve para controle de frequência na fibrilação atrial."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: em HFrEF sintomática estável, FEVE <=35%, ritmo sinusal e FC >=70 bpm apesar de betabloqueio máximo tolerado, ivabradina pode reduzir hospitalizações por insuficiência cardíaca."
+          ],
+          "safetyFlags": [
+            "BRADICARDIA",
+            "FIBRILACAO_ATRIAL",
+            "CYP3A4",
+            "TOXICIDADE_FETAL"
+          ],
+          "alerts": [
+            "Não usar em insuficiência cardíaca aguda descompensada",
+            "Evitar verapamil e diltiazem",
+            "Revisar ritmo se surgirem palpitações irregulares."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "hipertensão",
+              "fibrilação atrial",
+              "fenômenos luminosos ou fosfenos"
+            ],
+            "dangerous": [
+              "bradicardia sintomática",
+              "bloqueio de condução",
+              "fibrilação atrial",
+              "toxicidade fetal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5157767b-16d5-4a69-b6bd-95d360d19fda",
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=92018a65-38f6-45f7-91d4-a34921b81d0d",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5157767b-16d5-4a69-b6bd-95d360d19fda"
+        },
+        "es": {
+          "name": "Ivabradina",
+          "class": "Inhibidor selectivo de la corriente If del nodo sinusal",
+          "pharmacologicClass": "Bloqueador de canal HCN, reductor selectivo de frecuencia sin efecto inotrópico negativo directo",
+          "mechanism": "Inhibe la corriente If en células marcapasos del nodo sinusal, enlenteciendo la despolarización diastólica y reduciendo frecuencia cardíaca sin bloqueo beta ni efecto inotrópico negativo directo.",
+          "pharmacodynamics": "Reduce frecuencia en ritmo sinusal de manera dosis-dependiente. Puede producir bradicardia y fenómenos luminosos transitorios; aumenta riesgo de fibrilación auricular.",
+          "pharmacokinetics": "Metabolismo por CYP3A4. Vida media efectiva aproximada de 6 h, con metabolitos activos. Exposición aumenta con inhibidores CYP3A4 y hepatopatía.",
+          "indications": [
+            "Reducir hospitalización por empeoramiento de insuficiencia cardíaca en adultos con HFrEF crónica estable sintomática, ritmo sinusal y frecuencia elevada pese a betabloqueo máximo tolerado o contraindicación",
+            "insuficiencia cardíaca sintomática estable por miocardiopatía dilatada en pacientes pediátricos de 6 meses o más"
+          ],
+          "commercialNames": [
+            "Corlanor"
+          ],
+          "presentation": "Tabletas y solución oral.",
+          "presentations": [
+            "Tabletas 5 y 7.5 mg",
+            "Solución oral 5 mg/5 mL, 1 mg/mL"
+          ],
+          "dose": {
+            "adult": "5 mg dos veces al día con alimentos; 2.5 mg dos veces al día en adultos vulnerables. Ajustar después de 2 semanas por frecuencia; máximo 7.5 mg dos veces al día."
+          },
+          "pediatricDose": "Menos de 40 kg: iniciar 0.05 mg/kg dos veces al día con alimentos; ajustar cada 2 semanas. Máximo 0.2 mg/kg en 6 meses a <1 año o 0.3 mg/kg desde 1 año, sin superar 7.5 mg dos veces al día. Más de 40 kg: esquema según ficha con inicio 2.5 mg dos veces al día.",
+          "renalDose": "No se requiere ajuste entre CrCl 15-60 mL/min según farmacocinética; datos limitados por debajo de 15 mL/min. Titular por frecuencia y tolerancia.",
+          "hepaticDose": "No requiere ajuste en hepatopatía leve o moderada; contraindicado en insuficiencia hepática grave.",
+          "commonAdverseEffects": [
+            "bradicardia",
+            "hipertensión",
+            "fibrilación auricular",
+            "fenómenos luminosos o fosfenos"
+          ],
+          "dangerousAdverseEffects": [
+            "bradicardia sintomática",
+            "bloqueo de conducción",
+            "fibrilación auricular",
+            "toxicidad fetal"
+          ],
+          "contraindications": [
+            "Insuficiencia cardíaca aguda descompensada",
+            "hipotensión clínicamente significativa",
+            "síndrome del nodo enfermo o bloqueo SA/AV avanzado sin marcapasos",
+            "bradicardia clínicamente significativa",
+            "insuficiencia hepática grave",
+            "dependencia exclusiva de marcapasos",
+            "inhibidores fuertes de CYP3A4"
+          ],
+          "interactions": [
+            "Inhibidores fuertes CYP3A4 están contraindicados",
+            "Diltiazem y verapamilo aumentan exposición y bradicardia y deben evitarse",
+            "Inductores CYP3A4 reducen exposición",
+            "Otros cronotrópicos negativos aumentan riesgo de bradicardia"
+          ],
+          "monitoring": [
+            "Frecuencia cardíaca",
+            "ritmo y aparición de fibrilación auricular",
+            "presión arterial",
+            "síntomas de bradicardia",
+            "fenómenos visuales"
+          ],
+          "administration": "Administrar dos veces al día con alimentos. La solución oral debe medirse con jeringa o dispositivo adecuado.",
+          "preparation": "Solución oral 1 mg/mL lista para uso; no confundir mg con mL.",
+          "infusionProtocol": "No aplica: ivabradina es oral.",
+          "pregnancy": "Puede causar toxicidad fetal según mecanismo y datos animales; evitar embarazo y usar anticoncepción eficaz cuando corresponda.",
+          "lactation": "No se recomienda lactancia durante tratamiento por potencial de reacciones adversas graves y ausencia de datos humanos adecuados.",
+          "specialPopulations": {
+            "sinusRhythm": "Requiere ritmo sinusal para el efecto sobre nodo sinusal.",
+            "CYP3A4": "Evitar inhibidores fuertes y verapamilo/diltiazem.",
+            "pediatrics": "Indicación aprobada desde 6 meses en miocardiopatía dilatada sintomática estable."
+          },
+          "patientEducation": [
+            "Tomar con alimentos",
+            "consultar por pulso muy lento, síncope o palpitaciones irregulares",
+            "los fenómenos luminosos suelen ser transitorios",
+            "evitar pomelo y medicamentos CYP3A4 sin revisión clínica"
+          ],
+          "clinicalPearls": [
+            "No sustituye betabloqueo cuando este es tolerado; se usa en pacientes seleccionados con HFrEF y ritmo sinusal",
+            "La eficacia depende de frecuencia sinusal; no sirve para control de frecuencia en fibrilación auricular."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: en HFrEF sintomática estable, LVEF <=35%, ritmo sinusal y FC >=70 lpm pese a beta-bloqueo máximo tolerado, ivabradina puede reducir hospitalizaciones por insuficiencia cardíaca."
+          ],
+          "safetyFlags": [
+            "BRADICARDIA",
+            "FIBRILACION_AURICULAR",
+            "CYP3A4",
+            "TOXICIDAD_FETAL"
+          ],
+          "alerts": [
+            "No usar en insuficiencia cardíaca aguda descompensada",
+            "Evitar verapamilo y diltiazem",
+            "Revisar ritmo si aparecen palpitaciones irregulares."
+          ],
+          "adverseEffects": {
+            "common": [
+              "bradicardia",
+              "hipertensión",
+              "fibrilación auricular",
+              "fenómenos luminosos o fosfenos"
+            ],
+            "dangerous": [
+              "bradicardia sintomática",
+              "bloqueo de conducción",
+              "fibrilación auricular",
+              "toxicidad fetal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5157767b-16d5-4a69-b6bd-95d360d19fda",
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=92018a65-38f6-45f7-91d4-a34921b81d0d",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5157767b-16d5-4a69-b6bd-95d360d19fda"
+        }
       }
     }
 
@@ -9801,7 +14023,7 @@
     digoxina: {
       name:     { pt: 'Digoxina', es: 'Digoxina' },
       category: 'cardio',
-      icon:     '⚠️',
+      icon: '',
       color:    'rgba(245,158,11,0.15)',
       colorTxt: '#78350F',
 
@@ -10055,7 +14277,251 @@
         };
       },
       /* CALC-FARMACOS-BATCH2-CLINICAL-10-PATHOLOGY-DOSE-SAFETY-V1-B-R0 */
-      clinicalEnrichment: {"commonAdverseEffects":{"es":["Náuseas y vómitos","Anorexia","Fatiga/mareo","Alteraciones visuales"],"pt":["Náuseas e vômitos","Anorexia","Fadiga/tontura","Alterações visuais"]},"contraindications":{"es":{"absolute":["Fibrilación ventricular","Hipersensibilidad a digoxina u otros digitálicos"],"relative":["FA/flutter con vía accesoria (WPW): evitar por riesgo de respuesta ventricular muy rápida/FV","Enfermedad del nodo sinusal o bloqueo AV sin soporte de marcapasos","Insuficiencia renal, bajo peso, edad avanzada, hipopotasemia, hipomagnesemia o hipercalcemia aumentan el riesgo de toxicidad"]},"pt":{"absolute":["Fibrilação ventricular","Hipersensibilidade à digoxina ou outros digitálicos"],"relative":["FA/flutter com via acessória (WPW): evitar devido ao risco de resposta ventricular muito rápida/FV","Doença do nó sinusal ou bloqueio AV sem suporte de marcapasso","Insuficiência renal, baixo peso, idade avançada, hipocalemia, hipomagnesemia ou hipercalcemia aumentam risco de toxicidade"]}},"dangerousAdverseEffects":{"es":["Bradicardia o bloqueo AV avanzado","Arritmias ventriculares","Toxicidad digitálica potencialmente fatal","Fibrilación ventricular en FA con vía accesoria/WPW"],"pt":["Bradicardia ou bloqueio AV avançado","Arritmias ventriculares","Toxicidade digitálica potencialmente fatal","Fibrilação ventricular em FA com via acessória/WPW"]},"doseByIndication":{"es":[{"indication":"Digitalización oral — adulto y >10 años, cuando sea necesaria","note":"La carga no es obligatoria en todos los pacientes; individualizar por edad, masa corporal magra, función renal e interacciones.","rows":[{"dose":"10–15 mcg/kg VO; administrar 50% inicialmente y 25% cada 6–8 h por 2 dosis adicionales, reevaluando antes de cada fracción.","label":"Carga total"}]},{"indication":"Mantenimiento — IC/FA crónica","note":"Usar peso corporal magro y ajustar por función renal; no existe una dosis fija universal segura. Monitorizar respuesta, función renal, electrolitos y signos de toxicidad.","rows":[{"dose":"3,4–5,1 mcg/kg/día VO, habitualmente 1 vez/día en adultos y >10 años.","label":"Referencia con función renal normal"}]}],"pt":[{"indication":"Digitalização oral — adulto e >10 anos, quando necessária","note":"A carga não é obrigatória em todo paciente; individualizar por idade, massa corporal magra, função renal e interações.","rows":[{"dose":"10–15 mcg/kg VO; administrar 50% inicialmente e 25% a cada 6–8 h por mais 2 doses, reavaliando resposta antes de cada fração.","label":"Carga total"}]},{"indication":"Manutenção — IC/FA crônica","note":"Usar peso corporal magro e ajustar pela função renal; não existe dose fixa universal segura. Monitorar resposta, função renal, eletrólitos e sinais de toxicidade.","rows":[{"dose":"3,4–5,1 mcg/kg/dia VO, usualmente 1x/dia em adultos e >10 anos.","label":"Referência com função renal normal"}]}]},"indications":{"es":["Insuficiencia cardíaca crónica seleccionada como terapia adyuvante","Control de la frecuencia ventricular en fibrilación auricular crónica"],"pt":["Insuficiência cardíaca crônica selecionada como terapia adjuvante","Controle da frequência ventricular em fibrilação atrial crônica"]},"references":["DailyMed — Digoxin Tablets/Injection, prescribing information (2026)"]}
+      clinicalEnrichment: {"commonAdverseEffects":{"es":["Náuseas y vómitos","Anorexia","Fatiga/mareo","Alteraciones visuales"],"pt":["Náuseas e vômitos","Anorexia","Fadiga/tontura","Alterações visuais"]},"contraindications":{"es":{"absolute":["Fibrilación ventricular","Hipersensibilidad a digoxina u otros digitálicos"],"relative":["FA/flutter con vía accesoria (WPW): evitar por riesgo de respuesta ventricular muy rápida/FV","Enfermedad del nodo sinusal o bloqueo AV sin soporte de marcapasos","Insuficiencia renal, bajo peso, edad avanzada, hipopotasemia, hipomagnesemia o hipercalcemia aumentan el riesgo de toxicidad"]},"pt":{"absolute":["Fibrilação ventricular","Hipersensibilidade à digoxina ou outros digitálicos"],"relative":["FA/flutter com via acessória (WPW): evitar devido ao risco de resposta ventricular muito rápida/FV","Doença do nó sinusal ou bloqueio AV sem suporte de marcapasso","Insuficiência renal, baixo peso, idade avançada, hipocalemia, hipomagnesemia ou hipercalcemia aumentam risco de toxicidade"]}},"dangerousAdverseEffects":{"es":["Bradicardia o bloqueo AV avanzado","Arritmias ventriculares","Toxicidad digitálica potencialmente fatal","Fibrilación ventricular en FA con vía accesoria/WPW"],"pt":["Bradicardia ou bloqueio AV avançado","Arritmias ventriculares","Toxicidade digitálica potencialmente fatal","Fibrilação ventricular em FA com via acessória/WPW"]},"doseByIndication":{"es":[{"indication":"Digitalización oral — adulto y >10 años, cuando sea necesaria","note":"La carga no es obligatoria en todos los pacientes; individualizar por edad, masa corporal magra, función renal e interacciones.","rows":[{"dose":"10–15 mcg/kg VO; administrar 50% inicialmente y 25% cada 6–8 h por 2 dosis adicionales, reevaluando antes de cada fracción.","label":"Carga total"}]},{"indication":"Mantenimiento — IC/FA crónica","note":"Usar peso corporal magro y ajustar por función renal; no existe una dosis fija universal segura. Monitorizar respuesta, función renal, electrolitos y signos de toxicidad.","rows":[{"dose":"3,4–5,1 mcg/kg/día VO, habitualmente 1 vez/día en adultos y >10 años.","label":"Referencia con función renal normal"}]}],"pt":[{"indication":"Digitalização oral — adulto e >10 anos, quando necessária","note":"A carga não é obrigatória em todo paciente; individualizar por idade, massa corporal magra, função renal e interações.","rows":[{"dose":"10–15 mcg/kg VO; administrar 50% inicialmente e 25% a cada 6–8 h por mais 2 doses, reavaliando resposta antes de cada fração.","label":"Carga total"}]},{"indication":"Manutenção — IC/FA crônica","note":"Usar peso corporal magro e ajustar pela função renal; não existe dose fixa universal segura. Monitorar resposta, função renal, eletrólitos e sinais de toxicidade.","rows":[{"dose":"3,4–5,1 mcg/kg/dia VO, usualmente 1x/dia em adultos e >10 anos.","label":"Referência com função renal normal"}]}]},"indications":{"es":["Insuficiencia cardíaca crónica seleccionada como terapia adyuvante","Control de la frecuencia ventricular en fibrilación auricular crónica"],"pt":["Insuficiência cardíaca crônica selecionada como terapia adjuvante","Controle da frequência ventricular em fibrilação atrial crônica"]},"references":["DailyMed — Digoxin Tablets/Injection, prescribing information (2026)"]},
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Digoxina",
+          "class": "Glicosídeo cardíaco",
+          "pharmacologicClass": "Inibidor da Na/K-ATPase com efeito inotrópico positivo e vagomimético",
+          "mechanism": "Inibe Na/K-ATPase, aumenta sódio intracelular e reduz troca Na/Ca, elevando cálcio intracelular e contratilidade. Aumenta tônus vagal e desacelera condução AV.",
+          "pharmacodynamics": "Aumenta inotropismo e reduz condução AV. Tem margem terapêutica estreita; toxicidade é favorecida por insuficiência renal, hipocalemia, hipomagnesemia, hipercalcemia e interações.",
+          "pharmacokinetics": "Biodisponibilidade dos comprimidos aproximadamente 60-80%. Grande volume de distribuição e eliminação principalmente renal inalterada; meia-vida prolonga muito na disfunção renal.",
+          "indications": [
+            "Insuficiência cardíaca leve a moderada em adultos selecionados",
+            "aumento da contratilidade em pacientes pediátricos com insuficiência cardíaca",
+            "controle da frequência ventricular na fibrilação atrial crônica"
+          ],
+          "commercialNames": [
+            "Lanoxin"
+          ],
+          "presentation": "Comprimidos e solução oral; existem formulações injetáveis em outros produtos.",
+          "presentations": [
+            "Comprimidos 62,5, 125 e 250 mcg conforme produto",
+            "Solução oral 0,05 mg/mL em produtos específicos"
+          ],
+          "dose": {
+            "maintenanceHF": "Frequentemente 0,125-0,25 mg uma vez ao dia; usar 0,0625-0,125 mg/dia em idosos, baixo peso ou disfunção renal. Individualizar por função renal, massa magra e concentração sérica.",
+            "AF": "Individualizar para controle de frequência; evitar perseguir concentrações altas. Se nível for medido na FA, diretriz 2023 considera razoável alvo <1,2 ng/mL."
+          },
+          "pediatricDose": "Indicada na insuficiência cardíaca pediátrica; carga e manutenção dependem de idade, peso magro e função renal. Usar tabelas pediátricas específicas da bula e monitorização de concentração, sem extrapolar mg de adulto.",
+          "renalDose": "Reduzir dose de manutenção e/ou prolongar intervalo conforme ClCr, idade e massa magra. Em disfunção renal importante podem ser necessários 62,5 mcg/dia ou menos. A eliminação é principalmente renal.",
+          "hepaticDose": "Não requer ajuste direto por hepatopatia isolada; ajustar por função renal, massa magra, interações e resposta clínica.",
+          "commonAdverseEffects": [
+            "náuseas",
+            "anorexia",
+            "vômitos",
+            "tontura",
+            "alterações visuais"
+          ],
+          "dangerousAdverseEffects": [
+            "bradicardia e bloqueio AV",
+            "taquicardia atrial com bloqueio",
+            "arritmias ventriculares",
+            "hipercalemia na toxicidade aguda grave",
+            "toxicidade potencialmente fatal"
+          ],
+          "contraindications": [
+            "Fibrilação ventricular",
+            "hipersensibilidade à digoxina ou digitalis"
+          ],
+          "interactions": [
+            "Amiodarona, verapamil, quinidina e alguns macrolídeos podem aumentar concentração de digoxina",
+            "Diuréticos que causam hipocalemia aumentam toxicidade",
+            "Antiácidos e alguns sequestrantes podem reduzir absorção",
+            "Outros fármacos bradicardizantes aumentam bloqueio AV"
+          ],
+          "monitoring": [
+            "Frequência e ECG",
+            "função renal",
+            "potássio, magnésio e cálcio",
+            "concentração sérica quando indicada, colhida pelo menos 6-8 h após dose",
+            "sinais gastrointestinais, neurológicos e visuais de toxicidade"
+          ],
+          "administration": "Administrar em horário consistente. Se nível for monitorado, colher logo antes da próxima dose ou pelo menos 6-8 h após a última.",
+          "preparation": "Não confundir microgramas com miligramas. Medir solução oral com dispositivo calibrado.",
+          "infusionProtocol": "Este registro prioriza formulações orais; a conversão para IV não é 1:1 e exige protocolo específico.",
+          "pregnancy": "Usar quando o benefício clínico justificar a exposição; há experiência histórica, mas a dose deve ser individualizada.",
+          "lactation": "Passa ao leite em baixas concentrações; em geral a exposição do lactente é baixa, mas individualizar e observar se houver risco clínico.",
+          "specialPopulations": {
+            "elderly": "Maior risco por menor massa magra e função renal; usar doses baixas.",
+            "renal": "Principal determinante da eliminação.",
+            "electrolytes": "Hipocalemia e hipomagnesemia aumentam sensibilidade à toxicidade."
+          },
+          "patientEducation": [
+            "Não duplicar doses esquecidas",
+            "procurar avaliação por náuseas persistentes, visão amarelada, palpitações ou síncope",
+            "manter controles de função renal e eletrólitos",
+            "informar todos os medicamentos e suplementos."
+          ],
+          "clinicalPearls": [
+            "Em HFrEF a diretriz usa dose individualizada para concentração sérica 0,5 a <0,9 ng/mL quando empregada",
+            "Na FA, se nível for medido, é razoável mantê-lo <1,2 ng/mL",
+            "Toxicidade pode ocorrer com níveis não extremamente altos se houver hipocalemia, insuficiência renal ou interação."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: digoxina pode ser considerada em HFrEF sintomática apesar de GDMT ou quando GDMT não é tolerada, para reduzir hospitalizações.",
+            "Diretriz FA 2023: digoxina é razoável para controle de frequência de longo prazo em pacientes com FA e sintomas de IC quando outros agentes não são preferidos ou tolerados."
+          ],
+          "safetyFlags": [
+            "MARGEM_TERAPEUTICA_ESTREITA",
+            "FUNCAO_RENAL",
+            "ELETROLITOS",
+            "ARRITMIA",
+            "INTERACOES"
+          ],
+          "alerts": [
+            "Não interpretar nível sérico isolado sem horário da última dose",
+            "Revisar função renal e eletrólitos diante de suspeita de toxicidade",
+            "Não confundir mcg com mg."
+          ],
+          "adverseEffects": {
+            "common": [
+              "náuseas",
+              "anorexia",
+              "vômitos",
+              "tontura",
+              "alterações visuais"
+            ],
+            "dangerous": [
+              "bradicardia e bloqueio AV",
+              "taquicardia atrial com bloqueio",
+              "arritmias ventriculares",
+              "hipercalemia na toxicidade aguda grave",
+              "toxicidade potencialmente fatal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=51925501-ab5b-4e12-a67e-ec2b4b592e83",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=51925501-ab5b-4e12-a67e-ec2b4b592e83"
+        },
+        "es": {
+          "name": "Digoxina",
+          "class": "Glucósido cardíaco",
+          "pharmacologicClass": "Inhibidor de Na/K-ATPasa con efecto inotrópico positivo y vagomimético",
+          "mechanism": "Inhibe Na/K-ATPasa, aumenta sodio intracelular y reduce intercambio Na/Ca, elevando calcio intracelular y contractilidad. Aumenta tono vagal y enlentece conducción AV.",
+          "pharmacodynamics": "Aumenta inotropismo y reduce conducción AV. Tiene margen terapéutico estrecho; toxicidad se favorece por insuficiencia renal, hipopotasemia, hipomagnesemia, hipercalcemia e interacciones.",
+          "pharmacokinetics": "Biodisponibilidad de tabletas aproximadamente 60-80%. Gran volumen de distribución y eliminación principalmente renal sin cambios; vida media se prolonga mucho con disfunción renal.",
+          "indications": [
+            "Insuficiencia cardíaca leve a moderada en adultos seleccionados",
+            "aumento de contractilidad en pacientes pediátricos con insuficiencia cardíaca",
+            "control de frecuencia ventricular en fibrilación auricular crónica"
+          ],
+          "commercialNames": [
+            "Lanoxin"
+          ],
+          "presentation": "Tabletas y solución oral; existen formulaciones inyectables en otros productos.",
+          "presentations": [
+            "Tabletas 62.5, 125 y 250 mcg según producto",
+            "Solución oral 0.05 mg/mL en productos específicos"
+          ],
+          "dose": {
+            "maintenanceHF": "Frecuentemente 0.125-0.25 mg una vez al día; usar 0.0625-0.125 mg/día en ancianos, bajo peso o deterioro renal. Individualizar por función renal, masa magra y concentración sérica.",
+            "AF": "Individualizar para control de frecuencia; evitar perseguir concentraciones altas. Si se mide nivel en AF, guía 2023 considera razonable objetivo <1.2 ng/mL."
+          },
+          "pediatricDose": "Indicada en insuficiencia cardíaca pediátrica; carga y mantenimiento dependen de edad, peso magro y función renal. Usar tablas pediátricas específicas de la ficha y monitorización de concentración, sin extrapolar mg de adulto.",
+          "renalDose": "Reducir dosis de mantenimiento y/o prolongar intervalo según CrCl, edad y masa magra. En deterioro renal marcado pueden requerirse 62.5 mcg/día o menos. La eliminación es principalmente renal.",
+          "hepaticDose": "No requiere ajuste directo por hepatopatía aislada; ajustar por función renal, masa magra, interacciones y respuesta clínica.",
+          "commonAdverseEffects": [
+            "náuseas",
+            "anorexia",
+            "vómitos",
+            "mareo",
+            "alteraciones visuales"
+          ],
+          "dangerousAdverseEffects": [
+            "bradicardia y bloqueo AV",
+            "taquicardia auricular con bloqueo",
+            "arritmias ventriculares",
+            "hiperpotasemia en toxicidad aguda grave",
+            "toxicidad potencialmente fatal"
+          ],
+          "contraindications": [
+            "Fibrilación ventricular",
+            "hipersensibilidad a digoxina o digitalis"
+          ],
+          "interactions": [
+            "Amiodarona, verapamilo, quinidina y algunos macrólidos pueden aumentar concentración de digoxina",
+            "Diuréticos que causan hipopotasemia aumentan toxicidad",
+            "Antiacidos y algunos secuestrantes pueden reducir absorción",
+            "Otros fármacos bradicardizantes aumentan bloqueo AV"
+          ],
+          "monitoring": [
+            "Frecuencia y ECG",
+            "función renal",
+            "potasio, magnesio y calcio",
+            "concentración sérica cuando esté indicada, obtenida al menos 6-8 h tras dosis",
+            "signos gastrointestinales, neurológicos y visuales de toxicidad"
+          ],
+          "administration": "Administrar a horario consistente. Si se monitoriza nivel, obtener muestra justo antes de la siguiente dosis o al menos 6-8 h después de la última.",
+          "preparation": "No confundir microgramos con miligramos. Medir solución oral con dispositivo calibrado.",
+          "infusionProtocol": "Este registro prioriza formulaciones orales; la conversión a IV no es 1:1 y requiere protocolo específico.",
+          "pregnancy": "Usar cuando el beneficio clínico justifique la exposición; la experiencia histórica existe, pero la dosis debe individualizarse.",
+          "lactation": "Pasa a leche en bajas concentraciones; generalmente la exposición del lactante es baja, pero individualizar y vigilar si existe riesgo clínico.",
+          "specialPopulations": {
+            "elderly": "Mayor riesgo por menor masa magra y función renal; usar dosis bajas.",
+            "renal": "Principal determinante de eliminación.",
+            "electrolytes": "Hipopotasemia e hipomagnesemia aumentan sensibilidad a toxicidad."
+          },
+          "patientEducation": [
+            "No duplicar dosis olvidadas",
+            "consultar por náuseas persistentes, visión amarillenta, palpitaciones o síncope",
+            "mantener controles de función renal y electrolitos",
+            "informar todos los medicamentos y suplementos."
+          ],
+          "clinicalPearls": [
+            "En HFrEF la guía usa dosis individualizada para concentración sérica 0.5 a <0.9 ng/mL cuando se emplea",
+            "En AF, si se mide nivel, es razonable mantenerlo <1.2 ng/mL",
+            "Toxicidad puede ocurrir con niveles no extremadamente altos si existen hipopotasemia, insuficiencia renal o interacción."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: digoxina puede considerarse en HFrEF sintomática pese a GDMT o cuando GDMT no se tolera, para reducir hospitalizaciones.",
+            "Guía AF 2023: digoxina es razonable para control de frecuencia a largo plazo en pacientes con AF y síntomas de HF cuando otros agentes no son preferidos o tolerados."
+          ],
+          "safetyFlags": [
+            "MARGEN_TERAPEUTICO_ESTRECHO",
+            "FUNCION_RENAL",
+            "ELECTROLITOS",
+            "ARRITMIA",
+            "INTERACCIONES"
+          ],
+          "alerts": [
+            "No interpretar un nivel sérico aislado sin hora de la última dosis",
+            "Revisar función renal y electrolitos ante sospecha de toxicidad",
+            "No confundir mcg con mg."
+          ],
+          "adverseEffects": {
+            "common": [
+              "náuseas",
+              "anorexia",
+              "vómitos",
+              "mareo",
+              "alteraciones visuales"
+            ],
+            "dangerous": [
+              "bradicardia y bloqueo AV",
+              "taquicardia auricular con bloqueo",
+              "arritmias ventriculares",
+              "hiperpotasemia en toxicidad aguda grave",
+              "toxicidad potencialmente fatal"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=51925501-ab5b-4e12-a67e-ec2b4b592e83",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=51925501-ab5b-4e12-a67e-ec2b4b592e83"
+        }
+      }
     }
 
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 8 (Glicosídeo Cardíaco: digoxina) */
@@ -10075,7 +14541,7 @@
     furosemida: {
       name:     { pt: 'Furosemida', es: 'Furosemida' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(59,130,246,0.13)',
       colorTxt: '#1E3A5F',
 
@@ -10317,6 +14783,254 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Diurético de alça; inibidor do cotransportador NKCC2",
+          "mechanism": "Inibe o cotransportador Na-K-2Cl no ramo ascendente espesso da alça de Henle, aumentando excreção de sódio, cloro e água e favorecendo perdas de potássio, cálcio e magnésio.",
+          "pharmacodynamics": "Produz natriurese e diurese, reduz congestão e pressões de enchimento. A resposta depende da dose, perfusão renal, absorção oral e grau de resistência diurética.",
+          "commonAdverseEffects": [
+            "poliúria",
+            "tontura",
+            "hipotensão",
+            "hipocalemia",
+            "hiponatremia",
+            "hipomagnesemia"
+          ],
+          "dangerousAdverseEffects": [
+            "depleção volêmica profunda",
+            "lesão renal aguda",
+            "distúrbios eletrolíticos graves",
+            "ototoxicidade",
+            "reações cutâneas graves raras"
+          ],
+          "contraindications": [
+            "Anúria",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "AINEs podem reduzir resposta diurética e aumentar risco renal",
+            "Aminoglicosídeos ou outros ototóxicos podem aumentar ototoxicidade",
+            "Lítio pode acumular",
+            "Digoxina: hipocalemia aumenta toxicidade",
+            "Outros anti-hipertensivos aumentam hipotensão"
+          ],
+          "monitoring": [
+            "Peso e balanço hídrico",
+            "pressão arterial",
+            "creatinina/eTFG",
+            "sódio, potássio e magnésio",
+            "sinais de desidratação",
+            "audição em doses IV altas ou fatores de risco"
+          ],
+          "pregnancy": "Usar na gestação apenas se clinicamente necessário; monitorar crescimento fetal e perfusão materna quando houver necessidade de diurese sustentada.",
+          "lactation": "Individualizar; doses altas ou diurese intensa podem reduzir produção de leite. Observar hidratação e peso do lactente.",
+          "patientEducation": [
+            "Tomar preferencialmente cedo para reduzir noctúria",
+            "controlar peso se orientado",
+            "procurar avaliação por tontura intensa, cãibras, pouca urina ou sede importante",
+            "não usar AINE cronicamente sem orientação"
+          ],
+          "clinicalPearls": [
+            "A resposta é avaliada por diurese, peso e descongestão, não apenas pela dose nominal",
+            "Resistência diurética pode exigir aumento de dose ou combinação de estratégias sob monitorização."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: diuréticos são recomendados em pacientes com insuficiência cardíaca e retenção de líquidos para aliviar congestão e sintomas."
+          ],
+          "safetyFlags": [
+            "VOLEMIA",
+            "ELETROLITOS",
+            "FUNCAO_RENAL",
+            "OTOTOXICIDADE"
+          ],
+          "alerts": [
+            "Evitar diurese excessivamente rápida sem indicação",
+            "Corrigir distúrbios eletrolíticos relevantes",
+            "Ajustar conforme resposta clínica e função renal."
+          ],
+          "name": "Furosemida",
+          "class": "Diurético de alça de alta potência",
+          "pharmacokinetics": "Biodisponibilidade oral variável. Início IV rápido. Liga-se extensamente a proteínas e é secretada no túbulo proximal para alcançar NKCC2; a eliminação combina via renal e metabolismo.",
+          "indications": [
+            "Edema associado a insuficiência cardíaca, cirrose ou doença renal",
+            "edema pulmonar agudo como tratamento adjuvante por via IV",
+            "hipertensão por via oral em pacientes selecionados"
+          ],
+          "commercialNames": [
+            "Lasix"
+          ],
+          "presentation": "Comprimidos orais e solução injetável IV/IM.",
+          "presentations": [
+            "Comprimidos 20, 40 e 80 mg conforme produto",
+            "Injeção 10 mg/mL em múltiplos tamanhos de frasco/seringa"
+          ],
+          "dose": {
+            "oralEdema": "20-80 mg como dose inicial única; individualizar e repetir ou aumentar conforme resposta.",
+            "IVEdema": "20-40 mg IV ou IM; administrar IV lentamente em 1-2 minutos. Pode repetir uma segunda dose após 2 h se necessário.",
+            "acutePulmonaryEdema": "40 mg IV lentamente em 1-2 minutos; se resposta insuficiente, pode administrar 80 mg lentamente conforme bula e contexto clínico."
+          },
+          "pediatricDose": "IV/IM: dose inicial 1 mg/kg uma vez lentamente; se necessário aumentar 1 mg/kg não antes de 2 h; doses >6 mg/kg não recomendadas. Oral: usar esquema pediátrico específico por peso da bula e resposta.",
+          "renalDose": "Não há redução automática por eTFG; na doença renal frequentemente é necessária dose maior para alcançar o túbulo. Titular por diurese, congestão, pressão, creatinina e eletrólitos; evitar sobrediurese.",
+          "hepaticDose": "Na cirrose iniciar com cautela, habitualmente junto de estratégia antialdosterônica conforme indicação, monitorando encefalopatia, sódio, potássio, função renal e volemia.",
+          "administration": "Oral preferencialmente pela manhã. IV deve ser administrada lentamente; velocidades excessivas aumentam risco de ototoxicidade.",
+          "preparation": "Inspecionar solução IV. Não misturar com soluções muito ácidas que possam precipitar o fármaco; seguir compatibilidade institucional.",
+          "infusionProtocol": "Para doses IV habituais da bula administrar lentamente. Em doses altas ou infusão contínua usar bomba e protocolo institucional com limite de velocidade e monitorização de eletrólitos.",
+          "specialPopulations": {
+            "renal": "Pode exigir dose maior para obter resposta, mas com monitorização estreita.",
+            "cirrhosis": "Alto risco de alterações de volemia/eletrólitos e encefalopatia.",
+            "elderly": "Maior risco de hipovolemia e lesão renal."
+          },
+          "adverseEffects": {
+            "common": [
+              "poliúria",
+              "tontura",
+              "hipotensão",
+              "hipocalemia",
+              "hiponatremia",
+              "hipomagnesemia"
+            ],
+            "dangerous": [
+              "depleção volêmica profunda",
+              "lesão renal aguda",
+              "distúrbios eletrolíticos graves",
+              "ototoxicidade",
+              "reações cutâneas graves raras"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=aaced7a8-c3d7-4d66-8c07-aa407b8b3f35",
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2a5bcf50-6d63-463a-915e-a72ea2e5f131",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=aaced7a8-c3d7-4d66-8c07-aa407b8b3f35"
+        },
+        "es": {
+          "pharmacologicClass": "Diurético de asa; inhibidor del cotransportador NKCC2",
+          "mechanism": "Inhibe el cotransportador Na-K-2Cl en la rama ascendente gruesa del asa de Henle, aumentando excreción de sodio, cloro y agua y favoreciendo pérdidas de potasio, calcio y magnesio.",
+          "pharmacodynamics": "Produce natriuresis y diuresis, reduce congestión y presión de llenado. La respuesta depende de dosis, perfusión renal, absorción oral y grado de resistencia diurética.",
+          "commonAdverseEffects": [
+            "poliuria",
+            "mareo",
+            "hipotensión",
+            "hipopotasemia",
+            "hiponatremia",
+            "hipomagnesemia"
+          ],
+          "dangerousAdverseEffects": [
+            "depleción profunda de volumen",
+            "lesión renal aguda",
+            "alteraciones electrolíticas graves",
+            "ototoxicidad",
+            "reacciones cutáneas graves raras"
+          ],
+          "contraindications": [
+            "Anuria",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "AINE pueden reducir respuesta diurética y aumentar riesgo renal",
+            "Aminoglucósidos u otros ototóxicos pueden aumentar ototoxicidad",
+            "Litio puede acumularse",
+            "Digoxina: hipopotasemia aumenta toxicidad",
+            "Otros antihipertensivos aumentan hipotensión"
+          ],
+          "monitoring": [
+            "Peso y balance hídrico",
+            "presión arterial",
+            "creatinina/eGFR",
+            "sodio, potasio y magnesio",
+            "signos de deshidratación",
+            "audición si dosis IV altas o factores de riesgo"
+          ],
+          "pregnancy": "Usar durante embarazo solo si es clínicamente necesario; monitorizar crecimiento fetal y perfusión materna cuando se requiera diuresis sostenida.",
+          "lactation": "Individualizar; dosis altas o diuresis intensa pueden reducir producción de leche. Vigilar hidratación y peso del lactante.",
+          "patientEducation": [
+            "Tomar preferentemente temprano para reducir nocturia",
+            "controlar peso si fue indicado",
+            "consultar por mareo intenso, calambres, poca orina o sed marcada",
+            "no usar AINE de forma crónica sin consultar"
+          ],
+          "clinicalPearls": [
+            "La respuesta se evalúa por diuresis, peso y descongestión, no solo por dosis nominal",
+            "La resistencia diurética puede requerir aumentar dosis o combinar estrategias bajo monitorización."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: los diuréticos se recomiendan en pacientes con insuficiencia cardíaca y retención de líquidos para aliviar congestión y síntomas."
+          ],
+          "safetyFlags": [
+            "VOLUMEN",
+            "ELECTROLITOS",
+            "FUNCION_RENAL",
+            "OTOTOXICIDAD"
+          ],
+          "alerts": [
+            "Evitar diuresis excesivamente rápida sin indicación",
+            "Corregir alteraciones electrolíticas relevantes",
+            "Ajustar según respuesta clínica y función renal."
+          ],
+          "name": "Furosemida",
+          "class": "Diurético de asa de alta potencia",
+          "pharmacokinetics": "Biodisponibilidad oral variable. Inicio IV rápido. Se une extensamente a proteínas y se secreta en túbulo proximal para alcanzar NKCC2; la eliminación combina vía renal y metabolismo.",
+          "indications": [
+            "Edema asociado a insuficiencia cardíaca, cirrosis o enfermedad renal",
+            "edema pulmonar agudo como tratamiento adyuvante por vía IV",
+            "hipertensión por vía oral en pacientes seleccionados"
+          ],
+          "commercialNames": [
+            "Lasix"
+          ],
+          "presentation": "Tabletas orales y solución inyectable IV/IM.",
+          "presentations": [
+            "Tabletas 20, 40 y 80 mg según producto",
+            "Inyección 10 mg/mL en múltiples tamaños de vial/jeringa"
+          ],
+          "dose": {
+            "oralEdema": "20-80 mg como dosis inicial única; individualizar y repetir o aumentar según respuesta.",
+            "IVEdema": "20-40 mg IV o IM; administrar IV lentamente en 1-2 minutos. Puede repetirse una segunda dosis después de 2 h si es necesario.",
+            "acutePulmonaryEdema": "40 mg IV lentamente en 1-2 minutos; si respuesta insuficiente, puede administrarse 80 mg lentamente según ficha y contexto clínico."
+          },
+          "pediatricDose": "IV/IM: dosis inicial 1 mg/kg una vez lentamente; si es necesario aumentar 1 mg/kg no antes de 2 h; dosis >6 mg/kg no recomendadas. Oral: usar esquema pediátrico específico por peso de la ficha y respuesta.",
+          "renalDose": "No existe reducción automática por eGFR; en enfermedad renal suele requerirse una dosis mayor para alcanzar el túbulo. Titular por diuresis, congestión, presión, creatinina y electrolitos; evitar sobre-diuresis.",
+          "hepaticDose": "En cirrosis iniciar con cautela, habitualmente junto con estrategia antialdosterónica según indicación, vigilando encefalopatía, sodio, potasio, función renal y volumen.",
+          "administration": "Oral preferentemente por la mañana. IV debe administrarse lentamente; velocidades excesivas aumentan riesgo de ototoxicidad.",
+          "preparation": "Inspeccionar solución IV. No mezclar con soluciones muy ácidas que puedan precipitar el fármaco; seguir compatibilidad institucional.",
+          "infusionProtocol": "Para dosis IV habituales de la ficha administrar lentamente. En dosis altas o infusión continua usar bomba y protocolo institucional con límite de velocidad y monitorización de electrolitos.",
+          "specialPopulations": {
+            "renal": "Puede requerir mayor dosis para obtener respuesta, pero con vigilancia estrecha.",
+            "cirrhosis": "Alto riesgo de alteraciones de volumen/electrolitos y encefalopatía.",
+            "elderly": "Mayor riesgo de hipovolemia y lesión renal."
+          },
+          "adverseEffects": {
+            "common": [
+              "poliuria",
+              "mareo",
+              "hipotensión",
+              "hipopotasemia",
+              "hiponatremia",
+              "hipomagnesemia"
+            ],
+            "dangerous": [
+              "depleción profunda de volumen",
+              "lesión renal aguda",
+              "alteraciones electrolíticas graves",
+              "ototoxicidad",
+              "reacciones cutáneas graves raras"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=aaced7a8-c3d7-4d66-8c07-aa407b8b3f35",
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2a5bcf50-6d63-463a-915e-a72ea2e5f131",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=aaced7a8-c3d7-4d66-8c07-aa407b8b3f35"
+        }
       }
     },
 
@@ -10936,7 +15650,7 @@
     torsemida: {
       name:     { pt: 'Torsemida', es: 'Torasemida' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(59,130,246,0.10)',
       colorTxt: '#1E3A8A',
 
@@ -11173,6 +15887,256 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP05_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Diurético de alça; inibidor do cotransportador NKCC2",
+          "mechanism": "Inibe o cotransportador Na-K-2Cl no ramo ascendente espesso da alça de Henle, aumentando excreção de sódio, cloro e água e favorecendo perdas de potássio, cálcio e magnésio.",
+          "pharmacodynamics": "Produz natriurese e diurese, reduz congestão e pressões de enchimento. A resposta depende da dose, perfusão renal, absorção oral e grau de resistência diurética.",
+          "commonAdverseEffects": [
+            "poliúria",
+            "tontura",
+            "hipotensão",
+            "hipocalemia",
+            "hiponatremia",
+            "hipomagnesemia"
+          ],
+          "dangerousAdverseEffects": [
+            "depleção volêmica profunda",
+            "lesão renal aguda",
+            "distúrbios eletrolíticos graves",
+            "ototoxicidade",
+            "reações cutâneas graves raras"
+          ],
+          "contraindications": [
+            "Anúria",
+            "hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "AINEs podem reduzir resposta diurética e aumentar risco renal",
+            "Aminoglicosídeos ou outros ototóxicos podem aumentar ototoxicidade",
+            "Lítio pode acumular",
+            "Digoxina: hipocalemia aumenta toxicidade",
+            "Outros anti-hipertensivos aumentam hipotensão"
+          ],
+          "monitoring": [
+            "Peso e balanço hídrico",
+            "pressão arterial",
+            "creatinina/eTFG",
+            "sódio, potássio e magnésio",
+            "sinais de desidratação",
+            "audição em doses IV altas ou fatores de risco"
+          ],
+          "pregnancy": "Usar na gestação apenas se clinicamente necessário; monitorar crescimento fetal e perfusão materna quando houver necessidade de diurese sustentada.",
+          "lactation": "Individualizar; doses altas ou diurese intensa podem reduzir produção de leite. Observar hidratação e peso do lactente.",
+          "patientEducation": [
+            "Tomar preferencialmente cedo para reduzir noctúria",
+            "controlar peso se orientado",
+            "procurar avaliação por tontura intensa, cãibras, pouca urina ou sede importante",
+            "não usar AINE cronicamente sem orientação"
+          ],
+          "clinicalPearls": [
+            "A biodisponibilidade oral costuma ser mais previsível que a da furosemida",
+            "Não assumir superioridade clínica de mortalidade frente a outros diuréticos de alça; o objetivo principal é descongestão e controle de sintomas."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: diuréticos são recomendados em pacientes com insuficiência cardíaca e retenção de líquidos para aliviar congestão e sintomas."
+          ],
+          "safetyFlags": [
+            "VOLEMIA",
+            "ELETROLITOS",
+            "FUNCAO_RENAL",
+            "OTOTOXICIDADE"
+          ],
+          "alerts": [
+            "Evitar diurese excessivamente rápida sem indicação",
+            "Corrigir distúrbios eletrolíticos relevantes",
+            "Ajustar conforme resposta clínica e função renal."
+          ],
+          "name": "Torsemida",
+          "class": "Diurético de alça de administração oral uma vez ao dia",
+          "pharmacokinetics": "Biodisponibilidade oral alta e relativamente consistente, com meia-vida próxima de 3,5 h. Metabolismo principalmente hepático por CYP2C9 e eliminação renal de uma fração da dose.",
+          "indications": [
+            "Edema associado à insuficiência cardíaca",
+            "edema associado à doença renal",
+            "edema associado à doença hepática",
+            "hipertensão"
+          ],
+          "commercialNames": [
+            "Demadex"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 5, 10, 20 e 100 mg conforme produto"
+          ],
+          "dose": {
+            "heartFailureEdema": "10 ou 20 mg uma vez ao dia; dobrar conforme resposta; doses >200 mg não estudadas.",
+            "renalEdema": "20 mg uma vez ao dia; dobrar conforme resposta; doses >200 mg não estudadas.",
+            "cirrhosisEdema": "5 ou 10 mg uma vez ao dia; titular dobrando; doses >40 mg não estudadas.",
+            "hypertension": "5 mg uma vez ao dia; se necessário após 4-6 semanas aumentar para 10 mg uma vez ao dia."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas em pacientes pediátricos pela bula atual.",
+          "renalDose": "Edema por doença renal: início 20 mg uma vez ao dia e dobrar conforme resposta; não reduzir automaticamente apenas pela eTFG. Em anúria é contraindicado.",
+          "hepaticDose": "Cirrose: iniciar 5-10 mg uma vez ao dia, em geral junto de antagonista de aldosterona ou diurético poupador de potássio conforme plano; doses >40 mg não estudadas nesta indicação.",
+          "administration": "Uma vez ao dia, preferencialmente pela manhã; pode ser tomada com ou sem alimentos.",
+          "preparation": "Não requer reconstituição.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à torsemida oral.",
+          "specialPopulations": {
+            "renal": "A dose é titulada à resposta; anúria é contraindicação.",
+            "cirrhosis": "Maior risco de distúrbios hidroeletrolíticos e encefalopatia.",
+            "elderly": "Monitorar volemia, pressão, rim e eletrólitos."
+          },
+          "adverseEffects": {
+            "common": [
+              "poliúria",
+              "tontura",
+              "hipotensão",
+              "hipocalemia",
+              "hiponatremia",
+              "hipomagnesemia"
+            ],
+            "dangerous": [
+              "depleção volêmica profunda",
+              "lesão renal aguda",
+              "distúrbios eletrolíticos graves",
+              "ototoxicidade",
+              "reações cutâneas graves raras"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c755d94-b846-4336-a968-aa1b92dc0ac0",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c755d94-b846-4336-a968-aa1b92dc0ac0"
+        },
+        "es": {
+          "pharmacologicClass": "Diurético de asa; inhibidor del cotransportador NKCC2",
+          "mechanism": "Inhibe el cotransportador Na-K-2Cl en la rama ascendente gruesa del asa de Henle, aumentando excreción de sodio, cloro y agua y favoreciendo pérdidas de potasio, calcio y magnesio.",
+          "pharmacodynamics": "Produce natriuresis y diuresis, reduce congestión y presión de llenado. La respuesta depende de dosis, perfusión renal, absorción oral y grado de resistencia diurética.",
+          "commonAdverseEffects": [
+            "poliuria",
+            "mareo",
+            "hipotensión",
+            "hipopotasemia",
+            "hiponatremia",
+            "hipomagnesemia"
+          ],
+          "dangerousAdverseEffects": [
+            "depleción profunda de volumen",
+            "lesión renal aguda",
+            "alteraciones electrolíticas graves",
+            "ototoxicidad",
+            "reacciones cutáneas graves raras"
+          ],
+          "contraindications": [
+            "Anuria",
+            "hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "AINE pueden reducir respuesta diurética y aumentar riesgo renal",
+            "Aminoglucósidos u otros ototóxicos pueden aumentar ototoxicidad",
+            "Litio puede acumularse",
+            "Digoxina: hipopotasemia aumenta toxicidad",
+            "Otros antihipertensivos aumentan hipotensión"
+          ],
+          "monitoring": [
+            "Peso y balance hídrico",
+            "presión arterial",
+            "creatinina/eGFR",
+            "sodio, potasio y magnesio",
+            "signos de deshidratación",
+            "audición si dosis IV altas o factores de riesgo"
+          ],
+          "pregnancy": "Usar durante embarazo solo si es clínicamente necesario; monitorizar crecimiento fetal y perfusión materna cuando se requiera diuresis sostenida.",
+          "lactation": "Individualizar; dosis altas o diuresis intensa pueden reducir producción de leche. Vigilar hidratación y peso del lactante.",
+          "patientEducation": [
+            "Tomar preferentemente temprano para reducir nocturia",
+            "controlar peso si fue indicado",
+            "consultar por mareo intenso, calambres, poca orina o sed marcada",
+            "no usar AINE de forma crónica sin consultar"
+          ],
+          "clinicalPearls": [
+            "La biodisponibilidad oral suele ser más predecible que la de furosemida",
+            "No asumir superioridad clínica de mortalidad frente a otros diuréticos de asa; el objetivo principal es descongestión y control de síntomas."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: los diuréticos se recomiendan en pacientes con insuficiencia cardíaca y retención de líquidos para aliviar congestión y síntomas."
+          ],
+          "safetyFlags": [
+            "VOLUMEN",
+            "ELECTROLITOS",
+            "FUNCION_RENAL",
+            "OTOTOXICIDAD"
+          ],
+          "alerts": [
+            "Evitar diuresis excesivamente rápida sin indicación",
+            "Corregir alteraciones electrolíticas relevantes",
+            "Ajustar según respuesta clínica y función renal."
+          ],
+          "name": "Torasemida",
+          "class": "Diurético de asa de administración oral una vez al día",
+          "pharmacokinetics": "Biodisponibilidad oral alta y relativamente consistente, con vida media cercana a 3.5 h. Metabolismo principalmente hepático por CYP2C9 y eliminación renal de una fracción de la dosis.",
+          "indications": [
+            "Edema asociado a insuficiencia cardíaca",
+            "edema asociado a enfermedad renal",
+            "edema asociado a enfermedad hepática",
+            "hipertensión"
+          ],
+          "commercialNames": [
+            "Demadex"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 5, 10, 20 y 100 mg según producto"
+          ],
+          "dose": {
+            "heartFailureEdema": "10 o 20 mg una vez al día; duplicar según respuesta; dosis >200 mg no estudiadas.",
+            "renalEdema": "20 mg una vez al día; duplicar según respuesta; dosis >200 mg no estudiadas.",
+            "cirrhosisEdema": "5 o 10 mg una vez al día; titular por duplicación; dosis >40 mg no estudiadas.",
+            "hypertension": "5 mg una vez al día; si es necesario tras 4-6 semanas aumentar a 10 mg una vez al día."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos por la ficha actual.",
+          "renalDose": "Edema por enfermedad renal: inicio 20 mg una vez al día y duplicar según respuesta; no reducir automáticamente solo por eGFR. En anuria está contraindicado.",
+          "hepaticDose": "Cirrosis: iniciar 5-10 mg una vez al día, en general junto con antagonista de aldosterona o diurético ahorrador de potasio según plan; dosis >40 mg no estudiadas en esta indicación.",
+          "administration": "Una vez al día, preferentemente por la mañana; puede tomarse con o sin alimentos.",
+          "preparation": "No requiere reconstitución.",
+          "infusionProtocol": "No aplica: este registro corresponde a torsemida oral.",
+          "specialPopulations": {
+            "renal": "La dosis se titula a respuesta; anuria es contraindicación.",
+            "cirrhosis": "Mayor riesgo de alteraciones hidroelectrolíticas y encefalopatía.",
+            "elderly": "Vigilar volumen, presión, riñón y electrolitos."
+          },
+          "adverseEffects": {
+            "common": [
+              "poliuria",
+              "mareo",
+              "hipotensión",
+              "hipopotasemia",
+              "hiponatremia",
+              "hipomagnesemia"
+            ],
+            "dangerous": [
+              "depleción profunda de volumen",
+              "lesión renal aguda",
+              "alteraciones electrolíticas graves",
+              "ototoxicidad",
+              "reacciones cutáneas graves raras"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c755d94-b846-4336-a968-aa1b92dc0ac0",
+            "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+            "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c755d94-b846-4336-a968-aa1b92dc0ac0"
+        }
       }
     }
 
@@ -11193,7 +16157,7 @@
     espironolactona: {
       name:     { pt: 'Espironolactona', es: 'Espironolactona' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(16,185,129,0.12)',
       colorTxt: '#064E3B',
 
@@ -11426,6 +16390,236 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Antagonista do receptor mineralocorticoide, diurético poupador de potássio",
+          "mechanism": "Bloqueia a ação da aldosterona no receptor mineralocorticoide, reduzindo reabsorção de sódio e remodelamento cardiovascular e diminuindo a excreção de potássio.",
+          "pharmacodynamics": "Produz natriurese modesta e retenção de potássio; em HFrEF reduz remodelamento, hospitalização e mortalidade quando usado em pacientes elegíveis.",
+          "commonAdverseEffects": [
+            "hipercalemia",
+            "tontura",
+            "hipotensão",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "hipercalemia grave",
+            "lesão renal aguda",
+            "hipotensão sintomática",
+            "ginecomastia e efeitos endócrinos clinicamente importantes"
+          ],
+          "contraindications": [
+            "Hipercalemia clinicamente significativa",
+            "insuficiência renal avançada conforme indicação e bula",
+            "hipersensibilidade"
+          ],
+          "interactions": [
+            "Potássio, substitutos de sal e outros poupadores de potássio aumentam hipercalemia",
+            "IECA/BRA/ARNI aumentam risco de hipercalemia e exigem monitorização",
+            "AINEs podem piorar função renal",
+            "Inibidores de CYP3A4 são relevantes especialmente para eplerenona"
+          ],
+          "monitoring": [
+            "Potássio sérico",
+            "creatinina/eTFG",
+            "pressão arterial",
+            "estado volêmico",
+            "medicamentos concomitantes"
+          ],
+          "administration": "Via oral, em horário consistente; pode ser administrado com ou sem alimentos conforme produto.",
+          "preparation": "Não requer reconstituição para comprimidos.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+          "pregnancy": "Evitar uso rotineiro na gestação salvo indicação especializada e avaliação benefício-risco.",
+          "lactation": "Individualizar conforme fármaco, dose, idade do lactente e necessidade materna.",
+          "specialPopulations": {
+            "renal": "Maior risco de hipercalemia; ajustar ou evitar conforme eTFG e bula.",
+            "elderly": "Monitorar função renal e potássio de perto.",
+            "diabetes": "O risco de hipercalemia aumenta com DRC e bloqueio concomitante do SRAA."
+          },
+          "patientEducation": [
+            "Evitar suplementos de potássio ou sal com potássio sem orientação",
+            "realizar controles laboratoriais",
+            "procurar avaliação por fraqueza intensa, palpitações ou síncope"
+          ],
+          "clinicalPearls": [
+            "É menos seletiva que eplerenona e por isso causa mais ginecomastia e outros efeitos endócrinos",
+            "Na hipertensão resistente a diretriz 2025 a reconhece como quarto agente eficaz em pacientes selecionados."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: MRA recomendado em HFrEF NYHA II-IV com eTFG >30 e K <5,0 mEq/L; se o potássio não puder ser mantido <5,5 mEq/L, suspender o MRA.",
+            "AHA/ACC 2025: espironolactona 25-50 mg/dia é opção preferida como quarto fármaco na hipertensão resistente com função renal e potássio adequados."
+          ],
+          "safetyFlags": [
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "MONITORIZACAO_ELETROLITOS"
+          ],
+          "alerts": [
+            "Não iniciar MRA para HFrEF se eTFG <=30 ou K >=5,0 mEq/L",
+            "Revisar potássio e função renal após início e titulação."
+          ],
+          "name": "Espironolactona",
+          "class": "Antagonista não seletivo do receptor mineralocorticoide; diurético poupador de potássio",
+          "pharmacokinetics": "Metabolismo hepático rápido para metabólitos ativos, incluindo canrenona e compostos sulfurados; a atividade clínica dura mais que a meia-vida do fármaco original.",
+          "indications": [
+            "HFrEF sintomática em pacientes elegíveis",
+            "hipertensão essencial",
+            "edema por cirrose ou síndrome nefrótica",
+            "hiperaldosteronismo primário em avaliação e tratamento"
+          ],
+          "commercialNames": [
+            "Aldactone"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 25, 50 e 100 mg"
+          ],
+          "dose": {
+            "HFrEF": "Se K <=5,0 e eTFG >50: 25 mg uma vez ao dia; pode aumentar para 50 mg uma vez ao dia. Se ocorrer hipercalemia, 25 mg em dias alternados.",
+            "hypertension": "25-100 mg/dia em uma ou duas tomadas; doses >100 mg/dia geralmente não oferecem maior redução de PA.",
+            "edema": "Individualizar conforme etiologia e resposta; na cirrose iniciar em ambiente monitorado se o risco for alto."
+          },
+          "pediatricDose": "A bula de comprimido usada como referência não estabelece esquema pediátrico universal para estas indicações; não extrapolar dose adulta.",
+          "renalDose": "HFrEF: eTFG 30-50 mL/min/1,73 m2, considerar 25 mg em dias alternados. Não iniciar MRA de HFrEF com eTFG <=30; monitorar K e creatinina de perto.",
+          "hepaticDose": "Na cirrose há risco de distúrbios hidroeletrolíticos e encefalopatia; iniciar lentamente e monitorar volemia, sódio, potássio e função renal.",
+          "adverseEffects": {
+            "common": [
+              "hipercalemia",
+              "tontura",
+              "hipotensão",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "hipercalemia grave",
+              "lesão renal aguda",
+              "hipotensão sintomática",
+              "ginecomastia e efeitos endócrinos clinicamente importantes"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c31c953-05ce-475a-b93f-80aeb12bde95",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c31c953-05ce-475a-b93f-80aeb12bde95"
+        },
+        "es": {
+          "pharmacologicClass": "Antagonista del receptor mineralocorticoide, diurético ahorrador de potasio",
+          "mechanism": "Bloquea la acción de aldosterona en el receptor mineralocorticoide, reduciendo reabsorción de sodio y remodelado cardiovascular y disminuyendo excreción de potasio.",
+          "pharmacodynamics": "Produce natriuresis modesta y retención de potasio; en HFrEF reduce remodelado, hospitalización y mortalidad cuando se usa en pacientes elegibles.",
+          "commonAdverseEffects": [
+            "hiperpotasemia",
+            "mareo",
+            "hipotensión",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "hiperpotasemia grave",
+            "lesión renal aguda",
+            "hipotensión sintomática",
+            "ginecomastia y efectos endocrinos clínicamente importantes"
+          ],
+          "contraindications": [
+            "Hiperpotasemia clínicamente significativa",
+            "insuficiencia renal avanzada según indicación y ficha",
+            "hipersensibilidad"
+          ],
+          "interactions": [
+            "Potasio, sustitutos de sal y otros ahorradores de potasio aumentan hiperpotasemia",
+            "ACEi/ARA-II/ARNI aumentan riesgo de hiperpotasemia y requieren monitorización",
+            "AINE pueden empeorar función renal",
+            "Inhibidores CYP3A4 son relevantes especialmente para eplerenona"
+          ],
+          "monitoring": [
+            "Potasio sérico",
+            "creatinina/eGFR",
+            "presión arterial",
+            "estado de volumen",
+            "medicamentos concomitantes"
+          ],
+          "administration": "Vía oral, a horario consistente; puede administrarse con o sin alimentos según producto.",
+          "preparation": "No requiere reconstitución para tabletas.",
+          "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+          "pregnancy": "Evitar uso rutinario durante embarazo salvo indicación especializada y balance beneficio-riesgo.",
+          "lactation": "Individualizar según fármaco, dosis, edad del lactante y necesidad materna.",
+          "specialPopulations": {
+            "renal": "Mayor riesgo de hiperpotasemia; ajustar o evitar según eGFR y ficha.",
+            "elderly": "Vigilar función renal y potasio estrechamente.",
+            "diabetes": "El riesgo de hiperpotasemia aumenta con ERC y bloqueo concomitante del SRAA."
+          },
+          "patientEducation": [
+            "Evitar suplementos de potasio o sal con potasio sin indicación",
+            "realizar controles de laboratorio",
+            "consultar por debilidad intensa, palpitaciones o síncope"
+          ],
+          "clinicalPearls": [
+            "Es menos selectiva que eplerenona y por ello produce más ginecomastia y otros efectos endocrinos",
+            "En hipertensión resistente la guía 2025 la reconoce como cuarto agente eficaz en pacientes seleccionados."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: MRA recomendado en HFrEF NYHA II-IV con eGFR >30 y K <5.0 mEq/L; si el potasio no puede mantenerse <5.5 mEq/L, suspender el MRA.",
+            "AHA/ACC 2025: espironolactona 25-50 mg/día es una opción preferida como cuarto fármaco en hipertensión resistente con función renal y potasio adecuados."
+          ],
+          "safetyFlags": [
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "MONITORIZACION_ELECTROLITOS"
+          ],
+          "alerts": [
+            "No iniciar MRA para HFrEF si eGFR <=30 o K >=5.0 mEq/L",
+            "Revisar potasio y función renal tras inicio y titulación."
+          ],
+          "name": "Espironolactona",
+          "class": "Antagonista no selectivo del receptor mineralocorticoide; diurético ahorrador de potasio",
+          "pharmacokinetics": "Metabolismo hepático rápido a metabolitos activos, incluidos canrenona y compuestos sulfurados; la actividad clínica dura más que la vida media del fármaco original.",
+          "indications": [
+            "HFrEF sintomática en pacientes elegibles",
+            "hipertensión esencial",
+            "edema por cirrosis o síndrome nefrótico",
+            "hiperaldosteronismo primario en evaluación y tratamiento"
+          ],
+          "commercialNames": [
+            "Aldactone"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 25, 50 y 100 mg"
+          ],
+          "dose": {
+            "HFrEF": "Si K <=5.0 y eGFR >50: 25 mg una vez al día; puede aumentar a 50 mg una vez al día. Si aparece hiperpotasemia, 25 mg en días alternos.",
+            "hypertension": "25-100 mg/día en una o dos tomas; dosis >100 mg/día generalmente no aportan mayor reducción de PA.",
+            "edema": "Individualizar según etiología y respuesta; en cirrosis iniciar en entorno monitorizado si el riesgo es alto."
+          },
+          "pediatricDose": "La ficha de tableta usada como referencia no establece un esquema pediátrico universal para estas indicaciones; no extrapolar dosis adulta.",
+          "renalDose": "HFrEF: eGFR 30-50 mL/min/1.73 m2, considerar 25 mg en días alternos. No iniciar MRA de HFrEF con eGFR <=30; vigilar K y creatinina estrechamente.",
+          "hepaticDose": "En cirrosis existe riesgo de alteraciones hidroelectrolíticas y encefalopatía; iniciar lentamente y monitorizar volumen, sodio, potasio y función renal.",
+          "adverseEffects": {
+            "common": [
+              "hiperpotasemia",
+              "mareo",
+              "hipotensión",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "hiperpotasemia grave",
+              "lesión renal aguda",
+              "hipotensión sintomática",
+              "ginecomastia y efectos endocrinos clínicamente importantes"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c31c953-05ce-475a-b93f-80aeb12bde95",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c31c953-05ce-475a-b93f-80aeb12bde95"
+        }
       }
     },
 
@@ -11437,7 +16631,7 @@
     eplerenona: {
       name:     { pt: 'Eplerenona', es: 'Eplerenona' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(16,185,129,0.10)',
       colorTxt: '#065F46',
 
@@ -11663,6 +16857,230 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Antagonista do receptor mineralocorticoide, diurético poupador de potássio",
+          "mechanism": "Bloqueia a ação da aldosterona no receptor mineralocorticoide, reduzindo reabsorção de sódio e remodelamento cardiovascular e diminuindo a excreção de potássio.",
+          "pharmacodynamics": "Produz natriurese modesta e retenção de potássio; em HFrEF reduz remodelamento, hospitalização e mortalidade quando usado em pacientes elegíveis.",
+          "commonAdverseEffects": [
+            "hipercalemia",
+            "tontura",
+            "hipotensão",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "hipercalemia grave",
+            "lesão renal aguda",
+            "hipotensão sintomática"
+          ],
+          "contraindications": [
+            "K >5,5 mEq/L no início",
+            "ClCr <=30 mL/min",
+            "uso concomitante de inibidores fortes de CYP3A4",
+            "para hipertensão: restrições renais e de potássio adicionais conforme bula",
+            "hipersensibilidade"
+          ],
+          "interactions": [
+            "Inibidores fortes de CYP3A4 são contraindicados",
+            "IECA/BRA/ARNI e potássio aumentam hipercalemia",
+            "AINEs podem deteriorar função renal",
+            "Grapefruit pode aumentar exposição"
+          ],
+          "monitoring": [
+            "Potássio sérico",
+            "creatinina/eTFG",
+            "pressão arterial",
+            "estado volêmico",
+            "medicamentos concomitantes"
+          ],
+          "administration": "Via oral, em horário consistente; pode ser administrado com ou sem alimentos conforme produto.",
+          "preparation": "Não requer reconstituição para comprimidos.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+          "pregnancy": "Evitar uso rotineiro na gestação salvo indicação especializada e avaliação benefício-risco.",
+          "lactation": "Individualizar conforme fármaco, dose, idade do lactente e necessidade materna.",
+          "specialPopulations": {
+            "renal": "Maior risco de hipercalemia; ajustar ou evitar conforme eTFG e bula.",
+            "elderly": "Monitorar função renal e potássio de perto.",
+            "diabetes": "O risco de hipercalemia aumenta com DRC e bloqueio concomitante do SRAA."
+          },
+          "patientEducation": [
+            "Evitar suplementos de potássio ou sal com potássio sem orientação",
+            "realizar controles laboratoriais",
+            "procurar avaliação por fraqueza intensa, palpitações ou síncope"
+          ],
+          "clinicalPearls": [
+            "É mais seletiva que espironolactona e causa menos ginecomastia",
+            "Em HFrEF o potássio orienta redução, suspensão e reinício."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: MRA é recomendado em HFrEF NYHA II-IV se eTFG >30 mL/min/1,73 m2 e K <5,0 mEq/L; suspender se K não puder ser mantido <5,5 mEq/L."
+          ],
+          "safetyFlags": [
+            "HIPERCALEMIA",
+            "FUNCAO_RENAL",
+            "MONITORIZACAO_ELETROLITOS"
+          ],
+          "alerts": [
+            "Não iniciar MRA para HFrEF se eTFG <=30 ou K >=5,0 mEq/L",
+            "Revisar potássio e função renal após início e titulação."
+          ],
+          "name": "Eplerenona",
+          "class": "Antagonista seletivo do receptor mineralocorticoide",
+          "pharmacokinetics": "Metabolismo hepático principalmente por CYP3A4; meia-vida aproximada de 4-6 h. Metabólitos não contribuem de forma importante ao efeito.",
+          "indications": [
+            "HFrEF pós-IAM em pacientes selecionados",
+            "hipertensão arterial em adultos",
+            "HFrEF sintomática como MRA conforme diretriz em pacientes elegíveis"
+          ],
+          "commercialNames": [
+            "Inspra"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 25 e 50 mg"
+          ],
+          "dose": {
+            "postMIHFrEF": "25 mg uma vez ao dia; titular para 50 mg uma vez ao dia em até 4 semanas conforme K e tolerância.",
+            "hypertension": "50 mg uma vez ao dia; se resposta insuficiente, 50 mg duas vezes ao dia. Doses maiores não recomendadas."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro nestas indicações.",
+          "renalDose": "Contraindicado se ClCr <=30 mL/min. Para hipertensão há restrições adicionais com ClCr <50 mL/min; em HFrEF seguir ajuste por K e função renal.",
+          "hepaticDose": "Não requer ajuste na insuficiência hepática leve-moderada; dados insuficientes na grave. Monitorar potássio e exposição por interações CYP3A4.",
+          "adverseEffects": {
+            "common": [
+              "hipercalemia",
+              "tontura",
+              "hipotensão",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "hipercalemia grave",
+              "lesão renal aguda",
+              "hipotensão sintomática"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2a51c12-bdc2-4b3b-8e9e-bf363c2817ed",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2a51c12-bdc2-4b3b-8e9e-bf363c2817ed"
+        },
+        "es": {
+          "pharmacologicClass": "Antagonista del receptor mineralocorticoide, diurético ahorrador de potasio",
+          "mechanism": "Bloquea la acción de aldosterona en el receptor mineralocorticoide, reduciendo reabsorción de sodio y remodelado cardiovascular y disminuyendo excreción de potasio.",
+          "pharmacodynamics": "Produce natriuresis modesta y retención de potasio; en HFrEF reduce remodelado, hospitalización y mortalidad cuando se usa en pacientes elegibles.",
+          "commonAdverseEffects": [
+            "hiperpotasemia",
+            "mareo",
+            "hipotensión",
+            "aumento de creatinina"
+          ],
+          "dangerousAdverseEffects": [
+            "hiperpotasemia grave",
+            "lesión renal aguda",
+            "hipotensión sintomática"
+          ],
+          "contraindications": [
+            "K >5.5 mEq/L al inicio",
+            "CrCl <=30 mL/min",
+            "uso concomitante de inhibidores fuertes CYP3A4",
+            "para hipertensión: restricciones renales y de potasio adicionales según ficha",
+            "hipersensibilidad"
+          ],
+          "interactions": [
+            "Inhibidores fuertes CYP3A4 están contraindicados",
+            "ACEi/ARA-II/ARNI y potasio aumentan hiperpotasemia",
+            "AINE pueden deteriorar función renal",
+            "Pomelo puede aumentar exposición"
+          ],
+          "monitoring": [
+            "Potasio sérico",
+            "creatinina/eGFR",
+            "presión arterial",
+            "estado de volumen",
+            "medicamentos concomitantes"
+          ],
+          "administration": "Vía oral, a horario consistente; puede administrarse con o sin alimentos según producto.",
+          "preparation": "No requiere reconstitución para tabletas.",
+          "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+          "pregnancy": "Evitar uso rutinario durante embarazo salvo indicación especializada y balance beneficio-riesgo.",
+          "lactation": "Individualizar según fármaco, dosis, edad del lactante y necesidad materna.",
+          "specialPopulations": {
+            "renal": "Mayor riesgo de hiperpotasemia; ajustar o evitar según eGFR y ficha.",
+            "elderly": "Vigilar función renal y potasio estrechamente.",
+            "diabetes": "El riesgo de hiperpotasemia aumenta con ERC y bloqueo concomitante del SRAA."
+          },
+          "patientEducation": [
+            "Evitar suplementos de potasio o sal con potasio sin indicación",
+            "realizar controles de laboratorio",
+            "consultar por debilidad intensa, palpitaciones o síncope"
+          ],
+          "clinicalPearls": [
+            "Es más selectiva que espironolactona y causa menos ginecomastia",
+            "En HFrEF el potasio guía reducción, suspensión y reinicio."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC/HFSA: MRA se recomienda en HFrEF NYHA II-IV si eGFR >30 mL/min/1.73 m2 y K <5.0 mEq/L; suspender si K no puede mantenerse <5.5 mEq/L."
+          ],
+          "safetyFlags": [
+            "HIPERPOTASEMIA",
+            "FUNCION_RENAL",
+            "MONITORIZACION_ELECTROLITOS"
+          ],
+          "alerts": [
+            "No iniciar MRA para HFrEF si eGFR <=30 o K >=5.0 mEq/L",
+            "Revisar potasio y función renal tras inicio y titulación."
+          ],
+          "name": "Eplerenona",
+          "class": "Antagonista selectivo del receptor mineralocorticoide",
+          "pharmacokinetics": "Metabolismo hepático principalmente por CYP3A4; vida media aproximada 4-6 h. Metabolitos no contribuyen de forma importante al efecto.",
+          "indications": [
+            "HFrEF post-IAM en pacientes seleccionados",
+            "hipertensión arterial en adultos",
+            "HFrEF sintomática como MRA según guía en pacientes elegibles"
+          ],
+          "commercialNames": [
+            "Inspra"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 25 y 50 mg"
+          ],
+          "dose": {
+            "postMIHFrEF": "25 mg una vez al día; titular a 50 mg una vez al día dentro de 4 semanas según K y tolerancia.",
+            "hypertension": "50 mg una vez al día; si respuesta insuficiente, 50 mg dos veces al día. Dosis mayores no recomendadas."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario en estas indicaciones.",
+          "renalDose": "Contraindicado si CrCl <=30 mL/min. Para hipertensión existen restricciones adicionales con CrCl <50 mL/min; en HFrEF seguir ajuste por K y función renal.",
+          "hepaticDose": "No requiere ajuste en insuficiencia hepática leve-moderada; datos insuficientes en grave. Vigilar potasio y exposición por interacciones CYP3A4.",
+          "adverseEffects": {
+            "common": [
+              "hiperpotasemia",
+              "mareo",
+              "hipotensión",
+              "aumento de creatinina"
+            ],
+            "dangerous": [
+              "hiperpotasemia grave",
+              "lesión renal aguda",
+              "hipotensión sintomática"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2a51c12-bdc2-4b3b-8e9e-bf363c2817ed",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2a51c12-bdc2-4b3b-8e9e-bf363c2817ed"
+        }
       }
     },
 
@@ -12241,7 +17659,7 @@
     hidroclorotiazida: {
       name:     { pt: 'Hidroclorotiazida', es: 'Hidroclorotiazida' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(100,116,139,0.12)',
       colorTxt: '#1E293B',
 
@@ -12476,6 +17894,230 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Diurético tiazídico ou tipo tiazida; inibidor funcional do cotransportador Na/Cl do túbulo distal",
+          "mechanism": "Reduz reabsorção de sódio e cloro no túbulo contornado distal, aumentando natriurese e diurese e reduzindo volume extracelular e resistência vascular no longo prazo.",
+          "pharmacodynamics": "Reduz pressão arterial e aumenta excreção de sódio e potássio; pode elevar cálcio sérico, ácido úrico e glicose e causar hiponatremia.",
+          "commonAdverseEffects": [
+            "hiponatremia",
+            "hipocalemia",
+            "tontura",
+            "hiperuricemia",
+            "hiperglicemia"
+          ],
+          "dangerousAdverseEffects": [
+            "hiponatremia grave",
+            "hipocalemia grave",
+            "arritmia secundária a distúrbio eletrolítico",
+            "lesão renal por depleção volêmica"
+          ],
+          "contraindications": [
+            "Anúria",
+            "hipersensibilidade ao fármaco; revisar história de reação a sulfonamidas não antibióticas com critério clínico"
+          ],
+          "interactions": [
+            "Lítio pode acumular",
+            "AINEs podem reduzir efeito anti-hipertensivo e diurético",
+            "Digoxina: hipocalemia aumenta risco de arritmia",
+            "Outros anti-hipertensivos podem potencializar hipotensão"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "sódio e potássio",
+            "creatinina/eTFG",
+            "magnésio",
+            "ácido úrico",
+            "glicose conforme risco"
+          ],
+          "administration": "Administrar preferencialmente pela manhã; titular para a menor dose eficaz.",
+          "preparation": "Comprimidos não exigem reconstituição.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+          "pregnancy": "Diuréticos não são usados para tratar edema fisiológico da gestação; usar apenas se houver indicação materna clara.",
+          "lactation": "Pode reduzir produção de leite com diurese intensa; individualizar conforme dose e situação clínica.",
+          "specialPopulations": {
+            "elderly": "Maior risco de hiponatremia e depleção volêmica.",
+            "gout": "Pode aumentar ácido úrico e precipitar gota.",
+            "diabetes": "Pode piorar glicemia em alguns pacientes."
+          },
+          "patientEducation": [
+            "Tomar cedo para reduzir noctúria",
+            "procurar avaliação por fraqueza, cãibras, confusão ou tontura intensa",
+            "manter controles de eletrólitos e função renal"
+          ],
+          "clinicalPearls": [
+            "A resposta anti-hipertensiva deve ser avaliada junto com sódio, potássio, função renal e ácido úrico."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: diuréticos tiazídicos/tiazídico-like são tratamento de primeira linha para hipertensão; clortalidona tem maior meia-vida e potência mg por mg que hidroclorotiazida."
+          ],
+          "safetyFlags": [
+            "SODIO",
+            "POTASSIO",
+            "FUNCAO_RENAL",
+            "ACIDO_URICO"
+          ],
+          "alerts": [
+            "Corrigir distúrbios eletrolíticos relevantes",
+            "Evitar sobrediurese e revisar AINEs concomitantes."
+          ],
+          "name": "Hidroclorotiazida",
+          "class": "Diurético tiazídico",
+          "pharmacokinetics": "Absorção oral com eliminação renal predominantemente inalterada; a meia-vida aumenta quando a função renal diminui.",
+          "indications": [
+            "Hipertensão",
+            "edema associado a insuficiência cardíaca, cirrose, doença renal ou tratamento com corticosteroides/estrogênios conforme bula"
+          ],
+          "commercialNames": [
+            "Microzide"
+          ],
+          "presentation": "Comprimidos ou cápsulas orais conforme produto.",
+          "presentations": [
+            "Comprimidos 12,5, 25 e 50 mg conforme produto"
+          ],
+          "dose": {
+            "hypertension": "25 mg uma vez ao dia; pode aumentar para 50 mg/dia em uma ou duas tomadas. Doses >50 mg aumentam hipocalemia e raramente são necessárias.",
+            "edema": "25-100 mg/dia em uma ou duas tomadas; alguns pacientes respondem a uso intermitente."
+          },
+          "pediatricDose": "1-2 mg/kg/dia em uma ou duas tomadas; máximo 37,5 mg/dia até 2 anos e 100 mg/dia entre 2 e 12 anos. Menores de 6 meses podem necessitar até 3 mg/kg/dia divididos conforme bula.",
+          "renalDose": "A eficácia diminui na insuficiência renal avançada; evitar em anúria. Monitorar creatinina, sódio e potássio e suspender se houver azotemia progressiva clinicamente relevante.",
+          "hepaticDose": "Usar com cautela na hepatopatia ou cirrose pelo risco de alterações de volemia e eletrólitos que podem precipitar encefalopatia.",
+          "adverseEffects": {
+            "common": [
+              "hiponatremia",
+              "hipocalemia",
+              "tontura",
+              "hiperuricemia",
+              "hiperglicemia"
+            ],
+            "dangerous": [
+              "hiponatremia grave",
+              "hipocalemia grave",
+              "arritmia secundária a distúrbio eletrolítico",
+              "lesão renal por depleção volêmica"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c59c4230-7cea-4259-9f2f-6a568716fedf",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c59c4230-7cea-4259-9f2f-6a568716fedf"
+        },
+        "es": {
+          "pharmacologicClass": "Diurético tiazídico o tipo tiazida; inhibidor funcional del cotransportador Na/Cl del túbulo distal",
+          "mechanism": "Reduce reabsorción de sodio y cloro en el túbulo contorneado distal, aumentando natriuresis y diuresis y reduciendo volumen extracelular y resistencia vascular a largo plazo.",
+          "pharmacodynamics": "Disminuye presión arterial y favorece excreción de sodio y potasio; puede aumentar calcio sérico, ácido úrico y glucosa y causar hiponatremia.",
+          "commonAdverseEffects": [
+            "hiponatremia",
+            "hipopotasemia",
+            "mareo",
+            "hiperuricemia",
+            "hiperglucemia"
+          ],
+          "dangerousAdverseEffects": [
+            "hiponatremia grave",
+            "hipopotasemia grave",
+            "arritmia secundaria a trastorno electrolítico",
+            "lesión renal por depleción de volumen"
+          ],
+          "contraindications": [
+            "Anuria",
+            "hipersensibilidad al fármaco; revisar antecedentes de reacción a sulfonamidas no antibióticas con criterio clínico"
+          ],
+          "interactions": [
+            "Litio puede acumularse",
+            "AINE pueden reducir efecto antihipertensivo y diurético",
+            "Digoxina: hipopotasemia aumenta riesgo de arritmia",
+            "Otros antihipertensivos pueden potenciar hipotensión"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "sodio y potasio",
+            "creatinina/eGFR",
+            "magnesio",
+            "ácido úrico",
+            "glucosa según riesgo"
+          ],
+          "administration": "Administrar preferentemente por la mañana; titular a la menor dosis eficaz.",
+          "preparation": "Tabletas no requieren reconstitución.",
+          "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+          "pregnancy": "Los diuréticos no se usan para tratar edema fisiológico del embarazo; usar solo si existe indicación materna clara.",
+          "lactation": "Puede reducir producción de leche con diuresis intensa; individualizar por dosis y situación clínica.",
+          "specialPopulations": {
+            "elderly": "Mayor riesgo de hiponatremia y depleción de volumen.",
+            "gout": "Puede aumentar ácido úrico y precipitar gota.",
+            "diabetes": "Puede empeorar glucemia en algunos pacientes."
+          },
+          "patientEducation": [
+            "Tomar temprano para reducir nocturia",
+            "consultar por debilidad, calambres, confusión o mareo intenso",
+            "mantener controles de electrolitos y función renal"
+          ],
+          "clinicalPearls": [
+            "La respuesta antihipertensiva debe valorarse junto con sodio, potasio, función renal y ácido úrico."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: diuréticos tipo tiazida son tratamiento de primera línea para hipertensión; clortalidona tiene mayor vida media y potencia mg por mg que hidroclorotiazida."
+          ],
+          "safetyFlags": [
+            "SODIO",
+            "POTASIO",
+            "FUNCION_RENAL",
+            "ACIDO_URICO"
+          ],
+          "alerts": [
+            "Corregir alteraciones electrolíticas relevantes",
+            "Evitar sobre-diuresis y revisar AINE concomitantes."
+          ],
+          "name": "Hidroclorotiazida",
+          "class": "Diurético tiazídico",
+          "pharmacokinetics": "Absorción oral con eliminación renal predominantemente sin cambios; la vida media aumenta cuando disminuye la función renal.",
+          "indications": [
+            "Hipertensión",
+            "edema asociado a insuficiencia cardíaca, cirrosis, enfermedad renal o tratamiento con corticosteroides/estrógenos según ficha"
+          ],
+          "commercialNames": [
+            "Microzide"
+          ],
+          "presentation": "Tabletas o cápsulas orales según producto.",
+          "presentations": [
+            "Tabletas 12.5, 25 y 50 mg según producto"
+          ],
+          "dose": {
+            "hypertension": "25 mg una vez al día; puede aumentarse a 50 mg/día en una o dos tomas. Dosis >50 mg aumentan hipopotasemia y rara vez son necesarias.",
+            "edema": "25-100 mg/día en una o dos tomas; algunos pacientes responden a uso intermitente."
+          },
+          "pediatricDose": "1-2 mg/kg/día en una o dos tomas; máximo 37.5 mg/día hasta 2 años y 100 mg/día entre 2 y 12 años. Menores de 6 meses pueden requerir hasta 3 mg/kg/día divididos según ficha.",
+          "renalDose": "La eficacia disminuye con insuficiencia renal avanzada; evitar en anuria. Vigilar creatinina, sodio y potasio y suspender si se desarrolla azotemia progresiva clínicamente relevante.",
+          "hepaticDose": "Usar con cautela en hepatopatía o cirrosis por riesgo de cambios de volumen y electrolitos que pueden precipitar encefalopatía.",
+          "adverseEffects": {
+            "common": [
+              "hiponatremia",
+              "hipopotasemia",
+              "mareo",
+              "hiperuricemia",
+              "hiperglucemia"
+            ],
+            "dangerous": [
+              "hiponatremia grave",
+              "hipopotasemia grave",
+              "arritmia secundaria a trastorno electrolítico",
+              "lesión renal por depleción de volumen"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c59c4230-7cea-4259-9f2f-6a568716fedf",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c59c4230-7cea-4259-9f2f-6a568716fedf"
+        }
       }
     },
 
@@ -12488,7 +18130,7 @@
     clortalidona: {
       name:     { pt: 'Clortalidona', es: 'Clortalidona' },
       category: 'cardio',
-      icon:     '💊',
+      icon: '',
       color:    'rgba(100,116,139,0.10)',
       colorTxt: '#0F172A',
 
@@ -12726,6 +18368,232 @@
             )
           }
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Diurético tiazídico ou tipo tiazida; inibidor funcional do cotransportador Na/Cl do túbulo distal",
+          "mechanism": "Reduz reabsorção de sódio e cloro no túbulo contornado distal, aumentando natriurese e diurese e reduzindo volume extracelular e resistência vascular no longo prazo.",
+          "pharmacodynamics": "Reduz pressão arterial e aumenta excreção de sódio e potássio; pode elevar cálcio sérico, ácido úrico e glicose e causar hiponatremia.",
+          "commonAdverseEffects": [
+            "hiponatremia",
+            "hipocalemia",
+            "tontura",
+            "hiperuricemia",
+            "hiperglicemia"
+          ],
+          "dangerousAdverseEffects": [
+            "hiponatremia grave",
+            "hipocalemia grave",
+            "arritmia secundária a distúrbio eletrolítico",
+            "lesão renal por depleção volêmica"
+          ],
+          "contraindications": [
+            "Anúria",
+            "hipersensibilidade ao fármaco; revisar história de reação a sulfonamidas não antibióticas com critério clínico"
+          ],
+          "interactions": [
+            "Lítio pode acumular",
+            "AINEs podem reduzir efeito anti-hipertensivo e diurético",
+            "Digoxina: hipocalemia aumenta risco de arritmia",
+            "Outros anti-hipertensivos podem potencializar hipotensão"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "sódio e potássio",
+            "creatinina/eTFG",
+            "magnésio",
+            "ácido úrico",
+            "glicose conforme risco"
+          ],
+          "administration": "Administrar preferencialmente pela manhã; titular para a menor dose eficaz.",
+          "preparation": "Comprimidos não exigem reconstituição.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+          "pregnancy": "Diuréticos não são usados para tratar edema fisiológico da gestação; usar apenas se houver indicação materna clara.",
+          "lactation": "Pode reduzir produção de leite com diurese intensa; individualizar conforme dose e situação clínica.",
+          "specialPopulations": {
+            "elderly": "Maior risco de hiponatremia e depleção volêmica.",
+            "gout": "Pode aumentar ácido úrico e precipitar gota.",
+            "diabetes": "Pode piorar glicemia em alguns pacientes."
+          },
+          "patientEducation": [
+            "Tomar cedo para reduzir noctúria",
+            "procurar avaliação por fraqueza, cãibras, confusão ou tontura intensa",
+            "manter controles de eletrólitos e função renal"
+          ],
+          "clinicalPearls": [
+            "A diretriz AHA/ACC 2025 destaca que clortalidona tem meia-vida mais longa e maior potência mg por mg que hidroclorotiazida."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: diuréticos tiazídicos/tiazídico-like são tratamento de primeira linha para hipertensão; clortalidona tem maior meia-vida e potência mg por mg que hidroclorotiazida."
+          ],
+          "safetyFlags": [
+            "SODIO",
+            "POTASSIO",
+            "FUNCAO_RENAL",
+            "ACIDO_URICO"
+          ],
+          "alerts": [
+            "Corrigir distúrbios eletrolíticos relevantes",
+            "Evitar sobrediurese e revisar AINEs concomitantes."
+          ],
+          "name": "Clortalidona",
+          "class": "Diurético tiazídico-like de longa duração",
+          "pharmacokinetics": "Meia-vida muito prolongada, aproximadamente 40-60 h, com efeito anti-hipertensivo persistindo por mais de 24 h. Eliminação principalmente renal.",
+          "indications": [
+            "Hipertensão",
+            "edema de origem cardíaca, hepática ou renal em pacientes selecionados"
+          ],
+          "commercialNames": [
+            "Thalitone",
+            "Hygroton"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 15, 25, 50 ou 100 mg conforme produto"
+          ],
+          "dose": {
+            "hypertension": "Diretriz 2025: faixa habitual 12,5-25 mg uma vez ao dia. Algumas bulas tradicionais iniciam 25 mg/dia e permitem 50-100 mg, mas a toxicidade metabólica aumenta com a dose.",
+            "edema": "Individualizar para a menor dose eficaz conforme produto e resposta."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas de forma robusta para uso pediátrico rotineiro na bula adulta; usar protocolo pediátrico específico se indicado.",
+          "renalDose": "Pode perder eficácia na disfunção renal avançada e aumenta o risco de distúrbios eletrolíticos; evitar em anúria e monitorar de perto função renal e eletrólitos.",
+          "hepaticDose": "Usar com cautela em hepatopatia grave ou cirrose pelo risco de hiponatremia, hipocalemia e encefalopatia.",
+          "adverseEffects": {
+            "common": [
+              "hiponatremia",
+              "hipocalemia",
+              "tontura",
+              "hiperuricemia",
+              "hiperglicemia"
+            ],
+            "dangerous": [
+              "hiponatremia grave",
+              "hipocalemia grave",
+              "arritmia secundária a distúrbio eletrolítico",
+              "lesão renal por depleção volêmica"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0baac2aa-06c4-489e-a3f9-fe9d20cf61a2",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0baac2aa-06c4-489e-a3f9-fe9d20cf61a2"
+        },
+        "es": {
+          "pharmacologicClass": "Diurético tiazídico o tipo tiazida; inhibidor funcional del cotransportador Na/Cl del túbulo distal",
+          "mechanism": "Reduce reabsorción de sodio y cloro en el túbulo contorneado distal, aumentando natriuresis y diuresis y reduciendo volumen extracelular y resistencia vascular a largo plazo.",
+          "pharmacodynamics": "Disminuye presión arterial y favorece excreción de sodio y potasio; puede aumentar calcio sérico, ácido úrico y glucosa y causar hiponatremia.",
+          "commonAdverseEffects": [
+            "hiponatremia",
+            "hipopotasemia",
+            "mareo",
+            "hiperuricemia",
+            "hiperglucemia"
+          ],
+          "dangerousAdverseEffects": [
+            "hiponatremia grave",
+            "hipopotasemia grave",
+            "arritmia secundaria a trastorno electrolítico",
+            "lesión renal por depleción de volumen"
+          ],
+          "contraindications": [
+            "Anuria",
+            "hipersensibilidad al fármaco; revisar antecedentes de reacción a sulfonamidas no antibióticas con criterio clínico"
+          ],
+          "interactions": [
+            "Litio puede acumularse",
+            "AINE pueden reducir efecto antihipertensivo y diurético",
+            "Digoxina: hipopotasemia aumenta riesgo de arritmia",
+            "Otros antihipertensivos pueden potenciar hipotensión"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "sodio y potasio",
+            "creatinina/eGFR",
+            "magnesio",
+            "ácido úrico",
+            "glucosa según riesgo"
+          ],
+          "administration": "Administrar preferentemente por la mañana; titular a la menor dosis eficaz.",
+          "preparation": "Tabletas no requieren reconstitución.",
+          "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+          "pregnancy": "Los diuréticos no se usan para tratar edema fisiológico del embarazo; usar solo si existe indicación materna clara.",
+          "lactation": "Puede reducir producción de leche con diuresis intensa; individualizar por dosis y situación clínica.",
+          "specialPopulations": {
+            "elderly": "Mayor riesgo de hiponatremia y depleción de volumen.",
+            "gout": "Puede aumentar ácido úrico y precipitar gota.",
+            "diabetes": "Puede empeorar glucemia en algunos pacientes."
+          },
+          "patientEducation": [
+            "Tomar temprano para reducir nocturia",
+            "consultar por debilidad, calambres, confusión o mareo intenso",
+            "mantener controles de electrolitos y función renal"
+          ],
+          "clinicalPearls": [
+            "La guía AHA/ACC 2025 destaca que clortalidona tiene vida media más larga y mayor potencia mg por mg que hidroclorotiazida."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: diuréticos tipo tiazida son tratamiento de primera línea para hipertensión; clortalidona tiene mayor vida media y potencia mg por mg que hidroclorotiazida."
+          ],
+          "safetyFlags": [
+            "SODIO",
+            "POTASIO",
+            "FUNCION_RENAL",
+            "ACIDO_URICO"
+          ],
+          "alerts": [
+            "Corregir alteraciones electrolíticas relevantes",
+            "Evitar sobre-diuresis y revisar AINE concomitantes."
+          ],
+          "name": "Clortalidona",
+          "class": "Diurético tipo tiazida de larga duración",
+          "pharmacokinetics": "Vida media muy prolongada, aproximadamente 40-60 h, con efecto antihipertensivo que persiste más de 24 h. Eliminación principalmente renal.",
+          "indications": [
+            "Hipertensión",
+            "edema de origen cardíaco, hepático o renal en pacientes seleccionados"
+          ],
+          "commercialNames": [
+            "Thalitone",
+            "Hygroton"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 15, 25, 50 o 100 mg según producto"
+          ],
+          "dose": {
+            "hypertension": "Guía 2025: rango habitual 12.5-25 mg una vez al día. Algunas fichas tradicionales inician 25 mg/día y permiten 50-100 mg, pero la toxicidad metabólica aumenta con dosis.",
+            "edema": "Individualizar a la menor dosis eficaz según producto y respuesta."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas de forma robusta para uso pediátrico rutinario en la ficha adulta; usar protocolo pediátrico específico si se indica.",
+          "renalDose": "Puede perder eficacia con deterioro renal avanzado y aumenta el riesgo de alteraciones electrolíticas; evitar en anuria y monitorizar estrechamente función renal y electrolitos.",
+          "hepaticDose": "Usar con cautela en hepatopatía grave o cirrosis por riesgo de hiponatremia, hipopotasemia y encefalopatía.",
+          "adverseEffects": {
+            "common": [
+              "hiponatremia",
+              "hipopotasemia",
+              "mareo",
+              "hiperuricemia",
+              "hiperglucemia"
+            ],
+            "dangerous": [
+              "hiponatremia grave",
+              "hipopotasemia grave",
+              "arritmia secundaria a trastorno electrolítico",
+              "lesión renal por depleción de volumen"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0baac2aa-06c4-489e-a3f9-fe9d20cf61a2",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0baac2aa-06c4-489e-a3f9-fe9d20cf61a2"
+        }
       }
     }
 
@@ -12983,6 +18851,231 @@
             )
           }
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Diurético tiazídico ou tipo tiazida; inibidor funcional do cotransportador Na/Cl do túbulo distal",
+          "mechanism": "Reduz reabsorção de sódio e cloro no túbulo contornado distal, aumentando natriurese e diurese e reduzindo volume extracelular e resistência vascular no longo prazo.",
+          "pharmacodynamics": "Reduz pressão arterial e aumenta excreção de sódio e potássio; pode elevar cálcio sérico, ácido úrico e glicose e causar hiponatremia.",
+          "commonAdverseEffects": [
+            "hiponatremia",
+            "hipocalemia",
+            "tontura",
+            "hiperuricemia",
+            "hiperglicemia"
+          ],
+          "dangerousAdverseEffects": [
+            "hiponatremia grave",
+            "hipocalemia grave",
+            "arritmia secundária a distúrbio eletrolítico",
+            "lesão renal por depleção volêmica"
+          ],
+          "contraindications": [
+            "Anúria",
+            "hipersensibilidade ao fármaco; revisar história de reação a sulfonamidas não antibióticas com critério clínico"
+          ],
+          "interactions": [
+            "Lítio pode acumular",
+            "AINEs podem reduzir efeito anti-hipertensivo e diurético",
+            "Digoxina: hipocalemia aumenta risco de arritmia",
+            "Outros anti-hipertensivos podem potencializar hipotensão"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "sódio e potássio",
+            "creatinina/eTFG",
+            "magnésio",
+            "ácido úrico",
+            "glicose conforme risco"
+          ],
+          "administration": "Administrar preferencialmente pela manhã; titular para a menor dose eficaz.",
+          "preparation": "Comprimidos não exigem reconstituição.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+          "pregnancy": "Diuréticos não são usados para tratar edema fisiológico da gestação; usar apenas se houver indicação materna clara.",
+          "lactation": "Pode reduzir produção de leite com diurese intensa; individualizar conforme dose e situação clínica.",
+          "specialPopulations": {
+            "elderly": "Maior risco de hiponatremia e depleção volêmica.",
+            "gout": "Pode aumentar ácido úrico e precipitar gota.",
+            "diabetes": "Pode piorar glicemia em alguns pacientes."
+          },
+          "patientEducation": [
+            "Tomar cedo para reduzir noctúria",
+            "procurar avaliação por fraqueza, cãibras, confusão ou tontura intensa",
+            "manter controles de eletrólitos e função renal"
+          ],
+          "clinicalPearls": [
+            "A resposta anti-hipertensiva deve ser avaliada junto com sódio, potássio, função renal e ácido úrico."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: diuréticos tiazídicos/tiazídico-like são tratamento de primeira linha para hipertensão; clortalidona tem maior meia-vida e potência mg por mg que hidroclorotiazida."
+          ],
+          "safetyFlags": [
+            "SODIO",
+            "POTASSIO",
+            "FUNCAO_RENAL",
+            "ACIDO_URICO"
+          ],
+          "alerts": [
+            "Corrigir distúrbios eletrolíticos relevantes",
+            "Evitar sobrediurese e revisar AINEs concomitantes."
+          ],
+          "name": "Indapamida",
+          "class": "Diurético tiazídico-like",
+          "pharmacokinetics": "Absorção oral alta; metabolismo hepático importante e eliminação renal e fecal de metabólitos. Efeito anti-hipertensivo sustentado com dose uma vez ao dia.",
+          "indications": [
+            "Hipertensão",
+            "edema associado à insuficiência cardíaca congestiva conforme bula"
+          ],
+          "commercialNames": [
+            "Lozol"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 1,25 e 2,5 mg; algumas apresentações 5 mg"
+          ],
+          "dose": {
+            "hypertension": "1,25 mg uma vez ao dia pela manhã; se resposta insuficiente após 4 semanas, 2,5 mg/dia; se ainda insuficiente após 4 semanas, 5 mg/dia, considerando preferencialmente adicionar outro anti-hipertensivo.",
+            "heartFailureEdema": "2,5 mg uma vez ao dia; se resposta insuficiente após 1 semana, 5 mg/dia."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas em pacientes pediátricos.",
+          "renalDose": "Pode ser usada em função renal reduzida selecionada, mas perde eficácia na insuficiência renal avançada; monitorar creatinina e eletrólitos e evitar se houver anúria.",
+          "hepaticDose": "Usar com cautela; alterações de líquidos/eletrólitos podem precipitar encefalopatia em hepatopatia avançada.",
+          "adverseEffects": {
+            "common": [
+              "hiponatremia",
+              "hipocalemia",
+              "tontura",
+              "hiperuricemia",
+              "hiperglicemia"
+            ],
+            "dangerous": [
+              "hiponatremia grave",
+              "hipocalemia grave",
+              "arritmia secundária a distúrbio eletrolítico",
+              "lesão renal por depleção volêmica"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392"
+        },
+        "es": {
+          "pharmacologicClass": "Diurético tiazídico o tipo tiazida; inhibidor funcional del cotransportador Na/Cl del túbulo distal",
+          "mechanism": "Reduce reabsorción de sodio y cloro en el túbulo contorneado distal, aumentando natriuresis y diuresis y reduciendo volumen extracelular y resistencia vascular a largo plazo.",
+          "pharmacodynamics": "Disminuye presión arterial y favorece excreción de sodio y potasio; puede aumentar calcio sérico, ácido úrico y glucosa y causar hiponatremia.",
+          "commonAdverseEffects": [
+            "hiponatremia",
+            "hipopotasemia",
+            "mareo",
+            "hiperuricemia",
+            "hiperglucemia"
+          ],
+          "dangerousAdverseEffects": [
+            "hiponatremia grave",
+            "hipopotasemia grave",
+            "arritmia secundaria a trastorno electrolítico",
+            "lesión renal por depleción de volumen"
+          ],
+          "contraindications": [
+            "Anuria",
+            "hipersensibilidad al fármaco; revisar antecedentes de reacción a sulfonamidas no antibióticas con criterio clínico"
+          ],
+          "interactions": [
+            "Litio puede acumularse",
+            "AINE pueden reducir efecto antihipertensivo y diurético",
+            "Digoxina: hipopotasemia aumenta riesgo de arritmia",
+            "Otros antihipertensivos pueden potenciar hipotensión"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "sodio y potasio",
+            "creatinina/eGFR",
+            "magnesio",
+            "ácido úrico",
+            "glucosa según riesgo"
+          ],
+          "administration": "Administrar preferentemente por la mañana; titular a la menor dosis eficaz.",
+          "preparation": "Tabletas no requieren reconstitución.",
+          "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+          "pregnancy": "Los diuréticos no se usan para tratar edema fisiológico del embarazo; usar solo si existe indicación materna clara.",
+          "lactation": "Puede reducir producción de leche con diuresis intensa; individualizar por dosis y situación clínica.",
+          "specialPopulations": {
+            "elderly": "Mayor riesgo de hiponatremia y depleción de volumen.",
+            "gout": "Puede aumentar ácido úrico y precipitar gota.",
+            "diabetes": "Puede empeorar glucemia en algunos pacientes."
+          },
+          "patientEducation": [
+            "Tomar temprano para reducir nocturia",
+            "consultar por debilidad, calambres, confusión o mareo intenso",
+            "mantener controles de electrolitos y función renal"
+          ],
+          "clinicalPearls": [
+            "La respuesta antihipertensiva debe valorarse junto con sodio, potasio, función renal y ácido úrico."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: diuréticos tipo tiazida son tratamiento de primera línea para hipertensión; clortalidona tiene mayor vida media y potencia mg por mg que hidroclorotiazida."
+          ],
+          "safetyFlags": [
+            "SODIO",
+            "POTASIO",
+            "FUNCION_RENAL",
+            "ACIDO_URICO"
+          ],
+          "alerts": [
+            "Corregir alteraciones electrolíticas relevantes",
+            "Evitar sobre-diuresis y revisar AINE concomitantes."
+          ],
+          "name": "Indapamida",
+          "class": "Diurético tipo tiazida",
+          "pharmacokinetics": "Absorción oral alta; metabolismo hepático importante y eliminación renal y fecal de metabolitos. Efecto antihipertensivo sostenido con dosis una vez al día.",
+          "indications": [
+            "Hipertensión",
+            "edema asociado a insuficiencia cardíaca congestiva según ficha"
+          ],
+          "commercialNames": [
+            "Lozol"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 1.25 y 2.5 mg; algunas presentaciones 5 mg"
+          ],
+          "dose": {
+            "hypertension": "1.25 mg una vez al día por la mañana; si respuesta insuficiente tras 4 semanas, 2.5 mg/día; si aún insuficiente tras 4 semanas, 5 mg/día, considerando preferentemente añadir otro antihipertensivo.",
+            "heartFailureEdema": "2.5 mg una vez al día; si respuesta insuficiente tras 1 semana, 5 mg/día."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos.",
+          "renalDose": "Puede usarse con función renal reducida seleccionada, pero pierde eficacia en insuficiencia renal avanzada; vigilar creatinina y electrolitos y evitar si existe anuria.",
+          "hepaticDose": "Usar con cautela; alteraciones de líquidos/electrolitos pueden precipitar encefalopatía en hepatopatía avanzada.",
+          "adverseEffects": {
+            "common": [
+              "hiponatremia",
+              "hipopotasemia",
+              "mareo",
+              "hiperuricemia",
+              "hiperglucemia"
+            ],
+            "dangerous": [
+              "hiponatremia grave",
+              "hipopotasemia grave",
+              "arritmia secundaria a trastorno electrolítico",
+              "lesión renal por depleción de volumen"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392"
+        }
       }
     },
 
@@ -13226,6 +19319,237 @@
             )
           }
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Diurético tiazídico ou tipo tiazida; inibidor funcional do cotransportador Na/Cl do túbulo distal",
+          "mechanism": "Reduz reabsorção de sódio e cloro no túbulo contornado distal, aumentando natriurese e diurese e reduzindo volume extracelular e resistência vascular no longo prazo.",
+          "pharmacodynamics": "Reduz pressão arterial e aumenta excreção de sódio e potássio; pode elevar cálcio sérico, ácido úrico e glicose e causar hiponatremia.",
+          "commonAdverseEffects": [
+            "hiponatremia",
+            "hipocalemia",
+            "tontura",
+            "hiperuricemia",
+            "hiperglicemia"
+          ],
+          "dangerousAdverseEffects": [
+            "hiponatremia grave",
+            "hipocalemia grave",
+            "arritmia secundária a distúrbio eletrolítico",
+            "lesão renal por depleção volêmica"
+          ],
+          "contraindications": [
+            "Anúria",
+            "hipersensibilidade ao fármaco; revisar história de reação a sulfonamidas não antibióticas com critério clínico"
+          ],
+          "interactions": [
+            "Lítio pode acumular",
+            "AINEs podem reduzir efeito anti-hipertensivo e diurético",
+            "Digoxina: hipocalemia aumenta risco de arritmia",
+            "Outros anti-hipertensivos podem potencializar hipotensão",
+            "Combinação com diurético de alça pode causar diurese intensa e distúrbios eletrolíticos; exige monitorização estreita."
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "sódio e potássio",
+            "creatinina/eTFG",
+            "magnésio",
+            "ácido úrico",
+            "glicose conforme risco"
+          ],
+          "administration": "Administrar preferencialmente pela manhã; titular para a menor dose eficaz.",
+          "preparation": "Comprimidos não exigem reconstituição.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+          "pregnancy": "Diuréticos não são usados para tratar edema fisiológico da gestação; usar apenas se houver indicação materna clara.",
+          "lactation": "Pode reduzir produção de leite com diurese intensa; individualizar conforme dose e situação clínica.",
+          "specialPopulations": {
+            "elderly": "Maior risco de hiponatremia e depleção volêmica.",
+            "gout": "Pode aumentar ácido úrico e precipitar gota.",
+            "diabetes": "Pode piorar glicemia em alguns pacientes."
+          },
+          "patientEducation": [
+            "Tomar cedo para reduzir noctúria",
+            "procurar avaliação por fraqueza, cãibras, confusão ou tontura intensa",
+            "manter controles de eletrólitos e função renal"
+          ],
+          "clinicalPearls": [
+            "Pode potencializar diurese com diurético de alça na resistência diurética, mas aumenta muito o risco de hipovolemia, hiponatremia e hipocalemia."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: diuréticos tiazídicos/tiazídico-like são tratamento de primeira linha para hipertensão; clortalidona tem maior meia-vida e potência mg por mg que hidroclorotiazida."
+          ],
+          "safetyFlags": [
+            "SODIO",
+            "POTASSIO",
+            "FUNCAO_RENAL",
+            "ACIDO_URICO"
+          ],
+          "alerts": [
+            "Corrigir distúrbios eletrolíticos relevantes",
+            "Evitar sobrediurese e revisar AINEs concomitantes."
+          ],
+          "name": "Metolazona",
+          "class": "Diurético tiazídico-like de alta potência",
+          "pharmacokinetics": "Absorção oral variável e efeito diurético prolongado, com salurese que pode persistir 24 h ou mais. É eliminada em parte pelos rins.",
+          "indications": [
+            "Edema da insuficiência cardíaca",
+            "edema por doença renal, incluindo síndrome nefrótica",
+            "hipertensão leve a moderada"
+          ],
+          "commercialNames": [
+            "Zaroxolyn"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 2,5, 5 e 10 mg conforme produto"
+          ],
+          "dose": {
+            "cardiacEdema": "5-20 mg uma vez ao dia.",
+            "renalEdema": "5-20 mg uma vez ao dia.",
+            "hypertension": "2,5-5 mg uma vez ao dia."
+          },
+          "pediatricDose": "Não estabelecida em ensaios controlados; experiência limitada usa 0,05-0,1 mg/kg uma vez ao dia por poucos dias, com risco de hipovolemia e hipocalemia. Apenas sob protocolo pediátrico especializado.",
+          "renalDose": "Pode manter efeito com função renal reduzida e é usada em edema renal; não há redução fixa. Titular pela resposta com monitorização estreita de volemia, creatinina, sódio e potássio.",
+          "hepaticDose": "Usar com extrema cautela em cirrose ou hepatopatia avançada pelo risco de distúrbios eletrolíticos e encefalopatia.",
+          "adverseEffects": {
+            "common": [
+              "hiponatremia",
+              "hipocalemia",
+              "tontura",
+              "hiperuricemia",
+              "hiperglicemia"
+            ],
+            "dangerous": [
+              "hiponatremia grave",
+              "hipocalemia grave",
+              "arritmia secundária a distúrbio eletrolítico",
+              "lesão renal por depleção volêmica"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89201e19-d0e8-4192-b2a1-150e9d2c104d",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89201e19-d0e8-4192-b2a1-150e9d2c104d"
+        },
+        "es": {
+          "pharmacologicClass": "Diurético tiazídico o tipo tiazida; inhibidor funcional del cotransportador Na/Cl del túbulo distal",
+          "mechanism": "Reduce reabsorción de sodio y cloro en el túbulo contorneado distal, aumentando natriuresis y diuresis y reduciendo volumen extracelular y resistencia vascular a largo plazo.",
+          "pharmacodynamics": "Disminuye presión arterial y favorece excreción de sodio y potasio; puede aumentar calcio sérico, ácido úrico y glucosa y causar hiponatremia.",
+          "commonAdverseEffects": [
+            "hiponatremia",
+            "hipopotasemia",
+            "mareo",
+            "hiperuricemia",
+            "hiperglucemia"
+          ],
+          "dangerousAdverseEffects": [
+            "hiponatremia grave",
+            "hipopotasemia grave",
+            "arritmia secundaria a trastorno electrolítico",
+            "lesión renal por depleción de volumen"
+          ],
+          "contraindications": [
+            "Anuria",
+            "hipersensibilidad al fármaco; revisar antecedentes de reacción a sulfonamidas no antibióticas con criterio clínico"
+          ],
+          "interactions": [
+            "Litio puede acumularse",
+            "AINE pueden reducir efecto antihipertensivo y diurético",
+            "Digoxina: hipopotasemia aumenta riesgo de arritmia",
+            "Otros antihipertensivos pueden potenciar hipotensión",
+            "Combinación con diurético de asa puede producir diuresis intensa y alteraciones electrolíticas; requiere monitorización estrecha."
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "sodio y potasio",
+            "creatinina/eGFR",
+            "magnesio",
+            "ácido úrico",
+            "glucosa según riesgo"
+          ],
+          "administration": "Administrar preferentemente por la mañana; titular a la menor dosis eficaz.",
+          "preparation": "Tabletas no requieren reconstitución.",
+          "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+          "pregnancy": "Los diuréticos no se usan para tratar edema fisiológico del embarazo; usar solo si existe indicación materna clara.",
+          "lactation": "Puede reducir producción de leche con diuresis intensa; individualizar por dosis y situación clínica.",
+          "specialPopulations": {
+            "elderly": "Mayor riesgo de hiponatremia y depleción de volumen.",
+            "gout": "Puede aumentar ácido úrico y precipitar gota.",
+            "diabetes": "Puede empeorar glucemia en algunos pacientes."
+          },
+          "patientEducation": [
+            "Tomar temprano para reducir nocturia",
+            "consultar por debilidad, calambres, confusión o mareo intenso",
+            "mantener controles de electrolitos y función renal"
+          ],
+          "clinicalPearls": [
+            "Puede potenciar diuresis junto con un diurético de asa en resistencia diurética, pero aumenta mucho el riesgo de hipovolemia, hiponatremia e hipopotasemia."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: diuréticos tipo tiazida son tratamiento de primera línea para hipertensión; clortalidona tiene mayor vida media y potencia mg por mg que hidroclorotiazida."
+          ],
+          "safetyFlags": [
+            "SODIO",
+            "POTASIO",
+            "FUNCION_RENAL",
+            "ACIDO_URICO"
+          ],
+          "alerts": [
+            "Corregir alteraciones electrolíticas relevantes",
+            "Evitar sobre-diuresis y revisar AINE concomitantes."
+          ],
+          "name": "Metolazona",
+          "class": "Diurético tipo tiazida de alta potencia",
+          "pharmacokinetics": "Absorción oral variable y efecto diurético prolongado, con saluresis que puede persistir 24 h o más. Se elimina en parte por riñón.",
+          "indications": [
+            "Edema de insuficiencia cardíaca",
+            "edema por enfermedad renal, incluido síndrome nefrótico",
+            "hipertensión leve a moderada"
+          ],
+          "commercialNames": [
+            "Zaroxolyn"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 2.5, 5 y 10 mg según producto"
+          ],
+          "dose": {
+            "cardiacEdema": "5-20 mg una vez al día.",
+            "renalEdema": "5-20 mg una vez al día.",
+            "hypertension": "2.5-5 mg una vez al día."
+          },
+          "pediatricDose": "No establecida en ensayos controlados; experiencia limitada usa 0.05-0.1 mg/kg una vez al día por pocos días, con riesgo de hipovolemia e hipopotasemia. Solo bajo protocolo pediátrico especializado.",
+          "renalDose": "Puede conservar efecto con función renal reducida y se usa en edema renal; no existe reducción fija. Titular por respuesta con vigilancia estrecha de volumen, creatinina, sodio y potasio.",
+          "hepaticDose": "Usar con extrema cautela en cirrosis o hepatopatía avanzada por riesgo de alteraciones electrolíticas y encefalopatía.",
+          "adverseEffects": {
+            "common": [
+              "hiponatremia",
+              "hipopotasemia",
+              "mareo",
+              "hiperuricemia",
+              "hiperglucemia"
+            ],
+            "dangerous": [
+              "hiponatremia grave",
+              "hipopotasemia grave",
+              "arritmia secundaria a trastorno electrolítico",
+              "lesión renal por depleción de volumen"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89201e19-d0e8-4192-b2a1-150e9d2c104d",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89201e19-d0e8-4192-b2a1-150e9d2c104d"
+        }
       }
     }
 
@@ -14139,6 +20463,247 @@
             )
           }
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Manitol",
+          "class": "Diurético osmótico intravenoso",
+          "pharmacologicClass": "Agente osmótico filtrável que aumenta osmolaridade tubular e plasmática",
+          "mechanism": "Aumenta osmolaridade plasmática e tubular, mobiliza água dos tecidos para o compartimento intravascular e reduz reabsorção tubular de água.",
+          "pharmacodynamics": "Produz diurese osmótica e reduz pressão intracraniana e intraocular. Pode expandir transitoriamente o volume intravascular antes da diurese e piorar congestão pulmonar.",
+          "pharmacokinetics": "Distribui-se principalmente no espaço extracelular, sofre pouco metabolismo e é eliminado por filtração glomerular. O acúmulo aumenta na insuficiência renal.",
+          "indications": [
+            "Redução da pressão intracraniana e tratamento do edema cerebral",
+            "redução da pressão intraocular elevada"
+          ],
+          "commercialNames": [
+            "Mannitol Injection"
+          ],
+          "presentation": "Solução para infusão intravenosa.",
+          "presentations": [
+            "20%: 0,2 g/mL em bolsas de 250 ou 500 mL",
+            "25%: 0,25 g/mL em frasco conforme produto"
+          ],
+          "dose": {
+            "intracranialPressure": "0,25 g/kg IV a cada 6-8 h, infundido durante pelo menos 30 minutos, conforme a bula 20% atual.",
+            "intraocularPressure": "1,5-2 g/kg IV como dose única durante pelo menos 30 minutos; se pré-operatório, administrar 60-90 minutos antes."
+          },
+          "pediatricDose": "A dose depende do produto e da indicação; bulas específicas descrevem 1-2 g/kg ou 30-60 g/m2 em 30-60 min para redução da pressão intracraniana/intraocular. Usar protocolo pediátrico e monitorização intensiva.",
+          "renalDose": "Não usar em anúria. Avaliar função renal antes de iniciar; suspender se houver piora da função renal ou oligúria progressiva. O acúmulo aumenta risco de hiperosmolaridade e sobrecarga.",
+          "hepaticDose": "Não há ajuste específico por hepatopatia isolada; a decisão depende principalmente de volemia, rim, coração, pulmão e osmolaridade.",
+          "commonAdverseEffects": [
+            "poliúria",
+            "sede",
+            "cefaleia",
+            "náuseas",
+            "alterações de sódio"
+          ],
+          "dangerousAdverseEffects": [
+            "lesão renal osmótica",
+            "edema pulmonar",
+            "descompensação cardíaca",
+            "hiperosmolaridade",
+            "hiponatremia ou hipernatremia grave",
+            "toxicidade neurológica"
+          ],
+          "contraindications": [
+            "Anúria",
+            "hipovolemia grave",
+            "congestão vascular pulmonar grave ou edema pulmonar preexistente",
+            "hemorragia intracraniana ativa exceto durante craniotomia",
+            "hipersensibilidade"
+          ],
+          "interactions": [
+            "Outros nefrotóxicos aumentam risco renal",
+            "Outros diuréticos podem potencializar alterações de volemia e eletrólitos",
+            "Não administrar simultaneamente com sangue pelo mesmo equipo sem seguir instruções específicas de compatibilidade."
+          ],
+          "monitoring": [
+            "Osmolaridade sérica",
+            "sódio e outros eletrólitos",
+            "diurese",
+            "creatinina",
+            "estado cardíaco e pulmonar",
+            "pressão intracraniana ou intraocular conforme indicação"
+          ],
+          "administration": "Apenas IV; preferencialmente por veia central ou de grande calibre. Usar equipo com filtro para evitar infusão de cristais.",
+          "preparation": "Inspecionar cristais antes do uso; se presentes, seguir instruções do fabricante para resolubilização. Não transferir para bolsas de PVC quando a bula contraindicar.",
+          "infusionProtocol": "Para redução da PIC: 0,25 g/kg em pelo menos 30 min, repetível a cada 6-8 h se ainda indicado, com reavaliação renal, cardíaca, pulmonar, osmolar e eletrolítica antes de repetir.",
+          "pregnancy": "Usar apenas se a indicação materna justificar o risco; dados humanos são limitados.",
+          "lactation": "Dados clínicos limitados; individualizar conforme necessidade materna e exposição prevista.",
+          "specialPopulations": {
+            "renal": "Contraindicado em anúria e alto risco se a função renal piorar.",
+            "heartFailure": "A expansão intravascular inicial pode precipitar congestão.",
+            "brainInjury": "A indicação exige reavaliação clínica e osmolar seriada."
+          },
+          "patientEducation": [
+            "Uso hospitalar IV com monitorização",
+            "informar dispneia, dor torácica ou redução importante da urina se estiver consciente."
+          ],
+          "clinicalPearls": [
+            "Não é diurético para edema periférico rotineiro",
+            "A resposta e a segurança dependem de osmolaridade, rim e estado cardiopulmonar, não apenas da dose."
+          ],
+          "guidelineRecommendations": [
+            "A bula atual prioriza 0,25 g/kg para redução da pressão intracraniana; repetir apenas com reavaliação clínica e laboratorial."
+          ],
+          "safetyFlags": [
+            "ANURIA",
+            "OSMOLARIDADE",
+            "FUNCAO_RENAL",
+            "EDEMA_PULMONAR",
+            "ELETROLITOS"
+          ],
+          "alerts": [
+            "Não administrar se houver anúria, hipovolemia grave ou edema pulmonar preexistente grave",
+            "Suspender se houver piora do estado renal, cardíaco ou pulmonar."
+          ],
+          "adverseEffects": {
+            "common": [
+              "poliúria",
+              "sede",
+              "cefaleia",
+              "náuseas",
+              "alterações de sódio"
+            ],
+            "dangerous": [
+              "lesão renal osmótica",
+              "edema pulmonar",
+              "descompensação cardíaca",
+              "hiperosmolaridade",
+              "hiponatremia ou hipernatremia grave",
+              "toxicidade neurológica"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30",
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ba7bf864-8a4d-4262-8fd1-00174fa2f9d1"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30"
+        },
+        "es": {
+          "name": "Manitol",
+          "class": "Diurético osmótico intravenoso",
+          "pharmacologicClass": "Agente osmótico filtrable que aumenta osmolaridad tubular y plasmática",
+          "mechanism": "Aumenta osmolaridad plasmática y tubular, moviliza agua desde tejidos hacia el compartimento intravascular y reduce reabsorción tubular de agua.",
+          "pharmacodynamics": "Produce diuresis osmótica y reduce presión intracraneal e intraocular. Puede expandir transitoriamente volumen intravascular antes de la diuresis y empeorar congestión pulmonar.",
+          "pharmacokinetics": "Se distribuye principalmente en espacio extracelular, se metaboliza mínimamente y se elimina por filtración glomerular. La acumulación aumenta con insuficiencia renal.",
+          "indications": [
+            "Reducción de presión intracraneal y tratamiento de edema cerebral",
+            "reducción de presión intraocular elevada"
+          ],
+          "commercialNames": [
+            "Mannitol Injection"
+          ],
+          "presentation": "Solución para infusión intravenosa.",
+          "presentations": [
+            "20%: 0.2 g/mL en bolsas de 250 o 500 mL",
+            "25%: 0.25 g/mL en vial según producto"
+          ],
+          "dose": {
+            "intracranialPressure": "0.25 g/kg IV cada 6-8 h, infundido durante al menos 30 minutos, según la ficha 20% actual.",
+            "intraocularPressure": "1.5-2 g/kg IV como dosis única durante al menos 30 minutos; si es preoperatorio, administrar 60-90 minutos antes."
+          },
+          "pediatricDose": "La dosificación depende del producto y la indicación; fichas específicas describen 1-2 g/kg o 30-60 g/m2 en 30-60 min para reducción de presión intracraneal/intraocular. Usar protocolo pediátrico y monitorización intensiva.",
+          "renalDose": "No usar en anuria. Evaluar función renal antes de iniciar; suspender si empeora función renal o aparece oliguria progresiva. La acumulación aumenta riesgo de hiperosmolaridad y sobrecarga.",
+          "hepaticDose": "No existe ajuste específico por hepatopatía aislada; la decisión depende principalmente de volumen, riñón, corazón, pulmón y osmolaridad.",
+          "commonAdverseEffects": [
+            "poliuria",
+            "sed",
+            "cefalea",
+            "náuseas",
+            "alteraciones de sodio"
+          ],
+          "dangerousAdverseEffects": [
+            "lesión renal osmótica",
+            "edema pulmonar",
+            "descompensación cardíaca",
+            "hiperosmolaridad",
+            "hiponatremia o hipernatremia grave",
+            "toxicidad neurológica"
+          ],
+          "contraindications": [
+            "Anuria",
+            "hipovolemia grave",
+            "congestión vascular pulmonar grave o edema pulmonar preexistente",
+            "hemorragia intracraneal activa excepto durante craneotomía",
+            "hipersensibilidad"
+          ],
+          "interactions": [
+            "Otros nefrotóxicos aumentan riesgo renal",
+            "Otros diuréticos pueden potenciar alteraciones de volumen y electrolitos",
+            "No administrar simultáneamente con sangre por el mismo equipo sin seguir instrucciones específicas de compatibilidad."
+          ],
+          "monitoring": [
+            "Osmolaridad sérica",
+            "sodio y otros electrolitos",
+            "diuresis",
+            "creatinina",
+            "estado cardíaco y pulmonar",
+            "presión intracraneal o intraocular según indicación"
+          ],
+          "administration": "Solo IV; preferentemente por vena central o de gran calibre. Usar equipo con filtro para evitar infusión de cristales.",
+          "preparation": "Inspeccionar cristales antes de usar; si aparecen, seguir instrucciones del fabricante para resolubilización. No transferir a bolsas PVC cuando la ficha lo contraindique.",
+          "infusionProtocol": "Para reducción de PIC: 0.25 g/kg en al menos 30 min, repetible cada 6-8 h si sigue indicado, con reevaluación renal, cardíaca, pulmonar, osmolar y electrolítica antes de repetir.",
+          "pregnancy": "Usar solo si la indicación materna justifica el riesgo; datos humanos son limitados.",
+          "lactation": "Datos clínicos limitados; individualizar según necesidad materna y exposición prevista.",
+          "specialPopulations": {
+            "renal": "Contraindicado en anuria y alto riesgo si función renal empeora.",
+            "heartFailure": "La expansión intravascular inicial puede precipitar congestión.",
+            "brainInjury": "La indicación requiere reevaluación clínica y osmolar seriada."
+          },
+          "patientEducation": [
+            "Uso hospitalario IV con monitorización",
+            "informar disnea, dolor torácico o disminución marcada de orina si está consciente."
+          ],
+          "clinicalPearls": [
+            "No es un diurético para edema periférico rutinario",
+            "La respuesta y seguridad dependen de osmolaridad, riñón y estado cardiopulmonar, no solo de la dosis."
+          ],
+          "guidelineRecommendations": [
+            "La ficha actual prioriza 0.25 g/kg para reducción de presión intracraneal; repetir solo con reevaluación clínica y laboratorial."
+          ],
+          "safetyFlags": [
+            "ANURIA",
+            "OSMOLARIDAD",
+            "FUNCION_RENAL",
+            "EDEMA_PULMONAR",
+            "ELECTROLITOS"
+          ],
+          "alerts": [
+            "No administrar si existe anuria, hipovolemia grave o edema pulmonar preexistente grave",
+            "Suspender si empeora estado renal, cardíaco o pulmonar."
+          ],
+          "adverseEffects": {
+            "common": [
+              "poliuria",
+              "sed",
+              "cefalea",
+              "náuseas",
+              "alteraciones de sodio"
+            ],
+            "dangerous": [
+              "lesión renal osmótica",
+              "edema pulmonar",
+              "descompensación cardíaca",
+              "hiperosmolaridad",
+              "hiponatremia o hipernatremia grave",
+              "toxicidad neurológica"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30",
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ba7bf864-8a4d-4262-8fd1-00174fa2f9d1"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30"
+        }
       }
     }
 
@@ -14349,6 +20914,225 @@
             )
           }
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico de ação predominantemente vascular",
+          "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, produzindo vasodilatação e redução da resistência vascular sistêmica.",
+          "pharmacodynamics": "Reduz pressão arterial com pouco efeito direto sobre condução AV em doses terapêuticas; pode causar edema periférico, rubor e cefaleia por vasodilatação.",
+          "commonAdverseEffects": [
+            "edema periférico",
+            "cefaleia",
+            "rubor",
+            "tontura",
+            "palpitações"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensão sintomática",
+            "piora de angina no início ou aumento de dose em doença coronariana grave",
+            "reação de hipersensibilidade rara"
+          ],
+          "contraindications": [
+            "Hipersensibilidade ao fármaco; avaliar hipotensão grave individualmente"
+          ],
+          "interactions": [
+            "Outros anti-hipertensivos aumentam hipotensão",
+            "Inibidores de CYP3A4 podem aumentar exposição",
+            "Indutores de CYP3A4 podem reduzir exposição",
+            "Grapefruit é clinicamente relevante especialmente para nifedipino e felodipino"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "edema periférico",
+            "frequência cardíaca",
+            "sintomas de angina após início ou titulação",
+            "função hepática se houver hepatopatia"
+          ],
+          "administration": "Via oral uma vez ao dia conforme formulação; respeitar instruções específicas de liberação prolongada.",
+          "preparation": "Não requer reconstituição para comprimidos.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+          "pregnancy": "Usar quando o benefício materno justificar a exposição; escolher agente e formulação conforme indicação obstétrica.",
+          "lactation": "Individualizar; considerar dados específicos do fármaco e idade do lactente.",
+          "specialPopulations": {
+            "elderly": "Titular a partir de doses baixas quando aplicável.",
+            "hepatic": "A exposição pode aumentar; iniciar baixo e titular lentamente.",
+            "aorticStenosis": "Monitorar hipotensão na estenose aórtica grave."
+          },
+          "patientEducation": [
+            "Não triturar formulações de liberação prolongada",
+            "procurar avaliação por edema importante, síncope ou piora de angina",
+            "tomar em horário consistente"
+          ],
+          "clinicalPearls": [
+            "O edema periférico decorre de vasodilatação arteriolar e não necessariamente indica sobrecarga volêmica."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: bloqueadores de canal de cálcio di-hidropiridínicos de longa ação são opção de primeira linha para hipertensão."
+          ],
+          "safetyFlags": [
+            "HIPOTENSAO",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "alerts": [
+            "Evitar trocas não equivalentes entre formulações de liberação imediata e prolongada",
+            "Titular lentamente em hepatopatia importante."
+          ],
+          "name": "Anlodipino (Besilato)",
+          "class": "Bloqueador de canais de cálcio di-hidropiridínico de longa ação",
+          "pharmacokinetics": "Biodisponibilidade oral alta, início gradual e meia-vida terminal longa de aproximadamente 30-50 h. Metabolismo hepático e eliminação lenta permitem uma dose diária.",
+          "indications": [
+            "Hipertensão",
+            "angina crônica estável",
+            "angina vasoespástica",
+            "doença coronariana documentada angiograficamente em pacientes selecionados"
+          ],
+          "commercialNames": [
+            "Norvasc"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "Comprimidos 2,5, 5 e 10 mg"
+          ],
+          "dose": {
+            "hypertension": "5 mg uma vez ao dia; máximo 10 mg/dia. Em pessoas pequenas, frágeis, idosas ou com insuficiência hepática considerar 2,5 mg/dia.",
+            "angina": "5-10 mg uma vez ao dia."
+          },
+          "pediatricDose": "De 6 a 17 anos: 2,5-5 mg uma vez ao dia; doses >5 mg/dia não estudadas.",
+          "renalDose": "Não requer ajuste rotineiro por insuficiência renal isolada; titular conforme pressão e tolerância.",
+          "hepaticDose": "Iniciar 2,5 mg/dia e titular lentamente na insuficiência hepática importante pelo aumento da exposição.",
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "cefaleia",
+              "rubor",
+              "tontura",
+              "palpitações"
+            ],
+            "dangerous": [
+              "hipotensão sintomática",
+              "piora de angina no início ou aumento de dose em doença coronariana grave",
+              "reação de hipersensibilidade rara"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b0bcb95-dc85-46f7-8b69-ca55cd58b30e",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b0bcb95-dc85-46f7-8b69-ca55cd58b30e"
+        },
+        "es": {
+          "pharmacologicClass": "Bloqueante de canales de calcio dihidropiridínico de acción predominantemente vascular",
+          "mechanism": "Bloquea canales de calcio tipo L en músculo liso arterial, produciendo vasodilatación y reducción de resistencia vascular sistémica.",
+          "pharmacodynamics": "Reduce presión arterial con poco efecto directo sobre conducción AV a dosis terapéuticas; puede causar edema periférico, rubor y cefalea por vasodilatación.",
+          "commonAdverseEffects": [
+            "edema periférico",
+            "cefalea",
+            "rubor",
+            "mareo",
+            "palpitaciones"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensión sintomática",
+            "empeoramiento de angina al inicio o aumento de dosis en enfermedad coronaria grave",
+            "reacción de hipersensibilidad rara"
+          ],
+          "contraindications": [
+            "Hipersensibilidad al fármaco; valorar hipotensión grave individualmente"
+          ],
+          "interactions": [
+            "Otros antihipertensivos aumentan hipotensión",
+            "Inhibidores CYP3A4 pueden aumentar exposición",
+            "Inductores CYP3A4 pueden reducir exposición",
+            "Pomelo es clínicamente relevante especialmente para nifedipino y felodipino"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "edema periférico",
+            "frecuencia cardíaca",
+            "síntomas de angina tras inicio o titulación",
+            "función hepática si existe hepatopatía"
+          ],
+          "administration": "Vía oral una vez al día según formulación; respetar instrucciones específicas de liberación prolongada.",
+          "preparation": "No requiere reconstitución para tabletas.",
+          "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+          "pregnancy": "Usar cuando el beneficio materno justifique la exposición; elegir agente y formulación según indicación obstétrica.",
+          "lactation": "Individualizar; considerar datos específicos del fármaco y edad del lactante.",
+          "specialPopulations": {
+            "elderly": "Titular desde dosis bajas cuando corresponda.",
+            "hepatic": "La exposición puede aumentar; iniciar bajo y titular lentamente.",
+            "aorticStenosis": "Vigilar hipotensión en estenosis aórtica grave."
+          },
+          "patientEducation": [
+            "No triturar formulaciones de liberación prolongada",
+            "consultar por edema marcado, síncope o empeoramiento de angina",
+            "tomar a horario consistente"
+          ],
+          "clinicalPearls": [
+            "El edema periférico es por vasodilatación arteriolar y no necesariamente indica sobrecarga de volumen."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: los CCB dihidropiridínicos de acción prolongada son una opción de primera línea para hipertensión."
+          ],
+          "safetyFlags": [
+            "HIPOTENSION",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "alerts": [
+            "Evitar cambios no equivalentes entre formulaciones de liberación inmediata y prolongada",
+            "Titular lentamente en hepatopatía importante."
+          ],
+          "name": "Amlodipino (Besilato)",
+          "class": "Bloqueante de canales de calcio dihidropiridínico de larga acción",
+          "pharmacokinetics": "Biodisponibilidad oral alta, inicio gradual y vida media terminal larga de aproximadamente 30-50 h. Metabolismo hepático y eliminación lenta permiten una dosis diaria.",
+          "indications": [
+            "Hipertensión",
+            "angina estable crónica",
+            "angina vasoespástica",
+            "enfermedad coronaria angiográficamente documentada en pacientes seleccionados"
+          ],
+          "commercialNames": [
+            "Norvasc"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "Tabletas 2.5, 5 y 10 mg"
+          ],
+          "dose": {
+            "hypertension": "5 mg una vez al día; máximo 10 mg/día. En personas pequeñas, frágiles, mayores o con insuficiencia hepática considerar 2.5 mg/día.",
+            "angina": "5-10 mg una vez al día."
+          },
+          "pediatricDose": "De 6 a 17 años: 2.5-5 mg una vez al día; dosis >5 mg/día no estudiadas.",
+          "renalDose": "No requiere ajuste rutinario por insuficiencia renal aislada; titular según presión y tolerancia.",
+          "hepaticDose": "Iniciar 2.5 mg/día y titular lentamente en insuficiencia hepática importante por aumento de exposición.",
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "cefalea",
+              "rubor",
+              "mareo",
+              "palpitaciones"
+            ],
+            "dangerous": [
+              "hipotensión sintomática",
+              "empeoramiento de angina al inicio o aumento de dosis en enfermedad coronaria grave",
+              "reacción de hipersensibilidad rara"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b0bcb95-dc85-46f7-8b69-ca55cd58b30e",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2b0bcb95-dc85-46f7-8b69-ca55cd58b30e"
+        }
       }
     },
 
@@ -14563,6 +21347,223 @@
             )
           }
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico de ação predominantemente vascular",
+          "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, produzindo vasodilatação e redução da resistência vascular sistêmica.",
+          "pharmacodynamics": "Reduz pressão arterial com pouco efeito direto sobre condução AV em doses terapêuticas; pode causar edema periférico, rubor e cefaleia por vasodilatação.",
+          "commonAdverseEffects": [
+            "edema periférico",
+            "cefaleia",
+            "rubor",
+            "tontura",
+            "palpitações"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensão sintomática",
+            "piora de angina no início ou aumento de dose em doença coronariana grave",
+            "reação de hipersensibilidade rara"
+          ],
+          "contraindications": [
+            "Hipersensibilidade ao fármaco; avaliar hipotensão grave individualmente"
+          ],
+          "interactions": [
+            "Outros anti-hipertensivos aumentam hipotensão",
+            "Inibidores de CYP3A4 podem aumentar exposição",
+            "Indutores de CYP3A4 podem reduzir exposição",
+            "Grapefruit é clinicamente relevante especialmente para nifedipino e felodipino"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "edema periférico",
+            "frequência cardíaca",
+            "sintomas de angina após início ou titulação",
+            "função hepática se houver hepatopatia"
+          ],
+          "administration": "ER uma vez ao dia em jejum; engolir inteira, não morder, dividir nem triturar. Evitar suco de grapefruit.",
+          "preparation": "Não triturar nem manipular o comprimido ER; confirmar que seja dispensada a formulação de liberação prolongada.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+          "pregnancy": "Usar quando o benefício materno justificar a exposição; escolher agente e formulação conforme indicação obstétrica.",
+          "lactation": "Individualizar; considerar dados específicos do fármaco e idade do lactente.",
+          "specialPopulations": {
+            "elderly": "Titular a partir de doses baixas quando aplicável.",
+            "hepatic": "A exposição pode aumentar; iniciar baixo e titular lentamente.",
+            "aorticStenosis": "Monitorar hipotensão na estenose aórtica grave."
+          },
+          "patientEducation": [
+            "Não triturar formulações de liberação prolongada",
+            "procurar avaliação por edema importante, síncope ou piora de angina",
+            "tomar em horário consistente"
+          ],
+          "clinicalPearls": [
+            "Não substituir nifedipina de liberação imediata por ER automaticamente",
+            "Evitar uso sublingual de nifedipina de liberação imediata para redução urgente da pressão."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: bloqueadores de canal de cálcio di-hidropiridínicos de longa ação são opção de primeira linha para hipertensão."
+          ],
+          "safetyFlags": [
+            "HIPOTENSAO",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "alerts": [
+            "Evitar trocas não equivalentes entre formulações de liberação imediata e prolongada",
+            "Titular lentamente em hepatopatia importante."
+          ],
+          "name": "Nifedipina",
+          "class": "Bloqueador de canais de cálcio di-hidropiridínico de liberação prolongada",
+          "pharmacokinetics": "Formulação ER libera nifedipina de forma sustentada por 24 h. Metabolismo hepático por CYP3A4; grapefruit aumenta exposição.",
+          "indications": [
+            "Hipertensão",
+            "angina crônica estável ou vasoespástica conforme produto de liberação prolongada"
+          ],
+          "commercialNames": [
+            "Procardia XL",
+            "Adalat CC"
+          ],
+          "presentation": "Comprimidos de liberação prolongada.",
+          "presentations": [
+            "ER 30, 60 e 90 mg"
+          ],
+          "dose": {
+            "hypertensionER": "30 mg uma vez ao dia em jejum; titular conforme eficácia e segurança ao longo de 7-14 dias; manutenção 30-60 mg/dia; não se recomenda titular acima de 90 mg/dia na bula citada."
+          },
+          "pediatricDose": "Segurança e eficácia desta formulação ER não estabelecidas para uso pediátrico rotineiro na bula citada.",
+          "renalDose": "Não requer ajuste rotineiro específico por insuficiência renal isolada; monitorar pressão e tolerância.",
+          "hepaticDose": "A exposição aumenta na insuficiência hepática; considerar doses menores e titulação lenta.",
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "cefaleia",
+              "rubor",
+              "tontura",
+              "palpitações"
+            ],
+            "dangerous": [
+              "hipotensão sintomática",
+              "piora de angina no início ou aumento de dose em doença coronariana grave",
+              "reação de hipersensibilidade rara"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4d02eba2-e964-4fa7-aaae-25949b5f0316",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4d02eba2-e964-4fa7-aaae-25949b5f0316"
+        },
+        "es": {
+          "pharmacologicClass": "Bloqueante de canales de calcio dihidropiridínico de acción predominantemente vascular",
+          "mechanism": "Bloquea canales de calcio tipo L en músculo liso arterial, produciendo vasodilatación y reducción de resistencia vascular sistémica.",
+          "pharmacodynamics": "Reduce presión arterial con poco efecto directo sobre conducción AV a dosis terapéuticas; puede causar edema periférico, rubor y cefalea por vasodilatación.",
+          "commonAdverseEffects": [
+            "edema periférico",
+            "cefalea",
+            "rubor",
+            "mareo",
+            "palpitaciones"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensión sintomática",
+            "empeoramiento de angina al inicio o aumento de dosis en enfermedad coronaria grave",
+            "reacción de hipersensibilidad rara"
+          ],
+          "contraindications": [
+            "Hipersensibilidad al fármaco; valorar hipotensión grave individualmente"
+          ],
+          "interactions": [
+            "Otros antihipertensivos aumentan hipotensión",
+            "Inhibidores CYP3A4 pueden aumentar exposición",
+            "Inductores CYP3A4 pueden reducir exposición",
+            "Pomelo es clínicamente relevante especialmente para nifedipino y felodipino"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "edema periférico",
+            "frecuencia cardíaca",
+            "síntomas de angina tras inicio o titulación",
+            "función hepática si existe hepatopatía"
+          ],
+          "administration": "ER una vez al día en ayunas; tragar entera, no morder, dividir ni triturar. Evitar jugo de pomelo.",
+          "preparation": "No triturar ni manipular la tableta ER; verificar que se dispense la formulación de liberación prolongada.",
+          "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+          "pregnancy": "Usar cuando el beneficio materno justifique la exposición; elegir agente y formulación según indicación obstétrica.",
+          "lactation": "Individualizar; considerar datos específicos del fármaco y edad del lactante.",
+          "specialPopulations": {
+            "elderly": "Titular desde dosis bajas cuando corresponda.",
+            "hepatic": "La exposición puede aumentar; iniciar bajo y titular lentamente.",
+            "aorticStenosis": "Vigilar hipotensión en estenosis aórtica grave."
+          },
+          "patientEducation": [
+            "No triturar formulaciones de liberación prolongada",
+            "consultar por edema marcado, síncope o empeoramiento de angina",
+            "tomar a horario consistente"
+          ],
+          "clinicalPearls": [
+            "No sustituir nifedipino de liberación inmediata por ER de forma automática",
+            "Evitar uso sublingual de nifedipino de liberación inmediata para reducción urgente de presión."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: los CCB dihidropiridínicos de acción prolongada son una opción de primera línea para hipertensión."
+          ],
+          "safetyFlags": [
+            "HIPOTENSION",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "alerts": [
+            "Evitar cambios no equivalentes entre formulaciones de liberación inmediata y prolongada",
+            "Titular lentamente en hepatopatía importante."
+          ],
+          "name": "Nifedipino",
+          "class": "Bloqueante de canales de calcio dihidropiridínico de liberación prolongada",
+          "pharmacokinetics": "Formulación ER libera nifedipino de forma sostenida durante 24 h. Metabolismo hepático por CYP3A4; pomelo aumenta exposición.",
+          "indications": [
+            "Hipertensión",
+            "angina crónica estable o vasoespástica según producto de liberación prolongada"
+          ],
+          "commercialNames": [
+            "Procardia XL",
+            "Adalat CC"
+          ],
+          "presentation": "Tabletas de liberación prolongada.",
+          "presentations": [
+            "ER 30, 60 y 90 mg"
+          ],
+          "dose": {
+            "hypertensionER": "30 mg una vez al día en ayunas; titular según eficacia y seguridad durante un período de 7-14 días; mantenimiento 30-60 mg/día; no se recomienda titular por encima de 90 mg/día en la ficha citada."
+          },
+          "pediatricDose": "Seguridad y eficacia de esta formulación ER no establecidas para uso pediátrico rutinario en la ficha citada.",
+          "renalDose": "No requiere ajuste rutinario específico por insuficiencia renal aislada; vigilar presión y tolerancia.",
+          "hepaticDose": "La exposición aumenta en insuficiencia hepática; considerar dosis menores y titulación lenta.",
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "cefalea",
+              "rubor",
+              "mareo",
+              "palpitaciones"
+            ],
+            "dangerous": [
+              "hipotensión sintomática",
+              "empeoramiento de angina al inicio o aumento de dosis en enfermedad coronaria grave",
+              "reacción de hipersensibilidad rara"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4d02eba2-e964-4fa7-aaae-25949b5f0316",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4d02eba2-e964-4fa7-aaae-25949b5f0316"
+        }
       }
     }
 
@@ -14763,6 +21764,217 @@
             )
           }
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP06_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico de ação predominantemente vascular",
+          "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, produzindo vasodilatação e redução da resistência vascular sistêmica.",
+          "pharmacodynamics": "Reduz pressão arterial com pouco efeito direto sobre condução AV em doses terapêuticas; pode causar edema periférico, rubor e cefaleia por vasodilatação.",
+          "commonAdverseEffects": [
+            "edema periférico",
+            "cefaleia",
+            "rubor",
+            "tontura",
+            "palpitações"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensão sintomática",
+            "piora de angina no início ou aumento de dose em doença coronariana grave",
+            "reação de hipersensibilidade rara"
+          ],
+          "contraindications": [
+            "Hipersensibilidade ao fármaco; avaliar hipotensão grave individualmente"
+          ],
+          "interactions": [
+            "Outros anti-hipertensivos aumentam hipotensão",
+            "Inibidores de CYP3A4 podem aumentar exposição",
+            "Indutores de CYP3A4 podem reduzir exposição",
+            "Grapefruit é clinicamente relevante especialmente para nifedipino e felodipino"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "edema periférico",
+            "frequência cardíaca",
+            "sintomas de angina após início ou titulação",
+            "função hepática se houver hepatopatia"
+          ],
+          "administration": "Tomar regularmente em jejum ou com refeição leve; engolir inteira e não triturar nem mastigar.",
+          "preparation": "Não triturar a formulação ER.",
+          "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
+          "pregnancy": "Usar quando o benefício materno justificar a exposição; escolher agente e formulação conforme indicação obstétrica.",
+          "lactation": "Individualizar; considerar dados específicos do fármaco e idade do lactente.",
+          "specialPopulations": {
+            "elderly": "Titular a partir de doses baixas quando aplicável.",
+            "hepatic": "A exposição pode aumentar; iniciar baixo e titular lentamente.",
+            "aorticStenosis": "Monitorar hipotensão na estenose aórtica grave."
+          },
+          "patientEducation": [
+            "Não triturar formulações de liberação prolongada",
+            "procurar avaliação por edema importante, síncope ou piora de angina",
+            "tomar em horário consistente"
+          ],
+          "clinicalPearls": [
+            "Doses >10 mg/dia aumentam de forma importante edema e outros efeitos vasodilatadores sem relação benefício-risco favorável."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: bloqueadores de canal de cálcio di-hidropiridínicos de longa ação são opção de primeira linha para hipertensão."
+          ],
+          "safetyFlags": [
+            "HIPOTENSAO",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "alerts": [
+            "Evitar trocas não equivalentes entre formulações de liberação imediata e prolongada",
+            "Titular lentamente em hepatopatia importante."
+          ],
+          "name": "Felodipina",
+          "class": "Bloqueador de canais de cálcio di-hidropiridínico de liberação prolongada",
+          "pharmacokinetics": "Metabolismo hepático extenso por CYP3A4 com alta extração de primeira passagem. A formulação ER permite dose diária; idosos e hepatopatia podem apresentar maior exposição.",
+          "indications": [
+            "Hipertensão arterial em adultos"
+          ],
+          "commercialNames": [
+            "Plendil"
+          ],
+          "presentation": "Comprimidos de liberação prolongada.",
+          "presentations": [
+            "ER 2,5, 5 e 10 mg"
+          ],
+          "dose": {
+            "hypertension": "Início 5 mg uma vez ao dia; conforme resposta reduzir para 2,5 mg ou aumentar para 10 mg uma vez ao dia, com intervalos de pelo menos 2 semanas."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
+          "renalDose": "Em geral não requer ajuste de dose na insuficiência renal; titular conforme pressão e tolerância.",
+          "hepaticDose": "Na insuficiência hepática a exposição pode aumentar; considerar 2,5 mg/dia como início e titular lentamente.",
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "cefaleia",
+              "rubor",
+              "tontura",
+              "palpitações"
+            ],
+            "dangerous": [
+              "hipotensão sintomática",
+              "piora de angina no início ou aumento de dose em doença coronariana grave",
+              "reação de hipersensibilidade rara"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd39c559-5c5d-4d3b-9228-c44085e1699f",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd39c559-5c5d-4d3b-9228-c44085e1699f"
+        },
+        "es": {
+          "pharmacologicClass": "Bloqueante de canales de calcio dihidropiridínico de acción predominantemente vascular",
+          "mechanism": "Bloquea canales de calcio tipo L en músculo liso arterial, produciendo vasodilatación y reducción de resistencia vascular sistémica.",
+          "pharmacodynamics": "Reduce presión arterial con poco efecto directo sobre conducción AV a dosis terapéuticas; puede causar edema periférico, rubor y cefalea por vasodilatación.",
+          "commonAdverseEffects": [
+            "edema periférico",
+            "cefalea",
+            "rubor",
+            "mareo",
+            "palpitaciones"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensión sintomática",
+            "empeoramiento de angina al inicio o aumento de dosis en enfermedad coronaria grave",
+            "reacción de hipersensibilidad rara"
+          ],
+          "contraindications": [
+            "Hipersensibilidad al fármaco; valorar hipotensión grave individualmente"
+          ],
+          "interactions": [
+            "Otros antihipertensivos aumentan hipotensión",
+            "Inhibidores CYP3A4 pueden aumentar exposición",
+            "Inductores CYP3A4 pueden reducir exposición",
+            "Pomelo es clínicamente relevante especialmente para nifedipino y felodipino"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "edema periférico",
+            "frecuencia cardíaca",
+            "síntomas de angina tras inicio o titulación",
+            "función hepática si existe hepatopatía"
+          ],
+          "administration": "Tomar regularmente en ayunas o con comida ligera; tragar entera y no triturar ni masticar.",
+          "preparation": "No triturar la formulación ER.",
+          "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
+          "pregnancy": "Usar cuando el beneficio materno justifique la exposición; elegir agente y formulación según indicación obstétrica.",
+          "lactation": "Individualizar; considerar datos específicos del fármaco y edad del lactante.",
+          "specialPopulations": {
+            "elderly": "Titular desde dosis bajas cuando corresponda.",
+            "hepatic": "La exposición puede aumentar; iniciar bajo y titular lentamente.",
+            "aorticStenosis": "Vigilar hipotensión en estenosis aórtica grave."
+          },
+          "patientEducation": [
+            "No triturar formulaciones de liberación prolongada",
+            "consultar por edema marcado, síncope o empeoramiento de angina",
+            "tomar a horario consistente"
+          ],
+          "clinicalPearls": [
+            "Dosis >10 mg/día aumentan marcadamente edema y otros efectos vasodilatadores sin una relación beneficio-riesgo favorable."
+          ],
+          "guidelineRecommendations": [
+            "AHA/ACC 2025: los CCB dihidropiridínicos de acción prolongada son una opción de primera línea para hipertensión."
+          ],
+          "safetyFlags": [
+            "HIPOTENSION",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "alerts": [
+            "Evitar cambios no equivalentes entre formulaciones de liberación inmediata y prolongada",
+            "Titular lentamente en hepatopatía importante."
+          ],
+          "name": "Felodipino",
+          "class": "Bloqueante de canales de calcio dihidropiridínico de liberación prolongada",
+          "pharmacokinetics": "Metabolismo hepático extenso por CYP3A4 con alta extracción de primer paso. La formulación ER permite una dosis diaria; ancianos y hepatopatía pueden presentar mayor exposición.",
+          "indications": [
+            "Hipertensión arterial en adultos"
+          ],
+          "commercialNames": [
+            "Plendil"
+          ],
+          "presentation": "Tabletas de liberación prolongada.",
+          "presentations": [
+            "ER 2.5, 5 y 10 mg"
+          ],
+          "dose": {
+            "hypertension": "Inicio 5 mg una vez al día; según respuesta reducir a 2.5 mg o aumentar a 10 mg una vez al día, con intervalos de al menos 2 semanas."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
+          "renalDose": "No suele requerir ajuste de dosis en insuficiencia renal; titular según presión y tolerancia.",
+          "hepaticDose": "En insuficiencia hepática la exposición puede aumentar; considerar 2.5 mg/día como inicio y titular lentamente.",
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "cefalea",
+              "rubor",
+              "mareo",
+              "palpitaciones"
+            ],
+            "dangerous": [
+              "hipotensión sintomática",
+              "empeoramiento de angina al inicio o aumento de dosis en enfermedad coronaria grave",
+              "reacción de hipersensibilidad rara"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd39c559-5c5d-4d3b-9228-c44085e1699f",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=dd39c559-5c5d-4d3b-9228-c44085e1699f"
+        }
       }
     },
 
@@ -14949,6 +22161,235 @@
             )
           }
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico de ação vascular",
+          "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica e pressão arterial.",
+          "pharmacodynamics": "Produz vasodilatação arterial com pouco efeito direto sobre condução AV em doses terapêuticas. Pode causar cefaleia, rubor, palpitações, hipotensão e edema periférico.",
+          "commonAdverseEffects": [
+            "cefaleia",
+            "rubor",
+            "edema periférico",
+            "tontura",
+            "palpitações"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensão sintomática",
+            "piora de angina em pacientes suscetíveis",
+            "reação de hipersensibilidade rara"
+          ],
+          "interactions": [
+            "Inibidores de CYP3A4 podem aumentar exposição",
+            "Indutores de CYP3A4 podem reduzir exposição",
+            "Outros anti-hipertensivos aumentam hipotensão",
+            "Grapefruit pode aumentar exposição em di-hidropiridinas sensíveis a CYP3A4"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "edema periférico",
+            "frequência cardíaca",
+            "sintomas de angina ou hipotensão",
+            "função renal e hepática quando houver comorbidades"
+          ],
+          "preparation": "Comprimidos não exigem reconstituição.",
+          "infusionProtocol": "Não se aplica: formulação oral.",
+          "patientEducation": [
+            "Tomar exatamente conforme horário e relação com alimentos indicada para o produto",
+            "procurar avaliação por síncope, edema importante ou piora de angina",
+            "evitar grapefruit quando a bula indicar"
+          ],
+          "safetyFlags": [
+            "HIPOTENSAO",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "name": "Lercanidipina (Cloridrato)",
+          "class": "Bloqueador de canais de cálcio di-hidropiridínico de longa ação",
+          "pharmacokinetics": "Metabolismo extenso por CYP3A4, alta ligação a proteínas e efeito prolongado apesar de meia-vida plasmática relativamente curta. A disponibilidade aumenta de forma importante com refeições ricas em gordura.",
+          "indications": [
+            "Hipertensão essencial leve a moderada em adultos"
+          ],
+          "commercialNames": [
+            "Zanidip"
+          ],
+          "presentation": "Comprimidos revestidos de 10 e 20 mg.",
+          "presentations": [
+            "10 mg",
+            "20 mg"
+          ],
+          "dose": {
+            "hypertension": "10 mg uma vez ao dia pelo menos 15 minutos antes do café da manhã; pode aumentar para 20 mg conforme resposta. O efeito máximo pode levar cerca de 2 semanas."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas em menores de 18 anos.",
+          "renalDose": "Insuficiência leve-moderada: iniciar com cautela e ter cuidado especial ao aumentar de 10 para 20 mg. Contraindicado com eTFG <30 mL/min ou diálise.",
+          "hepaticDose": "Insuficiência moderada pode aumentar o efeito; considerar ajuste. Contraindicado na insuficiência hepática grave.",
+          "contraindications": [
+            "Obstrução da via de saída do ventrículo esquerdo",
+            "insuficiência cardíaca congestiva não tratada",
+            "angina instável ou IAM no último mês",
+            "insuficiência hepática grave",
+            "eTFG <30 mL/min ou diálise",
+            "inibidores fortes de CYP3A4",
+            "ciclosporina",
+            "grapefruit"
+          ],
+          "administration": "Preferencialmente pela manhã, pelo menos 15 minutos antes do café da manhã. Não administrar com grapefruit.",
+          "pregnancy": "Não recomendada durante a gestação nem em mulheres com possibilidade de gestação sem contracepção eficaz.",
+          "lactation": "Não deve ser usada durante a amamentação porque a excreção no leite é desconhecida e não se pode excluir risco ao lactente.",
+          "specialPopulations": {
+            "elderly": "Não exige ajuste automático, mas iniciar com cuidado especial.",
+            "peritonealDialysis": "Pode associar-se a efluente peritoneal turvo não infeccioso.",
+            "ischemicHeartDisease": "Usar com cautela."
+          },
+          "clinicalPearls": [
+            "Refeição rica em gordura aumenta de forma importante a exposição; respeitar administração antes das refeições",
+            "Não associar com grapefruit, ciclosporina ou inibidores fortes de CYP3A4."
+          ],
+          "guidelineRecommendations": [
+            "Diretrizes contemporâneas de hipertensão consideram bloqueadores de canais de cálcio de longa ação uma classe de primeira linha; a escolha da lercanidipina depende da disponibilidade e autorização regional."
+          ],
+          "alerts": [
+            "Não exceder 20 mg/dia rotineiramente",
+            "Não usar em insuficiência renal ou hepática grave."
+          ],
+          "adverseEffects": {
+            "common": [
+              "cefaleia",
+              "rubor",
+              "edema periférico",
+              "tontura",
+              "palpitações"
+            ],
+            "dangerous": [
+              "hipotensão sintomática",
+              "piora de angina em pacientes suscetíveis",
+              "reação de hipersensibilidade rara"
+            ]
+          },
+          "references": [
+            "https://www.medicines.org.uk/emc/product/102168/smpc",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://www.medicines.org.uk/emc/product/102168/smpc"
+        },
+        "es": {
+          "pharmacologicClass": "Bloqueante de canales de calcio dihidropiridínico de acción vascular",
+          "mechanism": "Bloquea canales de calcio tipo L en músculo liso arterial, reduciendo entrada de calcio, resistencia vascular sistémica y presión arterial.",
+          "pharmacodynamics": "Produce vasodilatación arterial con escaso efecto directo sobre conducción AV a dosis terapéuticas. Puede causar cefalea, rubor, palpitaciones, hipotensión y edema periférico.",
+          "commonAdverseEffects": [
+            "cefalea",
+            "rubor",
+            "edema periférico",
+            "mareo",
+            "palpitaciones"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensión sintomática",
+            "empeoramiento de angina en pacientes susceptibles",
+            "reacción de hipersensibilidad rara"
+          ],
+          "interactions": [
+            "Inhibidores CYP3A4 pueden aumentar exposición",
+            "Inductores CYP3A4 pueden reducir exposición",
+            "Otros antihipertensivos aumentan hipotensión",
+            "Pomelo puede aumentar exposición en dihidropiridinas sensibles a CYP3A4"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "edema periférico",
+            "frecuencia cardíaca",
+            "síntomas de angina o hipotensión",
+            "función renal y hepática cuando existan comorbilidades"
+          ],
+          "preparation": "Tabletas no requieren reconstitución.",
+          "infusionProtocol": "No aplica: formulación oral.",
+          "patientEducation": [
+            "Tomar exactamente según horario y relación con alimentos indicada para el producto",
+            "consultar por síncope, edema marcado o empeoramiento de angina",
+            "evitar pomelo cuando la ficha lo indique"
+          ],
+          "safetyFlags": [
+            "HIPOTENSION",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "name": "Lercanidipino (Clorhidrato)",
+          "class": "Bloqueante de canales de calcio dihidropiridínico de larga acción",
+          "pharmacokinetics": "Metabolismo extenso por CYP3A4, elevada unión a proteínas y efecto prolongado pese a vida media plasmática relativamente corta. La disponibilidad aumenta de forma marcada con comidas ricas en grasa.",
+          "indications": [
+            "Hipertensión esencial leve a moderada en adultos"
+          ],
+          "commercialNames": [
+            "Zanidip"
+          ],
+          "presentation": "Tabletas recubiertas de 10 y 20 mg.",
+          "presentations": [
+            "10 mg",
+            "20 mg"
+          ],
+          "dose": {
+            "hypertension": "10 mg una vez al día al menos 15 minutos antes del desayuno; puede aumentarse a 20 mg según respuesta. El efecto máximo puede tardar unas 2 semanas."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas en menores de 18 años.",
+          "renalDose": "Insuficiencia leve-moderada: iniciar con cautela y extremar cuidado al aumentar de 10 a 20 mg. Contraindicado con GFR <30 mL/min o diálisis.",
+          "hepaticDose": "Insuficiencia moderada puede aumentar el efecto; considerar ajuste. Contraindicado en insuficiencia hepática grave.",
+          "contraindications": [
+            "Obstrucción del tracto de salida del ventrículo izquierdo",
+            "insuficiencia cardíaca congestiva no tratada",
+            "angina inestable o IAM en el último mes",
+            "insuficiencia hepática grave",
+            "GFR <30 mL/min o diálisis",
+            "inhibidores fuertes CYP3A4",
+            "ciclosporina",
+            "pomelo"
+          ],
+          "administration": "Preferentemente por la mañana, al menos 15 minutos antes del desayuno. No administrar con pomelo.",
+          "pregnancy": "No recomendada durante embarazo ni en mujeres con posibilidad de embarazo sin anticoncepción eficaz.",
+          "lactation": "No debe usarse durante lactancia porque se desconoce la excreción en leche y no puede excluirse riesgo al lactante.",
+          "specialPopulations": {
+            "elderly": "No exige ajuste automático, pero iniciar con especial cuidado.",
+            "peritonealDialysis": "Puede asociarse con efluente peritoneal turbio no infeccioso.",
+            "ischemicHeartDisease": "Usar con cautela."
+          },
+          "clinicalPearls": [
+            "La comida rica en grasa aumenta marcadamente la exposición; respetar administración antes de comidas",
+            "No asociar con pomelo, ciclosporina o inhibidores fuertes CYP3A4."
+          ],
+          "guidelineRecommendations": [
+            "Las guías contemporáneas de hipertensión consideran los bloqueantes de canales de calcio de acción prolongada una clase de primera línea; la elección de lercanidipino depende de disponibilidad y autorización regional."
+          ],
+          "alerts": [
+            "No exceder 20 mg/día de rutina",
+            "No usar en insuficiencia renal o hepática grave."
+          ],
+          "adverseEffects": {
+            "common": [
+              "cefalea",
+              "rubor",
+              "edema periférico",
+              "mareo",
+              "palpitaciones"
+            ],
+            "dangerous": [
+              "hipotensión sintomática",
+              "empeoramiento de angina en pacientes susceptibles",
+              "reacción de hipersensibilidad rara"
+            ]
+          },
+          "references": [
+            "https://www.medicines.org.uk/emc/product/102168/smpc",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://www.medicines.org.uk/emc/product/102168/smpc"
+        }
       }
     },
 
@@ -15137,6 +22578,233 @@
             )
           }
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico de ação vascular",
+          "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica e pressão arterial.",
+          "pharmacodynamics": "Produz vasodilatação arterial com pouco efeito direto sobre condução AV em doses terapêuticas. Pode causar cefaleia, rubor, palpitações, hipotensão e edema periférico.",
+          "commonAdverseEffects": [
+            "cefaleia",
+            "rubor",
+            "edema periférico",
+            "tontura",
+            "palpitações"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensão sintomática",
+            "piora de angina em pacientes suscetíveis",
+            "reação de hipersensibilidade rara"
+          ],
+          "interactions": [
+            "Inibidores de CYP3A4 podem aumentar exposição",
+            "Indutores de CYP3A4 podem reduzir exposição",
+            "Outros anti-hipertensivos aumentam hipotensão",
+            "Grapefruit pode aumentar exposição em di-hidropiridinas sensíveis a CYP3A4"
+          ],
+          "monitoring": [
+            "Pressão arterial",
+            "edema periférico",
+            "frequência cardíaca",
+            "sintomas de angina ou hipotensão",
+            "função renal e hepática quando houver comorbidades"
+          ],
+          "preparation": "Comprimidos não exigem reconstituição.",
+          "infusionProtocol": "Não se aplica: formulação oral.",
+          "patientEducation": [
+            "Tomar exatamente conforme horário e relação com alimentos indicada para o produto",
+            "procurar avaliação por síncope, edema importante ou piora de angina",
+            "evitar grapefruit quando a bula indicar"
+          ],
+          "safetyFlags": [
+            "HIPOTENSAO",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "name": "Manidipina",
+          "class": "Bloqueador de canais de cálcio di-hidropiridínico de ação vascular",
+          "pharmacokinetics": "Alta lipofilicidade e metabolismo hepático extenso; absorção aumenta com alimentos. A farmacocinética muda pouco na insuficiência renal leve-moderada, mas disfunção grave é contraindicada.",
+          "indications": [
+            "Hipertensão essencial leve a moderada em adultos"
+          ],
+          "commercialNames": [
+            "Iperten"
+          ],
+          "presentation": "Comprimidos de 10 e 20 mg.",
+          "presentations": [
+            "10 mg",
+            "20 mg"
+          ],
+          "dose": {
+            "hypertension": "10 mg uma vez ao dia; se após 2-4 semanas o efeito for insuficiente, aumentar para 20 mg uma vez ao dia."
+          },
+          "pediatricDose": "Contraindicado em crianças conforme ficha técnica citada.",
+          "renalDose": "Insuficiência leve-moderada: cautela ao aumentar de 10 para 20 mg/dia. Contraindicado se ClCr <10 mL/min.",
+          "hepaticDose": "Insuficiência hepática leve: não ultrapassar 10 mg/dia. Contraindicado na insuficiência hepática moderada-grave.",
+          "contraindications": [
+            "Crianças",
+            "angina instável ou primeiras 4 semanas pós-IAM",
+            "insuficiência cardíaca congestiva não tratada",
+            "ClCr <10 mL/min",
+            "insuficiência hepática moderada-grave",
+            "hipersensibilidade a di-hidropiridinas"
+          ],
+          "administration": "Tomar pela manhã após o café da manhã, com líquido e sem mastigar. Evitar suco de grapefruit.",
+          "pregnancy": "Não administrar durante a gestação pela ausência de dados adequados e risco potencial de classe.",
+          "lactation": "Evitar durante a amamentação; se o tratamento for necessário, interromper amamentação conforme bula.",
+          "specialPopulations": {
+            "elderly": "Dose recomendada 10 mg/dia; avaliar cuidadosamente qualquer aumento.",
+            "peritonealDialysis": "Pode produzir efluente peritoneal turvo por aumento de triglicérides.",
+            "hepatic": "Leve: máximo 10 mg/dia."
+          },
+          "clinicalPearls": [
+            "Em idosos a dose de 10 mg/dia costuma ser suficiente",
+            "Efluente turvo na diálise peritoneal pode ser confundido com peritonite infecciosa."
+          ],
+          "guidelineRecommendations": [
+            "Como di-hidropiridínico de longa ação, alinha-se à classe usada para hipertensão; seu uso específico depende da autorização regional."
+          ],
+          "alerts": [
+            "Não ultrapassar 10 mg/dia em hepatopatia leve",
+            "Não usar com ClCr <10 mL/min nem em hepatopatia moderada-grave."
+          ],
+          "adverseEffects": {
+            "common": [
+              "cefaleia",
+              "rubor",
+              "edema periférico",
+              "tontura",
+              "palpitações"
+            ],
+            "dangerous": [
+              "hipotensão sintomática",
+              "piora de angina em pacientes suscetíveis",
+              "reação de hipersensibilidade rara"
+            ]
+          },
+          "references": [
+            "https://cima.aemps.es/cima/dochtml/ft/72458/FT_72458.html",
+            "https://base-donnees-publique.medicaments.gouv.fr/medicament/67699283/extrait",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://cima.aemps.es/cima/dochtml/ft/72458/FT_72458.html"
+        },
+        "es": {
+          "pharmacologicClass": "Bloqueante de canales de calcio dihidropiridínico de acción vascular",
+          "mechanism": "Bloquea canales de calcio tipo L en músculo liso arterial, reduciendo entrada de calcio, resistencia vascular sistémica y presión arterial.",
+          "pharmacodynamics": "Produce vasodilatación arterial con escaso efecto directo sobre conducción AV a dosis terapéuticas. Puede causar cefalea, rubor, palpitaciones, hipotensión y edema periférico.",
+          "commonAdverseEffects": [
+            "cefalea",
+            "rubor",
+            "edema periférico",
+            "mareo",
+            "palpitaciones"
+          ],
+          "dangerousAdverseEffects": [
+            "hipotensión sintomática",
+            "empeoramiento de angina en pacientes susceptibles",
+            "reacción de hipersensibilidad rara"
+          ],
+          "interactions": [
+            "Inhibidores CYP3A4 pueden aumentar exposición",
+            "Inductores CYP3A4 pueden reducir exposición",
+            "Otros antihipertensivos aumentan hipotensión",
+            "Pomelo puede aumentar exposición en dihidropiridinas sensibles a CYP3A4"
+          ],
+          "monitoring": [
+            "Presión arterial",
+            "edema periférico",
+            "frecuencia cardíaca",
+            "síntomas de angina o hipotensión",
+            "función renal y hepática cuando existan comorbilidades"
+          ],
+          "preparation": "Tabletas no requieren reconstitución.",
+          "infusionProtocol": "No aplica: formulación oral.",
+          "patientEducation": [
+            "Tomar exactamente según horario y relación con alimentos indicada para el producto",
+            "consultar por síncope, edema marcado o empeoramiento de angina",
+            "evitar pomelo cuando la ficha lo indique"
+          ],
+          "safetyFlags": [
+            "HIPOTENSION",
+            "EDEMA_PERIFERICO",
+            "CYP3A4"
+          ],
+          "name": "Manidipino",
+          "class": "Bloqueante de canales de calcio dihidropiridínico de acción vascular",
+          "pharmacokinetics": "Alta lipofilia y metabolismo hepático extenso; absorción aumenta con alimentos. La farmacocinética cambia poco en insuficiencia renal leve-moderada, pero el deterioro grave está contraindicado.",
+          "indications": [
+            "Hipertensión esencial leve a moderada en adultos"
+          ],
+          "commercialNames": [
+            "Iperten"
+          ],
+          "presentation": "Tabletas de 10 y 20 mg.",
+          "presentations": [
+            "10 mg",
+            "20 mg"
+          ],
+          "dose": {
+            "hypertension": "10 mg una vez al día; si tras 2-4 semanas el efecto es insuficiente, aumentar a 20 mg una vez al día."
+          },
+          "pediatricDose": "Contraindicado en niños según ficha técnica citada.",
+          "renalDose": "Insuficiencia leve-moderada: precaución al aumentar de 10 a 20 mg/día. Contraindicado si CrCl <10 mL/min.",
+          "hepaticDose": "Insuficiencia hepática leve: no superar 10 mg/día. Contraindicado en insuficiencia hepática moderada-grave.",
+          "contraindications": [
+            "Niños",
+            "angina inestable o primeras 4 semanas post-IAM",
+            "insuficiencia cardíaca congestiva no tratada",
+            "CrCl <10 mL/min",
+            "insuficiencia hepática moderada-grave",
+            "hipersensibilidad a dihidropiridinas"
+          ],
+          "administration": "Tomar por la mañana después del desayuno, con líquido y sin masticar. Evitar zumo de pomelo.",
+          "pregnancy": "No administrar durante embarazo por ausencia de datos adecuados y riesgo potencial de clase.",
+          "lactation": "Evitar durante lactancia; si el tratamiento es necesario, interrumpir lactancia según ficha.",
+          "specialPopulations": {
+            "elderly": "Dosis recomendada 10 mg/día; valorar cuidadosamente cualquier aumento.",
+            "peritonealDialysis": "Puede producir efluente peritoneal turbio por aumento de triglicéridos.",
+            "hepatic": "Leve: máximo 10 mg/día."
+          },
+          "clinicalPearls": [
+            "En ancianos la dosis de 10 mg/día suele ser suficiente",
+            "El efluente turbio en diálisis peritoneal puede confundirse con peritonitis infecciosa."
+          ],
+          "guidelineRecommendations": [
+            "Como dihidropiridínico de acción prolongada, se alinea con la clase usada para hipertensión; su uso específico depende de autorización regional."
+          ],
+          "alerts": [
+            "No superar 10 mg/día en hepatopatía leve",
+            "No usar con CrCl <10 mL/min ni en hepatopatía moderada-grave."
+          ],
+          "adverseEffects": {
+            "common": [
+              "cefalea",
+              "rubor",
+              "edema periférico",
+              "mareo",
+              "palpitaciones"
+            ],
+            "dangerous": [
+              "hipotensión sintomática",
+              "empeoramiento de angina en pacientes susceptibles",
+              "reacción de hipersensibilidad rara"
+            ]
+          },
+          "references": [
+            "https://cima.aemps.es/cima/dochtml/ft/72458/FT_72458.html",
+            "https://base-donnees-publique.medicaments.gouv.fr/medicament/67699283/extrait",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+          ],
+          "ref": "https://cima.aemps.es/cima/dochtml/ft/72458/FT_72458.html"
+        }
       }
     }
 
@@ -15653,6 +23321,259 @@
             )
           }
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "commonAdverseEffects": [
+            "edema periférico",
+            "bradicardia",
+            "cefaleia",
+            "tontura",
+            "fadiga",
+            "bloqueio AV de primeiro grau"
+          ],
+          "monitoring": [
+            "ECG de 12 derivações",
+            "frequência cardíaca",
+            "pressão arterial",
+            "função renal e eletrólitos quando aplicável",
+            "sintomas de pró-arritmia"
+          ],
+          "preparation": "Para infusão IV seguir diluição da bula ou usar produto premix; confirmar concentração antes de programar a bomba.",
+          "patientEducation": [
+            "Não duplicar doses esquecidas",
+            "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
+            "informar todos os fármacos pelo risco de interações e pró-arritmia"
+          ],
+          "name": "Diltiazem",
+          "class": "Bloqueador de canais de cálcio não di-hidropiridínico",
+          "pharmacologicClass": "Antagonista de canais de cálcio tipo L com efeitos vasculares e nodais AV",
+          "mechanism": "Reduz entrada de cálcio no músculo liso vascular e miocárdio; diminui condução e prolonga refratariedade do nó AV, além de produzir vasodilatação.",
+          "pharmacodynamics": "Reduz frequência ventricular na FA/flutter e pressão arterial; pode causar bradicardia, bloqueio AV e inotropismo negativo.",
+          "pharmacokinetics": "Metabolismo hepático extenso, principalmente CYP3A4; diltiazem também inibe CYP3A4 e P-gp. Formulações ER permitem dose diária.",
+          "indications": [
+            "Hipertensão",
+            "angina crônica estável",
+            "controle agudo da frequência na fibrilação atrial ou flutter por via IV em pacientes apropriados"
+          ],
+          "commercialNames": [
+            "Cardizem",
+            "Tiazac"
+          ],
+          "presentation": "Comprimidos/cápsulas de liberação prolongada e formulação IV.",
+          "presentations": [
+            "ER 120, 180, 240, 300, 360 e 420 mg",
+            "Injeção IV conforme produto"
+          ],
+          "dose": {
+            "hypertensionER": "180-240 mg uma vez ao dia; titular conforme resposta até 540 mg/dia segundo o comprimido ER citado.",
+            "anginaER": "180 mg uma vez ao dia; aumentar a cada 7-14 dias até máximo 360 mg/dia.",
+            "AFIV": "0,25 mg/kg IV em 2 min; se resposta insuficiente após 15 min, 0,35 mg/kg IV em 2 min. Depois infusão 5-15 mg/h por até 24 h."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas de forma geral nas bulas adultas citadas; usar protocolo pediátrico especializado quando aplicável.",
+          "renalDose": "Não há ajuste fixo por insuficiência renal para as formulações citadas; monitorar resposta, pressão, frequência e efeitos adversos.",
+          "hepaticDose": "Usar com cautela na hepatopatia; o metabolismo é hepático e a exposição pode aumentar. Titular lentamente.",
+          "dangerousAdverseEffects": [
+            "bradicardia grave",
+            "bloqueio AV avançado",
+            "hipotensão",
+            "piora de insuficiência cardíaca",
+            "lesão hepática aguda rara"
+          ],
+          "contraindications": [
+            "Síndrome do nó sinusal sem marcapasso",
+            "bloqueio AV de segundo ou terceiro grau sem marcapasso",
+            "PAS <90 mmHg",
+            "hipersensibilidade",
+            "para IV: FA/flutter com via acessória ou taquicardia ventricular",
+            "uso IV concomitante próximo com betabloqueador IV"
+          ],
+          "interactions": [
+            "Betabloqueadores e digoxina aumentam bradicardia e bloqueio AV",
+            "Diltiazem inibe CYP3A4 e pode aumentar concentrações de substratos sensíveis",
+            "Estatinas metabolizadas por CYP3A4 podem exigir ajuste",
+            "Ivabradina com diltiazem deve ser evitada"
+          ],
+          "administration": "ER: engolir inteira conforme formulação. IV: administrar com ECG contínuo e controle frequente da pressão.",
+          "infusionProtocol": "Após bolus efetivo, iniciar 5-10 mg/h e titular em incrementos de 5 mg/h até máximo 15 mg/h; não exceder 24 h de infusão conforme bula.",
+          "pregnancy": "Usar apenas se o benefício justificar o risco; dados humanos não permitem excluir risco.",
+          "lactation": "Diltiazem é excretado no leite; individualizar e considerar alternativa ou interrupção conforme necessidade materna.",
+          "specialPopulations": {
+            "HFrEF": "Evitar para controle de frequência se FEVE <40% pelo risco de piora da IC.",
+            "WPW": "Não usar IV em FA/flutter com via acessória.",
+            "elderly": "Titular pela resposta e condução."
+          },
+          "clinicalPearls": [
+            "Na FA com FEVE <40% diltiazem não deve ser usado para controle crônico da frequência",
+            "Na FA pré-excitada o bloqueio nodal AV pode acelerar condução pela via acessória."
+          ],
+          "guidelineRecommendations": [
+            "Diretriz FA 2023: diltiazem ou verapamil são recomendados para controle de frequência quando FEVE >40%; não devem ser administrados se FEVE <40%."
+          ],
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEIO_AV",
+            "HFrEF",
+            "VIA_ACESSORIA",
+            "CYP3A4"
+          ],
+          "alerts": [
+            "Monitorização contínua durante uso IV",
+            "Não ultrapassar 15 mg/h nem 24 h de infusão conforme bula."
+          ],
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "bradicardia",
+              "cefaleia",
+              "tontura",
+              "fadiga",
+              "bloqueio AV de primeiro grau"
+            ],
+            "dangerous": [
+              "bradicardia grave",
+              "bloqueio AV avançado",
+              "hipotensão",
+              "piora de insuficiência cardíaca",
+              "lesão hepática aguda rara"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95",
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=734beeef-3968-4137-af2c-276e8a9317df",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95"
+        },
+        "es": {
+          "commonAdverseEffects": [
+            "edema periférico",
+            "bradicardia",
+            "cefalea",
+            "mareo",
+            "fatiga",
+            "bloqueo AV de primer grado"
+          ],
+          "monitoring": [
+            "ECG de 12 derivaciones",
+            "frecuencia cardíaca",
+            "presión arterial",
+            "función renal y electrolitos cuando corresponda",
+            "síntomas de proarritmia"
+          ],
+          "preparation": "Para infusión IV seguir dilución de la ficha o usar producto premix; confirmar concentración antes de programar la bomba.",
+          "patientEducation": [
+            "No duplicar dosis omitidas",
+            "consultar por síncope, palpitaciones sostenidas o disnea nueva",
+            "informar todos los fármacos por riesgo de interacciones y proarritmia"
+          ],
+          "name": "Diltiazem",
+          "class": "Bloqueante de canales de calcio no dihidropiridínico",
+          "pharmacologicClass": "Antagonista de canales de calcio tipo L con efectos vasculares y nodales AV",
+          "mechanism": "Reduce entrada de calcio en músculo liso vascular y miocardio; disminuye conducción y prolonga refractariedad del nodo AV, además de producir vasodilatación.",
+          "pharmacodynamics": "Reduce frecuencia ventricular en FA/flutter y presión arterial; puede causar bradicardia, bloqueo AV e inotropismo negativo.",
+          "pharmacokinetics": "Metabolismo hepático extenso, principalmente CYP3A4; diltiazem también inhibe CYP3A4 y P-gp. Formulaciones ER permiten dosificación diaria.",
+          "indications": [
+            "Hipertensión",
+            "angina crónica estable",
+            "control agudo de frecuencia en fibrilación auricular o flutter por vía IV en pacientes apropiados"
+          ],
+          "commercialNames": [
+            "Cardizem",
+            "Tiazac"
+          ],
+          "presentation": "Tabletas/cápsulas de liberación prolongada y formulación IV.",
+          "presentations": [
+            "ER 120, 180, 240, 300, 360 y 420 mg",
+            "Inyección IV según producto"
+          ],
+          "dose": {
+            "hypertensionER": "180-240 mg una vez al día; titular según respuesta hasta 540 mg/día según la tableta ER citada.",
+            "anginaER": "180 mg una vez al día; aumentar cada 7-14 días hasta máximo 360 mg/día.",
+            "AFIV": "0.25 mg/kg IV en 2 min; si respuesta insuficiente a los 15 min, 0.35 mg/kg IV en 2 min. Luego infusión 5-15 mg/h hasta 24 h."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas de forma general en las fichas adultas citadas; usar protocolo pediátrico especializado cuando corresponda.",
+          "renalDose": "No existe ajuste fijo por insuficiencia renal para las formulaciones citadas; monitorizar respuesta, presión, frecuencia y efectos adversos.",
+          "hepaticDose": "Usar con cautela en hepatopatía; el metabolismo es hepático y la exposición puede aumentar. Titular lentamente.",
+          "dangerousAdverseEffects": [
+            "bradicardia grave",
+            "bloqueo AV avanzado",
+            "hipotensión",
+            "empeoramiento de insuficiencia cardíaca",
+            "lesión hepática aguda rara"
+          ],
+          "contraindications": [
+            "Síndrome del nodo enfermo sin marcapasos",
+            "bloqueo AV de segundo o tercer grado sin marcapasos",
+            "PAS <90 mmHg",
+            "hipersensibilidad",
+            "para IV: FA/flutter con vía accesoria o taquicardia ventricular",
+            "uso IV concomitante cercano con betabloqueante IV"
+          ],
+          "interactions": [
+            "Betabloqueantes y digoxina aumentan bradicardia y bloqueo AV",
+            "Diltiazem inhibe CYP3A4 y puede aumentar concentraciones de sustratos sensibles",
+            "Estatinas metabolizadas por CYP3A4 pueden requerir ajuste",
+            "Ivabradina con diltiazem debe evitarse"
+          ],
+          "administration": "ER: tragar entera según formulación. IV: administrar con ECG continuo y control frecuente de presión.",
+          "infusionProtocol": "Tras bolo efectivo, iniciar 5-10 mg/h y titular en incrementos de 5 mg/h hasta máximo 15 mg/h; no exceder 24 h de infusión según ficha.",
+          "pregnancy": "Usar solo si el beneficio justifica el riesgo; datos humanos no permiten excluir riesgo.",
+          "lactation": "Diltiazem se excreta en leche; individualizar y considerar alternativa o interrupción según necesidad materna.",
+          "specialPopulations": {
+            "HFrEF": "Evitar para control de frecuencia si LVEF <40% por riesgo de empeoramiento de HF.",
+            "WPW": "No usar IV en FA/flutter con vía accesoria.",
+            "elderly": "Titular por respuesta y conducción."
+          },
+          "clinicalPearls": [
+            "En FA con LVEF <40% no debe usarse diltiazem para control crónico de frecuencia",
+            "En FA preexcitada el bloqueo nodal AV puede acelerar conducción por la vía accesoria."
+          ],
+          "guidelineRecommendations": [
+            "Guía AF 2023: diltiazem o verapamilo se recomiendan para control de frecuencia cuando LVEF >40%; no deben administrarse si LVEF <40%."
+          ],
+          "safetyFlags": [
+            "BRADICARDIA",
+            "BLOQUEO_AV",
+            "HFrEF",
+            "VIA_ACCESORIA",
+            "CYP3A4"
+          ],
+          "alerts": [
+            "Monitorización continua durante uso IV",
+            "No superar 15 mg/h ni 24 h de infusión según ficha."
+          ],
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "bradicardia",
+              "cefalea",
+              "mareo",
+              "fatiga",
+              "bloqueo AV de primer grado"
+            ],
+            "dangerous": [
+              "bradicardia grave",
+              "bloqueo AV avanzado",
+              "hipotensión",
+              "empeoramiento de insuficiencia cardíaca",
+              "lesión hepática aguda rara"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95",
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=734beeef-3968-4137-af2c-276e8a9317df",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95"
+        }
       }
     }
 
@@ -15727,50 +23648,50 @@
 
         // Contraindicações absolutas
         if (ecgBloqueioAV) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ CONTRAINDICADO: Bloqueio AV de 2º/3º grau sem marcapasso — não usar adenosina.', '⛔ CONTRAINDICADO: Bloqueo AV 2º/3º grado sin marcapasos — no usar adenosina.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' CONTRAINDICADO: Bloqueio AV de 2º/3º grau sem marcapasso — não usar adenosina.', ' CONTRAINDICADO: Bloqueo AV 2º/3º grado sin marcapasos — no usar adenosina.') });
           contraindicado = true;
         }
         if (asmaDpoc) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ CONTRAINDICADO (relativo): Asma/DPOC com broncoespasmo ativo — alto risco de broncoespasmo grave.', '⛔ CONTRAINDICADO (relativo): Asma/EPOC con broncoespasmo activo — alto riesgo de broncoespasmo grave.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' CONTRAINDICADO (relativo): Asma/DPOC com broncoespasmo ativo — alto risco de broncoespasmo grave.', ' CONTRAINDICADO (relativo): Asma/EPOC con broncoespasmo activo — alto riesgo de broncoespasmo grave.') });
         }
 
         // Pré-excitação / QRS largo irregular
         if (preExcitacao) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ PERIGO: Pré-excitação detectada — NÃO usar adenosina em FA/flutter com QRS pré-excitado. Pode precipitar FV.', '⛔ PELIGRO: Preexcitación detectada — NO usar adenosina en FA/flutter con QRS preexcitado. Puede precipitar FV.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' PERIGO: Pré-excitação detectada — NÃO usar adenosina em FA/flutter com QRS pré-excitado. Pode precipitar FV.', ' PELIGRO: Preexcitación detectada — NO usar adenosina en FA/flutter con QRS preexcitado. Puede precipitar FV.') });
           contraindicado = true;
         }
         if (qrsLargo && ritmoIrregular) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ NÃO USAR: Taquicardia irregular de QRS largo — possível FA+pré-excitação ou TV polimórfica.', '⛔ NO USAR: Taquicardia irregular de QRS ancho — posible FA+preexcitación o TV polimorfa.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' NÃO USAR: Taquicardia irregular de QRS largo — possível FA+pré-excitação ou TV polimórfica.', ' NO USAR: Taquicardia irregular de QRS ancho — posible FA+preexcitación o TV polimorfa.') });
           contraindicado = true;
         }
 
         // Instabilidade hemodinâmica
         if (paSistolica < 90) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⚠️ Paciente instável (PAS <90 mmHg) — preferir cardioversão elétrica imediata.', '⚠️ Paciente inestable (PAS <90 mmHg) — preferir cardioversión eléctrica inmediata.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Paciente instável (PAS <90 mmHg) — preferir cardioversão elétrica imediata.', ' Paciente inestable (PAS <90 mmHg) — preferir cardioversión eléctrica inmediata.') });
         }
 
         // Doses especiais
         if (usoDipiridamol || usoCarbamazepina) {
           doseRec = '3 mg IV em bolus — DOSE REDUZIDA por uso de dipiridamol/carbamazepina';
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Dipiridamol ou carbamazepina em uso: usar dose INICIAL de 3 mg IV. Risco de bloqueio AV prolongado com dose padrão.', '⚠️ Dipiridamol o carbamazepina en uso: usar dosis INICIAL de 3 mg IV. Riesgo de bloqueo AV prolongado con dosis estándar.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Dipiridamol ou carbamazepina em uso: usar dose INICIAL de 3 mg IV. Risco de bloqueio AV prolongado com dose padrão.', ' Dipiridamol o carbamazepina en uso: usar dosis INICIAL de 3 mg IV. Riesgo de bloqueo AV prolongado con dosis estándar.') });
         }
         if (acessoCentral) {
           doseRec = '3 mg IV em bolus por acesso central';
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Acesso central: iniciar com 3 mg IV. Efeito muito potencializado.', '⚠️ Acceso central: iniciar con 3 mg IV. Efecto muy potenciado.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Acesso central: iniciar com 3 mg IV. Efeito muito potencializado.', ' Acceso central: iniciar con 3 mg IV. Efecto muy potenciado.') });
         }
 
         // Bradicardia antes
         if (fc < 100) {
-          alerts.push({ tipo: 'info', msg: t(lang, 'ℹ️ FC <100 bpm pré-tratamento — verificar diagnóstico de TSVP antes de administrar.', 'ℹ️ FC <100 lpm pretratamiento — verificar diagnóstico de TSVP antes de administrar.') });
+          alerts.push({ tipo: 'info', msg: t(lang, ' FC <100 bpm pré-tratamento — verificar diagnóstico de TSVP antes de administrar.', ' FC <100 lpm pretratamiento — verificar diagnóstico de TSVP antes de administrar.') });
         }
 
         // Gestante
         if (gestante) {
-          alerts.push({ tipo: 'info', msg: t(lang, 'ℹ️ Gestante: adenosina pode ser usada para TSVP na gravidez pela meia-vida ultracurta — uso monitorizado.', 'ℹ️ Embarazada: adenosina puede usarse para TSVP en embarazo por vida media ultracorta — uso monitorizado.') });
+          alerts.push({ tipo: 'info', msg: t(lang, ' Gestante: adenosina pode ser usada para TSVP na gravidez pela meia-vida ultracurta — uso monitorizado.', ' Embarazada: adenosina puede usarse para TSVP en embarazo por vida media ultracorta — uso monitorizado.') });
         }
 
         // Alerta universal de monitorização
-        alerts.push({ tipo: 'info', msg: t(lang, '📋 ECG contínuo obrigatório. Preparar desfibrilador. Registrar traçado durante administração. Flush imediato 20 mL SF após bolus.', '📋 ECG continuo obligatorio. Preparar desfibrilador. Registrar trazado durante administración. Flush inmediato 20 mL SF tras bolo.') });
+        alerts.push({ tipo: 'info', msg: t(lang, ' ECG contínuo obrigatório. Preparar desfibrilador. Registrar traçado durante administração. Flush imediato 20 mL SF após bolus.', ' ECG continuo obligatorio. Preparar desfibrilador. Registrar trazado durante administración. Flush inmediato 20 mL SF tras bolo.') });
 
         return {
           dose: contraindicado
@@ -15785,8 +23706,8 @@
           ),
           ajusteRenal: t(lang, 'Sem ajuste — meia-vida <10 s', 'Sin ajuste — vida media <10 s'),
           efeitosAdversos: t(lang,
-            ['Rubor facial', 'Pressão/dor torácica breve', 'Dispneia transitória', 'Sensação de morte iminente', 'Náuseas', 'Tontura', 'Cefaleia', '⚠️ Broncoespasmo', '⚠️ Bloqueio AV prolongado', '⚠️ FA transitória', '⚠️ Assistolia breve'],
-            ['Rubor facial', 'Presión/dolor torácico breve', 'Disnea transitoria', 'Sensación de muerte inminente', 'Náuseas', 'Mareos', 'Cefalea', '⚠️ Broncoespasmo', '⚠️ Bloqueo AV prolongado', '⚠️ FA transitoria', '⚠️ Asistolia breve']
+            ['Rubor facial', 'Pressão/dor torácica breve', 'Dispneia transitória', 'Sensação de morte iminente', 'Náuseas', 'Tontura', 'Cefaleia', ' Broncoespasmo', ' Bloqueio AV prolongado', ' FA transitória', ' Assistolia breve'],
+            ['Rubor facial', 'Presión/dolor torácico breve', 'Disnea transitoria', 'Sensación de muerte inminente', 'Náuseas', 'Mareos', 'Cefalea', ' Broncoespasmo', ' Bloqueo AV prolongado', ' FA transitoria', ' Asistolia breve']
           ),
           contraindicacoes: t(lang,
             ['Bloqueio AV 2º/3º sem marcapasso', 'Doença do nó sinusal sem marcapasso', 'Pré-excitação com FA/flutter', 'QRS largo irregular', 'Hipersensibilidade'],
@@ -15803,6 +23724,195 @@
           refs: ['AHA ACLS Guidelines', 'ESC SVT Guidelines', 'AHA/ACC/HRS SVT Guidelines', 'Goodman & Gilman', 'Lexicomp', 'FDA/DailyMed'],
           alerts
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Adenosina",
+          "class": "Antiarrítmico de ação ultracurta",
+          "pharmacologicClass": "Agonista de receptores de adenosina, principalmente A1 no nó AV",
+          "mechanism": "Ativa receptores A1 cardíacos, aumentando efluxo de potássio e reduzindo influxo de cálcio, causando bloqueio transitório da condução pelo nó AV.",
+          "pharmacodynamics": "Produz bloqueio AV transitório em segundos, terminando taquicardias reentrantes dependentes do nó AV e permitindo diagnóstico de alguns ritmos atriais.",
+          "pharmacokinetics": "Meia-vida plasmática inferior a 10 segundos devido à captação rápida por hemácias e células endoteliais e metabolismo intracelular. Função renal e hepática têm pouca influência clínica.",
+          "indications": [
+            "Conversão de taquicardia supraventricular paroxística regular dependente do nó AV",
+            "Auxílio diagnóstico em taquicardia regular monomórfica de complexo largo estável quando a origem é incerta, conforme AHA"
+          ],
+          "commercialNames": [
+            "Adenocard",
+            "Adenosina genérica"
+          ],
+          "presentation": "Solução injetável IV de administração rápida.",
+          "presentations": [
+            "Seringas ou frascos 3 mg/mL em vários volumes, conforme fabricante"
+          ],
+          "dose": {
+            "Adulto TSVP": "6 mg IV em bolus rápido de 1 a 2 segundos, seguido de flush de SF; se não converter em 1 a 2 min, 12 mg; pode repetir 12 mg uma vez",
+            "Acesso central ou transplante cardíaco": "Pode ocorrer resposta exagerada; considerar dose inicial menor conforme protocolo especializado"
+          },
+          "pediatricDose": "Seguir PALS vigente. Esquema comum: 0,1 mg/kg IV/IO rápido, máximo 6 mg; segunda dose 0,2 mg/kg, máximo 12 mg, sempre seguida de flush.",
+          "renalDose": "Não requer ajuste posológico por insuficiência renal devido à meia-vida extremamente curta e metabolismo celular rápido.",
+          "hepaticDose": "Não requer ajuste posológico por insuficiência hepática na maioria dos pacientes.",
+          "commonAdverseEffects": [
+            "Rubor",
+            "Pressão ou dor torácica",
+            "Dispneia",
+            "Náusea",
+            "Sensação de morte iminente",
+            "Cefaleia"
+          ],
+          "dangerousAdverseEffects": [
+            "Broncoespasmo grave",
+            "Assistolia prolongada",
+            "Bloqueio AV persistente",
+            "Fibrilação atrial com condução rápida por via acessória",
+            "FV rara"
+          ],
+          "adverseEffects": "Os sintomas costumam ser intensos, porém muito breves devido à meia-vida de segundos. Bloqueio AV e pausas transitórias são esperados durante efeito terapêutico.",
+          "contraindications": [
+            "Bloqueio AV de segundo ou terceiro grau sem marcapasso",
+            "Doença do nó sinusal sintomática sem marcapasso",
+            "Asma ou broncoespasmo ativo importante",
+            "Hipersensibilidade"
+          ],
+          "interactions": [
+            "Cafeína e teofilina antagonizam o efeito e podem exigir maior exposição",
+            "Dipiridamol potencializa adenosina e pode exigir dose menor",
+            "Carbamazepina pode aumentar bloqueio AV",
+            "Acesso central e transplante cardíaco aumentam sensibilidade"
+          ],
+          "monitoring": [
+            "ECG contínuo",
+            "Pressão arterial",
+            "Ritmo antes e durante o bolus",
+            "Disponibilidade imediata de cardioversão",
+            "Sintomas respiratórios"
+          ],
+          "administration": "Usar acesso IV o mais proximal possível. Administrar bolus muito rápido em 1 a 2 segundos, seguido imediatamente de flush vigoroso de SF.",
+          "preparation": "Não diluir para o bolus adulto de rotina quando a apresentação permite dose exata. Preparar flush de SF antes de administrar.",
+          "infusionProtocol": "Não é infusão contínua para TSVP: administrar bolus rápido, flush e reavaliar em 1 a 2 minutos antes de repetir dose.",
+          "pregnancy": "A meia-vida é extremamente curta e a exposição fetal sustentada é improvável. Pode ser usada em TSVP materna quando indicada, com monitorização.",
+          "lactation": "Devido à meia-vida de segundos e metabolismo rápido, exposição do lactente é mínima; não se espera necessidade de interrupção prolongada da amamentação.",
+          "specialPopulations": "Pacientes transplantados cardíacos e aqueles com acesso central podem responder a doses muito menores. Pacientes com asma têm risco de broncoespasmo.",
+          "patientEducation": "Avisar que podem ocorrer por alguns segundos rubor, falta de ar, pressão no peito e sensação intensa de mal-estar, geralmente desaparecendo rapidamente.",
+          "clinicalPearls": [
+            "É diagnóstica e terapêutica em taquicardias dependentes do nó AV",
+            "Não termina fibrilação ou flutter atrial, mas pode revelar atividade atrial",
+            "Evitar em taquicardia de complexo largo irregular ou polimórfica"
+          ],
+          "guidelineRecommendations": "AHA 2025: adenosina pode ser considerada em taquicardia regular monomórfica de complexo largo estável para tratamento ou diagnóstico; não deve ser usada em taquicardia de complexo largo instável, irregularmente irregular ou polimórfica. Em TSV regular estreita, é terapia padrão após manobras vagais.",
+          "safetyFlags": [
+            "Bolus extremamente rápido obrigatório",
+            "Risco de broncoespasmo",
+            "Cuidado em via acessória",
+            "Resposta exagerada em transplante cardíaco ou acesso central"
+          ],
+          "alerts": [
+            "Não usar em taquicardia de complexo largo irregular ou polimórfica",
+            "Ter cardioversão disponível antes de administrar em ritmo de diagnóstico incerto"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1c149fe-9095-4b2a-a21f-7af3212e0254",
+            "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+          ],
+          "ref": "DailyMed Adenosine; AHA Adult Advanced Life Support 2025"
+        },
+        "es": {
+          "name": "Adenosina",
+          "class": "Antiarrítmico de acción ultracorta",
+          "pharmacologicClass": "Agonista de receptores de adenosina, principalmente A1 en nodo AV",
+          "mechanism": "Activa receptores A1 cardíacos, aumentando eflujo de potasio y reduciendo entrada de calcio, produciendo bloqueo transitorio de conducción por nodo AV.",
+          "pharmacodynamics": "Produce bloqueo AV transitorio en segundos, terminando taquicardias reentrantes dependientes del nodo AV y permitiendo diagnóstico de algunos ritmos auriculares.",
+          "pharmacokinetics": "Vida media plasmática inferior a 10 segundos por captación rápida por eritrocitos y células endoteliales y metabolismo intracelular. Función renal y hepática tienen poca influencia clínica.",
+          "indications": [
+            "Conversión de taquicardia supraventricular paroxística regular dependiente del nodo AV",
+            "Ayuda diagnóstica en taquicardia regular monomórfica de complejo ancho estable cuando el origen es incierto, según AHA"
+          ],
+          "commercialNames": [
+            "Adenocard",
+            "Adenosina genérica"
+          ],
+          "presentation": "Solución inyectable IV para administración rápida.",
+          "presentations": [
+            "Jeringas o viales 3 mg/mL en varios volúmenes según fabricante"
+          ],
+          "dose": {
+            "Adulto TSVP": "6 mg IV en bolo rápido de 1 a 2 segundos, seguido de flush con SSN; si no convierte en 1 a 2 min, 12 mg; puede repetirse 12 mg una vez",
+            "Acceso central o trasplante cardíaco": "Puede haber respuesta exagerada; considerar dosis inicial menor según protocolo especializado"
+          },
+          "pediatricDose": "Seguir PALS vigente. Esquema común: 0,1 mg/kg IV/IO rápido, máximo 6 mg; segunda dosis 0,2 mg/kg, máximo 12 mg, siempre seguida de flush.",
+          "renalDose": "No requiere ajuste por insuficiencia renal debido a vida media extremadamente corta y metabolismo celular rápido.",
+          "hepaticDose": "No requiere ajuste por insuficiencia hepática en la mayoría de pacientes.",
+          "commonAdverseEffects": [
+            "Rubor",
+            "Presión o dolor torácico",
+            "Disnea",
+            "Náuseas",
+            "Sensación de muerte inminente",
+            "Cefalea"
+          ],
+          "dangerousAdverseEffects": [
+            "Broncoespasmo grave",
+            "Asistolia prolongada",
+            "Bloqueo AV persistente",
+            "Fibrilación auricular con conducción rápida por vía accesoria",
+            "FV rara"
+          ],
+          "adverseEffects": "Los síntomas suelen ser intensos pero muy breves debido a una vida media de segundos. Bloqueo AV y pausas transitorias son esperables durante el efecto terapéutico.",
+          "contraindications": [
+            "Bloqueo AV de segundo o tercer grado sin marcapasos",
+            "Enfermedad sintomática del nodo sinusal sin marcapasos",
+            "Asma o broncoespasmo activo importante",
+            "Hipersensibilidad"
+          ],
+          "interactions": [
+            "Cafeína y teofilina antagonizan el efecto y pueden requerir mayor exposición",
+            "Dipiridamol potencia adenosina y puede requerir dosis menor",
+            "Carbamazepina puede aumentar bloqueo AV",
+            "Acceso central y trasplante cardíaco aumentan sensibilidad"
+          ],
+          "monitoring": [
+            "ECG continuo",
+            "Presión arterial",
+            "Ritmo antes y durante el bolo",
+            "Disponibilidad inmediata de cardioversión",
+            "Síntomas respiratorios"
+          ],
+          "administration": "Usar acceso IV lo más proximal posible. Administrar bolo muy rápido en 1 a 2 segundos, seguido de inmediato por flush vigoroso con SSN.",
+          "preparation": "No diluir para el bolo adulto rutinario cuando la presentación permite dosis exacta. Preparar el flush antes de administrar.",
+          "infusionProtocol": "No es una infusión continua para TSVP: administrar bolo rápido, flush y reevaluar en 1 a 2 minutos antes de repetir.",
+          "pregnancy": "La vida media es extremadamente corta y la exposición fetal sostenida es improbable. Puede usarse en TSVP materna cuando está indicada, con monitorización.",
+          "lactation": "Por su vida media de segundos y metabolismo rápido, la exposición del lactante es mínima; no se espera necesidad de suspender lactancia de forma prolongada.",
+          "specialPopulations": "Pacientes con trasplante cardíaco y aquellos con acceso central pueden responder a dosis mucho menores. Pacientes con asma tienen riesgo de broncoespasmo.",
+          "patientEducation": "Avisar que durante algunos segundos pueden aparecer rubor, disnea, presión en el pecho y sensación intensa de malestar, generalmente de resolución rápida.",
+          "clinicalPearls": [
+            "Es diagnóstica y terapéutica en taquicardias dependientes del nodo AV",
+            "No termina fibrilación o flutter auricular, pero puede revelar actividad auricular",
+            "Evitar en taquicardia de complejo ancho irregular o polimórfica"
+          ],
+          "guidelineRecommendations": "AHA 2025: adenosina puede considerarse en taquicardia regular monomórfica de complejo ancho estable para tratamiento o diagnóstico; no debe usarse en taquicardia de complejo ancho inestable, irregularmente irregular o polimórfica. En TSV regular estrecha es terapia estándar tras maniobras vagales.",
+          "safetyFlags": [
+            "Bolo extremadamente rápido obligatorio",
+            "Riesgo de broncoespasmo",
+            "Precaución con vía accesoria",
+            "Respuesta exagerada en trasplante cardíaco o acceso central"
+          ],
+          "alerts": [
+            "No usar en taquicardia de complejo ancho irregular o polimórfica",
+            "Tener cardioversión disponible antes de administrar si el diagnóstico del ritmo es incierto"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1c149fe-9095-4b2a-a21f-7af3212e0254",
+            "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+          ],
+          "ref": "DailyMed Adenosine; AHA Adult Advanced Life Support 2025"
+        }
       }
     }, /* fim adenosina */
 
@@ -15877,83 +23987,83 @@
 
         // Contraindicações absolutas
         if (ecgBloqueioAV) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ CONTRAINDICADO: Bloqueio AV avançado sem marcapasso.', '⛔ CONTRAINDICADO: Bloqueo AV avanzado sin marcapasos.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' CONTRAINDICADO: Bloqueio AV avançado sem marcapasso.', ' CONTRAINDICADO: Bloqueo AV avanzado sin marcapasos.') });
           contraindicado = true;
         }
         if (paSistolica < 90) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ Choque/hipotensão grave — contraindicado como terapia não emergencial. Em PCR usar 300 mg IV bolus rápido.', '⛔ Shock/hipotensión grave — contraindicado como terapia no emergencial. En PCR usar 300 mg IV bolo rápido.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Choque/hipotensão grave — contraindicado como terapia não emergencial. Em PCR usar 300 mg IV bolus rápido.', ' Shock/hipotensión grave — contraindicado como terapia no emergencial. En PCR usar 300 mg IV bolo rápido.') });
           contraindicado = true;
         }
 
         // PCR / FV / TV sem pulso
         if (indicacao === 'PCR') {
-          alerts.push({ tipo: 'danger', msg: t(lang, '🚨 PCR FV/TV sem pulso: 300 mg IV/IO bolus rápido. Se não reverter: 150 mg adicional IV.', '🚨 PCR FV/TV sin pulso: 300 mg IV/IO bolo rápido. Si no revierte: 150 mg adicional IV.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' PCR FV/TV sem pulso: 300 mg IV/IO bolus rápido. Se não reverter: 150 mg adicional IV.', ' PCR FV/TV sin pulso: 300 mg IV/IO bolo rápido. Si no revierte: 150 mg adicional IV.') });
         }
 
         // QTc
         if (qtc > 500) {
-          alerts.push({ tipo: 'danger', msg: t(lang, `⛔ QTc ${qtc} ms — extremamente elevado. Risco aumentado de Torsades. Avaliar suspensão.`, `⛔ QTc ${qtc} ms — extremadamente elevado. Riesgo aumentado de Torsades. Evaluar suspensión.`) });
+          alerts.push({ tipo: 'danger', msg: t(lang, ` QTc ${qtc} ms — extremamente elevado. Risco aumentado de Torsades. Avaliar suspensão.`, ` QTc ${qtc} ms — extremadamente elevado. Riesgo aumentado de Torsades. Evaluar suspensión.`) });
         } else if (qtc > 470) {
-          alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ QTc ${qtc} ms — elevado. Monitorar rigorosamente e corrigir eletrólitos.`, `⚠️ QTc ${qtc} ms — elevado. Monitorizar rigurosamente y corregir electrolitos.`) });
+          alerts.push({ tipo: 'warning', msg: t(lang, ` QTc ${qtc} ms — elevado. Monitorar rigorosamente e corrigir eletrólitos.`, ` QTc ${qtc} ms — elevado. Monitorizar rigurosamente y corregir electrolitos.`) });
         }
 
         // Eletrólitos
         if (potassio < 3.5) {
-          alerts.push({ tipo: 'danger', msg: t(lang, `⛔ K⁺ ${potassio} mEq/L — hipocalemia. Corrigir antes/durante amiodarona. Risco de Torsades.`, `⛔ K⁺ ${potassio} mEq/L — hipocalemia. Corregir antes/durante amiodarona. Riesgo de Torsades.`) });
+          alerts.push({ tipo: 'danger', msg: t(lang, ` K⁺ ${potassio} mEq/L — hipocalemia. Corrigir antes/durante amiodarona. Risco de Torsades.`, ` K⁺ ${potassio} mEq/L — hipocalemia. Corregir antes/durante amiodarona. Riesgo de Torsades.`) });
         }
         if (magnesio < 1.7) {
-          alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ Mg²⁺ ${magnesio} mg/dL — hipomagnesemia. Repor magnésio IV/VO antes de iniciar.`, `⚠️ Mg²⁺ ${magnesio} mg/dL — hipomagnesemia. Reponer magnesio IV/VO antes de iniciar.`) });
+          alerts.push({ tipo: 'warning', msg: t(lang, ` Mg²⁺ ${magnesio} mg/dL — hipomagnesemia. Repor magnésio IV/VO antes de iniciar.`, ` Mg²⁺ ${magnesio} mg/dL — hipomagnesemia. Reponer magnesio IV/VO antes de iniciar.`) });
         }
 
         // FC
         if (fc < 50) {
-          alerts.push({ tipo: 'danger', msg: t(lang, `⛔ FC ${fc} bpm — bradicardia grave. Contraindicado sem marcapasso.`, `⛔ FC ${fc} lpm — bradicardia grave. Contraindicado sin marcapasos.`) });
+          alerts.push({ tipo: 'danger', msg: t(lang, ` FC ${fc} bpm — bradicardia grave. Contraindicado sem marcapasso.`, ` FC ${fc} lpm — bradicardia grave. Contraindicado sin marcapasos.`) });
           contraindicado = true;
         } else if (fc < 60) {
-          alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ FC ${fc} bpm — bradicardia. Monitorar; reduzir dose se necessário.`, `⚠️ FC ${fc} lpm — bradicardia. Monitorizar; reducir dosis si necesario.`) });
+          alerts.push({ tipo: 'warning', msg: t(lang, ` FC ${fc} bpm — bradicardia. Monitorar; reduzir dose se necessário.`, ` FC ${fc} lpm — bradicardia. Monitorizar; reducir dosis si necesario.`) });
         }
 
         // FEVE
         if (feve < 35) {
-          alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ FEVE ${feve}% — disfunção grave. Amiodarona é uma das poucas opções antiarrítmicas com menor impacto inotrópico negativo, mas monitorar sinais de IC.`, `⚠️ FEVE ${feve}% — disfunción grave. Amiodarona es una de las pocas opciones antiarrítmicas con menor impacto inotrópico negativo, pero monitorizar signos de IC.`) });
+          alerts.push({ tipo: 'warning', msg: t(lang, ` FEVE ${feve}% — disfunção grave. Amiodarona é uma das poucas opções antiarrítmicas com menor impacto inotrópico negativo, mas monitorar sinais de IC.`, ` FEVE ${feve}% — disfunción grave. Amiodarona es una de las pocas opciones antiarrítmicas con menor impacto inotrópico negativo, pero monitorizar signos de IC.`) });
         }
 
         // Doença pulmonar
         if (doencaPulmonar) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Doença pulmonar prévia — monitorar toxicidade pulmonar (dispneia, tosse seca, infiltrado intersticial).', '⚠️ Enfermedad pulmonar previa — monitorizar toxicidad pulmonar (disnea, tos seca, infiltrado intersticial).') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Doença pulmonar prévia — monitorar toxicidade pulmonar (dispneia, tosse seca, infiltrado intersticial).', ' Enfermedad pulmonar previa — monitorizar toxicidad pulmonar (disnea, tos seca, infiltrado intersticial).') });
         }
 
         // TSH
         if (tsh !== null && tsh < 0.1) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ TSH suprimido — possível hipertireoidismo induzido. Avaliar função tireoidiana.', '⚠️ TSH suprimido — posible hipertiroidismo inducido. Evaluar función tiroidea.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' TSH suprimido — possível hipertireoidismo induzido. Avaliar função tireoidiana.', ' TSH suprimido — posible hipertiroidismo inducido. Evaluar función tiroidea.') });
         }
         if (tsh !== null && tsh > 10) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ TSH elevado — possível hipotireoidismo induzido pela amiodarona. Avaliar levotiroxina.', '⚠️ TSH elevado — posible hipotiroidismo inducido por amiodarona. Evaluar levotiroxina.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' TSH elevado — possível hipotireoidismo induzido pela amiodarona. Avaliar levotiroxina.', ' TSH elevado — posible hipotiroidismo inducido por amiodarona. Evaluar levotiroxina.') });
         }
 
         // Interações
         if (usoVarfarina) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '🔴 Varfarina: amiodarona inibe CYP2C9 — INR pode duplicar ou triplicar. Reduzir warfarina em 30–50% e monitorar INR 2×/semana inicialmente.', '🔴 Warfarina: amiodarona inhibe CYP2C9 — INR puede duplicar o triplicar. Reducir warfarina 30–50% y monitorar INR 2×/semana inicialmente.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Varfarina: amiodarona inibe CYP2C9 — INR pode duplicar ou triplicar. Reduzir warfarina em 30–50% e monitorar INR 2×/semana inicialmente.', ' Warfarina: amiodarona inhibe CYP2C9 — INR puede duplicar o triplicar. Reducir warfarina 30–50% y monitorar INR 2×/semana inicialmente.') });
         }
         if (usoDigoxina) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '🔴 Digoxina: amiodarona aumenta nível sérico da digoxina. Reduzir dose de digoxina em ~50% e monitorar nível.', '🔴 Digoxina: amiodarona aumenta nivel sérico de digoxina. Reducir dosis de digoxina ~50% y monitorizar nivel.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Digoxina: amiodarona aumenta nível sérico da digoxina. Reduzir dose de digoxina em ~50% e monitorar nível.', ' Digoxina: amiodarona aumenta nivel sérico de digoxina. Reducir dosis de digoxina ~50% y monitorizar nivel.') });
         }
 
         // Gestante / Lactante
         if (gestante) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ Gestante: evitar amiodarona. Risco de toxicidade tireoidiana fetal/neonatal. Usar apenas em arritmia materna potencialmente fatal sem alternativa.', '⛔ Embarazada: evitar amiodarona. Riesgo de toxicidad tiroidea fetal/neonatal. Usar solo en arritmia materna potencialmente fatal sin alternativa.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Gestante: evitar amiodarona. Risco de toxicidade tireoidiana fetal/neonatal. Usar apenas em arritmia materna potencialmente fatal sem alternativa.', ' Embarazada: evitar amiodarona. Riesgo de toxicidad tiroidea fetal/neonatal. Usar solo en arritmia materna potencialmente fatal sin alternativa.') });
         }
         if (lactante) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ Lactante: evitar. Passa para o leite; meia-vida longa; risco de toxicidade tireoidiana no lactente.', '⛔ Lactante: evitar. Pasa a la leche; vida media larga; riesgo de toxicidad tiroidea en el lactante.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Lactante: evitar. Passa para o leite; meia-vida longa; risco de toxicidade tireoidiana no lactente.', ' Lactante: evitar. Pasa a la leche; vida media larga; riesgo de toxicidad tiroidea en el lactante.') });
         }
 
         // Idoso
         if (idade >= 70) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Idoso ≥70 anos — maior risco de toxicidade pulmonar, tireoidiana e interações. Usar a menor dose efetiva.', '⚠️ Anciano ≥70 años — mayor riesgo de toxicidad pulmonar, tiroidea e interacciones. Usar la menor dosis efectiva.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Idoso ≥70 anos — maior risco de toxicidade pulmonar, tireoidiana e interações. Usar a menor dose efetiva.', ' Anciano ≥70 años — mayor riesgo de toxicidad pulmonar, tiroidea e interacciones. Usar la menor dosis efectiva.') });
         }
 
         // Black Box universal
-        alerts.push({ tipo: 'danger', msg: t(lang, '📦 BLACK BOX: Toxicidade pulmonar (pneumonite/fibrose) e hepática potencialmente fatais. Uso crônico restrito a arritmias ventriculares graves refratárias.', '📦 BLACK BOX: Toxicidad pulmonar (neumonitis/fibrosis) y hepática potencialmente fatales. Uso crónico restringido a arritmias ventriculares graves refractarias.') });
+        alerts.push({ tipo: 'danger', msg: t(lang, ' BLACK BOX: Toxicidade pulmonar (pneumonite/fibrose) e hepática potencialmente fatais. Uso crônico restrito a arritmias ventriculares graves refratárias.', ' BLACK BOX: Toxicidad pulmonar (neumonitis/fibrosis) y hepática potencialmente fatales. Uso crónico restringido a arritmias ventriculares graves refractarias.') });
 
         return {
           dose: contraindicado
@@ -15970,8 +24080,8 @@
           ),
           ajusteRenal: t(lang, 'Sem ajuste renal', 'Sin ajuste renal'),
           efeitosAdversos: t(lang,
-            ['Bradicardia', 'Hipotensão IV', 'Fotossensibilidade', 'Constipação', 'Tremor', '⚠️ Toxicidade pulmonar', '⚠️ Hepatotoxicidade', '⚠️ Hipo/hipertireoidismo', '⚠️ QT prolongado/Torsades', '⚠️ Depósitos corneanos', '⚠️ Neuropatia periférica'],
-            ['Bradicardia', 'Hipotensión IV', 'Fotosensibilidad', 'Estreñimiento', 'Temblor', '⚠️ Toxicidad pulmonar', '⚠️ Hepatotoxicidad', '⚠️ Hipo/hipertiroidismo', '⚠️ QT prolongado/Torsades', '⚠️ Depósitos corneales', '⚠️ Neuropatía periférica']
+            ['Bradicardia', 'Hipotensão IV', 'Fotossensibilidade', 'Constipação', 'Tremor', ' Toxicidade pulmonar', ' Hepatotoxicidade', ' Hipo/hipertireoidismo', ' QT prolongado/Torsades', ' Depósitos corneanos', ' Neuropatia periférica'],
+            ['Bradicardia', 'Hipotensión IV', 'Fotosensibilidad', 'Estreñimiento', 'Temblor', ' Toxicidad pulmonar', ' Hepatotoxicidad', ' Hipo/hipertiroidismo', ' QT prolongado/Torsades', ' Depósitos corneales', ' Neuropatía periférica']
           ),
           monitoramento: t(lang,
             ['ECG + QTc', 'TSH/T4 livre (basal, 3–6 meses)', 'TGO/TGP (basal, periódico)', 'RX tórax + função pulmonar (uso crônico)', 'INR se varfarina', 'Nível digoxina se associado', 'Avaliação oftalmológica'],
@@ -15980,6 +24090,213 @@
           refs: ['AHA ACLS Guidelines', 'ESC AF Guidelines', 'ESC VA Guidelines', 'AHA/ACC/HRS Guidelines', 'Goodman & Gilman', 'Lexicomp', 'FDA/DailyMed'],
           alerts
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Amiodarona",
+          "class": "Antiarrítmico classe III de amplo espectro",
+          "pharmacologicClass": "Bloqueador predominante de canais de potássio com efeitos sobre sódio, cálcio e receptores beta",
+          "mechanism": "Prolonga repolarização e período refratário por bloqueio de canais de potássio, além de bloquear canais de sódio e cálcio e exercer efeito antiadrenérgico não competitivo.",
+          "pharmacodynamics": "Prolonga potencial de ação e QT, reduz automaticidade sinusal, lentifica condução AV e aumenta refratariedade atrial e ventricular. O efeito IV inicial inclui também vasodilatação e depressão nodal.",
+          "pharmacokinetics": "Muito lipofílica, grande volume de distribuição e meia-vida terminal de semanas. Metabolismo hepático principalmente por CYP3A4 e CYP2C8 a desetilamiodarona. Eliminação biliar; não é removida de forma relevante por diálise.",
+          "indications": [
+            "FV/TV sem pulso refratária à desfibrilação",
+            "TV ventricular hemodinamicamente instável recorrente ou refratária em contexto apropriado",
+            "Taquicardia de complexo largo estável em cenários selecionados",
+            "Controle de frequência em FA com resposta ventricular rápida em pacientes críticos selecionados sem pré-excitação"
+          ],
+          "commercialNames": [
+            "Cordarone",
+            "Pacerone",
+            "Amiodarona genérica"
+          ],
+          "presentation": "Solução injetável e comprimidos orais.",
+          "presentations": [
+            "Ampolas/frasco para injeção IV, frequentemente 50 mg/mL",
+            "Comprimidos 100 mg, 200 mg ou outras apresentações conforme mercado"
+          ],
+          "dose": {
+            "PCR FV/TVsp": "300 mg IV/IO em bolus; segunda dose 150 mg conforme AHA",
+            "Infusão IV": "150 mg em 100 mL de SG 5% em 10 min, depois 1 mg/min por 6 h e 0,5 mg/min depois",
+            "TV de complexo largo estável": "150 mg IV em 10 min, repetir conforme necessidade e limite total",
+            "Uso oral": "Carga e manutenção variam amplamente pela indicação; individualizar com cardiologia"
+          },
+          "pediatricDose": "Em ressuscitação pediátrica seguir PALS vigente; uso requer monitorização especializada e dose baseada em peso.",
+          "renalDose": "Não requer ajuste rotineiro por função renal e não é significativamente removida por diálise.",
+          "hepaticDose": "Metabolismo hepático importante. Reduzir ou interromper diante de elevação relevante de transaminases ou disfunção hepática atribuível ao fármaco.",
+          "commonAdverseEffects": [
+            "Bradicardia",
+            "Hipotensão IV",
+            "Náusea",
+            "Fotossensibilidade no uso crônico",
+            "Depósitos corneanos",
+            "Disfunção tireoidiana"
+          ],
+          "dangerousAdverseEffects": [
+            "Toxicidade pulmonar",
+            "Hepatotoxicidade grave",
+            "Bloqueio cardíaco",
+            "Torsades rara apesar de prolongar QT",
+            "Neuropatia óptica",
+            "Choque por hipotensão IV"
+          ],
+          "adverseEffects": "A toxicidade crônica é multissistêmica e inclui pulmão, tireoide, fígado, olhos, pele e nervos. No uso IV agudo predominam hipotensão e bradicardia.",
+          "contraindications": [
+            "Choque cardiogênico",
+            "Bradicardia sinusal marcada ou bloqueio AV de segundo ou terceiro grau sem marcapasso",
+            "Hipersensibilidade ao fármaco ou componentes"
+          ],
+          "interactions": [
+            "Aumenta níveis e efeito de varfarina",
+            "Aumenta digoxina; geralmente requer redução e monitorização",
+            "Interage com estatinas metabolizadas por CYP3A4",
+            "Outros prolongadores de QT e depressores nodais aumentam risco",
+            "Inibidores e indutores CYP3A4 alteram exposição"
+          ],
+          "monitoring": [
+            "ECG e QT",
+            "Pressão arterial na via IV",
+            "Função hepática",
+            "TSH e hormônios tireoidianos",
+            "Sintomas pulmonares e imagem quando indicado",
+            "Eletrólitos",
+            "Interações com varfarina e digoxina"
+          ],
+          "administration": "No uso IV, preferir SG 5% conforme formulação e administrar por bomba. Em infusão prolongada ou alta concentração, acesso central pode reduzir flebite e extravasamento.",
+          "preparation": "Para carga IV típica, diluir 150 mg em 100 mL de SG 5% e infundir em 10 minutos. Confirmar compatibilidade e concentração da formulação local.",
+          "infusionProtocol": "Carga 150 mg em 10 min, seguida de 1 mg/min por 6 h e 0,5 mg/min depois, total aproximado de 1000 mg nas primeiras 24 h conforme bula IV. Em PCR usar bolus do algoritmo AHA, não esse esquema.",
+          "pregnancy": "Atravessa placenta e pode causar disfunção tireoidiana fetal e outros efeitos. Evitar quando houver alternativa mais segura, mas pode ser necessária em arritmia materna grave refratária.",
+          "lactation": "É excretada no leite em quantidade relevante e tem meia-vida longa; em geral evitar amamentação durante terapia sistêmica prolongada, salvo decisão especializada.",
+          "specialPopulations": "Idosos e pacientes com doença sinusal, distúrbio de condução, doença pulmonar, hepática ou tireoidiana exigem vigilância aumentada.",
+          "patientEducation": "No uso crônico relatar tosse ou falta de ar, perda visual, perda ou ganho de peso, tremor, icterícia e bradicardia. Evitar exposição solar excessiva.",
+          "clinicalPearls": [
+            "Tem meia-vida extremamente longa",
+            "Prolonga QT mas torsades é menos comum que com muitos outros classe III",
+            "Não usar IV em FA com pré-excitação porque pode aumentar resposta ventricular e precipitar FV"
+          ],
+          "guidelineRecommendations": "AHA 2025: amiodarona ou lidocaína podem ser consideradas em FV/TV sem pulso refratária à desfibrilação. Amiodarona IV também pode ser considerada para taquicardia de complexo largo e pode ser útil para controle de frequência em FA de pacientes críticos sem pré-excitação.",
+          "safetyFlags": [
+            "Toxicidade pulmonar, hepática e tireoidiana",
+            "Múltiplas interações medicamentosas",
+            "Meia-vida muito longa",
+            "Risco de bradicardia e hipotensão IV"
+          ],
+          "alerts": [
+            "Não administrar amiodarona IV em FA/flutter com pré-excitação",
+            "Diferenciar esquema de PCR, carga IV de arritmia com pulso e terapia oral crônica"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7639dfe4-933c-2916-e053-2a91aa0a3fe7",
+            "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+          ],
+          "ref": "DailyMed Amiodarone IV; AHA Adult Advanced Life Support 2025"
+        },
+        "es": {
+          "name": "Amiodarona",
+          "class": "Antiarrítmico clase III de amplio espectro",
+          "pharmacologicClass": "Bloqueador predominante de canales de potasio con efectos sobre sodio, calcio y receptores beta",
+          "mechanism": "Prolonga repolarización y período refractario por bloqueo de canales de potasio, además de bloquear canales de sodio y calcio y ejercer efecto antiadrenérgico no competitivo.",
+          "pharmacodynamics": "Prolonga potencial de acción y QT, reduce automatismo sinusal, enlentece conducción AV y aumenta refractariedad auricular y ventricular. El efecto IV inicial incluye vasodilatación y depresión nodal.",
+          "pharmacokinetics": "Muy lipofílica, gran volumen de distribución y vida media terminal de semanas. Metabolismo hepático principalmente CYP3A4 y CYP2C8 a desetilamiodarona. Eliminación biliar; no se elimina significativamente por diálisis.",
+          "indications": [
+            "FV/TV sin pulso refractaria a desfibrilación",
+            "TV ventricular hemodinámicamente inestable recurrente o refractaria en contexto apropiado",
+            "Taquicardia de complejo ancho estable en escenarios seleccionados",
+            "Control de frecuencia en FA con respuesta ventricular rápida en pacientes críticos seleccionados sin preexcitación"
+          ],
+          "commercialNames": [
+            "Cordarone",
+            "Pacerone",
+            "Amiodarona genérica"
+          ],
+          "presentation": "Solución inyectable y comprimidos orales.",
+          "presentations": [
+            "Ampollas/vial para inyección IV, frecuentemente 50 mg/mL",
+            "Comprimidos 100 mg, 200 mg u otras presentaciones según mercado"
+          ],
+          "dose": {
+            "PCR FV/TVsp": "300 mg IV/IO en bolo; segunda dosis 150 mg según AHA",
+            "Infusión IV": "150 mg en 100 mL de dextrosa 5% en 10 min, luego 1 mg/min por 6 h y 0,5 mg/min después",
+            "TV de complejo ancho estable": "150 mg IV en 10 min, repetir según necesidad y límite total",
+            "Uso oral": "Carga y mantenimiento varían ampliamente según indicación; individualizar con cardiología"
+          },
+          "pediatricDose": "En reanimación pediátrica seguir PALS vigente; el uso requiere monitorización especializada y dosis por peso.",
+          "renalDose": "No requiere ajuste rutinario por función renal y no se elimina de forma significativa por diálisis.",
+          "hepaticDose": "Metabolismo hepático importante. Reducir o suspender ante elevación relevante de transaminasas o disfunción hepática atribuible al fármaco.",
+          "commonAdverseEffects": [
+            "Bradicardia",
+            "Hipotensión IV",
+            "Náuseas",
+            "Fotosensibilidad en uso crónico",
+            "Depósitos corneales",
+            "Disfunción tiroidea"
+          ],
+          "dangerousAdverseEffects": [
+            "Toxicidad pulmonar",
+            "Hepatotoxicidad grave",
+            "Bloqueo cardíaco",
+            "Torsades rara pese a prolongar QT",
+            "Neuropatía óptica",
+            "Shock por hipotensión IV"
+          ],
+          "adverseEffects": "La toxicidad crónica es multisistémica e incluye pulmón, tiroides, hígado, ojos, piel y nervios. En uso IV agudo predominan hipotensión y bradicardia.",
+          "contraindications": [
+            "Shock cardiogénico",
+            "Bradicardia sinusal marcada o bloqueo AV de segundo o tercer grado sin marcapasos",
+            "Hipersensibilidad al fármaco o componentes"
+          ],
+          "interactions": [
+            "Aumenta niveles y efecto de warfarina",
+            "Aumenta digoxina; suele requerir reducción y monitorización",
+            "Interacciona con estatinas CYP3A4",
+            "Otros prolongadores de QT y depresores nodales aumentan riesgo",
+            "Inhibidores e inductores CYP3A4 alteran exposición"
+          ],
+          "monitoring": [
+            "ECG y QT",
+            "Presión arterial en vía IV",
+            "Función hepática",
+            "TSH y hormonas tiroideas",
+            "Síntomas pulmonares e imagen cuando corresponda",
+            "Electrolitos",
+            "Interacciones con warfarina y digoxina"
+          ],
+          "administration": "En uso IV preferir dextrosa 5% según formulación y administrar con bomba. En infusión prolongada o alta concentración, acceso central puede reducir flebitis y extravasación.",
+          "preparation": "Para carga IV típica, diluir 150 mg en 100 mL de dextrosa 5% e infundir en 10 minutos. Confirmar compatibilidad y concentración local.",
+          "infusionProtocol": "Carga 150 mg en 10 min, seguida de 1 mg/min por 6 h y 0,5 mg/min después, total aproximado 1000 mg en primeras 24 h según ficha IV. En PCR usar bolo del algoritmo AHA, no este esquema.",
+          "pregnancy": "Cruza placenta y puede causar disfunción tiroidea fetal y otros efectos. Evitar cuando exista alternativa más segura, aunque puede ser necesaria en arritmia materna grave refractaria.",
+          "lactation": "Se excreta en leche en cantidad relevante y tiene vida media larga; en general evitar lactancia durante terapia sistémica prolongada salvo decisión especializada.",
+          "specialPopulations": "Ancianos y pacientes con enfermedad sinusal, trastorno de conducción, enfermedad pulmonar, hepática o tiroidea requieren vigilancia aumentada.",
+          "patientEducation": "En uso crónico comunicar tos o disnea, pérdida visual, cambios importantes de peso, temblor, ictericia o bradicardia. Evitar exposición solar excesiva.",
+          "clinicalPearls": [
+            "Tiene vida media extremadamente larga",
+            "Prolonga QT pero torsades es menos frecuente que con muchos otros clase III",
+            "No usar IV en FA con preexcitación porque puede aumentar respuesta ventricular y precipitar FV"
+          ],
+          "guidelineRecommendations": "AHA 2025: amiodarona o lidocaína pueden considerarse en FV/TV sin pulso refractaria a desfibrilación. Amiodarona IV también puede considerarse en taquicardia de complejo ancho y puede ser útil para control de frecuencia en FA de pacientes críticos sin preexcitación.",
+          "safetyFlags": [
+            "Toxicidad pulmonar, hepática y tiroidea",
+            "Múltiples interacciones medicamentosas",
+            "Vida media muy larga",
+            "Riesgo de bradicardia e hipotensión IV"
+          ],
+          "alerts": [
+            "No administrar amiodarona IV en FA/flutter con preexcitación",
+            "Diferenciar esquema de PCR, carga IV con pulso y terapia oral crónica"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7639dfe4-933c-2916-e053-2a91aa0a3fe7",
+            "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+          ],
+          "ref": "DailyMed Amiodarone IV; AHA Adult Advanced Life Support 2025"
+        }
       }
     }, /* fim amiodarona */
 
@@ -16348,6 +24665,251 @@
           refs: ['FDA Tikosyn Label', 'ESC AF Guidelines', 'AHA/ACC/HRS AF Guidelines', 'DIAMOND Trial', 'Goodman & Gilman', 'Lexicomp'],
           alerts
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "commonAdverseEffects": [
+            "cefaleia",
+            "dor torácica",
+            "tontura",
+            "náuseas"
+          ],
+          "monitoring": [
+            "Internação mínima de 3 dias para início ou reinício",
+            "ECG contínuo",
+            "QTc 2-3 h após cada uma das primeiras doses",
+            "ClCr",
+            "potássio e magnésio"
+          ],
+          "preparation": "Confirmar formulação e concentração antes de administrar.",
+          "patientEducation": [
+            "Não duplicar doses esquecidas",
+            "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
+            "informar todos os fármacos pelo risco de interações e pró-arritmia"
+          ],
+          "name": "Dofetilida",
+          "class": "Antiarrítmico classe III, bloqueador seletivo de IKr",
+          "pharmacologicClass": "Bloqueador do canal rápido de potássio IKr com prolongamento da repolarização",
+          "mechanism": "Bloqueia IKr e prolonga potencial de ação e período refratário atrial/ventricular sem efeito importante sobre condução.",
+          "pharmacodynamics": "Prolonga QT de forma relacionada à concentração; o principal risco é torsades de pointes, especialmente com dose excessiva ou insuficiência renal.",
+          "pharmacokinetics": "Biodisponibilidade oral alta; eliminação renal importante por filtração e secreção catiônica. A dose depende da ClCr.",
+          "indications": [
+            "Conversão de fibrilação atrial/flutter para ritmo sinusal",
+            "manutenção do ritmo sinusal em FA/flutter sintomáticos selecionados"
+          ],
+          "commercialNames": [
+            "Tikosyn"
+          ],
+          "presentation": "Cápsulas orais.",
+          "presentations": [
+            "125 mcg",
+            "250 mcg",
+            "500 mcg"
+          ],
+          "dose": {
+            "CrClOver60": "500 mcg duas vezes ao dia.",
+            "CrCl40to60": "250 mcg duas vezes ao dia.",
+            "CrCl20to39": "125 mcg duas vezes ao dia.",
+            "CrClUnder20": "Contraindicado."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas na população pediátrica.",
+          "renalDose": "ClCr >60: 500 mcg BID; 40-60: 250 mcg BID; 20 a <40: 125 mcg BID; <20 mL/min contraindicado. Recalcular com mudanças renais.",
+          "hepaticDose": "Sem ajuste adicional na insuficiência hepática leve-moderada após seleção pela ClCr; dados limitados em doença hepática grave.",
+          "dangerousAdverseEffects": [
+            "torsades de pointes",
+            "taquicardia ventricular",
+            "prolongamento importante do QT",
+            "morte arrítmica"
+          ],
+          "contraindications": [
+            "QT/QTc basal >440 ms ou >500 ms com distúrbio de condução",
+            "síndrome de QT longo",
+            "ClCr <20 mL/min",
+            "verapamil",
+            "cimetidina",
+            "trimetoprima com ou sem sulfametoxazol",
+            "cetoconazol",
+            "hidroclorotiazida",
+            "hipersensibilidade"
+          ],
+          "interactions": [
+            "Hidroclorotiazida é contraindicada pelo aumento importante do efeito sobre QT",
+            "Verapamil, cimetidina, trimetoprima e cetoconazol são contraindicados",
+            "Outros fármacos que prolongam QT aumentam pró-arritmia",
+            "Corrigir hipocalemia e hipomagnesemia antes de iniciar"
+          ],
+          "administration": "Início ou reinício apenas em hospital com cálculo de ClCr, ECG contínuo e capacidade de ressuscitação por pelo menos 3 dias.",
+          "infusionProtocol": "Não se aplica: dofetilida é oral.",
+          "pregnancy": "Usar apenas se o benefício materno justificar o risco; dados humanos são limitados.",
+          "lactation": "Evitar amamentação durante o tratamento pela ausência de dados suficientes e potencial de reações graves.",
+          "specialPopulations": {
+            "HFrEF": "É opção para manutenção de ritmo em HFrEF selecionada pela diretriz, com início hospitalar.",
+            "renal": "A função renal determina a dose.",
+            "QT": "Suspender ou reduzir conforme algoritmo se QT prolongar."
+          },
+          "clinicalPearls": [
+            "Não há início ambulatorial seguro aprovado",
+            "A dose máxima recomendada com ClCr >60 é 500 mcg BID; doses maiores aumentam torsades."
+          ],
+          "guidelineRecommendations": [
+            "Diretriz FA 2023: dofetilida é razoável para manutenção do ritmo em HFrEF e em pacientes sem QT prolongado ou alterações de K/Mg, com seleção pela função renal e monitorização estreita."
+          ],
+          "safetyFlags": [
+            "QT",
+            "TORSADES",
+            "INTERNACAO_3_DIAS",
+            "FUNCAO_RENAL",
+            "INTERACOES_CONTRAINDICADAS"
+          ],
+          "alerts": [
+            "Não iniciar se QTc ultrapassar o limite da bula",
+            "Não duplicar dose esquecida."
+          ],
+          "adverseEffects": {
+            "common": [
+              "cefaleia",
+              "dor torácica",
+              "tontura",
+              "náuseas"
+            ],
+            "dangerous": [
+              "torsades de pointes",
+              "taquicardia ventricular",
+              "prolongamento importante do QT",
+              "morte arrítmica"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02438044-d6a3-49e9-a1ac-3aad21ef2c8c",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02438044-d6a3-49e9-a1ac-3aad21ef2c8c"
+        },
+        "es": {
+          "commonAdverseEffects": [
+            "cefalea",
+            "dolor torácico",
+            "mareo",
+            "náuseas"
+          ],
+          "monitoring": [
+            "Ingreso mínimo de 3 días para inicio o reinicio",
+            "ECG continuo",
+            "QTc 2-3 h después de cada una de las primeras dosis",
+            "CrCl",
+            "potasio y magnesio"
+          ],
+          "preparation": "Verificar formulación y concentración antes de administrar.",
+          "patientEducation": [
+            "No duplicar dosis omitidas",
+            "consultar por síncope, palpitaciones sostenidas o disnea nueva",
+            "informar todos los fármacos por riesgo de interacciones y proarritmia"
+          ],
+          "name": "Dofetilida",
+          "class": "Antiarrítmico clase III, bloqueador selectivo IKr",
+          "pharmacologicClass": "Bloqueador del canal rápido de potasio IKr con prolongación de repolarización",
+          "mechanism": "Bloquea IKr y prolonga potencial de acción y período refractario auricular/ventricular sin efecto importante sobre conducción.",
+          "pharmacodynamics": "Prolonga QT de forma relacionada con concentración; el riesgo principal es torsades de pointes, especialmente con dosis excesiva o insuficiencia renal.",
+          "pharmacokinetics": "Biodisponibilidad oral alta; eliminación renal importante por filtración y secreción catiónica. La dosis depende de CrCl.",
+          "indications": [
+            "Conversión de fibrilación auricular/flutter a ritmo sinusal",
+            "mantenimiento de ritmo sinusal en FA/flutter sintomáticos seleccionados"
+          ],
+          "commercialNames": [
+            "Tikosyn"
+          ],
+          "presentation": "Cápsulas orales.",
+          "presentations": [
+            "125 mcg",
+            "250 mcg",
+            "500 mcg"
+          ],
+          "dose": {
+            "CrClOver60": "500 mcg dos veces al día.",
+            "CrCl40to60": "250 mcg dos veces al día.",
+            "CrCl20to39": "125 mcg dos veces al día.",
+            "CrClUnder20": "Contraindicado."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas en población pediátrica.",
+          "renalDose": "CrCl >60: 500 mcg BID; 40-60: 250 mcg BID; 20 a <40: 125 mcg BID; <20 mL/min contraindicado. Recalcular con cambios renales.",
+          "hepaticDose": "No ajuste adicional en insuficiencia hepática leve-moderada después de seleccionar por CrCl; datos limitados en enfermedad hepática grave.",
+          "dangerousAdverseEffects": [
+            "torsades de pointes",
+            "taquicardia ventricular",
+            "prolongación marcada del QT",
+            "muerte arrítmica"
+          ],
+          "contraindications": [
+            "QT/QTc basal >440 ms o >500 ms con trastorno de conducción",
+            "síndrome de QT largo",
+            "CrCl <20 mL/min",
+            "verapamilo",
+            "cimetidina",
+            "trimetoprim con o sin sulfametoxazol",
+            "ketoconazol",
+            "hidroclorotiazida",
+            "hipersensibilidad"
+          ],
+          "interactions": [
+            "Hidroclorotiazida está contraindicada por aumento marcado del efecto sobre QT",
+            "Verapamilo, cimetidina, trimetoprim y ketoconazol están contraindicados",
+            "Otros fármacos que prolongan QT aumentan proarritmia",
+            "Corregir hipopotasemia e hipomagnesemia antes de iniciar"
+          ],
+          "administration": "Inicio o reinicio solo en hospital con cálculo de CrCl, ECG continuo y capacidad de reanimación durante al menos 3 días.",
+          "infusionProtocol": "No aplica: dofetilida es oral.",
+          "pregnancy": "Usar solo si el beneficio materno justifica el riesgo; datos humanos son limitados.",
+          "lactation": "Evitar lactancia durante tratamiento por ausencia de datos suficientes y potencial de reacciones graves.",
+          "specialPopulations": {
+            "HFrEF": "Es una opción de mantenimiento de ritmo en HFrEF seleccionada por guía, con inicio hospitalario.",
+            "renal": "La función renal determina la dosis.",
+            "QT": "Suspender o reducir según algoritmo si QT se prolonga."
+          },
+          "clinicalPearls": [
+            "No existe inicio ambulatorio seguro aprobado",
+            "La dosis máxima recomendada con CrCl >60 es 500 mcg BID; dosis mayores aumentan torsades."
+          ],
+          "guidelineRecommendations": [
+            "Guía AF 2023: dofetilida es razonable para mantenimiento de ritmo en HFrEF y en pacientes sin QT prolongado o alteraciones de K/Mg, con selección por función renal y monitorización estrecha."
+          ],
+          "safetyFlags": [
+            "QT",
+            "TORSADES",
+            "INGRESO_3_DIAS",
+            "FUNCION_RENAL",
+            "INTERACCIONES_CONTRAINDICADAS"
+          ],
+          "alerts": [
+            "No iniciar si QTc supera el umbral de la ficha",
+            "No duplicar una dosis omitida."
+          ],
+          "adverseEffects": {
+            "common": [
+              "cefalea",
+              "dolor torácico",
+              "mareo",
+              "náuseas"
+            ],
+            "dangerous": [
+              "torsades de pointes",
+              "taquicardia ventricular",
+              "prolongación marcada del QT",
+              "muerte arrítmica"
+            ]
+          },
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02438044-d6a3-49e9-a1ac-3aad21ef2c8c",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02438044-d6a3-49e9-a1ac-3aad21ef2c8c"
+        }
       }
     } /* fim dofetilida */
 
@@ -16534,6 +25096,223 @@
           refs: ['ESC AF Guidelines', 'AHA/ACC/HRS AF Guidelines', 'Goodman & Gilman', 'Lexicomp', 'FDA Corvert label'],
           alerts
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "commonAdverseEffects": [
+            "náuseas",
+            "cefaleia",
+            "hipotensão",
+            "extrassístoles ventriculares"
+          ],
+          "monitoring": [
+            "ECG contínuo durante e após a infusão",
+            "QT/QTc",
+            "potássio e magnésio",
+            "pressão arterial",
+            "disponibilidade imediata de desfibrilação e ressuscitação"
+          ],
+          "preparation": "Concentração 0,1 mg/mL; pode ser administrada sem diluir ou diluída conforme técnica asséptica e compatibilidade da bula.",
+          "patientEducation": [
+            "Não duplicar doses esquecidas",
+            "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
+            "informar todos os fármacos pelo risco de interações e pró-arritmia"
+          ],
+          "name": "Ibutilida",
+          "class": "Antiarrítmico intravenoso classe III",
+          "pharmacologicClass": "Prolongador da repolarização com ativação de corrente lenta de sódio e bloqueio de potássio",
+          "mechanism": "Prolonga o potencial de ação e a refratariedade principalmente pela ativação de uma corrente lenta de sódio e efeitos sobre correntes de potássio.",
+          "pharmacodynamics": "Pode converter rapidamente FA ou flutter, mas prolonga QT e pode provocar torsades ou taquicardia ventricular polimórfica.",
+          "pharmacokinetics": "Administração IV com distribuição rápida e eliminação metabólica; a experiência para ajuste renal ou hepático específico é limitada.",
+          "indications": [
+            "Conversão rápida para ritmo sinusal de fibrilação atrial ou flutter de início recente"
+          ],
+          "commercialNames": [
+            "Corvert"
+          ],
+          "presentation": "Solução IV 0,1 mg/mL em frasco de 10 mL.",
+          "presentations": [
+            "1 mg/10 mL, 0,1 mg/mL"
+          ],
+          "dose": {
+            "weight60OrMore": "1 mg IV em 10 min; se a arritmia persistir, pode repetir uma segunda dose igual 10 min após terminar a primeira.",
+            "under60kg": "0,01 mg/kg IV em 10 min; pode repetir uma segunda dose igual uma vez."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas em menores de 18 anos.",
+          "renalDose": "Não há algoritmo de ajuste renal estabelecido na bula; usar com monitorização intensiva e corrigir eletrólitos.",
+          "hepaticDose": "Não há algoritmo de ajuste hepático estabelecido; individualizar e monitorar de perto.",
+          "dangerousAdverseEffects": [
+            "torsades de pointes",
+            "taquicardia ventricular polimórfica sustentada",
+            "fibrilação ventricular",
+            "bloqueio ou bradicardia significativa"
+          ],
+          "contraindications": [
+            "Hipersensibilidade; a bula enfatiza seleção rigorosa mais do que lista ampla de contraindicações absolutas"
+          ],
+          "interactions": [
+            "Evitar outros fármacos que prolongam QT quando possível",
+            "Corrigir hipocalemia e hipomagnesemia",
+            "Não administrar simultaneamente outros antiarrítmicos classe Ia ou III sem critério especializado"
+          ],
+          "administration": "Infundir exclusivamente IV em 10 minutos em ambiente com monitorização contínua e capacidade de tratar arritmias ventriculares.",
+          "infusionProtocol": "Monitorar ECG por pelo menos 4 h após a infusão ou até QTc retornar ao basal, o que for mais prolongado; mais tempo se houver arritmia.",
+          "pregnancy": "Usar apenas se o benefício justificar o risco; dados humanos insuficientes.",
+          "lactation": "Dados insuficientes; individualizar e considerar evitar amamentação durante exposição aguda.",
+          "specialPopulations": {
+            "heartFailure": "Risco pró-arrítmico maior em pacientes com insuficiência cardíaca ou FEVE baixa.",
+            "electrolytes": "Corrigir K e Mg antes do uso.",
+            "QT": "Evitar se QT estiver muito prolongado."
+          },
+          "clinicalPearls": [
+            "A dose é definida pelo peso com limiar de 60 kg",
+            "A vigilância não termina ao final da infusão: manter ECG por pelo menos 4 h."
+          ],
+          "guidelineRecommendations": [
+            "Diretriz FA 2023: ibutilida IV é opção para cardioversão farmacológica em pacientes selecionados, com vigilância pelo risco de torsades."
+          ],
+          "safetyFlags": [
+            "QT",
+            "TORSADES",
+            "ECG_4_HORAS",
+            "K_MG",
+            "RESSUSCITACAO_DISPONIVEL"
+          ],
+          "alerts": [
+            "Não administrar sem monitorização contínua",
+            "Corrigir K e Mg antes da infusão."
+          ],
+          "adverseEffects": {
+            "common": [
+              "náuseas",
+              "cefaleia",
+              "hipotensão",
+              "extrassístoles ventriculares"
+            ],
+            "dangerous": [
+              "torsades de pointes",
+              "taquicardia ventricular polimórfica sustentada",
+              "fibrilação ventricular",
+              "bloqueio ou bradicardia significativa"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2428969a-7431-4e94-9503-ad5c680e2ea4",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2428969a-7431-4e94-9503-ad5c680e2ea4"
+        },
+        "es": {
+          "commonAdverseEffects": [
+            "náuseas",
+            "cefalea",
+            "hipotensión",
+            "extrasístoles ventriculares"
+          ],
+          "monitoring": [
+            "ECG continuo durante y después de la infusión",
+            "QT/QTc",
+            "potasio y magnesio",
+            "presión arterial",
+            "disponibilidad inmediata de desfibrilación y reanimación"
+          ],
+          "preparation": "Concentración 0.1 mg/mL; puede administrarse sin diluir o diluirse según técnica aséptica y compatibilidad de la ficha.",
+          "patientEducation": [
+            "No duplicar dosis omitidas",
+            "consultar por síncope, palpitaciones sostenidas o disnea nueva",
+            "informar todos los fármacos por riesgo de interacciones y proarritmia"
+          ],
+          "name": "Ibutilida",
+          "class": "Antiarrítmico intravenoso clase III",
+          "pharmacologicClass": "Prolongador de repolarización con activación de corriente lenta de sodio y bloqueo de potasio",
+          "mechanism": "Prolonga el potencial de acción y la refractariedad principalmente mediante activación de una corriente lenta de sodio y efectos sobre corrientes de potasio.",
+          "pharmacodynamics": "Puede convertir rápidamente FA o flutter, pero prolonga QT y puede provocar torsades o taquicardia ventricular polimórfica.",
+          "pharmacokinetics": "Administración IV con distribución rápida y eliminación metabólica; la experiencia para ajuste renal o hepático específico es limitada.",
+          "indications": [
+            "Conversión rápida a ritmo sinusal de fibrilación auricular o flutter de inicio reciente"
+          ],
+          "commercialNames": [
+            "Corvert"
+          ],
+          "presentation": "Solución IV 0.1 mg/mL en vial de 10 mL.",
+          "presentations": [
+            "1 mg/10 mL, 0.1 mg/mL"
+          ],
+          "dose": {
+            "weight60OrMore": "1 mg IV durante 10 min; si la arritmia persiste, puede repetirse una segunda dosis igual 10 min después de finalizar la primera.",
+            "under60kg": "0.01 mg/kg IV durante 10 min; puede repetirse una segunda dosis igual una vez."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas en menores de 18 años.",
+          "renalDose": "No existe algoritmo de ajuste renal establecido en la ficha; usar con monitorización intensiva y corregir electrolitos.",
+          "hepaticDose": "No existe algoritmo de ajuste hepático establecido; individualizar y monitorizar estrechamente.",
+          "dangerousAdverseEffects": [
+            "torsades de pointes",
+            "taquicardia ventricular polimórfica sostenida",
+            "fibrilación ventricular",
+            "bloqueo o bradicardia significativa"
+          ],
+          "contraindications": [
+            "Hipersensibilidad; la ficha enfatiza selección estricta más que una lista amplia de contraindicaciones absolutas"
+          ],
+          "interactions": [
+            "Evitar otros fármacos que prolongan QT cuando sea posible",
+            "Corregir hipopotasemia e hipomagnesemia",
+            "No administrar simultáneamente otros antiarrítmicos clase Ia o III sin criterio especializado"
+          ],
+          "administration": "Infundir exclusivamente IV durante 10 minutos en entorno con monitorización continua y capacidad de tratar arritmias ventriculares.",
+          "infusionProtocol": "Monitorizar ECG al menos 4 h después de la infusión o hasta que QTc vuelva a basal, lo que sea más prolongado; más tiempo si existe arritmia.",
+          "pregnancy": "Usar solo si el beneficio justifica el riesgo; datos humanos insuficientes.",
+          "lactation": "Datos insuficientes; individualizar y considerar evitar lactancia durante exposición aguda.",
+          "specialPopulations": {
+            "heartFailure": "Riesgo proarrítmico mayor en pacientes con insuficiencia cardíaca o baja LVEF.",
+            "electrolytes": "Corregir K y Mg antes de uso.",
+            "QT": "Evitar si QT está marcadamente prolongado."
+          },
+          "clinicalPearls": [
+            "La dosis se define por peso con umbral de 60 kg",
+            "La vigilancia no termina al finalizar la infusión: mantener ECG por al menos 4 h."
+          ],
+          "guidelineRecommendations": [
+            "Guía AF 2023: ibutilida IV es una opción para cardioversión farmacológica en pacientes seleccionados, con vigilancia por riesgo de torsades."
+          ],
+          "safetyFlags": [
+            "QT",
+            "TORSADES",
+            "ECG_4_HORAS",
+            "K_MG",
+            "REANIMACION_DISPONIBLE"
+          ],
+          "alerts": [
+            "No administrar sin monitorización continua",
+            "Corregir K y Mg antes de la infusión."
+          ],
+          "adverseEffects": {
+            "common": [
+              "náuseas",
+              "cefalea",
+              "hipotensión",
+              "extrasístoles ventriculares"
+            ],
+            "dangerous": [
+              "torsades de pointes",
+              "taquicardia ventricular polimórfica sostenida",
+              "fibrilación ventricular",
+              "bloqueo o bradicardia significativa"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2428969a-7431-4e94-9503-ad5c680e2ea4",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2428969a-7431-4e94-9503-ad5c680e2ea4"
+        }
       }
     }, /* fim ibutilida */
 
@@ -16732,6 +25511,249 @@
           refs: ['CAST Trial', 'ESC AF Guidelines', 'AHA/ACC/HRS AF Guidelines', 'Goodman & Gilman', 'Lexicomp', 'FDA label'],
           alerts
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "commonAdverseEffects": [
+            "tontura",
+            "alterações visuais",
+            "cefaleia",
+            "náuseas",
+            "dispneia"
+          ],
+          "monitoring": [
+            "ECG de 12 derivações",
+            "frequência cardíaca",
+            "pressão arterial",
+            "função renal e eletrólitos quando aplicável",
+            "sintomas de pró-arritmia"
+          ],
+          "preparation": "Confirmar formulação e concentração antes de administrar.",
+          "patientEducation": [
+            "Não duplicar doses esquecidas",
+            "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
+            "informar todos os fármacos pelo risco de interações e pró-arritmia"
+          ],
+          "name": "Flecainida",
+          "class": "Antiarrítmico classe IC",
+          "pharmacologicClass": "Bloqueador potente de canais rápidos de sódio com cinética lenta",
+          "mechanism": "Bloqueia canais rápidos de sódio e desacelera de forma importante a condução em His-Purkinje e miocárdio, alargando PR e QRS.",
+          "pharmacodynamics": "Suprime arritmias supraventriculares e ventriculares, mas pode produzir pró-arritmia, condução 1:1 de flutter e piorar IC em cardiopatia estrutural.",
+          "pharmacokinetics": "Biodisponibilidade oral alta; metabolismo hepático e eliminação renal parcial inalterada. A meia-vida prolonga na insuficiência renal e em alguns metabolizadores lentos.",
+          "indications": [
+            "TPSV em pacientes sem cardiopatia estrutural",
+            "FA paroxística sintomática em pacientes selecionados",
+            "taquicardia ventricular sustentada documentada potencialmente fatal"
+          ],
+          "commercialNames": [
+            "Tambocor"
+          ],
+          "presentation": "Comprimidos orais.",
+          "presentations": [
+            "50 mg",
+            "100 mg",
+            "150 mg"
+          ],
+          "dose": {
+            "PSVT_PAF": "50 mg a cada 12 h; aumentar 50 mg BID a cada 4 dias conforme resposta; máximo 300 mg/dia.",
+            "sustainedVT": "100 mg a cada 12 h; aumentar 50 mg BID a cada 4 dias; máximo 400 mg/dia.",
+            "pillInPocket": "200-300 mg dose única em pacientes previamente selecionados, junto com bloqueador nodal AV e primeira dose testada sob monitorização."
+          },
+          "pediatricDose": "<6 meses: início aproximado 50 mg/m2/dia dividido em 2-3 doses; >6 meses: pode iniciar 100 mg/m2/dia; máximo 200 mg/m2/dia, sob cardiologista pediátrico e níveis/ECG.",
+          "renalDose": "ClCr <=35 mL/min/1,73 m2: iniciar 100 mg uma vez ao dia ou 50 mg BID, com níveis plasmáticos frequentes. Disfunção menor: 100 mg a cada 12 h pode ser usada com vigilância.",
+          "hepaticDose": "Na hepatopatia significativa a eliminação pode reduzir; usar doses menores, ECG e níveis plasmáticos quando possível.",
+          "dangerousAdverseEffects": [
+            "pró-arritmia ventricular",
+            "alargamento importante do QRS",
+            "bloqueio AV",
+            "insuficiência cardíaca",
+            "aumento de mortalidade pós-IAM com cardiopatia estrutural"
+          ],
+          "contraindications": [
+            "Bloqueio AV de segundo/terceiro grau sem marcapasso",
+            "bloqueio bifascicular sem marcapasso",
+            "choque cardiogênico",
+            "evitar em IAM prévio ou cardiopatia estrutural significativa para controle de ritmo da FA"
+          ],
+          "interactions": [
+            "Amiodarona pode aumentar níveis e geralmente exige redução da flecainida",
+            "Digoxina pode aumentar levemente",
+            "Outros bloqueadores de condução podem potencializar bradicardia ou bloqueio",
+            "Usar bloqueador nodal AV concomitante para reduzir flutter 1:1 na estratégia de FA"
+          ],
+          "administration": "Via oral em intervalos regulares; aumentos usuais são feitos a cada 4 dias para permitir estado de equilíbrio.",
+          "infusionProtocol": "Não se aplica à formulação oral citada.",
+          "pregnancy": "Usar se o benefício justificar o risco; atravessa a placenta.",
+          "lactation": "É excretada no leite; individualizar e observar o lactente se a amamentação for mantida.",
+          "specialPopulations": {
+            "structuralHeartDisease": "Não usar para manutenção de ritmo da FA com IAM prévio ou cardiopatia estrutural significativa.",
+            "renal": "Ajuste e níveis em ClCr <=35.",
+            "pediatrics": "Exige cardiologista pediátrico e monitorização de níveis/ECG."
+          },
+          "clinicalPearls": [
+            "O QRS é marcador prático de efeito e toxicidade",
+            "Para pill-in-the-pocket usar 200-300 mg apenas após seleção e teste inicial monitorado, com bloqueio nodal AV."
+          ],
+          "guidelineRecommendations": [
+            "Diretriz FA 2023: flecainida é razoável para manutenção do ritmo apenas se não houver IAM prévio, cardiopatia estrutural significativa nem cicatriz/fibrose ventricular."
+          ],
+          "safetyFlags": [
+            "QRS",
+            "PROARRITMIA",
+            "CARDIOPATIA_ESTRUTURAL",
+            "BLOQUEIO_NODAL_AV",
+            "FUNCAO_RENAL"
+          ],
+          "alerts": [
+            "Não usar na FA com cardiopatia estrutural significativa",
+            "Ajustar lentamente e controlar ECG."
+          ],
+          "adverseEffects": {
+            "common": [
+              "tontura",
+              "alterações visuais",
+              "cefaleia",
+              "náuseas",
+              "dispneia"
+            ],
+            "dangerous": [
+              "pró-arritmia ventricular",
+              "alargamento importante do QRS",
+              "bloqueio AV",
+              "insuficiência cardíaca",
+              "aumento de mortalidade pós-IAM com cardiopatia estrutural"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a30103c5-a261-49a5-a7b3-f43eb77e87b7&version=2",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a30103c5-a261-49a5-a7b3-f43eb77e87b7&version=2"
+        },
+        "es": {
+          "commonAdverseEffects": [
+            "mareo",
+            "alteraciones visuales",
+            "cefalea",
+            "náuseas",
+            "disnea"
+          ],
+          "monitoring": [
+            "ECG de 12 derivaciones",
+            "frecuencia cardíaca",
+            "presión arterial",
+            "función renal y electrolitos cuando corresponda",
+            "síntomas de proarritmia"
+          ],
+          "preparation": "Verificar formulación y concentración antes de administrar.",
+          "patientEducation": [
+            "No duplicar dosis omitidas",
+            "consultar por síncope, palpitaciones sostenidas o disnea nueva",
+            "informar todos los fármacos por riesgo de interacciones y proarritmia"
+          ],
+          "name": "Flecainida",
+          "class": "Antiarrítmico clase IC",
+          "pharmacologicClass": "Bloqueador potente de canales rápidos de sodio con cinética lenta",
+          "mechanism": "Bloquea canales rápidos de sodio y enlentece marcadamente la conducción en His-Purkinje y miocardio, ensanchando PR y QRS.",
+          "pharmacodynamics": "Suprime arritmias supraventriculares y ventriculares, pero puede producir proarritmia, conducción 1:1 de flutter y empeorar HF en cardiopatía estructural.",
+          "pharmacokinetics": "Biodisponibilidad oral alta; metabolismo hepático y eliminación renal parcial sin cambios. Vida media se prolonga con insuficiencia renal y en algunos metabolizadores lentos.",
+          "indications": [
+            "PSVT en pacientes sin cardiopatía estructural",
+            "FA paroxística sintomática en pacientes seleccionados",
+            "taquicardia ventricular sostenida documentada potencialmente mortal"
+          ],
+          "commercialNames": [
+            "Tambocor"
+          ],
+          "presentation": "Tabletas orales.",
+          "presentations": [
+            "50 mg",
+            "100 mg",
+            "150 mg"
+          ],
+          "dose": {
+            "PSVT_PAF": "50 mg cada 12 h; aumentar 50 mg BID cada 4 días según respuesta; máximo 300 mg/día.",
+            "sustainedVT": "100 mg cada 12 h; aumentar 50 mg BID cada 4 días; máximo 400 mg/día.",
+            "pillInPocket": "200-300 mg dosis única en pacientes previamente seleccionados, junto con bloqueador nodal AV y primera dosis probada bajo monitorización."
+          },
+          "pediatricDose": "<6 meses: inicio aproximado 50 mg/m2/día dividido en 2-3 dosis; >6 meses: puede iniciarse 100 mg/m2/día; máximo 200 mg/m2/día, bajo cardiólogo pediátrico y niveles/ECG.",
+          "renalDose": "CrCl <=35 mL/min/1.73 m2: iniciar 100 mg una vez al día o 50 mg BID, con niveles plasmáticos frecuentes. Menor deterioro: 100 mg cada 12 h puede usarse con vigilancia.",
+          "hepaticDose": "En hepatopatía significativa la eliminación puede reducirse; usar dosis menores, ECG y niveles plasmáticos cuando sea posible.",
+          "dangerousAdverseEffects": [
+            "proarritmia ventricular",
+            "ensanchamiento marcado de QRS",
+            "bloqueo AV",
+            "insuficiencia cardíaca",
+            "aumento de mortalidad post-IAM con cardiopatía estructural"
+          ],
+          "contraindications": [
+            "Bloqueo AV de segundo/tercer grado sin marcapasos",
+            "bloqueo bifascicular sin marcapasos",
+            "shock cardiogénico",
+            "evitar en IAM previo o cardiopatía estructural significativa para control de ritmo de FA"
+          ],
+          "interactions": [
+            "Amiodarona puede aumentar niveles y suele requerir reducción de flecainida",
+            "Digoxina puede aumentar levemente",
+            "Otros bloqueadores de conducción pueden potenciar bradicardia o bloqueo",
+            "Usar bloqueador nodal AV concomitante para reducir flutter 1:1 en estrategia de FA"
+          ],
+          "administration": "Vía oral a intervalos regulares; los aumentos usuales se hacen cada 4 días para permitir estado estable.",
+          "infusionProtocol": "No aplica a la formulación oral citada.",
+          "pregnancy": "Usar si el beneficio justifica el riesgo; atraviesa placenta.",
+          "lactation": "Se excreta en leche; individualizar y vigilar al lactante si se mantiene lactancia.",
+          "specialPopulations": {
+            "structuralHeartDisease": "No usar para mantenimiento de ritmo de FA con IAM previo o cardiopatía estructural significativa.",
+            "renal": "Ajuste y niveles en CrCl <=35.",
+            "pediatrics": "Requiere cardiólogo pediátrico y monitorización de niveles/ECG."
+          },
+          "clinicalPearls": [
+            "El QRS es un marcador práctico de efecto y toxicidad",
+            "Para pill-in-the-pocket usar 200-300 mg solo tras selección y prueba inicial monitorizada, con bloqueo nodal AV."
+          ],
+          "guidelineRecommendations": [
+            "Guía AF 2023: flecainida es razonable para mantenimiento de ritmo solo si no hay IAM previo, cardiopatía estructural significativa ni cicatriz/fibrosis ventricular."
+          ],
+          "safetyFlags": [
+            "QRS",
+            "PROARRITMIA",
+            "CARDIOPATIA_ESTRUCTURAL",
+            "BLOQUEO_NODAL_AV",
+            "FUNCION_RENAL"
+          ],
+          "alerts": [
+            "No usar en FA con cardiopatía estructural significativa",
+            "Ajustar lentamente y controlar ECG."
+          ],
+          "adverseEffects": {
+            "common": [
+              "mareo",
+              "alteraciones visuales",
+              "cefalea",
+              "náuseas",
+              "disnea"
+            ],
+            "dangerous": [
+              "proarritmia ventricular",
+              "ensanchamiento marcado de QRS",
+              "bloqueo AV",
+              "insuficiencia cardíaca",
+              "aumento de mortalidad post-IAM con cardiopatía estructural"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a30103c5-a261-49a5-a7b3-f43eb77e87b7&version=2",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a30103c5-a261-49a5-a7b3-f43eb77e87b7&version=2"
+        }
       }
     }, /* fim flecainida */
 
@@ -17981,22 +27003,22 @@
 
         // PCR — dose especial
         if (pcr) {
-          alerts.push({ tipo: 'danger', msg: t(lang, `🚨 PCR FV/TV sem pulso: Bolus ${doseBolusMax} mg IV/IO (1,5 mg/kg). Repetir 0,5–0,75 mg/kg a cada 5–10 min. Dose total máxima: ${doseBolusMax3} mg (3 mg/kg). Usar apenas se amiodarona indisponível.`, `🚨 PCR FV/TV sin pulso: Bolo ${doseBolusMax} mg IV/IO (1,5 mg/kg). Repetir 0,5–0,75 mg/kg cada 5–10 min. Dosis total máxima: ${doseBolusMax3} mg (3 mg/kg). Usar solo si amiodarona no disponible.`) });
+          alerts.push({ tipo: 'danger', msg: t(lang, ` PCR FV/TV sem pulso: Bolus ${doseBolusMax} mg IV/IO (1,5 mg/kg). Repetir 0,5–0,75 mg/kg a cada 5–10 min. Dose total máxima: ${doseBolusMax3} mg (3 mg/kg). Usar apenas se amiodarona indisponível.`, ` PCR FV/TV sin pulso: Bolo ${doseBolusMax} mg IV/IO (1,5 mg/kg). Repetir 0,5–0,75 mg/kg cada 5–10 min. Dosis total máxima: ${doseBolusMax3} mg (3 mg/kg). Usar solo si amiodarona no disponible.`) });
         }
 
         // Contraindicações
         if (paSistolica < 80) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ PAS <80 mmHg — hipotensão grave. Contraindicado ou usar apenas em PCR.', '⛔ PAS <80 mmHg — hipotensión grave. Contraindicado o usar solo en PCR.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' PAS <80 mmHg — hipotensão grave. Contraindicado ou usar apenas em PCR.', ' PAS <80 mmHg — hipotensión grave. Contraindicado o usar solo en PCR.') });
           if (!pcr) contraindicado = true;
         }
         if (fc < 45) {
-          alerts.push({ tipo: 'danger', msg: t(lang, `⛔ FC ${fc} bpm — bradicardia grave. Contraindicado.`, `⛔ FC ${fc} lpm — bradicardia grave. Contraindicado.`) });
+          alerts.push({ tipo: 'danger', msg: t(lang, ` FC ${fc} bpm — bradicardia grave. Contraindicado.`, ` FC ${fc} lpm — bradicardia grave. Contraindicado.`) });
           contraindicado = true;
         }
 
         // Sinais de neurotoxicidade
         if (sinaisNeurotoxicidade) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ Neurotoxicidade detectada — SUSPENDER infusão imediatamente. Sinais: tremor, parestesias, convulsão, confusão, disartria, coma.', '⛔ Neurotoxicidad detectada — SUSPENDER infusión inmediatamente. Signos: temblor, parestesias, convulsión, confusión, disartria, coma.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Neurotoxicidade detectada — SUSPENDER infusão imediatamente. Sinais: tremor, parestesias, convulsão, confusão, disartria, coma.', ' Neurotoxicidad detectada — SUSPENDER infusión inmediatamente. Signos: temblor, parestesias, convulsión, confusión, disartria, coma.') });
           contraindicado = true;
         }
 
@@ -18006,51 +27028,51 @@
         if (choque) {
           fatorReducao = 0.5;
           reducaoObs.push(t(lang, 'Choque: reduzir infusão 50%', 'Shock: reducir infusión 50%'));
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ Choque: fluxo hepático reduzido → acúmulo de lidocaína. Reduzir infusão em 50%.', '⛔ Shock: flujo hepático reducido → acumulación de lidocaína. Reducir infusión 50%.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Choque: fluxo hepático reduzido → acúmulo de lidocaína. Reduzir infusão em 50%.', ' Shock: flujo hepático reducido → acumulación de lidocaína. Reducir infusión 50%.') });
         }
         if (icAvancada) {
           fatorReducao = Math.min(fatorReducao, 0.5);
           reducaoObs.push(t(lang, 'IC avançada: reduzir infusão', 'IC avanzada: reducir infusión'));
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ IC avançada: débito cardíaco reduzido → maior exposição à lidocaína. Reduzir infusão e monitorar neurotoxicidade.', '⚠️ IC avanzada: gasto cardíaco reducido → mayor exposición a lidocaína. Reducir infusión y monitorizar neurotoxicidad.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' IC avançada: débito cardíaco reduzido → maior exposição à lidocaína. Reduzir infusão e monitorar neurotoxicidade.', ' IC avanzada: gasto cardíaco reducido → mayor exposición a lidocaína. Reducir infusión y monitorizar neurotoxicidad.') });
         }
         if (funcaoHepatica === 'grave') {
           fatorReducao = Math.min(fatorReducao, 0.5);
           reducaoObs.push(t(lang, 'Hepatopatia grave: reduzir infusão', 'Hepatopatía grave: reducir infusión'));
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ Insuficiência hepática grave: metabolismo drasticamente reduzido. Reduzir infusão em 50% e monitorar rigorosamente.', '⛔ Insuficiencia hepática grave: metabolismo drásticamente reducido. Reducir infusión 50% y monitorizar rigurosamente.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Insuficiência hepática grave: metabolismo drasticamente reduzido. Reduzir infusão em 50% e monitorar rigorosamente.', ' Insuficiencia hepática grave: metabolismo drásticamente reducido. Reducir infusión 50% y monitorizar rigurosamente.') });
         } else if (funcaoHepatica === 'moderada') {
           fatorReducao = Math.min(fatorReducao, 0.75);
           reducaoObs.push(t(lang, 'Hepatopatia moderada: cautela', 'Hepatopatía moderada: precaución'));
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Insuficiência hepática moderada: reduzir infusão e monitorar.', '⚠️ Insuficiencia hepática moderada: reducir infusión y monitorizar.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Insuficiência hepática moderada: reduzir infusão e monitorar.', ' Insuficiencia hepática moderada: reducir infusión y monitorizar.') });
         }
 
         const infusaoBase = fatorReducao === 1.0 ? '1–4 mg/min IV' : `${(1 * fatorReducao).toFixed(1)}–${(4 * fatorReducao).toFixed(1)} mg/min IV (ajustado)`;
 
         // Eletrólitos
         if (potassio < 3.5) {
-          alerts.push({ tipo: 'danger', msg: t(lang, `⛔ K⁺ ${potassio} mEq/L — hipocalemia. Corrigir para reduzir recorrência de TV/FV.`, `⛔ K⁺ ${potassio} mEq/L — hipocalemia. Corregir para reducir recurrencia de TV/FV.`) });
+          alerts.push({ tipo: 'danger', msg: t(lang, ` K⁺ ${potassio} mEq/L — hipocalemia. Corrigir para reduzir recorrência de TV/FV.`, ` K⁺ ${potassio} mEq/L — hipocalemia. Corregir para reducir recurrencia de TV/FV.`) });
         }
         if (magnesio < 1.7) {
-          alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ Mg²⁺ ${magnesio} mg/dL — repor magnésio.`, `⚠️ Mg²⁺ ${magnesio} mg/dL — reponer magnesio.`) });
+          alerts.push({ tipo: 'warning', msg: t(lang, ` Mg²⁺ ${magnesio} mg/dL — repor magnésio.`, ` Mg²⁺ ${magnesio} mg/dL — reponer magnesio.`) });
         }
 
         // Renal
         if (clcrCalc < 30) {
-          alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ ClCr ${clcrCalc} mL/min — metabólitos podem acumular. Reduzir infusão e monitorar neurotoxicidade.`, `⚠️ ClCr ${clcrCalc} mL/min — metabolitos pueden acumularse. Reducir infusión y monitorizar neurotoxicidad.`) });
+          alerts.push({ tipo: 'warning', msg: t(lang, ` ClCr ${clcrCalc} mL/min — metabólitos podem acumular. Reduzir infusão e monitorar neurotoxicidade.`, ` ClCr ${clcrCalc} mL/min — metabolitos pueden acumularse. Reducir infusión y monitorizar neurotoxicidad.`) });
         }
 
         // Idoso
         if (idade >= 70) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ ≥70 anos: menor depuração hepática e maior risco de neurotoxicidade. Reduzir dose e monitorar estado mental.', '⚠️ ≥70 años: menor depuración hepática y mayor riesgo de neurotoxicidad. Reducir dosis y monitorizar estado mental.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' ≥70 anos: menor depuração hepática e maior risco de neurotoxicidade. Reduzir dose e monitorar estado mental.', ' ≥70 años: menor depuración hepática y mayor riesgo de neurotoxicidad. Reducir dosis y monitorizar estado mental.') });
         }
 
         // WPW — aviso negativo
         if (indicacao === 'FA' || indicacao === 'FA-preexcitacao') {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Lidocaína NÃO é indicação para FA/flutter supraventricular — pouco eficaz em tecido atrial. Preferir cardioversão ou antiarrítmicos específicos.', '⚠️ Lidocaína NO es indicación para FA/flutter supraventricular — poco eficaz en tejido auricular. Preferir cardioversión o antiarrítmicos específicos.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Lidocaína NÃO é indicação para FA/flutter supraventricular — pouco eficaz em tecido atrial. Preferir cardioversão ou antiarrítmicos específicos.', ' Lidocaína NO es indicación para FA/flutter supraventricular — poco eficaz en tejido auricular. Preferir cardioversión o antiarrítmicos específicos.') });
         }
 
         // Gestante
         if (gestante) {
-          alerts.push({ tipo: 'info', msg: t(lang, 'ℹ️ Gestante: pode ser usada em situação emergencial. Risco-benefício favorável em arritmia ventricular grave — monitorar feto.', 'ℹ️ Embarazada: puede usarse en situación emergencial. Riesgo-beneficio favorable en arritmia ventricular grave — monitorizar feto.') });
+          alerts.push({ tipo: 'info', msg: t(lang, ' Gestante: pode ser usada em situação emergencial. Risco-benefício favorável em arritmia ventricular grave — monitorar feto.', ' Embarazada: puede usarse en situación emergencial. Riesgo-beneficio favorable en arritmia ventricular grave — monitorizar feto.') });
         }
 
         return {
@@ -18068,8 +27090,8 @@
             ['TV estable — alternativa a amiodarona', 'FV/TV recurrente post-PCR', 'Arritmias ventriculares isquémicas/post-IAM', 'PCR por FV/TV sin pulso (si amiodarona no disponible)']
           ),
           efeitosAdversos: t(lang,
-            ['Sonolência', 'Tontura', 'Parestesias', 'Tremor', 'Náuseas', 'Confusão', 'Disartria', '⚠️ Convulsões', '⚠️ Coma', '⚠️ Depressão respiratória', '⚠️ Bradicardia/BAV', '⚠️ Colapso CV'],
-            ['Somnolencia', 'Mareos', 'Parestesias', 'Temblor', 'Náuseas', 'Confusión', 'Disartria', '⚠️ Convulsiones', '⚠️ Coma', '⚠️ Depresión respiratoria', '⚠️ Bradicardia/BAV', '⚠️ Colapso CV']
+            ['Sonolência', 'Tontura', 'Parestesias', 'Tremor', 'Náuseas', 'Confusão', 'Disartria', ' Convulsões', ' Coma', ' Depressão respiratória', ' Bradicardia/BAV', ' Colapso CV'],
+            ['Somnolencia', 'Mareos', 'Parestesias', 'Temblor', 'Náuseas', 'Confusión', 'Disartria', ' Convulsiones', ' Coma', ' Depresión respiratoria', ' Bradicardia/BAV', ' Colapso CV']
           ),
           monitoramento: t(lang,
             ['ECG contínuo', 'PA a cada 5 min (carga)', 'Estado neurológico', 'Ritmo ventricular', 'K⁺ + Mg²⁺', 'Função hepática', 'Suspender se tremor/confusão/convulsão'],
@@ -18078,6 +27100,199 @@
           refs: ['AHA ACLS Guidelines', 'ESC VA Guidelines', 'AHA/ACC/HRS VA Guidelines', 'Goodman & Gilman', 'Lexicomp', 'FDA/DailyMed label'],
           alerts
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Lidocaína",
+          "class": "Antiarrítmico classe IB; anestésico local do tipo amida",
+          "pharmacologicClass": "Bloqueador de canais rápidos de sódio dependente de uso",
+          "mechanism": "Bloqueia canais de sódio voltagem-dependentes, com maior afinidade por canais abertos ou inativados. No miocárdio ventricular e fibras de Purkinje reduz a automaticidade e encurta o potencial de ação.",
+          "pharmacodynamics": "Reduz a velocidade da fase 0 e a automaticidade ventricular, sobretudo em tecido isquêmico. Em concentrações elevadas pode deprimir condução, contratilidade e sistema nervoso central.",
+          "pharmacokinetics": "Início IV em segundos. Metabolismo hepático extenso, principalmente CYP1A2 e CYP3A4, com metabólitos ativos. Meia-vida aproximada de 1,5 a 2 horas, prolongada em insuficiência hepática, baixo débito e infusão prolongada.",
+          "indications": [
+            "FV/TV sem pulso refratária à desfibrilação como opção antiarrítmica",
+            "Arritmias ventriculares agudas e recorrentes",
+            "Recorrência de TV polimórfica sem QT prolongado, conforme contexto clínico"
+          ],
+          "commercialNames": [
+            "Xylocaína",
+            "Lidocaína genérica"
+          ],
+          "presentation": "Solução injetável para bolus IV e soluções prontas para infusão; concentrações dependem do fabricante.",
+          "presentations": [
+            "Solução injetável 10 mg/mL ou 20 mg/mL conforme produto",
+            "Bolsas pré-misturadas em dextrose 4 mg/mL ou 8 mg/mL em alguns mercados"
+          ],
+          "dose": {
+            "PCR FV/TVsp": "1 a 1,5 mg/kg IV/IO; segunda dose 0,5 a 0,75 mg/kg conforme algoritmo AHA",
+            "Arritmia ventricular com pulso": "Bolus 1 a 1,5 mg/kg IV a 25 a 50 mg/min; repetir conforme resposta dentro do limite recomendado",
+            "Infusão": "1 a 4 mg/min após controle inicial; individualizar por resposta e depuração"
+          },
+          "pediatricDose": "Em ressuscitação pediátrica, seguir PALS vigente; esquemas usuais utilizam 1 mg/kg IV/IO para arritmia ventricular e infusão titulada. Confirmar protocolo institucional.",
+          "renalDose": "Em geral não exige ajuste inicial apenas pela função renal; metabólitos ativos podem acumular em insuficiência renal grave ou infusão prolongada, exigindo vigilância.",
+          "hepaticDose": "Reduzir manutenção em insuficiência hepática importante, choque ou baixo débito, pois a depuração é predominantemente hepática; titular por resposta e toxicidade.",
+          "commonAdverseEffects": [
+            "Parestesia perioral",
+            "Tontura",
+            "Sonolência",
+            "Náusea",
+            "Hipotensão",
+            "Bradicardia"
+          ],
+          "dangerousAdverseEffects": [
+            "Convulsões",
+            "Depressão respiratória",
+            "Bloqueio cardíaco",
+            "Arritmias graves",
+            "Colapso cardiovascular",
+            "Parada cardíaca"
+          ],
+          "adverseEffects": "Toxicidade sistêmica é concentração-dependente e costuma iniciar com manifestações neurológicas, podendo evoluir para depressão cardiovascular grave.",
+          "contraindications": [
+            "Hipersensibilidade à lidocaína ou anestésicos locais do tipo amida",
+            "Bloqueio sinoatrial, atrioventricular ou intraventricular grave sem marcapasso, conforme formulação e contexto"
+          ],
+          "interactions": [
+            "Betabloqueadores e fármacos que reduzem fluxo hepático podem diminuir depuração",
+            "Cimetidina pode elevar concentrações",
+            "Outros antiarrítmicos e depressores de condução somam efeitos eletrofisiológicos",
+            "Amiodarona pode aumentar exposição e toxicidade"
+          ],
+          "monitoring": [
+            "ECG contínuo",
+            "Pressão arterial",
+            "Frequência cardíaca",
+            "Estado neurológico",
+            "Sinais de toxicidade como parestesia perioral, zumbido, confusão ou convulsões"
+          ],
+          "administration": "Administrar IV/IO sob monitorização contínua. Bolus deve respeitar velocidade indicada; manter desfibrilador disponível.",
+          "preparation": "Para infusão, usar solução compatível e concentração padronizada institucional. Bolsas prontas com 4 mg/mL ou 8 mg/mL podem estar disponíveis; conferir rotulagem.",
+          "infusionProtocol": "Após bolus eficaz, infundir 1 a 4 mg/min. Em infusões prolongadas, especialmente após 24 horas, reduzir a velocidade conforme depuração e sinais de acúmulo.",
+          "pregnancy": "Atravessa a placenta. Pode ser usada quando clinicamente necessária; em arritmia materna grave, o benefício do tratamento pode superar risco potencial.",
+          "lactation": "Passa para o leite em pequenas quantidades. Exposição do lactente costuma ser baixa, mas uso antiarrítmico sistêmico requer avaliação individual.",
+          "specialPopulations": "Idosos, insuficiência cardíaca, choque, doença hepática e baixo débito podem apresentar depuração reduzida; usar doses menores ou titulação mais conservadora.",
+          "patientEducation": "Durante infusão, comunicar imediatamente gosto metálico, zumbido, dormência ao redor da boca, tontura intensa, confusão ou palpitações.",
+          "clinicalPearls": [
+            "Classe IB favorece tecido ventricular isquêmico",
+            "Toxicidade neurológica pode preceder cardiotoxicidade",
+            "Na PCR, amiodarona ou lidocaína podem ser consideradas para FV/TV sem pulso refratária"
+          ],
+          "guidelineRecommendations": "AHA 2025: amiodarona ou lidocaína podem ser consideradas em FV/TV sem pulso não responsiva à desfibrilação; lidocaína também pode ser considerada em recorrência de TV polimórfica sem QT prolongado.",
+          "safetyFlags": [
+            "Janela terapêutica estreita",
+            "Monitorização ECG obrigatória",
+            "Reduzir exposição em baixo débito ou insuficiência hepática",
+            "Risco de neurotoxicidade e cardiotoxicidade"
+          ],
+          "alerts": [
+            "Não confundir doses antiarrítmicas com doses de anestesia local",
+            "Interromper ou reduzir diante de toxicidade neurológica ou cardiovascular progressiva"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0",
+            "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+          ],
+          "ref": "DailyMed Lidocaine IV; AHA Adult Advanced Life Support 2025"
+        },
+        "es": {
+          "name": "Lidocaína",
+          "class": "Antiarrítmico clase IB; anestésico local tipo amida",
+          "pharmacologicClass": "Bloqueador de canales rápidos de sodio dependiente del uso",
+          "mechanism": "Bloquea canales de sodio dependientes de voltaje con mayor afinidad por canales abiertos o inactivados. En miocardio ventricular y fibras de Purkinje reduce automatismo y acorta el potencial de acción.",
+          "pharmacodynamics": "Reduce la velocidad de fase 0 y el automatismo ventricular, especialmente en tejido isquémico. A concentraciones altas puede deprimir conducción, contractilidad y sistema nervioso central.",
+          "pharmacokinetics": "Inicio IV en segundos. Metabolismo hepático extenso, principalmente CYP1A2 y CYP3A4, con metabolitos activos. Vida media aproximada de 1,5 a 2 horas, prolongada en insuficiencia hepática, bajo gasto e infusión prolongada.",
+          "indications": [
+            "FV/TV sin pulso refractaria a desfibrilación como opción antiarrítmica",
+            "Arritmias ventriculares agudas y recurrentes",
+            "Recurrencia de TV polimórfica sin QT prolongado según contexto clínico"
+          ],
+          "commercialNames": [
+            "Xylocaine",
+            "Lidocaína genérica"
+          ],
+          "presentation": "Solución inyectable para bolo IV y soluciones preparadas para infusión; las concentraciones dependen del fabricante.",
+          "presentations": [
+            "Solución inyectable 10 mg/mL o 20 mg/mL según producto",
+            "Bolsas premezcladas en dextrosa 4 mg/mL u 8 mg/mL en algunos mercados"
+          ],
+          "dose": {
+            "PCR FV/TVsp": "1 a 1,5 mg/kg IV/IO; segunda dosis 0,5 a 0,75 mg/kg según algoritmo AHA",
+            "Arritmia ventricular con pulso": "Bolo 1 a 1,5 mg/kg IV a 25 a 50 mg/min; repetir según respuesta dentro del límite recomendado",
+            "Infusión": "1 a 4 mg/min luego del control inicial; individualizar según respuesta y depuración"
+          },
+          "pediatricDose": "En reanimación pediátrica seguir PALS vigente; esquemas habituales utilizan 1 mg/kg IV/IO para arritmia ventricular y una infusión titulada. Confirmar protocolo institucional.",
+          "renalDose": "En general no requiere ajuste inicial solo por función renal; metabolitos activos pueden acumularse en insuficiencia renal grave o infusión prolongada, por lo que se requiere vigilancia.",
+          "hepaticDose": "Reducir mantenimiento en insuficiencia hepática importante, shock o bajo gasto porque la depuración es predominantemente hepática; titular según respuesta y toxicidad.",
+          "commonAdverseEffects": [
+            "Parestesia perioral",
+            "Mareo",
+            "Somnolencia",
+            "Náuseas",
+            "Hipotensión",
+            "Bradicardia"
+          ],
+          "dangerousAdverseEffects": [
+            "Convulsiones",
+            "Depresión respiratoria",
+            "Bloqueo cardíaco",
+            "Arritmias graves",
+            "Colapso cardiovascular",
+            "Paro cardíaco"
+          ],
+          "adverseEffects": "La toxicidad sistémica depende de la concentración y suele comenzar con manifestaciones neurológicas, pudiendo progresar a depresión cardiovascular grave.",
+          "contraindications": [
+            "Hipersensibilidad a lidocaína o anestésicos locales tipo amida",
+            "Bloqueo sinoauricular, auriculoventricular o intraventricular grave sin marcapasos según formulación y contexto"
+          ],
+          "interactions": [
+            "Betabloqueantes y fármacos que reducen flujo hepático pueden disminuir depuración",
+            "Cimetidina puede elevar concentraciones",
+            "Otros antiarrítmicos y depresores de conducción suman efectos electrofisiológicos",
+            "Amiodarona puede aumentar exposición y toxicidad"
+          ],
+          "monitoring": [
+            "ECG continuo",
+            "Presión arterial",
+            "Frecuencia cardíaca",
+            "Estado neurológico",
+            "Signos de toxicidad como parestesia perioral, tinnitus, confusión o convulsiones"
+          ],
+          "administration": "Administrar IV/IO con monitorización continua. El bolo debe respetar la velocidad indicada; mantener desfibrilador disponible.",
+          "preparation": "Para infusión usar solución compatible y concentración institucional estandarizada. Pueden existir bolsas listas de 4 mg/mL u 8 mg/mL; verificar rótulo.",
+          "infusionProtocol": "Después de un bolo eficaz, infundir 1 a 4 mg/min. En infusiones prolongadas, especialmente tras 24 horas, reducir velocidad según depuración y signos de acumulación.",
+          "pregnancy": "Cruza la placenta. Puede usarse cuando sea clínicamente necesario; en arritmia materna grave el beneficio puede superar el riesgo potencial.",
+          "lactation": "Pasa a leche en pequeñas cantidades. La exposición del lactante suele ser baja, pero el uso antiarrítmico sistémico requiere evaluación individual.",
+          "specialPopulations": "Ancianos, insuficiencia cardíaca, shock, hepatopatía y bajo gasto pueden tener depuración reducida; considerar dosis menores o titulación más conservadora.",
+          "patientEducation": "Durante la infusión avisar de inmediato si aparece sabor metálico, tinnitus, adormecimiento perioral, mareo intenso, confusión o palpitaciones.",
+          "clinicalPearls": [
+            "Clase IB con preferencia por tejido ventricular isquémico",
+            "La neurotoxicidad puede preceder cardiotoxicidad",
+            "En PCR, amiodarona o lidocaína pueden considerarse para FV/TV sin pulso refractaria"
+          ],
+          "guidelineRecommendations": "AHA 2025: amiodarona o lidocaína pueden considerarse en FV/TV sin pulso no respondiente a desfibrilación; lidocaína también puede considerarse en recurrencia de TV polimórfica sin QT prolongado.",
+          "safetyFlags": [
+            "Ventana terapéutica estrecha",
+            "Monitorización ECG obligatoria",
+            "Reducir exposición en bajo gasto o insuficiencia hepática",
+            "Riesgo de neurotoxicidad y cardiotoxicidad"
+          ],
+          "alerts": [
+            "No confundir dosis antiarrítmicas con dosis de anestesia local",
+            "Suspender o reducir ante toxicidad neurológica o cardiovascular progresiva"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0",
+            "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+          ],
+          "ref": "DailyMed Lidocaine IV; AHA Adult Advanced Life Support 2025"
+        }
       }
     }, /* fim lidocaina */
 
@@ -18159,42 +27374,42 @@
 
         // Contraindicações absolutas
         if (choque) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ CONTRAINDICADO: Choque cardiogênico.', '⛔ CONTRAINDICADO: Shock cardiogénico.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' CONTRAINDICADO: Choque cardiogênico.', ' CONTRAINDICADO: Shock cardiogénico.') });
           contraindicado = true;
         }
         if (paSistolica < 85) {
-          alerts.push({ tipo: 'danger', msg: t(lang, `⛔ PAS ${paSistolica} mmHg — hipotensão. Contraindicado.`, `⛔ PAS ${paSistolica} mmHg — hipotensión. Contraindicado.`) });
+          alerts.push({ tipo: 'danger', msg: t(lang, ` PAS ${paSistolica} mmHg — hipotensão. Contraindicado.`, ` PAS ${paSistolica} mmHg — hipotensión. Contraindicado.`) });
           contraindicado = true;
         }
         if (fc < 45) {
-          alerts.push({ tipo: 'danger', msg: t(lang, `⛔ FC ${fc} bpm — bradicardia grave. Contraindicado.`, `⛔ FC ${fc} lpm — bradicardia grave. Contraindicado.`) });
+          alerts.push({ tipo: 'danger', msg: t(lang, ` FC ${fc} bpm — bradicardia grave. Contraindicado.`, ` FC ${fc} lpm — bradicardia grave. Contraindicado.`) });
           contraindicado = true;
         }
 
         // Sinais de neurotoxicidade ativos
         if (sinaisNeurotoxicidade) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ Neurotoxicidade ativa (tremor/tontura/confusão/convulsão) — SUSPENDER mexiletina imediatamente.', '⛔ Neurotoxicidad activa (temblor/mareos/confusión/convulsión) — SUSPENDER mexiletina inmediatamente.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Neurotoxicidade ativa (tremor/tontura/confusão/convulsão) — SUSPENDER mexiletina imediatamente.', ' Neurotoxicidad activa (temblor/mareos/confusión/convulsión) — SUSPENDER mexiletina inmediatamente.') });
           contraindicado = true;
         }
 
         // Convulsões prévias
         if (convulsoesPreviasConvulsoes) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Epilepsia ou convulsões prévias — risco aumentado de convulsão por mexiletina. Usar com extrema cautela.', '⚠️ Epilepsia o convulsiones previas — riesgo aumentado de convulsión por mexiletina. Usar con extrema precaución.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Epilepsia ou convulsões prévias — risco aumentado de convulsão por mexiletina. Usar com extrema cautela.', ' Epilepsia o convulsiones previas — riesgo aumentado de convulsión por mexiletina. Usar con extrema precaución.') });
         }
 
         // QRS
         if (qrs > 120) {
-          alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ QRS ${qrs} ms alargado — monitorar alargamento adicional. Suspender se QRS aumentar significativamente.`, `⚠️ QRS ${qrs} ms ensanchado — monitorizar ensanchamiento adicional. Suspender si QRS aumenta significativamente.`) });
+          alerts.push({ tipo: 'warning', msg: t(lang, ` QRS ${qrs} ms alargado — monitorar alargamento adicional. Suspender se QRS aumentar significativamente.`, ` QRS ${qrs} ms ensanchado — monitorizar ensanchamiento adicional. Suspender si QRS aumenta significativamente.`) });
         }
 
         // Hepático — ponto crítico
         if (funcaoHepatica === 'grave') {
-          alerts.push({ tipo: 'danger', msg: t(lang, '⛔ Insuficiência hepática grave — metabolismo drasticamente reduzido. Reduzir dose e monitorar toxicidade rigorosamente.', '⛔ Insuficiencia hepática grave — metabolismo drásticamente reducido. Reducir dosis y monitorizar toxicidad rigurosamente.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Insuficiência hepática grave — metabolismo drasticamente reduzido. Reduzir dose e monitorar toxicidade rigorosamente.', ' Insuficiencia hepática grave — metabolismo drásticamente reducido. Reducir dosis y monitorizar toxicidad rigurosamente.') });
         } else if (funcaoHepatica === 'moderada') {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Insuficiência hepática moderada — reduzir dose e monitorar.', '⚠️ Insuficiencia hepática moderada — reducir dosis y monitorizar.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Insuficiência hepática moderada — reduzir dose e monitorar.', ' Insuficiencia hepática moderada — reducir dosis y monitorizar.') });
         }
         if (icAvancada) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ IC avançada: menor débito → acúmulo de mexiletina. Reduzir dose e monitorar.', '⚠️ IC avanzada: menor gasto → acumulación de mexiletina. Reducir dosis y monitorizar.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' IC avançada: menor débito → acúmulo de mexiletina. Reduzir dose e monitorar.', ' IC avanzada: menor gasto → acumulación de mexiletina. Reducir dosis y monitorizar.') });
         }
 
         // Determinar dose renal
@@ -18203,46 +27418,46 @@
           doseRec = '200 mg VO 8/8h com alimentos (titular 150–300 mg 8/8h)';
         } else if (clcrCalc >= 30) {
           doseRec = '150–200 mg VO 8/8h com alimentos';
-          alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ ClCr ${clcrCalc} mL/min: dose no limite inferior; monitorar.`, `⚠️ ClCr ${clcrCalc} mL/min: dosis en límite inferior; monitorizar.`) });
+          alerts.push({ tipo: 'warning', msg: t(lang, ` ClCr ${clcrCalc} mL/min: dose no limite inferior; monitorar.`, ` ClCr ${clcrCalc} mL/min: dosis en límite inferior; monitorizar.`) });
         } else {
           doseRec = '150 mg VO 8/8h ou 12/12h — DRC grave';
-          alerts.push({ tipo: 'warning', msg: t(lang, `⚠️ ClCr ${clcrCalc} mL/min — DRC grave. Usar dose mínima e monitorar.`, `⚠️ ClCr ${clcrCalc} mL/min — ERC grave. Usar dosis mínima y monitorizar.`) });
+          alerts.push({ tipo: 'warning', msg: t(lang, ` ClCr ${clcrCalc} mL/min — DRC grave. Usar dose mínima e monitorar.`, ` ClCr ${clcrCalc} mL/min — ERC grave. Usar dosis mínima y monitorizar.`) });
         }
 
         // TV não documentada — aviso importante
         if (!tvSustentada) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Mexiletina reservada para TV sustentada documentada ou EV potencialmente fatal. Não usar para EV assintomáticas/benignas — pode aumentar mortalidade.', '⚠️ Mexiletina reservada para TV sostenida documentada o EV potencialmente fatal. No usar para EV asintomáticas/benignas — puede aumentar mortalidad.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Mexiletina reservada para TV sustentada documentada ou EV potencialmente fatal. Não usar para EV assintomáticas/benignas — pode aumentar mortalidade.', ' Mexiletina reservada para TV sostenida documentada o EV potencialmente fatal. No usar para EV asintomáticas/benignas — puede aumentar mortalidad.') });
         }
 
         // Interações importantes
         if (usoAmiodarona) {
-          alerts.push({ tipo: 'danger', msg: t(lang, '🔴 Amiodarona: inibe CYP2D6/CYP1A2 → aumenta significativamente níveis de mexiletina. Risco de toxicidade neurológica e arrítmica.', '🔴 Amiodarona: inhibe CYP2D6/CYP1A2 → aumenta significativamente niveles de mexiletina. Riesgo de toxicidad neurológica y arrítmica.') });
+          alerts.push({ tipo: 'danger', msg: t(lang, ' Amiodarona: inibe CYP2D6/CYP1A2 → aumenta significativamente níveis de mexiletina. Risco de toxicidade neurológica e arrítmica.', ' Amiodarona: inhibe CYP2D6/CYP1A2 → aumenta significativamente niveles de mexiletina. Riesgo de toxicidad neurológica y arrítmica.') });
         }
         if (usoTeofilina) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Teofilina: mexiletina pode aumentar seus níveis. Monitorar toxicidade por teofilina.', '⚠️ Teofilina: mexiletina puede aumentar sus niveles. Monitorizar toxicidad por teofilina.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Teofilina: mexiletina pode aumentar seus níveis. Monitorar toxicidade por teofilina.', ' Teofilina: mexiletina puede aumentar sus niveles. Monitorizar toxicidad por teofilina.') });
         }
         if (usoPropafenona) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Propafenona: risco de pró-arritmia e condução alterada com associação de Classe IB + IC.', '⚠️ Propafenona: riesgo de proarritmia y conducción alterada con asociación Clase IB + IC.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Propafenona: risco de pró-arritmia e condução alterada com associação de Classe IB + IC.', ' Propafenona: riesgo de proarritmia y conducción alterada con asociación Clase IB + IC.') });
         }
 
         // Instrução de tomar com alimentos
-        alerts.push({ tipo: 'info', msg: t(lang, '🍽️ Tomar SEMPRE com alimentos — reduz significativamente náuseas e efeitos GI.', '🍽️ Tomar SIEMPRE con alimentos — reduce significativamente náuseas y efectos GI.') });
+        alerts.push({ tipo: 'info', msg: t(lang, ' Tomar SEMPRE com alimentos — reduz significativamente náuseas e efeitos GI.', ' Tomar SIEMPRE con alimentos — reduce significativamente náuseas y efectos GI.') });
 
         // Gestante / Lactante
         if (gestante) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Gestante: usar apenas se benefício superar risco — arritmia ventricular relevante sob especialista.', '⚠️ Embarazada: usar solo si beneficio supera riesgo — arritmia ventricular relevante bajo especialista.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Gestante: usar apenas se benefício superar risco — arritmia ventricular relevante sob especialista.', ' Embarazada: usar solo si beneficio supera riesgo — arritmia ventricular relevante bajo especialista.') });
         }
         if (lactante) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ Lactante: passa para o leite. Monitorar lactente para sonolência ou arritmias.', '⚠️ Lactante: pasa a la leche. Monitorizar lactante por somnolencia o arritmias.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' Lactante: passa para o leite. Monitorar lactente para sonolência ou arritmias.', ' Lactante: pasa a la leche. Monitorizar lactante por somnolencia o arritmias.') });
         }
 
         // Idoso
         if (idade >= 70) {
-          alerts.push({ tipo: 'warning', msg: t(lang, '⚠️ ≥70 anos: maior risco de tremor, tontura, quedas, interações e toxicidade. Iniciar com 150 mg 8/8h e titular lentamente.', '⚠️ ≥70 años: mayor riesgo de temblor, mareos, caídas, interacciones y toxicidad. Iniciar con 150 mg cada 8h y titular lentamente.') });
+          alerts.push({ tipo: 'warning', msg: t(lang, ' ≥70 anos: maior risco de tremor, tontura, quedas, interações e toxicidade. Iniciar com 150 mg 8/8h e titular lentamente.', ' ≥70 años: mayor riesgo de temblor, mareos, caídas, interacciones y toxicidad. Iniciar con 150 mg cada 8h y titular lentamente.') });
         }
 
         // Black Box
-        alerts.push({ tipo: 'danger', msg: t(lang, '📦 BLACK BOX: Antiarrítmicos podem aumentar mortalidade em arritmias não ameaçadoras à vida. Reservar para TV/EV documentadas e potencialmente fatais.', '📦 BLACK BOX: Antiarrítmicos pueden aumentar mortalidad en arritmias no amenazantes para la vida. Reservar para TV/EV documentadas y potencialmente fatales.') });
+        alerts.push({ tipo: 'danger', msg: t(lang, ' BLACK BOX: Antiarrítmicos podem aumentar mortalidade em arritmias não ameaçadoras à vida. Reservar para TV/EV documentadas e potencialmente fatais.', ' BLACK BOX: Antiarrítmicos pueden aumentar mortalidad en arritmias no amenazantes para la vida. Reservar para TV/EV documentadas y potencialmente fatales.') });
 
         return {
           dose: contraindicado
@@ -18257,8 +27472,8 @@
             ['TV sostenida documentada', 'Arritmias ventriculares potencialmente fatales', 'Adyuvante en TV refractaria (+ amiodarona)', 'QT largo tipo 3 seleccionado (especialista)', 'EV de alto riesgo seleccionadas']
           ),
           efeitosAdversos: t(lang,
-            ['Náuseas', 'Vômitos', 'Azia', 'Tremor', 'Tontura', 'Ataxia', 'Visão turva', '⚠️ Pró-arritmia ventricular', '⚠️ Convulsões', '⚠️ Hepatotoxicidade', '⚠️ Leucopenia rara'],
-            ['Náuseas', 'Vómitos', 'Acidez', 'Temblor', 'Mareos', 'Ataxia', 'Visión borrosa', '⚠️ Proarritmia ventricular', '⚠️ Convulsiones', '⚠️ Hepatotoxicidad', '⚠️ Leucopenia rara']
+            ['Náuseas', 'Vômitos', 'Azia', 'Tremor', 'Tontura', 'Ataxia', 'Visão turva', ' Pró-arritmia ventricular', ' Convulsões', ' Hepatotoxicidade', ' Leucopenia rara'],
+            ['Náuseas', 'Vómitos', 'Acidez', 'Temblor', 'Mareos', 'Ataxia', 'Visión borrosa', ' Proarritmia ventricular', ' Convulsiones', ' Hepatotoxicidad', ' Leucopenia rara']
           ),
           monitoramento: t(lang,
             ['ECG basal + periódico (QRS + PR)', 'Função hepática basal e periódica', 'K⁺ e Mg²⁺', 'Sintomas neurológicos', 'Sintomas GI', 'Recorrência de TV', 'Estado mental'],
@@ -18267,6 +27482,199 @@
           refs: ['ESC VA Guidelines', 'AHA/ACC/HRS VA Guidelines', 'Goodman & Gilman', 'Lexicomp', 'FDA/DailyMed label'],
           alerts
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Mexiletina",
+          "class": "Antiarrítmico classe IB oral",
+          "pharmacologicClass": "Bloqueador de canais rápidos de sódio, análogo oral da lidocaína",
+          "mechanism": "Bloqueia canais rápidos de sódio em estado aberto ou inativado, reduzindo velocidade de fase 0 e automaticidade ventricular com dependência de uso.",
+          "pharmacodynamics": "Encurta duração do potencial de ação em fibras de Purkinje e miocárdio ventricular. Pode suprimir ectopia e taquicardia ventricular, mas também causar pró-arritmia.",
+          "pharmacokinetics": "Boa absorção oral. Metabolismo predominantemente hepático por CYP2D6 e CYP1A2. Meia-vida usual em torno de 10 a 12 horas, prolongada em doença hepática e baixo débito.",
+          "indications": [
+            "Arritmias ventriculares documentadas potencialmente fatais, como taquicardia ventricular sustentada",
+            "Uso especializado como antiarrítmico oral classe IB quando o benefício supera o risco pró-arrítmico"
+          ],
+          "commercialNames": [
+            "Mexitil",
+            "Mexiletina genérica"
+          ],
+          "presentation": "Cápsulas de liberação imediata para uso oral.",
+          "presentations": [
+            "Cápsulas 150 mg",
+            "Cápsulas 200 mg",
+            "Cápsulas 250 mg conforme mercado"
+          ],
+          "dose": {
+            "Inicial": "200 mg VO a cada 8 horas quando não é necessário controle imediato",
+            "Faixa habitual": "200 a 300 mg VO a cada 8 horas com alimento ou antiácido",
+            "Máximo": "1200 mg/dia",
+            "Carga quando necessário": "400 mg VO, seguidos por 200 mg após 8 horas"
+          },
+          "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas para tratamento rotineiro de arritmias ventriculares; uso pediátrico deve ser especializado.",
+          "renalDose": "Em insuficiência renal, em geral usam-se doses usuais; titular por eficácia e toxicidade.",
+          "hepaticDose": "Doença hepática grave pode exigir dose menor e monitorização estreita. Insuficiência cardíaca direita importante também pode reduzir metabolismo hepático.",
+          "commonAdverseEffects": [
+            "Náusea",
+            "Vômitos",
+            "Pirose",
+            "Tremor",
+            "Tontura",
+            "Ataxia"
+          ],
+          "dangerousAdverseEffects": [
+            "Pró-arritmia",
+            "Bloqueio de condução",
+            "Convulsões",
+            "Hepatotoxicidade",
+            "Agravamento de insuficiência cardíaca"
+          ],
+          "adverseEffects": "Efeitos gastrointestinais e neurológicos são dose-dependentes e frequentemente limitam tratamento. Toxicidade aumenta com concentrações elevadas ou depuração hepática reduzida.",
+          "contraindications": [
+            "Choque cardiogênico",
+            "Bloqueio AV de segundo ou terceiro grau sem marcapasso",
+            "Hipersensibilidade ao fármaco"
+          ],
+          "interactions": [
+            "Inibidores de CYP2D6 ou CYP1A2 podem elevar níveis",
+            "Indutores enzimáticos podem reduzir exposição",
+            "Fármacos pró-arrítmicos ou depressores de condução podem somar risco",
+            "Teofilina e cafeína podem apresentar interação metabólica"
+          ],
+          "monitoring": [
+            "ECG e intervalo QRS",
+            "Carga de arritmia ou Holter quando indicado",
+            "Sintomas neurológicos",
+            "Função hepática",
+            "Sinais de insuficiência cardíaca"
+          ],
+          "administration": "Administrar com alimento ou antiácido para reduzir intolerância gastrointestinal. Ajustes devem ser espaçados em pelo menos 2 a 3 dias quando possível.",
+          "preparation": "Uso oral; cápsulas devem ser administradas conforme apresentação. Não há preparo para infusão.",
+          "infusionProtocol": "Não se aplica à mexiletina oral; para arritmia ventricular aguda que exija terapia IV escolher agente apropriado.",
+          "pregnancy": "Dados humanos são limitados. Usar apenas quando o benefício clínico justificar risco potencial, com decisão especializada em arritmia grave.",
+          "lactation": "Mexiletina é excretada no leite. Avaliar risco para o lactente e necessidade materna antes de manter amamentação.",
+          "specialPopulations": "Doença hepática, insuficiência cardíaca direita, idosos e pacientes com distúrbios de condução exigem titulação mais lenta e vigilância mais estreita.",
+          "patientEducation": "Tomar com alimento, não dobrar dose esquecida e relatar síncope, palpitações piores, tremor intenso, ataxia, icterícia ou convulsões.",
+          "clinicalPearls": [
+            "É o análogo oral funcional da lidocaína",
+            "Não usar para extrassístoles ventriculares assintomáticas",
+            "Resposta e tolerabilidade são dose-dependentes"
+          ],
+          "guidelineRecommendations": "A bula reserva o uso para arritmias ventriculares documentadas potencialmente fatais; tratamento deve ser iniciado e acompanhado por equipe com experiência em antiarrítmicos.",
+          "safetyFlags": [
+            "Pró-arritmia",
+            "Efeitos neurológicos dose-limitantes",
+            "Metabolismo hepático relevante",
+            "Necessidade de ECG durante titulação"
+          ],
+          "alerts": [
+            "Evitar uso para arritmias ventriculares benignas ou assintomáticas",
+            "Dose total diária não deve exceder 1200 mg segundo a bula consultada"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17c65cba-f56f-4cad-a9e2-d31f62e95849"
+          ],
+          "ref": "DailyMed Mexiletine Hydrochloride Capsules"
+        },
+        "es": {
+          "name": "Mexiletina",
+          "class": "Antiarrítmico clase IB oral",
+          "pharmacologicClass": "Bloqueador de canales rápidos de sodio, análogo oral de lidocaína",
+          "mechanism": "Bloquea canales rápidos de sodio en estado abierto o inactivado, reduciendo velocidad de fase 0 y automatismo ventricular con dependencia del uso.",
+          "pharmacodynamics": "Acorta la duración del potencial de acción en fibras de Purkinje y miocardio ventricular. Puede suprimir ectopia y taquicardia ventricular, pero también producir proarritmia.",
+          "pharmacokinetics": "Buena absorción oral. Metabolismo principalmente hepático por CYP2D6 y CYP1A2. Vida media habitual cercana a 10 a 12 horas, prolongada en hepatopatía y bajo gasto.",
+          "indications": [
+            "Arritmias ventriculares documentadas potencialmente mortales, como taquicardia ventricular sostenida",
+            "Uso especializado como antiarrítmico oral clase IB cuando el beneficio supera el riesgo proarrítmico"
+          ],
+          "commercialNames": [
+            "Mexitil",
+            "Mexiletina genérica"
+          ],
+          "presentation": "Cápsulas de liberación inmediata para uso oral.",
+          "presentations": [
+            "Cápsulas 150 mg",
+            "Cápsulas 200 mg",
+            "Cápsulas 250 mg según mercado"
+          ],
+          "dose": {
+            "Inicial": "200 mg VO cada 8 horas cuando no se requiere control inmediato",
+            "Rango habitual": "200 a 300 mg VO cada 8 horas con alimento o antiácido",
+            "Máximo": "1200 mg/día",
+            "Carga cuando se requiere": "400 mg VO, seguidos de 200 mg a las 8 horas"
+          },
+          "pediatricDose": "Seguridad y eficacia pediátricas no establecidas para el tratamiento rutinario de arritmias ventriculares; uso pediátrico debe ser especializado.",
+          "renalDose": "En insuficiencia renal generalmente se utilizan dosis habituales; titular por eficacia y toxicidad.",
+          "hepaticDose": "Enfermedad hepática grave puede requerir dosis menor y monitorización estrecha. Insuficiencia cardíaca derecha marcada también puede reducir metabolismo hepático.",
+          "commonAdverseEffects": [
+            "Náuseas",
+            "Vómitos",
+            "Pirosis",
+            "Temblor",
+            "Mareo",
+            "Ataxia"
+          ],
+          "dangerousAdverseEffects": [
+            "Proarritmia",
+            "Bloqueo de conducción",
+            "Convulsiones",
+            "Hepatotoxicidad",
+            "Empeoramiento de insuficiencia cardíaca"
+          ],
+          "adverseEffects": "Los efectos gastrointestinales y neurológicos son dependientes de dosis y con frecuencia limitan el tratamiento. La toxicidad aumenta con niveles altos o depuración hepática reducida.",
+          "contraindications": [
+            "Shock cardiogénico",
+            "Bloqueo AV de segundo o tercer grado sin marcapasos",
+            "Hipersensibilidad al fármaco"
+          ],
+          "interactions": [
+            "Inhibidores de CYP2D6 o CYP1A2 pueden elevar niveles",
+            "Inductores enzimáticos pueden reducir exposición",
+            "Fármacos proarrítmicos o depresores de conducción pueden sumar riesgo",
+            "Teofilina y cafeína pueden presentar interacción metabólica"
+          ],
+          "monitoring": [
+            "ECG e intervalo QRS",
+            "Carga arrítmica o Holter cuando corresponda",
+            "Síntomas neurológicos",
+            "Función hepática",
+            "Signos de insuficiencia cardíaca"
+          ],
+          "administration": "Administrar con alimento o antiácido para reducir intolerancia gastrointestinal. Los ajustes deben espaciarse al menos 2 a 3 días cuando sea posible.",
+          "preparation": "Uso oral; administrar cápsulas según presentación. No existe preparación para infusión.",
+          "infusionProtocol": "No se aplica a mexiletina oral; para arritmia ventricular aguda que requiera terapia IV elegir un agente apropiado.",
+          "pregnancy": "Datos humanos limitados. Usar solo cuando el beneficio clínico justifique riesgo potencial, con decisión especializada en arritmia grave.",
+          "lactation": "Mexiletina se excreta en leche. Evaluar riesgo para el lactante y necesidad materna antes de continuar lactancia.",
+          "specialPopulations": "Hepatopatía, insuficiencia cardíaca derecha, ancianos y pacientes con trastornos de conducción requieren titulación más lenta y vigilancia más estrecha.",
+          "patientEducation": "Tomar con alimento, no duplicar dosis olvidada y comunicar síncope, empeoramiento de palpitaciones, temblor intenso, ataxia, ictericia o convulsiones.",
+          "clinicalPearls": [
+            "Es el análogo oral funcional de lidocaína",
+            "No usar para extrasístoles ventriculares asintomáticas",
+            "Respuesta y tolerabilidad dependen de la dosis"
+          ],
+          "guidelineRecommendations": "La ficha técnica reserva su uso para arritmias ventriculares documentadas potencialmente mortales; iniciar y seguir por un equipo con experiencia en antiarrítmicos.",
+          "safetyFlags": [
+            "Proarritmia",
+            "Efectos neurológicos limitantes de dosis",
+            "Metabolismo hepático relevante",
+            "Necesidad de ECG durante titulación"
+          ],
+          "alerts": [
+            "Evitar uso en arritmias ventriculares benignas o asintomáticas",
+            "La dosis total diaria no debe superar 1200 mg según la ficha consultada"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17c65cba-f56f-4cad-a9e2-d31f62e95849"
+          ],
+          "ref": "DailyMed Mexiletine Hydrochloride Capsules"
+        }
       }
     } /* fim mexiletina */
 
@@ -18503,6 +27911,257 @@
           refs: ['CAST Trial', 'ESC AF Guidelines', 'AHA/ACC/HRS AF Guidelines', 'Goodman & Gilman', 'Lexicomp', 'FDA/DailyMed label'],
           alerts
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "commonAdverseEffects": [
+            "sabor metálico",
+            "tontura",
+            "constipação",
+            "náuseas",
+            "fadiga"
+          ],
+          "monitoring": [
+            "ECG de 12 derivações",
+            "frequência cardíaca",
+            "pressão arterial",
+            "função renal e eletrólitos quando aplicável",
+            "sintomas de pró-arritmia"
+          ],
+          "preparation": "Confirmar formulação e concentração antes de administrar.",
+          "patientEducation": [
+            "Não duplicar doses esquecidas",
+            "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
+            "informar todos os fármacos pelo risco de interações e pró-arritmia"
+          ],
+          "name": "Propafenona",
+          "class": "Antiarrítmico classe IC com atividade betabloqueadora fraca",
+          "pharmacologicClass": "Bloqueador de canais de sódio classe IC; substrato CYP2D6/CYP3A4",
+          "mechanism": "Bloqueia canais rápidos de sódio e desacelera condução; também possui atividade beta-adrenérgica fraca.",
+          "pharmacodynamics": "Prolonga PR e QRS e pode suprimir FA e outras taquiarritmias; risco de pró-arritmia, flutter 1:1 e piora de IC.",
+          "pharmacokinetics": "Metabolismo hepático intenso e saturável, principalmente CYP2D6 e CYP3A4; exposição varia muito conforme fenótipo CYP2D6 e inibidores concomitantes.",
+          "indications": [
+            "Prolongar tempo até recorrência de FA paroxística ou TPSV sintomática em pacientes sem cardiopatia estrutural",
+            "arritmias ventriculares documentadas potencialmente fatais"
+          ],
+          "commercialNames": [
+            "Rythmol"
+          ],
+          "presentation": "Comprimidos orais de liberação imediata.",
+          "presentations": [
+            "150 mg",
+            "225 mg",
+            "300 mg"
+          ],
+          "dose": {
+            "maintenance": "150 mg a cada 8 h; aumentar após pelo menos 3-4 dias para 225 mg a cada 8 h e, se necessário, 300 mg a cada 8 h; máximo 900 mg/dia.",
+            "pillInPocket": "450-600 mg dose única em pacientes selecionados, com bloqueador nodal AV e teste inicial monitorado."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
+          "renalDose": "Não há ajuste fixo bem estabelecido; metabólitos são eliminados pelos rins e deve-se monitorar toxicidade na disfunção renal.",
+          "hepaticDose": "A exposição aumenta na hepatopatia; considerar redução da dose e titulação lenta com ECG.",
+          "dangerousAdverseEffects": [
+            "pró-arritmia ventricular",
+            "alargamento do QRS",
+            "bloqueio AV",
+            "insuficiência cardíaca",
+            "síndrome de Brugada desmascarada",
+            "agranulocitose rara"
+          ],
+          "contraindications": [
+            "Insuficiência cardíaca",
+            "choque cardiogênico",
+            "distúrbios significativos de condução sem marcapasso",
+            "bradicardia importante",
+            "hipotensão importante",
+            "distúrbio broncoespástico grave",
+            "alterações eletrolíticas importantes",
+            "síndrome de Brugada"
+          ],
+          "interactions": [
+            "Evitar combinação simultânea de inibidor CYP2D6 mais inibidor CYP3A4 pelo aumento da exposição",
+            "Digoxina e varfarina podem ter concentrações aumentadas",
+            "Outros depressores nodais aumentam bradicardia ou bloqueio",
+            "Usar bloqueador nodal AV na estratégia de FA para reduzir flutter 1:1"
+          ],
+          "administration": "Administrar a cada 8 h; titular não mais rápido que a cada 3-4 dias.",
+          "infusionProtocol": "Não se aplica à formulação oral citada.",
+          "pregnancy": "Usar apenas se o benefício justificar o risco; dados humanos limitados.",
+          "lactation": "Foram detectadas pequenas quantidades no leite; individualizar e observar o lactente se usada.",
+          "specialPopulations": {
+            "structuralHeartDisease": "Não usar para manutenção de ritmo da FA com IAM prévio ou cardiopatia estrutural significativa.",
+            "hepatic": "Reduzir/titular lentamente.",
+            "CYP2D6": "Variabilidade genética e interações modificam muito a exposição."
+          },
+          "clinicalPearls": [
+            "A combinação de inibição de CYP2D6 e CYP3A4 deve ser evitada",
+            "Pill-in-the-pocket usa 450-600 mg com bloqueio nodal AV apenas após teste supervisionado."
+          ],
+          "guidelineRecommendations": [
+            "Diretriz FA 2023: propafenona é razoável para manutenção do ritmo apenas sem IAM prévio nem cardiopatia estrutural significativa."
+          ],
+          "safetyFlags": [
+            "PROARRITMIA",
+            "QRS",
+            "CARDIOPATIA_ESTRUTURAL",
+            "CYP2D6_CYP3A4",
+            "BRUGADA"
+          ],
+          "alerts": [
+            "Não usar em cardiopatia estrutural significativa para controle de ritmo da FA",
+            "Reduzir se QRS alargar de forma importante ou surgir bloqueio."
+          ],
+          "adverseEffects": {
+            "common": [
+              "sabor metálico",
+              "tontura",
+              "constipação",
+              "náuseas",
+              "fadiga"
+            ],
+            "dangerous": [
+              "pró-arritmia ventricular",
+              "alargamento do QRS",
+              "bloqueio AV",
+              "insuficiência cardíaca",
+              "síndrome de Brugada desmascarada",
+              "agranulocitose rara"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c8ad1f0f-0e95-4868-a2af-e193c1833841",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c8ad1f0f-0e95-4868-a2af-e193c1833841"
+        },
+        "es": {
+          "commonAdverseEffects": [
+            "sabor metálico",
+            "mareo",
+            "estreñimiento",
+            "náuseas",
+            "fatiga"
+          ],
+          "monitoring": [
+            "ECG de 12 derivaciones",
+            "frecuencia cardíaca",
+            "presión arterial",
+            "función renal y electrolitos cuando corresponda",
+            "síntomas de proarritmia"
+          ],
+          "preparation": "Verificar formulación y concentración antes de administrar.",
+          "patientEducation": [
+            "No duplicar dosis omitidas",
+            "consultar por síncope, palpitaciones sostenidas o disnea nueva",
+            "informar todos los fármacos por riesgo de interacciones y proarritmia"
+          ],
+          "name": "Propafenona",
+          "class": "Antiarrítmico clase IC con actividad betabloqueante débil",
+          "pharmacologicClass": "Bloqueador de canales de sodio clase IC; sustrato CYP2D6/CYP3A4",
+          "mechanism": "Bloquea canales rápidos de sodio y enlentece conducción; además posee actividad beta-adrenérgica débil.",
+          "pharmacodynamics": "Prolonga PR y QRS y puede suprimir FA y otras taquiarritmias; riesgo de proarritmia, flutter 1:1 y empeoramiento de HF.",
+          "pharmacokinetics": "Metabolismo hepático intenso y saturable, principalmente CYP2D6 y CYP3A4; exposición varía mucho según fenotipo CYP2D6 e inhibidores concomitantes.",
+          "indications": [
+            "Prolongar tiempo hasta recurrencia de FA paroxística o PSVT sintomática en pacientes sin cardiopatía estructural",
+            "arritmias ventriculares documentadas potencialmente mortales"
+          ],
+          "commercialNames": [
+            "Rythmol"
+          ],
+          "presentation": "Tabletas orales de liberación inmediata.",
+          "presentations": [
+            "150 mg",
+            "225 mg",
+            "300 mg"
+          ],
+          "dose": {
+            "maintenance": "150 mg cada 8 h; aumentar después de al menos 3-4 días a 225 mg cada 8 h y, si es necesario, 300 mg cada 8 h; máximo 900 mg/día.",
+            "pillInPocket": "450-600 mg dosis única en pacientes seleccionados, con bloqueador nodal AV y prueba inicial monitorizada."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
+          "renalDose": "No existe ajuste fijo bien establecido; los metabolitos se eliminan por riñón y debe vigilarse toxicidad en disfunción renal.",
+          "hepaticDose": "La exposición aumenta en hepatopatía; considerar reducción de dosis y titulación lenta con ECG.",
+          "dangerousAdverseEffects": [
+            "proarritmia ventricular",
+            "ensanchamiento de QRS",
+            "bloqueo AV",
+            "insuficiencia cardíaca",
+            "síndrome de Brugada desenmascarado",
+            "agranulocitosis rara"
+          ],
+          "contraindications": [
+            "Insuficiencia cardíaca",
+            "shock cardiogénico",
+            "trastornos significativos de conducción sin marcapasos",
+            "bradicardia marcada",
+            "hipotensión marcada",
+            "trastorno broncoespástico grave",
+            "alteraciones electrolíticas marcadas",
+            "síndrome de Brugada"
+          ],
+          "interactions": [
+            "Evitar combinación simultánea de inhibidor CYP2D6 más inhibidor CYP3A4 por aumento de exposición",
+            "Digoxina y warfarina pueden aumentar concentraciones",
+            "Otros depresores nodales aumentan bradicardia o bloqueo",
+            "Usar bloqueador nodal AV en estrategia de FA para reducir flutter 1:1"
+          ],
+          "administration": "Administrar cada 8 h; titular no más rápido que cada 3-4 días.",
+          "infusionProtocol": "No aplica a la formulación oral citada.",
+          "pregnancy": "Usar solo si el beneficio justifica el riesgo; datos humanos limitados.",
+          "lactation": "Se han detectado cantidades bajas en leche; individualizar y vigilar al lactante si se usa.",
+          "specialPopulations": {
+            "structuralHeartDisease": "No usar para mantenimiento de ritmo de FA con IAM previo o cardiopatía estructural significativa.",
+            "hepatic": "Reducir/titular lentamente.",
+            "CYP2D6": "Variabilidad genética e interacciones modifican mucho exposición."
+          },
+          "clinicalPearls": [
+            "La combinación de inhibición CYP2D6 y CYP3A4 debe evitarse",
+            "Pill-in-the-pocket usa 450-600 mg con bloqueo nodal AV solo tras prueba supervisada."
+          ],
+          "guidelineRecommendations": [
+            "Guía AF 2023: propafenona es razonable para mantenimiento de ritmo solo sin IAM previo ni cardiopatía estructural significativa."
+          ],
+          "safetyFlags": [
+            "PROARRITMIA",
+            "QRS",
+            "CARDIOPATIA_ESTRUCTURAL",
+            "CYP2D6_CYP3A4",
+            "BRUGADA"
+          ],
+          "alerts": [
+            "No usar en cardiopatía estructural significativa para control de ritmo de FA",
+            "Reducir si QRS se ensancha de forma importante o aparece bloqueo."
+          ],
+          "adverseEffects": {
+            "common": [
+              "sabor metálico",
+              "mareo",
+              "estreñimiento",
+              "náuseas",
+              "fatiga"
+            ],
+            "dangerous": [
+              "proarritmia ventricular",
+              "ensanchamiento de QRS",
+              "bloqueo AV",
+              "insuficiencia cardíaca",
+              "síndrome de Brugada desenmascarado",
+              "agranulocitosis rara"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c8ad1f0f-0e95-4868-a2af-e193c1833841",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c8ad1f0f-0e95-4868-a2af-e193c1833841"
+        }
       }
     }, /* fim propafenona */
 
@@ -18732,6 +28391,249 @@
           refs: ['ESC AF Guidelines', 'AHA/ACC/HRS Arrhythmia Guidelines', 'Brugada Syndrome Consensus', 'Goodman & Gilman', 'Lexicomp', 'FDA/DailyMed label'],
           alerts
         };
+      },
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "commonAdverseEffects": [
+            "diarreia",
+            "náuseas",
+            "tontura",
+            "cefaleia",
+            "cinchonismo com tinnitus ou alterações visuais"
+          ],
+          "monitoring": [
+            "ECG de 12 derivações",
+            "frequência cardíaca",
+            "pressão arterial",
+            "função renal e eletrólitos quando aplicável",
+            "sintomas de pró-arritmia"
+          ],
+          "preparation": "Confirmar formulação e concentração antes de administrar.",
+          "patientEducation": [
+            "Não duplicar doses esquecidas",
+            "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
+            "informar todos os fármacos pelo risco de interações e pró-arritmia"
+          ],
+          "name": "Quinidina",
+          "class": "Antiarrítmico classe IA",
+          "pharmacologicClass": "Bloqueador de canais de sódio classe IA com prolongamento da repolarização e QT",
+          "mechanism": "Bloqueia canais de sódio e várias correntes de potássio, desacelera condução e prolonga repolarização e QT.",
+          "pharmacodynamics": "Pode suprimir FA/flutter e arritmias ventriculares, mas tem margem de segurança estreita, prolonga QT e pode causar torsades.",
+          "pharmacokinetics": "Boa absorção oral, metabolismo hepático e eliminação renal parcial. Inibe P-gp e CYP2D6 e pode aumentar níveis de digoxina.",
+          "indications": [
+            "Conversão de FA/flutter sintomáticos quando o controle de frequência é insuficiente e outras estratégias não são adequadas",
+            "redução da recorrência de FA/flutter muito sintomáticos selecionados",
+            "supressão de arritmias ventriculares documentadas potencialmente fatais"
+          ],
+          "commercialNames": [
+            "Quinidine Gluconate ER"
+          ],
+          "presentation": "Comprimido de gluconato de quinidina de liberação prolongada.",
+          "presentations": [
+            "324 mg de gluconato de quinidina, equivalente a 202 mg de quinidina base"
+          ],
+          "dose": {
+            "AFprophylaxis": "324 mg a cada 8 ou 12 h; aumentar com muita cautela se necessário.",
+            "AFconversionLegacy": "Um regime descrito usa 648 mg a cada 8 h, com reavaliação após 3-4 doses; não é esquema moderno de primeira escolha."
+          },
+          "pediatricDose": "Não há esquema pediátrico moderno universal para uso antiarrítmico rotineiro; exige eletrofisiologia pediátrica especializada.",
+          "renalDose": "A insuficiência renal pode aumentar exposição e toxicidade; não há algoritmo simples. Usar ECG, QT, função renal e níveis quando disponíveis para individualizar.",
+          "hepaticDose": "A hepatopatia pode reduzir eliminação; usar doses menores e individualizar pelo QT, clínica e níveis quando disponíveis.",
+          "dangerousAdverseEffects": [
+            "torsades de pointes",
+            "taquicardia ventricular",
+            "trombocitopenia imune",
+            "hemólise",
+            "hepatite",
+            "aumento de mortalidade com uso antiarrítmico crônico em populações estudadas"
+          ],
+          "contraindications": [
+            "QT longo ou história de torsades",
+            "bloqueio AV completo sem marcapasso",
+            "miastenia gravis",
+            "trombocitopenia ou reação imune prévia por quinidina/quinina",
+            "hipersensibilidade"
+          ],
+          "interactions": [
+            "Aumenta níveis de digoxina pela inibição de P-gp",
+            "Outros fármacos que prolongam QT aumentam torsades",
+            "Inibição de CYP2D6 pode elevar substratos",
+            "Hipocalemia e hipomagnesemia aumentam pró-arritmia"
+          ],
+          "administration": "ER: não triturar nem mastigar; pode ser dividida conforme a bula específica sem perder toda a liberação prolongada, mas seguir instruções do produto.",
+          "infusionProtocol": "Não se aplica à formulação ER oral citada.",
+          "pregnancy": "Atravessa placenta; usar apenas se o benefício justificar claramente o risco e com vigilância materno-fetal.",
+          "lactation": "É excretada no leite; individualizar e observar o lactente ou considerar alternativa.",
+          "specialPopulations": {
+            "QT": "A duração do QTc é o principal marcador prático de risco de torsades.",
+            "electrolytes": "Corrigir K e Mg antes e durante o tratamento.",
+            "AF": "O benefício sintomático deve superar o risco de pró-arritmia e mortalidade."
+          },
+          "clinicalPearls": [
+            "A própria bula alerta para aumento de mortalidade e exige considerar alternativas",
+            "QTc prediz melhor o risco de torsades do que um nível sérico isolado."
+          ],
+          "guidelineRecommendations": [
+            "A diretriz contemporânea de FA prioriza outros antiarrítmicos para manutenção do ritmo; quinidina não é opção rotineira e deve ficar restrita a casos selecionados por especialista."
+          ],
+          "safetyFlags": [
+            "QT",
+            "TORSADES",
+            "MORTALIDADE",
+            "TROMBOCITOPENIA",
+            "DIGOXINA"
+          ],
+          "alerts": [
+            "Corrigir K e Mg antes de iniciar",
+            "Suspender e avaliar diante de síncope, púrpura ou cinchonismo importante."
+          ],
+          "adverseEffects": {
+            "common": [
+              "diarreia",
+              "náuseas",
+              "tontura",
+              "cefaleia",
+              "cinchonismo com tinnitus ou alterações visuais"
+            ],
+            "dangerous": [
+              "torsades de pointes",
+              "taquicardia ventricular",
+              "trombocitopenia imune",
+              "hemólise",
+              "hepatite",
+              "aumento de mortalidade com uso antiarrítmico crônico em populações estudadas"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ad2ad985-cca2-25b5-e053-2995a90a402f",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ad2ad985-cca2-25b5-e053-2995a90a402f"
+        },
+        "es": {
+          "commonAdverseEffects": [
+            "diarrea",
+            "náuseas",
+            "mareo",
+            "cefalea",
+            "cinchonismo con tinnitus o alteraciones visuales"
+          ],
+          "monitoring": [
+            "ECG de 12 derivaciones",
+            "frecuencia cardíaca",
+            "presión arterial",
+            "función renal y electrolitos cuando corresponda",
+            "síntomas de proarritmia"
+          ],
+          "preparation": "Verificar formulación y concentración antes de administrar.",
+          "patientEducation": [
+            "No duplicar dosis omitidas",
+            "consultar por síncope, palpitaciones sostenidas o disnea nueva",
+            "informar todos los fármacos por riesgo de interacciones y proarritmia"
+          ],
+          "name": "Quinidina",
+          "class": "Antiarrítmico clase IA",
+          "pharmacologicClass": "Bloqueador de canales de sodio clase IA con prolongación de repolarización y QT",
+          "mechanism": "Bloquea canales de sodio y varias corrientes de potasio, enlentece conducción y prolonga repolarización y QT.",
+          "pharmacodynamics": "Puede suprimir FA/flutter y arritmias ventriculares, pero tiene estrecho margen de seguridad, prolonga QT y puede causar torsades.",
+          "pharmacokinetics": "Buena absorción oral, metabolismo hepático y eliminación renal parcial. Inhibe P-gp y CYP2D6 y puede aumentar niveles de digoxina.",
+          "indications": [
+            "Conversión de FA/flutter sintomáticos cuando el control de frecuencia es insuficiente y otras estrategias no son adecuadas",
+            "reducción de recurrencia de FA/flutter muy sintomáticos seleccionados",
+            "supresión de arritmias ventriculares documentadas potencialmente mortales"
+          ],
+          "commercialNames": [
+            "Quinidine Gluconate ER"
+          ],
+          "presentation": "Tableta de quinidina gluconato de liberación prolongada.",
+          "presentations": [
+            "324 mg de quinidina gluconato, equivalente a 202 mg de quinidina base"
+          ],
+          "dose": {
+            "AFprophylaxis": "324 mg cada 8 o 12 h; aumentar con mucha cautela si es necesario.",
+            "AFconversionLegacy": "Un régimen descrito usa 648 mg cada 8 h, con reevaluación tras 3-4 dosis; no es un esquema moderno de primera elección."
+          },
+          "pediatricDose": "No existe un esquema pediátrico moderno universal para uso antiarrítmico de rutina; requiere electrofisiología pediátrica especializada.",
+          "renalDose": "La insuficiencia renal puede aumentar exposición y toxicidad; no hay algoritmo simple. Usar ECG, QT, función renal y niveles cuando disponibles para individualizar.",
+          "hepaticDose": "La hepatopatía puede reducir eliminación; usar dosis menores e individualizar mediante QT, clínica y niveles cuando estén disponibles.",
+          "dangerousAdverseEffects": [
+            "torsades de pointes",
+            "taquicardia ventricular",
+            "trombocitopenia inmunitaria",
+            "hemólisis",
+            "hepatitis",
+            "aumento de mortalidad con uso antiarrítmico crónico en poblaciones estudiadas"
+          ],
+          "contraindications": [
+            "QT largo o antecedente de torsades",
+            "bloqueo AV completo sin marcapasos",
+            "miastenia gravis",
+            "trombocitopenia o reacción inmunitaria previa por quinidina/quinina",
+            "hipersensibilidad"
+          ],
+          "interactions": [
+            "Aumenta niveles de digoxina por inhibición de P-gp",
+            "Otros fármacos que prolongan QT aumentan torsades",
+            "Inhibición CYP2D6 puede elevar sustratos",
+            "Hipopotasemia e hipomagnesemia aumentan proarritmia"
+          ],
+          "administration": "ER: no triturar ni masticar; puede partirse según la ficha específica sin perder toda la liberación prolongada, pero seguir instrucciones del producto.",
+          "infusionProtocol": "No aplica a la formulación ER oral citada.",
+          "pregnancy": "Cruza placenta; usar solo si el beneficio justifica claramente el riesgo y con vigilancia materno-fetal.",
+          "lactation": "Se excreta en leche; individualizar y vigilar al lactante o considerar alternativa.",
+          "specialPopulations": {
+            "QT": "La duración de QTc es el principal marcador práctico de riesgo de torsades.",
+            "electrolytes": "Corregir K y Mg antes y durante tratamiento.",
+            "AF": "El beneficio sintomático debe superar el riesgo de proarritmia y mortalidad."
+          },
+          "clinicalPearls": [
+            "La propia ficha advierte aumento de mortalidad y exige considerar alternativas",
+            "QTc predice mejor el riesgo de torsades que un nivel sérico aislado."
+          ],
+          "guidelineRecommendations": [
+            "La guía AF contemporánea prioriza otros antiarrítmicos para mantenimiento de ritmo; quinidina no es una opción rutinaria y debe reservarse a casos seleccionados por especialista."
+          ],
+          "safetyFlags": [
+            "QT",
+            "TORSADES",
+            "MORTALIDAD",
+            "TROMBOCITOPENIA",
+            "DIGOXINA"
+          ],
+          "alerts": [
+            "Corregir K y Mg antes de iniciar",
+            "Suspender y evaluar ante síncope, púrpura o cinchonismo significativo."
+          ],
+          "adverseEffects": {
+            "common": [
+              "diarrea",
+              "náuseas",
+              "mareo",
+              "cefalea",
+              "cinchonismo con tinnitus o alteraciones visuales"
+            ],
+            "dangerous": [
+              "torsades de pointes",
+              "taquicardia ventricular",
+              "trombocitopenia inmunitaria",
+              "hemólisis",
+              "hepatitis",
+              "aumento de mortalidad con uso antiarrítmico crónico en poblaciones estudiadas"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ad2ad985-cca2-25b5-e053-2995a90a402f",
+            "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ad2ad985-cca2-25b5-e053-2995a90a402f"
+        }
       }
     } /* fim quinidina */
 
@@ -18775,7 +28677,7 @@
     clopidogrel: {
       name:     { pt: 'Clopidogrel (Bisulfato de)', es: 'Clopidogrel (Bisulfato de)' },
       category: 'cardio',
-      icon:     '🩸',
+      icon: '',
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#B91C1C',
       calculate: (paciente, lang = 'pt') => {
@@ -18853,13 +28755,201 @@
             'CURE Trial (NEJM 2001) — SCA; COMMIT — IAM con ST; CAPRIE — EAP/ACV.'
           )
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Clopidogrel (Bissulfato de)",
+          "class": "Antiagregante plaquetário tienopiridínico",
+          "pharmacologicClass": "Pró-fármaco inibidor irreversível do receptor plaquetário P2Y12",
+          "mechanism": "Após bioativação hepática, o metabólito ativo liga-se de forma irreversível ao receptor P2Y12 do ADP, inibindo ativação e agregação plaquetária por toda a vida da plaqueta.",
+          "pharmacodynamics": "A inibição plaquetária começa em horas após dose de ataque e se acumula com uso diário. Recuperação funcional depende da produção de novas plaquetas.",
+          "pharmacokinetics": "Pró-fármaco com ativação em duas etapas, relevante pelo CYP2C19. Metabolizadores pobres têm menor exposição ao metabólito ativo e menor inibição plaquetária. Ligação proteica elevada; metabólitos eliminados por urina e fezes.",
+          "indications": [
+            "Síndrome coronariana aguda em combinação com aspirina",
+            "Prevenção secundária após IAM ou AVC isquêmico recente",
+            "Doença arterial periférica estabelecida",
+            "Componente de dupla antiagregação após PCI quando indicado"
+          ],
+          "commercialNames": [
+            "Plavix",
+            "Clopidogrel genérico"
+          ],
+          "presentation": "Comprimidos revestidos para uso oral.",
+          "presentations": [
+            "Comprimidos 75 mg",
+            "Comprimidos 300 mg em algumas apresentações"
+          ],
+          "dose": {
+            "SCA com necessidade de efeito rápido": "Ataque 300 mg VO, seguido de 75 mg VO uma vez ao dia segundo bula; estratégias de PCI podem usar carga maior conforme protocolo especializado",
+            "IAM/AVC recente ou DAP": "75 mg VO uma vez ao dia sem dose de ataque",
+            "Pós-PCI": "Manutenção usual 75 mg/dia associada à aspirina, duração conforme risco isquêmico e hemorrágico"
+          },
+          "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas para uso cardiovascular rotineiro; utilizar apenas sob protocolo especializado.",
+          "renalDose": "Não há ajuste posológico rotineiro específico apenas pela função renal; insuficiência renal avançada aumenta risco hemorrágico e exige avaliação individual.",
+          "hepaticDose": "Sem ajuste rotineiro em comprometimento leve a moderado; em hepatopatia grave ou coagulopatia, ponderar risco hemorrágico e capacidade de ativação metabólica.",
+          "commonAdverseEffects": [
+            "Equimoses",
+            "Epistaxe",
+            "Sangramento gastrointestinal",
+            "Diarreia",
+            "Rash"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia intracraniana",
+            "Hemorragia gastrointestinal maior",
+            "Púrpura trombocitopênica trombótica",
+            "Neutropenia rara",
+            "Reação alérgica grave"
+          ],
+          "adverseEffects": "O principal risco é sangramento. TTP pode ocorrer raramente, inclusive nas primeiras semanas, e exige reconhecimento e tratamento urgentes.",
+          "contraindications": [
+            "Sangramento patológico ativo, como úlcera hemorrágica ou hemorragia intracraniana",
+            "Hipersensibilidade ao clopidogrel"
+          ],
+          "interactions": [
+            "Omeprazol e esomeprazol podem reduzir formação do metabólito ativo via CYP2C19 e devem ser evitados",
+            "Anticoagulantes, AINEs e outros antiagregantes aumentam risco de sangramento",
+            "Inibidores fortes de CYP2C19 podem reduzir efeito antiplaquetário"
+          ],
+          "monitoring": [
+            "Sinais clínicos de sangramento",
+            "Hemograma quando clinicamente indicado",
+            "Adesão após PCI",
+            "Interações com inibidores de CYP2C19",
+            "Considerar farmacogenética em falha terapêutica ou cenários selecionados"
+          ],
+          "administration": "Administrar com ou sem alimento. Não interromper precocemente após stent sem discussão com cardiologia, devido ao risco de trombose do stent.",
+          "preparation": "Uso oral; comprimidos podem ser administrados inteiros. Se houver necessidade de via enteral, seguir política institucional e dados da formulação.",
+          "infusionProtocol": "Não se aplica: clopidogrel é administrado por via oral.",
+          "pregnancy": "Dados humanos disponíveis não demonstram sinal claro de grande teratogenicidade, mas uso deve ser guiado por indicação materna e risco de sangramento periparto.",
+          "lactation": "Não se sabe com precisão a exposição clínica do lactente; avaliar necessidade materna, risco hemorrágico e alternativas.",
+          "specialPopulations": "Metabolizadores pobres CYP2C19 podem ter menor resposta. Em pacientes que necessitam anticoagulação crônica após PCI, clopidogrel é frequentemente o P2Y12 preferido por estratégias de redução de sangramento.",
+          "patientEducation": "Informar sobre hematomas e sangramento, avisar dentista ou cirurgião e não interromper o tratamento por conta própria após SCA ou stent.",
+          "clinicalPearls": [
+            "É um pró-fármaco dependente de CYP2C19",
+            "Omeprazol e esomeprazol podem reduzir ativação",
+            "Prasugrel ou ticagrelor são preferidos ao clopidogrel em muitos pacientes com SCA submetidos a PCI, quando não há contraindicação"
+          ],
+          "guidelineRecommendations": "ACC/AHA 2025 para SCA: ticagrelor ou prasugrel são preferidos ao clopidogrel em NSTE-SCA e STEMI submetidos a PCI; DAPT por pelo menos 12 meses é estratégia padrão em pacientes sem alto risco hemorrágico. Quando anticoagulação crônica é necessária, clopidogrel é o P2Y12 preferido.",
+          "safetyFlags": [
+            "Risco de sangramento",
+            "Resposta reduzida em metabolizador pobre CYP2C19",
+            "Não interromper precocemente após PCI",
+            "Evitar omeprazol ou esomeprazol"
+          ],
+          "alerts": [
+            "Planejar suspensão antes de cirurgia eletiva de alto risco hemorrágico conforme protocolo; a bula cita 5 dias",
+            "Suspeitar TTP diante de trombocitopenia, anemia hemolítica, alterações neurológicas ou renais"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c03a895c-2d74-4d7f-891f-b752ce409b68",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+          ],
+          "ref": "DailyMed Clopidogrel; ACC/AHA ACS Guideline 2025"
+        },
+        "es": {
+          "name": "Clopidogrel (Bisulfato de)",
+          "class": "Antiagregante plaquetario tienopiridínico",
+          "pharmacologicClass": "Profármaco inhibidor irreversible del receptor plaquetario P2Y12",
+          "mechanism": "Tras bioactivación hepática, el metabolito activo se une de forma irreversible al receptor P2Y12 de ADP, inhibiendo activación y agregación plaquetaria durante la vida de la plaqueta.",
+          "pharmacodynamics": "La inhibición plaquetaria comienza en horas tras una dosis de carga y se acumula con el uso diario. La recuperación funcional depende de la producción de nuevas plaquetas.",
+          "pharmacokinetics": "Profármaco con activación en dos etapas, con papel relevante de CYP2C19. Metabolizadores pobres presentan menor exposición al metabolito activo y menor inhibición plaquetaria. Alta unión a proteínas; metabolitos eliminados por orina y heces.",
+          "indications": [
+            "Síndrome coronario agudo en combinación con aspirina",
+            "Prevención secundaria tras IAM o ACV isquémico reciente",
+            "Enfermedad arterial periférica establecida",
+            "Componente de doble antiagregación tras PCI cuando está indicado"
+          ],
+          "commercialNames": [
+            "Plavix",
+            "Clopidogrel genérico"
+          ],
+          "presentation": "Comprimidos recubiertos para uso oral.",
+          "presentations": [
+            "Comprimidos 75 mg",
+            "Comprimidos 300 mg en algunas presentaciones"
+          ],
+          "dose": {
+            "SCA con necesidad de efecto rápido": "Carga 300 mg VO, seguida de 75 mg VO una vez al día según ficha; estrategias de PCI pueden usar una carga mayor según protocolo especializado",
+            "IAM/ACV reciente o EAP": "75 mg VO una vez al día sin carga",
+            "Post-PCI": "Mantenimiento habitual 75 mg/día asociado a aspirina, duración según riesgo isquémico y hemorrágico"
+          },
+          "pediatricDose": "Seguridad y eficacia pediátricas no establecidas para uso cardiovascular rutinario; utilizar solo bajo protocolo especializado.",
+          "renalDose": "No requiere ajuste rutinario específico solo por función renal; la insuficiencia renal avanzada aumenta el riesgo hemorrágico y exige evaluación individual.",
+          "hepaticDose": "Sin ajuste rutinario en compromiso leve a moderado; en hepatopatía grave o coagulopatía valorar riesgo hemorrágico y capacidad de activación metabólica.",
+          "commonAdverseEffects": [
+            "Equimosis",
+            "Epistaxis",
+            "Sangrado gastrointestinal",
+            "Diarrea",
+            "Exantema"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia intracraneal",
+            "Hemorragia gastrointestinal mayor",
+            "Púrpura trombótica trombocitopénica",
+            "Neutropenia rara",
+            "Reacción alérgica grave"
+          ],
+          "adverseEffects": "El principal riesgo es el sangrado. La PTT puede aparecer raramente, incluso en las primeras semanas, y requiere reconocimiento y tratamiento urgentes.",
+          "contraindications": [
+            "Sangrado patológico activo, como úlcera hemorrágica o hemorragia intracraneal",
+            "Hipersensibilidad a clopidogrel"
+          ],
+          "interactions": [
+            "Omeprazol y esomeprazol pueden reducir la formación del metabolito activo por CYP2C19 y deben evitarse",
+            "Anticoagulantes, AINE y otros antiagregantes aumentan riesgo de sangrado",
+            "Inhibidores potentes de CYP2C19 pueden reducir efecto antiplaquetario"
+          ],
+          "monitoring": [
+            "Signos clínicos de sangrado",
+            "Hemograma cuando esté indicado",
+            "Adherencia tras PCI",
+            "Interacciones con inhibidores CYP2C19",
+            "Considerar farmacogenética en fracaso terapéutico o escenarios seleccionados"
+          ],
+          "administration": "Administrar con o sin alimentos. No suspender precozmente tras stent sin discutirlo con cardiología por el riesgo de trombosis del stent.",
+          "preparation": "Uso oral; administrar comprimidos enteros. Si se necesita vía enteral, seguir política institucional y datos de la formulación.",
+          "infusionProtocol": "No se aplica: clopidogrel se administra por vía oral.",
+          "pregnancy": "Los datos humanos disponibles no muestran una señal clara de gran teratogenicidad, pero el uso debe guiarse por indicación materna y riesgo de sangrado periparto.",
+          "lactation": "La exposición clínica del lactante no está bien definida; valorar necesidad materna, riesgo hemorrágico y alternativas.",
+          "specialPopulations": "Metabolizadores pobres CYP2C19 pueden responder menos. En pacientes que requieren anticoagulación crónica tras PCI, clopidogrel suele ser el P2Y12 preferido en estrategias de reducción de sangrado.",
+          "patientEducation": "Informar sobre hematomas y sangrado, avisar al dentista o cirujano y no suspender por cuenta propia tras SCA o stent.",
+          "clinicalPearls": [
+            "Es un profármaco dependiente de CYP2C19",
+            "Omeprazol y esomeprazol pueden reducir activación",
+            "Prasugrel o ticagrelor son preferidos a clopidogrel en muchos pacientes con SCA sometidos a PCI cuando no están contraindicados"
+          ],
+          "guidelineRecommendations": "ACC/AHA 2025 para SCA: ticagrelor o prasugrel se prefieren a clopidogrel en NSTE-SCA y STEMI sometidos a PCI; DAPT por al menos 12 meses es estrategia por defecto sin alto riesgo hemorrágico. Si se requiere anticoagulación crónica, clopidogrel es el P2Y12 preferido.",
+          "safetyFlags": [
+            "Riesgo de sangrado",
+            "Respuesta reducida en metabolizador pobre CYP2C19",
+            "No suspender precozmente tras PCI",
+            "Evitar omeprazol o esomeprazol"
+          ],
+          "alerts": [
+            "Planificar suspensión antes de cirugía electiva de alto riesgo hemorrágico según protocolo; la ficha cita 5 días",
+            "Sospechar PTT ante trombocitopenia, anemia hemolítica, alteraciones neurológicas o renales"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c03a895c-2d74-4d7f-891f-b752ce409b68",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+          ],
+          "ref": "DailyMed Clopidogrel; ACC/AHA ACS Guideline 2025"
+        }
       }
     },
 
     prasugrel: {
       name:     { pt: 'Prasugrel (Cloridrato de)', es: 'Prasugrel (Clorhidrato de)' },
       category: 'cardio',
-      icon:     '🩸',
+      icon: '',
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#B91C1C',
       calculate: (paciente, lang = 'pt') => {
@@ -18938,6 +29028,186 @@
             'TRITON-TIMI 38 Trial (NEJM 2007) — Superior al clopidogrel en ICP; TRILOGY-ACS — SCA sin ST.'
           )
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Prasugrel (Cloridrato de)",
+          "class": "Antiagregante plaquetário tienopiridínico",
+          "pharmacologicClass": "Pró-fármaco inibidor irreversível do receptor P2Y12",
+          "mechanism": "É convertido a metabólito ativo que se liga irreversivelmente ao receptor P2Y12, bloqueando ativação e agregação plaquetária mediadas por ADP.",
+          "pharmacodynamics": "Produz inibição plaquetária rápida e potente após carga de 60 mg, com efeito mantido por toda a vida da plaqueta.",
+          "pharmacokinetics": "Pró-fármaco rapidamente hidrolisado e depois oxidado a metabólito ativo. Metabolização envolve CYP3A e CYP2B6, entre outros. A resposta é menos dependente de CYP2C19 do que clopidogrel.",
+          "indications": [
+            "Redução de eventos trombóticos em pacientes com SCA submetidos a PCI, em associação com aspirina"
+          ],
+          "commercialNames": [
+            "Effient",
+            "Prasugrel genérico"
+          ],
+          "presentation": "Comprimidos revestidos para uso oral.",
+          "presentations": [
+            "Comprimidos 5 mg",
+            "Comprimidos 10 mg"
+          ],
+          "dose": {
+            "Ataque": "60 mg VO uma vez",
+            "Manutenção": "10 mg VO uma vez ao dia",
+            "Peso menor que 60 kg": "Considerar 5 mg VO uma vez ao dia",
+            "Associação": "Usar com aspirina conforme protocolo"
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para uso cardiovascular pediátrico; não utilizar rotineiramente.",
+          "renalDose": "Não há ajuste posológico de rotina, inclusive na insuficiência renal, mas risco de sangramento pode ser maior em doença renal avançada.",
+          "hepaticDose": "Sem ajuste em disfunção hepática leve a moderada; uso em doença hepática grave é pouco estudado e requer cautela pelo risco hemorrágico.",
+          "commonAdverseEffects": [
+            "Equimoses",
+            "Epistaxe",
+            "Sangramento gastrointestinal",
+            "Anemia"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia fatal",
+            "Hemorragia intracraniana",
+            "Sangramento perioperatório importante",
+            "TTP rara"
+          ],
+          "adverseEffects": "O risco dominante é hemorrágico e aumenta em idosos, baixo peso, cirurgia e associação com outros antitrombóticos.",
+          "contraindications": [
+            "Sangramento patológico ativo",
+            "História de AVC ou AIT",
+            "Hipersensibilidade ao prasugrel"
+          ],
+          "interactions": [
+            "Anticoagulantes, AINEs e outros antiagregantes aumentam risco de sangramento",
+            "Não administrar dose de carga antes de anatomia coronária estar definida em cenários em que cirurgia urgente é provável, conforme estratégia de SCA"
+          ],
+          "monitoring": [
+            "Sinais de sangramento",
+            "Hemograma quando indicado",
+            "Peso corporal",
+            "História de AVC/AIT",
+            "Necessidade de cirurgia"
+          ],
+          "administration": "Administrar com ou sem alimento. Em SCA invasiva, coordenar momento da carga com estratégia de cateterismo.",
+          "preparation": "Uso oral; comprimidos devem ser administrados conforme apresentação prescrita.",
+          "infusionProtocol": "Não se aplica: prasugrel é administrado por via oral.",
+          "pregnancy": "Dados humanos são limitados. Usar somente se o benefício materno justificar risco potencial, considerando risco de sangramento.",
+          "lactation": "Dados clínicos são insuficientes; ponderar necessidade materna e possível risco ao lactente.",
+          "specialPopulations": "Em pacientes com 75 anos ou mais, geralmente não é recomendado pelo aumento de sangramento fatal e intracraniano, exceto situações de alto risco como diabetes ou IAM prévio. Em peso menor que 60 kg, considerar 5 mg/dia.",
+          "patientEducation": "Não interromper sem orientação após PCI. Informar sangramentos, quedas importantes e qualquer história prévia de AVC ou AIT.",
+          "clinicalPearls": [
+            "Contraindicado se houver AVC ou AIT prévios",
+            "É mais potente e previsível que clopidogrel, porém com maior risco hemorrágico em grupos vulneráveis",
+            "Baixo peso e idade avançada mudam a decisão de uso"
+          ],
+          "guidelineRecommendations": "ACC/AHA 2025: prasugrel ou ticagrelor são preferidos ao clopidogrel em pacientes com SCA submetidos a PCI quando apropriado. DAPT por pelo menos 12 meses é padrão em ausência de alto risco hemorrágico.",
+          "safetyFlags": [
+            "Contraindicado após AVC/AIT",
+            "Cautela importante em idade igual ou superior a 75 anos",
+            "Considerar 5 mg/dia se peso menor que 60 kg",
+            "Alto risco hemorrágico"
+          ],
+          "alerts": [
+            "Evitar iniciar em paciente com alta probabilidade de CABG urgente",
+            "Quando possível, suspender pelo menos 7 dias antes de cirurgia segundo a bula"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b67ca60-d7e4-4c04-bbc6-dae86a7c7675",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+          ],
+          "ref": "DailyMed Prasugrel; ACC/AHA ACS Guideline 2025"
+        },
+        "es": {
+          "name": "Prasugrel (Clorhidrato de)",
+          "class": "Antiagregante plaquetario tienopiridínico",
+          "pharmacologicClass": "Profármaco inhibidor irreversible del receptor P2Y12",
+          "mechanism": "Se convierte en un metabolito activo que se une irreversiblemente al receptor P2Y12, bloqueando activación y agregación plaquetaria mediadas por ADP.",
+          "pharmacodynamics": "Produce inhibición plaquetaria rápida y potente tras carga de 60 mg, con efecto durante la vida de la plaqueta.",
+          "pharmacokinetics": "Profármaco rápidamente hidrolizado y luego oxidado a metabolito activo. Intervienen CYP3A y CYP2B6, entre otros. La respuesta depende menos de CYP2C19 que con clopidogrel.",
+          "indications": [
+            "Reducción de eventos trombóticos en pacientes con SCA sometidos a PCI, asociado a aspirina"
+          ],
+          "commercialNames": [
+            "Effient",
+            "Prasugrel genérico"
+          ],
+          "presentation": "Comprimidos recubiertos para uso oral.",
+          "presentations": [
+            "Comprimidos 5 mg",
+            "Comprimidos 10 mg"
+          ],
+          "dose": {
+            "Carga": "60 mg VO una vez",
+            "Mantenimiento": "10 mg VO una vez al día",
+            "Peso menor de 60 kg": "Considerar 5 mg VO una vez al día",
+            "Asociación": "Usar con aspirina según protocolo"
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para uso cardiovascular pediátrico; no utilizar de rutina.",
+          "renalDose": "No requiere ajuste rutinario, incluso con insuficiencia renal, aunque el riesgo hemorrágico puede aumentar en enfermedad renal avanzada.",
+          "hepaticDose": "Sin ajuste en disfunción hepática leve a moderada; la enfermedad hepática grave está poco estudiada y exige cautela por sangrado.",
+          "commonAdverseEffects": [
+            "Equimosis",
+            "Epistaxis",
+            "Sangrado gastrointestinal",
+            "Anemia"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia fatal",
+            "Hemorragia intracraneal",
+            "Sangrado perioperatorio importante",
+            "PTT rara"
+          ],
+          "adverseEffects": "El riesgo dominante es hemorrágico y aumenta en ancianos, bajo peso, cirugía y asociación con otros antitrombóticos.",
+          "contraindications": [
+            "Sangrado patológico activo",
+            "Antecedente de ACV o AIT",
+            "Hipersensibilidad a prasugrel"
+          ],
+          "interactions": [
+            "Anticoagulantes, AINE y otros antiagregantes aumentan riesgo de sangrado",
+            "No administrar carga antes de definir anatomía coronaria cuando es probable una cirugía urgente, según estrategia de SCA"
+          ],
+          "monitoring": [
+            "Signos de sangrado",
+            "Hemograma cuando esté indicado",
+            "Peso corporal",
+            "Antecedente de ACV/AIT",
+            "Necesidad de cirugía"
+          ],
+          "administration": "Administrar con o sin alimentos. En SCA invasivo coordinar la carga con la estrategia de cateterismo.",
+          "preparation": "Uso oral; administrar comprimidos según la presentación indicada.",
+          "infusionProtocol": "No se aplica: prasugrel se administra por vía oral.",
+          "pregnancy": "Datos humanos limitados. Usar solo si el beneficio materno justifica riesgo potencial, considerando riesgo hemorrágico.",
+          "lactation": "Datos clínicos insuficientes; valorar necesidad materna y posible riesgo para el lactante.",
+          "specialPopulations": "En pacientes de 75 años o más generalmente no se recomienda por aumento de sangrado fatal e intracraneal, salvo situaciones de alto riesgo como diabetes o IAM previo. Con peso menor de 60 kg considerar 5 mg/día.",
+          "patientEducation": "No suspender sin indicación tras PCI. Informar sangrados, caídas importantes y cualquier antecedente de ACV o AIT.",
+          "clinicalPearls": [
+            "Contraindicado con ACV o AIT previos",
+            "Más potente y predecible que clopidogrel, pero con mayor riesgo hemorrágico en grupos vulnerables",
+            "Bajo peso y edad avanzada modifican la decisión de uso"
+          ],
+          "guidelineRecommendations": "ACC/AHA 2025: prasugrel o ticagrelor se prefieren a clopidogrel en pacientes con SCA sometidos a PCI cuando corresponda. DAPT por al menos 12 meses es estrategia estándar sin alto riesgo hemorrágico.",
+          "safetyFlags": [
+            "Contraindicado tras ACV/AIT",
+            "Precaución importante en edad igual o mayor a 75 años",
+            "Considerar 5 mg/día si peso menor de 60 kg",
+            "Alto riesgo hemorrágico"
+          ],
+          "alerts": [
+            "Evitar iniciar si existe alta probabilidad de CABG urgente",
+            "Cuando sea posible suspender al menos 7 días antes de cirugía según ficha"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b67ca60-d7e4-4c04-bbc6-dae86a7c7675",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+          ],
+          "ref": "DailyMed Prasugrel; ACC/AHA ACS Guideline 2025"
+        }
       }
     }
 
@@ -18954,7 +29224,7 @@
     ticagrelor: {
       name:     { pt: 'Ticagrelor', es: 'Ticagrelor' },
       category: 'cardio',
-      icon:     '🩸',
+      icon: '',
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#B91C1C',
       calculate: (paciente, lang = 'pt') => {
@@ -19026,6 +29296,204 @@
             'PLATO Trial (NEJM 2009) — Superior al clopidogrel en SCA (mortalidad CV reducida 21%); PEGASUS-TIMI 54 — 60 mg 2 veces/día tras 1 año.'
           )
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Ticagrelor",
+          "class": "Antiagregante plaquetário não tienopiridínico",
+          "pharmacologicClass": "Antagonista direto, reversível e oral do receptor P2Y12",
+          "mechanism": "Liga-se de forma reversível a sítio alostérico do receptor P2Y12, impedindo sinalização mediada por ADP sem necessidade de bioativação.",
+          "pharmacodynamics": "Inibição plaquetária rápida após carga de 180 mg, mais intensa e previsível que clopidogrel. O efeito diminui progressivamente após suspensão.",
+          "pharmacokinetics": "Absorção oral rápida. Metabolismo principalmente por CYP3A4 para metabólito ativo. Ticagrelor e metabólito são substratos de P-gp. Eliminação predominantemente fecal.",
+          "indications": [
+            "SCA e prevenção de eventos após IAM",
+            "Doença coronariana selecionada de alto risco",
+            "AVC isquêmico leve ou AIT de alto risco em esquema de curta duração com aspirina"
+          ],
+          "commercialNames": [
+            "Brilinta",
+            "Brilique",
+            "Ticagrelor genérico"
+          ],
+          "presentation": "Comprimidos revestidos para uso oral.",
+          "presentations": [
+            "Comprimidos 60 mg",
+            "Comprimidos 90 mg"
+          ],
+          "dose": {
+            "SCA ou IAM": "Ataque 180 mg VO; depois 90 mg VO duas vezes ao dia durante o primeiro ano; após 1 ano, 60 mg duas vezes ao dia",
+            "DAC sem IAM ou AVC prévios em indicação selecionada": "60 mg VO duas vezes ao dia",
+            "AVC isquêmico leve ou AIT de alto risco": "Ataque 180 mg, depois 90 mg duas vezes ao dia por até 30 dias",
+            "Aspirina": "Manutenção usual 75 a 100 mg/dia quando combinada"
+          },
+          "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas para estas indicações cardiovasculares.",
+          "renalDose": "Não requer ajuste de dose rotineiro por função renal. Em doença renal terminal, benefício e risco devem ser individualizados.",
+          "hepaticDose": "Evitar em insuficiência hepática grave; em comprometimento moderado usar cautela por maior exposição e risco hemorrágico.",
+          "commonAdverseEffects": [
+            "Sangramento",
+            "Dispneia",
+            "Equimoses",
+            "Epistaxe",
+            "Aumento de ácido úrico"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia intracraniana",
+            "Sangramento fatal",
+            "Bradiarritmia clinicamente significativa",
+            "Pausa ventricular",
+            "Reação de hipersensibilidade"
+          ],
+          "adverseEffects": "Dispneia é característica e geralmente transitória, mas deve ser diferenciada de insuficiência cardíaca ou isquemia. Sangramento é o principal evento grave.",
+          "contraindications": [
+            "História de hemorragia intracraniana",
+            "Sangramento patológico ativo",
+            "Hipersensibilidade ao ticagrelor"
+          ],
+          "interactions": [
+            "Evitar inibidores fortes de CYP3A",
+            "Evitar indutores fortes de CYP3A",
+            "Monitorar digoxina ao iniciar ou modificar ticagrelor",
+            "Evitar doses de manutenção de aspirina acima do recomendado",
+            "Não associar a outro P2Y12 oral"
+          ],
+          "monitoring": [
+            "Sinais de sangramento",
+            "Dispneia",
+            "Frequência cardíaca e pausas em pacientes suscetíveis",
+            "Função renal quando clinicamente indicada",
+            "Ácido úrico em pacientes predispostos",
+            "Interações CYP3A"
+          ],
+          "administration": "Administrar duas vezes ao dia com ou sem alimento. Comprimidos podem ser triturados e administrados com água ou por sonda nasogástrica conforme bula.",
+          "preparation": "Uso oral; se triturado, dispersar completamente em água e administrar imediatamente, lavando o recipiente ou sonda.",
+          "infusionProtocol": "Não se aplica: ticagrelor é administrado por via oral.",
+          "pregnancy": "Dados humanos são limitados; usar apenas se benefício materno justificar risco potencial.",
+          "lactation": "Dados clínicos são insuficientes; avaliar interrupção da amamentação ou do fármaco conforme necessidade materna.",
+          "specialPopulations": "História de hemorragia intracraniana contraindica uso. Em bradicardia significativa ou doença de condução sem marcapasso, usar cautela.",
+          "patientEducation": "Tomar duas vezes ao dia, não dobrar dose esquecida, relatar sangramento e dispneia importante e não interromper após PCI sem orientação.",
+          "clinicalPearls": [
+            "Não precisa de ativação metabólica para agir",
+            "Dispneia é um efeito característico",
+            "Aspirina de manutenção deve permanecer em dose baixa quando combinada, salvo indicação específica"
+          ],
+          "guidelineRecommendations": "ACC/AHA 2025: ticagrelor ou prasugrel são preferidos ao clopidogrel em SCA submetida a PCI. Em pacientes que toleraram DAPT com ticagrelor, transição para monoterapia com ticagrelor a partir de 1 mês pós-PCI é uma estratégia recomendada para reduzir sangramento em cenários selecionados.",
+          "safetyFlags": [
+            "História de hemorragia intracraniana é contraindicação",
+            "Risco de sangramento",
+            "Interações CYP3A",
+            "Bradiarritmia e dispneia"
+          ],
+          "alerts": [
+            "Evitar aspirina de manutenção acima de 100 mg/dia salvo indicação excepcional",
+            "Não administrar com outro inibidor oral P2Y12"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f73a4db-2c7f-4e42-a914-87aedc2780fb",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+          ],
+          "ref": "DailyMed Ticagrelor 2026; ACC/AHA ACS Guideline 2025"
+        },
+        "es": {
+          "name": "Ticagrelor",
+          "class": "Antiagregante plaquetario no tienopiridínico",
+          "pharmacologicClass": "Antagonista directo, reversible y oral del receptor P2Y12",
+          "mechanism": "Se une de forma reversible a un sitio alostérico del receptor P2Y12, bloqueando señalización mediada por ADP sin requerir bioactivación.",
+          "pharmacodynamics": "Inhibición plaquetaria rápida tras carga de 180 mg, más intensa y predecible que clopidogrel. El efecto disminuye progresivamente tras suspenderlo.",
+          "pharmacokinetics": "Absorción oral rápida. Metabolismo principalmente por CYP3A4 a metabolito activo. Ticagrelor y metabolito son sustratos de P-gp. Eliminación predominantemente fecal.",
+          "indications": [
+            "SCA y prevención de eventos tras IAM",
+            "Enfermedad coronaria seleccionada de alto riesgo",
+            "ACV isquémico leve o AIT de alto riesgo en esquema corto con aspirina"
+          ],
+          "commercialNames": [
+            "Brilinta",
+            "Brilique",
+            "Ticagrelor genérico"
+          ],
+          "presentation": "Comprimidos recubiertos para uso oral.",
+          "presentations": [
+            "Comprimidos 60 mg",
+            "Comprimidos 90 mg"
+          ],
+          "dose": {
+            "SCA o IAM": "Carga 180 mg VO; luego 90 mg VO dos veces al día durante el primer año; después de 1 año, 60 mg dos veces al día",
+            "EC estable sin IAM ni ACV previo en indicación seleccionada": "60 mg VO dos veces al día",
+            "ACV isquémico leve o AIT de alto riesgo": "Carga 180 mg, luego 90 mg dos veces al día hasta 30 días",
+            "Aspirina": "Mantenimiento habitual 75 a 100 mg/día cuando se combina"
+          },
+          "pediatricDose": "Seguridad y eficacia pediátricas no establecidas para estas indicaciones cardiovasculares.",
+          "renalDose": "No requiere ajuste rutinario por función renal. En enfermedad renal terminal, individualizar beneficio y riesgo.",
+          "hepaticDose": "Evitar en insuficiencia hepática grave; en compromiso moderado usar con cautela por mayor exposición y riesgo hemorrágico.",
+          "commonAdverseEffects": [
+            "Sangrado",
+            "Disnea",
+            "Equimosis",
+            "Epistaxis",
+            "Aumento de ácido úrico"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia intracraneal",
+            "Sangrado fatal",
+            "Bradiarritmia clínicamente significativa",
+            "Pausa ventricular",
+            "Hipersensibilidad grave"
+          ],
+          "adverseEffects": "La disnea es característica y suele ser transitoria, pero debe diferenciarse de insuficiencia cardíaca o isquemia. El sangrado es el principal evento grave.",
+          "contraindications": [
+            "Antecedente de hemorragia intracraneal",
+            "Sangrado patológico activo",
+            "Hipersensibilidad a ticagrelor"
+          ],
+          "interactions": [
+            "Evitar inhibidores potentes de CYP3A",
+            "Evitar inductores potentes de CYP3A",
+            "Monitorizar digoxina al iniciar o modificar ticagrelor",
+            "Evitar dosis de mantenimiento de aspirina por encima de lo recomendado",
+            "No asociar otro P2Y12 oral"
+          ],
+          "monitoring": [
+            "Signos de sangrado",
+            "Disnea",
+            "Frecuencia cardíaca y pausas en susceptibles",
+            "Función renal cuando corresponda",
+            "Ácido úrico en predispuestos",
+            "Interacciones CYP3A"
+          ],
+          "administration": "Administrar dos veces al día con o sin alimentos. Los comprimidos pueden triturarse y administrarse con agua o por sonda nasogástrica según ficha.",
+          "preparation": "Uso oral; si se tritura, dispersar por completo en agua y administrar de inmediato, enjuagando recipiente o sonda.",
+          "infusionProtocol": "No se aplica: ticagrelor se administra por vía oral.",
+          "pregnancy": "Datos humanos limitados; usar solo si el beneficio materno justifica riesgo potencial.",
+          "lactation": "Datos clínicos insuficientes; valorar interrupción de lactancia o del fármaco según necesidad materna.",
+          "specialPopulations": "Antecedente de hemorragia intracraneal contraindica el uso. En bradicardia significativa o trastorno de conducción sin marcapasos, usar con cautela.",
+          "patientEducation": "Tomar dos veces al día, no duplicar dosis olvidada, comunicar sangrado o disnea importante y no suspender tras PCI sin indicación.",
+          "clinicalPearls": [
+            "No requiere activación metabólica para actuar",
+            "La disnea es un efecto característico",
+            "La aspirina de mantenimiento debe permanecer en dosis baja cuando se combina, salvo indicación específica"
+          ],
+          "guidelineRecommendations": "ACC/AHA 2025: ticagrelor o prasugrel se prefieren a clopidogrel en SCA sometido a PCI. En pacientes que toleraron DAPT con ticagrelor, transición a monoterapia con ticagrelor desde 1 mes post-PCI es una estrategia recomendada en escenarios seleccionados para reducir sangrado.",
+          "safetyFlags": [
+            "Antecedente de hemorragia intracraneal es contraindicación",
+            "Riesgo de sangrado",
+            "Interacciones CYP3A",
+            "Bradiarritmia y disnea"
+          ],
+          "alerts": [
+            "Evitar aspirina de mantenimiento por encima de 100 mg/día salvo indicación excepcional",
+            "No administrar con otro inhibidor oral P2Y12"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f73a4db-2c7f-4e42-a914-87aedc2780fb",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+          ],
+          "ref": "DailyMed Ticagrelor 2026; ACC/AHA ACS Guideline 2025"
+        }
       }
     }
 
@@ -19042,7 +29510,7 @@
     cangrelor: {
       name:     { pt: 'Cangrelor', es: 'Cangrelor' },
       category: 'cardio',
-      icon:     '💉',
+      icon: '',
       color:    'rgba(239,68,68,0.13)',
       colorTxt: '#B91C1C',
       calculate: (paciente, lang = 'pt') => {
@@ -19132,6 +29600,176 @@
             'CHAMPION PHOENIX Trial (NEJM 2013) — Superior al clopidogrel en ICP de emergencia; CHAMPION PLATFORM; FDA Prescribing Info Kengreal.'
           )
         };
+      },
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Cangrelor (Tetrafosfato de)",
+          "class": "Antiagregante plaquetário intravenoso",
+          "pharmacologicClass": "Antagonista direto e reversível do receptor P2Y12",
+          "mechanism": "Bloqueia diretamente o receptor plaquetário P2Y12 sem necessidade de ativação metabólica. A ligação é reversível e a inibição cessa rapidamente após suspensão.",
+          "pharmacodynamics": "Início de inibição plaquetária em minutos, com recuperação funcional aproximadamente dentro de 1 hora após interromper a infusão.",
+          "pharmacokinetics": "Uso exclusivamente IV. Meia-vida de poucos minutos por desfosforilação rápida; metabolismo não depende de fígado ou rim de forma clinicamente relevante.",
+          "indications": [
+            "Adjuvante à PCI para reduzir IAM periprocedimento, nova revascularização e trombose de stent em pacientes não tratados com P2Y12 oral e sem uso concomitante de inibidor GP IIb/IIIa"
+          ],
+          "commercialNames": [
+            "Kengreal",
+            "Cangrelor genérico"
+          ],
+          "presentation": "Frasco-ampola liofilizado de 50 mg para reconstituição e posterior diluição.",
+          "presentations": [
+            "Frasco 50 mg em 10 mL para reconstituição"
+          ],
+          "dose": {
+            "PCI": "Bolus 30 mcg/kg IV antes da PCI, seguido imediatamente por 4 mcg/kg/min",
+            "Duração": "Manter pelo menos 2 horas ou durante toda a PCI, o que for mais longo",
+            "Transição": "Ticagrelor 180 mg pode ser dado durante ou imediatamente após; prasugrel 60 mg e clopidogrel 600 mg devem ser administrados imediatamente após interromper cangrelor"
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas em pacientes pediátricos.",
+          "renalDose": "Não requer ajuste de dose em insuficiência renal segundo a bula.",
+          "hepaticDose": "Não requer ajuste de dose em insuficiência hepática segundo a bula.",
+          "commonAdverseEffects": [
+            "Sangramento leve",
+            "Hematoma no acesso vascular"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia maior",
+            "Hemorragia intracraniana",
+            "Sangramento com comprometimento hemodinâmico",
+            "Anafilaxia rara"
+          ],
+          "adverseEffects": "O evento adverso predominante é sangramento; a curta meia-vida permite rápida reversão funcional após suspensão.",
+          "contraindications": [
+            "Sangramento ativo significativo",
+            "Hipersensibilidade conhecida ao cangrelor"
+          ],
+          "interactions": [
+            "Clopidogrel e prasugrel administrados durante a infusão têm efeito atenuado; dar após interrupção",
+            "Ticagrelor pode ser administrado durante ou imediatamente após a infusão",
+            "Outros antitrombóticos aumentam risco de sangramento"
+          ],
+          "monitoring": [
+            "Sangramento no sítio de acesso",
+            "Hemoglobina e parâmetros clínicos quando indicado",
+            "Estado hemodinâmico",
+            "Momento correto da transição para P2Y12 oral"
+          ],
+          "administration": "Administrar por linha IV dedicada. O bolus deve ser dado rapidamente em menos de 1 minuto e a infusão deve iniciar imediatamente, antes da PCI.",
+          "preparation": "Reconstituir cada frasco de 50 mg com 5 mL de água estéril. Diluir o conteúdo reconstituído em 250 mL de SF 0,9% ou SG 5%, obtendo 200 mcg/mL. Misturar suavemente e inspecionar.",
+          "infusionProtocol": "Bolus 30 mcg/kg a partir da solução diluída, seguido de 4 mcg/kg/min por pelo menos 2 horas ou durante a PCI. Solução diluída é estável por até 12 h em SG 5% e 24 h em SF 0,9% à temperatura ambiente, conforme bula.",
+          "pregnancy": "Dados em gestantes são limitados; usar apenas se claramente necessário, ponderando risco hemorrágico materno-fetal.",
+          "lactation": "Não há dados clínicos adequados sobre excreção no leite; considerar necessidade materna e curta meia-vida.",
+          "specialPopulations": "Não requer ajuste por idade, função renal ou hepática apenas com base nesses fatores, mas risco hemorrágico global deve orientar decisão.",
+          "patientEducation": "Explicar que é terapia IV temporária durante PCI e que um antiagregante oral será necessário para manter proteção após a infusão.",
+          "clinicalPearls": [
+            "Início e reversão muito rápidos",
+            "Transição para clopidogrel ou prasugrel deve ocorrer após suspender cangrelor",
+            "Ticagrelor pode ser administrado durante a infusão"
+          ],
+          "guidelineRecommendations": "Em PCI selecionada sem pré-tratamento efetivo com P2Y12 oral, cangrelor oferece inibição imediata; a estratégia deve integrar transição correta para um P2Y12 oral.",
+          "safetyFlags": [
+            "Risco de sangramento",
+            "Linha IV dedicada",
+            "Transição medicamentosa dependente do P2Y12 escolhido",
+            "Efeito antiplaquetário desaparece rapidamente após suspensão"
+          ],
+          "alerts": [
+            "Não administrar clopidogrel ou prasugrel como transição antes de finalizar a infusão",
+            "Confirmar diluição final 200 mcg/mL e peso do paciente"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c86264c2-ef49-4524-b6af-edb7a6279faa",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+          ],
+          "ref": "DailyMed Cangrelor; ACC/AHA ACS Guideline 2025"
+        },
+        "es": {
+          "name": "Cangrelor (Tetrafosfato de)",
+          "class": "Antiagregante plaquetario intravenoso",
+          "pharmacologicClass": "Antagonista directo y reversible del receptor P2Y12",
+          "mechanism": "Bloquea directamente el receptor plaquetario P2Y12 sin requerir activación metabólica. La unión es reversible y la inhibición desaparece rápidamente al suspender la infusión.",
+          "pharmacodynamics": "Inicio de inhibición plaquetaria en minutos, con recuperación funcional aproximadamente dentro de 1 hora tras detener la infusión.",
+          "pharmacokinetics": "Uso exclusivamente IV. Vida media de pocos minutos por desfosforilación rápida; el metabolismo no depende de hígado o riñón de forma clínicamente relevante.",
+          "indications": [
+            "Adyuvante a PCI para reducir IAM periprocedimiento, nueva revascularización y trombosis de stent en pacientes no tratados con P2Y12 oral y sin uso concomitante de inhibidor GP IIb/IIIa"
+          ],
+          "commercialNames": [
+            "Kengreal",
+            "Cangrelor genérico"
+          ],
+          "presentation": "Vial liofilizado de 50 mg para reconstitución y posterior dilución.",
+          "presentations": [
+            "Vial 50 mg en 10 mL para reconstitución"
+          ],
+          "dose": {
+            "PCI": "Bolo 30 mcg/kg IV antes de PCI, seguido inmediatamente de 4 mcg/kg/min",
+            "Duración": "Mantener al menos 2 horas o durante toda la PCI, lo que sea más largo",
+            "Transición": "Ticagrelor 180 mg puede darse durante o inmediatamente después; prasugrel 60 mg y clopidogrel 600 mg deben darse inmediatamente tras suspender cangrelor"
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos.",
+          "renalDose": "No requiere ajuste de dosis en insuficiencia renal según ficha.",
+          "hepaticDose": "No requiere ajuste de dosis en insuficiencia hepática según ficha.",
+          "commonAdverseEffects": [
+            "Sangrado leve",
+            "Hematoma en acceso vascular"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia mayor",
+            "Hemorragia intracraneal",
+            "Sangrado con compromiso hemodinámico",
+            "Anafilaxia rara"
+          ],
+          "adverseEffects": "El evento adverso predominante es el sangrado; la corta vida media permite rápida reversión funcional tras suspender.",
+          "contraindications": [
+            "Sangrado activo significativo",
+            "Hipersensibilidad conocida a cangrelor"
+          ],
+          "interactions": [
+            "Clopidogrel y prasugrel administrados durante la infusión tienen efecto atenuado; dar tras suspender",
+            "Ticagrelor puede administrarse durante o inmediatamente después",
+            "Otros antitrombóticos aumentan riesgo de sangrado"
+          ],
+          "monitoring": [
+            "Sangrado en acceso vascular",
+            "Hemoglobina y parámetros clínicos cuando corresponda",
+            "Estado hemodinámico",
+            "Momento correcto de transición a P2Y12 oral"
+          ],
+          "administration": "Administrar por línea IV dedicada. El bolo debe darse rápidamente en menos de 1 minuto y la infusión comenzar de inmediato, antes de PCI.",
+          "preparation": "Reconstituir cada vial de 50 mg con 5 mL de agua estéril. Diluir el contenido en 250 mL de SSN 0,9% o dextrosa 5%, obteniendo 200 mcg/mL. Mezclar suavemente e inspeccionar.",
+          "infusionProtocol": "Bolo 30 mcg/kg desde la solución diluida, seguido de 4 mcg/kg/min por al menos 2 horas o durante PCI. La solución diluida es estable hasta 12 h en dextrosa 5% y 24 h en SSN 0,9% a temperatura ambiente, según ficha.",
+          "pregnancy": "Datos limitados en gestantes; usar solo si es claramente necesario, valorando riesgo hemorrágico materno-fetal.",
+          "lactation": "No hay datos clínicos adecuados sobre excreción en leche; considerar necesidad materna y corta vida media.",
+          "specialPopulations": "No requiere ajuste por edad, función renal o hepática solo por esos factores, pero el riesgo hemorrágico global debe guiar la decisión.",
+          "patientEducation": "Explicar que es una terapia IV temporal durante PCI y que se necesitará un antiagregante oral para mantener protección después.",
+          "clinicalPearls": [
+            "Inicio y reversión muy rápidos",
+            "La transición a clopidogrel o prasugrel debe hacerse tras suspender cangrelor",
+            "Ticagrelor puede administrarse durante la infusión"
+          ],
+          "guidelineRecommendations": "En PCI seleccionada sin pretratamiento efectivo con P2Y12 oral, cangrelor ofrece inhibición inmediata; la estrategia debe integrar transición correcta a un P2Y12 oral.",
+          "safetyFlags": [
+            "Riesgo de sangrado",
+            "Línea IV dedicada",
+            "Transición dependiente del P2Y12 elegido",
+            "El efecto antiplaquetario desaparece rápidamente al suspender"
+          ],
+          "alerts": [
+            "No administrar clopidogrel o prasugrel como transición antes de terminar la infusión",
+            "Confirmar concentración final 200 mcg/mL y peso del paciente"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c86264c2-ef49-4524-b6af-edb7a6279faa",
+            "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+          ],
+          "ref": "DailyMed Cangrelor; ACC/AHA ACS Guideline 2025"
+        }
       }
     }
 
@@ -20810,8 +31448,242 @@
         'Goodman & Gilman',
         'Lexicomp',
         'FDA/EMA label'
-      ]
-
+      ],
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Antagonista do receptor de endotelina para hipertensão arterial pulmonar",
+          "mechanism": "Antagoniza ETA e ETB, reduzindo vasoconstrição e proliferação mediadas pela endotelina-1.",
+          "pharmacodynamics": "Reduz resistência vascular pulmonar; pode causar retenção hídrica, edema e queda da hemoglobina.",
+          "commonAdverseEffects": [
+            "cefaleia",
+            "edema",
+            "anemia",
+            "nasofaringite",
+            "rubor"
+          ],
+          "dangerousAdverseEffects": [
+            "hepatotoxicidade e insuficiência hepática",
+            "toxicidade embriofetal",
+            "retenção hídrica e descompensação",
+            "anemia significativa"
+          ],
+          "monitoring": [
+            "Aminotransferases antes de iniciar e mensalmente",
+            "hemoglobina",
+            "peso e edema",
+            "resposta clínica da HAP",
+            "testes de gestação conforme bula"
+          ],
+          "administration": "Oral duas vezes ao dia, com ou sem alimentos.",
+          "preparation": "Para comprimido dispersível seguir instruções de dispersão da bula; não confundir com comprimidos revestidos de 62,5/125 mg.",
+          "infusionProtocol": "Não se aplica: tratamento oral.",
+          "patientEducation": [
+            "Evitar gestação e cumprir controles indicados",
+            "procurar avaliação por ganho rápido de peso, edema ou dispneia",
+            "não suspender nem modificar tratamento da HAP sem especialista"
+          ],
+          "safetyFlags": [
+            "HEPATOTOXICIDADE",
+            "REMS",
+            "EMBRIOFETAL",
+            "INTERACOES_CYP",
+            "ANEMIA"
+          ],
+          "name": "Bosentana",
+          "class": "Antagonista duplo dos receptores de endotelina ETA/ETB",
+          "pharmacokinetics": "Metabolismo hepático por CYP2C9 e CYP3A4; induz CYP2C9, CYP3A4 e provavelmente CYP2C19, gerando múltiplas interações.",
+          "indications": [
+            "Hipertensão arterial pulmonar WHO grupo 1 para melhorar capacidade de exercício e reduzir piora clínica em adultos e pacientes pediátricos elegíveis"
+          ],
+          "commercialNames": [
+            "Tracleer"
+          ],
+          "presentation": "Comprimidos revestidos e comprimidos dispersíveis para suspensão oral.",
+          "presentations": [
+            "62,5 mg",
+            "125 mg",
+            "32 mg dispersível"
+          ],
+          "dose": {
+            "over12AndOver40kg": "62,5 mg duas vezes ao dia por 4 semanas, depois 125 mg duas vezes ao dia.",
+            "over12And40kgOrLess": "62,5 mg duas vezes ao dia; não aumentar para 125 mg BID.",
+            "pediatric": "Usar tabela de peso da bula para pacientes pediátricos elegíveis; não interpolar doses fora da tabela."
+          },
+          "pediatricDose": "A bula inclui dose pediátrica baseada em peso para pacientes elegíveis; usar a tabela oficial e a formulação dispersível quando aplicável.",
+          "renalDose": "Em geral não requer ajuste por insuficiência renal; o fármaco tem alta ligação a proteínas e a hemodiálise não deve removê-lo de forma importante.",
+          "hepaticDose": "Evitar iniciar se aminotransferases basais >3×LSN; não recomendado na insuficiência hepática moderada-grave. Controle mensal obrigatório de aminotransferases.",
+          "contraindications": [
+            "Gestação",
+            "ciclosporina A",
+            "gliburida/glyburide",
+            "hipersensibilidade"
+          ],
+          "interactions": [
+            "Ciclosporina e glyburide são contraindicadas",
+            "Induz CYP3A4/2C9 e reduz exposição de vários fármacos, incluindo contraceptivos hormonais",
+            "Reduz exposição de tadalafil e sildenafil",
+            "Evitar contracepção hormonal como único método por indução enzimática"
+          ],
+          "pregnancy": "Contraindicado. Excluir gestação antes do início; usar contracepção eficaz durante o tratamento e por 1 mês após suspender.",
+          "lactation": "Amamentação não é recomendada durante o tratamento pelo potencial de reações graves no lactente.",
+          "specialPopulations": {
+            "hepatic": "Monitorização mensal obrigatória; evitar moderada-grave.",
+            "reproductivePotential": "Contracepção eficaz e testes de gestação.",
+            "pediatrics": "Dose por peso conforme tabela oficial."
+          },
+          "clinicalPearls": [
+            "A mudança importante de segurança da bula 2025 mantém REMS por hepatotoxicidade",
+            "ALT/AST devem ser medidas antes de iniciar e mensalmente durante todo o tratamento."
+          ],
+          "guidelineRecommendations": [
+            "ESC/ERS: antagonistas de endotelina fazem parte da terapia dirigida da HAP em pacientes selecionados, com estratégia combinada conforme estratificação de risco."
+          ],
+          "alerts": [
+            "Não iniciar se ALT/AST >3×LSN",
+            "Suspender se elevação de aminotransferases vier acompanhada de sintomas de lesão hepática ou bilirrubina >=2×LSN."
+          ],
+          "adverseEffects": {
+            "common": [
+              "cefaleia",
+              "edema",
+              "anemia",
+              "nasofaringite",
+              "rubor"
+            ],
+            "dangerous": [
+              "hepatotoxicidade e insuficiência hepática",
+              "toxicidade embriofetal",
+              "retenção hídrica e descompensação",
+              "anemia significativa"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c",
+            "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/pulmonary-hypertension/"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c"
+        },
+        "es": {
+          "pharmacologicClass": "Antagonista del receptor de endotelina para hipertensión arterial pulmonar",
+          "mechanism": "Antagoniza ETA y ETB, reduciendo vasoconstricción y proliferación mediadas por endotelina-1.",
+          "pharmacodynamics": "Reduce resistencia vascular pulmonar; puede causar retención de líquidos, edema y descenso de hemoglobina.",
+          "commonAdverseEffects": [
+            "cefalea",
+            "edema",
+            "anemia",
+            "nasofaringitis",
+            "rubor"
+          ],
+          "dangerousAdverseEffects": [
+            "hepatotoxicidad y fallo hepático",
+            "toxicidad embriofetal",
+            "retención de líquidos y descompensación",
+            "anemia significativa"
+          ],
+          "monitoring": [
+            "Aminotransferasas antes de iniciar y mensualmente",
+            "hemoglobina",
+            "peso y edema",
+            "respuesta clínica de PAH",
+            "pruebas de embarazo según ficha"
+          ],
+          "administration": "Oral dos veces al día, con o sin alimentos.",
+          "preparation": "Para tableta dispersable seguir instrucciones de dispersión de la ficha; no confundir con tabletas recubiertas de 62.5/125 mg.",
+          "infusionProtocol": "No aplica: tratamiento oral.",
+          "patientEducation": [
+            "Evitar embarazo y cumplir controles indicados",
+            "consultar por aumento rápido de peso, edema o disnea",
+            "no suspender ni modificar tratamiento de PAH sin especialista"
+          ],
+          "safetyFlags": [
+            "HEPATOTOXICIDAD",
+            "REMS",
+            "EMBRIOFETAL",
+            "INTERACCIONES_CYP",
+            "ANEMIA"
+          ],
+          "name": "Bosentán",
+          "class": "Antagonista dual de receptores de endotelina ETA/ETB",
+          "pharmacokinetics": "Metabolismo hepático por CYP2C9 y CYP3A4; induce CYP2C9, CYP3A4 y probablemente CYP2C19, generando múltiples interacciones.",
+          "indications": [
+            "Hipertensión arterial pulmonar WHO grupo 1 para mejorar capacidad de ejercicio y disminuir empeoramiento clínico en adultos y pacientes pediátricos elegibles"
+          ],
+          "commercialNames": [
+            "Tracleer"
+          ],
+          "presentation": "Tabletas recubiertas y tabletas dispersables para suspensión oral.",
+          "presentations": [
+            "62.5 mg",
+            "125 mg",
+            "32 mg dispersable"
+          ],
+          "dose": {
+            "over12AndOver40kg": "62.5 mg dos veces al día por 4 semanas, luego 125 mg dos veces al día.",
+            "over12And40kgOrLess": "62.5 mg dos veces al día; no aumentar a 125 mg BID.",
+            "pediatric": "Usar tabla de peso de la ficha para pacientes pediátricos elegibles; no interpolar dosis fuera de la tabla."
+          },
+          "pediatricDose": "La ficha incluye dosificación pediátrica basada en peso para pacientes elegibles; utilizar la tabla oficial y la formulación dispersable cuando corresponda.",
+          "renalDose": "No suele requerir ajuste por insuficiencia renal; el fármaco tiene alta unión a proteínas y la hemodiálisis no se espera que lo elimine de forma importante.",
+          "hepaticDose": "Evitar iniciar si aminotransferasas basales >3×ULN; no recomendado en insuficiencia hepática moderada-grave. Control mensual obligatorio de aminotransferasas.",
+          "contraindications": [
+            "Embarazo",
+            "ciclosporina A",
+            "gliburida/glyburide",
+            "hipersensibilidad"
+          ],
+          "interactions": [
+            "Ciclosporina y glyburide están contraindicadas",
+            "Induce CYP3A4/2C9 y reduce exposición de varios fármacos, incluidos anticonceptivos hormonales",
+            "Reduce exposición de tadalafil y sildenafil",
+            "Evitar anticoncepción hormonal como único método por inducción enzimática"
+          ],
+          "pregnancy": "Contraindicado. Excluir embarazo antes de iniciar; usar anticoncepción eficaz durante tratamiento y por 1 mes después de suspender.",
+          "lactation": "No se recomienda lactancia durante tratamiento por potencial de reacciones graves en el lactante.",
+          "specialPopulations": {
+            "hepatic": "Monitorización mensual obligatoria; evitar moderada-grave.",
+            "reproductivePotential": "Anticoncepción eficaz y pruebas de embarazo.",
+            "pediatrics": "Dosis por peso según tabla oficial."
+          },
+          "clinicalPearls": [
+            "El cambio mayor de seguridad de la ficha 2025 mantiene REMS por hepatotoxicidad",
+            "ALT/AST deben medirse antes de iniciar y mensualmente durante todo el tratamiento."
+          ],
+          "guidelineRecommendations": [
+            "ESC/ERS: los antagonistas de endotelina forman parte de la terapia dirigida de PAH en pacientes seleccionados, con estrategia combinada según estratificación de riesgo."
+          ],
+          "alerts": [
+            "No iniciar si ALT/AST >3×ULN",
+            "Suspender si elevación de aminotransferasas se acompaña de síntomas de lesión hepática o bilirrubina >=2×ULN."
+          ],
+          "adverseEffects": {
+            "common": [
+              "cefalea",
+              "edema",
+              "anemia",
+              "nasofaringitis",
+              "rubor"
+            ],
+            "dangerous": [
+              "hepatotoxicidad y fallo hepático",
+              "toxicidad embriofetal",
+              "retención de líquidos y descompensación",
+              "anemia significativa"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c",
+            "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/pulmonary-hypertension/"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c"
+        }
+      }
     }, /* fim bosentana */
 
     /* ══════════════════════════════════════════════════════════════
@@ -21105,8 +31977,234 @@
         'Goodman & Gilman',
         'Lexicomp',
         'FDA/EMA label'
-      ]
-
+      ],
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP07_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "pharmacologicClass": "Antagonista do receptor de endotelina para hipertensão arterial pulmonar",
+          "mechanism": "Antagoniza preferencialmente ETA e reduz vasoconstrição e proliferação vascular pulmonar mediadas pela endotelina-1.",
+          "pharmacodynamics": "Reduz resistência vascular pulmonar; pode causar retenção hídrica, edema e queda da hemoglobina.",
+          "commonAdverseEffects": [
+            "edema periférico",
+            "cefaleia",
+            "congestão nasal",
+            "rubor",
+            "anemia"
+          ],
+          "dangerousAdverseEffects": [
+            "toxicidade embriofetal",
+            "retenção hídrica com insuficiência cardíaca",
+            "anemia significativa",
+            "edema pulmonar se houver doença veno-oclusiva pulmonar"
+          ],
+          "monitoring": [
+            "Hemoglobina antes do início, em 1 mês e periodicamente",
+            "peso e edema",
+            "sintomas da HAP e sinais de PVOD",
+            "função hepática se surgirem sintomas ou alterações",
+            "teste de gestação antes e durante quando aplicável"
+          ],
+          "administration": "5 ou 10 mg uma vez ao dia; engolir o comprimido inteiro, não partir, triturar nem mastigar.",
+          "preparation": "Não requer reconstituição.",
+          "infusionProtocol": "Não se aplica: tratamento oral.",
+          "patientEducation": [
+            "Evitar gestação e cumprir controles indicados",
+            "procurar avaliação por ganho rápido de peso, edema ou dispneia",
+            "não suspender nem modificar tratamento da HAP sem especialista"
+          ],
+          "safetyFlags": [
+            "EMBRIOFETAL",
+            "ANEMIA",
+            "RETENCAO_HIDRICA",
+            "PVOD",
+            "HEPATICA"
+          ],
+          "name": "Ambrisentana",
+          "class": "Antagonista seletivo do receptor de endotelina ETA",
+          "pharmacokinetics": "Administração uma vez ao dia; metabolismo por glucuronidação e oxidação com participação de CYP3A e outros transportadores. Ciclosporina aumenta exposição.",
+          "indications": [
+            "HAP WHO grupo 1 para melhorar capacidade de exercício e retardar piora clínica",
+            "em combinação com tadalafil para reduzir progressão e hospitalização por piora da HAP"
+          ],
+          "commercialNames": [
+            "Letairis"
+          ],
+          "presentation": "Comprimidos revestidos.",
+          "presentations": [
+            "5 mg",
+            "10 mg"
+          ],
+          "dose": {
+            "adult": "5 mg uma vez ao dia, com ou sem tadalafil 20 mg uma vez ao dia. Em intervalos de 4 semanas pode aumentar ambrisentana para 10 mg e tadalafil para 40 mg conforme necessidade e tolerância."
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas em pacientes pediátricos conforme a bula atual.",
+          "renalDose": "Insuficiência renal leve-moderada (ClCr 20-150 mL/min em dados populacionais): não requer ajuste. Dados insuficientes na insuficiência renal grave ou hemodiálise.",
+          "hepaticDose": "Não recomendado na insuficiência hepática moderada-grave. Se desenvolver ALT/AST >5×LSN ou elevação com bilirrubina >2×LSN/sintomas, investigar e suspender conforme bula.",
+          "contraindications": [
+            "Gestação",
+            "fibrose pulmonar idiopática",
+            "hipersensibilidade"
+          ],
+          "interactions": [
+            "Ciclosporina aumenta exposição; limitar ambrisentana a 5 mg uma vez ao dia",
+            "Com tadalafil aumenta edema periférico, mas é combinação terapêutica respaldada",
+            "Revisar outros fármacos que favorecem retenção hídrica"
+          ],
+          "pregnancy": "Contraindicado por toxicidade embriofetal. Excluir gestação antes do início e usar contracepção eficaz durante o tratamento e por pelo menos 1 mês após.",
+          "lactation": "Escolher entre ambrisentana e amamentação; não se recomenda manter ambos pelo potencial de reações graves.",
+          "specialPopulations": {
+            "renal": "Sem ajuste na insuficiência leve-moderada; grave não estudada.",
+            "hepatic": "Não recomendado na moderada-grave.",
+            "elderly": "Edema periférico é mais frequente."
+          },
+          "clinicalPearls": [
+            "A combinação inicial com tadalafil tem evidência para reduzir progressão clínica em HAP selecionada",
+            "Controlar hemoglobina no início, em 1 mês e depois periodicamente."
+          ],
+          "guidelineRecommendations": [
+            "ESC/ERS: ERA como ambrisentana faz parte de esquemas dirigidos da HAP; a combinação com inibidor de PDE5 é usada conforme estratificação de risco e fenótipo."
+          ],
+          "alerts": [
+            "Limitar a 5 mg/dia com ciclosporina",
+            "Não iniciar se houver anemia clinicamente significativa sem avaliação."
+          ],
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "cefaleia",
+              "congestão nasal",
+              "rubor",
+              "anemia"
+            ],
+            "dangerous": [
+              "toxicidade embriofetal",
+              "retenção hídrica com insuficiência cardíaca",
+              "anemia significativa",
+              "edema pulmonar se houver doença veno-oclusiva pulmonar"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725d4e73-6c83-477a-adc6-0ae4a133a844",
+            "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/pulmonary-hypertension/"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725d4e73-6c83-477a-adc6-0ae4a133a844"
+        },
+        "es": {
+          "pharmacologicClass": "Antagonista del receptor de endotelina para hipertensión arterial pulmonar",
+          "mechanism": "Antagoniza preferentemente ETA y reduce vasoconstricción y proliferación vascular pulmonar mediadas por endotelina-1.",
+          "pharmacodynamics": "Reduce resistencia vascular pulmonar; puede causar retención de líquidos, edema y descenso de hemoglobina.",
+          "commonAdverseEffects": [
+            "edema periférico",
+            "cefalea",
+            "congestión nasal",
+            "rubor",
+            "anemia"
+          ],
+          "dangerousAdverseEffects": [
+            "toxicidad embriofetal",
+            "retención de líquidos con insuficiencia cardíaca",
+            "anemia significativa",
+            "edema pulmonar si existe enfermedad venooclusiva pulmonar"
+          ],
+          "monitoring": [
+            "Hemoglobina antes de iniciar, al mes y periódicamente",
+            "peso y edema",
+            "síntomas de PAH y signos de PVOD",
+            "función hepática si aparecen síntomas o alteraciones",
+            "prueba de embarazo antes y durante cuando corresponda"
+          ],
+          "administration": "5 o 10 mg una vez al día; tragar tableta entera, no partir, triturar ni masticar.",
+          "preparation": "No requiere reconstitución.",
+          "infusionProtocol": "No aplica: tratamiento oral.",
+          "patientEducation": [
+            "Evitar embarazo y cumplir controles indicados",
+            "consultar por aumento rápido de peso, edema o disnea",
+            "no suspender ni modificar tratamiento de PAH sin especialista"
+          ],
+          "safetyFlags": [
+            "EMBRIOFETAL",
+            "ANEMIA",
+            "RETENCION_LIQUIDOS",
+            "PVOD",
+            "HEPATICA"
+          ],
+          "name": "Ambrisentán",
+          "class": "Antagonista selectivo del receptor de endotelina ETA",
+          "pharmacokinetics": "Administración una vez al día; metabolismo por glucuronidación y oxidación con participación de CYP3A y otros transportadores. Ciclosporina aumenta exposición.",
+          "indications": [
+            "PAH WHO grupo 1 para mejorar capacidad de ejercicio y retrasar empeoramiento clínico",
+            "en combinación con tadalafil para reducir progresión y hospitalización por empeoramiento de PAH"
+          ],
+          "commercialNames": [
+            "Letairis"
+          ],
+          "presentation": "Tabletas recubiertas.",
+          "presentations": [
+            "5 mg",
+            "10 mg"
+          ],
+          "dose": {
+            "adult": "5 mg una vez al día, con o sin tadalafil 20 mg una vez al día. A intervalos de 4 semanas puede aumentarse ambrisentán a 10 mg y tadalafil a 40 mg según necesidad y tolerancia."
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos según la ficha actual.",
+          "renalDose": "Insuficiencia renal leve-moderada (CrCl 20-150 mL/min en datos poblacionales): no requiere ajuste. Datos insuficientes en insuficiencia renal grave o hemodiálisis.",
+          "hepaticDose": "No recomendado en insuficiencia hepática moderada-grave. Si desarrolla ALT/AST >5×ULN o elevación con bilirrubina >2×ULN/síntomas, investigar y suspender según ficha.",
+          "contraindications": [
+            "Embarazo",
+            "fibrosis pulmonar idiopática",
+            "hipersensibilidad"
+          ],
+          "interactions": [
+            "Ciclosporina aumenta exposición; limitar ambrisentán a 5 mg una vez al día",
+            "Con tadalafil aumenta edema periférico pero es combinación terapéutica respaldada",
+            "Revisar otros fármacos que favorecen retención de líquidos"
+          ],
+          "pregnancy": "Contraindicado por toxicidad embriofetal. Excluir embarazo antes de iniciar y usar anticoncepción eficaz durante tratamiento y por al menos 1 mes después.",
+          "lactation": "Elegir entre ambrisentán y lactancia; no se recomienda mantener ambos por potencial de reacciones graves.",
+          "specialPopulations": {
+            "renal": "Sin ajuste en insuficiencia leve-moderada; grave no estudiada.",
+            "hepatic": "No recomendado en moderada-grave.",
+            "elderly": "Edema periférico es más frecuente."
+          },
+          "clinicalPearls": [
+            "La combinación inicial con tadalafil tiene evidencia para reducir progresión clínica en PAH seleccionada",
+            "Controlar hemoglobina al inicio, al mes y después periódicamente."
+          ],
+          "guidelineRecommendations": [
+            "ESC/ERS: ERA como ambrisentán forma parte de esquemas dirigidos de PAH; la combinación con inhibidor PDE5 se usa según estratificación de riesgo y fenotipo."
+          ],
+          "alerts": [
+            "Limitar a 5 mg/día con ciclosporina",
+            "No iniciar si existe anemia clínicamente significativa sin evaluación."
+          ],
+          "adverseEffects": {
+            "common": [
+              "edema periférico",
+              "cefalea",
+              "congestión nasal",
+              "rubor",
+              "anemia"
+            ],
+            "dangerous": [
+              "toxicidad embriofetal",
+              "retención de líquidos con insuficiencia cardíaca",
+              "anemia significativa",
+              "edema pulmonar si existe enfermedad venooclusiva pulmonar"
+            ]
+          },
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725d4e73-6c83-477a-adc6-0ae4a133a844",
+            "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/pulmonary-hypertension/"
+          ],
+          "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725d4e73-6c83-477a-adc6-0ae4a133a844"
+        }
+      }
     } /* fim ambrisentana */
 
   }); /* fim Object.assign CARDIO_DRUGS_DB — Grupo 26 (ARE-HAP: Bosentana · Ambrisentana) */
@@ -21123,6 +32221,86 @@
        ARE dual ETA/ETB de 3ª geração — HAP Grupo 1 OMS · Redução de morbidade/mortalidade
     ══════════════════════════════════════════════════════════════ */
     macitentana: {
+      mcGoldClinicalV1: {
+        "pt": {
+          "name": "Macitentana",
+          "class": "Antagonista dos receptores de endotelina",
+          "pharmacologicClass": "Antagonista dual ETA/ETB da endotelina",
+          "mechanism": "Bloqueia a ligação da endotelina-1 aos receptores ETA e ETB, reduzindo vasoconstrição, proliferação e remodelamento vascular pulmonar.",
+          "pharmacodynamics": "Reduz a resistência vascular pulmonar e melhora a hemodinâmica da HAP por antagonismo sustentado da sinalização da endotelina.",
+          "pharmacokinetics": "Tmax cerca de 8 h; ligação proteica superior a 99%; metabolismo principalmente por CYP3A4, com metabólito ativo; meias-vidas aproximadas de 16 h e 48 h para fármaco e metabólito.",
+          "indications": "HAP, WHO Grupo 1, em adultos, para reduzir progressão da doença e hospitalização relacionada à HAP.",
+          "commercialNames": "Opsumit; macitentana genérica.",
+          "presentation": "Comprimido revestido de 10 mg.",
+          "presentations": "Comprimidos orais de 10 mg; a disponibilidade comercial varia conforme país e fabricante.",
+          "dose": "Adultos com HAP: 10 mg VO uma vez ao dia. Doses acima de 10 mg/dia não são recomendadas para HAP.",
+          "pediatricDose": "Segurança e eficácia para HAP pediátrica não estão estabelecidas na bula; não extrapolar a dose adulta.",
+          "renalDose": "CrCl 15-29 mL/min aumenta a exposição, mas sem relevância clínica definida na bula; não há ajuste rotineiro estabelecido.",
+          "hepaticDose": "A farmacocinética não exige ajuste por Child-Pugh isoladamente; obter enzimas hepáticas basais e reavaliar diante de suspeita de lesão hepática.",
+          "commonAdverseEffects": "Anemia, cefaleia, nasofaringite/faringite, bronquite, influenza e infecção urinária.",
+          "dangerousAdverseEffects": "Toxicidade embriofetal, hepatotoxicidade, retenção hídrica, queda de hemoglobina e edema pulmonar em doença veno-oclusiva pulmonar.",
+          "adverseEffects": "Além dos eventos comuns, vigiar edema, hipotensão clínica, anemia e sinais de lesão hepática ou doença veno-oclusiva pulmonar.",
+          "contraindications": "Gravidez e hipersensibilidade à macitentana ou componentes da formulação.",
+          "interactions": "Evitar indutores fortes de CYP3A4, inibidores fortes de CYP3A4 e inibição moderada dual/combinada de CYP3A4 e CYP2C9, como fluconazol ou combinações equivalentes.",
+          "monitoring": "Teste de gravidez antes do início quando aplicável; hemoglobina, retenção de volume, sintomas de HAP e enzimas hepáticas basais e conforme indicação clínica.",
+          "administration": "Administrar 10 mg VO uma vez ao dia, com ou sem alimentos, em horário consistente.",
+          "preparation": "Comprimido oral não requer preparo ou diluição; conferir apresentação e dose antes da administração.",
+          "infusionProtocol": "Não se aplica à formulação oral de macitentana; não existe protocolo de infusão para o produto oral.",
+          "pregnancy": "Contraindicada. Excluir gravidez antes de iniciar e usar contracepção eficaz durante o tratamento e por 1 mês após a suspensão.",
+          "lactation": "A bula orienta não amamentar durante o tratamento devido ao potencial de reações adversas graves no lactente.",
+          "specialPopulations": "Idosos não mostraram diferença global de resposta; atenção à anemia, retenção de volume, função hepática e risco reprodutivo masculino.",
+          "patientEducation": "Tomar diariamente; comunicar atraso menstrual ou suspeita de gravidez, edema rápido, piora da dispneia, icterícia, urina escura ou fadiga importante.",
+          "clinicalPearls": "ERA oral de dose fixa diária; não confundir monitorização de segurança com necessidade de titulação de dose.",
+          "guidelineRecommendations": "Diretrizes ESC/ERS mantêm ERA como eixo de terapia combinada orientada por risco na HAP; escolha e intensificação dependem do perfil de risco e terapias concomitantes.",
+          "safetyFlags": "Gravidez contraindicada; hepatotoxicidade; anemia; retenção hídrica; possível edema pulmonar em PVOD; interações CYP3A4/CYP2C9.",
+          "alerts": "Se ocorrer edema pulmonar, investigar doença veno-oclusiva pulmonar e suspender se confirmada; interromper diante de gravidez.",
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=39ed1c20-99ae-4780-b040-dbebfc90018f",
+            "https://www.ema.europa.eu/en/medicines/human/EPAR/opsumit",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "DailyMed macitentana, revisão 05/2026; EMA Opsumit; ESC/ERS Pulmonary Hypertension Guidelines."
+        },
+        "es": {
+          "name": "Macitentán",
+          "class": "Antagonista de los receptores de endotelina",
+          "pharmacologicClass": "Antagonista dual ETA/ETB de endotelina",
+          "mechanism": "Bloquea la unión de endotelina-1 a los receptores ETA y ETB, reduciendo vasoconstricción, proliferación y remodelado vascular pulmonar.",
+          "pharmacodynamics": "Reduce la resistencia vascular pulmonar y mejora la hemodinámica de la HAP mediante antagonismo sostenido de la señalización de endotelina.",
+          "pharmacokinetics": "Tmax alrededor de 8 h; unión a proteínas superior al 99%; metabolismo principalmente por CYP3A4, con metabolito activo; semividas aproximadas de 16 h y 48 h.",
+          "indications": "HAP, Grupo 1 de la WHO, en adultos, para reducir la progresión de la enfermedad y la hospitalización relacionada con HAP.",
+          "commercialNames": "Opsumit; macitentán genérico.",
+          "presentation": "Comprimido recubierto de 10 mg.",
+          "presentations": "Comprimidos orales de 10 mg; la disponibilidad comercial varía según país y fabricante.",
+          "dose": "Adultos con HAP: 10 mg VO una vez al día. No se recomiendan dosis superiores a 10 mg/día para HAP.",
+          "pediatricDose": "La seguridad y eficacia para HAP pediátrica no están establecidas en la ficha técnica; no extrapolar la dosis adulta.",
+          "renalDose": "CrCl 15-29 mL/min aumenta la exposición, sin relevancia clínica definida en la ficha técnica; no hay ajuste rutinario establecido.",
+          "hepaticDose": "La farmacocinética no exige ajuste por Child-Pugh aislado; obtener enzimas hepáticas basales y reevaluar ante sospecha de lesión hepática.",
+          "commonAdverseEffects": "Anemia, cefalea, nasofaringitis/faringitis, bronquitis, influenza e infección urinaria.",
+          "dangerousAdverseEffects": "Toxicidad embriofetal, hepatotoxicidad, retención de líquidos, descenso de hemoglobina y edema pulmonar en enfermedad venooclusiva pulmonar.",
+          "adverseEffects": "Además de los eventos comunes, vigilar edema, hipotensión clínica, anemia y signos de lesión hepática o enfermedad venooclusiva pulmonar.",
+          "contraindications": "Embarazo e hipersensibilidad a macitentán o a componentes de la formulación.",
+          "interactions": "Evitar inductores potentes de CYP3A4, inhibidores potentes de CYP3A4 e inhibición moderada dual/combinada de CYP3A4 y CYP2C9, como fluconazol o combinaciones equivalentes.",
+          "monitoring": "Prueba de embarazo antes del inicio cuando corresponda; hemoglobina, retención de volumen, síntomas de HAP y enzimas hepáticas basales y según indicación clínica.",
+          "administration": "Administrar 10 mg VO una vez al día, con o sin alimentos, en un horario constante.",
+          "preparation": "El comprimido oral no requiere preparación ni dilución; verificar presentación y dosis antes de administrar.",
+          "infusionProtocol": "No aplica a la formulación oral de macitentán; no existe protocolo de infusión para el producto oral.",
+          "pregnancy": "Contraindicado. Excluir embarazo antes de iniciar y usar anticoncepción eficaz durante el tratamiento y durante 1 mes después de suspenderlo.",
+          "lactation": "La ficha técnica aconseja no amamantar durante el tratamiento por el potencial de reacciones adversas graves en el lactante.",
+          "specialPopulations": "En mayores no se observó diferencia global de respuesta; atender anemia, retención de volumen, función hepática y riesgo reproductivo masculino.",
+          "patientEducation": "Tomar diariamente; comunicar retraso menstrual o sospecha de embarazo, edema rápido, empeoramiento de disnea, ictericia, orina oscura o fatiga importante.",
+          "clinicalPearls": "ERA oral de dosis fija diaria; no confundir monitorización de seguridad con necesidad de titulación de dosis.",
+          "guidelineRecommendations": "Las guías ESC/ERS mantienen los ERA como eje de terapia combinada orientada por riesgo en HAP; elección e intensificación dependen del perfil de riesgo y terapias concomitantes.",
+          "safetyFlags": "Embarazo contraindicado; hepatotoxicidad; anemia; retención de líquidos; posible edema pulmonar en PVOD; interacciones CYP3A4/CYP2C9.",
+          "alerts": "Si aparece edema pulmonar, investigar enfermedad venooclusiva pulmonar y suspender si se confirma; interrumpir ante embarazo.",
+          "references": [
+            "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=39ed1c20-99ae-4780-b040-dbebfc90018f",
+            "https://www.ema.europa.eu/en/medicines/human/EPAR/opsumit",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "DailyMed macitentán, revisión 05/2026; EMA Opsumit; ESC/ERS Pulmonary Hypertension Guidelines."
+        }
+      },
 
       name: {
         pt: 'Macitentana',
@@ -21657,6 +32835,86 @@
        Estimulador sGC — HAP Grupo 1 OMS + HPTEC · Único aprovado para HPTEC
     ══════════════════════════════════════════════════════════════ */
     riociguate: {
+      mcGoldClinicalV1: {
+        "pt": {
+          "name": "Riociguate",
+          "class": "Estimulador da guanilato ciclase solúvel",
+          "pharmacologicClass": "Estimulador de sGC da via óxido nítrico-GMPc",
+          "mechanism": "Sensibiliza a guanilato ciclase solúvel ao óxido nítrico endógeno e também estimula diretamente a sGC, aumentando GMPc.",
+          "pharmacodynamics": "Aumenta GMPc e promove vasodilatação pulmonar e sistêmica, com efeitos antiproliferativos sobre a vasculatura pulmonar.",
+          "pharmacokinetics": "Alta biodisponibilidade oral; metabolismo por CYP1A1, CYP3A4, CYP2C8 e CYP2J2; exposição aumenta em idosos e pode ser reduzida pelo tabagismo.",
+          "indications": "Adultos com HPTEC inoperável ou persistente/recorrente após tratamento cirúrgico e adultos com HAP WHO Grupo 1 para melhorar capacidade de exercício e desfechos clínicos.",
+          "commercialNames": "Adempas.",
+          "presentation": "Comprimidos revestidos de 0,5 mg, 1 mg, 1,5 mg, 2 mg e 2,5 mg.",
+          "presentations": "Cinco concentrações orais para titulação individual: 0,5; 1; 1,5; 2 e 2,5 mg.",
+          "dose": "Iniciar geralmente 1 mg VO três vezes ao dia, com intervalo aproximado de 6-8 h; considerar 0,5 mg três vezes ao dia se risco de hipotensão. Titular em passos de 0,5 mg a cada 2 semanas até 2,5 mg três vezes ao dia conforme PA e tolerância.",
+          "pediatricDose": "Segurança e eficácia em pacientes pediátricos não estão estabelecidas; não extrapolar a dose adulta.",
+          "renalDose": "CrCl abaixo de 15 mL/min ou diálise: não recomendado por falta de segurança e eficácia demonstradas.",
+          "hepaticDose": "Child-Pugh C: não recomendado; em comprometimento menor, titular cuidadosamente pela pressão arterial e tolerância.",
+          "commonAdverseEffects": "Cefaleia, dispepsia/gastrite, tontura, náusea, diarreia, hipotensão, vômitos, anemia e refluxo.",
+          "dangerousAdverseEffects": "Toxicidade embriofetal, hipotensão sintomática, hemoptise e hemorragia pulmonar grave.",
+          "adverseEffects": "Vasodilatação pode causar tontura e hipotensão; sangramento respiratório exige avaliação imediata.",
+          "contraindications": "Gravidez; nitratos ou doadores de óxido nítrico; inibidores PDE5 ou PDE inespecíficos; outros estimuladores de sGC; hipertensão pulmonar associada a pneumonias intersticiais idiopáticas.",
+          "interactions": "Nitratos e PDE5 são contraindicados. Separar antiácidos contendo alumínio/magnésio por pelo menos 1 h; tabagismo reduz exposição. Inibidores potentes de múltiplas vias CYP/P-gp/BCRP podem elevar exposição.",
+          "monitoring": "Pressão arterial e sintomas de hipotensão em cada titulação; teste de gravidez conforme programa de segurança; sinais de sangramento e resposta funcional da HPTEC/HAP.",
+          "administration": "VO três vezes ao dia, com ou sem alimentos, mantendo intervalos regulares; seguir regras formais de transição com PDE5.",
+          "preparation": "Comprimidos podem ser administrados inteiros; quando necessário, seguir a bula para preparo de comprimido triturado em veículo apropriado.",
+          "infusionProtocol": "Não se aplica; riociguate é terapia oral e não deve ser convertido em infusão.",
+          "pregnancy": "Contraindicado por toxicidade embriofetal; excluir gravidez antes do início e cumprir contracepção e testes previstos no programa de segurança.",
+          "lactation": "Não há dados humanos adequados; pelo potencial de reações adversas graves, a bula orienta não amamentar durante o tratamento.",
+          "specialPopulations": "Idosos apresentam maior exposição; fumantes podem ter menor exposição. Evitar em CrCl abaixo de 15 mL/min, diálise e Child-Pugh C.",
+          "patientEducation": "Nunca combinar com nitratos ou sildenafil/tadalafil. Informar tontura, síncope, hemoptise e suspeita de gravidez imediatamente.",
+          "clinicalPearls": "A combinação com PDE5 não é estratégia de intensificação: é contraindicada. A transição exige intervalo específico para reduzir hipotensão.",
+          "guidelineRecommendations": "Na HPTEC, avaliar operabilidade e terapias intervencionistas em centro especializado; riociguate é terapia dirigida estabelecida para doença inoperável ou persistente/recorrente. Na HAP, a seleção é orientada por risco.",
+          "safetyFlags": "Gravidez; nitratos; PDE5; outros estimuladores de sGC; hipotensão; hemorragia pulmonar; CrCl abaixo de 15 mL/min; Child-Pugh C.",
+          "alerts": "Não administrar junto com PDE5. Respeitar intervalo de transição e interromper/ajustar se hipotensão sintomática.",
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3",
+            "https://www.ema.europa.eu/en/medicines/human/EPAR/adempas",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "DailyMed Adempas, revisão 08/2026; EMA Adempas; ESC/ERS Pulmonary Hypertension Guidelines."
+        },
+        "es": {
+          "name": "Riociguat",
+          "class": "Estimulador de la guanilato ciclasa soluble",
+          "pharmacologicClass": "Estimulador de sGC de la vía óxido nítrico-GMPc",
+          "mechanism": "Sensibiliza la guanilato ciclasa soluble al óxido nítrico endógeno y también estimula directamente la sGC, aumentando GMPc.",
+          "pharmacodynamics": "Aumenta GMPc y produce vasodilatación pulmonar y sistémica, con efectos antiproliferativos sobre la vasculatura pulmonar.",
+          "pharmacokinetics": "Alta biodisponibilidad oral; metabolismo por CYP1A1, CYP3A4, CYP2C8 y CYP2J2; la exposición aumenta en mayores y puede disminuir con tabaquismo.",
+          "indications": "Adultos con HPTEC inoperable o persistente/recurrente tras tratamiento quirúrgico y adultos con HAP WHO Grupo 1 para mejorar capacidad de ejercicio y desenlaces clínicos.",
+          "commercialNames": "Adempas.",
+          "presentation": "Comprimidos recubiertos de 0,5 mg, 1 mg, 1,5 mg, 2 mg y 2,5 mg.",
+          "presentations": "Cinco concentraciones orales para titulación individual: 0,5; 1; 1,5; 2 y 2,5 mg.",
+          "dose": "Iniciar generalmente 1 mg VO tres veces al día, con intervalo aproximado de 6-8 h; considerar 0,5 mg tres veces al día si existe riesgo de hipotensión. Titular en pasos de 0,5 mg cada 2 semanas hasta 2,5 mg tres veces al día según PA y tolerancia.",
+          "pediatricDose": "La seguridad y eficacia en pacientes pediátricos no están establecidas; no extrapolar la dosis adulta.",
+          "renalDose": "CrCl menor de 15 mL/min o diálisis: no recomendado por falta de seguridad y eficacia demostradas.",
+          "hepaticDose": "Child-Pugh C: no recomendado; con deterioro menor, titular cuidadosamente según presión arterial y tolerancia.",
+          "commonAdverseEffects": "Cefalea, dispepsia/gastritis, mareo, náuseas, diarrea, hipotensión, vómitos, anemia y reflujo.",
+          "dangerousAdverseEffects": "Toxicidad embriofetal, hipotensión sintomática, hemoptisis y hemorragia pulmonar grave.",
+          "adverseEffects": "La vasodilatación puede causar mareo e hipotensión; el sangrado respiratorio requiere evaluación inmediata.",
+          "contraindications": "Embarazo; nitratos o donantes de óxido nítrico; inhibidores PDE5 o PDE inespecíficos; otros estimuladores de sGC; hipertensión pulmonar asociada a neumonías intersticiales idiopáticas.",
+          "interactions": "Nitratos y PDE5 están contraindicados. Separar antiácidos con aluminio/magnesio al menos 1 h; el tabaquismo reduce exposición. Inhibidores potentes de múltiples vías CYP/P-gp/BCRP pueden elevar exposición.",
+          "monitoring": "Presión arterial y síntomas de hipotensión en cada titulación; prueba de embarazo según programa de seguridad; signos de sangrado y respuesta funcional de HPTEC/HAP.",
+          "administration": "VO tres veces al día, con o sin alimentos, manteniendo intervalos regulares; seguir reglas formales de transición con PDE5.",
+          "preparation": "Los comprimidos pueden administrarse enteros; cuando sea necesario, seguir la ficha técnica para preparación de comprimido triturado en vehículo apropiado.",
+          "infusionProtocol": "No aplica; riociguat es terapia oral y no debe convertirse en infusión.",
+          "pregnancy": "Contraindicado por toxicidad embriofetal; excluir embarazo antes del inicio y cumplir anticoncepción y pruebas previstas en el programa de seguridad.",
+          "lactation": "No hay datos humanos adecuados; por el potencial de reacciones adversas graves, la ficha técnica aconseja no amamantar durante el tratamiento.",
+          "specialPopulations": "Los mayores presentan mayor exposición; fumadores pueden presentar menor exposición. Evitar con CrCl menor de 15 mL/min, diálisis y Child-Pugh C.",
+          "patientEducation": "Nunca combinar con nitratos ni sildenafil/tadalafil. Informar mareo, síncope, hemoptisis y sospecha de embarazo de inmediato.",
+          "clinicalPearls": "La combinación con PDE5 no es una estrategia de intensificación: está contraindicada. La transición exige un intervalo específico para reducir hipotensión.",
+          "guidelineRecommendations": "En HPTEC, evaluar operabilidad y terapias intervencionistas en centro especializado; riociguat es terapia dirigida establecida para enfermedad inoperable o persistente/recurrente. En HAP, la selección se orienta por riesgo.",
+          "safetyFlags": "Embarazo; nitratos; PDE5; otros estimuladores de sGC; hipotensión; hemorragia pulmonar; CrCl menor de 15 mL/min; Child-Pugh C.",
+          "alerts": "No administrar junto con PDE5. Respetar el intervalo de transición y suspender/ajustar si aparece hipotensión sintomática.",
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3",
+            "https://www.ema.europa.eu/en/medicines/human/EPAR/adempas",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "DailyMed Adempas, revisión 08/2026; EMA Adempas; ESC/ERS Pulmonary Hypertension Guidelines."
+        }
+      },
 
       name: {
         pt: 'Riociguate',
@@ -22192,6 +33450,86 @@
        Prostaciclina estável SC/IV/inalatória/oral — HAP II–IV
     ══════════════════════════════════════════════════════════════ */
     treprostinil: {
+      mcGoldClinicalV1: {
+        "pt": {
+          "name": "Treprostinil",
+          "class": "Análogo da prostaciclina",
+          "pharmacologicClass": "Prostanoide agonista funcional da via do receptor IP",
+          "mechanism": "Análogo estável da prostaciclina que promove vasodilatação pulmonar e sistêmica e inibe agregação plaquetária.",
+          "pharmacodynamics": "Reduz pós-carga vascular pulmonar e pode melhorar sintomas e capacidade de exercício na HAP; os efeitos vasodilatadores também explicam hipotensão, cefaleia e flushing.",
+          "pharmacokinetics": "Exposição é aproximadamente proporcional à dose na faixa terapêutica; metabolismo hepático, com participação de CYP2C8; depuração cai na insuficiência hepática.",
+          "indications": "HAP WHO Grupo 1 por infusão contínua SC ou IV para reduzir sintomas associados ao exercício; também pode ser usada em transição selecionada de epoprostenol.",
+          "commercialNames": "Remodulin; treprostinil injetável.",
+          "presentation": "Solução injetável em frascos de 20 mL com 0,1; 0,2; 0,4; 1; 2,5; 5; 10 ou 20 mg/mL.",
+          "presentations": "Frascos multidose de treprostinil para infusão contínua SC ou IV; selecionar concentração conforme taxa de bomba e prescrição.",
+          "dose": "Paciente sem prostaciclina: iniciar 1,25 ng/kg/min em infusão contínua SC ou IV; se efeitos sistêmicos limitantes, 0,625 ng/kg/min. Aumentar 1,25 ng/kg/min por semana nas primeiras 4 semanas e depois 2,5 ng/kg/min por semana conforme resposta e tolerância.",
+          "pediatricDose": "Segurança e eficácia pediátricas não estão estabelecidas; não extrapolar esquema adulto para uso rotineiro.",
+          "renalDose": "Não requer ajuste de dose na insuficiência renal; treprostinil não é removido por diálise.",
+          "hepaticDose": "Insuficiência hepática leve ou moderada: iniciar 0,625 ng/kg/min com peso ideal e titular cautelosamente; insuficiência grave não foi estudada.",
+          "commonAdverseEffects": "Dor e reação no sítio SC, cefaleia, diarreia, náusea, dor mandibular, vasodilatação, edema e hipotensão.",
+          "dangerousAdverseEffects": "Piora abrupta da HAP por interrupção ou grande redução de dose, hipotensão sintomática, sangramento e infecção/sepse relacionada a cateter IV.",
+          "adverseEffects": "Efeitos prostanoides incluem flushing, cefaleia, dor mandibular, náusea, vômitos e diarreia; vigiar sangramento e complicações do acesso.",
+          "contraindications": "A bula de Remodulin não lista contraindicações formais; riscos da via, hipotensão, sangramento e hipersensibilidade exigem avaliação individual.",
+          "interactions": "Inibidores ou indutores de CYP2C8 podem alterar exposição e exigir ajuste; anticoagulantes e antiagregantes podem aumentar risco de sangramento.",
+          "monitoring": "Sintomas e classe funcional da HAP, pressão arterial, efeitos prostanoides, sítio SC, integridade da bomba e, na via IV, sinais de infecção do cateter.",
+          "administration": "Infusão contínua SC é preferida; usar via IV contínua quando SC não for tolerada. Nunca administrar como bolus não programado.",
+          "preparation": "Pode ser usado sem diluição ou diluído apenas com diluentes compatíveis conforme bula; calcular concentração e taxa de bomba de forma independente e dupla checagem.",
+          "infusionProtocol": "Infusão contínua obrigatória: iniciar 1,25 ng/kg/min ou 0,625 ng/kg/min se intolerância; titular gradualmente. Evitar interrupção abrupta e manter plano de bomba/insumos de reserva.",
+          "pregnancy": "Dados humanos são limitados; a decisão exige avaliação materno-fetal especializada, considerando o alto risco da própria HAP na gestação.",
+          "lactation": "Não há dados sobre presença no leite humano, efeitos no lactente ou produção de leite; individualizar risco-benefício.",
+          "specialPopulations": "Idosos: iniciar com cautela. Insuficiência hepática aumenta exposição. Insuficiência renal não requer ajuste e diálise não remove o fármaco.",
+          "patientEducation": "Não interromper a bomba. Manter equipamento e medicação de reserva; reconhecer alarmes, sinais de infecção, hipotensão, sangramento e piora súbita da dispneia.",
+          "clinicalPearls": "Interrupção não planejada é uma emergência terapêutica potencial. A via SC reduz o risco de infecção de cateter central e é preferida pela bula.",
+          "guidelineRecommendations": "Prostaciclina parenteral é componente central da intensificação em HAP de maior risco; pacientes de risco intermediário-alto/alto devem ser avaliados em centro especializado para terapia prostanoide e transplante quando indicado.",
+          "safetyFlags": "Infusão contínua; nunca suspender abruptamente; risco de hipotensão, sangramento, erro de bomba e infecção de cateter; ajuste inicial hepático.",
+          "alerts": "Qualquer interrupção da infusão deve ser corrigida prontamente por equipe treinada; revisar bomba, acesso, concentração e taxa.",
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6c80bb38-e8db-4138-9f0d-dbbf9c673185",
+            "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021272",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "DailyMed Remodulin, revisão 04/2026; FDA Drugs@FDA Remodulin; ESC/ERS Pulmonary Hypertension Guidelines."
+        },
+        "es": {
+          "name": "Treprostinil",
+          "class": "Análogo de la prostaciclina",
+          "pharmacologicClass": "Prostanoide agonista funcional de la vía del receptor IP",
+          "mechanism": "Análogo estable de prostaciclina que produce vasodilatación pulmonar y sistémica e inhibe la agregación plaquetaria.",
+          "pharmacodynamics": "Reduce la poscarga vascular pulmonar y puede mejorar síntomas y capacidad de ejercicio en HAP; sus efectos vasodilatadores también explican hipotensión, cefalea y rubor.",
+          "pharmacokinetics": "La exposición es aproximadamente proporcional a la dosis en el rango terapéutico; metabolismo hepático con participación de CYP2C8; el aclaramiento disminuye en insuficiencia hepática.",
+          "indications": "HAP WHO Grupo 1 mediante infusión continua SC o IV para disminuir síntomas asociados al ejercicio; también puede utilizarse en transición seleccionada desde epoprostenol.",
+          "commercialNames": "Remodulin; treprostinil inyectable.",
+          "presentation": "Solución inyectable en viales de 20 mL con 0,1; 0,2; 0,4; 1; 2,5; 5; 10 o 20 mg/mL.",
+          "presentations": "Viales multidosis de treprostinil para infusión continua SC o IV; seleccionar concentración según velocidad de bomba y prescripción.",
+          "dose": "Paciente sin prostaciclina: iniciar 1,25 ng/kg/min en infusión continua SC o IV; si hay efectos sistémicos limitantes, 0,625 ng/kg/min. Aumentar 1,25 ng/kg/min por semana las primeras 4 semanas y luego 2,5 ng/kg/min por semana según respuesta y tolerancia.",
+          "pediatricDose": "La seguridad y eficacia pediátricas no están establecidas; no extrapolar el esquema adulto para uso rutinario.",
+          "renalDose": "No requiere ajuste de dosis en insuficiencia renal; treprostinil no se elimina por diálisis.",
+          "hepaticDose": "Insuficiencia hepática leve o moderada: iniciar 0,625 ng/kg/min con peso ideal y titular con cautela; insuficiencia grave no estudiada.",
+          "commonAdverseEffects": "Dolor y reacción en sitio SC, cefalea, diarrea, náuseas, dolor mandibular, vasodilatación, edema e hipotensión.",
+          "dangerousAdverseEffects": "Empeoramiento abrupto de HAP por interrupción o gran reducción de dosis, hipotensión sintomática, sangrado e infección/sepsis relacionada con catéter IV.",
+          "adverseEffects": "Efectos prostanoides incluyen rubor, cefalea, dolor mandibular, náuseas, vómitos y diarrea; vigilar sangrado y complicaciones del acceso.",
+          "contraindications": "La ficha técnica de Remodulin no enumera contraindicaciones formales; riesgos de vía, hipotensión, sangrado e hipersensibilidad requieren valoración individual.",
+          "interactions": "Inhibidores o inductores de CYP2C8 pueden modificar la exposición y exigir ajuste; anticoagulantes y antiagregantes pueden aumentar el riesgo de sangrado.",
+          "monitoring": "Síntomas y clase funcional de HAP, presión arterial, efectos prostanoides, sitio SC, integridad de bomba y, por vía IV, signos de infección del catéter.",
+          "administration": "La infusión continua SC es preferida; usar vía IV continua cuando SC no sea tolerada. Nunca administrar como bolo no programado.",
+          "preparation": "Puede utilizarse sin diluir o diluirse solo con diluyentes compatibles según ficha técnica; calcular concentración y velocidad de bomba con doble verificación independiente.",
+          "infusionProtocol": "Infusión continua obligatoria: iniciar 1,25 ng/kg/min o 0,625 ng/kg/min si no se tolera; titular gradualmente. Evitar interrupción abrupta y mantener plan de bomba e insumos de respaldo.",
+          "pregnancy": "Los datos humanos son limitados; la decisión requiere valoración materno-fetal especializada, considerando el alto riesgo de la propia HAP durante el embarazo.",
+          "lactation": "No hay datos sobre presencia en leche humana, efectos en el lactante o producción de leche; individualizar riesgo-beneficio.",
+          "specialPopulations": "Mayores: iniciar con cautela. La insuficiencia hepática aumenta exposición. La insuficiencia renal no requiere ajuste y la diálisis no elimina el fármaco.",
+          "patientEducation": "No interrumpir la bomba. Mantener equipo y medicación de respaldo; reconocer alarmas, signos de infección, hipotensión, sangrado y empeoramiento súbito de disnea.",
+          "clinicalPearls": "Una interrupción no planificada es una potencial emergencia terapéutica. La vía SC reduce el riesgo de infección de catéter central y es la preferida por la ficha técnica.",
+          "guidelineRecommendations": "La prostaciclina parenteral es componente central de intensificación en HAP de mayor riesgo; pacientes de riesgo intermedio-alto/alto deben evaluarse en centro especializado para terapia prostanoide y trasplante cuando corresponda.",
+          "safetyFlags": "Infusión continua; nunca suspender bruscamente; riesgo de hipotensión, sangrado, error de bomba e infección de catéter; ajuste inicial hepático.",
+          "alerts": "Toda interrupción de la infusión debe corregirse rápidamente por personal entrenado; revisar bomba, acceso, concentración y velocidad.",
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6c80bb38-e8db-4138-9f0d-dbbf9c673185",
+            "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=021272",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "DailyMed Remodulin, revisión 04/2026; FDA Drugs@FDA Remodulin; ESC/ERS Pulmonary Hypertension Guidelines."
+        }
+      },
 
       name: { pt: 'Treprostinil', es: 'Treprostinil' },
       category: 'cardio',
@@ -22437,6 +33775,86 @@
        Prostaciclina inalatória — HAP III–IV · 6–9x/dia
     ══════════════════════════════════════════════════════════════ */
     iloprosta: {
+      mcGoldClinicalV1: {
+        "pt": {
+          "name": "Iloprosta",
+          "class": "Análogo da prostaciclina inalatório",
+          "pharmacologicClass": "Prostanoide inalatório com atividade agonista da via IP",
+          "mechanism": "Mimético da prostaciclina que aumenta sinalização por AMPc, causando vasodilatação pulmonar e inibição da agregação plaquetária.",
+          "pharmacodynamics": "A administração inalatória produz vasodilatação pulmonar de ação curta; hipotensão sistêmica, síncope e broncoespasmo são riscos clinicamente relevantes.",
+          "pharmacokinetics": "Após inalação, a concentração plasmática cai rapidamente; o metabolismo é extenso e a depuração pode diminuir na disfunção hepática e na insuficiência renal terminal.",
+          "indications": "Ventavis é indicado para HAP WHO Grupo 1 para melhorar capacidade de exercício, sintomas e reduzir deterioração clínica no contexto estudado.",
+          "commercialNames": "Ventavis.",
+          "presentation": "Solução para inalação em ampolas de 1 mL nas concentrações 10 mcg/mL e 20 mcg/mL.",
+          "presentations": "Ampolas de uso único para sistema de nebulização compatível; a dose entregue no bocal é 2,5 ou 5 mcg.",
+          "dose": "Iniciar 2,5 mcg por inalação; se tolerado, aumentar para 5 mcg. Administrar 6-9 vezes ao dia durante vigília, com pelo menos 2 h entre doses; máximo estudado 45 mcg/dia.",
+          "pediatricDose": "Segurança e eficácia pediátricas não estão estabelecidas; não extrapolar o esquema adulto.",
+          "renalDose": "Ventavis não foi adequadamente avaliado na insuficiência renal; exposição pode aumentar em doença renal terminal com diálise. Usar cautela e individualizar.",
+          "hepaticDose": "Ventavis não foi adequadamente avaliado na disfunção hepática; estudos com iloprosta IV mostram depuração reduzida em cirrose. Usar cautela e individualizar.",
+          "commonAdverseEffects": "Flushing, tosse aumentada, cefaleia, trismo, insônia, náusea, hipotensão, dor mandibular, dor lombar e palpitações.",
+          "dangerousAdverseEffects": "Síncope/hipotensão, edema pulmonar em hipertensão venosa pulmonar/PVOD, broncoespasmo e aumento do risco de sangramento.",
+          "adverseEffects": "Efeitos vasodilatadores e irritativos respiratórios predominam; monitorar tontura, síncope, tosse, broncoespasmo e sangramento.",
+          "contraindications": "A bula de Ventavis não lista contraindicações formais; não administrar se PAS abaixo de 85 mmHg e interromper se houver edema pulmonar compatível com doença veno-oclusiva.",
+          "interactions": "Pode potencializar anti-hipertensivos e outros vasodilatadores; anticoagulantes e antiagregantes podem aumentar o risco de sangramento.",
+          "monitoring": "PA e sintomas de síncope ao iniciar; resposta clínica da HAP, broncoespasmo, sangramento e sinais de edema pulmonar/PVOD.",
+          "administration": "Somente por inalação com sistema de nebulização compatível; usar bocal, evitar contato com pele/olhos e não ingerir a solução.",
+          "preparation": "Usar uma ampola por sessão conforme dispositivo e concentração prescritos; não misturar diretamente com outros medicamentos no nebulizador.",
+          "infusionProtocol": "Não se aplica ao Ventavis para HAP: a formulação é inalatória, não uma infusão IV. Não confundir com formulações intravenosas de iloprosta usadas para outras indicações.",
+          "pregnancy": "Dados humanos são insuficientes; HAP na gestação tem alto risco materno-fetal. Decisão somente com equipe especializada.",
+          "lactation": "A bula orienta não amamentar durante Ventavis pelo potencial de reações adversas graves no lactente.",
+          "specialPopulations": "Idosos podem exigir maior cautela; doença hepática e insuficiência renal terminal podem aumentar exposição. Doença de vias aéreas hiperreativas aumenta risco de broncoespasmo.",
+          "patientEducation": "Respeitar intervalo mínimo de 2 h, manter nebulizador de reserva, não ingerir solução e relatar síncope, piora respiratória, sangramento ou edema pulmonar.",
+          "clinicalPearls": "A técnica e o dispositivo importam para a dose realmente entregue; 20 mcg/mL serve para reduzir tempo de tratamento em pacientes selecionados, não para aumentar a dose acima de 5 mcg por sessão.",
+          "guidelineRecommendations": "Prostanoides inalados podem integrar terapia dirigida da HAP em pacientes selecionados; intensificação deve seguir avaliação de risco em centro especializado.",
+          "safetyFlags": "PAS abaixo de 85 mmHg; síncope; broncoespasmo; sangramento; edema pulmonar/PVOD; administração exclusivamente inalatória para Ventavis.",
+          "alerts": "Não misturar no nebulizador. Se ocorrer edema pulmonar, interromper e investigar hipertensão venosa pulmonar/PVOD.",
+          "references": [
+            "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021779s021lbl.pdf",
+            "https://www.ema.europa.eu/en/medicines/human/EPAR/ventavis",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "FDA Ventavis prescribing information 03/2022, vigente na fonte consultada; EMA Ventavis; ESC/ERS Pulmonary Hypertension Guidelines."
+        },
+        "es": {
+          "name": "Iloprost",
+          "class": "Análogo inhalado de la prostaciclina",
+          "pharmacologicClass": "Prostanoide inhalado con actividad agonista de la vía IP",
+          "mechanism": "Mimético de prostaciclina que aumenta señalización por AMPc, produciendo vasodilatación pulmonar e inhibición de la agregación plaquetaria.",
+          "pharmacodynamics": "La administración inhalada produce vasodilatación pulmonar de acción corta; hipotensión sistémica, síncope y broncoespasmo son riesgos clínicamente relevantes.",
+          "pharmacokinetics": "Tras la inhalación, la concentración plasmática desciende rápidamente; el metabolismo es extenso y el aclaramiento puede disminuir con disfunción hepática e insuficiencia renal terminal.",
+          "indications": "Ventavis está indicado para HAP WHO Grupo 1 para mejorar capacidad de ejercicio, síntomas y reducir deterioro clínico en el contexto estudiado.",
+          "commercialNames": "Ventavis.",
+          "presentation": "Solución para inhalación en ampollas de 1 mL con concentraciones de 10 mcg/mL y 20 mcg/mL.",
+          "presentations": "Ampollas de un solo uso para sistema de nebulización compatible; la dosis entregada en la boquilla es 2,5 o 5 mcg.",
+          "dose": "Iniciar 2,5 mcg por inhalación; si se tolera, aumentar a 5 mcg. Administrar 6-9 veces al día durante vigilia, con al menos 2 h entre dosis; máximo estudiado 45 mcg/día.",
+          "pediatricDose": "La seguridad y eficacia pediátricas no están establecidas; no extrapolar el esquema adulto.",
+          "renalDose": "Ventavis no se evaluó adecuadamente en insuficiencia renal; la exposición puede aumentar en enfermedad renal terminal con diálisis. Usar con cautela e individualizar.",
+          "hepaticDose": "Ventavis no se evaluó adecuadamente en disfunción hepática; estudios con iloprost IV muestran aclaramiento reducido en cirrosis. Usar con cautela e individualizar.",
+          "commonAdverseEffects": "Rubor, aumento de tos, cefalea, trismo, insomnio, náuseas, hipotensión, dolor mandibular, dolor lumbar y palpitaciones.",
+          "dangerousAdverseEffects": "Síncope/hipotensión, edema pulmonar en hipertensión venosa pulmonar/PVOD, broncoespasmo y aumento del riesgo de sangrado.",
+          "adverseEffects": "Predominan efectos vasodilatadores e irritativos respiratorios; vigilar mareo, síncope, tos, broncoespasmo y sangrado.",
+          "contraindications": "La ficha técnica de Ventavis no enumera contraindicaciones formales; no administrar con PAS menor de 85 mmHg y suspender si aparece edema pulmonar compatible con enfermedad venooclusiva.",
+          "interactions": "Puede potenciar antihipertensivos y otros vasodilatadores; anticoagulantes y antiagregantes pueden aumentar el riesgo de sangrado.",
+          "monitoring": "PA y síntomas de síncope al iniciar; respuesta clínica de HAP, broncoespasmo, sangrado y signos de edema pulmonar/PVOD.",
+          "administration": "Solo por inhalación con sistema de nebulización compatible; usar boquilla, evitar contacto con piel/ojos y no ingerir la solución.",
+          "preparation": "Usar una ampolla por sesión según dispositivo y concentración prescritos; no mezclar directamente con otros medicamentos en el nebulizador.",
+          "infusionProtocol": "No aplica a Ventavis para HAP: la formulación es inhalada, no una infusión IV. No confundir con formulaciones intravenosas de iloprost usadas para otras indicaciones.",
+          "pregnancy": "Los datos humanos son insuficientes; la HAP durante el embarazo tiene alto riesgo materno-fetal. Decisión solo con equipo especializado.",
+          "lactation": "La ficha técnica aconseja no amamantar durante Ventavis por el potencial de reacciones adversas graves en el lactante.",
+          "specialPopulations": "Mayores pueden requerir más cautela; enfermedad hepática e insuficiencia renal terminal pueden aumentar exposición. Vías aéreas hiperreactivas aumentan riesgo de broncoespasmo.",
+          "patientEducation": "Respetar intervalo mínimo de 2 h, mantener nebulizador de respaldo, no ingerir la solución y comunicar síncope, empeoramiento respiratorio, sangrado o edema pulmonar.",
+          "clinicalPearls": "La técnica y el dispositivo importan para la dosis realmente administrada; 20 mcg/mL sirve para reducir tiempo de tratamiento en pacientes seleccionados, no para aumentar la dosis por encima de 5 mcg por sesión.",
+          "guidelineRecommendations": "Los prostanoides inhalados pueden integrar terapia dirigida de HAP en pacientes seleccionados; la intensificación debe seguir evaluación de riesgo en centro especializado.",
+          "safetyFlags": "PAS menor de 85 mmHg; síncope; broncoespasmo; sangrado; edema pulmonar/PVOD; administración exclusivamente inhalada para Ventavis.",
+          "alerts": "No mezclar en el nebulizador. Si aparece edema pulmonar, suspender e investigar hipertensión venosa pulmonar/PVOD.",
+          "references": [
+            "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021779s021lbl.pdf",
+            "https://www.ema.europa.eu/en/medicines/human/EPAR/ventavis",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "FDA Ventavis prescribing information 03/2022, vigente en la fuente consultada; EMA Ventavis; ESC/ERS Pulmonary Hypertension Guidelines."
+        }
+      },
 
       name: { pt: 'Iloprosta', es: 'Iloprost' },
       category: 'cardio',
@@ -22669,6 +34087,86 @@
        Agonista seletivo oral do receptor IP — HAP II–III · Titulação semanal
     ══════════════════════════════════════════════════════════════ */
     selexipague: {
+      mcGoldClinicalV1: {
+        "pt": {
+          "name": "Selexipague",
+          "class": "Agonista seletivo do receptor IP da prostaciclina",
+          "pharmacologicClass": "Agonista não prostanoide do receptor IP, com metabólito ativo",
+          "mechanism": "Selexipague e principalmente seu metabólito ativo agonizam seletivamente o receptor IP da prostaciclina, aumentando AMPc e promovendo vasodilatação e efeito antiproliferativo.",
+          "pharmacodynamics": "Ativação do receptor IP reduz tônus e remodelamento vascular pulmonar; efeitos de classe incluem cefaleia, flushing, dor mandibular e sintomas gastrointestinais.",
+          "pharmacokinetics": "É hidrolisado a metabólito ativo; metabolismo oxidativo principalmente por CYP2C8 e em menor grau CYP3A4, com participação de UGT1A3/UGT2B7 e transportadores.",
+          "indications": "HAP WHO Grupo 1 em adultos para retardar progressão e reduzir hospitalização; em pacientes pediátricos com 2 anos ou mais, reduz NT-proBNP e espera-se benefício sobre progressão/hospitalização.",
+          "commercialNames": "Uptravi.",
+          "presentation": "Comprimidos de 100, 150, 200, 400, 600, 800, 1000, 1200, 1400 e 1600 mcg; frasco IV de 1800 mcg para adultos.",
+          "presentations": "Múltiplas concentrações orais para titulação individual; formulação IV liofilizada de 1800 mcg para substituição temporária em adultos.",
+          "dose": "Adultos: iniciar 200 mcg VO duas vezes ao dia; aumentar 200 mcg duas vezes ao dia, geralmente semanalmente, até a maior dose tolerada, máximo 1600 mcg duas vezes ao dia.",
+          "pediatricDose": "A partir de 2 anos: 9 a <25 kg, 100 mcg 2x/dia, incremento 100, máximo 800; 25 a <40 kg, 150 mcg 2x/dia, incremento 150, máximo 1200; 40 a <50 kg, 150 mcg 2x/dia, incremento 150, máximo 1600; 50 kg ou mais, 200 mcg 2x/dia, incremento 200, máximo 1600. Titular semanalmente e monitorar crescimento.",
+          "renalDose": "TFGe 15 mL/min ou maior: sem ajuste. Não há experiência clínica em diálise ou TFGe abaixo de 15 mL/min.",
+          "hepaticDose": "Child-Pugh A: sem ajuste. Child-Pugh B: iniciar e titular uma vez ao dia. Child-Pugh C: evitar.",
+          "commonAdverseEffects": "Cefaleia, diarreia, dor mandibular, náusea, mialgia, vômitos, dor em extremidades, flushing, artralgia, anemia, redução do apetite e rash.",
+          "dangerousAdverseEffects": "Hipotensão sintomática, edema pulmonar em PVOD e intolerância importante durante titulação; em pediatria, acompanhar crescimento.",
+          "adverseEffects": "Eventos de prostaciclina são mais frequentes na titulação; em pediatria há maior frequência de vômitos e dor abdominal.",
+          "contraindications": "Hipersensibilidade e uso concomitante de inibidor forte de CYP2C8, como gemfibrozila.",
+          "interactions": "Inibidor forte de CYP2C8 é contraindicado. Com inibidor moderado de CYP2C8, reduzir para uma vez ao dia. Indutor de CYP2C8 pode exigir aumento de dose sob protocolo da bula.",
+          "monitoring": "Tolerabilidade em cada titulação, PA, sinais de PVOD, sintomas de HAP; em pediatria monitorar peso e altura/crescimento ao longo do tratamento.",
+          "administration": "Comprimidos inteiros, VO, preferencialmente com alimento se melhorar tolerabilidade. Se perder 3 dias ou mais, reiniciar em dose menor e retitular.",
+          "preparation": "Comprimidos não devem ser partidos ou triturados. Formulação IV exige reconstituição, diluição em recipiente de vidro com SF 0,9% e proteção da luz conforme bula.",
+          "infusionProtocol": "Adultos temporariamente sem VO: dose IV correspondente é 1,125 vezes a dose oral, duas vezes ao dia, diluída conforme tabela; infundir por 80 min e proteger da luz.",
+          "pregnancy": "Não há estudos adequados em gestantes; dados animais não mostraram teratogenicidade relevante nas exposições estudadas. A HAP gestacional permanece de alto risco e exige decisão especializada.",
+          "lactation": "Desconhece-se presença no leite humano; devido ao potencial de eventos graves, interromper amamentação ou selexipague.",
+          "specialPopulations": "Pediatria a partir de 2 anos tem dose por peso e exige monitorar crescimento. Idosos: sem diferença global relevante. Ajustar frequência em Child-Pugh B.",
+          "patientEducation": "Esperar sintomas de prostaciclina na titulação; não partir comprimidos; comunicar síncope ou piora respiratória. Em crianças, manter seguimento de peso e altura.",
+          "clinicalPearls": "A dose de manutenção é individual pela tolerabilidade, não por um alvo único. A aprovação pediátrica em 2026 mudou o antigo status de uso apenas adulto.",
+          "guidelineRecommendations": "Agonistas do receptor IP são opção de intensificação em HAP persistente apesar de terapia inicial; reavaliar risco periodicamente e escalar em centro especializado.",
+          "safetyFlags": "CYP2C8 forte contraindicado; Child-Pugh C evitar; hipotensão; PVOD; ajuste de frequência com CYP2C8 moderado e Child-Pugh B; monitorar crescimento pediátrico.",
+          "alerts": "Não usar com gemfibrozila. Se edema pulmonar sugerir PVOD, investigar e suspender se confirmado. Após interrupção de 3 dias ou mais, retitular.",
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a7a23b87-f892-4e2c-8e2e-ebf841220f90",
+            "https://www.ema.europa.eu/en/medicines/human/EPAR/uptravi",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "DailyMed Uptravi, revisão 05/2026 com indicação pediátrica; EMA Uptravi; ESC/ERS Pulmonary Hypertension Guidelines."
+        },
+        "es": {
+          "name": "Selexipag",
+          "class": "Agonista selectivo del receptor IP de prostaciclina",
+          "pharmacologicClass": "Agonista no prostanoide del receptor IP, con metabolito activo",
+          "mechanism": "Selexipag y principalmente su metabolito activo agonizan selectivamente el receptor IP de prostaciclina, aumentando AMPc y produciendo vasodilatación y efecto antiproliferativo.",
+          "pharmacodynamics": "La activación del receptor IP reduce tono y remodelado vascular pulmonar; efectos de clase incluyen cefalea, rubor, dolor mandibular y síntomas gastrointestinales.",
+          "pharmacokinetics": "Se hidroliza a un metabolito activo; metabolismo oxidativo principalmente por CYP2C8 y en menor grado CYP3A4, con participación de UGT1A3/UGT2B7 y transportadores.",
+          "indications": "HAP WHO Grupo 1 en adultos para retrasar progresión y reducir hospitalización; en pacientes pediátricos de 2 años o más reduce NT-proBNP y se espera beneficio sobre progresión/hospitalización.",
+          "commercialNames": "Uptravi.",
+          "presentation": "Comprimidos de 100, 150, 200, 400, 600, 800, 1000, 1200, 1400 y 1600 mcg; vial IV de 1800 mcg para adultos.",
+          "presentations": "Múltiples concentraciones orales para titulación individual; formulación IV liofilizada de 1800 mcg para sustitución temporal en adultos.",
+          "dose": "Adultos: iniciar 200 mcg VO dos veces al día; aumentar 200 mcg dos veces al día, generalmente semanalmente, hasta la mayor dosis tolerada, máximo 1600 mcg dos veces al día.",
+          "pediatricDose": "Desde 2 años: 9 a <25 kg, 100 mcg 2 veces/día, incremento 100, máximo 800; 25 a <40 kg, 150 mcg 2 veces/día, incremento 150, máximo 1200; 40 a <50 kg, 150 mcg 2 veces/día, incremento 150, máximo 1600; 50 kg o más, 200 mcg 2 veces/día, incremento 200, máximo 1600. Titular semanalmente y monitorizar crecimiento.",
+          "renalDose": "TFGe 15 mL/min o mayor: sin ajuste. No hay experiencia clínica en diálisis ni TFGe menor de 15 mL/min.",
+          "hepaticDose": "Child-Pugh A: sin ajuste. Child-Pugh B: iniciar y titular una vez al día. Child-Pugh C: evitar.",
+          "commonAdverseEffects": "Cefalea, diarrea, dolor mandibular, náuseas, mialgia, vómitos, dolor de extremidades, rubor, artralgia, anemia, disminución del apetito y rash.",
+          "dangerousAdverseEffects": "Hipotensión sintomática, edema pulmonar en PVOD e intolerancia importante durante titulación; en pediatría, vigilar crecimiento.",
+          "adverseEffects": "Los eventos de prostaciclina son más frecuentes durante titulación; en pediatría se observan más vómitos y dolor abdominal.",
+          "contraindications": "Hipersensibilidad y uso concomitante de inhibidor potente de CYP2C8, como gemfibrozilo.",
+          "interactions": "Un inhibidor potente de CYP2C8 está contraindicado. Con inhibidor moderado de CYP2C8, reducir a una vez al día. Un inductor de CYP2C8 puede exigir aumento de dosis según protocolo de ficha técnica.",
+          "monitoring": "Tolerabilidad en cada titulación, PA, signos de PVOD y síntomas de HAP; en pediatría monitorizar peso, talla y crecimiento durante el tratamiento.",
+          "administration": "Comprimidos enteros por VO, preferentemente con alimentos si mejora tolerabilidad. Si se interrumpe 3 días o más, reiniciar a dosis menor y retitular.",
+          "preparation": "Los comprimidos no deben partirse ni triturarse. La formulación IV requiere reconstitución, dilución en recipiente de vidrio con SF 0,9% y protección de la luz según ficha técnica.",
+          "infusionProtocol": "Adultos temporalmente sin VO: la dosis IV correspondiente es 1,125 veces la dosis oral, dos veces al día, diluida según tabla; infundir durante 80 min y proteger de la luz.",
+          "pregnancy": "No hay estudios adecuados en embarazadas; los datos animales no mostraron teratogenicidad relevante en las exposiciones estudiadas. La HAP gestacional sigue siendo de alto riesgo y requiere decisión especializada.",
+          "lactation": "Se desconoce su presencia en leche humana; por el potencial de eventos graves, suspender lactancia o selexipag.",
+          "specialPopulations": "Pediatría desde 2 años tiene dosis por peso y exige monitorizar crecimiento. Mayores: sin diferencia global relevante. Ajustar frecuencia en Child-Pugh B.",
+          "patientEducation": "Esperar síntomas de prostaciclina durante titulación; no partir comprimidos; comunicar síncope o empeoramiento respiratorio. En niños, mantener seguimiento de peso y talla.",
+          "clinicalPearls": "La dosis de mantenimiento es individual según tolerabilidad, no por un único objetivo. La aprobación pediátrica de 2026 cambió el antiguo estatus de uso solo adulto.",
+          "guidelineRecommendations": "Los agonistas del receptor IP son una opción de intensificación en HAP persistente pese a terapia inicial; reevaluar riesgo periódicamente y escalar en centro especializado.",
+          "safetyFlags": "CYP2C8 potente contraindicado; Child-Pugh C evitar; hipotensión; PVOD; ajustar frecuencia con CYP2C8 moderado y Child-Pugh B; monitorizar crecimiento pediátrico.",
+          "alerts": "No usar con gemfibrozilo. Si edema pulmonar sugiere PVOD, investigar y suspender si se confirma. Tras interrupción de 3 días o más, retitular.",
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a7a23b87-f892-4e2c-8e2e-ebf841220f90",
+            "https://www.ema.europa.eu/en/medicines/human/EPAR/uptravi",
+            "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+          ],
+          "ref": "DailyMed Uptravi, revisión 05/2026 con indicación pediátrica; EMA Uptravi; ESC/ERS Pulmonary Hypertension Guidelines."
+        }
+      },
 
       name: { pt: 'Selexipague', es: 'Selexipag' },
       category: 'cardio',
@@ -25188,7 +36686,198 @@
       commonAdverseEffects: {"es":["Sangrado en sitios de punción/venopunción","Equimosis","Sangrado gastrointestinal o genitourinario"],"pt":["Sangramento em locais de punção/venopunção","Equimoses","Sangramento gastrointestinal ou geniturinário"]},
       dangerousAdverseEffects: {"es":["Hemorragia intracraneal sintomática","Hemorragia interna mayor/fatal","Angioedema/hipersensibilidad","Embolización por colesterol o eventos tromboembólicos"],"pt":["Hemorragia intracraniana sintomática","Hemorragia interna maior/fatal","Angioedema/hipersensibilidade","Embolização por colesterol ou eventos tromboembólicos"]},
       /* CALC-FARMACOS-BATCH2-CLINICAL-10-PATHOLOGY-DOSE-SAFETY-V1-B-R0 */
-      clinicalEnrichment: {"commonAdverseEffects":{"es":["Sangrado en sitios de punción/venopunción","Equimosis","Sangrado gastrointestinal o genitourinario"],"pt":["Sangramento em locais de punção/venopunção","Equimoses","Sangramento gastrointestinal ou geniturinário"]},"contraindications":{"es":{"absolute":["Sangrado interno activo","Hemorragia intracraneal actual o hemorragia subaracnoidea en el contexto de ACV","Cirugía intracraneal/intraespinal reciente o traumatismo craneal grave reciente","Condición intracraneal con alto riesgo de sangrado","Diátesis hemorrágica","Hipertensión grave no controlada"],"relative":["Los criterios adicionales varían según ACV, IAM o TEP; revisar checklist/protocolo específico antes de administrar"]},"pt":{"absolute":["Sangramento interno ativo","Hemorragia intracraniana atual ou hemorragia subaracnoidea no contexto de AVC","Cirurgia intracraniana/intraespinhal recente ou trauma craniano grave recente","Condição intracraniana com alto risco de sangramento","Diátese hemorrágica","Hipertensão grave não controlada"],"relative":["Critérios adicionais variam conforme AVC, IAM ou TEP; conferir checklist/protocolo específico antes de administrar"]}},"dangerousAdverseEffects":{"es":["Hemorragia intracraneal sintomática","Hemorragia interna mayor/fatal","Angioedema/hipersensibilidad","Embolización por colesterol o eventos tromboembólicos"],"pt":["Hemorragia intracraniana sintomática","Hemorragia interna maior/fatal","Angioedema/hipersensibilidade","Embolização por colesterol ou eventos tromboembólicos"]},"doseByIndication":{"es":[{"indication":"ACV isquémico agudo","note":"Confirmar elegibilidad, neuroimagen, presión arterial y ventana terapéutica según el protocolo vigente de ACV antes de la trombólisis.","rows":[{"dose":"0,9 mg/kg (máx. 90 mg): 10% de la dosis en bolo IV durante 1 min y el 90% restante en 60 min.","label":"IV"}]},{"indication":"IAM — infusión acelerada","rows":[{"dose":"15 mg IV en bolo, luego 50 mg en 30 min y 35 mg en los 60 min siguientes.","label":">67 kg"},{"dose":"15 mg IV en bolo, luego 0,75 mg/kg en 30 min y 0,50 mg/kg en los 60 min siguientes; dosis total máx. 100 mg.","label":"≤67 kg"}]},{"indication":"Embolia pulmonar aguda masiva","note":"Usar solo con indicación apropiada y tras valorar el riesgo hemorrágico.","rows":[{"dose":"100 mg en infusión IV durante 2 h.","label":"IV"}]}],"pt":[{"indication":"AVC isquêmico agudo","note":"Confirmar elegibilidade, neuroimagem, pressão arterial e janela terapêutica conforme protocolo de AVC vigente antes da trombólise.","rows":[{"dose":"0,9 mg/kg (máx. 90 mg): 10% da dose em bolus IV por 1 min e os 90% restantes em 60 min.","label":"IV"}]},{"indication":"IAM — infusão acelerada","rows":[{"dose":"15 mg IV em bolus, depois 50 mg em 30 min e 35 mg nos 60 min seguintes.","label":">67 kg"},{"dose":"15 mg IV em bolus, depois 0,75 mg/kg em 30 min e 0,50 mg/kg nos 60 min seguintes; dose total máx. 100 mg.","label":"≤67 kg"}]},{"indication":"Embolia pulmonar aguda maciça","note":"Aplicar apenas no contexto de indicação apropriada e risco hemorrágico avaliado.","rows":[{"dose":"100 mg em infusão IV ao longo de 2 h.","label":"IV"}]}]},"indications":{"es":["ACV isquémico agudo en paciente elegible para trombólisis sistémica","Infarto agudo de miocardio cuando está indicada la fibrinólisis","Embolia pulmonar aguda masiva con inestabilidad hemodinámica"],"pt":["AVC isquêmico agudo em paciente elegível para trombólise sistêmica","Infarto agudo do miocárdio quando fibrinólise está indicada","Embolia pulmonar aguda maciça com instabilidade hemodinâmica"]},"references":["FDA Activase (alteplase) Prescribing Information 2022","Current stroke thrombolysis protocol/guideline eligibility should be checked before use"]}
+      clinicalEnrichment: {"commonAdverseEffects":{"es":["Sangrado en sitios de punción/venopunción","Equimosis","Sangrado gastrointestinal o genitourinario"],"pt":["Sangramento em locais de punção/venopunção","Equimoses","Sangramento gastrointestinal ou geniturinário"]},"contraindications":{"es":{"absolute":["Sangrado interno activo","Hemorragia intracraneal actual o hemorragia subaracnoidea en el contexto de ACV","Cirugía intracraneal/intraespinal reciente o traumatismo craneal grave reciente","Condición intracraneal con alto riesgo de sangrado","Diátesis hemorrágica","Hipertensión grave no controlada"],"relative":["Los criterios adicionales varían según ACV, IAM o TEP; revisar checklist/protocolo específico antes de administrar"]},"pt":{"absolute":["Sangramento interno ativo","Hemorragia intracraniana atual ou hemorragia subaracnoidea no contexto de AVC","Cirurgia intracraniana/intraespinhal recente ou trauma craniano grave recente","Condição intracraniana com alto risco de sangramento","Diátese hemorrágica","Hipertensão grave não controlada"],"relative":["Critérios adicionais variam conforme AVC, IAM ou TEP; conferir checklist/protocolo específico antes de administrar"]}},"dangerousAdverseEffects":{"es":["Hemorragia intracraneal sintomática","Hemorragia interna mayor/fatal","Angioedema/hipersensibilidad","Embolización por colesterol o eventos tromboembólicos"],"pt":["Hemorragia intracraniana sintomática","Hemorragia interna maior/fatal","Angioedema/hipersensibilidade","Embolização por colesterol ou eventos tromboembólicos"]},"doseByIndication":{"es":[{"indication":"ACV isquémico agudo","note":"Confirmar elegibilidad, neuroimagen, presión arterial y ventana terapéutica según el protocolo vigente de ACV antes de la trombólisis.","rows":[{"dose":"0,9 mg/kg (máx. 90 mg): 10% de la dosis en bolo IV durante 1 min y el 90% restante en 60 min.","label":"IV"}]},{"indication":"IAM — infusión acelerada","rows":[{"dose":"15 mg IV en bolo, luego 50 mg en 30 min y 35 mg en los 60 min siguientes.","label":">67 kg"},{"dose":"15 mg IV en bolo, luego 0,75 mg/kg en 30 min y 0,50 mg/kg en los 60 min siguientes; dosis total máx. 100 mg.","label":"≤67 kg"}]},{"indication":"Embolia pulmonar aguda masiva","note":"Usar solo con indicación apropiada y tras valorar el riesgo hemorrágico.","rows":[{"dose":"100 mg en infusión IV durante 2 h.","label":"IV"}]}],"pt":[{"indication":"AVC isquêmico agudo","note":"Confirmar elegibilidade, neuroimagem, pressão arterial e janela terapêutica conforme protocolo de AVC vigente antes da trombólise.","rows":[{"dose":"0,9 mg/kg (máx. 90 mg): 10% da dose em bolus IV por 1 min e os 90% restantes em 60 min.","label":"IV"}]},{"indication":"IAM — infusão acelerada","rows":[{"dose":"15 mg IV em bolus, depois 50 mg em 30 min e 35 mg nos 60 min seguintes.","label":">67 kg"},{"dose":"15 mg IV em bolus, depois 0,75 mg/kg em 30 min e 0,50 mg/kg nos 60 min seguintes; dose total máx. 100 mg.","label":"≤67 kg"}]},{"indication":"Embolia pulmonar aguda maciça","note":"Aplicar apenas no contexto de indicação apropriada e risco hemorrágico avaliado.","rows":[{"dose":"100 mg em infusão IV ao longo de 2 h.","label":"IV"}]}]},"indications":{"es":["ACV isquémico agudo en paciente elegible para trombólisis sistémica","Infarto agudo de miocardio cuando está indicada la fibrinólisis","Embolia pulmonar aguda masiva con inestabilidad hemodinámica"],"pt":["AVC isquêmico agudo em paciente elegível para trombólise sistêmica","Infarto agudo do miocárdio quando fibrinólise está indicada","Embolia pulmonar aguda maciça com instabilidade hemodinâmica"]},"references":["FDA Activase (alteplase) Prescribing Information 2022","Current stroke thrombolysis protocol/guideline eligibility should be checked before use"]},
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Alteplase",
+          "class": "Trombolítico fibrinolítico",
+          "pharmacologicClass": "Ativador recombinante do plasminogênio tecidual (rt-PA)",
+          "mechanism": "Converte plasminogênio em plasmina, com relativa preferência por plasminogênio ligado à fibrina, promovendo fibrinólise do trombo.",
+          "pharmacodynamics": "Reduz a carga trombótica ao degradar fibrina. O efeito sistêmico sobre fibrinogênio é menor que agentes não fibrinoespecíficos, mas o risco hemorrágico permanece relevante.",
+          "pharmacokinetics": "Administração IV. Depuração rápida principalmente hepática, com meia-vida plasmática inicial de poucos minutos. O efeito fibrinolítico persiste além da meia-vida plasmática.",
+          "indications": [
+            "AVC isquêmico agudo em pacientes elegíveis",
+            "IAM com supra de ST em cenários apropriados de fibrinólise",
+            "Embolia pulmonar aguda maciça com instabilidade hemodinâmica"
+          ],
+          "commercialNames": [
+            "Activase",
+            "Alteplase genérica"
+          ],
+          "presentation": "Pó liofilizado para reconstituição IV.",
+          "presentations": [
+            "Frasco 50 mg",
+            "Frasco 100 mg, conforme produto"
+          ],
+          "dose": {
+            "AVC isquêmico": "0,9 mg/kg IV, máximo 90 mg; 10% em bolus de 1 minuto e restante em 60 minutos",
+            "TEP maciço": "100 mg IV em 2 horas em adultos, conforme bula",
+            "IAM com supra": "Esquema acelerado baseado em peso, total máximo 100 mg, conforme protocolo de fibrinólise"
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para AVC isquêmico pediátrico de rotina; uso em trombose pediátrica deve seguir protocolo especializado.",
+          "renalDose": "Não há ajuste posológico específico baseado apenas na função renal, mas insuficiência renal pode aumentar risco hemorrágico e deve integrar avaliação global.",
+          "hepaticDose": "Não há ajuste posológico padronizado; hepatopatia grave, coagulopatia ou hipertensão portal aumentam risco de sangramento e podem contraindicar fibrinólise.",
+          "commonAdverseEffects": [
+            "Sangramento em sítios de punção",
+            "Equimoses",
+            "Sangramento gengival",
+            "Náusea"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia intracraniana sintomática",
+            "Hemorragia interna grave",
+            "Angioedema orolingual",
+            "Reação anafilactoide rara"
+          ],
+          "adverseEffects": "Hemorragia é a principal toxicidade. No AVC, hemorragia intracraniana e angioedema orolingual são eventos críticos que exigem vigilância imediata.",
+          "contraindications": [
+            "Sangramento interno ativo",
+            "Hemorragia intracraniana atual",
+            "Hemorragia subaracnoide",
+            "Condições intracranianas com alto risco de sangramento",
+            "Cirurgia intracraniana ou espinal recente ou trauma craniano grave",
+            "Hipertensão grave não controlada e outras contraindicações específicas da indicação"
+          ],
+          "interactions": [
+            "Anticoagulantes e antiagregantes aumentam risco de sangramento",
+            "Heparina e outros fibrinolíticos aumentam risco hemorrágico",
+            "IECA podem associar-se a maior risco de angioedema orolingual no AVC"
+          ],
+          "monitoring": [
+            "Exame neurológico seriado no AVC",
+            "Pressão arterial frequente",
+            "Sinais de sangramento",
+            "Hemoglobina e coagulação quando indicado",
+            "Inspeção de sítios de punção"
+          ],
+          "administration": "No AVC, administrar assim que possível após confirmar elegibilidade e excluir hemorragia intracraniana. Evitar punções invasivas desnecessárias durante e logo após a infusão.",
+          "preparation": "Reconstituir apenas com o diluente recomendado pelo fabricante e manipular suavemente para evitar espuma. Não adicionar outros medicamentos à solução de alteplase.",
+          "infusionProtocol": "AVC: 10% da dose total em bolus IV de 1 minuto, restante em 60 minutos. TEP maciço: 100 mg em 2 horas. IAM: seguir esquema acelerado por peso do protocolo.",
+          "pregnancy": "Dados são limitados; usar quando o benefício materno em situação trombótica grave superar risco de hemorragia materna ou fetal.",
+          "lactation": "Não se sabe se alteplase clinicamente relevante passa ao leite; devido à natureza proteica e curta meia-vida, absorção oral do lactente tende a ser baixa, mas decisão deve ser individualizada.",
+          "specialPopulations": "Idade avançada, hipertensão, AVC grave, baixo peso e anticoagulação recente aumentam risco hemorrágico e exigem seleção rigorosa.",
+          "patientEducation": "Explicar benefício tempo-dependente e risco de sangramento. Relatar cefaleia súbita, piora neurológica, sangramento persistente ou edema de língua e lábios.",
+          "clinicalPearls": [
+            "No AVC, cada minuto importa e atrasos evitáveis reduzem benefício",
+            "A dose para AVC é 0,9 mg/kg, máximo 90 mg",
+            "A dose e o esquema mudam completamente entre AVC, IAM e TEP"
+          ],
+          "guidelineRecommendations": "AHA/ASA 2026: em adultos elegíveis para trombólise IV dentro de 4,5 horas, alteplase 0,9 mg/kg ou tenecteplase 0,25 mg/kg até 25 mg são recomendadas. Janelas estendidas podem ser consideradas em pacientes selecionados por imagem avançada.",
+          "safetyFlags": [
+            "Alto risco hemorrágico",
+            "Exige seleção rigorosa por indicação",
+            "Monitorização de pressão arterial e neurologia no AVC",
+            "Evitar procedimentos invasivos desnecessários"
+          ],
+          "alerts": [
+            "No AVC, interromper infusão e investigar imediatamente diante de piora neurológica súbita",
+            "Confirmar dose por peso e indicação antes de preparar"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2",
+            "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513"
+          ],
+          "ref": "DailyMed Activase; AHA/ASA Acute Ischemic Stroke Guideline 2026"
+        },
+        "es": {
+          "name": "Alteplasa",
+          "class": "Trombolítico fibrinolítico",
+          "pharmacologicClass": "Activador recombinante del plasminógeno tisular (rt-PA)",
+          "mechanism": "Convierte plasminógeno en plasmina con relativa preferencia por plasminógeno unido a fibrina, promoviendo fibrinólisis del trombo.",
+          "pharmacodynamics": "Reduce la carga trombótica degradando fibrina. El efecto sistémico sobre fibrinógeno es menor que con agentes no fibrinoespecíficos, aunque persiste riesgo hemorrágico relevante.",
+          "pharmacokinetics": "Administración IV. Depuración rápida principalmente hepática, con vida media plasmática inicial de pocos minutos. El efecto fibrinolítico persiste más allá de la vida media plasmática.",
+          "indications": [
+            "ACV isquémico agudo en pacientes elegibles",
+            "IAM con elevación del ST en escenarios apropiados de fibrinólisis",
+            "Embolia pulmonar aguda masiva con inestabilidad hemodinámica"
+          ],
+          "commercialNames": [
+            "Activase",
+            "Alteplasa genérica"
+          ],
+          "presentation": "Polvo liofilizado para reconstitución IV.",
+          "presentations": [
+            "Vial 50 mg",
+            "Vial 100 mg según producto"
+          ],
+          "dose": {
+            "ACV isquémico": "0,9 mg/kg IV, máximo 90 mg; 10% en bolo de 1 minuto y resto en 60 minutos",
+            "TEP masivo": "100 mg IV en 2 horas en adultos según ficha",
+            "IAM con elevación ST": "Esquema acelerado según peso, total máximo 100 mg, según protocolo de fibrinólisis"
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para ACV isquémico pediátrico de rutina; el uso en trombosis pediátrica debe seguir protocolo especializado.",
+          "renalDose": "No hay ajuste específico basado solo en función renal, aunque insuficiencia renal puede aumentar riesgo hemorrágico y debe integrarse a evaluación global.",
+          "hepaticDose": "No existe ajuste estandarizado; hepatopatía grave, coagulopatía o hipertensión portal aumentan riesgo de sangrado y pueden contraindicar fibrinólisis.",
+          "commonAdverseEffects": [
+            "Sangrado en sitios de punción",
+            "Equimosis",
+            "Sangrado gingival",
+            "Náuseas"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia intracraneal sintomática",
+            "Hemorragia interna grave",
+            "Angioedema orolingual",
+            "Reacción anafilactoide rara"
+          ],
+          "adverseEffects": "La hemorragia es la toxicidad principal. En ACV, hemorragia intracraneal y angioedema orolingual son eventos críticos que requieren vigilancia inmediata.",
+          "contraindications": [
+            "Sangrado interno activo",
+            "Hemorragia intracraneal actual",
+            "Hemorragia subaracnoidea",
+            "Condiciones intracraneales con alto riesgo de sangrado",
+            "Cirugía intracraneal o espinal reciente o trauma craneal grave",
+            "Hipertensión grave no controlada y otras contraindicaciones específicas de la indicación"
+          ],
+          "interactions": [
+            "Anticoagulantes y antiagregantes aumentan riesgo de sangrado",
+            "Heparina y otros fibrinolíticos aumentan riesgo hemorrágico",
+            "IECA pueden asociarse a mayor riesgo de angioedema orolingual en ACV"
+          ],
+          "monitoring": [
+            "Examen neurológico seriado en ACV",
+            "Presión arterial frecuente",
+            "Signos de sangrado",
+            "Hemoglobina y coagulación cuando corresponda",
+            "Inspección de sitios de punción"
+          ],
+          "administration": "En ACV administrar lo antes posible tras confirmar elegibilidad y excluir hemorragia intracraneal. Evitar punciones invasivas innecesarias durante y después.",
+          "preparation": "Reconstituir solo con el diluyente recomendado y manipular suavemente para evitar espuma. No añadir otros medicamentos a la solución de alteplasa.",
+          "infusionProtocol": "ACV: 10% de la dosis total en bolo IV de 1 minuto, resto en 60 minutos. TEP masivo: 100 mg en 2 horas. IAM: seguir esquema acelerado según peso.",
+          "pregnancy": "Datos limitados; usar cuando el beneficio materno en una situación trombótica grave supere el riesgo de hemorragia materna o fetal.",
+          "lactation": "No se conoce la excreción clínicamente relevante en leche; por su naturaleza proteica y corta vida media la absorción oral del lactante sería baja, pero individualizar.",
+          "specialPopulations": "Edad avanzada, hipertensión, ACV grave, bajo peso y anticoagulación reciente aumentan riesgo hemorrágico y requieren selección rigurosa.",
+          "patientEducation": "Explicar beneficio dependiente del tiempo y riesgo de sangrado. Comunicar cefalea súbita, empeoramiento neurológico, sangrado persistente o edema de lengua y labios.",
+          "clinicalPearls": [
+            "En ACV cada minuto importa y los retrasos evitables reducen beneficio",
+            "La dosis para ACV es 0,9 mg/kg, máximo 90 mg",
+            "Dosis y esquema cambian completamente entre ACV, IAM y TEP"
+          ],
+          "guidelineRecommendations": "AHA/ASA 2026: en adultos elegibles para trombólisis IV dentro de 4,5 horas se recomiendan alteplasa 0,9 mg/kg o tenecteplasa 0,25 mg/kg hasta 25 mg. Ventanas extendidas pueden considerarse en pacientes seleccionados por imagen avanzada.",
+          "safetyFlags": [
+            "Alto riesgo hemorrágico",
+            "Selección rigurosa por indicación",
+            "Monitorización de presión arterial y neurología en ACV",
+            "Evitar procedimientos invasivos innecesarios"
+          ],
+          "alerts": [
+            "En ACV suspender infusión e investigar de inmediato ante empeoramiento neurológico súbito",
+            "Confirmar dosis por peso e indicación antes de preparar"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2",
+            "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513"
+          ],
+          "ref": "DailyMed Activase; AHA/ASA Acute Ischemic Stroke Guideline 2026"
+        }
+      }
     }, /* fim alteplase */
 
     tenecteplase: {
@@ -25473,7 +37162,188 @@
         "ESC Pulmonary Embolism Guidelines",
         "ASSENT Trials",
         "FDA/EMA label"
-      ]
+      ],
+      icon: '',
+      mcGoldClinicalV1: {
+        "meta": {
+          "schema": "mc-gold-clinical-v1",
+          "review": "2026-09",
+          "group": "GOLD_GROUP03_CARDIO_10",
+          "requiredFieldCount": 33
+        },
+        "pt": {
+          "name": "Tenecteplase",
+          "class": "Trombolítico fibrinolítico",
+          "pharmacologicClass": "Ativador de plasminogênio modificado, fibrinoespecífico",
+          "mechanism": "Versão modificada do tPA com maior especificidade por fibrina e maior resistência ao inibidor do ativador de plasminogênio, permitindo administração em bolus único.",
+          "pharmacodynamics": "Promove conversão de plasminogênio em plasmina predominantemente no trombo rico em fibrina. Produz fibrinólise rápida com risco de hemorragia sistêmica e intracraniana.",
+          "pharmacokinetics": "Administração IV em bolus. Meia-vida maior que alteplase, permitindo dose única. Depuração predominantemente hepática.",
+          "indications": [
+            "AVC isquêmico agudo em adultos elegíveis",
+            "IAM com supra de ST para fibrinólise quando PCI imediata não é possível ou não é a estratégia escolhida"
+          ],
+          "commercialNames": [
+            "TNKase",
+            "Metalyse em alguns mercados"
+          ],
+          "presentation": "Pó liofilizado para reconstituição e bolus IV.",
+          "presentations": [
+            "Frasco para reconstituição com dose total compatível com 25 mg para AVC ou até 50 mg para IAM, conforme apresentação comercial"
+          ],
+          "dose": {
+            "AVC isquêmico": "0,25 mg/kg IV em bolus único, máximo 25 mg; a bula dos EUA usa faixas de peso equivalentes",
+            "IAM com supra": "Bolus único por peso, 30 a 50 mg, máximo 50 mg, conforme bula e protocolo"
+          },
+          "pediatricDose": "Segurança e eficácia não estabelecidas para AVC ou IAM pediátricos de rotina; uso pediátrico deve ser especializado.",
+          "renalDose": "Não há ajuste padronizado apenas por função renal; insuficiência renal avançada aumenta risco hemorrágico e deve integrar seleção do paciente.",
+          "hepaticDose": "Sem ajuste padronizado; doença hepática grave ou coagulopatia pode contraindicar fibrinólise pelo risco hemorrágico.",
+          "commonAdverseEffects": [
+            "Sangramento em sítios de punção",
+            "Equimoses",
+            "Náusea"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia intracraniana",
+            "Hemorragia interna grave",
+            "Choque hemorrágico",
+            "Reação de hipersensibilidade rara"
+          ],
+          "adverseEffects": "A toxicidade principal é hemorrágica. A administração em bolus simplifica logística, mas não reduz a necessidade de seleção rigorosa e monitorização.",
+          "contraindications": [
+            "Sangramento interno ativo",
+            "Hemorragia intracraniana ou subaracnoide atual",
+            "Condições intracranianas com alto risco de sangramento",
+            "Trauma craniano ou cirurgia intracraniana recente",
+            "Hipertensão grave não controlada e outras contraindicações específicas da indicação"
+          ],
+          "interactions": [
+            "Anticoagulantes, antiagregantes e outros fibrinolíticos aumentam risco de sangramento",
+            "Procedimentos invasivos próximos à trombólise aumentam risco hemorrágico"
+          ],
+          "monitoring": [
+            "Exame neurológico seriado no AVC",
+            "Pressão arterial",
+            "Sinais de sangramento",
+            "Hemoglobina e coagulação quando indicado",
+            "Reperfusão e arritmias no IAM"
+          ],
+          "administration": "Administrar IV como bolus único após reconstituição correta. No AVC, iniciar o mais rapidamente possível após confirmar elegibilidade.",
+          "preparation": "Reconstituir com o diluente fornecido pelo fabricante, misturando suavemente até solução límpida. Confirmar concentração final e volume correspondente ao peso antes do bolus.",
+          "infusionProtocol": "Não há infusão de manutenção: administrar como bolus IV único, geralmente em cerca de 5 segundos, conforme bula. Dose depende do peso e da indicação.",
+          "pregnancy": "Dados são limitados; usar apenas em situação trombótica grave quando benefício materno superar risco hemorrágico.",
+          "lactation": "Não há dados adequados sobre excreção no leite; devido à natureza proteica e curta exposição, absorção oral do lactente tende a ser baixa, mas individualizar.",
+          "specialPopulations": "Idade avançada, hipertensão, baixo peso, anticoagulação e doença renal ou hepática aumentam risco de sangramento e exigem avaliação rigorosa.",
+          "patientEducation": "Explicar que é um trombolítico de dose única e que sangramento, cefaleia súbita ou piora neurológica requerem comunicação imediata.",
+          "clinicalPearls": [
+            "Bolus único simplifica tratamento comparado à alteplase",
+            "No AVC a dose recomendada por diretriz é 0,25 mg/kg, máximo 25 mg",
+            "Não confundir esquema de AVC com esquema de IAM"
+          ],
+          "guidelineRecommendations": "AHA/ASA 2026: tenecteplase 0,25 mg/kg até máximo 25 mg ou alteplase 0,9 mg/kg são recomendadas para adultos elegíveis à trombólise IV dentro de 4,5 horas.",
+          "safetyFlags": [
+            "Alto risco hemorrágico",
+            "Bolus único por peso",
+            "Dose diferente para AVC e IAM",
+            "Exige exclusão de hemorragia intracraniana no AVC"
+          ],
+          "alerts": [
+            "Conferir indicação antes de calcular dose",
+            "Nunca usar a dose de IAM para AVC",
+            "Investigar imediatamente piora neurológica após administração"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e647640d-c395-4b4b-a0be-1162f9c21d84",
+            "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513"
+          ],
+          "ref": "DailyMed TNKase 2025; AHA/ASA Acute Ischemic Stroke Guideline 2026"
+        },
+        "es": {
+          "name": "Tenecteplasa",
+          "class": "Trombolítico fibrinolítico",
+          "pharmacologicClass": "Activador de plasminógeno modificado y fibrinoespecífico",
+          "mechanism": "Versión modificada del tPA con mayor especificidad por fibrina y mayor resistencia al inhibidor del activador de plasminógeno, permitiendo administración en bolo único.",
+          "pharmacodynamics": "Promueve conversión de plasminógeno en plasmina predominantemente en el trombo rico en fibrina. Produce fibrinólisis rápida con riesgo de hemorragia sistémica e intracraneal.",
+          "pharmacokinetics": "Administración IV en bolo. Vida media mayor que alteplasa, permitiendo dosis única. Depuración predominantemente hepática.",
+          "indications": [
+            "ACV isquémico agudo en adultos elegibles",
+            "IAM con elevación del ST para fibrinólisis cuando PCI inmediata no es posible o no es la estrategia elegida"
+          ],
+          "commercialNames": [
+            "TNKase",
+            "Metalyse en algunos mercados"
+          ],
+          "presentation": "Polvo liofilizado para reconstitución y bolo IV.",
+          "presentations": [
+            "Vial para reconstitución con dosis total compatible con 25 mg para ACV o hasta 50 mg para IAM según presentación comercial"
+          ],
+          "dose": {
+            "ACV isquémico": "0,25 mg/kg IV en bolo único, máximo 25 mg; la ficha de EE.UU. usa bandas de peso equivalentes",
+            "IAM con elevación ST": "Bolo único por peso, 30 a 50 mg, máximo 50 mg, según ficha y protocolo"
+          },
+          "pediatricDose": "Seguridad y eficacia no establecidas para ACV o IAM pediátricos de rutina; uso pediátrico debe ser especializado.",
+          "renalDose": "No existe ajuste estandarizado solo por función renal; insuficiencia renal avanzada aumenta riesgo hemorrágico y debe integrarse a selección.",
+          "hepaticDose": "Sin ajuste estandarizado; hepatopatía grave o coagulopatía puede contraindicar fibrinólisis por riesgo hemorrágico.",
+          "commonAdverseEffects": [
+            "Sangrado en sitios de punción",
+            "Equimosis",
+            "Náuseas"
+          ],
+          "dangerousAdverseEffects": [
+            "Hemorragia intracraneal",
+            "Hemorragia interna grave",
+            "Shock hemorrágico",
+            "Hipersensibilidad rara"
+          ],
+          "adverseEffects": "La toxicidad principal es hemorrágica. El bolo simplifica logística, pero no reduce la necesidad de selección rigurosa y monitorización.",
+          "contraindications": [
+            "Sangrado interno activo",
+            "Hemorragia intracraneal o subaracnoidea actual",
+            "Condiciones intracraneales con alto riesgo de sangrado",
+            "Trauma craneal o cirugía intracraneal reciente",
+            "Hipertensión grave no controlada y otras contraindicaciones específicas"
+          ],
+          "interactions": [
+            "Anticoagulantes, antiagregantes y otros fibrinolíticos aumentan riesgo de sangrado",
+            "Procedimientos invasivos cercanos a trombólisis aumentan riesgo hemorrágico"
+          ],
+          "monitoring": [
+            "Examen neurológico seriado en ACV",
+            "Presión arterial",
+            "Signos de sangrado",
+            "Hemoglobina y coagulación cuando corresponda",
+            "Reperfusión y arritmias en IAM"
+          ],
+          "administration": "Administrar IV como bolo único tras reconstitución correcta. En ACV iniciar lo antes posible tras confirmar elegibilidad.",
+          "preparation": "Reconstituir con el diluyente del fabricante, mezclando suavemente hasta solución clara. Confirmar concentración final y volumen según peso antes del bolo.",
+          "infusionProtocol": "No existe infusión de mantenimiento: administrar como bolo IV único, generalmente en unos 5 segundos, según ficha. La dosis depende del peso y la indicación.",
+          "pregnancy": "Datos limitados; usar solo en situación trombótica grave cuando el beneficio materno supere el riesgo hemorrágico.",
+          "lactation": "No hay datos adecuados de excreción en leche; por su naturaleza proteica y breve exposición, la absorción oral del lactante sería baja, pero individualizar.",
+          "specialPopulations": "Edad avanzada, hipertensión, bajo peso, anticoagulación y enfermedad renal o hepática aumentan riesgo hemorrágico y requieren evaluación rigurosa.",
+          "patientEducation": "Explicar que es un trombolítico de dosis única y que sangrado, cefalea súbita o empeoramiento neurológico deben comunicarse de inmediato.",
+          "clinicalPearls": [
+            "Bolo único simplifica tratamiento frente a alteplasa",
+            "En ACV la dosis recomendada por guía es 0,25 mg/kg, máximo 25 mg",
+            "No confundir esquema de ACV con esquema de IAM"
+          ],
+          "guidelineRecommendations": "AHA/ASA 2026: tenecteplasa 0,25 mg/kg hasta máximo 25 mg o alteplasa 0,9 mg/kg son recomendadas en adultos elegibles para trombólisis IV dentro de 4,5 horas.",
+          "safetyFlags": [
+            "Alto riesgo hemorrágico",
+            "Bolo único por peso",
+            "Dosis diferente para ACV e IAM",
+            "Requiere excluir hemorragia intracraneal en ACV"
+          ],
+          "alerts": [
+            "Confirmar indicación antes de calcular dosis",
+            "Nunca usar dosis de IAM para ACV",
+            "Investigar de inmediato empeoramiento neurológico tras administración"
+          ],
+          "references": [
+            "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e647640d-c395-4b4b-a0be-1162f9c21d84",
+            "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513"
+          ],
+          "ref": "DailyMed TNKase 2025; AHA/ASA Acute Ischemic Stroke Guideline 2026"
+        }
+      }
     }, /* fim tenecteplase */
 
     reteplase: {

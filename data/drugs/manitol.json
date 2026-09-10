@@ -1,262 +1,240 @@
 {
   "id": "manitol",
   "category": "cardio",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "id": "manitol",
     "name": "Manitol",
-    "class": "Diurético osmótico",
-    "category": "cardio",
+    "class": "Diurético osmótico intravenoso",
+    "pharmacologicClass": "Agente osmótico filtrável que aumenta osmolaridade tubular e plasmática",
+    "mechanism": "Aumenta osmolaridade plasmática e tubular, mobiliza água dos tecidos para o compartimento intravascular e reduz reabsorção tubular de água.",
+    "pharmacodynamics": "Produz diurese osmótica e reduz pressão intracraniana e intraocular. Pode expandir transitoriamente o volume intravascular antes da diurese e piorar congestão pulmonar.",
+    "pharmacokinetics": "Distribui-se principalmente no espaço extracelular, sofre pouco metabolismo e é eliminado por filtração glomerular. O acúmulo aumenta na insuficiência renal.",
+    "indications": [
+      "Redução da pressão intracraniana e tratamento do edema cerebral",
+      "redução da pressão intraocular elevada"
+    ],
     "commercialNames": [
-      "Manitol Baxter",
-      "Manitol JP",
-      "Manitol genérico"
+      "Mannitol Injection"
     ],
-    "presentation": [
-      "Solução IV 10%  — frascos 250 mL e 500 mL",
-      "Solução IV 20%  — frascos 250 mL e 500 mL"
+    "presentation": "Solução para infusão intravenosa.",
+    "presentations": [
+      "20%: 0,2 g/mL em bolsas de 250 ou 500 mL",
+      "25%: 0,25 g/mL em frasco conforme produto"
     ],
-    "mechanism": "Aumenta a osmolaridade plasmática e tubular, promovendo movimentação de água do meio intracelular para o intravascular e reduzindo reabsorção de água nos túbulos renais. Produz intensa diurese osmótica sem metabolização.",
-    "halfLife": "1–2 horas (função renal normal)",
-    "onset": "5–15 minutos IV",
     "dose": {
-      "adultoPadrao": "0,25–1 g/kg IV conforme indicação. Para 70 kg → 18–70 g IV em 15–30 min.",
-      "adultoGrave": "Doses repetidas conforme protocolo institucional e monitorização da osmolaridade sérica (meta < 320 mOsm/kg)."
+      "intracranialPressure": "0,25 g/kg IV a cada 6-8 h, infundido durante pelo menos 30 minutos, conforme a bula 20% atual.",
+      "intraocularPressure": "1,5-2 g/kg IV como dose única durante pelo menos 30 minutos; se pré-operatório, administrar 60-90 minutos antes."
     },
-    "risksByPatient": [
-      "Gestante: utilizar apenas quando claramente necessário e sob supervisão especializada.",
-      "Lactante: dados limitados — utilizar com cautela.",
-      "Idoso (40 anos): maior risco de desidratação, distúrbios eletrolíticos, lesão renal e sobrecarga volêmica paradoxal.",
-      "ICC: CONTRAINDICADO em descompensação ativa — pode precipitar edema pulmonar.",
-      "Anúria estabelecida: CONTRAINDICADO."
-    ],
+    "pediatricDose": "A dose depende do produto e da indicação; bulas específicas descrevem 1-2 g/kg ou 30-60 g/m2 em 30-60 min para redução da pressão intracraniana/intraocular. Usar protocolo pediátrico e monitorização intensiva.",
+    "renalDose": "Não usar em anúria. Avaliar função renal antes de iniciar; suspender se houver piora da função renal ou oligúria progressiva. O acúmulo aumenta risco de hiperosmolaridade e sobrecarga.",
+    "hepaticDose": "Não há ajuste específico por hepatopatia isolada; a decisão depende principalmente de volemia, rim, coração, pulmão e osmolaridade.",
     "commonAdverseEffects": [
-      "Poliúria",
-      "Cefaleia",
-      "Náuseas",
-      "Sede",
-      "Desidratação",
-      "Hipotensão"
+      "poliúria",
+      "sede",
+      "cefaleia",
+      "náuseas",
+      "alterações de sódio"
     ],
     "dangerousAdverseEffects": [
-      "Edema pulmonar",
-      "Insuficiência cardíaca aguda",
-      "Hipernatremia",
-      "Hiponatremia (sobrecarga de livre)",
-      "Lesão renal aguda por acúmulo",
-      "Choque hipovolêmico",
-      "Hiperosmolaridade grave"
+      "lesão renal osmótica",
+      "edema pulmonar",
+      "descompensação cardíaca",
+      "hiperosmolaridade",
+      "hiponatremia ou hipernatremia grave",
+      "toxicidade neurológica"
+    ],
+    "contraindications": [
+      "Anúria",
+      "hipovolemia grave",
+      "congestão vascular pulmonar grave ou edema pulmonar preexistente",
+      "hemorragia intracraniana ativa exceto durante craniotomia",
+      "hipersensibilidade"
+    ],
+    "interactions": [
+      "Outros nefrotóxicos aumentam risco renal",
+      "Outros diuréticos podem potencializar alterações de volemia e eletrólitos",
+      "Não administrar simultaneamente com sangue pelo mesmo equipo sem seguir instruções específicas de compatibilidade."
+    ],
+    "monitoring": [
+      "Osmolaridade sérica",
+      "sódio e outros eletrólitos",
+      "diurese",
+      "creatinina",
+      "estado cardíaco e pulmonar",
+      "pressão intracraniana ou intraocular conforme indicação"
+    ],
+    "administration": "Apenas IV; preferencialmente por veia central ou de grande calibre. Usar equipo com filtro para evitar infusão de cristais.",
+    "preparation": "Inspecionar cristais antes do uso; se presentes, seguir instruções do fabricante para resolubilização. Não transferir para bolsas de PVC quando a bula contraindicar.",
+    "infusionProtocol": "Para redução da PIC: 0,25 g/kg em pelo menos 30 min, repetível a cada 6-8 h se ainda indicado, com reavaliação renal, cardíaca, pulmonar, osmolar e eletrolítica antes de repetir.",
+    "pregnancy": "Usar apenas se a indicação materna justificar o risco; dados humanos são limitados.",
+    "lactation": "Dados clínicos limitados; individualizar conforme necessidade materna e exposição prevista.",
+    "specialPopulations": {
+      "renal": "Contraindicado em anúria e alto risco se a função renal piorar.",
+      "heartFailure": "A expansão intravascular inicial pode precipitar congestão.",
+      "brainInjury": "A indicação exige reavaliação clínica e osmolar seriada."
+    },
+    "patientEducation": [
+      "Uso hospitalar IV com monitorização",
+      "informar dispneia, dor torácica ou redução importante da urina se estiver consciente."
+    ],
+    "clinicalPearls": [
+      "Não é diurético para edema periférico rotineiro",
+      "A resposta e a segurança dependem de osmolaridade, rim e estado cardiopulmonar, não apenas da dose."
+    ],
+    "guidelineRecommendations": [
+      "A bula atual prioriza 0,25 g/kg para redução da pressão intracraniana; repetir apenas com reavaliação clínica e laboratorial."
+    ],
+    "safetyFlags": [
+      "ANURIA",
+      "OSMOLARIDADE",
+      "FUNCAO_RENAL",
+      "EDEMA_PULMONAR",
+      "ELETROLITOS"
     ],
     "alerts": [
-      "Dose osmótica padrão: 0,25–1 g/kg IV. Para peso 70 kg → 18–70 g IV.",
-      "Monitorar osmolaridade sérica — suspender se osmolaridade > 320 mOsm/kg (risco de lesão renal e acúmulo).",
-      "CONTRAINDICADO em edema pulmonar ativo, ICC descompensada e anúria estabelecida.",
-      "Pode causar expansão inicial do volume intravascular — risco em pacientes com IC prévia ou oligúria.",
-      "Monitorar diurese horária, sódio sérico, osmolaridade e creatinina durante infusão."
+      "Não administrar se houver anúria, hipovolemia grave ou edema pulmonar preexistente grave",
+      "Suspender se houver piora do estado renal, cardíaco ou pulmonar."
     ],
-    "ref": "Neurocritical Care Guidelines · ESC Heart Failure Guidelines · Lexicomp · UpToDate · Goodman & Gilman · FDA Label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "ClCr ≥ 50 mL/min: uso habitual com monitorização de osmolaridade e eletrólitos.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "0,25–1 g/kg",
-          "intervalo": "dose única ou repetida conforme protocolo",
-          "doseMaxima": "monitorar osmolaridade < 320 mOsm/kg",
-          "unidade": "g/kg"
-        },
-        "pediatrica": null,
-        "obs": "Função renal adequada. Monitorar osmolaridade sérica e diurese horária."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "0,25–0,5 g/kg",
-          "intervalo": "com cautela — intervalo estendido",
-          "doseMaxima": "osmolaridade < 310 mOsm/kg",
-          "unidade": "g/kg"
-        },
-        "pediatrica": null,
-        "obs": "ClCr 30–50 mL/min: dose reduzida. Monitorar osmolaridade, sódio e creatinina frequentemente."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "0,25 g/kg",
-          "intervalo": "somente hospitalar sob supervisão",
-          "doseMaxima": "osmolaridade < 305 mOsm/kg",
-          "unidade": "g/kg"
-        },
-        "pediatrica": null,
-        "obs": "ClCr 10–30 mL/min: risco elevado de acúmulo. Uso restrito a especialistas em UTI. Monitorização contínua."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr < 10 mL/min / anúria: CONTRAINDICADO. Acúmulo osmolar e risco de edema pulmonar."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálise: CONTRAINDICADO em uso rotineiro. Discussão especializada necessária em caso excepcional."
-      }
-    },
-    "safetyFlags": {
-      "hypotensionRisk": true,
-      "volumeOverloadRisk": true,
-      "dehydrationRisk": true,
-      "osmolarityRisk": true,
-      "renalHighRisk": true,
-      "qtRisk": false,
-      "infusionDrug": true,
-      "pregnancyCaution": true,
-      "warning": "Manitol pode inicialmente expandir o volume intravascular e precipitar edema pulmonar ou insuficiência cardíaca em pacientes suscetíveis. Monitorar osmolaridade sérica (suspender > 320 mOsm/kg) e diurese horária."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "Neurocritical Care Guidelines",
-        "ESC Heart Failure Guidelines",
-        "Lexicomp 2026",
-        "UpToDate",
-        "Goodman & Gilman",
-        "FDA Label"
+    "adverseEffects": {
+      "common": [
+        "poliúria",
+        "sede",
+        "cefaleia",
+        "náuseas",
+        "alterações de sódio"
       ],
-      "note": "Diurético osmótico utilizado principalmente em neurocríticos (HIC, edema cerebral). Relevante na cardiologia por capacidade de alterar rapidamente volemia e função renal. CONTRAINDICADO em IC descompensada ativa."
-    }
+      "dangerous": [
+        "lesão renal osmótica",
+        "edema pulmonar",
+        "descompensação cardíaca",
+        "hiperosmolaridade",
+        "hiponatremia ou hipernatremia grave",
+        "toxicidade neurológica"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ba7bf864-8a4d-4262-8fd1-00174fa2f9d1"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30"
   },
   "es": {
-    "id": "manitol",
     "name": "Manitol",
-    "class": "Diurético osmótico",
-    "category": "cardio",
+    "class": "Diurético osmótico intravenoso",
+    "pharmacologicClass": "Agente osmótico filtrable que aumenta osmolaridad tubular y plasmática",
+    "mechanism": "Aumenta osmolaridad plasmática y tubular, moviliza agua desde tejidos hacia el compartimento intravascular y reduce reabsorción tubular de agua.",
+    "pharmacodynamics": "Produce diuresis osmótica y reduce presión intracraneal e intraocular. Puede expandir transitoriamente volumen intravascular antes de la diuresis y empeorar congestión pulmonar.",
+    "pharmacokinetics": "Se distribuye principalmente en espacio extracelular, se metaboliza mínimamente y se elimina por filtración glomerular. La acumulación aumenta con insuficiencia renal.",
+    "indications": [
+      "Reducción de presión intracraneal y tratamiento de edema cerebral",
+      "reducción de presión intraocular elevada"
+    ],
     "commercialNames": [
-      "Manitol Baxter",
-      "Manitol JP",
-      "Manitol genérico"
+      "Mannitol Injection"
     ],
-    "presentation": [
-      "Solución IV 10% — frascos 250 mL y 500 mL",
-      "Solución IV 20% — frascos 250 mL y 500 mL"
+    "presentation": "Solución para infusión intravenosa.",
+    "presentations": [
+      "20%: 0.2 g/mL en bolsas de 250 o 500 mL",
+      "25%: 0.25 g/mL en vial según producto"
     ],
-    "mechanism": "Aumenta la osmolaridad plasmática y tubular, promoviendo el movimiento de agua desde el espacio intracelular al intravascular y reduciendo la reabsorción de agua en los túbulos renales. Produce intensa diuresis osmótica sin metabolización.",
-    "halfLife": "1–2 horas (función renal normal)",
-    "onset": "5–15 minutos IV",
     "dose": {
-      "adultoPadrao": "0,25–1 g/kg IV según indicación. Para 70 kg → 18–70 g IV en 15–30 min.",
-      "adultoGrave": "Dosis repetidas según protocolo institucional y monitorización de la osmolaridad sérica (meta < 320 mOsm/kg)."
+      "intracranialPressure": "0.25 g/kg IV cada 6-8 h, infundido durante al menos 30 minutos, según la ficha 20% actual.",
+      "intraocularPressure": "1.5-2 g/kg IV como dosis única durante al menos 30 minutos; si es preoperatorio, administrar 60-90 minutos antes."
     },
-    "risksByPatient": [
-      "Gestante: utilizar solo cuando sea claramente necesario y bajo supervisión especializada.",
-      "Lactante: datos limitados — utilizar con precaución.",
-      "Anciano (40 años): mayor riesgo de deshidratación, trastornos electrolíticos, lesión renal y sobrecarga de volumen paradójica.",
-      "ICC: CONTRAINDICADO en descompensación activa — puede precipitar edema pulmonar.",
-      "Anuria establecida: CONTRAINDICADO."
-    ],
+    "pediatricDose": "La dosificación depende del producto y la indicación; fichas específicas describen 1-2 g/kg o 30-60 g/m2 en 30-60 min para reducción de presión intracraneal/intraocular. Usar protocolo pediátrico y monitorización intensiva.",
+    "renalDose": "No usar en anuria. Evaluar función renal antes de iniciar; suspender si empeora función renal o aparece oliguria progresiva. La acumulación aumenta riesgo de hiperosmolaridad y sobrecarga.",
+    "hepaticDose": "No existe ajuste específico por hepatopatía aislada; la decisión depende principalmente de volumen, riñón, corazón, pulmón y osmolaridad.",
     "commonAdverseEffects": [
-      "Poliuria",
-      "Cefalea",
-      "Náuseas",
-      "Sed",
-      "Deshidratación",
-      "Hipotensión"
+      "poliuria",
+      "sed",
+      "cefalea",
+      "náuseas",
+      "alteraciones de sodio"
     ],
     "dangerousAdverseEffects": [
-      "Edema pulmonar",
-      "Insuficiencia cardíaca aguda",
-      "Hipernatremia",
-      "Hiponatremia (sobrecarga de agua libre)",
-      "Lesión renal aguda por acumulación",
-      "Shock hipovolémico",
-      "Hiperosmolaridad grave"
+      "lesión renal osmótica",
+      "edema pulmonar",
+      "descompensación cardíaca",
+      "hiperosmolaridad",
+      "hiponatremia o hipernatremia grave",
+      "toxicidad neurológica"
+    ],
+    "contraindications": [
+      "Anuria",
+      "hipovolemia grave",
+      "congestión vascular pulmonar grave o edema pulmonar preexistente",
+      "hemorragia intracraneal activa excepto durante craneotomía",
+      "hipersensibilidad"
+    ],
+    "interactions": [
+      "Otros nefrotóxicos aumentan riesgo renal",
+      "Otros diuréticos pueden potenciar alteraciones de volumen y electrolitos",
+      "No administrar simultáneamente con sangre por el mismo equipo sin seguir instrucciones específicas de compatibilidad."
+    ],
+    "monitoring": [
+      "Osmolaridad sérica",
+      "sodio y otros electrolitos",
+      "diuresis",
+      "creatinina",
+      "estado cardíaco y pulmonar",
+      "presión intracraneal o intraocular según indicación"
+    ],
+    "administration": "Solo IV; preferentemente por vena central o de gran calibre. Usar equipo con filtro para evitar infusión de cristales.",
+    "preparation": "Inspeccionar cristales antes de usar; si aparecen, seguir instrucciones del fabricante para resolubilización. No transferir a bolsas PVC cuando la ficha lo contraindique.",
+    "infusionProtocol": "Para reducción de PIC: 0.25 g/kg en al menos 30 min, repetible cada 6-8 h si sigue indicado, con reevaluación renal, cardíaca, pulmonar, osmolar y electrolítica antes de repetir.",
+    "pregnancy": "Usar solo si la indicación materna justifica el riesgo; datos humanos son limitados.",
+    "lactation": "Datos clínicos limitados; individualizar según necesidad materna y exposición prevista.",
+    "specialPopulations": {
+      "renal": "Contraindicado en anuria y alto riesgo si función renal empeora.",
+      "heartFailure": "La expansión intravascular inicial puede precipitar congestión.",
+      "brainInjury": "La indicación requiere reevaluación clínica y osmolar seriada."
+    },
+    "patientEducation": [
+      "Uso hospitalario IV con monitorización",
+      "informar disnea, dolor torácico o disminución marcada de orina si está consciente."
+    ],
+    "clinicalPearls": [
+      "No es un diurético para edema periférico rutinario",
+      "La respuesta y seguridad dependen de osmolaridad, riñón y estado cardiopulmonar, no solo de la dosis."
+    ],
+    "guidelineRecommendations": [
+      "La ficha actual prioriza 0.25 g/kg para reducción de presión intracraneal; repetir solo con reevaluación clínica y laboratorial."
+    ],
+    "safetyFlags": [
+      "ANURIA",
+      "OSMOLARIDAD",
+      "FUNCION_RENAL",
+      "EDEMA_PULMONAR",
+      "ELECTROLITOS"
     ],
     "alerts": [
-      "Dosis osmótica estándar: 0,25–1 g/kg IV. Para peso 70 kg → 18–70 g IV.",
-      "Monitorizar osmolaridad sérica — suspender si osmolaridad > 320 mOsm/kg (riesgo de lesión renal y acumulación).",
-      "CONTRAINDICADO en edema pulmonar activo, ICC descompensada y anuria establecida.",
-      "Puede causar expansión inicial del volumen intravascular — riesgo en pacientes con IC previa u oliguria.",
-      "Monitorizar diuresis horaria, sodio sérico, osmolaridad y creatinina durante la infusión."
+      "No administrar si existe anuria, hipovolemia grave o edema pulmonar preexistente grave",
+      "Suspender si empeora estado renal, cardíaco o pulmonar."
     ],
-    "ref": "Neurocritical Care Guidelines · ESC Heart Failure Guidelines · Lexicomp · UpToDate · Goodman & Gilman · FDA Label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "ClCr ≥ 50 mL/min: uso habitual con monitorización de osmolaridad y electrolitos.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "0,25–1 g/kg",
-          "intervalo": "dose única ou repetida conforme protocolo",
-          "doseMaxima": "monitorar osmolaridade < 320 mOsm/kg",
-          "unidade": "g/kg"
-        },
-        "pediatrica": null,
-        "obs": "Función renal adecuada. Monitorizar osmolaridad sérica y diuresis horaria."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "0,25–0,5 g/kg",
-          "intervalo": "com cautela — intervalo estendido",
-          "doseMaxima": "osmolaridade < 310 mOsm/kg",
-          "unidade": "g/kg"
-        },
-        "pediatrica": null,
-        "obs": "ClCr 30–50 mL/min: dosis reducida. Monitorizar osmolaridad, sodio y creatinina frecuentemente."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "0,25 g/kg",
-          "intervalo": "somente hospitalar sob supervisão",
-          "doseMaxima": "osmolaridade < 305 mOsm/kg",
-          "unidade": "g/kg"
-        },
-        "pediatrica": null,
-        "obs": "ClCr 10–30 mL/min: riesgo elevado de acumulación. Uso restringido a especialistas en UCI. Monitorización continua."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "ClCr < 10 mL/min / anuria: CONTRAINDICADO. Acumulación osmolar y riesgo de edema pulmonar."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Hemodiálisis: CONTRAINDICADO en uso rutinario. Discusión especializada necesaria en caso excepcional."
-      }
-    },
-    "safetyFlags": {
-      "hypotensionRisk": true,
-      "volumeOverloadRisk": true,
-      "dehydrationRisk": true,
-      "osmolarityRisk": true,
-      "renalHighRisk": true,
-      "qtRisk": false,
-      "infusionDrug": true,
-      "pregnancyCaution": true,
-      "warning": "El manitol puede expandir inicialmente el volumen intravascular y precipitar edema pulmonar o insuficiencia cardíaca en pacientes susceptibles. Monitorizar osmolaridad sérica (suspender > 320 mOsm/kg) y diuresis horaria."
-    },
-    "auditNotes": {
-      "status": "excellent_after_review",
-      "sourcePriority": [
-        "Neurocritical Care Guidelines",
-        "ESC Heart Failure Guidelines",
-        "Lexicomp 2026",
-        "UpToDate",
-        "Goodman & Gilman",
-        "FDA Label"
+    "adverseEffects": {
+      "common": [
+        "poliuria",
+        "sed",
+        "cefalea",
+        "náuseas",
+        "alteraciones de sodio"
       ],
-      "note": "Diurético osmótico utilizado principalmente en neurocríticos (HIC, edema cerebral). Relevante en cardiología por capacidad de alterar rápidamente la volemia y la función renal. CONTRAINDICADO en IC descompensada activa."
-    }
+      "dangerous": [
+        "lesión renal osmótica",
+        "edema pulmonar",
+        "descompensación cardíaca",
+        "hiperosmolaridad",
+        "hiponatremia o hipernatremia grave",
+        "toxicidad neurológica"
+      ]
+    },
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ba7bf864-8a4d-4262-8fd1-00174fa2f9d1"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30"
   },
   "name": {
     "pt": "Manitol",
@@ -266,8 +244,8 @@
     "manitol",
     "diuretico osmotico"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-08b9648aa55fe977",
+  "clinicalContentSha256": "08b9648aa55fe9778b43ee806de0b8f0eaf5f6422a9ff82ed29ac061bad30083",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -332,5 +310,15 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "manitol.mcGoldClinicalV1",
+    "group": "GOLD_GROUP06_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "887ce465a938d14a6959b5d37953d3a57075afd036926e0bd4ceb4bbe5619325",
+    "physicalHomologation": "DEFERRED"
   }
 }

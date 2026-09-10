@@ -1,14 +1,206 @@
 {
   "id": "amiodarona",
   "category": "cardiologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Amiodarona"
+    "name": "Amiodarona",
+    "class": "Antiarrítmico classe III de amplo espectro",
+    "pharmacologicClass": "Bloqueador predominante de canais de potássio com efeitos sobre sódio, cálcio e receptores beta",
+    "mechanism": "Prolonga repolarização e período refratário por bloqueio de canais de potássio, além de bloquear canais de sódio e cálcio e exercer efeito antiadrenérgico não competitivo.",
+    "pharmacodynamics": "Prolonga potencial de ação e QT, reduz automaticidade sinusal, lentifica condução AV e aumenta refratariedade atrial e ventricular. O efeito IV inicial inclui também vasodilatação e depressão nodal.",
+    "pharmacokinetics": "Muito lipofílica, grande volume de distribuição e meia-vida terminal de semanas. Metabolismo hepático principalmente por CYP3A4 e CYP2C8 a desetilamiodarona. Eliminação biliar; não é removida de forma relevante por diálise.",
+    "indications": [
+      "FV/TV sem pulso refratária à desfibrilação",
+      "TV ventricular hemodinamicamente instável recorrente ou refratária em contexto apropriado",
+      "Taquicardia de complexo largo estável em cenários selecionados",
+      "Controle de frequência em FA com resposta ventricular rápida em pacientes críticos selecionados sem pré-excitação"
+    ],
+    "commercialNames": [
+      "Cordarone",
+      "Pacerone",
+      "Amiodarona genérica"
+    ],
+    "presentation": "Solução injetável e comprimidos orais.",
+    "presentations": [
+      "Ampolas/frasco para injeção IV, frequentemente 50 mg/mL",
+      "Comprimidos 100 mg, 200 mg ou outras apresentações conforme mercado"
+    ],
+    "dose": {
+      "PCR FV/TVsp": "300 mg IV/IO em bolus; segunda dose 150 mg conforme AHA",
+      "Infusão IV": "150 mg em 100 mL de SG 5% em 10 min, depois 1 mg/min por 6 h e 0,5 mg/min depois",
+      "TV de complexo largo estável": "150 mg IV em 10 min, repetir conforme necessidade e limite total",
+      "Uso oral": "Carga e manutenção variam amplamente pela indicação; individualizar com cardiologia"
+    },
+    "pediatricDose": "Em ressuscitação pediátrica seguir PALS vigente; uso requer monitorização especializada e dose baseada em peso.",
+    "renalDose": "Não requer ajuste rotineiro por função renal e não é significativamente removida por diálise.",
+    "hepaticDose": "Metabolismo hepático importante. Reduzir ou interromper diante de elevação relevante de transaminases ou disfunção hepática atribuível ao fármaco.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Hipotensão IV",
+      "Náusea",
+      "Fotossensibilidade no uso crônico",
+      "Depósitos corneanos",
+      "Disfunção tireoidiana"
+    ],
+    "dangerousAdverseEffects": [
+      "Toxicidade pulmonar",
+      "Hepatotoxicidade grave",
+      "Bloqueio cardíaco",
+      "Torsades rara apesar de prolongar QT",
+      "Neuropatia óptica",
+      "Choque por hipotensão IV"
+    ],
+    "adverseEffects": "A toxicidade crônica é multissistêmica e inclui pulmão, tireoide, fígado, olhos, pele e nervos. No uso IV agudo predominam hipotensão e bradicardia.",
+    "contraindications": [
+      "Choque cardiogênico",
+      "Bradicardia sinusal marcada ou bloqueio AV de segundo ou terceiro grau sem marcapasso",
+      "Hipersensibilidade ao fármaco ou componentes"
+    ],
+    "interactions": [
+      "Aumenta níveis e efeito de varfarina",
+      "Aumenta digoxina; geralmente requer redução e monitorização",
+      "Interage com estatinas metabolizadas por CYP3A4",
+      "Outros prolongadores de QT e depressores nodais aumentam risco",
+      "Inibidores e indutores CYP3A4 alteram exposição"
+    ],
+    "monitoring": [
+      "ECG e QT",
+      "Pressão arterial na via IV",
+      "Função hepática",
+      "TSH e hormônios tireoidianos",
+      "Sintomas pulmonares e imagem quando indicado",
+      "Eletrólitos",
+      "Interações com varfarina e digoxina"
+    ],
+    "administration": "No uso IV, preferir SG 5% conforme formulação e administrar por bomba. Em infusão prolongada ou alta concentração, acesso central pode reduzir flebite e extravasamento.",
+    "preparation": "Para carga IV típica, diluir 150 mg em 100 mL de SG 5% e infundir em 10 minutos. Confirmar compatibilidade e concentração da formulação local.",
+    "infusionProtocol": "Carga 150 mg em 10 min, seguida de 1 mg/min por 6 h e 0,5 mg/min depois, total aproximado de 1000 mg nas primeiras 24 h conforme bula IV. Em PCR usar bolus do algoritmo AHA, não esse esquema.",
+    "pregnancy": "Atravessa placenta e pode causar disfunção tireoidiana fetal e outros efeitos. Evitar quando houver alternativa mais segura, mas pode ser necessária em arritmia materna grave refratária.",
+    "lactation": "É excretada no leite em quantidade relevante e tem meia-vida longa; em geral evitar amamentação durante terapia sistêmica prolongada, salvo decisão especializada.",
+    "specialPopulations": "Idosos e pacientes com doença sinusal, distúrbio de condução, doença pulmonar, hepática ou tireoidiana exigem vigilância aumentada.",
+    "patientEducation": "No uso crônico relatar tosse ou falta de ar, perda visual, perda ou ganho de peso, tremor, icterícia e bradicardia. Evitar exposição solar excessiva.",
+    "clinicalPearls": [
+      "Tem meia-vida extremamente longa",
+      "Prolonga QT mas torsades é menos comum que com muitos outros classe III",
+      "Não usar IV em FA com pré-excitação porque pode aumentar resposta ventricular e precipitar FV"
+    ],
+    "guidelineRecommendations": "AHA 2025: amiodarona ou lidocaína podem ser consideradas em FV/TV sem pulso refratária à desfibrilação. Amiodarona IV também pode ser considerada para taquicardia de complexo largo e pode ser útil para controle de frequência em FA de pacientes críticos sem pré-excitação.",
+    "safetyFlags": [
+      "Toxicidade pulmonar, hepática e tireoidiana",
+      "Múltiplas interações medicamentosas",
+      "Meia-vida muito longa",
+      "Risco de bradicardia e hipotensão IV"
+    ],
+    "alerts": [
+      "Não administrar amiodarona IV em FA/flutter com pré-excitação",
+      "Diferenciar esquema de PCR, carga IV de arritmia com pulso e terapia oral crônica"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7639dfe4-933c-2916-e053-2a91aa0a3fe7",
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+    ],
+    "ref": "DailyMed Amiodarone IV; AHA Adult Advanced Life Support 2025"
   },
   "es": {
-    "name": "Amiodarona"
+    "name": "Amiodarona",
+    "class": "Antiarrítmico clase III de amplio espectro",
+    "pharmacologicClass": "Bloqueador predominante de canales de potasio con efectos sobre sodio, calcio y receptores beta",
+    "mechanism": "Prolonga repolarización y período refractario por bloqueo de canales de potasio, además de bloquear canales de sodio y calcio y ejercer efecto antiadrenérgico no competitivo.",
+    "pharmacodynamics": "Prolonga potencial de acción y QT, reduce automatismo sinusal, enlentece conducción AV y aumenta refractariedad auricular y ventricular. El efecto IV inicial incluye vasodilatación y depresión nodal.",
+    "pharmacokinetics": "Muy lipofílica, gran volumen de distribución y vida media terminal de semanas. Metabolismo hepático principalmente CYP3A4 y CYP2C8 a desetilamiodarona. Eliminación biliar; no se elimina significativamente por diálisis.",
+    "indications": [
+      "FV/TV sin pulso refractaria a desfibrilación",
+      "TV ventricular hemodinámicamente inestable recurrente o refractaria en contexto apropiado",
+      "Taquicardia de complejo ancho estable en escenarios seleccionados",
+      "Control de frecuencia en FA con respuesta ventricular rápida en pacientes críticos seleccionados sin preexcitación"
+    ],
+    "commercialNames": [
+      "Cordarone",
+      "Pacerone",
+      "Amiodarona genérica"
+    ],
+    "presentation": "Solución inyectable y comprimidos orales.",
+    "presentations": [
+      "Ampollas/vial para inyección IV, frecuentemente 50 mg/mL",
+      "Comprimidos 100 mg, 200 mg u otras presentaciones según mercado"
+    ],
+    "dose": {
+      "PCR FV/TVsp": "300 mg IV/IO en bolo; segunda dosis 150 mg según AHA",
+      "Infusión IV": "150 mg en 100 mL de dextrosa 5% en 10 min, luego 1 mg/min por 6 h y 0,5 mg/min después",
+      "TV de complejo ancho estable": "150 mg IV en 10 min, repetir según necesidad y límite total",
+      "Uso oral": "Carga y mantenimiento varían ampliamente según indicación; individualizar con cardiología"
+    },
+    "pediatricDose": "En reanimación pediátrica seguir PALS vigente; el uso requiere monitorización especializada y dosis por peso.",
+    "renalDose": "No requiere ajuste rutinario por función renal y no se elimina de forma significativa por diálisis.",
+    "hepaticDose": "Metabolismo hepático importante. Reducir o suspender ante elevación relevante de transaminasas o disfunción hepática atribuible al fármaco.",
+    "commonAdverseEffects": [
+      "Bradicardia",
+      "Hipotensión IV",
+      "Náuseas",
+      "Fotosensibilidad en uso crónico",
+      "Depósitos corneales",
+      "Disfunción tiroidea"
+    ],
+    "dangerousAdverseEffects": [
+      "Toxicidad pulmonar",
+      "Hepatotoxicidad grave",
+      "Bloqueo cardíaco",
+      "Torsades rara pese a prolongar QT",
+      "Neuropatía óptica",
+      "Shock por hipotensión IV"
+    ],
+    "adverseEffects": "La toxicidad crónica es multisistémica e incluye pulmón, tiroides, hígado, ojos, piel y nervios. En uso IV agudo predominan hipotensión y bradicardia.",
+    "contraindications": [
+      "Shock cardiogénico",
+      "Bradicardia sinusal marcada o bloqueo AV de segundo o tercer grado sin marcapasos",
+      "Hipersensibilidad al fármaco o componentes"
+    ],
+    "interactions": [
+      "Aumenta niveles y efecto de warfarina",
+      "Aumenta digoxina; suele requerir reducción y monitorización",
+      "Interacciona con estatinas CYP3A4",
+      "Otros prolongadores de QT y depresores nodales aumentan riesgo",
+      "Inhibidores e inductores CYP3A4 alteran exposición"
+    ],
+    "monitoring": [
+      "ECG y QT",
+      "Presión arterial en vía IV",
+      "Función hepática",
+      "TSH y hormonas tiroideas",
+      "Síntomas pulmonares e imagen cuando corresponda",
+      "Electrolitos",
+      "Interacciones con warfarina y digoxina"
+    ],
+    "administration": "En uso IV preferir dextrosa 5% según formulación y administrar con bomba. En infusión prolongada o alta concentración, acceso central puede reducir flebitis y extravasación.",
+    "preparation": "Para carga IV típica, diluir 150 mg en 100 mL de dextrosa 5% e infundir en 10 minutos. Confirmar compatibilidad y concentración local.",
+    "infusionProtocol": "Carga 150 mg en 10 min, seguida de 1 mg/min por 6 h y 0,5 mg/min después, total aproximado 1000 mg en primeras 24 h según ficha IV. En PCR usar bolo del algoritmo AHA, no este esquema.",
+    "pregnancy": "Cruza placenta y puede causar disfunción tiroidea fetal y otros efectos. Evitar cuando exista alternativa más segura, aunque puede ser necesaria en arritmia materna grave refractaria.",
+    "lactation": "Se excreta en leche en cantidad relevante y tiene vida media larga; en general evitar lactancia durante terapia sistémica prolongada salvo decisión especializada.",
+    "specialPopulations": "Ancianos y pacientes con enfermedad sinusal, trastorno de conducción, enfermedad pulmonar, hepática o tiroidea requieren vigilancia aumentada.",
+    "patientEducation": "En uso crónico comunicar tos o disnea, pérdida visual, cambios importantes de peso, temblor, ictericia o bradicardia. Evitar exposición solar excesiva.",
+    "clinicalPearls": [
+      "Tiene vida media extremadamente larga",
+      "Prolonga QT pero torsades es menos frecuente que con muchos otros clase III",
+      "No usar IV en FA con preexcitación porque puede aumentar respuesta ventricular y precipitar FV"
+    ],
+    "guidelineRecommendations": "AHA 2025: amiodarona o lidocaína pueden considerarse en FV/TV sin pulso refractaria a desfibrilación. Amiodarona IV también puede considerarse en taquicardia de complejo ancho y puede ser útil para control de frecuencia en FA de pacientes críticos sin preexcitación.",
+    "safetyFlags": [
+      "Toxicidad pulmonar, hepática y tiroidea",
+      "Múltiples interacciones medicamentosas",
+      "Vida media muy larga",
+      "Riesgo de bradicardia e hipotensión IV"
+    ],
+    "alerts": [
+      "No administrar amiodarona IV en FA/flutter con preexcitación",
+      "Diferenciar esquema de PCR, carga IV con pulso y terapia oral crónica"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7639dfe4-933c-2916-e053-2a91aa0a3fe7",
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+    ],
+    "ref": "DailyMed Amiodarone IV; AHA Adult Advanced Life Support 2025"
   },
   "name": {
     "pt": "Amiodarona",
@@ -17,8 +209,8 @@
   "keywords": [
     "amiodarona"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+  "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardiologia.js",
@@ -62,12 +254,12 @@
             "Fotossensibilidade",
             "Constipação",
             "Tremor",
-            "⚠️ Toxicidade pulmonar",
-            "⚠️ Hepatotoxicidade",
-            "⚠️ Hipo/hipertireoidismo",
-            "⚠️ QT prolongado/Torsades",
-            "⚠️ Depósitos corneanos",
-            "⚠️ Neuropatia periférica"
+            " Toxicidade pulmonar",
+            " Hepatotoxicidade",
+            " Hipo/hipertireoidismo",
+            " QT prolongado/Torsades",
+            " Depósitos corneanos",
+            " Neuropatia periférica"
           ],
           "monitoramento": [
             "ECG + QTc",
@@ -90,7 +282,7 @@
           "alerts": [
             {
               "tipo": "danger",
-              "msg": "📦 BLACK BOX: Toxicidade pulmonar (pneumonite/fibrose) e hepática potencialmente fatais. Uso crônico restrito a arritmias ventriculares graves refratárias."
+              "msg": " BLACK BOX: Toxicidade pulmonar (pneumonite/fibrose) e hepática potencialmente fatais. Uso crônico restrito a arritmias ventriculares graves refratárias."
             }
           ]
         },
@@ -114,12 +306,12 @@
             "Fotosensibilidad",
             "Estreñimiento",
             "Temblor",
-            "⚠️ Toxicidad pulmonar",
-            "⚠️ Hepatotoxicidad",
-            "⚠️ Hipo/hipertiroidismo",
-            "⚠️ QT prolongado/Torsades",
-            "⚠️ Depósitos corneales",
-            "⚠️ Neuropatía periférica"
+            " Toxicidad pulmonar",
+            " Hepatotoxicidad",
+            " Hipo/hipertiroidismo",
+            " QT prolongado/Torsades",
+            " Depósitos corneales",
+            " Neuropatía periférica"
           ],
           "monitoramento": [
             "ECG + QTc",
@@ -142,7 +334,7 @@
           "alerts": [
             {
               "tipo": "danger",
-              "msg": "📦 BLACK BOX: Toxicidad pulmonar (neumonitis/fibrosis) y hepática potencialmente fatales. Uso crónico restringido a arritmias ventriculares graves refractarias."
+              "msg": " BLACK BOX: Toxicidad pulmonar (neumonitis/fibrosis) y hepática potencialmente fatales. Uso crónico restringido a arritmias ventriculares graves refractarias."
             }
           ]
         },
@@ -153,8 +345,8 @@
         "keywords": [
           "amiodarona"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-51967ecf93b531fc",
+        "clinicalContentSha256": "51967ecf93b531fc0b026257046c435335786b6ea27f3a165b56409e28c0d52f",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "cardio.js"
@@ -222,5 +414,15 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "amiodarona.mcGoldClinicalV1",
+    "group": "GOLD_GROUP03_CARDIO_10",
+    "review": "2026-09",
+    "requiredFields": 33,
+    "contentSha256": "f5e4d8703f3496393874e00ffbef36bf3b380ea84138bb63a4e54ae9e1c8f4ad",
+    "physicalHomologation": "DEFERRED"
   }
 }
