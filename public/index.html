@@ -65665,7 +65665,26 @@ body > #mc-drug-detail-page-v21 .mcd-body ul{
 
       if(!target)return;
 
+      /* MEDCASES_GLOBAL_DOSE_ENGINE_R8_R5_R7_CAPTURE_TO_R8_EVENT_OWNER_CUTOVER
+       R7 remains the capture barrier for legacy handlers, but the visible dose
+       result owner is R8. Forward the explicit calculate action to R8 through
+       a non-click internal event, then stop the legacy click chain. */
+    const __mcR8Button=event.target instanceof Element
+      ? event.target.closest('#'+PAGE_ID+' .mcd-calc-btn')
+      : null;
+    if(
+      __mcR8Button &&
+      window.__MC_GLOBAL_DOSE_R8_EVENT_OWNER_ACTIVE__===true
+    ){
       event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      __mcR8Button.dispatchEvent(
+        new CustomEvent('mc-global-dose-r8-request',{bubbles:true,cancelable:false})
+      );
+      return;
+    }
+    event.preventDefault();
       event.stopPropagation();
       event.stopImmediatePropagation();
 
@@ -69257,7 +69276,15 @@ const apply=async(reason)=>{
 
 const schedule=reason=>[0,90,240,480].forEach(ms=>setTimeout(()=>apply(reason+'@'+ms),ms));
 
+/* MEDCASES_GLOBAL_DOSE_ENGINE_R8_R5_R7_CAPTURE_TO_R8_EVENT_OWNER_CUTOVER */
+window.__MC_GLOBAL_DOSE_R8_EVENT_OWNER_ACTIVE__=true;
 document.addEventListener('click',e=>{
+  const btn=e.target instanceof Element
+    ? e.target.closest('#'+PAGE_ID+' .mcd-calc-btn')
+    : null;
+  if(btn)schedule('calculate-click');
+},true);
+document.addEventListener('mc-global-dose-r8-request',e=>{
   const btn=e.target instanceof Element
     ? e.target.closest('#'+PAGE_ID+' .mcd-calc-btn')
     : null;
