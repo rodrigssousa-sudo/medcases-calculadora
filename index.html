@@ -65418,6 +65418,29 @@ body > #mc-drug-detail-page-v21 .mcd-body ul{
     S.sig=sig(p);
   };
 
+  /* MEDCASES_GLOBAL_DOSE_ENGINE_R8_R7_VISIBLE_RESULT_OWNER_BRIDGE_V1_B_R0
+     R7 remains the exclusive visible-result owner.
+     R8 publishes its already-calculated HTML through R7 so R7's own
+     enforcement state preserves the final visible result instead of
+     restoring the neutral prompt. */
+  window.__MC_R7_PUBLISH_GLOBAL_DOSE_R8__=(html)=>{
+    const p=parts();
+    if(!p?.owner||!p?.result||!p?.page)return false;
+
+    const visibleHtml=
+      '<div class="mcd-result-text mcd-r8-visible-bridge" data-mc-r8-visible-bridge="active">'
+      +String(html??'')
+      +'</div>';
+
+    p.result.dataset.mcR6State='calculated';
+    setVisible(p,visibleHtml,'calculated');
+
+    p.owner.dataset.mcR8VisibleBridge='active';
+    p.page.dataset.mcGlobalDoseR8VisibleBridge='r7-exclusive';
+
+    return true;
+  };
+
   const neutral=()=>{
     const p=parts();
 
@@ -69197,6 +69220,28 @@ const fetchDrug=async page=>{
   return null;
 };
 
+/* MEDCASES_GLOBAL_DOSE_ENGINE_R8_R7_VISIBLE_RESULT_OWNER_BRIDGE_V1_B_R0 */
+
+const publishVisible=(p,html)=>{
+  p.out.innerHTML=html;
+  p.result?.setAttribute('data-mc-global-dose-r8','active');
+
+  const bridged=(
+    typeof window.__MC_R7_PUBLISH_GLOBAL_DOSE_R8__==='function'
+    &&window.__MC_R7_PUBLISH_GLOBAL_DOSE_R8__(html)===true
+  );
+
+  p.page.dataset.mcGlobalDoseR8VisibleBridge=
+    bridged?'r7-exclusive':'unavailable';
+
+  if(bridged){
+    p.result.dataset.mcR6State='calculated';
+    p.page.dataset.mcCalculationStatus='calculated-after-explicit-click';
+  }
+
+  return bridged;
+};
+
 const apply=async(reason)=>{
   const p=parts();
   if(!p||p.page.dataset.open!=='true'||!p.out)return false;
@@ -69234,8 +69279,7 @@ const apply=async(reason)=>{
       html+=`<div class="mcd-r8-ref">${l==='es'
         ?'No existe una dosis pediátrica estándar disponible; no se extrapola la dosis del adulto.'
         :'Não existe dose pediátrica padrão disponível; a dose do adulto não é extrapolada.'}</div>`;
-      p.out.innerHTML=html;
-      p.result?.setAttribute('data-mc-global-dose-r8','active');
+      publishVisible(p,html);
       p.page.dataset.mcGlobalDoseR8='pediatric-no-standard';
       return true;
     }
@@ -69271,8 +69315,7 @@ const apply=async(reason)=>{
     }
   }
 
-  p.out.innerHTML=html;
-  p.result?.setAttribute('data-mc-global-dose-r8','active');
+  publishVisible(p,html);
   p.page.dataset.mcGlobalDoseR8Reason=String(reason||'');
   return true;
 };
