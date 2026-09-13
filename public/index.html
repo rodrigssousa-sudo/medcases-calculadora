@@ -69007,112 +69007,171 @@ const canonicalAliasFile=value=>{
   return (map&&map[key])||'';
 };
 
-const resourceCandidates=page=>{
-  const ids=[
-    page?.dataset?.mcDrugId,
-    page?.querySelector?.('.mcd-name')?.textContent,
-    document.getElementById('fd-modal')?.dataset?.currentDrugId,
-    document.getElementById('fd-modal')?.dataset?.drugId,
-    window.__fdCanonicalCurrentDrug?.id,
-    window.__mcCanonicalCurrentDrug?.id
-  ].map(v=>String(v??'').trim()).filter(Boolean);
+/* MEDCASES_GLOBAL_DOSE_ENGINE_R8_R4_TRUSTED_CANONICAL_IDENTITY_PRIORITY
+   The visible canonical drug title is authoritative for dose-data resolution.
+   Runtime datasets can be polluted by section/provider identities (for example
+   a dose subsection) and therefore must never outrank a canonical visible alias. */
+const identityNorm=value=>String(value??'')
+  .replace(/\.json$/i,'')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g,'')
+  .toLowerCase()
+  .replace(/[^a-z0-9]/g,'');
 
-  const urls=[];
-
-  for(const id of ids){
-    const alias=canonicalAliasFile(id);
-    if(alias)urls.push('data/drugs/'+alias);
-
-    const base=id.replace(/\.json$/i,'');
-    const plain=base.normalize('NFD')
-      .replace(/[\u0300-\u036f]/g,'')
-      .toLowerCase();
-
-    const underscored=plain
-      .replace(/[^a-z0-9]+/g,'_')
-      .replace(/^_+|_+$/g,'');
-
-    const compact=plain.replace(/[^a-z0-9]/g,'');
-
-    for(const candidate of [
-      base.toLowerCase(),
-      plain,
-      underscored,
-      compact
-    ]){
-      if(candidate){
-        urls.push(
-          'data/drugs/'+encodeURIComponent(candidate)+'.json'
-        );
-      }
-    }
-  }
-
-  /* If the canonical renderer already loaded the active JSON, retain that
-     concrete resource as a candidate. Match only basenames related to one
-     of the current identity candidates; never take an arbitrary drug JSON. */
-  const wanted=new Set();
-  for(const id of ids){
-    const alias=canonicalAliasFile(id);
-    if(alias){
-      wanted.add(
-        alias.replace(/\.json$/i,'').normalize('NFD')
-          .replace(/[\u0300-\u036f]/g,'')
-          .toLowerCase().replace(/[^a-z0-9]/g,'')
-      );
-    }
-    wanted.add(
-      id.replace(/\.json$/i,'').normalize('NFD')
-        .replace(/[\u0300-\u036f]/g,'')
-        .toLowerCase().replace(/[^a-z0-9]/g,'')
-    );
-  }
-
-  try{
-    const entries=performance.getEntriesByType('resource');
-    for(let i=entries.length-1;i>=0;i--){
-      const url=String(entries[i]?.name||'');
-      const m=url.match(/\/data\/drugs\/([^/?]+)\.json/i);
-      if(!m)continue;
-      let decoded=m[1];
-      try{decoded=decodeURIComponent(decoded)}catch(_){}
-      const n=decoded.normalize('NFD')
-        .replace(/[\u0300-\u036f]/g,'')
-        .toLowerCase().replace(/[^a-z0-9]/g,'');
-      if(wanted.has(n)){
-        urls.unshift(
-          'data/drugs/'+encodeURIComponent(decoded)+'.json'
-        );
-      }
-    }
-  }catch(_){}
-
-  return [...new Set(urls)];
+const basenameFromUrl=url=>{
+  const m=String(url??'').match(/\/data\/drugs\/([^/?]+)\.json/i);
+  if(!m)return '';
+  try{return decodeURIComponent(m[1])+'.json';}catch(_){return m[1]+'.json';}
 };
 
-const fetchDrug=async page=>{
-  const identity=[
-    page?.dataset?.mcDrugId||'',
-    page?.querySelector?.('.mcd-name')?.textContent||'',
-    lang(page)
-  ].join('|');
+const localizedNames=data=>{
+  const out=[];
+  for(const l of ['pt','es']){
+    const loc=data?.[l];
+    if(loc&&typeof loc==='object'){
+      for(const k of ['name','nome','nombre']){
+        if(loc[k])out.push(String(loc[k]));
+      }
+    }
+  }
+  for(const k of ['name','nome','nombre','id','key','slug','drugId']){
+    if(data?.[k])out.push(String(data[k]));
+  }
+  return out;
+};
 
-  if(cache.has(identity))return cache.get(identity);
+const resourceCandidates=page=>{
+  const visible=String(page?.querySelector?.('.mcd-name')?.textContent||'').trim();
+  const pageId=String(page?.dataset?.mcDrugId||'').trim();
+  const fd=document.getElementById('fd-modal');
+  const otherIds=[
+    window.__fdCanonicalCurrentDrug?.id,
+    window.__mcCanonicalCurrentDrug?.id,
+    fd?.dataset?.currentDrugId,
+    fd?.dataset?.drugId,
+    pageId
+  ].map(v=>String(v??'').trim()).filter(Boolean);
 
-  for(const url of resourceCandidates(page)){
+  const visibleAlias=canonicalAliasFile(visible);
+  const candidates=[];
+  const push=(url,authority,expectedFile='')=>{
+    if(!url)return;
+    candidates.push({url,authority,expectedFile});
+  };
+
+  /* 1. Canonical visible alias is strongest. */
+  if(visibleAlias){
+    push('data/drugs/'+visibleAlias,'VISIBLE_ALIAS',visibleAlias);
+  }
+
+  /* 2. Already-loaded resource is trusted only if it is the canonical visible file. */
+  if(visibleAlias){
     try{
-      const res=await fetch(url,{cache:'default'});
-      if(!res.ok)continue;
-      const data=await res.json();
-      if(data&&typeof data==='object'){
-        cache.set(identity,data);
-        page.dataset.mcGlobalDoseR8DataUrl=url;
-        return data;
+      const entries=performance.getEntriesByType('resource');
+      for(let i=entries.length-1;i>=0;i--){
+        const file=basenameFromUrl(entries[i]?.name||'');
+        if(file&&identityNorm(file)===identityNorm(visibleAlias)){
+          push('data/drugs/'+encodeURIComponent(file.replace(/\.json$/i,''))+'.json','VISIBLE_RESOURCE',visibleAlias);
+          break;
+        }
       }
     }catch(_){}
   }
 
+  /* 3. Other identities are allowed only through the canonical alias map.
+        If a visible canonical alias exists, conflicting aliases are rejected. */
+  for(const id of otherIds){
+    const alias=canonicalAliasFile(id);
+    if(!alias)continue;
+    if(visibleAlias&&identityNorm(alias)!==identityNorm(visibleAlias))continue;
+    push('data/drugs/'+alias,'MAPPED_RUNTIME_ALIAS',alias);
+  }
+
+  /* 4. Raw filename guesses are last-resort only when no canonical visible alias exists. */
+  if(!visibleAlias){
+    for(const id of [visible,...otherIds]){
+      if(!id)continue;
+      const base=id.replace(/\.json$/i,'');
+      const plain=base.normalize('NFD')
+        .replace(/[\u0300-\u036f]/g,'')
+        .toLowerCase();
+      const underscored=plain.replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,'');
+      const compact=plain.replace(/[^a-z0-9]/g,'');
+      for(const c of [base.toLowerCase(),plain,underscored,compact]){
+        if(c)push('data/drugs/'+encodeURIComponent(c)+'.json','RAW_LAST_RESORT','');
+      }
+    }
+  }
+
+  const seen=new Set();
+  return candidates.filter(c=>{
+    if(seen.has(c.url))return false;
+    seen.add(c.url);
+    return true;
+  });
+};
+
+const candidateMatchesPage=(data,candidate,page)=>{
+  if(!data||typeof data!=='object')return false;
+
+  const visible=String(page?.querySelector?.('.mcd-name')?.textContent||'').trim();
+  const visibleAlias=canonicalAliasFile(visible);
+  const actualFile=basenameFromUrl(candidate?.url||'');
+
+  /* When the visible title maps canonically, only that exact physical JSON is admissible. */
+  if(visibleAlias){
+    return identityNorm(actualFile)===identityNorm(visibleAlias);
+  }
+
+  /* Without a mapped visible title, require semantic identity agreement. */
+  const wanted=new Set([
+    visible,
+    page?.dataset?.mcDrugId,
+    document.getElementById('fd-modal')?.dataset?.currentDrugId,
+    document.getElementById('fd-modal')?.dataset?.drugId,
+    window.__fdCanonicalCurrentDrug?.id,
+    window.__mcCanonicalCurrentDrug?.id
+  ].map(identityNorm).filter(Boolean));
+
+  const got=localizedNames(data).map(identityNorm).filter(Boolean);
+  if(got.some(k=>wanted.has(k)))return true;
+
+  const actualKey=identityNorm(actualFile);
+  return actualKey&&wanted.has(actualKey);
+};
+
+const fetchDrug=async page=>{
+  const visible=String(page?.querySelector?.('.mcd-name')?.textContent||'').trim();
+  const visibleAlias=canonicalAliasFile(visible);
+  const stableIdentity=visibleAlias||identityNorm(visible)||canonicalAliasFile(page?.dataset?.mcDrugId||'')||identityNorm(page?.dataset?.mcDrugId||'');
+  const identity=[stableIdentity,lang(page)].join('|');
+
+  if(cache.has(identity)){
+    const cached=cache.get(identity);
+    if(cached&&typeof cached==='object')return cached;
+    cache.delete(identity);
+  }
+
+  const tried=[];
+  for(const candidate of resourceCandidates(page)){
+    tried.push(candidate.url);
+    try{
+      const res=await fetch(candidate.url,{cache:'default'});
+      if(!res.ok)continue;
+      const data=await res.json();
+      if(!candidateMatchesPage(data,candidate,page))continue;
+      cache.set(identity,data);
+      page.dataset.mcGlobalDoseR8DataUrl=candidate.url;
+      page.dataset.mcGlobalDoseR8DataAuthority=candidate.authority;
+      page.dataset.mcGlobalDoseR8StableIdentity=stableIdentity;
+      return data;
+    }catch(_){}
+  }
+
   page.dataset.mcGlobalDoseR8DataUrl='UNRESOLVED';
+  page.dataset.mcGlobalDoseR8DataAuthority='NONE';
+  page.dataset.mcGlobalDoseR8StableIdentity=stableIdentity||'NONE';
+  page.dataset.mcGlobalDoseR8Tried=tried.slice(0,8).join('|');
   return null;
 };
 
