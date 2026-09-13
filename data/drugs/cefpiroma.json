@@ -1,236 +1,170 @@
 {
   "id": "cefpiroma",
   "category": "atb",
-  "icon": "🧪",
+  "icon": "",
   "color": "rgba(220,38,38,0.12)",
   "colorTxt": "#DC2626",
   "pt": {
     "name": "Cefpiroma",
-    "class": "Cefalosporina de 4ª geração (EV)",
-    "commercialNames": {
-      "br": [
-        "Cefrom"
-      ],
-      "ar": [
-        "Cefrom"
-      ]
-    },
-    "presentation": [
-      "Pó para solução injetável EV: 1 g e 2 g por frasco"
+    "class": "Cefalosporina parenteral de 4ª geração",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoEV": "1–2 g EV 12/12h"
-    },
+    "presentation": "Pó para injeção IV/IM conforme mercado.",
+    "dose": "Adultos: 1–2 g q12h IV; infecções muito graves podem requerer 2 g q12h conforme produto e suscetibilidade.",
     "doseKg": null,
     "indication": "Infecções graves por Gram-negativos incluindo Pseudomonas aeruginosa, pneumonia hospitalar, infecções em pacientes neutropênicos febris, sepse bacteriana.",
     "spectrum": "Espectro amplo: Pseudomonas aeruginosa, Enterobacterales (incluindo produtores de AmpC), Staphylococcus aureus (MSSA), Streptococcus spp. Inferior à cefepima no mercado global, mas perfil semelhante. Sem atividade contra MRSA, Enterococcus ou anaeróbios.",
-    "contraindications": [
-      "Hipersensibilidade às cefalosporinas ou penicilinas (reação cruzada ~1–2%)"
-    ],
+    "contraindications": "Hipersensibilidade grave à cefpiroma/cefalosporinas.",
     "risksByPatient": [],
     "alerts": [
-      "Neurotoxicidade (encefalopatia, convulsões) — risco aumentado em insuficiência renal sem ajuste de dose.",
-      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+      "Adulto 1–2 g q12h",
+      "CrCl 20–50: ~50% dose diária",
+      "CrCl <20: ~25%",
+      "Carga histórica 1 g",
+      "Não extrapolar pediatria histórica"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / EMA Prescribing Information",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para infecções graves por Gram-negativos."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reduzir dose em insuficiência renal moderada."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obrigatório."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar encefalopatia e neurotoxicidade."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após HD."
-      }
-    }
+    "ref": [
+      "https://www.pmda.go.jp/files/000223549.pdf",
+      "https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-brasileira/insumos-farmaceuticos-e-especialidades_ingles-1.pdf",
+      "https://precision.fda.gov/ginas/app/ui/substances/0a2501ca-912c-4507-b84a-7dd8d91a5ddf",
+      "https://pubmed.ncbi.nlm.nih.gov/8261711/",
+      "https://pubmed.ncbi.nlm.nih.gov/1623690/",
+      "https://pubmed.ncbi.nlm.nih.gov/8619595/"
+    ],
+    "renalDose": "CrCl >50: dose usual; 20–50: aproximadamente 50% da dose diária usual; <20: aproximadamente 25%. Uma carga inicial de 1 g foi proposta em estudos PK históricos.",
+    "pharmacologicClass": "Cefalosporina de amplo espectro com eliminação predominantemente renal",
+    "mechanism": "Liga-se a PBPs e inibe síntese da parede; estrutura zwitteriônica favorece penetração em Gram-negativos.",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é o índice PK/PD relevante. Suscetibilidade local é essencial.",
+    "pharmacokinetics": "IV/IM em alguns mercados, baixa ligação proteica e cerca de 80% eliminada inalterada na urina; meia-vida ~2 h com função renal normal.",
+    "indications": "Infecções graves por Gram-positivos/Gram-negativos suscetíveis, incluindo sepse, pneumonia, UTI e meningite conforme aprovações locais históricas.",
+    "presentations": [
+      "0,5 g",
+      "1 g",
+      "2 g conforme produto"
+    ],
+    "pediatricDose": "Não há esquema pediátrico contemporâneo universalmente validado. Estudos PK históricos avaliaram 10–50 mg/kg e alguns estudos 20 mg/kg, mas isso não deve ser tratado como recomendação atual.",
+    "hepaticDose": "Disfunção hepática isolada tem pouco impacto comparado ao rim; sem ajuste numérico rotineiro bem estabelecido.",
+    "commonAdverseEffects": [
+      "Rash",
+      "Flebite",
+      "Diarreia",
+      "Elevação de transaminases"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Encefalopatia/mioclonia/convulsões por acúmulo",
+      "Citopenias"
+    ],
+    "adverseEffects": "Como outras cefalosporinas renais, acúmulo pode aumentar neurotoxicidade em DRC.",
+    "interactions": "Nefrotóxicos e diuréticos potentes exigem vigilância renal.",
+    "monitoring": "CrCl, estado neurológico, culturas e hemograma/função hepática em terapia prolongada.",
+    "administration": "IV lenta ou infusão conforme produto; não é adequadamente absorvida por via oral.",
+    "preparation": "Reconstituir e diluir segundo produto local.",
+    "infusionProtocol": "Regimes históricos usam injeção IV ou infusão de 20–30 min; estratégias prolongadas são especializadas e dependem de PK/PD.",
+    "pregnancy": "Dados contemporâneos são limitados; usar apenas se benefício justificar.",
+    "lactation": "Dados limitados; avaliar risco-benefício.",
+    "specialPopulations": "Disponibilidade e rotulagem variam entre países; em DRC a meia-vida pode aumentar marcadamente.",
+    "patientEducation": "Explicar que a dose depende da função renal e que confusão, mioclonia ou convulsão exigem avaliação urgente.",
+    "clinicalPearls": "Cefpiroma é uma cefalosporina de 4ª geração com uso atual limitado em muitos mercados; o principal princípio seguro é ajuste renal e não extrapolar doses pediátricas históricas.",
+    "guidelineRecommendations": "Usar somente onde houver produto autorizado, breakpoint e suscetibilidade válidos; para Gram-negativos multirresistentes preferir opções sustentadas por diretrizes atuais.",
+    "safetyFlags": [
+      "4ª geração",
+      "Ajuste renal",
+      "Neurotoxicidade por acúmulo",
+      "Rotulagem varia por país",
+      "Pediatria sem esquema atual universal"
+    ],
+    "references": [
+      "https://www.pmda.go.jp/files/000223549.pdf",
+      "https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-brasileira/insumos-farmaceuticos-e-especialidades_ingles-1.pdf",
+      "https://precision.fda.gov/ginas/app/ui/substances/0a2501ca-912c-4507-b84a-7dd8d91a5ddf",
+      "https://pubmed.ncbi.nlm.nih.gov/8261711/",
+      "https://pubmed.ncbi.nlm.nih.gov/1623690/",
+      "https://pubmed.ncbi.nlm.nih.gov/8619595/"
+    ]
   },
   "es": {
     "name": "Cefpiroma",
-    "class": "Cefalosporina de 4.ª generación (EV)",
-    "commercialNames": {
-      "br": [
-        "Cefrom"
-      ],
-      "ar": [
-        "Cefrom"
-      ]
-    },
-    "presentation": [
-      "Polvo para solución inyectable EV: 1 g y 2 g por frasco"
+    "class": "Cefalosporina parenteral de 4ª generación",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoEV": "1–2 g EV 12/12h"
-    },
+    "presentation": "Polvo IV/IM según mercado.",
+    "dose": "Adultos: 1–2 g q12h IV; infecciones muy graves pueden requerir 2 g q12h según producto/susceptibilidad.",
     "doseKg": null,
     "indication": "Infecciones graves por Gramnegativos incluida Pseudomonas aeruginosa, neumonía hospitalaria, infecciones en pacientes neutropénicos febriles, sepsis bacteriana.",
     "spectrum": "Espectro amplio: Pseudomonas aeruginosa, Enterobacterales (incluidos productores de AmpC), Staphylococcus aureus (MSSA), Streptococcus spp. Perfil similar a cefepima. Sin actividad frente a MRSA, Enterococcus ni anaerobios.",
-    "contraindications": [
-      "Hipersensibilidad a cefalosporinas o penicilinas (reacción cruzada ~1–2%)"
-    ],
+    "contraindications": "Hipersensibilidad grave a cefpiroma/cefalosporinas.",
     "risksByPatient": [],
     "alerts": [
-      "Neurotoxicidad (encefalopatía, convulsiones) — riesgo aumentado en insuficiencia renal sin ajuste de dosis.",
-      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+      "Adulto 1–2 g q12h",
+      "ClCr 20–50: ~50% dosis diaria",
+      "ClCr <20: ~25%",
+      "Carga histórica 1 g",
+      "No extrapolar pediatría histórica"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / EMA Prescribing Information",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para infecciones graves por Gramnegativos."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducir dosis en insuficiencia renal moderada."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obligatorio."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar encefalopatía y neurotoxicidad."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de HD."
-      }
-    }
+    "ref": [
+      "https://www.pmda.go.jp/files/000223549.pdf",
+      "https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-brasileira/insumos-farmaceuticos-e-especialidades_ingles-1.pdf",
+      "https://precision.fda.gov/ginas/app/ui/substances/0a2501ca-912c-4507-b84a-7dd8d91a5ddf",
+      "https://pubmed.ncbi.nlm.nih.gov/8261711/",
+      "https://pubmed.ncbi.nlm.nih.gov/1623690/",
+      "https://pubmed.ncbi.nlm.nih.gov/8619595/"
+    ],
+    "renalDose": "ClCr >50: dosis usual; 20–50: ~50% de dosis diaria; <20: ~25%. Estudios PK históricos propusieron carga inicial 1 g.",
+    "pharmacologicClass": "Cefalosporina de amplio espectro con eliminación principalmente renal",
+    "mechanism": "Se une a PBPs e inhibe pared; estructura zwitteriónica favorece penetración en Gram negativos.",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. La susceptibilidad local es esencial.",
+    "pharmacokinetics": "IV/IM en algunos mercados, baja unión proteica y ~80% se elimina sin cambios en orina; semivida ~2 h con función renal normal.",
+    "indications": "Infecciones graves por Gram positivos/negativos susceptibles, incluidas sepsis, neumonía, UTI y meningitis según autorizaciones locales históricas.",
+    "presentations": [
+      "0,5 g",
+      "1 g",
+      "2 g según producto"
+    ],
+    "pediatricDose": "No existe un esquema pediátrico contemporáneo universalmente validado. Estudios históricos evaluaron 10–50 mg/kg, pero no constituyen recomendación actual.",
+    "hepaticDose": "Hepatopatía aislada influye poco frente al riñón; sin ajuste numérico rutinario bien establecido.",
+    "commonAdverseEffects": [
+      "Rash",
+      "Flebitis",
+      "Diarrea",
+      "Elevación de transaminasas"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Encefalopatía/mioclonía/convulsiones por acumulación",
+      "Citopenias"
+    ],
+    "adverseEffects": "Acumulación renal puede aumentar neurotoxicidad.",
+    "interactions": "Nefrotóxicos y diuréticos potentes exigen vigilancia renal.",
+    "monitoring": "ClCr, estado neurológico, cultivos y hemograma/hígado en tratamiento prolongado.",
+    "administration": "IV lenta o infusión; no se absorbe adecuadamente por vía oral.",
+    "preparation": "Reconstituir/diluir según producto local.",
+    "infusionProtocol": "Regímenes históricos usan inyección IV o infusión 20–30 min; prolongada es estrategia especializada.",
+    "pregnancy": "Datos contemporáneos limitados; usar si beneficio justifica.",
+    "lactation": "Datos limitados.",
+    "specialPopulations": "Disponibilidad/rotulado varían por país; ERC aumenta mucho semivida.",
+    "patientEducation": "La dosis depende del riñón; confusión, mioclonía o convulsión requieren evaluación urgente.",
+    "clinicalPearls": "Cefpiroma es cefalosporina de 4ª generación con uso actual limitado en muchos mercados; ajustar por riñón y no extrapolar pediatría histórica.",
+    "guidelineRecommendations": "Usar solo donde exista producto autorizado, breakpoint y susceptibilidad válidos; en Gram negativos multirresistentes preferir opciones respaldadas por guías actuales.",
+    "safetyFlags": [
+      "4ª generación",
+      "Ajuste renal",
+      "Neurotoxicidad por acumulación",
+      "Rotulado varía por país",
+      "Pediatría sin esquema actual universal"
+    ],
+    "references": [
+      "https://www.pmda.go.jp/files/000223549.pdf",
+      "https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-brasileira/insumos-farmaceuticos-e-especialidades_ingles-1.pdf",
+      "https://precision.fda.gov/ginas/app/ui/substances/0a2501ca-912c-4507-b84a-7dd8d91a5ddf",
+      "https://pubmed.ncbi.nlm.nih.gov/8261711/",
+      "https://pubmed.ncbi.nlm.nih.gov/1623690/",
+      "https://pubmed.ncbi.nlm.nih.gov/8619595/"
+    ]
   },
   "name": {
     "pt": "Cefpiroma",
@@ -241,8 +175,8 @@
     "cefrom",
     "cefalosporina de 4ª geracao (ev)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6c4ad52b7b873b7c",
+  "clinicalContentSha256": "6c4ad52b7b873b7ca40f6b0951cd80bf9b4bfc56f4c0d21ead8d00c7218b4d79",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

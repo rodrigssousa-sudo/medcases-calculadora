@@ -1,30 +1,17 @@
 {
   "id": "polimixina_b",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Polimixina B",
-    "class": "Polimixina (lipopeptídeo policatiônico)",
-    "commercialNames": {
-      "br": [
-        "Polimixina B Genérica",
-        "Aerosporin"
-      ],
-      "ar": [
-        "Polimixina B Genérica",
-        "Aerosporin"
-      ]
-    },
-    "presentation": [
-      "Pó liofilizado EV: 500.000 UI (= 50 mg)"
+    "class": "Antibacteriano polimixina",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoAtaque": "158 mg EV dose de ataque (2–2,5 mg/kg)",
-      "adultoManutencao": "96 mg EV 12/12h (1,25–1,5 mg/kg)",
-      "pediatrica": "88 mg EV 12/12h (1,25 mg/kg)"
-    },
+    "presentation": "Pó injetável em unidades.",
+    "dose": "Bula IV: adultos e crianças com função renal normal, 15.000–25.000 unidades/kg/dia; pode dividir q12h; máximo 25.000 unidades/kg/dia.",
     "doseKg": {
       "standard": "1,25–1,5 mg/kg 12/12h EV (após ataque de 2–2,5 mg/kg)",
       "maxDose": "3 mg/kg/dia"
@@ -33,134 +20,81 @@
     "dilution": "EV: diluir em SG 5% 100–500 mL. NÃO usar SF (incompatível).",
     "speed": "EV: infundir em 60–120 minutos.",
     "commonAdverseEffects": [
-      "Nefrotoxicidade",
-      "Neurotoxicidade / parestesias",
-      "Dor no local de infusão"
+      "Parestesias",
+      "Tontura",
+      "Dor no local",
+      "Aumento de creatinina"
     ],
     "dangerousAdverseEffects": [
-      "Insuficiência renal aguda grave",
-      "Bloqueio neuromuscular",
-      "Apneia (raro)"
+      "Nefrotoxicidade",
+      "Neurotoxicidade",
+      "Apneia/bloqueio neuromuscular",
+      "Distúrbios eletrolíticos"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Diluir OBRIGATORIAMENTE em SG 5% — incompatível com SF 0,9%.",
-      "Monitorar creatinina a cada 48–72h apesar de não haver ajuste formal por função renal."
+      "15.000–25.000 U/kg/dia IV",
+      "Máx 25.000 U/kg/dia",
+      "Bula reduz na insuficiência renal",
+      "Evitar aminoglicosídeos/neurotóxicos",
+      "Monitorar respiração"
     ],
-    "ref": "Sanford Guide 2025 / Zavascki et al. / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Geralmente não necessita ajuste renal, porém requer monitorização rigorosa.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual após ataque de 2–2,5 mg/kg."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Sem ajuste habitual."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar toxicidade renal apesar da ausência de ajuste formal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Alto risco de nefrotoxicidade e neurotoxicidade."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não é significativamente removida pela HD."
-      }
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+    ],
+    "renalDose": "A bula orienta reduzir abaixo de 15.000 unidades/kg/dia em comprometimento renal. Consensos PK modernos diferem quanto à estratégia; usar protocolo institucional e TDM quando disponível.",
     "therapeuticMonitoring": {
       "required": true,
       "target": "Monitorização intensiva da função renal.",
       "monitoring": "Creatinina, ureia, eletrólitos e sintomas neurológicos.",
       "notes": "Menor dependência da função renal para dosagem que a colistina, porém toxicidade permanece elevada."
-    }
+    },
+    "pharmacologicClass": "Polimixina catiônica ativa",
+    "mechanism": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes e rompe a integridade da membrana.",
+    "pharmacodynamics": "Bactericida concentração-dependente com janela terapêutica estreita; resistência pode ocorrer por modificação do LPS.",
+    "pharmacokinetics": "Administrada como fármaco ativo, diferentemente do colistimetato. Eliminação renal não explica toda a variabilidade; concentrações sistêmicas podem ser mais previsíveis que colistina.",
+    "indications": "Infecções graves por Gram-negativos multirresistentes suscetíveis quando opções mais seguras/preferidas não são adequadas.",
+    "presentations": [
+      "500.000 unidades por frasco em apresentações usuais"
+    ],
+    "pediatricDose": "Bula IV: crianças 15.000–25.000 unidades/kg/dia com função renal normal; lactentes podem receber até 40.000 unidades/kg/dia segundo a bula, sempre com monitorização especializada.",
+    "hepaticDose": "Sem ajuste hepático específico estabelecido; toxicidade renal/neurológica é o principal limitante.",
+    "adverseEffects": "Pode causar albuminúria, cilindrúria, azotemia, parestesias, ataxia, sonolência e apneia, especialmente com outros neurotóxicos/bloqueadores.",
+    "contraindications": "Hipersensibilidade às polimixinas; evitar associação desnecessária com outros nefro/neurotóxicos.",
+    "interactions": "Aminoglicosídeos, colistina, outros nefrotóxicos e bloqueadores neuromusculares podem aumentar nefrotoxicidade, neurotoxicidade e apneia.",
+    "monitoring": "Função renal frequente, eletrólitos, sintomas neurológicos e força/respiração. Confirmar unidades/kg e dose total diária.",
+    "administration": "IV é via sistêmica preferida quando indicada; IM é dolorosa e não recomendada rotineiramente.",
+    "preparation": "Bula IV descreve 500.000 unidades diluídas em 300–500 mL de dextrose 5% para infusão contínua; seguir produto/protocolo local.",
+    "infusionProtocol": "A bula permite infusões a cada 12 h ou contínuas; não exceder 25.000 unidades/kg/dia na via IV rotulada.",
+    "pregnancy": "Dados limitados; usar apenas quando benefício superar risco e não houver alternativa adequada.",
+    "lactation": "Dados limitados sobre excreção; avaliar risco-benefício e observar o lactente.",
+    "specialPopulations": "Disfunção renal e exposição simultânea a nefro/neurotóxicos aumentam risco. Diferenças entre bula histórica e consenso PK moderno exigem protocolo local.",
+    "patientEducation": "Relatar parestesias, tontura, fraqueza, dificuldade respiratória ou queda da diurese imediatamente.",
+    "clinicalPearls": "Não confundir polimixina B com colistimetato: são produtos, unidades e farmacocinéticas diferentes. Prescrever em unidades e explicitar via/protocolo.",
+    "guidelineRecommendations": "Diretrizes de resistência atuais procuram evitar polimixinas quando existem agentes mais ativos e seguros. Se usadas, basear em AST, foco, função renal e protocolo especializado.",
+    "safetyFlags": [
+      "Dose em unidades/kg",
+      "Nefrotoxicidade",
+      "Neurotoxicidade",
+      "Apneia",
+      "Não confundir com colistina"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+    ]
   },
   "es": {
     "name": "Polimixina B",
-    "class": "Polimixina (lipopéptido policatiónico)",
-    "commercialNames": {
-      "br": [
-        "Polimixina B Genérica",
-        "Aerosporin"
-      ],
-      "ar": [
-        "Polimixina B Genérica",
-        "Aerosporin"
-      ]
-    },
-    "presentation": [
-      "Polvo liofilizado EV: 500.000 UI (= 50 mg)"
+    "class": "Antibacteriano polimixina",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoAtaque": "158 mg EV dosis de carga (2–2,5 mg/kg)",
-      "adultoManutencao": "96 mg EV cada 12h (1,25–1,5 mg/kg)",
-      "pediatrica": "88 mg EV cada 12h (1,25 mg/kg)"
-    },
+    "presentation": "Polvo inyectable en unidades.",
+    "dose": "Ficha IV: adultos y niños con función renal normal, 15.000–25.000 unidades/kg/día; puede dividirse q12h; máximo 25.000 unidades/kg/día.",
     "doseKg": {
       "standard": "1,25–1,5 mg/kg cada 12h EV (tras carga de 2–2,5 mg/kg)",
       "maxDose": "3 mg/kg/día"
@@ -169,112 +103,72 @@
     "dilution": "EV: diluir en SG 5% 100–500 mL. NO usar SF (incompatible).",
     "speed": "EV: infundir en 60–120 minutos.",
     "commonAdverseEffects": [
-      "Nefrotoxicidad",
-      "Neurotoxicidad / parestesias",
-      "Dolor en el sitio de infusión"
+      "Parestesias",
+      "Mareo",
+      "Dolor local",
+      "Aumento de creatinina"
     ],
     "dangerousAdverseEffects": [
-      "Insuficiencia renal aguda grave",
-      "Bloqueo neuromuscular",
-      "Apnea (raro)"
+      "Nefrotoxicidad",
+      "Neurotoxicidad",
+      "Apnea/bloqueo neuromuscular",
+      "Alteraciones electrolíticas"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Diluir OBLIGATORIAMENTE en SG 5% — incompatible con SF 0,9%.",
-      "Monitorizar creatinina cada 48–72h a pesar de no haber ajuste formal por función renal."
+      "15.000–25.000 U/kg/día IV",
+      "Máx 25.000 U/kg/día",
+      "Ficha reduce en insuficiencia renal",
+      "Evitar aminoglucósidos/neurotóxicos",
+      "Monitorizar respiración"
     ],
-    "ref": "Sanford Guide 2025 / Zavascki et al. / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Generalmente no requiere ajuste renal, pero requiere monitorización estricta.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual tras carga de 2–2,5 mg/kg."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Sin ajuste habitual."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar toxicidad renal a pesar de la ausencia de ajuste formal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Alto riesgo de nefrotoxicidad y neurotoxicidad."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25–1,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "1,25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "3 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No es significativamente removida por HD."
-      }
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+    ],
+    "renalDose": "La ficha orienta reducir por debajo de 15.000 unidades/kg/día en deterioro renal. Consensos PK modernos difieren; usar protocolo institucional y TDM si disponible.",
     "therapeuticMonitoring": {
       "required": true,
       "target": "Monitorización intensiva de la función renal.",
       "monitoring": "Creatinina, urea, electrolitos y síntomas neurológicos.",
       "notes": "Menor dependencia de la función renal para dosificación que la colistina, pero la toxicidad sigue siendo elevada."
-    }
+    },
+    "pharmacologicClass": "Polimixina catiónica activa",
+    "mechanism": "Se une al LPS de membrana externa de Gram negativos, desplaza cationes divalentes y rompe integridad de membrana.",
+    "pharmacodynamics": "Bactericida dependiente de concentración con ventana terapéutica estrecha; resistencia puede surgir por modificación de LPS.",
+    "pharmacokinetics": "Se administra como fármaco activo, a diferencia de colistimetato. Eliminación renal no explica toda la variabilidad; exposición sistémica puede ser más predecible.",
+    "indications": "Infecciones graves por Gram negativos multirresistentes susceptibles cuando opciones más seguras/preferidas no son adecuadas.",
+    "presentations": [
+      "500.000 unidades por vial en presentaciones usuales"
+    ],
+    "pediatricDose": "Ficha IV: niños 15.000–25.000 unidades/kg/día con función renal normal; lactantes hasta 40.000 unidades/kg/día según ficha, con monitorización experta.",
+    "hepaticDose": "Sin ajuste hepático específico; toxicidad renal/neurológica es el principal limitante.",
+    "adverseEffects": "Puede causar albuminuria, cilindruria, azotemia, parestesias, ataxia, somnolencia y apnea, sobre todo con otros neurotóxicos/bloqueantes.",
+    "contraindications": "Hipersensibilidad a polimixinas; evitar asociación innecesaria con otros nefro/neurotóxicos.",
+    "interactions": "Aminoglucósidos, colistina, otros nefrotóxicos y bloqueantes neuromusculares aumentan nefrotoxicidad, neurotoxicidad y apnea.",
+    "monitoring": "Función renal frecuente, electrolitos, síntomas neurológicos y fuerza/respiración. Confirmar unidades/kg y dosis total.",
+    "administration": "IV es vía sistémica preferida cuando está indicada; IM es dolorosa y no se recomienda rutinariamente.",
+    "preparation": "Ficha IV describe 500.000 unidades diluidas en 300–500 mL de dextrosa 5% para goteo continuo; seguir producto/protocolo local.",
+    "infusionProtocol": "Ficha permite infusiones q12h o continuas; no exceder 25.000 unidades/kg/día por vía IV rotulada.",
+    "pregnancy": "Datos limitados; usar solo si beneficio supera riesgo y no hay alternativa adecuada.",
+    "lactation": "Datos limitados sobre excreción; valorar riesgo-beneficio y observar lactante.",
+    "specialPopulations": "Disfunción renal y nefro/neurotóxicos concomitantes aumentan riesgo. Diferencias entre ficha histórica y consenso PK moderno requieren protocolo local.",
+    "patientEducation": "Informar parestesias, mareo, debilidad, dificultad respiratoria o caída de diuresis inmediatamente.",
+    "clinicalPearls": "No confundir polimixina B con colistimetato: son productos, unidades y PK diferentes. Prescribir en unidades y explicitar vía/protocolo.",
+    "guidelineRecommendations": "Guías actuales de resistencia intentan evitar polimixinas si existen agentes más activos y seguros. Si se usan, basar en AST, foco, función renal y protocolo experto.",
+    "safetyFlags": [
+      "Dosis en unidades/kg",
+      "Nefrotoxicidad",
+      "Neurotoxicidad",
+      "Apnea",
+      "No confundir con colistina"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+    ]
   },
   "name": {
     "pt": "Polimixina B",
@@ -287,8 +181,8 @@
     "aerosporin",
     "polimixina (lipopeptideo policationico)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8bd4419151c9028c",
+  "clinicalContentSha256": "8bd4419151c9028c7de7aad108eadfaca274267f7be1e107f04be2b0321d0813",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

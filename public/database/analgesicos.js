@@ -4078,3 +4078,162 @@
 })();
 
 })(); /* fim da IIFE do módulo analgésicos */
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP11_FROZEN_FINAL10_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANALGESICOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP11_FROZEN_FINAL10_V1: ANALGESICOS_DRUGS_DB unavailable');var gold={
+  "hidroxicloroquina": {
+    "pt": {
+      "name": "Hidroxicloroquina",
+      "class": "Antimalárico 4-aminoquinolina e DMARD — não antiparasitário genérico",
+      "pharmacologicClass": "4-aminoquinolina com atividade antimalárica e imunomoduladora",
+      "mechanism": "Em Plasmodium sensível, interfere no metabolismo/detoxificação do heme no vacúolo alimentar; em doenças reumatológicas modula processamento lisossomal e sinalização imune.",
+      "pharmacodynamics": "Ativa apenas contra espécies/cepas de malária sensíveis à cloroquina; não trata malária grave e não deve ser usada onde há resistência relevante.",
+      "pharmacokinetics": "VO, grande volume de distribuição e meia-vida muito longa; metabolismo hepático e eliminação renal parcial.",
+      "indications": "Prevenção e tratamento de malária não complicada por cepas sensíveis à cloroquina; também AR, lúpus sistêmico e discoide. Não é um antiparasitário de amplo espectro.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais.",
+      "presentations": [
+        "200 mg de sulfato = 155 mg base conforme produto"
+      ],
+      "dose": "Malária profilaxia adulto: 400 mg VO uma vez por semana, iniciar 2 semanas antes, continuar durante exposição e 4 semanas após. Tratamento não complicado: 800 mg inicial, depois 400 mg em 6, 24 e 48 h; total 2.000 mg.",
+      "pediatricDose": "Malária em pacientes >=31 kg: profilaxia 6,5 mg/kg (máx 400 mg) semanal. Tratamento: 13 mg/kg (máx 800 mg) inicial, depois 6,5 mg/kg (máx 400 mg) em 6,24,48 h; total 31 mg/kg máx 2.000 mg.",
+      "renalDose": "Pode ser necessário reduzir em DRC, especialmente uso prolongado; insuficiência renal aumenta risco de retinopatia e toxicidade.",
+      "hepaticDose": "Pode necessitar redução em hepatopatia ou com fármacos hepatotóxicos; não há tabela única para malária curta.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Dor abdominal",
+        "Cefaleia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Retinopatia irreversível",
+        "Cardiomiopatia/QT e arritmias",
+        "Hipoglicemia grave",
+        "Miopatia/neuropatia",
+        "Hemólise rara"
+      ],
+      "adverseEffects": "Toxicidade ocular é cumulativa no uso crônico; cardiotoxicidade/QT e hipoglicemia podem ocorrer mesmo sem tratamento prolongado.",
+      "contraindications": "Hipersensibilidade a 4-aminoquinolinas; avaliar doença macular/retiniana e risco de QT.",
+      "interactions": "Somação de QT com antiarrítmicos/macrolídeos; digoxina, antidiabéticos e outros fármacos podem exigir monitorização.",
+      "monitoring": "Para uso crônico: avaliação oftalmológica basal e periódica conforme risco; revisar dose por peso real, rim, QT/ECG quando indicado, glicemia e sintomas musculares.",
+      "administration": "VO com alimento ou leite; não triturar/dividir comprimidos quando a bula da formulação proibir.",
+      "preparation": "Comprimido pronto para uso.",
+      "infusionProtocol": "Não aplicável; uso oral.",
+      "pregnancy": "Hidroxicloroquina é amplamente utilizada em doenças reumatológicas na gestação e pode ser usada para malária sensível quando indicada; pesar benefício/risco.",
+      "lactation": "Passa ao leite em pequenas quantidades; uso pode ser compatível em contextos apropriados sob orientação clínica.",
+      "specialPopulations": "Para cura radical de P. vivax/P. ovale é necessária 8-aminoquinolina concomitante após avaliar G6PD; hidroxicloroquina sozinha não erradica hipnozoítos.",
+      "patientEducation": "Não usar para COVID-19 ou qualquer parasitose inespecífica; em malária, confirmar destino/espécie e sensibilidade à cloroquina.",
+      "clinicalPearls": "No inventário está sob ANTIPARASITIC, mas a taxonomia clínica correta é antimalárico 4-aminoquinolina/DMARD. Só funciona para malária sensível à cloroquina.",
+      "guidelineRecommendations": "CDC recomenda hidroxicloroquina apenas para prevenção/tratamento de malária em áreas/espécies sensíveis à cloroquina; malária grave exige terapia parenteral apropriada e P. vivax/ovale requer cura radical adicional.",
+      "safetyFlags": [
+        "Antimalárico/DMARD",
+        "Não antiparasitário genérico",
+        "Somente malária cloroquina-sensível",
+        "QT/retina",
+        "P. vivax/ovale requer 8-aminoquinolina"
+      ],
+      "alerts": [
+        "Profilaxia adulto 400 mg semanal",
+        "Tratamento 800 mg + 400 mg 6/24/48h",
+        "Pediatria >=31 kg",
+        "Com alimento/leite",
+        "Não usar para malária resistente"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87076a61-ce76-475b-ac6d-c33ba617195d",
+        "https://www.cdc.gov/malaria/hcp/clinical-guidance/treatment-uncomplicated-malaria.html",
+        "https://www.cdc.gov/malaria/hcp/drug-malaria/index.html",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-cautions-against-use-hydroxychloroquine-or-chloroquine-covid-19-outside-hospital-setting-or",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=hydroxychloroquine+malaria"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87076a61-ce76-475b-ac6d-c33ba617195d",
+        "https://www.cdc.gov/malaria/hcp/clinical-guidance/treatment-uncomplicated-malaria.html",
+        "https://www.cdc.gov/malaria/hcp/drug-malaria/index.html",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-cautions-against-use-hydroxychloroquine-or-chloroquine-covid-19-outside-hospital-setting-or",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=hydroxychloroquine+malaria"
+      ]
+    },
+    "es": {
+      "name": "Hidroxicloroquina",
+      "class": "Antipalúdico 4-aminoquinolina y DMARD — no antiparasitario genérico",
+      "pharmacologicClass": "4-aminoquinolina antipalúdica e inmunomoduladora",
+      "mechanism": "En Plasmodium sensible altera detoxificación de hemo; en reumatología modula función lisosomal/señalización inmune.",
+      "pharmacodynamics": "Activa solo contra malaria sensible a cloroquina; no trata malaria grave ni cepas resistentes.",
+      "pharmacokinetics": "VO, gran volumen de distribución y semivida muy larga; metabolismo hepático y eliminación renal parcial.",
+      "indications": "Prevención/tratamiento de malaria no complicada sensible a cloroquina; también AR y lupus. No es antiparasitario de amplio espectro.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales.",
+      "presentations": [
+        "200 mg sulfato = 155 mg base según producto"
+      ],
+      "dose": "Profilaxis adulto: 400 mg VO semanal desde 2 semanas antes, durante exposición y 4 semanas después. Tratamiento: 800 mg inicial, luego 400 mg a 6,24,48 h; total 2.000 mg.",
+      "pediatricDose": ">=31 kg: profilaxis 6,5 mg/kg (máx 400 mg) semanal. Tratamiento 13 mg/kg (máx 800 mg) inicial, luego 6,5 mg/kg (máx 400 mg) a 6,24,48 h; total 31 mg/kg máx 2.000 mg.",
+      "renalDose": "Puede requerir reducción en ERC, especialmente uso crónico; ERC aumenta riesgo de retinopatía/toxicidad.",
+      "hepaticDose": "Puede requerir reducción en hepatopatía; sin tabla única para curso corto antipalúdico.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Dolor abdominal",
+        "Cefalea",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Retinopatía irreversible",
+        "Cardiomiopatía/QT",
+        "Hipoglucemia grave",
+        "Miopatía/neuropatía",
+        "Hemólisis rara"
+      ],
+      "adverseEffects": "Toxicidad ocular es acumulativa; cardiotoxicidad/QT e hipoglucemia también pueden ocurrir.",
+      "contraindications": "Hipersensibilidad a 4-aminoquinolinas; valorar enfermedad retiniana y riesgo QT.",
+      "interactions": "Suma QT con antiarrítmicos/macrólidos; digoxina y antidiabéticos requieren vigilancia.",
+      "monitoring": "Uso crónico: oftalmología basal/periódica, dosis por peso real, función renal, ECG cuando corresponda, glucemia y síntomas musculares.",
+      "administration": "VO con comida o leche; no triturar/dividir si la formulación lo prohíbe.",
+      "preparation": "Comprimido listo.",
+      "infusionProtocol": "No aplicable.",
+      "pregnancy": "Amplia experiencia en reumatología; puede usarse para malaria sensible cuando esté indicada.",
+      "lactation": "Pequeñas cantidades en leche; puede ser compatible en contextos apropiados.",
+      "specialPopulations": "P. vivax/P. ovale requiere 8-aminoquinolina para cura radical tras evaluar G6PD; HCQ sola no elimina hipnozoítos.",
+      "patientEducation": "No usar para COVID-19 ni parasitosis inespecífica; confirmar sensibilidad a cloroquina.",
+      "clinicalPearls": "Aunque el inventario la ubica en ANTIPARASITIC, clínicamente es antipalúdico 4-aminoquinolina/DMARD y solo sirve para malaria sensible.",
+      "guidelineRecommendations": "CDC la recomienda solo para prevención/tratamiento de malaria sensible a cloroquina; malaria grave requiere terapia parenteral y vivax/ovale cura radical adicional.",
+      "safetyFlags": [
+        "Antipalúdico/DMARD",
+        "No antiparasitario genérico",
+        "Solo malaria sensible a cloroquina",
+        "QT/retina",
+        "Vivax/ovale requiere 8-aminoquinolina"
+      ],
+      "alerts": [
+        "Profilaxis 400 mg semanal",
+        "Tratamiento 800 + 400 mg 6/24/48h",
+        "Pediatría >=31 kg",
+        "Con comida/leche",
+        "No malaria resistente"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87076a61-ce76-475b-ac6d-c33ba617195d",
+        "https://www.cdc.gov/malaria/hcp/clinical-guidance/treatment-uncomplicated-malaria.html",
+        "https://www.cdc.gov/malaria/hcp/drug-malaria/index.html",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-cautions-against-use-hydroxychloroquine-or-chloroquine-covid-19-outside-hospital-setting-or",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=hydroxychloroquine+malaria"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87076a61-ce76-475b-ac6d-c33ba617195d",
+        "https://www.cdc.gov/malaria/hcp/clinical-guidance/treatment-uncomplicated-malaria.html",
+        "https://www.cdc.gov/malaria/hcp/drug-malaria/index.html",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-cautions-against-use-hydroxychloroquine-or-chloroquine-covid-19-outside-hospital-setting-or",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=hydroxychloroquine+malaria"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP11_FROZEN_FINAL10_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();

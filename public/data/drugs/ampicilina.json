@@ -1,34 +1,17 @@
 {
   "id": "ampicilina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Ampicilina",
-    "class": "Aminopenicilina",
-    "commercialNames": {
-      "br": [
-        "Ampicilina Blau",
-        "Ampicilina Teuto",
-        "Ampicilina EMS"
-      ],
-      "ar": [
-        "Ampicilina Richet",
-        "Ampicilina Klonal",
-        "Ampicilina genérica"
-      ]
-    },
-    "presentation": [
-      "Frasco-ampola 500 mg",
-      "Frasco-ampola 1 g",
-      "Cápsulas 250 mg / 500 mg",
-      "Suspensão oral 250 mg/5 mL"
+    "class": "Antibiótico beta-lactâmico",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "1–2 g EV 4/4h–6/6h",
-      "pediatrica": "2000 mg EV 6/6h"
-    },
+    "presentation": "Frascos-ampola para IV/IM.",
+    "dose": "Adultos: meningite/septicemia 150–200 mg/kg/dia divididos q3–4h; outros focos usam doses menores conforme protocolo.",
     "doseKg": {
       "standard": "50 mg/kg por dose",
       "maxDose": "12 g/dia"
@@ -37,139 +20,33 @@
     "dilution": "Diluir em SF 0,9% ou SG5% conforme protocolo institucional.",
     "speed": "Infundir em 15–30 minutos (EV lento).",
     "commonAdverseEffects": [
+      "Náusea",
       "Diarreia",
-      "Náuseas",
-      "Rash cutâneo"
+      "Rash"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Colite por Clostridioides difficile",
-      "Convulsões em insuficiência renal sem ajuste",
-      "Síndrome de Stevens-Johnson"
+      "C. difficile",
+      "SCAR/SJS-TEN",
+      "Neurotoxicidade por acúmulo"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Espectro limitado — não cobre MRSA, Pseudomonas nem beta-lactamase-produtores.",
-      "Considerar ampicilina-sulbactam para maior cobertura."
+      "Confirmar foco e suscetibilidade",
+      "Reavaliar dose se função renal mudar"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman / Lexicomp",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "4/4h–6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "200 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose conforme foco infeccioso. Para meningite, endocardite ou Listeria, usar esquema específico de alta dose."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "3 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h–8/8h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "150 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reduzir frequência conforme ClCr. Ajustar intervalo em insuficiência renal moderada."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obrigatório para evitar acúmulo. Monitorar neurotoxicidade em uso de altas doses."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Alto risco de acúmulo com esquemas de alta dose. Individualizar em meningite/endocardite. Monitorar neurotoxicidade e convulsões."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após HD. Em infecções graves (meningite, endocardite), discutir dose suplementar com infectologia."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "warning": "Ajustar cuidadosamente em meningite, endocardite, Listeria e insuficiência renal avançada. Risco de convulsões com acúmulo em IR sem ajuste adequado."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06ca924c-5f3a-4924-90f4-5ba623daaa0e",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ],
+    "renalDose": "Requer ampliação de intervalo/redução em insuficiência renal importante; hemodiálise remove ampicilina. Usar tabela renal institucional validada pelo foco.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal quando aplicável",
+      "Neurotoxicidade por acúmulo"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -182,33 +59,47 @@
         "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
       ],
       "note": "Bloco mesclado e melhorado: fgMaior50.obs com meningite/endocardite/Listeria; fg30a50.ev.intervalo e doseMaxima expandidos; fg10a30.obs com neurotoxicidade; fgMenor10.obs com acúmulo e individualização; hemodialise.obs com dose suplementar em infecções graves; safetyFlags e auditNotes adicionados."
-    }
+    },
+    "pharmacologicClass": "Aminopenicilina",
+    "mechanism": "Liga-se às PBPs e bloqueia a transpeptidação do peptidoglicano, causando lise bacteriana.",
+    "pharmacodynamics": "Bactericida tempo-dependente; otimização de fT>MIC é relevante em infecção grave.",
+    "pharmacokinetics": "IV/IM; ampla distribuição, penetração no LCR com meninges inflamadas e eliminação principalmente renal; é dialisável.",
+    "indications": "Infecções por suscetíveis, incluindo Enterococcus faecalis e Listeria; meningite e sepse conforme etiologia.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "Crianças: meningite/septicemia 150–200 mg/kg/dia q3–4h. Neonatos: 100–150 mg/kg/dia com intervalos de 8–12 h conforme idade gestacional/pós-natal.",
+    "hepaticDose": "Sem ajuste rotineiro na hepatopatia isolada; monitorar em terapia prolongada.",
+    "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+    "monitoring": "Culturas, resposta, função renal, hemograma e função hepática; vigiar alergia, C. difficile e neurotoxicidade.",
+    "administration": "IV ou IM; meningite/sepse devem iniciar por IV.",
+    "preparation": "Reconstituir com diluente compatível e respeitar estabilidade curta após preparo.",
+    "infusionProtocol": "Tempo-dependente; em críticos pode-se considerar infusão prolongada se estabilidade/protocolo permitirem, sem atrasar dose inicial.",
+    "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+    "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "Neonatos requerem intervalos próprios; DRC exige individualização; obesidade/hiperfiltração podem alterar exposição.",
+    "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+    "clinicalPearls": "Importante para Listeria e E. faecalis suscetível; não cobre MRSA nem Pseudomonas e é vulnerável a beta-lactamases.",
+    "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06ca924c-5f3a-4924-90f4-5ba623daaa0e",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ]
   },
   "es": {
     "name": "Ampicilina",
-    "class": "Aminopenicilina",
-    "commercialNames": {
-      "br": [
-        "Ampicilina Blau",
-        "Ampicilina Teuto",
-        "Ampicilina EMS"
-      ],
-      "ar": [
-        "Ampicilina Richet",
-        "Ampicilina Klonal",
-        "Ampicilina genérica"
-      ]
-    },
-    "presentation": [
-      "Frasco ampolla 500 mg",
-      "Frasco ampolla 1 g",
-      "Cápsulas 250 mg / 500 mg",
-      "Suspensión oral 250 mg/5 mL"
+    "class": "Antibiótico betalactámico",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "1–2 g EV cada 4h–6h",
-      "pediatrica": "2000 mg EV cada 6h"
-    },
+    "presentation": "Viales para IV/IM.",
+    "dose": "Adultos: meningitis/septicemia 150–200 mg/kg/día divididos q3–4h; otros focos usan dosis menores según protocolo.",
     "doseKg": {
       "standard": "50 mg/kg por dosis",
       "maxDose": "12 g/día"
@@ -217,139 +108,33 @@
     "dilution": "Diluir en SF 0,9% o SG5% según protocolo institucional.",
     "speed": "Infundir en 15–30 minutos (EV lento).",
     "commonAdverseEffects": [
-      "Diarrea",
       "Náuseas",
-      "Exantema cutáneo"
+      "Diarrea",
+      "Exantema"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Colitis por Clostridioides difficile",
-      "Convulsiones en insuficiencia renal sin ajuste",
-      "Síndrome de Stevens-Johnson"
+      "C. difficile",
+      "SCAR/SJS-TEN",
+      "Neurotoxicidad por acumulación"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Espectro limitado — no cubre MRSA, Pseudomonas ni productores de beta-lactamasa.",
-      "Considerar ampicilina-sulbactam para mayor cobertura."
+      "Confirmar foco y susceptibilidad",
+      "Reevaluar dosis si cambia la función renal"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman / Lexicomp",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "4/4h–6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "200 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis según foco infeccioso. Para meningitis, endocarditis o Listeria, usar esquema específico de alta dosis."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "3 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h–8/8h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "150 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducir frecuencia según ClCr. Ajustar intervalo en insuficiencia renal moderada."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obligatorio para evitar acumulación. Monitorizar neurotoxicidad con uso de dosis altas."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Alto riesgo de acumulación con esquemas de alta dosis. Individualizar en meningitis/endocarditis. Monitorizar neurotoxicidad y convulsiones."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "50 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de HD. En infecciones graves (meningitis, endocarditis), discutir dosis suplementaria con infectología."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": false,
-      "warning": "Ajustar cuidadosamente en meningitis, endocarditis, Listeria e insuficiencia renal avanzada. Riesgo de convulsiones con acumulación en IR sin ajuste adecuado."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06ca924c-5f3a-4924-90f4-5ba623daaa0e",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ],
+    "renalDose": "Requiere ampliar intervalo/reducir en insuficiencia renal importante; hemodiálisis elimina ampicilina. Usar tabla renal institucional validada por foco.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal cuando corresponda",
+      "Neurotoxicidad por acumulación"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -362,7 +147,38 @@
         "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
       ],
       "note": "Bloque fusionado y mejorado: fgMaior50.obs con meningitis/endocarditis/Listeria; fg30a50.ev.intervalo y doseMaxima ampliados; fg10a30.obs con neurotoxicidad; fgMenor10.obs con acumulación e individualización; hemodialise.obs con dosis suplementaria en infecciones graves; safetyFlags y auditNotes añadidos."
-    }
+    },
+    "pharmacologicClass": "Aminopenicilina",
+    "mechanism": "Se une a las PBP y bloquea la transpeptidación del peptidoglicano, causando lisis bacteriana.",
+    "pharmacodynamics": "Bactericida dependiente del tiempo; optimizar fT>MIC es relevante en infección grave.",
+    "pharmacokinetics": "IV/IM; amplia distribución, penetración en LCR con meninges inflamadas y eliminación renal; es dializable.",
+    "indications": "Infecciones por susceptibles, incluyendo Enterococcus faecalis y Listeria; meningitis y sepsis según etiología.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "Niños: meningitis/septicemia 150–200 mg/kg/día q3–4h. Neonatos: 100–150 mg/kg/día con intervalos 8–12 h según edad gestacional/posnatal.",
+    "hepaticDose": "Sin ajuste rutinario en hepatopatía aislada; monitorizar en tratamiento prolongado.",
+    "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+    "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+    "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+    "monitoring": "Cultivos, respuesta, función renal, hemograma y función hepática; vigilar alergia, C. difficile y neurotoxicidad.",
+    "administration": "IV o IM; meningitis/sepsis deben iniciar por IV.",
+    "preparation": "Reconstituir con diluyente compatible y respetar estabilidad corta pospreparación.",
+    "infusionProtocol": "Dependiente del tiempo; en críticos puede considerarse infusión prolongada si estabilidad/protocolo lo permiten, sin retrasar dosis inicial.",
+    "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+    "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+    "specialPopulations": "Neonatos requieren intervalos propios; ERC exige individualización; obesidad/hiperfiltración pueden alterar exposición.",
+    "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+    "clinicalPearls": "Importante para Listeria y E. faecalis susceptible; no cubre MRSA ni Pseudomonas y es vulnerable a betalactamasas.",
+    "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06ca924c-5f3a-4924-90f4-5ba623daaa0e",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ]
   },
   "name": {
     "pt": "Ampicilina",
@@ -378,8 +194,8 @@
     "ampicilina generica",
     "aminopenicilina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-e61729424f211913",
+  "clinicalContentSha256": "e61729424f2119133df2859fd54b61485ca0d422f660b50949e686e5f2e0905e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

@@ -1,14 +1,138 @@
 {
   "id": "teicoplanina",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Teicoplanina"
+    "name": "Teicoplanina",
+    "class": "Antibiótico glicopeptídeo",
+    "pharmacologicClass": "Glicopeptídeo anti-Gram-positivo",
+    "mechanism": "Liga-se a D-Ala-D-Ala e inibe síntese da parede bacteriana, com atividade contra cocos Gram-positivos suscetíveis incluindo MRSA.",
+    "pharmacodynamics": "Exposição e concentração de vale orientam eficácia; TDM é recomendado após carga e durante manutenção em infecções graves.",
+    "pharmacokinetics": "IV/IM, alta ligação proteica, meia-vida terminal muito longa de aproximadamente 100–170 h, eliminação majoritariamente renal e baixa penetração em LCR.",
+    "indications": "Infecções Gram-positivas complicadas: pele, pneumonia, cUTI, osso/articulação e endocardite por organismos suscetíveis.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Pó para solução IV/IM.",
+    "presentations": [
+      "200 mg",
+      "400 mg conforme mercado"
+    ],
+    "dose": "cSSTI/pneumonia/cUTI: 6 mg/kg q12h x3, depois 6 mg/kg q24h. Osso/endocardite: 12 mg/kg q12h x3–5, depois 12 mg/kg q24h.",
+    "pediatricDose": ">12 anos como adulto; 2 meses–12 anos: 10 mg/kg q12h x3, depois 6–10 mg/kg q24h; <=2 meses: 16 mg/kg carga, depois 8 mg/kg q24h.",
+    "renalDose": "Sem ajuste até o 4º dia; depois CrCl 30–80: metade da manutenção ou q48h; CrCl <30/HD: 1/3 da manutenção ou a cada 3 dias. Não removida por HD.",
+    "hepaticDose": "Sem ajuste hepático rotineiro específico; eliminação principalmente renal.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Diarreia",
+      "Cefaleia",
+      "Reação no local de administração"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Toxicidade órgão-específica conforme o agente"
+    ],
+    "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Revisar interações específicas e medicamentos que aumentem toxicidade do agente.",
+    "monitoring": "Resposta clínica/microbiológica e monitorização específica do agente, função renal/hepática e hemograma quando pertinentes.",
+    "administration": "IV ou IM; IV bolus 3–5 min ou infusão 30 min. Neonatos: somente infusão.",
+    "preparation": "Reconstituir cuidadosamente para minimizar espuma; diluir conforme SmPC e compatibilidade.",
+    "infusionProtocol": "Carga é essencial devido à meia-vida longa; TDM confirma exposição antes de manutenção prolongada.",
+    "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Endocardite e infecção grave requerem vales mais altos; DRC e nefro/ototóxicos aumentam risco.",
+    "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+    "clinicalPearls": "TDM: em muitas infecções vale >=10 mg/L por HPLC ou >=15 mg/L por FPIA; em endocardite/graves os alvos são maiores. Penetra pouco no LCR.",
+    "guidelineRecommendations": "SmPC recomenda TDM após a carga e pelo menos semanal durante manutenção; o ajuste renal de manutenção começa após a fase inicial de carga.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Monitorização de toxicidade"
+    ],
+    "alerts": [
+      "TDM em graves",
+      "Meia-vida 100–170 h",
+      "Não removida por HD",
+      "Baixa penetração em LCR"
+    ],
+    "references": [
+      "https://www.medicines.org.uk/emc/product/2927/smpc",
+      "https://www.ema.europa.eu/en/medicines/human/referrals/targocid",
+      "https://www.idsociety.org/practice-guideline/vancomycin/"
+    ],
+    "ref": [
+      "https://www.medicines.org.uk/emc/product/2927/smpc",
+      "https://www.ema.europa.eu/en/medicines/human/referrals/targocid",
+      "https://www.idsociety.org/practice-guideline/vancomycin/"
+    ]
   },
   "es": {
-    "name": "Teicoplanina"
+    "name": "Teicoplanina",
+    "class": "Antibiótico glicopéptido",
+    "pharmacologicClass": "Glicopéptido anti-Gram positivo",
+    "mechanism": "Se une a D-Ala-D-Ala e inhibe síntesis de pared bacteriana, activa frente a cocos Gram positivos susceptibles incluido MRSA.",
+    "pharmacodynamics": "Exposición y concentración valle orientan eficacia; se recomienda TDM tras carga y durante mantenimiento en infección grave.",
+    "pharmacokinetics": "IV/IM, alta unión proteica, semivida terminal muy larga de aproximadamente 100–170 h, eliminación principalmente renal y baja penetración en LCR.",
+    "indications": "Infecciones Gram positivas complicadas: piel, neumonía, cUTI, hueso/articulación y endocarditis por susceptibles.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Polvo para solución IV/IM.",
+    "presentations": [
+      "200 mg",
+      "400 mg según mercado"
+    ],
+    "dose": "cSSTI/neumonía/cUTI: 6 mg/kg q12h x3, luego 6 mg/kg q24h. Hueso/endocarditis: 12 mg/kg q12h x3–5, luego 12 mg/kg q24h.",
+    "pediatricDose": ">12 años como adulto; 2 meses–12 años: 10 mg/kg q12h x3, luego 6–10 mg/kg q24h; <=2 meses: 16 mg/kg carga, luego 8 mg/kg q24h.",
+    "renalDose": "Sin ajuste hasta el 4º día; luego ClCr 30–80: mitad de mantenimiento o q48h; ClCr <30/HD: 1/3 o cada 3 días. No se elimina por HD.",
+    "hepaticDose": "Sin ajuste hepático rutinario específico; eliminación principalmente renal.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarrea",
+      "Cefalea",
+      "Reacción en el sitio de administración"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Toxicidad órgano-específica según el agente"
+    ],
+    "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+    "interactions": "Revisar interacciones específicas y fármacos que aumenten toxicidad del agente.",
+    "monitoring": "Respuesta clínica/microbiológica y monitorización específica, función renal/hepática y hemograma cuando correspondan.",
+    "administration": "IV o IM; IV bolo 3–5 min o infusión 30 min. Neonatos: solo infusión.",
+    "preparation": "Reconstituir cuidadosamente para minimizar espuma; diluir según SmPC y compatibilidad.",
+    "infusionProtocol": "La carga es esencial por la semivida larga; TDM confirma exposición antes de mantenimiento prolongado.",
+    "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Endocarditis e infección grave requieren valles más altos; ERC y nefro/ototóxicos aumentan riesgo.",
+    "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+    "clinicalPearls": "TDM: en muchas infecciones valle >=10 mg/L por HPLC o >=15 mg/L por FPIA; en endocarditis/grave los objetivos son mayores. Penetra poco en LCR.",
+    "guidelineRecommendations": "El SmPC recomienda TDM tras la carga y al menos semanal durante mantenimiento; el ajuste renal de mantenimiento empieza después de la carga.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Monitorización de toxicidad"
+    ],
+    "alerts": [
+      "TDM en graves",
+      "Semivida 100–170 h",
+      "No se elimina por HD",
+      "Baja penetración en LCR"
+    ],
+    "references": [
+      "https://www.medicines.org.uk/emc/product/2927/smpc",
+      "https://www.ema.europa.eu/en/medicines/human/referrals/targocid",
+      "https://www.idsociety.org/practice-guideline/vancomycin/"
+    ],
+    "ref": [
+      "https://www.medicines.org.uk/emc/product/2927/smpc",
+      "https://www.ema.europa.eu/en/medicines/human/referrals/targocid",
+      "https://www.idsociety.org/practice-guideline/vancomycin/"
+    ]
   },
   "name": {
     "pt": "Teicoplanina",
@@ -17,8 +141,8 @@
   "keywords": [
     "teicoplanina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8748201986b5fc57",
+  "clinicalContentSha256": "8748201986b5fc5759ebd8fa28517ea54274edfd6d13294067ba1d3e22872ffb",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js",
@@ -426,8 +550,8 @@
           "teicoplanina generica",
           "glicopeptideo"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-8748201986b5fc57",
+        "clinicalContentSha256": "8748201986b5fc5759ebd8fa28517ea54274edfd6d13294067ba1d3e22872ffb",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "antimicrobianos.js"

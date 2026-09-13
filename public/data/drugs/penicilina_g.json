@@ -1,31 +1,17 @@
 {
   "id": "penicilina_g",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Penicilina G Cristalina",
-    "class": "Penicilina natural",
-    "commercialNames": {
-      "br": [
-        "Penicilina G Cristalina Blau",
-        "Penicilina G Teuto"
-      ],
-      "ar": [
-        "Penicilina G Cristalina Richet",
-        "Penicilina G Klonal"
-      ]
-    },
-    "presentation": [
-      "Frasco-ampola 1.000.000 UI",
-      "Frasco-ampola 5.000.000 UI",
-      "Frasco-ampola 10.000.000 UI"
+    "name": "Penicilina G",
+    "class": "Antibiótico beta-lactâmico",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "2–4 milhões UI EV 4/4h",
-      "pediatrica": "3.5 milhões UI EV 4/4h–6/6h"
-    },
+    "presentation": "Pó para IV/IM expresso em milhões de unidades.",
+    "dose": "Adultos: estreptocócicas graves 12–24 milhões UI/dia divididos q4–6h; meningococcemia/meningite pode usar 24 milhões UI/dia q2h.",
     "doseKg": {
       "standard": "50.000 UI/kg por dose",
       "maxDose": "24 milhões UI/dia"
@@ -34,129 +20,70 @@
     "dilution": "Diluir em SF 0,9% conforme protocolo institucional.",
     "speed": "Infundir em 15–30 minutos ou infusão contínua.",
     "commonAdverseEffects": [
-      "Flebite",
-      "Náuseas",
-      "Diarreia"
+      "Náusea",
+      "Diarreia",
+      "Rash"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Convulsões (especialmente em IR sem ajuste)",
-      "Hiperpotassemia (formulações K+)",
-      "Colite por C. difficile"
+      "Convulsões/encefalopatia por altas doses",
+      "Hipercalemia com sal potássico",
+      "C. difficile"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Indicada para neurossífilis, endocardite por estreptococos e meningite bacteriana.",
-      "Não cobre MRSA, Pseudomonas nem enterobactérias produtoras de beta-lactamase."
+      "Doses expressas em unidades: evitar erro de conversão",
+      "Monitorar potássio na formulação potássica em altas doses"
     ],
-    "ref": "Sanford Guide 2025 / CDC STI Treatment Guidelines / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2–4 milhões UI",
-          "intervalo": "4/4h",
-          "doseMaxima": "24 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "50.000 UI/kg",
-          "intervalo": "4/4h–6/6h",
-          "doseMaxima": "24 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Dose habitual para neurossífilis, endocardite e infecções graves por estreptococos."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "2–4 milhões UI",
-          "intervalo": "6/6h",
-          "doseMaxima": "16 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "50.000 UI/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "16 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Redução da frequência devido à depuração renal diminuída."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "2 milhões UI",
-          "intervalo": "8/8h",
-          "doseMaxima": "8 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "8 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Ajuste obrigatório para evitar neurotoxicidade."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 milhões UI",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "25.000 UI/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Monitorar convulsões, encefalopatia e distúrbios eletrolíticos."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 milhões UI",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "25.000 UI/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e0ced9d8-b9ea-466e-bf2c-10e9cc636f3f",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ],
+    "renalDose": "ClCr <10: carga completa, depois metade a cada 8–10h; urêmicos com ClCr >10: carga completa, depois metade q4–5h.",
+    "pharmacologicClass": "Penicilina natural",
+    "mechanism": "Liga PBPs e inibe a síntese do peptidoglicano da parede.",
+    "pharmacodynamics": "Bactericida tempo-dependente; eficácia ligada a fT>MIC.",
+    "pharmacokinetics": "Parenteral; meia-vida curta, doses frequentes e eliminação renal predominante.",
+    "indications": "Infecções graves por estreptococos/pneumococos e outros organismos altamente suscetíveis; meningococo, sífilis/neurosífilis, actinomicose e indicações específicas.",
+    "presentations": [
+      "Frascos em múltiplas potências de UI"
+    ],
+    "pediatricDose": "Graves suscetíveis 150.000–300.000 UI/kg/dia q4–6h; meningite pneumocócica/meningocócica 250.000 UI/kg/dia q4h, máximo 12–20 milhões UI/dia.",
+    "hepaticDose": "Sem ajuste isolado rotineiro; se hepatopatia coexistir com DRC pode ser necessário ajuste adicional.",
+    "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+    "monitoring": "Culturas/resposta, função renal, eletrólitos e sinais neurológicos em altas doses; hemograma em terapia prolongada.",
+    "administration": "IV ou IM; manter intervalos frequentes pela meia-vida curta.",
+    "preparation": "Reconstituir/diluir conforme formulação; considerar carga de potássio/sódio por milhão de unidades.",
+    "infusionProtocol": "Administrar conforme bula; estratégias PK/PD podem ser individualizadas em críticos respeitando estabilidade.",
+    "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+    "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "DRC grave aumenta neurotoxicidade; na forma potássica atenção a hipercalemia.",
+    "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+    "clinicalPearls": "Excelente contra estreptococos e espiroquetas suscetíveis; não cobre MRSA, Pseudomonas ou estafilococos produtores de penicilinase.",
+    "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal quando aplicável",
+      "Neurotoxicidade por acúmulo"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e0ced9d8-b9ea-466e-bf2c-10e9cc636f3f",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ]
   },
   "es": {
-    "name": "Penicilina G Cristalina",
-    "class": "Penicilina natural",
-    "commercialNames": {
-      "br": [
-        "Penicilina G Cristalina Blau",
-        "Penicilina G Teuto"
-      ],
-      "ar": [
-        "Penicilina G Cristalina Richet",
-        "Penicilina G Klonal"
-      ]
-    },
-    "presentation": [
-      "Frasco ampolla 1.000.000 UI",
-      "Frasco ampolla 5.000.000 UI",
-      "Frasco ampolla 10.000.000 UI"
+    "name": "Penicilina G",
+    "class": "Antibiótico betalactámico",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "2–4 millones UI EV cada 4h",
-      "pediatrica": "3.5 millones UI EV cada 4h–6h"
-    },
+    "presentation": "Polvo IV/IM expresado en millones de unidades.",
+    "dose": "Adultos: estreptocócicas graves 12–24 millones UI/día divididos q4–6h; meningococemia/meningitis puede usar 24 millones UI/día q2h.",
     "doseKg": {
       "standard": "50.000 UI/kg por dosis",
       "maxDose": "24 millones UI/día"
@@ -165,110 +92,65 @@
     "dilution": "Diluir en SF 0,9% según protocolo institucional.",
     "speed": "Infundir en 15–30 minutos o infusión continua.",
     "commonAdverseEffects": [
-      "Flebitis",
       "Náuseas",
-      "Diarrea"
+      "Diarrea",
+      "Exantema"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Convulsiones (especialmente en IR sin ajuste)",
-      "Hiperpotasemia (formulaciones K+)",
-      "Colitis por C. difficile"
+      "Convulsiones/encefalopatía por dosis altas",
+      "Hiperpotasemia con sal potásica",
+      "C. difficile"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Indicada para neurosífilis, endocarditis por estreptococos y meningitis bacteriana.",
-      "No cubre MRSA, Pseudomonas ni enterobacterias productoras de beta-lactamasa."
+      "Dosis expresadas en unidades: evitar error de conversión",
+      "Controlar potasio con formulación potásica a dosis altas"
     ],
-    "ref": "Sanford Guide 2025 / CDC STI Treatment Guidelines / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2–4 milhões UI",
-          "intervalo": "4/4h",
-          "doseMaxima": "24 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "50.000 UI/kg",
-          "intervalo": "4/4h–6/6h",
-          "doseMaxima": "24 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Dosis habitual para neurosífilis, endocarditis e infecciones graves por estreptococos."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "2–4 milhões UI",
-          "intervalo": "6/6h",
-          "doseMaxima": "16 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "50.000 UI/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "16 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Reducción de la frecuencia debido a la disminución del aclaramiento renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "2 milhões UI",
-          "intervalo": "8/8h",
-          "doseMaxima": "8 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "8 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Ajuste obligatorio para evitar neurotoxicidad."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 milhões UI",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "25.000 UI/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Monitorizar convulsiones, encefalopatía y trastornos electrolíticos."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 milhões UI",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 milhões UI/dia",
-          "unidade": "UI"
-        },
-        "pediatrica": {
-          "dose": "25.000 UI/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 milhões UI/dia",
-          "unidade": "UI/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e0ced9d8-b9ea-466e-bf2c-10e9cc636f3f",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ],
+    "renalDose": "ClCr <10: carga completa, luego mitad cada 8–10h; urémicos con ClCr >10: carga completa, luego mitad q4–5h.",
+    "pharmacologicClass": "Penicilina natural",
+    "mechanism": "Se une a PBP e inhibe síntesis del peptidoglicano de la pared.",
+    "pharmacodynamics": "Bactericida dependiente del tiempo; eficacia ligada a fT>MIC.",
+    "pharmacokinetics": "Parenteral; semivida corta, dosis frecuentes y eliminación renal predominante.",
+    "indications": "Infecciones graves por estreptococos/neumococos y otros muy susceptibles; meningococo, sífilis/neurosífilis, actinomicosis e indicaciones específicas.",
+    "presentations": [
+      "Viales en múltiples potencias de UI"
+    ],
+    "pediatricDose": "Graves susceptibles 150.000–300.000 UI/kg/día q4–6h; meningitis neumocócica/meningocócica 250.000 UI/kg/día q4h, máximo 12–20 millones UI/día.",
+    "hepaticDose": "Sin ajuste aislado rutinario; si hepatopatía coexiste con ERC puede requerir ajuste adicional.",
+    "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+    "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+    "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+    "monitoring": "Cultivos/respuesta, función renal, electrolitos y signos neurológicos con dosis altas; hemograma en tratamiento prolongado.",
+    "administration": "IV o IM; mantener intervalos frecuentes por semivida corta.",
+    "preparation": "Reconstituir/diluir según formulación; considerar carga de potasio/sodio por millón de unidades.",
+    "infusionProtocol": "Administrar según ficha; estrategias PK/PD pueden individualizarse en críticos respetando estabilidad.",
+    "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+    "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+    "specialPopulations": "ERC grave aumenta neurotoxicidad; con sal potásica vigilar hiperpotasemia.",
+    "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+    "clinicalPearls": "Excelente contra estreptococos y espiroquetas susceptibles; no cubre MRSA, Pseudomonas ni estafilococos productores de penicilinasa.",
+    "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal cuando corresponda",
+      "Neurotoxicidad por acumulación"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e0ced9d8-b9ea-466e-bf2c-10e9cc636f3f",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ]
   },
   "name": {
-    "pt": "Penicilina G Cristalina",
-    "es": "Penicilina G Cristalina"
+    "pt": "Penicilina G",
+    "es": "Penicilina G"
   },
   "keywords": [
     "penicilina_g",
@@ -279,8 +161,8 @@
     "penicilina g klonal",
     "penicilina natural"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-e61729424f211913",
+  "clinicalContentSha256": "e61729424f2119133df2859fd54b61485ca0d422f660b50949e686e5f2e0905e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

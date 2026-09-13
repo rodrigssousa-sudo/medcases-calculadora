@@ -1,30 +1,17 @@
 {
   "id": "pirazinamida",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Pirazinamida",
-    "class": "Antimicobacteriano (antituberculoso)",
-    "commercialNames": {
-      "br": [
-        "Pirazinamida Genérico",
-        "Rifater (associação)"
-      ],
-      "ar": [
-        "Pirazinamida Genérico",
-        "Rifater (asociación)"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 500 mg",
-      "Formulação combinada com rifampicina + isoniazida (Rifater)"
+    "class": "Antimicobacteriano",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "1750 mg VO 1x/dia (20–25 mg/kg/dia)",
-      "pediatrica": "2000 mg VO 1x/dia (30–40 mg/kg/dia)"
-    },
+    "presentation": "Comprimidos orais.",
+    "dose": "Adultos: aproximadamente 20–30 mg/kg VO uma vez ao dia; muitas diretrizes usam alvo ~25 mg/kg, máximo usual 2 g/dia em regime diário.",
     "doseKg": {
       "standard": "20–25 mg/kg/dia VO (adulto)",
       "maxDose": "2 g/dia"
@@ -33,127 +20,75 @@
     "dilution": "Uso exclusivamente oral.",
     "speed": "Não aplicável (uso oral).",
     "commonAdverseEffects": [
-      "Hiperuricemia / artralgia",
-      "Náuseas e vômitos",
+      "Artralgia",
+      "Hiperuricemia",
+      "Náusea",
       "Anorexia"
     ],
     "dangerousAdverseEffects": [
-      "Hepatotoxicidade grave",
-      "Crise gotosa aguda",
-      "Fotossensibilidade"
+      "Hepatite medicamentosa",
+      "Falência hepática",
+      "Gota aguda",
+      "Trombocitopenia rara"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Monitorar ácido úrico e provas de função hepática mensalmente.",
-      "Parte integrante do esquema RHZE (rifampicina + isoniazida + pirazinamida + etambutol) nos primeiros 2 meses."
+      "Adulto ~25 mg/kg/dia",
+      "Criança WHO 35 mg/kg/dia",
+      "Máx usual 2 g/dia",
+      "Contraindicado dano hepático grave",
+      "Gota aguda: contraindicação"
     ],
-    "ref": "WHO TB Guidelines 2022 / Ministério da Saúde BR / Sanford Guide 2025",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "20–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para tratamento da tuberculose."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "25–35 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajustar intervalo para evitar acúmulo."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "25–35 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar hepatotoxicidade e hiperuricemia."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "25–35 mg/kg",
-          "intervalo": "72/72h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "72/72h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar em intervalos prolongados."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "25–35 mg/kg",
-          "intervalo": "3x/semana pós-HD",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "3x/semana pós-HD",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8b7ba02-8509-475b-8a3b-39d205af3f1e",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ],
+    "renalDose": "A bula não exige redução simples em toda DRC, mas insuficiência renal prolonga meia-vida e a droga é dializável. DRC grave/HD deve seguir protocolo de TB, frequentemente com dose pós-diálise e frequência reduzida.",
+    "pharmacologicClass": "Análogo de nicotinamida ativo em meio ácido",
+    "mechanism": "Pró-fármaco convertido pela pirazinamidase micobacteriana em ácido pirazinoico; afeta metabolismo energético e membrana em bacilos sob condições ácidas.",
+    "pharmacodynamics": "Pode ser bactericida ou bacteriostática conforme concentração e microambiente; atividade é maior em pH ácido e é essencial na fase intensiva de vários regimes.",
+    "pharmacokinetics": "Boa absorção oral, ampla distribuição inclusive SNC; metabolismo hepático e eliminação renal de metabólitos. É dializável.",
+    "indications": "Componente de esquemas combinados para tuberculose ativa suscetível e regimes selecionados de TB resistente.",
+    "presentations": [
+      "500 mg"
+    ],
+    "pediatricDose": "WHO: crianças geralmente 35 mg/kg/dia, faixa 30–40 mg/kg, máximo 2 g/dia, em esquema combinado.",
+    "hepaticDose": "Contraindicada em dano hepático grave. Hepatopatia prévia exige avaliação especializada, função hepática basal e monitorização estreita.",
+    "adverseEffects": "O principal risco é hepatotoxicidade dose-relacionada; inibe excreção renal de urato e frequentemente eleva ácido úrico.",
+    "contraindications": "Dano hepático grave, hipersensibilidade e gota aguda.",
+    "interactions": "Outros hepatotóxicos aumentam risco. Pode interferir com testes urinários ACETEST/KETOSTIX.",
+    "monitoring": "AST/ALT/bilirrubina e ácido úrico basal; repetir se sintomas ou fatores de risco. Monitorar artrite/gota.",
+    "administration": "VO uma vez ao dia em combinação com outros antituberculosos; ajustar por peso ao longo do tratamento.",
+    "preparation": "Comprimidos prontos para uso.",
+    "infusionProtocol": "Não aplicável; formulação oral.",
+    "pregnancy": "Usada em muitos programas de TB na gestação quando benefício do regime justifica; seguir diretriz nacional/especializada.",
+    "lactation": "Pequena quantidade é excretada no leite; usar conforme risco-benefício e programa TB.",
+    "specialPopulations": "Doença hepática, consumo de álcool e história de gota aumentam risco. DRC/diálise exigem protocolo específico.",
+    "patientEducation": "Relatar anorexia persistente, náusea, urina escura, icterícia ou dor/inchaço articular.",
+    "clinicalPearls": "Pirazinamida encurta regimes de TB, mas é o fármaco do esquema de primeira linha com atenção especial a fígado e ácido úrico.",
+    "guidelineRecommendations": "WHO mantém pirazinamida em fases intensivas de esquemas de TB suscetível; em crianças a dose diária recomendada é 35 mg/kg, faixa 30–40 mg/kg.",
+    "safetyFlags": [
+      "Hepatotoxicidade",
+      "Hiperuricemia/gota",
+      "TB sempre em combinação",
+      "Dializável",
+      "Monitorar ácido úrico"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8b7ba02-8509-475b-8a3b-39d205af3f1e",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ]
   },
   "es": {
     "name": "Pirazinamida",
-    "class": "Antimicobacteriano (antituberculoso)",
-    "commercialNames": {
-      "br": [
-        "Pirazinamida Genérico",
-        "Rifater (associação)"
-      ],
-      "ar": [
-        "Pirazinamida Genérico",
-        "Rifater (asociación)"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 500 mg",
-      "Formulación combinada con rifampicina + isoniazida (Rifater)"
+    "class": "Antimicobacteriano",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "1750 mg VO 1 vez/día (20–25 mg/kg/día)",
-      "pediatrica": "2000 mg VO 1 vez/día (30–40 mg/kg/día)"
-    },
+    "presentation": "Comprimidos orales.",
+    "dose": "Adultos: aproximadamente 20–30 mg/kg VO una vez al día; muchas guías usan objetivo ~25 mg/kg, máximo usual 2 g/día en régimen diario.",
     "doseKg": {
       "standard": "20–25 mg/kg/día VO (adulto)",
       "maxDose": "2 g/día"
@@ -162,105 +97,66 @@
     "dilution": "Uso exclusivamente oral.",
     "speed": "No aplicable (uso oral).",
     "commonAdverseEffects": [
-      "Hiperuricemia / artralgia",
-      "Náuseas y vómitos",
+      "Artralgia",
+      "Hiperuricemia",
+      "Náuseas",
       "Anorexia"
     ],
     "dangerousAdverseEffects": [
-      "Hepatotoxicidad grave",
-      "Crisis gotosa aguda",
-      "Fotosensibilidad"
+      "Hepatitis medicamentosa",
+      "Fallo hepático",
+      "Gota aguda",
+      "Trombocitopenia rara"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Monitorizar ácido úrico y pruebas de función hepática mensualmente.",
-      "Parte integrante del esquema RHZE en los primeros 2 meses."
+      "Adulto ~25 mg/kg/día",
+      "Niño WHO 35 mg/kg/día",
+      "Máx usual 2 g/día",
+      "Contraindicada daño hepático grave",
+      "Gota aguda: contraindicación"
     ],
-    "ref": "WHO TB Guidelines 2022 / Ministério da Saúde BR / Sanford Guide 2025",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "20–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para tratamiento de la tuberculosis."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "25–35 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajustar intervalo para evitar acumulación."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "25–35 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar hepatotoxicidad e hiperuricemia."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "25–35 mg/kg",
-          "intervalo": "72/72h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "72/72h",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar en intervalos prolongados."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "25–35 mg/kg",
-          "intervalo": "3x/semana pós-HD",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30–40 mg/kg",
-          "intervalo": "3x/semana pós-HD",
-          "doseMaxima": "2 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8b7ba02-8509-475b-8a3b-39d205af3f1e",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ],
+    "renalDose": "La ficha no exige reducción simple en toda ERC, pero insuficiencia renal prolonga semivida y es dializable. ERC grave/HD debe seguir protocolo TB, a menudo con dosis posdiálisis y menor frecuencia.",
+    "pharmacologicClass": "Análogo de nicotinamida activo en medio ácido",
+    "mechanism": "Profármaco convertido por pirazinamidasa micobacteriana en ácido pirazinoico; altera metabolismo energético/membrana en condiciones ácidas.",
+    "pharmacodynamics": "Puede ser bactericida o bacteriostática según concentración/microambiente; mayor actividad a pH ácido y es esencial en fase intensiva de varios regímenes.",
+    "pharmacokinetics": "Buena absorción oral, amplia distribución incluido SNC; metabolismo hepático y eliminación renal de metabolitos. Es dializable.",
+    "indications": "Componente de esquemas combinados para TB activa susceptible y regímenes seleccionados de TB resistente.",
+    "presentations": [
+      "500 mg"
+    ],
+    "pediatricDose": "WHO: niños generalmente 35 mg/kg/día, rango 30–40 mg/kg, máximo 2 g/día, en combinación.",
+    "hepaticDose": "Contraindicada en daño hepático grave. Hepatopatía previa exige valoración especializada y monitorización estrecha.",
+    "adverseEffects": "El principal riesgo es hepatotoxicidad dependiente de dosis; inhibe excreción renal de urato y frecuentemente eleva ácido úrico.",
+    "contraindications": "Daño hepático grave, hipersensibilidad y gota aguda.",
+    "interactions": "Otros hepatotóxicos aumentan riesgo. Puede interferir con pruebas urinarias ACETEST/KETOSTIX.",
+    "monitoring": "AST/ALT/bilirrubina y ácido úrico basal; repetir ante síntomas/riesgo. Vigilar artritis/gota.",
+    "administration": "VO una vez al día combinada con otros antituberculosos; ajustar a cambios de peso.",
+    "preparation": "Comprimidos listos.",
+    "infusionProtocol": "No aplicable; formulación oral.",
+    "pregnancy": "Usada en muchos programas TB durante gestación cuando beneficio del régimen lo justifica; seguir guía nacional/especialista.",
+    "lactation": "Se excreta en pequeña cantidad en leche; usar según riesgo-beneficio y programa TB.",
+    "specialPopulations": "Hepatopatía, alcohol y antecedente de gota aumentan riesgo. ERC/diálisis requieren protocolo específico.",
+    "patientEducation": "Informar anorexia persistente, náuseas, orina oscura, ictericia o dolor/inflamación articular.",
+    "clinicalPearls": "Pirazinamida permite acortar regímenes TB, pero requiere especial atención al hígado y ácido úrico.",
+    "guidelineRecommendations": "WHO mantiene pirazinamida en fases intensivas de TB susceptible; en niños la dosis diaria recomendada es 35 mg/kg, rango 30–40 mg/kg.",
+    "safetyFlags": [
+      "Hepatotoxicidad",
+      "Hiperuricemia/gota",
+      "TB siempre combinada",
+      "Dializable",
+      "Monitorizar ácido úrico"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8b7ba02-8509-475b-8a3b-39d205af3f1e",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ]
   },
   "name": {
     "pt": "Pirazinamida",
@@ -273,8 +169,8 @@
     "rifater (asociacion)",
     "antimicobacteriano (antituberculoso)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-498fff204c135c65",
+  "clinicalContentSha256": "498fff204c135c65be0a5cfa66e32fec095850e080daef212492a73e722d15c9",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

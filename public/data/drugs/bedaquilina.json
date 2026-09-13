@@ -1,109 +1,45 @@
 {
   "id": "bedaquilina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(239,68,68,0.12)",
   "colorTxt": "#991B1B",
   "pt": {
     "name": "Bedaquilina",
-    "class": "Diarilquinolina (inibidor da ATP-sintase micobacteriana — 1ª nova classe antituberculosa em 40 anos)",
-    "commercialNames": {
-      "br": [
-        "Sirturo"
-      ],
-      "ar": [
-        "Sirturo"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 100 mg"
+    "class": "Antituberculoso diarylquinolina",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "400 mg VO 24/24h por 2 semanas → 200 mg VO 3×/semana por 22 semanas (sempre com alimentos)"
-    },
+    "presentation": "Comprimidos orais.",
+    "dose": "Rótulo adulto: semanas 1–2, 400 mg VO uma vez ao dia; semanas 3–24, 200 mg VO 3x/semana com pelo menos 48 h entre doses. Sempre com alimento e regime de fundo.",
     "doseKg": null,
     "indication": "Tuberculose pulmonar multirresistente (TB-MDR) e extensivamente resistente (TB-XDR) em adultos e adolescentes ≥ 12 anos, como parte de regime combinado.",
     "spectrum": "Mycobacterium tuberculosis (incluindo cepas MDR e XDR), Mycobacterium avium complex (MAC — atividade in vitro). Mecanismo único: inibição seletiva da subunidade c da ATP-sintase micobacteriana.",
-    "contraindications": [
-      "Hipersensibilidade à bedaquilina",
-      "Uso concomitante de azitromicina ou outros prolongadores de QT sem monitorização rigorosa"
-    ],
+    "contraindications": "Hipersensibilidade grave; uso exige avaliação de regime e interações, não monoterapia.",
     "risksByPatient": [],
     "alerts": [
-      "Prolongamento do QT — monitorar ECG antes, na 2ª e 12ª semana e mensalmente.",
-      "Meia-vida terminal extremamente longa (~5–6 meses) — efeitos adversos e interações persistem meses após a descontinuação.",
-      "SEMPRE administrar com alimentos (aumenta 2× a biodisponibilidade).",
-      "Parte dos esquemas BPaL (bedaquilina + pretomanida + linezolida) para TB-XDR."
+      "Semanas 1–2: 400 mg QD",
+      "Semanas 3–24: 200 mg 3x/sem",
+      ">=48 h entre doses",
+      "Pediatria >=2 anos e >=8 kg",
+      "ECG/K/Ca/Mg/LFT antes"
     ],
-    "ref": "Sanford Guide 2025 / WHO MDR-TB Guidelines 2022 / FDA label Sirturo / EMA label / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal em insuficiência leve a moderada. Sem dados suficientes em ClCr < 30 mL/min.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Esquema padrão: 400 mg/dia nas primeiras 2 semanas → 200 mg 3×/semana por 22 semanas. SEMPRE administrar com alimentos (aumenta biodisponibilidade ~2×). Uso guiado por cultura, antibiograma e infectologia. Monitorar ECG antes do início."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "FDA/EMA label: sem ajuste necessário para ClCr 30–50 mL/min. Bedaquilina é metabolizada principalmente pelo CYP3A4 — eliminação hepática predominante (~73% fecal). Eliminação renal mínima (~0,001%). Monitorar QTc a cada 2–4 semanas."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "FDA/EMA label: dados insuficientes para ClCr 10–30 mL/min — usar com cautela. Eliminação renal mínima — ajuste de dose provavelmente desnecessário, mas risco de acúmulo de metabólitos N-monodesmetil (M2) aumentado. Monitorar QTc mensalmente e sinais de toxicidade."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "FDA/EMA label: dados insuficientes para ClCr < 10 mL/min — usar com cautela extrema. Monitorar QTc rigorosamente (baseline, semana 2, 12 e mensalmente). Risco de prolongamento QT aumentado por acúmulo do metabólito M2. Avaliar risco/benefício com equipe de infectologia e cardiologia."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "FDA/EMA label: dados muito limitados em pacientes em hemodiálise. Bedaquilina NÃO é removida pela HD (altamente lipofílica, Vd enorme ~164 L/kg, ligação proteica >99,9%). Não requer dose suplementar pós-HD. Monitorar QTc rigorosamente — meia-vida terminal de 5–6 meses implica exposição prolongada."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": false,
-      "neurotoxicityRisk": false,
-      "qtRisk": true,
-      "hepatotoxicityRisk": true,
-      "requiresCultureGuidance": true,
-      "warning": "⚠️ RISCO DE QT PROLONGADO E TORSADES DE POINTES. ECG obrigatório antes do início e monitoração mensal. Nunca combinar com outros agentes QT-prolongadores (delamanida, clofazimina, fluoroquinolonas, azitromicina) sem ECG seriado. Meia-vida de 5–6 meses — efeitos persistem muito além da descontinuação."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e&type=display",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://tbksp.who.int/en/node/2976",
+      "https://www.who.int/news/item/15-04-2025-who-announces-landmark-changes-in-treatment-of-drug-resistant-tuberculosis",
+      "https://www.cdc.gov/tb/hcp/treatment/drug-resistant-tuberculosis-disease.html"
+    ],
+    "renalDose": "Sem ajuste em DRC leve/moderada; cautela em DRC grave/ESRD, pois dados são limitados.",
+    "safetyFlags": [
+      "TB resistente",
+      "Nunca monoterapia",
+      "QT",
+      "CYP3A",
+      "WHO 2025 regimes 6 meses"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -117,108 +53,87 @@
         "Lexicomp Online 2025"
       ],
       "note": "Bloco mesclado e melhorado: esquema de dose completo (400 mg × 2 semanas → 200 mg 3×/sem × 22 semanas) preservado em todas as faixas. Lógica de HD corrigida (Vd ~164 L/kg, LP >99,9% — não removida por HD). safetyFlags QT e hepatotoxicidade mantidos. Johns Hopkins, UpToDate e Lexicomp adicionados às fontes."
-    }
+    },
+    "pharmacologicClass": "Inibidor seletivo da ATP sintase micobacteriana",
+    "mechanism": "Liga-se à subunidade c da ATP sintase de M. tuberculosis, bloqueando produção de ATP.",
+    "pharmacodynamics": "Bactericida contra M. tuberculosis suscetível; atividade depende da exposição e deve ocorrer sempre em combinação com regime efetivo.",
+    "pharmacokinetics": "VO com alimento aumenta biodisponibilidade. Metabolizada principalmente por CYP3A4; meia-vida terminal extremamente longa por redistribuição tecidual.",
+    "indications": "Componente de regimes combinados para TB pulmonar resistente à rifampicina/MDR conforme suscetibilidade, programa e diretriz. Não usar como monoterapia.",
+    "presentations": [
+      "20 mg",
+      "100 mg"
+    ],
+    "pediatricDose": ">=2 anos e >=8 kg: 8–<10 kg 80 mg QD semanas 1–2, depois 40 mg 3x/sem; 10–<15 kg 120/60 mg; 15–<30 kg 200/100 mg; >=30 kg 400/200 mg conforme esquema semanal.",
+    "hepaticDose": "Sem ajuste em hepatopatia leve/moderada; não estudada adequadamente em hepatopatia grave.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Artralgia",
+      "Cefaleia",
+      "Elevação de transaminases"
+    ],
+    "dangerousAdverseEffects": [
+      "QT prolongado/Torsades",
+      "Hepatotoxicidade",
+      "Mortalidade aumentada observada em estudo histórico",
+      "Interações CYP3A"
+    ],
+    "adverseEffects": "QT prolonga de forma dose/exposição-dependente e soma com outros fármacos de TB que prolongam QT.",
+    "interactions": "Evitar indutores fortes de CYP3A como rifampicina/rifapentina e erva-de-são-joão; inibidores fortes prolongados podem aumentar exposição. Somação de QT com clofazimina, fluoroquinolonas e outros.",
+    "monitoring": "Antes de iniciar: ECG, K, Ca, Mg e enzimas hepáticas. Repetir ECG/eletrólitos conforme risco e regime; monitorar AST/ALT e resposta microbiológica.",
+    "administration": "Tomar com alimento. Semanas 3–24 manter pelo menos 48 h entre doses.",
+    "preparation": "Comprimidos 20 mg podem ser administrados por métodos alternativos previstos na bula para crianças/dificuldade de deglutição.",
+    "infusionProtocol": "Não aplicável; uso oral.",
+    "pregnancy": "Dados humanos são limitados; tratamento de TB resistente deve priorizar benefício materno e programa especializado.",
+    "lactation": "Pode haver exposição relevante devido à meia-vida longa; decisão deve ser especializada.",
+    "specialPopulations": "WHO 2025 prioriza regimes de 6 meses como BPaLM/BPaL em pacientes elegíveis; a composição/duração do regime completo não deve ser inferida apenas da bula individual.",
+    "patientEducation": "Explicar importância de adesão ao regime completo e de não tomar bedaquilina isoladamente; relatar síncope/palpitações e evitar medicamentos não revisados.",
+    "clinicalPearls": "Bedaquilina é fármaco de regime, não de monoterapia: QT, CYP3A e meia-vida longa tornam a combinação tão importante quanto a própria dose.",
+    "guidelineRecommendations": "WHO 2025 mantém BPaLM/BPaL entre regimes prioritários de 6 meses para MDR/RR-TB elegível e introduz alternativas adicionais; seleção depende de DST, local de doença, idade e programa nacional.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e&type=display",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://tbksp.who.int/en/node/2976",
+      "https://www.who.int/news/item/15-04-2025-who-announces-landmark-changes-in-treatment-of-drug-resistant-tuberculosis",
+      "https://www.cdc.gov/tb/hcp/treatment/drug-resistant-tuberculosis-disease.html"
+    ]
   },
   "es": {
     "name": "Bedaquilina",
-    "class": "Diarilquinolina (inhibidor de la ATP-sintasa micobacteriana — 1.ª nueva clase antituberculosa en 40 años)",
-    "commercialNames": {
-      "br": [
-        "Sirturo"
-      ],
-      "ar": [
-        "Sirturo"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 100 mg"
+    "class": "Antituberculoso diarilquinolina",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "400 mg VO 24/24h durante 2 semanas → 200 mg VO 3×/semana durante 22 semanas (siempre con alimentos)"
-    },
+    "presentation": "Comprimidos orales.",
+    "dose": "Ficha adulta: semanas 1–2 400 mg VO QD; semanas 3–24 200 mg VO 3x/semana con >=48 h entre dosis, siempre con alimentos y régimen de fondo.",
     "doseKg": null,
     "indication": "Tuberculosis pulmonar multirresistente (TB-MDR) y extensivamente resistente (TB-XDR) en adultos y adolescentes ≥ 12 años, como parte de régimen combinado.",
     "spectrum": "Mycobacterium tuberculosis (incluidas cepas MDR y XDR), Mycobacterium avium complex (MAC — actividad in vitro). Mecanismo único: inhibición selectiva de la subunidad c de la ATP-sintasa micobacteriana.",
-    "contraindications": [
-      "Hipersensibilidad a la bedaquilina",
-      "Uso concomitante de azitromicina u otros prolongadores de QT sin monitorización rigurosa"
-    ],
+    "contraindications": "Hipersensibilidad grave; requiere régimen combinado y evaluación de interacciones.",
     "risksByPatient": [],
     "alerts": [
-      "Prolongación del QT — monitorizar ECG antes, en la 2.ª y 12.ª semana y mensualmente.",
-      "Semivida terminal extremadamente larga (~5–6 meses) — efectos adversos e interacciones persisten meses tras la discontinuación.",
-      "SIEMPRE administrar con alimentos (aumenta 2× la biodisponibilidad).",
-      "Parte de los esquemas BPaL (bedaquilina + pretomanida + linezolida) para TB-XDR."
+      "Semanas 1–2 400 mg QD",
+      "Semanas 3–24 200 mg 3x/sem",
+      ">=48 h",
+      "Pediatría >=2 años y >=8 kg",
+      "ECG/K/Ca/Mg/LFT antes"
     ],
-    "ref": "Sanford Guide 2025 / WHO MDR-TB Guidelines 2022 / FDA label Sirturo / EMA label / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal en insuficiencia leve a moderada. Sin datos suficientes en ClCr < 30 mL/min.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Esquema estándar: 400 mg/día las primeras 2 semanas → 200 mg 3×/semana por 22 semanas. SIEMPRE administrar con alimentos (aumenta biodisponibilidad ~2×). Uso guiado por cultivo, antibiograma e infectología. Monitorizar ECG antes del inicio."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "FDA/EMA label: sin ajuste necesario para ClCr 30–50 mL/min. La bedaquilina se metaboliza principalmente por CYP3A4 — eliminación hepática predominante (~73% fecal). Eliminación renal mínima (~0,001%). Monitorizar QTc cada 2–4 semanas."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "FDA/EMA label: datos insuficientes para ClCr 10–30 mL/min — usar con precaución. Eliminación renal mínima — ajuste de dosis probablemente innecesario, pero riesgo de acumulación de metabolito N-monodesmetil (M2) aumentado. Monitorizar QTc mensualmente y signos de toxicidad."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "FDA/EMA label: datos insuficientes para ClCr < 10 mL/min — usar con cautela extrema. Monitorizar QTc rigurosamente (basal, semana 2, 12 y mensualmente). Riesgo de prolongación QT aumentado por acumulación del metabolito M2. Evaluar riesgo/beneficio con infectología y cardiología."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h (semanas 1–2) → 200 mg 3×/semana (semanas 3–24)",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": null,
-        "obs": "FDA/EMA label: datos muy limitados en pacientes en hemodiálisis. La bedaquilina NO es removida por HD (altamente lipofílica, Vd enorme ~164 L/kg, unión proteica >99,9%). No requiere dosis suplementaria post-HD. Monitorizar QTc rigurosamente — semivida terminal de 5–6 meses implica exposición prolongada."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": false,
-      "neurotoxicityRisk": false,
-      "qtRisk": true,
-      "hepatotoxicityRisk": true,
-      "requiresCultureGuidance": true,
-      "warning": "⚠️ RIESGO DE QT PROLONGADO Y TORSADES DE POINTES. ECG obligatorio antes del inicio y monitoreo mensual. Nunca combinar con otros agentes QT-prolongadores (delamanida, clofazimina, fluoroquinolonas, azitromicina) sin ECG seriado. Semivida de 5–6 meses — efectos persisten mucho después de la discontinuación."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e&type=display",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://tbksp.who.int/en/node/2976",
+      "https://www.who.int/news/item/15-04-2025-who-announces-landmark-changes-in-treatment-of-drug-resistant-tuberculosis",
+      "https://www.cdc.gov/tb/hcp/treatment/drug-resistant-tuberculosis-disease.html"
+    ],
+    "renalDose": "Sin ajuste en ERC leve/moderada; cautela en grave/ESRD.",
+    "safetyFlags": [
+      "TB resistente",
+      "Nunca monoterapia",
+      "QT",
+      "CYP3A",
+      "WHO 2025 regímenes 6 meses"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -232,7 +147,50 @@
         "Lexicomp Online 2025"
       ],
       "note": "Bloque fusionado y mejorado: esquema de dosis completo (400 mg × 2 semanas → 200 mg 3×/sem × 22 semanas) preservado en todos los rangos. Lógica de HD corregida (Vd ~164 L/kg, LP >99,9% — no removida por HD). safetyFlags QT y hepatotoxicidad mantenidos. Johns Hopkins, UpToDate y Lexicomp añadidos a las fuentes."
-    }
+    },
+    "pharmacologicClass": "Inhibidor selectivo de ATP sintasa micobacteriana",
+    "mechanism": "Se une a subunidad c de ATP sintasa de M. tuberculosis y bloquea producción de ATP.",
+    "pharmacodynamics": "Bactericida frente a M. tuberculosis susceptible; siempre en régimen combinado efectivo.",
+    "pharmacokinetics": "VO con alimentos aumenta biodisponibilidad; metabolismo CYP3A4 y semivida terminal muy larga.",
+    "indications": "Componente de regímenes para TB pulmonar resistente a rifampicina/MDR según susceptibilidad, programa y guía; nunca monoterapia.",
+    "presentations": [
+      "20 mg",
+      "100 mg"
+    ],
+    "pediatricDose": ">=2 años y >=8 kg: 8–<10 kg 80 mg QD luego 40 mg 3x/sem; 10–<15 kg 120/60 mg; 15–<30 kg 200/100 mg; >=30 kg 400/200 mg.",
+    "hepaticDose": "Sin ajuste leve/moderada; datos insuficientes en grave.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Artralgia",
+      "Cefalea",
+      "Elevación de transaminasas"
+    ],
+    "dangerousAdverseEffects": [
+      "QT/Torsades",
+      "Hepatotoxicidad",
+      "Señal histórica de mortalidad",
+      "Interacciones CYP3A"
+    ],
+    "adverseEffects": "QT se suma con otros fármacos del régimen y requiere control.",
+    "interactions": "Evitar inductores fuertes CYP3A; inhibidores fuertes prolongados aumentan exposición. Suma QT con clofazimina/fluoroquinolonas.",
+    "monitoring": "Antes: ECG, K, Ca, Mg y enzimas hepáticas; repetir según riesgo y vigilar respuesta microbiológica.",
+    "administration": "Con alimentos; semanas 3–24 >=48 h entre dosis.",
+    "preparation": "Comprimido 20 mg permite métodos alternativos de administración según ficha.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos limitados; manejo especializado de TB resistente.",
+    "lactation": "Valorar exposición por semivida larga.",
+    "specialPopulations": "WHO 2025 prioriza BPaLM/BPaL de 6 meses en elegibles; no inferir régimen completo desde la ficha individual.",
+    "patientEducation": "No tomar como monoterapia; adherir al régimen y comunicar síncope/palpitaciones.",
+    "clinicalPearls": "Es un fármaco de régimen: QT, CYP3A y semivida larga hacen crítica la combinación y monitorización.",
+    "guidelineRecommendations": "WHO 2025 mantiene BPaLM/BPaL entre regímenes prioritarios de 6 meses para MDR/RR-TB elegible e incorpora alternativas; selección depende de DST y programa.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e&type=display",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://tbksp.who.int/en/node/2976",
+      "https://www.who.int/news/item/15-04-2025-who-announces-landmark-changes-in-treatment-of-drug-resistant-tuberculosis",
+      "https://www.cdc.gov/tb/hcp/treatment/drug-resistant-tuberculosis-disease.html"
+    ]
   },
   "name": {
     "pt": "Bedaquilina",
@@ -243,8 +201,8 @@
     "sirturo",
     "diarilquinolina (inibidor da atp-sintase micobacteriana — 1ª nova classe antituberculosa em 40 anos)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-a6fa7d1c71ba5a14",
+  "clinicalContentSha256": "a6fa7d1c71ba5a142e837f517a373eed5a8df85ee543bd5f583bbe81439556de",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

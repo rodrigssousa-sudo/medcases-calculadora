@@ -1,344 +1,176 @@
 {
   "id": "minociclina",
   "category": "atb",
-  "icon": "🟡",
+  "icon": "",
   "color": "rgba(234,179,8,0.15)",
   "colorTxt": "#EAB308",
   "pt": {
     "name": "Minociclina",
-    "class": "Tetraciclina de 2ª geração",
-    "commercialNames": {
-      "br": [
-        "Minomycin",
-        "Minociclina Genérica"
-      ],
-      "ar": [
-        "Minocin",
-        "Minociclina Genérica"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 50 mg, 100 mg",
-      "Comprimidos de liberação prolongada: 45 mg, 90 mg, 135 mg",
-      "Pó para solução EV: 100 mg"
+    "class": "Antibiótico tetraciclina",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "200 mg dose de ataque, depois 100 mg VO/EV 12/12h",
-      "adultoEV": "200 mg dose de ataque EV, depois 100 mg EV 12/12h (infusão 60 min)",
-      "pediatrica": "140 mg/dose VO/EV 12/12h (ataque: 4 mg/kg)"
-    },
+    "presentation": "Cápsulas/comprimidos orais.",
+    "dose": "Adultos: 200 mg inicial, depois 100 mg q12h. IDSA 2026 usa minociclina 200 mg q12h como componente alternativo para CRAB/S. maltophilia.",
     "doseKg": {
       "pediatrica": "2 mg/kg/dose 12/12h (ataque: 4 mg/kg)"
     },
-    "mechanism": "Liga-se à subunidade 30S ribossomal, inibindo reversível e bacteriostaticamente a síntese proteica bacteriana. Excelente penetração intracelular.",
+    "mechanism": "Liga-se à subunidade 30S e inibe incorporação de aminoacil-tRNA.",
     "onset": "Absorção oral rápida — Tmáx 2–4 h; biodisponibilidade > 90%.",
     "halfLife": "Meia-vida 11–26 h (eliminação principalmente hepática — NÃO renal).",
     "therapeuticRange": "Bacteriostático. Concentração-dependente para alguns organismos intracelulares.",
     "dilution": "EV: reconstituir 100 mg em 5 mL de água estéril; diluir em 500–1000 mL de SF/SG.",
     "speed": "Infundir em 60–360 minutos.",
     "commonAdverseEffects": [
-      "Náuseas e vômitos",
-      "Tontura e vertigem",
-      "Fotossensibilidade",
-      "Pigmentação cutânea/dental",
-      "Diarreia"
+      "Náusea",
+      "Diarreia",
+      "Dor abdominal",
+      "Cefaleia"
     ],
     "dangerousAdverseEffects": [
-      "Hepatotoxicidade grave",
-      "Hipertensão intracraniana benigna",
-      "Síndrome lúpus-like",
-      "Vestibulotoxicidade (tontura, vertigem grave)"
+      "DRESS",
+      "Hepatite autoimune",
+      "Lúpus induzido",
+      "Hipertensão intracraniana",
+      "Anafilaxia/SCAR"
     ],
-    "contraindications": [
-      "Gestação (especialmente 2º e 3º trimestres)",
-      "Crianças < 8 anos (pigmentação dentária permanente)",
-      "Hipersensibilidade a tetraciclinas"
-    ],
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
     "risksByPatient": [],
     "alerts": [
-      "Não tomar com laticínios, antiácidos com Ca²⁺/Mg²⁺/Al³⁺, ferro ou zinco — quelação reduz absorção.",
-      "Usar fotoproteção solar durante o tratamento.",
-      "Não requer ajuste renal — vantagem em pacientes com DRC."
+      "Vertigem/vestibular",
+      "Pigmentação",
+      "Hepatite autoimune/lúpus",
+      "Hipertensão intracraniana",
+      "Quelantes"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Após dose de ataque de 200 mg."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar hepatotoxicidade e vestibulotoxicidade."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita dose suplementar pós-HD."
-      }
-    }
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=093ff3c7-3ecc-47b4-9ae6-5218bcd262b2",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e415c323-8219-464b-9e3e-72c5a796cdaa",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/050444s053lbl.pdf",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=55df55fb-18ec-4e00-9ed0-10bba0da513b"
+    ],
+    "renalDose": "CrCl <80 não totalmente caracterizado; monitorar BUN/creatinina e não exceder 200 mg/dia no rótulo convencional em insuficiência renal.",
+    "pharmacologicClass": "Tetraciclina semissintética lipofílica",
+    "pharmacodynamics": "Bacteriostática; AUC/MIC é relevante. Para CRAB, PK/PD 2026 suporta dose alta como componente alternativo conforme suscetibilidade.",
+    "pharmacokinetics": "Alta biodisponibilidade oral e penetração tecidual; metabolismo parcial hepático e eliminação renal/fecal. Maior penetração vestibular/SNC que doxiciclina.",
+    "indications": "Infecções por suscetíveis; pode integrar combinações alternativas para CRAB ou S. maltophilia segundo AST/diretriz.",
+    "presentations": [
+      "50 mg",
+      "75 mg",
+      "100 mg"
+    ],
+    "pediatricDose": ">8 anos: 4 mg/kg inicialmente, depois 2 mg/kg q12h, sem exceder dose adulta.",
+    "hepaticDose": "Cautela em hepatopatia; insuficiência renal pode aumentar exposição e toxicidade hepática.",
+    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+    "interactions": "Cátions/antiácidos/ferro reduzem absorção; retinoides sistêmicos aumentam risco de hipertensão intracraniana.",
+    "monitoring": "Função renal/hepática, sintomas vestibulares, pigmentação e sinais autoimunes.",
+    "administration": "VO com água; pode ser tomada com alimento. Separar de antiácidos/ferro/cátions.",
+    "preparation": "Preparar conforme a formulação; não extrapolar instruções entre formas oral e intravenosa. Cápsulas de 50, 75 ou 100 mg: não requerem reconstituição; engolir inteiras com quantidade adequada de líquido para reduzir risco de irritação ou ulceração esofágica; podem ser administradas com ou sem alimentos. Minociclina IV 100 mg/vial (pó liofilizado): reconstituir cada frasco com 5 mL de água estéril para injeção. Imediatamente após a reconstituição, diluir em 100–1000 mL de cloreto de sódio 0,9%, dextrose 5% ou dextrose + cloreto de sódio, ou em 250–1000 mL de Ringer lactato. Não usar outras soluções contendo cálcio, pois pode ocorrer precipitação, sobretudo em meios neutros ou alcalinos. Após diluição na bolsa IV, conservar por até 4 horas em temperatura ambiente ou até 24 horas refrigerada a 2–8 °C; descartar qualquer porção não utilizada após esse período.",
+    "infusionProtocol": "Não aplicável ao registro oral.",
+    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Efeitos vestibulares, pigmentação, hepatite autoimune/lúpus induzido e hipertensão intracraniana são mais característicos.",
+    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+    "clinicalPearls": "Para CRAB, IDSA 2026 prefere minociclina entre tetraciclinas selecionadas, como componente de combinação e baseada em AST.",
+    "guidelineRecommendations": "IDSA 2026: alternativa em combinação para CRAB invasivo e S. maltophilia; não confiar como monoterapia de bacteremia por baixa concentração sérica.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interações"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=093ff3c7-3ecc-47b4-9ae6-5218bcd262b2",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e415c323-8219-464b-9e3e-72c5a796cdaa",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/050444s053lbl.pdf",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=55df55fb-18ec-4e00-9ed0-10bba0da513b"
+    ]
   },
   "es": {
     "name": "Minociclina",
-    "class": "Tetraciclina de 2ª generación",
-    "commercialNames": {
-      "br": [
-        "Minomycin",
-        "Minociclina Genérica"
-      ],
-      "ar": [
-        "Minocin",
-        "Minociclina Genérica"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 50 mg, 100 mg",
-      "Comprimidos de liberación prolongada: 45 mg, 90 mg, 135 mg",
-      "Polvo para solución EV: 100 mg"
+    "class": "Antibiótico tetraciclina",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "200 mg dosis de carga, luego 100 mg VO/EV cada 12h",
-      "adultoEV": "200 mg dosis de carga EV, luego 100 mg EV cada 12h (infusión 60 min)",
-      "pediatrica": "140 mg/dosis VO/EV cada 12h (carga: 4 mg/kg)"
-    },
+    "presentation": "Cápsulas/comprimidos orales.",
+    "dose": "Adultos: 200 mg inicial, luego 100 mg q12h. IDSA 2026 usa minociclina 200 mg q12h como componente alternativo para CRAB/S. maltophilia.",
     "doseKg": {
       "pediatrica": "2 mg/kg/dosis cada 12h (carga: 4 mg/kg)"
     },
-    "mechanism": "Se une a la subunidad 30S ribosomal, inhibiendo reversible y bacteriostáticamente la síntesis proteica bacteriana. Excelente penetración intracelular.",
+    "mechanism": "Se une a subunidad 30S e inhibe incorporación de aminoacil-tRNA.",
     "onset": "Absorción oral rápida — Tmáx 2–4 h; biodisponibilidad > 90%.",
     "halfLife": "Semivida 11–26 h (eliminación principalmente hepática — NO renal).",
     "therapeuticRange": "Bacteriostático. Concentración-dependiente para algunos organismos intracelulares.",
     "dilution": "EV: reconstituir 100 mg en 5 mL de agua estéril; diluir en 500–1000 mL de SF/SG.",
     "speed": "Infundir en 60–360 minutos.",
     "commonAdverseEffects": [
-      "Náuseas y vómitos",
-      "Mareos y vértigo",
-      "Fotosensibilidad",
-      "Pigmentación cutánea/dental",
-      "Diarrea"
+      "Náuseas",
+      "Diarrea",
+      "Dolor abdominal",
+      "Cefalea"
     ],
     "dangerousAdverseEffects": [
-      "Hepatotoxicidad grave",
-      "Hipertensión intracraneal benigna",
-      "Síndrome lupus-like",
-      "Vestibulotoxicidad (mareo, vértigo grave)"
+      "DRESS",
+      "Hepatitis autoinmune",
+      "Lupus inducido",
+      "Hipertensión intracraneal",
+      "Anafilaxia/SCAR"
     ],
-    "contraindications": [
-      "Gestación (especialmente 2º y 3er trimestres)",
-      "Niños < 8 años (pigmentación dental permanente)",
-      "Hipersensibilidad a tetraciclinas"
-    ],
+    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
     "risksByPatient": [],
     "alerts": [
-      "No tomar con lácteos, antiácidos con Ca²⁺/Mg²⁺/Al³⁺, hierro o zinc — quelación reduce absorción.",
-      "Usar fotoprotección solar durante el tratamiento.",
-      "No requiere ajuste renal — ventaja en pacientes con ERC."
+      "Vértigo/vestibular",
+      "Pigmentación",
+      "Hepatitis autoinmune/lupus",
+      "Hipertensión intracraneal",
+      "Quelantes"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Tras dosis de carga de 200 mg."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar hepatotoxicidad y vestibulotoxicidad."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere dosis suplementaria post-HD."
-      }
-    }
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=093ff3c7-3ecc-47b4-9ae6-5218bcd262b2",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e415c323-8219-464b-9e3e-72c5a796cdaa",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/050444s053lbl.pdf",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=55df55fb-18ec-4e00-9ed0-10bba0da513b"
+    ],
+    "renalDose": "ClCr <80 no totalmente caracterizado; monitorizar BUN/creatinina y no exceder 200 mg/día en ficha convencional con insuficiencia renal.",
+    "pharmacologicClass": "Tetraciclina semisintética lipofílica",
+    "pharmacodynamics": "Bacteriostática; AUC/MIC es relevante. Para CRAB, PK/PD 2026 apoya dosis altas como componente alternativo según susceptibilidad.",
+    "pharmacokinetics": "Alta biodisponibilidad oral y penetración tisular; metabolismo parcial hepático y eliminación renal/fecal. Mayor penetración vestibular/SNC que doxiciclina.",
+    "indications": "Infecciones por susceptibles; puede integrar combinaciones alternativas para CRAB o S. maltophilia según AST/guía.",
+    "presentations": [
+      "50 mg",
+      "75 mg",
+      "100 mg"
+    ],
+    "pediatricDose": ">8 años: 4 mg/kg inicial, luego 2 mg/kg q12h, sin exceder dosis adulta.",
+    "hepaticDose": "Precaución en hepatopatía; insuficiencia renal puede aumentar exposición y toxicidad hepática.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+    "interactions": "Cationes/antiácidos/hierro reducen absorción; retinoides sistémicos aumentan hipertensión intracraneal.",
+    "monitoring": "Función renal/hepática, síntomas vestibulares, pigmentación y signos autoinmunes.",
+    "administration": "VO con agua; puede tomarse con alimentos. Separar de antiácidos/hierro/cationes.",
+    "preparation": "Preparar según la formulación; no extrapolar instrucciones entre las formas oral e intravenosa. Cápsulas de 50, 75 o 100 mg: no requieren reconstitución; tragar enteras con una cantidad adecuada de líquido para reducir el riesgo de irritación o ulceración esofágica; pueden administrarse con o sin alimentos. Minociclina IV 100 mg/vial (polvo liofilizado): reconstituir cada vial con 5 mL de agua estéril para inyección. Inmediatamente después de la reconstitución, diluir en 100–1000 mL de cloruro de sodio 0,9%, dextrosa 5% o dextrosa + cloruro de sodio, o en 250–1000 mL de Ringer lactato. No usar otras soluciones que contengan calcio, porque puede producirse precipitación, especialmente en medios neutros o alcalinos. Después de la dilución en la bolsa IV, conservar hasta 4 horas a temperatura ambiente o hasta 24 horas refrigerada a 2–8 °C; desechar cualquier porción no utilizada después de ese período.",
+    "infusionProtocol": "No aplicable al registro oral.",
+    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Efectos vestibulares, pigmentación, hepatitis autoinmune/lupus inducido e hipertensión intracraneal son característicos.",
+    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+    "clinicalPearls": "Para CRAB, IDSA 2026 prefiere minociclina entre tetraciclinas seleccionadas, como componente de combinación y basada en AST.",
+    "guidelineRecommendations": "IDSA 2026: alternativa en combinación para CRAB invasivo y S. maltophilia; no confiar como monoterapia de bacteriemia por baja concentración sérica.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interacciones"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=093ff3c7-3ecc-47b4-9ae6-5218bcd262b2",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e415c323-8219-464b-9e3e-72c5a796cdaa",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/050444s053lbl.pdf",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=55df55fb-18ec-4e00-9ed0-10bba0da513b"
+    ]
   },
   "name": {
     "pt": "Minociclina",
@@ -351,8 +183,8 @@
     "minocin",
     "tetraciclina de 2ª geracao"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-37908dbea177d64a",
+  "clinicalContentSha256": "37908dbea177d64a76a1b7d028e86cd137427e295ee9f84cc76ced7b04e5f549",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

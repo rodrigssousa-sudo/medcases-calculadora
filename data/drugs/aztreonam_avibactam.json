@@ -1,194 +1,172 @@
 {
   "id": "aztreonam_avibactam",
   "category": "atb",
-  "icon": "🧬",
+  "icon": "",
   "color": "rgba(59,130,246,0.15)",
   "colorTxt": "#1E40AF",
   "pt": {
-    "name": "Aztreonam + Avibactam",
-    "class": "Monobactâmico + Inibidor de beta-lactamase (anti-MBL — NDM, VIM, IMP)",
-    "commercialNames": {
-      "br": [
-        "Emblaveo (acesso limitado no Brasil)"
-      ],
-      "ar": [
-        "Emblaveo"
-      ]
-    },
-    "presentation": [
-      "Pó para solução injetável EV: 1,5 g aztreonam/600 mg avibactam (combinação extemporânea com ceftazidima+avibactam na prática)"
+    "name": "Aztreonam + avibactam",
+    "class": "Monobactâmico + inibidor de beta-lactamase",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoEV": "2,5 g EV 8/8h (infusão 3 horas)"
-    },
+    "presentation": "Pó para solução IV em combinação fixa.",
+    "dose": "CrCl >50: carga 2,67 g IV, depois 2 g IV q6h; cada dose em infusão de 3 h. cIAI: usar metronidazol concomitante; duração 5–14 dias.",
     "doseKg": null,
     "indication": "Infecções por bacilos Gram-negativos produtores de metalo-beta-lactamases (NDM, VIM, IMP) — único regime com atividade confiável contra NDM. Pneumonia hospitalar/VAP, infecções intra-abdominais, ITU complicada, bacteremia por MBL.",
     "spectrum": "Enterobacterales MBL+ (NDM, VIM, IMP), Klebsiella pneumoniae NDM+, E. coli NDM+. O aztreonam é estável às MBL; o avibactam protege o aztreonam das beta-lactamases de classe A e C co-produzidas. Atividade contra Pseudomonas aeruginosa é variável. Sem atividade contra Acinetobacter ou Gram-positivos.",
-    "contraindications": [
-      "Hipersensibilidade ao aztreonam ou avibactam",
-      "Hipersensibilidade grave à ceftazidima (reação cruzada possível com aztreonam)"
-    ],
+    "contraindications": "Hipersensibilidade grave ao aztreonam, avibactam ou componentes; avaliar alergias beta-lactâmicas prévias.",
     "risksByPatient": [],
     "alerts": [
-      "ÚNICO regime com atividade comprovada contra organismos NDM+ — reservar para MBL documentado.",
-      "Na prática, frequentemente combinado com ceftazidima+avibactam para ampliação do espectro (cobertura MBL + KPC).",
-      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+      "Carga 2,67 g",
+      "CrCl >50: 2 g q6h",
+      "CrCl >30–50: 1 g q6h",
+      "HD: 0,9 g q12h após sessão",
+      "Metronidazol no cIAI"
     ],
-    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CRE Guidelines / Wunderink et al. NEJM 2023 / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2,5 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "7,5 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Dose habitual para metalo-beta-lactamases."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "3,75 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Redução necessária em insuficiência renal moderada."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "940 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,88 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Ajuste obrigatório para manutenção da exposição farmacodinâmica."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "940 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "940 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Monitorar resposta clínica e neurotoxicidade."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "940 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "940 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Administrar após HD."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a&type=display",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.fda.gov/news-events/press-announcements/fda-approves-new-treatment-complicated-intra-abdominal-infections",
+      "https://clinicaltrials.gov/search?term=aztreonam%20avibactam"
+    ],
+    "renalDose": "CrCl >30–50: carga 2,67 g, manutenção 1 g q6h; >15–30: carga 1,8 g, manutenção 0,9 g q8h; <=15/HD: carga 1,33 g, manutenção 0,9 g q12h. Em HD, administrar após a sessão.",
+    "pharmacologicClass": "Aztreonam protegido por avibactam em proporção fixa 3:1",
+    "mechanism": "Aztreonam liga-se sobretudo à PBP3 e resiste à hidrólise por metalo-beta-lactamases; avibactam inibe beta-lactamases serinas coexpressas que, sem proteção, hidrolisariam aztreonam.",
+    "pharmacodynamics": "Bactericida tempo-dependente; metas PK/PD combinam fT>MIC do aztreonam e exposição ao avibactam. AST continua obrigatório, especialmente em AMR.",
+    "pharmacokinetics": "Somente IV; ambos têm eliminação renal importante e são removidos por hemodiálise. A depuração acompanha de perto a função renal.",
+    "indications": "Bula EUA 2026: adultos >=18 anos com infecção intra-abdominal complicada com opções limitadas ou ausentes, em combinação com metronidazol.",
+    "presentations": [
+      "2 g aztreonam + 0,67 g avibactam por dose de carga 2,67 g conforme apresentação"
+    ],
+    "pediatricDose": "Segurança e eficácia abaixo de 18 anos não estabelecidas na bula norte-americana atual; não extrapolar a dose adulta.",
+    "hepaticDose": "Sem ajuste numérico rotineiro estabelecido; monitorar transaminases, pois elevações hepáticas ocorreram em estudos clínicos.",
+    "commonAdverseEffects": [
+      "Elevação de transaminases",
+      "Anemia",
+      "Diarreia",
+      "Hipocalemia",
+      "Febre"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Lesão hepática clinicamente relevante",
+      "C. difficile",
+      "Emergência de resistência"
+    ],
+    "adverseEffects": "Alterações hepáticas e hematológicas foram descritas; a aprovação de cIAI baseou-se em dados clínicos limitados, exigindo vigilância de eficácia e segurança.",
+    "interactions": "Poucas interações metabólicas relevantes; metronidazol deve ser administrado concomitantemente no cIAI rotulado.",
+    "monitoring": "CrCl frequente, AST/ALT, hemograma, eletrólitos, cultura/AST e resposta clínica.",
+    "administration": "IV exclusivamente. A dose é calculada desde o início de uma infusão até o início da próxima.",
+    "preparation": "Reconstituir e diluir conforme bula, preservando proporção fixa 3:1.",
+    "infusionProtocol": "Infundir cada carga e manutenção durante 3 horas.",
+    "pregnancy": "Dados humanos são limitados; usar somente quando benefício justificar.",
+    "lactation": "Dados da combinação são limitados; avaliar exposição e benefício materno.",
+    "specialPopulations": "Adultos apenas na bula EUA atual. A função renal pode mudar rapidamente no início da infecção e requer recálculo de CrCl.",
+    "patientEducation": "Explicar que é terapia IV de reserva para Gram-negativos resistentes e que o tratamento de cIAI exige metronidazol concomitante.",
+    "clinicalPearls": "Aztreonam protege a atividade contra MBL porque não é hidrolisado por essas enzimas, enquanto avibactam bloqueia ESBL/AmpC/OXA serinas que frequentemente coexistem.",
+    "guidelineRecommendations": "IDSA 2026 considera aztreonam-avibactam opção preferida para Enterobacterales produtores de NDM/MBL suscetíveis; para MBL-Pseudomonas não é sugerido de rotina e AST continua essencial.",
+    "safetyFlags": [
+      "MBL/NDM",
+      "cIAI + metronidazol",
+      "Infusão 3 h",
+      "Ajuste renal obrigatório",
+      "Adultos >=18"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a&type=display",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.fda.gov/news-events/press-announcements/fda-approves-new-treatment-complicated-intra-abdominal-infections",
+      "https://clinicaltrials.gov/search?term=aztreonam%20avibactam"
+    ]
   },
   "es": {
-    "name": "Aztreonam + Avibactam",
-    "class": "Monobactámico + Inhibidor de beta-lactamasa (anti-MBL — NDM, VIM, IMP)",
-    "commercialNames": {
-      "br": [
-        "Emblaveo (acesso limitado no Brasil)"
-      ],
-      "ar": [
-        "Emblaveo"
-      ]
-    },
-    "presentation": [
-      "Polvo para solución inyectable EV: 1,5 g aztreonam/600 mg avibactam (combinación extemporánea con ceftazidima+avibactam en la práctica)"
+    "name": "Aztreonam + avibactam",
+    "class": "Monobactámico + inhibidor de beta-lactamasa",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoEV": "2,5 g EV 8/8h (infusión 3 horas)"
-    },
+    "presentation": "Polvo para solución IV en combinación fija.",
+    "dose": "ClCr >50: carga 2,67 g IV, luego 2 g IV q6h; cada dosis en 3 h. cIAI: metronidazol concomitante; 5–14 días.",
     "doseKg": null,
     "indication": "Infecciones por bacilos Gramnegativos productores de metalo-betalactamasas (NDM, VIM, IMP) — único régimen con actividad confiable frente a NDM. Neumonía hospitalaria/VAP, infecciones intraabdominales, ITU complicada, bacteriemia por MBL.",
     "spectrum": "Enterobacterales MBL+ (NDM, VIM, IMP), Klebsiella pneumoniae NDM+, E. coli NDM+. El aztreonam es estable frente a las MBL; el avibactam protege el aztreonam de betalactamasas de clase A y C co-producidas. Actividad frente a Pseudomonas aeruginosa es variable. Sin actividad frente a Acinetobacter ni Grampositivos.",
-    "contraindications": [
-      "Hipersensibilidad al aztreonam o avibactam",
-      "Hipersensibilidad grave a ceftazidima (reacción cruzada posible con aztreonam)"
-    ],
+    "contraindications": "Hipersensibilidad grave a aztreonam, avibactam o componentes.",
     "risksByPatient": [],
     "alerts": [
-      "ÚNICO régimen con actividad comprobada frente a organismos NDM+ — reservar para MBL documentado.",
-      "En la práctica, frecuentemente combinado con ceftazidima+avibactam para ampliar el espectro (cobertura MBL + KPC).",
-      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+      "Carga 2,67 g",
+      "ClCr >50: 2 g q6h",
+      "ClCr >30–50: 1 g q6h",
+      "HD: 0,9 g q12h tras sesión",
+      "Metronidazol en cIAI"
     ],
-    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CRE Guidelines / Wunderink et al. NEJM 2023 / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2,5 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "7,5 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Dosis habitual para metalo-beta-lactamasas."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1,25 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "3,75 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Reducción necesaria en insuficiencia renal moderada."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "940 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,88 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Ajuste obligatorio para mantener la exposición farmacodinámica."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "940 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "940 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Monitorizar respuesta clínica y neurotoxicidad."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "940 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "940 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Administrar después de HD."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a&type=display",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.fda.gov/news-events/press-announcements/fda-approves-new-treatment-complicated-intra-abdominal-infections",
+      "https://clinicaltrials.gov/search?term=aztreonam%20avibactam"
+    ],
+    "renalDose": "ClCr >30–50: carga 2,67 g, mantenimiento 1 g q6h; >15–30: carga 1,8 g, 0,9 g q8h; <=15/HD: carga 1,33 g, 0,9 g q12h. HD: administrar después de sesión.",
+    "pharmacologicClass": "Aztreonam protegido por avibactam en proporción fija 3:1",
+    "mechanism": "Aztreonam se une principalmente a PBP3 y resiste MBL; avibactam inhibe beta-lactamasas serinas coexpresadas que hidrolizarían aztreonam.",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; objetivos PK/PD combinan fT>MIC de aztreonam y exposición a avibactam. AST sigue siendo obligatorio.",
+    "pharmacokinetics": "Solo IV; ambos dependen de eliminación renal y se eliminan por hemodiálisis.",
+    "indications": "Ficha EUA 2026: adultos >=18 años con cIAI con opciones limitadas o ausentes, junto con metronidazol.",
+    "presentations": [
+      "Carga 2,67 g = aztreonam 2 g + avibactam 0,67 g según presentación"
+    ],
+    "pediatricDose": "Seguridad/eficacia <18 años no establecidas en ficha EUA actual; no extrapolar dosis adulta.",
+    "hepaticDose": "Sin ajuste numérico rutinario; controlar transaminasas.",
+    "commonAdverseEffects": [
+      "Elevación de transaminasas",
+      "Anemia",
+      "Diarrea",
+      "Hipopotasemia",
+      "Fiebre"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Lesión hepática relevante",
+      "C. difficile",
+      "Emergencia de resistencia"
+    ],
+    "adverseEffects": "Se describieron alteraciones hepáticas/hematológicas; aprobación cIAI se apoya en datos clínicos limitados.",
+    "interactions": "Pocas interacciones metabólicas; metronidazol es concomitante obligatorio en cIAI rotulada.",
+    "monitoring": "ClCr frecuente, AST/ALT, hemograma, electrolitos, cultivo/AST y respuesta.",
+    "administration": "Exclusivamente IV.",
+    "preparation": "Reconstituir/diluir según ficha conservando proporción 3:1.",
+    "infusionProtocol": "Cada dosis en 3 horas.",
+    "pregnancy": "Datos humanos limitados.",
+    "lactation": "Datos limitados para la combinación.",
+    "specialPopulations": "Solo adultos en ficha EUA. Recalcular ClCr si la función renal cambia.",
+    "patientEducation": "Explicar uso de reserva para Gram negativos resistentes y metronidazol concomitante en cIAI.",
+    "clinicalPearls": "Aztreonam conserva actividad frente a MBL y avibactam bloquea ESBL/AmpC/OXA serinas que suelen coexistir.",
+    "guidelineRecommendations": "IDSA 2026 considera aztreonam-avibactam preferido para Enterobacterales NDM/MBL susceptibles; no se sugiere de rutina para Pseudomonas MBL y AST sigue siendo esencial.",
+    "safetyFlags": [
+      "MBL/NDM",
+      "cIAI + metronidazol",
+      "Infusión 3 h",
+      "Ajuste renal obligatorio",
+      "Adultos >=18"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a&type=display",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.fda.gov/news-events/press-announcements/fda-approves-new-treatment-complicated-intra-abdominal-infections",
+      "https://clinicaltrials.gov/search?term=aztreonam%20avibactam"
+    ]
   },
   "name": {
-    "pt": "Aztreonam + Avibactam",
-    "es": "Aztreonam + Avibactam"
+    "pt": "Aztreonam + avibactam",
+    "es": "Aztreonam + avibactam"
   },
   "keywords": [
     "aztreonam_avibactam",
@@ -197,8 +175,8 @@
     "emblaveo",
     "monobactamico + inibidor de beta-lactamase (anti-mbl — ndm, vim, imp)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-229c61552610b9a0",
+  "clinicalContentSha256": "229c61552610b9a0e5664364d3a384a0eb8c6bf4f1c307f12f3634d3727c1992",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

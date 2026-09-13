@@ -1,298 +1,160 @@
 {
   "id": "cloxacilina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(59,130,246,0.12)",
   "colorTxt": "#1D4ED8",
   "pt": {
     "name": "Cloxacilina",
-    "class": "Penicilina resistente à penicilinase (isoxazolilpenicilina — anti-MSSA)",
-    "commercialNames": {
-      "br": [
-        "Cloxacilina Genérico",
-        "Staficilin-N"
-      ],
-      "ar": [
-        "Cloxacilina Genérico"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 500 mg",
-      "Pó para solução injetável EV/IM: 500 mg, 1 g por frasco"
+    "class": "Penicilina resistente a penicilinase",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "500 mg VO 6/6h (em jejum)",
-      "adultoEV": "1–2 g EV 4/4h–6/6h"
-    },
+    "presentation": "Cápsulas, suspensão oral e formulação IV conforme mercado.",
+    "dose": "Oral adulto, infecção leve-moderada: 250–500 mg q6h em jejum; doses maiores podem ser necessárias em infecção muito grave sob protocolo. Monografia oral limita 6 g/dia.",
     "doseKg": null,
     "indication": "Infecções por Staphylococcus aureus sensível à meticilina (MSSA): endocardite, bacteremia, osteomielite, artrite séptica, infecções de pele e partes moles, pneumonia estafilocócica.",
     "spectrum": "Staphylococcus aureus (MSSA — droga de escolha), Staphylococcus epidermidis (MSSE), Streptococcus spp. Sem atividade contra MRSA, Gram-negativos, enterococos ou anaeróbios.",
-    "contraindications": [
-      "Hipersensibilidade às penicilinas (reação cruzada com cefalosporinas ~1–2%)"
-    ],
+    "contraindications": "Hipersensibilidade grave a penicilinas/beta-lactâmicos.",
     "risksByPatient": [],
     "alerts": [
-      "DROGA DE ESCOLHA para MSSA — superior à vancomicina em desfechos clínicos para bacteremia e endocardite.",
-      "Tomar VO em jejum — alimentos reduzem a absorção em até 50%.",
-      "Hepatotoxicidade colestática — monitorar enzimas hepáticas em tratamentos longos.",
-      "Não necessita ajuste renal habitual."
+      "Adulto oral 250–500 mg q6h",
+      "Criança >5–40 kg: 50 mg/kg/dia q6h",
+      "1–2 h antes de alimento",
+      "MSSA direcionado",
+      "Infecção grave: preferir IV"
     ],
-    "ref": "Sanford Guide 2025 / IDSA MRSA Guidelines / ANVISA / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "4/4h–6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Penicilina resistente à penicilinase para MSSA."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "4/4h–6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Pode ser necessário ajuste em insuficiência renal muito avançada."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar neurotoxicidade e eletrólitos."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após HD quando possível."
-      }
-    }
+    "ref": [
+      "https://health-products.canada.ca/dpd-bdpp/info?code=2234&lang=eng",
+      "https://pdf.hres.ca/dpd_pm/00036515.PDF",
+      "https://health-products.canada.ca/dpd-bdpp/search-fast-recherche-rapide?lang=eng&no=0131306009"
+    ],
+    "renalDose": "Não há tabela oral simples de ajuste. Em insuficiência renal, monitorar acúmulo/neurotoxicidade em doses altas; diálise pode auxiliar em superexposição conforme monografia.",
+    "pharmacologicClass": "Isoxazolilpenicilina antiestafilocócica",
+    "mechanism": "Liga-se a PBPs e inibe transpeptidação do peptidoglicano, causando lise bacteriana; é estável à penicilinase estafilocócica.",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é o índice PK/PD relevante. Ativa contra MSSA e estreptococos suscetíveis, não MRSA.",
+    "pharmacokinetics": "Absorção oral rápida porém incompleta e reduzida por alimento; alta ligação proteica ~94%; eliminação renal e biliar.",
+    "indications": "Infecções por estafilococos produtores de penicilinase suscetíveis/MSSA e estreptococos suscetíveis; terapia IV preferida em infecção grave.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "125 mg/5 mL",
+      "1 g IV"
+    ],
+    "pediatricDose": "Monografia oral: <=5 kg 250 mg/dia; >5 a ~40 kg 50 mg/kg/dia, dividido q6h.",
+    "hepaticDose": "Sem ajuste numérico rotineiro. Monitorar função hepática em terapia prolongada; hepatotoxicidade/elevação de transaminases é possível.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Diarreia",
+      "Rash",
+      "Dor epigástrica"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Hepatotoxicidade",
+      "Neurotoxicidade/convulsões em altas exposições"
+    ],
+    "adverseEffects": "Reações alérgicas e GI predominam; tratamento prolongado exige vigilância renal, hepática e hematológica.",
+    "interactions": "Probenecida reduz secreção tubular e aumenta níveis de cloxacilina; revisar anticoagulantes e outros beta-lactâmicos conforme contexto.",
+    "monitoring": "Resposta clínica, culturas, função renal/hepática/hemograma em uso prolongado e sinais de hipersensibilidade.",
+    "administration": "Oral 1–2 h antes das refeições porque alimento reduz absorção. Em infecção grave, preferir via parenteral conforme produto/protocolo.",
+    "preparation": "Suspensão oral deve ser reconstituída conforme produto e mantida refrigerada quando indicado.",
+    "infusionProtocol": "Para cloxacilina IV, reconstituir/infundir conforme monografia específica do produto; não extrapolar preparo oral para IV.",
+    "pregnancy": "Dados humanos são limitados; penicilinas têm ampla experiência clínica, mas a monografia oral específica informa segurança não estabelecida.",
+    "lactation": "Penicilinas podem passar ao leite em pequenas quantidades; monitorar diarreia/candidíase/sensibilização no lactente.",
+    "specialPopulations": "Prematuros/neonatos têm experiência limitada e precisam monitorização frequente. Insuficiência renal aumenta risco de neurotoxicidade em doses altas.",
+    "patientEducation": "Tomar em jejum com água, completar o esquema e procurar atendimento em caso de urticária, falta de ar ou diarreia intensa.",
+    "clinicalPearls": "Cloxacilina é beta-lactâmico anti-MSSA, não anti-MRSA. A absorção oral cai com alimento, por isso o timing em jejum importa.",
+    "guidelineRecommendations": "Usar para MSSA/estreptococos suscetíveis guiado por foco e cultura; em bacteremia/endocardite ou infecção grave usar formulação parenteral/protocolo apropriado.",
+    "safetyFlags": [
+      "MSSA, não MRSA",
+      "fT>MIC",
+      "Tomar em jejum",
+      "Alergia beta-lactâmica",
+      "Monitorar fígado/rim em uso prolongado"
+    ],
+    "references": [
+      "https://health-products.canada.ca/dpd-bdpp/info?code=2234&lang=eng",
+      "https://pdf.hres.ca/dpd_pm/00036515.PDF",
+      "https://health-products.canada.ca/dpd-bdpp/search-fast-recherche-rapide?lang=eng&no=0131306009"
+    ]
   },
   "es": {
     "name": "Cloxacilina",
-    "class": "Penicilina resistente a penicilinasa (isoxazolilpenicilina — anti-MSSA)",
-    "commercialNames": {
-      "br": [
-        "Cloxacilina Genérico",
-        "Staficilin-N"
-      ],
-      "ar": [
-        "Cloxacilina Genérico"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 500 mg",
-      "Polvo para solución inyectable EV/IM: 500 mg, 1 g por frasco"
+    "class": "Penicilina resistente a penicilinasa",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "500 mg VO 6/6h (en ayunas)",
-      "adultoEV": "1–2 g EV 4/4h–6/6h"
-    },
+    "presentation": "Cápsulas, suspensión oral y IV según mercado.",
+    "dose": "Oral adulto leve-moderada: 250–500 mg q6h en ayunas; dosis mayores pueden requerirse en infección muy grave bajo protocolo. Monografía oral limita 6 g/día.",
     "doseKg": null,
     "indication": "Infecciones por Staphylococcus aureus sensible a meticilina (MSSA): endocarditis, bacteriemia, osteomielitis, artritis séptica, infecciones de piel y partes blandas, neumonía estafilocócica.",
     "spectrum": "Staphylococcus aureus (MSSA — droga de elección), Staphylococcus epidermidis (MSSE), Streptococcus spp. Sin actividad frente a MRSA, Gramnegativos, enterococos ni anaerobios.",
-    "contraindications": [
-      "Hipersensibilidad a las penicilinas (reacción cruzada con cefalosporinas ~1–2%)"
-    ],
+    "contraindications": "Hipersensibilidad grave a penicilinas/beta-lactámicos.",
     "risksByPatient": [],
     "alerts": [
-      "DROGA DE ELECCIÓN para MSSA — superior a vancomicina en desenlaces clínicos para bacteriemia y endocarditis.",
-      "Tomar VO en ayunas — los alimentos reducen la absorción hasta un 50%.",
-      "Hepatotoxicidad colestásica — monitorizar enzimas hepáticas en tratamientos prolongados.",
-      "No requiere ajuste renal habitual."
+      "Adulto oral 250–500 mg q6h",
+      "Niño >5–40 kg: 50 mg/kg/día q6h",
+      "1–2 h antes de alimentos",
+      "MSSA dirigido",
+      "Infección grave: preferir IV"
     ],
-    "ref": "Sanford Guide 2025 / IDSA MRSA Guidelines / ANVISA / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "4/4h–6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Penicilina resistente a penicilinasa para MSSA."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "4/4h–6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Puede ser necesario ajuste en insuficiencia renal muy avanzada."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar neurotoxicidad y electrolitos."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de HD cuando sea posible."
-      }
-    }
+    "ref": [
+      "https://health-products.canada.ca/dpd-bdpp/info?code=2234&lang=eng",
+      "https://pdf.hres.ca/dpd_pm/00036515.PDF",
+      "https://health-products.canada.ca/dpd-bdpp/search-fast-recherche-rapide?lang=eng&no=0131306009"
+    ],
+    "renalDose": "Sin tabla oral simple de ajuste. En insuficiencia renal vigilar acumulación/neurotoxicidad con dosis altas; diálisis puede ayudar en sobreexposición según monografía.",
+    "pharmacologicClass": "Isoxazolilpenicilina antiestafilocócica",
+    "mechanism": "Se une a PBPs e inhibe transpeptidación de peptidoglicano, causando lisis; estable frente a penicilinasa estafilocócica.",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC es índice PK/PD relevante. Activa contra MSSA y estreptococos susceptibles, no MRSA.",
+    "pharmacokinetics": "Absorción oral rápida pero incompleta y reducida por alimentos; unión proteica ~94%; eliminación renal y biliar.",
+    "indications": "Infecciones por estafilococos productores de penicilinasa susceptibles/MSSA y estreptococos susceptibles; IV preferida en infección grave.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "125 mg/5 mL",
+      "1 g IV"
+    ],
+    "pediatricDose": "Monografía oral: <=5 kg 250 mg/día; >5 a ~40 kg 50 mg/kg/día dividido q6h.",
+    "hepaticDose": "Sin ajuste numérico rutinario. Monitorizar función hepática en tratamiento prolongado; puede haber hepatotoxicidad/elevación de transaminasas.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarrea",
+      "Rash",
+      "Dolor epigástrico"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Hepatotoxicidad",
+      "Neurotoxicidad/convulsiones con alta exposición"
+    ],
+    "adverseEffects": "Predominan alergia y GI; tratamiento prolongado requiere vigilancia renal, hepática y hematológica.",
+    "interactions": "Probenecid reduce secreción tubular y aumenta niveles; revisar anticoagulantes y otros beta-lactámicos según contexto.",
+    "monitoring": "Respuesta clínica/cultivos, función renal/hepática/hemograma en uso prolongado y signos de hipersensibilidad.",
+    "administration": "Oral 1–2 h antes de alimentos porque comida reduce absorción. En infección grave preferir vía parenteral según producto/protocolo.",
+    "preparation": "Suspensión oral reconstituida según producto y refrigerada cuando corresponda.",
+    "infusionProtocol": "Para cloxacilina IV, reconstituir/infundir según monografía específica; no extrapolar preparación oral a IV.",
+    "pregnancy": "Datos humanos limitados; penicilinas tienen amplia experiencia, pero monografía oral específica indica seguridad no establecida.",
+    "lactation": "Penicilinas pueden pasar a leche en pequeñas cantidades; vigilar diarrea/candidiasis/sensibilización.",
+    "specialPopulations": "Prematuros/neonatos con experiencia limitada y monitorización frecuente. Insuficiencia renal aumenta neurotoxicidad a dosis altas.",
+    "patientEducation": "Tomar en ayunas con agua, completar tratamiento y consultar ante urticaria, disnea o diarrea intensa.",
+    "clinicalPearls": "Cloxacilina es beta-lactámico anti-MSSA, no anti-MRSA. Alimento reduce absorción oral, por eso importa el ayuno.",
+    "guidelineRecommendations": "Usar para MSSA/estreptococos susceptibles guiado por foco/cultivo; en bacteriemia/endocarditis o infección grave usar formulación parenteral/protocolo apropiado.",
+    "safetyFlags": [
+      "MSSA, no MRSA",
+      "fT>MIC",
+      "Tomar en ayunas",
+      "Alergia beta-lactámica",
+      "Monitorizar hígado/riñón en uso prolongado"
+    ],
+    "references": [
+      "https://health-products.canada.ca/dpd-bdpp/info?code=2234&lang=eng",
+      "https://pdf.hres.ca/dpd_pm/00036515.PDF",
+      "https://health-products.canada.ca/dpd-bdpp/search-fast-recherche-rapide?lang=eng&no=0131306009"
+    ]
   },
   "name": {
     "pt": "Cloxacilina",
@@ -304,8 +166,8 @@
     "staficilin-n",
     "penicilina resistente a penicilinase (isoxazolilpenicilina — anti-mssa)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-498fff204c135c65",
+  "clinicalContentSha256": "498fff204c135c65be0a5cfa66e32fec095850e080daef212492a73e722d15c9",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

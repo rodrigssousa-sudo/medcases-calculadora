@@ -1,33 +1,17 @@
 {
   "id": "claritromicina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Claritromicina",
-    "class": "Macrolídeo",
-    "commercialNames": {
-      "br": [
-        "Klaricid",
-        "Claritromicina EMS",
-        "Claritromicina Medley"
-      ],
-      "ar": [
-        "Klaricid",
-        "Claritromicina Bagó",
-        "Claritromicina Richet"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 250 mg / 500 mg",
-      "Suspensão oral 125 mg/5 mL / 250 mg/5 mL",
-      "Frasco-ampola EV 500 mg"
+    "class": "Antibiótico macrolídeo",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "500 mg VO/EV 12/12h",
-      "pediatrica": "500 mg VO 12/12h"
-    },
+    "presentation": "Comprimidos e suspensão oral.",
+    "dose": "Adultos: 250–500 mg VO q12h conforme foco; CAP rotulada 250 mg q12h; H. pylori 500 mg q12h em combinação; MAC 500 mg q12h.",
     "doseKg": {
       "standard": "7,5 mg/kg por dose",
       "maxDose": "1 g/dia"
@@ -36,132 +20,31 @@
     "dilution": "EV: diluir em SF 0,9% — nunca administrar em bólus.",
     "speed": "EV: infundir em 60 minutos.",
     "commonAdverseEffects": [
-      "Náuseas",
+      "Náusea",
       "Diarreia",
-      "Gosto metálico",
+      "Dor abdominal",
       "Cefaleia"
     ],
     "dangerousAdverseEffects": [
-      "QT prolongado",
-      "Hepatotoxicidade",
-      "Colite por C. difficile",
-      "Interações via CYP3A4"
+      "Torsades/QT prolongado",
+      "Hepatotoxicidade grave",
+      "Anafilaxia/SCAR",
+      "Toxicidade por colchicina"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Inibidor potente de CYP3A4 — verificar interações.",
-      "Monitorar ECG em pacientes com risco de QT longo."
+      "QT/torsades",
+      "CYP3A4/P-gp",
+      "CrCl <30: reduzir 50%",
+      "Hepatotoxicidade",
+      "Interações com estatinas/colchicina"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman / IDSA CAP",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Geralmente sem ajuste até ClCr 30 mL/min."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "3,75 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reduzir dose em aproximadamente 50%."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "3,75 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar QT prolongado e hepatotoxicidade."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "3,75 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não é significativamente removida pela hemodiálise."
-      }
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ],
+    "renalDose": "CrCl <30 mL/min: reduzir dose em 50%. Com atazanavir/ritonavir, ajustes adicionais podem ser necessários.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "Sem alvo de nível sérico definido na prática clínica. Monitoração baseada em resposta clínica e ECG.",
@@ -194,32 +77,50 @@
         "Insuficiência hepática grave (Child-Pugh C)",
         "Cisaprida, pimozida, terfenadina (risco de torsades de pointes fatal)"
       ]
-    }
+    },
+    "pharmacologicClass": "Macrolídeo / inibidor CYP3A4 e P-gp",
+    "mechanism": "Liga-se ao 23S rRNA da subunidade 50S e inibe translocação/síntese proteica.",
+    "pharmacodynamics": "Atividade dependente de exposição; AUC/MIC contribui para eficácia. Resistência ocorre por metilação erm e efluxo mef.",
+    "pharmacokinetics": "Boa absorção oral, metabolização hepática a 14-OH-claritromicina; eliminação renal e hepática. Forte potencial de interações via CYP3A4/P-gp.",
+    "indications": "Infecções respiratórias e de pele por suscetíveis, erradicação de H. pylori em combinação e tratamento/profilaxia de MAC conforme indicação.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "Suspensão oral"
+    ],
+    "pediatricDose": "15 mg/kg/dia VO divididos q12h para várias infecções, máximo dose adulta; MAC 7,5 mg/kg q12h, máximo 500 mg/dose.",
+    "hepaticDose": "Sem ajuste em hepatopatia isolada com função renal normal; se insuficiência renal grave coexistir, reduzir/prolongar intervalo.",
+    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+    "interactions": "Inibe CYP3A4/P-gp; revisar pimozida, simvastatina/lovastatina, ergotamínicos, colchicina e outros substratos.",
+    "monitoring": "ECG/eletrólitos em alto risco, função hepática se sintomas, função renal e interações.",
+    "administration": "VO; revisar interações antes de dosar.",
+    "preparation": "Reconstituir e agitar suspensão conforme fabricante.",
+    "infusionProtocol": "Não aplicável ao registro oral.",
+    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Idosos e pacientes com QT longo, hipocalemia/hipomagnesemia, bradicardia ou antiarrítmicos têm maior risco de torsades.",
+    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+    "clinicalPearls": "Claritromicina gera interações importantes: simvastatina/lovastatina, colchicina em disfunção renal/hepática e múltiplos substratos CYP3A4.",
+    "guidelineRecommendations": "Em CAP usar macrolídeo apenas em cenários compatíveis com diretriz e resistência local. Para H. pylori evitar uso empírico quando resistência inviabilize o esquema.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interações"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ]
   },
   "es": {
     "name": "Claritromicina",
-    "class": "Macrólido",
-    "commercialNames": {
-      "br": [
-        "Klaricid",
-        "Claritromicina EMS",
-        "Claritromicina Medley"
-      ],
-      "ar": [
-        "Klaricid",
-        "Claritromicina Bagó",
-        "Claritromicina Richet"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 250 mg / 500 mg",
-      "Suspensión oral 125 mg/5 mL / 250 mg/5 mL",
-      "Frasco ampolla EV 500 mg"
+    "class": "Antibiótico macrólido",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "500 mg VO/EV cada 12h",
-      "pediatrica": "500 mg VO cada 12h"
-    },
+    "presentation": "Comprimidos y suspensión oral.",
+    "dose": "Adultos: 250–500 mg VO q12h según foco; CAP rotulada 250 mg q12h; H. pylori 500 mg q12h en combinación; MAC 500 mg q12h.",
     "doseKg": {
       "standard": "7,5 mg/kg por dosis",
       "maxDose": "1 g/día"
@@ -230,130 +131,29 @@
     "commonAdverseEffects": [
       "Náuseas",
       "Diarrea",
-      "Sabor metálico",
+      "Dolor abdominal",
       "Cefalea"
     ],
     "dangerousAdverseEffects": [
-      "QT prolongado",
-      "Hepatotoxicidad",
-      "Colitis por C. difficile",
-      "Interacciones vía CYP3A4"
+      "Torsades/QT prolongado",
+      "Hepatotoxicidad grave",
+      "Anafilaxia/SCAR",
+      "Toxicidad por colchicina"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Inhibidor potente de CYP3A4 — verificar interacciones.",
-      "Monitorizar ECG en pacientes con riesgo de QT largo."
+      "QT/torsades",
+      "CYP3A4/P-gp",
+      "ClCr <30: reducir 50%",
+      "Hepatotoxicidad",
+      "Interacciones con estatinas/colchicina"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman / IDSA CAP",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Generalmente sin ajuste hasta ClCr 30 mL/min."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "3,75 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducir la dosis aproximadamente un 50%."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "3,75 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar QT prolongado y hepatotoxicidad."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "3,75 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No es significativamente removida por hemodiálisis."
-      }
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ],
+    "renalDose": "ClCr <30 mL/min: reducir dosis 50%. Con atazanavir/ritonavir pueden requerirse ajustes adicionales.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "Sin objetivo de nivel sérico definido en la práctica clínica. Monitoreo basado en respuesta clínica y ECG.",
@@ -386,7 +186,41 @@
         "Insuficiencia hepática grave (Child-Pugh C)",
         "Cisaprida, pimozida, terfenadina (riesgo de torsades de pointes fatal)"
       ]
-    }
+    },
+    "pharmacologicClass": "Macrólido / inhibidor CYP3A4 y P-gp",
+    "mechanism": "Se une al 23S rRNA de subunidad 50S e inhibe translocación/síntesis proteica.",
+    "pharmacodynamics": "Actividad dependiente de exposición; AUC/MIC contribuye a eficacia. Resistencia por metilación erm y eflujo mef.",
+    "pharmacokinetics": "Buena absorción oral, metabolismo hepático a 14-OH-claritromicina; eliminación renal y hepática. Alto potencial de interacciones CYP3A4/P-gp.",
+    "indications": "Infecciones respiratorias y de piel por susceptibles, erradicación H. pylori en combinación y tratamiento/profilaxis MAC.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "Suspensión oral"
+    ],
+    "pediatricDose": "15 mg/kg/día VO divididos q12h, máximo dosis adulta; MAC 7,5 mg/kg q12h, máximo 500 mg/dosis.",
+    "hepaticDose": "Sin ajuste en hepatopatía aislada con función renal normal; si coexiste insuficiencia renal grave, reducir/prolongar intervalo.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+    "interactions": "Inhibe CYP3A4/P-gp; revisar pimozida, simvastatina/lovastatina, ergotamínicos, colchicina y otros sustratos.",
+    "monitoring": "ECG/electrolitos en alto riesgo, función hepática si síntomas, función renal e interacciones.",
+    "administration": "VO; revisar interacciones antes de dosificar.",
+    "preparation": "Reconstituir y agitar suspensión según fabricante.",
+    "infusionProtocol": "No aplicable al registro oral.",
+    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Ancianos y pacientes con QT largo, hipoK/hipoMg, bradicardia o antiarrítmicos tienen mayor riesgo de torsades.",
+    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+    "clinicalPearls": "Claritromicina genera interacciones importantes: simvastatina/lovastatina, colchicina con disfunción renal/hepática y múltiples sustratos CYP3A4.",
+    "guidelineRecommendations": "En CAP usar macrólido solo en escenarios compatibles con guía y resistencia local. Para H. pylori evitar uso empírico cuando la resistencia invalide el esquema.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interacciones"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ]
   },
   "name": {
     "pt": "Claritromicina",
@@ -401,8 +235,8 @@
     "claritromicina richet",
     "macrolideo"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-1650ecd6ef3edfc0",
+  "clinicalContentSha256": "1650ecd6ef3edfc00d5dc41c6a9cca40b684a3ef5e0c59133f8449b7f1a4bb0c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

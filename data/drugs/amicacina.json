@@ -1,31 +1,17 @@
 {
   "id": "amicacina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Amicacina",
-    "class": "Aminoglicosídeo",
-    "commercialNames": {
-      "br": [
-        "Novamin",
-        "Amicacina Teuto",
-        "Amicacina Eurofarma"
-      ],
-      "ar": [
-        "Amikacina Richet",
-        "Amikacina Klonal",
-        "Amikacina Genérica"
-      ]
-    },
-    "presentation": [
-      "Ampola 100 mg/2 mL",
-      "Ampola 500 mg/2 mL"
+    "class": "Antibiótico aminoglicosídeo",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "extendedInterval": "1050 mg EV a cada 24 horas"
-    },
+    "presentation": "Solução injetável IV/IM.",
+    "dose": "15 mg/kg/dia IV/IM divididos q12h ou q8h; máximo usual 1,5 g/dia no rótulo.",
     "doseKg": {
       "standard": "15–20 mg/kg/dose",
       "maxDose": "Monitorização sérica obrigatória"
@@ -34,106 +20,30 @@
     "dilution": "Diluir em 100–200 mL de SF 0,9%.",
     "speed": "Infundir em 30–60 minutos.",
     "commonAdverseEffects": [
-      "Náuseas",
-      "Febre medicamentosa"
+      "Náusea",
+      "Diarreia",
+      "Cefaleia",
+      "Reação no local de administração"
     ],
     "dangerousAdverseEffects": [
       "Nefrotoxicidade",
-      "Ototoxicidade",
-      "Bloqueio neuromuscular",
-      "Surdez permanente"
+      "Ototoxicidade irreversível",
+      "Bloqueio neuromuscular"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Monitorar creatinina e níveis séricos.",
-      "Evitar associação com vancomicina quando possível.",
-      "Maior potência contra Gram negativos resistentes."
+      "Nefrotoxicidade",
+      "Ototoxicidade",
+      "Bloqueio neuromuscular",
+      "TDM",
+      "Ajuste renal"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman / IDSA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Preferir dose estendida (ODA) única diária com monitorização sérica. Alvo pico ODA: 56–64 mcg/mL; infecções graves: 40–60 mcg/mL. Vale alvo: < 5 mcg/mL. Monitorar creatinina 2–3×/semana e débito urinário diário."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "15 mg/kg",
-          "intervalo": "36–48/48h",
-          "doseMaxima": "15 mg/kg/dose",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "36/36h",
-          "doseMaxima": "15 mg/kg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorização sérica obrigatória — ajustar dose e intervalo conforme níveis séricos. Vale > 5 mcg/mL: ampliar intervalo ou suspender até clearance. Monitorar função renal diariamente nesta faixa."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "Individualizada",
-          "intervalo": "Conforme nível sérico",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "Individualizada",
-          "intervalo": "Conforme nível sérico",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorização farmacocinética obrigatória — não usar tabela fixa isolada. Ajustar exclusivamente por pico e vale séricos. Risco elevado de acúmulo e toxicidade acumulativa. Avaliar alternativa terapêutica se dispunível."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "Individualizada",
-          "intervalo": "Conforme nível sérico",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "Individualizada",
-          "intervalo": "Conforme nível sérico",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "obs": "Alto risco de acúmulo, nefrotoxicidade e ototoxicidade irreversível. Usar apenas se não houver alternativa. Intervalo guíado exclusivamente por nível pré-dose (vale < 5 mcg/mL obrigatório antes de cada dose). Monitorar toxicidade vestibular e coclear diariamente."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "2–5 mg/kg",
-          "intervalo": "Pós-HD",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "2–5 mg/kg",
-          "intervalo": "Pós-HD",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise e monitorar níveis séricos. Amicacina é parcialmente removida pela HD (~50%). Reposição de 2–5 mg/kg pós-HD guiada por nível pré-dose. Não administrar antes da sessão de HD para evitar remoção imediata. Monitorar toxicidade vestibular."
-      }
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=840ba25a-d60c-4f0d-a084-71b0c68237df",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b56f6df-a05d-4520-8bf0-d7cefe20f6ad",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "renalDose": "Ajustar por função renal e TDM; em DRC grave/HD usar protocolo dialítico e níveis.",
     "therapeuticMonitoring": {
       "required": true,
       "target": "Dose estendida (ODA 15–20 mg/kg/dia): pico 56–64 mcg/mL (1h após infusão) e vale < 5 mcg/mL. Dose clássica: pico 20–30 mcg/mL (habituais) ou 40–60 mcg/mL (infecções graves) e vale < 5 mcg/mL. Monitorar nível de pico (30 min após infusão de 30 min) e vale (30 min antes da próxima dose).",
@@ -160,14 +70,10 @@
       "monitoring": "Sem risco clinicamente significativo de prolongamento do QT.",
       "contraindications": []
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": true,
-      "warning": "Alto risco de nefrotoxicidade e ototoxicidade irreversível — ajuste guiado obrigatoriamente por níveis séricos (pico e vale). Evitar combinação com vancomicina, anfotericina B ou outros nefrotóxicos. Ototoxicidade acumulativa — monitorar audiometria basal e semanal em tratamentos > 7 dias. Contraindicação relativa em gestação (ototoxicidade fetal)."
-    },
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Monitorização de toxicidade"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -179,30 +85,44 @@
         "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
       ],
       "note": "Bloco mesclado e melhorado: doses pediátricas corrigidas (15–20 mg/kg fgMaior50), dose HD ajustada para 2–5 mg/kg (faixa mais ampla). Obs enriquecidas com alvo pico 40–60 mcg/mL para infecções graves, vale > 5 suspender, não usar tabela fixa isolada, toxicidade vestibular monitorar, HD não administrar antes da sessão. therapeuticMonitoring enriquecido com débito urinário e toxicidade vestibular. safetyFlags e auditNotes adicionados."
-    }
+    },
+    "pharmacologicClass": "Aminoglicosídeo sistêmico",
+    "mechanism": "Liga-se irreversivelmente à subunidade 30S, causa leitura incorreta do mRNA e inibe síntese proteica.",
+    "pharmacodynamics": "Bactericida concentração-dependente; Cmax/MIC é alvo central e há efeito pós-antibiótico. TDM reduz toxicidade.",
+    "pharmacokinetics": "IV/IM; distribuição extracelular, baixa penetração em LCR e eliminação renal quase exclusiva.",
+    "indications": "Infecções graves por Gram-negativos suscetíveis, inclusive alguns resistentes a outros aminoglicosídeos.",
+    "presentations": [
+      "Concentrações variam por fabricante"
+    ],
+    "pediatricDose": "Neonatos: carga 10 mg/kg seguida 7,5 mg/kg q12h; crianças maiores 15 mg/kg/dia divididos.",
+    "hepaticDose": "Sem ajuste hepático específico; função renal determina clearance.",
+    "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Evitar associação desnecessária com outros nefro/ototóxicos e diuréticos de alça; separar fisicamente de beta-lactâmicos.",
+    "monitoring": "Creatinina, diurese, audição/vestíbulo e TDM de pico/vale ou estratégia validada.",
+    "administration": "IV ou IM; obter peso e função renal antes da dose; em obesidade usar peso ajustado conforme protocolo.",
+    "preparation": "Diluir para IV em solução compatível; não misturar fisicamente com beta-lactâmico na mesma solução.",
+    "infusionProtocol": "Infusão IV geralmente 30–60 min; interpretar TDM segundo estratégia convencional ou de intervalo estendido.",
+    "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Idosos, DRC, queimados, fibrose cística e obesidade alteram PK; existe risco fetal de ototoxicidade.",
+    "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+    "clinicalPearls": "No esquema convencional, evitar pico >35 mcg/mL e vale >10 mcg/mL; TDM é essencial em DRC ou curso repetido.",
+    "guidelineRecommendations": "Stewardship: limitar duração, usar TDM e reservar para situações em que benefício supere nefro/ototoxicidade.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=840ba25a-d60c-4f0d-a084-71b0c68237df",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b56f6df-a05d-4520-8bf0-d7cefe20f6ad",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "es": {
     "name": "Amikacina",
-    "class": "Aminoglucósido",
-    "commercialNames": {
-      "br": [
-        "Novamin",
-        "Amicacina Teuto",
-        "Amicacina Eurofarma"
-      ],
-      "ar": [
-        "Amikacina Richet",
-        "Amikacina Klonal",
-        "Amikacina Genérica"
-      ]
-    },
-    "presentation": [
-      "Ampolla 100 mg/2 mL",
-      "Ampolla 500 mg/2 mL"
+    "class": "Antibiótico aminoglucósido",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "extendedInterval": "1050 mg EV cada 24 horas"
-    },
+    "presentation": "Solución inyectable IV/IM.",
+    "dose": "15 mg/kg/día IV/IM divididos q12h o q8h; máximo habitual 1,5 g/día según ficha.",
     "doseKg": {
       "standard": "15–20 mg/kg/dosis",
       "maxDose": "Monitorización sérica obligatoria"
@@ -212,105 +132,29 @@
     "speed": "Infundir en 30–60 minutos.",
     "commonAdverseEffects": [
       "Náuseas",
-      "Fiebre medicamentosa"
+      "Diarrea",
+      "Cefalea",
+      "Reacción en el sitio de administración"
     ],
     "dangerousAdverseEffects": [
       "Nefrotoxicidad",
-      "Ototoxicidad",
-      "Bloqueo neuromuscular",
-      "Sordera permanente"
+      "Ototoxicidad irreversible",
+      "Bloqueo neuromuscular"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Monitorar creatinina y niveles séricos.",
-      "Evitar asociación con vancomicina cuando sea posible.",
-      "Mayor potencia contra Gram negativos resistentes."
+      "Nefrotoxicidad",
+      "Ototoxicidad",
+      "Bloqueo neuromuscular",
+      "TDM",
+      "Ajuste renal"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman / IDSA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "20 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Preferir dosis extendida (ODA) única diaria con monitorización sérica. Objetivo pico ODA: 56–64 mcg/mL; infecciones graves: 40–60 mcg/mL. Valle objetivo: < 5 mcg/mL. Monitorizar creatinina 2–3×/semana y diuresis diaria."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "15 mg/kg",
-          "intervalo": "36–48/48h",
-          "doseMaxima": "15 mg/kg/dose",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "36/36h",
-          "doseMaxima": "15 mg/kg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorización sérica obligatoria — ajustar dosis e intervalo según niveles séricos. Valle > 5 mcg/mL: ampliar intervalo o suspender hasta clearance. Monitorizar función renal diariamente en esta franja."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "Individualizada",
-          "intervalo": "Conforme nível sérico",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "Individualizada",
-          "intervalo": "Conforme nível sérico",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorización farmacocinética obligatoria — no usar tabla fija aislada. Ajustar exclusivamente por pico y valle séricos. Riesgo elevado de acumulación y toxicidad acumulativa. Evaluar alternativa terapéutica si disponible."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "Individualizada",
-          "intervalo": "Conforme nível sérico",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "Individualizada",
-          "intervalo": "Conforme nível sérico",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "obs": "Alto riesgo de acumulación, nefrotoxicidad y ototoxicidad irreversible. Usar solo si no hay alternativa. Intervalo guiado exclusivamente por nivel predosis (valle < 5 mcg/mL obligatorio antes de cada dosis). Monitorizar toxicidad vestibular y coclear diariamente."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "2–5 mg/kg",
-          "intervalo": "Pós-HD",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "pediatrica": {
-          "dose": "2–5 mg/kg",
-          "intervalo": "Pós-HD",
-          "doseMaxima": "Individualizada",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis y monitorizar niveles séricos. La amikacina es parcialmente removida por HD (~50%). Reposición de 2–5 mg/kg post-HD guiada por nivel predosis. No administrar antes de la sesión de HD para evitar remoción inmediata. Monitorizar toxicidad vestibular."
-      }
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=840ba25a-d60c-4f0d-a084-71b0c68237df",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b56f6df-a05d-4520-8bf0-d7cefe20f6ad",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "renalDose": "Ajustar por función renal y TDM; en ERC grave/HD usar protocolo dialítico y niveles.",
     "therapeuticMonitoring": {
       "required": true,
       "target": "Dosis extendida (ODA 15–20 mg/kg/día): pico 56–64 mcg/mL (1h después de infusión) y valle < 5 mcg/mL. Dosis clásica: pico 20–30 mcg/mL (habituales) o 40–60 mcg/mL (infecciones graves) y valle < 5 mcg/mL. Monitorizar nivel de pico (30 min después de infusión de 30 min) y valle (30 min antes de la próxima dosis).",
@@ -337,14 +181,10 @@
       "monitoring": "Sin riesgo clínicamente significativo de prolongamiento del QT.",
       "contraindications": []
     },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": true,
-      "warning": "Alto riesgo de nefrotoxicidad y ototoxicidad irreversible — ajuste obligatoriamente guiado por niveles séricos (pico y valle). Evitar combinación con vancomicina, anfotericina B u otros nefrotóxicos. Ototoxicidad acumulativa — monitorizar audiometría basal y semanal en tratamientos > 7 días. Contraindicación relativa en gestación (ototoxicidad fetal)."
-    },
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Monitorización de toxicidad"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -356,7 +196,35 @@
         "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
       ],
       "note": "Bloque fusionado y mejorado: dosis pediátricas corregidas (15–20 mg/kg fgMaior50), dosis HD ajustada a 2–5 mg/kg (rango más amplio). Obs enriquecidas con objetivo pico 40–60 mcg/mL para infecciones graves, valle > 5 suspender, no usar tabla fija aislada, toxicidad vestibular monitorizar, HD no administrar antes de la sesión. therapeuticMonitoring enriquecido con diuresis y toxicidad vestibular. safetyFlags y auditNotes añadidos."
-    }
+    },
+    "pharmacologicClass": "Aminoglucósido sistémico",
+    "mechanism": "Se une irreversiblemente a subunidad 30S, causa lectura errónea del mRNA e inhibe síntesis proteica.",
+    "pharmacodynamics": "Bactericida dependiente de concentración; Cmax/MIC es objetivo central y existe efecto posantibiótico. TDM reduce toxicidad.",
+    "pharmacokinetics": "IV/IM; distribución extracelular, baja penetración en LCR y eliminación renal casi exclusiva.",
+    "indications": "Infecciones graves por Gram negativos susceptibles, incluidos algunos resistentes a otros aminoglucósidos.",
+    "presentations": [
+      "Concentraciones varían según fabricante"
+    ],
+    "pediatricDose": "Neonatos: carga 10 mg/kg seguida 7,5 mg/kg q12h; niños mayores 15 mg/kg/día dividido.",
+    "hepaticDose": "Sin ajuste hepático específico; función renal determina clearance.",
+    "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+    "interactions": "Evitar asociación innecesaria con otros nefro/ototóxicos y diuréticos de asa; separar físicamente de betalactámicos.",
+    "monitoring": "Creatinina, diuresis, audición/vestíbulo y TDM de pico/valle o estrategia validada.",
+    "administration": "IV o IM; obtener peso y función renal antes de dosis; en obesidad usar peso ajustado según protocolo.",
+    "preparation": "Diluir para IV en solución compatible; no mezclar físicamente con betalactámico en la misma solución.",
+    "infusionProtocol": "Infusión IV generalmente 30–60 min; interpretar TDM según estrategia convencional o de intervalo extendido.",
+    "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Ancianos, ERC, quemados, fibrosis quística y obesidad alteran PK; existe riesgo fetal de ototoxicidad.",
+    "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+    "clinicalPearls": "En esquema convencional, evitar pico >35 mcg/mL y valle >10 mcg/mL; TDM es esencial en ERC o tratamiento repetido.",
+    "guidelineRecommendations": "Stewardship: limitar duración, usar TDM y reservar para situaciones donde beneficio supere nefro/ototoxicidad.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=840ba25a-d60c-4f0d-a084-71b0c68237df",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b56f6df-a05d-4520-8bf0-d7cefe20f6ad",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "name": {
     "pt": "Amicacina",
@@ -373,8 +241,8 @@
     "amikacina generica",
     "aminoglicosideo"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8748201986b5fc57",
+  "clinicalContentSha256": "8748201986b5fc5759ebd8fa28517ea54274edfd6d13294067ba1d3e22872ffb",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

@@ -1,30 +1,17 @@
 {
   "id": "imipenem_cilastatina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Imipenem + Cilastatina",
-    "class": "Carbapenêmico (grupo 1 — com atividade anti-Pseudomonas)",
-    "commercialNames": {
-      "br": [
-        "Tienam",
-        "Imipenem+Cilastatina Genérico"
-      ],
-      "ar": [
-        "Tienam",
-        "Imipenem+Cilastatina Genérico"
-      ]
-    },
-    "presentation": [
-      "Pó liofilizado EV: 500 mg + 500 mg",
-      "Pó para suspensão IM: 500 mg + 500 mg"
+    "name": "Imipenem/cilastatina",
+    "class": "Antibiótico beta-lactâmico de amplo espectro",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoGrave": "500 mg EV 6/6h",
-      "pediatrica": "1000 mg EV 6/6h (15–25 mg/kg/dose)"
-    },
+    "presentation": "Frasco IV com imipenem/cilastatina.",
+    "dose": "Adultos CrCl >=90: 500 mg q6h ou 1 g q8h para suscetíveis; 1 g q6h se suscetibilidade intermediária, respeitando máximo diário/ajuste renal.",
     "doseKg": {
       "standard": "15–25 mg/kg/dose EV 6/6h (pediátrico)",
       "maxDose": "4 g/dia (adulto)"
@@ -33,114 +20,37 @@
     "dilution": "EV: diluir em SF 0,9% ou SG 5% 100–250 mL.",
     "speed": "EV: infundir em 20–60 minutos (infusão prolongada 3h para doses altas em MIC elevada).",
     "commonAdverseEffects": [
-      "Náuseas e vômitos",
       "Diarreia",
-      "Flebite",
-      "Elevação de transaminases"
+      "Náusea",
+      "Rash",
+      "Reação no local de administração"
     ],
     "dangerousAdverseEffects": [
-      "Convulsões (maior risco que outros carbapenêmicos)",
-      "Colite por C. difficile",
-      "Reação de hipersensibilidade grave"
+      "Anafilaxia",
+      "SCAR/SJS-TEN",
+      "C. difficile",
+      "Citopenias",
+      "Neurotoxicidade/convulsões em exposição excessiva"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Maior potencial convulsivante entre os carbapenêmicos — evitar em pacientes com epilepsia ou TCE.",
-      "Ajuste obrigatório de frequência por ClCr — ver tabela renal."
+      "Risco de convulsões",
+      "Não recomendado em infecção pediátrica do SNC",
+      "Interação grave com valproato",
+      "Ajuste renal obrigatório"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman / IDSA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "100 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para infecções graves. Considerar infusão estendida de 2–3h para MIC elevada."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "3 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "3 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Redução obrigatória para diminuir risco convulsivo. Ajustar frequência para manter T>MIC adequado."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar convulsões, mioclonias e encefalopatia — risco amplificado nesta faixa renal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Maior risco de convulsões em insuficiência renal avançada. Uso com extrema cautela."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise. Imipenem é parcialmente removido pela HD."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": true,
-      "warning": "Entre os beta-lactâmicos com MAIOR risco de convulsões em insuficiência renal. Monitorar convulsões, mioclonias e encefalopatia diariamente. Risco aumentado sem ajuste renal adequado. Evitar em pacientes com histórico de epilepsia ou TCE."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f41d8abd-7792-4918-1b93-bd83ea01955e",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+    ],
+    "renalDose": "Ajustar por CrCl e peso conforme tabela rotulada; maior risco de convulsões com CrCl <=30/HD. Não recomendado <30 kg com insuficiência renal.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal",
+      "Neurotoxicidade por acúmulo"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -181,29 +91,44 @@
       "risk": "none",
       "monitoring": "Sem risco clinicamente significativo de prolongamento do QT.",
       "contraindications": []
-    }
+    },
+    "pharmacologicClass": "Carbapenêmico + inibidor da deidropeptidase renal",
+    "mechanism": "Imipenem inibe PBPs; cilastatina bloqueia deidropeptidase-I renal, evitando degradação do imipenem.",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é relevante.",
+    "pharmacokinetics": "IV; eliminação renal importante; acúmulo na DRC aumenta risco de convulsões.",
+    "indications": "Infecções graves polimicrobianas e por Gram-negativos suscetíveis; intra-abdominal, urinária, pele, osso e outros focos. Não recomendado em infecção pediátrica do SNC.",
+    "presentations": [
+      "500/500 mg"
+    ],
+    "pediatricDose": ">=3 meses: 15–25 mg/kg q6h; <=3 meses: 25 mg/kg com intervalos de 6–12 h conforme idade; máximo 4 g/dia. Não recomendado em SNC.",
+    "hepaticDose": "Sem ajuste hepático rotineiro específico.",
+    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+    "interactions": "Carbapenêmicos reduzem níveis de valproato/divalproato; evitar associação. Ganciclovir e fatores neurológicos podem aumentar risco convulsivo; revisar nefrotóxicos.",
+    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+    "administration": "IV; doses <=500 mg em 20–30 min e >500 mg em 40–60 min.",
+    "preparation": "Reconstituir/diluir conforme fabricante; não confundir componentes.",
+    "infusionProtocol": "Infusão intermitente conforme dose; individualização PK/PD pode ser considerada, evitando sobre-exposição neurotóxica.",
+    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "Evitar em pediatria com infecção do SNC; DRC, doença neurológica e valproato elevam risco de convulsões.",
+    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+    "clinicalPearls": "Espectro amplo com Pseudomonas suscetível e anaeróbios, mas sem MRSA; maior propensão a convulsões que alguns outros carbapenêmicos.",
+    "guidelineRecommendations": "Stewardship: reservar carbapenêmicos para necessidade documentada; se Pseudomonas for suscetível a beta-lactâmico não carbapenêmico, preservar carbapenêmicos.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f41d8abd-7792-4918-1b93-bd83ea01955e",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+    ]
   },
   "es": {
-    "name": "Imipenem + Cilastatina",
-    "class": "Carbapenémico (grupo 1 — con actividad anti-Pseudomonas)",
-    "commercialNames": {
-      "br": [
-        "Tienam",
-        "Imipenem+Cilastatina Genérico"
-      ],
-      "ar": [
-        "Tienam",
-        "Imipenem+Cilastatina Genérico"
-      ]
-    },
-    "presentation": [
-      "Polvo liofilizado EV: 500 mg + 500 mg",
-      "Polvo para suspensión IM: 500 mg + 500 mg"
+    "name": "Imipenem/cilastatina",
+    "class": "Antibiótico betalactámico de amplio espectro",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoGrave": "500 mg EV 6/6h",
-      "pediatrica": "1000 mg EV cada 6h (15–25 mg/kg/dosis)"
-    },
+    "presentation": "Vial IV con imipenem/cilastatina.",
+    "dose": "Adultos ClCr >=90: 500 mg q6h o 1 g q8h para susceptibles; 1 g q6h si susceptibilidad intermedia, respetando máximo diario/ajuste renal.",
     "doseKg": {
       "standard": "15–25 mg/kg/dosis EV cada 6h (pediátrico)",
       "maxDose": "4 g/día (adulto)"
@@ -212,114 +137,37 @@
     "dilution": "EV: diluir en SF 0,9% o SG 5% 100–250 mL.",
     "speed": "EV: infundir en 20–60 minutos (infusión prolongada 3h para dosis altas con MIC elevada).",
     "commonAdverseEffects": [
-      "Náuseas y vómitos",
       "Diarrea",
-      "Flebitis",
-      "Elevación de transaminasas"
+      "Náuseas",
+      "Exantema",
+      "Reacción en el sitio de administración"
     ],
     "dangerousAdverseEffects": [
-      "Convulsiones (mayor riesgo que otros carbapenémicos)",
-      "Colitis por C. difficile",
-      "Reacción de hipersensibilidad grave"
+      "Anafilaxia",
+      "SCAR/SJS-TEN",
+      "C. difficile",
+      "Citopenias",
+      "Neurotoxicidad/convulsiones por exposición excesiva"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Mayor potencial convulsivante entre los carbapenémicos — evitar en pacientes con epilepsia o TCE.",
-      "Ajuste obligatorio de frecuencia por ClCr — ver tabla renal."
+      "Riesgo de convulsiones",
+      "No recomendado en infección pediátrica del SNC",
+      "Interacción grave con valproato",
+      "Ajuste renal obligatorio"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman / IDSA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "100 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para infecciones graves. Considerar infusión extendida de 2–3h para MIC elevada."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "3 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "3 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducción obligatoria para disminuir riesgo convulsivo. Ajustar frecuencia para mantener T>MIC adecuado."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar convulsiones, mioclonías y encefalopatía — riesgo amplificado en este rango renal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Mayor riesgo de convulsiones en insuficiencia renal avanzada. Uso con extrema precaución."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis. Imipenem es parcialmente removido por HD."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": true,
-      "warning": "Entre los betalactámicos con MAYOR riesgo de convulsiones en insuficiencia renal. Monitorizar convulsiones, mioclonías y encefalopatía diariamente. Riesgo aumentado sin ajuste renal adecuado. Evitar en pacientes con historial de epilepsia o TCE."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f41d8abd-7792-4918-1b93-bd83ea01955e",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+    ],
+    "renalDose": "Ajustar por ClCr y peso según tabla rotulada; mayor riesgo de convulsiones con ClCr <=30/HD. No recomendado <30 kg con insuficiencia renal.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal",
+      "Neurotoxicidad por acumulación"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -360,11 +208,39 @@
       "risk": "none",
       "monitoring": "Sin riesgo clínicamente significativo de prolongamiento del QT.",
       "contraindications": []
-    }
+    },
+    "pharmacologicClass": "Carbapenémico + inhibidor de dehidropeptidasa renal",
+    "mechanism": "Imipenem inhibe PBP; cilastatina bloquea dehidropeptidasa-I renal y evita degradación de imipenem.",
+    "pharmacodynamics": "Bactericida dependiente del tiempo; fT>MIC es relevante.",
+    "pharmacokinetics": "IV; eliminación renal importante; acumulación en ERC aumenta riesgo de convulsiones.",
+    "indications": "Infecciones graves polimicrobianas y por Gram negativos susceptibles; intraabdominal, urinaria, piel, hueso y otros focos. No recomendado en infección pediátrica del SNC.",
+    "presentations": [
+      "500/500 mg"
+    ],
+    "pediatricDose": ">=3 meses: 15–25 mg/kg q6h; <=3 meses: 25 mg/kg con intervalos de 6–12 h según edad; máximo 4 g/día. No recomendado en SNC.",
+    "hepaticDose": "Sin ajuste hepático rutinario específico.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+    "interactions": "Carbapenémicos reducen niveles de valproato/divalproato; evitar asociación. Ganciclovir y factores neurológicos pueden aumentar riesgo convulsivo; revisar nefrotóxicos.",
+    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+    "administration": "IV; dosis <=500 mg en 20–30 min y >500 mg en 40–60 min.",
+    "preparation": "Reconstituir/diluir según fabricante; no confundir componentes.",
+    "infusionProtocol": "Infusión intermitente según dosis; puede considerarse individualización PK/PD evitando sobreexposición neurotóxica.",
+    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+    "specialPopulations": "Evitar en pediatría con infección del SNC; ERC, enfermedad neurológica y valproato elevan riesgo de convulsiones.",
+    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+    "clinicalPearls": "Espectro amplio con Pseudomonas susceptible y anaerobios, pero sin MRSA; mayor propensión a convulsiones que algunos otros carbapenémicos.",
+    "guidelineRecommendations": "Stewardship: reservar carbapenémicos para necesidad documentada; si Pseudomonas es susceptible a betalactámico no carbapenémico, preservar carbapenémicos.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f41d8abd-7792-4918-1b93-bd83ea01955e",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+    ]
   },
   "name": {
-    "pt": "Imipenem + Cilastatina",
-    "es": "Imipenem + Cilastatina"
+    "pt": "Imipenem/cilastatina",
+    "es": "Imipenem/cilastatina"
   },
   "keywords": [
     "imipenem_cilastatina",
@@ -373,8 +249,8 @@
     "imipenem+cilastatina generico",
     "carbapenemico (grupo 1 — com atividade anti-pseudomonas)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-5e2142f005cf704c",
+  "clinicalContentSha256": "5e2142f005cf704cfb9b532d72be22b8a435e0f42b2f977cadc07edee431baff",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

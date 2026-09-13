@@ -1,144 +1,164 @@
 {
   "id": "espectinomicina",
   "category": "atb",
-  "icon": "💉",
+  "icon": "",
   "color": "rgba(99,102,241,0.12)",
   "colorTxt": "#3730A3",
   "pt": {
     "name": "Espectinomicina",
-    "class": "Aminociclitol (inibidor da síntese proteica — sem atividade em outras infecções)",
-    "commercialNames": {
-      "br": [
-        "Trobicin (disponibilidade limitada)"
-      ],
-      "ar": [
-        "Trobicin"
-      ]
-    },
-    "presentation": [
-      "Pó para suspensão injetável IM: 2 g por frasco"
+    "class": "Antibiótico aminociclitol — NÃO tetraciclina",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoIM": "2 g IM dose única (gonorreia)"
-    },
+    "presentation": "Pó para injeção IM conforme disponibilidade.",
+    "dose": "Regime histórico/local: 2 g IM dose única para gonorreia não complicada. Não é terapia preferida atual nos EUA.",
     "doseKg": null,
     "indication": "Gonorreia urogenital não complicada em pacientes alérgicos à cefalosporinas e fluoroquinolonas, ou em áreas com alta resistência a esses agentes.",
     "spectrum": "Neisseria gonorrhoeae (incluindo cepas resistentes à penicilina e fluoroquinolonas). NÃO ativa contra Chlamydia trachomatis (co-infecção deve ser tratada separadamente). Sem atividade útil contra outros patógenos.",
-    "contraindications": [
-      "Hipersensibilidade à espectinomicina",
-      "NÃO indicada para gonorreia faríngea ou retal (eficácia muito baixa)"
-    ],
+    "contraindications": "Hipersensibilidade grave à espectinomicina.",
     "risksByPatient": [],
     "alerts": [
-      "NÃO eficaz para gonorreia faríngea (única indicação é a urogenital).",
-      "Sempre tratar co-infecção por Chlamydia trachomatis (azitromicina ou doxiciclina).",
-      "Administração exclusivamente IM — via EV não disponível/aprovada.",
-      "Não necessita ajuste renal habitual."
+      "2 g IM dose única histórica",
+      "Não preferida atualmente",
+      "Eficácia faríngea ruim",
+      "Seguir AST/diretriz local",
+      "Corrigir taxonomia futura"
     ],
-    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / WHO Gonorrhea Treatment Guidelines / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dose habitual: 2 g IM dose única para gonorreia."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dados limitados em insuficiência renal terminal."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Não há recomendação de suplementação pós-HD."
-      }
-    }
+    "ref": [
+      "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+      "https://www.who.int/publications/i/item/9789240090767",
+      "https://www.who.int/publications/i/item/9789241549714",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=spectinomycin+gonorrhea",
+      "https://www.ncbi.nlm.nih.gov/books/?term=spectinomycin",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ],
+    "renalDose": "Eliminação renal predominante, mas dose única histórica geralmente não possui tabela universal de ajuste; cautela em DRC grave.",
+    "pharmacologicClass": "Aminociclitol inibidor da subunidade 30S",
+    "mechanism": "Liga-se à subunidade 30S e interfere na translocação/síntese proteica bacteriana.",
+    "pharmacodynamics": "Bacteriostática em concentrações usuais contra N. gonorrhoeae; atividade depende de suscetibilidade e disponibilidade local.",
+    "pharmacokinetics": "Administração IM, absorção rápida e eliminação predominantemente renal inalterada.",
+    "indications": "Alternativa histórica/local para gonorreia urogenital ou anorretal não complicada quando disponível e suscetível; baixa eficácia em infecção faríngea.",
+    "presentations": [
+      "2 g por frasco conforme produto histórico/local"
+    ],
+    "pediatricDose": "Não há regime pediátrico rotineiro atual universalmente validado; seguir diretriz/local especialista se produto estiver disponível.",
+    "hepaticDose": "Sem ajuste hepático rotineiro esperado.",
+    "commonAdverseEffects": [
+      "Dor no local da injeção",
+      "Náusea",
+      "Tontura",
+      "Febre"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Falha terapêutica faríngea",
+      "Emergência de resistência"
+    ],
+    "adverseEffects": "Geralmente bem tolerada; o principal problema clínico é eficácia inadequada na faringe e disponibilidade limitada.",
+    "interactions": "Poucas interações clinicamente relevantes descritas; revisar nefrotóxicos em DRC.",
+    "monitoring": "Teste microbiológico conforme diretriz de gonorreia, rastrear outras ISTs e realizar test-of-cure quando indicado pelo sítio/regime.",
+    "administration": "IM profunda em dose única quando utilizada.",
+    "preparation": "Reconstituir o pó com diluente apropriado conforme produto.",
+    "infusionProtocol": "Não aplicável; uso é intramuscular, não infusão IV.",
+    "pregnancy": "Dados históricos existem, mas a terapia preferida atual para gonorreia deve seguir diretrizes contemporâneas.",
+    "lactation": "Dados limitados; avaliar risco-benefício.",
+    "specialPopulations": "CDC relata eficácia de 98,2% em gonorreia urogenital/anorretal, mas eficácia pobre na faringe e indisponibilidade nos EUA.",
+    "patientEducation": "Explicar que a dose única histórica não é a primeira escolha atual e que infecção faríngea exige outro regime.",
+    "clinicalPearls": "Espectinomicina é aminociclitol, não tetraciclina. Seu nicho histórico é gonorreia genital/retal, mas a má eficácia faríngea limita seu papel.",
+    "guidelineRecommendations": "CDC atual não a utiliza como alternativa nos EUA porque está indisponível e tem baixa eficácia faríngea; seguir recomendações atuais, que priorizam ceftriaxona.",
+    "safetyFlags": [
+      "Aminociclitol, não tetraciclina",
+      "2 g IM histórico",
+      "Baixa eficácia faríngea",
+      "Indisponível EUA",
+      "Gonorreia"
+    ],
+    "references": [
+      "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+      "https://www.who.int/publications/i/item/9789240090767",
+      "https://www.who.int/publications/i/item/9789241549714",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=spectinomycin+gonorrhea",
+      "https://www.ncbi.nlm.nih.gov/books/?term=spectinomycin",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ]
   },
   "es": {
     "name": "Espectinomicina",
-    "class": "Aminociclitol (inhibidor de la síntesis proteica — sin actividad en otras infecciones)",
-    "commercialNames": {
-      "br": [
-        "Trobicin (disponibilidade limitada)"
-      ],
-      "ar": [
-        "Trobicin"
-      ]
-    },
-    "presentation": [
-      "Polvo para suspensión inyectable IM: 2 g por frasco"
+    "class": "Antibiótico aminociclitol — NO tetraciclina",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoIM": "2 g IM dosis única (gonorrea)"
-    },
+    "presentation": "Polvo IM según disponibilidad.",
+    "dose": "Régimen histórico/local: 2 g IM dosis única para gonorrea no complicada. No es terapia preferida actual en EUA.",
     "doseKg": null,
     "indication": "Gonorrea urogenital no complicada en pacientes alérgicos a cefalosporinas y fluoroquinolonas, o en áreas con alta resistencia a estos agentes.",
     "spectrum": "Neisseria gonorrhoeae (incluidas cepas resistentes a penicilina y fluoroquinolonas). NO activa frente a Chlamydia trachomatis (la coinfección debe tratarse por separado). Sin actividad útil frente a otros patógenos.",
-    "contraindications": [
-      "Hipersensibilidad a la espectinomicina",
-      "NO indicada para gonorrea faríngea ni rectal (eficacia muy baja)"
-    ],
+    "contraindications": "Hipersensibilidad grave a espectinomicina.",
     "risksByPatient": [],
     "alerts": [
-      "NO eficaz para gonorrea faríngea (la única indicación es la urogenital).",
-      "Siempre tratar la coinfección por Chlamydia trachomatis (azitromicina o doxiciclina).",
-      "Administración exclusivamente IM — vía EV no disponible/aprobada.",
-      "No requiere ajuste renal habitual."
+      "2 g IM dosis única histórica",
+      "No preferida actualmente",
+      "Mala eficacia faríngea",
+      "Seguir guía/AST local",
+      "Corregir taxonomía futura"
     ],
-    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / WHO Gonorrhea Treatment Guidelines / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Dosis habitual: 2 g IM dosis única para gonorrea."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Datos limitados en insuficiencia renal terminal."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "No existe recomendación de suplementación post-HD."
-      }
-    }
+    "ref": [
+      "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+      "https://www.who.int/publications/i/item/9789240090767",
+      "https://www.who.int/publications/i/item/9789241549714",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=spectinomycin+gonorrhea",
+      "https://www.ncbi.nlm.nih.gov/books/?term=spectinomycin",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ],
+    "renalDose": "Eliminación renal; dosis única histórica no tiene tabla universal de ajuste; cautela en ERC grave.",
+    "pharmacologicClass": "Aminociclitol inhibidor de 30S",
+    "mechanism": "Se une a 30S e interfiere translocación/síntesis proteica.",
+    "pharmacodynamics": "Bacteriostática frente a N. gonorrhoeae en concentraciones habituales; actividad depende de susceptibilidad.",
+    "pharmacokinetics": "IM, absorción rápida y eliminación renal principalmente sin cambios.",
+    "indications": "Alternativa histórica/local para gonorrea urogenital/anorrectal no complicada cuando disponible/susceptible; baja eficacia faríngea.",
+    "presentations": [
+      "2 g por vial según producto histórico/local"
+    ],
+    "pediatricDose": "Sin régimen pediátrico rutinario universal actual; seguir guía/local especialista si está disponible.",
+    "hepaticDose": "Sin ajuste hepático rutinario esperado.",
+    "commonAdverseEffects": [
+      "Dolor local",
+      "Náuseas",
+      "Mareo",
+      "Fiebre"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Fracaso terapéutico faríngeo",
+      "Emergencia de resistencia"
+    ],
+    "adverseEffects": "Generalmente bien tolerada; problema central es baja eficacia faríngea y disponibilidad limitada.",
+    "interactions": "Pocas interacciones relevantes; revisar nefrotóxicos en ERC.",
+    "monitoring": "Pruebas microbiológicas según guía de gonorrea, cribado de otras ITS y test-of-cure cuando corresponda.",
+    "administration": "IM profunda en dosis única.",
+    "preparation": "Reconstituir polvo según producto.",
+    "infusionProtocol": "No aplicable; IM, no infusión IV.",
+    "pregnancy": "Seguir guías contemporáneas que priorizan regímenes actuales.",
+    "lactation": "Datos limitados.",
+    "specialPopulations": "CDC informa 98,2% eficacia urogenital/anorrectal, pero pobre eficacia faríngea e indisponibilidad en EUA.",
+    "patientEducation": "La dosis única histórica no es primera elección actual; faringe requiere otro régimen.",
+    "clinicalPearls": "Es aminociclitol, no tetraciclina. Su nicho histórico es gonorrea genital/rectal, limitado por mala eficacia faríngea.",
+    "guidelineRecommendations": "CDC actual no la usa como alternativa en EUA por indisponibilidad y baja eficacia faríngea; las guías actuales priorizan ceftriaxona.",
+    "safetyFlags": [
+      "Aminociclitol, no tetraciclina",
+      "2 g IM histórico",
+      "Baja eficacia faríngea",
+      "No disponible EUA",
+      "Gonorrea"
+    ],
+    "references": [
+      "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+      "https://www.who.int/publications/i/item/9789240090767",
+      "https://www.who.int/publications/i/item/9789241549714",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=spectinomycin+gonorrhea",
+      "https://www.ncbi.nlm.nih.gov/books/?term=spectinomycin",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ]
   },
   "name": {
     "pt": "Espectinomicina",
@@ -150,8 +170,8 @@
     "trobicin",
     "aminociclitol (inibidor da sintese proteica — sem atividade em outras infeccoes)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-229c61552610b9a0",
+  "clinicalContentSha256": "229c61552610b9a0e5664364d3a384a0eb8c6bf4f1c307f12f3634d3727c1992",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

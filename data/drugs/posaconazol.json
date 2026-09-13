@@ -1,14 +1,142 @@
 {
   "id": "posaconazol",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Posaconazol"
+    "name": "Posaconazol",
+    "class": "Antifúngico azólico",
+    "pharmacologicClass": "Triazol de amplo espectro; forte inibidor CYP3A4",
+    "mechanism": "Inibe a 14-alfa-desmetilase fúngica dependente de CYP51, reduzindo ergosterol e desorganizando a membrana.",
+    "pharmacodynamics": "Atividade depende de exposição; AUC/MIC é índice PK/PD relevante para vários fungos e azóis.",
+    "pharmacokinetics": "Comprimido DR tem exposição mais previsível que suspensão; forte inibição de CYP3A4. Formulações têm absorção e doses diferentes.",
+    "indications": "Profilaxia de Aspergillus/Candida invasivos em alto risco e tratamento de aspergilose invasiva em formulações/idades aprovadas.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Formulações oral e/ou IV conforme agente.",
+    "presentations": [
+      "Comprimidos/cápsulas conforme agente",
+      "IV conforme agente"
+    ],
+    "dose": "Comprimido de liberação retardada: 300 mg VO BID no dia 1, depois 300 mg uma vez ao dia a partir do dia 2 para indicações aprovadas desta formulação.",
+    "pediatricDose": "Profilaxia em >=2 anos e >40 kg com comprimido DR: 300 mg BID no dia 1, depois 300 mg uma vez ao dia. Pacientes <=40 kg exigem outra formulação/esquema conforme bula.",
+    "renalDose": "VO: sem ajuste específico, mas insuficiência renal grave aumenta variabilidade e requer vigiar breakthrough. IV com veículo SBECD deve ser evitado/preferir VO quando função renal é significativamente reduzida.",
+    "hepaticDose": "Sem ajuste rotineiro leve–grave na bula, mas monitorar enzimas/bilirrubina e considerar suspensão se lesão hepática clínica.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Cefaleia",
+      "Elevação de transaminases"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidade grave",
+      "Interações medicamentosas graves",
+      "Arritmia relacionada a QT conforme agente"
+    ],
+    "adverseEffects": "Azóis podem causar hepatotoxicidade e interações CYP; o perfil de QT e toxicidades específicas varia entre agentes.",
+    "contraindications": "Hipersensibilidade e combinações formalmente contraindicadas por interações/QT conforme bula.",
+    "interactions": "Forte inibidor CYP3A4; contraindicações importantes incluem certos substratos de QT, estatinas CYP3A4 e ergotamínicos. Ajustar/monitorar tacrolimo e ciclosporina.",
+    "monitoring": "AST/ALT/bilirrubina, K/Mg/Ca, pressão arterial e potássio por pseudoaldosteronismo, ECG em risco e níveis farmacológicos quando indicado.",
+    "administration": "VO/IV conforme formulação; revisar alimentação, pH gástrico e interações específicas antes da administração.",
+    "preparation": "Comprimidos DR devem ser usados conforme bula e não substituídos por suspensão. IV requer reconstituição/diluição específica.",
+    "infusionProtocol": "Formulação IV deve seguir tempo de infusão e filtro do fabricante; preferir formulação oral quando apropriada.",
+    "pregnancy": "Azóis sistêmicos exigem avaliação individual de risco reprodutivo; evitar exposição desnecessária e seguir bula específica.",
+    "lactation": "Avaliar agente, dose e duração; consultar bula específica e risco do lactente.",
+    "specialPopulations": "Imunossuprimidos têm maior risco de hepatotoxicidade e breakthrough. Insuficiência renal grave requer atenção à formulação IV e à variabilidade de exposição.",
+    "patientEducation": "Informar icterícia, urina escura, palpitações, síncope, rash grave ou alterações visuais/neurológicas específicas.",
+    "clinicalPearls": "Comprimido DR e suspensão oral NÃO são intercambiáveis mg por mg. Confirmar formulação antes de prescrever; pseudoaldosteronismo pode causar hipertensão e hipocalemia.",
+    "guidelineRecommendations": "Posaconazol é opção importante para profilaxia antifúngica de alto risco e terapia de aspergilose em cenários selecionados; TDM pode ser útil conforme indicação/formulação.",
+    "safetyFlags": [
+      "Hepatotoxicidade",
+      "Interações CYP",
+      "Revisar QT e formulação"
+    ],
+    "alerts": [
+      "300 mg BID dia 1 -> 300 mg/dia",
+      "Formulações não intercambiáveis",
+      "QT/torsades",
+      "CYP3A4 forte",
+      "Pseudoaldosteronismo",
+      "Hepatotoxicidade"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8d8dd03-46b5-bd26-bb27-7ca31d8c3326",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/",
+      "https://www.idsociety.org/practice-guideline/candidiasis/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8d8dd03-46b5-bd26-bb27-7ca31d8c3326",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/",
+      "https://www.idsociety.org/practice-guideline/candidiasis/"
+    ]
   },
   "es": {
-    "name": "Posaconazol"
+    "name": "Posaconazol",
+    "class": "Antifúngico azólico",
+    "pharmacologicClass": "Triazol de amplio espectro; potente inhibidor CYP3A4",
+    "mechanism": "Inhibe la 14-alfa-desmetilasa fúngica dependiente de CYP51, reduce ergosterol y altera la membrana.",
+    "pharmacodynamics": "Actividad dependiente de exposición; AUC/MIC es un índice PK/PD relevante para varios hongos y azoles.",
+    "pharmacokinetics": "Comprimido DR tiene exposición más predecible que suspensión; fuerte inhibición CYP3A4. Formulaciones tienen absorción/dosis diferentes.",
+    "indications": "Profilaxis de Aspergillus/Candida invasivos en alto riesgo y tratamiento de aspergilosis invasiva en formulaciones/edades aprobadas.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Formulaciones oral y/o IV según agente.",
+    "presentations": [
+      "Comprimidos/cápsulas según agente",
+      "IV según agente"
+    ],
+    "dose": "Comprimido de liberación retardada: 300 mg VO BID día 1, luego 300 mg una vez al día desde día 2 para indicaciones aprobadas.",
+    "pediatricDose": "Profilaxis en >=2 años y >40 kg con comprimido DR: 300 mg BID día 1, luego 300 mg una vez al día. <=40 kg requiere otra formulación/esquema según ficha.",
+    "renalDose": "VO: sin ajuste específico, pero insuficiencia renal grave aumenta variabilidad y exige vigilar breakthrough. IV con SBECD debe evitarse/preferir VO si función renal está muy reducida.",
+    "hepaticDose": "Sin ajuste rutinario leve–grave en ficha, pero monitorizar enzimas/bilirrubina y considerar suspensión ante lesión hepática.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Cefalea",
+      "Elevación de transaminasas"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidad grave",
+      "Interacciones medicamentosas graves",
+      "Arritmia relacionada con QT según agente"
+    ],
+    "adverseEffects": "Los azoles pueden causar hepatotoxicidad e interacciones CYP; el perfil de QT y toxicidades específicas varía entre agentes.",
+    "contraindications": "Hipersensibilidad y combinaciones formalmente contraindicadas por interacciones/QT según ficha.",
+    "interactions": "Potente inhibidor CYP3A4; contraindicaciones incluyen ciertos sustratos QT, estatinas CYP3A4 y ergotamínicos. Ajustar/monitorizar tacrolimus y ciclosporina.",
+    "monitoring": "AST/ALT/bilirrubina, K/Mg/Ca, presión y potasio por pseudoaldosteronismo, ECG en riesgo y niveles cuando corresponda.",
+    "administration": "VO/IV según formulación; revisar alimentos, pH gástrico e interacciones específicas.",
+    "preparation": "Comprimidos DR según ficha y no sustituir por suspensión. IV requiere reconstitución/dilución específica.",
+    "infusionProtocol": "IV según tiempo/filtro del fabricante; preferir oral cuando sea apropiado.",
+    "pregnancy": "Los azoles sistémicos requieren valoración individual del riesgo reproductivo; evitar exposición innecesaria y seguir ficha.",
+    "lactation": "Valorar agente, dosis y duración; consultar ficha específica y riesgo del lactante.",
+    "specialPopulations": "Inmunosuprimidos tienen mayor riesgo de hepatotoxicidad y breakthrough. Insuficiencia renal grave requiere atención a formulación IV y exposición.",
+    "patientEducation": "Informar ictericia, orina oscura, palpitaciones, síncope, rash grave o alteraciones visuales/neurológicas específicas.",
+    "clinicalPearls": "Comprimido DR y suspensión oral NO son intercambiables mg por mg. Confirmar formulación; pseudoaldosteronismo puede causar hipertensión e hipopotasemia.",
+    "guidelineRecommendations": "Posaconazol es opción importante para profilaxis antifúngica de alto riesgo y terapia de aspergilosis en escenarios selectos; TDM puede ser útil.",
+    "safetyFlags": [
+      "Hepatotoxicidad",
+      "Interacciones CYP",
+      "Revisar QT y formulación"
+    ],
+    "alerts": [
+      "300 mg BID día 1 -> 300 mg/día",
+      "Formulaciones no intercambiables",
+      "QT/torsades",
+      "CYP3A4 fuerte",
+      "Pseudoaldosteronismo",
+      "Hepatotoxicidad"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8d8dd03-46b5-bd26-bb27-7ca31d8c3326",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/",
+      "https://www.idsociety.org/practice-guideline/candidiasis/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d8d8dd03-46b5-bd26-bb27-7ca31d8c3326",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/",
+      "https://www.idsociety.org/practice-guideline/candidiasis/"
+    ]
   },
   "name": {
     "pt": "Posaconazol",
@@ -17,8 +145,8 @@
   "keywords": [
     "posaconazol"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8bd4419151c9028c",
+  "clinicalContentSha256": "8bd4419151c9028c7de7aad108eadfaca274267f7be1e107f04be2b0321d0813",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js"

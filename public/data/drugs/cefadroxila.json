@@ -1,280 +1,174 @@
 {
   "id": "cefadroxila",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(34,197,94,0.15)",
   "colorTxt": "#22C55E",
   "pt": {
     "name": "Cefadroxila",
-    "class": "Cefalosporina de 1ª geração (oral)",
-    "commercialNames": {
-      "br": [
-        "Cefamox",
-        "Cefadroxila Genérica",
-        "Drafloxin"
-      ],
-      "ar": [
-        "Cefadroxilo Genérico",
-        "Duricef"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 500 mg",
-      "Suspensão oral: 250 mg/5 mL; 500 mg/5 mL"
+    "class": "Cefalosporina oral de 1ª geração",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "500 mg–1 g VO 12/12h",
-      "pediatrica": "2000 mg VO 12/12h (30 mg/kg/dia dividido 12/12h)"
-    },
+    "presentation": "Cápsulas/comprimidos e suspensão.",
+    "dose": "UTI baixa 1–2 g/dia; pele 1 g/dia; GAS 1 g/dia por 10 dias.",
     "doseKg": {
       "pediatrica": "30 mg/kg/dia dividido 12/12h (máx 2 g/dia)"
     },
-    "mechanism": "Liga-se às proteínas ligadoras de penicilina (PBPs), inibindo a síntese da parede celular bacteriana. Bactericida tempo-dependente.",
+    "mechanism": "Liga-se a PBPs e inibe síntese da parede bacteriana.",
     "onset": "Absorção oral boa — Tmáx 1–2 h; biodisponibilidade ~90%.",
     "halfLife": "Meia-vida 1,1–2 h. Eliminação predominantemente renal (>90% inalterada na urina).",
     "therapeuticRange": "Tempo acima da CIM (T>CIM) como parâmetro PK/PD. Uso oral exclusivo.",
     "dilution": "Uso oral exclusivo.",
     "speed": "Não aplicável (uso oral).",
     "commonAdverseEffects": [
-      "Náuseas e vômitos",
+      "Náusea",
       "Diarreia",
-      "Dor abdominal",
-      "Rash cutâneo"
+      "Rash"
     ],
     "dangerousAdverseEffects": [
-      "Reação de hipersensibilidade grave (anafilaxia)",
-      "Colite pseudomembranosa por C. difficile",
-      "Nefrotoxicidade (raro)"
+      "Anafilaxia",
+      "Clostridioides difficile",
+      "Toxicidade grave específica"
     ],
-    "contraindications": [
-      "Hipersensibilidade a cefalosporinas ou penicilinas (reação cruzada ~1–2%)"
-    ],
+    "contraindications": "Hipersensibilidade grave ao agente ou beta-lactâmicos relacionados.",
     "risksByPatient": [],
     "alerts": [
-      "Requer ajuste de dose em insuficiência renal (eliminação renal >90%).",
-      "Excelente opção oral para infecções de pele, tecidos moles e ITU não complicada."
+      "Carga 1 g",
+      "CrCl 0–10: 500 mg q36h",
+      "10–25: q24h",
+      "25–50: q12h",
+      "Pediatria 30 mg/kg/dia"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para infecções de pele e vias aéreas superiores."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reduzir frequência devido à eliminação renal predominante."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "24–36h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24–36h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obrigatório para evitar acúmulo."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "36–48h",
-          "doseMaxima": "500 mg/dose",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "36–48h",
-          "doseMaxima": "500 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar neurotoxicidade em insuficiência renal avançada."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg/dose",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485bc35b-637a-426b-aaa2-023c664914ae",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4674a05c-fdef-4737-a4b8-e3229bdada9d",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba26618e-4a67-42a3-a194-f4ab6bc04bc7",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "renalDose": "Carga 1 g, manutenção 500 mg: CrCl 0–10 q36h; 10–25 q24h; 25–50 q12h; >50 sem ajuste.",
+    "pharmacologicClass": "Cefalosporina beta-lactâmica oral",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC.",
+    "pharmacokinetics": "Absorção oral e eliminação predominantemente renal.",
+    "indications": "Infecções respiratórias, pele e/ou UTI por organismos suscetíveis conforme bula.",
+    "presentations": [
+      "500 mg",
+      "1 g conforme produto",
+      "250 mg/5 mL",
+      "500 mg/5 mL"
+    ],
+    "pediatricDose": "30 mg/kg/dia; UTI/pele q12h; GAS/impetigo pode ser diária ou q12h.",
+    "hepaticDose": "Sem ajuste hepático rotineiro estabelecido.",
+    "adverseEffects": "Eventos GI, hipersensibilidade e toxicidades específicas do agente; risco de C. difficile é de classe.",
+    "interactions": "Probenecida pode aumentar níveis; revisar anticoagulantes.",
+    "monitoring": "Resposta clínica, culturas e função renal; considerar hemograma/função hepática em terapia prolongada.",
+    "administration": "VO; seguir relação com alimento e interações específicas do produto.",
+    "preparation": "Suspensão oral, quando presente, deve ser reconstituída/agitada conforme bula.",
+    "infusionProtocol": "Não aplicável; formulação oral.",
+    "pregnancy": "Usar quando benefício justificar e conforme bula/diretriz.",
+    "lactation": "Pequenas quantidades podem passar ao leite; monitorar o lactente.",
+    "specialPopulations": "DRC exige revisão da dose quando indicado.",
+    "patientEducation": "Completar o esquema e procurar atendimento em caso de reação alérgica grave ou diarreia intensa.",
+    "clinicalPearls": "Meia-vida oral longa permite 1–2 tomadas/dia, mas DRC muda bastante o intervalo.",
+    "guidelineRecommendations": "Usar apenas quando foco/patógeno forem compatíveis com espectro e suscetibilidade local.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "Stewardship",
+      "Revisar função renal"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485bc35b-637a-426b-aaa2-023c664914ae",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4674a05c-fdef-4737-a4b8-e3229bdada9d",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba26618e-4a67-42a3-a194-f4ab6bc04bc7",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "es": {
     "name": "Cefadroxilo",
-    "class": "Cefalosporina de 1ª generación (oral)",
-    "commercialNames": {
-      "br": [
-        "Cefamox",
-        "Cefadroxila Genérica",
-        "Drafloxin"
-      ],
-      "ar": [
-        "Cefadroxilo Genérico",
-        "Duricef"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 500 mg",
-      "Suspensión oral: 250 mg/5 mL; 500 mg/5 mL"
+    "class": "Cefalosporina oral de 1ª geração",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "500 mg–1 g VO 12/12h",
-      "pediatrica": "2000 mg VO cada 12h (30 mg/kg/día dividido cada 12h)"
-    },
+    "presentation": "Cápsulas/comprimidos e suspensão.",
+    "dose": "UTI baja 1–2 g/día; piel 1 g/día; GAS 1 g/día por 10 días.",
     "doseKg": {
       "pediatrica": "30 mg/kg/día dividido cada 12h (máx 2 g/día)"
     },
-    "mechanism": "Se une a las proteínas ligadoras de penicilina (PBPs), inhibiendo la síntesis de la pared celular bacteriana. Bactericida tiempo-dependiente.",
+    "mechanism": "Se une a PBPs e inhibe pared bacteriana.",
     "onset": "Absorción oral buena — Tmáx 1–2 h; biodisponibilidad ~90%.",
     "halfLife": "Semivida 1,1–2 h. Eliminación predominantemente renal (>90% inalterada en orina).",
     "therapeuticRange": "Tiempo sobre la CIM (T>CIM) como parámetro PK/PD. Uso oral exclusivo.",
     "dilution": "Uso oral exclusivo.",
     "speed": "No aplicable (uso oral).",
     "commonAdverseEffects": [
-      "Náuseas y vómitos",
+      "Náuseas",
       "Diarrea",
-      "Dolor abdominal",
-      "Erupción cutánea"
+      "Rash"
     ],
     "dangerousAdverseEffects": [
-      "Reacción de hipersensibilidad grave (anafilaxia)",
-      "Colitis seudomembranosa por C. difficile",
-      "Nefrotoxicidad (raro)"
+      "Anafilaxia",
+      "Clostridioides difficile",
+      "Toxicidad grave específica"
     ],
-    "contraindications": [
-      "Hipersensibilidad a cefalosporinas o penicilinas (reacción cruzada ~1–2%)"
-    ],
+    "contraindications": "Hipersensibilidad grave al agente o beta-lactámicos relacionados.",
     "risksByPatient": [],
     "alerts": [
-      "Requiere ajuste de dosis en insuficiencia renal (eliminación renal >90%).",
-      "Excelente opción oral para infecciones de piel, tejidos blandos e ITU no complicada."
+      "Carga 1 g",
+      "ClCr 0–10: 500 mg q36h",
+      "10–25: q24h",
+      "25–50: q12h",
+      "Pediatría 30 mg/kg/día"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para infecciones de piel y vías respiratorias superiores."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducir frecuencia debido a la eliminación renal predominante."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "24–36h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24–36h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obligatorio para evitar acumulación."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "36–48h",
-          "doseMaxima": "500 mg/dose",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "36–48h",
-          "doseMaxima": "500 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar neurotoxicidad en insuficiencia renal avanzada."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg/dose",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485bc35b-637a-426b-aaa2-023c664914ae",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4674a05c-fdef-4737-a4b8-e3229bdada9d",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba26618e-4a67-42a3-a194-f4ab6bc04bc7",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "renalDose": "Carga 1 g, mantenimiento 500 mg: ClCr 0–10 q36h; 10–25 q24h; 25–50 q12h; >50 sin ajuste.",
+    "pharmacologicClass": "Cefalosporina beta-lactámica oral",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC.",
+    "pharmacokinetics": "Absorción oral y eliminación principalmente renal.",
+    "indications": "Infecciones respiratorias, piel y/o UTI por organismos susceptibles según ficha.",
+    "presentations": [
+      "500 mg",
+      "1 g conforme produto",
+      "250 mg/5 mL",
+      "500 mg/5 mL"
+    ],
+    "pediatricDose": "30 mg/kg/día; UTI/piel q12h; GAS/impétigo una vez o q12h.",
+    "hepaticDose": "Sin ajuste hepático rutinario establecido.",
+    "adverseEffects": "Eventos GI, hipersensibilidad y toxicidades específicas; riesgo de C. difficile es de clase.",
+    "interactions": "Probenecid puede aumentar niveles; revisar anticoagulantes.",
+    "monitoring": "Respuesta clínica, cultivos y función renal; considerar hemograma/función hepática en terapia prolongada.",
+    "administration": "VO; seguir relación con alimentos e interacciones específicas.",
+    "preparation": "Suspensión, si existe, reconstituir/agitar según ficha.",
+    "infusionProtocol": "No aplicable; oral.",
+    "pregnancy": "Usar cuando beneficio lo justifique y según ficha/guía.",
+    "lactation": "Pequeñas cantidades pueden pasar a leche; vigilar al lactante.",
+    "specialPopulations": "ERC requiere revisar dosis cuando corresponda.",
+    "patientEducation": "Completar el esquema y consultar ante reacción alérgica grave o diarrea intensa.",
+    "clinicalPearls": "Semivida oral larga permite 1–2 dosis/día, pero ERC cambia mucho el intervalo.",
+    "guidelineRecommendations": "Usar solo cuando foco/patógeno sean compatibles con espectro/susceptibilidad local.",
+    "safetyFlags": [
+      "Alergia beta-lactámica",
+      "Stewardship",
+      "Revisar función renal"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485bc35b-637a-426b-aaa2-023c664914ae",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4674a05c-fdef-4737-a4b8-e3229bdada9d",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba26618e-4a67-42a3-a194-f4ab6bc04bc7",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "name": {
     "pt": "Cefadroxila",
@@ -290,8 +184,8 @@
     "duricef",
     "cefalosporina de 1ª geracao (oral)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-4a2f17e52faa0b7f",
+  "clinicalContentSha256": "4a2f17e52faa0b7f2a2798522360957dae6963a3da0eef98baa416949621699b",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

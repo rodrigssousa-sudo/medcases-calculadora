@@ -1,33 +1,17 @@
 {
   "id": "cefazolina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Cefazolina",
-    "class": "Cefalosporina de 1ª geração",
-    "commercialNames": {
-      "br": [
-        "Kefazol",
-        "Cefazolina ABL",
-        "Cefazolina Eurofarma"
-      ],
-      "ar": [
-        "Cefazolina Richet",
-        "Cefazolina Klonal",
-        "Cefazolina genérica"
-      ]
-    },
-    "presentation": [
-      "Frasco-ampola 500 mg",
-      "Frasco-ampola 1 g"
+    "class": "Antibiótico beta-lactâmico",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "1–2 g EV 8/8h",
-      "profilaxiaCirurgica": "2 g EV 30–60 min antes da incisão; 3 g se peso ≥120 kg",
-      "pediatrica": "2000 mg EV 8/8h"
-    },
+    "presentation": "Frascos para IV/IM.",
+    "dose": "Adultos: 500 mg–1 g q6–8h em moderadas/graves; 1–1,5 g q6h em potencialmente fatais; alguns protocolos dirigidos usam 2 g q8h.",
     "doseKg": {
       "standard": "25–33 mg/kg por dose 8/8h",
       "profilaxiaPediatrica": "30 mg/kg dose única antes da incisão",
@@ -37,133 +21,72 @@
     "dilution": "Diluir em SF 0,9% ou SG5% conforme protocolo institucional.",
     "speed": "Infundir em 30 minutos; na profilaxia cirúrgica pode ser administrada lentamente conforme protocolo.",
     "commonAdverseEffects": [
-      "Dor no local da aplicação",
+      "Náusea",
       "Diarreia",
-      "Náuseas",
-      "Rash cutâneo"
+      "Rash"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Colite por Clostridioides difficile",
-      "Neutropenia em uso prolongado",
-      "Convulsões em insuficiência renal sem ajuste"
+      "C. difficile",
+      "SCAR/SJS-TEN",
+      "Neurotoxicidade por acúmulo"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Excelente opção para MSSA sensível e profilaxia cirúrgica.",
-      "Não cobre MRSA, Enterococcus nem Pseudomonas.",
-      "Investigar reação grave prévia a beta-lactâmicos."
+      "Confirmar foco e suscetibilidade",
+      "Reavaliar dose se função renal mudar"
     ],
-    "ref": "Goodman & Gilman / Sanford Guide / ASHP Surgical Prophylaxis Guidelines",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "100 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para infecções por MSSA e profilaxia cirúrgica."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "75 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reduzir frequência de administração."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "50 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obrigatório para evitar acúmulo."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "25 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar neurotoxicidade em insuficiência renal avançada."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "25 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=197d5702-2c20-480e-8246-4d0d21f871be",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ],
+    "renalDose": "ClCr >=55: plena; 35–54: plena com intervalo >=8h; 11–34: metade q12h; <=10: metade q18–24h, após ataque adequado.",
+    "pharmacologicClass": "Cefalosporina de 1ª geração",
+    "mechanism": "Liga PBPs e inibe síntese de parede.",
+    "pharmacodynamics": "Bactericida tempo-dependente; eficácia ligada a fT>MIC.",
+    "pharmacokinetics": "IV/IM; alta concentração sérica/tecidual; eliminação renal; penetração inadequada no LCR para meningite.",
+    "indications": "MSSA/estreptococos suscetíveis, algumas Enterobacterales e profilaxia cirúrgica; pele, osso/articulação e bacteremia conforme foco.",
+    "presentations": [
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "25–50 mg/kg/dia em 3–4 doses para leves/moderadas; até 100 mg/kg/dia em graves. Segurança em prematuros/neonatos não estabelecida na bula citada.",
+    "hepaticDose": "Sem ajuste hepático rotineiro; eliminação renal predomina.",
+    "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+    "monitoring": "Culturas, resposta, função renal e hemograma; vigiar alergia, C. difficile e neurotoxicidade na DRC.",
+    "administration": "IV ou IM; grave preferir IV. Profilaxia cirúrgica deve respeitar tempo da incisão/redose.",
+    "preparation": "Reconstituir/diluir conforme via e fabricante.",
+    "infusionProtocol": "Infusão intermitente padrão; prolongada pode ser considerada em contextos selecionados se estabilidade permitir.",
+    "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+    "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "DRC exige ajuste; obesidade pode exigir dose de profilaxia maior conforme protocolo.",
+    "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+    "clinicalPearls": "Excelente para MSSA/estreptococos; não cobre MRSA, Enterococcus ou Pseudomonas e não deve ser usada para meningite.",
+    "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal quando aplicável",
+      "Neurotoxicidade por acúmulo"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=197d5702-2c20-480e-8246-4d0d21f871be",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ]
   },
   "es": {
     "name": "Cefazolina",
-    "class": "Cefalosporina de 1ª generación",
-    "commercialNames": {
-      "br": [
-        "Kefazol",
-        "Cefazolina ABL",
-        "Cefazolina Eurofarma"
-      ],
-      "ar": [
-        "Cefazolina Richet",
-        "Cefazolina Klonal",
-        "Cefazolina genérica"
-      ]
-    },
-    "presentation": [
-      "Frasco ampolla 500 mg",
-      "Frasco ampolla 1 g"
+    "class": "Antibiótico betalactámico",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "1–2 g EV cada 8h",
-      "profilaxiaCirurgica": "2 g EV 30–60 min antes de la incisión; 3 g si peso ≥120 kg",
-      "pediatrica": "2000 mg EV cada 8h"
-    },
+    "presentation": "Viales IV/IM.",
+    "dose": "Adultos: 500 mg–1 g q6–8h en moderadas/graves; 1–1,5 g q6h en potencialmente mortales; algunos protocolos dirigidos usan 2 g q8h.",
     "doseKg": {
       "standard": "25–33 mg/kg por dosis cada 8h",
       "profilaxiaPediatrica": "30 mg/kg dosis única antes de la incisión",
@@ -173,108 +96,63 @@
     "dilution": "Diluir en SF 0,9% o SG5% según protocolo institucional.",
     "speed": "Infundir en 30 minutos; en profilaxis quirúrgica puede administrarse lentamente según protocolo.",
     "commonAdverseEffects": [
-      "Dolor en el sitio de aplicación",
-      "Diarrea",
       "Náuseas",
-      "Exantema cutáneo"
+      "Diarrea",
+      "Exantema"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Colitis por Clostridioides difficile",
-      "Neutropenia en uso prolongado",
-      "Convulsiones en insuficiencia renal sin ajuste"
+      "C. difficile",
+      "SCAR/SJS-TEN",
+      "Neurotoxicidad por acumulación"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Excelente opción para MSSA sensible y profilaxis quirúrgica.",
-      "No cubre MRSA, Enterococcus ni Pseudomonas.",
-      "Investigar reacción grave previa a beta-lactámicos."
+      "Confirmar foco y susceptibilidad",
+      "Reevaluar dosis si cambia la función renal"
     ],
-    "ref": "Goodman & Gilman / Sanford Guide / ASHP Surgical Prophylaxis Guidelines",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "100 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para infecciones por MSSA y profilaxis quirúrgica."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "75 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducir frecuencia de administración."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "50 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obligatorio para evitar acumulación."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "25 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar neurotoxicidad en insuficiencia renal avanzada."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "25 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=197d5702-2c20-480e-8246-4d0d21f871be",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ],
+    "renalDose": "ClCr >=55: plena; 35–54: plena con intervalo >=8h; 11–34: mitad q12h; <=10: mitad q18–24h, tras carga adecuada.",
+    "pharmacologicClass": "Cefalosporina de 1ª generación",
+    "mechanism": "Se une a PBP e inhibe síntesis de pared.",
+    "pharmacodynamics": "Bactericida dependiente del tiempo; eficacia ligada a fT>MIC.",
+    "pharmacokinetics": "IV/IM; alta concentración sérica/tisular; eliminación renal; penetración insuficiente en LCR para meningitis.",
+    "indications": "MSSA/estreptococos susceptibles, algunas Enterobacterales y profilaxis quirúrgica; piel, hueso/articulación y bacteriemia según foco.",
+    "presentations": [
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "25–50 mg/kg/día en 3–4 dosis para leves/moderadas; hasta 100 mg/kg/día en graves. Seguridad en prematuros/neonatos no establecida en la ficha citada.",
+    "hepaticDose": "Sin ajuste hepático rutinario; predomina eliminación renal.",
+    "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+    "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+    "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+    "monitoring": "Cultivos, respuesta, función renal y hemograma; vigilar alergia, C. difficile y neurotoxicidad en ERC.",
+    "administration": "IV o IM; grave preferir IV. Profilaxis quirúrgica debe respetar tiempo de incisión/redosis.",
+    "preparation": "Reconstituir/diluir según vía y fabricante.",
+    "infusionProtocol": "Infusión intermitente estándar; prolongada puede considerarse en contextos seleccionados si estabilidad lo permite.",
+    "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+    "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+    "specialPopulations": "ERC requiere ajuste; obesidad puede requerir mayor dosis de profilaxis según protocolo.",
+    "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+    "clinicalPearls": "Excelente para MSSA/estreptococos; no cubre MRSA, Enterococcus ni Pseudomonas y no debe usarse para meningitis.",
+    "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal cuando corresponda",
+      "Neurotoxicidad por acumulación"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=197d5702-2c20-480e-8246-4d0d21f871be",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ]
   },
   "name": {
     "pt": "Cefazolina",
@@ -290,8 +168,8 @@
     "cefazolina generica",
     "cefalosporina de 1ª geracao"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-e61729424f211913",
+  "clinicalContentSha256": "e61729424f2119133df2859fd54b61485ca0d422f660b50949e686e5f2e0905e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

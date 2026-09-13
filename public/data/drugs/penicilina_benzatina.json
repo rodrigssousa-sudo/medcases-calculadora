@@ -1,32 +1,17 @@
 {
   "id": "penicilina_benzatina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Penicilina Benzatina",
-    "class": "Penicilina de ação prolongada",
-    "commercialNames": {
-      "br": [
-        "Benzetacil",
-        "Penicilina Benzatina Teuto"
-      ],
-      "ar": [
-        "Benzetacil",
-        "Penicilina Benzatínica Richet"
-      ]
-    },
-    "presentation": [
-      "Suspensão IM 600.000 UI/dose",
-      "Suspensão IM 1.200.000 UI/dose",
-      "Suspensão IM 2.400.000 UI/dose"
+    "name": "Penicilina G benzatina",
+    "class": "Penicilina natural de depósito",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "sifilisPrecoce": "2,4 milhões UI IM dose única",
-      "sifilisLateLatente": "2,4 milhões UI IM 1×/semana por 3 semanas",
-      "pediatrica": "2.40 milhões UI IM dose única"
-    },
+    "presentation": "Seringa pré-cheia IM profunda.",
+    "dose": "Sífilis precoce 2,4 milhões U IM única; latente tardia/desconhecida 2,4 milhões U IM semanal x3; GAS adulto 1,2 milhão U IM única.",
     "doseKg": {
       "standard": "25.000–50.000 UI/kg",
       "maxDose": "2,4 milhões UI"
@@ -35,104 +20,83 @@
     "dilution": "Administração exclusivamente IM profunda — NUNCA EV.",
     "speed": "IM profunda em glúteo. Aspirar antes de injetar.",
     "commonAdverseEffects": [
-      "Dor local no sítio de injeção",
-      "Reação de Jarisch-Herxheimer (nas primeiras 24h)"
+      "Dor local",
+      "Rash",
+      "Febre",
+      "Náusea"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Síndrome de Hoigne (injeção IV acidental)",
-      "Embolia com injeção IV acidental"
+      "Isquemia/gangrena por injeção vascular",
+      "Lesão neurovascular",
+      "Jarisch-Herxheimer"
     ],
     "risksByPatient": [],
     "alerts": [
-      "NUNCA administrar por via endovenosa.",
-      "Indicada para sífilis, faringite estreptocócica e profilaxia de febre reumática."
+      "2,4 milhões U IM precoce",
+      "2,4 milhões U semanal x3 tardia",
+      "GAS <27 kg: 600.000 U",
+      ">=27 kg: 1,2 milhão U",
+      "NUNCA IV/intra-arterial"
     ],
-    "ref": "CDC STI Treatment Guidelines 2021 / Sanford Guide 2025 / MS Brasil",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "Administração exclusivamente IM profunda."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "Não necessita dose suplementar pós-hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16&version=35",
+      "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm",
+      "https://www.cdc.gov/std/treatment-guidelines/primary-and-secondary-syphilis.htm"
+    ],
+    "renalDose": "Sem ajuste padronizado nas indicações usuais de dose única.",
+    "pharmacologicClass": "Benzatina penicilina G de liberação prolongada IM",
+    "mechanism": "Libera penicilina G lentamente do depósito IM; liga PBPs e inibe parede bacteriana.",
+    "pharmacodynamics": "Bactericida tempo-dependente; concentrações baixas e prolongadas.",
+    "pharmacokinetics": "Absorção IM muito lenta por dias-semanas; não atinge exposição adequada para neurosífilis/meningite.",
+    "indications": "Sífilis sem comprometimento neurológico/ocular, faringite GAS e outras indicações específicas.",
+    "presentations": [
+      "600.000 U/1 mL",
+      "1.200.000 U/2 mL",
+      "2.400.000 U/4 mL"
+    ],
+    "pediatricDose": "GAS <27 kg 600.000 U IM única; >=27 kg 1,2 milhão U IM única. Sífilis pediátrica/congênita requer protocolo específico.",
+    "hepaticDose": "Sem ajuste hepático rotineiro.",
+    "adverseEffects": "Administração intravascular/intra-arterial inadvertida pode causar necrose, gangrena e morte.",
+    "contraindications": "Alergia grave a penicilinas; não usar para neurosífilis/meningite.",
+    "interactions": "Probenecida pode alterar depuração; revisar anticoagulantes.",
+    "monitoring": "Observar anafilaxia; em sífilis, resposta sorológica; garantir técnica IM.",
+    "administration": "EXCLUSIVAMENTE IM profunda. NUNCA IV ou intra-arterial.",
+    "preparation": "Suspensão viscosa pré-cheia; administrar com técnica IM profunda.",
+    "infusionProtocol": "Não aplicável; infusão IV é contraindicada e potencialmente fatal.",
+    "pregnancy": "Tratamento de escolha para sífilis na gestação.",
+    "lactation": "Compatível quando indicada.",
+    "specialPopulations": "Neurosífilis/ocular/ótica requer penicilina G aquosa IV, não benzatina.",
+    "patientEducation": "Explicar que é exclusivamente IM profunda e procurar urgência diante de reação grave.",
+    "clinicalPearls": "Benzatina não trata neurosífilis, meningite ou sepse; sua baixa concentração sustentada serve apenas a indicações específicas e exige via IM profunda.",
+    "guidelineRecommendations": "CDC mantém 2,4 milhões U IM única na sífilis precoce e semanal x3 na latente tardia.",
+    "safetyFlags": [
+      "IM profunda SOMENTE",
+      "Fatal se outra via",
+      "Sífilis gestacional: escolha",
+      "Não neurosífilis",
+      "Jarisch-Herxheimer"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16&version=35",
+      "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm",
+      "https://www.cdc.gov/std/treatment-guidelines/primary-and-secondary-syphilis.htm"
+    ]
   },
   "es": {
-    "name": "Penicilina Benzatínica",
-    "class": "Penicilina de acción prolongada",
-    "commercialNames": {
-      "br": [
-        "Benzetacil",
-        "Penicilina Benzatina Teuto"
-      ],
-      "ar": [
-        "Benzetacil",
-        "Penicilina Benzatínica Richet"
-      ]
-    },
-    "presentation": [
-      "Suspensión IM 600.000 UI/dosis",
-      "Suspensión IM 1.200.000 UI/dosis",
-      "Suspensión IM 2.400.000 UI/dosis"
+    "name": "Penicilina G benzatina",
+    "class": "Penicilina natural de depósito",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "sifilisPrecoce": "2,4 millones UI IM dosis única",
-      "sifilisLateLatente": "2,4 millones UI IM 1×/semana durante 3 semanas",
-      "pediatrica": "2.40 millones UI IM dosis única"
-    },
+    "presentation": "Jeringa precargada IM profunda.",
+    "dose": "Sífilis precoz 2,4 millones U IM única; latente tardía/desconocida 2,4 millones U IM semanal x3; GAS adulto 1,2 millón U única.",
     "doseKg": {
       "standard": "25.000–50.000 UI/kg",
       "maxDose": "2,4 millones UI"
@@ -141,84 +105,78 @@
     "dilution": "Administración exclusivamente IM profunda — NUNCA EV.",
     "speed": "IM profunda en glúteo. Aspirar antes de inyectar.",
     "commonAdverseEffects": [
-      "Dolor local en el sitio de inyección",
-      "Reacción de Jarisch-Herxheimer (primeras 24h)"
+      "Dolor local",
+      "Rash",
+      "Fiebre",
+      "Náuseas"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Síndrome de Hoigné (inyección IV accidental)",
-      "Embolia con inyección IV accidental"
+      "Isquemia/gangrena por inyección vascular",
+      "Lesión neurovascular",
+      "Jarisch-Herxheimer"
     ],
     "risksByPatient": [],
     "alerts": [
-      "NUNCA administrar por vía endovenosa.",
-      "Indicada para sífilis, faringitis estreptocócica y profilaxis de fiebre reumática."
+      "2,4 millones U IM precoz",
+      "2,4 millones U semanal x3 tardía",
+      "GAS <27 kg: 600.000 U",
+      ">=27 kg: 1,2 millón U",
+      "NUNCA IV/intraarterial"
     ],
-    "ref": "CDC STI Treatment Guidelines 2021 / Sanford Guide 2025 / MS Brasil",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "Administración exclusivamente IM profunda."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": {
-          "dose": "25.000–50.000 UI/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2,4 milhões UI",
-          "unidade": "UI/kg"
-        },
-        "obs": "No requiere dosis suplementaria post-hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16&version=35",
+      "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm",
+      "https://www.cdc.gov/std/treatment-guidelines/primary-and-secondary-syphilis.htm"
+    ],
+    "renalDose": "Sin ajuste estándar en dosis única habitual.",
+    "pharmacologicClass": "Penicilina G benzatina de liberación prolongada IM",
+    "mechanism": "Libera penicilina G lentamente; se une a PBPs e inhibe pared.",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; concentraciones bajas/prolongadas.",
+    "pharmacokinetics": "Absorción IM lenta durante días-semanas; no alcanza exposición para neurosífilis/meningitis.",
+    "indications": "Sífilis sin compromiso neuro/ocular, faringitis GAS y otras indicaciones específicas.",
+    "presentations": [
+      "600.000 U/1 mL",
+      "1.200.000 U/2 mL",
+      "2.400.000 U/4 mL"
+    ],
+    "pediatricDose": "GAS <27 kg 600.000 U IM; >=27 kg 1,2 millón U IM. Sífilis pediátrica/congénita: protocolo específico.",
+    "hepaticDose": "Sin ajuste hepático rutinario.",
+    "adverseEffects": "Administración intravascular/intraarterial inadvertida puede causar necrosis, gangrena y muerte.",
+    "contraindications": "Alergia grave a penicilinas; no usar en neurosífilis/meningitis.",
+    "interactions": "Probenecid puede modificar depuración; revisar anticoagulantes.",
+    "monitoring": "Observar anafilaxia; respuesta serológica en sífilis; técnica IM.",
+    "administration": "EXCLUSIVAMENTE IM profunda. NUNCA IV/intraarterial.",
+    "preparation": "Suspensión viscosa; técnica IM profunda.",
+    "infusionProtocol": "No aplicable; IV contraindicada y potencialmente fatal.",
+    "pregnancy": "Tratamiento de elección en sífilis gestacional.",
+    "lactation": "Compatible cuando indicada.",
+    "specialPopulations": "Neurosífilis/ocular/ótica requiere penicilina G acuosa IV.",
+    "patientEducation": "Explicar vía IM exclusiva.",
+    "clinicalPearls": "Benzatina no trata neurosífilis, meningitis ni sepsis; su exposición baja y prolongada sirve solo para indicaciones específicas y siempre por IM profunda.",
+    "guidelineRecommendations": "CDC mantiene 2,4 millones U IM única para sífilis precoz y 2,4 millones U IM semanal por 3 dosis para sífilis latente tardía o de duración desconocida.",
+    "safetyFlags": [
+      "SOLO IM profunda",
+      "Fatal por otra vía",
+      "Sífilis gestacional: elección",
+      "No neurosífilis",
+      "Jarisch-Herxheimer"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16&version=35",
+      "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm",
+      "https://www.cdc.gov/std/treatment-guidelines/primary-and-secondary-syphilis.htm"
+    ]
   },
   "name": {
-    "pt": "Penicilina Benzatina",
-    "es": "Penicilina Benzatínica"
+    "pt": "Penicilina G benzatina",
+    "es": "Penicilina G benzatina"
   },
   "keywords": [
     "penicilina_benzatina",
@@ -229,8 +187,8 @@
     "penicilina benzatinica richet",
     "penicilina de acao prolongada"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-4a2f17e52faa0b7f",
+  "clinicalContentSha256": "4a2f17e52faa0b7f2a2798522360957dae6963a3da0eef98baa416949621699b",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

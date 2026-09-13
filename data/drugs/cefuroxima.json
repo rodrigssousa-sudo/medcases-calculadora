@@ -1,34 +1,17 @@
 {
   "id": "cefuroxima",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Cefuroxima",
-    "class": "Cefalosporina de 2ª geração",
-    "commercialNames": {
-      "br": [
-        "Zinnat",
-        "Cefuroxima Sandoz",
-        "Cefuroxima genérica"
-      ],
-      "ar": [
-        "Zinnat",
-        "Cefuroxima Richet",
-        "Cefuroxima genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 250 mg, 500 mg",
-      "Suspensão oral: 250 mg/5 mL",
-      "Frasco-ampola EV/IM: 750 mg, 1,5 g"
+    "class": "Antibiótico beta-lactâmico",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "250–500 mg VO 12/12h",
-      "adultoEV": "750 mg EV/IM 8/8h; infecção grave: 1,5 g EV 8/8h",
-      "pediatricaVO": "500 mg VO 12/12h"
-    },
+    "presentation": "Comprimidos/suspensão de axetil e frascos IV/IM de cefuroxima sódica.",
+    "dose": "VO: 250–500 mg q12h conforme foco. IV/IM: 750 mg–1,5 g q8h; graves 1,5 g q6h; meningite até 3 g q8h.",
     "doseKg": {
       "standardVO": "20–30 mg/kg/dia VO dividido 12/12h",
       "standardEV": "50–100 mg/kg/dia EV dividido 8/8h",
@@ -39,158 +22,78 @@
     "speed": "VO: administrar preferencialmente após alimento. EV: infundir em aproximadamente 30 minutos.",
     "commonAdverseEffects": [
       "Diarreia",
-      "Náuseas",
-      "Dor abdominal",
-      "Rash cutâneo"
+      "Náusea",
+      "Rash",
+      "Reação no local de administração"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Colite por Clostridioides difficile",
-      "Síndrome de Stevens-Johnson",
-      "Convulsões em insuficiência renal sem ajuste"
+      "SCAR/SJS-TEN",
+      "C. difficile",
+      "Citopenias",
+      "Neurotoxicidade/convulsões em exposição excessiva"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Útil para infecções respiratórias, otite, sinusite e algumas infecções urinárias conforme sensibilidade.",
-      "Não cobre MRSA, Enterococcus nem Pseudomonas.",
-      "A formulação oral tem melhor absorção quando administrada após alimento."
+      "Comprimido e suspensão oral não são bioequivalentes mg por mg",
+      "Não cobre Pseudomonas",
+      "Ajustar na DRC"
     ],
-    "ref": "Goodman & Gilman / Sanford Guide / Lexicomp-style dosing references",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg–1,5 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "20–30 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,5 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,5 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Redução da frequência devido à depuração renal reduzida."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obrigatório."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "250 mg",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "750 mg",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "750 mg",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar acúmulo e neurotoxicidade."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=135e2dfc-eb47-4d04-a903-a081d36c267e",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76cec54f-d167-4298-951b-5411a3c47f4a"
+    ],
+    "renalDose": "VO: CrCl 10–<30, dose padrão q24h; <10, q48h; HD, dose extra pós-HD. IV: >20, 750 mg–1,5 g q8h; 10–20, 750 mg q12h; <10, 750 mg q24h + dose pós-HD.",
+    "pharmacologicClass": "Cefalosporina de 2ª geração; axetil oral / sódica parenteral",
+    "mechanism": "Liga PBPs e inibe síntese da parede bacteriana.",
+    "pharmacodynamics": "Bactericida tempo-dependente (fT>MIC).",
+    "pharmacokinetics": "Axetil é pró-fármaco oral; cefuroxima sódica é IV/IM. Eliminação renal predominante e dialisável.",
+    "indications": "Infecções respiratórias, pele, urinárias e outras por suscetíveis; forma parenteral para quadros moderados/graves e profilaxia cirúrgica.",
+    "presentations": [
+      "250 mg e 500 mg VO",
+      "Suspensão oral",
+      "750 mg e 1,5 g IV/IM"
+    ],
+    "pediatricDose": "≥3 meses. Cefuroxima axetil suspensão VO: faringite/amigdalite 20 mg/kg/dia divididos q12h (máx 500 mg/dia) por 10 dias; otite média aguda, sinusite maxilar bacteriana e impetigo 30 mg/kg/dia divididos q12h (máx 1.000 mg/dia) por 10 dias. Crianças <13 anos que conseguem engolir comprimidos: 250 mg VO q12h por 10 dias para otite média aguda ou sinusite maxilar bacteriana. Cefuroxima sódica IV/IM >3 meses: 50–100 mg/kg/dia divididos q6–8h; usar 100 mg/kg/dia nas infecções mais graves; osso/articulação 150 mg/kg/dia q8h; meningite bacteriana 200–240 mg/kg/dia IV q6–8h, sem exceder a dose máxima adulta. Axetil oral e cefuroxima sódica parenteral não são intercambiáveis mg por mg.",
+    "hepaticDose": "Sem ajuste hepático rotineiro específico.",
+    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+    "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+    "administration": "Axetil oral: comprimidos com ou sem alimento; suspensão e comprimidos não são bioequivalentes mg por mg. Parenteral: IV/IM.",
+    "preparation": "Não intercambiar comprimido e suspensão mg por mg; reconstituir forma parenteral com diluente compatível.",
+    "infusionProtocol": "Parenteral: infusão intermitente padrão; em críticos considerar individualização PK/PD conforme estabilidade.",
+    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "DRC exige ajuste; idosos exigem revisão renal; formulações oral e parenteral não são intercambiáveis dose a dose.",
+    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+    "clinicalPearls": "Cobre estreptococos, MSSA e alguns Gram-negativos respiratórios; não cobre MRSA, Enterococcus ou Pseudomonas.",
+    "guidelineRecommendations": "Stewardship: escolher via/espectro conforme foco e revisar função renal e exposição beta-lactâmica no paciente agudo.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal",
+      "Neurotoxicidade por acúmulo"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=135e2dfc-eb47-4d04-a903-a081d36c267e",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76cec54f-d167-4298-951b-5411a3c47f4a"
+    ]
   },
   "es": {
     "name": "Cefuroxima",
-    "class": "Cefalosporina de 2ª generación",
-    "commercialNames": {
-      "br": [
-        "Zinnat",
-        "Cefuroxima Sandoz",
-        "Cefuroxima genérica"
-      ],
-      "ar": [
-        "Zinnat",
-        "Cefuroxima Richet",
-        "Cefuroxima genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 250 mg, 500 mg",
-      "Suspensión oral: 250 mg/5 mL",
-      "Frasco ampolla EV/IM: 750 mg, 1,5 g"
+    "class": "Antibiótico betalactámico",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "250–500 mg VO cada 12h",
-      "adultoEV": "750 mg EV/IM cada 8h; infección grave: 1,5 g EV cada 8h",
-      "pediatricaVO": "500 mg VO cada 12h"
-    },
+    "presentation": "Comprimidos/suspensión de axetilo y viales IV/IM de cefuroxima sódica.",
+    "dose": "VO: 250–500 mg q12h según foco. IV/IM: 750 mg–1,5 g q8h; graves 1,5 g q6h; meningitis hasta 3 g q8h.",
     "doseKg": {
       "standardVO": "20–30 mg/kg/día VO dividido cada 12h",
       "standardEV": "50–100 mg/kg/día EV dividido cada 8h",
@@ -202,131 +105,68 @@
     "commonAdverseEffects": [
       "Diarrea",
       "Náuseas",
-      "Dolor abdominal",
-      "Exantema cutáneo"
+      "Exantema",
+      "Reacción en el sitio de administración"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Colitis por Clostridioides difficile",
-      "Síndrome de Stevens-Johnson",
-      "Convulsiones en insuficiencia renal sin ajuste"
+      "SCAR/SJS-TEN",
+      "C. difficile",
+      "Citopenias",
+      "Neurotoxicidad/convulsiones por exposición excesiva"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Útil para infecciones respiratorias, otitis, sinusitis y algunas infecciones urinarias según sensibilidad.",
-      "No cubre MRSA, Enterococcus ni Pseudomonas.",
-      "La formulación oral tiene mejor absorción cuando se administra después de comida."
+      "Comprimido y suspensión oral no son bioequivalentes mg por mg",
+      "No cubre Pseudomonas",
+      "Ajustar en ERC"
     ],
-    "ref": "Goodman & Gilman / Sanford Guide / Lexicomp-style dosing references",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg–1,5 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "20–30 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,5 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,5 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducción de la frecuencia debido a la disminución del aclaramiento renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obligatorio."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "250 mg",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "750 mg",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "750 mg",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar acumulación y neurotoxicidad."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "250 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=135e2dfc-eb47-4d04-a903-a081d36c267e",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76cec54f-d167-4298-951b-5411a3c47f4a"
+    ],
+    "renalDose": "VO: ClCr 10–<30, dosis estándar q24h; <10, q48h; HD, dosis extra pos-HD. IV: >20, 750 mg–1,5 g q8h; 10–20, 750 mg q12h; <10, 750 mg q24h + dosis pos-HD.",
+    "pharmacologicClass": "Cefalosporina de 2ª generación; axetilo oral / sódica parenteral",
+    "mechanism": "Se une a PBP e inhibe síntesis de pared bacteriana.",
+    "pharmacodynamics": "Bactericida dependiente del tiempo (fT>MIC).",
+    "pharmacokinetics": "Axetilo es profármaco oral; cefuroxima sódica es IV/IM. Eliminación renal predominante y dializable.",
+    "indications": "Infecciones respiratorias, piel, urinarias y otras por susceptibles; forma parenteral para cuadros moderados/graves y profilaxis quirúrgica.",
+    "presentations": [
+      "250 mg y 500 mg VO",
+      "Suspensión oral",
+      "750 mg y 1,5 g IV/IM"
+    ],
+    "pediatricDose": "≥3 meses. Cefuroxima axetilo suspensión VO: faringitis/amigdalitis 20 mg/kg/día divididos q12h (máx 500 mg/día) por 10 días; otitis media aguda, sinusitis maxilar bacteriana e impétigo 30 mg/kg/día divididos q12h (máx 1.000 mg/día) por 10 días. Niños <13 años que pueden tragar comprimidos enteros: 250 mg VO q12h por 10 días para otitis media aguda o sinusitis maxilar bacteriana. Cefuroxima sódica IV/IM >3 meses: 50–100 mg/kg/día divididos q6–8h; usar 100 mg/kg/día en infecciones más graves; hueso/articulación 150 mg/kg/día q8h; meningitis bacteriana 200–240 mg/kg/día IV q6–8h, sin exceder la dosis máxima adulta. El axetilo oral y la cefuroxima sódica parenteral no son intercambiables mg por mg.",
+    "hepaticDose": "Sin ajuste hepático rutinario específico.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+    "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+    "administration": "Axetilo oral: comprimidos con o sin alimentos; suspensión y comprimidos no son bioequivalentes mg por mg. Parenteral: IV/IM.",
+    "preparation": "No intercambiar comprimido y suspensión mg por mg; reconstituir forma parenteral con diluyente compatible.",
+    "infusionProtocol": "Parenteral: infusión intermitente estándar; en críticos considerar individualización PK/PD según estabilidad.",
+    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+    "specialPopulations": "ERC requiere ajuste; ancianos requieren revisión renal; formulaciones oral y parenteral no son intercambiables dosis a dosis.",
+    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+    "clinicalPearls": "Cubre estreptococos, MSSA y algunos Gram negativos respiratorios; no cubre MRSA, Enterococcus ni Pseudomonas.",
+    "guidelineRecommendations": "Stewardship: elegir vía/espectro según foco y revisar función renal/exposición betalactámica en paciente agudo.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal",
+      "Neurotoxicidad por acumulación"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=135e2dfc-eb47-4d04-a903-a081d36c267e",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76cec54f-d167-4298-951b-5411a3c47f4a"
+    ]
   },
   "name": {
     "pt": "Cefuroxima",
@@ -340,8 +180,8 @@
     "cefuroxima richet",
     "cefalosporina de 2ª geracao"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-3df93cda7246635d",
+  "clinicalContentSha256": "3df93cda7246635d219469a585e883748d4f5a1732385ffefa17671c7c3ee594",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

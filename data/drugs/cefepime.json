@@ -1,34 +1,17 @@
 {
   "id": "cefepime",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Cefepime",
-    "class": "Cefalosporina de 4ª geração",
-    "commercialNames": {
-      "br": [
-        "Maxcef",
-        "Cefepime ABL",
-        "Cefepime Eurofarma"
-      ],
-      "ar": [
-        "Maxipime",
-        "Cefepime Richet",
-        "Cefepime Klonal"
-      ]
-    },
-    "presentation": [
-      "Frasco-ampola 500 mg",
-      "Frasco-ampola 1 g",
-      "Frasco-ampola 2 g"
+    "class": "Cefalosporina antipseudomonal de 4ª geração",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "2 g EV 8/8h",
-      "neutropeniaFebril": "2 g EV 8/8h",
-      "pediatrica": "2000 mg EV 8/8h"
-    },
+    "presentation": "Pó ou solução IV/IM.",
+    "dose": "Adulto 1–2 g q8–12h conforme foco; Pseudomonas grave/neutropenia febril tipicamente 2 g IV q8h com renal normal.",
     "doseKg": {
       "standard": "50 mg/kg por dose",
       "maxDose": "6 g/dia"
@@ -37,106 +20,35 @@
     "dilution": "Diluir em SF 0,9% ou SG5%.",
     "speed": "Infundir em aproximadamente 30 minutos.",
     "commonAdverseEffects": [
-      "Diarreia",
+      "Reação local",
       "Rash",
-      "Náuseas"
+      "Diarreia",
+      "Náusea"
     ],
     "dangerousAdverseEffects": [
-      "Neurotoxicidade",
-      "Encefalopatia",
-      "Convulsões",
-      "Anafilaxia"
+      "Neurotoxicidade/encefalopatia",
+      "Mioclonias",
+      "Convulsões/status não convulsivo",
+      "Anafilaxia",
+      "C. difficile"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Monitorar estado mental em pacientes renais.",
-      "Cobertura para Pseudomonas aeruginosa."
+      "Grave/Pseudomonas 2 g q8h",
+      "Pediatria 50 mg/kg/dose",
+      "CrCl <=60 ajustar",
+      "Confusão/mioclonia alerta",
+      "HD: após sessão"
     ],
-    "ref": "Sanford Guide 2025 / IDSA HAP-VAP / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para infecções graves, neutropenia febril e Pseudomonas aeruginosa."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reduzir frequência para evitar acúmulo do fármaco."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Aumenta significativamente o risco de neurotoxicidade se não houver ajuste."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar encefalopatia, mioclonias e convulsões associadas ao acúmulo."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise. O cefepime é significativamente removido pela HD."
-      }
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be5f8ca6-7232-423a-a2d5-cccb7abe7921",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefepime"
+    ],
+    "renalDose": "Ajustar obrigatoriamente se CrCl <=60 mL/min; HD remove cefepime e a dose deve ser dada após HD nos dias de diálise.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "Tempo acima da MIC (T>MIC) ≥ 60–70% do intervalo para infecções graves; considerar infusão estendida (3h) para atingir T>MIC > 90%.",
@@ -164,33 +76,56 @@
       "risk": "none",
       "monitoring": "Sem risco clinicamente significativo de prolongamento do QT. ECG não requerido rotineiramente.",
       "contraindications": []
-    }
+    },
+    "pharmacologicClass": "Cefalosporina IV/IM antipseudomonal",
+    "mechanism": "Liga PBPs e inibe parede; maior estabilidade a AmpC que várias cefalosporinas anteriores.",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Infusão prolongada pode otimizar exposição.",
+    "pharmacokinetics": "Eliminação predominantemente renal inalterada; meia-vida aumenta muito quando CrCl cai.",
+    "indications": "Pneumonia, neutropenia febril, UTI, pele, intra-abdominal combinada e outras infecções graves por Gram-negativos/Pseudomonas.",
+    "presentations": [
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "2 meses–16 anos <=40 kg: 50 mg/kg/dose; q12h em várias infecções e q8h em neutropenia febril; máximo dose adulta.",
+    "hepaticDose": "Sem ajuste hepático rotineiro se função renal adequada.",
+    "adverseEffects": "Neurotoxicidade ocorre sobretudo em DRC/dose não ajustada, mas também pode ocorrer apesar de ajuste.",
+    "contraindications": "Hipersensibilidade imediata grave a cefepime/cefalosporinas.",
+    "interactions": "Nefrotóxicos podem piorar função renal e aumentar exposição indiretamente.",
+    "monitoring": "CrCl frequente, estado mental/mioclonias, culturas e resposta.",
+    "administration": "IV ou IM; em grave preferir IV.",
+    "preparation": "Reconstituir/diluir conforme produto.",
+    "infusionProtocol": "Padrão IV ~30 min; IDSA usa altas doses/infusão prolongada em Pseudomonas selecionado.",
+    "pregnancy": "Usar quando indicada.",
+    "lactation": "Baixa excreção no leite.",
+    "specialPopulations": "Idosos/DRC são o grupo clássico de encefalopatia por cefepime.",
+    "patientEducation": "Relatar confusão, sonolência intensa, tremores/mioclonias ou convulsões.",
+    "clinicalPearls": "Alteração mental em DRC sob cefepime deve levantar neurotoxicidade por acúmulo.",
+    "guidelineRecommendations": "IDSA 2026 favorece cefepime alta dose/prolongada em alguns Pseudomonas suscetíveis com resistência a carbapenem.",
+    "safetyFlags": [
+      "Neurotoxicidade",
+      "CrCl <=60 ajustar",
+      "Pseudomonas",
+      "Infusão prolongada selecionada",
+      "HD remove"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be5f8ca6-7232-423a-a2d5-cccb7abe7921",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefepime"
+    ]
   },
   "es": {
     "name": "Cefepime",
-    "class": "Cefalosporina de 4ª generación",
-    "commercialNames": {
-      "br": [
-        "Maxcef",
-        "Cefepime ABL",
-        "Cefepime Eurofarma"
-      ],
-      "ar": [
-        "Maxipime",
-        "Cefepime Richet",
-        "Cefepime Klonal"
-      ]
-    },
-    "presentation": [
-      "Frasco ampolla 500 mg",
-      "Frasco ampolla 1 g",
-      "Frasco ampolla 2 g"
+    "class": "Cefalosporina antipseudomónica de 4ª generación",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "2 g EV cada 8h",
-      "neutropeniaFebril": "2 g EV cada 8h",
-      "pediatrica": "2000 mg EV cada 8h"
-    },
+    "presentation": "Polvo/solución IV/IM.",
+    "dose": "Adulto 1–2 g q8–12h; Pseudomonas grave/neutropenia típicamente 2 g IV q8h con renal normal.",
     "doseKg": {
       "standard": "50 mg/kg por dosis",
       "maxDose": "6 g/día"
@@ -199,106 +134,35 @@
     "dilution": "Diluir en SF 0,9% o SG5%.",
     "speed": "Infundir en aproximadamente 30 minutos.",
     "commonAdverseEffects": [
+      "Reacción local",
+      "Rash",
       "Diarrea",
-      "Exantema",
       "Náuseas"
     ],
     "dangerousAdverseEffects": [
-      "Neurotoxicidad",
-      "Encefalopatía",
-      "Convulsiones",
-      "Anafilaxia"
+      "Neurotoxicidad/encefalopatía",
+      "Mioclonías",
+      "Convulsiones/status no convulsivo",
+      "Anafilaxia",
+      "C. difficile"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Monitorar estado mental en pacientes renales.",
-      "Cobertura para Pseudomonas aeruginosa."
+      "Grave/Pseudomonas 2 g q8h",
+      "Pediatría 50 mg/kg/dosis",
+      "ClCr <=60 ajustar",
+      "Confusión/mioclonía alerta",
+      "HD: tras sesión"
     ],
-    "ref": "Sanford Guide 2025 / IDSA HAP-VAP / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para infecciones graves, neutropenia febril y Pseudomonas aeruginosa."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducir frecuencia para evitar acumulación del fármaco."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Aumenta significativamente el riesgo de neurotoxicidad si no se ajusta."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar encefalopatía, mioclonías y convulsiones asociadas a la acumulación."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis. El cefepime es significativamente removido por HD."
-      }
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be5f8ca6-7232-423a-a2d5-cccb7abe7921",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefepime"
+    ],
+    "renalDose": "Ajustar si ClCr <=60; HD elimina y dosificar tras HD.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "Tiempo sobre la MIC (T>MIC) ≥ 60–70% del intervalo para infecciones graves; considerar infusión extendida (3h) para lograr T>MIC > 90%.",
@@ -326,7 +190,47 @@
       "risk": "none",
       "monitoring": "Sin riesgo clínicamente significativo de prolongamiento del QT. ECG no requerido de forma rutinaria.",
       "contraindications": []
-    }
+    },
+    "pharmacologicClass": "Cefalosporina IV/IM antipseudomónica",
+    "mechanism": "Se une a PBPs e inhibe pared; mayor estabilidad frente a AmpC.",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC; prolongada puede optimizar exposición.",
+    "pharmacokinetics": "Eliminación renal; semivida aumenta con caída de ClCr.",
+    "indications": "Neumonía, neutropenia febril, UTI, piel, intraabdominal combinada y otras graves por Gram negativos/Pseudomonas.",
+    "presentations": [
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "2 meses–16 años <=40 kg: 50 mg/kg/dosis; q12h o q8h según foco; máximo adulto.",
+    "hepaticDose": "Sin ajuste hepático si renal adecuada.",
+    "adverseEffects": "Neurotoxicidad sobre todo en ERC/dosis no ajustada, aunque puede aparecer con ajuste.",
+    "contraindications": "Hipersensibilidad inmediata grave.",
+    "interactions": "Nefrotóxicos pueden empeorar función renal.",
+    "monitoring": "ClCr, estado mental/mioclonías, cultivos y respuesta.",
+    "administration": "IV o IM; grave preferir IV.",
+    "preparation": "Reconstituir/diluir según producto.",
+    "infusionProtocol": "Estándar ~30 min; IDSA usa alta dosis/prolongada en Pseudomonas selecto.",
+    "pregnancy": "Usar cuando indicada.",
+    "lactation": "Baja excreción.",
+    "specialPopulations": "Ancianos/ERC: mayor riesgo de encefalopatía.",
+    "patientEducation": "Informar confusión, somnolencia, mioclonías o convulsiones.",
+    "clinicalPearls": "Alteración mental en ERC bajo cefepime debe sugerir neurotoxicidad.",
+    "guidelineRecommendations": "IDSA 2026 favorece alta dosis/prolongada en algunos Pseudomonas susceptibles.",
+    "safetyFlags": [
+      "Neurotoxicidad",
+      "ClCr <=60 ajustar",
+      "Pseudomonas",
+      "Prolongada selecta",
+      "HD elimina"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be5f8ca6-7232-423a-a2d5-cccb7abe7921",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefepime"
+    ]
   },
   "name": {
     "pt": "Cefepime",
@@ -342,8 +246,8 @@
     "cefepime klonal",
     "cefalosporina de 4ª geracao"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-4a2f17e52faa0b7f",
+  "clinicalContentSha256": "4a2f17e52faa0b7f2a2798522360957dae6963a3da0eef98baa416949621699b",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

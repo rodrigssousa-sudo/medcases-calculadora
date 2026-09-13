@@ -1,34 +1,21 @@
 {
   "id": "cefpodoxima",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(6,182,212,0.15)",
   "colorTxt": "#06B6D4",
   "pt": {
-    "name": "Cefpodoxima",
-    "class": "Cefalosporina de 3ª geração (oral)",
-    "commercialNames": {
-      "br": [
-        "Orelox",
-        "Cefpodoxima Genérica"
-      ],
-      "ar": [
-        "Orelox",
-        "Cefpodoxima Genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos revestidos: 100 mg, 200 mg",
-      "Suspensão oral: 40 mg/5 mL; 100 mg/5 mL"
+    "name": "Cefpodoxima proxetila",
+    "class": "Cefalosporina oral de 3ª geração",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "200 mg VO 12/12h",
-      "pediatrica": "350 mg VO 12/12h (5 mg/kg/dose)"
-    },
+    "presentation": "Comprimidos e suspensão oral.",
+    "dose": "Adulto: 100–200 mg VO q12h conforme indicação; vários focos usam 200 mg q12h. Duração depende do foco.",
     "doseKg": {
       "pediatrica": "5 mg/kg/dose VO 12/12h (máx 200 mg/dose)"
     },
-    "mechanism": "Pró-fármaco do cefpodoxima proxetil; após absorção, hidrolisado a cefpodoxima ativa. Liga-se às PBPs, inibindo síntese da parede celular. Estável a várias beta-lactamases.",
+    "mechanism": "Após conversão ao metabólito ativo, liga-se a PBPs e inibe síntese da parede bacteriana.",
     "onset": "Absorção oral moderada — biodisponibilidade ~40–50% (aumenta com alimento); Tmáx 2–3 h.",
     "halfLife": "Meia-vida 2–3 h. Eliminação renal ~29–33% inalterada.",
     "therapeuticRange": "Tempo acima da CIM (T>CIM) como parâmetro PK/PD. Tomar com alimento.",
@@ -36,136 +23,86 @@
     "speed": "Não aplicável (uso oral).",
     "commonAdverseEffects": [
       "Diarreia",
-      "Náuseas",
+      "Náusea",
       "Dor abdominal",
-      "Rash cutâneo",
-      "Vaginite (em mulheres)"
+      "Cefaleia"
     ],
     "dangerousAdverseEffects": [
-      "Anafilaxia / hipersensibilidade grave",
-      "Colite por C. difficile",
-      "Síndrome de Stevens-Johnson (muito raro)"
+      "Anafilaxia",
+      "C. difficile",
+      "SCAR",
+      "Convulsões por acúmulo renal"
     ],
-    "contraindications": [
-      "Hipersensibilidade a cefalosporinas ou penicilinas"
-    ],
+    "contraindications": "Hipersensibilidade grave a cefalosporinas.",
     "risksByPatient": [],
     "alerts": [
-      "Tomar com alimento para aumentar biodisponibilidade.",
-      "Requer ajuste em ClCr < 30 mL/min (estender intervalo para 24h).",
-      "Útil para step-down oral após cefalosporinas EV em infecções respiratórias e ITU."
+      "Adulto 100–200 mg q12h",
+      "Pediatria 10 mg/kg/dia",
+      "CrCl <30: q24h",
+      "HD: 3x/semana após sessão",
+      "Comprimido com alimento"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "200 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "200 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Sem ajuste significativo até ClCr 30 mL/min."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "200 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "5 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Estender intervalo para 24 horas."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "100–200 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "2,5–5 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar sinais de neurotoxicidade."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "100–200 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "2,5–5 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4587a7c1-cd6c-4946-a0dd-fcfe0c8504b9",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=59d848e9-de7a-669b-e063-6394a90a2b35",
+      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=59d848e9-de7a-669b-e063-6394a90a2b35&type=display",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "renalDose": "CrCl <30 mL/min: aumentar intervalo para q24h. Hemodiálise: administrar 3 vezes por semana após HD.",
+    "pharmacologicClass": "Pró-fármaco oral convertido em cefpodoxima ativa",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. É opção oral e não substitui terapia IV em infecção grave.",
+    "pharmacokinetics": "Pró-fármaco oral; alimento aumenta AUC/Cmax dos comprimidos. Eliminação renal do fármaco ativo; cerca de 23% pode ser removido em 3 h de HD.",
+    "indications": "Faringite/tonsilite, sinusite, otite pediátrica, algumas infecções respiratórias, pele e UTI não complicada por organismos suscetíveis.",
+    "presentations": [
+      "100 mg",
+      "200 mg",
+      "50 mg/5 mL",
+      "100 mg/5 mL conforme produto"
+    ],
+    "pediatricDose": "2 meses–12 anos: 10 mg/kg/dia, geralmente 5 mg/kg q12h. Máximo varia por indicação: 200–400 mg/dia conforme foco.",
+    "hepaticDose": "Sem ajuste rotineiro em cirrose leve/moderada conforme dados disponíveis.",
+    "adverseEffects": "Diarreia e eventos GI são comuns; DRC prolonga meia-vida.",
+    "interactions": "Antiácidos/H2 podem reduzir absorção em algumas formulações; probenecida pode aumentar exposição.",
+    "monitoring": "CrCl, resposta/culturas e sinais de C. difficile.",
+    "administration": "Comprimidos devem ser tomados com alimento para aumentar absorção; suspensão pode ser administrada sem relação com alimento.",
+    "preparation": "Reconstituir suspensão conforme fabricante, agitar e armazenar segundo rótulo.",
+    "infusionProtocol": "Não aplicável; cefpodoxima é oral.",
+    "pregnancy": "Usar quando indicada.",
+    "lactation": "Pode passar ao leite em pequena quantidade; observar lactente.",
+    "specialPopulations": "DRC grave exige q24h; HD exige esquema pós-sessão. Pediatria abaixo de 2 meses não estabelecida.",
+    "patientEducation": "Tomar comprimido com alimento e completar o tratamento; não reutilizar suspensão sem respeitar validade após reconstituição.",
+    "clinicalPearls": "Cefpodoxima é útil como opção oral em focos selecionados, mas o detalhe prático é que comprimido se beneficia de alimento e CrCl <30 muda o intervalo para q24h.",
+    "guidelineRecommendations": "Usar apenas para focos suscetíveis e quando via oral for adequada; para organismos AMR/ESBL seguir diretrizes atuais em vez de presumir cobertura pela geração da cefalosporina.",
+    "safetyFlags": [
+      "Oral",
+      "Comprimido com alimento",
+      "CrCl <30: q24h",
+      "HD 3x/semana após sessão",
+      "Pediatria 10 mg/kg/dia"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4587a7c1-cd6c-4946-a0dd-fcfe0c8504b9",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=59d848e9-de7a-669b-e063-6394a90a2b35",
+      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=59d848e9-de7a-669b-e063-6394a90a2b35&type=display",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "es": {
-    "name": "Cefpodoxima",
-    "class": "Cefalosporina de 3ª generación (oral)",
-    "commercialNames": {
-      "br": [
-        "Orelox",
-        "Cefpodoxima Genérica"
-      ],
-      "ar": [
-        "Orelox",
-        "Cefpodoxima Genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos recubiertos: 100 mg, 200 mg",
-      "Suspensión oral: 40 mg/5 mL; 100 mg/5 mL"
+    "name": "Cefpodoxima proxetilo",
+    "class": "Cefalosporina oral de 3ª generación",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "200 mg VO 12/12h",
-      "pediatrica": "350 mg VO cada 12h (5 mg/kg/dosis)"
-    },
+    "presentation": "Comprimidos y suspensión oral.",
+    "dose": "Adulto: 100–200 mg VO q12h según indicación; varios focos usan 200 mg q12h.",
     "doseKg": {
       "pediatrica": "5 mg/kg/dosis VO cada 12h (máx 200 mg/dosis)"
     },
-    "mechanism": "Profármaco del cefpodoxima proxetilo; tras absorción, hidrolizado a cefpodoxima activa. Se une a las PBPs, inhibiendo síntesis de pared celular. Estable frente a varias beta-lactamasas.",
+    "mechanism": "Tras conversión al metabolito activo se une a PBPs e inhibe pared bacteriana.",
     "onset": "Absorción oral moderada — biodisponibilidad ~40–50% (aumenta con alimento); Tmáx 2–3 h.",
     "halfLife": "Semivida 2–3 h. Eliminación renal ~29–33% inalterada.",
     "therapeuticRange": "Tiempo sobre la CIM (T>CIM) como parámetro PK/PD. Tomar con alimento.",
@@ -175,112 +112,75 @@
       "Diarrea",
       "Náuseas",
       "Dolor abdominal",
-      "Erupción cutánea",
-      "Vaginitis (en mujeres)"
+      "Cefalea"
     ],
     "dangerousAdverseEffects": [
-      "Anafilaxia / hipersensibilidad grave",
-      "Colitis por C. difficile",
-      "Síndrome de Stevens-Johnson (muy raro)"
+      "Anafilaxia",
+      "C. difficile",
+      "SCAR",
+      "Convulsiones por acumulación"
     ],
-    "contraindications": [
-      "Hipersensibilidad a cefalosporinas o penicilinas"
-    ],
+    "contraindications": "Hipersensibilidad grave a cefalosporinas.",
     "risksByPatient": [],
     "alerts": [
-      "Tomar con alimento para aumentar biodisponibilidad.",
-      "Requiere ajuste en ClCr < 30 mL/min (extender intervalo a 24h).",
-      "Útil para step-down oral tras cefalosporinas EV en infecciones respiratorias e ITU."
+      "Adulto 100–200 mg q12h",
+      "Pediatría 10 mg/kg/día",
+      "ClCr <30: q24h",
+      "HD 3x/semana tras sesión",
+      "Comprimido con comida"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "200 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "200 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "5 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Sin ajuste significativo hasta ClCr 30 mL/min."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "200 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "5 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Extender intervalo a 24 horas."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "100–200 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "2,5–5 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar signos de neurotoxicidad."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "100–200 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "2,5–5 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4587a7c1-cd6c-4946-a0dd-fcfe0c8504b9",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=59d848e9-de7a-669b-e063-6394a90a2b35",
+      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=59d848e9-de7a-669b-e063-6394a90a2b35&type=display",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "renalDose": "ClCr <30: aumentar intervalo a q24h. Hemodiálisis: 3 veces/semana después de HD.",
+    "pharmacologicClass": "Profármaco oral convertido en cefpodoxima activa",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Opción oral, no sustituye terapia IV en infección grave.",
+    "pharmacokinetics": "Profármaco oral; comida aumenta AUC/Cmax de comprimidos. Eliminación renal; ~23% puede eliminarse en 3 h de HD.",
+    "indications": "Faringitis/tonsilitis, sinusitis, otitis pediátrica, algunas infecciones respiratorias, piel y UTI no complicada susceptibles.",
+    "presentations": [
+      "100 mg",
+      "200 mg",
+      "50 mg/5 mL",
+      "100 mg/5 mL según producto"
+    ],
+    "pediatricDose": "2 meses–12 años: 10 mg/kg/día, generalmente 5 mg/kg q12h. Máximo 200–400 mg/día según foco.",
+    "hepaticDose": "Sin ajuste rutinario en cirrosis leve/moderada según datos disponibles.",
+    "adverseEffects": "Diarrea/eventos GI son frecuentes; ERC prolonga semivida.",
+    "interactions": "Antiácidos/H2 pueden reducir absorción en algunas formulaciones; probenecid aumenta exposición.",
+    "monitoring": "ClCr, respuesta/cultivos y C. difficile.",
+    "administration": "Comprimidos con alimentos para mejorar absorción; suspensión sin relación obligatoria con comida.",
+    "preparation": "Reconstituir/agitar y almacenar según ficha.",
+    "infusionProtocol": "No aplicable; oral.",
+    "pregnancy": "Usar cuando indicada.",
+    "lactation": "Pequeña cantidad puede pasar a leche.",
+    "specialPopulations": "ERC grave q24h; HD pos-sesión. <2 meses no establecido.",
+    "patientEducation": "Tomar comprimido con comida y completar tratamiento.",
+    "clinicalPearls": "El detalle práctico es que el comprimido se beneficia de alimento y ClCr <30 cambia intervalo a q24h.",
+    "guidelineRecommendations": "Usar solo en focos susceptibles y vía oral apropiada; en AMR/ESBL seguir guías actuales y no asumir cobertura por la generación.",
+    "safetyFlags": [
+      "Oral",
+      "Comprimido con alimentos",
+      "ClCr <30: q24h",
+      "HD 3x/semana pos-sesión",
+      "Pediatría 10 mg/kg/día"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4587a7c1-cd6c-4946-a0dd-fcfe0c8504b9",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=59d848e9-de7a-669b-e063-6394a90a2b35",
+      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=59d848e9-de7a-669b-e063-6394a90a2b35&type=display",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "name": {
-    "pt": "Cefpodoxima",
-    "es": "Cefpodoxima"
+    "pt": "Cefpodoxima proxetila",
+    "es": "Cefpodoxima proxetilo"
   },
   "keywords": [
     "cefpodoxima",
@@ -288,8 +188,8 @@
     "cefpodoxima generica",
     "cefalosporina de 3ª geracao (oral)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6c4ad52b7b873b7c",
+  "clinicalContentSha256": "6c4ad52b7b873b7ca40f6b0951cd80bf9b4bfc56f4c0d21ead8d00c7218b4d79",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

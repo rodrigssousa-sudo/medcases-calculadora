@@ -1,25 +1,173 @@
 {
   "id": "anfotericina_lipossomal",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Anfotericina B Lipossomal"
+    "name": "Anfotericina B lipossomal",
+    "class": "Antifúngico poliênico lipossomal",
+    "pharmacologicClass": "Anfotericina B encapsulada em lipossomas; ligante de ergosterol",
+    "mechanism": "Entrega lipossomal de anfotericina B, que se liga a ergosterol e forma poros na membrana fúngica.",
+    "pharmacodynamics": "Fungicida para muitos fungos; formulação lipossomal reduz exposição renal livre e nefrotoxicidade relativa, mas NÃO é intercambiável mg/kg com desoxicolato.",
+    "pharmacokinetics": "Distribuição reticuloendotelial/lipossomal distinta da forma convencional; exposição varia com dose e formulação.",
+    "indications": "Terapia empírica em neutropenia febril, micoses sistêmicas, criptococose em cenários selecionados e leishmaniose visceral conforme bula/diretriz.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Pó liofilizado lipossomal IV.",
+    "presentations": [
+      "50 mg por frasco"
+    ],
+    "dose": "Bula: terapia empírica 3 mg/kg/dia; micoses sistêmicas Aspergillus/Candida/Cryptococcus 3–5 mg/kg/dia; meningite criptocócica em HIV 6 mg/kg/dia. Dose depende do foco/diretriz.",
+    "pediatricDose": "Pediatria (bula AmBisome): em pacientes de 1 mês a 16 anos, usar as mesmas doses iniciais por kg indicadas para adultos, sem ajuste pediátrico adicional. Terapia empírica em neutropenia febril: 3 mg/kg/dia EV. Infecções fúngicas sistêmicas por Aspergillus, Candida ou Cryptococcus: 3–5 mg/kg/dia EV. Meningite criptocócica em pacientes com HIV: 6 mg/kg/dia EV. Leishmaniose visceral: imunocompetentes 3 mg/kg/dia nos dias 1–5, 14 e 21; imunocomprometidos 4 mg/kg/dia nos dias 1–5, 10, 17, 24, 31 e 38. Abaixo de 1 mês, segurança e eficácia não estão estabelecidas na bula. AmBisome não é intercambiável nem substituível mg por mg por outras formulações de anfotericina B; individualizar dose e velocidade de infusão conforme indicação e tolerabilidade.",
+    "renalDose": "Sem tabela de redução fixa apenas por DRC; monitorar creatinina/eletrólitos e ajustar estratégia pela toxicidade e indicação.",
+    "hepaticDose": "Insuficiência hepática (AmBisome): não há dados disponíveis que permitam recomendar um ajuste posológico específico. A bula americana informa que o efeito da insuficiência hepática sobre a disposição da anfotericina B após AmBisome é desconhecido; o SmPC informa que não há dados para formular recomendação de dose em pacientes com insuficiência hepática. Portanto, não existe tabela numérica validada de redução ou intervalo: individualizar conforme indicação, resposta e toxicidade, com monitorização regular da função hepática. Não extrapolar ajuste da anfotericina B desoxicolato nem de outras formulações.",
+    "commonAdverseEffects": [
+      "Reação infusional",
+      "Náusea",
+      "Hipocalemia",
+      "Elevação de creatinina"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Nefrotoxicidade",
+      "Hipocalemia grave",
+      "Reações cardiorrespiratórias infusionais"
+    ],
+    "adverseEffects": "É menos nefrotóxica que desoxicolato em estudos comparativos, mas ainda pode causar lesão renal e distúrbios eletrolíticos.",
+    "contraindications": "Hipersensibilidade à formulação, salvo infecção potencialmente fatal sem alternativa.",
+    "interactions": "Nefrotóxicos e depletores de potássio aumentam toxicidade; revisar digoxina/bloqueadores neuromusculares em hipocalemia.",
+    "monitoring": "Creatinina, K, Mg, hemograma, função hepática e reações infusionais.",
+    "administration": "IV exclusivamente. Linha existente deve ser lavada com dextrose 5% antes; se não for possível, usar linha separada.",
+    "preparation": "Reconstituir apenas conforme bula e diluir em dextrose 5%; não usar soluções salinas para diluição.",
+    "infusionProtocol": "Infundir tipicamente em ~2 h; se bem tolerado pode reduzir para ~60 min. Aumentar tempo se houver desconforto.",
+    "pregnancy": "Anfotericina B é opção sistêmica amplamente usada quando antifúngico é necessário na gestação.",
+    "lactation": "Dados limitados; avaliar risco-benefício.",
+    "specialPopulations": "Leishmaniose visceral imunocompetente: 3 mg/kg dias 1–5, 14 e 21. Imunocomprometido: 4 mg/kg dias 1–5, 10,17,24,31,38 na bula.",
+    "patientEducation": "Confirmar sempre a formulação antes da dose: lipossomal não é equivalente à desoxicolato.",
+    "clinicalPearls": "A menor nefrotoxicidade não elimina monitorização. O erro mais perigoso é confundir mg/kg da forma lipossomal com a desoxicolato.",
+    "guidelineRecommendations": "Diretrizes modernas frequentemente preferem anfotericina B lipossomal para micoses invasivas específicas pela relação eficácia/toxicidade; dose e duração são foco-dependentes.",
+    "safetyFlags": [
+      "LIPOSSOMAL",
+      "NÃO intercambiável",
+      "3–5 mg/kg micoses sistêmicas",
+      "Dextrose 5%",
+      "Menor nefrotoxicidade relativa"
+    ],
+    "alerts": [
+      "Empírico 3 mg/kg/dia",
+      "Sistêmicas 3–5 mg/kg/dia",
+      "Criptococo HIV 6 mg/kg/dia",
+      "Infusão ~2 h",
+      "D5W, não salina"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
+      "https://www.cdc.gov/leishmaniasis/hcp/clinical-care/index.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-pediatric-opportunistic-infections/table-3-treatment-full",
+      "https://www.medicines.org.uk/emc/product/1022/smpc"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
+      "https://www.cdc.gov/leishmaniasis/hcp/clinical-care/index.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "es": {
-    "name": "Anfotericina B Liposomal"
+    "name": "Anfotericina B liposomal",
+    "class": "Antifúngico poliénico liposomal",
+    "pharmacologicClass": "Anfotericina B encapsulada en liposomas; ligando de ergosterol",
+    "mechanism": "La formulación liposomal entrega anfotericina B que se une a ergosterol y forma poros.",
+    "pharmacodynamics": "Fungicida; menor nefrotoxicidad relativa que desoxicolato, pero NO intercambiable mg/kg.",
+    "pharmacokinetics": "Distribución liposomal/reticuloendotelial distinta de la forma convencional.",
+    "indications": "Terapia empírica en neutropenia febril, micosis sistémicas, criptococosis seleccionada y leishmaniasis visceral.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Polvo liofilizado liposomal IV.",
+    "presentations": [
+      "50 mg por vial"
+    ],
+    "dose": "Ficha: empírico 3 mg/kg/día; Aspergillus/Candida/Cryptococcus 3–5 mg/kg/día; meningitis criptocócica en VIH 6 mg/kg/día.",
+    "pediatricDose": "Pediatría (ficha técnica de AmBisome): en pacientes de 1 mes a 16 años, usar las mismas dosis iniciales por kg indicadas para adultos, sin ajuste pediátrico adicional. Terapia empírica en neutropenia febril: 3 mg/kg/día IV. Infecciones fúngicas sistémicas por Aspergillus, Candida o Cryptococcus: 3–5 mg/kg/día IV. Meningitis criptocócica en pacientes con VIH: 6 mg/kg/día IV. Leishmaniasis visceral: inmunocompetentes 3 mg/kg/día los días 1–5, 14 y 21; inmunocomprometidos 4 mg/kg/día los días 1–5, 10, 17, 24, 31 y 38. Por debajo de 1 mes, la seguridad y eficacia no están establecidas en la ficha técnica. AmBisome no es intercambiable ni sustituible mg por mg por otras formulaciones de anfotericina B; individualizar dosis y velocidad de infusión según indicación y tolerabilidad.",
+    "renalDose": "Sin tabla fija por ERC; vigilar creatinina/electrolitos y ajustar estrategia por toxicidad.",
+    "hepaticDose": "Insuficiencia hepática (AmBisome): no hay datos disponibles que permitan recomendar un ajuste posológico específico. La ficha estadounidense informa que se desconoce el efecto de la insuficiencia hepática sobre la disposición de anfotericina B después de AmBisome; el SmPC informa que no hay datos para formular una recomendación de dosis en pacientes con insuficiencia hepática. Por lo tanto, no existe una tabla numérica validada de reducción o intervalo: individualizar según indicación, respuesta y toxicidad, con monitorización regular de la función hepática. No extrapolar ajustes de anfotericina B desoxicolato ni de otras formulaciones.",
+    "commonAdverseEffects": [
+      "Reacción infusional",
+      "Náuseas",
+      "Hipopotasemia",
+      "Aumento de creatinina"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Nefrotoxicidad",
+      "Hipopotasemia grave",
+      "Reacción cardiorrespiratoria infusional"
+    ],
+    "adverseEffects": "Menos nefrotóxica que desoxicolato, pero puede lesionar riñón y electrolitos.",
+    "contraindications": "Hipersensibilidad a la formulación salvo infección mortal sin alternativa.",
+    "interactions": "Nefrotóxicos y depletores de K aumentan toxicidad.",
+    "monitoring": "Creatinina, K, Mg, hemograma, hígado y reacción infusional.",
+    "administration": "Solo IV; lavar línea con dextrosa 5% o usar línea separada.",
+    "preparation": "Reconstituir según ficha y diluir en dextrosa 5%; no salina.",
+    "infusionProtocol": "Típicamente ~2 h; puede reducirse a ~60 min si bien tolerada.",
+    "pregnancy": "Opción sistémica cuando se necesita anfotericina en embarazo.",
+    "lactation": "Datos limitados.",
+    "specialPopulations": "Leishmaniasis inmunocompetente: 3 mg/kg días 1–5,14,21; inmunocomprometido: 4 mg/kg días 1–5,10,17,24,31,38.",
+    "patientEducation": "Confirmar siempre formulación; liposomal no equivale a desoxicolato.",
+    "clinicalPearls": "Menor nefrotoxicidad no elimina control; error crítico es confundir mg/kg con desoxicolato.",
+    "guidelineRecommendations": "Guías modernas suelen preferir la formulación liposomal en micosis invasivas específicas por mejor relación eficacia/toxicidad; dosis depende del foco.",
+    "safetyFlags": [
+      "LIPOSOMAL",
+      "NO intercambiable",
+      "3–5 mg/kg sistémicas",
+      "Dextrosa 5%",
+      "Menor nefrotoxicidad relativa"
+    ],
+    "alerts": [
+      "Empírico 3 mg/kg/día",
+      "Sistémicas 3–5 mg/kg/día",
+      "Criptococo VIH 6 mg/kg/día",
+      "Infusión ~2 h",
+      "D5W, no salina"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
+      "https://www.cdc.gov/leishmaniasis/hcp/clinical-care/index.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-pediatric-opportunistic-infections/table-3-treatment-full",
+      "https://www.medicines.org.uk/emc/product/1022/smpc"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
+      "https://www.cdc.gov/leishmaniasis/hcp/clinical-care/index.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "name": {
-    "pt": "Anfotericina B Lipossomal",
-    "es": "Anfotericina B Liposomal"
+    "pt": "Anfotericina B lipossomal",
+    "es": "Anfotericina B liposomal"
   },
   "keywords": [
     "anfotericina_lipossomal",
     "anfotericina b lipossomal"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-2fa60cf94e5bb30e",
+  "clinicalContentSha256": "2fa60cf94e5bb30e3c556527f2d350da895c726b249e173a7ebea2c00f3257a6",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js"

@@ -1,29 +1,17 @@
 {
   "id": "tigeciclina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Tigeciclina",
-    "class": "Glicilciclina (tetraciclinóide de amplo espectro)",
-    "commercialNames": {
-      "br": [
-        "Tygacil",
-        "Tigeciclina Genérica"
-      ],
-      "ar": [
-        "Tygacil",
-        "Tigeciclina Genérica"
-      ]
-    },
-    "presentation": [
-      "Pó liofilizado EV: 50 mg"
+    "class": "Antibiótico glicilciclina",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "100 mg EV (ataque) → 50 mg EV 12/12h (manutenção)",
-      "pediatrica": "50.0 mg EV 12/12h (1,2 mg/kg/dose)"
-    },
+    "presentation": "Pó liofilizado IV.",
+    "dose": "Adultos: 100 mg IV ataque, depois 50 mg q12h. Para CRAB, IDSA 2026 descreve alta dose 200 mg ataque seguida 100 mg q12h como alternativa em combinação.",
     "doseKg": {
       "standard": "1,2 mg/kg/dose 12/12h EV (pediátrico)",
       "maxDose": "100 mg/dia (manutenção)"
@@ -32,128 +20,72 @@
     "dilution": "EV: reconstituir com 5,3 mL de SF ou SG 5% → diluir em 100 mL.",
     "speed": "EV: infundir em 30–60 minutos.",
     "commonAdverseEffects": [
-      "Náuseas e vômitos (frequentes)",
+      "Náusea",
       "Diarreia",
-      "Anorexia"
+      "Dor abdominal",
+      "Cefaleia"
     ],
     "dangerousAdverseEffects": [
-      "Aumento de mortalidade em pneumonia adquirida no hospital (metanálise FDA)",
-      "Pancreatite",
-      "Hepatotoxicidade",
-      "Pseudotumor cerebri"
+      "Maior mortalidade global",
+      "Pancreatite aguda",
+      "Insuficiência hepática",
+      "Hipofibrinogenemia/coagulopatia"
     ],
     "risksByPatient": [],
     "alerts": [
-      "FDA alerta para aumento de mortalidade em pneumonia hospitalar — usar somente quando não há alternativa.",
-      "NÃO cobre Pseudomonas aeruginosa nem Proteus spp."
+      "Boxed warning: maior mortalidade",
+      "Não usar rotineiramente em bacteremia/UTI",
+      "Child-Pugh C: 25 mg q12h",
+      "Pancreatite",
+      "Hipofibrinogenemia"
     ],
-    "ref": "FDA Label / Sanford Guide 2025 / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Após dose de ataque de 100 mg."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Avaliar ajuste apenas em insuficiência hepática grave."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não removida significativamente pela hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=230484a8-408c-dcc1-d0c4-d9dd9a46831b",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-warns-increased-risk-death-iv-antibacterial-tygacil-tigecycline"
+    ],
+    "renalDose": "Sem ajuste em insuficiência renal ou hemodiálise.",
+    "pharmacologicClass": "Derivado tetraciclínico de amplo espectro tecidual",
+    "mechanism": "Liga-se à subunidade 30S e bloqueia entrada do aminoacil-tRNA; supera alguns mecanismos clássicos de efluxo/proteção ribossomal.",
+    "pharmacodynamics": "Bacteriostática; AUC/MIC é principal índice PK/PD. Distribuição tecidual rápida gera baixas concentrações séricas e urinárias.",
+    "pharmacokinetics": "IV; grande volume de distribuição, eliminação biliar/fecal predominante e meia-vida longa.",
+    "indications": "cIAI, cSSSI e CAP bacteriana por suscetíveis. Não é opção de rotina para bacteremia ou UTI.",
+    "presentations": [
+      "50 mg por frasco"
+    ],
+    "pediatricDose": "Evitar <18 anos se houver alternativas; se nenhuma, 8–11a 1,2 mg/kg q12h (máx 50 mg) e 12–17a 50 mg q12h.",
+    "hepaticDose": "Child-Pugh A/B sem ajuste; Child-Pugh C: 100 mg ataque, depois 25 mg q12h.",
+    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+    "interactions": "Pode aumentar efeito de warfarina; revisar anticoagulação e função hepática.",
+    "monitoring": "Função hepática, fibrinogênio/coagulação, pancreatite e resposta clínica.",
+    "administration": "IV em 30–60 min q12h.",
+    "preparation": "Reconstituir/diluir conforme fabricante e respeitar estabilidade.",
+    "infusionProtocol": "Infusão 30–60 min; alta dose CRAB é estratégia especializada/off-label.",
+    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Náusea/vômitos frequentes; pancreatite, hipofibrinogenemia e hepatotoxicidade exigem vigilância.",
+    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+    "clinicalPearls": "Boxed warning: maior mortalidade global vs comparadores; reservar quando alternativas adequadas não são apropriadas. Evitar bacteremia/UTI por PK desfavorável.",
+    "guidelineRecommendations": "IDSA 2026: tetraciclinas não sugeridas para CRE em sangue/UTI; tigeciclina pode ser alternativa tecidual e alta dose em CRAB, preferindo minociclina quando escolhida.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interações"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=230484a8-408c-dcc1-d0c4-d9dd9a46831b",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-warns-increased-risk-death-iv-antibacterial-tygacil-tigecycline"
+    ]
   },
   "es": {
     "name": "Tigeciclina",
-    "class": "Glicilciclina (tetraciclínoide de amplio espectro)",
-    "commercialNames": {
-      "br": [
-        "Tygacil",
-        "Tigeciclina Genérica"
-      ],
-      "ar": [
-        "Tygacil",
-        "Tigeciclina Genérica"
-      ]
-    },
-    "presentation": [
-      "Polvo liofilizado EV: 50 mg"
+    "class": "Antibiótico glicilciclina",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "100 mg EV (carga) → 50 mg EV cada 12h (mantenimiento)",
-      "pediatrica": "50.0 mg EV cada 12h (1,2 mg/kg/dosis)"
-    },
+    "presentation": "Polvo liofilizado IV.",
+    "dose": "Adultos: 100 mg IV carga, luego 50 mg q12h. Para CRAB, IDSA 2026 describe alta dosis 200 mg carga seguida 100 mg q12h como alternativa combinada.",
     "doseKg": {
       "standard": "1,2 mg/kg/dosis cada 12h EV (pediátrico)",
       "maxDose": "100 mg/día (mantenimiento)"
@@ -162,107 +94,63 @@
     "dilution": "EV: reconstituir con 5,3 mL de SF o SG 5% → diluir en 100 mL.",
     "speed": "EV: infundir en 30–60 minutos.",
     "commonAdverseEffects": [
-      "Náuseas y vómitos (frecuentes)",
+      "Náuseas",
       "Diarrea",
-      "Anorexia"
+      "Dolor abdominal",
+      "Cefalea"
     ],
     "dangerousAdverseEffects": [
-      "Aumento de mortalidad en neumonía nosocomial (metaanálisis FDA)",
-      "Pancreatitis",
-      "Hepatotoxicidad",
-      "Pseudotumor cerebri"
+      "Mayor mortalidad global",
+      "Pancreatitis aguda",
+      "Insuficiencia hepática",
+      "Hipofibrinogenemia/coagulopatía"
     ],
     "risksByPatient": [],
     "alerts": [
-      "FDA alerta sobre aumento de mortalidad en neumonía nosocomial — usar solo cuando no hay alternativa.",
-      "NO cubre Pseudomonas aeruginosa ni Proteus spp."
+      "Boxed warning: mayor mortalidad",
+      "No usar rutinariamente en bacteriemia/UTI",
+      "Child-Pugh C: 25 mg q12h",
+      "Pancreatitis",
+      "Hipofibrinogenemia"
     ],
-    "ref": "FDA Label / Sanford Guide 2025 / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal.",
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Después de dosis de carga de 100 mg."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Evaluar ajuste solo en insuficiencia hepática grave."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "50 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "1,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "100 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No removida significativamente por hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=230484a8-408c-dcc1-d0c4-d9dd9a46831b",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-warns-increased-risk-death-iv-antibacterial-tygacil-tigecycline"
+    ],
+    "renalDose": "Sin ajuste en insuficiencia renal o hemodiálisis.",
+    "pharmacologicClass": "Derivado tetraciclínico de amplio espectro tisular",
+    "mechanism": "Se une a subunidad 30S y bloquea entrada de aminoacil-tRNA; supera algunos mecanismos de eflujo/protección ribosomal.",
+    "pharmacodynamics": "Bacteriostática; AUC/MIC es índice PK/PD principal. Distribución tisular rápida produce bajas concentraciones séricas/urinarias.",
+    "pharmacokinetics": "IV; gran volumen de distribución, eliminación biliar/fecal predominante y semivida larga.",
+    "indications": "cIAI, cSSSI y CAP bacteriana por susceptibles. No es opción rutinaria para bacteriemia o UTI.",
+    "presentations": [
+      "50 mg por vial"
+    ],
+    "pediatricDose": "Evitar <18 años si hay alternativas; si ninguna, 8–11a 1,2 mg/kg q12h (máx 50 mg) y 12–17a 50 mg q12h.",
+    "hepaticDose": "Child-Pugh A/B sin ajuste; Child-Pugh C: 100 mg carga, luego 25 mg q12h.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+    "interactions": "Puede aumentar efecto de warfarina; revisar anticoagulación y función hepática.",
+    "monitoring": "Función hepática, fibrinógeno/coagulación, pancreatitis y respuesta clínica.",
+    "administration": "IV en 30–60 min q12h.",
+    "preparation": "Reconstituir/diluir según fabricante y estabilidad.",
+    "infusionProtocol": "Infusión 30–60 min; alta dosis CRAB es estrategia especializada/off-label.",
+    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Náuseas/vómitos frecuentes; pancreatitis, hipofibrinogenemia y hepatotoxicidad requieren vigilancia.",
+    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+    "clinicalPearls": "Boxed warning: mayor mortalidad global frente a comparadores; reservar si alternativas adecuadas no son apropiadas. Evitar bacteriemia/UTI por PK.",
+    "guidelineRecommendations": "IDSA 2026: tetraciclinas no sugeridas para CRE en sangre/UTI; tigeciclina puede ser alternativa tisular y alta dosis en CRAB, prefiriendo minociclina.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interacciones"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=230484a8-408c-dcc1-d0c4-d9dd9a46831b",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-warns-increased-risk-death-iv-antibacterial-tygacil-tigecycline"
+    ]
   },
   "name": {
     "pt": "Tigeciclina",
@@ -274,8 +162,8 @@
     "tigeciclina generica",
     "glicilciclina (tetraciclinoide de amplo espectro)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-1650ecd6ef3edfc0",
+  "clinicalContentSha256": "1650ecd6ef3edfc00d5dc41c6a9cca40b684a3ef5e0c59133f8449b7f1a4bb0c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

@@ -1,30 +1,21 @@
 {
   "id": "cefiderocol",
   "category": "atb",
-  "icon": "🔬",
+  "icon": "",
   "color": "rgba(168,85,247,0.15)",
   "colorTxt": "#A855F7",
   "pt": {
     "name": "Cefiderocol",
-    "class": "Cefalosporina siderófora (nova classe — anti-BGN pan-resistentes)",
-    "commercialNames": {
-      "br": [
-        "Fetroja"
-      ],
-      "ar": [
-        "Fetroja"
-      ]
-    },
-    "presentation": [
-      "Pó para solução injetável EV: 1 g/frasco"
+    "class": "Cefalosporina siderófora",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoEV": "2 g EV 8/8h (infusão 180 min)"
-    },
+    "presentation": "Pó IV.",
+    "dose": "CrCl 60–119: 2 g q8h em 3 h. CrCl >=120: 2 g q6h.",
     "doseKg": {
       "adulto": "Dose fixa 2 g 8/8h (não baseado em peso em adultos)"
     },
-    "mechanism": "Conjugado sideróforo-cefalosporina: utiliza os transportadores de ferro bacterianos (catecol sideróforo) para entrar ativamente na célula, contornando bombas de efluxo e porinas. Liga-se às PBPs inibindo síntese da parede celular. Único agente com atividade contra todos os tipos de carbapenemases (KPC, MBL, OXA).",
+    "mechanism": "Capta ferro e usa transportadores TonB para entrar no periplasma; liga sobretudo PBP3.",
     "onset": "EV: pico sérico ao final da infusão de 180 min.",
     "halfLife": "Meia-vida 2,6 h. Eliminação renal ~90% inalterada.",
     "therapeuticRange": "T>CIM (fT>CIM ≥ 75%) como parâmetro PK/PD — infusão prolongada de 3h é essencial.",
@@ -32,93 +23,41 @@
     "speed": "Infundir em 180 minutos (3 horas). NÃO reduzir tempo de infusão.",
     "commonAdverseEffects": [
       "Diarreia",
-      "Náuseas",
+      "Reação local",
       "Constipação",
-      "Elevação de transaminases",
-      "Hipocalemia"
+      "Rash"
     ],
     "dangerousAdverseEffects": [
-      "Colite por C. difficile",
-      "Anafilaxia / hipersensibilidade grave",
-      "Convulsões (raro)"
+      "Maior mortalidade observada em certos pacientes com Gram-negativos carbapenem-resistentes",
+      "Anafilaxia",
+      "C. difficile",
+      "Neurotoxicidade beta-lactâmica"
     ],
-    "contraindications": [
-      "Hipersensibilidade a cefiderocol ou cefalosporinas"
-    ],
+    "contraindications": "Hipersensibilidade grave a cefiderocol/cefalosporinas.",
     "risksByPatient": [],
     "alerts": [
-      "ÚLTIMO RECURSO para BGN pan-resistentes (NDM, VIM, IMP, KPC, OXA) — único agente que cobre todos os tipos de carbapenemases.",
-      "Infusão de 3h OBRIGATÓRIA — não reduzir para menos de 180 min (parâmetro T>CIM crítico).",
-      "Atenção em ambientes ricos em ferro (p.ex. hemodiálise, nutrição parenteral) — pode competir com mecanismo sideróforo."
+      "CrCl 60–119: 2 g q8h",
+      "CrCl >=120: 2 g q6h",
+      "CrCl 30–59: 1,5 g q8h",
+      "HD: após sessão",
+      "Uso guiado por AMR/AST"
     ],
-    "ref": "Sanford Guide 2025 / FDA label Fetroja / IDSA MDR Guidelines / EUCAST 2024 / Johns Hopkins ABX Guide",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Dose habitual. Infusão OBRIGATÓRIA em 180 min — redução do tempo compromete T>CIM crítico. Uso guiado por cultura, antibiograma e infectologia. Único agente ativo contra todos os tipos de carbapenemases (KPC, MBL, OXA)."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1,5 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,5 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Corte oficial FDA label: CrCl 30–59 mL/min → 1,5 g 8/8h. Manter infusão em 180 min. Atenção ao ambiente rico em ferro (hemodiálise, nutrição parenteral) que pode competir com o mecanismo sideróforo."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "3 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Corte oficial FDA label: CrCl 15–29 mL/min → 1 g 8/8h. Ajuste obrigatório. Manter intervalo 8/8h (não ampliar intervalo — prejudica parâmetro T>CIM). Monitorar função renal diariamente."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,5 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Corte oficial FDA label: CrCl < 15 mL/min (sem HD) → 750 mg 12/12h. Parâmetro T>CIM é crítico — considerar monitoração sérica se disponível. Monitorar convulsões e neurotoxicidade. Eficácia pode ser subótima em CrCl muito baixo."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,5 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Corte oficial FDA label: HD → 750 mg 12/12h. Administrar após hemodiálise nos dias de HD. Cefiderocol é removido pela HD — monitorar resposta clínica e considerar dose suplementar após sessões prolongadas. Ambientes com alto ferro quelado (dialisato) podem reduzir captação bacteriana pelo sideróforo."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": true,
-      "warning": "Reservado como última opção para BGN pan-resistentes confirmados por antibiograma. Infusão prolongada de 3h NÃO negociável. Monitorar resposta clínica em 48–72h — mortalidade pode ser superior à comparadores em alguns ensaios (CREDIBLE-CR)."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+    ],
+    "renalDose": "CrCl 30–59: 1,5 g q8h; 15–29: 1 g q8h; ESRD <15: 0,75 g q12h; HD: após sessão; ARC >=120: 2 g q6h.",
+    "safetyFlags": [
+      "Infusão 3 h",
+      "CrCl/ARC mudam dose",
+      "Adultos >=18",
+      "Alerta mortalidade CREDIBLE-CR",
+      "Reservar AMR"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -130,29 +69,49 @@
         "CREDIBLE-CR / APEKS-NP trial data"
       ],
       "note": "Bloco revisado com cortes renais oficiais FDA (CrCl 30–59 / 15–29 / <15 / HD). Obs expandidas com alerta sobre mecanismo sideróforo em ambientes ricos em ferro. safetyFlags e auditNotes adicionados."
-    }
+    },
+    "pharmacologicClass": "Cefalosporina siderófora IV",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Ativa contra muitos Gram-negativos com carbapenemases, inclusive MBL.",
+    "pharmacokinetics": "IV; pouca metabolização e eliminação renal inalterada. ARC reduz exposição; DRC aumenta.",
+    "indications": "Adultos >=18: cUTI/pielonefrite e pneumonia hospitalar/VAP por Gram-negativos suscetíveis, com uso dirigido por resistência/AST.",
+    "presentations": [
+      "1 g por frasco"
+    ],
+    "pediatricDose": "Segurança/eficácia <18 anos não estabelecidas na bula EUA atual.",
+    "hepaticDose": "Sem ajuste esperado; metabolismo hepático não é via importante.",
+    "adverseEffects": "A bula mantém alerta de mortalidade observada em CREDIBLE-CR; causalidade incerta.",
+    "interactions": "Poucas interações metabólicas; função renal muda exposição de forma importante.",
+    "monitoring": "CrCl frequente, cultura/AST, resposta, superinfecção e estado neurológico em DRC.",
+    "administration": "IV exclusivamente.",
+    "preparation": "Reconstituir e diluir conforme bula.",
+    "infusionProtocol": "Cada dose em 3 horas; ARC >=120 exige q6h.",
+    "pregnancy": "Dados humanos insuficientes.",
+    "lactation": "Dados limitados.",
+    "specialPopulations": "Adultos apenas; ARC aumenta frequência; DRC/HD reduz dose.",
+    "patientEducation": "Explicar que é reservado para Gram-negativos resistentes e exige AST/ajuste renal.",
+    "clinicalPearls": "Usa o sistema de ferro bacteriano como cavalo de Troia; potente contra MBL/DTR, mas deve ser preservado.",
+    "guidelineRecommendations": "IDSA 2026: preferido para NDM-E e MBL-Pseudomonas; cUTI DTR entre preferidos; CRAB invasivo alternativa em combinação.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+    ]
   },
   "es": {
     "name": "Cefiderocol",
-    "class": "Cefalosporina siderófora (nueva clase — anti-BGN pan-resistentes)",
-    "commercialNames": {
-      "br": [
-        "Fetroja"
-      ],
-      "ar": [
-        "Fetroja"
-      ]
-    },
-    "presentation": [
-      "Polvo para solución inyectable EV: 1 g/frasco"
+    "class": "Cefalosporina siderófora",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoEV": "2 g EV 8/8h (infusão 180 min)"
-    },
+    "presentation": "Polvo IV.",
+    "dose": "ClCr 60–119: 2 g q8h en 3 h. ClCr >=120: 2 g q6h.",
     "doseKg": {
       "adulto": "Dosis fija 2 g cada 8h (no basado en peso en adultos)"
     },
-    "mechanism": "Conjugado sideróforo-cefalosporina: utiliza los transportadores de hierro bacterianos (catecol sideróforo) para entrar activamente en la célula, evitando bombas de eflujo y porinas. Se une a las PBPs inhibiendo la síntesis de pared celular. Único agente con actividad contra todos los tipos de carbapenemasas (KPC, MBL, OXA).",
+    "mechanism": "Capta hierro y usa transportadores TonB; se une sobre todo a PBP3.",
     "onset": "EV: pico sérico al final de la infusión de 180 min.",
     "halfLife": "Semivida 2,6 h. Eliminación renal ~90% inalterada.",
     "therapeuticRange": "T>CIM (fT>CIM ≥ 75%) como parámetro PK/PD — infusión prolongada de 3h es esencial.",
@@ -160,93 +119,41 @@
     "speed": "Infundir en 180 minutos (3 horas). NO reducir el tiempo de infusión.",
     "commonAdverseEffects": [
       "Diarrea",
-      "Náuseas",
+      "Reacción local",
       "Estreñimiento",
-      "Elevación de transaminasas",
-      "Hipocalemia"
+      "Rash"
     ],
     "dangerousAdverseEffects": [
-      "Colitis por C. difficile",
-      "Anafilaxia / hipersensibilidad grave",
-      "Convulsiones (raro)"
+      "Mayor mortalidad observada en ciertos pacientes con Gram negativos resistentes a carbapenem",
+      "Anafilaxia",
+      "C. difficile",
+      "Neurotoxicidad beta-lactámica"
     ],
-    "contraindications": [
-      "Hipersensibilidad a cefiderocol o cefalosporinas"
-    ],
+    "contraindications": "Hipersensibilidad grave a cefiderocol/cefalosporinas.",
     "risksByPatient": [],
     "alerts": [
-      "ÚLTIMO RECURSO para BGN pan-resistentes (NDM, VIM, IMP, KPC, OXA) — único agente que cubre todos los tipos de carbapenemasas.",
-      "Infusión de 3h OBLIGATORIA — no reducir a menos de 180 min (parámetro T>CIM crítico).",
-      "Atención en ambientes ricos en hierro (p.ej. hemodiálisis, nutrición parenteral) — puede competir con el mecanismo sideróforo."
+      "ClCr 60–119: 2 g q8h",
+      "ClCr >=120: 2 g q6h",
+      "ClCr 30–59: 1,5 g q8h",
+      "HD: tras sesión",
+      "Uso por AMR/AST"
     ],
-    "ref": "Sanford Guide 2025 / FDA label Fetroja / IDSA MDR Guidelines / EUCAST 2024 / Johns Hopkins ABX Guide",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Dosis habitual. Infusión OBLIGATORIA en 180 min — reducción del tiempo compromete T>CIM crítico. Uso guiado por cultivo, antibiograma e infectología. Único agente activo contra todos los tipos de carbapenemasas (KPC, MBL, OXA)."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1,5 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,5 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Corte oficial FDA label: CrCl 30–59 mL/min → 1,5 g 8/8h. Mantener infusión en 180 min. Atención al ambiente rico en hierro (hemodiálisis, nutrición parenteral) que puede competir con el mecanismo sideróforo."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "3 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Corte oficial FDA label: CrCl 15–29 mL/min → 1 g 8/8h. Ajuste obligatorio. Mantener intervalo 8/8h (no ampliar intervalo — perjudica parámetro T>CIM). Monitorizar función renal diariamente."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,5 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Corte oficial FDA label: CrCl < 15 mL/min (sin HD) → 750 mg 12/12h. El parámetro T>CIM es crítico — considerar monitoreo sérico si disponible. Monitorizar convulsiones y neurotoxicidad. Eficacia puede ser subóptima con CrCl muy bajo."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "750 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,5 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Corte oficial FDA label: HD → 750 mg 12/12h. Administrar después de hemodiálisis en días de HD. Cefiderocol es removido por HD — monitorizar respuesta clínica y considerar dosis suplementaria tras sesiones prolongadas. Ambientes con alto hierro quelado (dializato) pueden reducir captación bacteriana por el sideróforo."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": true,
-      "warning": "Reservado como última opción para BGN pan-resistentes confirmados por antibiograma. Infusión prolongada de 3h NO negociable. Monitorizar respuesta clínica en 48–72h — mortalidad puede ser superior a comparadores en algunos ensayos (CREDIBLE-CR)."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+    ],
+    "renalDose": "ClCr 30–59: 1,5 g q8h; 15–29: 1 g q8h; ESRD <15: 0,75 g q12h; HD tras sesión; ARC >=120: 2 g q6h.",
+    "safetyFlags": [
+      "Infusión 3 h",
+      "ClCr/ARC cambian dosis",
+      "Adultos >=18",
+      "Alerta mortalidad CREDIBLE-CR",
+      "Reservar AMR"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -258,7 +165,36 @@
         "CREDIBLE-CR / APEKS-NP trial data"
       ],
       "note": "Bloque revisado con cortes renales oficiales FDA (CrCl 30–59 / 15–29 / <15 / HD). Obs ampliadas con alerta sobre mecanismo sideróforo en ambientes ricos en hierro. safetyFlags y auditNotes añadidos."
-    }
+    },
+    "pharmacologicClass": "Cefalosporina siderófora IV",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Activa frente a muchos Gram negativos con carbapenemasas, incluidas MBL.",
+    "pharmacokinetics": "IV; poco metabolismo y eliminación renal. ARC reduce exposición; ERC la aumenta.",
+    "indications": "Adultos >=18: cUTI/pielonefritis y HAP/VAP por Gram negativos susceptibles, guiado por AMR/AST.",
+    "presentations": [
+      "1 g por vial"
+    ],
+    "pediatricDose": "Seguridad/eficacia <18 años no establecidas en ficha EUA.",
+    "hepaticDose": "Sin ajuste esperado.",
+    "adverseEffects": "Ficha mantiene alerta de mortalidad observada en CREDIBLE-CR; causalidad incierta.",
+    "interactions": "Pocas interacciones metabólicas; función renal cambia exposición.",
+    "monitoring": "ClCr frecuente, cultivo/AST, respuesta y estado neurológico.",
+    "administration": "Exclusivamente IV.",
+    "preparation": "Reconstituir/diluir según ficha.",
+    "infusionProtocol": "Cada dosis en 3 horas; ARC >=120 q6h.",
+    "pregnancy": "Datos insuficientes.",
+    "lactation": "Datos limitados.",
+    "specialPopulations": "Solo adultos; ARC aumenta frecuencia; ERC/HD reduce dosis.",
+    "patientEducation": "Explicar reserva para AMR y necesidad de AST/ajuste renal.",
+    "clinicalPearls": "Usa hierro bacteriano como caballo de Troya; potente contra MBL/DTR, pero debe preservarse.",
+    "guidelineRecommendations": "IDSA 2026: preferido NDM-E/MBL-Pseudomonas; cUTI DTR preferido; CRAB invasivo alternativa combinada.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+    ]
   },
   "name": {
     "pt": "Cefiderocol",
@@ -269,8 +205,8 @@
     "fetroja",
     "cefalosporina siderofora (nova classe — anti-bgn pan-resistentes)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-4a2f17e52faa0b7f",
+  "clinicalContentSha256": "4a2f17e52faa0b7f2a2798522360957dae6963a3da0eef98baa416949621699b",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

@@ -1,294 +1,172 @@
 {
   "id": "moxifloxacino",
   "category": "atb",
-  "icon": "🦠",
+  "icon": "",
   "color": "rgba(251,146,60,0.15)",
   "colorTxt": "#FB923C",
   "pt": {
     "name": "Moxifloxacino",
-    "class": "Fluoroquinolona de 4ª geração",
-    "commercialNames": {
-      "br": [
-        "Avalox",
-        "Moxifloxacino Genérico"
-      ],
-      "ar": [
-        "Avalox",
-        "Moxifloxacino Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos revestidos: 400 mg",
-      "Solução para infusão EV: 400 mg/250 mL"
+    "class": "Antibiótico fluoroquinolona",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "400 mg VO 1x/dia",
-      "adultoEV": "400 mg EV 1x/dia (infusão 60 min)"
-    },
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "dose": "400 mg VO/IV q24h; CAP 7–14 d, cIAI 5–14 d conforme foco.",
     "doseKg": {
       "standard": "Dose fixa 400 mg/dia (não baseado em peso)"
     },
-    "mechanism": "Inibe as topoisomerases II (DNA girase) e IV, bloqueando a replicação e transcrição do DNA bacteriano.",
+    "mechanism": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
     "onset": "Absorção oral rápida — Tmáx 1–3 h; biodisponibilidade ~90%.",
     "halfLife": "Meia-vida 11–15 h (dose única diária).",
     "therapeuticRange": "Concentração-dependente. AUC/CIM ≥ 30–50 para otimizar eficácia.",
     "dilution": "EV: pronto para infusão (400 mg/250 mL). Não diluir adicionalmente.",
     "speed": "Infundir em 60 minutos. Não infundir em menos de 60 min.",
     "commonAdverseEffects": [
-      "Náuseas e vômitos",
+      "Náusea",
       "Diarreia",
-      "Cefaleia",
-      "Tontura",
-      "Elevação de TGO/TGP"
+      "Dor abdominal",
+      "Cefaleia"
     ],
     "dangerousAdverseEffects": [
-      "QT prolongado / Torsades de Pointes",
-      "Hepatotoxicidade grave",
       "Ruptura de tendão",
-      "Neuropatia periférica",
-      "Convulsões / Psicose (raro)"
+      "Neuropatia potencialmente irreversível",
+      "Efeitos SNC/convulsões",
+      "Aneurisma/dissecção de aorta",
+      "Torsades/QT"
     ],
-    "contraindications": [
-      "QT prolongado congênito ou adquirido",
-      "Uso concomitante de antiarrítmicos classe IA/III",
-      "Hipocalemia ou hipomagnesemia não corrigidas",
-      "Crianças e adolescentes < 18 anos"
-    ],
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
     "risksByPatient": [],
     "alerts": [
-      "Monitorar ECG (intervalo QTc) antes e durante o uso, especialmente em pacientes de risco.",
-      "Evitar uso simultâneo com outros fármacos que prolongam QT (haloperidol, metadona, amiodarona).",
-      "Não requer ajuste renal — vantagem sobre outras fluoroquinolonas em insuficiência renal."
+      "Tendinite/ruptura de tendão",
+      "Neuropatia periférica",
+      "Efeitos SNC",
+      "Miastenia gravis",
+      "Aneurisma/dissecção de aorta",
+      "Disglicemia",
+      "QT/torsades proeminente",
+      "Não usar para UTI de rotina",
+      "Não é antipseudomonas confiável"
     ],
-    "ref": "Sanford Guide 2025 / ANVISA / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Dose habitual."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Monitorar QT prolongado e hepatotoxicidade."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Não removido significativamente pela hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+    ],
+    "renalDose": "Sem ajuste em qualquer grau de insuficiência renal, inclusive HD/CAPD.",
+    "pharmacologicClass": "Fluoroquinolona sistêmica",
+    "pharmacodynamics": "Bactericida concentração-dependente; AUC/MIC e Cmax/MIC correlacionam-se com eficácia.",
+    "pharmacokinetics": "Alta biodisponibilidade oral e ampla penetração tecidual; eliminação renal varia por agente.",
+    "indications": "CAP, infecções intra-abdominais e outras respiratórias/pele; não é escolha para UTI e não é antipseudomonas confiável.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "750 mg conforme agente"
+    ],
+    "pediatricDose": "Segurança/eficácia pediátrica não estabelecida para uso rotineiro.",
+    "hepaticDose": "Sem ajuste rotineiro, mas cirrose pode aumentar risco de QT; monitorar ECG se hepatopatia relevante.",
+    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+    "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes e interações específicas.",
+    "monitoring": "Sintomas tendíneos/neurológicos, glicemia, ECG/eletrólitos quando QT relevante e função renal.",
+    "administration": "VO com ou sem alimento; separar de antiácidos/cátions. IV conforme formulação.",
+    "preparation": "Comprimidos sem preparo; IV conforme fabricante.",
+    "infusionProtocol": "Quando IV, respeitar tempo mínimo de infusão do produto.",
+    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Idosos, transplantados, usuários de corticoide e pacientes com aneurisma/aortopatia têm maior risco.",
+    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+    "clinicalPearls": "Maior preocupação de QT entre o trio; não usar para UTI ou Pseudomonas quando cobertura dirigida é necessária.",
+    "guidelineRecommendations": "Usar apenas quando benefício supera os riscos da classe e AST/epidemiologia justificam.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interações"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+    ]
   },
   "es": {
     "name": "Moxifloxacino",
-    "class": "Fluoroquinolona de 4ª generación",
-    "commercialNames": {
-      "br": [
-        "Avalox",
-        "Moxifloxacino Genérico"
-      ],
-      "ar": [
-        "Avalox",
-        "Moxifloxacino Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos recubiertos: 400 mg",
-      "Solución para infusión EV: 400 mg/250 mL"
+    "class": "Antibiótico fluoroquinolona",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "400 mg VO 1 vez/día",
-      "adultoEV": "400 mg EV 1 vez/día (infusión 60 min)"
-    },
+    "presentation": "Comprimidos orales; existe formulación IV.",
+    "dose": "400 mg VO/IV q24h; CAP 7–14 d, cIAI 5–14 d según foco.",
     "doseKg": {
       "standard": "Dosis fija 400 mg/día (no basado en peso)"
     },
-    "mechanism": "Inhibe las topoisomerasas II (DNA girasa) y IV, bloqueando la replicación y transcripción del DNA bacteriano.",
+    "mechanism": "Inhibe DNA girasa y topoisomerasa IV, bloqueando replicación/reparación del DNA bacteriano.",
     "onset": "Absorción oral rápida — Tmáx 1–3 h; biodisponibilidad ~90%.",
     "halfLife": "Semivida 11–15 h (dosis única diaria).",
     "therapeuticRange": "Concentración-dependiente. AUC/CIM ≥ 30–50 para optimizar eficacia.",
     "dilution": "EV: listo para infusión (400 mg/250 mL). No diluir adicionalmente.",
     "speed": "Infundir en 60 minutos. No infundir en menos de 60 min.",
     "commonAdverseEffects": [
-      "Náuseas y vómitos",
+      "Náuseas",
       "Diarrea",
-      "Cefalea",
-      "Mareos",
-      "Elevación de TGO/TGP"
+      "Dolor abdominal",
+      "Cefalea"
     ],
     "dangerousAdverseEffects": [
-      "QT prolongado / Torsades de Pointes",
-      "Hepatotoxicidad grave",
-      "Rotura de tendón",
-      "Neuropatía periférica",
-      "Convulsiones / Psicosis (raro)"
+      "Rotura tendinosa",
+      "Neuropatía potencialmente irreversible",
+      "Efectos SNC/convulsiones",
+      "Aneurisma/disección aórtica",
+      "Torsades/QT"
     ],
-    "contraindications": [
-      "QT prolongado congénito o adquirido",
-      "Uso concomitante de antiarrítmicos clase IA/III",
-      "Hipocalemia o hipomagnesemia no corregidas",
-      "Niños y adolescentes < 18 años"
-    ],
+    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
     "risksByPatient": [],
     "alerts": [
-      "Monitorizar ECG (intervalo QTc) antes y durante el uso, especialmente en pacientes de riesgo.",
-      "Evitar uso simultáneo con otros fármacos que prolongan QT (haloperidol, metadona, amiodarona).",
-      "No requiere ajuste renal — ventaja sobre otras fluoroquinolonas en insuficiencia renal."
+      "Tendinitis/rotura tendinosa",
+      "Neuropatía periférica",
+      "Efectos SNC",
+      "Miastenia gravis",
+      "Aneurisma/disección aórtica",
+      "Disglucemia",
+      "QT/torsades prominente",
+      "No usar para UTI de rutina",
+      "No es antipseudomónica confiable"
     ],
-    "ref": "Sanford Guide 2025 / ANVISA / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Dosis habitual."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Monitorizar QT prolongado y hepatotoxicidad."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "No removido significativamente por hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+    ],
+    "renalDose": "Sin ajuste en cualquier grado de insuficiencia renal, incluso HD/CAPD.",
+    "pharmacologicClass": "Fluoroquinolona sistémica",
+    "pharmacodynamics": "Bactericida dependiente de concentración; AUC/MIC y Cmax/MIC se correlacionan con eficacia.",
+    "pharmacokinetics": "Alta biodisponibilidad oral y amplia penetración tisular; eliminación renal varía según agente.",
+    "indications": "CAP, intraabdominal y otras respiratorias/piel; no es elección para UTI ni antipseudomónica confiable.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "750 mg según agente"
+    ],
+    "pediatricDose": "Seguridad/eficacia pediátrica no establecida para uso rutinario.",
+    "hepaticDose": "Sin ajuste rutinario, pero cirrosis puede aumentar riesgo QT; monitorizar ECG si hepatopatía relevante.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+    "interactions": "Cationes reducen absorción; revisar antiarrítmicos/QT, fármacos glucémicos e interacciones específicas.",
+    "monitoring": "Síntomas tendinosos/neurológicos, glucemia, ECG/electrolitos cuando QT sea relevante y función renal.",
+    "administration": "VO con o sin alimentos; separar de antiácidos/cationes. IV según formulación.",
+    "preparation": "Comprimidos sin preparación; IV según fabricante.",
+    "infusionProtocol": "Cuando IV, respetar tiempo mínimo de infusión.",
+    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Ancianos, trasplantados, usuarios de corticoide y pacientes con aneurisma/aortopatía tienen mayor riesgo.",
+    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+    "clinicalPearls": "Mayor preocupación de QT del grupo; no usar para UTI ni Pseudomonas cuando se requiere cobertura dirigida.",
+    "guidelineRecommendations": "Usar solo cuando beneficio supere riesgos de clase y AST/epidemiología lo justifiquen.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interacciones"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+    ]
   },
   "name": {
     "pt": "Moxifloxacino",
@@ -300,8 +178,8 @@
     "moxifloxacino generico",
     "fluoroquinolona de 4ª geracao"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-1650ecd6ef3edfc0",
+  "clinicalContentSha256": "1650ecd6ef3edfc00d5dc41c6a9cca40b684a3ef5e0c59133f8449b7f1a4bb0c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

@@ -1,14 +1,142 @@
 {
   "id": "voriconazol",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Voriconazol"
+    "name": "Voriconazol",
+    "class": "Antifúngico azólico",
+    "pharmacologicClass": "Triazol de amplo espectro; substrato/inibidor CYP2C19/2C9/3A4",
+    "mechanism": "Inibe a 14-alfa-desmetilase fúngica dependente de CYP51, reduzindo ergosterol e desorganizando a membrana.",
+    "pharmacodynamics": "Atividade depende de exposição; AUC/MIC é índice PK/PD relevante para vários fungos e azóis.",
+    "pharmacokinetics": "Biodisponibilidade oral alta, metabolismo hepático não linear com grande variabilidade por CYP2C19; TDM é útil em tratamento prolongado/invasivo.",
+    "indications": "Primeira linha para aspergilose invasiva em muitos cenários; candidíase invasiva selecionada e outras micoses por suscetíveis.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Formulações oral e/ou IV conforme agente.",
+    "presentations": [
+      "Comprimidos/cápsulas conforme agente",
+      "IV conforme agente"
+    ],
+    "dose": "Aspergilose invasiva em adulto: IV 6 mg/kg q12h por 2 doses, depois 4 mg/kg q12h; via oral usa esquema de manutenção por peso/formulação conforme bula.",
+    "pediatricDose": "2–<12 anos e 12–14 anos <50 kg: IV 9 mg/kg q12h nas primeiras 24 h, depois 8 mg/kg q12h; VO 9 mg/kg q12h, máximo 350 mg q12h. Demais adolescentes usam esquema adulto conforme bula.",
+    "renalDose": "VO: sem ajuste por insuficiência renal. IV: em CrCl <50 mL/min o veículo SBECD acumula; preferir VO, salvo se benefício do IV superar risco.",
+    "hepaticDose": "Child-Pugh A/B: carga usual e reduzir manutenção pela metade conforme bula. Doença hepática grave exige cautela e monitorização intensiva.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Cefaleia",
+      "Elevação de transaminases"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidade grave",
+      "Interações medicamentosas graves",
+      "Arritmia relacionada a QT conforme agente"
+    ],
+    "adverseEffects": "Azóis podem causar hepatotoxicidade e interações CYP; o perfil de QT e toxicidades específicas varia entre agentes.",
+    "contraindications": "Hipersensibilidade e combinações formalmente contraindicadas por interações/QT conforme bula.",
+    "interactions": "Inibe e é metabolizado por CYP2C19/2C9/3A4; há múltiplas contraindicações. Revisar rifampicina, carbamazepina, sirolimo, estatinas, tacrolimo e fármacos de QT.",
+    "monitoring": "TDM quando indicado, AST/ALT/bilirrubina, função renal se IV, eletrólitos/ECG em risco, visão/pele e sinais de periostite em uso prolongado.",
+    "administration": "VO/IV conforme formulação; revisar alimentação, pH gástrico e interações específicas antes da administração.",
+    "preparation": "VO: administrar conforme relação com alimento da bula. IV: reconstituir/diluir corretamente; contém SBECD.",
+    "infusionProtocol": "IV deve ser infundido em aproximadamente 1–3 h conforme concentração/velocidade recomendada; não administrar em bolus.",
+    "pregnancy": "Azóis sistêmicos exigem avaliação individual de risco reprodutivo; evitar exposição desnecessária e seguir bula específica.",
+    "lactation": "Avaliar agente, dose e duração; consultar bula específica e risco do lactente.",
+    "specialPopulations": "Variabilidade CYP2C19 é clinicamente relevante. Uso prolongado associa-se a fototoxicidade, carcinoma cutâneo e periostite por flúor.",
+    "patientEducation": "Informar icterícia, urina escura, palpitações, síncope, rash grave ou alterações visuais/neurológicas específicas.",
+    "clinicalPearls": "TDM ajuda a equilibrar eficácia e neuro/hepatotoxicidade. O veículo IV SBECD, e não o voriconazol oral, é a principal preocupação renal em CrCl <50.",
+    "guidelineRecommendations": "IDSA recomenda voriconazol como opção principal para aspergilose invasiva; monitorar níveis e interações em doença grave, especialmente com longa duração.",
+    "safetyFlags": [
+      "Hepatotoxicidade",
+      "Interações CYP",
+      "Revisar QT e formulação"
+    ],
+    "alerts": [
+      "CrCl <50: preferir VO ao IV/SBECD",
+      "QT prolongado",
+      "TDM útil",
+      "Alterações visuais/alucinações",
+      "Fototoxicidade/SCC",
+      "Hepatotoxicidade"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c620b2d7-3c2b-4252-8cfc-2f322d624435",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/",
+      "https://www.idsociety.org/practice-guideline/candidiasis/"
+    ],
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c620b2d7-3c2b-4252-8cfc-2f322d624435",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/",
+      "https://www.idsociety.org/practice-guideline/candidiasis/"
+    ]
   },
   "es": {
-    "name": "Voriconazol"
+    "name": "Voriconazol",
+    "class": "Antifúngico azólico",
+    "pharmacologicClass": "Triazol de amplio espectro; sustrato/inhibidor CYP2C19/2C9/3A4",
+    "mechanism": "Inhibe la 14-alfa-desmetilasa fúngica dependiente de CYP51, reduce ergosterol y altera la membrana.",
+    "pharmacodynamics": "Actividad dependiente de exposición; AUC/MIC es un índice PK/PD relevante para varios hongos y azoles.",
+    "pharmacokinetics": "Alta biodisponibilidad oral, metabolismo hepático no lineal y gran variabilidad CYP2C19; TDM es útil en infección invasiva/prolongada.",
+    "indications": "Primera línea para aspergilosis invasiva en muchos escenarios; candidiasis invasiva selecta y otras micosis susceptibles.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Formulaciones oral y/o IV según agente.",
+    "presentations": [
+      "Comprimidos/cápsulas según agente",
+      "IV según agente"
+    ],
+    "dose": "Aspergilosis invasiva en adulto: IV 6 mg/kg q12h por 2 dosis, luego 4 mg/kg q12h; vía oral usa mantenimiento por peso/formulación según ficha.",
+    "pediatricDose": "2–<12 años y 12–14 años <50 kg: IV 9 mg/kg q12h primeras 24 h, luego 8 mg/kg q12h; VO 9 mg/kg q12h, máximo 350 mg q12h. Otros adolescentes usan esquema adulto.",
+    "renalDose": "VO: sin ajuste por insuficiencia renal. IV: con ClCr <50 mL/min se acumula vehículo SBECD; preferir VO salvo beneficio IV superior.",
+    "hepaticDose": "Child-Pugh A/B: carga usual y reducir mantenimiento a la mitad según ficha. Hepatopatía grave requiere precaución/monitorización.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Cefalea",
+      "Elevación de transaminasas"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatotoxicidad grave",
+      "Interacciones medicamentosas graves",
+      "Arritmia relacionada con QT según agente"
+    ],
+    "adverseEffects": "Los azoles pueden causar hepatotoxicidad e interacciones CYP; el perfil de QT y toxicidades específicas varía entre agentes.",
+    "contraindications": "Hipersensibilidad y combinaciones formalmente contraindicadas por interacciones/QT según ficha.",
+    "interactions": "Inhibe y es metabolizado por CYP2C19/2C9/3A4; múltiples contraindicaciones. Revisar rifampicina, carbamazepina, sirolimus, estatinas, tacrolimus y fármacos QT.",
+    "monitoring": "TDM cuando corresponda, AST/ALT/bilirrubina, función renal si IV, electrolitos/ECG, visión/piel y periostitis en uso prolongado.",
+    "administration": "VO/IV según formulación; revisar alimentos, pH gástrico e interacciones específicas.",
+    "preparation": "VO según relación con alimentos de ficha. IV: reconstituir/diluir correctamente; contiene SBECD.",
+    "infusionProtocol": "IV en aproximadamente 1–3 h según concentración/velocidad recomendada; no administrar en bolo.",
+    "pregnancy": "Los azoles sistémicos requieren valoración individual del riesgo reproductivo; evitar exposición innecesaria y seguir ficha.",
+    "lactation": "Valorar agente, dosis y duración; consultar ficha específica y riesgo del lactante.",
+    "specialPopulations": "Variabilidad CYP2C19 es relevante. Uso prolongado se asocia a fototoxicidad, cáncer cutáneo y periostitis por flúor.",
+    "patientEducation": "Informar ictericia, orina oscura, palpitaciones, síncope, rash grave o alteraciones visuales/neurológicas específicas.",
+    "clinicalPearls": "TDM ayuda a equilibrar eficacia y neuro/hepatotoxicidad. El vehículo IV SBECD, no el voriconazol oral, es la principal preocupación renal con ClCr <50.",
+    "guidelineRecommendations": "IDSA recomienda voriconazol como opción principal para aspergilosis invasiva; monitorizar niveles e interacciones en enfermedad grave/prolongada.",
+    "safetyFlags": [
+      "Hepatotoxicidad",
+      "Interacciones CYP",
+      "Revisar QT y formulación"
+    ],
+    "alerts": [
+      "ClCr <50: preferir VO a IV/SBECD",
+      "QT prolongado",
+      "TDM útil",
+      "Alteraciones visuales/alucinaciones",
+      "Fototoxicidad/SCC",
+      "Hepatotoxicidad"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c620b2d7-3c2b-4252-8cfc-2f322d624435",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/",
+      "https://www.idsociety.org/practice-guideline/candidiasis/"
+    ],
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c620b2d7-3c2b-4252-8cfc-2f322d624435",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/",
+      "https://www.idsociety.org/practice-guideline/candidiasis/"
+    ]
   },
   "name": {
     "pt": "Voriconazol",
@@ -17,8 +145,8 @@
   "keywords": [
     "voriconazol"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8bd4419151c9028c",
+  "clinicalContentSha256": "8bd4419151c9028c7de7aad108eadfaca274267f7be1e107f04be2b0321d0813",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js"

@@ -1,31 +1,17 @@
 {
   "id": "doxiciclina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Doxiciclina",
-    "class": "Tetraciclina",
-    "commercialNames": {
-      "br": [
-        "Vibramicina",
-        "Doxiciclina EMS"
-      ],
-      "ar": [
-        "Vibramicina",
-        "Doxiciclina Bagó"
-      ]
-    },
-    "presentation": [
-      "Comprimido 100 mg",
-      "Cápsula 100 mg"
+    "class": "Antibiótico tetraciclina",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "100 mg VO 12/12h",
-      "dst": "100 mg VO 12/12h por 7 dias",
-      "lyme": "100 mg VO 12/12h"
-    },
+    "presentation": "Comprimidos/cápsulas e suspensão oral.",
+    "dose": "Adultos: 200 mg no primeiro dia (100 mg q12h), depois 100 mg/dia; grave 100 mg q12h.",
     "doseKg": {
       "pediatrica": "2–4 mg/kg/dia",
       "maxDose": "200 mg/dia"
@@ -34,155 +20,73 @@
     "dilution": "Via oral.",
     "speed": "Administrar com água abundante.",
     "commonAdverseEffects": [
-      "Náuseas",
-      "Dispepsia",
-      "Fotossensibilidade"
+      "Náusea",
+      "Diarreia",
+      "Dor abdominal",
+      "Cefaleia"
     ],
     "dangerousAdverseEffects": [
-      "Esofagite",
-      "Hepatotoxicidade",
-      "Hipertensão intracraniana"
+      "Anafilaxia",
+      "C. difficile",
+      "Toxicidade órgão-específica conforme o agente"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Não deitar por 30 minutos após tomar.",
-      "Evitar exposição solar excessiva.",
-      "Evitar associação com ferro, cálcio e antiácidos."
+      "Esofagite",
+      "Fotossensibilidade",
+      "Quelantes reduzem absorção",
+      "Hipertensão intracraniana",
+      "Dentes/osso em desenvolvimento"
     ],
-    "ref": "Sanford Guide / Goodman & Gilman / CDC STI Guidelines",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Doxiciclina não necessita ajuste renal. Eliminação predominantemente biliar/fecal.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Preferível em pacientes renais por eliminação predominantemente não renal."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita dose suplementar pós-hemodiálise."
-      }
-    }
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ],
+    "renalDose": "Sem ajuste rotineiro; doses usuais não demonstram acúmulo excessivo em insuficiência renal e diálise não reduz significativamente meia-vida.",
+    "pharmacologicClass": "Tetraciclina de longa ação",
+    "mechanism": "Liga-se reversivelmente à subunidade 30S e impede ligação do aminoacil-tRNA.",
+    "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC e tempo de exposição contribuem para atividade.",
+    "pharmacokinetics": "Alta biodisponibilidade oral, ampla distribuição e eliminação renal/fecal; não há acúmulo excessivo nas doses usuais em insuficiência renal.",
+    "indications": "Rickettsioses, Chlamydia/Mycoplasma, algumas infecções respiratórias, zoonoses e outras por suscetíveis.",
+    "presentations": [
+      "50 mg",
+      "100 mg",
+      "Suspensão oral"
+    ],
+    "pediatricDose": "<45 kg com infecção grave: 2,2 mg/kg q12h. >8 anos menos grave: 4,4 mg/kg dia 1 dividido, depois 2,2 mg/kg/dia; >=45 kg dose adulta.",
+    "hepaticDose": "Sem esquema universal de ajuste; cautela em hepatopatia grave e com hepatotóxicos.",
+    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+    "interactions": "Antiácidos, cálcio, ferro, magnésio e bismuto reduzem absorção; revisar retinoides, anticoagulantes e indutores.",
+    "monitoring": "Tolerância GI/esofágica, fotossensibilidade e função hepática em cursos prolongados.",
+    "administration": "VO com bastante água; permanecer erguido após dose. Separar de cátions/antiácidos/ferro.",
+    "preparation": "Suspensão conforme fabricante; evitar quelantes.",
+    "infusionProtocol": "Não aplicável ao registro oral.",
+    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Pode causar coloração dentária/efeito ósseo durante desenvolvimento; rickettsioses graves podem justificar uso pediátrico conforme diretrizes.",
+    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+    "clinicalPearls": "Boa biodisponibilidade e ausência de ajuste renal favorecem uso na DRC; quelantes reduzem absorção e esofagite é prevenível com água/posição.",
+    "guidelineRecommendations": "Em CAP pode ser opção selecionada; em IST/rickettsiose seguir diretriz específica e não atrasar tratamento de doença grave.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interações"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ]
   },
   "es": {
     "name": "Doxiciclina",
-    "class": "Tetraciclina",
-    "commercialNames": {
-      "br": [
-        "Vibramicina",
-        "Doxiciclina EMS"
-      ],
-      "ar": [
-        "Vibramicina",
-        "Doxiciclina Bagó"
-      ]
-    },
-    "presentation": [
-      "Comprimido 100 mg",
-      "Cápsula 100 mg"
+    "class": "Antibiótico tetraciclina",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "100 mg VO cada 12h",
-      "dst": "100 mg VO cada 12h por 7 días",
-      "lyme": "100 mg VO cada 12h"
-    },
+    "presentation": "Comprimidos/cápsulas y suspensión oral.",
+    "dose": "Adultos: 200 mg día 1 (100 mg q12h), luego 100 mg/día; grave 100 mg q12h.",
     "doseKg": {
       "pediatrica": "2–4 mg/kg/día",
       "maxDose": "200 mg/día"
@@ -192,131 +96,63 @@
     "speed": "Administrar con abundante agua.",
     "commonAdverseEffects": [
       "Náuseas",
-      "Dispepsia",
-      "Fotosensibilidad"
+      "Diarrea",
+      "Dolor abdominal",
+      "Cefalea"
     ],
     "dangerousAdverseEffects": [
-      "Esofagitis",
-      "Hepatotoxicidad",
-      "Hipertensión intracraneal"
+      "Anafilaxia",
+      "C. difficile",
+      "Toxicidad órgano-específica según el agente"
     ],
     "risksByPatient": [],
     "alerts": [
-      "No acostarse durante 30 minutos después de tomarla.",
-      "Evitar exposición solar excesiva.",
-      "Evitar asociación con hierro, calcio y antiácidos."
+      "Esofagitis",
+      "Fotosensibilidad",
+      "Quelantes reducen absorción",
+      "Hipertensión intracraneal",
+      "Dientes/hueso en desarrollo"
     ],
-    "ref": "Sanford Guide / Goodman & Gilman / CDC STI Guidelines",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Doxiciclina no requiere ajuste renal. Eliminación predominantemente biliar/fecal.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Preferible en pacientes renales por eliminación predominantemente no renal."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "2,2 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere dosis suplementaria post-hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ],
+    "renalDose": "Sin ajuste rutinario; dosis usuales no muestran acumulación excesiva en insuficiencia renal y diálisis no reduce significativamente semivida.",
+    "pharmacologicClass": "Tetraciclina de acción prolongada",
+    "mechanism": "Se une reversiblemente a subunidad 30S e impide unión de aminoacil-tRNA.",
+    "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC y tiempo de exposición contribuyen a actividad.",
+    "pharmacokinetics": "Alta biodisponibilidad oral, amplia distribución y eliminación renal/fecal; no hay acumulación excesiva con dosis usuales en insuficiencia renal.",
+    "indications": "Rickettsiosis, Chlamydia/Mycoplasma, algunas respiratorias, zoonosis y otras por susceptibles.",
+    "presentations": [
+      "50 mg",
+      "100 mg",
+      "Suspensión oral"
+    ],
+    "pediatricDose": "<45 kg con infección grave: 2,2 mg/kg q12h. >8 años menos grave: 4,4 mg/kg día 1 dividido, luego 2,2 mg/kg/día; >=45 kg dosis adulta.",
+    "hepaticDose": "Sin esquema universal de ajuste; precaución en hepatopatía grave y hepatotóxicos.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+    "interactions": "Antiácidos, calcio, hierro, magnesio y bismuto reducen absorción; revisar retinoides, anticoagulantes e inductores.",
+    "monitoring": "Tolerancia GI/esofágica, fotosensibilidad y función hepática en cursos prolongados.",
+    "administration": "VO con abundante agua; permanecer erguido. Separar de cationes/antiácidos/hierro.",
+    "preparation": "Suspensión según fabricante; evitar quelantes.",
+    "infusionProtocol": "No aplicable al registro oral.",
+    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Puede causar coloración dental/efecto óseo durante desarrollo; rickettsiosis grave puede justificar uso pediátrico según guías.",
+    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+    "clinicalPearls": "Buena biodisponibilidad y ausencia de ajuste renal favorecen uso en ERC; quelantes reducen absorción y esofagitis se previene con agua/posición.",
+    "guidelineRecommendations": "En CAP puede ser opción seleccionada; en ITS/rickettsiosis seguir guía específica y no retrasar tratamiento grave.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interacciones"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+    ]
   },
   "name": {
     "pt": "Doxiciclina",
@@ -329,8 +165,8 @@
     "doxiciclina bago",
     "tetraciclina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-1650ecd6ef3edfc0",
+  "clinicalContentSha256": "1650ecd6ef3edfc00d5dc41c6a9cca40b684a3ef5e0c59133f8449b7f1a4bb0c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

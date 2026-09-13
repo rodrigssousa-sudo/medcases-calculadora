@@ -1,14 +1,136 @@
 {
   "id": "dalbavancina",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Dalbavancina"
+    "name": "Dalbavancina",
+    "class": "Antibiótico lipoglicopeptídeo",
+    "pharmacologicClass": "Lipoglicopeptídeo de longa ação anti-Gram-positivo",
+    "mechanism": "Liga-se a D-Ala-D-Ala e inibe síntese da parede; porção lipofílica aumenta ancoragem à membrana.",
+    "pharmacodynamics": "Bactericida contra Gram-positivos; AUC/MIC sustenta efeito prolongado por meia-vida muito longa.",
+    "pharmacokinetics": "Somente IV; meia-vida terminal de vários dias, alta ligação proteica e eliminação renal/não renal.",
+    "indications": "ABSSSI por Gram-positivos suscetíveis incluindo MRSA.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Pó para solução IV.",
+    "presentations": [
+      "500 mg por frasco"
+    ],
+    "dose": "Adultos CrCl >=30 ou HD regular: 1.500 mg IV dose única em 30 min.",
+    "pediatricDose": "CrCl/eGFR >=30: nascimento–<6a 22,5 mg/kg dose única; 6–<18a 18 mg/kg dose única; máximo 1.500 mg.",
+    "renalDose": "CrCl <30 sem HD regular: 1.125 mg dose única. Sem ajuste em HD regular; ajuste pediátrico <30 não estudado.",
+    "hepaticDose": "Sem ajuste em Child-Pugh A; cautela em B/C por dados limitados.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Diarreia",
+      "Cefaleia",
+      "Reação no local de administração"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Toxicidade órgão-específica conforme o agente"
+    ],
+    "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Revisar interações específicas e medicamentos que aumentem toxicidade do agente.",
+    "monitoring": "Resposta clínica/microbiológica e monitorização específica do agente, função renal/hepática e hemograma quando pertinentes.",
+    "administration": "Infusão IV de 30 min.",
+    "preparation": "Reconstituir e diluir conforme fabricante; respeitar diluente e estabilidade.",
+    "infusionProtocol": "Dose única de ação prolongada; evitar infusão rápida.",
+    "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "A meia-vida muito longa limita reversibilidade; confirmar foco e necessidade de controle cirúrgico antes da dose.",
+    "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+    "clinicalPearls": "A dose única pode facilitar tratamento de ABSSSI por MRSA, mas não deve ser extrapolada automaticamente para bacteremia, endocardite ou osteomielite.",
+    "guidelineRecommendations": "Stewardship: confirmar foco apropriado para terapia de longa ação e microbiologia compatível; evitar uso quando provável necessidade de troca rápida de antibiótico.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Monitorização de toxicidade"
+    ],
+    "alerts": [
+      "Meia-vida muito longa",
+      "ABSSSI é indicação rotulada",
+      "CrCl <30 sem HD: reduzir",
+      "Não extrapolar a infecção profunda"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4c0bd0f-03c2-4ce5-bcc2-b58f21ce75c1",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b4674d8-4d1e-4728-8465-d42ada33fa5c",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4c0bd0f-03c2-4ce5-bcc2-b58f21ce75c1",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b4674d8-4d1e-4728-8465-d42ada33fa5c",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "es": {
-    "name": "Dalbavancina"
+    "name": "Dalbavancina",
+    "class": "Antibiótico lipoglicopéptido",
+    "pharmacologicClass": "Lipoglicopéptido de acción prolongada anti-Gram positivo",
+    "mechanism": "Se une a D-Ala-D-Ala e inhibe síntesis de pared; porción lipofílica aumenta anclaje a membrana.",
+    "pharmacodynamics": "Bactericida frente a Gram positivos; AUC/MIC sostiene efecto prolongado por semivida muy larga.",
+    "pharmacokinetics": "Solo IV; semivida terminal de varios días, alta unión proteica y eliminación renal/no renal.",
+    "indications": "ABSSSI por Gram positivos susceptibles incluido MRSA.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Polvo para solución IV.",
+    "presentations": [
+      "500 mg por vial"
+    ],
+    "dose": "Adultos ClCr >=30 o HD regular: 1.500 mg IV dosis única en 30 min.",
+    "pediatricDose": "ClCr/eGFR >=30: nacimiento–<6a 22,5 mg/kg dosis única; 6–<18a 18 mg/kg; máximo 1.500 mg.",
+    "renalDose": "ClCr <30 sin HD regular: 1.125 mg dosis única. Sin ajuste en HD regular; ajuste pediátrico <30 no estudiado.",
+    "hepaticDose": "Sin ajuste en Child-Pugh A; precaución en B/C por datos limitados.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarrea",
+      "Cefalea",
+      "Reacción en el sitio de administración"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Toxicidad órgano-específica según el agente"
+    ],
+    "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+    "interactions": "Revisar interacciones específicas y fármacos que aumenten toxicidad del agente.",
+    "monitoring": "Respuesta clínica/microbiológica y monitorización específica, función renal/hepática y hemograma cuando correspondan.",
+    "administration": "Infusión IV de 30 min.",
+    "preparation": "Reconstituir y diluir según fabricante; respetar diluyente y estabilidad.",
+    "infusionProtocol": "Dosis única de acción prolongada; evitar infusión rápida.",
+    "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "La semivida muy larga limita reversibilidad; confirmar foco y necesidad de control quirúrgico antes de la dosis.",
+    "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+    "clinicalPearls": "La dosis única puede facilitar ABSSSI por MRSA, pero no debe extrapolarse automáticamente a bacteriemia, endocarditis u osteomielitis.",
+    "guidelineRecommendations": "Stewardship: confirmar foco apropiado para terapia de larga acción y microbiología compatible; evitar uso si probablemente habrá que cambiar rápidamente el antibiótico.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Monitorización de toxicidad"
+    ],
+    "alerts": [
+      "Semivida muy larga",
+      "ABSSSI es indicación rotulada",
+      "ClCr <30 sin HD: reducir",
+      "No extrapolar a infección profunda"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4c0bd0f-03c2-4ce5-bcc2-b58f21ce75c1",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b4674d8-4d1e-4728-8465-d42ada33fa5c",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4c0bd0f-03c2-4ce5-bcc2-b58f21ce75c1",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b4674d8-4d1e-4728-8465-d42ada33fa5c",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "name": {
     "pt": "Dalbavancina",
@@ -17,8 +139,8 @@
   "keywords": [
     "dalbavancina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8748201986b5fc57",
+  "clinicalContentSha256": "8748201986b5fc5759ebd8fa28517ea54274edfd6d13294067ba1d3e22872ffb",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js",
@@ -364,8 +486,8 @@
           "xydalba",
           "lipoglicopeptideo de longa duracao (anti-mrsa)"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-8748201986b5fc57",
+        "clinicalContentSha256": "8748201986b5fc5759ebd8fa28517ea54274edfd6d13294067ba1d3e22872ffb",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "antimicrobianos.js"

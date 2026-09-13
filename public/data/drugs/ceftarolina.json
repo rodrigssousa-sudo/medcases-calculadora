@@ -1,33 +1,21 @@
 {
   "id": "ceftarolina",
   "category": "atb",
-  "icon": "💉",
+  "icon": "",
   "color": "rgba(56,189,248,0.15)",
   "colorTxt": "#38BDF8",
   "pt": {
     "name": "Ceftarolina",
-    "class": "Cefalosporina de 5ª geração (anti-MRSA)",
-    "commercialNames": {
-      "br": [
-        "Zinforo"
-      ],
-      "ar": [
-        "Zinforo",
-        "Teflaro"
-      ]
-    },
-    "presentation": [
-      "Pó para solução injetável EV: 400 mg/frasco",
-      "Pó para solução injetável EV: 600 mg/frasco"
+    "class": "Antibiótico beta-lactâmico com atividade anti-MRSA",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoEV": "600 mg EV 12/12h (infusão 60 min)",
-      "pediatrica": "600 mg EV 8/8h–12/12h (8–12 mg/kg/dose)"
-    },
+    "presentation": "Frasco IV de ceftarolina fosamila.",
+    "dose": "Adultos: 600 mg IV q12h, infusão 5–60 min.",
     "doseKg": {
       "pediatrica": "8–12 mg/kg/dose EV 8/8h–12/12h (máx 600 mg/dose)"
     },
-    "mechanism": "Liga-se à PBP2a (presente no MRSA) e às demais PBPs, inibindo a síntese da parede celular. Única cefalosporina com atividade anti-MRSA documentada.",
+    "mechanism": "Pró-fármaco convertido em ceftarolina; liga PBPs, incluindo PBP2a do MRSA, inibindo síntese da parede.",
     "onset": "EV: pico sérico ao final da infusão de 60 min.",
     "halfLife": "Meia-vida 2,6 h (função renal normal). Eliminação renal ~64% inalterada.",
     "therapeuticRange": "Tempo acima da CIM (T>CIM ≥ 60%) como parâmetro PK/PD.",
@@ -35,136 +23,76 @@
     "speed": "Infundir em 60 minutos.",
     "commonAdverseEffects": [
       "Diarreia",
-      "Náuseas",
-      "Rash cutâneo",
-      "Prurido",
-      "Flebite no local de infusão"
+      "Náusea",
+      "Rash",
+      "Reação no local de administração"
     ],
     "dangerousAdverseEffects": [
-      "Anemia hemolítica por Coombs positivo direto",
-      "Hipersensibilidade grave / anafilaxia",
-      "Colite por C. difficile",
-      "Convulsões (especialmente em insuficiência renal)"
+      "Anafilaxia",
+      "SCAR/SJS-TEN",
+      "C. difficile",
+      "Citopenias",
+      "Neurotoxicidade/convulsões em exposição excessiva"
     ],
-    "contraindications": [
-      "Hipersensibilidade a cefalosporinas ou penicilinas (reação cruzada)"
-    ],
+    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
     "risksByPatient": [],
     "alerts": [
-      "Monitorar hemograma: anemia hemolítica com teste de Coombs positivo relatada em ~10% dos pacientes.",
-      "Requer ajuste de dose em insuficiência renal (eliminação renal ~64%).",
-      "Reservar para infecções por MRSA ou pneumonia grave sem resposta a outros agentes."
+      "Ativa contra MRSA",
+      "Não cobre Pseudomonas",
+      "Não extrapolar para meningite",
+      "Ajustar se CrCl <50"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA / FDA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "8–12 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para MRSA e pneumonia adquirida na comunidade."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "800 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "8 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reduzir dose em insuficiência renal moderada."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "300 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "600 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "6 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obrigatório."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "200 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "4 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar acúmulo e neurotoxicidade."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "200 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "4 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ecde48b-75a2-4beb-9999-369f3f61bb8a",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "renalDose": "CrCl >30–50: 400 mg q12h; 15–30: 300 mg q12h; ESRD/HD: 200 mg q12h após HD. Dados insuficientes para pediatria com eGFR <50.",
+    "pharmacologicClass": "Cefalosporina avançada (ceftarolina fosamila)",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC guia eficácia.",
+    "pharmacokinetics": "IV; conversão rápida do pró-fármaco e eliminação predominantemente renal.",
+    "indications": "ABSSSI e pneumonia bacteriana adquirida na comunidade por suscetíveis; inclui atividade contra MRSA em infecções cutâneas.",
+    "presentations": [
+      "600 mg"
+    ],
+    "pediatricDose": ">=2 anos e >33 kg: 400 mg q8h ou 600 mg q12h; <=33 kg: 12 mg/kg q8h; 2 meses–<2 anos: 8 mg/kg q8h; neonatos elegíveis: 6 mg/kg q8h.",
+    "hepaticDose": "Sem ajuste hepático rotineiro.",
+    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+    "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+    "administration": "Somente IV.",
+    "preparation": "Reconstituir e diluir conforme fabricante.",
+    "infusionProtocol": "Infusão 5–60 min; individualização beta-lactâmica pode ser considerada em doença crítica.",
+    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "DRC requer ajuste; concentração no LCR não foi estabelecida, portanto não extrapolar para meningite.",
+    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+    "clinicalPearls": "Atividade contra MRSA por ligação à PBP2a; não cobre Pseudomonas.",
+    "guidelineRecommendations": "Usar conforme foco/suscetibilidade e reservar espectro quando cefalosporina mais estreita for suficiente.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal",
+      "Neurotoxicidade por acúmulo"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ecde48b-75a2-4beb-9999-369f3f61bb8a",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "es": {
     "name": "Ceftarolina",
-    "class": "Cefalosporina de 5ª generación (anti-MRSA)",
-    "commercialNames": {
-      "br": [
-        "Zinforo"
-      ],
-      "ar": [
-        "Zinforo",
-        "Teflaro"
-      ]
-    },
-    "presentation": [
-      "Polvo para solución inyectable EV: 400 mg/frasco",
-      "Polvo para solución inyectable EV: 600 mg/frasco"
+    "class": "Antibiótico betalactámico con actividad anti-MRSA",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoEV": "600 mg EV 12/12h (infusão 60 min)",
-      "pediatrica": "600 mg EV cada 8h–12h (8–12 mg/kg/dosis)"
-    },
+    "presentation": "Vial IV de ceftarolina fosamilo.",
+    "dose": "Adultos: 600 mg IV q12h, infusión 5–60 min.",
     "doseKg": {
       "pediatrica": "8–12 mg/kg/dosis EV cada 8h–12h (máx 600 mg/dosis)"
     },
-    "mechanism": "Se une a PBP2a (presente en MRSA) y a las demás PBPs, inhibiendo la síntesis de la pared celular. Única cefalosporina con actividad anti-MRSA documentada.",
+    "mechanism": "Profármaco convertido a ceftarolina; se une a PBP, incluida PBP2a de MRSA, inhibiendo síntesis de pared.",
     "onset": "EV: pico sérico al final de la infusión de 60 min.",
     "halfLife": "Semivida 2,6 h (función renal normal). Eliminación renal ~64% inalterada.",
     "therapeuticRange": "Tiempo sobre la CIM (T>CIM ≥ 60%) como parámetro PK/PD.",
@@ -173,110 +101,62 @@
     "commonAdverseEffects": [
       "Diarrea",
       "Náuseas",
-      "Erupción cutánea",
-      "Prurito",
-      "Flebitis en el lugar de infusión"
+      "Exantema",
+      "Reacción en el sitio de administración"
     ],
     "dangerousAdverseEffects": [
-      "Anemia hemolítica por Coombs directo positivo",
-      "Hipersensibilidad grave / anafilaxia",
-      "Colitis por C. difficile",
-      "Convulsiones (especialmente en insuficiencia renal)"
+      "Anafilaxia",
+      "SCAR/SJS-TEN",
+      "C. difficile",
+      "Citopenias",
+      "Neurotoxicidad/convulsiones por exposición excesiva"
     ],
-    "contraindications": [
-      "Hipersensibilidad a cefalosporinas o penicilinas (reacción cruzada)"
-    ],
+    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
     "risksByPatient": [],
     "alerts": [
-      "Monitorizar hemograma: anemia hemolítica con test de Coombs positivo reportada en ~10% de pacientes.",
-      "Requiere ajuste de dosis en insuficiencia renal (eliminación renal ~64%).",
-      "Reservar para infecciones por MRSA o neumonía grave sin respuesta a otros agentes."
+      "Activa contra MRSA",
+      "No cubre Pseudomonas",
+      "No extrapolar a meningitis",
+      "Ajustar si ClCr <50"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman 14ª ed. / ANVISA / FDA label",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "8–12 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para MRSA y neumonía adquirida en la comunidad."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "400 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "800 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "8 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducir dosis en insuficiencia renal moderada."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "300 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "600 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "6 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obligatorio."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "200 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "4 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar acumulación y neurotoxicidad."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "200 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "400 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "4 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ecde48b-75a2-4beb-9999-369f3f61bb8a",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "renalDose": "ClCr >30–50: 400 mg q12h; 15–30: 300 mg q12h; ESRD/HD: 200 mg q12h después de HD. Datos insuficientes en pediatría con eGFR <50.",
+    "pharmacologicClass": "Cefalosporina avanzada (ceftarolina fosamilo)",
+    "pharmacodynamics": "Bactericida dependiente del tiempo; fT>MIC guía eficacia.",
+    "pharmacokinetics": "IV; conversión rápida del profármaco y eliminación predominantemente renal.",
+    "indications": "ABSSSI y neumonía bacteriana adquirida en comunidad por susceptibles; incluye actividad frente a MRSA en infección cutánea.",
+    "presentations": [
+      "600 mg"
+    ],
+    "pediatricDose": ">=2 años y >33 kg: 400 mg q8h o 600 mg q12h; <=33 kg: 12 mg/kg q8h; 2 meses–<2 años: 8 mg/kg q8h; neonatos elegibles: 6 mg/kg q8h.",
+    "hepaticDose": "Sin ajuste hepático rutinario.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+    "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+    "administration": "Solo IV.",
+    "preparation": "Reconstituir y diluir según fabricante.",
+    "infusionProtocol": "Infusión 5–60 min; puede considerarse individualización betalactámica en enfermedad crítica.",
+    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+    "specialPopulations": "ERC requiere ajuste; no se estableció concentración en LCR, por lo que no debe extrapolarse a meningitis.",
+    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+    "clinicalPearls": "Actividad frente a MRSA por unión a PBP2a; no cubre Pseudomonas.",
+    "guidelineRecommendations": "Usar según foco/susceptibilidad y reservar espectro si una cefalosporina más estrecha es suficiente.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal",
+      "Neurotoxicidad por acumulación"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ecde48b-75a2-4beb-9999-369f3f61bb8a",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "name": {
     "pt": "Ceftarolina",
@@ -288,8 +168,8 @@
     "teflaro",
     "cefalosporina de 5ª geracao (anti-mrsa)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-5e2142f005cf704c",
+  "clinicalContentSha256": "5e2142f005cf704cfb9b532d72be22b8a435e0f42b2f977cadc07edee431baff",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

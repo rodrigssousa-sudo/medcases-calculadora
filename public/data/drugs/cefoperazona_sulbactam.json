@@ -1,246 +1,174 @@
 {
   "id": "cefoperazona_sulbactam",
   "category": "atb",
-  "icon": "🧬",
+  "icon": "",
   "color": "rgba(220,38,38,0.15)",
   "colorTxt": "#DC2626",
   "pt": {
-    "name": "Cefoperazona + Sulbactam",
-    "class": "Cefalosporina de 3ª geração + Inibidor de beta-lactamase",
-    "commercialNames": {
-      "br": [
-        "Sulperazon",
-        "Cefoperazona/Sulbactam Genérico"
-      ],
-      "ar": [
-        "Sulperazon",
-        "Cefoperazona/Sulbactam Genérico"
-      ]
-    },
-    "presentation": [
-      "Pó para solução injetável EV: 1 g/1 g (cefoperazona/sulbactam) por frasco"
+    "name": "Cefoperazona + sulbactam",
+    "class": "Cefalosporina antipseudomonal + inibidor de beta-lactamase",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoEV": "2–4 g EV 12/12h"
-    },
+    "presentation": "Pó para IV/IM em proporção 1:1.",
+    "dose": "Adulto 1:1: 2–4 g/dia divididos q12h. Infecção grave/refratária pode chegar a 8 g/dia do produto 1:1; máximo de sulbactam 4 g/dia.",
     "doseKg": null,
     "indication": "Infecções por Acinetobacter baumannii multirresistente (em combinação), infecções intra-abdominais, ginecológicas, pneumonia hospitalar, sepse.",
     "spectrum": "Acinetobacter baumannii (incluindo cepas resistentes à ampicilina/sulbactam clássica), Pseudomonas aeruginosa (atividade variável), Enterobacterales (incluindo produtores de ESBL), anaeróbios (Bacteroides fragilis), Staphylococcus aureus (MSSA). A fração sulbactam tem atividade intrínseca contra Acinetobacter.",
-    "contraindications": [
-      "Hipersensibilidade às cefalosporinas, penicilinas ou sulbactam"
-    ],
+    "contraindications": "Hipersensibilidade a qualquer componente ou beta-lactâmicos com reação grave prévia.",
     "risksByPatient": [],
     "alerts": [
-      "Potente inibidor de vitamina K — risco aumentado de sangramento; monitorar INR.",
-      "Evitar álcool durante e até 3 dias após o tratamento (efeito antabuse pela estrutura MTT).",
-      "Ajuste renal orientado principalmente pela fração sulbactam."
+      "Adulto 2–4 g/dia",
+      "Grave até 8 g/dia",
+      "Sulbactam máx 4 g/dia",
+      "Pediatria 40–80 mg/kg/dia",
+      "Álcool evitar até 5º dia"
     ],
-    "ref": "Sanford Guide 2025 / IDSA HAP/VAP Guidelines / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2–4 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "40–80 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "40 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajustar principalmente pela fração sulbactam."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "20–40 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Redução necessária em insuficiência renal significativa."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "20 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar neurotoxicidade."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "20 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após HD."
-      }
-    }
+    "ref": [
+      "https://labeling.pfizer.com/ShowLabeling.aspx?id=14626",
+      "https://www.pfizer.com/products",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.who.int/publications/i/item/9789240095368",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=cefoperazone+sulbactam",
+      "https://www.ncbi.nlm.nih.gov/books/NBK557829/"
+    ],
+    "renalDose": "CrCl 15–30: máximo 1 g de sulbactam q12h; CrCl <15: máximo 500 mg de sulbactam q12h. Em HD, programar dose após a sessão.",
+    "pharmacologicClass": "Cefoperazona de 3ª geração associada ao sulbactam",
+    "mechanism": "Cefoperazona inibe PBPs e parede bacteriana; sulbactam inibe várias beta-lactamases e possui atividade intrínseca contra algumas cepas de Acinetobacter.",
+    "pharmacodynamics": "Bactericida tempo-dependente; a contribuição do sulbactam depende do patógeno e exposição. Suscetibilidade deve orientar uso.",
+    "pharmacokinetics": "Cefoperazona é eliminada em grande parte pela bile; sulbactam depende mais da depuração renal. Hemodiálise altera substancialmente a PK do sulbactam.",
+    "indications": "Infecções respiratórias, urinárias, intra-abdominais/biliares, pele e outras por organismos suscetíveis segundo rotulagem internacional.",
+    "presentations": [
+      "1 g total: 0,5 g + 0,5 g",
+      "2 g total: 1 g + 1 g"
+    ],
+    "pediatricDose": "Crianças: 40–80 mg/kg/dia do produto 1:1 divididos q6–12h; grave/refratária até 160 mg/kg/dia. Neonatos na primeira semana: q12h.",
+    "hepaticDose": "Obstrução biliar/hepatopatia grave pode exigir ajuste. Se hepatopatia + DRC, cefoperazona não deve exceder 2 g/dia sem monitorização de concentrações.",
+    "commonAdverseEffects": [
+      "Diarreia",
+      "Náusea",
+      "Rash",
+      "Elevação de transaminases"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia/coagulopatia",
+      "Anafilaxia",
+      "SJS/TEN",
+      "C. difficile",
+      "Reação álcool-cefoperazona"
+    ],
+    "adverseEffects": "Foram relatadas hemorragias graves/fatais e deficiência de vitamina K; risco aumenta com dieta inadequada, má absorção e nutrição parenteral prolongada.",
+    "interactions": "Evitar álcool e soluções com etanol durante e até o quinto dia após cefoperazona; aminoglicosídeos exigem compatibilidade separada e monitorização renal.",
+    "monitoring": "PT/INR em risco de deficiência de vitamina K, função renal/hepática, hemograma e resposta microbiológica.",
+    "administration": "IV ou IM. Infusão IV intermitente após reconstituição/diluição.",
+    "preparation": "Reconstituir com diluente compatível; Ringer lactato não é adequado para reconstituição inicial.",
+    "infusionProtocol": "Infusão IV em 15–60 min; injeção IV direta deve durar pelo menos 3 min.",
+    "pregnancy": "Atravessa placenta; usar somente se claramente necessário.",
+    "lactation": "Pequenas quantidades passam ao leite; usar com cautela.",
+    "specialPopulations": "Prematuros/neonatos têm dados limitados. Hepatopatia afeta cefoperazona; DRC afeta sulbactam.",
+    "patientEducation": "Evitar álcool durante o tratamento e por 5 dias após; relatar sangramento, equimoses ou diarreia intensa.",
+    "clinicalPearls": "A associação exige pensar em dois órgãos: rim determina exposição do sulbactam e fígado/via biliar determina a cefoperazona; coagulação também precisa ser lembrada.",
+    "guidelineRecommendations": "Usar conforme suscetibilidade e rotulagem local; não substituir automaticamente os regimes de sulbactam em alta dose recomendados por diretrizes atuais para CRAB invasivo.",
+    "safetyFlags": [
+      "Vitamina K/coagulação",
+      "Álcool até dia 5",
+      "Renal regula sulbactam",
+      "Hepatobiliar regula cefoperazona",
+      "Infusão 15–60 min"
+    ],
+    "references": [
+      "https://labeling.pfizer.com/ShowLabeling.aspx?id=14626",
+      "https://www.pfizer.com/products",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.who.int/publications/i/item/9789240095368",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=cefoperazone+sulbactam",
+      "https://www.ncbi.nlm.nih.gov/books/NBK557829/"
+    ]
   },
   "es": {
-    "name": "Cefoperazona + Sulbactam",
-    "class": "Cefalosporina de 3.ª generación + Inhibidor de beta-lactamasa",
-    "commercialNames": {
-      "br": [
-        "Sulperazon",
-        "Cefoperazona/Sulbactam Genérico"
-      ],
-      "ar": [
-        "Sulperazon",
-        "Cefoperazona/Sulbactam Genérico"
-      ]
-    },
-    "presentation": [
-      "Polvo para solución inyectable EV: 1 g/1 g (cefoperazona/sulbactam) por frasco"
+    "name": "Cefoperazona + sulbactam",
+    "class": "Cefalosporina antipseudomónica + inhibidor de beta-lactamasa",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoEV": "2–4 g EV 12/12h"
-    },
+    "presentation": "Polvo IV/IM en proporción 1:1.",
+    "dose": "Adulto 1:1: 2–4 g/día dividido q12h. Grave/refractaria hasta 8 g/día; máximo sulbactam 4 g/día.",
     "doseKg": null,
     "indication": "Infecciones por Acinetobacter baumannii multirresistente (en combinación), infecciones intraabdominales, ginecológicas, neumonía hospitalaria, sepsis.",
     "spectrum": "Acinetobacter baumannii (incluidas cepas resistentes a ampicilina/sulbactam clásica), Pseudomonas aeruginosa (actividad variable), Enterobacterales (incluidos productores de ESBL), anaerobios (Bacteroides fragilis), Staphylococcus aureus (MSSA). La fracción sulbactam tiene actividad intrínseca frente a Acinetobacter.",
-    "contraindications": [
-      "Hipersensibilidad a cefalosporinas, penicilinas o sulbactam"
-    ],
+    "contraindications": "Hipersensibilidad a componentes o beta-lactámicos con reacción grave.",
     "risksByPatient": [],
     "alerts": [
-      "Potente inhibidor de vitamina K — riesgo aumentado de sangrado; monitorizar INR.",
-      "Evitar alcohol durante y hasta 3 días después del tratamiento (efecto antabus por estructura MTT).",
-      "Ajuste renal orientado principalmente por la fracción sulbactam."
+      "Adulto 2–4 g/día",
+      "Grave hasta 8 g/día",
+      "Sulbactam máx 4 g/día",
+      "Pediatría 40–80 mg/kg/día",
+      "Evitar alcohol hasta día 5"
     ],
-    "ref": "Sanford Guide 2025 / IDSA HAP/VAP Guidelines / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2–4 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "40–80 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "8 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "40 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajustar principalmente por la fracción sulbactam."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "20–40 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducción necesaria en insuficiencia renal significativa."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "20 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar neurotoxicidad."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "20 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de HD."
-      }
-    }
+    "ref": [
+      "https://labeling.pfizer.com/ShowLabeling.aspx?id=14626",
+      "https://www.pfizer.com/products",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.who.int/publications/i/item/9789240095368",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=cefoperazone+sulbactam",
+      "https://www.ncbi.nlm.nih.gov/books/NBK557829/"
+    ],
+    "renalDose": "ClCr 15–30: máximo 1 g de sulbactam q12h; ClCr <15: máximo 500 mg sulbactam q12h. HD: dosificar tras sesión.",
+    "pharmacologicClass": "Cefoperazona de 3ª generación asociada a sulbactam",
+    "mechanism": "Cefoperazona inhibe PBPs/pared; sulbactam inhibe varias beta-lactamasas y tiene actividad intrínseca frente a algunas cepas de Acinetobacter.",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; contribución de sulbactam depende de patógeno/exposición. Usar según susceptibilidad.",
+    "pharmacokinetics": "Cefoperazona se elimina en gran parte por bilis; sulbactam depende más del riñón. Hemodiálisis altera significativamente PK de sulbactam.",
+    "indications": "Infecciones respiratorias, urinarias, intraabdominales/biliares, piel y otras por organismos susceptibles según ficha internacional.",
+    "presentations": [
+      "1 g total: 0,5 g + 0,5 g",
+      "2 g total: 1 g + 1 g"
+    ],
+    "pediatricDose": "Niños: 40–80 mg/kg/día del producto 1:1 dividido q6–12h; grave hasta 160 mg/kg/día. Neonatos primera semana: q12h.",
+    "hepaticDose": "Obstrucción biliar/hepatopatía grave puede exigir ajuste. Hepatopatía + ERC: cefoperazona no superar 2 g/día sin monitorización.",
+    "commonAdverseEffects": [
+      "Diarrea",
+      "Náuseas",
+      "Rash",
+      "Elevación de transaminasas"
+    ],
+    "dangerousAdverseEffects": [
+      "Hemorragia/coagulopatía",
+      "Anafilaxia",
+      "SJS/TEN",
+      "C. difficile",
+      "Reacción alcohol-cefoperazona"
+    ],
+    "adverseEffects": "Se han comunicado hemorragias graves/fatales y déficit de vitamina K; riesgo mayor con malnutrición/malabsorción.",
+    "interactions": "Evitar alcohol/etanol durante y hasta el quinto día posterior; aminoglucósidos requieren compatibilidad separada y control renal.",
+    "monitoring": "PT/INR en riesgo, función renal/hepática, hemograma y respuesta microbiológica.",
+    "administration": "IV o IM.",
+    "preparation": "Reconstituir con diluyente compatible; Ringer lactato no para reconstitución inicial.",
+    "infusionProtocol": "Infusión IV 15–60 min; inyección IV directa al menos 3 min.",
+    "pregnancy": "Cruza placenta; usar solo si claramente necesario.",
+    "lactation": "Pequeñas cantidades en leche; usar con cautela.",
+    "specialPopulations": "Prematuros/neonatos con datos limitados. Hepatopatía afecta cefoperazona; ERC afecta sulbactam.",
+    "patientEducation": "Evitar alcohol durante tratamiento y 5 días después; informar sangrado o diarrea intensa.",
+    "clinicalPearls": "Hay que pensar en dos órganos: riñón para sulbactam y hígado/vía biliar para cefoperazona, además de coagulación.",
+    "guidelineRecommendations": "Usar según susceptibilidad y ficha local; no sustituir automáticamente regímenes de sulbactam en alta dosis recomendados actualmente para CRAB invasivo.",
+    "safetyFlags": [
+      "Vitamina K/coagulación",
+      "Alcohol hasta día 5",
+      "Renal regula sulbactam",
+      "Hepatobiliar regula cefoperazona",
+      "Infusión 15–60 min"
+    ],
+    "references": [
+      "https://labeling.pfizer.com/ShowLabeling.aspx?id=14626",
+      "https://www.pfizer.com/products",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.who.int/publications/i/item/9789240095368",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=cefoperazone+sulbactam",
+      "https://www.ncbi.nlm.nih.gov/books/NBK557829/"
+    ]
   },
   "name": {
-    "pt": "Cefoperazona + Sulbactam",
-    "es": "Cefoperazona + Sulbactam"
+    "pt": "Cefoperazona + sulbactam",
+    "es": "Cefoperazona + sulbactam"
   },
   "keywords": [
     "cefoperazona_sulbactam",
@@ -249,8 +177,8 @@
     "cefoperazona/sulbactam generico",
     "cefalosporina de 3ª geracao + inibidor de beta-lactamase"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6c4ad52b7b873b7c",
+  "clinicalContentSha256": "6c4ad52b7b873b7ca40f6b0951cd80bf9b4bfc56f4c0d21ead8d00c7218b4d79",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

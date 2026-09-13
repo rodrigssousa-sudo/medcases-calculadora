@@ -1,188 +1,184 @@
 {
   "id": "temocilina",
   "category": "atb",
-  "icon": "🧬",
+  "icon": "",
   "color": "rgba(59,130,246,0.12)",
   "colorTxt": "#1D4ED8",
   "pt": {
     "name": "Temocilina",
-    "class": "Penicilina antiestafilocócica modificada (anti-ESBL/KPC sem atividade antianaeróbia)",
-    "commercialNames": {
-      "br": [
-        "Negaban (acesso limitado no Brasil)"
-      ],
-      "ar": [
-        "Negaban"
-      ]
-    },
-    "presentation": [
-      "Pó para solução injetável EV/IM: 1 g por frasco (uso hospitalar)"
+    "class": "Penicilina de espectro dirigido a Gram-negativos",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoEV": "2 g EV 12/12h"
-    },
+    "presentation": "Pó IV/IM.",
+    "dose": "Normal: 4 g/dia em 2 doses ou contínua; crítico: 6 g/dia em 3 doses ou contínua; carga 2 g antes da contínua.",
     "doseKg": null,
     "indication": "Infecções por Enterobacterales produtoras de ESBL ou KPC (alternativa aos carbapenêmicos), ITU complicada, infecções intra-abdominais, bacteremia por Gram-negativos sensíveis. Uso restrito a centros com acesso ao fármaco.",
     "spectrum": "Enterobacterales (incluindo produtores de ESBL e KPC — exceto NDM e OXA-48 puro), E. coli, Klebsiella pneumoniae, Proteus spp. Naturalmente resistente a Pseudomonas, Acinetobacter e anaeróbios. Estável a beta-lactamases classe A e C.",
-    "contraindications": [
-      "Hipersensibilidade às penicilinas ou cefalosporinas (reação cruzada)"
-    ],
+    "contraindications": "Hipersensibilidade grave a penicilinas.",
     "risksByPatient": [],
     "alerts": [
-      "Cobertura seletiva anti-Enterobacterales: NÃO cobre Pseudomonas, Acinetobacter nem anaeróbios.",
-      "Utilidade como poupador de carbapenêmicos em infecções por ESBL documentadas.",
-      "Ajuste renal obrigatório quando ClCr < 50 mL/min."
+      "4 g/dia padrão",
+      "6 g/dia crítico",
+      "CrCl 30–60: 1 g q12h",
+      "CrCl 10–30: 1 g q24h",
+      "Infusão 30–40 min"
     ],
-    "ref": "Sanford Guide 2025 / EUCAST / Livermore DM et al. / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Dose habitual para Enterobacterales multirresistentes."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Reduzir frequência em insuficiência renal moderada."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Ajuste obrigatório."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "48/48h",
-          "doseMaxima": "1 g/dose",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Monitorar acúmulo do fármaco."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "48/48h",
-          "doseMaxima": "1 g/dose",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://www.medicines.org.uk/emc/product/466/smpc",
+      "https://base-donnees-publique.medicaments.gouv.fr/medicament/64732109/extrait",
+      "https://base-donnees-publique.medicaments.gouv.fr/medicament/62424059/extrait",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://academic.oup.com/jac/article/79/9/2204/7710585",
+      "https://pubmed.ncbi.nlm.nih.gov/38985543/",
+      "https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43759",
+      "https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43760",
+      "https://assets.hpra.ie/products/Human/43759/Licence_PA23460-002-001_20022026130002.pdf",
+      "https://assets.hpra.ie/products/Human/43760/Licence_PA23460-002-002_20022026130002.pdf"
+    ],
+    "renalDose": "CrCl >60: 2 g q12h; 30–60: 1 g q12h; 10–30: 1 g q24h; <10: 1 g q48h ou 500 mg q24h.",
+    "pharmacologicClass": "Beta-lactâmico 6-alfa-metoxi estável a muitas ESBL/AmpC",
+    "mechanism": "Liga PBPs e inibe parede; substituição 6-alfa-metoxi aumenta estabilidade a beta-lactamases.",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Enterobacterales suscetíveis; sem cobertura útil de Pseudomonas, Acinetobacter, Gram-positivos ou anaeróbios.",
+    "pharmacokinetics": "Parenteral; eliminada renalmente quase inalterada.",
+    "indications": "Septicemia, UTI e infecção respiratória baixa por bacilos Gram-negativos suscetíveis.",
+    "presentations": [
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "SmPC HPRA 20/02/2026 — população pediátrica: 25–50 mg/kg/dia, divididos em 2 administrações, máximo 4 g/dia. Em infecções graves, recomenda-se a dose mais alta de 50 mg/kg/dia, dividida em 2 administrações. A dose padrão de 25 mg/kg/dia pode ser administrada em 2 doses por via IM ou IV (injeção/infusão); a dose alta de 50 mg/kg/dia é descrita em 2 administrações IV. A via IM deve ser considerada apenas quando a via IV não for viável. O SmPC de 2026 ressalta incerteza sobre a adequação da dose inferior de 25 mg/kg/dia em cada indicação e sobre eventual necessidade de exceder 50 mg/kg/dia em infecções graves ou por cepas multirresistentes; não exceder 50 mg/kg/dia fora de protocolo especializado.",
+    "hepaticDose": "Sem redução necessária com base em experiência limitada.",
+    "commonAdverseEffects": [
+      "Rash",
+      "Náusea",
+      "Diarreia",
+      "Dor local"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Neurotoxicidade por acúmulo",
+      "Citopenias raras"
+    ],
+    "adverseEffects": "Geralmente tolerável; acúmulo em DRC aumenta toxicidade beta-lactâmica.",
+    "interactions": "Cobertura adicional é necessária se Gram-positivo/anaeróbio relevante.",
+    "monitoring": "CrCl, cultura/MIC, resposta e hemograma/fígado em cursos prolongados.",
+    "administration": "IV lenta 3–4 min, infusão 30–40 min, contínua 24 h ou IM.",
+    "preparation": "HPRA 20/02/2026. Injeção IV: reconstituir 1 g com 10 mL ou 2 g com 20 mL de água para injetáveis ou solução salina fisiológica; agitar até obter solução límpida e administrar em 3–4 minutos. Infusão IV intermitente: reconstituir 1 g com 10 mL ou 2 g com 20 mL usando água para injetáveis, NaCl 0,9%, dextrose 5%, Ringer ou Hartmann; após dissolução, diluir em 50, 100 ou 150 mL e infundir em 30–40 minutos. IM: para dose de 1 g, reconstituir com 3 mL de água para injetáveis, solução salina ou lidocaína 0,5–1%; administrar imediatamente; solução com lidocaína nunca deve ser administrada IV. Infusão contínua 6 g/dia: com frascos de 1 g, usar 5 mL de solvente em cada um de 6 frascos; com frascos de 2 g, usar 10 mL em cada um de 3 frascos; reunir e completar para 48 mL com o mesmo solvente, administrar a 2 mL/h por 24 h após dose de ataque de 2 g. Usar técnica asséptica, inspecionar visualmente e utilizar apenas solução límpida, praticamente livre de partículas.",
+    "infusionProtocol": "Intermitente 30–40 min; contínua 4–6 g/24 h após carga 2 g.",
+    "pregnancy": "Dados limitados; usar se benefício superar risco.",
+    "lactation": "Dados limitados.",
+    "specialPopulations": "DRC exige ajuste importante; sem regime pediátrico validado.",
+    "patientEducation": "Explicar espectro dirigido e necessidade de cultura.",
+    "clinicalPearls": "Carbapenem-sparing para Enterobacterales suscetíveis, mas sem Pseudomonas.",
+    "guidelineRecommendations": "Usar com suscetibilidade e epidemiologia local; 4–6 g/dia conforme gravidade/PKPD.",
+    "safetyFlags": [
+      "Enterobacterales dirigido",
+      "Sem Pseudomonas",
+      "Ajuste renal obrigatório",
+      "Carga 2 g contínua",
+      "Pediatria sem regime"
+    ],
+    "references": [
+      "https://www.medicines.org.uk/emc/product/466/smpc",
+      "https://base-donnees-publique.medicaments.gouv.fr/medicament/64732109/extrait",
+      "https://base-donnees-publique.medicaments.gouv.fr/medicament/62424059/extrait",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://academic.oup.com/jac/article/79/9/2204/7710585",
+      "https://pubmed.ncbi.nlm.nih.gov/38985543/",
+      "https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43759",
+      "https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43760",
+      "https://assets.hpra.ie/products/Human/43759/Licence_PA23460-002-001_20022026130002.pdf",
+      "https://assets.hpra.ie/products/Human/43760/Licence_PA23460-002-002_20022026130002.pdf"
+    ]
   },
   "es": {
     "name": "Temocilina",
-    "class": "Penicilina antiestafilocócica modificada (anti-ESBL/KPC sin actividad antianaeróbica)",
-    "commercialNames": {
-      "br": [
-        "Negaban (acesso limitado no Brasil)"
-      ],
-      "ar": [
-        "Negaban"
-      ]
-    },
-    "presentation": [
-      "Polvo para solución inyectable EV/IM: 1 g por frasco (uso hospitalario)"
+    "class": "Penicilina dirigida a Gram negativos",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoEV": "2 g EV 12/12h"
-    },
+    "presentation": "Polvo IV/IM.",
+    "dose": "Normal 4 g/día BID o continua; crítico 6 g/día TID o continua; carga 2 g.",
     "doseKg": null,
     "indication": "Infecciones por Enterobacterales productoras de ESBL o KPC (alternativa a carbapenémicos), ITU complicada, infecciones intraabdominales, bacteriemia por Gramnegativos sensibles. Uso restringido a centros con acceso al fármaco.",
     "spectrum": "Enterobacterales (incluidos productores de ESBL y KPC — excepto NDM y OXA-48 puro), E. coli, Klebsiella pneumoniae, Proteus spp. Naturalmente resistente a Pseudomonas, Acinetobacter y anaerobios. Estable frente a betalactamasas de clase A y C.",
-    "contraindications": [
-      "Hipersensibilidad a penicilinas o cefalosporinas (reacción cruzada)"
-    ],
+    "contraindications": "Hipersensibilidad grave a penicilinas.",
     "risksByPatient": [],
     "alerts": [
-      "Cobertura selectiva anti-Enterobacterales: NO cubre Pseudomonas, Acinetobacter ni anaerobios.",
-      "Utilidad como ahorrador de carbapenémicos en infecciones por ESBL documentadas.",
-      "Ajuste renal obligatorio cuando ClCr < 50 mL/min."
+      "4 g/día estándar",
+      "6 g/día crítico",
+      "ClCr 30–60: 1 g q12h",
+      "ClCr 10–30: 1 g q24h",
+      "Infusión 30–40 min"
     ],
-    "ref": "Sanford Guide 2025 / EUCAST / Livermore DM et al. / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Dosis habitual para Enterobacterales multirresistentes."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "2 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Reducir frecuencia en insuficiencia renal moderada."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Ajuste obligatorio."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "48/48h",
-          "doseMaxima": "1 g/dose",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Monitorizar acumulación del fármaco."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "48/48h",
-          "doseMaxima": "1 g/dose",
-          "unidade": "g"
-        },
-        "pediatrica": null,
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://www.medicines.org.uk/emc/product/466/smpc",
+      "https://base-donnees-publique.medicaments.gouv.fr/medicament/64732109/extrait",
+      "https://base-donnees-publique.medicaments.gouv.fr/medicament/62424059/extrait",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://academic.oup.com/jac/article/79/9/2204/7710585",
+      "https://pubmed.ncbi.nlm.nih.gov/38985543/",
+      "https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43759",
+      "https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43760",
+      "https://assets.hpra.ie/products/Human/43759/Licence_PA23460-002-001_20022026130002.pdf",
+      "https://assets.hpra.ie/products/Human/43760/Licence_PA23460-002-002_20022026130002.pdf"
+    ],
+    "renalDose": "ClCr >60: 2 g q12h; 30–60: 1 g q12h; 10–30: 1 g q24h; <10: 1 g q48h o 500 mg q24h.",
+    "pharmacologicClass": "Beta-lactámico 6-alfa-metoxi estable frente a muchas ESBL/AmpC",
+    "mechanism": "Se une a PBPs; sustitución 6-alfa-metoxi aumenta estabilidad.",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Enterobacterales; sin Pseudomonas, Acinetobacter, Gram positivos o anaerobios.",
+    "pharmacokinetics": "Parenteral; eliminación renal casi sin cambios.",
+    "indications": "Septicemia, UTI e infección respiratoria baja por Gram negativos susceptibles.",
+    "presentations": [
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "SmPC HPRA 20/02/2026 — población pediátrica: 25–50 mg/kg/día, divididos en 2 administraciones, máximo 4 g/día. En infecciones graves se recomienda la dosis más alta de 50 mg/kg/día, dividida en 2 administraciones. La dosis estándar de 25 mg/kg/día puede administrarse en 2 dosis por vía IM o IV (inyección/infusión); la dosis alta de 50 mg/kg/día se describe en 2 administraciones IV. La vía IM debe considerarse únicamente cuando la vía IV no sea factible. El SmPC de 2026 señala incertidumbre sobre la adecuación de la dosis inferior de 25 mg/kg/día en cada indicación y sobre la eventual necesidad de superar 50 mg/kg/día en infecciones graves o por cepas multirresistentes; no superar 50 mg/kg/día fuera de un protocolo especializado.",
+    "hepaticDose": "Sin reducción necesaria según experiencia limitada.",
+    "commonAdverseEffects": [
+      "Rash",
+      "Náuseas",
+      "Diarrea",
+      "Dolor local"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Neurotoxicidad por acumulación",
+      "Citopenias raras"
+    ],
+    "adverseEffects": "Generalmente tolerable; ERC aumenta toxicidad.",
+    "interactions": "Añadir cobertura si Gram positivo/anaerobio relevante.",
+    "monitoring": "ClCr, cultivo/MIC, respuesta, hemograma/hígado.",
+    "administration": "IV 3–4 min, infusión 30–40 min, continua o IM.",
+    "preparation": "HPRA 20/02/2026. Inyección IV: reconstituir 1 g con 10 mL o 2 g con 20 mL de agua para inyección o solución salina fisiológica; agitar hasta obtener una solución clara y administrar en 3–4 minutos. Infusión IV intermitente: reconstituir 1 g con 10 mL o 2 g con 20 mL usando agua para inyección, NaCl 0,9%, dextrosa 5%, Ringer o Hartmann; después de la disolución, diluir en 50, 100 o 150 mL e infundir en 30–40 minutos. IM: para una dosis de 1 g, reconstituir con 3 mL de agua para inyección, solución salina o lidocaína 0,5–1%; administrar inmediatamente; la solución con lidocaína nunca debe administrarse por vía IV. Infusión continua 6 g/día: con viales de 1 g, usar 5 mL de solvente en cada uno de 6 viales; con viales de 2 g, usar 10 mL en cada uno de 3 viales; reunir y completar hasta 48 mL con el mismo solvente, administrar a 2 mL/h durante 24 h después de una dosis de carga de 2 g. Usar técnica aséptica, inspeccionar visualmente y utilizar únicamente una solución clara, prácticamente libre de partículas.",
+    "infusionProtocol": "Intermitente 30–40 min; continua 4–6 g/24 h tras carga 2 g.",
+    "pregnancy": "Datos limitados.",
+    "lactation": "Datos limitados.",
+    "specialPopulations": "ERC exige ajuste; sin régimen pediátrico validado.",
+    "patientEducation": "Explicar espectro dirigido.",
+    "clinicalPearls": "Temocilina puede ahorrar carbapenémicos en Enterobacterales susceptibles, pero su espectro es estrecho y no debe asumirse cobertura de Pseudomonas.",
+    "guidelineRecommendations": "Usar solo con susceptibilidad demostrada y epidemiología local favorable; elegir 4–6 g/día y estrategia intermitente o continua según gravedad y objetivo PK/PD.",
+    "safetyFlags": [
+      "Enterobacterales dirigido",
+      "Sin Pseudomonas",
+      "Ajuste renal",
+      "Carga 2 g continua",
+      "Pediatría sin régimen"
+    ],
+    "references": [
+      "https://www.medicines.org.uk/emc/product/466/smpc",
+      "https://base-donnees-publique.medicaments.gouv.fr/medicament/64732109/extrait",
+      "https://base-donnees-publique.medicaments.gouv.fr/medicament/62424059/extrait",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://academic.oup.com/jac/article/79/9/2204/7710585",
+      "https://pubmed.ncbi.nlm.nih.gov/38985543/",
+      "https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43759",
+      "https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43760",
+      "https://assets.hpra.ie/products/Human/43759/Licence_PA23460-002-001_20022026130002.pdf",
+      "https://assets.hpra.ie/products/Human/43760/Licence_PA23460-002-002_20022026130002.pdf"
+    ]
   },
   "name": {
     "pt": "Temocilina",
@@ -194,8 +190,8 @@
     "negaban",
     "penicilina antiestafilococica modificada (anti-esbl/kpc sem atividade antianaerobia)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-e807fcb055dd1f51",
+  "clinicalContentSha256": "e807fcb055dd1f5169201f51432d6886dcebb9213e51c03f7118fe2b200483b7",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

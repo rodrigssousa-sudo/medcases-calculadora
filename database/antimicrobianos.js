@@ -12989,3 +12989,11631 @@ Object.assign(window.ANTIMICROBIANOS_DRUGS_DB, {
 }); /* fim Grupo 19 */
 
 })(); /* fim da IIFE do módulo antimicrobianos */
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP01_V1 — additive source-authority clinical overlay */
+;(function(){
+'use strict';
+var db=window.ANTIMICROBIANOS_DRUGS_DB;
+if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP01_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');
+var gold={
+  "amoxicilina": {
+    "pt": {
+      "name": "Amoxicilina",
+      "class": "Antibiótico beta-lactâmico",
+      "pharmacologicClass": "Aminopenicilina",
+      "mechanism": "Liga-se às PBPs e inibe a transpeptidação do peptidoglicano, interrompendo a síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; eficácia correlaciona-se ao tempo da fração livre acima da MIC (fT>MIC).",
+      "pharmacokinetics": "Boa absorção oral; ampla distribuição; eliminação predominantemente renal. Hemodiálise remove amoxicilina.",
+      "indications": "Infecções por suscetíveis de vias respiratórias, ORL, pele/tecidos moles e trato geniturinário; parte de esquemas para H. pylori.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas/comprimidos e suspensão oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "875 mg em algumas apresentações",
+        "Suspensões orais"
+      ],
+      "dose": "Adultos: leves/moderadas 500 mg VO q12h ou 250 mg q8h; graves/trato respiratório inferior 875 mg q12h ou 500 mg q8h.",
+      "pediatricDose": ">3 meses: 20–45 mg/kg/dia divididos q8–12h; <=12 semanas: máximo 30 mg/kg/dia dividido q12h.",
+      "renalDose": "TFG 10–30: 250–500 mg q12h; <10: 250–500 mg q24h; hemodiálise q24h com dose adicional durante e ao final. Evitar 875 mg se TFG <30.",
+      "hepaticDose": "Sem ajuste rotineiro definido para hepatopatia isolada; monitorar se doença hepática relevante ou curso prolongado.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+      "monitoring": "Resposta clínica/culturas; função renal; hemograma e função hepática em cursos prolongados; vigiar C. difficile.",
+      "administration": "VO com ou sem alimento; manter intervalos regulares.",
+      "preparation": "Reconstituir suspensão conforme fabricante; agitar antes de cada dose.",
+      "infusionProtocol": "Não aplicável às formulações orais deste registro.",
+      "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+      "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "DRC exige ajuste; idosos/críticos requerem reavaliação renal; obesidade/hiperfiltração podem alterar exposição.",
+      "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+      "clinicalPearls": "Espectro útil contra estreptococos e outros suscetíveis; não cobre MRSA nem Pseudomonas e é vulnerável a muitas beta-lactamases.",
+      "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal quando aplicável",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Confirmar foco e suscetibilidade",
+        "Reavaliar dose se função renal mudar"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82c0c5d1-df2d-4352-bd12-99f955af569e",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82c0c5d1-df2d-4352-bd12-99f955af569e",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    },
+    "es": {
+      "name": "Amoxicilina",
+      "class": "Antibiótico betalactámico",
+      "pharmacologicClass": "Aminopenicilina",
+      "mechanism": "Se une a las PBP e inhibe la transpeptidación del peptidoglicano, interrumpiendo la síntesis de la pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; eficacia correlacionada con el tiempo libre por encima de la MIC (fT>MIC).",
+      "pharmacokinetics": "Buena absorción oral; amplia distribución; eliminación predominantemente renal. La hemodiálisis elimina amoxicilina.",
+      "indications": "Infecciones por susceptibles de vías respiratorias, ORL, piel/tejidos blandos y tracto genitourinario; parte de esquemas para H. pylori.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas/comprimidos y suspensión oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "875 mg en algunas presentaciones",
+        "Suspensiones orales"
+      ],
+      "dose": "Adultos: leves/moderadas 500 mg VO q12h o 250 mg q8h; graves/vía respiratoria inferior 875 mg q12h o 500 mg q8h.",
+      "pediatricDose": ">3 meses: 20–45 mg/kg/día divididos q8–12h; <=12 semanas: máximo 30 mg/kg/día dividido q12h.",
+      "renalDose": "TFG 10–30: 250–500 mg q12h; <10: 250–500 mg q24h; hemodiálisis q24h con dosis adicional durante y al final. Evitar 875 mg si TFG <30.",
+      "hepaticDose": "Sin ajuste rutinario definido en hepatopatía aislada; monitorizar si hepatopatía relevante o curso prolongado.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Exantema"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidad por acumulación"
+      ],
+      "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+      "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+      "monitoring": "Respuesta clínica/cultivos; función renal; hemograma y función hepática en cursos prolongados; vigilar C. difficile.",
+      "administration": "VO con o sin alimentos; mantener intervalos regulares.",
+      "preparation": "Reconstituir la suspensión según fabricante; agitar antes de cada dosis.",
+      "infusionProtocol": "No aplicable a las formulaciones orales de este registro.",
+      "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+      "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+      "specialPopulations": "ERC requiere ajuste; ancianos/críticos requieren reevaluación renal; obesidad/hiperfiltración pueden alterar exposición.",
+      "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+      "clinicalPearls": "Espectro útil contra estreptococos y otros susceptibles; no cubre MRSA ni Pseudomonas y es vulnerable a muchas betalactamasas.",
+      "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal cuando corresponda",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Confirmar foco y susceptibilidad",
+        "Reevaluar dosis si cambia la función renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82c0c5d1-df2d-4352-bd12-99f955af569e",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82c0c5d1-df2d-4352-bd12-99f955af569e",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    }
+  },
+  "ampicilina": {
+    "pt": {
+      "name": "Ampicilina",
+      "class": "Antibiótico beta-lactâmico",
+      "pharmacologicClass": "Aminopenicilina",
+      "mechanism": "Liga-se às PBPs e bloqueia a transpeptidação do peptidoglicano, causando lise bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; otimização de fT>MIC é relevante em infecção grave.",
+      "pharmacokinetics": "IV/IM; ampla distribuição, penetração no LCR com meninges inflamadas e eliminação principalmente renal; é dialisável.",
+      "indications": "Infecções por suscetíveis, incluindo Enterococcus faecalis e Listeria; meningite e sepse conforme etiologia.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frascos-ampola para IV/IM.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: meningite/septicemia 150–200 mg/kg/dia divididos q3–4h; outros focos usam doses menores conforme protocolo.",
+      "pediatricDose": "Crianças: meningite/septicemia 150–200 mg/kg/dia q3–4h. Neonatos: 100–150 mg/kg/dia com intervalos de 8–12 h conforme idade gestacional/pós-natal.",
+      "renalDose": "Requer ampliação de intervalo/redução em insuficiência renal importante; hemodiálise remove ampicilina. Usar tabela renal institucional validada pelo foco.",
+      "hepaticDose": "Sem ajuste rotineiro na hepatopatia isolada; monitorar em terapia prolongada.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+      "monitoring": "Culturas, resposta, função renal, hemograma e função hepática; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "IV ou IM; meningite/sepse devem iniciar por IV.",
+      "preparation": "Reconstituir com diluente compatível e respeitar estabilidade curta após preparo.",
+      "infusionProtocol": "Tempo-dependente; em críticos pode-se considerar infusão prolongada se estabilidade/protocolo permitirem, sem atrasar dose inicial.",
+      "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+      "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "Neonatos requerem intervalos próprios; DRC exige individualização; obesidade/hiperfiltração podem alterar exposição.",
+      "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+      "clinicalPearls": "Importante para Listeria e E. faecalis suscetível; não cobre MRSA nem Pseudomonas e é vulnerável a beta-lactamases.",
+      "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal quando aplicável",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Confirmar foco e suscetibilidade",
+        "Reavaliar dose se função renal mudar"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06ca924c-5f3a-4924-90f4-5ba623daaa0e",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06ca924c-5f3a-4924-90f4-5ba623daaa0e",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    },
+    "es": {
+      "name": "Ampicilina",
+      "class": "Antibiótico betalactámico",
+      "pharmacologicClass": "Aminopenicilina",
+      "mechanism": "Se une a las PBP y bloquea la transpeptidación del peptidoglicano, causando lisis bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; optimizar fT>MIC es relevante en infección grave.",
+      "pharmacokinetics": "IV/IM; amplia distribución, penetración en LCR con meninges inflamadas y eliminación renal; es dializable.",
+      "indications": "Infecciones por susceptibles, incluyendo Enterococcus faecalis y Listeria; meningitis y sepsis según etiología.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Viales para IV/IM.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: meningitis/septicemia 150–200 mg/kg/día divididos q3–4h; otros focos usan dosis menores según protocolo.",
+      "pediatricDose": "Niños: meningitis/septicemia 150–200 mg/kg/día q3–4h. Neonatos: 100–150 mg/kg/día con intervalos 8–12 h según edad gestacional/posnatal.",
+      "renalDose": "Requiere ampliar intervalo/reducir en insuficiencia renal importante; hemodiálisis elimina ampicilina. Usar tabla renal institucional validada por foco.",
+      "hepaticDose": "Sin ajuste rutinario en hepatopatía aislada; monitorizar en tratamiento prolongado.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Exantema"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidad por acumulación"
+      ],
+      "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+      "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+      "monitoring": "Cultivos, respuesta, función renal, hemograma y función hepática; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "IV o IM; meningitis/sepsis deben iniciar por IV.",
+      "preparation": "Reconstituir con diluyente compatible y respetar estabilidad corta pospreparación.",
+      "infusionProtocol": "Dependiente del tiempo; en críticos puede considerarse infusión prolongada si estabilidad/protocolo lo permiten, sin retrasar dosis inicial.",
+      "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+      "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+      "specialPopulations": "Neonatos requieren intervalos propios; ERC exige individualización; obesidad/hiperfiltración pueden alterar exposición.",
+      "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+      "clinicalPearls": "Importante para Listeria y E. faecalis susceptible; no cubre MRSA ni Pseudomonas y es vulnerable a betalactamasas.",
+      "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal cuando corresponda",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Confirmar foco y susceptibilidad",
+        "Reevaluar dosis si cambia la función renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06ca924c-5f3a-4924-90f4-5ba623daaa0e",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06ca924c-5f3a-4924-90f4-5ba623daaa0e",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    }
+  },
+  "ampicilina_sulbactam": {
+    "pt": {
+      "name": "Ampicilina/sulbactam",
+      "class": "Beta-lactâmico com inibidor de beta-lactamase",
+      "pharmacologicClass": "Aminopenicilina + sulbactam",
+      "mechanism": "Ampicilina inibe PBPs; sulbactam inibe beta-lactamases de serina e tem atividade intrínseca contra algumas Acinetobacter, dependente de exposição/suscetibilidade.",
+      "pharmacodynamics": "Tempo-dependente (fT>MIC); exposição ao sulbactam também importa para atividade contra Acinetobacter.",
+      "pharmacokinetics": "IV/IM; ambos têm eliminação renal importante e meia-vida prolongada na DRC.",
+      "indications": "Pele/tecidos moles, intra-abdominais e ginecológicas por suscetíveis; outros focos conforme cultura/protocolo.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frascos combinados 2:1.",
+      "presentations": [
+        "1,5 g (1/0,5 g)",
+        "3 g (2/1 g)"
+      ],
+      "dose": "Adultos: 1,5–3 g IV/IM q6–8h; máximo rotulado de sulbactam 4 g/dia no esquema convencional.",
+      "pediatricDose": ">=1 ano: 300 mg/kg/dia do produto total IV q6h (200 mg/kg/dia ampicilina + 100 mg/kg/dia sulbactam); >=40 kg dose adulta.",
+      "renalDose": "ClCr >=30: 1,5–3 g q6–8h; 15–29: q12h; 5–14: q24h.",
+      "hepaticDose": "Sem ajuste específico na hepatopatia isolada; monitorar em cursos prolongados.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+      "monitoring": "Culturas, resposta, função renal/hepática e hemograma; vigiar C. difficile e neurotoxicidade.",
+      "administration": "IV por infusão ou IM; em grave preferir IV. Ver compatibilidade se houver aminoglicosídeo.",
+      "preparation": "Reconstituir/diluir conforme fabricante e estabilidade.",
+      "infusionProtocol": "Infusão padrão rotulada; em críticos, infusão prolongada pode ser considerada se estabilidade e protocolo permitirem.",
+      "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+      "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "DRC exige redução de frequência. Não assumir atividade contra Acinetobacter sem suscetibilidade/regime apropriado.",
+      "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+      "clinicalPearls": "Cobre anaeróbios e vários produtores de beta-lactamase suscetíveis; não cobre Pseudomonas nem MRSA.",
+      "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal quando aplicável",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Confirmar foco e suscetibilidade",
+        "Reavaliar dose se função renal mudar"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc374fa4-350b-425d-a7db-7099fdc64cf1",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc374fa4-350b-425d-a7db-7099fdc64cf1",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    },
+    "es": {
+      "name": "Ampicilina/sulbactam",
+      "class": "Betalactámico con inhibidor de betalactamasa",
+      "pharmacologicClass": "Aminopenicilina + sulbactam",
+      "mechanism": "Ampicilina inhibe PBP; sulbactam inhibe betalactamasas de serina y tiene actividad intrínseca frente a algunas Acinetobacter según exposición/susceptibilidad.",
+      "pharmacodynamics": "Dependiente del tiempo (fT>MIC); la exposición a sulbactam también importa frente a Acinetobacter.",
+      "pharmacokinetics": "IV/IM; ambos tienen eliminación renal importante y semivida prolongada en ERC.",
+      "indications": "Piel/tejidos blandos, intraabdominales y ginecológicas por susceptibles; otros focos según cultivo/protocolo.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Viales combinados 2:1.",
+      "presentations": [
+        "1,5 g (1/0,5 g)",
+        "3 g (2/1 g)"
+      ],
+      "dose": "Adultos: 1,5–3 g IV/IM q6–8h; máximo rotulado de sulbactam 4 g/día en esquema convencional.",
+      "pediatricDose": ">=1 año: 300 mg/kg/día de producto total IV q6h (200 mg/kg/día ampicilina + 100 mg/kg/día sulbactam); >=40 kg dosis adulta.",
+      "renalDose": "ClCr >=30: 1,5–3 g q6–8h; 15–29: q12h; 5–14: q24h.",
+      "hepaticDose": "Sin ajuste específico en hepatopatía aislada; monitorizar en cursos prolongados.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Exantema"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidad por acumulación"
+      ],
+      "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+      "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+      "monitoring": "Cultivos, respuesta, función renal/hepática y hemograma; vigilar C. difficile y neurotoxicidad.",
+      "administration": "IV por infusión o IM; en grave preferir IV. Revisar compatibilidad si hay aminoglucósido.",
+      "preparation": "Reconstituir/diluir según fabricante y estabilidad.",
+      "infusionProtocol": "Infusión estándar rotulada; en críticos puede considerarse infusión prolongada si estabilidad/protocolo lo permiten.",
+      "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+      "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+      "specialPopulations": "ERC requiere menor frecuencia. No asumir actividad contra Acinetobacter sin susceptibilidad/régimen adecuado.",
+      "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+      "clinicalPearls": "Cubre anaerobios y varios productores de betalactamasa susceptibles; no cubre Pseudomonas ni MRSA.",
+      "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal cuando corresponda",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Confirmar foco y susceptibilidad",
+        "Reevaluar dosis si cambia la función renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc374fa4-350b-425d-a7db-7099fdc64cf1",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dc374fa4-350b-425d-a7db-7099fdc64cf1",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    }
+  },
+  "penicilina_g": {
+    "pt": {
+      "name": "Penicilina G",
+      "class": "Antibiótico beta-lactâmico",
+      "pharmacologicClass": "Penicilina natural",
+      "mechanism": "Liga PBPs e inibe a síntese do peptidoglicano da parede.",
+      "pharmacodynamics": "Bactericida tempo-dependente; eficácia ligada a fT>MIC.",
+      "pharmacokinetics": "Parenteral; meia-vida curta, doses frequentes e eliminação renal predominante.",
+      "indications": "Infecções graves por estreptococos/pneumococos e outros organismos altamente suscetíveis; meningococo, sífilis/neurosífilis, actinomicose e indicações específicas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para IV/IM expresso em milhões de unidades.",
+      "presentations": [
+        "Frascos em múltiplas potências de UI"
+      ],
+      "dose": "Adultos: estreptocócicas graves 12–24 milhões UI/dia divididos q4–6h; meningococcemia/meningite pode usar 24 milhões UI/dia q2h.",
+      "pediatricDose": "Graves suscetíveis 150.000–300.000 UI/kg/dia q4–6h; meningite pneumocócica/meningocócica 250.000 UI/kg/dia q4h, máximo 12–20 milhões UI/dia.",
+      "renalDose": "ClCr <10: carga completa, depois metade a cada 8–10h; urêmicos com ClCr >10: carga completa, depois metade q4–5h.",
+      "hepaticDose": "Sem ajuste isolado rotineiro; se hepatopatia coexistir com DRC pode ser necessário ajuste adicional.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Convulsões/encefalopatia por altas doses",
+        "Hipercalemia com sal potássico",
+        "C. difficile"
+      ],
+      "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+      "monitoring": "Culturas/resposta, função renal, eletrólitos e sinais neurológicos em altas doses; hemograma em terapia prolongada.",
+      "administration": "IV ou IM; manter intervalos frequentes pela meia-vida curta.",
+      "preparation": "Reconstituir/diluir conforme formulação; considerar carga de potássio/sódio por milhão de unidades.",
+      "infusionProtocol": "Administrar conforme bula; estratégias PK/PD podem ser individualizadas em críticos respeitando estabilidade.",
+      "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+      "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "DRC grave aumenta neurotoxicidade; na forma potássica atenção a hipercalemia.",
+      "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+      "clinicalPearls": "Excelente contra estreptococos e espiroquetas suscetíveis; não cobre MRSA, Pseudomonas ou estafilococos produtores de penicilinase.",
+      "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal quando aplicável",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Doses expressas em unidades: evitar erro de conversão",
+        "Monitorar potássio na formulação potássica em altas doses"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e0ced9d8-b9ea-466e-bf2c-10e9cc636f3f",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e0ced9d8-b9ea-466e-bf2c-10e9cc636f3f",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    },
+    "es": {
+      "name": "Penicilina G",
+      "class": "Antibiótico betalactámico",
+      "pharmacologicClass": "Penicilina natural",
+      "mechanism": "Se une a PBP e inhibe síntesis del peptidoglicano de la pared.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; eficacia ligada a fT>MIC.",
+      "pharmacokinetics": "Parenteral; semivida corta, dosis frecuentes y eliminación renal predominante.",
+      "indications": "Infecciones graves por estreptococos/neumococos y otros muy susceptibles; meningococo, sífilis/neurosífilis, actinomicosis e indicaciones específicas.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo IV/IM expresado en millones de unidades.",
+      "presentations": [
+        "Viales en múltiples potencias de UI"
+      ],
+      "dose": "Adultos: estreptocócicas graves 12–24 millones UI/día divididos q4–6h; meningococemia/meningitis puede usar 24 millones UI/día q2h.",
+      "pediatricDose": "Graves susceptibles 150.000–300.000 UI/kg/día q4–6h; meningitis neumocócica/meningocócica 250.000 UI/kg/día q4h, máximo 12–20 millones UI/día.",
+      "renalDose": "ClCr <10: carga completa, luego mitad cada 8–10h; urémicos con ClCr >10: carga completa, luego mitad q4–5h.",
+      "hepaticDose": "Sin ajuste aislado rutinario; si hepatopatía coexiste con ERC puede requerir ajuste adicional.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Exantema"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Convulsiones/encefalopatía por dosis altas",
+        "Hiperpotasemia con sal potásica",
+        "C. difficile"
+      ],
+      "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+      "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+      "monitoring": "Cultivos/respuesta, función renal, electrolitos y signos neurológicos con dosis altas; hemograma en tratamiento prolongado.",
+      "administration": "IV o IM; mantener intervalos frecuentes por semivida corta.",
+      "preparation": "Reconstituir/diluir según formulación; considerar carga de potasio/sodio por millón de unidades.",
+      "infusionProtocol": "Administrar según ficha; estrategias PK/PD pueden individualizarse en críticos respetando estabilidad.",
+      "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+      "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+      "specialPopulations": "ERC grave aumenta neurotoxicidad; con sal potásica vigilar hiperpotasemia.",
+      "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+      "clinicalPearls": "Excelente contra estreptococos y espiroquetas susceptibles; no cubre MRSA, Pseudomonas ni estafilococos productores de penicilinasa.",
+      "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal cuando corresponda",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Dosis expresadas en unidades: evitar error de conversión",
+        "Controlar potasio con formulación potásica a dosis altas"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e0ced9d8-b9ea-466e-bf2c-10e9cc636f3f",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=e0ced9d8-b9ea-466e-bf2c-10e9cc636f3f",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    }
+  },
+  "oxacilina": {
+    "pt": {
+      "name": "Oxacilina",
+      "class": "Antibiótico beta-lactâmico",
+      "pharmacologicClass": "Penicilina antiestafilocócica resistente à penicilinase",
+      "mechanism": "Inibe PBPs e síntese da parede; estabilidade à penicilinase permite atividade contra MSSA.",
+      "pharmacodynamics": "Bactericida tempo-dependente; exposição ligada a fT>MIC.",
+      "pharmacokinetics": "Parenteral; alta ligação proteica; eliminação renal e biliar/hepática.",
+      "indications": "Infecções por MSSA e outros cocos Gram-positivos suscetíveis, incluindo bacteremia/endocardite, pele e osso.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frascos para IV/IM.",
+      "presentations": [
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: 250–500 mg q4–6h leves/moderadas; 1 g q4–6h graves segundo bula; focos profundos usam protocolos específicos.",
+      "pediatricDose": "<40 kg: 50 mg/kg/dia q6h leves/moderadas; 100 mg/kg/dia q4–6h graves. Prematuros/neonatos: 25 mg/kg/dia no esquema rotulado.",
+      "renalDose": "Geralmente sem ajuste rotineiro por disfunção renal isolada; monitorar rim e exposição em falência multiorgânica.",
+      "hepaticDose": "Doses altas/prolongadas podem causar hepatotoxicidade; monitorar transaminases e individualizar em hepatopatia importante.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Hepatite/lesão hepática",
+        "Neutropenia",
+        "Nefrite intersticial",
+        "C. difficile"
+      ],
+      "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+      "monitoring": "Culturas/clearance de bacteremia, hemograma, função renal e transaminases em cursos prolongados; vigiar flebite/C. difficile.",
+      "administration": "IV preferida em grave; IM possível. Infundir conforme diluição/velocidade do fabricante.",
+      "preparation": "Reconstituir para IV/IM e respeitar estabilidade.",
+      "infusionProtocol": "Infusão intermitente padrão; otimização PK/PD pode ser considerada em infecção grave conforme estabilidade.",
+      "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+      "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "Cursos prolongados exigem hemograma/função hepática; obesidade e endocardite demandam exposição adequada.",
+      "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+      "clinicalPearls": "Direcionada para MSSA; não cobre MRSA, enterococos ou bacilos Gram-negativos.",
+      "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal quando aplicável",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Confirmar foco e suscetibilidade",
+        "Reavaliar dose se função renal mudar"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81e90279-9889-47bd-974b-334c181f295c",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81e90279-9889-47bd-974b-334c181f295c",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    },
+    "es": {
+      "name": "Oxacilina",
+      "class": "Antibiótico betalactámico",
+      "pharmacologicClass": "Penicilina antiestafilocócica resistente a penicilinasa",
+      "mechanism": "Inhibe PBP y síntesis de pared; estabilidad a penicilinasa permite actividad contra MSSA.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; exposición ligada a fT>MIC.",
+      "pharmacokinetics": "Parenteral; alta unión proteica; eliminación renal y biliar/hepática.",
+      "indications": "Infecciones por MSSA y otros cocos Gram positivos susceptibles, incluyendo bacteriemia/endocarditis, piel y hueso.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Viales IV/IM.",
+      "presentations": [
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: 250–500 mg q4–6h leves/moderadas; 1 g q4–6h graves según ficha; focos profundos usan protocolos específicos.",
+      "pediatricDose": "<40 kg: 50 mg/kg/día q6h leves/moderadas; 100 mg/kg/día q4–6h graves. Prematuros/neonatos: 25 mg/kg/día en esquema rotulado.",
+      "renalDose": "Generalmente sin ajuste rutinario por disfunción renal aislada; controlar riñón/exposición en falla multiorgánica.",
+      "hepaticDose": "Dosis altas/prolongadas pueden causar hepatotoxicidad; controlar transaminasas e individualizar en hepatopatía importante.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Exantema"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Hepatitis/lesión hepática",
+        "Neutropenia",
+        "Nefritis intersticial",
+        "C. difficile"
+      ],
+      "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+      "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+      "monitoring": "Cultivos/clearance de bacteriemia, hemograma, función renal y transaminasas en cursos prolongados; vigilar flebitis/C. difficile.",
+      "administration": "IV preferida en grave; IM posible. Infundir según dilución/velocidad del fabricante.",
+      "preparation": "Reconstituir para IV/IM y respetar estabilidad.",
+      "infusionProtocol": "Infusión intermitente estándar; optimización PK/PD puede considerarse en infección grave según estabilidad.",
+      "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+      "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+      "specialPopulations": "Cursos prolongados requieren hemograma/función hepática; obesidad y endocarditis exigen exposición adecuada.",
+      "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+      "clinicalPearls": "Dirigida a MSSA; no cubre MRSA, enterococos ni bacilos Gram negativos.",
+      "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal cuando corresponda",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Confirmar foco y susceptibilidad",
+        "Reevaluar dosis si cambia la función renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81e90279-9889-47bd-974b-334c181f295c",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81e90279-9889-47bd-974b-334c181f295c",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    }
+  },
+  "cefazolina": {
+    "pt": {
+      "name": "Cefazolina",
+      "class": "Antibiótico beta-lactâmico",
+      "pharmacologicClass": "Cefalosporina de 1ª geração",
+      "mechanism": "Liga PBPs e inibe síntese de parede.",
+      "pharmacodynamics": "Bactericida tempo-dependente; eficácia ligada a fT>MIC.",
+      "pharmacokinetics": "IV/IM; alta concentração sérica/tecidual; eliminação renal; penetração inadequada no LCR para meningite.",
+      "indications": "MSSA/estreptococos suscetíveis, algumas Enterobacterales e profilaxia cirúrgica; pele, osso/articulação e bacteremia conforme foco.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frascos para IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: 500 mg–1 g q6–8h em moderadas/graves; 1–1,5 g q6h em potencialmente fatais; alguns protocolos dirigidos usam 2 g q8h.",
+      "pediatricDose": "25–50 mg/kg/dia em 3–4 doses para leves/moderadas; até 100 mg/kg/dia em graves. Segurança em prematuros/neonatos não estabelecida na bula citada.",
+      "renalDose": "ClCr >=55: plena; 35–54: plena com intervalo >=8h; 11–34: metade q12h; <=10: metade q18–24h, após ataque adequado.",
+      "hepaticDose": "Sem ajuste hepático rotineiro; eliminação renal predomina.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+      "monitoring": "Culturas, resposta, função renal e hemograma; vigiar alergia, C. difficile e neurotoxicidade na DRC.",
+      "administration": "IV ou IM; grave preferir IV. Profilaxia cirúrgica deve respeitar tempo da incisão/redose.",
+      "preparation": "Reconstituir/diluir conforme via e fabricante.",
+      "infusionProtocol": "Infusão intermitente padrão; prolongada pode ser considerada em contextos selecionados se estabilidade permitir.",
+      "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+      "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "DRC exige ajuste; obesidade pode exigir dose de profilaxia maior conforme protocolo.",
+      "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+      "clinicalPearls": "Excelente para MSSA/estreptococos; não cobre MRSA, Enterococcus ou Pseudomonas e não deve ser usada para meningite.",
+      "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal quando aplicável",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Confirmar foco e suscetibilidade",
+        "Reavaliar dose se função renal mudar"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=197d5702-2c20-480e-8246-4d0d21f871be",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=197d5702-2c20-480e-8246-4d0d21f871be",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    },
+    "es": {
+      "name": "Cefazolina",
+      "class": "Antibiótico betalactámico",
+      "pharmacologicClass": "Cefalosporina de 1ª generación",
+      "mechanism": "Se une a PBP e inhibe síntesis de pared.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; eficacia ligada a fT>MIC.",
+      "pharmacokinetics": "IV/IM; alta concentración sérica/tisular; eliminación renal; penetración insuficiente en LCR para meningitis.",
+      "indications": "MSSA/estreptococos susceptibles, algunas Enterobacterales y profilaxis quirúrgica; piel, hueso/articulación y bacteriemia según foco.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Viales IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: 500 mg–1 g q6–8h en moderadas/graves; 1–1,5 g q6h en potencialmente mortales; algunos protocolos dirigidos usan 2 g q8h.",
+      "pediatricDose": "25–50 mg/kg/día en 3–4 dosis para leves/moderadas; hasta 100 mg/kg/día en graves. Seguridad en prematuros/neonatos no establecida en la ficha citada.",
+      "renalDose": "ClCr >=55: plena; 35–54: plena con intervalo >=8h; 11–34: mitad q12h; <=10: mitad q18–24h, tras carga adecuada.",
+      "hepaticDose": "Sin ajuste hepático rutinario; predomina eliminación renal.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Exantema"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidad por acumulación"
+      ],
+      "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+      "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+      "monitoring": "Cultivos, respuesta, función renal y hemograma; vigilar alergia, C. difficile y neurotoxicidad en ERC.",
+      "administration": "IV o IM; grave preferir IV. Profilaxis quirúrgica debe respetar tiempo de incisión/redosis.",
+      "preparation": "Reconstituir/diluir según vía y fabricante.",
+      "infusionProtocol": "Infusión intermitente estándar; prolongada puede considerarse en contextos seleccionados si estabilidad lo permite.",
+      "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+      "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+      "specialPopulations": "ERC requiere ajuste; obesidad puede requerir mayor dosis de profilaxis según protocolo.",
+      "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+      "clinicalPearls": "Excelente para MSSA/estreptococos; no cubre MRSA, Enterococcus ni Pseudomonas y no debe usarse para meningitis.",
+      "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal cuando corresponda",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Confirmar foco y susceptibilidad",
+        "Reevaluar dosis si cambia la función renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=197d5702-2c20-480e-8246-4d0d21f871be",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=197d5702-2c20-480e-8246-4d0d21f871be",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    }
+  },
+  "cefotaxima": {
+    "pt": {
+      "name": "Cefotaxima",
+      "class": "Antibiótico beta-lactâmico",
+      "pharmacologicClass": "Cefalosporina de 3ª geração",
+      "mechanism": "Liga PBPs e inibe síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; eficácia depende de fT>MIC.",
+      "pharmacokinetics": "IV/IM; metabolizada parcialmente a desacetil-cefotaxima ativa; eliminação predominantemente renal; boa penetração no LCR.",
+      "indications": "Infecções moderadas/graves, sepse e meningite por suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frascos para IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: não complicadas 1 g q12h; moderadas/graves 1–2 g q8h; sepse 2 g q6–8h; potencialmente fatais 2 g q4h; máximo 12 g/dia.",
+      "pediatricDose": "<50 kg: 50–180 mg/kg/dia divididos em 4–6 doses; usar faixa alta em grave/meningite. >=50 kg: dose adulta.",
+      "renalDose": "Se ClCr <20 mL/min/1,73 m², reduzir dose total aproximadamente 50% e individualizar pela gravidade.",
+      "hepaticDose": "Sem ajuste hepático rotineiro; monitorar em hepatopatia importante/curso prolongado.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+      "monitoring": "Culturas/resposta, função renal, hemograma e função hepática; vigiar neurotoxicidade e rim se associado a aminoglicosídeo.",
+      "administration": "IV ou IM; sepse/meningite usar IV.",
+      "preparation": "Reconstituir/diluir conforme apresentação e compatibilidade.",
+      "infusionProtocol": "Infusão intermitente padrão; prolongada pode ser considerada em críticos se estabilidade permitir.",
+      "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+      "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "DRC exige redução; hiperfiltração em críticos pode causar subexposição.",
+      "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+      "clinicalPearls": "Boa penetração no SNC e amplo Gram-negativo, mas sem cobertura confiável de Pseudomonas, Enterococcus ou MRSA.",
+      "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal quando aplicável",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Confirmar foco e suscetibilidade",
+        "Reavaliar dose se função renal mudar"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef1a6dc6-bc3d-4f09-8f92-7ff328f56561",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef1a6dc6-bc3d-4f09-8f92-7ff328f56561",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    },
+    "es": {
+      "name": "Cefotaxima",
+      "class": "Antibiótico betalactámico",
+      "pharmacologicClass": "Cefalosporina de 3ª generación",
+      "mechanism": "Se une a PBP e inhibe síntesis de pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; eficacia depende de fT>MIC.",
+      "pharmacokinetics": "IV/IM; metabolizada parcialmente a desacetil-cefotaxima activa; eliminación renal; buena penetración en LCR.",
+      "indications": "Infecciones moderadas/graves, sepsis y meningitis por susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Viales IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: no complicadas 1 g q12h; moderadas/graves 1–2 g q8h; sepsis 2 g q6–8h; potencialmente mortales 2 g q4h; máximo 12 g/día.",
+      "pediatricDose": "<50 kg: 50–180 mg/kg/día divididos en 4–6 dosis; usar rango alto en grave/meningitis. >=50 kg: dosis adulta.",
+      "renalDose": "Si ClCr <20 mL/min/1,73 m², reducir dosis total aproximadamente 50% e individualizar según gravedad.",
+      "hepaticDose": "Sin ajuste hepático rutinario; monitorizar en hepatopatía importante/curso prolongado.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Exantema"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR/SJS-TEN",
+        "Neurotoxicidad por acumulación"
+      ],
+      "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+      "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+      "monitoring": "Cultivos/respuesta, función renal, hemograma y función hepática; vigilar neurotoxicidad y riñón si se asocia a aminoglucósido.",
+      "administration": "IV o IM; sepsis/meningitis usar IV.",
+      "preparation": "Reconstituir/diluir según presentación y compatibilidad.",
+      "infusionProtocol": "Infusión intermitente estándar; prolongada puede considerarse en críticos si estabilidad lo permite.",
+      "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+      "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+      "specialPopulations": "ERC exige reducción; hiperfiltración en críticos puede causar subexposición.",
+      "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+      "clinicalPearls": "Buena penetración en SNC y amplio Gram negativo, pero sin cobertura confiable de Pseudomonas, Enterococcus o MRSA.",
+      "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal cuando corresponda",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Confirmar foco y susceptibilidad",
+        "Reevaluar dosis si cambia la función renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef1a6dc6-bc3d-4f09-8f92-7ff328f56561",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef1a6dc6-bc3d-4f09-8f92-7ff328f56561",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      ]
+    }
+  }
+};
+Object.keys(gold).forEach(function(id){
+ if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP01_V1: missing owner '+id+' in ANTIMICROBIANOS_DRUGS_DB');
+ db[id].mcGoldClinicalV1=gold[id];
+});
+})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP02_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP02_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "cefalexina": {
+    "pt": {
+      "name": "Cefalexina",
+      "class": "Antibiótico beta-lactâmico",
+      "pharmacologicClass": "Cefalosporina de 1ª geração oral",
+      "mechanism": "Liga-se às PBPs e inibe a transpeptidação do peptidoglicano, interrompendo a síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; a eficácia se relaciona ao tempo da fração livre acima da MIC (fT>MIC).",
+      "pharmacokinetics": "Boa absorção oral; pouca metabolização; eliminação predominantemente renal.",
+      "indications": "Faringite estreptocócica, pele/tecidos moles, otite e infecções geniturinárias por organismos suscetíveis; terapia dirigida para MSSA/estreptococos em focos apropriados.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas/comprimidos e suspensão oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "750 mg em alguns fabricantes",
+        "Suspensão oral"
+      ],
+      "dose": "Adultos/adolescentes >=15 anos: 250 mg VO a cada 6 h ou 500 mg a cada 12 h; graves podem exigir até 4 g/dia divididos.",
+      "pediatricDose": ">1 ano: 25–50 mg/kg/dia VO divididos; graves 50–100 mg/kg/dia; otite 75–100 mg/kg/dia.",
+      "renalDose": "CrCl >60: sem ajuste; 30–59: máximo 1 g/dia; 15–29: 250 mg q8–12h; 5–14: 250 mg q24h; 1–4: 250 mg q48–60h. Dados insuficientes para esquema rotulado em hemodiálise.",
+      "hepaticDose": "Sem ajuste hepático rotineiro específico; eliminação renal predomina.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidade/convulsões em exposição excessiva"
+      ],
+      "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+      "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+      "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "VO, com ou sem alimentos; manter intervalos regulares.",
+      "preparation": "Reconstituir suspensão conforme fabricante e agitar antes de cada dose.",
+      "infusionProtocol": "Não aplicável: formulação oral.",
+      "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+      "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "Idosos exigem revisão de função renal; não é opção para meningite ou infecção invasiva que exija terapia parenteral.",
+      "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+      "clinicalPearls": "Boa atividade contra estreptococos e MSSA suscetível; não cobre MRSA, Pseudomonas ou Enterococcus e não é confiável contra ESBL.",
+      "guidelineRecommendations": "Stewardship: preferir terapia oral estreita quando foco e suscetibilidade permitirem; não ampliar espectro sem indicação microbiológica.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Não usar para MRSA ou Pseudomonas",
+        "Ajustar na DRC",
+        "Sem recomendação rotulada de hemodiálise"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4fec8daf-6e09-4153-926f-64709dbdd26c",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4fec8daf-6e09-4153-926f-64709dbdd26c",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Cefalexina",
+      "class": "Antibiótico betalactámico",
+      "pharmacologicClass": "Cefalosporina oral de 1ª generación",
+      "mechanism": "Se une a las PBP e inhibe la transpeptidación del peptidoglicano, interrumpiendo la síntesis de pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; la eficacia se relaciona con el tiempo de fracción libre por encima de la MIC (fT>MIC).",
+      "pharmacokinetics": "Buena absorción oral; poco metabolismo; eliminación predominantemente renal.",
+      "indications": "Faringitis estreptocócica, piel/tejidos blandos, otitis e infecciones genitourinarias por organismos susceptibles; terapia dirigida para MSSA/estreptococos en focos apropiados.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas/comprimidos y suspensión oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "750 mg en algunos fabricantes",
+        "Suspensión oral"
+      ],
+      "dose": "Adultos/adolescentes >=15 años: 250 mg VO cada 6 h o 500 mg cada 12 h; graves pueden requerir hasta 4 g/día divididos.",
+      "pediatricDose": ">1 año: 25–50 mg/kg/día VO divididos; graves 50–100 mg/kg/día; otitis 75–100 mg/kg/día.",
+      "renalDose": "ClCr >60: sin ajuste; 30–59: máximo 1 g/día; 15–29: 250 mg q8–12h; 5–14: 250 mg q24h; 1–4: 250 mg q48–60h. Datos insuficientes para esquema rotulado en hemodiálisis.",
+      "hepaticDose": "Sin ajuste hepático rutinario específico; predomina eliminación renal.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Exantema",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidad/convulsiones por exposición excesiva"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+      "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+      "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "VO, con o sin alimentos; mantener intervalos regulares.",
+      "preparation": "Reconstituir suspensión según fabricante y agitar antes de cada dosis.",
+      "infusionProtocol": "No aplicable: formulación oral.",
+      "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+      "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+      "specialPopulations": "Ancianos requieren revisión de función renal; no es opción para meningitis ni infección invasiva que requiera terapia parenteral.",
+      "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+      "clinicalPearls": "Buena actividad frente a estreptococos y MSSA susceptible; no cubre MRSA, Pseudomonas ni Enterococcus y no es confiable frente a ESBL.",
+      "guidelineRecommendations": "Stewardship: preferir terapia oral estrecha cuando foco y susceptibilidad lo permitan; no ampliar espectro sin indicación microbiológica.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "No usar para MRSA o Pseudomonas",
+        "Ajustar en ERC",
+        "Sin recomendación rotulada de hemodiálisis"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4fec8daf-6e09-4153-926f-64709dbdd26c",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4fec8daf-6e09-4153-926f-64709dbdd26c",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "cefuroxima": {
+    "pt": {
+      "name": "Cefuroxima",
+      "class": "Antibiótico beta-lactâmico",
+      "pharmacologicClass": "Cefalosporina de 2ª geração; axetil oral / sódica parenteral",
+      "mechanism": "Liga PBPs e inibe síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente (fT>MIC).",
+      "pharmacokinetics": "Axetil é pró-fármaco oral; cefuroxima sódica é IV/IM. Eliminação renal predominante e dialisável.",
+      "indications": "Infecções respiratórias, pele, urinárias e outras por suscetíveis; forma parenteral para quadros moderados/graves e profilaxia cirúrgica.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos/suspensão de axetil e frascos IV/IM de cefuroxima sódica.",
+      "presentations": [
+        "250 mg e 500 mg VO",
+        "Suspensão oral",
+        "750 mg e 1,5 g IV/IM"
+      ],
+      "dose": "VO: 250–500 mg q12h conforme foco. IV/IM: 750 mg–1,5 g q8h; graves 1,5 g q6h; meningite até 3 g q8h.",
+      "pediatricDose": "Dose depende de foco, idade e via; não extrapolar entre axetil oral e cefuroxima sódica parenteral.",
+      "renalDose": "VO: CrCl 10–<30, dose padrão q24h; <10, q48h; HD, dose extra pós-HD. IV: >20, 750 mg–1,5 g q8h; 10–20, 750 mg q12h; <10, 750 mg q24h + dose pós-HD.",
+      "hepaticDose": "Sem ajuste hepático rotineiro específico.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidade/convulsões em exposição excessiva"
+      ],
+      "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+      "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+      "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "Axetil oral: comprimidos com ou sem alimento; suspensão e comprimidos não são bioequivalentes mg por mg. Parenteral: IV/IM.",
+      "preparation": "Não intercambiar comprimido e suspensão mg por mg; reconstituir forma parenteral com diluente compatível.",
+      "infusionProtocol": "Parenteral: infusão intermitente padrão; em críticos considerar individualização PK/PD conforme estabilidade.",
+      "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+      "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "DRC exige ajuste; idosos exigem revisão renal; formulações oral e parenteral não são intercambiáveis dose a dose.",
+      "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+      "clinicalPearls": "Cobre estreptococos, MSSA e alguns Gram-negativos respiratórios; não cobre MRSA, Enterococcus ou Pseudomonas.",
+      "guidelineRecommendations": "Stewardship: escolher via/espectro conforme foco e revisar função renal e exposição beta-lactâmica no paciente agudo.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Comprimido e suspensão oral não são bioequivalentes mg por mg",
+        "Não cobre Pseudomonas",
+        "Ajustar na DRC"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    },
+    "es": {
+      "name": "Cefuroxima",
+      "class": "Antibiótico betalactámico",
+      "pharmacologicClass": "Cefalosporina de 2ª generación; axetilo oral / sódica parenteral",
+      "mechanism": "Se une a PBP e inhibe síntesis de pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo (fT>MIC).",
+      "pharmacokinetics": "Axetilo es profármaco oral; cefuroxima sódica es IV/IM. Eliminación renal predominante y dializable.",
+      "indications": "Infecciones respiratorias, piel, urinarias y otras por susceptibles; forma parenteral para cuadros moderados/graves y profilaxis quirúrgica.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos/suspensión de axetilo y viales IV/IM de cefuroxima sódica.",
+      "presentations": [
+        "250 mg y 500 mg VO",
+        "Suspensión oral",
+        "750 mg y 1,5 g IV/IM"
+      ],
+      "dose": "VO: 250–500 mg q12h según foco. IV/IM: 750 mg–1,5 g q8h; graves 1,5 g q6h; meningitis hasta 3 g q8h.",
+      "pediatricDose": "La dosis depende de foco, edad y vía; no extrapolar entre axetilo oral y cefuroxima sódica parenteral.",
+      "renalDose": "VO: ClCr 10–<30, dosis estándar q24h; <10, q48h; HD, dosis extra pos-HD. IV: >20, 750 mg–1,5 g q8h; 10–20, 750 mg q12h; <10, 750 mg q24h + dosis pos-HD.",
+      "hepaticDose": "Sin ajuste hepático rutinario específico.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Exantema",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidad/convulsiones por exposición excesiva"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+      "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+      "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "Axetilo oral: comprimidos con o sin alimentos; suspensión y comprimidos no son bioequivalentes mg por mg. Parenteral: IV/IM.",
+      "preparation": "No intercambiar comprimido y suspensión mg por mg; reconstituir forma parenteral con diluyente compatible.",
+      "infusionProtocol": "Parenteral: infusión intermitente estándar; en críticos considerar individualización PK/PD según estabilidad.",
+      "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+      "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+      "specialPopulations": "ERC requiere ajuste; ancianos requieren revisión renal; formulaciones oral y parenteral no son intercambiables dosis a dosis.",
+      "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+      "clinicalPearls": "Cubre estreptococos, MSSA y algunos Gram negativos respiratorios; no cubre MRSA, Enterococcus ni Pseudomonas.",
+      "guidelineRecommendations": "Stewardship: elegir vía/espectro según foco y revisar función renal/exposición betalactámica en paciente agudo.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Comprimido y suspensión oral no son bioequivalentes mg por mg",
+        "No cubre Pseudomonas",
+        "Ajustar en ERC"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    }
+  },
+  "ceftazidima": {
+    "pt": {
+      "name": "Ceftazidima",
+      "class": "Antibiótico beta-lactâmico antipseudomonas",
+      "pharmacologicClass": "Cefalosporina de 3ª geração antipseudomonas",
+      "mechanism": "Inibe PBPs e síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é o principal alvo PK/PD.",
+      "pharmacokinetics": "IV/IM; baixa metabolização e eliminação quase exclusivamente renal; boa penetração no LCR em meningite inflamada.",
+      "indications": "Infecções graves por Gram-negativos suscetíveis, incluindo Pseudomonas; pneumonia, cUTI, intra-abdominal, osso/articulação e meningite conforme foco.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para solução IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: usual 1 g q8–12h; graves/meningite 2 g q8h; Pseudomonas em fibrose cística 30–50 mg/kg q8h, máximo 6 g/dia.",
+      "pediatricDose": "Neonatos 0–4 semanas: 30 mg/kg IV q12h; 1 mês–12 anos: 30–50 mg/kg IV q8h, máximo 6 g/dia; faixa alta em meningite/imunocomprometidos.",
+      "renalDose": "Reduzir se GFR/CrCl <50 mL/min; usar dose de ataque e manutenção conforme função renal; diálise pode remover o fármaco.",
+      "hepaticDose": "Sem ajuste rotineiro por disfunção hepática isolada.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidade/convulsões em exposição excessiva"
+      ],
+      "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+      "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+      "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "IV ou IM; em sepse/meningite preferir IV.",
+      "preparation": "Reconstituir/diluir conforme fabricante e respeitar estabilidade.",
+      "infusionProtocol": "Infusão padrão; para Pseudomonas/MIC elevada, alta dose e infusão prolongada podem maximizar fT>MIC quando protocolo/estabilidade permitirem.",
+      "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+      "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "DRC aumenta risco de encefalopatia/convulsões; hiperfiltração em críticos pode reduzir exposição.",
+      "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+      "clinicalPearls": "Ativa contra Pseudomonas, mas com cobertura Gram-positiva limitada; não cobre MRSA/Enterococcus. ESBL/AmpC podem conferir resistência.",
+      "guidelineRecommendations": "IDSA 2026: se Pseudomonas for suscetível a beta-lactâmico tradicional, este pode ser preferido ao carbapenêmico; em resistência a carbapenêmicos com suscetibilidade preservada, usar alta dose/infusão prolongada.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Pseudomonas exige exposição adequada",
+        "Neurotoxicidade na DRC",
+        "Não assumir atividade contra ESBL/AmpC"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22d6534c-4488-48a1-8d78-e2fb908259de",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22d6534c-4488-48a1-8d78-e2fb908259de",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    },
+    "es": {
+      "name": "Ceftazidima",
+      "class": "Antibiótico betalactámico antipseudomónico",
+      "pharmacologicClass": "Cefalosporina antipseudomónica de 3ª generación",
+      "mechanism": "Inhibe PBP y síntesis de pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; fT>MIC es el principal objetivo PK/PD.",
+      "pharmacokinetics": "IV/IM; poco metabolismo y eliminación casi exclusivamente renal; buena penetración en LCR con meninges inflamadas.",
+      "indications": "Infecciones graves por Gram negativos susceptibles, incluido Pseudomonas; neumonía, cUTI, intraabdominal, hueso/articulación y meningitis según foco.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo para solución IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: usual 1 g q8–12h; graves/meningitis 2 g q8h; Pseudomonas en fibrosis quística 30–50 mg/kg q8h, máximo 6 g/día.",
+      "pediatricDose": "Neonatos 0–4 semanas: 30 mg/kg IV q12h; 1 mes–12 años: 30–50 mg/kg IV q8h, máximo 6 g/día; rango alto en meningitis/inmunocomprometidos.",
+      "renalDose": "Reducir si GFR/ClCr <50 mL/min; usar carga y mantenimiento según función renal; diálisis puede eliminar el fármaco.",
+      "hepaticDose": "Sin ajuste rutinario por disfunción hepática aislada.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Exantema",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidad/convulsiones por exposición excesiva"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+      "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+      "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "IV o IM; en sepsis/meningitis preferir IV.",
+      "preparation": "Reconstituir/diluir según fabricante y respetar estabilidad.",
+      "infusionProtocol": "Infusión estándar; en Pseudomonas/MIC elevada, alta dosis e infusión prolongada pueden maximizar fT>MIC si protocolo/estabilidad lo permiten.",
+      "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+      "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+      "specialPopulations": "ERC aumenta riesgo de encefalopatía/convulsiones; hiperfiltración en críticos puede reducir exposición.",
+      "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+      "clinicalPearls": "Activa frente a Pseudomonas, con cobertura Gram positiva limitada; no cubre MRSA/Enterococcus. ESBL/AmpC pueden conferir resistencia.",
+      "guidelineRecommendations": "IDSA 2026: si Pseudomonas es susceptible a betalactámico tradicional puede preferirse al carbapenémico; con resistencia a carbapenémicos y susceptibilidad preservada, usar alta dosis/infusión prolongada.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Pseudomonas requiere exposición adecuada",
+        "Neurotoxicidad en ERC",
+        "No asumir actividad frente a ESBL/AmpC"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22d6534c-4488-48a1-8d78-e2fb908259de",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22d6534c-4488-48a1-8d78-e2fb908259de",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    }
+  },
+  "ceftarolina": {
+    "pt": {
+      "name": "Ceftarolina",
+      "class": "Antibiótico beta-lactâmico com atividade anti-MRSA",
+      "pharmacologicClass": "Cefalosporina avançada (ceftarolina fosamila)",
+      "mechanism": "Pró-fármaco convertido em ceftarolina; liga PBPs, incluindo PBP2a do MRSA, inibindo síntese da parede.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC guia eficácia.",
+      "pharmacokinetics": "IV; conversão rápida do pró-fármaco e eliminação predominantemente renal.",
+      "indications": "ABSSSI e pneumonia bacteriana adquirida na comunidade por suscetíveis; inclui atividade contra MRSA em infecções cutâneas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frasco IV de ceftarolina fosamila.",
+      "presentations": [
+        "600 mg"
+      ],
+      "dose": "Adultos: 600 mg IV q12h, infusão 5–60 min.",
+      "pediatricDose": ">=2 anos e >33 kg: 400 mg q8h ou 600 mg q12h; <=33 kg: 12 mg/kg q8h; 2 meses–<2 anos: 8 mg/kg q8h; neonatos elegíveis: 6 mg/kg q8h.",
+      "renalDose": "CrCl >30–50: 400 mg q12h; 15–30: 300 mg q12h; ESRD/HD: 200 mg q12h após HD. Dados insuficientes para pediatria com eGFR <50.",
+      "hepaticDose": "Sem ajuste hepático rotineiro.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidade/convulsões em exposição excessiva"
+      ],
+      "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+      "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+      "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "Somente IV.",
+      "preparation": "Reconstituir e diluir conforme fabricante.",
+      "infusionProtocol": "Infusão 5–60 min; individualização beta-lactâmica pode ser considerada em doença crítica.",
+      "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+      "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "DRC requer ajuste; concentração no LCR não foi estabelecida, portanto não extrapolar para meningite.",
+      "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+      "clinicalPearls": "Atividade contra MRSA por ligação à PBP2a; não cobre Pseudomonas.",
+      "guidelineRecommendations": "Usar conforme foco/suscetibilidade e reservar espectro quando cefalosporina mais estreita for suficiente.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Ativa contra MRSA",
+        "Não cobre Pseudomonas",
+        "Não extrapolar para meningite",
+        "Ajustar se CrCl <50"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ecde48b-75a2-4beb-9999-369f3f61bb8a",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ecde48b-75a2-4beb-9999-369f3f61bb8a",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Ceftarolina",
+      "class": "Antibiótico betalactámico con actividad anti-MRSA",
+      "pharmacologicClass": "Cefalosporina avanzada (ceftarolina fosamilo)",
+      "mechanism": "Profármaco convertido a ceftarolina; se une a PBP, incluida PBP2a de MRSA, inhibiendo síntesis de pared.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; fT>MIC guía eficacia.",
+      "pharmacokinetics": "IV; conversión rápida del profármaco y eliminación predominantemente renal.",
+      "indications": "ABSSSI y neumonía bacteriana adquirida en comunidad por susceptibles; incluye actividad frente a MRSA en infección cutánea.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Vial IV de ceftarolina fosamilo.",
+      "presentations": [
+        "600 mg"
+      ],
+      "dose": "Adultos: 600 mg IV q12h, infusión 5–60 min.",
+      "pediatricDose": ">=2 años y >33 kg: 400 mg q8h o 600 mg q12h; <=33 kg: 12 mg/kg q8h; 2 meses–<2 años: 8 mg/kg q8h; neonatos elegibles: 6 mg/kg q8h.",
+      "renalDose": "ClCr >30–50: 400 mg q12h; 15–30: 300 mg q12h; ESRD/HD: 200 mg q12h después de HD. Datos insuficientes en pediatría con eGFR <50.",
+      "hepaticDose": "Sin ajuste hepático rutinario.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Exantema",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidad/convulsiones por exposición excesiva"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+      "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+      "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "Solo IV.",
+      "preparation": "Reconstituir y diluir según fabricante.",
+      "infusionProtocol": "Infusión 5–60 min; puede considerarse individualización betalactámica en enfermedad crítica.",
+      "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+      "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+      "specialPopulations": "ERC requiere ajuste; no se estableció concentración en LCR, por lo que no debe extrapolarse a meningitis.",
+      "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+      "clinicalPearls": "Actividad frente a MRSA por unión a PBP2a; no cubre Pseudomonas.",
+      "guidelineRecommendations": "Usar según foco/susceptibilidad y reservar espectro si una cefalosporina más estrecha es suficiente.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Activa contra MRSA",
+        "No cubre Pseudomonas",
+        "No extrapolar a meningitis",
+        "Ajustar si ClCr <50"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ecde48b-75a2-4beb-9999-369f3f61bb8a",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ecde48b-75a2-4beb-9999-369f3f61bb8a",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "ceftolozano_tazobactam": {
+    "pt": {
+      "name": "Ceftolozano/tazobactam",
+      "class": "Cefalosporina antipseudomonas + inibidor de beta-lactamase",
+      "pharmacologicClass": "Ceftolozano + tazobactam",
+      "mechanism": "Ceftolozano inibe PBPs e é estável frente a vários mecanismos pseudomonais; tazobactam inibe algumas beta-lactamases de serina.",
+      "pharmacodynamics": "Tempo-dependente; exposição do ceftolozano por fT>MIC e exposição do tazobactam são relevantes.",
+      "pharmacokinetics": "IV; eliminação renal predominante de ambos os componentes.",
+      "indications": "cUTI/pielonefrite, cIAI com metronidazol e HABP/VABP; importante opção para Pseudomonas suscetível, inclusive DTR.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frasco IV de 1,5 g (1 g/0,5 g).",
+      "presentations": [
+        "1,5 g por frasco"
+      ],
+      "dose": "Adultos CrCl >50: cUTI/cIAI 1,5 g IV q8h; HABP/VABP 3 g IV q8h.",
+      "pediatricDose": "Com eGFR >50: cUTI/cIAI 30 mg/kg q8h até 1,5 g; HABP/VABP usa dose maior conforme idade/peso e rótulo.",
+      "renalDose": "CrCl 30–50: 750 mg q8h para cUTI/cIAI e 1,5 g q8h para HABP/VABP; 15–29: 375 mg q8h e 750 mg q8h; ESRD/HD requer carga e manutenção reduzida pós-HD.",
+      "hepaticDose": "Sem ajuste hepático rotineiro; eliminação renal predomina.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidade/convulsões em exposição excessiva"
+      ],
+      "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+      "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+      "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "IV; duração de infusão depende da indicação.",
+      "preparation": "Reconstituir/diluir conforme fabricante; doses >1,5 g exigem volume de mais de um frasco.",
+      "infusionProtocol": "Seguir tempo de infusão rotulado por indicação; em doença crítica revisar PK/PD e função renal diariamente.",
+      "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+      "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "Monitorar função renal diariamente quando instável; pediatria <2 anos com insuficiência renal tem dados limitados.",
+      "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+      "clinicalPearls": "Potente contra Pseudomonas, inclusive muitos DTR; não cobre MRSA e não deve ser presumido ativo contra MBL/AmpC-E.",
+      "guidelineRecommendations": "IDSA 2026 inclui ceftolozano/tazobactam entre opções preferidas para DTR Pseudomonas e o prefere para pneumonia por DTR Pseudomonas quando suscetível.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Confirmar AST em DTR Pseudomonas",
+        "Não cobre MRSA",
+        "Não assumir atividade contra MBL/AmpC-E",
+        "Monitorar função renal em mudança"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    },
+    "es": {
+      "name": "Ceftolozano/tazobactam",
+      "class": "Cefalosporina antipseudomónica + inhibidor de betalactamasa",
+      "pharmacologicClass": "Ceftolozano + tazobactam",
+      "mechanism": "Ceftolozano inhibe PBP y es estable frente a varios mecanismos pseudomonales; tazobactam inhibe algunas betalactamasas de serina.",
+      "pharmacodynamics": "Dependiente del tiempo; son relevantes fT>MIC de ceftolozano y exposición a tazobactam.",
+      "pharmacokinetics": "IV; eliminación renal predominante de ambos componentes.",
+      "indications": "cUTI/pielonefritis, cIAI con metronidazol y HABP/VABP; opción importante para Pseudomonas susceptible, incluso DTR.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Vial IV de 1,5 g (1 g/0,5 g).",
+      "presentations": [
+        "1,5 g por vial"
+      ],
+      "dose": "Adultos ClCr >50: cUTI/cIAI 1,5 g IV q8h; HABP/VABP 3 g IV q8h.",
+      "pediatricDose": "Con eGFR >50: cUTI/cIAI 30 mg/kg q8h hasta 1,5 g; HABP/VABP usa dosis mayor según edad/peso y ficha.",
+      "renalDose": "ClCr 30–50: 750 mg q8h para cUTI/cIAI y 1,5 g q8h para HABP/VABP; 15–29: 375 mg q8h y 750 mg q8h; ESRD/HD requiere carga y mantenimiento reducido pos-HD.",
+      "hepaticDose": "Sin ajuste hepático rutinario; predomina eliminación renal.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Exantema",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidad/convulsiones por exposición excesiva"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+      "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+      "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "IV; duración de infusión depende de la indicación.",
+      "preparation": "Reconstituir/diluir según fabricante; dosis >1,5 g requieren volumen de más de un vial.",
+      "infusionProtocol": "Seguir tiempo de infusión rotulado por indicación; en enfermedad crítica revisar PK/PD y función renal diariamente.",
+      "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+      "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+      "specialPopulations": "Controlar función renal diariamente si es inestable; pediatría <2 años con insuficiencia renal tiene datos limitados.",
+      "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+      "clinicalPearls": "Potente frente a Pseudomonas, incluidos muchos DTR; no cubre MRSA y no debe asumirse activo frente a MBL/AmpC-E.",
+      "guidelineRecommendations": "IDSA 2026 incluye ceftolozano/tazobactam entre opciones preferidas para DTR Pseudomonas y lo prefiere en neumonía DTR cuando es susceptible.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Confirmar AST en DTR Pseudomonas",
+        "No cubre MRSA",
+        "No asumir actividad frente a MBL/AmpC-E",
+        "Controlar función renal cambiante"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    }
+  },
+  "ceftazidima_avibactam": {
+    "pt": {
+      "name": "Ceftazidima/avibactam",
+      "class": "Cefalosporina antipseudomonas + inibidor não beta-lactâmico de beta-lactamase",
+      "pharmacologicClass": "Ceftazidima + avibactam",
+      "mechanism": "Ceftazidima inibe PBPs; avibactam inibe beta-lactamases classe A (KPC), classe C e algumas classe D como OXA-48-like, mas não MBL.",
+      "pharmacodynamics": "Beta-lactâmico tempo-dependente; exposição adequada de ambos os componentes é essencial.",
+      "pharmacokinetics": "IV; ambos predominantemente renais e hemodialisáveis.",
+      "indications": "cIAI com metronidazol, cUTI/pielonefrite e HABP/VABP; terapia dirigida para Enterobacterales resistentes e DTR Pseudomonas suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frasco IV 2,5 g (2 g/0,5 g).",
+      "presentations": [
+        "2,5 g por frasco"
+      ],
+      "dose": "Adultos CrCl >50: 2,5 g IV q8h por 2 h.",
+      "pediatricDose": "2–<18 anos: 62,5 mg/kg q8h até 2,5 g; 6 meses–<2 anos 62,5 mg/kg; 3–<6 meses 50 mg/kg; >28 dias–<3 meses 37,5 mg/kg; neonatos elegíveis 25 mg/kg, todos q8h.",
+      "renalDose": "CrCl 31–50: 1,25 g q8h; 16–30: 0,94 g q12h; menor função requer reduções adicionais conforme rótulo; monitorar CrCl/eGFR diariamente se em mudança e administrar após HD.",
+      "hepaticDose": "Sem ajuste hepático rotineiro.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidade/convulsões em exposição excessiva"
+      ],
+      "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+      "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+      "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "IV em 2 h; cIAI exige metronidazol.",
+      "preparation": "Reconstituir/diluir conforme fabricante e calcular dose pelo produto combinado.",
+      "infusionProtocol": "Infusão de 2 h; manter exposição adequada em Pseudomonas/CRE e função renal instável.",
+      "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+      "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "Insuficiência renal exige ajuste rápido; dados pediátricos renais são limitados em menores de 2 anos.",
+      "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+      "clinicalPearls": "Ativo contra KPC, OXA-48-like, ESBL/AmpC suscetíveis e parte dos DTR Pseudomonas; avibactam não inibe NDM/VIM/IMP.",
+      "guidelineRecommendations": "IDSA 2026: opção preferida para várias CRE suscetíveis e DTR Pseudomonas; para NDM/MBL, aztreonam-avibactam ou ceftazidima/avibactam + aztreonam são estratégias razoáveis.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Não cobre MBL isoladamente",
+        "Monitorar função renal diariamente se instável",
+        "AST indispensável em CRE/DTR Pseudomonas",
+        "Resistência pode emergir durante terapia"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9c2803f-dc9c-4b19-b4a3-8303bc8c15fd",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9c2803f-dc9c-4b19-b4a3-8303bc8c15fd",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    },
+    "es": {
+      "name": "Ceftazidima/avibactam",
+      "class": "Cefalosporina antipseudomónica + inhibidor no betalactámico de betalactamasa",
+      "pharmacologicClass": "Ceftazidima + avibactam",
+      "mechanism": "Ceftazidima inhibe PBP; avibactam inhibe betalactamasas clase A (KPC), clase C y algunas clase D como OXA-48-like, pero no MBL.",
+      "pharmacodynamics": "Betalactámico dependiente del tiempo; exposición adecuada de ambos componentes es esencial.",
+      "pharmacokinetics": "IV; ambos predominantemente renales y hemodializables.",
+      "indications": "cIAI con metronidazol, cUTI/pielonefritis y HABP/VABP; terapia dirigida para Enterobacterales resistentes y DTR Pseudomonas susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Vial IV 2,5 g (2 g/0,5 g).",
+      "presentations": [
+        "2,5 g por vial"
+      ],
+      "dose": "Adultos ClCr >50: 2,5 g IV q8h durante 2 h.",
+      "pediatricDose": "2–<18 años: 62,5 mg/kg q8h hasta 2,5 g; 6 meses–<2 años 62,5 mg/kg; 3–<6 meses 50 mg/kg; >28 días–<3 meses 37,5 mg/kg; neonatos elegibles 25 mg/kg, todos q8h.",
+      "renalDose": "ClCr 31–50: 1,25 g q8h; 16–30: 0,94 g q12h; menor función requiere reducciones adicionales según ficha; controlar CrCl/eGFR diariamente si cambia y administrar tras HD.",
+      "hepaticDose": "Sin ajuste hepático rutinario.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Exantema",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidad/convulsiones por exposición excesiva"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+      "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+      "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "IV en 2 h; cIAI requiere metronidazol.",
+      "preparation": "Reconstituir/diluir según fabricante y calcular dosis por producto combinado.",
+      "infusionProtocol": "Infusión de 2 h; mantener exposición adecuada en Pseudomonas/CRE y función renal inestable.",
+      "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+      "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+      "specialPopulations": "Insuficiencia renal exige ajuste rápido; datos renales pediátricos son limitados en menores de 2 años.",
+      "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+      "clinicalPearls": "Activo frente a KPC, OXA-48-like, ESBL/AmpC susceptibles y parte de DTR Pseudomonas; avibactam no inhibe NDM/VIM/IMP.",
+      "guidelineRecommendations": "IDSA 2026: opción preferida para varias CRE susceptibles y DTR Pseudomonas; para NDM/MBL, aztreonam-avibactam o ceftazidima/avibactam + aztreonam son estrategias razonables.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "No cubre MBL por sí solo",
+        "Controlar función renal diariamente si inestable",
+        "AST indispensable en CRE/DTR Pseudomonas",
+        "Puede emerger resistencia"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9c2803f-dc9c-4b19-b4a3-8303bc8c15fd",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9c2803f-dc9c-4b19-b4a3-8303bc8c15fd",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    }
+  },
+  "imipenem_cilastatina": {
+    "pt": {
+      "name": "Imipenem/cilastatina",
+      "class": "Antibiótico beta-lactâmico de amplo espectro",
+      "pharmacologicClass": "Carbapenêmico + inibidor da deidropeptidase renal",
+      "mechanism": "Imipenem inibe PBPs; cilastatina bloqueia deidropeptidase-I renal, evitando degradação do imipenem.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é relevante.",
+      "pharmacokinetics": "IV; eliminação renal importante; acúmulo na DRC aumenta risco de convulsões.",
+      "indications": "Infecções graves polimicrobianas e por Gram-negativos suscetíveis; intra-abdominal, urinária, pele, osso e outros focos. Não recomendado em infecção pediátrica do SNC.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frasco IV com imipenem/cilastatina.",
+      "presentations": [
+        "500/500 mg"
+      ],
+      "dose": "Adultos CrCl >=90: 500 mg q6h ou 1 g q8h para suscetíveis; 1 g q6h se suscetibilidade intermediária, respeitando máximo diário/ajuste renal.",
+      "pediatricDose": ">=3 meses: 15–25 mg/kg q6h; <=3 meses: 25 mg/kg com intervalos de 6–12 h conforme idade; máximo 4 g/dia. Não recomendado em SNC.",
+      "renalDose": "Ajustar por CrCl e peso conforme tabela rotulada; maior risco de convulsões com CrCl <=30/HD. Não recomendado <30 kg com insuficiência renal.",
+      "hepaticDose": "Sem ajuste hepático rotineiro específico.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidade/convulsões em exposição excessiva"
+      ],
+      "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+      "interactions": "Carbapenêmicos reduzem níveis de valproato/divalproato; evitar associação. Ganciclovir e fatores neurológicos podem aumentar risco convulsivo; revisar nefrotóxicos.",
+      "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "IV; doses <=500 mg em 20–30 min e >500 mg em 40–60 min.",
+      "preparation": "Reconstituir/diluir conforme fabricante; não confundir componentes.",
+      "infusionProtocol": "Infusão intermitente conforme dose; individualização PK/PD pode ser considerada, evitando sobre-exposição neurotóxica.",
+      "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+      "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "Evitar em pediatria com infecção do SNC; DRC, doença neurológica e valproato elevam risco de convulsões.",
+      "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+      "clinicalPearls": "Espectro amplo com Pseudomonas suscetível e anaeróbios, mas sem MRSA; maior propensão a convulsões que alguns outros carbapenêmicos.",
+      "guidelineRecommendations": "Stewardship: reservar carbapenêmicos para necessidade documentada; se Pseudomonas for suscetível a beta-lactâmico não carbapenêmico, preservar carbapenêmicos.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Risco de convulsões",
+        "Não recomendado em infecção pediátrica do SNC",
+        "Interação grave com valproato",
+        "Ajuste renal obrigatório"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f41d8abd-7792-4918-1b93-bd83ea01955e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f41d8abd-7792-4918-1b93-bd83ea01955e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    },
+    "es": {
+      "name": "Imipenem/cilastatina",
+      "class": "Antibiótico betalactámico de amplio espectro",
+      "pharmacologicClass": "Carbapenémico + inhibidor de dehidropeptidasa renal",
+      "mechanism": "Imipenem inhibe PBP; cilastatina bloquea dehidropeptidasa-I renal y evita degradación de imipenem.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; fT>MIC es relevante.",
+      "pharmacokinetics": "IV; eliminación renal importante; acumulación en ERC aumenta riesgo de convulsiones.",
+      "indications": "Infecciones graves polimicrobianas y por Gram negativos susceptibles; intraabdominal, urinaria, piel, hueso y otros focos. No recomendado en infección pediátrica del SNC.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Vial IV con imipenem/cilastatina.",
+      "presentations": [
+        "500/500 mg"
+      ],
+      "dose": "Adultos ClCr >=90: 500 mg q6h o 1 g q8h para susceptibles; 1 g q6h si susceptibilidad intermedia, respetando máximo diario/ajuste renal.",
+      "pediatricDose": ">=3 meses: 15–25 mg/kg q6h; <=3 meses: 25 mg/kg con intervalos de 6–12 h según edad; máximo 4 g/día. No recomendado en SNC.",
+      "renalDose": "Ajustar por ClCr y peso según tabla rotulada; mayor riesgo de convulsiones con ClCr <=30/HD. No recomendado <30 kg con insuficiencia renal.",
+      "hepaticDose": "Sin ajuste hepático rutinario específico.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Exantema",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidad/convulsiones por exposición excesiva"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+      "interactions": "Carbapenémicos reducen niveles de valproato/divalproato; evitar asociación. Ganciclovir y factores neurológicos pueden aumentar riesgo convulsivo; revisar nefrotóxicos.",
+      "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "IV; dosis <=500 mg en 20–30 min y >500 mg en 40–60 min.",
+      "preparation": "Reconstituir/diluir según fabricante; no confundir componentes.",
+      "infusionProtocol": "Infusión intermitente según dosis; puede considerarse individualización PK/PD evitando sobreexposición neurotóxica.",
+      "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+      "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+      "specialPopulations": "Evitar en pediatría con infección del SNC; ERC, enfermedad neurológica y valproato elevan riesgo de convulsiones.",
+      "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+      "clinicalPearls": "Espectro amplio con Pseudomonas susceptible y anaerobios, pero sin MRSA; mayor propensión a convulsiones que algunos otros carbapenémicos.",
+      "guidelineRecommendations": "Stewardship: reservar carbapenémicos para necesidad documentada; si Pseudomonas es susceptible a betalactámico no carbapenémico, preservar carbapenémicos.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Riesgo de convulsiones",
+        "No recomendado en infección pediátrica del SNC",
+        "Interacción grave con valproato",
+        "Ajuste renal obligatorio"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f41d8abd-7792-4918-1b93-bd83ea01955e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f41d8abd-7792-4918-1b93-bd83ea01955e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    }
+  },
+  "ertapenem": {
+    "pt": {
+      "name": "Ertapenem",
+      "class": "Antibiótico beta-lactâmico de amplo espectro",
+      "pharmacologicClass": "Carbapenêmico de longa meia-vida",
+      "mechanism": "Liga PBPs e inibe síntese da parede; estável frente a muitas ESBL/AmpC, mas não carbapenemases.",
+      "pharmacodynamics": "Bactericida tempo-dependente; longa meia-vida permite administração diária.",
+      "pharmacokinetics": "IV/IM; alta ligação proteica, eliminação renal e meia-vida mais longa que outros carbapenêmicos.",
+      "indications": "Infecções intra-abdominais, pele, urinárias, pélvicas e outras por suscetíveis; profilaxia colorretal; útil para ESBL quando não é necessária atividade antipseudomonas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frasco para IV/IM.",
+      "presentations": [
+        "1 g"
+      ],
+      "dose": ">=13 anos: 1 g uma vez ao dia; IV em 30 min ou IM conforme indicação.",
+      "pediatricDose": "3 meses–12 anos: 15 mg/kg duas vezes ao dia, máximo 1 g/dia.",
+      "renalDose": "Adultos CrCl >30: sem ajuste; <=30 ou ESRD: 500 mg/dia. Se administrado até 6 h antes de HD, suplemento 150 mg pós-HD. Sem dados pediátricos suficientes em DRC.",
+      "hepaticDose": "Sem ajuste hepático rotineiro específico.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidade/convulsões em exposição excessiva"
+      ],
+      "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+      "interactions": "Carbapenêmicos podem reduzir níveis de valproato/divalproato; evitar associação. Probenecida altera exposição; revisar anticoagulantes e nefrotóxicos.",
+      "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "IV em 30 min ou IM; não misturar/co-infundir com outros medicamentos.",
+      "preparation": "Não usar diluentes contendo dextrose; reconstituir conforme via/fabricante.",
+      "infusionProtocol": "Infusão IV de 30 min; longa meia-vida sustenta dose diária.",
+      "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+      "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "DRC requer redução; hipoalbuminemia crítica pode alterar fração livre/exposição.",
+      "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+      "clinicalPearls": "Carbapenêmico diário ativo contra muitas ESBL, mas não cobre Pseudomonas, Acinetobacter ou Enterococcus.",
+      "guidelineRecommendations": "IDSA 2026 usa carbapenêmicos para ESBL quando indicados; ertapenem é opção quando Pseudomonas/Acinetobacter não precisam ser cobertos e o estado clínico permite.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Não cobre Pseudomonas",
+        "Não cobre Acinetobacter/Enterococcus",
+        "Interação com valproato",
+        "Ajustar em CrCl <=30"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33f3b99b-fa82-42e0-26bf-f49891ae3d22",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33f3b99b-fa82-42e0-26bf-f49891ae3d22",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    },
+    "es": {
+      "name": "Ertapenem",
+      "class": "Antibiótico betalactámico de amplio espectro",
+      "pharmacologicClass": "Carbapenémico de semivida larga",
+      "mechanism": "Se une a PBP e inhibe síntesis de pared; estable frente a muchas ESBL/AmpC, pero no carbapenemasas.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; semivida larga permite administración diaria.",
+      "pharmacokinetics": "IV/IM; alta unión proteica, eliminación renal y semivida mayor que otros carbapenémicos.",
+      "indications": "Infecciones intraabdominales, piel, urinarias, pélvicas y otras por susceptibles; profilaxis colorrectal; útil para ESBL si no se necesita actividad antipseudomónica.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Vial para IV/IM.",
+      "presentations": [
+        "1 g"
+      ],
+      "dose": ">=13 años: 1 g una vez al día; IV en 30 min o IM según indicación.",
+      "pediatricDose": "3 meses–12 años: 15 mg/kg dos veces al día, máximo 1 g/día.",
+      "renalDose": "Adultos ClCr >30: sin ajuste; <=30 o ESRD: 500 mg/día. Si se administra hasta 6 h antes de HD, suplemento 150 mg pos-HD. Sin datos pediátricos suficientes en ERC.",
+      "hepaticDose": "Sin ajuste hepático rutinario específico.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Exantema",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidad/convulsiones por exposición excesiva"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+      "interactions": "Carbapenémicos pueden reducir niveles de valproato/divalproato; evitar asociación. Probenecid altera exposición; revisar anticoagulantes y nefrotóxicos.",
+      "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "IV en 30 min o IM; no mezclar/co-infusar con otros medicamentos.",
+      "preparation": "No usar diluyentes con dextrosa; reconstituir según vía/fabricante.",
+      "infusionProtocol": "Infusión IV de 30 min; semivida larga permite dosis diaria.",
+      "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+      "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+      "specialPopulations": "ERC requiere reducción; hipoalbuminemia crítica puede modificar fracción libre/exposición.",
+      "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+      "clinicalPearls": "Carbapenémico diario activo frente a muchas ESBL, pero no cubre Pseudomonas, Acinetobacter ni Enterococcus.",
+      "guidelineRecommendations": "IDSA 2026 usa carbapenémicos para ESBL cuando están indicados; ertapenem es opción si no se necesita cobertura de Pseudomonas/Acinetobacter y el estado clínico lo permite.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "No cubre Pseudomonas",
+        "No cubre Acinetobacter/Enterococcus",
+        "Interacción con valproato",
+        "Ajustar en ClCr <=30"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33f3b99b-fa82-42e0-26bf-f49891ae3d22",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33f3b99b-fa82-42e0-26bf-f49891ae3d22",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    }
+  },
+  "aztreonam": {
+    "pt": {
+      "name": "Aztreonam",
+      "class": "Antibiótico beta-lactâmico dirigido a Gram-negativos aeróbios",
+      "pharmacologicClass": "Monobactâmico",
+      "mechanism": "Liga preferencialmente PBP3 de bacilos Gram-negativos e inibe síntese da parede; é estável a MBL, mas vulnerável a outras beta-lactamases.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC guia exposição.",
+      "pharmacokinetics": "IV/IM; distribuição extracelular e eliminação renal predominante; hemodiálise remove o fármaco.",
+      "indications": "Infecções por Gram-negativos aeróbios suscetíveis, incluindo Pseudomonas; sem atividade útil contra Gram-positivos ou anaeróbios.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frascos para IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: UTI 0,5–1 g q8–12h; sistêmicas moderadas 1–2 g q8–12h; graves/ameaça à vida ou Pseudomonas 2 g q6–8h; máximo 8 g/dia.",
+      "pediatricDose": "30 mg/kg IV q8h em leves/moderadas; 30 mg/kg q6–8h em moderadas/graves; máximo 120 mg/kg/dia. Dados insuficientes para ajuste renal pediátrico.",
+      "renalDose": "CrCl 10–30: após dose de ataque, cerca de metade da dose usual no intervalo habitual. CrCl <10/HD: dose inicial usual e manutenção de 1/4; em grave, adicionar 1/8 da dose inicial pós-HD.",
+      "hepaticDose": "Sem ajuste hepático primário; em hepatopatia crônica com curso prolongado considerar redução/monitorização conforme protocolo.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidade/convulsões em exposição excessiva"
+      ],
+      "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+      "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+      "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+      "administration": "IV ou IM; IV preferida em doses >1 g, sepse, abscesso, peritonite e infecções graves.",
+      "preparation": "Reconstituir vigorosamente e usar dentro da estabilidade; inspecionar partículas/descoloração.",
+      "infusionProtocol": "Infusão intermitente padrão; em críticos/Pseudomonas pode-se considerar otimização fT>MIC conforme protocolo/estabilidade.",
+      "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+      "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+      "specialPopulations": "Pode ser útil em alergia imediata a muitos beta-lactâmicos, mas há potencial de reação cruzada com ceftazidima por cadeia lateral semelhante.",
+      "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+      "clinicalPearls": "Cobre apenas Gram-negativos aeróbios, incluindo Pseudomonas. MBL não hidrolisa aztreonam, porém ESBL/AmpC coexistentes podem; avibactam pode protegê-lo.",
+      "guidelineRecommendations": "IDSA 2026: para NDM/MBL, aztreonam-avibactam é opção preferida emergente e ceftazidima/avibactam + aztreonam continua razoável.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo"
+      ],
+      "alerts": [
+        "Sem cobertura Gram-positiva ou anaeróbia",
+        "Atenção à cadeia lateral compartilhada com ceftazidima",
+        "Ajustar fortemente na DRC/HD",
+        "MBL isolada não garante suscetibilidade se ESBL/AmpC coexistirem"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9a105eaf-ee77-4016-beeb-d425a5565db2",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9a105eaf-ee77-4016-beeb-d425a5565db2",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    },
+    "es": {
+      "name": "Aztreonam",
+      "class": "Antibiótico betalactámico dirigido a Gram negativos aerobios",
+      "pharmacologicClass": "Monobactámico",
+      "mechanism": "Se une preferentemente a PBP3 de bacilos Gram negativos e inhibe síntesis de pared; es estable a MBL, pero vulnerable a otras betalactamasas.",
+      "pharmacodynamics": "Bactericida dependiente del tiempo; fT>MIC guía exposición.",
+      "pharmacokinetics": "IV/IM; distribución extracelular y eliminación renal predominante; hemodiálisis elimina el fármaco.",
+      "indications": "Infecciones por Gram negativos aerobios susceptibles, incluido Pseudomonas; sin actividad útil contra Gram positivos o anaerobios.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Viales para IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adultos: UTI 0,5–1 g q8–12h; sistémicas moderadas 1–2 g q8–12h; graves/amenaza vital o Pseudomonas 2 g q6–8h; máximo 8 g/día.",
+      "pediatricDose": "30 mg/kg IV q8h en leves/moderadas; 30 mg/kg q6–8h en moderadas/graves; máximo 120 mg/kg/día. Datos insuficientes para ajuste renal pediátrico.",
+      "renalDose": "ClCr 10–30: tras carga, aproximadamente mitad de dosis usual en intervalo habitual. ClCr <10/HD: dosis inicial usual y mantenimiento de 1/4; en grave, añadir 1/8 de la dosis inicial pos-HD.",
+      "hepaticDose": "Sin ajuste hepático primario; en hepatopatía crónica con curso prolongado considerar reducción/monitorización según protocolo.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Exantema",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "SCAR/SJS-TEN",
+        "C. difficile",
+        "Citopenias",
+        "Neurotoxicidad/convulsiones por exposición excesiva"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+      "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+      "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+      "administration": "IV o IM; IV preferida en dosis >1 g, sepsis, absceso, peritonitis e infecciones graves.",
+      "preparation": "Reconstituir vigorosamente y usar dentro de estabilidad; inspeccionar partículas/color.",
+      "infusionProtocol": "Infusión intermitente estándar; en críticos/Pseudomonas puede considerarse optimización fT>MIC según protocolo/estabilidad.",
+      "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+      "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+      "specialPopulations": "Puede ser útil en alergia inmediata a muchos betalactámicos, pero existe potencial de reacción cruzada con ceftazidima por cadena lateral similar.",
+      "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+      "clinicalPearls": "Cubre solo Gram negativos aerobios, incluido Pseudomonas. MBL no hidroliza aztreonam, pero ESBL/AmpC coexistentes sí; avibactam puede protegerlo.",
+      "guidelineRecommendations": "IDSA 2026: para NDM/MBL, aztreonam-avibactam es opción preferida emergente y ceftazidima/avibactam + aztreonam sigue siendo razonable.",
+      "safetyFlags": [
+        "Alergia a betalactámicos",
+        "C. difficile",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación"
+      ],
+      "alerts": [
+        "Sin cobertura Gram positiva ni anaerobia",
+        "Atención a cadena lateral compartida con ceftazidima",
+        "Ajustar fuertemente en ERC/HD",
+        "MBL aislada no garantiza susceptibilidad si coexisten ESBL/AmpC"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9a105eaf-ee77-4016-beeb-d425a5565db2",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9a105eaf-ee77-4016-beeb-d425a5565db2",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP02_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP03_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP03_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "linezolida": {
+    "pt": {
+      "name": "Linezolida",
+      "class": "Antibiótico oxazolidinona",
+      "pharmacologicClass": "Oxazolidinona anti-MRSA/VRE",
+      "mechanism": "Liga-se ao 23S rRNA da subunidade 50S e impede formação do complexo de iniciação 70S.",
+      "pharmacodynamics": "A eficácia se relaciona à exposição AUC/MIC e tempo acima da MIC; geralmente bacteriostática contra estafilococos e enterococos.",
+      "pharmacokinetics": "Biodisponibilidade oral ~100%, conversão IV-VO 1:1; boa distribuição e metabolismo não enzimático.",
+      "indications": "Pneumonia e infecções de pele por Gram-positivos suscetíveis; VRE incluindo E. faecium. Não cobre Gram-negativos.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos, suspensão oral e solução IV.",
+      "presentations": [
+        "600 mg comprimido",
+        "100 mg/5 mL suspensão",
+        "2 mg/mL IV"
+      ],
+      "dose": "Adultos/adolescentes: 600 mg IV ou VO q12h para a maioria das indicações graves.",
+      "pediatricDose": "<12 anos: frequentemente 10 mg/kg q8h conforme indicação; neonatos muito jovens podem iniciar q12h. >=12 anos: 600 mg q12h.",
+      "renalDose": "Sem ajuste padrão, mas metabólitos acumulam na DRC; em HD administrar após sessão. Risco de trombocitopenia pode ser maior em insuficiência renal.",
+      "hepaticDose": "Sem ajuste em hepatopatia leve/moderada; dados limitados em grave.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Cefaleia",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Mielossupressão/trombocitopenia",
+        "Síndrome serotoninérgica",
+        "Neuropatia óptica/periférica",
+        "Acidose láctica"
+      ],
+      "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+      "interactions": "Fármacos serotonérgicos, opioides, antidepressivos, simpaticomiméticos e alimentos ricos em tiramina exigem revisão por efeito MAOI.",
+      "monitoring": "Hemograma semanal; sintomas visuais/neuropáticos em uso prolongado; lactato se acidose; vigiar síndrome serotoninérgica.",
+      "administration": "IV ou VO; VO tem biodisponibilidade quase completa.",
+      "preparation": "Solução IV pronta não deve receber aditivos incompatíveis; suspensão oral conforme fabricante.",
+      "infusionProtocol": "Infundir IV em 30–120 min; conversão IV-VO geralmente sem mudança de dose.",
+      "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Cursos >2 semanas aumentam mielossupressão; uso prolongado associa neuropatia óptica/periférica e acidose láctica.",
+      "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+      "clinicalPearls": "É inibidor reversível não seletivo da MAO: risco de síndrome serotoninérgica com serotonérgicos e resposta pressórica com tiramina/simpaticomiméticos.",
+      "guidelineRecommendations": "Usar para Gram-positivos resistentes quando apropriado e desescalonar com microbiologia. Monitorar hemograma semanal, especialmente >2 semanas ou em DRC.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorização de toxicidade"
+      ],
+      "alerts": [
+        "Síndrome serotoninérgica/MAO",
+        "Hemograma semanal",
+        "Neuropatia óptica/periférica",
+        "Acidose láctica",
+        "Sem cobertura Gram-negativa"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Linezolida",
+      "class": "Antibiótico oxazolidinona",
+      "pharmacologicClass": "Oxazolidinona anti-MRSA/VRE",
+      "mechanism": "Se une al 23S rRNA de la subunidad 50S e impide formar el complejo de iniciación 70S.",
+      "pharmacodynamics": "La eficacia se relaciona con AUC/MIC y tiempo sobre MIC; suele ser bacteriostática frente a estafilococos y enterococos.",
+      "pharmacokinetics": "Biodisponibilidad oral ~100%, conversión IV-VO 1:1; buena distribución y metabolismo no enzimático.",
+      "indications": "Neumonía e infecciones de piel por Gram positivos susceptibles; VRE incluido E. faecium. No cubre Gram negativos.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos, suspensión oral y solución IV.",
+      "presentations": [
+        "600 mg comprimido",
+        "100 mg/5 mL suspensión",
+        "2 mg/mL IV"
+      ],
+      "dose": "Adultos/adolescentes: 600 mg IV o VO q12h para la mayoría de indicaciones graves.",
+      "pediatricDose": "<12 años: con frecuencia 10 mg/kg q8h según indicación; neonatos muy jóvenes pueden iniciar q12h. >=12 años: 600 mg q12h.",
+      "renalDose": "Sin ajuste estándar, pero metabolitos se acumulan en ERC; en HD administrar después de sesión. Puede aumentar trombocitopenia en insuficiencia renal.",
+      "hepaticDose": "Sin ajuste en hepatopatía leve/moderada; datos limitados en grave.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Cefalea",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Mielosupresión/trombocitopenia",
+        "Síndrome serotoninérgico",
+        "Neuropatía óptica/periférica",
+        "Acidosis láctica"
+      ],
+      "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+      "interactions": "Fármacos serotoninérgicos, opioides, antidepresivos, simpaticomiméticos y alimentos ricos en tiramina requieren revisión por efecto IMAO.",
+      "monitoring": "Hemograma semanal; síntomas visuales/neuropáticos en uso prolongado; lactato si acidosis; vigilar síndrome serotoninérgico.",
+      "administration": "IV o VO; VO tiene biodisponibilidad casi completa.",
+      "preparation": "Solución IV lista no debe recibir aditivos incompatibles; suspensión oral según fabricante.",
+      "infusionProtocol": "Infundir IV en 30–120 min; conversión IV-VO generalmente sin cambio de dosis.",
+      "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Tratamientos >2 semanas aumentan mielosupresión; uso prolongado se asocia a neuropatía óptica/periférica y acidosis láctica.",
+      "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+      "clinicalPearls": "Es inhibidor reversible no selectivo de MAO: riesgo de síndrome serotoninérgico con serotoninérgicos y respuesta presora con tiramina/simpaticomiméticos.",
+      "guidelineRecommendations": "Usar para Gram positivos resistentes cuando corresponda y desescalar con microbiología. Controlar hemograma semanal, especialmente >2 semanas o en ERC.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorización de toxicidad"
+      ],
+      "alerts": [
+        "Síndrome serotoninérgico/MAO",
+        "Hemograma semanal",
+        "Neuropatía óptica/periférica",
+        "Acidosis láctica",
+        "Sin cobertura Gram negativa"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "daptomicina": {
+    "pt": {
+      "name": "Daptomicina",
+      "class": "Antibiótico lipopeptídeo cíclico",
+      "pharmacologicClass": "Lipopeptídeo anti-MRSA/VRE",
+      "mechanism": "Liga-se de forma cálcio-dependente à membrana de Gram-positivos, causa despolarização rápida e morte bacteriana.",
+      "pharmacodynamics": "Bactericida concentração-dependente; Cmax/MIC e AUC/MIC se correlacionam com atividade.",
+      "pharmacokinetics": "Somente IV; alta ligação proteica, eliminação renal predominante e inativação pelo surfactante pulmonar.",
+      "indications": "cSSSI e bacteremia por S. aureus incluindo endocardite direita por MSSA/MRSA; não indicada para pneumonia.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó liofilizado para solução IV.",
+      "presentations": [
+        "350 mg",
+        "500 mg conforme fabricante"
+      ],
+      "dose": "Adultos CrCl >=30: cSSSI 4 mg/kg q24h; bacteremia/endocardite direita 6 mg/kg q24h.",
+      "pediatricDose": "cSSSI: 12–17a 5 mg/kg; 7–11a 7 mg/kg; 2–6a 9 mg/kg; 1–<2a 10 mg/kg q24h. Bacteremia: 12–17a 7; 7–11a 9; 1–6a 12 mg/kg q24h.",
+      "renalDose": "CrCl <30 incluindo HD/CAPD: 4 mg/kg q48h para cSSSI ou 6 mg/kg q48h para bacteremia; em HD administrar após sessão.",
+      "hepaticDose": "Sem ajuste em hepatopatia leve/moderada; dados limitados em grave.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Cefaleia",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Miopatia/rabdomiólise",
+        "Pneumonia eosinofílica",
+        "DRESS",
+        "Neuropatia periférica"
+      ],
+      "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+      "interactions": "Estatinas e outros agentes associados a miopatia exigem revisão; considerar suspensão temporária de estatina.",
+      "monitoring": "CPK basal e pelo menos semanal; função renal; dor/fraqueza muscular; sintomas respiratórios após 2–4 semanas.",
+      "administration": "Adultos: IV 2 min ou infusão 30 min. Pediatria: infusão 30 min (7–17a) ou 60 min (1–6a), nunca bolus 2 min.",
+      "preparation": "Reconstituir sem agitação vigorosa; usar diluente compatível da formulação específica.",
+      "infusionProtocol": "Não administrar mais de uma vez ao dia em função renal normal; respeitar duração por idade.",
+      "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Evitar <12 meses. Estatinas podem aumentar risco de miopatia; considerar suspensão temporária.",
+      "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+      "clinicalPearls": "NÃO usar em pneumonia porque o surfactante pulmonar inativa a daptomicina. CPK basal e pelo menos semanal é essencial.",
+      "guidelineRecommendations": "Em bacteremia persistente/recidivante por S. aureus, repetir suscetibilidade e buscar foco não controlado; interromper conforme limiares de CPK e sintomas do rótulo.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorização de toxicidade"
+      ],
+      "alerts": [
+        "NÃO usar em pneumonia",
+        "CPK semanal",
+        "Miopatia/rabdomiólise",
+        "Pneumonia eosinofílica",
+        "Ajustar CrCl <30"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d29832c-564b-4694-842a-50aeeb823ec8",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23f39005-3008-4ab1-918d-b8acb001554e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d29832c-564b-4694-842a-50aeeb823ec8",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23f39005-3008-4ab1-918d-b8acb001554e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Daptomicina",
+      "class": "Antibiótico lipopéptido cíclico",
+      "pharmacologicClass": "Lipopéptido anti-MRSA/VRE",
+      "mechanism": "Se une de forma calcio-dependiente a membrana Gram positiva, causa despolarización rápida y muerte bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente de concentración; Cmax/MIC y AUC/MIC se correlacionan con actividad.",
+      "pharmacokinetics": "Solo IV; alta unión proteica, eliminación renal predominante e inactivación por surfactante pulmonar.",
+      "indications": "cSSSI y bacteriemia por S. aureus incluida endocarditis derecha por MSSA/MRSA; no indicada para neumonía.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo liofilizado para solución IV.",
+      "presentations": [
+        "350 mg",
+        "500 mg según fabricante"
+      ],
+      "dose": "Adultos ClCr >=30: cSSSI 4 mg/kg q24h; bacteriemia/endocarditis derecha 6 mg/kg q24h.",
+      "pediatricDose": "cSSSI: 12–17a 5 mg/kg; 7–11a 7; 2–6a 9; 1–<2a 10 mg/kg q24h. Bacteriemia: 12–17a 7; 7–11a 9; 1–6a 12 mg/kg q24h.",
+      "renalDose": "ClCr <30 incluido HD/CAPD: 4 mg/kg q48h para cSSSI o 6 mg/kg q48h para bacteriemia; en HD administrar después de sesión.",
+      "hepaticDose": "Sin ajuste en hepatopatía leve/moderada; datos limitados en grave.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Cefalea",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Miopatía/rabdomiólisis",
+        "Neumonía eosinofílica",
+        "DRESS",
+        "Neuropatía periférica"
+      ],
+      "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+      "interactions": "Estatinas y otros agentes asociados a miopatía requieren revisión; considerar suspensión temporal de estatina.",
+      "monitoring": "CPK basal y al menos semanal; función renal; dolor/debilidad muscular; síntomas respiratorios tras 2–4 semanas.",
+      "administration": "Adultos: IV 2 min o infusión 30 min. Pediatría: infusión 30 min (7–17a) o 60 min (1–6a), nunca bolo 2 min.",
+      "preparation": "Reconstituir sin agitación vigorosa; usar diluyente compatible de la formulación específica.",
+      "infusionProtocol": "No administrar más de una vez al día con función renal normal; respetar duración según edad.",
+      "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Evitar <12 meses. Estatinas pueden aumentar riesgo de miopatía; considerar suspensión temporal.",
+      "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+      "clinicalPearls": "NO usar en neumonía porque el surfactante pulmonar inactiva daptomicina. CPK basal y al menos semanal es esencial.",
+      "guidelineRecommendations": "En bacteriemia persistente/recidivante por S. aureus, repetir susceptibilidad y buscar foco no controlado; suspender según umbrales de CPK y síntomas de la ficha.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorización de toxicidad"
+      ],
+      "alerts": [
+        "NO usar en neumonía",
+        "CPK semanal",
+        "Miopatía/rabdomiólisis",
+        "Neumonía eosinofílica",
+        "Ajustar ClCr <30"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d29832c-564b-4694-842a-50aeeb823ec8",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23f39005-3008-4ab1-918d-b8acb001554e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d29832c-564b-4694-842a-50aeeb823ec8",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23f39005-3008-4ab1-918d-b8acb001554e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "oritavancina": {
+    "pt": {
+      "name": "Oritavancina",
+      "class": "Antibiótico lipoglicopeptídeo",
+      "pharmacologicClass": "Lipoglicopeptídeo de longa ação anti-Gram-positivo",
+      "mechanism": "Inibe síntese da parede e perturba membrana bacteriana; ativa contra Gram-positivos suscetíveis incluindo MRSA.",
+      "pharmacodynamics": "Bactericida com exposição prolongada; AUC/MIC contribui para atividade sustentada.",
+      "pharmacokinetics": "IV, meia-vida terminal muito longa de aproximadamente 245 h e ampla distribuição.",
+      "indications": "ABSSSI por Gram-positivos suscetíveis incluindo MRSA em adultos.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó liofilizado IV; ORBACTIV e KIMYRSA têm preparo e infusão diferentes.",
+      "presentations": [
+        "400 mg ORBACTIV",
+        "1.200 mg KIMYRSA"
+      ],
+      "dose": "Adultos: 1.200 mg IV dose única; tempo e diluente dependem da formulação específica.",
+      "pediatricDose": "Segurança/eficácia pediátrica não estabelecida para formulações usuais; não extrapolar dose adulta.",
+      "renalDose": "Sem ajuste em insuficiência renal leve/moderada; dados limitados em CrCl <30/ESRD.",
+      "hepaticDose": "Sem ajuste em Child-Pugh A/B; não adequadamente estudada em Child-Pugh C.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Cefaleia",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Toxicidade órgão-específica conforme o agente"
+      ],
+      "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+      "interactions": "Pode interferir com anticoagulantes e enzimas CYP; warfarina exige vigilância clínica e testes de coagulação podem ser artificialmente alterados.",
+      "monitoring": "Reação de infusão, sinais de hipersensibilidade e planejamento de testes de coagulação/anticoagulação após a dose.",
+      "administration": "IV em dose única; seguir tempo e diluente específicos da formulação.",
+      "preparation": "ORBACTIV e KIMYRSA não são intercambiáveis quanto a reconstituição/diluente/tempo de infusão.",
+      "infusionProtocol": "Dose única; monitorar reação de infusão e respeitar protocolo da formulação.",
+      "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Interfere artificialmente em testes de coagulação sem causar anticoagulação real; planejar monitorização antes da dose.",
+      "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+      "clinicalPearls": "aPTT pode ficar falsamente elevado até 120 h e PT/INR temporariamente; heparina não fracionada IV é contraindicada por 120 h após dose.",
+      "guidelineRecommendations": "Reservar terapia de longa ação para ABSSSI apropriada. Se anticoagulação for necessária no período de interferência, usar estratégia/teste não dependente de aPTT conforme rótulo.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorização de toxicidade"
+      ],
+      "alerts": [
+        "Heparina IV contraindicada 120 h",
+        "aPTT falso elevado até 120 h",
+        "Formulações têm preparo diferente",
+        "Meia-vida ~245 h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff09a726-9f9b-4e30-b509-396781293220",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5e755c40-6e73-4572-b474-4d8a131693d1",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff09a726-9f9b-4e30-b509-396781293220",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5e755c40-6e73-4572-b474-4d8a131693d1",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Oritavancina",
+      "class": "Antibiótico lipoglicopéptido",
+      "pharmacologicClass": "Lipoglicopéptido de acción prolongada anti-Gram positivo",
+      "mechanism": "Inhibe síntesis de pared y altera membrana bacteriana; activa frente a Gram positivos susceptibles incluido MRSA.",
+      "pharmacodynamics": "Bactericida con exposición prolongada; AUC/MIC contribuye a actividad sostenida.",
+      "pharmacokinetics": "IV, semivida terminal muy larga de aproximadamente 245 h y amplia distribución.",
+      "indications": "ABSSSI por Gram positivos susceptibles incluido MRSA en adultos.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo liofilizado IV; ORBACTIV y KIMYRSA tienen preparación e infusión diferentes.",
+      "presentations": [
+        "400 mg ORBACTIV",
+        "1.200 mg KIMYRSA"
+      ],
+      "dose": "Adultos: 1.200 mg IV dosis única; tiempo y diluyente dependen de formulación específica.",
+      "pediatricDose": "Seguridad/eficacia pediátrica no establecida para formulaciones habituales; no extrapolar dosis adulta.",
+      "renalDose": "Sin ajuste en insuficiencia renal leve/moderada; datos limitados en ClCr <30/ESRD.",
+      "hepaticDose": "Sin ajuste en Child-Pugh A/B; no adecuadamente estudiada en Child-Pugh C.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Cefalea",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Toxicidad órgano-específica según el agente"
+      ],
+      "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+      "interactions": "Puede interferir con anticoagulantes y enzimas CYP; warfarina exige vigilancia y pruebas de coagulación pueden alterarse artificialmente.",
+      "monitoring": "Reacción de infusión, hipersensibilidad y planificación de pruebas de coagulación/anticoagulación tras la dosis.",
+      "administration": "IV en dosis única; seguir tiempo y diluyente específicos de formulación.",
+      "preparation": "ORBACTIV y KIMYRSA no son intercambiables en reconstitución/diluyente/tiempo de infusión.",
+      "infusionProtocol": "Dosis única; monitorizar reacción de infusión y respetar protocolo de formulación.",
+      "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Interfiere artificialmente con pruebas de coagulación sin causar anticoagulación real; planificar monitorización antes de la dosis.",
+      "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+      "clinicalPearls": "aPTT puede quedar falsamente elevado hasta 120 h y PT/INR temporalmente; heparina no fraccionada IV está contraindicada 120 h tras dosis.",
+      "guidelineRecommendations": "Reservar terapia de larga acción para ABSSSI apropiada. Si se necesita anticoagulación durante interferencia, usar estrategia/prueba no dependiente de aPTT.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorización de toxicidad"
+      ],
+      "alerts": [
+        "Heparina IV contraindicada 120 h",
+        "aPTT falso elevado hasta 120 h",
+        "Formulaciones con preparación diferente",
+        "Semivida ~245 h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff09a726-9f9b-4e30-b509-396781293220",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5e755c40-6e73-4572-b474-4d8a131693d1",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff09a726-9f9b-4e30-b509-396781293220",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5e755c40-6e73-4572-b474-4d8a131693d1",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "gentamicina": {
+    "pt": {
+      "name": "Gentamicina",
+      "class": "Antibiótico aminoglicosídeo",
+      "pharmacologicClass": "Aminoglicosídeo sistêmico",
+      "mechanism": "Liga-se irreversivelmente à subunidade 30S, causa leitura incorreta do mRNA e inibe síntese proteica.",
+      "pharmacodynamics": "Bactericida concentração-dependente; Cmax/MIC é alvo central e há efeito pós-antibiótico. TDM reduz toxicidade.",
+      "pharmacokinetics": "IV/IM; distribuição extracelular, baixa penetração em LCR e eliminação renal quase exclusiva.",
+      "indications": "Infecções graves por bacilos Gram-negativos suscetíveis e sinergia selecionada em endocardite.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Solução injetável IV/IM.",
+      "presentations": [
+        "Concentrações variam por fabricante"
+      ],
+      "dose": "Adultos: esquema convencional 3 mg/kg/dia divididos q8h; ameaça à vida até 5 mg/kg/dia inicialmente.",
+      "pediatricDose": "Doses dependem da idade; neonatos exigem intervalos maiores e TDM.",
+      "renalDose": "Ajustar dose/intervalo por função renal e TDM; HD remove quantidade clinicamente relevante.",
+      "hepaticDose": "Sem ajuste hepático específico; função renal determina clearance.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Cefaleia",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidade",
+        "Ototoxicidade irreversível",
+        "Bloqueio neuromuscular"
+      ],
+      "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+      "interactions": "Evitar associação desnecessária com outros nefro/ototóxicos e diuréticos de alça; separar fisicamente de beta-lactâmicos.",
+      "monitoring": "Creatinina, diurese, audição/vestíbulo e TDM de pico/vale ou estratégia validada.",
+      "administration": "IV ou IM; obter peso e função renal antes da dose; em obesidade usar peso ajustado conforme protocolo.",
+      "preparation": "Diluir para IV em solução compatível; não misturar fisicamente com beta-lactâmico na mesma solução.",
+      "infusionProtocol": "Infusão IV geralmente 30–60 min; interpretar TDM segundo estratégia convencional ou de intervalo estendido.",
+      "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Idosos, DRC, queimados, fibrose cística e obesidade alteram PK; existe risco fetal de ototoxicidade.",
+      "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+      "clinicalPearls": "No esquema convencional, evitar picos persistentemente >12 mcg/mL e vales >2 mcg/mL; níveis crescentes sinalizam acúmulo.",
+      "guidelineRecommendations": "Stewardship: limitar duração, usar TDM e reservar para situações em que benefício supere nefro/ototoxicidade.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorização de toxicidade"
+      ],
+      "alerts": [
+        "Nefrotoxicidade",
+        "Ototoxicidade",
+        "Bloqueio neuromuscular",
+        "TDM",
+        "Ajuste renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8c608b3-50b8-4d5d-9e8a-e92c0d2e3cdc",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8c608b3-50b8-4d5d-9e8a-e92c0d2e3cdc",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Gentamicina",
+      "class": "Antibiótico aminoglucósido",
+      "pharmacologicClass": "Aminoglucósido sistémico",
+      "mechanism": "Se une irreversiblemente a subunidad 30S, causa lectura errónea del mRNA e inhibe síntesis proteica.",
+      "pharmacodynamics": "Bactericida dependiente de concentración; Cmax/MIC es objetivo central y existe efecto posantibiótico. TDM reduce toxicidad.",
+      "pharmacokinetics": "IV/IM; distribución extracelular, baja penetración en LCR y eliminación renal casi exclusiva.",
+      "indications": "Infecciones graves por bacilos Gram negativos susceptibles y sinergia seleccionada en endocarditis.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Solución inyectable IV/IM.",
+      "presentations": [
+        "Concentraciones varían según fabricante"
+      ],
+      "dose": "Adultos: esquema convencional 3 mg/kg/día divididos q8h; amenaza vital hasta 5 mg/kg/día inicialmente.",
+      "pediatricDose": "Dosis dependen de edad; neonatos requieren intervalos mayores y TDM.",
+      "renalDose": "Ajustar dosis/intervalo por función renal y TDM; HD elimina cantidad clínicamente relevante.",
+      "hepaticDose": "Sin ajuste hepático específico; función renal determina clearance.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Cefalea",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidad",
+        "Ototoxicidad irreversible",
+        "Bloqueo neuromuscular"
+      ],
+      "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+      "interactions": "Evitar asociación innecesaria con otros nefro/ototóxicos y diuréticos de asa; separar físicamente de betalactámicos.",
+      "monitoring": "Creatinina, diuresis, audición/vestíbulo y TDM de pico/valle o estrategia validada.",
+      "administration": "IV o IM; obtener peso y función renal antes de dosis; en obesidad usar peso ajustado según protocolo.",
+      "preparation": "Diluir para IV en solución compatible; no mezclar físicamente con betalactámico en la misma solución.",
+      "infusionProtocol": "Infusión IV generalmente 30–60 min; interpretar TDM según estrategia convencional o de intervalo extendido.",
+      "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Ancianos, ERC, quemados, fibrosis quística y obesidad alteran PK; existe riesgo fetal de ototoxicidad.",
+      "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+      "clinicalPearls": "En esquema convencional, evitar picos persistentemente >12 mcg/mL y valles >2 mcg/mL; niveles crecientes indican acumulación.",
+      "guidelineRecommendations": "Stewardship: limitar duración, usar TDM y reservar para situaciones donde beneficio supere nefro/ototoxicidad.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorización de toxicidad"
+      ],
+      "alerts": [
+        "Nefrotoxicidad",
+        "Ototoxicidad",
+        "Bloqueo neuromuscular",
+        "TDM",
+        "Ajuste renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8c608b3-50b8-4d5d-9e8a-e92c0d2e3cdc",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8c608b3-50b8-4d5d-9e8a-e92c0d2e3cdc",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "amicacina": {
+    "pt": {
+      "name": "Amicacina",
+      "class": "Antibiótico aminoglicosídeo",
+      "pharmacologicClass": "Aminoglicosídeo sistêmico",
+      "mechanism": "Liga-se irreversivelmente à subunidade 30S, causa leitura incorreta do mRNA e inibe síntese proteica.",
+      "pharmacodynamics": "Bactericida concentração-dependente; Cmax/MIC é alvo central e há efeito pós-antibiótico. TDM reduz toxicidade.",
+      "pharmacokinetics": "IV/IM; distribuição extracelular, baixa penetração em LCR e eliminação renal quase exclusiva.",
+      "indications": "Infecções graves por Gram-negativos suscetíveis, inclusive alguns resistentes a outros aminoglicosídeos.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Solução injetável IV/IM.",
+      "presentations": [
+        "Concentrações variam por fabricante"
+      ],
+      "dose": "15 mg/kg/dia IV/IM divididos q12h ou q8h; máximo usual 1,5 g/dia no rótulo.",
+      "pediatricDose": "Neonatos: carga 10 mg/kg seguida 7,5 mg/kg q12h; crianças maiores 15 mg/kg/dia divididos.",
+      "renalDose": "Ajustar por função renal e TDM; em DRC grave/HD usar protocolo dialítico e níveis.",
+      "hepaticDose": "Sem ajuste hepático específico; função renal determina clearance.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Cefaleia",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidade",
+        "Ototoxicidade irreversível",
+        "Bloqueio neuromuscular"
+      ],
+      "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+      "interactions": "Evitar associação desnecessária com outros nefro/ototóxicos e diuréticos de alça; separar fisicamente de beta-lactâmicos.",
+      "monitoring": "Creatinina, diurese, audição/vestíbulo e TDM de pico/vale ou estratégia validada.",
+      "administration": "IV ou IM; obter peso e função renal antes da dose; em obesidade usar peso ajustado conforme protocolo.",
+      "preparation": "Diluir para IV em solução compatível; não misturar fisicamente com beta-lactâmico na mesma solução.",
+      "infusionProtocol": "Infusão IV geralmente 30–60 min; interpretar TDM segundo estratégia convencional ou de intervalo estendido.",
+      "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Idosos, DRC, queimados, fibrose cística e obesidade alteram PK; existe risco fetal de ototoxicidade.",
+      "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+      "clinicalPearls": "No esquema convencional, evitar pico >35 mcg/mL e vale >10 mcg/mL; TDM é essencial em DRC ou curso repetido.",
+      "guidelineRecommendations": "Stewardship: limitar duração, usar TDM e reservar para situações em que benefício supere nefro/ototoxicidade.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorização de toxicidade"
+      ],
+      "alerts": [
+        "Nefrotoxicidade",
+        "Ototoxicidade",
+        "Bloqueio neuromuscular",
+        "TDM",
+        "Ajuste renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=840ba25a-d60c-4f0d-a084-71b0c68237df",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b56f6df-a05d-4520-8bf0-d7cefe20f6ad",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=840ba25a-d60c-4f0d-a084-71b0c68237df",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b56f6df-a05d-4520-8bf0-d7cefe20f6ad",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Amikacina",
+      "class": "Antibiótico aminoglucósido",
+      "pharmacologicClass": "Aminoglucósido sistémico",
+      "mechanism": "Se une irreversiblemente a subunidad 30S, causa lectura errónea del mRNA e inhibe síntesis proteica.",
+      "pharmacodynamics": "Bactericida dependiente de concentración; Cmax/MIC es objetivo central y existe efecto posantibiótico. TDM reduce toxicidad.",
+      "pharmacokinetics": "IV/IM; distribución extracelular, baja penetración en LCR y eliminación renal casi exclusiva.",
+      "indications": "Infecciones graves por Gram negativos susceptibles, incluidos algunos resistentes a otros aminoglucósidos.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Solución inyectable IV/IM.",
+      "presentations": [
+        "Concentraciones varían según fabricante"
+      ],
+      "dose": "15 mg/kg/día IV/IM divididos q12h o q8h; máximo habitual 1,5 g/día según ficha.",
+      "pediatricDose": "Neonatos: carga 10 mg/kg seguida 7,5 mg/kg q12h; niños mayores 15 mg/kg/día dividido.",
+      "renalDose": "Ajustar por función renal y TDM; en ERC grave/HD usar protocolo dialítico y niveles.",
+      "hepaticDose": "Sin ajuste hepático específico; función renal determina clearance.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Cefalea",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidad",
+        "Ototoxicidad irreversible",
+        "Bloqueo neuromuscular"
+      ],
+      "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+      "interactions": "Evitar asociación innecesaria con otros nefro/ototóxicos y diuréticos de asa; separar físicamente de betalactámicos.",
+      "monitoring": "Creatinina, diuresis, audición/vestíbulo y TDM de pico/valle o estrategia validada.",
+      "administration": "IV o IM; obtener peso y función renal antes de dosis; en obesidad usar peso ajustado según protocolo.",
+      "preparation": "Diluir para IV en solución compatible; no mezclar físicamente con betalactámico en la misma solución.",
+      "infusionProtocol": "Infusión IV generalmente 30–60 min; interpretar TDM según estrategia convencional o de intervalo extendido.",
+      "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Ancianos, ERC, quemados, fibrosis quística y obesidad alteran PK; existe riesgo fetal de ototoxicidad.",
+      "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+      "clinicalPearls": "En esquema convencional, evitar pico >35 mcg/mL y valle >10 mcg/mL; TDM es esencial en ERC o tratamiento repetido.",
+      "guidelineRecommendations": "Stewardship: limitar duración, usar TDM y reservar para situaciones donde beneficio supere nefro/ototoxicidad.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorización de toxicidad"
+      ],
+      "alerts": [
+        "Nefrotoxicidad",
+        "Ototoxicidad",
+        "Bloqueo neuromuscular",
+        "TDM",
+        "Ajuste renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=840ba25a-d60c-4f0d-a084-71b0c68237df",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b56f6df-a05d-4520-8bf0-d7cefe20f6ad",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=840ba25a-d60c-4f0d-a084-71b0c68237df",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b56f6df-a05d-4520-8bf0-d7cefe20f6ad",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "tobramicina": {
+    "pt": {
+      "name": "Tobramicina",
+      "class": "Antibiótico aminoglicosídeo",
+      "pharmacologicClass": "Aminoglicosídeo sistêmico",
+      "mechanism": "Liga-se irreversivelmente à subunidade 30S, causa leitura incorreta do mRNA e inibe síntese proteica.",
+      "pharmacodynamics": "Bactericida concentração-dependente; Cmax/MIC é alvo central e há efeito pós-antibiótico. TDM reduz toxicidade.",
+      "pharmacokinetics": "IV/IM; distribuição extracelular, baixa penetração em LCR e eliminação renal quase exclusiva.",
+      "indications": "Infecções graves por Gram-negativos suscetíveis, especialmente Pseudomonas; formulações inalatórias têm indicações próprias.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Solução injetável IV/IM.",
+      "presentations": [
+        "Concentrações variam por fabricante"
+      ],
+      "dose": "Adultos: 3 mg/kg/dia divididos q8h; ameaça à vida até 5 mg/kg/dia inicialmente.",
+      "pediatricDose": " >1 semana: 6–7,5 mg/kg/dia divididos q6–8h; neonatos <=1 semana até 4 mg/kg/dia divididos q12h.",
+      "renalDose": "Ajustar por função renal e TDM; medir níveis mais frequentemente se função renal mudar.",
+      "hepaticDose": "Sem ajuste hepático específico; função renal determina clearance.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Cefaleia",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidade",
+        "Ototoxicidade irreversível",
+        "Bloqueio neuromuscular"
+      ],
+      "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+      "interactions": "Evitar associação desnecessária com outros nefro/ototóxicos e diuréticos de alça; separar fisicamente de beta-lactâmicos.",
+      "monitoring": "Creatinina, diurese, audição/vestíbulo e TDM de pico/vale ou estratégia validada.",
+      "administration": "IV ou IM; obter peso e função renal antes da dose; em obesidade usar peso ajustado conforme protocolo.",
+      "preparation": "Diluir para IV em solução compatível; não misturar fisicamente com beta-lactâmico na mesma solução.",
+      "infusionProtocol": "Infusão IV geralmente 30–60 min; interpretar TDM segundo estratégia convencional ou de intervalo estendido.",
+      "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Idosos, DRC, queimados, fibrose cística e obesidade alteram PK; existe risco fetal de ototoxicidade.",
+      "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+      "clinicalPearls": "No esquema convencional, evitar picos >12 mcg/mL e vales >2 mcg/mL; fibrose cística pode aumentar clearance.",
+      "guidelineRecommendations": "Stewardship: limitar duração, usar TDM e reservar para situações em que benefício supere nefro/ototoxicidade.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorização de toxicidade"
+      ],
+      "alerts": [
+        "Nefrotoxicidade",
+        "Ototoxicidade",
+        "Bloqueio neuromuscular",
+        "TDM",
+        "Ajuste renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c5a005b0-7b6f-4e30-df92-9a20b1ca66a1",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed254eec-10f4-425a-895b-66e325b7bf69",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c5a005b0-7b6f-4e30-df92-9a20b1ca66a1",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed254eec-10f4-425a-895b-66e325b7bf69",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Tobramicina",
+      "class": "Antibiótico aminoglucósido",
+      "pharmacologicClass": "Aminoglucósido sistémico",
+      "mechanism": "Se une irreversiblemente a subunidad 30S, causa lectura errónea del mRNA e inhibe síntesis proteica.",
+      "pharmacodynamics": "Bactericida dependiente de concentración; Cmax/MIC es objetivo central y existe efecto posantibiótico. TDM reduce toxicidad.",
+      "pharmacokinetics": "IV/IM; distribución extracelular, baja penetración en LCR y eliminación renal casi exclusiva.",
+      "indications": "Infecciones graves por Gram negativos susceptibles, especialmente Pseudomonas; formulaciones inhaladas tienen indicaciones propias.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Solución inyectable IV/IM.",
+      "presentations": [
+        "Concentraciones varían según fabricante"
+      ],
+      "dose": "Adultos: 3 mg/kg/día divididos q8h; amenaza vital hasta 5 mg/kg/día inicialmente.",
+      "pediatricDose": ">1 semana: 6–7,5 mg/kg/día divididos q6–8h; neonatos <=1 semana hasta 4 mg/kg/día divididos q12h.",
+      "renalDose": "Ajustar por función renal y TDM; medir niveles más frecuentemente si cambia función renal.",
+      "hepaticDose": "Sin ajuste hepático específico; función renal determina clearance.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Cefalea",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidad",
+        "Ototoxicidad irreversible",
+        "Bloqueo neuromuscular"
+      ],
+      "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+      "interactions": "Evitar asociación innecesaria con otros nefro/ototóxicos y diuréticos de asa; separar físicamente de betalactámicos.",
+      "monitoring": "Creatinina, diuresis, audición/vestíbulo y TDM de pico/valle o estrategia validada.",
+      "administration": "IV o IM; obtener peso y función renal antes de dosis; en obesidad usar peso ajustado según protocolo.",
+      "preparation": "Diluir para IV en solución compatible; no mezclar físicamente con betalactámico en la misma solución.",
+      "infusionProtocol": "Infusión IV generalmente 30–60 min; interpretar TDM según estrategia convencional o de intervalo extendido.",
+      "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Ancianos, ERC, quemados, fibrosis quística y obesidad alteran PK; existe riesgo fetal de ototoxicidad.",
+      "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+      "clinicalPearls": "En esquema convencional, evitar picos >12 mcg/mL y valles >2 mcg/mL; fibrosis quística puede aumentar clearance.",
+      "guidelineRecommendations": "Stewardship: limitar duración, usar TDM y reservar para situaciones donde beneficio supere nefro/ototoxicidad.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorización de toxicidad"
+      ],
+      "alerts": [
+        "Nefrotoxicidad",
+        "Ototoxicidad",
+        "Bloqueo neuromuscular",
+        "TDM",
+        "Ajuste renal"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c5a005b0-7b6f-4e30-df92-9a20b1ca66a1",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed254eec-10f4-425a-895b-66e325b7bf69",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c5a005b0-7b6f-4e30-df92-9a20b1ca66a1",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed254eec-10f4-425a-895b-66e325b7bf69",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "azitromicina": {
+    "pt": {
+      "name": "Azitromicina",
+      "class": "Antibiótico macrolídeo",
+      "pharmacologicClass": "Azalídeo/macrolídeo",
+      "mechanism": "Liga-se ao 23S rRNA da subunidade 50S e bloqueia translocação da cadeia peptídica.",
+      "pharmacodynamics": "A exposição AUC/MIC é importante; longa meia-vida e alta concentração intracelular sustentam efeito pós-dose.",
+      "pharmacokinetics": "VO/IV; grande volume de distribuição e acúmulo intracelular, meia-vida longa e eliminação principalmente biliar.",
+      "indications": "Infecções respiratórias por patógenos suscetíveis e atípicos e outras indicações específicas; resistência local limita monoterapia empírica.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos, suspensão oral e formulação IV.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "Suspensão oral",
+        "500 mg IV"
+      ],
+      "dose": "Regimes variam por foco; exemplo respiratório 500 mg dia 1 seguido 250 mg dias 2–5 ou 500 mg/dia por 3 dias conforme indicação.",
+      "pediatricDose": "Muitos esquemas respiratórios usam 10 mg/kg dia 1 e 5 mg/kg dias 2–5, respeitando máximos; neonatos exigem cautela.",
+      "renalDose": "Sem ajuste habitual em DRC leve/moderada; cautela em insuficiência renal grave.",
+      "hepaticDose": "Contraindicada se houve icterícia colestática/disfunção hepática por azitromicina prévia; suspender se sinais de hepatite.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Cefaleia",
+        "Reação no local de administração"
+      ],
+      "dangerousAdverseEffects": [
+        "Torsades/prolongamento QT",
+        "Hepatotoxicidade grave",
+        "Anafilaxia/SCAR",
+        "C. difficile"
+      ],
+      "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+      "interactions": "Revisar outros prolongadores de QT, antiarrítmicos, eletrólitos, warfarina e nelfinavir conforme rótulo.",
+      "monitoring": "ECG/eletrólitos em alto risco, sinais de hepatite e resposta clínica; revisar resistência local quando usada para CAP.",
+      "administration": "VO conforme formulação; IV apenas por infusão, nunca bolus.",
+      "preparation": "Reconstituir suspensão/IV conforme fabricante; apresentações podem ter instruções diferentes.",
+      "infusionProtocol": "IV deve ser diluída e infundida lentamente; não administrar IM ou bolus IV.",
+      "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Idosos e pacientes com QT longo, distúrbios eletrolíticos, bradicardia ou antiarrítmicos têm maior risco de torsades.",
+      "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+      "clinicalPearls": "Excelente atividade contra atípicos, mas resistência macrolídica local pode inviabilizar monoterapia empírica para pneumococo; avaliar risco cardíaco.",
+      "guidelineRecommendations": "Diretrizes de CAP usam macrolídeo em contextos selecionados e conforme resistência local/combinação; evitar uso desnecessário e revisar QT/interações.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorização de toxicidade"
+      ],
+      "alerts": [
+        "QT/torsades",
+        "Hepatotoxicidade",
+        "Risco cardiovascular em suscetíveis",
+        "Estenose hipertrófica de piloro em neonatos",
+        "Pode exacerbar miastenia"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=661ff7a6-6394-493d-a307-a1f607e5d117",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5199689f-8881-7757-e063-6394a90ae2eb",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=661ff7a6-6394-493d-a307-a1f607e5d117",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5199689f-8881-7757-e063-6394a90ae2eb",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      ]
+    },
+    "es": {
+      "name": "Azitromicina",
+      "class": "Antibiótico macrólido",
+      "pharmacologicClass": "Azálido/macrólido",
+      "mechanism": "Se une al 23S rRNA de subunidad 50S y bloquea translocación de cadena peptídica.",
+      "pharmacodynamics": "La exposición AUC/MIC es importante; semivida larga y alta concentración intracelular sostienen efecto posdosis.",
+      "pharmacokinetics": "VO/IV; gran volumen de distribución y acumulación intracelular, semivida larga y eliminación principalmente biliar.",
+      "indications": "Infecciones respiratorias por patógenos susceptibles y atípicos y otras indicaciones específicas; resistencia local limita monoterapia empírica.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos, suspensión oral y formulación IV.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "Suspensión oral",
+        "500 mg IV"
+      ],
+      "dose": "Esquemas varían por foco; ejemplo respiratorio 500 mg día 1 seguido 250 mg días 2–5 o 500 mg/día por 3 días según indicación.",
+      "pediatricDose": "Muchos esquemas respiratorios usan 10 mg/kg día 1 y 5 mg/kg días 2–5, respetando máximos; neonatos requieren cautela.",
+      "renalDose": "Sin ajuste habitual en ERC leve/moderada; precaución en insuficiencia renal grave.",
+      "hepaticDose": "Contraindicada si hubo ictericia colestásica/disfunción hepática por azitromicina previa; suspender ante hepatitis.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Cefalea",
+        "Reacción en el sitio de administración"
+      ],
+      "dangerousAdverseEffects": [
+        "Torsades/prolongación QT",
+        "Hepatotoxicidad grave",
+        "Anafilaxia/SCAR",
+        "C. difficile"
+      ],
+      "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+      "interactions": "Revisar otros prolongadores de QT, antiarrítmicos, electrolitos, warfarina y nelfinavir según ficha.",
+      "monitoring": "ECG/electrolitos en alto riesgo, signos de hepatitis y respuesta clínica; revisar resistencia local si se usa en CAP.",
+      "administration": "VO según formulación; IV solo por infusión, nunca bolo.",
+      "preparation": "Reconstituir suspensión/IV según fabricante; presentaciones pueden tener instrucciones diferentes.",
+      "infusionProtocol": "IV debe diluirse e infundirse lentamente; no administrar IM ni bolo IV.",
+      "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Ancianos y pacientes con QT largo, alteraciones electrolíticas, bradicardia o antiarrítmicos tienen mayor riesgo de torsades.",
+      "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+      "clinicalPearls": "Excelente actividad frente a atípicos, pero resistencia macrólida local puede impedir monoterapia empírica para neumococo; valorar riesgo cardíaco.",
+      "guidelineRecommendations": "Guías de CAP usan macrólido en contextos seleccionados y según resistencia local/combinación; evitar uso innecesario y revisar QT/interacciones.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Monitorización de toxicidad"
+      ],
+      "alerts": [
+        "QT/torsades",
+        "Hepatotoxicidad",
+        "Riesgo cardiovascular en susceptibles",
+        "Estenosis hipertrófica de píloro en neonatos",
+        "Puede exacerbar miastenia"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=661ff7a6-6394-493d-a307-a1f607e5d117",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5199689f-8881-7757-e063-6394a90ae2eb",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=661ff7a6-6394-493d-a307-a1f607e5d117",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5199689f-8881-7757-e063-6394a90ae2eb",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP03_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP04_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP04_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "claritromicina": {
+    "pt": {
+      "name": "Claritromicina",
+      "class": "Antibiótico macrolídeo",
+      "pharmacologicClass": "Macrolídeo / inibidor CYP3A4 e P-gp",
+      "mechanism": "Liga-se ao 23S rRNA da subunidade 50S e inibe translocação/síntese proteica.",
+      "pharmacodynamics": "Atividade dependente de exposição; AUC/MIC contribui para eficácia. Resistência ocorre por metilação erm e efluxo mef.",
+      "pharmacokinetics": "Boa absorção oral, metabolização hepática a 14-OH-claritromicina; eliminação renal e hepática. Forte potencial de interações via CYP3A4/P-gp.",
+      "indications": "Infecções respiratórias e de pele por suscetíveis, erradicação de H. pylori em combinação e tratamento/profilaxia de MAC conforme indicação.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos e suspensão oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "Suspensão oral"
+      ],
+      "dose": "Adultos: 250–500 mg VO q12h conforme foco; CAP rotulada 250 mg q12h; H. pylori 500 mg q12h em combinação; MAC 500 mg q12h.",
+      "pediatricDose": "15 mg/kg/dia VO divididos q12h para várias infecções, máximo dose adulta; MAC 7,5 mg/kg q12h, máximo 500 mg/dose.",
+      "renalDose": "CrCl <30 mL/min: reduzir dose em 50%. Com atazanavir/ritonavir, ajustes adicionais podem ser necessários.",
+      "hepaticDose": "Sem ajuste em hepatopatia isolada com função renal normal; se insuficiência renal grave coexistir, reduzir/prolongar intervalo.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Torsades/QT prolongado",
+        "Hepatotoxicidade grave",
+        "Anafilaxia/SCAR",
+        "Toxicidade por colchicina"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Inibe CYP3A4/P-gp; revisar pimozida, simvastatina/lovastatina, ergotamínicos, colchicina e outros substratos.",
+      "monitoring": "ECG/eletrólitos em alto risco, função hepática se sintomas, função renal e interações.",
+      "administration": "VO; revisar interações antes de dosar.",
+      "preparation": "Reconstituir e agitar suspensão conforme fabricante.",
+      "infusionProtocol": "Não aplicável ao registro oral.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Idosos e pacientes com QT longo, hipocalemia/hipomagnesemia, bradicardia ou antiarrítmicos têm maior risco de torsades.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Claritromicina gera interações importantes: simvastatina/lovastatina, colchicina em disfunção renal/hepática e múltiplos substratos CYP3A4.",
+      "guidelineRecommendations": "Em CAP usar macrolídeo apenas em cenários compatíveis com diretriz e resistência local. Para H. pylori evitar uso empírico quando resistência inviabilize o esquema.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "QT/torsades",
+        "CYP3A4/P-gp",
+        "CrCl <30: reduzir 50%",
+        "Hepatotoxicidade",
+        "Interações com estatinas/colchicina"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    },
+    "es": {
+      "name": "Claritromicina",
+      "class": "Antibiótico macrólido",
+      "pharmacologicClass": "Macrólido / inhibidor CYP3A4 y P-gp",
+      "mechanism": "Se une al 23S rRNA de subunidad 50S e inhibe translocación/síntesis proteica.",
+      "pharmacodynamics": "Actividad dependiente de exposición; AUC/MIC contribuye a eficacia. Resistencia por metilación erm y eflujo mef.",
+      "pharmacokinetics": "Buena absorción oral, metabolismo hepático a 14-OH-claritromicina; eliminación renal y hepática. Alto potencial de interacciones CYP3A4/P-gp.",
+      "indications": "Infecciones respiratorias y de piel por susceptibles, erradicación H. pylori en combinación y tratamiento/profilaxis MAC.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos y suspensión oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "Suspensión oral"
+      ],
+      "dose": "Adultos: 250–500 mg VO q12h según foco; CAP rotulada 250 mg q12h; H. pylori 500 mg q12h en combinación; MAC 500 mg q12h.",
+      "pediatricDose": "15 mg/kg/día VO divididos q12h, máximo dosis adulta; MAC 7,5 mg/kg q12h, máximo 500 mg/dosis.",
+      "renalDose": "ClCr <30 mL/min: reducir dosis 50%. Con atazanavir/ritonavir pueden requerirse ajustes adicionales.",
+      "hepaticDose": "Sin ajuste en hepatopatía aislada con función renal normal; si coexiste insuficiencia renal grave, reducir/prolongar intervalo.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Torsades/QT prolongado",
+        "Hepatotoxicidad grave",
+        "Anafilaxia/SCAR",
+        "Toxicidad por colchicina"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Inhibe CYP3A4/P-gp; revisar pimozida, simvastatina/lovastatina, ergotamínicos, colchicina y otros sustratos.",
+      "monitoring": "ECG/electrolitos en alto riesgo, función hepática si síntomas, función renal e interacciones.",
+      "administration": "VO; revisar interacciones antes de dosificar.",
+      "preparation": "Reconstituir y agitar suspensión según fabricante.",
+      "infusionProtocol": "No aplicable al registro oral.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Ancianos y pacientes con QT largo, hipoK/hipoMg, bradicardia o antiarrítmicos tienen mayor riesgo de torsades.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Claritromicina genera interacciones importantes: simvastatina/lovastatina, colchicina con disfunción renal/hepática y múltiples sustratos CYP3A4.",
+      "guidelineRecommendations": "En CAP usar macrólido solo en escenarios compatibles con guía y resistencia local. Para H. pylori evitar uso empírico cuando la resistencia invalide el esquema.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "QT/torsades",
+        "CYP3A4/P-gp",
+        "ClCr <30: reducir 50%",
+        "Hepatotoxicidad",
+        "Interacciones con estatinas/colchicina"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    }
+  },
+  "eritromicina": {
+    "pt": {
+      "name": "Eritromicina",
+      "class": "Antibiótico macrolídeo",
+      "pharmacologicClass": "Macrolídeo clássico / inibidor CYP3A4",
+      "mechanism": "Liga-se à subunidade 50S e inibe translocação da cadeia peptídica.",
+      "pharmacodynamics": "Atividade dependente de exposição; resistência cruzada por erm/mef pode ocorrer.",
+      "pharmacokinetics": "Absorção varia por sal/formulação; metabolismo/eliminaçao principalmente hepatobiliar. Potente inibidor CYP3A4.",
+      "indications": "Infecções respiratórias, estreptocócicas e por atípicos suscetíveis; usos dependem da formulação e resistência local.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais; sais/formulações variam.",
+      "presentations": [
+        "250 mg",
+        "500 mg"
+      ],
+      "dose": "Adultos: 250 mg q6h ou 500 mg q12h; graves até 4 g/dia. Doses >1 g/dia não devem ser dadas apenas q12h.",
+      "pediatricDose": "30–50 mg/kg/dia divididos; em graves pode dobrar sem exceder 4 g/dia.",
+      "renalDose": "Sem ajuste renal padrão; cautela em insuficiência renal grave e revisar exposição/ototoxicidade.",
+      "hepaticDose": "Metabolização predominantemente hepática; cautela em hepatopatia e suspender se hepatite colestática.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Torsades/QT prolongado",
+        "Hepatite colestática",
+        "Anafilaxia/SCAR",
+        "Ototoxicidade"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Inibe CYP3A4; revisar estatinas, anticoagulantes, antiarrítmicos, colchicina e outros substratos.",
+      "monitoring": "ECG/eletrólitos em alto risco, sintomas hepáticos, interações e tolerância GI.",
+      "administration": "VO conforme sal/formulação; intervalos uniformes.",
+      "preparation": "Seguir formulação específica; não intercambiar sais/formas sem equivalência.",
+      "infusionProtocol": "Não aplicável ao registro oral.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Neonatos expostos têm risco de estenose hipertrófica de piloro; idosos/cardiopatas maior risco arrítmico.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Eritromicina tem alto potencial de interação CYP3A4 e QT; frequentemente existem alternativas melhor toleradas.",
+      "guidelineRecommendations": "Em infecção respiratória, considerar resistência macrolídica e preferir alternativas quando risco de QT/interação supera benefício.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "QT/torsades",
+        "CYP3A4",
+        "Hepatite colestática",
+        "Estenose hipertrófica de piloro",
+        "Ototoxicidade"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=933049f6-61b9-4ed5-b6b7-60c5037e2115",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=933049f6-61b9-4ed5-b6b7-60c5037e2115",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    },
+    "es": {
+      "name": "Eritromicina",
+      "class": "Antibiótico macrólido",
+      "pharmacologicClass": "Macrólido clásico / inhibidor CYP3A4",
+      "mechanism": "Se une a subunidad 50S e inhibe translocación de cadena peptídica.",
+      "pharmacodynamics": "Actividad dependiente de exposición; puede haber resistencia cruzada por erm/mef.",
+      "pharmacokinetics": "Absorción varía según sal/formulación; metabolismo/eliminación principalmente hepatobiliar. Potente inhibidor CYP3A4.",
+      "indications": "Infecciones respiratorias, estreptocócicas y por atípicos susceptibles; usos dependen de formulación y resistencia local.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales; sales/formulaciones varían.",
+      "presentations": [
+        "250 mg",
+        "500 mg"
+      ],
+      "dose": "Adultos: 250 mg q6h o 500 mg q12h; graves hasta 4 g/día. Dosis >1 g/día no deben darse solo q12h.",
+      "pediatricDose": "30–50 mg/kg/día divididos; en graves puede duplicarse sin exceder 4 g/día.",
+      "renalDose": "Sin ajuste renal estándar; precaución en insuficiencia renal grave y revisar exposición/ototoxicidad.",
+      "hepaticDose": "Metabolismo principalmente hepático; precaución en hepatopatía y suspender ante hepatitis colestásica.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Torsades/QT prolongado",
+        "Hepatitis colestásica",
+        "Anafilaxia/SCAR",
+        "Ototoxicidad"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Inhibe CYP3A4; revisar estatinas, anticoagulantes, antiarrítmicos, colchicina y otros sustratos.",
+      "monitoring": "ECG/electrolitos en alto riesgo, síntomas hepáticos, interacciones y tolerancia GI.",
+      "administration": "VO según sal/formulación; intervalos uniformes.",
+      "preparation": "Seguir formulación específica; no intercambiar sales/formas sin equivalencia.",
+      "infusionProtocol": "No aplicable al registro oral.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Neonatos expuestos tienen riesgo de estenosis hipertrófica de píloro; ancianos/cardiopatía mayor riesgo arrítmico.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Eritromicina tiene alto potencial de interacción CYP3A4 y QT; con frecuencia existen alternativas mejor toleradas.",
+      "guidelineRecommendations": "En infección respiratoria considerar resistencia macrólida y preferir alternativas si riesgo de QT/interacciones supera beneficio.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "QT/torsades",
+        "CYP3A4",
+        "Hepatitis colestásica",
+        "Estenosis hipertrófica de píloro",
+        "Ototoxicidad"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=933049f6-61b9-4ed5-b6b7-60c5037e2115",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=933049f6-61b9-4ed5-b6b7-60c5037e2115",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    }
+  },
+  "doxiciclina": {
+    "pt": {
+      "name": "Doxiciclina",
+      "class": "Antibiótico tetraciclina",
+      "pharmacologicClass": "Tetraciclina de longa ação",
+      "mechanism": "Liga-se reversivelmente à subunidade 30S e impede ligação do aminoacil-tRNA.",
+      "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC e tempo de exposição contribuem para atividade.",
+      "pharmacokinetics": "Alta biodisponibilidade oral, ampla distribuição e eliminação renal/fecal; não há acúmulo excessivo nas doses usuais em insuficiência renal.",
+      "indications": "Rickettsioses, Chlamydia/Mycoplasma, algumas infecções respiratórias, zoonoses e outras por suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos/cápsulas e suspensão oral.",
+      "presentations": [
+        "50 mg",
+        "100 mg",
+        "Suspensão oral"
+      ],
+      "dose": "Adultos: 200 mg no primeiro dia (100 mg q12h), depois 100 mg/dia; grave 100 mg q12h.",
+      "pediatricDose": "<45 kg com infecção grave: 2,2 mg/kg q12h. >8 anos menos grave: 4,4 mg/kg dia 1 dividido, depois 2,2 mg/kg/dia; >=45 kg dose adulta.",
+      "renalDose": "Sem ajuste rotineiro; doses usuais não demonstram acúmulo excessivo em insuficiência renal e diálise não reduz significativamente meia-vida.",
+      "hepaticDose": "Sem esquema universal de ajuste; cautela em hepatopatia grave e com hepatotóxicos.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Toxicidade órgão-específica conforme o agente"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Antiácidos, cálcio, ferro, magnésio e bismuto reduzem absorção; revisar retinoides, anticoagulantes e indutores.",
+      "monitoring": "Tolerância GI/esofágica, fotossensibilidade e função hepática em cursos prolongados.",
+      "administration": "VO com bastante água; permanecer erguido após dose. Separar de cátions/antiácidos/ferro.",
+      "preparation": "Suspensão conforme fabricante; evitar quelantes.",
+      "infusionProtocol": "Não aplicável ao registro oral.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Pode causar coloração dentária/efeito ósseo durante desenvolvimento; rickettsioses graves podem justificar uso pediátrico conforme diretrizes.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Boa biodisponibilidade e ausência de ajuste renal favorecem uso na DRC; quelantes reduzem absorção e esofagite é prevenível com água/posição.",
+      "guidelineRecommendations": "Em CAP pode ser opção selecionada; em IST/rickettsiose seguir diretriz específica e não atrasar tratamento de doença grave.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "Esofagite",
+        "Fotossensibilidade",
+        "Quelantes reduzem absorção",
+        "Hipertensão intracraniana",
+        "Dentes/osso em desenvolvimento"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    },
+    "es": {
+      "name": "Doxiciclina",
+      "class": "Antibiótico tetraciclina",
+      "pharmacologicClass": "Tetraciclina de acción prolongada",
+      "mechanism": "Se une reversiblemente a subunidad 30S e impide unión de aminoacil-tRNA.",
+      "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC y tiempo de exposición contribuyen a actividad.",
+      "pharmacokinetics": "Alta biodisponibilidad oral, amplia distribución y eliminación renal/fecal; no hay acumulación excesiva con dosis usuales en insuficiencia renal.",
+      "indications": "Rickettsiosis, Chlamydia/Mycoplasma, algunas respiratorias, zoonosis y otras por susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos/cápsulas y suspensión oral.",
+      "presentations": [
+        "50 mg",
+        "100 mg",
+        "Suspensión oral"
+      ],
+      "dose": "Adultos: 200 mg día 1 (100 mg q12h), luego 100 mg/día; grave 100 mg q12h.",
+      "pediatricDose": "<45 kg con infección grave: 2,2 mg/kg q12h. >8 años menos grave: 4,4 mg/kg día 1 dividido, luego 2,2 mg/kg/día; >=45 kg dosis adulta.",
+      "renalDose": "Sin ajuste rutinario; dosis usuales no muestran acumulación excesiva en insuficiencia renal y diálisis no reduce significativamente semivida.",
+      "hepaticDose": "Sin esquema universal de ajuste; precaución en hepatopatía grave y hepatotóxicos.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Toxicidad órgano-específica según el agente"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Antiácidos, calcio, hierro, magnesio y bismuto reducen absorción; revisar retinoides, anticoagulantes e inductores.",
+      "monitoring": "Tolerancia GI/esofágica, fotosensibilidad y función hepática en cursos prolongados.",
+      "administration": "VO con abundante agua; permanecer erguido. Separar de cationes/antiácidos/hierro.",
+      "preparation": "Suspensión según fabricante; evitar quelantes.",
+      "infusionProtocol": "No aplicable al registro oral.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Puede causar coloración dental/efecto óseo durante desarrollo; rickettsiosis grave puede justificar uso pediátrico según guías.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Buena biodisponibilidad y ausencia de ajuste renal favorecen uso en ERC; quelantes reducen absorción y esofagitis se previene con agua/posición.",
+      "guidelineRecommendations": "En CAP puede ser opción seleccionada; en ITS/rickettsiosis seguir guía específica y no retrasar tratamiento grave.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "Esofagitis",
+        "Fotosensibilidad",
+        "Quelantes reducen absorción",
+        "Hipertensión intracraneal",
+        "Dientes/hueso en desarrollo"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    }
+  },
+  "minociclina": {
+    "pt": {
+      "name": "Minociclina",
+      "class": "Antibiótico tetraciclina",
+      "pharmacologicClass": "Tetraciclina semissintética lipofílica",
+      "mechanism": "Liga-se à subunidade 30S e inibe incorporação de aminoacil-tRNA.",
+      "pharmacodynamics": "Bacteriostática; AUC/MIC é relevante. Para CRAB, PK/PD 2026 suporta dose alta como componente alternativo conforme suscetibilidade.",
+      "pharmacokinetics": "Alta biodisponibilidade oral e penetração tecidual; metabolismo parcial hepático e eliminação renal/fecal. Maior penetração vestibular/SNC que doxiciclina.",
+      "indications": "Infecções por suscetíveis; pode integrar combinações alternativas para CRAB ou S. maltophilia segundo AST/diretriz.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas/comprimidos orais.",
+      "presentations": [
+        "50 mg",
+        "75 mg",
+        "100 mg"
+      ],
+      "dose": "Adultos: 200 mg inicial, depois 100 mg q12h. IDSA 2026 usa minociclina 200 mg q12h como componente alternativo para CRAB/S. maltophilia.",
+      "pediatricDose": ">8 anos: 4 mg/kg inicialmente, depois 2 mg/kg q12h, sem exceder dose adulta.",
+      "renalDose": "CrCl <80 não totalmente caracterizado; monitorar BUN/creatinina e não exceder 200 mg/dia no rótulo convencional em insuficiência renal.",
+      "hepaticDose": "Cautela em hepatopatia; insuficiência renal pode aumentar exposição e toxicidade hepática.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "DRESS",
+        "Hepatite autoimune",
+        "Lúpus induzido",
+        "Hipertensão intracraniana",
+        "Anafilaxia/SCAR"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Cátions/antiácidos/ferro reduzem absorção; retinoides sistêmicos aumentam risco de hipertensão intracraniana.",
+      "monitoring": "Função renal/hepática, sintomas vestibulares, pigmentação e sinais autoimunes.",
+      "administration": "VO com água; pode ser tomada com alimento. Separar de antiácidos/ferro/cátions.",
+      "preparation": "Engolir cápsulas inteiras.",
+      "infusionProtocol": "Não aplicável ao registro oral.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Efeitos vestibulares, pigmentação, hepatite autoimune/lúpus induzido e hipertensão intracraniana são mais característicos.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Para CRAB, IDSA 2026 prefere minociclina entre tetraciclinas selecionadas, como componente de combinação e baseada em AST.",
+      "guidelineRecommendations": "IDSA 2026: alternativa em combinação para CRAB invasivo e S. maltophilia; não confiar como monoterapia de bacteremia por baixa concentração sérica.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "Vertigem/vestibular",
+        "Pigmentação",
+        "Hepatite autoimune/lúpus",
+        "Hipertensão intracraniana",
+        "Quelantes"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=093ff3c7-3ecc-47b4-9ae6-5218bcd262b2",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=093ff3c7-3ecc-47b4-9ae6-5218bcd262b2",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    },
+    "es": {
+      "name": "Minociclina",
+      "class": "Antibiótico tetraciclina",
+      "pharmacologicClass": "Tetraciclina semisintética lipofílica",
+      "mechanism": "Se une a subunidad 30S e inhibe incorporación de aminoacil-tRNA.",
+      "pharmacodynamics": "Bacteriostática; AUC/MIC es relevante. Para CRAB, PK/PD 2026 apoya dosis altas como componente alternativo según susceptibilidad.",
+      "pharmacokinetics": "Alta biodisponibilidad oral y penetración tisular; metabolismo parcial hepático y eliminación renal/fecal. Mayor penetración vestibular/SNC que doxiciclina.",
+      "indications": "Infecciones por susceptibles; puede integrar combinaciones alternativas para CRAB o S. maltophilia según AST/guía.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas/comprimidos orales.",
+      "presentations": [
+        "50 mg",
+        "75 mg",
+        "100 mg"
+      ],
+      "dose": "Adultos: 200 mg inicial, luego 100 mg q12h. IDSA 2026 usa minociclina 200 mg q12h como componente alternativo para CRAB/S. maltophilia.",
+      "pediatricDose": ">8 años: 4 mg/kg inicial, luego 2 mg/kg q12h, sin exceder dosis adulta.",
+      "renalDose": "ClCr <80 no totalmente caracterizado; monitorizar BUN/creatinina y no exceder 200 mg/día en ficha convencional con insuficiencia renal.",
+      "hepaticDose": "Precaución en hepatopatía; insuficiencia renal puede aumentar exposición y toxicidad hepática.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "DRESS",
+        "Hepatitis autoinmune",
+        "Lupus inducido",
+        "Hipertensión intracraneal",
+        "Anafilaxia/SCAR"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Cationes/antiácidos/hierro reducen absorción; retinoides sistémicos aumentan hipertensión intracraneal.",
+      "monitoring": "Función renal/hepática, síntomas vestibulares, pigmentación y signos autoinmunes.",
+      "administration": "VO con agua; puede tomarse con alimentos. Separar de antiácidos/hierro/cationes.",
+      "preparation": "Tragar cápsulas enteras.",
+      "infusionProtocol": "No aplicable al registro oral.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Efectos vestibulares, pigmentación, hepatitis autoinmune/lupus inducido e hipertensión intracraneal son característicos.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Para CRAB, IDSA 2026 prefiere minociclina entre tetraciclinas seleccionadas, como componente de combinación y basada en AST.",
+      "guidelineRecommendations": "IDSA 2026: alternativa en combinación para CRAB invasivo y S. maltophilia; no confiar como monoterapia de bacteriemia por baja concentración sérica.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "Vértigo/vestibular",
+        "Pigmentación",
+        "Hepatitis autoinmune/lupus",
+        "Hipertensión intracraneal",
+        "Quelantes"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=093ff3c7-3ecc-47b4-9ae6-5218bcd262b2",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=093ff3c7-3ecc-47b4-9ae6-5218bcd262b2",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    }
+  },
+  "tigeciclina": {
+    "pt": {
+      "name": "Tigeciclina",
+      "class": "Antibiótico glicilciclina",
+      "pharmacologicClass": "Derivado tetraciclínico de amplo espectro tecidual",
+      "mechanism": "Liga-se à subunidade 30S e bloqueia entrada do aminoacil-tRNA; supera alguns mecanismos clássicos de efluxo/proteção ribossomal.",
+      "pharmacodynamics": "Bacteriostática; AUC/MIC é principal índice PK/PD. Distribuição tecidual rápida gera baixas concentrações séricas e urinárias.",
+      "pharmacokinetics": "IV; grande volume de distribuição, eliminação biliar/fecal predominante e meia-vida longa.",
+      "indications": "cIAI, cSSSI e CAP bacteriana por suscetíveis. Não é opção de rotina para bacteremia ou UTI.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó liofilizado IV.",
+      "presentations": [
+        "50 mg por frasco"
+      ],
+      "dose": "Adultos: 100 mg IV ataque, depois 50 mg q12h. Para CRAB, IDSA 2026 descreve alta dose 200 mg ataque seguida 100 mg q12h como alternativa em combinação.",
+      "pediatricDose": "Evitar <18 anos se houver alternativas; se nenhuma, 8–11a 1,2 mg/kg q12h (máx 50 mg) e 12–17a 50 mg q12h.",
+      "renalDose": "Sem ajuste em insuficiência renal ou hemodiálise.",
+      "hepaticDose": "Child-Pugh A/B sem ajuste; Child-Pugh C: 100 mg ataque, depois 25 mg q12h.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Maior mortalidade global",
+        "Pancreatite aguda",
+        "Insuficiência hepática",
+        "Hipofibrinogenemia/coagulopatia"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Pode aumentar efeito de warfarina; revisar anticoagulação e função hepática.",
+      "monitoring": "Função hepática, fibrinogênio/coagulação, pancreatite e resposta clínica.",
+      "administration": "IV em 30–60 min q12h.",
+      "preparation": "Reconstituir/diluir conforme fabricante e respeitar estabilidade.",
+      "infusionProtocol": "Infusão 30–60 min; alta dose CRAB é estratégia especializada/off-label.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Náusea/vômitos frequentes; pancreatite, hipofibrinogenemia e hepatotoxicidade exigem vigilância.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Boxed warning: maior mortalidade global vs comparadores; reservar quando alternativas adequadas não são apropriadas. Evitar bacteremia/UTI por PK desfavorável.",
+      "guidelineRecommendations": "IDSA 2026: tetraciclinas não sugeridas para CRE em sangue/UTI; tigeciclina pode ser alternativa tecidual e alta dose em CRAB, preferindo minociclina quando escolhida.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "Boxed warning: maior mortalidade",
+        "Não usar rotineiramente em bacteremia/UTI",
+        "Child-Pugh C: 25 mg q12h",
+        "Pancreatite",
+        "Hipofibrinogenemia"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=230484a8-408c-dcc1-d0c4-d9dd9a46831b",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-warns-increased-risk-death-iv-antibacterial-tygacil-tigecycline"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=230484a8-408c-dcc1-d0c4-d9dd9a46831b",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-warns-increased-risk-death-iv-antibacterial-tygacil-tigecycline"
+      ]
+    },
+    "es": {
+      "name": "Tigeciclina",
+      "class": "Antibiótico glicilciclina",
+      "pharmacologicClass": "Derivado tetraciclínico de amplio espectro tisular",
+      "mechanism": "Se une a subunidad 30S y bloquea entrada de aminoacil-tRNA; supera algunos mecanismos de eflujo/protección ribosomal.",
+      "pharmacodynamics": "Bacteriostática; AUC/MIC es índice PK/PD principal. Distribución tisular rápida produce bajas concentraciones séricas/urinarias.",
+      "pharmacokinetics": "IV; gran volumen de distribución, eliminación biliar/fecal predominante y semivida larga.",
+      "indications": "cIAI, cSSSI y CAP bacteriana por susceptibles. No es opción rutinaria para bacteriemia o UTI.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo liofilizado IV.",
+      "presentations": [
+        "50 mg por vial"
+      ],
+      "dose": "Adultos: 100 mg IV carga, luego 50 mg q12h. Para CRAB, IDSA 2026 describe alta dosis 200 mg carga seguida 100 mg q12h como alternativa combinada.",
+      "pediatricDose": "Evitar <18 años si hay alternativas; si ninguna, 8–11a 1,2 mg/kg q12h (máx 50 mg) y 12–17a 50 mg q12h.",
+      "renalDose": "Sin ajuste en insuficiencia renal o hemodiálisis.",
+      "hepaticDose": "Child-Pugh A/B sin ajuste; Child-Pugh C: 100 mg carga, luego 25 mg q12h.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Mayor mortalidad global",
+        "Pancreatitis aguda",
+        "Insuficiencia hepática",
+        "Hipofibrinogenemia/coagulopatía"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Puede aumentar efecto de warfarina; revisar anticoagulación y función hepática.",
+      "monitoring": "Función hepática, fibrinógeno/coagulación, pancreatitis y respuesta clínica.",
+      "administration": "IV en 30–60 min q12h.",
+      "preparation": "Reconstituir/diluir según fabricante y estabilidad.",
+      "infusionProtocol": "Infusión 30–60 min; alta dosis CRAB es estrategia especializada/off-label.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Náuseas/vómitos frecuentes; pancreatitis, hipofibrinogenemia y hepatotoxicidad requieren vigilancia.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Boxed warning: mayor mortalidad global frente a comparadores; reservar si alternativas adecuadas no son apropiadas. Evitar bacteriemia/UTI por PK.",
+      "guidelineRecommendations": "IDSA 2026: tetraciclinas no sugeridas para CRE en sangre/UTI; tigeciclina puede ser alternativa tisular y alta dosis en CRAB, prefiriendo minociclina.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "Boxed warning: mayor mortalidad",
+        "No usar rutinariamente en bacteriemia/UTI",
+        "Child-Pugh C: 25 mg q12h",
+        "Pancreatitis",
+        "Hipofibrinogenemia"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=230484a8-408c-dcc1-d0c4-d9dd9a46831b",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-warns-increased-risk-death-iv-antibacterial-tygacil-tigecycline"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=230484a8-408c-dcc1-d0c4-d9dd9a46831b",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-warns-increased-risk-death-iv-antibacterial-tygacil-tigecycline"
+      ]
+    }
+  },
+  "ciprofloxacino": {
+    "pt": {
+      "name": "Ciprofloxacino",
+      "class": "Antibiótico fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona sistêmica",
+      "mechanism": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+      "pharmacodynamics": "Bactericida concentração-dependente; AUC/MIC e Cmax/MIC correlacionam-se com eficácia.",
+      "pharmacokinetics": "Alta biodisponibilidade oral e ampla penetração tecidual; eliminação renal varia por agente.",
+      "indications": "cUTI/pyelonefrite, prostatite e Gram-negativos suscetíveis incluindo Pseudomonas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais; formulação IV existe.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "750 mg conforme agente"
+      ],
+      "dose": "250–750 mg VO q12h conforme foco; cUTI/pyelonefrite/Pseudomonas exigem esquema específico.",
+      "pediatricDose": "cUTI/pyelonefrite 1–17a: 10–20 mg/kg q12h, máx 750 mg/dose.",
+      "renalDose": "CrCl >50 usual; 30–50: 250–500 mg q12h; 5–29: 250–500 mg q18h; HD/PD: 250–500 mg q24h após diálise.",
+      "hepaticDose": "Sem ajuste hepático rotineiro em hepatopatia estável.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Ruptura de tendão",
+        "Neuropatia potencialmente irreversível",
+        "Efeitos SNC/convulsões",
+        "Aneurisma/dissecção de aorta",
+        "Torsades/QT"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes e interações específicas.",
+      "monitoring": "Sintomas tendíneos/neurológicos, glicemia, ECG/eletrólitos quando QT relevante e função renal.",
+      "administration": "VO com ou sem alimento; separar de antiácidos/cátions. IV conforme formulação.",
+      "preparation": "Comprimidos sem preparo; IV conforme fabricante.",
+      "infusionProtocol": "Quando IV, respeitar tempo mínimo de infusão do produto.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Idosos, transplantados, usuários de corticoide e pacientes com aneurisma/aortopatia têm maior risco.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Boa atividade antipseudomonas se suscetível; forte inibidor CYP1A2 e tizanidina é contraindicada.",
+      "guidelineRecommendations": "Usar apenas quando benefício supera os riscos da classe e AST/epidemiologia justificam.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "Tendinite/ruptura de tendão",
+        "Neuropatia periférica",
+        "Efeitos SNC",
+        "Miastenia gravis",
+        "Aneurisma/dissecção de aorta",
+        "Disglicemia",
+        "CYP1A2/tizanidina contraindicada",
+        "Pseudomonas pode adquirir resistência"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      ]
+    },
+    "es": {
+      "name": "Ciprofloxacino",
+      "class": "Antibiótico fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona sistémica",
+      "mechanism": "Inhibe DNA girasa y topoisomerasa IV, bloqueando replicación/reparación del DNA bacteriano.",
+      "pharmacodynamics": "Bactericida dependiente de concentración; AUC/MIC y Cmax/MIC se correlacionan con eficacia.",
+      "pharmacokinetics": "Alta biodisponibilidad oral y amplia penetración tisular; eliminación renal varía según agente.",
+      "indications": "cUTI/pielonefritis, prostatitis y Gram negativos susceptibles incluido Pseudomonas.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales; existe formulación IV.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "750 mg según agente"
+      ],
+      "dose": "250–750 mg VO q12h según foco; cUTI/pielonefritis/Pseudomonas requieren esquema específico.",
+      "pediatricDose": "cUTI/pielonefritis 1–17a: 10–20 mg/kg q12h, máx 750 mg/dosis.",
+      "renalDose": "ClCr >50 usual; 30–50: 250–500 mg q12h; 5–29: 250–500 mg q18h; HD/PD: 250–500 mg q24h tras diálisis.",
+      "hepaticDose": "Sin ajuste hepático rutinario en hepatopatía estable.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Rotura tendinosa",
+        "Neuropatía potencialmente irreversible",
+        "Efectos SNC/convulsiones",
+        "Aneurisma/disección aórtica",
+        "Torsades/QT"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Cationes reducen absorción; revisar antiarrítmicos/QT, fármacos glucémicos e interacciones específicas.",
+      "monitoring": "Síntomas tendinosos/neurológicos, glucemia, ECG/electrolitos cuando QT sea relevante y función renal.",
+      "administration": "VO con o sin alimentos; separar de antiácidos/cationes. IV según formulación.",
+      "preparation": "Comprimidos sin preparación; IV según fabricante.",
+      "infusionProtocol": "Cuando IV, respetar tiempo mínimo de infusión.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Ancianos, trasplantados, usuarios de corticoide y pacientes con aneurisma/aortopatía tienen mayor riesgo.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Buena actividad antipseudomónica si susceptible; fuerte inhibidor CYP1A2 y tizanidina está contraindicada.",
+      "guidelineRecommendations": "Usar solo cuando beneficio supere riesgos de clase y AST/epidemiología lo justifiquen.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "Tendinitis/rotura tendinosa",
+        "Neuropatía periférica",
+        "Efectos SNC",
+        "Miastenia gravis",
+        "Aneurisma/disección aórtica",
+        "Disglucemia",
+        "CYP1A2/tizanidina contraindicada",
+        "Pseudomonas puede adquirir resistencia"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      ]
+    }
+  },
+  "levofloxacino": {
+    "pt": {
+      "name": "Levofloxacino",
+      "class": "Antibiótico fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona sistêmica",
+      "mechanism": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+      "pharmacodynamics": "Bactericida concentração-dependente; AUC/MIC e Cmax/MIC correlacionam-se com eficácia.",
+      "pharmacokinetics": "Alta biodisponibilidade oral e ampla penetração tecidual; eliminação renal varia por agente.",
+      "indications": "CAP, pneumonia nosocomial, cUTI/pyelonefrite, prostatite e outras infecções por suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais; formulação IV existe.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "750 mg conforme agente"
+      ],
+      "dose": "CrCl >=50: 250, 500 ou 750 mg VO/IV q24h conforme foco; CAP 500 mg q24h 7–14 d ou 750 mg q24h 5 d conforme rótulo.",
+      "pediatricDose": "Uso pediátrico rotulado limitado a indicações específicas como antraz/plague; não extrapolar dose adulta.",
+      "renalDose": "CrCl <50 exige redução/alongamento conforme dose-base; HD/CAPD não requerem suplemento pós-diálise.",
+      "hepaticDose": "Sem ajuste hepático rotineiro específico.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Ruptura de tendão",
+        "Neuropatia potencialmente irreversível",
+        "Efeitos SNC/convulsões",
+        "Aneurisma/dissecção de aorta",
+        "Torsades/QT"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes e interações específicas.",
+      "monitoring": "Sintomas tendíneos/neurológicos, glicemia, ECG/eletrólitos quando QT relevante e função renal.",
+      "administration": "VO com ou sem alimento; separar de antiácidos/cátions. IV conforme formulação.",
+      "preparation": "Comprimidos sem preparo; IV conforme fabricante.",
+      "infusionProtocol": "Quando IV, respeitar tempo mínimo de infusão do produto.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Idosos, transplantados, usuários de corticoide e pacientes com aneurisma/aortopatia têm maior risco.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Fluoroquinolona respiratória com boa biodisponibilidade e penetração urinária; IDSA 2026 a usa em cUTI ESBL/CRE apenas se AST suscetível.",
+      "guidelineRecommendations": "Usar apenas quando benefício supera os riscos da classe e AST/epidemiologia justificam.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "Tendinite/ruptura de tendão",
+        "Neuropatia periférica",
+        "Efeitos SNC",
+        "Miastenia gravis",
+        "Aneurisma/dissecção de aorta",
+        "Disglicemia",
+        "QT prolongado",
+        "Hepatotoxicidade"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcad1dad-53aa-43dd-90f3-cc17cc9598d5",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcad1dad-53aa-43dd-90f3-cc17cc9598d5",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      ]
+    },
+    "es": {
+      "name": "Levofloxacino",
+      "class": "Antibiótico fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona sistémica",
+      "mechanism": "Inhibe DNA girasa y topoisomerasa IV, bloqueando replicación/reparación del DNA bacteriano.",
+      "pharmacodynamics": "Bactericida dependiente de concentración; AUC/MIC y Cmax/MIC se correlacionan con eficacia.",
+      "pharmacokinetics": "Alta biodisponibilidad oral y amplia penetración tisular; eliminación renal varía según agente.",
+      "indications": "CAP, neumonía nosocomial, cUTI/pielonefritis, prostatitis y otras infecciones por susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales; existe formulación IV.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "750 mg según agente"
+      ],
+      "dose": "ClCr >=50: 250, 500 o 750 mg VO/IV q24h según foco; CAP 500 mg q24h 7–14 d o 750 mg q24h 5 d según ficha.",
+      "pediatricDose": "Uso pediátrico rotulado limitado a ántrax/plaga; no extrapolar dosis adulta.",
+      "renalDose": "ClCr <50 requiere reducción/intervalo según dosis-base; HD/CAPD no requieren suplemento posdiálisis.",
+      "hepaticDose": "Sin ajuste hepático rutinario específico.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Rotura tendinosa",
+        "Neuropatía potencialmente irreversible",
+        "Efectos SNC/convulsiones",
+        "Aneurisma/disección aórtica",
+        "Torsades/QT"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Cationes reducen absorción; revisar antiarrítmicos/QT, fármacos glucémicos e interacciones específicas.",
+      "monitoring": "Síntomas tendinosos/neurológicos, glucemia, ECG/electrolitos cuando QT sea relevante y función renal.",
+      "administration": "VO con o sin alimentos; separar de antiácidos/cationes. IV según formulación.",
+      "preparation": "Comprimidos sin preparación; IV según fabricante.",
+      "infusionProtocol": "Cuando IV, respetar tiempo mínimo de infusión.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Ancianos, trasplantados, usuarios de corticoide y pacientes con aneurisma/aortopatía tienen mayor riesgo.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Fluoroquinolona respiratoria con alta biodisponibilidad y penetración urinaria; IDSA 2026 la usa en cUTI ESBL/CRE solo si AST susceptible.",
+      "guidelineRecommendations": "Usar solo cuando beneficio supere riesgos de clase y AST/epidemiología lo justifiquen.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "Tendinitis/rotura tendinosa",
+        "Neuropatía periférica",
+        "Efectos SNC",
+        "Miastenia gravis",
+        "Aneurisma/disección aórtica",
+        "Disglucemia",
+        "QT prolongado",
+        "Hepatotoxicidad"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcad1dad-53aa-43dd-90f3-cc17cc9598d5",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcad1dad-53aa-43dd-90f3-cc17cc9598d5",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      ]
+    }
+  },
+  "moxifloxacino": {
+    "pt": {
+      "name": "Moxifloxacino",
+      "class": "Antibiótico fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona sistêmica",
+      "mechanism": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+      "pharmacodynamics": "Bactericida concentração-dependente; AUC/MIC e Cmax/MIC correlacionam-se com eficácia.",
+      "pharmacokinetics": "Alta biodisponibilidade oral e ampla penetração tecidual; eliminação renal varia por agente.",
+      "indications": "CAP, infecções intra-abdominais e outras respiratórias/pele; não é escolha para UTI e não é antipseudomonas confiável.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais; formulação IV existe.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "750 mg conforme agente"
+      ],
+      "dose": "400 mg VO/IV q24h; CAP 7–14 d, cIAI 5–14 d conforme foco.",
+      "pediatricDose": "Segurança/eficácia pediátrica não estabelecida para uso rotineiro.",
+      "renalDose": "Sem ajuste em qualquer grau de insuficiência renal, inclusive HD/CAPD.",
+      "hepaticDose": "Sem ajuste rotineiro, mas cirrose pode aumentar risco de QT; monitorar ECG se hepatopatia relevante.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Ruptura de tendão",
+        "Neuropatia potencialmente irreversível",
+        "Efeitos SNC/convulsões",
+        "Aneurisma/dissecção de aorta",
+        "Torsades/QT"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes e interações específicas.",
+      "monitoring": "Sintomas tendíneos/neurológicos, glicemia, ECG/eletrólitos quando QT relevante e função renal.",
+      "administration": "VO com ou sem alimento; separar de antiácidos/cátions. IV conforme formulação.",
+      "preparation": "Comprimidos sem preparo; IV conforme fabricante.",
+      "infusionProtocol": "Quando IV, respeitar tempo mínimo de infusão do produto.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Idosos, transplantados, usuários de corticoide e pacientes com aneurisma/aortopatia têm maior risco.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Maior preocupação de QT entre o trio; não usar para UTI ou Pseudomonas quando cobertura dirigida é necessária.",
+      "guidelineRecommendations": "Usar apenas quando benefício supera os riscos da classe e AST/epidemiologia justificam.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "Tendinite/ruptura de tendão",
+        "Neuropatia periférica",
+        "Efeitos SNC",
+        "Miastenia gravis",
+        "Aneurisma/dissecção de aorta",
+        "Disglicemia",
+        "QT/torsades proeminente",
+        "Não usar para UTI de rotina",
+        "Não é antipseudomonas confiável"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      ]
+    },
+    "es": {
+      "name": "Moxifloxacino",
+      "class": "Antibiótico fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona sistémica",
+      "mechanism": "Inhibe DNA girasa y topoisomerasa IV, bloqueando replicación/reparación del DNA bacteriano.",
+      "pharmacodynamics": "Bactericida dependiente de concentración; AUC/MIC y Cmax/MIC se correlacionan con eficacia.",
+      "pharmacokinetics": "Alta biodisponibilidad oral y amplia penetración tisular; eliminación renal varía según agente.",
+      "indications": "CAP, intraabdominal y otras respiratorias/piel; no es elección para UTI ni antipseudomónica confiable.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales; existe formulación IV.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "750 mg según agente"
+      ],
+      "dose": "400 mg VO/IV q24h; CAP 7–14 d, cIAI 5–14 d según foco.",
+      "pediatricDose": "Seguridad/eficacia pediátrica no establecida para uso rutinario.",
+      "renalDose": "Sin ajuste en cualquier grado de insuficiencia renal, incluso HD/CAPD.",
+      "hepaticDose": "Sin ajuste rutinario, pero cirrosis puede aumentar riesgo QT; monitorizar ECG si hepatopatía relevante.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Rotura tendinosa",
+        "Neuropatía potencialmente irreversible",
+        "Efectos SNC/convulsiones",
+        "Aneurisma/disección aórtica",
+        "Torsades/QT"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Cationes reducen absorción; revisar antiarrítmicos/QT, fármacos glucémicos e interacciones específicas.",
+      "monitoring": "Síntomas tendinosos/neurológicos, glucemia, ECG/electrolitos cuando QT sea relevante y función renal.",
+      "administration": "VO con o sin alimentos; separar de antiácidos/cationes. IV según formulación.",
+      "preparation": "Comprimidos sin preparación; IV según fabricante.",
+      "infusionProtocol": "Cuando IV, respetar tiempo mínimo de infusión.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Ancianos, trasplantados, usuarios de corticoide y pacientes con aneurisma/aortopatía tienen mayor riesgo.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Mayor preocupación de QT del grupo; no usar para UTI ni Pseudomonas cuando se requiere cobertura dirigida.",
+      "guidelineRecommendations": "Usar solo cuando beneficio supere riesgos de clase y AST/epidemiología lo justifiquen.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "Tendinitis/rotura tendinosa",
+        "Neuropatía periférica",
+        "Efectos SNC",
+        "Miastenia gravis",
+        "Aneurisma/disección aórtica",
+        "Disglucemia",
+        "QT/torsades prominente",
+        "No usar para UTI de rutina",
+        "No es antipseudomónica confiable"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
+        "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      ]
+    }
+  },
+  "metronidazol": {
+    "pt": {
+      "name": "Metronidazol",
+      "class": "Antimicrobiano nitroimidazol",
+      "pharmacologicClass": "Nitroimidazol antibacteriano/antiprotozoário",
+      "mechanism": "Em anaeróbios/protozoários, o grupo nitro é reduzido a intermediários reativos que lesam DNA.",
+      "pharmacodynamics": "Bactericida contra anaeróbios suscetíveis; atividade exige ambiente redutor intracelular.",
+      "pharmacokinetics": "Alta biodisponibilidade oral, ampla distribuição inclusive SNC; metabolismo hepático e eliminação renal de metabólitos.",
+      "indications": "Infecções anaeróbias, tricomoníase, vaginose bacteriana e outras protozoárias conforme indicação.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais; formulação IV existe.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "125 mg em alguns produtos"
+      ],
+      "dose": "Infecção anaeróbia grave: 7,5 mg/kg VO q6h, aproximadamente 500 mg q6h em adulto de 70 kg; máximo 4 g/dia.",
+      "pediatricDose": "Dose pediátrica varia por foco/protozoário e idade; usar esquema específico validado.",
+      "renalDose": "Geralmente sem ajuste em ESRD/CAPD; HD remove quantidade relevante e pode exigir suplemento se dose não for separada da sessão.",
+      "hepaticDose": "Child-Pugh C: reduzir dose em 50%; A/B sem ajuste formal, monitorando eventos adversos.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Neuropatia periférica",
+        "Encefalopatia/convulsões",
+        "Leucopenia",
+        "Reação álcool/disulfiram-like"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Álcool/propilenoglicol, disulfiram, warfarina e lítio exigem atenção; pode aumentar INR.",
+      "monitoring": "Sintomas neurológicos em cursos prolongados, hemograma se prolongado e INR se anticoagulado.",
+      "administration": "VO com ou sem alimento; evitar álcool/propilenoglicol durante e por pelo menos 3 dias após.",
+      "preparation": "Comprimidos prontos; IV conforme fabricante.",
+      "infusionProtocol": "Quando IV, infundir conforme formulação; alta biodisponibilidade facilita transição IV-VO.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "Uso prolongado aumenta risco de neuropatia periférica/encefalopatia; insuficiência hepática aumenta exposição.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Evitar álcool durante e pelo menos 3 dias após. Neuropatia em tratamento prolongado exige suspensão e avaliação.",
+      "guidelineRecommendations": "Usar para anaeróbios/protozoários com benefício e seguir esquemas específicos de diretrizes para vaginose/tricomoníase.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "Álcool/propilenoglicol: evitar +3 dias",
+        "Neuropatia periférica",
+        "Encefalopatia/convulsões",
+        "Child-Pugh C: reduzir 50%",
+        "Warfarina/disulfiram"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2ae49bf4-a23b-bdcc-e063-6294a90a80a9",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2ae49bf4-a23b-bdcc-e063-6294a90a80a9",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+      ]
+    },
+    "es": {
+      "name": "Metronidazol",
+      "class": "Antimicrobiano nitroimidazol",
+      "pharmacologicClass": "Nitroimidazol antibacteriano/antiprotozoario",
+      "mechanism": "En anaerobios/protozoos, el grupo nitro se reduce a intermediarios reactivos que lesionan DNA.",
+      "pharmacodynamics": "Bactericida frente a anaerobios susceptibles; requiere ambiente reductor intracelular.",
+      "pharmacokinetics": "Alta biodisponibilidad oral, amplia distribución incluido SNC; metabolismo hepático y eliminación renal de metabolitos.",
+      "indications": "Infecciones anaerobias, tricomoniasis, vaginosis bacteriana y otras protozoarias según indicación.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales; existe formulación IV.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "125 mg en algunos productos"
+      ],
+      "dose": "Infección anaerobia grave: 7,5 mg/kg VO q6h, aproximadamente 500 mg q6h en adulto de 70 kg; máximo 4 g/día.",
+      "pediatricDose": "Dosis pediátrica varía según foco/protozoo y edad; usar esquema validado.",
+      "renalDose": "Generalmente sin ajuste en ESRD/CAPD; HD elimina cantidad relevante y puede requerir suplemento si dosis no se separa.",
+      "hepaticDose": "Child-Pugh C: reducir dosis 50%; A/B sin ajuste formal, monitorizando eventos adversos.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Neuropatía periférica",
+        "Encefalopatía/convulsiones",
+        "Leucopenia",
+        "Reacción alcohol/disulfiram-like"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Alcohol/propilenglicol, disulfiram, warfarina y litio requieren atención; puede aumentar INR.",
+      "monitoring": "Síntomas neurológicos en tratamientos prolongados, hemograma si prolongado e INR si anticoagulado.",
+      "administration": "VO con o sin alimentos; evitar alcohol/propilenglicol durante y al menos 3 días después.",
+      "preparation": "Comprimidos listos; IV según fabricante.",
+      "infusionProtocol": "Cuando IV, infundir según formulación; alta biodisponibilidad facilita transición IV-VO.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "Uso prolongado aumenta neuropatía periférica/encefalopatía; insuficiencia hepática aumenta exposición.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Evitar alcohol durante y al menos 3 días después. Neuropatía prolongada exige suspensión/evaluación.",
+      "guidelineRecommendations": "Usar para anaerobios/protozoos con beneficio y seguir guías específicas para vaginosis/tricomoniasis.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "Alcohol/propilenglicol: evitar +3 días",
+        "Neuropatía periférica",
+        "Encefalopatía/convulsiones",
+        "Child-Pugh C: reducir 50%",
+        "Warfarina/disulfiram"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2ae49bf4-a23b-bdcc-e063-6294a90a80a9",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2ae49bf4-a23b-bdcc-e063-6294a90a80a9",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+      ]
+    }
+  },
+  "fosfomicina": {
+    "pt": {
+      "name": "Fosfomicina",
+      "class": "Antibiótico derivado do ácido fosfônico",
+      "pharmacologicClass": "Inibidor precoce da síntese de parede; fosfomicina trometamol oral",
+      "mechanism": "Inibe irreversivelmente MurA, bloqueando a primeira etapa citoplasmática da síntese do peptidoglicano.",
+      "pharmacodynamics": "Bactericida; AUC/MIC e exposição urinária contribuem para atividade. Resistência por perda de transportadores ou enzimas Fos.",
+      "pharmacokinetics": "Fosfomicina trometamol oral alcança altas concentrações urinárias; meia-vida ~5,7 h. Concentração parenquimatosa renal é insuficiente para pielonefrite confiável.",
+      "indications": "Cistite aguda não complicada em mulheres por E. coli ou E. faecalis suscetíveis. Formulação IV é distinta.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Sachê oral de fosfomicina trometamol equivalente a 3 g de fosfomicina.",
+      "presentations": [
+        "3 g sachê"
+      ],
+      "dose": "Mulheres >=18 anos com cistite aguda não complicada: 3 g VO em dose única dissolvidos em água.",
+      "pediatricDose": "Segurança/eficácia do sachê oral de 3 g não estabelecida em pediatria no rótulo americano.",
+      "renalDose": "Rótulo oral não fornece esquema padronizado por CrCl para dose única; insuficiência renal prolonga eliminação. Não extrapolar múltiplas doses.",
+      "hepaticDose": "Sem ajuste hepático específico esperado; metabolismo hepático mínimo.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Angioedema",
+        "Falha terapêutica se usada em pielonefrite"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+      "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+      "interactions": "Metoclopramida pode reduzir concentrações séricas/urinárias; evitar se possível.",
+      "monitoring": "Resposta em 48–72 h; febre, dor lombar, bacteremia ou falha exigem reavaliação e terapia sistêmica.",
+      "administration": "Dissolver todo o sachê em água e ingerir imediatamente; nunca tomar granulado seco. Com ou sem alimento.",
+      "preparation": "Dissolver em água; não usar água quente.",
+      "infusionProtocol": "Não aplicável à fosfomicina trometamol oral. Fosfomicina IV é distinta e não intercambiável mg por mg.",
+      "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+      "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+      "specialPopulations": "NÃO indicada para pielonefrite ou abscesso perinéfrico. Repetição diária em cistite simples não melhora eficácia no rótulo.",
+      "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+      "clinicalPearls": "Distinguir oral de IV: oral é terapia de bexiga; IV foi aprovada nos EUA em 2025 e tem papel distinto em cUTI/AMR.",
+      "guidelineRecommendations": "IDSA 2026: fosfomicina oral não é terapia inicial de cUTI/pielonefrite por baixa concentração parenquimatosa; transição seletiva em E. coli pode ser considerada. IV é alternativa em cUTI ESBL/CRE selecionada.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interações"
+      ],
+      "alerts": [
+        "Somente cistite baixa para sachê oral",
+        "NÃO indicada para pielonefrite",
+        "3 g dose única",
+        "IV e oral não são intercambiáveis",
+        "AST importante"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=4f206750-8126-99a3-e063-6294a90ade4c&version=1",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8ec4771-3f8d-473a-a1d0-e42038f61a42",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=4f206750-8126-99a3-e063-6294a90ade4c&version=1",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8ec4771-3f8d-473a-a1d0-e42038f61a42",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Fosfomicina",
+      "class": "Antibiótico derivado del ácido fosfónico",
+      "pharmacologicClass": "Inhibidor temprano de síntesis de pared; fosfomicina trometamol oral",
+      "mechanism": "Inhibe irreversiblemente MurA, bloqueando la primera etapa citoplasmática de síntesis de peptidoglicano.",
+      "pharmacodynamics": "Bactericida; AUC/MIC y exposición urinaria contribuyen a actividad. Resistencia por pérdida de transportadores o enzimas Fos.",
+      "pharmacokinetics": "Fosfomicina trometamol oral alcanza altas concentraciones urinarias; semivida ~5,7 h. Concentración parenquimatosa renal insuficiente para pielonefritis confiable.",
+      "indications": "Cistitis aguda no complicada en mujeres por E. coli o E. faecalis susceptibles. Formulación IV es distinta.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Sobre oral de fosfomicina trometamol equivalente a 3 g de fosfomicina.",
+      "presentations": [
+        "3 g sobre"
+      ],
+      "dose": "Mujeres >=18 años con cistitis aguda no complicada: 3 g VO dosis única disueltos en agua.",
+      "pediatricDose": "Seguridad/eficacia del sobre oral de 3 g no establecida en pediatría en ficha estadounidense.",
+      "renalDose": "Ficha oral no ofrece esquema estándar por ClCr para dosis única; insuficiencia renal prolonga eliminación. No extrapolar dosis múltiples.",
+      "hepaticDose": "Sin ajuste hepático específico esperado; metabolismo hepático mínimo.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Angioedema",
+        "Fracaso terapéutico si se usa en pielonefritis"
+      ],
+      "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+      "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+      "interactions": "Metoclopramida puede reducir concentraciones séricas/urinarias; evitar si es posible.",
+      "monitoring": "Respuesta en 48–72 h; fiebre, dolor lumbar, bacteriemia o fracaso exigen reevaluación y terapia sistémica.",
+      "administration": "Disolver todo el sobre en agua e ingerir de inmediato; nunca tomar granulado seco. Con o sin alimentos.",
+      "preparation": "Disolver en agua; no usar agua caliente.",
+      "infusionProtocol": "No aplicable a fosfomicina trometamol oral. Fosfomicina IV es distinta y no intercambiable mg por mg.",
+      "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+      "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+      "specialPopulations": "NO indicada para pielonefritis ni absceso perinéfrico. Repetición diaria en cistitis simple no mejora eficacia en ficha.",
+      "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+      "clinicalPearls": "Distinguir oral de IV: oral es terapia vesical; IV fue aprobada en EE.UU. en 2025 y tiene papel distinto en cUTI/AMR.",
+      "guidelineRecommendations": "IDSA 2026: fosfomicina oral no es terapia inicial de cUTI/pielonefritis por baja concentración parenquimatosa; transición selectiva en E. coli puede considerarse. IV es alternativa en cUTI ESBL/CRE seleccionada.",
+      "safetyFlags": [
+        "Stewardship antimicrobiano",
+        "Revisar toxicidades e interacciones"
+      ],
+      "alerts": [
+        "Solo cistitis baja para sobre oral",
+        "NO indicada para pielonefritis",
+        "3 g dosis única",
+        "IV y oral no intercambiables",
+        "AST importante"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=4f206750-8126-99a3-e063-6294a90ade4c&version=1",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8ec4771-3f8d-473a-a1d0-e42038f61a42",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=4f206750-8126-99a3-e063-6294a90ade4c&version=1",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8ec4771-3f8d-473a-a1d0-e42038f61a42",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP04_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP05_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP05_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "nitrofurantoina": {
+    "pt": {
+      "name": "Nitrofurantoína",
+      "class": "Antibacteriano urinário nitrofurano",
+      "pharmacologicClass": "Nitrofurano de ação predominantemente urinária",
+      "mechanism": "Após redução por flavoproteínas bacterianas, gera intermediários reativos que lesionam DNA, ribossomos e outras macromoléculas.",
+      "pharmacodynamics": "Atividade bactericida/concentração-dependente no trato urinário; concentrações sistêmicas e no parênquima renal são inadequadas para pielonefrite.",
+      "pharmacokinetics": "Boa absorção oral da formulação monoidratada/macrocristais; rápida eliminação renal e altas concentrações urinárias. Exposição sistêmica aumenta com disfunção renal.",
+      "indications": "Cistite aguda não complicada por uropatógenos suscetíveis. Não usar para pielonefrite, abscesso perinéfrico, prostatite ou bacteremia.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas monoidratadas/macrocristais e macrocristais.",
+      "presentations": [
+        "100 mg monoidratada/macrocristais",
+        "50 mg e 100 mg macrocristais"
+      ],
+      "dose": "Cistite não complicada: 100 mg VO q12h; duração depende de formulação/diretriz, frequentemente 5 dias em diretrizes modernas. Seguir bula local.",
+      "pediatricDose": "A dose depende da formulação e idade. A bula norte-americana de monoidratada/macrocristais não estabelece segurança/eficácia abaixo de 12 anos; não extrapolar a dose adulta.",
+      "renalDose": "Bula norte-americana contraindica anúria, oligúria ou comprometimento renal significativo, incluindo CrCl <60 mL/min. Protocolos modernos podem usar limiar diferente; seguir bula/diretriz institucional vigente.",
+      "hepaticDose": "Sem ajuste posológico rotineiro definido; contraindicar se houver história de icterícia colestática ou disfunção hepática associada previamente à nitrofurantoína.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Cefaleia",
+        "Urina escura",
+        "Dor abdominal"
+      ],
+      "dangerousAdverseEffects": [
+        "Pneumonite aguda",
+        "Fibrose pulmonar em uso prolongado",
+        "Hepatite/necrose hepática",
+        "Neuropatia periférica",
+        "Anemia hemolítica"
+      ],
+      "adverseEffects": "Reações pulmonares agudas, subagudas ou crônicas podem ocorrer; hepatotoxicidade e neuropatia podem ser graves e exigir suspensão imediata.",
+      "contraindications": "Anúria/oligúria ou comprometimento renal significativo conforme bula; termo gestacional 38–42 semanas/trabalho de parto; neonato <1 mês; hepatotoxicidade prévia por nitrofurantoína.",
+      "interactions": "Antiácidos com magnésio podem reduzir absorção; probenecida/sulfinpirazona podem reduzir secreção renal e aumentar toxicidade.",
+      "monitoring": "Função renal; sintomas respiratórios; enzimas hepáticas em uso prolongado; sinais de neuropatia e hemólise em pacientes de risco.",
+      "administration": "VO com alimento para melhorar absorção/tolerância. Engolir a cápsula inteira e completar o esquema.",
+      "preparation": "Cápsula não exige preparo. Verificar formulação porque macrocristais e monoidratada/macrocristais têm esquemas diferentes.",
+      "infusionProtocol": "Não aplicável; não existe formulação IV rotineira deste registro.",
+      "pregnancy": "Contraindicada no termo, 38–42 semanas, durante trabalho de parto ou quando o parto é iminente pelo risco de hemólise neonatal. Fora desse período, avaliar indicação obstétrica.",
+      "lactation": "Evitar em lactentes muito jovens ou com deficiência de G6PD quando o risco de hemólise for relevante; avaliar bula e idade do lactente.",
+      "specialPopulations": "Uso por seis meses ou mais aumenta risco de pneumonite intersticial/fibrose; deficiência de G6PD aumenta risco de hemólise.",
+      "patientEducation": "Procurar atendimento se dispneia, tosse, febre, icterícia, parestesias ou fraqueza. Informar gravidez próxima ao termo.",
+      "clinicalPearls": "É fármaco de bexiga, não de rim: excelente concentração urinária para cistite, mas não alcança tecido renal adequado para pielonefrite ou bacteremia.",
+      "guidelineRecommendations": "IDSA favorece nitrofurantoína em cistite não complicada por ESBL-E quando suscetível. Não usar para pielonefrite/cUTI sistêmica; respeitar função renal e bula local.",
+      "safetyFlags": [
+        "Cistite baixa apenas",
+        "Toxicidade pulmonar",
+        "Hepatotoxicidade",
+        "Neuropatia",
+        "Hemólise/G6PD"
+      ],
+      "alerts": [
+        "NÃO usar para pielonefrite",
+        "Pulmonar aguda/crônica",
+        "CrCl: seguir bula/protocolo",
+        "Contraindicada no termo gestacional",
+        "Neonato <1 mês"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10e2503d-a250-996f-e063-6294a90abd61",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/uncomplicated-cystitis-and-pyelonephritis-uti"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10e2503d-a250-996f-e063-6294a90abd61",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/uncomplicated-cystitis-and-pyelonephritis-uti"
+      ]
+    },
+    "es": {
+      "name": "Nitrofurantoína",
+      "class": "Antibacteriano urinario nitrofurano",
+      "pharmacologicClass": "Nitrofurano de acción predominantemente urinaria",
+      "mechanism": "Tras reducción por flavoproteínas bacterianas genera intermediarios reactivos que lesionan DNA, ribosomas y otras macromoléculas.",
+      "pharmacodynamics": "Actividad bactericida/concentración-dependiente en orina; concentraciones sistémicas y renales parenquimatosas son insuficientes para pielonefritis.",
+      "pharmacokinetics": "Buena absorción oral de monohidrato/macrocristales; eliminación renal rápida y altas concentraciones urinarias. La exposición aumenta con disfunción renal.",
+      "indications": "Cistitis aguda no complicada por uropatógenos susceptibles. No usar para pielonefritis, absceso perinéfrico, prostatitis o bacteriemia.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas monohidrato/macrocristales y macrocristales.",
+      "presentations": [
+        "100 mg monohidrato/macrocristales",
+        "50 mg y 100 mg macrocristales"
+      ],
+      "dose": "Cistitis no complicada: 100 mg VO q12h; duración depende de formulación/guía, frecuentemente 5 días en guías modernas. Seguir ficha local.",
+      "pediatricDose": "La dosis depende de formulación y edad. La ficha estadounidense de monohidrato/macrocristales no establece seguridad/eficacia <12 años; no extrapolar dosis adulta.",
+      "renalDose": "La ficha estadounidense contraindica anuria, oliguria o deterioro renal significativo, incluido ClCr <60 mL/min. Protocolos modernos pueden usar otro umbral; seguir ficha/guía institucional.",
+      "hepaticDose": "Sin ajuste rutinario definido; contraindicada si existe antecedente de ictericia colestásica o disfunción hepática previa por nitrofurantoína.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Cefalea",
+        "Orina oscura",
+        "Dolor abdominal"
+      ],
+      "dangerousAdverseEffects": [
+        "Neumonitis aguda",
+        "Fibrosis pulmonar en uso prolongado",
+        "Hepatitis/necrosis hepática",
+        "Neuropatía periférica",
+        "Anemia hemolítica"
+      ],
+      "adverseEffects": "Pueden ocurrir reacciones pulmonares agudas, subagudas o crónicas; hepatotoxicidad y neuropatía pueden ser graves y requieren suspensión.",
+      "contraindications": "Anuria/oliguria o deterioro renal significativo según ficha; término 38–42 semanas/parto; neonato <1 mes; hepatotoxicidad previa por nitrofurantoína.",
+      "interactions": "Antiácidos con magnesio pueden reducir absorción; probenecid/sulfinpirazona pueden disminuir secreción renal y aumentar toxicidad.",
+      "monitoring": "Función renal; síntomas respiratorios; pruebas hepáticas en uso prolongado; neuropatía y hemólisis en pacientes de riesgo.",
+      "administration": "VO con alimentos para mejorar absorción/tolerancia. Tragar cápsula entera y completar el esquema.",
+      "preparation": "La cápsula no requiere preparación. Verificar formulación porque macrocristales y monohidrato/macrocristales usan esquemas distintos.",
+      "infusionProtocol": "No aplicable; no existe formulación IV rutinaria de este registro.",
+      "pregnancy": "Contraindicada al término, 38–42 semanas, durante trabajo de parto o parto inminente por riesgo de hemólisis neonatal. Fuera de ese período valorar indicación obstétrica.",
+      "lactation": "Evitar en lactantes muy pequeños o con déficit de G6PD cuando el riesgo de hemólisis sea relevante; valorar ficha y edad.",
+      "specialPopulations": "Uso durante seis meses o más aumenta riesgo de neumonitis intersticial/fibrosis; déficit de G6PD aumenta riesgo de hemólisis.",
+      "patientEducation": "Consultar ante disnea, tos, fiebre, ictericia, parestesias o debilidad. Informar embarazo cercano al término.",
+      "clinicalPearls": "Es un fármaco de vejiga, no de riñón: excelente concentración urinaria para cistitis, pero no alcanza tejido renal adecuado para pielonefritis o bacteriemia.",
+      "guidelineRecommendations": "IDSA favorece nitrofurantoína en cistitis no complicada por ESBL-E si es susceptible. No usar para pielonefritis/cUTI sistémica; respetar función renal y ficha local.",
+      "safetyFlags": [
+        "Solo cistitis baja",
+        "Toxicidad pulmonar",
+        "Hepatotoxicidad",
+        "Neuropatía",
+        "Hemólisis/G6PD"
+      ],
+      "alerts": [
+        "NO usar para pielonefritis",
+        "Pulmonar aguda/crónica",
+        "ClCr: seguir ficha/protocolo",
+        "Contraindicada al término",
+        "Neonato <1 mes"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10e2503d-a250-996f-e063-6294a90abd61",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/uncomplicated-cystitis-and-pyelonephritis-uti"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10e2503d-a250-996f-e063-6294a90abd61",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/practice-guideline/uncomplicated-cystitis-and-pyelonephritis-uti"
+      ]
+    }
+  },
+  "rifampicina": {
+    "pt": {
+      "name": "Rifampicina",
+      "class": "Antimicobacteriano rifamicina",
+      "pharmacologicClass": "Rifamicina; potente indutor enzimático e de transportadores",
+      "mechanism": "Liga-se à subunidade beta da RNA-polimerase DNA-dependente bacteriana e inibe síntese de RNA.",
+      "pharmacodynamics": "Bactericida concentração-dependente contra micobactérias suscetíveis; resistência emerge rapidamente em monoterapia na doença tuberculosa ativa.",
+      "pharmacokinetics": "Boa absorção oral; ampla distribuição; metabolismo hepático com autoindução. Excreção predominantemente biliar/fecal e parte renal.",
+      "indications": "Tuberculose em combinação, hanseníase em esquemas combinados, profilaxia de meningococo/H. influenzae e usos selecionados contra biofilme por Gram-positivos conforme protocolo.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas 150 e 300 mg; formulação IV em alguns mercados.",
+      "presentations": [
+        "150 mg",
+        "300 mg",
+        "IV conforme produto"
+      ],
+      "dose": "Tuberculose em adultos: 10 mg/kg VO uma vez ao dia, máximo 600 mg/dia, sempre como parte de esquema combinado adequado.",
+      "pediatricDose": "Tuberculose pediátrica: 10–20 mg/kg VO uma vez ao dia, máximo 600 mg/dia, em esquema combinado conforme diretriz.",
+      "renalDose": "Em geral não requer redução da dose diária usual até 600 mg em insuficiência renal; confirmar bula/protocolo em disfunção renal grave ou diálise.",
+      "hepaticDose": "Hepatopatia exige uso apenas quando necessário, supervisão estrita e função hepática basal e a cada 2–4 semanas conforme bula.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Dor abdominal",
+        "Coloração laranja-avermelhada de urina/lágrimas",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatite/falência hepática",
+        "Trombocitopenia",
+        "Hemólise",
+        "Insuficiência renal aguda",
+        "Reação de hipersensibilidade"
+      ],
+      "adverseEffects": "Hepatotoxicidade pode ser hepatocelular, colestática ou mista e raramente fulminante; esquemas intermitentes/reinício aumentam reações imunológicas.",
+      "contraindications": "Hipersensibilidade às rifamicinas e combinações medicamentosas formalmente contraindicadas pela bula devido a indução enzimática relevante.",
+      "interactions": "Potente indutor de CYP3A4, CYP2C9, CYP2C19, UGT e P-gp; pode reduzir exposição de anticoagulantes, antirretrovirais, azóis, anticoncepcionais, imunossupressores e muitos outros.",
+      "monitoring": "AST/ALT, bilirrubina e sintomas hepáticos; hemograma quando indicado; revisar interações na introdução e na retirada.",
+      "administration": "VO em jejum, idealmente 1 h antes ou 2 h após alimento, com água; IV usa a mesma dose quando indicada.",
+      "preparation": "Cápsulas não exigem preparo. Suspensão extemporânea/IV somente conforme formulação validada.",
+      "infusionProtocol": "Se IV, reconstituir e infundir conforme bula específica; preferir VO quando absorção é adequada.",
+      "pregnancy": "Pode ser usada quando necessária em esquemas de TB, com avaliação obstétrica e do risco hemorrágico periparto conforme contexto.",
+      "lactation": "Compatibilidade depende do contexto terapêutico; pequena quantidade pode passar ao leite. Seguir diretriz de TB e monitorar lactente.",
+      "specialPopulations": "Hepatopatia, consumo de álcool e uso concomitante de hepatotóxicos elevam risco. Reinício após interrupção requer atenção a reações imunológicas.",
+      "patientEducation": "Urina, suor, saliva e lágrimas podem ficar laranja-avermelhados; lentes de contato podem manchar. Usar contracepção alternativa se interação reduzir eficácia hormonal.",
+      "clinicalPearls": "Nunca usar rifampicina isoladamente para TB ativa. A indução enzimática começa após introdução e persiste algum tempo após suspensão, exigindo revisão ativa de interações.",
+      "guidelineRecommendations": "Diretrizes atuais de TB mantêm rifamicinas como eixo de esquemas combinados para doença suscetível; escolher regime e duração conforme diretriz, resistência e interações.",
+      "safetyFlags": [
+        "Potente indutor CYP/P-gp",
+        "Hepatotoxicidade",
+        "Não monoterapia para TB ativa",
+        "Trombocitopenia",
+        "Coloração de fluidos"
+      ],
+      "alerts": [
+        "TB sempre em combinação",
+        "Indução enzimática maciça",
+        "Monitorar fígado",
+        "Interações com azóis/ARV/anticoagulantes",
+        "Fluidos laranja-avermelhados"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cb75e95-d165-4580-9340-42d7a9fd546e",
+        "https://www.idsociety.org/practice-guideline/treatment-of-drug-susceptible-tb/treatment-of-drug-resistant-and-drug-susceptible-tb-2025-update/",
+        "https://www.cdc.gov/tb/hcp/treatment/tuberculosis-disease.html"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cb75e95-d165-4580-9340-42d7a9fd546e",
+        "https://www.idsociety.org/practice-guideline/treatment-of-drug-susceptible-tb/treatment-of-drug-resistant-and-drug-susceptible-tb-2025-update/",
+        "https://www.cdc.gov/tb/hcp/treatment/tuberculosis-disease.html"
+      ]
+    },
+    "es": {
+      "name": "Rifampicina",
+      "class": "Antimicobacteriano rifamicina",
+      "pharmacologicClass": "Rifamicina; potente inductor enzimático y de transportadores",
+      "mechanism": "Se une a la subunidad beta de RNA-polimerasa DNA-dependiente bacteriana e inhibe síntesis de RNA.",
+      "pharmacodynamics": "Bactericida concentración-dependiente frente a micobacterias susceptibles; la resistencia aparece rápidamente con monoterapia de TB activa.",
+      "pharmacokinetics": "Buena absorción oral; amplia distribución; metabolismo hepático con autoinducción. Excreción principalmente biliar/fecal y parcialmente renal.",
+      "indications": "Tuberculosis en combinación, lepra en esquemas combinados, profilaxis meningocócica/H. influenzae y usos selectos contra biofilm según protocolo.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas de 150 y 300 mg; formulación IV en algunos mercados.",
+      "presentations": [
+        "150 mg",
+        "300 mg",
+        "IV según producto"
+      ],
+      "dose": "Tuberculosis en adultos: 10 mg/kg VO una vez al día, máximo 600 mg/día, siempre dentro de un esquema combinado adecuado.",
+      "pediatricDose": "Tuberculosis pediátrica: 10–20 mg/kg VO una vez al día, máximo 600 mg/día, en esquema combinado según guía.",
+      "renalDose": "En general no requiere reducir la dosis diaria usual hasta 600 mg en insuficiencia renal; confirmar ficha/protocolo en enfermedad renal grave o diálisis.",
+      "hepaticDose": "Hepatopatía exige uso solo si es necesario, supervisión estricta y función hepática basal y cada 2–4 semanas según ficha.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Dolor abdominal",
+        "Color naranja-rojizo de orina/lágrimas",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatitis/fallo hepático",
+        "Trombocitopenia",
+        "Hemólisis",
+        "Insuficiencia renal aguda",
+        "Hipersensibilidad"
+      ],
+      "adverseEffects": "La hepatotoxicidad puede ser hepatocelular, colestásica o mixta y raramente fulminante; esquemas intermitentes/reinicio aumentan reacciones inmunológicas.",
+      "contraindications": "Hipersensibilidad a rifamicinas y combinaciones formalmente contraindicadas por la ficha debido a inducción enzimática relevante.",
+      "interactions": "Potente inductor de CYP3A4, CYP2C9, CYP2C19, UGT y P-gp; reduce exposición de anticoagulantes, antirretrovirales, azoles, anticonceptivos, inmunosupresores y muchos otros.",
+      "monitoring": "AST/ALT, bilirrubina y síntomas hepáticos; hemograma cuando corresponda; revisar interacciones al iniciar y suspender.",
+      "administration": "VO en ayunas, idealmente 1 h antes o 2 h después de alimentos, con agua; IV usa la misma dosis cuando está indicada.",
+      "preparation": "Cápsulas no requieren preparación. Suspensión extemporánea/IV solo según formulación validada.",
+      "infusionProtocol": "Si IV, reconstituir e infundir según ficha específica; preferir VO cuando la absorción es adecuada.",
+      "pregnancy": "Puede usarse cuando sea necesaria en esquemas de TB, con evaluación obstétrica y del riesgo hemorrágico periparto.",
+      "lactation": "La compatibilidad depende del contexto; pequeñas cantidades pasan a leche. Seguir guía de TB y monitorizar lactante.",
+      "specialPopulations": "Hepatopatía, alcohol y otros hepatotóxicos elevan riesgo. Reinicio tras interrupción requiere atención a reacciones inmunológicas.",
+      "patientEducation": "Orina, sudor, saliva y lágrimas pueden tornarse naranja-rojizos; puede teñir lentes de contacto. Usar anticoncepción alternativa si disminuye eficacia hormonal.",
+      "clinicalPearls": "Nunca usar rifampicina sola para TB activa. La inducción enzimática comienza tras introducirla y persiste después de suspenderla, por lo que las interacciones deben revisarse activamente.",
+      "guidelineRecommendations": "Guías actuales de TB mantienen rifamicinas como eje de esquemas combinados para enfermedad susceptible; seleccionar régimen y duración según guía, resistencia e interacciones.",
+      "safetyFlags": [
+        "Potente inductor CYP/P-gp",
+        "Hepatotoxicidad",
+        "No monoterapia en TB activa",
+        "Trombocitopenia",
+        "Coloración de fluidos"
+      ],
+      "alerts": [
+        "TB siempre combinada",
+        "Inducción enzimática masiva",
+        "Monitorizar hígado",
+        "Interacciones con azoles/ARV/anticoagulantes",
+        "Fluidos naranja-rojizos"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cb75e95-d165-4580-9340-42d7a9fd546e",
+        "https://www.idsociety.org/practice-guideline/treatment-of-drug-susceptible-tb/treatment-of-drug-resistant-and-drug-susceptible-tb-2025-update/",
+        "https://www.cdc.gov/tb/hcp/treatment/tuberculosis-disease.html"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cb75e95-d165-4580-9340-42d7a9fd546e",
+        "https://www.idsociety.org/practice-guideline/treatment-of-drug-susceptible-tb/treatment-of-drug-resistant-and-drug-susceptible-tb-2025-update/",
+        "https://www.cdc.gov/tb/hcp/treatment/tuberculosis-disease.html"
+      ]
+    }
+  },
+  "colistina": {
+    "pt": {
+      "name": "Colistina (colistimetato sódico)",
+      "class": "Antibacteriano polimixina",
+      "pharmacologicClass": "Pró-fármaco colistimetato; polimixina E ativa",
+      "mechanism": "A colistina ativa liga-se ao LPS e desloca Ca/Mg da membrana externa de Gram-negativos, aumentando permeabilidade e causando morte celular.",
+      "pharmacodynamics": "Bactericida concentração-dependente; janela terapêutica estreita. Resistência pode envolver modificação de LPS, inclusive mecanismos mcr.",
+      "pharmacokinetics": "Colistimetato é pró-fármaco convertido a colistina; eliminação e conversão dependem fortemente da função renal. A nomenclatura CBA versus UI é fonte crítica de erro.",
+      "indications": "Infecções graves por Gram-negativos multirresistentes suscetíveis quando agentes mais seguros/preferidos não estão disponíveis ou são inadequados.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frasco injetável rotulado em colistin base activity (CBA); concentração e equivalência devem ser verificadas no produto.",
+      "presentations": [
+        "150 mg CBA por frasco em apresentações norte-americanas"
+      ],
+      "dose": "Bula norte-americana: 2,5–5 mg/kg/dia de colistin base activity, divididos em 2–4 doses, com função renal normal. Protocolos modernos podem usar carga e esquemas distintos.",
+      "pediatricDose": "Bula inclui pacientes pediátricos com 2,5–5 mg/kg/dia de CBA divididos em 2–4 doses com função renal normal; ajustar em disfunção renal segundo protocolo.",
+      "renalDose": "Bula: CrCl >=80: 2,5–5 mg/kg/dia CBA; 50–79: 2,5–3,8 mg/kg/dia BID; 30–49: 2,5 mg/kg/dia uma vez ou BID; 10–29: 1,5 mg/kg q36h.",
+      "hepaticDose": "Sem ajuste hepático específico estabelecido; função renal é o principal determinante de exposição ao pró-fármaco.",
+      "commonAdverseEffects": [
+        "Parestesias",
+        "Tontura",
+        "Elevação de creatinina",
+        "Fraqueza"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidade",
+        "Neurotoxicidade",
+        "Bloqueio neuromuscular/apneia",
+        "Desequilíbrios eletrolíticos"
+      ],
+      "adverseEffects": "Nefrotoxicidade é dose/exposição-dependente e frequentemente reversível após suspensão; neurotoxicidade pode progredir a fraqueza e apneia.",
+      "contraindications": "Hipersensibilidade às polimixinas; cautela extrema com bloqueadores neuromusculares e outros nefro/neurotóxicos.",
+      "interactions": "Evitar ou minimizar aminoglicosídeos, outras polimixinas, bloqueadores neuromusculares e outros nefro/neurotóxicos quando possível.",
+      "monitoring": "Creatinina e diurese frequentes, eletrólitos, sinais neurológicos e respiratórios. Confirmar unidade de dose antes de cada prescrição/administração.",
+      "administration": "IV/IM conforme produto; em obesidade a bula norte-americana orienta basear mg/kg no peso ideal.",
+      "preparation": "Reconstituir conforme fabricante. Escrever sempre a unidade por extenso: mg de CBA ou UI, nunca apenas 'mg de colistina' sem especificação.",
+      "infusionProtocol": "A bula permite administração IV intermitente/contínua conforme preparo; protocolos contemporâneos de carga/manutenção devem ser validados institucionalmente.",
+      "pregnancy": "Dados humanos limitados; usar apenas quando necessidade materna superar riscos e não houver alternativa mais segura.",
+      "lactation": "Dados limitados; avaliar exposição do lactente e toxicidade potencial, especialmente função renal/intestinal.",
+      "specialPopulations": "Obesidade: bula usa peso ideal. Terapia renal substitutiva/CRRT exige protocolo farmacocinético específico; não extrapolar tabela de CrCl simples.",
+      "patientEducation": "Informar formigamento, fraqueza, dificuldade respiratória e redução da diurese. Explicar que a dose depende da unidade CBA/UI e da função renal.",
+      "clinicalPearls": "Colistimetato não deve ser prescrito com unidade ambígua. Diferenciar CBA, colistina ativa e unidades internacionais evita erros de várias vezes na dose.",
+      "guidelineRecommendations": "IDSA 2026 prefere beta-lactâmicos novos ou outros agentes ativos para muitos MDR Gram-negativos; reservar polimixinas para cenários selecionados e AST/protocolo especializado.",
+      "safetyFlags": [
+        "CBA versus UI",
+        "Nefrotoxicidade",
+        "Neurotoxicidade",
+        "Bloqueio neuromuscular",
+        "Ajuste renal obrigatório"
+      ],
+      "alerts": [
+        "Dose em CBA explícita",
+        "Obesidade: peso ideal na bula",
+        "CrCl 10–29: 1,5 mg/kg q36h",
+        "Evitar nefrotóxicos",
+        "Protocolo específico em CRRT"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ec7dc90-825c-422e-9f4b-c8ace9d93af5",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ec7dc90-825c-422e-9f4b-c8ace9d93af5",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      ]
+    },
+    "es": {
+      "name": "Colistina (colistimetato sódico)",
+      "class": "Antibacteriano polimixina",
+      "pharmacologicClass": "Profármaco colistimetato; polimixina E activa",
+      "mechanism": "La colistina activa se une a LPS y desplaza Ca/Mg de membrana externa de Gram negativos, aumentando permeabilidad y causando muerte celular.",
+      "pharmacodynamics": "Bactericida dependiente de concentración; ventana terapéutica estrecha. Resistencia puede incluir modificación de LPS y mecanismos mcr.",
+      "pharmacokinetics": "Colistimetato es profármaco convertido a colistina; eliminación/conversión dependen de función renal. CBA versus UI es fuente crítica de errores.",
+      "indications": "Infecciones graves por Gram negativos multirresistentes susceptibles cuando agentes más seguros/preferidos no están disponibles o son inadecuados.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Vial inyectable rotulado en colistin base activity (CBA); verificar concentración y equivalencia del producto.",
+      "presentations": [
+        "150 mg CBA por vial en presentaciones estadounidenses"
+      ],
+      "dose": "Ficha estadounidense: 2,5–5 mg/kg/día de colistin base activity divididos en 2–4 dosis con función renal normal. Protocolos modernos pueden usar carga diferente.",
+      "pediatricDose": "La ficha incluye pediatría con 2,5–5 mg/kg/día CBA divididos en 2–4 dosis con función renal normal; ajustar en disfunción renal según protocolo.",
+      "renalDose": "Ficha: ClCr >=80: 2,5–5 mg/kg/día CBA; 50–79: 2,5–3,8 mg/kg/día BID; 30–49: 2,5 mg/kg/día una vez o BID; 10–29: 1,5 mg/kg q36h.",
+      "hepaticDose": "Sin ajuste hepático específico; función renal es el principal determinante de exposición al profármaco.",
+      "commonAdverseEffects": [
+        "Parestesias",
+        "Mareo",
+        "Aumento de creatinina",
+        "Debilidad"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidad",
+        "Neurotoxicidad",
+        "Bloqueo neuromuscular/apnea",
+        "Alteraciones electrolíticas"
+      ],
+      "adverseEffects": "Nefrotoxicidad es dependiente de exposición y a menudo reversible; neurotoxicidad puede progresar a debilidad y apnea.",
+      "contraindications": "Hipersensibilidad a polimixinas; extrema precaución con bloqueantes neuromusculares y otros nefro/neurotóxicos.",
+      "interactions": "Evitar o minimizar aminoglucósidos, otras polimixinas, bloqueantes neuromusculares y otros nefro/neurotóxicos cuando sea posible.",
+      "monitoring": "Creatinina/diuresis frecuentes, electrolitos, signos neurológicos/respiratorios. Confirmar unidad de dosis antes de cada administración.",
+      "administration": "IV/IM según producto; en obesidad la ficha estadounidense orienta dosificar por peso ideal.",
+      "preparation": "Reconstituir según fabricante. Escribir siempre la unidad completa: mg de CBA o UI, nunca 'mg de colistina' sin especificar.",
+      "infusionProtocol": "Ficha permite IV intermitente/continua según preparación; protocolos contemporáneos de carga/mantenimiento deben validarse institucionalmente.",
+      "pregnancy": "Datos humanos limitados; usar solo si necesidad materna supera riesgos y no existe alternativa más segura.",
+      "lactation": "Datos limitados; valorar exposición y toxicidad potencial en lactante.",
+      "specialPopulations": "Obesidad: ficha usa peso ideal. Terapia renal sustitutiva/CRRT requiere protocolo PK específico; no extrapolar tabla simple.",
+      "patientEducation": "Informar hormigueo, debilidad, dificultad respiratoria y reducción de diuresis. La dosis depende de unidad CBA/UI y función renal.",
+      "clinicalPearls": "Colistimetato nunca debe prescribirse con unidad ambigua. Diferenciar CBA, colistina activa y unidades internacionales evita errores de varias veces la dosis.",
+      "guidelineRecommendations": "IDSA 2026 prefiere nuevos beta-lactámicos u otros agentes activos para muchos MDR Gram negativos; reservar polimixinas para escenarios selectos y AST/protocolo experto.",
+      "safetyFlags": [
+        "CBA versus UI",
+        "Nefrotoxicidad",
+        "Neurotoxicidad",
+        "Bloqueo neuromuscular",
+        "Ajuste renal obligatorio"
+      ],
+      "alerts": [
+        "Dosis CBA explícita",
+        "Obesidad: peso ideal en ficha",
+        "ClCr 10–29: 1,5 mg/kg q36h",
+        "Evitar nefrotóxicos",
+        "Protocolo específico en CRRT"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ec7dc90-825c-422e-9f4b-c8ace9d93af5",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ec7dc90-825c-422e-9f4b-c8ace9d93af5",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      ]
+    }
+  },
+  "polimixina_b": {
+    "pt": {
+      "name": "Polimixina B",
+      "class": "Antibacteriano polimixina",
+      "pharmacologicClass": "Polimixina catiônica ativa",
+      "mechanism": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes e rompe a integridade da membrana.",
+      "pharmacodynamics": "Bactericida concentração-dependente com janela terapêutica estreita; resistência pode ocorrer por modificação do LPS.",
+      "pharmacokinetics": "Administrada como fármaco ativo, diferentemente do colistimetato. Eliminação renal não explica toda a variabilidade; concentrações sistêmicas podem ser mais previsíveis que colistina.",
+      "indications": "Infecções graves por Gram-negativos multirresistentes suscetíveis quando opções mais seguras/preferidas não são adequadas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó injetável em unidades.",
+      "presentations": [
+        "500.000 unidades por frasco em apresentações usuais"
+      ],
+      "dose": "Bula IV: adultos e crianças com função renal normal, 15.000–25.000 unidades/kg/dia; pode dividir q12h; máximo 25.000 unidades/kg/dia.",
+      "pediatricDose": "Bula IV: crianças 15.000–25.000 unidades/kg/dia com função renal normal; lactentes podem receber até 40.000 unidades/kg/dia segundo a bula, sempre com monitorização especializada.",
+      "renalDose": "A bula orienta reduzir abaixo de 15.000 unidades/kg/dia em comprometimento renal. Consensos PK modernos diferem quanto à estratégia; usar protocolo institucional e TDM quando disponível.",
+      "hepaticDose": "Sem ajuste hepático específico estabelecido; toxicidade renal/neurológica é o principal limitante.",
+      "commonAdverseEffects": [
+        "Parestesias",
+        "Tontura",
+        "Dor no local",
+        "Aumento de creatinina"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidade",
+        "Neurotoxicidade",
+        "Apneia/bloqueio neuromuscular",
+        "Distúrbios eletrolíticos"
+      ],
+      "adverseEffects": "Pode causar albuminúria, cilindrúria, azotemia, parestesias, ataxia, sonolência e apneia, especialmente com outros neurotóxicos/bloqueadores.",
+      "contraindications": "Hipersensibilidade às polimixinas; evitar associação desnecessária com outros nefro/neurotóxicos.",
+      "interactions": "Aminoglicosídeos, colistina, outros nefrotóxicos e bloqueadores neuromusculares podem aumentar nefrotoxicidade, neurotoxicidade e apneia.",
+      "monitoring": "Função renal frequente, eletrólitos, sintomas neurológicos e força/respiração. Confirmar unidades/kg e dose total diária.",
+      "administration": "IV é via sistêmica preferida quando indicada; IM é dolorosa e não recomendada rotineiramente.",
+      "preparation": "Bula IV descreve 500.000 unidades diluídas em 300–500 mL de dextrose 5% para infusão contínua; seguir produto/protocolo local.",
+      "infusionProtocol": "A bula permite infusões a cada 12 h ou contínuas; não exceder 25.000 unidades/kg/dia na via IV rotulada.",
+      "pregnancy": "Dados limitados; usar apenas quando benefício superar risco e não houver alternativa adequada.",
+      "lactation": "Dados limitados sobre excreção; avaliar risco-benefício e observar o lactente.",
+      "specialPopulations": "Disfunção renal e exposição simultânea a nefro/neurotóxicos aumentam risco. Diferenças entre bula histórica e consenso PK moderno exigem protocolo local.",
+      "patientEducation": "Relatar parestesias, tontura, fraqueza, dificuldade respiratória ou queda da diurese imediatamente.",
+      "clinicalPearls": "Não confundir polimixina B com colistimetato: são produtos, unidades e farmacocinéticas diferentes. Prescrever em unidades e explicitar via/protocolo.",
+      "guidelineRecommendations": "Diretrizes de resistência atuais procuram evitar polimixinas quando existem agentes mais ativos e seguros. Se usadas, basear em AST, foco, função renal e protocolo especializado.",
+      "safetyFlags": [
+        "Dose em unidades/kg",
+        "Nefrotoxicidade",
+        "Neurotoxicidade",
+        "Apneia",
+        "Não confundir com colistina"
+      ],
+      "alerts": [
+        "15.000–25.000 U/kg/dia IV",
+        "Máx 25.000 U/kg/dia",
+        "Bula reduz na insuficiência renal",
+        "Evitar aminoglicosídeos/neurotóxicos",
+        "Monitorar respiração"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      ]
+    },
+    "es": {
+      "name": "Polimixina B",
+      "class": "Antibacteriano polimixina",
+      "pharmacologicClass": "Polimixina catiónica activa",
+      "mechanism": "Se une al LPS de membrana externa de Gram negativos, desplaza cationes divalentes y rompe integridad de membrana.",
+      "pharmacodynamics": "Bactericida dependiente de concentración con ventana terapéutica estrecha; resistencia puede surgir por modificación de LPS.",
+      "pharmacokinetics": "Se administra como fármaco activo, a diferencia de colistimetato. Eliminación renal no explica toda la variabilidad; exposición sistémica puede ser más predecible.",
+      "indications": "Infecciones graves por Gram negativos multirresistentes susceptibles cuando opciones más seguras/preferidas no son adecuadas.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo inyectable en unidades.",
+      "presentations": [
+        "500.000 unidades por vial en presentaciones usuales"
+      ],
+      "dose": "Ficha IV: adultos y niños con función renal normal, 15.000–25.000 unidades/kg/día; puede dividirse q12h; máximo 25.000 unidades/kg/día.",
+      "pediatricDose": "Ficha IV: niños 15.000–25.000 unidades/kg/día con función renal normal; lactantes hasta 40.000 unidades/kg/día según ficha, con monitorización experta.",
+      "renalDose": "La ficha orienta reducir por debajo de 15.000 unidades/kg/día en deterioro renal. Consensos PK modernos difieren; usar protocolo institucional y TDM si disponible.",
+      "hepaticDose": "Sin ajuste hepático específico; toxicidad renal/neurológica es el principal limitante.",
+      "commonAdverseEffects": [
+        "Parestesias",
+        "Mareo",
+        "Dolor local",
+        "Aumento de creatinina"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidad",
+        "Neurotoxicidad",
+        "Apnea/bloqueo neuromuscular",
+        "Alteraciones electrolíticas"
+      ],
+      "adverseEffects": "Puede causar albuminuria, cilindruria, azotemia, parestesias, ataxia, somnolencia y apnea, sobre todo con otros neurotóxicos/bloqueantes.",
+      "contraindications": "Hipersensibilidad a polimixinas; evitar asociación innecesaria con otros nefro/neurotóxicos.",
+      "interactions": "Aminoglucósidos, colistina, otros nefrotóxicos y bloqueantes neuromusculares aumentan nefrotoxicidad, neurotoxicidad y apnea.",
+      "monitoring": "Función renal frecuente, electrolitos, síntomas neurológicos y fuerza/respiración. Confirmar unidades/kg y dosis total.",
+      "administration": "IV es vía sistémica preferida cuando está indicada; IM es dolorosa y no se recomienda rutinariamente.",
+      "preparation": "Ficha IV describe 500.000 unidades diluidas en 300–500 mL de dextrosa 5% para goteo continuo; seguir producto/protocolo local.",
+      "infusionProtocol": "Ficha permite infusiones q12h o continuas; no exceder 25.000 unidades/kg/día por vía IV rotulada.",
+      "pregnancy": "Datos limitados; usar solo si beneficio supera riesgo y no hay alternativa adecuada.",
+      "lactation": "Datos limitados sobre excreción; valorar riesgo-beneficio y observar lactante.",
+      "specialPopulations": "Disfunción renal y nefro/neurotóxicos concomitantes aumentan riesgo. Diferencias entre ficha histórica y consenso PK moderno requieren protocolo local.",
+      "patientEducation": "Informar parestesias, mareo, debilidad, dificultad respiratoria o caída de diuresis inmediatamente.",
+      "clinicalPearls": "No confundir polimixina B con colistimetato: son productos, unidades y PK diferentes. Prescribir en unidades y explicitar vía/protocolo.",
+      "guidelineRecommendations": "Guías actuales de resistencia intentan evitar polimixinas si existen agentes más activos y seguros. Si se usan, basar en AST, foco, función renal y protocolo experto.",
+      "safetyFlags": [
+        "Dosis en unidades/kg",
+        "Nefrotoxicidad",
+        "Neurotoxicidad",
+        "Apnea",
+        "No confundir con colistina"
+      ],
+      "alerts": [
+        "15.000–25.000 U/kg/día IV",
+        "Máx 25.000 U/kg/día",
+        "Ficha reduce en insuficiencia renal",
+        "Evitar aminoglucósidos/neurotóxicos",
+        "Monitorizar respiración"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP05_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP06_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP06_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "isoniazida": {
+    "pt": {
+      "name": "Isoniazida",
+      "class": "Antimicobacteriano",
+      "pharmacologicClass": "Hidrazida do ácido isonicotínico; inibidor da síntese de ácido micólico",
+      "mechanism": "Pró-fármaco ativado pela catalase-peroxidase KatG do M. tuberculosis; inibe síntese de ácido micólico via alvos como InhA.",
+      "pharmacodynamics": "Bactericida contra bacilos em rápida replicação e bacteriostática contra populações menos ativas; resistência por katG/inhA e outros mecanismos.",
+      "pharmacokinetics": "Excelente absorção oral e penetração tecidual/LCR; acetilação hepática por NAT2 gera grande variabilidade; metabólitos eliminados pelos rins.",
+      "indications": "Tratamento de tuberculose ativa sempre em combinação e tratamento preventivo de infecção latente em regimes apropriados.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos e solução oral/injetável em alguns mercados.",
+      "presentations": [
+        "100 mg",
+        "300 mg",
+        "Solução oral conforme produto"
+      ],
+      "dose": "TB ativa em adulto: 5 mg/kg VO uma vez ao dia, máximo 300 mg/dia, sempre em combinação. Regimes intermitentes 15 mg/kg até 900 mg 2–3 vezes/semana existem sob programas específicos.",
+      "pediatricDose": "Crianças: 10–15 mg/kg VO uma vez ao dia, máximo 300 mg/dia; regimes intermitentes 20–40 mg/kg até 900 mg 2–3 vezes/semana conforme diretriz/programa.",
+      "renalDose": "Geralmente sem ajuste em insuficiência renal, inclusive hemodiálise; administrar após HD quando possível. Monitorar neurotoxicidade em DRC.",
+      "hepaticDose": "Sem tabela simples de ajuste; hepatopatia ativa/elevação importante exige cautela, monitorização intensa e reconsideração do regime. Boxed warning para hepatite grave/fatal.",
+      "commonAdverseEffects": [
+        "Elevação de transaminases",
+        "Náusea",
+        "Neuropatia periférica",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatite grave/fatal",
+        "Neuropatia periférica",
+        "Convulsões",
+        "Psicose",
+        "Anemia sideroblástica"
+      ],
+      "adverseEffects": "Hepatotoxicidade pode ocorrer mesmo após meses e risco aumenta com idade, álcool e doença hepática. Neuropatia relaciona-se à deficiência funcional de piridoxina.",
+      "contraindications": "Hepatite aguda importante, história de reação hepática grave à isoniazida ou hipersensibilidade clinicamente significativa.",
+      "interactions": "Inibe enzimas como CYP2C19/CYP3A em graus relevantes e pode aumentar níveis de fenitoína/carbamazepina; álcool e outros hepatotóxicos aumentam risco.",
+      "monitoring": "Avaliar sintomas de hepatite mensalmente; AST/ALT/bilirrubina em pacientes de risco/baseline alterado. Monitorar neuropatia e adesão.",
+      "administration": "VO preferencialmente em jejum, 1 h antes ou 2 h após alimento; alimento pode reduzir absorção.",
+      "preparation": "Comprimidos/solução conforme produto; piridoxina deve ser prescrita separadamente quando indicada.",
+      "infusionProtocol": "Não aplicável à rotina oral; formulações parenterais são reservadas a situações específicas.",
+      "pregnancy": "Pode ser usada em regimes de TB quando indicada; gestação aumenta indicação de piridoxina profilática em pessoas de risco.",
+      "lactation": "Compatível em muitos regimes de TB; a quantidade no leite não substitui profilaxia/tratamento do lactente. Considerar piridoxina para mãe/lactente quando indicada.",
+      "specialPopulations": "Dar piridoxina 25–50 mg/dia a pessoas com risco de neuropatia, incluindo gestantes, lactentes amamentados, HIV, diabetes, alcoolismo, desnutrição, DRC ou idade avançada.",
+      "patientEducation": "Suspender e procurar avaliação se anorexia persistente, náusea/vômito, fadiga intensa, urina escura ou icterícia; relatar parestesias.",
+      "clinicalPearls": "B6 não é opcional em grupos de risco: piridoxina 25–50 mg/dia reduz neuropatia. TB ativa nunca deve receber isoniazida isolada.",
+      "guidelineRecommendations": "Diretrizes atuais mantêm isoniazida como componente central de vários regimes para TB suscetível e de alguns regimes para infecção latente; sempre considerar resistência, adesão e hepatotoxicidade.",
+      "safetyFlags": [
+        "Boxed warning hepatite",
+        "TB ativa sempre em combinação",
+        "Piridoxina em grupos de risco",
+        "Neuropatia",
+        "NAT2/variabilidade"
+      ],
+      "alerts": [
+        "5 mg/kg/dia adulto, máx 300 mg",
+        "Criança 10–15 mg/kg/dia, máx 300 mg",
+        "B6 25–50 mg/dia em risco",
+        "Monitorar hepatite",
+        "Álcool aumenta risco"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+        "https://www.cdc.gov/tb/treatment/index.html",
+        "https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+        "https://www.cdc.gov/tb/treatment/index.html",
+        "https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+      ]
+    },
+    "es": {
+      "name": "Isoniazida",
+      "class": "Antimicobacteriano",
+      "pharmacologicClass": "Hidrazida del ácido isonicotínico; inhibidor de síntesis de ácido micólico",
+      "mechanism": "Profármaco activado por catalasa-peroxidasa KatG de M. tuberculosis; inhibe síntesis de ácido micólico a través de blancos como InhA.",
+      "pharmacodynamics": "Bactericida contra bacilos en replicación rápida y bacteriostática en poblaciones menos activas; resistencia por katG/inhA y otros.",
+      "pharmacokinetics": "Excelente absorción oral y penetración tisular/LCR; acetilación hepática NAT2 con gran variabilidad; metabolitos renales.",
+      "indications": "Tratamiento de TB activa siempre en combinación y tratamiento preventivo de infección latente en regímenes apropiados.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos y solución oral/inyectable en algunos mercados.",
+      "presentations": [
+        "100 mg",
+        "300 mg",
+        "Solución oral según producto"
+      ],
+      "dose": "TB activa adulto: 5 mg/kg VO una vez al día, máximo 300 mg/día, siempre combinada. Regímenes intermitentes 15 mg/kg hasta 900 mg 2–3 veces/semana existen bajo programas específicos.",
+      "pediatricDose": "Niños: 10–15 mg/kg VO una vez al día, máximo 300 mg/día; intermitente 20–40 mg/kg hasta 900 mg 2–3 veces/semana según guía/programa.",
+      "renalDose": "Generalmente sin ajuste en insuficiencia renal incluida hemodiálisis; administrar después de HD cuando sea posible. Vigilar neurotoxicidad en ERC.",
+      "hepaticDose": "Sin tabla simple de ajuste; hepatopatía activa/elevación importante exige precaución, monitorización intensa y reconsiderar régimen. Boxed warning por hepatitis grave/fatal.",
+      "commonAdverseEffects": [
+        "Elevación de transaminasas",
+        "Náuseas",
+        "Neuropatía periférica",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatitis grave/fatal",
+        "Neuropatía periférica",
+        "Convulsiones",
+        "Psicosis",
+        "Anemia sideroblástica"
+      ],
+      "adverseEffects": "Hepatotoxicidad puede ocurrir tras meses y riesgo aumenta con edad, alcohol y hepatopatía. Neuropatía se relaciona con déficit funcional de piridoxina.",
+      "contraindications": "Hepatitis aguda importante, antecedente de reacción hepática grave por isoniazida o hipersensibilidad significativa.",
+      "interactions": "Inhibe enzimas como CYP2C19/CYP3A y puede elevar fenitoína/carbamazepina; alcohol y otros hepatotóxicos aumentan riesgo.",
+      "monitoring": "Evaluar síntomas de hepatitis mensualmente; AST/ALT/bilirrubina en pacientes de riesgo/baseline alterado. Vigilar neuropatía y adherencia.",
+      "administration": "VO preferentemente en ayunas, 1 h antes o 2 h después de alimentos; alimentos reducen absorción.",
+      "preparation": "Comprimidos/solución según producto; piridoxina se prescribe por separado cuando está indicada.",
+      "infusionProtocol": "No aplicable a rutina oral; formulaciones parenterales para situaciones específicas.",
+      "pregnancy": "Puede usarse en regímenes de TB cuando corresponde; gestación refuerza indicación de piridoxina profiláctica.",
+      "lactation": "Compatible en muchos regímenes de TB; cantidad en leche no sustituye profilaxis/tratamiento del lactante. Considerar piridoxina.",
+      "specialPopulations": "Dar piridoxina 25–50 mg/día a personas con riesgo de neuropatía: gestantes, lactantes amamantados, HIV, diabetes, alcoholismo, malnutrición, ERC o edad avanzada.",
+      "patientEducation": "Suspender y consultar ante anorexia persistente, náuseas/vómitos, fatiga intensa, orina oscura o ictericia; informar parestesias.",
+      "clinicalPearls": "B6 no es opcional en grupos de riesgo: piridoxina 25–50 mg/día reduce neuropatía. TB activa nunca debe tratarse con isoniazida sola.",
+      "guidelineRecommendations": "Guías actuales mantienen isoniazida como componente central de varios regímenes para TB susceptible y algunos regímenes de infección latente; considerar resistencia, adherencia y hepatotoxicidad.",
+      "safetyFlags": [
+        "Boxed warning hepatitis",
+        "TB activa siempre combinada",
+        "Piridoxina en grupos de riesgo",
+        "Neuropatía",
+        "NAT2/variabilidad"
+      ],
+      "alerts": [
+        "5 mg/kg/día adulto, máx 300 mg",
+        "Niño 10–15 mg/kg/día, máx 300 mg",
+        "B6 25–50 mg/día en riesgo",
+        "Monitorizar hepatitis",
+        "Alcohol aumenta riesgo"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+        "https://www.cdc.gov/tb/treatment/index.html",
+        "https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+        "https://www.cdc.gov/tb/treatment/index.html",
+        "https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+      ]
+    }
+  },
+  "rifabutina": {
+    "pt": {
+      "name": "Rifabutina",
+      "class": "Antimicobacteriano rifamicina",
+      "pharmacologicClass": "Rifamicina; indutor CYP3A menos potente que rifampicina",
+      "mechanism": "Liga-se à subunidade beta da RNA-polimerase DNA-dependente bacteriana e inibe síntese de RNA.",
+      "pharmacodynamics": "Bactericida contra micobactérias suscetíveis; resistência emerge rapidamente se usada isoladamente para TB ativa.",
+      "pharmacokinetics": "Boa absorção oral, grande distribuição tecidual, metabolismo hepático CYP3A a metabólitos ativos e meia-vida longa.",
+      "indications": "Prevenção de MAC disseminado em pessoas com HIV avançado selecionadas; componente alternativo de regimes para TB/MAC quando interações favorecem rifabutina.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas orais.",
+      "presentations": [
+        "150 mg"
+      ],
+      "dose": "Profilaxia MAC em adulto: 300 mg VO uma vez ao dia. Doses precisam ser modificadas com vários antirretrovirais/inibidores ou indutores CYP3A.",
+      "pediatricDose": "Dados pediátricos são mais limitados; diretrizes HIV pediátricas aceitam rifabutina como alternativa quando macrolídeos não são tolerados, com dose especializada.",
+      "renalDose": "Insuficiência renal leve-moderada geralmente não exige grande ajuste; disfunção grave pode aumentar exposição e requer monitorização/ajuste conforme protocolo.",
+      "hepaticDose": "Hepatopatia grave pode reduzir depuração; não há tabela simples universal, exigir cautela e monitorização.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Rash",
+        "Coloração laranja-avermelhada de fluidos",
+        "Neutropenia"
+      ],
+      "dangerousAdverseEffects": [
+        "Neutropenia grave",
+        "Uveíte",
+        "Hepatotoxicidade",
+        "Trombocitopenia",
+        "Hipersensibilidade"
+      ],
+      "adverseEffects": "Uveíte e neutropenia são concentração-dependentes e mais prováveis com inibidores CYP3A como claritromicina/azóis; fluidos corporais podem mudar de cor.",
+      "contraindications": "Hipersensibilidade a rifabutina/rifamicinas; algumas combinações antirretrovirais são contraindicadas ou não recomendadas.",
+      "interactions": "Induz CYP3A e também é substrato CYP3A. Inibidores como claritromicina/fluconazol aumentam rifabutina; vários ARV exigem redução, aumento ou proibição da combinação.",
+      "monitoring": "Hemograma periódico, sintomas/avaliação ocular se dor/visão alterada, função hepática e revisão sistemática de interações.",
+      "administration": "VO com ou sem alimento; tomar com alimento se houver desconforto gastrointestinal.",
+      "preparation": "Cápsulas prontas para uso; não há preparo especial.",
+      "infusionProtocol": "Não aplicável; rifabutina é oral.",
+      "pregnancy": "Dados são limitados; usar apenas quando benefício do regime antimicobacteriano justificar risco e não houver alternativa melhor.",
+      "lactation": "Dados limitados; considerar regime materno, exposição do lactente e risco de TB/MAC.",
+      "specialPopulations": "Em HIV, dose depende fortemente do esquema antirretroviral. Claritromicina/azóis elevam risco de uveíte e neutropenia; TDM pode ser útil em casos complexos.",
+      "patientEducation": "Urina, lágrimas e suor podem ficar laranja-avermelhados; procurar avaliação urgente se dor ocular, fotofobia, visão borrada, febre ou infecções.",
+      "clinicalPearls": "Rifabutina tem menos indução que rifampicina, mas não é neutra: a dose pode mudar radicalmente com ARV, claritromicina e azóis.",
+      "guidelineRecommendations": "Em HIV, rifabutina é alternativa para profilaxia/tratamento MAC e para TB quando interações tornam rifampicina inadequada; excluir TB ativa antes de usar como profilaxia MAC.",
+      "safetyFlags": [
+        "CYP3A indutor/substrato",
+        "Uveíte",
+        "Neutropenia",
+        "Interações ARV",
+        "Não monoterapia para TB ativa"
+      ],
+      "alerts": [
+        "300 mg/dia profilaxia MAC",
+        "Excluir TB ativa",
+        "Claritromicina/azóis aumentam toxicidade",
+        "Monitorar hemograma/olhos",
+        "Dose depende do ARV"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2026b67-4755-4236-96b6-a6b5e7399707",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/disseminated-mycobacterium-avium-complex",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-arv/drug-interactions-protease-inhibitors?view=full"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2026b67-4755-4236-96b6-a6b5e7399707",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/disseminated-mycobacterium-avium-complex",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-arv/drug-interactions-protease-inhibitors?view=full"
+      ]
+    },
+    "es": {
+      "name": "Rifabutina",
+      "class": "Antimicobacteriano rifamicina",
+      "pharmacologicClass": "Rifamicina; inductor CYP3A menos potente que rifampicina",
+      "mechanism": "Se une a subunidad beta de RNA-polimerasa DNA-dependiente bacteriana e inhibe síntesis de RNA.",
+      "pharmacodynamics": "Bactericida frente a micobacterias susceptibles; resistencia aparece rápidamente si se usa sola en TB activa.",
+      "pharmacokinetics": "Buena absorción oral, gran distribución tisular, metabolismo hepático CYP3A a metabolitos activos y semivida larga.",
+      "indications": "Prevención de MAC diseminado en personas con HIV avanzado seleccionadas; componente alternativo de regímenes TB/MAC cuando interacciones favorecen rifabutina.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas orales.",
+      "presentations": [
+        "150 mg"
+      ],
+      "dose": "Profilaxis MAC adulto: 300 mg VO una vez al día. Dosis debe modificarse con múltiples antirretrovirales/inhibidores o inductores CYP3A.",
+      "pediatricDose": "Datos pediátricos limitados; guías HIV pediátricas aceptan rifabutina como alternativa si macrólidos no se toleran, con dosis especializada.",
+      "renalDose": "Insuficiencia renal leve-moderada generalmente no exige gran ajuste; disfunción grave puede aumentar exposición y requiere monitorización/ajuste según protocolo.",
+      "hepaticDose": "Hepatopatía grave puede reducir depuración; sin tabla universal simple, usar cautela y monitorizar.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Rash",
+        "Color naranja-rojizo de fluidos",
+        "Neutropenia"
+      ],
+      "dangerousAdverseEffects": [
+        "Neutropenia grave",
+        "Uveítis",
+        "Hepatotoxicidad",
+        "Trombocitopenia",
+        "Hipersensibilidad"
+      ],
+      "adverseEffects": "Uveítis y neutropenia son concentración-dependientes y más probables con inhibidores CYP3A como claritromicina/azoles; fluidos corporales pueden cambiar de color.",
+      "contraindications": "Hipersensibilidad a rifabutina/rifamicinas; algunas combinaciones ARV están contraindicadas/no recomendadas.",
+      "interactions": "Induce CYP3A y también es sustrato CYP3A. Inhibidores como claritromicina/fluconazol aumentan rifabutina; varios ARV exigen reducir, aumentar o evitar combinación.",
+      "monitoring": "Hemograma periódico, síntomas/evaluación ocular ante dolor/cambio visual, función hepática y revisión sistemática de interacciones.",
+      "administration": "VO con o sin alimentos; tomar con comida si hay molestias GI.",
+      "preparation": "Cápsulas listas para uso; sin preparación especial.",
+      "infusionProtocol": "No aplicable; rifabutina es oral.",
+      "pregnancy": "Datos limitados; usar si beneficio del régimen antimicobacteriano justifica riesgo y no hay alternativa mejor.",
+      "lactation": "Datos limitados; considerar régimen materno, exposición del lactante y riesgo TB/MAC.",
+      "specialPopulations": "En HIV, dosis depende fuertemente del esquema ARV. Claritromicina/azoles aumentan uveítis/neutropenia; TDM puede ser útil en casos complejos.",
+      "patientEducation": "Orina, lágrimas y sudor pueden volverse naranja-rojizos; consultar urgente ante dolor ocular, fotofobia, visión borrosa, fiebre o infecciones.",
+      "clinicalPearls": "Rifabutina induce menos que rifampicina, pero no es neutra: la dosis puede cambiar radicalmente con ARV, claritromicina y azoles.",
+      "guidelineRecommendations": "En HIV, rifabutina es alternativa para profilaxis/tratamiento MAC y TB cuando interacciones hacen inadecuada rifampicina; excluir TB activa antes de profilaxis MAC.",
+      "safetyFlags": [
+        "CYP3A inductor/sustrato",
+        "Uveítis",
+        "Neutropenia",
+        "Interacciones ARV",
+        "No monoterapia en TB activa"
+      ],
+      "alerts": [
+        "300 mg/día profilaxis MAC",
+        "Excluir TB activa",
+        "Claritromicina/azoles aumentan toxicidad",
+        "Monitorizar hemograma/ojos",
+        "Dosis depende del ARV"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2026b67-4755-4236-96b6-a6b5e7399707",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/disseminated-mycobacterium-avium-complex",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-arv/drug-interactions-protease-inhibitors?view=full"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2026b67-4755-4236-96b6-a6b5e7399707",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/disseminated-mycobacterium-avium-complex",
+        "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-arv/drug-interactions-protease-inhibitors?view=full"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP06_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP07_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP07_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "etambutol": {
+    "pt": {
+      "name": "Etambutol",
+      "class": "Antimicobacteriano",
+      "pharmacologicClass": "Inibidor de arabinosil-transferases da parede micobacteriana",
+      "mechanism": "Inibe arabinosil-transferases envolvidas na síntese de arabinogalactano da parede de Mycobacterium tuberculosis.",
+      "pharmacodynamics": "Predominantemente bacteriostático nas concentrações usuais; deve ser usado em combinação para evitar seleção rápida de resistência.",
+      "pharmacokinetics": "Boa absorção oral; ampla distribuição, com penetração limitada no SNC sem inflamação meníngea. Eliminação predominantemente renal.",
+      "indications": "Componente de esquemas combinados para tuberculose suscetível e situações selecionadas de micobactérias não tuberculosas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais.",
+      "presentations": [
+        "100 mg",
+        "400 mg"
+      ],
+      "dose": "Adulto em TB suscetível: 15 mg/kg VO uma vez ao dia em esquema combinado; retratamento histórico rotulado pode usar 25 mg/kg/dia sob supervisão.",
+      "pediatricDose": "WHO: crianças e adolescentes 0–14 anos geralmente 20 mg/kg/dia, faixa 15–25 mg/kg, em esquema combinado. A bula norte-americana antiga não recomenda <13 anos por dificuldade de monitorar visão.",
+      "renalDose": "Insuficiência renal exige redução de exposição, frequentemente por alongamento do intervalo e/ou ajuste guiado por protocolo/níveis. Em DRC grave ou diálise, usar esquema específico de TB.",
+      "hepaticDose": "Sem ajuste numérico rotineiro estabelecido; hepatotoxicidade rara, inclusive fatal, foi relatada. Avaliar função hepática basal/periódica.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Artralgia",
+        "Cefaleia",
+        "Hiperuricemia"
+      ],
+      "dangerousAdverseEffects": [
+        "Neurite óptica",
+        "Perda de acuidade visual",
+        "Discromatopsia vermelho-verde",
+        "Hepatotoxicidade rara"
+      ],
+      "adverseEffects": "Toxicidade ocular é dose e duração dependente e pode ser irreversível se não reconhecida precocemente.",
+      "contraindications": "Neurite óptica conhecida, salvo decisão especializada, e incapacidade de reconhecer/relatar alterações visuais quando risco supera benefício.",
+      "interactions": "Antiácidos contendo alumínio podem reduzir absorção. Revisar outros agentes neuro/oculotóxicos.",
+      "monitoring": "Acuidade visual, discriminação de cores e exame ocular basal e periódico; função renal, hepática e hematológica conforme risco.",
+      "administration": "VO uma vez ao dia; alimento não altera substancialmente a absorção. Nunca usar isoladamente para TB ativa.",
+      "preparation": "Comprimidos prontos para uso; ajustar dose ao peso atualizado.",
+      "infusionProtocol": "Não aplicável; formulação oral.",
+      "pregnancy": "Usado em esquemas de TB quando indicado; decisão deve seguir programa de TB e avaliação materno-fetal.",
+      "lactation": "Pequenas quantidades podem passar ao leite; geralmente compatível em tratamento de TB quando indicado, com seguimento clínico.",
+      "specialPopulations": "DRC aumenta exposição e risco ocular. Crianças pequenas exigem método apropriado de avaliação visual e supervisão especializada.",
+      "patientEducation": "Relatar imediatamente visão borrada, alteração de cores ou perda visual; não interromper o esquema de TB por conta própria.",
+      "clinicalPearls": "O principal marcador de segurança é a visão: perda de acuidade ou discriminação vermelho-verde durante etambutol exige avaliação rápida e revisão do tratamento.",
+      "guidelineRecommendations": "WHO mantém etambutol como componente de esquemas combinados para TB suscetível; dose pediátrica diária recomendada geralmente 20 mg/kg, faixa 15–25 mg/kg.",
+      "safetyFlags": [
+        "Neurite óptica",
+        "Monitorização visual",
+        "Ajuste renal",
+        "TB sempre em combinação",
+        "Dose pediátrica por peso"
+      ],
+      "alerts": [
+        "Adulto 15 mg/kg/dia",
+        "Criança WHO 20 mg/kg/dia",
+        "Nunca monoterapia em TB ativa",
+        "Monitorar cores vermelho-verde",
+        "DRC exige ajuste/protocolo"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08decdf3-a397-42e7-8ac3-e489c0cc7085",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://www.cdc.gov/tb/hcp/treatment/index.html"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08decdf3-a397-42e7-8ac3-e489c0cc7085",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://www.cdc.gov/tb/hcp/treatment/index.html"
+      ]
+    },
+    "es": {
+      "name": "Etambutol",
+      "class": "Antimicobacteriano",
+      "pharmacologicClass": "Inhibidor de arabinosil-transferasas de pared micobacteriana",
+      "mechanism": "Inhibe arabinosil-transferasas implicadas en síntesis de arabinogalactano de pared de Mycobacterium tuberculosis.",
+      "pharmacodynamics": "Predominantemente bacteriostático a concentraciones usuales; debe usarse en combinación para evitar resistencia.",
+      "pharmacokinetics": "Buena absorción oral; amplia distribución, penetración SNC limitada sin meninges inflamadas. Eliminación principalmente renal.",
+      "indications": "Componente de esquemas combinados para tuberculosis susceptible y situaciones seleccionadas de micobacterias no tuberculosas.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales.",
+      "presentations": [
+        "100 mg",
+        "400 mg"
+      ],
+      "dose": "Adulto en TB susceptible: 15 mg/kg VO una vez al día en combinación; retratamiento histórico rotulado puede usar 25 mg/kg/día bajo supervisión.",
+      "pediatricDose": "WHO: niños/adolescentes 0–14 años generalmente 20 mg/kg/día, rango 15–25 mg/kg, en combinación. La ficha estadounidense antigua no recomienda <13 años por monitorización visual.",
+      "renalDose": "Insuficiencia renal exige reducir exposición, con frecuencia alargando intervalo y/o ajuste por protocolo/niveles. En ERC grave o diálisis usar esquema TB específico.",
+      "hepaticDose": "Sin ajuste numérico rutinario; se ha comunicado hepatotoxicidad rara incluso fatal. Evaluar función hepática basal/periódica.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Artralgia",
+        "Cefalea",
+        "Hiperuricemia"
+      ],
+      "dangerousAdverseEffects": [
+        "Neuritis óptica",
+        "Pérdida de agudeza visual",
+        "Discromatopsia rojo-verde",
+        "Hepatotoxicidad rara"
+      ],
+      "adverseEffects": "Toxicidad ocular depende de dosis/duración y puede ser irreversible si no se reconoce precozmente.",
+      "contraindications": "Neuritis óptica conocida salvo decisión especializada e incapacidad de reconocer/comunicar cambios visuales cuando riesgo supera beneficio.",
+      "interactions": "Antiácidos con aluminio pueden reducir absorción. Revisar otros agentes neuro/oculotóxicos.",
+      "monitoring": "Agudeza visual, discriminación de colores y examen ocular basal/periódico; función renal/hepática/hematológica según riesgo.",
+      "administration": "VO una vez al día; alimentos no alteran sustancialmente absorción. Nunca usar solo para TB activa.",
+      "preparation": "Comprimidos listos; ajustar dosis al peso actualizado.",
+      "infusionProtocol": "No aplicable; formulación oral.",
+      "pregnancy": "Usado en esquemas TB cuando está indicado; seguir programa TB y valoración materno-fetal.",
+      "lactation": "Pequeñas cantidades pueden pasar a leche; generalmente compatible en tratamiento TB cuando corresponde.",
+      "specialPopulations": "ERC aumenta exposición y riesgo ocular. Niños pequeños requieren evaluación visual apropiada y supervisión especializada.",
+      "patientEducation": "Informar de inmediato visión borrosa, cambios de color o pérdida visual; no suspender esquema TB por cuenta propia.",
+      "clinicalPearls": "El principal marcador de seguridad es la visión: pérdida de agudeza o discriminación rojo-verde exige evaluación rápida.",
+      "guidelineRecommendations": "WHO mantiene etambutol en esquemas combinados para TB susceptible; dosis pediátrica diaria generalmente 20 mg/kg, rango 15–25 mg/kg.",
+      "safetyFlags": [
+        "Neuritis óptica",
+        "Monitorización visual",
+        "Ajuste renal",
+        "TB siempre combinada",
+        "Dosis pediátrica por peso"
+      ],
+      "alerts": [
+        "Adulto 15 mg/kg/día",
+        "Niño WHO 20 mg/kg/día",
+        "Nunca monoterapia TB activa",
+        "Monitorizar rojo-verde",
+        "ERC exige ajuste/protocolo"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08decdf3-a397-42e7-8ac3-e489c0cc7085",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://www.cdc.gov/tb/hcp/treatment/index.html"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08decdf3-a397-42e7-8ac3-e489c0cc7085",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://www.cdc.gov/tb/hcp/treatment/index.html"
+      ]
+    }
+  },
+  "pirazinamida": {
+    "pt": {
+      "name": "Pirazinamida",
+      "class": "Antimicobacteriano",
+      "pharmacologicClass": "Análogo de nicotinamida ativo em meio ácido",
+      "mechanism": "Pró-fármaco convertido pela pirazinamidase micobacteriana em ácido pirazinoico; afeta metabolismo energético e membrana em bacilos sob condições ácidas.",
+      "pharmacodynamics": "Pode ser bactericida ou bacteriostática conforme concentração e microambiente; atividade é maior em pH ácido e é essencial na fase intensiva de vários regimes.",
+      "pharmacokinetics": "Boa absorção oral, ampla distribuição inclusive SNC; metabolismo hepático e eliminação renal de metabólitos. É dializável.",
+      "indications": "Componente de esquemas combinados para tuberculose ativa suscetível e regimes selecionados de TB resistente.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais.",
+      "presentations": [
+        "500 mg"
+      ],
+      "dose": "Adultos: aproximadamente 20–30 mg/kg VO uma vez ao dia; muitas diretrizes usam alvo ~25 mg/kg, máximo usual 2 g/dia em regime diário.",
+      "pediatricDose": "WHO: crianças geralmente 35 mg/kg/dia, faixa 30–40 mg/kg, máximo 2 g/dia, em esquema combinado.",
+      "renalDose": "A bula não exige redução simples em toda DRC, mas insuficiência renal prolonga meia-vida e a droga é dializável. DRC grave/HD deve seguir protocolo de TB, frequentemente com dose pós-diálise e frequência reduzida.",
+      "hepaticDose": "Contraindicada em dano hepático grave. Hepatopatia prévia exige avaliação especializada, função hepática basal e monitorização estreita.",
+      "commonAdverseEffects": [
+        "Artralgia",
+        "Hiperuricemia",
+        "Náusea",
+        "Anorexia"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatite medicamentosa",
+        "Falência hepática",
+        "Gota aguda",
+        "Trombocitopenia rara"
+      ],
+      "adverseEffects": "O principal risco é hepatotoxicidade dose-relacionada; inibe excreção renal de urato e frequentemente eleva ácido úrico.",
+      "contraindications": "Dano hepático grave, hipersensibilidade e gota aguda.",
+      "interactions": "Outros hepatotóxicos aumentam risco. Pode interferir com testes urinários ACETEST/KETOSTIX.",
+      "monitoring": "AST/ALT/bilirrubina e ácido úrico basal; repetir se sintomas ou fatores de risco. Monitorar artrite/gota.",
+      "administration": "VO uma vez ao dia em combinação com outros antituberculosos; ajustar por peso ao longo do tratamento.",
+      "preparation": "Comprimidos prontos para uso.",
+      "infusionProtocol": "Não aplicável; formulação oral.",
+      "pregnancy": "Usada em muitos programas de TB na gestação quando benefício do regime justifica; seguir diretriz nacional/especializada.",
+      "lactation": "Pequena quantidade é excretada no leite; usar conforme risco-benefício e programa TB.",
+      "specialPopulations": "Doença hepática, consumo de álcool e história de gota aumentam risco. DRC/diálise exigem protocolo específico.",
+      "patientEducation": "Relatar anorexia persistente, náusea, urina escura, icterícia ou dor/inchaço articular.",
+      "clinicalPearls": "Pirazinamida encurta regimes de TB, mas é o fármaco do esquema de primeira linha com atenção especial a fígado e ácido úrico.",
+      "guidelineRecommendations": "WHO mantém pirazinamida em fases intensivas de esquemas de TB suscetível; em crianças a dose diária recomendada é 35 mg/kg, faixa 30–40 mg/kg.",
+      "safetyFlags": [
+        "Hepatotoxicidade",
+        "Hiperuricemia/gota",
+        "TB sempre em combinação",
+        "Dializável",
+        "Monitorar ácido úrico"
+      ],
+      "alerts": [
+        "Adulto ~25 mg/kg/dia",
+        "Criança WHO 35 mg/kg/dia",
+        "Máx usual 2 g/dia",
+        "Contraindicado dano hepático grave",
+        "Gota aguda: contraindicação"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8b7ba02-8509-475b-8a3b-39d205af3f1e",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://www.cdc.gov/tb/hcp/treatment/index.html"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8b7ba02-8509-475b-8a3b-39d205af3f1e",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://www.cdc.gov/tb/hcp/treatment/index.html"
+      ]
+    },
+    "es": {
+      "name": "Pirazinamida",
+      "class": "Antimicobacteriano",
+      "pharmacologicClass": "Análogo de nicotinamida activo en medio ácido",
+      "mechanism": "Profármaco convertido por pirazinamidasa micobacteriana en ácido pirazinoico; altera metabolismo energético/membrana en condiciones ácidas.",
+      "pharmacodynamics": "Puede ser bactericida o bacteriostática según concentración/microambiente; mayor actividad a pH ácido y es esencial en fase intensiva de varios regímenes.",
+      "pharmacokinetics": "Buena absorción oral, amplia distribución incluido SNC; metabolismo hepático y eliminación renal de metabolitos. Es dializable.",
+      "indications": "Componente de esquemas combinados para TB activa susceptible y regímenes seleccionados de TB resistente.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales.",
+      "presentations": [
+        "500 mg"
+      ],
+      "dose": "Adultos: aproximadamente 20–30 mg/kg VO una vez al día; muchas guías usan objetivo ~25 mg/kg, máximo usual 2 g/día en régimen diario.",
+      "pediatricDose": "WHO: niños generalmente 35 mg/kg/día, rango 30–40 mg/kg, máximo 2 g/día, en combinación.",
+      "renalDose": "La ficha no exige reducción simple en toda ERC, pero insuficiencia renal prolonga semivida y es dializable. ERC grave/HD debe seguir protocolo TB, a menudo con dosis posdiálisis y menor frecuencia.",
+      "hepaticDose": "Contraindicada en daño hepático grave. Hepatopatía previa exige valoración especializada y monitorización estrecha.",
+      "commonAdverseEffects": [
+        "Artralgia",
+        "Hiperuricemia",
+        "Náuseas",
+        "Anorexia"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatitis medicamentosa",
+        "Fallo hepático",
+        "Gota aguda",
+        "Trombocitopenia rara"
+      ],
+      "adverseEffects": "El principal riesgo es hepatotoxicidad dependiente de dosis; inhibe excreción renal de urato y frecuentemente eleva ácido úrico.",
+      "contraindications": "Daño hepático grave, hipersensibilidad y gota aguda.",
+      "interactions": "Otros hepatotóxicos aumentan riesgo. Puede interferir con pruebas urinarias ACETEST/KETOSTIX.",
+      "monitoring": "AST/ALT/bilirrubina y ácido úrico basal; repetir ante síntomas/riesgo. Vigilar artritis/gota.",
+      "administration": "VO una vez al día combinada con otros antituberculosos; ajustar a cambios de peso.",
+      "preparation": "Comprimidos listos.",
+      "infusionProtocol": "No aplicable; formulación oral.",
+      "pregnancy": "Usada en muchos programas TB durante gestación cuando beneficio del régimen lo justifica; seguir guía nacional/especialista.",
+      "lactation": "Se excreta en pequeña cantidad en leche; usar según riesgo-beneficio y programa TB.",
+      "specialPopulations": "Hepatopatía, alcohol y antecedente de gota aumentan riesgo. ERC/diálisis requieren protocolo específico.",
+      "patientEducation": "Informar anorexia persistente, náuseas, orina oscura, ictericia o dolor/inflamación articular.",
+      "clinicalPearls": "Pirazinamida permite acortar regímenes TB, pero requiere especial atención al hígado y ácido úrico.",
+      "guidelineRecommendations": "WHO mantiene pirazinamida en fases intensivas de TB susceptible; en niños la dosis diaria recomendada es 35 mg/kg, rango 30–40 mg/kg.",
+      "safetyFlags": [
+        "Hepatotoxicidad",
+        "Hiperuricemia/gota",
+        "TB siempre combinada",
+        "Dializable",
+        "Monitorizar ácido úrico"
+      ],
+      "alerts": [
+        "Adulto ~25 mg/kg/día",
+        "Niño WHO 35 mg/kg/día",
+        "Máx usual 2 g/día",
+        "Contraindicada daño hepático grave",
+        "Gota aguda: contraindicación"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8b7ba02-8509-475b-8a3b-39d205af3f1e",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://www.cdc.gov/tb/hcp/treatment/index.html"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8b7ba02-8509-475b-8a3b-39d205af3f1e",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://www.cdc.gov/tb/hcp/treatment/index.html"
+      ]
+    }
+  },
+  "tinidazol": {
+    "pt": {
+      "name": "Tinidazol",
+      "class": "Antiprotozoário e antibacteriano nitroimidazol",
+      "pharmacologicClass": "Nitroimidazol de longa meia-vida",
+      "mechanism": "Em anaeróbios/protozoários, o grupo nitro é reduzido a intermediários reativos que danificam DNA e outras macromoléculas.",
+      "pharmacodynamics": "Atividade microbicida contra protozoários e anaeróbios suscetíveis; meia-vida longa permite vários esquemas de dose única.",
+      "pharmacokinetics": "Alta biodisponibilidade oral, ampla distribuição e metabolismo hepático; cerca de 43% pode ser removido em 6 h de hemodiálise.",
+      "indications": "Tricomoníase, giardíase, amebíase intestinal/abscesso hepático amebiano e vaginose bacteriana em adultos conforme bula.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais revestidos.",
+      "presentations": [
+        "500 mg"
+      ],
+      "dose": "Tricomoníase ou giardíase em adulto: 2 g VO dose única com alimento. Amebíase intestinal: 2 g/dia por 3 dias; abscesso amebiano: 2 g/dia por 3–5 dias. Vaginose: 2 g/dia x2 ou 1 g/dia x5.",
+      "pediatricDose": ">3 anos: giardíase 50 mg/kg dose única, máximo 2 g; amebíase 50 mg/kg/dia, máximo 2 g/dia, por 3 dias ou 3–5 dias no abscesso hepático.",
+      "renalDose": "Sem ajuste em insuficiência renal grave (CrCl <22 mL/min). Se administrado antes da hemodiálise no mesmo dia, dar após HD dose adicional equivalente a metade da dose recomendada.",
+      "hepaticDose": "Sem dados formais suficientes; usar doses usuais com cautela em disfunção hepática devido a possível redução da eliminação.",
+      "commonAdverseEffects": [
+        "Sabor metálico",
+        "Náusea",
+        "Dispepsia",
+        "Cefaleia",
+        "Tontura"
+      ],
+      "dangerousAdverseEffects": [
+        "Convulsões",
+        "Neuropatia periférica",
+        "SCAR",
+        "Hepatotoxicidade grave em síndrome de Cockayne"
+      ],
+      "adverseEffects": "Eventos GI e sabor metálico são comuns; sinais neurológicos anormais exigem suspensão imediata.",
+      "contraindications": "Hipersensibilidade a nitroimidazóis e síndrome de Cockayne.",
+      "interactions": "Evitar álcool/etanol/propilenoglicol durante e por 3 dias após. Pode aumentar efeito de warfarina; monitorar lítio, ciclosporina e tacrolimo.",
+      "monitoring": "Avaliar sintomas neurológicos; hemograma se retratamento; monitorar INR e lítio quando aplicável.",
+      "administration": "VO com alimento para reduzir desconforto epigástrico.",
+      "preparation": "Pode ser triturado e preparado em suspensão extemporânea com xarope conforme bula; estabilidade de 7 dias em temperatura ambiente.",
+      "infusionProtocol": "Não aplicável; formulação oral.",
+      "pregnancy": "Dados humanos são insuficientes para definir risco; tratar infecção quando benefício materno justificar, seguindo indicação e diretriz obstétrica.",
+      "lactation": "Não amamentar durante o tratamento e por 72 h após a última dose; pode-se ordenhar e descartar nesse período.",
+      "specialPopulations": "Síndrome de Cockayne é contraindicação devido a risco de insuficiência hepática grave com nitroimidazóis relacionados.",
+      "patientEducation": "Evitar álcool e propilenoglicol durante e por 3 dias depois; relatar formigamento, convulsão ou icterícia.",
+      "clinicalPearls": "Tinidazol combina meia-vida longa com dose única para várias indicações; o detalhe de segurança que não pode ser perdido é álcool por 72 h e Cockayne como contraindicação.",
+      "guidelineRecommendations": "Usar apenas para indicações aprovadas/fortemente sustentadas e tratar parceiros simultaneamente na tricomoníase.",
+      "safetyFlags": [
+        "Álcool +3 dias",
+        "Cockayne contraindicado",
+        "Neuropatia/convulsões",
+        "HD: meia dose suplementar",
+        "Uso pediátrico >3 anos para Giardia/ameba"
+      ],
+      "alerts": [
+        "2 g dose única tricomoníase/giardíase adulto",
+        "Pediatria >3a: 50 mg/kg",
+        "CrCl <22: sem ajuste",
+        "HD: +50% da dose após sessão",
+        "Não amamentar por 72 h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=45fa3ebd-52da-4987-82a1-4a64f99785a7",
+        "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
+        "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=45fa3ebd-52da-4987-82a1-4a64f99785a7",
+        "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
+        "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+      ]
+    },
+    "es": {
+      "name": "Tinidazol",
+      "class": "Antiprotozoario y antibacteriano nitroimidazol",
+      "pharmacologicClass": "Nitroimidazol de larga semivida",
+      "mechanism": "En anaerobios/protozoos, el grupo nitro se reduce a intermediarios reactivos que dañan DNA y otras macromoléculas.",
+      "pharmacodynamics": "Actividad microbicida frente a protozoos y anaerobios susceptibles; semivida larga permite varios esquemas de dosis única.",
+      "pharmacokinetics": "Alta biodisponibilidad oral, amplia distribución y metabolismo hepático; ~43% puede eliminarse en 6 h de hemodiálisis.",
+      "indications": "Tricomoniasis, giardiasis, amebiasis intestinal/absceso hepático amebiano y vaginosis bacteriana en adultos según ficha.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales recubiertos.",
+      "presentations": [
+        "500 mg"
+      ],
+      "dose": "Tricomoniasis o giardiasis adulto: 2 g VO dosis única con alimentos. Amebiasis intestinal 2 g/día x3; absceso amebiano 2 g/día x3–5. Vaginosis 2 g/día x2 o 1 g/día x5.",
+      "pediatricDose": ">3 años: giardiasis 50 mg/kg dosis única, máximo 2 g; amebiasis 50 mg/kg/día, máximo 2 g/día, por 3 días o 3–5 días en absceso.",
+      "renalDose": "Sin ajuste en insuficiencia renal grave (ClCr <22 mL/min). Si se administra antes de HD el mismo día, dar tras HD una dosis adicional equivalente a la mitad de la dosis recomendada.",
+      "hepaticDose": "Sin datos formales suficientes; usar dosis usuales con cautela en disfunción hepática por posible menor eliminación.",
+      "commonAdverseEffects": [
+        "Sabor metálico",
+        "Náuseas",
+        "Dispepsia",
+        "Cefalea",
+        "Mareo"
+      ],
+      "dangerousAdverseEffects": [
+        "Convulsiones",
+        "Neuropatía periférica",
+        "SCAR",
+        "Hepatotoxicidad grave en síndrome de Cockayne"
+      ],
+      "adverseEffects": "Eventos GI y sabor metálico son frecuentes; signos neurológicos anormales exigen suspensión inmediata.",
+      "contraindications": "Hipersensibilidad a nitroimidazoles y síndrome de Cockayne.",
+      "interactions": "Evitar alcohol/etanol/propilenglicol durante y 3 días después. Puede aumentar efecto de warfarina; monitorizar litio, ciclosporina y tacrolimus.",
+      "monitoring": "Síntomas neurológicos; hemograma si retratamiento; INR y litio cuando corresponda.",
+      "administration": "VO con alimentos para reducir molestias epigástricas.",
+      "preparation": "Puede triturarse y prepararse suspensión extemporánea con jarabe según ficha; estable 7 días a temperatura ambiente.",
+      "infusionProtocol": "No aplicable; formulación oral.",
+      "pregnancy": "Datos humanos insuficientes; tratar cuando beneficio materno lo justifique, siguiendo indicación y guía obstétrica.",
+      "lactation": "No amamantar durante tratamiento y por 72 h tras última dosis; puede extraerse y desecharse leche.",
+      "specialPopulations": "Síndrome de Cockayne es contraindicación por riesgo de fallo hepático grave con nitroimidazoles relacionados.",
+      "patientEducation": "Evitar alcohol/propilenglicol durante y 3 días después; informar hormigueo, convulsión o ictericia.",
+      "clinicalPearls": "Tinidazol permite dosis única en varias indicaciones; seguridad clave: alcohol por 72 h y Cockayne contraindicado.",
+      "guidelineRecommendations": "Usar solo en indicaciones aprobadas/bien sustentadas y tratar parejas simultáneamente en tricomoniasis.",
+      "safetyFlags": [
+        "Alcohol +3 días",
+        "Cockayne contraindicado",
+        "Neuropatía/convulsiones",
+        "HD: media dosis suplementaria",
+        "Pediatría >3 años"
+      ],
+      "alerts": [
+        "2 g dosis única tricomoniasis/giardiasis adulto",
+        "Pediatría >3a: 50 mg/kg",
+        "ClCr <22: sin ajuste",
+        "HD: +50% tras sesión",
+        "No lactancia por 72 h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=45fa3ebd-52da-4987-82a1-4a64f99785a7",
+        "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
+        "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=45fa3ebd-52da-4987-82a1-4a64f99785a7",
+        "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
+        "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+      ]
+    }
+  },
+  "cloxacilina": {
+    "pt": {
+      "name": "Cloxacilina",
+      "class": "Penicilina resistente a penicilinase",
+      "pharmacologicClass": "Isoxazolilpenicilina antiestafilocócica",
+      "mechanism": "Liga-se a PBPs e inibe transpeptidação do peptidoglicano, causando lise bacteriana; é estável à penicilinase estafilocócica.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é o índice PK/PD relevante. Ativa contra MSSA e estreptococos suscetíveis, não MRSA.",
+      "pharmacokinetics": "Absorção oral rápida porém incompleta e reduzida por alimento; alta ligação proteica ~94%; eliminação renal e biliar.",
+      "indications": "Infecções por estafilococos produtores de penicilinase suscetíveis/MSSA e estreptococos suscetíveis; terapia IV preferida em infecção grave.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas, suspensão oral e formulação IV conforme mercado.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "125 mg/5 mL",
+        "1 g IV"
+      ],
+      "dose": "Oral adulto, infecção leve-moderada: 250–500 mg q6h em jejum; doses maiores podem ser necessárias em infecção muito grave sob protocolo. Monografia oral limita 6 g/dia.",
+      "pediatricDose": "Monografia oral: <=5 kg 250 mg/dia; >5 a ~40 kg 50 mg/kg/dia, dividido q6h.",
+      "renalDose": "Não há tabela oral simples de ajuste. Em insuficiência renal, monitorar acúmulo/neurotoxicidade em doses altas; diálise pode auxiliar em superexposição conforme monografia.",
+      "hepaticDose": "Sem ajuste numérico rotineiro. Monitorar função hepática em terapia prolongada; hepatotoxicidade/elevação de transaminases é possível.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash",
+        "Dor epigástrica"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Hepatotoxicidade",
+        "Neurotoxicidade/convulsões em altas exposições"
+      ],
+      "adverseEffects": "Reações alérgicas e GI predominam; tratamento prolongado exige vigilância renal, hepática e hematológica.",
+      "contraindications": "Hipersensibilidade grave a penicilinas/beta-lactâmicos.",
+      "interactions": "Probenecida reduz secreção tubular e aumenta níveis de cloxacilina; revisar anticoagulantes e outros beta-lactâmicos conforme contexto.",
+      "monitoring": "Resposta clínica, culturas, função renal/hepática/hemograma em uso prolongado e sinais de hipersensibilidade.",
+      "administration": "Oral 1–2 h antes das refeições porque alimento reduz absorção. Em infecção grave, preferir via parenteral conforme produto/protocolo.",
+      "preparation": "Suspensão oral deve ser reconstituída conforme produto e mantida refrigerada quando indicado.",
+      "infusionProtocol": "Para cloxacilina IV, reconstituir/infundir conforme monografia específica do produto; não extrapolar preparo oral para IV.",
+      "pregnancy": "Dados humanos são limitados; penicilinas têm ampla experiência clínica, mas a monografia oral específica informa segurança não estabelecida.",
+      "lactation": "Penicilinas podem passar ao leite em pequenas quantidades; monitorar diarreia/candidíase/sensibilização no lactente.",
+      "specialPopulations": "Prematuros/neonatos têm experiência limitada e precisam monitorização frequente. Insuficiência renal aumenta risco de neurotoxicidade em doses altas.",
+      "patientEducation": "Tomar em jejum com água, completar o esquema e procurar atendimento em caso de urticária, falta de ar ou diarreia intensa.",
+      "clinicalPearls": "Cloxacilina é beta-lactâmico anti-MSSA, não anti-MRSA. A absorção oral cai com alimento, por isso o timing em jejum importa.",
+      "guidelineRecommendations": "Usar para MSSA/estreptococos suscetíveis guiado por foco e cultura; em bacteremia/endocardite ou infecção grave usar formulação parenteral/protocolo apropriado.",
+      "safetyFlags": [
+        "MSSA, não MRSA",
+        "fT>MIC",
+        "Tomar em jejum",
+        "Alergia beta-lactâmica",
+        "Monitorar fígado/rim em uso prolongado"
+      ],
+      "alerts": [
+        "Adulto oral 250–500 mg q6h",
+        "Criança >5–40 kg: 50 mg/kg/dia q6h",
+        "1–2 h antes de alimento",
+        "MSSA direcionado",
+        "Infecção grave: preferir IV"
+      ],
+      "references": [
+        "https://health-products.canada.ca/dpd-bdpp/info?code=2234&lang=eng",
+        "https://pdf.hres.ca/dpd_pm/00036515.PDF",
+        "https://health-products.canada.ca/dpd-bdpp/search-fast-recherche-rapide?lang=eng&no=0131306009"
+      ],
+      "ref": [
+        "https://health-products.canada.ca/dpd-bdpp/info?code=2234&lang=eng",
+        "https://pdf.hres.ca/dpd_pm/00036515.PDF",
+        "https://health-products.canada.ca/dpd-bdpp/search-fast-recherche-rapide?lang=eng&no=0131306009"
+      ]
+    },
+    "es": {
+      "name": "Cloxacilina",
+      "class": "Penicilina resistente a penicilinasa",
+      "pharmacologicClass": "Isoxazolilpenicilina antiestafilocócica",
+      "mechanism": "Se une a PBPs e inhibe transpeptidación de peptidoglicano, causando lisis; estable frente a penicilinasa estafilocócica.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC es índice PK/PD relevante. Activa contra MSSA y estreptococos susceptibles, no MRSA.",
+      "pharmacokinetics": "Absorción oral rápida pero incompleta y reducida por alimentos; unión proteica ~94%; eliminación renal y biliar.",
+      "indications": "Infecciones por estafilococos productores de penicilinasa susceptibles/MSSA y estreptococos susceptibles; IV preferida en infección grave.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas, suspensión oral y IV según mercado.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "125 mg/5 mL",
+        "1 g IV"
+      ],
+      "dose": "Oral adulto leve-moderada: 250–500 mg q6h en ayunas; dosis mayores pueden requerirse en infección muy grave bajo protocolo. Monografía oral limita 6 g/día.",
+      "pediatricDose": "Monografía oral: <=5 kg 250 mg/día; >5 a ~40 kg 50 mg/kg/día dividido q6h.",
+      "renalDose": "Sin tabla oral simple de ajuste. En insuficiencia renal vigilar acumulación/neurotoxicidad con dosis altas; diálisis puede ayudar en sobreexposición según monografía.",
+      "hepaticDose": "Sin ajuste numérico rutinario. Monitorizar función hepática en tratamiento prolongado; puede haber hepatotoxicidad/elevación de transaminasas.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Rash",
+        "Dolor epigástrico"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Hepatotoxicidad",
+        "Neurotoxicidad/convulsiones con alta exposición"
+      ],
+      "adverseEffects": "Predominan alergia y GI; tratamiento prolongado requiere vigilancia renal, hepática y hematológica.",
+      "contraindications": "Hipersensibilidad grave a penicilinas/beta-lactámicos.",
+      "interactions": "Probenecid reduce secreción tubular y aumenta niveles; revisar anticoagulantes y otros beta-lactámicos según contexto.",
+      "monitoring": "Respuesta clínica/cultivos, función renal/hepática/hemograma en uso prolongado y signos de hipersensibilidad.",
+      "administration": "Oral 1–2 h antes de alimentos porque comida reduce absorción. En infección grave preferir vía parenteral según producto/protocolo.",
+      "preparation": "Suspensión oral reconstituida según producto y refrigerada cuando corresponda.",
+      "infusionProtocol": "Para cloxacilina IV, reconstituir/infundir según monografía específica; no extrapolar preparación oral a IV.",
+      "pregnancy": "Datos humanos limitados; penicilinas tienen amplia experiencia, pero monografía oral específica indica seguridad no establecida.",
+      "lactation": "Penicilinas pueden pasar a leche en pequeñas cantidades; vigilar diarrea/candidiasis/sensibilización.",
+      "specialPopulations": "Prematuros/neonatos con experiencia limitada y monitorización frecuente. Insuficiencia renal aumenta neurotoxicidad a dosis altas.",
+      "patientEducation": "Tomar en ayunas con agua, completar tratamiento y consultar ante urticaria, disnea o diarrea intensa.",
+      "clinicalPearls": "Cloxacilina es beta-lactámico anti-MSSA, no anti-MRSA. Alimento reduce absorción oral, por eso importa el ayuno.",
+      "guidelineRecommendations": "Usar para MSSA/estreptococos susceptibles guiado por foco/cultivo; en bacteriemia/endocarditis o infección grave usar formulación parenteral/protocolo apropiado.",
+      "safetyFlags": [
+        "MSSA, no MRSA",
+        "fT>MIC",
+        "Tomar en ayunas",
+        "Alergia beta-lactámica",
+        "Monitorizar hígado/riñón en uso prolongado"
+      ],
+      "alerts": [
+        "Adulto oral 250–500 mg q6h",
+        "Niño >5–40 kg: 50 mg/kg/día q6h",
+        "1–2 h antes de alimentos",
+        "MSSA dirigido",
+        "Infección grave: preferir IV"
+      ],
+      "references": [
+        "https://health-products.canada.ca/dpd-bdpp/info?code=2234&lang=eng",
+        "https://pdf.hres.ca/dpd_pm/00036515.PDF",
+        "https://health-products.canada.ca/dpd-bdpp/search-fast-recherche-rapide?lang=eng&no=0131306009"
+      ],
+      "ref": [
+        "https://health-products.canada.ca/dpd-bdpp/info?code=2234&lang=eng",
+        "https://pdf.hres.ca/dpd_pm/00036515.PDF",
+        "https://health-products.canada.ca/dpd-bdpp/search-fast-recherche-rapide?lang=eng&no=0131306009"
+      ]
+    }
+  },
+  "dicloxacilina": {
+    "pt": {
+      "name": "Dicloxacilina",
+      "class": "Penicilina resistente a penicilinase",
+      "pharmacologicClass": "Isoxazolilpenicilina oral antiestafilocócica",
+      "mechanism": "Liga-se a PBPs e inibe síntese de peptidoglicano; resistente à hidrólise por muitas penicilinases estafilocócicas.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é o principal índice PK/PD. Indicada para MSSA suscetível, não MRSA.",
+      "pharmacokinetics": "Absorção oral reduzida por alimento; alta ligação proteica e eliminação principalmente renal com secreção tubular.",
+      "indications": "Infecções leves-moderadas por estafilococos produtores de penicilinase suscetíveis/MSSA e estreptococos; terapia oral de seguimento quando quadro permite.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas orais.",
+      "presentations": [
+        "250 mg",
+        "500 mg"
+      ],
+      "dose": "Bula 2026: adulto leve-moderada 125 mg q6h; grave 250 mg q6h. Na prática moderna, doses podem variar conforme foco/protocolo; infecção ameaçadora à vida deve iniciar terapia parenteral.",
+      "pediatricDose": "<40 kg: leve-moderada 12,5 mg/kg/dia divididos q6h; grave 25 mg/kg/dia divididos q6h conforme bula.",
+      "renalDose": "Sem tabela simples de redução na bula usual; considerar função renal em idosos/DRC e monitorar em exposições altas/prolongadas.",
+      "hepaticDose": "Sem ajuste numérico rotineiro; elevações transitórias de fosfatase alcalina/AST/ALT e hepatotoxicidade rara foram relatadas.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor epigástrica",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Hepatite colestática/hepatotoxicidade rara",
+        "Neutropenia em uso prolongado"
+      ],
+      "adverseEffects": "Eventos GI e hipersensibilidade são comuns; hepatotoxicidade e alterações hematológicas são raras mas relevantes em uso prolongado.",
+      "contraindications": "Hipersensibilidade grave a penicilinas/beta-lactâmicos.",
+      "interactions": "Probenecida reduz secreção tubular e prolonga níveis; revisar anticoagulantes e outros medicamentos de alta interação conforme paciente.",
+      "monitoring": "Resposta clínica/culturas; função renal, hepática e hemograma em terapia prolongada; sinais de alergia e C. difficile.",
+      "administration": "Tomar em jejum, pelo menos 1 h antes ou 2 h após refeições, com pelo menos 120 mL de água; não tomar deitado nem imediatamente antes de dormir.",
+      "preparation": "Cápsulas prontas para uso; engolir com água suficiente.",
+      "infusionProtocol": "Não aplicável; dicloxacilina deste registro é oral.",
+      "pregnancy": "Penicilinas têm ampla experiência; usar quando indicação bacteriana e benefício justifiquem.",
+      "lactation": "Pequenas quantidades podem passar ao leite; monitorar diarreia, candidíase ou sensibilização.",
+      "specialPopulations": "Idosos/DRC exigem atenção à função renal. Terapia oral não deve ser inicial em infecção grave ameaçadora à vida.",
+      "patientEducation": "Tomar em jejum e com água, permanecer sentado/em pé após dose, completar esquema e relatar reação alérgica ou diarreia intensa.",
+      "clinicalPearls": "Dicloxacilina é opção oral dirigida para MSSA; não deve substituir beta-lactâmico IV em bacteremia, endocardite ou sepse.",
+      "guidelineRecommendations": "Usar em infecções cutâneas/tecidos moles e outros focos por MSSA quando via oral e gravidade permitem; cultura e foco determinam dose/duração.",
+      "safetyFlags": [
+        "MSSA, não MRSA",
+        "fT>MIC",
+        "Jejum",
+        "Água e posição ereta",
+        "Não iniciar oral em infecção ameaçadora à vida"
+      ],
+      "alerts": [
+        "Adulto bula: 125 mg q6h leve / 250 mg q6h grave",
+        "<40 kg: 12,5–25 mg/kg/dia q6h",
+        "1 h antes ou 2 h após alimento",
+        "120 mL água",
+        "Não deitar após dose"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=270c0839-c30c-475d-a505-e70855652c9e",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8478f242-c715-4984-ac1d-dc79dc28665e"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=270c0839-c30c-475d-a505-e70855652c9e",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8478f242-c715-4984-ac1d-dc79dc28665e"
+      ]
+    },
+    "es": {
+      "name": "Dicloxacilina",
+      "class": "Penicilina resistente a penicilinasa",
+      "pharmacologicClass": "Isoxazolilpenicilina oral antiestafilocócica",
+      "mechanism": "Se une a PBPs e inhibe peptidoglicano; resistente a hidrólisis por muchas penicilinasas estafilocócicas.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC es índice PK/PD principal. Indicada para MSSA susceptible, no MRSA.",
+      "pharmacokinetics": "Absorción oral disminuye con alimentos; alta unión proteica y eliminación principalmente renal con secreción tubular.",
+      "indications": "Infecciones leves-moderadas por estafilococos productores de penicilinasa susceptibles/MSSA y estreptococos; continuación oral cuando el cuadro lo permite.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas orales.",
+      "presentations": [
+        "250 mg",
+        "500 mg"
+      ],
+      "dose": "Ficha 2026: adulto leve-moderada 125 mg q6h; grave 250 mg q6h. En práctica moderna dosis puede variar por foco/protocolo; infección vital debe iniciar parenteral.",
+      "pediatricDose": "<40 kg: leve-moderada 12,5 mg/kg/día dividido q6h; grave 25 mg/kg/día dividido q6h según ficha.",
+      "renalDose": "Sin tabla simple de reducción en ficha habitual; considerar función renal en ancianos/ERC y monitorizar exposiciones altas/prolongadas.",
+      "hepaticDose": "Sin ajuste numérico rutinario; se han comunicado elevaciones transitorias de FA/AST/ALT y hepatotoxicidad rara.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor epigástrico",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Hepatitis colestásica/hepatotoxicidad rara",
+        "Neutropenia en uso prolongado"
+      ],
+      "adverseEffects": "Eventos GI e hipersensibilidad son comunes; hepatotoxicidad y cambios hematológicos son raros pero relevantes.",
+      "contraindications": "Hipersensibilidad grave a penicilinas/beta-lactámicos.",
+      "interactions": "Probenecid reduce secreción tubular y prolonga niveles; revisar anticoagulantes y otros fármacos relevantes.",
+      "monitoring": "Respuesta clínica/cultivos; función renal/hepática/hemograma en tratamiento prolongado; alergia y C. difficile.",
+      "administration": "Tomar en ayunas, al menos 1 h antes o 2 h después de comida, con al menos 120 mL de agua; no tomar acostado ni justo antes de dormir.",
+      "preparation": "Cápsulas listas; tragar con agua suficiente.",
+      "infusionProtocol": "No aplicable; dicloxacilina de este registro es oral.",
+      "pregnancy": "Penicilinas tienen amplia experiencia; usar cuando indicación bacteriana y beneficio lo justifiquen.",
+      "lactation": "Pequeñas cantidades pueden pasar a leche; vigilar diarrea, candidiasis o sensibilización.",
+      "specialPopulations": "Ancianos/ERC requieren atención a función renal. Terapia oral no debe iniciar infección grave vital.",
+      "patientEducation": "Tomar en ayunas y con agua, permanecer erguido, completar tratamiento e informar alergia o diarrea intensa.",
+      "clinicalPearls": "Dicloxacilina es opción oral dirigida para MSSA; no reemplaza beta-lactámico IV en bacteriemia, endocarditis o sepsis.",
+      "guidelineRecommendations": "Usar en piel/tejidos blandos y otros focos MSSA cuando vía oral/gravedad lo permiten; cultivo/foco determinan dosis y duración.",
+      "safetyFlags": [
+        "MSSA, no MRSA",
+        "fT>MIC",
+        "Ayunas",
+        "Agua y posición erguida",
+        "No iniciar oral en infección vital"
+      ],
+      "alerts": [
+        "Adulto ficha: 125 mg q6h leve / 250 mg q6h grave",
+        "<40 kg: 12,5–25 mg/kg/día q6h",
+        "1 h antes o 2 h después de comida",
+        "120 mL agua",
+        "No acostarse tras dosis"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=270c0839-c30c-475d-a505-e70855652c9e",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8478f242-c715-4984-ac1d-dc79dc28665e"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=270c0839-c30c-475d-a505-e70855652c9e",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8478f242-c715-4984-ac1d-dc79dc28665e"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP07_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP08_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP08_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "flucloxacilina": {
+    "pt": {
+      "name": "Flucloxacilina",
+      "class": "Penicilina resistente a penicilinase",
+      "pharmacologicClass": "Isoxazolilpenicilina antiestafilocócica",
+      "mechanism": "Liga-se a PBPs e inibe peptidoglicano; é estável a muitas penicilinases estafilocócicas.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Direcionada a MSSA e estreptococos suscetíveis, não MRSA.",
+      "pharmacokinetics": "Absorção oral cai com alimento; alta ligação proteica, eliminação renal/biliar; não é significativamente removida por diálise.",
+      "indications": "Infecções por MSSA e Gram-positivos suscetíveis, incluindo pele, osso, endocardite e bacteremia associada.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas e formulações IV/IM.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "500 mg/1 g injetável"
+      ],
+      "dose": "Adulto oral 250 mg q6h; grave pode dobrar. Parenteral 1–6 g/dia; grave até 8 g/dia e alguns esquemas até 12 g/dia.",
+      "pediatricDose": "<2 anos 62,5 mg q6h; 2–10 anos 125 mg q6h. IV/IM <14 anos 25–50 mg/kg/dia; grave até 100 mg/kg/dia.",
+      "renalDose": "CrCl <10 mL/min: reduzir dose ou alongar intervalo; máximo recomendado 1 g q8–12h. Sem suplemento pós-HD.",
+      "hepaticDose": "Sem redução numérica, porém contraindicada se houve icterícia/disfunção hepática por flucloxacilina.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash",
+        "Dor esofágica"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatite/icterícia colestática",
+        "Anafilaxia",
+        "SJS/TEN/AGEP",
+        "Nefrite intersticial",
+        "Neurotoxicidade em DRC"
+      ],
+      "adverseEffects": "Hepatite/icterícia podem aparecer até cerca de 2 meses após o tratamento, prolongar-se e raramente ser fatais.",
+      "contraindications": "Alergia beta-lactâmica e história prévia de hepatotoxicidade por flucloxacilina.",
+      "interactions": "Probenecida pode aumentar níveis; revisar metotrexato e anticoagulantes.",
+      "monitoring": "Função renal; função hepática em tratamento prolongado/risco; hemograma em uso prolongado.",
+      "administration": "VO em jejum, 1 h antes ou 2 h após alimento, com copo cheio de água; não deitar logo após.",
+      "preparation": "Cápsula pronta; IV reconstituir conforme produto.",
+      "infusionProtocol": "IV lenta/injeção ou infusão; produtos atuais descrevem infusão de 20–30 min em doses graves.",
+      "pregnancy": "Usar quando indicada; ampla experiência de classe.",
+      "lactation": "Pequenas quantidades no leite; monitorar diarreia/candidíase.",
+      "specialPopulations": ">50 anos e doença de base aumentam risco hepático; HLA-B*5701 associa-se a risco, sem rastreio rotineiro.",
+      "patientEducation": "Relatar icterícia, prurido ou urina escura mesmo semanas após terminar.",
+      "clinicalPearls": "Anti-MSSA, não anti-MRSA. O alerta distintivo é hepatotoxicidade colestática tardia.",
+      "guidelineRecommendations": "Usar dirigido a MSSA quando foco/suscetibilidade forem compatíveis; grave requer via parenteral apropriada.",
+      "safetyFlags": [
+        "MSSA não MRSA",
+        "Hepatotoxicidade tardia",
+        "CrCl <10: reduzir/alongar",
+        "Jejum",
+        "Sem suplemento pós-HD"
+      ],
+      "alerts": [
+        "VO 250 mg q6h",
+        "CrCl <10: máx 1 g q8–12h",
+        "Contraindicada hepatotoxicidade prévia",
+        "Icterícia pode atrasar ~2 meses",
+        "Água/sem deitar"
+      ],
+      "references": [
+        "https://www.medicines.org.uk/emc/product/14151/smpc",
+        "https://www.medicines.org.uk/emc/product/12395/smpc",
+        "https://www.medicines.org.uk/emc/product/12636/smpc",
+        "https://www.medicines.org.uk/emc/product/15053/smpc",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.medicines.org.uk/emc/product/8745/smpc"
+      ],
+      "ref": [
+        "https://www.medicines.org.uk/emc/product/14151/smpc",
+        "https://www.medicines.org.uk/emc/product/12395/smpc",
+        "https://www.medicines.org.uk/emc/product/12636/smpc",
+        "https://www.medicines.org.uk/emc/product/15053/smpc",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.medicines.org.uk/emc/product/8745/smpc"
+      ]
+    },
+    "es": {
+      "name": "Flucloxacilina",
+      "class": "Penicilina resistente a penicilinasa",
+      "pharmacologicClass": "Isoxazolilpenicilina antiestafilocócica",
+      "mechanism": "Se une a PBPs e inhibe peptidoglicano; estable frente a muchas penicilinasas.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Dirigida a MSSA, no MRSA.",
+      "pharmacokinetics": "Absorción oral disminuye con comida; eliminación renal/biliar; no se elimina significativamente por diálisis.",
+      "indications": "Infecciones por MSSA/Gram positivos susceptibles, incluidas piel, hueso, endocarditis y bacteriemia asociada.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas y formulaciones IV/IM.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "500 mg/1 g inyectable"
+      ],
+      "dose": "Adulto oral 250 mg q6h; grave puede duplicarse. Parenteral 1–6 g/día; grave hasta 8 g/día y algunos esquemas hasta 12 g/día.",
+      "pediatricDose": "<2 años 62,5 mg q6h; 2–10 años 125 mg q6h. IV/IM <14 años 25–50 mg/kg/día; grave hasta 100 mg/kg/día.",
+      "renalDose": "ClCr <10: reducir o alargar; máximo 1 g q8–12h. Sin suplemento pos-HD.",
+      "hepaticDose": "Sin reducción numérica, pero contraindicada si hubo ictericia/disfunción hepática por flucloxacilina.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Rash",
+        "Dolor esofágico"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatitis/ictericia colestásica",
+        "Anafilaxia",
+        "SJS/TEN/AGEP",
+        "Nefritis intersticial",
+        "Neurotoxicidad en ERC"
+      ],
+      "adverseEffects": "Hepatitis/ictericia pueden aparecer hasta ~2 meses después, prolongarse y raramente ser fatales.",
+      "contraindications": "Alergia beta-lactámica y hepatotoxicidad previa por flucloxacilina.",
+      "interactions": "Probenecid puede aumentar niveles; revisar metotrexato/anticoagulantes.",
+      "monitoring": "Función renal; hepática en tratamiento prolongado/riesgo; hemograma prolongado.",
+      "administration": "VO en ayunas, 1 h antes o 2 h después de alimentos, con vaso lleno de agua; no acostarse.",
+      "preparation": "Cápsula lista; IV según producto.",
+      "infusionProtocol": "IV lenta o infusión; productos actuales describen 20–30 min.",
+      "pregnancy": "Usar cuando indicada.",
+      "lactation": "Pequeñas cantidades en leche.",
+      "specialPopulations": ">50 años/enfermedad de base aumentan riesgo hepático; HLA-B*5701 asociado, sin cribado rutinario.",
+      "patientEducation": "Informar ictericia/prurito/orina oscura incluso semanas después.",
+      "clinicalPearls": "Anti-MSSA, no anti-MRSA. Alerta distintiva: hepatotoxicidad colestásica tardía.",
+      "guidelineRecommendations": "Usar dirigida a MSSA cuando foco, gravedad y susceptibilidad sean compatibles; en infección grave emplear la vía y dosis parenteral apropiadas según protocolo.",
+      "safetyFlags": [
+        "MSSA no MRSA",
+        "Hepatotoxicidad tardía",
+        "ClCr <10: reducir/alargar",
+        "Ayunas",
+        "Sin suplemento pos-HD"
+      ],
+      "alerts": [
+        "VO 250 mg q6h",
+        "ClCr <10: máx 1 g q8–12h",
+        "Contraindicada hepatotoxicidad previa",
+        "Ictericia puede retrasarse ~2 meses",
+        "Agua/no acostarse"
+      ],
+      "references": [
+        "https://www.medicines.org.uk/emc/product/14151/smpc",
+        "https://www.medicines.org.uk/emc/product/12395/smpc",
+        "https://www.medicines.org.uk/emc/product/12636/smpc",
+        "https://www.medicines.org.uk/emc/product/15053/smpc",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.medicines.org.uk/emc/product/8745/smpc"
+      ],
+      "ref": [
+        "https://www.medicines.org.uk/emc/product/14151/smpc",
+        "https://www.medicines.org.uk/emc/product/12395/smpc",
+        "https://www.medicines.org.uk/emc/product/12636/smpc",
+        "https://www.medicines.org.uk/emc/product/15053/smpc",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.medicines.org.uk/emc/product/8745/smpc"
+      ]
+    }
+  },
+  "penicilina_benzatina": {
+    "pt": {
+      "name": "Penicilina G benzatina",
+      "class": "Penicilina natural de depósito",
+      "pharmacologicClass": "Benzatina penicilina G de liberação prolongada IM",
+      "mechanism": "Libera penicilina G lentamente do depósito IM; liga PBPs e inibe parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; concentrações baixas e prolongadas.",
+      "pharmacokinetics": "Absorção IM muito lenta por dias-semanas; não atinge exposição adequada para neurosífilis/meningite.",
+      "indications": "Sífilis sem comprometimento neurológico/ocular, faringite GAS e outras indicações específicas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Seringa pré-cheia IM profunda.",
+      "presentations": [
+        "600.000 U/1 mL",
+        "1.200.000 U/2 mL",
+        "2.400.000 U/4 mL"
+      ],
+      "dose": "Sífilis precoce 2,4 milhões U IM única; latente tardia/desconhecida 2,4 milhões U IM semanal x3; GAS adulto 1,2 milhão U IM única.",
+      "pediatricDose": "GAS <27 kg 600.000 U IM única; >=27 kg 1,2 milhão U IM única. Sífilis pediátrica/congênita requer protocolo específico.",
+      "renalDose": "Sem ajuste padronizado nas indicações usuais de dose única.",
+      "hepaticDose": "Sem ajuste hepático rotineiro.",
+      "commonAdverseEffects": [
+        "Dor local",
+        "Rash",
+        "Febre",
+        "Náusea"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Isquemia/gangrena por injeção vascular",
+        "Lesão neurovascular",
+        "Jarisch-Herxheimer"
+      ],
+      "adverseEffects": "Administração intravascular/intra-arterial inadvertida pode causar necrose, gangrena e morte.",
+      "contraindications": "Alergia grave a penicilinas; não usar para neurosífilis/meningite.",
+      "interactions": "Probenecida pode alterar depuração; revisar anticoagulantes.",
+      "monitoring": "Observar anafilaxia; em sífilis, resposta sorológica; garantir técnica IM.",
+      "administration": "EXCLUSIVAMENTE IM profunda. NUNCA IV ou intra-arterial.",
+      "preparation": "Suspensão viscosa pré-cheia; administrar com técnica IM profunda.",
+      "infusionProtocol": "Não aplicável; infusão IV é contraindicada e potencialmente fatal.",
+      "pregnancy": "Tratamento de escolha para sífilis na gestação.",
+      "lactation": "Compatível quando indicada.",
+      "specialPopulations": "Neurosífilis/ocular/ótica requer penicilina G aquosa IV, não benzatina.",
+      "patientEducation": "Explicar que é exclusivamente IM profunda e procurar urgência diante de reação grave.",
+      "clinicalPearls": "Benzatina não trata neurosífilis, meningite ou sepse; sua baixa concentração sustentada serve apenas a indicações específicas e exige via IM profunda.",
+      "guidelineRecommendations": "CDC mantém 2,4 milhões U IM única na sífilis precoce e semanal x3 na latente tardia.",
+      "safetyFlags": [
+        "IM profunda SOMENTE",
+        "Fatal se outra via",
+        "Sífilis gestacional: escolha",
+        "Não neurosífilis",
+        "Jarisch-Herxheimer"
+      ],
+      "alerts": [
+        "2,4 milhões U IM precoce",
+        "2,4 milhões U semanal x3 tardia",
+        "GAS <27 kg: 600.000 U",
+        ">=27 kg: 1,2 milhão U",
+        "NUNCA IV/intra-arterial"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16&version=35",
+        "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/primary-and-secondary-syphilis.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16&version=35",
+        "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/primary-and-secondary-syphilis.htm"
+      ]
+    },
+    "es": {
+      "name": "Penicilina G benzatina",
+      "class": "Penicilina natural de depósito",
+      "pharmacologicClass": "Penicilina G benzatina de liberación prolongada IM",
+      "mechanism": "Libera penicilina G lentamente; se une a PBPs e inhibe pared.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; concentraciones bajas/prolongadas.",
+      "pharmacokinetics": "Absorción IM lenta durante días-semanas; no alcanza exposición para neurosífilis/meningitis.",
+      "indications": "Sífilis sin compromiso neuro/ocular, faringitis GAS y otras indicaciones específicas.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Jeringa precargada IM profunda.",
+      "presentations": [
+        "600.000 U/1 mL",
+        "1.200.000 U/2 mL",
+        "2.400.000 U/4 mL"
+      ],
+      "dose": "Sífilis precoz 2,4 millones U IM única; latente tardía/desconocida 2,4 millones U IM semanal x3; GAS adulto 1,2 millón U única.",
+      "pediatricDose": "GAS <27 kg 600.000 U IM; >=27 kg 1,2 millón U IM. Sífilis pediátrica/congénita: protocolo específico.",
+      "renalDose": "Sin ajuste estándar en dosis única habitual.",
+      "hepaticDose": "Sin ajuste hepático rutinario.",
+      "commonAdverseEffects": [
+        "Dolor local",
+        "Rash",
+        "Fiebre",
+        "Náuseas"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Isquemia/gangrena por inyección vascular",
+        "Lesión neurovascular",
+        "Jarisch-Herxheimer"
+      ],
+      "adverseEffects": "Administración intravascular/intraarterial inadvertida puede causar necrosis, gangrena y muerte.",
+      "contraindications": "Alergia grave a penicilinas; no usar en neurosífilis/meningitis.",
+      "interactions": "Probenecid puede modificar depuración; revisar anticoagulantes.",
+      "monitoring": "Observar anafilaxia; respuesta serológica en sífilis; técnica IM.",
+      "administration": "EXCLUSIVAMENTE IM profunda. NUNCA IV/intraarterial.",
+      "preparation": "Suspensión viscosa; técnica IM profunda.",
+      "infusionProtocol": "No aplicable; IV contraindicada y potencialmente fatal.",
+      "pregnancy": "Tratamiento de elección en sífilis gestacional.",
+      "lactation": "Compatible cuando indicada.",
+      "specialPopulations": "Neurosífilis/ocular/ótica requiere penicilina G acuosa IV.",
+      "patientEducation": "Explicar vía IM exclusiva.",
+      "clinicalPearls": "Benzatina no trata neurosífilis, meningitis ni sepsis; su exposición baja y prolongada sirve solo para indicaciones específicas y siempre por IM profunda.",
+      "guidelineRecommendations": "CDC mantiene 2,4 millones U IM única para sífilis precoz y 2,4 millones U IM semanal por 3 dosis para sífilis latente tardía o de duración desconocida.",
+      "safetyFlags": [
+        "SOLO IM profunda",
+        "Fatal por otra vía",
+        "Sífilis gestacional: elección",
+        "No neurosífilis",
+        "Jarisch-Herxheimer"
+      ],
+      "alerts": [
+        "2,4 millones U IM precoz",
+        "2,4 millones U semanal x3 tardía",
+        "GAS <27 kg: 600.000 U",
+        ">=27 kg: 1,2 millón U",
+        "NUNCA IV/intraarterial"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16&version=35",
+        "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/primary-and-secondary-syphilis.htm"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16&version=35",
+        "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/primary-and-secondary-syphilis.htm"
+      ]
+    }
+  },
+  "penicilina_procaina": {
+    "pt": {
+      "name": "Penicilina G procaína",
+      "class": "Penicilina natural de depósito intermediário",
+      "pharmacologicClass": "Sal de procaína da penicilina G para IM",
+      "mechanism": "Libera penicilina G do depósito IM; a penicilina liga PBPs e bloqueia parede.",
+      "pharmacodynamics": "Bactericida tempo-dependente, duração intermediária entre aquosa e benzatina.",
+      "pharmacokinetics": "Absorção IM prolongada; penicilina liberada é eliminada predominantemente pelos rins.",
+      "indications": "Indicações específicas de penicilina G quando depósito IM intermediário é adequado; alternativa CDC para neurosífilis se adesão garantida.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Suspensão IM.",
+      "presentations": [
+        "600.000 U/mL em produtos/mercados selecionados"
+      ],
+      "dose": "Neurosífilis alternativa: 2,4 milhões U IM diariamente + probenecida 500 mg VO QID por 10–14 dias; demais indicações seguem produto local.",
+      "pediatricDose": "Não usar dose pediátrica genérica; sífilis congênita e outras indicações usam protocolos específicos.",
+      "renalDose": "DRC grave pode prolongar exposição; ajuste depende de indicação/frequência/produto.",
+      "hepaticDose": "Sem ajuste hepático rotineiro.",
+      "commonAdverseEffects": [
+        "Dor local",
+        "Rash",
+        "Febre",
+        "Náusea"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Síndrome de Hoigné",
+        "Convulsões/psicose por injeção intravascular",
+        "Isquemia vascular"
+      ],
+      "adverseEffects": "Injeção intravascular inadvertida pode causar ansiedade intensa, alucinações, confusão e convulsões.",
+      "contraindications": "Alergia grave a penicilina/procaína. Nunca IV/intra-arterial.",
+      "interactions": "Probenecida prolonga níveis e integra o regime alternativo de neurosífilis.",
+      "monitoring": "Observar anafilaxia e reação neuropsiquiátrica pós-injeção.",
+      "administration": "IM profunda apenas; técnica correta para minimizar injeção vascular.",
+      "preparation": "Homogeneizar suspensão conforme produto.",
+      "infusionProtocol": "Não aplicável; IV é contraindicada.",
+      "pregnancy": "Penicilina é essencial na sífilis gestacional; neurosífilis exige regime especializado.",
+      "lactation": "Geralmente compatível.",
+      "specialPopulations": "Regime procaína + probenecida exige adesão confiável.",
+      "patientEducation": "Relatar confusão, alucinações, dispneia ou síncope.",
+      "clinicalPearls": "Procaína e benzatina não são intercambiáveis; na neurosífilis, procaína é alternativa diária + probenecida.",
+      "guidelineRecommendations": "CDC aceita 2,4 milhões U IM/dia + probenecida 500 mg QID por 10–14 dias se adesão assegurada.",
+      "safetyFlags": [
+        "IM profunda SOMENTE",
+        "Não intercambiar com benzatina",
+        "Síndrome de Hoigné",
+        "Neurosífilis: + probenecida",
+        "Adesão obrigatória"
+      ],
+      "alerts": [
+        "2,4 milhões U IM/dia",
+        "Probenecida 500 mg QID",
+        "10–14 dias",
+        "NUNCA IV/intra-arterial",
+        "Pediatria: protocolo específico"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/search.cfm?query=PENICILLIN+G+PROCAINE",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b5640fc6-76d8-428d-80e6-760d769af8bb",
+        "https://www.cdc.gov/std/treatment-guidelines/neurosyphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/search.cfm?query=PENICILLIN+G+PROCAINE",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b5640fc6-76d8-428d-80e6-760d769af8bb",
+        "https://www.cdc.gov/std/treatment-guidelines/neurosyphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm"
+      ]
+    },
+    "es": {
+      "name": "Penicilina G procaína",
+      "class": "Penicilina natural de depósito intermedio",
+      "pharmacologicClass": "Sal procaína de penicilina G para IM",
+      "mechanism": "Libera penicilina G desde depósito IM; se une a PBPs.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo, duración intermedia.",
+      "pharmacokinetics": "Absorción IM prolongada; eliminación renal.",
+      "indications": "Indicaciones específicas; alternativa CDC para neurosífilis si adherencia garantizada.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Suspensión IM.",
+      "presentations": [
+        "600.000 U/mL en productos/mercados seleccionados"
+      ],
+      "dose": "Neurosífilis alternativa: 2,4 millones U IM diaria + probenecid 500 mg QID por 10–14 días.",
+      "pediatricDose": "No usar dosis pediátrica genérica; protocolos específicos.",
+      "renalDose": "ERC grave puede prolongar exposición; ajuste depende de indicación.",
+      "hepaticDose": "Sin ajuste hepático rutinario.",
+      "commonAdverseEffects": [
+        "Dolor local",
+        "Rash",
+        "Fiebre",
+        "Náuseas"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Síndrome de Hoigné",
+        "Convulsiones/psicosis por inyección intravascular",
+        "Isquemia vascular"
+      ],
+      "adverseEffects": "Inyección intravascular puede causar ansiedad, alucinaciones, confusión y convulsiones.",
+      "contraindications": "Alergia grave a penicilina/procaína. Nunca IV/intraarterial.",
+      "interactions": "Probenecid prolonga niveles y forma parte del régimen alternativo.",
+      "monitoring": "Observar anafilaxia y reacción neuropsiquiátrica.",
+      "administration": "Solo IM profunda.",
+      "preparation": "Homogeneizar según producto.",
+      "infusionProtocol": "No aplicable; IV contraindicada.",
+      "pregnancy": "Penicilina esencial en sífilis gestacional; neurosífilis exige régimen especializado.",
+      "lactation": "Generalmente compatible.",
+      "specialPopulations": "Procaína + probenecid exige adherencia fiable.",
+      "patientEducation": "Informar confusión/alucinaciones/disnea/síncope.",
+      "clinicalPearls": "Procaína y benzatina no son intercambiables: la procaína tiene duración intermedia y en neurosífilis solo se usa como alternativa diaria junto con probenecid.",
+      "guidelineRecommendations": "CDC: 2,4 millones U IM/día + probenecid 500 mg QID 10–14 días si adherencia.",
+      "safetyFlags": [
+        "SOLO IM profunda",
+        "No intercambiar con benzatina",
+        "Síndrome de Hoigné",
+        "Neurosífilis: + probenecid",
+        "Adherencia obligatoria"
+      ],
+      "alerts": [
+        "2,4 millones U IM/día",
+        "Probenecid 500 mg QID",
+        "10–14 días",
+        "NUNCA IV/intraarterial",
+        "Pediatría: protocolo específico"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/search.cfm?query=PENICILLIN+G+PROCAINE",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b5640fc6-76d8-428d-80e6-760d769af8bb",
+        "https://www.cdc.gov/std/treatment-guidelines/neurosyphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/search.cfm?query=PENICILLIN+G+PROCAINE",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b5640fc6-76d8-428d-80e6-760d769af8bb",
+        "https://www.cdc.gov/std/treatment-guidelines/neurosyphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm",
+        "https://www.cdc.gov/std/treatment-guidelines/latent-syphilis.htm"
+      ]
+    }
+  },
+  "penicilina_v": {
+    "pt": {
+      "name": "Penicilina V potássica",
+      "class": "Penicilina natural oral",
+      "pharmacologicClass": "Fenoximetilpenicilina oral sensível a penicilinase",
+      "mechanism": "Liga PBPs e inibe peptidoglicano.",
+      "pharmacodynamics": "Bactericida tempo-dependente; não cobre produtores de penicilinase.",
+      "pharmacokinetics": "Ácido-estável; níveis maiores em jejum; eliminação renal relativamente rápida.",
+      "indications": "Faringite GAS e outras infecções leves/moderadas por organismos muito suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos e solução oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "125 mg/5 mL",
+        "250 mg/5 mL"
+      ],
+      "dose": "GAS adulto/adolescente: 500 mg BID ou 250 mg QID por 10 dias; outras indicações 250–500 mg q6–8h.",
+      "pediatricDose": "GAS criança: 250 mg BID ou TID por 10 dias.",
+      "renalDose": "Excreção é retardada na DRC; sem tabela universal atual. Avaliar DRC grave e carga de potássio.",
+      "hepaticDose": "Sem ajuste hepático rotineiro.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash",
+        "Vômito"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR",
+        "Nefrite intersticial rara"
+      ],
+      "adverseEffects": "Hipersensibilidade e diarreia são os principais eventos.",
+      "contraindications": "Hipersensibilidade grave a penicilinas.",
+      "interactions": "Probenecida prolonga níveis; metotrexato pode ter depuração reduzida. Formulação 500 mg pode conter ~1,43 mEq K.",
+      "monitoring": "Resposta; função renal e potássio em DRC importante.",
+      "administration": "Pode ser com alimento, mas níveis são maiores em jejum; GAS exige 10 dias.",
+      "preparation": "Solução reconstituída refrigerada; descartar após 14 dias.",
+      "infusionProtocol": "Não aplicável; oral.",
+      "pregnancy": "Usar quando indicada.",
+      "lactation": "Geralmente compatível.",
+      "specialPopulations": "DRC/restrição de potássio exigem atenção à sal potássica.",
+      "patientEducation": "Completar 10 dias no GAS.",
+      "clinicalPearls": "Excelente para GAS suscetível por via oral, mas não substitui terapia parenteral em doença grave.",
+      "guidelineRecommendations": "CDC mantém penicilina V como terapia de primeira linha para faringite por GAS, com tratamento completo por 10 dias e doses definidas por faixa etária.",
+      "safetyFlags": [
+        "Oral",
+        "GAS 10 dias",
+        "Potássio",
+        "Não cobre penicilinase",
+        "Jejum aumenta níveis"
+      ],
+      "alerts": [
+        "Adulto GAS 500 mg BID ou 250 mg QID",
+        "Criança GAS 250 mg BID/TID",
+        "10 dias",
+        "Solução refrigerada",
+        "DRC: revisar K"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0744674-ddf7-4022-be2f-2a22bef0d379",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b8f797fb-979c-4eab-a3a6-ad4edcb9ff07",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fba1ffe5-809a-495b-bf3e-f2099ac459f6",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8f9fa2c8-4d25-48a8-9257-43c33d08e83a&version=1",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0fb8ab8a-5aa7-e6f4-e063-6294a90a1af6"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0744674-ddf7-4022-be2f-2a22bef0d379",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b8f797fb-979c-4eab-a3a6-ad4edcb9ff07",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fba1ffe5-809a-495b-bf3e-f2099ac459f6",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8f9fa2c8-4d25-48a8-9257-43c33d08e83a&version=1",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0fb8ab8a-5aa7-e6f4-e063-6294a90a1af6"
+      ]
+    },
+    "es": {
+      "name": "Penicilina V potásica",
+      "class": "Penicilina natural oral",
+      "pharmacologicClass": "Fenoximetilpenicilina oral sensible a penicilinasa",
+      "mechanism": "Se une a PBPs e inhibe peptidoglicano.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; no cubre productores de penicilinasa.",
+      "pharmacokinetics": "Ácido-estable; niveles mayores en ayunas; eliminación renal.",
+      "indications": "Faringitis GAS y otras infecciones leves/moderadas susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos y solución oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "125 mg/5 mL",
+        "250 mg/5 mL"
+      ],
+      "dose": "GAS adulto/adolescente: 500 mg BID o 250 mg QID x10 días; otras 250–500 mg q6–8h.",
+      "pediatricDose": "GAS niño: 250 mg BID o TID x10 días.",
+      "renalDose": "Excreción retrasada en ERC; sin tabla universal. Revisar carga de potasio.",
+      "hepaticDose": "Sin ajuste hepático.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Rash",
+        "Vómitos"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR",
+        "Nefritis intersticial rara"
+      ],
+      "adverseEffects": "Hipersensibilidad y diarrea predominan.",
+      "contraindications": "Hipersensibilidad grave a penicilinas.",
+      "interactions": "Probenecid prolonga niveles; metotrexato puede reducir depuración. 500 mg puede aportar ~1,43 mEq K.",
+      "monitoring": "Respuesta; función renal/potasio en ERC.",
+      "administration": "Puede darse con comida, pero niveles mayores en ayunas; GAS 10 días.",
+      "preparation": "Solución refrigerada; desechar tras 14 días.",
+      "infusionProtocol": "No aplicable; oral.",
+      "pregnancy": "Usar cuando indicada.",
+      "lactation": "Generalmente compatible.",
+      "specialPopulations": "ERC/restricción de K requieren atención.",
+      "patientEducation": "Completar 10 días en GAS.",
+      "clinicalPearls": "Excelente para GAS susceptible oral; no sustituye parenteral en grave.",
+      "guidelineRecommendations": "CDC mantiene penicilina V como tratamiento de primera línea para faringitis por GAS, con 10 días completos de terapia y dosis definidas por edad.",
+      "safetyFlags": [
+        "Oral",
+        "GAS 10 días",
+        "Potasio",
+        "No cubre penicilinasa",
+        "Ayunas aumenta niveles"
+      ],
+      "alerts": [
+        "Adulto GAS 500 mg BID o 250 mg QID",
+        "Niño 250 mg BID/TID",
+        "10 días",
+        "Solución refrigerada",
+        "ERC: revisar K"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0744674-ddf7-4022-be2f-2a22bef0d379",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b8f797fb-979c-4eab-a3a6-ad4edcb9ff07",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fba1ffe5-809a-495b-bf3e-f2099ac459f6",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8f9fa2c8-4d25-48a8-9257-43c33d08e83a&version=1",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0fb8ab8a-5aa7-e6f4-e063-6294a90a1af6"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0744674-ddf7-4022-be2f-2a22bef0d379",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b8f797fb-979c-4eab-a3a6-ad4edcb9ff07",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fba1ffe5-809a-495b-bf3e-f2099ac459f6",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8f9fa2c8-4d25-48a8-9257-43c33d08e83a&version=1",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0fb8ab8a-5aa7-e6f4-e063-6294a90a1af6"
+      ]
+    }
+  },
+  "temocilina": {
+    "pt": {
+      "name": "Temocilina",
+      "class": "Penicilina de espectro dirigido a Gram-negativos",
+      "pharmacologicClass": "Beta-lactâmico 6-alfa-metoxi estável a muitas ESBL/AmpC",
+      "mechanism": "Liga PBPs e inibe parede; substituição 6-alfa-metoxi aumenta estabilidade a beta-lactamases.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Enterobacterales suscetíveis; sem cobertura útil de Pseudomonas, Acinetobacter, Gram-positivos ou anaeróbios.",
+      "pharmacokinetics": "Parenteral; eliminada renalmente quase inalterada.",
+      "indications": "Septicemia, UTI e infecção respiratória baixa por bacilos Gram-negativos suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó IV/IM.",
+      "presentations": [
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Normal: 4 g/dia em 2 doses ou contínua; crítico: 6 g/dia em 3 doses ou contínua; carga 2 g antes da contínua.",
+      "pediatricDose": "SmPC: dados insuficientes para recomendar regime pediátrico.",
+      "renalDose": "CrCl >60: 2 g q12h; 30–60: 1 g q12h; 10–30: 1 g q24h; <10: 1 g q48h ou 500 mg q24h.",
+      "hepaticDose": "Sem redução necessária com base em experiência limitada.",
+      "commonAdverseEffects": [
+        "Rash",
+        "Náusea",
+        "Diarreia",
+        "Dor local"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Neurotoxicidade por acúmulo",
+        "Citopenias raras"
+      ],
+      "adverseEffects": "Geralmente tolerável; acúmulo em DRC aumenta toxicidade beta-lactâmica.",
+      "contraindications": "Hipersensibilidade grave a penicilinas.",
+      "interactions": "Cobertura adicional é necessária se Gram-positivo/anaeróbio relevante.",
+      "monitoring": "CrCl, cultura/MIC, resposta e hemograma/fígado em cursos prolongados.",
+      "administration": "IV lenta 3–4 min, infusão 30–40 min, contínua 24 h ou IM.",
+      "preparation": "1 g com 10 mL ou 2 g com 20 mL para IV; depois diluir se infusão.",
+      "infusionProtocol": "Intermitente 30–40 min; contínua 4–6 g/24 h após carga 2 g.",
+      "pregnancy": "Dados limitados; usar se benefício superar risco.",
+      "lactation": "Dados limitados.",
+      "specialPopulations": "DRC exige ajuste importante; sem regime pediátrico validado.",
+      "patientEducation": "Explicar espectro dirigido e necessidade de cultura.",
+      "clinicalPearls": "Carbapenem-sparing para Enterobacterales suscetíveis, mas sem Pseudomonas.",
+      "guidelineRecommendations": "Usar com suscetibilidade e epidemiologia local; 4–6 g/dia conforme gravidade/PKPD.",
+      "safetyFlags": [
+        "Enterobacterales dirigido",
+        "Sem Pseudomonas",
+        "Ajuste renal obrigatório",
+        "Carga 2 g contínua",
+        "Pediatria sem regime"
+      ],
+      "alerts": [
+        "4 g/dia padrão",
+        "6 g/dia crítico",
+        "CrCl 30–60: 1 g q12h",
+        "CrCl 10–30: 1 g q24h",
+        "Infusão 30–40 min"
+      ],
+      "references": [
+        "https://www.medicines.org.uk/emc/product/466/smpc",
+        "https://base-donnees-publique.medicaments.gouv.fr/medicament/64732109/extrait",
+        "https://base-donnees-publique.medicaments.gouv.fr/medicament/62424059/extrait",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://academic.oup.com/jac/article/79/9/2204/7710585",
+        "https://pubmed.ncbi.nlm.nih.gov/38985543/"
+      ],
+      "ref": [
+        "https://www.medicines.org.uk/emc/product/466/smpc",
+        "https://base-donnees-publique.medicaments.gouv.fr/medicament/64732109/extrait",
+        "https://base-donnees-publique.medicaments.gouv.fr/medicament/62424059/extrait",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://academic.oup.com/jac/article/79/9/2204/7710585",
+        "https://pubmed.ncbi.nlm.nih.gov/38985543/"
+      ]
+    },
+    "es": {
+      "name": "Temocilina",
+      "class": "Penicilina dirigida a Gram negativos",
+      "pharmacologicClass": "Beta-lactámico 6-alfa-metoxi estable frente a muchas ESBL/AmpC",
+      "mechanism": "Se une a PBPs; sustitución 6-alfa-metoxi aumenta estabilidad.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Enterobacterales; sin Pseudomonas, Acinetobacter, Gram positivos o anaerobios.",
+      "pharmacokinetics": "Parenteral; eliminación renal casi sin cambios.",
+      "indications": "Septicemia, UTI e infección respiratoria baja por Gram negativos susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo IV/IM.",
+      "presentations": [
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Normal 4 g/día BID o continua; crítico 6 g/día TID o continua; carga 2 g.",
+      "pediatricDose": "SmPC: datos insuficientes para régimen pediátrico.",
+      "renalDose": "ClCr >60: 2 g q12h; 30–60: 1 g q12h; 10–30: 1 g q24h; <10: 1 g q48h o 500 mg q24h.",
+      "hepaticDose": "Sin reducción necesaria según experiencia limitada.",
+      "commonAdverseEffects": [
+        "Rash",
+        "Náuseas",
+        "Diarrea",
+        "Dolor local"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Neurotoxicidad por acumulación",
+        "Citopenias raras"
+      ],
+      "adverseEffects": "Generalmente tolerable; ERC aumenta toxicidad.",
+      "contraindications": "Hipersensibilidad grave a penicilinas.",
+      "interactions": "Añadir cobertura si Gram positivo/anaerobio relevante.",
+      "monitoring": "ClCr, cultivo/MIC, respuesta, hemograma/hígado.",
+      "administration": "IV 3–4 min, infusión 30–40 min, continua o IM.",
+      "preparation": "1 g con 10 mL o 2 g con 20 mL.",
+      "infusionProtocol": "Intermitente 30–40 min; continua 4–6 g/24 h tras carga 2 g.",
+      "pregnancy": "Datos limitados.",
+      "lactation": "Datos limitados.",
+      "specialPopulations": "ERC exige ajuste; sin régimen pediátrico validado.",
+      "patientEducation": "Explicar espectro dirigido.",
+      "clinicalPearls": "Temocilina puede ahorrar carbapenémicos en Enterobacterales susceptibles, pero su espectro es estrecho y no debe asumirse cobertura de Pseudomonas.",
+      "guidelineRecommendations": "Usar solo con susceptibilidad demostrada y epidemiología local favorable; elegir 4–6 g/día y estrategia intermitente o continua según gravedad y objetivo PK/PD.",
+      "safetyFlags": [
+        "Enterobacterales dirigido",
+        "Sin Pseudomonas",
+        "Ajuste renal",
+        "Carga 2 g continua",
+        "Pediatría sin régimen"
+      ],
+      "alerts": [
+        "4 g/día estándar",
+        "6 g/día crítico",
+        "ClCr 30–60: 1 g q12h",
+        "ClCr 10–30: 1 g q24h",
+        "Infusión 30–40 min"
+      ],
+      "references": [
+        "https://www.medicines.org.uk/emc/product/466/smpc",
+        "https://base-donnees-publique.medicaments.gouv.fr/medicament/64732109/extrait",
+        "https://base-donnees-publique.medicaments.gouv.fr/medicament/62424059/extrait",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://academic.oup.com/jac/article/79/9/2204/7710585",
+        "https://pubmed.ncbi.nlm.nih.gov/38985543/"
+      ],
+      "ref": [
+        "https://www.medicines.org.uk/emc/product/466/smpc",
+        "https://base-donnees-publique.medicaments.gouv.fr/medicament/64732109/extrait",
+        "https://base-donnees-publique.medicaments.gouv.fr/medicament/62424059/extrait",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://academic.oup.com/jac/article/79/9/2204/7710585",
+        "https://pubmed.ncbi.nlm.nih.gov/38985543/"
+      ]
+    }
+  },
+  "cefaclor": {
+    "pt": {
+      "name": "Cefaclor",
+      "class": "Cefalosporina oral de 2ª geração",
+      "pharmacologicClass": "Cefalosporina beta-lactâmica oral",
+      "mechanism": "Liga-se a PBPs e inibe síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC.",
+      "pharmacokinetics": "Absorção oral e eliminação predominantemente renal.",
+      "indications": "Infecções respiratórias, pele e/ou UTI por organismos suscetíveis conforme bula.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas e suspensão oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "125 mg/5 mL",
+        "250 mg/5 mL"
+      ],
+      "dose": "Adulto 250 mg q8h; grave/pneumonia 500 mg q8h; GAS >=10 dias.",
+      "pediatricDose": "20 mg/kg/dia q8h; grave/otite 40 mg/kg/dia; máximo 1 g/dia.",
+      "renalDose": "Geralmente sem mudança de dose mesmo com função renal reduzida; DRC grave exige vigilância.",
+      "hepaticDose": "Sem ajuste hepático rotineiro estabelecido.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Clostridioides difficile",
+        "Toxicidade grave específica"
+      ],
+      "adverseEffects": "Eventos GI, hipersensibilidade e toxicidades específicas do agente; risco de C. difficile é de classe.",
+      "contraindications": "Hipersensibilidade grave ao agente ou beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar níveis; revisar anticoagulantes.",
+      "monitoring": "Resposta clínica, culturas e função renal; considerar hemograma/função hepática em terapia prolongada.",
+      "administration": "VO; seguir relação com alimento e interações específicas do produto.",
+      "preparation": "Suspensão oral, quando presente, deve ser reconstituída/agitada conforme bula.",
+      "infusionProtocol": "Não aplicável; formulação oral.",
+      "pregnancy": "Usar quando benefício justificar e conforme bula/diretriz.",
+      "lactation": "Pequenas quantidades podem passar ao leite; monitorar o lactente.",
+      "specialPopulations": "Crianças têm maior associação com reação tipo doença do soro.",
+      "patientEducation": "Completar o esquema e procurar atendimento em caso de reação alérgica grave ou diarreia intensa.",
+      "clinicalPearls": "Associado de forma característica a reação tipo doença do soro, sobretudo em crianças.",
+      "guidelineRecommendations": "Usar apenas quando foco/patógeno forem compatíveis com espectro e suscetibilidade local.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "Stewardship",
+        "Revisar função renal"
+      ],
+      "alerts": [
+        "Adulto 250 mg q8h",
+        "Grave 500 mg q8h",
+        "Pediatria 20–40 mg/kg/dia",
+        "Máx 1 g/dia",
+        "Reação tipo doença do soro"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2f61354e-bcb0-41aa-955f-51eabc11387b",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=224af904-38f3-4210-a750-e21006db4c66",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefaclor",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9e8890f0-e04a-4555-ac8d-d1b792a5c276"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2f61354e-bcb0-41aa-955f-51eabc11387b",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=224af904-38f3-4210-a750-e21006db4c66",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefaclor",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9e8890f0-e04a-4555-ac8d-d1b792a5c276"
+      ]
+    },
+    "es": {
+      "name": "Cefaclor",
+      "class": "Cefalosporina oral de 2ª geração",
+      "pharmacologicClass": "Cefalosporina beta-lactámica oral",
+      "mechanism": "Se une a PBPs e inhibe pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC.",
+      "pharmacokinetics": "Absorción oral y eliminación principalmente renal.",
+      "indications": "Infecciones respiratorias, piel y/o UTI por organismos susceptibles según ficha.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas e suspensão oral.",
+      "presentations": [
+        "250 mg",
+        "500 mg",
+        "125 mg/5 mL",
+        "250 mg/5 mL"
+      ],
+      "dose": "Adulto 250 mg q8h; grave/neumonía 500 mg q8h; GAS >=10 días.",
+      "pediatricDose": "20 mg/kg/día q8h; grave/otitis 40 mg/kg/día; máximo 1 g/día.",
+      "renalDose": "Generalmente sin cambio de dosis; ERC grave requiere vigilancia.",
+      "hepaticDose": "Sin ajuste hepático rutinario establecido.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Clostridioides difficile",
+        "Toxicidad grave específica"
+      ],
+      "adverseEffects": "Eventos GI, hipersensibilidad y toxicidades específicas; riesgo de C. difficile es de clase.",
+      "contraindications": "Hipersensibilidad grave al agente o beta-lactámicos relacionados.",
+      "interactions": "Probenecid puede aumentar niveles; revisar anticoagulantes.",
+      "monitoring": "Respuesta clínica, cultivos y función renal; considerar hemograma/función hepática en terapia prolongada.",
+      "administration": "VO; seguir relación con alimentos e interacciones específicas.",
+      "preparation": "Suspensión, si existe, reconstituir/agitar según ficha.",
+      "infusionProtocol": "No aplicable; oral.",
+      "pregnancy": "Usar cuando beneficio lo justifique y según ficha/guía.",
+      "lactation": "Pequeñas cantidades pueden pasar a leche; vigilar al lactante.",
+      "specialPopulations": "Niños tienen mayor asociación con reacción tipo enfermedad del suero.",
+      "patientEducation": "Completar el esquema y consultar ante reacción alérgica grave o diarrea intensa.",
+      "clinicalPearls": "Asociado de forma característica a reacción tipo enfermedad del suero, sobre todo en niños.",
+      "guidelineRecommendations": "Usar solo cuando foco/patógeno sean compatibles con espectro/susceptibilidad local.",
+      "safetyFlags": [
+        "Alergia beta-lactámica",
+        "Stewardship",
+        "Revisar función renal"
+      ],
+      "alerts": [
+        "Adulto 250 mg q8h",
+        "Grave 500 mg q8h",
+        "Pediatría 20–40 mg/kg/día",
+        "Máx 1 g/día",
+        "Reacción tipo enfermedad del suero"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2f61354e-bcb0-41aa-955f-51eabc11387b",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=224af904-38f3-4210-a750-e21006db4c66",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefaclor",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9e8890f0-e04a-4555-ac8d-d1b792a5c276"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2f61354e-bcb0-41aa-955f-51eabc11387b",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=224af904-38f3-4210-a750-e21006db4c66",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefaclor",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9e8890f0-e04a-4555-ac8d-d1b792a5c276"
+      ]
+    }
+  },
+  "cefadroxila": {
+    "pt": {
+      "name": "Cefadroxila",
+      "class": "Cefalosporina oral de 1ª geração",
+      "pharmacologicClass": "Cefalosporina beta-lactâmica oral",
+      "mechanism": "Liga-se a PBPs e inibe síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC.",
+      "pharmacokinetics": "Absorção oral e eliminação predominantemente renal.",
+      "indications": "Infecções respiratórias, pele e/ou UTI por organismos suscetíveis conforme bula.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas/comprimidos e suspensão.",
+      "presentations": [
+        "500 mg",
+        "1 g conforme produto",
+        "250 mg/5 mL",
+        "500 mg/5 mL"
+      ],
+      "dose": "UTI baixa 1–2 g/dia; pele 1 g/dia; GAS 1 g/dia por 10 dias.",
+      "pediatricDose": "30 mg/kg/dia; UTI/pele q12h; GAS/impetigo pode ser diária ou q12h.",
+      "renalDose": "Carga 1 g, manutenção 500 mg: CrCl 0–10 q36h; 10–25 q24h; 25–50 q12h; >50 sem ajuste.",
+      "hepaticDose": "Sem ajuste hepático rotineiro estabelecido.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Clostridioides difficile",
+        "Toxicidade grave específica"
+      ],
+      "adverseEffects": "Eventos GI, hipersensibilidade e toxicidades específicas do agente; risco de C. difficile é de classe.",
+      "contraindications": "Hipersensibilidade grave ao agente ou beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar níveis; revisar anticoagulantes.",
+      "monitoring": "Resposta clínica, culturas e função renal; considerar hemograma/função hepática em terapia prolongada.",
+      "administration": "VO; seguir relação com alimento e interações específicas do produto.",
+      "preparation": "Suspensão oral, quando presente, deve ser reconstituída/agitada conforme bula.",
+      "infusionProtocol": "Não aplicável; formulação oral.",
+      "pregnancy": "Usar quando benefício justificar e conforme bula/diretriz.",
+      "lactation": "Pequenas quantidades podem passar ao leite; monitorar o lactente.",
+      "specialPopulations": "DRC exige revisão da dose quando indicado.",
+      "patientEducation": "Completar o esquema e procurar atendimento em caso de reação alérgica grave ou diarreia intensa.",
+      "clinicalPearls": "Meia-vida oral longa permite 1–2 tomadas/dia, mas DRC muda bastante o intervalo.",
+      "guidelineRecommendations": "Usar apenas quando foco/patógeno forem compatíveis com espectro e suscetibilidade local.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "Stewardship",
+        "Revisar função renal"
+      ],
+      "alerts": [
+        "Carga 1 g",
+        "CrCl 0–10: 500 mg q36h",
+        "10–25: q24h",
+        "25–50: q12h",
+        "Pediatria 30 mg/kg/dia"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485bc35b-637a-426b-aaa2-023c664914ae",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4674a05c-fdef-4737-a4b8-e3229bdada9d",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba26618e-4a67-42a3-a194-f4ab6bc04bc7",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485bc35b-637a-426b-aaa2-023c664914ae",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4674a05c-fdef-4737-a4b8-e3229bdada9d",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba26618e-4a67-42a3-a194-f4ab6bc04bc7",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    },
+    "es": {
+      "name": "Cefadroxilo",
+      "class": "Cefalosporina oral de 1ª geração",
+      "pharmacologicClass": "Cefalosporina beta-lactámica oral",
+      "mechanism": "Se une a PBPs e inhibe pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC.",
+      "pharmacokinetics": "Absorción oral y eliminación principalmente renal.",
+      "indications": "Infecciones respiratorias, piel y/o UTI por organismos susceptibles según ficha.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas/comprimidos e suspensão.",
+      "presentations": [
+        "500 mg",
+        "1 g conforme produto",
+        "250 mg/5 mL",
+        "500 mg/5 mL"
+      ],
+      "dose": "UTI baja 1–2 g/día; piel 1 g/día; GAS 1 g/día por 10 días.",
+      "pediatricDose": "30 mg/kg/día; UTI/piel q12h; GAS/impétigo una vez o q12h.",
+      "renalDose": "Carga 1 g, mantenimiento 500 mg: ClCr 0–10 q36h; 10–25 q24h; 25–50 q12h; >50 sin ajuste.",
+      "hepaticDose": "Sin ajuste hepático rutinario establecido.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Clostridioides difficile",
+        "Toxicidad grave específica"
+      ],
+      "adverseEffects": "Eventos GI, hipersensibilidad y toxicidades específicas; riesgo de C. difficile es de clase.",
+      "contraindications": "Hipersensibilidad grave al agente o beta-lactámicos relacionados.",
+      "interactions": "Probenecid puede aumentar niveles; revisar anticoagulantes.",
+      "monitoring": "Respuesta clínica, cultivos y función renal; considerar hemograma/función hepática en terapia prolongada.",
+      "administration": "VO; seguir relación con alimentos e interacciones específicas.",
+      "preparation": "Suspensión, si existe, reconstituir/agitar según ficha.",
+      "infusionProtocol": "No aplicable; oral.",
+      "pregnancy": "Usar cuando beneficio lo justifique y según ficha/guía.",
+      "lactation": "Pequeñas cantidades pueden pasar a leche; vigilar al lactante.",
+      "specialPopulations": "ERC requiere revisar dosis cuando corresponda.",
+      "patientEducation": "Completar el esquema y consultar ante reacción alérgica grave o diarrea intensa.",
+      "clinicalPearls": "Semivida oral larga permite 1–2 dosis/día, pero ERC cambia mucho el intervalo.",
+      "guidelineRecommendations": "Usar solo cuando foco/patógeno sean compatibles con espectro/susceptibilidad local.",
+      "safetyFlags": [
+        "Alergia beta-lactámica",
+        "Stewardship",
+        "Revisar función renal"
+      ],
+      "alerts": [
+        "Carga 1 g",
+        "ClCr 0–10: 500 mg q36h",
+        "10–25: q24h",
+        "25–50: q12h",
+        "Pediatría 30 mg/kg/día"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485bc35b-637a-426b-aaa2-023c664914ae",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4674a05c-fdef-4737-a4b8-e3229bdada9d",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba26618e-4a67-42a3-a194-f4ab6bc04bc7",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485bc35b-637a-426b-aaa2-023c664914ae",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4674a05c-fdef-4737-a4b8-e3229bdada9d",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba26618e-4a67-42a3-a194-f4ab6bc04bc7",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    }
+  },
+  "cefdinir": {
+    "pt": {
+      "name": "Cefdinir",
+      "class": "Cefalosporina oral de 3ª geração",
+      "pharmacologicClass": "Cefalosporina beta-lactâmica oral",
+      "mechanism": "Liga-se a PBPs e inibe síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC.",
+      "pharmacokinetics": "Absorção oral e eliminação predominantemente renal.",
+      "indications": "Infecções respiratórias, pele e/ou UTI por organismos suscetíveis conforme bula.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas e suspensão.",
+      "presentations": [
+        "300 mg",
+        "125 mg/5 mL",
+        "250 mg/5 mL"
+      ],
+      "dose": "Adulto/adolescente total 600 mg/dia: 300 mg q12h ou 600 mg q24h conforme foco.",
+      "pediatricDose": "6 meses–12 anos: 14 mg/kg/dia; máximo 600 mg/dia.",
+      "renalDose": "Adulto CrCl <30: 300 mg q24h; pediatria CrCl <30: 7 mg/kg q24h, máx 300 mg.",
+      "hepaticDose": "Sem ajuste hepático rotineiro estabelecido.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Clostridioides difficile",
+        "Toxicidade grave específica"
+      ],
+      "adverseEffects": "Eventos GI, hipersensibilidade e toxicidades específicas do agente; risco de C. difficile é de classe.",
+      "contraindications": "Hipersensibilidade grave ao agente ou beta-lactâmicos relacionados.",
+      "interactions": "Separar ferro e antiácidos Mg/Al por pelo menos 2 h.",
+      "monitoring": "Resposta clínica, culturas e função renal; considerar hemograma/função hepática em terapia prolongada.",
+      "administration": "VO; seguir relação com alimento e interações específicas do produto.",
+      "preparation": "Suspensão oral, quando presente, deve ser reconstituída/agitada conforme bula.",
+      "infusionProtocol": "Não aplicável; formulação oral.",
+      "pregnancy": "Usar quando benefício justificar e conforme bula/diretriz.",
+      "lactation": "Pequenas quantidades podem passar ao leite; monitorar o lactente.",
+      "specialPopulations": "Ferro pode causar fezes avermelhadas sem sangramento.",
+      "patientEducation": "Completar o esquema e procurar atendimento em caso de reação alérgica grave ou diarreia intensa.",
+      "clinicalPearls": "CrCl <30 reduz a dose; ferro/antiácidos Mg-Al devem ser separados 2 h e ferro pode deixar fezes avermelhadas.",
+      "guidelineRecommendations": "Usar apenas quando foco/patógeno forem compatíveis com espectro e suscetibilidade local.",
+      "safetyFlags": [
+        "Alergia beta-lactâmica",
+        "Stewardship",
+        "Revisar função renal"
+      ],
+      "alerts": [
+        "Adulto 600 mg/dia",
+        "Pediatria 14 mg/kg/dia",
+        "CrCl <30 adulto 300 mg/dia",
+        "CrCl <30 criança 7 mg/kg/dia",
+        "Separar ferro 2 h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefdinir",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?adv=1&labeltype=human&query=INGREDIENT%3Acefdinir",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/050739s015,050749s021lbl.pdf",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefdinir",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?adv=1&labeltype=human&query=INGREDIENT%3Acefdinir",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/050739s015,050749s021lbl.pdf",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    },
+    "es": {
+      "name": "Cefdinir",
+      "class": "Cefalosporina oral de 3ª geração",
+      "pharmacologicClass": "Cefalosporina beta-lactámica oral",
+      "mechanism": "Se une a PBPs e inhibe pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC.",
+      "pharmacokinetics": "Absorción oral y eliminación principalmente renal.",
+      "indications": "Infecciones respiratorias, piel y/o UTI por organismos susceptibles según ficha.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas e suspensão.",
+      "presentations": [
+        "300 mg",
+        "125 mg/5 mL",
+        "250 mg/5 mL"
+      ],
+      "dose": "Adulto/adolescente total 600 mg/día: 300 mg q12h o 600 mg q24h según foco.",
+      "pediatricDose": "6 meses–12 años: 14 mg/kg/día; máximo 600 mg/día.",
+      "renalDose": "Adulto ClCr <30: 300 mg q24h; pediatría ClCr <30: 7 mg/kg q24h, máx 300 mg.",
+      "hepaticDose": "Sin ajuste hepático rutinario establecido.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Clostridioides difficile",
+        "Toxicidad grave específica"
+      ],
+      "adverseEffects": "Eventos GI, hipersensibilidad y toxicidades específicas; riesgo de C. difficile es de clase.",
+      "contraindications": "Hipersensibilidad grave al agente o beta-lactámicos relacionados.",
+      "interactions": "Separar hierro y antiácidos Mg/Al al menos 2 h.",
+      "monitoring": "Respuesta clínica, cultivos y función renal; considerar hemograma/función hepática en terapia prolongada.",
+      "administration": "VO; seguir relación con alimentos e interacciones específicas.",
+      "preparation": "Suspensión, si existe, reconstituir/agitar según ficha.",
+      "infusionProtocol": "No aplicable; oral.",
+      "pregnancy": "Usar cuando beneficio lo justifique y según ficha/guía.",
+      "lactation": "Pequeñas cantidades pueden pasar a leche; vigilar al lactante.",
+      "specialPopulations": "Hierro puede causar heces rojizas sin sangrado.",
+      "patientEducation": "Completar el esquema y consultar ante reacción alérgica grave o diarrea intensa.",
+      "clinicalPearls": "ClCr <30 reduce dosis; hierro/antiácidos Mg-Al separar 2 h y hierro puede dar heces rojizas.",
+      "guidelineRecommendations": "Usar solo cuando foco/patógeno sean compatibles con espectro/susceptibilidad local.",
+      "safetyFlags": [
+        "Alergia beta-lactámica",
+        "Stewardship",
+        "Revisar función renal"
+      ],
+      "alerts": [
+        "Adulto 600 mg/día",
+        "Pediatría 14 mg/kg/día",
+        "ClCr <30 adulto 300 mg/día",
+        "ClCr <30 niño 7 mg/kg/día",
+        "Separar hierro 2 h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefdinir",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?adv=1&labeltype=human&query=INGREDIENT%3Acefdinir",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/050739s015,050749s021lbl.pdf",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefdinir",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?adv=1&labeltype=human&query=INGREDIENT%3Acefdinir",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/050739s015,050749s021lbl.pdf",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    }
+  },
+  "cefepime": {
+    "pt": {
+      "name": "Cefepime",
+      "class": "Cefalosporina antipseudomonal de 4ª geração",
+      "pharmacologicClass": "Cefalosporina IV/IM antipseudomonal",
+      "mechanism": "Liga PBPs e inibe parede; maior estabilidade a AmpC que várias cefalosporinas anteriores.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Infusão prolongada pode otimizar exposição.",
+      "pharmacokinetics": "Eliminação predominantemente renal inalterada; meia-vida aumenta muito quando CrCl cai.",
+      "indications": "Pneumonia, neutropenia febril, UTI, pele, intra-abdominal combinada e outras infecções graves por Gram-negativos/Pseudomonas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó ou solução IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adulto 1–2 g q8–12h conforme foco; Pseudomonas grave/neutropenia febril tipicamente 2 g IV q8h com renal normal.",
+      "pediatricDose": "2 meses–16 anos <=40 kg: 50 mg/kg/dose; q12h em várias infecções e q8h em neutropenia febril; máximo dose adulta.",
+      "renalDose": "Ajustar obrigatoriamente se CrCl <=60 mL/min; HD remove cefepime e a dose deve ser dada após HD nos dias de diálise.",
+      "hepaticDose": "Sem ajuste hepático rotineiro se função renal adequada.",
+      "commonAdverseEffects": [
+        "Reação local",
+        "Rash",
+        "Diarreia",
+        "Náusea"
+      ],
+      "dangerousAdverseEffects": [
+        "Neurotoxicidade/encefalopatia",
+        "Mioclonias",
+        "Convulsões/status não convulsivo",
+        "Anafilaxia",
+        "C. difficile"
+      ],
+      "adverseEffects": "Neurotoxicidade ocorre sobretudo em DRC/dose não ajustada, mas também pode ocorrer apesar de ajuste.",
+      "contraindications": "Hipersensibilidade imediata grave a cefepime/cefalosporinas.",
+      "interactions": "Nefrotóxicos podem piorar função renal e aumentar exposição indiretamente.",
+      "monitoring": "CrCl frequente, estado mental/mioclonias, culturas e resposta.",
+      "administration": "IV ou IM; em grave preferir IV.",
+      "preparation": "Reconstituir/diluir conforme produto.",
+      "infusionProtocol": "Padrão IV ~30 min; IDSA usa altas doses/infusão prolongada em Pseudomonas selecionado.",
+      "pregnancy": "Usar quando indicada.",
+      "lactation": "Baixa excreção no leite.",
+      "specialPopulations": "Idosos/DRC são o grupo clássico de encefalopatia por cefepime.",
+      "patientEducation": "Relatar confusão, sonolência intensa, tremores/mioclonias ou convulsões.",
+      "clinicalPearls": "Alteração mental em DRC sob cefepime deve levantar neurotoxicidade por acúmulo.",
+      "guidelineRecommendations": "IDSA 2026 favorece cefepime alta dose/prolongada em alguns Pseudomonas suscetíveis com resistência a carbapenem.",
+      "safetyFlags": [
+        "Neurotoxicidade",
+        "CrCl <=60 ajustar",
+        "Pseudomonas",
+        "Infusão prolongada selecionada",
+        "HD remove"
+      ],
+      "alerts": [
+        "Grave/Pseudomonas 2 g q8h",
+        "Pediatria 50 mg/kg/dose",
+        "CrCl <=60 ajustar",
+        "Confusão/mioclonia alerta",
+        "HD: após sessão"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be5f8ca6-7232-423a-a2d5-cccb7abe7921",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefepime"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be5f8ca6-7232-423a-a2d5-cccb7abe7921",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefepime"
+      ]
+    },
+    "es": {
+      "name": "Cefepime",
+      "class": "Cefalosporina antipseudomónica de 4ª generación",
+      "pharmacologicClass": "Cefalosporina IV/IM antipseudomónica",
+      "mechanism": "Se une a PBPs e inhibe pared; mayor estabilidad frente a AmpC.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC; prolongada puede optimizar exposición.",
+      "pharmacokinetics": "Eliminación renal; semivida aumenta con caída de ClCr.",
+      "indications": "Neumonía, neutropenia febril, UTI, piel, intraabdominal combinada y otras graves por Gram negativos/Pseudomonas.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo/solución IV/IM.",
+      "presentations": [
+        "500 mg",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adulto 1–2 g q8–12h; Pseudomonas grave/neutropenia típicamente 2 g IV q8h con renal normal.",
+      "pediatricDose": "2 meses–16 años <=40 kg: 50 mg/kg/dosis; q12h o q8h según foco; máximo adulto.",
+      "renalDose": "Ajustar si ClCr <=60; HD elimina y dosificar tras HD.",
+      "hepaticDose": "Sin ajuste hepático si renal adecuada.",
+      "commonAdverseEffects": [
+        "Reacción local",
+        "Rash",
+        "Diarrea",
+        "Náuseas"
+      ],
+      "dangerousAdverseEffects": [
+        "Neurotoxicidad/encefalopatía",
+        "Mioclonías",
+        "Convulsiones/status no convulsivo",
+        "Anafilaxia",
+        "C. difficile"
+      ],
+      "adverseEffects": "Neurotoxicidad sobre todo en ERC/dosis no ajustada, aunque puede aparecer con ajuste.",
+      "contraindications": "Hipersensibilidad inmediata grave.",
+      "interactions": "Nefrotóxicos pueden empeorar función renal.",
+      "monitoring": "ClCr, estado mental/mioclonías, cultivos y respuesta.",
+      "administration": "IV o IM; grave preferir IV.",
+      "preparation": "Reconstituir/diluir según producto.",
+      "infusionProtocol": "Estándar ~30 min; IDSA usa alta dosis/prolongada en Pseudomonas selecto.",
+      "pregnancy": "Usar cuando indicada.",
+      "lactation": "Baja excreción.",
+      "specialPopulations": "Ancianos/ERC: mayor riesgo de encefalopatía.",
+      "patientEducation": "Informar confusión, somnolencia, mioclonías o convulsiones.",
+      "clinicalPearls": "Alteración mental en ERC bajo cefepime debe sugerir neurotoxicidad.",
+      "guidelineRecommendations": "IDSA 2026 favorece alta dosis/prolongada en algunos Pseudomonas susceptibles.",
+      "safetyFlags": [
+        "Neurotoxicidad",
+        "ClCr <=60 ajustar",
+        "Pseudomonas",
+        "Prolongada selecta",
+        "HD elimina"
+      ],
+      "alerts": [
+        "Grave/Pseudomonas 2 g q8h",
+        "Pediatría 50 mg/kg/dosis",
+        "ClCr <=60 ajustar",
+        "Confusión/mioclonía alerta",
+        "HD: tras sesión"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be5f8ca6-7232-423a-a2d5-cccb7abe7921",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefepime"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be5f8ca6-7232-423a-a2d5-cccb7abe7921",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de477f37-40f6-4295-ae72-a2ee36a8922e",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=cefepime"
+      ]
+    }
+  },
+  "cefiderocol": {
+    "pt": {
+      "name": "Cefiderocol",
+      "class": "Cefalosporina siderófora",
+      "pharmacologicClass": "Cefalosporina siderófora IV",
+      "mechanism": "Capta ferro e usa transportadores TonB para entrar no periplasma; liga sobretudo PBP3.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Ativa contra muitos Gram-negativos com carbapenemases, inclusive MBL.",
+      "pharmacokinetics": "IV; pouca metabolização e eliminação renal inalterada. ARC reduz exposição; DRC aumenta.",
+      "indications": "Adultos >=18: cUTI/pielonefrite e pneumonia hospitalar/VAP por Gram-negativos suscetíveis, com uso dirigido por resistência/AST.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó IV.",
+      "presentations": [
+        "1 g por frasco"
+      ],
+      "dose": "CrCl 60–119: 2 g q8h em 3 h. CrCl >=120: 2 g q6h.",
+      "pediatricDose": "Segurança/eficácia <18 anos não estabelecidas na bula EUA atual.",
+      "renalDose": "CrCl 30–59: 1,5 g q8h; 15–29: 1 g q8h; ESRD <15: 0,75 g q12h; HD: após sessão; ARC >=120: 2 g q6h.",
+      "hepaticDose": "Sem ajuste esperado; metabolismo hepático não é via importante.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Reação local",
+        "Constipação",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Maior mortalidade observada em certos pacientes com Gram-negativos carbapenem-resistentes",
+        "Anafilaxia",
+        "C. difficile",
+        "Neurotoxicidade beta-lactâmica"
+      ],
+      "adverseEffects": "A bula mantém alerta de mortalidade observada em CREDIBLE-CR; causalidade incerta.",
+      "contraindications": "Hipersensibilidade grave a cefiderocol/cefalosporinas.",
+      "interactions": "Poucas interações metabólicas; função renal muda exposição de forma importante.",
+      "monitoring": "CrCl frequente, cultura/AST, resposta, superinfecção e estado neurológico em DRC.",
+      "administration": "IV exclusivamente.",
+      "preparation": "Reconstituir e diluir conforme bula.",
+      "infusionProtocol": "Cada dose em 3 horas; ARC >=120 exige q6h.",
+      "pregnancy": "Dados humanos insuficientes.",
+      "lactation": "Dados limitados.",
+      "specialPopulations": "Adultos apenas; ARC aumenta frequência; DRC/HD reduz dose.",
+      "patientEducation": "Explicar que é reservado para Gram-negativos resistentes e exige AST/ajuste renal.",
+      "clinicalPearls": "Usa o sistema de ferro bacteriano como cavalo de Troia; potente contra MBL/DTR, mas deve ser preservado.",
+      "guidelineRecommendations": "IDSA 2026: preferido para NDM-E e MBL-Pseudomonas; cUTI DTR entre preferidos; CRAB invasivo alternativa em combinação.",
+      "safetyFlags": [
+        "Infusão 3 h",
+        "CrCl/ARC mudam dose",
+        "Adultos >=18",
+        "Alerta mortalidade CREDIBLE-CR",
+        "Reservar AMR"
+      ],
+      "alerts": [
+        "CrCl 60–119: 2 g q8h",
+        "CrCl >=120: 2 g q6h",
+        "CrCl 30–59: 1,5 g q8h",
+        "HD: após sessão",
+        "Uso guiado por AMR/AST"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+      ]
+    },
+    "es": {
+      "name": "Cefiderocol",
+      "class": "Cefalosporina siderófora",
+      "pharmacologicClass": "Cefalosporina siderófora IV",
+      "mechanism": "Capta hierro y usa transportadores TonB; se une sobre todo a PBP3.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Activa frente a muchos Gram negativos con carbapenemasas, incluidas MBL.",
+      "pharmacokinetics": "IV; poco metabolismo y eliminación renal. ARC reduce exposición; ERC la aumenta.",
+      "indications": "Adultos >=18: cUTI/pielonefritis y HAP/VAP por Gram negativos susceptibles, guiado por AMR/AST.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo IV.",
+      "presentations": [
+        "1 g por vial"
+      ],
+      "dose": "ClCr 60–119: 2 g q8h en 3 h. ClCr >=120: 2 g q6h.",
+      "pediatricDose": "Seguridad/eficacia <18 años no establecidas en ficha EUA.",
+      "renalDose": "ClCr 30–59: 1,5 g q8h; 15–29: 1 g q8h; ESRD <15: 0,75 g q12h; HD tras sesión; ARC >=120: 2 g q6h.",
+      "hepaticDose": "Sin ajuste esperado.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Reacción local",
+        "Estreñimiento",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Mayor mortalidad observada en ciertos pacientes con Gram negativos resistentes a carbapenem",
+        "Anafilaxia",
+        "C. difficile",
+        "Neurotoxicidad beta-lactámica"
+      ],
+      "adverseEffects": "Ficha mantiene alerta de mortalidad observada en CREDIBLE-CR; causalidad incierta.",
+      "contraindications": "Hipersensibilidad grave a cefiderocol/cefalosporinas.",
+      "interactions": "Pocas interacciones metabólicas; función renal cambia exposición.",
+      "monitoring": "ClCr frecuente, cultivo/AST, respuesta y estado neurológico.",
+      "administration": "Exclusivamente IV.",
+      "preparation": "Reconstituir/diluir según ficha.",
+      "infusionProtocol": "Cada dosis en 3 horas; ARC >=120 q6h.",
+      "pregnancy": "Datos insuficientes.",
+      "lactation": "Datos limitados.",
+      "specialPopulations": "Solo adultos; ARC aumenta frecuencia; ERC/HD reduce dosis.",
+      "patientEducation": "Explicar reserva para AMR y necesidad de AST/ajuste renal.",
+      "clinicalPearls": "Usa hierro bacteriano como caballo de Troya; potente contra MBL/DTR, pero debe preservarse.",
+      "guidelineRecommendations": "IDSA 2026: preferido NDM-E/MBL-Pseudomonas; cUTI DTR preferido; CRAB invasivo alternativa combinada.",
+      "safetyFlags": [
+        "Infusión 3 h",
+        "ClCr/ARC cambian dosis",
+        "Adultos >=18",
+        "Alerta mortalidad CREDIBLE-CR",
+        "Reservar AMR"
+      ],
+      "alerts": [
+        "ClCr 60–119: 2 g q8h",
+        "ClCr >=120: 2 g q6h",
+        "ClCr 30–59: 1,5 g q8h",
+        "HD: tras sesión",
+        "Uso por AMR/AST"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP08_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP09_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP09_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "cefixima": {
+    "pt": {
+      "name": "Cefixima",
+      "class": "Cefalosporina oral de 3ª geração",
+      "pharmacologicClass": "Cefalosporina beta-lactâmica oral de amplo espectro",
+      "mechanism": "Liga-se a PBPs e inibe a síntese do peptidoglicano da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é o principal índice PK/PD. Não deve ser usada para organismos sem suscetibilidade demonstrada.",
+      "pharmacokinetics": "Biodisponibilidade oral moderada, ligação proteica aproximada de 65% e eliminação renal importante; a suspensão pode gerar maior exposição que comprimido/cápsula.",
+      "indications": "UTI não complicada, faringite/tonsilite estreptocócica, exacerbação bacteriana de bronquite crônica e gonorreia não complicada conforme rótulo; epidemiologia atual deve orientar uso.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas/comprimidos e suspensão oral.",
+      "presentations": [
+        "400 mg",
+        "100 mg/5 mL",
+        "200 mg/5 mL",
+        "500 mg/5 mL conforme produto"
+      ],
+      "dose": "Adulto: 400 mg VO uma vez ao dia; algumas formulações permitem 200 mg q12h. Gonorreia não complicada rotulada: 400 mg dose única, embora diretrizes atuais possam preferir outro esquema.",
+      "pediatricDose": ">=6 meses: 8 mg/kg/dia, uma vez ao dia ou 4 mg/kg q12h; máximo 400 mg/dia.",
+      "renalDose": "CrCl >=60 mL/min: esquema usual. CrCl <60 requer ajuste segundo formulação/tabela do produto. Hemodiálise e diálise peritoneal não removem quantidade significativa.",
+      "hepaticDose": "Sem ajuste hepático rotineiro estabelecido; considerar risco de coagulopatia em hepatopatia importante/desnutrição.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Dor abdominal",
+        "Dispepsia"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Coagulopatia/hipoprotrombinemia",
+        "SCAR"
+      ],
+      "adverseEffects": "Eventos gastrointestinais são frequentes. Cefalosporinas podem reduzir atividade de protrombina em pacientes de risco.",
+      "contraindications": "Hipersensibilidade conhecida a cefixima ou cefalosporinas.",
+      "interactions": "Carbamazepina pode ter níveis aumentados; anticoagulantes podem aumentar INR/tempo de protrombina.",
+      "monitoring": "CrCl antes e durante se DRC; resposta microbiológica; INR/tempo de protrombina em pacientes de risco.",
+      "administration": "VO; cápsula pode ser administrada sem relação com alimento. Garantir concentração correta da suspensão pediátrica.",
+      "preparation": "Reconstituir suspensão conforme fabricante e agitar antes de cada dose.",
+      "infusionProtocol": "Não aplicável; cefixima é oral.",
+      "pregnancy": "Usar quando indicação bacteriana justificar; dados de classe não sugerem sinal teratogênico importante.",
+      "lactation": "Dados humanos são limitados; observar lactente para diarreia/candidíase.",
+      "specialPopulations": "Crianças <6 meses não têm segurança/eficácia estabelecidas. DRC exige ajuste e vigilância.",
+      "patientEducation": "Usar a concentração correta da suspensão e completar o tratamento; relatar diarreia intensa ou sangramento incomum.",
+      "clinicalPearls": "Cefixima é opção oral, não um substituto de ceftriaxona em toda infecção grave; a função renal e a concentração da suspensão mudam a segurança da prescrição.",
+      "guidelineRecommendations": "Usar somente para infecções comprovadas ou fortemente suspeitas por organismos suscetíveis; para gonorreia seguir a diretriz atual, que pode priorizar ceftriaxona sobre cefixima.",
+      "safetyFlags": [
+        ">=6 meses",
+        "8 mg/kg/dia pediatria",
+        "CrCl <60: ajustar",
+        "Diálise remove pouco",
+        "Coagulação em pacientes de risco"
+      ],
+      "alerts": [
+        "Adulto 400 mg/dia",
+        "Pediatria 8 mg/kg/dia",
+        "Máx pediátrico 400 mg/dia",
+        "GAS pelo menos 10 dias",
+        "CrCl <60: ajuste"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6f1df975-f825-4301-87da-d7eba56a6890",
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/6132008C1022_5?user=1",
+        "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6f1df975-f825-4301-87da-d7eba56a6890",
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/6132008C1022_5?user=1",
+        "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    },
+    "es": {
+      "name": "Cefixima",
+      "class": "Cefalosporina oral de 3ª generación",
+      "pharmacologicClass": "Cefalosporina beta-lactámica oral de amplio espectro",
+      "mechanism": "Se une a PBPs e inhibe síntesis de peptidoglicano de pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC es el índice PK/PD principal.",
+      "pharmacokinetics": "Biodisponibilidad oral moderada, unión proteica ~65% y eliminación renal importante; suspensión puede dar mayor exposición que tabletas/cápsulas.",
+      "indications": "UTI no complicada, faringitis/tonsilitis estreptocócica, exacerbación bacteriana de bronquitis crónica y gonorrea no complicada según ficha.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas/comprimidos y suspensión oral.",
+      "presentations": [
+        "400 mg",
+        "100 mg/5 mL",
+        "200 mg/5 mL",
+        "500 mg/5 mL según producto"
+      ],
+      "dose": "Adulto: 400 mg VO una vez al día; algunas formulaciones permiten 200 mg q12h. Gonorrea rotulada: 400 mg dosis única, aunque guías actuales pueden priorizar otro esquema.",
+      "pediatricDose": ">=6 meses: 8 mg/kg/día una vez al día o 4 mg/kg q12h; máximo 400 mg/día.",
+      "renalDose": "ClCr >=60 mL/min: esquema usual. ClCr <60 requiere ajuste según formulación/tabla. Hemodiálisis y diálisis peritoneal no eliminan cantidad significativa.",
+      "hepaticDose": "Sin ajuste hepático rutinario; considerar riesgo de coagulopatía en hepatopatía/desnutrición.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Dolor abdominal",
+        "Dispepsia"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Coagulopatía/hipoprotrombinemia",
+        "SCAR"
+      ],
+      "adverseEffects": "Los eventos gastrointestinales son frecuentes; cefalosporinas pueden reducir actividad de protrombina en pacientes de riesgo.",
+      "contraindications": "Hipersensibilidad conocida a cefixima o cefalosporinas.",
+      "interactions": "Carbamazepina puede aumentar niveles; anticoagulantes pueden aumentar INR/tiempo de protrombina.",
+      "monitoring": "ClCr; respuesta microbiológica; INR/tiempo de protrombina en pacientes de riesgo.",
+      "administration": "VO; cápsula puede darse sin relación con alimentos. Confirmar concentración de suspensión.",
+      "preparation": "Reconstituir suspensión según fabricante y agitar antes de cada dosis.",
+      "infusionProtocol": "No aplicable; cefixima es oral.",
+      "pregnancy": "Usar cuando indicación bacteriana lo justifique.",
+      "lactation": "Datos limitados; vigilar diarrea/candidiasis en lactante.",
+      "specialPopulations": "<6 meses sin seguridad/eficacia establecida. ERC exige ajuste.",
+      "patientEducation": "Usar la concentración correcta de suspensión y completar tratamiento.",
+      "clinicalPearls": "Cefixima es una opción oral, no un sustituto de ceftriaxona en toda infección grave; función renal y concentración de suspensión importan.",
+      "guidelineRecommendations": "Usar solo para infecciones por organismos susceptibles; para gonorrea seguir la guía vigente, que puede priorizar ceftriaxona sobre cefixima.",
+      "safetyFlags": [
+        ">=6 meses",
+        "8 mg/kg/día pediatría",
+        "ClCr <60: ajustar",
+        "Diálisis elimina poco",
+        "Coagulación en riesgo"
+      ],
+      "alerts": [
+        "Adulto 400 mg/día",
+        "Pediatría 8 mg/kg/día",
+        "Máx 400 mg/día",
+        "GAS al menos 10 días",
+        "ClCr <60: ajuste"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6f1df975-f825-4301-87da-d7eba56a6890",
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/6132008C1022_5?user=1",
+        "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6f1df975-f825-4301-87da-d7eba56a6890",
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/6132008C1022_5?user=1",
+        "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    }
+  },
+  "cefmetazol": {
+    "pt": {
+      "name": "Cefmetazol",
+      "class": "Cefamicina parenteral",
+      "pharmacologicClass": "Cefamicina beta-lactâmica com grupo N-metil-tiotetrazol",
+      "mechanism": "Liga-se a PBPs e inibe parede bacteriana; a estrutura cefamicina confere estabilidade frente a algumas beta-lactamases.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Atividade inclui vários Enterobacterales e anaeróbios suscetíveis.",
+      "pharmacokinetics": "Somente parenteral; distribuição ampla e eliminação renal predominante sem metabolismo relevante.",
+      "indications": "Sepse, infecções respiratórias, intra-abdominais, biliares, urinárias, ginecológicas e outras por organismos suscetíveis segundo bula japonesa.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para injeção IV.",
+      "presentations": [
+        "0,25 g",
+        "0,5 g",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adulto: 1–2 g/dia divididos em 2 doses IV; infecção grave/refratária pode chegar a 4 g/dia divididos em 2–4 doses.",
+      "pediatricDose": "Crianças: 25–100 mg/kg/dia divididos em 2–4 doses; grave/refratária até 150 mg/kg/dia em 2–4 doses.",
+      "renalDose": "Ajustar intervalo/dose conforme CrCl. Referência PMDA: >60, 1 g q12h; 30–60, 1 g q24h ou 500 mg q12h; 10–30, 1 g q48h ou 250 mg q12h; <10, 1 g q120h ou 100 mg q12h.",
+      "hepaticDose": "Sem ajuste hepático numérico rotineiro; monitorar função hepática e coagulação, especialmente em cursos prolongados.",
+      "commonAdverseEffects": [
+        "Rash",
+        "Náusea",
+        "Elevação de transaminases",
+        "Flebite"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "IRA",
+        "Neutropenia/trombocitopenia",
+        "Coagulopatia por deficiência de vitamina K",
+        "Reação tipo dissulfiram"
+      ],
+      "adverseEffects": "O grupo NMTT pode favorecer hipoprotrombinemia/deficiência de vitamina K e reação tipo dissulfiram com álcool.",
+      "contraindications": "Hipersensibilidade ao cefmetazol ou cefalosporinas relacionadas.",
+      "interactions": "Evitar álcool durante o tratamento e por aproximadamente 1 semana após; diuréticos de alça podem aumentar risco renal.",
+      "monitoring": "CrCl, hemograma, AST/ALT e coagulação/tempo de protrombina em pacientes de risco ou cursos prolongados.",
+      "administration": "IV lenta ou infusão; evitar administração oral.",
+      "preparation": "Reconstituir 1 g com cerca de 10 mL do diluente compatível conforme bula PMDA; diluir adicionalmente para infusão.",
+      "infusionProtocol": "IV lenta ou infusão conforme produto; ajustar velocidade e volume à condição clínica.",
+      "pregnancy": "Usar quando o benefício justificar; avaliar risco materno-fetal.",
+      "lactation": "Considerar benefício materno e exposição do lactente.",
+      "specialPopulations": "Idosos/desnutridos têm maior risco de deficiência de vitamina K. DRC exige grande prolongamento do intervalo.",
+      "patientEducation": "Evitar álcool durante o tratamento e por 1 semana após; relatar sangramento, icterícia ou redução da diurese.",
+      "clinicalPearls": "Cefmetazol combina cobertura de cefamicina com dois alertas clássicos do grupo NMTT: coagulopatia por vitamina K e reação tipo dissulfiram com álcool.",
+      "guidelineRecommendations": "Usar apenas se o patógeno for suscetível e o foco for compatível; não assumir que estabilidade laboratorial a ESBL substitui recomendações atuais para infecção invasiva por ESBL.",
+      "safetyFlags": [
+        "NMTT",
+        "Vitamina K/coagulação",
+        "Álcool +1 semana",
+        "Ajuste renal por CrCl",
+        "Anaeróbios suscetíveis"
+      ],
+      "alerts": [
+        "Adulto 1–2 g/dia",
+        "Grave até 4 g/dia",
+        "Pediatria 25–100 mg/kg/dia",
+        "Grave pediátrica até 150 mg/kg/dia",
+        "Evitar álcool 1 semana"
+      ],
+      "references": [
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/6132408F1056_4?user=1",
+        "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/530169_6132408F1056_4_01",
+        "https://www.pmda.go.jp/files/000228929.pdf",
+        "https://www.pmda.go.jp/files/000217652.pdf",
+        "https://jpdb.nihs.go.jp/jp/DetailList_ja?keyword=%E3%82%BB%E3%83%95%E3%83%A1%E3%82%BF%E3%82%BE%E3%83%BC%E3%83%AB%E3%83%8A%E3%83%88%E3%83%AA%E3%82%A6%E3%83%A0&rs=False&submit=%E8%A9%B3%E7%B4%B0%E6%A4%9C%E7%B4%A2%28%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%90%8D%29",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/6132408F1056_4?user=1",
+        "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/530169_6132408F1056_4_01",
+        "https://www.pmda.go.jp/files/000228929.pdf",
+        "https://www.pmda.go.jp/files/000217652.pdf",
+        "https://jpdb.nihs.go.jp/jp/DetailList_ja?keyword=%E3%82%BB%E3%83%95%E3%83%A1%E3%82%BF%E3%82%BE%E3%83%BC%E3%83%AB%E3%83%8A%E3%83%88%E3%83%AA%E3%82%A6%E3%83%A0&rs=False&submit=%E8%A9%B3%E7%B4%B0%E6%A4%9C%E7%B4%A2%28%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%90%8D%29",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Cefmetazol",
+      "class": "Cefamicina parenteral",
+      "pharmacologicClass": "Cefamicina beta-lactámica con grupo N-metil-tiotetrazol",
+      "mechanism": "Se une a PBPs e inhibe pared; estructura cefamicina aporta estabilidad frente a algunas beta-lactamasas.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Actividad frente a varios Enterobacterales y anaerobios susceptibles.",
+      "pharmacokinetics": "Parenteral; amplia distribución y eliminación renal predominante sin metabolismo relevante.",
+      "indications": "Sepsis e infecciones respiratorias, intraabdominales, biliares, urinarias y ginecológicas por organismos susceptibles según ficha japonesa.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo para inyección IV.",
+      "presentations": [
+        "0,25 g",
+        "0,5 g",
+        "1 g",
+        "2 g"
+      ],
+      "dose": "Adulto: 1–2 g/día dividido en 2 dosis IV; grave/refractaria hasta 4 g/día en 2–4 dosis.",
+      "pediatricDose": "Niños: 25–100 mg/kg/día dividido en 2–4 dosis; grave/refractaria hasta 150 mg/kg/día en 2–4 dosis.",
+      "renalDose": "Ajustar por ClCr. PMDA: >60, 1 g q12h; 30–60, 1 g q24h o 500 mg q12h; 10–30, 1 g q48h o 250 mg q12h; <10, 1 g q120h o 100 mg q12h.",
+      "hepaticDose": "Sin ajuste hepático numérico rutinario; monitorizar hígado y coagulación.",
+      "commonAdverseEffects": [
+        "Rash",
+        "Náuseas",
+        "Elevación de transaminasas",
+        "Flebitis"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "IRA",
+        "Neutropenia/trombocitopenia",
+        "Coagulopatía por déficit de vitamina K",
+        "Reacción tipo disulfiram"
+      ],
+      "adverseEffects": "El grupo NMTT favorece hipoprotrombinemia/déficit de vitamina K y reacción tipo disulfiram con alcohol.",
+      "contraindications": "Hipersensibilidad a cefmetazol o cefalosporinas relacionadas.",
+      "interactions": "Evitar alcohol durante tratamiento y aproximadamente 1 semana después; diuréticos de asa pueden aumentar riesgo renal.",
+      "monitoring": "ClCr, hemograma, AST/ALT y coagulación/TP en riesgo o cursos prolongados.",
+      "administration": "IV lenta o infusión.",
+      "preparation": "Reconstituir según ficha PMDA y diluir adicionalmente si se infunde.",
+      "infusionProtocol": "IV lenta o infusión según producto; ajustar volumen/velocidad al paciente.",
+      "pregnancy": "Usar cuando beneficio justifique riesgo.",
+      "lactation": "Valorar beneficio materno y exposición del lactante.",
+      "specialPopulations": "Ancianos/desnutridos tienen mayor riesgo de déficit de vitamina K. ERC exige gran prolongación del intervalo.",
+      "patientEducation": "Evitar alcohol durante tratamiento y 1 semana después; informar sangrado, ictericia o menor diuresis.",
+      "clinicalPearls": "Cefmetazol reúne dos alertas clásicos NMTT: coagulopatía por vitamina K y reacción tipo disulfiram con alcohol.",
+      "guidelineRecommendations": "Usar solo con susceptibilidad y foco compatibles; no asumir que estabilidad frente a ESBL sustituya recomendaciones actuales para infección invasiva por ESBL.",
+      "safetyFlags": [
+        "NMTT",
+        "Vitamina K/coagulación",
+        "Alcohol +1 semana",
+        "Ajuste renal por ClCr",
+        "Anaerobios susceptibles"
+      ],
+      "alerts": [
+        "Adulto 1–2 g/día",
+        "Grave hasta 4 g/día",
+        "Pediatría 25–100 mg/kg/día",
+        "Grave pediátrica hasta 150 mg/kg/día",
+        "Evitar alcohol 1 semana"
+      ],
+      "references": [
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/6132408F1056_4?user=1",
+        "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/530169_6132408F1056_4_01",
+        "https://www.pmda.go.jp/files/000228929.pdf",
+        "https://www.pmda.go.jp/files/000217652.pdf",
+        "https://jpdb.nihs.go.jp/jp/DetailList_ja?keyword=%E3%82%BB%E3%83%95%E3%83%A1%E3%82%BF%E3%82%BE%E3%83%BC%E3%83%AB%E3%83%8A%E3%83%88%E3%83%AA%E3%82%A6%E3%83%A0&rs=False&submit=%E8%A9%B3%E7%B4%B0%E6%A4%9C%E7%B4%A2%28%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%90%8D%29",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/6132408F1056_4?user=1",
+        "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/530169_6132408F1056_4_01",
+        "https://www.pmda.go.jp/files/000228929.pdf",
+        "https://www.pmda.go.jp/files/000217652.pdf",
+        "https://jpdb.nihs.go.jp/jp/DetailList_ja?keyword=%E3%82%BB%E3%83%95%E3%83%A1%E3%82%BF%E3%82%BE%E3%83%BC%E3%83%AB%E3%83%8A%E3%83%88%E3%83%AA%E3%82%A6%E3%83%A0&rs=False&submit=%E8%A9%B3%E7%B4%B0%E6%A4%9C%E7%B4%A2%28%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%90%8D%29",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "cefoperazona_sulbactam": {
+    "pt": {
+      "name": "Cefoperazona + sulbactam",
+      "class": "Cefalosporina antipseudomonal + inibidor de beta-lactamase",
+      "pharmacologicClass": "Cefoperazona de 3ª geração associada ao sulbactam",
+      "mechanism": "Cefoperazona inibe PBPs e parede bacteriana; sulbactam inibe várias beta-lactamases e possui atividade intrínseca contra algumas cepas de Acinetobacter.",
+      "pharmacodynamics": "Bactericida tempo-dependente; a contribuição do sulbactam depende do patógeno e exposição. Suscetibilidade deve orientar uso.",
+      "pharmacokinetics": "Cefoperazona é eliminada em grande parte pela bile; sulbactam depende mais da depuração renal. Hemodiálise altera substancialmente a PK do sulbactam.",
+      "indications": "Infecções respiratórias, urinárias, intra-abdominais/biliares, pele e outras por organismos suscetíveis segundo rotulagem internacional.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para IV/IM em proporção 1:1.",
+      "presentations": [
+        "1 g total: 0,5 g + 0,5 g",
+        "2 g total: 1 g + 1 g"
+      ],
+      "dose": "Adulto 1:1: 2–4 g/dia divididos q12h. Infecção grave/refratária pode chegar a 8 g/dia do produto 1:1; máximo de sulbactam 4 g/dia.",
+      "pediatricDose": "Crianças: 40–80 mg/kg/dia do produto 1:1 divididos q6–12h; grave/refratária até 160 mg/kg/dia. Neonatos na primeira semana: q12h.",
+      "renalDose": "CrCl 15–30: máximo 1 g de sulbactam q12h; CrCl <15: máximo 500 mg de sulbactam q12h. Em HD, programar dose após a sessão.",
+      "hepaticDose": "Obstrução biliar/hepatopatia grave pode exigir ajuste. Se hepatopatia + DRC, cefoperazona não deve exceder 2 g/dia sem monitorização de concentrações.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Rash",
+        "Elevação de transaminases"
+      ],
+      "dangerousAdverseEffects": [
+        "Hemorragia/coagulopatia",
+        "Anafilaxia",
+        "SJS/TEN",
+        "C. difficile",
+        "Reação álcool-cefoperazona"
+      ],
+      "adverseEffects": "Foram relatadas hemorragias graves/fatais e deficiência de vitamina K; risco aumenta com dieta inadequada, má absorção e nutrição parenteral prolongada.",
+      "contraindications": "Hipersensibilidade a qualquer componente ou beta-lactâmicos com reação grave prévia.",
+      "interactions": "Evitar álcool e soluções com etanol durante e até o quinto dia após cefoperazona; aminoglicosídeos exigem compatibilidade separada e monitorização renal.",
+      "monitoring": "PT/INR em risco de deficiência de vitamina K, função renal/hepática, hemograma e resposta microbiológica.",
+      "administration": "IV ou IM. Infusão IV intermitente após reconstituição/diluição.",
+      "preparation": "Reconstituir com diluente compatível; Ringer lactato não é adequado para reconstituição inicial.",
+      "infusionProtocol": "Infusão IV em 15–60 min; injeção IV direta deve durar pelo menos 3 min.",
+      "pregnancy": "Atravessa placenta; usar somente se claramente necessário.",
+      "lactation": "Pequenas quantidades passam ao leite; usar com cautela.",
+      "specialPopulations": "Prematuros/neonatos têm dados limitados. Hepatopatia afeta cefoperazona; DRC afeta sulbactam.",
+      "patientEducation": "Evitar álcool durante o tratamento e por 5 dias após; relatar sangramento, equimoses ou diarreia intensa.",
+      "clinicalPearls": "A associação exige pensar em dois órgãos: rim determina exposição do sulbactam e fígado/via biliar determina a cefoperazona; coagulação também precisa ser lembrada.",
+      "guidelineRecommendations": "Usar conforme suscetibilidade e rotulagem local; não substituir automaticamente os regimes de sulbactam em alta dose recomendados por diretrizes atuais para CRAB invasivo.",
+      "safetyFlags": [
+        "Vitamina K/coagulação",
+        "Álcool até dia 5",
+        "Renal regula sulbactam",
+        "Hepatobiliar regula cefoperazona",
+        "Infusão 15–60 min"
+      ],
+      "alerts": [
+        "Adulto 2–4 g/dia",
+        "Grave até 8 g/dia",
+        "Sulbactam máx 4 g/dia",
+        "Pediatria 40–80 mg/kg/dia",
+        "Álcool evitar até 5º dia"
+      ],
+      "references": [
+        "https://labeling.pfizer.com/ShowLabeling.aspx?id=14626",
+        "https://www.pfizer.com/products",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.who.int/publications/i/item/9789240095368",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=cefoperazone+sulbactam",
+        "https://www.ncbi.nlm.nih.gov/books/NBK557829/"
+      ],
+      "ref": [
+        "https://labeling.pfizer.com/ShowLabeling.aspx?id=14626",
+        "https://www.pfizer.com/products",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.who.int/publications/i/item/9789240095368",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=cefoperazone+sulbactam",
+        "https://www.ncbi.nlm.nih.gov/books/NBK557829/"
+      ]
+    },
+    "es": {
+      "name": "Cefoperazona + sulbactam",
+      "class": "Cefalosporina antipseudomónica + inhibidor de beta-lactamasa",
+      "pharmacologicClass": "Cefoperazona de 3ª generación asociada a sulbactam",
+      "mechanism": "Cefoperazona inhibe PBPs/pared; sulbactam inhibe varias beta-lactamasas y tiene actividad intrínseca frente a algunas cepas de Acinetobacter.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; contribución de sulbactam depende de patógeno/exposición. Usar según susceptibilidad.",
+      "pharmacokinetics": "Cefoperazona se elimina en gran parte por bilis; sulbactam depende más del riñón. Hemodiálisis altera significativamente PK de sulbactam.",
+      "indications": "Infecciones respiratorias, urinarias, intraabdominales/biliares, piel y otras por organismos susceptibles según ficha internacional.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo IV/IM en proporción 1:1.",
+      "presentations": [
+        "1 g total: 0,5 g + 0,5 g",
+        "2 g total: 1 g + 1 g"
+      ],
+      "dose": "Adulto 1:1: 2–4 g/día dividido q12h. Grave/refractaria hasta 8 g/día; máximo sulbactam 4 g/día.",
+      "pediatricDose": "Niños: 40–80 mg/kg/día del producto 1:1 dividido q6–12h; grave hasta 160 mg/kg/día. Neonatos primera semana: q12h.",
+      "renalDose": "ClCr 15–30: máximo 1 g de sulbactam q12h; ClCr <15: máximo 500 mg sulbactam q12h. HD: dosificar tras sesión.",
+      "hepaticDose": "Obstrucción biliar/hepatopatía grave puede exigir ajuste. Hepatopatía + ERC: cefoperazona no superar 2 g/día sin monitorización.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Rash",
+        "Elevación de transaminasas"
+      ],
+      "dangerousAdverseEffects": [
+        "Hemorragia/coagulopatía",
+        "Anafilaxia",
+        "SJS/TEN",
+        "C. difficile",
+        "Reacción alcohol-cefoperazona"
+      ],
+      "adverseEffects": "Se han comunicado hemorragias graves/fatales y déficit de vitamina K; riesgo mayor con malnutrición/malabsorción.",
+      "contraindications": "Hipersensibilidad a componentes o beta-lactámicos con reacción grave.",
+      "interactions": "Evitar alcohol/etanol durante y hasta el quinto día posterior; aminoglucósidos requieren compatibilidad separada y control renal.",
+      "monitoring": "PT/INR en riesgo, función renal/hepática, hemograma y respuesta microbiológica.",
+      "administration": "IV o IM.",
+      "preparation": "Reconstituir con diluyente compatible; Ringer lactato no para reconstitución inicial.",
+      "infusionProtocol": "Infusión IV 15–60 min; inyección IV directa al menos 3 min.",
+      "pregnancy": "Cruza placenta; usar solo si claramente necesario.",
+      "lactation": "Pequeñas cantidades en leche; usar con cautela.",
+      "specialPopulations": "Prematuros/neonatos con datos limitados. Hepatopatía afecta cefoperazona; ERC afecta sulbactam.",
+      "patientEducation": "Evitar alcohol durante tratamiento y 5 días después; informar sangrado o diarrea intensa.",
+      "clinicalPearls": "Hay que pensar en dos órganos: riñón para sulbactam y hígado/vía biliar para cefoperazona, además de coagulación.",
+      "guidelineRecommendations": "Usar según susceptibilidad y ficha local; no sustituir automáticamente regímenes de sulbactam en alta dosis recomendados actualmente para CRAB invasivo.",
+      "safetyFlags": [
+        "Vitamina K/coagulación",
+        "Alcohol hasta día 5",
+        "Renal regula sulbactam",
+        "Hepatobiliar regula cefoperazona",
+        "Infusión 15–60 min"
+      ],
+      "alerts": [
+        "Adulto 2–4 g/día",
+        "Grave hasta 8 g/día",
+        "Sulbactam máx 4 g/día",
+        "Pediatría 40–80 mg/kg/día",
+        "Evitar alcohol hasta día 5"
+      ],
+      "references": [
+        "https://labeling.pfizer.com/ShowLabeling.aspx?id=14626",
+        "https://www.pfizer.com/products",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.who.int/publications/i/item/9789240095368",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=cefoperazone+sulbactam",
+        "https://www.ncbi.nlm.nih.gov/books/NBK557829/"
+      ],
+      "ref": [
+        "https://labeling.pfizer.com/ShowLabeling.aspx?id=14626",
+        "https://www.pfizer.com/products",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.who.int/publications/i/item/9789240095368",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=cefoperazone+sulbactam",
+        "https://www.ncbi.nlm.nih.gov/books/NBK557829/"
+      ]
+    }
+  },
+  "cefoxitina": {
+    "pt": {
+      "name": "Cefoxitina",
+      "class": "Cefamicina parenteral",
+      "pharmacologicClass": "Cefamicina beta-lactâmica IV/IM com atividade contra anaeróbios suscetíveis",
+      "mechanism": "Liga-se a PBPs e bloqueia síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Possui atividade contra vários anaeróbios, mas resistência deve ser considerada.",
+      "pharmacokinetics": "Parenteral, baixa metabolização e eliminação predominantemente renal; hemodiálise remove quantidade clinicamente relevante.",
+      "indications": "Infecções intra-abdominais, ginecológicas, pele, trato urinário, respiratórias e profilaxia cirúrgica por organismos suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para IV/IM e bolsas premisturadas conforme produto.",
+      "presentations": [
+        "1 g",
+        "2 g",
+        "10 g pharmacy bulk conforme produto"
+      ],
+      "dose": "Adulto usual: 1–2 g IV q6–8h. Grave: 6–8 g/dia; infecções muito graves podem usar até 12 g/dia conforme bula.",
+      "pediatricDose": ">=3 meses: 80–160 mg/kg/dia divididos em 4–6 doses; máximo 12 g/dia. Não há recomendação rotulada para <3 meses.",
+      "renalDose": "Após carga 1–2 g: CrCl 50–30, 1–2 g q8–12h; 29–10, q12–24h; 9–5, 0,5–1 g q12–24h; <5, 0,5–1 g q24–48h. HD: carga 1–2 g após cada sessão.",
+      "hepaticDose": "Sem ajuste hepático rotineiro estabelecido.",
+      "commonAdverseEffects": [
+        "Flebite",
+        "Rash",
+        "Diarreia",
+        "Náusea"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Neutropenia/trombocitopenia",
+        "Convulsões por acúmulo renal"
+      ],
+      "adverseEffects": "Toxicidade beta-lactâmica aumenta com acúmulo em DRC; alterações hematológicas podem surgir em cursos prolongados.",
+      "contraindications": "Hipersensibilidade grave a cefalosporinas ou beta-lactâmicos relacionados.",
+      "interactions": "Probenecida pode aumentar níveis. Nefrotóxicos concomitantes exigem vigilância renal.",
+      "monitoring": "CrCl, resposta/culturas e hemograma em curso prolongado.",
+      "administration": "IV ou IM. Em infecção grave, preferir IV.",
+      "preparation": "Reconstituir cada frasco segundo bula; inspecionar partículas e compatibilidade.",
+      "infusionProtocol": "Infusão IV conforme produto; injeção IV lenta pode ser usada conforme apresentação.",
+      "pregnancy": "Usar quando indicação justificar; ampla experiência de classe.",
+      "lactation": "Pequena quantidade pode aparecer no leite.",
+      "specialPopulations": "DRC exige ajuste importante. Cefoxitina não cobre Chlamydia trachomatis; adicionar terapia específica se houver suspeita.",
+      "patientEducation": "Relatar alergia grave, diarreia persistente ou sintomas neurológicos.",
+      "clinicalPearls": "Cefoxitina é cefamicina útil por sua atividade anaeróbia, mas não deve ser confundida com cobertura para Chlamydia e exige ajuste renal detalhado.",
+      "guidelineRecommendations": "Usar quando foco e suscetibilidade forem compatíveis; para organismos ESBL/AMR seguir diretrizes atuais, pois cefoxitina não é substituto universal de carbapenêmico.",
+      "safetyFlags": [
+        "Anaeróbios suscetíveis",
+        "CrCl por intervalo",
+        "HD: carga pós-sessão",
+        "Pediatria >=3 meses",
+        "Sem Chlamydia"
+      ],
+      "alerts": [
+        "Adulto 1–2 g q6–8h",
+        "Pediatria 80–160 mg/kg/dia",
+        "Máx 12 g/dia",
+        "CrCl <50: ajustar",
+        "HD: carga 1–2 g após sessão"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6a4a2afa-4f00-41d4-bd6d-baa0a95f6929",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d02170ff-65aa-48b8-a922-94271c46ffa7",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b272ef9c-4d83-4ee2-b9cc-477440822cca",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6c7e9485-1ede-411c-8c46-911439332864",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6a4a2afa-4f00-41d4-bd6d-baa0a95f6929",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d02170ff-65aa-48b8-a922-94271c46ffa7",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b272ef9c-4d83-4ee2-b9cc-477440822cca",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6c7e9485-1ede-411c-8c46-911439332864",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    },
+    "es": {
+      "name": "Cefoxitina",
+      "class": "Cefamicina parenteral",
+      "pharmacologicClass": "Cefamicina beta-lactámica IV/IM con actividad contra anaerobios susceptibles",
+      "mechanism": "Se une a PBPs e inhibe pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Activa contra varios anaerobios, pero resistencia importa.",
+      "pharmacokinetics": "Parenteral, poco metabolismo y eliminación renal predominante; hemodiálisis elimina cantidad relevante.",
+      "indications": "Infecciones intraabdominales, ginecológicas, piel, UTI, respiratorias y profilaxis quirúrgica por organismos susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo IV/IM y bolsas premezcladas según producto.",
+      "presentations": [
+        "1 g",
+        "2 g",
+        "10 g pharmacy bulk según producto"
+      ],
+      "dose": "Adulto usual: 1–2 g IV q6–8h. Grave 6–8 g/día; muy grave hasta 12 g/día según ficha.",
+      "pediatricDose": ">=3 meses: 80–160 mg/kg/día dividido 4–6 veces; máximo 12 g/día. Sin recomendación rotulada <3 meses.",
+      "renalDose": "Tras carga 1–2 g: ClCr 50–30, 1–2 g q8–12h; 29–10, q12–24h; 9–5, 0,5–1 g q12–24h; <5, 0,5–1 g q24–48h. HD: carga 1–2 g tras sesión.",
+      "hepaticDose": "Sin ajuste hepático rutinario.",
+      "commonAdverseEffects": [
+        "Flebitis",
+        "Rash",
+        "Diarrea",
+        "Náuseas"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Neutropenia/trombocitopenia",
+        "Convulsiones por acumulación"
+      ],
+      "adverseEffects": "Toxicidad beta-lactámica aumenta con acumulación en ERC; pueden aparecer citopenias en tratamiento prolongado.",
+      "contraindications": "Hipersensibilidad grave a cefalosporinas/beta-lactámicos.",
+      "interactions": "Probenecid aumenta niveles; nefrotóxicos exigen control renal.",
+      "monitoring": "ClCr, respuesta/cultivos y hemograma en cursos prolongados.",
+      "administration": "IV o IM; grave preferir IV.",
+      "preparation": "Reconstituir según ficha e inspeccionar partículas/compatibilidad.",
+      "infusionProtocol": "Infusión IV según producto; inyección IV lenta cuando esté permitida.",
+      "pregnancy": "Usar cuando indicada.",
+      "lactation": "Pequeñas cantidades pueden pasar a leche.",
+      "specialPopulations": "ERC exige ajuste. No cubre Chlamydia trachomatis; añadir terapia específica si se sospecha.",
+      "patientEducation": "Informar alergia grave, diarrea persistente o síntomas neurológicos.",
+      "clinicalPearls": "Cefoxitina es cefamicina útil por actividad anaerobia, pero no cubre Chlamydia y requiere ajuste renal detallado.",
+      "guidelineRecommendations": "Usar según foco/susceptibilidad; en ESBL/AMR seguir guías actuales, ya que no reemplaza universalmente a carbapenémicos.",
+      "safetyFlags": [
+        "Anaerobios susceptibles",
+        "ClCr por intervalo",
+        "HD: carga pos-sesión",
+        "Pediatría >=3 meses",
+        "Sin Chlamydia"
+      ],
+      "alerts": [
+        "Adulto 1–2 g q6–8h",
+        "Pediatría 80–160 mg/kg/día",
+        "Máx 12 g/día",
+        "ClCr <50: ajustar",
+        "HD: carga 1–2 g tras sesión"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6a4a2afa-4f00-41d4-bd6d-baa0a95f6929",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d02170ff-65aa-48b8-a922-94271c46ffa7",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b272ef9c-4d83-4ee2-b9cc-477440822cca",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6c7e9485-1ede-411c-8c46-911439332864",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6a4a2afa-4f00-41d4-bd6d-baa0a95f6929",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d02170ff-65aa-48b8-a922-94271c46ffa7",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b272ef9c-4d83-4ee2-b9cc-477440822cca",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6c7e9485-1ede-411c-8c46-911439332864",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    }
+  },
+  "cefpiroma": {
+    "pt": {
+      "name": "Cefpiroma",
+      "class": "Cefalosporina parenteral de 4ª geração",
+      "pharmacologicClass": "Cefalosporina de amplo espectro com eliminação predominantemente renal",
+      "mechanism": "Liga-se a PBPs e inibe síntese da parede; estrutura zwitteriônica favorece penetração em Gram-negativos.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é o índice PK/PD relevante. Suscetibilidade local é essencial.",
+      "pharmacokinetics": "IV/IM em alguns mercados, baixa ligação proteica e cerca de 80% eliminada inalterada na urina; meia-vida ~2 h com função renal normal.",
+      "indications": "Infecções graves por Gram-positivos/Gram-negativos suscetíveis, incluindo sepse, pneumonia, UTI e meningite conforme aprovações locais históricas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para injeção IV/IM conforme mercado.",
+      "presentations": [
+        "0,5 g",
+        "1 g",
+        "2 g conforme produto"
+      ],
+      "dose": "Adultos: 1–2 g q12h IV; infecções muito graves podem requerer 2 g q12h conforme produto e suscetibilidade.",
+      "pediatricDose": "Não há esquema pediátrico contemporâneo universalmente validado. Estudos PK históricos avaliaram 10–50 mg/kg e alguns estudos 20 mg/kg, mas isso não deve ser tratado como recomendação atual.",
+      "renalDose": "CrCl >50: dose usual; 20–50: aproximadamente 50% da dose diária usual; <20: aproximadamente 25%. Uma carga inicial de 1 g foi proposta em estudos PK históricos.",
+      "hepaticDose": "Disfunção hepática isolada tem pouco impacto comparado ao rim; sem ajuste numérico rotineiro bem estabelecido.",
+      "commonAdverseEffects": [
+        "Rash",
+        "Flebite",
+        "Diarreia",
+        "Elevação de transaminases"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Encefalopatia/mioclonia/convulsões por acúmulo",
+        "Citopenias"
+      ],
+      "adverseEffects": "Como outras cefalosporinas renais, acúmulo pode aumentar neurotoxicidade em DRC.",
+      "contraindications": "Hipersensibilidade grave à cefpiroma/cefalosporinas.",
+      "interactions": "Nefrotóxicos e diuréticos potentes exigem vigilância renal.",
+      "monitoring": "CrCl, estado neurológico, culturas e hemograma/função hepática em terapia prolongada.",
+      "administration": "IV lenta ou infusão conforme produto; não é adequadamente absorvida por via oral.",
+      "preparation": "Reconstituir e diluir segundo produto local.",
+      "infusionProtocol": "Regimes históricos usam injeção IV ou infusão de 20–30 min; estratégias prolongadas são especializadas e dependem de PK/PD.",
+      "pregnancy": "Dados contemporâneos são limitados; usar apenas se benefício justificar.",
+      "lactation": "Dados limitados; avaliar risco-benefício.",
+      "specialPopulations": "Disponibilidade e rotulagem variam entre países; em DRC a meia-vida pode aumentar marcadamente.",
+      "patientEducation": "Explicar que a dose depende da função renal e que confusão, mioclonia ou convulsão exigem avaliação urgente.",
+      "clinicalPearls": "Cefpiroma é uma cefalosporina de 4ª geração com uso atual limitado em muitos mercados; o principal princípio seguro é ajuste renal e não extrapolar doses pediátricas históricas.",
+      "guidelineRecommendations": "Usar somente onde houver produto autorizado, breakpoint e suscetibilidade válidos; para Gram-negativos multirresistentes preferir opções sustentadas por diretrizes atuais.",
+      "safetyFlags": [
+        "4ª geração",
+        "Ajuste renal",
+        "Neurotoxicidade por acúmulo",
+        "Rotulagem varia por país",
+        "Pediatria sem esquema atual universal"
+      ],
+      "alerts": [
+        "Adulto 1–2 g q12h",
+        "CrCl 20–50: ~50% dose diária",
+        "CrCl <20: ~25%",
+        "Carga histórica 1 g",
+        "Não extrapolar pediatria histórica"
+      ],
+      "references": [
+        "https://www.pmda.go.jp/files/000223549.pdf",
+        "https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-brasileira/insumos-farmaceuticos-e-especialidades_ingles-1.pdf",
+        "https://precision.fda.gov/ginas/app/ui/substances/0a2501ca-912c-4507-b84a-7dd8d91a5ddf",
+        "https://pubmed.ncbi.nlm.nih.gov/8261711/",
+        "https://pubmed.ncbi.nlm.nih.gov/1623690/",
+        "https://pubmed.ncbi.nlm.nih.gov/8619595/"
+      ],
+      "ref": [
+        "https://www.pmda.go.jp/files/000223549.pdf",
+        "https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-brasileira/insumos-farmaceuticos-e-especialidades_ingles-1.pdf",
+        "https://precision.fda.gov/ginas/app/ui/substances/0a2501ca-912c-4507-b84a-7dd8d91a5ddf",
+        "https://pubmed.ncbi.nlm.nih.gov/8261711/",
+        "https://pubmed.ncbi.nlm.nih.gov/1623690/",
+        "https://pubmed.ncbi.nlm.nih.gov/8619595/"
+      ]
+    },
+    "es": {
+      "name": "Cefpiroma",
+      "class": "Cefalosporina parenteral de 4ª generación",
+      "pharmacologicClass": "Cefalosporina de amplio espectro con eliminación principalmente renal",
+      "mechanism": "Se une a PBPs e inhibe pared; estructura zwitteriónica favorece penetración en Gram negativos.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. La susceptibilidad local es esencial.",
+      "pharmacokinetics": "IV/IM en algunos mercados, baja unión proteica y ~80% se elimina sin cambios en orina; semivida ~2 h con función renal normal.",
+      "indications": "Infecciones graves por Gram positivos/negativos susceptibles, incluidas sepsis, neumonía, UTI y meningitis según autorizaciones locales históricas.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo IV/IM según mercado.",
+      "presentations": [
+        "0,5 g",
+        "1 g",
+        "2 g según producto"
+      ],
+      "dose": "Adultos: 1–2 g q12h IV; infecciones muy graves pueden requerir 2 g q12h según producto/susceptibilidad.",
+      "pediatricDose": "No existe un esquema pediátrico contemporáneo universalmente validado. Estudios históricos evaluaron 10–50 mg/kg, pero no constituyen recomendación actual.",
+      "renalDose": "ClCr >50: dosis usual; 20–50: ~50% de dosis diaria; <20: ~25%. Estudios PK históricos propusieron carga inicial 1 g.",
+      "hepaticDose": "Hepatopatía aislada influye poco frente al riñón; sin ajuste numérico rutinario bien establecido.",
+      "commonAdverseEffects": [
+        "Rash",
+        "Flebitis",
+        "Diarrea",
+        "Elevación de transaminasas"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "Encefalopatía/mioclonía/convulsiones por acumulación",
+        "Citopenias"
+      ],
+      "adverseEffects": "Acumulación renal puede aumentar neurotoxicidad.",
+      "contraindications": "Hipersensibilidad grave a cefpiroma/cefalosporinas.",
+      "interactions": "Nefrotóxicos y diuréticos potentes exigen vigilancia renal.",
+      "monitoring": "ClCr, estado neurológico, cultivos y hemograma/hígado en tratamiento prolongado.",
+      "administration": "IV lenta o infusión; no se absorbe adecuadamente por vía oral.",
+      "preparation": "Reconstituir/diluir según producto local.",
+      "infusionProtocol": "Regímenes históricos usan inyección IV o infusión 20–30 min; prolongada es estrategia especializada.",
+      "pregnancy": "Datos contemporáneos limitados; usar si beneficio justifica.",
+      "lactation": "Datos limitados.",
+      "specialPopulations": "Disponibilidad/rotulado varían por país; ERC aumenta mucho semivida.",
+      "patientEducation": "La dosis depende del riñón; confusión, mioclonía o convulsión requieren evaluación urgente.",
+      "clinicalPearls": "Cefpiroma es cefalosporina de 4ª generación con uso actual limitado en muchos mercados; ajustar por riñón y no extrapolar pediatría histórica.",
+      "guidelineRecommendations": "Usar solo donde exista producto autorizado, breakpoint y susceptibilidad válidos; en Gram negativos multirresistentes preferir opciones respaldadas por guías actuales.",
+      "safetyFlags": [
+        "4ª generación",
+        "Ajuste renal",
+        "Neurotoxicidad por acumulación",
+        "Rotulado varía por país",
+        "Pediatría sin esquema actual universal"
+      ],
+      "alerts": [
+        "Adulto 1–2 g q12h",
+        "ClCr 20–50: ~50% dosis diaria",
+        "ClCr <20: ~25%",
+        "Carga histórica 1 g",
+        "No extrapolar pediatría histórica"
+      ],
+      "references": [
+        "https://www.pmda.go.jp/files/000223549.pdf",
+        "https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-brasileira/insumos-farmaceuticos-e-especialidades_ingles-1.pdf",
+        "https://precision.fda.gov/ginas/app/ui/substances/0a2501ca-912c-4507-b84a-7dd8d91a5ddf",
+        "https://pubmed.ncbi.nlm.nih.gov/8261711/",
+        "https://pubmed.ncbi.nlm.nih.gov/1623690/",
+        "https://pubmed.ncbi.nlm.nih.gov/8619595/"
+      ],
+      "ref": [
+        "https://www.pmda.go.jp/files/000223549.pdf",
+        "https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-brasileira/insumos-farmaceuticos-e-especialidades_ingles-1.pdf",
+        "https://precision.fda.gov/ginas/app/ui/substances/0a2501ca-912c-4507-b84a-7dd8d91a5ddf",
+        "https://pubmed.ncbi.nlm.nih.gov/8261711/",
+        "https://pubmed.ncbi.nlm.nih.gov/1623690/",
+        "https://pubmed.ncbi.nlm.nih.gov/8619595/"
+      ]
+    }
+  },
+  "cefpodoxima": {
+    "pt": {
+      "name": "Cefpodoxima proxetila",
+      "class": "Cefalosporina oral de 3ª geração",
+      "pharmacologicClass": "Pró-fármaco oral convertido em cefpodoxima ativa",
+      "mechanism": "Após conversão ao metabólito ativo, liga-se a PBPs e inibe síntese da parede bacteriana.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. É opção oral e não substitui terapia IV em infecção grave.",
+      "pharmacokinetics": "Pró-fármaco oral; alimento aumenta AUC/Cmax dos comprimidos. Eliminação renal do fármaco ativo; cerca de 23% pode ser removido em 3 h de HD.",
+      "indications": "Faringite/tonsilite, sinusite, otite pediátrica, algumas infecções respiratórias, pele e UTI não complicada por organismos suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos e suspensão oral.",
+      "presentations": [
+        "100 mg",
+        "200 mg",
+        "50 mg/5 mL",
+        "100 mg/5 mL conforme produto"
+      ],
+      "dose": "Adulto: 100–200 mg VO q12h conforme indicação; vários focos usam 200 mg q12h. Duração depende do foco.",
+      "pediatricDose": "2 meses–12 anos: 10 mg/kg/dia, geralmente 5 mg/kg q12h. Máximo varia por indicação: 200–400 mg/dia conforme foco.",
+      "renalDose": "CrCl <30 mL/min: aumentar intervalo para q24h. Hemodiálise: administrar 3 vezes por semana após HD.",
+      "hepaticDose": "Sem ajuste rotineiro em cirrose leve/moderada conforme dados disponíveis.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Dor abdominal",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR",
+        "Convulsões por acúmulo renal"
+      ],
+      "adverseEffects": "Diarreia e eventos GI são comuns; DRC prolonga meia-vida.",
+      "contraindications": "Hipersensibilidade grave a cefalosporinas.",
+      "interactions": "Antiácidos/H2 podem reduzir absorção em algumas formulações; probenecida pode aumentar exposição.",
+      "monitoring": "CrCl, resposta/culturas e sinais de C. difficile.",
+      "administration": "Comprimidos devem ser tomados com alimento para aumentar absorção; suspensão pode ser administrada sem relação com alimento.",
+      "preparation": "Reconstituir suspensão conforme fabricante, agitar e armazenar segundo rótulo.",
+      "infusionProtocol": "Não aplicável; cefpodoxima é oral.",
+      "pregnancy": "Usar quando indicada.",
+      "lactation": "Pode passar ao leite em pequena quantidade; observar lactente.",
+      "specialPopulations": "DRC grave exige q24h; HD exige esquema pós-sessão. Pediatria abaixo de 2 meses não estabelecida.",
+      "patientEducation": "Tomar comprimido com alimento e completar o tratamento; não reutilizar suspensão sem respeitar validade após reconstituição.",
+      "clinicalPearls": "Cefpodoxima é útil como opção oral em focos selecionados, mas o detalhe prático é que comprimido se beneficia de alimento e CrCl <30 muda o intervalo para q24h.",
+      "guidelineRecommendations": "Usar apenas para focos suscetíveis e quando via oral for adequada; para organismos AMR/ESBL seguir diretrizes atuais em vez de presumir cobertura pela geração da cefalosporina.",
+      "safetyFlags": [
+        "Oral",
+        "Comprimido com alimento",
+        "CrCl <30: q24h",
+        "HD 3x/semana após sessão",
+        "Pediatria 10 mg/kg/dia"
+      ],
+      "alerts": [
+        "Adulto 100–200 mg q12h",
+        "Pediatria 10 mg/kg/dia",
+        "CrCl <30: q24h",
+        "HD: 3x/semana após sessão",
+        "Comprimido com alimento"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4587a7c1-cd6c-4946-a0dd-fcfe0c8504b9",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=59d848e9-de7a-669b-e063-6394a90a2b35",
+        "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=59d848e9-de7a-669b-e063-6394a90a2b35&type=display",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4587a7c1-cd6c-4946-a0dd-fcfe0c8504b9",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=59d848e9-de7a-669b-e063-6394a90a2b35",
+        "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=59d848e9-de7a-669b-e063-6394a90a2b35&type=display",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    },
+    "es": {
+      "name": "Cefpodoxima proxetilo",
+      "class": "Cefalosporina oral de 3ª generación",
+      "pharmacologicClass": "Profármaco oral convertido en cefpodoxima activa",
+      "mechanism": "Tras conversión al metabolito activo se une a PBPs e inhibe pared bacteriana.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Opción oral, no sustituye terapia IV en infección grave.",
+      "pharmacokinetics": "Profármaco oral; comida aumenta AUC/Cmax de comprimidos. Eliminación renal; ~23% puede eliminarse en 3 h de HD.",
+      "indications": "Faringitis/tonsilitis, sinusitis, otitis pediátrica, algunas infecciones respiratorias, piel y UTI no complicada susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos y suspensión oral.",
+      "presentations": [
+        "100 mg",
+        "200 mg",
+        "50 mg/5 mL",
+        "100 mg/5 mL según producto"
+      ],
+      "dose": "Adulto: 100–200 mg VO q12h según indicación; varios focos usan 200 mg q12h.",
+      "pediatricDose": "2 meses–12 años: 10 mg/kg/día, generalmente 5 mg/kg q12h. Máximo 200–400 mg/día según foco.",
+      "renalDose": "ClCr <30: aumentar intervalo a q24h. Hemodiálisis: 3 veces/semana después de HD.",
+      "hepaticDose": "Sin ajuste rutinario en cirrosis leve/moderada según datos disponibles.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Dolor abdominal",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "C. difficile",
+        "SCAR",
+        "Convulsiones por acumulación"
+      ],
+      "adverseEffects": "Diarrea/eventos GI son frecuentes; ERC prolonga semivida.",
+      "contraindications": "Hipersensibilidad grave a cefalosporinas.",
+      "interactions": "Antiácidos/H2 pueden reducir absorción en algunas formulaciones; probenecid aumenta exposición.",
+      "monitoring": "ClCr, respuesta/cultivos y C. difficile.",
+      "administration": "Comprimidos con alimentos para mejorar absorción; suspensión sin relación obligatoria con comida.",
+      "preparation": "Reconstituir/agitar y almacenar según ficha.",
+      "infusionProtocol": "No aplicable; oral.",
+      "pregnancy": "Usar cuando indicada.",
+      "lactation": "Pequeña cantidad puede pasar a leche.",
+      "specialPopulations": "ERC grave q24h; HD pos-sesión. <2 meses no establecido.",
+      "patientEducation": "Tomar comprimido con comida y completar tratamiento.",
+      "clinicalPearls": "El detalle práctico es que el comprimido se beneficia de alimento y ClCr <30 cambia intervalo a q24h.",
+      "guidelineRecommendations": "Usar solo en focos susceptibles y vía oral apropiada; en AMR/ESBL seguir guías actuales y no asumir cobertura por la generación.",
+      "safetyFlags": [
+        "Oral",
+        "Comprimido con alimentos",
+        "ClCr <30: q24h",
+        "HD 3x/semana pos-sesión",
+        "Pediatría 10 mg/kg/día"
+      ],
+      "alerts": [
+        "Adulto 100–200 mg q12h",
+        "Pediatría 10 mg/kg/día",
+        "ClCr <30: q24h",
+        "HD 3x/semana tras sesión",
+        "Comprimido con comida"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4587a7c1-cd6c-4946-a0dd-fcfe0c8504b9",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=59d848e9-de7a-669b-e063-6394a90a2b35",
+        "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=59d848e9-de7a-669b-e063-6394a90a2b35&type=display",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4587a7c1-cd6c-4946-a0dd-fcfe0c8504b9",
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=59d848e9-de7a-669b-e063-6394a90a2b35",
+        "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=59d848e9-de7a-669b-e063-6394a90a2b35&type=display",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      ]
+    }
+  },
+  "eravaciclina": {
+    "pt": {
+      "name": "Eravaciclina",
+      "class": "Fluorociclina derivada de tetraciclina",
+      "pharmacologicClass": "Tetraciclina sintética fluorociclina; inibidor da subunidade ribossomal 30S",
+      "mechanism": "Liga-se à subunidade 30S e bloqueia a entrada do aminoacil-tRNA, inibindo síntese proteica bacteriana.",
+      "pharmacodynamics": "AUC/MIC é o principal índice PK/PD. Atividade inclui vários Gram-positivos, Gram-negativos e anaeróbios, mas não Pseudomonas.",
+      "pharmacokinetics": "IV, grande volume de distribuição, alta ligação proteica, metabolismo CYP3A4/FMO e eliminação fecal/urinária mista.",
+      "indications": "Adultos com infecção intra-abdominal complicada por organismos suscetíveis. Não é indicada para cUTI.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó liofilizado IV.",
+      "presentations": [
+        "50 mg",
+        "100 mg"
+      ],
+      "dose": "Adulto: 1 mg/kg IV q12h, infundido em aproximadamente 60 min, por 4–14 dias.",
+      "pediatricDose": "Segurança/eficácia pediátrica não estabelecidas. Uso <8 anos não recomendado por efeitos de classe em dentes e crescimento ósseo.",
+      "renalDose": "Sem ajuste em insuficiência renal, inclusive ESRD; HD não remove quantidade significativa.",
+      "hepaticDose": "Child-Pugh A/B: sem ajuste. Child-Pugh C: 1 mg/kg q12h no dia 1, depois 1 mg/kg q24h a partir do dia 2.",
+      "commonAdverseEffects": [
+        "Reação no local",
+        "Náusea",
+        "Vômito",
+        "Diarreia"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Descoloração dentária/hipoplasia do esmalte",
+        "Inibição reversível do crescimento ósseo",
+        "C. difficile"
+      ],
+      "adverseEffects": "Como tetraciclina, pode afetar dentes e osso em períodos de desenvolvimento; eventos GI e de infusão são comuns.",
+      "contraindications": "Hipersensibilidade a eravaciclina ou tetraciclinas.",
+      "interactions": "Indutor forte de CYP3A: aumentar para 1,5 mg/kg q12h. Revisar outros indutores e anticoagulantes.",
+      "monitoring": "Resposta, função hepática e tolerância à infusão; cultura/AST em infecção resistente.",
+      "administration": "Somente IV, calculada pelo peso corporal real.",
+      "preparation": "Reconstituir cada frasco e diluir em solução compatível antes da infusão.",
+      "infusionProtocol": "Infundir em aproximadamente 60 min a cada 12 h.",
+      "pregnancy": "Pode causar dano fetal por efeitos de classe em dentes e osso, especialmente 2º/3º trimestre.",
+      "lactation": "Considerar interrupção temporária ou alternativa conforme risco-benefício e bula.",
+      "specialPopulations": "Não usar como terapia de cUTI; baixa concentração urinária limita esse foco. Pediatria não estabelecida.",
+      "patientEducation": "Informar que não é carbapenêmico; é tetraciclina/fluorociclina e pode afetar dentes/osso em gestação e crianças pequenas.",
+      "clinicalPearls": "Eravaciclina foi classificada incorretamente como carbapenêmico no inventário, mas farmacologicamente é fluorociclina; também não deve ser escolhida para UTI.",
+      "guidelineRecommendations": "IDSA 2026 considera derivados de tetraciclina em cenários selecionados de CRE/CRAB fora de corrente sanguínea e trato urinário; evitar para bacteremia e UTI por exposição inadequada.",
+      "safetyFlags": [
+        "Fluorociclina, não carbapenêmico",
+        "cIAI apenas na bula",
+        "Não cUTI",
+        "Sem ajuste renal",
+        "Child-Pugh C ajustar"
+      ],
+      "alerts": [
+        "1 mg/kg q12h",
+        "Infusão 60 min",
+        "Child-Pugh C: q24h após dia 1",
+        "CYP3A forte: 1,5 mg/kg q12h",
+        "Pediatria não estabelecida"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a4b188d4-f467-470c-ad7b-25ffbdd8862a",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a4b188d4-f467-470c-ad7b-25ffbdd8862a",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/resources-information-approved-drugs/eravacycline",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=eravacycline"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a4b188d4-f467-470c-ad7b-25ffbdd8862a",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a4b188d4-f467-470c-ad7b-25ffbdd8862a",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/resources-information-approved-drugs/eravacycline",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=eravacycline"
+      ]
+    },
+    "es": {
+      "name": "Eravaciclina",
+      "class": "Fluorociclina derivada de tetraciclina",
+      "pharmacologicClass": "Tetraciclina sintética fluorociclina; inhibidor ribosomal 30S",
+      "mechanism": "Se une a 30S y bloquea entrada de aminoacil-tRNA, inhibiendo síntesis proteica.",
+      "pharmacodynamics": "AUC/MIC es índice PK/PD principal. Activa frente a varios Gram positivos/negativos y anaerobios, no Pseudomonas.",
+      "pharmacokinetics": "IV, gran volumen de distribución, alta unión proteica, metabolismo CYP3A4/FMO y eliminación fecal/urinaria.",
+      "indications": "Adultos con infección intraabdominal complicada susceptible. No indicada para cUTI.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo liofilizado IV.",
+      "presentations": [
+        "50 mg",
+        "100 mg"
+      ],
+      "dose": "Adulto: 1 mg/kg IV q12h en ~60 min por 4–14 días.",
+      "pediatricDose": "Seguridad/eficacia pediátrica no establecidas. <8 años no recomendado por efectos de clase en dientes/hueso.",
+      "renalDose": "Sin ajuste en insuficiencia renal incluida ESRD; HD no elimina cantidad significativa.",
+      "hepaticDose": "Child-Pugh A/B sin ajuste. Child-Pugh C: 1 mg/kg q12h día 1, luego 1 mg/kg q24h desde día 2.",
+      "commonAdverseEffects": [
+        "Reacción local",
+        "Náuseas",
+        "Vómitos",
+        "Diarrea"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Coloración dental/hipoplasia del esmalte",
+        "Inhibición reversible de crecimiento óseo",
+        "C. difficile"
+      ],
+      "adverseEffects": "Como tetraciclina puede afectar dientes/hueso durante desarrollo; eventos GI/infusión son frecuentes.",
+      "contraindications": "Hipersensibilidad a eravaciclina/tetraciclinas.",
+      "interactions": "Con inductor fuerte CYP3A usar 1,5 mg/kg q12h. Revisar otros inductores/anticoagulantes.",
+      "monitoring": "Respuesta, función hepática, tolerancia a infusión y AST.",
+      "administration": "Solo IV basada en peso corporal real.",
+      "preparation": "Reconstituir y diluir antes de infusión.",
+      "infusionProtocol": "Infundir ~60 min q12h.",
+      "pregnancy": "Puede causar daño fetal por efectos de clase en dientes/hueso, especialmente 2º/3º trimestre.",
+      "lactation": "Valorar interrupción temporal o alternativa según riesgo-beneficio.",
+      "specialPopulations": "No usar como cUTI; baja exposición urinaria. Pediatría no establecida.",
+      "patientEducation": "No es carbapenémico; es fluorociclina/tetraciclina y puede afectar dientes/hueso.",
+      "clinicalPearls": "El inventario la clasifica erróneamente como carbapenémico; farmacológicamente es fluorociclina y tampoco debe elegirse para UTI.",
+      "guidelineRecommendations": "IDSA 2026 considera derivados de tetraciclina en escenarios seleccionados CRE/CRAB fuera de sangre/UTI; evitar bacteriemia y UTI por exposición insuficiente.",
+      "safetyFlags": [
+        "Fluorociclina, no carbapenémico",
+        "cIAI rotulada",
+        "No cUTI",
+        "Sin ajuste renal",
+        "Child-Pugh C ajustar"
+      ],
+      "alerts": [
+        "1 mg/kg q12h",
+        "Infusión 60 min",
+        "Child-Pugh C q24h tras día 1",
+        "CYP3A fuerte 1,5 mg/kg q12h",
+        "Pediatría no establecida"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a4b188d4-f467-470c-ad7b-25ffbdd8862a",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a4b188d4-f467-470c-ad7b-25ffbdd8862a",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/resources-information-approved-drugs/eravacycline",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=eravacycline"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a4b188d4-f467-470c-ad7b-25ffbdd8862a",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a4b188d4-f467-470c-ad7b-25ffbdd8862a",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/resources-information-approved-drugs/eravacycline",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=eravacycline"
+      ]
+    }
+  },
+  "imipenem_cilastatina_relebactam": {
+    "pt": {
+      "name": "Imipenem + cilastatina + relebactam",
+      "class": "Carbapenêmico + inibidor de DHP-I + inibidor de beta-lactamase",
+      "pharmacologicClass": "Imipenem/cilastatina associado ao inibidor de beta-lactamase relebactam",
+      "mechanism": "Imipenem inibe PBPs; cilastatina bloqueia dehidropeptidase-I renal; relebactam inibe beta-lactamases classe A/C, restaurando atividade contra alguns Gram-negativos resistentes.",
+      "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC para imipenem e AUC/MIC para relebactam. Não cobre metalo-beta-lactamases.",
+      "pharmacokinetics": "Somente IV; componentes dependem fortemente da eliminação renal e são removidos por hemodiálise.",
+      "indications": "HABP/VABP, cUTI/pielonefrite e cIAI por Gram-negativos suscetíveis em adultos e populações pediátricas aprovadas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Frasco de combinação fixa IV.",
+      "presentations": [
+        "1,25 g = imipenem 500 mg + cilastatina 500 mg + relebactam 250 mg"
+      ],
+      "dose": "Adulto CrCl >=90: 1,25 g IV q6h, infusão 30 min, por 4–14 dias conforme foco.",
+      "pediatricDose": ">=37 semanas pós-menstrual e 2 kg a <3 meses: 37,5 mg/kg q8h em 60 min. 3 meses–<18 anos <30 kg: 37,5 mg/kg q6h em 60 min; >=30 kg: 1,25 g q6h em 30 min.",
+      "renalDose": "CrCl 60–89: 1 g q6h; 30–59: 0,75 g q6h; 15–29: 0,5 g q6h; HD: 0,5 g q6h após sessão. <15 sem HD: não recomendado.",
+      "hepaticDose": "Sem ajuste hepático rotineiro esperado; eliminação renal é predominante.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Elevação de transaminases",
+        "Reação infusional"
+      ],
+      "dangerousAdverseEffects": [
+        "Convulsões/CNS",
+        "Anafilaxia",
+        "C. difficile",
+        "Redução de níveis de valproato"
+      ],
+      "adverseEffects": "Carbapenêmicos podem reduzir níveis de ácido valproico e precipitar convulsões; risco neurológico aumenta com DRC.",
+      "contraindications": "Hipersensibilidade grave ao produto/beta-lactâmicos.",
+      "interactions": "Evitar ganciclovir quando possível e evitar ácido valproico/divalproato por risco de convulsões e queda de níveis.",
+      "monitoring": "CrCl frequente, estado neurológico, culturas/AST e resposta.",
+      "administration": "IV exclusivamente.",
+      "preparation": "Constituir o pó e diluir para volume final conforme bula; doses renais são preparadas retirando volume do saco padrão.",
+      "infusionProtocol": "Adultos e >=30 kg: 30 min; menores de 30 kg: 60 min conforme idade/peso.",
+      "pregnancy": "Dados humanos limitados; usar se benefício justificar.",
+      "lactation": "Dados limitados para combinação completa; avaliar risco-benefício.",
+      "specialPopulations": "Não recomendado <37 semanas pós-menstrual. Pediatria <30 kg com insuficiência renal não tem recomendação suficiente.",
+      "patientEducation": "Relatar convulsão, confusão ou piora neurológica e informar uso de valproato/ganciclovir.",
+      "clinicalPearls": "Relebactam amplia imipenem contra KPC/AmpC selecionadas, mas não resolve MBL; a dose precisa acompanhar CrCl e o valproato é uma interação crítica.",
+      "guidelineRecommendations": "IDSA 2026 inclui imipenem-relebactam entre opções preferidas para KPC-CRE e DTR Pseudomonas suscetíveis em cenários apropriados, guiado por AST.",
+      "safetyFlags": [
+        "CrCl <90: ajustar",
+        "Valproato evitar",
+        "Ganciclovir evitar",
+        "Convulsões",
+        "Não cobre MBL"
+      ],
+      "alerts": [
+        "Adulto 1,25 g q6h",
+        "Infusão 30 min",
+        "Pediatria 37,5 mg/kg",
+        "CrCl 30–59: 0,75 g q6h",
+        "<15 sem HD: não recomendado"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-antibiotic-treat-hospital-acquired-bacterial-pneumonia-and-ventilator-associated",
+        "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-antibiotic-treat-hospital-acquired-bacterial-pneumonia-and-ventilator-associated",
+        "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
+      ]
+    },
+    "es": {
+      "name": "Imipenem + cilastatina + relebactam",
+      "class": "Carbapenémico + inhibidor DHP-I + inhibidor beta-lactamasa",
+      "pharmacologicClass": "Imipenem/cilastatina asociado al inhibidor relebactam",
+      "mechanism": "Imipenem inhibe PBPs; cilastatina bloquea dehidropeptidasa-I renal; relebactam inhibe beta-lactamasas clase A/C.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC para imipenem y AUC/MIC para relebactam. No cubre MBL.",
+      "pharmacokinetics": "Solo IV; componentes dependen de eliminación renal y se eliminan por HD.",
+      "indications": "HABP/VABP, cUTI/pielonefritis y cIAI por Gram negativos susceptibles en adultos y pediatría aprobada.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Vial combinación fija IV.",
+      "presentations": [
+        "1,25 g = imipenem 500 mg + cilastatina 500 mg + relebactam 250 mg"
+      ],
+      "dose": "Adulto ClCr >=90: 1,25 g IV q6h en 30 min por 4–14 días.",
+      "pediatricDose": ">=37 semanas postmenstrual y 2 kg a <3 meses: 37,5 mg/kg q8h en 60 min. 3 meses–<18 años <30 kg: 37,5 mg/kg q6h; >=30 kg: 1,25 g q6h.",
+      "renalDose": "ClCr 60–89: 1 g q6h; 30–59: 0,75 g q6h; 15–29: 0,5 g q6h; HD: 0,5 g q6h tras sesión. <15 sin HD: no recomendado.",
+      "hepaticDose": "Sin ajuste hepático rutinario esperado.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Elevación de transaminasas",
+        "Reacción infusional"
+      ],
+      "dangerousAdverseEffects": [
+        "Convulsiones/CNS",
+        "Anafilaxia",
+        "C. difficile",
+        "Reducción de valproato"
+      ],
+      "adverseEffects": "Carbapenémicos pueden reducir valproato y precipitar convulsiones; riesgo CNS aumenta en ERC.",
+      "contraindications": "Hipersensibilidad grave al producto/beta-lactámicos.",
+      "interactions": "Evitar ganciclovir cuando sea posible y ácido valproico/divalproato.",
+      "monitoring": "ClCr frecuente, estado neurológico, cultivos/AST y respuesta.",
+      "administration": "Exclusivamente IV.",
+      "preparation": "Constituir/diluir; dosis renales se preparan desde solución estándar según ficha.",
+      "infusionProtocol": "Adultos y >=30 kg 30 min; <30 kg 60 min.",
+      "pregnancy": "Datos humanos limitados.",
+      "lactation": "Datos limitados para combinación completa.",
+      "specialPopulations": "No recomendado <37 semanas postmenstrual. Pediatría <30 kg con ERC sin recomendación suficiente.",
+      "patientEducation": "Informar convulsiones/confusión y uso de valproato/ganciclovir.",
+      "clinicalPearls": "Relebactam amplía imipenem frente a KPC/AmpC selectas, no MBL; dosis sigue ClCr y valproato es interacción crítica.",
+      "guidelineRecommendations": "IDSA 2026 incluye imipenem-relebactam entre opciones preferidas para KPC-CRE y DTR Pseudomonas susceptibles en escenarios apropiados, guiado por AST.",
+      "safetyFlags": [
+        "ClCr <90: ajustar",
+        "Valproato evitar",
+        "Ganciclovir evitar",
+        "Convulsiones",
+        "No cubre MBL"
+      ],
+      "alerts": [
+        "Adulto 1,25 g q6h",
+        "Infusión 30 min",
+        "Pediatría 37,5 mg/kg",
+        "ClCr 30–59: 0,75 g q6h",
+        "<15 sin HD: no recomendado"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-antibiotic-treat-hospital-acquired-bacterial-pneumonia-and-ventilator-associated",
+        "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-antibiotic-treat-hospital-acquired-bacterial-pneumonia-and-ventilator-associated",
+        "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
+      ]
+    }
+  },
+  "meropenem_vaborbactam": {
+    "pt": {
+      "name": "Meropenem + vaborbactam",
+      "class": "Carbapenêmico + inibidor de beta-lactamase",
+      "pharmacologicClass": "Meropenem associado ao inibidor borônico vaborbactam",
+      "mechanism": "Meropenem inibe PBPs; vaborbactam inibe principalmente beta-lactamases classe A, incluindo KPC, protegendo meropenem da hidrólise.",
+      "pharmacodynamics": "fT>MIC para meropenem e AUC/MIC para vaborbactam. Não inibe metalo-beta-lactamases e não restaura atividade contra mecanismos não cobertos.",
+      "pharmacokinetics": "Somente IV; ambos são eliminados predominantemente pelos rins e removidos por hemodiálise.",
+      "indications": "Bula EUA: adultos >=18 anos com cUTI incluindo pielonefrite por bactérias suscetíveis; uso AMR fora dessa indicação depende de diretriz/AST.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para infusão IV.",
+      "presentations": [
+        "4 g por dose = meropenem 2 g + vaborbactam 2 g"
+      ],
+      "dose": "Adulto >=18 com eGFR >=50: 4 g IV q8h, cada dose em infusão de 3 h, por até 14 dias.",
+      "pediatricDose": "Segurança/eficácia <18 anos não estabelecidas na bula norte-americana atual; não extrapolar dose adulta.",
+      "renalDose": "eGFR 30–49: 2 g q8h; 15–29: 2 g q12h; <15: 1 g q12h. HD remove ambos; administrar após HD e monitorar eGFR diariamente se função estiver mudando.",
+      "hepaticDose": "Sem ajuste hepático rotineiro esperado; eliminação renal predomina.",
+      "commonAdverseEffects": [
+        "Cefaleia",
+        "Flebite/reação local",
+        "Diarreia",
+        "Náusea"
+      ],
+      "dangerousAdverseEffects": [
+        "Convulsões",
+        "Anafilaxia",
+        "Rabdomiólise",
+        "C. difficile",
+        "Redução de valproato"
+      ],
+      "adverseEffects": "Meropenem pode reduzir níveis de valproato e aumentar risco de convulsões; rabdomiólise também consta como alerta de bula.",
+      "contraindications": "Hipersensibilidade grave a componentes ou beta-lactâmicos relacionados.",
+      "interactions": "Evitar valproato/divalproato. A bula 2026 também alerta possível redução de eficácia de contraceptivos hormonais; orientar método adicional/não hormonal.",
+      "monitoring": "eGFR/creatinina ao menos diariamente se função renal mudar, estado neurológico, CK se mialgia e culturas/AST.",
+      "administration": "IV exclusivamente.",
+      "preparation": "Reconstituir cada frasco e diluir conforme bula para concentração final apropriada.",
+      "infusionProtocol": "Infundir cada dose em 3 horas.",
+      "pregnancy": "Dados humanos limitados; usar quando benefício superar risco.",
+      "lactation": "Meropenem passa ao leite em pequenas quantidades; dados de vaborbactam são limitados.",
+      "specialPopulations": "Apenas adultos na bula EUA. eGFR muda significativamente a dose e HD remove os dois componentes.",
+      "patientEducation": "Informar convulsões, dor muscular intensa ou uso de valproato; cumprir método contraceptivo adicional quando indicado pela bula.",
+      "clinicalPearls": "Vaborbactam foi desenhado para KPC: é excelente em KPC-CRE suscetível, mas não cobre MBL. A infusão de 3 h e o ajuste renal são parte do regime, não detalhes opcionais.",
+      "guidelineRecommendations": "IDSA 2026 considera meropenem-vaborbactam uma opção preferida para KPC-producing CRE suscetível e frequentemente o favorece entre os novos beta-lactâmicos nesse mecanismo.",
+      "safetyFlags": [
+        "KPC",
+        "Não MBL",
+        "Infusão 3 h",
+        "eGFR <50 ajustar",
+        "Adultos >=18"
+      ],
+      "alerts": [
+        "4 g q8h",
+        "Infusão 3 h",
+        "eGFR 30–49: 2 g q8h",
+        "eGFR 15–29: 2 g q12h",
+        "HD: administrar após sessão"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibacterial-drug",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=meropenem+vaborbactam"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibacterial-drug",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=meropenem+vaborbactam"
+      ]
+    },
+    "es": {
+      "name": "Meropenem + vaborbactam",
+      "class": "Carbapenémico + inhibidor beta-lactamasa",
+      "pharmacologicClass": "Meropenem asociado al inhibidor borónico vaborbactam",
+      "mechanism": "Meropenem inhibe PBPs; vaborbactam inhibe principalmente beta-lactamasas clase A, incluida KPC.",
+      "pharmacodynamics": "fT>MIC para meropenem y AUC/MIC para vaborbactam. No inhibe MBL.",
+      "pharmacokinetics": "Solo IV; ambos se eliminan principalmente por riñón y por HD.",
+      "indications": "Ficha EUA: adultos >=18 con cUTI/pielonefritis susceptible; uso AMR fuera de ficha depende de guía/AST.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo para infusión IV.",
+      "presentations": [
+        "4 g por dosis = meropenem 2 g + vaborbactam 2 g"
+      ],
+      "dose": "Adulto >=18 con eGFR >=50: 4 g IV q8h, cada dosis en 3 h, hasta 14 días.",
+      "pediatricDose": "Seguridad/eficacia <18 años no establecidas en ficha EUA; no extrapolar dosis adulta.",
+      "renalDose": "eGFR 30–49: 2 g q8h; 15–29: 2 g q12h; <15: 1 g q12h. HD elimina ambos; administrar después de HD.",
+      "hepaticDose": "Sin ajuste hepático rutinario esperado.",
+      "commonAdverseEffects": [
+        "Cefalea",
+        "Flebitis/reacción local",
+        "Diarrea",
+        "Náuseas"
+      ],
+      "dangerousAdverseEffects": [
+        "Convulsiones",
+        "Anafilaxia",
+        "Rabdomiólisis",
+        "C. difficile",
+        "Reducción de valproato"
+      ],
+      "adverseEffects": "Meropenem reduce valproato y puede aumentar convulsiones; rabdomiólisis figura como alerta.",
+      "contraindications": "Hipersensibilidad grave a componentes/beta-lactámicos.",
+      "interactions": "Evitar valproato/divalproato. Ficha 2026 alerta posible menor eficacia de anticonceptivos hormonales; usar método adicional/no hormonal.",
+      "monitoring": "eGFR/creatinina diaria si función cambia, estado neurológico, CK si mialgia y cultivos/AST.",
+      "administration": "Exclusivamente IV.",
+      "preparation": "Reconstituir/diluir según ficha.",
+      "infusionProtocol": "Infundir cada dosis en 3 horas.",
+      "pregnancy": "Datos humanos limitados.",
+      "lactation": "Meropenem pasa a leche en pequeñas cantidades; vaborbactam con datos limitados.",
+      "specialPopulations": "Solo adultos en ficha EUA. eGFR cambia significativamente la dosis y HD elimina ambos.",
+      "patientEducation": "Informar convulsiones, mialgia intensa o uso de valproato; seguir anticoncepción adicional cuando corresponda.",
+      "clinicalPearls": "Vaborbactam está diseñado para KPC: potente en KPC-CRE susceptible, no MBL. Infusión 3 h y ajuste renal son parte esencial del régimen.",
+      "guidelineRecommendations": "IDSA 2026 considera meropenem-vaborbactam opción preferida para KPC-CRE susceptible y con frecuencia lo favorece entre nuevos beta-lactámicos para ese mecanismo.",
+      "safetyFlags": [
+        "KPC",
+        "No MBL",
+        "Infusión 3 h",
+        "eGFR <50 ajustar",
+        "Adultos >=18"
+      ],
+      "alerts": [
+        "4 g q8h",
+        "Infusión 3 h",
+        "eGFR 30–49: 2 g q8h",
+        "eGFR 15–29: 2 g q12h",
+        "HD: después de sesión"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibacterial-drug",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=meropenem+vaborbactam"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibacterial-drug",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=meropenem+vaborbactam"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP09_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP10_FROZEN_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP10_FROZEN_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "aztreonam_avibactam": {
+    "pt": {
+      "name": "Aztreonam + avibactam",
+      "class": "Monobactâmico + inibidor de beta-lactamase",
+      "pharmacologicClass": "Aztreonam protegido por avibactam em proporção fixa 3:1",
+      "mechanism": "Aztreonam liga-se sobretudo à PBP3 e resiste à hidrólise por metalo-beta-lactamases; avibactam inibe beta-lactamases serinas coexpressas que, sem proteção, hidrolisariam aztreonam.",
+      "pharmacodynamics": "Bactericida tempo-dependente; metas PK/PD combinam fT>MIC do aztreonam e exposição ao avibactam. AST continua obrigatório, especialmente em AMR.",
+      "pharmacokinetics": "Somente IV; ambos têm eliminação renal importante e são removidos por hemodiálise. A depuração acompanha de perto a função renal.",
+      "indications": "Bula EUA 2026: adultos >=18 anos com infecção intra-abdominal complicada com opções limitadas ou ausentes, em combinação com metronidazol.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para solução IV em combinação fixa.",
+      "presentations": [
+        "2 g aztreonam + 0,67 g avibactam por dose de carga 2,67 g conforme apresentação"
+      ],
+      "dose": "CrCl >50: carga 2,67 g IV, depois 2 g IV q6h; cada dose em infusão de 3 h. cIAI: usar metronidazol concomitante; duração 5–14 dias.",
+      "pediatricDose": "Segurança e eficácia abaixo de 18 anos não estabelecidas na bula norte-americana atual; não extrapolar a dose adulta.",
+      "renalDose": "CrCl >30–50: carga 2,67 g, manutenção 1 g q6h; >15–30: carga 1,8 g, manutenção 0,9 g q8h; <=15/HD: carga 1,33 g, manutenção 0,9 g q12h. Em HD, administrar após a sessão.",
+      "hepaticDose": "Sem ajuste numérico rotineiro estabelecido; monitorar transaminases, pois elevações hepáticas ocorreram em estudos clínicos.",
+      "commonAdverseEffects": [
+        "Elevação de transaminases",
+        "Anemia",
+        "Diarreia",
+        "Hipocalemia",
+        "Febre"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Lesão hepática clinicamente relevante",
+        "C. difficile",
+        "Emergência de resistência"
+      ],
+      "adverseEffects": "Alterações hepáticas e hematológicas foram descritas; a aprovação de cIAI baseou-se em dados clínicos limitados, exigindo vigilância de eficácia e segurança.",
+      "contraindications": "Hipersensibilidade grave ao aztreonam, avibactam ou componentes; avaliar alergias beta-lactâmicas prévias.",
+      "interactions": "Poucas interações metabólicas relevantes; metronidazol deve ser administrado concomitantemente no cIAI rotulado.",
+      "monitoring": "CrCl frequente, AST/ALT, hemograma, eletrólitos, cultura/AST e resposta clínica.",
+      "administration": "IV exclusivamente. A dose é calculada desde o início de uma infusão até o início da próxima.",
+      "preparation": "Reconstituir e diluir conforme bula, preservando proporção fixa 3:1.",
+      "infusionProtocol": "Infundir cada carga e manutenção durante 3 horas.",
+      "pregnancy": "Dados humanos são limitados; usar somente quando benefício justificar.",
+      "lactation": "Dados da combinação são limitados; avaliar exposição e benefício materno.",
+      "specialPopulations": "Adultos apenas na bula EUA atual. A função renal pode mudar rapidamente no início da infecção e requer recálculo de CrCl.",
+      "patientEducation": "Explicar que é terapia IV de reserva para Gram-negativos resistentes e que o tratamento de cIAI exige metronidazol concomitante.",
+      "clinicalPearls": "Aztreonam protege a atividade contra MBL porque não é hidrolisado por essas enzimas, enquanto avibactam bloqueia ESBL/AmpC/OXA serinas que frequentemente coexistem.",
+      "guidelineRecommendations": "IDSA 2026 considera aztreonam-avibactam opção preferida para Enterobacterales produtores de NDM/MBL suscetíveis; para MBL-Pseudomonas não é sugerido de rotina e AST continua essencial.",
+      "safetyFlags": [
+        "MBL/NDM",
+        "cIAI + metronidazol",
+        "Infusão 3 h",
+        "Ajuste renal obrigatório",
+        "Adultos >=18"
+      ],
+      "alerts": [
+        "Carga 2,67 g",
+        "CrCl >50: 2 g q6h",
+        "CrCl >30–50: 1 g q6h",
+        "HD: 0,9 g q12h após sessão",
+        "Metronidazol no cIAI"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a&type=display",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-treatment-complicated-intra-abdominal-infections",
+        "https://clinicaltrials.gov/search?term=aztreonam%20avibactam"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a&type=display",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-treatment-complicated-intra-abdominal-infections",
+        "https://clinicaltrials.gov/search?term=aztreonam%20avibactam"
+      ]
+    },
+    "es": {
+      "name": "Aztreonam + avibactam",
+      "class": "Monobactámico + inhibidor de beta-lactamasa",
+      "pharmacologicClass": "Aztreonam protegido por avibactam en proporción fija 3:1",
+      "mechanism": "Aztreonam se une principalmente a PBP3 y resiste MBL; avibactam inhibe beta-lactamasas serinas coexpresadas que hidrolizarían aztreonam.",
+      "pharmacodynamics": "Bactericida dependiente de tiempo; objetivos PK/PD combinan fT>MIC de aztreonam y exposición a avibactam. AST sigue siendo obligatorio.",
+      "pharmacokinetics": "Solo IV; ambos dependen de eliminación renal y se eliminan por hemodiálisis.",
+      "indications": "Ficha EUA 2026: adultos >=18 años con cIAI con opciones limitadas o ausentes, junto con metronidazol.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo para solución IV en combinación fija.",
+      "presentations": [
+        "Carga 2,67 g = aztreonam 2 g + avibactam 0,67 g según presentación"
+      ],
+      "dose": "ClCr >50: carga 2,67 g IV, luego 2 g IV q6h; cada dosis en 3 h. cIAI: metronidazol concomitante; 5–14 días.",
+      "pediatricDose": "Seguridad/eficacia <18 años no establecidas en ficha EUA actual; no extrapolar dosis adulta.",
+      "renalDose": "ClCr >30–50: carga 2,67 g, mantenimiento 1 g q6h; >15–30: carga 1,8 g, 0,9 g q8h; <=15/HD: carga 1,33 g, 0,9 g q12h. HD: administrar después de sesión.",
+      "hepaticDose": "Sin ajuste numérico rutinario; controlar transaminasas.",
+      "commonAdverseEffects": [
+        "Elevación de transaminasas",
+        "Anemia",
+        "Diarrea",
+        "Hipopotasemia",
+        "Fiebre"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Lesión hepática relevante",
+        "C. difficile",
+        "Emergencia de resistencia"
+      ],
+      "adverseEffects": "Se describieron alteraciones hepáticas/hematológicas; aprobación cIAI se apoya en datos clínicos limitados.",
+      "contraindications": "Hipersensibilidad grave a aztreonam, avibactam o componentes.",
+      "interactions": "Pocas interacciones metabólicas; metronidazol es concomitante obligatorio en cIAI rotulada.",
+      "monitoring": "ClCr frecuente, AST/ALT, hemograma, electrolitos, cultivo/AST y respuesta.",
+      "administration": "Exclusivamente IV.",
+      "preparation": "Reconstituir/diluir según ficha conservando proporción 3:1.",
+      "infusionProtocol": "Cada dosis en 3 horas.",
+      "pregnancy": "Datos humanos limitados.",
+      "lactation": "Datos limitados para la combinación.",
+      "specialPopulations": "Solo adultos en ficha EUA. Recalcular ClCr si la función renal cambia.",
+      "patientEducation": "Explicar uso de reserva para Gram negativos resistentes y metronidazol concomitante en cIAI.",
+      "clinicalPearls": "Aztreonam conserva actividad frente a MBL y avibactam bloquea ESBL/AmpC/OXA serinas que suelen coexistir.",
+      "guidelineRecommendations": "IDSA 2026 considera aztreonam-avibactam preferido para Enterobacterales NDM/MBL susceptibles; no se sugiere de rutina para Pseudomonas MBL y AST sigue siendo esencial.",
+      "safetyFlags": [
+        "MBL/NDM",
+        "cIAI + metronidazol",
+        "Infusión 3 h",
+        "Ajuste renal obligatorio",
+        "Adultos >=18"
+      ],
+      "alerts": [
+        "Carga 2,67 g",
+        "ClCr >50: 2 g q6h",
+        "ClCr >30–50: 1 g q6h",
+        "HD: 0,9 g q12h tras sesión",
+        "Metronidazol en cIAI"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a&type=display",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-treatment-complicated-intra-abdominal-infections",
+        "https://clinicaltrials.gov/search?term=aztreonam%20avibactam"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be1a6c99-d4b3-46d7-9e99-6e5f9fab556a&type=display",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-treatment-complicated-intra-abdominal-infections",
+        "https://clinicaltrials.gov/search?term=aztreonam%20avibactam"
+      ]
+    }
+  },
+  "tedizolida": {
+    "pt": {
+      "name": "Tedizolida",
+      "class": "Oxazolidinona anti-Gram-positivo",
+      "pharmacologicClass": "Pró-fármaco tedizolida fosfato convertido em tedizolida; inibidor da subunidade 50S",
+      "mechanism": "Liga-se à subunidade ribossomal 50S e impede a formação do complexo de iniciação da síntese proteica.",
+      "pharmacodynamics": "AUC/MIC é o principal índice PK/PD. Atividade inclui MRSA, estreptococos e enterococos suscetíveis.",
+      "pharmacokinetics": "Biodisponibilidade oral elevada e equivalência prática IV/VO; ampla distribuição e metabolismo principalmente por sulfatação. HD remove pouco.",
+      "indications": "ABSSSI por Gram-positivos suscetíveis, incluindo MRSA, em adultos e pacientes pediátricos com pelo menos 26 semanas de idade gestacional e >=1 kg.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimido oral e pó para infusão IV.",
+      "presentations": [
+        "200 mg comprimido",
+        "200 mg frasco IV"
+      ],
+      "dose": "Adulto: 200 mg VO ou IV uma vez ao dia por 6 dias; IV em 1 hora.",
+      "pediatricDose": "1–<2 kg: 3 mg/kg IV BID; 2–<3 kg: 6 mg IV BID; 3–<6 kg: 12 mg BID; 6–<10 kg: 20 mg BID; 10–<14 kg: 30 mg BID; 14–<20 kg: 40 mg BID; 20–<35 kg: 60 mg BID; >=35 kg: 200 mg uma vez ao dia. Duração 6 dias.",
+      "renalDose": "Sem ajuste em insuficiência renal, inclusive pacientes em hemodiálise; HD não remove quantidade clinicamente relevante.",
+      "hepaticDose": "Sem ajuste em insuficiência hepática moderada ou grave segundo a bula.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Cefaleia",
+        "Diarreia",
+        "Vômito"
+      ],
+      "dangerousAdverseEffects": [
+        "Mielossupressão/trombocitopenia",
+        "Síndrome serotoninérgica",
+        "Neuropatia óptica/periférica em exposição prolongada",
+        "C. difficile"
+      ],
+      "adverseEffects": "Tratamentos além de 6 dias não são aprovados e aumentam a preocupação com mielossupressão e neuropatia de classe.",
+      "contraindications": "Hipersensibilidade grave a tedizolida. Não há contraindicação absoluta rotulada a serotonérgicos, mas existe alerta para síndrome serotoninérgica.",
+      "interactions": "Tedizolida é inibidor reversível de MAO in vitro; monitorar fármacos serotoninérgicos. Pode aumentar exposição de substratos BCRP como rosuvastatina.",
+      "monitoring": "Hemograma se risco hematológico ou exposição além do usual; sintomas serotoninérgicos, neuropatia e resposta da infecção.",
+      "administration": "VO com ou sem alimento; IV durante 1 h. Pacientes >=35 kg podem usar comprimido oral.",
+      "preparation": "Reconstituir frasco IV e diluir conforme bula; evitar incompatibilidades.",
+      "infusionProtocol": "IV em 1 hora.",
+      "pregnancy": "Dados humanos limitados; usar quando benefício justificar.",
+      "lactation": "Dados clínicos são limitados; avaliar exposição do lactente.",
+      "specialPopulations": "Eficácia em neutropenia não foi adequadamente avaliada; considerar alternativa quando a neutropenia for clinicamente relevante.",
+      "patientEducation": "O curso rotulado é de 6 dias; relatar hematomas, alteração visual, parestesias ou sintomas serotoninérgicos.",
+      "clinicalPearls": "Tedizolida permite curso curto de 6 dias e troca IV-VO simples; não se deve extrapolar automaticamente segurança de 6 dias para terapia prolongada.",
+      "guidelineRecommendations": "Usar para ABSSSI por Gram-positivos suscetíveis quando apropriado; stewardship deve limitar uso prolongado/off-label e considerar alternativas em neutropenia significativa.",
+      "safetyFlags": [
+        "MRSA",
+        "200 mg/dia por 6 dias",
+        "Pediatria >=26 semanas e >=1 kg",
+        "Sem ajuste renal/HD",
+        "Serotonina/mielossupressão"
+      ],
+      "alerts": [
+        "Adulto 200 mg QD x6 dias",
+        ">=35 kg: 200 mg QD",
+        "IV 1 h",
+        "HD sem ajuste",
+        "Monitorar serotoninérgicos"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75672079-589f-451a-bdbf-eaebcfcc80a9",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=75672079-589f-451a-bdbf-eaebcfcc80a9&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://clinicaltrials.gov/search?term=tedizolid",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=tedizolid"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75672079-589f-451a-bdbf-eaebcfcc80a9",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=75672079-589f-451a-bdbf-eaebcfcc80a9&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://clinicaltrials.gov/search?term=tedizolid",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=tedizolid"
+      ]
+    },
+    "es": {
+      "name": "Tedizolida",
+      "class": "Oxazolidinona anti-Gram positivo",
+      "pharmacologicClass": "Profármaco tedizolida fosfato convertido a tedizolida; inhibidor 50S",
+      "mechanism": "Se une a 50S e impide formación del complejo de iniciación de síntesis proteica.",
+      "pharmacodynamics": "AUC/MIC es índice PK/PD. Activa frente a MRSA, estreptococos y enterococos susceptibles.",
+      "pharmacokinetics": "Alta biodisponibilidad oral, exposición IV/VO comparable; metabolismo por sulfatación. HD elimina poco.",
+      "indications": "ABSSSI por Gram positivos susceptibles, incluido MRSA, en adultos y pediatría desde 26 semanas de edad gestacional y >=1 kg.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimido oral y polvo IV.",
+      "presentations": [
+        "200 mg comprimido",
+        "200 mg vial IV"
+      ],
+      "dose": "Adulto: 200 mg VO o IV una vez al día por 6 días; IV en 1 hora.",
+      "pediatricDose": "1–<2 kg: 3 mg/kg IV BID; 2–<3 kg: 6 mg BID; 3–<6 kg: 12 mg; 6–<10 kg: 20 mg; 10–<14 kg: 30 mg; 14–<20 kg: 40 mg; 20–<35 kg: 60 mg BID; >=35 kg: 200 mg QD. 6 días.",
+      "renalDose": "Sin ajuste en insuficiencia renal, incluida HD; HD no elimina cantidad clínicamente relevante.",
+      "hepaticDose": "Sin ajuste en insuficiencia hepática moderada/grave.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Cefalea",
+        "Diarrea",
+        "Vómitos"
+      ],
+      "dangerousAdverseEffects": [
+        "Mielosupresión/trombocitopenia",
+        "Síndrome serotoninérgico",
+        "Neuropatía óptica/periférica con exposición prolongada",
+        "C. difficile"
+      ],
+      "adverseEffects": "Tratamiento >6 días no está aprobado y aumenta preocupación por mielosupresión/neuropatía de clase.",
+      "contraindications": "Hipersensibilidad grave a tedizolida.",
+      "interactions": "Inhibidor reversible MAO in vitro; vigilar serotoninérgicos. Puede aumentar exposición a sustratos BCRP como rosuvastatina.",
+      "monitoring": "Hemograma si riesgo hematológico, síntomas serotoninérgicos/neuropáticos y respuesta clínica.",
+      "administration": "VO con o sin alimentos; IV en 1 h. Comprimido en >=35 kg.",
+      "preparation": "Reconstituir/diluir vial según ficha.",
+      "infusionProtocol": "IV en 1 hora.",
+      "pregnancy": "Datos humanos limitados.",
+      "lactation": "Datos limitados.",
+      "specialPopulations": "Eficacia en neutropenia no se evaluó adecuadamente; considerar alternativa.",
+      "patientEducation": "El curso rotulado dura 6 días; informar hematomas, cambios visuales, parestesias o síntomas serotoninérgicos.",
+      "clinicalPearls": "Curso corto de 6 días y cambio IV-VO sencillo; no extrapolar automáticamente seguridad a tratamiento prolongado.",
+      "guidelineRecommendations": "Usar en ABSSSI por Gram positivos susceptibles; stewardship debe limitar exposición prolongada/off-label y considerar alternativas en neutropenia significativa.",
+      "safetyFlags": [
+        "MRSA",
+        "200 mg/día x6 días",
+        "Pediatría >=26 semanas y >=1 kg",
+        "Sin ajuste renal/HD",
+        "Serotonina/mielosupresión"
+      ],
+      "alerts": [
+        "Adulto 200 mg QD x6 días",
+        ">=35 kg 200 mg QD",
+        "IV 1 h",
+        "HD sin ajuste",
+        "Vigilar serotoninérgicos"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75672079-589f-451a-bdbf-eaebcfcc80a9",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=75672079-589f-451a-bdbf-eaebcfcc80a9&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://clinicaltrials.gov/search?term=tedizolid",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=tedizolid"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75672079-589f-451a-bdbf-eaebcfcc80a9",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=75672079-589f-451a-bdbf-eaebcfcc80a9&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://clinicaltrials.gov/search?term=tedizolid",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=tedizolid"
+      ]
+    }
+  },
+  "telavancina": {
+    "pt": {
+      "name": "Telavancina",
+      "class": "Lipoglicopeptídeo anti-MRSA",
+      "pharmacologicClass": "Lipoglicopeptídeo bactericida com ação na parede e membrana",
+      "mechanism": "Liga-se ao precursor D-Ala-D-Ala, inibe polimerização/cross-link da parede e perturba o potencial de membrana bacteriana.",
+      "pharmacodynamics": "AUC/MIC é o principal índice PK/PD. Ativa contra Gram-positivos suscetíveis, incluindo MRSA.",
+      "pharmacokinetics": "Somente IV; alta ligação proteica e eliminação predominantemente renal.",
+      "indications": "Adultos: cSSSI por Gram-positivos suscetíveis e HABP/VABP por S. aureus quando alternativas não são adequadas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para infusão IV.",
+      "presentations": [
+        "250 mg",
+        "750 mg"
+      ],
+      "dose": "CrCl >50: 10 mg/kg IV q24h, cada dose em 60 min. Duração cSSSI 7–14 dias; HABP/VABP 7–21 dias.",
+      "pediatricDose": "Segurança e eficácia em pacientes pediátricos não estabelecidas; não há regime pediátrico aprovado.",
+      "renalDose": "CrCl 30–50: 7,5 mg/kg q24h; CrCl 10–<30: 10 mg/kg q48h. CrCl <10 ou hemodiálise: dados insuficientes para recomendar regime.",
+      "hepaticDose": "Sem ajuste rotineiro em comprometimento leve/moderado; dados limitados em hepatopatia grave.",
+      "commonAdverseEffects": [
+        "Alteração do paladar",
+        "Náusea",
+        "Vômito",
+        "Urina espumosa",
+        "Reação infusional"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidade",
+        "Maior mortalidade em HABP/VABP com CrCl <=50",
+        "QT prolongado",
+        "Anafilaxia",
+        "Embriotoxicidade fetal"
+      ],
+      "adverseEffects": "Nefrotoxicidade é central e a mortalidade em pneumonia hospitalar foi maior em pacientes com CrCl basal <=50 mL/min.",
+      "contraindications": "Heparina não fracionada IV é contraindicada durante telavancina por interferência artificial com aPTT; hipersensibilidade grave ao fármaco.",
+      "interactions": "Interfere com PT/INR/aPTT e outros testes de coagulação; evitar fármacos que prolongam QT quando possível.",
+      "monitoring": "Função renal antes, a cada 48–72 h ou mais frequentemente e ao final; ECG/eletrólitos se risco de QT; programar testes de coagulação longe do pico de interferência.",
+      "administration": "IV somente, em 60 min; infusão rápida aumenta reação tipo red-man.",
+      "preparation": "Reconstituir e diluir conforme bula; não misturar com soluções incompatíveis.",
+      "infusionProtocol": "Infundir 10 ou 7,5 mg/kg durante 60 min conforme função renal.",
+      "pregnancy": "Pode causar dano fetal; verificar estado gestacional antes e usar contracepção eficaz durante e por 2 dias após o tratamento.",
+      "lactation": "Dados humanos são insuficientes; avaliar risco-benefício.",
+      "specialPopulations": "HABP/VABP com CrCl <=50 apresenta sinal de mortalidade maior; reavaliar alternativas e risco-benefício.",
+      "patientEducation": "Relatar redução da diurese, palpitações ou reação infusional; informar gestação e uso de heparina.",
+      "clinicalPearls": "Telavancina combina potência anti-MRSA com três alertas práticos: rim, QT e interferência de coagulação; heparina IV é incompatível do ponto de vista laboratorial/rotulado.",
+      "guidelineRecommendations": "Reservar HABP/VABP para situações em que alternativas não sejam adequadas e sempre ponderar o sinal de mortalidade quando CrCl basal <=50 mL/min.",
+      "safetyFlags": [
+        "MRSA",
+        "Nefrotoxicidade",
+        "CrCl <=50 mortalidade HABP/VABP",
+        "Heparina IV contraindicada",
+        "QT/gestação"
+      ],
+      "alerts": [
+        "10 mg/kg q24h",
+        "CrCl 30–50: 7,5 mg/kg q24h",
+        "CrCl 10–<30: 10 mg/kg q48h",
+        "Infusão 60 min",
+        "Renal q48–72h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5359b759-db7c-4672-9e8a-59c93869bd91",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9fc67b76-9ba1-45ec-9749-ca3f3a6477d9&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/mrsa/",
+        "https://clinicaltrials.gov/search?term=telavancin",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=telavancin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5359b759-db7c-4672-9e8a-59c93869bd91",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9fc67b76-9ba1-45ec-9749-ca3f3a6477d9&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/mrsa/",
+        "https://clinicaltrials.gov/search?term=telavancin",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=telavancin"
+      ]
+    },
+    "es": {
+      "name": "Telavancina",
+      "class": "Lipoglucopéptido anti-MRSA",
+      "pharmacologicClass": "Lipoglucopéptido bactericida con acción en pared y membrana",
+      "mechanism": "Se une a D-Ala-D-Ala, inhibe pared y altera potencial de membrana.",
+      "pharmacodynamics": "AUC/MIC es índice PK/PD. Activa contra Gram positivos susceptibles incluido MRSA.",
+      "pharmacokinetics": "Solo IV; alta unión proteica y eliminación renal predominante.",
+      "indications": "Adultos: cSSSI y HABP/VABP por S. aureus susceptible cuando alternativas no son adecuadas.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo IV.",
+      "presentations": [
+        "250 mg",
+        "750 mg"
+      ],
+      "dose": "ClCr >50: 10 mg/kg IV q24h en 60 min. cSSSI 7–14 días; HABP/VABP 7–21 días.",
+      "pediatricDose": "Seguridad/eficacia pediátrica no establecidas; sin régimen aprobado.",
+      "renalDose": "ClCr 30–50: 7,5 mg/kg q24h; 10–<30: 10 mg/kg q48h. <10/HD: datos insuficientes.",
+      "hepaticDose": "Sin ajuste rutinario en hepatopatía leve/moderada; datos limitados en grave.",
+      "commonAdverseEffects": [
+        "Alteración del gusto",
+        "Náuseas",
+        "Vómitos",
+        "Orina espumosa",
+        "Reacción infusional"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidad",
+        "Mayor mortalidad HABP/VABP con ClCr <=50",
+        "QT prolongado",
+        "Anafilaxia",
+        "Toxicidad fetal"
+      ],
+      "adverseEffects": "Nefrotoxicidad es central y se observó mayor mortalidad en neumonía hospitalaria con ClCr basal <=50.",
+      "contraindications": "Heparina no fraccionada IV contraindicada por interferencia con aPTT; hipersensibilidad grave.",
+      "interactions": "Interfiere PT/INR/aPTT; evitar otros fármacos que prolonguen QT cuando sea posible.",
+      "monitoring": "Función renal antes, cada 48–72 h o más, y al final; ECG/electrolitos si riesgo QT.",
+      "administration": "Solo IV en 60 min.",
+      "preparation": "Reconstituir/diluir según ficha.",
+      "infusionProtocol": "Infundir en 60 min.",
+      "pregnancy": "Puede causar daño fetal; verificar embarazo y usar anticoncepción durante y 2 días después.",
+      "lactation": "Datos insuficientes.",
+      "specialPopulations": "HABP/VABP con ClCr <=50: reevaluar alternativas por señal de mortalidad.",
+      "patientEducation": "Informar menor diuresis, palpitaciones, reacción infusional, embarazo o heparina.",
+      "clinicalPearls": "Tres alertas prácticos: riñón, QT e interferencia de coagulación; heparina IV está contraindicada durante telavancina.",
+      "guidelineRecommendations": "Reservar HABP/VABP cuando alternativas no sean adecuadas y ponderar especialmente riesgo/beneficio con ClCr basal <=50 mL/min.",
+      "safetyFlags": [
+        "MRSA",
+        "Nefrotoxicidad",
+        "ClCr <=50 mortalidad HABP/VABP",
+        "Heparina IV contraindicada",
+        "QT/embarazo"
+      ],
+      "alerts": [
+        "10 mg/kg q24h",
+        "ClCr 30–50: 7,5 mg/kg q24h",
+        "ClCr 10–<30: 10 mg/kg q48h",
+        "Infusión 60 min",
+        "Renal q48–72h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5359b759-db7c-4672-9e8a-59c93869bd91",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9fc67b76-9ba1-45ec-9749-ca3f3a6477d9&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/mrsa/",
+        "https://clinicaltrials.gov/search?term=telavancin",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=telavancin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5359b759-db7c-4672-9e8a-59c93869bd91",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9fc67b76-9ba1-45ec-9749-ca3f3a6477d9&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/mrsa/",
+        "https://clinicaltrials.gov/search?term=telavancin",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=telavancin"
+      ]
+    }
+  },
+  "plazomicina": {
+    "pt": {
+      "name": "Plazomicina",
+      "class": "Aminoglicosídeo de nova geração",
+      "pharmacologicClass": "Aminoglicosídeo semissintético inibidor da subunidade 30S",
+      "mechanism": "Liga-se à subunidade 30S, causa erro de leitura do mRNA e síntese de proteínas defeituosas, levando à morte bacteriana.",
+      "pharmacodynamics": "Bactericida concentração-dependente; Cmax/MIC e AUC/MIC orientam eficácia.",
+      "pharmacokinetics": "Somente IV, baixo volume de distribuição e eliminação renal quase integralmente inalterada.",
+      "indications": "Adultos >=18 anos com cUTI, incluindo pielonefrite, por Gram-negativos suscetíveis quando opções apropriadas são limitadas.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Solução para infusão IV.",
+      "presentations": [
+        "500 mg/10 mL (50 mg/mL)"
+      ],
+      "dose": "CrCl >=90: 15 mg/kg IV q24h durante 30 min por 4–7 dias; pode ocorrer step-down oral para completar 7–10 dias totais.",
+      "pediatricDose": "Segurança e eficácia abaixo de 18 anos não estabelecidas na bula atual; não extrapolar dose adulta.",
+      "renalDose": "CrCl 60–<90: 15 mg/kg q24h; 30–<60: 10 mg/kg q24h; 15–<30: 10 mg/kg q48h. <15 ou RRT/HD/CRRT: informação insuficiente.",
+      "hepaticDose": "Sem ajuste hepático rotineiro esperado; não sofre metabolismo hepático clinicamente relevante.",
+      "commonAdverseEffects": [
+        "Redução transitória da função renal",
+        "Diarreia",
+        "Hipertensão",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidade",
+        "Ototoxicidade irreversível",
+        "Bloqueio neuromuscular",
+        "Dano fetal de classe"
+      ],
+      "adverseEffects": "Aminoglicosídeos podem causar lesão renal e coclear/vestibular; ototoxicidade pode ser irreversível.",
+      "contraindications": "Hipersensibilidade grave à plazomicina ou aminoglicosídeos.",
+      "interactions": "Evitar ou monitorar intensamente outros nefro/ototóxicos e bloqueadores neuromusculares.",
+      "monitoring": "Calcular CrCl antes e diariamente. Se CrCl 15–<90, fazer TDM visando trough <3 mcg/mL, medido ~30 min antes da segunda dose.",
+      "administration": "IV em 30 min. Dosear pelo peso corporal total; se TBW >=25% acima do IBW, usar peso ajustado = IBW + 0,4 x (TBW-IBW).",
+      "preparation": "Diluir a dose calculada em solução compatível conforme bula.",
+      "infusionProtocol": "Infusão de 30 min; não administrar em bolus.",
+      "pregnancy": "Aminoglicosídeos podem causar dano fetal, incluindo ototoxicidade; evitar salvo necessidade clara.",
+      "lactation": "Dados humanos limitados; avaliar risco-benefício.",
+      "specialPopulations": "Obesidade exige peso ajustado quando TBW >=25% acima do IBW. Não há regime confiável para RRT.",
+      "patientEducation": "Relatar zumbido, perda auditiva, vertigem ou redução da diurese; realizar exames renais e TDM conforme orientado.",
+      "clinicalPearls": "Plazomicina é aminoglicosídeo de precisão: peso, CrCl diário e TDM em DRC fazem parte do regime, não são opcionais.",
+      "guidelineRecommendations": "IDSA 2026 inclui plazomicina como alternativa aminoglicosídica para cUTI por CRE suscetível; usar AST e preferir agentes menos tóxicos quando apropriado.",
+      "safetyFlags": [
+        "Nefrotoxicidade",
+        "Ototoxicidade",
+        "TDM se CrCl 15–<90",
+        "Peso ajustado se obesidade",
+        "Sem regime RRT"
+      ],
+      "alerts": [
+        "15 mg/kg q24h se CrCl >=60",
+        "CrCl 30–<60: 10 mg/kg q24h",
+        "15–<30: 10 mg/kg q48h",
+        "Trough <3 mcg/mL",
+        "Infusão 30 min"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eccf9fd9-53ac-4252-a106-5567b3a82a70",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=eccf9fd9-53ac-4252-a106-5567b3a82a70&type=display",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-complicated-urinary-tract-infections",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=plazomicin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eccf9fd9-53ac-4252-a106-5567b3a82a70",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=eccf9fd9-53ac-4252-a106-5567b3a82a70&type=display",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-complicated-urinary-tract-infections",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=plazomicin"
+      ]
+    },
+    "es": {
+      "name": "Plazomicina",
+      "class": "Aminoglucósido de nueva generación",
+      "pharmacologicClass": "Aminoglucósido semisintético inhibidor 30S",
+      "mechanism": "Se une a 30S, induce lectura errónea de mRNA y proteínas defectuosas, causando muerte bacteriana.",
+      "pharmacodynamics": "Bactericida concentración-dependiente; Cmax/MIC y AUC/MIC orientan eficacia.",
+      "pharmacokinetics": "Solo IV, bajo volumen de distribución y eliminación renal casi totalmente sin cambios.",
+      "indications": "Adultos >=18 con cUTI/pielonefritis por Gram negativos susceptibles cuando las opciones son limitadas.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Solución IV.",
+      "presentations": [
+        "500 mg/10 mL (50 mg/mL)"
+      ],
+      "dose": "ClCr >=90: 15 mg/kg IV q24h en 30 min por 4–7 días; puede hacerse step-down oral hasta 7–10 días totales.",
+      "pediatricDose": "Seguridad/eficacia <18 años no establecidas; no extrapolar adulto.",
+      "renalDose": "ClCr 60–<90: 15 mg/kg q24h; 30–<60: 10 mg/kg q24h; 15–<30: 10 mg/kg q48h. <15 o RRT/HD/CRRT: información insuficiente.",
+      "hepaticDose": "Sin ajuste hepático rutinario esperado.",
+      "commonAdverseEffects": [
+        "Deterioro renal transitorio",
+        "Diarrea",
+        "Hipertensión",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "Nefrotoxicidad",
+        "Ototoxicidad irreversible",
+        "Bloqueo neuromuscular",
+        "Daño fetal de clase"
+      ],
+      "adverseEffects": "Puede causar lesión renal y coclear/vestibular; ototoxicidad puede ser irreversible.",
+      "contraindications": "Hipersensibilidad grave a plazomicina/aminoglucósidos.",
+      "interactions": "Evitar o vigilar nefro/ototóxicos y bloqueadores neuromusculares.",
+      "monitoring": "ClCr antes y diariamente. Si 15–<90, TDM con trough <3 mcg/mL, ~30 min antes de segunda dosis.",
+      "administration": "IV 30 min. TBW; si TBW >=25% sobre IBW usar peso ajustado = IBW + 0,4 x (TBW-IBW).",
+      "preparation": "Diluir dosis calculada según ficha.",
+      "infusionProtocol": "Infusión 30 min, no bolo.",
+      "pregnancy": "Aminoglucósidos pueden causar daño fetal/ototoxicidad.",
+      "lactation": "Datos limitados.",
+      "specialPopulations": "Obesidad requiere peso ajustado; sin régimen fiable para RRT.",
+      "patientEducation": "Informar tinnitus, hipoacusia, vértigo o menor diuresis.",
+      "clinicalPearls": "Peso, ClCr diario y TDM en ERC son parte esencial del régimen de plazomicina.",
+      "guidelineRecommendations": "IDSA 2026 incluye plazomicina como alternativa para cUTI por CRE susceptible; usar AST y preferir opciones menos tóxicas cuando sean apropiadas.",
+      "safetyFlags": [
+        "Nefrotoxicidad",
+        "Ototoxicidad",
+        "TDM ClCr 15–<90",
+        "Peso ajustado obesidad",
+        "Sin régimen RRT"
+      ],
+      "alerts": [
+        "15 mg/kg q24h si ClCr >=60",
+        "ClCr 30–<60: 10 mg/kg q24h",
+        "15–<30: 10 mg/kg q48h",
+        "Trough <3 mcg/mL",
+        "Infusión 30 min"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eccf9fd9-53ac-4252-a106-5567b3a82a70",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=eccf9fd9-53ac-4252-a106-5567b3a82a70&type=display",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-complicated-urinary-tract-infections",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=plazomicin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eccf9fd9-53ac-4252-a106-5567b3a82a70",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=eccf9fd9-53ac-4252-a106-5567b3a82a70&type=display",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-complicated-urinary-tract-infections",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=plazomicin"
+      ]
+    }
+  },
+  "espiramicina": {
+    "pt": {
+      "name": "Espiramicina",
+      "class": "Macrolídeo",
+      "pharmacologicClass": "Macrolídeo inibidor da subunidade ribossomal 50S",
+      "mechanism": "Liga-se à subunidade 50S e inibe translocação/síntese proteica.",
+      "pharmacodynamics": "Predominantemente bacteriostática; concentra-se bem em tecidos e placenta. A atividade clínica depende do patógeno e indicação.",
+      "pharmacokinetics": "VO, distribuição tecidual ampla e metabolismo hepático/biliar predominante; eliminação renal é limitada.",
+      "indications": "Indicações antibacterianas variam por país. Em toxoplasmose gestacional, é usada para reduzir transmissão fetal quando infecção materna ocorreu/foi diagnosticada antes de 18 semanas e infecção fetal não é documentada/suspeita.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos, frequentemente expressos em milhões de unidades internacionais.",
+      "presentations": [
+        "3 MIU comprimido conforme produto"
+      ],
+      "dose": "Uso antibacteriano adulto em bula internacional: 6–9 MIU/dia VO divididos em 2–3 doses. Toxoplasmose gestacional costuma usar 9 MIU/dia divididos TID em protocolos especializados.",
+      "pediatricDose": "Não há um regime pediátrico universal atual aplicável a todas as indicações; seguir bula local e especialista. Não extrapolar a dose adulta.",
+      "renalDose": "Geralmente não requer ajuste renal relevante devido à baixa eliminação renal; dados em falência renal grave são limitados.",
+      "hepaticDose": "Usar cautela em hepatopatia importante; metabolismo/eliminações hepatobiliares predominam e não existe tabela universal de ajuste.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Dor abdominal",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "QT prolongado/arrítmia rara",
+        "Hepatotoxicidade",
+        "C. difficile"
+      ],
+      "adverseEffects": "Eventos GI são comuns; macrolídeos podem prolongar QT e causar lesão hepática rara.",
+      "contraindications": "Hipersensibilidade grave a espiramicina/macrolídeos; considerar contraindicações locais relacionadas a QT/interações.",
+      "interactions": "Revisar outros fármacos que prolongam QT e interações de macrolídeos conforme produto local.",
+      "monitoring": "Sintomas GI, função hepática se curso prolongado e ECG/eletrólitos em pacientes com risco de QT.",
+      "administration": "VO; relação com alimentos depende do produto local.",
+      "preparation": "Comprimidos prontos; não há preparação IV padronizada universal para este registro.",
+      "infusionProtocol": "Não aplicável às formulações orais usuais.",
+      "pregnancy": "CDC 2026 recomenda espiramicina quando infecção materna é adquirida/diagnosticada antes de 18 semanas e infecção fetal não está documentada/suspeita; é mais eficaz se iniciada até 8 semanas da soroconversão.",
+      "lactation": "Dados variam por produto; avaliar risco-benefício e possível exposição do lactente.",
+      "specialPopulations": "Nos EUA não é comercialmente disponível e é obtida via FDA. Se >=18 semanas ou houver infecção fetal documentada/suspeita, CDC recomenda pirimetamina + sulfadiazina + leucovorina em vez de espiramicina.",
+      "patientEducation": "Na gestação, explicar que o objetivo é reduzir transmissão fetal e que o esquema muda se a infecção fetal for confirmada ou a aquisição ocorrer mais tarde.",
+      "clinicalPearls": "O ponto decisório não é apenas a dose: antes de 18 semanas e sem evidência fetal, espiramicina; com infecção fetal suspeita/documentada ou aquisição tardia, muda-se a estratégia.",
+      "guidelineRecommendations": "CDC 2026 recomenda espiramicina para toxoplasmose materna adquirida/diagnosticada antes de 18 semanas sem infecção fetal documentada ou suspeita, idealmente iniciada rapidamente após soroconversão.",
+      "safetyFlags": [
+        "Toxoplasmose gestacional",
+        "<18 semanas sem infecção fetal",
+        "9 MIU/dia em protocolos",
+        "QT/hepatotoxicidade",
+        "Não comercial nos EUA"
+      ],
+      "alerts": [
+        "Adulto antibacteriano 6–9 MIU/dia",
+        "Toxo gestacional frequentemente 9 MIU/dia TID",
+        "CDC: antes de 18 semanas",
+        "Iniciar cedo após soroconversão",
+        "Feto infectado: outro esquema"
+      ],
+      "references": [
+        "https://www.cdc.gov/toxoplasmosis/hcp/clinical-care/index.html",
+        "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/toxoplasma-gondii-encephalitis",
+        "https://www.sanofi.com/assets/countries/turkey/docs/products/prescription-products/R/rovamycine-3-miu-film-kapli-tablet-kub.pdf",
+        "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html",
+        "https://www.who.int/publications/i/item/9789240095368",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=spiramycin+toxoplasmosis+pregnancy"
+      ],
+      "ref": [
+        "https://www.cdc.gov/toxoplasmosis/hcp/clinical-care/index.html",
+        "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/toxoplasma-gondii-encephalitis",
+        "https://www.sanofi.com/assets/countries/turkey/docs/products/prescription-products/R/rovamycine-3-miu-film-kapli-tablet-kub.pdf",
+        "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html",
+        "https://www.who.int/publications/i/item/9789240095368",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=spiramycin+toxoplasmosis+pregnancy"
+      ]
+    },
+    "es": {
+      "name": "Espiramicina",
+      "class": "Macrólido",
+      "pharmacologicClass": "Macrólido inhibidor de la subunidad 50S",
+      "mechanism": "Se une a 50S e inhibe translocación/síntesis proteica.",
+      "pharmacodynamics": "Principalmente bacteriostática; buena concentración tisular/placentaria.",
+      "pharmacokinetics": "VO, amplia distribución y metabolismo/eliminación hepatobiliar predominante.",
+      "indications": "Indicaciones antibacterianas varían por país. En toxoplasmosis gestacional se usa para reducir transmisión fetal si infección materna fue adquirida/diagnosticada antes de 18 semanas y no hay infección fetal documentada/sospechada.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos expresados frecuentemente en millones de UI.",
+      "presentations": [
+        "3 MUI comprimido según producto"
+      ],
+      "dose": "Uso antibacteriano adulto: 6–9 MUI/día VO divididos 2–3 veces. Toxoplasmosis gestacional suele usar 9 MUI/día TID en protocolos especializados.",
+      "pediatricDose": "No existe un régimen pediátrico universal actual para todas las indicaciones; seguir ficha local/especialista.",
+      "renalDose": "Generalmente sin ajuste renal relevante por baja eliminación renal; datos limitados en fallo grave.",
+      "hepaticDose": "Usar cautela en hepatopatía importante; sin tabla universal de ajuste.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Dolor abdominal",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "QT prolongado/arritmia rara",
+        "Hepatotoxicidad",
+        "C. difficile"
+      ],
+      "adverseEffects": "Eventos GI frecuentes; macrólidos pueden prolongar QT y causar lesión hepática rara.",
+      "contraindications": "Hipersensibilidad grave a espiramicina/macrólidos.",
+      "interactions": "Revisar otros fármacos que prolongan QT e interacciones según producto.",
+      "monitoring": "Síntomas GI, función hepática si curso prolongado y ECG/electrolitos si riesgo QT.",
+      "administration": "VO; relación con alimentos según producto.",
+      "preparation": "Comprimidos listos.",
+      "infusionProtocol": "No aplicable a formulación oral habitual.",
+      "pregnancy": "CDC 2026 recomienda espiramicina si infección materna se adquiere/diagnostica antes de 18 semanas y no hay infección fetal documentada/sospechada; mayor beneficio si se inicia dentro de 8 semanas de seroconversión.",
+      "lactation": "Valorar riesgo-beneficio.",
+      "specialPopulations": "En EUA no está comercialmente disponible y se obtiene vía FDA. Si >=18 semanas o infección fetal documentada/sospechada, CDC recomienda pirimetamina+sulfadiazina+leucovorina.",
+      "patientEducation": "Explicar que el objetivo es reducir transmisión fetal y que el esquema cambia si se confirma infección fetal.",
+      "clinicalPearls": "La decisión depende del momento gestacional y estado fetal, no solo de la dosis: antes de 18 semanas sin infección fetal favorece espiramicina.",
+      "guidelineRecommendations": "CDC 2026 recomienda espiramicina para infección materna antes de 18 semanas sin infección fetal documentada/sospechada, idealmente iniciada pronto tras seroconversión.",
+      "safetyFlags": [
+        "Toxoplasmosis gestacional",
+        "<18 semanas sin infección fetal",
+        "9 MUI/día en protocolos",
+        "QT/hepatotoxicidad",
+        "No comercial en EUA"
+      ],
+      "alerts": [
+        "Adulto 6–9 MUI/día",
+        "Toxo frecuentemente 9 MUI/día TID",
+        "CDC antes de 18 semanas",
+        "Inicio precoz",
+        "Feto infectado: otro esquema"
+      ],
+      "references": [
+        "https://www.cdc.gov/toxoplasmosis/hcp/clinical-care/index.html",
+        "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/toxoplasma-gondii-encephalitis",
+        "https://www.sanofi.com/assets/countries/turkey/docs/products/prescription-products/R/rovamycine-3-miu-film-kapli-tablet-kub.pdf",
+        "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html",
+        "https://www.who.int/publications/i/item/9789240095368",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=spiramycin+toxoplasmosis+pregnancy"
+      ],
+      "ref": [
+        "https://www.cdc.gov/toxoplasmosis/hcp/clinical-care/index.html",
+        "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/toxoplasma-gondii-encephalitis",
+        "https://www.sanofi.com/assets/countries/turkey/docs/products/prescription-products/R/rovamycine-3-miu-film-kapli-tablet-kub.pdf",
+        "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html",
+        "https://www.who.int/publications/i/item/9789240095368",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=spiramycin+toxoplasmosis+pregnancy"
+      ]
+    }
+  },
+  "roxitromicina": {
+    "pt": {
+      "name": "Roxitromicina",
+      "class": "Macrolídeo semissintético",
+      "pharmacologicClass": "Macrolídeo inibidor da subunidade 50S",
+      "mechanism": "Liga-se à subunidade 50S e inibe síntese proteica por bloqueio da translocação.",
+      "pharmacodynamics": "Predominantemente bacteriostática; AUC/MIC relaciona-se à exposição. Resistência MLSB pode conferir resistência cruzada.",
+      "pharmacokinetics": "VO, boa penetração tecidual, alta ligação proteica e eliminação principalmente hepatobiliar; meia-vida prolonga-se na hepatopatia.",
+      "indications": "Infecções leves/moderadas de vias respiratórias, odontogênicas, pele e uretrite não gonocócica por organismos suscetíveis, conforme bula local.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos revestidos.",
+      "presentations": [
+        "150 mg",
+        "300 mg"
+      ],
+      "dose": "Adulto: 300 mg/dia, como 300 mg uma vez ao dia ou 150 mg BID. Curso usual 5–10 dias; faringite estreptocócica deve completar 10 dias.",
+      "pediatricDose": "5–8 mg/kg/dia divididos BID, por no máximo 10 dias; crianças >=40 kg podem usar 150 mg BID conforme bula neozelandesa.",
+      "renalDose": "Redução geralmente não é necessária na insuficiência renal durante os cursos curtos usuais.",
+      "hepaticDose": "Insuficiência hepática grave: reduzir pela metade para 150 mg uma vez ao dia.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Dor abdominal",
+        "Diarreia",
+        "Cefaleia"
+      ],
+      "dangerousAdverseEffects": [
+        "QT prolongado/Torsades",
+        "Anafilaxia",
+        "Hepatotoxicidade",
+        "Neutropenia pediátrica",
+        "C. difficile"
+      ],
+      "adverseEffects": "QT prolongado e arritmias são riscos de classe; há alerta cardiovascular recente e neutropenia foi descrita em crianças.",
+      "contraindications": "Hipersensibilidade a macrolídeos e uso concomitante de alcaloides ergotamínicos vasoconstritores.",
+      "interactions": "Ergotamina/dihidroergotamina são contraindicadas; revisar fármacos que prolongam QT. Anticoagulantes cumarínicos exigem controle de INR.",
+      "monitoring": "ECG/eletrólitos se risco de QT, função hepática, INR se cumarínico e hemograma em criança se clinicamente indicado.",
+      "administration": "Tomar pelo menos 15 min antes da comida ou em jejum, mais de 3 h após uma refeição; engolir comprimido inteiro.",
+      "preparation": "Comprimido pronto para uso.",
+      "infusionProtocol": "Não aplicável; formulação oral.",
+      "pregnancy": "Dados humanos não são suficientes para uso indiscriminado; seguir bula e considerar alternativas mais estabelecidas.",
+      "lactation": "Pequenas quantidades podem passar ao leite; avaliar risco-benefício.",
+      "specialPopulations": "Idosos podem ser mais suscetíveis a QT. Hepatopatia grave exige redução de dose.",
+      "patientEducation": "Tomar em jejum e informar palpitações, síncope, icterícia ou uso de ergotamínicos/anticoagulantes.",
+      "clinicalPearls": "Roxitromicina é macrolídeo oral de 300 mg/dia; o manejo seguro depende de jejum, QT/interações e redução para 150 mg/dia na hepatopatia grave.",
+      "guidelineRecommendations": "Usar apenas onde o produto esteja autorizado e a suscetibilidade local sustente seu emprego; evitar escolha empírica quando resistência a macrolídeos for elevada.",
+      "safetyFlags": [
+        "300 mg/dia",
+        "Pediatria 5–8 mg/kg/dia",
+        "Hepática grave 150 mg/dia",
+        "QT/Torsades",
+        "Ergot contraindicada"
+      ],
+      "alerts": [
+        "300 mg QD ou 150 mg BID",
+        "Pediatria 5–8 mg/kg/dia BID",
+        "Hepática grave 150 mg QD",
+        "Jejum",
+        "GAS 10 dias"
+      ],
+      "references": [
+        "https://www.medsafe.govt.nz/profs/Datasheet/a/ArrowRoxithromycintab.pdf",
+        "https://www.medsafe.govt.nz/profs/Datasheet/datasheet.htm",
+        "https://www.tga.gov.au/resources/artg",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=roxithromycin",
+        "https://www.who.int/publications/i/item/2021-aware-classification",
+        "https://www.ncbi.nlm.nih.gov/books/?term=roxithromycin"
+      ],
+      "ref": [
+        "https://www.medsafe.govt.nz/profs/Datasheet/a/ArrowRoxithromycintab.pdf",
+        "https://www.medsafe.govt.nz/profs/Datasheet/datasheet.htm",
+        "https://www.tga.gov.au/resources/artg",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=roxithromycin",
+        "https://www.who.int/publications/i/item/2021-aware-classification",
+        "https://www.ncbi.nlm.nih.gov/books/?term=roxithromycin"
+      ]
+    },
+    "es": {
+      "name": "Roxitromicina",
+      "class": "Macrólido semisintético",
+      "pharmacologicClass": "Macrólido inhibidor de 50S",
+      "mechanism": "Se une a 50S e inhibe síntesis proteica por bloqueo de translocación.",
+      "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC se relaciona con exposición. Resistencia MLSB puede causar resistencia cruzada.",
+      "pharmacokinetics": "VO, buena penetración tisular, alta unión proteica y eliminación hepatobiliar; semivida aumenta en hepatopatía.",
+      "indications": "Infecciones leves/moderadas respiratorias, dentales, piel y uretritis no gonocócica susceptibles según ficha local.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos recubiertos.",
+      "presentations": [
+        "150 mg",
+        "300 mg"
+      ],
+      "dose": "Adulto 300 mg/día como 300 mg QD o 150 mg BID. Curso habitual 5–10 días; faringitis estreptocócica 10 días.",
+      "pediatricDose": "5–8 mg/kg/día dividido BID, máximo 10 días; >=40 kg puede usar 150 mg BID según ficha NZ.",
+      "renalDose": "Generalmente sin reducción en insuficiencia renal durante cursos cortos.",
+      "hepaticDose": "Insuficiencia hepática grave: reducir a 150 mg una vez al día.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Dolor abdominal",
+        "Diarrea",
+        "Cefalea"
+      ],
+      "dangerousAdverseEffects": [
+        "QT/Torsades",
+        "Anafilaxia",
+        "Hepatotoxicidad",
+        "Neutropenia pediátrica",
+        "C. difficile"
+      ],
+      "adverseEffects": "QT y arritmia son riesgos de clase; existe advertencia cardiovascular y neutropenia pediátrica.",
+      "contraindications": "Hipersensibilidad a macrólidos y alcaloides ergotamínicos vasoconstrictores concomitantes.",
+      "interactions": "Ergotamina/dihidroergotamina contraindicadas; revisar QT. Cumarínicos requieren INR.",
+      "monitoring": "ECG/electrolitos si riesgo QT, hígado, INR y hemograma en niños cuando proceda.",
+      "administration": "Tomar >=15 min antes de comida o >3 h después; tragar entero.",
+      "preparation": "Comprimido listo.",
+      "infusionProtocol": "No aplicable; oral.",
+      "pregnancy": "Datos humanos limitados; considerar alternativas con mayor experiencia.",
+      "lactation": "Pequeñas cantidades pueden pasar a leche.",
+      "specialPopulations": "Ancianos más sensibles a QT; hepatopatía grave reduce dosis.",
+      "patientEducation": "Tomar en ayunas e informar palpitaciones, síncope, ictericia o uso de ergot/anticoagulantes.",
+      "clinicalPearls": "Macrólido oral 300 mg/día; seguridad depende de ayuno, QT/interacciones y reducción a 150 mg/día en hepatopatía grave.",
+      "guidelineRecommendations": "Usar solo donde esté autorizado y susceptibilidad local lo apoye; evitar elección empírica con alta resistencia a macrólidos.",
+      "safetyFlags": [
+        "300 mg/día",
+        "Pediatría 5–8 mg/kg/día",
+        "Hepática grave 150 mg/día",
+        "QT/Torsades",
+        "Ergot contraindicada"
+      ],
+      "alerts": [
+        "300 mg QD o 150 mg BID",
+        "Pediatría 5–8 mg/kg/día BID",
+        "Hepática grave 150 mg QD",
+        "Ayunas",
+        "GAS 10 días"
+      ],
+      "references": [
+        "https://www.medsafe.govt.nz/profs/Datasheet/a/ArrowRoxithromycintab.pdf",
+        "https://www.medsafe.govt.nz/profs/Datasheet/datasheet.htm",
+        "https://www.tga.gov.au/resources/artg",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=roxithromycin",
+        "https://www.who.int/publications/i/item/2021-aware-classification",
+        "https://www.ncbi.nlm.nih.gov/books/?term=roxithromycin"
+      ],
+      "ref": [
+        "https://www.medsafe.govt.nz/profs/Datasheet/a/ArrowRoxithromycintab.pdf",
+        "https://www.medsafe.govt.nz/profs/Datasheet/datasheet.htm",
+        "https://www.tga.gov.au/resources/artg",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=roxithromycin",
+        "https://www.who.int/publications/i/item/2021-aware-classification",
+        "https://www.ncbi.nlm.nih.gov/books/?term=roxithromycin"
+      ]
+    }
+  },
+  "solitromicina": {
+    "pt": {
+      "name": "Solitromicina",
+      "class": "Fluoroquetolídeo investigacional",
+      "pharmacologicClass": "Macrolídeo/quetolídeo investigacional de 4ª geração, inibidor 50S",
+      "mechanism": "Liga-se a múltiplos sítios do ribossomo 50S e inibe síntese proteica, buscando superar alguns mecanismos de resistência a macrolídeos.",
+      "pharmacodynamics": "Exposição AUC/MIC foi estudada como índice PK/PD, mas não há regime clínico rotulado aprovado.",
+      "pharmacokinetics": "Dados de estudos mostram formulações oral e IV, metabolismo hepático relevante e potencial de interações; não existe bula aprovada que defina PK clínica de rotina.",
+      "indications": "Não possui indicação clínica rotineira aprovada nos EUA. Foi estudada principalmente em pneumonia bacteriana adquirida na comunidade.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Produto investigacional; não há apresentação comercial aprovada para uso clínico rotineiro.",
+      "presentations": [
+        "Comprimidos/cápsulas e formulação IV usadas em estudos clínicos, não como produto aprovado"
+      ],
+      "dose": "NÃO é dose recomendada: ensaio fase 3 oral estudou 800 mg no dia 1 e 400 mg VO uma vez ao dia nos dias 2–5. Este é apenas regime de pesquisa.",
+      "pediatricDose": "Não existe dose pediátrica aprovada; não extrapolar regimes de estudos adultos.",
+      "renalDose": "Não existe regime renal aprovado para uso clínico; dados investigacionais não devem ser convertidos em recomendação assistencial.",
+      "hepaticDose": "Não existe regime hepático aprovado. A hepatotoxicidade foi uma preocupação regulatória importante e desaconselha extrapolação de dose.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Cefaleia",
+        "Elevação de aminotransferases"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatotoxicidade",
+        "Hepatite colestática em exposição mais longa",
+        "QT/interações de classe",
+        "Reações de hipersensibilidade"
+      ],
+      "adverseEffects": "O programa regulatório identificou mais elevações de aminotransferases e caso de hepatite colestática em exposição prolongada, impedindo tratar o esquema experimental como padrão.",
+      "contraindications": "Sem bula aprovada não existe conjunto formal de contraindicações para uso clínico; não deve ser usado rotineiramente fora de pesquisa/regulação.",
+      "interactions": "Potenciais interações de macrolídeos/CYP foram avaliadas em estudos, mas não há orientação aprovada para prescrição clínica.",
+      "monitoring": "Em pesquisa, monitorização hepática e ECG são essenciais; fora de estudo, preferir antimicrobianos aprovados.",
+      "administration": "Regimes oral e IV foram experimentais; não há administração clínica aprovada.",
+      "preparation": "Não existe preparação comercial aprovada para rotina.",
+      "infusionProtocol": "Formulação IV foi estudada em ensaios, mas não existe protocolo aprovado de infusão para prática clínica.",
+      "pregnancy": "Segurança clínica aprovada não estabelecida; não usar rotineiramente.",
+      "lactation": "Segurança não estabelecida; não usar rotineiramente.",
+      "specialPopulations": "Não há posologia aprovada para pediatria, DRC ou hepatopatia; hepatotoxicidade é especialmente relevante.",
+      "patientEducation": "Este medicamento é investigacional e não deve ser interpretado como opção prescricional disponível.",
+      "clinicalPearls": "O erro perigoso é transformar dose de ensaio em dose clínica: solitromicina permanece investigacional e o sinal hepático é parte central da sua história regulatória.",
+      "guidelineRecommendations": "Não usar rotineiramente fora de ensaio clínico ou via regulatória específica; para CABP escolher agentes aprovados e recomendados por diretrizes atuais.",
+      "safetyFlags": [
+        "INVESTIGACIONAL",
+        "Sem aprovação clínica rotineira",
+        "Hepatotoxicidade",
+        "Dose de ensaio não é recomendação",
+        "Sem pediatria aprovada"
+      ],
+      "alerts": [
+        "Ensaio oral: 800 mg dia 1",
+        "Depois 400 mg dias 2–5",
+        "REGIME DE PESQUISA",
+        "Sem dose pediátrica aprovada",
+        "Não usar rotineiramente"
+      ],
+      "references": [
+        "https://www.fda.gov/advisory-committees/advisory-committee-calendar/november-4-2016-meeting-antimicrobial-drugs-advisory-committee-11032016",
+        "https://www.fda.gov/files/advisory%20committees/published/FDA-Briefing-Information-for-the-November-4--2016-Meeting-of-the-Antimicrobial-Drugs-Advisory-Committee.pdf",
+        "https://clinicaltrials.gov/study/NCT01756339",
+        "https://clinicaltrials.gov/study/NCT01968733",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=solithromycin",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://www.fda.gov/advisory-committees/advisory-committee-calendar/november-4-2016-meeting-antimicrobial-drugs-advisory-committee-11032016",
+        "https://www.fda.gov/files/advisory%20committees/published/FDA-Briefing-Information-for-the-November-4--2016-Meeting-of-the-Antimicrobial-Drugs-Advisory-Committee.pdf",
+        "https://clinicaltrials.gov/study/NCT01756339",
+        "https://clinicaltrials.gov/study/NCT01968733",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=solithromycin",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    },
+    "es": {
+      "name": "Solitromicina",
+      "class": "Fluoroquetólido investigacional",
+      "pharmacologicClass": "Macrólido/quetólido investigacional de 4ª generación, inhibidor 50S",
+      "mechanism": "Se une a múltiples sitios de 50S e inhibe síntesis proteica, buscando superar ciertos mecanismos de resistencia.",
+      "pharmacodynamics": "AUC/MIC fue estudiada como índice PK/PD, pero no existe régimen clínico aprobado.",
+      "pharmacokinetics": "Estudios evaluaron formulaciones oral/IV y metabolismo hepático; no existe ficha aprobada para práctica habitual.",
+      "indications": "Sin indicación clínica rutinaria aprobada en EUA. Estudiada principalmente en CABP.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Producto investigacional, sin presentación comercial aprobada de rutina.",
+      "presentations": [
+        "Formulaciones oral e IV usadas en estudios, no como producto clínico aprobado"
+      ],
+      "dose": "NO es dosis recomendada: fase 3 oral estudió 800 mg día 1 y 400 mg VO QD días 2–5. Es solo régimen de investigación.",
+      "pediatricDose": "No existe dosis pediátrica aprobada; no extrapolar ensayos adultos.",
+      "renalDose": "No existe régimen renal aprobado; no convertir datos investigacionales en recomendación clínica.",
+      "hepaticDose": "No existe régimen hepático aprobado. Hepatotoxicidad fue preocupación regulatoria central.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Cefalea",
+        "Elevación de aminotransferasas"
+      ],
+      "dangerousAdverseEffects": [
+        "Hepatotoxicidad",
+        "Hepatitis colestásica con exposición prolongada",
+        "QT/interacciones de clase",
+        "Hipersensibilidad"
+      ],
+      "adverseEffects": "El programa regulatorio mostró más elevaciones de aminotransferasas y un caso de hepatitis colestásica en exposición prolongada.",
+      "contraindications": "Sin ficha aprobada no existe conjunto formal para uso rutinario; no debe usarse clínicamente fuera de investigación/regulación.",
+      "interactions": "Interacciones CYP/macrólidos fueron estudiadas, sin guía aprobada de prescripción.",
+      "monitoring": "En investigación: hígado y ECG; fuera de estudio preferir antimicrobianos aprobados.",
+      "administration": "Regímenes oral/IV experimentales; sin administración clínica aprobada.",
+      "preparation": "Sin preparación comercial aprobada.",
+      "infusionProtocol": "IV fue estudiada, pero no existe protocolo aprobado para rutina.",
+      "pregnancy": "Seguridad aprobada no establecida.",
+      "lactation": "Seguridad no establecida.",
+      "specialPopulations": "Sin posología aprobada para pediatría, ERC o hepatopatía.",
+      "patientEducation": "Es investigacional y no debe interpretarse como una opción prescricional disponible.",
+      "clinicalPearls": "No convertir dosis de ensayo en dosis clínica: solitromicina sigue investigacional y la señal hepática es central en su historia regulatoria.",
+      "guidelineRecommendations": "No usar de rutina fuera de ensayo o vía regulatoria específica; para CABP elegir agentes aprobados y respaldados por guías actuales.",
+      "safetyFlags": [
+        "INVESTIGACIONAL",
+        "Sin aprobación rutinaria",
+        "Hepatotoxicidad",
+        "Dosis de ensayo no recomendación",
+        "Sin pediatría aprobada"
+      ],
+      "alerts": [
+        "Ensayo oral 800 mg día 1",
+        "Luego 400 mg días 2–5",
+        "RÉGIMEN DE INVESTIGACIÓN",
+        "Sin dosis pediátrica aprobada",
+        "No uso rutinario"
+      ],
+      "references": [
+        "https://www.fda.gov/advisory-committees/advisory-committee-calendar/november-4-2016-meeting-antimicrobial-drugs-advisory-committee-11032016",
+        "https://www.fda.gov/files/advisory%20committees/published/FDA-Briefing-Information-for-the-November-4--2016-Meeting-of-the-Antimicrobial-Drugs-Advisory-Committee.pdf",
+        "https://clinicaltrials.gov/study/NCT01756339",
+        "https://clinicaltrials.gov/study/NCT01968733",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=solithromycin",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ],
+      "ref": [
+        "https://www.fda.gov/advisory-committees/advisory-committee-calendar/november-4-2016-meeting-antimicrobial-drugs-advisory-committee-11032016",
+        "https://www.fda.gov/files/advisory%20committees/published/FDA-Briefing-Information-for-the-November-4--2016-Meeting-of-the-Antimicrobial-Drugs-Advisory-Committee.pdf",
+        "https://clinicaltrials.gov/study/NCT01756339",
+        "https://clinicaltrials.gov/study/NCT01968733",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=solithromycin",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+      ]
+    }
+  },
+  "espectinomicina": {
+    "pt": {
+      "name": "Espectinomicina",
+      "class": "Antibiótico aminociclitol — NÃO tetraciclina",
+      "pharmacologicClass": "Aminociclitol inibidor da subunidade 30S",
+      "mechanism": "Liga-se à subunidade 30S e interfere na translocação/síntese proteica bacteriana.",
+      "pharmacodynamics": "Bacteriostática em concentrações usuais contra N. gonorrhoeae; atividade depende de suscetibilidade e disponibilidade local.",
+      "pharmacokinetics": "Administração IM, absorção rápida e eliminação predominantemente renal inalterada.",
+      "indications": "Alternativa histórica/local para gonorreia urogenital ou anorretal não complicada quando disponível e suscetível; baixa eficácia em infecção faríngea.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Pó para injeção IM conforme disponibilidade.",
+      "presentations": [
+        "2 g por frasco conforme produto histórico/local"
+      ],
+      "dose": "Regime histórico/local: 2 g IM dose única para gonorreia não complicada. Não é terapia preferida atual nos EUA.",
+      "pediatricDose": "Não há regime pediátrico rotineiro atual universalmente validado; seguir diretriz/local especialista se produto estiver disponível.",
+      "renalDose": "Eliminação renal predominante, mas dose única histórica geralmente não possui tabela universal de ajuste; cautela em DRC grave.",
+      "hepaticDose": "Sem ajuste hepático rotineiro esperado.",
+      "commonAdverseEffects": [
+        "Dor no local da injeção",
+        "Náusea",
+        "Tontura",
+        "Febre"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Falha terapêutica faríngea",
+        "Emergência de resistência"
+      ],
+      "adverseEffects": "Geralmente bem tolerada; o principal problema clínico é eficácia inadequada na faringe e disponibilidade limitada.",
+      "contraindications": "Hipersensibilidade grave à espectinomicina.",
+      "interactions": "Poucas interações clinicamente relevantes descritas; revisar nefrotóxicos em DRC.",
+      "monitoring": "Teste microbiológico conforme diretriz de gonorreia, rastrear outras ISTs e realizar test-of-cure quando indicado pelo sítio/regime.",
+      "administration": "IM profunda em dose única quando utilizada.",
+      "preparation": "Reconstituir o pó com diluente apropriado conforme produto.",
+      "infusionProtocol": "Não aplicável; uso é intramuscular, não infusão IV.",
+      "pregnancy": "Dados históricos existem, mas a terapia preferida atual para gonorreia deve seguir diretrizes contemporâneas.",
+      "lactation": "Dados limitados; avaliar risco-benefício.",
+      "specialPopulations": "CDC relata eficácia de 98,2% em gonorreia urogenital/anorretal, mas eficácia pobre na faringe e indisponibilidade nos EUA.",
+      "patientEducation": "Explicar que a dose única histórica não é a primeira escolha atual e que infecção faríngea exige outro regime.",
+      "clinicalPearls": "Espectinomicina é aminociclitol, não tetraciclina. Seu nicho histórico é gonorreia genital/retal, mas a má eficácia faríngea limita seu papel.",
+      "guidelineRecommendations": "CDC atual não a utiliza como alternativa nos EUA porque está indisponível e tem baixa eficácia faríngea; seguir recomendações atuais, que priorizam ceftriaxona.",
+      "safetyFlags": [
+        "Aminociclitol, não tetraciclina",
+        "2 g IM histórico",
+        "Baixa eficácia faríngea",
+        "Indisponível EUA",
+        "Gonorreia"
+      ],
+      "alerts": [
+        "2 g IM dose única histórica",
+        "Não preferida atualmente",
+        "Eficácia faríngea ruim",
+        "Seguir AST/diretriz local",
+        "Corrigir taxonomia futura"
+      ],
+      "references": [
+        "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+        "https://www.who.int/publications/i/item/9789240090767",
+        "https://www.who.int/publications/i/item/9789241549714",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=spectinomycin+gonorrhea",
+        "https://www.ncbi.nlm.nih.gov/books/?term=spectinomycin",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+        "https://www.who.int/publications/i/item/9789240090767",
+        "https://www.who.int/publications/i/item/9789241549714",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=spectinomycin+gonorrhea",
+        "https://www.ncbi.nlm.nih.gov/books/?term=spectinomycin",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    },
+    "es": {
+      "name": "Espectinomicina",
+      "class": "Antibiótico aminociclitol — NO tetraciclina",
+      "pharmacologicClass": "Aminociclitol inhibidor de 30S",
+      "mechanism": "Se une a 30S e interfiere translocación/síntesis proteica.",
+      "pharmacodynamics": "Bacteriostática frente a N. gonorrhoeae en concentraciones habituales; actividad depende de susceptibilidad.",
+      "pharmacokinetics": "IM, absorción rápida y eliminación renal principalmente sin cambios.",
+      "indications": "Alternativa histórica/local para gonorrea urogenital/anorrectal no complicada cuando disponible/susceptible; baja eficacia faríngea.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Polvo IM según disponibilidad.",
+      "presentations": [
+        "2 g por vial según producto histórico/local"
+      ],
+      "dose": "Régimen histórico/local: 2 g IM dosis única para gonorrea no complicada. No es terapia preferida actual en EUA.",
+      "pediatricDose": "Sin régimen pediátrico rutinario universal actual; seguir guía/local especialista si está disponible.",
+      "renalDose": "Eliminación renal; dosis única histórica no tiene tabla universal de ajuste; cautela en ERC grave.",
+      "hepaticDose": "Sin ajuste hepático rutinario esperado.",
+      "commonAdverseEffects": [
+        "Dolor local",
+        "Náuseas",
+        "Mareo",
+        "Fiebre"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia",
+        "Fracaso terapéutico faríngeo",
+        "Emergencia de resistencia"
+      ],
+      "adverseEffects": "Generalmente bien tolerada; problema central es baja eficacia faríngea y disponibilidad limitada.",
+      "contraindications": "Hipersensibilidad grave a espectinomicina.",
+      "interactions": "Pocas interacciones relevantes; revisar nefrotóxicos en ERC.",
+      "monitoring": "Pruebas microbiológicas según guía de gonorrea, cribado de otras ITS y test-of-cure cuando corresponda.",
+      "administration": "IM profunda en dosis única.",
+      "preparation": "Reconstituir polvo según producto.",
+      "infusionProtocol": "No aplicable; IM, no infusión IV.",
+      "pregnancy": "Seguir guías contemporáneas que priorizan regímenes actuales.",
+      "lactation": "Datos limitados.",
+      "specialPopulations": "CDC informa 98,2% eficacia urogenital/anorrectal, pero pobre eficacia faríngea e indisponibilidad en EUA.",
+      "patientEducation": "La dosis única histórica no es primera elección actual; faringe requiere otro régimen.",
+      "clinicalPearls": "Es aminociclitol, no tetraciclina. Su nicho histórico es gonorrea genital/rectal, limitado por mala eficacia faríngea.",
+      "guidelineRecommendations": "CDC actual no la usa como alternativa en EUA por indisponibilidad y baja eficacia faríngea; las guías actuales priorizan ceftriaxona.",
+      "safetyFlags": [
+        "Aminociclitol, no tetraciclina",
+        "2 g IM histórico",
+        "Baja eficacia faríngea",
+        "No disponible EUA",
+        "Gonorrea"
+      ],
+      "alerts": [
+        "2 g IM dosis única histórica",
+        "No preferida actualmente",
+        "Mala eficacia faríngea",
+        "Seguir guía/AST local",
+        "Corregir taxonomía futura"
+      ],
+      "references": [
+        "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+        "https://www.who.int/publications/i/item/9789240090767",
+        "https://www.who.int/publications/i/item/9789241549714",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=spectinomycin+gonorrhea",
+        "https://www.ncbi.nlm.nih.gov/books/?term=spectinomycin",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ],
+      "ref": [
+        "https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm",
+        "https://www.who.int/publications/i/item/9789240090767",
+        "https://www.who.int/publications/i/item/9789241549714",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=spectinomycin+gonorrhea",
+        "https://www.ncbi.nlm.nih.gov/books/?term=spectinomycin",
+        "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      ]
+    }
+  },
+  "omadaciclina": {
+    "pt": {
+      "name": "Omadaciclina",
+      "class": "Aminometilciclina derivada de tetraciclina",
+      "pharmacologicClass": "Aminometilciclina inibidora da subunidade 30S",
+      "mechanism": "Liga-se à subunidade 30S e bloqueia a incorporação de aminoacil-tRNA, mantendo atividade contra alguns mecanismos de resistência a tetraciclinas.",
+      "pharmacodynamics": "AUC/MIC é o índice PK/PD principal. Atividade inclui vários Gram-positivos, atípicos e alguns Gram-negativos suscetíveis.",
+      "pharmacokinetics": "Disponível IV e VO; biodisponibilidade oral é reduzida por alimentos/cátions. Eliminação fecal e renal; HD não altera clinicamente a exposição.",
+      "indications": "Adultos >=18 anos com CABP ou ABSSSI por organismos suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos e pó IV.",
+      "presentations": [
+        "150 mg comprimido",
+        "100 mg frasco IV"
+      ],
+      "dose": "CABP: dia 1 IV 200 mg em 60 min OU 100 mg BID em 30 min, ou VO 300 mg BID; manutenção 100 mg IV QD ou 300 mg VO QD. ABSSSI: mesmo load IV; opção oral 450 mg QD dias 1–2, depois 300 mg QD.",
+      "pediatricDose": "Segurança e eficácia <18 anos não estabelecidas; tetraciclinas não são recomendadas <8 anos por efeitos em dentes e osso.",
+      "renalDose": "Sem ajuste em qualquer grau de insuficiência renal, inclusive ESRD/HD.",
+      "hepaticDose": "Sem ajuste em Child-Pugh A, B ou C.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Vômito",
+        "Elevação de transaminases",
+        "Reação no local IV"
+      ],
+      "dangerousAdverseEffects": [
+        "Maior mortalidade observada no estudo CABP",
+        "Coloração dentária/efeito ósseo fetal ou infantil",
+        "Anafilaxia",
+        "C. difficile"
+      ],
+      "adverseEffects": "Toxicidades de tetraciclina incluem efeitos em dentes/osso durante desenvolvimento; náusea é especialmente frequente com carga oral.",
+      "contraindications": "Hipersensibilidade a omadaciclina/tetraciclinas.",
+      "interactions": "Alimentos, laticínios, antiácidos e suplementos com cátions reduzem absorção oral; separar rigorosamente.",
+      "monitoring": "Resposta, função hepática e tolerância GI; revisar cultura/AST quando disponível.",
+      "administration": "VO: jejum >=4 h antes; após a dose, apenas água por 2 h e evitar laticínios, antiácidos ou multivitamínicos por 4 h. IV conforme carga/manutenção.",
+      "preparation": "Reconstituir e diluir frasco IV segundo bula.",
+      "infusionProtocol": "200 mg IV em 60 min; 100 mg IV em 30 min.",
+      "pregnancy": "Pode causar dano fetal por efeitos de tetraciclina em dentes e osso, especialmente 2º/3º trimestre.",
+      "lactation": "Evitar amamentação durante e por 4 dias após a última dose conforme bula, quando aplicável.",
+      "specialPopulations": "Adultos apenas; sem ajuste renal ou hepático. Não confundir esquema CABP com esquema oral de ABSSSI.",
+      "patientEducation": "Para comprimidos, jejum e separação de laticínios/cátions são essenciais; explicar risco fetal e dentário.",
+      "clinicalPearls": "Omadaciclina facilita step-down IV-VO sem ajuste renal/hepático, mas a absorção oral é muito sensível a alimento e cátions.",
+      "guidelineRecommendations": "Usar somente para CABP/ABSSSI em adultos quando suscetibilidade e contexto forem adequados; não extrapolar para bacteremia/UTI sem evidência e orientação especializada.",
+      "safetyFlags": [
+        "CABP/ABSSSI adultos",
+        "Jejum oral rigoroso",
+        "Sem ajuste renal",
+        "Sem ajuste hepático",
+        "Tetraciclina fetal/dentes"
+      ],
+      "alerts": [
+        "CABP oral load 300 mg BID dia 1",
+        "ABSSSI oral load 450 mg QD dias 1–2",
+        "Manutenção 300 mg QD",
+        "Jejum 4 h antes",
+        "Laticínios/cátions +4 h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=51591524-4703-44c6-8bde-dce3e6a463d1",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=51591524-4703-44c6-8bde-dce3e6a463d1&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibiotic-treatment-adults-community-acquired-bacterial-pneumonia-and-skin",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=omadacycline"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=51591524-4703-44c6-8bde-dce3e6a463d1",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=51591524-4703-44c6-8bde-dce3e6a463d1&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibiotic-treatment-adults-community-acquired-bacterial-pneumonia-and-skin",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=omadacycline"
+      ]
+    },
+    "es": {
+      "name": "Omadaciclina",
+      "class": "Aminometilciclina derivada de tetraciclina",
+      "pharmacologicClass": "Aminometilciclina inhibidora de 30S",
+      "mechanism": "Se une a 30S y bloquea incorporación de aminoacil-tRNA, conservando actividad frente a algunos mecanismos de resistencia.",
+      "pharmacodynamics": "AUC/MIC es índice PK/PD principal. Activa frente a Gram positivos, atípicos y algunos Gram negativos susceptibles.",
+      "pharmacokinetics": "IV y VO; biodisponibilidad oral cae con alimentos/cationes. Eliminación fecal/renal; HD sin efecto clínico relevante.",
+      "indications": "Adultos >=18 con CABP o ABSSSI susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos y polvo IV.",
+      "presentations": [
+        "150 mg comprimido",
+        "100 mg vial IV"
+      ],
+      "dose": "CABP día 1: IV 200 mg/60 min o 100 mg BID/30 min, o VO 300 mg BID; luego 100 mg IV QD o 300 mg VO QD. ABSSSI: mismo load IV; oral 450 mg QD días 1–2, luego 300 mg QD.",
+      "pediatricDose": "Seguridad/eficacia <18 no establecidas; tetraciclinas no recomendadas <8 años por dientes/hueso.",
+      "renalDose": "Sin ajuste en cualquier grado de ERC incluida ESRD/HD.",
+      "hepaticDose": "Sin ajuste Child-Pugh A/B/C.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Vómitos",
+        "Elevación de transaminasas",
+        "Reacción local IV"
+      ],
+      "dangerousAdverseEffects": [
+        "Mayor mortalidad observada en estudio CABP",
+        "Coloración dental/efecto óseo fetal o infantil",
+        "Anafilaxia",
+        "C. difficile"
+      ],
+      "adverseEffects": "Efectos de tetraciclina incluyen dientes/hueso durante desarrollo; náusea frecuente con carga oral.",
+      "contraindications": "Hipersensibilidad a omadaciclina/tetraciclinas.",
+      "interactions": "Alimentos, lácteos, antiácidos y cationes reducen absorción oral; separar estrictamente.",
+      "monitoring": "Respuesta, hígado y tolerancia GI; cultivo/AST.",
+      "administration": "VO: ayuno >=4 h antes; después solo agua por 2 h y sin lácteos/antiácidos/multivitamínicos por 4 h.",
+      "preparation": "Reconstituir/diluir vial según ficha.",
+      "infusionProtocol": "200 mg IV en 60 min; 100 mg IV en 30 min.",
+      "pregnancy": "Puede causar daño fetal en dientes/hueso.",
+      "lactation": "Evitar lactancia durante y 4 días tras última dosis según ficha.",
+      "specialPopulations": "Solo adultos; sin ajuste renal/hepático. Diferenciar CABP de ABSSSI.",
+      "patientEducation": "Ayuno y separación de lácteos/cationes son esenciales; explicar riesgo fetal/dental.",
+      "clinicalPearls": "Permite step-down IV-VO sin ajuste renal/hepático, pero absorción oral es muy sensible a alimentos/cationes.",
+      "guidelineRecommendations": "Usar solo para CABP/ABSSSI en adultos cuando sea apropiado; no extrapolar a bacteriemia/UTI sin evidencia y valoración especializada.",
+      "safetyFlags": [
+        "CABP/ABSSSI adultos",
+        "Ayuno oral riguroso",
+        "Sin ajuste renal",
+        "Sin ajuste hepático",
+        "Tetraciclina fetal/dientes"
+      ],
+      "alerts": [
+        "CABP load oral 300 mg BID día 1",
+        "ABSSSI load 450 mg QD días 1–2",
+        "Mantenimiento 300 mg QD",
+        "Ayuno 4 h antes",
+        "Lácteos/cationes +4 h"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=51591524-4703-44c6-8bde-dce3e6a463d1",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=51591524-4703-44c6-8bde-dce3e6a463d1&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibiotic-treatment-adults-community-acquired-bacterial-pneumonia-and-skin",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=omadacycline"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=51591524-4703-44c6-8bde-dce3e6a463d1",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=51591524-4703-44c6-8bde-dce3e6a463d1&type=display",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibiotic-treatment-adults-community-acquired-bacterial-pneumonia-and-skin",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=omadacycline"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP10_FROZEN_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD_ANTIMICROBIALS_GROUP11_FROZEN_FINAL10_V1 — additive source-authority clinical overlay */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||typeof db!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP11_FROZEN_FINAL10_V1: ANTIMICROBIANOS_DRUGS_DB unavailable');var gold={
+  "delafloxacino": {
+    "pt": {
+      "name": "Delafloxacino",
+      "class": "Fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona aniónica inibidora de DNA girase e topoisomerase IV",
+      "mechanism": "Inibe DNA girase e topoisomerase IV bacterianas, bloqueando replicação, transcrição e reparo do DNA.",
+      "pharmacodynamics": "Bactericida; AUC/MIC é o principal índice PK/PD. Atividade inclui MRSA e alguns Gram-negativos suscetíveis, mas AST e epidemiologia local devem orientar uso.",
+      "pharmacokinetics": "Disponível IV e VO. Biodisponibilidade oral ~59%; exposição de 450 mg VO é comparável a 300 mg IV. Eliminação renal e fecal; veículo IV SBECD acumula na DRC grave.",
+      "indications": "Adultos com ABSSSI e pneumonia bacteriana adquirida na comunidade por patógenos suscetíveis.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimido oral e pó liofilizado IV.",
+      "presentations": [
+        "450 mg comprimido",
+        "300 mg frasco IV"
+      ],
+      "dose": "Adulto: 450 mg VO q12h OU 300 mg IV q12h em 60 min. Pode fazer IV→VO. ABSSSI 5–14 dias; CABP 5–10 dias.",
+      "pediatricDose": "Segurança e eficácia em menores de 18 anos não estabelecidas; não extrapolar a dose adulta.",
+      "renalDose": "eGFR 30–89: sem ajuste. eGFR 15–29: VO 450 mg q12h sem ajuste; IV reduzir para 200 mg q12h. eGFR <15 ou hemodiálise: não recomendado.",
+      "hepaticDose": "Sem ajuste em Child-Pugh A, B ou C.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Diarreia",
+        "Cefaleia",
+        "Elevação de transaminases"
+      ],
+      "dangerousAdverseEffects": [
+        "Tendinite/ruptura de tendão",
+        "Neuropatia periférica",
+        "Efeitos SNC",
+        "Exacerbação de miastenia gravis",
+        "Aneurisma/dissecção aórtica"
+      ],
+      "adverseEffects": "Compartilha alertas de classe das fluoroquinolonas para toxicidade incapacitante potencialmente irreversível; risco-benefício deve ser individualizado.",
+      "contraindications": "Hipersensibilidade a delafloxacino ou outras fluoroquinolonas.",
+      "interactions": "Cátions multivalentes reduzem absorção oral; separar antiácidos, ferro, zinco e multivitamínicos. Revisar fármacos que reduzem limiar convulsivo.",
+      "monitoring": "eGFR/creatinina, sobretudo IV em eGFR 15–29; sintomas de tendão, neuropatia, SNC, disglucemia e C. difficile.",
+      "administration": "VO com ou sem alimento. IV em 60 min. Separar VO de cátions conforme bula.",
+      "preparation": "Reconstituir e diluir a formulação IV segundo bula; não administrar em bolus.",
+      "infusionProtocol": "300 mg IV em 60 min; eGFR 15–29: 200 mg IV em 60 min.",
+      "pregnancy": "Dados humanos limitados; fluoroquinolonas não são escolha preferida quando houver alternativas adequadas.",
+      "lactation": "Dados limitados; avaliar risco-benefício e possíveis efeitos no lactente.",
+      "specialPopulations": "ESRD/HD: não recomendado. Idosos e pacientes com doença vascular/tendínea podem ter maior risco de eventos graves de classe.",
+      "patientEducation": "Suspender e procurar avaliação diante de dor tendínea, neuropatia, sintomas neurológicos ou dor súbita torácica/abdominal.",
+      "clinicalPearls": "Delafloxacino tem transição IV-VO simples e não exige ajuste da formulação oral em eGFR 15–29; quem muda é a dose IV por acúmulo do veículo SBECD.",
+      "guidelineRecommendations": "Reservar fluoroquinolonas para situações em que benefício supere riscos e o patógeno seja suscetível; não usar a cobertura anti-MRSA como justificativa para ampliar empiricamente sem necessidade.",
+      "safetyFlags": [
+        "Fluoroquinolona",
+        "MRSA suscetível",
+        "IV renal 15–29: 200 mg q12h",
+        "ESRD/HD não recomendado",
+        "Tendão/neuropatia/SNC/aorta"
+      ],
+      "alerts": [
+        "450 mg VO q12h",
+        "300 mg IV q12h",
+        "Infusão 60 min",
+        "eGFR 15–29 IV 200 mg q12h",
+        "<15/HD não recomendado"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb77637a-88d9-4aea-958f-e270030ce30d",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/208610s000,208611s000lbl.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=delafloxacin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb77637a-88d9-4aea-958f-e270030ce30d",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/208610s000,208611s000lbl.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=delafloxacin"
+      ]
+    },
+    "es": {
+      "name": "Delafloxacino",
+      "class": "Fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona aniónica inhibidora de ADN girasa y topoisomerasa IV",
+      "mechanism": "Inhibe ADN girasa y topoisomerasa IV bacterianas, bloqueando replicación, transcripción y reparación del ADN.",
+      "pharmacodynamics": "Bactericida; AUC/MIC es el índice PK/PD principal. Incluye MRSA y algunos Gram negativos susceptibles; usar AST.",
+      "pharmacokinetics": "IV y VO. Biodisponibilidad oral ~59%; 450 mg VO produce exposición comparable a 300 mg IV. Eliminación renal/fecal; SBECD IV se acumula en ERC grave.",
+      "indications": "Adultos con ABSSSI y neumonía bacteriana adquirida en la comunidad por patógenos susceptibles.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimido y polvo IV.",
+      "presentations": [
+        "450 mg comprimido",
+        "300 mg vial IV"
+      ],
+      "dose": "Adulto: 450 mg VO q12h o 300 mg IV q12h en 60 min. ABSSSI 5–14 días; CABP 5–10 días.",
+      "pediatricDose": "Seguridad/eficacia <18 años no establecidas; no extrapolar adulto.",
+      "renalDose": "eGFR 30–89 sin ajuste. 15–29: VO 450 mg q12h sin ajuste; IV 200 mg q12h. <15 o HD: no recomendado.",
+      "hepaticDose": "Sin ajuste Child-Pugh A/B/C.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Diarrea",
+        "Cefalea",
+        "Elevación de transaminasas"
+      ],
+      "dangerousAdverseEffects": [
+        "Tendinitis/rotura tendón",
+        "Neuropatía periférica",
+        "Efectos SNC",
+        "Exacerbación miastenia",
+        "Aneurisma/disección aórtica"
+      ],
+      "adverseEffects": "Comparte advertencias de clase de fluoroquinolonas con toxicidades incapacitantes potencialmente irreversibles.",
+      "contraindications": "Hipersensibilidad a delafloxacino/fluoroquinolonas.",
+      "interactions": "Cationes multivalentes reducen absorción oral; separar antiácidos, hierro, zinc y multivitamínicos.",
+      "monitoring": "eGFR/creatinina, tendón, neuropatía, SNC, glucemia y C. difficile.",
+      "administration": "VO con o sin alimentos; IV 60 min.",
+      "preparation": "Reconstituir/diluir IV según ficha; no bolo.",
+      "infusionProtocol": "300 mg IV en 60 min; eGFR 15–29: 200 mg IV en 60 min.",
+      "pregnancy": "Datos limitados; considerar alternativas cuando existan.",
+      "lactation": "Datos limitados; valorar riesgo-beneficio.",
+      "specialPopulations": "ESRD/HD no recomendado; ancianos y vasculopatía pueden aumentar riesgos de clase.",
+      "patientEducation": "Suspender y consultar por dolor tendinoso, neuropatía, síntomas SNC o dolor torácico/abdominal súbito.",
+      "clinicalPearls": "La formulación oral no requiere ajuste en eGFR 15–29; la IV sí baja a 200 mg q12h por exposición y vehículo SBECD.",
+      "guidelineRecommendations": "Reservar fluoroquinolonas para situaciones con beneficio claro y susceptibilidad; la actividad anti-MRSA no justifica uso empírico innecesario.",
+      "safetyFlags": [
+        "Fluoroquinolona",
+        "MRSA susceptible",
+        "IV renal 15–29: 200 mg q12h",
+        "ESRD/HD no recomendado",
+        "Tendón/neuropatía/SNC/aorta"
+      ],
+      "alerts": [
+        "450 mg VO q12h",
+        "300 mg IV q12h",
+        "Infusión 60 min",
+        "eGFR 15–29 IV 200 mg q12h",
+        "<15/HD no recomendado"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb77637a-88d9-4aea-958f-e270030ce30d",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/208610s000,208611s000lbl.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=delafloxacin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb77637a-88d9-4aea-958f-e270030ce30d",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/208610s000,208611s000lbl.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=delafloxacin"
+      ]
+    }
+  },
+  "norfloxacino": {
+    "pt": {
+      "name": "Norfloxacino",
+      "class": "Fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona predominantemente urinária, inibidora de DNA girase/topoisomerase IV",
+      "mechanism": "Inibe DNA girase e topoisomerase IV bacterianas.",
+      "pharmacodynamics": "Bactericida; eficácia depende de exposição/MIC. Resistência urinária elevada em muitos locais limita uso empírico.",
+      "pharmacokinetics": "Biodisponibilidade oral limitada; altas concentrações urinárias. Eliminação renal relevante.",
+      "indications": "Indicações históricas incluem UTI por organismos suscetíveis; disponibilidade e aprovação variam por país e o uso atual é limitado.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais.",
+      "presentations": [
+        "400 mg comprimido conforme produto histórico/local"
+      ],
+      "dose": "Adulto com função renal normal: 400 mg VO q12h em indicações urinárias históricas; duração depende do foco e diretriz local.",
+      "pediatricDose": "Segurança e eficácia pediátrica não estabelecidas para uso rotineiro; não há regime pediátrico aprovado universal.",
+      "renalDose": "CrCl >30 mL/min: regime usual. CrCl <=30 mL/min/1,73m²: 400 mg VO uma vez ao dia segundo rótulo NOROXIN histórico.",
+      "hepaticDose": "Sem tabela universal de ajuste; usar cautela em hepatopatia importante.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Cefaleia",
+        "Tontura",
+        "Diarreia"
+      ],
+      "dangerousAdverseEffects": [
+        "Tendinite/ruptura tendínea",
+        "Neuropatia periférica",
+        "Efeitos SNC",
+        "QT prolongado",
+        "Aneurisma/dissecção aórtica"
+      ],
+      "adverseEffects": "A segurança segue os alertas de classe das fluoroquinolonas; uso deve ser restrito a situações apropriadas.",
+      "contraindications": "Hipersensibilidade a quinolonas e história de tendinite/ruptura associada a quinolona conforme rotulagem local.",
+      "interactions": "Cátions, sucralfato, ferro e zinco reduzem absorção; teofilina, cafeína, ciclosporina e anticoagulantes podem exigir vigilância.",
+      "monitoring": "CrCl, sintomas de tendão/neuropatia/SNC, QT quando houver fatores de risco e resposta microbiológica.",
+      "administration": "Tomar em jejum: pelo menos 1 h antes ou 2 h após alimento/leite; separar cátions/minerais.",
+      "preparation": "Comprimido pronto para uso.",
+      "infusionProtocol": "Não aplicável; formulação oral.",
+      "pregnancy": "Evitar quando houver alternativas mais estabelecidas.",
+      "lactation": "Dados limitados; avaliar alternativa mais segura quando possível.",
+      "specialPopulations": "Idosos e DRC aumentam exposição/risco. Disponibilidade comercial varia substancialmente entre países.",
+      "patientEducation": "Não usar como opção urinária automática; parar por dor tendínea, neuropatia ou sintomas neurológicos.",
+      "clinicalPearls": "Norfloxacino concentra-se na urina, mas a resistência e os alertas de classe reduziram muito seu papel; CrCl <=30 muda o intervalo para 400 mg q24h.",
+      "guidelineRecommendations": "Não é escolha empírica preferencial para cistite em muitos cenários atuais; usar apenas se disponível, indicado e sustentado por suscetibilidade/local stewardship.",
+      "safetyFlags": [
+        "Fluoroquinolona antiga",
+        "UTI histórica",
+        "CrCl <=30: 400 mg q24h",
+        "Jejum",
+        "Tendão/neuropatia/SNC/aorta"
+      ],
+      "alerts": [
+        "400 mg q12h histórico",
+        "CrCl <=30: 400 mg q24h",
+        "1 h antes ou 2 h após alimento",
+        "Separar cátions",
+        "Uso atual limitado"
+      ],
+      "references": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019384s066lbl.pdf",
+        "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019384",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=norfloxacin"
+      ],
+      "ref": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019384s066lbl.pdf",
+        "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019384",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=norfloxacin"
+      ]
+    },
+    "es": {
+      "name": "Norfloxacino",
+      "class": "Fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona de predominio urinario, inhibidora de ADN girasa/topoisomerasa IV",
+      "mechanism": "Inhibe ADN girasa y topoisomerasa IV.",
+      "pharmacodynamics": "Bactericida; eficacia depende de exposición/MIC. Alta resistencia urinaria local puede limitar uso empírico.",
+      "pharmacokinetics": "Biodisponibilidad oral limitada; altas concentraciones urinarias y eliminación renal relevante.",
+      "indications": "Indicaciones históricas incluyen UTI por organismos susceptibles; disponibilidad/aprobación varía y su uso actual es limitado.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales.",
+      "presentations": [
+        "400 mg comprimido según producto histórico/local"
+      ],
+      "dose": "Adulto con función renal normal: 400 mg VO q12h para indicaciones urinarias históricas; duración según foco/guía local.",
+      "pediatricDose": "Seguridad/eficacia pediátrica no establecidas para uso rutinario.",
+      "renalDose": "ClCr >30: régimen usual. ClCr <=30 mL/min/1,73m²: 400 mg VO una vez al día según ficha histórica NOROXIN.",
+      "hepaticDose": "Sin tabla universal de ajuste; cautela en hepatopatía importante.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Cefalea",
+        "Mareo",
+        "Diarrea"
+      ],
+      "dangerousAdverseEffects": [
+        "Tendinitis/rotura tendón",
+        "Neuropatía",
+        "Efectos SNC",
+        "QT prolongado",
+        "Aneurisma/disección aórtica"
+      ],
+      "adverseEffects": "Comparte advertencias graves de clase de fluoroquinolonas.",
+      "contraindications": "Hipersensibilidad a quinolonas y antecedentes de tendinopatía por quinolona según ficha local.",
+      "interactions": "Cationes, sucralfato, hierro y zinc reducen absorción; revisar teofilina, cafeína, ciclosporina y anticoagulantes.",
+      "monitoring": "ClCr, tendón/neuropatía/SNC, QT si riesgo y respuesta microbiológica.",
+      "administration": "En ayunas: >=1 h antes o 2 h después de comida/leche; separar cationes.",
+      "preparation": "Comprimido listo.",
+      "infusionProtocol": "No aplicable.",
+      "pregnancy": "Evitar si existen alternativas más establecidas.",
+      "lactation": "Datos limitados.",
+      "specialPopulations": "Ancianos/ERC aumentan exposición; disponibilidad comercial varía por país.",
+      "patientEducation": "No usar como opción urinaria automática; suspender por dolor tendinoso, neuropatía o síntomas SNC.",
+      "clinicalPearls": "Su papel actual es limitado; el dato práctico clásico es ClCr <=30: 400 mg q24h y administración en ayunas.",
+      "guidelineRecommendations": "No es opción empírica preferida para cistitis en muchos escenarios actuales; usar solo con disponibilidad, indicación y susceptibilidad apropiadas.",
+      "safetyFlags": [
+        "Fluoroquinolona antigua",
+        "UTI histórica",
+        "ClCr <=30: 400 mg q24h",
+        "Ayunas",
+        "Tendón/neuropatía/SNC/aorta"
+      ],
+      "alerts": [
+        "400 mg q12h histórico",
+        "ClCr <=30: 400 mg q24h",
+        "1 h antes o 2 h después",
+        "Separar cationes",
+        "Uso actual limitado"
+      ],
+      "references": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019384s066lbl.pdf",
+        "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019384",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=norfloxacin"
+      ],
+      "ref": [
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019384s066lbl.pdf",
+        "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019384",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=norfloxacin"
+      ]
+    }
+  },
+  "ofloxacino": {
+    "pt": {
+      "name": "Ofloxacino",
+      "class": "Fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona inibidora de DNA girase e topoisomerase IV",
+      "mechanism": "Bloqueia DNA girase e topoisomerase IV bacterianas.",
+      "pharmacodynamics": "Bactericida, exposição/MIC-dependente. Resistência e alertas de classe limitam uso empírico contemporâneo.",
+      "pharmacokinetics": "Alta biodisponibilidade oral; 65–80% excretado inalterado na urina. DRC prolonga eliminação.",
+      "indications": "Rótulo inclui infecções respiratórias, pele, UTI, prostatite e algumas ISTs por patógenos suscetíveis; diretrizes atuais frequentemente preferem outros agentes.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais.",
+      "presentations": [
+        "200 mg",
+        "300 mg",
+        "400 mg"
+      ],
+      "dose": "Adulto: 200–400 mg VO q12h conforme indicação; por exemplo, CABP 400 mg q12h, cistite selecionada 200 mg q12h.",
+      "pediatricDose": "Segurança/eficácia sistêmica pediátrica não estabelecidas para uso rotineiro; evitar extrapolação.",
+      "renalDose": "CrCl 20–50: após dose inicial usual, manter a dose unitária usual q24h. CrCl <20: metade da dose unitária usual q24h. HD remove pouco.",
+      "hepaticDose": "Cirrose grave: não exceder 400 mg/dia.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Insônia",
+        "Cefaleia",
+        "Tontura",
+        "Diarreia"
+      ],
+      "dangerousAdverseEffects": [
+        "Tendinite/ruptura",
+        "Neuropatia periférica",
+        "Efeitos SNC",
+        "QT/Torsades",
+        "Disglucemia",
+        "Aneurisma/dissecção aórtica"
+      ],
+      "adverseEffects": "Pode causar eventos incapacitantes de classe e fototoxicidade; risco aumenta com idade, corticoide e disfunção renal.",
+      "contraindications": "Hipersensibilidade a ofloxacino/quinolonas.",
+      "interactions": "Separar antiácidos, sucralfato, ferro, zinco e cátions por 2 h antes/depois; monitorar hipoglicemiantes e fármacos que prolongam QT.",
+      "monitoring": "CrCl, ECG/eletrólitos se risco QT, glicemia em diabéticos, sintomas tendíneos/neurológicos e resposta microbiológica.",
+      "administration": "VO; manter hidratação. Separar cátions 2 h antes e 2 h depois.",
+      "preparation": "Comprimido pronto.",
+      "infusionProtocol": "Não aplicável à formulação oral deste registro.",
+      "pregnancy": "Evitar quando houver alternativas adequadas.",
+      "lactation": "Avaliar alternativa; exposição do lactente é possível.",
+      "specialPopulations": "Idosos exigem avaliação renal e têm maior risco de QT/tendão/aorta.",
+      "patientEducation": "Suspender por dor tendínea, neuropatia, hipoglicemia grave, palpitação ou sintomas neurológicos.",
+      "clinicalPearls": "Ofloxacino exige ajuste renal precoce: CrCl 20–50 muda para q24h; <20 reduz a dose pela metade q24h. Em cirrose grave, teto 400 mg/dia.",
+      "guidelineRecommendations": "Muitas indicações históricas hoje têm opções preferidas mais seguras ou com melhor perfil de resistência; usar somente com indicação atual e suscetibilidade.",
+      "safetyFlags": [
+        "Fluoroquinolona",
+        "CrCl 20–50 q24h",
+        "CrCl <20 metade q24h",
+        "Cirrose grave máx 400 mg/dia",
+        "QT/tendão/neuropatia"
+      ],
+      "alerts": [
+        "200–400 mg q12h",
+        "CrCl 20–50: q24h",
+        "CrCl <20: metade q24h",
+        "Cátions ±2 h",
+        "Cirrose grave máx 400 mg/dia"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c677b35c-0432-4ee5-af57-1f95449c48b6",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/019735s059lbl.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=ofloxacin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c677b35c-0432-4ee5-af57-1f95449c48b6",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/019735s059lbl.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=ofloxacin"
+      ]
+    },
+    "es": {
+      "name": "Ofloxacino",
+      "class": "Fluoroquinolona",
+      "pharmacologicClass": "Fluoroquinolona inhibidora de ADN girasa/topoisomerasa IV",
+      "mechanism": "Bloquea ADN girasa y topoisomerasa IV.",
+      "pharmacodynamics": "Bactericida, dependiente de exposición/MIC. Resistencia y seguridad limitan uso empírico actual.",
+      "pharmacokinetics": "Alta biodisponibilidad oral; 65–80% se excreta sin cambios en orina. ERC prolonga eliminación.",
+      "indications": "Ficha incluye infecciones respiratorias, piel, UTI, prostatitis y algunas ITS susceptibles; guías actuales suelen preferir otros agentes.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales.",
+      "presentations": [
+        "200 mg",
+        "300 mg",
+        "400 mg"
+      ],
+      "dose": "Adulto: 200–400 mg VO q12h según indicación; CABP 400 mg q12h, cistitis seleccionada 200 mg q12h.",
+      "pediatricDose": "Seguridad/eficacia sistémica pediátrica no establecidas para uso rutinario.",
+      "renalDose": "ClCr 20–50: tras dosis inicial usual, dosis unitaria usual q24h. ClCr <20: mitad de la dosis unitaria usual q24h. HD elimina poco.",
+      "hepaticDose": "Cirrosis grave: no superar 400 mg/día.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Insomnio",
+        "Cefalea",
+        "Mareo",
+        "Diarrea"
+      ],
+      "dangerousAdverseEffects": [
+        "Tendinitis/rotura",
+        "Neuropatía",
+        "Efectos SNC",
+        "QT/Torsades",
+        "Disglucemia",
+        "Aneurisma/disección aórtica"
+      ],
+      "adverseEffects": "Puede producir eventos incapacitantes de clase y fototoxicidad.",
+      "contraindications": "Hipersensibilidad a ofloxacino/quinolonas.",
+      "interactions": "Separar antiácidos, sucralfato, hierro, zinc/cationes 2 h antes y después; vigilar hipoglucemiantes y QT.",
+      "monitoring": "ClCr, ECG/electrolitos si riesgo, glucemia, tendón/SNC y respuesta.",
+      "administration": "VO e hidratación adecuada; cationes ±2 h.",
+      "preparation": "Comprimido listo.",
+      "infusionProtocol": "No aplicable a esta formulación oral.",
+      "pregnancy": "Evitar cuando haya alternativas adecuadas.",
+      "lactation": "Valorar alternativa.",
+      "specialPopulations": "Ancianos: revisar riñón, QT, tendón y riesgo aórtico.",
+      "patientEducation": "Suspender por dolor tendinoso, neuropatía, hipoglucemia grave, palpitaciones o síntomas SNC.",
+      "clinicalPearls": "ClCr 20–50 cambia a q24h; <20 reduce a mitad q24h. Cirrosis grave limita a 400 mg/día.",
+      "guidelineRecommendations": "Muchas indicaciones históricas tienen hoy alternativas preferidas; usar solo con indicación vigente y susceptibilidad.",
+      "safetyFlags": [
+        "Fluoroquinolona",
+        "ClCr 20–50 q24h",
+        "ClCr <20 mitad q24h",
+        "Cirrosis grave máx 400 mg/día",
+        "QT/tendón/neuropatía"
+      ],
+      "alerts": [
+        "200–400 mg q12h",
+        "ClCr 20–50 q24h",
+        "ClCr <20 mitad q24h",
+        "Cationes ±2 h",
+        "Cirrosis grave máx 400 mg/día"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c677b35c-0432-4ee5-af57-1f95449c48b6",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/019735s059lbl.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=ofloxacin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c677b35c-0432-4ee5-af57-1f95449c48b6",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2008/019735s059lbl.pdf",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=ofloxacin"
+      ]
+    }
+  },
+  "clindamicina": {
+    "pt": {
+      "name": "Clindamicina",
+      "class": "Lincosamida",
+      "pharmacologicClass": "Lincosamida inibidora da subunidade ribossomal 50S",
+      "mechanism": "Liga-se à subunidade 50S e inibe elongação da síntese proteica; pode reduzir produção de toxinas em estreptococos/estafilococos.",
+      "pharmacodynamics": "Predominantemente bacteriostática; AUC/MIC relaciona-se à atividade. Resistência MLSB induzível deve ser pesquisada quando relevante.",
+      "pharmacokinetics": "Boa absorção oral e ampla distribuição tecidual, inclusive osso; metabolismo hepático e excreção biliar/renal.",
+      "indications": "Infecções graves por Gram-positivos e anaeróbios suscetíveis; uso oral/IV depende do foco. Importante como adjuvante antitoxina em síndromes estreptocócicas graves.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Cápsulas, solução oral e formulações IM/IV.",
+      "presentations": [
+        "150 mg/300 mg cápsulas conforme produto",
+        "solução oral",
+        "300/600/900 mg IV premix conforme produto"
+      ],
+      "dose": "Adulto IV: 600–1200 mg/dia em 2–4 doses para infecções sérias; 1200–2700 mg/dia em 2–4 doses para mais graves; situações de ameaça à vida podem usar doses maiores sob supervisão. VO frequentemente 150–450 mg q6h conforme gravidade.",
+      "pediatricDose": "Neonatos <1 mês: 15–20 mg/kg/dia em 3–4 doses. 1 mês–16 anos IV/IM: 20–40 mg/kg/dia em 3–4 doses; usar maior faixa em infecção mais grave.",
+      "renalDose": "Geralmente não requer ajuste em insuficiência renal ou hemodiálise; monitorar cursos prolongados.",
+      "hepaticDose": "Hepatopatia grave pode prolongar meia-vida; não há redução automática, mas monitorar enzimas e considerar alongar intervalo conforme resposta.",
+      "commonAdverseEffects": [
+        "Diarreia",
+        "Náusea",
+        "Dor abdominal",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "C. difficile/colite potencialmente fatal",
+        "Anafilaxia",
+        "SCAR",
+        "Hepatotoxicidade",
+        "Neutropenia"
+      ],
+      "adverseEffects": "Clindamicina é um dos antibióticos mais associados a C. difficile; diarreia pode surgir durante ou após o tratamento.",
+      "contraindications": "Hipersensibilidade a clindamicina ou lincomicina.",
+      "interactions": "Antagonismo potencial com macrolídeos no sítio 50S; potencializa bloqueio neuromuscular.",
+      "monitoring": "Diarreia/C. difficile, função hepática/renal e hemograma em terapia prolongada; cultura e D-test para resistência MLSB quando aplicável.",
+      "administration": "VO ou IM/IV. Não administrar IV em bolus rápido.",
+      "preparation": "Diluir IV para concentração apropriada; formulações premix devem respeitar dose disponível.",
+      "infusionProtocol": "Concentração IV não deve exceder 18 mg/mL e velocidade não deve exceder 30 mg/min.",
+      "pregnancy": "Uso pode ser considerado quando claramente indicado; experiência clínica é ampla.",
+      "lactation": "Passa ao leite; observar diarreia, candidíase ou sangue nas fezes do lactente.",
+      "specialPopulations": "Dose pediátrica deve usar peso corporal total mesmo em obesidade segundo rótulos parenterais.",
+      "patientEducation": "Relatar diarreia aquosa/sanguinolenta mesmo semanas após terminar; não usar antidiarreicos por conta própria se suspeita de colite.",
+      "clinicalPearls": "Clindamicina combina cobertura anaeróbia/Gram-positiva com efeito antitoxina, mas o preço é um risco particularmente alto de C. difficile.",
+      "guidelineRecommendations": "Usar conforme foco e suscetibilidade; em infecção invasiva por estreptococo produtor de toxina, costuma ser adjuvante à terapia beta-lactâmica, não substituto isolado.",
+      "safetyFlags": [
+        "C. difficile alto risco",
+        "Antitoxina",
+        "IV máx 30 mg/min",
+        "Pediatria 20–40 mg/kg/dia",
+        "D-test MLSB"
+      ],
+      "alerts": [
+        "IV adulto 600–1200 ou 1200–2700 mg/dia",
+        "Pediatria 20–40 mg/kg/dia",
+        "Neonato 15–20 mg/kg/dia",
+        "Concentração <=18 mg/mL",
+        "Velocidade <=30 mg/min"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+      ]
+    },
+    "es": {
+      "name": "Clindamicina",
+      "class": "Lincosamida",
+      "pharmacologicClass": "Lincosamida inhibidora de la subunidad 50S",
+      "mechanism": "Se une a 50S e inhibe elongación proteica; puede reducir producción de toxinas estreptocócicas/estafilocócicas.",
+      "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC. Buscar resistencia MLSB inducible cuando corresponda.",
+      "pharmacokinetics": "Buena absorción oral, amplia distribución incluida ósea; metabolismo hepático y excreción biliar/renal.",
+      "indications": "Infecciones graves por Gram positivos/anaerobios susceptibles; papel adyuvante antitoxina en síndromes estreptocócicos graves.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Cápsulas, solución oral y formulaciones IM/IV.",
+      "presentations": [
+        "150/300 mg cápsulas",
+        "solución oral",
+        "300/600/900 mg IV según producto"
+      ],
+      "dose": "Adulto IV: 600–1200 mg/día en 2–4 dosis; más grave 1200–2700 mg/día. VO frecuentemente 150–450 mg q6h según gravedad.",
+      "pediatricDose": "Neonatos <1 mes: 15–20 mg/kg/día en 3–4 dosis. 1 mes–16 años: 20–40 mg/kg/día en 3–4 dosis.",
+      "renalDose": "Generalmente sin ajuste en ERC/HD.",
+      "hepaticDose": "Hepatopatía grave puede prolongar semivida; monitorizar y ajustar intervalo clínicamente.",
+      "commonAdverseEffects": [
+        "Diarrea",
+        "Náuseas",
+        "Dolor abdominal",
+        "Rash"
+      ],
+      "dangerousAdverseEffects": [
+        "C. difficile/colitis potencialmente fatal",
+        "Anafilaxia",
+        "SCAR",
+        "Hepatotoxicidad",
+        "Neutropenia"
+      ],
+      "adverseEffects": "Es uno de los antibióticos más asociados a C. difficile.",
+      "contraindications": "Hipersensibilidad a clindamicina/lincomicina.",
+      "interactions": "Posible antagonismo con macrólidos y potenciación de bloqueo neuromuscular.",
+      "monitoring": "Diarrea/C. difficile, función hepática/renal, hemograma y D-test MLSB cuando aplique.",
+      "administration": "VO o IM/IV; no bolo IV rápido.",
+      "preparation": "Diluir IV apropiadamente.",
+      "infusionProtocol": "Concentración <=18 mg/mL y velocidad <=30 mg/min.",
+      "pregnancy": "Puede usarse si está claramente indicada.",
+      "lactation": "Pasa a leche; vigilar diarrea/candidiasis/sangre en heces.",
+      "specialPopulations": "Pediatría parenteral usa peso corporal total incluso en obesidad.",
+      "patientEducation": "Informar diarrea acuosa/sanguinolenta incluso semanas después.",
+      "clinicalPearls": "Aporta cobertura anaerobia/Gram positiva y efecto antitoxina, pero con riesgo especialmente alto de C. difficile.",
+      "guidelineRecommendations": "Usar según foco/susceptibilidad; en infección invasiva estreptocócica con toxina suele acompañar al beta-lactámico, no reemplazarlo.",
+      "safetyFlags": [
+        "C. difficile alto riesgo",
+        "Antitoxina",
+        "IV máx 30 mg/min",
+        "Pediatría 20–40 mg/kg/día",
+        "D-test MLSB"
+      ],
+      "alerts": [
+        "IV adulto 600–1200 o 1200–2700 mg/día",
+        "Pediatría 20–40 mg/kg/día",
+        "Neonato 15–20 mg/kg/día",
+        "Concentración <=18 mg/mL",
+        "Velocidad <=30 mg/min"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
+        "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+        "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+      ]
+    }
+  },
+  "fidaxomicina": {
+    "pt": {
+      "name": "Fidaxomicina",
+      "class": "Macrocíclico antibacteriano não absorvível",
+      "pharmacologicClass": "Inibidor seletivo da RNA polimerase de Clostridioides difficile",
+      "mechanism": "Inibe a RNA polimerase dependente de DNA em estágio inicial da transcrição, com ação luminal seletiva contra C. difficile.",
+      "pharmacodynamics": "Bactericida contra C. difficile e com impacto relativamente menor na microbiota intestinal que antibióticos sistêmicos amplos.",
+      "pharmacokinetics": "Absorção sistêmica mínima; concentrações fecais altas. Metabólito ativo OP-1118 também permanece predominantemente no lúmen intestinal.",
+      "indications": "Tratamento de diarreia/infecção por C. difficile em adultos e pacientes pediátricos a partir de 6 meses.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimido e granulado para suspensão oral.",
+      "presentations": [
+        "200 mg comprimido",
+        "40 mg/mL suspensão após reconstituição"
+      ],
+      "dose": "Adulto: 200 mg VO BID por 10 dias. Regimes estendidos/pulsados podem ser usados em recorrência conforme diretriz especializada, mas não substituem a posologia rotulada sem contexto.",
+      "pediatricDose": "6 meses–<18 anos: >=12,5 kg e capaz de engolir: 200 mg BID x10 dias. Suspensão: 4–<7 kg 80 mg BID; 7–<9 kg 120 mg BID; 9–<12,5 kg 160 mg BID; >=12,5 kg 200 mg BID.",
+      "renalDose": "Sem ajuste renal rotineiro, inclusive DRC, devido à absorção sistêmica mínima.",
+      "hepaticDose": "Sem ajuste hepático rotineiro; exposição sistêmica é baixa.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Dor abdominal",
+        "Vômito",
+        "Sangramento gastrointestinal"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia/angioedema",
+        "Hipersensibilidade",
+        "Falha/recorrência de C. difficile"
+      ],
+      "adverseEffects": "Não é tratamento para infecções sistêmicas; a concentração terapêutica está no trato gastrointestinal.",
+      "contraindications": "Hipersensibilidade a fidaxomicina ou componentes.",
+      "interactions": "Inibidores de P-gp não exigem ajuste segundo dados de bula; interações sistêmicas são limitadas.",
+      "monitoring": "Resposta da diarreia, hidratação, sinais de colite grave/fulminante e recorrência.",
+      "administration": "VO com ou sem alimento.",
+      "preparation": "Suspensão: adicionar 130 mL de água purificada e agitar conforme sequência da bula; concentração final 40 mg/mL e descarte conforme rótulo.",
+      "infusionProtocol": "Não aplicável; uso oral.",
+      "pregnancy": "Exposição sistêmica mínima, mas dados gestacionais humanos são limitados.",
+      "lactation": "Exposição sistêmica materna baixa; avaliar benefício materno e condição do lactente.",
+      "specialPopulations": "<6 meses: segurança/eficácia não estabelecidas. Colite fulminante requer avaliação especializada e manejo sistêmico do quadro.",
+      "patientEducation": "Usar apenas para C. difficile; não serve como antibiótico sistêmico para outras infecções.",
+      "clinicalPearls": "Fidaxomicina é um antibiótico luminal: 200 mg BID x10 dias no adulto e esquema pediátrico por peso a partir de 6 meses, com mínima absorção sistêmica.",
+      "guidelineRecommendations": "Diretrizes IDSA/SHEA favorecem fidaxomicina sobre vancomicina para episódios iniciais e recorrentes quando factível, com escolha condicionada a gravidade, disponibilidade e custo.",
+      "safetyFlags": [
+        "C. difficile",
+        "Absorção sistêmica mínima",
+        ">=6 meses",
+        "200 mg BID x10 dias",
+        "Suspensão 40 mg/mL"
+      ],
+      "alerts": [
+        "Adulto 200 mg BID x10d",
+        "4–<7 kg 80 mg BID",
+        "7–<9 kg 120 mg BID",
+        "9–<12,5 kg 160 mg BID",
+        ">=12,5 kg 200 mg BID"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd966338-c820-4270-b704-09ef75fa3ceb",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6cc3e803-8935-f9b3-ab7f-fef8b1c02070",
+        "https://www.idsociety.org/practice-guideline/clostridioides-difficile-2021-focused-update/",
+        "https://www.cdc.gov/c-diff/hcp/clinical-overview/index.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=fidaxomicin"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd966338-c820-4270-b704-09ef75fa3ceb",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6cc3e803-8935-f9b3-ab7f-fef8b1c02070",
+        "https://www.idsociety.org/practice-guideline/clostridioides-difficile-2021-focused-update/",
+        "https://www.cdc.gov/c-diff/hcp/clinical-overview/index.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=fidaxomicin"
+      ]
+    },
+    "es": {
+      "name": "Fidaxomicina",
+      "class": "Antibacteriano macrocíclico no absorbible",
+      "pharmacologicClass": "Inhibidor selectivo de ARN polimerasa de Clostridioides difficile",
+      "mechanism": "Inhibe ARN polimerasa dependiente de ADN en fase inicial de transcripción.",
+      "pharmacodynamics": "Bactericida frente a C. difficile y relativamente preservadora de microbiota intestinal.",
+      "pharmacokinetics": "Absorción sistémica mínima; altas concentraciones fecales. Metabolito OP-1118 también permanece luminal.",
+      "indications": "Tratamiento de infección/diarrea por C. difficile en adultos y pediatría desde 6 meses.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimido y granulado para suspensión.",
+      "presentations": [
+        "200 mg comprimido",
+        "40 mg/mL suspensión reconstituida"
+      ],
+      "dose": "Adulto 200 mg VO BID por 10 días. Regímenes extendidos/pulsados se reservan para contextos especializados de recurrencia.",
+      "pediatricDose": "6 meses–<18 años: >=12,5 kg y puede tragar: 200 mg BID x10d. Suspensión: 4–<7 kg 80 mg BID; 7–<9 kg 120 mg BID; 9–<12,5 kg 160 mg BID; >=12,5 kg 200 mg BID.",
+      "renalDose": "Sin ajuste renal rutinario.",
+      "hepaticDose": "Sin ajuste hepático rutinario.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Dolor abdominal",
+        "Vómitos",
+        "Sangrado gastrointestinal"
+      ],
+      "dangerousAdverseEffects": [
+        "Anafilaxia/angioedema",
+        "Hipersensibilidad",
+        "Fracaso/recurrencia de C. difficile"
+      ],
+      "adverseEffects": "No trata infecciones sistémicas; su exposición terapéutica es luminal intestinal.",
+      "contraindications": "Hipersensibilidad a fidaxomicina/componentes.",
+      "interactions": "Inhibidores P-gp no requieren ajuste según datos de ficha.",
+      "monitoring": "Respuesta de diarrea, hidratación, colitis grave/fulminante y recurrencia.",
+      "administration": "VO con o sin alimentos.",
+      "preparation": "Suspensión: añadir 130 mL de agua purificada y agitar según ficha; final 40 mg/mL.",
+      "infusionProtocol": "No aplicable.",
+      "pregnancy": "Datos humanos limitados, con absorción sistémica mínima.",
+      "lactation": "Exposición materna sistémica baja; valorar riesgo-beneficio.",
+      "specialPopulations": "<6 meses no establecido. Colitis fulminante requiere manejo especializado.",
+      "patientEducation": "Solo para C. difficile; no sirve como antibiótico sistémico.",
+      "clinicalPearls": "Es antibiótico luminal: 200 mg BID x10 días en adulto y esquema pediátrico por peso desde 6 meses.",
+      "guidelineRecommendations": "IDSA/SHEA favorece fidaxomicina sobre vancomicina en episodios iniciales/recurrencias cuando sea factible, considerando gravedad, disponibilidad y costo.",
+      "safetyFlags": [
+        "C. difficile",
+        "Absorción mínima",
+        ">=6 meses",
+        "200 mg BID x10d",
+        "Suspensión 40 mg/mL"
+      ],
+      "alerts": [
+        "Adulto 200 mg BID x10d",
+        "4–<7 kg 80 mg BID",
+        "7–<9 kg 120 mg BID",
+        "9–<12,5 kg 160 mg BID",
+        ">=12,5 kg 200 mg BID"
+      ],
+      "references": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd966338-c820-4270-b704-09ef75fa3ceb",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6cc3e803-8935-f9b3-ab7f-fef8b1c02070",
+        "https://www.idsociety.org/practice-guideline/clostridioides-difficile-2021-focused-update/",
+        "https://www.cdc.gov/c-diff/hcp/clinical-overview/index.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=fidaxomicin"
+      ],
+      "ref": [
+        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd966338-c820-4270-b704-09ef75fa3ceb",
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=6cc3e803-8935-f9b3-ab7f-fef8b1c02070",
+        "https://www.idsociety.org/practice-guideline/clostridioides-difficile-2021-focused-update/",
+        "https://www.cdc.gov/c-diff/hcp/clinical-overview/index.html",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=fidaxomicin"
+      ]
+    }
+  },
+  "sulfametoxazol_trimetoprim": {
+    "pt": {
+      "name": "Sulfametoxazol + trimetoprim",
+      "class": "Antifolato antibacteriano combinado",
+      "pharmacologicClass": "Sulfonamida + inibidor de diidrofolato redutase",
+      "mechanism": "Bloqueio sequencial da síntese de folato: sulfametoxazol inibe diidropteroato sintetase e trimetoprim inibe diidrofolato redutase.",
+      "pharmacodynamics": "Combinação frequentemente bactericida por bloqueio sequencial; exposição/MIC e concentração no foco influenciam eficácia.",
+      "pharmacokinetics": "Excelente biodisponibilidade oral, ampla distribuição e eliminação renal relevante de ambos; trimetoprim também reduz secreção tubular de creatinina sem necessariamente reduzir GFR.",
+      "indications": "UTI, algumas infecções por Staphylococcus suscetível, Stenotrophomonas, Nocardia e tratamento/profilaxia de Pneumocystis jirovecii conforme diretriz e suscetibilidade.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos simples/DS, suspensão oral e formulação IV conforme mercado.",
+      "presentations": [
+        "80/400 mg",
+        "160/800 mg DS",
+        "40/200 mg por 5 mL suspensão",
+        "IV conforme produto"
+      ],
+      "dose": "Exemplo UTI adulto: 160 mg TMP/800 mg SMX VO q12h. PJP tratamento: 15–20 mg/kg/dia do componente TMP divididos q6–8h, com duração conforme diretriz.",
+      "pediatricDose": ">=2 meses: UTI/otite 8 mg/kg/dia TMP + 40 mg/kg/dia SMX divididos q12h. PJP usa dose maior baseada no componente TMP conforme protocolo especializado.",
+      "renalDose": "CrCl >30: dose usual. CrCl 15–30: usar 1/2 do regime usual. CrCl <15: uso não recomendado pela bula clássica; RRT exige protocolo especializado.",
+      "hepaticDose": "Contraindicado em dano hepático marcado segundo vários rótulos; sem ajuste numérico padronizado para hepatopatia leve.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Rash",
+        "Anorexia",
+        "Elevação de creatinina"
+      ],
+      "dangerousAdverseEffects": [
+        "SJS/TEN/DRESS",
+        "Hipercalemia",
+        "Supressão medular",
+        "Hemólise em G6PD",
+        "Nefrotoxicidade/cristalúria"
+      ],
+      "adverseEffects": "Pode causar reações cutâneas fatais, citopenias, hipercalemia e aumento de creatinina; risco cresce com DRC, idade e interações.",
+      "contraindications": "<2 meses, hipersensibilidade a sulfonamida/TMP, dano hepático marcado e certas discrasias/deficiências de folato conforme bula.",
+      "interactions": "Aumenta efeito de varfarina; eleva risco de hipercalemia com ACEi/ARB/espironolactona; pode aumentar metotrexato e fenitoína.",
+      "monitoring": "Creatinina/CrCl, potássio, hemograma, função hepática e INR se varfarina; hidratação adequada.",
+      "administration": "VO com água e boa hidratação; IV conforme formulação e diluição específica.",
+      "preparation": "Suspensão deve ser agitada; IV deve ser diluída exatamente conforme produto.",
+      "infusionProtocol": "Quando IV, infundir lentamente segundo bula; não administrar solução incompatível/concentrada fora da recomendação.",
+      "pregnancy": "Antifolato e sulfonamida exigem avaliação rigorosa de trimestre/indicação; em PJP os benefícios podem superar riscos sob especialista.",
+      "lactation": "Evitar/cautela em prematuros, hiperbilirrubinemia ou G6PD; considerar idade e condição do lactente.",
+      "specialPopulations": "Não usar rotineiramente <2 meses. DRC aumenta hipercalemia e toxicidade hematológica.",
+      "patientEducation": "Suspender e procurar avaliação por rash, bolhas, febre, icterícia, sangramento ou fraqueza; manter hidratação.",
+      "clinicalPearls": "A dose deve ser expressa pelo componente trimetoprim quando se trata PJP/Nocardia; na DRC 15–30 a bula clássica reduz para metade.",
+      "guidelineRecommendations": "TMP-SMX continua fármaco-chave para PJP e vários patógenos específicos; para AMR deve ser guiado por suscetibilidade e função renal, evitando uso empírico indiscriminado.",
+      "safetyFlags": [
+        "Dose por componente TMP",
+        "CrCl 15–30 meia dose",
+        "<15 não recomendado pela bula",
+        "Hipercalemia",
+        "SJS/TEN/mielossupressão"
+      ],
+      "alerts": [
+        "DS 160/800 mg",
+        "UTI adulto q12h",
+        "Pediatria 8 mg/kg/dia TMP",
+        "PJP 15–20 mg/kg/dia TMP",
+        "CrCl 15–30: 1/2 dose"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0138a156-859a-48a3-bf5a-e2db0cc7f2f9",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=80f7f00b-add4-4d6b-9e9c-bea29768c239",
+        "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/pneumocystis-pneumonia",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=trimethoprim+sulfamethoxazole"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0138a156-859a-48a3-bf5a-e2db0cc7f2f9",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=80f7f00b-add4-4d6b-9e9c-bea29768c239",
+        "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/pneumocystis-pneumonia",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=trimethoprim+sulfamethoxazole"
+      ]
+    },
+    "es": {
+      "name": "Sulfametoxazol + trimetoprim",
+      "class": "Antifolato antibacteriano combinado",
+      "pharmacologicClass": "Sulfonamida + inhibidor de dihidrofolato reductasa",
+      "mechanism": "Bloqueo secuencial de folato: SMX inhibe dihidropteroato sintetasa y TMP inhibe dihidrofolato reductasa.",
+      "pharmacodynamics": "Combinación a menudo bactericida por bloqueo secuencial; exposición/MIC y foco importan.",
+      "pharmacokinetics": "Excelente biodisponibilidad oral y eliminación renal relevante; TMP reduce secreción tubular de creatinina.",
+      "indications": "UTI, algunos Staphylococcus susceptibles, Stenotrophomonas, Nocardia y tratamiento/profilaxis de PJP según guía.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos, suspensión y IV según mercado.",
+      "presentations": [
+        "80/400 mg",
+        "160/800 mg DS",
+        "40/200 mg por 5 mL",
+        "IV según producto"
+      ],
+      "dose": "UTI adulto: 160 mg TMP/800 mg SMX VO q12h. PJP: 15–20 mg/kg/día del componente TMP dividido q6–8h.",
+      "pediatricDose": ">=2 meses: UTI/otitis 8 mg/kg/día TMP + 40 mg/kg/día SMX dividido q12h. PJP usa dosis mayor por TMP.",
+      "renalDose": "ClCr >30 usual; 15–30: 1/2 del régimen usual; <15: no recomendado por ficha clásica.",
+      "hepaticDose": "Contraindicado en daño hepático marcado; sin tabla numérica para hepatopatía leve.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Rash",
+        "Anorexia",
+        "Aumento de creatinina"
+      ],
+      "dangerousAdverseEffects": [
+        "SJS/TEN/DRESS",
+        "Hiperpotasemia",
+        "Mielosupresión",
+        "Hemólisis G6PD",
+        "Nefrotoxicidad/cristaluria"
+      ],
+      "adverseEffects": "Puede causar reacciones cutáneas graves, citopenias, hiperpotasemia y aumento de creatinina.",
+      "contraindications": "<2 meses, hipersensibilidad a sulfas/TMP, daño hepático marcado y ciertas discrasias/deficiencia de folato.",
+      "interactions": "Potencia warfarina; hiperpotasemia con ACEi/ARB/espironolactona; interacción con metotrexato/fenitoína.",
+      "monitoring": "Creatinina/ClCr, potasio, hemograma, hígado e INR si warfarina.",
+      "administration": "VO con agua/hidratación; IV según formulación.",
+      "preparation": "Agitar suspensión; diluir IV según producto.",
+      "infusionProtocol": "IV lenta según ficha.",
+      "pregnancy": "Antifolato/sulfonamida requiere valoración por trimestre/indicación.",
+      "lactation": "Cautela en prematuros, hiperbilirrubinemia o G6PD.",
+      "specialPopulations": "No usar rutinariamente <2 meses; ERC aumenta toxicidad.",
+      "patientEducation": "Suspender y consultar por rash, ampollas, fiebre, ictericia, sangrado o debilidad.",
+      "clinicalPearls": "En PJP/Nocardia la dosis se expresa por TMP; en ClCr 15–30 la ficha clásica reduce a la mitad.",
+      "guidelineRecommendations": "Sigue siendo clave para PJP y patógenos específicos; en AMR usar susceptibilidad y función renal, evitando empirismo innecesario.",
+      "safetyFlags": [
+        "Dosis por TMP",
+        "ClCr 15–30 media dosis",
+        "<15 no recomendado ficha",
+        "Hiperpotasemia",
+        "SJS/TEN/mielosupresión"
+      ],
+      "alerts": [
+        "DS 160/800 mg",
+        "UTI adulto q12h",
+        "Pediatría 8 mg/kg/día TMP",
+        "PJP 15–20 mg/kg/día TMP",
+        "ClCr 15–30: 1/2 dosis"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0138a156-859a-48a3-bf5a-e2db0cc7f2f9",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=80f7f00b-add4-4d6b-9e9c-bea29768c239",
+        "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/pneumocystis-pneumonia",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=trimethoprim+sulfamethoxazole"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0138a156-859a-48a3-bf5a-e2db0cc7f2f9",
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=80f7f00b-add4-4d6b-9e9c-bea29768c239",
+        "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/pneumocystis-pneumonia",
+        "https://www.idsociety.org/practice-guideline/amr-guidance/",
+        "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+        "https://pubmed.ncbi.nlm.nih.gov/?term=trimethoprim+sulfamethoxazole"
+      ]
+    }
+  },
+  "bedaquilina": {
+    "pt": {
+      "name": "Bedaquilina",
+      "class": "Antituberculoso diarylquinolina",
+      "pharmacologicClass": "Inibidor seletivo da ATP sintase micobacteriana",
+      "mechanism": "Liga-se à subunidade c da ATP sintase de M. tuberculosis, bloqueando produção de ATP.",
+      "pharmacodynamics": "Bactericida contra M. tuberculosis suscetível; atividade depende da exposição e deve ocorrer sempre em combinação com regime efetivo.",
+      "pharmacokinetics": "VO com alimento aumenta biodisponibilidade. Metabolizada principalmente por CYP3A4; meia-vida terminal extremamente longa por redistribuição tecidual.",
+      "indications": "Componente de regimes combinados para TB pulmonar resistente à rifampicina/MDR conforme suscetibilidade, programa e diretriz. Não usar como monoterapia.",
+      "commercialNames": [
+        "Genérico; marcas variam por país"
+      ],
+      "presentation": "Comprimidos orais.",
+      "presentations": [
+        "20 mg",
+        "100 mg"
+      ],
+      "dose": "Rótulo adulto: semanas 1–2, 400 mg VO uma vez ao dia; semanas 3–24, 200 mg VO 3x/semana com pelo menos 48 h entre doses. Sempre com alimento e regime de fundo.",
+      "pediatricDose": ">=2 anos e >=8 kg: 8–<10 kg 80 mg QD semanas 1–2, depois 40 mg 3x/sem; 10–<15 kg 120/60 mg; 15–<30 kg 200/100 mg; >=30 kg 400/200 mg conforme esquema semanal.",
+      "renalDose": "Sem ajuste em DRC leve/moderada; cautela em DRC grave/ESRD, pois dados são limitados.",
+      "hepaticDose": "Sem ajuste em hepatopatia leve/moderada; não estudada adequadamente em hepatopatia grave.",
+      "commonAdverseEffects": [
+        "Náusea",
+        "Artralgia",
+        "Cefaleia",
+        "Elevação de transaminases"
+      ],
+      "dangerousAdverseEffects": [
+        "QT prolongado/Torsades",
+        "Hepatotoxicidade",
+        "Mortalidade aumentada observada em estudo histórico",
+        "Interações CYP3A"
+      ],
+      "adverseEffects": "QT prolonga de forma dose/exposição-dependente e soma com outros fármacos de TB que prolongam QT.",
+      "contraindications": "Hipersensibilidade grave; uso exige avaliação de regime e interações, não monoterapia.",
+      "interactions": "Evitar indutores fortes de CYP3A como rifampicina/rifapentina e erva-de-são-joão; inibidores fortes prolongados podem aumentar exposição. Somação de QT com clofazimina, fluoroquinolonas e outros.",
+      "monitoring": "Antes de iniciar: ECG, K, Ca, Mg e enzimas hepáticas. Repetir ECG/eletrólitos conforme risco e regime; monitorar AST/ALT e resposta microbiológica.",
+      "administration": "Tomar com alimento. Semanas 3–24 manter pelo menos 48 h entre doses.",
+      "preparation": "Comprimidos 20 mg podem ser administrados por métodos alternativos previstos na bula para crianças/dificuldade de deglutição.",
+      "infusionProtocol": "Não aplicável; uso oral.",
+      "pregnancy": "Dados humanos são limitados; tratamento de TB resistente deve priorizar benefício materno e programa especializado.",
+      "lactation": "Pode haver exposição relevante devido à meia-vida longa; decisão deve ser especializada.",
+      "specialPopulations": "WHO 2025 prioriza regimes de 6 meses como BPaLM/BPaL em pacientes elegíveis; a composição/duração do regime completo não deve ser inferida apenas da bula individual.",
+      "patientEducation": "Explicar importância de adesão ao regime completo e de não tomar bedaquilina isoladamente; relatar síncope/palpitações e evitar medicamentos não revisados.",
+      "clinicalPearls": "Bedaquilina é fármaco de regime, não de monoterapia: QT, CYP3A e meia-vida longa tornam a combinação tão importante quanto a própria dose.",
+      "guidelineRecommendations": "WHO 2025 mantém BPaLM/BPaL entre regimes prioritários de 6 meses para MDR/RR-TB elegível e introduz alternativas adicionais; seleção depende de DST, local de doença, idade e programa nacional.",
+      "safetyFlags": [
+        "TB resistente",
+        "Nunca monoterapia",
+        "QT",
+        "CYP3A",
+        "WHO 2025 regimes 6 meses"
+      ],
+      "alerts": [
+        "Semanas 1–2: 400 mg QD",
+        "Semanas 3–24: 200 mg 3x/sem",
+        ">=48 h entre doses",
+        "Pediatria >=2 anos e >=8 kg",
+        "ECG/K/Ca/Mg/LFT antes"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e&type=display",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://tbksp.who.int/en/node/2976",
+        "https://www.who.int/news/item/15-04-2025-who-announces-landmark-changes-in-treatment-of-drug-resistant-tuberculosis",
+        "https://www.cdc.gov/tb/hcp/treatment/drug-resistant-tuberculosis-disease.html"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e&type=display",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://tbksp.who.int/en/node/2976",
+        "https://www.who.int/news/item/15-04-2025-who-announces-landmark-changes-in-treatment-of-drug-resistant-tuberculosis",
+        "https://www.cdc.gov/tb/hcp/treatment/drug-resistant-tuberculosis-disease.html"
+      ]
+    },
+    "es": {
+      "name": "Bedaquilina",
+      "class": "Antituberculoso diarilquinolina",
+      "pharmacologicClass": "Inhibidor selectivo de ATP sintasa micobacteriana",
+      "mechanism": "Se une a subunidad c de ATP sintasa de M. tuberculosis y bloquea producción de ATP.",
+      "pharmacodynamics": "Bactericida frente a M. tuberculosis susceptible; siempre en régimen combinado efectivo.",
+      "pharmacokinetics": "VO con alimentos aumenta biodisponibilidad; metabolismo CYP3A4 y semivida terminal muy larga.",
+      "indications": "Componente de regímenes para TB pulmonar resistente a rifampicina/MDR según susceptibilidad, programa y guía; nunca monoterapia.",
+      "commercialNames": [
+        "Genérico; las marcas varían según el país"
+      ],
+      "presentation": "Comprimidos orales.",
+      "presentations": [
+        "20 mg",
+        "100 mg"
+      ],
+      "dose": "Ficha adulta: semanas 1–2 400 mg VO QD; semanas 3–24 200 mg VO 3x/semana con >=48 h entre dosis, siempre con alimentos y régimen de fondo.",
+      "pediatricDose": ">=2 años y >=8 kg: 8–<10 kg 80 mg QD luego 40 mg 3x/sem; 10–<15 kg 120/60 mg; 15–<30 kg 200/100 mg; >=30 kg 400/200 mg.",
+      "renalDose": "Sin ajuste en ERC leve/moderada; cautela en grave/ESRD.",
+      "hepaticDose": "Sin ajuste leve/moderada; datos insuficientes en grave.",
+      "commonAdverseEffects": [
+        "Náuseas",
+        "Artralgia",
+        "Cefalea",
+        "Elevación de transaminasas"
+      ],
+      "dangerousAdverseEffects": [
+        "QT/Torsades",
+        "Hepatotoxicidad",
+        "Señal histórica de mortalidad",
+        "Interacciones CYP3A"
+      ],
+      "adverseEffects": "QT se suma con otros fármacos del régimen y requiere control.",
+      "contraindications": "Hipersensibilidad grave; requiere régimen combinado y evaluación de interacciones.",
+      "interactions": "Evitar inductores fuertes CYP3A; inhibidores fuertes prolongados aumentan exposición. Suma QT con clofazimina/fluoroquinolonas.",
+      "monitoring": "Antes: ECG, K, Ca, Mg y enzimas hepáticas; repetir según riesgo y vigilar respuesta microbiológica.",
+      "administration": "Con alimentos; semanas 3–24 >=48 h entre dosis.",
+      "preparation": "Comprimido 20 mg permite métodos alternativos de administración según ficha.",
+      "infusionProtocol": "No aplicable.",
+      "pregnancy": "Datos limitados; manejo especializado de TB resistente.",
+      "lactation": "Valorar exposición por semivida larga.",
+      "specialPopulations": "WHO 2025 prioriza BPaLM/BPaL de 6 meses en elegibles; no inferir régimen completo desde la ficha individual.",
+      "patientEducation": "No tomar como monoterapia; adherir al régimen y comunicar síncope/palpitaciones.",
+      "clinicalPearls": "Es un fármaco de régimen: QT, CYP3A y semivida larga hacen crítica la combinación y monitorización.",
+      "guidelineRecommendations": "WHO 2025 mantiene BPaLM/BPaL entre regímenes prioritarios de 6 meses para MDR/RR-TB elegible e incorpora alternativas; selección depende de DST y programa.",
+      "safetyFlags": [
+        "TB resistente",
+        "Nunca monoterapia",
+        "QT",
+        "CYP3A",
+        "WHO 2025 regímenes 6 meses"
+      ],
+      "alerts": [
+        "Semanas 1–2 400 mg QD",
+        "Semanas 3–24 200 mg 3x/sem",
+        ">=48 h",
+        "Pediatría >=2 años y >=8 kg",
+        "ECG/K/Ca/Mg/LFT antes"
+      ],
+      "references": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e&type=display",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://tbksp.who.int/en/node/2976",
+        "https://www.who.int/news/item/15-04-2025-who-announces-landmark-changes-in-treatment-of-drug-resistant-tuberculosis",
+        "https://www.cdc.gov/tb/hcp/treatment/drug-resistant-tuberculosis-disease.html"
+      ],
+      "ref": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e",
+        "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1534c9ae-4948-4cf4-9f66-222a99db6d0e&type=display",
+        "https://www.who.int/publications/i/item/9789240107243",
+        "https://tbksp.who.int/en/node/2976",
+        "https://www.who.int/news/item/15-04-2025-who-announces-landmark-changes-in-treatment-of-drug-resistant-tuberculosis",
+        "https://www.cdc.gov/tb/hcp/treatment/drug-resistant-tuberculosis-disease.html"
+      ]
+    }
+  }
+};Object.keys(gold).forEach(function(id){if(!db[id]||typeof db[id]!=='object')throw new Error('MEDCASES_GOLD_ANTIMICROBIALS_GROUP11_FROZEN_FINAL10_V1: missing '+id);db[id].mcGoldClinicalV1=gold[id];});})();
+
+
+/* MEDCASES_GOLD110_CEFUROXIMA_PEDIATRIC_DOSE_R0 — focused pediatric-dose correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["cefuroxima"]||!db["cefuroxima"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_CEFUROXIMA_PEDIATRIC_DOSE_R0: target Gold unavailable');var g=db["cefuroxima"].mcGoldClinicalV1;g.pt.pediatricDose="≥3 meses. Cefuroxima axetil suspensão VO: faringite/amigdalite 20 mg/kg/dia divididos q12h (máx 500 mg/dia) por 10 dias; otite média aguda, sinusite maxilar bacteriana e impetigo 30 mg/kg/dia divididos q12h (máx 1.000 mg/dia) por 10 dias. Crianças <13 anos que conseguem engolir comprimidos: 250 mg VO q12h por 10 dias para otite média aguda ou sinusite maxilar bacteriana. Cefuroxima sódica IV/IM >3 meses: 50–100 mg/kg/dia divididos q6–8h; usar 100 mg/kg/dia nas infecções mais graves; osso/articulação 150 mg/kg/dia q8h; meningite bacteriana 200–240 mg/kg/dia IV q6–8h, sem exceder a dose máxima adulta. Axetil oral e cefuroxima sódica parenteral não são intercambiáveis mg por mg.";g.es.pediatricDose="≥3 meses. Cefuroxima axetilo suspensión VO: faringitis/amigdalitis 20 mg/kg/día divididos q12h (máx 500 mg/día) por 10 días; otitis media aguda, sinusitis maxilar bacteriana e impétigo 30 mg/kg/día divididos q12h (máx 1.000 mg/día) por 10 días. Niños <13 años que pueden tragar comprimidos enteros: 250 mg VO q12h por 10 días para otitis media aguda o sinusitis maxilar bacteriana. Cefuroxima sódica IV/IM >3 meses: 50–100 mg/kg/día divididos q6–8h; usar 100 mg/kg/día en infecciones más graves; hueso/articulación 150 mg/kg/día q8h; meningitis bacteriana 200–240 mg/kg/día IV q6–8h, sin exceder la dosis máxima adulta. El axetilo oral y la cefuroxima sódica parenteral no son intercambiables mg por mg.";var refs=["https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=135e2dfc-eb47-4d04-a903-a081d36c267e","https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10","https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76cec54f-d167-4298-951b-5411a3c47f4a"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_GENTAMICINA_PEDIATRIC_DOSE_R0 — focused pediatric-dose correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["gentamicina"]||!db["gentamicina"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_GENTAMICINA_PEDIATRIC_DOSE_R0: target Gold unavailable');var g=db["gentamicina"].mcGoldClinicalV1;g.pt.pediatricDose="Função renal normal — esquema de referência da bula. Crianças: 6–7,5 mg/kg/dia IV/IM, divididos em 2–2,5 mg/kg q8h. Lactentes e neonatos: 7,5 mg/kg/dia, equivalentes a 2,5 mg/kg q8h. Prematuros ou neonatos a termo com ≤1 semana de vida: 5 mg/kg/dia, equivalentes a 2,5 mg/kg q12h. Realizar TDM sempre que possível e individualizar pela função renal, gravidade e sítio da infecção. Em neonatos, não extrapolar intervalos de forma automática: idade gestacional/pós-natal, peso e depuração renal podem exigir intervalos maiores segundo protocolo neonatal local. Monitorar creatinina, função auditiva/vestibular e concentrações séricas; evitar níveis persistentemente excessivos.";g.es.pediatricDose="Función renal normal — esquema de referencia del prospecto. Niños: 6–7,5 mg/kg/día IV/IM, divididos en 2–2,5 mg/kg q8h. Lactantes y neonatos: 7,5 mg/kg/día, equivalentes a 2,5 mg/kg q8h. Prematuros o neonatos a término con ≤1 semana de vida: 5 mg/kg/día, equivalentes a 2,5 mg/kg q12h. Realizar TDM siempre que sea posible e individualizar según función renal, gravedad y foco de infección. En neonatos no extrapolar intervalos automáticamente: edad gestacional/posnatal, peso y depuración renal pueden requerir intervalos mayores según el protocolo neonatal local. Monitorizar creatinina, función auditiva/vestibular y concentraciones séricas; evitar niveles persistentemente excesivos.";var refs=["https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305","https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f8c608b3-50b8-4d5d-9e8a-e92c0d2e3cdc","https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be5b414e-d598-4721-80ee-5836156ad210"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_ERITROMICINA_PREPARATION_R0 — focused preparation correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["eritromicina"]||!db["eritromicina"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_ERITROMICINA_PREPARATION_R0: target Gold unavailable');var g=db["eritromicina"].mcGoldClinicalV1;g.pt.preparation="Preparar conforme a formulação; não intercambiar sais ou formas farmacêuticas. Lactobionato IV 500 mg: reconstituir o frasco exclusivamente com 10 mL de água estéril para injeção sem conservantes, obtendo 50 mg/mL. Em seguida, diluir a solução reconstituída em diluente compatível para concentração final de 1 mg/mL em infusão contínua ou 1–5 mg/mL em infusão intermitente; soluções com pH <5,5 são instáveis. A solução final diluída deve ser administrada integralmente em até 8 horas e a porção não utilizada deve ser descartada. Etilsuccinato em grânulos para suspensão 200 mg/5 mL: para frasco final de 100 mL, adicionar 77 mL de água e agitar vigorosamente; para 200 mL, adicionar 154 mL de água e agitar vigorosamente. Após reconstituição, refrigerar e utilizar em até 10 dias. Comprimidos gastrorresistentes/de liberação retardada não requerem reconstituição.";g.es.preparation="Preparar según la formulación; no intercambiar sales ni formas farmacéuticas. Lactobionato IV 500 mg: reconstituir el vial exclusivamente con 10 mL de agua estéril para inyección sin conservantes, obteniendo 50 mg/mL. Luego diluir la solución reconstituida en un diluyente compatible hasta una concentración final de 1 mg/mL para infusión continua o 1–5 mg/mL para infusión intermitente; las soluciones con pH <5,5 son inestables. La solución final diluida debe administrarse por completo dentro de 8 horas y debe desecharse la porción no utilizada. Etilsuccinato en gránulos para suspensión 200 mg/5 mL: para un volumen final de 100 mL, agregar 77 mL de agua y agitar vigorosamente; para 200 mL, agregar 154 mL de agua y agitar vigorosamente. Después de la reconstitución, refrigerar y usar dentro de 10 días. Los comprimidos gastrorresistentes/de liberación retardada no requieren reconstitución.";var refs=["https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee345752-0f0c-c69b-e053-2995a90a7dac","https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49b3ca93-43cc-439c-8f5d-e3ea2e87ad2f","https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=66b0d891-8756-43d1-b046-6dba787dd96f"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_MINOCICLINA_PREPARATION_R0 — focused preparation correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["minociclina"]||!db["minociclina"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_MINOCICLINA_PREPARATION_R0: target Gold unavailable');var g=db["minociclina"].mcGoldClinicalV1;g.pt.preparation="Preparar conforme a formulação; não extrapolar instruções entre formas oral e intravenosa. Cápsulas de 50, 75 ou 100 mg: não requerem reconstituição; engolir inteiras com quantidade adequada de líquido para reduzir risco de irritação ou ulceração esofágica; podem ser administradas com ou sem alimentos. Minociclina IV 100 mg/vial (pó liofilizado): reconstituir cada frasco com 5 mL de água estéril para injeção. Imediatamente após a reconstituição, diluir em 100–1000 mL de cloreto de sódio 0,9%, dextrose 5% ou dextrose + cloreto de sódio, ou em 250–1000 mL de Ringer lactato. Não usar outras soluções contendo cálcio, pois pode ocorrer precipitação, sobretudo em meios neutros ou alcalinos. Após diluição na bolsa IV, conservar por até 4 horas em temperatura ambiente ou até 24 horas refrigerada a 2–8 °C; descartar qualquer porção não utilizada após esse período.";g.es.preparation="Preparar según la formulación; no extrapolar instrucciones entre las formas oral e intravenosa. Cápsulas de 50, 75 o 100 mg: no requieren reconstitución; tragar enteras con una cantidad adecuada de líquido para reducir el riesgo de irritación o ulceración esofágica; pueden administrarse con o sin alimentos. Minociclina IV 100 mg/vial (polvo liofilizado): reconstituir cada vial con 5 mL de agua estéril para inyección. Inmediatamente después de la reconstitución, diluir en 100–1000 mL de cloruro de sodio 0,9%, dextrosa 5% o dextrosa + cloruro de sodio, o en 250–1000 mL de Ringer lactato. No usar otras soluciones que contengan calcio, porque puede producirse precipitación, especialmente en medios neutros o alcalinos. Después de la dilución en la bolsa IV, conservar hasta 4 horas a temperatura ambiente o hasta 24 horas refrigerada a 2–8 °C; desechar cualquier porción no utilizada después de ese período.";var refs=["https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e415c323-8219-464b-9e3e-72c5a796cdaa","https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/050444s053lbl.pdf","https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=55df55fb-18ec-4e00-9ed0-10bba0da513b"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_LEVOFLOXACINO_PEDIATRIC_DOSE_R0 — focused pediatric-dose correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["levofloxacino"]||!db["levofloxacino"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_LEVOFLOXACINO_PEDIATRIC_DOSE_R0: target Gold unavailable');var g=db["levofloxacino"].mcGoldClinicalV1;g.pt.pediatricDose="Uso pediátrico rotulado restrito a antraz inalatório pós-exposição e peste em pacientes ≥6 meses; não extrapolar automaticamente para infecções pediátricas comuns. Peso <50 kg: 8 mg/kg por dose VO/IV a cada 12 h, máximo 250 mg por dose. Peso ≥50 kg: 500 mg VO/IV a cada 24 h. Antraz inalatório pós-exposição: 60 dias; iniciar o mais cedo possível após exposição suspeita ou confirmada. Peste: 10–14 dias. Para comprimidos, a formulação disponível pode limitar o uso em crianças <30 kg; considerar formulação alternativa quando necessário. A segurança pediátrica por mais de 14 dias não foi estabelecida; eventos musculoesqueléticos são mais frequentes que em controles, portanto tratamento prolongado deve ser reservado a situações em que o benefício supere o risco.";g.es.pediatricDose="Uso pediátrico autorizado restringido a ántrax por inhalación posexposición y peste en pacientes ≥6 meses; no extrapolar automáticamente a infecciones pediátricas comunes. Peso <50 kg: 8 mg/kg por dosis VO/IV cada 12 h, máximo 250 mg por dosis. Peso ≥50 kg: 500 mg VO/IV cada 24 h. Ántrax por inhalación posexposición: 60 días; iniciar lo antes posible después de una exposición sospechada o confirmada. Peste: 10–14 días. Para comprimidos, la formulación disponible puede limitar el uso en niños <30 kg; considerar una formulación alternativa cuando sea necesario. La seguridad pediátrica durante más de 14 días no ha sido establecida; los eventos musculoesqueléticos son más frecuentes que en los controles, por lo que el tratamiento prolongado debe reservarse para situaciones en las que el beneficio supere el riesgo.";var refs=["https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=4f40d5fa-ebcc-516c-e054-00144ff8d46c&type=pdf","https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f944b63-9b60-437a-ba57-d14d7976bc32","https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a61c1d31-d27e-42f9-a221-cdaef76ed91b&type=display"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_METRONIDAZOL_PEDIATRIC_DOSE_R0 — focused pediatric-dose correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["metronidazol"]||!db["metronidazol"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_METRONIDAZOL_PEDIATRIC_DOSE_R0: target Gold unavailable');var g=db["metronidazol"].mcGoldClinicalV1;g.pt.pediatricDose="A dose pediátrica depende da indicação e da idade; não usar um esquema único para todas as situações. Amebíase por via oral: 35–50 mg/kg/dia, divididos em 3 doses, por 10 dias. Metronidazol IV para infecção intra-abdominal em pacientes <4 meses: dose de ataque 15 mg/kg. Manutenção 7,5 mg/kg conforme idade pós-menstrual: 23–<34 semanas, a cada 12 h; 34–40 semanas, a cada 8 h; >40–48 semanas, a cada 6 h. A primeira dose de manutenção é administrada 24 h após o início da dose de ataque. Para pacientes pediátricos ≥4 meses, a bula IV não estabelece segurança e eficácia para tratamento de infecções anaeróbias; não extrapolar automaticamente este esquema neonatal para outras idades ou indicações. Utilizar regime específico validado quando houver indicação pediátrica não coberta pela bula.";g.es.pediatricDose="La dosis pediátrica depende de la indicación y de la edad; no utilizar un único esquema para todas las situaciones. Amebiasis por vía oral: 35–50 mg/kg/día, divididos en 3 dosis, durante 10 días. Metronidazol IV para infección intraabdominal en pacientes <4 meses: dosis de carga 15 mg/kg. Mantenimiento 7,5 mg/kg según edad posmenstrual: 23–<34 semanas, cada 12 h; 34–40 semanas, cada 8 h; >40–48 semanas, cada 6 h. La primera dosis de mantenimiento se administra 24 h después del inicio de la dosis de carga. Para pacientes pediátricos ≥4 meses, el prospecto IV no establece seguridad y eficacia para el tratamiento de infecciones anaerobias; no extrapolar automáticamente este esquema neonatal a otras edades o indicaciones. Utilizar un régimen específico validado cuando exista una indicación pediátrica no cubierta por el prospecto.";var refs=["https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71f5ce2f-17f8-45fc-b27d-2bf982591ab3","https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e4ea0c09-cdd1-4708-962c-6ba28b989df3","https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/018900s046lbl.pdf"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_RIFABUTINA_PEDIATRIC_DOSE_R0 — focused pediatric-dose correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["rifabutina"]||!db["rifabutina"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_RIFABUTINA_PEDIATRIC_DOSE_R0: target Gold unavailable');var g=db["rifabutina"].mcGoldClinicalV1;g.pt.pediatricDose="Uso pediátrico especializado em HIV/MAC; distinguir bula de diretriz. A bula informa que segurança e eficácia da rifabutina para profilaxia de MAC em crianças não foram estabelecidas. Na diretriz NIH de infecções oportunistas pediátricas em HIV, revisada em 23/04/2026, para profilaxia primária de MAC em crianças que não toleram azitromicina ou claritromicina, rifabutina 5 mg/kg VO uma vez ao dia, máximo 300 mg/dia, pode ser usada como alternativa; o uso é limitado por interações medicamentosas e falta de dados de eficácia pediátrica. Para profilaxia secundária em crianças ≥6 anos que receberam rifabutina no tratamento inicial: 5 mg/kg VO uma vez ao dia com alimento, máximo 300 mg/dia. No tratamento de MAC grave, extenso, com sintomas prolongados ou resposta lenta, pode-se adicionar rifabutina 10–20 mg/kg VO uma vez ao dia, máximo 300 mg/dia, como parte de esquema multidroga. Revisar cuidadosamente interações com antirretrovirais e outros inibidores/indutores de CYP3A; consultar especialista em HIV pediátrico. Monitorar hemograma por risco de leucopenia/neutropenia e avaliar sintomas oculares por risco de uveíte. Não apresentar estes esquemas de diretriz como dose pediátrica rotulada e não extrapolar para outras indicações.";g.es.pediatricDose="Uso pediátrico especializado en VIH/MAC; distinguir prospecto de guía clínica. El prospecto informa que la seguridad y la eficacia de rifabutina para profilaxis de MAC en niños no han sido establecidas. En la guía NIH de infecciones oportunistas pediátricas en VIH, revisada el 23/04/2026, para profilaxis primaria de MAC en niños que no toleran azitromicina o claritromicina, rifabutina 5 mg/kg VO una vez al día, máximo 300 mg/día, puede utilizarse como alternativa; su uso está limitado por interacciones farmacológicas y falta de datos de eficacia pediátrica. Para profilaxis secundaria en niños ≥6 años que recibieron rifabutina durante el tratamiento inicial: 5 mg/kg VO una vez al día con alimentos, máximo 300 mg/día. En el tratamiento de MAC grave, extenso, con síntomas prolongados o respuesta lenta, puede añadirse rifabutina 10–20 mg/kg VO una vez al día, máximo 300 mg/día, como parte de un esquema multidroga. Revisar cuidadosamente las interacciones con antirretrovirales y otros inhibidores/inductores de CYP3A; consultar a un especialista en VIH pediátrico. Monitorizar hemograma por riesgo de leucopenia/neutropenia y evaluar síntomas oculares por riesgo de uveítis. No presentar estos esquemas de guía como dosis pediátrica autorizada y no extrapolar a otras indicaciones.";var refs=["https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-pediatric-opportunistic-infections/mycobacterium-avium-complex?view=full","https://clinicalinfo.hiv.gov/sites/g/files/mnhszr391/files/guidelines/documents/pediatric-oi/dosing-tables-pediatric-oi.pdf","https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=baf8ec98-bd0c-4b87-a7ee-813335431b89"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_PENICILINA_PROCAINA_PEDIATRIC_DOSE_R0 — focused pediatric-dose correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["penicilina_procaina"]||!db["penicilina_procaina"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_PENICILINA_PROCAINA_PEDIATRIC_DOSE_R0: target Gold unavailable');var g=db["penicilina_procaina"].mcGoldClinicalV1;g.pt.pediatricDose="Sífilis congênita/neonatal: penicilina G procaína 50.000 unidades/kg/dose por via IM profunda, em dose única diária, por 10 dias. Se mais de 1 dia de tratamento for perdido, reiniciar todo o curso de 10 dias. Em lactentes e crianças com sífilis congênita, quando a penicilina G procaína é utilizada como alternativa durante limitação de penicilina G aquosa, o CDC recomenda 50.000 unidades/kg/dose IM profunda uma vez ao dia, máximo 2,4 milhões de unidades/dia, por 10 dias. A bula de penicilina G procaína também descreve sífilis congênita em pacientes com menos de 70 lb: 50.000 unidades/kg/dia por 10 dias. Usar somente formulação de penicilina G procaína apropriada para IM profunda; nunca administrar por via IV ou intra-arterial. Não confundir com combinações benzatinada/procaína como Bicillin C-R, que são explicitamente não indicadas para tratamento de sífilis. Outras indicações pediátricas exigem esquema específico por diagnóstico e não devem ser extrapoladas deste regime de sífilis congênita.";g.es.pediatricDose="Sífilis congénita/neonatal: penicilina G procaína 50.000 unidades/kg/dosis por vía IM profunda, en una dosis diaria, durante 10 días. Si se pierde más de 1 día de tratamiento, reiniciar todo el curso de 10 días. En lactantes y niños con sífilis congénita, cuando la penicilina G procaína se utiliza como alternativa durante una disponibilidad limitada de penicilina G acuosa, el CDC recomienda 50.000 unidades/kg/dosis IM profunda una vez al día, máximo 2,4 millones de unidades/día, durante 10 días. El prospecto de penicilina G procaína también describe sífilis congénita en pacientes de menos de 70 lb: 50.000 unidades/kg/día durante 10 días. Utilizar únicamente una formulación de penicilina G procaína apropiada para IM profunda; nunca administrar por vía IV ni intraarterial. No confundir con combinaciones benzatina/procaína como Bicillin C-R, que están explícitamente no indicadas para el tratamiento de la sífilis. Otras indicaciones pediátricas requieren un esquema específico según el diagnóstico y no deben extrapolarse de este régimen de sífilis congénita.";var refs=["https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm","https://www.cdc.gov/sti/php/sti-program-resources/health-alert-template-for-congenital-syphilis.html","https://dailymed.nlm.nih.gov/dailymed/downloadpdffile.cfm?setid=07fe2b47-34ac-4a20-be67-3c788c77b207"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_PENICILINA_PROCAINA_RENAL_DOSE_R0 — focused renal-dose correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["penicilina_procaina"]||!db["penicilina_procaina"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_PENICILINA_PROCAINA_RENAL_DOSE_R0: target Gold unavailable');var g=db["penicilina_procaina"].mcGoldClinicalV1;g.pt.renalDose="Não há esquema quantitativo específico de ajuste renal estabelecido na bula da penicilina G procaína IM. A penicilina G é substancialmente excretada pelos rins e sua excreção fica consideravelmente retardada em pacientes com função renal comprometida. Em DRC, especialmente grave, selecionar dose e intervalo com cautela de acordo com a indicação, gravidade da infecção, resposta clínica e função renal, com monitorização de creatinina/TFG durante tratamento prolongado ou com doses elevadas. Vigiar toxicidade por beta-lactâmicos/CNS — confusão, mioclonia ou convulsões — se houver acúmulo. Não existe na bula desta formulação IM um corte de CrCl/TFG com redução numérica padronizada, nem esquema suplementar de hemodiálise estabelecido. Não importar automaticamente os ajustes de CrCl descritos para penicilina G potássica IV, pois são formulação, via e farmacocinética diferentes. Na DRC grave ou diálise, individualizar com infectologia/farmácia clínica e monitorar função renal.";g.es.renalDose="No existe un esquema cuantitativo específico de ajuste renal establecido en el prospecto de penicilina G procaína IM. La penicilina G se elimina de forma importante por vía renal y su excreción se retrasa considerablemente en pacientes con función renal deteriorada. En ERC, especialmente grave, seleccionar la dosis y el intervalo con precaución según la indicación, gravedad de la infección, respuesta clínica y función renal, con monitorización de creatinina/TFG durante tratamientos prolongados o con dosis altas. Vigilar toxicidad por betalactámicos/SNC — confusión, mioclonías o convulsiones — si existe acumulación. El prospecto de esta formulación IM no establece un punto de corte de CrCl/TFG con reducción numérica estandarizada ni un esquema suplementario de hemodiálisis. No importar automáticamente los ajustes de CrCl descritos para penicilina G potásica IV, porque corresponden a una formulación, vía y farmacocinética diferentes. En ERC grave o diálisis, individualizar con infectología/farmacia clínica y monitorizar la función renal.";var refs=["https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=07fe2b47-34ac-4a20-be67-3c788c77b207","https://dailymed.nlm.nih.gov/dailymed/downloadpdffile.cfm?setid=07fe2b47-34ac-4a20-be67-3c788c77b207","https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=07fe2b47-34ac-4a20-be67-3c788c77b207&type=display"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_PENICILINA_V_RENAL_DOSE_R0 — focused renal-dose correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["penicilina_v"]||!db["penicilina_v"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_PENICILINA_V_RENAL_DOSE_R0: target Gold unavailable');var g=db["penicilina_v"].mcGoldClinicalV1;g.pt.renalDose="Penicilina V potássica por via oral: a bula norte-americana atual informa que a excreção fica consideravelmente retardada em pacientes com função renal comprometida, mas não fornece tabela específica por CrCl/TFG. O SmPC oficial de fenoximetilpenicilina recomenda, na insuficiência renal, ajustar o intervalo para cada 8–12 horas conforme a gravidade. Assim, manter a dose indicada para a infecção e espaçar o intervalo dentro de q8–12h conforme a intensidade da disfunção renal e a resposta clínica; na DRC mais grave, usar o extremo mais longo do intervalo, sem inventar cutoff de CrCl que não está definido nessas bulas. Monitorar creatinina/TFG em DRC avançada, função renal instável ou tratamento prolongado. Os rótulos oficiais citados não estabelecem dose suplementar específica após hemodiálise. Como o produto é o sal potássico da penicilina V, revisar potássio sérico e outras fontes de potássio em pacientes com DRC avançada, hipercalemia ou uso concomitante de fármacos que elevem K+. Individualizar em insuficiência renal grave ou diálise com infectologia/farmácia clínica.";g.es.renalDose="Penicilina V potásica por vía oral: el prospecto estadounidense actual informa que la excreción se retrasa considerablemente en pacientes con función renal deteriorada, pero no proporciona una tabla específica por CrCl/TFG. El SmPC oficial de fenoximetilpenicilina recomienda, en insuficiencia renal, ajustar el intervalo a cada 8–12 horas según la gravedad. Por lo tanto, mantener la dosis indicada para la infección y espaciar el intervalo dentro de q8–12h según la intensidad de la disfunción renal y la respuesta clínica; en ERC más grave, utilizar el extremo más largo del intervalo, sin inventar un punto de corte de CrCl que no está definido en estos prospectos. Monitorizar creatinina/TFG en ERC avanzada, función renal inestable o tratamiento prolongado. Los prospectos oficiales citados no establecen una dosis suplementaria específica después de hemodiálisis. Como el producto es la sal potásica de penicilina V, revisar potasio sérico y otras fuentes de potasio en pacientes con ERC avanzada, hiperpotasemia o fármacos concomitantes que aumenten K+. Individualizar en insuficiencia renal grave o diálisis con infectología/farmacia clínica.";var refs=["https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0744674-ddf7-4022-be2f-2a22bef0d379","https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=64ac283c-fe6a-49f0-ae85-90ab98e38272","https://www.medicines.org.uk/emc/product/15480/smpc"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_TEMOCILINA_PEDIATRIC_PREPARATION_2026_R0 — focused temocillin 2026 pediatric-dose + preparation correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["temocilina"]||!db["temocilina"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_TEMOCILINA_PEDIATRIC_PREPARATION_2026_R0: target Gold unavailable');var g=db["temocilina"].mcGoldClinicalV1;g.pt.pediatricDose="SmPC HPRA 20/02/2026 — população pediátrica: 25–50 mg/kg/dia, divididos em 2 administrações, máximo 4 g/dia. Em infecções graves, recomenda-se a dose mais alta de 50 mg/kg/dia, dividida em 2 administrações. A dose padrão de 25 mg/kg/dia pode ser administrada em 2 doses por via IM ou IV (injeção/infusão); a dose alta de 50 mg/kg/dia é descrita em 2 administrações IV. A via IM deve ser considerada apenas quando a via IV não for viável. O SmPC de 2026 ressalta incerteza sobre a adequação da dose inferior de 25 mg/kg/dia em cada indicação e sobre eventual necessidade de exceder 50 mg/kg/dia em infecções graves ou por cepas multirresistentes; não exceder 50 mg/kg/dia fora de protocolo especializado.";g.es.pediatricDose="SmPC HPRA 20/02/2026 — población pediátrica: 25–50 mg/kg/día, divididos en 2 administraciones, máximo 4 g/día. En infecciones graves se recomienda la dosis más alta de 50 mg/kg/día, dividida en 2 administraciones. La dosis estándar de 25 mg/kg/día puede administrarse en 2 dosis por vía IM o IV (inyección/infusión); la dosis alta de 50 mg/kg/día se describe en 2 administraciones IV. La vía IM debe considerarse únicamente cuando la vía IV no sea factible. El SmPC de 2026 señala incertidumbre sobre la adecuación de la dosis inferior de 25 mg/kg/día en cada indicación y sobre la eventual necesidad de superar 50 mg/kg/día en infecciones graves o por cepas multirresistentes; no superar 50 mg/kg/día fuera de un protocolo especializado.";g.pt.preparation="HPRA 20/02/2026. Injeção IV: reconstituir 1 g com 10 mL ou 2 g com 20 mL de água para injetáveis ou solução salina fisiológica; agitar até obter solução límpida e administrar em 3–4 minutos. Infusão IV intermitente: reconstituir 1 g com 10 mL ou 2 g com 20 mL usando água para injetáveis, NaCl 0,9%, dextrose 5%, Ringer ou Hartmann; após dissolução, diluir em 50, 100 ou 150 mL e infundir em 30–40 minutos. IM: para dose de 1 g, reconstituir com 3 mL de água para injetáveis, solução salina ou lidocaína 0,5–1%; administrar imediatamente; solução com lidocaína nunca deve ser administrada IV. Infusão contínua 6 g/dia: com frascos de 1 g, usar 5 mL de solvente em cada um de 6 frascos; com frascos de 2 g, usar 10 mL em cada um de 3 frascos; reunir e completar para 48 mL com o mesmo solvente, administrar a 2 mL/h por 24 h após dose de ataque de 2 g. Usar técnica asséptica, inspecionar visualmente e utilizar apenas solução límpida, praticamente livre de partículas.";g.es.preparation="HPRA 20/02/2026. Inyección IV: reconstituir 1 g con 10 mL o 2 g con 20 mL de agua para inyección o solución salina fisiológica; agitar hasta obtener una solución clara y administrar en 3–4 minutos. Infusión IV intermitente: reconstituir 1 g con 10 mL o 2 g con 20 mL usando agua para inyección, NaCl 0,9%, dextrosa 5%, Ringer o Hartmann; después de la disolución, diluir en 50, 100 o 150 mL e infundir en 30–40 minutos. IM: para una dosis de 1 g, reconstituir con 3 mL de agua para inyección, solución salina o lidocaína 0,5–1%; administrar inmediatamente; la solución con lidocaína nunca debe administrarse por vía IV. Infusión continua 6 g/día: con viales de 1 g, usar 5 mL de solvente en cada uno de 6 viales; con viales de 2 g, usar 10 mL en cada uno de 3 viales; reunir y completar hasta 48 mL con el mismo solvente, administrar a 2 mL/h durante 24 h después de una dosis de carga de 2 g. Usar técnica aséptica, inspeccionar visualmente y utilizar únicamente una solución clara, prácticamente libre de partículas.";var refs=["https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43759","https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines/details/43760","https://assets.hpra.ie/products/Human/43759/Licence_PA23460-002-001_20022026130002.pdf","https://assets.hpra.ie/products/Human/43760/Licence_PA23460-002-002_20022026130002.pdf"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+
+
+/* MEDCASES_GOLD110_ESPIRAMICINA_PEDIATRIC_DOSE_R0 — focused pediatric-dose correction */
+;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["espiramicina"]||!db["espiramicina"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_ESPIRAMICINA_PEDIATRIC_DOSE_R0: target Gold unavailable');var g=db["espiramicina"].mcGoldClinicalV1;g.pt.pediatricDose="Espiramicina oral (Rovamycine 1,5 MUI comprimido; ANSM/BDPM): em crianças com função renal normal, 1,5–3 milhões de UI por 10 kg de peso por dia, equivalentes a 150.000–300.000 UI/kg/dia, divididos em 2–3 tomadas. Para faringoamigdalite estreptocócica quando indicada, a duração recomendada do tratamento é de 10 dias. Profilaxia de meningite meningocócica quando rifampicina é contraindicada: 75.000 UI/kg por dose VO a cada 12 horas por 5 dias; a espiramicina é usada para erradicação nasofaríngea e não para tratamento de meningite meningocócica. A apresentação comprimido de 1,5 MUI é destinada a adultos e crianças com mais de 6 anos; é contraindicada em menores de 6 anos por risco de engasgo/falsa via. Não extrapolar automaticamente este esquema para outras formulações ou indicações específicas sem conferir a bula local.";g.es.pediatricDose="Espiramicina oral (Rovamycine 1,5 MUI comprimido; ANSM/BDPM): en niños con función renal normal, 1,5–3 millones de UI por 10 kg de peso al día, equivalentes a 150.000–300.000 UI/kg/día, divididos en 2–3 tomas. Para faringoamigdalitis estreptocócica cuando esté indicada, la duración recomendada del tratamiento es de 10 días. Profilaxis de meningitis meningocócica cuando la rifampicina está contraindicada: 75.000 UI/kg por dosis VO cada 12 horas durante 5 días; la espiramicina se utiliza para erradicación nasofaríngea y no para tratar la meningitis meningocócica. La presentación en comprimidos de 1,5 MUI está destinada a adultos y niños mayores de 6 años; está contraindicada en menores de 6 años por riesgo de atragantamiento/falsa vía. No extrapolar automáticamente este esquema a otras formulaciones o indicaciones específicas sin verificar el prospecto local.";var refs=["https://m.base-donnees-publique.medicaments.gouv.fr/rcp-64212005-2","https://base-donnees-publique.medicaments.gouv.fr/medicament/64212005/extrait","https://base-donnees-publique.medicaments.gouv.fr/medicament/62793782/extrait"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();

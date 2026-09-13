@@ -1,32 +1,17 @@
 {
   "id": "cefotaxima",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Cefotaxima",
-    "class": "Cefalosporina de 3ª geração",
-    "commercialNames": {
-      "br": [
-        "Claforan",
-        "Cefotaxima Eurofarma"
-      ],
-      "ar": [
-        "Claforan",
-        "Cefotaxima Richet"
-      ]
-    },
-    "presentation": [
-      "Frasco-ampola 500 mg",
-      "Frasco-ampola 1 g",
-      "Frasco-ampola 2 g"
+    "class": "Antibiótico beta-lactâmico",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "1–2 g EV 6/6h a 8/8h",
-      "meningite": "2 g EV 4/4h a 6/6h",
-      "pediatrica": "2000 mg EV 6/6h"
-    },
+    "presentation": "Frascos para IV/IM.",
+    "dose": "Adultos: não complicadas 1 g q12h; moderadas/graves 1–2 g q8h; sepse 2 g q6–8h; potencialmente fatais 2 g q4h; máximo 12 g/dia.",
     "doseKg": {
       "standard": "100–150 mg/kg/dia",
       "meningite": "200–300 mg/kg/dia",
@@ -36,129 +21,72 @@
     "dilution": "Diluir conforme protocolo institucional.",
     "speed": "Infusão em aproximadamente 30 minutos.",
     "commonAdverseEffects": [
-      "Náuseas",
+      "Náusea",
       "Diarreia",
       "Rash"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Neutropenia",
-      "Colite por C. difficile"
+      "C. difficile",
+      "SCAR/SJS-TEN",
+      "Neurotoxicidade por acúmulo"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Excelente opção para meningite bacteriana.",
-      "Alternativa à Ceftriaxona em neonatos."
+      "Confirmar foco e suscetibilidade",
+      "Reavaliar dose se função renal mudar"
     ],
-    "ref": "Sanford Guide 2025 / Nelson Pediatrics / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h–8/8h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h–8/8h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para meningite e infecções graves."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Redução da frequência conforme função renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h–24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "12/12h–24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajustar conforme gravidade da infecção."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar toxicidade neurológica em insuficiência renal avançada."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef1a6dc6-bc3d-4f09-8f92-7ff328f56561",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ],
+    "renalDose": "Se ClCr <20 mL/min/1,73 m², reduzir dose total aproximadamente 50% e individualizar pela gravidade.",
+    "pharmacologicClass": "Cefalosporina de 3ª geração",
+    "mechanism": "Liga PBPs e inibe síntese da parede bacteriana.",
+    "pharmacodynamics": "Bactericida tempo-dependente; eficácia depende de fT>MIC.",
+    "pharmacokinetics": "IV/IM; metabolizada parcialmente a desacetil-cefotaxima ativa; eliminação predominantemente renal; boa penetração no LCR.",
+    "indications": "Infecções moderadas/graves, sepse e meningite por suscetíveis.",
+    "presentations": [
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "<50 kg: 50–180 mg/kg/dia divididos em 4–6 doses; usar faixa alta em grave/meningite. >=50 kg: dose adulta.",
+    "hepaticDose": "Sem ajuste hepático rotineiro; monitorar em hepatopatia importante/curso prolongado.",
+    "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+    "monitoring": "Culturas/resposta, função renal, hemograma e função hepática; vigiar neurotoxicidade e rim se associado a aminoglicosídeo.",
+    "administration": "IV ou IM; sepse/meningite usar IV.",
+    "preparation": "Reconstituir/diluir conforme apresentação e compatibilidade.",
+    "infusionProtocol": "Infusão intermitente padrão; prolongada pode ser considerada em críticos se estabilidade permitir.",
+    "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+    "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "DRC exige redução; hiperfiltração em críticos pode causar subexposição.",
+    "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+    "clinicalPearls": "Boa penetração no SNC e amplo Gram-negativo, mas sem cobertura confiável de Pseudomonas, Enterococcus ou MRSA.",
+    "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal quando aplicável",
+      "Neurotoxicidade por acúmulo"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef1a6dc6-bc3d-4f09-8f92-7ff328f56561",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ]
   },
   "es": {
     "name": "Cefotaxima",
-    "class": "Cefalosporina de 3ª generación",
-    "commercialNames": {
-      "br": [
-        "Claforan",
-        "Cefotaxima Eurofarma"
-      ],
-      "ar": [
-        "Claforan",
-        "Cefotaxima Richet"
-      ]
-    },
-    "presentation": [
-      "Frasco ampolla 500 mg",
-      "Frasco ampolla 1 g",
-      "Frasco ampolla 2 g"
+    "class": "Antibiótico betalactámico",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "1–2 g EV cada 6h a 8h",
-      "meningite": "2 g EV cada 4h a 6h",
-      "pediatrica": "2000 mg EV cada 6h"
-    },
+    "presentation": "Viales IV/IM.",
+    "dose": "Adultos: no complicadas 1 g q12h; moderadas/graves 1–2 g q8h; sepsis 2 g q6–8h; potencialmente mortales 2 g q4h; máximo 12 g/día.",
     "doseKg": {
       "standard": "100–150 mg/kg/día",
       "meningite": "200–300 mg/kg/día",
@@ -174,99 +102,57 @@
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Neutropenia",
-      "Colitis por C. difficile"
+      "C. difficile",
+      "SCAR/SJS-TEN",
+      "Neurotoxicidad por acumulación"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Excelente opción para meningitis bacteriana.",
-      "Alternativa a Ceftriaxona en neonatos."
+      "Confirmar foco y susceptibilidad",
+      "Reevaluar dosis si cambia la función renal"
     ],
-    "ref": "Sanford Guide 2025 / Nelson Pediatrics / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h–8/8h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h–8/8h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para meningitis e infecciones graves."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–50 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducción de la frecuencia según función renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "12/12h–24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25 mg/kg",
-          "intervalo": "12/12h–24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajustar según gravedad de la infección."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar toxicidad neurológica en insuficiencia renal avanzada."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef1a6dc6-bc3d-4f09-8f92-7ff328f56561",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ],
+    "renalDose": "Si ClCr <20 mL/min/1,73 m², reducir dosis total aproximadamente 50% e individualizar según gravedad.",
+    "pharmacologicClass": "Cefalosporina de 3ª generación",
+    "mechanism": "Se une a PBP e inhibe síntesis de pared bacteriana.",
+    "pharmacodynamics": "Bactericida dependiente del tiempo; eficacia depende de fT>MIC.",
+    "pharmacokinetics": "IV/IM; metabolizada parcialmente a desacetil-cefotaxima activa; eliminación renal; buena penetración en LCR.",
+    "indications": "Infecciones moderadas/graves, sepsis y meningitis por susceptibles.",
+    "presentations": [
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "<50 kg: 50–180 mg/kg/día divididos en 4–6 dosis; usar rango alto en grave/meningitis. >=50 kg: dosis adulta.",
+    "hepaticDose": "Sin ajuste hepático rutinario; monitorizar en hepatopatía importante/curso prolongado.",
+    "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+    "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+    "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+    "monitoring": "Cultivos/respuesta, función renal, hemograma y función hepática; vigilar neurotoxicidad y riñón si se asocia a aminoglucósido.",
+    "administration": "IV o IM; sepsis/meningitis usar IV.",
+    "preparation": "Reconstituir/diluir según presentación y compatibilidad.",
+    "infusionProtocol": "Infusión intermitente estándar; prolongada puede considerarse en críticos si estabilidad lo permite.",
+    "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+    "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+    "specialPopulations": "ERC exige reducción; hiperfiltración en críticos puede causar subexposición.",
+    "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+    "clinicalPearls": "Buena penetración en SNC y amplio Gram negativo, pero sin cobertura confiable de Pseudomonas, Enterococcus o MRSA.",
+    "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal cuando corresponda",
+      "Neurotoxicidad por acumulación"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef1a6dc6-bc3d-4f09-8f92-7ff328f56561",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+    ]
   },
   "name": {
     "pt": "Cefotaxima",
@@ -279,8 +165,8 @@
     "cefotaxima richet",
     "cefalosporina de 3ª geracao"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-e61729424f211913",
+  "clinicalContentSha256": "e61729424f2119133df2859fd54b61485ca0d422f660b50949e686e5f2e0905e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

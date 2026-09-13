@@ -1,31 +1,17 @@
 {
   "id": "linezolida",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Linezolida",
-    "class": "Oxazolidinona",
-    "commercialNames": {
-      "br": [
-        "Zyvox",
-        "Linezolida Genérica"
-      ],
-      "ar": [
-        "Zyvox",
-        "Linezolida Genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 600 mg",
-      "Suspensão oral: 100 mg/5 mL",
-      "Solução injetável EV: 2 mg/mL (300 mL = 600 mg)"
+    "class": "Antibiótico oxazolidinona",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "600 mg VO/EV 12/12h",
-      "pediatrica": "600 mg VO/EV 8/8h–12/12h (10 mg/kg/dose)"
-    },
+    "presentation": "Comprimidos, suspensão oral e solução IV.",
+    "dose": "Adultos/adolescentes: 600 mg IV ou VO q12h para a maioria das indicações graves.",
     "doseKg": {
       "standard": "10 mg/kg/dose 8/8h–12/12h (pediátrico)",
       "maxDose": "1,2 g/dia"
@@ -34,142 +20,35 @@
     "dilution": "EV: solução pronta 2 mg/mL — infundir sem diluição adicional.",
     "speed": "EV: infundir em 30–120 minutos.",
     "commonAdverseEffects": [
-      "Náuseas e vômitos",
-      "Cefaleia",
+      "Náusea",
       "Diarreia",
-      "Insônia"
+      "Cefaleia",
+      "Reação no local de administração"
     ],
     "dangerousAdverseEffects": [
-      "Trombocitopenia (uso > 2 semanas)",
-      "Síndrome serotoninérgica (com ISRSs / IMAOs)",
-      "Neuropatia óptica e periférica (uso prolongado)",
+      "Mielossupressão/trombocitopenia",
+      "Síndrome serotoninérgica",
+      "Neuropatia óptica/periférica",
       "Acidose láctica"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Monitorar hemograma semanalmente em tratamentos > 2 semanas.",
-      "Evitar associação com ISRSs, IMAOs e alimentos ricos em tiramina — crise hipertensiva.",
-      "Biodisponibilidade oral ~ 100% — trocar EV→VO assim que possível."
+      "Síndrome serotoninérgica/MAO",
+      "Hemograma semanal",
+      "Neuropatia óptica/periférica",
+      "Acidose láctica",
+      "Sem cobertura Gram-negativa"
     ],
-    "ref": "IDSA MRSA Guidelines 2011 / Sanford Guide 2025 / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual, mas exige vigilância hematológica.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para MRSA e Enterococcus resistente."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar trombocitopenia, especialmente se uso >7–14 dias."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Maior risco de mielossupressão, acidose láctica e neuropatia óptica/periférica em uso prolongado."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Preferir administrar após HD nos dias de diálise. Linezolida é parcialmente removida pela hemodiálise."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": false,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": true,
-      "warning": "Monitorar hemograma e plaquetas semanalmente (trombocitopenia em uso >2 semanas). Risco de neuropatia óptica/periférica em uso prolongado (>28 dias). Risco de síndrome serotoninérgica com IMAOs, ISRSs e outros serotoninérgicos. Monitorar acidose láctica em uso prolongado."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "renalDose": "Sem ajuste padrão, mas metabólitos acumulam na DRC; em HD administrar após sessão. Risco de trombocitopenia pode ser maior em insuficiência renal.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Monitorização de toxicidade"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -183,30 +62,46 @@
         "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
       ],
       "note": "Bloco mesclado e melhorado: message expandida com vigilância hematológica; doseMaxima pediátrica corrigida para 600 mg/dose; fg10a30.obs com threshold >7–14 dias; fgMenor10.obs com mielossupressão; hemodialise.obs com remoção parcial por HD; safetyFlags e auditNotes adicionados."
-    }
+    },
+    "pharmacologicClass": "Oxazolidinona anti-MRSA/VRE",
+    "mechanism": "Liga-se ao 23S rRNA da subunidade 50S e impede formação do complexo de iniciação 70S.",
+    "pharmacodynamics": "A eficácia se relaciona à exposição AUC/MIC e tempo acima da MIC; geralmente bacteriostática contra estafilococos e enterococos.",
+    "pharmacokinetics": "Biodisponibilidade oral ~100%, conversão IV-VO 1:1; boa distribuição e metabolismo não enzimático.",
+    "indications": "Pneumonia e infecções de pele por Gram-positivos suscetíveis; VRE incluindo E. faecium. Não cobre Gram-negativos.",
+    "presentations": [
+      "600 mg comprimido",
+      "100 mg/5 mL suspensão",
+      "2 mg/mL IV"
+    ],
+    "pediatricDose": "<12 anos: frequentemente 10 mg/kg q8h conforme indicação; neonatos muito jovens podem iniciar q12h. >=12 anos: 600 mg q12h.",
+    "hepaticDose": "Sem ajuste em hepatopatia leve/moderada; dados limitados em grave.",
+    "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Fármacos serotonérgicos, opioides, antidepressivos, simpaticomiméticos e alimentos ricos em tiramina exigem revisão por efeito MAOI.",
+    "monitoring": "Hemograma semanal; sintomas visuais/neuropáticos em uso prolongado; lactato se acidose; vigiar síndrome serotoninérgica.",
+    "administration": "IV ou VO; VO tem biodisponibilidade quase completa.",
+    "preparation": "Solução IV pronta não deve receber aditivos incompatíveis; suspensão oral conforme fabricante.",
+    "infusionProtocol": "Infundir IV em 30–120 min; conversão IV-VO geralmente sem mudança de dose.",
+    "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Cursos >2 semanas aumentam mielossupressão; uso prolongado associa neuropatia óptica/periférica e acidose láctica.",
+    "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
+    "clinicalPearls": "É inibidor reversível não seletivo da MAO: risco de síndrome serotoninérgica com serotonérgicos e resposta pressórica com tiramina/simpaticomiméticos.",
+    "guidelineRecommendations": "Usar para Gram-positivos resistentes quando apropriado e desescalonar com microbiologia. Monitorar hemograma semanal, especialmente >2 semanas ou em DRC.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "es": {
     "name": "Linezolida",
-    "class": "Oxazolidinona",
-    "commercialNames": {
-      "br": [
-        "Zyvox",
-        "Linezolida Genérica"
-      ],
-      "ar": [
-        "Zyvox",
-        "Linezolida Genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 600 mg",
-      "Suspensión oral: 100 mg/5 mL",
-      "Solución inyectable EV: 2 mg/mL (300 mL = 600 mg)"
+    "class": "Antibiótico oxazolidinona",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "600 mg VO/EV cada 12h",
-      "pediatrica": "600 mg VO/EV cada 8h–12h (10 mg/kg/dosis)"
-    },
+    "presentation": "Comprimidos, suspensión oral y solución IV.",
+    "dose": "Adultos/adolescentes: 600 mg IV o VO q12h para la mayoría de indicaciones graves.",
     "doseKg": {
       "standard": "10 mg/kg/dosis cada 8h–12h (pediátrico)",
       "maxDose": "1,2 g/día"
@@ -215,142 +110,35 @@
     "dilution": "EV: solución lista 2 mg/mL — infundir sin dilución adicional.",
     "speed": "EV: infundir en 30–120 minutos.",
     "commonAdverseEffects": [
-      "Náuseas y vómitos",
-      "Cefalea",
+      "Náuseas",
       "Diarrea",
-      "Insomnio"
+      "Cefalea",
+      "Reacción en el sitio de administración"
     ],
     "dangerousAdverseEffects": [
-      "Trombocitopenia (uso > 2 semanas)",
-      "Síndrome serotoninérgica (con ISRSs / IMAOs)",
-      "Neuropatía óptica y periférica (uso prolongado)",
+      "Mielosupresión/trombocitopenia",
+      "Síndrome serotoninérgico",
+      "Neuropatía óptica/periférica",
       "Acidosis láctica"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Monitorizar hemograma semanalmente en tratamientos > 2 semanas.",
-      "Evitar asociación con ISRSs, IMAOs y alimentos ricos en tiramina — crisis hipertensiva.",
-      "Biodisponibilidad oral ~ 100% — cambiar EV→VO tan pronto como sea posible."
+      "Síndrome serotoninérgico/MAO",
+      "Hemograma semanal",
+      "Neuropatía óptica/periférica",
+      "Acidosis láctica",
+      "Sin cobertura Gram negativa"
     ],
-    "ref": "IDSA MRSA Guidelines 2011 / Sanford Guide 2025 / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual, pero exige vigilancia hematológica.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para MRSA y Enterococcus resistente."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar trombocitopenia, especialmente si uso >7–14 días."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Mayor riesgo de mielosupresión, acidosis láctica y neuropatía óptica/periférica en uso prolongado."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1,2 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "8/8h–12/12h",
-          "doseMaxima": "600 mg/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Preferir administrar después de HD en días de diálisis. Linezolida es parcialmente removida por hemodiálisis."
-      }
-    },
-    "safetyFlags": {
-      "renalHighRisk": false,
-      "neurotoxicityRisk": true,
-      "qtRisk": false,
-      "hepatotoxicityRisk": false,
-      "requiresCultureGuidance": true,
-      "warning": "Monitorizar hemograma y plaquetas semanalmente (trombocitopenia en uso >2 semanas). Riesgo de neuropatía óptica/periférica en uso prolongado (>28 días). Riesgo de síndrome serotoninérgico con IMAOs, ISRSs y otros serotoninérgicos. Monitorizar acidosis láctica en uso prolongado."
-    },
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "renalDose": "Sin ajuste estándar, pero metabolitos se acumulan en ERC; en HD administrar después de sesión. Puede aumentar trombocitopenia en insuficiencia renal.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Monitorización de toxicidad"
+    ],
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -364,7 +152,37 @@
         "Goodman & Gilman's Pharmacological Basis of Therapeutics 14ª ed."
       ],
       "note": "Bloque fusionado y mejorado: message ampliada con vigilancia hematológica; doseMaxima pediátrica corregida a 600 mg/dosis; fg10a30.obs con umbral >7–14 días; fgMenor10.obs con mielosupresión; hemodialise.obs con remoción parcial por HD; safetyFlags y auditNotes añadidos."
-    }
+    },
+    "pharmacologicClass": "Oxazolidinona anti-MRSA/VRE",
+    "mechanism": "Se une al 23S rRNA de la subunidad 50S e impide formar el complejo de iniciación 70S.",
+    "pharmacodynamics": "La eficacia se relaciona con AUC/MIC y tiempo sobre MIC; suele ser bacteriostática frente a estafilococos y enterococos.",
+    "pharmacokinetics": "Biodisponibilidad oral ~100%, conversión IV-VO 1:1; buena distribución y metabolismo no enzimático.",
+    "indications": "Neumonía e infecciones de piel por Gram positivos susceptibles; VRE incluido E. faecium. No cubre Gram negativos.",
+    "presentations": [
+      "600 mg comprimido",
+      "100 mg/5 mL suspensión",
+      "2 mg/mL IV"
+    ],
+    "pediatricDose": "<12 años: con frecuencia 10 mg/kg q8h según indicación; neonatos muy jóvenes pueden iniciar q12h. >=12 años: 600 mg q12h.",
+    "hepaticDose": "Sin ajuste en hepatopatía leve/moderada; datos limitados en grave.",
+    "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+    "interactions": "Fármacos serotoninérgicos, opioides, antidepresivos, simpaticomiméticos y alimentos ricos en tiramina requieren revisión por efecto IMAO.",
+    "monitoring": "Hemograma semanal; síntomas visuales/neuropáticos en uso prolongado; lactato si acidosis; vigilar síndrome serotoninérgico.",
+    "administration": "IV o VO; VO tiene biodisponibilidad casi completa.",
+    "preparation": "Solución IV lista no debe recibir aditivos incompatibles; suspensión oral según fabricante.",
+    "infusionProtocol": "Infundir IV en 30–120 min; conversión IV-VO generalmente sin cambio de dosis.",
+    "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Tratamientos >2 semanas aumentan mielosupresión; uso prolongado se asocia a neuropatía óptica/periférica y acidosis láctica.",
+    "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
+    "clinicalPearls": "Es inhibidor reversible no selectivo de MAO: riesgo de síndrome serotoninérgico con serotoninérgicos y respuesta presora con tiramina/simpaticomiméticos.",
+    "guidelineRecommendations": "Usar para Gram positivos resistentes cuando corresponda y desescalar con microbiología. Controlar hemograma semanal, especialmente >2 semanas o en ERC.",
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "name": {
     "pt": "Linezolida",
@@ -376,8 +194,8 @@
     "linezolida generica",
     "oxazolidinona"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8748201986b5fc57",
+  "clinicalContentSha256": "8748201986b5fc5759ebd8fa28517ea54274edfd6d13294067ba1d3e22872ffb",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

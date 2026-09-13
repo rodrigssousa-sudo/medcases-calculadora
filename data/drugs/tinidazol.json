@@ -1,248 +1,156 @@
 {
   "id": "tinidazol",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(16,185,129,0.12)",
   "colorTxt": "#047857",
   "pt": {
     "name": "Tinidazol",
-    "class": "Nitroimidazol de 2ª geração (longa meia-vida)",
-    "commercialNames": {
-      "br": [
-        "Fasigyn",
-        "Tinidazol Genérico"
-      ],
-      "ar": [
-        "Fasigyn",
-        "Tinidazol Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 500 mg"
+    "class": "Antiprotozoário e antibacteriano nitroimidazol",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "2 g VO dose única (ou 2 g/dia × 3 dias para amebíase)"
-    },
+    "presentation": "Comprimidos orais revestidos.",
+    "dose": "Tricomoníase ou giardíase em adulto: 2 g VO dose única com alimento. Amebíase intestinal: 2 g/dia por 3 dias; abscesso amebiano: 2 g/dia por 3–5 dias. Vaginose: 2 g/dia x2 ou 1 g/dia x5.",
     "doseKg": null,
     "indication": "Giardíase, amebíase intestinal e hepática, tricomoníase, vaginose bacteriana (Gardnerella vaginalis), infecções por anaeróbios.",
     "spectrum": "Trichomonas vaginalis, Giardia lamblia, Entamoeba histolytica, anaeróbios (Bacteroides fragilis, Clostridium spp.), Gardnerella vaginalis. Sem atividade contra aeróbios.",
-    "contraindications": [
-      "Hipersensibilidade aos nitroimidazóis",
-      "1º trimestre de gestação",
-      "Distúrbios neurológicos orgânicos (risco de neurotoxicidade)"
-    ],
+    "contraindications": "Hipersensibilidade a nitroimidazóis e síndrome de Cockayne.",
     "risksByPatient": [],
     "alerts": [
-      "Efeito antabuse com álcool — orientar abstinência durante tratamento e 72h após.",
-      "Meia-vida longa (~12–14h) permite dose única ou regimes curtos.",
-      "Não necessita ajuste renal habitual."
+      "2 g dose única tricomoníase/giardíase adulto",
+      "Pediatria >3a: 50 mg/kg",
+      "CrCl <22: sem ajuste",
+      "HD: +50% da dose após sessão",
+      "Não amamentar por 72 h"
     ],
-    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Utilizado para giardíase, amebíase e tricomoníase."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar neurotoxicidade em uso prolongado."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Pode ser necessária dose suplementar após HD em tratamentos prolongados."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=45fa3ebd-52da-4987-82a1-4a64f99785a7",
+      "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
+      "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+    ],
+    "renalDose": "Sem ajuste em insuficiência renal grave (CrCl <22 mL/min). Se administrado antes da hemodiálise no mesmo dia, dar após HD dose adicional equivalente a metade da dose recomendada.",
+    "pharmacologicClass": "Nitroimidazol de longa meia-vida",
+    "mechanism": "Em anaeróbios/protozoários, o grupo nitro é reduzido a intermediários reativos que danificam DNA e outras macromoléculas.",
+    "pharmacodynamics": "Atividade microbicida contra protozoários e anaeróbios suscetíveis; meia-vida longa permite vários esquemas de dose única.",
+    "pharmacokinetics": "Alta biodisponibilidade oral, ampla distribuição e metabolismo hepático; cerca de 43% pode ser removido em 6 h de hemodiálise.",
+    "indications": "Tricomoníase, giardíase, amebíase intestinal/abscesso hepático amebiano e vaginose bacteriana em adultos conforme bula.",
+    "presentations": [
+      "500 mg"
+    ],
+    "pediatricDose": ">3 anos: giardíase 50 mg/kg dose única, máximo 2 g; amebíase 50 mg/kg/dia, máximo 2 g/dia, por 3 dias ou 3–5 dias no abscesso hepático.",
+    "hepaticDose": "Sem dados formais suficientes; usar doses usuais com cautela em disfunção hepática devido a possível redução da eliminação.",
+    "commonAdverseEffects": [
+      "Sabor metálico",
+      "Náusea",
+      "Dispepsia",
+      "Cefaleia",
+      "Tontura"
+    ],
+    "dangerousAdverseEffects": [
+      "Convulsões",
+      "Neuropatia periférica",
+      "SCAR",
+      "Hepatotoxicidade grave em síndrome de Cockayne"
+    ],
+    "adverseEffects": "Eventos GI e sabor metálico são comuns; sinais neurológicos anormais exigem suspensão imediata.",
+    "interactions": "Evitar álcool/etanol/propilenoglicol durante e por 3 dias após. Pode aumentar efeito de warfarina; monitorar lítio, ciclosporina e tacrolimo.",
+    "monitoring": "Avaliar sintomas neurológicos; hemograma se retratamento; monitorar INR e lítio quando aplicável.",
+    "administration": "VO com alimento para reduzir desconforto epigástrico.",
+    "preparation": "Pode ser triturado e preparado em suspensão extemporânea com xarope conforme bula; estabilidade de 7 dias em temperatura ambiente.",
+    "infusionProtocol": "Não aplicável; formulação oral.",
+    "pregnancy": "Dados humanos são insuficientes para definir risco; tratar infecção quando benefício materno justificar, seguindo indicação e diretriz obstétrica.",
+    "lactation": "Não amamentar durante o tratamento e por 72 h após a última dose; pode-se ordenhar e descartar nesse período.",
+    "specialPopulations": "Síndrome de Cockayne é contraindicação devido a risco de insuficiência hepática grave com nitroimidazóis relacionados.",
+    "patientEducation": "Evitar álcool e propilenoglicol durante e por 3 dias depois; relatar formigamento, convulsão ou icterícia.",
+    "clinicalPearls": "Tinidazol combina meia-vida longa com dose única para várias indicações; o detalhe de segurança que não pode ser perdido é álcool por 72 h e Cockayne como contraindicação.",
+    "guidelineRecommendations": "Usar apenas para indicações aprovadas/fortemente sustentadas e tratar parceiros simultaneamente na tricomoníase.",
+    "safetyFlags": [
+      "Álcool +3 dias",
+      "Cockayne contraindicado",
+      "Neuropatia/convulsões",
+      "HD: meia dose suplementar",
+      "Uso pediátrico >3 anos para Giardia/ameba"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=45fa3ebd-52da-4987-82a1-4a64f99785a7",
+      "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
+      "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+    ]
   },
   "es": {
     "name": "Tinidazol",
-    "class": "Nitroimidazol de 2.ª generación (larga semivida)",
-    "commercialNames": {
-      "br": [
-        "Fasigyn",
-        "Tinidazol Genérico"
-      ],
-      "ar": [
-        "Fasigyn",
-        "Tinidazol Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 500 mg"
+    "class": "Antiprotozoario y antibacteriano nitroimidazol",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "2 g VO dosis única (o 2 g/día × 3 días para amebiasis)"
-    },
+    "presentation": "Comprimidos orales recubiertos.",
+    "dose": "Tricomoniasis o giardiasis adulto: 2 g VO dosis única con alimentos. Amebiasis intestinal 2 g/día x3; absceso amebiano 2 g/día x3–5. Vaginosis 2 g/día x2 o 1 g/día x5.",
     "doseKg": null,
     "indication": "Giardiasis, amebiasis intestinal y hepática, tricomoniasis, vaginosis bacteriana (Gardnerella vaginalis), infecciones por anaerobios.",
     "spectrum": "Trichomonas vaginalis, Giardia lamblia, Entamoeba histolytica, anaerobios (Bacteroides fragilis, Clostridium spp.), Gardnerella vaginalis. Sin actividad frente a aerobios.",
-    "contraindications": [
-      "Hipersensibilidad a los nitroimidazoles",
-      "1.er trimestre de gestación",
-      "Trastornos neurológicos orgánicos (riesgo de neurotoxicidad)"
-    ],
+    "contraindications": "Hipersensibilidad a nitroimidazoles y síndrome de Cockayne.",
     "risksByPatient": [],
     "alerts": [
-      "Efecto antabus con alcohol — orientar abstinencia durante el tratamiento y 72h después.",
-      "Semivida larga (~12–14h) permite dosis única o regímenes cortos.",
-      "No requiere ajuste renal habitual."
+      "2 g dosis única tricomoniasis/giardiasis adulto",
+      "Pediatría >3a: 50 mg/kg",
+      "ClCr <22: sin ajuste",
+      "HD: +50% tras sesión",
+      "No lactancia por 72 h"
     ],
-    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Utilizado para giardiasis, amebiasis y tricomoniasis."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar neurotoxicidad en uso prolongado."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Puede ser necesaria dosis suplementaria después de HD en tratamientos prolongados."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=45fa3ebd-52da-4987-82a1-4a64f99785a7",
+      "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
+      "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+    ],
+    "renalDose": "Sin ajuste en insuficiencia renal grave (ClCr <22 mL/min). Si se administra antes de HD el mismo día, dar tras HD una dosis adicional equivalente a la mitad de la dosis recomendada.",
+    "pharmacologicClass": "Nitroimidazol de larga semivida",
+    "mechanism": "En anaerobios/protozoos, el grupo nitro se reduce a intermediarios reactivos que dañan DNA y otras macromoléculas.",
+    "pharmacodynamics": "Actividad microbicida frente a protozoos y anaerobios susceptibles; semivida larga permite varios esquemas de dosis única.",
+    "pharmacokinetics": "Alta biodisponibilidad oral, amplia distribución y metabolismo hepático; ~43% puede eliminarse en 6 h de hemodiálisis.",
+    "indications": "Tricomoniasis, giardiasis, amebiasis intestinal/absceso hepático amebiano y vaginosis bacteriana en adultos según ficha.",
+    "presentations": [
+      "500 mg"
+    ],
+    "pediatricDose": ">3 años: giardiasis 50 mg/kg dosis única, máximo 2 g; amebiasis 50 mg/kg/día, máximo 2 g/día, por 3 días o 3–5 días en absceso.",
+    "hepaticDose": "Sin datos formales suficientes; usar dosis usuales con cautela en disfunción hepática por posible menor eliminación.",
+    "commonAdverseEffects": [
+      "Sabor metálico",
+      "Náuseas",
+      "Dispepsia",
+      "Cefalea",
+      "Mareo"
+    ],
+    "dangerousAdverseEffects": [
+      "Convulsiones",
+      "Neuropatía periférica",
+      "SCAR",
+      "Hepatotoxicidad grave en síndrome de Cockayne"
+    ],
+    "adverseEffects": "Eventos GI y sabor metálico son frecuentes; signos neurológicos anormales exigen suspensión inmediata.",
+    "interactions": "Evitar alcohol/etanol/propilenglicol durante y 3 días después. Puede aumentar efecto de warfarina; monitorizar litio, ciclosporina y tacrolimus.",
+    "monitoring": "Síntomas neurológicos; hemograma si retratamiento; INR y litio cuando corresponda.",
+    "administration": "VO con alimentos para reducir molestias epigástricas.",
+    "preparation": "Puede triturarse y prepararse suspensión extemporánea con jarabe según ficha; estable 7 días a temperatura ambiente.",
+    "infusionProtocol": "No aplicable; formulación oral.",
+    "pregnancy": "Datos humanos insuficientes; tratar cuando beneficio materno lo justifique, siguiendo indicación y guía obstétrica.",
+    "lactation": "No amamantar durante tratamiento y por 72 h tras última dosis; puede extraerse y desecharse leche.",
+    "specialPopulations": "Síndrome de Cockayne es contraindicación por riesgo de fallo hepático grave con nitroimidazoles relacionados.",
+    "patientEducation": "Evitar alcohol/propilenglicol durante y 3 días después; informar hormigueo, convulsión o ictericia.",
+    "clinicalPearls": "Tinidazol permite dosis única en varias indicaciones; seguridad clave: alcohol por 72 h y Cockayne contraindicado.",
+    "guidelineRecommendations": "Usar solo en indicaciones aprobadas/bien sustentadas y tratar parejas simultáneamente en tricomoniasis.",
+    "safetyFlags": [
+      "Alcohol +3 días",
+      "Cockayne contraindicado",
+      "Neuropatía/convulsiones",
+      "HD: media dosis suplementaria",
+      "Pediatría >3 años"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=45fa3ebd-52da-4987-82a1-4a64f99785a7",
+      "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
+      "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+    ]
   },
   "name": {
     "pt": "Tinidazol",
@@ -254,8 +162,8 @@
     "tinidazol generico",
     "nitroimidazol de 2ª geracao (longa meia-vida)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-498fff204c135c65",
+  "clinicalContentSha256": "498fff204c135c65be0a5cfa66e32fec095850e080daef212492a73e722d15c9",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

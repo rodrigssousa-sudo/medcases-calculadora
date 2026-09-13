@@ -1,298 +1,172 @@
 {
   "id": "flucloxacilina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": "rgba(245,158,11,0.12)",
   "colorTxt": "#92400E",
   "pt": {
     "name": "Flucloxacilina",
-    "class": "Penicilina resistente à penicilinase (isoxazolilpenicilina — anti-MSSA, padrão europeu)",
-    "commercialNames": {
-      "br": [
-        "Flucloxacilina Genérico (uso limitado no Brasil)"
-      ],
-      "ar": [
-        "Flucloxacilina Genérico"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 250 mg, 500 mg",
-      "Pó para solução injetável EV/IM: 250 mg, 500 mg, 1 g por frasco",
-      "Suspensão oral: 125 mg/5 mL"
+    "class": "Penicilina resistente a penicilinase",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "500 mg–1 g VO 6/6h (em jejum)",
-      "adultoEV": "1–2 g EV 6/6h"
-    },
+    "presentation": "Cápsulas e formulações IV/IM.",
+    "dose": "Adulto oral 250 mg q6h; grave pode dobrar. Parenteral 1–6 g/dia; grave até 8 g/dia e alguns esquemas até 12 g/dia.",
     "doseKg": null,
     "indication": "Infecções por MSSA: endocardite, bacteremia, osteomielite, artrite séptica, infecções de pele e partes moles, pneumonia estafilocócica. Droga de escolha para MSSA em muitos países europeus (equivalente à nafcilina/oxacilina nas Américas).",
     "spectrum": "Staphylococcus aureus (MSSA), Staphylococcus epidermidis (MSSE), Streptococcus spp. Sem atividade contra MRSA, Gram-negativos, enterococos ou anaeróbios.",
-    "contraindications": [
-      "Hipersensibilidade às penicilinas"
-    ],
+    "contraindications": "Alergia beta-lactâmica e história prévia de hepatotoxicidade por flucloxacilina.",
     "risksByPatient": [],
     "alerts": [
-      "DROGA DE ESCOLHA para MSSA em países europeus — equivalente funcional à nafcilina.",
-      "Tomar VO em jejum — alimentos reduzem absorção.",
-      "Hepatotoxicidade colestática idiossincrática — mais comum que com dicloxacilina; monitorar enzimas hepáticas.",
-      "Não necessita ajuste renal habitual."
+      "VO 250 mg q6h",
+      "CrCl <10: máx 1 g q8–12h",
+      "Contraindicada hepatotoxicidade prévia",
+      "Icterícia pode atrasar ~2 meses",
+      "Água/sem deitar"
     ],
-    "ref": "Sanford Guide 2025 / BSAC Guidelines / EMA Prescribing Information / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Primeira linha para MSSA em diversos países."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar hepatotoxicidade colestática."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após HD quando possível."
-      }
-    }
+    "ref": [
+      "https://www.medicines.org.uk/emc/product/14151/smpc",
+      "https://www.medicines.org.uk/emc/product/12395/smpc",
+      "https://www.medicines.org.uk/emc/product/12636/smpc",
+      "https://www.medicines.org.uk/emc/product/15053/smpc",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.medicines.org.uk/emc/product/8745/smpc"
+    ],
+    "renalDose": "CrCl <10 mL/min: reduzir dose ou alongar intervalo; máximo recomendado 1 g q8–12h. Sem suplemento pós-HD.",
+    "pharmacologicClass": "Isoxazolilpenicilina antiestafilocócica",
+    "mechanism": "Liga-se a PBPs e inibe peptidoglicano; é estável a muitas penicilinases estafilocócicas.",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Direcionada a MSSA e estreptococos suscetíveis, não MRSA.",
+    "pharmacokinetics": "Absorção oral cai com alimento; alta ligação proteica, eliminação renal/biliar; não é significativamente removida por diálise.",
+    "indications": "Infecções por MSSA e Gram-positivos suscetíveis, incluindo pele, osso, endocardite e bacteremia associada.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "500 mg/1 g injetável"
+    ],
+    "pediatricDose": "<2 anos 62,5 mg q6h; 2–10 anos 125 mg q6h. IV/IM <14 anos 25–50 mg/kg/dia; grave até 100 mg/kg/dia.",
+    "hepaticDose": "Sem redução numérica, porém contraindicada se houve icterícia/disfunção hepática por flucloxacilina.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Diarreia",
+      "Rash",
+      "Dor esofágica"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatite/icterícia colestática",
+      "Anafilaxia",
+      "SJS/TEN/AGEP",
+      "Nefrite intersticial",
+      "Neurotoxicidade em DRC"
+    ],
+    "adverseEffects": "Hepatite/icterícia podem aparecer até cerca de 2 meses após o tratamento, prolongar-se e raramente ser fatais.",
+    "interactions": "Probenecida pode aumentar níveis; revisar metotrexato e anticoagulantes.",
+    "monitoring": "Função renal; função hepática em tratamento prolongado/risco; hemograma em uso prolongado.",
+    "administration": "VO em jejum, 1 h antes ou 2 h após alimento, com copo cheio de água; não deitar logo após.",
+    "preparation": "Cápsula pronta; IV reconstituir conforme produto.",
+    "infusionProtocol": "IV lenta/injeção ou infusão; produtos atuais descrevem infusão de 20–30 min em doses graves.",
+    "pregnancy": "Usar quando indicada; ampla experiência de classe.",
+    "lactation": "Pequenas quantidades no leite; monitorar diarreia/candidíase.",
+    "specialPopulations": ">50 anos e doença de base aumentam risco hepático; HLA-B*5701 associa-se a risco, sem rastreio rotineiro.",
+    "patientEducation": "Relatar icterícia, prurido ou urina escura mesmo semanas após terminar.",
+    "clinicalPearls": "Anti-MSSA, não anti-MRSA. O alerta distintivo é hepatotoxicidade colestática tardia.",
+    "guidelineRecommendations": "Usar dirigido a MSSA quando foco/suscetibilidade forem compatíveis; grave requer via parenteral apropriada.",
+    "safetyFlags": [
+      "MSSA não MRSA",
+      "Hepatotoxicidade tardia",
+      "CrCl <10: reduzir/alongar",
+      "Jejum",
+      "Sem suplemento pós-HD"
+    ],
+    "references": [
+      "https://www.medicines.org.uk/emc/product/14151/smpc",
+      "https://www.medicines.org.uk/emc/product/12395/smpc",
+      "https://www.medicines.org.uk/emc/product/12636/smpc",
+      "https://www.medicines.org.uk/emc/product/15053/smpc",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.medicines.org.uk/emc/product/8745/smpc"
+    ]
   },
   "es": {
     "name": "Flucloxacilina",
-    "class": "Penicilina resistente a penicilinasa (isoxazolilpenicilina — anti-MSSA, estándar europeo)",
-    "commercialNames": {
-      "br": [
-        "Flucloxacilina Genérico (uso limitado no Brasil)"
-      ],
-      "ar": [
-        "Flucloxacilina Genérico"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 250 mg, 500 mg",
-      "Polvo para solución inyectable EV/IM: 250 mg, 500 mg, 1 g por frasco",
-      "Suspensión oral: 125 mg/5 mL"
+    "class": "Penicilina resistente a penicilinasa",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "500 mg–1 g VO 6/6h (en ayunas)",
-      "adultoEV": "1–2 g EV 6/6h"
-    },
+    "presentation": "Cápsulas y formulaciones IV/IM.",
+    "dose": "Adulto oral 250 mg q6h; grave puede duplicarse. Parenteral 1–6 g/día; grave hasta 8 g/día y algunos esquemas hasta 12 g/día.",
     "doseKg": null,
     "indication": "Infecciones por MSSA: endocarditis, bacteriemia, osteomielitis, artritis séptica, infecciones de piel y partes blandas, neumonía estafilocócica. Droga de elección para MSSA en muchos países europeos (equivalente a nafcilina/oxacilina en las Américas).",
     "spectrum": "Staphylococcus aureus (MSSA), Staphylococcus epidermidis (MSSE), Streptococcus spp. Sin actividad frente a MRSA, Gramnegativos, enterococos ni anaerobios.",
-    "contraindications": [
-      "Hipersensibilidad a las penicilinas"
-    ],
+    "contraindications": "Alergia beta-lactámica y hepatotoxicidad previa por flucloxacilina.",
     "risksByPatient": [],
     "alerts": [
-      "DROGA DE ELECCIÓN para MSSA en países europeos — equivalente funcional a nafcilina.",
-      "Tomar VO en ayunas — los alimentos reducen la absorción.",
-      "Hepatotoxicidad colestásica idiosincrática — más común que con dicloxacilina; monitorizar enzimas hepáticas.",
-      "No requiere ajuste renal habitual."
+      "VO 250 mg q6h",
+      "ClCr <10: máx 1 g q8–12h",
+      "Contraindicada hepatotoxicidad previa",
+      "Ictericia puede retrasarse ~2 meses",
+      "Agua/no acostarse"
     ],
-    "ref": "Sanford Guide 2025 / BSAC Guidelines / EMA Prescribing Information / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Primera línea para MSSA en diversos países."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50–100 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "12 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar hepatotoxicidad colestásica."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "500 mg–1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "50 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de HD cuando sea posible."
-      }
-    }
+    "ref": [
+      "https://www.medicines.org.uk/emc/product/14151/smpc",
+      "https://www.medicines.org.uk/emc/product/12395/smpc",
+      "https://www.medicines.org.uk/emc/product/12636/smpc",
+      "https://www.medicines.org.uk/emc/product/15053/smpc",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.medicines.org.uk/emc/product/8745/smpc"
+    ],
+    "renalDose": "ClCr <10: reducir o alargar; máximo 1 g q8–12h. Sin suplemento pos-HD.",
+    "pharmacologicClass": "Isoxazolilpenicilina antiestafilocócica",
+    "mechanism": "Se une a PBPs e inhibe peptidoglicano; estable frente a muchas penicilinasas.",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Dirigida a MSSA, no MRSA.",
+    "pharmacokinetics": "Absorción oral disminuye con comida; eliminación renal/biliar; no se elimina significativamente por diálisis.",
+    "indications": "Infecciones por MSSA/Gram positivos susceptibles, incluidas piel, hueso, endocarditis y bacteriemia asociada.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "500 mg/1 g inyectable"
+    ],
+    "pediatricDose": "<2 años 62,5 mg q6h; 2–10 años 125 mg q6h. IV/IM <14 años 25–50 mg/kg/día; grave hasta 100 mg/kg/día.",
+    "hepaticDose": "Sin reducción numérica, pero contraindicada si hubo ictericia/disfunción hepática por flucloxacilina.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarrea",
+      "Rash",
+      "Dolor esofágico"
+    ],
+    "dangerousAdverseEffects": [
+      "Hepatitis/ictericia colestásica",
+      "Anafilaxia",
+      "SJS/TEN/AGEP",
+      "Nefritis intersticial",
+      "Neurotoxicidad en ERC"
+    ],
+    "adverseEffects": "Hepatitis/ictericia pueden aparecer hasta ~2 meses después, prolongarse y raramente ser fatales.",
+    "interactions": "Probenecid puede aumentar niveles; revisar metotrexato/anticoagulantes.",
+    "monitoring": "Función renal; hepática en tratamiento prolongado/riesgo; hemograma prolongado.",
+    "administration": "VO en ayunas, 1 h antes o 2 h después de alimentos, con vaso lleno de agua; no acostarse.",
+    "preparation": "Cápsula lista; IV según producto.",
+    "infusionProtocol": "IV lenta o infusión; productos actuales describen 20–30 min.",
+    "pregnancy": "Usar cuando indicada.",
+    "lactation": "Pequeñas cantidades en leche.",
+    "specialPopulations": ">50 años/enfermedad de base aumentan riesgo hepático; HLA-B*5701 asociado, sin cribado rutinario.",
+    "patientEducation": "Informar ictericia/prurito/orina oscura incluso semanas después.",
+    "clinicalPearls": "Anti-MSSA, no anti-MRSA. Alerta distintiva: hepatotoxicidad colestásica tardía.",
+    "guidelineRecommendations": "Usar dirigida a MSSA cuando foco, gravedad y susceptibilidad sean compatibles; en infección grave emplear la vía y dosis parenteral apropiadas según protocolo.",
+    "safetyFlags": [
+      "MSSA no MRSA",
+      "Hepatotoxicidad tardía",
+      "ClCr <10: reducir/alargar",
+      "Ayunas",
+      "Sin suplemento pos-HD"
+    ],
+    "references": [
+      "https://www.medicines.org.uk/emc/product/14151/smpc",
+      "https://www.medicines.org.uk/emc/product/12395/smpc",
+      "https://www.medicines.org.uk/emc/product/12636/smpc",
+      "https://www.medicines.org.uk/emc/product/15053/smpc",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.medicines.org.uk/emc/product/8745/smpc"
+    ]
   },
   "name": {
     "pt": "Flucloxacilina",
@@ -304,8 +178,8 @@
     "flucloxacilina generico",
     "penicilina resistente a penicilinase (isoxazolilpenicilina — anti-mssa, padrao europeu)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-4a2f17e52faa0b7f",
+  "clinicalContentSha256": "4a2f17e52faa0b7f2a2798522360957dae6963a3da0eef98baa416949621699b",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

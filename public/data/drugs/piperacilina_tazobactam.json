@@ -1,25 +1,153 @@
 {
   "id": "piperacilina_tazobactam",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Piperacilina + Tazobactam"
+    "name": "Piperacilina/tazobactam",
+    "class": "Beta-lactâmico antipseudomonas com inibidor de beta-lactamase",
+    "pharmacologicClass": "Ureidopenicilina + tazobactam",
+    "mechanism": "Piperacilina inibe PBPs; tazobactam inibe diversas beta-lactamases de serina.",
+    "pharmacodynamics": "Bactericida tempo-dependente; eficácia por fT>MIC. Em Pseudomonas/MIC elevada, infusão prolongada pode melhorar alvo PK/PD.",
+    "pharmacokinetics": "IV; eliminação renal predominante; hemodiálise remove parcela relevante; hiperfiltração pode reduzir exposição.",
+    "indications": "Infecções graves polimicrobianas, intra-abdominais, pneumonia hospitalar e outras por suscetíveis incluindo Pseudomonas.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Frascos/bolsas IV.",
+    "presentations": [
+      "2,25 g",
+      "3,375 g",
+      "4,5 g"
+    ],
+    "dose": "Adultos: maioria 3,375 g IV q6h; pneumonia nosocomial 4,5 g q6h. Protocolos prolongados podem usar esquemas distintos.",
+    "pediatricDose": "2–9 meses: 90 mg/kg (80/10) q8h intra-abdominal ou q6h pneumonia; >9 meses <=40 kg: 112,5 mg/kg (100/12,5) q8h ou q6h; >40 kg dose adulta.",
+    "renalDose": "ClCr >40: 3,375 g q6h (pneumonia 4,5 q6h); 20–40: 2,25 q6h (pneumonia 3,375 q6h); <20: 2,25 q8h (pneumonia q6h); HD 2,25 q12h (pneumonia q8h)+0,75 g pós-HD; CAPD 2,25 q12h (pneumonia q8h).",
+    "hepaticDose": "Sem ajuste rotineiro por cirrose/hepatopatia isolada; reavaliar em falência multiorgânica.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Diarreia",
+      "Rash"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Lesão renal aguda",
+      "Citopenias",
+      "Convulsões/encefalopatia por acúmulo"
+    ],
+    "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+    "monitoring": "Culturas/MIC, resposta, creatinina/diurese, hemograma, eletrólitos e função hepática; vigiar neurotoxicidade e C. difficile.",
+    "administration": "IV; não atrasar primeira dose em infecção grave; depois otimizar intervalo/infusão conforme rim/MIC.",
+    "preparation": "Reconstituir/diluir conforme fabricante; checar compatibilidade e estabilidade para infusão prolongada.",
+    "infusionProtocol": "Bula usa 30 min; em críticos ou Pseudomonas, protocolos podem usar 3–4 h para maximizar fT>MIC se estabilidade permitir.",
+    "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+    "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "DRC exige ajuste e dose pós-HD; dose pediátrica em DRC não estabelecida na bula citada; obesidade/choque podem exigir individualização.",
+    "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+    "clinicalPearls": "Cobre Pseudomonas, muitos Gram-negativos, anaeróbios e estreptococos, mas não MRSA. Para ESBL não presumir equivalência a carbapenêmico.",
+    "guidelineRecommendations": "IDSA 2026: piperacilina/tazobactam pode ser alternativa em cUTI por ESBL em pacientes selecionados não críticos e sem bacteremia, mas não é sugerida para ESBL fora do trato urinário; infusão prolongada pode otimizar PK/PD em Pseudomonas.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal quando aplicável",
+      "Neurotoxicidade por acúmulo"
+    ],
+    "alerts": [
+      "Não assumir cobertura confiável de ESBL fora dos cenários recomendados",
+      "Ajustar rigorosamente na DRC/diálise"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cfa6723-175b-4c4d-8212-266844b07610",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cfa6723-175b-4c4d-8212-266844b07610",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "es": {
-    "name": "Piperacilina + Tazobactam"
+    "name": "Piperacilina/tazobactam",
+    "class": "Betalactámico antipseudomónico con inhibidor de betalactamasa",
+    "pharmacologicClass": "Ureidopenicilina + tazobactam",
+    "mechanism": "Piperacilina inhibe PBP; tazobactam inhibe diversas betalactamasas de serina.",
+    "pharmacodynamics": "Bactericida dependiente del tiempo; eficacia por fT>MIC. En Pseudomonas/MIC elevada, infusión prolongada puede mejorar objetivo PK/PD.",
+    "pharmacokinetics": "IV; eliminación renal predominante; hemodiálisis elimina una fracción relevante; hiperfiltración puede reducir exposición.",
+    "indications": "Infecciones graves polimicrobianas, intraabdominales, neumonía hospitalaria y otras por susceptibles incluido Pseudomonas.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Viales/bolsas IV.",
+    "presentations": [
+      "2,25 g",
+      "3,375 g",
+      "4,5 g"
+    ],
+    "dose": "Adultos: mayoría 3,375 g IV q6h; neumonía nosocomial 4,5 g q6h. Protocolos prolongados pueden usar esquemas distintos.",
+    "pediatricDose": "2–9 meses: 90 mg/kg (80/10) q8h intraabdominal o q6h neumonía; >9 meses <=40 kg: 112,5 mg/kg (100/12,5) q8h o q6h; >40 kg dosis adulta.",
+    "renalDose": "ClCr >40: 3,375 g q6h (neumonía 4,5 q6h); 20–40: 2,25 q6h (neumonía 3,375 q6h); <20: 2,25 q8h (neumonía q6h); HD 2,25 q12h (neumonía q8h)+0,75 g post-HD; CAPD 2,25 q12h (neumonía q8h).",
+    "hepaticDose": "Sin ajuste rutinario por cirrosis/hepatopatía aislada; reevaluar en falla multiorgánica.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarrea",
+      "Exantema"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "Lesión renal aguda",
+      "Citopenias",
+      "Convulsiones/encefalopatía por acumulación"
+    ],
+    "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+    "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
+    "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+    "monitoring": "Cultivos/MIC, respuesta, creatinina/diuresis, hemograma, electrolitos y función hepática; vigilar neurotoxicidad y C. difficile.",
+    "administration": "IV; no retrasar primera dosis en infección grave; luego optimizar intervalo/infusión según riñón/MIC.",
+    "preparation": "Reconstituir/diluir según fabricante; revisar compatibilidad y estabilidad para infusión prolongada.",
+    "infusionProtocol": "Ficha usa 30 min; en críticos o Pseudomonas, protocolos pueden usar 3–4 h para maximizar fT>MIC si estabilidad lo permite.",
+    "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+    "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+    "specialPopulations": "ERC exige ajuste y dosis post-HD; dosis pediátrica en ERC no establecida en ficha citada; obesidad/shock pueden requerir individualización.",
+    "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+    "clinicalPearls": "Cubre Pseudomonas, muchos Gram negativos, anaerobios y estreptococos, pero no MRSA. Para ESBL no asumir equivalencia a carbapenémico.",
+    "guidelineRecommendations": "IDSA 2026: piperacilina/tazobactam puede ser alternativa en cUTI por ESBL en pacientes seleccionados no críticos y sin bacteriemia, pero no se sugiere para ESBL fuera del tracto urinario; infusión prolongada puede optimizar PK/PD en Pseudomonas.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal cuando corresponda",
+      "Neurotoxicidad por acumulación"
+    ],
+    "alerts": [
+      "No asumir cobertura confiable de ESBL fuera de escenarios recomendados",
+      "Ajustar estrictamente en ERC/diálisis"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cfa6723-175b-4c4d-8212-266844b07610",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cfa6723-175b-4c4d-8212-266844b07610",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "name": {
-    "pt": "Piperacilina + Tazobactam",
-    "es": "Piperacilina + Tazobactam"
+    "pt": "Piperacilina/tazobactam",
+    "es": "Piperacilina/tazobactam"
   },
   "keywords": [
     "piperacilina_tazobactam",
     "piperacilina + tazobactam"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-e61729424f211913",
+  "clinicalContentSha256": "e61729424f2119133df2859fd54b61485ca0d422f660b50949e686e5f2e0905e",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js",
@@ -361,8 +489,8 @@
           "piperacilina/tazobactam richet",
           "penicilina antipseudomonas + inibidor de beta-lactamase"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-e61729424f211913",
+        "clinicalContentSha256": "e61729424f2119133df2859fd54b61485ca0d422f660b50949e686e5f2e0905e",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "antimicrobianos.js"

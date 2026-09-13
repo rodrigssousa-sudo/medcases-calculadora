@@ -1,35 +1,17 @@
 {
   "id": "clindamicina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Clindamicina",
     "class": "Lincosamida",
-    "commercialNames": {
-      "br": [
-        "Dalacin C",
-        "Clindamicina EMS",
-        "Clindamicina Medley"
-      ],
-      "ar": [
-        "Dalacin C",
-        "Clindamicina Bagó",
-        "Clindamicina Richet"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 300 mg",
-      "Cápsulas: 600 mg",
-      "Ampola EV: 300 mg/2 mL",
-      "Ampola EV: 600 mg/4 mL"
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "300–450 mg VO 6/6h",
-      "adultoEV": "600–900 mg EV 8/8h",
-      "pediatrica": "700 mg por dose VO/EV 8/8h"
-    },
+    "presentation": "Cápsulas, solução oral e formulações IM/IV.",
+    "dose": "Adulto IV: 600–1200 mg/dia em 2–4 doses para infecções sérias; 1200–2700 mg/dia em 2–4 doses para mais graves; situações de ameaça à vida podem usar doses maiores sob supervisão. VO frequentemente 150–450 mg q6h conforme gravidade.",
     "doseKg": {
       "standard": "20–30 mg/kg/dia",
       "severe": "30–40 mg/kg/dia",
@@ -40,159 +22,83 @@
     "speed": "Infundir em 30–60 minutos.",
     "commonAdverseEffects": [
       "Diarreia",
-      "Náuseas",
+      "Náusea",
       "Dor abdominal",
       "Rash"
     ],
     "dangerousAdverseEffects": [
-      "Colite por Clostridioides difficile",
+      "C. difficile/colite potencialmente fatal",
       "Anafilaxia",
-      "Stevens-Johnson",
-      "Hepatotoxicidade"
+      "SCAR",
+      "Hepatotoxicidade",
+      "Neutropenia"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Maior risco de colite associada a antibióticos.",
-      "Suspender se diarreia importante."
+      "IV adulto 600–1200 ou 1200–2700 mg/dia",
+      "Pediatria 20–40 mg/kg/dia",
+      "Neonato 15–20 mg/kg/dia",
+      "Concentração <=18 mg/mL",
+      "Velocidade <=30 mg/min"
     ],
-    "ref": "Goodman & Gilman / Sanford Guide / IDSA SSTI Guidelines",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual. Não necessita ajuste renal."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal habitual."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal. Monitorar colite por Clostridioides difficile."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita dose suplementar pós-hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+    ],
+    "renalDose": "Geralmente não requer ajuste em insuficiência renal ou hemodiálise; monitorar cursos prolongados.",
+    "pharmacologicClass": "Lincosamida inibidora da subunidade ribossomal 50S",
+    "mechanism": "Liga-se à subunidade 50S e inibe elongação da síntese proteica; pode reduzir produção de toxinas em estreptococos/estafilococos.",
+    "pharmacodynamics": "Predominantemente bacteriostática; AUC/MIC relaciona-se à atividade. Resistência MLSB induzível deve ser pesquisada quando relevante.",
+    "pharmacokinetics": "Boa absorção oral e ampla distribuição tecidual, inclusive osso; metabolismo hepático e excreção biliar/renal.",
+    "indications": "Infecções graves por Gram-positivos e anaeróbios suscetíveis; uso oral/IV depende do foco. Importante como adjuvante antitoxina em síndromes estreptocócicas graves.",
+    "presentations": [
+      "150 mg/300 mg cápsulas conforme produto",
+      "solução oral",
+      "300/600/900 mg IV premix conforme produto"
+    ],
+    "pediatricDose": "Neonatos <1 mês: 15–20 mg/kg/dia em 3–4 doses. 1 mês–16 anos IV/IM: 20–40 mg/kg/dia em 3–4 doses; usar maior faixa em infecção mais grave.",
+    "hepaticDose": "Hepatopatia grave pode prolongar meia-vida; não há redução automática, mas monitorar enzimas e considerar alongar intervalo conforme resposta.",
+    "adverseEffects": "Clindamicina é um dos antibióticos mais associados a C. difficile; diarreia pode surgir durante ou após o tratamento.",
+    "contraindications": "Hipersensibilidade a clindamicina ou lincomicina.",
+    "interactions": "Antagonismo potencial com macrolídeos no sítio 50S; potencializa bloqueio neuromuscular.",
+    "monitoring": "Diarreia/C. difficile, função hepática/renal e hemograma em terapia prolongada; cultura e D-test para resistência MLSB quando aplicável.",
+    "administration": "VO ou IM/IV. Não administrar IV em bolus rápido.",
+    "preparation": "Diluir IV para concentração apropriada; formulações premix devem respeitar dose disponível.",
+    "infusionProtocol": "Concentração IV não deve exceder 18 mg/mL e velocidade não deve exceder 30 mg/min.",
+    "pregnancy": "Uso pode ser considerado quando claramente indicado; experiência clínica é ampla.",
+    "lactation": "Passa ao leite; observar diarreia, candidíase ou sangue nas fezes do lactente.",
+    "specialPopulations": "Dose pediátrica deve usar peso corporal total mesmo em obesidade segundo rótulos parenterais.",
+    "patientEducation": "Relatar diarreia aquosa/sanguinolenta mesmo semanas após terminar; não usar antidiarreicos por conta própria se suspeita de colite.",
+    "clinicalPearls": "Clindamicina combina cobertura anaeróbia/Gram-positiva com efeito antitoxina, mas o preço é um risco particularmente alto de C. difficile.",
+    "guidelineRecommendations": "Usar conforme foco e suscetibilidade; em infecção invasiva por estreptococo produtor de toxina, costuma ser adjuvante à terapia beta-lactâmica, não substituto isolado.",
+    "safetyFlags": [
+      "C. difficile alto risco",
+      "Antitoxina",
+      "IV máx 30 mg/min",
+      "Pediatria 20–40 mg/kg/dia",
+      "D-test MLSB"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+    ]
   },
   "es": {
     "name": "Clindamicina",
     "class": "Lincosamida",
-    "commercialNames": {
-      "br": [
-        "Dalacin C",
-        "Clindamicina EMS",
-        "Clindamicina Medley"
-      ],
-      "ar": [
-        "Dalacin C",
-        "Clindamicina Bagó",
-        "Clindamicina Richet"
-      ]
-    },
-    "presentation": [
-      "Cápsulas: 300 mg",
-      "Cápsulas: 600 mg",
-      "Ampolla EV: 300 mg/2 mL",
-      "Ampolla EV: 600 mg/4 mL"
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "300–450 mg VO cada 6h",
-      "adultoEV": "600–900 mg EV cada 8h",
-      "pediatrica": "700 mg por dosis VO/EV cada 8h"
-    },
+    "presentation": "Cápsulas, solución oral y formulaciones IM/IV.",
+    "dose": "Adulto IV: 600–1200 mg/día en 2–4 dosis; más grave 1200–2700 mg/día. VO frecuentemente 150–450 mg q6h según gravedad.",
     "doseKg": {
       "standard": "20–30 mg/kg/día",
       "severe": "30–40 mg/kg/día",
@@ -205,130 +111,72 @@
       "Diarrea",
       "Náuseas",
       "Dolor abdominal",
-      "Exantema"
+      "Rash"
     ],
     "dangerousAdverseEffects": [
-      "Colitis por Clostridioides difficile",
+      "C. difficile/colitis potencialmente fatal",
       "Anafilaxia",
-      "Stevens-Johnson",
-      "Hepatotoxicidad"
+      "SCAR",
+      "Hepatotoxicidad",
+      "Neutropenia"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Mayor riesgo de colitis asociada a antibióticos.",
-      "Suspender si aparece diarrea importante."
+      "IV adulto 600–1200 o 1200–2700 mg/día",
+      "Pediatría 20–40 mg/kg/día",
+      "Neonato 15–20 mg/kg/día",
+      "Concentración <=18 mg/mL",
+      "Velocidad <=30 mg/min"
     ],
-    "ref": "Goodman & Gilman / Sanford Guide / IDSA SSTI Guidelines",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual. No requiere ajuste renal."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal habitual."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal. Monitorizar colitis por Clostridioides difficile."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "300–450 mg",
-          "intervalo": "6/6h",
-          "doseMaxima": "1,8 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "600–900 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4,8 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10–13 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "40 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere dosis suplementaria post-hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+    ],
+    "renalDose": "Generalmente sin ajuste en ERC/HD.",
+    "pharmacologicClass": "Lincosamida inhibidora de la subunidad 50S",
+    "mechanism": "Se une a 50S e inhibe elongación proteica; puede reducir producción de toxinas estreptocócicas/estafilocócicas.",
+    "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC. Buscar resistencia MLSB inducible cuando corresponda.",
+    "pharmacokinetics": "Buena absorción oral, amplia distribución incluida ósea; metabolismo hepático y excreción biliar/renal.",
+    "indications": "Infecciones graves por Gram positivos/anaerobios susceptibles; papel adyuvante antitoxina en síndromes estreptocócicos graves.",
+    "presentations": [
+      "150/300 mg cápsulas",
+      "solución oral",
+      "300/600/900 mg IV según producto"
+    ],
+    "pediatricDose": "Neonatos <1 mes: 15–20 mg/kg/día en 3–4 dosis. 1 mes–16 años: 20–40 mg/kg/día en 3–4 dosis.",
+    "hepaticDose": "Hepatopatía grave puede prolongar semivida; monitorizar y ajustar intervalo clínicamente.",
+    "adverseEffects": "Es uno de los antibióticos más asociados a C. difficile.",
+    "contraindications": "Hipersensibilidad a clindamicina/lincomicina.",
+    "interactions": "Posible antagonismo con macrólidos y potenciación de bloqueo neuromuscular.",
+    "monitoring": "Diarrea/C. difficile, función hepática/renal, hemograma y D-test MLSB cuando aplique.",
+    "administration": "VO o IM/IV; no bolo IV rápido.",
+    "preparation": "Diluir IV apropiadamente.",
+    "infusionProtocol": "Concentración <=18 mg/mL y velocidad <=30 mg/min.",
+    "pregnancy": "Puede usarse si está claramente indicada.",
+    "lactation": "Pasa a leche; vigilar diarrea/candidiasis/sangre en heces.",
+    "specialPopulations": "Pediatría parenteral usa peso corporal total incluso en obesidad.",
+    "patientEducation": "Informar diarrea acuosa/sanguinolenta incluso semanas después.",
+    "clinicalPearls": "Aporta cobertura anaerobia/Gram positiva y efecto antitoxina, pero con riesgo especialmente alto de C. difficile.",
+    "guidelineRecommendations": "Usar según foco/susceptibilidad; en infección invasiva estreptocócica con toxina suele acompañar al beta-lactámico, no reemplazarlo.",
+    "safetyFlags": [
+      "C. difficile alto riesgo",
+      "Antitoxina",
+      "IV máx 30 mg/min",
+      "Pediatría 20–40 mg/kg/día",
+      "D-test MLSB"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
+      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
+      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+    ]
   },
   "name": {
     "pt": "Clindamicina",
@@ -343,12 +191,11 @@
     "clindamicina richet",
     "lincosamida"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-a6fa7d1c71ba5a14",
+  "clinicalContentSha256": "a6fa7d1c71ba5a142e837f517a373eed5a8df85ee543bd5f583bbe81439556de",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
-,
+  "sourceModule": "antimicrobianos.js",
   "mc_clinical_enrichment_v1": {
     "schema": "medcases.clinical-enrichment.v1",
     "drug_key": "clindamicina",

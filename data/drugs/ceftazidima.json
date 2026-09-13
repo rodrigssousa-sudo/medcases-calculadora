@@ -1,34 +1,17 @@
 {
   "id": "ceftazidima",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Ceftazidima",
-    "class": "Cefalosporina de 3ª geração antipseudomonas",
-    "commercialNames": {
-      "br": [
-        "Fortaz",
-        "Ceftazidima Eurofarma",
-        "Ceftazidima ABL"
-      ],
-      "ar": [
-        "Fortum",
-        "Ceftazidima Richet",
-        "Ceftazidima Klonal"
-      ]
-    },
-    "presentation": [
-      "Frasco-ampola 500 mg",
-      "Frasco-ampola 1 g",
-      "Frasco-ampola 2 g"
+    "class": "Antibiótico beta-lactâmico antipseudomonas",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "2 g EV 8/8h",
-      "neutropeniaFebril": "2 g EV 8/8h",
-      "pediatrica": "2000 mg EV 8/8h"
-    },
+    "presentation": "Pó para solução IV/IM.",
+    "dose": "Adultos: usual 1 g q8–12h; graves/meningite 2 g q8h; Pseudomonas em fibrose cística 30–50 mg/kg q8h, máximo 6 g/dia.",
     "doseKg": {
       "standard": "30–50 mg/kg por dose",
       "maxDose": "6 g/dia"
@@ -38,131 +21,74 @@
     "speed": "Infundir em aproximadamente 30 minutos.",
     "commonAdverseEffects": [
       "Diarreia",
-      "Náuseas",
-      "Rash"
+      "Náusea",
+      "Rash",
+      "Reação no local de administração"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Neurotoxicidade",
-      "Convulsões",
-      "Colite por C. difficile"
+      "SCAR/SJS-TEN",
+      "C. difficile",
+      "Citopenias",
+      "Neurotoxicidade/convulsões em exposição excessiva"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Cobertura para Pseudomonas aeruginosa.",
-      "Não possui boa cobertura para Gram positivos comparada ao Cefepime."
+      "Pseudomonas exige exposição adequada",
+      "Neurotoxicidade na DRC",
+      "Não assumir atividade contra ESBL/AmpC"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "30–50 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para Pseudomonas e infecções graves."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–30 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reduzir frequência devido à diminuição da depuração renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obrigatório para evitar neurotoxicidade."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar encefalopatia e convulsões associadas ao acúmulo."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22d6534c-4488-48a1-8d78-e2fb908259de",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+    ],
+    "renalDose": "Reduzir se GFR/CrCl <50 mL/min; usar dose de ataque e manutenção conforme função renal; diálise pode remover o fármaco.",
+    "pharmacologicClass": "Cefalosporina de 3ª geração antipseudomonas",
+    "mechanism": "Inibe PBPs e síntese da parede bacteriana.",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é o principal alvo PK/PD.",
+    "pharmacokinetics": "IV/IM; baixa metabolização e eliminação quase exclusivamente renal; boa penetração no LCR em meningite inflamada.",
+    "indications": "Infecções graves por Gram-negativos suscetíveis, incluindo Pseudomonas; pneumonia, cUTI, intra-abdominal, osso/articulação e meningite conforme foco.",
+    "presentations": [
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "Neonatos 0–4 semanas: 30 mg/kg IV q12h; 1 mês–12 anos: 30–50 mg/kg IV q8h, máximo 6 g/dia; faixa alta em meningite/imunocomprometidos.",
+    "hepaticDose": "Sem ajuste rotineiro por disfunção hepática isolada.",
+    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+    "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
+    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
+    "administration": "IV ou IM; em sepse/meningite preferir IV.",
+    "preparation": "Reconstituir/diluir conforme fabricante e respeitar estabilidade.",
+    "infusionProtocol": "Infusão padrão; para Pseudomonas/MIC elevada, alta dose e infusão prolongada podem maximizar fT>MIC quando protocolo/estabilidade permitirem.",
+    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
+    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "DRC aumenta risco de encefalopatia/convulsões; hiperfiltração em críticos pode reduzir exposição.",
+    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
+    "clinicalPearls": "Ativa contra Pseudomonas, mas com cobertura Gram-positiva limitada; não cobre MRSA/Enterococcus. ESBL/AmpC podem conferir resistência.",
+    "guidelineRecommendations": "IDSA 2026: se Pseudomonas for suscetível a beta-lactâmico tradicional, este pode ser preferido ao carbapenêmico; em resistência a carbapenêmicos com suscetibilidade preservada, usar alta dose/infusão prolongada.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal",
+      "Neurotoxicidade por acúmulo"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22d6534c-4488-48a1-8d78-e2fb908259de",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+    ]
   },
   "es": {
     "name": "Ceftazidima",
-    "class": "Cefalosporina de 3ª generación antipseudomona",
-    "commercialNames": {
-      "br": [
-        "Fortaz",
-        "Ceftazidima Eurofarma",
-        "Ceftazidima ABL"
-      ],
-      "ar": [
-        "Fortum",
-        "Ceftazidima Richet",
-        "Ceftazidima Klonal"
-      ]
-    },
-    "presentation": [
-      "Frasco ampolla 500 mg",
-      "Frasco ampolla 1 g",
-      "Frasco ampolla 2 g"
+    "class": "Antibiótico betalactámico antipseudomónico",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "2 g EV cada 8h",
-      "neutropeniaFebril": "2 g EV cada 8h",
-      "pediatrica": "2000 mg EV cada 8h"
-    },
+    "presentation": "Polvo para solución IV/IM.",
+    "dose": "Adultos: usual 1 g q8–12h; graves/meningitis 2 g q8h; Pseudomonas en fibrosis quística 30–50 mg/kg q8h, máximo 6 g/día.",
     "doseKg": {
       "standard": "30–50 mg/kg por dosis",
       "maxDose": "6 g/día"
@@ -173,104 +99,64 @@
     "commonAdverseEffects": [
       "Diarrea",
       "Náuseas",
-      "Exantema"
+      "Exantema",
+      "Reacción en el sitio de administración"
     ],
     "dangerousAdverseEffects": [
       "Anafilaxia",
-      "Neurotoxicidad",
-      "Convulsiones",
-      "Colitis por C. difficile"
+      "SCAR/SJS-TEN",
+      "C. difficile",
+      "Citopenias",
+      "Neurotoxicidad/convulsiones por exposición excesiva"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Cobertura para Pseudomonas aeruginosa.",
-      "No posee buena cobertura para Gram positivos comparada con Cefepime."
+      "Pseudomonas requiere exposición adecuada",
+      "Neurotoxicidad en ERC",
+      "No asumir actividad frente a ESBL/AmpC"
     ],
-    "ref": "Sanford Guide 2025 / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "30–50 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "6 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para Pseudomonas e infecciones graves."
-      },
-      "fg30a50": {
-        "vo": null,
-        "ev": {
-          "dose": "1–2 g",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "25–30 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Reducir frecuencia debido a la disminución del aclaramiento renal."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "2 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajuste obligatorio para evitar neurotoxicidad."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": {
-          "dose": "500 mg–1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar encefalopatía y convulsiones asociadas a la acumulación."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": {
-          "dose": "1 g",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "g"
-        },
-        "pediatrica": {
-          "dose": "15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22d6534c-4488-48a1-8d78-e2fb908259de",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+    ],
+    "renalDose": "Reducir si GFR/ClCr <50 mL/min; usar carga y mantenimiento según función renal; diálisis puede eliminar el fármaco.",
+    "pharmacologicClass": "Cefalosporina antipseudomónica de 3ª generación",
+    "mechanism": "Inhibe PBP y síntesis de pared bacteriana.",
+    "pharmacodynamics": "Bactericida dependiente del tiempo; fT>MIC es el principal objetivo PK/PD.",
+    "pharmacokinetics": "IV/IM; poco metabolismo y eliminación casi exclusivamente renal; buena penetración en LCR con meninges inflamadas.",
+    "indications": "Infecciones graves por Gram negativos susceptibles, incluido Pseudomonas; neumonía, cUTI, intraabdominal, hueso/articulación y meningitis según foco.",
+    "presentations": [
+      "500 mg",
+      "1 g",
+      "2 g"
+    ],
+    "pediatricDose": "Neonatos 0–4 semanas: 30 mg/kg IV q12h; 1 mes–12 años: 30–50 mg/kg IV q8h, máximo 6 g/día; rango alto en meningitis/inmunocomprometidos.",
+    "hepaticDose": "Sin ajuste rutinario por disfunción hepática aislada.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+    "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
+    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
+    "administration": "IV o IM; en sepsis/meningitis preferir IV.",
+    "preparation": "Reconstituir/diluir según fabricante y respetar estabilidad.",
+    "infusionProtocol": "Infusión estándar; en Pseudomonas/MIC elevada, alta dosis e infusión prolongada pueden maximizar fT>MIC si protocolo/estabilidad lo permiten.",
+    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
+    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
+    "specialPopulations": "ERC aumenta riesgo de encefalopatía/convulsiones; hiperfiltración en críticos puede reducir exposición.",
+    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
+    "clinicalPearls": "Activa frente a Pseudomonas, con cobertura Gram positiva limitada; no cubre MRSA/Enterococcus. ESBL/AmpC pueden conferir resistencia.",
+    "guidelineRecommendations": "IDSA 2026: si Pseudomonas es susceptible a betalactámico tradicional puede preferirse al carbapenémico; con resistencia a carbapenémicos y susceptibilidad preservada, usar alta dosis/infusión prolongada.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal",
+      "Neurotoxicidad por acumulación"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22d6534c-4488-48a1-8d78-e2fb908259de",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+    ]
   },
   "name": {
     "pt": "Ceftazidima",
@@ -286,8 +172,8 @@
     "ceftazidima klonal",
     "cefalosporina de 3ª geracao antipseudomonas"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-5e2142f005cf704c",
+  "clinicalContentSha256": "5e2142f005cf704cfb9b532d72be22b8a435e0f42b2f977cadc07edee431baff",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

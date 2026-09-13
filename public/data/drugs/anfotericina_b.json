@@ -1,25 +1,159 @@
 {
   "id": "anfotericina_b",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Anfotericina B (ID Canônico de Classe)"
+    "name": "Anfotericina B lipossomal",
+    "class": "Antifúngico polieno",
+    "pharmacologicClass": "Polieno lipossomal de amplo espectro",
+    "mechanism": "Liga-se ao ergosterol da membrana fúngica, formando poros e causando perda de íons/conteúdo celular.",
+    "pharmacodynamics": "Fungicida concentração-dependente para muitos fungos; Cmax/MIC e AUC/MIC relacionam-se à atividade.",
+    "pharmacokinetics": "A formulação lipossomal altera distribuição e reduz nefrotoxicidade em relação à anfotericina B desoxicolato, mas não elimina o risco renal/eletrolítico.",
+    "indications": "Micoses invasivas graves, incluindo Candida, Aspergillus e mucormicose em cenários apropriados; terapia empírica em neutropenia conforme indicação.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Pó liofilizado lipossomal para IV.",
+    "presentations": [
+      "50 mg por frasco"
+    ],
+    "dose": "Adultos: terapia empírica 3 mg/kg/dia; Aspergillus/Candida/Cryptococcus sistêmicos 3–5 mg/kg/dia conforme bula e indicação.",
+    "pediatricDose": "A bula utiliza doses mg/kg semelhantes em pacientes pediátricos para indicações aprovadas; selecionar 3–5 mg/kg/dia conforme doença/protocolo.",
+    "renalDose": "Não há ajuste numérico rotulado padronizado por CrCl; monitorar função renal e eletrólitos estreitamente e corrigir fatores nefrotóxicos.",
+    "hepaticDose": "Sem ajuste numérico rotineiro; monitorar enzimas hepáticas conforme gravidade/doença de base.",
+    "commonAdverseEffects": [
+      "Febre/calafrios infusionais",
+      "Náusea",
+      "Hipocalemia",
+      "Elevação de creatinina",
+      "Anemia"
+    ],
+    "dangerousAdverseEffects": [
+      "Nefrotoxicidade",
+      "Hipocalemia/hipomagnesemia graves",
+      "Anafilaxia/reação infusional",
+      "Arritmia secundária a eletrólitos"
+    ],
+    "adverseEffects": "Apesar de menos nefrotóxica que desoxicolato, a formulação lipossomal ainda pode causar lesão renal, perdas de K/Mg, anemia e reações à infusão.",
+    "contraindications": "Hipersensibilidade à anfotericina B/componentes, salvo se quadro ameaçador à vida justificar uso sob supervisão especializada.",
+    "interactions": "Outros nefrotóxicos aumentam lesão renal; diuréticos/corticoides podem agravar hipocalemia; hipocalemia pode potencializar toxicidade digitálica.",
+    "monitoring": "Creatinina, ureia, K, Mg, hemograma e função hepática; sinais vitais e reação durante infusão.",
+    "administration": "Somente IV. Não intercambiar formulações de anfotericina B mg por mg; confirmar que o produto é lipossomal.",
+    "preparation": "Reconstituir exatamente conforme fabricante. Antes de usar linha IV existente, lavar com dextrose 5%; se incompatível, usar linha separada.",
+    "infusionProtocol": "Infusão geralmente em cerca de 2 h; pode reduzir para aproximadamente 1 h se tolerada. Usar filtro somente se poro >=1,0 micra conforme bula.",
+    "pregnancy": "Anfotericina B tem longa experiência na gestação para micoses graves e pode ser preferida em cenários em que azóis são inadequados; individualizar.",
+    "lactation": "Dados de formulação lipossomal são limitados; baixa absorção oral pelo lactente é esperada, mas avaliar gravidade e alternativas.",
+    "specialPopulations": "Doença renal, uso de nefrotóxicos e distúrbios eletrolíticos exigem monitorização intensiva. Formulações desoxicolato/lipídicas não são equivalentes.",
+    "patientEducation": "Informar calafrios, dor torácica, dispneia, redução de diurese, fraqueza ou palpitações. Explicar necessidade de exames seriados.",
+    "clinicalPearls": "A palavra 'lipossomal' é parte da prescrição: AmBisome e anfotericina B desoxicolato não são intercambiáveis mg por mg e têm toxicidade/dose diferentes.",
+    "guidelineRecommendations": "Diretrizes de micoses invasivas usam anfotericina B lipossomal como terapia primária ou alternativa em doença grave, mucormicose e cenários de resistência/intolerância.",
+    "safetyFlags": [
+      "Formulações NÃO intercambiáveis",
+      "Nefrotoxicidade",
+      "K/Mg baixos",
+      "Reação infusional",
+      "D5W/compatibilidade"
+    ],
+    "alerts": [
+      "3–5 mg/kg/dia em muitas micoses invasivas",
+      "Confirmar formulação lipossomal",
+      "Monitorar K/Mg/creatinina",
+      "Flush com D5W",
+      "Não misturar como se fosse desoxicolato"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+    ]
   },
   "es": {
-    "name": "Anfotericina B (ID Canónico de Clase)"
+    "name": "Anfotericina B liposomal",
+    "class": "Antifúngico polieno",
+    "pharmacologicClass": "Polieno liposomal de amplio espectro",
+    "mechanism": "Se une al ergosterol de membrana fúngica, forma poros y causa pérdida de iones/contenido celular.",
+    "pharmacodynamics": "Fungicida dependiente de concentración para muchos hongos; Cmax/MIC y AUC/MIC se relacionan con actividad.",
+    "pharmacokinetics": "La formulación liposomal cambia distribución y reduce nefrotoxicidad frente a desoxicolato, pero no elimina riesgo renal/electrolítico.",
+    "indications": "Micosis invasivas graves, incluidas Candida, Aspergillus y mucormicosis en escenarios apropiados; terapia empírica en neutropenia según indicación.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Polvo liofilizado liposomal IV.",
+    "presentations": [
+      "50 mg por vial"
+    ],
+    "dose": "Adultos: terapia empírica 3 mg/kg/día; Aspergillus/Candida/Cryptococcus sistémicos 3–5 mg/kg/día según ficha e indicación.",
+    "pediatricDose": "Ficha usa dosis mg/kg semejantes en pediatría para indicaciones aprobadas; seleccionar 3–5 mg/kg/día según enfermedad/protocolo.",
+    "renalDose": "Sin ajuste numérico estándar por ClCr en ficha; monitorizar función renal/electrolitos estrechamente y corregir nefrotóxicos.",
+    "hepaticDose": "Sin ajuste numérico rutinario; monitorizar pruebas hepáticas según gravedad/enfermedad de base.",
+    "commonAdverseEffects": [
+      "Fiebre/escalofríos infusionales",
+      "Náuseas",
+      "Hipopotasemia",
+      "Aumento de creatinina",
+      "Anemia"
+    ],
+    "dangerousAdverseEffects": [
+      "Nefrotoxicidad",
+      "Hipopotasemia/hipomagnesemia graves",
+      "Anafilaxia/reacción infusional",
+      "Arritmia por alteración electrolítica"
+    ],
+    "adverseEffects": "Aunque menos nefrotóxica que desoxicolato, la forma liposomal puede causar lesión renal, pérdidas de K/Mg, anemia y reacción infusional.",
+    "contraindications": "Hipersensibilidad a anfotericina B/componentes, salvo enfermedad vital que justifique uso bajo supervisión experta.",
+    "interactions": "Otros nefrotóxicos aumentan lesión renal; diuréticos/corticoides agravan hipopotasemia; esta puede potenciar toxicidad digitálica.",
+    "monitoring": "Creatinina, urea, K, Mg, hemograma, función hepática; signos vitales y reacción durante infusión.",
+    "administration": "Solo IV. No intercambiar formulaciones de anfotericina B mg por mg; confirmar producto liposomal.",
+    "preparation": "Reconstituir exactamente según fabricante. Antes de usar línea IV existente, lavar con dextrosa 5%; si no es compatible, usar línea separada.",
+    "infusionProtocol": "Infusión generalmente ~2 h; puede reducirse a ~1 h si se tolera. Usar filtro solo si poro >=1,0 micra según ficha.",
+    "pregnancy": "Anfotericina B tiene amplia experiencia en gestación para micosis graves y puede preferirse cuando azoles son inadecuados; individualizar.",
+    "lactation": "Datos de forma liposomal limitados; se espera baja absorción oral del lactante, pero valorar gravedad y alternativas.",
+    "specialPopulations": "Enfermedad renal, nefrotóxicos y trastornos electrolíticos requieren monitorización intensa. Desoxicolato/formas lipídicas no son equivalentes.",
+    "patientEducation": "Informar escalofríos, dolor torácico, disnea, menor diuresis, debilidad o palpitaciones. Explicar necesidad de controles seriados.",
+    "clinicalPearls": "'Liposomal' forma parte de la prescripción: AmBisome y anfotericina B desoxicolato no son intercambiables mg por mg y tienen dosis/toxicidad diferentes.",
+    "guidelineRecommendations": "Guías de micosis invasivas usan anfotericina B liposomal como terapia primaria o alternativa en enfermedad grave, mucormicosis y resistencia/intolerancia.",
+    "safetyFlags": [
+      "Formulaciones NO intercambiables",
+      "Nefrotoxicidad",
+      "K/Mg bajos",
+      "Reacción infusional",
+      "Dextrosa/compatibilidad"
+    ],
+    "alerts": [
+      "3–5 mg/kg/día en muchas micosis invasivas",
+      "Confirmar forma liposomal",
+      "Monitorizar K/Mg/creatinina",
+      "Flush con dextrosa 5%",
+      "No tratar como desoxicolato"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+    ]
   },
   "name": {
-    "pt": "Anfotericina B (ID Canônico de Classe)",
-    "es": "Anfotericina B (ID Canónico de Clase)"
+    "pt": "Anfotericina B lipossomal",
+    "es": "Anfotericina B liposomal"
   },
   "keywords": [
     "anfotericina_b",
     "anfotericina b (id canônico de classe)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8bd4419151c9028c",
+  "clinicalContentSha256": "8bd4419151c9028c7de7aad108eadfaca274267f7be1e107f04be2b0321d0813",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js"

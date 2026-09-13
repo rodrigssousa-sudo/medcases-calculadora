@@ -1,14 +1,148 @@
 {
   "id": "caspofungina",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Caspofungina"
+    "name": "Caspofungina",
+    "class": "Antifúngico equinocandina",
+    "pharmacologicClass": "Equinocandina; inibidor de beta-1,3-D-glucano sintase",
+    "mechanism": "Inibe síntese de beta-1,3-D-glucano da parede fúngica, causando instabilidade osmótica e morte/inibição do fungo.",
+    "pharmacodynamics": "Fungicida contra Candida e fungistática contra Aspergillus; atividade relacionada a exposição AUC/MIC e concentração.",
+    "pharmacokinetics": "Somente IV; alta ligação proteica, degradação/metabolismo hepático lento e mínima eliminação renal de fármaco ativo.",
+    "indications": "Candidemia e outras candidíases invasivas, candidíase esofágica, terapia empírica em neutropenia e aspergilose invasiva refratária/intolerante.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Pó liofilizado IV.",
+    "presentations": [
+      "50 mg",
+      "70 mg"
+    ],
+    "dose": "Adultos: 70 mg IV de ataque no dia 1, depois 50 mg uma vez ao dia para candidemia e várias indicações; candidíase esofágica usa 50 mg/dia sem ataque.",
+    "pediatricDose": "3 meses–17 anos: 70 mg/m² de ataque no dia 1, depois 50 mg/m²/dia; máximo 70 mg por dose. Pode aumentar a 70 mg/m²/dia, máximo 70 mg, se resposta inadequada e tolerado.",
+    "renalDose": "Sem ajuste em insuficiência renal. Não é dializável; não administrar dose suplementar após hemodiálise.",
+    "hepaticDose": "Child-Pugh A: sem ajuste. Child-Pugh B (7–9): 35 mg/dia após carga de 70 mg quando indicada. Sem experiência clínica robusta em Child-Pugh C.",
+    "commonAdverseEffects": [
+      "Febre",
+      "Flebite",
+      "Cefaleia",
+      "Elevação de transaminases"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Reação histaminérgica grave",
+      "Hepatotoxicidade",
+      "Reação cutânea grave"
+    ],
+    "adverseEffects": "Pode causar reações mediadas por histamina durante infusão, incluindo rash, edema facial, broncoespasmo e anafilaxia; enzimas hepáticas podem aumentar.",
+    "contraindications": "Hipersensibilidade à caspofungina ou componentes.",
+    "interactions": "Rifampicina reduz exposição: adulto em rifampicina deve receber 70 mg/dia. Considerar 70 mg/dia com outros indutores como efavirenz, carbamazepina, dexametasona ou fenitoína.",
+    "monitoring": "AST/ALT/bilirrubina, sinais de hipersensibilidade durante infusão, resposta microbiológica e interações com indutores.",
+    "administration": "IV lenta em aproximadamente 1 hora. NÃO administrar em bolus.",
+    "preparation": "Reconstituir e diluir conforme bula. NÃO usar diluentes contendo dextrose porque a caspofungina não é estável.",
+    "infusionProtocol": "Infundir em aproximadamente 1 hora; não misturar/co-infundir com outros medicamentos na mesma solução.",
+    "pregnancy": "Dados humanos são limitados; usar quando benefício justificar risco e doença fúngica exigir terapia sistêmica.",
+    "lactation": "Não há dados humanos suficientes; avaliar necessidade materna e risco potencial ao lactente.",
+    "specialPopulations": "Insuficiência renal não requer ajuste. Child-Pugh B exige redução de manutenção; indutores enzimáticos podem exigir aumento a 70 mg/dia.",
+    "patientEducation": "Relatar falta de ar, edema facial, rash, prurido ou sintomas hepáticos. Explicar que é administrada por infusão lenta.",
+    "clinicalPearls": "Equinocandina não exige ajuste renal nem suplemento pós-HD. O contraste é o fígado: Child-Pugh B reduz manutenção a 35 mg/dia, enquanto rifampicina exige 70 mg/dia.",
+    "guidelineRecommendations": "IDSA recomenda equinocandinas como terapia inicial preferida para muitas candidemias/invasivas, especialmente em pacientes críticos, com step-down conforme suscetibilidade e estabilidade.",
+    "safetyFlags": [
+      "Sem ajuste renal",
+      "Child-Pugh B: 35 mg/dia",
+      "Rifampicina: 70 mg/dia",
+      "Infusão 1 h",
+      "Sem dextrose"
+    ],
+    "alerts": [
+      "70 mg ataque -> 50 mg/dia",
+      "Não bolus",
+      "Não diluir em dextrose",
+      "Sem suplemento pós-HD",
+      "Reação histaminérgica"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08fb61ee-a05a-4ce1-934c-8cd26c5733db",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08fb61ee-a05a-4ce1-934c-8cd26c5733db",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+    ]
   },
   "es": {
-    "name": "Caspofungina"
+    "name": "Caspofungina",
+    "class": "Antifúngico equinocandina",
+    "pharmacologicClass": "Equinocandina; inhibidor de beta-1,3-D-glucano sintasa",
+    "mechanism": "Inhibe síntesis de beta-1,3-D-glucano de pared fúngica, causando inestabilidad osmótica y muerte/inhibición.",
+    "pharmacodynamics": "Fungicida frente a Candida y fungistática frente a Aspergillus; actividad relacionada con AUC/MIC y concentración.",
+    "pharmacokinetics": "Solo IV; alta unión proteica, degradación/metabolismo hepático lento y mínima eliminación renal de fármaco activo.",
+    "indications": "Candidemia y otras candidiasis invasivas, candidiasis esofágica, terapia empírica en neutropenia y aspergilosis invasiva refractaria/intolerante.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Polvo liofilizado IV.",
+    "presentations": [
+      "50 mg",
+      "70 mg"
+    ],
+    "dose": "Adultos: 70 mg IV carga día 1, luego 50 mg una vez al día para candidemia y varias indicaciones; candidiasis esofágica usa 50 mg/día sin carga.",
+    "pediatricDose": "3 meses–17 años: 70 mg/m² carga día 1, luego 50 mg/m²/día; máximo 70 mg por dosis. Puede aumentarse a 70 mg/m²/día, máximo 70 mg, si respuesta insuficiente.",
+    "renalDose": "Sin ajuste en insuficiencia renal. No es dializable; no administrar suplemento tras hemodiálisis.",
+    "hepaticDose": "Child-Pugh A: sin ajuste. Child-Pugh B (7–9): 35 mg/día tras carga de 70 mg cuando corresponde. Sin experiencia robusta en Child-Pugh C.",
+    "commonAdverseEffects": [
+      "Fiebre",
+      "Flebitis",
+      "Cefalea",
+      "Elevación de transaminasas"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "Reacción histaminérgica grave",
+      "Hepatotoxicidad",
+      "Reacción cutánea grave"
+    ],
+    "adverseEffects": "Puede causar reacciones mediadas por histamina durante infusión, con rash, edema facial, broncoespasmo y anafilaxia; pueden elevarse enzimas hepáticas.",
+    "contraindications": "Hipersensibilidad a caspofungina o componentes.",
+    "interactions": "Rifampicina reduce exposición: adulto con rifampicina debe recibir 70 mg/día. Considerar 70 mg/día con otros inductores como efavirenz, carbamazepina, dexametasona o fenitoína.",
+    "monitoring": "AST/ALT/bilirrubina, hipersensibilidad durante infusión, respuesta microbiológica e interacciones con inductores.",
+    "administration": "IV lenta en aproximadamente 1 hora. NO administrar en bolo.",
+    "preparation": "Reconstituir/diluir según ficha. NO usar diluyentes con dextrosa porque caspofungina no es estable.",
+    "infusionProtocol": "Infundir en aproximadamente 1 hora; no mezclar/co-infundir con otros fármacos en la misma solución.",
+    "pregnancy": "Datos humanos limitados; usar cuando beneficio justifique riesgo y la micosis requiera terapia sistémica.",
+    "lactation": "Datos humanos insuficientes; valorar necesidad materna y riesgo potencial al lactante.",
+    "specialPopulations": "Insuficiencia renal no requiere ajuste. Child-Pugh B reduce mantenimiento; inductores pueden exigir aumento a 70 mg/día.",
+    "patientEducation": "Informar disnea, edema facial, rash, prurito o síntomas hepáticos. Explicar que se administra por infusión lenta.",
+    "clinicalPearls": "Equinocandina sin ajuste renal ni suplemento pos-HD. El contraste es hepático: Child-Pugh B reduce mantenimiento a 35 mg/día, mientras rifampicina exige 70 mg/día.",
+    "guidelineRecommendations": "IDSA recomienda equinocandinas como terapia inicial preferida para muchas candidemias/invasivas, especialmente en críticos, con step-down según susceptibilidad y estabilidad.",
+    "safetyFlags": [
+      "Sin ajuste renal",
+      "Child-Pugh B: 35 mg/día",
+      "Rifampicina: 70 mg/día",
+      "Infusión 1 h",
+      "Sin dextrosa"
+    ],
+    "alerts": [
+      "70 mg carga -> 50 mg/día",
+      "No bolo",
+      "No diluir en dextrosa",
+      "Sin suplemento pos-HD",
+      "Reacción histaminérgica"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08fb61ee-a05a-4ce1-934c-8cd26c5733db",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08fb61ee-a05a-4ce1-934c-8cd26c5733db",
+      "https://www.idsociety.org/practice-guideline/candidiasis/",
+      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+    ]
   },
   "name": {
     "pt": "Caspofungina",
@@ -17,8 +151,8 @@
   "keywords": [
     "caspofungina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8bd4419151c9028c",
+  "clinicalContentSha256": "8bd4419151c9028c7de7aad108eadfaca274267f7be1e107f04be2b0321d0813",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js"

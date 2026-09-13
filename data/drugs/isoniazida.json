@@ -1,31 +1,17 @@
 {
   "id": "isoniazida",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Isoniazida",
-    "class": "Antituberculoso (hidrazida do ácido isonicotínico)",
-    "commercialNames": {
-      "br": [
-        "Isoniazida EMS",
-        "Isoniazida Teuto",
-        "Rifaldin (combinação)"
-      ],
-      "ar": [
-        "Isoniazida Richet",
-        "Isoniazida Klonal"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 100 mg / 300 mg",
-      "Solução oral 50 mg/5 mL"
+    "class": "Antimicobacteriano",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "300 mg VO 24/24h (em jejum)",
-      "pediatrica": "300 mg VO 24/24h"
-    },
+    "presentation": "Comprimidos e solução oral/injetável em alguns mercados.",
+    "dose": "TB ativa em adulto: 5 mg/kg VO uma vez ao dia, máximo 300 mg/dia, sempre em combinação. Regimes intermitentes 15 mg/kg até 900 mg 2–3 vezes/semana existem sob programas específicos.",
     "doseKg": {
       "standard": "10–15 mg/kg/dia",
       "maxDose": "300 mg/dia"
@@ -34,131 +20,78 @@
     "dilution": "Uso oral. Pode ser administrada EV em casos selecionados.",
     "speed": "Oral em jejum. Se EV: infusão lenta conforme protocolo.",
     "commonAdverseEffects": [
-      "Náuseas",
-      "Cefaleia",
-      "Insônia",
-      "Neuropatia periférica (deficiência de B6)"
+      "Elevação de transaminases",
+      "Náusea",
+      "Neuropatia periférica",
+      "Rash"
     ],
     "dangerousAdverseEffects": [
-      "Hepatotoxicidade grave (hepatite isoniazídica)",
-      "Neuropatia periférica grave",
-      "Lúpus induzido por droga",
-      "Convulsões (superdose)"
+      "Hepatite grave/fatal",
+      "Neuropatia periférica",
+      "Convulsões",
+      "Psicose",
+      "Anemia sideroblástica"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Associar piridoxina (vitamina B6) para prevenir neuropatia em grupos de risco.",
-      "Monitorar função hepática mensalmente no primeiro trimestre de tratamento."
+      "5 mg/kg/dia adulto, máx 300 mg",
+      "Criança 10–15 mg/kg/dia, máx 300 mg",
+      "B6 25–50 mg/dia em risco",
+      "Monitorar hepatite",
+      "Álcool aumenta risco"
     ],
-    "ref": "WHO TB Guidelines 2022 / MS Brasil PNCT / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Associar piridoxina em grupos de risco para neuropatia."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar neuropatia periférica e hepatotoxicidade."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise."
-      }
-    }
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+      "https://www.cdc.gov/tb/treatment/index.html",
+      "https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+    ],
+    "renalDose": "Geralmente sem ajuste em insuficiência renal, inclusive hemodiálise; administrar após HD quando possível. Monitorar neurotoxicidade em DRC.",
+    "pharmacologicClass": "Hidrazida do ácido isonicotínico; inibidor da síntese de ácido micólico",
+    "mechanism": "Pró-fármaco ativado pela catalase-peroxidase KatG do M. tuberculosis; inibe síntese de ácido micólico via alvos como InhA.",
+    "pharmacodynamics": "Bactericida contra bacilos em rápida replicação e bacteriostática contra populações menos ativas; resistência por katG/inhA e outros mecanismos.",
+    "pharmacokinetics": "Excelente absorção oral e penetração tecidual/LCR; acetilação hepática por NAT2 gera grande variabilidade; metabólitos eliminados pelos rins.",
+    "indications": "Tratamento de tuberculose ativa sempre em combinação e tratamento preventivo de infecção latente em regimes apropriados.",
+    "presentations": [
+      "100 mg",
+      "300 mg",
+      "Solução oral conforme produto"
+    ],
+    "pediatricDose": "Crianças: 10–15 mg/kg VO uma vez ao dia, máximo 300 mg/dia; regimes intermitentes 20–40 mg/kg até 900 mg 2–3 vezes/semana conforme diretriz/programa.",
+    "hepaticDose": "Sem tabela simples de ajuste; hepatopatia ativa/elevação importante exige cautela, monitorização intensa e reconsideração do regime. Boxed warning para hepatite grave/fatal.",
+    "adverseEffects": "Hepatotoxicidade pode ocorrer mesmo após meses e risco aumenta com idade, álcool e doença hepática. Neuropatia relaciona-se à deficiência funcional de piridoxina.",
+    "contraindications": "Hepatite aguda importante, história de reação hepática grave à isoniazida ou hipersensibilidade clinicamente significativa.",
+    "interactions": "Inibe enzimas como CYP2C19/CYP3A em graus relevantes e pode aumentar níveis de fenitoína/carbamazepina; álcool e outros hepatotóxicos aumentam risco.",
+    "monitoring": "Avaliar sintomas de hepatite mensalmente; AST/ALT/bilirrubina em pacientes de risco/baseline alterado. Monitorar neuropatia e adesão.",
+    "administration": "VO preferencialmente em jejum, 1 h antes ou 2 h após alimento; alimento pode reduzir absorção.",
+    "preparation": "Comprimidos/solução conforme produto; piridoxina deve ser prescrita separadamente quando indicada.",
+    "infusionProtocol": "Não aplicável à rotina oral; formulações parenterais são reservadas a situações específicas.",
+    "pregnancy": "Pode ser usada em regimes de TB quando indicada; gestação aumenta indicação de piridoxina profilática em pessoas de risco.",
+    "lactation": "Compatível em muitos regimes de TB; a quantidade no leite não substitui profilaxia/tratamento do lactente. Considerar piridoxina para mãe/lactente quando indicada.",
+    "specialPopulations": "Dar piridoxina 25–50 mg/dia a pessoas com risco de neuropatia, incluindo gestantes, lactentes amamentados, HIV, diabetes, alcoolismo, desnutrição, DRC ou idade avançada.",
+    "patientEducation": "Suspender e procurar avaliação se anorexia persistente, náusea/vômito, fadiga intensa, urina escura ou icterícia; relatar parestesias.",
+    "clinicalPearls": "B6 não é opcional em grupos de risco: piridoxina 25–50 mg/dia reduz neuropatia. TB ativa nunca deve receber isoniazida isolada.",
+    "guidelineRecommendations": "Diretrizes atuais mantêm isoniazida como componente central de vários regimes para TB suscetível e de alguns regimes para infecção latente; sempre considerar resistência, adesão e hepatotoxicidade.",
+    "safetyFlags": [
+      "Boxed warning hepatite",
+      "TB ativa sempre em combinação",
+      "Piridoxina em grupos de risco",
+      "Neuropatia",
+      "NAT2/variabilidade"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+      "https://www.cdc.gov/tb/treatment/index.html",
+      "https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+    ]
   },
   "es": {
     "name": "Isoniazida",
-    "class": "Antituberculoso (hidrazida del ácido isonicotínico)",
-    "commercialNames": {
-      "br": [
-        "Isoniazida EMS",
-        "Isoniazida Teuto",
-        "Rifaldin (combinação)"
-      ],
-      "ar": [
-        "Isoniazida Richet",
-        "Isoniazida Klonal"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 100 mg / 300 mg",
-      "Solución oral 50 mg/5 mL"
+    "class": "Antimicobacteriano",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "300 mg VO cada 24h (en ayunas)",
-      "pediatrica": "300 mg VO cada 24h"
-    },
+    "presentation": "Comprimidos y solución oral/inyectable en algunos mercados.",
+    "dose": "TB activa adulto: 5 mg/kg VO una vez al día, máximo 300 mg/día, siempre combinada. Regímenes intermitentes 15 mg/kg hasta 900 mg 2–3 veces/semana existen bajo programas específicos.",
     "doseKg": {
       "standard": "10–15 mg/kg/día",
       "maxDose": "300 mg/día"
@@ -167,108 +100,69 @@
     "dilution": "Uso oral. Puede administrarse EV en casos seleccionados.",
     "speed": "Oral en ayunas. Si EV: infusión lenta según protocolo.",
     "commonAdverseEffects": [
+      "Elevación de transaminasas",
       "Náuseas",
-      "Cefalea",
-      "Insomnio",
-      "Neuropatía periférica (deficiencia de B6)"
+      "Neuropatía periférica",
+      "Rash"
     ],
     "dangerousAdverseEffects": [
-      "Hepatotoxicidad grave (hepatitis isoniazídica)",
-      "Neuropatía periférica grave",
-      "Lupus inducido por droga",
-      "Convulsiones (sobredosis)"
+      "Hepatitis grave/fatal",
+      "Neuropatía periférica",
+      "Convulsiones",
+      "Psicosis",
+      "Anemia sideroblástica"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Asociar piridoxina (vitamina B6) para prevenir neuropatía en grupos de riesgo.",
-      "Monitorizar función hepática mensualmente en el primer trimestre de tratamiento."
+      "5 mg/kg/día adulto, máx 300 mg",
+      "Niño 10–15 mg/kg/día, máx 300 mg",
+      "B6 25–50 mg/día en riesgo",
+      "Monitorizar hepatitis",
+      "Alcohol aumenta riesgo"
     ],
-    "ref": "WHO TB Guidelines 2022 / MS Brasil PNCT / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Asociar piridoxina en grupos de riesgo para neuropatía."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar neuropatía periférica y hepatotoxicidad."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "300 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "10–15 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis."
-      }
-    }
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+      "https://www.cdc.gov/tb/treatment/index.html",
+      "https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+    ],
+    "renalDose": "Generalmente sin ajuste en insuficiencia renal incluida hemodiálisis; administrar después de HD cuando sea posible. Vigilar neurotoxicidad en ERC.",
+    "pharmacologicClass": "Hidrazida del ácido isonicotínico; inhibidor de síntesis de ácido micólico",
+    "mechanism": "Profármaco activado por catalasa-peroxidasa KatG de M. tuberculosis; inhibe síntesis de ácido micólico a través de blancos como InhA.",
+    "pharmacodynamics": "Bactericida contra bacilos en replicación rápida y bacteriostática en poblaciones menos activas; resistencia por katG/inhA y otros.",
+    "pharmacokinetics": "Excelente absorción oral y penetración tisular/LCR; acetilación hepática NAT2 con gran variabilidad; metabolitos renales.",
+    "indications": "Tratamiento de TB activa siempre en combinación y tratamiento preventivo de infección latente en regímenes apropiados.",
+    "presentations": [
+      "100 mg",
+      "300 mg",
+      "Solución oral según producto"
+    ],
+    "pediatricDose": "Niños: 10–15 mg/kg VO una vez al día, máximo 300 mg/día; intermitente 20–40 mg/kg hasta 900 mg 2–3 veces/semana según guía/programa.",
+    "hepaticDose": "Sin tabla simple de ajuste; hepatopatía activa/elevación importante exige precaución, monitorización intensa y reconsiderar régimen. Boxed warning por hepatitis grave/fatal.",
+    "adverseEffects": "Hepatotoxicidad puede ocurrir tras meses y riesgo aumenta con edad, alcohol y hepatopatía. Neuropatía se relaciona con déficit funcional de piridoxina.",
+    "contraindications": "Hepatitis aguda importante, antecedente de reacción hepática grave por isoniazida o hipersensibilidad significativa.",
+    "interactions": "Inhibe enzimas como CYP2C19/CYP3A y puede elevar fenitoína/carbamazepina; alcohol y otros hepatotóxicos aumentan riesgo.",
+    "monitoring": "Evaluar síntomas de hepatitis mensualmente; AST/ALT/bilirrubina en pacientes de riesgo/baseline alterado. Vigilar neuropatía y adherencia.",
+    "administration": "VO preferentemente en ayunas, 1 h antes o 2 h después de alimentos; alimentos reducen absorción.",
+    "preparation": "Comprimidos/solución según producto; piridoxina se prescribe por separado cuando está indicada.",
+    "infusionProtocol": "No aplicable a rutina oral; formulaciones parenterales para situaciones específicas.",
+    "pregnancy": "Puede usarse en regímenes de TB cuando corresponde; gestación refuerza indicación de piridoxina profiláctica.",
+    "lactation": "Compatible en muchos regímenes de TB; cantidad en leche no sustituye profilaxis/tratamiento del lactante. Considerar piridoxina.",
+    "specialPopulations": "Dar piridoxina 25–50 mg/día a personas con riesgo de neuropatía: gestantes, lactantes amamantados, HIV, diabetes, alcoholismo, malnutrición, ERC o edad avanzada.",
+    "patientEducation": "Suspender y consultar ante anorexia persistente, náuseas/vómitos, fatiga intensa, orina oscura o ictericia; informar parestesias.",
+    "clinicalPearls": "B6 no es opcional en grupos de riesgo: piridoxina 25–50 mg/día reduce neuropatía. TB activa nunca debe tratarse con isoniazida sola.",
+    "guidelineRecommendations": "Guías actuales mantienen isoniazida como componente central de varios regímenes para TB susceptible y algunos regímenes de infección latente; considerar resistencia, adherencia y hepatotoxicidad.",
+    "safetyFlags": [
+      "Boxed warning hepatitis",
+      "TB activa siempre combinada",
+      "Piridoxina en grupos de riesgo",
+      "Neuropatía",
+      "NAT2/variabilidad"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+      "https://www.cdc.gov/tb/treatment/index.html",
+      "https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+    ]
   },
   "name": {
     "pt": "Isoniazida",
@@ -283,8 +177,8 @@
     "isoniazida klonal",
     "antituberculoso (hidrazida do acido isonicotinico)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-1b46e20f6067bef5",
+  "clinicalContentSha256": "1b46e20f6067bef5822e16cf43153e91a96cb4f2e6290213cc6cedfdb1ece199",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

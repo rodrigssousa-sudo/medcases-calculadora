@@ -1,34 +1,17 @@
 {
   "id": "metronidazol",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Metronidazol",
-    "class": "Nitroimidazólico",
-    "commercialNames": {
-      "br": [
-        "Flagyl",
-        "Metronidazol EMS",
-        "Neo Metrodazol"
-      ],
-      "ar": [
-        "Flagyl",
-        "Metronidazol Bagó",
-        "Metronidazol Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 250 mg e 400 mg",
-      "Suspensão oral",
-      "Bolsa EV: 500 mg/100 mL"
+    "class": "Antimicrobiano nitroimidazol",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adultoVO": "500 mg VO 8/8h",
-      "adultoEV": "500 mg EV 8/8h",
-      "pediatrica": "700 mg por dose EV/VO 8/8h"
-    },
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "dose": "Infecção anaeróbia grave: 7,5 mg/kg VO q6h, aproximadamente 500 mg q6h em adulto de 70 kg; máximo 4 g/dia.",
     "doseKg": {
       "standard": "20–30 mg/kg/dia",
       "severe": "30–40 mg/kg/dia",
@@ -38,159 +21,80 @@
     "dilution": "Bolsa pronta para uso ou diluição conforme protocolo institucional.",
     "speed": "Infundir em 30 a 60 minutos.",
     "commonAdverseEffects": [
-      "Náuseas",
-      "Sabor metálico",
+      "Náusea",
+      "Diarreia",
       "Dor abdominal",
-      "Diarreia"
+      "Cefaleia"
     ],
     "dangerousAdverseEffects": [
       "Neuropatia periférica",
-      "Convulsões",
-      "Encefalopatia tóxica",
-      "Pancreatite"
+      "Encefalopatia/convulsões",
+      "Leucopenia",
+      "Reação álcool/disulfiram-like"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Proibido consumir álcool durante o tratamento e por 48–72h após término.",
-      "Monitorar sintomas neurológicos em tratamentos prolongados."
+      "Álcool/propilenoglicol: evitar +3 dias",
+      "Neuropatia periférica",
+      "Encefalopatia/convulsões",
+      "Child-Pugh C: reduzir 50%",
+      "Warfarina/disulfiram"
     ],
-    "ref": "Goodman & Gilman / Sanford Guide / IDSA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual. Não necessita ajuste renal."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal habitual."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal habitual. Monitorar neurotoxicidade em uso prolongado."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal habitual. Em insuficiência renal terminal, monitorar neurotoxicidade se uso prolongado."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Geralmente não necessita ajuste; em alguns protocolos administrar após hemodiálise nos dias de HD."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2ae49bf4-a23b-bdcc-e063-6294a90a80a9",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+      "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71f5ce2f-17f8-45fc-b27d-2bf982591ab3",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e4ea0c09-cdd1-4708-962c-6ba28b989df3",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/018900s046lbl.pdf"
+    ],
+    "renalDose": "Geralmente sem ajuste em ESRD/CAPD; HD remove quantidade relevante e pode exigir suplemento se dose não for separada da sessão.",
+    "pharmacologicClass": "Nitroimidazol antibacteriano/antiprotozoário",
+    "mechanism": "Em anaeróbios/protozoários, o grupo nitro é reduzido a intermediários reativos que lesam DNA.",
+    "pharmacodynamics": "Bactericida contra anaeróbios suscetíveis; atividade exige ambiente redutor intracelular.",
+    "pharmacokinetics": "Alta biodisponibilidade oral, ampla distribuição inclusive SNC; metabolismo hepático e eliminação renal de metabólitos.",
+    "indications": "Infecções anaeróbias, tricomoníase, vaginose bacteriana e outras protozoárias conforme indicação.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "125 mg em alguns produtos"
+    ],
+    "pediatricDose": "A dose pediátrica depende da indicação e da idade; não usar um esquema único para todas as situações. Amebíase por via oral: 35–50 mg/kg/dia, divididos em 3 doses, por 10 dias. Metronidazol IV para infecção intra-abdominal em pacientes <4 meses: dose de ataque 15 mg/kg. Manutenção 7,5 mg/kg conforme idade pós-menstrual: 23–<34 semanas, a cada 12 h; 34–40 semanas, a cada 8 h; >40–48 semanas, a cada 6 h. A primeira dose de manutenção é administrada 24 h após o início da dose de ataque. Para pacientes pediátricos ≥4 meses, a bula IV não estabelece segurança e eficácia para tratamento de infecções anaeróbias; não extrapolar automaticamente este esquema neonatal para outras idades ou indicações. Utilizar regime específico validado quando houver indicação pediátrica não coberta pela bula.",
+    "hepaticDose": "Child-Pugh C: reduzir dose em 50%; A/B sem ajuste formal, monitorando eventos adversos.",
+    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+    "interactions": "Álcool/propilenoglicol, disulfiram, warfarina e lítio exigem atenção; pode aumentar INR.",
+    "monitoring": "Sintomas neurológicos em cursos prolongados, hemograma se prolongado e INR se anticoagulado.",
+    "administration": "VO com ou sem alimento; evitar álcool/propilenoglicol durante e por pelo menos 3 dias após.",
+    "preparation": "Comprimidos prontos; IV conforme fabricante.",
+    "infusionProtocol": "Quando IV, infundir conforme formulação; alta biodisponibilidade facilita transição IV-VO.",
+    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Uso prolongado aumenta risco de neuropatia periférica/encefalopatia; insuficiência hepática aumenta exposição.",
+    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+    "clinicalPearls": "Evitar álcool durante e pelo menos 3 dias após. Neuropatia em tratamento prolongado exige suspensão e avaliação.",
+    "guidelineRecommendations": "Usar para anaeróbios/protozoários com benefício e seguir esquemas específicos de diretrizes para vaginose/tricomoníase.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interações"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2ae49bf4-a23b-bdcc-e063-6294a90a80a9",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+      "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71f5ce2f-17f8-45fc-b27d-2bf982591ab3",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e4ea0c09-cdd1-4708-962c-6ba28b989df3",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/018900s046lbl.pdf"
+    ]
   },
   "es": {
     "name": "Metronidazol",
-    "class": "Nitroimidazol",
-    "commercialNames": {
-      "br": [
-        "Flagyl",
-        "Metronidazol EMS",
-        "Neo Metrodazol"
-      ],
-      "ar": [
-        "Flagyl",
-        "Metronidazol Bagó",
-        "Metronidazol Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 250 mg y 400 mg",
-      "Suspensión oral",
-      "Bolsa EV: 500 mg/100 mL"
+    "class": "Antimicrobiano nitroimidazol",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adultoVO": "500 mg VO cada 8h",
-      "adultoEV": "500 mg EV cada 8h",
-      "pediatrica": "700 mg por dosis EV/VO cada 8h"
-    },
+    "presentation": "Comprimidos orales; existe formulación IV.",
+    "dose": "Infección anaerobia grave: 7,5 mg/kg VO q6h, aproximadamente 500 mg q6h en adulto de 70 kg; máximo 4 g/día.",
     "doseKg": {
       "standard": "20–30 mg/kg/día",
       "severe": "30–40 mg/kg/día",
@@ -201,132 +105,70 @@
     "speed": "Infundir en 30 a 60 minutos.",
     "commonAdverseEffects": [
       "Náuseas",
-      "Sabor metálico",
+      "Diarrea",
       "Dolor abdominal",
-      "Diarrea"
+      "Cefalea"
     ],
     "dangerousAdverseEffects": [
       "Neuropatía periférica",
-      "Convulsiones",
-      "Encefalopatía tóxica",
-      "Pancreatitis"
+      "Encefalopatía/convulsiones",
+      "Leucopenia",
+      "Reacción alcohol/disulfiram-like"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Prohibido consumir alcohol durante el tratamiento y por 48–72h posteriores.",
-      "Monitorar síntomas neurológicos en tratamientos prolongados."
+      "Alcohol/propilenglicol: evitar +3 días",
+      "Neuropatía periférica",
+      "Encefalopatía/convulsiones",
+      "Child-Pugh C: reducir 50%",
+      "Warfarina/disulfiram"
     ],
-    "ref": "Goodman & Gilman / Sanford Guide / IDSA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual. No requiere ajuste renal."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal habitual."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal habitual. Monitorizar neurotoxicidad en uso prolongado."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal habitual. En insuficiencia renal terminal, monitorizar neurotoxicidad si uso prolongado."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "7,5–10 mg/kg",
-          "intervalo": "8/8h",
-          "doseMaxima": "4 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Generalmente no requiere ajuste; en algunos protocolos administrar después de hemodiálisis en días de HD."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2ae49bf4-a23b-bdcc-e063-6294a90a80a9",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+      "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71f5ce2f-17f8-45fc-b27d-2bf982591ab3",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e4ea0c09-cdd1-4708-962c-6ba28b989df3",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/018900s046lbl.pdf"
+    ],
+    "renalDose": "Generalmente sin ajuste en ESRD/CAPD; HD elimina cantidad relevante y puede requerir suplemento si dosis no se separa.",
+    "pharmacologicClass": "Nitroimidazol antibacteriano/antiprotozoario",
+    "mechanism": "En anaerobios/protozoos, el grupo nitro se reduce a intermediarios reactivos que lesionan DNA.",
+    "pharmacodynamics": "Bactericida frente a anaerobios susceptibles; requiere ambiente reductor intracelular.",
+    "pharmacokinetics": "Alta biodisponibilidad oral, amplia distribución incluido SNC; metabolismo hepático y eliminación renal de metabolitos.",
+    "indications": "Infecciones anaerobias, tricomoniasis, vaginosis bacteriana y otras protozoarias según indicación.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "125 mg en algunos productos"
+    ],
+    "pediatricDose": "La dosis pediátrica depende de la indicación y de la edad; no utilizar un único esquema para todas las situaciones. Amebiasis por vía oral: 35–50 mg/kg/día, divididos en 3 dosis, durante 10 días. Metronidazol IV para infección intraabdominal en pacientes <4 meses: dosis de carga 15 mg/kg. Mantenimiento 7,5 mg/kg según edad posmenstrual: 23–<34 semanas, cada 12 h; 34–40 semanas, cada 8 h; >40–48 semanas, cada 6 h. La primera dosis de mantenimiento se administra 24 h después del inicio de la dosis de carga. Para pacientes pediátricos ≥4 meses, el prospecto IV no establece seguridad y eficacia para el tratamiento de infecciones anaerobias; no extrapolar automáticamente este esquema neonatal a otras edades o indicaciones. Utilizar un régimen específico validado cuando exista una indicación pediátrica no cubierta por el prospecto.",
+    "hepaticDose": "Child-Pugh C: reducir dosis 50%; A/B sin ajuste formal, monitorizando eventos adversos.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+    "interactions": "Alcohol/propilenglicol, disulfiram, warfarina y litio requieren atención; puede aumentar INR.",
+    "monitoring": "Síntomas neurológicos en tratamientos prolongados, hemograma si prolongado e INR si anticoagulado.",
+    "administration": "VO con o sin alimentos; evitar alcohol/propilenglicol durante y al menos 3 días después.",
+    "preparation": "Comprimidos listos; IV según fabricante.",
+    "infusionProtocol": "Cuando IV, infundir según formulación; alta biodisponibilidad facilita transición IV-VO.",
+    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Uso prolongado aumenta neuropatía periférica/encefalopatía; insuficiencia hepática aumenta exposición.",
+    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+    "clinicalPearls": "Evitar alcohol durante y al menos 3 días después. Neuropatía prolongada exige suspensión/evaluación.",
+    "guidelineRecommendations": "Usar para anaerobios/protozoos con beneficio y seguir guías específicas para vaginosis/tricomoniasis.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interacciones"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2ae49bf4-a23b-bdcc-e063-6294a90a80a9",
+      "https://www.cdc.gov/std/treatment-guidelines/default.htm",
+      "https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71f5ce2f-17f8-45fc-b27d-2bf982591ab3",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e4ea0c09-cdd1-4708-962c-6ba28b989df3",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/018900s046lbl.pdf"
+    ]
   },
   "name": {
     "pt": "Metronidazol",
@@ -341,8 +183,8 @@
     "metronidazol generico",
     "nitroimidazolico"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-12e38da82c710c3a",
+  "clinicalContentSha256": "12e38da82c710c3aab5929680b5de7dd1eb782f07f842fd1808a8999be238416",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",

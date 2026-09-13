@@ -1,25 +1,153 @@
 {
   "id": "amoxicilina_clavulanato",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Amoxicilina + Clavulanato"
+    "name": "Amoxicilina/clavulanato",
+    "class": "Beta-lactâmico com inibidor de beta-lactamase",
+    "pharmacologicClass": "Aminopenicilina + clavulanato",
+    "mechanism": "Amoxicilina inibe PBPs; clavulanato inativa diversas beta-lactamases de serina e protege a amoxicilina.",
+    "pharmacodynamics": "Atividade tempo-dependente da amoxicilina (fT>MIC); clavulanato amplia atividade contra produtores suscetíveis de beta-lactamase.",
+    "pharmacokinetics": "Boa absorção oral de ambos; eliminação renal importante; hemodiálise remove os componentes.",
+    "indications": "Otite/sinusite e outras infecções respiratórias, pele/tecidos moles e infecções por produtores suscetíveis de beta-lactamase.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Comprimidos e suspensões com diferentes proporções amoxicilina:clavulanato.",
+    "presentations": [
+      "250/125 mg",
+      "500/125 mg",
+      "875/125 mg",
+      "Suspensões pediátricas específicas"
+    ],
+    "dose": "Adultos: 500/125 mg q12h ou 250/125 mg q8h em menos graves; 875/125 mg q12h ou 500/125 mg q8h em mais graves/respiratórias.",
+    "pediatricDose": "<40 kg e >=12 semanas: pelo componente amoxicilina, 25–45 mg/kg/dia q12h ou 20–40 mg/kg/dia q8h conforme gravidade/formulação; >=40 kg dose adulta.",
+    "renalDose": "TFG 10–30: 250/125 ou 500/125 mg q12h; <10: q24h; HD: q24h + dose adicional durante e ao final. Não usar 875 mg se TFG <30.",
+    "hepaticDose": "Cautela e monitorização hepática; contraindicado se houve icterícia colestática/disfunção hepática previamente associada à combinação.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Diarreia",
+      "Rash"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "SCAR/SJS-TEN",
+      "Neurotoxicidade por acúmulo"
+    ],
+    "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
+    "contraindications": "Hipersensibilidade grave a beta-lactâmicos e antecedente de icterícia colestática/disfunção hepática causada pela combinação.",
+    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+    "monitoring": "Resposta, função renal, alergia e diarreia; função hepática se curso prolongado/hepatopatia.",
+    "administration": "VO no início da refeição para melhorar tolerabilidade e absorção do clavulanato.",
+    "preparation": "Reconstituir suspensão conforme fabricante; respeitar a proporção amoxicilina:clavulanato e armazenamento.",
+    "infusionProtocol": "Não aplicável às formulações orais deste registro.",
+    "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
+    "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
+    "specialPopulations": "DRC requer ajuste; hepatopatia exige cautela; não assumir eficácia contra ESBL.",
+    "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
+    "clinicalPearls": "Cobre muitos produtores comuns de beta-lactamase e anaeróbios, mas não MRSA nem Pseudomonas; não é terapia confiável para ESBL.",
+    "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
+    "safetyFlags": [
+      "Alergia beta-lactâmica",
+      "C. difficile",
+      "Ajuste renal quando aplicável",
+      "Neurotoxicidade por acúmulo"
+    ],
+    "alerts": [
+      "Contraindicado se hepatotoxicidade prévia pela combinação",
+      "875 mg não deve ser usado se TFG <30"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0d40bc70-8f47-48c2-a7c6-ba7db9cace74",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0d40bc70-8f47-48c2-a7c6-ba7db9cace74",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "es": {
-    "name": "Amoxicilina + Ácido Clavulánico"
+    "name": "Amoxicilina/ácido clavulánico",
+    "class": "Betalactámico con inhibidor de betalactamasa",
+    "pharmacologicClass": "Aminopenicilina + clavulanato",
+    "mechanism": "Amoxicilina inhibe PBP; clavulanato inactiva diversas betalactamasas de serina y protege a la amoxicilina.",
+    "pharmacodynamics": "Actividad dependiente del tiempo de amoxicilina (fT>MIC); clavulanato amplía actividad frente a productores susceptibles de betalactamasa.",
+    "pharmacokinetics": "Buena absorción oral; eliminación renal importante; hemodiálisis elimina los componentes.",
+    "indications": "Otitis/sinusitis y otras infecciones respiratorias, piel/tejidos blandos e infecciones por productores susceptibles de betalactamasa.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Comprimidos y suspensiones con distintas proporciones amoxicilina:clavulanato.",
+    "presentations": [
+      "250/125 mg",
+      "500/125 mg",
+      "875/125 mg",
+      "Suspensiones pediátricas específicas"
+    ],
+    "dose": "Adultos: 500/125 mg q12h o 250/125 mg q8h en menos graves; 875/125 mg q12h o 500/125 mg q8h en más graves/respiratorias.",
+    "pediatricDose": "<40 kg y >=12 semanas: por componente amoxicilina 25–45 mg/kg/día q12h o 20–40 mg/kg/día q8h según gravedad/formulación; >=40 kg dosis adulta.",
+    "renalDose": "TFG 10–30: 250/125 o 500/125 mg q12h; <10: q24h; HD: q24h + dosis adicional durante y al final. No usar 875 mg si TFG <30.",
+    "hepaticDose": "Precaución y control hepático; contraindicado si hubo ictericia colestásica/disfunción hepática previamente asociada a la combinación.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarrea",
+      "Exantema"
+    ],
+    "dangerousAdverseEffects": [
+      "Anafilaxia",
+      "C. difficile",
+      "SCAR/SJS-TEN",
+      "Neurotoxicidad por acumulación"
+    ],
+    "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
+    "contraindications": "Hipersensibilidad grave a betalactámicos y antecedente de ictericia colestásica/disfunción hepática causada por la combinación.",
+    "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
+    "monitoring": "Respuesta, función renal, alergia y diarrea; función hepática si curso prolongado/hepatopatía.",
+    "administration": "VO al inicio de la comida para mejorar tolerancia y absorción de clavulanato.",
+    "preparation": "Reconstituir la suspensión según fabricante; respetar proporción amoxicilina:clavulanato y almacenamiento.",
+    "infusionProtocol": "No aplicable a las formulaciones orales de este registro.",
+    "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
+    "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
+    "specialPopulations": "ERC requiere ajuste; hepatopatía requiere precaución; no asumir eficacia contra ESBL.",
+    "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
+    "clinicalPearls": "Cubre muchos productores comunes de betalactamasa y anaerobios, pero no MRSA ni Pseudomonas; no es terapia confiable para ESBL.",
+    "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
+    "safetyFlags": [
+      "Alergia a betalactámicos",
+      "C. difficile",
+      "Ajuste renal cuando corresponda",
+      "Neurotoxicidad por acumulación"
+    ],
+    "alerts": [
+      "Contraindicado si hubo hepatotoxicidad previa por la combinación",
+      "875 mg no debe usarse si TFG <30"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0d40bc70-8f47-48c2-a7c6-ba7db9cace74",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0d40bc70-8f47-48c2-a7c6-ba7db9cace74",
+      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ]
   },
   "name": {
-    "pt": "Amoxicilina + Clavulanato",
-    "es": "Amoxicilina + Ácido Clavulánico"
+    "pt": "Amoxicilina/clavulanato",
+    "es": "Amoxicilina/ácido clavulánico"
   },
   "keywords": [
     "amoxicilina_clavulanato",
     "amoxicilina + clavulanato"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-e61729424f211913",
+  "clinicalContentSha256": "e61729424f2119133df2859fd54b61485ca0d422f660b50949e686e5f2e0905e",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js",
@@ -392,8 +520,8 @@
           "amoclav",
           "aminopenicilina + inibidor de beta-lactamase"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-e61729424f211913",
+        "clinicalContentSha256": "e61729424f2119133df2859fd54b61485ca0d422f660b50949e686e5f2e0905e",
         "source": "medcases-calculadora",
         "schema": "premium-v1",
         "sourceModule": "antimicrobianos.js"

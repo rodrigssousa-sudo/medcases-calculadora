@@ -1,24 +1,170 @@
 {
   "id": "ceftobiprole",
   "category": "infectologia",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Ceftobiprole"
+    "name": "Ceftobiprole medocarila",
+    "class": "Cefalosporina anti-MRSA de amplo espectro",
+    "pharmacologicClass": "Pró-fármaco IV convertido em ceftobiprole; alta afinidade por PBP2a de MRSA",
+    "mechanism": "Após conversão ao ceftobiprole, liga-se a PBPs, incluindo PBP2a de MRSA, e inibe parede bacteriana.",
+    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Atividade inclui MRSA e vários Gram-negativos suscetíveis, mas não substitui AST.",
+    "pharmacokinetics": "Somente IV; pró-fármaco rapidamente convertido. Eliminação renal do ceftobiprole é importante e HD remove fármaco.",
+    "indications": "Adultos: bacteremia por S. aureus incluindo endocardite direita, ABSSSI e CABP. Pediatria 3 meses–<18 anos: CABP.",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
+    ],
+    "presentation": "Pó liofilizado IV.",
+    "presentations": [
+      "667 mg ceftobiprole medocarila = 500 mg ceftobiprole"
+    ],
+    "dose": "Adulto: ABSSSI/CABP 667 mg IV q8h. SAB: 667 mg q6h nos dias 1–8 e q8h a partir do dia 9. Infundir em 2 h.",
+    "pediatricDose": "CABP: 12–<18 anos 13,3 mg/kg q8h, máx 667 mg; 3 meses–<12 anos 20 mg/kg q8h, máx 667 mg. Infundir em 2 h.",
+    "renalDose": "Adulto CrCl <50: ajustar. ABSSSI/CABP: 30–<50, 667 mg q12h; 15–<30, 333 mg q12h; <15/HD, 333 mg q24h. ARC >150: 667 mg q6h.",
+    "hepaticDose": "Sem ajuste hepático rotineiro esperado; eliminação é predominantemente renal.",
+    "commonAdverseEffects": [
+      "Náusea",
+      "Diarreia",
+      "Cefaleia",
+      "Elevação de enzimas hepáticas",
+      "Reação infusional"
+    ],
+    "dangerousAdverseEffects": [
+      "Maior mortalidade em uso não aprovado para VABP",
+      "Convulsões/CNS",
+      "Anafilaxia",
+      "C. difficile"
+    ],
+    "adverseEffects": "A bula alerta contra uso em VABP não aprovado devido a maior mortalidade observada; convulsões/CNS também são possíveis.",
+    "contraindications": "Hipersensibilidade grave a ceftobiprole ou cefalosporinas.",
+    "interactions": "Poucas interações metabólicas relevantes; função renal é o principal determinante de exposição.",
+    "monitoring": "CrCl/eGFR, culturas, resposta e sinais neurológicos; em SAB acompanhar foco/endocardite e duração apropriada.",
+    "administration": "IV exclusivamente, cada dose em 2 horas.",
+    "preparation": "Reconstituir e depois diluir; concentrações de infusão dependem de idade conforme bula.",
+    "infusionProtocol": "Infundir em 2 h. Não usar bolus.",
+    "pregnancy": "Dados humanos ainda limitados; usar se benefício superar risco.",
+    "lactation": "Dados limitados; avaliar risco-benefício.",
+    "specialPopulations": "Pediatria aprovada apenas para CABP. VABP não é indicação aprovada. ARC >150 requer q6h em adultos.",
+    "patientEducation": "Explicar que é IV, exige ajuste renal e que não está aprovado para pneumonia associada à ventilação.",
+    "clinicalPearls": "Ceftobiprole é raro entre cefalosporinas por cobrir MRSA via PBP2a; o benefício não elimina a necessidade de distinguir CABP de VABP e ajustar pela função renal.",
+    "guidelineRecommendations": "Usar nas indicações aprovadas e com suscetibilidade apropriada; para infecções AMR fora da bula, seguir diretrizes atuais e avaliação especializada.",
+    "safetyFlags": [
+      "MRSA/PBP2a",
+      "Infusão 2 h",
+      "CrCl <50 ajustar",
+      "ARC >150 q6h",
+      "VABP não aprovado"
+    ],
+    "alerts": [
+      "667 mg q8h ABSSSI/CABP",
+      "SAB q6h dias 1–8",
+      "Pediatria CABP 13,3 ou 20 mg/kg",
+      "HD: 333 mg q24h",
+      "Infusão 2 h"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2bd685df-7dc6-78a6-e063-6294a90a580b",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=2bd685df-7dc6-78a6-e063-6294a90a580b",
+      "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibiotic-three-different-uses",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=ceftobiprole"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2bd685df-7dc6-78a6-e063-6294a90a580b",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=2bd685df-7dc6-78a6-e063-6294a90a580b",
+      "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibiotic-three-different-uses",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=ceftobiprole"
+    ]
   },
   "es": {
-    "name": "Ceftobiprol"
+    "name": "Ceftobiprole medocarilo",
+    "class": "Cefalosporina anti-MRSA de amplio espectro",
+    "pharmacologicClass": "Profármaco IV convertido en ceftobiprole; alta afinidad por PBP2a de MRSA",
+    "mechanism": "Tras conversión a ceftobiprole se une a PBPs, incluida PBP2a de MRSA, e inhibe pared bacteriana.",
+    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Incluye MRSA y varios Gram negativos susceptibles, siempre guiado por AST.",
+    "pharmacokinetics": "Solo IV; rápida conversión del profármaco. Eliminación renal importante y HD elimina fármaco.",
+    "indications": "Adultos: bacteriemia S. aureus incluida endocarditis derecha, ABSSSI y CABP. Pediatría 3 meses–<18 años: CABP.",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
+    ],
+    "presentation": "Polvo liofilizado IV.",
+    "presentations": [
+      "667 mg medocarilo = 500 mg ceftobiprole"
+    ],
+    "dose": "Adulto: ABSSSI/CABP 667 mg IV q8h. SAB 667 mg q6h días 1–8 y q8h desde día 9. Infundir 2 h.",
+    "pediatricDose": "CABP: 12–<18 años 13,3 mg/kg q8h, máx 667 mg; 3 meses–<12 años 20 mg/kg q8h, máx 667 mg. Infusión 2 h.",
+    "renalDose": "Adulto ClCr <50: ajustar. ABSSSI/CABP 30–<50: 667 mg q12h; 15–<30: 333 mg q12h; <15/HD: 333 mg q24h. ARC >150: 667 mg q6h.",
+    "hepaticDose": "Sin ajuste hepático rutinario esperado.",
+    "commonAdverseEffects": [
+      "Náuseas",
+      "Diarrea",
+      "Cefalea",
+      "Elevación de enzimas hepáticas",
+      "Reacción infusional"
+    ],
+    "dangerousAdverseEffects": [
+      "Mayor mortalidad en uso no aprobado para VABP",
+      "Convulsiones/CNS",
+      "Anafilaxia",
+      "C. difficile"
+    ],
+    "adverseEffects": "Ficha alerta contra VABP no aprobado por mayor mortalidad observada; también pueden aparecer reacciones CNS.",
+    "contraindications": "Hipersensibilidad grave a ceftobiprole/cefalosporinas.",
+    "interactions": "Pocas interacciones metabólicas; función renal determina exposición.",
+    "monitoring": "ClCr/eGFR, cultivos, respuesta y síntomas neurológicos.",
+    "administration": "Exclusivamente IV en 2 horas.",
+    "preparation": "Reconstituir y diluir; concentración depende de edad.",
+    "infusionProtocol": "Infundir en 2 h; no bolo.",
+    "pregnancy": "Datos humanos limitados.",
+    "lactation": "Datos limitados.",
+    "specialPopulations": "Pediatría aprobada solo para CABP. VABP no aprobada. ARC >150 requiere q6h adulto.",
+    "patientEducation": "Explicar ajuste renal y que no está aprobado para neumonía asociada a ventilación.",
+    "clinicalPearls": "Cubre MRSA vía PBP2a, pero hay que distinguir CABP de VABP y ajustar rigurosamente por función renal.",
+    "guidelineRecommendations": "Usar en indicaciones aprobadas y con susceptibilidad; para AMR fuera de ficha, seguir guías actuales y evaluación especializada.",
+    "safetyFlags": [
+      "MRSA/PBP2a",
+      "Infusión 2 h",
+      "ClCr <50 ajustar",
+      "ARC >150 q6h",
+      "VABP no aprobada"
+    ],
+    "alerts": [
+      "667 mg q8h ABSSSI/CABP",
+      "SAB q6h días 1–8",
+      "Pediatría CABP 13,3 o 20 mg/kg",
+      "HD 333 mg q24h",
+      "Infusión 2 h"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2bd685df-7dc6-78a6-e063-6294a90a580b",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=2bd685df-7dc6-78a6-e063-6294a90a580b",
+      "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibiotic-three-different-uses",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=ceftobiprole"
+    ],
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2bd685df-7dc6-78a6-e063-6294a90a580b",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=2bd685df-7dc6-78a6-e063-6294a90a580b",
+      "https://www.fda.gov/news-events/press-announcements/fda-approves-new-antibiotic-three-different-uses",
+      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://pubmed.ncbi.nlm.nih.gov/?term=ceftobiprole"
+    ]
   },
   "name": {
-    "pt": "Ceftobiprole",
-    "es": "Ceftobiprol"
+    "pt": "Ceftobiprole medocarila",
+    "es": "Ceftobiprole medocarilo"
   },
   "keywords": [
     "ceftobiprole"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6c4ad52b7b873b7c",
+  "clinicalContentSha256": "6c4ad52b7b873b7ca40f6b0951cd80bf9b4bfc56f4c0d21ead8d00c7218b4d79",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js"

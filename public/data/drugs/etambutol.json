@@ -1,30 +1,17 @@
 {
   "id": "etambutol",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Etambutol",
-    "class": "Antimicobacteriano (antituberculoso)",
-    "commercialNames": {
-      "br": [
-        "Etambutol Genérico",
-        "Miambutol"
-      ],
-      "ar": [
-        "Etambutol Genérico",
-        "Miambutol"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 400 mg",
-      "Formulação combinada no esquema RHZE"
+    "class": "Antimicobacteriano",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "1225 mg VO 1x/dia (15–20 mg/kg/dia)",
-      "pediatrica": "1400 mg VO 1x/dia (15–25 mg/kg/dia)"
-    },
+    "presentation": "Comprimidos orais.",
+    "dose": "Adulto em TB suscetível: 15 mg/kg VO uma vez ao dia em esquema combinado; retratamento histórico rotulado pode usar 25 mg/kg/dia sob supervisão.",
     "doseKg": {
       "standard": "15–20 mg/kg/dia VO (adulto)",
       "maxDose": "1,6 g/dia"
@@ -33,127 +20,76 @@
     "dilution": "Uso exclusivamente oral.",
     "speed": "Não aplicável (uso oral).",
     "commonAdverseEffects": [
-      "Neurite óptica (visão turva, discromatopsia)",
-      "Náuseas",
-      "Artralgias"
+      "Náusea",
+      "Artralgia",
+      "Cefaleia",
+      "Hiperuricemia"
     ],
     "dangerousAdverseEffects": [
-      "Perda visual irreversível por neurite óptica",
-      "Neuropatia periférica",
-      "Hiperuricemia"
+      "Neurite óptica",
+      "Perda de acuidade visual",
+      "Discromatopsia vermelho-verde",
+      "Hepatotoxicidade rara"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Avaliar acuidade visual e percepção de cores antes e mensalmente durante o tratamento.",
-      "Suspender imediatamente se alteração visual — risco de amaurose permanente."
+      "Adulto 15 mg/kg/dia",
+      "Criança WHO 20 mg/kg/dia",
+      "Nunca monoterapia em TB ativa",
+      "Monitorar cores vermelho-verde",
+      "DRC exige ajuste/protocolo"
     ],
-    "ref": "WHO TB Guidelines 2022 / Ministério da Saúde BR / Sanford Guide 2025",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1,6 g/dia",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1,6 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual para tuberculose."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajustar intervalo devido à eliminação renal predominante."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar toxicidade ocular."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "72/72h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "72/72h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Maior risco de neurite óptica."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "3x/semana pós-HD",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "3x/semana pós-HD",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar após hemodiálise e monitorar acuidade visual."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08decdf3-a397-42e7-8ac3-e489c0cc7085",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ],
+    "renalDose": "Insuficiência renal exige redução de exposição, frequentemente por alongamento do intervalo e/ou ajuste guiado por protocolo/níveis. Em DRC grave ou diálise, usar esquema específico de TB.",
+    "pharmacologicClass": "Inibidor de arabinosil-transferases da parede micobacteriana",
+    "mechanism": "Inibe arabinosil-transferases envolvidas na síntese de arabinogalactano da parede de Mycobacterium tuberculosis.",
+    "pharmacodynamics": "Predominantemente bacteriostático nas concentrações usuais; deve ser usado em combinação para evitar seleção rápida de resistência.",
+    "pharmacokinetics": "Boa absorção oral; ampla distribuição, com penetração limitada no SNC sem inflamação meníngea. Eliminação predominantemente renal.",
+    "indications": "Componente de esquemas combinados para tuberculose suscetível e situações selecionadas de micobactérias não tuberculosas.",
+    "presentations": [
+      "100 mg",
+      "400 mg"
+    ],
+    "pediatricDose": "WHO: crianças e adolescentes 0–14 anos geralmente 20 mg/kg/dia, faixa 15–25 mg/kg, em esquema combinado. A bula norte-americana antiga não recomenda <13 anos por dificuldade de monitorar visão.",
+    "hepaticDose": "Sem ajuste numérico rotineiro estabelecido; hepatotoxicidade rara, inclusive fatal, foi relatada. Avaliar função hepática basal/periódica.",
+    "adverseEffects": "Toxicidade ocular é dose e duração dependente e pode ser irreversível se não reconhecida precocemente.",
+    "contraindications": "Neurite óptica conhecida, salvo decisão especializada, e incapacidade de reconhecer/relatar alterações visuais quando risco supera benefício.",
+    "interactions": "Antiácidos contendo alumínio podem reduzir absorção. Revisar outros agentes neuro/oculotóxicos.",
+    "monitoring": "Acuidade visual, discriminação de cores e exame ocular basal e periódico; função renal, hepática e hematológica conforme risco.",
+    "administration": "VO uma vez ao dia; alimento não altera substancialmente a absorção. Nunca usar isoladamente para TB ativa.",
+    "preparation": "Comprimidos prontos para uso; ajustar dose ao peso atualizado.",
+    "infusionProtocol": "Não aplicável; formulação oral.",
+    "pregnancy": "Usado em esquemas de TB quando indicado; decisão deve seguir programa de TB e avaliação materno-fetal.",
+    "lactation": "Pequenas quantidades podem passar ao leite; geralmente compatível em tratamento de TB quando indicado, com seguimento clínico.",
+    "specialPopulations": "DRC aumenta exposição e risco ocular. Crianças pequenas exigem método apropriado de avaliação visual e supervisão especializada.",
+    "patientEducation": "Relatar imediatamente visão borrada, alteração de cores ou perda visual; não interromper o esquema de TB por conta própria.",
+    "clinicalPearls": "O principal marcador de segurança é a visão: perda de acuidade ou discriminação vermelho-verde durante etambutol exige avaliação rápida e revisão do tratamento.",
+    "guidelineRecommendations": "WHO mantém etambutol como componente de esquemas combinados para TB suscetível; dose pediátrica diária recomendada geralmente 20 mg/kg, faixa 15–25 mg/kg.",
+    "safetyFlags": [
+      "Neurite óptica",
+      "Monitorização visual",
+      "Ajuste renal",
+      "TB sempre em combinação",
+      "Dose pediátrica por peso"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08decdf3-a397-42e7-8ac3-e489c0cc7085",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ]
   },
   "es": {
     "name": "Etambutol",
-    "class": "Antimicobacteriano (antituberculoso)",
-    "commercialNames": {
-      "br": [
-        "Etambutol Genérico",
-        "Miambutol"
-      ],
-      "ar": [
-        "Etambutol Genérico",
-        "Miambutol"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 400 mg",
-      "Formulación combinada en esquema RHZE"
+    "class": "Antimicobacteriano",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "1225 mg VO 1 vez/día (15–20 mg/kg/día)",
-      "pediatrica": "1400 mg VO 1 vez/día (15–25 mg/kg/día)"
-    },
+    "presentation": "Comprimidos orales.",
+    "dose": "Adulto en TB susceptible: 15 mg/kg VO una vez al día en combinación; retratamiento histórico rotulado puede usar 25 mg/kg/día bajo supervisión.",
     "doseKg": {
       "standard": "15–20 mg/kg/día VO (adulto)",
       "maxDose": "1,6 g/día"
@@ -162,105 +98,67 @@
     "dilution": "Uso exclusivamente oral.",
     "speed": "No aplicable (uso oral).",
     "commonAdverseEffects": [
-      "Neuritis óptica (visión borrosa, discromatopsia)",
       "Náuseas",
-      "Artralgias"
+      "Artralgia",
+      "Cefalea",
+      "Hiperuricemia"
     ],
     "dangerousAdverseEffects": [
-      "Pérdida visual irreversible por neuritis óptica",
-      "Neuropatía periférica",
-      "Hiperuricemia"
+      "Neuritis óptica",
+      "Pérdida de agudeza visual",
+      "Discromatopsia rojo-verde",
+      "Hepatotoxicidad rara"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Evaluar agudeza visual y percepción de colores antes y mensualmente durante el tratamiento.",
-      "Suspender inmediatamente si hay alteración visual — riesgo de amaurosis permanente."
+      "Adulto 15 mg/kg/día",
+      "Niño WHO 20 mg/kg/día",
+      "Nunca monoterapia TB activa",
+      "Monitorizar rojo-verde",
+      "ERC exige ajuste/protocolo"
     ],
-    "ref": "WHO TB Guidelines 2022 / Ministério da Saúde BR / Sanford Guide 2025",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1,6 g/dia",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "1,6 g/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual para tuberculosis."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Ajustar intervalo debido a la eliminación renal predominante."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar toxicidad ocular."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "15–20 mg/kg",
-          "intervalo": "72/72h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "72/72h",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Mayor riesgo de neuritis óptica."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "3x/semana pós-HD",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "15–25 mg/kg",
-          "intervalo": "3x/semana pós-HD",
-          "doseMaxima": "1,6 g/dose",
-          "unidade": "mg/kg"
-        },
-        "obs": "Administrar después de hemodiálisis y monitorizar agudeza visual."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08decdf3-a397-42e7-8ac3-e489c0cc7085",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ],
+    "renalDose": "Insuficiencia renal exige reducir exposición, con frecuencia alargando intervalo y/o ajuste por protocolo/niveles. En ERC grave o diálisis usar esquema TB específico.",
+    "pharmacologicClass": "Inhibidor de arabinosil-transferasas de pared micobacteriana",
+    "mechanism": "Inhibe arabinosil-transferasas implicadas en síntesis de arabinogalactano de pared de Mycobacterium tuberculosis.",
+    "pharmacodynamics": "Predominantemente bacteriostático a concentraciones usuales; debe usarse en combinación para evitar resistencia.",
+    "pharmacokinetics": "Buena absorción oral; amplia distribución, penetración SNC limitada sin meninges inflamadas. Eliminación principalmente renal.",
+    "indications": "Componente de esquemas combinados para tuberculosis susceptible y situaciones seleccionadas de micobacterias no tuberculosas.",
+    "presentations": [
+      "100 mg",
+      "400 mg"
+    ],
+    "pediatricDose": "WHO: niños/adolescentes 0–14 años generalmente 20 mg/kg/día, rango 15–25 mg/kg, en combinación. La ficha estadounidense antigua no recomienda <13 años por monitorización visual.",
+    "hepaticDose": "Sin ajuste numérico rutinario; se ha comunicado hepatotoxicidad rara incluso fatal. Evaluar función hepática basal/periódica.",
+    "adverseEffects": "Toxicidad ocular depende de dosis/duración y puede ser irreversible si no se reconoce precozmente.",
+    "contraindications": "Neuritis óptica conocida salvo decisión especializada e incapacidad de reconocer/comunicar cambios visuales cuando riesgo supera beneficio.",
+    "interactions": "Antiácidos con aluminio pueden reducir absorción. Revisar otros agentes neuro/oculotóxicos.",
+    "monitoring": "Agudeza visual, discriminación de colores y examen ocular basal/periódico; función renal/hepática/hematológica según riesgo.",
+    "administration": "VO una vez al día; alimentos no alteran sustancialmente absorción. Nunca usar solo para TB activa.",
+    "preparation": "Comprimidos listos; ajustar dosis al peso actualizado.",
+    "infusionProtocol": "No aplicable; formulación oral.",
+    "pregnancy": "Usado en esquemas TB cuando está indicado; seguir programa TB y valoración materno-fetal.",
+    "lactation": "Pequeñas cantidades pueden pasar a leche; generalmente compatible en tratamiento TB cuando corresponde.",
+    "specialPopulations": "ERC aumenta exposición y riesgo ocular. Niños pequeños requieren evaluación visual apropiada y supervisión especializada.",
+    "patientEducation": "Informar de inmediato visión borrosa, cambios de color o pérdida visual; no suspender esquema TB por cuenta propia.",
+    "clinicalPearls": "El principal marcador de seguridad es la visión: pérdida de agudeza o discriminación rojo-verde exige evaluación rápida.",
+    "guidelineRecommendations": "WHO mantiene etambutol en esquemas combinados para TB susceptible; dosis pediátrica diaria generalmente 20 mg/kg, rango 15–25 mg/kg.",
+    "safetyFlags": [
+      "Neuritis óptica",
+      "Monitorización visual",
+      "Ajuste renal",
+      "TB siempre combinada",
+      "Dosis pediátrica por peso"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08decdf3-a397-42e7-8ac3-e489c0cc7085",
+      "https://www.who.int/publications/i/item/9789240107243",
+      "https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ]
   },
   "name": {
     "pt": "Etambutol",
@@ -272,8 +170,8 @@
     "miambutol",
     "antimicobacteriano (antituberculoso)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-498fff204c135c65",
+  "clinicalContentSha256": "498fff204c135c65be0a5cfa66e32fec095850e080daef212492a73e722d15c9",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

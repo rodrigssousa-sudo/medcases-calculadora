@@ -1,35 +1,17 @@
 {
   "id": "levofloxacino",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Levofloxacino",
-    "class": "Fluoroquinolona respiratória",
-    "commercialNames": {
-      "br": [
-        "Tavanic",
-        "Levoxin",
-        "Levofloxacino EMS"
-      ],
-      "ar": [
-        "Tavanic",
-        "Levofloxacino Bagó",
-        "Levofloxacino Richet"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 250 mg",
-      "Comprimidos 500 mg",
-      "Comprimidos 750 mg",
-      "Bolsa EV 500 mg/100 mL"
+    "class": "Antibiótico fluoroquinolona",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "pneumonia": "750 mg VO/EV 1x/dia",
-      "sinusite": "500 mg VO 1x/dia",
-      "pielonefrite": "750 mg VO/EV 1x/dia"
-    },
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "dose": "CrCl >=50: 250, 500 ou 750 mg VO/IV q24h conforme foco; CAP 500 mg q24h 7–14 d ou 750 mg q24h 5 d conforme rótulo.",
     "doseKg": {
       "standard": "Não utilizada rotineiramente em adultos."
     },
@@ -37,133 +19,38 @@
     "dilution": "Bolsa pronta para uso.",
     "speed": "Infundir em 60–90 minutos.",
     "commonAdverseEffects": [
-      "Náuseas",
+      "Náusea",
       "Diarreia",
-      "Insônia",
+      "Dor abdominal",
       "Cefaleia"
     ],
     "dangerousAdverseEffects": [
       "Ruptura de tendão",
-      "QT prolongado",
-      "Hipoglicemia",
-      "Dissecção de aorta",
-      "Convulsões"
+      "Neuropatia potencialmente irreversível",
+      "Efeitos SNC/convulsões",
+      "Aneurisma/dissecção de aorta",
+      "Torsades/QT"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Evitar uso concomitante com antiácidos.",
-      "Suspender se ocorrer dor tendínea."
+      "Tendinite/ruptura de tendão",
+      "Neuropatia periférica",
+      "Efeitos SNC",
+      "Miastenia gravis",
+      "Aneurisma/dissecção de aorta",
+      "Disglicemia",
+      "QT prolongado",
+      "Hepatotoxicidade"
     ],
-    "ref": "Sanford Guide / Goodman & Gilman / FDA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "500–750 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500–750 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dose habitual conforme infecção."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Pode requerer redução conforme indicação clínica."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250–500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg/kg"
-        },
-        "obs": "Intervalo prolongado para evitar acúmulo."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "250 mg",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "250 mg",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "5–10 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "250 mg",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar QT prolongado, neurotoxicidade e tendinopatia."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250–500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "5–10 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não requer dose suplementar pós-hemodiálise."
-      }
-    },
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcad1dad-53aa-43dd-90f3-cc17cc9598d5",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=4f40d5fa-ebcc-516c-e054-00144ff8d46c&type=pdf",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f944b63-9b60-437a-ba57-d14d7976bc32",
+      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a61c1d31-d27e-42f9-a221-cdaef76ed91b&type=display"
+    ],
+    "renalDose": "CrCl <50 exige redução/alongamento conforme dose-base; HD/CAPD não requerem suplemento pós-diálise.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "AUC/MIC ≥ 125 (parâmetro PK-PD concentração-dependente). Dose única diária maximiza eficácia por concentração-dependência.",
@@ -197,34 +84,53 @@
         "Hipocalemia ou hipomagnesemia não corrigidas",
         "Bradiarritmia clínica significativa"
       ]
-    }
+    },
+    "pharmacologicClass": "Fluoroquinolona sistêmica",
+    "mechanism": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacodynamics": "Bactericida concentração-dependente; AUC/MIC e Cmax/MIC correlacionam-se com eficácia.",
+    "pharmacokinetics": "Alta biodisponibilidade oral e ampla penetração tecidual; eliminação renal varia por agente.",
+    "indications": "CAP, pneumonia nosocomial, cUTI/pyelonefrite, prostatite e outras infecções por suscetíveis.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "750 mg conforme agente"
+    ],
+    "pediatricDose": "Uso pediátrico rotulado restrito a antraz inalatório pós-exposição e peste em pacientes ≥6 meses; não extrapolar automaticamente para infecções pediátricas comuns. Peso <50 kg: 8 mg/kg por dose VO/IV a cada 12 h, máximo 250 mg por dose. Peso ≥50 kg: 500 mg VO/IV a cada 24 h. Antraz inalatório pós-exposição: 60 dias; iniciar o mais cedo possível após exposição suspeita ou confirmada. Peste: 10–14 dias. Para comprimidos, a formulação disponível pode limitar o uso em crianças <30 kg; considerar formulação alternativa quando necessário. A segurança pediátrica por mais de 14 dias não foi estabelecida; eventos musculoesqueléticos são mais frequentes que em controles, portanto tratamento prolongado deve ser reservado a situações em que o benefício supere o risco.",
+    "hepaticDose": "Sem ajuste hepático rotineiro específico.",
+    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+    "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes e interações específicas.",
+    "monitoring": "Sintomas tendíneos/neurológicos, glicemia, ECG/eletrólitos quando QT relevante e função renal.",
+    "administration": "VO com ou sem alimento; separar de antiácidos/cátions. IV conforme formulação.",
+    "preparation": "Comprimidos sem preparo; IV conforme fabricante.",
+    "infusionProtocol": "Quando IV, respeitar tempo mínimo de infusão do produto.",
+    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
+    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
+    "specialPopulations": "Idosos, transplantados, usuários de corticoide e pacientes com aneurisma/aortopatia têm maior risco.",
+    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
+    "clinicalPearls": "Fluoroquinolona respiratória com boa biodisponibilidade e penetração urinária; IDSA 2026 a usa em cUTI ESBL/CRE apenas se AST suscetível.",
+    "guidelineRecommendations": "Usar apenas quando benefício supera os riscos da classe e AST/epidemiologia justificam.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interações"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcad1dad-53aa-43dd-90f3-cc17cc9598d5",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=4f40d5fa-ebcc-516c-e054-00144ff8d46c&type=pdf",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f944b63-9b60-437a-ba57-d14d7976bc32",
+      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a61c1d31-d27e-42f9-a221-cdaef76ed91b&type=display"
+    ]
   },
   "es": {
     "name": "Levofloxacino",
-    "class": "Fluoroquinolona respiratoria",
-    "commercialNames": {
-      "br": [
-        "Tavanic",
-        "Levoxin",
-        "Levofloxacino EMS"
-      ],
-      "ar": [
-        "Tavanic",
-        "Levofloxacino Bagó",
-        "Levofloxacino Richet"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 250 mg",
-      "Comprimidos 500 mg",
-      "Comprimidos 750 mg",
-      "Bolsa EV 500 mg/100 mL"
+    "class": "Antibiótico fluoroquinolona",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "pneumonia": "750 mg VO/EV 1 vez/día",
-      "sinusite": "500 mg VO 1 vez/día",
-      "pielonefrite": "750 mg VO/EV 1 vez/día"
-    },
+    "presentation": "Comprimidos orales; existe formulación IV.",
+    "dose": "ClCr >=50: 250, 500 o 750 mg VO/IV q24h según foco; CAP 500 mg q24h 7–14 d o 750 mg q24h 5 d según ficha.",
     "doseKg": {
       "standard": "No utilizada rutinariamente en adultos."
     },
@@ -234,131 +140,36 @@
     "commonAdverseEffects": [
       "Náuseas",
       "Diarrea",
-      "Insomnio",
+      "Dolor abdominal",
       "Cefalea"
     ],
     "dangerousAdverseEffects": [
       "Rotura tendinosa",
-      "QT prolongado",
-      "Hipoglucemia",
-      "Disección aórtica",
-      "Convulsiones"
+      "Neuropatía potencialmente irreversible",
+      "Efectos SNC/convulsiones",
+      "Aneurisma/disección aórtica",
+      "Torsades/QT"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Evitar uso concomitante con antiácidos.",
-      "Suspender si aparece dolor tendinoso."
+      "Tendinitis/rotura tendinosa",
+      "Neuropatía periférica",
+      "Efectos SNC",
+      "Miastenia gravis",
+      "Aneurisma/disección aórtica",
+      "Disglucemia",
+      "QT prolongado",
+      "Hepatotoxicidad"
     ],
-    "ref": "Sanford Guide / Goodman & Gilman / FDA",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": true,
-      "fgMaior50": {
-        "vo": {
-          "dose": "500–750 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500–750 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "12/12h",
-          "doseMaxima": "750 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Dosis habitual según infección."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "500 mg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "24/24h",
-          "doseMaxima": "500 mg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Puede requerir reducción según indicación clínica."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250–500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "10 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg/kg"
-        },
-        "obs": "Intervalo prolongado para evitar acumulación."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "250 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "250 mg",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "250 mg",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "5–10 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "250 mg",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar QT prolongado, neurotoxicidad y tendinopatia."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "250–500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "250–500 mg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg"
-        },
-        "pediatrica": {
-          "dose": "5–10 mg/kg",
-          "intervalo": "48/48h",
-          "doseMaxima": "500 mg",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere dosis suplementaria post-hemodiálisis."
-      }
-    },
+    "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcad1dad-53aa-43dd-90f3-cc17cc9598d5",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=4f40d5fa-ebcc-516c-e054-00144ff8d46c&type=pdf",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f944b63-9b60-437a-ba57-d14d7976bc32",
+      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a61c1d31-d27e-42f9-a221-cdaef76ed91b&type=display"
+    ],
+    "renalDose": "ClCr <50 requiere reducción/intervalo según dosis-base; HD/CAPD no requieren suplemento posdiálisis.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "AUC/MIC ≥ 125 (parámetro PK-PD concentración-dependiente). Dosis única diaria maximiza eficacia por concentración-dependencia.",
@@ -392,7 +203,44 @@
         "Hipocalemia o hipomagnesemia no corregidas",
         "Bradiarritmia clínica significativa"
       ]
-    }
+    },
+    "pharmacologicClass": "Fluoroquinolona sistémica",
+    "mechanism": "Inhibe DNA girasa y topoisomerasa IV, bloqueando replicación/reparación del DNA bacteriano.",
+    "pharmacodynamics": "Bactericida dependiente de concentración; AUC/MIC y Cmax/MIC se correlacionan con eficacia.",
+    "pharmacokinetics": "Alta biodisponibilidad oral y amplia penetración tisular; eliminación renal varía según agente.",
+    "indications": "CAP, neumonía nosocomial, cUTI/pielonefritis, prostatitis y otras infecciones por susceptibles.",
+    "presentations": [
+      "250 mg",
+      "500 mg",
+      "750 mg según agente"
+    ],
+    "pediatricDose": "Uso pediátrico autorizado restringido a ántrax por inhalación posexposición y peste en pacientes ≥6 meses; no extrapolar automáticamente a infecciones pediátricas comunes. Peso <50 kg: 8 mg/kg por dosis VO/IV cada 12 h, máximo 250 mg por dosis. Peso ≥50 kg: 500 mg VO/IV cada 24 h. Ántrax por inhalación posexposición: 60 días; iniciar lo antes posible después de una exposición sospechada o confirmada. Peste: 10–14 días. Para comprimidos, la formulación disponible puede limitar el uso en niños <30 kg; considerar una formulación alternativa cuando sea necesario. La seguridad pediátrica durante más de 14 días no ha sido establecida; los eventos musculoesqueléticos son más frecuentes que en los controles, por lo que el tratamiento prolongado debe reservarse para situaciones en las que el beneficio supere el riesgo.",
+    "hepaticDose": "Sin ajuste hepático rutinario específico.",
+    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
+    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+    "interactions": "Cationes reducen absorción; revisar antiarrítmicos/QT, fármacos glucémicos e interacciones específicas.",
+    "monitoring": "Síntomas tendinosos/neurológicos, glucemia, ECG/electrolitos cuando QT sea relevante y función renal.",
+    "administration": "VO con o sin alimentos; separar de antiácidos/cationes. IV según formulación.",
+    "preparation": "Comprimidos sin preparación; IV según fabricante.",
+    "infusionProtocol": "Cuando IV, respetar tiempo mínimo de infusión.",
+    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
+    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
+    "specialPopulations": "Ancianos, trasplantados, usuarios de corticoide y pacientes con aneurisma/aortopatía tienen mayor riesgo.",
+    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
+    "clinicalPearls": "Fluoroquinolona respiratoria con alta biodisponibilidad y penetración urinaria; IDSA 2026 la usa en cUTI ESBL/CRE solo si AST susceptible.",
+    "guidelineRecommendations": "Usar solo cuando beneficio supere riesgos de clase y AST/epidemiología lo justifiquen.",
+    "safetyFlags": [
+      "Stewardship antimicrobiano",
+      "Revisar toxicidades e interacciones"
+    ],
+    "references": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcad1dad-53aa-43dd-90f3-cc17cc9598d5",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
+      "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=4f40d5fa-ebcc-516c-e054-00144ff8d46c&type=pdf",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f944b63-9b60-437a-ba57-d14d7976bc32",
+      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a61c1d31-d27e-42f9-a221-cdaef76ed91b&type=display"
+    ]
   },
   "name": {
     "pt": "Levofloxacino",
@@ -407,8 +255,8 @@
     "levofloxacino richet",
     "fluoroquinolona respiratoria"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-ccb267aa70c410fd",
+  "clinicalContentSha256": "ccb267aa70c410fd7fe51f129d9f8f5e8077f7ad72dead5d3d1ed531b74c4dba",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"

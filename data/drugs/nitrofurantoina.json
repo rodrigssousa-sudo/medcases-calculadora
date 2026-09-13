@@ -1,32 +1,17 @@
 {
   "id": "nitrofurantoina",
   "category": "atb",
-  "icon": "💊",
+  "icon": "",
   "color": null,
   "colorTxt": null,
   "pt": {
     "name": "Nitrofurantoína",
-    "class": "Nitrofurano (uso exclusivo urinário)",
-    "commercialNames": {
-      "br": [
-        "Macrobid",
-        "Macrodantina",
-        "Nitrofurantoína EMS"
-      ],
-      "ar": [
-        "Macrodantina",
-        "Nitrofurantoína Richet"
-      ]
-    },
-    "presentation": [
-      "Cápsulas 100 mg (macrocristalina/macrobid)",
-      "Suspensão oral 25 mg/5 mL"
+    "class": "Antibacteriano urinário nitrofurano",
+    "commercialNames": [
+      "Genérico; marcas variam por país"
     ],
-    "dose": {
-      "adulto": "100 mg VO 12/12h (macrocristalina)",
-      "profilaxia": "50–100 mg VO 24/24h ao deitar",
-      "pediatrica": "100 mg VO 6/6h"
-    },
+    "presentation": "Cápsulas monoidratadas/macrocristais e macrocristais.",
+    "dose": "Cistite não complicada: 100 mg VO q12h; duração depende de formulação/diretriz, frequentemente 5 dias em diretrizes modernas. Seguir bula local.",
     "doseKg": {
       "standard": "1,25–1,75 mg/kg por dose 6/6h",
       "profilaxia": "1–2 mg/kg/dia ao deitar",
@@ -36,101 +21,77 @@
     "dilution": "Uso oral exclusivo. Tomar com alimentos para melhorar absorção e reduzir efeitos GI.",
     "speed": "Administração oral com alimento.",
     "commonAdverseEffects": [
-      "Náuseas",
-      "Vômitos",
-      "Urina escurecida (marrom-amarelada)"
+      "Náusea",
+      "Cefaleia",
+      "Urina escura",
+      "Dor abdominal"
     ],
     "dangerousAdverseEffects": [
-      "Pneumonite intersticial (uso crônico)",
-      "Fibrose pulmonar (uso prolongado)",
+      "Pneumonite aguda",
+      "Fibrose pulmonar em uso prolongado",
+      "Hepatite/necrose hepática",
       "Neuropatia periférica",
-      "Hepatotoxicidade"
+      "Anemia hemolítica"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Uso restrito a ITU baixa não complicada. Não cobre Pseudomonas, Klebsiella nem Proteus resistente.",
-      "Contraindicada se ClCr < 30 mL/min."
+      "NÃO usar para pielonefrite",
+      "Pulmonar aguda/crônica",
+      "CrCl: seguir bula/protocolo",
+      "Contraindicada no termo gestacional",
+      "Neonato <1 mês"
     ],
-    "ref": "Sanford Guide 2025 / AUA / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Contraindicada quando ClCr < 30 mL/min.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "1,25–1,75 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "7 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Uso exclusivo para infecções urinárias baixas."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "1,25–1,75 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "7 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Pode ser utilizada com cautela."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Contraindicada por baixa concentração urinária e maior toxicidade."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Contraindicada."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Contraindicada em pacientes dialíticos."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10e2503d-a250-996f-e063-6294a90abd61",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/uncomplicated-cystitis-and-pyelonephritis-uti"
+    ],
+    "renalDose": "Bula norte-americana contraindica anúria, oligúria ou comprometimento renal significativo, incluindo CrCl <60 mL/min. Protocolos modernos podem usar limiar diferente; seguir bula/diretriz institucional vigente.",
+    "pharmacologicClass": "Nitrofurano de ação predominantemente urinária",
+    "mechanism": "Após redução por flavoproteínas bacterianas, gera intermediários reativos que lesionam DNA, ribossomos e outras macromoléculas.",
+    "pharmacodynamics": "Atividade bactericida/concentração-dependente no trato urinário; concentrações sistêmicas e no parênquima renal são inadequadas para pielonefrite.",
+    "pharmacokinetics": "Boa absorção oral da formulação monoidratada/macrocristais; rápida eliminação renal e altas concentrações urinárias. Exposição sistêmica aumenta com disfunção renal.",
+    "indications": "Cistite aguda não complicada por uropatógenos suscetíveis. Não usar para pielonefrite, abscesso perinéfrico, prostatite ou bacteremia.",
+    "presentations": [
+      "100 mg monoidratada/macrocristais",
+      "50 mg e 100 mg macrocristais"
+    ],
+    "pediatricDose": "A dose depende da formulação e idade. A bula norte-americana de monoidratada/macrocristais não estabelece segurança/eficácia abaixo de 12 anos; não extrapolar a dose adulta.",
+    "hepaticDose": "Sem ajuste posológico rotineiro definido; contraindicar se houver história de icterícia colestática ou disfunção hepática associada previamente à nitrofurantoína.",
+    "adverseEffects": "Reações pulmonares agudas, subagudas ou crônicas podem ocorrer; hepatotoxicidade e neuropatia podem ser graves e exigir suspensão imediata.",
+    "contraindications": "Anúria/oligúria ou comprometimento renal significativo conforme bula; termo gestacional 38–42 semanas/trabalho de parto; neonato <1 mês; hepatotoxicidade prévia por nitrofurantoína.",
+    "interactions": "Antiácidos com magnésio podem reduzir absorção; probenecida/sulfinpirazona podem reduzir secreção renal e aumentar toxicidade.",
+    "monitoring": "Função renal; sintomas respiratórios; enzimas hepáticas em uso prolongado; sinais de neuropatia e hemólise em pacientes de risco.",
+    "administration": "VO com alimento para melhorar absorção/tolerância. Engolir a cápsula inteira e completar o esquema.",
+    "preparation": "Cápsula não exige preparo. Verificar formulação porque macrocristais e monoidratada/macrocristais têm esquemas diferentes.",
+    "infusionProtocol": "Não aplicável; não existe formulação IV rotineira deste registro.",
+    "pregnancy": "Contraindicada no termo, 38–42 semanas, durante trabalho de parto ou quando o parto é iminente pelo risco de hemólise neonatal. Fora desse período, avaliar indicação obstétrica.",
+    "lactation": "Evitar em lactentes muito jovens ou com deficiência de G6PD quando o risco de hemólise for relevante; avaliar bula e idade do lactente.",
+    "specialPopulations": "Uso por seis meses ou mais aumenta risco de pneumonite intersticial/fibrose; deficiência de G6PD aumenta risco de hemólise.",
+    "patientEducation": "Procurar atendimento se dispneia, tosse, febre, icterícia, parestesias ou fraqueza. Informar gravidez próxima ao termo.",
+    "clinicalPearls": "É fármaco de bexiga, não de rim: excelente concentração urinária para cistite, mas não alcança tecido renal adequado para pielonefrite ou bacteremia.",
+    "guidelineRecommendations": "IDSA favorece nitrofurantoína em cistite não complicada por ESBL-E quando suscetível. Não usar para pielonefrite/cUTI sistêmica; respeitar função renal e bula local.",
+    "safetyFlags": [
+      "Cistite baixa apenas",
+      "Toxicidade pulmonar",
+      "Hepatotoxicidade",
+      "Neuropatia",
+      "Hemólise/G6PD"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10e2503d-a250-996f-e063-6294a90abd61",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/uncomplicated-cystitis-and-pyelonephritis-uti"
+    ]
   },
   "es": {
     "name": "Nitrofurantoína",
-    "class": "Nitrofurano (uso exclusivo urinario)",
-    "commercialNames": {
-      "br": [
-        "Macrobid",
-        "Macrodantina",
-        "Nitrofurantoína EMS"
-      ],
-      "ar": [
-        "Macrodantina",
-        "Nitrofurantoína Richet"
-      ]
-    },
-    "presentation": [
-      "Cápsulas 100 mg (macrocristalina/macrobid)",
-      "Suspensión oral 25 mg/5 mL"
+    "class": "Antibacteriano urinario nitrofurano",
+    "commercialNames": [
+      "Genérico; las marcas varían según el país"
     ],
-    "dose": {
-      "adulto": "100 mg VO cada 12h (macrocristalina)",
-      "profilaxia": "50–100 mg VO cada 24h al acostarse",
-      "pediatrica": "100 mg VO cada 6h"
-    },
+    "presentation": "Cápsulas monohidrato/macrocristales y macrocristales.",
+    "dose": "Cistitis no complicada: 100 mg VO q12h; duración depende de formulación/guía, frecuentemente 5 días en guías modernas. Seguir ficha local.",
     "doseKg": {
       "standard": "1,25–1,75 mg/kg por dosis cada 6h",
       "profilaxia": "1–2 mg/kg/día al acostarse",
@@ -141,76 +102,67 @@
     "speed": "Administración oral con alimento.",
     "commonAdverseEffects": [
       "Náuseas",
-      "Vómitos",
-      "Orina oscurecida (marrón-amarillenta)"
+      "Cefalea",
+      "Orina oscura",
+      "Dolor abdominal"
     ],
     "dangerousAdverseEffects": [
-      "Pneumonitis intersticial (uso crónico)",
-      "Fibrosis pulmonar (uso prolongado)",
+      "Neumonitis aguda",
+      "Fibrosis pulmonar en uso prolongado",
+      "Hepatitis/necrosis hepática",
       "Neuropatía periférica",
-      "Hepatotoxicidad"
+      "Anemia hemolítica"
     ],
     "risksByPatient": [],
     "alerts": [
-      "Uso restringido a ITU baja no complicada. No cubre Pseudomonas, Klebsiella ni Proteus resistente.",
-      "Contraindicada si ClCr < 30 mL/min."
+      "NO usar para pielonefritis",
+      "Pulmonar aguda/crónica",
+      "ClCr: seguir ficha/protocolo",
+      "Contraindicada al término",
+      "Neonato <1 mes"
     ],
-    "ref": "Sanford Guide 2025 / AUA / Goodman & Gilman",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Contraindicada cuando ClCr < 30 mL/min.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "1,25–1,75 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "7 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Uso exclusivo para infecciones urinarias bajas."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "100 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "1,25–1,75 mg/kg",
-          "intervalo": "6/6h",
-          "doseMaxima": "7 mg/kg/dia",
-          "unidade": "mg/kg"
-        },
-        "obs": "Puede utilizarse con precaución."
-      },
-      "fg10a30": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Contraindicada por baja concentración urinaria y mayor toxicidad."
-      },
-      "fgMenor10": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Contraindicada."
-      },
-      "hemodialise": {
-        "vo": null,
-        "ev": null,
-        "pediatrica": null,
-        "obs": "Contraindicada en pacientes dializados."
-      }
-    }
+    "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10e2503d-a250-996f-e063-6294a90abd61",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/uncomplicated-cystitis-and-pyelonephritis-uti"
+    ],
+    "renalDose": "La ficha estadounidense contraindica anuria, oliguria o deterioro renal significativo, incluido ClCr <60 mL/min. Protocolos modernos pueden usar otro umbral; seguir ficha/guía institucional.",
+    "pharmacologicClass": "Nitrofurano de acción predominantemente urinaria",
+    "mechanism": "Tras reducción por flavoproteínas bacterianas genera intermediarios reactivos que lesionan DNA, ribosomas y otras macromoléculas.",
+    "pharmacodynamics": "Actividad bactericida/concentración-dependiente en orina; concentraciones sistémicas y renales parenquimatosas son insuficientes para pielonefritis.",
+    "pharmacokinetics": "Buena absorción oral de monohidrato/macrocristales; eliminación renal rápida y altas concentraciones urinarias. La exposición aumenta con disfunción renal.",
+    "indications": "Cistitis aguda no complicada por uropatógenos susceptibles. No usar para pielonefritis, absceso perinéfrico, prostatitis o bacteriemia.",
+    "presentations": [
+      "100 mg monohidrato/macrocristales",
+      "50 mg y 100 mg macrocristales"
+    ],
+    "pediatricDose": "La dosis depende de formulación y edad. La ficha estadounidense de monohidrato/macrocristales no establece seguridad/eficacia <12 años; no extrapolar dosis adulta.",
+    "hepaticDose": "Sin ajuste rutinario definido; contraindicada si existe antecedente de ictericia colestásica o disfunción hepática previa por nitrofurantoína.",
+    "adverseEffects": "Pueden ocurrir reacciones pulmonares agudas, subagudas o crónicas; hepatotoxicidad y neuropatía pueden ser graves y requieren suspensión.",
+    "contraindications": "Anuria/oliguria o deterioro renal significativo según ficha; término 38–42 semanas/parto; neonato <1 mes; hepatotoxicidad previa por nitrofurantoína.",
+    "interactions": "Antiácidos con magnesio pueden reducir absorción; probenecid/sulfinpirazona pueden disminuir secreción renal y aumentar toxicidad.",
+    "monitoring": "Función renal; síntomas respiratorios; pruebas hepáticas en uso prolongado; neuropatía y hemólisis en pacientes de riesgo.",
+    "administration": "VO con alimentos para mejorar absorción/tolerancia. Tragar cápsula entera y completar el esquema.",
+    "preparation": "La cápsula no requiere preparación. Verificar formulación porque macrocristales y monohidrato/macrocristales usan esquemas distintos.",
+    "infusionProtocol": "No aplicable; no existe formulación IV rutinaria de este registro.",
+    "pregnancy": "Contraindicada al término, 38–42 semanas, durante trabajo de parto o parto inminente por riesgo de hemólisis neonatal. Fuera de ese período valorar indicación obstétrica.",
+    "lactation": "Evitar en lactantes muy pequeños o con déficit de G6PD cuando el riesgo de hemólisis sea relevante; valorar ficha y edad.",
+    "specialPopulations": "Uso durante seis meses o más aumenta riesgo de neumonitis intersticial/fibrosis; déficit de G6PD aumenta riesgo de hemólisis.",
+    "patientEducation": "Consultar ante disnea, tos, fiebre, ictericia, parestesias o debilidad. Informar embarazo cercano al término.",
+    "clinicalPearls": "Es un fármaco de vejiga, no de riñón: excelente concentración urinaria para cistitis, pero no alcanza tejido renal adecuado para pielonefritis o bacteriemia.",
+    "guidelineRecommendations": "IDSA favorece nitrofurantoína en cistitis no complicada por ESBL-E si es susceptible. No usar para pielonefritis/cUTI sistémica; respetar función renal y ficha local.",
+    "safetyFlags": [
+      "Solo cistitis baja",
+      "Toxicidad pulmonar",
+      "Hepatotoxicidad",
+      "Neuropatía",
+      "Hemólisis/G6PD"
+    ],
+    "references": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10e2503d-a250-996f-e063-6294a90abd61",
+      "https://www.idsociety.org/practice-guideline/amr-guidance/",
+      "https://www.idsociety.org/practice-guideline/uncomplicated-cystitis-and-pyelonephritis-uti"
+    ]
   },
   "name": {
     "pt": "Nitrofurantoína",
@@ -225,8 +177,8 @@
     "nitrofurantoina richet",
     "nitrofurano (uso exclusivo urinario)"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-8bd4419151c9028c",
+  "clinicalContentSha256": "8bd4419151c9028c7de7aad108eadfaca274267f7be1e107f04be2b0321d0813",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js"
