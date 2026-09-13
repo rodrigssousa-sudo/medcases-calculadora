@@ -68733,5 +68733,396 @@ html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21
 }
 </style>
 
+
+<!-- MEDCASES_GLOBAL_DOSE_ENGINE_STANDARD_FALLBACK_AND_PEDIATRIC_REAL_CALC_V1_B_R0 -->
+<style id="mc-global-dose-r8-style">
+#mc-drug-detail-page-v21 .mcd-result[data-mc-global-dose-r8="active"] .mcd-result-text{
+  white-space:normal!important;
+}
+#mc-drug-detail-page-v21 .mcd-result-text .mcd-r8-meta{
+  font-size:11px;line-height:1.35;opacity:.78;margin-bottom:6px;
+}
+#mc-drug-detail-page-v21 .mcd-result-text .mcd-r8-dose{
+  font-size:14px;line-height:1.45;margin:3px 0;
+}
+#mc-drug-detail-page-v21 .mcd-result-text .mcd-r8-ref{
+  font-size:11.5px;line-height:1.45;margin-top:5px;opacity:.88;
+}
+#mc-drug-detail-page-v21 .mcd-result-text .mcd-r8-row{
+  font-size:11.5px;line-height:1.45;margin:3px 0;
+}
+#mc-drug-detail-page-v21 .mcd-result-text .mcd-r8-row strong{
+  font-weight:700;
+}
+</style>
+<script>
+(()=>{
+'use strict';
+if(window.__MC_GLOBAL_DOSE_R8__)return;
+window.__MC_GLOBAL_DOSE_R8__=true;
+
+const BUILD='MEDCASES_GLOBAL_DOSE_ENGINE_STANDARD_FALLBACK_AND_PEDIATRIC_REAL_CALC_V1_B_R0';
+const PAGE_ID='mc-drug-detail-page-v21';
+const cache=new Map();
+
+const norm=v=>String(v??'')
+  .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+  .toLowerCase().replace(/\s+/g,' ').trim();
+
+const finite=v=>Number.isFinite(Number(v));
+const number=v=>{
+  const n=Number(String(v??'').replace(',','.'));
+  return Number.isFinite(n)?n:null;
+};
+const fmt=(v,l,max=2)=>{
+  if(!Number.isFinite(v))return '';
+  return v.toLocaleString(l==='es'?'es-AR':'pt-BR',{
+    maximumFractionDigits:max,
+    minimumFractionDigits:0
+  });
+};
+const esc=v=>String(v??'')
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+const nonempty=v=>{
+  if(v==null)return false;
+  if(typeof v==='string')return !!v.trim() && v.trim()!=='—';
+  if(Array.isArray(v))return v.some(nonempty);
+  if(typeof v==='object')return Object.values(v).some(nonempty);
+  return true;
+};
+
+const lang=page=>{
+  const raw=String(
+    page?.dataset?.mcLang ||
+    document.documentElement?.lang ||
+    document.body?.dataset?.currentLang ||
+    window.currentLang || 'pt'
+  ).toLowerCase();
+  return raw.startsWith('es')?'es':'pt';
+};
+
+const parts=()=>{
+  const page=document.getElementById(PAGE_ID);
+  if(!page)return null;
+  return {
+    page,
+    age:page.querySelector('.mcd-patient .mcd-field:nth-child(1) input'),
+    weight:page.querySelector('.mcd-patient .mcd-field:nth-child(2) input'),
+    result:page.querySelector('.mcd-result'),
+    out:page.querySelector('.mcd-result-text'),
+    label:page.querySelector('.mcd-result .mcd-lab')
+  };
+};
+
+const flattenRows=(v,prefix='',out=[])=>{
+  if(v==null)return out;
+  if(typeof v==='string'||typeof v==='number'){
+    const text=String(v).trim();
+    if(text && text!=='—')out.push({label:prefix,text});
+    return out;
+  }
+  if(Array.isArray(v)){
+    v.forEach((x,i)=>flattenRows(x,prefix,out));
+    return out;
+  }
+  if(typeof v==='object'){
+    Object.entries(v).forEach(([k,x])=>{
+      const label=prefix?`${prefix} — ${k}`:k;
+      flattenRows(x,label,out);
+    });
+  }
+  return out;
+};
+
+const adultValue=loc=>{
+  const dose=loc?.dose;
+  if(!nonempty(dose))return null;
+  if(typeof dose==='string'||Array.isArray(dose))return dose;
+  if(typeof dose!=='object')return dose;
+
+  const entries=Object.entries(dose).filter(([k,v])=>
+    nonempty(v) && !/pediatr|crian|niñ|child/i.test(norm(k))
+  );
+  if(!entries.length)return null;
+
+  /* MEDCASES_GLOBAL_DOSE_ENGINE_R8_R2_ADULT_NONPEDIATRIC_INDICATIONS_FIX
+     Adult fallback preserves ALL non-pediatric indication rows.
+     An explicit "adult/adulto" key must not suppress other valid adult/general indications. */
+  return Object.fromEntries(entries);
+};
+
+const keyAgeRange=key=>{
+  const raw=norm(key).replace(/[–—]/g,'-');
+  if(!raw)return null;
+
+  const monthRange=raw.match(/(\d+(?:[.,]\d+)?)\s*(?:-|a|ate|hasta)\s*(\d+(?:[.,]\d+)?)\s*mes/);
+  if(monthRange){
+    return {min:Number(monthRange[1].replace(',','.'))/12,
+            max:Number(monthRange[2].replace(',','.'))/12};
+  }
+
+  const mixed=raw.match(/(\d+(?:[.,]\d+)?)\s*mes(?:es)?\s*(?:-|a|ate|hasta)\s*(\d+(?:[.,]\d+)?)\s*(?:ano|anos|año|años|year)/);
+  if(mixed){
+    return {min:Number(mixed[1].replace(',','.'))/12,
+            max:Number(mixed[2].replace(',','.'))};
+  }
+
+  const yearRange=raw.match(/(\d+(?:[.,]\d+)?)\s*(?:-|a|ate|hasta)\s*(\d+(?:[.,]\d+)?)\s*(?:ano|anos|año|años|year)/);
+  if(yearRange){
+    return {min:Number(yearRange[1].replace(',','.')),
+            max:Number(yearRange[2].replace(',','.'))};
+  }
+
+  const ltMonths=raw.match(/(?:<|menor(?:es)?\s+(?:de|a)|menos\s+de)\s*(\d+(?:[.,]\d+)?)\s*mes/);
+  if(ltMonths)return {min:0,max:Number(ltMonths[1].replace(',','.'))/12,upperOpen:true};
+
+  const ltYears=raw.match(/(?:<|menor(?:es)?\s+(?:de|a)|menos\s+de)\s*(\d+(?:[.,]\d+)?)\s*(?:ano|anos|año|años|year)/);
+  if(ltYears)return {min:0,max:Number(ltYears[1].replace(',','.')),upperOpen:true};
+
+  const geYears=raw.match(/(?:>=|≥|maior(?:es)?\s+(?:ou\s+igual\s+)?(?:a|de)|mayor(?:es)?\s+(?:o\s+igual\s+)?(?:a|de)|a partir de)\s*(\d+(?:[.,]\d+)?)\s*(?:ano|anos|año|años|year)/);
+  if(geYears)return {min:Number(geYears[1].replace(',','.')),max:Infinity};
+
+  return null;
+};
+
+const inRange=(age,r)=>{
+  if(!r||!Number.isFinite(age))return false;
+  const lo=age>=r.min;
+  const hi=r.upperOpen?age<r.max:age<=r.max;
+  return lo&&hi;
+};
+
+const pediatricValue=(loc,age)=>{
+  let ped=nonempty(loc?.pediatricDose)?loc.pediatricDose:null;
+
+  if(!ped && loc?.dose && typeof loc.dose==='object'){
+    const entries=Object.entries(loc.dose)
+      .filter(([k,v])=>nonempty(v)&&/pediatr|crian|niñ|child/i.test(norm(k)));
+    if(entries.length)ped=Object.fromEntries(entries);
+  }
+  if(!nonempty(ped))return null;
+  if(typeof ped==='string'||Array.isArray(ped))return {key:'pediatricDose',value:ped,ageSpecific:true};
+  if(typeof ped!=='object')return {key:'pediatricDose',value:ped,ageSpecific:true};
+
+  const entries=Object.entries(ped).filter(([,v])=>nonempty(v));
+  if(!entries.length)return null;
+  if(entries.length===1)return {key:entries[0][0],value:entries[0][1],ageSpecific:true};
+
+  const matched=entries.filter(([k])=>inRange(age,keyAgeRange(k)));
+  if(matched.length===1){
+    return {key:matched[0][0],value:matched[0][1],ageSpecific:true};
+  }
+
+  return {key:'pediatricDose',value:ped,ageSpecific:false};
+};
+
+const absentPediatric=text=>{
+  const n=norm(text);
+  return /nao existe dose pediatrica aprovada|nao ha dose pediatrica aprovada|dose pediatrica nao (?:esta )?estabelecida|seguranca e eficacia .*nao estabelecid|no existe una dosis pediatrica aprobada|no hay dosis pediatrica aprobada|dosis pediatrica no establecida|seguridad y eficacia .*no establecid|pediatric dose .*not established/.test(n);
+};
+
+const weightFormula=text=>{
+  const raw=String(text??'').replace(/[–—]/g,'-');
+  if(!raw.trim()||absentPediatric(raw))return null;
+
+  const rx=/(\d+(?:[.,]\d+)?)\s*(?:-|a|até|hasta|to)?\s*(\d+(?:[.,]\d+)?)?\s*(mcg|µg|μg|mg|g|mEq|UI|IU|U|mL)\s*\/\s*kg(?:\s*\/\s*(dose|dosis|dia|día|day|h|hora|horas|min|minuto|minutos))?/gi;
+  const matches=[...raw.matchAll(rx)];
+  if(matches.length!==1)return null;
+
+  const m=matches[0];
+  const low=Number(m[1].replace(',','.'));
+  const high=m[2]?Number(m[2].replace(',','.')):low;
+  if(!(low>0)||!(high>=low))return null;
+
+  const unit=m[3];
+  const per=norm(m[4]||'');
+  const baseUnit=/^(ui|iu|u)$/i.test(unit)?'UI':(/^(mcg|µg|μg)$/i.test(unit)?'mcg':unit);
+
+  let max=null;
+  const maxRx=new RegExp(
+    '(?:máx(?:imo|ima)?|max(?:imum)?|máximo|máxima)[^0-9]{0,30}(\\d+(?:[.,]\\d+)?)\\s*'+
+    baseUnit.replace(/[.*+?^${}()|[\]\\]/g,'\\</body>')+'\\b','i'
+  );
+  const mm=raw.match(maxRx);
+  if(mm)max=Number(mm[1].replace(',','.'));
+
+  return {low,high,unit:baseUnit,per,max,raw:String(text)};
+};
+
+const calculated=(sel,weight)=>{
+  if(!sel?.ageSpecific||!(weight>0))return null;
+  const rows=flattenRows(sel.value);
+  if(rows.length!==1)return null;
+  const wb=weightFormula(rows[0].text);
+  if(!wb)return null;
+
+  let low=wb.low*weight;
+  let high=wb.high*weight;
+  if(Number.isFinite(wb.max)&&wb.max>0){
+    low=Math.min(low,wb.max);
+    high=Math.min(high,wb.max);
+  }
+  if(high<low)high=low;
+  return {...wb,lowAbs:low,highAbs:high};
+};
+
+const meaningfulExisting=out=>{
+  const text=String(out?.textContent||'').replace(/\s+/g,' ').trim();
+  const n=norm(text);
+  if(!text||text==='—')return false;
+  if(/nao existe dose (?:adulta|pediatrica) padrao disponivel|no existe una dosis (?:adulta|pediatrica) estandar disponible/.test(n))return false;
+  if(/informe uma idade valida|informe una edad valida|informe um peso valido|informe un peso valido/.test(n))return false;
+
+  const calc=text.match(/(?:Dose calculada|Dosis calculada)\s*:\s*([^•\n]+)/i);
+  if(calc && calc[1] && calc[1].trim()!=='—')return true;
+
+  // Explicit "no approved pediatric dose" is clinically meaningful and must survive.
+  if(absentPediatric(text))return true;
+  return false;
+};
+
+const renderRows=(value,l)=>{
+  const rows=flattenRows(value);
+  if(!rows.length)return '';
+  return rows.map(r=>
+    `<div class="mcd-r8-row">${r.label?`<strong>${esc(r.label)}:</strong> `:''}${esc(r.text)}</div>`
+  ).join('');
+};
+
+const fetchDrug=async page=>{
+  const id=String(page?.dataset?.mcDrugId||'').trim();
+  if(!id)return null;
+  if(cache.has(id))return cache.get(id);
+  try{
+    const res=await fetch('data/drugs/'+encodeURIComponent(id.replace(/\.json$/i,''))+'.json',{cache:'default'});
+    if(!res.ok)return null;
+    const data=await res.json();
+    cache.set(id,data);
+    return data;
+  }catch(_){return null;}
+};
+
+const apply=async(reason)=>{
+  const p=parts();
+  if(!p||p.page.dataset.open!=='true'||!p.out)return false;
+
+  // Existing real/special calculation wins.
+  if(meaningfulExisting(p.out)){
+    p.page.dataset.mcGlobalDoseR8='pass-through-existing';
+    return true;
+  }
+
+  const l=lang(p.page);
+  const age=number(p.age?.value);
+  const weight=number(p.weight?.value);
+  if(!(age>0))return false;
+
+  const data=await fetchDrug(p.page);
+  if(!data)return false;
+  const loc=(data[l]&&typeof data[l]==='object')?data[l]:
+            ((data.pt&&typeof data.pt==='object')?data.pt:
+            ((data.es&&typeof data.es==='object')?data.es:{}));
+
+  const pediatric=age<18;
+  const profile=pediatric?'Pediátrico':'Adulto';
+  const meta=[
+    profile,
+    weight>0?`${fmt(weight,l,1)} kg`:'',
+    l==='es'?`${fmt(age,l,1)} años`:`${fmt(age,l,1)} anos`
+  ].filter(Boolean).join(' • ');
+
+  let html=`<div class="mcd-r8-meta">${esc(meta)}</div>`;
+
+  if(pediatric){
+    const sel=pediatricValue(loc,age);
+    if(!sel){
+      html+=`<div class="mcd-r8-ref">${l==='es'
+        ?'No existe una dosis pediátrica estándar disponible; no se extrapola la dosis del adulto.'
+        :'Não existe dose pediátrica padrão disponível; a dose do adulto não é extrapolada.'}</div>`;
+      p.out.innerHTML=html;
+      p.result?.setAttribute('data-mc-global-dose-r8','active');
+      p.page.dataset.mcGlobalDoseR8='pediatric-no-standard';
+      return true;
+    }
+
+    const calc=calculated(sel,weight);
+    if(calc){
+      const per=calc.per==='dia'||calc.per==='day'?'/' + (l==='es'?'día':'dia'):
+                calc.per==='dosis'||calc.per==='dose'?'/' + (l==='es'?'dosis':'dose'):
+                calc.per?'/'+calc.per:'';
+      const abs=calc.lowAbs===calc.highAbs
+        ?`${fmt(calc.lowAbs,l,2)} ${calc.unit}${per}`
+        :`${fmt(calc.lowAbs,l,2)}–${fmt(calc.highAbs,l,2)} ${calc.unit}${per}`;
+
+      html+=`<div class="mcd-r8-dose">${l==='es'?'Dosis calculada: ':'Dose calculada: '}<strong>${esc(abs)}</strong></div>`;
+      html+=`<div class="mcd-r8-ref">${l==='es'?'Referencia pediátrica: ':'Referência pediátrica: '}${renderRows(sel.value,l)}</div>`;
+      p.page.dataset.mcGlobalDoseR8='pediatric-calculated';
+    }else{
+      html+=`<div class="mcd-r8-dose">${l==='es'?'Dosis pediátrica estándar: ':'Dose pediátrica padrão: '}</div>`;
+      html+=renderRows(sel.value,l);
+      p.page.dataset.mcGlobalDoseR8='pediatric-text-fallback';
+    }
+  }else{
+    const standard=adultValue(loc);
+    if(!standard){
+      html+=`<div class="mcd-r8-ref">${l==='es'
+        ?'No existe una dosis adulta estándar disponible.'
+        :'Não existe dose adulta padrão disponível.'}</div>`;
+      p.page.dataset.mcGlobalDoseR8='adult-no-standard';
+    }else{
+      html+=`<div class="mcd-r8-dose">${l==='es'?'Dosis estándar: ':'Dose padrão: '}</div>`;
+      html+=renderRows(standard,l);
+      p.page.dataset.mcGlobalDoseR8='adult-standard-fallback';
+    }
+  }
+
+  p.out.innerHTML=html;
+  p.result?.setAttribute('data-mc-global-dose-r8','active');
+  p.page.dataset.mcGlobalDoseR8Reason=String(reason||'');
+  return true;
+};
+
+const schedule=reason=>[0,90,240,480].forEach(ms=>setTimeout(()=>apply(reason+'@'+ms),ms));
+
+document.addEventListener('click',e=>{
+  const btn=e.target instanceof Element
+    ? e.target.closest('#'+PAGE_ID+' .mcd-calc-btn')
+    : null;
+  if(btn)schedule('calculate-click');
+},true);
+
+document.addEventListener('keydown',e=>{
+  const page=document.getElementById(PAGE_ID);
+  if(!page||page.dataset.open!=='true'||e.key!=='Enter')return;
+  if(e.target instanceof Element && e.target.closest('.mcd-patient'))schedule('patient-enter');
+},true);
+
+window.__mcGlobalDoseR8={
+  apply:()=>apply('manual'),
+  audit:()=>{
+    const p=parts();
+    return {
+      mounted:true,
+      open:p?.page?.dataset?.open==='true',
+      drug:p?.page?.dataset?.mcDrugId||'',
+      state:p?.page?.dataset?.mcGlobalDoseR8||'',
+      result:String(p?.out?.textContent||'').replace(/\s+/g,' ').trim()
+    };
+  }
+};
+
+console.info('['+BUILD+'] MOUNTED',{
+  adultFallback:'canonical standard dose',
+  pediatricCalculation:'unambiguous single weight formula only',
+  pediatricFallback:'canonical pediatricDose text',
+  adultToPediatricExtrapolation:false
+});
+})();
+</script>
+<!-- END MEDCASES_GLOBAL_DOSE_ENGINE_STANDARD_FALLBACK_AND_PEDIATRIC_REAL_CALC_V1_B_R0 -->
+
+
 </body>
 </html>
