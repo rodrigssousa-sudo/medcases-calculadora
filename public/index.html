@@ -68991,17 +68991,129 @@ const renderRows=(value,l)=>{
   ).join('');
 };
 
-const fetchDrug=async page=>{
-  const id=String(page?.dataset?.mcDrugId||'').trim();
-  if(!id)return null;
-  if(cache.has(id))return cache.get(id);
+/* MEDCASES_GLOBAL_DOSE_ENGINE_R8_R3_ALIAS_AWARE_DATA_PATH_FIX
+   Resolve the same canonical JSON identity used by the cleanroom renderer.
+   mcDrugId may be a localized/display alias and is NOT guaranteed to equal
+   the physical JSON basename. */
+const canonicalAliasFile=value=>{
+  const raw=String(value??'').replace(/\.json$/i,'').trim();
+  if(!raw)return '';
+  const key=raw.normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g,'');
+  const map=(typeof MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP==='object'
+    && MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP)||null;
+  return (map&&map[key])||'';
+};
+
+const resourceCandidates=page=>{
+  const ids=[
+    page?.dataset?.mcDrugId,
+    page?.querySelector?.('.mcd-name')?.textContent,
+    document.getElementById('fd-modal')?.dataset?.currentDrugId,
+    document.getElementById('fd-modal')?.dataset?.drugId,
+    window.__fdCanonicalCurrentDrug?.id,
+    window.__mcCanonicalCurrentDrug?.id
+  ].map(v=>String(v??'').trim()).filter(Boolean);
+
+  const urls=[];
+
+  for(const id of ids){
+    const alias=canonicalAliasFile(id);
+    if(alias)urls.push('data/drugs/'+alias);
+
+    const base=id.replace(/\.json$/i,'');
+    const plain=base.normalize('NFD')
+      .replace(/[\u0300-\u036f]/g,'')
+      .toLowerCase();
+
+    const underscored=plain
+      .replace(/[^a-z0-9]+/g,'_')
+      .replace(/^_+|_+$/g,'');
+
+    const compact=plain.replace(/[^a-z0-9]/g,'');
+
+    for(const candidate of [
+      base.toLowerCase(),
+      plain,
+      underscored,
+      compact
+    ]){
+      if(candidate){
+        urls.push(
+          'data/drugs/'+encodeURIComponent(candidate)+'.json'
+        );
+      }
+    }
+  }
+
+  /* If the canonical renderer already loaded the active JSON, retain that
+     concrete resource as a candidate. Match only basenames related to one
+     of the current identity candidates; never take an arbitrary drug JSON. */
+  const wanted=new Set();
+  for(const id of ids){
+    const alias=canonicalAliasFile(id);
+    if(alias){
+      wanted.add(
+        alias.replace(/\.json$/i,'').normalize('NFD')
+          .replace(/[\u0300-\u036f]/g,'')
+          .toLowerCase().replace(/[^a-z0-9]/g,'')
+      );
+    }
+    wanted.add(
+      id.replace(/\.json$/i,'').normalize('NFD')
+        .replace(/[\u0300-\u036f]/g,'')
+        .toLowerCase().replace(/[^a-z0-9]/g,'')
+    );
+  }
+
   try{
-    const res=await fetch('data/drugs/'+encodeURIComponent(id.replace(/\.json$/i,''))+'.json',{cache:'default'});
-    if(!res.ok)return null;
-    const data=await res.json();
-    cache.set(id,data);
-    return data;
-  }catch(_){return null;}
+    const entries=performance.getEntriesByType('resource');
+    for(let i=entries.length-1;i>=0;i--){
+      const url=String(entries[i]?.name||'');
+      const m=url.match(/\/data\/drugs\/([^/?]+)\.json/i);
+      if(!m)continue;
+      let decoded=m[1];
+      try{decoded=decodeURIComponent(decoded)}catch(_){}
+      const n=decoded.normalize('NFD')
+        .replace(/[\u0300-\u036f]/g,'')
+        .toLowerCase().replace(/[^a-z0-9]/g,'');
+      if(wanted.has(n)){
+        urls.unshift(
+          'data/drugs/'+encodeURIComponent(decoded)+'.json'
+        );
+      }
+    }
+  }catch(_){}
+
+  return [...new Set(urls)];
+};
+
+const fetchDrug=async page=>{
+  const identity=[
+    page?.dataset?.mcDrugId||'',
+    page?.querySelector?.('.mcd-name')?.textContent||'',
+    lang(page)
+  ].join('|');
+
+  if(cache.has(identity))return cache.get(identity);
+
+  for(const url of resourceCandidates(page)){
+    try{
+      const res=await fetch(url,{cache:'default'});
+      if(!res.ok)continue;
+      const data=await res.json();
+      if(data&&typeof data==='object'){
+        cache.set(identity,data);
+        page.dataset.mcGlobalDoseR8DataUrl=url;
+        return data;
+      }
+    }catch(_){}
+  }
+
+  page.dataset.mcGlobalDoseR8DataUrl='UNRESOLVED';
+  return null;
 };
 
 const apply=async(reason)=>{
