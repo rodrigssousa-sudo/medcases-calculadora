@@ -69038,7 +69038,10 @@ const identityNorm=value=>String(value??'')
   .replace(/[^a-z0-9]/g,'');
 
 const basenameFromUrl=url=>{
-  const m=String(url??'').match(/\/data\/drugs\/([^/?]+)\.json/i);
+  /* MEDCASES_GLOBAL_DOSE_ENGINE_R8_R6_RELATIVE_CANONICAL_URL_BASENAME_FIX
+     Accept both the relative canonical URL produced by resourceCandidates()
+     (data/drugs/<file>.json) and root-relative/absolute URLs. */
+  const m=String(url??'').match(/(?:^|\/)data\/drugs\/([^/?]+)\.json/i);
   if(!m)return '';
   try{return decodeURIComponent(m[1])+'.json';}catch(_){return m[1]+'.json';}
 };
