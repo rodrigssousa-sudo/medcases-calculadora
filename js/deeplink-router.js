@@ -27,7 +27,6 @@
      calculadoras        → fecha todos (home limpa)
      farmacos            → hub-card-farmacos + q opcional
      interacoes          → hub-card-interacoes + drug1/drug2
-     scores              → hub-card-scores + selectScore(q)
      renal / clcr        → hub-card-clcr
      pediatria           → hub-card-pediatria
      gestante/ob         → hub-card-gestante
@@ -36,7 +35,6 @@
      hemodinamica        → hub-card-hemodinamica + scroll por q
      fluidos             → hub-card-fluidos
 
-   ALIASES DE SCORES (q=):
      wells-tep / wells-pe → wells-pe
      sofa                 → sofa
      glasgow              → glasgow
@@ -144,91 +142,6 @@
     setTimeout(function () { _waitFor(fnName, cb, attempts + 1); }, 100);
   }
 
-  /* ================================================================
-     MAPA DE SCORES — alias → id interno do selectScore()
-  ================================================================ */
-  var SCORE_ALIASES = {
-    'wells-tep':    'wells-pe',
-    'wells-pe':     'wells-pe',
-    'wells-dvt':    'wells-dvt',
-    'wells-tvp':    'wells-dvt',
-    'sofa':         'sofa',
-    'glasgow':      'glasgow',
-    'curb-65':      'curb65',
-    'curb65':       'curb65',
-    'cha2ds2vasc':  'chads2',
-    'cha2ds2-vasc': 'chads2',
-    'chads2':       'chads2',
-    'has-bled':     'hasbled',
-    'hasbled':      'hasbled',
-    'timi':         'timi',
-    'news2':        'news2',
-    'child':        'child',
-    'child-pugh':   'child',
-  };
-
-  /* ================================================================
-     MAPA DE ELETRÓLITOS — alias → id do card na página
-  ================================================================ */
-  /* ELEC_CARD_ALIASES v3.0 — alias → chave interna ElecCalc (elecKey)
-     Mapeamento expandido com todos os 11 eletrólitos da Calculadora v3 */
-  var ELEC_CARD_ALIASES = {
-    /* Potássio */
-    'potassio':   'k',
-    'potasio':    'k',
-    'k':          'k',
-    'kcl':        'k',
-    /* Sódio */
-    'sodio':      'na',
-    'sódio':      'na',
-    'na':         'na',
-    'nacl':       'na',
-    /* Cloro */
-    'cloro':      'cl',
-    'cl':         'cl',
-    'cloreto':    'cl',
-    /* Magnésio */
-    'magnesio':   'mg',
-    'magnésio':   'mg',
-    'mg':         'mg',
-    'mgso4':      'mg',
-    /* Cálcio */
-    'calcio':     'ca',
-    'cálcio':     'ca',
-    'ca':         'ca',
-    'calcio-total': 'ca',
-    /* Fósforo */
-    'fosforo':    'p',
-    'fósforo':    'p',
-    'p':          'p',
-    'fosfato':    'p',
-    /* Bicarbonato */
-    'bicarbonato': 'hco3',
-    'hco3':        'hco3',
-    'bicarb':      'hco3',
-    'bicarbonato-sodio': 'hco3',
-    /* Glicose */
-    'glicose':    'glicose',
-    'glucosa':    'glicose',
-    'glucose':    'glicose',
-    'sg':         'glicose',
-    'dextrose':   'glicose',
-    /* Albumina */
-    'albumina':   'albumina',
-    'albumin':    'albumina',
-    'alb':        'albumina',
-    /* Ânion Gap */
-    'anion-gap':  'ag',
-    'aniongap':   'ag',
-    'ag':         'ag',
-    'anion':      'ag',
-    'gap':        'ag',
-    /* Osmolaridade */
-    'osmolaridade': 'osm',
-    'osmolaridad':  'osm',
-    'osm':          'osm',
-    'osmolalidade': 'osm',
-  };
 
   /* ================================================================
      MAPA DE HEMODINÂMICA — alias → id do card
@@ -333,12 +246,6 @@
     },
 
     /* ── SCORES ── */
-    'scores': function (q) {
-      _waitForHub(function () {
-        var scoreKey = q ? (SCORE_ALIASES[_norm(q)] || _norm(q)) : null;
-        window.HubAccordion.open('scores', { scoreKey: scoreKey });
-      });
-    },
 
     /* ── RENAL / ClCr ── */
     'renal': function (q) {
@@ -448,7 +355,7 @@
   TAB_HANDLERS['hemodynamica']              = TAB_HANDLERS['hemodinamica'];
   /* adult → retrocompat: abre home */
   TAB_HANDLERS['adult']                     = TAB_HANDLERS['calculadoras'];
-  TAB_HANDLERS['scores_clinicos']           = TAB_HANDLERS['scores'];
+
   TAB_HANDLERS['patient']                   = TAB_HANDLERS['paciente'];
 
   /* ── Capitaliza a primeira letra (para nomes de fármacos) ── */
@@ -630,8 +537,6 @@
      * @returns {string} URL completa
      *
      * Exemplo:
-     *   window.MedCasesRouter.buildUrl('scores', { q: 'sofa', lang: 'es' })
-     *   → "https://medcasescalcu.com/?lang=es&tab=scores&q=sofa"
      */
     buildUrl: function (tab, opts) {
       opts = opts || {};

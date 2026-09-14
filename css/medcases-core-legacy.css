@@ -142,7 +142,6 @@
   --mc-l2-border-fluidos: rgba(52,211,153,0.18);
   --mc-l2-border-elec:    rgba(129,140,248,0.18);
   --mc-l2-border-hemo:    rgba(251,113,133,0.18);
-  --mc-l2-border-scores:  rgba(148,163,184,0.18);
 
   /* ── Level 3 Palettes ── */
   --mc-l3-ped-a:  var(--mc-bg-surface); --mc-l3-ped-b:  var(--mc-bg-surface2);
@@ -217,7 +216,6 @@ body.light-mode {
 .theme-hemo   { --theme-accent: #FB7185; --theme-accent-rgb: 251,113,133; --theme-bg: rgba(251,113,133,0.09); }
 .theme-eletro { --theme-accent: #A78BFA; --theme-accent-rgb: 167,139,250; --theme-bg: rgba(167,139,250,0.09); }
 .theme-fluidos{ --theme-accent: #34D399; --theme-accent-rgb: 52,211,153;  --theme-bg: rgba(52,211,153,0.09); }
-.theme-scores { --theme-accent: #FBBF24; --theme-accent-rgb: 251,191,36;  --theme-bg: rgba(251,191,36,0.09); }
 
 
 /* ================================================================
@@ -549,16 +547,6 @@ body.calc-overlay-open #scroll-content { overflow: hidden !important; touch-acti
 #hub-card-hemodinamica .hub-card-chevron{ color: rgba(252,165,165,0.45) !important; }
 #hub-card-hemodinamica .hub-card-body   { background: var(--mc-bg-surface, #252930) !important; }
 
-/* ── SCORES — acento #94A3B8 ── */
-#hub-card-scores { border-color: var(--mc-l2-border-scores, rgba(148,163,184,0.18)) !important; }
-#hub-card-scores.is-open { border-color: rgba(148,163,184,0.35) !important; }
-#hub-card-scores .hub-card-trigger { border-bottom: var(--mc-border-width) solid var(--mc-l2-border-scores, rgba(148,163,184,0.18)) !important; }
-#hub-card-scores .hub-card-ico    { background: rgba(148,163,184,0.10) !important; color: #94A3B8 !important; }
-#hub-card-scores .hub-card-name   { color: #CBD5E1 !important; }
-#hub-card-scores .hub-card-desc   { color: rgba(203,213,225,0.68) !important; }
-#hub-card-scores .hub-card-chevron{ color: rgba(203,213,225,0.45) !important; }
-#hub-card-scores .hub-card-body   { background: var(--mc-bg-surface, #252930) !important; }
-
 /* ── PEDIATRIA — acento #64748B ── */
 #hub-card-pediatria { border-color: var(--mc-l3-border-ped, rgba(100,116,139,0.22)) !important; }
 #hub-card-pediatria.is-open { border-color: rgba(100,116,139,0.38) !important; }
@@ -585,7 +573,6 @@ body.calc-overlay-open #scroll-content { overflow: hidden !important; touch-acti
 .hub-card[data-hub="infusao"] .hub-card-ico      { background: rgba(34,211,238,0.12) !important; color: #22D3EE !important; }
 .hub-card[data-hub="farmacos"] .hub-card-ico     { background: rgba(45,212,191,0.12) !important; color: #2DD4BF !important; }
 .hub-card[data-hub="interacoes"] .hub-card-ico   { background: rgba(56,189,248,0.12) !important; color: #38BDF8 !important; }
-.hub-card[data-hub="scores"] .hub-card-ico       { background: rgba(148,163,184,0.12) !important; color: #94A3B8 !important; }
 .hub-card[data-hub="hemodinamica"] .hub-card-ico { background: rgba(251,113,133,0.12) !important; color: #FB7185 !important; }
 .hub-card[data-hub="patient"] .hub-card-ico      { background: rgba(74,222,128,0.12) !important;  color: #4ADE80 !important; }
 
@@ -1047,7 +1034,6 @@ body.light-mode .hm-copy-rx-btn.is-copied{ background: rgba(21,128,61,0.18) !imp
 .calc-hub-card-v2.chc-atb      { background: #78350F; color:#fff; border-color: rgba(251,191,36,0.20); }
 .calc-hub-card-v2.chc-farmacos { background: #164E63; color:#fff; border-color: rgba(34,211,238,0.22); }
 .calc-hub-card-v2.chc-hemo     { background: #7F1D1D; color:#fff; border-color: rgba(248,113,113,0.25); }
-.calc-hub-card-v2.chc-scores   { background: #1F2937; color:#fff; border-color: rgba(148,163,184,0.22); }
 /* Fluidos: Verde MedCases — destaque primário */
 .calc-hub-card-v2.chc-fluids {
   background: #065F46; color:#fff;
@@ -1209,11 +1195,6 @@ body.light-mode .univ-input-group .univ-input-unit { background: var(--mc-bg-sur
   box-shadow: none;
 }
 .univ-toggle-btn.is-active .univ-toggle-pts { background: var(--mc-accent, #10B981); color: #0B0F17; }
-
-/* univ-score-section / stepper (build273) */
-.univ-score-section { margin-bottom: 16px; }
-.univ-score-group-title { font-size: 11px; font-weight: 700; color: var(--text-muted,#475569); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-.univ-score-group-title::before { content:''; width: 3px; height: 14px; border-radius: 2px; background: var(--theme-accent); }
 .univ-toggle-btn--stepper { cursor: default; }
 .univ-toggle-btn--stepper:active { transform: none; }
 .univ-stepper { display: flex; align-items: center; gap: 0; flex-shrink: 0; }
@@ -1259,18 +1240,13 @@ body.light-mode .univ-result-conduct {
   color: var(--mc-text-secondary, #4B5563);
   background: rgba(16,185,129,0.04);
 }
-
-/* Pontes de compatibilidade (score legado) */
-.score-row.selected { border-color: var(--theme-accent,var(--border-green)) !important; background: var(--theme-bg,rgba(14,90,58,0.12)) !important; }
-.score-check:checked { background: var(--theme-accent,linear-gradient(135deg,var(--green-mid),var(--green-bright))) !important; }
 .stepper-btn:active { color: var(--theme-accent,var(--green-glow)) !important; }
-.score-result-box.theme-hemo, .score-result-box.theme-scores,
+.score-result-box.theme-hemo,
 .score-result-box.theme-renal, .score-result-box.theme-eletro {
   background: linear-gradient(160deg,rgba(var(--theme-accent-rgb),0.18) 0%,#0A0E17 65%) !important;
   border-color: rgba(var(--theme-accent-rgb),0.35) !important;
 }
 .score-result-box.theme-hemo   .score-result-number,
-.score-result-box.theme-scores .score-result-number,
 .score-result-box.theme-renal  .score-result-number,
 .score-result-box.theme-eletro .score-result-number { color: var(--theme-accent) !important; text-shadow: 0 0 20px rgba(var(--theme-accent-rgb),0.35) !important; }
 .hm-input:focus, .input-field:focus, #fluid-temp:focus { border-color: var(--mc-accent, #10B981) !important; box-shadow: none !important; }

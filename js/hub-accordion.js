@@ -18,7 +18,6 @@
      clcr        → clona subview ClCr do #page-adult ou usa hub-clcr-slot
      infusao     → move .infusion-module do #page-infusion
      hemodinamica→ move #subview-hemo content
-     scores      → move #subview-scores content
      fluidos     → move #subview-fluids content
      eletrolitos → move .elec-card content from #page-elec
 
@@ -232,32 +231,6 @@
         break;
       }
 
-      /* ── Scores ─────────────────────────────────────────────── */
-      case 'scores': {
-        var slot = document.getElementById('hub-scores-slot');
-        if (!slot) break;
-        /* Move o conteúdo do #subview-scores para o slot.
-           Estratégia: mover preserva os IDs (scard-sofa etc.) e
-           a área de resultado #score-calc-area. O subview-scores
-           fica como shell com redirect. */
-        var scoresView = document.getElementById('subview-scores');
-        if (scoresView) {
-          var bb = scoresView.querySelector('.section-back-bar');
-          if (bb) bb.remove();
-          while (scoresView.firstChild) {
-            slot.appendChild(scoresView.firstChild);
-          }
-          scoresView.innerHTML =
-            '<div style="padding:16px;text-align:center;">' +
-              '<button class="btn-primary" onclick="hubOpen(\'scores\')" style="margin:0 auto;display:block;">' +
-                '<i class="fa-solid fa-chart-bar"></i> Abrir Scores no Hub' +
-              '</button></div>';
-        } else {
-          slot.innerHTML = '<p style="color:var(--text-secondary);font-size:12px;">Módulo scores não encontrado.</p>';
-        }
-        _mounted['scores'] = true;
-        break;
-      }
 
       /* ── Fluidos ────────────────────────────────────────────── */
       case 'fluidos': {
@@ -527,62 +500,6 @@
 
     if (_openCard === id) _openCard = null;
 
-    /* BUILD 275 — RESET DE ESTADO AO FECHAR SCORES
-       Quando o card de Scores é fechado, limpa todos os inputs
-       (textos, rádios, checkboxes) dentro do painel, e reseta o
-       estado interno do motor de scores (activeScore, scoreSelections).
-       Garante formulário zerado para o próximo paciente, sem
-       persistência de dados anteriores entre atendimentos.
-       ─────────────────────────────────────────────────────────────
-       Execução defensiva: wrapped em try/catch para não bloquear
-       o fechamento se algum seletor inesperado falhar. */
-    if (id === 'scores') {
-      try {
-        var scoreBody = document.getElementById('hub-body-scores');
-        if (scoreBody) {
-          /* Limpa todos os inputs de texto e number */
-          scoreBody.querySelectorAll('input[type="text"], input[type="number"]').forEach(function (el) {
-            el.value = '';
-          });
-          /* Desmarca todos os rádios e checkboxes */
-          scoreBody.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(function (el) {
-            el.checked = false;
-          });
-          /* Remove classe is-active dos toggle-buttons (univ-toggle-btn e score-check) */
-          scoreBody.querySelectorAll('.is-active, .selected').forEach(function (el) {
-            el.classList.remove('is-active', 'selected');
-          });
-          /* Remove seleção dos score-cards (scard-*) */
-          scoreBody.querySelectorAll('[id^="scard-"]').forEach(function (el) {
-            el.classList.remove('selected');
-          });
-          /* Oculta o result-card se estiver visível */
-          scoreBody.querySelectorAll('.univ-result-card').forEach(function (el) {
-            el.classList.remove('is-visible');
-          });
-          /* Limpa textarea do result legado, se existir */
-          scoreBody.querySelectorAll('textarea').forEach(function (el) {
-            el.value = '';
-          });
-        }
-        /* Reseta variáveis globais do motor de scores.
-           scoreSelections é um objeto mutado inline (não reatribuído),
-           então limpamos suas chaves em vez de reatribuir a referência
-           — isso garante que o scoreChange() local veja o objeto zerado. */
-        if (typeof window.activeScore !== 'undefined') window.activeScore = null;
-        if (typeof window.scoreSelections !== 'undefined') {
-          Object.keys(window.scoreSelections).forEach(function (k) {
-            delete window.scoreSelections[k];
-          });
-        }
-        /* Limpa a área de cálculo do score (bloco renderizado pelo JS) */
-        var calcArea = document.getElementById('score-calc-area');
-        if (calcArea) calcArea.innerHTML = '';
-      } catch (e) {
-        /* Reset silencioso — não bloqueia o fechamento do card */
-        console.warn('[HubAccordion] Aviso: reset de scores falhou parcialmente.', e);
-      }
-    }
 
     /* Verifica se ainda há algum card aberto */
     var stillOpen = document.querySelector('.hub-card.is-open');
@@ -671,14 +588,6 @@
         }, 350);
       }
 
-      /* Módulo-específico: scores */
-      if (id === 'scores' && opts.scoreKey) {
-        setTimeout(function () {
-          if (typeof selectScore === 'function') {
-            selectScore(opts.scoreKey);
-          }
-        }, 350);
-      }
 
       /* Módulo-específico: infusão com q → modo Selecionar Droga */
       if (id === 'infusao' && opts.q) {
@@ -866,7 +775,7 @@
       clinicalDataMutation: false
     };
 
-    console.log('[HubAccordion] v2.2 (BUILD 276) pronto. Cards: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, scores, fluidos, eletrolitos');
+    console.log('[HubAccordion] v2.2 (BUILD 276) pronto. Cards: patient, clcr, farmacos, interacoes, pediatria, gestante, infusao, hemodinamica, fluidos, eletrolitos');
   }
 
   /* ── Capitaliza a primeira letra ── */
