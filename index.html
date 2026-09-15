@@ -66579,5 +66579,80 @@ console.info('['+BUILD+'] MOUNTED',{
 <!-- MEDCASES_CALCULADORA_SCORES_R2B_CORE_SOURCE_EXCISION_ROBUST_SCRIPT_BOUNDARY_V1_B_R0 -->
 
 <!-- MEDCASES_CALCULADORA_SCORES_R3K_FINAL_DIFFCHECK_BASELINE_AWARE_V1_B_R0 -->
+<!-- MEDCASES_PREMIUM_R8_PROTECTED_DRUG_FETCH_ADAPTER_V1 -->
+<script id="mc-mcc1-protected-drug-fetch-adapter-v1">
+(() => {
+  'use strict';
+  if (window.__MC_MCC1_DRUG_FETCH_ADAPTER_V1) return;
+  const nativeFetch = window.fetch.bind(window);
+  const DRUG_PATH_RE = /\/data\/drugs\/([^/?]+)\.json$/i;
+
+  const parseDrugRequest = input => {
+    try {
+      const raw = input instanceof Request ? input.url : String(input || '');
+      const url = new URL(raw, window.location.href);
+      if (url.origin !== window.location.origin) return null;
+      const match = DRUG_PATH_RE.exec(url.pathname);
+      if (!match) return null;
+      const drugId = decodeURIComponent(match[1] || '').trim().toLowerCase();
+      if (!/^[a-z0-9_]+$/.test(drugId)) return null;
+      return { drugId };
+    } catch (_) {
+      return null;
+    }
+  };
+
+  const unwrapGatewayDrug = async response => {
+    if (!response || !response.ok) return response;
+    let envelope;
+    try {
+      envelope = await response.json();
+    } catch (_) {
+      return new Response(JSON.stringify({ok:false,error:'MCC1_GATEWAY_RESPONSE_NOT_JSON'}), {
+        status: 502,
+        headers: {'Content-Type':'application/json','Cache-Control':'no-store'}
+      });
+    }
+    const drug = envelope && envelope.drug;
+    if (!drug || typeof drug !== 'object' || Array.isArray(drug)) {
+      return new Response(JSON.stringify({ok:false,error:'MCC1_GATEWAY_DRUG_PAYLOAD_INVALID'}), {
+        status: 502,
+        headers: {'Content-Type':'application/json','Cache-Control':'no-store'}
+      });
+    }
+    return new Response(JSON.stringify(drug), {
+      status: 200,
+      headers: {
+        'Content-Type':'application/json',
+        'Cache-Control':'no-store',
+        'X-MedCases-Drug-Source':'mcc1-gateway'
+      }
+    });
+  };
+
+  window.fetch = async function medCasesProtectedDrugFetch(input, init) {
+    const parsed = parseDrugRequest(input);
+    if (!parsed) return nativeFetch(input, init);
+
+    const bridge = window.__medcasesMcc1Bridge;
+    if (!bridge || typeof bridge.fetch !== 'function') {
+      return nativeFetch(input, init);
+    }
+
+    const gatewayResponse = await bridge.fetch(
+      '/api/drugs/' + encodeURIComponent(parsed.drugId),
+      { method: 'GET' }
+    );
+    return unwrapGatewayDrug(gatewayResponse);
+  };
+
+  window.__MC_MCC1_DRUG_FETCH_ADAPTER_V1 = Object.freeze({
+    version: 1,
+    mode: 'MCC1_WHEN_AVAILABLE_STATIC_FALLBACK_WITHOUT_BRIDGE',
+    protectedPath: '/api/drugs/:id'
+  });
+})();
+</script>
+<!-- MEDCASES_PREMIUM_R8_PROTECTED_DRUG_FETCH_ADAPTER_V1_END -->
 </body>
 </html>

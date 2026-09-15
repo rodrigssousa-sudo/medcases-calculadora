@@ -194,6 +194,19 @@ self.addEventListener('message', (event) => {
    Só intercepta requests GET. POST/PUT/DELETE passam direto.
 ============================================================ */
 self.addEventListener('fetch', (event) => {
+  // MEDCASES_MCC1_API_BYPASS_V1
+  // Protected API calls must go directly to the network. Never serve or
+  // populate service-worker caches for Authorization-bearing /api/ traffic.
+  try {
+    const medcasesApiUrl = new URL(event.request.url);
+    if (
+      medcasesApiUrl.origin === self.location.origin &&
+      medcasesApiUrl.pathname.startsWith('/api/')
+    ) {
+      return;
+    }
+  } catch (_) {}
+
 
   /* Ignora métodos não-GET (POST, PUT, DELETE, etc.) */
   if (event.request.method !== 'GET') return;
