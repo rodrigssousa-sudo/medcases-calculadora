@@ -66876,10 +66876,7 @@ console.info('['+BUILD+'] MOUNTED',{
       event.type === 'touchstart' ||
       event.type === 'mousedown'
     ) {
-      // MEDCASES_PREMIUM_R8_4_R82_CAPTURE_PAYWALL_FIX_V1_B_R0
-      // The capture-down event is the earliest event proven to fire on iOS WKWebView.
-      // Open the native MedCases+ screen here while preserving the existing lock.
-      stopPremiumEvent(event, true);
+      stopPremiumEvent(event, false);
     }
   }
 
@@ -67032,6 +67029,99 @@ console.info('['+BUILD+'] MOUNTED',{
 </script>
 <!-- MEDCASES_PREMIUM_R8_2_FREE60_LOCK_NATIVE_PAYWALL_V1_B_R0:end -->
 
+<!-- MEDCASES_PREMIUM_R8_3_LOCKED_TAP_NATIVE_PAYWALL_V1_B_R0:start -->
+<script id="mc-r8-3-locked-tap-native-paywall-owner">
+(() => {
+  'use strict';
+  const BUILD = 'MEDCASES_PREMIUM_R8_3_LOCKED_TAP_NATIVE_PAYWALL_V1_B_R0';
+  const ROW_SELECTOR = [
+    '.hm-drug-item[data-drug-id]',
+    '.mc-fnav-drug-row[data-drug-id]',
+    '.mc-fnav-drug-row[data-mc-fnav-drug-id]',
+    '.mc-pharm-drug-row[data-drug-id]',
+    '[data-mc-farm-canonical-drug]'
+  ].join(',');
 
+  let lastOpenAt = 0;
+  let lastDrug = '';
+
+  function normalizeId(value) {
+    return String(value || '').trim().toLowerCase();
+  }
+
+  function drugIdFromRow(row) {
+    if (!row) return '';
+    return normalizeId(
+      row.getAttribute('data-drug-id') ||
+      row.getAttribute('data-mc-fnav-drug-id') ||
+      row.getAttribute('data-mc-farm-canonical-drug') ||
+      ''
+    );
+  }
+
+  function activeLang() {
+    try {
+      const q = new URLSearchParams(location.search);
+      const raw = String(
+        q.get('lang') || q.get('locale') || q.get('language') ||
+        document.documentElement.getAttribute('lang') ||
+        document.body?.getAttribute('lang') ||
+        window.currentLang || window.lang || ''
+      ).trim().toLowerCase();
+      if (raw.startsWith('pt')) return 'pt';
+      if (raw.startsWith('es')) return 'es';
+    } catch (_) {}
+    return 'es';
+  }
+
+  function isLockedPremium(id) {
+    const access = window.__mcR82DrugAccess;
+    return !!(access && typeof access.isLocked === 'function' && access.isLocked(id));
+  }
+
+  function openNativeUpgrade(id) {
+    const now = Date.now();
+    if (id === lastDrug && now - lastOpenAt < 900) return;
+    lastDrug = id;
+    lastOpenAt = now;
+
+    const channel = window.MCUpgrade;
+    if (channel && typeof channel.postMessage === 'function') {
+      channel.postMessage(activeLang());
+      console.info('[' + BUILD + '] NATIVE_PAYWALL_REQUEST', { drug: id, lang: activeLang() });
+      return;
+    }
+    console.warn('[' + BUILD + '] NATIVE_PAYWALL_CHANNEL_UNAVAILABLE', { drug: id });
+  }
+
+  function onActivationEnd(event) {
+    const target = event.target instanceof Element ? event.target : null;
+    const row = target ? target.closest(ROW_SELECTOR) : null;
+    if (!row) return;
+
+    const id = drugIdFromRow(row);
+    if (!id || !isLockedPremium(id)) return;
+
+    // R8.2 already blocks clinical work at pointerdown/touchstart/mousedown.
+    // R8.3 owns the complementary activation-end phase because iOS WKWebView
+    // can suppress the later click after the capture-phase lock.
+    event.preventDefault();
+    event.stopPropagation();
+    if (typeof event.stopImmediatePropagation === 'function') event.stopImmediatePropagation();
+    openNativeUpgrade(id);
+  }
+
+  window.addEventListener('pointerup', onActivationEnd, true);
+  window.addEventListener('touchend', onActivationEnd, true);
+  window.addEventListener('mouseup', onActivationEnd, true);
+
+  window.__mcR83PaywallTap = Object.freeze({
+    build: BUILD,
+    ready: true
+  });
+  console.info('[' + BUILD + '] READY');
+})();
+</script>
+<!-- MEDCASES_PREMIUM_R8_3_LOCKED_TAP_NATIVE_PAYWALL_V1_B_R0:end -->
 </body>
 </html>
