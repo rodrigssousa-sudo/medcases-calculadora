@@ -13,7 +13,7 @@ const {
 } = require('./medcases_entitlement_gate');
 
 const DEFAULT_PORT = 8080;
-const REQUIRED_FREE_DRUG_COUNT = 400;
+const REQUIRED_FREE_DRUG_COUNT = 60;
 
 function json(res, status, payload) {
   const body = Buffer.from(JSON.stringify(payload), 'utf8');
@@ -303,7 +303,7 @@ function startGateway({
   secret = process.env.MEDCASES_CALCULATOR_SESSION_SECRET,
   rootDir = path.join(__dirname, '..'),
   allowlistPath = process.env.MEDCASES_FREE_DRUG_ALLOWLIST ||
-    path.join(__dirname, 'data', 'free400_allowlist.v1.json'),
+    path.join(__dirname, 'data', 'free60_allowlist.v2.json'),
   production =
     process.env.NODE_ENV === 'production',
 } = {}) {
