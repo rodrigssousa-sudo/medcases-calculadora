@@ -1,3 +1,17 @@
+/* MEDCASES_PREMIUM_R9B_PURGE_SW_CACHE_CLOSURE_V1_B_R0:start */
+// Security closure: old static Premium drug payloads must not survive in CacheStorage.
+self.addEventListener('install', (event) => {
+  self.skipWaiting();
+});
+self.addEventListener('activate', (event) => {
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.map((key) => caches.delete(key)));
+    await self.clients.claim();
+  })());
+});
+/* MEDCASES_PREMIUM_R9B_PURGE_SW_CACHE_CLOSURE_V1_B_R0:end */
+
 /* ============================================================
    MedCases Pro — Service Worker v5.2 (BUILD 477)
    Estratégia: STALE-WHILE-REVALIDATE (Cache-First + Background Sync)
