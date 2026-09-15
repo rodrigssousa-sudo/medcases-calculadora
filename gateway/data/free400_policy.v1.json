@@ -1,0 +1,29 @@
+{
+  "schema": "medcases.free400.policy.v1",
+  "policyId": "free400-concept-bucket-uniqueness-v1",
+  "status": "approved",
+  "approvedDate": "2026-09-14",
+  "principles": {
+    "preserveConceptBucketUniqueness": true,
+    "exactFamilyQuotasSecondary": true,
+    "acceptedFamilyVariance": 1,
+    "acceptedVarianceCondition": "Only when satisfying the family quota would require adding a context-specific duplicate of an already represented active ingredient.",
+    "initialFree400ContextVariantExceptionGranted": false
+  },
+  "acceptedInitialVariance": [
+    {
+      "family": "obesidade",
+      "quota": 2,
+      "selected": 1,
+      "delta": -1
+    },
+    {
+      "family": "antidepressivo",
+      "quota": 13,
+      "selected": 14,
+      "delta": 1
+    }
+  ],
+  "approvedPolicyText": "Preserve concept-bucket uniqueness. Exact family quotas are secondary. A ±1 family variance is accepted when satisfying the quota would require adding a context-specific duplicate of an already represented active ingredient. No context-variant exception is granted for the initial Free400.",
+  "allowlistIdsSha256": "def935ca0786a3f68e0c18c4ab0f0ded9049bfdc317287ae83a1160313296232"
+}
