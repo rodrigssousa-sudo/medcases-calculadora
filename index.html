@@ -2,6 +2,116 @@
 <!-- MedCases Pro — build 2026-06-19e -->
 <html lang="pt-BR">
 <head>
+<!-- MEDCASES_PREMIUM_R8_5_EARLY_CAPTURE_NATIVE_PAYWALL_FINAL_V1_B_R0:start -->
+<script id="mc-r8-5-early-premium-paywall-capture">
+(function () {
+  'use strict';
+  const BUILD = 'MEDCASES_PREMIUM_R8_5_EARLY_CAPTURE_NATIVE_PAYWALL_FINAL_V1_B_R0';
+  let lastUpgradeAt = 0;
+  let lastDrugId = '';
+
+  function clean(value) {
+    return String(value || '').trim().replace(/\.json$/i, '').toLowerCase();
+  }
+
+  function currentTier() {
+    try {
+      return String(window.__medcasesMcc1Bridge?.tier || '').trim().toLowerCase() === 'premium'
+        ? 'premium'
+        : 'free';
+    } catch (_) {
+      return 'free';
+    }
+  }
+
+  function currentLang() {
+    try {
+      const params = new URLSearchParams(window.location.search || '');
+      const raw = String(
+        params.get('lang') ||
+        document.documentElement.getAttribute('lang') ||
+        window.currentLang ||
+        'es'
+      ).trim().toLowerCase();
+      return raw.startsWith('pt') ? 'pt' : 'es';
+    } catch (_) {
+      return 'es';
+    }
+  }
+
+  function lockedRowFromEvent(event) {
+    try {
+      const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
+      for (const node of path) {
+        if (!(node instanceof Element)) continue;
+        if (node.matches('[data-mc-premium-locked="true"]')) return node;
+        const parent = node.closest?.('[data-mc-premium-locked="true"]');
+        if (parent) return parent;
+      }
+    } catch (_) {}
+    try {
+      return event?.target?.closest?.('[data-mc-premium-locked="true"]') || null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function rowDrugId(row) {
+    if (!row || !row.getAttribute) return '';
+    return clean(
+      row.getAttribute('data-mc-premium-drug-id') ||
+      row.getAttribute('data-drug-id') ||
+      row.getAttribute('data-mc-fnav-drug-id') ||
+      row.getAttribute('data-mc-farm-canonical-drug') ||
+      row.getAttribute('data-drug-key') ||
+      ''
+    );
+  }
+
+  function stopEvent(event) {
+    try { event.preventDefault(); } catch (_) {}
+    try { event.stopImmediatePropagation(); } catch (_) {}
+    try { event.stopPropagation(); } catch (_) {}
+  }
+
+  function openNativePaywall(event) {
+    const row = lockedRowFromEvent(event);
+    if (!row || currentTier() === 'premium') return;
+
+    const drugId = rowDrugId(row);
+    if (!drugId) return;
+
+    stopEvent(event);
+
+    const now = Date.now();
+    if (drugId === lastDrugId && now - lastUpgradeAt < 700) return;
+    lastDrugId = drugId;
+    lastUpgradeAt = now;
+
+    const lang = currentLang();
+    try {
+      if (window.MCUpgrade && typeof window.MCUpgrade.postMessage === 'function') {
+        window.MCUpgrade.postMessage(lang);
+        console.log('[' + BUILD + '] EARLY_PAYWALL_REQUESTED', {drugId: drugId, lang: lang, event: event.type});
+        return;
+      }
+    } catch (_) {}
+
+    console.warn('[' + BUILD + '] MCUPGRADE_UNAVAILABLE', {drugId: drugId, lang: lang, event: event.type});
+  }
+
+  ['pointerdown', 'touchstart', 'mousedown', 'click'].forEach(function (type) {
+    window.addEventListener(type, openNativePaywall, {capture: true, passive: false});
+  });
+
+  window.__mcR85EarlyPremiumPaywall = Object.freeze({
+    build: BUILD,
+    mode: 'EARLY_WINDOW_CAPTURE_BEFORE_CLINICAL_OWNERS'
+  });
+})();
+</script>
+<!-- MEDCASES_PREMIUM_R8_5_EARLY_CAPTURE_NATIVE_PAYWALL_FINAL_V1_B_R0:end -->
+
   <!-- BUILD 483-ABS-PATH: base href absoluta elimina race condition iOS WebKit.
        Quando a WKWebView abre com URL malformada (ex: "https://?lang=es"), a
        base relativa "/" resolvia contra o host vazio → 404 em todos os assets.
