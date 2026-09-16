@@ -8838,6 +8838,190 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
   display:none!important;
 }
 </style>
+
+<style id="medcases-home-layout-r1b-structural-section-grid">
+/* MEDCASES_CALCULADORA_HOME_LAYOUT_R1C3R4_FINAL_THREE_SECTION_COMPACT_GRID
+   SCOPE: visual/structural geometry of #page-home only.
+   CONTRACT: keep the three real DOM sections; no flattening; no desktop row-sync. */
+
+#page-home #hub-accordion {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  grid-template-areas:
+    "section1 section2"
+    "section3 section3" !important;
+  grid-template-rows: auto auto !important;
+  column-gap: 10px !important;
+  row-gap: 10px !important;
+  align-items: start !important;
+  align-content: start !important;
+  width: min(100%, 1280px) !important;
+  max-width: 1280px !important;
+  margin-inline: auto !important;
+}
+
+#page-home #hub-accordion > .hub-divider {
+  display: none !important;
+}
+
+#page-home #hub-accordion > .hub-section:nth-child(1),
+#page-home #hub-accordion > .hub-section:nth-child(3),
+#page-home #hub-accordion > .hub-section:nth-child(5) {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: auto !important;
+  align-items: start !important;
+  align-content: start !important;
+  align-self: start !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+
+#page-home #hub-accordion > .hub-section:nth-child(1) {
+  grid-area: section1 !important;
+}
+
+#page-home #hub-accordion > .hub-section:nth-child(3) {
+  grid-area: section2 !important;
+}
+
+#page-home #hub-accordion > .hub-section:nth-child(5) {
+  grid-area: section3 !important;
+}
+
+/* SECTION 1 — Paciente / ClCr / Fármacos: compact vertical stack. */
+#page-home #hub-accordion > .hub-section:nth-child(1) > .hub-l1-section {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: repeat(3, auto) !important;
+  gap: 10px !important;
+  align-items: start !important;
+  align-content: start !important;
+  align-self: start !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+
+#page-home #hub-accordion > .hub-section:nth-child(1) > .hub-l1-section > .hub-l1-row {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  align-self: start !important;
+  margin: 0 !important;
+}
+
+/* SECTION 2 — Interações / 3 módulos / Hemodinâmica. */
+#page-home #hub-accordion > .hub-section:nth-child(3) > #hub-l2-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-areas:
+    "interacoes interacoes interacoes"
+    "eletrolitos infusao fluidos"
+    "hemodinamica hemodinamica hemodinamica" !important;
+  grid-template-rows: auto auto auto !important;
+  gap: 10px !important;
+  align-items: start !important;
+  align-content: start !important;
+  align-self: start !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+
+#page-home #hub-card-interacoes   { grid-area: interacoes !important; }
+#page-home #hub-card-eletrolitos  { grid-area: eletrolitos !important; }
+#page-home #hub-card-infusao      { grid-area: infusao !important; }
+#page-home #hub-card-fluidos      { grid-area: fluidos !important; }
+#page-home #hub-card-hemodinamica { grid-area: hemodinamica !important; }
+
+/* SECTION 3 — Pediatria / Gestantes. */
+#page-home #hub-accordion > .hub-section:nth-child(5) > .hub-l3-row {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-areas: "pediatria gestante" !important;
+  grid-template-rows: auto !important;
+  gap: 10px !important;
+  align-items: start !important;
+  align-content: start !important;
+  align-self: start !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+
+#page-home #hub-card-pediatria { grid-area: pediatria !important; }
+#page-home #hub-card-gestante  { grid-area: gestante !important; }
+
+#page-home #hub-card-patient,
+#page-home #hub-card-clcr,
+#page-home #hub-card-farmacos,
+#page-home #hub-card-interacoes,
+#page-home #hub-card-eletrolitos,
+#page-home #hub-card-infusao,
+#page-home #hub-card-fluidos,
+#page-home #hub-card-hemodinamica,
+#page-home #hub-card-pediatria,
+#page-home #hub-card-gestante {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  align-self: start !important;
+  margin: 0 !important;
+}
+
+/* Tablet: stack only the three real section hosts. */
+@media (max-width: 900px) {
+  #page-home #hub-accordion {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas:
+      "section1"
+      "section2"
+      "section3" !important;
+    grid-template-rows: auto auto auto !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Phone: collapse each section's own grid, preserving functional order. */
+@media (max-width: 480px) {
+  #page-home #hub-accordion,
+  #page-home #hub-accordion > .hub-section:nth-child(1) > .hub-l1-section,
+  #page-home #hub-accordion > .hub-section:nth-child(3) > #hub-l2-grid,
+  #page-home #hub-accordion > .hub-section:nth-child(5) > .hub-l3-row {
+    gap: 8px !important;
+  }
+
+  #page-home #hub-accordion > .hub-section:nth-child(3) > #hub-l2-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas:
+      "interacoes"
+      "eletrolitos"
+      "infusao"
+      "fluidos"
+      "hemodinamica" !important;
+    grid-template-rows: auto auto auto auto auto !important;
+  }
+
+  #page-home #hub-accordion > .hub-section:nth-child(5) > .hub-l3-row {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas:
+      "pediatria"
+      "gestante" !important;
+    grid-template-rows: auto auto !important;
+  }
+}
+</style>
 </head>
 <body>
 <div id="app">
