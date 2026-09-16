@@ -148,7 +148,10 @@
       'right:0!important;',
       'bottom:0!important;',
       'width:auto!important;',
-      'height:auto!important;',
+      /* R1C3R10: explicit scrollport: fixed + top/bottom + auto
+         previously expanded a long projected card to intrinsic content height. */
+      'height:calc(100vh - var(--mc-overlay-projection-top,56px))!important;',
+      'height:calc(100dvh - var(--mc-overlay-projection-top,56px))!important;',
       'min-height:0!important;',
       'max-height:none!important;',
       'box-sizing:border-box!important;',

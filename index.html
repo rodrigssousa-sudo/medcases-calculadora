@@ -9021,6 +9021,59 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
     grid-template-rows: auto auto !important;
   }
 }
+
+/* MEDCASES_HOME_R1C3R6_APPROVED_DESIGN_V1_B_R0
+   Desktop user map: left 420/right 640, proportional to 1280px max.
+   Structural hosts preserved; native responsive breakpoints below retained. */
+@media (min-width: 901px) {
+  #page-home #hub-accordion {
+    grid-template-columns: minmax(0, 21fr) minmax(0, 32fr) !important;
+    column-gap: 8px !important;
+    row-gap: 8px !important;
+    width: min(100%, 1280px) !important;
+    max-width: 1280px !important;
+    margin-inline: auto !important;
+  }
+  #page-home #hub-accordion > .hub-section:nth-child(1) > .hub-l1-section,
+  #page-home #hub-accordion > .hub-section:nth-child(3) > #hub-l2-grid,
+  #page-home #hub-accordion > .hub-section:nth-child(5) > .hub-l3-row {
+    gap: 6px !important;
+  }
+  #page-home #hub-accordion > .hub-section:nth-child(5) > .hub-l3-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: start !important;
+  }
+}
+
+/* MEDCASES_HOME_R1C3R7_ROW_UNIFORMITY */
+@media (min-width: 1180px){
+  :where(body:not(.calc-overlay-open)) #hub-accordion{
+    max-width:1280px !important;
+  }
+
+  :where(body:not(.calc-overlay-open)) #page-home .hub-section{
+    align-self:start !important;
+  }
+
+  :where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos,
+  :where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao,
+  :where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos{
+    align-self:stretch !important;
+  }
+
+  :where(body:not(.calc-overlay-open)) #page-home #hub-card-pediatria,
+  :where(body:not(.calc-overlay-open)) #page-home #hub-card-gestante{
+    min-height:122px !important;
+    height:122px !important;
+  }
+}
+
+/* MEDCASES_HOME_R1C3R8_GRID_KEEP */
+@media (min-width: 1180px){
+  :where(body:not(.calc-overlay-open)) #hub-accordion{
+    max-width:1280px !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -9088,8 +9141,8 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
               <div class="hub-card-ico hub-ico--patient"><i class="fa-solid fa-user-injured"></i></div>
               <div class="hub-card-meta">
                 <div class="hub-card-name">
-                  <span class="lang-hub-pt">Dados do Paciente</span>
-                  <span class="lang-hub-es">Datos del Paciente</span>
+                  <span class="lang-hub-pt">Função Renal</span>
+                  <span class="lang-hub-es">Función Renal</span>
                 </div>
                 <div class="hub-card-desc">
                   <span class="lang-hub-pt">Peso · Idade · ClCr · IMC · Sexo</span>
@@ -24504,7 +24557,7 @@ document.addEventListener('DOMContentLoaded', () => {
   _updateDrugSearchHint();
 
   /* ── NEWS2: inicializa escala 1 e popula select de SpO₂ ── */
-  setNEWS2Scale(1);
+  if (typeof setNEWS2Scale === 'function') setNEWS2Scale(1);
 
   /* ── Infusões: inicializa banco de drogas e modos ── */
   if (typeof initInfusionDatabase === 'function') initInfusionDatabase();
@@ -25894,7 +25947,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-  window.__fdCanonicalCurrentDrug = drug || null;
+  if (typeof drug !== 'undefined') window.__fdCanonicalCurrentDrug = drug || null;
   queueMicrotask(() => window._fdEnsureCanonicalPosologyOwner?.());
 
   /* R3 one-shot no-data lifecycle settle */
@@ -41201,8 +41254,8 @@ html[data-theme="light"] #page-home {
   box-shadow: none !important;
   filter: none !important;
   overflow: hidden !important;
-  height: 85px !important;
-  min-height: 85px !important;
+  height: auto !important;
+  min-height: 104px !important;
 }
 
 #page-home #hub-l2-grid > .hub-card:not(.is-open)::before,
@@ -41229,9 +41282,14 @@ html[data-theme="light"] #page-home {
 #page-home #hub-card-farmacos:not(.is-open) .hub-card-trigger,
 #page-home #hub-l2-grid > .hub-card:not(.is-open) .hub-card-trigger,
 #page-home .hub-l3-row > .hub-card:not(.is-open) .hub-card-trigger {
-  height: 100% !important;
-  min-height: 85px !important;
-  padding: 10px !important;
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) 18px !important;
+  grid-template-rows: auto !important;
+  align-items: center !important;
+  align-content: center !important;
+  height: auto !important;
+  min-height: 104px !important;
+  padding: 12px !important;
   gap: 8px !important;
   color: var(--mch-text) !important;
   background: transparent !important;
@@ -41286,8 +41344,8 @@ html[data-theme="light"] #page-home {
 /* Keep the legacy two-line Pediatrics/Gestantes layout compatible with the 54px visual slot. */
 #page-home #hub-card-pediatria:not(.is-open) .hub-card-trigger,
 #page-home #hub-card-gestante:not(.is-open) .hub-card-trigger {
-  grid-template-columns: 44px minmax(0, 1fr) 18px !important;
-  min-height: 85px !important;
+  grid-template-columns: 44px minmax(0, 1fr) max-content 18px !important;
+  min-height: 104px !important;
 }
 
 /* Direct semantic equivalents from MedCases Home V2. */
@@ -41368,6 +41426,447 @@ html[data-theme="light"] #page-home #hub-card-pediatria:not(.is-open) {
  * No selector below styles Farmacos V2 internals.
  * .is-open is deliberately absent from all surface/geometry owners above.
  */
+
+/* MEDCASES_HOME_R1C3R5_CLOSED_CARDS_TEXT_GEOMETRY_V1_B_R0
+   Only closed home state: no clinical panels, no projected drug overlay. */
+#page-home #hub-accordion .hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > .hub-card-body {
+  display: none !important;
+}
+#page-home #hub-accordion .hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > .hub-card-trigger > .hub-card-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-self: center !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  gap: 4px !important;
+}
+#page-home #hub-accordion .hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > .hub-card-trigger .hub-card-name,
+#page-home #hub-accordion .hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > .hub-card-trigger .hub-card-desc {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin-top: 0 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: break-word !important;
+}
+#page-home #hub-accordion .hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > .hub-card-trigger .hub-card-desc {
+  line-height: 1.35 !important;
+}
+#page-home #hub-card-pediatria:not(.is-open) > .hub-card-trigger > .hub-soon-badge,
+#page-home #hub-card-gestante:not(.is-open) > .hub-card-trigger > .hub-soon-badge {
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+}
+#page-home #hub-card-pediatria:not(.is-open) > .hub-card-trigger > .hub-card-chevron,
+#page-home #hub-card-gestante:not(.is-open) > .hub-card-trigger > .hub-card-chevron {
+  grid-column: 4 !important;
+  grid-row: 1 !important;
+}
+#page-home #hub-version-footer {
+  margin-top: 18px !important;
+  padding-bottom: 12px !important;
+}
+
+/* MEDCASES_HOME_R1C3R6_APPROVED_VISUAL_V1_B_R0
+   Scope: compact CLOSED home cards only; no clinical or projected content. */
+#page-home #hub-accordion .hub-card:not(.hub-card--static):not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger > .hub-card-ico {
+  display: none !important;
+}
+#page-home #hub-accordion .hub-card:not(.hub-card--static):not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger {
+  grid-template-columns: minmax(0, 1fr) 18px !important;
+  grid-template-rows: auto !important;
+  column-gap: 10px !important;
+  justify-content: stretch !important;
+  align-items: center !important;
+  padding: 12px 18px !important;
+}
+#page-home #hub-accordion .hub-card:not(.hub-card--static):not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger > .hub-card-meta {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  min-width: 0 !important;
+}
+#page-home #hub-accordion .hub-card:not(.hub-card--static):not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger > .hub-card-chevron {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+/* User's 110px primary / 112px other cards. Minimum, never hard clipping. */
+#page-home #hub-card-patient:not(.is-open),
+#page-home #hub-card-interacoes:not(.is-open) {
+  height: auto !important;
+  min-height: 110px !important;
+}
+#page-home #hub-card-patient:not(.is-open) > .hub-card-trigger,
+#page-home #hub-card-interacoes:not(.is-open) > .hub-card-trigger {
+  height: auto !important;
+  min-height: 110px !important;
+}
+#page-home #hub-card-farmacos:not(.is-open),
+#page-home #hub-card-eletrolitos:not(.is-open),
+#page-home #hub-card-infusao:not(.is-open),
+#page-home #hub-card-fluidos:not(.is-open),
+#page-home #hub-card-hemodinamica:not(.is-open),
+#page-home #hub-card-pediatria:not(.is-open),
+#page-home #hub-card-gestante:not(.is-open) {
+  height: auto !important;
+  min-height: 112px !important;
+}
+#page-home #hub-card-farmacos:not(.is-open) > .hub-card-trigger,
+#page-home #hub-card-eletrolitos:not(.is-open) > .hub-card-trigger,
+#page-home #hub-card-infusao:not(.is-open) > .hub-card-trigger,
+#page-home #hub-card-fluidos:not(.is-open) > .hub-card-trigger,
+#page-home #hub-card-hemodinamica:not(.is-open) > .hub-card-trigger,
+#page-home #hub-card-pediatria:not(.is-open) > .hub-card-trigger,
+#page-home #hub-card-gestante:not(.is-open) > .hub-card-trigger {
+  height: auto !important;
+  min-height: 112px !important;
+}
+/* Pediatric/obstetric 'soon' badges remain functional on two-column trigger. */
+#page-home #hub-card-pediatria:not(.is-open) > .hub-card-trigger,
+#page-home #hub-card-gestante:not(.is-open) > .hub-card-trigger {
+  grid-template-columns: minmax(0,1fr) max-content 18px !important;
+}
+#page-home #hub-card-pediatria:not(.is-open) > .hub-card-trigger > .hub-soon-badge,
+#page-home #hub-card-gestante:not(.is-open) > .hub-card-trigger > .hub-soon-badge {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+#page-home #hub-card-pediatria:not(.is-open) > .hub-card-trigger > .hub-card-chevron,
+#page-home #hub-card-gestante:not(.is-open) > .hub-card-trigger > .hub-card-chevron {
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+}
+/* The legacy closed-card owner sets shorthand gap:3px later in source;
+   restore approved desktop host gaps here after that shorthand. */
+@media (min-width: 901px) {
+  #page-home #hub-accordion {
+    column-gap: 8px !important;
+    row-gap: 8px !important;
+  }
+}
+/* Renal dashboard is a real content card; no fixed height or clipping imposed. */
+#page-home #hub-card-clcr.hub-card--static {
+  min-height: 180px !important;
+  height: auto !important;
+}
+/* Primary title hierarchy, without adding or translating clinical text. */
+#page-home #hub-card-patient:not(.is-open) .hub-card-name,
+#page-home #hub-card-interacoes:not(.is-open) .hub-card-name,
+#page-home #hub-card-farmacos:not(.is-open) .hub-card-name,
+#page-home #hub-card-hemodinamica:not(.is-open) .hub-card-name,
+#page-home #hub-card-pediatria:not(.is-open) .hub-card-name,
+#page-home #hub-card-gestante:not(.is-open) .hub-card-name {
+  font-size: 19px !important;
+}
+#page-home #hub-card-eletrolitos:not(.is-open) .hub-card-name,
+#page-home #hub-card-infusao:not(.is-open) .hub-card-name,
+#page-home #hub-card-fluidos:not(.is-open) .hub-card-name {
+  font-size: 18px !important;
+}
+#page-home #hub-accordion .hub-card:not(.is-open) > .hub-card-trigger .hub-card-desc {
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+}
+#page-home #hub-version-footer {
+  margin-top: 18px !important;
+}
+@media (max-width: 480px) {
+  #page-home #hub-accordion .hub-card:not(.hub-card--static):not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger {
+    padding: 12px !important;
+  }
+}
+
+/* MEDCASES_HOME_R1C3R7_UNIFORM_ROW_FULLCARD_TOUCH */
+:where(body:not(.calc-overlay-open)) #page-home .hub-card,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"]{
+  position:relative !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card > button,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card > a,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card > summary,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card > [role="button"],
+:where(body:not(.calc-overlay-open)) #page-home .hub-card > .hub-card-trigger,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card > .hub-card-button,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card > .hub-trigger,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card > .card-trigger,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] > button,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] > a,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] > summary,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] > [role="button"],
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] > .hub-card-trigger,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] > .hub-card-button,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] > .hub-trigger,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] > .card-trigger{
+  width:100% !important;
+  min-width:100% !important;
+  height:100% !important;
+  min-height:100% !important;
+  display:block !important;
+  position:absolute !important;
+  inset:0 !important;
+  box-sizing:border-box !important;
+  cursor:pointer !important;
+  background:transparent !important;
+  border:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  z-index:2 !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-inner,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-content,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-copy,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-main,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-head,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-trigger-inner,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .card-trigger-inner,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-inner,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-content,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-copy,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-main,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-head,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-trigger-inner,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .card-trigger-inner{
+  min-height:100% !important;
+  width:100% !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  padding:20px 54px 20px 24px !important;
+  gap:8px !important;
+  box-sizing:border-box !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-title,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-title,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card h1,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card h2,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card h3,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card h4,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-title,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-title,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] h1,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] h2,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] h3,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] h4{
+  margin:0 !important;
+  width:100% !important;
+  text-align:center !important;
+  align-self:center !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card p,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card small,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] p,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] small{
+  margin:0 !important;
+  width:100% !important;
+  max-width:100% !important;
+  text-align:center !important;
+  align-self:center !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-chevron,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-chevron,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .chevron,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card svg.chevron,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-chevron,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-chevron,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .chevron,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] svg.chevron{
+  position:absolute !important;
+  right:18px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  margin:0 !important;
+  z-index:3 !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos{
+  min-height:166px !important;
+  height:166px !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-patient,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-interacoes{
+  min-height:118px !important;
+  height:118px !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-farmacos,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-hemodinamica,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-pediatria,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-gestante{
+  min-height:122px !important;
+  height:122px !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-clcr{
+  min-height:186px !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-pediatria,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-gestante{
+  align-self:stretch !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card svg:not(.chevron),
+:where(body:not(.calc-overlay-open)) #page-home .hub-card [class*="icon"],
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] svg:not(.chevron),
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] [class*="icon"]{
+  display:none !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .medcases-pro,
+:where(body:not(.calc-overlay-open)) #page-home .home-footer,
+:where(body:not(.calc-overlay-open)) #page-home footer,
+:where(body:not(.calc-overlay-open)) #page-home .brand-footer{
+  margin-top:18px !important;
+}
+
+/* MEDCASES_HOME_R1C3R8_ICONS_RESTORE_RENAL_LABEL */
+:where(body:not(.calc-overlay-open)) #page-home .hub-card svg:not(.chevron),
+:where(body:not(.calc-overlay-open)) #page-home .hub-card [class*="icon"],
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] svg:not(.chevron),
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] [class*="icon"]{
+  display:inline-flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-inner,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-content,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-copy,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-main,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-head,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-trigger-inner,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .card-trigger-inner,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-inner,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-content,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-copy,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-main,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-head,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-trigger-inner,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .card-trigger-inner{
+  display:grid !important;
+  grid-template-columns:36px minmax(0,1fr) 20px !important;
+  align-items:center !important;
+  justify-content:stretch !important;
+  text-align:left !important;
+  gap:12px !important;
+  padding:18px 22px !important;
+  min-height:100% !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-title,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-title,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card h1,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card h2,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card h3,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card h4,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-title,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-title,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] h1,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] h2,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] h3,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] h4{
+  margin:0 0 6px 0 !important;
+  width:100% !important;
+  text-align:left !important;
+  align-self:center !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card p,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card small,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] p,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] small{
+  margin:0 !important;
+  width:100% !important;
+  text-align:left !important;
+  line-height:1.25 !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-card-chevron,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .hub-chevron,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card .chevron,
+:where(body:not(.calc-overlay-open)) #page-home .hub-card svg.chevron,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-card-chevron,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .hub-chevron,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] .chevron,
+:where(body:not(.calc-overlay-open)) #page-home [id^="hub-card-"] svg.chevron{
+  position:static !important;
+  transform:none !important;
+  margin-left:auto !important;
+  justify-self:end !important;
+  align-self:center !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos .hub-card-title,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao .hub-card-title,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos .hub-card-title,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos .hub-title,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao .hub-title,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos .hub-title,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos h1,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao h1,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos h1,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos h2,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao h2,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos h2,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos h3,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao h3,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos h3{
+  font-size:19px !important;
+  line-height:1.08 !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+  white-space:normal !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos .hub-card-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao .hub-card-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos .hub-card-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos .hub-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao .hub-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos .hub-subtitle,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos p,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao p,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos p,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-eletrolitos small,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-infusao small,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-fluidos small{
+  font-size:12px !important;
+  line-height:1.22 !important;
+  word-break:keep-all !important;
+  overflow-wrap:anywhere !important;
+  white-space:normal !important;
+}
+
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-patient,
+:where(body:not(.calc-overlay-open)) #page-home #hub-card-interacoes{
+  min-height:112px !important;
+  height:112px !important;
+}
 </style>
 <!-- CALC-HOME-MEDCASES-V1-B-R0 END -->
 
@@ -59969,7 +60468,59 @@ function show(){const u=ensure();u.page.dataset.open='true';u.page.style.setProp
 function hide(){const p=document.getElementById(PAGE_ID);if(p){p.dataset.open='false';p.style.setProperty('display','none','important');p.style.setProperty('visibility','hidden','important');p.style.setProperty('opacity','0','important')}document.documentElement.classList.remove('mc-drug-cleanroom-open');document.body.classList.remove('mc-drug-cleanroom-open')}
 const loading=()=>{const u=ensure(),l=lang();u.tt.textContent='Fármaco';u.eye.textContent=L[l].eye;u.name.textContent=L[l].loading;u.klass.textContent='';u.loading.textContent=L[l].loading;u.loading.hidden=false};
 const underlying=()=>{const fd=document.getElementById('fd-modal'),all=fd?[...fd.querySelectorAll('input')]:[];const pick=ts=>all.map(el=>({el,s:ts.reduce((n,t)=>n+(norm([el.id,el.name,el.placeholder,el.getAttribute('aria-label'),el.parentElement?.textContent?.slice(0,100)].filter(Boolean).join(' ')).includes(norm(t))?1:0),0)})).sort((a,b)=>b.s-a.s).find(x=>x.s>0)?.el||null;return{age:pick(['idade','edad','age']),weight:pick(['peso','weight','kg'])}};
-const bridge=()=>{const u=ensure(),x=underlying();for(const[v,sr,k]of[[u.ai,x.age,'age'],[u.wi,x.weight,'weight']]){if(!v||!sr)continue;if(document.activeElement!==v)v.value=sr.value||'';if(!v.dataset.bound){v.dataset.bound='1';v.addEventListener('input',()=>{const now=underlying()[k];if(now){now.value=v.value;now.dispatchEvent(new Event('input',{bubbles:true}));now.dispatchEvent(new Event('change',{bubbles:true}))}})}}};
+const bridge=()=>{
+  const u=ensure(),x=underlying();
+  const p=window.hmPatientState||null;
+  const stamp=Number(p?._savedAt);
+  const ttl=Number(window.HM_PATIENT_TTL_MS);
+  const maxAge=Number.isFinite(ttl)&&ttl>0?ttl:900000;
+  const now=Date.now();
+  const fixed=window.__hmUserRequestedResults===true
+    &&document.documentElement.classList.contains('hm-user-results-ready')
+    &&p&&Number.isFinite(stamp)&&stamp>0&&now>=stamp&&now-stamp<maxAge;
+  const context=String(u.page.dataset.mcDrugId||active()||'')+'|'+(fixed?String(stamp):'none');
+  for(const[v,sr,k]of[[u.ai,x.age,'age'],[u.wi,x.weight,'weight']]){
+    if(!v)continue;
+    const previous=v.dataset.mcR14Context||'';
+    if(previous!==context){
+      const previousStamp=previous.slice(previous.lastIndexOf('|')+1);
+      if(previous&&previousStamp!=='none'&&!fixed){
+        /* Clear only the provider's matching age/weight when a previously
+           fixed home session was cleared or expired. No clinical data owner
+           or patient state is mutated here. */
+        if(sr)sr.value='';
+        v.dataset.mcR14NoProvider='1';
+      }else if(fixed){
+        delete v.dataset.mcR14NoProvider;
+      }
+      v.value='';
+      delete v.dataset.mcR14Manual;
+      v.dataset.mcR14Context=context;
+    }
+    const raw=fixed?p[k]:null;
+    const value=raw==null?NaN:Number(raw);
+    if(fixed&&Number.isFinite(value)&&value>0&&!v.dataset.mcR14Manual){
+      if(document.activeElement!==v)v.value=String(value);
+    }else if(!fixed&&!v.dataset.mcR14NoProvider&&sr
+      &&!v.dataset.mcR14Manual&&document.activeElement!==v){
+      /* Preserve the pre-existing provider fallback for standalone drug entry. */
+      v.value=sr.value||'';
+    }
+    if(!v.dataset.bound){
+      v.dataset.bound='1';
+      v.addEventListener('input',()=>{
+        v.dataset.mcR14Manual='1';
+        const provider=underlying()[k];
+        if(provider){
+          provider.value=v.value;
+          provider.dispatchEvent(new Event('input',{bubbles:true}));
+          provider.dispatchEvent(new Event('change',{bubbles:true}));
+        }
+      });
+    }
+  }
+};
+
 const result=()=>{
   const u=ensure(),l=lang();
   const src=[...document.querySelectorAll('.fd-canonical-calculated-result')].find(e=>!e.closest('#'+PAGE_ID));
@@ -60187,7 +60738,7 @@ const secCommercial=(title,names,l)=>{
   return{k:'commercialNames',source:s.dataset.mcContentSource};
 };
 /* __MC_CLEANROOM_DIRECT_JSON_FIRST_PAINT_RENDER_MODE_V1_B_R0__ */
-const render=async(drug,why,directOnly=false)=>{if(S.busy)return;const fd=document.getElementById('fd-modal');if((!directOnly&&!fd?.classList.contains('open'))||!drug)return;S.busy=true;try{const l=lang(),drugText=String(drug),rawFile=/\.json$/i.test(drugText)?drugText:drugText+'.json',aliasBase=drugText.replace(/\.json$/i,''),aliasKey=aliasBase.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,''),aliasMap=(typeof MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP==='object'&&MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP)||null,file=(aliasMap&&aliasMap[aliasKey])||rawFile;let data=S.cache.get(file);if(!data){try{const r=await fetch('data/drugs/'+encodeURIComponent(file),{cache:'default'});if(r.ok){data=await r.json();S.cache.set(file,data)}}catch{}}if(!data){loading();return}const u=ensure(),p=P(l),lab=L[l],display=first(data,p.name)||drug,klass=first(data,p.klass)||'';u.loading.hidden=true;u.eye.textContent=lab.eye;u.name.textContent=display;u.tt.textContent=display;u.klass.textContent=klass;u.al.textContent=lab.age;u.wl.textContent=lab.weight;u.cb.textContent=lab.calculate;u.rl.textContent=lab.result;const a=[];a.push(sec('dose',lab.dose,first(data,p.dose),(directOnly?undefined:provider('dose')),l));a.push(sec('renal',lab.renal,first(data,p.renal),(directOnly?undefined:provider('renal')),l));a.push(sec('hepatic',lab.hepatic,first(data,p.hepatic),(directOnly?undefined:provider('hepatic')),l));a.push(sec('indications',lab.indications,first(data,p.indications),(directOnly?undefined:provider('indications')),l));a.push(sec('contraindications',lab.contraindications,first(data,p.contraindications),(directOnly?undefined:provider('contraindications')),l));a.push(sec('adverse',lab.adverse,first(data,p.adverse),(directOnly?undefined:provider('adverse')),l));a.push(sec('interactions',lab.interactions,first(data,p.interactions),(directOnly?undefined:provider('interactions')),l));const mon=first(data,p.monitoring),alerts=first(data,p.alerts);a.push(sec('monitoring',lab.monitoring,has(mon)||has(alerts)?{monitoring:mon,alerts}:undefined,(directOnly?undefined:provider('monitoring')),l));const adm=first(data,p.administration),prep=first(data,p.preparation);a.push(sec('admin',lab.admin,has(adm)||has(prep)?{administration:adm,preparation:prep}:undefined,(directOnly?undefined:provider('admin')),l));const mech=first(data,p.mechanism),pk=first(data,p.pk);a.push(sec('pharmacology',lab.pharmacology,has(mech)||has(pk)?{mechanism:mech,pharmacokinetics:pk}:undefined,(directOnly?undefined:provider('pharmacology')),l));a.push(sec('special',lab.special,first(data,p.special),(directOnly?undefined:provider('special')),l));a.push(sec('presentations',lab.presentations,first(data,p.presentations),(directOnly?undefined:provider('presentations')),l));a.push(secCommercial(lab.commercialNames,commercialFor(data,l),l));a.push(sec('references',lab.references,first(data,p.references),(directOnly?undefined:provider('references')),l));u.page.dataset.mcDrugId=drug;u.page.dataset.mcLang=l;u.page.dataset.mcVisibleOrder=ORDER.join(',');u.page.dataset.mcCanonicalStructure='v26-r1-16-point-lock';u.page.dataset.mcEmptySectionPolicy='hidden-empty';S.id=drug;S.lang=l;S.data=data;S.sig=sig();if(!directOnly){bridge();result()}show();polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug);setTimeout(()=>{polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},120);setTimeout(()=>{polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},320);console.log('['+BUILD+'] RENDERED',{why,id:drug,lang:l,displayName:display,parent:u.page.parentElement===document.body?'BODY':'NOT_BODY',visible:[...u.page.querySelectorAll('.mcd-sec')].filter(s=>!s.hidden).map(s=>s.dataset.mcBlock),audit:a})}finally{S.busy=false}};
+const render=async(drug,why,directOnly=false)=>{if(S.busy)return;const fd=document.getElementById('fd-modal');if((!directOnly&&!fd?.classList.contains('open'))||!drug)return;S.busy=true;try{const l=lang(),drugText=String(drug),rawFile=/\.json$/i.test(drugText)?drugText:drugText+'.json',aliasBase=drugText.replace(/\.json$/i,''),aliasKey=aliasBase.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,''),aliasMap=(typeof MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP==='object'&&MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP)||null,file=(aliasMap&&aliasMap[aliasKey])||rawFile;let data=S.cache.get(file);if(!data){try{const r=await fetch('data/drugs/'+encodeURIComponent(file),{cache:'default'});if(r.ok){data=await r.json();S.cache.set(file,data)}}catch{}}if(!data){loading();return}const u=ensure(),p=P(l),lab=L[l],display=first(data,p.name)||drug,klass=first(data,p.klass)||'';u.loading.hidden=true;u.eye.textContent=lab.eye;u.name.textContent=display;u.tt.textContent=display;u.klass.textContent=klass;u.al.textContent=lab.age;u.wl.textContent=lab.weight;u.cb.textContent=lab.calculate;u.rl.textContent=lab.result;const a=[];a.push(sec('dose',lab.dose,first(data,p.dose),(directOnly?undefined:provider('dose')),l));a.push(sec('renal',lab.renal,first(data,p.renal),(directOnly?undefined:provider('renal')),l));a.push(sec('hepatic',lab.hepatic,first(data,p.hepatic),(directOnly?undefined:provider('hepatic')),l));a.push(sec('indications',lab.indications,first(data,p.indications),(directOnly?undefined:provider('indications')),l));a.push(sec('contraindications',lab.contraindications,first(data,p.contraindications),(directOnly?undefined:provider('contraindications')),l));a.push(sec('adverse',lab.adverse,first(data,p.adverse),(directOnly?undefined:provider('adverse')),l));a.push(sec('interactions',lab.interactions,first(data,p.interactions),(directOnly?undefined:provider('interactions')),l));const mon=first(data,p.monitoring),alerts=first(data,p.alerts);a.push(sec('monitoring',lab.monitoring,has(mon)||has(alerts)?{monitoring:mon,alerts}:undefined,(directOnly?undefined:provider('monitoring')),l));const adm=first(data,p.administration),prep=first(data,p.preparation);a.push(sec('admin',lab.admin,has(adm)||has(prep)?{administration:adm,preparation:prep}:undefined,(directOnly?undefined:provider('admin')),l));const mech=first(data,p.mechanism),pk=first(data,p.pk);a.push(sec('pharmacology',lab.pharmacology,has(mech)||has(pk)?{mechanism:mech,pharmacokinetics:pk}:undefined,(directOnly?undefined:provider('pharmacology')),l));a.push(sec('special',lab.special,first(data,p.special),(directOnly?undefined:provider('special')),l));a.push(sec('presentations',lab.presentations,first(data,p.presentations),(directOnly?undefined:provider('presentations')),l));a.push(secCommercial(lab.commercialNames,commercialFor(data,l),l));a.push(sec('references',lab.references,first(data,p.references),(directOnly?undefined:provider('references')),l));u.page.dataset.mcDrugId=drug;u.page.dataset.mcLang=l;u.page.dataset.mcVisibleOrder=ORDER.join(',');u.page.dataset.mcCanonicalStructure='v26-r1-16-point-lock';u.page.dataset.mcEmptySectionPolicy='hidden-empty';S.id=drug;S.lang=l;S.data=data;S.sig=sig();bridge();if(!directOnly){result()}show();polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug);setTimeout(()=>{polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},120);setTimeout(()=>{polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},320);console.log('['+BUILD+'] RENDERED',{why,id:drug,lang:l,displayName:display,parent:u.page.parentElement===document.body?'BODY':'NOT_BODY',visible:[...u.page.querySelectorAll('.mcd-sec')].filter(s=>!s.hidden).map(s=>s.dataset.mcBlock),audit:a})}finally{S.busy=false}};
 const reconcile=(why,force=false)=>{const fd=document.getElementById('fd-modal');if(!fd?.classList.contains('open')){hide();S.id=S.lang=S.sig='';return}show();const drug=active();if(!drug){loading();return}bridge();result();const l=lang(),sg=sig();if(force||S.id!==drug||S.lang!==l||S.sig!==sg)render(drug,why)};
 const schedule=(why,force=false)=>[0,80,220].forEach(ms=>setTimeout(()=>reconcile(why+'@'+ms,force&&ms===0),ms));
 document.addEventListener('click',e=>{const t=e.target instanceof Element?e.target:null;if(t?.closest('#'+PAGE_ID))return;schedule('external-click')},true);
@@ -66238,39 +66789,7 @@ html body #hub-card-farmacos.mc-overlay-projected-card
   padding-top:0!important;
 }
 
-/* Canonical close owner is the topbar .mcd-close.
-   Collapse only the redundant identity-row close slot. */
-html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21
-.mcd-id > .mcd-name-row{
-  grid-template-columns:minmax(0,1fr)!important;
-  gap:0!important;
-}
-
-html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21
-.mcd-id > .mcd-name-row > .mcd-id-close{
-  display:none!important;
-  visibility:hidden!important;
-  opacity:0!important;
-  width:0!important;
-  min-width:0!important;
-  max-width:0!important;
-  height:0!important;
-  min-height:0!important;
-  max-height:0!important;
-  margin:0!important;
-  padding:0!important;
-  border:0!important;
-  overflow:hidden!important;
-  pointer-events:none!important;
-}
-
-@media(max-width:700px){
-  html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21
-  .mcd-id > .mcd-name-row{
-    grid-template-columns:minmax(0,1fr)!important;
-    gap:0!important;
-  }
-}
+/* R1C3R11: preserve the canonical identity-row X and its existing closeFn; remove only R4B detail hiding rules. */
 </style>
 
 
@@ -67325,6 +67844,8 @@ console.info('['+BUILD+'] MOUNTED',{
 })();
 </script>
 <!-- MEDCASES_PREMIUM_R8_2_FREE60_LOCK_NATIVE_PAYWALL_V1_B_R0:end -->
+
+
 
 
 </body>
