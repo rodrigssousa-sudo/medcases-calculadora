@@ -219,6 +219,7 @@ const publicationManifest = {
   deterministicDosingPublishableCount: 0,
   textToRegimenInferenceUsed: false,
   immutableBundle: true,
+  generatedAtUtc: new Date().toISOString(),
   paths: {
     manifest: 'manifest.json',
     index: 'index.json',
@@ -257,6 +258,17 @@ if (fs.existsSync(finalBundleRoot)) {
   fs.renameSync(temporaryBundleRoot, finalBundleRoot);
 }
 
+const effectivePublication = readJson(
+  path.join(finalBundleRoot, 'publication.json'),
+);
+const generatedAtUtc = effectivePublication.generatedAtUtc ??
+  fs.statSync(finalBundleRoot).birthtime.toISOString();
+
+let previousCurrent = null;
+if (fs.existsSync(currentPath)) {
+  previousCurrent = readJson(currentPath);
+}
+
 const current = {
   schemaVersion: 'medcases-ai-drug-data-current-v1',
   bundleId,
@@ -272,6 +284,15 @@ const current = {
   typedRegimenCount: 0,
   deterministicDosingPublishableCount: 0,
   textToRegimenInferenceUsed: false,
+  generatedAtUtc,
+  clinicalBaseline: {
+    version: source.bundleVersion,
+    sha256: source.bundleSha256,
+  },
+  previousBundleId:
+    previousCurrent?.bundleId && previousCurrent.bundleId !== bundleId
+      ? previousCurrent.bundleId
+      : previousCurrent?.previousBundleId ?? null,
 };
 
 writeFileAtomically(currentPath, stableJson(current));

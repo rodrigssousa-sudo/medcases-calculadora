@@ -3,6 +3,7 @@
 const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
+const crypto = require('node:crypto');
 
 const {
   CAP,
@@ -24,6 +25,7 @@ function json(res, status, payload) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Content-Length', String(body.length));
   res.setHeader('Cache-Control', 'private, no-store');
+  res.setHeader('X-Robots-Tag', 'noindex, nofollow');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.end(body);
 }
@@ -63,6 +65,80 @@ function cleanDrugId(value) {
     return '';
   }
   return id;
+}
+
+function cleanBundleId(value) {
+  const id = String(value || '').trim();
+  return /^[a-z0-9._-]+$/.test(id) ? id : '';
+}
+
+function readPrivateJson(res, filePath, errorCode) {
+  if (!fs.existsSync(filePath)) {
+    return json(res, 404, { ok: false, error: errorCode });
+  }
+  try {
+    return json(res, 200, JSON.parse(fs.readFileSync(filePath, 'utf8')));
+  } catch (_) {
+    return json(res, 500, { ok: false, error: `${errorCode}_INVALID` });
+  }
+}
+
+function readVerifiedBundleJson(res, bundleRoot, bundleId, relativeFile) {
+  const publicationPath = path.join(bundleRoot, 'publication.json');
+  if (!fs.existsSync(publicationPath)) {
+    return json(res, 404, { ok: false, error: 'AI_BUNDLE_NOT_FOUND' });
+  }
+  let publication;
+  try {
+    publication = JSON.parse(fs.readFileSync(publicationPath, 'utf8'));
+  } catch (_) {
+    return json(res, 500, { ok: false, error: 'AI_BUNDLE_PUBLICATION_INVALID' });
+  }
+  if (publication.bundleId !== bundleId || publication.immutableBundle !== true) {
+    return json(res, 409, { ok: false, error: 'AI_BUNDLE_IDENTITY_INVALID' });
+  }
+  const filePath = path.resolve(bundleRoot, relativeFile);
+  if (relativeFile !== 'publication.json') {
+    const expected = publication.files?.[relativeFile]?.sha256;
+    if (!/^[a-f0-9]{64}$/.test(String(expected || '')) || !fs.existsSync(filePath)) {
+      return json(res, 404, { ok: false, error: 'AI_BUNDLE_FILE_NOT_FOUND' });
+    }
+    const actual = crypto.createHash('sha256').update(fs.readFileSync(filePath)).digest('hex');
+    if (actual !== expected) {
+      return json(res, 409, { ok: false, error: 'AI_BUNDLE_FILE_TAMPERED' });
+    }
+  }
+  return readPrivateJson(res, filePath, 'AI_BUNDLE_FILE_NOT_FOUND');
+}
+
+function readVerifiedCurrent(res, aiRoot) {
+  const currentPath = path.join(aiRoot, 'current.json');
+  if (!fs.existsSync(currentPath)) {
+    return json(res, 404, { ok: false, error: 'AI_CURRENT_NOT_FOUND' });
+  }
+  let current;
+  try {
+    current = JSON.parse(fs.readFileSync(currentPath, 'utf8'));
+  } catch (_) {
+    return json(res, 500, { ok: false, error: 'AI_CURRENT_INVALID' });
+  }
+  const bundleId = cleanBundleId(current.bundleId);
+  const publicationPath = path.join(aiRoot, 'bundles', bundleId, 'publication.json');
+  if (!bundleId || !fs.existsSync(publicationPath)) {
+    return json(res, 409, { ok: false, error: 'AI_CURRENT_BUNDLE_MISSING' });
+  }
+  try {
+    const publication = JSON.parse(fs.readFileSync(publicationPath, 'utf8'));
+    if (
+      publication.bundleId !== bundleId ||
+      publication.bundleSha256 !== current.bundleSha256
+    ) {
+      return json(res, 409, { ok: false, error: 'AI_CURRENT_SHA_MISMATCH' });
+    }
+  } catch (_) {
+    return json(res, 500, { ok: false, error: 'AI_BUNDLE_PUBLICATION_INVALID' });
+  }
+  return json(res, 200, current);
 }
 
 function loadFreeDrugIds(filePath, {
@@ -182,6 +258,50 @@ function createGatewayHandler({
           { ok: false, error: err.message },
         );
       }
+    }
+
+    const aiCurrent =
+      url.pathname === '/api/ai-drug-data/current' ||
+      url.pathname === '/api/ai-drug-data/current.json';
+    const aiBundleMatch = /^\/api\/ai-drug-data\/bundles\/([a-z0-9._-]+)\/(publication\.json|manifest\.json|index\.json|drugs\/([a-z0-9_-]+)\.json)$/.exec(url.pathname);
+
+    if (req.method === 'GET' && (aiCurrent || aiBundleMatch)) {
+      let claims;
+      try {
+        claims = authenticate(req);
+        if (
+          !claims.cap.includes(CAP.AI_DRUG_DATA) &&
+          !claims.cap.includes(CAP.DRUG_CATALOG_FULL)
+        ) {
+          const error = new Error('AI_DRUG_DATA_REQUIRED');
+          error.code = 'PREMIUM_REQUIRED';
+          throw error;
+        }
+      } catch (err) {
+        return json(res, err.code === 'PREMIUM_REQUIRED' ? 403 : 401, {
+          ok: false,
+          error: err.code === 'PREMIUM_REQUIRED' ? 'AI_DRUG_DATA_REQUIRED' : 'SESSION_TOKEN_INVALID',
+          capability: CAP.AI_DRUG_DATA,
+        });
+      }
+
+      const aiRoot = path.join(safeRoot, 'data', 'ai-drug-data');
+      if (aiCurrent) {
+        return readVerifiedCurrent(res, aiRoot);
+      }
+
+      const bundleId = cleanBundleId(aiBundleMatch[1]);
+      const relativeFile = aiBundleMatch[2];
+      const bundleRoot = path.resolve(aiRoot, 'bundles', bundleId);
+      const filePath = path.resolve(bundleRoot, relativeFile);
+      if (
+        !bundleId ||
+        !bundleRoot.startsWith(path.resolve(aiRoot, 'bundles') + path.sep) ||
+        !filePath.startsWith(bundleRoot + path.sep)
+      ) {
+        return json(res, 400, { ok: false, error: 'AI_BUNDLE_PATH_INVALID' });
+      }
+      return readVerifiedBundleJson(res, bundleRoot, bundleId, relativeFile);
     }
 
     const drugMatch =
@@ -423,6 +543,7 @@ module.exports = {
   DEFAULT_PORT,
   REQUIRED_FREE_DRUG_COUNT,
   cleanDrugId,
+  cleanBundleId,
   loadFreeDrugIds,
   createGatewayHandler,
   startGateway,

@@ -10,6 +10,7 @@ const CAP = Object.freeze({
   SCORES: 'scores',
   DRUG_CATALOG_FREE: 'drug_catalog_free',
   DRUG_CATALOG_FULL: 'drug_catalog_full',
+  AI_DRUG_DATA: 'ai_drug_data',
   DOSE_BY_WEIGHT: 'dose_by_weight',
   RENAL_ADJUSTMENT: 'renal_adjustment',
 });

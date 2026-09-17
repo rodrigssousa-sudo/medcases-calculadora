@@ -2894,3 +2894,91 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 })();
 /* END MEDCASES_GOLD120_GROUP12_R4_emergencia_js */
+/* GOLD33_SELECTIVE:acetilcisteina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["acetilcisteina"])throw new Error("GOLD33_MISSING_CANONICAL:acetilcisteina");db["acetilcisteina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "001",
+    "requiredFieldCount": 33,
+    "approvedSha256": "53bcfc3dbf1c89900d6f8192c0101c1b064d440c6500738b654f137c419db449",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Acetilcisteína — ficha restrita à injeção IV como antídoto para toxicidade por paracetamol/acetaminofeno.",
+    "class": "Antídoto; doador de grupos sulfidrila/precursor de glutationa.",
+    "pharmacologicClass": "Acetilcisteína IV.",
+    "commercialNames": "",
+    "presentation": "Solução injetável IV; concentração, ampola e disponibilidade local não confirmadas nesta etapa.",
+    "presentations": "",
+    "mechanism": "Repõe/auxilia a reposição de glutationa e reduz lesão hepática após exposição potencialmente hepatotóxica ao paracetamol.",
+    "pharmacodynamics": "Maior benefício quando iniciado precocemente, mas decisão deve seguir avaliação toxicológica e protocolo validado.",
+    "pharmacokinetics": "",
+    "indications": "Prevenir ou reduzir lesão hepática após ingestão aguda ou exposição supraterapêutica repetida a quantidade potencialmente hepatotóxica de paracetamol/acetaminofeno, em adultos e pediatria, conforme página do produto US.",
+    "dose": "Dose total rotulada nos protocolos IV é 300 mg/kg, mas o esquema, diluentes, volumes e duração são específicos de produto/país. NÃO gerar dose, volume ou velocidade automática sem PI completo vigente e protocolo toxicológico institucional.",
+    "pediatricDose": "A indicação do produto cobre pediatria, porém volumes precisam ser ajustados para <40 kg e restrição hídrica. Motor pediátrico BLOQUEADO até anexar tabela primária de diluição/infusão.",
+    "renalDose": "Não propor ajuste sem PI aplicável.",
+    "hepaticDose": "Uso é determinado pelo contexto toxicológico/hepático; não propor ajuste independente do protocolo.",
+    "commonAdverseEffects": "Rash, urticária e prurido; frequentemente durante a fase inicial de infusão.",
+    "dangerousAdverseEffects": "Reação de hipersensibilidade aguda com hipotensão, sibilância/broncoespasmo ou dispneia; risco de sobrecarga hídrica quando volume não é ajustado.",
+    "adverseEffects": "",
+    "contraindications": "Hipersensibilidade prévia à acetilcisteína conforme página do produto US.",
+    "interactions": "Não considerar esta ficha como avaliação de interações; revisar exposição a paracetamol, coingestões e tratamento concomitante do paciente.",
+    "monitoring": "Sinais vitais e reação durante infusão; protocolo toxicológico com dosagem de paracetamol e marcadores hepáticos/coagulação conforme cenário.",
+    "administration": "Somente IV em ambiente capaz de reconhecer e tratar anafilaxia/broncoespasmo. Não usar esta ficha para via oral ou mucolítica.",
+    "preparation": "Compatibilidade mencionada pela página do produto US: SG 5%, SF 0,45% e água estéril; NÃO inferir volumes/concentrações sem PI do produto local.",
+    "infusionProtocol": "BLOQUEADO. O texto fonte acessível não forneceu a tabela completa e vigente de etapas, volumes e taxas para a apresentação local.",
+    "pregnancy": "Emergência toxicológica: decisão individual especializada; não concluir nesta ficha.",
+    "lactation": "Não concluir nesta ficha.",
+    "specialPopulations": "Asma/antecedente de broncoespasmo exige cautela; <40 kg e restrição hídrica exigem ajuste de volume pelo PI aplicável.",
+    "patientEducation": "Uso hospitalar. Avisar imediatamente por chiado, dispneia, urticária, tontura ou sensação de desmaio durante a infusão.",
+    "clinicalPearls": "Não confundir acetilcisteína IV antídoto com apresentações orais/mucolíticas; concentração e infusão não são intercambiáveis.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CRÍTICO: antídoto IV; preparar/infundir somente com PI e protocolo vigente; cálculo pediátrico bloqueado.",
+    "alerts": "PUBLICAÇÃO BLOQUEADA até obter PI completo da apresentação alvo e validar aritmética, volumes e taxas com toxicologia/farmácia.",
+    "references": [
+      "Cumberland Pharmaceuticals. ACETADOTE (acetylcysteine) Injection. US. Consultado 2026-09-17. https://acetadote.com/"
+    ],
+    "ref": "https://acetadote.com/"
+  },
+  "es": {
+    "name": "Acetilcisteína — ficha restringida a la inyección IV como antídoto para toxicidad por paracetamol/acetaminofén.",
+    "class": "Antídoto; donador de grupos sulfhidrilo/precursor de glutatión.",
+    "pharmacologicClass": "Acetilcisteína IV.",
+    "commercialNames": "",
+    "presentation": "Solución inyectable IV; concentración, ampolla y disponibilidad local no confirmadas en esta etapa.",
+    "presentations": "",
+    "mechanism": "Repone/ayuda a reponer glutatión y reduce lesión hepática tras exposición potencialmente hepatotóxica al paracetamol.",
+    "pharmacodynamics": "Mayor beneficio cuando se inicia precozmente, pero la decisión debe seguir evaluación toxicológica y protocolo validado.",
+    "pharmacokinetics": "",
+    "indications": "Prevenir o reducir lesión hepática tras ingestión aguda o exposición supraterapéutica repetida a cantidad potencialmente hepatotóxica de paracetamol/acetaminofén, en adultos y pediatría, según página del producto estadounidense.",
+    "dose": "La dosis total rotulada en los protocolos IV es 300 mg/kg, pero el esquema, diluyentes, volúmenes y duración son específicos de producto/país. NO generar dosis, volumen o velocidad automática sin PI completo vigente y protocolo toxicológico institucional.",
+    "pediatricDose": "La indicación del producto cubre pediatría, pero los volúmenes deben ajustarse para <40 kg y restricción hídrica. Motor pediátrico BLOQUEADO hasta adjuntar tabla primaria de dilución/infusión.",
+    "renalDose": "No proponer ajuste sin PI aplicable.",
+    "hepaticDose": "El uso se determina por el contexto toxicológico/hepático; no proponer ajuste independiente del protocolo.",
+    "commonAdverseEffects": "Erupción, urticaria y prurito; frecuentemente durante la fase inicial de infusión.",
+    "dangerousAdverseEffects": "Reacción de hipersensibilidad aguda con hipotensión, sibilancias/broncoespasmo o disnea; riesgo de sobrecarga hídrica cuando el volumen no se ajusta.",
+    "adverseEffects": "",
+    "contraindications": "Hipersensibilidad previa a la acetilcisteína según página del producto estadounidense.",
+    "interactions": "No considerar esta ficha como evaluación de interacciones; revisar exposición a paracetamol, coingestiones y tratamiento concomitante del paciente.",
+    "monitoring": "Signos vitales y reacción durante infusión; protocolo toxicológico con dosaje de paracetamol y marcadores hepáticos/coagulación según escenario.",
+    "administration": "Solo IV en entorno capaz de reconocer y tratar anafilaxia/broncoespasmo. No usar esta ficha para vía oral o mucolítica.",
+    "preparation": "Compatibilidad mencionada por la página del producto estadounidense: DAD 5%, SF 0,45% y agua estéril; NO inferir volúmenes/concentraciones sin PI del producto local.",
+    "infusionProtocol": "BLOQUEADO. El texto fuente accesible no proporcionó la tabla completa y vigente de etapas, volúmenes y velocidades para la presentación local.",
+    "pregnancy": "Emergencia toxicológica: decisión individual especializada; no concluir en esta ficha.",
+    "lactation": "No concluir en esta ficha.",
+    "specialPopulations": "Asma/antecedente de broncoespasmo exige precaución; <40 kg y restricción hídrica exigen ajuste de volumen por el PI aplicable.",
+    "patientEducation": "Uso hospitalario. Avisar inmediatamente por sibilancias, disnea, urticaria, mareo o sensación de desmayo durante la infusión.",
+    "clinicalPearls": "No confundir acetilcisteína IV antídoto con presentaciones orales/mucolíticas; concentración e infusión no son intercambiables.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CRÍTICO: antídoto IV; preparar/infundir solo con PI y protocolo vigente; cálculo pediátrico bloqueado.",
+    "alerts": "PUBLICACIÓN BLOQUEADA hasta obtener PI completo de la presentación objetivo y validar aritmética, volúmenes y velocidades con toxicología/farmacia.",
+    "references": [
+      "Cumberland Pharmaceuticals. ACETADOTE (acetylcysteine) Injection. US. Consultado 2026-09-17. https://acetadote.com/"
+    ],
+    "ref": "https://acetadote.com/"
+  }
+};})();
+/* GOLD33_SELECTIVE:acetilcisteina:END */

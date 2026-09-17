@@ -101,7 +101,17 @@ for (const id of ids) {
     continue;
   }
 
-  const term = forbiddenTerms.find((x) => signal.includes(x));
+  // A clinical class may explicitly state that a sulfonamide is *not*
+  // antibacterial.  Negated occurrences are not positive antimicrobial
+  // classification signals.
+  const term = forbiddenTerms.find((x) => {
+    const positiveSignal = signal
+      .replace(/sulfonamid\S*\s+(?:não|nao|no)\s+antibacter\S*/g, '')
+      .replaceAll(`não ${x}`, '')
+      .replaceAll(`nao ${x}`, '')
+      .replaceAll(`no ${x}`, '');
+    return positiveSignal.includes(x);
+  });
   if (term) violations.push(`${id}:forbidden-term:${term}`);
 }
 assert(violations.length === 0, `Free antimicrobial violations: ${violations.join(', ')}`);

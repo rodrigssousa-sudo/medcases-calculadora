@@ -197,3 +197,91 @@
   }); /* fim Object.assign REUMATOLOGIA_DRUGS_DB — BUILD 451 (certolizumabe_pegol + abatacepte + rituximabe + tocilizumabe — Inauguração Módulo Reumatologia: DMARDs Biológicos) */
 
 })();
+/* GOLD33_SELECTIVE:abatacepte:START */
+;(function(){var db=window.REUMATOLOGIA_DRUGS_DB;if(!db||!db["abatacepte"])throw new Error("GOLD33_MISSING_CANONICAL:abatacepte");db["abatacepte"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "001",
+    "requiredFieldCount": 33,
+    "approvedSha256": "53bcfc3dbf1c89900d6f8192c0101c1b064d440c6500738b654f137c419db449",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Abatacepte.",
+    "class": "DMARD biológico; modulador seletivo de coestimulação de células T.",
+    "pharmacologicClass": "Proteína de fusão CTLA-4–Ig que se liga a CD80/CD86 e reduz a ativação de células T.",
+    "commercialNames": "",
+    "presentation": "Formulações IV e SC; a fonte US descreve frasco IV 250 mg e formulações SC.",
+    "presentations": "",
+    "mechanism": "Modula a segunda via de sinalização necessária à ativação completa dos linfócitos T.",
+    "pharmacodynamics": "Imunomodulação sistêmica; pode aumentar suscetibilidade a infecções.",
+    "pharmacokinetics": "",
+    "indications": "Indicações dependem de formulação, idade e jurisdição; incluem doenças inflamatórias articulares em rótulos específicos. Confirmar produto/país antes de liberar.",
+    "dose": "Adultos, formulação SC US/EMA: 125 mg uma vez por semana para AR/APs. O regime IV é por faixa de peso e requer confirmação no PI atual; não automatizar sem rota/formulação.",
+    "pediatricDose": "Há esquemas pediátricos dependentes de idade, peso e apresentação. Mantido bloqueado até registrar a tabela primária atual por produto.",
+    "renalDose": "Sem ajuste numérico proposto nesta etapa.",
+    "hepaticDose": "Sem ajuste numérico proposto nesta etapa.",
+    "commonAdverseEffects": "Cefaleia, náusea, infecção de vias aéreas superiores e reações no local da injeção/infusão.",
+    "dangerousAdverseEffects": "Infecção grave/opotunista, reativação de tuberculose/hepatite B e hipersensibilidade grave.",
+    "adverseEffects": "",
+    "contraindications": "Não iniciar em infecção grave ativa; confirmar contraindicações e advertências do produto local.",
+    "interactions": "Evitar combinação com outros imunobiológicos/imunossupressão adicional sem diretriz e especialista; vacinas vivas exigem avaliação específica.",
+    "monitoring": "Triagem de tuberculose e hepatite B antes do início; rastrear infecção durante tratamento e acompanhar resposta da doença.",
+    "administration": "IV ou SC conforme produto; não converter mg, volume, diluente ou tempo entre formulações.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "Dados e decisão dependem de indicação e produto; não concluir nesta ficha.",
+    "lactation": "Não concluir nesta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "Relatar febre, tosse persistente, dispneia, herpes-zóster ou outro sinal de infecção; não receber vacina viva sem orientação.",
+    "clinicalPearls": "",
+    "guidelineRecommendations": "",
+    "safetyFlags": "IMUNOSSUPRESSÃO: avaliação infecciosa prévia obrigatória; doses pediátrica e IV automatizadas bloqueadas.",
+    "alerts": "PUBLICAÇÃO BLOQUEADA até confirmar a bula atual e o produto/registro escolhido para BR/AR.",
+    "references": [
+      "Bristol Myers Squibb. ORENCIA U.S. Prescribing Information. US. Consultado 2026-09-17. https://packageinserts.bms.com/"
+    ],
+    "ref": "https://packageinserts.bms.com/"
+  },
+  "es": {
+    "name": "Abatacept.",
+    "class": "FARME biológico; modulador selectivo de la coestimulación de células T.",
+    "pharmacologicClass": "Proteína de fusión CTLA-4–Ig que se une a CD80/CD86 y reduce la activación de células T.",
+    "commercialNames": "",
+    "presentation": "Formulaciones IV y SC; la fuente estadounidense describe vial IV 250 mg y formulaciones SC.",
+    "presentations": "",
+    "mechanism": "Modula la segunda vía de señalización necesaria para la activación completa de los linfocitos T.",
+    "pharmacodynamics": "Inmunomodulación sistémica; puede aumentar la susceptibilidad a infecciones.",
+    "pharmacokinetics": "",
+    "indications": "Las indicaciones dependen de formulación, edad y jurisdicción; incluyen enfermedades articulares inflamatorias en etiquetas específicas. Confirmar producto/país antes de liberar.",
+    "dose": "Adultos, formulación SC EE. UU./EMA: 125 mg una vez por semana para AR/APs. El esquema IV es por rango de peso y requiere confirmación en el PI actual; no automatizar sin vía/formulación.",
+    "pediatricDose": "Existen esquemas pediátricos dependientes de edad, peso y presentación. Se mantiene bloqueado hasta registrar la tabla primaria actual por producto.",
+    "renalDose": "Sin ajuste numérico propuesto en esta etapa.",
+    "hepaticDose": "Sin ajuste numérico propuesto en esta etapa.",
+    "commonAdverseEffects": "Cefalea, náuseas, infección de vías aéreas superiores y reacciones en el lugar de inyección/infusión.",
+    "dangerousAdverseEffects": "Infección grave/oportunista, reactivación de tuberculosis/hepatitis B e hipersensibilidad grave.",
+    "adverseEffects": "",
+    "contraindications": "No iniciar en infección grave activa; confirmar contraindicaciones y advertencias del producto local.",
+    "interactions": "Evitar combinación con otros biológicos/inmunosupresión adicional sin guía y especialista; las vacunas vivas requieren evaluación específica.",
+    "monitoring": "Tamizaje de tuberculosis y hepatitis B antes del inicio; vigilar infección durante el tratamiento y seguir la respuesta de la enfermedad.",
+    "administration": "IV o SC según producto; no convertir mg, volumen, diluyente o tiempo entre formulaciones.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "Los datos y la decisión dependen de indicación y producto; no concluir en esta ficha.",
+    "lactation": "No concluir en esta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "Informar fiebre, tos persistente, disnea, herpes zóster u otro signo de infección; no recibir vacuna viva sin orientación.",
+    "clinicalPearls": "",
+    "guidelineRecommendations": "",
+    "safetyFlags": "INMUNOSUPRESIÓN: evaluación infecciosa previa obligatoria; dosis pediátrica e IV automatizadas bloqueadas.",
+    "alerts": "PUBLICACIÓN BLOQUEADA hasta confirmar el prospecto actual y el producto/registro elegido para BR/AR.",
+    "references": [
+      "Bristol Myers Squibb. ORENCIA U.S. Prescribing Information. US. Consultado 2026-09-17. https://packageinserts.bms.com/"
+    ],
+    "ref": "https://packageinserts.bms.com/"
+  }
+};})();
+/* GOLD33_SELECTIVE:abatacepte:END */

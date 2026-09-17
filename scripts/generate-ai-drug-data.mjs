@@ -7,8 +7,10 @@ import { fileURLToPath } from 'node:url';
 
 const scriptPath = fileURLToPath(import.meta.url);
 const repoRoot = path.resolve(path.dirname(scriptPath), '..');
-const publicDataRoot = path.join(repoRoot, 'public', 'data');
-const manifestPath = path.join(publicDataRoot, 'manifest.json');
+// R30: the complete pharmacological catalog is private.  The AI projection
+// must therefore be derived from data/, never from the Free60 public mirror.
+const privateDataRoot = path.join(repoRoot, 'data');
+const manifestPath = path.join(privateDataRoot, 'manifest.json');
 const outputRoot = path.join(repoRoot, 'generated', 'ai-drug-data');
 const temporaryRoot = `${outputRoot}.tmp-${process.pid}`;
 
@@ -102,7 +104,7 @@ if (typeof endpoints.drugById !== 'string' || !endpoints.drugById.includes('{id}
   fail('Endpoint drugById inválido.');
 }
 
-const siteRoot = path.resolve(publicDataRoot, '..');
+const siteRoot = repoRoot;
 const indexPath = resolveEndpoint(siteRoot, endpoints.drugsIndex);
 const sourceIndex = readJson(indexPath);
 
@@ -139,13 +141,13 @@ for (const entry of sourceIndex) {
   if (calculatorDocument.id !== drugId) {
     fail(`Documento ${drugId} possui identidade divergente.`);
   }
-  if (calculatorDocument.dataVersion !== sourceManifest.version) {
-    fail(`Documento ${drugId} possui versão divergente.`);
-  }
   if (
-    calculatorDocument.clinicalContentSha256 !== sourceManifest.contentSha256
+    typeof calculatorDocument.dataVersion !== 'string' ||
+    !/^clinical-data-v1-[a-f0-9]{16}$/.test(calculatorDocument.dataVersion) ||
+    typeof calculatorDocument.clinicalContentSha256 !== 'string' ||
+    !/^[a-f0-9]{64}$/.test(calculatorDocument.clinicalContentSha256)
   ) {
-    fail(`Documento ${drugId} possui SHA clínico divergente.`);
+    fail(`Documento ${drugId} possui identidade clínica inválida.`);
   }
 
   const sourceDocumentSha256 = sha256File(documentPath);
@@ -153,8 +155,10 @@ for (const entry of sourceIndex) {
     schemaVersion: 'medcases-ai-drug-data-v1',
     drugId,
     calculatorBinding: {
-      bundleVersion: sourceManifest.version,
-      bundleSha256: sourceManifest.contentSha256,
+      catalogVersion: sourceManifest.version,
+      catalogSha256: sourceManifest.contentSha256,
+      bundleVersion: calculatorDocument.dataVersion,
+      bundleSha256: calculatorDocument.clinicalContentSha256,
       identitySchema: sourceManifest.identitySchema ?? null,
       sourceDocumentSha256,
       sourceModule:

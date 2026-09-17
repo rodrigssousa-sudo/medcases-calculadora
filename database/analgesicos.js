@@ -4252,3 +4252,91 @@
   }
 })();
 /* END MEDCASES_GOLD120_GROUP12_R4_analgesicos_js */
+/* GOLD33_SELECTIVE:aceclofenaco:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["aceclofenaco"])throw new Error("GOLD33_MISSING_CANONICAL:aceclofenaco");db["aceclofenaco"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "001",
+    "requiredFieldCount": 33,
+    "approvedSha256": "53bcfc3dbf1c89900d6f8192c0101c1b064d440c6500738b654f137c419db449",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Aceclofenaco.",
+    "class": "Anti-inflamatório não esteroidal (AINE).",
+    "pharmacologicClass": "Derivado do ácido fenilacético; inibidor da ciclo-oxigenase.",
+    "commercialNames": "",
+    "presentation": "Comprimidos 100 mg na ficha técnica espanhola consultada.",
+    "presentations": "",
+    "mechanism": "Inibe a síntese de prostaglandinas por inibição da ciclo-oxigenase.",
+    "pharmacodynamics": "Efeito analgésico e anti-inflamatório; os mesmos mecanismos aumentam riscos gastrointestinal, renal e cardiovascular.",
+    "pharmacokinetics": "",
+    "indications": "Tratamento sintomático de condições dolorosas e inflamatórias em rótulo espanhol; não estabelece disponibilidade BR/AR.",
+    "dose": "Espanha: 100 mg VO a cada 12 h; máximo 200 mg/dia. Usar a menor dose eficaz pelo menor tempo, conforme bula e risco individual.",
+    "pediatricDose": "Não estabelecida na fonte consultada; bloqueada.",
+    "renalDose": "Evitar uso na insuficiência renal grave; não propor ajuste numérico.",
+    "hepaticDose": "Insuficiência hepática leve/moderada: fonte espanhola recomenda iniciar 100 mg/dia; insuficiência grave: evitar/contraindicado conforme produto.",
+    "commonAdverseEffects": "Dispepsia, dor abdominal, náusea, diarreia, cefaleia, tontura e edema.",
+    "dangerousAdverseEffects": "Úlcera/perfuração/hemorragia gastrointestinal, insuficiência renal aguda, hepatotoxicidade, reação cutânea grave, anafilaxia e eventos trombóticos cardiovasculares.",
+    "adverseEffects": "",
+    "contraindications": "Hipersensibilidade a AINEs, sangramento/úlcera gastrointestinal ativa e insuficiência grave de órgãos exigem confirmação na bula local; não usar no terceiro trimestre sem fonte obstétrica aplicável.",
+    "interactions": "Anticoagulantes/antiagregantes, corticosteroides, ISRS, outros AINEs, IECA/BRA/diuréticos, lítio e metotrexato podem gerar riscos relevantes.",
+    "monitoring": "PA, sintomas GI/sangramento, creatinina/eletrólitos e função hepática em uso prolongado ou pacientes de risco.",
+    "administration": "VO, preferencialmente com alimento se houver desconforto gastrointestinal; não combinar com outro AINE.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "Evitar; no terceiro trimestre o risco fetal/materno é particularmente relevante. Confirmar rótulo obstétrico local.",
+    "lactation": "Não concluir nesta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "Suspender e procurar atendimento por melena, hematêmese, falta de ar, edema importante, rash/bolhas ou redução acentuada da diurese.",
+    "clinicalPearls": "",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO ALERTA: AINE com risco GI/renal/CV; pediatria bloqueada.",
+    "alerts": "Não inferir registro ou apresentações BR/AR a partir da ficha espanhola.",
+    "references": [
+      "AEMPS CIMA. FICHA TÉCNICA ACECLOFENACO ARISTO 100 mg. Spain. Consultado 2026-09-17. https://cima.aemps.es/"
+    ],
+    "ref": "https://cima.aemps.es/"
+  },
+  "es": {
+    "name": "Aceclofenaco.",
+    "class": "Antiinflamatorio no esteroideo (AINE).",
+    "pharmacologicClass": "Derivado del ácido fenilacético; inhibidor de la ciclooxigenasa.",
+    "commercialNames": "",
+    "presentation": "Comprimidos 100 mg en la ficha técnica española consultada.",
+    "presentations": "",
+    "mechanism": "Inhibe la síntesis de prostaglandinas mediante inhibición de la ciclooxigenasa.",
+    "pharmacodynamics": "Efecto analgésico y antiinflamatorio; los mismos mecanismos aumentan los riesgos gastrointestinal, renal y cardiovascular.",
+    "pharmacokinetics": "",
+    "indications": "Tratamiento sintomático de condiciones dolorosas e inflamatorias en etiqueta española; no establece disponibilidad BR/AR.",
+    "dose": "España: 100 mg VO cada 12 h; máximo 200 mg/día. Usar la menor dosis eficaz durante el menor tiempo, según prospecto y riesgo individual.",
+    "pediatricDose": "No establecida en la fuente consultada; bloqueada.",
+    "renalDose": "Evitar uso en insuficiencia renal grave; no proponer ajuste numérico.",
+    "hepaticDose": "Insuficiencia hepática leve/moderada: la fuente española recomienda iniciar 100 mg/día; insuficiencia grave: evitar/contraindicado según producto.",
+    "commonAdverseEffects": "Dispepsia, dolor abdominal, náuseas, diarrea, cefalea, mareo y edema.",
+    "dangerousAdverseEffects": "Úlcera/perforación/hemorragia gastrointestinal, insuficiencia renal aguda, hepatotoxicidad, reacción cutánea grave, anafilaxia y eventos trombóticos cardiovasculares.",
+    "adverseEffects": "",
+    "contraindications": "Hipersensibilidad a AINE, sangrado/úlcera gastrointestinal activa e insuficiencia grave de órganos exigen confirmación en el prospecto local; no usar en el tercer trimestre sin fuente obstétrica aplicable.",
+    "interactions": "Anticoagulantes/antiagregantes, corticosteroides, ISRS, otros AINE, IECA/ARA/diuréticos, litio y metotrexato pueden generar riesgos relevantes.",
+    "monitoring": "PA, síntomas GI/sangrado, creatinina/electrolitos y función hepática en uso prolongado o pacientes de riesgo.",
+    "administration": "VO, preferentemente con alimento si hay molestia gastrointestinal; no combinar con otro AINE.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "Evitar; en el tercer trimestre el riesgo fetal/materno es particularmente relevante. Confirmar etiqueta obstétrica local.",
+    "lactation": "No concluir en esta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "Suspender y buscar atención por melena, hematemesis, falta de aire, edema importante, erupción/ampollas o reducción marcada de la diuresis.",
+    "clinicalPearls": "",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTA ALERTA: AINE con riesgo GI/renal/CV; pediatría bloqueada.",
+    "alerts": "No inferir registro o presentaciones BR/AR a partir de la ficha española.",
+    "references": [
+      "AEMPS CIMA. FICHA TÉCNICA ACECLOFENACO ARISTO 100 mg. Spain. Consultado 2026-09-17. https://cima.aemps.es/"
+    ],
+    "ref": "https://cima.aemps.es/"
+  }
+};})();
+/* GOLD33_SELECTIVE:aceclofenaco:END */

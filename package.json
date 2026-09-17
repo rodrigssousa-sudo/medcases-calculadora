@@ -12,7 +12,15 @@
     "export:data": "node scripts/generate-offline-manifest.js && node scripts/verify-public-boundary.cjs",
     "build": "node scripts/generate-offline-manifest.js && node scripts/verify-public-boundary.cjs",
     "predeploy": "node scripts/verify-public-boundary.cjs",
-    "export:ai": "node -e \"throw Error('PUBLIC_AI_EXPORT_DISABLED_R30')\""
+    "export:ai": "node -e \"throw Error('PUBLIC_AI_EXPORT_DISABLED_R30')\"",
+    "gold33:package-gate": "node scripts/gold33-package-gate.mjs",
+    "gold33:deploy-gate": "node scripts/gold33-safe-deploy-gate.mjs",
+    "gold33:sync": "node scripts/gold33-selective-sync.mjs",
+    "gold33:identity": "node scripts/refresh-clinical-identity.mjs",
+    "gold33:stage-release": "node scripts/gold33-stage-release.mjs",
+    "test:gold33-pipeline": "node tests/gold33-pipeline-gates.test.mjs",
+    "test:gold33-sync": "node tests/gold33-selective-sync.test.mjs",
+    "test:gold33-staging": "node tests/gold33-stage-release.test.mjs"
   },
   "engines": {
     "node": ">=18.0.0"

@@ -2146,3 +2146,91 @@ Object.assign(window.NEFRO_DRUGS_DB, {
 }); /* fim aliases BUILD 456-NEFRO */
 
 })();
+/* GOLD33_SELECTIVE:acetato_de_calcio:START */
+;(function(){var db=window.NEFRO_DRUGS_DB;if(!db||!db["acetato_de_calcio"])throw new Error("GOLD33_MISSING_CANONICAL:acetato_de_calcio");db["acetato_de_calcio"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "001",
+    "requiredFieldCount": 33,
+    "approvedSha256": "53bcfc3dbf1c89900d6f8192c0101c1b064d440c6500738b654f137c419db449",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Acetato de cálcio.",
+    "class": "Quelante intestinal de fosfato à base de cálcio.",
+    "pharmacologicClass": "Forma complexos insolúveis com fosfato dietético no trato gastrointestinal.",
+    "commercialNames": "",
+    "presentation": "Cápsulas 667 mg de acetato de cálcio em rótulos US; produto/força local devem ser confirmados.",
+    "presentations": "",
+    "mechanism": "Liga-se ao fosfato da dieta, reduzindo sua absorção.",
+    "pharmacodynamics": "Reduz fósforo sérico quando associado à dieta e ao acompanhamento da DRC; pode aumentar cálcio sérico.",
+    "pharmacokinetics": "",
+    "indications": "Controle de hiperfosfatemia em pacientes com doença renal terminal em diálise no rótulo US consultado.",
+    "dose": "Rótulo US: dose inicial adulta de 2 cápsulas com cada refeição (cada cápsula 667 mg). Titular com fósforo e cálcio séricos; não automatizar porque força e produto locais podem divergir.",
+    "pediatricDose": "Não estabelecida; bloqueada.",
+    "renalDose": "Indicado no contexto de diálise; não é ajuste renal convencional. Requer nefrologia e monitorização mineral.",
+    "hepaticDose": "Sem ajuste numérico proposto nesta etapa.",
+    "commonAdverseEffects": "Hipercalcemia, constipação, náusea e prurido podem ocorrer.",
+    "dangerousAdverseEffects": "Hipercalcemia sintomática, calcificação extraesquelética e interações por redução de absorção de medicamentos.",
+    "adverseEffects": "",
+    "contraindications": "Hipercalcemia; confirmar as demais contraindicações no rótulo local.",
+    "interactions": "Pode reduzir absorção de medicamentos orais; separar horários apenas quando a bula do medicamento concomitante documentar essa necessidade.",
+    "monitoring": "Cálcio sérico e fósforo regularmente; avaliar produto cálcio × fósforo e sintomas de hipercalcemia.",
+    "administration": "Administrar com as refeições para ligar o fosfato dietético.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "Não concluir nesta ficha.",
+    "lactation": "Não concluir nesta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "Não adicionar suplemento de cálcio ou quelante sem prescrição; relatar constipação intensa, confusão, fraqueza ou vômitos persistentes.",
+    "clinicalPearls": "",
+    "guidelineRecommendations": "",
+    "safetyFlags": "Risco de hipercalcemia e de interação por absorção; pediatria bloqueada.",
+    "alerts": "PUBLICAÇÃO BLOQUEADA até identificar força e produto autorizados no país-alvo.",
+    "references": [
+      "DailyMed / NLM. CALCIUM ACETATE capsule label search record. US. Consultado 2026-09-17. https://dailymed.nlm.nih.gov/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/"
+  },
+  "es": {
+    "name": "Acetato de calcio.",
+    "class": "Quelante intestinal de fosfato a base de calcio.",
+    "pharmacologicClass": "Forma complejos insolubles con fosfato dietario en el tracto gastrointestinal.",
+    "commercialNames": "",
+    "presentation": "Cápsulas 667 mg de acetato de calcio en etiquetas US; el producto/fuerza local deben confirmarse.",
+    "presentations": "",
+    "mechanism": "Se une al fosfato de la dieta, reduciendo su absorción.",
+    "pharmacodynamics": "Reduce el fósforo sérico cuando se asocia a dieta y seguimiento de ERC; puede aumentar el calcio sérico.",
+    "pharmacokinetics": "",
+    "indications": "Control de hiperfosfatemia en pacientes con enfermedad renal terminal en diálisis en la etiqueta estadounidense consultada.",
+    "dose": "Etiqueta EE. UU.: dosis inicial adulta de 2 cápsulas con cada comida (cada cápsula 667 mg). Titular con fósforo y calcio séricos; no automatizar porque la fuerza y el producto locales pueden diferir.",
+    "pediatricDose": "No establecida; bloqueada.",
+    "renalDose": "Indicado en contexto de diálisis; no es un ajuste renal convencional. Requiere nefrología y monitorización mineral.",
+    "hepaticDose": "Sin ajuste numérico propuesto en esta etapa.",
+    "commonAdverseEffects": "Pueden ocurrir hipercalcemia, estreñimiento, náuseas y prurito.",
+    "dangerousAdverseEffects": "Hipercalcemia sintomática, calcificación extraesquelética e interacciones por reducción de la absorción de medicamentos.",
+    "adverseEffects": "",
+    "contraindications": "Hipercalcemia; confirmar las demás contraindicaciones en la etiqueta local.",
+    "interactions": "Puede reducir la absorción de medicamentos orales; separar horarios solo cuando el prospecto del medicamento concomitante documente esa necesidad.",
+    "monitoring": "Calcio sérico y fósforo regularmente; evaluar producto calcio × fósforo y síntomas de hipercalcemia.",
+    "administration": "Administrar con las comidas para unir el fosfato dietario.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "No concluir en esta ficha.",
+    "lactation": "No concluir en esta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "No agregar suplemento de calcio o quelante sin prescripción; informar estreñimiento intenso, confusión, debilidad o vómitos persistentes.",
+    "clinicalPearls": "",
+    "guidelineRecommendations": "",
+    "safetyFlags": "Riesgo de hipercalcemia e interacción por absorción; pediatría bloqueada.",
+    "alerts": "PUBLICACIÓN BLOQUEADA hasta identificar fuerza y producto autorizados en el país objetivo.",
+    "references": [
+      "DailyMed / NLM. CALCIUM ACETATE capsule label search record. US. Consultado 2026-09-17. https://dailymed.nlm.nih.gov/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/"
+  }
+};})();
+/* GOLD33_SELECTIVE:acetato_de_calcio:END */

@@ -5,294 +5,104 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Acetazolamida",
-    "class": "Inibidor da anidrase carbônica / Diurético proximal",
-    "pharmacologicClass": "Inibidor sistêmico da anidrase carbônica; diurético proximal.",
-    "mechanism": "Inibe a anidrase carbônica no túbulo proximal, reduzindo reabsorção de bicarbonato, sódio e água. Promove bicarbonatúria, diurese leve/moderada e acidificação metabólica relativa. Útil na alcalose metabólica associada a diuréticos de alça e na congestão em IC aguda.",
-    "pharmacodynamics": [
-      "Aumenta excreção de bicarbonato, sódio, água e potássio, causando acidose metabólica hiperclorêmica.",
-      "Reduz produção de humor aquoso e ajuda na aclimatação à altitude por estímulo ventilatório secundário à acidose."
-    ],
-    "pharmacokinetics": {
-      "Metabolismo": "Praticamente não metabolizada.",
-      "Eliminação": "Predominantemente renal como fármaco inalterado."
-    },
-    "indications": [
-      "Edema por insuficiência cardíaca ou induzido por fármacos.",
-      "Glaucoma de ângulo aberto/secundário e pré-operatório no ângulo fechado agudo.",
-      "Epilepsias centrencefálicas selecionadas.",
-      "Prevenção/melhora de mal agudo da montanha."
-    ],
-    "commercialNames": [
-      "Diamox",
-      "Acetazolamida genérica"
-    ],
-    "presentation": [
-      "Comprimidos 250 mg",
-      "Ampolas injetáveis 500 mg"
-    ],
-    "presentations": [
-      "Comprimidos 250 mg.",
-      "Cápsulas de liberação prolongada 500 mg.",
-      "Frasco-ampola 500 mg para solução injetável conforme fabricante."
-    ],
-    "dose": {
-      "Edema por IC": "250–375 mg VO 1x/dia pela manhã; preferir esquema intermitente.",
-      "Edema induzido por fármacos": "250–375 mg VO 1x/dia por 1–2 dias, alternando com 1 dia de pausa.",
-      "Mal agudo da montanha": "500–1000 mg/dia VO em doses divididas; iniciar 24–48 h antes da subida quando possível.",
-      "Glaucoma ER": "500 mg VO 2x/dia; >1 g/dia geralmente não aumenta efeito."
-    },
-    "pediatricDose": "A bula não estabelece esquema pediátrico amplo para todas as indicações; uso pediátrico deve seguir especialista/protocolo.",
-    "renalDose": {
-      "Doença renal marcada": "Contraindicada.",
-      "Disfunção leve/moderada": "Individualizar e monitorar bicarbonato/eletrólitos; não usar faixas artificiais que contradigam a contraindicação em doença renal importante."
-    },
-    "hepaticDose": {
-      "Cirrose": "Contraindicada pelo risco de encefalopatia hepática.",
-      "Doença hepática marcada": "Contraindicada."
-    },
-    "commonAdverseEffects": [
-      "Parestesias (mãos, pés, lábios)",
-      "Poliúria",
-      "Náuseas",
-      "Fadiga",
-      "Sonolência",
-      "Alteração do paladar",
-      "Hipocalemia"
-    ],
-    "dangerousAdverseEffects": [
-      "Acidose metabólica grave",
-      "Hipocalemia grave",
-      "Hiponatremia",
-      "Lesão renal aguda",
-      "Cálculos renais (nefrolitíase)",
-      "Reações cutâneas graves raras",
-      "Encefalopatia hepática em cirrose"
-    ],
-    "adverseEffects": [
-      "Parestesias, fadiga, poliúria e alteração do paladar.",
-      "Hipocalemia, hiponatremia e acidose metabólica.",
-      "Nefrolitíase e raras reações graves a sulfonamidas/discrasias sanguíneas."
-    ],
-    "contraindications": [
-      "Doença renal ou hepática marcada/cirrose.",
-      "Hiponatremia ou hipocalemia.",
-      "Insuficiência adrenal.",
-      "Acidose hiperclorêmica.",
-      "Hipersensibilidade à acetazolamida/sulfonamidas relacionadas."
-    ],
-    "interactions": [
-      "Salicilatos em altas doses podem aumentar toxicidade grave.",
-      "Outros diuréticos aumentam risco eletrolítico.",
-      "Pode alterar eliminação de fármacos dependentes do pH urinário."
-    ],
-    "monitoring": [
-      "Bicarbonato, sódio, potássio e função renal.",
-      "Hemograma/plaquetas periodicamente em uso prolongado.",
-      "Estado ácido-base e resposta clínica da indicação."
-    ],
-    "administration": "VO conforme indicação; para edema, uso intermitente costuma ser preferível. Formulação IV deve ser reconstituída conforme produto.",
-    "preparation": "Para injetável, reconstituir frasco-ampola conforme rótulo e usar técnica asséptica. Comprimidos/cápsulas não requerem preparo.",
-    "infusionProtocol": "Não existe infusão contínua padrão; quando IV, administrar dose reconstituída conforme indicação/protocolo institucional.",
-    "pregnancy": "Usar apenas quando claramente necessário após avaliação risco-benefício.",
-    "lactation": "Passa para o leite em pequenas quantidades; avaliar risco-benefício, sobretudo em prematuros ou doença renal/metabólica.",
-    "specialPopulations": {
-      "Idosos": "Maior risco de acidose com função renal reduzida.",
-      "DPOC/hipoventilação": "Cautela por acidose.",
-      "Cirrose": "Contraindicada."
-    },
-    "patientEducation": [
-      "Parestesias e aumento da diurese são frequentes.",
-      "Procurar atendimento por rash grave, confusão ou respiração anormal.",
-      "Em altitude, não substitui descida em doença grave."
-    ],
-    "clinicalPearls": [
-      "É causa clássica de acidose metabólica hiperclorêmica.",
-      "No edema, aumentar frequência pode piorar a eficácia; pausas permitem recuperação da anidrase carbônica renal."
-    ],
-    "guidelineRecommendations": [
-      "Uso em edema por IC é adjuvante e não substitui terapia modificadora de prognóstico."
-    ],
-    "safetyFlags": {
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "hypotensionRisk": true,
-      "metabolicAcidosisRisk": true,
-      "nephrolithiasisRisk": true,
-      "pregnancyCaution": true,
-      "qtRisk": false,
-      "renalHighRisk": true,
-      "warning": "Acetazolamida pode acelerar descongestão na IC aguda (ADVOR), mas exige controle rigoroso de bicarbonato, pH, K⁺, Na⁺ e função renal. Contraindicada em acidose metabólica, DRC grave e insuficiência hepática grave."
-    },
-    "alerts": [
-      "ADVOR Trial (NEJM 2022): acetazolamida 500 mg IV/dia + alça → descongestão mais rápida na IC aguda descompensada.",
-      "Monitorar bicarbonato e pH — risco de acidose metabólica como efeito adverso principal.",
-      "Contraindicada em acidose metabólica pré-existente, hiponatremia grave, hipocalemia grave e insuficiência renal grave.",
-      "Interação grave: aspirina em altas doses — risco de toxicidade grave por acetazolamida.",
-      "Interação grave: topiramato e zonisamida — aumento do risco de acidose metabólica e nefrolitíase.",
-      "Parestesias em mãos, pés e lábios são efeito adverso comum — orientar paciente."
-    ],
+    "name": "Acetazolamida.",
+    "class": "Inibidor da anidrase carbônica; sulfonamida não antibacteriana.",
+    "pharmacologicClass": "Inibidor sistêmico da anidrase carbônica.",
+    "mechanism": "Inibe a anidrase carbônica; reduz secreção de humor aquoso, altera excitabilidade neuronal e aumenta perda renal de bicarbonato, sódio, água e potássio.",
+    "pharmacodynamics": "Diminui pressão intraocular, promove diurese alcalinizante e pode atuar como adjuvante anticonvulsivante; maior dose não aumenta necessariamente diurese.",
+    "pharmacokinetics": "",
+    "indications": "Rótulo US: edema por IC/fármacos, epilepsias centrenfálicas, glaucoma aberto/secundário e pré-operatório no fechamento angular agudo; prevenção/melhoria de sintomas de mal da montanha.",
+    "commercialNames": "",
+    "presentation": "Comprimidos VO 125 mg/250 mg; pó IV equivalente a 500 mg de acetazolamida no rótulo FDA consultado.",
+    "presentations": "",
+    "dose": "A dose é específica da indicação. Rótulo DailyMed: edema por IC ou fármaco, 250–375 mg VO 1 vez/dia, de modo intermitente; mal da montanha, 500–1.000 mg/dia divididos, iniciar 24–48 h antes da subida. Glaucoma/epilepsia exigem regime próprio e não devem ser derivados destes.",
+    "pediatricDose": "Epilepsia: rótulos descrevem 8–30 mg/kg/dia em doses divididas, mas faixa etária, indicação e máximo devem ser reconciliados com fonte pediátrica primária antes de automatizar. BLOQUEADO.",
+    "renalDose": "Contraindicado em doença/disfunção renal acentuada e em hiponatremia/hipocalemia; não converter para tabela eGFR sem fonte específica.",
+    "hepaticDose": "Contraindicado em doença hepática acentuada/cirrose pelo risco de encefalopatia hepática.",
+    "commonAdverseEffects": "Parestesias, poliúria, alteração do paladar, fadiga, náusea e sonolência.",
+    "dangerousAdverseEffects": "Acidose metabólica, distúrbios eletrolíticos, litíase renal, discrasias sanguíneas, anafilaxia, SJS/TEN e necrose hepática fulminante rara.",
+    "adverseEffects": "",
+    "contraindications": "Hipersensibilidade; sódio/potássio baixos; disfunção renal/hepática acentuada; insuficiência adrenal; acidose hiperclorêmica; cirrose. Administração crônica em glaucoma de fechamento angular não congestivo é contraindicada.",
+    "interactions": "AAS em altas doses: relatos de acidose, coma e morte; revisar outros inibidores da anidrase carbônica, diuréticos, anticonvulsivantes e fármacos que alterem eletrólitos.",
+    "monitoring": "Eletrólitos, bicarbonato, função renal, hemograma e sinais de reação cutânea/hematológica em uso relevante.",
+    "administration": "VO ou IV conforme produto. Não assumir equivalência ou conversão entre apresentações.",
+    "preparation": "O pó IV requer reconstituição; diluente, volume final e estabilidade não foram extraídos nesta etapa e permanecem bloqueados.",
+    "infusionProtocol": "Não gerar protocolo IV sem instruções completas de reconstituição e administração do produto específico.",
+    "pregnancy": "Não concluir nesta ficha.",
+    "lactation": "Não concluir nesta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "Relatar rash, febre, dor de garganta, sangramento, confusão, dispneia, dor em flanco ou formigamentos importantes.",
+    "clinicalPearls": "Não transportar o regime intermitente de edema para glaucoma/epilepsia; cada indicação possui lógica e dose própria.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO ALERTA: eletrólitos/acidose, contraindicações renais-hepáticas e risco com AAS em alta dose; IV e pediatria automatizados bloqueados.",
+    "alerts": "O rótulo FDA 2022 informa que pode não ser o mais atual; confirmação do produto local é obrigatória antes da aprovação.",
     "references": [
-      "DailyMed Acetazolamide tablets 2026",
-      "DailyMed Acetazolamide injection 2026"
+      "DailyMed / NLM. ACETAZOLAMIDE tablet label. US. Consultado 2026-09-17. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f75bbf55-98ac-4f91-b6fd-17b5ac860e55",
+      "FDA Drugs@FDA. DIAMOX acetazolamide tablets and injection label, 2022. US. Consultado 2026-09-17. https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/008943s052,009388s038lbl.pdf"
     ],
-    "ref": "DailyMed acetazolamide tablets/injection 2026."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f75bbf55-98ac-4f91-b6fd-17b5ac860e55"
   },
   "es": {
-    "name": "Acetazolamida",
-    "class": "Inhibidor de la anhidrasa carbónica / Diurético proximal",
-    "pharmacologicClass": "Inhibidor sistémico de anhidrasa carbónica; diurético proximal.",
-    "mechanism": "Inhibe la anhidrasa carbónica en el túbulo proximal, reduciendo la reabsorción de bicarbonato, sodio y agua. Produce bicarbonaturia, diuresis leve/moderada y acidificación metabólica relativa. Útil en alcalosis metabólica asociada a diuréticos de asa y en la congestión en IC aguda.",
-    "pharmacodynamics": [
-      "Aumenta excreción de bicarbonato, sodio, agua y potasio, causando acidosis metabólica hiperclorémica.",
-      "Reduce producción de humor acuoso y facilita aclimatación a altura por estímulo ventilatorio secundario a acidosis."
-    ],
-    "pharmacokinetics": {
-      "Metabolismo": "Prácticamente no se metaboliza.",
-      "Eliminación": "Predominantemente renal sin cambios."
-    },
-    "indications": [
-      "Edema por insuficiencia cardíaca o inducido por fármacos.",
-      "Glaucoma de ángulo abierto/secundario y preoperatorio en ángulo cerrado agudo.",
-      "Epilepsias centrencefálicas seleccionadas.",
-      "Prevención/mejoría del mal agudo de montaña."
-    ],
-    "commercialNames": [
-      "Diamox",
-      "Acetazolamida genérica"
-    ],
-    "presentation": [
-      "Comprimidos 250 mg",
-      "Ampollas inyectables 500 mg"
-    ],
-    "presentations": [
-      "Comprimidos 250 mg.",
-      "Cápsulas de liberación prolongada 500 mg.",
-      "Frasco-ampolla 500 mg para solución inyectable según fabricante."
-    ],
-    "dose": {
-      "Edema por IC": "250–375 mg VO 1 vez/día por la mañana; preferir esquema intermitente.",
-      "Edema inducido por fármacos": "250–375 mg VO 1 vez/día durante 1–2 días, alternando con 1 día de pausa.",
-      "Mal agudo de montaña": "500–1000 mg/día VO en dosis divididas; iniciar 24–48 h antes del ascenso cuando sea posible.",
-      "Glaucoma ER": "500 mg VO 2 veces/día; >1 g/día generalmente no aumenta efecto."
-    },
-    "pediatricDose": "La ficha no establece un esquema pediátrico amplio para todas las indicaciones; seguir especialista/protocolo.",
-    "renalDose": {
-      "Enfermedad renal marcada": "Contraindicada.",
-      "Disfunción leve/moderada": "Individualizar y monitorizar bicarbonato/electrolitos; no usar bandas artificiales que contradigan la contraindicación en enfermedad renal importante."
-    },
-    "hepaticDose": {
-      "Cirrosis": "Contraindicada por riesgo de encefalopatía hepática.",
-      "Enfermedad hepática marcada": "Contraindicada."
-    },
-    "commonAdverseEffects": [
-      "Parestesias (manos, pies, labios)",
-      "Poliuria",
-      "Náuseas",
-      "Fatiga",
-      "Somnolencia",
-      "Alteración del gusto",
-      "Hipocalemia"
-    ],
-    "dangerousAdverseEffects": [
-      "Acidosis metabólica grave",
-      "Hipocalemia grave",
-      "Hiponatremia",
-      "Lesión renal aguda",
-      "Cálculos renales (nefrolitiasis)",
-      "Reacciones cutáneas graves raras",
-      "Encefalopatía hepática en cirrosis"
-    ],
-    "adverseEffects": [
-      "Parestesias, fatiga, poliuria y alteración del gusto.",
-      "Hipopotasemia, hiponatremia y acidosis metabólica.",
-      "Nefrolitiasis y raras reacciones graves a sulfonamidas/discrasias sanguíneas."
-    ],
-    "contraindications": [
-      "Enfermedad renal o hepática marcada/cirrosis.",
-      "Hiponatremia o hipopotasemia.",
-      "Insuficiencia suprarrenal.",
-      "Acidosis hiperclorémica.",
-      "Hipersensibilidad a acetazolamida/sulfonamidas relacionadas."
-    ],
-    "interactions": [
-      "Salicilatos a dosis altas pueden aumentar toxicidad grave.",
-      "Otros diuréticos aumentan riesgo electrolítico.",
-      "Puede modificar eliminación de fármacos dependientes del pH urinario."
-    ],
-    "monitoring": [
-      "Bicarbonato, sodio, potasio y función renal.",
-      "Hemograma/plaquetas periódicamente en uso prolongado.",
-      "Estado ácido-base y respuesta clínica de la indicación."
-    ],
-    "administration": "VO según indicación; para edema suele preferirse uso intermitente. Formulación IV debe reconstituirse según producto.",
-    "preparation": "Para inyectable, reconstituir frasco-ampolla según rótulo y usar técnica aséptica. Comprimidos/cápsulas no requieren preparación.",
-    "infusionProtocol": "No existe infusión continua estándar; cuando se usa IV, administrar dosis reconstituida según indicación/protocolo.",
-    "pregnancy": "Usar solo cuando sea claramente necesario tras evaluación riesgo-beneficio.",
-    "lactation": "Pasa a leche en pequeñas cantidades; evaluar riesgo-beneficio, sobre todo en prematuros o enfermedad renal/metabólica.",
-    "specialPopulations": {
-      "Adultos mayores": "Mayor riesgo de acidosis con función renal reducida.",
-      "EPOC/hipoventilación": "Precaución por acidosis.",
-      "Cirrosis": "Contraindicada."
-    },
-    "patientEducation": [
-      "Parestesias y aumento de diuresis son frecuentes.",
-      "Consultar por rash grave, confusión o respiración anormal.",
-      "En altura no sustituye descenso en enfermedad grave."
-    ],
-    "clinicalPearls": [
-      "Causa clásica de acidosis metabólica hiperclorémica.",
-      "En edema, aumentar frecuencia puede reducir eficacia; pausas permiten recuperación de anhidrasa carbónica renal."
-    ],
-    "guidelineRecommendations": [
-      "Uso en edema por IC es adyuvante y no sustituye terapia modificadora de pronóstico."
-    ],
-    "safetyFlags": {
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "hypotensionRisk": true,
-      "metabolicAcidosisRisk": true,
-      "nephrolithiasisRisk": true,
-      "pregnancyCaution": true,
-      "qtRisk": false,
-      "renalHighRisk": true,
-      "warning": "Acetazolamida puede acelerar la descongestión en IC aguda (ADVOR), pero exige control riguroso de bicarbonato, pH, K⁺, Na⁺ y función renal. Contraindicada en acidosis metabólica, ERC grave e insuficiencia hepática grave."
-    },
-    "alerts": [
-      "ADVOR Trial (NEJM 2022): acetazolamida 500 mg IV/día + asa → descongestión más rápida en IC aguda descompensada.",
-      "Monitorizar bicarbonato y pH — riesgo de acidosis metabólica como efecto adverso principal.",
-      "Contraindicada en acidosis metabólica preexistente, hiponatremia grave, hipocalemia grave e insuficiencia renal grave.",
-      "Interacción grave: aspirina en altas dosis — riesgo de toxicidad grave por acetazolamida.",
-      "Interacción grave: topiramato y zonisamida — aumento del riesgo de acidosis metabólica y nefrolitiasis.",
-      "Las parestesias en manos, pies y labios son efecto adverso frecuente — orientar al paciente."
-    ],
+    "name": "Acetazolamida.",
+    "class": "Inhibidor de la anhidrasa carbónica; sulfonamida no antibacteriana.",
+    "pharmacologicClass": "Inhibidor sistémico de la anhidrasa carbónica.",
+    "mechanism": "Inhibe la anhidrasa carbónica; reduce la secreción de humor acuoso, altera la excitabilidad neuronal y aumenta la pérdida renal de bicarbonato, sodio, agua y potasio.",
+    "pharmacodynamics": "Disminuye presión intraocular, promueve diuresis alcalinizante y puede actuar como adyuvante anticonvulsivante; una dosis mayor no aumenta necesariamente la diuresis.",
+    "pharmacokinetics": "",
+    "indications": "Etiqueta EE. UU.: edema por IC/fármacos, epilepsias centrencefálicas, glaucoma abierto/secundario y preoperatorio en cierre angular agudo; prevención/mejoría de síntomas de mal de montaña.",
+    "commercialNames": "",
+    "presentation": "Comprimidos VO 125 mg/250 mg; polvo IV equivalente a 500 mg de acetazolamida en la etiqueta FDA consultada.",
+    "presentations": "",
+    "dose": "La dosis es específica de la indicación. Etiqueta DailyMed: edema por IC o fármaco, 250–375 mg VO 1 vez/día, de modo intermitente; mal de montaña, 500–1.000 mg/día divididos, iniciar 24–48 h antes del ascenso. Glaucoma/epilepsia exigen esquema propio y no deben derivarse de estos.",
+    "pediatricDose": "Epilepsia: las etiquetas describen 8–30 mg/kg/día en dosis divididas, pero edad, indicación y máximo deben reconciliarse con fuente pediátrica primaria antes de automatizar. BLOQUEADO.",
+    "renalDose": "Contraindicado en enfermedad/disfunción renal marcada y en hiponatremia/hipopotasemia; no convertir a tabla eGFR sin fuente específica.",
+    "hepaticDose": "Contraindicado en enfermedad hepática marcada/cirrosis por el riesgo de encefalopatía hepática.",
+    "commonAdverseEffects": "Parestesias, poliuria, alteración del gusto, fatiga, náuseas y somnolencia.",
+    "dangerousAdverseEffects": "Acidosis metabólica, trastornos electrolíticos, litiasis renal, discrasias sanguíneas, anafilaxia, SJS/TEN y necrosis hepática fulminante rara.",
+    "adverseEffects": "",
+    "contraindications": "Hipersensibilidad; sodio/potasio bajos; disfunción renal/hepática marcada; insuficiencia suprarrenal; acidosis hiperclorémica; cirrosis. La administración crónica en glaucoma de cierre angular no congestivo está contraindicada.",
+    "interactions": "AAS en dosis altas: informes de acidosis, coma y muerte; revisar otros inhibidores de anhidrasa carbónica, diuréticos, anticonvulsivantes y fármacos que alteren electrolitos.",
+    "monitoring": "Electrolitos, bicarbonato, función renal, hemograma y signos de reacción cutánea/hematológica en uso relevante.",
+    "administration": "VO o IV según producto. No asumir equivalencia o conversión entre presentaciones.",
+    "preparation": "El polvo IV requiere reconstitución; diluyente, volumen final y estabilidad no se extrajeron en esta etapa y permanecen bloqueados.",
+    "infusionProtocol": "No generar protocolo IV sin instrucciones completas de reconstitución y administración del producto específico.",
+    "pregnancy": "No concluir en esta ficha.",
+    "lactation": "No concluir en esta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "Informar erupción, fiebre, dolor de garganta, sangrado, confusión, disnea, dolor en flanco u hormigueos importantes.",
+    "clinicalPearls": "No trasladar el esquema intermitente de edema a glaucoma/epilepsia; cada indicación tiene lógica y dosis propia.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTA ALERTA: electrolitos/acidosis, contraindicaciones renales-hepáticas y riesgo con AAS en dosis alta; IV y pediatría automatizados bloqueados.",
+    "alerts": "La etiqueta FDA 2022 informa que puede no ser la más actual; la confirmación del producto local es obligatoria antes de la aprobación.",
     "references": [
-      "DailyMed Acetazolamide tablets 2026",
-      "DailyMed Acetazolamide injection 2026"
+      "DailyMed / NLM. ACETAZOLAMIDE tablet label. US. Consultado 2026-09-17. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f75bbf55-98ac-4f91-b6fd-17b5ac860e55",
+      "FDA Drugs@FDA. DIAMOX acetazolamide tablets and injection label, 2022. US. Consultado 2026-09-17. https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/008943s052,009388s038lbl.pdf"
     ],
-    "ref": "DailyMed acetazolamide tablets/injection 2026."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f75bbf55-98ac-4f91-b6fd-17b5ac860e55"
   },
   "name": {
-    "pt": "Acetazolamida",
-    "es": "Acetazolamida"
+    "pt": "Acetazolamida.",
+    "es": "Acetazolamida."
   },
   "keywords": [
     "acetazolamida",
     "inibidor da anidrase carbonica / diuretico proximal"
   ],
-  "dataVersion": "clinical-data-v1-94eb725226171058",
-  "clinicalContentSha256": "94eb7252261710584e8fe39f84a402b33183af6ebf5cd4858d2bb29f822370fe",
+  "dataVersion": "clinical-data-v1-8dd8cd44415dcc7f",
+  "clinicalContentSha256": "8dd8cd44415dcc7ff78d516bffc7cd5361091ac4757b8404a1d7c3d528c7dd2e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "acetazolamida.mcGoldClinicalV1",
-    "group": "GOLD_GROUP02_CARDIO_10",
-    "review": "2026-09",
+    "lote": "001",
     "requiredFields": 33,
-    "contentSha256": "fc2708ccde336628bbab06f65bf631f19534b27e64df26f0f6bf7e466e4d5840",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "53bcfc3dbf1c89900d6f8192c0101c1b064d440c6500738b654f137c419db449",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

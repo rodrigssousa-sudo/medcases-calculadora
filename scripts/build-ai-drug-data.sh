@@ -4,46 +4,8 @@ set -Eeuo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO"
 
-[ -f "scripts/export-clinical-data.js" ] || {
-  echo "ERRO: scripts/export-clinical-data.js ausente." >&2
-  exit 1
-}
-
-PRESERVE_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/medcases-ai-drug-data-preserve.XXXXXX")"
-cleanup_preserve() {
-  rm -rf "$PRESERVE_ROOT"
-}
-trap cleanup_preserve EXIT
-
-if [ -d "data/ai-drug-data" ]; then
-  mv "data/ai-drug-data" "$PRESERVE_ROOT/data-ai-drug-data"
-fi
-if [ -d "public/data/ai-drug-data" ]; then
-  mv "public/data/ai-drug-data" "$PRESERVE_ROOT/public-ai-drug-data"
-fi
-
-restore_preserved_ai_drug_data() {
-  if [ -d "$PRESERVE_ROOT/data-ai-drug-data" ]; then
-    mkdir -p "data"
-    rm -rf "data/ai-drug-data"
-    mv "$PRESERVE_ROOT/data-ai-drug-data" "data/ai-drug-data"
-  fi
-  if [ -d "$PRESERVE_ROOT/public-ai-drug-data" ]; then
-    mkdir -p "public/data"
-    rm -rf "public/data/ai-drug-data"
-    mv "$PRESERVE_ROOT/public-ai-drug-data" "public/data/ai-drug-data"
-  fi
-}
-
-if ! node scripts/export-clinical-data.js; then
-  restore_preserved_ai_drug_data
-  exit 1
-fi
-
-restore_preserved_ai_drug_data
-
-echo "Aplicando mirrors clínicos persistentes de registros enriquecidos..."
-node scripts/apply-clinical-source-mirrors.mjs
+# This command intentionally does not run the global clinical exporter.  Its
+# sole input is the already validated private canonical projection under data/.
 
 echo "Gerando projeção farmacológica para a IA..."
 node scripts/generate-ai-drug-data.mjs
@@ -123,18 +85,9 @@ echo "BUILD_AI_DRUG_DATA_PASS"
 echo "Publicando projeção farmacológica versionada..."
 node scripts/publish-ai-drug-data.mjs
 
-echo "Sincronizando projeção farmacológica versionada para public..."
-rm -rf "$REPO/public/data/ai-drug-data"
-mkdir -p "$REPO/public/data"
-cp -R "$REPO/data/ai-drug-data" "$REPO/public/data/ai-drug-data"
+test ! -e "$REPO/public/data/ai-drug-data" || {
+  echo "ERRO: R30 bloqueia bundle completo da IA em public/." >&2
+  exit 1
+}
 
-cmp -s \
-  "$REPO/data/ai-drug-data/current.json" \
-  "$REPO/public/data/ai-drug-data/current.json" || {
-    echo "ERRO: current.json AI sem paridade root/public."
-    exit 1
-  }
-
-echo "PUBLIC_AI_DRUG_DATA_MIRROR_PASS"
-
-echo "PUBLICATION_AI_DRUG_DATA_PASS"
+echo "PRIVATE_AI_DRUG_DATA_PUBLICATION_PASS"

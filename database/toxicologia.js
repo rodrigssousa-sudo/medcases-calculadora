@@ -530,3 +530,91 @@
                   6 drugs total — Inauguração Módulo Toxicologia */
 
 })();
+/* GOLD33_SELECTIVE:acamprosato:START */
+;(function(){var db=window.TOXICOLOGIA_DRUGS_DB;if(!db||!db["acamprosato"])throw new Error("GOLD33_MISSING_CANONICAL:acamprosato");db["acamprosato"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "001",
+    "requiredFieldCount": 33,
+    "approvedSha256": "53bcfc3dbf1c89900d6f8192c0101c1b064d440c6500738b654f137c419db449",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Acamprosato cálcico.",
+    "class": "Fármaco para manutenção de abstinência no transtorno por uso de álcool.",
+    "pharmacologicClass": "Mecanismo neuroquímico não completamente elucidado; modula sistemas glutamatérgico/GABAérgico.",
+    "commercialNames": "",
+    "presentation": "Comprimido gastrorresistente 333 mg no rótulo US consultado.",
+    "presentations": "",
+    "mechanism": "Ajuda a restaurar o equilíbrio entre neurotransmissão excitatória e inibitória alterado pela exposição crônica ao álcool; mecanismo exato não estabelecido.",
+    "pharmacodynamics": "",
+    "pharmacokinetics": "",
+    "indications": "Manutenção de abstinência alcoólica em pessoas dependentes já abstinentes no início do tratamento, como parte de abordagem psicossocial.",
+    "dose": "Rótulo US: 666 mg VO três vezes/dia. Confirmar produto, função renal e protocolo local antes de liberar.",
+    "pediatricDose": "Não estabelecida; bloqueada.",
+    "renalDose": "Rótulo US: ClCr 30–50 mL/min, 333 mg VO três vezes/dia; ClCr ≤30 mL/min, contraindicado.",
+    "hepaticDose": "Sem ajuste numérico proposto nesta etapa; confirmar bula local.",
+    "commonAdverseEffects": "Diarreia, náusea, dor abdominal, cefaleia, insônia ou ansiedade.",
+    "dangerousAdverseEffects": "Ideação suicida/depressão exige avaliação clínica; reação de hipersensibilidade é possível.",
+    "adverseEffects": "",
+    "contraindications": "Insuficiência renal grave (ClCr ≤30 mL/min) conforme rótulo US e hipersensibilidade ao produto.",
+    "interactions": "Não presumir ausência de interações; revisar tratamento do transtorno por uso de álcool, psicotrópicos e comorbidades.",
+    "monitoring": "Função renal antes do início e quando clinicamente indicado; abstinência, humor, ideação suicida e adesão ao cuidado psicossocial.",
+    "administration": "VO; engolir comprimido gastrorresistente conforme bula, sem esmagar.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "Não concluir nesta ficha.",
+    "lactation": "Não concluir nesta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "Não é tratamento de intoxicação ou abstinência aguda. Manter acompanhamento psicossocial e procurar ajuda por piora importante do humor ou ideação suicida.",
+    "clinicalPearls": "",
+    "guidelineRecommendations": "",
+    "safetyFlags": "Avaliar ClCr; cálculo renal automatizado bloqueado até confirmar o produto local.",
+    "alerts": "PUBLICAÇÃO BLOQUEADA até documentar SPL/registro primário atual e jurisdição alvo.",
+    "references": [
+      "DailyMed / NLM. CAMPRAL (acamprosate calcium) label search record. US. Consultado 2026-09-17. https://dailymed.nlm.nih.gov/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/"
+  },
+  "es": {
+    "name": "Acamprosato cálcico.",
+    "class": "Fármaco para mantenimiento de abstinencia en el trastorno por consumo de alcohol.",
+    "pharmacologicClass": "Mecanismo neuroquímico no completamente dilucidado; modula sistemas glutamatérgico/GABAérgico.",
+    "commercialNames": "",
+    "presentation": "Comprimido gastrorresistente 333 mg en el etiquetado estadounidense consultado.",
+    "presentations": "",
+    "mechanism": "Ayuda a restaurar el equilibrio entre neurotransmisión excitatoria e inhibitoria alterado por la exposición crónica al alcohol; el mecanismo exacto no está establecido.",
+    "pharmacodynamics": "",
+    "pharmacokinetics": "",
+    "indications": "Mantenimiento de abstinencia alcohólica en personas dependientes ya abstinentes al inicio del tratamiento, como parte de abordaje psicosocial.",
+    "dose": "Etiqueta EE. UU.: 666 mg VO tres veces/día. Confirmar producto, función renal y protocolo local antes de liberar.",
+    "pediatricDose": "No establecida; bloqueada.",
+    "renalDose": "Etiqueta EE. UU.: ClCr 30–50 ml/min, 333 mg VO tres veces/día; ClCr ≤30 ml/min, contraindicado.",
+    "hepaticDose": "Sin ajuste numérico propuesto en esta etapa; confirmar prospecto local.",
+    "commonAdverseEffects": "Diarrea, náuseas, dolor abdominal, cefalea, insomnio o ansiedad.",
+    "dangerousAdverseEffects": "Ideación suicida/depresión exige evaluación clínica; es posible una reacción de hipersensibilidad.",
+    "adverseEffects": "",
+    "contraindications": "Insuficiencia renal grave (ClCr ≤30 ml/min) según etiqueta EE. UU. e hipersensibilidad al producto.",
+    "interactions": "No presumir ausencia de interacciones; revisar el tratamiento del trastorno por consumo de alcohol, psicotrópicos y comorbilidades.",
+    "monitoring": "Función renal antes del inicio y cuando esté clínicamente indicado; abstinencia, estado de ánimo, ideación suicida y adherencia al cuidado psicosocial.",
+    "administration": "VO; tragar el comprimido gastrorresistente según prospecto, sin triturar.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "No concluir en esta ficha.",
+    "lactation": "No concluir en esta ficha.",
+    "specialPopulations": "",
+    "patientEducation": "No es tratamiento de intoxicación o abstinencia aguda. Mantener seguimiento psicosocial y buscar ayuda por empeoramiento importante del ánimo o ideación suicida.",
+    "clinicalPearls": "",
+    "guidelineRecommendations": "",
+    "safetyFlags": "Evaluar ClCr; cálculo renal automatizado bloqueado hasta confirmar el producto local.",
+    "alerts": "PUBLICACIÓN BLOQUEADA hasta documentar SPL/registro primario actual y jurisdicción objetivo.",
+    "references": [
+      "DailyMed / NLM. CAMPRAL (acamprosate calcium) label search record. US. Consultado 2026-09-17. https://dailymed.nlm.nih.gov/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/"
+  }
+};})();
+/* GOLD33_SELECTIVE:acamprosato:END */

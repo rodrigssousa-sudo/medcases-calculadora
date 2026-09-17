@@ -678,3 +678,91 @@
   }); /* fim Object.assign ANTICOAG_DRUGS_DB — BUILD 452 (aas_antiagregante + clopidogrel + ticagrelor + prasugrel + cangrelor + heparina_hnf + enoxaparina + dalteparina + fondaparinux + varfarina + apixabana + rivaroxabana + edoxabana + dabigatrana + betrixabana — Consolidação Central Anticoagulação e Antiagregação) */
 
 })();
+/* GOLD33_SELECTIVE:aas_antiagregante:START */
+;(function(){var db=window.ANTICOAG_DRUGS_DB;if(!db||!db["aas_antiagregante"])throw new Error("GOLD33_MISSING_CANONICAL:aas_antiagregante");db["aas_antiagregante"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "001",
+    "requiredFieldCount": 33,
+    "approvedSha256": "53bcfc3dbf1c89900d6f8192c0101c1b064d440c6500738b654f137c419db449",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ácido acetilsalicílico (AAS) — ficha restrita ao uso antiagregante; não cobre analgésico/antitérmico.",
+    "class": "Antiagregante plaquetário; salicilato.",
+    "pharmacologicClass": "Inibidor irreversível da ciclo-oxigenase plaquetária, com redução de tromboxano A2.",
+    "commercialNames": "",
+    "presentation": "",
+    "presentations": "",
+    "mechanism": "Acetila irreversivelmente COX-1 nas plaquetas; a inibição persiste pela vida da plaqueta.",
+    "pharmacodynamics": "Reduz a síntese plaquetária de tromboxano A2 e a agregação; aumenta o risco de sangramento.",
+    "pharmacokinetics": "",
+    "indications": "Uso antiagregante depende do cenário clínico. Em SCA, a diretriz ACC/AHA 2025 mantém dupla antiagregação com AAS e inibidor P2Y12 como estratégia padrão quando o risco de sangramento não é alto.",
+    "dose": "Não há dose universal segura nesta ficha. Para prevenção cardiovascular/uso em SCA, selecionar exclusivamente o regime da diretriz aplicável e do produto local; não automatizar sem indicação, formulação e avaliação do risco hemorrágico.",
+    "pediatricDose": "",
+    "renalDose": "Sem ajuste posológico antiagregante numérico proposto; doença renal aumenta risco de sangramento e exige avaliação individual.",
+    "hepaticDose": "Sem ajuste numérico proposto; avaliar coagulopatia, risco gastrointestinal e risco de sangramento.",
+    "commonAdverseEffects": "Dispepsia, azia, náusea e sangramento/hematomas.",
+    "dangerousAdverseEffects": "Hemorragia gastrointestinal ou intracraniana, broncoespasmo/anafilaxia por hipersensibilidade e toxicidade por salicilato em exposição excessiva.",
+    "adverseEffects": "Tinnitus pode sinalizar exposição excessiva; confirmar causa e produto antes de qualquer conduta.",
+    "contraindications": "Hipersensibilidade a salicilatos/AINEs, sangramento ativo ou condição em que o risco hemorrágico seja inaceitável exigem avaliação médica; confirmar contraindicações na bula local.",
+    "interactions": "Anticoagulantes, outros antiagregantes, AINEs, ISRS/IRSN e álcool podem aumentar risco de sangramento; revisar sempre a combinação real.",
+    "monitoring": "Sinais de sangramento, hemograma quando clinicamente indicado, função renal/hepática conforme contexto e reconciliação de medicamentos.",
+    "administration": "Via oral; não triturar formulação gastrorresistente sem confirmação do produto.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "Não usar dose/indicação obstétrica nesta ficha; risco e permissões variam por dose, idade gestacional e produto.",
+    "lactation": "Sem recomendação universal proposta; confirmar fonte local e cenário clínico.",
+    "specialPopulations": "Idosos e pessoas com antecedente de úlcera, sangramento, asma por AINE ou uso concomitante de antitrombóticos requerem estratificação individual.",
+    "patientEducation": "Não combinar por conta própria com ibuprofeno, naproxeno, anticoagulante ou outro antiagregante; procurar atendimento por fezes escuras, hematêmese, sangramento persistente, síncope ou déficit neurológico.",
+    "clinicalPearls": "Separar rigorosamente a ficha antiagregante de usos analgésicos e das diferentes apresentações; dose e benefício mudam com a indicação.",
+    "guidelineRecommendations": "ACC/AHA 2025: em SCA, dupla antiagregação com AAS + inibidor oral de P2Y12 é a estratégia padrão por pelo menos 12 meses na ausência de alto risco hemorrágico; individualizar.",
+    "safetyFlags": "ALTO ALERTA: risco hemorrágico; cálculo e dose automática bloqueados.",
+    "alerts": "Não disponibilizar dose automática até vincular indicação, formulação, país e diretriz/protocolo aprovado.",
+    "references": [
+      "American College of Cardiology. 2025 ACC/AHA Acute Coronary Syndromes Clinical Guidance summary. US. Consultado 2026-09-17. https://www.acc.org/latest-in-cardiology/articles/2025/04/01/01/new-in-clinical-guidance"
+    ],
+    "ref": "https://www.acc.org/latest-in-cardiology/articles/2025/04/01/01/new-in-clinical-guidance"
+  },
+  "es": {
+    "name": "Ácido acetilsalicílico (AAS) — ficha restringida al uso antiagregante; no cubre uso analgésico/antitérmico.",
+    "class": "Antiagregante plaquetario; salicilato.",
+    "pharmacologicClass": "Inhibidor irreversible de la ciclooxigenasa plaquetaria, con reducción de tromboxano A2.",
+    "commercialNames": "",
+    "presentation": "",
+    "presentations": "",
+    "mechanism": "Acetila irreversiblemente COX-1 en las plaquetas; la inhibición persiste durante la vida plaquetaria.",
+    "pharmacodynamics": "Reduce la síntesis plaquetaria de tromboxano A2 y la agregación; aumenta el riesgo de sangrado.",
+    "pharmacokinetics": "",
+    "indications": "El uso antiagregante depende del escenario clínico. En SCA, la guía ACC/AHA 2025 mantiene doble antiagregación con AAS e inhibidor P2Y12 como estrategia estándar cuando el riesgo de sangrado no es alto.",
+    "dose": "No hay dosis universal segura en esta ficha. Para prevención cardiovascular/uso en SCA, seleccionar exclusivamente el esquema de la guía aplicable y del producto local; no automatizar sin indicación, formulación y evaluación del riesgo hemorrágico.",
+    "pediatricDose": "",
+    "renalDose": "Sin ajuste posológico antiagregante numérico propuesto; la enfermedad renal aumenta el riesgo de sangrado y exige evaluación individual.",
+    "hepaticDose": "Sin ajuste numérico propuesto; evaluar coagulopatía, riesgo gastrointestinal y riesgo de sangrado.",
+    "commonAdverseEffects": "Dispepsia, pirosis, náuseas y sangrado/hematomas.",
+    "dangerousAdverseEffects": "Hemorragia gastrointestinal o intracraneal, broncoespasmo/anafilaxia por hipersensibilidad y toxicidad por salicilato con exposición excesiva.",
+    "adverseEffects": "El tinnitus puede señalar exposición excesiva; confirmar causa y producto antes de cualquier conducta.",
+    "contraindications": "Hipersensibilidad a salicilatos/AINE, sangrado activo o condición en la que el riesgo hemorrágico sea inaceptable requieren evaluación médica; confirmar contraindicaciones en el prospecto local.",
+    "interactions": "Anticoagulantes, otros antiagregantes, AINE, ISRS/IRSN y alcohol pueden aumentar el riesgo de sangrado; revisar siempre la combinación real.",
+    "monitoring": "Signos de sangrado, hemograma cuando esté clínicamente indicado, función renal/hepática según contexto y conciliación de medicamentos.",
+    "administration": "Vía oral; no triturar una formulación gastrorresistente sin confirmar el producto.",
+    "preparation": "",
+    "infusionProtocol": "",
+    "pregnancy": "No usar dosis/indicación obstétrica en esta ficha; el riesgo y las autorizaciones varían por dosis, edad gestacional y producto.",
+    "lactation": "Sin recomendación universal propuesta; confirmar fuente local y escenario clínico.",
+    "specialPopulations": "Adultos mayores y personas con antecedente de úlcera, sangrado, asma por AINE o uso concomitante de antitrombóticos requieren estratificación individual.",
+    "patientEducation": "No combinar por cuenta propia con ibuprofeno, naproxeno, anticoagulante u otro antiagregante; buscar atención por heces oscuras, hematemesis, sangrado persistente, síncope o déficit neurológico.",
+    "clinicalPearls": "Separar rigurosamente la ficha antiagregante de los usos analgésicos y de las diferentes presentaciones; la dosis y el beneficio cambian con la indicación.",
+    "guidelineRecommendations": "ACC/AHA 2025: en SCA, doble antiagregación con AAS + inhibidor oral de P2Y12 es la estrategia estándar durante al menos 12 meses en ausencia de alto riesgo hemorrágico; individualizar.",
+    "safetyFlags": "ALTA ALERTA: riesgo hemorrágico; cálculo y dosis automática bloqueados.",
+    "alerts": "No disponibilizar dosis automática hasta vincular indicación, formulación, país y guía/protocolo aprobado.",
+    "references": [
+      "American College of Cardiology. 2025 ACC/AHA Acute Coronary Syndromes Clinical Guidance summary. US. Consultado 2026-09-17. https://www.acc.org/latest-in-cardiology/articles/2025/04/01/01/new-in-clinical-guidance"
+    ],
+    "ref": "https://www.acc.org/latest-in-cardiology/articles/2025/04/01/01/new-in-clinical-guidance"
+  }
+};})();
+/* GOLD33_SELECTIVE:aas_antiagregante:END */
