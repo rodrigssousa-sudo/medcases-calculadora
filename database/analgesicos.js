@@ -4340,3 +4340,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:aceclofenaco:END */
+/* GOLD33_SELECTIVE:adalimumabe:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["adalimumabe"])throw new Error("GOLD33_MISSING_CANONICAL:adalimumabe");db["adalimumabe"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "003",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cd35e10aef0c58df9f1a51122f9ae347c30c14947f1d5d4b20f84b1fe752807b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Adalimumabe [1–2].",
+    "class": "Anticorpo monoclonal anti-TNF alfa [1–2].",
+    "pharmacologicClass": "Imunomodulador biológico; bloqueador de TNF [1–2].",
+    "commercialNames": "Nome comercial depende da jurisdição; confirmar produto e bula local. [1–2].",
+    "presentation": "Solução injetável SC em seringa/caneta preenchida; concentrações e volumes dependem da apresentação. [1–2].",
+    "presentations": "Solução injetável SC em seringa/caneta preenchida; concentrações e volumes dependem da apresentação. [1–2].",
+    "mechanism": "Liga TNF alfa e bloqueia a interação com receptores p55/p75, modulando a resposta inflamatória. [1–2].",
+    "pharmacodynamics": "A redução da sinalização TNF diminui marcadores inflamatórios; não usar para controlar infecção ativa. [1–2].",
+    "pharmacokinetics": "Após SC, biodisponibilidade aproximada de 64%; pico em cerca de 5 dias e meia-vida terminal média de cerca de 2 semanas no rótulo. [1–2].",
+    "indications": "Doenças inflamatórias imunomediadas especificadas no rótulo, incluindo artrite reumatoide, artrite idiopática juvenil, psoríase, doença inflamatória intestinal e hidradenite; confirmar indicação e produto local. [1–2].",
+    "dose": "Adultos: esquema depende estritamente da doença; por exemplo, artrite reumatoide/psoriática e espondilite: 40 mg SC a cada 2 semanas. Algumas indicações usam indução e manutenção diferentes; consultar PI. [1–2].",
+    "pediatricDose": "Há esquemas por peso para indicações pediátricas no PI (p. ex., AIJ e Crohn ≥6 anos). CÁLCULO PEDIÁTRICO: BLOQUEADO — seleção depende da indicação, peso e apresentação. [1–2].",
+    "renalDose": "Não há ajuste numérico recomendado no PI; dados farmacocinéticos em insuficiência renal são limitados. [1–2].",
+    "hepaticDose": "Não há ajuste numérico recomendado; dados em insuficiência hepática são limitados. [1–2].",
+    "commonAdverseEffects": "Infecção de vias respiratórias, reação no local, cefaleia e erupção podem ocorrer. [1–2].",
+    "dangerousAdverseEffects": "Infecções graves/TB, malignidade, reativação de HBV, insuficiência cardíaca, desmielinização, citopenias e anafilaxia exigem atenção. [1–2].",
+    "adverseEffects": "Infecção de vias respiratórias, reação no local, cefaleia e erupção podem ocorrer. Infecções graves/TB, malignidade, reativação de HBV, insuficiência cardíaca, desmielinização, citopenias e anafilaxia exigem atenção. [1–2].",
+    "contraindications": "Hipersensibilidade. Não iniciar durante infecção ativa; avaliar e tratar TB latente e rastrear HBV conforme rótulo. [1–2].",
+    "interactions": "Evitar associação com outros bloqueadores de TNF ou anakinra/abatacepte; vacinas vivas devem ser evitadas durante tratamento. [1–2].",
+    "monitoring": "Rastrear TB e HBV antes; vigiar infecção, hemograma, sinais neurológicos, cardíacos e cutâneos conforme risco. [1–2].",
+    "administration": "SC; inspecionar solução, alternar locais e não injetar em pele sensível/lesada. [1–2].",
+    "preparation": "Não requer reconstituição nesta apresentação; conferir produto, concentração e integridade antes do uso. [1–2].",
+    "infusionProtocol": "Não aplicável à apresentação/ via principal desta ficha; não criar protocolo de infusão. [1–2].",
+    "pregnancy": "Registro de exposição disponível; decidir individualmente considerando controle materno da doença. [1–2].",
+    "lactation": "O rótulo descreve níveis baixos no leite em dados limitados; avaliar risco/benefício individual. [1–2].",
+    "specialPopulations": "Idosos, pessoas com multimorbidade e imunossupressão exigem avaliação individual e reconciliação de medicamentos. [1–2].",
+    "patientEducation": "Usar somente conforme prescrição; comunicar evento adverso importante, não compartilhar o medicamento e confirmar cada formulação/via. [1–2].",
+    "clinicalPearls": "A indicação, formulação e via são parte da dose. Não aplicar números desta ficha a produto diferente. [1–2].",
+    "guidelineRecommendations": "Usar em consonância com diretriz da doença, registro local e avaliação especializada quando indicada; a bula não substitui diretriz. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS nesta versão candidata. Confirmar indicação, produto, dose, via e monitorização antes de qualquer uso. [1–2].",
+    "alerts": "REVISÃO MÉDICA PENDENTE. Dados educacionais candidatos; não autorizam integração, publicação, prescrição automatizada ou cálculo. [1–2].",
+    "references": [
+      "1. AbbVie — HUMIRA (adalimumab) Full Prescribing Information. https://www.rxabbvie.com/pdf/humira.pdf",
+      "2. FDA — HUMIRA — prescribing information / regulatory record. https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125057"
+    ],
+    "ref": "Fontes primárias: AbbVie — HUMIRA (adalimumab) Full Prescribing Information. https://www.rxabbvie.com/pdf/humira.pdf; FDA — HUMIRA — prescribing information / regulatory record. https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125057"
+  },
+  "es": {
+    "name": "Adalimumab [1–2].",
+    "class": "Anticuerpo monoclonal anti-TNF alfa [1–2].",
+    "pharmacologicClass": "Inmunomodulador biológico; bloqueador de TNF [1–2].",
+    "commercialNames": "El nombre comercial depende de la jurisdicción; confirmar producto y prospecto local. [1–2].",
+    "presentation": "Solución inyectable SC en jeringa/pluma precargada; concentraciones y volúmenes dependen de la presentación. [1–2].",
+    "presentations": "Solución inyectable SC en jeringa/pluma precargada; concentraciones y volúmenes dependen de la presentación. [1–2].",
+    "mechanism": "Se une al TNF alfa y bloquea la interacción con los receptores p55/p75, modulando la respuesta inflamatoria. [1–2].",
+    "pharmacodynamics": "La reducción de la señalización TNF disminuye marcadores inflamatorios; no usar para controlar una infección activa. [1–2].",
+    "pharmacokinetics": "Tras SC, biodisponibilidad aproximada de 64%; pico alrededor de 5 días y semivida terminal media de aproximadamente 2 semanas en el prospecto. [1–2].",
+    "indications": "Enfermedades inflamatorias inmunomediadas especificadas en el prospecto, incluidas artritis reumatoide, artritis idiopática juvenil, psoriasis, enfermedad inflamatoria intestinal e hidradenitis; confirmar indicación y producto local. [1–2].",
+    "dose": "Adultos: esquema depende estrictamente de la enfermedad; por ejemplo, artritis reumatoide/psoriásica y espondilitis: 40 mg SC cada 2 semanas. Algunas indicaciones usan inducción y mantenimiento distintos; consultar PI. [1–2].",
+    "pediatricDose": "Hay esquemas por peso para indicaciones pediátricas en la PI (p. ej., AIJ y Crohn ≥6 años). CÁLCULO PEDIÁTRICO: BLOQUEADO — la selección depende de indicación, peso y presentación. [1–2].",
+    "renalDose": "No hay ajuste numérico recomendado en la PI; los datos farmacocinéticos en insuficiencia renal son limitados. [1–2].",
+    "hepaticDose": "No hay ajuste numérico recomendado; los datos en insuficiencia hepática son limitados. [1–2].",
+    "commonAdverseEffects": "Pueden ocurrir infección respiratoria, reacción local, cefalea y erupción. [1–2].",
+    "dangerousAdverseEffects": "Infecciones graves/TB, malignidad, reactivación de VHB, insuficiencia cardiaca, desmielinización, citopenias y anafilaxia requieren atención. [1–2].",
+    "adverseEffects": "Pueden ocurrir infección respiratoria, reacción local, cefalea y erupción. Infecciones graves/TB, malignidad, reactivación de VHB, insuficiencia cardiaca, desmielinización, citopenias y anafilaxia requieren atención. [1–2].",
+    "contraindications": "Hipersensibilidad. No iniciar durante infección activa; evaluar y tratar TB latente y detectar VHB según prospecto. [1–2].",
+    "interactions": "Evitar asociación con otros bloqueadores de TNF o anakinra/abatacept; se deben evitar vacunas vivas durante el tratamiento. [1–2].",
+    "monitoring": "Detectar TB y VHB antes; vigilar infección, hemograma, signos neurológicos, cardiacos y cutáneos según riesgo. [1–2].",
+    "administration": "SC; inspeccionar la solución, rotar sitios y no inyectar en piel sensible/lesionada. [1–2].",
+    "preparation": "No requiere reconstitución en esta presentación; verificar producto, concentración e integridad antes de usar. [1–2].",
+    "infusionProtocol": "No aplicable a la presentación/vía principal de esta ficha; no crear protocolo de infusión. [1–2].",
+    "pregnancy": "Existe registro de exposición; decidir individualmente considerando el control materno de la enfermedad. [1–2].",
+    "lactation": "El prospecto describe niveles bajos en leche en datos limitados; evaluar riesgo/beneficio individual. [1–2].",
+    "specialPopulations": "Las personas mayores, con multimorbilidad e inmunosupresión requieren evaluación individual y conciliación de medicamentos. [1–2].",
+    "patientEducation": "Usar solo según prescripción; comunicar evento adverso importante, no compartir el medicamento y confirmar cada formulación/vía. [1–2].",
+    "clinicalPearls": "La indicación, formulación y vía forman parte de la dosis. No aplicar números de esta ficha a un producto distinto. [1–2].",
+    "guidelineRecommendations": "Usar en consonancia con guía de la enfermedad, registro local y evaluación especializada cuando corresponda; el prospecto no sustituye la guía. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS en esta versión candidata. Confirmar indicación, producto, dosis, vía y monitorización antes de cualquier uso. [1–2].",
+    "alerts": "REVISIÓN MÉDICA PENDIENTE. Datos educativos candidatos; no autorizan integración, publicación, prescripción automatizada ni cálculo. [1–2].",
+    "references": [
+      "1. AbbVie — HUMIRA (adalimumab) Full Prescribing Information. https://www.rxabbvie.com/pdf/humira.pdf",
+      "2. FDA — HUMIRA — prescribing information / regulatory record. https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125057"
+    ],
+    "ref": "Fuentes primarias: AbbVie — HUMIRA (adalimumab) Full Prescribing Information. https://www.rxabbvie.com/pdf/humira.pdf; FDA — HUMIRA — prescribing information / regulatory record. https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=125057"
+  }
+};})();
+/* GOLD33_SELECTIVE:adalimumabe:END */

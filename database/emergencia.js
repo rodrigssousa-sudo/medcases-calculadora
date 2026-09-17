@@ -2982,3 +2982,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:acetilcisteina:END */
+/* GOLD33_SELECTIVE:adrenalina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["adrenalina"])throw new Error("GOLD33_MISSING_CANONICAL:adrenalina");db["adrenalina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "003",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cd35e10aef0c58df9f1a51122f9ae347c30c14947f1d5d4b20f84b1fe752807b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Adrenalina (epinefrina) [1–2].",
+    "class": "Agonista adrenérgico não seletivo [1–2].",
+    "pharmacologicClass": "Catecolamina simpaticomimética alfa e beta [1–2].",
+    "commercialNames": "Nome comercial depende da jurisdição; confirmar produto e bula local. [1–2].",
+    "presentation": "ADRENALIN 1 mg/mL (1:1.000) em frasco/ampola para IM/SC; apresentações 0,1 mg/mL (1:10.000) são distintas. [1–2].",
+    "presentations": "ADRENALIN 1 mg/mL (1:1.000) em frasco/ampola para IM/SC; apresentações 0,1 mg/mL (1:10.000) são distintas. [1–2].",
+    "mechanism": "Ativa receptores alfa-1, beta-1 e beta-2; vasoconstrição, inotropismo/cronotropismo e broncodilatação. [1–2].",
+    "pharmacodynamics": "Na anafilaxia reduz edema de vias aéreas, urticária e hipotensão; efeito depende criticamente da via/concentração. [1–2].",
+    "pharmacokinetics": "Início rápido; metabolizada por COMT/MAO e tem duração curta. Monitorização é essencial em uso IV. [1–2].",
+    "indications": "PI consultado: anafilaxia. Outras indicações usam apresentações e protocolos específicos e não são intercambiáveis. [1–2].",
+    "dose": "Anafilaxia: 0,3–0,5 mg IM ou SC na face anterolateral da coxa; repetir a cada 5–10 min conforme necessidade e monitorização. [1–2].",
+    "pediatricDose": "Anafilaxia: 0,01 mg/kg IM/SC (máximo 0,3 mg por dose em crianças <30 kg; 0,3–0,5 mg em ≥30 kg segundo PI). CÁLCULO PEDIÁTRICO: BLOQUEADO para exigir conferência de concentração. [1–2].",
+    "renalDose": "Sem ajuste para dose de resgate em anafilaxia; usar cautela e monitorizar em disfunção renal/cardiovascular. [1–2].",
+    "hepaticDose": "Sem ajuste específico no rótulo de anafilaxia. [1–2].",
+    "commonAdverseEffects": "Tremor, ansiedade, cefaleia, palpitações, taquicardia, náusea e sudorese. [1–2].",
+    "dangerousAdverseEffects": "Arritmias, crise hipertensiva, isquemia miocárdica, edema pulmonar e necrose por extravasamento/uso inadequado. [1–2].",
+    "adverseEffects": "Tremor, ansiedade, cefaleia, palpitações, taquicardia, náusea e sudorese. Arritmias, crise hipertensiva, isquemia miocárdica, edema pulmonar e necrose por extravasamento/uso inadequado. [1–2].",
+    "contraindications": "Em anafilaxia não há contraindicação absoluta; riscos cardiovasculares não devem atrasar tratamento. [1–2].",
+    "interactions": "IMAO, antidepressivos tricíclicos, betabloqueadores, anestésicos halogenados e outros simpaticomiméticos podem alterar resposta; reavaliar risco. [1–2].",
+    "monitoring": "Via, concentração, PA, FC, ritmo, perfusão, resposta respiratória e recorrência dos sintomas. [1–2].",
+    "administration": "Para anafilaxia, preferir IM na coxa. NÃO administrar a formulação 1 mg/mL por via IV em bolus. [1–2].",
+    "preparation": "Não requer reconstituição nesta apresentação; conferir produto, concentração e integridade antes do uso. [1–2].",
+    "infusionProtocol": "Não aplicável à apresentação/ via principal desta ficha; não criar protocolo de infusão. [1–2].",
+    "pregnancy": "Na anafilaxia, tratar prontamente; risco da anafilaxia materna supera atraso terapêutico. [1–2].",
+    "lactation": "Compatível com necessidade emergencial; monitorar efeito transitório na produção de leite conforme contexto. [1–2].",
+    "specialPopulations": "Idosos, pessoas com multimorbidade e imunossupressão exigem avaliação individual e reconciliação de medicamentos. [1–2].",
+    "patientEducation": "Usar somente conforme prescrição; comunicar evento adverso importante, não compartilhar o medicamento e confirmar cada formulação/via. [1–2].",
+    "clinicalPearls": "A indicação, formulação e via são parte da dose. Não aplicar números desta ficha a produto diferente. [1–2].",
+    "guidelineRecommendations": "Usar em consonância com diretriz da doença, registro local e avaliação especializada quando indicada; a bula não substitui diretriz. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS nesta versão candidata. Confirmar indicação, produto, dose, via e monitorização antes de qualquer uso. [1–2].",
+    "alerts": "REVISÃO MÉDICA PENDENTE. Dados educacionais candidatos; não autorizam integração, publicação, prescrição automatizada ou cálculo. [1–2].",
+    "references": [
+      "1. FDA — ADRENALIN (epinephrine) Injection — Full Prescribing Information. https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/204640Orig1s022lbl.pdf",
+      "2. DailyMed / FDA SPL — Epinephrine injection — product labeling. https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=epinephrine+injection"
+    ],
+    "ref": "Fontes primárias: FDA — ADRENALIN (epinephrine) Injection — Full Prescribing Information. https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/204640Orig1s022lbl.pdf; DailyMed / FDA SPL — Epinephrine injection — product labeling. https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=epinephrine+injection"
+  },
+  "es": {
+    "name": "Adrenalina (epinefrina) [1–2].",
+    "class": "Agonista adrenérgico no selectivo [1–2].",
+    "pharmacologicClass": "Catecolamina simpaticomimética alfa y beta [1–2].",
+    "commercialNames": "El nombre comercial depende de la jurisdicción; confirmar producto y prospecto local. [1–2].",
+    "presentation": "ADRENALIN 1 mg/mL (1:1.000) en vial/ampolla para IM/SC; las presentaciones 0,1 mg/mL (1:10.000) son distintas. [1–2].",
+    "presentations": "ADRENALIN 1 mg/mL (1:1.000) en vial/ampolla para IM/SC; las presentaciones 0,1 mg/mL (1:10.000) son distintas. [1–2].",
+    "mechanism": "Activa receptores alfa-1, beta-1 y beta-2; vasoconstricción, inotropismo/cronotropismo y broncodilatación. [1–2].",
+    "pharmacodynamics": "En anafilaxia reduce edema de vía aérea, urticaria e hipotensión; el efecto depende críticamente de vía/concentración. [1–2].",
+    "pharmacokinetics": "Inicio rápido; metabolizada por COMT/MAO y tiene duración corta. La monitorización es esencial con uso IV. [1–2].",
+    "indications": "PI consultada: anafilaxia. Otras indicaciones usan presentaciones y protocolos específicos y no son intercambiables. [1–2].",
+    "dose": "Anafilaxia: 0,3–0,5 mg IM o SC en la cara anterolateral del muslo; repetir cada 5–10 min según necesidad y monitorización. [1–2].",
+    "pediatricDose": "Anafilaxia: 0,01 mg/kg IM/SC (máximo 0,3 mg por dosis en niños <30 kg; 0,3–0,5 mg en ≥30 kg según PI). CÁLCULO PEDIÁTRICO: BLOQUEADO para exigir verificación de concentración. [1–2].",
+    "renalDose": "Sin ajuste para dosis de rescate en anafilaxia; usar cautela y monitorizar en disfunción renal/cardiovascular. [1–2].",
+    "hepaticDose": "Sin ajuste específico en el prospecto de anafilaxia. [1–2].",
+    "commonAdverseEffects": "Temblor, ansiedad, cefalea, palpitaciones, taquicardia, náuseas y sudoración. [1–2].",
+    "dangerousAdverseEffects": "Arritmias, crisis hipertensiva, isquemia miocárdica, edema pulmonar y necrosis por extravasación/uso inadecuado. [1–2].",
+    "adverseEffects": "Temblor, ansiedad, cefalea, palpitaciones, taquicardia, náuseas y sudoración. Arritmias, crisis hipertensiva, isquemia miocárdica, edema pulmonar y necrosis por extravasación/uso inadecuado. [1–2].",
+    "contraindications": "En anafilaxia no existe contraindicación absoluta; los riesgos cardiovasculares no deben retrasar el tratamiento. [1–2].",
+    "interactions": "IMAO, antidepresivos tricíclicos, betabloqueadores, anestésicos halogenados y otros simpaticomiméticos pueden alterar la respuesta; reevaluar riesgo. [1–2].",
+    "monitoring": "Vía, concentración, PA, FC, ritmo, perfusión, respuesta respiratoria y recurrencia de síntomas. [1–2].",
+    "administration": "Para anafilaxia, preferir IM en el muslo. NO administrar la formulación 1 mg/mL por vía IV en bolo. [1–2].",
+    "preparation": "No requiere reconstitución en esta presentación; verificar producto, concentración e integridad antes de usar. [1–2].",
+    "infusionProtocol": "No aplicable a la presentación/vía principal de esta ficha; no crear protocolo de infusión. [1–2].",
+    "pregnancy": "En anafilaxia, tratar de inmediato; el riesgo de anafilaxia materna supera el retraso terapéutico. [1–2].",
+    "lactation": "Compatible con necesidad emergente; vigilar efecto transitorio sobre producción de leche según contexto. [1–2].",
+    "specialPopulations": "Las personas mayores, con multimorbilidad e inmunosupresión requieren evaluación individual y conciliación de medicamentos. [1–2].",
+    "patientEducation": "Usar solo según prescripción; comunicar evento adverso importante, no compartir el medicamento y confirmar cada formulación/vía. [1–2].",
+    "clinicalPearls": "La indicación, formulación y vía forman parte de la dosis. No aplicar números de esta ficha a un producto distinto. [1–2].",
+    "guidelineRecommendations": "Usar en consonancia con guía de la enfermedad, registro local y evaluación especializada cuando corresponda; el prospecto no sustituye la guía. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS en esta versión candidata. Confirmar indicación, producto, dosis, vía y monitorización antes de cualquier uso. [1–2].",
+    "alerts": "REVISIÓN MÉDICA PENDIENTE. Datos educativos candidatos; no autorizan integración, publicación, prescripción automatizada ni cálculo. [1–2].",
+    "references": [
+      "1. FDA — ADRENALIN (epinephrine) Injection — Full Prescribing Information. https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/204640Orig1s022lbl.pdf",
+      "2. DailyMed / FDA SPL — Epinephrine injection — product labeling. https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=epinephrine+injection"
+    ],
+    "ref": "Fuentes primarias: FDA — ADRENALIN (epinephrine) Injection — Full Prescribing Information. https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/204640Orig1s022lbl.pdf; DailyMed / FDA SPL — Epinephrine injection — product labeling. https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=epinephrine+injection"
+  }
+};})();
+/* GOLD33_SELECTIVE:adrenalina:END */

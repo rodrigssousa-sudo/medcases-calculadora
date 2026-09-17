@@ -2322,3 +2322,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:acido_tioctico:END */
+/* GOLD33_SELECTIVE:alfacalcidol:START */
+;(function(){var db=window.NEFRO_DRUGS_DB;if(!db||!db["alfacalcidol"])throw new Error("GOLD33_MISSING_CANONICAL:alfacalcidol");db["alfacalcidol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "003",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cd35e10aef0c58df9f1a51122f9ae347c30c14947f1d5d4b20f84b1fe752807b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Alfacalcidol [1–2].",
+    "class": "Análogo de vitamina D [1–2].",
+    "pharmacologicClass": "Pró-hormônio 1-alfa-hidroxilado de vitamina D [1–2].",
+    "commercialNames": "Nome comercial depende da jurisdição; confirmar produto e bula local. [1–2].",
+    "presentation": "Cápsulas moles 0,25 micrograma e 1 micrograma; apresentações locais podem variar. [1–2].",
+    "presentations": "Cápsulas moles 0,25 micrograma e 1 micrograma; apresentações locais podem variar. [1–2].",
+    "mechanism": "É convertido no fígado a calcitriol, aumentando absorção intestinal de cálcio/fósforo e modulando osso/paratireoide. [1–2].",
+    "pharmacodynamics": "Eleva cálcio sérico e pode suprimir PTH; benefício e toxicidade dependem de monitorização bioquímica. [1–2].",
+    "pharmacokinetics": "Ativação hepática rápida; não requer 1-alfa-hidroxilação renal, mas risco de hipercalcemia persiste. [1–2].",
+    "indications": "Distúrbios de metabolismo do cálcio por redução de 1-alfa-hidroxilação, incluindo doença renal crônica, osteodistrofia e hipoparatireoidismo, conforme SmPC. [1–2].",
+    "dose": "Adultos: 0,5–1 micrograma VO/dia inicialmente; ajustar tipicamente em incrementos de 0,25–0,5 micrograma segundo cálcio/PTH. Manutenção individualizada. [1–2].",
+    "pediatricDose": "SmPC: dose inicial de 0,05–0,1 micrograma/kg/dia em crianças; ajustes por cálcio. CÁLCULO PEDIÁTRICO: BLOQUEADO — depende de indicação e monitorização. [1–2].",
+    "renalDose": "Usado em DRC, mas ajustar exclusivamente por cálcio, fosfato, PTH e contexto de diálise; não converter automaticamente. [1–2].",
+    "hepaticDose": "Ativação é hepática; em hepatopatia grave a resposta pode ser alterada. Exige monitorização laboratorial, sem ajuste numérico universal. [1–2].",
+    "commonAdverseEffects": "Hipercalcemia, hiperfosfatemia, prurido, rash, náusea e dor abdominal. [1–2].",
+    "dangerousAdverseEffects": "Hipercalcemia/hipercalciúria, nefrocalcinose, arritmia com digitálicos e calcificação de tecidos moles. [1–2].",
+    "adverseEffects": "Hipercalcemia, hiperfosfatemia, prurido, rash, náusea e dor abdominal. Hipercalcemia/hipercalciúria, nefrocalcinose, arritmia com digitálicos e calcificação de tecidos moles. [1–2].",
+    "contraindications": "Hipercalcemia, calcificação metastática e hipersensibilidade; corrigir antes de iniciar. [1–2].",
+    "interactions": "Evitar outros análogos de vitamina D/cálcio sem supervisão; tiazídicos aumentam hipercalcemia e digitálicos aumentam risco arrítmico. [1–2].",
+    "monitoring": "Cálcio, fósforo, fosfatase alcalina, PTH, creatinina e cálcio urinário quando indicado; mais frequente durante titulação. [1–2].",
+    "administration": "VO; manter esquema de monitorização e suspender/reduzir se hipercalcemia conforme prescrição. [1–2].",
+    "preparation": "Não requer reconstituição nesta apresentação; conferir produto, concentração e integridade antes do uso. [1–2].",
+    "infusionProtocol": "Não aplicável à apresentação/ via principal desta ficha; não criar protocolo de infusão. [1–2].",
+    "pregnancy": "Dados limitados; usar somente se benefício justificar risco e monitorar cálcio. [1–2].",
+    "lactation": "Pode requerer decisão individual; monitorar mãe/lactente e evitar excesso de vitamina D. [1–2].",
+    "specialPopulations": "Idosos, pessoas com multimorbidade e imunossupressão exigem avaliação individual e reconciliação de medicamentos. [1–2].",
+    "patientEducation": "Usar somente conforme prescrição; comunicar evento adverso importante, não compartilhar o medicamento e confirmar cada formulação/via. [1–2].",
+    "clinicalPearls": "A indicação, formulação e via são parte da dose. Não aplicar números desta ficha a produto diferente. [1–2].",
+    "guidelineRecommendations": "Usar em consonância com diretriz da doença, registro local e avaliação especializada quando indicada; a bula não substitui diretriz. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS nesta versão candidata. Confirmar indicação, produto, dose, via e monitorização antes de qualquer uso. [1–2].",
+    "alerts": "REVISÃO MÉDICA PENDENTE. Dados educacionais candidatos; não autorizam integração, publicação, prescrição automatizada ou cálculo. [1–2].",
+    "references": [
+      "1. electronic Medicines Compendium — Alfacalcidol 0.25 microgram soft capsules — SmPC. https://www.medicines.org.uk/emc/product/1180/smpc",
+      "2. electronic Medicines Compendium — Alfacalcidol — current UK product information. https://www.medicines.org.uk/emc/search?q=alfacalcidol"
+    ],
+    "ref": "Fontes primárias: electronic Medicines Compendium — Alfacalcidol 0.25 microgram soft capsules — SmPC. https://www.medicines.org.uk/emc/product/1180/smpc; electronic Medicines Compendium — Alfacalcidol — current UK product information. https://www.medicines.org.uk/emc/search?q=alfacalcidol"
+  },
+  "es": {
+    "name": "Alfacalcidol [1–2].",
+    "class": "Análogo de vitamina D [1–2].",
+    "pharmacologicClass": "Prohormona 1-alfa-hidroxilada de vitamina D [1–2].",
+    "commercialNames": "El nombre comercial depende de la jurisdicción; confirmar producto y prospecto local. [1–2].",
+    "presentation": "Cápsulas blandas 0,25 microgramos y 1 microgramo; presentaciones locales pueden variar. [1–2].",
+    "presentations": "Cápsulas blandas 0,25 microgramos y 1 microgramo; presentaciones locales pueden variar. [1–2].",
+    "mechanism": "Se convierte en el hígado en calcitriol, aumentando absorción intestinal de calcio/fósforo y modulando hueso/paratiroides. [1–2].",
+    "pharmacodynamics": "Eleva calcio sérico y puede suprimir PTH; beneficio y toxicidad dependen de monitorización bioquímica. [1–2].",
+    "pharmacokinetics": "Activación hepática rápida; no requiere 1-alfa-hidroxilación renal, pero persiste riesgo de hipercalcemia. [1–2].",
+    "indications": "Trastornos del metabolismo del calcio por reducción de 1-alfa-hidroxilación, incluida enfermedad renal crónica, osteodistrofia e hipoparatiroidismo, según SmPC. [1–2].",
+    "dose": "Adultos: 0,5–1 microgramos VO/día inicialmente; ajustar típicamente en incrementos de 0,25–0,5 microgramos según calcio/PTH. Mantenimiento individualizado. [1–2].",
+    "pediatricDose": "SmPC: dosis inicial de 0,05–0,1 microgramos/kg/día en niños; ajustes por calcio. CÁLCULO PEDIÁTRICO: BLOQUEADO — depende de indicación y monitorización. [1–2].",
+    "renalDose": "Se usa en ERC, pero ajustar exclusivamente por calcio, fosfato, PTH y contexto de diálisis; no convertir automáticamente. [1–2].",
+    "hepaticDose": "La activación es hepática; en hepatopatía grave la respuesta puede alterarse. Requiere monitorización de laboratorio, sin ajuste numérico universal. [1–2].",
+    "commonAdverseEffects": "Hipercalcemia, hiperfosfatemia, prurito, erupción, náuseas y dolor abdominal. [1–2].",
+    "dangerousAdverseEffects": "Hipercalcemia/hipercalciuria, nefrocalcinosis, arritmia con digitálicos y calcificación de tejidos blandos. [1–2].",
+    "adverseEffects": "Hipercalcemia, hiperfosfatemia, prurito, erupción, náuseas y dolor abdominal. Hipercalcemia/hipercalciuria, nefrocalcinosis, arritmia con digitálicos y calcificación de tejidos blandos. [1–2].",
+    "contraindications": "Hipercalcemia, calcificación metastásica e hipersensibilidad; corregir antes de iniciar. [1–2].",
+    "interactions": "Evitar otros análogos de vitamina D/calcio sin supervisión; tiazidas aumentan hipercalcemia y digitálicos aumentan riesgo arrítmico. [1–2].",
+    "monitoring": "Calcio, fósforo, fosfatasa alcalina, PTH, creatinina y calcio urinario cuando corresponda; más frecuente durante titulación. [1–2].",
+    "administration": "VO; mantener esquema de monitorización y suspender/reducir si hipercalcemia según prescripción. [1–2].",
+    "preparation": "No requiere reconstitución en esta presentación; verificar producto, concentración e integridad antes de usar. [1–2].",
+    "infusionProtocol": "No aplicable a la presentación/vía principal de esta ficha; no crear protocolo de infusión. [1–2].",
+    "pregnancy": "Datos limitados; usar solo si beneficio justifica riesgo y monitorizar calcio. [1–2].",
+    "lactation": "Puede requerir decisión individual; monitorizar madre/lactante y evitar exceso de vitamina D. [1–2].",
+    "specialPopulations": "Las personas mayores, con multimorbilidad e inmunosupresión requieren evaluación individual y conciliación de medicamentos. [1–2].",
+    "patientEducation": "Usar solo según prescripción; comunicar evento adverso importante, no compartir el medicamento y confirmar cada formulación/vía. [1–2].",
+    "clinicalPearls": "La indicación, formulación y vía forman parte de la dosis. No aplicar números de esta ficha a un producto distinto. [1–2].",
+    "guidelineRecommendations": "Usar en consonancia con guía de la enfermedad, registro local y evaluación especializada cuando corresponda; el prospecto no sustituye la guía. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS en esta versión candidata. Confirmar indicación, producto, dosis, vía y monitorización antes de cualquier uso. [1–2].",
+    "alerts": "REVISIÓN MÉDICA PENDIENTE. Datos educativos candidatos; no autorizan integración, publicación, prescripción automatizada ni cálculo. [1–2].",
+    "references": [
+      "1. electronic Medicines Compendium — Alfacalcidol 0.25 microgram soft capsules — SmPC. https://www.medicines.org.uk/emc/product/1180/smpc",
+      "2. electronic Medicines Compendium — Alfacalcidol — current UK product information. https://www.medicines.org.uk/emc/search?q=alfacalcidol"
+    ],
+    "ref": "Fuentes primarias: electronic Medicines Compendium — Alfacalcidol 0.25 microgram soft capsules — SmPC. https://www.medicines.org.uk/emc/product/1180/smpc; electronic Medicines Compendium — Alfacalcidol — current UK product information. https://www.medicines.org.uk/emc/search?q=alfacalcidol"
+  }
+};})();
+/* GOLD33_SELECTIVE:alfacalcidol:END */

@@ -6885,3 +6885,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:aciclovir:END */
+/* GOLD33_SELECTIVE:albendazol:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB;if(!db||!db["albendazol"])throw new Error("GOLD33_MISSING_CANONICAL:albendazol");db["albendazol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "003",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cd35e10aef0c58df9f1a51122f9ae347c30c14947f1d5d4b20f84b1fe752807b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Albendazol [1–2].",
+    "class": "Anti-helmíntico benzimidazólico [1–2].",
+    "pharmacologicClass": "Inibidor de microtúbulos parasitários [1–2].",
+    "commercialNames": "Nome comercial depende da jurisdição; confirmar produto e bula local. [1–2].",
+    "presentation": "Comprimidos de 200 mg; mastigar/triturar conforme incapacidade de deglutir descrita no PI. [1–2].",
+    "presentations": "Comprimidos de 200 mg; mastigar/triturar conforme incapacidade de deglutir descrita no PI. [1–2].",
+    "mechanism": "Liga beta-tubulina do parasita, inibe polimerização de microtúbulos e reduz captação de glicose. [1–2].",
+    "pharmacodynamics": "A atividade e necessidade de tratamento adjuvante variam pela parasitose e localização. [1–2].",
+    "pharmacokinetics": "Absorção oral aumenta com refeição gordurosa; metabolizado ao sulfóxido ativo; eliminação predominantemente biliar. [1–2].",
+    "indications": "PI: neurocisticercose parenquimatosa ativa e doença hidática cística de fígado, pulmão e peritônio. [1–2].",
+    "dose": "≥60 kg: 400 mg VO 2×/dia com alimento; <60 kg: 15 mg/kg/dia em 2 tomadas (máx. 800 mg/dia). Duração depende de neurocisticercose versus doença hidática. [1–2].",
+    "pediatricDose": "≥1 ano: mesma regra por peso do PI para indicações aprovadas; <1 ano não estabelecido. CÁLCULO PEDIÁTRICO: BLOQUEADO — exige diagnóstico e duração. [1–2].",
+    "renalDose": "Ajuste não estudado; usar cautela e monitorar em insuficiência renal. [1–2].",
+    "hepaticDose": "Pode elevar enzimas; monitorar e interromper/reavaliar aumento clinicamente significativo. [1–2].",
+    "commonAdverseEffects": "Dor abdominal, náuseas, vômito, cefaleia e tontura. [1–2].",
+    "dangerousAdverseEffects": "Hepatotoxicidade, pancitopenia, agranulocitose, alopecia, SJS/TEN e exacerbação neurológica por morte parasitária. [1–2].",
+    "adverseEffects": "Dor abdominal, náuseas, vômito, cefaleia e tontura. Hepatotoxicidade, pancitopenia, agranulocitose, alopecia, SJS/TEN e exacerbação neurológica por morte parasitária. [1–2].",
+    "contraindications": "Hipersensibilidade a benzimidazóis; evitar na gravidez salvo ausência de alternativa apropriada. [1–2].",
+    "interactions": "Dexametasona, praziquantel e cimetidina podem aumentar metabólito ativo; monitorar contexto clínico. [1–2].",
+    "monitoring": "Hemograma e transaminases antes e a cada 2 semanas em ciclos; avaliação oftalmológica antes do tratamento de neurocisticercose. [1–2].",
+    "administration": "Tomar com alimento; em neurocisticercose usar corticosteroide/anticonvulsivante quando indicado pelo PI. [1–2].",
+    "preparation": "Não requer reconstituição nesta apresentação; conferir produto, concentração e integridade antes do uso. [1–2].",
+    "infusionProtocol": "Não aplicável à apresentação/ via principal desta ficha; não criar protocolo de infusão. [1–2].",
+    "pregnancy": "Teste de gravidez antes; contracepção durante e por 1 mês após tratamento. [1–2].",
+    "lactation": "Dados no leite insuficientes; ponderar benefício e risco. [1–2].",
+    "specialPopulations": "Idosos, pessoas com multimorbidade e imunossupressão exigem avaliação individual e reconciliação de medicamentos. [1–2].",
+    "patientEducation": "Usar somente conforme prescrição; comunicar evento adverso importante, não compartilhar o medicamento e confirmar cada formulação/via. [1–2].",
+    "clinicalPearls": "A indicação, formulação e via são parte da dose. Não aplicar números desta ficha a produto diferente. [1–2].",
+    "guidelineRecommendations": "Usar em consonância com diretriz da doença, registro local e avaliação especializada quando indicada; a bula não substitui diretriz. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS nesta versão candidata. Confirmar indicação, produto, dose, via e monitorização antes de qualquer uso. [1–2].",
+    "alerts": "REVISÃO MÉDICA PENDENTE. Dados educacionais candidatos; não autorizam integração, publicação, prescrição automatizada ou cálculo. [1–2].",
+    "references": [
+      "1. FDA — ALBENZA (albendazole) Full Prescribing Information. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/020666s012lbl.pdf",
+      "2. DailyMed / FDA SPL — ALBENZA — albendazole tablet label. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=62a3f663-9e76-47f6-b089-54e4db01f697"
+    ],
+    "ref": "Fontes primárias: FDA — ALBENZA (albendazole) Full Prescribing Information. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/020666s012lbl.pdf; DailyMed / FDA SPL — ALBENZA — albendazole tablet label. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=62a3f663-9e76-47f6-b089-54e4db01f697"
+  },
+  "es": {
+    "name": "Albendazol [1–2].",
+    "class": "Antihelmíntico benzimidazólico [1–2].",
+    "pharmacologicClass": "Inhibidor de microtúbulos parasitarios [1–2].",
+    "commercialNames": "El nombre comercial depende de la jurisdicción; confirmar producto y prospecto local. [1–2].",
+    "presentation": "Comprimidos de 200 mg; masticar/triturar según incapacidad para tragar descrita en la PI. [1–2].",
+    "presentations": "Comprimidos de 200 mg; masticar/triturar según incapacidad para tragar descrita en la PI. [1–2].",
+    "mechanism": "Se une a beta-tubulina del parásito, inhibe polimerización de microtúbulos y reduce captación de glucosa. [1–2].",
+    "pharmacodynamics": "La actividad y necesidad de tratamiento adyuvante varían según parasitosis y localización. [1–2].",
+    "pharmacokinetics": "La absorción oral aumenta con comida grasa; se metaboliza a sulfóxido activo; eliminación predominantemente biliar. [1–2].",
+    "indications": "PI: neurocisticercosis parenquimatosa activa y enfermedad hidatídica quística de hígado, pulmón y peritoneo. [1–2].",
+    "dose": "≥60 kg: 400 mg VO 2×/día con alimento; <60 kg: 15 mg/kg/día en 2 tomas (máx. 800 mg/día). Duración depende de neurocisticercosis versus enfermedad hidatídica. [1–2].",
+    "pediatricDose": "≥1 año: misma regla por peso de la PI para indicaciones aprobadas; <1 año no establecido. CÁLCULO PEDIÁTRICO: BLOQUEADO — exige diagnóstico y duración. [1–2].",
+    "renalDose": "Ajuste no estudiado; usar cautela y monitorizar en insuficiencia renal. [1–2].",
+    "hepaticDose": "Puede elevar enzimas; monitorizar e interrumpir/reevaluar elevación clínicamente significativa. [1–2].",
+    "commonAdverseEffects": "Dolor abdominal, náuseas, vómito, cefalea y mareo. [1–2].",
+    "dangerousAdverseEffects": "Hepatotoxicidad, pancitopenia, agranulocitosis, alopecia, SJS/TEN y exacerbación neurológica por muerte parasitaria. [1–2].",
+    "adverseEffects": "Dolor abdominal, náuseas, vómito, cefalea y mareo. Hepatotoxicidad, pancitopenia, agranulocitosis, alopecia, SJS/TEN y exacerbación neurológica por muerte parasitaria. [1–2].",
+    "contraindications": "Hipersensibilidad a benzimidazoles; evitar en embarazo salvo ausencia de alternativa apropiada. [1–2].",
+    "interactions": "Dexametasona, prazicuantel y cimetidina pueden aumentar metabolito activo; monitorizar contexto clínico. [1–2].",
+    "monitoring": "Hemograma y transaminasas antes y cada 2 semanas en ciclos; evaluación oftalmológica antes del tratamiento de neurocisticercosis. [1–2].",
+    "administration": "Tomar con alimento; en neurocisticercosis usar corticoide/anticonvulsivante cuando indicado por la PI. [1–2].",
+    "preparation": "No requiere reconstitución en esta presentación; verificar producto, concentración e integridad antes de usar. [1–2].",
+    "infusionProtocol": "No aplicable a la presentación/vía principal de esta ficha; no crear protocolo de infusión. [1–2].",
+    "pregnancy": "Prueba de embarazo antes; anticoncepción durante y 1 mes después del tratamiento. [1–2].",
+    "lactation": "Datos en leche insuficientes; ponderar beneficio y riesgo. [1–2].",
+    "specialPopulations": "Las personas mayores, con multimorbilidad e inmunosupresión requieren evaluación individual y conciliación de medicamentos. [1–2].",
+    "patientEducation": "Usar solo según prescripción; comunicar evento adverso importante, no compartir el medicamento y confirmar cada formulación/vía. [1–2].",
+    "clinicalPearls": "La indicación, formulación y vía forman parte de la dosis. No aplicar números de esta ficha a un producto distinto. [1–2].",
+    "guidelineRecommendations": "Usar en consonancia con guía de la enfermedad, registro local y evaluación especializada cuando corresponda; el prospecto no sustituye la guía. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS en esta versión candidata. Confirmar indicación, producto, dosis, vía y monitorización antes de cualquier uso. [1–2].",
+    "alerts": "REVISIÓN MÉDICA PENDIENTE. Datos educativos candidatos; no autorizan integración, publicación, prescripción automatizada ni cálculo. [1–2].",
+    "references": [
+      "1. FDA — ALBENZA (albendazole) Full Prescribing Information. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/020666s012lbl.pdf",
+      "2. DailyMed / FDA SPL — ALBENZA — albendazole tablet label. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=62a3f663-9e76-47f6-b089-54e4db01f697"
+    ],
+    "ref": "Fuentes primarias: FDA — ALBENZA (albendazole) Full Prescribing Information. https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/020666s012lbl.pdf; DailyMed / FDA SPL — ALBENZA — albendazole tablet label. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=62a3f663-9e76-47f6-b089-54e4db01f697"
+  }
+};})();
+/* GOLD33_SELECTIVE:albendazol:END */

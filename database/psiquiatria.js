@@ -5151,3 +5151,93 @@
                   litio (Estabilizador de Humor) — 46 drugs total */
 
 })();
+/* GOLD33_SELECTIVE:agomelatina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["agomelatina"])throw new Error("GOLD33_MISSING_CANONICAL:agomelatina");db["agomelatina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "003",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cd35e10aef0c58df9f1a51122f9ae347c30c14947f1d5d4b20f84b1fe752807b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Agomelatina [1–2].",
+    "class": "Antidepressivo melatoninérgico [1–2].",
+    "pharmacologicClass": "Agonista MT1/MT2 e antagonista 5-HT2C [1–2].",
+    "commercialNames": "Nome comercial depende da jurisdição; confirmar produto e bula local. [1–2].",
+    "presentation": "Comprimido revestido de 25 mg. [1–2].",
+    "presentations": "Comprimido revestido de 25 mg. [1–2].",
+    "mechanism": "Estimula receptores melatoninérgicos MT1/MT2 e bloqueia 5-HT2C, influenciando ritmos circadianos e neurotransmissão. [1–2].",
+    "pharmacodynamics": "Pode normalizar padrão de sono e aliviar episódio depressivo maior em adultos; não é sedativo de resgate. [1–2].",
+    "pharmacokinetics": "Extenso metabolismo de primeira passagem, principalmente CYP1A2; exposição é muito sensível a inibidores de CYP1A2. [1–2].",
+    "indications": "Tratamento de episódios depressivos maiores em adultos (EMA). [1–2].",
+    "dose": "25 mg VO ao deitar; se não houver melhora após 2 semanas, 50 mg ao deitar pode ser considerado. Tratar pelo menos 6 meses após remissão conforme EMA. [1–2].",
+    "pediatricDose": "Não recomendado em <18 anos; segurança/eficácia não estabelecidas e há preocupação comportamental. AUTOMATIZÁVEL: NÃO. [1–2].",
+    "renalDose": "Não recomendado em insuficiência renal moderada/grave por dados limitados; confirmar SmPC local. [1–2].",
+    "hepaticDose": "Contraindicado em insuficiência hepática/ doença hepática ativa ou transaminases >3× LSN. [1–2].",
+    "commonAdverseEffects": "Cefaleia, náusea e tontura são frequentes. [1–2].",
+    "dangerousAdverseEffects": "Hepatotoxicidade, elevação de transaminases, ideação suicida, mania/hipomania e reações cutâneas graves exigem avaliação. [1–2].",
+    "adverseEffects": "Cefaleia, náusea e tontura são frequentes. Hepatotoxicidade, elevação de transaminases, ideação suicida, mania/hipomania e reações cutâneas graves exigem avaliação. [1–2].",
+    "contraindications": "Doença hepática, transaminases >3× LSN e coadministração com fluvoxamina ou ciprofloxacino. [1–2].",
+    "interactions": "Contraindicado com inibidores fortes de CYP1A2; cautela com estrogênios e outros inibidores moderados de CYP1A2. [1–2].",
+    "monitoring": "AST/ALT antes, e cerca de 3, 6, 12 e 24 semanas, e após aumento; vigiar humor e sintomas hepáticos. [1–2].",
+    "administration": "VO ao deitar; não duplicar dose esquecida. [1–2].",
+    "preparation": "Não requer reconstituição nesta apresentação; conferir produto, concentração e integridade antes do uso. [1–2].",
+    "infusionProtocol": "Não aplicável à apresentação/ via principal desta ficha; não criar protocolo de infusão. [1–2].",
+    "pregnancy": "Dados são limitados; decidir individualmente. [1–2].",
+    "lactation": "Não recomendado durante amamentação no SmPC por ausência de dados adequados. [1–2].",
+    "specialPopulations": "Idosos, pessoas com multimorbidade e imunossupressão exigem avaliação individual e reconciliação de medicamentos. [1–2].",
+    "patientEducation": "Usar somente conforme prescrição; comunicar evento adverso importante, não compartilhar o medicamento e confirmar cada formulação/via. [1–2].",
+    "clinicalPearls": "A indicação, formulação e via são parte da dose. Não aplicar números desta ficha a produto diferente. [1–2].",
+    "guidelineRecommendations": "Usar em consonância com diretriz da doença, registro local e avaliação especializada quando indicada; a bula não substitui diretriz. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS nesta versão candidata. Confirmar indicação, produto, dose, via e monitorização antes de qualquer uso. [1–2].",
+    "alerts": "REVISÃO MÉDICA PENDENTE. Dados educacionais candidatos; não autorizam integração, publicação, prescrição automatizada ou cálculo. [1–2].",
+    "references": [
+      "1. EMA — Valdoxan (agomelatine) EPAR — Product information. https://www.ema.europa.eu/en/medicines/human/EPAR/valdoxan",
+      "2. EMA — Valdoxan EPAR — risk-management information. https://www.ema.europa.eu/en/medicines/human/EPAR/valdoxan"
+    ],
+    "ref": "Fontes primárias: EMA — Valdoxan (agomelatine) EPAR — Product information. https://www.ema.europa.eu/en/medicines/human/EPAR/valdoxan; EMA — Valdoxan EPAR — risk-management information. https://www.ema.europa.eu/en/medicines/human/EPAR/valdoxan"
+  },
+  "es": {
+    "name": "Agomelatina [1–2].",
+    "class": "Antidepresivo melatoninérgico [1–2].",
+    "pharmacologicClass": "Agonista MT1/MT2 y antagonista 5-HT2C [1–2].",
+    "commercialNames": "El nombre comercial depende de la jurisdicción; confirmar producto y prospecto local. [1–2].",
+    "presentation": "Comprimido recubierto de 25 mg. [1–2].",
+    "presentations": "Comprimido recubierto de 25 mg. [1–2].",
+    "mechanism": "Estimula receptores melatoninérgicos MT1/MT2 y bloquea 5-HT2C, influyendo en ritmos circadianos y neurotransmisión. [1–2].",
+    "pharmacodynamics": "Puede normalizar el patrón de sueño y aliviar episodio depresivo mayor en adultos; no es sedante de rescate. [1–2].",
+    "pharmacokinetics": "Extenso metabolismo de primer paso, principalmente CYP1A2; la exposición es muy sensible a inhibidores de CYP1A2. [1–2].",
+    "indications": "Tratamiento de episodios depresivos mayores en adultos (EMA). [1–2].",
+    "dose": "25 mg VO al acostarse; si no hay mejoría después de 2 semanas, puede considerarse 50 mg al acostarse. Tratar al menos 6 meses después de remisión según EMA. [1–2].",
+    "pediatricDose": "No recomendado en <18 años; seguridad/eficacia no establecidas y existe preocupación conductual. AUTOMATIZABLE: NO. [1–2].",
+    "renalDose": "No recomendado en insuficiencia renal moderada/grave por datos limitados; confirmar SmPC local. [1–2].",
+    "hepaticDose": "Contraindicado en insuficiencia hepática/enfermedad hepática activa o transaminasas >3× LSN. [1–2].",
+    "commonAdverseEffects": "Cefalea, náuseas y mareo son frecuentes. [1–2].",
+    "dangerousAdverseEffects": "Hepatotoxicidad, elevación de transaminasas, ideación suicida, manía/hipomanía y reacciones cutáneas graves requieren evaluación. [1–2].",
+    "adverseEffects": "Cefalea, náuseas y mareo son frecuentes. Hepatotoxicidad, elevación de transaminasas, ideación suicida, manía/hipomanía y reacciones cutáneas graves requieren evaluación. [1–2].",
+    "contraindications": "Enfermedad hepática, transaminasas >3× LSN y coadministración con fluvoxamina o ciprofloxacino. [1–2].",
+    "interactions": "Contraindicado con inhibidores fuertes de CYP1A2; cautela con estrógenos y otros inhibidores moderados de CYP1A2. [1–2].",
+    "monitoring": "AST/ALT antes, y aproximadamente a 3, 6, 12 y 24 semanas, y tras aumento; vigilar ánimo y síntomas hepáticos. [1–2].",
+    "administration": "VO al acostarse; no duplicar una dosis olvidada. [1–2].",
+    "preparation": "No requiere reconstitución en esta presentación; verificar producto, concentración e integridad antes de usar. [1–2].",
+    "infusionProtocol": "No aplicable a la presentación/vía principal de esta ficha; no crear protocolo de infusión. [1–2].",
+    "pregnancy": "Los datos son limitados; decidir individualmente. [1–2].",
+    "lactation": "No recomendado durante lactancia en el SmPC por falta de datos adecuados. [1–2].",
+    "specialPopulations": "Las personas mayores, con multimorbilidad e inmunosupresión requieren evaluación individual y conciliación de medicamentos. [1–2].",
+    "patientEducation": "Usar solo según prescripción; comunicar evento adverso importante, no compartir el medicamento y confirmar cada formulación/vía. [1–2].",
+    "clinicalPearls": "La indicación, formulación y vía forman parte de la dosis. No aplicar números de esta ficha a un producto distinto. [1–2].",
+    "guidelineRecommendations": "Usar en consonancia con guía de la enfermedad, registro local y evaluación especializada cuando corresponda; el prospecto no sustituye la guía. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS en esta versión candidata. Confirmar indicación, producto, dosis, vía y monitorización antes de cualquier uso. [1–2].",
+    "alerts": "REVISIÓN MÉDICA PENDIENTE. Datos educativos candidatos; no autorizan integración, publicación, prescripción automatizada ni cálculo. [1–2].",
+    "references": [
+      "1. EMA — Valdoxan (agomelatine) EPAR — Product information. https://www.ema.europa.eu/en/medicines/human/EPAR/valdoxan",
+      "2. EMA — Valdoxan EPAR — risk-management information. https://www.ema.europa.eu/en/medicines/human/EPAR/valdoxan"
+    ],
+    "ref": "Fuentes primarias: EMA — Valdoxan (agomelatine) EPAR — Product information. https://www.ema.europa.eu/en/medicines/human/EPAR/valdoxan; EMA — Valdoxan EPAR — risk-management information. https://www.ema.europa.eu/en/medicines/human/EPAR/valdoxan"
+  }
+};})();
+/* GOLD33_SELECTIVE:agomelatina:END */

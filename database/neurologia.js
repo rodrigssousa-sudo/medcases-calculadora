@@ -8582,3 +8582,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:acido_valproico:END */
+/* GOLD33_SELECTIVE:alemtuzumabe:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["alemtuzumabe"])throw new Error("GOLD33_MISSING_CANONICAL:alemtuzumabe");db["alemtuzumabe"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "003",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cd35e10aef0c58df9f1a51122f9ae347c30c14947f1d5d4b20f84b1fe752807b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Alemtuzumabe [1–2].",
+    "class": "Anticorpo monoclonal anti-CD52 [1–2].",
+    "pharmacologicClass": "Terapia de depleção linfocitária [1–2].",
+    "commercialNames": "Nome comercial depende da jurisdição; confirmar produto e bula local. [1–2].",
+    "presentation": "Concentrado para infusão IV 12 mg/1,2 mL (10 mg/mL). [1–2].",
+    "presentations": "Concentrado para infusão IV 12 mg/1,2 mL (10 mg/mL). [1–2].",
+    "mechanism": "Liga CD52 em linfócitos B/T, produzindo citólise mediada por complemento e células efetoras. [1–2].",
+    "pharmacodynamics": "Depleção e repopulação imune modificam atividade da EM, mas criam risco prolongado de autoimunidade e infecção. [1–2].",
+    "pharmacokinetics": "Infusão IV; concentração sérica reduz rapidamente após cada ciclo, mas efeitos imunes são prolongados. [1–2].",
+    "indications": "Formas recidivantes de esclerose múltipla em adultos, geralmente após resposta inadequada a ≥2 terapias; não recomendado em síndrome clinicamente isolada. [1–2].",
+    "dose": "12 mg/dia IV por 5 dias consecutivos (curso 1), seguido 12 meses depois por 12 mg/dia IV por 3 dias (curso 2). Cursos adicionais somente conforme PI. [1–2].",
+    "pediatricDose": "Não estabelecido em pediatria. AUTOMATIZÁVEL: NÃO. [1–2].",
+    "renalDose": "Não há ajuste recomendado; dados específicos são limitados. [1–2].",
+    "hepaticDose": "Não há ajuste recomendado; dados específicos são limitados. [1–2].",
+    "commonAdverseEffects": "Cefaleia, erupção, pirexia, náusea, fadiga, infecções respiratórias e reações à infusão. [1–2].",
+    "dangerousAdverseEffects": "Autoimunidade (ITP, nefropatia, tireoide), AVC/dissecção cervical, reações graves à infusão, infecções, malignidade e linfo-histiocitose. [1–2].",
+    "adverseEffects": "Cefaleia, erupção, pirexia, náusea, fadiga, infecções respiratórias e reações à infusão. Autoimunidade (ITP, nefropatia, tireoide), AVC/dissecção cervical, reações graves à infusão, infecções, malignidade e linfo-histiocitose. [1–2].",
+    "contraindications": "Hipersensibilidade; avaliar e tratar infecção ativa. Uso restrito via REMS devido a riscos graves. [1–2].",
+    "interactions": "Evitar associação com outros imunossupressores quando possível; vacinas vivas devem ser evitadas após curso conforme orientação. [1–2].",
+    "monitoring": "Hemograma com diferencial, creatinina/urina e TSH antes e mensalmente/periodicamente por 48 meses após última infusão; vigilância infecciosa e de AVC. [1–2].",
+    "administration": "Premedicar com corticosteroide por 3 primeiros dias, diluir em 100 mL de SF 0,9% ou SG 5% e infundir ≥4 h; observar ≥2 h após. [1–2].",
+    "preparation": "Diluir somente em 100 mL de SF 0,9% ou SG 5%; não adicionar outros medicamentos à mesma bolsa. [1–2].",
+    "infusionProtocol": "Infundir por ≥4 h; premedicar e observar por ≥2 h após cada infusão, conforme PI. [1–2].",
+    "pregnancy": "Pode atravessar placenta; usar contracepção eficaz durante e por 4 meses após curso. [1–2].",
+    "lactation": "Não amamentar durante cada curso e por pelo menos 4 meses após. [1–2].",
+    "specialPopulations": "Idosos, pessoas com multimorbidade e imunossupressão exigem avaliação individual e reconciliação de medicamentos. [1–2].",
+    "patientEducation": "Usar somente conforme prescrição; comunicar evento adverso importante, não compartilhar o medicamento e confirmar cada formulação/via. [1–2].",
+    "clinicalPearls": "A indicação, formulação e via são parte da dose. Não aplicar números desta ficha a produto diferente. [1–2].",
+    "guidelineRecommendations": "Usar em consonância com diretriz da doença, registro local e avaliação especializada quando indicada; a bula não substitui diretriz. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS nesta versão candidata. Confirmar indicação, produto, dose, via e monitorização antes de qualquer uso. [1–2].",
+    "alerts": "REVISÃO MÉDICA PENDENTE. Dados educacionais candidatos; não autorizam integração, publicação, prescrição automatizada ou cálculo. [1–2].",
+    "references": [
+      "1. Sanofi — LEMTRADA (alemtuzumab) Full Prescribing Information. https://products.sanofi.us/Lemtrada/Lemtrada.pdf",
+      "2. FDA — LEMTRADA label / safety information. https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=103948"
+    ],
+    "ref": "Fontes primárias: Sanofi — LEMTRADA (alemtuzumab) Full Prescribing Information. https://products.sanofi.us/Lemtrada/Lemtrada.pdf; FDA — LEMTRADA label / safety information. https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=103948"
+  },
+  "es": {
+    "name": "Alemtuzumab [1–2].",
+    "class": "Anticuerpo monoclonal anti-CD52 [1–2].",
+    "pharmacologicClass": "Terapia de depleción linfocitaria [1–2].",
+    "commercialNames": "El nombre comercial depende de la jurisdicción; confirmar producto y prospecto local. [1–2].",
+    "presentation": "Concentrado para infusión IV 12 mg/1,2 mL (10 mg/mL). [1–2].",
+    "presentations": "Concentrado para infusión IV 12 mg/1,2 mL (10 mg/mL). [1–2].",
+    "mechanism": "Se une a CD52 en linfocitos B/T, produciendo citólisis mediada por complemento y células efectoras. [1–2].",
+    "pharmacodynamics": "La depleción y repoblación inmune modifican actividad de EM, pero crean riesgo prolongado de autoinmunidad e infección. [1–2].",
+    "pharmacokinetics": "Infusión IV; concentración sérica disminuye rápidamente tras cada ciclo, pero efectos inmunes son prolongados. [1–2].",
+    "indications": "Formas recidivantes de esclerosis múltiple en adultos, generalmente tras respuesta inadecuada a ≥2 terapias; no recomendado en síndrome clínicamente aislado. [1–2].",
+    "dose": "12 mg/día IV por 5 días consecutivos (curso 1), seguido 12 meses después por 12 mg/día IV por 3 días (curso 2). Cursos adicionales solo según PI. [1–2].",
+    "pediatricDose": "No establecido en pediatría. AUTOMATIZABLE: NO. [1–2].",
+    "renalDose": "No hay ajuste recomendado; datos específicos son limitados. [1–2].",
+    "hepaticDose": "No hay ajuste recomendado; datos específicos son limitados. [1–2].",
+    "commonAdverseEffects": "Cefalea, erupción, pirexia, náuseas, fatiga, infecciones respiratorias y reacciones a la infusión. [1–2].",
+    "dangerousAdverseEffects": "Autoinmunidad (PTI, nefropatía, tiroides), ACV/disección cervical, reacciones graves a la infusión, infecciones, malignidad y linfohistiocitosis. [1–2].",
+    "adverseEffects": "Cefalea, erupción, pirexia, náuseas, fatiga, infecciones respiratorias y reacciones a la infusión. Autoinmunidad (PTI, nefropatía, tiroides), ACV/disección cervical, reacciones graves a la infusión, infecciones, malignidad y linfohistiocitosis. [1–2].",
+    "contraindications": "Hipersensibilidad; evaluar y tratar infección activa. Uso restringido vía REMS por riesgos graves. [1–2].",
+    "interactions": "Evitar asociación con otros inmunosupresores cuando sea posible; se deben evitar vacunas vivas tras el curso según orientación. [1–2].",
+    "monitoring": "Hemograma con diferencial, creatinina/orina y TSH antes y mensualmente/periódicamente por 48 meses tras última infusión; vigilancia infecciosa y de ACV. [1–2].",
+    "administration": "Premedicar con corticoide los 3 primeros días, diluir en 100 mL de SF 0,9% o SG 5% e infundir ≥4 h; observar ≥2 h después. [1–2].",
+    "preparation": "Diluir solo en 100 mL de SF 0,9% o SG 5%; no añadir otros medicamentos a la misma bolsa. [1–2].",
+    "infusionProtocol": "Infundir durante ≥4 h; premedicar y observar durante ≥2 h después de cada infusión, según PI. [1–2].",
+    "pregnancy": "Puede atravesar placenta; usar anticoncepción eficaz durante y 4 meses tras el curso. [1–2].",
+    "lactation": "No amamantar durante cada curso y durante al menos 4 meses después. [1–2].",
+    "specialPopulations": "Las personas mayores, con multimorbilidad e inmunosupresión requieren evaluación individual y conciliación de medicamentos. [1–2].",
+    "patientEducation": "Usar solo según prescripción; comunicar evento adverso importante, no compartir el medicamento y confirmar cada formulación/vía. [1–2].",
+    "clinicalPearls": "La indicación, formulación y vía forman parte de la dosis. No aplicar números de esta ficha a un producto distinto. [1–2].",
+    "guidelineRecommendations": "Usar en consonancia con guía de la enfermedad, registro local y evaluación especializada cuando corresponda; el prospecto no sustituye la guía. [1–2].",
+    "safetyFlags": "CÁLCULOS CLÍNICOS: BLOQUEADOS en esta versión candidata. Confirmar indicación, producto, dosis, vía y monitorización antes de cualquier uso. [1–2].",
+    "alerts": "REVISIÓN MÉDICA PENDIENTE. Datos educativos candidatos; no autorizan integración, publicación, prescripción automatizada ni cálculo. [1–2].",
+    "references": [
+      "1. Sanofi — LEMTRADA (alemtuzumab) Full Prescribing Information. https://products.sanofi.us/Lemtrada/Lemtrada.pdf",
+      "2. FDA — LEMTRADA label / safety information. https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=103948"
+    ],
+    "ref": "Fuentes primarias: Sanofi — LEMTRADA (alemtuzumab) Full Prescribing Information. https://products.sanofi.us/Lemtrada/Lemtrada.pdf; FDA — LEMTRADA label / safety information. https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=103948"
+  }
+};})();
+/* GOLD33_SELECTIVE:alemtuzumabe:END */
