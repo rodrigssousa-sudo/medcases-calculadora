@@ -40,7 +40,7 @@ self.addEventListener('activate', (event) => {
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-v517-gpb-focus-suppression';
+const CACHE_VERSION   = 'medcases-r30-free60-security-20260916';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de assets pré-cacheados no install ──────
@@ -92,7 +92,7 @@ const ASSETS_TO_CACHE = [
   './database/pneumologia_otorrino.js?v=484',
   './database/neurologia.js?v=484',
   './database/prescricoes.js?v=484',
-  './database/psicofarmacos.js?v=484',
+  './database/psicofarmacos.js?v=r30-free60-security-20260916',
   './database/psiquiatria.js?v=484',
   './database/reumatologia.js?v=484',
   './database/emergencia.js?v=484',

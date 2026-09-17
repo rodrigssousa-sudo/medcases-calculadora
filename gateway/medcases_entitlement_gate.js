@@ -37,7 +37,16 @@ function safeEqual(left, right) {
     return false;
   }
 
-  return a.length === b.length &&
+  // Reject alternate base64url encodings of the same HMAC bytes.
+  // A SHA-256 signature must use the single canonical 43-character encoding.
+  const l = String(left);
+  const r = String(right);
+  return /^[A-Za-z0-9_-]{43}$/.test(l) &&
+    /^[A-Za-z0-9_-]{43}$/.test(r) &&
+    a.length === 32 &&
+    b.length === 32 &&
+    a.toString('base64url') === l &&
+    b.toString('base64url') === r &&
     crypto.timingSafeEqual(a, b);
 }
 

@@ -7,12 +7,12 @@
   "author": "MedCases Pro",
   "license": "UNLICENSED",
   "scripts": {
-    "export:clinical": "node scripts/export-clinical-data.js",
+    "export:clinical": "node -e \"throw Error('UNSAFE_GLOBAL_EXPORT_DISABLED_R30')\"",
     "manifest:offline": "node scripts/generate-offline-manifest.js",
-    "export:data": "npm run export:ai && npm run manifest:offline",
-    "build": "npm run export:data",
-    "predeploy": "npm run export:data",
-    "export:ai": "./scripts/build-ai-drug-data.sh"
+    "export:data": "node scripts/generate-offline-manifest.js && node scripts/verify-public-boundary.cjs",
+    "build": "node scripts/generate-offline-manifest.js && node scripts/verify-public-boundary.cjs",
+    "predeploy": "node scripts/verify-public-boundary.cjs",
+    "export:ai": "node -e \"throw Error('PUBLIC_AI_EXPORT_DISABLED_R30')\""
   },
   "engines": {
     "node": ">=18.0.0"
