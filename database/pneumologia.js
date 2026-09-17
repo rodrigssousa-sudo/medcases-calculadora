@@ -3119,3 +3119,93 @@
                      Xantina: Teofilina (Euphyllin)
                      Inibidor PDE-4: Roflumilaste (Daxas) */
 })();
+/* GOLD33_SELECTIVE:aclidinio:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["aclidinio"])throw new Error("GOLD33_MISSING_CANONICAL:aclidinio");db["aclidinio"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "002",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e149f8e22971fe01f8b9480334053b230ce2c76ef359f54930d25b1dccbd5011",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Aclidínio (brometo de aclidínio).",
+    "class": "Broncodilatador antimuscarínico de longa ação (LAMA) inalatório.",
+    "pharmacologicClass": "Composto de amônio quaternário; antagonista muscarínico inalatório.",
+    "commercialNames": "Tudorza Pressair® nos EUA; Eklira Genuair®/Bretaris Genuair® em alguns mercados. Confirmar produto e disponibilidade locais.",
+    "presentation": "Pó para inalação oral em inalador multidose de pó seco ativado pela inspiração [1].",
+    "presentations": "No rótulo Tudorza Pressair: 400 mcg medidos por acionamento, com 375 mcg liberados pelo bocal; dispositivos de 30 ou 60 doses. As apresentações variam por jurisdição [1].",
+    "mechanism": "Antagoniza de modo competitivo e reversível receptores muscarínicos; nas vias aéreas, a inibição de M3 no músculo liso produz broncodilatação [1].",
+    "pharmacodynamics": "O efeito broncodilatador é predominantemente local após inalação. No rótulo, não houve efeito clinicamente significativo sobre QT ou ritmo cardíaco nos estudos descritos [1].",
+    "pharmacokinetics": "Biodisponibilidade absoluta aproximada de 6% no estudo do rótulo; pico plasmático em até 10 min após 400 mcg duas vezes/dia. Sofre hidrólise rápida a metabólitos sem atividade muscarínica; não se esperam interações CYP clinicamente relevantes pelas baixas concentrações plasmáticas [1].",
+    "indications": "Tratamento de manutenção de longo prazo do broncoespasmo associado à DPOC, incluindo bronquite crônica e enfisema; não é medicamento de resgate [1].",
+    "dose": "DPOC: 1 inalação oral de 400 mcg duas vezes ao dia, usando apenas o dispositivo correspondente. Não usar para episódio agudo de broncoespasmo [1].",
+    "pediatricDose": "Segurança e eficácia em pacientes pediátricos não estabelecidas; não criar cálculo pediátrico [1].",
+    "renalDose": "O rótulo não requer ajuste em insuficiência renal, inclusive nos graus avaliados; manter vigilância clínica individual.",
+    "hepaticDose": "O efeito da insuficiência hepática na farmacocinética não foi estudado no rótulo consultado; não inferir ajuste posológico.",
+    "commonAdverseEffects": "Cefaleia, nasofaringite e tosse foram as reações mais comuns no rótulo (≥3% e acima de placebo); também foram relatados diarreia, sinusite e rinite [1].",
+    "dangerousAdverseEffects": "Broncoespasmo paradoxal, reação de hipersensibilidade imediata, piora de glaucoma de ângulo estreito e retenção urinária [1].",
+    "adverseEffects": "O perfil é anticolinérgico; avaliar sintomas oculares e urinários, além de qualquer broncoespasmo após a inalação. A reação adversa deve ser interpretada no contexto da DPOC e da comedicação [1].",
+    "contraindications": "O rótulo FDA consultado não lista contraindicação formal. Há precaução com hipersensibilidade imediata, inclusive a proteínas do leite, e antecedente de reação à atropina [1].",
+    "interactions": "Evitar coadministração com outros medicamentos anticolinérgicos por potencial somatório de efeitos. O rótulo não identificou aumento de reações com agonistas beta2, metilxantinas ou corticoides usados na DPOC [1].",
+    "monitoring": "Avaliar controle de sintomas e exacerbações de DPOC; vigiar broncoespasmo paradoxal, dor ocular/visão turva/halos e sintomas de retenção urinária. Confirmar técnica inalatória.",
+    "administration": "Somente por inalação oral. Usar o dispositivo específico, conforme instruções do fabricante; não ingerir o pó e não usar como resgate [1].",
+    "preparation": "Não requer reconstituição. Manter o inalador seco e na embalagem até o uso; conferir contador e indicadores do dispositivo conforme instruções de uso locais.",
+    "infusionProtocol": "Não aplicável: formulação inalatória, sem protocolo de infusão.",
+    "pregnancy": "Não há estudos adequados e bem controlados em gestantes no rótulo consultado; usar somente se o benefício potencial justificar o risco potencial fetal [1].",
+    "lactation": "Não há dados humanos adequados no rótulo; há dados animais e recomenda-se cautela. Decidir considerando benefício da amamentação, necessidade materna e alternativas [1].",
+    "specialPopulations": "Idosos: não requerem ajuste segundo o rótulo. Usar cautela em glaucoma de ângulo estreito, hiperplasia prostática ou obstrução do colo vesical. Pediatria: não estabelecido [1].",
+    "patientEducation": "Usar regularmente, duas vezes ao dia, e manter um broncodilatador de resgate apropriado para sintomas agudos conforme plano clínico. Procurar atendimento se ocorrer falta de ar súbita após a dose, dor ocular/halos ou dificuldade para urinar.",
+    "clinicalPearls": "Não converter automaticamente a dose nominal entre dispositivos ou jurisdições. O dado seguro é o regime indicado na bula do dispositivo dispensado; técnica inalatória é parte essencial da efetividade.",
+    "guidelineRecommendations": "LAMA é classe de manutenção na DPOC; a escolha e a escalada terapêutica devem seguir avaliação individual de sintomas, exacerbações, técnica e disponibilidade local. Esta ficha não substitui a diretriz vigente.",
+    "safetyFlags": "NÃO É RESGATE. Risco anticolinérgico localizado/sistêmico: atenção a glaucoma de ângulo estreito e retenção urinária. Evitar associação com outros anticolinérgicos [1].",
+    "alerts": "ALERTA DE DISPOSITIVO: conferir produto, dose nominal/liberada e técnica antes de qualquer orientação. Se ocorrer broncoespasmo paradoxal, suspender e avaliar tratamento alternativo [1].",
+    "references": [
+      "1. U.S. FDA. TUDORZA PRESSAIR (aclidinium bromide) inhalation powder — Full Prescribing Information, 2012. https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/202450s000lbl.pdf (o próprio documento informa que pode não ser o rótulo FDA mais recente; disponibilidade e rotulagem local requerem verificação).",
+      "2. GOLD. Global Strategy for the Diagnosis, Management, and Prevention of COPD — usar a edição vigente para decisões terapêuticas. https://goldcopd.org/"
+    ],
+    "ref": "Fontes principais: bula FDA de aclidínio/Tudorza Pressair e diretriz GOLD vigente. Conferir a bula e a disponibilidade da jurisdição antes de dispensar."
+  },
+  "es": {
+    "name": "Aclidinio (bromuro de aclidinio).",
+    "class": "Broncodilatador antimuscarínico de acción prolongada (LAMA) inhalado.",
+    "pharmacologicClass": "Compuesto de amonio cuaternario; antagonista muscarínico inhalado.",
+    "commercialNames": "Tudorza Pressair® en EE. UU.; Eklira Genuair®/Bretaris Genuair® en algunos mercados. Confirmar producto y disponibilidad locales.",
+    "presentation": "Polvo para inhalación oral en inhalador multidosis de polvo seco activado por la inspiración [1].",
+    "presentations": "En el prospecto de Tudorza Pressair: 400 mcg medidos por accionamiento, con 375 mcg liberados por la boquilla; dispositivos de 30 o 60 dosis. Las presentaciones varían según la jurisdicción [1].",
+    "mechanism": "Antagoniza de forma competitiva y reversible los receptores muscarínicos; en las vías aéreas, la inhibición de M3 en el músculo liso produce broncodilatación [1].",
+    "pharmacodynamics": "El efecto broncodilatador es predominantemente local tras la inhalación. En el prospecto, no hubo efecto clínicamente significativo sobre QT ni ritmo cardíaco en los estudios descritos [1].",
+    "pharmacokinetics": "Biodisponibilidad absoluta aproximada de 6% en el estudio del prospecto; pico plasmático hasta 10 min tras 400 mcg dos veces/día. Sufre hidrólisis rápida a metabolitos sin actividad muscarínica; no se esperan interacciones CYP clínicamente relevantes por las bajas concentraciones plasmáticas [1].",
+    "indications": "Tratamiento de mantenimiento a largo plazo del broncoespasmo asociado a EPOC, incluida bronquitis crónica y enfisema; no es medicación de rescate [1].",
+    "dose": "EPOC: 1 inhalación oral de 400 mcg dos veces al día, usando solo el dispositivo correspondiente. No usar para un episodio agudo de broncoespasmo [1].",
+    "pediatricDose": "Seguridad y eficacia en pacientes pediátricos no establecidas; no crear cálculo pediátrico [1].",
+    "renalDose": "El prospecto no requiere ajuste en insuficiencia renal, incluidos los grados evaluados; mantener vigilancia clínica individual.",
+    "hepaticDose": "El efecto de la insuficiencia hepática sobre la farmacocinética no fue estudiado en el prospecto consultado; no inferir ajuste posológico.",
+    "commonAdverseEffects": "Cefalea, nasofaringitis y tos fueron las reacciones más comunes en el prospecto (≥3% y por encima de placebo); también se notificaron diarrea, sinusitis y rinitis [1].",
+    "dangerousAdverseEffects": "Broncoespasmo paradójico, reacción de hipersensibilidad inmediata, empeoramiento del glaucoma de ángulo estrecho y retención urinaria [1].",
+    "adverseEffects": "El perfil es anticolinérgico; evaluar síntomas oculares y urinarios, además de cualquier broncoespasmo tras la inhalación. La reacción adversa debe interpretarse en el contexto de la EPOC y la medicación concomitante [1].",
+    "contraindications": "El prospecto FDA consultado no enumera una contraindicación formal. Hay precaución con hipersensibilidad inmediata, incluso a proteínas de la leche, y antecedente de reacción a la atropina [1].",
+    "interactions": "Evitar la coadministración con otros medicamentos anticolinérgicos por posible suma de efectos. El prospecto no identificó aumento de reacciones con agonistas beta2, metilxantinas o corticoides usados en EPOC [1].",
+    "monitoring": "Evaluar control de síntomas y exacerbaciones de EPOC; vigilar broncoespasmo paradójico, dolor ocular/visión borrosa/halos y síntomas de retención urinaria. Confirmar técnica inhalatoria.",
+    "administration": "Solo por inhalación oral. Usar el dispositivo específico conforme a las instrucciones del fabricante; no ingerir el polvo ni usarlo como rescate [1].",
+    "preparation": "No requiere reconstitución. Mantener el inhalador seco y en su envase hasta el uso; comprobar contador e indicadores del dispositivo según las instrucciones de uso locales.",
+    "infusionProtocol": "No aplicable: formulación inhalada, sin protocolo de infusión.",
+    "pregnancy": "No hay estudios adecuados y bien controlados en embarazadas en el prospecto consultado; usar solo si el beneficio potencial justifica el riesgo fetal potencial [1].",
+    "lactation": "No hay datos humanos adecuados en el prospecto; existen datos animales y se recomienda cautela. Decidir considerando beneficio de la lactancia, necesidad materna y alternativas [1].",
+    "specialPopulations": "Personas mayores: no requieren ajuste según el prospecto. Usar cautela en glaucoma de ángulo estrecho, hiperplasia prostática u obstrucción del cuello vesical. Pediatría: no establecido [1].",
+    "patientEducation": "Usar regularmente, dos veces al día, y mantener un broncodilatador de rescate apropiado para síntomas agudos según el plan clínico. Buscar atención si aparece falta de aire súbita después de la dosis, dolor ocular/halos o dificultad para orinar.",
+    "clinicalPearls": "No convertir automáticamente la dosis nominal entre dispositivos o jurisdicciones. El dato seguro es el régimen indicado en el prospecto del dispositivo dispensado; la técnica inhalatoria es parte esencial de la efectividad.",
+    "guidelineRecommendations": "LAMA es una clase de mantenimiento en EPOC; la elección y escalada terapéutica deben seguir evaluación individual de síntomas, exacerbaciones, técnica y disponibilidad local. Esta ficha no sustituye la guía vigente.",
+    "safetyFlags": "NO ES RESCATE. Riesgo anticolinérgico local/sistémico: atención a glaucoma de ángulo estrecho y retención urinaria. Evitar asociación con otros anticolinérgicos [1].",
+    "alerts": "ALERTA DE DISPOSITIVO: confirmar producto, dosis nominal/liberada y técnica antes de cualquier orientación. Si ocurre broncoespasmo paradójico, suspender y evaluar tratamiento alternativo [1].",
+    "references": [
+      "1. U.S. FDA. TUDORZA PRESSAIR (aclidinium bromide) inhalation powder — Full Prescribing Information, 2012. https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/202450s000lbl.pdf (o próprio documento informa que pode não ser o rótulo FDA mais recente; disponibilidade e rotulagem local requerem verificação).",
+      "2. GOLD. Global Strategy for the Diagnosis, Management, and Prevention of COPD — usar a edição vigente para decisões terapêuticas. https://goldcopd.org/"
+    ],
+    "ref": "Fuentes principales: prospecto FDA de aclidinio/Tudorza Pressair y guía GOLD vigente. Confirmar el prospecto y la disponibilidad de la jurisdicción antes de dispensar."
+  }
+};})();
+/* GOLD33_SELECTIVE:aclidinio:END */

@@ -6797,3 +6797,91 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:abacavir:END */
+/* GOLD33_SELECTIVE:aciclovir:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB;if(!db||!db["aciclovir"])throw new Error("GOLD33_MISSING_CANONICAL:aciclovir");db["aciclovir"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "002",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e149f8e22971fe01f8b9480334053b230ce2c76ef359f54930d25b1dccbd5011",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Aciclovir — escopo desta ficha: solução para infusão intravenosa.",
+    "class": "Antiviral anti-herpesvírus.",
+    "pharmacologicClass": "Análogo de nucleosídeo de guanosina; inibidor da DNA-polimerase viral.",
+    "commercialNames": "Nomes comerciais variam por país; confirmar disponibilidade, concentração e bula local antes de dispensar.",
+    "presentation": "Solução IV 50 mg/mL que deve ser diluída antes da infusão [1].",
+    "presentations": "Frascos de 500 mg/10 mL e 1.000 mg/20 mL no produto consultado; apresentação local pode diferir [1].",
+    "mechanism": "Após fosforilação inicial preferencial pela timidina-quinase viral, o trifosfato ativo inibe competitivamente a DNA-polimerase viral, incorpora-se ao DNA e encerra a cadeia [1].",
+    "pharmacodynamics": "Atividade seletiva contra HSV-1, HSV-2 e VZV; resistência pode ocorrer por alterações de timidina-quinase ou DNA-polimerase, sobretudo em imunossuprimidos [1].",
+    "pharmacokinetics": "Eliminação predominantemente renal como fármaco inalterado; a meia-vida e a depuração dependem da função renal. A exposição no LCR é aproximadamente 50% da plasmática no rótulo consultado [1].",
+    "indications": "No rótulo IV: HSV mucocutâneo em imunocomprometidos, episódio inicial grave de herpes genital, encefalite por HSV, HSV neonatal e VZV em imunocomprometidos [1].",
+    "dose": "Regimes do rótulo IV dependem da indicação: 5 mg/kg a cada 8 h para HSV grave; 10 mg/kg a cada 8 h para encefalite HSV em adultos/adolescentes; cada dose por infusão de 1 h. Não extrapolar para formulações orais [1].",
+    "pediatricDose": "Rótulo IV: 10 mg/kg a cada 8 h para HSV mucocutâneo em 3 meses–12 anos; 20 mg/kg a cada 8 h para encefalite HSV nessa faixa; neonatos exigem regime por idade pós-menstrual. AUTOMATIZÁVEL: NÃO, até validar regra local completa [1].",
+    "renalDose": "Ajustar pelo clearance de creatinina: o rótulo reduz o intervalo para 12 h com ClCr >25–50, 24 h com >10–25 e reduz a dose a 50% a cada 24 h com ClCr ≤10 mL/min/1,73 m²; hemodiálise requer dose adicional após a sessão [1].",
+    "hepaticDose": "Não há ajuste hepático numérico proposto no rótulo IV; a depuração é predominantemente renal. Reavaliar em doença hepática grave concomitante.",
+    "commonAdverseEffects": "Flebite/inflamação no local, náusea/vômito e elevação transitória de creatinina ou ureia foram relatados [1].",
+    "dangerousAdverseEffects": "Lesão renal aguda por cristalização, neurotoxicidade/encefalopatia, anafilaxia e TTP/SHU em imunocomprometidos são eventos graves relevantes [1].",
+    "adverseEffects": "Flebite/inflamação no local, náusea/vômito e elevação transitória de creatinina ou ureia foram relatados [1]. Lesão renal aguda por cristalização, neurotoxicidade/encefalopatia, anafilaxia e TTP/SHU em imunocomprometidos são eventos graves relevantes [1]. Avaliar temporalidade, produto e dose; notificar suspeitas relevantes conforme a farmacovigilância local.",
+    "contraindications": "Hipersensibilidade a aciclovir ou valaciclovir [1].",
+    "interactions": "Probenecida reduz a depuração renal; nefrotóxicos, desidratação e doença renal aumentam risco de toxicidade [1].",
+    "monitoring": "Creatinina/ClCr, diurese, hidratação, sinais neurológicos e integridade do acesso venoso.",
+    "administration": "Somente infusão IV; nunca bolus, IM, SC, oral, tópica ou ocular [1].",
+    "preparation": "Diluir em solução IV compatível conforme o produto; usar concentração final aproximada ≤7 mg/mL e não usar fluidos biológicos/coloides no produto consultado [1].",
+    "infusionProtocol": "Infundir cada dose em pelo menos 1 hora; hidratação adequada reduz risco de dano tubular renal [1].",
+    "pregnancy": "O rótulo descreve dados observacionais limitados; usar apenas quando o benefício justificar o risco fetal [1].",
+    "lactation": "Aciclovir passa ao leite; o rótulo recomenda cautela e uso somente quando indicado [1].",
+    "specialPopulations": "Idosos e pessoas com DRC têm maior risco de toxicidade neurológica/renal; obesidade exige critério de peso definido no protocolo.",
+    "patientEducation": "Manter hidratação conforme prescrição e comunicar oligúria, confusão, tremores, alucinações ou dor/flebite no acesso. Não automatizar cálculo, dose pediátrica, ajuste renal ou infusão nesta versão candidata; a ficha é educativa e requer validação clínica e vinculação ao produto local.",
+    "clinicalPearls": "Três medidas previnem grande parte da toxicidade IV: indicação correta, ajuste renal atual e infusão lenta com hidratação.",
+    "guidelineRecommendations": "Usar o regime específico da indicação e da formulação; esta ficha não cria um esquema universal.",
+    "safetyFlags": "ALTO RISCO RENAL; ajuste obrigatório; via IV exclusiva; risco de neurotoxicidade.",
+    "alerts": "ALERTA: evitar bolus e confirmar ClCr antes de cada regime IV.",
+    "references": [
+      "[1] DailyMed — Acyclovir Injection, USP — Formulação IV 50 mg/mL; bula EUA."
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=b1bb347d-74f4-4976-8450-a375a271718f&type=display"
+  },
+  "es": {
+    "name": "Aciclovir — alcance de esta ficha: solución para infusión intravenosa.",
+    "class": "Antiviral antiherpesvirus.",
+    "pharmacologicClass": "Análogo nucleosídico de guanosina; inhibidor de la ADN-polimerasa viral.",
+    "commercialNames": "Los nombres comerciales varían por país; confirmar disponibilidad, concentración y prospecto local antes de dispensar.",
+    "presentation": "Solución IV 50 mg/mL que debe diluirse antes de la infusión [1].",
+    "presentations": "Viales de 500 mg/10 mL y 1.000 mg/20 mL en el producto consultado; la presentación local puede diferir [1].",
+    "mechanism": "Tras la fosforilación inicial preferencial por la timidina-quinasa viral, el trifosfato activo inhibe competitivamente la ADN-polimerasa viral, se incorpora al ADN y termina la cadena [1].",
+    "pharmacodynamics": "Actividad selectiva contra HSV-1, HSV-2 y VZV; puede aparecer resistencia por alteraciones de timidina-quinasa o ADN-polimerasa, sobre todo en inmunosuprimidos [1].",
+    "pharmacokinetics": "Eliminación predominantemente renal como fármaco inalterado; la semivida y el aclaramiento dependen de la función renal. La exposición en LCR es aproximadamente 50% de la plasmática en el rótulo consultado [1].",
+    "indications": "En el rótulo IV: HSV mucocutáneo en inmunocomprometidos, episodio inicial grave de herpes genital, encefalitis por HSV, HSV neonatal y VZV en inmunocomprometidos [1].",
+    "dose": "Los esquemas del rótulo IV dependen de la indicación: 5 mg/kg cada 8 h para HSV grave; 10 mg/kg cada 8 h para encefalitis por HSV en adultos/adolescentes; cada dosis por infusión de 1 h. No extrapolar a formulaciones orales [1].",
+    "pediatricDose": "Rótulo IV: 10 mg/kg cada 8 h para HSV mucocutáneo en 3 meses–12 años; 20 mg/kg cada 8 h para encefalitis por HSV en ese rango; los neonatos requieren esquema por edad posmenstrual. AUTOMATIZABLE: NO, hasta validar la regla local completa [1].",
+    "renalDose": "Ajustar por aclaramiento de creatinina: el rótulo reduce el intervalo a 12 h con ClCr >25–50, 24 h con >10–25 y reduce la dosis al 50% cada 24 h con ClCr ≤10 mL/min/1,73 m²; la hemodiálisis requiere dosis adicional después de la sesión [1].",
+    "hepaticDose": "No se propone ajuste hepático numérico en el rótulo IV; el aclaramiento es predominantemente renal. Reevaluar en hepatopatía grave concomitante.",
+    "commonAdverseEffects": "Se han comunicado flebitis/inflamación local, náuseas/vómitos y elevación transitoria de creatinina o urea [1].",
+    "dangerousAdverseEffects": "Lesión renal aguda por cristalización, neurotoxicidad/encefalopatía, anafilaxia y PTT/SHU en inmunocomprometidos son eventos graves relevantes [1].",
+    "adverseEffects": "Se han comunicado flebitis/inflamación local, náuseas/vómitos y elevación transitoria de creatinina o urea [1]. Lesión renal aguda por cristalización, neurotoxicidad/encefalopatía, anafilaxia y PTT/SHU en inmunocomprometidos son eventos graves relevantes [1]. Evaluar temporalidad, producto y dosis; notificar sospechas relevantes según la farmacovigilancia local.",
+    "contraindications": "Hipersensibilidad a aciclovir o valaciclovir [1].",
+    "interactions": "Probenecid reduce el aclaramiento renal; nefrotóxicos, deshidratación y enfermedad renal aumentan el riesgo de toxicidad [1].",
+    "monitoring": "Creatinina/ClCr, diuresis, hidratación, signos neurológicos e integridad del acceso venoso.",
+    "administration": "Solo infusión IV; nunca bolo, IM, SC, oral, tópica u ocular [1].",
+    "preparation": "Diluir en solución IV compatible según el producto; usar concentración final aproximada ≤7 mg/mL y no usar fluidos biológicos/coloides en el producto consultado [1].",
+    "infusionProtocol": "Infundir cada dosis durante al menos 1 hora; una hidratación adecuada reduce el riesgo de daño tubular renal [1].",
+    "pregnancy": "El rótulo describe datos observacionales limitados; usar solo cuando el beneficio justifique el riesgo fetal [1].",
+    "lactation": "Aciclovir pasa a la leche; el rótulo recomienda cautela y uso solo cuando esté indicado [1].",
+    "specialPopulations": "Las personas mayores y con ERC tienen mayor riesgo de toxicidad neurológica/renal; la obesidad exige un criterio de peso definido en el protocolo.",
+    "patientEducation": "Mantener la hidratación según prescripción y comunicar oliguria, confusión, temblores, alucinaciones o dolor/flebitis en el acceso. No automatizar cálculo, dosis pediátrica, ajuste renal ni infusión en esta versión candidata; la ficha es educativa y requiere validación clínica y vinculación al producto local.",
+    "clinicalPearls": "Tres medidas previenen gran parte de la toxicidad IV: indicación correcta, ajuste renal actualizado e infusión lenta con hidratación.",
+    "guidelineRecommendations": "Usar el esquema específico de la indicación y formulación; esta ficha no crea un esquema universal.",
+    "safetyFlags": "ALTO RIESGO RENAL; ajuste obligatorio; vía IV exclusiva; riesgo de neurotoxicidad.",
+    "alerts": "ALERTA: evitar bolo y confirmar ClCr antes de cada esquema IV.",
+    "references": [
+      "[1] DailyMed — Acyclovir Injection, USP — Formulação IV 50 mg/mL; bula EUA."
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=b1bb347d-74f4-4976-8450-a375a271718f&type=display"
+  }
+};})();
+/* GOLD33_SELECTIVE:aciclovir:END */

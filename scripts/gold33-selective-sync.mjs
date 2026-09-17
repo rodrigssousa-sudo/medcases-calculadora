@@ -18,7 +18,10 @@ const root = path.resolve(args.root || path.resolve(import.meta.dirname, '..'));
 const zip = path.resolve(String(args.zip || ''));
 const apply = args.apply === true;
 const ownerAuthorization = String(args['owner-publication-authorization'] || '');
-const ownerAuthorized = ownerAuthorization === 'mission10-owner-confirmed';
+const ownerAuthorized = new Set([
+  'mission10-owner-confirmed',
+  'lote002-owner-confirmed',
+]).has(ownerAuthorization);
 const failAfter = Number(process.env.GOLD33_FAIL_AFTER_WRITES || 0);
 const required = ['name','class','pharmacologicClass','commercialNames','presentation','presentations','mechanism','pharmacodynamics','pharmacokinetics','indications','dose','pediatricDose','renalDose','hepaticDose','commonAdverseEffects','dangerousAdverseEffects','adverseEffects','contraindications','interactions','monitoring','administration','preparation','infusionProtocol','pregnancy','lactation','specialPopulations','patientEducation','clinicalPearls','guidelineRecommendations','safetyFlags','alerts','references','ref'];
 const die = (message) => { throw new Error(message); };
@@ -29,6 +32,15 @@ const safe = (relative) => {
   const absolute = path.resolve(root, relative);
   if (!absolute.startsWith(root + path.sep)) die(`PATH_ESCAPE:${relative}`);
   return absolute;
+};
+const executableOwner = (restriction, sourceRel) => {
+  const declared = String(restriction.owner_canonico || '');
+  if (/^[A-Z][A-Z0-9_]*_DRUGS_DB$/.test(declared)) return declared;
+  const sourceName = path.basename(sourceRel);
+  if (declared !== sourceName || !/^[a-z0-9_]+\.js$/.test(sourceName)) {
+    die(`CANONICAL_OWNER_INVALID:${restriction.id}:${declared}`);
+  }
+  return `${path.basename(sourceName, '.js').toUpperCase()}_DRUGS_DB`;
 };
 
 if (!zip.endsWith('.zip') || !fs.existsSync(zip)) die('GOLD33_ZIP_REQUIRED');
@@ -51,6 +63,7 @@ for (const row of data) {
   if (!restriction || !opinion.scope.ids.includes(id)) die(`UNAUTHORIZED_ID:${id}`);
   if (Object.keys(row.CAMPOS_33||{}).length !== 33 || required.some((field)=>!Object.hasOwn(row.CAMPOS_33,field))) die(`FIELD_SCOPE_INVALID:${id}`);
   const sourceRel = restriction.source_executavel;
+  const owner = executableOwner(restriction, sourceRel);
   const sourcePath = safe(sourceRel);
   const source = outputs.get(sourcePath)?.toString('utf8') ?? fs.readFileSync(sourcePath,'utf8');
   const start = `/* GOLD33_SELECTIVE:${id}:START */`, end = `/* GOLD33_SELECTIVE:${id}:END */`;
@@ -58,7 +71,7 @@ for (const row of data) {
   const pt={},es={}; for (const field of required) { const value=row.CAMPOS_33[field]; pt[field]=field==='references'?value:value.pt; es[field]=field==='references'?value:value.es; }
   const publicationAuthorized = restriction.states.PUBLICACAO === 'LIBERADA' || ownerAuthorized;
   const payload = { meta:{schema:'mc-gold-clinical-v1',lote:opinion.lote,requiredFieldCount:33,approvedSha256:opinion.final_consolidation.final_sha256,calculationAuthorized:false,publicationAuthorized,clinicalPackagePublicationState:restriction.states.PUBLICACAO,ownerPublicationAuthorization:ownerAuthorized?ownerAuthorization:null}, pt, es };
-  const block = `${start}\n;(function(){var db=window.${restriction.owner_canonico};if(!db||!db[${JSON.stringify(id)}])throw new Error(${JSON.stringify(`GOLD33_MISSING_CANONICAL:${id}`)});db[${JSON.stringify(id)}].mcGoldClinicalV1=${JSON.stringify(payload,null,2)};})();\n${end}\n`;
+  const block = `${start}\n;(function(){var db=window.${owner};if(!db||!db[${JSON.stringify(id)}])throw new Error(${JSON.stringify(`GOLD33_MISSING_CANONICAL:${id}`)});db[${JSON.stringify(id)}].mcGoldClinicalV1=${JSON.stringify(payload,null,2)};})();\n${end}\n`;
   outputs.set(sourcePath, Buffer.from(source.replace(re,'').replace(/\s*$/,'\n') + block));
 
   const derivedPath=safe(restriction.derived_private_json), derived=JSON.parse(fs.readFileSync(derivedPath,'utf8'));

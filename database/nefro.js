@@ -2234,3 +2234,91 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:acetato_de_calcio:END */
+/* GOLD33_SELECTIVE:acido_tioctico:START */
+;(function(){var db=window.NEFRO_DRUGS_DB;if(!db||!db["acido_tioctico"])throw new Error("GOLD33_MISSING_CANONICAL:acido_tioctico");db["acido_tioctico"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "002",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e149f8e22971fe01f8b9480334053b230ce2c76ef359f54930d25b1dccbd5011",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ácido tióctico (ácido alfa-lipoico) — Biletan Forte injetável 50 mg/2 mL, ANMAT.",
+    "class": "Antioxidante e antineurítico no produto consultado.",
+    "pharmacologicClass": "Cofator mitocondrial e par redox ácido tióctico/dihidrolipóico.",
+    "commercialNames": "Nomes comerciais variam por jurisdição; a marca não substitui a confirmação de princípio ativo, sal e concentração.",
+    "presentation": "Injetável 50 mg em ampola de 2 mL [5].",
+    "presentations": "Injetável 50 mg em ampola de 2 mL [5].",
+    "mechanism": "Cofator de complexos mitocondriais de descarboxilação oxidativa; formas oxidada/reduzida participam do sistema redox [5].",
+    "pharmacodynamics": "O documento descreve efeito antioxidante e benefício em dor/parestesias na polineuropatia diabética [5].",
+    "pharmacokinetics": "EVIDÊNCIA = NAO_LOCALIZADA para PK completa diretamente aplicável; consultada ANMAT [5].",
+    "indications": "Polineuropatia diabética e prevenção de injúria por isquemia/reperfusão em transplante hepático com doador cadáver, adultos, no produto ANMAT [5].",
+    "dose": "Não há regime universal. O documento cita 600 mg IV em estudo de transplante, sem autorização para converter em protocolo. AUTOMATIZÁVEL: NÃO [5].",
+    "pediatricDose": "Não foi localizado regime pediátrico completo e diretamente aplicável na fonte selecionada. Campo textual mantido para revisão; AUTOMATIZÁVEL: NÃO.",
+    "renalDose": "EVIDÊNCIA = NAO_LOCALIZADA para ajuste renal específico; não inferir dose.",
+    "hepaticDose": "A fonte selecionada não fornece ajuste hepático numérico universal; avaliar gravidade, produto e indicação antes de prescrever.",
+    "commonAdverseEffects": "EVIDÊNCIA = NAO_LOCALIZADA para frequências utilizáveis; confirmar prospecto local completo.",
+    "dangerousAdverseEffects": "EVIDÊNCIA = NAO_LOCALIZADA para lista consolidada de eventos graves; vigiar hipersensibilidade e não automatizar.",
+    "adverseEffects": "EVIDÊNCIA = NAO_LOCALIZADA para frequências utilizáveis; confirmar prospecto local completo. EVIDÊNCIA = NAO_LOCALIZADA para lista consolidada de eventos graves; vigiar hipersensibilidade e não automatizar. Avaliar temporalidade, produto e dose; notificar suspeitas relevantes conforme a farmacovigilância local.",
+    "contraindications": "EVIDÊNCIA = NAO_LOCALIZADA para contraindicações completas; exigir prospecto local antes de prescrever.",
+    "interactions": "EVIDÊNCIA = NAO_LOCALIZADA para interações completas; reconciliar tratamento em bula local.",
+    "monitoring": "Monitorar resposta/eventos segundo indicação especializada; não substituir protocolo do centro.",
+    "administration": "Via parenteral somente conforme produto e prescrição; sem regra universal [5].",
+    "preparation": "EVIDÊNCIA = NAO_LOCALIZADA para diluente, estabilidade e compatibilidade. Não preparar por esta ficha.",
+    "infusionProtocol": "EVIDÊNCIA = NAO_LOCALIZADA para velocidade/protocolo completo. INFUSÃO = BLOQUEADA [5].",
+    "pregnancy": "EVIDÊNCIA = NAO_LOCALIZADA para gestação do produto ANMAT.",
+    "lactation": "EVIDÊNCIA = NAO_LOCALIZADA para lactação do produto ANMAT.",
+    "specialPopulations": "Pediatria, IR/IH e populações especiais: pendentes de evidência aplicável.",
+    "patientEducation": "Não iniciar, interromper ou ajustar por conta própria; levar lista de medicamentos e comunicar sinais de toxicidade ou alergia. Não automatizar cálculo, dose pediátrica, ajuste renal ou infusão nesta versão candidata; a ficha é educativa e requer validação clínica e vinculação ao produto local.",
+    "clinicalPearls": "A indicação e a formulação definem a segurança do uso; esta ficha não autoriza intercâmbio automático entre produtos.",
+    "guidelineRecommendations": "Seguir bula e diretriz aplicáveis ao cenário; quando houver lacuna, encaminhar para revisão clínica.",
+    "safetyFlags": "FORMULAÇÃO DEPENDENTE; infusão, pediatria e ajustes bloqueados.",
+    "alerts": "ALERTA: não converter dados de formulação oral/outra jurisdição para esta ampola.",
+    "references": [
+      "[5] ANMAT — Disposición 7141/2020, ácido tióctico — Documento regulatório argentino; formulação deve ser confirmada por produto."
+    ],
+    "ref": "https://boletin.anmat.gob.ar/septiembre_2020/Dispo_7141-20.pdf"
+  },
+  "es": {
+    "name": "Ácido tióctico (ácido alfa-lipoico) — Biletan Forte inyectable 50 mg/2 mL, ANMAT.",
+    "class": "Antioxidante y antineurítico en el producto consultado.",
+    "pharmacologicClass": "Cofactor mitocondrial y par redox ácido tióctico/dihidrolipoico.",
+    "commercialNames": "Los nombres comerciales varían por jurisdicción; la marca no sustituye la confirmación de principio activo, sal y concentración.",
+    "presentation": "Inyectable 50 mg en ampolla de 2 mL [5].",
+    "presentations": "Inyectable 50 mg en ampolla de 2 mL [5].",
+    "mechanism": "Cofactor de complejos mitocondriales de descarboxilación oxidativa; formas oxidada/reducida participan en el sistema redox [5].",
+    "pharmacodynamics": "El documento describe efecto antioxidante y beneficio en dolor/parestesias en polineuropatía diabética [5].",
+    "pharmacokinetics": "EVIDENCIA = NO_LOCALIZADA para PK completa directamente aplicable; consultada ANMAT [5].",
+    "indications": "Polineuropatía diabética y prevención de lesión por isquemia/reperfusión en trasplante hepático con donante cadáver, adultos, en el producto ANMAT [5].",
+    "dose": "No hay régimen universal. El documento cita 600 mg IV en estudio de trasplante, sin autorización para convertirlo en protocolo. AUTOMATIZABLE: NO [5].",
+    "pediatricDose": "No se localizó un esquema pediátrico completo y directamente aplicable en la fuente seleccionada. Campo textual mantenido para revisión; AUTOMATIZABLE: NO.",
+    "renalDose": "EVIDENCIA = NO_LOCALIZADA para ajuste renal específico; no inferir dosis.",
+    "hepaticDose": "La fuente seleccionada no proporciona un ajuste hepático numérico universal; evaluar gravedad, producto e indicación antes de prescribir.",
+    "commonAdverseEffects": "EVIDENCIA = NO_LOCALIZADA para frecuencias utilizables; confirmar prospecto local completo.",
+    "dangerousAdverseEffects": "EVIDENCIA = NO_LOCALIZADA para lista consolidada de eventos graves; vigilar hipersensibilidad y no automatizar.",
+    "adverseEffects": "EVIDENCIA = NO_LOCALIZADA para frecuencias utilizables; confirmar prospecto local completo. EVIDENCIA = NO_LOCALIZADA para lista consolidada de eventos graves; vigilar hipersensibilidad y no automatizar. Evaluar temporalidad, producto y dosis; notificar sospechas relevantes según la farmacovigilancia local.",
+    "contraindications": "EVIDENCIA = NO_LOCALIZADA para contraindicaciones completas; exigir prospecto local antes de prescribir.",
+    "interactions": "EVIDENCIA = NO_LOCALIZADA para interacciones completas; reconciliar tratamiento en prospecto local.",
+    "monitoring": "Monitorizar respuesta/eventos según indicación especializada; no sustituir protocolo del centro.",
+    "administration": "Vía parenteral solo según producto y prescripción; sin regla universal [5].",
+    "preparation": "EVIDENCIA = NO_LOCALIZADA para diluyente, estabilidad y compatibilidad. No preparar con esta ficha.",
+    "infusionProtocol": "EVIDENCIA = NO_LOCALIZADA para velocidad/protocolo completo. INFUSIÓN = BLOQUEADA [5].",
+    "pregnancy": "EVIDENCIA = NO_LOCALIZADA para embarazo del producto ANMAT.",
+    "lactation": "EVIDENCIA = NO_LOCALIZADA para lactancia del producto ANMAT.",
+    "specialPopulations": "Pediatría, IR/IH y poblaciones especiales: pendientes de evidencia aplicable.",
+    "patientEducation": "No iniciar, suspender ni ajustar por cuenta propia; llevar la lista de medicamentos y comunicar signos de toxicidad o alergia. No automatizar cálculo, dosis pediátrica, ajuste renal ni infusión en esta versión candidata; la ficha es educativa y requiere validación clínica y vinculación al producto local.",
+    "clinicalPearls": "La indicación y la formulación definen la seguridad del uso; esta ficha no autoriza intercambio automático entre productos.",
+    "guidelineRecommendations": "Seguir el prospecto y la guía aplicables al escenario; cuando haya una laguna, derivar a revisión clínica.",
+    "safetyFlags": "DEPENDIENTE DE FORMULACIÓN; infusión, pediatría y ajustes bloqueados.",
+    "alerts": "ALERTA: no convertir datos de formulación oral/otra jurisdicción a esta ampolla.",
+    "references": [
+      "[5] ANMAT — Disposición 7141/2020, ácido tióctico — Documento regulatório argentino; formulação deve ser confirmada por produto."
+    ],
+    "ref": "https://boletin.anmat.gob.ar/septiembre_2020/Dispo_7141-20.pdf"
+  }
+};})();
+/* GOLD33_SELECTIVE:acido_tioctico:END */

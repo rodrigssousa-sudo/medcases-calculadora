@@ -8494,3 +8494,91 @@ function _mcNeurologiaT(lang, pt, es) {
          apomorfina·amantadina·selegilina·rasagilina·entacapona·biperideno (Parkinson) — 11 total */
 
 })();
+/* GOLD33_SELECTIVE:acido_valproico:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["acido_valproico"])throw new Error("GOLD33_MISSING_CANONICAL:acido_valproico");db["acido_valproico"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "002",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e149f8e22971fe01f8b9480334053b230ce2c76ef359f54930d25b1dccbd5011",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ácido valproico — comprimido oral de liberação prolongada.",
+    "class": "Antiepiléptico e estabilizador do humor.",
+    "pharmacologicClass": "Valproato; anticonvulsivante de mecanismo múltiplo.",
+    "commercialNames": "Nomes comerciais variam por jurisdição; a marca não substitui a confirmação de princípio ativo, sal e concentração.",
+    "presentation": "Comprimidos LP de 300 e 500 mg equivalentes a valproato sódico [8].",
+    "presentations": "Comprimidos LP de 300 e 500 mg equivalentes a valproato sódico [8].",
+    "mechanism": "A bula selecionada não sustenta uma descrição única suficiente; o efeito anticonvulsivante é multifatorial.",
+    "pharmacodynamics": "Uso em epilepsias listadas e mania bipolar quando lítio contraindicado/não tolerado [8].",
+    "pharmacokinetics": "A dose sérica efetiva geralmente é 40–100 mg/L; o efeito é guiado também pela resposta clínica [8].",
+    "indications": "Epilepsia parcial/generalizada e episódios maníacos bipolares, no escopo da bula [8].",
+    "dose": "Epilepsia: iniciar 10–15 mg/kg/dia e usualmente 20–30 mg/kg/dia; vigiar de perto >50 mg/kg/dia. Mania adulta: início 750 mg/dia ou 20 mg/kg, usual 1.000–2.000 mg/dia [8].",
+    "pediatricDose": "Epilepsia: cerca de 30 mg/kg/dia; mania <18 anos sem eficácia estabelecida [8]. AUTOMATIZÁVEL: NÃO.",
+    "renalDose": "Pode exigir reduzir dose ou aumentar em hemodiálise conforme monitorização clínica; valproato é dializável [8].",
+    "hepaticDose": "Contraindicado em hepatite aguda/crônica, antecedentes de hepatite grave e outras condições hepáticas listadas [8].",
+    "commonAdverseEffects": "Náusea, tremor, ganho de peso e alterações laboratoriais exigem revisão no produto local.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, pancreatite, hiperamonemia/encefalopatia, teratogenicidade e risco reprodutivo são críticos [8,9].",
+    "adverseEffects": "Náusea, tremor, ganho de peso e alterações laboratoriais exigem revisão no produto local. Hepatotoxicidade, pancreatite, hiperamonemia/encefalopatia, teratogenicidade e risco reprodutivo são críticos [8,9]. Avaliar temporalidade, produto e dose; notificar suspeitas relevantes conforme a farmacovigilância local.",
+    "contraindications": "Doença hepática, porfiria hepática, distúrbio do ciclo da ureia, POLG/Alpers e deficiência primária de carnitina não corrigida, além das restrições reprodutivas [8].",
+    "interactions": "Revisar todos antiepilépticos e medicamentos hepatotóxicos; a bula exige titulação lenta em combinações [8].",
+    "monitoring": "Resposta clínica, níveis quando indicados, função hepática, hemograma/plaquetas, amônia se sintomas e risco gestacional.",
+    "administration": "Via oral; a formulação LP pode ser 1–2x/dia conforme prescrição [8].",
+    "preparation": "Não há preparo parenteral no escopo desta ficha. Não triturar, dividir ou manipular a formulação sem confirmação do produto.",
+    "infusionProtocol": "Não há protocolo de infusão aplicável ao escopo/formulação desta ficha; não extrapolar para apresentações injetáveis.",
+    "pregnancy": "Epilepsia: contraindicado na gravidez salvo ausência de alternativa adequada. Transtorno bipolar: contraindicado. Aplicar programa de prevenção de gravidez [8,9].",
+    "lactation": "Consultar a bula local/especialista; risco e benefício devem ser individualizados.",
+    "specialPopulations": "Início/supervisão por especialista; meninas e mulheres com potencial reprodutivo somente se não houver alternativa eficaz/tolerada [8,9].",
+    "patientEducation": "Não iniciar, interromper ou ajustar por conta própria; levar lista de medicamentos e comunicar sinais de toxicidade ou alergia. Não automatizar cálculo, dose pediátrica, ajuste renal ou infusão nesta versão candidata; a ficha é educativa e requer validação clínica e vinculação ao produto local.",
+    "clinicalPearls": "A indicação e a formulação definem a segurança do uso; esta ficha não autoriza intercâmbio automático entre produtos.",
+    "guidelineRecommendations": "Seguir bula e diretriz aplicáveis ao cenário; quando houver lacuna, encaminhar para revisão clínica.",
+    "safetyFlags": "ALTO RISCO HEPÁTICO, PANCREÁTICO E TERATOGÊNICO; cálculo bloqueado.",
+    "alerts": "ALERTA: não iniciar sem avaliação reprodutiva e sem confirmar contraindicações hepáticas/mitocondriais.",
+    "references": [
+      "[8] AEMPS/CIMA — Ácido Valproico Aurovitas LP — Comprimidos de liberação prolongada; ficha técnica Espanha.\n[9] AEMPS — prevenção de exposição ao valproato na gestação — Restrições reprodutivas."
+    ],
+    "ref": "https://cima.aemps.es/cima/dochtml/ft/84516/FT_84516.html\nhttps://www.aemps.gob.es/informa/notasinformativas/medicamentosusohumano-3/seguridad-1/2018/ni-muh_fv_3-acido-valproico/"
+  },
+  "es": {
+    "name": "Ácido valproico — comprimido oral de liberación prolongada.",
+    "class": "Antiepiléptico y estabilizador del ánimo.",
+    "pharmacologicClass": "Valproato; anticonvulsivante de mecanismo múltiple.",
+    "commercialNames": "Los nombres comerciales varían por jurisdicción; la marca no sustituye la confirmación de principio activo, sal y concentración.",
+    "presentation": "Comprimidos LP de 300 y 500 mg equivalentes a valproato sódico [8].",
+    "presentations": "Comprimidos LP de 300 y 500 mg equivalentes a valproato sódico [8].",
+    "mechanism": "El prospecto seleccionado no sustenta una descripción única suficiente; el efecto anticonvulsivante es multifactorial.",
+    "pharmacodynamics": "Uso en epilepsias listadas y manía bipolar cuando litio contraindicado/no tolerado [8].",
+    "pharmacokinetics": "La concentración sérica efectiva generalmente es 40–100 mg/L; el efecto también se guía por la respuesta clínica [8].",
+    "indications": "Epilepsia parcial/generalizada y episodios maníacos bipolares, en el alcance del prospecto [8].",
+    "dose": "Epilepsia: iniciar 10–15 mg/kg/día y usualmente 20–30 mg/kg/día; vigilar de cerca >50 mg/kg/día. Manía adulta: inicio 750 mg/día o 20 mg/kg, usual 1.000–2.000 mg/día [8].",
+    "pediatricDose": "Epilepsia: cerca de 30 mg/kg/día; manía <18 años sin eficacia establecida [8]. AUTOMATIZABLE: NO.",
+    "renalDose": "Puede requerir reducir dosis o aumentar en hemodiálisis según monitorización clínica; valproato es dializable [8].",
+    "hepaticDose": "Contraindicado en hepatitis aguda/crónica, antecedentes de hepatitis grave y otras condiciones hepáticas listadas [8].",
+    "commonAdverseEffects": "Náuseas, temblor, aumento de peso y alteraciones laboratoriales exigen revisión en el producto local.",
+    "dangerousAdverseEffects": "Hepatotoxicidad, pancreatitis, hiperamonemia/encefalopatía, teratogenicidad y riesgo reproductivo son críticos [8,9].",
+    "adverseEffects": "Náuseas, temblor, aumento de peso y alteraciones laboratoriales exigen revisión en el producto local. Hepatotoxicidad, pancreatitis, hiperamonemia/encefalopatía, teratogenicidad y riesgo reproductivo son críticos [8,9]. Evaluar temporalidad, producto y dosis; notificar sospechas relevantes según la farmacovigilancia local.",
+    "contraindications": "Enfermedad hepática, porfiria hepática, trastorno del ciclo de la urea, POLG/Alpers y deficiencia primaria de carnitina no corregida, además de restricciones reproductivas [8].",
+    "interactions": "Revisar todos los antiepilépticos y medicamentos hepatotóxicos; el prospecto exige titulación lenta en combinaciones [8].",
+    "monitoring": "Respuesta clínica, niveles cuando indicados, función hepática, hemograma/plaquetas, amonio si síntomas y riesgo gestacional.",
+    "administration": "Vía oral; la formulación LP puede ser 1–2 veces/día según prescripción [8].",
+    "preparation": "No hay preparación parenteral en el alcance de esta ficha. No triturar, dividir ni manipular la formulación sin confirmación del producto.",
+    "infusionProtocol": "No hay protocolo de infusión aplicable al alcance/formulación de esta ficha; no extrapolar a presentaciones inyectables.",
+    "pregnancy": "Epilepsia: contraindicado en embarazo salvo ausencia de alternativa adecuada. Trastorno bipolar: contraindicado. Aplicar programa de prevención de embarazo [8,9].",
+    "lactation": "Consultar el prospecto local/especialista; riesgo y beneficio deben individualizarse.",
+    "specialPopulations": "Inicio/supervisión por especialista; niñas y mujeres con potencial reproductivo solo si no hay alternativa eficaz/tolerada [8,9].",
+    "patientEducation": "No iniciar, suspender ni ajustar por cuenta propia; llevar la lista de medicamentos y comunicar signos de toxicidad o alergia. No automatizar cálculo, dosis pediátrica, ajuste renal ni infusión en esta versión candidata; la ficha es educativa y requiere validación clínica y vinculación al producto local.",
+    "clinicalPearls": "La indicación y la formulación definen la seguridad del uso; esta ficha no autoriza intercambio automático entre productos.",
+    "guidelineRecommendations": "Seguir el prospecto y la guía aplicables al escenario; cuando haya una laguna, derivar a revisión clínica.",
+    "safetyFlags": "ALTO RIESGO HEPÁTICO, PANCREÁTICO Y TERATOGÉNICO; cálculo bloqueado.",
+    "alerts": "ALERTA: no iniciar sin evaluación reproductiva y sin confirmar contraindicaciones hepáticas/mitocondriales.",
+    "references": [
+      "[8] AEMPS/CIMA — Ácido Valproico Aurovitas LP — Comprimidos de liberação prolongada; ficha técnica Espanha.\n[9] AEMPS — prevenção de exposição ao valproato na gestação — Restrições reprodutivas."
+    ],
+    "ref": "https://cima.aemps.es/cima/dochtml/ft/84516/FT_84516.html\nhttps://www.aemps.gob.es/informa/notasinformativas/medicamentosusohumano-3/seguridad-1/2018/ni-muh_fv_3-acido-valproico/"
+  }
+};})();
+/* GOLD33_SELECTIVE:acido_valproico:END */
