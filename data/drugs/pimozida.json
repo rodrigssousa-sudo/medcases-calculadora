@@ -75,6 +75,9 @@
       "Álcool e depressores do SNC"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "Pimozida: antes de usar, revisar ECG/QT, potássio/magnésio e lista de interações CYP/QT da bula; indicação e dose para tiques não devem ser transpostas a outras condições. Sem cálculo pediátrico automático.",
+      "Bula FDA para tiques de Tourette após resposta inadequada a tratamento padrão: riscos de QT e interações contraindicam combinações específicas (inclusive vários inibidores CYP). Conferir ECG, eletrólitos e lista completa antes de prescrever.",
       "Obrigatório avaliar risco de QT antes de iniciar.",
       "Realizar ECG basal e durante titulação em pacientes de risco.",
       "Corrigir potássio e magnésio antes de usar.",
@@ -82,13 +85,29 @@
       "Reservar para indicações específicas, especialmente Tourette/tics refratários."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70b079e2-a1f7-4a93-8685-d60a4d7c1280",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Pimozide Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Pimozida",
@@ -161,6 +180,9 @@
       "Alcohol y depresores del SNC"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "Pimozida: antes de usar revisar ECG/QT, potasio/magnesio e interacciones CYP/QT del prospecto; indicación y dosis para tics no se transfieren a otras patologías. Sin cálculo pediátrico automático.",
+      "Ficha FDA para tics de Tourette tras respuesta insatisfactoria al tratamiento estándar: riesgos QT e interacciones contraindican combinaciones específicas (incluidos inhibidores CYP). Verificar ECG, electrolitos y lista completa.",
       "Obligatorio evaluar riesgo de QT antes de iniciar.",
       "Realizar ECG basal y durante titulación en pacientes de riesgo.",
       "Corregir potasio y magnesio antes de usar.",
@@ -168,13 +190,29 @@
       "Reservar para indicaciones específicas, especialmente Tourette/tics refractarios."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70b079e2-a1f7-4a93-8685-d60a4d7c1280",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Pimozide Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Pimozida",
@@ -185,8 +223,8 @@
     "orap",
     "antipsicotico tipico de alta potencia — difenilbutilpiperidina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

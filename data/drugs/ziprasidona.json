@@ -79,6 +79,9 @@
       "Levodopa e agonistas dopaminérgicos: antagonismo"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "GEODON cápsulas devem ser administradas com alimento; GEODON IM tem indicação/preparo próprios. Conferir ECG/QT, cardiopatia e fármacos que prolongam QT antes de prescrever; não converter doses VO e IM.",
+      "GEODON cápsulas: administrar com alimento para absorção adequada; a apresentação IM tem bula e indicação distintas. Avaliar risco de QT e eletrólitos; não converter VO↔IM automaticamente.",
       "Deve ser administrada com alimento para absorção adequada.",
       "Avaliar risco de QT antes de iniciar.",
       "Considerar ECG basal em pacientes de risco.",
@@ -86,13 +89,29 @@
       "Menor risco metabólico que olanzapina, mas não isenta de monitorização."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8326928a-2cb6-4f7f-9712-03a425a14c37",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Ziprasidone Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Ziprasidona",
@@ -169,6 +188,9 @@
       "Levodopa y agonistas dopaminérgicos: antagonismo"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "GEODON cápsulas deben administrarse con comida; GEODON IM tiene indicación/preparación propia. Revisar ECG/QT, cardiopatía y fármacos que prolongan QT antes de prescribir; no convertir dosis oral e IM.",
+      "GEODON cápsulas: administrar con alimentos para absorción adecuada; presentación IM tiene ficha e indicación diferentes. Evaluar QT y electrolitos; no convertir oral↔IM automáticamente.",
       "Debe administrarse con comida para absorción adecuada.",
       "Evaluar riesgo de QT antes de iniciar.",
       "Considerar ECG basal en pacientes de riesgo.",
@@ -176,13 +198,29 @@
       "Menor riesgo metabólico que olanzapina, pero no exenta de monitorización."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8326928a-2cb6-4f7f-9712-03a425a14c37",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Ziprasidone Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Ziprasidona",
@@ -194,8 +232,8 @@
     "zeldox",
     "antipsicotico atipico"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

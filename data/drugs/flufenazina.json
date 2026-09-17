@@ -27,7 +27,7 @@
     ],
     "dose": {
       "adulto": "Psicose: iniciar 1–2,5 mg VO 2–3x/dia; titular conforme resposta.",
-      "depot": "Decanoato: 12,5–25 mg IM profunda a cada 2–4 semanas, conforme resposta e tolerabilidade.",
+      "depot": "Decanoato injetável 25 mg/mL da bula FDA citada: dose inicial de 12,5–25 mg IM ou SC; intervalo de manutenção individualizado pela resposta. Não converter VO↔depot automaticamente nem extrapolar a outro produto.",
       "maxDose": "Dose máxima depende da indicação; evitar doses altas sem monitorização de EPS e ECG."
     },
     "indications": [
@@ -74,19 +74,38 @@
       "Anticolinérgicos usados para EPS: maior risco de delirium/constipação"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "Flufenazina VO não é intercambiável automaticamente com decanoato depot; confirmar produto, veículo, via e intervalo conforme bula local antes de qualquer conversão. Não extrapolar doses adultas para pediatria.",
+      "Flufenazina oral e decanoato são formulações diferentes; a bula do decanoato em óleo 25 mg/mL admite IM ou SC apenas para o produto citado. Confirmar excipientes, via e apresentação local.",
       "Alto risco extrapiramidal; monitorar acatisia, distonia e parkinsonismo.",
       "Formulação depot é útil para baixa adesão, mas exige tolerância prévia ao fármaco oral.",
       "Considerar ECG se risco de QT.",
       "Monitorar prolactina se sintomas clínicos."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3832d3d3-15ce-4d41-8431-11e9bd04cf4d",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Fluphenazine Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Flufenazina",
@@ -111,7 +130,7 @@
     ],
     "dose": {
       "adulto": "Psicosis: iniciar 1–2,5 mg VO 2–3 veces/día; titular según respuesta.",
-      "depot": "Decanoato: 12,5–25 mg IM profunda cada 2–4 semanas, según respuesta y tolerabilidad.",
+      "depot": "Decanoato inyectable 25 mg/mL de la ficha FDA citada: dosis inicial 12,5–25 mg IM o SC; intervalo de mantenimiento individualizado según respuesta. No convertir VO↔depot automáticamente ni extrapolar a otro producto.",
       "maxDose": "La dosis máxima depende de indicación; evitar dosis altas sin monitorización de EPS y ECG."
     },
     "indications": [
@@ -158,19 +177,38 @@
       "Anticolinérgicos usados para EPS: mayor riesgo de delirium/estreñimiento"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "Flufenazina oral no es automáticamente intercambiable con decanoato depot; confirmar producto, vehículo, vía e intervalo según prospecto local antes de convertir. No extrapolar dosis adultas a pediatría.",
+      "Flufenazina oral y decanoato son formulaciones distintas; ficha de decanoato en aceite 25 mg/mL admite IM o SC solo para el producto citado. Confirmar excipientes, vía y presentación local.",
       "Alto riesgo extrapiramidal; monitorizar acatisia, distonía y parkinsonismo.",
       "La formulación depot es útil para baja adherencia, pero exige tolerancia previa al fármaco oral.",
       "Considerar ECG si hay riesgo de QT.",
       "Monitorizar prolactina si hay síntomas clínicos."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3832d3d3-15ce-4d41-8431-11e9bd04cf4d",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Fluphenazine Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Flufenazina",
@@ -183,8 +221,8 @@
     "modecate",
     "antipsicotico tipico de alta potencia — fenotiazina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

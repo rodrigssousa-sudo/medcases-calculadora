@@ -26,8 +26,7 @@
       "Comprimido 15 mg",
       "Comprimido 20 mg",
       "Comprimido 30 mg",
-      "Solução oral 1 mg/mL",
-      "Injetável de longa ação"
+      "Solução oral 1 mg/mL"
     ],
     "dose": {
       "adulto": "Esquizofrenia: iniciar 10–15 mg VO 1x/dia; usual 10–30 mg/dia.",
@@ -77,6 +76,9 @@
       "Álcool e depressores do SNC"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "Aripiprazol VO: indicação, idade e titulação pediátrica diferem; não converter pauta VO para Maintena/Aristada ou inferir dose pediátrica de adulto. Confirmar interações CYP2D6/CYP3A4 por produto.",
+      "Registro de aripiprazol VO: não extrapolar para LAI. Na bula de comprimidos dos EUA, esquizofrenia pediátrica ≥13 anos, mania bipolar ≥10, irritabilidade no autismo 6–17; doses e titulação diferem por indicação. Sem cálculo pediátrico universal.",
       "Monitorar acatisia, especialmente no início.",
       "Menor risco de ganho de peso e hiperprolactinemia que vários antipsicóticos, mas ainda monitorar metabolismo.",
       "Perguntar sobre impulsividade, jogo, compras compulsivas ou hipersexualidade.",
@@ -84,13 +86,143 @@
       "Pode piorar insônia/ansiedade em alguns pacientes."
     ],
     "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c7040fef-96a7-4429-9a8e-ec3ab17a8019",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Aripiprazole Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "LABEL_POSOLOGY_REFERENCE_DISPENSING_BLOCKED",
+      "doseAuto": false,
+      "indication": "autism_irritability",
+      "sourceUrls": [
+        "https://boletin.anmat.gob.ar/Marzo_2024/Dispo_2758-24.pdf",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021436s046s050lbl.pdf"
+      ],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "jurisdiction": "AR",
+      "product": "LEMIDAL",
+      "formulation": "oral_tablet",
+      "minAge": 6,
+      "maxAge": 17,
+      "minWeightKg": null,
+      "calculationStatus": "BLOCKED_LEMIDAL_2MG_STRENGTH_UNVERIFIED",
+      "titrationAutomatic": false,
+      "maintenanceAutomatic": false,
+      "independentlyClinicallySignedOff": false,
+      "unit": "mg/day",
+      "dispensingNote": "Não converter em fração de comprimido: confirmar apresentação apta a fornecer 2 mg.",
+      "clinicalReferenceR27": {
+        "status": "LABEL_POSOLOGY_REFERENCE_DISPENSING_BLOCKED",
+        "product": "LEMIDAL",
+        "jurisdiction": "AR",
+        "formulation": "oral_tablet",
+        "indication": "autism_irritability",
+        "minAgeYears": 6,
+        "maxAgeYears": 17,
+        "route": "oral",
+        "unit": "mg/day",
+        "frequency": "once_daily",
+        "initialMgDay": 2,
+        "recommendedRangeMgDay": [
+          5,
+          15
+        ],
+        "labelEscalationStepsMgDay": [
+          2,
+          5,
+          10,
+          15
+        ],
+        "minimumEscalationIntervalDays": 7,
+        "maxIncreaseMgPerStep": 5,
+        "titrationIndividualized": true,
+        "strengthsConfirmedBy2024LabelMg": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "initial2mgStrengthAvailableInNamedProduct": false,
+        "allowedAutomaticInitialDose": false,
+        "tabletSplittingNotAuthorizedByReviewedLabel": true,
+        "additionalIndicationsReferenceOnly": [
+          {
+            "indication": "schizophrenia",
+            "agesYears": [
+              13,
+              17
+            ],
+            "arLabelTargetMgDay": 10,
+            "arLabelMaxMgDay": 30,
+            "usAbilifyStartingMgDay": 2,
+            "usAbilifyTitrationMgDay": [
+              2,
+              5,
+              10
+            ],
+            "usScheduleMinDay": [
+              1,
+              3,
+              5
+            ],
+            "usDifferentProduct": true
+          },
+          {
+            "indication": "bipolar_i_mania",
+            "agesYears": [
+              10,
+              17
+            ],
+            "arLabelTargetMgDay": 10,
+            "usAbilifyStartingMgDay": 2,
+            "usAbilifyTitrationMgDay": [
+              2,
+              5,
+              10
+            ],
+            "usScheduleMinDay": [
+              1,
+              3,
+              5
+            ],
+            "usDifferentProduct": true
+          }
+        ],
+        "source": [
+          {
+            "url": "https://boletin.anmat.gob.ar/Marzo_2024/Dispo_2758-24.pdf",
+            "regulator": "ANMAT",
+            "disposition": "2758/2024",
+            "pages": [
+              1,
+              2,
+              5,
+              6
+            ],
+            "accessed": "2026-09-16"
+          },
+          {
+            "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021436s046s050lbl.pdf",
+            "regulator": "FDA",
+            "product": "ABILIFY not LEMIDAL",
+            "labelYear": 2025,
+            "pages": [
+              4,
+              5,
+              6
+            ],
+            "supplementaryCrossCheck": true,
+            "accessed": "2026-09-16"
+          }
+        ],
+        "marketAvailability2026": "NOT_VERIFIED",
+        "independentlyClinicallySignedOff": false
+      }
+    }
   },
   "es": {
     "name": "Aripiprazol",
@@ -114,8 +246,7 @@
       "Comprimido 15 mg",
       "Comprimido 20 mg",
       "Comprimido 30 mg",
-      "Solución oral 1 mg/mL",
-      "Inyectable de larga acción"
+      "Solución oral 1 mg/mL"
     ],
     "dose": {
       "adulto": "Esquizofrenia: iniciar 10–15 mg VO 1 vez/día; habitual 10–30 mg/día.",
@@ -165,6 +296,9 @@
       "Alcohol y depresores del SNC"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "Aripiprazol oral: indicación, edad y titulación pediátrica difieren; no convertir pauta oral a Maintena/Aristada ni inferir dosis pediátrica de adultos. Comprobar interacciones CYP2D6/CYP3A4 según producto.",
+      "Registro de aripiprazol VO: no extrapolar a LAI. En ficha de comprimidos EUA: esquizofrenia pediátrica ≥13 años, manía bipolar ≥10, irritabilidad en autismo 6–17; dosis y titulación dependen de indicación. Sin cálculo pediátrico universal.",
       "Monitorizar acatisia, especialmente al inicio.",
       "Menor riesgo de aumento de peso e hiperprolactinemia que varios antipsicóticos, pero aun así monitorizar metabolismo.",
       "Preguntar sobre impulsividad, juego, compras compulsivas o hipersexualidad.",
@@ -172,13 +306,143 @@
       "Puede empeorar insomnio/ansiedad en algunos pacientes."
     ],
     "ref": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c7040fef-96a7-4429-9a8e-ec3ab17a8019",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Aripiprazole Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "LABEL_POSOLOGY_REFERENCE_DISPENSING_BLOCKED",
+      "doseAuto": false,
+      "indication": "autism_irritability",
+      "sourceUrls": [
+        "https://boletin.anmat.gob.ar/Marzo_2024/Dispo_2758-24.pdf",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021436s046s050lbl.pdf"
+      ],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "jurisdiction": "AR",
+      "product": "LEMIDAL",
+      "formulation": "oral_tablet",
+      "minAge": 6,
+      "maxAge": 17,
+      "minWeightKg": null,
+      "calculationStatus": "BLOCKED_LEMIDAL_2MG_STRENGTH_UNVERIFIED",
+      "titrationAutomatic": false,
+      "maintenanceAutomatic": false,
+      "independentlyClinicallySignedOff": false,
+      "unit": "mg/day",
+      "dispensingNote": "No convertir en fracción de comprimido: confirmar presentación apta para administrar 2 mg.",
+      "clinicalReferenceR27": {
+        "status": "LABEL_POSOLOGY_REFERENCE_DISPENSING_BLOCKED",
+        "product": "LEMIDAL",
+        "jurisdiction": "AR",
+        "formulation": "oral_tablet",
+        "indication": "autism_irritability",
+        "minAgeYears": 6,
+        "maxAgeYears": 17,
+        "route": "oral",
+        "unit": "mg/day",
+        "frequency": "once_daily",
+        "initialMgDay": 2,
+        "recommendedRangeMgDay": [
+          5,
+          15
+        ],
+        "labelEscalationStepsMgDay": [
+          2,
+          5,
+          10,
+          15
+        ],
+        "minimumEscalationIntervalDays": 7,
+        "maxIncreaseMgPerStep": 5,
+        "titrationIndividualized": true,
+        "strengthsConfirmedBy2024LabelMg": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "initial2mgStrengthAvailableInNamedProduct": false,
+        "allowedAutomaticInitialDose": false,
+        "tabletSplittingNotAuthorizedByReviewedLabel": true,
+        "additionalIndicationsReferenceOnly": [
+          {
+            "indication": "schizophrenia",
+            "agesYears": [
+              13,
+              17
+            ],
+            "arLabelTargetMgDay": 10,
+            "arLabelMaxMgDay": 30,
+            "usAbilifyStartingMgDay": 2,
+            "usAbilifyTitrationMgDay": [
+              2,
+              5,
+              10
+            ],
+            "usScheduleMinDay": [
+              1,
+              3,
+              5
+            ],
+            "usDifferentProduct": true
+          },
+          {
+            "indication": "bipolar_i_mania",
+            "agesYears": [
+              10,
+              17
+            ],
+            "arLabelTargetMgDay": 10,
+            "usAbilifyStartingMgDay": 2,
+            "usAbilifyTitrationMgDay": [
+              2,
+              5,
+              10
+            ],
+            "usScheduleMinDay": [
+              1,
+              3,
+              5
+            ],
+            "usDifferentProduct": true
+          }
+        ],
+        "source": [
+          {
+            "url": "https://boletin.anmat.gob.ar/Marzo_2024/Dispo_2758-24.pdf",
+            "regulator": "ANMAT",
+            "disposition": "2758/2024",
+            "pages": [
+              1,
+              2,
+              5,
+              6
+            ],
+            "accessed": "2026-09-16"
+          },
+          {
+            "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021436s046s050lbl.pdf",
+            "regulator": "FDA",
+            "product": "ABILIFY not LEMIDAL",
+            "labelYear": 2025,
+            "pages": [
+              4,
+              5,
+              6
+            ],
+            "supplementaryCrossCheck": true,
+            "accessed": "2026-09-16"
+          }
+        ],
+        "marketAvailability2026": "NOT_VERIFIED",
+        "independentlyClinicallySignedOff": false
+      }
+    }
   },
   "name": {
     "pt": "Aripiprazol",
@@ -193,8 +457,8 @@
     "aripiprazol gador",
     "antipsicotico atipico agonista parcial dopaminergico"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

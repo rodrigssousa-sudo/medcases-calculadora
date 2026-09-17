@@ -74,6 +74,9 @@
       "Anti-hipertensivos: maior hipotensão"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "Zuclopentixol VO di-hidroclorido, acetato IM de curta ação e decanoato depot não são intercambiáveis; verificar sal, concentração, via, intervalo e bula da apresentação BR/AR antes de qualquer conversão.",
+      "Separar di-hidroclorido VO, acetato de ação curta e decanoato depot: são produtos diferentes. Não transferir concentração, via ou intervalo entre eles.",
       "Formulação acetato IM não é equivalente ao decanoato de manutenção.",
       "Monitorar sedação, pressão arterial e sintomas extrapiramidais.",
       "Decanoato exige avaliação de tolerância e plano de seguimento.",
@@ -81,12 +84,30 @@
       "Considerar ECG em pacientes com risco cardiovascular ou QT."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/994/smpc",
+      "https://www.medicines.org.uk/emc/product/993/smpc",
+      "https://www.medicines.org.uk/emc/product/6414/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "ORAL_ACETATE_DECANOATE_NOT_INTERCHANGEABLE",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Zuclopentixol",
@@ -158,6 +179,9 @@
       "Antihipertensivos: mayor hipotensión"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "Zuclopentixol oral diclorhidrato, acetato IM de acción corta y decanoato depot no son intercambiables; verificar sal, concentración, vía, intervalo y prospecto BR/AR antes de convertir.",
+      "Separar diclorhidrato oral, acetato de acción corta y decanoato depot: productos diferentes. No trasladar concentración, vía ni intervalo entre ellos.",
       "La formulación acetato IM no es equivalente al decanoato de mantenimiento.",
       "Monitorizar sedación, presión arterial y síntomas extrapiramidales.",
       "El decanoato exige evaluación de tolerancia y plan de seguimiento.",
@@ -165,12 +189,30 @@
       "Considerar ECG en pacientes con riesgo cardiovascular o QT."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/994/smpc",
+      "https://www.medicines.org.uk/emc/product/993/smpc",
+      "https://www.medicines.org.uk/emc/product/6414/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "ORAL_ACETATE_DECANOATE_NOT_INTERCHANGEABLE",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Zuclopentixol",
@@ -181,8 +223,8 @@
     "clopixol",
     "antipsicotico tipico — tioxanteno"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

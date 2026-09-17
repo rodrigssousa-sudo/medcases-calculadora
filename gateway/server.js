@@ -12,6 +12,8 @@ const {
   extractBearerToken,
 } = require('./medcases_entitlement_gate');
 
+const { evaluateG01PediatricReview } = require('./clinical/g01_pediatric_review');
+
 const DEFAULT_PORT = 8080;
 const REQUIRED_FREE_DRUG_COUNT = 60;
 
@@ -24,6 +26,35 @@ function json(res, status, payload) {
   res.setHeader('Cache-Control', 'private, no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.end(body);
+}
+
+function readJsonBody(req, { maxBytes = 32768 } = {}) {
+  return new Promise((resolve, reject) => {
+    let size = 0;
+    const chunks = [];
+    req.on('data', (chunk) => {
+      size += chunk.length;
+      if (size > maxBytes) {
+        const error = new Error('REQUEST_BODY_TOO_LARGE');
+        error.statusCode = 413;
+        reject(error);
+        req.destroy();
+        return;
+      }
+      chunks.push(chunk);
+    });
+    req.on('end', () => {
+      if (!chunks.length) return resolve(null);
+      try {
+        resolve(JSON.parse(Buffer.concat(chunks).toString('utf8')));
+      } catch (_) {
+        const error = new Error('REQUEST_BODY_INVALID_JSON');
+        error.statusCode = 400;
+        reject(error);
+      }
+    });
+    req.on('error', reject);
+  });
 }
 
 function cleanDrugId(value) {
@@ -78,6 +109,7 @@ function createGatewayHandler({
   rootDir,
   freeDrugIds,
   nowEpochProvider = () => Math.floor(Date.now() / 1000),
+  clinicalReviewerSubjects = process.env.MEDCASES_CLINICAL_REVIEWER_SUBJECTS || '',
 } = {}) {
   const safeRoot = path.resolve(
     rootDir || path.join(__dirname, '..'),
@@ -87,6 +119,10 @@ function createGatewayHandler({
     freeDrugIds instanceof Set
       ? freeDrugIds
       : new Set(freeDrugIds || []);
+
+  const reviewSubjects = clinicalReviewerSubjects instanceof Set
+    ? new Set([...clinicalReviewerSubjects].filter(v => typeof v === 'string' && v.trim()))
+    : new Set(String(clinicalReviewerSubjects || '').split(',').map(v => v.trim()).filter(Boolean));
 
   function authenticate(req) {
     const token = extractBearerToken(
@@ -251,9 +287,38 @@ function createGatewayHandler({
         );
       }
 
-      return json(res, 501, {
-        ok: false,
-        error: 'AUTHORIZED_RUNTIME_NOT_YET_WIRED',
+      // Backward-compatible fail-closed response for empty/legacy requests.
+      const lengthHeader = Number(req.headers?.['content-length'] || 0);
+      if (!lengthHeader) {
+        return json(res, 501, {
+          ok: false,
+          error: 'AUTHORIZED_RUNTIME_NOT_YET_WIRED',
+          capability: CAP.DOSE_BY_WEIGHT,
+        });
+      }
+
+      // Only server-authorized reviewer subjects may inspect unapproved pediatric output.
+      if (!reviewSubjects.has(claims.sub)) {
+        return json(res, 403, {
+          ok: false,
+          error: 'CLINICAL_REVIEWER_REQUIRED',
+          clinicalSignoff: false,
+        });
+      }
+
+      let payload;
+      try {
+        payload = await readJsonBody(req);
+      } catch (err) {
+        return json(res, err.statusCode || 400, {
+          ok: false,
+          error: err.message || 'REQUEST_BODY_INVALID',
+        });
+      }
+
+      const result = evaluateG01PediatricReview(payload || {});
+      return json(res, result.ok ? 200 : 422, {
+        ...result,
         capability: CAP.DOSE_BY_WEIGHT,
       });
     }

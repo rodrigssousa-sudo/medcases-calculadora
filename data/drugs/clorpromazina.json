@@ -40,7 +40,7 @@
       "Sedação em estados de excitação intensa"
     ],
     "renalAdjustment": "Sem ajuste renal habitual.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
+    "hepaticAdjustment": "Bula FDA de clorpromazina injetável: usar com cautela em hepatopatia; não há algoritmo universal de redução neste registro. Conferir bula local e via; não gerar dose automática.",
     "mechanism": "Antagonista D2 com forte bloqueio H1, muscarínico e alfa-1; menor risco extrapiramidal que haloperidol, porém maior sedação, hipotensão e efeito anticolinérgico.",
     "onset": "Sedação pode ocorrer em horas; efeito antipsicótico pleno pode levar dias a semanas.",
     "halfLife": "Vida média aproximada: 16–30 horas.",
@@ -77,6 +77,9 @@
       "Levodopa: antagonismo dopaminérgico"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "Clorpromazina VO e injetável possuem bulas e vias diferentes. Confirmar concentração/rota no produto disponível; não converter dose entre vias ou extrapolar regime adulto para criança. Conferir medicamentos que prolongam QT.",
+      "As bulas FDA de comprimidos e injetável são distintas; concentrações de gotas e ampolas e vias disponíveis em BR/AR requerem confirmação no produto local. Nunca converter VO/IM/IV automaticamente.",
       "Maior sedação e hipotensão que antipsicóticos típicos de alta potência.",
       "Monitorar pressão arterial, especialmente após início ou aumento de dose.",
       "Orientar fotoproteção por risco de fotossensibilidade.",
@@ -84,13 +87,30 @@
       "Evitar em idosos frágeis quando possível."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e97db69-e09b-407d-8a81-a36cc80fff13",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2a8b8a3-187f-4000-bde3-b40bb0e5600f",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Chlorpromazine Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Clorpromazina",
@@ -128,7 +148,7 @@
       "Sedación en estados de excitación intensa"
     ],
     "renalAdjustment": "Sin ajuste renal habitual.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
+    "hepaticAdjustment": "Ficha FDA de clorpromazina inyectable: usar con cautela en hepatopatía; no hay algoritmo universal de reducción en este registro. Verificar ficha local y vía; no calcular dosis automática.",
     "mechanism": "Antagonista D2 con fuerte bloqueo H1, muscarínico y alfa-1; menor riesgo extrapiramidal que haloperidol, pero mayor sedación, hipotensión y efecto anticolinérgico.",
     "onset": "La sedación puede ocurrir en horas; el efecto antipsicótico pleno puede tardar días a semanas.",
     "halfLife": "Vida media aproximada: 16–30 horas.",
@@ -165,6 +185,9 @@
       "Levodopa: antagonismo dopaminérgico"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "Clorpromazina oral e inyectable tienen fichas y vías distintas. Confirmar concentración/vía del producto disponible; no convertir dosis entre vías ni extrapolar pauta adulta a niños. Revisar fármacos que prolongan QT.",
+      "Las fichas FDA de comprimidos e inyectable son distintas; concentraciones de gotas y ampollas y vías disponibles en BR/AR requieren confirmar el producto local. Nunca convertir VO/IM/IV automáticamente.",
       "Mayor sedación e hipotensión que antipsicóticos típicos de alta potencia.",
       "Monitorizar presión arterial, especialmente tras inicio o aumento de dosis.",
       "Orientar fotoprotección por riesgo de fotosensibilidad.",
@@ -172,13 +195,30 @@
       "Evitar en adultos mayores frágiles cuando sea posible."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e97db69-e09b-407d-8a81-a36cc80fff13",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2a8b8a3-187f-4000-bde3-b40bb0e5600f",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Chlorpromazine Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Clorpromazina",
@@ -193,8 +233,8 @@
     "clorpromazina klonal",
     "antipsicotico tipico de baixa potencia — fenotiazina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

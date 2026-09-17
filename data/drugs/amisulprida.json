@@ -39,7 +39,7 @@
       "Transtorno esquizoafetivo em casos selecionados",
       "Baixa resposta ou intolerância a outros antipsicóticos em casos selecionados"
     ],
-    "renalAdjustment": "Sem ajuste renal se função renal normal.",
+    "renalAdjustment": "SmPC Viatris 400 mg: ClCr >60 mL/min, sem redução por este critério; avaliar quadro e produto local.",
     "hepaticAdjustment": "Sem ajuste hepático habitual; metabolismo hepático é limitado.",
     "mechanism": "Antagonista seletivo D2/D3; em doses baixas pode modular sintomas negativos e em doses altas exerce efeito antipsicótico.",
     "onset": "Efeito inicial em dias a semanas; resposta plena geralmente em 4–6 semanas.",
@@ -78,6 +78,9 @@
       "Anti-hipertensivos: maior hipotensão"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "SmPC Amisulpride comprimido 400 mg: menores de 15 anos contraindicado; 15–18 anos sem indicação rotineira. ClCr ausente não autoriza presumir função normal; não aplicar o esquema adulto como dose pediátrica.",
+      "SmPC Viatris 400 mg: contraindicado antes de 15 anos; entre 15 e 18 anos não recomendado rotineiramente por falta de dados. Não derivar dose pediátrica.",
       "Ajustar dose pela função renal.",
       "Monitorar prolactina se sintomas clínicos.",
       "Considerar ECG basal se risco de QT.",
@@ -85,12 +88,28 @@
       "Monitorar EPS, especialmente em doses altas."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/102114/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Amisulprida",
@@ -127,7 +146,7 @@
       "Trastorno esquizoafectivo en casos seleccionados",
       "Baja respuesta o intolerancia a otros antipsicóticos en casos seleccionados"
     ],
-    "renalAdjustment": "Sin ajuste renal si función renal normal.",
+    "renalAdjustment": "Ficha Viatris 400 mg: ClCr >60 mL/min, sin reducción por este criterio; valorar contexto y producto local.",
     "hepaticAdjustment": "Sin ajuste hepático habitual; metabolismo hepático limitado.",
     "mechanism": "Antagonista selectivo D2/D3; en dosis bajas puede modular síntomas negativos y en dosis altas ejerce efecto antipsicótico.",
     "onset": "Efecto inicial en días a semanas; respuesta plena generalmente en 4–6 semanas.",
@@ -166,6 +185,9 @@
       "Antihipertensivos: mayor hipotensión"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "Ficha Amisulpride comprimido 400 mg: contraindicado en menores de 15 años; 15–18 años sin indicación rutinaria. ClCr ausente no autoriza presumir función normal; no usar pauta adulta como dosis pediátrica.",
+      "Ficha Viatris 400 mg: contraindicado antes de los 15 años; entre 15 y 18 no recomendado habitualmente por falta de datos. No extrapolar dosis pediátrica.",
       "Ajustar dosis por función renal.",
       "Monitorizar prolactina si hay síntomas clínicos.",
       "Considerar ECG basal si hay riesgo de QT.",
@@ -173,12 +195,28 @@
       "Monitorizar EPS, especialmente en dosis altas."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/102114/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Amisulprida",
@@ -190,8 +228,8 @@
     "amisulprida gador",
     "antipsicotico benzamida substituida"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

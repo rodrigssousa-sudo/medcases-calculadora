@@ -72,6 +72,9 @@
       "Levodopa e agonistas dopaminérgicos: antagonismo"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "ZYPREXA RELPREVV: após CADA injeção, bula FDA vigente exige observação profissional contínua por pelo menos 3 horas em serviço certificado, avaliação antes da alta e acompanhante na saída; não dirigir no restante do dia. Checar regras locais.",
+      "ZYPREXA RELPREVV/pamoato: síndrome de delírio/sedação pós-injeção exige observação por pelo menos 3 horas em serviço habilitado segundo bula EUA atual; REMS deste produto NÃO é o REMS da clozapina. Verificar regras locais.",
       "Exige observação pós-injeção por risco de síndrome pós-injeção com sedação/delirium.",
       "Confirmar tolerância oral antes de iniciar.",
       "Monitorar peso, cintura, glicemia/HbA1c, lipídios e pressão arterial.",
@@ -79,13 +82,29 @@
       "Registrar data, dose, lote e local de aplicação."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=11544cba-64a9-49cb-8d74-da228053b252",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Olanzapine Pamoate LAI Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_POST_INJECTION_SEDATION_OBSERVATION",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Olanzapina LAI",
@@ -155,6 +174,9 @@
       "Levodopa y agonistas dopaminérgicos: antagonismo"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "ZYPREXA RELPREVV: tras CADA inyección, ficha FDA vigente exige observación profesional continua al menos 3 horas en centro certificado, valoración previa al alta y acompañante al salir; no conducir el resto del día. Revisar normas locales.",
+      "ZYPREXA RELPREVV/pamoato: síndrome de delirio/sedación posinyección requiere observación durante al menos 3 horas en centro habilitado según ficha vigente EUA; REMS de este producto NO es REMS de clozapina. Verificar normas locales.",
       "Requiere observación postinyección por riesgo de síndrome postinyección con sedación/delirium.",
       "Confirmar tolerancia oral antes de iniciar.",
       "Monitorizar peso, cintura, glucemia/HbA1c, lípidos y presión arterial.",
@@ -162,13 +184,29 @@
       "Registrar fecha, dosis, lote y sitio de aplicación."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=11544cba-64a9-49cb-8d74-da228053b252",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Olanzapine Pamoate LAI Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_POST_INJECTION_SEDATION_OBSERVATION",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Olanzapina LAI",
@@ -182,8 +220,8 @@
     "zypadhera",
     "antipsicotico atipico injetavel de longa acao"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

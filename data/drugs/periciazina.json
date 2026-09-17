@@ -75,18 +75,37 @@
       "Levodopa e agonistas dopaminérgicos"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "Periciazina: bula de xarope 10 mg/5 mL NÃO valida gotas ou comprimidos. Para criança, confirmar indicação, idade, peso e concentração exata da apresentação local antes de calcular dose.",
+      "A bula Pericyazine xarope 10 mg/5 mL refere-se somente a esse produto; doses pediátricas dependem de peso, indicação e idade. Não converter para gotas ou comprimidos sem bula própria.",
       "Monitorar sedação, pressão arterial e sintomas extrapiramidais.",
       "Evitar em idosos frágeis quando possível.",
       "Considerar ECG em pacientes com risco de QT.",
       "Evitar associação com álcool e outros sedativos."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/3962/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Periciazina",
@@ -159,18 +178,37 @@
       "Levodopa y agonistas dopaminérgicos"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "Periciazina: ficha de jarabe 10 mg/5 mL NO valida gotas ni comprimidos. En niños confirmar indicación, edad, peso y concentración exacta de presentación local antes de calcular dosis.",
+      "La ficha Pericyazine jarabe 10 mg/5 mL se refiere solo a ese producto; dosis pediátricas dependen de peso, indicación y edad. No convertir a gotas o comprimidos sin prospecto específico.",
       "Monitorizar sedación, presión arterial y síntomas extrapiramidales.",
       "Evitar en adultos mayores frágiles cuando sea posible.",
       "Considerar ECG en pacientes con riesgo de QT.",
       "Evitar asociación con alcohol y otros sedantes."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/3962/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Periciazina",
@@ -181,8 +219,8 @@
     "neuleptil",
     "antipsicotico tipico — fenotiazina piperidinica"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

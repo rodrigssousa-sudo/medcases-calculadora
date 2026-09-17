@@ -39,8 +39,8 @@
       "Psicose com necessidade de menor risco de acatisia que aripiprazol em alguns pacientes",
       "Depressão resistente como estratégia de potencialização"
     ],
-    "renalAdjustment": "Insuficiência renal moderada/grave: pode requerer limite de dose máxima conforme protocolo.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
+    "renalAdjustment": "REXULTI (bula FDA): ClCr <60 mL/min: máximo 2 mg/dia para depressão maior adjuvante ou agitação da demência de Alzheimer; máximo 3 mg/dia para esquizofrenia. Considerar também interações CYP.",
+    "hepaticAdjustment": "REXULTI (bula FDA): Child-Pugh ≥7: máximo 2 mg/dia para depressão maior adjuvante ou agitação da demência de Alzheimer; máximo 3 mg/dia para esquizofrenia. Considerar também interações CYP.",
     "mechanism": "Agonista parcial D2 e 5HT1A, antagonista 5HT2A; perfil estabilizador dopaminérgico com menor ativação que aripiprazol em alguns pacientes.",
     "onset": "Efeito pode surgir em 1–2 semanas; resposta plena geralmente em 4–6 semanas.",
     "halfLife": "Vida média aproximada: 91 horas.",
@@ -72,6 +72,8 @@
       "Levodopa e agonistas dopaminérgicos"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "REXULTI: dose máxima muda conforme indicação e função renal/hepática; inibidores/indutores CYP podem exigir ajuste adicional. Não aplicar máximo de esquizofrenia à depressão adjuvante ou a outra indicação.",
       "Monitorar peso, glicemia e lipídios.",
       "Observar acatisia, inquietação e insônia.",
       "Perguntar sobre impulsividade ou comportamentos compulsivos.",
@@ -81,11 +83,26 @@
     "ref": [
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Brexpiprazole Prescribing Information",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2d301358-6291-4ec1-bd87-37b4ad9bd850",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Brexpiprazol",
@@ -122,8 +139,8 @@
       "Psicosis con necesidad de menor riesgo de acatisia que aripiprazol en algunos pacientes",
       "Depresión resistente como estrategia de potenciación"
     ],
-    "renalAdjustment": "Insuficiencia renal moderada/grave: puede requerir límite de dosis máxima según protocolo.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
+    "renalAdjustment": "REXULTI (ficha FDA): ClCr <60 mL/min: máximo 2 mg/día para depresión mayor como coadyuvante o agitación de demencia de Alzheimer; máximo 3 mg/día para esquizofrenia. Considerar además interacciones CYP.",
+    "hepaticAdjustment": "REXULTI (ficha FDA): Child-Pugh ≥7: máximo 2 mg/día para depresión mayor como coadyuvante o agitación de demencia de Alzheimer; máximo 3 mg/día para esquizofrenia. Considerar además interacciones CYP.",
     "mechanism": "Agonista parcial D2 y 5HT1A, antagonista 5HT2A; perfil estabilizador dopaminérgico con menor activación que aripiprazol en algunos pacientes.",
     "onset": "El efecto puede aparecer en 1–2 semanas; respuesta plena generalmente en 4–6 semanas.",
     "halfLife": "Vida media aproximada: 91 horas.",
@@ -155,6 +172,8 @@
       "Levodopa y agonistas dopaminérgicos"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "REXULTI: dosis máxima varía por indicación y función renal/hepática; inhibidores/inductores CYP pueden exigir ajustes adicionales. No trasladar el máximo de esquizofrenia a depresión como adyuvante u otra indicación.",
       "Monitorizar peso, glucemia y lípidos.",
       "Observar acatisia, inquietud e insomnio.",
       "Preguntar por impulsividad o conductas compulsivas.",
@@ -164,11 +183,26 @@
     "ref": [
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Brexpiprazole Prescribing Information",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2d301358-6291-4ec1-bd87-37b4ad9bd850",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Brexpiprazol",
@@ -179,8 +213,8 @@
     "rexulti",
     "antipsicotico atipico agonista parcial d2"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

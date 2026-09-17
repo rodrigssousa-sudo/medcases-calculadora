@@ -40,8 +40,8 @@
       "Adjuvante no transtorno depressivo maior em alguns protocolos",
       "Sintomas negativos da esquizofrenia em casos selecionados"
     ],
-    "renalAdjustment": "Sem ajuste renal habitual em insuficiência leve/moderada; evitar ou cautela se grave.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
+    "renalAdjustment": "VRAYLAR (bula FDA): ClCr ≥30 mL/min: sem ajuste em insuficiência leve/moderada; ClCr <30 mL/min: uso não recomendado, população não avaliada. Não gerar dose automática.",
+    "hepaticAdjustment": "VRAYLAR (bula FDA): Child-Pugh 5–9: sem ajuste; Child-Pugh 10–15: uso não recomendado, população não avaliada. Não gerar dose automática.",
     "mechanism": "Agonista parcial D3/D2 com preferência por D3, agonista parcial 5HT1A e antagonista 5HT2A.",
     "onset": "Resposta pode demorar semanas; metabólitos ativos têm meia-vida longa, então ajustes aparecem lentamente.",
     "halfLife": "Vida média efetiva longa; metabólito ativo didesmetil-cariprazina pode persistir por 1–3 semanas.",
@@ -73,6 +73,8 @@
       "Levodopa e agonistas dopaminérgicos"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "VRAYLAR: metabólitos de longa duração retardam o efeito de mudanças de dose; disfunção renal grave ou Child-Pugh grave exigem revisão da bula antes de escolher dose. Não converter doses adultas em doses pediátricas.",
       "Monitorar acatisia e insônia, especialmente no início.",
       "Ajustes de dose devem considerar meia-vida longa dos metabólitos.",
       "Monitorar peso, glicemia e lipídios.",
@@ -82,11 +84,26 @@
     "ref": [
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Cariprazine Prescribing Information",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b5f7c65-aa2d-452a-b3db-bc85c06ff12f",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Cariprazina",
@@ -124,8 +141,8 @@
       "Coadyuvante en trastorno depresivo mayor en algunos protocolos",
       "Síntomas negativos de la esquizofrenia en casos seleccionados"
     ],
-    "renalAdjustment": "Sin ajuste renal habitual en insuficiencia leve/moderada; evitar o cautela si es grave.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
+    "renalAdjustment": "VRAYLAR (ficha FDA): ClCr ≥30 mL/min: sin ajuste en insuficiencia leve/moderada; ClCr <30 mL/min: uso no recomendado, población no evaluada. No generar dosis automática.",
+    "hepaticAdjustment": "VRAYLAR (ficha FDA): Child-Pugh 5–9: sin ajuste; Child-Pugh 10–15: uso no recomendado, población no evaluada. No generar dosis automática.",
     "mechanism": "Agonista parcial D3/D2 con preferencia por D3, agonista parcial 5HT1A y antagonista 5HT2A.",
     "onset": "La respuesta puede tardar semanas; metabolitos activos tienen vida media larga, por eso los ajustes se reflejan lentamente.",
     "halfLife": "Vida media efectiva larga; metabolito activo didesmetil-cariprazina puede persistir por 1–3 semanas.",
@@ -157,6 +174,8 @@
       "Levodopa y agonistas dopaminérgicos"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "VRAYLAR: metabolitos de larga duración retrasan el efecto de los cambios de dosis; daño renal grave o Child-Pugh grave requieren revisar ficha antes de dosificar. No convertir dosis de adulto a dosis pediátricas.",
       "Monitorizar acatisia e insomnio, especialmente al inicio.",
       "Los ajustes de dosis deben considerar la vida media larga de los metabolitos.",
       "Monitorizar peso, glucemia y lípidos.",
@@ -166,11 +185,26 @@
     "ref": [
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Cariprazine Prescribing Information",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b5f7c65-aa2d-452a-b3db-bc85c06ff12f",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Cariprazina",
@@ -182,8 +216,8 @@
     "reagila",
     "antipsicotico atipico agonista parcial d3/d2"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

@@ -73,6 +73,9 @@
       "Anti-hipertensivos: maior hipotensão"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "Tiotixeno cápsulas: bula citada não recomenda uso em menores de 12 anos pela falta de segurança estabelecida. Confirmar apresentação e idade; não gerar esquema pediátrico a partir da dose adulta.",
+      "Bula Thiothixene cápsulas: uso em menores de 12 anos não recomendado por segurança não estabelecida. Não inferir dose pediátrica a partir da adulta.",
       "Monitorar sintomas extrapiramidais desde o início.",
       "Considerar ECG em pacientes com risco cardiovascular ou QT.",
       "Evitar em idosos com demência quando possível.",
@@ -80,13 +83,29 @@
       "Reduzir gradualmente se uso prolongado."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81c40311-7dc4-4332-8920-a39a8466aea6",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Thiothixene Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Tiotixeno",
@@ -157,6 +176,9 @@
       "Antihipertensivos: mayor hipotensión"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "Tiotixeno cápsulas: la ficha citada no recomienda uso en menores de 12 años por seguridad no establecida. Confirmar presentación y edad; no generar pauta pediátrica desde dosis adulta.",
+      "Ficha Thiothixene cápsulas: uso en menores de 12 años no recomendado por seguridad no establecida. No inferir dosis pediátrica de la adulta.",
       "Monitorizar síntomas extrapiramidales desde el inicio.",
       "Considerar ECG en pacientes con riesgo cardiovascular o QT.",
       "Evitar en adultos mayores con demencia cuando sea posible.",
@@ -164,13 +186,29 @@
       "Reducir gradualmente si uso prolongado."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81c40311-7dc4-4332-8920-a39a8466aea6",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Thiothixene Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Tiotixeno",
@@ -181,8 +219,8 @@
     "navane",
     "antipsicotico tipico — tioxanteno"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

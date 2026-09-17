@@ -76,6 +76,9 @@
       "Fármacos que prolongam QT"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "NOZINAN maleato oral e cloridrato injetável diferem em sal, concentração e via; confirmar bula e apresentação do país. Não usar dose oral como referência direta para injetável ou pediatria.",
+      "Nozinan oral (maleato) e injetável (cloridrato) têm sais, vias e bulas distintas; não converter doses/formulações automaticamente. Confirmar apresentação local.",
       "Antipsicótico muito sedativo; titular lentamente.",
       "Monitorar pressão arterial e risco de quedas.",
       "Cuidado em combinação com opioides, benzodiazepínicos ou álcool.",
@@ -83,12 +86,29 @@
       "Considerar ECG em pacientes com risco de QT."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/1429/smpc",
+      "https://www.medicines.org.uk/emc/product/1428/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Levomepromazina",
@@ -162,6 +182,9 @@
       "Fármacos que prolongan QT"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "NOZINAN maleato oral y clorhidrato inyectable difieren en sal, concentración y vía; confirmar ficha y presentación del país. No usar dosis oral como referencia directa para inyectable o pediatría.",
+      "Nozinan oral (maleato) e inyectable (clorhidrato) tienen sales, vías y fichas diferentes; no convertir dosis/formulaciones automáticamente. Verificar presentación local.",
       "Antipsicótico muy sedativo; titular lentamente.",
       "Monitorizar presión arterial y riesgo de caídas.",
       "Cuidado en combinación con opioides, benzodiacepinas o alcohol.",
@@ -169,12 +192,29 @@
       "Considerar ECG en pacientes con riesgo de QT."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/1429/smpc",
+      "https://www.medicines.org.uk/emc/product/1428/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Levomepromazina",
@@ -188,8 +228,8 @@
     "levomepromazina northia",
     "antipsicotico tipico sedativo — fenotiazina"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

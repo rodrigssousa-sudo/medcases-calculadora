@@ -26,9 +26,7 @@
       "Comprimido de liberação prolongada 3 mg",
       "Comprimido de liberação prolongada 6 mg",
       "Comprimido de liberação prolongada 9 mg",
-      "Comprimido de liberação prolongada 12 mg",
-      "Injetável mensal de longa ação",
-      "Injetável trimestral de longa ação"
+      "Comprimido de liberação prolongada 12 mg"
     ],
     "dose": {
       "adulto": "Esquizofrenia: iniciar 6 mg VO 1x/dia pela manhã; usual 3–12 mg/dia.",
@@ -43,8 +41,8 @@
       "Baixa adesão ao tratamento oral",
       "Psicose crônica com necessidade de estabilidade plasmática"
     ],
-    "renalAdjustment": "Sem ajuste renal se função renal normal.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
+    "renalAdjustment": "INVEGA oral de liberação prolongada (bula FDA): ClCr 50–<80 mL/min: iniciar 3 mg 1x/dia, máximo 6 mg/dia; ClCr 10–<50: iniciar 3 mg em dias alternados, máximo 3 mg 1x/dia após reavaliação; ClCr <10: uso não recomendado. Não aplicar a LAI nem a outros produtos.",
+    "hepaticAdjustment": "INVEGA oral de liberação prolongada (bula FDA): Child-Pugh A/B sem ajuste; insuficiência hepática grave não estudada. Não generalizar para palmitato injetável.",
     "mechanism": "Metabólito ativo da risperidona; antagonista D2 e 5HT2A, com risco relevante de hiperprolactinemia.",
     "onset": "Efeito inicial em dias; resposta antipsicótica plena geralmente em 2–6 semanas.",
     "halfLife": "Vida média VO aproximada: 23 horas; formulações LAI têm duração mensal ou trimestral.",
@@ -79,6 +77,7 @@
       "Álcool e depressores do SNC"
     ],
     "alerts": [
+      "INVEGA comprimidos de liberação prolongada: ajuste por ClCr específico do produto, inclusive limitação em insuficiência grave; não converter esquema oral para palmitato mensal/trimestral.",
       "Ajustar dose pela função renal.",
       "Monitorar prolactina se sintomas clínicos.",
       "Monitorar peso, glicemia, lipídios e pressão arterial.",
@@ -86,13 +85,29 @@
       "Formulações LAI exigem protocolo específico de início e manutenção."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b8e5b26-b9e4-4704-921b-3c3c0d159916",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Paliperidone Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Paliperidona",
@@ -116,9 +131,7 @@
       "Comprimido de liberación prolongada 3 mg",
       "Comprimido de liberación prolongada 6 mg",
       "Comprimido de liberación prolongada 9 mg",
-      "Comprimido de liberación prolongada 12 mg",
-      "Inyectable mensual de larga acción",
-      "Inyectable trimestral de larga acción"
+      "Comprimido de liberación prolongada 12 mg"
     ],
     "dose": {
       "adulto": "Esquizofrenia: iniciar 6 mg VO 1 vez/día por la mañana; habitual 3–12 mg/día.",
@@ -133,8 +146,8 @@
       "Baja adherencia al tratamiento oral",
       "Psicosis crónica con necesidad de estabilidad plasmática"
     ],
-    "renalAdjustment": "Sin ajuste renal si función renal normal.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
+    "renalAdjustment": "INVEGA oral de liberación prolongada (ficha FDA): ClCr 50–<80 mL/min: iniciar 3 mg 1 vez/día, máximo 6 mg/día; ClCr 10–<50: iniciar 3 mg en días alternos, máximo 3 mg 1 vez/día tras reevaluación; ClCr <10: uso no recomendado. No aplicar a LAI ni a otros productos.",
+    "hepaticAdjustment": "INVEGA oral de liberación prolongada (ficha FDA): Child-Pugh A/B sin ajuste; insuficiencia hepática grave no estudiada. No generalizar a palmitato inyectable.",
     "mechanism": "Metabolito activo de risperidona; antagonista D2 y 5HT2A, con riesgo relevante de hiperprolactinemia.",
     "onset": "Efecto inicial en días; respuesta antipsicótica plena generalmente en 2–6 semanas.",
     "halfLife": "Vida media VO aproximada: 23 horas; formulaciones LAI tienen duración mensual o trimestral.",
@@ -169,6 +182,7 @@
       "Alcohol y depresores del SNC"
     ],
     "alerts": [
+      "INVEGA comprimidos de liberación prolongada: ajuste según ClCr específico del producto, incluso limitación en insuficiencia grave; no convertir régimen oral a palmitato mensual/trimestral.",
       "Ajustar dosis por función renal.",
       "Monitorizar prolactina si hay síntomas clínicos.",
       "Monitorizar peso, glucemia, lípidos y presión arterial.",
@@ -176,13 +190,29 @@
       "Formulaciones LAI requieren protocolo específico de inicio y mantenimiento."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b8e5b26-b9e4-4704-921b-3c3c0d159916",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Paliperidone Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Paliperidona",
@@ -197,8 +227,8 @@
     "trevicta",
     "antipsicotico atipico"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

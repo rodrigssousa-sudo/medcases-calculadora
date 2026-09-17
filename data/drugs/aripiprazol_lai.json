@@ -10,8 +10,7 @@
     "category": "antipsicotico",
     "commercialNames": {
       "br": [
-        "Abilify Maintena",
-        "Aristada"
+        "Abilify Maintena"
       ],
       "ar": [
         "Abilify Maintena",
@@ -21,11 +20,11 @@
     "presentation": [
       "Frasco/seringa 300 mg",
       "Frasco/seringa 400 mg",
-      "Formulações de longa ação com diferentes intervalos conforme produto"
+      "Registro restrito a Abilify Maintena (aripiprazol); aripiprazol lauroxil/Aristada exige ficha separada."
     ],
     "dose": {
-      "adulto": "Dose usual: 400 mg IM 1x/mês; pode reduzir para 300 mg/mês se intolerância.",
-      "suplementacao": "Manter aripiprazol oral por 14 dias após a primeira aplicação, conforme formulação.",
+      "adulto": "Abilify Maintena (não Aristada): dose de manutenção habitual 400 mg IM mensal; considerar redução para 300 mg/mês se reação adversa, conforme bula FDA.",
+      "suplementacao": "Abilify Maintena (FDA): existem dois inícios distintos, de 1 dia ou de 14 dias; consultar o esquema integral e as interações da bula antes da aplicação. Não aplicar o início de Aristada.",
       "maxDose": "Dose máxima usual: 400 mg IM mensal para Abilify Maintena."
     },
     "indications": [
@@ -39,7 +38,7 @@
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Agonista parcial D2 e 5HT1A, antagonista 5HT2A, em formulação depot de liberação prolongada.",
-    "onset": "Não é indicado para controle imediato; requer tolerância oral prévia e cobertura oral inicial.",
+    "onset": "Não indicado para controle imediato. Estabelecer tolerância ao aripiprazol oral em pacientes sem exposição anterior; início de 1 ou 14 dias conforme Abilify Maintena FDA.",
     "halfLife": "Meia-vida aparente prolongada, permitindo administração mensal ou intervalos maiores conforme formulação.",
     "commonAdverseEffects": [
       "Dor no local da injeção",
@@ -71,6 +70,8 @@
       "Levodopa e agonistas dopaminérgicos"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "ABILIFY MAINTENA (bula EUA 2026): início de 1 dia exige duas injeções IM separadas de 400 mg e uma dose VO de 20 mg; início de 14 dias exige uma injeção IM de 400 mg com antipsicótico VO por 14 dias. Verificar tolerância, CYP e protocolo; nunca usar início de Aristada.",
       "Confirmar tolerância oral antes da primeira aplicação.",
       "Manter cobertura oral inicial conforme formulação.",
       "Monitorar acatisia, insônia e impulsividade.",
@@ -80,11 +81,26 @@
     "ref": [
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Aripiprazole LAI Prescribing Information",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee49f3b1-1650-47ff-9fb1-ea53fe0b92b6",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_MAINTENA_NOT_ARISTADA_ADULT_PEDIATRIC_INTERCHANGE_BLOCK",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Aripiprazol LAI",
@@ -92,8 +108,7 @@
     "category": "antipsicotico",
     "commercialNames": {
       "br": [
-        "Abilify Maintena",
-        "Aristada"
+        "Abilify Maintena"
       ],
       "ar": [
         "Abilify Maintena",
@@ -103,11 +118,11 @@
     "presentation": [
       "Frasco/jeringa 300 mg",
       "Frasco/jeringa 400 mg",
-      "Formulaciones de larga acción con diferentes intervalos según producto"
+      "Registro limitado a Abilify Maintena (aripiprazol); aripiprazol lauroxilo/Aristada requiere ficha separada."
     ],
     "dose": {
-      "adulto": "Dosis habitual: 400 mg IM 1 vez/mes; puede reducirse a 300 mg/mes si intolerancia.",
-      "suplementacao": "Mantener aripiprazol oral durante 14 días tras la primera aplicación, según formulación.",
+      "adulto": "Abilify Maintena (no Aristada): dosis habitual de mantenimiento 400 mg IM mensual; considerar reducción a 300 mg/mes ante reacción adversa, según ficha FDA.",
+      "suplementacao": "Abilify Maintena (FDA): existen dos inicios distintos, de 1 día o de 14 días; consultar el esquema completo y las interacciones de la ficha antes de administrar. No aplicar el inicio de Aristada.",
       "maxDose": "Dosis máxima habitual: 400 mg IM mensual para Abilify Maintena."
     },
     "indications": [
@@ -121,7 +136,7 @@
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
     "mechanism": "Agonista parcial D2 y 5HT1A, antagonista 5HT2A, en formulación depot de liberación prolongada.",
-    "onset": "No está indicado para control inmediato; requiere tolerancia oral previa y cobertura oral inicial.",
+    "onset": "No indicado para control inmediato. Establecer tolerancia al aripiprazol oral en pacientes sin exposición previa; inicio de 1 o 14 días según Abilify Maintena FDA.",
     "halfLife": "Vida media aparente prolongada, permitiendo administración mensual o intervalos mayores según formulación.",
     "commonAdverseEffects": [
       "Dolor en el sitio de inyección",
@@ -153,6 +168,8 @@
       "Levodopa y agonistas dopaminérgicos"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "ABILIFY MAINTENA (ficha EE. UU. 2026): inicio de 1 día requiere dos inyecciones IM separadas de 400 mg y una dosis oral de 20 mg; inicio de 14 días requiere una inyección IM de 400 mg con antipsicótico oral durante 14 días. Verificar tolerancia, CYP y protocolo; no usar inicio de Aristada.",
       "Confirmar tolerancia oral antes de la primera aplicación.",
       "Mantener cobertura oral inicial según formulación.",
       "Monitorizar acatisia, insomnio e impulsividad.",
@@ -162,11 +179,26 @@
     "ref": [
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Aripiprazole LAI Prescribing Information",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee49f3b1-1650-47ff-9fb1-ea53fe0b92b6",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_MAINTENA_NOT_ARISTADA_ADULT_PEDIATRIC_INTERCHANGE_BLOCK",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Aripiprazol LAI",
@@ -176,11 +208,10 @@
     "aripiprazol_lai",
     "aripiprazol lai",
     "abilify maintena",
-    "aristada",
     "antipsicotico atipico injetavel de longa acao"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

@@ -34,7 +34,7 @@
       "Psicose crônica com necessidade de LAI",
       "Transtorno esquizoafetivo em casos selecionados"
     ],
-    "renalAdjustment": "Sem ajuste renal habitual se função renal normal.",
+    "renalAdjustment": "ClCr informado ≥60 mL/min: confirmar tolerância oral e fatores individuais antes de iniciar CONSTA.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Antagonista D2 e 5HT2A em formulação depot de microesferas, com liberação prolongada.",
     "onset": "Liberação clínica relevante é retardada; por isso exige cobertura oral inicial por aproximadamente 3 semanas.",
@@ -69,6 +69,9 @@
       "Álcool e depressores do SNC"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "RISPERDAL CONSTA (microesferas): cobertura oral por 3 semanas após 1ª aplicação; disfunção renal/hepática requer titulação VO prévia. ClCr não informado deve aparecer como desconhecido, não como 100 mL/min. Não aplicar regras de outros LAI de risperidona.",
+      "RISPERDAL CONSTA (microesferas): tolerância oral prévia e cobertura oral por 3 semanas após início, conforme bula desse produto. Não transferir a regra para outros LAI de risperidona.",
       "Confirmar tolerância oral antes de iniciar LAI.",
       "Manter cobertura oral por aproximadamente 3 semanas após primeira aplicação.",
       "Aplicação IM profunda a cada 2 semanas.",
@@ -76,13 +79,29 @@
       "Registrar data de aplicação para evitar falhas no intervalo."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bb34ee82-d2c2-43b8-ba21-2825c0954691",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Risperidone LAI Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_BRAND_SPECIFIC_ORAL_OVERLAP",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Risperidona LAI",
@@ -114,7 +133,7 @@
       "Psicosis crónica con necesidad de LAI",
       "Trastorno esquizoafectivo en casos seleccionados"
     ],
-    "renalAdjustment": "Sin ajuste renal habitual si función renal normal.",
+    "renalAdjustment": "ClCr informado ≥60 mL/min: confirmar tolerancia oral y factores individuales antes de iniciar CONSTA.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
     "mechanism": "Antagonista D2 y 5HT2A en formulación depot de microesferas, con liberación prolongada.",
     "onset": "La liberación clínica relevante es retardada; por eso requiere cobertura oral inicial durante aproximadamente 3 semanas.",
@@ -149,6 +168,9 @@
       "Alcohol y depresores del SNC"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "RISPERDAL CONSTA (microesferas): cobertura oral 3 semanas después de la 1.ª dosis; daño renal/hepático requiere titulación oral previa. ClCr sin dato debe mostrarse desconocido, no como 100 mL/min. No aplicar pautas de otros LAI de risperidona.",
+      "RISPERDAL CONSTA (microesferas): tolerancia oral previa y cobertura oral durante 3 semanas después del inicio, según ficha de ese producto. No transferir regla a otros LAI de risperidona.",
       "Confirmar tolerancia oral antes de iniciar LAI.",
       "Mantener cobertura oral aproximadamente 3 semanas tras primera aplicación.",
       "Aplicación IM profunda cada 2 semanas.",
@@ -156,13 +178,29 @@
       "Registrar fecha de aplicación para evitar fallas en el intervalo."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bb34ee82-d2c2-43b8-ba21-2825c0954691",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Risperidone LAI Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_BRAND_SPECIFIC_ORAL_OVERLAP",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Risperidona LAI",
@@ -174,8 +212,8 @@
     "risperdal consta",
     "antipsicotico atipico injetavel de longa acao"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

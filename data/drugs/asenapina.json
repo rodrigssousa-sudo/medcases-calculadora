@@ -38,7 +38,7 @@
       "Psicose com preocupação de menor ganho ponderal que olanzapina"
     ],
     "renalAdjustment": "Sem ajuste renal habitual.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
+    "hepaticAdjustment": "SAPHRIS (bula FDA): Child-Pugh A ou B: sem ajuste de dose; Child-Pugh C: contraindicado devido ao aumento importante da exposição. Não extrapolar para outras formulações.",
     "mechanism": "Antagonista 5HT2A e D2, com ação em múltiplos receptores serotoninérgicos, dopaminérgicos, adrenérgicos e histamínicos.",
     "onset": "Melhora de mania/agitação pode ocorrer em dias; efeito antipsicótico pleno em 2–6 semanas.",
     "halfLife": "Vida média aproximada: 24 horas.",
@@ -72,6 +72,8 @@
       "Levodopa e agonistas dopaminérgicos: antagonismo"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "SAPHRIS sublingual: confirmar forma farmacêutica e técnica; comprimido não deve ser engolido e requer restrição de alimentos/bebidas após aplicação. Child-Pugh C não deve receber esquema adulto sem checar contraindicação da bula.",
       "Administrar por via sublingual; não engolir o comprimido inteiro.",
       "Não comer nem beber por 10 minutos após administração.",
       "Monitorar dormência oral e disgeusia.",
@@ -81,11 +83,26 @@
     "ref": [
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Asenapine Prescribing Information",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=5429f134-839f-4ffc-9944-55f51238def8",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Asenapina",
@@ -121,7 +138,7 @@
       "Psicosis con preocupación de menor aumento ponderal que olanzapina"
     ],
     "renalAdjustment": "Sin ajuste renal habitual.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
+    "hepaticAdjustment": "SAPHRIS (ficha FDA): Child-Pugh A o B: sin ajuste de dosis; Child-Pugh C: contraindicado por aumento importante de la exposición. No extrapolar a otras formulaciones.",
     "mechanism": "Antagonista 5HT2A y D2, con acción en múltiples receptores serotoninérgicos, dopaminérgicos, adrenérgicos e histamínicos.",
     "onset": "Mejoría de manía/agitación puede ocurrir en días; efecto antipsicótico pleno en 2–6 semanas.",
     "halfLife": "Vida media aproximada: 24 horas.",
@@ -155,6 +172,8 @@
       "Levodopa y agonistas dopaminérgicos: antagonismo"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "SAPHRIS sublingual: confirmar formulación y técnica; el comprimido no debe tragarse y requiere evitar alimentos/bebidas después. Child-Pugh C no debe recibir pauta adulta sin verificar contraindicación del prospecto.",
       "Administrar por vía sublingual; no tragar el comprimido entero.",
       "No comer ni beber por 10 minutos tras la administración.",
       "Monitorizar adormecimiento oral y disgeusia.",
@@ -164,11 +183,26 @@
     "ref": [
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Asenapine Prescribing Information",
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=5429f134-839f-4ffc-9944-55f51238def8",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Asenapina",
@@ -180,8 +214,8 @@
     "sycrest",
     "antipsicotico atipico"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

@@ -38,8 +38,8 @@
       "Psicose com preocupação metabólica",
       "Transtorno esquizoafetivo em casos selecionados"
     ],
-    "renalAdjustment": "Sem ajuste renal habitual.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
+    "renalAdjustment": "LATUDA oral (bula FDA): ClCr 30–<50 ou <30 mL/min: iniciar 20 mg/dia; máximo 80 mg/dia. Conferir indicação, idade e interações CYP3A4 antes de selecionar dose.",
+    "hepaticAdjustment": "LATUDA oral (bula FDA): Child-Pugh 7–9 iniciar 20 mg/dia, máximo 80 mg/dia; Child-Pugh 10–15 iniciar 20 mg/dia, máximo 40 mg/dia. Não inferir gravidade a partir do booleano hepatopatia.",
     "mechanism": "Antagonista D2 e 5HT2A, antagonista 5HT7 e agonista parcial 5HT1A; perfil metabólico relativamente favorável.",
     "onset": "Melhora pode surgir em 1–2 semanas; resposta plena geralmente em 4–6 semanas.",
     "halfLife": "Vida média aproximada: 18 horas.",
@@ -74,6 +74,7 @@
       "Fármacos que prolongam QT"
     ],
     "alerts": [
+      "LATUDA VO: administrar com alimento de pelo menos 350 kcal. Dose máxima depende de indicação, idade, função renal/hepática e interações CYP3A4; sem cálculo universal.",
       "Administrar sempre com alimento para absorção adequada.",
       "Evitar grapefruit/toranja.",
       "Contraindicada com inibidores ou indutores fortes de CYP3A4.",
@@ -81,13 +82,29 @@
       "Perfil metabólico mais favorável, mas ainda requer controle de peso, glicemia e lipídios."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=afad3051-9df2-4c54-9684-e8262a133af8",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Lurasidone Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Lurasidona",
@@ -123,8 +140,8 @@
       "Psicosis con preocupación metabólica",
       "Trastorno esquizoafectivo en casos seleccionados"
     ],
-    "renalAdjustment": "Sin ajuste renal habitual.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
+    "renalAdjustment": "LATUDA oral (ficha FDA): ClCr 30–<50 o <30 mL/min: iniciar 20 mg/día; máximo 80 mg/día. Verificar indicación, edad e interacciones CYP3A4 antes de seleccionar dosis.",
+    "hepaticAdjustment": "LATUDA oral (ficha FDA): Child-Pugh 7–9 iniciar 20 mg/día, máximo 80 mg/día; Child-Pugh 10–15 iniciar 20 mg/día, máximo 40 mg/día. No inferir gravedad de un booleano hepatopatía.",
     "mechanism": "Antagonista D2 y 5HT2A, antagonista 5HT7 y agonista parcial 5HT1A; perfil metabólico relativamente favorable.",
     "onset": "La mejoría puede aparecer en 1–2 semanas; respuesta plena generalmente en 4–6 semanas.",
     "halfLife": "Vida media aproximada: 18 horas.",
@@ -159,6 +176,7 @@
       "Fármacos que prolongan QT"
     ],
     "alerts": [
+      "LATUDA oral: administrar con comida de al menos 350 kcal. Dosis máxima depende de indicación, edad, función renal/hepática e interacciones CYP3A4; sin cálculo universal.",
       "Administrar siempre con comida para absorción adecuada.",
       "Evitar pomelo/toronja.",
       "Contraindicada con inhibidores o inductores fuertes de CYP3A4.",
@@ -166,13 +184,29 @@
       "Perfil metabólico más favorable, pero aún requiere control de peso, glucemia y lípidos."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=afad3051-9df2-4c54-9684-e8262a133af8",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Lurasidone Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Lurasidona",
@@ -183,8 +217,8 @@
     "latuda",
     "antipsicotico atipico"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

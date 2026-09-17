@@ -66814,128 +66814,60 @@ html body #hub-card-farmacos.mc-overlay-projected-card
   font-weight:700;
 }
 </style>
-<script id="mc-g01-r31-pediatric-ui-preview">
-/* MEDCASES_G01_R31_PEDIATRIC_UI_PREVIEW_V1
- * One input/context owner only. The existing R8/R7 pipeline owns ALL visible results.
- * No clinical doses in this script: only existing R27 drug.calculate() may supply them.
- * No client-side tier decision can replace server authorization.
+<script id="mc-g01-r32-pediatric-clinical-review">
+
+/* MEDCASES_G01_R32_PEDIATRIC_CLINICAL_REVIEW_GATEWAY_V1
+ * Normal users remain fail-closed. Review output is requested only with ?clinicalReview=1,
+ * Premium MCC1 bridge and explicit clinical context. Server remains the calculation owner.
  */
 (() => {
   'use strict';
-  if (window.__MC_G01_R28_PEDIATRIC_UI__) return;
-  const BUILD='G01_R31_PEDIATRIC_UI_PREVIEW_V1';
+  const BUILD='MEDCASES_G01_R32_PEDIATRIC_CLINICAL_REVIEW_GATEWAY_V1';
   const PAGE='mc-drug-detail-page-v21';
   const allowed=new Set(['risperidona','aripiprazol']);
   const norm=v=>String(v??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
   const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   const lang=page=>String(page?.dataset?.mcLang||document.documentElement?.lang||'pt').toLowerCase().startsWith('es')?'es':'pt';
-  const identify=page=>{
-    if (!page||page.id!==PAGE) return '';
-    const raw=norm(page.dataset?.mcDrugId);
-    const visible=norm(page.querySelector?.('.mcd-name')?.textContent);
-    // An explicit mismatched identity is NEVER silently resolved to another drug.
-    if(raw && visible && raw!==visible) return '';
-    const id=raw||visible;
-    return allowed.has(id)?id:'';
-  };
+  const reviewEnabled=()=>new URLSearchParams(location.search||'').get('clinicalReview')==='1';
+  const identify=page=>{if(!page||page.id!==PAGE)return'';const raw=norm(page.dataset?.mcDrugId);const visible=norm(page.querySelector?.('.mcd-name')?.textContent);if(raw&&visible&&raw!==visible)return'';const id=raw||visible;return allowed.has(id)?id:''};
   const targets={
-    risperidona:{product:'RISPERDAL',formulation:'oral_solution_1mg_ml',source:'https://boletin.anmat.gob.ar/mayo_2019/Dispo_MSYDS_4586-19.pdf'},
-    aripiprazol:{product:'LEMIDAL',formulation:'oral_tablet',source:'https://boletin.anmat.gob.ar/Marzo_2024/Dispo_2758-24.pdf'}
+    risperidona:{product:'RISPERDAL',formulation:'oral_solution_1mg_ml'},
+    aripiprazol:{product:'LEMIDAL',formulation:'oral_tablet'}
   };
   const fields=['indicacao','jurisdicao','produto','formulacao','renalStatus','hepaticStatus','diaTratamento'];
   function option(select,value,pt,es){const o=document.createElement('option');o.value=value;o.textContent=lang(select.closest('#'+PAGE))==='es'?es:pt;select.appendChild(o)}
-  const clear=page=>{
-    const r=page.querySelector('.mcd-result');
-    if(!r)return;
-    const out=r.querySelector('.mcd-result-text');
-    const owner=r.querySelector('.mcd-r7-result-owner');
-    if(out)out.replaceChildren();
-    if(owner)owner.replaceChildren();
-    page.dataset.mcCalculationStatus='awaiting-explicit-click';
-    page.dataset.mcGlobalDoseR8='r28-needs-explicit-click';
-  };
+  const clear=page=>{const r=page.querySelector('.mcd-result');if(!r)return;const out=r.querySelector('.mcd-result-text');const owner=r.querySelector('.mcd-r7-result-owner');if(out)out.replaceChildren();if(owner)owner.replaceChildren();page.dataset.mcCalculationStatus='awaiting-explicit-click';page.dataset.mcGlobalDoseR8='r32-needs-explicit-click'};
   const mount=page=>{
-    const patient=page.querySelector('.mcd-patient');
-    if(!patient)return null;
-    let panel=patient.querySelector('#mc-r28-pediatric-context');
-    if(panel)return panel;
-    panel=document.createElement('section');panel.id='mc-r28-pediatric-context';panel.className='mc-r28-context';panel.hidden=true;
+    const patient=page.querySelector('.mcd-patient');if(!patient)return null;
+    let panel=patient.querySelector('#mc-r28-pediatric-context');if(panel){panel.dataset.r32='1';return panel;}
+    panel=document.createElement('section');panel.id='mc-r28-pediatric-context';panel.className='mc-r28-context';panel.hidden=true;panel.dataset.r32='1';
     const heading=document.createElement('h3');heading.className='mc-r28-heading';panel.appendChild(heading);
-    const labels={
-      indicacao:['Indicação','Indicación'],jurisdicao:['País da bula','País del prospecto'],
-      produto:['Produto confirmado','Producto confirmado'],formulacao:['Formulação confirmada','Formulación confirmada'],
-      renalStatus:['Função renal verificada','Función renal verificada'],hepaticStatus:['Função hepática verificada','Función hepática verificada'],
-      diaTratamento:['Dia do tratamento','Día del tratamiento']
-    };
-    for(const key of fields){
-      const label=document.createElement('label');label.className='mc-r28-entry';label.dataset.r28Field=key;
-      const text=document.createElement('span');text.dataset.r28Label=key;label.appendChild(text);
-      const control=document.createElement(key==='diaTratamento'?'input':'select');control.dataset.mcR28=key;control.setAttribute('aria-label',labels[key][0]);
-      if(key==='diaTratamento'){control.type='number';control.min='1';control.step='1';control.placeholder='—'}
-      else {
-        option(control,'','Selecione','Seleccione');
-        if(key==='indicacao')option(control,'autism_irritability','Irritabilidade associada ao autismo','Irritabilidad asociada al autismo');
-        if(key==='jurisdicao')option(control,'AR','Argentina — bula ANMAT','Argentina — prospecto ANMAT');
-        if(key==='produto'){option(control,'RISPERDAL','RISPERDAL — solução','RISPERDAL — solución');option(control,'LEMIDAL','LEMIDAL — comprimido','LEMIDAL — comprimido')}
-        if(key==='formulacao'){option(control,'oral_solution_1mg_ml','Solução oral 1 mg/mL','Solución oral 1 mg/mL');option(control,'oral_tablet','Comprimido oral','Comprimido oral')}
-        if(key==='renalStatus'||key==='hepaticStatus'){option(control,'normal','Normal — verificado','Normal — verificado');option(control,'impaired','Alterada — bloquear cálculo','Alterada — bloquear cálculo');option(control,'unknown','Não verificada — bloquear','No verificada — bloquear')}
-      }
-      label.appendChild(control);panel.appendChild(label);
-    }
-    const checkLabel=document.createElement('label');checkLabel.className='mc-r28-consent';
-    const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.dataset.mcR28='interactionsReviewed';
-    const checkText=document.createElement('span');checkText.dataset.r28CheckLabel='1';checkLabel.append(checkbox,checkText);panel.appendChild(checkLabel);
+    const labels={indicacao:['Indicação','Indicación'],jurisdicao:['País da bula','País del prospecto'],produto:['Produto confirmado','Producto confirmado'],formulacao:['Formulação confirmada','Formulación confirmada'],renalStatus:['Função renal verificada','Función renal verificada'],hepaticStatus:['Função hepática verificada','Función hepática verificada'],diaTratamento:['Dia do tratamento','Día del tratamiento']};
+    for(const key of fields){const label=document.createElement('label');label.className='mc-r28-entry';label.dataset.r28Field=key;const text=document.createElement('span');text.dataset.r28Label=key;label.appendChild(text);const control=document.createElement(key==='diaTratamento'?'input':'select');control.dataset.mcR28=key;control.setAttribute('aria-label',labels[key][0]);if(key==='diaTratamento'){control.type='number';control.min='1';control.step='1';control.placeholder='—'}else{option(control,'','Selecione','Seleccione');if(key==='indicacao')option(control,'autism_irritability','Irritabilidade associada ao autismo','Irritabilidad asociada al autismo');if(key==='jurisdicao')option(control,'AR','Argentina — bula ANMAT','Argentina — prospecto ANMAT');if(key==='produto'){option(control,'RISPERDAL','RISPERDAL — solução','RISPERDAL — solución');option(control,'LEMIDAL','LEMIDAL — comprimido','LEMIDAL — comprimido')}if(key==='formulacao'){option(control,'oral_solution_1mg_ml','Solução oral 1 mg/mL','Solución oral 1 mg/mL');option(control,'oral_tablet','Comprimido oral','Comprimido oral')}if(key==='renalStatus'||key==='hepaticStatus'){option(control,'normal','Normal — verificado','Normal — verificado');option(control,'impaired','Alterada — bloquear cálculo','Alterada — bloquear cálculo');option(control,'unknown','Não verificada — bloquear','No verificada — bloquear')}}label.appendChild(control);panel.appendChild(label)}
+    const checkLabel=document.createElement('label');checkLabel.className='mc-r28-consent';const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.dataset.mcR28='interactionsReviewed';const checkText=document.createElement('span');checkText.dataset.r28CheckLabel='1';checkLabel.append(checkbox,checkText);panel.appendChild(checkLabel);
     const note=document.createElement('p');note.className='mc-r28-note';note.dataset.r28Note='1';panel.appendChild(note);
-    const btn=patient.querySelector('.mcd-calc-action');if(!btn)return null;
-    patient.insertBefore(panel,btn);
-    panel.addEventListener('input',()=>clear(page),true);
-    panel.addEventListener('change',()=>clear(page),true);
-    return panel;
+    const btn=patient.querySelector('.mcd-calc-action');if(!btn)return null;patient.insertBefore(panel,btn);panel.addEventListener('input',()=>clear(page),true);panel.addEventListener('change',()=>clear(page),true);return panel;
   };
   const val=(page,key)=>page.querySelector('#mc-r28-pediatric-context [data-mc-r28="'+key+'"]')?.value??'';
-  const sync=()=>{
-    const page=document.getElementById(PAGE);if(!page)return;
-    const panel=mount(page);if(!panel)return;
-    const id=identify(page),ageRaw=page.querySelector('.mcd-patient .mcd-field:nth-child(1) input')?.value;
-    const age=ageRaw===''?NaN:Number(ageRaw);
-    const show=page.dataset.open==='true'&&!!id&&Number.isFinite(age)&&age<18;
-    const changed=panel.dataset.currentDrug!==id;
-    if(changed){
-      panel.dataset.currentDrug=id;
-      panel.querySelectorAll('select,input').forEach(el=>{if(el.type==='checkbox')el.checked=false;else el.value='';});
-      clear(page);
-    }
-    panel.hidden=!show;
-    if(!show)return;
-    const l=lang(page),es=l==='es';
-    const label={indicacao:['Indicação','Indicación'],jurisdicao:['País da bula','País del prospecto'],produto:['Produto confirmado','Producto confirmado'],formulacao:['Formulação confirmada','Formulación confirmada'],renalStatus:['Função renal verificada','Función renal verificada'],hepaticStatus:['Função hepática verificada','Función hepática verificada'],diaTratamento:['Dia do tratamento','Día del tratamiento']};
-    panel.querySelector('.mc-r28-heading').textContent=es?'Cálculo pediátrico — confirmar contexto':'Cálculo pediátrico — confirmar contexto';
-    for(const key of fields){const el=panel.querySelector('[data-r28-label="'+key+'"]');el.textContent=label[key][es?1:0];}
-    panel.querySelector('[data-r28-check-label]').textContent=es?'Confirmo que revisé las interacciones para este paciente.':'Confirmo que revisei as interações deste paciente.';
-    panel.querySelector('[data-r28-note]').textContent=es?'Sin valores preseleccionados. Vista previa sin cálculo; las dosis quedan bloqueadas hasta validar el motor autenticado y la documentación clínica.':'Sem opções pré-selecionadas. Prévia sem cálculo; doses bloqueadas até validar o motor autenticado e a documentação clínica.';
-    for(const key of ['produto','formulacao']){
-      const select=panel.querySelector('[data-mc-r28="'+key+'"]');
-      [...select.options].forEach(op=>{if(!op.value)return;op.hidden=op.value!==targets[id][key==='produto'?'product':'formulation'];});
-      if(select.value && select.value!==targets[id][key==='produto'?'product':'formulation'])select.value='';
-    }
+  const sync=()=>{const page=document.getElementById(PAGE);if(!page)return;const panel=mount(page);if(!panel)return;const id=identify(page),ageRaw=page.querySelector('.mcd-patient .mcd-field:nth-child(1) input')?.value;const age=ageRaw===''?NaN:Number(ageRaw);const show=page.dataset.open==='true'&&!!id&&Number.isFinite(age)&&age<18;const changed=panel.dataset.currentDrug!==id;if(changed){panel.dataset.currentDrug=id;panel.querySelectorAll('select,input').forEach(el=>{if(el.type==='checkbox')el.checked=false;else el.value='';});clear(page)}panel.hidden=!show;if(!show)return;const es=lang(page)==='es';const label={indicacao:['Indicação','Indicación'],jurisdicao:['País da bula','País del prospecto'],produto:['Produto confirmado','Producto confirmado'],formulacao:['Formulação confirmada','Formulación confirmada'],renalStatus:['Função renal verificada','Función renal verificada'],hepaticStatus:['Função hepática verificada','Función hepática verificada'],diaTratamento:['Dia do tratamento','Día del tratamiento']};panel.querySelector('.mc-r28-heading').textContent=es?'REVISIÓN CLÍNICA — pediatría':'REVISÃO CLÍNICA — pediatria';for(const key of fields)panel.querySelector('[data-r28-label="'+key+'"]').textContent=label[key][es?1:0];panel.querySelector('[data-r28-check-label]').textContent=es?'Confirmo que revisé las interacciones para este paciente.':'Confirmo que revisei as interações deste paciente.';panel.querySelector('[data-r28-note]').textContent=reviewEnabled()?(es?'Modo de revisión médica. Las dosis mostradas NO están homologadas clínicamente y deben ser confirmadas por el médico revisor.':'Modo de revisão médica. As doses exibidas NÃO estão homologadas clinicamente e devem ser confirmadas pelo médico revisor.'):(es?'Cálculo pediátrico bloqueado. Para revisión interna use el modo clinicalReview.':'Cálculo pediátrico bloqueado. Para revisão interna use o modo clinicalReview.');for(const key of ['produto','formulacao']){const select=panel.querySelector('[data-mc-r28="'+key+'"]');[...select.options].forEach(op=>{if(!op.value)return;op.hidden=op.value!==targets[id][key==='produto'?'product':'formulation'];});if(select.value&&select.value!==targets[id][key==='produto'?'product':'formulation'])select.value='';}};
+  const blocked=(msg,status='BLOCKED')=>({status,html:`<div class="mcd-r8-ref" role="status">${esc(msg)}</div>`});
+  const evaluate=async(p,data,l,age,weight)=>{
+    const id=identify(p.page);if(!id)return null;const es=l==='es';
+    if(!reviewEnabled())return blocked(es?'Cálculo pediátrico no liberado para usuarios. Modo de revisión clínica desactivado.':'Cálculo pediátrico não liberado para usuários. Modo de revisão clínica desativado.','BLOCKED_REVIEW_MODE');
+    const bridge=window.__medcasesMcc1Bridge;
+    if(!bridge||String(bridge.tier||'').toLowerCase()!=='premium'||typeof bridge.fetch!=='function')return blocked(es?'Sesión Premium autenticada requerida.':'Sessão Premium autenticada obrigatória.','BLOCKED_ACCESS');
+    const context=Object.fromEntries(fields.map(k=>[k,val(p.page,k)]));const checkbox=p.page.querySelector('#mc-r28-pediatric-context [data-mc-r28="interactionsReviewed"]');
+    const payload={clinicalReview:true,drugId:id,ageYears:age,weightKg:weight,indication:context.indicacao,jurisdiction:context.jurisdicao,product:context.produto,formulation:context.formulacao,renalStatus:context.renalStatus,hepaticStatus:context.hepaticStatus,interactionsReviewed:checkbox?.checked===true,dayOfTreatment:context.diaTratamento===''?null:Number(context.diaTratamento)};
+    let response;try{response=await bridge.fetch('/api/premium/dose-by-weight',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})}catch(_){return blocked(es?'Gateway de revisión no disponible.':'Gateway de revisão indisponível.','BLOCKED_GATEWAY')}
+    let body={};try{body=await response.json()}catch(_){return blocked(es?'Respuesta inválida del gateway.':'Resposta inválida do gateway.','BLOCKED_GATEWAY')}
+    if(!response.ok||!body.ok){const msg=body.message||body.error||(es?'Cálculo bloqueado por seguridad.':'Cálculo bloqueado por segurança.');return blocked((es?'REVISIÓN CLÍNICA — ':'REVISÃO CLÍNICA — ')+msg,body.status||body.error||'BLOCKED_SERVER')}
+    const d=body.dose||{};if(body.reviewOnly!==true||body.clinicalSignoff!==false||id!=='risperidona'||!Number.isFinite(d.mgPerDay)||!Number.isFinite(d.mlPerDay))return blocked(es?'Contrato de revisión inválido; bloqueado.':'Contrato de revisão inválido; bloqueado.','BLOCKED_CONTRACT');
+    const fmt=v=>Number(v).toLocaleString(es?'es-AR':'pt-BR',{maximumFractionDigits:2});
+    const html=`<div class="mcd-r8-meta"><strong>${es?'REVISIÓN CLÍNICA — NO HOMOLOGADA':'REVISÃO CLÍNICA — NÃO HOMOLOGADA'}</strong></div>`+`<div class="mcd-r8-dose">${es?'Dosis inicial para revisión':'Dose inicial para revisão'}: <strong>${esc(fmt(d.mgPerDay))} mg/dia = ${esc(fmt(d.mlPerDay))} mL/dia</strong></div>`+`<div class="mcd-r8-ref">${es?'Solo días 1–4. Sin titulación/mantenimiento automático. Confirmación médica obligatoria antes de cualquier uso clínico.':'Somente dias 1–4. Sem titulação/manutenção automática. Confirmação médica obrigatória antes de qualquer uso clínico.'}</div>`;
+    return {status:'REVIEW_ONLY_NOT_SIGNED_OFF',html};
   };
-  const blocked=(l,msg,status='BLOCKED')=>({status,html:`<div class="mcd-r8-ref" role="status">${esc(msg)}</div>`});
-  // No dose calculation until independently signed off and served by authenticated gateway.
-  const evaluate=(p,data,l,age,weight)=>{
-    if(!identify(p.page))return null;
-    const es=l==='es';
-    const premium=String(window.__medcasesMcc1Bridge?.tier||'').toLowerCase()==='premium';
-    if(!premium)return blocked(l,es?'Acceso Premium no verificado.':'Acesso Premium não verificado.','BLOCKED_ACCESS');
-    return blocked(l,es?'Formulario de prueba: cálculo pediátrico deshabilitado hasta la validación clínica independiente y motor autenticado. No se muestra ninguna dosis.':'Formulário de teste: cálculo pediátrico desabilitado até revisão clínica independente e motor autenticado. Nenhuma dose é exibida.','BLOCKED_CLINICAL');
-  };
-  const api=Object.freeze({build:BUILD,target:page=>!!identify(page),identify,evaluate,sync,audit:()=>{const p=document.getElementById(PAGE);return {build:BUILD,id:identify(p),visible:!!p?.querySelector('#mc-r28-pediatric-context')&&!p.querySelector('#mc-r28-pediatric-context').hidden,open:p?.dataset.open==='true'}}});
-  window.__MC_G01_R28_PEDIATRIC_UI__=api;
-  function ready(){sync();const root=document.documentElement||document.body;if(!root||typeof MutationObserver!=='function')return;
-    const observer=new MutationObserver(ms=>{if(ms.some(m=>m.type==='childList'||['data-mc-drug-id','data-open','data-mc-lang'].includes(m.attributeName)))sync()});
-    observer.observe(root,{childList:true,subtree:true,attributes:true,attributeFilter:['data-mc-drug-id','data-open','data-mc-lang']});
-    document.addEventListener('input',e=>{if(e.target?.closest?.('#'+PAGE+' .mcd-patient')){clear(document.getElementById(PAGE));sync()}},true);
-    document.addEventListener('change',e=>{if(e.target?.closest?.('#'+PAGE+' .mcd-patient')){clear(document.getElementById(PAGE));sync()}},true);
-  }
+  window.__MC_G01_R28_PEDIATRIC_UI__=Object.freeze({build:BUILD,target:page=>!!identify(page),identify,evaluate,sync,audit:()=>{const p=document.getElementById(PAGE);return{build:BUILD,reviewEnabled:reviewEnabled(),id:identify(p),visible:!!p?.querySelector('#mc-r28-pediatric-context')&&!p.querySelector('#mc-r28-pediatric-context').hidden}}});
+  function ready(){sync();const root=document.documentElement||document.body;if(!root||typeof MutationObserver!=='function')return;const observer=new MutationObserver(ms=>{if(ms.some(m=>m.type==='childList'||['data-mc-drug-id','data-open','data-mc-lang'].includes(m.attributeName)))sync()});observer.observe(root,{childList:true,subtree:true,attributes:true,attributeFilter:['data-mc-drug-id','data-open','data-mc-lang']});document.addEventListener('input',e=>{if(e.target?.closest?.('#'+PAGE+' .mcd-patient')){clear(document.getElementById(PAGE));sync()}},true);document.addEventListener('change',e=>{if(e.target?.closest?.('#'+PAGE+' .mcd-patient')){clear(document.getElementById(PAGE));sync()}},true)}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
 })();
 
@@ -67396,7 +67328,7 @@ const apply=async(reason)=>{
     const previousId=r28.identify(p.page);
     const r31Weight=number(p.weight?.value);
     if(previousId!==r28.identify(p.page)||number(p.age?.value)!==r31Age||number(p.weight?.value)!==r31Weight)return false;
-    const preview=r28.evaluate(p,null,lang(p.page),r31Age,r31Weight);
+    const preview=await r28.evaluate(p,null,lang(p.page),r31Age,r31Weight);
     if(!preview)return false;
     publishVisible(p,preview.html);
     p.page.dataset.mcGlobalDoseR8='r31-'+preview.status;

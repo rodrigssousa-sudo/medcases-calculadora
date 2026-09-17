@@ -47,7 +47,7 @@
       "Agitação psicótica com necessidade de perfil menos extrapiramidal"
     ],
     "renalAdjustment": "Sem ajuste renal habitual.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
+    "hepaticAdjustment": "QUETIAPINA comprimidos de liberação imediata (bula FDA): em insuficiência hepática, iniciar 25 mg VO/dia e titular em incrementos de 25–50 mg/dia conforme resposta/tolerabilidade. Não extrapolar a XR.",
     "mechanism": "Antagonista 5HT2A e D2, com forte bloqueio H1 e alfa-1; metabólito norquetiapina contribui para efeito antidepressivo.",
     "onset": "Sedação pode ocorrer no primeiro dia; efeito antipsicótico/estabilizador geralmente em 1–6 semanas conforme indicação.",
     "halfLife": "Vida média aproximada: quetiapina 6 horas; norquetiapina cerca de 12 horas.",
@@ -83,6 +83,7 @@
       "Levodopa e agonistas dopaminérgicos: antagonismo"
     ],
     "alerts": [
+      "Comprimidos de liberação imediata e SEROQUEL XR têm bulas e esquemas distintos. Não reutilizar automaticamente titulação IR em XR ou tratar uso para insônia off-label como indicação aprovada.",
       "Risco importante de sedação e hipotensão ortostática no início.",
       "Monitorar peso, glicemia/HbA1c, lipídios e pressão arterial.",
       "Não usar apenas como hipnótico de rotina sem avaliar risco-benefício.",
@@ -90,13 +91,30 @@
       "Cuidado com interações por CYP3A4."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ffe52b98-9872-48c1-90fd-8fcd37c3432f",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=473a3ac4-67f4-4782-baa9-7f9bdd8761f4",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Quetiapine Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Quetiapina",
@@ -141,7 +159,7 @@
       "Agitación psicótica con necesidad de perfil menos extrapiramidal"
     ],
     "renalAdjustment": "Sin ajuste renal habitual.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
+    "hepaticAdjustment": "QUETIAPINA comprimidos de liberación inmediata (ficha FDA): en insuficiencia hepática, iniciar 25 mg VO/día y titular en incrementos de 25–50 mg/día según respuesta/tolerancia. No extrapolar a XR.",
     "mechanism": "Antagonista 5HT2A y D2, con fuerte bloqueo H1 y alfa-1; metabolito norquetiapina contribuye al efecto antidepresivo.",
     "onset": "Sedación puede ocurrir el primer día; efecto antipsicótico/estabilizador generalmente en 1–6 semanas según indicación.",
     "halfLife": "Vida media aproximada: quetiapina 6 horas; norquetiapina cerca de 12 horas.",
@@ -177,6 +195,7 @@
       "Levodopa y agonistas dopaminérgicos: antagonismo"
     ],
     "alerts": [
+      "Comprimidos de liberación inmediata y SEROQUEL XR tienen prospectos y esquemas distintos. No reutilizar titulación IR en XR ni considerar el uso para insomnio off-label una indicación aprobada.",
       "Riesgo importante de sedación e hipotensión ortostática al inicio.",
       "Monitorizar peso, glucemia/HbA1c, lípidos y presión arterial.",
       "No usar solo como hipnótico de rutina sin evaluar riesgo-beneficio.",
@@ -184,13 +203,30 @@
       "Cuidado con interacciones por CYP3A4."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ffe52b98-9872-48c1-90fd-8fcd37c3432f",
+      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=473a3ac4-67f4-4782-baa9-7f9bdd8761f4",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Quetiapine Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Quetiapina",
@@ -207,8 +243,8 @@
     "quetiapina richmond",
     "antipsicotico atipico"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js",
@@ -245,8 +281,8 @@
         "keywords": [
           "quetiapina"
         ],
-        "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-        "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+        "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+        "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
         "source": "medcases-calculadora",
         "schema": "legacy-v1",
         "sourceModule": "sedacao.js"

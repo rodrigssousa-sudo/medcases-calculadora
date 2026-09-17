@@ -35,7 +35,7 @@
       "Psicose crônica com necessidade de estabilidade plasmática prolongada",
       "Redução de internações por abandono terapêutico"
     ],
-    "renalAdjustment": "Sem ajuste renal se função renal normal.",
+    "renalAdjustment": "ClCr ≥80 mL/min: confirmar ≥4 meses de manutenção mensal e últimas duas doses iguais antes de converter; não converter unidades entre marcas automaticamente.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Metabólito ativo da risperidona; antagonista D2 e 5HT2A com liberação prolongada por aproximadamente 3 meses.",
     "onset": "Não indicada para início de tratamento; deve ser usada apenas após estabilização com formulação mensal.",
@@ -71,6 +71,9 @@
       "Álcool e depressores do SNC"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "INVEGA TRINZA (referência FDA): somente após pelo menos 4 meses com SUSTENNA; recomenda-se que as duas últimas doses mensais sejam iguais. Se ClCr <50 não recomendado; ClCr ausente não equivale a normal. Trevicta pode ter unidades diferentes: não converter automaticamente.",
+      "Trevicta trimestral: apenas manutenção após estabilização com paliperidona mensal, segundo bula EMA. Não calcular equivalência entre doses rotuladas em mg de base e mg de palmitato nem fazer troca automática de produtos.",
       "Não usar para início de tratamento.",
       "Usar apenas após estabilização com paliperidona mensal.",
       "Ajustar decisão pela função renal.",
@@ -78,13 +81,30 @@
       "Eventos adversos podem persistir por meses."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c39e65d7-fa44-4e4c-8b12-a654d3ed0eae",
+      "https://www.ema.europa.eu/en/medicines/human/EPAR/trevicta",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Paliperidone Palmitate 3-month Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_3MONTH_NEEDS_PRIOR_STABILIZATION",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Paliperidona trimestral",
@@ -117,7 +137,7 @@
       "Psicosis crónica con necesidad de estabilidad plasmática prolongada",
       "Reducción de internaciones por abandono terapéutico"
     ],
-    "renalAdjustment": "Sin ajuste renal si función renal normal.",
+    "renalAdjustment": "ClCr ≥80 mL/min: confirmar ≥4 meses de mantenimiento mensual y últimas dos dosis iguales antes de convertir; no convertir unidades entre marcas automáticamente.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
     "mechanism": "Metabolito activo de risperidona; antagonista D2 y 5HT2A con liberación prolongada por aproximadamente 3 meses.",
     "onset": "No indicada para inicio de tratamiento; debe usarse solo tras estabilización con formulación mensual.",
@@ -153,6 +173,9 @@
       "Alcohol y depresores del SNC"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "INVEGA TRINZA (referencia FDA): solo tras al menos 4 meses con SUSTENNA; se recomienda que las últimas dos dosis mensuales sean iguales. Si ClCr <50 no recomendado; ClCr ausente no equivale a normal. Trevicta puede usar otras unidades: no convertir automáticamente.",
+      "Trevicta trimestral: solo mantenimiento tras estabilización con paliperidona mensual según ficha EMA. No calcular equivalencia entre dosis rotuladas en mg de base y mg de palmitato ni cambiar automáticamente productos.",
       "No usar para inicio de tratamiento.",
       "Usar solo tras estabilización con paliperidona mensual.",
       "Ajustar decisión por función renal.",
@@ -160,13 +183,30 @@
       "Los eventos adversos pueden persistir por meses."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c39e65d7-fa44-4e4c-8b12-a654d3ed0eae",
+      "https://www.ema.europa.eu/en/medicines/human/EPAR/trevicta",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Paliperidone Palmitate 3-month Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_3MONTH_NEEDS_PRIOR_STABILIZATION",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Paliperidona trimestral",
@@ -179,8 +219,8 @@
     "trevicta",
     "antipsicotico atipico injetavel de longa acao trimestral"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

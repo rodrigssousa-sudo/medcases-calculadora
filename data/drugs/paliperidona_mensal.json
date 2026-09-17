@@ -36,7 +36,7 @@
       "Prevenção de recaídas psicóticas",
       "Ponte para paliperidona trimestral após estabilização"
     ],
-    "renalAdjustment": "Sem ajuste renal se função renal normal.",
+    "renalAdjustment": "ClCr ≥80 mL/min: seguir esquema de bula específico da indicação/produto; checar função renal antes da primeira dose.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Palmitato de paliperidona com liberação prolongada mensal; antagonista D2 e 5HT2A.",
     "onset": "Esquema de carga permite início sem suplementação oral em muitos protocolos.",
@@ -71,6 +71,9 @@
       "Álcool e depressores do SNC"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "INVEGA SUSTENNA: sem ClCr válido não presumir função normal. Bula FDA: ClCr 50–<80 usa início renal específico 156 mg dia 1/117 mg dia 8 e manutenção inicial 78 mg mensal (máx. 156 mg/mês); ClCr <50: não recomendado. Não copiar números para Xeplion sem verificar unidades.",
+      "INVEGA SUSTENNA é palmitato IM mensal: esquema de início, ajuste renal e unidades dependem da bula e do mercado. Xeplion EMA apresenta unidades de rotulagem distintas. Não intercambiar números diretamente.",
       "Confirmar tolerância prévia à risperidona ou paliperidona antes do LAI.",
       "Ajustar pela função renal.",
       "Monitorar prolactina se sintomas clínicos.",
@@ -78,13 +81,30 @@
       "Registrar data e local da aplicação para evitar erro de intervalo."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1af14e42-951d-414d-8564-5d5fce138554",
+      "https://www.ema.europa.eu/en/medicines/human/EPAR/xeplion",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Paliperidone Palmitate Monthly Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_MONTHLY_INITIATION_RENAL_GATE",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Paliperidona mensual",
@@ -118,7 +138,7 @@
       "Prevención de recaídas psicóticas",
       "Puente hacia paliperidona trimestral tras estabilización"
     ],
-    "renalAdjustment": "Sin ajuste renal si función renal normal.",
+    "renalAdjustment": "ClCr ≥80 mL/min: seguir pauta de ficha específica según indicación/producto; revisar función renal antes de primera dosis.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
     "mechanism": "Palmitato de paliperidona con liberación prolongada mensual; antagonista D2 y 5HT2A.",
     "onset": "El esquema de carga permite inicio sin suplementación oral en muchos protocolos.",
@@ -153,6 +173,9 @@
       "Alcohol y depresores del SNC"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "INVEGA SUSTENNA: sin ClCr válido no presumir función normal. Ficha FDA: ClCr 50–<80 usa inicio renal específico 156 mg día 1/117 mg día 8 y mantenimiento inicial 78 mg mensual (máx. 156 mg/mes); ClCr <50: no recomendado. No copiar cifras a Xeplion sin verificar unidades.",
+      "INVEGA SUSTENNA es palmitato IM mensual: inicio, ajuste renal y unidades dependen de ficha y mercado. Xeplion EMA usa unidades de rotulado distintas. No intercambiar valores directamente.",
       "Confirmar tolerancia previa a risperidona o paliperidona antes del LAI.",
       "Ajustar por función renal.",
       "Monitorizar prolactina si hay síntomas clínicos.",
@@ -160,13 +183,30 @@
       "Registrar fecha y sitio de aplicación para evitar error de intervalo."
     ],
     "ref": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1af14e42-951d-414d-8564-5d5fce138554",
+      "https://www.ema.europa.eu/en/medicines/human/EPAR/xeplion",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "FDA/DailyMed Paliperidone Palmitate Monthly Prescribing Information",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "LAI_MONTHLY_INITIATION_RENAL_GATE",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Paliperidona mensal",
@@ -180,8 +220,8 @@
     "xeplion",
     "antipsicotico atipico injetavel de longa acao mensal"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"

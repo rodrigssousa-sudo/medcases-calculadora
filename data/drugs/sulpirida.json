@@ -40,7 +40,7 @@
       "Vertigem/labirintopatias em alguns protocolos",
       "Dispepsia funcional ou sintomas gastrointestinais funcionais em alguns países"
     ],
-    "renalAdjustment": "Sem ajuste renal se função renal normal.",
+    "renalAdjustment": "ClCr informado ≥60 mL/min: verificar produto, idade e indicação antes da seleção da dose.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Antagonista seletivo dopaminérgico D2/D3, com ação antipsicótica em doses altas e efeitos dopaminérgicos diferenciados em doses baixas.",
     "onset": "Efeito sedativo/sintomático pode ocorrer em dias; efeito antipsicótico pleno pode levar semanas.",
@@ -77,6 +77,9 @@
       "Lítio: possível neurotoxicidade com antipsicóticos"
     ],
     "alerts": [
+      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
+      "Sulpirida comprimidos 200 mg: sem ClCr válido não afirmar função renal normal. Ajustes dependem de função renal, idade e apresentação; não extrapolar a solução nem usar dose adulta como dose pediátrica.",
+      "SmPC 200 mg comprimidos: experiência insuficiente em menores de 14 anos; idosos com disfunção renal requerem redução individualizada. Não extrapolar outras indicações ou solução a este produto.",
       "Ajustar dose pela função renal.",
       "Monitorar prolactina se galactorreia, amenorreia, infertilidade ou disfunção sexual.",
       "Considerar ECG em pacientes com risco de QT.",
@@ -84,12 +87,28 @@
       "Monitorar sintomas extrapiramidais."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/2430/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "es": {
     "name": "Sulpirida",
@@ -127,7 +146,7 @@
       "Vértigo/laberintopatías en algunos protocolos",
       "Dispepsia funcional o síntomas gastrointestinales funcionales en algunos países"
     ],
-    "renalAdjustment": "Sin ajuste renal si función renal normal.",
+    "renalAdjustment": "ClCr informado ≥60 mL/min: verificar producto, edad e indicación antes de dosificar.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
     "mechanism": "Antagonista selectivo dopaminérgico D2/D3, con acción antipsicótica en dosis altas y efectos dopaminérgicos diferenciados en dosis bajas.",
     "onset": "Efecto sedativo/sintomático puede ocurrir en días; efecto antipsicótico pleno puede tardar semanas.",
@@ -164,6 +183,9 @@
       "Litio: posible neurotoxicidad con antipsicóticos"
     ],
     "alerts": [
+      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
+      "Sulpirida comprimidos 200 mg: sin ClCr válido no afirmar función renal normal. Ajustes dependen de función renal, edad y presentación; no extrapolar a solución ni usar dosis adulta como pediátrica.",
+      "Ficha de comprimidos 200 mg: experiencia insuficiente en menores de 14 años; mayores con deterioro renal requieren reducción individualizada. No extrapolar otras indicaciones o solución a este producto.",
       "Ajustar dosis por función renal.",
       "Monitorizar prolactina si galactorrea, amenorrea, infertilidad o disfunción sexual.",
       "Considerar ECG en pacientes con riesgo de QT.",
@@ -171,12 +193,28 @@
       "Monitorizar síntomas extrapiramidales."
     ],
     "ref": [
+      "https://www.medicines.org.uk/emc/product/2430/smpc",
       "Goodman & Gilman 14ª Ed.",
       "Stahl's Essential Psychopharmacology",
       "Lexicomp",
       "Micromedex",
       "UpToDate"
-    ]
+    ],
+    "pediatricDose": {
+      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
+      "doseAuto": false,
+      "indication": null,
+      "sourceUrls": [],
+      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
+      "clinicalReferenceR27": {
+        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
+        "doseAuto": false,
+        "medicalSafetyReviewRequired": true,
+        "unverifiedDoseValues": 0,
+        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
+        "source": []
+      }
+    }
   },
   "name": {
     "pt": "Sulpirida",
@@ -189,8 +227,8 @@
     "sulpirida gador",
     "antipsicotico benzamida substituida"
   ],
-  "dataVersion": "clinical-data-v1-fbb6827710f35a56",
-  "clinicalContentSha256": "fbb6827710f35a569a5f76e34db789533b388d5437225c3cce61f7de6ee3e292",
+  "dataVersion": "clinical-data-v1-6f8d3beac60d038a",
+  "clinicalContentSha256": "6f8d3beac60d038a2f501bc6a71ef918dda47a4018ec3f725ea89ec80e894b38",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psicofarmacos.js"
