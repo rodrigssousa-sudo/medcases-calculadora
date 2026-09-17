@@ -25,3 +25,21 @@ if(!html.includes('database/psicofarmacos.js?v=r30-free60-security-20260916'))fa
 const pkg=read(path.join(root,'package.json'));
 if(!pkg.scripts.build.includes('verify-public-boundary.cjs')||pkg.scripts.build.includes('export:ai'))fail('BUILD_POLICY');
 console.log('RESULT=PASS_R30_PUBLIC_BOUNDARY | FREE=60 | PUBLIC_G01=1 | AI_PUBLIC=0 | R28_CLINICAL=DISABLED');
+
+/* MEDCASES_R33_FREE60_INDEX_PERMANENT_GATE: build and predeploy enforce public metadata boundary. */
+;(() => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const root = path.resolve(__dirname, '..');
+  const base = path.join(root, 'public');
+  const free = JSON.parse(fs.readFileSync(path.join(root, 'gateway/data/free60_allowlist.v2.json'), 'utf8')).ids;
+  const rows = JSON.parse(fs.readFileSync(path.join(base, 'data/drugs_index.json'), 'utf8'));
+  if (!Array.isArray(free) || free.length !== 60 || new Set(free).size !== 60 ||
+      !Array.isArray(rows) || rows.length !== 60 ||
+      rows.some(r => !r || typeof r.id !== 'string') ||
+      new Set(rows.map(r => r.id)).size !== 60 ||
+      rows.some(r => !free.includes(r.id))) {
+    throw Error('R33_PUBLIC_INDEX_MUST_EQUAL_FREE60');
+  }
+  console.log('R33_PUBLIC_INDEX_FREE60=PASS');
+})();
