@@ -6407,3 +6407,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:doxepina:END */
+/* GOLD33_SELECTIVE:duloxetina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["duloxetina"])throw new Error("GOLD33_MISSING_CANONICAL:duloxetina");db["duloxetina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "028",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ff7e772cca4ff0461ed14ee5bed47a89845b0c2810e7a428dbafbd2e78ef2bad",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Duloxetina",
+    "class": "Inibidor da recaptação de serotonina e noradrenalina",
+    "pharmacologicClass": "Inibe recaptação central de serotonina e norepinefrina",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas gastrorresistentes 20/30/40/60 mg.",
+    "presentations": "Cápsulas gastrorresistentes 20/30/40/60 mg.",
+    "mechanism": "Inibe recaptação central de serotonina e norepinefrina. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP1A2/2D6; meia-vida ~12 h.",
+    "indications": "Depressão, ansiedade generalizada, dor neuropática diabética, fibromialgia e dor musculoesquelética crônica conforme população.",
+    "dose": "Usualmente 30–60 mg VO/dia conforme indicação; máximo 120 mg/dia em indicações selecionadas, sem benefício adicional consistente acima de 60 mg para várias condições.",
+    "pediatricDose": "TAG 7–17 anos: 30 mg/dia por 2 semanas, alvo 30–60 mg, máximo 120 mg. Fibromialgia 13–17 anos: 30 mg/dia, pode subir a 60 mg. AUTOMATABLE=NO.",
+    "renalDose": "Evitar em TFG <30 mL/min.",
+    "hepaticDose": "Evitar em doença hepática crônica/cirrose.",
+    "commonAdverseEffects": "Náusea, boca seca, sonolência, constipação, redução do apetite e hiperidrose.",
+    "dangerousAdverseEffects": "Suicidalidade, síndrome serotoninérgica, hepatotoxicidade, hiponatremia, sangramento e retirada.",
+    "adverseEffects": "Náusea, boca seca, sonolência, constipação, redução do apetite e hiperidrose. Graves: Suicidalidade, síndrome serotoninérgica, hepatotoxicidade, hiponatremia, sangramento e retirada.",
+    "contraindications": "IMAO concomitante ou dentro das janelas definidas; glaucoma de ângulo fechado não controlado exige cautela.",
+    "interactions": "IMAO/serotonérgicos, álcool/hepatotóxicos, CYP1A2/2D6 e fármacos que aumentam sangramento.",
+    "monitoring": "Humor/suicídio, PA, fígado, Na, sangramento, glaucoma e sintomas de retirada.",
+    "administration": "Engolir inteira; retirada gradual.",
+    "preparation": "Confirmar produto e apresentação; seguir rotulagem oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; quando houver, seguir rótulo.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica; evitar exposição desnecessária.",
+    "lactation": "Avaliar transferência ao leite, idade do lactente e alternativa terapêutica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Suicidalidade, síndrome serotoninérgica, hepatotoxicidade, hiponatremia, sangramento e retirada. Seleção/dose bloqueadas sem indicação, idade, risco suicida/bipolar, PA, rim/fígado, Na, álcool e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=duloxetine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021427s059lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=duloxetine"
+  },
+  "es": {
+    "name": "Duloxetina",
+    "class": "Inhibidor de recaptación de serotonina y noradrenalina",
+    "pharmacologicClass": "Inhibe recaptación central de serotonina y norepinefrina",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas gastrorresistentes 20/30/40/60 mg.",
+    "presentations": "Cápsulas gastrorresistentes 20/30/40/60 mg.",
+    "mechanism": "Inhibe recaptación central de serotonina y norepinefrina. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP1A2/2D6; semivida ~12 h.",
+    "indications": "Depresión, ansiedad generalizada, dolor neuropático diabético, fibromialgia y dolor musculoesquelético crónico según población.",
+    "dose": "Usualmente 30–60 mg VO/día según indicación; máximo 120 mg/día en indicaciones seleccionadas, sin beneficio adicional consistente sobre 60 mg para varias condiciones.",
+    "pediatricDose": "TAG 7–17 años: 30 mg/día por 2 semanas, objetivo 30–60 mg, máximo 120 mg. Fibromialgia 13–17 años: 30 mg/día, puede subir a 60 mg. AUTOMATABLE=NO.",
+    "renalDose": "Evitar en TFG <30 mL/min.",
+    "hepaticDose": "Evitar en hepatopatía crónica/cirrosis.",
+    "commonAdverseEffects": "Náusea, boca seca, somnolencia, estreñimiento, menor apetito e hiperhidrosis.",
+    "dangerousAdverseEffects": "Suicidalidad, síndrome serotoninérgico, hepatotoxicidad, hiponatremia, sangrado y retirada.",
+    "adverseEffects": "Náusea, boca seca, somnolencia, estreñimiento, menor apetito e hiperhidrosis. Graves: Suicidalidad, síndrome serotoninérgico, hepatotoxicidad, hiponatremia, sangrado y retirada.",
+    "contraindications": "IMAO concomitante o dentro de ventanas definidas; glaucoma de ángulo cerrado no controlado exige precaución.",
+    "interactions": "IMAO/serotoninérgicos, alcohol/hepatotóxicos, CYP1A2/2D6 y fármacos que aumentan sangrado.",
+    "monitoring": "Ánimo/suicidio, PA, hígado, Na, sangrado, glaucoma y síntomas de retirada.",
+    "administration": "Tragar entera; retirada gradual.",
+    "preparation": "Confirmar producto y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; cuando exista, seguir ficha.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica; evitar exposición innecesaria.",
+    "lactation": "Evaluar paso a leche, edad del lactante y alternativa terapéutica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Suicidalidad, síndrome serotoninérgico, hepatotoxicidad, hiponatremia, sangrado y retirada. Seleção/dose bloqueadas sem indicação, idade, risco suicida/bipolar, PA, rim/fígado, Na, álcool e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=duloxetine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021427s059lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=duloxetine"
+  }
+};})();
+/* GOLD33_SELECTIVE:duloxetina:END */

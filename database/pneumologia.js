@@ -4647,3 +4647,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:dropropizina:END */
+/* GOLD33_SELECTIVE:dupilumabe:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["dupilumabe"])throw new Error("GOLD33_MISSING_CANONICAL:dupilumabe");db["dupilumabe"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "028",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ff7e772cca4ff0461ed14ee5bed47a89845b0c2810e7a428dbafbd2e78ef2bad",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Dupilumabe",
+    "class": "Anticorpo monoclonal anti-IL-4Rα",
+    "pharmacologicClass": "Bloqueia sinalização de IL-4 e IL-13",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Seringas/canetas SC 200 ou 300 mg; seringa 100 mg conforme mercado.",
+    "presentations": "Seringas/canetas SC 200 ou 300 mg; seringa 100 mg conforme mercado.",
+    "mechanism": "Bloqueia sinalização de IL-4 e IL-13. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Anticorpo IgG4; catabolismo proteico.",
+    "indications": "Dermatite atópica, asma tipo 2, rinossinusite crônica com pólipos nasais, esofagite eosinofílica e outras indicações conforme idade/rótulo.",
+    "dose": "Dose depende da indicação e peso. Exemplo dermatite atópica adulta: 600 mg carga, depois 300 mg SC a cada 2 semanas.",
+    "pediatricDose": "Esquemas por idade/peso e indicação, inclusive ≥6 meses em dermatite atópica. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste esperado; dados limitados em grave.",
+    "hepaticDose": "Sem ajuste esperado; dados limitados.",
+    "commonAdverseEffects": "Reação no local, conjuntivite/blefarite, herpes oral e artralgia.",
+    "dangerousAdverseEffects": "Anafilaxia, ceratite grave e condições eosinofílicas sistêmicas raras.",
+    "adverseEffects": "Reação no local, conjuntivite/blefarite, herpes oral e artralgia. Graves: Anafilaxia, ceratite grave e condições eosinofílicas sistêmicas raras.",
+    "contraindications": "Hipersensibilidade ao produto.",
+    "interactions": "Evitar vacinas vivas; reduzir corticosteroide apenas gradualmente; atenção a helmintos.",
+    "monitoring": "Controle da doença, olhos/conjuntivite, eosinofilia, hipersensibilidade, helmintos e dor articular.",
+    "administration": "SC; permitir atingir temperatura ambiente conforme dispositivo; alternar locais.",
+    "preparation": "Confirmar produto e apresentação; seguir rotulagem oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; quando houver, seguir rótulo.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica; evitar exposição desnecessária.",
+    "lactation": "Avaliar transferência ao leite, idade do lactente e alternativa terapêutica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, ceratite grave e condições eosinofílicas sistêmicas raras. Esquema bloqueado sem indicação, idade, peso, fenótipo, comorbidades, vacinas, olhos e terapia concomitante.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dupilumab",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/761055s065lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dupilumab"
+  },
+  "es": {
+    "name": "Dupilumab",
+    "class": "Anticuerpo monoclonal anti-IL-4Rα",
+    "pharmacologicClass": "Bloquea señalización de IL-4 e IL-13",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Jeringas/plumas SC 200 o 300 mg; jeringa 100 mg según mercado.",
+    "presentations": "Jeringas/plumas SC 200 o 300 mg; jeringa 100 mg según mercado.",
+    "mechanism": "Bloquea señalización de IL-4 e IL-13. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Anticuerpo IgG4; catabolismo proteico.",
+    "indications": "Dermatitis atópica, asma tipo 2, rinosinusitis crónica con pólipos nasales, esofagitis eosinofílica y otras indicaciones según edad/ficha.",
+    "dose": "Dosis depende de indicación y peso. Ejemplo dermatitis atópica adulta: 600 mg de carga, luego 300 mg SC cada 2 semanas.",
+    "pediatricDose": "Esquemas por edad/peso e indicación, incluso ≥6 meses en dermatitis atópica. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste esperado; datos limitados en grave.",
+    "hepaticDose": "Sin ajuste esperado; datos limitados.",
+    "commonAdverseEffects": "Reacción local, conjuntivitis/blefaritis, herpes oral y artralgia.",
+    "dangerousAdverseEffects": "Anafilaxia, queratitis grave y condiciones eosinofílicas sistémicas raras.",
+    "adverseEffects": "Reacción local, conjuntivitis/blefaritis, herpes oral y artralgia. Graves: Anafilaxia, queratitis grave y condiciones eosinofílicas sistémicas raras.",
+    "contraindications": "Hipersensibilidad al producto.",
+    "interactions": "Evitar vacunas vivas; reducir corticoide solo gradualmente; atención a helmintos.",
+    "monitoring": "Control de enfermedad, ojos/conjuntivitis, eosinofilia, hipersensibilidad, helmintos y dolor articular.",
+    "administration": "SC; dejar llegar a temperatura ambiente según dispositivo; alternar sitios.",
+    "preparation": "Confirmar producto y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; cuando exista, seguir ficha.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica; evitar exposición innecesaria.",
+    "lactation": "Evaluar paso a leche, edad del lactante y alternativa terapéutica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, queratitis grave y condiciones eosinofílicas sistémicas raras. Esquema bloqueado sem indicação, idade, peso, fenótipo, comorbidades, vacinas, olhos e terapia concomitante.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dupilumab",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/761055s065lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dupilumab"
+  }
+};})();
+/* GOLD33_SELECTIVE:dupilumabe:END */

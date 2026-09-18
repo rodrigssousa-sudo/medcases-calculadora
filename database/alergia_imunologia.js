@@ -2369,3 +2369,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:diflucortolona:END */
+/* GOLD33_SELECTIVE:ebastina:START */
+;(function(){var db=window.ALERGIA_IMUNOLOGIA_DRUGS_DB;if(!db||!db["ebastina"])throw new Error("GOLD33_MISSING_CANONICAL:ebastina");db["ebastina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "028",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ff7e772cca4ff0461ed14ee5bed47a89845b0c2810e7a428dbafbd2e78ef2bad",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ebastina",
+    "class": "Anti-histamínico H1 de segunda geração",
+    "pharmacologicClass": "Pró-fármaco convertido em carebastina, antagonista periférico H1",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 10/20 mg e solução oral conforme país.",
+    "presentations": "Comprimidos 10/20 mg e solução oral conforme país.",
+    "mechanism": "Pró-fármaco convertido em carebastina, antagonista periférico H1. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP3A4 a carebastina ativa; meia-vida do metabólito ~15–19 h.",
+    "indications": "Rinite alérgica e urticária conforme autorização nacional; não aprovada nos EUA.",
+    "dose": "Adultos: geralmente 10 mg VO 1x/dia; 20 mg/dia em quadros selecionados conforme bula local.",
+    "pediatricDose": "Esquemas variam por idade/produto; confirmar bula nacional. AUTOMATABLE=NO.",
+    "renalDose": "Cautela em insuficiência renal grave; seguir rótulo regional.",
+    "hepaticDose": "Limitar/evitar doses altas em hepatopatia; confirmar rótulo.",
+    "commonAdverseEffects": "Cefaleia, boca seca, sonolência e dor abdominal.",
+    "dangerousAdverseEffects": "Hipersensibilidade e prolongamento de QT em contexto de risco/interação.",
+    "adverseEffects": "Cefaleia, boca seca, sonolência e dor abdominal. Graves: Hipersensibilidade e prolongamento de QT em contexto de risco/interação.",
+    "contraindications": "Hipersensibilidade; contraindicações etárias/gestacionais variam por país.",
+    "interactions": "Inibidores CYP3A4 como cetoconazol/macrolídeos podem elevar níveis e QT; álcool/sedativos.",
+    "monitoring": "Sintomas, sedação, fígado e ECG/QT em pacientes de risco.",
+    "administration": "VO 1x/dia, com ou sem alimento conforme produto.",
+    "preparation": "Confirmar produto e apresentação; seguir rotulagem oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; quando houver, seguir rótulo.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica; evitar exposição desnecessária.",
+    "lactation": "Avaliar transferência ao leite, idade do lactente e alternativa terapêutica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipersensibilidade e prolongamento de QT em contexto de risco/interação. Dose bloqueada sem país/bula, idade, formulação, fígado, QT e interações CYP3A4.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://cima.aemps.es/cima/publico/home.html",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://consultas.anvisa.gov.br/#/bulario/"
+    ],
+    "ref": "https://cima.aemps.es/cima/publico/home.html"
+  },
+  "es": {
+    "name": "Ebastina",
+    "class": "Antihistamínico H1 de segunda generación",
+    "pharmacologicClass": "Profármaco convertido en carebastina, antagonista periférico H1",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 10/20 mg y solución oral según país.",
+    "presentations": "Comprimidos 10/20 mg y solución oral según país.",
+    "mechanism": "Profármaco convertido en carebastina, antagonista periférico H1. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP3A4 a carebastina activa; semivida del metabolito ~15–19 h.",
+    "indications": "Rinitis alérgica y urticaria según autorización nacional; no aprobada en EE. UU.",
+    "dose": "Adultos: generalmente 10 mg VO 1 vez/día; 20 mg/día en casos seleccionados según ficha local.",
+    "pediatricDose": "Pautas varían por edad/producto; confirmar ficha nacional. AUTOMATABLE=NO.",
+    "renalDose": "Precaución en insuficiencia renal grave; seguir ficha regional.",
+    "hepaticDose": "Limitar/evitar dosis altas en hepatopatía; confirmar ficha.",
+    "commonAdverseEffects": "Cefalea, boca seca, somnolencia y dolor abdominal.",
+    "dangerousAdverseEffects": "Hipersensibilidad y prolongación de QT en contexto de riesgo/interacción.",
+    "adverseEffects": "Cefalea, boca seca, somnolencia y dolor abdominal. Graves: Hipersensibilidad y prolongación de QT en contexto de riesgo/interacción.",
+    "contraindications": "Hipersensibilidad; contraindicaciones etarias/gestacionales varían por país.",
+    "interactions": "Inhibidores CYP3A4 como ketoconazol/macrólidos pueden elevar niveles y QT; alcohol/sedantes.",
+    "monitoring": "Síntomas, sedación, hígado y ECG/QT en pacientes de riesgo.",
+    "administration": "VO 1 vez/día, con o sin alimento según producto.",
+    "preparation": "Confirmar producto y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; cuando exista, seguir ficha.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica; evitar exposición innecesaria.",
+    "lactation": "Evaluar paso a leche, edad del lactante y alternativa terapéutica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipersensibilidad y prolongación de QT en contexto de riesgo/interacción. Dose bloqueada sem país/bula, idade, formulação, fígado, QT e interações CYP3A4.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://cima.aemps.es/cima/publico/home.html",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://consultas.anvisa.gov.br/#/bulario/"
+    ],
+    "ref": "https://cima.aemps.es/cima/publico/home.html"
+  }
+};})();
+/* GOLD33_SELECTIVE:ebastina:END */

@@ -327,3 +327,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:clomifeno:END */
+/* GOLD33_SELECTIVE:drospirenona:START */
+;(function(){var db=window.GINECOLOGIA_DRUGS_DB;if(!db||!db["drospirenona"])throw new Error("GOLD33_MISSING_CANONICAL:drospirenona");db["drospirenona"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "028",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ff7e772cca4ff0461ed14ee5bed47a89845b0c2810e7a428dbafbd2e78ef2bad",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Drospirenona",
+    "class": "Progestagênio",
+    "pharmacologicClass": "Derivado de espironolactona com atividade progestagênica, antimineralocorticoide e antiandrogênica",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 4 mg isolados; combinações com etinilestradiol em diferentes forças.",
+    "presentations": "Comprimidos 4 mg isolados; combinações com etinilestradiol em diferentes forças.",
+    "mechanism": "Derivado de espironolactona com atividade progestagênica, antimineralocorticoide e antiandrogênica. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP3A4; meia-vida terminal ~30 h.",
+    "indications": "Contracepção em formulações isoladas ou combinadas; indicações adicionais dependem do produto.",
+    "dose": "Produto isolado: 4 mg VO diariamente em regime 24 ativos/4 inativos. Combinações seguem regime específico; não são intercambiáveis.",
+    "pediatricDose": "Uso pós-menarca conforme indicação adulta; não indicado antes da menarca. AUTOMATABLE=NO.",
+    "renalDose": "Contraindicada em insuficiência renal.",
+    "hepaticDose": "Contraindicada em insuficiência hepática.",
+    "commonAdverseEffects": "Sangramento irregular, cefaleia, náusea, mastalgia e acne.",
+    "dangerousAdverseEffects": "Hipercalemia, tromboembolismo nas combinações e eventos hepáticos.",
+    "adverseEffects": "Sangramento irregular, cefaleia, náusea, mastalgia e acne. Graves: Hipercalemia, tromboembolismo nas combinações e eventos hepáticos.",
+    "contraindications": "Insuficiência renal, adrenal ou hepática; neoplasia hormônio-dependente; sangramento uterino não diagnosticado. Combinações estrogênicas acrescentam contraindicações trombóticas.",
+    "interactions": "Fármacos que elevam K, indutores CYP3A4 e alguns inibidores; combinações têm interações adicionais.",
+    "monitoring": "Gestação antes de iniciar, PA e risco trombótico conforme produto; K no primeiro ciclo quando houver risco de hipercalemia.",
+    "administration": "Tomar no mesmo horário; seguir instruções específicas para esquecimento e troca de método.",
+    "preparation": "Confirmar produto e apresentação; seguir rotulagem oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; quando houver, seguir rótulo.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica; evitar exposição desnecessária.",
+    "lactation": "Avaliar transferência ao leite, idade do lactente e alternativa terapêutica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipercalemia, tromboembolismo nas combinações e eventos hepáticos. Seleção/regime bloqueados sem produto exato, objetivo, risco trombótico, rim/fígado/adrenal, K, gestação e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=drospirenone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/211367s004lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=drospirenone"
+  },
+  "es": {
+    "name": "Drospirenona",
+    "class": "Progestágeno",
+    "pharmacologicClass": "Derivado de espironolactona con actividad progestágena, antimineralocorticoide y antiandrogénica",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 4 mg solos; combinaciones con etinilestradiol en distintas dosis.",
+    "presentations": "Comprimidos 4 mg solos; combinaciones con etinilestradiol en distintas dosis.",
+    "mechanism": "Derivado de espironolactona con actividad progestágena, antimineralocorticoide y antiandrogénica. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP3A4; semivida terminal ~30 h.",
+    "indications": "Anticoncepción en formulaciones solas o combinadas; indicaciones adicionales dependen del producto.",
+    "dose": "Producto solo: 4 mg VO diario en régimen 24 activos/4 inactivos. Combinaciones siguen régimen específico; no son intercambiables.",
+    "pediatricDose": "Uso posmenarquia según indicación adulta; no indicado antes de menarquia. AUTOMATABLE=NO.",
+    "renalDose": "Contraindicada en insuficiencia renal.",
+    "hepaticDose": "Contraindicada en insuficiencia hepática.",
+    "commonAdverseEffects": "Sangrado irregular, cefalea, náusea, mastalgia y acné.",
+    "dangerousAdverseEffects": "Hiperpotasemia, tromboembolismo en combinaciones y eventos hepáticos.",
+    "adverseEffects": "Sangrado irregular, cefalea, náusea, mastalgia y acné. Graves: Hiperpotasemia, tromboembolismo en combinaciones y eventos hepáticos.",
+    "contraindications": "Insuficiencia renal, suprarrenal o hepática; neoplasia hormonodependiente; sangrado uterino no diagnosticado. Combinaciones estrogénicas añaden contraindicaciones trombóticas.",
+    "interactions": "Fármacos que elevan K, inductores CYP3A4 y algunos inhibidores; combinaciones tienen interacciones adicionales.",
+    "monitoring": "Embarazo antes de iniciar, PA y riesgo trombótico según producto; K en primer ciclo si hay riesgo de hiperpotasemia.",
+    "administration": "Tomar a la misma hora; seguir instrucciones específicas por olvido y cambio de método.",
+    "preparation": "Confirmar producto y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; cuando exista, seguir ficha.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica; evitar exposición innecesaria.",
+    "lactation": "Evaluar paso a leche, edad del lactante y alternativa terapéutica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hiperpotasemia, tromboembolismo en combinaciones y eventos hepáticos. Seleção/regime bloqueados sem produto exato, objetivo, risco trombótico, rim/fígado/adrenal, K, gestação e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=drospirenone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/211367s004lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=drospirenone"
+  }
+};})();
+/* GOLD33_SELECTIVE:drospirenona:END */

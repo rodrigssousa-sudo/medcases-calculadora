@@ -1306,3 +1306,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:dalteparina:END */
+/* GOLD33_SELECTIVE:edoxabana:START */
+;(function(){var db=window.ANTICOAG_DRUGS_DB;if(!db||!db["edoxabana"])throw new Error("GOLD33_MISSING_CANONICAL:edoxabana");db["edoxabana"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "028",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ff7e772cca4ff0461ed14ee5bed47a89845b0c2810e7a428dbafbd2e78ef2bad",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Edoxabana",
+    "class": "Anticoagulante inibidor direto do fator Xa",
+    "pharmacologicClass": "Inibição seletiva e reversível do fator Xa",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 15/30/60 mg.",
+    "presentations": "Comprimidos 15/30/60 mg.",
+    "mechanism": "Inibição seletiva e reversível do fator Xa. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Substrato P-gp; ~50% renal, meia-vida 10–14 h.",
+    "indications": "Prevenção de AVC/embolia na FA não valvar e tratamento de TVP/EP após anticoagulação parenteral inicial.",
+    "dose": "FA: 60 mg VO/dia se CrCl >50–95; 30 mg/dia se CrCl 15–50; não usar se CrCl >95. TVP/EP: após 5–10 dias parenteral, 60 mg/dia; 30 mg se CrCl 15–50, peso ≤60 kg ou certos inibidores P-gp.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Ver dose por CrCl; evitar CrCl <15 mL/min.",
+    "hepaticDose": "Não recomendada em hepatopatia moderada/grave com coagulopatia.",
+    "commonAdverseEffects": "Sangramento, anemia, rash e testes hepáticos alterados.",
+    "dangerousAdverseEffects": "Hemorragia fatal/intracraniana, hematoma espinal/epidural e trombose após interrupção.",
+    "adverseEffects": "Sangramento, anemia, rash e testes hepáticos alterados. Graves: Hemorragia fatal/intracraniana, hematoma espinal/epidural e trombose após interrupção.",
+    "contraindications": "Sangramento ativo patológico.",
+    "interactions": "P-gp; outros anticoagulantes, antiagregantes, AINEs e trombolíticos aumentam sangramento.",
+    "monitoring": "CrCl por Cockcroft-Gault, hemograma, sangramento, fígado, adesão e procedimentos/neuroeixo.",
+    "administration": "VO 1x/dia; não interromper abruptamente sem cobertura.",
+    "preparation": "Confirmar produto e apresentação; seguir rotulagem oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; quando houver, seguir rótulo.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica; evitar exposição desnecessária.",
+    "lactation": "Avaliar transferência ao leite, idade do lactente e alternativa terapêutica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hemorragia fatal/intracraniana, hematoma espinal/epidural e trombose após interrupção. Dose bloqueada sem indicação, CrCl Cockcroft-Gault, peso, anticoagulação prévia, fígado, sangramento, P-gp e procedimento.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=edoxaban",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/206316s019lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=edoxaban"
+  },
+  "es": {
+    "name": "Edoxabán",
+    "class": "Anticoagulante inhibidor directo del factor Xa",
+    "pharmacologicClass": "Inhibición selectiva y reversible del factor Xa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 15/30/60 mg.",
+    "presentations": "Comprimidos 15/30/60 mg.",
+    "mechanism": "Inhibición selectiva y reversible del factor Xa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Sustrato P-gp; ~50% renal, semivida 10–14 h.",
+    "indications": "Prevención de ictus/embolia en FA no valvular y tratamiento de TVP/EP tras anticoagulación parenteral inicial.",
+    "dose": "FA: 60 mg VO/día si CrCl >50–95; 30 mg/día si CrCl 15–50; no usar si CrCl >95. TVP/EP: tras 5–10 días parenteral, 60 mg/día; 30 mg si CrCl 15–50, peso ≤60 kg o ciertos inhibidores P-gp.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Ver dosis por CrCl; evitar CrCl <15 mL/min.",
+    "hepaticDose": "No recomendada en hepatopatía moderada/grave con coagulopatía.",
+    "commonAdverseEffects": "Sangrado, anemia, erupción y pruebas hepáticas alteradas.",
+    "dangerousAdverseEffects": "Hemorragia fatal/intracraneal, hematoma espinal/epidural y trombosis tras suspensión.",
+    "adverseEffects": "Sangrado, anemia, erupción y pruebas hepáticas alteradas. Graves: Hemorragia fatal/intracraneal, hematoma espinal/epidural y trombosis tras suspensión.",
+    "contraindications": "Sangrado activo patológico.",
+    "interactions": "P-gp; otros anticoagulantes, antiagregantes, AINE y trombolíticos aumentan sangrado.",
+    "monitoring": "CrCl por Cockcroft-Gault, hemograma, sangrado, hígado, adherencia y procedimientos/neuroeje.",
+    "administration": "VO 1 vez/día; no suspender bruscamente sin cobertura.",
+    "preparation": "Confirmar producto y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; cuando exista, seguir ficha.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica; evitar exposición innecesaria.",
+    "lactation": "Evaluar paso a leche, edad del lactante y alternativa terapéutica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hemorragia fatal/intracraneal, hematoma espinal/epidural y trombosis tras suspensión. Dose bloqueada sem indicação, CrCl Cockcroft-Gault, peso, anticoagulação prévia, fígado, sangramento, P-gp e procedimento.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=edoxaban",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/206316s019lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=edoxaban"
+  }
+};})();
+/* GOLD33_SELECTIVE:edoxabana:END */
