@@ -97,6 +97,26 @@
       }
     } catch (_) {}
 
+    // MEDCASES_PREMIUM_R8_6_WEB_PARENT_PAYWALL_BRIDGE_V1_B_R4
+    // Native keeps MCUpgrade. Flutter Web receives this cross-origin message
+    // and validates event.origin before opening the Premium paywall.
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage(JSON.stringify({
+          type: 'medcases:premium-upgrade',
+          lang: lang,
+          drugId: drugId,
+          source: 'free60-drug-lock'
+        }), '*');
+        console.log('[' + BUILD + '] WEB_PARENT_PAYWALL_REQUESTED', {
+          drugId: drugId,
+          lang: lang,
+          event: event.type
+        });
+        return;
+      }
+    } catch (_) {}
+
     console.warn('[' + BUILD + '] MCUPGRADE_UNAVAILABLE', {drugId: drugId, lang: lang, event: event.type});
   }
 
