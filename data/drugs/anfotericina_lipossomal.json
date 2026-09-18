@@ -7,156 +7,76 @@
   "pt": {
     "name": "Anfotericina B lipossomal",
     "class": "Antifúngico poliênico lipossomal",
-    "pharmacologicClass": "Anfotericina B encapsulada em lipossomas; ligante de ergosterol",
-    "mechanism": "Entrega lipossomal de anfotericina B, que se liga a ergosterol e forma poros na membrana fúngica.",
-    "pharmacodynamics": "Fungicida para muitos fungos; formulação lipossomal reduz exposição renal livre e nefrotoxicidade relativa, mas NÃO é intercambiável mg/kg com desoxicolato.",
-    "pharmacokinetics": "Distribuição reticuloendotelial/lipossomal distinta da forma convencional; exposição varia com dose e formulação.",
-    "indications": "Terapia empírica em neutropenia febril, micoses sistêmicas, criptococose em cenários selecionados e leishmaniose visceral conforme bula/diretriz.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Pó liofilizado lipossomal IV.",
-    "presentations": [
-      "50 mg por frasco"
-    ],
-    "dose": "Bula: terapia empírica 3 mg/kg/dia; micoses sistêmicas Aspergillus/Candida/Cryptococcus 3–5 mg/kg/dia; meningite criptocócica em HIV 6 mg/kg/dia. Dose depende do foco/diretriz.",
-    "pediatricDose": "Pediatria (bula AmBisome): em pacientes de 1 mês a 16 anos, usar as mesmas doses iniciais por kg indicadas para adultos, sem ajuste pediátrico adicional. Terapia empírica em neutropenia febril: 3 mg/kg/dia EV. Infecções fúngicas sistêmicas por Aspergillus, Candida ou Cryptococcus: 3–5 mg/kg/dia EV. Meningite criptocócica em pacientes com HIV: 6 mg/kg/dia EV. Leishmaniose visceral: imunocompetentes 3 mg/kg/dia nos dias 1–5, 14 e 21; imunocomprometidos 4 mg/kg/dia nos dias 1–5, 10, 17, 24, 31 e 38. Abaixo de 1 mês, segurança e eficácia não estão estabelecidas na bula. AmBisome não é intercambiável nem substituível mg por mg por outras formulações de anfotericina B; individualizar dose e velocidade de infusão conforme indicação e tolerabilidade.",
-    "renalDose": "Sem tabela de redução fixa apenas por DRC; monitorar creatinina/eletrólitos e ajustar estratégia pela toxicidade e indicação.",
-    "hepaticDose": "Insuficiência hepática (AmBisome): não há dados disponíveis que permitam recomendar um ajuste posológico específico. A bula americana informa que o efeito da insuficiência hepática sobre a disposição da anfotericina B após AmBisome é desconhecido; o SmPC informa que não há dados para formular recomendação de dose em pacientes com insuficiência hepática. Portanto, não existe tabela numérica validada de redução ou intervalo: individualizar conforme indicação, resposta e toxicidade, com monitorização regular da função hepática. Não extrapolar ajuste da anfotericina B desoxicolato nem de outras formulações.",
-    "commonAdverseEffects": [
-      "Reação infusional",
-      "Náusea",
-      "Hipocalemia",
-      "Elevação de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "Nefrotoxicidade",
-      "Hipocalemia grave",
-      "Reações cardiorrespiratórias infusionais"
-    ],
-    "adverseEffects": "É menos nefrotóxica que desoxicolato em estudos comparativos, mas ainda pode causar lesão renal e distúrbios eletrolíticos.",
-    "contraindications": "Hipersensibilidade à formulação, salvo infecção potencialmente fatal sem alternativa.",
-    "interactions": "Nefrotóxicos e depletores de potássio aumentam toxicidade; revisar digoxina/bloqueadores neuromusculares em hipocalemia.",
-    "monitoring": "Creatinina, K, Mg, hemograma, função hepática e reações infusionais.",
-    "administration": "IV exclusivamente. Linha existente deve ser lavada com dextrose 5% antes; se não for possível, usar linha separada.",
-    "preparation": "Reconstituir apenas conforme bula e diluir em dextrose 5%; não usar soluções salinas para diluição.",
-    "infusionProtocol": "Infundir tipicamente em ~2 h; se bem tolerado pode reduzir para ~60 min. Aumentar tempo se houver desconforto.",
-    "pregnancy": "Anfotericina B é opção sistêmica amplamente usada quando antifúngico é necessário na gestação.",
-    "lactation": "Dados limitados; avaliar risco-benefício.",
-    "specialPopulations": "Leishmaniose visceral imunocompetente: 3 mg/kg dias 1–5, 14 e 21. Imunocomprometido: 4 mg/kg dias 1–5, 10,17,24,31,38 na bula.",
-    "patientEducation": "Confirmar sempre a formulação antes da dose: lipossomal não é equivalente à desoxicolato.",
-    "clinicalPearls": "A menor nefrotoxicidade não elimina monitorização. O erro mais perigoso é confundir mg/kg da forma lipossomal com a desoxicolato.",
-    "guidelineRecommendations": "Diretrizes modernas frequentemente preferem anfotericina B lipossomal para micoses invasivas específicas pela relação eficácia/toxicidade; dose e duração são foco-dependentes.",
-    "safetyFlags": [
-      "LIPOSSOMAL",
-      "NÃO intercambiável",
-      "3–5 mg/kg micoses sistêmicas",
-      "Dextrose 5%",
-      "Menor nefrotoxicidade relativa"
-    ],
-    "alerts": [
-      "Empírico 3 mg/kg/dia",
-      "Sistêmicas 3–5 mg/kg/dia",
-      "Criptococo HIV 6 mg/kg/dia",
-      "Infusão ~2 h",
-      "D5W, não salina"
-    ],
+    "pharmacologicClass": "Anfotericina B encapsulada em lipossomas; ligação ao ergosterol",
+    "mechanism": "Anfotericina B encapsulada em lipossomas; ligação ao ergosterol. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Farmacocinética não linear; meia-vida inicial 7-10 h e terminal 100-153 h por redistribuição tecidual; via de metabolismo/excreção não definida.",
+    "indications": "Terapia empírica em neutropenia febril; meningite criptocócica no HIV; micoses sistêmicas refratárias/intolerantes ao desoxicolato; leishmaniose visceral.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frasco liofilizado 50 mg com filtro de 5 micra. Não intercambiável mg por mg com outras anfotericinas.",
+    "presentations": "Frasco liofilizado 50 mg com filtro de 5 micra. Não intercambiável mg por mg com outras anfotericinas.",
+    "dose": "Empírico neutropenia: 3 mg/kg IV/dia; aspergilose/candidíase/criptococose refratária: 3-5 mg/kg/dia; meningite criptocócica HIV: 6 mg/kg/dia; leishmaniose: esquemas cumulativos específicos.",
+    "pediatricDose": "1 mês-16 anos: doses por kg comparáveis às de adultos conforme indicação; <1 mês não estabelecido. AUTOMATABLE=NO sem indicação e peso.",
+    "renalDose": "Sem ajuste fixo; pode ser usada em insuficiência renal, mas monitorar creatinina e eletrólitos.",
+    "hepaticDose": "Efeito da insuficiência hepática não estabelecido; monitorar.",
+    "commonAdverseEffects": "Calafrios, febre, náusea, vômito, dor, dispneia, hipocalemia e aumento de creatinina.",
+    "dangerousAdverseEffects": "Anafilaxia, reação grave à infusão, nefrotoxicidade, arritmia e hepatotoxicidade.",
+    "adverseEffects": "Calafrios, febre, náusea, vômito, dor, dispneia, hipocalemia e aumento de creatinina. Graves: Anafilaxia, reação grave à infusão, nefrotoxicidade, arritmia e hepatotoxicidade.",
+    "contraindications": "Hipersensibilidade à anfotericina B desoxicolato ou componentes, salvo benefício superior ao risco.",
+    "interactions": "Nefrotóxicos, diuréticos/corticosteroides, digitálicos, flucitosina e antineoplásicos.",
+    "monitoring": "Creatinina, K/Mg, função hepática, hemograma, reação à infusão e resposta microbiológica.",
+    "administration": "Somente IV com bomba; linha deve ser lavada com glicose 5% ou separada de soluções salinas.",
+    "preparation": "Adicionar 12 mL de água estéril ao frasco (4 mg/mL), agitar vigorosamente 30 s; filtrar com 5 micra e diluir apenas em glicose 5% para 1-2 mg/mL (0,2-0,5 mg/mL em pequenos lactentes).",
+    "infusionProtocol": "Infundir em cerca de 120 min; pode reduzir a ~60 min se bem tolerada. Filtro em linha, se usado, deve ter poro médio ≥1 micra.",
+    "pregnancy": "Usar somente se benefício justificar risco; estudos animais não demonstraram teratogenicidade nas doses testadas.",
+    "lactation": "Dados insuficientes; decidir individualmente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, reação grave à infusão, nefrotoxicidade, arritmia e hepatotoxicidade. Não intercambiar formulações; cálculo, reconstituição e diluição bloqueados sem indicação, peso e produto.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
-      "https://www.cdc.gov/leishmaniasis/hcp/clinical-care/index.html",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-pediatric-opportunistic-infections/table-3-treatment-full",
-      "https://www.medicines.org.uk/emc/product/1022/smpc"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02aadef1-390b-4270-b56d-33452eb89dde"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
-      "https://www.cdc.gov/leishmaniasis/hcp/clinical-care/index.html",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02aadef1-390b-4270-b56d-33452eb89dde"
   },
   "es": {
     "name": "Anfotericina B liposomal",
     "class": "Antifúngico poliénico liposomal",
-    "pharmacologicClass": "Anfotericina B encapsulada en liposomas; ligando de ergosterol",
-    "mechanism": "La formulación liposomal entrega anfotericina B que se une a ergosterol y forma poros.",
-    "pharmacodynamics": "Fungicida; menor nefrotoxicidad relativa que desoxicolato, pero NO intercambiable mg/kg.",
-    "pharmacokinetics": "Distribución liposomal/reticuloendotelial distinta de la forma convencional.",
-    "indications": "Terapia empírica en neutropenia febril, micosis sistémicas, criptococosis seleccionada y leishmaniasis visceral.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Polvo liofilizado liposomal IV.",
-    "presentations": [
-      "50 mg por vial"
-    ],
-    "dose": "Ficha: empírico 3 mg/kg/día; Aspergillus/Candida/Cryptococcus 3–5 mg/kg/día; meningitis criptocócica en VIH 6 mg/kg/día.",
-    "pediatricDose": "Pediatría (ficha técnica de AmBisome): en pacientes de 1 mes a 16 años, usar las mismas dosis iniciales por kg indicadas para adultos, sin ajuste pediátrico adicional. Terapia empírica en neutropenia febril: 3 mg/kg/día IV. Infecciones fúngicas sistémicas por Aspergillus, Candida o Cryptococcus: 3–5 mg/kg/día IV. Meningitis criptocócica en pacientes con VIH: 6 mg/kg/día IV. Leishmaniasis visceral: inmunocompetentes 3 mg/kg/día los días 1–5, 14 y 21; inmunocomprometidos 4 mg/kg/día los días 1–5, 10, 17, 24, 31 y 38. Por debajo de 1 mes, la seguridad y eficacia no están establecidas en la ficha técnica. AmBisome no es intercambiable ni sustituible mg por mg por otras formulaciones de anfotericina B; individualizar dosis y velocidad de infusión según indicación y tolerabilidad.",
-    "renalDose": "Sin tabla fija por ERC; vigilar creatinina/electrolitos y ajustar estrategia por toxicidad.",
-    "hepaticDose": "Insuficiencia hepática (AmBisome): no hay datos disponibles que permitan recomendar un ajuste posológico específico. La ficha estadounidense informa que se desconoce el efecto de la insuficiencia hepática sobre la disposición de anfotericina B después de AmBisome; el SmPC informa que no hay datos para formular una recomendación de dosis en pacientes con insuficiencia hepática. Por lo tanto, no existe una tabla numérica validada de reducción o intervalo: individualizar según indicación, respuesta y toxicidad, con monitorización regular de la función hepática. No extrapolar ajustes de anfotericina B desoxicolato ni de otras formulaciones.",
-    "commonAdverseEffects": [
-      "Reacción infusional",
-      "Náuseas",
-      "Hipopotasemia",
-      "Aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "Nefrotoxicidad",
-      "Hipopotasemia grave",
-      "Reacción cardiorrespiratoria infusional"
-    ],
-    "adverseEffects": "Menos nefrotóxica que desoxicolato, pero puede lesionar riñón y electrolitos.",
-    "contraindications": "Hipersensibilidad a la formulación salvo infección mortal sin alternativa.",
-    "interactions": "Nefrotóxicos y depletores de K aumentan toxicidad.",
-    "monitoring": "Creatinina, K, Mg, hemograma, hígado y reacción infusional.",
-    "administration": "Solo IV; lavar línea con dextrosa 5% o usar línea separada.",
-    "preparation": "Reconstituir según ficha y diluir en dextrosa 5%; no salina.",
-    "infusionProtocol": "Típicamente ~2 h; puede reducirse a ~60 min si bien tolerada.",
-    "pregnancy": "Opción sistémica cuando se necesita anfotericina en embarazo.",
-    "lactation": "Datos limitados.",
-    "specialPopulations": "Leishmaniasis inmunocompetente: 3 mg/kg días 1–5,14,21; inmunocomprometido: 4 mg/kg días 1–5,10,17,24,31,38.",
-    "patientEducation": "Confirmar siempre formulación; liposomal no equivale a desoxicolato.",
-    "clinicalPearls": "Menor nefrotoxicidad no elimina control; error crítico es confundir mg/kg con desoxicolato.",
-    "guidelineRecommendations": "Guías modernas suelen preferir la formulación liposomal en micosis invasivas específicas por mejor relación eficacia/toxicidad; dosis depende del foco.",
-    "safetyFlags": [
-      "LIPOSOMAL",
-      "NO intercambiable",
-      "3–5 mg/kg sistémicas",
-      "Dextrosa 5%",
-      "Menor nefrotoxicidad relativa"
-    ],
-    "alerts": [
-      "Empírico 3 mg/kg/día",
-      "Sistémicas 3–5 mg/kg/día",
-      "Criptococo VIH 6 mg/kg/día",
-      "Infusión ~2 h",
-      "D5W, no salina"
-    ],
+    "pharmacologicClass": "Anfotericina B encapsulada en liposomas; unión a ergosterol",
+    "mechanism": "Anfotericina B encapsulada en liposomas; unión a ergosterol. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Farmacocinética no lineal; semivida inicial 7-10 h y terminal 100-153 h por redistribución tisular; metabolismo/excreción no definidos.",
+    "indications": "Terapia empírica en neutropenia febril; meningitis criptocócica en VIH; micosis sistémicas refractarias/intolerantes al desoxicolato; leishmaniasis visceral.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Vial liofilizado 50 mg con filtro de 5 micras. No intercambiable mg por mg con otras anfotericinas.",
+    "presentations": "Vial liofilizado 50 mg con filtro de 5 micras. No intercambiable mg por mg con otras anfotericinas.",
+    "dose": "Empírico neutropenia: 3 mg/kg IV/día; aspergilosis/candidiasis/criptococosis refractaria: 3-5 mg/kg/día; meningitis criptocócica VIH: 6 mg/kg/día; leishmaniasis: esquemas acumulados específicos.",
+    "pediatricDose": "1 mes-16 años: dosis por kg comparables a adultos según indicación; <1 mes no establecido. AUTOMATABLE=NO sin indicación y peso.",
+    "renalDose": "Sin ajuste fijo; puede usarse en insuficiencia renal, pero controlar creatinina y electrolitos.",
+    "hepaticDose": "Efecto de insuficiencia hepática no establecido; controlar.",
+    "commonAdverseEffects": "Escalofríos, fiebre, náusea, vómito, dolor, disnea, hipopotasemia y aumento de creatinina.",
+    "dangerousAdverseEffects": "Anafilaxia, reacción grave de infusión, nefrotoxicidad, arritmia y hepatotoxicidad.",
+    "adverseEffects": "Escalofríos, fiebre, náusea, vómito, dolor, disnea, hipopotasemia y aumento de creatinina. Graves: Anafilaxia, reacción grave de infusión, nefrotoxicidad, arritmia y hepatotoxicidad.",
+    "contraindications": "Hipersensibilidad a anfotericina B desoxicolato o componentes, salvo beneficio superior al riesgo.",
+    "interactions": "Nefrotóxicos, diuréticos/corticoides, digitálicos, flucitosina y antineoplásicos.",
+    "monitoring": "Creatinina, K/Mg, función hepática, hemograma, reacción a infusión y respuesta microbiológica.",
+    "administration": "Solo IV con bomba; lavar línea con glucosa 5% o usar línea separada de soluciones salinas.",
+    "preparation": "Añadir 12 mL de agua estéril al vial (4 mg/mL), agitar 30 s; filtrar con 5 micras y diluir solo en glucosa 5% a 1-2 mg/mL (0,2-0,5 mg/mL en lactantes pequeños).",
+    "infusionProtocol": "Infundir en aproximadamente 120 min; puede reducir a ~60 min si bien tolerado. Filtro en línea, si se usa, poro medio ≥1 micra.",
+    "pregnancy": "Usar solo si beneficio justifica riesgo; estudios animales no mostraron teratogenicidad a dosis evaluadas.",
+    "lactation": "Datos insuficientes; decidir individualmente.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, reacción grave de infusión, nefrotoxicidad, arritmia y hepatotoxicidad. Não intercambiar formulações; cálculo, reconstituição e diluição bloqueados sem indicação, peso e produto.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
-      "https://www.cdc.gov/leishmaniasis/hcp/clinical-care/index.html",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-pediatric-opportunistic-infections/table-3-treatment-full",
-      "https://www.medicines.org.uk/emc/product/1022/smpc"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02aadef1-390b-4270-b56d-33452eb89dde"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7be6506-4d20-401e-a0ff-02ad7c33158a",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
-      "https://www.cdc.gov/leishmaniasis/hcp/clinical-care/index.html",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02aadef1-390b-4270-b56d-33452eb89dde"
   },
   "name": {
     "pt": "Anfotericina B lipossomal",
@@ -166,9 +86,21 @@
     "anfotericina_lipossomal",
     "anfotericina b lipossomal"
   ],
-  "dataVersion": "clinical-data-v1-12ba8ad15e98178c",
-  "clinicalContentSha256": "12ba8ad15e98178c5bd41c8f5078d65a9b7455b1b496e724a8ddbe3acc0c73de",
+  "dataVersion": "clinical-data-v1-651204207193a35d",
+  "clinicalContentSha256": "651204207193a35d2fbaf4355a7b18420752b1899e9a148516ddda3d0f89a82b",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "infectologia.js"
+  "sourceModule": "infectologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "anfotericina_lipossomal.mcGoldClinicalV1",
+    "lote": "006",
+    "requiredFields": 33,
+    "approvedSha256": "29dcd13d6e24b2553690505773d6f3cc674de822214a06576063ea319921645d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

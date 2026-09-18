@@ -6,12 +6,10 @@
   "colorTxt": null,
   "pt": {
     "name": "Amoxicilina",
-    "class": "Antibiótico beta-lactâmico",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Cápsulas/comprimidos e suspensão oral.",
-    "dose": "Adultos: leves/moderadas 500 mg VO q12h ou 250 mg q8h; graves/trato respiratório inferior 875 mg q12h ou 500 mg q8h.",
+    "class": "Antibacteriano beta-lactâmico",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 250/500 mg; comprimidos mastigáveis 125/250 mg; suspensão 125 ou 250 mg/5 mL no rótulo consultado.",
+    "dose": "Adultos e ≥40 kg: infecção leve/moderada 500 mg VO a cada 12 h ou 250 mg a cada 8 h; grave/respiratória 875 mg a cada 12 h ou 500 mg a cada 8 h. Indicação e duração dependem do foco e protocolo.",
     "doseKg": {
       "padrao": "25–50 mg/kg/dia dividido 8/8h ou 12/12h",
       "alta": "80–90 mg/kg/dia dividido 12/12h (OMA, pneumonia — S. pneumoniae resistente)",
@@ -20,74 +18,44 @@
     "therapeuticRange": "Faixa usual pediátrica: 25–90 mg/kg/dia conforme indicação.",
     "dilution": "Via oral: não necessita diluição. Uso EV não habitual para amoxicilina isolada no Brasil.",
     "speed": "VO: administrar conforme intervalo prescrito.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Rash"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "SCAR/SJS-TEN",
-      "Neurotoxicidade por acúmulo"
-    ],
+    "commonAdverseEffects": "Diarreia, náusea, vômito e rash.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, colite por C. difficile, hepatotoxicidade, citopenias e convulsões por altas exposições.",
     "risksByPatient": [],
-    "alerts": [
-      "Confirmar foco e suscetibilidade",
-      "Reavaliar dose se função renal mudar"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82c0c5d1-df2d-4352-bd12-99f955af569e",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
-    ],
-    "renalDose": "TFG 10–30: 250–500 mg q12h; <10: 250–500 mg q24h; hemodiálise q24h com dose adicional durante e ao final. Evitar 875 mg se TFG <30.",
-    "pharmacologicClass": "Aminopenicilina",
-    "mechanism": "Liga-se às PBPs e inibe a transpeptidação do peptidoglicano, interrompendo a síntese da parede bacteriana.",
-    "pharmacodynamics": "Bactericida tempo-dependente; eficácia correlaciona-se ao tempo da fração livre acima da MIC (fT>MIC).",
-    "pharmacokinetics": "Boa absorção oral; ampla distribuição; eliminação predominantemente renal. Hemodiálise remove amoxicilina.",
-    "indications": "Infecções por suscetíveis de vias respiratórias, ORL, pele/tecidos moles e trato geniturinário; parte de esquemas para H. pylori.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "875 mg em algumas apresentações",
-      "Suspensões orais"
-    ],
-    "pediatricDose": ">3 meses: 20–45 mg/kg/dia divididos q8–12h; <=12 semanas: máximo 30 mg/kg/dia dividido q12h.",
-    "hepaticDose": "Sem ajuste rotineiro definido para hepatopatia isolada; monitorar se doença hepática relevante ou curso prolongado.",
-    "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
-    "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
-    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
-    "monitoring": "Resposta clínica/culturas; função renal; hemograma e função hepática em cursos prolongados; vigiar C. difficile.",
-    "administration": "VO com ou sem alimento; manter intervalos regulares.",
-    "preparation": "Reconstituir suspensão conforme fabricante; agitar antes de cada dose.",
-    "infusionProtocol": "Não aplicável às formulações orais deste registro.",
-    "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
-    "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
-    "specialPopulations": "DRC exige ajuste; idosos/críticos requerem reavaliação renal; obesidade/hiperfiltração podem alterar exposição.",
-    "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
-    "clinicalPearls": "Espectro útil contra estreptococos e outros suscetíveis; não cobre MRSA nem Pseudomonas e é vulnerável a muitas beta-lactamases.",
-    "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
-    "safetyFlags": [
-      "Alergia beta-lactâmica",
-      "C. difficile",
-      "Ajuste renal quando aplicável",
-      "Neurotoxicidade por acúmulo"
-    ],
+    "alerts": "Anafilaxia, SCAR, colite por C. difficile, hepatotoxicidade, citopenias e convulsões por altas exposições. Cálculo pediátrico bloqueado sem foco, gravidade, peso, função renal e concentração.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=42a9d92c-f6d9-42b8-a58c-fd51cca49258",
+    "renalDose": "CrCl 10-30: 250-500 mg a cada 12 h; CrCl <10: 250-500 mg a cada 24 h. Evitar comprimido 875 mg em insuficiência renal grave; diálise requer dose suplementar conforme rótulo.",
+    "pharmacologicClass": "Aminopenicilina inibidora da síntese da parede celular",
+    "mechanism": "Aminopenicilina inibidora da síntese da parede celular. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade oral, baixa ligação proteica, distribuição ampla e eliminação renal predominante inalterada; meia-vida prolonga na insuficiência renal/neonato.",
+    "indications": "Infecções por bactérias suscetíveis do ouvido/nariz/garganta, trato respiratório, geniturinário, pele; erradicação de H. pylori em combinação.",
+    "presentations": "Cápsulas 250/500 mg; comprimidos mastigáveis 125/250 mg; suspensão 125 ou 250 mg/5 mL no rótulo consultado.",
+    "pediatricDose": "<40 kg e >3 meses: 20-25 mg/kg/dia em doses divididas para quadros leves ou 40-45 mg/kg/dia para quadros graves conforme rótulo; neonatos/≤3 meses: máximo 30 mg/kg/dia dividido a cada 12 h. AUTOMATABLE=NO sem foco, peso e concentração.",
+    "hepaticDose": "Sem ajuste numérico específico; monitorar hepatotoxicidade em tratamento prolongado.",
+    "adverseEffects": "Diarreia, náusea, vômito e rash. Graves: Anafilaxia, SCAR, colite por C. difficile, hepatotoxicidade, citopenias e convulsões por altas exposições.",
+    "contraindications": "Hipersensibilidade grave prévia a penicilinas/cefalosporinas/outros beta-lactâmicos.",
+    "interactions": "Probenecida aumenta exposição; alopurinol aumenta rash; anticoagulantes podem exigir monitorização; reduz eficácia da vacina oral contra tifo.",
+    "monitoring": "Resposta, alergia, diarreia/C. difficile; função renal/hepática/hematológica em uso prolongado.",
+    "administration": "VO com ou sem alimento; completar curso indicado e colher culturas quando pertinente.",
+    "preparation": "Adicionar água conforme marca, agitar vigorosamente; refrigerar é preferível e descartar após 14 dias no rótulo consultado.",
+    "infusionProtocol": "Não aplicável às formas orais.",
+    "pregnancy": "Dados disponíveis não mostram risco maior consistente; usar quando indicado.",
+    "lactation": "Presente em baixas concentrações no leite; observar diarreia, candidíase ou sensibilização.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82c0c5d1-df2d-4352-bd12-99f955af569e",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=42a9d92c-f6d9-42b8-a58c-fd51cca49258"
     ]
   },
   "es": {
     "name": "Amoxicilina",
-    "class": "Antibiótico betalactámico",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Cápsulas/comprimidos y suspensión oral.",
-    "dose": "Adultos: leves/moderadas 500 mg VO q12h o 250 mg q8h; graves/vía respiratoria inferior 875 mg q12h o 500 mg q8h.",
+    "class": "Antibacteriano betalactámico",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 250/500 mg; masticables 125/250 mg; suspensión 125 o 250 mg/5 mL en la ficha consultada.",
+    "dose": "Adultos y ≥40 kg: infección leve/moderada 500 mg VO cada 12 h o 250 mg cada 8 h; grave/respiratoria 875 mg cada 12 h o 500 mg cada 8 h. Indicación y duración dependen del foco y protocolo.",
     "doseKg": {
       "padrao": "25–50 mg/kg/día dividido cada 8h o 12h",
       "alta": "80–90 mg/kg/día dividido cada 12h (OMA, neumonía — S. pneumoniae resistente)",
@@ -96,64 +64,36 @@
     "therapeuticRange": "Rango usual pediátrico: 25–90 mg/kg/día según indicación.",
     "dilution": "Vía oral: no requiere dilución. El uso EV de amoxicilina sola no es habitual.",
     "speed": "VO: administrar según intervalo prescrito.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Exantema"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "SCAR/SJS-TEN",
-      "Neurotoxicidad por acumulación"
-    ],
+    "commonAdverseEffects": "Diarrea, náusea, vómito y erupción.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, colitis por C. difficile, hepatotoxicidad, citopenias y convulsiones por alta exposición.",
     "risksByPatient": [],
-    "alerts": [
-      "Confirmar foco y susceptibilidad",
-      "Reevaluar dosis si cambia la función renal"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82c0c5d1-df2d-4352-bd12-99f955af569e",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
-    ],
-    "renalDose": "TFG 10–30: 250–500 mg q12h; <10: 250–500 mg q24h; hemodiálisis q24h con dosis adicional durante y al final. Evitar 875 mg si TFG <30.",
-    "pharmacologicClass": "Aminopenicilina",
-    "mechanism": "Se une a las PBP e inhibe la transpeptidación del peptidoglicano, interrumpiendo la síntesis de la pared bacteriana.",
-    "pharmacodynamics": "Bactericida dependiente del tiempo; eficacia correlacionada con el tiempo libre por encima de la MIC (fT>MIC).",
-    "pharmacokinetics": "Buena absorción oral; amplia distribución; eliminación predominantemente renal. La hemodiálisis elimina amoxicilina.",
-    "indications": "Infecciones por susceptibles de vías respiratorias, ORL, piel/tejidos blandos y tracto genitourinario; parte de esquemas para H. pylori.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "875 mg en algunas presentaciones",
-      "Suspensiones orales"
-    ],
-    "pediatricDose": ">3 meses: 20–45 mg/kg/día divididos q8–12h; <=12 semanas: máximo 30 mg/kg/día dividido q12h.",
-    "hepaticDose": "Sin ajuste rutinario definido en hepatopatía aislada; monitorizar si hepatopatía relevante o curso prolongado.",
-    "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
-    "contraindications": "Hipersensibilidad grave al fármaco o a betalactámicos relacionados.",
-    "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
-    "monitoring": "Respuesta clínica/cultivos; función renal; hemograma y función hepática en cursos prolongados; vigilar C. difficile.",
-    "administration": "VO con o sin alimentos; mantener intervalos regulares.",
-    "preparation": "Reconstituir la suspensión según fabricante; agitar antes de cada dosis.",
-    "infusionProtocol": "No aplicable a las formulaciones orales de este registro.",
-    "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
-    "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
-    "specialPopulations": "ERC requiere ajuste; ancianos/críticos requieren reevaluación renal; obesidad/hiperfiltración pueden alterar exposición.",
-    "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
-    "clinicalPearls": "Espectro útil contra estreptococos y otros susceptibles; no cubre MRSA ni Pseudomonas y es vulnerable a muchas betalactamasas.",
-    "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
-    "safetyFlags": [
-      "Alergia a betalactámicos",
-      "C. difficile",
-      "Ajuste renal cuando corresponda",
-      "Neurotoxicidad por acumulación"
-    ],
+    "alerts": "Anafilaxia, SCAR, colitis por C. difficile, hepatotoxicidad, citopenias y convulsiones por alta exposición. Cálculo pediátrico bloqueado sem foco, gravidade, peso, função renal e concentração.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=42a9d92c-f6d9-42b8-a58c-fd51cca49258",
+    "renalDose": "CrCl 10-30: 250-500 mg cada 12 h; CrCl <10: 250-500 mg cada 24 h. Evitar 875 mg en insuficiencia renal grave; diálisis requiere dosis suplementaria según ficha.",
+    "pharmacologicClass": "Aminopenicilina inhibidora de pared celular",
+    "mechanism": "Aminopenicilina inhibidora de pared celular. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad oral, baja unión proteica, amplia distribución y eliminación renal sin cambios; semivida prolongada en insuficiencia renal/neonato.",
+    "indications": "Infecciones por bacterias sensibles de oído/nariz/garganta, respiratorias, genitourinarias y piel; erradicación de H. pylori en combinación.",
+    "presentations": "Cápsulas 250/500 mg; masticables 125/250 mg; suspensión 125 o 250 mg/5 mL en la ficha consultada.",
+    "pediatricDose": "<40 kg y >3 meses: 20-25 mg/kg/día divididos para cuadros leves o 40-45 mg/kg/día para graves según ficha; neonatos/≤3 meses: máximo 30 mg/kg/día dividido cada 12 h. AUTOMATABLE=NO sin foco, peso y concentración.",
+    "hepaticDose": "Sin ajuste numérico específico; vigilar hepatotoxicidad en tratamiento prolongado.",
+    "adverseEffects": "Diarrea, náusea, vómito y erupción. Graves: Anafilaxia, SCAR, colitis por C. difficile, hepatotoxicidad, citopenias y convulsiones por alta exposición.",
+    "contraindications": "Hipersensibilidad grave previa a penicilinas/cefalosporinas/otros betalactámicos.",
+    "interactions": "Probenecid aumenta exposición; alopurinol aumenta erupción; anticoagulantes pueden requerir control; reduce eficacia de vacuna oral antitifoidea.",
+    "monitoring": "Respuesta, alergia, diarrea/C. difficile; función renal/hepática/hematológica en uso prolongado.",
+    "administration": "VO con o sin alimentos; completar curso indicado y obtener cultivos cuando corresponda.",
+    "preparation": "Añadir agua según marca, agitar; refrigeración preferible y desechar tras 14 días en la ficha consultada.",
+    "infusionProtocol": "No aplicable a formas orales.",
+    "pregnancy": "Datos disponibles no muestran riesgo mayor consistente; usar cuando esté indicado.",
+    "lactation": "Presente en bajas concentraciones en leche; vigilar diarrea, candidiasis o sensibilización.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82c0c5d1-df2d-4352-bd12-99f955af569e",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=42a9d92c-f6d9-42b8-a58c-fd51cca49258"
     ]
   },
   "name": {
@@ -171,9 +111,21 @@
     "amoxicilina generica",
     "penicilina de amplo espectro (aminopenicilina)"
   ],
-  "dataVersion": "clinical-data-v1-12ba8ad15e98178c",
-  "clinicalContentSha256": "12ba8ad15e98178c5bd41c8f5078d65a9b7455b1b496e724a8ddbe3acc0c73de",
+  "dataVersion": "clinical-data-v1-651204207193a35d",
+  "clinicalContentSha256": "651204207193a35d2fbaf4355a7b18420752b1899e9a148516ddda3d0f89a82b",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "amoxicilina.mcGoldClinicalV1",
+    "lote": "006",
+    "requiredFields": 33,
+    "approvedSha256": "29dcd13d6e24b2553690505773d6f3cc674de822214a06576063ea319921645d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

@@ -7,160 +7,76 @@
   "pt": {
     "name": "Anfotericina B desoxicolato",
     "class": "Antifúngico poliênico convencional",
-    "pharmacologicClass": "Polieno IV complexo com desoxicolato; ligante de ergosterol",
-    "mechanism": "Liga-se ao ergosterol da membrana fúngica, forma poros e causa perda de íons/constituintes celulares.",
-    "pharmacodynamics": "Fungicida para muitos fungos; atividade depende de exposição e espécie. Formulação é altamente nefrotóxica e NÃO é intercambiável mg/kg com formulações lipídicas.",
-    "pharmacokinetics": "IV, extensa ligação tecidual/proteica e meia-vida terminal longa; pouca remoção por diálise.",
-    "indications": "Micoses sistêmicas progressivas e potencialmente fatais por fungos suscetíveis; não indicada para candidíase superficial simples em hospedeiro imunocompetente.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Frasco liofilizado IV com anfotericina B + desoxicolato.",
-    "presentations": [
-      "50 mg por frasco; após reconstituição 5 mg/mL"
-    ],
-    "dose": "Bula clássica: iniciar 0,25 mg/kg/dia (ou 0,3 mg/kg em doença rapidamente progressiva), titular geralmente para 0,5–0,7 mg/kg/dia. Doses até 1 mg/kg/dia ou 1,5 mg/kg em dias alternados podem ser usadas conforme indicação; nunca exceder 1,5 mg/kg.",
-    "pediatricDose": "Pediatria: não há uma dose única para todas as micoses; usar o regime específico da indicação. Candidíase disseminada neonatal e candidíase do SNC neonatal: anfotericina B desoxicolato 1 mg/kg EV a cada 24 h. Em crianças com HIV ou expostas ao HIV, NIH Pediatric OI: criptococose do SNC 1 mg/kg EV a cada 24 h na indução, associada a flucitosina 25 mg/kg VO a cada 6 h; coccidioidomicose grave difusa ou disseminada não meníngea 0,5–1 mg/kg EV a cada 24 h até melhora clínica. A bula orienta usar a menor dose compatível com um regime eficaz e não exceder 1,5 mg/kg. As formulações desoxicolato e lipossomal não são intercambiáveis mg por mg.",
-    "renalDose": "Não há ajuste numérico simples: nefrotoxicidade é dose-limitante. Reavaliar dose/intervalo conforme creatinina, eletrólitos e necessidade; diálise remove pouco.",
-    "hepaticDose": "Sem ajuste hepático numérico padronizado; monitorar função hepática.",
-    "commonAdverseEffects": [
-      "Febre/calafrios infusionais",
-      "Náusea",
-      "Hipocalemia",
-      "Hipomagnesemia",
-      "Anemia"
-    ],
-    "dangerousAdverseEffects": [
-      "Nefrotoxicidade grave",
-      "Arritmias por distúrbios eletrolíticos",
-      "Anafilaxia",
-      "Parada cardiorrespiratória por overdose",
-      "Flebite"
-    ],
-    "adverseEffects": "Toxicidade renal e reações infusionais são muito mais pronunciadas que na formulação lipossomal.",
-    "contraindications": "Hipersensibilidade grave; quando a infecção ameaça a vida, riscos/benefícios devem ser avaliados individualmente.",
-    "interactions": "Nefrotóxicos e depletores de potássio aumentam toxicidade; hipocalemia potencializa digoxina e bloqueadores neuromusculares.",
-    "monitoring": "Creatinina/BUN, K, Mg, hemograma, função hepática e sinais de reação infusional; hidratação salina prévia pode ser considerada conforme protocolo clínico.",
-    "administration": "IV exclusivamente. NÃO usar formulações de anfotericina de modo intercambiável.",
-    "preparation": "Reconstituir frasco com 10 mL de água estéril para 5 mg/mL; diluir em dextrose para concentração final geralmente <=0,1 mg/mL e proteger da luz.",
-    "infusionProtocol": "Infusão IV lenta, tradicionalmente por 2–6 h conforme tolerância/protocolo. Nunca exceder 1,5 mg/kg.",
-    "pregnancy": "Anfotericina B é uma opção sistêmica historicamente utilizada na gestação quando tratamento antifúngico sistêmico é necessário.",
-    "lactation": "Dados limitados; avaliar risco-benefício.",
-    "specialPopulations": "DRC, uso de outros nefrotóxicos e distúrbios eletrolíticos aumentam risco; formulação lipossomal costuma ser preferida quando toxicidade renal é preocupação.",
-    "patientEducation": "Explicar que esta é a formulação convencional mais nefrotóxica; sintomas infusionais e exames renais/eletrolíticos são esperados durante monitorização.",
-    "clinicalPearls": "A regra de segurança crítica é o nome da formulação: desoxicolato e lipossomal não são equivalentes mg/kg. Doses >1,5 mg/kg de desoxicolato podem ser fatais.",
-    "guidelineRecommendations": "Usar formulação e dose específicas para o foco; em muitos cenários modernos a formulação lipossomal é preferida por menor nefrotoxicidade, mas desoxicolato permanece opção em indicações selecionadas.",
-    "safetyFlags": [
-      "DESOXICOLATO",
-      "NÃO intercambiável com lipossomal",
-      "Nefrotoxicidade alta",
-      "K/Mg",
-      "Máx absoluto 1,5 mg/kg"
-    ],
-    "alerts": [
-      "Início 0,25 mg/kg/dia",
-      "Usual 0,5–0,7 mg/kg/dia",
-      "Nunca >1,5 mg/kg",
-      "Reconstituir 5 mg/mL",
-      "Diluir em dextrose"
-    ],
+    "pharmacologicClass": "Ligação ao ergosterol e formação de poros",
+    "mechanism": "Ligação ao ergosterol e formação de poros. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Distribuição tecidual extensa, alta ligação proteica, eliminação lenta e meia-vida terminal prolongada; não dializável de forma relevante.",
+    "indications": "Micoses sistêmicas progressivas e potencialmente fatais por organismos suscetíveis; não usar para candidíase superficial em hospedeiro imunocompetente.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frasco liofilizado 50 mg. Não intercambiável mg por mg com formulações lipídicas/lipossomais.",
+    "presentations": "Frasco liofilizado 50 mg. Não intercambiável mg por mg com formulações lipídicas/lipossomais.",
+    "dose": "Dose teste pode ser usada conforme rótulo. Iniciar geralmente 0,25 mg/kg/dia IV e aumentar gradualmente; faixa usual 0,5-1 mg/kg/dia conforme infecção e tolerância; nunca exceder 1,5 mg/kg/dia.",
+    "pediatricDose": "Regimes pediátricos por kg podem ser semelhantes, mas exigem infectologia e monitorização intensiva. AUTOMATABLE=NO.",
+    "renalDose": "Não há ajuste fixo confiável; nefrotoxicidade exige monitorização frequente, hidratação/sódio e possível interrupção/redução.",
+    "hepaticDose": "Sem ajuste fixo; monitorar função hepática.",
+    "commonAdverseEffects": "Febre, calafrios, náusea, vômito, cefaleia, flebite e hipocalemia.",
+    "dangerousAdverseEffects": "Nefrotoxicidade, arritmia por distúrbios eletrolíticos, anafilaxia, anemia e parada cardíaca com administração incorreta.",
+    "adverseEffects": "Febre, calafrios, náusea, vômito, cefaleia, flebite e hipocalemia. Graves: Nefrotoxicidade, arritmia por distúrbios eletrolíticos, anafilaxia, anemia e parada cardíaca com administração incorreta.",
+    "contraindications": "Hipersensibilidade, salvo quando doença fatal só responder ao fármaco.",
+    "interactions": "Outros nefrotóxicos, diuréticos, corticosteroides, digitálicos, flucitosina e relaxantes neuromusculares exigem cautela.",
+    "monitoring": "Creatinina/BUN, K, Mg, hemograma, função hepática, balanço hídrico e reação à infusão.",
+    "administration": "IV por linha dedicada, sob observação estreita; nunca IM nem bolus.",
+    "preparation": "Reconstituir 50 mg com 10 mL de água estéril sem bacteriostático (5 mg/mL); diluir somente em glicose 5% para concentração final geralmente 0,1 mg/mL. Não usar salina.",
+    "infusionProtocol": "Infundir lentamente por aproximadamente 2-6 h; taxa rápida aumenta toxicidade.",
+    "pregnancy": "Usar apenas se claramente necessário; experiência clínica deve ser ponderada contra toxicidade.",
+    "lactation": "Dados limitados; individualizar e observar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Nefrotoxicidade, arritmia por distúrbios eletrolíticos, anafilaxia, anemia e parada cardíaca com administração incorreta. Formulação e diluente são críticos; cálculo e preparo bloqueados sem peso, indicação e produto confirmados.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=amphotericin+B+deoxycholate",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-pediatric-opportunistic-infections/table-3-treatment-full"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce"
     ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=amphotericin+B+deoxycholate"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce"
   },
   "es": {
     "name": "Anfotericina B desoxicolato",
     "class": "Antifúngico poliénico convencional",
-    "pharmacologicClass": "Polieno IV complejo con desoxicolato; ligando de ergosterol",
-    "mechanism": "Se une a ergosterol y forma poros de membrana fúngica.",
-    "pharmacodynamics": "Fungicida para muchos hongos; muy nefrotóxica y NO intercambiable mg/kg con formulaciones lipídicas.",
-    "pharmacokinetics": "IV, extensa unión/distribución tisular y semivida terminal larga; diálisis elimina poco.",
-    "indications": "Micosis sistémicas progresivas y potencialmente mortales; no para candidiasis superficial simple en inmunocompetente.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Vial IV liofilizado con anfotericina B + desoxicolato.",
-    "presentations": [
-      "50 mg por vial; 5 mg/mL tras reconstitución"
-    ],
-    "dose": "Ficha clásica: iniciar 0,25 mg/kg/día (0,3 mg/kg si progresión rápida), titular generalmente 0,5–0,7 mg/kg/día. Puede llegar a 1 mg/kg/día o 1,5 mg/kg días alternos según indicación; nunca >1,5 mg/kg.",
-    "pediatricDose": "Pediatría: no existe una dosis única para todas las micosis; usar el régimen específico de la indicación. Candidiasis diseminada neonatal y candidiasis del SNC neonatal: anfotericina B desoxicolato 1 mg/kg IV cada 24 h. En niños con VIH o expuestos al VIH, NIH Pediatric OI: criptococosis del SNC 1 mg/kg IV cada 24 h durante la inducción, asociada con flucitosina 25 mg/kg VO cada 6 h; coccidioidomicosis grave difusa o diseminada no meníngea 0,5–1 mg/kg IV cada 24 h hasta mejoría clínica. La ficha técnica indica usar la menor dosis compatible con un régimen eficaz y no exceder 1,5 mg/kg. Las formulaciones desoxicolato y liposomal no son intercambiables mg por mg.",
-    "renalDose": "Sin ajuste numérico simple; nefrotoxicidad limita dosis. Revaluar según creatinina/electrolitos; diálisis elimina poco.",
-    "hepaticDose": "Sin ajuste hepático numérico estandarizado.",
-    "commonAdverseEffects": [
-      "Fiebre/escalofríos",
-      "Náuseas",
-      "Hipopotasemia",
-      "Hipomagnesemia",
-      "Anemia"
-    ],
-    "dangerousAdverseEffects": [
-      "Nefrotoxicidad grave",
-      "Arritmias por electrolitos",
-      "Anafilaxia",
-      "Parada cardiorrespiratoria por sobredosis",
-      "Flebitis"
-    ],
-    "adverseEffects": "Más nefrotóxica y reactogénica que la formulación liposomal.",
-    "contraindications": "Hipersensibilidad grave; valorar riesgo/beneficio en infección mortal.",
-    "interactions": "Nefrotóxicos y depletores de K aumentan toxicidad; hipopotasemia potencia digoxina/bloqueadores neuromusculares.",
-    "monitoring": "Creatinina/BUN, K, Mg, hemograma, hígado y reacción infusional.",
-    "administration": "Solo IV; NO intercambiar formulaciones.",
-    "preparation": "Reconstituir 50 mg con 10 mL de agua estéril a 5 mg/mL; diluir en dextrosa generalmente <=0,1 mg/mL.",
-    "infusionProtocol": "Infusión lenta 2–6 h según tolerancia; nunca >1,5 mg/kg.",
-    "pregnancy": "Opción sistémica histórica cuando antifúngico sistémico es necesario.",
-    "lactation": "Datos limitados.",
-    "specialPopulations": "ERC/nefrotóxicos aumentan riesgo; liposomal suele preferirse si preocupa riñón.",
-    "patientEducation": "Es la formulación convencional más nefrotóxica y requiere controles renales/electrolíticos.",
-    "clinicalPearls": "Desoxicolato y liposomal no son equivalentes mg/kg; exceder 1,5 mg/kg de desoxicolato puede ser fatal.",
-    "guidelineRecommendations": "Usar formulación/dosis específicas del foco; en muchos escenarios modernos se prefiere liposomal por menor nefrotoxicidad.",
-    "safetyFlags": [
-      "DESOXICOLATO",
-      "NO intercambiable con liposomal",
-      "Nefrotoxicidad alta",
-      "K/Mg",
-      "Máx 1,5 mg/kg"
-    ],
-    "alerts": [
-      "Inicio 0,25 mg/kg/día",
-      "Usual 0,5–0,7 mg/kg/día",
-      "Nunca >1,5 mg/kg",
-      "Reconstituir 5 mg/mL",
-      "Diluir en dextrosa"
-    ],
+    "pharmacologicClass": "Unión a ergosterol y formación de poros",
+    "mechanism": "Unión a ergosterol y formación de poros. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Amplia distribución tisular, alta unión proteica, eliminación lenta y semivida terminal prolongada; no dializable de forma relevante.",
+    "indications": "Micosis sistémicas progresivas potencialmente mortales por organismos sensibles; no usar para candidiasis superficial en inmunocompetente.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Vial liofilizado 50 mg. No intercambiable mg por mg con formulaciones lipídicas/liposomales.",
+    "presentations": "Vial liofilizado 50 mg. No intercambiable mg por mg con formulaciones lipídicas/liposomales.",
+    "dose": "Puede usarse dosis prueba según ficha. Iniciar generalmente 0,25 mg/kg/día IV y aumentar; rango usual 0,5-1 mg/kg/día según infección/tolerancia; nunca superar 1,5 mg/kg/día.",
+    "pediatricDose": "Regímenes pediátricos por kg pueden ser similares, pero requieren infectología y vigilancia intensiva. AUTOMATABLE=NO.",
+    "renalDose": "No hay ajuste fijo confiable; nefrotoxicidad exige vigilancia, hidratación/sodio y posible suspensión/reducción.",
+    "hepaticDose": "Sin ajuste fijo; controlar función hepática.",
+    "commonAdverseEffects": "Fiebre, escalofríos, náusea, vómito, cefalea, flebitis e hipopotasemia.",
+    "dangerousAdverseEffects": "Nefrotoxicidad, arritmia por trastornos electrolíticos, anafilaxia, anemia y paro cardíaco por administración incorrecta.",
+    "adverseEffects": "Fiebre, escalofríos, náusea, vómito, cefalea, flebitis e hipopotasemia. Graves: Nefrotoxicidad, arritmia por trastornos electrolíticos, anafilaxia, anemia y paro cardíaco por administración incorrecta.",
+    "contraindications": "Hipersensibilidad, salvo enfermedad mortal tratable solo con el fármaco.",
+    "interactions": "Otros nefrotóxicos, diuréticos, corticoides, digitálicos, flucitosina y relajantes neuromusculares requieren precaución.",
+    "monitoring": "Creatinina/BUN, K, Mg, hemograma, función hepática, balance hídrico y reacción a infusión.",
+    "administration": "IV por línea dedicada, bajo observación estrecha; nunca IM ni bolo.",
+    "preparation": "Reconstituir 50 mg con 10 mL de agua estéril sin bacteriostático (5 mg/mL); diluir solo en glucosa 5% a concentración final generalmente 0,1 mg/mL. No usar salina.",
+    "infusionProtocol": "Infundir lentamente durante aproximadamente 2-6 h; velocidad rápida aumenta toxicidad.",
+    "pregnancy": "Usar solo si es claramente necesario; ponderar experiencia clínica frente a toxicidad.",
+    "lactation": "Datos limitados; individualizar y vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Nefrotoxicidad, arritmia por trastornos electrolíticos, anafilaxia, anemia y paro cardíaco por administración incorrecta. Formulação e diluente são críticos; cálculo e preparo bloqueados sem peso, indicação e produto confirmados.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=amphotericin+B+deoxycholate",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-pediatric-opportunistic-infections/table-3-treatment-full"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce"
     ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://clinicalinfo.hiv.gov/en/guidelines/adult-and-adolescent-opportunistic-infection/cryptococcosis",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=amphotericin+B+deoxycholate"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a54943-9ce4-4f3e-b681-a1a9144c16ce"
   },
   "name": {
     "pt": "Anfotericina B desoxicolato",
@@ -170,9 +86,21 @@
     "anfotericina_desoxicolato",
     "anfotericina b desoxicolato"
   ],
-  "dataVersion": "clinical-data-v1-12ba8ad15e98178c",
-  "clinicalContentSha256": "12ba8ad15e98178c5bd41c8f5078d65a9b7455b1b496e724a8ddbe3acc0c73de",
+  "dataVersion": "clinical-data-v1-651204207193a35d",
+  "clinicalContentSha256": "651204207193a35d2fbaf4355a7b18420752b1899e9a148516ddda3d0f89a82b",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "infectologia.js"
+  "sourceModule": "infectologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "anfotericina_desoxicolato.mcGoldClinicalV1",
+    "lote": "006",
+    "requiredFields": 33,
+    "approvedSha256": "29dcd13d6e24b2553690505773d6f3cc674de822214a06576063ea319921645d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }
