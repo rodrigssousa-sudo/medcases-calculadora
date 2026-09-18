@@ -1649,3 +1649,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:bilastina:END */
+/* GOLD33_SELECTIVE:cetirizina:START */
+;(function(){var db=window.ALERGIA_IMUNOLOGIA_DRUGS_DB;if(!db||!db["cetirizina"])throw new Error("GOLD33_MISSING_CANONICAL:cetirizina");db["cetirizina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "017",
+    "requiredFieldCount": 33,
+    "approvedSha256": "253c17c2327715b3e25ab80e7138de200e935b80e7d849c1c6088a69116420a3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cetirizina",
+    "class": "Anti-histamínico H1 de 2ª geração",
+    "pharmacologicClass": "Antagonista periférico H1",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 5/10 mg; solução 1 mg/mL; outras apresentações conforme produto.",
+    "presentations": "Comprimidos 5/10 mg; solução 1 mg/mL; outras apresentações conforme produto.",
+    "mechanism": "Antagonista periférico H1. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Pouco metabolizada; eliminação renal predominante; meia-vida ~8 h.",
+    "indications": "Rinite alérgica e urticária.",
+    "dose": "Adulto e ≥6 anos: 5-10 mg VO uma vez/dia; máximo 10 mg/dia.",
+    "pediatricDose": "2-5 anos: 2,5 mg/dia, podendo chegar a 5 mg/dia; 6-23 meses: 2,5 mg/dia, e 12-23 meses pode usar 2,5 mg a cada 12 h conforme rótulo. AUTOMATABLE=NO.",
+    "renalDose": "Reduzir em comprometimento renal; evitar automação sem eGFR/idade.",
+    "hepaticDose": "Reduzir em comprometimento hepático.",
+    "commonAdverseEffects": "Sonolência, fadiga, boca seca e cefaleia.",
+    "dangerousAdverseEffects": "Hipersensibilidade grave e retenção urinária rara; prurido intenso pode ocorrer após suspensão prolongada.",
+    "adverseEffects": "Sonolência, fadiga, boca seca e cefaleia. Graves: Hipersensibilidade grave e retenção urinária rara; prurido intenso pode ocorrer após suspensão prolongada.",
+    "contraindications": "Hipersensibilidade a cetirizina, hidroxizina ou componentes.",
+    "interactions": "Álcool e depressores SNC aumentam sedação.",
+    "monitoring": "Controle de sintomas, sonolência e função renal em idosos.",
+    "administration": "VO com ou sem alimento; pode causar sonolência.",
+    "preparation": "Solução pronta; medir com dispositivo oral.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados geralmente tranquilizadores; usar menor dose eficaz.",
+    "lactation": "Pode ser compatível; observar sedação e produção de leite.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipersensibilidade grave e retenção urinária rara; prurido intenso pode ocorrer após suspensão prolongada. Dose bloqueada sem idade/peso pediátrico, concentração, rim/fígado e sedativos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cetirizine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requires-warning-about-rare-occurrence-severe-itching-after-stopping-long-term-use-oral-allergy"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cetirizine"
+  },
+  "es": {
+    "name": "Cetirizina",
+    "class": "Antihistamínico H1 de 2ª generación",
+    "pharmacologicClass": "Antagonista periférico H1",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 5/10 mg; solución 1 mg/mL; otras presentaciones según producto.",
+    "presentations": "Comprimidos 5/10 mg; solución 1 mg/mL; otras presentaciones según producto.",
+    "mechanism": "Antagonista periférico H1. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Poco metabolizada; eliminación renal predominante; semivida ~8 h.",
+    "indications": "Rinitis alérgica y urticaria.",
+    "dose": "Adulto y ≥6 años: 5-10 mg VO una vez/día; máximo 10 mg/día.",
+    "pediatricDose": "2-5 años: 2,5 mg/día, pudiendo llegar a 5 mg/día; 6-23 meses: 2,5 mg/día, y 12-23 meses puede usar 2,5 mg cada 12 h según ficha. AUTOMATABLE=NO.",
+    "renalDose": "Reducir en insuficiencia renal; evitar automatización sin eGFR/edad.",
+    "hepaticDose": "Reducir en insuficiencia hepática.",
+    "commonAdverseEffects": "Somnolencia, fatiga, boca seca y cefalea.",
+    "dangerousAdverseEffects": "Hipersensibilidad grave y retención urinaria rara; prurito intenso puede aparecer tras suspensión prolongada.",
+    "adverseEffects": "Somnolencia, fatiga, boca seca y cefalea. Graves: Hipersensibilidad grave y retención urinaria rara; prurito intenso puede aparecer tras suspensión prolongada.",
+    "contraindications": "Hipersensibilidad a cetirizina, hidroxizina o componentes.",
+    "interactions": "Alcohol y depresores SNC aumentan sedación.",
+    "monitoring": "Control de síntomas, somnolencia y función renal en ancianos.",
+    "administration": "VO con o sin alimentos; puede causar somnolencia.",
+    "preparation": "Solución lista; medir con dispositivo oral.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos generalmente tranquilizadores; usar menor dosis eficaz.",
+    "lactation": "Puede ser compatible; vigilar sedación y producción de leche.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipersensibilidad grave y retención urinaria rara; prurito intenso puede aparecer tras suspensión prolongada. Dose bloqueada sem idade/peso pediátrico, concentração, rim/fígado e sedativos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cetirizine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requires-warning-about-rare-occurrence-severe-itching-after-stopping-long-term-use-oral-allergy"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cetirizine"
+  }
+};})();
+/* GOLD33_SELECTIVE:cetirizina:END */

@@ -4197,3 +4197,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:carbocisteina:END */
+/* GOLD33_SELECTIVE:ciclesonida:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["ciclesonida"])throw new Error("GOLD33_MISSING_CANONICAL:ciclesonida");db["ciclesonida"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "017",
+    "requiredFieldCount": 33,
+    "approvedSha256": "253c17c2327715b3e25ab80e7138de200e935b80e7d849c1c6088a69116420a3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ciclesonida inalatória",
+    "class": "Corticosteroide inalatório",
+    "pharmacologicClass": "Pró-fármaco ativado no pulmão com ação glicocorticoide",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Aerossol dosimetrado 80 ou 160 mcg por atuação conforme produto.",
+    "presentations": "Aerossol dosimetrado 80 ou 160 mcg por atuação conforme produto.",
+    "mechanism": "Pró-fármaco ativado no pulmão com ação glicocorticoide. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Ativada por esterases pulmonares; alta ligação; metabolismo CYP3A4; baixa exposição sistêmica.",
+    "indications": "Manutenção da asma; não indicada para broncoespasmo agudo.",
+    "dose": "Adultos/adolescentes: 80-320 mcg inalados 2x/dia conforme terapia prévia; máximo rotulado pode chegar a 640 mcg 2x/dia em pacientes selecionados.",
+    "pediatricDose": "≥12 anos no rótulo EUA; segurança abaixo não estabelecida. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste.",
+    "hepaticDose": "Dados limitados; cautela em grave.",
+    "commonAdverseEffects": "Cefaleia, nasofaringite, disfonia e candidíase oral.",
+    "dangerousAdverseEffects": "Broncoespasmo paradoxal, supressão adrenal, glaucoma/catarata, perda óssea e infecções.",
+    "adverseEffects": "Cefaleia, nasofaringite, disfonia e candidíase oral. Graves: Broncoespasmo paradoxal, supressão adrenal, glaucoma/catarata, perda óssea e infecções.",
+    "contraindications": "Hipersensibilidade; tratamento primário de status asmático/episódio agudo.",
+    "interactions": "Inibidores fortes CYP3A4 podem aumentar exposição sistêmica.",
+    "monitoring": "Controle, técnica, uso de resgate, candidíase, crescimento, olhos, osso e supressão adrenal em altas doses.",
+    "administration": "Inalar regularmente; preparar dispositivo, coordenar inspiração e lavar boca após uso.",
+    "preparation": "Não lavar atuador com água; seguir priming e limpeza do fabricante.",
+    "infusionProtocol": "Não aplicável; não usar em nebulizador.",
+    "pregnancy": "Manter controle da asma; usar menor dose eficaz.",
+    "lactation": "Exposição sistêmica baixa; compatibilidade provável com monitorização.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Broncoespasmo paradoxal, supressão adrenal, glaucoma/catarata, perda óssea e infecções. Dose bloqueada sem idade, gravidade, tratamento prévio, técnica, adesão e plano de resgate.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ALVESCO",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://ginasthma.org/2025-gina-strategy-report/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ALVESCO"
+  },
+  "es": {
+    "name": "Ciclesonida inhalada",
+    "class": "Corticoide inhalado",
+    "pharmacologicClass": "Profármaco activado en pulmón con acción glucocorticoide",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Aerosol dosificado 80 o 160 mcg por actuación según producto.",
+    "presentations": "Aerosol dosificado 80 o 160 mcg por actuación según producto.",
+    "mechanism": "Profármaco activado en pulmón con acción glucocorticoide. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Activada por esterasas pulmonares; alta unión; metabolismo CYP3A4; baja exposición sistémica.",
+    "indications": "Mantenimiento del asma; no indicada para broncoespasmo agudo.",
+    "dose": "Adultos/adolescentes: 80-320 mcg inhalados 2 veces/día según terapia previa; máximo autorizado puede llegar a 640 mcg 2 veces/día en pacientes seleccionados.",
+    "pediatricDose": "≥12 años en ficha EE. UU.; seguridad por debajo no establecida. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste.",
+    "hepaticDose": "Datos limitados; precaución en grave.",
+    "commonAdverseEffects": "Cefalea, nasofaringitis, disfonía y candidiasis oral.",
+    "dangerousAdverseEffects": "Broncoespasmo paradójico, supresión suprarrenal, glaucoma/catarata, pérdida ósea e infecciones.",
+    "adverseEffects": "Cefalea, nasofaringitis, disfonía y candidiasis oral. Graves: Broncoespasmo paradójico, supresión suprarrenal, glaucoma/catarata, pérdida ósea e infecciones.",
+    "contraindications": "Hipersensibilidad; tratamiento primario de estatus asmático/episodio agudo.",
+    "interactions": "Inhibidores fuertes CYP3A4 pueden aumentar exposición sistémica.",
+    "monitoring": "Control, técnica, uso de rescate, candidiasis, crecimiento, ojos, hueso y supresión suprarrenal a dosis altas.",
+    "administration": "Inhalar regularmente; preparar dispositivo, coordinar inspiración y enjuagar boca.",
+    "preparation": "No lavar actuador con agua; seguir cebado y limpieza del fabricante.",
+    "infusionProtocol": "No aplicable; no usar en nebulizador.",
+    "pregnancy": "Mantener control del asma; usar menor dosis eficaz.",
+    "lactation": "Exposición sistémica baja; compatibilidad probable con vigilancia.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Broncoespasmo paradójico, supresión suprarrenal, glaucoma/catarata, pérdida ósea e infecciones. Dose bloqueada sem idade, gravidade, tratamento prévio, técnica, adesão e plano de resgate.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ALVESCO",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://ginasthma.org/2025-gina-strategy-report/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ALVESCO"
+  }
+};})();
+/* GOLD33_SELECTIVE:ciclesonida:END */

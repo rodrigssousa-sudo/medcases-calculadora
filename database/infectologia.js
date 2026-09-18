@@ -7873,3 +7873,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:ceftriaxona:END */
+/* GOLD33_SELECTIVE:cetoconazol_oral:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB;if(!db||!db["cetoconazol_oral"])throw new Error("GOLD33_MISSING_CANONICAL:cetoconazol_oral");db["cetoconazol_oral"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "017",
+    "requiredFieldCount": 33,
+    "approvedSha256": "253c17c2327715b3e25ab80e7138de200e935b80e7d849c1c6088a69116420a3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cetoconazol oral",
+    "class": "Antifúngico azólico sistêmico restrito",
+    "pharmacologicClass": "Inibe síntese de ergosterol via CYP51",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 200 mg.",
+    "presentations": "Comprimidos 200 mg.",
+    "mechanism": "Inibe síntese de ergosterol via CYP51. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção pH-dependente; metabolismo hepático CYP3A4; excreção biliar.",
+    "indications": "Somente micoses sistêmicas selecionadas quando alternativas eficazes não estão disponíveis ou toleradas; não usar para infecção cutânea/unhas.",
+    "dose": "200 mg VO uma vez/dia; pode aumentar a 400 mg/dia se resposta insuficiente. Uso excepcional e especializado.",
+    "pediatricDose": "≥2 anos: 3,3-6,6 mg/kg/dia em rótulos históricos; uso atual fortemente restrito. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal, mas risco de interações e doença crítica.",
+    "hepaticDose": "Contraindicado em doença hepática aguda ou crônica.",
+    "commonAdverseEffects": "Náusea, vômito, dor abdominal e prurido.",
+    "dangerousAdverseEffects": "Hepatotoxicidade fatal/transplante, QT/torsades, insuficiência adrenal e interações fatais.",
+    "adverseEffects": "Náusea, vômito, dor abdominal e prurido. Graves: Hepatotoxicidade fatal/transplante, QT/torsades, insuficiência adrenal e interações fatais.",
+    "contraindications": "Doença hepática, hipersensibilidade e múltiplos substratos CYP3A4 associados a QT/toxicidade.",
+    "interactions": "Potente inibidor CYP3A4; antiácidos/IBP reduzem absorção; numerosas combinações contraindicadas por QT, sedação ou rabdomiólise.",
+    "monitoring": "ALT/AST/bilirrubina basal e semanal, sintomas hepáticos, QT, cortisol e interações.",
+    "administration": "VO; absorção exige acidez gástrica.",
+    "preparation": "Comprimido pronto.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Evitar; potencial risco fetal e materno.",
+    "lactation": "Evitar uso sistêmico; dados insuficientes e risco materno.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hepatotoxicidade fatal/transplante, QT/torsades, insuficiência adrenal e interações fatais. Uso bloqueado salvo especialista confirmar ausência de alternativa, indicação sistêmica, fígado normal, interações/QT e monitorização semanal.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ketoconazole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-limits-usage-nizoral-ketoconazole-oral-tablets-due-potentially-fatal"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ketoconazole"
+  },
+  "es": {
+    "name": "Ketoconazol oral",
+    "class": "Antifúngico azólico sistémico restringido",
+    "pharmacologicClass": "Inhibe síntesis de ergosterol vía CYP51",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 200 mg.",
+    "presentations": "Comprimidos 200 mg.",
+    "mechanism": "Inhibe síntesis de ergosterol vía CYP51. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción dependiente de pH; metabolismo hepático CYP3A4; excreción biliar.",
+    "indications": "Solo micosis sistémicas seleccionadas cuando alternativas eficaces no están disponibles o toleradas; no usar para infección cutánea/uñas.",
+    "dose": "200 mg VO una vez/día; puede aumentar a 400 mg/día si respuesta insuficiente. Uso excepcional y especializado.",
+    "pediatricDose": "≥2 años: 3,3-6,6 mg/kg/día en fichas históricas; uso actual muy restringido. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal, pero riesgo de interacciones y enfermedad crítica.",
+    "hepaticDose": "Contraindicado en enfermedad hepática aguda o crónica.",
+    "commonAdverseEffects": "Náusea, vómito, dolor abdominal y prurito.",
+    "dangerousAdverseEffects": "Hepatotoxicidad fatal/trasplante, QT/torsades, insuficiencia suprarrenal e interacciones fatales.",
+    "adverseEffects": "Náusea, vómito, dolor abdominal y prurito. Graves: Hepatotoxicidad fatal/trasplante, QT/torsades, insuficiencia suprarrenal e interacciones fatales.",
+    "contraindications": "Enfermedad hepática, hipersensibilidad y múltiples sustratos CYP3A4 asociados a QT/toxicidad.",
+    "interactions": "Potente inhibidor CYP3A4; antiácidos/IBP reducen absorción; numerosas combinaciones contraindicadas por QT, sedación o rabdomiólisis.",
+    "monitoring": "ALT/AST/bilirrubina basal y semanal, síntomas hepáticos, QT, cortisol e interacciones.",
+    "administration": "VO; absorción requiere acidez gástrica.",
+    "preparation": "Comprimido listo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Evitar; potencial riesgo fetal y materno.",
+    "lactation": "Evitar uso sistémico; datos insuficientes y riesgo materno.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hepatotoxicidad fatal/trasplante, QT/torsades, insuficiencia suprarrenal e interacciones fatales. Uso bloqueado salvo especialista confirmar ausência de alternativa, indicação sistêmica, fígado normal, interações/QT e monitorização semanal.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ketoconazole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-limits-usage-nizoral-ketoconazole-oral-tablets-due-potentially-fatal"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ketoconazole"
+  }
+};})();
+/* GOLD33_SELECTIVE:cetoconazol_oral:END */

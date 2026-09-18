@@ -3520,3 +3520,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:carvao_ativado:END */
+/* GOLD33_SELECTIVE:cetamina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["cetamina"])throw new Error("GOLD33_MISSING_CANONICAL:cetamina");db["cetamina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "017",
+    "requiredFieldCount": 33,
+    "approvedSha256": "253c17c2327715b3e25ab80e7138de200e935b80e7d849c1c6088a69116420a3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cetamina",
+    "class": "Anestésico dissociativo",
+    "pharmacologicClass": "Antagonista não competitivo NMDA",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Solução injetável 10, 50 ou 100 mg/mL conforme produto.",
+    "presentations": "Solução injetável 10, 50 ou 100 mg/mL conforme produto.",
+    "mechanism": "Antagonista não competitivo NMDA. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Distribuição rápida, metabolismo CYP a norketamina, meia-vida terminal ~2-3 h.",
+    "indications": "Indução/manutenção de anestesia e procedimentos conforme ambiente monitorizado; usos analgésicos são protocolizados/off-label.",
+    "dose": "Indução IV: 1-4,5 mg/kg, média 2 mg/kg administrada lentamente; IM: 6,5-13 mg/kg, média 10 mg/kg. Dose depende de objetivo e coadjuvantes.",
+    "pediatricDose": "Dose anestésica pediátrica individualizada por anestesia; AUTOMATABLE=NO sem ambiente, via e peso.",
+    "renalDose": "Sem ajuste formal; cautela e titulação.",
+    "hepaticDose": "Cautela; uso repetido pode causar hepatotoxicidade.",
+    "commonAdverseEffects": "Hipertensão, taquicardia, náusea, hipersalivação e fenômenos de emergência.",
+    "dangerousAdverseEffects": "Apneia/laringoespasmo, arritmia, hipertensão grave, delírio e abuso/dependência.",
+    "adverseEffects": "Hipertensão, taquicardia, náusea, hipersalivação e fenômenos de emergência. Graves: Apneia/laringoespasmo, arritmia, hipertensão grave, delírio e abuso/dependência.",
+    "contraindications": "Condição em que aumento importante da PA represente risco grave.",
+    "interactions": "Depressores SNC/opioides aumentam sedação; simpaticomiméticos elevam PA; teofilina pode reduzir limiar convulsivo.",
+    "monitoring": "PA, FC, SpO2, ventilação, via aérea, emergência, secreções e recuperação.",
+    "administration": "IV lenta ou IM por equipe treinada, com via aérea, ventilação e ressuscitação disponíveis.",
+    "preparation": "Confirmar concentração; diluir apenas conforme produto/protocolo.",
+    "infusionProtocol": "Bolus IV rápido aumenta depressão respiratória e resposta pressórica; administrar lentamente.",
+    "pregnancy": "Usar somente se benefício justificar; pode aumentar tônus uterino em doses obstétricas altas.",
+    "lactation": "Dados limitados; avaliar pausa conforme dose e sedação.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Apneia/laringoespasmo, arritmia, hipertensão grave, delírio e abuso/dependência. Dose/administração bloqueadas sem indicação, peso, concentração, via, monitorização, equipe de via aérea e risco cardiovascular.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ketamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/ketamine"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ketamine"
+  },
+  "es": {
+    "name": "Ketamina",
+    "class": "Anestésico disociativo",
+    "pharmacologicClass": "Antagonista no competitivo NMDA",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Solución inyectable 10, 50 o 100 mg/mL según producto.",
+    "presentations": "Solución inyectable 10, 50 o 100 mg/mL según producto.",
+    "mechanism": "Antagonista no competitivo NMDA. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Distribución rápida, metabolismo CYP a norketamina, semivida terminal ~2-3 h.",
+    "indications": "Inducción/mantenimiento anestésico y procedimientos en entorno monitorizado; usos analgésicos son protocolizados/off-label.",
+    "dose": "Inducción IV: 1-4,5 mg/kg, promedio 2 mg/kg administrado lentamente; IM: 6,5-13 mg/kg, promedio 10 mg/kg. Dosis depende de objetivo y coadyuvantes.",
+    "pediatricDose": "Dosis anestésica pediátrica individualizada por anestesia; AUTOMATABLE=NO sin entorno, vía y peso.",
+    "renalDose": "Sin ajuste formal; precaución y titulación.",
+    "hepaticDose": "Precaución; uso repetido puede causar hepatotoxicidad.",
+    "commonAdverseEffects": "Hipertensión, taquicardia, náusea, hipersalivación y fenómenos de emergencia.",
+    "dangerousAdverseEffects": "Apnea/laringoespasmo, arritmia, hipertensión grave, delirio y abuso/dependencia.",
+    "adverseEffects": "Hipertensión, taquicardia, náusea, hipersalivación y fenómenos de emergencia. Graves: Apnea/laringoespasmo, arritmia, hipertensión grave, delirio y abuso/dependencia.",
+    "contraindications": "Condición en que aumento importante de PA represente riesgo grave.",
+    "interactions": "Depresores SNC/opioides aumentan sedación; simpaticomiméticos elevan PA; teofilina puede reducir umbral convulsivo.",
+    "monitoring": "PA, FC, SpO2, ventilación, vía aérea, emergencia, secreciones y recuperación.",
+    "administration": "IV lenta o IM por equipo entrenado, con vía aérea, ventilación y reanimación disponibles.",
+    "preparation": "Confirmar concentración; diluir solo según producto/protocolo.",
+    "infusionProtocol": "Bolo IV rápido aumenta depresión respiratoria y respuesta hipertensiva; administrar lentamente.",
+    "pregnancy": "Usar solo si beneficio justifica; puede aumentar tono uterino a dosis obstétricas altas.",
+    "lactation": "Datos limitados; valorar pausa según dosis y sedación.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Apnea/laringoespasmo, arritmia, hipertensión grave, delirio y abuso/dependencia. Dose/administração bloqueadas sem indicação, peso, concentração, via, monitorização, equipe de via aérea e risco cardiovascular.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ketamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/ketamine"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ketamine"
+  }
+};})();
+/* GOLD33_SELECTIVE:cetamina:END */
