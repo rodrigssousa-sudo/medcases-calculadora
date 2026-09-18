@@ -3880,3 +3880,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:cloreto_potassio:END */
+/* GOLD33_SELECTIVE:deferoxamina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["deferoxamina"])throw new Error("GOLD33_MISSING_CANONICAL:deferoxamina");db["deferoxamina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "023",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ddd43232bffb6d2fdf6447f4d98a9bfbf2223ee2bd963eb5420620e5362f6de6",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Deferoxamina",
+    "class": "Quelante de ferro",
+    "pharmacologicClass": "Liga ferro férrico e alumínio formando complexos excretáveis",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Pó liofilizado 500 mg e 2 g para SC/IM/IV.",
+    "presentations": "Pó liofilizado 500 mg e 2 g para SC/IM/IV.",
+    "mechanism": "Liga ferro férrico e alumínio formando complexos excretáveis. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Quelatos eliminados na urina e bile; meia-vida curta.",
+    "indications": "Sobrecarga crônica de ferro transfusional, intoxicação aguda por ferro e sobrecarga de alumínio em DRC selecionada.",
+    "dose": "Sobrecarga crônica: usual 20–60 mg/kg/dia SC por 8–12 h, 5–7 dias/semana; intoxicação aguda: IV até 15 mg/kg/h, máximo diário dependente do caso/protocolo.",
+    "pediatricDose": "Dose por peso e carga férrica; evitar doses excessivas em crianças pelo crescimento. AUTOMATABLE=NO.",
+    "renalDose": "Reduzir/evitar em insuficiência renal grave salvo indicação dialítica especializada.",
+    "hepaticDose": "Sem ajuste definido; monitorar.",
+    "commonAdverseEffects": "Dor local, rash, febre, hipotensão.",
+    "dangerousAdverseEffects": "Choque por infusão rápida, toxicidade ocular/auditiva, ARDS, lesão renal e infecção invasiva.",
+    "adverseEffects": "Dor local, rash, febre, hipotensão. Graves: Choque por infusão rápida, toxicidade ocular/auditiva, ARDS, lesão renal e infecção invasiva.",
+    "contraindications": "Doença renal grave/anúria quando eliminação do quelato inviável; hipersensibilidade.",
+    "interactions": "Vitamina C em altas doses aumenta risco cardíaco; proclorperazina e gálio-67 interferem.",
+    "monitoring": "Ferritina/carga de ferro, audição, visão, crescimento, rim/fígado, infecções por Yersinia/mucor.",
+    "administration": "SC lenta por bomba para crônica; IV somente monitorada em intoxicação grave.",
+    "preparation": "Reconstituir exatamente conforme produto; concentração e via determinam diluente.",
+    "infusionProtocol": "Não exceder taxa IV; infusão rápida pode causar colapso.",
+    "pregnancy": "Usar se claramente indicada.",
+    "lactation": "Dados limitados; cautela.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Choque por infusão rápida, toxicidade ocular/auditiva, ARDS, lesão renal e infecção invasiva. Cálculo/infusão bloqueados sem indicação, peso, ferro sérico/ferritina, rim, via, concentração, bomba e monitorização ocular/auditiva.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=deferoxamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/016267s050lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=deferoxamine"
+  },
+  "es": {
+    "name": "Deferoxamina",
+    "class": "Quelante de hierro",
+    "pharmacologicClass": "Une hierro férrico y aluminio formando complejos excretables",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Polvo liofilizado 500 mg y 2 g para SC/IM/IV.",
+    "presentations": "Polvo liofilizado 500 mg y 2 g para SC/IM/IV.",
+    "mechanism": "Une hierro férrico y aluminio formando complejos excretables. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Quelatos eliminados en orina y bilis; semivida corta.",
+    "indications": "Sobrecarga crónica transfusional de hierro, intoxicación aguda por hierro y sobrecarga de aluminio en ERC seleccionada.",
+    "dose": "Sobrecarga crónica: habitual 20–60 mg/kg/día SC por 8–12 h, 5–7 días/semana; intoxicación aguda: IV hasta 15 mg/kg/h, máximo diario según caso/protocolo.",
+    "pediatricDose": "Dosis por peso y carga férrica; evitar dosis excesivas en niños por crecimiento. AUTOMATABLE=NO.",
+    "renalDose": "Reducir/evitar en insuficiencia renal grave salvo indicación dialítica especializada.",
+    "hepaticDose": "Sin ajuste definido; controlar.",
+    "commonAdverseEffects": "Dolor local, erupción, fiebre, hipotensión.",
+    "dangerousAdverseEffects": "Choque por infusión rápida, toxicidad ocular/auditiva, SDRA, lesión renal e infección invasiva.",
+    "adverseEffects": "Dolor local, erupción, fiebre, hipotensión. Graves: Choque por infusión rápida, toxicidad ocular/auditiva, SDRA, lesión renal e infección invasiva.",
+    "contraindications": "Enfermedad renal grave/anuria cuando eliminación del quelato es inviable; hipersensibilidad.",
+    "interactions": "Vitamina C en dosis altas aumenta riesgo cardíaco; proclorperazina y galio-67 interfieren.",
+    "monitoring": "Ferritina/carga de hierro, audición, visión, crecimiento, riñón/hígado, infecciones por Yersinia/mucor.",
+    "administration": "SC lenta por bomba para crónica; IV solo monitorizada en intoxicación grave.",
+    "preparation": "Reconstituir exactamente según producto; concentración y vía determinan diluyente.",
+    "infusionProtocol": "No exceder velocidad IV; infusión rápida puede causar colapso.",
+    "pregnancy": "Usar si claramente indicada.",
+    "lactation": "Datos limitados; precaución.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Choque por infusión rápida, toxicidad ocular/auditiva, SDRA, lesión renal e infección invasiva. Cálculo/infusão bloqueados sem indicação, peso, ferro sérico/ferritina, rim, via, concentração, bomba e monitorização ocular/auditiva.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=deferoxamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/016267s050lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=deferoxamine"
+  }
+};})();
+/* GOLD33_SELECTIVE:deferoxamina:END */

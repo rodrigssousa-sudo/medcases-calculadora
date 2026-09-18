@@ -6047,3 +6047,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:clordiazepoxido:END */
+/* GOLD33_SELECTIVE:desipramina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["desipramina"])throw new Error("GOLD33_MISSING_CANONICAL:desipramina");db["desipramina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "023",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ddd43232bffb6d2fdf6447f4d98a9bfbf2223ee2bd963eb5420620e5362f6de6",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Desipramina",
+    "class": "Antidepressivo tricíclico",
+    "pharmacologicClass": "Inibe recaptação de noradrenalina; efeitos anticolinérgicos e cardíacos",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 10–150 mg conforme produto.",
+    "presentations": "Comprimidos 10–150 mg conforme produto.",
+    "mechanism": "Inibe recaptação de noradrenalina; efeitos anticolinérgicos e cardíacos. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático CYP2D6; meia-vida variável.",
+    "indications": "Transtorno depressivo maior em adultos; uso exige avaliação de risco suicida e cardíaco.",
+    "dose": "100–200 mg/dia VO em doses divididas ou única; iniciar baixo. Máximo 300 mg/dia apenas em pacientes selecionados e monitorados.",
+    "pediatricDose": "Não recomendada rotineiramente; risco suicida/cardíaco. AUTOMATABLE=NO.",
+    "renalDose": "Cautela e dose menor em DRC.",
+    "hepaticDose": "Cautela e dose menor em hepatopatia.",
+    "commonAdverseEffects": "Boca seca, constipação, visão turva, sedação, ortostatismo.",
+    "dangerousAdverseEffects": "Arritmia/morte em overdose, convulsão, síndrome serotoninérgica, mania e suicídio.",
+    "adverseEffects": "Boca seca, constipação, visão turva, sedação, ortostatismo. Graves: Arritmia/morte em overdose, convulsão, síndrome serotoninérgica, mania e suicídio.",
+    "contraindications": "Uso com IMAO ou até 14 dias; fase aguda pós-IM; hipersensibilidade a TCA.",
+    "interactions": "IMAO, serotonérgicos, CYP2D6, antiarrítmicos/QT, anticolinérgicos e álcool.",
+    "monitoring": "Humor/suicídio, ECG, PA, frequência, efeitos anticolinérgicos, sódio e nível se indicado.",
+    "administration": "VO; titulação gradual e desmame.",
+    "preparation": "Comprimido pronto.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar apenas se benefício justificar.",
+    "lactation": "Pode causar efeitos no lactente; preferir alternativa.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Arritmia/morte em overdose, convulsão, síndrome serotoninérgica, mania e suicídio. Início/titulação bloqueados sem diagnóstico, risco suicida/overdose, ECG, comorbidades cardíacas, CYP2D6, interações e plano de seguimento.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desipramine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/suicidality-children-and-adolescents-being-treated-antidepressant-medications"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desipramine"
+  },
+  "es": {
+    "name": "Desipramina",
+    "class": "Antidepresivo tricíclico",
+    "pharmacologicClass": "Inhibe recaptación de noradrenalina; efectos anticolinérgicos y cardíacos",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 10–150 mg según producto.",
+    "presentations": "Comprimidos 10–150 mg según producto.",
+    "mechanism": "Inhibe recaptación de noradrenalina; efectos anticolinérgicos y cardíacos. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático CYP2D6; semivida variable.",
+    "indications": "Trastorno depresivo mayor en adultos; uso exige evaluación de riesgo suicida y cardíaco.",
+    "dose": "100–200 mg/día VO en dosis divididas o única; iniciar bajo. Máximo 300 mg/día solo en pacientes seleccionados y monitorizados.",
+    "pediatricDose": "No recomendada rutinariamente; riesgo suicida/cardíaco. AUTOMATABLE=NO.",
+    "renalDose": "Precaución y dosis menor en ERC.",
+    "hepaticDose": "Precaución y dosis menor en hepatopatía.",
+    "commonAdverseEffects": "Boca seca, estreñimiento, visión borrosa, sedación, ortostatismo.",
+    "dangerousAdverseEffects": "Arritmia/muerte en sobredosis, convulsión, síndrome serotoninérgico, manía y suicidio.",
+    "adverseEffects": "Boca seca, estreñimiento, visión borrosa, sedación, ortostatismo. Graves: Arritmia/muerte en sobredosis, convulsión, síndrome serotoninérgico, manía y suicidio.",
+    "contraindications": "Uso con IMAO o hasta 14 días; fase aguda pos-IM; hipersensibilidad a TCA.",
+    "interactions": "IMAO, serotoninérgicos, CYP2D6, antiarrítmicos/QT, anticolinérgicos y alcohol.",
+    "monitoring": "Ánimo/suicidio, ECG, PA, frecuencia, efectos anticolinérgicos, sodio y nivel si indicado.",
+    "administration": "VO; titulación gradual y retirada progresiva.",
+    "preparation": "Comprimido listo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Usar solo si beneficio justifica.",
+    "lactation": "Puede causar efectos en lactante; preferir alternativa.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Arritmia/muerte en sobredosis, convulsión, síndrome serotoninérgico, manía y suicidio. Início/titulação bloqueados sem diagnóstico, risco suicida/overdose, ECG, comorbidades cardíacas, CYP2D6, interações e plano de seguimento.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desipramine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/suicidality-children-and-adolescents-being-treated-antidepressant-medications"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desipramine"
+  }
+};})();
+/* GOLD33_SELECTIVE:desipramina:END */
