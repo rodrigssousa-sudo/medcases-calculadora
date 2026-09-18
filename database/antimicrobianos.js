@@ -28031,3 +28031,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:doxiciclina:END */
+/* GOLD33_SELECTIVE:eravaciclina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["eravaciclina"])throw new Error("GOLD33_MISSING_CANONICAL:eravaciclina");db["eravaciclina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "030",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6726ebdc5c8e078f5314ad3a6cb32ce82725cad8ec97894513a3dac291dff38",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Eravaciclina",
+    "class": "Antibiótico fluorociclina",
+    "pharmacologicClass": "Liga subunidade 30S e inibe síntese proteica",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Pó IV 50 mg para reconstituição.",
+    "presentations": "Pó IV 50 mg para reconstituição.",
+    "mechanism": "Liga subunidade 30S e inibe síntese proteica. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP3A4; meia-vida ~20 h.",
+    "indications": "Infecções intra-abdominais complicadas em adultos por organismos suscetíveis.",
+    "dose": "1 mg/kg IV a cada 12 h por 4–14 dias.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste.",
+    "hepaticDose": "Child-Pugh C: 1 mg/kg q12h no dia 1, depois 1 mg/kg q24h; A/B sem ajuste.",
+    "commonAdverseEffects": "Náusea, vômito e reação no local.",
+    "dangerousAdverseEffects": "Anafilaxia, hepatotoxicidade, pancreatite, C. difficile e efeitos de classe em dentes/ossos fetais.",
+    "adverseEffects": "Náusea, vômito e reação no local. Graves: Anafilaxia, hepatotoxicidade, pancreatite, C. difficile e efeitos de classe em dentes/ossos fetais.",
+    "contraindications": "Hipersensibilidade a tetraciclinas.",
+    "interactions": "Indutores CYP3A fortes reduzem exposição e podem exigir ajuste.",
+    "monitoring": "Resposta, culturas, fígado, reação de infusão, pancreatite e C. difficile.",
+    "administration": "Infundir em aproximadamente 60 min após reconstituição/diluição.",
+    "preparation": "Confirmar produto, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo do produto.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar benefício materno, exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, hepatotoxicidade, pancreatite, C. difficile e efeitos de classe em dentes/ossos fetais. Cálculo bloqueado sem peso, foco/cultura, controle de foco, Child-Pugh, alergias e indutores CYP3A.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eravacycline",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/211109s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eravacycline"
+  },
+  "es": {
+    "name": "Eravaciclina",
+    "class": "Antibiótico fluorociclina",
+    "pharmacologicClass": "Se une a subunidad 30S e inhibe síntesis proteica",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Polvo IV 50 mg para reconstitución.",
+    "presentations": "Polvo IV 50 mg para reconstitución.",
+    "mechanism": "Se une a subunidad 30S e inhibe síntesis proteica. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP3A4; semivida ~20 h.",
+    "indications": "Infecciones intraabdominales complicadas en adultos por organismos susceptibles.",
+    "dose": "1 mg/kg IV cada 12 h por 4–14 días.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste.",
+    "hepaticDose": "Child-Pugh C: 1 mg/kg q12h día 1, luego 1 mg/kg q24h; A/B sin ajuste.",
+    "commonAdverseEffects": "Náusea, vómito y reacción local.",
+    "dangerousAdverseEffects": "Anafilaxia, hepatotoxicidad, pancreatitis, C. difficile y efectos de clase en dientes/huesos fetales.",
+    "adverseEffects": "Náusea, vómito y reacción local. Graves: Anafilaxia, hepatotoxicidad, pancreatitis, C. difficile y efectos de clase en dientes/huesos fetales.",
+    "contraindications": "Hipersensibilidad a tetraciclinas.",
+    "interactions": "Inductores CYP3A fuertes reducen exposición y pueden exigir ajuste.",
+    "monitoring": "Respuesta, cultivos, hígado, reacción de infusión, pancreatitis y C. difficile.",
+    "administration": "Infundir en aproximadamente 60 min tras reconstitución/dilución.",
+    "preparation": "Confirmar producto, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo del producto.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar beneficio materno, exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, hepatotoxicidad, pancreatitis, C. difficile y efectos de clase en dientes/huesos fetales. Cálculo bloqueado sem peso, foco/cultura, controle de foco, Child-Pugh, alergias e indutores CYP3A.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eravacycline",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/211109s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eravacycline"
+  }
+};})();
+/* GOLD33_SELECTIVE:eravaciclina:END */

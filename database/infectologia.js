@@ -8505,3 +8505,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:emtricitabina:END */
+/* GOLD33_SELECTIVE:entecavir:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB;if(!db||!db["entecavir"])throw new Error("GOLD33_MISSING_CANONICAL:entecavir");db["entecavir"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "030",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6726ebdc5c8e078f5314ad3a6cb32ce82725cad8ec97894513a3dac291dff38",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Entecavir",
+    "class": "Antiviral análogo nucleosídico",
+    "pharmacologicClass": "Inibe a polimerase do HBV",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 0,5/1 mg e solução 0,05 mg/mL.",
+    "presentations": "Comprimidos 0,5/1 mg e solução 0,05 mg/mL.",
+    "mechanism": "Inibe a polimerase do HBV. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Eliminação renal; meia-vida intracelular prolongada.",
+    "indications": "Hepatite B crônica com replicação viral ativa e evidência de doença.",
+    "dose": "Nucleosídeo-naïve: 0,5 mg VO/dia; resistência à lamivudina ou doença descompensada: 1 mg/dia.",
+    "pediatricDose": "≥2 anos e ≥10 kg: dose por peso/formulação, máximo 0,5 ou 1 mg conforme resistência. AUTOMATABLE=NO.",
+    "renalDose": "Ajustar dose/intervalo se CrCl <50 mL/min, inclusive diálise.",
+    "hepaticDose": "Sem ajuste; vigiar descompensação.",
+    "commonAdverseEffects": "Cefaleia, fadiga, tontura e náusea.",
+    "dangerousAdverseEffects": "Acidose láctica, hepatomegalia com esteatose e exacerbação grave após interrupção.",
+    "adverseEffects": "Cefaleia, fadiga, tontura e náusea. Graves: Acidose láctica, hepatomegalia com esteatose e exacerbação grave após interrupção.",
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "Poucas interações; nefrotóxicos ou competidores de secreção renal podem aumentar exposição.",
+    "monitoring": "HBV DNA, ALT, função hepática, CrCl, HIV antes de monoterapia e flare após suspensão.",
+    "administration": "Em jejum, especialmente em resistência à lamivudina/descompensação.",
+    "preparation": "Confirmar produto, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo do produto.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar benefício materno, exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Acidose láctica, hepatomegalia com esteatose e exacerbação grave após interrupção. Dose bloqueada sem HBV DNA, resistência prévia, HIV, CrCl, peso/idade, estado hepático e plano de seguimento pós-suspensão.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entecavir",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/021797s018,021798s019lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entecavir"
+  },
+  "es": {
+    "name": "Entecavir",
+    "class": "Antiviral análogo nucleósido",
+    "pharmacologicClass": "Inhibe la polimerasa del VHB",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 0,5/1 mg y solución 0,05 mg/mL.",
+    "presentations": "Comprimidos 0,5/1 mg y solución 0,05 mg/mL.",
+    "mechanism": "Inhibe la polimerasa del VHB. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Eliminación renal; semivida intracelular prolongada.",
+    "indications": "Hepatitis B crónica con replicación viral activa y evidencia de enfermedad.",
+    "dose": "Naïve a nucleósidos: 0,5 mg VO/día; resistencia a lamivudina o enfermedad descompensada: 1 mg/día.",
+    "pediatricDose": "≥2 años y ≥10 kg: dosis por peso/formulación, máximo 0,5 o 1 mg según resistencia. AUTOMATABLE=NO.",
+    "renalDose": "Ajustar dosis/intervalo si CrCl <50 mL/min, incluida diálisis.",
+    "hepaticDose": "Sin ajuste; vigilar descompensación.",
+    "commonAdverseEffects": "Cefalea, fatiga, mareo y náusea.",
+    "dangerousAdverseEffects": "Acidosis láctica, hepatomegalia con esteatosis y exacerbación grave tras suspensión.",
+    "adverseEffects": "Cefalea, fatiga, mareo y náusea. Graves: Acidosis láctica, hepatomegalia con esteatosis y exacerbación grave tras suspensión.",
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Pocas interacciones; nefrotóxicos o competidores de secreción renal pueden aumentar exposición.",
+    "monitoring": "ADN VHB, ALT, función hepática, CrCl, VIH antes de monoterapia y rebrote tras suspensión.",
+    "administration": "En ayunas, especialmente con resistencia a lamivudina/descompensación.",
+    "preparation": "Confirmar producto, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo del producto.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar beneficio materno, exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Acidosis láctica, hepatomegalia con esteatosis y exacerbación grave tras suspensión. Dose bloqueada sem HBV DNA, resistência prévia, HIV, CrCl, peso/idade, estado hepático e plano de seguimento pós-suspensão.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entecavir",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/021797s018,021798s019lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entecavir"
+  }
+};})();
+/* GOLD33_SELECTIVE:entecavir:END */

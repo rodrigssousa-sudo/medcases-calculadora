@@ -5,228 +5,84 @@
   "color": "rgba(16,185,129,0.13)",
   "colorTxt": "#064E3B",
   "pt": {
-    "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
-    "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
-    "mechanism": "Bloqueia seletivamente o receptor AT1 e inibe vasoconstrição, secreção de aldosterona e retenção de sódio mediadas pela angiotensina II, sem inibir diretamente a ECA.",
-    "pharmacodynamics": "Reduz resistência vascular e pressão arterial. Pode elevar potássio e creatinina, especialmente em hipovolemia, estenose de artéria renal ou doença renal avançada.",
-    "commonAdverseEffects": [
-      "tontura",
-      "hipotensão",
-      "hipercalemia",
-      "aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "lesão renal aguda",
-      "hipercalemia grave",
-      "hipotensão sintomática",
-      "angioedema raro",
-      "toxicidade fetal"
-    ],
-    "contraindications": [
-      "Gestação: suspender quando detectada",
-      "hipersensibilidade",
-      "evitar duplo bloqueio rotineiro do SRAA"
-    ],
-    "interactions": [
-      "Potássio e diuréticos poupadores de potássio aumentam hipercalemia",
-      "AINEs podem reduzir efeito e aumentar risco renal",
-      "Lítio pode acumular",
-      "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
-    ],
-    "monitoring": [
-      "Pressão arterial",
-      "creatinina/eTFG",
-      "potássio",
-      "estado volêmico",
-      "gestação quando aplicável"
-    ],
-    "pregnancy": "Toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
-    "lactation": "Dados humanos limitados; individualizar e preferir alternativas com maior experiência em lactentes muito jovens.",
-    "patientEducation": [
-      "Evitar gestação",
-      "não usar potássio ou substitutos de sal sem orientação",
-      "manter hidratação",
-      "procurar avaliação por tontura intensa ou síncope"
-    ],
-    "clinicalPearls": [
-      "BRAs são alternativa quando IECA causa tosse",
-      "Controlar creatinina e potássio após início ou titulação."
-    ],
-    "guidelineRecommendations": [
-      "Diretriz AHA/ACC 2025: BRAs são fármacos de primeira linha para hipertensão quando indicados."
-    ],
-    "safetyFlags": [
-      "TOXICIDADE_FETAL",
-      "HIPERCALEMIA",
-      "FUNCAO_RENAL",
-      "HIPOTENSAO"
-    ],
-    "alerts": [
-      "Corrigir depleção de volume quando possível",
-      "Revisar creatinina e potássio após mudanças de dose",
-      "Não associar rotineiramente a IECA."
-    ],
-    "name": "Eprosartana Mesilato",
-    "pharmacokinetics": "Biodisponibilidade oral baixa a moderada; não exige biotransformação para metabólito ativo. É eliminada por vias biliar/fecal e renal. A exposição aumenta na insuficiência renal.",
-    "indications": [
-      "Hipertensão essencial em adultos"
-    ],
-    "commercialNames": [
-      "Teveten"
-    ],
-    "presentation": "Comprimidos revestidos de mesilato de eprosartana equivalentes a 600 mg de eprosartana.",
-    "presentations": [
-      "Comprimidos 600 mg"
-    ],
-    "dose": {
-      "hypertension": "600 mg uma vez ao dia; o efeito máximo pode levar 2-3 semanas."
-    },
-    "pediatricDose": "Não recomendada em crianças e adolescentes por falta de dados suficientes de segurança e eficácia.",
-    "renalDose": "ClCr <60 mL/min: a dose diária não deve exceder 600 mg segundo SmPC vigente. Monitorar creatinina e potássio.",
-    "hepaticDose": "Experiência limitada na insuficiência hepática; usar com cautela e monitorar resposta.",
-    "administration": "Administrar uma vez ao dia com ou sem alimentos.",
-    "preparation": "Não requer reconstituição.",
-    "infusionProtocol": "Não se aplica: eprosartana é oral.",
-    "specialPopulations": {
-      "elderly": "Não requer ajuste apenas por idade.",
-      "renal": "Limitar a 600 mg/dia se ClCr <60 mL/min.",
-      "hepatic": "Experiência limitada."
-    },
-    "adverseEffects": {
-      "common": [
-        "tontura",
-        "hipotensão",
-        "hipercalemia",
-        "aumento de creatinina"
-      ],
-      "dangerous": [
-        "lesão renal aguda",
-        "hipercalemia grave",
-        "hipotensão sintomática",
-        "angioedema raro",
-        "toxicidade fetal"
-      ]
-    },
+    "class": "Bloqueador do receptor de angiotensina II",
+    "pharmacologicClass": "Antagonista AT1",
+    "mechanism": "Antagonista AT1. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "commonAdverseEffects": "Tontura, fadiga e infecção respiratória.",
+    "dangerousAdverseEffects": "Fetotoxicidade, hipercalemia, lesão renal e angioedema raro.",
+    "contraindications": "Gestação; aliscireno em diabetes; hipersensibilidade.",
+    "interactions": "K/poupadores, AINEs, lítio, IECA/ARB/aliscireno.",
+    "monitoring": "PA, creatinina/eGFR, K e volume.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar benefício materno, exposição do lactente e alternativas.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Fetotoxicidade, hipercalemia, lesão renal e angioedema raro. Dose bloqueada sem PA, gestação, função renal/K, volume e revisão de RAAS/AINE/lítio.",
+    "name": "Eprosartana",
+    "pharmacokinetics": "Eliminação biliar e renal; meia-vida 5–9 h.",
+    "indications": "Hipertensão arterial.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 400/600 mg conforme mercado.",
+    "presentations": "Comprimidos 400/600 mg conforme mercado.",
+    "dose": "600 mg VO 1x/dia; faixa total 400–800 mg/dia em 1–2 tomadas conforme resposta.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Cautela em insuficiência renal; exposição aumenta.",
+    "hepaticDose": "Dados limitados em hepatopatia grave.",
+    "administration": "VO com ou sem alimento, consistentemente.",
+    "preparation": "Confirmar produto, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo do produto.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "adverseEffects": "Tontura, fadiga e infecção respiratória. Graves: Fetotoxicidade, hipercalemia, lesão renal e angioedema raro.",
     "references": [
-      "https://www.medicines.org.uk/emc/product/1346/smpc",
-      "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Eprosartan",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eprosartan",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/020738s019lbl.pdf"
     ],
-    "ref": "https://www.medicines.org.uk/emc/product/1346/smpc"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eprosartan"
   },
   "es": {
-    "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
-    "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
-    "mechanism": "Bloquea selectivamente el receptor AT1 e inhibe vasoconstricción, secreción de aldosterona y retención de sodio mediadas por angiotensina II, sin inhibir directamente la ECA.",
-    "pharmacodynamics": "Reduce resistencia vascular y presión arterial. Puede aumentar potasio y creatinina, especialmente con hipovolemia, estenosis de arteria renal o enfermedad renal avanzada.",
-    "commonAdverseEffects": [
-      "mareo",
-      "hipotensión",
-      "hiperpotasemia",
-      "aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "lesión renal aguda",
-      "hiperpotasemia grave",
-      "hipotensión sintomática",
-      "angioedema raro",
-      "toxicidad fetal"
-    ],
-    "contraindications": [
-      "Embarazo: suspender cuando se detecte",
-      "hipersensibilidad",
-      "evitar doble bloqueo del SRAA de rutina"
-    ],
-    "interactions": [
-      "Potasio y diuréticos ahorradores de potasio aumentan hiperpotasemia",
-      "AINE pueden reducir efecto y aumentar riesgo renal",
-      "Litio puede acumularse",
-      "Doble bloqueo SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
-    ],
-    "monitoring": [
-      "Presión arterial",
-      "creatinina/eGFR",
-      "potasio",
-      "estado de volumen",
-      "embarazo cuando corresponda"
-    ],
-    "pregnancy": "Toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
-    "lactation": "Datos humanos limitados; individualizar y preferir alternativas con mayor experiencia en lactantes muy pequeños.",
-    "patientEducation": [
-      "Evitar embarazo",
-      "no usar potasio o sustitutos de sal sin indicación",
-      "mantener hidratación",
-      "consultar por mareo intenso o síncope"
-    ],
-    "clinicalPearls": [
-      "ARA-II son alternativa cuando IECA causa tos",
-      "Controlar creatinina y potasio tras inicio o titulación."
-    ],
-    "guidelineRecommendations": [
-      "Guía AHA/ACC 2025: los ARA-II son fármacos de primera línea para hipertensión cuando están indicados."
-    ],
-    "safetyFlags": [
-      "TOXICIDAD_FETAL",
-      "HIPERPOTASEMIA",
-      "FUNCION_RENAL",
-      "HIPOTENSION"
-    ],
-    "alerts": [
-      "Corregir depleción de volumen si es posible",
-      "Revisar creatinina y potasio tras cambios de dosis",
-      "No asociar rutinariamente con IECA."
-    ],
-    "name": "Eprosartán Mesilato",
-    "pharmacokinetics": "Biodisponibilidad oral baja a moderada; no requiere biotransformación a un metabolito activo. Se elimina por vía biliar/fecal y renal. La exposición aumenta con insuficiencia renal.",
-    "indications": [
-      "Hipertensión esencial en adultos"
-    ],
-    "commercialNames": [
-      "Teveten"
-    ],
-    "presentation": "Tabletas recubiertas de eprosartán mesilato equivalentes a 600 mg de eprosartán.",
-    "presentations": [
-      "Tabletas 600 mg"
-    ],
-    "dose": {
-      "hypertension": "600 mg una vez al día; el efecto máximo puede tardar 2-3 semanas."
-    },
-    "pediatricDose": "No recomendada en niños y adolescentes por falta de datos suficientes de seguridad y eficacia.",
-    "renalDose": "CrCl <60 mL/min: la dosis diaria no debe exceder 600 mg según SmPC vigente. Vigilar creatinina y potasio.",
-    "hepaticDose": "Experiencia limitada en insuficiencia hepática; usar con cautela y monitorizar respuesta.",
-    "administration": "Administrar una vez al día con o sin alimentos.",
-    "preparation": "No requiere reconstitución.",
-    "infusionProtocol": "No aplica: eprosartán es oral.",
-    "specialPopulations": {
-      "elderly": "No requiere ajuste solo por edad.",
-      "renal": "Limitar a 600 mg/día si CrCl <60 mL/min.",
-      "hepatic": "Experiencia limitada."
-    },
-    "adverseEffects": {
-      "common": [
-        "mareo",
-        "hipotensión",
-        "hiperpotasemia",
-        "aumento de creatinina"
-      ],
-      "dangerous": [
-        "lesión renal aguda",
-        "hiperpotasemia grave",
-        "hipotensión sintomática",
-        "angioedema raro",
-        "toxicidad fetal"
-      ]
-    },
+    "class": "Bloqueante del receptor de angiotensina II",
+    "pharmacologicClass": "Antagonista AT1",
+    "mechanism": "Antagonista AT1. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "commonAdverseEffects": "Mareo, fatiga e infección respiratoria.",
+    "dangerousAdverseEffects": "Fetotoxicidad, hiperpotasemia, lesión renal y angioedema raro.",
+    "contraindications": "Embarazo; aliskireno en diabetes; hipersensibilidad.",
+    "interactions": "K/ahorradores, AINE, litio, IECA/ARA-II/aliskireno.",
+    "monitoring": "PA, creatinina/eGFR, K y volumen.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar beneficio materno, exposición del lactante y alternativas.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Fetotoxicidad, hiperpotasemia, lesión renal y angioedema raro. Dose bloqueada sem PA, gestação, função renal/K, volume e revisão de RAAS/AINE/lítio.",
+    "name": "Eprosartán",
+    "pharmacokinetics": "Eliminación biliar y renal; semivida 5–9 h.",
+    "indications": "Hipertensión arterial.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 400/600 mg según mercado.",
+    "presentations": "Comprimidos 400/600 mg según mercado.",
+    "dose": "600 mg VO 1 vez/día; rango total 400–800 mg/día en 1–2 tomas según respuesta.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Precaución en insuficiencia renal; exposición aumenta.",
+    "hepaticDose": "Datos limitados en hepatopatía grave.",
+    "administration": "VO con o sin alimento, consistentemente.",
+    "preparation": "Confirmar producto, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo del producto.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "adverseEffects": "Mareo, fatiga e infección respiratoria. Graves: Fetotoxicidad, hiperpotasemia, lesión renal y angioedema raro.",
     "references": [
-      "https://www.medicines.org.uk/emc/product/1346/smpc",
-      "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Eprosartan",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eprosartan",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/020738s019lbl.pdf"
     ],
-    "ref": "https://www.medicines.org.uk/emc/product/1346/smpc"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eprosartan"
   },
   "name": {
-    "pt": "Eprosartana Mesilato",
-    "es": "Eprosartán Mesilato"
+    "pt": "Eprosartana",
+    "es": "Eprosartán"
   },
   "keywords": [
     "eprosartana",
@@ -236,19 +92,21 @@
     "eprosartan generico",
     "bloqueador do receptor de angiotensina ii (bra/arb)"
   ],
-  "dataVersion": "clinical-data-v1-5b77ee82ab6304c6",
-  "clinicalContentSha256": "5b77ee82ab6304c6f0ad69682d7aa1074a895e7b8d32c63c7f374f0b71bf2500",
+  "dataVersion": "clinical-data-v1-628982a257e8a599",
+  "clinicalContentSha256": "628982a257e8a59960f52bba72fe5a0557c00b4fc382ed0f14ca558c2d443ea8",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "eprosartana.mcGoldClinicalV1",
-    "group": "GOLD_GROUP05_CARDIO_10",
-    "review": "2026-09",
+    "lote": "030",
     "requiredFields": 33,
-    "contentSha256": "75785500066d111346f85ee3ac1711b3459d3f080f4a4865d00904bab455fa76",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "b6726ebdc5c8e078f5314ad3a6cb32ce82725cad8ec97894513a3dac291dff38",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

@@ -4737,3 +4737,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:dupilumabe:END */
+/* GOLD33_SELECTIVE:erdosteina:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["erdosteina"])throw new Error("GOLD33_MISSING_CANONICAL:erdosteina");db["erdosteina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "030",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6726ebdc5c8e078f5314ad3a6cb32ce82725cad8ec97894513a3dac291dff38",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Erdosteína",
+    "class": "Mucolítico",
+    "pharmacologicClass": "Pró-fármaco com metabólitos tiol que reduzem viscosidade do muco",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 300 mg, sachês e suspensão conforme país.",
+    "presentations": "Cápsulas 300 mg, sachês e suspensão conforme país.",
+    "mechanism": "Pró-fármaco com metabólitos tiol que reduzem viscosidade do muco. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Pró-fármaco hepático a metabólito ativo; eliminação renal.",
+    "indications": "Distúrbios respiratórios com secreção espessa conforme autorização nacional; não aprovada nos EUA.",
+    "dose": "Adultos: frequentemente 300 mg VO 2x/dia; duração e produto conforme bula nacional.",
+    "pediatricDose": "Dose por peso/idade varia por produto; AUTOMATABLE=NO.",
+    "renalDose": "Reduzir/evitar em insuficiência renal grave conforme rótulo.",
+    "hepaticDose": "Contraindicada ou evitar em hepatopatia grave conforme rótulo.",
+    "commonAdverseEffects": "Náusea, dor epigástrica, cefaleia e alteração do paladar.",
+    "dangerousAdverseEffects": "Hipersensibilidade/broncoespasmo e lesão hepática rara.",
+    "adverseEffects": "Náusea, dor epigástrica, cefaleia e alteração do paladar. Graves: Hipersensibilidade/broncoespasmo e lesão hepática rara.",
+    "contraindications": "Hipersensibilidade, doença hepática/renal grave; homocistinúria conforme rótulo.",
+    "interactions": "Interações relevantes pouco definidas; revisar antitussígenos que retêm secreção.",
+    "monitoring": "Sintomas, volume de secreção, broncoespasmo, rim/fígado e tolerância GI.",
+    "administration": "VO com hidratação adequada; não substituir avaliação da causa.",
+    "preparation": "Confirmar produto, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo do produto.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar benefício materno, exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipersensibilidade/broncoespasmo e lesão hepática rara. Dose bloqueada sem país/bula, idade/peso, formulação, diagnóstico, rim/fígado e característica da tosse/secreção.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://cima.aemps.es/cima/publico/home.html",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://consultas.anvisa.gov.br/#/bulario/"
+    ],
+    "ref": "https://cima.aemps.es/cima/publico/home.html"
+  },
+  "es": {
+    "name": "Erdosteína",
+    "class": "Mucolítico",
+    "pharmacologicClass": "Profármaco con metabolitos tiol que reducen viscosidad del moco",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 300 mg, sobres y suspensión según país.",
+    "presentations": "Cápsulas 300 mg, sobres y suspensión según país.",
+    "mechanism": "Profármaco con metabolitos tiol que reducen viscosidad del moco. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Profármaco hepático a metabolito activo; eliminación renal.",
+    "indications": "Trastornos respiratorios con secreción espesa según autorización nacional; no aprobada en EE. UU.",
+    "dose": "Adultos: frecuentemente 300 mg VO 2 veces/día; duración y producto según ficha nacional.",
+    "pediatricDose": "Dosis por peso/edad varía por producto; AUTOMATABLE=NO.",
+    "renalDose": "Reducir/evitar en insuficiencia renal grave según ficha.",
+    "hepaticDose": "Contraindicada o evitar en hepatopatía grave según ficha.",
+    "commonAdverseEffects": "Náusea, dolor epigástrico, cefalea y alteración del gusto.",
+    "dangerousAdverseEffects": "Hipersensibilidad/broncoespasmo y lesión hepática rara.",
+    "adverseEffects": "Náusea, dolor epigástrico, cefalea y alteración del gusto. Graves: Hipersensibilidad/broncoespasmo y lesión hepática rara.",
+    "contraindications": "Hipersensibilidad, enfermedad hepática/renal grave; homocistinuria según ficha.",
+    "interactions": "Interacciones relevantes poco definidas; revisar antitusivos que retienen secreción.",
+    "monitoring": "Síntomas, volumen de secreción, broncoespasmo, riñón/hígado y tolerancia GI.",
+    "administration": "VO con hidratación adecuada; no sustituir evaluación de causa.",
+    "preparation": "Confirmar producto, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo del producto.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar beneficio materno, exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipersensibilidad/broncoespasmo y lesión hepática rara. Dose bloqueada sem país/bula, idade/peso, formulação, diagnóstico, rim/fígado e característica da tosse/secreção.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://cima.aemps.es/cima/publico/home.html",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://consultas.anvisa.gov.br/#/bulario/"
+    ],
+    "ref": "https://cima.aemps.es/cima/publico/home.html"
+  }
+};})();
+/* GOLD33_SELECTIVE:erdosteina:END */
