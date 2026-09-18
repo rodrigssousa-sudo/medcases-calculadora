@@ -1,6 +1,6 @@
 {
   "category": "estabilizador_humor",
-  "clinicalContentSha256": "ab157ac020897e833430cf9aaabf7dbaf2662ca80b6a384cf72f6ef33ddac4d0",
+  "clinicalContentSha256": "d54997ea8cd8e9d1127724d20a800b7055086f4e023ece37627ed4d19c3735d1",
   "clinicalEnrichment": {
     "doseByIndication": {
       "es": [
@@ -82,7 +82,7 @@
   },
   "color": null,
   "colorTxt": null,
-  "dataVersion": "clinical-data-v1-ab157ac020897e83",
+  "dataVersion": "clinical-data-v1-d54997ea8cd8e9d1",
   "doseByIndication": {
     "es": [
       {
@@ -158,58 +158,14 @@
     ]
   },
   "es": {
-    "alerts": [
-      "Solicitar hemograma, TGO/TGP, sodio y nivel sérico según necesidad.",
-      "Considerar HLA-B*1502 en poblaciones asiáticas de riesgo antes de iniciar.",
-      "Suspender y evaluar si rash, fiebre, lesiones mucosas o síntomas sistémicos.",
-      "Atención extrema a interacciones por inducción enzimática.",
-      "Puede reducir eficacia de anticonceptivos hormonales."
-    ],
+    "alerts": "SJS/TEN/DRESS, agranulocitosis/aplasia, hepatotoxicidad, hiponatremia grave, arritmia y suicidabilidad. Dose bloqueada sem indicação, idade/peso, formulação, HLA/ancestralidade, hemograma, Na, fígado e reconciliação completa de interações.",
     "category": "estabilizador_humor",
-    "class": "Estabilizador del ánimo y anticonvulsivante",
-    "commercialNames": {
-      "ar": [
-        "Tegretol",
-        "Carbamazepina Gador",
-        "Carbamazepina Denver Farma"
-      ],
-      "br": [
-        "Tegretol",
-        "Tegretol CR",
-        "Carbamazepina EMS"
-      ]
-    },
-    "commonAdverseEffects": [
-      "Mareos",
-      "Somnolencia",
-      "Diplopía",
-      "Ataxia",
-      "Náuseas",
-      "Hiponatremia",
-      "Rash cutáneo"
-    ],
-    "contraindications": [
-      "Hipersensibilidad a carbamazepina o tricíclicos",
-      "Antecedente de depresión medular",
-      "Uso concomitante con IMAO",
-      "Porfiria hepática",
-      "Antecedente de SJS/TEN asociada a carbamazepina"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome de Stevens-Johnson/necrólisis epidérmica tóxica",
-      "Agranulocitosis",
-      "Anemia aplásica",
-      "Hepatotoxicidad",
-      "Hiponatremia grave/SIADH",
-      "Pancreatitis rara",
-      "Ideación suicida"
-    ],
-    "dose": {
-      "adulto": "Bipolar/epilepsia: iniciar 100–200 mg VO 1–2 veces/día; titular gradualmente.",
-      "alvoSerico": "Nivel sérico habitual: 4–12 mcg/mL.",
-      "manutencao": "Dosis habitual: 400–1200 mg/día en 2–4 tomas.",
-      "maxDose": "Dosis máxima habitual: 1600 mg/día en adultos seleccionados."
-    },
+    "class": "Antiepiléptico y estabilizador del ánimo",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "commonAdverseEffects": "Mareo, diplopía, ataxia, somnolencia, náusea e hiponatremia.",
+    "contraindications": "Depresión medular, IMAO en 14 días, hipersensibilidad a tricíclicos/carbamazepina; HLA-B*1502 positivo en poblaciones de riesgo.",
+    "dangerousAdverseEffects": "SJS/TEN/DRESS, agranulocitosis/aplasia, hepatotoxicidad, hiponatremia grave, arritmia y suicidabilidad.",
+    "dose": "Epilepsia adulto: iniciar 200 mg 2 veces/día y titular; habitual 800-1200 mg/día. Neuralgia: iniciar 100 mg 2 veces/día; máximo rotulado 1200 mg/día.",
     "doseKg": {
       "maxDose": "1600 mg/día",
       "pediatric": "Pediatría/epilepsia: ajustar por peso y nivel sérico según protocolo.",
@@ -217,42 +173,38 @@
     },
     "halfLife": "Vida media inicial 25–65 h; tras autoinducción puede caer a 12–17 h.",
     "hepaticAdjustment": "Monitorizar función hepática periódicamente.",
-    "indications": [
-      "Trastorno bipolar — manía aguda",
-      "Mantenimiento del trastorno bipolar en casos seleccionados",
-      "Epilepsia focal",
-      "Crisis tónico-clónicas generalizadas",
-      "Neuralgia del trigémino",
-      "Neuralgia glosofaríngea",
-      "Impulsividad/agresividad en casos seleccionados"
-    ],
-    "interactions": [
-      "Anticonceptivos hormonales: reduce eficacia",
-      "Warfarina/DOACs: puede reducir anticoagulación",
-      "Lamotrigina, valproato, fenitoína: interacciones bidireccionales",
-      "Macrólidos/azoles: aumentan niveles y toxicidad",
-      "Litio y antipsicóticos: posible neurotoxicidad",
-      "Alcohol y sedantes: mayor depresión del SNC"
-    ],
-    "mechanism": "Bloquea canales de sodio voltaje-dependientes, reduciendo descargas neuronales repetitivas; potente inductor enzimático.",
+    "indications": "Crisis focales/tónico-clónicas, neuralgia del trigémino y episodio maníaco según producto/jurisdicción.",
+    "interactions": "Potente inductor CYP3A4/UGT/P-gp; macrólidos/azoles/pomelo elevan niveles; reduce anticonceptivos, anticoagulantes y muchos fármacos.",
+    "mechanism": "Bloquea canales de sodio dependientes de voltaje. El efecto debe interpretarse por indicación, formulación y exposición.",
     "name": "Carbamazepina",
     "onset": "Efecto antimaníaco puede aparecer en días a 1–2 semanas; autoinducción reduce niveles tras semanas.",
-    "presentation": [
-      "Comprimido 200 mg",
-      "Comprimido 400 mg LP",
-      "Suspensión oral 100 mg/5 mL"
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Carbamazepine Prescribing Information",
-      "CANMAT Bipolar Guidelines",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
+    "presentation": "Comprimidos IR 100/200 mg, XR 100/200/400 mg y suspensión 100 mg/5 mL; formulaciones no bioequivalentes por frecuencia.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carbamazepine",
     "renalAdjustment": "Sin ajuste renal habitual, pero monitorizar sodio y toxicidad en pacientes frágiles.",
-    "risksByPatient": []
+    "risksByPatient": [],
+    "pharmacologicClass": "Bloquea canales de sodio dependientes de voltaje",
+    "presentations": "Comprimidos IR 100/200 mg, XR 100/200/400 mg y suspensión 100 mg/5 mL; formulaciones no bioequivalentes por frecuencia.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción variable; unión 70-80%; CYP3A4 a epóxido activo; autoinducción reduce semivida de 25-65 h a 12-17 h; eliminación urinaria como metabolitos.",
+    "pediatricDose": "<6 años: 10-20 mg/kg/día divididos, titular; 6-12 años: iniciar 100 mg 2 veces/día. Máximos según edad. AUTOMATABLE=NO sin indicación/formulación/nivel.",
+    "renalDose": "Sin ajuste tabulado; vigilar metabolito y sodio en disfunción.",
+    "hepaticDose": "Evitar/precaución en hepatopatía significativa; metabolismo hepático y autoinducción.",
+    "adverseEffects": "Mareo, diplopía, ataxia, somnolencia, náusea e hiponatremia. Graves: SJS/TEN/DRESS, agranulocitosis/aplasia, hepatotoxicidad, hiponatremia grave, arritmia y suicidabilidad.",
+    "monitoring": "Hemograma, ALT/AST, Na, función renal, niveles 4-12 mcg/mL cuando indicados, rash, suicidabilidad e interacciones.",
+    "administration": "VO con alimentos puede mejorar tolerancia; agitar suspensión; no triturar XR; retirar gradualmente.",
+    "preparation": "Separar suspensión de otros líquidos medicamentosos; confirmar conversión IR/XR.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Teratógena, especialmente defecto del tubo neural; usar menor dosis eficaz y asesoramiento especializado.",
+    "lactation": "Pasa a leche; generalmente posible con vigilancia del lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carbamazepine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/016608s101lbl.pdf"
+    ]
   },
   "icon": "💊",
   "id": "carbamazepina",
@@ -266,62 +218,18 @@
     "estabilizador do humor e anticonvulsivante"
   ],
   "name": {
-    "es": "Carbamazepina",
-    "pt": "Carbamazepina"
+    "pt": "Carbamazepina",
+    "es": "Carbamazepina"
   },
   "pt": {
-    "alerts": [
-      "Solicitar hemograma, TGO/TGP, sódio e nível sérico conforme necessidade.",
-      "Considerar HLA-B*1502 em populações asiáticas de risco antes de iniciar.",
-      "Suspender e avaliar se rash, febre, lesões mucosas ou sintomas sistêmicos.",
-      "Atenção extrema às interações por indução enzimática.",
-      "Pode reduzir eficácia de anticoncepcionais hormonais."
-    ],
+    "alerts": "SJS/TEN/DRESS, agranulocitose/aplasia, hepatotoxicidade, hiponatremia grave, arritmia e suicidabilidade. Dose bloqueada sem indicação, idade/peso, formulação, HLA/ancestralidade, hemograma, Na, fígado e reconciliação completa de interações.",
     "category": "estabilizador_humor",
-    "class": "Estabilizador do humor e anticonvulsivante",
-    "commercialNames": {
-      "ar": [
-        "Tegretol",
-        "Carbamazepina Gador",
-        "Carbamazepina Denver Farma"
-      ],
-      "br": [
-        "Tegretol",
-        "Tegretol CR",
-        "Carbamazepina EMS"
-      ]
-    },
-    "commonAdverseEffects": [
-      "Tontura",
-      "Sonolência",
-      "Diplopia",
-      "Ataxia",
-      "Náuseas",
-      "Hiponatremia",
-      "Rash cutâneo"
-    ],
-    "contraindications": [
-      "Hipersensibilidade à carbamazepina ou tricíclicos",
-      "História de depressão medular",
-      "Uso concomitante com IMAO",
-      "Porfiria hepática",
-      "História de SJS/TEN associada à carbamazepina"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome de Stevens-Johnson/necrólise epidérmica tóxica",
-      "Agranulocitose",
-      "Anemia aplásica",
-      "Hepatotoxicidade",
-      "Hiponatremia grave/SIADH",
-      "Pancreatite rara",
-      "Ideação suicida"
-    ],
-    "dose": {
-      "adulto": "Bipolar/epilepsia: iniciar 100–200 mg VO 1–2x/dia; titular gradualmente.",
-      "alvoSerico": "Nível sérico usual: 4–12 mcg/mL.",
-      "manutencao": "Dose usual: 400–1200 mg/dia em 2–4 tomadas.",
-      "maxDose": "Dose máxima usual: 1600 mg/dia em adultos selecionados."
-    },
+    "class": "Antiepiléptico e estabilizador do humor",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "commonAdverseEffects": "Tontura, diplopia, ataxia, sonolência, náusea e hiponatremia.",
+    "contraindications": "Depressão medular, uso de IMAO em 14 dias, hipersensibilidade a tricíclicos/carbamazepina; HLA-B*1502 positivo em populações de risco.",
+    "dangerousAdverseEffects": "SJS/TEN/DRESS, agranulocitose/aplasia, hepatotoxicidade, hiponatremia grave, arritmia e suicidabilidade.",
+    "dose": "Epilepsia adulto: iniciar 200 mg 2x/dia e titular; usual 800-1200 mg/dia. Neuralgia: iniciar 100 mg 2x/dia; máximo rotulado 1200 mg/dia.",
     "doseKg": {
       "maxDose": "1600 mg/dia",
       "pediatric": "Pediatria/epilepsia: ajustar por peso e nível sérico conforme protocolo.",
@@ -329,42 +237,38 @@
     },
     "halfLife": "Vida média inicial 25–65 h; após autoindução pode cair para 12–17 h.",
     "hepaticAdjustment": "Monitorar função hepática periodicamente.",
-    "indications": [
-      "Transtorno bipolar — mania aguda",
-      "Manutenção do transtorno bipolar em casos selecionados",
-      "Epilepsia focal",
-      "Crises tônico-clônicas generalizadas",
-      "Neuralgia do trigêmeo",
-      "Neuralgia glossofaríngea",
-      "Impulsividade/agressividade em casos selecionados"
-    ],
-    "interactions": [
-      "Anticoncepcionais hormonais: reduz eficácia",
-      "Varfarina/DOACs: pode reduzir anticoagulação",
-      "Lamotrigina, valproato, fenitoína: interações bidirecionais",
-      "Macrolídeos/azólicos: aumentam níveis e toxicidade",
-      "Lítio e antipsicóticos: possível neurotoxicidade",
-      "Álcool e sedativos: maior depressão do SNC"
-    ],
-    "mechanism": "Bloqueia canais de sódio voltagem-dependentes, reduzindo descargas neuronais repetitivas; potente indutor enzimático.",
+    "indications": "Crises focais/tônico-clônicas, neuralgia do trigêmeo e episódio maníaco conforme produto/jurisdição.",
+    "interactions": "Potente indutor CYP3A4/UGT/P-gp; macrolídeos/azóis/grapefruit elevam níveis; reduz anticoncepcionais, anticoagulantes e muitos fármacos.",
+    "mechanism": "Bloqueia canais de sódio dependentes de voltagem. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "name": "Carbamazepina",
     "onset": "Efeito antimaníaco pode surgir em dias a 1–2 semanas; autoindução reduz níveis após semanas.",
-    "presentation": [
-      "Comprimido 200 mg",
-      "Comprimido 400 mg CR",
-      "Suspensão oral 100 mg/5 mL"
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Carbamazepine Prescribing Information",
-      "CANMAT Bipolar Guidelines",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
+    "presentation": "Comprimidos IR 100/200 mg, XR 100/200/400 mg e suspensão 100 mg/5 mL; formulações não são bioequivalentes por frequência.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carbamazepine",
     "renalAdjustment": "Sem ajuste renal habitual, mas monitorar sódio e toxicidade em pacientes frágeis.",
-    "risksByPatient": []
+    "risksByPatient": [],
+    "pharmacologicClass": "Bloqueia canais de sódio dependentes de voltagem",
+    "presentations": "Comprimidos IR 100/200 mg, XR 100/200/400 mg e suspensão 100 mg/5 mL; formulações não são bioequivalentes por frequência.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção variável; ligação 70-80%; CYP3A4 a epóxido ativo; autoindução reduz meia-vida de 25-65 h para 12-17 h; eliminação urinária como metabólitos.",
+    "pediatricDose": "<6 anos: 10-20 mg/kg/dia divididos, titular; 6-12 anos: iniciar 100 mg 2x/dia. Máximos dependem da idade. AUTOMATABLE=NO sem indicação/formulação/nível.",
+    "renalDose": "Sem ajuste tabelado; monitorar metabólito e sódio em disfunção.",
+    "hepaticDose": "Evitar/cautela em doença hepática significativa; metabolismo hepático e autoindução.",
+    "adverseEffects": "Tontura, diplopia, ataxia, sonolência, náusea e hiponatremia. Graves: SJS/TEN/DRESS, agranulocitose/aplasia, hepatotoxicidade, hiponatremia grave, arritmia e suicidabilidade.",
+    "monitoring": "Hemograma, ALT/AST, Na, função renal, níveis 4-12 mcg/mL quando indicados, rash, suicidabilidade e interações.",
+    "administration": "VO com alimento pode melhorar tolerância; agitar suspensão; não triturar XR; retirar gradualmente.",
+    "preparation": "Separar suspensão de outros líquidos medicamentosos; confirmar conversão IR/XR.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Teratogênica, especialmente defeito de tubo neural; usar menor dose eficaz e aconselhamento especializado.",
+    "lactation": "Passa ao leite; geralmente possível com monitorização do lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carbamazepine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/016608s101lbl.pdf"
+    ]
   },
   "references": [
     "DailyMed Carbamazepine"
@@ -423,5 +327,17 @@
         "updated": "2026-06"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/neurologia.js",
+    "sourceField": "carbamazepina.mcGoldClinicalV1",
+    "lote": "013",
+    "requiredFields": 33,
+    "approvedSha256": "9e2bb4dd7dab045f089fff2c5b88e1d5f0afd80731602b0c3fabff299d094223",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

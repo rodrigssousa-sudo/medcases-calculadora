@@ -4878,3 +4878,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:buprenorfina:END */
+/* GOLD33_SELECTIVE:capsaicina:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["capsaicina"])throw new Error("GOLD33_MISSING_CANONICAL:capsaicina");db["capsaicina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "013",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9e2bb4dd7dab045f089fff2c5b88e1d5f0afd80731602b0c3fabff299d094223",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Capsaicina tópica",
+    "class": "Analgésico tópico agonista TRPV1",
+    "pharmacologicClass": "Ativa TRPV1 e causa dessensibilização/redução de fibras nociceptivas epidérmicas",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cremes 0,025-0,1%; sistema tópico 8% (179 mg/patch) é profissional e não intercambiável.",
+    "presentations": "Cremes 0,025-0,1%; sistema tópico 8% (179 mg/patch) é profissional e não intercambiável.",
+    "mechanism": "Ativa TRPV1 e causa dessensibilização/redução de fibras nociceptivas epidérmicas. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Exposição sistêmica transitória após 8%; Tmax ~20 min após remoção, meia-vida ~1,6 h; metabolismo hepático rápido.",
+    "indications": "Creme de baixa concentração para dor musculoesquelética/neuropática conforme produto; adesivo 8% para neuralgia pós-herpética e neuropatia diabética dos pés em adultos.",
+    "dose": "Qutenza 8%: até 4 adesivos, 60 min para PHN ou 30 min nos pés para neuropatia diabética; repetir não mais frequentemente que a cada 3 meses.",
+    "pediatricDose": "Segurança/eficácia do adesivo 8% não estabelecidas. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste sistêmico esperado.",
+    "hepaticDose": "Sem ajuste sistêmico esperado.",
+    "commonAdverseEffects": "Dor, eritema, prurido e edema no local.",
+    "dangerousAdverseEffects": "Dor intensa, aumento transitório de PA, queimadura, exposição ocular/respiratória e redução sensorial.",
+    "adverseEffects": "Dor, eritema, prurido e edema no local. Graves: Dor intensa, aumento transitório de PA, queimadura, exposição ocular/respiratória e redução sensorial.",
+    "contraindications": "Hipersensibilidade; não aplicar em pele lesionada.",
+    "interactions": "Interações sistêmicas improváveis; anestésicos/analgésicos locais devem seguir protocolo.",
+    "monitoring": "Dor/eritema, PA durante e após aplicação, integridade cutânea e resposta.",
+    "administration": "Somente pele íntegra; adesivo 8% por profissional em área ventilada, com luvas de nitrila e anestesia/analgesia conforme necessidade.",
+    "preparation": "Mapear área, recortar sem remover liner quando permitido, aplicar, retirar e limpar com gel/solução conforme kit; evitar olhos e mucosas.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados limitados; absorção sistêmica baixa, individualizar.",
+    "lactation": "Absorção sistêmica baixa; evitar contato do lactente com área tratada.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Dor intensa, aumento transitório de PA, queimadura, exposição ocular/respiratória e redução sensorial. Aplicação bloqueada sem diagnóstico, produto/concentração, área, pele íntegra, PA, analgesia e equipe treinada.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=QUTENZA",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022395s023lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=QUTENZA"
+  },
+  "es": {
+    "name": "Capsaicina tópica",
+    "class": "Analgésico tópico agonista TRPV1",
+    "pharmacologicClass": "Activa TRPV1 y causa desensibilización/reducción de fibras nociceptivas epidérmicas",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cremas 0,025-0,1%; sistema tópico 8% (179 mg/parche) es profesional y no intercambiable.",
+    "presentations": "Cremas 0,025-0,1%; sistema tópico 8% (179 mg/parche) es profesional y no intercambiable.",
+    "mechanism": "Activa TRPV1 y causa desensibilización/reducción de fibras nociceptivas epidérmicas. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Exposición sistémica transitoria tras 8%; Tmax ~20 min tras retirada, semivida ~1,6 h; metabolismo hepático rápido.",
+    "indications": "Crema de baja concentración para dolor musculoesquelético/neuropático según producto; parche 8% para neuralgia posherpética y neuropatía diabética de pies en adultos.",
+    "dose": "Qutenza 8%: hasta 4 parches, 60 min para NPH o 30 min en pies para neuropatía diabética; repetir no más frecuentemente que cada 3 meses.",
+    "pediatricDose": "Seguridad/eficacia del parche 8% no establecidas. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste sistémico esperado.",
+    "hepaticDose": "Sin ajuste sistémico esperado.",
+    "commonAdverseEffects": "Dolor, eritema, prurito y edema local.",
+    "dangerousAdverseEffects": "Dolor intenso, aumento transitorio de PA, quemadura, exposición ocular/respiratoria y reducción sensorial.",
+    "adverseEffects": "Dolor, eritema, prurito y edema local. Graves: Dolor intenso, aumento transitorio de PA, quemadura, exposición ocular/respiratoria y reducción sensorial.",
+    "contraindications": "Hipersensibilidad; no aplicar sobre piel lesionada.",
+    "interactions": "Interacciones sistémicas improbables; anestésicos/analgésicos locales según protocolo.",
+    "monitoring": "Dolor/eritema, PA durante y después, integridad cutánea y respuesta.",
+    "administration": "Solo piel intacta; parche 8% por profesional en área ventilada, con guantes de nitrilo y anestesia/analgesia según necesidad.",
+    "preparation": "Mapear área, recortar sin quitar protector cuando se permita, aplicar, retirar y limpiar con gel/solución del kit; evitar ojos y mucosas.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos limitados; absorción sistémica baja, individualizar.",
+    "lactation": "Absorción sistémica baja; evitar contacto del lactante con área tratada.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Dolor intenso, aumento transitorio de PA, quemadura, exposición ocular/respiratoria y reducción sensorial. Aplicação bloqueada sem diagnóstico, produto/concentração, área, pele íntegra, PA, analgesia e equipe treinada.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=QUTENZA",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022395s023lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=QUTENZA"
+  }
+};})();
+/* GOLD33_SELECTIVE:capsaicina:END */

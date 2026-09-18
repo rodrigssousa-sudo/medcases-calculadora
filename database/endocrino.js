@@ -1043,3 +1043,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:bromocriptina:END */
+/* GOLD33_SELECTIVE:cabergolina:START */
+;(function(){var db=window.ENDOCRINO_DRUGS_DB;if(!db||!db["cabergolina"])throw new Error("GOLD33_MISSING_CANONICAL:cabergolina");db["cabergolina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "013",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9e2bb4dd7dab045f089fff2c5b88e1d5f0afd80731602b0c3fabff299d094223",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cabergolina",
+    "class": "Agonista dopaminérgico derivado do ergot",
+    "pharmacologicClass": "Agonista D2 de longa ação",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 0,5 mg; algumas jurisdições possuem outras forças.",
+    "presentations": "Comprimidos 0,5 mg; algumas jurisdições possuem outras forças.",
+    "mechanism": "Agonista D2 de longa ação. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Tmax 2-3 h; alta ligação proteica; metabolismo por hidrólise; meia-vida longa ~63-69 h; eliminação fecal predominante.",
+    "indications": "Tratamento de distúrbios hiperprolactinêmicos; usos e limites variam por jurisdição.",
+    "dose": "Iniciar 0,25 mg duas vezes por semana; aumentar 0,25 mg duas vezes/semana em intervalos não menores que 4 semanas conforme prolactina; máximo rotulado EUA 1 mg duas vezes/semana.",
+    "pediatricDose": "Segurança e eficácia não estabelecidas no rótulo para pediatria. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal rotulado; dados limitados em doença grave.",
+    "hepaticDose": "Exposição aumenta na insuficiência grave; usar dose menor e monitorar.",
+    "commonAdverseEffects": "Náusea, cefaleia, tontura, constipação, fadiga e hipotensão.",
+    "dangerousAdverseEffects": "Valvulopatia/fibrose, síncope, psicose e transtornos de controle de impulso.",
+    "adverseEffects": "Náusea, cefaleia, tontura, constipação, fadiga e hipotensão. Graves: Valvulopatia/fibrose, síncope, psicose e transtornos de controle de impulso.",
+    "contraindications": "Hipertensão não controlada, hipersensibilidade a ergot e histórico de valvulopatia/fibrose conforme rótulo.",
+    "interactions": "Antagonistas D2 reduzem efeito; macrolídeos/inibidores metabólicos podem elevar exposição; outros ergotamínicos e anti-hipertensivos exigem cautela.",
+    "monitoring": "Prolactina mensal durante titulação, PA ortostática, gravidez, sintomas de fibrose/valvulopatia e impulsividade.",
+    "administration": "VO uma ou duas vezes por semana, preferencialmente com alimento se náusea; titular lentamente.",
+    "preparation": "Comprimido pronto; dividir apenas se sulcado e permitido.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Suspender quando gravidez confirmada na maioria dos microprolactinomas; decisão especializada em macroadenoma.",
+    "lactation": "Suprime lactação e não deve ser usada quando se deseja amamentar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Valvulopatia/fibrose, síncope, psicose e transtornos de controle de impulso. Titulação bloqueada sem indicação, prolactina, gravidez, PA, fígado e avaliação de valvulopatia/fibrose.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cabergoline",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=cabergoline"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cabergoline"
+  },
+  "es": {
+    "name": "Cabergolina",
+    "class": "Agonista dopaminérgico derivado del ergot",
+    "pharmacologicClass": "Agonista D2 de acción prolongada",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 0,5 mg; algunas jurisdicciones tienen otras dosis.",
+    "presentations": "Comprimidos 0,5 mg; algunas jurisdicciones tienen otras dosis.",
+    "mechanism": "Agonista D2 de acción prolongada. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Tmax 2-3 h; alta unión proteica; metabolismo por hidrólisis; semivida larga ~63-69 h; eliminación fecal predominante.",
+    "indications": "Tratamiento de trastornos hiperprolactinémicos; usos y límites varían según jurisdicción.",
+    "dose": "Iniciar 0,25 mg dos veces por semana; aumentar 0,25 mg dos veces/semana a intervalos no menores de 4 semanas según prolactina; máximo rotulado EE. UU. 1 mg dos veces/semana.",
+    "pediatricDose": "Seguridad y eficacia no establecidas en ficha para pediatría. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal en ficha; datos limitados en enfermedad grave.",
+    "hepaticDose": "La exposición aumenta en insuficiencia grave; usar dosis menor y vigilar.",
+    "commonAdverseEffects": "Náusea, cefalea, mareo, estreñimiento, fatiga e hipotensión.",
+    "dangerousAdverseEffects": "Valvulopatía/fibrosis, síncope, psicosis y trastornos del control de impulsos.",
+    "adverseEffects": "Náusea, cefalea, mareo, estreñimiento, fatiga e hipotensión. Graves: Valvulopatía/fibrosis, síncope, psicosis y trastornos del control de impulsos.",
+    "contraindications": "Hipertensión no controlada, hipersensibilidad a ergot y antecedente de valvulopatía/fibrosis según ficha.",
+    "interactions": "Antagonistas D2 reducen efecto; macrólidos/inhibidores metabólicos pueden elevar exposición; otros ergotamínicos y antihipertensivos requieren precaución.",
+    "monitoring": "Prolactina mensual durante titulación, PA ortostática, embarazo, síntomas de fibrosis/valvulopatía e impulsividad.",
+    "administration": "VO una o dos veces por semana, preferentemente con alimentos si náusea; titular lentamente.",
+    "preparation": "Comprimido listo; dividir solo si está ranurado y permitido.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Suspender al confirmar embarazo en la mayoría de microprolactinomas; decisión especializada en macroadenoma.",
+    "lactation": "Suprime lactancia y no debe usarse si se desea amamantar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Valvulopatía/fibrosis, síncope, psicosis y trastornos del control de impulsos. Titulação bloqueada sem indicação, prolactina, gravidez, PA, fígado e avaliação de valvulopatia/fibrose.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cabergoline",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=cabergoline"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cabergoline"
+  }
+};})();
+/* GOLD33_SELECTIVE:cabergolina:END */

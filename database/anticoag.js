@@ -946,3 +946,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:betrixabana:END */
+/* GOLD33_SELECTIVE:cangrelor:START */
+;(function(){var db=window.ANTICOAG_DRUGS_DB;if(!db||!db["cangrelor"])throw new Error("GOLD33_MISSING_CANONICAL:cangrelor");db["cangrelor"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "013",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9e2bb4dd7dab045f089fff2c5b88e1d5f0afd80731602b0c3fabff299d094223",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cangrelor",
+    "class": "Antiagregante plaquetário IV",
+    "pharmacologicClass": "Antagonista reversível P2Y12 de ação direta",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frasco-ampola 50 mg liofilizado para reconstituição/diluição.",
+    "presentations": "Frasco-ampola 50 mg liofilizado para reconstituição/diluição.",
+    "mechanism": "Antagonista reversível P2Y12 de ação direta. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Início em ~2 min, recuperação plaquetária em ~1 h; desfosforilação rápida; meia-vida 3-6 min; independente de rim/fígado.",
+    "indications": "Adjuvante de ICP para reduzir eventos periprocedimento em pacientes que não receberam P2Y12 oral e não usam inibidor GP IIb/IIIa.",
+    "dose": "Bolus 30 mcg/kg IV antes da ICP, seguido imediatamente por 4 mcg/kg/min por pelo menos 2 h ou duração da ICP, o que for maior.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste.",
+    "hepaticDose": "Sem ajuste formal.",
+    "commonAdverseEffects": "Sangramento e dispneia.",
+    "dangerousAdverseEffects": "Hemorragia grave/fatal e hipersensibilidade.",
+    "adverseEffects": "Sangramento e dispneia. Graves: Hemorragia grave/fatal e hipersensibilidade.",
+    "contraindications": "Sangramento ativo significativo.",
+    "interactions": "Clopidogrel/prasugrel administrados durante infusão têm efeito reduzido; ticagrelor pode ser dado durante; anticoagulantes e outros antiagregantes elevam sangramento.",
+    "monitoring": "Sangramento, Hb/hematócrito, local de acesso e transição oral documentada.",
+    "administration": "IV somente em ambiente de ICP; transição para P2Y12 oral deve seguir o momento específico de cada fármaco.",
+    "preparation": "Reconstituir cada 50 mg com 5 mL de água estéril; diluir em 250 mL de SF 0,9% ou SG 5% para 200 mcg/mL conforme rótulo.",
+    "infusionProtocol": "Bolus de solução diluída seguido de infusão contínua 4 mcg/kg/min; usar imediatamente após preparo dentro do prazo rotulado.",
+    "pregnancy": "Dados insuficientes; uso apenas se claramente necessário no contexto de ICP.",
+    "lactation": "Dados insuficientes; meia-vida muito curta, mas individualizar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hemorragia grave/fatal e hipersensibilidade. Bolus/infusão bloqueados sem peso, indicação de ICP, sangramento, P2Y12 prévio/transição e concentração final verificada.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=KENGREAL",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/204958s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=KENGREAL"
+  },
+  "es": {
+    "name": "Cangrelor",
+    "class": "Antiagregante plaquetario IV",
+    "pharmacologicClass": "Antagonista reversible P2Y12 de acción directa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Vial 50 mg liofilizado para reconstitución/dilución.",
+    "presentations": "Vial 50 mg liofilizado para reconstitución/dilución.",
+    "mechanism": "Antagonista reversible P2Y12 de acción directa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Inicio en ~2 min, recuperación plaquetaria en ~1 h; desfosforilación rápida; semivida 3-6 min; independiente de riñón/hígado.",
+    "indications": "Adyuvante de ICP para reducir eventos periprocedimiento en pacientes sin P2Y12 oral previo y sin inhibidor GP IIb/IIIa.",
+    "dose": "Bolo 30 mcg/kg IV antes de ICP, seguido inmediatamente por 4 mcg/kg/min durante al menos 2 h o duración de ICP, lo que sea mayor.",
+    "pediatricDose": "Seguridad/eficacia no establecidas. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste.",
+    "hepaticDose": "Sin ajuste formal.",
+    "commonAdverseEffects": "Sangrado y disnea.",
+    "dangerousAdverseEffects": "Hemorragia grave/fatal e hipersensibilidad.",
+    "adverseEffects": "Sangrado y disnea. Graves: Hemorragia grave/fatal e hipersensibilidad.",
+    "contraindications": "Sangrado activo significativo.",
+    "interactions": "Clopidogrel/prasugrel durante infusión tienen efecto reducido; ticagrelor puede darse durante; anticoagulantes y otros antiagregantes elevan sangrado.",
+    "monitoring": "Sangrado, Hb/hematocrito, sitio de acceso y transición oral documentada.",
+    "administration": "IV solo en entorno de ICP; transición a P2Y12 oral debe seguir el momento específico de cada fármaco.",
+    "preparation": "Reconstituir cada 50 mg con 5 mL de agua estéril; diluir en 250 mL de SS 0,9% o dextrosa 5% a 200 mcg/mL según ficha.",
+    "infusionProtocol": "Bolo de solución diluida seguido de infusión continua 4 mcg/kg/min; usar tras preparación dentro del plazo de ficha.",
+    "pregnancy": "Datos insuficientes; uso solo si claramente necesario en contexto de ICP.",
+    "lactation": "Datos insuficientes; semivida muy corta, pero individualizar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hemorragia grave/fatal e hipersensibilidad. Bolus/infusão bloqueados sem peso, indicação de ICP, sangramento, P2Y12 prévio/transição e concentração final verificada.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=KENGREAL",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/204958s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=KENGREAL"
+  }
+};})();
+/* GOLD33_SELECTIVE:cangrelor:END */

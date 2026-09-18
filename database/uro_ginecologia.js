@@ -817,3 +817,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:atosibana:END */
+/* GOLD33_SELECTIVE:carbetocina:START */
+;(function(){var db=window.URO_GINECOLOGIA_DRUGS_DB;if(!db||!db["carbetocina"])throw new Error("GOLD33_MISSING_CANONICAL:carbetocina");db["carbetocina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "013",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9e2bb4dd7dab045f089fff2c5b88e1d5f0afd80731602b0c3fabff299d094223",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Carbetocina",
+    "class": "Uterotônico análogo da ocitocina",
+    "pharmacologicClass": "Agonista do receptor de ocitocina de ação prolongada",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Solução injetável 100 mcg/mL em ampola/frasco de 1 mL; produtos termoestáveis existem em alguns programas.",
+    "presentations": "Solução injetável 100 mcg/mL em ampola/frasco de 1 mL; produtos termoestáveis existem em alguns programas.",
+    "mechanism": "Agonista do receptor de ocitocina de ação prolongada. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Início uterotônico em ~2 min; efeito prolongado cerca de 1 h; meia-vida ~40 min; eliminação predominantemente renal.",
+    "indications": "Prevenção de hemorragia pós-parto por atonia uterina após cesárea ou parto vaginal, conforme rótulo e protocolo local.",
+    "dose": "Dose única 100 mcg IV lentamente após nascimento e dequitação, conforme produto; alguns rótulos permitem IM. Não repetir.",
+    "pediatricDose": "Não indicada em população pediátrica. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste estabelecido; cautela/contraindicação em disfunção conforme rótulo.",
+    "hepaticDose": "Contraindicada em doença hepática em algumas bulas; confirmar produto.",
+    "commonAdverseEffects": "Náusea, dor abdominal, cefaleia, tremor, rubor, hipotensão e taquicardia.",
+    "dangerousAdverseEffects": "Hiponatremia/intoxicação hídrica, arritmia, isquemia, broncoespasmo e anafilaxia.",
+    "adverseEffects": "Náusea, dor abdominal, cefaleia, tremor, rubor, hipotensão e taquicardia. Graves: Hiponatremia/intoxicação hídrica, arritmia, isquemia, broncoespasmo e anafilaxia.",
+    "contraindications": "Gestação antes do parto, indução do parto, hipersensibilidade a ocitocina/carbetocina; epilepsia e doença cardíaca/renal/hepática conforme bula.",
+    "interactions": "Outros uterotônicos aumentam efeito; vasoconstritores/anestésicos podem modificar PA e ritmo.",
+    "monitoring": "Tônus/sangramento uterino, PA, FC, dor, balanço hídrico e sinais de hiponatremia.",
+    "administration": "Somente após o parto; IV lenta em cerca de 1 minuto por profissional habilitado. Nunca usar para induzir o parto.",
+    "preparation": "Solução pronta; inspecionar e confirmar 100 mcg/mL.",
+    "infusionProtocol": "Administrar dose única IV lenta; não há infusão contínua rotulada.",
+    "pregnancy": "É contraindicada antes do nascimento; uso apenas no pós-parto imediato.",
+    "lactation": "Pequena transferência prevista após dose única; aleitamento geralmente pode prosseguir.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hiponatremia/intoxicação hídrica, arritmia, isquemia, broncoespasmo e anafilaxia. Administração bloqueada sem confirmação de pós-parto, via/bula local, sangramento, comorbidades e disponibilidade de manejo de HPP.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=carbetocin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.who.int/publications/i/item/9789241550420"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=carbetocin"
+  },
+  "es": {
+    "name": "Carbetocina",
+    "class": "Uterotónico análogo de oxitocina",
+    "pharmacologicClass": "Agonista del receptor de oxitocina de acción prolongada",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Solución inyectable 100 mcg/mL en ampolla/vial de 1 mL; existen productos termoestables en algunos programas.",
+    "presentations": "Solución inyectable 100 mcg/mL en ampolla/vial de 1 mL; existen productos termoestables en algunos programas.",
+    "mechanism": "Agonista del receptor de oxitocina de acción prolongada. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Inicio uterotónico en ~2 min; efecto prolongado cerca de 1 h; semivida ~40 min; eliminación principalmente renal.",
+    "indications": "Prevención de hemorragia posparto por atonía uterina tras cesárea o parto vaginal, según ficha y protocolo local.",
+    "dose": "Dosis única 100 mcg IV lenta tras nacimiento y alumbramiento, según producto; algunas fichas permiten IM. No repetir.",
+    "pediatricDose": "No indicada en población pediátrica. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste establecido; precaución/contraindicación en disfunción según ficha.",
+    "hepaticDose": "Contraindicada en hepatopatía en algunas fichas; confirmar producto.",
+    "commonAdverseEffects": "Náusea, dolor abdominal, cefalea, temblor, rubor, hipotensión y taquicardia.",
+    "dangerousAdverseEffects": "Hiponatremia/intoxicación hídrica, arritmia, isquemia, broncoespasmo y anafilaxia.",
+    "adverseEffects": "Náusea, dolor abdominal, cefalea, temblor, rubor, hipotensión y taquicardia. Graves: Hiponatremia/intoxicación hídrica, arritmia, isquemia, broncoespasmo y anafilaxia.",
+    "contraindications": "Embarazo antes del parto, inducción, hipersensibilidad a oxitocina/carbetocina; epilepsia y enfermedad cardíaca/renal/hepática según ficha.",
+    "interactions": "Otros uterotónicos aumentan efecto; vasoconstrictores/anestésicos pueden modificar PA y ritmo.",
+    "monitoring": "Tono/sangrado uterino, PA, FC, dolor, balance hídrico y signos de hiponatremia.",
+    "administration": "Solo después del parto; IV lenta en aproximadamente 1 minuto por profesional. Nunca usar para inducir parto.",
+    "preparation": "Solución lista; inspeccionar y confirmar 100 mcg/mL.",
+    "infusionProtocol": "Administrar dosis única IV lenta; no hay infusión continua indicada.",
+    "pregnancy": "Contraindicada antes del nacimiento; uso solo en posparto inmediato.",
+    "lactation": "Se prevé pequeña transferencia tras dosis única; lactancia generalmente puede continuar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hiponatremia/intoxicación hídrica, arritmia, isquemia, broncoespasmo y anafilaxia. Administração bloqueada sem confirmação de pós-parto, via/bula local, sangramento, comorbidades e disponibilidade de manejo de HPP.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=carbetocin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.who.int/publications/i/item/9789241550420"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=carbetocin"
+  }
+};})();
+/* GOLD33_SELECTIVE:carbetocina:END */
