@@ -1386,3 +1386,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:diltiazem:END */
+/* GOLD33_SELECTIVE:doxazosina_lp:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB;if(!db||!db["doxazosina_lp"])throw new Error("GOLD33_MISSING_CANONICAL:doxazosina_lp");db["doxazosina_lp"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "027",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6a76fbf1440e5ec71509c8cde336ce4c45c6a97a183998429f649b5751b7fd7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Doxazosina de liberação prolongada",
+    "class": "Bloqueador alfa-1 LP",
+    "pharmacologicClass": "Antagonismo alfa-1 periférico",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos LP 4/8 mg.",
+    "presentations": "Comprimidos LP 4/8 mg.",
+    "mechanism": "Antagonismo alfa-1 periférico. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Liberação controlada; meia-vida aparente ~15–19 h.",
+    "indications": "Sintomas de hiperplasia prostática benigna; não intercambiável mg a mg com IR.",
+    "dose": "4 mg VO 1x/dia com café da manhã; pode aumentar para 8 mg após 3–4 semanas.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste usual.",
+    "hepaticDose": "Cautela; evitar hepatopatia grave.",
+    "commonAdverseEffects": "Tontura, cefaleia, fadiga, edema e hipotensão.",
+    "dangerousAdverseEffects": "Síncope, priapismo e íris flácida intraoperatória.",
+    "adverseEffects": "Tontura, cefaleia, fadiga, edema e hipotensão. Graves: Síncope, priapismo e íris flácida intraoperatória.",
+    "contraindications": "Hipersensibilidade a quinazolinas; obstrução GI importante exige cautela pela matriz.",
+    "interactions": "PDE5 e anti-hipertensivos aumentam hipotensão.",
+    "monitoring": "PA ortostática, sintomas urinários e tolerabilidade.",
+    "administration": "Engolir inteira com café da manhã; não triturar/mastigar.",
+    "preparation": "Usar a apresentação correta; seguir rótulo.",
+    "infusionProtocol": "Não aplicável salvo produto parenteral.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco.",
+    "lactation": "Dados limitados; avaliar exposição do lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Síncope, priapismo e íris flácida intraoperatória. Conversão/titulação bloqueadas sem formulação exata, indicação, PA, fígado e risco GI.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxazosin+extended+release",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/021625s008lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxazosin+extended+release"
+  },
+  "es": {
+    "name": "Doxazosina de liberación prolongada",
+    "class": "Bloqueante alfa-1 LP",
+    "pharmacologicClass": "Antagonismo alfa-1 periférico",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos LP 4/8 mg.",
+    "presentations": "Comprimidos LP 4/8 mg.",
+    "mechanism": "Antagonismo alfa-1 periférico. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Liberación controlada; semivida aparente ~15–19 h.",
+    "indications": "Síntomas de hiperplasia prostática benigna; no intercambiable mg a mg con IR.",
+    "dose": "4 mg VO 1 vez/día con desayuno; puede subir a 8 mg tras 3–4 semanas.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste habitual.",
+    "hepaticDose": "Precaución; evitar hepatopatía grave.",
+    "commonAdverseEffects": "Mareo, cefalea, fatiga, edema e hipotensión.",
+    "dangerousAdverseEffects": "Síncope, priapismo e iris flácido intraoperatorio.",
+    "adverseEffects": "Mareo, cefalea, fatiga, edema e hipotensión. Graves: Síncope, priapismo e iris flácido intraoperatorio.",
+    "contraindications": "Hipersensibilidad a quinazolinas; obstrucción GI importante exige precaución por matriz.",
+    "interactions": "PDE5 y antihipertensivos aumentan hipotensión.",
+    "monitoring": "PA ortostática, síntomas urinarios y tolerabilidad.",
+    "administration": "Tragar entera con desayuno; no triturar/masticar.",
+    "preparation": "Usar presentación correcta; seguir ficha.",
+    "infusionProtocol": "No aplicable salvo producto parenteral.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo.",
+    "lactation": "Datos limitados; evaluar exposición del lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Síncope, priapismo e iris flácido intraoperatorio. Conversão/titulação bloqueadas sem formulação exata, indicação, PA, fígado e risco GI.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxazosin+extended+release",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/021625s008lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxazosin+extended+release"
+  }
+};})();
+/* GOLD33_SELECTIVE:doxazosina_lp:END */

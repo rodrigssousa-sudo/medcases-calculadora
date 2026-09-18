@@ -6317,3 +6317,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:diazepam:END */
+/* GOLD33_SELECTIVE:doxepina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["doxepina"])throw new Error("GOLD33_MISSING_CANONICAL:doxepina");db["doxepina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "027",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6a76fbf1440e5ec71509c8cde336ce4c45c6a97a183998429f649b5751b7fd7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Doxepina",
+    "class": "Antidepressivo tricíclico",
+    "pharmacologicClass": "Inibe recaptação de serotonina/noradrenalina; antagonismo H1 potente",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas/concentrado 10–150 mg; comprimidos 3/6 mg para insônia.",
+    "presentations": "Cápsulas/concentrado 10–150 mg; comprimidos 3/6 mg para insônia.",
+    "mechanism": "Inibe recaptação de serotonina/noradrenalina; antagonismo H1 potente. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP2D6/2C19; metabólito ativo nordoxepina.",
+    "indications": "Depressão/ansiedade em doses antidepressivas; insônia em formulação de baixa dose específica.",
+    "dose": "Depressão: usual 75 mg/dia, faixa 75–150 mg/dia, máximo 300 mg/dia em pacientes selecionados. Insônia: 3–6 mg ao deitar. Formulações não intercambiáveis.",
+    "pediatricDose": "Não estabelecido para insônia; uso psiquiátrico pediátrico exige especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sem tabela; iniciar baixo.",
+    "hepaticDose": "Reduzir/iniciar baixo.",
+    "commonAdverseEffects": "Sonolência, boca seca, constipação, visão turva e ganho de peso.",
+    "dangerousAdverseEffects": "Suicidalidade, arritmia, convulsão, síndrome serotoninérgica e toxicidade fatal em overdose.",
+    "adverseEffects": "Sonolência, boca seca, constipação, visão turva e ganho de peso. Graves: Suicidalidade, arritmia, convulsão, síndrome serotoninérgica e toxicidade fatal em overdose.",
+    "contraindications": "IMAO nos 14 dias anteriores, glaucoma de ângulo fechado não tratado, retenção urinária grave.",
+    "interactions": "IMAO, serotonérgicos, álcool/CNS, CYP2D6 e fármacos QT.",
+    "monitoring": "Humor/suicídio, sedação, anticolinérgicos, PA, ECG em risco e peso.",
+    "administration": "Insônia: dentro de 30 min de deitar e não dentro de 3 h após refeição.",
+    "preparation": "Usar a apresentação correta; seguir rótulo.",
+    "infusionProtocol": "Não aplicável salvo produto parenteral.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco.",
+    "lactation": "Dados limitados; avaliar exposição do lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Suicidalidade, arritmia, convulsão, síndrome serotoninérgica e toxicidade fatal em overdose. Dose bloqueada sem indicação/formulação, risco suicida, ECG, glaucoma/retenção, fígado e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxepin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022036s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxepin"
+  },
+  "es": {
+    "name": "Doxepina",
+    "class": "Antidepresivo tricíclico",
+    "pharmacologicClass": "Inhibe recaptación de serotonina/noradrenalina; antagonismo H1 potente",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas/concentrado 10–150 mg; comprimidos 3/6 mg para insomnio.",
+    "presentations": "Cápsulas/concentrado 10–150 mg; comprimidos 3/6 mg para insomnio.",
+    "mechanism": "Inhibe recaptación de serotonina/noradrenalina; antagonismo H1 potente. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP2D6/2C19; metabolito activo nordoxepina.",
+    "indications": "Depresión/ansiedad en dosis antidepresivas; insomnio en formulación específica de dosis baja.",
+    "dose": "Depresión: habitual 75 mg/día, rango 75–150 mg/día, máximo 300 mg/día en seleccionados. Insomnio: 3–6 mg al acostarse. Formulaciones no intercambiables.",
+    "pediatricDose": "No establecido para insomnio; uso psiquiátrico pediátrico exige especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sin tabla; iniciar bajo.",
+    "hepaticDose": "Reducir/iniciar bajo.",
+    "commonAdverseEffects": "Somnolencia, boca seca, estreñimiento, visión borrosa y aumento de peso.",
+    "dangerousAdverseEffects": "Suicidalidad, arritmia, convulsión, síndrome serotoninérgico y toxicidad fatal en sobredosis.",
+    "adverseEffects": "Somnolencia, boca seca, estreñimiento, visión borrosa y aumento de peso. Graves: Suicidalidad, arritmia, convulsión, síndrome serotoninérgico y toxicidad fatal en sobredosis.",
+    "contraindications": "IMAO en 14 días previos, glaucoma de ángulo cerrado no tratado, retención urinaria grave.",
+    "interactions": "IMAO, serotoninérgicos, alcohol/SNC, CYP2D6 y fármacos QT.",
+    "monitoring": "Ánimo/suicidio, sedación, anticolinérgicos, PA, ECG en riesgo y peso.",
+    "administration": "Insomnio: dentro de 30 min de acostarse y no dentro de 3 h tras comida.",
+    "preparation": "Usar presentación correcta; seguir ficha.",
+    "infusionProtocol": "No aplicable salvo producto parenteral.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo.",
+    "lactation": "Datos limitados; evaluar exposición del lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Suicidalidad, arritmia, convulsión, síndrome serotoninérgico y toxicidad fatal en sobredosis. Dose bloqueada sem indicação/formulação, risco suicida, ECG, glaucoma/retenção, fígado e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxepin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022036s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxepin"
+  }
+};})();
+/* GOLD33_SELECTIVE:doxepina:END */

@@ -7,11 +7,9 @@
   "pt": {
     "name": "Doxiciclina",
     "class": "Antibiótico tetraciclina",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Comprimidos/cápsulas e suspensão oral.",
-    "dose": "Adultos: 200 mg no primeiro dia (100 mg q12h), depois 100 mg/dia; grave 100 mg q12h.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos/cápsulas/suspensão e IV; sais/formulações variam.",
+    "dose": "Muitas infecções: 200 mg no primeiro dia (100 mg a cada 12 h), depois 100 mg/dia; graves podem requerer 100 mg a cada 12 h. Indicação define esquema/duração.",
     "doseKg": {
       "pediatrica": "2–4 mg/kg/dia",
       "maxDose": "200 mg/dia"
@@ -19,74 +17,45 @@
     "therapeuticRange": "Boa biodisponibilidade oral.",
     "dilution": "Via oral.",
     "speed": "Administrar com água abundante.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Dor abdominal",
-      "Cefaleia"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "Toxicidade órgão-específica conforme o agente"
-    ],
+    "commonAdverseEffects": "Náusea, diarreia, esofagite, candidíase e fotossensibilidade.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, hipertensão intracraniana, hepatotoxicidade e C. difficile.",
     "risksByPatient": [],
-    "alerts": [
-      "Esofagite",
-      "Fotossensibilidade",
-      "Quelantes reduzem absorção",
-      "Hipertensão intracraniana",
-      "Dentes/osso em desenvolvimento"
-    ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
-    ],
-    "renalDose": "Sem ajuste rotineiro; doses usuais não demonstram acúmulo excessivo em insuficiência renal e diálise não reduz significativamente meia-vida.",
-    "pharmacologicClass": "Tetraciclina de longa ação",
-    "mechanism": "Liga-se reversivelmente à subunidade 30S e impede ligação do aminoacil-tRNA.",
-    "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC e tempo de exposição contribuem para atividade.",
-    "pharmacokinetics": "Alta biodisponibilidade oral, ampla distribuição e eliminação renal/fecal; não há acúmulo excessivo nas doses usuais em insuficiência renal.",
-    "indications": "Rickettsioses, Chlamydia/Mycoplasma, algumas infecções respiratórias, zoonoses e outras por suscetíveis.",
-    "presentations": [
-      "50 mg",
-      "100 mg",
-      "Suspensão oral"
-    ],
-    "pediatricDose": "<45 kg com infecção grave: 2,2 mg/kg q12h. >8 anos menos grave: 4,4 mg/kg dia 1 dividido, depois 2,2 mg/kg/dia; >=45 kg dose adulta.",
-    "hepaticDose": "Sem esquema universal de ajuste; cautela em hepatopatia grave e com hepatotóxicos.",
-    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
-    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
-    "interactions": "Antiácidos, cálcio, ferro, magnésio e bismuto reduzem absorção; revisar retinoides, anticoagulantes e indutores.",
-    "monitoring": "Tolerância GI/esofágica, fotossensibilidade e função hepática em cursos prolongados.",
-    "administration": "VO com bastante água; permanecer erguido após dose. Separar de cátions/antiácidos/ferro.",
-    "preparation": "Suspensão conforme fabricante; evitar quelantes.",
-    "infusionProtocol": "Não aplicável ao registro oral.",
-    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
-    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
-    "specialPopulations": "Pode causar coloração dentária/efeito ósseo durante desenvolvimento; rickettsioses graves podem justificar uso pediátrico conforme diretrizes.",
-    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
-    "clinicalPearls": "Boa biodisponibilidade e ausência de ajuste renal favorecem uso na DRC; quelantes reduzem absorção e esofagite é prevenível com água/posição.",
-    "guidelineRecommendations": "Em CAP pode ser opção selecionada; em IST/rickettsiose seguir diretriz específica e não atrasar tratamento de doença grave.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Revisar toxicidades e interações"
-    ],
+    "alerts": "Anafilaxia, SCAR, hipertensão intracraniana, hepatotoxicidade e C. difficile. Esquema bloqueado sem foco, patógeno, idade/peso, formulação, alergias, gestação e interações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxycycline",
+    "renalDose": "Geralmente sem ajuste renal.",
+    "pharmacologicClass": "Liga subunidade 30S e inibe síntese proteica",
+    "mechanism": "Liga subunidade 30S e inibe síntese proteica. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Boa absorção oral; eliminação fecal/renal, meia-vida ~18–22 h.",
+    "indications": "Infecções suscetíveis e indicações específicas conforme foco, patógeno e diretriz.",
+    "presentations": "Comprimidos/cápsulas/suspensão e IV; sais/formulações variam.",
+    "pediatricDose": "≥8 anos: frequentemente 2,2 mg/kg a cada 12 h no primeiro dia, depois 2,2 mg/kg/dia; infecções graves mantêm q12h. Uso em menores depende da indicação. AUTOMATABLE=NO.",
+    "hepaticDose": "Cautela em hepatopatia.",
+    "adverseEffects": "Náusea, diarreia, esofagite, candidíase e fotossensibilidade. Graves: Anafilaxia, SCAR, hipertensão intracraniana, hepatotoxicidade e C. difficile.",
+    "contraindications": "Hipersensibilidade a tetraciclinas.",
+    "interactions": "Antiácidos/ferro/cálcio reduzem absorção; retinoides aumentam hipertensão intracraniana; varfarina.",
+    "monitoring": "Resposta, cultura, GI/esofagite, fotossensibilidade, fígado e C. difficile.",
+    "administration": "VO com copo cheio de água, sentado/em pé; separar de cátions. IV conforme rótulo.",
+    "preparation": "Usar a apresentação correta; seguir rótulo.",
+    "infusionProtocol": "Não aplicável salvo produto parenteral.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco.",
+    "lactation": "Dados limitados; avaliar exposição do lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxycycline",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/050795s024lbl.pdf"
     ]
   },
   "es": {
     "name": "Doxiciclina",
     "class": "Antibiótico tetraciclina",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos/cápsulas y suspensión oral.",
-    "dose": "Adultos: 200 mg día 1 (100 mg q12h), luego 100 mg/día; grave 100 mg q12h.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos/cápsulas/suspensión e IV; sales/formulaciones varían.",
+    "dose": "Muchas infecciones: 200 mg primer día (100 mg cada 12 h), luego 100 mg/día; graves pueden requerir 100 mg cada 12 h. Indicación define pauta/duración.",
     "doseKg": {
       "pediatrica": "2–4 mg/kg/día",
       "maxDose": "200 mg/día"
@@ -94,64 +63,37 @@
     "therapeuticRange": "Buena biodisponibilidad oral.",
     "dilution": "Vía oral.",
     "speed": "Administrar con abundante agua.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Dolor abdominal",
-      "Cefalea"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "Toxicidad órgano-específica según el agente"
-    ],
+    "commonAdverseEffects": "Náusea, diarrea, esofagitis, candidiasis y fotosensibilidad.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, hipertensión intracraneal, hepatotoxicidad y C. difficile.",
     "risksByPatient": [],
-    "alerts": [
-      "Esofagitis",
-      "Fotosensibilidad",
-      "Quelantes reducen absorción",
-      "Hipertensión intracraneal",
-      "Dientes/hueso en desarrollo"
-    ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
-    ],
-    "renalDose": "Sin ajuste rutinario; dosis usuales no muestran acumulación excesiva en insuficiencia renal y diálisis no reduce significativamente semivida.",
-    "pharmacologicClass": "Tetraciclina de acción prolongada",
-    "mechanism": "Se une reversiblemente a subunidad 30S e impide unión de aminoacil-tRNA.",
-    "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC y tiempo de exposición contribuyen a actividad.",
-    "pharmacokinetics": "Alta biodisponibilidad oral, amplia distribución y eliminación renal/fecal; no hay acumulación excesiva con dosis usuales en insuficiencia renal.",
-    "indications": "Rickettsiosis, Chlamydia/Mycoplasma, algunas respiratorias, zoonosis y otras por susceptibles.",
-    "presentations": [
-      "50 mg",
-      "100 mg",
-      "Suspensión oral"
-    ],
-    "pediatricDose": "<45 kg con infección grave: 2,2 mg/kg q12h. >8 años menos grave: 4,4 mg/kg día 1 dividido, luego 2,2 mg/kg/día; >=45 kg dosis adulta.",
-    "hepaticDose": "Sin esquema universal de ajuste; precaución en hepatopatía grave y hepatotóxicos.",
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
-    "interactions": "Antiácidos, calcio, hierro, magnesio y bismuto reducen absorción; revisar retinoides, anticoagulantes e inductores.",
-    "monitoring": "Tolerancia GI/esofágica, fotosensibilidad y función hepática en cursos prolongados.",
-    "administration": "VO con abundante agua; permanecer erguido. Separar de cationes/antiácidos/hierro.",
-    "preparation": "Suspensión según fabricante; evitar quelantes.",
-    "infusionProtocol": "No aplicable al registro oral.",
-    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
-    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
-    "specialPopulations": "Puede causar coloración dental/efecto óseo durante desarrollo; rickettsiosis grave puede justificar uso pediátrico según guías.",
-    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
-    "clinicalPearls": "Buena biodisponibilidad y ausencia de ajuste renal favorecen uso en ERC; quelantes reducen absorción y esofagitis se previene con agua/posición.",
-    "guidelineRecommendations": "En CAP puede ser opción seleccionada; en ITS/rickettsiosis seguir guía específica y no retrasar tratamiento grave.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Revisar toxicidades e interacciones"
-    ],
+    "alerts": "Anafilaxia, SCAR, hipertensión intracraneal, hepatotoxicidad y C. difficile. Esquema bloqueado sem foco, patógeno, idade/peso, formulação, alergias, gestação e interações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxycycline",
+    "renalDose": "Generalmente sin ajuste renal.",
+    "pharmacologicClass": "Se une a subunidad 30S e inhibe síntesis proteica",
+    "mechanism": "Se une a subunidad 30S e inhibe síntesis proteica. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Buena absorción oral; eliminación fecal/renal, semivida ~18–22 h.",
+    "indications": "Infecciones susceptibles e indicaciones específicas según foco, patógeno y guía.",
+    "presentations": "Comprimidos/cápsulas/suspensión e IV; sales/formulaciones varían.",
+    "pediatricDose": "≥8 años: frecuentemente 2,2 mg/kg cada 12 h primer día, luego 2,2 mg/kg/día; graves mantienen q12h. Uso en menores depende de indicación. AUTOMATABLE=NO.",
+    "hepaticDose": "Precaución en hepatopatía.",
+    "adverseEffects": "Náusea, diarrea, esofagitis, candidiasis y fotosensibilidad. Graves: Anafilaxia, SCAR, hipertensión intracraneal, hepatotoxicidad y C. difficile.",
+    "contraindications": "Hipersensibilidad a tetraciclinas.",
+    "interactions": "Antiácidos/hierro/calcio reducen absorción; retinoides aumentan hipertensión intracraneal; warfarina.",
+    "monitoring": "Respuesta, cultivo, GI/esofagitis, fotosensibilidad, hígado y C. difficile.",
+    "administration": "VO con vaso lleno de agua, sentado/de pie; separar de cationes. IV según ficha.",
+    "preparation": "Usar presentación correcta; seguir ficha.",
+    "infusionProtocol": "No aplicable salvo producto parenteral.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo.",
+    "lactation": "Datos limitados; evaluar exposición del lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fdc01c3-c62f-40cf-8351-91cbcc43d379",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxycycline",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/050795s024lbl.pdf"
     ]
   },
   "name": {
@@ -165,9 +107,21 @@
     "doxiciclina bago",
     "tetraciclina"
   ],
-  "dataVersion": "clinical-data-v1-7a2b2da33f44c7d0",
-  "clinicalContentSha256": "7a2b2da33f44c7d0e2b465b60db6f154b6da14f6571bb903c0931ba42481f27a",
+  "dataVersion": "clinical-data-v1-aeb4dc6afb729273",
+  "clinicalContentSha256": "aeb4dc6afb7292734cc9954c73a5005e929d4828acaf2a94e7eda14b36f084a2",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "doxiciclina.mcGoldClinicalV1",
+    "lote": "027",
+    "requiredFields": 33,
+    "approvedSha256": "b6a76fbf1440e5ec71509c8cde336ce4c45c6a97a183998429f649b5751b7fd7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

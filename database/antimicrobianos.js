@@ -27941,3 +27941,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:dicloxacilina:END */
+/* GOLD33_SELECTIVE:doxiciclina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["doxiciclina"])throw new Error("GOLD33_MISSING_CANONICAL:doxiciclina");db["doxiciclina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "027",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6a76fbf1440e5ec71509c8cde336ce4c45c6a97a183998429f649b5751b7fd7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Doxiciclina",
+    "class": "Antibiótico tetraciclina",
+    "pharmacologicClass": "Liga subunidade 30S e inibe síntese proteica",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos/cápsulas/suspensão e IV; sais/formulações variam.",
+    "presentations": "Comprimidos/cápsulas/suspensão e IV; sais/formulações variam.",
+    "mechanism": "Liga subunidade 30S e inibe síntese proteica. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Boa absorção oral; eliminação fecal/renal, meia-vida ~18–22 h.",
+    "indications": "Infecções suscetíveis e indicações específicas conforme foco, patógeno e diretriz.",
+    "dose": "Muitas infecções: 200 mg no primeiro dia (100 mg a cada 12 h), depois 100 mg/dia; graves podem requerer 100 mg a cada 12 h. Indicação define esquema/duração.",
+    "pediatricDose": "≥8 anos: frequentemente 2,2 mg/kg a cada 12 h no primeiro dia, depois 2,2 mg/kg/dia; infecções graves mantêm q12h. Uso em menores depende da indicação. AUTOMATABLE=NO.",
+    "renalDose": "Geralmente sem ajuste renal.",
+    "hepaticDose": "Cautela em hepatopatia.",
+    "commonAdverseEffects": "Náusea, diarreia, esofagite, candidíase e fotossensibilidade.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, hipertensão intracraniana, hepatotoxicidade e C. difficile.",
+    "adverseEffects": "Náusea, diarreia, esofagite, candidíase e fotossensibilidade. Graves: Anafilaxia, SCAR, hipertensão intracraniana, hepatotoxicidade e C. difficile.",
+    "contraindications": "Hipersensibilidade a tetraciclinas.",
+    "interactions": "Antiácidos/ferro/cálcio reduzem absorção; retinoides aumentam hipertensão intracraniana; varfarina.",
+    "monitoring": "Resposta, cultura, GI/esofagite, fotossensibilidade, fígado e C. difficile.",
+    "administration": "VO com copo cheio de água, sentado/em pé; separar de cátions. IV conforme rótulo.",
+    "preparation": "Usar a apresentação correta; seguir rótulo.",
+    "infusionProtocol": "Não aplicável salvo produto parenteral.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco.",
+    "lactation": "Dados limitados; avaliar exposição do lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, SCAR, hipertensão intracraniana, hepatotoxicidade e C. difficile. Esquema bloqueado sem foco, patógeno, idade/peso, formulação, alergias, gestação e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxycycline",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/050795s024lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxycycline"
+  },
+  "es": {
+    "name": "Doxiciclina",
+    "class": "Antibiótico tetraciclina",
+    "pharmacologicClass": "Se une a subunidad 30S e inhibe síntesis proteica",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos/cápsulas/suspensión e IV; sales/formulaciones varían.",
+    "presentations": "Comprimidos/cápsulas/suspensión e IV; sales/formulaciones varían.",
+    "mechanism": "Se une a subunidad 30S e inhibe síntesis proteica. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Buena absorción oral; eliminación fecal/renal, semivida ~18–22 h.",
+    "indications": "Infecciones susceptibles e indicaciones específicas según foco, patógeno y guía.",
+    "dose": "Muchas infecciones: 200 mg primer día (100 mg cada 12 h), luego 100 mg/día; graves pueden requerir 100 mg cada 12 h. Indicación define pauta/duración.",
+    "pediatricDose": "≥8 años: frecuentemente 2,2 mg/kg cada 12 h primer día, luego 2,2 mg/kg/día; graves mantienen q12h. Uso en menores depende de indicación. AUTOMATABLE=NO.",
+    "renalDose": "Generalmente sin ajuste renal.",
+    "hepaticDose": "Precaución en hepatopatía.",
+    "commonAdverseEffects": "Náusea, diarrea, esofagitis, candidiasis y fotosensibilidad.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, hipertensión intracraneal, hepatotoxicidad y C. difficile.",
+    "adverseEffects": "Náusea, diarrea, esofagitis, candidiasis y fotosensibilidad. Graves: Anafilaxia, SCAR, hipertensión intracraneal, hepatotoxicidad y C. difficile.",
+    "contraindications": "Hipersensibilidad a tetraciclinas.",
+    "interactions": "Antiácidos/hierro/calcio reducen absorción; retinoides aumentan hipertensión intracraneal; warfarina.",
+    "monitoring": "Respuesta, cultivo, GI/esofagitis, fotosensibilidad, hígado y C. difficile.",
+    "administration": "VO con vaso lleno de agua, sentado/de pie; separar de cationes. IV según ficha.",
+    "preparation": "Usar presentación correcta; seguir ficha.",
+    "infusionProtocol": "No aplicable salvo producto parenteral.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo.",
+    "lactation": "Datos limitados; evaluar exposición del lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, SCAR, hipertensión intracraneal, hepatotoxicidad y C. difficile. Esquema bloqueado sem foco, patógeno, idade/peso, formulação, alergias, gestação e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxycycline",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/050795s024lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=doxycycline"
+  }
+};})();
+/* GOLD33_SELECTIVE:doxiciclina:END */

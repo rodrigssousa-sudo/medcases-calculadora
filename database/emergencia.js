@@ -4060,3 +4060,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:dobutamina:END */
+/* GOLD33_SELECTIVE:dopamina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["dopamina"])throw new Error("GOLD33_MISSING_CANONICAL:dopamina");db["dopamina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "027",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6a76fbf1440e5ec71509c8cde336ce4c45c6a97a183998429f649b5751b7fd7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Dopamina",
+    "class": "Catecolamina vasopressora/inotrópica",
+    "pharmacologicClass": "Agonismo dopaminérgico e adrenérgico dependente da dose",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Concentrado e bolsas IV em múltiplas concentrações.",
+    "presentations": "Concentrado e bolsas IV em múltiplas concentrações.",
+    "mechanism": "Agonismo dopaminérgico e adrenérgico dependente da dose. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Meia-vida ~2 min; metabolizada por MAO/COMT.",
+    "indications": "Correção de instabilidade hemodinâmica em choque selecionado após reposição volêmica adequada.",
+    "dose": "Iniciar 2–5 mcg/kg/min IV contínuo e titular; faixa usual 2–20 mcg/kg/min, podendo requerer doses maiores em ambiente crítico.",
+    "pediatricDose": "Uso especializado e titulado por peso/resposta. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste fixo; titular.",
+    "hepaticDose": "Sem ajuste fixo; titular.",
+    "commonAdverseEffects": "Taquicardia, ectopia, náusea, cefaleia e vasoconstrição.",
+    "dangerousAdverseEffects": "Arritmia, isquemia, necrose por extravasamento e gangrena periférica.",
+    "adverseEffects": "Taquicardia, ectopia, náusea, cefaleia e vasoconstrição. Graves: Arritmia, isquemia, necrose por extravasamento e gangrena periférica.",
+    "contraindications": "Feocromocitoma e taquiarritmia não corrigida; hipersensibilidade/sulfito conforme produto.",
+    "interactions": "IMAO potencializam acentuadamente; tricíclicos, anestésicos e outros simpaticomiméticos elevam risco.",
+    "monitoring": "PA invasiva, ECG, perfusão, débito urinário, lactato e local de infusão.",
+    "administration": "Infusão por bomba, preferir veia central; corrigir hipovolemia.",
+    "preparation": "Diluir concentrado em solução compatível; não usar com bicarbonato.",
+    "infusionProtocol": "Infusão contínua; desmame gradual. Tratar extravasamento conforme protocolo.",
+    "pregnancy": "Usar se benefício justificar.",
+    "lactation": "Dados insuficientes; decisão no contexto crítico.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Arritmia, isquemia, necrose por extravasamento e gangrena periférica. Cálculo de bomba bloqueado sem peso, concentração, acesso, alvo hemodinâmico, ritmo e reposição volêmica.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dopamine+hydrochloride",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/018135s033lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dopamine+hydrochloride"
+  },
+  "es": {
+    "name": "Dopamina",
+    "class": "Catecolamina vasopresora/inotrópica",
+    "pharmacologicClass": "Agonismo dopaminérgico y adrenérgico dependiente de dosis",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Concentrado y bolsas IV en múltiples concentraciones.",
+    "presentations": "Concentrado y bolsas IV en múltiples concentraciones.",
+    "mechanism": "Agonismo dopaminérgico y adrenérgico dependiente de dosis. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Semivida ~2 min; metabolizada por MAO/COMT.",
+    "indications": "Corrección de inestabilidad hemodinámica en shock seleccionado tras reposición de volumen adecuada.",
+    "dose": "Iniciar 2–5 mcg/kg/min IV continua y titular; rango habitual 2–20 mcg/kg/min, pudiendo requerir dosis mayores en críticos.",
+    "pediatricDose": "Uso especializado y titulado por peso/respuesta. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste fijo; titular.",
+    "hepaticDose": "Sin ajuste fijo; titular.",
+    "commonAdverseEffects": "Taquicardia, ectopia, náusea, cefalea y vasoconstricción.",
+    "dangerousAdverseEffects": "Arritmia, isquemia, necrosis por extravasación y gangrena periférica.",
+    "adverseEffects": "Taquicardia, ectopia, náusea, cefalea y vasoconstricción. Graves: Arritmia, isquemia, necrosis por extravasación y gangrena periférica.",
+    "contraindications": "Feocromocitoma y taquiarritmia no corregida; hipersensibilidad/sulfito según producto.",
+    "interactions": "IMAO potencian marcadamente; tricíclicos, anestésicos y otros simpaticomiméticos elevan riesgo.",
+    "monitoring": "PA invasiva, ECG, perfusión, diuresis, lactato y sitio de infusión.",
+    "administration": "Infusión por bomba, preferir vía central; corregir hipovolemia.",
+    "preparation": "Diluir concentrado en solución compatible; no usar con bicarbonato.",
+    "infusionProtocol": "Infusión continua; retirada gradual. Tratar extravasación según protocolo.",
+    "pregnancy": "Usar si beneficio justifica.",
+    "lactation": "Datos insuficientes; decisión en contexto crítico.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Arritmia, isquemia, necrosis por extravasación y gangrena periférica. Cálculo de bomba bloqueado sem peso, concentração, acesso, alvo hemodinâmico, ritmo e reposição volêmica.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dopamine+hydrochloride",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/018135s033lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dopamine+hydrochloride"
+  }
+};})();
+/* GOLD33_SELECTIVE:dopamina:END */
