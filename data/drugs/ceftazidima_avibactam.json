@@ -5,55 +5,28 @@
   "color": "rgba(220,38,38,0.15)",
   "colorTxt": "#DC2626",
   "pt": {
-    "name": "Ceftazidima/avibactam",
-    "class": "Cefalosporina antipseudomonas + inibidor não beta-lactâmico de beta-lactamase",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Frasco IV 2,5 g (2 g/0,5 g).",
-    "dose": "Adultos CrCl >50: 2,5 g IV q8h por 2 h.",
+    "name": "Ceftazidima + avibactam",
+    "class": "Cefalosporina + inibidor de beta-lactamase",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frasco 2,5 g: 2 g/0,5 g.",
+    "dose": "Adulto CrCl >50: 2,5 g IV a cada 8 h, infusão de 2 h; duração conforme foco.",
     "doseKg": {
       "pediatrica": "50 mg/kg (ceftazidima) + 12,5 mg/kg (avibactam) EV 8/8h (máx 2,5 g/dose)"
     },
-    "mechanism": "Ceftazidima inibe PBPs; avibactam inibe beta-lactamases classe A (KPC), classe C e algumas classe D como OXA-48-like, mas não MBL.",
+    "mechanism": "Beta-lactâmico inibidor da síntese da parede bacteriana. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "EV: pico sérico ao final da infusão de 120 min.",
     "halfLife": "Meia-vida 2,7 h (ceftazidima); 2,7 h (avibactam). Eliminação renal >80%.",
     "therapeuticRange": "T>CIM para ceftazidima; AUC/CIM para avibactam. Infusão prolongada pode otimizar T>CIM.",
     "dilution": "Reconstituir em 10 mL de SF; diluir em 50–250 mL de SF 0,9% ou SG 5%. Estável 12h em temperatura ambiente.",
     "speed": "Infundir em 120 minutos.",
-    "commonAdverseEffects": [
-      "Diarreia",
-      "Náusea",
-      "Rash",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidade/convulsões em exposição excessiva"
-    ],
-    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+    "commonAdverseEffects": "Diarreia, náusea, rash e reação no local de administração.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara.",
+    "contraindications": "Hipersensibilidade grave a cefalosporinas; avaliar reação imediata a outros beta-lactâmicos.",
     "risksByPatient": [],
-    "alerts": [
-      "Não cobre MBL isoladamente",
-      "Monitorar função renal diariamente se instável",
-      "AST indispensável em CRE/DTR Pseudomonas",
-      "Resistência pode emergir durante terapia"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9c2803f-dc9c-4b19-b4a3-8303bc8c15fd",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
-    ],
-    "renalDose": "CrCl 31–50: 1,25 g q8h; 16–30: 0,94 g q12h; menor função requer reduções adicionais conforme rótulo; monitorar CrCl/eGFR diariamente se em mudança e administrar após HD.",
-    "safetyFlags": [
-      "Alergia beta-lactâmica",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidade por acúmulo"
-    ],
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara. Uso bloqueado sem foco, cultura/MIC/mecanismo, peso/idade, CrCl atual, diálise, metronidazol e stewardship.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=AVYCAZ",
+    "renalDose": "Ajustar quando CrCl ≤50; monitorar diariamente se função renal instável.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -68,83 +41,53 @@
       ],
       "note": "Bloco mesclado e melhorado: cortes renais oficiais do FDA label (CrCl 31–50 / 16–30 / 6–15 / ≤5) preservados. Doses pediátricas corrigidas para incluir ambos os componentes (ceftazidima + avibactam) em todas as faixas. Obs enriquecidas com monitoramento diário de CrCl, neurotoxicidade, dose pós-HD e risco de resistência emergente. safetyFlags e warning expandidos. EMA label, Johns Hopkins e Lexicomp adicionados às fontes."
     },
-    "pharmacologicClass": "Ceftazidima + avibactam",
-    "pharmacodynamics": "Beta-lactâmico tempo-dependente; exposição adequada de ambos os componentes é essencial.",
-    "pharmacokinetics": "IV; ambos predominantemente renais e hemodialisáveis.",
-    "indications": "cIAI com metronidazol, cUTI/pielonefrite e HABP/VABP; terapia dirigida para Enterobacterales resistentes e DTR Pseudomonas suscetíveis.",
-    "presentations": [
-      "2,5 g por frasco"
-    ],
-    "pediatricDose": "2–<18 anos: 62,5 mg/kg q8h até 2,5 g; 6 meses–<2 anos 62,5 mg/kg; 3–<6 meses 50 mg/kg; >28 dias–<3 meses 37,5 mg/kg; neonatos elegíveis 25 mg/kg, todos q8h.",
-    "hepaticDose": "Sem ajuste hepático rotineiro.",
-    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
-    "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
-    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
-    "administration": "IV em 2 h; cIAI exige metronidazol.",
-    "preparation": "Reconstituir/diluir conforme fabricante e calcular dose pelo produto combinado.",
-    "infusionProtocol": "Infusão de 2 h; manter exposição adequada em Pseudomonas/CRE e função renal instável.",
-    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
-    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
-    "specialPopulations": "Insuficiência renal exige ajuste rápido; dados pediátricos renais são limitados em menores de 2 anos.",
-    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
-    "clinicalPearls": "Ativo contra KPC, OXA-48-like, ESBL/AmpC suscetíveis e parte dos DTR Pseudomonas; avibactam não inibe NDM/VIM/IMP.",
-    "guidelineRecommendations": "IDSA 2026: opção preferida para várias CRE suscetíveis e DTR Pseudomonas; para NDM/MBL, aztreonam-avibactam ou ceftazidima/avibactam + aztreonam são estratégias razoáveis.",
+    "pharmacologicClass": "Beta-lactâmico inibidor da síntese da parede bacteriana",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Ambos eliminados predominantemente pelos rins; farmacocinética guiada por CrCl.",
+    "indications": "cUTI, cIAI com metronidazol e HABP/VABP por Gram-negativos suscetíveis; reservar conforme resistência.",
+    "presentations": "Frasco 2,5 g: 2 g/0,5 g.",
+    "pediatricDose": "≥3 meses: dose por peso/idade e CrCl, máximo 2,5 g a cada 8 h. AUTOMATABLE=NO.",
+    "hepaticDose": "Sem ajuste específico.",
+    "adverseEffects": "Diarreia, náusea, rash e reação no local de administração. Graves: Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara.",
+    "interactions": "Probenecida pode elevar exposição; revisar anticoagulantes, nefrotóxicos, soluções incompatíveis e vacinas bacterianas vivas.",
+    "monitoring": "Culturas e suscetibilidade, resposta, alergia, C. difficile, hemograma, função renal/hepática e neurotoxicidade.",
+    "administration": "Somente IV por 2 h.",
+    "preparation": "Reconstituir e diluir conforme rótulo; usar dentro da estabilidade indicada.",
+    "infusionProtocol": "Infundir em 2 h; combinar metronidazol quando indicado para cIAI.",
+    "pregnancy": "Usar quando indicado após avaliação de benefício-risco.",
+    "lactation": "Passagem geralmente baixa; observar diarreia, candidíase ou sensibilização no lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9c2803f-dc9c-4b19-b4a3-8303bc8c15fd",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=AVYCAZ",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/amr-guidance/"
     ]
   },
   "es": {
-    "name": "Ceftazidima/avibactam",
-    "class": "Cefalosporina antipseudomónica + inhibidor no betalactámico de betalactamasa",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Vial IV 2,5 g (2 g/0,5 g).",
-    "dose": "Adultos ClCr >50: 2,5 g IV q8h durante 2 h.",
+    "name": "Ceftazidima + avibactam",
+    "class": "Cefalosporina + inhibidor de betalactamasa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Vial 2,5 g: 2 g/0,5 g.",
+    "dose": "Adulto CrCl >50: 2,5 g IV cada 8 h, infusión de 2 h; duración según foco.",
     "doseKg": {
       "pediatrica": "50 mg/kg (ceftazidima) + 12,5 mg/kg (avibactam) EV cada 8h (máx 2,5 g/dosis)"
     },
-    "mechanism": "Ceftazidima inhibe PBP; avibactam inhibe betalactamasas clase A (KPC), clase C y algunas clase D como OXA-48-like, pero no MBL.",
+    "mechanism": "Betalactámico inhibidor de la síntesis de pared bacteriana. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "EV: pico sérico al final de la infusión de 120 min.",
     "halfLife": "Semivida 2,7 h (ceftazidima); 2,7 h (avibactam). Eliminación renal >80%.",
     "therapeuticRange": "T>CIM para ceftazidima; AUC/CIM para avibactam. Infusión prolongada puede optimizar T>CIM.",
     "dilution": "Reconstituir en 10 mL de SF; diluir en 50–250 mL de SF 0,9% o SG 5%. Estable 12h a temperatura ambiente.",
     "speed": "Infundir en 120 minutos.",
-    "commonAdverseEffects": [
-      "Diarrea",
-      "Náuseas",
-      "Exantema",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidad/convulsiones por exposición excesiva"
-    ],
-    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+    "commonAdverseEffects": "Diarrea, náusea, erupción y reacción en sitio de administración.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara.",
+    "contraindications": "Hipersensibilidad grave a cefalosporinas; evaluar reacción inmediata a otros betalactámicos.",
     "risksByPatient": [],
-    "alerts": [
-      "No cubre MBL por sí solo",
-      "Controlar función renal diariamente si inestable",
-      "AST indispensable en CRE/DTR Pseudomonas",
-      "Puede emerger resistencia"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9c2803f-dc9c-4b19-b4a3-8303bc8c15fd",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
-    ],
-    "renalDose": "ClCr 31–50: 1,25 g q8h; 16–30: 0,94 g q12h; menor función requiere reducciones adicionales según ficha; controlar CrCl/eGFR diariamente si cambia y administrar tras HD.",
-    "safetyFlags": [
-      "Alergia a betalactámicos",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidad por acumulación"
-    ],
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara. Uso bloqueado sem foco, cultura/MIC/mecanismo, peso/idade, CrCl atual, diálise, metronidazol e stewardship.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=AVYCAZ",
+    "renalDose": "Ajustar con CrCl ≤50; controlar diariamente si función renal inestable.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -159,36 +102,33 @@
       ],
       "note": "Bloque fusionado y mejorado: cortes renales oficiales del FDA label (CrCl 31–50 / 16–30 / 6–15 / ≤5) preservados. Dosis pediátricas corregidas para incluir ambos componentes (ceftazidima + avibactam) en todas las franjas. Obs enriquecidas con monitoreo diario de CrCl, neurotoxicidad, dosis post-HD y riesgo de resistencia emergente. safetyFlags y warning expandidos. EMA label, Johns Hopkins y Lexicomp añadidos a las fuentes."
     },
-    "pharmacologicClass": "Ceftazidima + avibactam",
-    "pharmacodynamics": "Betalactámico dependiente del tiempo; exposición adecuada de ambos componentes es esencial.",
-    "pharmacokinetics": "IV; ambos predominantemente renales y hemodializables.",
-    "indications": "cIAI con metronidazol, cUTI/pielonefritis y HABP/VABP; terapia dirigida para Enterobacterales resistentes y DTR Pseudomonas susceptibles.",
-    "presentations": [
-      "2,5 g por vial"
-    ],
-    "pediatricDose": "2–<18 años: 62,5 mg/kg q8h hasta 2,5 g; 6 meses–<2 años 62,5 mg/kg; 3–<6 meses 50 mg/kg; >28 días–<3 meses 37,5 mg/kg; neonatos elegibles 25 mg/kg, todos q8h.",
-    "hepaticDose": "Sin ajuste hepático rutinario.",
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
-    "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
-    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
-    "administration": "IV en 2 h; cIAI requiere metronidazol.",
-    "preparation": "Reconstituir/diluir según fabricante y calcular dosis por producto combinado.",
-    "infusionProtocol": "Infusión de 2 h; mantener exposición adecuada en Pseudomonas/CRE y función renal inestable.",
-    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
-    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
-    "specialPopulations": "Insuficiencia renal exige ajuste rápido; datos renales pediátricos son limitados en menores de 2 años.",
-    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
-    "clinicalPearls": "Activo frente a KPC, OXA-48-like, ESBL/AmpC susceptibles y parte de DTR Pseudomonas; avibactam no inhibe NDM/VIM/IMP.",
-    "guidelineRecommendations": "IDSA 2026: opción preferida para varias CRE susceptibles y DTR Pseudomonas; para NDM/MBL, aztreonam-avibactam o ceftazidima/avibactam + aztreonam son estrategias razonables.",
+    "pharmacologicClass": "Betalactámico inhibidor de la síntesis de pared bacteriana",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Ambos eliminados principalmente por riñón; farmacocinética guiada por CrCl.",
+    "indications": "cUTI, cIAI con metronidazol y HABP/VABP por gramnegativos susceptibles; reservar según resistencia.",
+    "presentations": "Vial 2,5 g: 2 g/0,5 g.",
+    "pediatricDose": "≥3 meses: dosis por peso/edad y CrCl, máximo 2,5 g cada 8 h. AUTOMATABLE=NO.",
+    "hepaticDose": "Sin ajuste específico.",
+    "adverseEffects": "Diarrea, náusea, erupción y reacción en sitio de administración. Graves: Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara.",
+    "interactions": "Probenecid puede elevar exposición; revisar anticoagulantes, nefrotóxicos, soluciones incompatibles y vacunas bacterianas vivas.",
+    "monitoring": "Cultivos y sensibilidad, respuesta, alergia, C. difficile, hemograma, función renal/hepática y neurotoxicidad.",
+    "administration": "Solo IV durante 2 h.",
+    "preparation": "Reconstituir y diluir según ficha; usar dentro de estabilidad indicada.",
+    "infusionProtocol": "Infundir en 2 h; combinar metronidazol cuando corresponda para cIAI.",
+    "pregnancy": "Usar cuando esté indicado tras evaluar beneficio-riesgo.",
+    "lactation": "Paso generalmente bajo; vigilar diarrea, candidiasis o sensibilización en lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9c2803f-dc9c-4b19-b4a3-8303bc8c15fd",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=AVYCAZ",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/amr-guidance/"
     ]
   },
   "name": {
-    "pt": "Ceftazidima/avibactam",
-    "es": "Ceftazidima/avibactam"
+    "pt": "Ceftazidima + avibactam",
+    "es": "Ceftazidima + avibactam"
   },
   "keywords": [
     "ceftazidima_avibactam",
@@ -197,8 +137,8 @@
     "zavicefta",
     "cefalosporina de 3ª geracao + inibidor de beta-lactamase (anti-kpc, oxa-48, mbl parcial)"
   ],
-  "dataVersion": "clinical-data-v1-1d6d6cf06c68c802",
-  "clinicalContentSha256": "1d6d6cf06c68c8024790a1bb66726b2299758d2eaf77f140d63d0e8d85638ab9",
+  "dataVersion": "clinical-data-v1-fe99d9e084bd8979",
+  "clinicalContentSha256": "fe99d9e084bd8979cc514c0939372aad2e04b8a6a04a4d22d83a6857ad69ae9e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",
@@ -264,5 +204,17 @@
         "updated": "2025-04-25"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "ceftazidima_avibactam.mcGoldClinicalV1",
+    "lote": "016",
+    "requiredFields": 33,
+    "approvedSha256": "edd955962363f9efc0d22d2a79299d1e785692bced8bf248426d86777ef530d0",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

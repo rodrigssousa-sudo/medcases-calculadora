@@ -5,162 +5,102 @@
   "color": "rgba(239,68,68,0.15)",
   "colorTxt": "#EF4444",
   "pt": {
-    "name": "Ceftolozano/tazobactam",
-    "class": "Cefalosporina antipseudomonas + inibidor de beta-lactamase",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Frasco IV de 1,5 g (1 g/0,5 g).",
-    "dose": "Adultos CrCl >50: cUTI/cIAI 1,5 g IV q8h; HABP/VABP 3 g IV q8h.",
+    "name": "Ceftolozano + tazobactam",
+    "class": "Cefalosporina antipseudomonas + inibidor",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frasco 1,5 g: 1 g/0,5 g.",
+    "dose": "Adulto CrCl >50: cUTI/cIAI 1,5 g IV a cada 8 h; HABP/VABP 3 g a cada 8 h; infusão de 1 h.",
     "doseKg": {
       "pediatrica": "20 mg/kg (ceftolozano) + 10 mg/kg (tazobactam) EV 8/8h (máx 1,5 g/dose)"
     },
-    "mechanism": "Ceftolozano inibe PBPs e é estável frente a vários mecanismos pseudomonais; tazobactam inibe algumas beta-lactamases de serina.",
+    "mechanism": "Beta-lactâmico inibidor da síntese da parede bacteriana. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "EV: pico sérico ao final da infusão de 60 min.",
     "halfLife": "Meia-vida 2,7 h (ceftolozano); 1 h (tazobactam). Eliminação renal >90%.",
     "therapeuticRange": "T>CIM (fT>CIM ≥ 40–60%) como parâmetro PK/PD.",
     "dilution": "Reconstituir em 10 mL de água estéril ou SF; diluir em 100 mL de SF 0,9% ou SG 5%.",
     "speed": "Infundir em 60 minutos.",
-    "commonAdverseEffects": [
-      "Diarreia",
-      "Náusea",
-      "Rash",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidade/convulsões em exposição excessiva"
-    ],
-    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+    "commonAdverseEffects": "Diarreia, náusea, rash e reação no local de administração.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara.",
+    "contraindications": "Hipersensibilidade grave a cefalosporinas; avaliar reação imediata a outros beta-lactâmicos.",
     "risksByPatient": [],
-    "alerts": [
-      "Confirmar AST em DTR Pseudomonas",
-      "Não cobre MRSA",
-      "Não assumir atividade contra MBL/AmpC-E",
-      "Monitorar função renal em mudança"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
-    ],
-    "renalDose": "CrCl 30–50: 750 mg q8h para cUTI/cIAI e 1,5 g q8h para HABP/VABP; 15–29: 375 mg q8h e 750 mg q8h; ESRD/HD requer carga e manutenção reduzida pós-HD.",
-    "pharmacologicClass": "Ceftolozano + tazobactam",
-    "pharmacodynamics": "Tempo-dependente; exposição do ceftolozano por fT>MIC e exposição do tazobactam são relevantes.",
-    "pharmacokinetics": "IV; eliminação renal predominante de ambos os componentes.",
-    "indications": "cUTI/pielonefrite, cIAI com metronidazol e HABP/VABP; importante opção para Pseudomonas suscetível, inclusive DTR.",
-    "presentations": [
-      "1,5 g por frasco"
-    ],
-    "pediatricDose": "Com eGFR >50: cUTI/cIAI 30 mg/kg q8h até 1,5 g; HABP/VABP usa dose maior conforme idade/peso e rótulo.",
-    "hepaticDose": "Sem ajuste hepático rotineiro; eliminação renal predomina.",
-    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
-    "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
-    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
-    "administration": "IV; duração de infusão depende da indicação.",
-    "preparation": "Reconstituir/diluir conforme fabricante; doses >1,5 g exigem volume de mais de um frasco.",
-    "infusionProtocol": "Seguir tempo de infusão rotulado por indicação; em doença crítica revisar PK/PD e função renal diariamente.",
-    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
-    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
-    "specialPopulations": "Monitorar função renal diariamente quando instável; pediatria <2 anos com insuficiência renal tem dados limitados.",
-    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
-    "clinicalPearls": "Potente contra Pseudomonas, inclusive muitos DTR; não cobre MRSA e não deve ser presumido ativo contra MBL/AmpC-E.",
-    "guidelineRecommendations": "IDSA 2026 inclui ceftolozano/tazobactam entre opções preferidas para DTR Pseudomonas e o prefere para pneumonia por DTR Pseudomonas quando suscetível.",
-    "safetyFlags": [
-      "Alergia beta-lactâmica",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidade por acúmulo"
-    ],
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara. Dose bloqueada sem foco, peso/idade, cultura/MIC, CrCl/diálise, metronidazol e stewardship.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ZERBAXA",
+    "renalDose": "Ajustar quando CrCl ≤50; hemodiálise exige dose de ataque e manutenção específicas.",
+    "pharmacologicClass": "Beta-lactâmico inibidor da síntese da parede bacteriana",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Eliminação renal predominante dos dois componentes.",
+    "indications": "cUTI, cIAI com metronidazol e HABP/VABP por organismos suscetíveis.",
+    "presentations": "Frasco 1,5 g: 1 g/0,5 g.",
+    "pediatricDose": "Pediatria desde nascimento: dose por idade/peso/foco, máximo adulto; AUTOMATABLE=NO.",
+    "hepaticDose": "Sem ajuste específico.",
+    "adverseEffects": "Diarreia, náusea, rash e reação no local de administração. Graves: Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara.",
+    "interactions": "Probenecida pode elevar exposição; revisar anticoagulantes, nefrotóxicos, soluções incompatíveis e vacinas bacterianas vivas.",
+    "monitoring": "Culturas e suscetibilidade, resposta, alergia, C. difficile, hemograma, função renal/hepática e neurotoxicidade.",
+    "administration": "Somente IV por 1 h.",
+    "preparation": "Reconstituir e diluir conforme rótulo; confirmar apresentação.",
+    "infusionProtocol": "Infundir em 1 h; associar metronidazol para cIAI.",
+    "pregnancy": "Usar quando indicado após avaliação de benefício-risco.",
+    "lactation": "Passagem geralmente baixa; observar diarreia, candidíase ou sensibilização no lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ZERBAXA",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/amr-guidance/"
     ]
   },
   "es": {
-    "name": "Ceftolozano/tazobactam",
-    "class": "Cefalosporina antipseudomónica + inhibidor de betalactamasa",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Vial IV de 1,5 g (1 g/0,5 g).",
-    "dose": "Adultos ClCr >50: cUTI/cIAI 1,5 g IV q8h; HABP/VABP 3 g IV q8h.",
+    "name": "Ceftolozano + tazobactam",
+    "class": "Cefalosporina antipseudomónica + inhibidor",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Vial 1,5 g: 1 g/0,5 g.",
+    "dose": "Adulto CrCl >50: cUTI/cIAI 1,5 g IV cada 8 h; HABP/VABP 3 g cada 8 h; infusión de 1 h.",
     "doseKg": {
       "pediatrica": "20 mg/kg (ceftolozano) + 10 mg/kg (tazobactam) EV cada 8h (máx 1,5 g/dosis)"
     },
-    "mechanism": "Ceftolozano inhibe PBP y es estable frente a varios mecanismos pseudomonales; tazobactam inhibe algunas betalactamasas de serina.",
+    "mechanism": "Betalactámico inhibidor de la síntesis de pared bacteriana. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "EV: pico sérico al final de la infusión de 60 min.",
     "halfLife": "Semivida 2,7 h (ceftolozano); 1 h (tazobactam). Eliminación renal >90%.",
     "therapeuticRange": "T>CIM (fT>CIM ≥ 40–60%) como parámetro PK/PD.",
     "dilution": "Reconstituir en 10 mL de agua estéril o SF; diluir en 100 mL de SF 0,9% o SG 5%.",
     "speed": "Infundir en 60 minutos.",
-    "commonAdverseEffects": [
-      "Diarrea",
-      "Náuseas",
-      "Exantema",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidad/convulsiones por exposición excesiva"
-    ],
-    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
+    "commonAdverseEffects": "Diarrea, náusea, erupción y reacción en sitio de administración.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara.",
+    "contraindications": "Hipersensibilidad grave a cefalosporinas; evaluar reacción inmediata a otros betalactámicos.",
     "risksByPatient": [],
-    "alerts": [
-      "Confirmar AST en DTR Pseudomonas",
-      "No cubre MRSA",
-      "No asumir actividad frente a MBL/AmpC-E",
-      "Controlar función renal cambiante"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
-    ],
-    "renalDose": "ClCr 30–50: 750 mg q8h para cUTI/cIAI y 1,5 g q8h para HABP/VABP; 15–29: 375 mg q8h y 750 mg q8h; ESRD/HD requiere carga y mantenimiento reducido pos-HD.",
-    "pharmacologicClass": "Ceftolozano + tazobactam",
-    "pharmacodynamics": "Dependiente del tiempo; son relevantes fT>MIC de ceftolozano y exposición a tazobactam.",
-    "pharmacokinetics": "IV; eliminación renal predominante de ambos componentes.",
-    "indications": "cUTI/pielonefritis, cIAI con metronidazol y HABP/VABP; opción importante para Pseudomonas susceptible, incluso DTR.",
-    "presentations": [
-      "1,5 g por vial"
-    ],
-    "pediatricDose": "Con eGFR >50: cUTI/cIAI 30 mg/kg q8h hasta 1,5 g; HABP/VABP usa dosis mayor según edad/peso y ficha.",
-    "hepaticDose": "Sin ajuste hepático rutinario; predomina eliminación renal.",
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
-    "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
-    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
-    "administration": "IV; duración de infusión depende de la indicación.",
-    "preparation": "Reconstituir/diluir según fabricante; dosis >1,5 g requieren volumen de más de un vial.",
-    "infusionProtocol": "Seguir tiempo de infusión rotulado por indicación; en enfermedad crítica revisar PK/PD y función renal diariamente.",
-    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
-    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
-    "specialPopulations": "Controlar función renal diariamente si es inestable; pediatría <2 años con insuficiencia renal tiene datos limitados.",
-    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
-    "clinicalPearls": "Potente frente a Pseudomonas, incluidos muchos DTR; no cubre MRSA y no debe asumirse activo frente a MBL/AmpC-E.",
-    "guidelineRecommendations": "IDSA 2026 incluye ceftolozano/tazobactam entre opciones preferidas para DTR Pseudomonas y lo prefiere en neumonía DTR cuando es susceptible.",
-    "safetyFlags": [
-      "Alergia a betalactámicos",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidad por acumulación"
-    ],
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara. Dose bloqueada sem foco, peso/idade, cultura/MIC, CrCl/diálise, metronidazol e stewardship.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ZERBAXA",
+    "renalDose": "Ajustar con CrCl ≤50; hemodiálisis requiere carga y mantenimiento específicos.",
+    "pharmacologicClass": "Betalactámico inhibidor de la síntesis de pared bacteriana",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Eliminación renal predominante de ambos componentes.",
+    "indications": "cUTI, cIAI con metronidazol y HABP/VABP por organismos susceptibles.",
+    "presentations": "Vial 1,5 g: 1 g/0,5 g.",
+    "pediatricDose": "Pediatría desde nacimiento: dosis por edad/peso/foco, máximo adulto; AUTOMATABLE=NO.",
+    "hepaticDose": "Sin ajuste específico.",
+    "adverseEffects": "Diarrea, náusea, erupción y reacción en sitio de administración. Graves: Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara.",
+    "interactions": "Probenecid puede elevar exposición; revisar anticoagulantes, nefrotóxicos, soluciones incompatibles y vacunas bacterianas vivas.",
+    "monitoring": "Cultivos y sensibilidad, respuesta, alergia, C. difficile, hemograma, función renal/hepática y neurotoxicidad.",
+    "administration": "Solo IV durante 1 h.",
+    "preparation": "Reconstituir y diluir según ficha; confirmar presentación.",
+    "infusionProtocol": "Infundir en 1 h; asociar metronidazol para cIAI.",
+    "pregnancy": "Usar cuando esté indicado tras evaluar beneficio-riesgo.",
+    "lactation": "Paso generalmente bajo; vigilar diarrea, candidiasis o sensibilización en lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ZERBAXA",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/amr-guidance/"
     ]
   },
   "name": {
-    "pt": "Ceftolozano/tazobactam",
-    "es": "Ceftolozano/tazobactam"
+    "pt": "Ceftolozano + tazobactam",
+    "es": "Ceftolozano + tazobactam"
   },
   "keywords": [
     "ceftolozano_tazobactam",
@@ -168,8 +108,8 @@
     "zerbaxa",
     "cefalosporina de 5ª geracao + inibidor de beta-lactamase (anti-pseudomonas mdr)"
   ],
-  "dataVersion": "clinical-data-v1-1d6d6cf06c68c802",
-  "clinicalContentSha256": "1d6d6cf06c68c8024790a1bb66726b2299758d2eaf77f140d63d0e8d85638ab9",
+  "dataVersion": "clinical-data-v1-fe99d9e084bd8979",
+  "clinicalContentSha256": "fe99d9e084bd8979cc514c0939372aad2e04b8a6a04a4d22d83a6857ad69ae9e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",
@@ -234,5 +174,17 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "ceftolozano_tazobactam.mcGoldClinicalV1",
+    "lote": "016",
+    "requiredFields": 33,
+    "approvedSha256": "edd955962363f9efc0d22d2a79299d1e785692bced8bf248426d86777ef530d0",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

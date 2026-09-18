@@ -5,13 +5,11 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Cefuroxima",
-    "class": "Antibiótico beta-lactâmico",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Comprimidos/suspensão de axetil e frascos IV/IM de cefuroxima sódica.",
-    "dose": "VO: 250–500 mg q12h conforme foco. IV/IM: 750 mg–1,5 g q8h; graves 1,5 g q6h; meningite até 3 g q8h.",
+    "name": "Cefuroxima / cefuroxima axetila",
+    "class": "Cefalosporina de 2ª geração oral/parenteral",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Axetila VO 250/500 mg e suspensão; cefuroxima sódica IV/IM 750 mg/1,5 g.",
+    "dose": "VO: 250-500 mg a cada 12 h conforme foco. Parenteral: 750 mg-1,5 g IV/IM a cada 8 h; meningite 3 g a cada 8 h.",
     "doseKg": {
       "standardVO": "20–30 mg/kg/dia VO dividido 12/12h",
       "standardEV": "50–100 mg/kg/dia EV dividido 8/8h",
@@ -20,80 +18,45 @@
     "therapeuticRange": "Beta-lactâmico dependente do tempo acima da MIC.",
     "dilution": "VO: não necessita diluição. EV: reconstituir e diluir conforme protocolo institucional.",
     "speed": "VO: administrar preferencialmente após alimento. EV: infundir em aproximadamente 30 minutos.",
-    "commonAdverseEffects": [
-      "Diarreia",
-      "Náusea",
-      "Rash",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidade/convulsões em exposição excessiva"
-    ],
+    "commonAdverseEffects": "Diarreia, náusea, rash e reação no local de administração.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara.",
     "risksByPatient": [],
-    "alerts": [
-      "Comprimido e suspensão oral não são bioequivalentes mg por mg",
-      "Não cobre Pseudomonas",
-      "Ajustar na DRC"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=135e2dfc-eb47-4d04-a903-a081d36c267e",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76cec54f-d167-4298-951b-5411a3c47f4a"
-    ],
-    "renalDose": "VO: CrCl 10–<30, dose padrão q24h; <10, q48h; HD, dose extra pós-HD. IV: >20, 750 mg–1,5 g q8h; 10–20, 750 mg q12h; <10, 750 mg q24h + dose pós-HD.",
-    "pharmacologicClass": "Cefalosporina de 2ª geração; axetil oral / sódica parenteral",
-    "mechanism": "Liga PBPs e inibe síntese da parede bacteriana.",
-    "pharmacodynamics": "Bactericida tempo-dependente (fT>MIC).",
-    "pharmacokinetics": "Axetil é pró-fármaco oral; cefuroxima sódica é IV/IM. Eliminação renal predominante e dialisável.",
-    "indications": "Infecções respiratórias, pele, urinárias e outras por suscetíveis; forma parenteral para quadros moderados/graves e profilaxia cirúrgica.",
-    "presentations": [
-      "250 mg e 500 mg VO",
-      "Suspensão oral",
-      "750 mg e 1,5 g IV/IM"
-    ],
-    "pediatricDose": "≥3 meses. Cefuroxima axetil suspensão VO: faringite/amigdalite 20 mg/kg/dia divididos q12h (máx 500 mg/dia) por 10 dias; otite média aguda, sinusite maxilar bacteriana e impetigo 30 mg/kg/dia divididos q12h (máx 1.000 mg/dia) por 10 dias. Crianças <13 anos que conseguem engolir comprimidos: 250 mg VO q12h por 10 dias para otite média aguda ou sinusite maxilar bacteriana. Cefuroxima sódica IV/IM >3 meses: 50–100 mg/kg/dia divididos q6–8h; usar 100 mg/kg/dia nas infecções mais graves; osso/articulação 150 mg/kg/dia q8h; meningite bacteriana 200–240 mg/kg/dia IV q6–8h, sem exceder a dose máxima adulta. Axetil oral e cefuroxima sódica parenteral não são intercambiáveis mg por mg.",
-    "hepaticDose": "Sem ajuste hepático rotineiro específico.",
-    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
-    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
-    "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
-    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
-    "administration": "Axetil oral: comprimidos com ou sem alimento; suspensão e comprimidos não são bioequivalentes mg por mg. Parenteral: IV/IM.",
-    "preparation": "Não intercambiar comprimido e suspensão mg por mg; reconstituir forma parenteral com diluente compatível.",
-    "infusionProtocol": "Parenteral: infusão intermitente padrão; em críticos considerar individualização PK/PD conforme estabilidade.",
-    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
-    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
-    "specialPopulations": "DRC exige ajuste; idosos exigem revisão renal; formulações oral e parenteral não são intercambiáveis dose a dose.",
-    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
-    "clinicalPearls": "Cobre estreptococos, MSSA e alguns Gram-negativos respiratórios; não cobre MRSA, Enterococcus ou Pseudomonas.",
-    "guidelineRecommendations": "Stewardship: escolher via/espectro conforme foco e revisar função renal e exposição beta-lactâmica no paciente agudo.",
-    "safetyFlags": [
-      "Alergia beta-lactâmica",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidade por acúmulo"
-    ],
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara. Conversão, dose e preparo bloqueados sem formulação exata, foco, peso, CrCl, concentração e via.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefuroxime",
+    "renalDose": "Ajustar em CrCl <30, com esquemas distintos VO e IV e para diálise.",
+    "pharmacologicClass": "Beta-lactâmico inibidor da síntese da parede bacteriana",
+    "mechanism": "Beta-lactâmico inibidor da síntese da parede bacteriana. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Axetila é pró-fármaco oral; cefuroxima é eliminada predominantemente pelos rins.",
+    "indications": "Infecções respiratórias, urinárias, pele, Lyme e infecções graves/profilaxia conforme formulação.",
+    "presentations": "Axetila VO 250/500 mg e suspensão; cefuroxima sódica IV/IM 750 mg/1,5 g.",
+    "pediatricDose": "VO: 20-30 mg/kg/dia divididos; IV: 50-150 mg/kg/dia conforme foco, máximo adulto. AUTOMATABLE=NO.",
+    "hepaticDose": "Sem ajuste específico.",
+    "adverseEffects": "Diarreia, náusea, rash e reação no local de administração. Graves: Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara.",
+    "contraindications": "Hipersensibilidade grave a cefalosporinas; avaliar reação imediata a outros beta-lactâmicos.",
+    "interactions": "Probenecida pode elevar exposição; revisar anticoagulantes, nefrotóxicos, soluções incompatíveis e vacinas bacterianas vivas.",
+    "monitoring": "Culturas e suscetibilidade, resposta, alergia, C. difficile, hemograma, função renal/hepática e neurotoxicidade.",
+    "administration": "Comprimido axetila após alimento; suspensão com alimento e não intercambiar mg por mg sem produto. IV/IM conforme rótulo.",
+    "preparation": "Confirmar se axetila oral ou sódica parenteral; reconstituir cada formulação conforme fabricante.",
+    "infusionProtocol": "Parenteral por IV lenta/infusão conforme dose; não aplicável à forma oral.",
+    "pregnancy": "Usar quando indicado após avaliação de benefício-risco.",
+    "lactation": "Passagem geralmente baixa; observar diarreia, candidíase ou sensibilização no lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=135e2dfc-eb47-4d04-a903-a081d36c267e",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76cec54f-d167-4298-951b-5411a3c47f4a"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefuroxime",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/050605s048,050672s034lbl.pdf"
     ]
   },
   "es": {
-    "name": "Cefuroxima",
-    "class": "Antibiótico betalactámico",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos/suspensión de axetilo y viales IV/IM de cefuroxima sódica.",
-    "dose": "VO: 250–500 mg q12h según foco. IV/IM: 750 mg–1,5 g q8h; graves 1,5 g q6h; meningitis hasta 3 g q8h.",
+    "name": "Cefuroxima / cefuroxima axetilo",
+    "class": "Cefalosporina de 2ª generación oral/parenteral",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Axetilo VO 250/500 mg y suspensión; cefuroxima sódica IV/IM 750 mg/1,5 g.",
+    "dose": "VO: 250-500 mg cada 12 h según foco. Parenteral: 750 mg-1,5 g IV/IM cada 8 h; meningitis 3 g cada 8 h.",
     "doseKg": {
       "standardVO": "20–30 mg/kg/día VO dividido cada 12h",
       "standardEV": "50–100 mg/kg/día EV dividido cada 8h",
@@ -102,75 +65,42 @@
     "therapeuticRange": "Beta-lactámico dependiente del tiempo sobre la MIC.",
     "dilution": "VO: no requiere dilución. EV: reconstituir y diluir según protocolo institucional.",
     "speed": "VO: administrar preferentemente después de comida. EV: infundir en aproximadamente 30 minutos.",
-    "commonAdverseEffects": [
-      "Diarrea",
-      "Náuseas",
-      "Exantema",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidad/convulsiones por exposición excesiva"
-    ],
+    "commonAdverseEffects": "Diarrea, náusea, erupción y reacción en sitio de administración.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara.",
     "risksByPatient": [],
-    "alerts": [
-      "Comprimido y suspensión oral no son bioequivalentes mg por mg",
-      "No cubre Pseudomonas",
-      "Ajustar en ERC"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=135e2dfc-eb47-4d04-a903-a081d36c267e",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76cec54f-d167-4298-951b-5411a3c47f4a"
-    ],
-    "renalDose": "VO: ClCr 10–<30, dosis estándar q24h; <10, q48h; HD, dosis extra pos-HD. IV: >20, 750 mg–1,5 g q8h; 10–20, 750 mg q12h; <10, 750 mg q24h + dosis pos-HD.",
-    "pharmacologicClass": "Cefalosporina de 2ª generación; axetilo oral / sódica parenteral",
-    "mechanism": "Se une a PBP e inhibe síntesis de pared bacteriana.",
-    "pharmacodynamics": "Bactericida dependiente del tiempo (fT>MIC).",
-    "pharmacokinetics": "Axetilo es profármaco oral; cefuroxima sódica es IV/IM. Eliminación renal predominante y dializable.",
-    "indications": "Infecciones respiratorias, piel, urinarias y otras por susceptibles; forma parenteral para cuadros moderados/graves y profilaxis quirúrgica.",
-    "presentations": [
-      "250 mg y 500 mg VO",
-      "Suspensión oral",
-      "750 mg y 1,5 g IV/IM"
-    ],
-    "pediatricDose": "≥3 meses. Cefuroxima axetilo suspensión VO: faringitis/amigdalitis 20 mg/kg/día divididos q12h (máx 500 mg/día) por 10 días; otitis media aguda, sinusitis maxilar bacteriana e impétigo 30 mg/kg/día divididos q12h (máx 1.000 mg/día) por 10 días. Niños <13 años que pueden tragar comprimidos enteros: 250 mg VO q12h por 10 días para otitis media aguda o sinusitis maxilar bacteriana. Cefuroxima sódica IV/IM >3 meses: 50–100 mg/kg/día divididos q6–8h; usar 100 mg/kg/día en infecciones más graves; hueso/articulación 150 mg/kg/día q8h; meningitis bacteriana 200–240 mg/kg/día IV q6–8h, sin exceder la dosis máxima adulta. El axetilo oral y la cefuroxima sódica parenteral no son intercambiables mg por mg.",
-    "hepaticDose": "Sin ajuste hepático rutinario específico.",
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
-    "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
-    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
-    "administration": "Axetilo oral: comprimidos con o sin alimentos; suspensión y comprimidos no son bioequivalentes mg por mg. Parenteral: IV/IM.",
-    "preparation": "No intercambiar comprimido y suspensión mg por mg; reconstituir forma parenteral con diluyente compatible.",
-    "infusionProtocol": "Parenteral: infusión intermitente estándar; en críticos considerar individualización PK/PD según estabilidad.",
-    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
-    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
-    "specialPopulations": "ERC requiere ajuste; ancianos requieren revisión renal; formulaciones oral y parenteral no son intercambiables dosis a dosis.",
-    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
-    "clinicalPearls": "Cubre estreptococos, MSSA y algunos Gram negativos respiratorios; no cubre MRSA, Enterococcus ni Pseudomonas.",
-    "guidelineRecommendations": "Stewardship: elegir vía/espectro según foco y revisar función renal/exposición betalactámica en paciente agudo.",
-    "safetyFlags": [
-      "Alergia a betalactámicos",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidad por acumulación"
-    ],
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara. Conversão, dose e preparo bloqueados sem formulação exata, foco, peso, CrCl, concentração e via.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefuroxime",
+    "renalDose": "Ajustar con CrCl <30, con esquemas distintos VO e IV y para diálisis.",
+    "pharmacologicClass": "Betalactámico inhibidor de la síntesis de pared bacteriana",
+    "mechanism": "Betalactámico inhibidor de la síntesis de pared bacteriana. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Axetilo es profármaco oral; cefuroxima se elimina principalmente por riñón.",
+    "indications": "Infecciones respiratorias, urinarias, cutáneas, Lyme e infecciones graves/profilaxis según formulación.",
+    "presentations": "Axetilo VO 250/500 mg y suspensión; cefuroxima sódica IV/IM 750 mg/1,5 g.",
+    "pediatricDose": "VO: 20-30 mg/kg/día dividido; IV: 50-150 mg/kg/día según foco, máximo adulto. AUTOMATABLE=NO.",
+    "hepaticDose": "Sin ajuste específico.",
+    "adverseEffects": "Diarrea, náusea, erupción y reacción en sitio de administración. Graves: Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara.",
+    "contraindications": "Hipersensibilidad grave a cefalosporinas; evaluar reacción inmediata a otros betalactámicos.",
+    "interactions": "Probenecid puede elevar exposición; revisar anticoagulantes, nefrotóxicos, soluciones incompatibles y vacunas bacterianas vivas.",
+    "monitoring": "Cultivos y sensibilidad, respuesta, alergia, C. difficile, hemograma, función renal/hepática y neurotoxicidad.",
+    "administration": "Comprimido axetilo tras alimentos; suspensión con alimentos y no intercambiar mg por mg sin producto. IV/IM según ficha.",
+    "preparation": "Confirmar si axetilo oral o sódica parenteral; reconstituir cada formulación según fabricante.",
+    "infusionProtocol": "Parenteral por IV lenta/infusión según dosis; no aplicable a forma oral.",
+    "pregnancy": "Usar cuando esté indicado tras evaluar beneficio-riesgo.",
+    "lactation": "Paso generalmente bajo; vigilar diarrea, candidiasis o sensibilización en lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=48d96608-d3da-b512-e063-6294a90a07d5",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0a145288-733a-4966-b7ae-dc96eb103d8c&version=10",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=135e2dfc-eb47-4d04-a903-a081d36c267e",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76cec54f-d167-4298-951b-5411a3c47f4a"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefuroxime",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/050605s048,050672s034lbl.pdf"
     ]
   },
   "name": {
-    "pt": "Cefuroxima",
-    "es": "Cefuroxima"
+    "pt": "Cefuroxima / cefuroxima axetila",
+    "es": "Cefuroxima / cefuroxima axetilo"
   },
   "keywords": [
     "cefuroxima",
@@ -180,9 +110,21 @@
     "cefuroxima richet",
     "cefalosporina de 2ª geracao"
   ],
-  "dataVersion": "clinical-data-v1-1d6d6cf06c68c802",
-  "clinicalContentSha256": "1d6d6cf06c68c8024790a1bb66726b2299758d2eaf77f140d63d0e8d85638ab9",
+  "dataVersion": "clinical-data-v1-fe99d9e084bd8979",
+  "clinicalContentSha256": "fe99d9e084bd8979cc514c0939372aad2e04b8a6a04a4d22d83a6857ad69ae9e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "cefuroxima.mcGoldClinicalV1",
+    "lote": "016",
+    "requiredFields": 33,
+    "approvedSha256": "edd955962363f9efc0d22d2a79299d1e785692bced8bf248426d86777ef530d0",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

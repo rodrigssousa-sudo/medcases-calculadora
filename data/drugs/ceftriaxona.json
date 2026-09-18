@@ -6,137 +6,79 @@
   "colorTxt": null,
   "pt": {
     "name": "Ceftriaxona",
-    "class": "Antibiótico beta-lactâmico",
-    "pharmacologicClass": "Cefalosporina de 3ª geração",
-    "mechanism": "Liga PBPs e bloqueia síntese da parede bacteriana.",
-    "pharmacodynamics": "Bactericida tempo-dependente (fT>MIC), com meia-vida longa.",
-    "pharmacokinetics": "IV/IM; alta ligação proteica, eliminação renal e biliar; boa penetração no LCR com meninges inflamadas.",
-    "indications": "Meningite bacteriana, pneumonia e outras infecções por suscetíveis; indicações específicas conforme foco/diretriz.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Frascos para IV/IM.",
-    "presentations": [
-      "500 mg",
-      "1 g",
-      "2 g"
-    ],
-    "dose": "Adultos: 1–2 g IV/IM uma vez/dia ou q12h conforme gravidade; máximo 4 g/dia.",
-    "pediatricDose": "Pele e graves não meningite 50–75 mg/kg/dia; meningite 100 mg/kg/dia, máximo 4 g/dia.",
-    "renalDose": "Geralmente sem ajuste em insuficiência renal isolada nas doses usuais; cautela se renal e hepática graves coexistirem.",
-    "hepaticDose": "Geralmente sem ajuste em insuficiência hepática isolada; cautela se hepatopatia e nefropatia graves coexistirem.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Rash"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "Precipitação ceftriaxona-cálcio em neonatos",
-      "Encefalopatia/convulsões",
-      "Pseudolitíase biliar"
-    ],
-    "adverseEffects": "Eventos gastrointestinais e cutâneos são comuns; eventos graves incluem hipersensibilidade, C. difficile e toxicidade aumentada por exposição excessiva.",
-    "contraindications": "Hipersensibilidade grave a cefalosporinas; neonatos hiperbilirrubinêmicos/prematuros conforme bula e neonatos <=28 dias que necessitem cálcio IV.",
-    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
-    "monitoring": "Resposta/culturas, hemograma e função hepatorrenal; sinais neurológicos, C. difficile e complicações biliares.",
-    "administration": "IV ou IM. Em neonatos, doses IV lentamente; nunca coadministrar simultaneamente com cálcio IV em neonatos.",
-    "preparation": "Reconstituir com diluente compatível; lidocaína para IM não deve ser administrada IV; respeitar incompatibilidade com cálcio.",
-    "infusionProtocol": "Infusão IV conforme fabricante; não misturar com cálcio.",
-    "pregnancy": "Usar quando clinicamente indicado, após avaliação individual de risco-benefício; beta-lactâmicos têm ampla experiência clínica.",
-    "lactation": "Geralmente compatível quando indicado; observar lactente para diarreia, candidíase ou rash.",
-    "specialPopulations": "Neonatos têm contraindicações específicas por hiperbilirrubinemia e cálcio IV; em falência hepatorrenal combinada monitorar.",
-    "patientEducation": "Completar o esquema; não usar para infecções virais; procurar atendimento diante de reação alérgica grave ou diarreia intensa/persistente.",
-    "clinicalPearls": "Boa penetração no SNC; não cobre Pseudomonas, MRSA ou Enterococcus. Atenção a precipitação com cálcio e pseudolitíase biliar.",
-    "guidelineRecommendations": "Stewardship: obter culturas quando apropriado, usar o espectro mais estreito eficaz, desescalar e individualizar exposição beta-lactâmica em pacientes agudos/críticos.",
-    "safetyFlags": [
-      "Alergia beta-lactâmica",
-      "C. difficile",
-      "Ajuste renal quando aplicável",
-      "Neurotoxicidade por acúmulo"
-    ],
-    "alerts": [
-      "Confirmar foco e suscetibilidade",
-      "Reavaliar dose se função renal mudar"
-    ],
+    "class": "Cefalosporina de 3ª geração parenteral",
+    "pharmacologicClass": "Beta-lactâmico inibidor da síntese da parede bacteriana",
+    "mechanism": "Beta-lactâmico inibidor da síntese da parede bacteriana. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Meia-vida longa; eliminação renal e biliar; alta ligação proteica.",
+    "indications": "Infecções suscetíveis sistêmicas, meningite, gonorreia e profilaxia cirúrgica conforme protocolo.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frascos 250/500 mg, 1 g e 2 g para IV/IM.",
+    "presentations": "Frascos 250/500 mg, 1 g e 2 g para IV/IM.",
+    "dose": "Adulto: 1-2 g IV/IM uma vez/dia ou dividido; grave/meningite até 4 g/dia. Gonorreia: seguir guideline vigente.",
+    "pediatricDose": "50-75 mg/kg/dia; meningite 100 mg/kg/dia, máximo 4 g/dia. Neonatos têm restrições específicas. AUTOMATABLE=NO.",
+    "renalDose": "Geralmente sem ajuste renal isolado; limitar/monitorar se disfunção renal e hepática combinadas.",
+    "hepaticDose": "Cautela em doença grave e disfunção renal concomitante.",
+    "commonAdverseEffects": "Diarreia, náusea, rash e reação no local de administração.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara.",
+    "adverseEffects": "Diarreia, náusea, rash e reação no local de administração. Graves: Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara.",
+    "contraindications": "Hipersensibilidade grave a cefalosporinas; avaliar reação imediata a outros beta-lactâmicos.",
+    "interactions": "Probenecida pode elevar exposição; revisar anticoagulantes, nefrotóxicos, soluções incompatíveis e vacinas bacterianas vivas.",
+    "monitoring": "Culturas e suscetibilidade, resposta, alergia, C. difficile, hemograma, função renal/hepática e neurotoxicidade.",
+    "administration": "IV/IM; nunca misturar ou coadministrar com cálcio IV em neonatos.",
+    "preparation": "Reconstituir conforme via; lidocaína apenas IM e nunca IV.",
+    "infusionProtocol": "IV em cerca de 30 min; usar linha separada/lavada para soluções com cálcio fora do período neonatal.",
+    "pregnancy": "Usar quando indicado após avaliação de benefício-risco.",
+    "lactation": "Passagem geralmente baixa; observar diarreia, candidíase ou sensibilização no lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, convulsões por acúmulo e lesão orgânica rara. Uso bloqueado em neonatos sem idade/bilirrubina/cálcio IV; demais doses bloqueadas sem foco, peso, alergia e função renal/hepática.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=36c07ebf-b091-483e-b2c4-f0fc0c2b4186",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ceftriaxone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=36c07ebf-b091-483e-b2c4-f0fc0c2b4186",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ceftriaxone"
   },
   "es": {
     "name": "Ceftriaxona",
-    "class": "Antibiótico betalactámico",
-    "pharmacologicClass": "Cefalosporina de 3ª generación",
-    "mechanism": "Se une a PBP y bloquea síntesis de pared bacteriana.",
-    "pharmacodynamics": "Bactericida dependiente del tiempo (fT>MIC), con semivida larga.",
-    "pharmacokinetics": "IV/IM; alta unión proteica, eliminación renal y biliar; buena penetración en LCR con meninges inflamadas.",
-    "indications": "Meningitis bacteriana, neumonía y otras infecciones por susceptibles; indicaciones específicas según foco/guía.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Viales IV/IM.",
-    "presentations": [
-      "500 mg",
-      "1 g",
-      "2 g"
-    ],
-    "dose": "Adultos: 1–2 g IV/IM una vez/día o q12h según gravedad; máximo 4 g/día.",
-    "pediatricDose": "Piel y graves no meningitis 50–75 mg/kg/día; meningitis 100 mg/kg/día, máximo 4 g/día.",
-    "renalDose": "Generalmente sin ajuste en insuficiencia renal aislada a dosis usuales; precaución si coexisten falla renal y hepática graves.",
-    "hepaticDose": "Generalmente sin ajuste en insuficiencia hepática aislada; precaución si coexisten hepatopatía y nefropatía graves.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Exantema"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "Precipitación ceftriaxona-calcio en neonatos",
-      "Encefalopatía/convulsiones",
-      "Pseudolitiasis biliar"
-    ],
-    "adverseEffects": "Los eventos gastrointestinales y cutáneos son frecuentes; los graves incluyen hipersensibilidad, C. difficile y toxicidad por exposición excesiva.",
-    "contraindications": "Hipersensibilidad grave a cefalosporinas; neonatos hiperbilirrubinémicos/prematuros según ficha y neonatos <=28 días que requieran calcio IV.",
-    "interactions": "Probenecid puede aumentar exposición; revisar anticoagulantes, metotrexato y compatibilidades IV según contexto clínico.",
-    "monitoring": "Respuesta/cultivos, hemograma y función hepatorrenal; signos neurológicos, C. difficile y complicaciones biliares.",
-    "administration": "IV o IM. En neonatos, dosis IV lentamente; nunca coadministrar simultáneamente con calcio IV en neonatos.",
-    "preparation": "Reconstituir con diluyente compatible; lidocaína para IM no debe administrarse IV; respetar incompatibilidad con calcio.",
-    "infusionProtocol": "Infusión IV según fabricante; no mezclar con calcio.",
-    "pregnancy": "Usar cuando esté clínicamente indicado tras evaluación individual riesgo-beneficio; los betalactámicos tienen amplia experiencia clínica.",
-    "lactation": "Generalmente compatible cuando está indicado; observar al lactante por diarrea, candidiasis o exantema.",
-    "specialPopulations": "Neonatos tienen contraindicaciones específicas por hiperbilirrubinemia y calcio IV; monitorizar en falla hepatorrenal combinada.",
-    "patientEducation": "Completar el esquema; no usar para infecciones virales; consultar ante reacción alérgica grave o diarrea intensa/persistente.",
-    "clinicalPearls": "Buena penetración en SNC; no cubre Pseudomonas, MRSA o Enterococcus. Atención a precipitación con calcio y pseudolitiasis biliar.",
-    "guidelineRecommendations": "Stewardship: obtener cultivos cuando corresponda, usar el espectro más estrecho eficaz, desescalar e individualizar exposición betalactámica en pacientes agudos/críticos.",
-    "safetyFlags": [
-      "Alergia a betalactámicos",
-      "C. difficile",
-      "Ajuste renal cuando corresponda",
-      "Neurotoxicidad por acumulación"
-    ],
-    "alerts": [
-      "Confirmar foco y susceptibilidad",
-      "Reevaluar dosis si cambia la función renal"
-    ],
+    "class": "Cefalosporina de 3ª generación parenteral",
+    "pharmacologicClass": "Betalactámico inhibidor de la síntesis de pared bacteriana",
+    "mechanism": "Betalactámico inhibidor de la síntesis de pared bacteriana. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Semivida larga; eliminación renal y biliar; alta unión proteica.",
+    "indications": "Infecciones sistémicas susceptibles, meningitis, gonorrea y profilaxis quirúrgica según protocolo.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Viales 250/500 mg, 1 g y 2 g para IV/IM.",
+    "presentations": "Viales 250/500 mg, 1 g y 2 g para IV/IM.",
+    "dose": "Adulto: 1-2 g IV/IM una vez/día o dividido; grave/meningitis hasta 4 g/día. Gonorrea: seguir guía vigente.",
+    "pediatricDose": "50-75 mg/kg/día; meningitis 100 mg/kg/día, máximo 4 g/día. Neonatos tienen restricciones específicas. AUTOMATABLE=NO.",
+    "renalDose": "Generalmente sin ajuste renal aislado; limitar/controlar si disfunción renal y hepática combinadas.",
+    "hepaticDose": "Precaución en enfermedad grave y disfunción renal concomitante.",
+    "commonAdverseEffects": "Diarrea, náusea, erupción y reacción en sitio de administración.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara.",
+    "adverseEffects": "Diarrea, náusea, erupción y reacción en sitio de administración. Graves: Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara.",
+    "contraindications": "Hipersensibilidad grave a cefalosporinas; evaluar reacción inmediata a otros betalactámicos.",
+    "interactions": "Probenecid puede elevar exposición; revisar anticoagulantes, nefrotóxicos, soluciones incompatibles y vacunas bacterianas vivas.",
+    "monitoring": "Cultivos y sensibilidad, respuesta, alergia, C. difficile, hemograma, función renal/hepática y neurotoxicidad.",
+    "administration": "IV/IM; nunca mezclar o coadministrar con calcio IV en neonatos.",
+    "preparation": "Reconstituir según vía; lidocaína solo IM y nunca IV.",
+    "infusionProtocol": "IV en unos 30 min; usar línea separada/lavada para soluciones con calcio fuera del período neonatal.",
+    "pregnancy": "Usar cuando esté indicado tras evaluar beneficio-riesgo.",
+    "lactation": "Paso generalmente bajo; vigilar diarrea, candidiasis o sensibilización en lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, convulsiones por acumulación y lesión orgánica rara. Uso bloqueado em neonatos sem idade/bilirrubina/cálcio IV; demais doses bloqueadas sem foco, peso, alergia e função renal/hepática.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=36c07ebf-b091-483e-b2c4-f0fc0c2b4186",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ceftriaxone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.cdc.gov/std/treatment-guidelines/gonorrhea-adults.htm"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=36c07ebf-b091-483e-b2c4-f0fc0c2b4186",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/accp_prolonged_infusion_beta_lactums/"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ceftriaxone"
   },
   "name": {
     "pt": "Ceftriaxona",
@@ -145,8 +87,8 @@
   "keywords": [
     "ceftriaxona"
   ],
-  "dataVersion": "clinical-data-v1-1d6d6cf06c68c802",
-  "clinicalContentSha256": "1d6d6cf06c68c8024790a1bb66726b2299758d2eaf77f140d63d0e8d85638ab9",
+  "dataVersion": "clinical-data-v1-fe99d9e084bd8979",
+  "clinicalContentSha256": "fe99d9e084bd8979cc514c0939372aad2e04b8a6a04a4d22d83a6857ad69ae9e",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js",
@@ -574,5 +516,17 @@
         "updated": "2026-01-22"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "ceftriaxona.mcGoldClinicalV1",
+    "lote": "016",
+    "requiredFields": 33,
+    "approvedSha256": "edd955962363f9efc0d22d2a79299d1e785692bced8bf248426d86777ef530d0",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }
