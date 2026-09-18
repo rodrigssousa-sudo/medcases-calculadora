@@ -4030,3 +4030,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:epoetina_beta:END */
+/* GOLD33_SELECTIVE:etelcalcetida:START */
+;(function(){var db=window.NEFRO_DRUGS_DB;if(!db||!db["etelcalcetida"])throw new Error("GOLD33_MISSING_CANONICAL:etelcalcetida");db["etelcalcetida"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "032",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cfc357cce126e64830ae5d1ff0c06fba184ab8add397e7a97ec88d24cbe7b6a1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Etelcalcetida",
+    "class": "Calcimimético",
+    "pharmacologicClass": "Ativa receptor sensor de cálcio e reduz PTH",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Solução IV 2,5/5/10 mg por frasco.",
+    "presentations": "Solução IV 2,5/5/10 mg por frasco.",
+    "mechanism": "Ativa receptor sensor de cálcio e reduz PTH. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Removida parcialmente por diálise; ligação covalente a albumina.",
+    "indications": "Hiperparatireoidismo secundário em adultos com DRC em hemodiálise.",
+    "dose": "5 mg IV 3x/semana ao final da hemodiálise; titular 2,5–15 mg 3x/semana em intervalos ≥4 semanas.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Indicada apenas em hemodiálise; não requer ajuste além da titulação.",
+    "hepaticDose": "Sem ajuste definido.",
+    "commonAdverseEffects": "Náusea, vômito, diarreia, hipocalcemia e espasmos.",
+    "dangerousAdverseEffects": "Hipocalcemia fatal, QT/arrítmia, convulsão, piora de IC e sangramento GI.",
+    "adverseEffects": "Náusea, vômito, diarreia, hipocalcemia e espasmos. Graves: Hipocalcemia fatal, QT/arrítmia, convulsão, piora de IC e sangramento GI.",
+    "contraindications": "Hipersensibilidade; não iniciar com Ca abaixo do normal.",
+    "interactions": "Outros redutores de Ca, cinacalcete e fármacos que prolongam QT em hipocalcemia.",
+    "monitoring": "Ca, PTH, fósforo, QT/sintomas, IC e convulsões.",
+    "administration": "Bolus IV na linha venosa ao final da hemodiálise; não misturar.",
+    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipocalcemia fatal, QT/arrítmia, convulsão, piora de IC e sangramento GI. Titulação bloqueada sem Ca corrigido, PTH/fósforo, sessão de diálise, cinacalcete, QT/convulsão/IC e monitorização.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=etelcalcetide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/208325Orig1s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=etelcalcetide"
+  },
+  "es": {
+    "name": "Etelcalcetida",
+    "class": "Calcimimético",
+    "pharmacologicClass": "Activa receptor sensor de calcio y reduce PTH",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Solución IV 2,5/5/10 mg por vial.",
+    "presentations": "Solución IV 2,5/5/10 mg por vial.",
+    "mechanism": "Activa receptor sensor de calcio y reduce PTH. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Eliminada parcialmente por diálisis; unión covalente a albúmina.",
+    "indications": "Hiperparatiroidismo secundario en adultos con ERC en hemodiálisis.",
+    "dose": "5 mg IV 3 veces/semana al final de hemodiálisis; titular 2,5–15 mg 3 veces/semana en intervalos ≥4 semanas.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Indicada solo en hemodiálisis; no requiere ajuste además de titulación.",
+    "hepaticDose": "Sin ajuste definido.",
+    "commonAdverseEffects": "Náusea, vómito, diarrea, hipocalcemia y espasmos.",
+    "dangerousAdverseEffects": "Hipocalcemia fatal, QT/arritmia, convulsión, empeoramiento de IC y sangrado GI.",
+    "adverseEffects": "Náusea, vómito, diarrea, hipocalcemia y espasmos. Graves: Hipocalcemia fatal, QT/arritmia, convulsión, empeoramiento de IC y sangrado GI.",
+    "contraindications": "Hipersensibilidad; no iniciar con Ca bajo lo normal.",
+    "interactions": "Otros reductores de Ca, cinacalcet y fármacos que prolongan QT con hipocalcemia.",
+    "monitoring": "Ca, PTH, fósforo, QT/síntomas, IC y convulsiones.",
+    "administration": "Bolo IV en línea venosa al final de hemodiálisis; no mezclar.",
+    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipocalcemia fatal, QT/arritmia, convulsión, empeoramiento de IC y sangrado GI. Titulação bloqueada sem Ca corrigido, PTH/fósforo, sessão de diálise, cinacalcete, QT/convulsão/IC e monitorização.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=etelcalcetide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/208325Orig1s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=etelcalcetide"
+  }
+};})();
+/* GOLD33_SELECTIVE:etelcalcetida:END */

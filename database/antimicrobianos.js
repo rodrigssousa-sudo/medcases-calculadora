@@ -28481,3 +28481,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:espiramicina:END */
+/* GOLD33_SELECTIVE:etambutol:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["etambutol"])throw new Error("GOLD33_MISSING_CANONICAL:etambutol");db["etambutol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "032",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cfc357cce126e64830ae5d1ff0c06fba184ab8add397e7a97ec88d24cbe7b6a1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Etambutol",
+    "class": "Antimicobacteriano",
+    "pharmacologicClass": "Inibe arabinosil-transferases da parede micobacteriana",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 100/400 mg.",
+    "presentations": "Comprimidos 100/400 mg.",
+    "mechanism": "Inibe arabinosil-transferases da parede micobacteriana. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Eliminação renal significativa; meia-vida 3–4 h.",
+    "indications": "Tuberculose e micobacterioses sempre em combinação apropriada.",
+    "dose": "TB diária: 15–20 mg/kg VO 1x/dia; esquemas intermitentes somente protocolizados.",
+    "pediatricDose": "Crianças: 15–25 mg/kg/dia conforme diretriz; monitorização visual. AUTOMATABLE=NO.",
+    "renalDose": "Reduzir frequência/dose em CrCl baixo; diálise requer protocolo.",
+    "hepaticDose": "Sem ajuste usual.",
+    "commonAdverseEffects": "Náusea, artralgia, hiperuricemia e cefaleia.",
+    "dangerousAdverseEffects": "Neurite óptica irreversível, hepatotoxicidade e neuropatia.",
+    "adverseEffects": "Náusea, artralgia, hiperuricemia e cefaleia. Graves: Neurite óptica irreversível, hepatotoxicidade e neuropatia.",
+    "contraindications": "Neurite óptica ou incapacidade de relatar alteração visual, salvo decisão especializada.",
+    "interactions": "Antiácidos de alumínio reduzem absorção; outros neurotóxicos ópticos.",
+    "monitoring": "Acuidade e visão de cores basal/mensal, rim, cultura e dose mg/kg.",
+    "administration": "VO com ou sem alimento; separar antiácidos de alumínio.",
+    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Neurite óptica irreversível, hepatotoxicidade e neuropatia. Dose bloqueada sem peso, regime TB/cultura, CrCl/diálise, visão basal, idade e fármacos associados.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ethambutol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ethambutol"
+  },
+  "es": {
+    "name": "Etambutol",
+    "class": "Antimicobacteriano",
+    "pharmacologicClass": "Inhibe arabinosil-transferasas de pared micobacteriana",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 100/400 mg.",
+    "presentations": "Comprimidos 100/400 mg.",
+    "mechanism": "Inhibe arabinosil-transferasas de pared micobacteriana. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Eliminación renal significativa; semivida 3–4 h.",
+    "indications": "Tuberculosis y micobacteriosis siempre en combinación apropiada.",
+    "dose": "TB diaria: 15–20 mg/kg VO 1 vez/día; pautas intermitentes solo protocolizadas.",
+    "pediatricDose": "Niños: 15–25 mg/kg/día según guía; control visual. AUTOMATABLE=NO.",
+    "renalDose": "Reducir frecuencia/dosis en CrCl bajo; diálisis requiere protocolo.",
+    "hepaticDose": "Sin ajuste habitual.",
+    "commonAdverseEffects": "Náusea, artralgia, hiperuricemia y cefalea.",
+    "dangerousAdverseEffects": "Neuritis óptica irreversible, hepatotoxicidad y neuropatía.",
+    "adverseEffects": "Náusea, artralgia, hiperuricemia y cefalea. Graves: Neuritis óptica irreversible, hepatotoxicidad y neuropatía.",
+    "contraindications": "Neuritis óptica o incapacidad de informar cambio visual, salvo decisión especializada.",
+    "interactions": "Antiácidos de aluminio reducen absorción; otros neurotóxicos ópticos.",
+    "monitoring": "Agudeza y visión de colores basal/mensual, riñón, cultivo y dosis mg/kg.",
+    "administration": "VO con o sin alimento; separar antiácidos de aluminio.",
+    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Neuritis óptica irreversible, hepatotoxicidad y neuropatía. Dose bloqueada sem peso, regime TB/cultura, CrCl/diálise, visão basal, idade e fármacos associados.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ethambutol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.cdc.gov/tb/hcp/treatment/index.html"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ethambutol"
+  }
+};})();
+/* GOLD33_SELECTIVE:etambutol:END */

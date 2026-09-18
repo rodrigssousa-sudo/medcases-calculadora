@@ -65592,3 +65592,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:esmolol:END */
+/* GOLD33_SELECTIVE:espironolactona:START */
+;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["espironolactona"])throw new Error("GOLD33_MISSING_CANONICAL:espironolactona");db["espironolactona"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "032",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cfc357cce126e64830ae5d1ff0c06fba184ab8add397e7a97ec88d24cbe7b6a1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Espironolactona",
+    "class": "Antagonista da aldosterona/diurético poupador de K",
+    "pharmacologicClass": "Bloqueia receptor mineralocorticoide e tem efeito antiandrogênico",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 25/50/100 mg e suspensão.",
+    "presentations": "Comprimidos 25/50/100 mg e suspensão.",
+    "mechanism": "Bloqueia receptor mineralocorticoide e tem efeito antiandrogênico. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabólitos ativos hepáticos; eliminação renal/biliar.",
+    "indications": "IC, hipertensão, edema e hiperaldosteronismo; usos dermatológicos são off-label.",
+    "dose": "IC: 25 mg/dia, ajustar 25–50 mg. HAS: 25–100 mg/dia. Edema/hiperaldosteronismo exigem esquemas próprios.",
+    "pediatricDose": "Dose por peso/indicação especializada. AUTOMATABLE=NO.",
+    "renalDose": "Evitar se eGFR muito baixa/hipercalemia; ajustar por K e função renal.",
+    "hepaticDose": "Cautela em hepatopatia/cirrose por alterações hidroeletrolíticas.",
+    "commonAdverseEffects": "Hipercalemia, ginecomastia, irregularidade menstrual, tontura e GI.",
+    "dangerousAdverseEffects": "Hipercalemia/arrítmia, lesão renal, hipotensão e distúrbios eletrolíticos.",
+    "adverseEffects": "Hipercalemia, ginecomastia, irregularidade menstrual, tontura e GI. Graves: Hipercalemia/arrítmia, lesão renal, hipotensão e distúrbios eletrolíticos.",
+    "contraindications": "Anúria, insuficiência renal aguda, hipercalemia, doença de Addison e eplerenona concomitante.",
+    "interactions": "K, RAAS, AINEs, trimetoprima, digoxina e lítio.",
+    "monitoring": "K, creatinina/eGFR, PA, volume e efeitos endócrinos.",
+    "administration": "VO com alimento de modo consistente.",
+    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipercalemia/arrítmia, lesão renal, hipotensão e distúrbios eletrolíticos. Dose bloqueada sem indicação, eGFR/CrCl, K, PA/volume, fígado e revisão de RAAS/K/AINEs.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=spironolactone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/012151s080lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=spironolactone"
+  },
+  "es": {
+    "name": "Espironolactona",
+    "class": "Antagonista de aldosterona/diurético ahorrador de K",
+    "pharmacologicClass": "Bloquea receptor mineralocorticoide y tiene efecto antiandrogénico",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 25/50/100 mg y suspensión.",
+    "presentations": "Comprimidos 25/50/100 mg y suspensión.",
+    "mechanism": "Bloquea receptor mineralocorticoide y tiene efecto antiandrogénico. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolitos activos hepáticos; eliminación renal/biliar.",
+    "indications": "IC, hipertensión, edema e hiperaldosteronismo; usos dermatológicos son off-label.",
+    "dose": "IC: 25 mg/día, ajustar 25–50 mg. HTA: 25–100 mg/día. Edema/hiperaldosteronismo requieren pautas propias.",
+    "pediatricDose": "Dosis por peso/indicación especializada. AUTOMATABLE=NO.",
+    "renalDose": "Evitar si eGFR muy baja/hiperpotasemia; ajustar por K y función renal.",
+    "hepaticDose": "Precaución en hepatopatía/cirrosis por alteraciones hidroelectrolíticas.",
+    "commonAdverseEffects": "Hiperpotasemia, ginecomastia, irregularidad menstrual, mareo y GI.",
+    "dangerousAdverseEffects": "Hiperpotasemia/arritmia, lesión renal, hipotensión y trastornos electrolíticos.",
+    "adverseEffects": "Hiperpotasemia, ginecomastia, irregularidad menstrual, mareo y GI. Graves: Hiperpotasemia/arritmia, lesión renal, hipotensión y trastornos electrolíticos.",
+    "contraindications": "Anuria, insuficiencia renal aguda, hiperpotasemia, enfermedad de Addison y eplerenona concomitante.",
+    "interactions": "K, SRAA, AINE, trimetoprima, digoxina y litio.",
+    "monitoring": "K, creatinina/eGFR, PA, volumen y efectos endocrinos.",
+    "administration": "VO con alimento de forma consistente.",
+    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hiperpotasemia/arritmia, lesión renal, hipotensión y trastornos electrolíticos. Dose bloqueada sem indicação, eGFR/CrCl, K, PA/volume, fígado e revisão de RAAS/K/AINEs.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=spironolactone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/012151s080lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=spironolactone"
+  }
+};})();
+/* GOLD33_SELECTIVE:espironolactona:END */

@@ -5,226 +5,80 @@
   "color": "rgba(16,185,129,0.12)",
   "colorTxt": "#064E3B",
   "pt": {
-    "pharmacologicClass": "Antagonista do receptor mineralocorticoide, diurético poupador de potássio",
-    "mechanism": "Bloqueia a ação da aldosterona no receptor mineralocorticoide, reduzindo reabsorção de sódio e remodelamento cardiovascular e diminuindo a excreção de potássio.",
-    "pharmacodynamics": "Produz natriurese modesta e retenção de potássio; em HFrEF reduz remodelamento, hospitalização e mortalidade quando usado em pacientes elegíveis.",
-    "commonAdverseEffects": [
-      "hipercalemia",
-      "tontura",
-      "hipotensão",
-      "aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "hipercalemia grave",
-      "lesão renal aguda",
-      "hipotensão sintomática",
-      "ginecomastia e efeitos endócrinos clinicamente importantes"
-    ],
-    "contraindications": [
-      "Hipercalemia clinicamente significativa",
-      "insuficiência renal avançada conforme indicação e bula",
-      "hipersensibilidade"
-    ],
-    "interactions": [
-      "Potássio, substitutos de sal e outros poupadores de potássio aumentam hipercalemia",
-      "IECA/BRA/ARNI aumentam risco de hipercalemia e exigem monitorização",
-      "AINEs podem piorar função renal",
-      "Inibidores de CYP3A4 são relevantes especialmente para eplerenona"
-    ],
-    "monitoring": [
-      "Potássio sérico",
-      "creatinina/eTFG",
-      "pressão arterial",
-      "estado volêmico",
-      "medicamentos concomitantes"
-    ],
-    "administration": "Via oral, em horário consistente; pode ser administrado com ou sem alimentos conforme produto.",
-    "preparation": "Não requer reconstituição para comprimidos.",
-    "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
-    "pregnancy": "Evitar uso rotineiro na gestação salvo indicação especializada e avaliação benefício-risco.",
-    "lactation": "Individualizar conforme fármaco, dose, idade do lactente e necessidade materna.",
-    "specialPopulations": {
-      "renal": "Maior risco de hipercalemia; ajustar ou evitar conforme eTFG e bula.",
-      "elderly": "Monitorar função renal e potássio de perto.",
-      "diabetes": "O risco de hipercalemia aumenta com DRC e bloqueio concomitante do SRAA."
-    },
-    "patientEducation": [
-      "Evitar suplementos de potássio ou sal com potássio sem orientação",
-      "realizar controles laboratoriais",
-      "procurar avaliação por fraqueza intensa, palpitações ou síncope"
-    ],
-    "clinicalPearls": [
-      "É menos seletiva que eplerenona e por isso causa mais ginecomastia e outros efeitos endócrinos",
-      "Na hipertensão resistente a diretriz 2025 a reconhece como quarto agente eficaz em pacientes selecionados."
-    ],
-    "guidelineRecommendations": [
-      "AHA/ACC/HFSA: MRA recomendado em HFrEF NYHA II-IV com eTFG >30 e K <5,0 mEq/L; se o potássio não puder ser mantido <5,5 mEq/L, suspender o MRA.",
-      "AHA/ACC 2025: espironolactona 25-50 mg/dia é opção preferida como quarto fármaco na hipertensão resistente com função renal e potássio adequados."
-    ],
-    "safetyFlags": [
-      "HIPERCALEMIA",
-      "FUNCAO_RENAL",
-      "MONITORIZACAO_ELETROLITOS"
-    ],
-    "alerts": [
-      "Não iniciar MRA para HFrEF se eTFG <=30 ou K >=5,0 mEq/L",
-      "Revisar potássio e função renal após início e titulação."
-    ],
+    "pharmacologicClass": "Bloqueia receptor mineralocorticoide e tem efeito antiandrogênico",
+    "mechanism": "Bloqueia receptor mineralocorticoide e tem efeito antiandrogênico. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "commonAdverseEffects": "Hipercalemia, ginecomastia, irregularidade menstrual, tontura e GI.",
+    "dangerousAdverseEffects": "Hipercalemia/arrítmia, lesão renal, hipotensão e distúrbios eletrolíticos.",
+    "contraindications": "Anúria, insuficiência renal aguda, hipercalemia, doença de Addison e eplerenona concomitante.",
+    "interactions": "K, RAAS, AINEs, trimetoprima, digoxina e lítio.",
+    "monitoring": "K, creatinina/eGFR, PA, volume e efeitos endócrinos.",
+    "administration": "VO com alimento de modo consistente.",
+    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipercalemia/arrítmia, lesão renal, hipotensão e distúrbios eletrolíticos. Dose bloqueada sem indicação, eGFR/CrCl, K, PA/volume, fígado e revisão de RAAS/K/AINEs.",
     "name": "Espironolactona",
-    "class": "Antagonista não seletivo do receptor mineralocorticoide; diurético poupador de potássio",
-    "pharmacokinetics": "Metabolismo hepático rápido para metabólitos ativos, incluindo canrenona e compostos sulfurados; a atividade clínica dura mais que a meia-vida do fármaco original.",
-    "indications": [
-      "HFrEF sintomática em pacientes elegíveis",
-      "hipertensão essencial",
-      "edema por cirrose ou síndrome nefrótica",
-      "hiperaldosteronismo primário em avaliação e tratamento"
-    ],
-    "commercialNames": [
-      "Aldactone"
-    ],
-    "presentation": "Comprimidos orais.",
-    "presentations": [
-      "Comprimidos 25, 50 e 100 mg"
-    ],
-    "dose": {
-      "HFrEF": "Se K <=5,0 e eTFG >50: 25 mg uma vez ao dia; pode aumentar para 50 mg uma vez ao dia. Se ocorrer hipercalemia, 25 mg em dias alternados.",
-      "hypertension": "25-100 mg/dia em uma ou duas tomadas; doses >100 mg/dia geralmente não oferecem maior redução de PA.",
-      "edema": "Individualizar conforme etiologia e resposta; na cirrose iniciar em ambiente monitorado se o risco for alto."
-    },
-    "pediatricDose": "A bula de comprimido usada como referência não estabelece esquema pediátrico universal para estas indicações; não extrapolar dose adulta.",
-    "renalDose": "HFrEF: eTFG 30-50 mL/min/1,73 m2, considerar 25 mg em dias alternados. Não iniciar MRA de HFrEF com eTFG <=30; monitorar K e creatinina de perto.",
-    "hepaticDose": "Na cirrose há risco de distúrbios hidroeletrolíticos e encefalopatia; iniciar lentamente e monitorar volemia, sódio, potássio e função renal.",
-    "adverseEffects": {
-      "common": [
-        "hipercalemia",
-        "tontura",
-        "hipotensão",
-        "aumento de creatinina"
-      ],
-      "dangerous": [
-        "hipercalemia grave",
-        "lesão renal aguda",
-        "hipotensão sintomática",
-        "ginecomastia e efeitos endócrinos clinicamente importantes"
-      ]
-    },
+    "class": "Antagonista da aldosterona/diurético poupador de K",
+    "pharmacokinetics": "Metabólitos ativos hepáticos; eliminação renal/biliar.",
+    "indications": "IC, hipertensão, edema e hiperaldosteronismo; usos dermatológicos são off-label.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 25/50/100 mg e suspensão.",
+    "presentations": "Comprimidos 25/50/100 mg e suspensão.",
+    "dose": "IC: 25 mg/dia, ajustar 25–50 mg. HAS: 25–100 mg/dia. Edema/hiperaldosteronismo exigem esquemas próprios.",
+    "pediatricDose": "Dose por peso/indicação especializada. AUTOMATABLE=NO.",
+    "renalDose": "Evitar se eGFR muito baixa/hipercalemia; ajustar por K e função renal.",
+    "hepaticDose": "Cautela em hepatopatia/cirrose por alterações hidroeletrolíticas.",
+    "adverseEffects": "Hipercalemia, ginecomastia, irregularidade menstrual, tontura e GI. Graves: Hipercalemia/arrítmia, lesão renal, hipotensão e distúrbios eletrolíticos.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c31c953-05ce-475a-b93f-80aeb12bde95",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=spironolactone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/012151s080lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c31c953-05ce-475a-b93f-80aeb12bde95"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=spironolactone"
   },
   "es": {
-    "pharmacologicClass": "Antagonista del receptor mineralocorticoide, diurético ahorrador de potasio",
-    "mechanism": "Bloquea la acción de aldosterona en el receptor mineralocorticoide, reduciendo reabsorción de sodio y remodelado cardiovascular y disminuyendo excreción de potasio.",
-    "pharmacodynamics": "Produce natriuresis modesta y retención de potasio; en HFrEF reduce remodelado, hospitalización y mortalidad cuando se usa en pacientes elegibles.",
-    "commonAdverseEffects": [
-      "hiperpotasemia",
-      "mareo",
-      "hipotensión",
-      "aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "hiperpotasemia grave",
-      "lesión renal aguda",
-      "hipotensión sintomática",
-      "ginecomastia y efectos endocrinos clínicamente importantes"
-    ],
-    "contraindications": [
-      "Hiperpotasemia clínicamente significativa",
-      "insuficiencia renal avanzada según indicación y ficha",
-      "hipersensibilidad"
-    ],
-    "interactions": [
-      "Potasio, sustitutos de sal y otros ahorradores de potasio aumentan hiperpotasemia",
-      "ACEi/ARA-II/ARNI aumentan riesgo de hiperpotasemia y requieren monitorización",
-      "AINE pueden empeorar función renal",
-      "Inhibidores CYP3A4 son relevantes especialmente para eplerenona"
-    ],
-    "monitoring": [
-      "Potasio sérico",
-      "creatinina/eGFR",
-      "presión arterial",
-      "estado de volumen",
-      "medicamentos concomitantes"
-    ],
-    "administration": "Vía oral, a horario consistente; puede administrarse con o sin alimentos según producto.",
-    "preparation": "No requiere reconstitución para tabletas.",
-    "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
-    "pregnancy": "Evitar uso rutinario durante embarazo salvo indicación especializada y balance beneficio-riesgo.",
-    "lactation": "Individualizar según fármaco, dosis, edad del lactante y necesidad materna.",
-    "specialPopulations": {
-      "renal": "Mayor riesgo de hiperpotasemia; ajustar o evitar según eGFR y ficha.",
-      "elderly": "Vigilar función renal y potasio estrechamente.",
-      "diabetes": "El riesgo de hiperpotasemia aumenta con ERC y bloqueo concomitante del SRAA."
-    },
-    "patientEducation": [
-      "Evitar suplementos de potasio o sal con potasio sin indicación",
-      "realizar controles de laboratorio",
-      "consultar por debilidad intensa, palpitaciones o síncope"
-    ],
-    "clinicalPearls": [
-      "Es menos selectiva que eplerenona y por ello produce más ginecomastia y otros efectos endocrinos",
-      "En hipertensión resistente la guía 2025 la reconoce como cuarto agente eficaz en pacientes seleccionados."
-    ],
-    "guidelineRecommendations": [
-      "AHA/ACC/HFSA: MRA recomendado en HFrEF NYHA II-IV con eGFR >30 y K <5.0 mEq/L; si el potasio no puede mantenerse <5.5 mEq/L, suspender el MRA.",
-      "AHA/ACC 2025: espironolactona 25-50 mg/día es una opción preferida como cuarto fármaco en hipertensión resistente con función renal y potasio adecuados."
-    ],
-    "safetyFlags": [
-      "HIPERPOTASEMIA",
-      "FUNCION_RENAL",
-      "MONITORIZACION_ELECTROLITOS"
-    ],
-    "alerts": [
-      "No iniciar MRA para HFrEF si eGFR <=30 o K >=5.0 mEq/L",
-      "Revisar potasio y función renal tras inicio y titulación."
-    ],
+    "pharmacologicClass": "Bloquea receptor mineralocorticoide y tiene efecto antiandrogénico",
+    "mechanism": "Bloquea receptor mineralocorticoide y tiene efecto antiandrogénico. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "commonAdverseEffects": "Hiperpotasemia, ginecomastia, irregularidad menstrual, mareo y GI.",
+    "dangerousAdverseEffects": "Hiperpotasemia/arritmia, lesión renal, hipotensión y trastornos electrolíticos.",
+    "contraindications": "Anuria, insuficiencia renal aguda, hiperpotasemia, enfermedad de Addison y eplerenona concomitante.",
+    "interactions": "K, SRAA, AINE, trimetoprima, digoxina y litio.",
+    "monitoring": "K, creatinina/eGFR, PA, volumen y efectos endocrinos.",
+    "administration": "VO con alimento de forma consistente.",
+    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hiperpotasemia/arritmia, lesión renal, hipotensión y trastornos electrolíticos. Dose bloqueada sem indicação, eGFR/CrCl, K, PA/volume, fígado e revisão de RAAS/K/AINEs.",
     "name": "Espironolactona",
-    "class": "Antagonista no selectivo del receptor mineralocorticoide; diurético ahorrador de potasio",
-    "pharmacokinetics": "Metabolismo hepático rápido a metabolitos activos, incluidos canrenona y compuestos sulfurados; la actividad clínica dura más que la vida media del fármaco original.",
-    "indications": [
-      "HFrEF sintomática en pacientes elegibles",
-      "hipertensión esencial",
-      "edema por cirrosis o síndrome nefrótico",
-      "hiperaldosteronismo primario en evaluación y tratamiento"
-    ],
-    "commercialNames": [
-      "Aldactone"
-    ],
-    "presentation": "Tabletas orales.",
-    "presentations": [
-      "Tabletas 25, 50 y 100 mg"
-    ],
-    "dose": {
-      "HFrEF": "Si K <=5.0 y eGFR >50: 25 mg una vez al día; puede aumentar a 50 mg una vez al día. Si aparece hiperpotasemia, 25 mg en días alternos.",
-      "hypertension": "25-100 mg/día en una o dos tomas; dosis >100 mg/día generalmente no aportan mayor reducción de PA.",
-      "edema": "Individualizar según etiología y respuesta; en cirrosis iniciar en entorno monitorizado si el riesgo es alto."
-    },
-    "pediatricDose": "La ficha de tableta usada como referencia no establece un esquema pediátrico universal para estas indicaciones; no extrapolar dosis adulta.",
-    "renalDose": "HFrEF: eGFR 30-50 mL/min/1.73 m2, considerar 25 mg en días alternos. No iniciar MRA de HFrEF con eGFR <=30; vigilar K y creatinina estrechamente.",
-    "hepaticDose": "En cirrosis existe riesgo de alteraciones hidroelectrolíticas y encefalopatía; iniciar lentamente y monitorizar volumen, sodio, potasio y función renal.",
-    "adverseEffects": {
-      "common": [
-        "hiperpotasemia",
-        "mareo",
-        "hipotensión",
-        "aumento de creatinina"
-      ],
-      "dangerous": [
-        "hiperpotasemia grave",
-        "lesión renal aguda",
-        "hipotensión sintomática",
-        "ginecomastia y efectos endocrinos clínicamente importantes"
-      ]
-    },
+    "class": "Antagonista de aldosterona/diurético ahorrador de K",
+    "pharmacokinetics": "Metabolitos activos hepáticos; eliminación renal/biliar.",
+    "indications": "IC, hipertensión, edema e hiperaldosteronismo; usos dermatológicos son off-label.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 25/50/100 mg y suspensión.",
+    "presentations": "Comprimidos 25/50/100 mg y suspensión.",
+    "dose": "IC: 25 mg/día, ajustar 25–50 mg. HTA: 25–100 mg/día. Edema/hiperaldosteronismo requieren pautas propias.",
+    "pediatricDose": "Dosis por peso/indicación especializada. AUTOMATABLE=NO.",
+    "renalDose": "Evitar si eGFR muy baja/hiperpotasemia; ajustar por K y función renal.",
+    "hepaticDose": "Precaución en hepatopatía/cirrosis por alteraciones hidroelectrolíticas.",
+    "adverseEffects": "Hiperpotasemia, ginecomastia, irregularidad menstrual, mareo y GI. Graves: Hiperpotasemia/arritmia, lesión renal, hipotensión y trastornos electrolíticos.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c31c953-05ce-475a-b93f-80aeb12bde95",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=spironolactone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/012151s080lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1c31c953-05ce-475a-b93f-80aeb12bde95"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=spironolactone"
   },
   "name": {
     "pt": "Espironolactona",
@@ -236,8 +90,8 @@
     "espironolactona generica",
     "antagonista do receptor mineralocorticoide (mra) nao seletivo — diuretico poupador de potassio"
   ],
-  "dataVersion": "clinical-data-v1-0d9e4487b6a9a056",
-  "clinicalContentSha256": "0d9e4487b6a9a05605709f3248ceb82dad85b7e91ee4744dfcb27770405a18aa",
+  "dataVersion": "clinical-data-v1-3bc15e3d5a421487",
+  "clinicalContentSha256": "3bc15e3d5a4214878818e7e287c10f0857e3ba2c7285b73f209e9633b5060171",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -289,13 +143,15 @@
     ]
   },
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "espironolactona.mcGoldClinicalV1",
-    "group": "GOLD_GROUP06_CARDIO_10",
-    "review": "2026-09",
+    "lote": "032",
     "requiredFields": 33,
-    "contentSha256": "ca8d24d39b244b039f649419fc74265d1ee26a0654d2d479f6c71fbbc0c39dda",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "cfc357cce126e64830ae5d1ff0c06fba184ab8add397e7a97ec88d24cbe7b6a1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

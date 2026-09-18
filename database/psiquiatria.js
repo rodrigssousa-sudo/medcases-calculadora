@@ -6587,3 +6587,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:escitalopram:END */
+/* GOLD33_SELECTIVE:eszopiclona:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["eszopiclona"])throw new Error("GOLD33_MISSING_CANONICAL:eszopiclona");db["eszopiclona"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "032",
+    "requiredFieldCount": 33,
+    "approvedSha256": "cfc357cce126e64830ae5d1ff0c06fba184ab8add397e7a97ec88d24cbe7b6a1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Eszopiclona",
+    "class": "Hipnótico não benzodiazepínico",
+    "pharmacologicClass": "Modula receptor GABA-A",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 1/2/3 mg.",
+    "presentations": "Comprimidos 1/2/3 mg.",
+    "mechanism": "Modula receptor GABA-A. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP3A4/2E1; meia-vida ~6 h.",
+    "indications": "Insônia em adultos.",
+    "dose": "Iniciar 1 mg ao deitar; pode aumentar a 2–3 mg. Máximo 3 mg/noite; idosos máximo 2 mg.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste.",
+    "hepaticDose": "Hepatopatia grave: máximo 2 mg.",
+    "commonAdverseEffects": "Gosto desagradável, cefaleia, tontura, boca seca e sonolência.",
+    "dangerousAdverseEffects": "Comportamentos complexos fatais, depressão respiratória, abuso e suicídio.",
+    "adverseEffects": "Gosto desagradável, cefaleia, tontura, boca seca e sonolência. Graves: Comportamentos complexos fatais, depressão respiratória, abuso e suicídio.",
+    "contraindications": "Comportamento complexo do sono prévio com Z-drug; hipersensibilidade.",
+    "interactions": "Álcool/opioides/CNS, CYP3A4 fortes e outros sedativos.",
+    "monitoring": "Sono, comportamento complexo, cognição no dia seguinte, humor e dependência.",
+    "administration": "Imediatamente antes de deitar, garantindo 7–8 h; evitar refeição pesada próxima.",
+    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Comportamentos complexos fatais, depressão respiratória, abuso e suicídio. Dose bloqueada sem duração de sono, idade, fígado, depressão/suicídio, apneia, álcool/opioides e história de comportamento complexo.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eszopiclone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021476s037lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eszopiclone"
+  },
+  "es": {
+    "name": "Eszopiclona",
+    "class": "Hipnótico no benzodiazepínico",
+    "pharmacologicClass": "Modula receptor GABA-A",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 1/2/3 mg.",
+    "presentations": "Comprimidos 1/2/3 mg.",
+    "mechanism": "Modula receptor GABA-A. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP3A4/2E1; semivida ~6 h.",
+    "indications": "Insomnio en adultos.",
+    "dose": "Iniciar 1 mg al acostarse; puede subir a 2–3 mg. Máximo 3 mg/noche; ancianos máximo 2 mg.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste.",
+    "hepaticDose": "Hepatopatía grave: máximo 2 mg.",
+    "commonAdverseEffects": "Sabor desagradable, cefalea, mareo, boca seca y somnolencia.",
+    "dangerousAdverseEffects": "Conductas complejas fatales, depresión respiratoria, abuso y suicidio.",
+    "adverseEffects": "Sabor desagradable, cefalea, mareo, boca seca y somnolencia. Graves: Conductas complejas fatales, depresión respiratoria, abuso y suicidio.",
+    "contraindications": "Conducta compleja del sueño previa con Z-drug; hipersensibilidad.",
+    "interactions": "Alcohol/opioides/SNC, CYP3A4 fuertes y otros sedantes.",
+    "monitoring": "Sueño, conducta compleja, cognición al día siguiente, ánimo y dependencia.",
+    "administration": "Inmediatamente antes de acostarse, garantizando 7–8 h; evitar comida pesada próxima.",
+    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Conductas complejas fatales, depresión respiratoria, abuso y suicidio. Dose bloqueada sem duração de sono, idade, fígado, depressão/suicídio, apneia, álcool/opioides e história de comportamento complexo.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eszopiclone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021476s037lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=eszopiclone"
+  }
+};})();
+/* GOLD33_SELECTIVE:eszopiclona:END */
