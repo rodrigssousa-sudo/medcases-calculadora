@@ -27851,3 +27851,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:delamanida:END */
+/* GOLD33_SELECTIVE:dicloxacilina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["dicloxacilina"])throw new Error("GOLD33_MISSING_CANONICAL:dicloxacilina");db["dicloxacilina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "025",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f490066cbf88c2c1fc49fde254c0e52699a8a5320bd3cfb2ee1a9d3050dd9c7f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Dicloxacilina",
+    "class": "Penicilina resistente a penicilinase",
+    "pharmacologicClass": "Inibe síntese da parede bacteriana",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 250 e 500 mg; suspensão pode existir conforme mercado.",
+    "presentations": "Cápsulas 250 e 500 mg; suspensão pode existir conforme mercado.",
+    "mechanism": "Inibe síntese da parede bacteriana. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção oral reduzida por alimento; eliminação renal e biliar.",
+    "indications": "Infecções por estafilococos produtores de penicilinase suscetíveis; confirmar cultura/foco.",
+    "dose": "Adultos: 125–250 mg VO a cada 6 h para infecção leve/moderada; 250–500 mg a cada 6 h para grave, conforme rótulo/foco.",
+    "pediatricDose": "<40 kg: 12,5 mg/kg/dia divididos q6h em leve/moderada ou 25 mg/kg/dia q6h em grave, conforme rótulo. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste usual isolado; considerar em insuficiência grave e monitorar.",
+    "hepaticDose": "Cautela e monitorar hepatotoxicidade; pode ocorrer hepatite colestática.",
+    "commonAdverseEffects": "Náusea, diarreia, rash e candidíase.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, hepatite colestática e nefrite intersticial.",
+    "adverseEffects": "Náusea, diarreia, rash e candidíase. Graves: Anafilaxia, SCAR, C. difficile, hepatite colestática e nefrite intersticial.",
+    "contraindications": "Hipersensibilidade grave a penicilinas/beta-lactâmicos.",
+    "interactions": "Probenecida eleva níveis; anticoagulantes e metotrexato exigem monitorização; pode induzir CYP.",
+    "monitoring": "Resposta/cultura, alergia, diarreia/C. difficile, fígado, rim e hemograma em uso prolongado.",
+    "administration": "Tomar em jejum, 1 h antes ou 2 h após refeição, com água; completar duração prescrita.",
+    "preparation": "Agitar suspensão se utilizada e medir com dispositivo.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Penicilinas têm experiência ampla; usar quando indicado.",
+    "lactation": "Níveis muito baixos no leite; observar diarreia/candidíase.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, SCAR, C. difficile, hepatite colestática e nefrite intersticial. Dose/duração bloqueadas sem foco, gravidade, peso, cultura/suscetibilidade, alergia e função hepatorrenal.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dicloxacillin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dicloxacillin"
+  },
+  "es": {
+    "name": "Dicloxacilina",
+    "class": "Penicilina resistente a penicilinasa",
+    "pharmacologicClass": "Inhibe síntesis de pared bacteriana",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 250 y 500 mg; suspensión puede existir según mercado.",
+    "presentations": "Cápsulas 250 y 500 mg; suspensión puede existir según mercado.",
+    "mechanism": "Inhibe síntesis de pared bacteriana. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción oral reducida por comida; eliminación renal y biliar.",
+    "indications": "Infecciones por estafilococos productores de penicilinasa sensibles; confirmar cultivo/foco.",
+    "dose": "Adultos: 125–250 mg VO cada 6 h para infección leve/moderada; 250–500 mg cada 6 h para grave, según ficha/foco.",
+    "pediatricDose": "<40 kg: 12,5 mg/kg/día dividido q6h en leve/moderada o 25 mg/kg/día q6h en grave, según ficha. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste habitual aislado; considerar en insuficiencia grave y controlar.",
+    "hepaticDose": "Precaución y control de hepatotoxicidad; puede ocurrir hepatitis colestásica.",
+    "commonAdverseEffects": "Náusea, diarrea, erupción y candidiasis.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, hepatitis colestásica y nefritis intersticial.",
+    "adverseEffects": "Náusea, diarrea, erupción y candidiasis. Graves: Anafilaxia, SCAR, C. difficile, hepatitis colestásica y nefritis intersticial.",
+    "contraindications": "Hipersensibilidad grave a penicilinas/betalactámicos.",
+    "interactions": "Probenecid eleva niveles; anticoagulantes y metotrexato requieren control; puede inducir CYP.",
+    "monitoring": "Respuesta/cultivo, alergia, diarrea/C. difficile, hígado, riñón y hemograma en uso prolongado.",
+    "administration": "Tomar en ayunas, 1 h antes o 2 h después de comida, con agua; completar duración prescrita.",
+    "preparation": "Agitar suspensión si se usa y medir con dispositivo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Penicilinas tienen amplia experiencia; usar cuando esté indicado.",
+    "lactation": "Niveles muy bajos en leche; vigilar diarrea/candidiasis.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, SCAR, C. difficile, hepatitis colestásica y nefritis intersticial. Dose/duração bloqueadas sem foco, gravidade, peso, cultura/suscetibilidade, alergia e função hepatorrenal.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dicloxacillin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dicloxacillin"
+  }
+};})();
+/* GOLD33_SELECTIVE:dicloxacilina:END */

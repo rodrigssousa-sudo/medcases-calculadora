@@ -5508,3 +5508,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:codeina:END */
+/* GOLD33_SELECTIVE:diclofenaco:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["diclofenaco"])throw new Error("GOLD33_MISSING_CANONICAL:diclofenaco");db["diclofenaco"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "025",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f490066cbf88c2c1fc49fde254c0e52699a8a5320bd3cfb2ee1a9d3050dd9c7f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Diclofenaco",
+    "class": "AINE",
+    "pharmacologicClass": "Inibição de COX e síntese de prostaglandinas",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos IR/DR/ER, solução, gel, adesivo e injetável em alguns países; não intercambiáveis.",
+    "presentations": "Comprimidos IR/DR/ER, solução, gel, adesivo e injetável em alguns países; não intercambiáveis.",
+    "mechanism": "Inibição de COX e síntese de prostaglandinas. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático CYP2C9; alta ligação proteica e eliminação renal/biliar de metabólitos.",
+    "indications": "Dor e inflamação em osteoartrite, artrite reumatoide, espondilite e outras indicações específicas por formulação.",
+    "dose": "DR: osteoartrite 50 mg 2–3x/dia ou 75 mg 2x/dia; artrite reumatoide 50 mg 3–4x/dia ou 75 mg 2x/dia. Usar menor dose pelo menor tempo; formulações têm limites próprios.",
+    "pediatricDose": "Não estabelecido para muitas apresentações adultas; produtos pediátricos variam por país. AUTOMATABLE=NO.",
+    "renalDose": "Evitar em doença renal avançada; monitorar creatinina, volume e potássio.",
+    "hepaticDose": "Contraindicado em insuficiência hepática grave em vários rótulos; monitorar transaminases, especialmente 4–8 semanas.",
+    "commonAdverseEffects": "Dispepsia, náusea, dor abdominal, edema e cefaleia.",
+    "dangerousAdverseEffects": "Infarto/AVC, sangramento/perfuração GI, lesão renal/hepática, SCAR e anafilaxia.",
+    "adverseEffects": "Dispepsia, náusea, dor abdominal, edema e cefaleia. Graves: Infarto/AVC, sangramento/perfuração GI, lesão renal/hepática, SCAR e anafilaxia.",
+    "contraindications": "Alergia a AINE/asma por aspirina, perioperatório de CABG, sangramento GI ativo; outras por produto.",
+    "interactions": "Anticoagulantes/antiagregantes, outros AINE, lítio, metotrexato, IECA/ARA2/diuréticos e CYP2C9.",
+    "monitoring": "Dor, PA, edema, GI/sangramento, hemograma, rim, potássio e fígado.",
+    "administration": "VO com água; não triturar DR/ER. Não combinar formulações sem somar dose total.",
+    "preparation": "Não aplicável a comprimidos; tópico/injetável conforme produto.",
+    "infusionProtocol": "Não aplicável ao oral.",
+    "pregnancy": "Evitar a partir de 20 semanas se possível e contraindicado no 3º trimestre conforme alerta regulatório.",
+    "lactation": "Baixa passagem; preferir menor dose/tempo e evitar tópico no mamilo.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Infarto/AVC, sangramento/perfuração GI, lesão renal/hepática, SCAR e anafilaxia. Dose bloqueada sem indicação, formulação, risco CV/GI/renal/hepático, gestação e total diário de todos os AINE.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diclofenac",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diclofenac"
+  },
+  "es": {
+    "name": "Diclofenaco",
+    "class": "AINE",
+    "pharmacologicClass": "Inhibición de COX y síntesis de prostaglandinas",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos IR/DR/ER, solución, gel, parche e inyectable en algunos países; no intercambiables.",
+    "presentations": "Comprimidos IR/DR/ER, solución, gel, parche e inyectable en algunos países; no intercambiables.",
+    "mechanism": "Inhibición de COX y síntesis de prostaglandinas. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático CYP2C9; alta unión proteica y eliminación renal/biliar de metabolitos.",
+    "indications": "Dolor e inflamación en osteoartritis, artritis reumatoide, espondilitis y otras indicaciones específicas por formulación.",
+    "dose": "DR: osteoartritis 50 mg 2–3 veces/día o 75 mg 2 veces/día; artritis reumatoide 50 mg 3–4 veces/día o 75 mg 2 veces/día. Usar mínima dosis y tiempo; formulaciones tienen límites propios.",
+    "pediatricDose": "No establecido para muchas presentaciones adultas; productos pediátricos varían por país. AUTOMATABLE=NO.",
+    "renalDose": "Evitar en enfermedad renal avanzada; controlar creatinina, volumen y potasio.",
+    "hepaticDose": "Contraindicado en insuficiencia hepática grave en varias fichas; controlar transaminasas, especialmente 4–8 semanas.",
+    "commonAdverseEffects": "Dispepsia, náusea, dolor abdominal, edema y cefalea.",
+    "dangerousAdverseEffects": "Infarto/ACV, sangrado/perforación GI, lesión renal/hepática, SCAR y anafilaxia.",
+    "adverseEffects": "Dispepsia, náusea, dolor abdominal, edema y cefalea. Graves: Infarto/ACV, sangrado/perforación GI, lesión renal/hepática, SCAR y anafilaxia.",
+    "contraindications": "Alergia a AINE/asma por aspirina, perioperatorio de CABG, sangrado GI activo; otras por producto.",
+    "interactions": "Anticoagulantes/antiagregantes, otros AINE, litio, metotrexato, IECA/ARA2/diuréticos y CYP2C9.",
+    "monitoring": "Dolor, PA, edema, GI/sangrado, hemograma, riñón, potasio e hígado.",
+    "administration": "VO con agua; no triturar DR/ER. No combinar formulaciones sin sumar dosis total.",
+    "preparation": "No aplicable a comprimidos; tópico/inyectable según producto.",
+    "infusionProtocol": "No aplicable al oral.",
+    "pregnancy": "Evitar desde 20 semanas si es posible y contraindicado en tercer trimestre según alerta regulatoria.",
+    "lactation": "Bajo paso; preferir mínima dosis/tiempo y evitar tópico en pezón.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Infarto/ACV, sangrado/perforación GI, lesión renal/hepática, SCAR y anafilaxia. Dose bloqueada sem indicação, formulação, risco CV/GI/renal/hepático, gestação e total diário de todos os AINE.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diclofenac",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diclofenac"
+  }
+};})();
+/* GOLD33_SELECTIVE:diclofenaco:END */

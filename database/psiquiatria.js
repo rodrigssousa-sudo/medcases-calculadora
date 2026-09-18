@@ -6227,3 +6227,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:desvenlafaxina:END */
+/* GOLD33_SELECTIVE:diazepam:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["diazepam"])throw new Error("GOLD33_MISSING_CANONICAL:diazepam");db["diazepam"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "025",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f490066cbf88c2c1fc49fde254c0e52699a8a5320bd3cfb2ee1a9d3050dd9c7f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Diazepam",
+    "class": "Benzodiazepínico",
+    "pharmacologicClass": "Modulador alostérico positivo do receptor GABA-A",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 2/5/10 mg, solução oral, injeção 5 mg/mL e formas retal/nasal específicas.",
+    "presentations": "Comprimidos 2/5/10 mg, solução oral, injeção 5 mg/mL e formas retal/nasal específicas.",
+    "mechanism": "Modulador alostérico positivo do receptor GABA-A. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP2C19/3A4 em metabólitos ativos; meia-vida longa, maior em idosos/hepatopatia.",
+    "indications": "Ansiedade, abstinência alcoólica, espasmo muscular, crises convulsivas e sedação conforme via/produto.",
+    "dose": "Ansiedade: 2–10 mg VO 2–4x/dia; estado de mal epiléptico: 5–10 mg IV, podendo repetir conforme rótulo/protocolo. Doses dependem fortemente da indicação e via.",
+    "pediatricDose": "Crises: 0,15–0,2 mg/kg IV em protocolos, com máximos por idade; formas retal/nasal usam tabelas próprias. AUTOMATABLE=NO.",
+    "renalDose": "Metabólitos ativos podem acumular; iniciar baixo e monitorar em DRC grave.",
+    "hepaticDose": "Reduzir dose em hepatopatia; evitar em insuficiência hepática grave/encefalopatia.",
+    "commonAdverseEffects": "Sonolência, ataxia, fadiga, confusão e hipotensão.",
+    "dangerousAdverseEffects": "Depressão respiratória, coma, reação paradoxal, dependência/abstinência e lesão por extravasamento.",
+    "adverseEffects": "Sonolência, ataxia, fadiga, confusão e hipotensão. Graves: Depressão respiratória, coma, reação paradoxal, dependência/abstinência e lesão por extravasamento.",
+    "contraindications": "Hipersensibilidade, miastenia gravis, insuficiência respiratória grave, apneia do sono e glaucoma de ângulo fechado agudo conforme produto.",
+    "interactions": "Opioides, álcool e outros depressores do SNC podem causar sedação profunda/morte; CYP3A4/2C19 alteram exposição.",
+    "monitoring": "Respiração, sedação, PA, resposta convulsiva, dependência, quedas e sinais de abstinência.",
+    "administration": "VO conforme prescrição; IV lenta em veia calibrosa com monitorização respiratória e equipamento de resgate.",
+    "preparation": "Não diluir/misturar sem confirmar compatibilidade; soluções podem adsorver em PVC.",
+    "infusionProtocol": "IV lenta, geralmente não mais que 5 mg/min em adultos; seguir rótulo pediátrico.",
+    "pregnancy": "Exposição tardia pode causar sedação/abstinência neonatal; usar somente se necessário.",
+    "lactation": "Passa ao leite e pode sedar/acumular; geralmente evitar uso repetido.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Depressão respiratória, coma, reação paradoxal, dependência/abstinência e lesão por extravasamento. Dose/via bloqueadas sem indicação, idade/peso, função respiratória/hepática, opioides/sedativos, acesso venoso e plano de resgate/desmame.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diazepam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diazepam"
+  },
+  "es": {
+    "name": "Diazepam",
+    "class": "Benzodiazepina",
+    "pharmacologicClass": "Modulador alostérico positivo del receptor GABA-A",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 2/5/10 mg, solución oral, inyección 5 mg/mL y formas rectal/nasal específicas.",
+    "presentations": "Comprimidos 2/5/10 mg, solución oral, inyección 5 mg/mL y formas rectal/nasal específicas.",
+    "mechanism": "Modulador alostérico positivo del receptor GABA-A. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP2C19/3A4 a metabolitos activos; semivida larga, mayor en ancianos/hepatopatía.",
+    "indications": "Ansiedad, abstinencia alcohólica, espasmo muscular, convulsiones y sedación según vía/producto.",
+    "dose": "Ansiedad: 2–10 mg VO 2–4 veces/día; estatus epiléptico: 5–10 mg IV, repetible según ficha/protocolo. Dosis dependen mucho de indicación y vía.",
+    "pediatricDose": "Convulsiones: 0,15–0,2 mg/kg IV en protocolos, con máximos por edad; formas rectal/nasal usan tablas propias. AUTOMATABLE=NO.",
+    "renalDose": "Metabolitos activos pueden acumularse; iniciar bajo y controlar en ERC grave.",
+    "hepaticDose": "Reducir dosis en hepatopatía; evitar en insuficiencia hepática grave/encefalopatía.",
+    "commonAdverseEffects": "Somnolencia, ataxia, fatiga, confusión e hipotensión.",
+    "dangerousAdverseEffects": "Depresión respiratoria, coma, reacción paradójica, dependencia/abstinencia y lesión por extravasación.",
+    "adverseEffects": "Somnolencia, ataxia, fatiga, confusión e hipotensión. Graves: Depresión respiratoria, coma, reacción paradójica, dependencia/abstinencia y lesión por extravasación.",
+    "contraindications": "Hipersensibilidad, miastenia gravis, insuficiencia respiratoria grave, apnea del sueño y glaucoma agudo de ángulo cerrado según producto.",
+    "interactions": "Opioides, alcohol y otros depresores SNC pueden causar sedación profunda/muerte; CYP3A4/2C19 alteran exposición.",
+    "monitoring": "Respiración, sedación, PA, respuesta convulsiva, dependencia, caídas y abstinencia.",
+    "administration": "VO según prescripción; IV lenta en vena grande con control respiratorio y equipo de rescate.",
+    "preparation": "No diluir/mezclar sin confirmar compatibilidad; soluciones pueden adsorberse en PVC.",
+    "infusionProtocol": "IV lenta, generalmente no más de 5 mg/min en adultos; seguir ficha pediátrica.",
+    "pregnancy": "Exposición tardía puede causar sedación/abstinencia neonatal; usar solo si es necesario.",
+    "lactation": "Pasa a leche y puede sedar/acumular; generalmente evitar uso repetido.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Depresión respiratoria, coma, reacción paradójica, dependencia/abstinencia y lesión por extravasación. Dose/via bloqueadas sem indicação, idade/peso, função respiratória/hepática, opioides/sedativos, acesso venoso e plano de resgate/desmame.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diazepam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diazepam"
+  }
+};})();
+/* GOLD33_SELECTIVE:diazepam:END */

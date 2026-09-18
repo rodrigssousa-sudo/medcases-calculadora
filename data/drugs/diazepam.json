@@ -6,172 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Diazepam",
-    "class": "Benzodiazepínico de longa ação",
+    "class": "Benzodiazepínico",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Valium",
-        "Uni-Diazepax",
-        "Diazepam EMS"
-      ],
-      "ar": [
-        "Valium",
-        "Diazepam Bagó",
-        "Diazepam Richmond"
-      ]
-    },
-    "presentation": [
-      "Comprimido 5 mg",
-      "Comprimido 10 mg",
-      "Ampola 10 mg/2 mL",
-      "Solução oral"
-    ],
-    "dose": {
-      "adulto": "Ansiedade: 2–10 mg VO 2–4x/dia.",
-      "abstinencia": "Abstinência alcoólica: doses individualizadas conforme protocolo.",
-      "maxDose": "Variável conforme indicação clínica."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 2/5/10 mg, solução oral, injeção 5 mg/mL e formas retal/nasal específicas.",
+    "dose": "Ansiedade: 2–10 mg VO 2–4x/dia; estado de mal epiléptico: 5–10 mg IV, podendo repetir conforme rótulo/protocolo. Doses dependem fortemente da indicação e via.",
     "doseKg": {
       "standard": "Não se utiliza cálculo rotineiro por kg em adultos.",
       "pediatric": "Convulsões pediátricas: 0,2–0,5 mg/kg IV; máx 10 mg.",
       "maxDose": "Variável conforme indicação"
     },
-    "indications": [
-      "Transtornos de ansiedade",
-      "Abstinência alcoólica",
-      "Estado de mal epiléptico",
-      "Convulsões agudas",
-      "Espasticidade muscular",
-      "Espasmos musculares",
-      "Sedação pré-operatória",
-      "Síndrome de abstinência benzodiazepínica"
-    ],
+    "indications": "Ansiedade, abstinência alcoólica, espasmo muscular, crises convulsivas e sedação conforme via/produto.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Facilita a ação do GABA através do receptor GABA-A.",
+    "mechanism": "Modulador alostérico positivo do receptor GABA-A. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "VO: 30–60 minutos. EV: 1–5 minutos.",
     "halfLife": "Vida média: 20–80 horas; metabólitos ativos até 100 horas.",
-    "commonAdverseEffects": [
-      "Sonolência",
-      "Ataxia",
-      "Fraqueza muscular",
-      "Confusão",
-      "Tontura"
-    ],
-    "dangerousAdverseEffects": [
-      "Depressão respiratória",
-      "Coma",
-      "Dependência",
-      "Quedas em idosos"
-    ],
+    "commonAdverseEffects": "Sonolência, ataxia, fadiga, confusão e hipotensão.",
+    "dangerousAdverseEffects": "Depressão respiratória, coma, reação paradoxal, dependência/abstinência e lesão por extravasamento.",
     "risksByPatient": [],
-    "contraindications": [
-      "Miastenia gravis",
-      "Insuficiência respiratória grave",
-      "Apneia do sono grave"
-    ],
-    "interactions": [
-      "Álcool",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos"
-    ],
-    "alerts": [
-      "Fármaco de escolha para abstinência alcoólica.",
-      "Acúmulo importante em idosos.",
-      "Não suspender abruptamente após uso prolongado."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidade, miastenia gravis, insuficiência respiratória grave, apneia do sono e glaucoma de ângulo fechado agudo conforme produto.",
+    "interactions": "Opioides, álcool e outros depressores do SNC podem causar sedação profunda/morte; CYP3A4/2C19 alteram exposição.",
+    "alerts": "Depressão respiratória, coma, reação paradoxal, dependência/abstinência e lesão por extravasamento. Dose/via bloqueadas sem indicação, idade/peso, função respiratória/hepática, opioides/sedativos, acesso venoso e plano de resgate/desmame.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diazepam",
+    "pharmacologicClass": "Modulador alostérico positivo do receptor GABA-A",
+    "presentations": "Comprimidos 2/5/10 mg, solução oral, injeção 5 mg/mL e formas retal/nasal específicas.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP2C19/3A4 em metabólitos ativos; meia-vida longa, maior em idosos/hepatopatia.",
+    "pediatricDose": "Crises: 0,15–0,2 mg/kg IV em protocolos, com máximos por idade; formas retal/nasal usam tabelas próprias. AUTOMATABLE=NO.",
+    "renalDose": "Metabólitos ativos podem acumular; iniciar baixo e monitorar em DRC grave.",
+    "hepaticDose": "Reduzir dose em hepatopatia; evitar em insuficiência hepática grave/encefalopatia.",
+    "adverseEffects": "Sonolência, ataxia, fadiga, confusão e hipotensão. Graves: Depressão respiratória, coma, reação paradoxal, dependência/abstinência e lesão por extravasamento.",
+    "monitoring": "Respiração, sedação, PA, resposta convulsiva, dependência, quedas e sinais de abstinência.",
+    "administration": "VO conforme prescrição; IV lenta em veia calibrosa com monitorização respiratória e equipamento de resgate.",
+    "preparation": "Não diluir/misturar sem confirmar compatibilidade; soluções podem adsorver em PVC.",
+    "infusionProtocol": "IV lenta, geralmente não mais que 5 mg/min em adultos; seguir rótulo pediátrico.",
+    "pregnancy": "Exposição tardia pode causar sedação/abstinência neonatal; usar somente se necessário.",
+    "lactation": "Passa ao leite e pode sedar/acumular; geralmente evitar uso repetido.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diazepam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class"
     ]
   },
   "es": {
     "name": "Diazepam",
-    "class": "Benzodiacepina de larga duración",
+    "class": "Benzodiazepina",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Valium",
-        "Uni-Diazepax",
-        "Diazepam EMS"
-      ],
-      "ar": [
-        "Valium",
-        "Diazepam Bagó",
-        "Diazepam Richmond"
-      ]
-    },
-    "presentation": [
-      "Comprimido 5 mg",
-      "Comprimido 10 mg",
-      "Ampolla 10 mg/2 mL",
-      "Solución oral"
-    ],
-    "dose": {
-      "adulto": "Ansiedad: 2–10 mg VO 2–4 veces/día.",
-      "abstinencia": "Abstinencia alcohólica: dosis individualizadas según protocolo.",
-      "maxDose": "Variable según indicación clínica."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 2/5/10 mg, solución oral, inyección 5 mg/mL y formas rectal/nasal específicas.",
+    "dose": "Ansiedad: 2–10 mg VO 2–4 veces/día; estatus epiléptico: 5–10 mg IV, repetible según ficha/protocolo. Dosis dependen mucho de indicación y vía.",
     "doseKg": {
       "standard": "No se utiliza cálculo rutinario por kg en adultos.",
       "pediatric": "Convulsiones pediátricas: 0,2–0,5 mg/kg IV; máx 10 mg.",
       "maxDose": "Variable según indicación"
     },
-    "indications": [
-      "Trastornos de ansiedad",
-      "Abstinencia alcohólica",
-      "Estado epiléptico",
-      "Convulsiones agudas",
-      "Espasticidad muscular",
-      "Espasmos musculares",
-      "Sedación preoperatoria",
-      "Síndrome de abstinencia benzodiacepínica"
-    ],
+    "indications": "Ansiedad, abstinencia alcohólica, espasmo muscular, convulsiones y sedación según vía/producto.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Facilita la acción del GABA a través del receptor GABA-A.",
+    "mechanism": "Modulador alostérico positivo del receptor GABA-A. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "VO: 30–60 minutos. IV: 1–5 minutos.",
     "halfLife": "Vida media: 20–80 horas; metabolitos activos hasta 100 horas.",
-    "commonAdverseEffects": [
-      "Somnolencia",
-      "Ataxia",
-      "Debilidad muscular",
-      "Confusión",
-      "Mareos"
-    ],
-    "dangerousAdverseEffects": [
-      "Depresión respiratoria",
-      "Coma",
-      "Dependencia",
-      "Caídas en adultos mayores"
-    ],
+    "commonAdverseEffects": "Somnolencia, ataxia, fatiga, confusión e hipotensión.",
+    "dangerousAdverseEffects": "Depresión respiratoria, coma, reacción paradójica, dependencia/abstinencia y lesión por extravasación.",
     "risksByPatient": [],
-    "contraindications": [
-      "Miastenia gravis",
-      "Insuficiencia respiratoria grave",
-      "Apnea del sueño grave"
-    ],
-    "interactions": [
-      "Alcohol",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos"
-    ],
-    "alerts": [
-      "Fármaco de elección para abstinencia alcohólica.",
-      "Acumulación importante en adultos mayores.",
-      "No suspender abruptamente tras uso prolongado."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidad, miastenia gravis, insuficiencia respiratoria grave, apnea del sueño y glaucoma agudo de ángulo cerrado según producto.",
+    "interactions": "Opioides, alcohol y otros depresores SNC pueden causar sedación profunda/muerte; CYP3A4/2C19 alteran exposición.",
+    "alerts": "Depresión respiratoria, coma, reacción paradójica, dependencia/abstinencia y lesión por extravasación. Dose/via bloqueadas sem indicação, idade/peso, função respiratória/hepática, opioides/sedativos, acesso venoso e plano de resgate/desmame.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diazepam",
+    "pharmacologicClass": "Modulador alostérico positivo del receptor GABA-A",
+    "presentations": "Comprimidos 2/5/10 mg, solución oral, inyección 5 mg/mL y formas rectal/nasal específicas.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP2C19/3A4 a metabolitos activos; semivida larga, mayor en ancianos/hepatopatía.",
+    "pediatricDose": "Convulsiones: 0,15–0,2 mg/kg IV en protocolos, con máximos por edad; formas rectal/nasal usan tablas propias. AUTOMATABLE=NO.",
+    "renalDose": "Metabolitos activos pueden acumularse; iniciar bajo y controlar en ERC grave.",
+    "hepaticDose": "Reducir dosis en hepatopatía; evitar en insuficiencia hepática grave/encefalopatía.",
+    "adverseEffects": "Somnolencia, ataxia, fatiga, confusión e hipotensión. Graves: Depresión respiratoria, coma, reacción paradójica, dependencia/abstinencia y lesión por extravasación.",
+    "monitoring": "Respiración, sedación, PA, respuesta convulsiva, dependencia, caídas y abstinencia.",
+    "administration": "VO según prescripción; IV lenta en vena grande con control respiratorio y equipo de rescate.",
+    "preparation": "No diluir/mezclar sin confirmar compatibilidad; soluciones pueden adsorberse en PVC.",
+    "infusionProtocol": "IV lenta, generalmente no más de 5 mg/min en adultos; seguir ficha pediátrica.",
+    "pregnancy": "Exposición tardía puede causar sedación/abstinencia neonatal; usar solo si es necesario.",
+    "lactation": "Pasa a leche y puede sedar/acumular; generalmente evitar uso repetido.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diazepam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class"
     ]
   },
   "name": {
@@ -187,8 +115,8 @@
     "diazepam richmond",
     "benzodiazepinico de longa acao"
   ],
-  "dataVersion": "clinical-data-v1-a11ecae151bba7a9",
-  "clinicalContentSha256": "a11ecae151bba7a99b34c88ad7be1e6250b96efae0f3aa6f9eae63dd994f8bb4",
+  "dataVersion": "clinical-data-v1-3f6ac98a5d4acf2a",
+  "clinicalContentSha256": "3f6ac98a5d4acf2a45829b7218dbcb022150bbbf10b4af3ad49ada015709d8ba",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psiquiatria.js",
@@ -232,5 +160,17 @@
         "sourceModule": "sedacao.js"
       }
     }
-  ]
+  ],
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "diazepam.mcGoldClinicalV1",
+    "lote": "025",
+    "requiredFields": 33,
+    "approvedSha256": "f490066cbf88c2c1fc49fde254c0e52699a8a5320bd3cfb2ee1a9d3050dd9c7f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

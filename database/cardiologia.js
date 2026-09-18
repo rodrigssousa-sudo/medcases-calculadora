@@ -1296,3 +1296,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:anlodipino:END */
+/* GOLD33_SELECTIVE:diltiazem:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB;if(!db||!db["diltiazem"])throw new Error("GOLD33_MISSING_CANONICAL:diltiazem");db["diltiazem"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "025",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f490066cbf88c2c1fc49fde254c0e52699a8a5320bd3cfb2ee1a9d3050dd9c7f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Diltiazem",
+    "class": "Bloqueador de canal de cálcio não di-hidropiridínico",
+    "pharmacologicClass": "Bloqueia canais L cardíacos e vasculares, reduz condução AV",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "IR/ER em múltiplas forças e injeção 5 mg/mL; produtos ER não são intercambiáveis.",
+    "presentations": "IR/ER em múltiplas forças e injeção 5 mg/mL; produtos ER não são intercambiáveis.",
+    "mechanism": "Bloqueia canais L cardíacos e vasculares, reduz condução AV. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP3A4, metabólitos ativos, alta primeira passagem e meia-vida dependente da formulação.",
+    "indications": "Hipertensão/angina por formas orais; controle agudo de frequência em FA/flutter e TSV por IV.",
+    "dose": "IV: 0,25 mg/kg em 2 min; se necessário após 15 min, 0,35 mg/kg; infusão 5–15 mg/h. Oral ER: início usual 120–240 mg/dia conforme indicação/produto.",
+    "pediatricDose": "Segurança/eficácia geral não estabelecidas nas bulas adultas; usar protocolo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste fixo; cautela e monitorar em DRC.",
+    "hepaticDose": "Reduzir/cautela em hepatopatia; metabolismo hepático.",
+    "commonAdverseEffects": "Edema, cefaleia, tontura, bradicardia e constipação.",
+    "dangerousAdverseEffects": "Bloqueio AV, hipotensão, bradicardia/assistolia, piora de IC e lesão hepática.",
+    "adverseEffects": "Edema, cefaleia, tontura, bradicardia e constipação. Graves: Bloqueio AV, hipotensão, bradicardia/assistolia, piora de IC e lesão hepática.",
+    "contraindications": "Choque/hipotensão grave, bloqueio AV 2º/3º sem marca-passo, síndrome do nó sinusal, WPW com FA/flutter e uso IV de beta-bloqueador próximo.",
+    "interactions": "Beta-bloqueadores, digoxina, CYP3A4, estatinas e outros bradicardizantes/hipotensores.",
+    "monitoring": "ECG/FC, PA, sinais de IC, fígado, rim e interações.",
+    "administration": "ER engolir inteira conforme produto; IV somente com ECG/PA contínuos.",
+    "preparation": "Para infusão, diluir conforme rótulo e confirmar compatibilidade/concentração.",
+    "infusionProtocol": "Bolus em 2 min; infusão titulada 5–15 mg/h, geralmente até 24 h conforme rótulo.",
+    "pregnancy": "Dados limitados; usar se benefício justificar.",
+    "lactation": "Passa ao leite; considerar alternativa/monitorar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Bloqueio AV, hipotensão, bradicardia/assistolia, piora de IC e lesão hepática. Bolus/infusão bloqueados sem ritmo/ECG, peso, PA, FEVE/IC, WPW, bloqueios, beta-bloqueador/digoxina, concentração e monitorização contínua.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diltiazem",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diltiazem"
+  },
+  "es": {
+    "name": "Diltiazem",
+    "class": "Bloqueador de canal de calcio no dihidropiridínico",
+    "pharmacologicClass": "Bloquea canales L cardíacos y vasculares, reduce conducción AV",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "IR/ER en múltiples dosis e inyección 5 mg/mL; productos ER no intercambiables.",
+    "presentations": "IR/ER en múltiples dosis e inyección 5 mg/mL; productos ER no intercambiables.",
+    "mechanism": "Bloquea canales L cardíacos y vasculares, reduce conducción AV. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP3A4, metabolitos activos, alto primer paso y semivida según formulación.",
+    "indications": "Hipertensión/angina con formas orales; control agudo de frecuencia en FA/flutter y TSV por IV.",
+    "dose": "IV: 0,25 mg/kg en 2 min; si precisa tras 15 min, 0,35 mg/kg; infusión 5–15 mg/h. Oral ER: inicio habitual 120–240 mg/día según indicación/producto.",
+    "pediatricDose": "Seguridad/eficacia general no establecidas en fichas adultas; usar protocolo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste fijo; precaución y control en ERC.",
+    "hepaticDose": "Reducir/precaución en hepatopatía; metabolismo hepático.",
+    "commonAdverseEffects": "Edema, cefalea, mareo, bradicardia y estreñimiento.",
+    "dangerousAdverseEffects": "Bloqueo AV, hipotensión, bradicardia/asistolia, empeoramiento de IC y lesión hepática.",
+    "adverseEffects": "Edema, cefalea, mareo, bradicardia y estreñimiento. Graves: Bloqueo AV, hipotensión, bradicardia/asistolia, empeoramiento de IC y lesión hepática.",
+    "contraindications": "Choque/hipotensión grave, bloqueo AV 2º/3º sin marcapasos, nodo sinusal, WPW con FA/flutter y betabloqueador IV cercano.",
+    "interactions": "Betabloqueadores, digoxina, CYP3A4, estatinas y otros bradicardizantes/hipotensores.",
+    "monitoring": "ECG/FC, PA, signos de IC, hígado, riñón e interacciones.",
+    "administration": "ER tragar entera según producto; IV solo con ECG/PA continuos.",
+    "preparation": "Para infusión, diluir según ficha y confirmar compatibilidad/concentración.",
+    "infusionProtocol": "Bolo en 2 min; infusión titulada 5–15 mg/h, generalmente hasta 24 h según ficha.",
+    "pregnancy": "Datos limitados; usar si beneficio justifica.",
+    "lactation": "Pasa a leche; considerar alternativa/controlar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Bloqueo AV, hipotensión, bradicardia/asistolia, empeoramiento de IC y lesión hepática. Bolus/infusão bloqueados sem ritmo/ECG, peso, PA, FEVE/IC, WPW, bloqueios, beta-bloqueador/digoxina, concentração e monitorização contínua.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diltiazem",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diltiazem"
+  }
+};})();
+/* GOLD33_SELECTIVE:diltiazem:END */
