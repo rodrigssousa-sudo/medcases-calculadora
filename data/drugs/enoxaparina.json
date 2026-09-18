@@ -5,21 +5,91 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Enoxaparina Sódica (HBPM)"
+    "name": "Enoxaparina",
+    "class": "Heparina de baixo peso molecular",
+    "pharmacologicClass": "Potencializa antitrombina com atividade anti-Xa predominante",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Seringas SC pré-cheias e frascos multidose em várias concentrações.",
+    "presentations": "Seringas SC pré-cheias e frascos multidose em várias concentrações.",
+    "mechanism": "Potencializa antitrombina com atividade anti-Xa predominante. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Eliminação renal; atividade anti-Xa meia-vida ~4,5–7 h.",
+    "indications": "Profilaxia/tratamento de TEV e síndromes coronarianas conforme cenário.",
+    "dose": "Esquema depende da indicação: profilaxia comum 40 mg SC/dia; tratamento 1 mg/kg SC q12h ou 1,5 mg/kg/dia em selecionados. SCA e cirurgia têm protocolos próprios.",
+    "pediatricDose": "Tratamento neonatal/pediátrico usa mg/kg por idade e monitorização anti-Xa especializada. AUTOMATABLE=NO.",
+    "renalDose": "CrCl <30: profilaxia geralmente 30 mg SC/dia; tratamento 1 mg/kg SC/dia, conforme indicação/rótulo.",
+    "hepaticDose": "Sem ajuste definido; cautela em coagulopatia.",
+    "commonAdverseEffects": "Sangramento, anemia, hematoma no local e trombocitopenia.",
+    "dangerousAdverseEffects": "Hemorragia fatal, HIT, hematoma espinal/epidural, necrose cutânea e hipercalemia.",
+    "adverseEffects": "Sangramento, anemia, hematoma no local e trombocitopenia. Graves: Hemorragia fatal, HIT, hematoma espinal/epidural, necrose cutânea e hipercalemia.",
+    "contraindications": "Sangramento maior ativo; trombocitopenia imune por heparina recente/anticorpos; hipersensibilidade.",
+    "interactions": "Anticoagulantes, antiagregantes, AINEs e procedimentos neuroaxiais aumentam sangramento.",
+    "monitoring": "Hemograma/plaquetas, creatinina, sangramento; anti-Xa em populações selecionadas; tempo neuroaxial.",
+    "administration": "SC profunda no abdome; não expulsar bolha da seringa pré-cheia. IV apenas em protocolos específicos de IAM.",
+    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo do produto.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente, benefício materno e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hemorragia fatal, HIT, hematoma espinal/epidural, necrose cutânea e hipercalemia. Cálculo bloqueado sem indicação, peso, CrCl, idade, plaquetas/HIT, sangramento, gestação/prótese valvar e procedimento neuroaxial.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enoxaparin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/020164s129lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enoxaparin"
   },
   "es": {
-    "name": "Enoxaparina Sódica (HBPM)"
+    "name": "Enoxaparina",
+    "class": "Heparina de bajo peso molecular",
+    "pharmacologicClass": "Potencia antitrombina con actividad anti-Xa predominante",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Jeringas SC precargadas y viales multidosis en varias concentraciones.",
+    "presentations": "Jeringas SC precargadas y viales multidosis en varias concentraciones.",
+    "mechanism": "Potencia antitrombina con actividad anti-Xa predominante. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Eliminación renal; actividad anti-Xa semivida ~4,5–7 h.",
+    "indications": "Profilaxis/tratamiento de TEV y síndromes coronarios según escenario.",
+    "dose": "Pauta depende de indicación: profilaxis común 40 mg SC/día; tratamiento 1 mg/kg SC q12h o 1,5 mg/kg/día en seleccionados. SCA y cirugía tienen protocolos propios.",
+    "pediatricDose": "Tratamiento neonatal/pediátrico usa mg/kg por edad y monitorización anti-Xa especializada. AUTOMATABLE=NO.",
+    "renalDose": "CrCl <30: profilaxis generalmente 30 mg SC/día; tratamiento 1 mg/kg SC/día, según indicación/ficha.",
+    "hepaticDose": "Sin ajuste definido; precaución en coagulopatía.",
+    "commonAdverseEffects": "Sangrado, anemia, hematoma local y trombocitopenia.",
+    "dangerousAdverseEffects": "Hemorragia fatal, HIT, hematoma espinal/epidural, necrosis cutánea e hiperpotasemia.",
+    "adverseEffects": "Sangrado, anemia, hematoma local y trombocitopenia. Graves: Hemorragia fatal, HIT, hematoma espinal/epidural, necrosis cutánea e hiperpotasemia.",
+    "contraindications": "Sangrado mayor activo; trombocitopenia inmune por heparina reciente/anticuerpos; hipersensibilidad.",
+    "interactions": "Anticoagulantes, antiagregantes, AINE y procedimientos neuroaxiales aumentan sangrado.",
+    "monitoring": "Hemograma/plaquetas, creatinina, sangrado; anti-Xa en poblaciones seleccionadas; tiempo neuroaxial.",
+    "administration": "SC profunda en abdomen; no expulsar burbuja de jeringa precargada. IV solo en protocolos específicos de IAM.",
+    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo del producto.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante, beneficio materno y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hemorragia fatal, HIT, hematoma espinal/epidural, necrosis cutánea e hiperpotasemia. Cálculo bloqueado sem indicação, peso, CrCl, idade, plaquetas/HIT, sangramento, gestação/prótese valvar e procedimento neuroaxial.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enoxaparin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/020164s129lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enoxaparin"
   },
   "name": {
-    "pt": "Enoxaparina Sódica (HBPM)",
-    "es": "Enoxaparina Sódica (HBPM)"
+    "pt": "Enoxaparina",
+    "es": "Enoxaparina"
   },
   "keywords": [
     "enoxaparina",
     "enoxaparina sódica (hbpm)"
   ],
-  "dataVersion": "clinical-data-v1-f4b5c46b08328a66",
-  "clinicalContentSha256": "f4b5c46b08328a66909e9345d825fea9c85f0e2c53363eeca6bdc1156d545223",
+  "dataVersion": "clinical-data-v1-5b77ee82ab6304c6",
+  "clinicalContentSha256": "5b77ee82ab6304c6f0ad69682d7aa1074a895e7b8d32c63c7f374f0b71bf2500",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "anticoag.js",
@@ -126,5 +196,17 @@
         "updated": "2026-05-28"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/anticoag.js",
+    "sourceField": "enoxaparina.mcGoldClinicalV1",
+    "lote": "029",
+    "requiredFields": 33,
+    "approvedSha256": "5d547791a4727e50809145d534af14205bfcad60ce3a97b2e32cec7f8f441bff",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

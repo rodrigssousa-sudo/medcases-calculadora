@@ -5,256 +5,84 @@
   "color": "rgba(59,130,246,0.13)",
   "colorTxt": "#1E40AF",
   "pt": {
-    "class": "Inibidor da enzima conversora de angiotensina (IECA)",
-    "pharmacologicClass": "Modulador do sistema renina-angiotensina; inibidor da ECA",
-    "mechanism": "Inibe a ECA, reduz a formação de angiotensina II e a secreção de aldosterona e aumenta bradicinina. O resultado é vasodilatação e redução de pós-carga e pré-carga.",
-    "pharmacodynamics": "Reduz pressão arterial e resistência vascular sistêmica sem taquicardia reflexa importante. Na insuficiência cardíaca reduz pós-carga; pode elevar potássio e creatinina pelo bloqueio do SRAA.",
-    "commonAdverseEffects": [
-      "tosse seca",
-      "tontura",
-      "hipotensão",
-      "hipercalemia",
-      "aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "angioedema",
-      "lesão renal aguda",
-      "hipercalemia grave",
-      "hipotensão sintomática",
-      "toxicidade fetal"
-    ],
-    "contraindications": [
-      "História de angioedema relacionado a IECA",
-      "angioedema hereditário ou idiopático",
-      "uso concomitante de alisquireno em diabetes",
-      "uso dentro de 36 h de sacubitril/valsartana",
-      "hipersensibilidade ao fármaco"
-    ],
-    "interactions": [
-      "Suplementos de potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
-      "AINEs podem reduzir efeito anti-hipertensivo e aumentar lesão renal",
-      "Lítio pode acumular",
-      "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
-      "Sacubitril/valsartana exige intervalo de 36 h"
-    ],
-    "monitoring": [
-      "Pressão arterial",
-      "creatinina/eTFG e potássio antes de iniciar e após titulação",
-      "sintomas de hipotensão",
-      "angioedema",
-      "gestação quando aplicável"
-    ],
-    "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
-    "patientEducation": [
-      "Evitar gestação durante o tratamento",
-      "procurar urgência diante de edema de face, lábios ou língua",
-      "não usar suplementos de potássio ou sal com potássio sem orientação",
-      "levantar lentamente se houver tontura"
-    ],
-    "clinicalPearls": [
-      "Elevação de creatinina exige avaliar volume, AINE, estenose de artéria renal e outros fatores; KDIGO orienta revisar se o aumento superar 30% em até 4 semanas",
-      "A tosse é mediada em parte por bradicinina e costuma resolver com troca para BRA"
-    ],
-    "guidelineRecommendations": [
-      "Diretriz AHA/ACC 2025: IECAs são uma das classes de primeira linha para hipertensão quando indicados",
-      "KDIGO 2024: IECA ou BRA são priorizados na DRC com albuminúria e titulados à maior dose tolerada",
-      "AHA/ACC/HFSA: em HFrEF usa-se IECA quando ARNI não é viável"
-    ],
-    "safetyFlags": [
-      "TOXICIDADE_FETAL",
-      "ANGIOEDEMA",
-      "HIPERCALEMIA",
-      "FUNCAO_RENAL",
-      "INTERVALO_ARNI_36H"
-    ],
-    "alerts": [
-      "Não combinar rotineiramente IECA e BRA",
-      "Corrigir depleção de volume quando possível antes de iniciar",
-      "Suspender e tratar imediatamente se ocorrer angioedema"
-    ],
-    "specialPopulations": {
-      "elderly": "Titular conforme pressão, função renal e estado volêmico.",
-      "renalArteryStenosis": "Maior risco de deterioração renal; monitorar de perto.",
-      "blackPatients": "A resposta anti-hipertensiva em monoterapia pode ser menor; o risco de angioedema é maior."
-    },
-    "name": "Maleato de Enalapril",
-    "pharmacokinetics": "Pró-fármaco hidrolisado a enalaprilato ativo. Eliminação predominantemente renal; a meia-vida efetiva de acumulação do enalaprilato é prolongada, permitindo 1-2 tomadas ao dia.",
-    "indications": [
-      "Hipertensão em adultos e crianças >1 mês",
-      "insuficiência cardíaca sintomática",
-      "disfunção ventricular esquerda assintomática"
-    ],
-    "commercialNames": [
-      "Vasotec"
-    ],
-    "presentation": "Comprimidos orais; solução oral em apresentações específicas.",
-    "presentations": [
-      "Comprimidos 2,5, 5, 10 e 20 mg",
-      "Solução oral 1 mg/mL em produtos específicos"
-    ],
-    "dose": {
-      "hypertension": "Início habitual 5 mg uma vez ao dia; máximo 40 mg/dia. Se uso de diurético ou risco de hipotensão, considerar 2,5 mg/dia.",
-      "heartFailure": "2,5 mg duas vezes ao dia; titular conforme tolerância até 20 mg duas vezes ao dia.",
-      "asymptomaticLV": "2,5 mg duas vezes ao dia; alvo até 10 mg duas vezes ao dia."
-    },
-    "pediatricDose": "Crianças >1 mês com hipertensão: 0,08 mg/kg uma vez ao dia, máximo inicial 5 mg; doses >0,58 mg/kg ou >40 mg/dia não estudadas. Não recomendado em neonatos ou eTFG <30 mL/min/1,73 m².",
-    "renalDose": "ClCr >30 mL/min: dose inicial usual 5 mg/dia. ClCr <=30 mL/min: iniciar 2,5 mg/dia. Hemodiálise: 2,5 mg nos dias de diálise e ajustar nos demais conforme pressão.",
-    "hepaticDose": "Sem algoritmo rotineiro de ajuste; hepatotoxicidade colestática/hepatocelular é rara. Suspender e investigar se ocorrer icterícia ou elevação importante de enzimas.",
-    "administration": "Via oral com ou sem alimentos. Em alto risco de hipotensão, primeira dose e titulação exigem monitorização mais próxima.",
-    "preparation": "Comprimidos não exigem preparo. Solução oral pronta deve ser medida com dispositivo dosador; não improvisar concentração.",
-    "infusionProtocol": "Este registro é do enalapril oral. Não converter para enalaprilato IV sem protocolo específico.",
-    "lactation": "Enalapril/enalaprilato podem aparecer em baixa concentração no leite; avaliar idade do lactente, dose materna e bula local. Maior cautela em prematuros e recém-nascidos.",
-    "adverseEffects": {
-      "common": [
-        "tosse seca",
-        "tontura",
-        "hipotensão",
-        "hipercalemia",
-        "aumento de creatinina"
-      ],
-      "dangerous": [
-        "angioedema",
-        "lesão renal aguda",
-        "hipercalemia grave",
-        "hipotensão sintomática",
-        "toxicidade fetal"
-      ]
-    },
+    "class": "Inibidor da ECA",
+    "pharmacologicClass": "Pró-fármaco convertido em enalaprilato, reduz angiotensina II/aldosterona",
+    "mechanism": "Pró-fármaco convertido em enalaprilato, reduz angiotensina II/aldosterona. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "commonAdverseEffects": "Tosse, tontura, hipotensão e hipercalemia.",
+    "dangerousAdverseEffects": "Angioedema fatal, lesão renal, hipercalemia e fetotoxicidade.",
+    "contraindications": "Gestação, angioedema prévio por IECA/hereditário, aliscireno em diabetes, sacubitril/valsartana dentro de 36 h.",
+    "interactions": "K/suplementos, diuréticos poupadores, AINEs, lítio, ARB/aliscireno e neprilisina.",
+    "monitoring": "PA, creatinina/eGFR, K, angioedema, tosse e volume.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco e rotulagem específica.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Angioedema fatal, lesão renal, hipercalemia e fetotoxicidade. Dose bloqueada sem indicação, PA/volume, gestação, CrCl/eGFR, K, angioedema e medicamentos RAAS/ARNI.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "name": "Enalapril",
+    "pharmacokinetics": "Pró-fármaco; enalaprilato renal, meia-vida efetiva ~11 h.",
+    "indications": "Hipertensão, insuficiência cardíaca e disfunção ventricular esquerda assintomática.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 2,5/5/10/20 mg e solução oral.",
+    "presentations": "Comprimidos 2,5/5/10/20 mg e solução oral.",
+    "dose": "HAS: iniciar 5 mg VO/dia (2,5 mg se diurético); faixa 10–40 mg/dia em 1–2 tomadas. IC: iniciar 2,5 mg 1–2x/dia e titular, máximo 40 mg/dia.",
+    "pediatricDose": "HAS ≥1 mês: 0,08 mg/kg 1x/dia (máx inicial 5 mg); dados limitados em <2,5 kg e TFG baixa. AUTOMATABLE=NO.",
+    "renalDose": "Iniciar 2,5 mg/dia se CrCl ≤30; titular por resposta/K/creatinina.",
+    "hepaticDose": "Sem ajuste específico; cautela.",
+    "administration": "VO; corrigir depleção de volume e monitorar primeira dose.",
+    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo do produto.",
+    "lactation": "Avaliar exposição do lactente, benefício materno e alternativas.",
+    "adverseEffects": "Tosse, tontura, hipotensão e hipercalemia. Graves: Angioedema fatal, lesão renal, hipercalemia e fetotoxicidade.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f103b9f9-e081-419d-a2d8-b86acda834dd",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
-      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
-      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enalapril",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/018998s074lbl.pdf"
     ],
-    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f103b9f9-e081-419d-a2d8-b86acda834dd"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enalapril"
   },
   "es": {
-    "class": "Inhibidor de la enzima convertidora de angiotensina (IECA)",
-    "pharmacologicClass": "Modulador del sistema renina-angiotensina; inhibidor de la ECA",
-    "mechanism": "Inhibe la ECA, reduce la formación de angiotensina II y la secreción de aldosterona, y aumenta bradicinina. El resultado es vasodilatación y menor poscarga y precarga.",
-    "pharmacodynamics": "Reduce la presión arterial y la resistencia vascular sistémica sin taquicardia refleja importante. En insuficiencia cardíaca reduce poscarga; puede aumentar potasio y creatinina por bloqueo del SRAA.",
-    "commonAdverseEffects": [
-      "tos seca",
-      "mareo",
-      "hipotensión",
-      "hiperpotasemia",
-      "aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "angioedema",
-      "lesión renal aguda",
-      "hiperpotasemia grave",
-      "hipotensión sintomática",
-      "toxicidad fetal"
-    ],
-    "contraindications": [
-      "Antecedente de angioedema relacionado con IECA",
-      "angioedema hereditario o idiopático",
-      "uso concomitante de aliskireno en diabetes",
-      "uso dentro de las 36 h de sacubitrilo/valsartán",
-      "hipersensibilidad al fármaco"
-    ],
-    "interactions": [
-      "Suplementos de potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
-      "AINE pueden reducir efecto antihipertensivo y aumentar lesión renal",
-      "Litio puede acumularse",
-      "Doble bloqueo SRAA aumenta hipotensión, hiperpotasemia y lesión renal",
-      "Sacubitrilo/valsartán requiere separación de 36 h"
-    ],
-    "monitoring": [
-      "Presión arterial",
-      "creatinina/eGFR y potasio antes de iniciar y tras titulación",
-      "síntomas de hipotensión",
-      "angioedema",
-      "embarazo cuando corresponda"
-    ],
-    "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
-    "patientEducation": [
-      "Evitar embarazo durante el tratamiento",
-      "consultar de urgencia ante edema de cara, labios o lengua",
-      "no usar suplementos de potasio o sal con potasio sin indicación",
-      "levantarse lentamente si hay mareo"
-    ],
-    "clinicalPearls": [
-      "Una elevación de creatinina obliga a evaluar volumen, AINE, estenosis de arteria renal y otros factores; KDIGO aconseja revisar si el aumento supera 30% dentro de 4 semanas",
-      "La tos es mediada en parte por bradicinina y suele resolverse al cambiar a un ARA-II"
-    ],
-    "guidelineRecommendations": [
-      "Guía AHA/ACC 2025: IECA son una de las clases de primera línea para hipertensión cuando están indicados",
-      "KDIGO 2024: IECA o ARA-II se priorizan en ERC con albuminuria y se titulan a dosis máxima tolerada",
-      "AHA/ACC/HFSA: en HFrEF se usa IECA cuando ARNI no es factible"
-    ],
-    "safetyFlags": [
-      "TOXICIDAD_FETAL",
-      "ANGIOEDEMA",
-      "HIPERPOTASEMIA",
-      "FUNCION_RENAL",
-      "INTERVALO_ARNI_36H"
-    ],
-    "alerts": [
-      "No combinar rutinariamente IECA y ARA-II",
-      "Corregir depleción de volumen si es posible antes de iniciar",
-      "Suspender y tratar de inmediato si aparece angioedema"
-    ],
-    "specialPopulations": {
-      "elderly": "Titular según presión, función renal y volumen.",
-      "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar estrechamente.",
-      "blackPatients": "La respuesta antihipertensiva como monoterapia puede ser menor; el riesgo de angioedema es mayor."
-    },
-    "name": "Maleato de Enalapril",
-    "pharmacokinetics": "Profármaco hidrolizado a enalaprilato activo. Eliminación predominantemente renal; la vida media efectiva de acumulación de enalaprilato es prolongada y permite 1-2 tomas diarias.",
-    "indications": [
-      "Hipertensión en adultos y niños >1 mes",
-      "insuficiencia cardíaca sintomática",
-      "disfunción ventricular izquierda asintomática"
-    ],
-    "commercialNames": [
-      "Vasotec"
-    ],
-    "presentation": "Tabletas orales; solución oral en presentaciones específicas.",
-    "presentations": [
-      "Tabletas 2.5, 5, 10 y 20 mg",
-      "Solución oral 1 mg/mL en productos específicos"
-    ],
-    "dose": {
-      "hypertension": "Inicio habitual 5 mg una vez al día; máximo 40 mg/día. Con diurético o riesgo de hipotensión, considerar 2.5 mg/día.",
-      "heartFailure": "2.5 mg dos veces al día; titular según tolerancia hasta 20 mg dos veces al día.",
-      "asymptomaticLV": "2.5 mg dos veces al día; objetivo hasta 10 mg dos veces al día."
-    },
-    "pediatricDose": "Niños >1 mes con hipertensión: 0.08 mg/kg una vez al día, máximo inicial 5 mg; dosis >0.58 mg/kg o >40 mg/día no estudiadas. No recomendado en neonatos o eGFR <30 mL/min/1.73 m².",
-    "renalDose": "ClCr >30 mL/min: dosis inicial habitual 5 mg/día. ClCr <=30 mL/min: iniciar 2.5 mg/día. Hemodiálisis: 2.5 mg en días de diálisis y ajustar los otros días según presión.",
-    "hepaticDose": "Sin algoritmo rutinario de ajuste; hepatotoxicidad colestásica/hepatocelular es rara. Suspender e investigar si aparece ictericia o elevación importante de enzimas.",
-    "administration": "Vía oral con o sin alimentos. En alto riesgo de hipotensión, primera dosis y titulación requieren vigilancia más estrecha.",
-    "preparation": "Las tabletas no requieren preparación. La solución oral lista para usar debe medirse con dispositivo dosificador; no improvisar concentraciones.",
-    "infusionProtocol": "Este registro corresponde a enalapril oral. No convertir a enalaprilato IV sin protocolo específico.",
-    "lactation": "Enalapril/enalaprilato pueden aparecer en baja concentración en leche; valorar edad del lactante, dosis materna y ficha local. Mayor cautela en prematuros y recién nacidos.",
-    "adverseEffects": {
-      "common": [
-        "tos seca",
-        "mareo",
-        "hipotensión",
-        "hiperpotasemia",
-        "aumento de creatinina"
-      ],
-      "dangerous": [
-        "angioedema",
-        "lesión renal aguda",
-        "hiperpotasemia grave",
-        "hipotensión sintomática",
-        "toxicidad fetal"
-      ]
-    },
+    "class": "Inhibidor de ECA",
+    "pharmacologicClass": "Profármaco convertido en enalaprilato, reduce angiotensina II/aldosterona",
+    "mechanism": "Profármaco convertido en enalaprilato, reduce angiotensina II/aldosterona. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "commonAdverseEffects": "Tos, mareo, hipotensión e hiperpotasemia.",
+    "dangerousAdverseEffects": "Angioedema fatal, lesión renal, hiperpotasemia y fetotoxicidad.",
+    "contraindications": "Embarazo, angioedema previo por IECA/hereditario, aliskireno en diabetes, sacubitrilo/valsartán dentro de 36 h.",
+    "interactions": "K/suplementos, diuréticos ahorradores, AINE, litio, ARA-II/aliskireno y neprilisina.",
+    "monitoring": "PA, creatinina/eGFR, K, angioedema, tos y volumen.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo y ficha específica.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Angioedema fatal, lesión renal, hiperpotasemia y fetotoxicidad. Dose bloqueada sem indicação, PA/volume, gestação, CrCl/eGFR, K, angioedema e medicamentos RAAS/ARNI.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "name": "Enalapril",
+    "pharmacokinetics": "Profármaco; enalaprilato renal, semivida efectiva ~11 h.",
+    "indications": "Hipertensión, insuficiencia cardíaca y disfunción ventricular izquierda asintomática.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 2,5/5/10/20 mg y solución oral.",
+    "presentations": "Comprimidos 2,5/5/10/20 mg y solución oral.",
+    "dose": "HTA: iniciar 5 mg VO/día (2,5 mg si diurético); rango 10–40 mg/día en 1–2 tomas. IC: iniciar 2,5 mg 1–2 veces/día y titular, máximo 40 mg/día.",
+    "pediatricDose": "HTA ≥1 mes: 0,08 mg/kg 1 vez/día (máx inicial 5 mg); datos limitados en <2,5 kg y TFG baja. AUTOMATABLE=NO.",
+    "renalDose": "Iniciar 2,5 mg/día si CrCl ≤30; titular por respuesta/K/creatinina.",
+    "hepaticDose": "Sin ajuste específico; precaución.",
+    "administration": "VO; corregir depleción de volumen y vigilar primera dosis.",
+    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo del producto.",
+    "lactation": "Evaluar exposición del lactante, beneficio materno y alternativas.",
+    "adverseEffects": "Tos, mareo, hipotensión e hiperpotasemia. Graves: Angioedema fatal, lesión renal, hiperpotasemia y fetotoxicidad.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f103b9f9-e081-419d-a2d8-b86acda834dd",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
-      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
-      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enalapril",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/018998s074lbl.pdf"
     ],
-    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f103b9f9-e081-419d-a2d8-b86acda834dd"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enalapril"
   },
   "name": {
-    "pt": "Maleato de Enalapril",
-    "es": "Maleato de Enalapril"
+    "pt": "Enalapril",
+    "es": "Enalapril"
   },
   "keywords": [
     "enalapril",
@@ -266,8 +94,8 @@
     "glioten",
     "inibidor da enzima conversora de angiotensina (ieca)"
   ],
-  "dataVersion": "clinical-data-v1-f4b5c46b08328a66",
-  "clinicalContentSha256": "f4b5c46b08328a66909e9345d825fea9c85f0e2c53363eeca6bdc1156d545223",
+  "dataVersion": "clinical-data-v1-5b77ee82ab6304c6",
+  "clinicalContentSha256": "5b77ee82ab6304c6f0ad69682d7aa1074a895e7b8d32c63c7f374f0b71bf2500",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -319,13 +147,15 @@
     ]
   },
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "enalapril.mcGoldClinicalV1",
-    "group": "GOLD_GROUP04_CARDIO_10",
-    "review": "2026-09",
+    "lote": "029",
     "requiredFields": 33,
-    "contentSha256": "91c75332592c668a29beb24dadf0730c984a5e8afca87249c239d4f9494f7ab0",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "5d547791a4727e50809145d534af14205bfcad60ce3a97b2e32cec7f8f441bff",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

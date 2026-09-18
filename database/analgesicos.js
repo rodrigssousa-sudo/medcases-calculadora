@@ -5598,3 +5598,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:diclofenaco:END */
+/* GOLD33_SELECTIVE:enalaprilato:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["enalaprilato"])throw new Error("GOLD33_MISSING_CANONICAL:enalaprilato");db["enalaprilato"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "029",
+    "requiredFieldCount": 33,
+    "approvedSha256": "5d547791a4727e50809145d534af14205bfcad60ce3a97b2e32cec7f8f441bff",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Enalaprilato",
+    "class": "Inibidor da ECA intravenoso",
+    "pharmacologicClass": "Metabólito ativo do enalapril, inibe ECA",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Injeção 1,25 mg/mL.",
+    "presentations": "Injeção 1,25 mg/mL.",
+    "mechanism": "Metabólito ativo do enalapril, inibe ECA. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Eliminação renal; meia-vida efetiva ~11 h, efeito prolongado.",
+    "indications": "Hipertensão quando terapia oral não é prática; uso hospitalar.",
+    "dose": "1,25 mg IV em 5 min a cada 6 h; iniciar 0,625 mg em risco de hipotensão/diurético ou disfunção renal, com titulação especializada.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas. AUTOMATABLE=NO.",
+    "renalDose": "Reduzir dose se CrCl ≤30 mL/min.",
+    "hepaticDose": "Sem ajuste definido.",
+    "commonAdverseEffects": "Hipotensão, tontura, cefaleia e hipercalemia.",
+    "dangerousAdverseEffects": "Choque, angioedema, lesão renal, hipercalemia e fetotoxicidade.",
+    "adverseEffects": "Hipotensão, tontura, cefaleia e hipercalemia. Graves: Choque, angioedema, lesão renal, hipercalemia e fetotoxicidade.",
+    "contraindications": "Mesmas do IECA: gestação, angioedema, aliscireno em diabetes e proximidade de sacubitril/valsartana.",
+    "interactions": "K, diuréticos, AINEs, lítio, RAAS e neprilisina.",
+    "monitoring": "PA contínua/seriada, creatinina, K, volume e angioedema.",
+    "administration": "IV lenta em 5 min; monitorização hospitalar.",
+    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo do produto.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente, benefício materno e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Choque, angioedema, lesão renal, hipercalemia e fetotoxicidade. Dose IV bloqueada sem PA/urgência, volume, CrCl, K, gestação, diurético e capacidade de resgate hemodinâmico.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enalaprilat",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/019221s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enalaprilat"
+  },
+  "es": {
+    "name": "Enalaprilato",
+    "class": "Inhibidor de ECA intravenoso",
+    "pharmacologicClass": "Metabolito activo de enalapril, inhibe ECA",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Inyección 1,25 mg/mL.",
+    "presentations": "Inyección 1,25 mg/mL.",
+    "mechanism": "Metabolito activo de enalapril, inhibe ECA. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Eliminación renal; semivida efectiva ~11 h, efecto prolongado.",
+    "indications": "Hipertensión cuando terapia oral no es práctica; uso hospitalario.",
+    "dose": "1,25 mg IV en 5 min cada 6 h; iniciar 0,625 mg si riesgo de hipotensión/diurético o disfunción renal, con titulación especializada.",
+    "pediatricDose": "Seguridad/eficacia no establecidas. AUTOMATABLE=NO.",
+    "renalDose": "Reducir dosis si CrCl ≤30 mL/min.",
+    "hepaticDose": "Sin ajuste definido.",
+    "commonAdverseEffects": "Hipotensión, mareo, cefalea e hiperpotasemia.",
+    "dangerousAdverseEffects": "Shock, angioedema, lesión renal, hiperpotasemia y fetotoxicidad.",
+    "adverseEffects": "Hipotensión, mareo, cefalea e hiperpotasemia. Graves: Shock, angioedema, lesión renal, hiperpotasemia y fetotoxicidad.",
+    "contraindications": "Mismas de IECA: embarazo, angioedema, aliskireno en diabetes y proximidad de sacubitrilo/valsartán.",
+    "interactions": "K, diuréticos, AINE, litio, SRAA y neprilisina.",
+    "monitoring": "PA continua/seriada, creatinina, K, volumen y angioedema.",
+    "administration": "IV lenta en 5 min; monitorización hospitalaria.",
+    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo del producto.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante, beneficio materno y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Shock, angioedema, lesión renal, hiperpotasemia y fetotoxicidad. Dose IV bloqueada sem PA/urgência, volume, CrCl, K, gestação, diurético e capacidade de resgate hemodinâmico.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enalaprilat",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/019221s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=enalaprilat"
+  }
+};})();
+/* GOLD33_SELECTIVE:enalaprilato:END */

@@ -8,180 +8,98 @@
     "name": "Entacapona",
     "class": "Inibidor periférico da COMT",
     "category": "antiparkinsoniano",
-    "commercialNames": {
-      "br": [
-        "Comtan",
-        "Stalevo",
-        "Entacapona"
-      ],
-      "ar": [
-        "Comtan",
-        "Stalevo",
-        "Entacapona"
-      ]
-    },
-    "presentation": [
-      "Comprimido 200 mg",
-      "Associação levodopa/carbidopa/entacapona"
-    ],
-    "dose": {
-      "adulto": "200 mg VO junto com cada dose de levodopa/carbidopa ou levodopa/benserazida.",
-      "manutencao": "Usar apenas como adjuvante da levodopa; não tem efeito antiparkinsoniano isolado relevante.",
-      "maxDose": "Dose máxima usual: 1600 mg/dia."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 200 mg; combinações fixas.",
+    "dose": "200 mg com cada dose de levodopa/carbidopa, máximo 8 vezes/dia (1600 mg/dia). Pode exigir redução da levodopa.",
     "doseKg": {
       "standard": "Não se utiliza cálculo por kg.",
       "severe": "Dose fixa associada a cada tomada de levodopa.",
       "maxDose": "1600 mg/dia"
     },
-    "indications": [
-      "Doença de Parkinson com wearing-off",
-      "Flutuações motoras de fim de dose",
-      "Aumento da duração do efeito da levodopa",
-      "Redução do tempo OFF",
-      "Adjuvante em pacientes em uso de levodopa",
-      "Otimização do esquema levodopa/carbidopa ou levodopa/benserazida"
-    ],
+    "indications": "Adjuvante a levodopa/carbidopa em doença de Parkinson com desgaste de fim de dose.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Inibe a catecol-O-metiltransferase periférica, reduzindo metabolismo periférico da levodopa e aumentando sua disponibilidade/duração de ação.",
+    "mechanism": "Prolonga efeito da levodopa ao inibir seu metabolismo periférico. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Efeito ocorre junto ao esquema de levodopa, com redução de wearing-off após ajuste terapêutico.",
     "halfLife": "Vida média aproximada: 0,5–1 hora.",
-    "commonAdverseEffects": [
-      "Discinesia",
-      "Náuseas",
-      "Diarreia",
-      "Dor abdominal",
-      "Urina alaranjada/acastanhada",
-      "Tontura",
-      "Insônia"
-    ],
-    "dangerousAdverseEffects": [
-      "Diarreia grave ou persistente",
-      "Discinesias incapacitantes",
-      "Alucinações ou confusão",
-      "Hipotensão sintomática",
-      "Síndrome semelhante à neuroléptica maligna se retirada abrupta de dopaminérgicos",
-      "Rabdomiólise rara associada a discinesia intensa"
-    ],
+    "commonAdverseEffects": "Discinesia, náusea, urina alaranjada, diarreia e hipotensão.",
+    "dangerousAdverseEffects": "Rabdomiólise/síndrome hiperpirética na retirada, sono súbito, alucinações e diarreia grave.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade à entacapona",
-      "Uso concomitante com IMAO não seletivo",
-      "Feocromocitoma",
-      "História de síndrome neuroléptica maligna ou rabdomiólise não traumática relacionada a dopaminérgicos"
-    ],
-    "interactions": [
-      "Levodopa: aumenta efeito e pode aumentar discinesias",
-      "IMAO não seletivos: contraindicado",
-      "Fármacos metabolizados por COMT/catecolaminas: cautela",
-      "Antipsicóticos dopaminérgicos D2: podem reduzir benefício clínico",
-      "Ferro: pode reduzir absorção; separar administração"
-    ],
-    "alerts": [
-      "Sempre administrar junto com levodopa.",
-      "Pode ser necessário reduzir dose de levodopa se houver discinesias.",
-      "Urina alaranjada/acastanhada é esperada e geralmente benigna.",
-      "Investigar diarreia persistente.",
-      "Monitorar alucinações, hipotensão e confusão em idosos."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "MDS Parkinson Disease Guidelines",
-      "FDA/DailyMed Entacapone Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Uso concomitante com IMAO não seletivo; hipersensibilidade.",
+    "interactions": "Levodopa, IMAO, catecolaminas e fármacos metabolizados por COMT; varfarina.",
+    "alerts": "Rabdomiólise/síndrome hiperpirética na retirada, sono súbito, alucinações e diarreia grave. Dose bloqueada sem esquema exato de levodopa, wearing-off, discinesia, PA, sono/alucinação, fígado e interações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entacapone",
+    "pharmacologicClass": "Prolonga efeito da levodopa ao inibir seu metabolismo periférico",
+    "presentations": "Comprimidos 200 mg; combinações fixas.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo por conjugação; meia-vida ~0,4–0,7 h.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste usual.",
+    "hepaticDose": "Cautela em hepatopatia/obstrução biliar; exposição aumenta.",
+    "adverseEffects": "Discinesia, náusea, urina alaranjada, diarreia e hipotensão. Graves: Rabdomiólise/síndrome hiperpirética na retirada, sono súbito, alucinações e diarreia grave.",
+    "monitoring": "Discinesia, wearing-off, PA, sono súbito, alucinação, diarreia e INR se varfarina.",
+    "administration": "Tomar junto de cada dose de levodopa/carbidopa; não usar isoladamente.",
+    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo do produto.",
+    "pregnancy": "Usar somente após avaliação individual de benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente, benefício materno e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entacapone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/020796s021lbl.pdf"
     ]
   },
   "es": {
     "name": "Entacapona",
-    "class": "Inhibidor periférico de la COMT",
+    "class": "Inhibidor periférico de COMT",
     "category": "antiparkinsoniano",
-    "commercialNames": {
-      "br": [
-        "Comtan",
-        "Stalevo",
-        "Entacapona"
-      ],
-      "ar": [
-        "Comtan",
-        "Stalevo",
-        "Entacapona"
-      ]
-    },
-    "presentation": [
-      "Comprimido 200 mg",
-      "Asociación levodopa/carbidopa/entacapona"
-    ],
-    "dose": {
-      "adulto": "200 mg VO junto con cada dosis de levodopa/carbidopa o levodopa/benserazida.",
-      "manutencao": "Usar solo como coadyuvante de levodopa; no tiene efecto antiparkinsoniano aislado relevante.",
-      "maxDose": "Dosis máxima habitual: 1600 mg/día."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 200 mg; combinaciones fijas.",
+    "dose": "200 mg con cada dosis de levodopa/carbidopa, máximo 8 veces/día (1600 mg/día). Puede requerir reducir levodopa.",
     "doseKg": {
       "standard": "No se utiliza cálculo por kg.",
       "severe": "Dosis fija asociada a cada toma de levodopa.",
       "maxDose": "1600 mg/día"
     },
-    "indications": [
-      "Enfermedad de Parkinson con wearing-off",
-      "Fluctuaciones motoras de fin de dosis",
-      "Aumento de la duración del efecto de levodopa",
-      "Reducción del tiempo OFF",
-      "Coadyuvante en pacientes en uso de levodopa",
-      "Optimización del esquema levodopa/carbidopa o levodopa/benserazida"
-    ],
+    "indications": "Adyuvante de levodopa/carbidopa en Parkinson con desgaste de fin de dosis.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Inhibe la catecol-O-metiltransferasa periférica, reduciendo metabolismo periférico de levodopa y aumentando su disponibilidad/duración de acción.",
+    "mechanism": "Prolonga efecto de levodopa al inhibir su metabolismo periférico. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "El efecto ocurre junto al esquema de levodopa, con reducción de wearing-off tras ajuste terapéutico.",
     "halfLife": "Vida media aproximada: 0,5–1 hora.",
-    "commonAdverseEffects": [
-      "Discinesia",
-      "Náuseas",
-      "Diarrea",
-      "Dolor abdominal",
-      "Orina anaranjada/marrón",
-      "Mareos",
-      "Insomnio"
-    ],
-    "dangerousAdverseEffects": [
-      "Diarrea grave o persistente",
-      "Discinesias incapacitantes",
-      "Alucinaciones o confusión",
-      "Hipotensión sintomática",
-      "Síndrome similar al neuroléptico maligno si retirada brusca de dopaminérgicos",
-      "Rabdomiólisis rara asociada a discinesia intensa"
-    ],
+    "commonAdverseEffects": "Discinesia, náusea, orina naranja, diarrea e hipotensión.",
+    "dangerousAdverseEffects": "Rabdomiólisis/síndrome hiperpirético al retirar, sueño súbito, alucinaciones y diarrea grave.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a entacapona",
-      "Uso concomitante con IMAO no selectivo",
-      "Feocromocitoma",
-      "Antecedente de síndrome neuroléptico maligno o rabdomiólisis no traumática relacionada a dopaminérgicos"
-    ],
-    "interactions": [
-      "Levodopa: aumenta efecto y puede aumentar discinesias",
-      "IMAO no selectivos: contraindicado",
-      "Fármacos metabolizados por COMT/catecolaminas: cautela",
-      "Antipsicóticos dopaminérgicos D2: pueden reducir beneficio clínico",
-      "Hierro: puede reducir absorción; separar administración"
-    ],
-    "alerts": [
-      "Administrar siempre junto con levodopa.",
-      "Puede ser necesario reducir dosis de levodopa si hay discinesias.",
-      "La orina anaranjada/marrón es esperada y generalmente benigna.",
-      "Investigar diarrea persistente.",
-      "Monitorizar alucinaciones, hipotensión y confusión en adultos mayores."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "MDS Parkinson Disease Guidelines",
-      "FDA/DailyMed Entacapone Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Uso concomitante con IMAO no selectivo; hipersensibilidad.",
+    "interactions": "Levodopa, IMAO, catecolaminas y fármacos metabolizados por COMT; warfarina.",
+    "alerts": "Rabdomiólisis/síndrome hiperpirético al retirar, sueño súbito, alucinaciones y diarrea grave. Dose bloqueada sem esquema exato de levodopa, wearing-off, discinesia, PA, sono/alucinação, fígado e interações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entacapone",
+    "pharmacologicClass": "Prolonga efecto de levodopa al inhibir su metabolismo periférico",
+    "presentations": "Comprimidos 200 mg; combinaciones fijas.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo por conjugación; semivida ~0,4–0,7 h.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste habitual.",
+    "hepaticDose": "Precaución en hepatopatía/obstrucción biliar; exposición aumenta.",
+    "adverseEffects": "Discinesia, náusea, orina naranja, diarrea e hipotensión. Graves: Rabdomiólisis/síndrome hiperpirético al retirar, sueño súbito, alucinaciones y diarrea grave.",
+    "monitoring": "Discinesia, wearing-off, PA, sueño súbito, alucinación, diarrea e INR si warfarina.",
+    "administration": "Tomar con cada dosis de levodopa/carbidopa; no usar sola.",
+    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo del producto.",
+    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante, beneficio materno y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entacapone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/020796s021lbl.pdf"
     ]
   },
   "name": {
@@ -194,9 +112,21 @@
     "stalevo",
     "inibidor periferico da comt"
   ],
-  "dataVersion": "clinical-data-v1-f4b5c46b08328a66",
-  "clinicalContentSha256": "f4b5c46b08328a66909e9345d825fea9c85f0e2c53363eeca6bdc1156d545223",
+  "dataVersion": "clinical-data-v1-5b77ee82ab6304c6",
+  "clinicalContentSha256": "5b77ee82ab6304c6f0ad69682d7aa1074a895e7b8d32c63c7f374f0b71bf2500",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "neurologia.js"
+  "sourceModule": "neurologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/neurologia.js",
+    "sourceField": "entacapona.mcGoldClinicalV1",
+    "lote": "029",
+    "requiredFields": 33,
+    "approvedSha256": "5d547791a4727e50809145d534af14205bfcad60ce3a97b2e32cec7f8f441bff",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }
