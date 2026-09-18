@@ -9838,3 +9838,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:carbamazepina:END */
+/* GOLD33_SELECTIVE:carisoprodol:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["carisoprodol"])throw new Error("GOLD33_MISSING_CANONICAL:carisoprodol");db["carisoprodol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "014",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1b0e41cf6b530a2ba21cb52fc7aac4a33e9139cf286fd47a605ff6656ee8c7db",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Carisoprodol",
+    "class": "Relaxante muscular de ação central",
+    "pharmacologicClass": "Depressor central; metabólito ativo meprobamato",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 250 e 350 mg.",
+    "presentations": "Comprimidos 250 e 350 mg.",
+    "mechanism": "Depressor central; metabólito ativo meprobamato. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP2C19 a meprobamato; meia-vida carisoprodol ~2 h e meprobamato ~10 h; eliminação renal.",
+    "indications": "Alívio de curto prazo de desconforto musculoesquelético agudo em adultos, junto a repouso e fisioterapia.",
+    "dose": "250-350 mg VO 3x/dia e ao deitar; duração máxima recomendada 2-3 semanas.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas <16 anos. AUTOMATABLE=NO.",
+    "renalDose": "Cautela; carisoprodol/meprobamato podem acumular.",
+    "hepaticDose": "Cautela; metabolismo hepático CYP2C19.",
+    "commonAdverseEffects": "Sonolência, tontura, cefaleia e taquicardia.",
+    "dangerousAdverseEffects": "Dependência/abstinência, convulsão, depressão respiratória, coma e reação alérgica.",
+    "adverseEffects": "Sonolência, tontura, cefaleia e taquicardia. Graves: Dependência/abstinência, convulsão, depressão respiratória, coma e reação alérgica.",
+    "contraindications": "Porfiria aguda intermitente e hipersensibilidade a carisoprodol/meprobamato.",
+    "interactions": "Opioides, benzodiazepínicos, álcool e outros depressores aumentam sedação/depressão respiratória; CYP2C19 altera exposição.",
+    "monitoring": "Sedação, respiração, risco de abuso, duração, quedas e sintomas de abstinência.",
+    "administration": "VO; evitar dirigir, álcool e outros sedativos. Retirada gradual se uso prolongado.",
+    "preparation": "Comprimido pronto.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados insuficientes; evitar se possível.",
+    "lactation": "Passa ao leite; pode sedar o lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Dependência/abstinência, convulsão, depressão respiratória, coma e reação alérgica. Uso bloqueado sem duração, dor aguda, sedativos/opioides, risco de abuso, rim/fígado e plano de suspensão.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carisoprodol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/011792s043lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carisoprodol"
+  },
+  "es": {
+    "name": "Carisoprodol",
+    "class": "Relajante muscular de acción central",
+    "pharmacologicClass": "Depresor central; metabolito activo meprobamato",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 250 y 350 mg.",
+    "presentations": "Comprimidos 250 y 350 mg.",
+    "mechanism": "Depresor central; metabolito activo meprobamato. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP2C19 a meprobamato; semivida carisoprodol ~2 h y meprobamato ~10 h; eliminación renal.",
+    "indications": "Alivio a corto plazo de molestias musculoesqueléticas agudas en adultos, junto a reposo y fisioterapia.",
+    "dose": "250-350 mg VO 3 veces/día y al acostarse; duración máxima recomendada 2-3 semanas.",
+    "pediatricDose": "Seguridad/eficacia no establecidas <16 años. AUTOMATABLE=NO.",
+    "renalDose": "Precaución; carisoprodol/meprobamato pueden acumularse.",
+    "hepaticDose": "Precaución; metabolismo hepático CYP2C19.",
+    "commonAdverseEffects": "Somnolencia, mareo, cefalea y taquicardia.",
+    "dangerousAdverseEffects": "Dependencia/abstinencia, convulsión, depresión respiratoria, coma y reacción alérgica.",
+    "adverseEffects": "Somnolencia, mareo, cefalea y taquicardia. Graves: Dependencia/abstinencia, convulsión, depresión respiratoria, coma y reacción alérgica.",
+    "contraindications": "Porfiria aguda intermitente e hipersensibilidad a carisoprodol/meprobamato.",
+    "interactions": "Opioides, benzodiacepinas, alcohol y otros depresores aumentan sedación/depresión respiratoria; CYP2C19 altera exposición.",
+    "monitoring": "Sedación, respiración, riesgo de abuso, duración, caídas y síntomas de abstinencia.",
+    "administration": "VO; evitar conducir, alcohol y otros sedantes. Retirada gradual si uso prolongado.",
+    "preparation": "Comprimido listo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos insuficientes; evitar si es posible.",
+    "lactation": "Pasa a leche; puede sedar al lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Dependencia/abstinencia, convulsión, depresión respiratoria, coma y reacción alérgica. Uso bloqueado sem duração, dor aguda, sedativos/opioides, risco de abuso, rim/fígado e plano de suspensão.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carisoprodol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/011792s043lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carisoprodol"
+  }
+};})();
+/* GOLD33_SELECTIVE:carisoprodol:END */

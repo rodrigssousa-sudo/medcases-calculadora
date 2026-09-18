@@ -25329,3 +25329,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:bedaquilina:END */
+/* GOLD33_SELECTIVE:cefaclor:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["cefaclor"])throw new Error("GOLD33_MISSING_CANONICAL:cefaclor");db["cefaclor"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "014",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1b0e41cf6b530a2ba21cb52fc7aac4a33e9139cf286fd47a605ff6656ee8c7db",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cefaclor",
+    "class": "Cefalosporina oral de 2ª geração",
+    "pharmacologicClass": "Inibe síntese da parede bacteriana por PBPs",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 250/500 mg; suspensão 125 ou 250 mg/5 mL; liberação prolongada é produto distinto.",
+    "presentations": "Cápsulas 250/500 mg; suspensão 125 ou 250 mg/5 mL; liberação prolongada é produto distinto.",
+    "mechanism": "Inibe síntese da parede bacteriana por PBPs. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção oral 75-90%; baixa ligação; meia-vida 0,6-0,9 h; eliminação renal predominante inalterada.",
+    "indications": "Infecções suscetíveis de via respiratória, ouvido, pele e trato urinário; usar conforme cultura e resistência local.",
+    "dose": "Adulto IR: 250 mg a cada 8 h; infecção grave 500 mg a cada 8 h; máximo usual 4 g/dia conforme rótulo.",
+    "pediatricDose": "≥1 mês: 20 mg/kg/dia divididos a cada 8 h; grave/otite 40 mg/kg/dia, máximo 1 g/dia. AUTOMATABLE=YES apenas com indicação, peso e suspensão.",
+    "renalDose": "Reduzir dose/alongar intervalo em insuficiência importante; hemodiálise remove parcialmente. Confirmar protocolo local.",
+    "hepaticDose": "Sem ajuste formal; cautela.",
+    "commonAdverseEffects": "Diarreia, náusea, dor abdominal, rash e candidíase.",
+    "dangerousAdverseEffects": "Anafilaxia, C. difficile, SJS/TEN, anemia hemolítica, nefrite e reação tipo doença do soro em crianças.",
+    "adverseEffects": "Diarreia, náusea, dor abdominal, rash e candidíase. Graves: Anafilaxia, C. difficile, SJS/TEN, anemia hemolítica, nefrite e reação tipo doença do soro em crianças.",
+    "contraindications": "Hipersensibilidade grave a cefalosporinas; avaliar reação imediata a penicilinas.",
+    "interactions": "Probenecida eleva níveis; varfarina pode aumentar INR; vacinas bacterianas vivas e testes de glicose podem ser afetados.",
+    "monitoring": "Resposta clínica, alergia, diarreia/C. difficile, função renal, cultura e INR se varfarina.",
+    "administration": "VO com ou sem alimento; alimento pode retardar pico. Completar duração prescrita.",
+    "preparation": "Agitar suspensão; refrigerar se bula exigir e descartar no prazo. Não intercambiar IR/ER.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados não sugerem grande risco; usar quando indicado.",
+    "lactation": "Baixa passagem; geralmente compatível, observar flora/alergia.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, C. difficile, SJS/TEN, anemia hemolítica, nefrite e reação tipo doença do soro em crianças. Dose bloqueada sem foco/cultura, idade/peso, formulação, alergia, função renal, duração e resistência local.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefaclor",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2005/050373s049lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefaclor"
+  },
+  "es": {
+    "name": "Cefaclor",
+    "class": "Cefalosporina oral de 2ª generación",
+    "pharmacologicClass": "Inhibe síntesis de pared bacteriana por PBP",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 250/500 mg; suspensión 125 o 250 mg/5 mL; liberación prolongada es producto distinto.",
+    "presentations": "Cápsulas 250/500 mg; suspensión 125 o 250 mg/5 mL; liberación prolongada es producto distinto.",
+    "mechanism": "Inhibe síntesis de pared bacteriana por PBP. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción oral 75-90%; baja unión; semivida 0,6-0,9 h; eliminación renal principalmente inalterada.",
+    "indications": "Infecciones susceptibles respiratorias, óticas, cutáneas y urinarias; usar según cultivo y resistencia local.",
+    "dose": "Adulto IR: 250 mg cada 8 h; infección grave 500 mg cada 8 h; máximo habitual 4 g/día según ficha.",
+    "pediatricDose": "≥1 mes: 20 mg/kg/día divididos cada 8 h; grave/otitis 40 mg/kg/día, máximo 1 g/día. AUTOMATABLE=YES solo con indicación, peso y suspensión.",
+    "renalDose": "Reducir dosis/alargar intervalo en insuficiencia importante; hemodiálisis elimina parcialmente. Confirmar protocolo local.",
+    "hepaticDose": "Sin ajuste formal; precaución.",
+    "commonAdverseEffects": "Diarrea, náusea, dolor abdominal, erupción y candidiasis.",
+    "dangerousAdverseEffects": "Anafilaxia, C. difficile, SJS/TEN, anemia hemolítica, nefritis y reacción tipo enfermedad del suero en niños.",
+    "adverseEffects": "Diarrea, náusea, dolor abdominal, erupción y candidiasis. Graves: Anafilaxia, C. difficile, SJS/TEN, anemia hemolítica, nefritis y reacción tipo enfermedad del suero en niños.",
+    "contraindications": "Hipersensibilidad grave a cefalosporinas; evaluar reacción inmediata a penicilinas.",
+    "interactions": "Probenecid eleva niveles; warfarina puede aumentar INR; vacunas bacterianas vivas y pruebas de glucosa pueden afectarse.",
+    "monitoring": "Respuesta clínica, alergia, diarrea/C. difficile, función renal, cultivo e INR si warfarina.",
+    "administration": "VO con o sin alimentos; alimentos pueden retrasar pico. Completar duración indicada.",
+    "preparation": "Agitar suspensión; refrigerar si ficha lo exige y desechar en plazo. No intercambiar IR/ER.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos no sugieren gran riesgo; usar cuando esté indicado.",
+    "lactation": "Bajo paso; generalmente compatible, observar flora/alergia.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, C. difficile, SJS/TEN, anemia hemolítica, nefritis y reacción tipo enfermedad del suero en niños. Dose bloqueada sem foco/cultura, idade/peso, formulação, alergia, função renal, duração e resistência local.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefaclor",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2005/050373s049lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefaclor"
+  }
+};})();
+/* GOLD33_SELECTIVE:cefaclor:END */

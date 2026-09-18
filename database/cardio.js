@@ -63160,3 +63160,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:candesartana:END */
+/* GOLD33_SELECTIVE:carvedilol:START */
+;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["carvedilol"])throw new Error("GOLD33_MISSING_CANONICAL:carvedilol");db["carvedilol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "014",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1b0e41cf6b530a2ba21cb52fc7aac4a33e9139cf286fd47a605ff6656ee8c7db",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Carvedilol",
+    "class": "Betabloqueador não seletivo com bloqueio alfa-1",
+    "pharmacologicClass": "Bloqueia β1/β2 e α1; reduz frequência e pós-carga",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos IR 3,125/6,25/12,5/25 mg; cápsulas CR 10/20/40/80 mg.",
+    "presentations": "Comprimidos IR 3,125/6,25/12,5/25 mg; cápsulas CR 10/20/40/80 mg.",
+    "mechanism": "Bloqueia β1/β2 e α1; reduz frequência e pós-carga. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade 25-35%; alta ligação; CYP2D6/2C9; meia-vida 7-10 h; eliminação biliar/fecal.",
+    "indications": "Insuficiência cardíaca com FE reduzida, disfunção ventricular pós-IAM e hipertensão.",
+    "dose": "IC: 3,125 mg 2x/dia por 2 semanas, dobrar progressivamente até 25 mg 2x/dia (até 50 mg 2x/dia se >85 kg em alguns rótulos). HAS: 6,25 mg 2x/dia, titular.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas no rótulo EUA. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal; cautela em hipotensão e disfunção grave.",
+    "hepaticDose": "Contraindicado em insuficiência hepática grave.",
+    "commonAdverseEffects": "Tontura, fadiga, hipotensão, bradicardia, diarreia e aumento de peso.",
+    "dangerousAdverseEffects": "Bloqueio AV, broncoespasmo, piora de IC, síncope e isquemia por retirada abrupta.",
+    "adverseEffects": "Tontura, fadiga, hipotensão, bradicardia, diarreia e aumento de peso. Graves: Bloqueio AV, broncoespasmo, piora de IC, síncope e isquemia por retirada abrupta.",
+    "contraindications": "Asma/broncoespasmo, bloqueio AV 2º/3º sem marcapasso, bradicardia grave, choque cardiogênico/IC descompensada e hepatopatia grave.",
+    "interactions": "Verapamil/diltiazem/digoxina/amiodarona aumentam bradicardia; insulina mascara hipoglicemia; CYP2D6 e clonidina exigem cuidado.",
+    "monitoring": "FC, PA ortostática, peso/volume, sintomas de IC, glicose e condução.",
+    "administration": "Tomar com alimento; titular somente estável/euvolemico; não interromper abruptamente.",
+    "preparation": "IR e CR não são mg-a-mg por frequência; seguir conversão rotulada.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Pode ser usado quando indicado; monitorar crescimento fetal.",
+    "lactation": "Baixa exposição esperada, mas dados limitados; monitorar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Bloqueio AV, broncoespasmo, piora de IC, síncope e isquemia por retirada abrupta. Titulação bloqueada sem indicação, estabilidade/volemia, FC/PA, ECG, fígado, broncoespasmo e interações cronotrópicas.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carvedilol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carvedilol"
+  },
+  "es": {
+    "name": "Carvedilol",
+    "class": "Betabloqueante no selectivo con bloqueo alfa-1",
+    "pharmacologicClass": "Bloquea β1/β2 y α1; reduce frecuencia y poscarga",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos IR 3,125/6,25/12,5/25 mg; cápsulas CR 10/20/40/80 mg.",
+    "presentations": "Comprimidos IR 3,125/6,25/12,5/25 mg; cápsulas CR 10/20/40/80 mg.",
+    "mechanism": "Bloquea β1/β2 y α1; reduce frecuencia y poscarga. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad 25-35%; alta unión; CYP2D6/2C9; semivida 7-10 h; eliminación biliar/fecal.",
+    "indications": "Insuficiencia cardíaca con FE reducida, disfunción ventricular pos-IAM e hipertensión.",
+    "dose": "IC: 3,125 mg 2 veces/día por 2 semanas, duplicar progresivamente hasta 25 mg 2 veces/día (hasta 50 mg 2 veces/día si >85 kg en algunas fichas). HTA: 6,25 mg 2 veces/día, titular.",
+    "pediatricDose": "Seguridad/eficacia no establecidas en ficha EE. UU. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal; precaución en hipotensión y disfunción grave.",
+    "hepaticDose": "Contraindicado en insuficiencia hepática grave.",
+    "commonAdverseEffects": "Mareo, fatiga, hipotensión, bradicardia, diarrea y aumento de peso.",
+    "dangerousAdverseEffects": "Bloqueo AV, broncoespasmo, empeoramiento de IC, síncope e isquemia por retirada brusca.",
+    "adverseEffects": "Mareo, fatiga, hipotensión, bradicardia, diarrea y aumento de peso. Graves: Bloqueo AV, broncoespasmo, empeoramiento de IC, síncope e isquemia por retirada brusca.",
+    "contraindications": "Asma/broncoespasmo, bloqueo AV 2º/3º sin marcapasos, bradicardia grave, choque cardiogénico/IC descompensada y hepatopatía grave.",
+    "interactions": "Verapamilo/diltiazem/digoxina/amiodarona aumentan bradicardia; insulina enmascara hipoglucemia; CYP2D6 y clonidina requieren cuidado.",
+    "monitoring": "FC, PA ortostática, peso/volumen, síntomas de IC, glucosa y conducción.",
+    "administration": "Tomar con alimentos; titular solo estable/euvolémico; no interrumpir bruscamente.",
+    "preparation": "IR y CR no son mg-a-mg por frecuencia; seguir conversión de ficha.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Puede usarse cuando esté indicado; vigilar crecimiento fetal.",
+    "lactation": "Baja exposición esperada, datos limitados; vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Bloqueo AV, broncoespasmo, empeoramiento de IC, síncope e isquemia por retirada brusca. Titulação bloqueada sem indicação, estabilidade/volemia, FC/PA, ECG, fígado, broncoespasmo e interações cronotrópicas.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carvedilol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=carvedilol"
+  }
+};})();
+/* GOLD33_SELECTIVE:carvedilol:END */

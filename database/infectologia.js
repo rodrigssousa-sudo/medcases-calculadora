@@ -7603,3 +7603,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:bictegravir:END */
+/* GOLD33_SELECTIVE:caspofungina:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB;if(!db||!db["caspofungina"])throw new Error("GOLD33_MISSING_CANONICAL:caspofungina");db["caspofungina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "014",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1b0e41cf6b530a2ba21cb52fc7aac4a33e9139cf286fd47a605ff6656ee8c7db",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Caspofungina",
+    "class": "Antifúngico equinocandina",
+    "pharmacologicClass": "Inibe síntese de β-(1,3)-D-glucano da parede fúngica",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frascos liofilizados 50 e 70 mg para IV.",
+    "presentations": "Frascos liofilizados 50 e 70 mg para IV.",
+    "mechanism": "Inibe síntese de β-(1,3)-D-glucano da parede fúngica. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Alta ligação; degradação/hidrólise não CYP; meia-vida terminal 40-50 h; eliminação urinária/fecal como metabólitos.",
+    "indications": "Candidíase invasiva, terapia empírica em neutropenia febril e aspergilose refratária/intolerante; indicações incluem pediatria ≥3 meses.",
+    "dose": "Adulto: 70 mg IV no dia 1, depois 50 mg/dia; considerar 70 mg/dia se >80 kg em algumas indicações.",
+    "pediatricDose": "3 meses-17 anos: 70 mg/m² no dia 1 (máx. 70 mg), depois 50 mg/m²/dia (máx. 70 mg). AUTOMATABLE=YES apenas com SC validada.",
+    "renalDose": "Sem ajuste; não é dializável de modo clinicamente relevante.",
+    "hepaticDose": "Child-Pugh B adulto: após ataque 70 mg, manutenção 35 mg/dia; dados insuficientes em grave e pediatria hepatopata.",
+    "commonAdverseEffects": "Febre, flebite, cefaleia, náusea, diarreia e elevação de transaminases.",
+    "dangerousAdverseEffects": "Anafilaxia, reação por histamina, hepatotoxicidade e SJS/TEN raros.",
+    "adverseEffects": "Febre, flebite, cefaleia, náusea, diarreia e elevação de transaminases. Graves: Anafilaxia, reação por histamina, hepatotoxicidade e SJS/TEN raros.",
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "Ciclosporina aumenta exposição/enzimas; rifampicina, efavirenz, nevirapina, dexametasona, fenitoína e carbamazepina podem reduzir níveis.",
+    "monitoring": "Culturas/suscetibilidade, resposta, ALT/AST/bilirrubina, K/Mg, hemograma e reações de infusão.",
+    "administration": "IV por aproximadamente 1 h; não administrar em bolus.",
+    "preparation": "Reconstituir conforme frasco; diluir em SF 0,9% ou Ringer lactato. NÃO usar diluentes com dextrose.",
+    "infusionProtocol": "Infundir em ~1 h por linha compatível; inspecionar solução.",
+    "pregnancy": "Dados humanos limitados; usar se benefício justificar.",
+    "lactation": "Dados insuficientes; considerar interromper amamentação ou fármaco.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, reação por histamina, hepatotoxicidade e SJS/TEN raros. Dose/preparo bloqueados sem indicação, peso/SC, Child-Pugh, frasco, diluente, interações e microbiologia.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/021227s034lbl.pdf",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/candidiasis/"
+    ],
+    "ref": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/021227s034lbl.pdf"
+  },
+  "es": {
+    "name": "Caspofungina",
+    "class": "Antifúngico equinocandina",
+    "pharmacologicClass": "Inhibe síntesis de β-(1,3)-D-glucano de pared fúngica",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Viales liofilizados 50 y 70 mg para IV.",
+    "presentations": "Viales liofilizados 50 y 70 mg para IV.",
+    "mechanism": "Inhibe síntesis de β-(1,3)-D-glucano de pared fúngica. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Alta unión; degradación/hidrólisis no CYP; semivida terminal 40-50 h; eliminación urinaria/fecal como metabolitos.",
+    "indications": "Candidiasis invasiva, terapia empírica en neutropenia febril y aspergilosis refractaria/intolerante; incluye pediatría ≥3 meses.",
+    "dose": "Adulto: 70 mg IV día 1, luego 50 mg/día; considerar 70 mg/día si >80 kg en algunas indicaciones.",
+    "pediatricDose": "3 meses-17 años: 70 mg/m² día 1 (máx. 70 mg), luego 50 mg/m²/día (máx. 70 mg). AUTOMATABLE=YES solo con SC validada.",
+    "renalDose": "Sin ajuste; no es dializable de forma clínicamente relevante.",
+    "hepaticDose": "Child-Pugh B adulto: tras carga 70 mg, mantenimiento 35 mg/día; datos insuficientes en grave y pediatría hepatópata.",
+    "commonAdverseEffects": "Fiebre, flebitis, cefalea, náusea, diarrea y aumento de transaminasas.",
+    "dangerousAdverseEffects": "Anafilaxia, reacción por histamina, hepatotoxicidad y SJS/TEN raros.",
+    "adverseEffects": "Fiebre, flebitis, cefalea, náusea, diarrea y aumento de transaminasas. Graves: Anafilaxia, reacción por histamina, hepatotoxicidad y SJS/TEN raros.",
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Ciclosporina aumenta exposición/enzimas; rifampicina, efavirenz, nevirapina, dexametasona, fenitoína y carbamazepina pueden reducir niveles.",
+    "monitoring": "Cultivos/susceptibilidad, respuesta, ALT/AST/bilirrubina, K/Mg, hemograma y reacciones de infusión.",
+    "administration": "IV durante aproximadamente 1 h; no administrar en bolo.",
+    "preparation": "Reconstituir según vial; diluir en SS 0,9% o Ringer lactato. NO usar diluyentes con dextrosa.",
+    "infusionProtocol": "Infundir en ~1 h por línea compatible; inspeccionar solución.",
+    "pregnancy": "Datos humanos limitados; usar si beneficio justifica.",
+    "lactation": "Datos insuficientes; considerar suspender lactancia o fármaco.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, reacción por histamina, hepatotoxicidad y SJS/TEN raros. Dose/preparo bloqueados sem indicação, peso/SC, Child-Pugh, frasco, diluente, interações e microbiologia.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/021227s034lbl.pdf",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/candidiasis/"
+    ],
+    "ref": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/021227s034lbl.pdf"
+  }
+};})();
+/* GOLD33_SELECTIVE:caspofungina:END */

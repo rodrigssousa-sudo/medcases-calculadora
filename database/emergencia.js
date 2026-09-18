@@ -3430,3 +3430,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:bicarbonato_sodio:END */
+/* GOLD33_SELECTIVE:carvao_ativado:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["carvao_ativado"])throw new Error("GOLD33_MISSING_CANONICAL:carvao_ativado");db["carvao_ativado"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "014",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1b0e41cf6b530a2ba21cb52fc7aac4a33e9139cf286fd47a605ff6656ee8c7db",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Carvão ativado",
+    "class": "Adsorvente gastrointestinal",
+    "pharmacologicClass": "Adsorve diversos xenobióticos no lúmen gastrointestinal",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Suspensão/pó oral; produtos com sorbitol não devem ser repetidos rotineiramente.",
+    "presentations": "Suspensão/pó oral; produtos com sorbitol não devem ser repetidos rotineiramente.",
+    "mechanism": "Adsorve diversos xenobióticos no lúmen gastrointestinal. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Não absorvido; permanece no trato GI e é eliminado nas fezes.",
+    "indications": "Descontaminação seletiva após ingestão potencialmente tóxica, somente quando benefício supera risco e substância é adsorvível.",
+    "dose": "Dose única adulto: 25-100 g VO/sonda, idealmente dentro de 1 h em casos selecionados. Doses múltiplas: 25-50 g a cada 4-6 h apenas para toxinas específicas e toxicologia.",
+    "pediatricDose": "Dose única: 0,5-1 g/kg (frequentemente 10-50 g conforme idade). AUTOMATABLE=NO sem toxina, tempo e via aérea.",
+    "renalDose": "Sem ajuste sistêmico.",
+    "hepaticDose": "Sem ajuste sistêmico.",
+    "commonAdverseEffects": "Náusea, vômito, constipação e fezes negras.",
+    "dangerousAdverseEffects": "Aspiração/pneumonite, obstrução/perfuração, hipernatremia e desidratação com catártico.",
+    "adverseEffects": "Náusea, vômito, constipação e fezes negras. Graves: Aspiração/pneumonite, obstrução/perfuração, hipernatremia e desidratação com catártico.",
+    "contraindications": "Via aérea desprotegida, risco de aspiração, obstrução/íleo/perfuração e ingestão cáustica/hidrocarboneto com alto risco.",
+    "interactions": "Adsorve muitos medicamentos orais e antídotos; não é eficaz para álcoois, lítio, ferro e vários metais.",
+    "monitoring": "Via aérea, consciência, vômitos, peristalse, eletrólitos/volume se doses múltiplas e evolução toxicológica.",
+    "administration": "Somente com via aérea protegida e motilidade GI adequada; consultar centro toxicológico.",
+    "preparation": "Misturar pó com água conforme produto; confirmar concentração e volume.",
+    "infusionProtocol": "Não é infusão IV; pode ser administrado por sonda orogástrica/nasogástrica por equipe treinada.",
+    "pregnancy": "Uso agudo se clinicamente necessário.",
+    "lactation": "Uso agudo compatível; não há absorção sistêmica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Aspiração/pneumonite, obstrução/perfuração, hipernatremia e desidratação com catártico. Administração bloqueada sem toxina/dose/tempo, via aérea, contraindicações GI e orientação toxicológica.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.clintox.org/resources/position-statements",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.poison.org/articles/activated-charcoal"
+    ],
+    "ref": "https://www.clintox.org/resources/position-statements"
+  },
+  "es": {
+    "name": "Carbón activado",
+    "class": "Adsorbente gastrointestinal",
+    "pharmacologicClass": "Adsorbe diversos xenobióticos en luz gastrointestinal",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Suspensión/polvo oral; productos con sorbitol no deben repetirse rutinariamente.",
+    "presentations": "Suspensión/polvo oral; productos con sorbitol no deben repetirse rutinariamente.",
+    "mechanism": "Adsorbe diversos xenobióticos en luz gastrointestinal. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "No absorbido; permanece en tracto GI y se elimina en heces.",
+    "indications": "Descontaminación selectiva tras ingestión potencialmente tóxica, solo si beneficio supera riesgo y sustancia es adsorbible.",
+    "dose": "Dosis única adulto: 25-100 g VO/sonda, idealmente dentro de 1 h en casos seleccionados. Dosis múltiples: 25-50 g cada 4-6 h solo para toxinas específicas y toxicología.",
+    "pediatricDose": "Dosis única: 0,5-1 g/kg (frecuentemente 10-50 g según edad). AUTOMATABLE=NO sin tóxico, tiempo y vía aérea.",
+    "renalDose": "Sin ajuste sistémico.",
+    "hepaticDose": "Sin ajuste sistémico.",
+    "commonAdverseEffects": "Náusea, vómito, estreñimiento y heces negras.",
+    "dangerousAdverseEffects": "Aspiración/neumonitis, obstrucción/perforación, hipernatremia y deshidratación con catártico.",
+    "adverseEffects": "Náusea, vómito, estreñimiento y heces negras. Graves: Aspiración/neumonitis, obstrucción/perforación, hipernatremia y deshidratación con catártico.",
+    "contraindications": "Vía aérea no protegida, riesgo de aspiración, obstrucción/íleo/perforación e ingestión cáustica/hidrocarburo de alto riesgo.",
+    "interactions": "Adsorbe muchos medicamentos orales y antídotos; no es eficaz para alcoholes, litio, hierro y varios metales.",
+    "monitoring": "Vía aérea, conciencia, vómitos, peristalsis, electrolitos/volumen si dosis múltiples y evolución toxicológica.",
+    "administration": "Solo con vía aérea protegida y motilidad GI adecuada; consultar centro toxicológico.",
+    "preparation": "Mezclar polvo con agua según producto; confirmar concentración y volumen.",
+    "infusionProtocol": "No es infusión IV; puede administrarse por sonda orogástrica/nasogástrica por equipo entrenado.",
+    "pregnancy": "Uso agudo si clínicamente necesario.",
+    "lactation": "Uso agudo compatible; no hay absorción sistémica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Aspiración/neumonitis, obstrucción/perforación, hipernatremia y deshidratación con catártico. Administração bloqueada sem toxina/dose/tempo, via aérea, contraindicações GI e orientação toxicológica.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.clintox.org/resources/position-statements",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.poison.org/articles/activated-charcoal"
+    ],
+    "ref": "https://www.clintox.org/resources/position-statements"
+  }
+};})();
+/* GOLD33_SELECTIVE:carvao_ativado:END */

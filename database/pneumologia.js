@@ -4107,3 +4107,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:butamirato:END */
+/* GOLD33_SELECTIVE:carbocisteina:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["carbocisteina"])throw new Error("GOLD33_MISSING_CANONICAL:carbocisteina");db["carbocisteina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "014",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1b0e41cf6b530a2ba21cb52fc7aac4a33e9139cf286fd47a605ff6656ee8c7db",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Carbocisteína",
+    "class": "Mucolítico",
+    "pharmacologicClass": "Mucorregulador derivado da cisteína",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 375 mg; solução/xarope 250 mg/5 mL e apresentações pediátricas variáveis.",
+    "presentations": "Cápsulas 375 mg; solução/xarope 250 mg/5 mL e apresentações pediátricas variáveis.",
+    "mechanism": "Mucorregulador derivado da cisteína. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção oral rápida; Tmax ~2 h; metabolismo hepático; excreção urinária, principalmente inalterada/metabólitos.",
+    "indications": "Adjuvante em doenças respiratórias com secreção espessa; indicação e disponibilidade variam por país.",
+    "dose": "Adulto: 750 mg 3x/dia inicialmente; reduzir para 500 mg 3x/dia quando houver resposta, conforme SmPC do produto.",
+    "pediatricDose": "Regimes dependem da concentração e idade; evitar <2 anos em várias jurisdições. AUTOMATABLE=NO sem bula local.",
+    "renalDose": "Sem ajuste quantitativo estabelecido; cautela em doença grave.",
+    "hepaticDose": "Sem ajuste quantitativo estabelecido.",
+    "commonAdverseEffects": "Náusea, diarreia, dor epigástrica e rash.",
+    "dangerousAdverseEffects": "Sangramento gastrointestinal, anafilaxia e reações cutâneas graves raras.",
+    "adverseEffects": "Náusea, diarreia, dor epigástrica e rash. Graves: Sangramento gastrointestinal, anafilaxia e reações cutâneas graves raras.",
+    "contraindications": "Úlcera péptica ativa e hipersensibilidade; restrições etárias conforme produto.",
+    "interactions": "Antitussígenos e anticolinérgicos podem favorecer retenção de secreções; revisar risco gastrointestinal.",
+    "monitoring": "Sintomas, volume/viscosidade do escarro, broncoespasmo, sangramento GI e necessidade de antibiótico.",
+    "administration": "VO; manter hidratação e capacidade de eliminar secreções.",
+    "preparation": "Medir solução com dispositivo graduado; não intercambiar concentrações.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Evitar no primeiro trimestre; depois, usar apenas se necessário conforme bula.",
+    "lactation": "Dados insuficientes; individualizar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Sangramento gastrointestinal, anafilaxia e reações cutâneas graves raras. Dose bloqueada sem idade, formulação/concentração, história ulcerosa, padrão de tosse e capacidade de expectoração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=carbocisteine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.nhs.uk/medicines/carbocisteine/about-carbocisteine/"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=carbocisteine"
+  },
+  "es": {
+    "name": "Carbocisteína",
+    "class": "Mucolítico",
+    "pharmacologicClass": "Mucorregulador derivado de cisteína",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 375 mg; solución/jarabe 250 mg/5 mL y presentaciones pediátricas variables.",
+    "presentations": "Cápsulas 375 mg; solución/jarabe 250 mg/5 mL y presentaciones pediátricas variables.",
+    "mechanism": "Mucorregulador derivado de cisteína. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción oral rápida; Tmax ~2 h; metabolismo hepático; excreción urinaria, principalmente inalterada/metabolitos.",
+    "indications": "Adyuvante en enfermedades respiratorias con secreción espesa; indicación y disponibilidad varían por país.",
+    "dose": "Adulto: 750 mg 3 veces/día inicialmente; reducir a 500 mg 3 veces/día al responder, según SmPC del producto.",
+    "pediatricDose": "Regímenes dependen de concentración y edad; evitar <2 años en varias jurisdicciones. AUTOMATABLE=NO sin ficha local.",
+    "renalDose": "Sin ajuste cuantitativo establecido; precaución en enfermedad grave.",
+    "hepaticDose": "Sin ajuste cuantitativo establecido.",
+    "commonAdverseEffects": "Náusea, diarrea, dolor epigástrico y erupción.",
+    "dangerousAdverseEffects": "Sangrado gastrointestinal, anafilaxia y reacciones cutáneas graves raras.",
+    "adverseEffects": "Náusea, diarrea, dolor epigástrico y erupción. Graves: Sangrado gastrointestinal, anafilaxia y reacciones cutáneas graves raras.",
+    "contraindications": "Úlcera péptica activa e hipersensibilidad; restricciones etarias según producto.",
+    "interactions": "Antitusivos y anticolinérgicos pueden favorecer retención de secreciones; revisar riesgo gastrointestinal.",
+    "monitoring": "Síntomas, volumen/viscosidad del esputo, broncoespasmo, sangrado GI y necesidad de antibiótico.",
+    "administration": "VO; mantener hidratación y capacidad de eliminar secreciones.",
+    "preparation": "Medir solución con dispositivo graduado; no intercambiar concentraciones.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Evitar en primer trimestre; después usar solo si es necesario según ficha.",
+    "lactation": "Datos insuficientes; individualizar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Sangrado gastrointestinal, anafilaxia y reacciones cutáneas graves raras. Dose bloqueada sem idade, formulação/concentração, história ulcerosa, padrão de tosse e capacidade de expectoração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=carbocisteine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.nhs.uk/medicines/carbocisteine/about-carbocisteine/"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=carbocisteine"
+  }
+};})();
+/* GOLD33_SELECTIVE:carbocisteina:END */

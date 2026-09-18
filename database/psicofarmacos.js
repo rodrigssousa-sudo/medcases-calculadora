@@ -3366,3 +3366,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:brexpiprazol:END */
+/* GOLD33_SELECTIVE:cariprazina:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB;if(!db||!db["cariprazina"])throw new Error("GOLD33_MISSING_CANONICAL:cariprazina");db["cariprazina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "014",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1b0e41cf6b530a2ba21cb52fc7aac4a33e9139cf286fd47a605ff6656ee8c7db",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cariprazina",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Agonista parcial D3/D2 e 5-HT1A; antagonista 5-HT2A",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 1,5; 3; 4,5 e 6 mg.",
+    "presentations": "Cápsulas 1,5; 3; 4,5 e 6 mg.",
+    "mechanism": "Agonista parcial D3/D2 e 5-HT1A; antagonista 5-HT2A. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP3A4; metabólitos ativos DCAR/DDCAR; meia-vida efetiva longa, especialmente DDCAR (~1-3 semanas).",
+    "indications": "Esquizofrenia, episódios maníacos/mistos ou depressivos do bipolar I e adjuvante no transtorno depressivo maior em adultos.",
+    "dose": "Esquizofrenia/manía: 1,5 mg/dia, aumentar a 3 mg no dia 2; faixa 1,5-6 mg/dia. Depressão bipolar/TDM adjuvante: 1,5 mg/dia, máximo 3 mg/dia.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas <18 anos. AUTOMATABLE=NO.",
+    "renalDose": "CrCl ≥30: sem ajuste; CrCl <30: não recomendada.",
+    "hepaticDose": "Child-Pugh A/B: sem ajuste; C: não recomendada.",
+    "commonAdverseEffects": "Acatisia, parkinsonismo, insônia, náusea e inquietação.",
+    "dangerousAdverseEffects": "NMS, discinesia tardia, suicidabilidade, hiperglicemia, leucopenia e convulsões.",
+    "adverseEffects": "Acatisia, parkinsonismo, insônia, náusea e inquietação. Graves: NMS, discinesia tardia, suicidabilidade, hiperglicemia, leucopenia e convulsões.",
+    "contraindications": "Hipersensibilidade; não aprovada para psicose associada à demência.",
+    "interactions": "Inibidores fortes/moderados CYP3A4 exigem redução; indutores CYP3A4 não recomendados; depressores SNC e dopaminérgicos exigem revisão.",
+    "monitoring": "Acatisia/EPS, humor/suicidabilidade, peso, glicose/lípidos, PA, movimentos tardios, NMS e CBC se risco.",
+    "administration": "VO 1x/dia com ou sem alimento; mudanças de dose demoram semanas para refletir plenamente.",
+    "preparation": "Cápsula pronta; não fracionar.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Pode causar sintomas neonatais no terceiro trimestre; usar apenas se benefício justificar.",
+    "lactation": "Dados insuficientes; considerar alternativa.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "NMS, discinesia tardia, suicidabilidade, hiperglicemia, leucopenia e convulsões. Dose bloqueada sem diagnóstico, suicidabilidade, CrCl/Child-Pugh, CYP3A4 e avaliação metabólica/EPS.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=VRAYLAR",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/204370s010lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=VRAYLAR"
+  },
+  "es": {
+    "name": "Cariprazina",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Agonista parcial D3/D2 y 5-HT1A; antagonista 5-HT2A",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 1,5; 3; 4,5 y 6 mg.",
+    "presentations": "Cápsulas 1,5; 3; 4,5 y 6 mg.",
+    "mechanism": "Agonista parcial D3/D2 y 5-HT1A; antagonista 5-HT2A. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP3A4; metabolitos activos DCAR/DDCAR; semivida efectiva larga, especialmente DDCAR (~1-3 semanas).",
+    "indications": "Esquizofrenia, episodios maníacos/mixtos o depresivos de bipolar I y adyuvante en depresión mayor en adultos.",
+    "dose": "Esquizofrenia/manía: 1,5 mg/día, aumentar a 3 mg el día 2; rango 1,5-6 mg/día. Depresión bipolar/TDM adyuvante: 1,5 mg/día, máximo 3 mg/día.",
+    "pediatricDose": "Seguridad/eficacia no establecidas <18 años. AUTOMATABLE=NO.",
+    "renalDose": "CrCl ≥30: sin ajuste; CrCl <30: no recomendada.",
+    "hepaticDose": "Child-Pugh A/B: sin ajuste; C: no recomendada.",
+    "commonAdverseEffects": "Acatisia, parkinsonismo, insomnio, náusea e inquietud.",
+    "dangerousAdverseEffects": "SNM, discinesia tardía, suicidabilidad, hiperglucemia, leucopenia y convulsiones.",
+    "adverseEffects": "Acatisia, parkinsonismo, insomnio, náusea e inquietud. Graves: SNM, discinesia tardía, suicidabilidad, hiperglucemia, leucopenia y convulsiones.",
+    "contraindications": "Hipersensibilidad; no aprobada para psicosis asociada a demencia.",
+    "interactions": "Inhibidores fuertes/moderados CYP3A4 requieren reducción; inductores CYP3A4 no recomendados; depresores SNC y dopaminérgicos requieren revisión.",
+    "monitoring": "Acatisia/EPS, ánimo/suicidabilidad, peso, glucosa/lípidos, PA, movimientos tardíos, SNM y hemograma si riesgo.",
+    "administration": "VO 1 vez/día con o sin alimentos; cambios de dosis tardan semanas en reflejarse.",
+    "preparation": "Cápsula lista; no fraccionar.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Puede causar síntomas neonatales en tercer trimestre; usar solo si beneficio justifica.",
+    "lactation": "Datos insuficientes; considerar alternativa.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "SNM, discinesia tardía, suicidabilidad, hiperglucemia, leucopenia y convulsiones. Dose bloqueada sem diagnóstico, suicidabilidade, CrCl/Child-Pugh, CYP3A4 e avaliação metabólica/EPS.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=VRAYLAR",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/204370s010lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=VRAYLAR"
+  }
+};})();
+/* GOLD33_SELECTIVE:cariprazina:END */
