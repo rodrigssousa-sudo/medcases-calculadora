@@ -5,448 +5,96 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Aripiprazol",
-    "class": "Antipsicótico atípico agonista parcial dopaminérgico",
+    "name": "Aripiprazol oral",
+    "class": "Antipsicótico de segunda geração",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Abilify",
-        "Aristab",
-        "Aripiprazol EMS"
-      ],
-      "ar": [
-        "Abilify",
-        "Aripiprazol Bagó",
-        "Aripiprazol Gador"
-      ]
-    },
-    "presentation": [
-      "Comprimido 5 mg",
-      "Comprimido 10 mg",
-      "Comprimido 15 mg",
-      "Comprimido 20 mg",
-      "Comprimido 30 mg",
-      "Solução oral 1 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Esquizofrenia: iniciar 10–15 mg VO 1x/dia; usual 10–30 mg/dia.",
-      "mania": "Mania aguda: 15 mg VO 1x/dia; titular conforme resposta.",
-      "depressaoAdjuvante": "Adjuvante na depressão: iniciar 2–5 mg/dia; usual 2–15 mg/dia.",
-      "maxDose": "Dose máxima usual: 30 mg/dia."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Transtorno bipolar — mania aguda",
-      "Manutenção no transtorno bipolar",
-      "Adjuvante no transtorno depressivo maior",
-      "Irritabilidade associada ao transtorno do espectro autista",
-      "Síndrome de Tourette",
-      "Hiperprolactinemia induzida por antipsicótico em casos selecionados"
-    ],
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 2, 5, 10, 15, 20 e 30 mg; solução oral e formas dispersíveis podem variar por mercado.",
+    "dose": "Esquizofrenia adulta: 10-15 mg VO uma vez/dia, alvo 10-15 mg, máximo 30 mg/dia. Bipolar mania: 15 mg/dia (10-15 com lítio/valproato), máximo 30 mg. Depressão adjuvante: iniciar 2-5 mg/dia, faixa 2-15 mg.",
+    "indications": "Esquizofrenia; mania/misto bipolar I; adjuvante na depressão maior; irritabilidade no autismo; Tourette, conforme idade e produto.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Agonista parcial D2 e 5HT1A, antagonista 5HT2A; estabiliza a neurotransmissão dopaminérgica com menor risco de prolactina elevada.",
+    "mechanism": "Agonista parcial D2/D3 e 5-HT1A; antagonista 5-HT2A. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Efeito em agitação/mania pode surgir em dias; efeito antipsicótico pleno em 2–6 semanas.",
     "halfLife": "Vida média aproximada: 75 horas; metabólito ativo cerca de 94 horas.",
-    "commonAdverseEffects": [
-      "Acatisia",
-      "Insônia",
-      "Náuseas",
-      "Cefaleia",
-      "Ansiedade ou ativação",
-      "Tontura"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptica maligna",
-      "Discinesia tardia",
-      "Impulsividade/jogo patológico/hipersexualidade em casos raros",
-      "Hiperglicemia e dislipidemia, geralmente menor que olanzapina",
-      "Convulsões em predispostos"
-    ],
+    "commonAdverseEffects": "Acatisia, náusea, insônia, ansiedade, cefaleia, constipação e sonolência.",
+    "dangerousAdverseEffects": "Mortalidade aumentada em idosos com psicose por demência, SNM, discinesia tardia, hiperglicemia, hipotensão, convulsões e suicidabilidade em jovens.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade ao aripiprazol",
-      "Demência com psicose sem avaliação especializada"
-    ],
-    "interactions": [
-      "Inibidores fortes de CYP2D6 como fluoxetina/paroxetina: aumentam níveis",
-      "Inibidores fortes de CYP3A4 como cetoconazol/claritromicina: aumentam níveis",
-      "Carbamazepina e rifampicina: reduzem níveis",
-      "Anti-hipertensivos: risco de hipotensão",
-      "Álcool e depressores do SNC"
-    ],
-    "alerts": [
-      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
-      "Aripiprazol VO: indicação, idade e titulação pediátrica diferem; não converter pauta VO para Maintena/Aristada ou inferir dose pediátrica de adulto. Confirmar interações CYP2D6/CYP3A4 por produto.",
-      "Registro de aripiprazol VO: não extrapolar para LAI. Na bula de comprimidos dos EUA, esquizofrenia pediátrica ≥13 anos, mania bipolar ≥10, irritabilidade no autismo 6–17; doses e titulação diferem por indicação. Sem cálculo pediátrico universal.",
-      "Monitorar acatisia, especialmente no início.",
-      "Menor risco de ganho de peso e hiperprolactinemia que vários antipsicóticos, mas ainda monitorar metabolismo.",
-      "Perguntar sobre impulsividade, jogo, compras compulsivas ou hipersexualidade.",
-      "Ajustar dose em interações fortes por CYP2D6/CYP3A4.",
-      "Pode piorar insônia/ansiedade em alguns pacientes."
-    ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c7040fef-96a7-4429-9a8e-ec3ab17a8019",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Aripiprazole Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "LABEL_POSOLOGY_REFERENCE_DISPENSING_BLOCKED",
-      "doseAuto": false,
-      "indication": "autism_irritability",
-      "sourceUrls": [
-        "https://boletin.anmat.gob.ar/Marzo_2024/Dispo_2758-24.pdf",
-        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021436s046s050lbl.pdf"
-      ],
-      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
-      "jurisdiction": "AR",
-      "product": "LEMIDAL",
-      "formulation": "oral_tablet",
-      "minAge": 6,
-      "maxAge": 17,
-      "minWeightKg": null,
-      "calculationStatus": "BLOCKED_LEMIDAL_2MG_STRENGTH_UNVERIFIED",
-      "titrationAutomatic": false,
-      "maintenanceAutomatic": false,
-      "independentlyClinicallySignedOff": false,
-      "unit": "mg/day",
-      "dispensingNote": "Não converter em fração de comprimido: confirmar apresentação apta a fornecer 2 mg.",
-      "clinicalReferenceR27": {
-        "status": "LABEL_POSOLOGY_REFERENCE_DISPENSING_BLOCKED",
-        "product": "LEMIDAL",
-        "jurisdiction": "AR",
-        "formulation": "oral_tablet",
-        "indication": "autism_irritability",
-        "minAgeYears": 6,
-        "maxAgeYears": 17,
-        "route": "oral",
-        "unit": "mg/day",
-        "frequency": "once_daily",
-        "initialMgDay": 2,
-        "recommendedRangeMgDay": [
-          5,
-          15
-        ],
-        "labelEscalationStepsMgDay": [
-          2,
-          5,
-          10,
-          15
-        ],
-        "minimumEscalationIntervalDays": 7,
-        "maxIncreaseMgPerStep": 5,
-        "titrationIndividualized": true,
-        "strengthsConfirmedBy2024LabelMg": [
-          5,
-          10,
-          15,
-          20
-        ],
-        "initial2mgStrengthAvailableInNamedProduct": false,
-        "allowedAutomaticInitialDose": false,
-        "tabletSplittingNotAuthorizedByReviewedLabel": true,
-        "additionalIndicationsReferenceOnly": [
-          {
-            "indication": "schizophrenia",
-            "agesYears": [
-              13,
-              17
-            ],
-            "arLabelTargetMgDay": 10,
-            "arLabelMaxMgDay": 30,
-            "usAbilifyStartingMgDay": 2,
-            "usAbilifyTitrationMgDay": [
-              2,
-              5,
-              10
-            ],
-            "usScheduleMinDay": [
-              1,
-              3,
-              5
-            ],
-            "usDifferentProduct": true
-          },
-          {
-            "indication": "bipolar_i_mania",
-            "agesYears": [
-              10,
-              17
-            ],
-            "arLabelTargetMgDay": 10,
-            "usAbilifyStartingMgDay": 2,
-            "usAbilifyTitrationMgDay": [
-              2,
-              5,
-              10
-            ],
-            "usScheduleMinDay": [
-              1,
-              3,
-              5
-            ],
-            "usDifferentProduct": true
-          }
-        ],
-        "source": [
-          {
-            "url": "https://boletin.anmat.gob.ar/Marzo_2024/Dispo_2758-24.pdf",
-            "regulator": "ANMAT",
-            "disposition": "2758/2024",
-            "pages": [
-              1,
-              2,
-              5,
-              6
-            ],
-            "accessed": "2026-09-16"
-          },
-          {
-            "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021436s046s050lbl.pdf",
-            "regulator": "FDA",
-            "product": "ABILIFY not LEMIDAL",
-            "labelYear": 2025,
-            "pages": [
-              4,
-              5,
-              6
-            ],
-            "supplementaryCrossCheck": true,
-            "accessed": "2026-09-16"
-          }
-        ],
-        "marketAvailability2026": "NOT_VERIFIED",
-        "independentlyClinicallySignedOff": false
-      }
-    }
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "Inibidores fortes CYP2D6/3A4 exigem redução; indutores fortes CYP3A4 exigem aumento/evitação conforme bula; anti-hipertensivos e depressores SNC.",
+    "alerts": "Mortalidade aumentada em idosos com psicose por demência, SNM, discinesia tardia, hiperglicemia, hipotensão, convulsões e suicidabilidade em jovens. Seleção e titulação bloqueadas sem indicação, idade, medicamentos CYP2D6/3A4 e avaliação metabólica/neurológica.",
+    "ref": "https://www.otsuka-us.com/media/static/Abilify-PI.pdf",
+    "pediatricDose": "Regimes dependem de indicação e idade: esquizofrenia 13-17 anos alvo 10 mg/dia; bipolar 10-17 anos alvo 10 mg/dia; autismo 6-17 anos 5-15 mg/dia. AUTOMATABLE=NO sem indicação/idade.",
+    "pharmacologicClass": "Agonista parcial D2/D3 e 5-HT1A; antagonista 5-HT2A",
+    "presentations": "Comprimidos 2, 5, 10, 15, 20 e 30 mg; solução oral e formas dispersíveis podem variar por mercado.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade ~87%; pico 3-5 h; alta ligação proteica; CYP2D6/3A4; meia-vida ~75 h (146 h em metabolizadores 2D6 lentos).",
+    "renalDose": "Sem ajuste por função renal isolada.",
+    "hepaticDose": "Sem ajuste em Child-Pugh 5-15 segundo bula; individualizar tolerabilidade.",
+    "adverseEffects": "Acatisia, náusea, insônia, ansiedade, cefaleia, constipação e sonolência. Graves: Mortalidade aumentada em idosos com psicose por demência, SNM, discinesia tardia, hiperglicemia, hipotensão, convulsões e suicidabilidade em jovens.",
+    "monitoring": "Sintomas, suicidabilidade, acatisia/EPS, peso, glicemia, lipídios, PA, impulsos compulsivos e discinesia tardia.",
+    "administration": "VO uma vez/dia, com ou sem alimento; titular em intervalos adequados à meia-vida.",
+    "preparation": "Confirmar formulação antes de partir, dispersar ou substituir solução por comprimido.",
+    "infusionProtocol": "Não aplicável à forma oral.",
+    "pregnancy": "Registro de exposição disponível; usar após avaliação benefício-risco.",
+    "lactation": "Presente no leite e pode reduzir prolactina/suprimento; monitorar lactente e produção.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.otsuka-us.com/media/static/Abilify-PI.pdf",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=aripiprazole"
+    ]
   },
   "es": {
-    "name": "Aripiprazol",
-    "class": "Antipsicótico atípico agonista parcial dopaminérgico",
+    "name": "Aripiprazol oral",
+    "class": "Antipsicótico de segunda generación",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Abilify",
-        "Aristab",
-        "Aripiprazol EMS"
-      ],
-      "ar": [
-        "Abilify",
-        "Aripiprazol Bagó",
-        "Aripiprazol Gador"
-      ]
-    },
-    "presentation": [
-      "Comprimido 5 mg",
-      "Comprimido 10 mg",
-      "Comprimido 15 mg",
-      "Comprimido 20 mg",
-      "Comprimido 30 mg",
-      "Solución oral 1 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Esquizofrenia: iniciar 10–15 mg VO 1 vez/día; habitual 10–30 mg/día.",
-      "mania": "Manía aguda: 15 mg VO 1 vez/día; titular según respuesta.",
-      "depressaoAdjuvante": "Coadyuvante en depresión: iniciar 2–5 mg/día; habitual 2–15 mg/día.",
-      "maxDose": "Dosis máxima habitual: 30 mg/día."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Trastorno bipolar — manía aguda",
-      "Mantenimiento en trastorno bipolar",
-      "Coadyuvante en trastorno depresivo mayor",
-      "Irritabilidad asociada al trastorno del espectro autista",
-      "Síndrome de Tourette",
-      "Hiperprolactinemia inducida por antipsicótico en casos seleccionados"
-    ],
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 2, 5, 10, 15, 20 y 30 mg; solución oral y formas dispersables varían por mercado.",
+    "dose": "Esquizofrenia adulta: 10-15 mg VO una vez/día, objetivo 10-15 mg, máximo 30 mg/día. Manía bipolar: 15 mg/día (10-15 con litio/valproato), máximo 30 mg. Depresión adyuvante: iniciar 2-5 mg/día, rango 2-15 mg.",
+    "indications": "Esquizofrenia; manía/mixto bipolar I; adyuvante en depresión mayor; irritabilidad en autismo; Tourette, según edad y producto.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Agonista parcial D2 y 5HT1A, antagonista 5HT2A; estabiliza la neurotransmisión dopaminérgica con menor riesgo de prolactina elevada.",
+    "mechanism": "Agonista parcial D2/D3 y 5-HT1A; antagonista 5-HT2A. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Efecto en agitación/manía puede aparecer en días; efecto antipsicótico pleno en 2–6 semanas.",
     "halfLife": "Vida media aproximada: 75 horas; metabolito activo cerca de 94 horas.",
-    "commonAdverseEffects": [
-      "Acatisia",
-      "Insomnio",
-      "Náuseas",
-      "Cefalea",
-      "Ansiedad o activación",
-      "Mareos"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptico maligno",
-      "Discinesia tardía",
-      "Impulsividad/juego patológico/hipersexualidad en casos raros",
-      "Hiperglucemia y dislipidemia, generalmente menor que olanzapina",
-      "Convulsiones en predispuestos"
-    ],
+    "commonAdverseEffects": "Acatisia, náusea, insomnio, ansiedad, cefalea, estreñimiento y somnolencia.",
+    "dangerousAdverseEffects": "Mayor mortalidad en ancianos con psicosis por demencia, SNM, discinesia tardía, hiperglucemia, hipotensión, convulsiones y suicidabilidad en jóvenes.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad al aripiprazol",
-      "Demencia con psicosis sin evaluación especializada"
-    ],
-    "interactions": [
-      "Inhibidores fuertes de CYP2D6 como fluoxetina/paroxetina: aumentan niveles",
-      "Inhibidores fuertes de CYP3A4 como ketoconazol/claritromicina: aumentan niveles",
-      "Carbamazepina y rifampicina: reducen niveles",
-      "Antihipertensivos: riesgo de hipotensión",
-      "Alcohol y depresores del SNC"
-    ],
-    "alerts": [
-      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
-      "Aripiprazol oral: indicación, edad y titulación pediátrica difieren; no convertir pauta oral a Maintena/Aristada ni inferir dosis pediátrica de adultos. Comprobar interacciones CYP2D6/CYP3A4 según producto.",
-      "Registro de aripiprazol VO: no extrapolar a LAI. En ficha de comprimidos EUA: esquizofrenia pediátrica ≥13 años, manía bipolar ≥10, irritabilidad en autismo 6–17; dosis y titulación dependen de indicación. Sin cálculo pediátrico universal.",
-      "Monitorizar acatisia, especialmente al inicio.",
-      "Menor riesgo de aumento de peso e hiperprolactinemia que varios antipsicóticos, pero aun así monitorizar metabolismo.",
-      "Preguntar sobre impulsividad, juego, compras compulsivas o hipersexualidad.",
-      "Ajustar dosis en interacciones fuertes por CYP2D6/CYP3A4.",
-      "Puede empeorar insomnio/ansiedad en algunos pacientes."
-    ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c7040fef-96a7-4429-9a8e-ec3ab17a8019",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Aripiprazole Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "LABEL_POSOLOGY_REFERENCE_DISPENSING_BLOCKED",
-      "doseAuto": false,
-      "indication": "autism_irritability",
-      "sourceUrls": [
-        "https://boletin.anmat.gob.ar/Marzo_2024/Dispo_2758-24.pdf",
-        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021436s046s050lbl.pdf"
-      ],
-      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
-      "jurisdiction": "AR",
-      "product": "LEMIDAL",
-      "formulation": "oral_tablet",
-      "minAge": 6,
-      "maxAge": 17,
-      "minWeightKg": null,
-      "calculationStatus": "BLOCKED_LEMIDAL_2MG_STRENGTH_UNVERIFIED",
-      "titrationAutomatic": false,
-      "maintenanceAutomatic": false,
-      "independentlyClinicallySignedOff": false,
-      "unit": "mg/day",
-      "dispensingNote": "No convertir en fracción de comprimido: confirmar presentación apta para administrar 2 mg.",
-      "clinicalReferenceR27": {
-        "status": "LABEL_POSOLOGY_REFERENCE_DISPENSING_BLOCKED",
-        "product": "LEMIDAL",
-        "jurisdiction": "AR",
-        "formulation": "oral_tablet",
-        "indication": "autism_irritability",
-        "minAgeYears": 6,
-        "maxAgeYears": 17,
-        "route": "oral",
-        "unit": "mg/day",
-        "frequency": "once_daily",
-        "initialMgDay": 2,
-        "recommendedRangeMgDay": [
-          5,
-          15
-        ],
-        "labelEscalationStepsMgDay": [
-          2,
-          5,
-          10,
-          15
-        ],
-        "minimumEscalationIntervalDays": 7,
-        "maxIncreaseMgPerStep": 5,
-        "titrationIndividualized": true,
-        "strengthsConfirmedBy2024LabelMg": [
-          5,
-          10,
-          15,
-          20
-        ],
-        "initial2mgStrengthAvailableInNamedProduct": false,
-        "allowedAutomaticInitialDose": false,
-        "tabletSplittingNotAuthorizedByReviewedLabel": true,
-        "additionalIndicationsReferenceOnly": [
-          {
-            "indication": "schizophrenia",
-            "agesYears": [
-              13,
-              17
-            ],
-            "arLabelTargetMgDay": 10,
-            "arLabelMaxMgDay": 30,
-            "usAbilifyStartingMgDay": 2,
-            "usAbilifyTitrationMgDay": [
-              2,
-              5,
-              10
-            ],
-            "usScheduleMinDay": [
-              1,
-              3,
-              5
-            ],
-            "usDifferentProduct": true
-          },
-          {
-            "indication": "bipolar_i_mania",
-            "agesYears": [
-              10,
-              17
-            ],
-            "arLabelTargetMgDay": 10,
-            "usAbilifyStartingMgDay": 2,
-            "usAbilifyTitrationMgDay": [
-              2,
-              5,
-              10
-            ],
-            "usScheduleMinDay": [
-              1,
-              3,
-              5
-            ],
-            "usDifferentProduct": true
-          }
-        ],
-        "source": [
-          {
-            "url": "https://boletin.anmat.gob.ar/Marzo_2024/Dispo_2758-24.pdf",
-            "regulator": "ANMAT",
-            "disposition": "2758/2024",
-            "pages": [
-              1,
-              2,
-              5,
-              6
-            ],
-            "accessed": "2026-09-16"
-          },
-          {
-            "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/021436s046s050lbl.pdf",
-            "regulator": "FDA",
-            "product": "ABILIFY not LEMIDAL",
-            "labelYear": 2025,
-            "pages": [
-              4,
-              5,
-              6
-            ],
-            "supplementaryCrossCheck": true,
-            "accessed": "2026-09-16"
-          }
-        ],
-        "marketAvailability2026": "NOT_VERIFIED",
-        "independentlyClinicallySignedOff": false
-      }
-    }
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Inhibidores fuertes CYP2D6/3A4 requieren reducción; inductores fuertes CYP3A4 requieren aumento/evitación según ficha; antihipertensivos y depresores SNC.",
+    "alerts": "Mayor mortalidad en ancianos con psicosis por demencia, SNM, discinesia tardía, hiperglucemia, hipotensión, convulsiones y suicidabilidad en jóvenes. Seleção e titulação bloqueadas sem indicação, idade, medicamentos CYP2D6/3A4 e avaliação metabólica/neurológica.",
+    "ref": "https://www.otsuka-us.com/media/static/Abilify-PI.pdf",
+    "pediatricDose": "Regímenes dependen de indicación y edad: esquizofrenia 13-17 objetivo 10 mg/día; bipolar 10-17 objetivo 10 mg/día; autismo 6-17 años 5-15 mg/día. AUTOMATABLE=NO sin indicación/edad.",
+    "pharmacologicClass": "Agonista parcial D2/D3 y 5-HT1A; antagonista 5-HT2A",
+    "presentations": "Comprimidos 2, 5, 10, 15, 20 y 30 mg; solución oral y formas dispersables varían por mercado.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad ~87%; pico 3-5 h; alta unión proteica; CYP2D6/3A4; semivida ~75 h (146 h en metabolizadores 2D6 lentos).",
+    "renalDose": "Sin ajuste por función renal aislada.",
+    "hepaticDose": "Sin ajuste en Child-Pugh 5-15 según ficha; individualizar tolerabilidad.",
+    "adverseEffects": "Acatisia, náusea, insomnio, ansiedad, cefalea, estreñimiento y somnolencia. Graves: Mayor mortalidad en ancianos con psicosis por demencia, SNM, discinesia tardía, hiperglucemia, hipotensión, convulsiones y suicidabilidad en jóvenes.",
+    "monitoring": "Síntomas, suicidabilidad, acatisia/EPS, peso, glucemia, lípidos, PA, impulsos compulsivos y discinesia tardía.",
+    "administration": "VO una vez/día, con o sin alimentos; titular según semivida.",
+    "preparation": "Confirmar formulación antes de partir, dispersar o sustituir solución por comprimido.",
+    "infusionProtocol": "No aplicable a forma oral.",
+    "pregnancy": "Registro de exposición disponible; usar tras evaluar beneficio-riesgo.",
+    "lactation": "Presente en leche y puede reducir prolactina/suministro; vigilar lactante y producción.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.otsuka-us.com/media/static/Abilify-PI.pdf",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=aripiprazole"
+    ]
   },
   "name": {
-    "pt": "Aripiprazol",
-    "es": "Aripiprazol"
+    "pt": "Aripiprazol oral",
+    "es": "Aripiprazol oral"
   },
   "keywords": [
     "aripiprazol",
@@ -457,9 +105,21 @@
     "aripiprazol gador",
     "antipsicotico atipico agonista parcial dopaminergico"
   ],
-  "dataVersion": "clinical-data-v1-651204207193a35d",
-  "clinicalContentSha256": "651204207193a35d2fbaf4355a7b18420752b1899e9a148516ddda3d0f89a82b",
+  "dataVersion": "clinical-data-v1-95b8226b8af81490",
+  "clinicalContentSha256": "95b8226b8af81490a67a00056a0475edeabc0462101cf54cce1eddf7a7539bbb",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psicofarmacos.js"
+  "sourceModule": "psicofarmacos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psicofarmacos.js",
+    "sourceField": "aripiprazol.mcGoldClinicalV1",
+    "lote": "007",
+    "requiredFields": 33,
+    "approvedSha256": "ce8db330a22d993d0f20ecd247514972db328ff0f8a9db4a8978761cb5aea92a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

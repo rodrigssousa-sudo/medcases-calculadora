@@ -5,188 +5,106 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Apomorfina",
-    "class": "Agonista dopaminérgico de ação rápida",
+    "name": "Apomorfina subcutânea",
+    "class": "Agonista dopaminérgico de resgate",
     "category": "antiparkinsoniano",
-    "commercialNames": {
-      "br": [
-        "Apokinon",
-        "Apomorfina"
-      ],
-      "ar": [
-        "Apomorfina",
-        "Apokyn"
-      ]
-    },
-    "presentation": [
-      "Caneta SC 10 mg/mL",
-      "Ampola para infusão subcutânea contínua"
-    ],
-    "dose": {
-      "adulto": "Iniciar sob supervisão especializada com 1–2 mg SC durante episódio OFF; titular conforme resposta.",
-      "manutencao": "Dose individualizada para resgate de episódios OFF ou infusão contínua.",
-      "infusao": "Pode ser utilizada em infusão subcutânea contínua em pacientes selecionados.",
-      "maxDose": "Individualizar conforme protocolo especializado."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Solução SC 10 mg/mL em cartucho/caneta; não administrar IV.",
+    "dose": "Primeira dose deve ser supervisionada: 0,2 mL (2 mg) SC; pode testar 0,1 mL (1 mg) em candidatos selecionados. Titular em incrementos de 0,1 mL; máximo 0,6 mL (6 mg) por dose, até 5 doses/dia, separadas por ≥2 h.",
     "doseKg": {
       "standard": "Não se utiliza cálculo por kg.",
       "severe": "Titulação individual obrigatória.",
       "maxDose": "Conforme protocolo especializado."
     },
-    "indications": [
-      "Episódios OFF súbitos na doença de Parkinson",
-      "Flutuações motoras graves",
-      "Resgate motor rápido",
-      "Doença de Parkinson avançada",
-      "Infusão contínua em pacientes selecionados",
-      "Pacientes com OFF refratário apesar de levodopa otimizada"
-    ],
+    "indications": "Tratamento agudo e intermitente de episódios OFF em doença de Parkinson avançada.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Agonista potente dos receptores dopaminérgicos D1 e D2 com início extremamente rápido após administração subcutânea.",
+    "mechanism": "Agonista não ergolínico D1/D2. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Início de ação geralmente em 5–20 minutos.",
     "halfLife": "Vida média aproximada: 30–60 minutos.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Vômitos",
-      "Sonolência",
-      "Tontura",
-      "Hipotensão ortostática",
-      "Bocejos frequentes",
-      "Nódulos subcutâneos"
-    ],
-    "dangerousAdverseEffects": [
-      "Hipotensão grave",
-      "Síncope",
-      "Alucinações",
-      "Psicose",
-      "Ataques súbitos de sono",
-      "Discinesias importantes",
-      "Prolongamento QT e arritmias raras"
-    ],
+    "commonAdverseEffects": "Náusea, vômito, bocejo, sonolência, tontura, rinorreia e reação local.",
+    "dangerousAdverseEffects": "Hipotensão/síncope, adormecimento súbito, alucinações, discinesia, prolongamento QT, priapismo e eventos cardiovasculares.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade à apomorfina",
-      "Uso concomitante com ondansetrona",
-      "Hipotensão grave não controlada",
-      "Psicose grave ativa"
-    ],
-    "interactions": [
-      "Ondansetrona: contraindicação absoluta pelo risco de hipotensão grave e perda de consciência",
-      "Anti-hipertensivos: potencializam hipotensão",
-      "Levodopa: aumenta risco de discinesias",
-      "Álcool e sedativos: aumentam sonolência",
-      "Antipsicóticos: antagonizam efeito terapêutico"
-    ],
-    "alerts": [
-      "Uso geralmente restrito a neurologistas especializados em Parkinson.",
-      "Monitorar pressão arterial durante titulação.",
-      "Orientar paciente sobre episódios de sono súbito.",
-      "Contraindicada com ondansetrona.",
-      "Importante para resgate rápido de episódios OFF."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "MDS Parkinson Disease Guidelines",
-      "FDA/DailyMed Apomorphine Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Uso concomitante com antagonistas 5-HT3; hipersensibilidade a apomorfina/sulfitos.",
+    "interactions": "Antagonistas 5-HT3 podem causar hipotensão profunda/perda de consciência; anti-hipertensivos, nitratos, álcool e antagonistas dopaminérgicos.",
+    "alerts": "Hipotensão/síncope, adormecimento súbito, alucinações, discinesia, prolongamento QT, priapismo e eventos cardiovasculares. Dose em mL bloqueada sem teste supervisionado, PA, resposta clínica, função renal e confirmação 10 mg/mL.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=APOKYN",
+    "pharmacologicClass": "Agonista não ergolínico D1/D2",
+    "presentations": "Solução SC 10 mg/mL em cartucho/caneta; não administrar IV.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção SC rápida; Tmax 10-60 min; metabolismo por sulfatação e glicuronidação; meia-vida ~40 min.",
+    "pediatricDose": "Não estabelecida em pediatria. AUTOMATABLE=NO.",
+    "renalDose": "Comprometimento renal leve/moderado: iniciar 0,1 mL (1 mg); dados limitados no grave.",
+    "hepaticDose": "Cautela; farmacocinética não estudada adequadamente em insuficiência hepática.",
+    "adverseEffects": "Náusea, vômito, bocejo, sonolência, tontura, rinorreia e reação local. Graves: Hipotensão/síncope, adormecimento súbito, alucinações, discinesia, prolongamento QT, priapismo e eventos cardiovasculares.",
+    "monitoring": "PA ortostática, resposta OFF/ON, náusea, sonolência súbita, QT, comportamentos compulsivos e locais de injeção.",
+    "administration": "SC no abdome, coxa ou braço; alternar locais; primeira dose com PA supina/em pé monitorada.",
+    "preparation": "Caneta individual; confirmar concentração 10 mg/mL e conversão mL↔mg; não usar solução turva.",
+    "infusionProtocol": "Não aplicável; IV pode causar trombose/embolia e é proibida.",
+    "pregnancy": "Dados insuficientes; toxicidade embriofetal em animais.",
+    "lactation": "Desconhecido se passa ao leite; avaliar necessidade do tratamento.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=APOKYN",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.apokyn.com/sites/default/files/pdf/APOKYN_PI.pdf"
     ]
   },
   "es": {
-    "name": "Apomorfina",
-    "class": "Agonista dopaminérgico de acción rápida",
+    "name": "Apomorfina subcutánea",
+    "class": "Agonista dopaminérgico de rescate",
     "category": "antiparkinsoniano",
-    "commercialNames": {
-      "br": [
-        "Apokinon",
-        "Apomorfina"
-      ],
-      "ar": [
-        "Apomorfina",
-        "Apokyn"
-      ]
-    },
-    "presentation": [
-      "Pluma SC 10 mg/mL",
-      "Ampolla para infusión subcutánea continua"
-    ],
-    "dose": {
-      "adulto": "Iniciar bajo supervisión especializada con 1–2 mg SC durante episodio OFF; titular según respuesta.",
-      "manutencao": "Dosis individualizada para rescate de episodios OFF o infusión continua.",
-      "infusao": "Puede utilizarse en infusión subcutánea continua en pacientes seleccionados.",
-      "maxDose": "Individualizar según protocolo especializado."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Solución SC 10 mg/mL en cartucho/pluma; no administrar IV.",
+    "dose": "Primera dosis supervisada: 0,2 mL (2 mg) SC; puede probarse 0,1 mL (1 mg) en seleccionados. Titular en incrementos de 0,1 mL; máximo 0,6 mL (6 mg) por dosis, hasta 5 dosis/día, separadas ≥2 h.",
     "doseKg": {
       "standard": "No se utiliza cálculo por kg.",
       "severe": "Titulación individual obligatoria.",
       "maxDose": "Según protocolo especializado."
     },
-    "indications": [
-      "Episodios OFF súbitos en enfermedad de Parkinson",
-      "Fluctuaciones motoras graves",
-      "Rescate motor rápido",
-      "Enfermedad de Parkinson avanzada",
-      "Infusión continua en pacientes seleccionados",
-      "Pacientes con OFF refractario pese a levodopa optimizada"
-    ],
+    "indications": "Tratamiento agudo e intermitente de episodios OFF en enfermedad de Parkinson avanzada.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Agonista potente de receptores dopaminérgicos D1 y D2 con inicio extremadamente rápido tras administración subcutánea.",
+    "mechanism": "Agonista no ergolínico D1/D2. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Inicio de acción generalmente en 5–20 minutos.",
     "halfLife": "Vida media aproximada: 30–60 minutos.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Vómitos",
-      "Somnolencia",
-      "Mareos",
-      "Hipotensión ortostática",
-      "Bostezos frecuentes",
-      "Nódulos subcutáneos"
-    ],
-    "dangerousAdverseEffects": [
-      "Hipotensión grave",
-      "Síncope",
-      "Alucinaciones",
-      "Psicosis",
-      "Ataques súbitos de sueño",
-      "Discinesias importantes",
-      "Prolongación QT y arritmias raras"
-    ],
+    "commonAdverseEffects": "Náusea, vómito, bostezo, somnolencia, mareo, rinorrea y reacción local.",
+    "dangerousAdverseEffects": "Hipotensión/síncope, sueño súbito, alucinaciones, discinesia, prolongación QT, priapismo y eventos cardiovasculares.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a apomorfina",
-      "Uso concomitante con ondansetrón",
-      "Hipotensión grave no controlada",
-      "Psicosis grave activa"
-    ],
-    "interactions": [
-      "Ondansetrón: contraindicación absoluta por riesgo de hipotensión grave y pérdida de conciencia",
-      "Antihipertensivos: potencian hipotensión",
-      "Levodopa: aumenta riesgo de discinesias",
-      "Alcohol y sedantes: aumentan somnolencia",
-      "Antipsicóticos: antagonizan efecto terapéutico"
-    ],
-    "alerts": [
-      "Uso generalmente restringido a neurólogos especializados en Parkinson.",
-      "Monitorizar presión arterial durante la titulación.",
-      "Orientar al paciente sobre episodios de sueño súbito.",
-      "Contraindicada con ondansetrón.",
-      "Importante para rescate rápido de episodios OFF."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "MDS Parkinson Disease Guidelines",
-      "FDA/DailyMed Apomorphine Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Uso concomitante con antagonistas 5-HT3; hipersensibilidad a apomorfina/sulfitos.",
+    "interactions": "Antagonistas 5-HT3 pueden causar hipotensión profunda/pérdida de conciencia; antihipertensivos, nitratos, alcohol y antagonistas dopaminérgicos.",
+    "alerts": "Hipotensión/síncope, sueño súbito, alucinaciones, discinesia, prolongación QT, priapismo y eventos cardiovasculares. Dose em mL bloqueada sem teste supervisionado, PA, resposta clínica, função renal e confirmação 10 mg/mL.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=APOKYN",
+    "pharmacologicClass": "Agonista no ergolínico D1/D2",
+    "presentations": "Solución SC 10 mg/mL en cartucho/pluma; no administrar IV.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción SC rápida; Tmax 10-60 min; metabolismo por sulfatación y glucuronidación; semivida ~40 min.",
+    "pediatricDose": "No establecida en pediatría. AUTOMATABLE=NO.",
+    "renalDose": "Insuficiencia renal leve/moderada: iniciar 0,1 mL (1 mg); datos limitados en grave.",
+    "hepaticDose": "Precaución; farmacocinética no estudiada adecuadamente en insuficiencia hepática.",
+    "adverseEffects": "Náusea, vómito, bostezo, somnolencia, mareo, rinorrea y reacción local. Graves: Hipotensión/síncope, sueño súbito, alucinaciones, discinesia, prolongación QT, priapismo y eventos cardiovasculares.",
+    "monitoring": "PA ortostática, respuesta OFF/ON, náusea, sueño súbito, QT, conductas compulsivas y sitios de inyección.",
+    "administration": "SC en abdomen, muslo o brazo; rotar sitios; primera dosis con PA supina/de pie monitorizada.",
+    "preparation": "Pluma individual; confirmar concentración 10 mg/mL y conversión mL↔mg; no usar solución turbia.",
+    "infusionProtocol": "No aplicable; IV puede causar trombosis/embolia y está prohibida.",
+    "pregnancy": "Datos insuficientes; toxicidad embriofetal en animales.",
+    "lactation": "Se desconoce paso a leche; evaluar necesidad del tratamiento.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=APOKYN",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.apokyn.com/sites/default/files/pdf/APOKYN_PI.pdf"
     ]
   },
   "name": {
-    "pt": "Apomorfina",
-    "es": "Apomorfina"
+    "pt": "Apomorfina subcutânea",
+    "es": "Apomorfina subcutánea"
   },
   "keywords": [
     "apomorfina",
@@ -194,9 +112,21 @@
     "apokyn",
     "agonista dopaminergico de acao rapida"
   ],
-  "dataVersion": "clinical-data-v1-651204207193a35d",
-  "clinicalContentSha256": "651204207193a35d2fbaf4355a7b18420752b1899e9a148516ddda3d0f89a82b",
+  "dataVersion": "clinical-data-v1-95b8226b8af81490",
+  "clinicalContentSha256": "95b8226b8af81490a67a00056a0475edeabc0462101cf54cce1eddf7a7539bbb",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "neurologia.js"
+  "sourceModule": "neurologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/neurologia.js",
+    "sourceField": "apomorfina.mcGoldClinicalV1",
+    "lote": "007",
+    "requiredFields": 33,
+    "approvedSha256": "ce8db330a22d993d0f20ecd247514972db328ff0f8a9db4a8978761cb5aea92a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

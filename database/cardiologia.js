@@ -1206,3 +1206,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:amlodipino_valsartana:END */
+/* GOLD33_SELECTIVE:anlodipino:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB;if(!db||!db["anlodipino"])throw new Error("GOLD33_MISSING_CANONICAL:anlodipino");db["anlodipino"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "007",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ce8db330a22d993d0f20ecd247514972db328ff0f8a9db4a8978761cb5aea92a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Amlodipino (ID legado: anlodipino)",
+    "class": "Anti-hipertensivo; antianginoso",
+    "pharmacologicClass": "Bloqueador di-hidropiridínico de canais de cálcio",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 2,5 mg, 5 mg e 10 mg.",
+    "presentations": "Comprimidos 2,5 mg, 5 mg e 10 mg.",
+    "mechanism": "Bloqueador di-hidropiridínico de canais de cálcio. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade 64-90%; Tmax 6-12 h; ligação proteica ~93%; metabolismo hepático; meia-vida 30-50 h; eliminação urinária de metabólitos.",
+    "indications": "Hipertensão; angina crônica estável ou vasoespástica; doença coronariana documentada.",
+    "dose": "Adultos: iniciar 5 mg VO uma vez/dia; 2,5 mg em idosos frágeis ou insuficiência hepática. Máximo 10 mg uma vez/dia; titular em geral após 7-14 dias.",
+    "pediatricDose": "Hipertensão, 6-17 anos: 2,5-5 mg VO uma vez/dia; doses >5 mg não estudadas. AUTOMATABLE=NO sem idade e indicação.",
+    "renalDose": "Sem ajuste inicial habitual; não removido significativamente por hemodiálise.",
+    "hepaticDose": "Iniciar 2,5 mg/dia e titular lentamente em insuficiência hepática.",
+    "commonAdverseEffects": "Edema periférico, cefaleia, rubor, tontura, fadiga e palpitações.",
+    "dangerousAdverseEffects": "Hipotensão sintomática; piora transitória da angina/infarto ao iniciar ou aumentar em DAC grave.",
+    "adverseEffects": "Edema periférico, cefaleia, rubor, tontura, fadiga e palpitações. Graves: Hipotensão sintomática; piora transitória da angina/infarto ao iniciar ou aumentar em DAC grave.",
+    "contraindications": "Hipersensibilidade ao amlodipino ou componentes.",
+    "interactions": "Inibidores CYP3A4 podem aumentar exposição; sinvastatina deve ter dose limitada conforme bula; indutores podem reduzir efeito.",
+    "monitoring": "PA, edema, frequência cardíaca, sintomas de hipotensão e angina ao titular.",
+    "administration": "VO uma vez/dia, com ou sem alimento.",
+    "preparation": "Comprimido pronto; confirmar possibilidade de fracionamento do produto.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados observacionais não mostram sinal consistente; individualizar benefício-risco.",
+    "lactation": "Presente no leite; avaliar exposição do lactente e necessidade materna.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipotensão sintomática; piora transitória da angina/infarto ao iniciar ou aumentar em DAC grave. Preservar o ID legado anlodipino; não renomear automaticamente. Titulação bloqueada sem PA, indicação e função hepática.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=amlodipine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/019787s047lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=amlodipine"
+  },
+  "es": {
+    "name": "Amlodipino (ID heredado: anlodipino)",
+    "class": "Antihipertensivo; antianginoso",
+    "pharmacologicClass": "Bloqueador dihidropiridínico de canales de calcio",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 2,5 mg, 5 mg y 10 mg.",
+    "presentations": "Comprimidos 2,5 mg, 5 mg y 10 mg.",
+    "mechanism": "Bloqueador dihidropiridínico de canales de calcio. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad 64-90%; Tmax 6-12 h; unión proteica ~93%; metabolismo hepático; semivida 30-50 h; eliminación urinaria de metabolitos.",
+    "indications": "Hipertensión; angina crónica estable o vasoespástica; enfermedad coronaria documentada.",
+    "dose": "Adultos: iniciar 5 mg VO una vez/día; 2,5 mg en ancianos frágiles o insuficiencia hepática. Máximo 10 mg una vez/día; titular generalmente tras 7-14 días.",
+    "pediatricDose": "Hipertensión, 6-17 años: 2,5-5 mg VO una vez/día; dosis >5 mg no estudiadas. AUTOMATABLE=NO sin edad e indicación.",
+    "renalDose": "Sin ajuste inicial habitual; no se elimina significativamente por hemodiálisis.",
+    "hepaticDose": "Iniciar 2,5 mg/día y titular lentamente en insuficiencia hepática.",
+    "commonAdverseEffects": "Edema periférico, cefalea, rubor, mareo, fatiga y palpitaciones.",
+    "dangerousAdverseEffects": "Hipotensión sintomática; empeoramiento transitorio de angina/infarto al iniciar o aumentar en coronariopatía grave.",
+    "adverseEffects": "Edema periférico, cefalea, rubor, mareo, fatiga y palpitaciones. Graves: Hipotensión sintomática; empeoramiento transitorio de angina/infarto al iniciar o aumentar en coronariopatía grave.",
+    "contraindications": "Hipersensibilidad a amlodipino o componentes.",
+    "interactions": "Inhibidores CYP3A4 pueden aumentar exposición; limitar simvastatina según ficha; inductores pueden reducir efecto.",
+    "monitoring": "PA, edema, frecuencia cardíaca, síntomas de hipotensión y angina al titular.",
+    "administration": "VO una vez/día, con o sin alimentos.",
+    "preparation": "Comprimido listo; confirmar posibilidad de fraccionamiento del producto.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos observacionales no muestran señal consistente; individualizar beneficio-riesgo.",
+    "lactation": "Presente en leche; evaluar exposición del lactante y necesidad materna.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipotensión sintomática; empeoramiento transitorio de angina/infarto al iniciar o aumentar en coronariopatía grave. Preservar o ID legado anlodipino; não renomear automaticamente. Titulação bloqueada sem PA, indicação e função hepática.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=amlodipine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/019787s047lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=amlodipine"
+  }
+};})();
+/* GOLD33_SELECTIVE:anlodipino:END */
