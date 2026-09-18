@@ -6,17 +6,10 @@
   "colorTxt": "#B91C1C",
   "pt": {
     "name": "Atenolol",
-    "class": "Betabloqueador cardioseletivo",
-    "commercialNames": [
-      "Tenormin",
-      "Atenolol genérico"
-    ],
-    "presentation": "Comprimidos de 25 mg, 50 mg e 100 mg.",
-    "dose": {
-      "Hipertensão": "50 mg VO 1x/dia; se resposta insuficiente após 1–2 semanas, aumentar para 100 mg 1x/dia. Doses acima de 100 mg/dia geralmente não acrescentam benefício anti-hipertensivo.",
-      "Angina": "50 mg VO 1x/dia; pode aumentar para 100 mg após cerca de 1 semana. Alguns pacientes requerem 200 mg/dia.",
-      "IAM hemodinamicamente estável": "5 mg IV em 5 min; se tolerado, repetir 5 mg após 10 min. Se não houver contraindicação, seguir com 50 mg VO cerca de 10 min após a última dose IV, mais 50 mg 12 h depois, então 100 mg/dia ou 50 mg 2x/dia por 6–9 dias ou até alta, conforme protocolo."
-    },
+    "class": "Anti-hipertensivo e antianginoso",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos de 25, 50 e 100 mg; solução IV em algumas jurisdições.",
+    "dose": "Hipertensão: 50 mg VO uma vez/dia, podendo aumentar a 100 mg/dia. Angina: 50 mg/dia, titular a 100 mg; alguns pacientes requerem 200 mg. IAM: protocolo específico após estabilidade hemodinâmica.",
     "doseKg": {
       "padrao": null,
       "grave": null,
@@ -26,67 +19,20 @@
     "therapeuticRange": "FC alvo 55–70 bpm conforme contexto clínico; controle pressórico e de angina",
     "dilution": "Uso exclusivo via oral. Não diluir.",
     "speed": "Administrar 1x/dia, preferencialmente pela manhã.",
-    "commonAdverseEffects": [
-      "Bradicardia.",
-      "Fadiga e astenia.",
-      "Tontura.",
-      "Extremidades frias.",
-      "Sintomas gastrointestinais."
-    ],
-    "dangerousAdverseEffects": [
-      "Bradicardia grave e bloqueio AV.",
-      "Hipotensão importante.",
-      "Piora ou descompensação de insuficiência cardíaca.",
-      "Broncoespasmo em pacientes suscetíveis.",
-      "Hipoglicemia com mascaramento de sintomas adrenérgicos."
-    ],
+    "commonAdverseEffects": "Bradicardia, fadiga, tontura, extremidades frias, náusea e hipotensão.",
+    "dangerousAdverseEffects": "Bloqueio AV, choque, piora de IC, broncoespasmo e isquemia/infarto após suspensão abrupta.",
     "risksByPatient": [],
-    "alerts": [
-      "Não suspender abruptamente em doença coronariana.",
-      "Ajustar dose quando ClCr <35 mL/min/1,73 m².",
-      "Evitar iniciar/continuar em bradicardia importante, bloqueio avançado, choque ou insuficiência cardíaca descompensada.",
-      "Monitorar lactente se exposição durante amamentação for mantida."
-    ],
-    "ref": "DailyMed Atenolol tablets, current 2026 label.",
-    "pharmacologicClass": "Antagonista seletivo de receptores beta-1 adrenérgicos, sem atividade simpatomimética intrínseca significativa e sem atividade estabilizadora de membrana nas doses usuais.",
-    "mechanism": "Bloqueia predominantemente receptores beta-1 cardíacos, reduzindo frequência cardíaca, contratilidade, condução AV e liberação de renina. A seletividade beta-1 não é absoluta e diminui em doses maiores.",
-    "pharmacodynamics": [
-      "Reduz frequência cardíaca em repouso e exercício e diminui pressão arterial.",
-      "Reduz demanda miocárdica de oxigênio, contribuindo para efeito antianginoso.",
-      "Pode prolongar condução AV e precipitar bradicardia ou bloqueio em pacientes suscetíveis."
-    ],
+    "alerts": "Bloqueio AV, choque, piora de IC, broncoespasmo e isquemia/infarto após suspensão abrupta. Titulação bloqueada sem indicação, FC, PA, condução cardíaca, função renal e comedicações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=atenolol",
+    "pharmacologicClass": "Betabloqueador beta-1 seletivo",
+    "mechanism": "Betabloqueador beta-1 seletivo. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
     "onset": "Início do efeito em aproximadamente 1 hora após dose oral. Efeito máximo em 2–4 horas.",
-    "pharmacokinetics": {
-      "Absorção": "Absorção oral incompleta; fármaco relativamente hidrofílico.",
-      "Metabolismo": "Metabolismo hepático é mínimo.",
-      "Eliminação": "Predominantemente renal, em grande parte inalterado; acúmulo torna-se relevante quando ClCr cai abaixo de aproximadamente 35 mL/min/1,73 m²."
-    },
-    "indications": [
-      "Hipertensão arterial.",
-      "Tratamento de longo prazo da angina pectoris por aterosclerose coronariana.",
-      "Manejo de pacientes hemodinamicamente estáveis com infarto agudo do miocárdio conforme seleção clínica e protocolo."
-    ],
-    "contraindications": [
-      "Bradicardia sinusal.",
-      "Bloqueio cardíaco maior que primeiro grau sem marcapasso adequado.",
-      "Choque cardiogênico.",
-      "Insuficiência cardíaca manifesta/descompensada não controlada.",
-      "Hipersensibilidade ao atenolol ou componentes."
-    ],
-    "interactions": [
-      "Verapamil ou diltiazem podem aumentar bradicardia, depressão de contratilidade e bloqueio AV.",
-      "Digoxina pode produzir efeito bradicardizante aditivo.",
-      "Amiodarona e outros fármacos que deprimem nó sinusal/AV aumentam risco de bradicardia e bloqueio.",
-      "Clonidina: retirada deve ser planejada; a interrupção abrupta de clonidina em paciente betabloqueado pode agravar hipertensão rebote.",
-      "AINEs podem reduzir o efeito anti-hipertensivo em alguns pacientes."
-    ],
-    "monitoring": [
-      "Frequência cardíaca e pressão arterial.",
-      "ECG se bradicardia, síncope, distúrbio de condução ou uso de outros cronotrópicos negativos.",
-      "Função renal antes e durante tratamento em idosos ou DRC.",
-      "Sinais de congestão/piora de insuficiência cardíaca.",
-      "Glicemia em pacientes com diabetes ou risco de hipogliccemia."
-    ],
+    "pharmacokinetics": "Baixa metabolização hepática; eliminação renal predominante; meia-vida 6-7 h, prolongada na insuficiência renal.",
+    "indications": "Hipertensão; angina; redução de mortalidade após infarto agudo do miocárdio em pacientes selecionados.",
+    "contraindications": "Bradicardia sinusal, bloqueio cardíaco maior que primeiro grau, choque cardiogênico e insuficiência cardíaca descompensada.",
+    "interactions": "Verapamil/diltiazem, digoxina e outros cronotrópicos negativos aumentam bradicardia/bloqueio; clonidina exige sequência de retirada planejada.",
+    "monitoring": "PA, frequência cardíaca, ECG quando indicado, sintomas de IC, broncoespasmo, glicemia em diabéticos e função renal.",
     "overdose": {
       "signs": [
         "Bradicardia grave (FC < 40 bpm)",
@@ -107,29 +53,11 @@
         "8. ECMO em colapso circulatório refratário"
       ]
     },
-    "specialPopulations": {
-      "Idosos": "Escolher dose com cautela e avaliar função renal.",
-      "DRC": "Aplicar limites de dose por ClCr.",
-      "Doença broncoespástica": "Evitar betabloqueadores quando possível; se necessário, usar com cautela e na menor dose efetiva.",
-      "Diabetes": "Pode mascarar taquicardia da hipoglicemia.",
-      "Feocromocitoma": "Não usar betabloqueio isolado sem bloqueio alfa adequado."
-    },
-    "hepaticDose": "Como o metabolismo hepático é mínimo, não há ajuste hepático específico rotineiro na bula; titular pelo efeito clínico, frequência cardíaca e pressão arterial.",
-    "patientEducation": [
-      "Não interromper atenolol abruptamente.",
-      "Medir pulso e pressão conforme orientação.",
-      "Procurar atendimento por síncope, falta de ar nova, edema importante ou frequência cardíaca muito baixa.",
-      "Pessoas com diabetes devem reconhecer que palpitação/taquicardia da hipoglicemia pode estar mascarada."
-    ],
-    "clinicalPearls": [
-      "A eliminação é predominantemente renal; ajuste por função renal é mais importante que ajuste hepático.",
-      "Atenolol não é um dos três betabloqueadores com evidência específica de redução de mortalidade em ICFEr nas diretrizes de insuficiência cardíaca.",
-      "Cardioseletividade não significa ausência completa de risco de broncoespasmo."
-    ],
-    "guidelineRecommendations": [
-      "Usar conforme indicações de hipertensão, angina e cenário selecionado de IAM descritos em bula.",
-      "Para ICFEr, preferir betabloqueadores com benefício de mortalidade comprovado — bisoprolol, carvedilol ou metoprolol succinato — em vez de extrapolar benefício de classe para atenolol."
-    ],
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "hepaticDose": "Sem ajuste específico habitual; titular pela resposta.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
     "incompatibilities": "Formulação oral exclusiva. Sem incompatibilidades IV a relatar.",
     "renalReplacementTherapy": {
       "dialysePeritoneal": {
@@ -149,22 +77,8 @@
       "Prescrevê-lo como primeira escolha em DPOC + ICC — bisoprolol é preferencial pela maior seletividade β1 (75:1 vs 35:1).",
       "Não orientar paciente sobre mascaramento de taquicardia hipoglicêmica em diabéticos tratados com insulina."
     ],
-    "renalDose": {
-      "ClCr ≥35 mL/min": "Em geral não há acúmulo clinicamente importante; individualizar.",
-      "ClCr 15–35 mL/min": "Dose oral máxima recomendada 50 mg/dia.",
-      "ClCr <15 mL/min": "Dose oral máxima recomendada 25 mg/dia.",
-      "Hemodiálise": "Administrar 25 ou 50 mg após cada sessão de diálise sob supervisão hospitalar, conforme bula."
-    },
-    "safetyFlags": {
-      "bradycardiaRisk": true,
-      "avBlockRisk": true,
-      "hypotensionRisk": true,
-      "renalDoseAdjustment": true,
-      "bronchospasmRisk": true,
-      "hypoglycemiaMasking": true,
-      "abruptWithdrawalRisk": true,
-      "pregnancyFetalRisk": true
-    },
+    "renalDose": "ClCr 15-35 mL/min: máximo 50 mg/dia; ClCr <15: máximo 25 mg/dia. Hemodiálise: dose supervisionada após sessão conforme bula.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "auditNotes": {
       "status": "excellent_after_review_V2",
       "sourcePriority": [
@@ -180,43 +94,25 @@
       ],
       "note": "Betabloqueador β1 seletivo (β1:β2 ~35:1) hidrofílico VO. Eliminação renal >85% — único da classe com dialisabilidade relevante (~50% HD) e ajuste obrigatório em ClCr ≤ 35 mL/min. Sem evidência de redução de mortalidade em ICFEr. Auditoria V2 completada 2026-06."
     },
-    "presentations": [
-      "Comprimido 25 mg.",
-      "Comprimido 50 mg.",
-      "Comprimido 100 mg."
-    ],
-    "pediatricDose": "Segurança e eficácia em pacientes pediátricos não foram estabelecidas; não há dose pediátrica aprovada na bula.",
-    "adverseEffects": [
-      "Cardiovasculares: bradicardia, hipotensão, bloqueio AV, piora de insuficiência cardíaca.",
-      "Neurológicos: tontura, fadiga, letargia.",
-      "Respiratórios: broncoespasmo em suscetíveis.",
-      "Metabólicos: mascaramento de taquicardia associada à hipoglicemia."
-    ],
-    "administration": "Via oral, preferencialmente no mesmo horário diariamente. Não suspender abruptamente, especialmente em doença coronariana. Uso IV no IAM deve ocorrer em ambiente monitorizado e apenas em paciente adequadamente selecionado.",
-    "preparation": "Comprimidos não requerem preparo especial. Quando a formulação IV for utilizada em protocolo de IAM, seguir concentração e instruções específicas do produto disponível.",
-    "infusionProtocol": {
-      "IAM — IV": "5 mg IV durante 5 min; repetir 5 mg após 10 min se tolerado.",
-      "Monitorização": "ECG, frequência cardíaca e pressão arterial durante e após a administração; não prosseguir se surgirem bradicardia, hipotensão, bloqueio ou insuficiência cardíaca."
-    },
-    "pregnancy": "Atenolol atravessa a placenta e pode causar dano fetal. O uso durante a gestação foi associado a menor crescimento fetal; no período periparto há risco neonatal de bradicardia e hipoglicemia. Usar somente quando benefício justificar o risco.",
-    "lactation": "Atenolol é excretado no leite humano e pode atingir concentrações superiores às plasmáticas maternas. Foram relatadas bradicardia clinicamente relevante em lactentes; prematuros e lactentes com disfunção renal têm maior risco.",
+    "presentations": "Comprimidos de 25, 50 e 100 mg; solução IV em algumas jurisdições.",
+    "pediatricDose": "Segurança e eficácia não estabelecidas na bula consultada; uso pediátrico é off-label e individualizado. AUTOMATABLE=NO.",
+    "adverseEffects": "Bradicardia, fadiga, tontura, extremidades frias, náusea e hipotensão. Graves: Bloqueio AV, choque, piora de IC, broncoespasmo e isquemia/infarto após suspensão abrupta.",
+    "administration": "VO com ou sem alimento, de modo consistente; não interromper abruptamente.",
+    "preparation": "Comprimido pronto; confirmar possibilidade de fracionamento.",
+    "infusionProtocol": "Via IV apenas com protocolo, monitorização e apresentação apropriada.",
+    "pregnancy": "Pode causar restrição de crescimento fetal e bradicardia neonatal; individualizar.",
+    "lactation": "Passa ao leite em concentrações relevantes; monitorar bradicardia e hipoglicemia do lactente.",
     "references": [
-      "DailyMed — Atenolol tablets, updated 2026-01-01: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9cdc2ed-99bf-0d6a-e053-2a95a90a0262"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=atenolol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/018240s031lbl.pdf"
     ]
   },
   "es": {
     "name": "Atenolol",
-    "class": "Betabloqueante cardioselectivo",
-    "commercialNames": [
-      "Tenormin",
-      "Atenolol genérico"
-    ],
-    "presentation": "Comprimidos de 25 mg, 50 mg y 100 mg.",
-    "dose": {
-      "Hipertensión": "50 mg VO 1 vez/día; si respuesta insuficiente tras 1–2 semanas, aumentar a 100 mg 1 vez/día. Dosis superiores a 100 mg/día generalmente no agregan beneficio antihipertensivo.",
-      "Angina": "50 mg VO 1 vez/día; puede aumentar a 100 mg tras aproximadamente 1 semana. Algunos pacientes requieren 200 mg/día.",
-      "IAM hemodinámicamente estable": "5 mg IV en 5 min; si se tolera, repetir 5 mg tras 10 min. Si no hay contraindicación, continuar con 50 mg VO aproximadamente 10 min después de la última dosis IV, otros 50 mg 12 h después y luego 100 mg/día o 50 mg 2 veces/día durante 6–9 días o hasta el alta, según protocolo."
-    },
+    "class": "Antihipertensivo y antianginoso",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos de 25, 50 y 100 mg; solución IV en algunas jurisdicciones.",
+    "dose": "Hipertensión: 50 mg VO una vez/día, puede aumentarse a 100 mg/día. Angina: 50 mg/día, titular a 100 mg; algunos pacientes requieren 200 mg. IAM: protocolo específico tras estabilidad hemodinámica.",
     "doseKg": {
       "padrao": null,
       "grave": null,
@@ -226,67 +122,20 @@
     "therapeuticRange": "FC objetivo 55–70 lpm según contexto clínico; control tensional y de angina",
     "dilution": "Uso exclusivo vía oral. No diluir.",
     "speed": "Administrar 1 vez/día, preferiblemente por la mañana.",
-    "commonAdverseEffects": [
-      "Bradicardia.",
-      "Fatiga y astenia.",
-      "Mareo.",
-      "Extremidades frías.",
-      "Síntomas gastrointestinales."
-    ],
-    "dangerousAdverseEffects": [
-      "Bradicardia grave y bloqueo AV.",
-      "Hipotensión importante.",
-      "Empeoramiento o descompensación de insuficiencia cardíaca.",
-      "Broncoespasmo en pacientes susceptibles.",
-      "Hipoglucemia con enmascaramiento de síntomas adrenérgicos."
-    ],
+    "commonAdverseEffects": "Bradicardia, fatiga, mareo, extremidades frías, náusea e hipotensión.",
+    "dangerousAdverseEffects": "Bloqueo AV, choque, empeoramiento de IC, broncoespasmo e isquemia/infarto tras suspensión brusca.",
     "risksByPatient": [],
-    "alerts": [
-      "No suspender bruscamente en enfermedad coronaria.",
-      "Ajustar dosis cuando ClCr <35 mL/min/1,73 m².",
-      "Evitar iniciar/continuar con bradicardia importante, bloqueo avanzado, shock o insuficiencia cardíaca descompensada.",
-      "Monitorizar al lactante si se mantiene exposición durante lactancia."
-    ],
-    "ref": "DailyMed Atenolol tablets, current 2026 label.",
-    "pharmacologicClass": "Antagonista selectivo de receptores beta-1 adrenérgicos, sin actividad simpaticomimética intrínseca significativa ni actividad estabilizadora de membrana a dosis habituales.",
-    "mechanism": "Bloquea predominantemente receptores beta-1 cardíacos, reduciendo frecuencia cardíaca, contractilidad, conducción AV y liberación de renina. La selectividad beta-1 no es absoluta y disminuye con dosis mayores.",
-    "pharmacodynamics": [
-      "Reduce frecuencia cardíaca en reposo y ejercicio y disminuye presión arterial.",
-      "Reduce demanda miocárdica de oxígeno, contribuyendo al efecto antianginoso.",
-      "Puede prolongar conducción AV y precipitar bradicardia o bloqueo en pacientes susceptibles."
-    ],
+    "alerts": "Bloqueo AV, choque, empeoramiento de IC, broncoespasmo e isquemia/infarto tras suspensión brusca. Titulação bloqueada sem indicação, FC, PA, condução cardíaca, função renal e comedicações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=atenolol",
+    "pharmacologicClass": "Betabloqueante beta-1 selectivo",
+    "mechanism": "Betabloqueante beta-1 selectivo. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
     "onset": "Inicio del efecto en aproximadamente 1 hora tras dosis oral. Efecto máximo entre 2–4 horas.",
-    "pharmacokinetics": {
-      "Absorción": "Absorción oral incompleta; fármaco relativamente hidrofílico.",
-      "Metabolismo": "El metabolismo hepático es mínimo.",
-      "Eliminación": "Predominantemente renal, en gran parte sin cambios; la acumulación se vuelve relevante cuando ClCr cae por debajo de aproximadamente 35 mL/min/1,73 m²."
-    },
-    "indications": [
-      "Hipertensión arterial.",
-      "Tratamiento a largo plazo de angina de pecho por aterosclerosis coronaria.",
-      "Manejo de pacientes hemodinámicamente estables con infarto agudo de miocardio según selección clínica y protocolo."
-    ],
-    "contraindications": [
-      "Bradicardia sinusal.",
-      "Bloqueo cardíaco mayor que primer grado sin marcapasos adecuado.",
-      "Shock cardiogénico.",
-      "Insuficiencia cardíaca manifiesta/descompensada no controlada.",
-      "Hipersensibilidad a atenolol o componentes."
-    ],
-    "interactions": [
-      "Verapamilo o diltiazem pueden aumentar bradicardia, depresión de contractilidad y bloqueo AV.",
-      "Digoxina puede producir efecto bradicardizante aditivo.",
-      "Amiodarona y otros fármacos que deprimen nodo sinusal/AV aumentan riesgo de bradicardia y bloqueo.",
-      "Clonidina: la retirada debe planificarse; la interrupción brusca de clonidina en paciente betabloqueado puede agravar hipertensión rebote.",
-      "AINE pueden reducir el efecto antihipertensivo en algunos pacientes."
-    ],
-    "monitoring": [
-      "Frecuencia cardíaca y presión arterial.",
-      "ECG si hay bradicardia, síncope, trastorno de conducción o uso de otros cronotrópicos negativos.",
-      "Función renal antes y durante tratamiento en mayores o ERC.",
-      "Signos de congestión/empeoramiento de insuficiencia cardíaca.",
-      "Glucemia en pacientes con diabetes o riesgo de hipoglucemia."
-    ],
+    "pharmacokinetics": "Escaso metabolismo hepático; eliminación renal predominante; semivida 6-7 h, prolongada en insuficiencia renal.",
+    "indications": "Hipertensión; angina; reducción de mortalidad tras infarto agudo de miocardio en pacientes seleccionados.",
+    "contraindications": "Bradicardia sinusal, bloqueo cardíaco mayor de primer grado, choque cardiogénico e insuficiencia cardíaca descompensada.",
+    "interactions": "Verapamilo/diltiazem, digoxina y otros cronotrópicos negativos aumentan bradicardia/bloqueo; clonidina requiere retirada planificada.",
+    "monitoring": "PA, frecuencia cardíaca, ECG cuando proceda, síntomas de IC, broncoespasmo, glucemia en diabéticos y función renal.",
     "overdose": {
       "signs": [
         "Bradicardia grave (FC < 40 lpm)",
@@ -307,29 +156,11 @@
         "8. ECMO en colapso circulatorio refractario"
       ]
     },
-    "specialPopulations": {
-      "Adultos mayores": "Elegir dosis con cautela y evaluar función renal.",
-      "ERC": "Aplicar límites de dosis según ClCr.",
-      "Enfermedad broncoespástica": "Evitar betabloqueantes cuando sea posible; si son necesarios, usar con cautela y a la menor dosis efectiva.",
-      "Diabetes": "Puede enmascarar taquicardia de hipoglucemia.",
-      "Feocromocitoma": "No usar betabloqueo aislado sin bloqueo alfa adecuado."
-    },
-    "hepaticDose": "Como el metabolismo hepático es mínimo, no hay ajuste hepático específico rutinario en ficha; titular por efecto clínico, frecuencia cardíaca y presión arterial.",
-    "patientEducation": [
-      "No interrumpir atenolol bruscamente.",
-      "Controlar pulso y presión según indicación.",
-      "Consultar por síncope, nueva disnea, edema importante o frecuencia cardíaca muy baja.",
-      "Las personas con diabetes deben saber que palpitaciones/taquicardia de hipoglucemia pueden estar enmascaradas."
-    ],
-    "clinicalPearls": [
-      "La eliminación es predominantemente renal; el ajuste por función renal es más importante que el ajuste hepático.",
-      "Atenolol no es uno de los tres betabloqueantes con evidencia específica de reducción de mortalidad en ICFEr en las guías de insuficiencia cardíaca.",
-      "Cardioselectividad no significa ausencia completa de riesgo de broncoespasmo."
-    ],
-    "guidelineRecommendations": [
-      "Usar según indicaciones de hipertensión, angina y escenario seleccionado de IAM descritos en ficha.",
-      "Para ICFEr, preferir betabloqueantes con beneficio de mortalidad demostrado — bisoprolol, carvedilol o metoprolol succinato — en lugar de extrapolar beneficio de clase a atenolol."
-    ],
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "hepaticDose": "Sin ajuste específico habitual; titular según respuesta.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
     "incompatibilities": "Formulación oral exclusiva. Sin incompatibilidades IV a reportar.",
     "renalReplacementTherapy": {
       "dialysePeritoneal": {
@@ -349,22 +180,8 @@
       "Prescribirlo como primera elección en EPOC + ICC — bisoprolol es preferente por mayor selectividad β1 (75:1 vs 35:1).",
       "No orientar al paciente sobre el enmascaramiento de la taquicardia hipoglucémica en diabéticos tratados con insulina."
     ],
-    "renalDose": {
-      "ClCr ≥35 mL/min": "En general no hay acumulación clínicamente importante; individualizar.",
-      "ClCr 15–35 mL/min": "Dosis oral máxima recomendada 50 mg/día.",
-      "ClCr <15 mL/min": "Dosis oral máxima recomendada 25 mg/día.",
-      "Hemodiálisis": "Administrar 25 o 50 mg después de cada sesión de diálisis bajo supervisión hospitalaria, según ficha."
-    },
-    "safetyFlags": {
-      "bradycardiaRisk": true,
-      "avBlockRisk": true,
-      "hypotensionRisk": true,
-      "renalDoseAdjustment": true,
-      "bronchospasmRisk": true,
-      "hypoglycemiaMasking": true,
-      "abruptWithdrawalRisk": true,
-      "pregnancyFetalRisk": true
-    },
+    "renalDose": "ClCr 15-35 mL/min: máximo 50 mg/día; ClCr <15: máximo 25 mg/día. Hemodiálisis: dosis supervisada después de sesión según ficha.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "auditNotes": {
       "status": "excellent_after_review_V2",
       "sourcePriority": [
@@ -380,28 +197,17 @@
       ],
       "note": "Betabloqueante β1 selectivo (β1:β2 ~35:1) hidrofílico VO. Eliminación renal >85% — único de la clase con diálisis relevante (~50% HD) y ajuste obligatorio con ClCr ≤ 35 mL/min. Sin evidencia de reducción de mortalidad en ICFEr. Auditoría V2 completada 2026-06."
     },
-    "presentations": [
-      "Comprimido 25 mg.",
-      "Comprimido 50 mg.",
-      "Comprimido 100 mg."
-    ],
-    "pediatricDose": "La seguridad y eficacia en pacientes pediátricos no se han establecido; no existe dosis pediátrica aprobada en ficha.",
-    "adverseEffects": [
-      "Cardiovasculares: bradicardia, hipotensión, bloqueo AV, empeoramiento de insuficiencia cardíaca.",
-      "Neurológicos: mareo, fatiga, letargia.",
-      "Respiratorios: broncoespasmo en susceptibles.",
-      "Metabólicos: enmascaramiento de taquicardia asociada a hipoglucemia."
-    ],
-    "administration": "Vía oral, preferentemente a la misma hora todos los días. No suspender bruscamente, especialmente en enfermedad coronaria. El uso IV en IAM debe realizarse en ambiente monitorizado y solo en paciente adecuadamente seleccionado.",
-    "preparation": "Los comprimidos no requieren preparación especial. Cuando se utilice formulación IV en protocolo de IAM, seguir concentración e instrucciones específicas del producto disponible.",
-    "infusionProtocol": {
-      "IAM — IV": "5 mg IV durante 5 min; repetir 5 mg tras 10 min si se tolera.",
-      "Monitorización": "ECG, frecuencia cardíaca y presión arterial durante y después; no continuar si aparecen bradicardia, hipotensión, bloqueo o insuficiencia cardíaca."
-    },
-    "pregnancy": "Atenolol atraviesa la placenta y puede causar daño fetal. Su uso durante embarazo se asoció con menor crecimiento fetal; en el período periparto existe riesgo neonatal de bradicardia e hipoglucemia. Usar solo cuando el beneficio justifique el riesgo.",
-    "lactation": "Atenolol se excreta en leche humana y puede alcanzar concentraciones superiores a las plasmáticas maternas. Se ha comunicado bradicardia clínicamente relevante en lactantes; prematuros y lactantes con disfunción renal tienen mayor riesgo.",
+    "presentations": "Comprimidos de 25, 50 y 100 mg; solución IV en algunas jurisdicciones.",
+    "pediatricDose": "Seguridad y eficacia no establecidas en ficha consultada; uso pediátrico off-label e individualizado. AUTOMATABLE=NO.",
+    "adverseEffects": "Bradicardia, fatiga, mareo, extremidades frías, náusea e hipotensión. Graves: Bloqueo AV, choque, empeoramiento de IC, broncoespasmo e isquemia/infarto tras suspensión brusca.",
+    "administration": "VO con o sin alimentos, de forma consistente; no suspender bruscamente.",
+    "preparation": "Comprimido listo; confirmar posibilidad de fraccionamiento.",
+    "infusionProtocol": "Vía IV solo con protocolo, monitorización y presentación apropiada.",
+    "pregnancy": "Puede causar restricción del crecimiento fetal y bradicardia neonatal; individualizar.",
+    "lactation": "Pasa a leche en concentraciones relevantes; vigilar bradicardia e hipoglucemia del lactante.",
     "references": [
-      "DailyMed — Atenolol tablets, updated 2026-01-01: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9cdc2ed-99bf-0d6a-e053-2a95a90a0262"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=atenolol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/018240s031lbl.pdf"
     ]
   },
   "name": {
@@ -416,18 +222,21 @@
     "tenormin",
     "betabloqueador beta-1 seletivo"
   ],
-  "dataVersion": "clinical-data-v1-95b8226b8af81490",
-  "clinicalContentSha256": "95b8226b8af81490a67a00056a0475edeabc0462101cf54cce1eddf7a7539bbb",
+  "dataVersion": "clinical-data-v1-7649213855d278a3",
+  "clinicalContentSha256": "7649213855d278a3e4fbaacf1bd2fb36da543d8326d59b0e1d102f659e9960f8",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "atenolol.mcGoldClinicalV1",
-    "group": "GOLD_GROUP01_CARDIO_5",
-    "review": "2026-09",
+    "lote": "008",
     "requiredFields": 33,
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "6524d3c9be4ba255da914408ffdaee73a0124c52509a8a6d0807cabe670cb4a5",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

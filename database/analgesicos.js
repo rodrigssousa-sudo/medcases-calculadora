@@ -4518,3 +4518,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:alopurinol:END */
+/* GOLD33_SELECTIVE:azatioprina:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["azatioprina"])throw new Error("GOLD33_MISSING_CANONICAL:azatioprina");db["azatioprina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "008",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6524d3c9be4ba255da914408ffdaee73a0124c52509a8a6d0807cabe670cb4a5",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Azatioprina",
+    "class": "Imunossupressor",
+    "pharmacologicClass": "Antimetabólito purínico convertido em 6-mercaptopurina",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos de 50 mg; pó/solução injetável em alguns mercados.",
+    "presentations": "Comprimidos de 50 mg; pó/solução injetável em alguns mercados.",
+    "mechanism": "Antimetabólito purínico convertido em 6-mercaptopurina. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Pró-fármaco convertido em 6-MP; vias TPMT, NUDT15 e xantina oxidase influenciam eficácia/toxicidade; meia-vida plasmática curta, efeito imunológico tardio.",
+    "indications": "Prevenção de rejeição em transplante renal; artrite reumatoide grave refratária. Outros usos imunomediados são off-label conforme protocolo.",
+    "dose": "Transplante renal: inicial geralmente 3-5 mg/kg/dia, depois manutenção 1-3 mg/kg/dia. Artrite reumatoide: iniciar ~1 mg/kg/dia, aumentar gradualmente; máximo 2,5 mg/kg/dia.",
+    "pediatricDose": "Doses pediátricas dependem de indicação e frequentemente são off-label; exigir especialista, peso e protocolo. AUTOMATABLE=NO.",
+    "renalDose": "Considerar dose menor em disfunção renal; titular por hemograma e toxicidade.",
+    "hepaticDose": "Considerar dose menor e monitorização estreita; suspender em hepatotoxicidade clinicamente relevante.",
+    "commonAdverseEffects": "Náusea, vômito, leucopenia, anemia, trombocitopenia e infecções.",
+    "dangerousAdverseEffects": "Mielossupressão grave, hepatotoxicidade, pancreatite, infecções oportunistas e malignidades incluindo linfoma hepatoesplênico de células T.",
+    "adverseEffects": "Náusea, vômito, leucopenia, anemia, trombocitopenia e infecções. Graves: Mielossupressão grave, hepatotoxicidade, pancreatite, infecções oportunistas e malignidades incluindo linfoma hepatoesplênico de células T.",
+    "contraindications": "Hipersensibilidade; na artrite reumatoide, gravidez é contraindicação na bula consultada.",
+    "interactions": "Alopurinol exige reduzir azatioprina para cerca de 1/3-1/4; febuxostate deve ser evitado. Aminossalicilatos podem inibir TPMT; ACEI, ribavirina e outros mielotóxicos elevam risco.",
+    "monitoring": "TPMT/NUDT15 antes ou cedo no tratamento, hemograma frequente, função hepática/renal, infecção, pancreatite e câncer de pele/linfoma.",
+    "administration": "VO com alimento se náusea; usar luvas para comprimidos partidos quando aplicável; não esmagar sem controle de risco.",
+    "preparation": "Produto oral pronto; injetável exige protocolo e é reservado quando VO inviável.",
+    "infusionProtocol": "Não aplicável à forma oral; IV conforme produto específico.",
+    "pregnancy": "Risco fetal existe; decisão depende de indicação e alternativa, com especialista. Não suspender transplante/doença grave sem orientação.",
+    "lactation": "Metabólitos aparecem em baixa quantidade no leite; decisões especializadas e monitorização do lactente podem ser necessárias.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Mielossupressão grave, hepatotoxicidade, pancreatite, infecções oportunistas e malignidades incluindo linfoma hepatoesplênico de células T. Cálculo/titulação bloqueados sem indicação, peso, hemograma, função hepática/renal, TPMT/NUDT15 e revisão de alopurinol/febuxostate.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=azathioprine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/016324s034s035lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=azathioprine"
+  },
+  "es": {
+    "name": "Azatioprina",
+    "class": "Inmunosupresor",
+    "pharmacologicClass": "Antimetabolito purínico convertido en 6-mercaptopurina",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos de 50 mg; polvo/solución inyectable en algunos mercados.",
+    "presentations": "Comprimidos de 50 mg; polvo/solución inyectable en algunos mercados.",
+    "mechanism": "Antimetabolito purínico convertido en 6-mercaptopurina. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Profármaco convertido en 6-MP; TPMT, NUDT15 y xantina oxidasa influyen en eficacia/toxicidad; semivida plasmática corta, efecto inmunológico tardío.",
+    "indications": "Prevención del rechazo en trasplante renal; artritis reumatoide grave refractaria. Otros usos inmunomediados son off-label según protocolo.",
+    "dose": "Trasplante renal: inicial generalmente 3-5 mg/kg/día, luego mantenimiento 1-3 mg/kg/día. Artritis reumatoide: iniciar ~1 mg/kg/día, aumentar gradualmente; máximo 2,5 mg/kg/día.",
+    "pediatricDose": "Dosis pediátricas dependen de indicación y a menudo son off-label; requieren especialista, peso y protocolo. AUTOMATABLE=NO.",
+    "renalDose": "Considerar dosis menor en disfunción renal; titular por hemograma y toxicidad.",
+    "hepaticDose": "Considerar dosis menor y vigilancia estrecha; suspender ante hepatotoxicidad clínicamente relevante.",
+    "commonAdverseEffects": "Náusea, vómito, leucopenia, anemia, trombocitopenia e infecciones.",
+    "dangerousAdverseEffects": "Mielosupresión grave, hepatotoxicidad, pancreatitis, infecciones oportunistas y neoplasias, incluido linfoma hepatoesplénico de células T.",
+    "adverseEffects": "Náusea, vómito, leucopenia, anemia, trombocitopenia e infecciones. Graves: Mielosupresión grave, hepatotoxicidad, pancreatitis, infecciones oportunistas y neoplasias, incluido linfoma hepatoesplénico de células T.",
+    "contraindications": "Hipersensibilidad; en artritis reumatoide, embarazo es contraindicación en la ficha consultada.",
+    "interactions": "Alopurinol exige reducir azatioprina a ~1/3-1/4; evitar febuxostat. Aminosalicilatos pueden inhibir TPMT; IECA, ribavirina y otros mielotóxicos aumentan riesgo.",
+    "monitoring": "TPMT/NUDT15 antes o al inicio, hemograma frecuente, función hepática/renal, infección, pancreatitis y cáncer cutáneo/linfoma.",
+    "administration": "VO con alimentos si náusea; usar guantes con comprimidos partidos cuando proceda; no triturar sin control de riesgo.",
+    "preparation": "Producto oral listo; inyectable requiere protocolo y se reserva cuando VO no es viable.",
+    "infusionProtocol": "No aplicable a forma oral; IV según producto específico.",
+    "pregnancy": "Existe riesgo fetal; decisión según indicación y alternativas, con especialista. No suspender trasplante/enfermedad grave sin orientación.",
+    "lactation": "Metabolitos aparecen en baja cantidad en leche; se requieren decisiones especializadas y posible vigilancia del lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Mielosupresión grave, hepatotoxicidad, pancreatitis, infecciones oportunistas y neoplasias, incluido linfoma hepatoesplénico de células T. Cálculo/titulação bloqueados sem indicação, peso, hemograma, função hepática/renal, TPMT/NUDT15 e revisão de alopurinol/febuxostate.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=azathioprine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/016324s034s035lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=azathioprine"
+  }
+};})();
+/* GOLD33_SELECTIVE:azatioprina:END */
