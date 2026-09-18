@@ -9208,3 +9208,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:atomoxetina:END */
+/* GOLD33_SELECTIVE:baclofeno:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["baclofeno"])throw new Error("GOLD33_MISSING_CANONICAL:baclofeno");db["baclofeno"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "009",
+    "requiredFieldCount": 33,
+    "approvedSha256": "fbc238c39aa4dcfb79f685d3fa8aff362a039b63478bae6431f19e116a408e10",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Baclofeno oral",
+    "class": "Antiespástico",
+    "pharmacologicClass": "Agonista do receptor GABA-B",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 5, 10 e 20 mg; solução/grânulos variam. Baclofeno intratecal é produto distinto.",
+    "presentations": "Comprimidos 5, 10 e 20 mg; solução/grânulos variam. Baclofeno intratecal é produto distinto.",
+    "mechanism": "Agonista do receptor GABA-B. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção rápida, baixa ligação, pouco metabolismo e eliminação renal predominante inalterada; meia-vida ~3-4 h.",
+    "indications": "Espasticidade de origem medular, especialmente esclerose múltipla e lesões medulares; não indicada para espasmo reumático comum.",
+    "dose": "Iniciar 5 mg VO 3x/dia por 3 dias; aumentar progressivamente para 10, 15 e 20 mg 3x/dia em intervalos de 3 dias. Máximo 80 mg/dia na bula tradicional.",
+    "pediatricDose": "Segurança/eficácia oral não estabelecidas <12 anos na bula consultada; uso especializado. AUTOMATABLE=NO.",
+    "renalDose": "Eliminação renal: reduzir e titular muito lentamente; evitar ou usar extrema cautela em eGFR baixa/diálise.",
+    "hepaticDose": "Sem ajuste formal; cautela por sedação.",
+    "commonAdverseEffects": "Sonolência, tontura, fraqueza, fadiga, náusea e constipação.",
+    "dangerousAdverseEffects": "Depressão respiratória/coma em superdose ou acúmulo, convulsões, alucinações e síndrome de abstinência grave.",
+    "adverseEffects": "Sonolência, tontura, fraqueza, fadiga, náusea e constipação. Graves: Depressão respiratória/coma em superdose ou acúmulo, convulsões, alucinações e síndrome de abstinência grave.",
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "Álcool, opioides, benzodiazepínicos e outros depressores SNC aumentam sedação/depressão respiratória; anti-hipertensivos aumentam hipotensão.",
+    "monitoring": "Espasticidade, força, sedação, respiração, função renal, quedas, sintomas psiquiátricos e retirada.",
+    "administration": "VO com ou sem alimento; retirar gradualmente, nunca interromper abruptamente.",
+    "preparation": "Comprimido pronto; não converter para intratecal.",
+    "infusionProtocol": "Não aplicável à forma oral.",
+    "pregnancy": "Dados limitados; usar se benefício justificar.",
+    "lactation": "Passa ao leite em pequenas quantidades; monitorar sedação do lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Depressão respiratória/coma em superdose ou acúmulo, convulsões, alucinações e síndrome de abstinência grave. Titulação e retirada bloqueadas sem eGFR, dose atual, duração, sedação, comedicações e risco de abstinência.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=baclofen",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/017851s056lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=baclofen"
+  },
+  "es": {
+    "name": "Baclofeno oral",
+    "class": "Antiespástico",
+    "pharmacologicClass": "Agonista del receptor GABA-B",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 5, 10 y 20 mg; solución/gránulos varían. Baclofeno intratecal es producto distinto.",
+    "presentations": "Comprimidos 5, 10 y 20 mg; solución/gránulos varían. Baclofeno intratecal es producto distinto.",
+    "mechanism": "Agonista del receptor GABA-B. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción rápida, baja unión, poco metabolismo y eliminación renal predominante sin cambios; semivida ~3-4 h.",
+    "indications": "Espasticidad de origen medular, especialmente esclerosis múltiple y lesiones medulares; no indicado para espasmo reumático común.",
+    "dose": "Iniciar 5 mg VO 3 veces/día por 3 días; aumentar progresivamente a 10, 15 y 20 mg 3 veces/día en intervalos de 3 días. Máximo 80 mg/día en ficha tradicional.",
+    "pediatricDose": "Seguridad/eficacia oral no establecidas <12 años en ficha consultada; uso especializado. AUTOMATABLE=NO.",
+    "renalDose": "Eliminación renal: reducir y titular muy lentamente; evitar o extremar precaución con eGFR baja/diálisis.",
+    "hepaticDose": "Sin ajuste formal; precaución por sedación.",
+    "commonAdverseEffects": "Somnolencia, mareo, debilidad, fatiga, náusea y estreñimiento.",
+    "dangerousAdverseEffects": "Depresión respiratoria/coma por sobredosis o acumulación, convulsiones, alucinaciones y abstinencia grave.",
+    "adverseEffects": "Somnolencia, mareo, debilidad, fatiga, náusea y estreñimiento. Graves: Depresión respiratoria/coma por sobredosis o acumulación, convulsiones, alucinaciones y abstinencia grave.",
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Alcohol, opioides, benzodiacepinas y otros depresores SNC aumentan sedación/depresión respiratoria; antihipertensivos aumentan hipotensión.",
+    "monitoring": "Espasticidad, fuerza, sedación, respiración, función renal, caídas, síntomas psiquiátricos y retirada.",
+    "administration": "VO con o sin alimentos; retirar gradualmente, nunca suspender bruscamente.",
+    "preparation": "Comprimido listo; no convertir a vía intratecal.",
+    "infusionProtocol": "No aplicable a forma oral.",
+    "pregnancy": "Datos limitados; usar si beneficio lo justifica.",
+    "lactation": "Pasa a leche en pequeñas cantidades; vigilar sedación del lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Depresión respiratoria/coma por sobredosis o acumulación, convulsiones, alucinaciones y abstinencia grave. Titulação e retirada bloqueadas sem eGFR, dose atual, duração, sedação, comedicações e risco de abstinência.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=baclofen",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/017851s056lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=baclofen"
+  }
+};})();
+/* GOLD33_SELECTIVE:baclofeno:END */

@@ -6,12 +6,10 @@
   "colorTxt": null,
   "pt": {
     "name": "Aztreonam",
-    "class": "Antibiótico beta-lactâmico dirigido a Gram-negativos aeróbios",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Frascos para IV/IM.",
-    "dose": "Adultos: UTI 0,5–1 g q8–12h; sistêmicas moderadas 1–2 g q8–12h; graves/ameaça à vida ou Pseudomonas 2 g q6–8h; máximo 8 g/dia.",
+    "class": "Antibacteriano monobactâmico",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Pó para solução IV/IM de 1 e 2 g. Formulação inalatória é distinta.",
+    "dose": "ITU: 0,5-1 g IV/IM a cada 8-12 h; infecção sistêmica moderada: 1-2 g a cada 8-12 h; grave/ameaça à vida: 2 g a cada 6-8 h; máximo 8 g/dia.",
     "doseKg": {
       "standard": "30 mg/kg/dose EV 6/6h–8/8h (pediátrico)",
       "maxDose": "8 g/dia (adulto)"
@@ -19,77 +17,45 @@
     "therapeuticRange": "Tempo-dependente. EXCLUSIVAMENTE Gram-negativos aeróbicos (Pseudomonas, Enterobacterales). SEM atividade contra Gram-positivos ou anaeróbios.",
     "dilution": "EV: diluir em SF 0,9% ou SG 5% 50–100 mL.",
     "speed": "EV: infundir em 20–60 minutos.",
-    "commonAdverseEffects": [
-      "Diarreia",
-      "Náusea",
-      "Rash",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidade/convulsões em exposição excessiva"
-    ],
+    "commonAdverseEffects": "Reação local, rash, náusea, vômito e diarreia.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, hepatotoxicidade e convulsões com acúmulo.",
     "risksByPatient": [],
-    "alerts": [
-      "Sem cobertura Gram-positiva ou anaeróbia",
-      "Atenção à cadeia lateral compartilhada com ceftazidima",
-      "Ajustar fortemente na DRC/HD",
-      "MBL isolada não garante suscetibilidade se ESBL/AmpC coexistirem"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9a105eaf-ee77-4016-beeb-d425a5565db2",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
-    ],
-    "renalDose": "CrCl 10–30: após dose de ataque, cerca de metade da dose usual no intervalo habitual. CrCl <10/HD: dose inicial usual e manutenção de 1/4; em grave, adicionar 1/8 da dose inicial pós-HD.",
-    "pharmacologicClass": "Monobactâmico",
-    "mechanism": "Liga preferencialmente PBP3 de bacilos Gram-negativos e inibe síntese da parede; é estável a MBL, mas vulnerável a outras beta-lactamases.",
-    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC guia exposição.",
-    "pharmacokinetics": "IV/IM; distribuição extracelular e eliminação renal predominante; hemodiálise remove o fármaco.",
-    "indications": "Infecções por Gram-negativos aeróbios suscetíveis, incluindo Pseudomonas; sem atividade útil contra Gram-positivos ou anaeróbios.",
-    "presentations": [
-      "500 mg",
-      "1 g",
-      "2 g"
-    ],
-    "pediatricDose": "30 mg/kg IV q8h em leves/moderadas; 30 mg/kg q6–8h em moderadas/graves; máximo 120 mg/kg/dia. Dados insuficientes para ajuste renal pediátrico.",
-    "hepaticDose": "Sem ajuste hepático primário; em hepatopatia crônica com curso prolongado considerar redução/monitorização conforme protocolo.",
-    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
-    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
-    "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
-    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
-    "administration": "IV ou IM; IV preferida em doses >1 g, sepse, abscesso, peritonite e infecções graves.",
-    "preparation": "Reconstituir vigorosamente e usar dentro da estabilidade; inspecionar partículas/descoloração.",
-    "infusionProtocol": "Infusão intermitente padrão; em críticos/Pseudomonas pode-se considerar otimização fT>MIC conforme protocolo/estabilidade.",
-    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
-    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
-    "specialPopulations": "Pode ser útil em alergia imediata a muitos beta-lactâmicos, mas há potencial de reação cruzada com ceftazidima por cadeia lateral semelhante.",
-    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
-    "clinicalPearls": "Cobre apenas Gram-negativos aeróbios, incluindo Pseudomonas. MBL não hidrolisa aztreonam, porém ESBL/AmpC coexistentes podem; avibactam pode protegê-lo.",
-    "guidelineRecommendations": "IDSA 2026: para NDM/MBL, aztreonam-avibactam é opção preferida emergente e ceftazidima/avibactam + aztreonam continua razoável.",
-    "safetyFlags": [
-      "Alergia beta-lactâmica",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidade por acúmulo"
-    ],
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, hepatotoxicidade e convulsões com acúmulo. Dose/preparo bloqueados sem foco, gravidade, peso/idade, ClCr, via, frasco e cobertura microbiológica necessária.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=aztreonam",
+    "renalDose": "ClCr 10-30: dose inicial usual e depois 50%; ClCr <10: dose inicial e depois 25%; hemodiálise exige suplementação conforme bula.",
+    "pharmacologicClass": "Beta-lactâmico ativo contra aeróbios Gram-negativos",
+    "mechanism": "Beta-lactâmico ativo contra aeróbios Gram-negativos. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Distribuição extracelular; baixa ligação; meia-vida ~1,7 h; eliminação renal predominante inalterada.",
+    "indications": "Infecções suscetíveis por Gram-negativos, incluindo ITU, trato respiratório inferior, septicemia, pele, intra-abdominal e ginecológica; combinar cobertura Gram-positiva/anaeróbia quando necessária.",
+    "presentations": "Pó para solução IV/IM de 1 e 2 g. Formulação inalatória é distinta.",
+    "pediatricDose": "≥9 meses: 30 mg/kg IV a cada 6-8 h; grave em ≥2 anos até 50 mg/kg, sem exceder máximo adulto. AUTOMATABLE=NO sem idade, peso, foco e rim.",
+    "hepaticDose": "Sem ajuste definido; monitorar em disfunção hepática, sobretudo tratamento prolongado.",
+    "adverseEffects": "Reação local, rash, náusea, vômito e diarreia. Graves: Anafilaxia, SCAR, C. difficile, citopenias, hepatotoxicidade e convulsões com acúmulo.",
+    "contraindications": "Hipersensibilidade ao aztreonam; cautela especial se alergia a ceftazidima pela cadeia lateral compartilhada.",
+    "interactions": "Probenecida/furosemida elevam modestamente níveis; anticoagulantes e outros antibióticos exigem monitorização contextual.",
+    "monitoring": "Culturas, resposta, função renal/hepática/hematológica, alergia e C. difficile.",
+    "administration": "IV lenta em 3-5 min ou infusão em 20-60 min; IM profunda para doses apropriadas.",
+    "preparation": "Reconstituir/diluir conforme via, frasco e compatibilidade; não misturar com outros antimicrobianos sem dados.",
+    "infusionProtocol": "Infundir em 20-60 min quando diluído; confirmar concentração e estabilidade locais.",
+    "pregnancy": "Usar quando benefício justificar; atravessa placenta.",
+    "lactation": "Excretado em baixa quantidade; geralmente compatível com observação do lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9a105eaf-ee77-4016-beeb-d425a5565db2",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=aztreonam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/050580s043lbl.pdf"
     ]
   },
   "es": {
     "name": "Aztreonam",
-    "class": "Antibiótico betalactámico dirigido a Gram negativos aerobios",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Viales para IV/IM.",
-    "dose": "Adultos: UTI 0,5–1 g q8–12h; sistémicas moderadas 1–2 g q8–12h; graves/amenaza vital o Pseudomonas 2 g q6–8h; máximo 8 g/día.",
+    "class": "Antibacteriano monobactámico",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Polvo para solución IV/IM de 1 y 2 g. La formulación inhalatoria es distinta.",
+    "dose": "ITU: 0,5-1 g IV/IM cada 8-12 h; infección sistémica moderada: 1-2 g cada 8-12 h; grave/vital: 2 g cada 6-8 h; máximo 8 g/día.",
     "doseKg": {
       "standard": "30 mg/kg/dosis EV cada 6h–8h (pediátrico)",
       "maxDose": "8 g/día (adulto)"
@@ -97,67 +63,37 @@
     "therapeuticRange": "Tiempo-dependiente. EXCLUSIVAMENTE Gram-negativos aeróbicos (Pseudomonas, Enterobacterales). SIN actividad contra Gram-positivos o anaerobios.",
     "dilution": "EV: diluir en SF 0,9% o SG 5% 50–100 mL.",
     "speed": "EV: infundir en 20–60 minutos.",
-    "commonAdverseEffects": [
-      "Diarrea",
-      "Náuseas",
-      "Exantema",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidad/convulsiones por exposición excesiva"
-    ],
+    "commonAdverseEffects": "Reacción local, erupción, náusea, vómito y diarrea.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, C. difficile, citopenias, hepatotoxicidad y convulsiones por acumulación.",
     "risksByPatient": [],
-    "alerts": [
-      "Sin cobertura Gram positiva ni anaerobia",
-      "Atención a cadena lateral compartida con ceftazidima",
-      "Ajustar fuertemente en ERC/HD",
-      "MBL aislada no garantiza susceptibilidad si coexisten ESBL/AmpC"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9a105eaf-ee77-4016-beeb-d425a5565db2",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
-    ],
-    "renalDose": "ClCr 10–30: tras carga, aproximadamente mitad de dosis usual en intervalo habitual. ClCr <10/HD: dosis inicial usual y mantenimiento de 1/4; en grave, añadir 1/8 de la dosis inicial pos-HD.",
-    "pharmacologicClass": "Monobactámico",
-    "mechanism": "Se une preferentemente a PBP3 de bacilos Gram negativos e inhibe síntesis de pared; es estable a MBL, pero vulnerable a otras betalactamasas.",
-    "pharmacodynamics": "Bactericida dependiente del tiempo; fT>MIC guía exposición.",
-    "pharmacokinetics": "IV/IM; distribución extracelular y eliminación renal predominante; hemodiálisis elimina el fármaco.",
-    "indications": "Infecciones por Gram negativos aerobios susceptibles, incluido Pseudomonas; sin actividad útil contra Gram positivos o anaerobios.",
-    "presentations": [
-      "500 mg",
-      "1 g",
-      "2 g"
-    ],
-    "pediatricDose": "30 mg/kg IV q8h en leves/moderadas; 30 mg/kg q6–8h en moderadas/graves; máximo 120 mg/kg/día. Datos insuficientes para ajuste renal pediátrico.",
-    "hepaticDose": "Sin ajuste hepático primario; en hepatopatía crónica con curso prolongado considerar reducción/monitorización según protocolo.",
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
-    "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
-    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
-    "administration": "IV o IM; IV preferida en dosis >1 g, sepsis, absceso, peritonitis e infecciones graves.",
-    "preparation": "Reconstituir vigorosamente y usar dentro de estabilidad; inspeccionar partículas/color.",
-    "infusionProtocol": "Infusión intermitente estándar; en críticos/Pseudomonas puede considerarse optimización fT>MIC según protocolo/estabilidad.",
-    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
-    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
-    "specialPopulations": "Puede ser útil en alergia inmediata a muchos betalactámicos, pero existe potencial de reacción cruzada con ceftazidima por cadena lateral similar.",
-    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
-    "clinicalPearls": "Cubre solo Gram negativos aerobios, incluido Pseudomonas. MBL no hidroliza aztreonam, pero ESBL/AmpC coexistentes sí; avibactam puede protegerlo.",
-    "guidelineRecommendations": "IDSA 2026: para NDM/MBL, aztreonam-avibactam es opción preferida emergente y ceftazidima/avibactam + aztreonam sigue siendo razonable.",
-    "safetyFlags": [
-      "Alergia a betalactámicos",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidad por acumulación"
-    ],
+    "alerts": "Anafilaxia, SCAR, C. difficile, citopenias, hepatotoxicidad y convulsiones por acumulación. Dose/preparo bloqueados sem foco, gravidade, peso/idade, ClCr, via, frasco e cobertura microbiológica necessária.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=aztreonam",
+    "renalDose": "ClCr 10-30: dosis inicial habitual y luego 50%; ClCr <10: dosis inicial y luego 25%; hemodiálisis requiere suplemento según ficha.",
+    "pharmacologicClass": "Betalactámico activo contra aerobios gramnegativos",
+    "mechanism": "Betalactámico activo contra aerobios gramnegativos. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Distribución extracelular; baja unión; semivida ~1,7 h; eliminación renal predominante sin cambios.",
+    "indications": "Infecciones susceptibles por gramnegativos, incluidas ITU, respiratorias bajas, sepsis, piel, intraabdominales y ginecológicas; combinar cobertura grampositiva/anaerobia cuando sea necesario.",
+    "presentations": "Polvo para solución IV/IM de 1 y 2 g. La formulación inhalatoria es distinta.",
+    "pediatricDose": "≥9 meses: 30 mg/kg IV cada 6-8 h; grave en ≥2 años hasta 50 mg/kg, sin superar máximo adulto. AUTOMATABLE=NO sin edad, peso, foco y riñón.",
+    "hepaticDose": "Sin ajuste definido; vigilar en disfunción hepática, especialmente tratamiento prolongado.",
+    "adverseEffects": "Reacción local, erupción, náusea, vómito y diarrea. Graves: Anafilaxia, SCAR, C. difficile, citopenias, hepatotoxicidad y convulsiones por acumulación.",
+    "contraindications": "Hipersensibilidad a aztreonam; precaución especial con alergia a ceftazidima por cadena lateral compartida.",
+    "interactions": "Probenecid/furosemida elevan modestamente niveles; anticoagulantes y otros antibióticos requieren vigilancia contextual.",
+    "monitoring": "Cultivos, respuesta, función renal/hepática/hematológica, alergia y C. difficile.",
+    "administration": "IV lenta en 3-5 min o infusión en 20-60 min; IM profunda para dosis apropiadas.",
+    "preparation": "Reconstituir/diluir según vía, vial y compatibilidad; no mezclar con otros antimicrobianos sin datos.",
+    "infusionProtocol": "Infundir en 20-60 min cuando se diluya; confirmar concentración y estabilidad locales.",
+    "pregnancy": "Usar cuando beneficio lo justifique; atraviesa placenta.",
+    "lactation": "Excretado en baja cantidad; generalmente compatible con vigilancia del lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9a105eaf-ee77-4016-beeb-d425a5565db2",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=aztreonam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/050580s043lbl.pdf"
     ]
   },
   "name": {
@@ -170,9 +106,21 @@
     "aztreonam generico",
     "monobactamico (beta-lactamico monociclico)"
   ],
-  "dataVersion": "clinical-data-v1-7649213855d278a3",
-  "clinicalContentSha256": "7649213855d278a3e4fbaacf1bd2fb36da543d8326d59b0e1d102f659e9960f8",
+  "dataVersion": "clinical-data-v1-2f437bd1f929863b",
+  "clinicalContentSha256": "2f437bd1f929863bd7362f40f372f0f7629ceefda5c70036222bc7400287c251",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "aztreonam.mcGoldClinicalV1",
+    "lote": "009",
+    "requiredFields": 33,
+    "approvedSha256": "fbc238c39aa4dcfb79f685d3fa8aff362a039b63478bae6431f19e116a408e10",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

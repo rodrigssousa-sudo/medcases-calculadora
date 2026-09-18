@@ -6,12 +6,10 @@
   "colorTxt": null,
   "pt": {
     "name": "Azitromicina",
-    "class": "Antibiótico macrolídeo",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Comprimidos, suspensão oral e formulação IV.",
-    "dose": "Regimes variam por foco; exemplo respiratório 500 mg dia 1 seguido 250 mg dias 2–5 ou 500 mg/dia por 3 dias conforme indicação.",
+    "class": "Antibacteriano macrolídeo",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 250/500/600 mg; suspensão 100 ou 200 mg/5 mL; pó IV 500 mg.",
+    "dose": "Exemplos: pneumonia adquirida na comunidade 500 mg no dia 1, depois 250 mg/dia nos dias 2-5; clamídia genital não complicada 1 g VO dose única. Usar esquema específico do foco.",
     "doseKg": {
       "esquema3Dias": "10 mg/kg/dia por 3 dias",
       "esquema5Dias": "10 mg/kg no dia 1 + 5 mg/kg/dia do dia 2 ao 5",
@@ -20,76 +18,45 @@
     "therapeuticRange": "Faixa usual pediátrica: 5–10 mg/kg/dia conforme indicação clínica.",
     "dilution": "Via oral: não necessita diluição. EV: reconstituir e diluir conforme protocolo institucional.",
     "speed": "VO: administrar 1x/dia. EV: infundir lentamente conforme protocolo hospitalar.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Cefaleia",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Torsades/prolongamento QT",
-      "Hepatotoxicidade grave",
-      "Anafilaxia/SCAR",
-      "C. difficile"
-    ],
+    "commonAdverseEffects": "Diarreia, náusea, dor abdominal e vômito.",
+    "dangerousAdverseEffects": "QT/torsades, hepatotoxicidade, anafilaxia/SCAR, C. difficile, perda auditiva e piora de miastenia.",
     "risksByPatient": [],
-    "alerts": [
-      "QT/torsades",
-      "Hepatotoxicidade",
-      "Risco cardiovascular em suscetíveis",
-      "Estenose hipertrófica de piloro em neonatos",
-      "Pode exacerbar miastenia"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=661ff7a6-6394-493d-a307-a1f607e5d117",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5199689f-8881-7757-e063-6394a90ae2eb",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
-    ],
-    "renalDose": "Sem ajuste habitual em DRC leve/moderada; cautela em insuficiência renal grave.",
-    "pharmacologicClass": "Azalídeo/macrolídeo",
-    "mechanism": "Liga-se ao 23S rRNA da subunidade 50S e bloqueia translocação da cadeia peptídica.",
-    "pharmacodynamics": "A exposição AUC/MIC é importante; longa meia-vida e alta concentração intracelular sustentam efeito pós-dose.",
-    "pharmacokinetics": "VO/IV; grande volume de distribuição e acúmulo intracelular, meia-vida longa e eliminação principalmente biliar.",
-    "indications": "Infecções respiratórias por patógenos suscetíveis e atípicos e outras indicações específicas; resistência local limita monoterapia empírica.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "Suspensão oral",
-      "500 mg IV"
-    ],
-    "pediatricDose": "Muitos esquemas respiratórios usam 10 mg/kg dia 1 e 5 mg/kg dias 2–5, respeitando máximos; neonatos exigem cautela.",
-    "hepaticDose": "Contraindicada se houve icterícia colestática/disfunção hepática por azitromicina prévia; suspender se sinais de hepatite.",
-    "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
-    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
-    "interactions": "Revisar outros prolongadores de QT, antiarrítmicos, eletrólitos, warfarina e nelfinavir conforme rótulo.",
-    "monitoring": "ECG/eletrólitos em alto risco, sinais de hepatite e resposta clínica; revisar resistência local quando usada para CAP.",
-    "administration": "VO conforme formulação; IV apenas por infusão, nunca bolus.",
-    "preparation": "Reconstituir suspensão/IV conforme fabricante; apresentações podem ter instruções diferentes.",
-    "infusionProtocol": "IV deve ser diluída e infundida lentamente; não administrar IM ou bolus IV.",
-    "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
-    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
-    "specialPopulations": "Idosos e pacientes com QT longo, distúrbios eletrolíticos, bradicardia ou antiarrítmicos têm maior risco de torsades.",
-    "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
-    "clinicalPearls": "Excelente atividade contra atípicos, mas resistência macrolídica local pode inviabilizar monoterapia empírica para pneumococo; avaliar risco cardíaco.",
-    "guidelineRecommendations": "Diretrizes de CAP usam macrolídeo em contextos selecionados e conforme resistência local/combinação; evitar uso desnecessário e revisar QT/interações.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorização de toxicidade"
-    ],
+    "alerts": "QT/torsades, hepatotoxicidade, anafilaxia/SCAR, C. difficile, perda auditiva e piora de miastenia. Cálculo bloqueado sem foco, peso/idade, formulação, concentração, função hepática e risco de QT.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=azithromycin",
+    "renalDose": "Sem ajuste usual; cautela em eGFR <10 mL/min.",
+    "pharmacologicClass": "Azalídeo inibidor da subunidade ribossomal 50S",
+    "mechanism": "Azalídeo inibidor da subunidade ribossomal 50S. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade ~37%; ampla distribuição e acúmulo tecidual; meia-vida terminal ~68 h; eliminação biliar predominante.",
+    "indications": "Infecções por microrganismos suscetíveis; indicação, dose e duração dependem do foco.",
+    "presentations": "Comprimidos 250/500/600 mg; suspensão 100 ou 200 mg/5 mL; pó IV 500 mg.",
+    "pediatricDose": "Otite/PAC: 10 mg/kg no dia 1, depois 5 mg/kg/dia dias 2-5, ou esquemas alternativos autorizados; máximos adultos. AUTOMATABLE=NO sem foco, idade, peso e concentração.",
+    "hepaticDose": "Evitar em doença hepática grave; suspender se hepatite/disfunção.",
+    "adverseEffects": "Diarreia, náusea, dor abdominal e vômito. Graves: QT/torsades, hepatotoxicidade, anafilaxia/SCAR, C. difficile, perda auditiva e piora de miastenia.",
+    "contraindications": "Hipersensibilidade a macrolídeos; história de icterícia colestática/disfunção hepática por azitromicina.",
+    "interactions": "Fármacos que prolongam QT, antiácidos de alumínio/magnésio simultâneos, digoxina e anticoagulantes; revisar interações.",
+    "monitoring": "Resposta, culturas, QT/eletrólitos se risco, função hepática, diarreia e sinais de miastenia.",
+    "administration": "VO com ou sem alimento; cápsulas podem exigir jejum conforme produto. IV somente por infusão.",
+    "preparation": "Suspensão: reconstituir conforme frasco e agitar. IV: reconstituir/diluir para concentração autorizada.",
+    "infusionProtocol": "IV: 1 mg/mL por 3 h ou 2 mg/mL por 1 h; nunca bolus/IM.",
+    "pregnancy": "Dados disponíveis não mostram grande risco teratogênico; usar quando indicada.",
+    "lactation": "Passa ao leite; observar diarreia, candidíase ou rash no lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=661ff7a6-6394-493d-a307-a1f607e5d117",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5199689f-8881-7757-e063-6394a90ae2eb",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=azithromycin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/050710s039,050711s036,050784s023lbl.pdf"
     ]
   },
   "es": {
     "name": "Azitromicina",
-    "class": "Antibiótico macrólido",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos, suspensión oral y formulación IV.",
-    "dose": "Esquemas varían por foco; ejemplo respiratorio 500 mg día 1 seguido 250 mg días 2–5 o 500 mg/día por 3 días según indicación.",
+    "class": "Antibacteriano macrólido",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 250/500/600 mg; suspensión 100 o 200 mg/5 mL; polvo IV 500 mg.",
+    "dose": "Ejemplos: neumonía comunitaria 500 mg día 1, luego 250 mg/día días 2-5; clamidia genital no complicada 1 g VO dosis única. Usar esquema específico del foco.",
     "doseKg": {
       "esquema3Dias": "10 mg/kg/día por 3 días",
       "esquema5Dias": "10 mg/kg el día 1 + 5 mg/kg/día del día 2 al 5",
@@ -98,66 +65,37 @@
     "therapeuticRange": "Rango usual pediátrico: 5–10 mg/kg/día según indicación clínica.",
     "dilution": "Vía oral: no requiere dilución. EV: reconstituir y diluir según protocolo institucional.",
     "speed": "VO: administrar 1 vez/día. EV: infundir lentamente según protocolo hospitalario.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Cefalea",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Torsades/prolongación QT",
-      "Hepatotoxicidad grave",
-      "Anafilaxia/SCAR",
-      "C. difficile"
-    ],
+    "commonAdverseEffects": "Diarrea, náusea, dolor abdominal y vómito.",
+    "dangerousAdverseEffects": "QT/torsades, hepatotoxicidad, anafilaxia/SCAR, C. difficile, pérdida auditiva y empeoramiento de miastenia.",
     "risksByPatient": [],
-    "alerts": [
-      "QT/torsades",
-      "Hepatotoxicidad",
-      "Riesgo cardiovascular en susceptibles",
-      "Estenosis hipertrófica de píloro en neonatos",
-      "Puede exacerbar miastenia"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=661ff7a6-6394-493d-a307-a1f607e5d117",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5199689f-8881-7757-e063-6394a90ae2eb",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
-    ],
-    "renalDose": "Sin ajuste habitual en ERC leve/moderada; precaución en insuficiencia renal grave.",
-    "pharmacologicClass": "Azálido/macrólido",
-    "mechanism": "Se une al 23S rRNA de subunidad 50S y bloquea translocación de cadena peptídica.",
-    "pharmacodynamics": "La exposición AUC/MIC es importante; semivida larga y alta concentración intracelular sostienen efecto posdosis.",
-    "pharmacokinetics": "VO/IV; gran volumen de distribución y acumulación intracelular, semivida larga y eliminación principalmente biliar.",
-    "indications": "Infecciones respiratorias por patógenos susceptibles y atípicos y otras indicaciones específicas; resistencia local limita monoterapia empírica.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "Suspensión oral",
-      "500 mg IV"
-    ],
-    "pediatricDose": "Muchos esquemas respiratorios usan 10 mg/kg día 1 y 5 mg/kg días 2–5, respetando máximos; neonatos requieren cautela.",
-    "hepaticDose": "Contraindicada si hubo ictericia colestásica/disfunción hepática por azitromicina previa; suspender ante hepatitis.",
-    "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
-    "interactions": "Revisar otros prolongadores de QT, antiarrítmicos, electrolitos, warfarina y nelfinavir según ficha.",
-    "monitoring": "ECG/electrolitos en alto riesgo, signos de hepatitis y respuesta clínica; revisar resistencia local si se usa en CAP.",
-    "administration": "VO según formulación; IV solo por infusión, nunca bolo.",
-    "preparation": "Reconstituir suspensión/IV según fabricante; presentaciones pueden tener instrucciones diferentes.",
-    "infusionProtocol": "IV debe diluirse e infundirse lentamente; no administrar IM ni bolo IV.",
-    "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
-    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
-    "specialPopulations": "Ancianos y pacientes con QT largo, alteraciones electrolíticas, bradicardia o antiarrítmicos tienen mayor riesgo de torsades.",
-    "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
-    "clinicalPearls": "Excelente actividad frente a atípicos, pero resistencia macrólida local puede impedir monoterapia empírica para neumococo; valorar riesgo cardíaco.",
-    "guidelineRecommendations": "Guías de CAP usan macrólido en contextos seleccionados y según resistencia local/combinación; evitar uso innecesario y revisar QT/interacciones.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorización de toxicidad"
-    ],
+    "alerts": "QT/torsades, hepatotoxicidad, anafilaxia/SCAR, C. difficile, pérdida auditiva y empeoramiento de miastenia. Cálculo bloqueado sem foco, peso/idade, formulação, concentração, função hepática e risco de QT.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=azithromycin",
+    "renalDose": "Sin ajuste usual; precaución con eGFR <10 mL/min.",
+    "pharmacologicClass": "Azálido inhibidor de la subunidad ribosomal 50S",
+    "mechanism": "Azálido inhibidor de la subunidad ribosomal 50S. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad ~37%; amplia distribución y acumulación tisular; semivida terminal ~68 h; eliminación biliar predominante.",
+    "indications": "Infecciones por microorganismos sensibles; indicación, dosis y duración dependen del foco.",
+    "presentations": "Comprimidos 250/500/600 mg; suspensión 100 o 200 mg/5 mL; polvo IV 500 mg.",
+    "pediatricDose": "Otitis/NAC: 10 mg/kg día 1, luego 5 mg/kg/día días 2-5, o esquemas alternativos autorizados; máximos adultos. AUTOMATABLE=NO sin foco, edad, peso y concentración.",
+    "hepaticDose": "Evitar en hepatopatía grave; suspender ante hepatitis/disfunción.",
+    "adverseEffects": "Diarrea, náusea, dolor abdominal y vómito. Graves: QT/torsades, hepatotoxicidad, anafilaxia/SCAR, C. difficile, pérdida auditiva y empeoramiento de miastenia.",
+    "contraindications": "Hipersensibilidad a macrólidos; antecedente de ictericia colestásica/disfunción hepática por azitromicina.",
+    "interactions": "Fármacos que prolongan QT, antiácidos de aluminio/magnesio simultáneos, digoxina y anticoagulantes; revisar interacciones.",
+    "monitoring": "Respuesta, cultivos, QT/electrolitos si riesgo, función hepática, diarrea y signos de miastenia.",
+    "administration": "VO con o sin alimentos; cápsulas pueden requerir ayuno según producto. IV solo por infusión.",
+    "preparation": "Suspensión: reconstituir según frasco y agitar. IV: reconstituir/diluir a concentración autorizada.",
+    "infusionProtocol": "IV: 1 mg/mL durante 3 h o 2 mg/mL durante 1 h; nunca bolo/IM.",
+    "pregnancy": "Datos disponibles no muestran gran riesgo teratógeno; usar cuando esté indicada.",
+    "lactation": "Pasa a leche; vigilar diarrea, candidiasis o erupción en lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=661ff7a6-6394-493d-a307-a1f607e5d117",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5199689f-8881-7757-e063-6394a90ae2eb",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=azithromycin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/050710s039,050711s036,050784s023lbl.pdf"
     ]
   },
   "name": {
@@ -173,8 +111,8 @@
     "azitromicina generica",
     "macrolideo"
   ],
-  "dataVersion": "clinical-data-v1-7649213855d278a3",
-  "clinicalContentSha256": "7649213855d278a3e4fbaacf1bd2fb36da543d8326d59b0e1d102f659e9960f8",
+  "dataVersion": "clinical-data-v1-2f437bd1f929863b",
+  "clinicalContentSha256": "2f437bd1f929863bd7362f40f372f0f7629ceefda5c70036222bc7400287c251",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",
@@ -256,5 +194,17 @@
         "updated": "2026-07-27"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "azitromicina.mcGoldClinicalV1",
+    "lote": "009",
+    "requiredFields": 33,
+    "approvedSha256": "fbc238c39aa4dcfb79f685d3fa8aff362a039b63478bae6431f19e116a408e10",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

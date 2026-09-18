@@ -5,252 +5,82 @@
   "color": "rgba(16,185,129,0.13)",
   "colorTxt": "#065F46",
   "pt": {
-    "name": "Azilsartana Medoxomila",
-    "class": "Bloqueador do Receptor de Angiotensina II (BRA/ARB) — Pró-fármaco (azilsartana ativa) · Geração mais recente",
-    "pharmacologicClass": "BRA seletivo AT1; pró-fármaco azilsartana medoxomila.",
-    "mechanism": "Converte-se à azilsartana ativa e bloqueia AT1, reduzindo vasoconstrição e aldosterona.",
-    "pharmacodynamics": [
-      "Reduz PA por bloqueio do SRAA.",
-      "Pode causar hipotensão, hipercalemia e piora renal em suscetíveis."
-    ],
-    "pharmacokinetics": {
-      "Metabolismo": "Principalmente CYP2C9.",
-      "Meia-vida": "Cerca de 11 h.",
-      "Diálise": "Não é dialisável."
-    },
-    "indications": [
-      "Hipertensão arterial em adultos."
-    ],
-    "commercialNames": {
-      "br": [
-        "Edarbi",
-        "Azilsartana genérica"
-      ],
-      "ar": [
-        "Edarbi",
-        "Azilsartán genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 40 mg, 80 mg"
-    ],
-    "presentations": [
-      "Comprimidos 40 mg e 80 mg."
-    ],
-    "dose": {
-      "Adulto": "80 mg VO 1x/dia.",
-      "Altas doses de diuréticos/depleção de volume": "Considerar início com 40 mg/dia após correção de volume/sal."
-    },
-    "pediatricDose": "Segurança e eficácia não estabelecidas em <18 anos.",
-    "renalDose": {
-      "Leve a grave/DRT": "Sem ajuste de dose.",
-      "Monitorização": "Maior risco de creatinina elevada; monitorar rim/potássio.",
-      "Diálise": "Não dialisável."
-    },
-    "hepaticDose": {
-      "Leve/moderada": "Sem ajuste.",
-      "Grave": "Não estudada."
-    },
-    "commonAdverseEffects": [
-      "Tontura / hipotensão",
-      "Hipercalemia",
-      "Elevação de creatinina",
-      "Fadiga",
-      "Diarreia (leve)"
-    ],
-    "dangerousAdverseEffects": [
-      "Angioedema (raro)",
-      "Hipercalemia grave (K⁺ > 6 mEq/L)",
-      "Insuficiência Renal Aguda",
-      "Hipotensão grave"
-    ],
-    "adverseEffects": [
-      "Tontura, hipotensão, hipercalemia e aumento de creatinina."
-    ],
-    "contraindications": [
-      "Alisquireno em pacientes com diabetes.",
-      "Hipersensibilidade.",
-      "Gestação exige interrupção por toxicidade fetal do SRAA."
-    ],
-    "interactions": [
-      "AINEs podem reduzir efeito e piorar função renal.",
-      "Potássio/poupadores aumentam hipercalemia.",
-      "Lítio pode aumentar níveis.",
-      "Duplo bloqueio do SRAA aumenta eventos adversos."
-    ],
-    "monitoring": [
-      "PA, creatinina/eGFR, potássio e volume."
-    ],
-    "administration": "VO 1x/dia, com ou sem alimento; corrigir depleção de volume/sal antes de iniciar.",
-    "preparation": "Manter na embalagem original conforme produto para proteção de luz/umidade.",
-    "infusionProtocol": "Não se aplica: uso oral.",
-    "pregnancy": "Interromper assim que gestação for detectada.",
-    "lactation": "Dados humanos insuficientes; preferir alternativa com segurança melhor estabelecida.",
-    "specialPopulations": {
-      "Idosos": "Sem ajuste automático.",
-      "DRC": "Sem ajuste fixo, mas monitorar.",
-      "Depleção de volume": "Considerar 40 mg inicial."
-    },
-    "patientEducation": [
-      "Evitar gravidez e suplementos de potássio sem orientação.",
-      "Comunicar síncope ou redução importante da urina."
-    ],
-    "clinicalPearls": [
-      "Dose usual 80 mg/dia; 40 mg é opção inicial com diurético em alta dose/depleção.",
-      "Não requer ajuste renal e não é dialisável."
-    ],
-    "guidelineRecommendations": [
-      "Usar como BRA para hipertensão; não extrapolar indicação específica de IC de outros BRA."
-    ],
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": true,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "angioedemaRisk": false,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICAÇÃO ABSOLUTA na gravidez. BRA mais potente em redução pressórica (MAPA 24h). Pró-fármaco — cautela em hepatopatia. Monitorar K⁺ e creatinina."
-    },
-    "alerts": [
-      "DIFERENCIAL DA CLASSE: azilsartana é o BRA mais potente em redução pressórica (PAS e MAPA 24h) nos estudos head-to-head vs. olmesartana 40 mg e valsartana 320 mg. Opção em HTA de difícil controle.",
-      "Pró-fármaco: cautela em insuficiência hepática moderada/grave — conversão GI pode ser prejudicada.",
-      "Monitorar creatinina e K⁺ em 1–2 semanas após início ou titulação. Aumento ≤ 30% de creatinina é esperado.",
-      "Evitar dupla inibição do SRAA (BRA + IECA): sem benefício e risco aumentado de eventos adversos graves."
-    ],
+    "name": "Azilsartana medoxomila",
+    "class": "Anti-hipertensivo",
+    "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+    "mechanism": "Antagonista seletivo do receptor AT1 da angiotensina II. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade ~60%; Tmax 1,5-3 h; ligação >99%; metabolismo CYP2C9; meia-vida ~11 h; eliminação fecal 55% e urinária 42%.",
+    "indications": "Hipertensão arterial em adultos, isoladamente ou com outros anti-hipertensivos.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos de 40 e 80 mg.",
+    "presentations": "Comprimidos de 40 e 80 mg.",
+    "dose": "80 mg VO uma vez/dia. Considerar 40 mg/dia em pacientes tratados com diurético em alta dose ou com possível depleção volêmica.",
+    "pediatricDose": "Segurança e eficácia não estabelecidas <18 anos. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste inicial em disfunção renal leve a grave; monitorar creatinina e potássio. Não é removida por diálise.",
+    "hepaticDose": "Sem ajuste na insuficiência leve/moderada; não estudada na grave.",
+    "commonAdverseEffects": "Tontura, hipotensão, diarreia e aumento de creatinina.",
+    "dangerousAdverseEffects": "Toxicidade fetal, hipercalemia, lesão renal aguda, angioedema e hipotensão grave.",
+    "adverseEffects": "Tontura, hipotensão, diarreia e aumento de creatinina. Graves: Toxicidade fetal, hipercalemia, lesão renal aguda, angioedema e hipotensão grave.",
+    "contraindications": "Gestação; hipersensibilidade; aliscireno em pacientes com diabetes.",
+    "interactions": "AINEs podem reduzir efeito e piorar rim; potássio/poupadores elevam hipercalemia; bloqueio duplo do SRAA e lítio exigem cautela.",
+    "monitoring": "PA, creatinina/eGFR, potássio e hipotensão após início/titulação.",
+    "administration": "VO uma vez/dia, com ou sem alimento; corrigir depleção de volume/sódio.",
+    "preparation": "Comprimido pronto; confirmar produto antes de fracionar.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Contraindicada; suspender assim que a gestação for detectada.",
+    "lactation": "Dados humanos insuficientes; considerar alternativa, sobretudo em recém-nascido.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Toxicidade fetal, hipercalemia, lesão renal aguda, angioedema e hipotensão grave. Titulação bloqueada sem PA, estado volêmico, função renal, potássio, gestação e revisão do SRAA.",
     "references": [
-      "DailyMed EDARBI/azilsartan medoxomil current label"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=52b27c75-9f5a-4816-bafd-dace9d7d2063&type=display"
     ],
-    "ref": "DailyMed EDARBI/azilsartan."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=52b27c75-9f5a-4816-bafd-dace9d7d2063&type=display"
   },
   "es": {
-    "name": "Azilsartán Medoxomilo",
-    "class": "Bloqueante del Receptor de Angiotensina II (BRA/ARA-II) — Profármaco (azilsartán activo) · Generación más reciente",
-    "pharmacologicClass": "ARA-II selectivo AT1; profármaco azilsartán medoxomilo.",
-    "mechanism": "Se convierte a azilsartán activo y bloquea AT1, reduciendo vasoconstricción y aldosterona.",
-    "pharmacodynamics": [
-      "Reduce PA por bloqueo del SRAA.",
-      "Puede causar hipotensión, hiperpotasemia y deterioro renal en susceptibles."
-    ],
-    "pharmacokinetics": {
-      "Metabolismo": "Principalmente CYP2C9.",
-      "Semivida": "Cerca de 11 h.",
-      "Diálisis": "No es dializable."
-    },
-    "indications": [
-      "Hipertensión arterial en adultos."
-    ],
-    "commercialNames": {
-      "br": [
-        "Edarbi",
-        "Azilsartana genérica"
-      ],
-      "ar": [
-        "Edarbi",
-        "Azilsartán genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 40 mg, 80 mg"
-    ],
-    "presentations": [
-      "Comprimidos 40 mg y 80 mg."
-    ],
-    "dose": {
-      "Adulto": "80 mg VO 1 vez/día.",
-      "Altas dosis de diuréticos/depleción de volumen": "Considerar inicio con 40 mg/día tras corregir volumen/sal."
-    },
-    "pediatricDose": "Seguridad y eficacia no establecidas en <18 años.",
-    "renalDose": {
-      "Leve a grave/ERT": "Sin ajuste de dosis.",
-      "Monitorización": "Mayor riesgo de creatinina elevada; monitorizar riñón/potasio.",
-      "Diálisis": "No dializable."
-    },
-    "hepaticDose": {
-      "Leve/moderada": "Sin ajuste.",
-      "Grave": "No estudiada."
-    },
-    "commonAdverseEffects": [
-      "Mareos / hipotensión",
-      "Hiperpotasemia",
-      "Elevación de creatinina",
-      "Fatiga",
-      "Diarrea (leve)"
-    ],
-    "dangerousAdverseEffects": [
-      "Angioedema (raro)",
-      "Hiperpotasemia grave (K⁺ > 6 mEq/L)",
-      "Insuficiencia Renal Aguda",
-      "Hipotensión grave"
-    ],
-    "adverseEffects": [
-      "Mareo, hipotensión, hiperpotasemia y aumento de creatinina."
-    ],
-    "contraindications": [
-      "Aliskireno en pacientes con diabetes.",
-      "Hipersensibilidad.",
-      "Embarazo exige suspensión por toxicidad fetal del SRAA."
-    ],
-    "interactions": [
-      "AINE pueden reducir efecto y empeorar función renal.",
-      "Potasio/ahorradores aumentan hiperpotasemia.",
-      "Litio puede aumentar niveles.",
-      "Bloqueo dual del SRAA aumenta eventos adversos."
-    ],
-    "monitoring": [
-      "PA, creatinina/eGFR, potasio y volumen."
-    ],
-    "administration": "VO 1 vez/día, con o sin alimentos; corregir depleción de volumen/sal antes de iniciar.",
-    "preparation": "Mantener en envase original según producto para proteger de luz/humedad.",
-    "infusionProtocol": "No aplica: uso oral.",
-    "pregnancy": "Suspender al detectar embarazo.",
-    "lactation": "Datos humanos insuficientes; preferir alternativa con seguridad mejor establecida.",
-    "specialPopulations": {
-      "Adultos mayores": "Sin ajuste automático.",
-      "ERC": "Sin ajuste fijo, pero monitorizar.",
-      "Depleción de volumen": "Considerar 40 mg inicial."
-    },
-    "patientEducation": [
-      "Evitar embarazo y suplementos de potasio sin indicación.",
-      "Comunicar síncope o reducción importante de orina."
-    ],
-    "clinicalPearls": [
-      "Dosis usual 80 mg/día; 40 mg es opción inicial con diurético de alta dosis/depleción.",
-      "No requiere ajuste renal y no es dializable."
-    ],
-    "guidelineRecommendations": [
-      "Usar como ARA-II para hipertensión; no extrapolar indicación específica de IC de otros ARA-II."
-    ],
-    "safetyFlags": {
-      "renalHighRisk": true,
-      "neurotoxicityRisk": false,
-      "qtRisk": false,
-      "hepatotoxicityRisk": true,
-      "requiresCultureGuidance": false,
-      "hypotensionRisk": true,
-      "bradycardiaRisk": false,
-      "avBlockRisk": false,
-      "angioedemaRisk": false,
-      "pregnancyCaution": true,
-      "warning": "CONTRAINDICACIÓN ABSOLUTA en embarazo. ARA-II más potente en reducción tensional (MAPA 24h). Profármaco — precaución en hepatopatía. Monitorizar K⁺ y creatinina."
-    },
-    "alerts": [
-      "DIFERENCIAL DE LA CLASE: azilsartán es el ARA-II más potente en reducción tensional (PAS y MAPA 24h) en estudios head-to-head vs. olmesartán 40 mg y valsartán 320 mg. Opción en HTA de difícil control.",
-      "Profármaco: precaución en insuficiencia hepática moderada/grave — conversión GI puede estar deteriorada.",
-      "Monitorizar creatinina y K⁺ en 1–2 semanas tras inicio o titulación. Aumento ≤ 30% de creatinina es esperado.",
-      "Evitar doble inhibición del SRAA (ARA-II + IECA): sin beneficio y riesgo aumentado de eventos adversos graves."
-    ],
+    "name": "Azilsartán medoxomilo",
+    "class": "Antihipertensivo",
+    "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+    "mechanism": "Antagonista selectivo del receptor AT1 de angiotensina II. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad ~60%; Tmax 1,5-3 h; unión >99%; metabolismo CYP2C9; semivida ~11 h; eliminación fecal 55% y urinaria 42%.",
+    "indications": "Hipertensión arterial en adultos, sola o con otros antihipertensivos.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos de 40 y 80 mg.",
+    "presentations": "Comprimidos de 40 y 80 mg.",
+    "dose": "80 mg VO una vez/día. Considerar 40 mg/día con diurético a dosis altas o posible depleción de volumen.",
+    "pediatricDose": "Seguridad y eficacia no establecidas <18 años. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste inicial en disfunción renal leve a grave; controlar creatinina y potasio. No se elimina por diálisis.",
+    "hepaticDose": "Sin ajuste en insuficiencia leve/moderada; no estudiada en grave.",
+    "commonAdverseEffects": "Mareo, hipotensión, diarrea y aumento de creatinina.",
+    "dangerousAdverseEffects": "Toxicidad fetal, hiperpotasemia, lesión renal aguda, angioedema e hipotensión grave.",
+    "adverseEffects": "Mareo, hipotensión, diarrea y aumento de creatinina. Graves: Toxicidad fetal, hiperpotasemia, lesión renal aguda, angioedema e hipotensión grave.",
+    "contraindications": "Embarazo; hipersensibilidad; aliskireno en pacientes con diabetes.",
+    "interactions": "AINE pueden reducir efecto y empeorar riñón; potasio/ahorradores elevan hiperpotasemia; doble bloqueo del SRAA y litio requieren precaución.",
+    "monitoring": "PA, creatinina/eGFR, potasio e hipotensión tras inicio/titulación.",
+    "administration": "VO una vez/día, con o sin alimentos; corregir depleción de volumen/sodio.",
+    "preparation": "Comprimido listo; confirmar producto antes de fraccionar.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Contraindicada; suspender al detectar embarazo.",
+    "lactation": "Datos humanos insuficientes; considerar alternativa, especialmente en recién nacido.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Toxicidad fetal, hiperpotasemia, lesión renal aguda, angioedema e hipotensión grave. Titulação bloqueada sem PA, estado volêmico, função renal, potássio, gestação e revisão do SRAA.",
     "references": [
-      "DailyMed EDARBI/azilsartan medoxomil current label"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=52b27c75-9f5a-4816-bafd-dace9d7d2063&type=display"
     ],
-    "ref": "DailyMed EDARBI/azilsartan."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=52b27c75-9f5a-4816-bafd-dace9d7d2063&type=display"
   },
   "name": {
-    "pt": "Azilsartana Medoxomila",
-    "es": "Azilsartán Medoxomilo"
+    "pt": "Azilsartana medoxomila",
+    "es": "Azilsartán medoxomilo"
   },
   "keywords": [
     "azilsartana",
@@ -260,19 +90,21 @@
     "azilsartan generico",
     "bloqueador do receptor de angiotensina ii (bra/arb) — pro-farmaco (azilsartana ativa) · geracao mais recente"
   ],
-  "dataVersion": "clinical-data-v1-7649213855d278a3",
-  "clinicalContentSha256": "7649213855d278a3e4fbaacf1bd2fb36da543d8326d59b0e1d102f659e9960f8",
+  "dataVersion": "clinical-data-v1-2f437bd1f929863b",
+  "clinicalContentSha256": "2f437bd1f929863bd7362f40f372f0f7629ceefda5c70036222bc7400287c251",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "azilsartana.mcGoldClinicalV1",
-    "group": "GOLD_GROUP02_CARDIO_10",
-    "review": "2026-09",
+    "lote": "009",
     "requiredFields": 33,
-    "contentSha256": "5fdfe926abedccc330edced559d73cfb204b2f977d723b8d1f9442bd3333f1b2",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "fbc238c39aa4dcfb79f685d3fa8aff362a039b63478bae6431f19e116a408e10",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }
