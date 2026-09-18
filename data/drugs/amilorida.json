@@ -6,247 +6,77 @@
   "colorTxt": "#064E3B",
   "pt": {
     "name": "Amilorida",
-    "class": "Diurético poupador de potássio — Bloqueador dos canais epiteliais de sódio (ENaC)",
-    "pharmacologicClass": "Diurético poupador de potássio; bloqueador de ENaC no túbulo distal/ducto coletor.",
-    "mechanism": "Bloqueia ENaC luminal, reduz reabsorção de sódio e diminui secreção de potássio e hidrogênio.",
-    "pharmacodynamics": [
-      "Diurese modesta; principal utilidade é prevenir/corrigir hipocalemia de diuréticos kaliuréticos.",
-      "Pode causar hipercalemia grave."
-    ],
-    "pharmacokinetics": {
-      "Metabolismo": "Pouco metabolizada.",
-      "Eliminação": "Predominantemente renal como fármaco inalterado."
-    },
-    "indications": [
-      "Adjunto a tiazídico/outro diurético kaliurético em hipertensão ou IC para prevenir/corrigir hipocalemia.",
-      "Monoterapia apenas em hipocalemia persistente documentada com monitorização rigorosa."
-    ],
-    "commercialNames": {
-      "ar": [
-        "Amilorida genérica",
-        "Asociaciones con hidroclorotiazida"
-      ],
-      "br": [
-        "Amilorida genérica",
-        "Moduretic (associação com hidroclorotiazida)"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 5 mg",
-      "Comprimidos associados à hidroclorotiazida (Moduretic e genéricos)"
-    ],
-    "presentations": [
-      "Comprimido 5 mg."
-    ],
-    "dose": {
-      "Inicial": "5 mg VO 1x/dia com alimento.",
-      "Titulação": "Pode aumentar a 10 mg/dia; se hipocalemia persistente, 15 mg e depois 20 mg/dia com monitorização estreita."
-    },
-    "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas.",
-    "renalDose": {
-      "Anúria/insuficiência renal importante": "Contraindicada.",
-      "BUN >30 mg/dL ou creatinina >1,5 mg/dL": "Não usar sem monitorização frequente de eletrólitos e função renal.",
-      "Diálise": "Dialisabilidade não estabelecida."
-    },
-    "hepaticDose": "Sem ajuste hepático específico; monitorar função renal e potássio em hepatopatia.",
-    "commonAdverseEffects": [
-      "Hipercalemia",
-      "Náuseas",
-      "Diarreia",
-      "Tontura",
-      "Cefaleia",
-      "Fadiga"
-    ],
-    "dangerousAdverseEffects": [
-      "Hipercalemia grave (arritmias ventriculares)",
-      "Parada cardíaca",
-      "Lesão renal aguda",
-      "Acidose metabólica hiperclorêmica"
-    ],
-    "adverseEffects": [
-      "Hipercalemia potencialmente fatal.",
-      "Náusea, diarreia, cefaleia, tontura e fadiga."
-    ],
-    "contraindications": [
-      "K >5,5 mEq/L.",
-      "Outros poupadores de potássio como espironolactona/triantereno.",
-      "Anúria, insuficiência renal aguda/crônica importante ou nefropatia diabética conforme bula."
-    ],
-    "interactions": [
-      "IECA, BRA, ciclosporina e tacrolimo aumentam hipercalemia.",
-      "Evitar suplementos de potássio/substitutos de sal com potássio salvo exceção monitorada.",
-      "AINEs podem aumentar risco renal/hipercalemia."
-    ],
-    "monitoring": [
-      "Potássio, creatinina, BUN/eGFR e sódio.",
-      "ECG se hipercalemia significativa."
-    ],
-    "administration": "VO com alimento; reavaliar necessidade após correção da hipocalemia.",
-    "preparation": "Comprimidos; sem preparo especial.",
-    "infusionProtocol": "Não se aplica: uso oral.",
-    "pregnancy": "Usar apenas se claramente necessário.",
-    "lactation": "Dados humanos limitados; avaliar risco-benefício e monitorar lactente.",
-    "specialPopulations": {
-      "Idosos/DRC/diabetes": "Maior risco de hipercalemia.",
-      "Uso com SRAA": "IECA/BRA aumentam risco de hipercalemia."
-    },
-    "patientEducation": [
-      "Evitar suplementos de potássio e sal light sem orientação.",
-      "Procurar atendimento por fraqueza intensa, parestesias ou palpitações."
-    ],
-    "clinicalPearls": [
-      "O risco limitante é hipercalemia, não hipotensão.",
-      "Insuficiência renal grave é contraindicação, não simples ajuste de dose."
-    ],
-    "guidelineRecommendations": [
-      "Usar como poupador de potássio quando indicado; não substituir antagonistas mineralocorticoides com benefício prognóstico em ICFEr quando apropriados."
-    ],
-    "safetyFlags": {
-      "avBlockRisk": false,
-      "bradycardiaRisk": false,
-      "endocrineEffects": false,
-      "hepatotoxicityRisk": false,
-      "hyperkalemiaRisk": true,
-      "hypotensionRisk": true,
-      "neurotoxicityRisk": false,
-      "pregnancyCaution": true,
-      "qtRisk": false,
-      "renalHighRisk": true,
-      "requiresCultureGuidance": false,
-      "warning": "Principal risco é HIPERCALEMIA potencialmente fatal, especialmente quando associada a IECA, BRA, ARNI, espironolactona ou suplementos de K⁺. CONTRAINDICADA em DRC grave (ClCr < 30) e K⁺ ≥ 5,0 mEq/L."
-    },
-    "alerts": [
-      "HIPERCALEMIA é o principal risco — monitorar K⁺ em 3–7 dias após início ou ajuste.",
-      "Interações graves: IECA, BRA, ARNI, espironolactona, eplerenona, suplementos de K⁺ — risco de hipercalemia potencialmente fatal.",
-      "Mecanismo diferente da espironolactona (ENaC vs receptor de aldosterona) — pode somar efeito em Síndrome de Liddle.",
-      "Trimetoprim e heparina também bloqueiam ENaC ou elevam K⁺ — atenção ao uso concomitante."
-    ],
+    "class": "Diurético poupador de potássio",
+    "pharmacologicClass": "Bloqueador do canal epitelial de sódio no néfron distal",
+    "mechanism": "Bloqueador do canal epitelial de sódio no néfron distal. O mecanismo deve ser interpretado no contexto da formulação e indicação.",
+    "pharmacodynamics": "Resposta e toxicidade são dependentes de exposição, via e população; ver dose e monitorização.",
+    "pharmacokinetics": "Absorção oral parcial; não metabolizada de modo relevante; excreção renal inalterada; efeito inicia em ~2 h e dura cerca de 24 h.",
+    "indications": "Adjuvante a tiazídico/outro diurético kaliurético em hipertensão ou insuficiência cardíaca para prevenir/corrigir hipocalemia. Não usar rotineiramente como monoterapia.",
+    "commercialNames": "Usar somente produtos regulatórios citados nas fontes; marcas AR/BR não presumidas.",
+    "presentation": "Comprimido 5 mg.",
+    "presentations": "Comprimido 5 mg.",
+    "dose": "Iniciar 5 mg VO 1 vez/dia com diurético kaliurético; se necessário, aumentar a 10 mg/dia. Doses >10 mg têm pouca experiência; máximo estudado 20 mg/dia.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas. AUTOMATABLE=NO.",
+    "renalDose": "Contraindicada em anúria, insuficiência renal aguda ou significativa/nefropatia diabética conforme bula; creatinina/BUN elevados exigem monitorização frequente e avaliação especializada.",
+    "hepaticDose": "Sem ajuste numérico; cautela em cirrose/doença hepática grave por risco de alterações eletrolíticas e encefalopatia.",
+    "commonAdverseEffects": "Náusea, diarreia, cefaleia, tontura e cãibras.",
+    "dangerousAdverseEffects": "Hipercalemia potencialmente fatal, arritmias e piora renal.",
+    "adverseEffects": "Náusea, diarreia, cefaleia, tontura e cãibras. Graves: Hipercalemia potencialmente fatal, arritmias e piora renal.",
+    "contraindications": "Hipercalemia, uso de outros poupadores de potássio/suplementos sem indicação, anúria e insuficiência renal relevante.",
+    "interactions": "IECA/BRA/aliscireno, AINEs, ciclosporina/tacrolimo, trimetoprima e potássio aumentam hipercalemia.",
+    "monitoring": "Potássio, creatinina/eGFR, sódio, PA, peso/edema; repetir após início e mudanças de dose/estado clínico.",
+    "administration": "VO com alimento; associar apenas quando houver indicação e controlar potássio.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar somente se claramente necessário.",
+    "lactation": "Não se sabe se é excretada no leite humano; decidir com cautela.",
+    "specialPopulations": "Individualizar em idosos, gestação/lactação, disfunção renal/hepática e polifarmácia conforme campos específicos.",
+    "patientEducation": "Explicar indicação, técnica, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em fonte regulatória primária; protocolo local pode restringir seleção, sequência e monitorização.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipercalemia potencialmente fatal, arritmias e piora renal. Uso bloqueado se potássio e função renal não estiverem disponíveis.",
     "references": [
-      "DailyMed Amiloride HCl tablets, revised 06/2026"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e0cc2d44-436a-47e8-a890-589882fff4c4"
     ],
-    "ref": "DailyMed amiloride HCl 2026."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e0cc2d44-436a-47e8-a890-589882fff4c4"
   },
   "es": {
     "name": "Amilorida",
-    "class": "Diurético ahorrador de potasio — Bloqueador de los canales epiteliales de sodio (ENaC)",
-    "pharmacologicClass": "Diurético ahorrador de potasio; bloqueador de ENaC en túbulo distal/conducto colector.",
-    "mechanism": "Bloquea ENaC luminal, reduce reabsorción de sodio y disminuye secreción de potasio e hidrógeno.",
-    "pharmacodynamics": [
-      "Diuresis modesta; utilidad principal es prevenir/corregir hipopotasemia por diuréticos kaliuréticos.",
-      "Puede causar hiperpotasemia grave."
-    ],
-    "pharmacokinetics": {
-      "Metabolismo": "Poco metabolizada.",
-      "Eliminación": "Predominantemente renal sin cambios."
-    },
-    "indications": [
-      "Adyuvante a tiazida/u otro diurético kaliurético en hipertensión o IC para prevenir/corregir hipopotasemia.",
-      "Monoterapia solo con hipopotasemia persistente documentada y monitorización rigurosa."
-    ],
-    "commercialNames": {
-      "ar": [
-        "Amilorida genérica",
-        "Asociaciones con hidroclorotiazida"
-      ],
-      "br": [
-        "Amilorida genérica",
-        "Moduretic (associação com hidroclorotiazida)"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 5 mg",
-      "Comprimidos asociados a hidroclorotiazida (Moduretic y genéricos)"
-    ],
-    "presentations": [
-      "Comprimido 5 mg."
-    ],
-    "dose": {
-      "Inicial": "5 mg VO 1 vez/día con alimento.",
-      "Titulación": "Puede aumentar a 10 mg/día; si hipopotasemia persiste, 15 mg y luego 20 mg/día con monitorización estrecha."
-    },
-    "pediatricDose": "Seguridad y eficacia pediátricas no establecidas.",
-    "renalDose": {
-      "Anuria/insuficiencia renal importante": "Contraindicada.",
-      "BUN >30 mg/dL o creatinina >1,5 mg/dL": "No usar sin monitorización frecuente de electrolitos y función renal.",
-      "Diálisis": "Dializabilidad no establecida."
-    },
-    "hepaticDose": "Sin ajuste hepático específico; monitorizar función renal y potasio en hepatopatía.",
-    "commonAdverseEffects": [
-      "Hiperpotasemia",
-      "Náuseas",
-      "Diarrea",
-      "Mareos",
-      "Cefalea",
-      "Fatiga"
-    ],
-    "dangerousAdverseEffects": [
-      "Hiperpotasemia grave (arritmias ventriculares)",
-      "Paro cardíaco",
-      "Lesión renal aguda",
-      "Acidosis metabólica hiperclorémica"
-    ],
-    "adverseEffects": [
-      "Hiperpotasemia potencialmente mortal.",
-      "Náuseas, diarrea, cefalea, mareo y fatiga."
-    ],
-    "contraindications": [
-      "K >5,5 mEq/L.",
-      "Otros ahorradores de potasio como espironolactona/triamtereno.",
-      "Anuria, insuficiencia renal aguda/crónica importante o nefropatía diabética según ficha."
-    ],
-    "interactions": [
-      "IECA, ARA-II, ciclosporina y tacrolimus aumentan hiperpotasemia.",
-      "Evitar suplementos de potasio/sustitutos de sal con potasio salvo excepción monitorizada.",
-      "AINE pueden aumentar riesgo renal/hiperpotasemia."
-    ],
-    "monitoring": [
-      "Potasio, creatinina, BUN/eGFR y sodio.",
-      "ECG si hiperpotasemia significativa."
-    ],
-    "administration": "VO con alimento; reevaluar necesidad tras corregir hipopotasemia.",
-    "preparation": "Comprimidos; sin preparación especial.",
-    "infusionProtocol": "No aplica: uso oral.",
-    "pregnancy": "Usar solo si es claramente necesario.",
-    "lactation": "Datos humanos limitados; evaluar riesgo-beneficio y monitorizar lactante.",
-    "specialPopulations": {
-      "Adultos mayores/ERC/diabetes": "Mayor riesgo de hiperpotasemia.",
-      "Uso con SRAA": "IECA/ARA-II aumentan riesgo de hiperpotasemia."
-    },
-    "patientEducation": [
-      "Evitar suplementos de potasio y sal light sin indicación.",
-      "Consultar por debilidad intensa, parestesias o palpitaciones."
-    ],
-    "clinicalPearls": [
-      "El riesgo limitante es hiperpotasemia, no hipotensión.",
-      "Insuficiencia renal grave es contraindicación, no simple ajuste de dosis."
-    ],
-    "guidelineRecommendations": [
-      "Usar como ahorrador de potasio cuando corresponda; no sustituir antagonistas mineralocorticoides con beneficio pronóstico en ICFEr cuando sean apropiados."
-    ],
-    "safetyFlags": {
-      "avBlockRisk": false,
-      "bradycardiaRisk": false,
-      "endocrineEffects": false,
-      "hepatotoxicityRisk": false,
-      "hyperkalemiaRisk": true,
-      "hypotensionRisk": true,
-      "neurotoxicityRisk": false,
-      "pregnancyCaution": true,
-      "qtRisk": false,
-      "renalHighRisk": true,
-      "requiresCultureGuidance": false,
-      "warning": "El principal riesgo es HIPERPOTASEMIA potencialmente fatal, especialmente cuando se asocia a IECA, ARA-II, ARNI, espironolactona o suplementos de K⁺. CONTRAINDICADA en ERC grave (ClCr < 30) y K⁺ ≥ 5,0 mEq/L."
-    },
-    "alerts": [
-      "HIPERPOTASEMIA es el principal riesgo — monitorizar K⁺ en 3–7 días tras inicio o ajuste.",
-      "Interacciones graves: IECA, ARA-II, ARNI, espironolactona, eplerenona, suplementos de K⁺ — riesgo de hiperpotasemia potencialmente fatal.",
-      "Mecanismo diferente de espironolactona (ENaC vs receptor de aldosterona) — puede sumar efecto en Síndrome de Liddle.",
-      "Trimetoprim y heparina también bloquean ENaC o elevan K⁺ — atención al uso concomitante."
-    ],
+    "class": "Diurético ahorrador de potasio",
+    "pharmacologicClass": "Bloqueador del canal epitelial de sodio distal",
+    "mechanism": "Bloqueador del canal epitelial de sodio distal. El mecanismo debe interpretarse según formulación e indicación.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición, vía y población; ver dosis y monitorización.",
+    "pharmacokinetics": "Absorción oral parcial; escaso metabolismo; excreción renal sin cambios; efecto inicia ~2 h y dura cerca de 24 h.",
+    "indications": "Adyuvante a tiazida/u otro diurético kaliurético en hipertensión o insuficiencia cardíaca para prevenir/corregir hipopotasemia. No usar rutinariamente como monoterapia.",
+    "commercialNames": "Usar solo productos regulatorios citados; no se presumen marcas AR/BR.",
+    "presentation": "Comprimido 5 mg.",
+    "presentations": "Comprimido 5 mg.",
+    "dose": "Iniciar 5 mg VO una vez/día con diurético kaliurético; si necesario, aumentar a 10 mg/día. Hay poca experiencia >10 mg; máximo estudiado 20 mg/día.",
+    "pediatricDose": "Seguridad/eficacia no establecidas. AUTOMATABLE=NO.",
+    "renalDose": "Contraindicada en anuria, insuficiencia renal aguda o significativa/nefropatía diabética según ficha; creatinina/BUN elevados exigen vigilancia frecuente y evaluación especializada.",
+    "hepaticDose": "Sin ajuste numérico; precaución en cirrosis/hepatopatía grave por alteraciones electrolíticas y encefalopatía.",
+    "commonAdverseEffects": "Náusea, diarrea, cefalea, mareo y calambres.",
+    "dangerousAdverseEffects": "Hiperpotasemia potencialmente fatal, arritmias y deterioro renal.",
+    "adverseEffects": "Náusea, diarrea, cefalea, mareo y calambres. Graves: Hiperpotasemia potencialmente fatal, arritmias y deterioro renal.",
+    "contraindications": "Hiperpotasemia, uso de otros ahorradores/suplementos de potasio sin indicación, anuria e insuficiencia renal relevante.",
+    "interactions": "IECA/ARA-II/aliskireno, AINE, ciclosporina/tacrolimus, trimetoprima y potasio aumentan hiperpotasemia.",
+    "monitoring": "Potasio, creatinina/eGFR, sodio, PA, peso/edema; repetir tras inicio y cambios de dosis/estado.",
+    "administration": "VO con alimentos; asociar solo cuando esté indicado y controlar potasio.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Usar solo si claramente necesario.",
+    "lactation": "Se desconoce si se excreta en leche humana; decidir con precaución.",
+    "specialPopulations": "Individualizar en ancianos, embarazo/lactancia, disfunción renal/hepática y polifarmacia según campos específicos.",
+    "patientEducation": "Explicar indicación, técnica, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en fuente regulatoria primaria; protocolo local puede restringir selección, secuencia y monitorización.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hiperpotasemia potencialmente fatal, arritmias y deterioro renal. Uso bloqueado se potássio e função renal não estiverem disponíveis.",
     "references": [
-      "DailyMed Amiloride HCl tablets, revised 06/2026"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e0cc2d44-436a-47e8-a890-589882fff4c4"
     ],
-    "ref": "DailyMed amiloride HCl 2026."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e0cc2d44-436a-47e8-a890-589882fff4c4"
   },
   "name": {
     "pt": "Amilorida",
@@ -259,19 +89,21 @@
     "asociaciones con hidroclorotiazida",
     "diuretico poupador de potassio — bloqueador dos canais epiteliais de sodio (enac)"
   ],
-  "dataVersion": "clinical-data-v1-1cac4b67956c5c6c",
-  "clinicalContentSha256": "1cac4b67956c5c6c05986aab0fbb87654cdbe4126bd865f82f084986ed2dfcd6",
+  "dataVersion": "clinical-data-v1-12ba8ad15e98178c",
+  "clinicalContentSha256": "12ba8ad15e98178c5bd41c8f5078d65a9b7455b1b496e724a8ddbe3acc0c73de",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "amilorida.mcGoldClinicalV1",
-    "group": "GOLD_GROUP02_CARDIO_10",
-    "review": "2026-09",
+    "lote": "005",
     "requiredFields": 33,
-    "contentSha256": "5466f7054a3b629415ee5c67f2a74b961dc2f294070e4c3f2399a695f091b311",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "a52097a2e20608e28786e280427a4445cb7d16984c62eb2f05df9d280fc142ea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

@@ -24617,3 +24617,91 @@ Object.keys(gold).forEach(function(id){
 
 /* MEDCASES_GOLD110_ESPIRAMICINA_PEDIATRIC_DOSE_R0 — focused pediatric-dose correction */
 ;(function(){'use strict';var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["espiramicina"]||!db["espiramicina"].mcGoldClinicalV1)throw new Error('MEDCASES_GOLD110_ESPIRAMICINA_PEDIATRIC_DOSE_R0: target Gold unavailable');var g=db["espiramicina"].mcGoldClinicalV1;g.pt.pediatricDose="Espiramicina oral (Rovamycine 1,5 MUI comprimido; ANSM/BDPM): em crianças com função renal normal, 1,5–3 milhões de UI por 10 kg de peso por dia, equivalentes a 150.000–300.000 UI/kg/dia, divididos em 2–3 tomadas. Para faringoamigdalite estreptocócica quando indicada, a duração recomendada do tratamento é de 10 dias. Profilaxia de meningite meningocócica quando rifampicina é contraindicada: 75.000 UI/kg por dose VO a cada 12 horas por 5 dias; a espiramicina é usada para erradicação nasofaríngea e não para tratamento de meningite meningocócica. A apresentação comprimido de 1,5 MUI é destinada a adultos e crianças com mais de 6 anos; é contraindicada em menores de 6 anos por risco de engasgo/falsa via. Não extrapolar automaticamente este esquema para outras formulações ou indicações específicas sem conferir a bula local.";g.es.pediatricDose="Espiramicina oral (Rovamycine 1,5 MUI comprimido; ANSM/BDPM): en niños con función renal normal, 1,5–3 millones de UI por 10 kg de peso al día, equivalentes a 150.000–300.000 UI/kg/día, divididos en 2–3 tomas. Para faringoamigdalitis estreptocócica cuando esté indicada, la duración recomendada del tratamiento es de 10 días. Profilaxis de meningitis meningocócica cuando la rifampicina está contraindicada: 75.000 UI/kg por dosis VO cada 12 horas durante 5 días; la espiramicina se utiliza para erradicación nasofaríngea y no para tratar la meningitis meningocócica. La presentación en comprimidos de 1,5 MUI está destinada a adultos y niños mayores de 6 años; está contraindicada en menores de 6 años por riesgo de atragantamiento/falsa vía. No extrapolar automáticamente este esquema a otras formulaciones o indicaciones específicas sin verificar el prospecto local.";var refs=["https://m.base-donnees-publique.medicaments.gouv.fr/rcp-64212005-2","https://base-donnees-publique.medicaments.gouv.fr/medicament/64212005/extrait","https://base-donnees-publique.medicaments.gouv.fr/medicament/62793782/extrait"];['pt','es'].forEach(function(l){['references','ref'].forEach(function(k){var a=Array.isArray(g[l][k])?g[l][k].slice():[];refs.forEach(function(r){if(a.indexOf(r)<0)a.push(r);});g[l][k]=a;});});})();
+/* GOLD33_SELECTIVE:amicacina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["amicacina"])throw new Error("GOLD33_MISSING_CANONICAL:amicacina");db["amicacina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "005",
+    "requiredFieldCount": 33,
+    "approvedSha256": "a52097a2e20608e28786e280427a4445cb7d16984c62eb2f05df9d280fc142ea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Amicacina",
+    "class": "Antibacteriano aminoglicosídeo",
+    "pharmacologicClass": "Inibidor bactericida da síntese proteica 30S",
+    "commercialNames": "Usar somente produtos regulatórios citados nas fontes; marcas AR/BR não presumidas.",
+    "presentation": "Injeção 250 mg/mL em frascos de 2 mL (500 mg), conforme produto consultado.",
+    "presentations": "Injeção 250 mg/mL em frascos de 2 mL (500 mg), conforme produto consultado.",
+    "mechanism": "Inibidor bactericida da síntese proteica 30S. O mecanismo deve ser interpretado no contexto da formulação e indicação.",
+    "pharmacodynamics": "Resposta e toxicidade são dependentes de exposição, via e população; ver dose e monitorização.",
+    "pharmacokinetics": "Distribuição extracelular; baixa ligação proteica; eliminação glomerular quase inalterada; meia-vida prolonga-se na insuficiência renal e no neonato.",
+    "indications": "Infecções graves por Gram-negativos suscetíveis, incluindo septicemia, trato respiratório, SNC, intra-abdominal, pele/tecidos e urinárias complicadas; orientar por cultura.",
+    "dose": "Adultos/crianças com função renal normal: 15 mg/kg/dia IM/IV divididos a cada 8 ou 12 h; máximo usual 1,5 g/dia e duração total não superior a 10 dias sem reavaliação especializada.",
+    "pediatricDose": "Neonatos: ataque 10 mg/kg, depois 7,5 mg/kg a cada 12 h. Lactentes/crianças: 15 mg/kg/dia divididos cada 8–12 h. Exige peso, idade pós-natal/gestacional, função renal e monitorização de níveis. AUTOMATABLE=NO.",
+    "renalDose": "Ajustar intervalo ou dose pela função renal e concentrações séricas; não usar nomograma sem protocolo local validado. Hemodiálise/peritoneal podem remover fármaco em grau variável.",
+    "hepaticDose": "Sem ajuste hepático específico; risco pode aumentar com doença grave e disfunção renal concomitante.",
+    "commonAdverseEffects": "Náusea, febre medicamentosa, rash e alterações laboratoriais renais.",
+    "dangerousAdverseEffects": "Nefrotoxicidade, ototoxicidade coclear/vestibular irreversível, bloqueio neuromuscular e paralisia respiratória; caixa de advertência.",
+    "adverseEffects": "Náusea, febre medicamentosa, rash e alterações laboratoriais renais. Graves: Nefrotoxicidade, ototoxicidade coclear/vestibular irreversível, bloqueio neuromuscular e paralisia respiratória; caixa de advertência.",
+    "contraindications": "Hipersensibilidade a amicacina/aminoglicosídeos; história de reação grave pode contraindicar a classe.",
+    "interactions": "Outros nefro/ototóxicos, diuréticos de alça e bloqueadores neuromusculares aumentam risco; separar fisicamente de betalactâmicos.",
+    "monitoring": "Creatinina/diurese, níveis de pico e vale conforme protocolo, audição/vestíbulo, função neuromuscular, culturas e resposta.",
+    "administration": "IM profunda ou IV após diluição; confirmar peso e função renal antes da primeira dose e obter culturas.",
+    "preparation": "Para IV, diluir a dose em 100–200 mL de NaCl 0,9% ou glicose 5%; em pediatria ajustar volume. Não premisturar com betalactâmicos.",
+    "infusionProtocol": "Adultos: infundir em 30–60 min; lactentes: 1–2 h. Não administrar IV em bolus.",
+    "pregnancy": "Aminoglicosídeos podem causar dano fetal; usar apenas em infecção grave quando benefício justificar risco.",
+    "lactation": "Baixa absorção oral pelo lactente é esperada, mas decidir individualmente e observar flora/diarreia.",
+    "specialPopulations": "Individualizar em idosos, gestação/lactação, disfunção renal/hepática e polifarmácia conforme campos específicos.",
+    "patientEducation": "Explicar indicação, técnica, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em fonte regulatória primária; protocolo local pode restringir seleção, sequência e monitorização.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Nefrotoxicidade, ototoxicidade coclear/vestibular irreversível, bloqueio neuromuscular e paralisia respiratória; caixa de advertência. Cálculo de dose/intervalo e níveis séricos bloqueado sem protocolo local, peso e função renal.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f260ff2a-76a0-4672-9516-91c344b67890"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f260ff2a-76a0-4672-9516-91c344b67890"
+  },
+  "es": {
+    "name": "Amikacina",
+    "class": "Antibacteriano aminoglucósido",
+    "pharmacologicClass": "Inhibidor bactericida de síntesis proteica 30S",
+    "commercialNames": "Usar solo productos regulatorios citados; no se presumen marcas AR/BR.",
+    "presentation": "Inyección 250 mg/mL en viales de 2 mL (500 mg), según producto consultado.",
+    "presentations": "Inyección 250 mg/mL en viales de 2 mL (500 mg), según producto consultado.",
+    "mechanism": "Inhibidor bactericida de síntesis proteica 30S. El mecanismo debe interpretarse según formulación e indicación.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición, vía y población; ver dosis y monitorización.",
+    "pharmacokinetics": "Distribución extracelular; baja unión proteica; eliminación glomerular casi sin cambios; semivida prolongada en insuficiencia renal y neonato.",
+    "indications": "Infecciones graves por Gram negativos sensibles, incluyendo sepsis, respiratorias, SNC, intraabdominales, piel/tejidos y urinarias complicadas; orientar por cultivo.",
+    "dose": "Adultos/niños con función renal normal: 15 mg/kg/día IM/IV divididos cada 8 o 12 h; máximo usual 1,5 g/día y duración total no superior a 10 días sin reevaluación especializada.",
+    "pediatricDose": "Neonatos: carga 10 mg/kg, luego 7,5 mg/kg cada 12 h. Lactantes/niños: 15 mg/kg/día divididos cada 8–12 h. Requiere peso, edad posnatal/gestacional, función renal y niveles. AUTOMATABLE=NO.",
+    "renalDose": "Ajustar intervalo o dosis según función renal y concentraciones séricas; no usar nomograma sin protocolo local validado. Hemodiálisis/peritoneal pueden eliminar fármaco en grado variable.",
+    "hepaticDose": "Sin ajuste hepático específico; el riesgo puede aumentar con enfermedad grave y disfunción renal concomitante.",
+    "commonAdverseEffects": "Náusea, fiebre medicamentosa, erupción y alteraciones renales de laboratorio.",
+    "dangerousAdverseEffects": "Nefrotoxicidad, ototoxicidad coclear/vestibular irreversible, bloqueo neuromuscular y parálisis respiratoria; advertencia destacada.",
+    "adverseEffects": "Náusea, fiebre medicamentosa, erupción y alteraciones renales de laboratorio. Graves: Nefrotoxicidad, ototoxicidad coclear/vestibular irreversible, bloqueo neuromuscular y parálisis respiratoria; advertencia destacada.",
+    "contraindications": "Hipersensibilidad a amikacina/aminoglucósidos; antecedente de reacción grave puede contraindicar la clase.",
+    "interactions": "Otros nefro/ototóxicos, diuréticos de asa y bloqueantes neuromusculares aumentan riesgo; separar físicamente de betalactámicos.",
+    "monitoring": "Creatinina/diuresis, picos y valles según protocolo, audición/vestíbulo, función neuromuscular, cultivos y respuesta.",
+    "administration": "IM profunda o IV tras dilución; confirmar peso y función renal antes de la primera dosis y obtener cultivos.",
+    "preparation": "Para IV, diluir dosis en 100–200 mL de NaCl 0,9% o glucosa 5%; en pediatría ajustar volumen. No premezclar con betalactámicos.",
+    "infusionProtocol": "Adultos: infundir en 30–60 min; lactantes: 1–2 h. No administrar IV en bolo.",
+    "pregnancy": "Los aminoglucósidos pueden causar daño fetal; usar solo en infección grave cuando beneficio justifique riesgo.",
+    "lactation": "Se espera baja absorción oral por el lactante, pero decidir individualmente y vigilar flora/diarrea.",
+    "specialPopulations": "Individualizar en ancianos, embarazo/lactancia, disfunción renal/hepática y polifarmacia según campos específicos.",
+    "patientEducation": "Explicar indicación, técnica, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en fuente regulatoria primaria; protocolo local puede restringir selección, secuencia y monitorización.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Nefrotoxicidad, ototoxicidad coclear/vestibular irreversible, bloqueo neuromuscular y parálisis respiratoria; advertencia destacada. Cálculo de dose/intervalo e níveis séricos bloqueado sem protocolo local, peso e função renal.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f260ff2a-76a0-4672-9516-91c344b67890"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f260ff2a-76a0-4672-9516-91c344b67890"
+  }
+};})();
+/* GOLD33_SELECTIVE:amicacina:END */

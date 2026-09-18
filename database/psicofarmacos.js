@@ -2916,3 +2916,93 @@
 
 
 })(); /* fim da IIFE do módulo psicofarmacos */
+/* GOLD33_SELECTIVE:amisulprida:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB;if(!db||!db["amisulprida"])throw new Error("GOLD33_MISSING_CANONICAL:amisulprida");db["amisulprida"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "005",
+    "requiredFieldCount": 33,
+    "approvedSha256": "a52097a2e20608e28786e280427a4445cb7d16984c62eb2f05df9d280fc142ea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Amisulprida",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Antagonista seletivo dopaminérgico D2/D3",
+    "commercialNames": "Usar somente produtos regulatórios citados nas fontes; marcas AR/BR não presumidas.",
+    "presentation": "Comprimidos 50, 100, 200 e 400 mg conforme produto/jurisdição.",
+    "presentations": "Comprimidos 50, 100, 200 e 400 mg conforme produto/jurisdição.",
+    "mechanism": "Antagonista seletivo dopaminérgico D2/D3. O mecanismo deve ser interpretado no contexto da formulação e indicação.",
+    "pharmacodynamics": "Resposta e toxicidade são dependentes de exposição, via e população; ver dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade ~48%; dois picos; baixa ligação proteica; pouco metabolizada; eliminação renal inalterada; meia-vida ~12 h.",
+    "indications": "Transtornos esquizofrênicos agudos e crônicos com sintomas positivos e/ou negativos, conforme SmPC oral. Não confundir com amisulprida IV para náusea pós-operatória em outras jurisdições.",
+    "dose": "Episódios psicóticos agudos: 400–800 mg/dia VO; em casos individuais até 1200 mg/dia, sem exceder esse teto. Sintomas negativos predominantes: 50–300 mg/dia. Doses >400 mg/dia divididas em 2 tomadas.",
+    "pediatricDose": "Contraindicada até a puberdade; uso da puberdade aos 18 anos não recomendado por dados insuficientes. AUTOMATABLE=NO.",
+    "renalDose": "CrCl 30–60 mL/min: metade da dose; CrCl 10–30: um terço. CrCl <10: experiência insuficiente, cuidado especial.",
+    "hepaticDose": "Como é pouco metabolizada, não é necessário ajuste na insuficiência hepática segundo SmPC.",
+    "commonAdverseEffects": "Insônia, ansiedade, agitação, sintomas extrapiramidais, hiperprolactinemia, aumento de peso e hipotensão.",
+    "dangerousAdverseEffects": "QT prolongado/torsades, síndrome neuroléptica maligna, discinesia tardia, tromboembolismo, agranulocitose e hiperglicemia.",
+    "adverseEffects": "Insônia, ansiedade, agitação, sintomas extrapiramidais, hiperprolactinemia, aumento de peso e hipotensão. Graves: QT prolongado/torsades, síndrome neuroléptica maligna, discinesia tardia, tromboembolismo, agranulocitose e hiperglicemia.",
+    "contraindications": "Hipersensibilidade, tumores prolactino-dependentes, feocromocitoma, lactação e combinações contraindicadas por QT/dopamina conforme SmPC.",
+    "interactions": "Evitar outros prolongadores de QT, levodopa/agonistas dopaminérgicos, álcool e depressores; corrigir hipocalemia.",
+    "monitoring": "ECG/QTc e eletrólitos em risco, função renal, sintomas extrapiramidais, prolactina, peso/metabolismo, NMS e suicidabilidade.",
+    "administration": "VO; doses até 300–400 mg podem ser uma vez/dia conforme produto, maiores em 2 tomadas; usar mínima dose eficaz.",
+    "preparation": "Comprimido pronto para uso; divisibilidade depende da apresentação.",
+    "infusionProtocol": "Não aplicável ao produto oral avaliado.",
+    "pregnancy": "Evitar salvo necessidade clara; exposição neonatal pode causar sintomas extrapiramidais/abstinência.",
+    "lactation": "Contraindicada durante amamentação no SmPC consultado.",
+    "specialPopulations": "Individualizar em idosos, gestação/lactação, disfunção renal/hepática e polifarmácia conforme campos específicos.",
+    "patientEducation": "Explicar indicação, técnica, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em fonte regulatória primária; protocolo local pode restringir seleção, sequência e monitorização.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "QT prolongado/torsades, síndrome neuroléptica maligna, discinesia tardia, tromboembolismo, agranulocitose e hiperglicemia. Pediatria bloqueada; ajuste renal exige CrCl validado e revisão de QT/interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/product/4526/smpc",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.medsafe.govt.nz/profs/datasheet/a/AmisulprideMaxtab.pdf"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/4526/smpc"
+  },
+  "es": {
+    "name": "Amisulprida",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Antagonista selectivo dopaminérgico D2/D3",
+    "commercialNames": "Usar solo productos regulatorios citados; no se presumen marcas AR/BR.",
+    "presentation": "Comprimidos 50, 100, 200 y 400 mg según producto/jurisdicción.",
+    "presentations": "Comprimidos 50, 100, 200 y 400 mg según producto/jurisdicción.",
+    "mechanism": "Antagonista selectivo dopaminérgico D2/D3. El mecanismo debe interpretarse según formulación e indicación.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición, vía y población; ver dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad ~48%; dos picos; baja unión proteica; poco metabolismo; eliminación renal sin cambios; semivida ~12 h.",
+    "indications": "Trastornos esquizofrénicos agudos y crónicos con síntomas positivos y/o negativos, según SmPC oral. No confundir con amisulprida IV para náusea posoperatoria en otras jurisdicciones.",
+    "dose": "Episodios psicóticos agudos: 400–800 mg/día VO; en casos individuales hasta 1200 mg/día, sin exceder ese techo. Síntomas negativos predominantes: 50–300 mg/día. Dosis >400 mg/día en 2 tomas.",
+    "pediatricDose": "Contraindicada hasta la pubertad; uso desde pubertad hasta 18 años no recomendado por datos insuficientes. AUTOMATABLE=NO.",
+    "renalDose": "CrCl 30–60 mL/min: mitad de dosis; CrCl 10–30: un tercio. CrCl <10: experiencia insuficiente, especial precaución.",
+    "hepaticDose": "Como se metaboliza poco, no requiere ajuste en insuficiencia hepática según SmPC.",
+    "commonAdverseEffects": "Insomnio, ansiedad, agitación, síntomas extrapiramidales, hiperprolactinemia, aumento de peso e hipotensión.",
+    "dangerousAdverseEffects": "QT prolongado/torsades, síndrome neuroléptico maligno, discinesia tardía, tromboembolismo, agranulocitosis e hiperglucemia.",
+    "adverseEffects": "Insomnio, ansiedad, agitación, síntomas extrapiramidales, hiperprolactinemia, aumento de peso e hipotensión. Graves: QT prolongado/torsades, síndrome neuroléptico maligno, discinesia tardía, tromboembolismo, agranulocitosis e hiperglucemia.",
+    "contraindications": "Hipersensibilidad, tumores prolactino-dependientes, feocromocitoma, lactancia y combinaciones contraindicadas por QT/dopamina según SmPC.",
+    "interactions": "Evitar otros prolongadores QT, levodopa/agonistas dopaminérgicos, alcohol y depresores; corregir hipopotasemia.",
+    "monitoring": "ECG/QTc y electrolitos en riesgo, función renal, síntomas extrapiramidales, prolactina, peso/metabolismo, SNM y suicidabilidad.",
+    "administration": "VO; dosis hasta 300–400 mg pueden darse una vez/día según producto, mayores en 2 tomas; usar mínima dosis eficaz.",
+    "preparation": "Comprimido listo; divisibilidad depende de presentación.",
+    "infusionProtocol": "No aplicable al producto oral evaluado.",
+    "pregnancy": "Evitar salvo necesidad clara; exposición neonatal puede causar síntomas extrapiramidales/abstinencia.",
+    "lactation": "Contraindicada durante lactancia en el SmPC consultado.",
+    "specialPopulations": "Individualizar en ancianos, embarazo/lactancia, disfunción renal/hepática y polifarmacia según campos específicos.",
+    "patientEducation": "Explicar indicación, técnica, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en fuente regulatoria primaria; protocolo local puede restringir selección, secuencia y monitorización.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "QT prolongado/torsades, síndrome neuroléptico maligno, discinesia tardía, tromboembolismo, agranulocitosis e hiperglucemia. Pediatria bloqueada; ajuste renal exige CrCl validado e revisão de QT/interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/product/4526/smpc",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.medsafe.govt.nz/profs/datasheet/a/AmisulprideMaxtab.pdf"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/4526/smpc"
+  }
+};})();
+/* GOLD33_SELECTIVE:amisulprida:END */

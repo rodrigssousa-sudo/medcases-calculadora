@@ -936,3 +936,93 @@
 
   }); /* fim Object.assign CARDIOLOGIA_DRUGS_DB — BUILD 441 (perindopril_indapamida — IECA+TiazídicoLike/ADVANCE-Lancet2007/DM2; perindopril_amlodipino — IECA+BCC/ASCOT-BPLA-Lancet2005) */
 })();
+/* GOLD33_SELECTIVE:amiodarona:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB;if(!db||!db["amiodarona"])throw new Error("GOLD33_MISSING_CANONICAL:amiodarona");db["amiodarona"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "005",
+    "requiredFieldCount": 33,
+    "approvedSha256": "a52097a2e20608e28786e280427a4445cb7d16984c62eb2f05df9d280fc142ea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Amiodarona",
+    "class": "Antiarrítmico classe III",
+    "pharmacologicClass": "Bloqueador multicanal com efeitos classes I–IV",
+    "commercialNames": "Usar somente produtos regulatórios citados nas fontes; marcas AR/BR não presumidas.",
+    "presentation": "IV pré-misturada: 150 mg/100 mL e 360 mg/200 mL. Oral: comprimidos 100/200/400 mg conforme produto.",
+    "presentations": "IV pré-misturada: 150 mg/100 mL e 360 mg/200 mL. Oral: comprimidos 100/200/400 mg conforme produto.",
+    "mechanism": "Bloqueador multicanal com efeitos classes I–IV. O mecanismo deve ser interpretado no contexto da formulação e indicação.",
+    "pharmacodynamics": "Resposta e toxicidade são dependentes de exposição, via e população; ver dose e monitorização.",
+    "pharmacokinetics": "Altamente lipofílica, grande volume de distribuição, metabolismo CYP3A/2C8 a desetilamiodarona e meia-vida extremamente longa após uso crônico.",
+    "indications": "IV: início/tratamento de fibrilação ventricular recorrente e taquicardia ventricular hemodinamicamente instável refratárias. Oral: arritmias ventriculares graves recorrentes quando outros agentes falham, devido à toxicidade.",
+    "dose": "IV: 150 mg em 10 min, depois 1 mg/min por 6 h e 0,5 mg/min; após 24 h, 0,5 mg/min. Para recorrência, 150 mg em 10 min; máximo inicial usual 2,2 g/24 h. Oral: ataque individualizado em ambiente especializado; não converter automaticamente IV↔VO.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas na bula; excipientes e dose neonatal exigem protocolo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste renal específico, inclusive diálise; monitorar eletrólitos e toxicidade.",
+    "hepaticDose": "Reduzir taxa ou suspender diante de lesão hepática progressiva; sem tabela fixa.",
+    "commonAdverseEffects": "Hipotensão, bradicardia, flebite IV; oralmente, náusea, tremor, fotossensibilidade e depósitos corneanos.",
+    "dangerousAdverseEffects": "Toxicidade pulmonar potencialmente fatal, hepatotoxicidade, pró-arritmia/QT, disfunção tireoidiana, neuropatia e toxicidade ocular.",
+    "adverseEffects": "Hipotensão, bradicardia, flebite IV; oralmente, náusea, tremor, fotossensibilidade e depósitos corneanos. Graves: Toxicidade pulmonar potencialmente fatal, hepatotoxicidade, pró-arritmia/QT, disfunção tireoidiana, neuropatia e toxicidade ocular.",
+    "contraindications": "IV: hipersensibilidade, choque cardiogênico, bradicardia marcada e bloqueio AV de 2º/3º grau sem marcapasso. Oral: consultar contraindicações completas do produto.",
+    "interactions": "Prolongadores de QT, fármacos bradicardizantes, digoxina, varfarina, estatinas e inibidores/indutores CYP/P-gp exigem ajuste/monitorização; evitar toranja.",
+    "monitoring": "ECG/QTc, FC/PA, K/Mg, função hepática e tireoide; no uso oral/continuado, pulmões, olhos e pele; revisar interações.",
+    "administration": "IV por bomba, preferir acesso central para concentrações/infusões prolongadas; monitorização contínua. Oral requer avaliação basal pulmonar, hepática, tireoidiana e ocular.",
+    "preparation": "Usar bolsa pré-misturada conforme rótulo; para outras apresentações seguir diluente/concentração e filtro especificados, sem extrapolar.",
+    "infusionProtocol": "150 mg/10 min; manutenção 1 mg/min por 6 h e 0,5 mg/min depois. Evitar infusão rápida por hipotensão.",
+    "pregnancy": "Pode causar dano fetal, inclusive disfunção tireoidiana; usar apenas em arritmia grave quando benefício superar risco.",
+    "lactation": "Amiodarona e metabólito passam ao leite; amamentação não é recomendada durante tratamento.",
+    "specialPopulations": "Individualizar em idosos, gestação/lactação, disfunção renal/hepática e polifarmácia conforme campos específicos.",
+    "patientEducation": "Explicar indicação, técnica, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em fonte regulatória primária; protocolo local pode restringir seleção, sequência e monitorização.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Toxicidade pulmonar potencialmente fatal, hepatotoxicidade, pró-arritmia/QT, disfunção tireoidiana, neuropatia e toxicidade ocular. Conversão IV↔VO e pediatria bloqueadas; uso exige monitorização contínua e revisão de interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9108958-b8d7-4fba-87c3-9a32990de551",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9108958-b8d7-4fba-87c3-9a32990de551"
+  },
+  "es": {
+    "name": "Amiodarona",
+    "class": "Antiarrítmico clase III",
+    "pharmacologicClass": "Bloqueador multicanal con efectos clases I–IV",
+    "commercialNames": "Usar solo productos regulatorios citados; no se presumen marcas AR/BR.",
+    "presentation": "IV premezclada: 150 mg/100 mL y 360 mg/200 mL. Oral: comprimidos 100/200/400 mg según producto.",
+    "presentations": "IV premezclada: 150 mg/100 mL y 360 mg/200 mL. Oral: comprimidos 100/200/400 mg según producto.",
+    "mechanism": "Bloqueador multicanal con efectos clases I–IV. El mecanismo debe interpretarse según formulación e indicación.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición, vía y población; ver dosis y monitorización.",
+    "pharmacokinetics": "Muy lipófila, gran volumen de distribución, metabolismo CYP3A/2C8 a desetilamiodarona y semivida extremadamente larga tras uso crónico.",
+    "indications": "IV: inicio/tratamiento de fibrilación ventricular recurrente y taquicardia ventricular inestable refractaria. Oral: arritmias ventriculares graves recurrentes cuando otros agentes fallan, por toxicidad.",
+    "dose": "IV: 150 mg en 10 min, luego 1 mg/min por 6 h y 0,5 mg/min; tras 24 h, 0,5 mg/min. Para recurrencia, 150 mg en 10 min; máximo inicial usual 2,2 g/24 h. Oral: carga individualizada en entorno especializado; no convertir automáticamente IV↔VO.",
+    "pediatricDose": "Seguridad/eficacia no establecidas en ficha; excipientes y dosis neonatal requieren protocolo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste renal específico, incluso diálisis; vigilar electrolitos y toxicidad.",
+    "hepaticDose": "Reducir velocidad o suspender ante lesión hepática progresiva; sin tabla fija.",
+    "commonAdverseEffects": "Hipotensión, bradicardia, flebitis IV; oralmente, náusea, temblor, fotosensibilidad y depósitos corneales.",
+    "dangerousAdverseEffects": "Toxicidad pulmonar potencialmente fatal, hepatotoxicidad, proarritmia/QT, disfunción tiroidea, neuropatía y toxicidad ocular.",
+    "adverseEffects": "Hipotensión, bradicardia, flebitis IV; oralmente, náusea, temblor, fotosensibilidad y depósitos corneales. Graves: Toxicidad pulmonar potencialmente fatal, hepatotoxicidad, proarritmia/QT, disfunción tiroidea, neuropatía y toxicidad ocular.",
+    "contraindications": "IV: hipersensibilidad, shock cardiogénico, bradicardia marcada y bloqueo AV 2º/3º sin marcapasos. Oral: consultar contraindicaciones completas.",
+    "interactions": "Prolongadores QT, bradicardizantes, digoxina, warfarina, estatinas e inhibidores/inductores CYP/P-gp exigen ajuste/vigilancia; evitar pomelo.",
+    "monitoring": "ECG/QTc, FC/PA, K/Mg, función hepática y tiroidea; en uso oral/prolongado, pulmones, ojos y piel; revisar interacciones.",
+    "administration": "IV por bomba, preferir acceso central para concentraciones/infusiones prolongadas; monitorización continua. Oral requiere evaluación pulmonar, hepática, tiroidea y ocular.",
+    "preparation": "Usar bolsa premezclada según ficha; para otras presentaciones seguir diluyente/concentración y filtro especificados, sin extrapolar.",
+    "infusionProtocol": "150 mg/10 min; mantenimiento 1 mg/min por 6 h y 0,5 mg/min después. Evitar infusión rápida por hipotensión.",
+    "pregnancy": "Puede causar daño fetal, incluida disfunción tiroidea; usar solo en arritmia grave cuando beneficio supere riesgo.",
+    "lactation": "Amiodarona y metabolito pasan a leche; no se recomienda lactancia durante tratamiento.",
+    "specialPopulations": "Individualizar en ancianos, embarazo/lactancia, disfunción renal/hepática y polifarmacia según campos específicos.",
+    "patientEducation": "Explicar indicación, técnica, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en fuente regulatoria primaria; protocolo local puede restringir selección, secuencia y monitorización.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Toxicidad pulmonar potencialmente fatal, hepatotoxicidad, proarritmia/QT, disfunción tiroidea, neuropatía y toxicidad ocular. Conversão IV↔VO e pediatria bloqueadas; uso exige monitorização contínua e revisão de interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9108958-b8d7-4fba-87c3-9a32990de551",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9108958-b8d7-4fba-87c3-9a32990de551"
+  }
+};})();
+/* GOLD33_SELECTIVE:amiodarona:END */

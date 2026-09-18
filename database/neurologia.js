@@ -8760,3 +8760,91 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:almotriptana:END */
+/* GOLD33_SELECTIVE:amantadina:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["amantadina"])throw new Error("GOLD33_MISSING_CANONICAL:amantadina");db["amantadina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "005",
+    "requiredFieldCount": 33,
+    "approvedSha256": "a52097a2e20608e28786e280427a4445cb7d16984c62eb2f05df9d280fc142ea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Amantadina",
+    "class": "Antiparkinsoniano e antiviral adamantano",
+    "pharmacologicClass": "Antagonista NMDA/dopaminérgico indireto",
+    "commercialNames": "Usar somente produtos regulatórios citados nas fontes; marcas AR/BR não presumidas.",
+    "presentation": "Cápsulas/comprimidos 100 mg; solução oral 50 mg/5 mL. Formulações de liberação prolongada não são intercambiáveis.",
+    "presentations": "Cápsulas/comprimidos 100 mg; solução oral 50 mg/5 mL. Formulações de liberação prolongada não são intercambiáveis.",
+    "mechanism": "Antagonista NMDA/dopaminérgico indireto. O mecanismo deve ser interpretado no contexto da formulação e indicação.",
+    "pharmacodynamics": "Resposta e toxicidade são dependentes de exposição, via e população; ver dose e monitorização.",
+    "pharmacokinetics": "Boa absorção oral; baixa metabolização; eliminação principalmente urinária inalterada. Meia-vida aumenta marcadamente na insuficiência renal e em idosos.",
+    "indications": "Parkinsonismo e reações extrapiramidais induzidas por fármacos; a indicação para influenza A deve seguir a bula/jurisdição e resistência circulante.",
+    "dose": "Parkinsonismo: 100 mg VO 2 vezes/dia; iniciar 100 mg/dia em pessoas frágeis ou com comorbidades. Reações extrapiramidais: 100 mg VO 2 vezes/dia; alguns pacientes podem requerer até 300 mg/dia em doses divididas.",
+    "pediatricDose": "Segurança/eficácia para parkinsonismo pediátrico não estabelecidas. Para influenza, o rótulo histórico contém esquemas etários, mas a automação fica bloqueada por indicação epidemiológica e produto. AUTOMATABLE=NO.",
+    "renalDose": "A depuração é renal e a dose/intervalo devem ser reduzidos por clearance de creatinina conforme tabela do produto; hemodiálise remove quantidade desprezível. Não automatizar sem CrCl, idade e formulação.",
+    "hepaticDose": "Sem tabela específica; usar cautela e monitorar em doença hepática.",
+    "commonAdverseEffects": "Náusea, tontura, insônia, confusão, boca seca, edema e livedo reticular.",
+    "dangerousAdverseEffects": "Psicose, ideação suicida, convulsões, insuficiência cardíaca, síndrome de abstinência/hiperpirexia e toxicidade grave por acúmulo renal.",
+    "adverseEffects": "Náusea, tontura, insônia, confusão, boca seca, edema e livedo reticular. Graves: Psicose, ideação suicida, convulsões, insuficiência cardíaca, síndrome de abstinência/hiperpirexia e toxicidade grave por acúmulo renal.",
+    "contraindications": "Hipersensibilidade ao fármaco/componentes.",
+    "interactions": "Anticolinérgicos e estimulantes do SNC podem intensificar toxicidade; fármacos que reduzem depuração renal podem elevar exposição; álcool piora efeitos do SNC.",
+    "monitoring": "Função renal, estado mental, alucinações, impulsividade, edema, hipotensão ortostática e controle motor.",
+    "administration": "Via oral; evitar suspensão abrupta em Parkinson devido a piora clínica, delirium ou síndrome semelhante à neuroléptica maligna.",
+    "preparation": "Formas orais prontas; medir solução com dispositivo calibrado.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados humanos insuficientes; usar somente se benefício justificar risco.",
+    "lactation": "É excretada no leite; bula desaconselha o uso durante amamentação.",
+    "specialPopulations": "Individualizar em idosos, gestação/lactação, disfunção renal/hepática e polifarmácia conforme campos específicos.",
+    "patientEducation": "Explicar indicação, técnica, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em fonte regulatória primária; protocolo local pode restringir seleção, sequência e monitorização.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Psicose, ideação suicida, convulsões, insuficiência cardíaca, síndrome de abstinência/hiperpirexia e toxicidade grave por acúmulo renal. Cálculo renal e uso pediátrico bloqueados sem CrCl, indicação e produto validados.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5119801d-a5cb-4adf-96b2-08cc3a0ba594"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5119801d-a5cb-4adf-96b2-08cc3a0ba594"
+  },
+  "es": {
+    "name": "Amantadina",
+    "class": "Antiparkinsoniano y antiviral adamantano",
+    "pharmacologicClass": "Antagonista NMDA/dopaminérgico indirecto",
+    "commercialNames": "Usar solo productos regulatorios citados; no se presumen marcas AR/BR.",
+    "presentation": "Cápsulas/comprimidos 100 mg; solución oral 50 mg/5 mL. Las formulaciones de liberación prolongada no son intercambiables.",
+    "presentations": "Cápsulas/comprimidos 100 mg; solución oral 50 mg/5 mL. Las formulaciones de liberación prolongada no son intercambiables.",
+    "mechanism": "Antagonista NMDA/dopaminérgico indirecto. El mecanismo debe interpretarse según formulación e indicación.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición, vía y población; ver dosis y monitorización.",
+    "pharmacokinetics": "Buena absorción oral; escaso metabolismo; eliminación principalmente urinaria sin cambios. La semivida aumenta marcadamente en insuficiencia renal y ancianos.",
+    "indications": "Parkinsonismo y reacciones extrapiramidales inducidas por fármacos; la indicación para influenza A depende de ficha/jurisdicción y resistencia circulante.",
+    "dose": "Parkinsonismo: 100 mg VO 2 veces/día; iniciar 100 mg/día en personas frágiles o con comorbilidad. Reacciones extrapiramidales: 100 mg VO 2 veces/día; algunos pacientes pueden requerir hasta 300 mg/día fraccionados.",
+    "pediatricDose": "Seguridad/eficacia para parkinsonismo pediátrico no establecidas. Para influenza, la ficha histórica contiene esquemas por edad, pero la automatización queda bloqueada por indicación epidemiológica y producto. AUTOMATABLE=NO.",
+    "renalDose": "La depuración es renal y la dosis/intervalo deben reducirse según aclaramiento de creatinina y tabla del producto; hemodiálisis elimina una cantidad despreciable. No automatizar sin CrCl, edad y formulación.",
+    "hepaticDose": "Sin tabla específica; usar precaución y vigilar en hepatopatía.",
+    "commonAdverseEffects": "Náusea, mareo, insomnio, confusión, boca seca, edema y livedo reticular.",
+    "dangerousAdverseEffects": "Psicosis, ideación suicida, convulsiones, insuficiencia cardíaca, síndrome de retirada/hiperpirexia y toxicidad grave por acumulación renal.",
+    "adverseEffects": "Náusea, mareo, insomnio, confusión, boca seca, edema y livedo reticular. Graves: Psicosis, ideación suicida, convulsiones, insuficiencia cardíaca, síndrome de retirada/hiperpirexia y toxicidad grave por acumulación renal.",
+    "contraindications": "Hipersensibilidad al fármaco/componentes.",
+    "interactions": "Anticolinérgicos y estimulantes del SNC pueden intensificar toxicidad; fármacos que reducen depuración renal pueden elevar exposición; alcohol empeora efectos del SNC.",
+    "monitoring": "Función renal, estado mental, alucinaciones, impulsividad, edema, hipotensión ortostática y control motor.",
+    "administration": "Vía oral; evitar suspensión brusca en Parkinson por empeoramiento, delirium o síndrome similar al neuroléptico maligno.",
+    "preparation": "Formas orales listas; medir solución con dispositivo calibrado.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos humanos insuficientes; usar solo si beneficio justifica riesgo.",
+    "lactation": "Se excreta en leche; la ficha desaconseja su uso durante lactancia.",
+    "specialPopulations": "Individualizar en ancianos, embarazo/lactancia, disfunción renal/hepática y polifarmacia según campos específicos.",
+    "patientEducation": "Explicar indicación, técnica, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en fuente regulatoria primaria; protocolo local puede restringir selección, secuencia y monitorización.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Psicosis, ideación suicida, convulsiones, insuficiencia cardíaca, síndrome de retirada/hiperpirexia y toxicidad grave por acumulación renal. Cálculo renal e uso pediátrico bloqueados sem CrCl, indicação e produto validados.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5119801d-a5cb-4adf-96b2-08cc3a0ba594"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5119801d-a5cb-4adf-96b2-08cc3a0ba594"
+  }
+};})();
+/* GOLD33_SELECTIVE:amantadina:END */

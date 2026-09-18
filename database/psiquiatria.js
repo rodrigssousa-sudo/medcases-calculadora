@@ -5329,3 +5329,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:alprazolam:END */
+/* GOLD33_SELECTIVE:amitriptilina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["amitriptilina"])throw new Error("GOLD33_MISSING_CANONICAL:amitriptilina");db["amitriptilina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "005",
+    "requiredFieldCount": 33,
+    "approvedSha256": "a52097a2e20608e28786e280427a4445cb7d16984c62eb2f05df9d280fc142ea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Amitriptilina",
+    "class": "Antidepressivo tricíclico",
+    "pharmacologicClass": "Inibidor da recaptação de noradrenalina e serotonina",
+    "commercialNames": "Usar somente produtos regulatórios citados nas fontes; marcas AR/BR não presumidas.",
+    "presentation": "Comprimidos 10, 25, 50, 75, 100 e 150 mg conforme produto.",
+    "presentations": "Comprimidos 10, 25, 50, 75, 100 e 150 mg conforme produto.",
+    "mechanism": "Inibidor da recaptação de noradrenalina e serotonina. O mecanismo deve ser interpretado no contexto da formulação e indicação.",
+    "pharmacodynamics": "Resposta e toxicidade são dependentes de exposição, via e população; ver dose e monitorização.",
+    "pharmacokinetics": "Boa absorção; intenso metabolismo de primeira passagem por CYP2D6/2C19 a nortriptilina ativa; alta ligação proteica; meia-vida variável e eliminação urinária de metabólitos.",
+    "indications": "Tratamento de depressão; usos para dor/sono são off-label e não devem herdar automaticamente a posologia antidepressiva.",
+    "dose": "Ambulatório: iniciar 75 mg/dia VO em doses divididas; pode aumentar a 150 mg/dia. Alternativa: 50–100 mg ao deitar, aumentando 25–50 mg conforme necessário até total 150 mg/dia. Hospitalizados podem requerer até 300 mg/dia sob supervisão.",
+    "pediatricDose": "Não aprovada <12 anos; em adolescentes, a bula histórica sugere 10 mg 3 vezes/dia + 20 mg ao deitar, mas automação é bloqueada e requer psiquiatria especializada. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste numérico específico; iniciar baixo e titular com cautela em comorbidade/idosos.",
+    "hepaticDose": "Metabolismo hepático extenso; usar cautela e doses menores, sem tabela validada.",
+    "commonAdverseEffects": "Sedação, boca seca, constipação, visão turva, retenção urinária, hipotensão ortostática e ganho de peso.",
+    "dangerousAdverseEffects": "Suicidabilidade, arritmias/QRS largo, convulsões, síndrome serotoninérgica, íleo, glaucoma e toxicidade fatal em overdose.",
+    "adverseEffects": "Sedação, boca seca, constipação, visão turva, retenção urinária, hipotensão ortostática e ganho de peso. Graves: Suicidabilidade, arritmias/QRS largo, convulsões, síndrome serotoninérgica, íleo, glaucoma e toxicidade fatal em overdose.",
+    "contraindications": "Uso concomitante/recente de IMAO, fase aguda pós-infarto e hipersensibilidade; respeitar intervalo de washout da bula.",
+    "interactions": "IMAO, serotoninérgicos, anticolinérgicos, depressores do SNC, prolongadores QT e inibidores CYP2D6 elevam risco; pode potencializar simpaticomiméticos.",
+    "monitoring": "Suicidabilidade, resposta, mania, PA/FC, ECG em risco cardíaco, efeitos anticolinérgicos, sódio e quedas.",
+    "administration": "VO; dose noturna pode reduzir sedação diurna. Retirar gradualmente após uso prolongado.",
+    "preparation": "Comprimido pronto; não triturar sem verificar formulação.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar somente se benefício justificar risco; considerar adaptação neonatal perto do parto.",
+    "lactation": "Presente no leite; avaliar benefício-risco e observar sedação no lactente.",
+    "specialPopulations": "Individualizar em idosos, gestação/lactação, disfunção renal/hepática e polifarmácia conforme campos específicos.",
+    "patientEducation": "Explicar indicação, técnica, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em fonte regulatória primária; protocolo local pode restringir seleção, sequência e monitorização.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Suicidabilidade, arritmias/QRS largo, convulsões, síndrome serotoninérgica, íleo, glaucoma e toxicidade fatal em overdose. Pediatria, usos off-label e conversões de dose bloqueados; overdose exige protocolo de emergência.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e520c63-1cf6-40f6-a51c-3f9b0e181342"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e520c63-1cf6-40f6-a51c-3f9b0e181342"
+  },
+  "es": {
+    "name": "Amitriptilina",
+    "class": "Antidepresivo tricíclico",
+    "pharmacologicClass": "Inhibidor de recaptación de noradrenalina y serotonina",
+    "commercialNames": "Usar solo productos regulatorios citados; no se presumen marcas AR/BR.",
+    "presentation": "Comprimidos 10, 25, 50, 75, 100 y 150 mg según producto.",
+    "presentations": "Comprimidos 10, 25, 50, 75, 100 y 150 mg según producto.",
+    "mechanism": "Inhibidor de recaptación de noradrenalina y serotonina. El mecanismo debe interpretarse según formulación e indicación.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición, vía y población; ver dosis y monitorización.",
+    "pharmacokinetics": "Buena absorción; intenso primer paso por CYP2D6/2C19 a nortriptilina activa; alta unión proteica; semivida variable y eliminación urinaria de metabolitos.",
+    "indications": "Tratamiento de depresión; usos para dolor/sueño son off-label y no deben heredar automáticamente la posología antidepresiva.",
+    "dose": "Ambulatorio: iniciar 75 mg/día VO fraccionado; puede aumentar a 150 mg/día. Alternativa: 50–100 mg al acostarse, aumentar 25–50 mg según necesidad hasta 150 mg/día. Hospitalizados pueden requerir hasta 300 mg/día bajo supervisión.",
+    "pediatricDose": "No aprobada <12 años; en adolescentes, la ficha histórica sugiere 10 mg 3 veces/día + 20 mg al acostarse, pero automatización bloqueada y requiere psiquiatría especializada. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste numérico específico; iniciar bajo y titular con cautela en comorbilidad/ancianos.",
+    "hepaticDose": "Metabolismo hepático extenso; usar precaución y dosis menores, sin tabla validada.",
+    "commonAdverseEffects": "Sedación, boca seca, estreñimiento, visión borrosa, retención urinaria, hipotensión ortostática y aumento de peso.",
+    "dangerousAdverseEffects": "Suicidabilidad, arritmias/QRS ancho, convulsiones, síndrome serotoninérgico, íleo, glaucoma y toxicidad fatal en sobredosis.",
+    "adverseEffects": "Sedación, boca seca, estreñimiento, visión borrosa, retención urinaria, hipotensión ortostática y aumento de peso. Graves: Suicidabilidad, arritmias/QRS ancho, convulsiones, síndrome serotoninérgico, íleo, glaucoma y toxicidad fatal en sobredosis.",
+    "contraindications": "Uso concomitante/reciente de IMAO, fase aguda posinfarto e hipersensibilidad; respetar lavado de ficha.",
+    "interactions": "IMAO, serotoninérgicos, anticolinérgicos, depresores SNC, prolongadores QT e inhibidores CYP2D6 elevan riesgo; puede potenciar simpaticomiméticos.",
+    "monitoring": "Suicidabilidad, respuesta, manía, PA/FC, ECG en riesgo cardíaco, efectos anticolinérgicos, sodio y caídas.",
+    "administration": "VO; dosis nocturna puede reducir sedación diurna. Retirar gradualmente tras uso prolongado.",
+    "preparation": "Comprimido listo; no triturar sin verificar formulación.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Usar solo si beneficio justifica riesgo; considerar adaptación neonatal cerca del parto.",
+    "lactation": "Presente en leche; evaluar beneficio-riesgo y vigilar sedación en lactante.",
+    "specialPopulations": "Individualizar en ancianos, embarazo/lactancia, disfunción renal/hepática y polifarmacia según campos específicos.",
+    "patientEducation": "Explicar indicación, técnica, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en fuente regulatoria primaria; protocolo local puede restringir selección, secuencia y monitorización.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Suicidabilidad, arritmias/QRS ancho, convulsiones, síndrome serotoninérgico, íleo, glaucoma y toxicidad fatal en sobredosis. Pediatria, usos off-label e conversões de dose bloqueados; overdose exige protocolo de emergência.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e520c63-1cf6-40f6-a51c-3f9b0e181342"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e520c63-1cf6-40f6-a51c-3f9b0e181342"
+  }
+};})();
+/* GOLD33_SELECTIVE:amitriptilina:END */

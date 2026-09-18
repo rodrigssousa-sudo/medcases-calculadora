@@ -6,185 +6,79 @@
   "colorTxt": null,
   "pt": {
     "name": "Alteplase",
-    "class": "Trombolítico fibrinolítico",
-    "pharmacologicClass": "Ativador recombinante do plasminogênio tecidual (rt-PA)",
-    "mechanism": "Converte plasminogênio em plasmina, com relativa preferência por plasminogênio ligado à fibrina, promovendo fibrinólise do trombo.",
-    "pharmacodynamics": "Reduz a carga trombótica ao degradar fibrina. O efeito sistêmico sobre fibrinogênio é menor que agentes não fibrinoespecíficos, mas o risco hemorrágico permanece relevante.",
-    "pharmacokinetics": "Administração IV. Depuração rápida principalmente hepática, com meia-vida plasmática inicial de poucos minutos. O efeito fibrinolítico persiste além da meia-vida plasmática.",
-    "indications": [
-      "AVC isquêmico agudo em pacientes elegíveis",
-      "IAM com supra de ST em cenários apropriados de fibrinólise",
-      "Embolia pulmonar aguda maciça com instabilidade hemodinâmica"
-    ],
-    "commercialNames": [
-      "Activase",
-      "Alteplase genérica"
-    ],
-    "presentation": "Pó liofilizado para reconstituição IV.",
-    "presentations": [
-      "Frasco 50 mg",
-      "Frasco 100 mg, conforme produto"
-    ],
-    "dose": {
-      "AVC isquêmico": "0,9 mg/kg IV, máximo 90 mg; 10% em bolus de 1 minuto e restante em 60 minutos",
-      "TEP maciço": "100 mg IV em 2 horas em adultos, conforme bula",
-      "IAM com supra": "Esquema acelerado baseado em peso, total máximo 100 mg, conforme protocolo de fibrinólise"
-    },
-    "pediatricDose": "Segurança e eficácia não estabelecidas para AVC isquêmico pediátrico de rotina; uso em trombose pediátrica deve seguir protocolo especializado.",
-    "renalDose": "Não há ajuste posológico específico baseado apenas na função renal, mas insuficiência renal pode aumentar risco hemorrágico e deve integrar avaliação global.",
-    "hepaticDose": "Não há ajuste posológico padronizado; hepatopatia grave, coagulopatia ou hipertensão portal aumentam risco de sangramento e podem contraindicar fibrinólise.",
-    "commonAdverseEffects": [
-      "Sangramento em sítios de punção",
-      "Equimoses",
-      "Sangramento gengival",
-      "Náusea"
-    ],
-    "dangerousAdverseEffects": [
-      "Hemorragia intracraniana sintomática",
-      "Hemorragia interna grave",
-      "Angioedema orolingual",
-      "Reação anafilactoide rara"
-    ],
-    "adverseEffects": "Hemorragia é a principal toxicidade. No AVC, hemorragia intracraniana e angioedema orolingual são eventos críticos que exigem vigilância imediata.",
-    "contraindications": [
-      "Sangramento interno ativo",
-      "Hemorragia intracraniana atual",
-      "Hemorragia subaracnoide",
-      "Condições intracranianas com alto risco de sangramento",
-      "Cirurgia intracraniana ou espinal recente ou trauma craniano grave",
-      "Hipertensão grave não controlada e outras contraindicações específicas da indicação"
-    ],
-    "interactions": [
-      "Anticoagulantes e antiagregantes aumentam risco de sangramento",
-      "Heparina e outros fibrinolíticos aumentam risco hemorrágico",
-      "IECA podem associar-se a maior risco de angioedema orolingual no AVC"
-    ],
-    "monitoring": [
-      "Exame neurológico seriado no AVC",
-      "Pressão arterial frequente",
-      "Sinais de sangramento",
-      "Hemoglobina e coagulação quando indicado",
-      "Inspeção de sítios de punção"
-    ],
-    "administration": "No AVC, administrar assim que possível após confirmar elegibilidade e excluir hemorragia intracraniana. Evitar punções invasivas desnecessárias durante e logo após a infusão.",
-    "preparation": "Reconstituir apenas com o diluente recomendado pelo fabricante e manipular suavemente para evitar espuma. Não adicionar outros medicamentos à solução de alteplase.",
-    "infusionProtocol": "AVC: 10% da dose total em bolus IV de 1 minuto, restante em 60 minutos. TEP maciço: 100 mg em 2 horas. IAM: seguir esquema acelerado por peso do protocolo.",
-    "pregnancy": "Dados são limitados; usar quando o benefício materno em situação trombótica grave superar risco de hemorragia materna ou fetal.",
-    "lactation": "Não se sabe se alteplase clinicamente relevante passa ao leite; devido à natureza proteica e curta meia-vida, absorção oral do lactente tende a ser baixa, mas decisão deve ser individualizada.",
-    "specialPopulations": "Idade avançada, hipertensão, AVC grave, baixo peso e anticoagulação recente aumentam risco hemorrágico e exigem seleção rigorosa.",
-    "patientEducation": "Explicar benefício tempo-dependente e risco de sangramento. Relatar cefaleia súbita, piora neurológica, sangramento persistente ou edema de língua e lábios.",
-    "clinicalPearls": [
-      "No AVC, cada minuto importa e atrasos evitáveis reduzem benefício",
-      "A dose para AVC é 0,9 mg/kg, máximo 90 mg",
-      "A dose e o esquema mudam completamente entre AVC, IAM e TEP"
-    ],
-    "guidelineRecommendations": "AHA/ASA 2026: em adultos elegíveis para trombólise IV dentro de 4,5 horas, alteplase 0,9 mg/kg ou tenecteplase 0,25 mg/kg até 25 mg são recomendadas. Janelas estendidas podem ser consideradas em pacientes selecionados por imagem avançada.",
-    "safetyFlags": [
-      "Alto risco hemorrágico",
-      "Exige seleção rigorosa por indicação",
-      "Monitorização de pressão arterial e neurologia no AVC",
-      "Evitar procedimentos invasivos desnecessários"
-    ],
-    "alerts": [
-      "No AVC, interromper infusão e investigar imediatamente diante de piora neurológica súbita",
-      "Confirmar dose por peso e indicação antes de preparar"
-    ],
+    "class": "Trombolítico",
+    "pharmacologicClass": "Ativador tecidual do plasminogênio recombinante",
+    "mechanism": "Ativador tecidual do plasminogênio recombinante. O mecanismo deve ser interpretado no contexto da formulação e indicação.",
+    "pharmacodynamics": "Resposta e toxicidade são dependentes de exposição, via e população; ver dose e monitorização.",
+    "pharmacokinetics": "Depuração plasmática rápida, predominantemente hepática; meia-vida inicial inferior a 5 min. Efeito trombolítico pode persistir além da presença plasmática.",
+    "indications": "Activase: AVC isquêmico agudo, embolia pulmonar maciça e infarto agudo do miocárdio conforme critérios da bula. Cathflo: restauração de cateter venoso central ocluído. Produtos/regimes não intercambiáveis.",
+    "commercialNames": "Usar somente produtos regulatórios citados nas fontes; marcas AR/BR não presumidas.",
+    "presentation": "Activase: frascos 50 mg e 100 mg para reconstituição. Cathflo: frasco 2 mg.",
+    "presentations": "Activase: frascos 50 mg e 100 mg para reconstituição. Cathflo: frasco 2 mg.",
+    "dose": "AVC: 0,9 mg/kg IV (máx. 90 mg), 10% em bolus de 1 min e restante em 60 min, após excluir hemorragia e dentro da janela indicada. EP maciça: 100 mg IV em 2 h. Cathflo: 2 mg/2 mL intraluminal; reavaliar em 30 e 120 min; pode repetir uma vez.",
+    "pediatricDose": "Activase sistêmica: segurança/eficácia pediátrica não estabelecidas. Cathflo ≥30 kg: 2 mg/2 mL; <30 kg: 110% do volume interno do cateter, máximo 2 mg/2 mL. AUTOMATABLE=NO sem volume do lúmen e produto confirmados.",
+    "renalDose": "Sem ajuste numérico; insuficiência renal pode elevar risco hemorrágico e exige avaliação global.",
+    "hepaticDose": "Evitar/avaliar rigorosamente em hepatopatia com coagulopatia; sem ajuste numérico validado.",
+    "commonAdverseEffects": "Sangramento em locais de punção, equimoses, náusea e hipotensão podem ocorrer.",
+    "dangerousAdverseEffects": "Hemorragia intracraniana/fatal, sangramento interno grave, angioedema e embolização por trombo subjacente.",
+    "adverseEffects": "Sangramento em locais de punção, equimoses, náusea e hipotensão podem ocorrer. Graves: Hemorragia intracraniana/fatal, sangramento interno grave, angioedema e embolização por trombo subjacente.",
+    "contraindications": "Sangramento ativo e condições de alto risco hemorrágico; contraindicações são específicas da indicação e devem ser checadas integralmente na bula/protocolo.",
+    "interactions": "Anticoagulantes, antiagregantes e outros agentes que afetam hemostasia aumentam sangramento; inibidores da ECA associam-se a angioedema.",
+    "monitoring": "Sangramento, PA, exame neurológico, sinais de angioedema, hemoglobina e coagulação conforme protocolo; evitar punções traumáticas.",
+    "administration": "Somente por equipe treinada; controlar PA, neuroimagem/diagnóstico, contraindicações e exposição anticoagulante antes do uso sistêmico. Cathflo é apenas intraluminal.",
+    "preparation": "Reconstituir Activase somente com água estéril fornecida, concentração 1 mg/mL; misturar suavemente, não agitar. Cathflo 2 mg com 2,2 mL de água estéril, resultando 1 mg/mL.",
+    "infusionProtocol": "AVC: bolus inicial + infusão 60 min. EP: 2 h. Não confundir com tempo de permanência intraluminal de Cathflo.",
+    "pregnancy": "Dados limitados e risco hemorrágico; usar somente quando benefício materno justificar risco.",
+    "lactation": "Dados insuficientes; decidir individualmente considerando urgência, exposição sistêmica e benefício da amamentação.",
+    "specialPopulations": "Individualizar em idosos, gestação/lactação, disfunção renal/hepática e polifarmácia conforme campos específicos.",
+    "patientEducation": "Explicar indicação, técnica, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em fonte regulatória primária; protocolo local pode restringir seleção, sequência e monitorização.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hemorragia intracraniana/fatal, sangramento interno grave, angioedema e embolização por trombo subjacente. Cálculo de AVC e Cathflo bloqueado sem indicação, peso, volume luminal e checklist de contraindicações.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2",
-      "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=91ecdef2-95ff-42dd-a31c-c8a09cab3ad9"
     ],
-    "ref": "DailyMed Activase; AHA/ASA Acute Ischemic Stroke Guideline 2026"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2"
   },
   "es": {
     "name": "Alteplasa",
-    "class": "Trombolítico fibrinolítico",
-    "pharmacologicClass": "Activador recombinante del plasminógeno tisular (rt-PA)",
-    "mechanism": "Convierte plasminógeno en plasmina con relativa preferencia por plasminógeno unido a fibrina, promoviendo fibrinólisis del trombo.",
-    "pharmacodynamics": "Reduce la carga trombótica degradando fibrina. El efecto sistémico sobre fibrinógeno es menor que con agentes no fibrinoespecíficos, aunque persiste riesgo hemorrágico relevante.",
-    "pharmacokinetics": "Administración IV. Depuración rápida principalmente hepática, con vida media plasmática inicial de pocos minutos. El efecto fibrinolítico persiste más allá de la vida media plasmática.",
-    "indications": [
-      "ACV isquémico agudo en pacientes elegibles",
-      "IAM con elevación del ST en escenarios apropiados de fibrinólisis",
-      "Embolia pulmonar aguda masiva con inestabilidad hemodinámica"
-    ],
-    "commercialNames": [
-      "Activase",
-      "Alteplasa genérica"
-    ],
-    "presentation": "Polvo liofilizado para reconstitución IV.",
-    "presentations": [
-      "Vial 50 mg",
-      "Vial 100 mg según producto"
-    ],
-    "dose": {
-      "ACV isquémico": "0,9 mg/kg IV, máximo 90 mg; 10% en bolo de 1 minuto y resto en 60 minutos",
-      "TEP masivo": "100 mg IV en 2 horas en adultos según ficha",
-      "IAM con elevación ST": "Esquema acelerado según peso, total máximo 100 mg, según protocolo de fibrinólisis"
-    },
-    "pediatricDose": "Seguridad y eficacia no establecidas para ACV isquémico pediátrico de rutina; el uso en trombosis pediátrica debe seguir protocolo especializado.",
-    "renalDose": "No hay ajuste específico basado solo en función renal, aunque insuficiencia renal puede aumentar riesgo hemorrágico y debe integrarse a evaluación global.",
-    "hepaticDose": "No existe ajuste estandarizado; hepatopatía grave, coagulopatía o hipertensión portal aumentan riesgo de sangrado y pueden contraindicar fibrinólisis.",
-    "commonAdverseEffects": [
-      "Sangrado en sitios de punción",
-      "Equimosis",
-      "Sangrado gingival",
-      "Náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "Hemorragia intracraneal sintomática",
-      "Hemorragia interna grave",
-      "Angioedema orolingual",
-      "Reacción anafilactoide rara"
-    ],
-    "adverseEffects": "La hemorragia es la toxicidad principal. En ACV, hemorragia intracraneal y angioedema orolingual son eventos críticos que requieren vigilancia inmediata.",
-    "contraindications": [
-      "Sangrado interno activo",
-      "Hemorragia intracraneal actual",
-      "Hemorragia subaracnoidea",
-      "Condiciones intracraneales con alto riesgo de sangrado",
-      "Cirugía intracraneal o espinal reciente o trauma craneal grave",
-      "Hipertensión grave no controlada y otras contraindicaciones específicas de la indicación"
-    ],
-    "interactions": [
-      "Anticoagulantes y antiagregantes aumentan riesgo de sangrado",
-      "Heparina y otros fibrinolíticos aumentan riesgo hemorrágico",
-      "IECA pueden asociarse a mayor riesgo de angioedema orolingual en ACV"
-    ],
-    "monitoring": [
-      "Examen neurológico seriado en ACV",
-      "Presión arterial frecuente",
-      "Signos de sangrado",
-      "Hemoglobina y coagulación cuando corresponda",
-      "Inspección de sitios de punción"
-    ],
-    "administration": "En ACV administrar lo antes posible tras confirmar elegibilidad y excluir hemorragia intracraneal. Evitar punciones invasivas innecesarias durante y después.",
-    "preparation": "Reconstituir solo con el diluyente recomendado y manipular suavemente para evitar espuma. No añadir otros medicamentos a la solución de alteplasa.",
-    "infusionProtocol": "ACV: 10% de la dosis total en bolo IV de 1 minuto, resto en 60 minutos. TEP masivo: 100 mg en 2 horas. IAM: seguir esquema acelerado según peso.",
-    "pregnancy": "Datos limitados; usar cuando el beneficio materno en una situación trombótica grave supere el riesgo de hemorragia materna o fetal.",
-    "lactation": "No se conoce la excreción clínicamente relevante en leche; por su naturaleza proteica y corta vida media la absorción oral del lactante sería baja, pero individualizar.",
-    "specialPopulations": "Edad avanzada, hipertensión, ACV grave, bajo peso y anticoagulación reciente aumentan riesgo hemorrágico y requieren selección rigurosa.",
-    "patientEducation": "Explicar beneficio dependiente del tiempo y riesgo de sangrado. Comunicar cefalea súbita, empeoramiento neurológico, sangrado persistente o edema de lengua y labios.",
-    "clinicalPearls": [
-      "En ACV cada minuto importa y los retrasos evitables reducen beneficio",
-      "La dosis para ACV es 0,9 mg/kg, máximo 90 mg",
-      "Dosis y esquema cambian completamente entre ACV, IAM y TEP"
-    ],
-    "guidelineRecommendations": "AHA/ASA 2026: en adultos elegibles para trombólisis IV dentro de 4,5 horas se recomiendan alteplasa 0,9 mg/kg o tenecteplasa 0,25 mg/kg hasta 25 mg. Ventanas extendidas pueden considerarse en pacientes seleccionados por imagen avanzada.",
-    "safetyFlags": [
-      "Alto riesgo hemorrágico",
-      "Selección rigurosa por indicación",
-      "Monitorización de presión arterial y neurología en ACV",
-      "Evitar procedimientos invasivos innecesarios"
-    ],
-    "alerts": [
-      "En ACV suspender infusión e investigar de inmediato ante empeoramiento neurológico súbito",
-      "Confirmar dosis por peso e indicación antes de preparar"
-    ],
+    "class": "Trombolítico",
+    "pharmacologicClass": "Activador tisular del plasminógeno recombinante",
+    "mechanism": "Activador tisular del plasminógeno recombinante. El mecanismo debe interpretarse según formulación e indicación.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición, vía y población; ver dosis y monitorización.",
+    "pharmacokinetics": "Depuración plasmática rápida, predominantemente hepática; semivida inicial menor de 5 min. El efecto trombolítico puede persistir más allá de la presencia plasmática.",
+    "indications": "Activase: ACV isquémico agudo, embolia pulmonar masiva e infarto agudo de miocardio según ficha. Cathflo: restauración de catéter venoso central ocluido. Productos/regímenes no intercambiables.",
+    "commercialNames": "Usar solo productos regulatorios citados; no se presumen marcas AR/BR.",
+    "presentation": "Activase: viales 50 mg y 100 mg para reconstitución. Cathflo: vial 2 mg.",
+    "presentations": "Activase: viales 50 mg y 100 mg para reconstitución. Cathflo: vial 2 mg.",
+    "dose": "ACV: 0,9 mg/kg IV (máx. 90 mg), 10% en bolo de 1 min y resto en 60 min, tras excluir hemorragia y dentro de ventana indicada. EP masiva: 100 mg IV en 2 h. Cathflo: 2 mg/2 mL intraluminal; reevaluar a 30 y 120 min; puede repetirse una vez.",
+    "pediatricDose": "Activase sistémica: seguridad/eficacia pediátrica no establecidas. Cathflo ≥30 kg: 2 mg/2 mL; <30 kg: 110% del volumen interno del catéter, máximo 2 mg/2 mL. AUTOMATABLE=NO sin volumen luminal y producto confirmados.",
+    "renalDose": "Sin ajuste numérico; insuficiencia renal puede aumentar riesgo hemorrágico y exige evaluación global.",
+    "hepaticDose": "Evitar/evaluar rigurosamente en hepatopatía con coagulopatía; sin ajuste numérico validado.",
+    "commonAdverseEffects": "Sangrado en punciones, equimosis, náusea e hipotensión pueden ocurrir.",
+    "dangerousAdverseEffects": "Hemorragia intracraneal/fatal, sangrado interno grave, angioedema y embolización por trombo subyacente.",
+    "adverseEffects": "Sangrado en punciones, equimosis, náusea e hipotensión pueden ocurrir. Graves: Hemorragia intracraneal/fatal, sangrado interno grave, angioedema y embolización por trombo subyacente.",
+    "contraindications": "Sangrado activo y condiciones de alto riesgo hemorrágico; las contraindicaciones son específicas de la indicación y deben revisarse íntegramente en ficha/protocolo.",
+    "interactions": "Anticoagulantes, antiagregantes y otros agentes que afectan hemostasia aumentan sangrado; inhibidores ECA se asocian a angioedema.",
+    "monitoring": "Sangrado, PA, examen neurológico, angioedema, hemoglobina y coagulación según protocolo; evitar punciones traumáticas.",
+    "administration": "Solo por equipo entrenado; controlar PA, neuroimagen/diagnóstico, contraindicaciones y anticoagulantes antes del uso sistémico. Cathflo es solo intraluminal.",
+    "preparation": "Reconstituir Activase solo con agua estéril suministrada, concentración 1 mg/mL; mezclar suavemente, no agitar. Cathflo 2 mg con 2,2 mL de agua estéril, resultando 1 mg/mL.",
+    "infusionProtocol": "ACV: bolo inicial + infusión 60 min. EP: 2 h. No confundir con tiempo de permanencia intraluminal de Cathflo.",
+    "pregnancy": "Datos limitados y riesgo hemorrágico; usar solo cuando beneficio materno justifique riesgo.",
+    "lactation": "Datos insuficientes; decidir individualmente considerando urgencia, exposición sistémica y beneficio de lactancia.",
+    "specialPopulations": "Individualizar en ancianos, embarazo/lactancia, disfunción renal/hepática y polifarmacia según campos específicos.",
+    "patientEducation": "Explicar indicación, técnica, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en fuente regulatoria primaria; protocolo local puede restringir selección, secuencia y monitorización.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hemorragia intracraneal/fatal, sangrado interno grave, angioedema y embolización por trombo subyacente. Cálculo de AVC e Cathflo bloqueado sem indicação, peso, volume luminal e checklist de contraindicações.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2",
-      "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=91ecdef2-95ff-42dd-a31c-c8a09cab3ad9"
     ],
-    "ref": "DailyMed Activase; AHA/ASA Acute Ischemic Stroke Guideline 2026"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2"
   },
   "name": {
     "pt": "Alteplase",
@@ -193,8 +87,8 @@
   "keywords": [
     "alteplase"
   ],
-  "dataVersion": "clinical-data-v1-1cac4b67956c5c6c",
-  "clinicalContentSha256": "1cac4b67956c5c6c05986aab0fbb87654cdbe4126bd865f82f084986ed2dfcd6",
+  "dataVersion": "clinical-data-v1-12ba8ad15e98178c",
+  "clinicalContentSha256": "12ba8ad15e98178c5bd41c8f5078d65a9b7455b1b496e724a8ddbe3acc0c73de",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardio.js",
@@ -295,13 +189,15 @@
     ]
   },
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "alteplase.mcGoldClinicalV1",
-    "group": "GOLD_GROUP03_CARDIO_10",
-    "review": "2026-09",
+    "lote": "005",
     "requiredFields": 33,
-    "contentSha256": "b319fe71791e8441c9f2c1bac42744c99cec3721af55bbf1adaeab34d6befef7",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "a52097a2e20608e28786e280427a4445cb7d16984c62eb2f05df9d280fc142ea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }
