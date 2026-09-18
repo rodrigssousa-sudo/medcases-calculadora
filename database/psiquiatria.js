@@ -5417,3 +5417,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:amitriptilina:END */
+/* GOLD33_SELECTIVE:bromazepam:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["bromazepam"])throw new Error("GOLD33_MISSING_CANONICAL:bromazepam");db["bromazepam"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "011",
+    "requiredFieldCount": 33,
+    "approvedSha256": "7b76ae47c1977e8ef5a9181eab9814d1b9fae210d78f43b2fc0fe9534c35db7d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Bromazepam",
+    "class": "Benzodiazepínico ansiolítico",
+    "pharmacologicClass": "Modulador alostérico positivo do receptor GABA-A",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 1,5/3/6 mg conforme mercado; gotas em alguns países.",
+    "presentations": "Comprimidos 1,5/3/6 mg conforme mercado; gotas em alguns países.",
+    "mechanism": "Modulador alostérico positivo do receptor GABA-A. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção rápida; biodisponibilidade 60-70% ou maior conforme produto; ligação ~70%; metabolismo hepático; meia-vida média ~17 h.",
+    "indications": "Tratamento de curto prazo de ansiedade grave/incapacitante quando medidas não farmacológicas são insuficientes; autorização varia por país.",
+    "dose": "Usual ambulatorial 1,5-3 mg até 3x/dia; casos graves hospitalares podem exigir mais, conforme bula. Usar menor dose pelo menor tempo; duração total geralmente ≤8-12 semanas incluindo retirada.",
+    "pediatricDose": "Não recomendado em crianças; se excepcional, dose individualizada por especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste definido; iniciar baixo em idosos/insuficiência e monitorar acúmulo.",
+    "hepaticDose": "Reduzir dose/evitar em insuficiência grave; metabolismo hepático.",
+    "commonAdverseEffects": "Sonolência, fadiga, ataxia, tontura, amnésia e fraqueza muscular.",
+    "dangerousAdverseEffects": "Depressão respiratória, dependência/abstinência com convulsões, reações paradoxais e quedas.",
+    "adverseEffects": "Sonolência, fadiga, ataxia, tontura, amnésia e fraqueza muscular. Graves: Depressão respiratória, dependência/abstinência com convulsões, reações paradoxais e quedas.",
+    "contraindications": "Miastenia gravis, insuficiência respiratória grave, apneia do sono, insuficiência hepática grave e hipersensibilidade a benzodiazepínicos.",
+    "interactions": "Opioides, álcool e outros depressores SNC podem causar sedação profunda, depressão respiratória, coma e morte; inibidores CYP podem aumentar exposição.",
+    "monitoring": "Sedação, respiração, quedas, cognição, uso problemático/dependência e sintomas de retirada.",
+    "administration": "VO em doses divididas. Retirada gradual obrigatória após uso regular.",
+    "preparation": "Comprimido pronto; gotas exigem confirmar concentração.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Evitar quando possível; uso tardio pode causar hipotonia, depressão respiratória e abstinência neonatal.",
+    "lactation": "Passa ao leite; não recomendado em uso repetido, sobretudo em recém-nascidos.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Depressão respiratória, dependência/abstinência com convulsões, reações paradoxais e quedas. Prescrição/taper bloqueados sem gravidade/duração, idade, respiração/fígado, opioides/álcool, dependência e concentração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://assets.hpra.ie/products/Human/30762/Licence_PA2239-008-002_03072025152535.pdf",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.tga.gov.au/resources/artg/52269"
+    ],
+    "ref": "https://assets.hpra.ie/products/Human/30762/Licence_PA2239-008-002_03072025152535.pdf"
+  },
+  "es": {
+    "name": "Bromazepam",
+    "class": "Benzodiacepina ansiolítica",
+    "pharmacologicClass": "Modulador alostérico positivo del receptor GABA-A",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 1,5/3/6 mg según mercado; gotas en algunos países.",
+    "presentations": "Comprimidos 1,5/3/6 mg según mercado; gotas en algunos países.",
+    "mechanism": "Modulador alostérico positivo del receptor GABA-A. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción rápida; biodisponibilidad 60-70% o mayor según producto; unión ~70%; metabolismo hepático; semivida media ~17 h.",
+    "indications": "Tratamiento corto de ansiedad grave/incapacitante cuando medidas no farmacológicas son insuficientes; autorización varía por país.",
+    "dose": "Habitual ambulatoria 1,5-3 mg hasta 3 veces/día; casos graves hospitalarios pueden requerir más, según ficha. Usar mínima dosis/tiempo; total generalmente ≤8-12 semanas incluida retirada.",
+    "pediatricDose": "No recomendado en niños; si excepcional, dosis individualizada por especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste definido; iniciar bajo en ancianos/insuficiencia y vigilar acumulación.",
+    "hepaticDose": "Reducir dosis/evitar en insuficiencia grave; metabolismo hepático.",
+    "commonAdverseEffects": "Somnolencia, fatiga, ataxia, mareo, amnesia y debilidad muscular.",
+    "dangerousAdverseEffects": "Depresión respiratoria, dependencia/abstinencia con convulsiones, reacciones paradójicas y caídas.",
+    "adverseEffects": "Somnolencia, fatiga, ataxia, mareo, amnesia y debilidad muscular. Graves: Depresión respiratoria, dependencia/abstinencia con convulsiones, reacciones paradójicas y caídas.",
+    "contraindications": "Miastenia gravis, insuficiencia respiratoria grave, apnea del sueño, insuficiencia hepática grave e hipersensibilidad a benzodiacepinas.",
+    "interactions": "Opioides, alcohol y otros depresores SNC pueden causar sedación profunda, depresión respiratoria, coma y muerte; inhibidores CYP pueden aumentar exposición.",
+    "monitoring": "Sedación, respiración, caídas, cognición, uso problemático/dependencia y retirada.",
+    "administration": "VO en dosis divididas. Retirada gradual obligatoria tras uso regular.",
+    "preparation": "Comprimido listo; gotas requieren confirmar concentración.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Evitar cuando sea posible; uso tardío puede causar hipotonía, depresión respiratoria y abstinencia neonatal.",
+    "lactation": "Pasa a leche; no recomendado en uso repetido, sobre todo en recién nacidos.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Depresión respiratoria, dependencia/abstinencia con convulsiones, reacciones paradójicas y caídas. Prescrição/taper bloqueados sem gravidade/duração, idade, respiração/fígado, opioides/álcool, dependência e concentração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://assets.hpra.ie/products/Human/30762/Licence_PA2239-008-002_03072025152535.pdf",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.tga.gov.au/resources/artg/52269"
+    ],
+    "ref": "https://assets.hpra.ie/products/Human/30762/Licence_PA2239-008-002_03072025152535.pdf"
+  }
+};})();
+/* GOLD33_SELECTIVE:bromazepam:END */

@@ -3747,3 +3747,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:benralizumabe:END */
+/* GOLD33_SELECTIVE:bromexina:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["bromexina"])throw new Error("GOLD33_MISSING_CANONICAL:bromexina");db["bromexina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "011",
+    "requiredFieldCount": 33,
+    "approvedSha256": "7b76ae47c1977e8ef5a9181eab9814d1b9fae210d78f43b2fc0fe9534c35db7d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Bromexina",
+    "class": "Mucolítico",
+    "pharmacologicClass": "Reduz viscosidade do muco e favorece depuração mucociliar",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 8 mg e solução/xarope com concentrações variáveis; confirmar produto.",
+    "presentations": "Comprimidos 8 mg e solução/xarope com concentrações variáveis; confirmar produto.",
+    "mechanism": "Reduz viscosidade do muco e favorece depuração mucociliar. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção rápida com alto efeito de primeira passagem; metabólito ambroxol; meia-vida terminal aproximada 12-15 h.",
+    "indications": "Terapia secretolítica em doenças broncopulmonares com muco viscoso, conforme autorização local; não substitui avaliação de tosse persistente.",
+    "dose": "Adultos e ≥12 anos: frequentemente 8 mg VO 3x/dia; alguns produtos permitem 16 mg 3x/dia inicialmente. Seguir SmPC local.",
+    "pediatricDose": "6-11 anos: frequentemente 4 mg 3x/dia; 2-5 anos: 2 mg 3x/dia em produtos autorizados. <2 anos: não usar sem orientação/regulação local. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste estabelecido; metabólitos podem acumular, usar cautela em grave.",
+    "hepaticDose": "Cautela/redução em insuficiência grave por metabolismo hepático.",
+    "commonAdverseEffects": "Náusea, dor epigástrica, vômito, diarreia e cefaleia.",
+    "dangerousAdverseEffects": "Anafilaxia e reações cutâneas graves como SJS/TEN/AGEP, raras; interromper diante de lesões de pele/mucosa.",
+    "adverseEffects": "Náusea, dor epigástrica, vômito, diarreia e cefaleia. Graves: Anafilaxia e reações cutâneas graves como SJS/TEN/AGEP, raras; interromper diante de lesões de pele/mucosa.",
+    "contraindications": "Hipersensibilidade; contraindicações etárias dependem do produto.",
+    "interactions": "Não combinar rotineiramente com antitussígenos que impeçam expectoração; antibióticos podem ter maior penetração em secreções.",
+    "monitoring": "Resposta, volume/eliminação de secreções, sintomas persistentes, pele/mucosas e função renal/hepática se grave.",
+    "administration": "VO, preferencialmente após alimento se desconforto; hidratação adequada.",
+    "preparation": "Medir líquido com dispositivo; confirmar mg/mL.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados limitados; evitar no primeiro trimestre por precaução e usar apenas se necessário.",
+    "lactation": "Provável excreção; não recomendada durante amamentação segundo algumas bulas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia e reações cutâneas graves como SJS/TEN/AGEP, raras; interromper diante de lesões de pele/mucosa. Dose bloqueada sem idade/peso, concentração/produto autorizado, causa da tosse e função renal/hepática; alerta cutâneo obrigatório.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://smpcs.mcaz.co.zw/medicine/bromhexine-8mg-tablets/",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines/human/referrals/ambroxol-bromhexine-containing-medicines"
+    ],
+    "ref": "https://smpcs.mcaz.co.zw/medicine/bromhexine-8mg-tablets/"
+  },
+  "es": {
+    "name": "Bromhexina",
+    "class": "Mucolítico",
+    "pharmacologicClass": "Reduce viscosidad del moco y favorece aclaramiento mucociliar",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 8 mg y solución/jarabe con concentraciones variables; confirmar producto.",
+    "presentations": "Comprimidos 8 mg y solución/jarabe con concentraciones variables; confirmar producto.",
+    "mechanism": "Reduce viscosidad del moco y favorece aclaramiento mucociliar. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción rápida con alto primer paso; metabolito ambroxol; semivida terminal aproximada 12-15 h.",
+    "indications": "Terapia secretolítica en enfermedades broncopulmonares con moco viscoso, según autorización local; no sustituye evaluación de tos persistente.",
+    "dose": "Adultos y ≥12 años: frecuentemente 8 mg VO 3 veces/día; algunos productos permiten 16 mg 3 veces/día al inicio. Seguir ficha local.",
+    "pediatricDose": "6-11 años: frecuentemente 4 mg 3 veces/día; 2-5 años: 2 mg 3 veces/día en productos autorizados. <2 años: no usar sin indicación/regulación local. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste establecido; metabolitos pueden acumularse, usar precaución en grave.",
+    "hepaticDose": "Precaución/reducción en insuficiencia grave por metabolismo hepático.",
+    "commonAdverseEffects": "Náusea, dolor epigástrico, vómito, diarrea y cefalea.",
+    "dangerousAdverseEffects": "Anafilaxia y reacciones cutáneas graves como SJS/TEN/AGEP, raras; suspender ante lesiones de piel/mucosa.",
+    "adverseEffects": "Náusea, dolor epigástrico, vómito, diarrea y cefalea. Graves: Anafilaxia y reacciones cutáneas graves como SJS/TEN/AGEP, raras; suspender ante lesiones de piel/mucosa.",
+    "contraindications": "Hipersensibilidad; contraindicaciones por edad dependen del producto.",
+    "interactions": "No combinar rutinariamente con antitusivos que impidan expectoración; antibióticos pueden aumentar penetración en secreciones.",
+    "monitoring": "Respuesta, volumen/eliminación de secreciones, síntomas persistentes, piel/mucosas y función renal/hepática si grave.",
+    "administration": "VO, preferentemente después de alimentos si malestar; hidratación adecuada.",
+    "preparation": "Medir líquido con dispositivo; confirmar mg/mL.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos limitados; evitar en primer trimestre por precaución y usar solo si es necesario.",
+    "lactation": "Probable excreción; no recomendada durante lactancia según algunas fichas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia y reacciones cutáneas graves como SJS/TEN/AGEP, raras; suspender ante lesiones de piel/mucosa. Dose bloqueada sem idade/peso, concentração/produto autorizado, causa da tosse e função renal/hepática; alerta cutâneo obrigatório.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://smpcs.mcaz.co.zw/medicine/bromhexine-8mg-tablets/",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines/human/referrals/ambroxol-bromhexine-containing-medicines"
+    ],
+    "ref": "https://smpcs.mcaz.co.zw/medicine/bromhexine-8mg-tablets/"
+  }
+};})();
+/* GOLD33_SELECTIVE:bromexina:END */

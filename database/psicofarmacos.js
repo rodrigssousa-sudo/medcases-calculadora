@@ -3276,3 +3276,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:asenapina:END */
+/* GOLD33_SELECTIVE:brexpiprazol:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB;if(!db||!db["brexpiprazol"])throw new Error("GOLD33_MISSING_CANONICAL:brexpiprazol");db["brexpiprazol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "011",
+    "requiredFieldCount": 33,
+    "approvedSha256": "7b76ae47c1977e8ef5a9181eab9814d1b9fae210d78f43b2fc0fe9534c35db7d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Brexpiprazol",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Agonista parcial D2/5-HT1A e antagonista 5-HT2A",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 0,25; 0,5; 1; 2; 3 e 4 mg.",
+    "presentations": "Comprimidos 0,25; 0,5; 1; 2; 3 e 4 mg.",
+    "mechanism": "Agonista parcial D2/5-HT1A e antagonista 5-HT2A. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Tmax ~4 h; ligação >99%; metabolismo CYP3A4/2D6; meia-vida ~91 h.",
+    "indications": "Esquizofrenia; adjuvante no transtorno depressivo maior; agitação associada à demência por Alzheimer conforme rótulo. Não trata psicose relacionada à demência sem indicação aprovada.",
+    "dose": "Dose depende da indicação: TDM iniciar 0,5-1 mg/dia, alvo 2 mg, máximo 3 mg; esquizofrenia iniciar 1 mg/dia, alvo 2-4 mg, máximo 4 mg; agitação Alzheimer 0,5 mg/dia com titulação, alvo 2 mg, máximo 3 mg.",
+    "pediatricDose": "Esquizofrenia em adolescentes conforme jurisdição/rótulo; demais usos pediátricos não estabelecidos. AUTOMATABLE=NO.",
+    "renalDose": "ClCr <60: máximo 2 mg/dia em TDM/agitação e 3 mg/dia em esquizofrenia.",
+    "hepaticDose": "Child-Pugh ≥7: mesmos máximos reduzidos.",
+    "commonAdverseEffects": "Acatisia, ganho de peso, cefaleia, sonolência, náusea e insônia.",
+    "dangerousAdverseEffects": "Mortalidade/AVC em idosos com psicose por demência, síndrome neuroléptica maligna, discinesia tardia, hiperglicemia e suicidabilidade em jovens.",
+    "adverseEffects": "Acatisia, ganho de peso, cefaleia, sonolência, náusea e insônia. Graves: Mortalidade/AVC em idosos com psicose por demência, síndrome neuroléptica maligna, discinesia tardia, hiperglicemia e suicidabilidade em jovens.",
+    "contraindications": "Hipersensibilidade; contraindicações adicionais dependem do contexto.",
+    "interactions": "Inibidores CYP2D6/3A4 exigem redução; indutores CYP3A4 exigem ajuste/evitação; álcool e depressores aumentam sedação.",
+    "monitoring": "Sintomas/ideação suicida, acatisia, peso/IMC, glicose, lipídios, PA, movimentos anormais, quedas e hemograma se risco.",
+    "administration": "VO uma vez/dia, com ou sem alimento; titular conforme indicação.",
+    "preparation": "Comprimido pronto.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Exposição no 3º trimestre pode causar sintomas extrapiramidais/abstinência neonatal.",
+    "lactation": "Dados insuficientes; pode reduzir prolactina/lactação. Individualizar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Mortalidade/AVC em idosos com psicose por demência, síndrome neuroléptica maligna, discinesia tardia, hiperglicemia e suicidabilidade em jovens. Indicação e titulação bloqueadas sem diagnóstico, idade, rim/fígado, CYP2D6/3A4, risco suicida/metabólico e demência.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=REXULTI",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/205422s009lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=REXULTI"
+  },
+  "es": {
+    "name": "Brexpiprazol",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Agonista parcial D2/5-HT1A y antagonista 5-HT2A",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 0,25; 0,5; 1; 2; 3 y 4 mg.",
+    "presentations": "Comprimidos 0,25; 0,5; 1; 2; 3 y 4 mg.",
+    "mechanism": "Agonista parcial D2/5-HT1A y antagonista 5-HT2A. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Tmax ~4 h; unión >99%; metabolismo CYP3A4/2D6; semivida ~91 h.",
+    "indications": "Esquizofrenia; adyuvante en trastorno depresivo mayor; agitación asociada a demencia de Alzheimer según ficha. No trata psicosis por demencia sin indicación aprobada.",
+    "dose": "Dosis según indicación: TDM iniciar 0,5-1 mg/día, objetivo 2 mg, máximo 3 mg; esquizofrenia iniciar 1 mg/día, objetivo 2-4 mg, máximo 4 mg; agitación Alzheimer 0,5 mg/día con titulación, objetivo 2 mg, máximo 3 mg.",
+    "pediatricDose": "Esquizofrenia en adolescentes según jurisdicción/ficha; otros usos pediátricos no establecidos. AUTOMATABLE=NO.",
+    "renalDose": "ClCr <60: máximo 2 mg/día en TDM/agitación y 3 mg/día en esquizofrenia.",
+    "hepaticDose": "Child-Pugh ≥7: mismos máximos reducidos.",
+    "commonAdverseEffects": "Acatisia, aumento de peso, cefalea, somnolencia, náusea e insomnio.",
+    "dangerousAdverseEffects": "Mortalidad/ACV en ancianos con psicosis por demencia, síndrome neuroléptico maligno, discinesia tardía, hiperglucemia y suicidabilidad en jóvenes.",
+    "adverseEffects": "Acatisia, aumento de peso, cefalea, somnolencia, náusea e insomnio. Graves: Mortalidad/ACV en ancianos con psicosis por demencia, síndrome neuroléptico maligno, discinesia tardía, hiperglucemia y suicidabilidad en jóvenes.",
+    "contraindications": "Hipersensibilidad; contraindicaciones adicionales dependen del contexto.",
+    "interactions": "Inhibidores CYP2D6/3A4 exigen reducción; inductores CYP3A4 requieren ajuste/evitación; alcohol y depresores aumentan sedación.",
+    "monitoring": "Síntomas/ideación suicida, acatisia, peso/IMC, glucosa, lípidos, PA, movimientos anormales, caídas y hemograma si riesgo.",
+    "administration": "VO una vez/día, con o sin alimentos; titular según indicación.",
+    "preparation": "Comprimido listo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Exposición en tercer trimestre puede causar síntomas extrapiramidales/abstinencia neonatal.",
+    "lactation": "Datos insuficientes; puede reducir prolactina/lactancia. Individualizar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Mortalidad/ACV en ancianos con psicosis por demencia, síndrome neuroléptico maligno, discinesia tardía, hiperglucemia y suicidabilidad en jóvenes. Indicação e titulação bloqueadas sem diagnóstico, idade, rim/fígado, CYP2D6/3A4, risco suicida/metabólico e demência.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=REXULTI",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/205422s009lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=REXULTI"
+  }
+};})();
+/* GOLD33_SELECTIVE:brexpiprazol:END */

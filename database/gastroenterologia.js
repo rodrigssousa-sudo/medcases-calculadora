@@ -2132,3 +2132,93 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:alginato_de_sodio:END */
+/* GOLD33_SELECTIVE:bisacodil:START */
+;(function(){var db=window.GASTROENTEROLOGIA_DRUGS_DB;if(!db||!db["bisacodil"])throw new Error("GOLD33_MISSING_CANONICAL:bisacodil");db["bisacodil"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "011",
+    "requiredFieldCount": 33,
+    "approvedSha256": "7b76ae47c1977e8ef5a9181eab9814d1b9fae210d78f43b2fc0fe9534c35db7d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Bisacodil",
+    "class": "Laxante estimulante",
+    "pharmacologicClass": "Estimula plexos entéricos e secreção de água/eletrólitos no cólon",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos gastrorresistentes 5 mg e supositórios 10 mg; apresentações pediátricas variam.",
+    "presentations": "Comprimidos gastrorresistentes 5 mg e supositórios 10 mg; apresentações pediátricas variam.",
+    "mechanism": "Estimula plexos entéricos e secreção de água/eletrólitos no cólon. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Pró-fármaco hidrolisado no cólon; baixa absorção sistêmica; início depende da via.",
+    "indications": "Constipação ocasional e preparo intestinal como parte de protocolo específico.",
+    "dose": "Constipação: 5-15 mg VO uma vez/dia ou 10 mg retal; uso curto. Preparo intestinal exige esquema institucional específico.",
+    "pediatricDose": "6-11 anos: frequentemente 5 mg VO ou supositório pediátrico conforme produto; <6 anos somente orientação profissional. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal; evitar desidratação e distúrbios eletrolíticos.",
+    "hepaticDose": "Sem ajuste formal.",
+    "commonAdverseEffects": "Cólica, dor abdominal, diarreia e náusea.",
+    "dangerousAdverseEffects": "Desidratação, distúrbios eletrolíticos, síncope e colite isquêmica rara.",
+    "adverseEffects": "Cólica, dor abdominal, diarreia e náusea. Graves: Desidratação, distúrbios eletrolíticos, síncope e colite isquêmica rara.",
+    "contraindications": "Obstrução/íleo, abdome agudo, apendicite suspeita, dor abdominal inexplicada com náusea/vômito e desidratação grave.",
+    "interactions": "Antiácidos/leite/IBP podem dissolver revestimento precocemente; diuréticos e corticoides aumentam risco de hipocalemia com abuso.",
+    "monitoring": "Frequência evacuatória, dor, hidratação e eletrólitos se uso repetido.",
+    "administration": "Engolir comprimido inteiro; efeito VO em 6-12 h, retal em 15-60 min.",
+    "preparation": "Não triturar/mastigar revestido; separar de leite, antiácidos ou IBP por pelo menos 1 h conforme rótulo.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Uso ocasional geralmente aceitável quando necessário; evitar abuso.",
+    "lactation": "Absorção sistêmica mínima; geralmente compatível.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Desidratação, distúrbios eletrolíticos, síncope e colite isquêmica rara. Uso bloqueado sem excluir obstrução/abdome agudo; preparo intestinal não automatizado sem protocolo e produto.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bisacodyl",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/021632s012lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bisacodyl"
+  },
+  "es": {
+    "name": "Bisacodilo",
+    "class": "Laxante estimulante",
+    "pharmacologicClass": "Estimula plexos entéricos y secreción de agua/electrolitos en colon",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos gastrorresistentes 5 mg y supositorios 10 mg; presentaciones pediátricas variables.",
+    "presentations": "Comprimidos gastrorresistentes 5 mg y supositorios 10 mg; presentaciones pediátricas variables.",
+    "mechanism": "Estimula plexos entéricos y secreción de agua/electrolitos en colon. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Profármaco hidrolizado en colon; baja absorción sistémica; inicio depende de vía.",
+    "indications": "Estreñimiento ocasional y preparación intestinal como parte de protocolo específico.",
+    "dose": "Estreñimiento: 5-15 mg VO una vez/día o 10 mg rectal; uso corto. Preparación intestinal exige esquema institucional específico.",
+    "pediatricDose": "6-11 años: frecuentemente 5 mg VO o supositorio pediátrico según producto; <6 años solo con indicación profesional. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal; evitar deshidratación y trastornos electrolíticos.",
+    "hepaticDose": "Sin ajuste formal.",
+    "commonAdverseEffects": "Cólico, dolor abdominal, diarrea y náusea.",
+    "dangerousAdverseEffects": "Deshidratación, trastornos electrolíticos, síncope y colitis isquémica rara.",
+    "adverseEffects": "Cólico, dolor abdominal, diarrea y náusea. Graves: Deshidratación, trastornos electrolíticos, síncope y colitis isquémica rara.",
+    "contraindications": "Obstrucción/íleo, abdomen agudo, apendicitis sospechada, dolor abdominal inexplicado con náusea/vómito y deshidratación grave.",
+    "interactions": "Antiácidos/leche/IBP pueden disolver recubrimiento antes; diuréticos y corticoides aumentan hipopotasemia con abuso.",
+    "monitoring": "Frecuencia evacuatoria, dolor, hidratación y electrolitos si uso repetido.",
+    "administration": "Tragar comprimido entero; efecto VO en 6-12 h, rectal en 15-60 min.",
+    "preparation": "No triturar/masticar recubierto; separar de leche, antiácidos o IBP al menos 1 h según ficha.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Uso ocasional generalmente aceptable cuando sea necesario; evitar abuso.",
+    "lactation": "Absorción sistémica mínima; generalmente compatible.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Deshidratación, trastornos electrolíticos, síncope y colitis isquémica rara. Uso bloqueado sem excluir obstrução/abdome agudo; preparo intestinal não automatizado sem protocolo e produto.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bisacodyl",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/021632s012lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bisacodyl"
+  }
+};})();
+/* GOLD33_SELECTIVE:bisacodil:END */

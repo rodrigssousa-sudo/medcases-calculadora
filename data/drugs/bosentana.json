@@ -5,230 +5,80 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "pharmacologicClass": "Antagonista do receptor de endotelina para hipertensão arterial pulmonar",
-    "mechanism": "Antagoniza ETA e ETB, reduzindo vasoconstrição e proliferação mediadas pela endotelina-1.",
-    "pharmacodynamics": "Reduz resistência vascular pulmonar; pode causar retenção hídrica, edema e queda da hemoglobina.",
-    "commonAdverseEffects": [
-      "cefaleia",
-      "edema",
-      "anemia",
-      "nasofaringite",
-      "rubor"
-    ],
-    "dangerousAdverseEffects": [
-      "hepatotoxicidade e insuficiência hepática",
-      "toxicidade embriofetal",
-      "retenção hídrica e descompensação",
-      "anemia significativa"
-    ],
-    "monitoring": [
-      "Aminotransferases antes de iniciar e mensalmente",
-      "hemoglobina",
-      "peso e edema",
-      "resposta clínica da HAP",
-      "testes de gestação conforme bula"
-    ],
-    "administration": "Oral duas vezes ao dia, com ou sem alimentos.",
-    "preparation": "Para comprimido dispersível seguir instruções de dispersão da bula; não confundir com comprimidos revestidos de 62,5/125 mg.",
-    "infusionProtocol": "Não se aplica: tratamento oral.",
-    "patientEducation": [
-      "Evitar gestação e cumprir controles indicados",
-      "procurar avaliação por ganho rápido de peso, edema ou dispneia",
-      "não suspender nem modificar tratamento da HAP sem especialista"
-    ],
-    "safetyFlags": [
-      "HEPATOTOXICIDADE",
-      "REMS",
-      "EMBRIOFETAL",
-      "INTERACOES_CYP",
-      "ANEMIA"
-    ],
+    "pharmacologicClass": "Bloqueia receptores ETA e ETB",
+    "mechanism": "Bloqueia receptores ETA e ETB. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "commonAdverseEffects": "Cefaleia, edema, rubor, nasofaringite, anemia e elevação de transaminases.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, toxicidade embriofetal, anemia grave, edema pulmonar em doença veno-oclusiva e infertilidade masculina potencial.",
+    "monitoring": "Transaminases mensais, teste de gravidez mensal quando aplicável, Hb aos 1 e 3 meses e depois trimestral, edema e resposta.",
+    "administration": "VO 2x/dia com ou sem alimento. Interrupção deve ser planejada.",
+    "preparation": "Dispersível pode ser dividido/disperso conforme bula; contém fenilalanina em alguns produtos.",
+    "infusionProtocol": "Não aplicável.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "name": "Bosentana",
-    "class": "Antagonista duplo dos receptores de endotelina ETA/ETB",
-    "pharmacokinetics": "Metabolismo hepático por CYP2C9 e CYP3A4; induz CYP2C9, CYP3A4 e provavelmente CYP2C19, gerando múltiplas interações.",
-    "indications": [
-      "Hipertensão arterial pulmonar WHO grupo 1 para melhorar capacidade de exercício e reduzir piora clínica em adultos e pacientes pediátricos elegíveis"
-    ],
-    "commercialNames": [
-      "Tracleer"
-    ],
-    "presentation": "Comprimidos revestidos e comprimidos dispersíveis para suspensão oral.",
-    "presentations": [
-      "62,5 mg",
-      "125 mg",
-      "32 mg dispersível"
-    ],
-    "dose": {
-      "over12AndOver40kg": "62,5 mg duas vezes ao dia por 4 semanas, depois 125 mg duas vezes ao dia.",
-      "over12And40kgOrLess": "62,5 mg duas vezes ao dia; não aumentar para 125 mg BID.",
-      "pediatric": "Usar tabela de peso da bula para pacientes pediátricos elegíveis; não interpolar doses fora da tabela."
-    },
-    "pediatricDose": "A bula inclui dose pediátrica baseada em peso para pacientes elegíveis; usar a tabela oficial e a formulação dispersível quando aplicável.",
-    "renalDose": "Em geral não requer ajuste por insuficiência renal; o fármaco tem alta ligação a proteínas e a hemodiálise não deve removê-lo de forma importante.",
-    "hepaticDose": "Evitar iniciar se aminotransferases basais >3×LSN; não recomendado na insuficiência hepática moderada-grave. Controle mensal obrigatório de aminotransferases.",
-    "contraindications": [
-      "Gestação",
-      "ciclosporina A",
-      "gliburida/glyburide",
-      "hipersensibilidade"
-    ],
-    "interactions": [
-      "Ciclosporina e glyburide são contraindicadas",
-      "Induz CYP3A4/2C9 e reduz exposição de vários fármacos, incluindo contraceptivos hormonais",
-      "Reduz exposição de tadalafil e sildenafil",
-      "Evitar contracepção hormonal como único método por indução enzimática"
-    ],
-    "pregnancy": "Contraindicado. Excluir gestação antes do início; usar contracepção eficaz durante o tratamento e por 1 mês após suspender.",
-    "lactation": "Amamentação não é recomendada durante o tratamento pelo potencial de reações graves no lactente.",
-    "specialPopulations": {
-      "hepatic": "Monitorização mensal obrigatória; evitar moderada-grave.",
-      "reproductivePotential": "Contracepção eficaz e testes de gestação.",
-      "pediatrics": "Dose por peso conforme tabela oficial."
-    },
-    "clinicalPearls": [
-      "A mudança importante de segurança da bula 2025 mantém REMS por hepatotoxicidade",
-      "ALT/AST devem ser medidas antes de iniciar e mensalmente durante todo o tratamento."
-    ],
-    "guidelineRecommendations": [
-      "ESC/ERS: antagonistas de endotelina fazem parte da terapia dirigida da HAP em pacientes selecionados, com estratégia combinada conforme estratificação de risco."
-    ],
-    "alerts": [
-      "Não iniciar se ALT/AST >3×LSN",
-      "Suspender se elevação de aminotransferases vier acompanhada de sintomas de lesão hepática ou bilirrubina >=2×LSN."
-    ],
-    "adverseEffects": {
-      "common": [
-        "cefaleia",
-        "edema",
-        "anemia",
-        "nasofaringite",
-        "rubor"
-      ],
-      "dangerous": [
-        "hepatotoxicidade e insuficiência hepática",
-        "toxicidade embriofetal",
-        "retenção hídrica e descompensação",
-        "anemia significativa"
-      ]
-    },
+    "class": "Antagonista dos receptores de endotelina",
+    "pharmacokinetics": "Biodisponibilidade ~50%; metabolismo CYP2C9/3A4; autoindução; meia-vida terminal ~5 h; eliminação biliar.",
+    "indications": "Hipertensão arterial pulmonar grupo 1; adultos e, conforme produto, crianças ≥3 anos.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 62,5/125 mg; dispersível 32 mg.",
+    "presentations": "Comprimidos 62,5/125 mg; dispersível 32 mg.",
+    "dose": "Adultos >12 anos e >40 kg: 62,5 mg 2x/dia por 4 semanas, depois 125 mg 2x/dia. Pesos menores usam regime específico.",
+    "pediatricDose": "≥3 anos: dose 2x/dia por faixas de peso usando dispersível; não converter sem tabela/produto. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste usual; experiência limitada em diálise.",
+    "hepaticDose": "Evitar em Child-Pugh moderado/grave; não iniciar se aminotransferases >3x LSN.",
+    "contraindications": "Gestação; ciclosporina A; gliburida; hipersensibilidade.",
+    "interactions": "Induz CYP2C9/3A: reduz contraceptivos hormonais e estatinas; interage com rifampicina, azóis, varfarina e antirretrovirais.",
+    "pregnancy": "Contraindicada; contracepção eficaz não exclusivamente hormonal durante e 1 mês após.",
+    "lactation": "Presente no leite; amamentação não recomendada.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "alerts": "Hepatotoxicidade, toxicidade embriofetal, anemia grave, edema pulmonar em doença veno-oclusiva e infertilidade masculina potencial. Dose bloqueada sem especialista em HAP, peso/idade, fígado, gravidez, Hb, interações e produto dispersível/exato.",
+    "adverseEffects": "Cefaleia, edema, rubor, nasofaringite, anemia e elevação de transaminases. Graves: Hepatotoxicidade, toxicidade embriofetal, anemia grave, edema pulmonar em doença veno-oclusiva e infertilidade masculina potencial.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c",
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/pulmonary-hypertension/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines/human/EPAR/tracleer"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c"
   },
   "es": {
-    "pharmacologicClass": "Antagonista del receptor de endotelina para hipertensión arterial pulmonar",
-    "mechanism": "Antagoniza ETA y ETB, reduciendo vasoconstricción y proliferación mediadas por endotelina-1.",
-    "pharmacodynamics": "Reduce resistencia vascular pulmonar; puede causar retención de líquidos, edema y descenso de hemoglobina.",
-    "commonAdverseEffects": [
-      "cefalea",
-      "edema",
-      "anemia",
-      "nasofaringitis",
-      "rubor"
-    ],
-    "dangerousAdverseEffects": [
-      "hepatotoxicidad y fallo hepático",
-      "toxicidad embriofetal",
-      "retención de líquidos y descompensación",
-      "anemia significativa"
-    ],
-    "monitoring": [
-      "Aminotransferasas antes de iniciar y mensualmente",
-      "hemoglobina",
-      "peso y edema",
-      "respuesta clínica de PAH",
-      "pruebas de embarazo según ficha"
-    ],
-    "administration": "Oral dos veces al día, con o sin alimentos.",
-    "preparation": "Para tableta dispersable seguir instrucciones de dispersión de la ficha; no confundir con tabletas recubiertas de 62.5/125 mg.",
-    "infusionProtocol": "No aplica: tratamiento oral.",
-    "patientEducation": [
-      "Evitar embarazo y cumplir controles indicados",
-      "consultar por aumento rápido de peso, edema o disnea",
-      "no suspender ni modificar tratamiento de PAH sin especialista"
-    ],
-    "safetyFlags": [
-      "HEPATOTOXICIDAD",
-      "REMS",
-      "EMBRIOFETAL",
-      "INTERACCIONES_CYP",
-      "ANEMIA"
-    ],
+    "pharmacologicClass": "Bloquea receptores ETA y ETB",
+    "mechanism": "Bloquea receptores ETA y ETB. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "commonAdverseEffects": "Cefalea, edema, rubor, nasofaringitis, anemia y aumento de transaminasas.",
+    "dangerousAdverseEffects": "Hepatotoxicidad, toxicidad embriofetal, anemia grave, edema pulmonar en enfermedad venooclusiva e infertilidad masculina potencial.",
+    "monitoring": "Transaminasas mensuales, prueba de embarazo mensual cuando aplique, Hb a 1 y 3 meses y luego trimestral, edema y respuesta.",
+    "administration": "VO 2 veces/día con o sin alimentos. Interrupción debe planificarse.",
+    "preparation": "Dispersable puede dividirse/dispersarse según ficha; contiene fenilalanina en algunos productos.",
+    "infusionProtocol": "No aplicable.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "name": "Bosentán",
-    "class": "Antagonista dual de receptores de endotelina ETA/ETB",
-    "pharmacokinetics": "Metabolismo hepático por CYP2C9 y CYP3A4; induce CYP2C9, CYP3A4 y probablemente CYP2C19, generando múltiples interacciones.",
-    "indications": [
-      "Hipertensión arterial pulmonar WHO grupo 1 para mejorar capacidad de ejercicio y disminuir empeoramiento clínico en adultos y pacientes pediátricos elegibles"
-    ],
-    "commercialNames": [
-      "Tracleer"
-    ],
-    "presentation": "Tabletas recubiertas y tabletas dispersables para suspensión oral.",
-    "presentations": [
-      "62.5 mg",
-      "125 mg",
-      "32 mg dispersable"
-    ],
-    "dose": {
-      "over12AndOver40kg": "62.5 mg dos veces al día por 4 semanas, luego 125 mg dos veces al día.",
-      "over12And40kgOrLess": "62.5 mg dos veces al día; no aumentar a 125 mg BID.",
-      "pediatric": "Usar tabla de peso de la ficha para pacientes pediátricos elegibles; no interpolar dosis fuera de la tabla."
-    },
-    "pediatricDose": "La ficha incluye dosificación pediátrica basada en peso para pacientes elegibles; utilizar la tabla oficial y la formulación dispersable cuando corresponda.",
-    "renalDose": "No suele requerir ajuste por insuficiencia renal; el fármaco tiene alta unión a proteínas y la hemodiálisis no se espera que lo elimine de forma importante.",
-    "hepaticDose": "Evitar iniciar si aminotransferasas basales >3×ULN; no recomendado en insuficiencia hepática moderada-grave. Control mensual obligatorio de aminotransferasas.",
-    "contraindications": [
-      "Embarazo",
-      "ciclosporina A",
-      "gliburida/glyburide",
-      "hipersensibilidad"
-    ],
-    "interactions": [
-      "Ciclosporina y glyburide están contraindicadas",
-      "Induce CYP3A4/2C9 y reduce exposición de varios fármacos, incluidos anticonceptivos hormonales",
-      "Reduce exposición de tadalafil y sildenafil",
-      "Evitar anticoncepción hormonal como único método por inducción enzimática"
-    ],
-    "pregnancy": "Contraindicado. Excluir embarazo antes de iniciar; usar anticoncepción eficaz durante tratamiento y por 1 mes después de suspender.",
-    "lactation": "No se recomienda lactancia durante tratamiento por potencial de reacciones graves en el lactante.",
-    "specialPopulations": {
-      "hepatic": "Monitorización mensual obligatoria; evitar moderada-grave.",
-      "reproductivePotential": "Anticoncepción eficaz y pruebas de embarazo.",
-      "pediatrics": "Dosis por peso según tabla oficial."
-    },
-    "clinicalPearls": [
-      "El cambio mayor de seguridad de la ficha 2025 mantiene REMS por hepatotoxicidad",
-      "ALT/AST deben medirse antes de iniciar y mensualmente durante todo el tratamiento."
-    ],
-    "guidelineRecommendations": [
-      "ESC/ERS: los antagonistas de endotelina forman parte de la terapia dirigida de PAH en pacientes seleccionados, con estrategia combinada según estratificación de riesgo."
-    ],
-    "alerts": [
-      "No iniciar si ALT/AST >3×ULN",
-      "Suspender si elevación de aminotransferasas se acompaña de síntomas de lesión hepática o bilirrubina >=2×ULN."
-    ],
-    "adverseEffects": {
-      "common": [
-        "cefalea",
-        "edema",
-        "anemia",
-        "nasofaringitis",
-        "rubor"
-      ],
-      "dangerous": [
-        "hepatotoxicidad y fallo hepático",
-        "toxicidad embriofetal",
-        "retención de líquidos y descompensación",
-        "anemia significativa"
-      ]
-    },
+    "class": "Antagonista de receptores de endotelina",
+    "pharmacokinetics": "Biodisponibilidad ~50%; metabolismo CYP2C9/3A4; autoinducción; semivida terminal ~5 h; eliminación biliar.",
+    "indications": "Hipertensión arterial pulmonar grupo 1; adultos y, según producto, niños ≥3 años.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 62,5/125 mg; dispersable 32 mg.",
+    "presentations": "Comprimidos 62,5/125 mg; dispersable 32 mg.",
+    "dose": "Adultos >12 años y >40 kg: 62,5 mg 2 veces/día 4 semanas, luego 125 mg 2 veces/día. Pesos menores usan régimen específico.",
+    "pediatricDose": "≥3 años: dosis 2 veces/día por rangos de peso con dispersable; no convertir sin tabla/producto. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste habitual; experiencia limitada en diálisis.",
+    "hepaticDose": "Evitar en Child-Pugh moderado/grave; no iniciar si aminotransferasas >3x LSN.",
+    "contraindications": "Embarazo; ciclosporina A; gliburida; hipersensibilidad.",
+    "interactions": "Induce CYP2C9/3A: reduce anticonceptivos hormonales y estatinas; interactúa con rifampicina, azoles, warfarina y antirretrovirales.",
+    "pregnancy": "Contraindicado; anticoncepción eficaz no exclusivamente hormonal durante y 1 mes después.",
+    "lactation": "Presente en leche; lactancia no recomendada.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "alerts": "Hepatotoxicidad, toxicidad embriofetal, anemia grave, edema pulmonar en enfermedad venooclusiva e infertilidad masculina potencial. Dose bloqueada sem especialista em HAP, peso/idade, fígado, gravidez, Hb, interações e produto dispersível/exato.",
+    "adverseEffects": "Cefalea, edema, rubor, nasofaringitis, anemia y aumento de transaminasas. Graves: Hepatotoxicidad, toxicidad embriofetal, anemia grave, edema pulmonar en enfermedad venooclusiva e infertilidad masculina potencial.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c",
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/pulmonary-hypertension/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines/human/EPAR/tracleer"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c"
   },
   "name": {
     "pt": "Bosentana",
@@ -237,19 +87,21 @@
   "keywords": [
     "bosentana"
   ],
-  "dataVersion": "clinical-data-v1-ce3a077c92ca984f",
-  "clinicalContentSha256": "ce3a077c92ca984f4b30c2e8a03536db7f2cf618f4619c16eca2f00299d136f6",
+  "dataVersion": "clinical-data-v1-4f45375767b6e870",
+  "clinicalContentSha256": "4f45375767b6e8706d5987e0984794bd1957f8a226c466b1041c31104e06bca6",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "bosentana.mcGoldClinicalV1",
-    "group": "GOLD_GROUP07_CARDIO_10",
-    "review": "2026-09",
+    "lote": "011",
     "requiredFields": 33,
-    "contentSha256": "952e55cf3b7703ac3c05e5b387e3a69a915956057f9a76c88e775585ac1fad1d",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "7b76ae47c1977e8ef5a9181eab9814d1b9fae210d78f43b2fc0fe9534c35db7d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

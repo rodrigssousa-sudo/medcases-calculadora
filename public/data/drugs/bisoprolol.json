@@ -7,17 +7,9 @@
   "pt": {
     "name": "Bisoprolol",
     "class": "Betabloqueador cardioseletivo",
-    "commercialNames": [
-      "Concor",
-      "Zebeta",
-      "Bisoprolol genérico"
-    ],
-    "presentation": "Comprimidos de 5 mg e 10 mg na bula DailyMed atual; apresentações de 1,25 mg e 2,5 mg existem em alguns mercados para titulação de insuficiência cardíaca.",
-    "dose": {
-      "Hipertensão": "Dose inicial usual 5 mg VO 1x/dia; 2,5 mg pode ser apropriado em alguns pacientes. Se necessário, aumentar para 10 mg e depois 20 mg 1x/dia.",
-      "ICFEr estável — diretriz": "Iniciar 1,25 mg VO 1x/dia e titular gradualmente conforme tolerância; dose-alvo de ensaios/diretriz 10 mg 1x/dia.",
-      "Insuficiência renal/hepática relevante": "Se ClCr <40 mL/min ou hepatite/cirrose, iniciar 2,5 mg/dia e titular com cautela."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 5 e 10 mg; 1,25 e 2,5 mg em alguns mercados.",
+    "dose": "Hipertensão: 5 mg VO/dia, podendo aumentar a 10 mg e máximo 20 mg/dia. IC: iniciar 1,25 mg/dia e titular gradualmente até 10 mg/dia se tolerado.",
     "doseKg": {
       "padrao": "Adultos: 0,02–0,2 mg/kg/dia VO 1x/dia (referência clínica)",
       "grave": "ICC: titular de 1,25 mg até 10 mg/dia independente do peso",
@@ -27,60 +19,17 @@
     "therapeuticRange": "ICC: alvo de FC 55–65 bpm em repouso. HTA: FC < 70 bpm com PA-alvo atingida. Titular sempre com base em resposta clínica.",
     "dilution": "Apenas formulação oral disponível comercialmente. Sem apresentação EV padronizada.",
     "speed": "VO: tomar pela manhã, com ou sem alimento, no mesmo horário diariamente.",
-    "commonAdverseEffects": [
-      "Fadiga/astenia.",
-      "Tontura e cefaleia.",
-      "Bradicardia.",
-      "Diarreia, náusea.",
-      "Extremidades frias."
-    ],
-    "dangerousAdverseEffects": [
-      "Bradicardia sintomática ou bloqueio AV.",
-      "Hipotensão grave.",
-      "Piora transitória de insuficiência cardíaca se iniciado/titulado durante descompensação.",
-      "Broncoespasmo em suscetíveis.",
-      "Hipoglicemia com mascaramento de sinais adrenérgicos."
-    ],
+    "commonAdverseEffects": "Fadiga, tontura, bradicardia, hipotensão, extremidades frias e distúrbios GI.",
+    "dangerousAdverseEffects": "Bloqueio cardíaco, broncoespasmo, piora aguda de IC e isquemia por retirada abrupta.",
     "risksByPatient": [],
-    "alerts": [
-      "Iniciar ICFEr apenas após estabilização clínica.",
-      "ClCr <40 mL/min ou hepatite/cirrose: iniciar 2,5 mg/dia.",
-      "Não suspender abruptamente.",
-      "Reduzir/titular com cautela diante de bradicardia, hipotensão ou piora de congestão."
-    ],
-    "ref": "DailyMed Bisoprolol 2026; AHA/ACC/HFSA Heart Failure Guideline 2022; AHA/ACC Chronic Coronary Disease Guideline 2023.",
-    "mechanism": "Bloqueia predominantemente receptores beta-1 cardíacos, reduzindo frequência cardíaca, contratilidade, condução AV e atividade de renina. Não possui atividade simpatomimética intrínseca clinicamente relevante.",
-    "pharmacokinetics": {
-      "Biodisponibilidade": "Aproximadamente 80% por via oral.",
-      "Meia-vida": "Cerca de 9–12 h, permitindo dose única diária.",
-      "Eliminação": "Aproximadamente metade é eliminada inalterada pelos rins e metade metabolizada a metabólitos inativos; depuração diminui na insuficiência renal e hepática.",
-      "Diálise": "Dados limitados indicam que não é significativamente dialisável."
-    },
-    "indications": [
-      "Hipertensão arterial.",
-      "ICFEr sintomática e clinicamente estável como um dos betabloqueadores com benefício de mortalidade comprovado em diretrizes, embora a indicação regulatória possa variar por país."
-    ],
-    "contraindications": [
-      "Choque cardiogênico.",
-      "Insuficiência cardíaca descompensada que requer suporte inotrópico antes da estabilização.",
-      "Bloqueio AV de segundo ou terceiro grau sem marcapasso.",
-      "Bradicardia sinusal marcada.",
-      "Hipersensibilidade ao bisoprolol."
-    ],
-    "interactions": [
-      "Verapamil/diltiazem: maior risco de bradicardia, hipotensão e bloqueio AV.",
-      "Digoxina e outros cronotrópicos negativos: bradicardia aditiva.",
-      "Amiodarona e antiarrítmicos que deprimem condução podem aumentar bloqueio.",
-      "Clonidina: planejar retirada para evitar hipertensão rebote.",
-      "Insulina e hipoglicemiantes: pode mascarar taquicardia da hipoglicemia."
-    ],
-    "monitoring": [
-      "Frequência cardíaca e pressão arterial.",
-      "Peso, sintomas de congestão e tolerância a cada etapa de titulação em ICFEr.",
-      "ECG se bradicardia, síncope ou distúrbio de condução.",
-      "Função renal e hepática quando alteradas ou durante titulação.",
-      "Glicemia em diabetes quando clinicamente indicado."
-    ],
+    "alerts": "Bloqueio cardíaco, broncoespasmo, piora aguda de IC e isquemia por retirada abrupta. Titulação bloqueada sem indicação, FC/PA, estabilidade da IC, ECG, rim/fígado e comedicações cronotrópicas.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c3ee566c-74c4-45f4-a947-526a7313e326",
+    "mechanism": "Antagonista beta-1 adrenérgico. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacokinetics": "Biodisponibilidade ~80%; metabolismo hepático e eliminação renal balanceados; meia-vida 9-12 h.",
+    "indications": "Hipertensão; insuficiência cardíaca com fração de ejeção reduzida em protocolos que incluem bisoprolol.",
+    "contraindications": "Bradicardia marcada, bloqueio AV 2º/3º sem marcapasso, choque cardiogênico e IC descompensada.",
+    "interactions": "Verapamil/diltiazem, digoxina e outros cronotrópicos aumentam bradicardia; mascara hipoglicemia; clonidina exige sequência de retirada.",
+    "monitoring": "FC, PA, peso/sintomas de IC, ECG quando indicado, glicemia e função renal/hepática.",
     "overdose": {
       "signs": [
         "Bradicardia grave",
@@ -102,23 +51,9 @@
         "8. Hemodiálise não é eficaz (bisoprolol não é significativamente dialisável)"
       ]
     },
-    "specialPopulations": {
-      "ICFEr": "Iniciar apenas em estabilidade clínica e titular para a maior dose tolerada, idealmente alvo de 10 mg/dia.",
-      "DRC/hepatopatia": "ClCr <40 mL/min ou hepatite/cirrose: iniciar 2,5 mg/dia.",
-      "Idosos": "Sem ajuste obrigatório isolado; considerar função renal/hepática.",
-      "Doença broncoespástica": "Preferir alternativas quando possível; se necessário, usar menor dose e ter broncodilatador disponível."
-    },
-    "clinicalPearls": [
-      "Bisoprolol é um dos três betabloqueadores com evidência de redução de mortalidade em ICFEr.",
-      "Dose-alvo de diretriz em ICFEr: 10 mg 1x/dia, se tolerada.",
-      "ClCr <40 mL/min ou hepatite/cirrose: iniciar 2,5 mg/dia conforme bula."
-    ],
-    "patientEducation": [
-      "Não suspender abruptamente.",
-      "Durante titulação de ICFEr, comunicar ganho rápido de peso, edema, dispneia ou tontura importante.",
-      "Aprender a verificar pulso quando orientado e comunicar bradicardia sintomática.",
-      "Pacientes com diabetes devem saber que taquicardia de hipoglicemia pode ser mascarada."
-    ],
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
     "prescriptionErrors": [
       "Iniciar dose plena (5–10 mg) em ICC — obrigatório começar com 1,25 mg e titular lentamente.",
       "Suspender abruptamente no perioperatório em paciente com ICC/DAC.",
@@ -139,35 +74,13 @@
         "obs": "CVVH/CVVHD/CVVHDF: remoção mínima do bisoprolol. Não requer suplementação de dose. Em UTI com TRSC, usar dose mínima eficaz com monitorização hemodinâmica contínua."
       }
     },
-    "pharmacologicClass": "Antagonista beta-1 adrenérgico seletivo; a seletividade beta-1 diminui em doses mais altas.",
-    "pharmacodynamics": [
-      "Reduz frequência cardíaca e pressão arterial de forma dose-dependente.",
-      "Diminui consumo miocárdico de oxigênio e atividade simpática cardíaca.",
-      "Em ICFEr estável, titulação crônica reduz mortalidade e hospitalizações quando usada como terapia baseada em evidência."
-    ],
+    "pharmacologicClass": "Antagonista beta-1 adrenérgico",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
     "onset": "Início do efeito em 2–4 horas após dose oral. Efeito anti-hipertensivo máximo após 2–4 semanas de uso regular.",
-    "guidelineRecommendations": [
-      "AHA/ACC/HFSA 2022: bisoprolol, carvedilol ou metoprolol succinato são recomendados em ICFEr sintomática atual ou prévia para reduzir mortalidade e hospitalizações.",
-      "A diretriz recomenda iniciar em baixa dose e buscar as doses-alvo testadas conforme tolerabilidade."
-    ],
-    "hepaticDose": {
-      "Hepatite ou cirrose": "Iniciar 2,5 mg VO 1x/dia e titular com cautela.",
-      "Sem hepatopatia relevante": "Não requer ajuste além da titulação clínica habitual."
-    },
-    "renalDose": {
-      "ClCr <40 mL/min": "Iniciar 2,5 mg VO 1x/dia e titular cautelosamente.",
-      "Hemodiálise": "Dados limitados sugerem que bisoprolol não é dialisável; não é necessária dose de reposição após diálise.",
-      "Demais pacientes": "Individualizar por frequência cardíaca, pressão arterial e tolerabilidade."
-    },
-    "safetyFlags": {
-      "hfrEFMortalityBenefit": true,
-      "bradycardiaRisk": true,
-      "avBlockRisk": true,
-      "bronchospasmRisk": true,
-      "renalHepaticLowStart": true,
-      "abruptWithdrawalRisk": true,
-      "hypoglycemiaMasking": true
-    },
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "hepaticDose": "Hepatopatia significativa: iniciar 2,5 mg/dia e titular com cautela.",
+    "renalDose": "ClCr <40 mL/min: iniciar 2,5 mg/dia e titular cautelosamente conforme bula.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "auditNotes": {
       "status": "excellent_after_review_V4",
       "sourcePriority": [
@@ -182,43 +95,25 @@
       ],
       "note": "Betabloqueador de 2ª geração. Um dos 3 com evidência A de redução de mortalidade em ICFEr (CIBIS-II: RR 0,66, NNT ~16/ano). Alta seletividade β1:β2 ~75:1. Hidrofílico — menor risco cognitivo/pesadelos vs metoprolol. Metabolismo dual 50% hepático (CYP3A4/2D6) + 50% renal — menor impacto de polimorfismo CYP2D6. Ajuste renal apenas em ClCr < 20 mL/min (máx 10 mg/dia). Hepatopatia: cautela em CYP. monitoring.baseline enriquecido com função hepática (CYP). Auditoria V4 completada 2026-06."
     },
-    "presentations": [
-      "Comprimido 5 mg.",
-      "Comprimido 10 mg.",
-      "Em alguns mercados: 1,25 mg e 2,5 mg."
-    ],
-    "pediatricDose": "Segurança e eficácia em pacientes pediátricos não foram estabelecidas; a bula informa ausência de experiência pediátrica.",
-    "adverseEffects": [
-      "Cardiovasculares: bradicardia, hipotensão, bloqueio AV, piora de IC durante titulação inadequada.",
-      "Neurológicos: fadiga, tontura, cefaleia.",
-      "Gastrointestinais: diarreia, náusea, vômito.",
-      "Respiratórios: broncoespasmo raro, mas possível porque seletividade beta-1 não é absoluta."
-    ],
-    "administration": "Administrar VO 1x/dia, no mesmo horário. Em ICFEr, iniciar apenas quando o paciente estiver clinicamente estável e sem necessidade de inotrópico IV; titular lentamente. Não suspender abruptamente.",
-    "preparation": "Comprimidos não requerem preparo especial; selecionar apresentação que permita titulação segura. Não improvisar fracionamento quando o produto não for sulcado/aprovado para isso.",
-    "infusionProtocol": "Não se aplica: bisoprolol é utilizado por via oral; não há protocolo IV rotineiro aprovado.",
-    "pregnancy": "Dados humanos adequados são limitados. Estudos animais mostraram fetotoxicidade em exposições elevadas. Usar na gestação apenas quando o benefício esperado justificar o risco; se usado próximo ao parto, considerar monitorização neonatal para efeitos de betabloqueio.",
-    "lactation": "Não se sabe se bisoprolol é excretado no leite humano. Usar cautela e monitorar o lactente para bradicardia, hipotensão ou dificuldade de alimentação se a exposição for mantida.",
+    "presentations": "Comprimidos 5 e 10 mg; 1,25 e 2,5 mg em alguns mercados.",
+    "pediatricDose": "Segurança e eficácia não estabelecidas. AUTOMATABLE=NO.",
+    "adverseEffects": "Fadiga, tontura, bradicardia, hipotensão, extremidades frias e distúrbios GI. Graves: Bloqueio cardíaco, broncoespasmo, piora aguda de IC e isquemia por retirada abrupta.",
+    "administration": "VO uma vez/dia; não interromper abruptamente, especialmente em coronariopatia.",
+    "preparation": "Comprimido pronto; forças pequenas dependem do mercado.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Pode causar bradicardia/crescimento fetal reduzido; usar se benefício justificar.",
+    "lactation": "Dados limitados; preferir agente com maior experiência ou monitorar lactente.",
     "references": [
-      "DailyMed — Bisoprolol fumarate tablets, current 2026 label: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c3ee566c-74c4-45f4-a947-526a7313e326",
-      "2022 AHA/ACC/HFSA Heart Failure Guideline: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
-      "2023 AHA/ACC Chronic Coronary Disease Guideline: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001168"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c3ee566c-74c4-45f4-a947-526a7313e326",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063"
     ]
   },
   "es": {
     "name": "Bisoprolol",
     "class": "Betabloqueante cardioselectivo",
-    "commercialNames": [
-      "Concor",
-      "Zebeta",
-      "Bisoprolol genérico"
-    ],
-    "presentation": "Comprimidos de 5 mg y 10 mg en la ficha DailyMed actual; presentaciones de 1,25 mg y 2,5 mg existen en algunos mercados para titulación de insuficiencia cardíaca.",
-    "dose": {
-      "Hipertensión": "Dosis inicial habitual 5 mg VO 1 vez/día; 2,5 mg puede ser apropiado en algunos pacientes. Si es necesario, aumentar a 10 mg y luego 20 mg 1 vez/día.",
-      "ICFEr estable — guía": "Iniciar 1,25 mg VO 1 vez/día y titular gradualmente según tolerancia; dosis objetivo de ensayos/guía 10 mg 1 vez/día.",
-      "Insuficiencia renal/hepática relevante": "Si ClCr <40 mL/min o hepatitis/cirrosis, iniciar 2,5 mg/día y titular con cautela."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 5 y 10 mg; 1,25 y 2,5 mg en algunos mercados.",
+    "dose": "Hipertensión: 5 mg VO/día, puede aumentar a 10 mg y máximo 20 mg/día. IC: iniciar 1,25 mg/día y titular gradualmente hasta 10 mg/día si tolera.",
     "doseKg": {
       "padrao": "Adultos: 0,02–0,2 mg/kg/día VO 1 vez/día (referencia clínica)",
       "grave": "ICC: titular desde 1,25 mg hasta 10 mg/día independiente del peso",
@@ -228,60 +123,17 @@
     "therapeuticRange": "ICC: objetivo de FC 55–65 lpm en reposo. HTA: FC < 70 lpm con PA objetivo alcanzada. Titular siempre en base a respuesta clínica.",
     "dilution": "Solo formulación oral disponible comercialmente. Sin presentación EV estandarizada.",
     "speed": "VO: tomar por la mañana, con o sin alimento, a la misma hora diariamente.",
-    "commonAdverseEffects": [
-      "Fatiga/astenia.",
-      "Mareo y cefalea.",
-      "Bradicardia.",
-      "Diarrea, náuseas.",
-      "Extremidades frías."
-    ],
-    "dangerousAdverseEffects": [
-      "Bradicardia sintomática o bloqueo AV.",
-      "Hipotensión grave.",
-      "Empeoramiento transitorio de insuficiencia cardíaca si se inicia/titula durante descompensación.",
-      "Broncoespasmo en susceptibles.",
-      "Hipoglucemia con enmascaramiento de señales adrenérgicas."
-    ],
+    "commonAdverseEffects": "Fatiga, mareo, bradicardia, hipotensión, extremidades frías y trastornos GI.",
+    "dangerousAdverseEffects": "Bloqueo cardíaco, broncoespasmo, empeoramiento agudo de IC e isquemia por retirada brusca.",
     "risksByPatient": [],
-    "alerts": [
-      "Iniciar ICFEr solo después de estabilización clínica.",
-      "ClCr <40 mL/min o hepatitis/cirrosis: iniciar 2,5 mg/día.",
-      "No suspender bruscamente.",
-      "Reducir/titular con cautela ante bradicardia, hipotensión o empeoramiento de congestión."
-    ],
-    "ref": "DailyMed Bisoprolol 2026; AHA/ACC/HFSA Heart Failure Guideline 2022; AHA/ACC Chronic Coronary Disease Guideline 2023.",
-    "mechanism": "Bloquea predominantemente receptores beta-1 cardíacos, reduciendo frecuencia cardíaca, contractilidad, conducción AV y actividad de renina. No posee actividad simpaticomimética intrínseca clínicamente relevante.",
-    "pharmacokinetics": {
-      "Biodisponibilidad": "Aproximadamente 80% por vía oral.",
-      "Semivida": "Alrededor de 9–12 h, permitiendo dosis única diaria.",
-      "Eliminación": "Aproximadamente la mitad se elimina sin cambios por riñón y la mitad se metaboliza a metabolitos inactivos; el aclaramiento disminuye en insuficiencia renal y hepática.",
-      "Diálisis": "Datos limitados indican que no es significativamente dializable."
-    },
-    "indications": [
-      "Hipertensión arterial.",
-      "ICFEr sintomática y clínicamente estable como uno de los betabloqueantes con beneficio de mortalidad demostrado en guías, aunque la indicación regulatoria puede variar según país."
-    ],
-    "contraindications": [
-      "Shock cardiogénico.",
-      "Insuficiencia cardíaca descompensada que requiere soporte inotrópico antes de estabilización.",
-      "Bloqueo AV de segundo o tercer grado sin marcapasos.",
-      "Bradicardia sinusal marcada.",
-      "Hipersensibilidad a bisoprolol."
-    ],
-    "interactions": [
-      "Verapamilo/diltiazem: mayor riesgo de bradicardia, hipotensión y bloqueo AV.",
-      "Digoxina y otros cronotrópicos negativos: bradicardia aditiva.",
-      "Amiodarona y antiarrítmicos que deprimen conducción pueden aumentar bloqueo.",
-      "Clonidina: planificar retirada para evitar hipertensión rebote.",
-      "Insulina e hipoglucemiantes: puede enmascarar taquicardia de hipoglucemia."
-    ],
-    "monitoring": [
-      "Frecuencia cardíaca y presión arterial.",
-      "Peso, síntomas de congestión y tolerancia en cada etapa de titulación en ICFEr.",
-      "ECG si hay bradicardia, síncope o trastorno de conducción.",
-      "Función renal y hepática cuando estén alteradas o durante titulación.",
-      "Glucemia en diabetes cuando esté clínicamente indicado."
-    ],
+    "alerts": "Bloqueo cardíaco, broncoespasmo, empeoramiento agudo de IC e isquemia por retirada brusca. Titulação bloqueada sem indicação, FC/PA, estabilidade da IC, ECG, rim/fígado e comedicações cronotrópicas.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c3ee566c-74c4-45f4-a947-526a7313e326",
+    "mechanism": "Antagonista beta-1 adrenérgico. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacokinetics": "Biodisponibilidad ~80%; metabolismo hepático y eliminación renal equilibrados; semivida 9-12 h.",
+    "indications": "Hipertensión; insuficiencia cardíaca con fracción de eyección reducida en protocolos con bisoprolol.",
+    "contraindications": "Bradicardia marcada, bloqueo AV 2º/3º sin marcapasos, shock cardiogénico e IC descompensada.",
+    "interactions": "Verapamilo/diltiazem, digoxina y otros cronotrópicos aumentan bradicardia; enmascara hipoglucemia; clonidina exige secuencia de retirada.",
+    "monitoring": "FC, PA, peso/síntomas de IC, ECG cuando proceda, glucemia y función renal/hepática.",
     "overdose": {
       "signs": [
         "Bradicardia grave",
@@ -303,23 +155,9 @@
         "8. Hemodiálisis no es eficaz (bisoprolol no es significativamente dializable)"
       ]
     },
-    "specialPopulations": {
-      "ICFEr": "Iniciar solo en estabilidad clínica y titular a la mayor dosis tolerada, idealmente objetivo 10 mg/día.",
-      "ERC/hepatopatía": "ClCr <40 mL/min o hepatitis/cirrosis: iniciar 2,5 mg/día.",
-      "Adultos mayores": "Sin ajuste obligatorio aislado; considerar función renal/hepática.",
-      "Enfermedad broncoespástica": "Preferir alternativas cuando sea posible; si es necesario, usar menor dosis y disponer de broncodilatador."
-    },
-    "clinicalPearls": [
-      "Bisoprolol es uno de los tres betabloqueantes con evidencia de reducción de mortalidad en ICFEr.",
-      "Dosis objetivo de guía en ICFEr: 10 mg 1 vez/día, si se tolera.",
-      "ClCr <40 mL/min o hepatitis/cirrosis: iniciar 2,5 mg/día según ficha."
-    ],
-    "patientEducation": [
-      "No suspender bruscamente.",
-      "Durante titulación de ICFEr, comunicar aumento rápido de peso, edema, disnea o mareo importante.",
-      "Aprender a verificar pulso cuando se indique y comunicar bradicardia sintomática.",
-      "Pacientes con diabetes deben saber que taquicardia de hipoglucemia puede estar enmascarada."
-    ],
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
     "prescriptionErrors": [
       "Iniciar dosis plena (5–10 mg) en ICC — obligatorio comenzar con 1,25 mg y titular lentamente.",
       "Suspender abruptamente en el perioperatorio en paciente con ICC/DAC.",
@@ -340,35 +178,13 @@
         "obs": "CVVH/CVVHD/CVVHDF: eliminación mínima de bisoprolol. No requiere suplementación de dosis. En UCI con TRRC, usar dosis mínima eficaz con monitorización hemodinámica continua."
       }
     },
-    "pharmacologicClass": "Antagonista beta-1 adrenérgico selectivo; la selectividad beta-1 disminuye con dosis más altas.",
-    "pharmacodynamics": [
-      "Reduce frecuencia cardíaca y presión arterial de forma dosis-dependiente.",
-      "Disminuye consumo miocárdico de oxígeno y actividad simpática cardíaca.",
-      "En ICFEr estable, la titulación crónica reduce mortalidad y hospitalizaciones cuando se usa como terapia basada en evidencia."
-    ],
+    "pharmacologicClass": "Antagonista beta-1 adrenérgico",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
     "onset": "Inicio del efecto en 2–4 horas tras la dosis oral. Efecto antihipertensivo máximo tras 2–4 semanas de uso regular.",
-    "guidelineRecommendations": [
-      "AHA/ACC/HFSA 2022: bisoprolol, carvedilol o metoprolol succinato están recomendados en ICFEr sintomática actual o previa para reducir mortalidad y hospitalizaciones.",
-      "La guía recomienda iniciar a dosis baja y buscar las dosis objetivo ensayadas según tolerancia."
-    ],
-    "hepaticDose": {
-      "Hepatitis o cirrosis": "Iniciar 2,5 mg VO 1 vez/día y titular con cautela.",
-      "Sin hepatopatía relevante": "No requiere ajuste además de titulación clínica habitual."
-    },
-    "renalDose": {
-      "ClCr <40 mL/min": "Iniciar 2,5 mg VO 1 vez/día y titular cautelosamente.",
-      "Hemodiálisis": "Datos limitados sugieren que bisoprolol no es dializable; no se requiere dosis de reposición tras diálisis.",
-      "Otros pacientes": "Individualizar por frecuencia cardíaca, presión arterial y tolerancia."
-    },
-    "safetyFlags": {
-      "hfrEFMortalityBenefit": true,
-      "bradycardiaRisk": true,
-      "avBlockRisk": true,
-      "bronchospasmRisk": true,
-      "renalHepaticLowStart": true,
-      "abruptWithdrawalRisk": true,
-      "hypoglycemiaMasking": true
-    },
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "hepaticDose": "Hepatopatía significativa: iniciar 2,5 mg/día y titular con cautela.",
+    "renalDose": "ClCr <40 mL/min: iniciar 2,5 mg/día y titular con cautela según ficha.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "auditNotes": {
       "status": "excellent_after_review_V4",
       "sourcePriority": [
@@ -383,27 +199,17 @@
       ],
       "note": "Betabloqueante de 2ª generación. Uno de los 3 con evidencia A de reducción de mortalidad en ICFEr (CIBIS-II: RR 0,66, NNT ~16/año). Alta selectividad β1:β2 ~75:1. Hidrofílico — menor riesgo cognitivo/pesadillas vs metoprolol. Metabolismo dual 50% hepático (CYP3A4/2D6) + 50% renal — menor impacto de polimorfismo CYP2D6. Ajuste renal solo en ClCr < 20 mL/min (máx 10 mg/día). Hepatopatía: precaución en CYP. monitoring.baseline enriquecido con función hepática (CYP). Auditoría V4 completada 2026-06."
     },
-    "presentations": [
-      "Comprimido 5 mg.",
-      "Comprimido 10 mg.",
-      "En algunos mercados: 1,25 mg y 2,5 mg."
-    ],
-    "pediatricDose": "La seguridad y eficacia en pacientes pediátricos no están establecidas; la ficha informa ausencia de experiencia pediátrica.",
-    "adverseEffects": [
-      "Cardiovasculares: bradicardia, hipotensión, bloqueo AV, empeoramiento de IC durante titulación inadecuada.",
-      "Neurológicos: fatiga, mareo, cefalea.",
-      "Gastrointestinales: diarrea, náuseas, vómitos.",
-      "Respiratorios: broncoespasmo raro pero posible porque selectividad beta-1 no es absoluta."
-    ],
-    "administration": "Administrar VO 1 vez/día a la misma hora. En ICFEr, iniciar solo cuando el paciente esté clínicamente estable y sin necesidad de inotrópico IV; titular lentamente. No suspender bruscamente.",
-    "preparation": "Los comprimidos no requieren preparación especial; seleccionar presentación que permita titulación segura. No improvisar fraccionamiento cuando el producto no esté ranurado/aprobado para ello.",
-    "infusionProtocol": "No aplica: bisoprolol se utiliza por vía oral; no existe protocolo IV rutinario aprobado.",
-    "pregnancy": "Los datos humanos adecuados son limitados. Estudios animales mostraron fetotoxicidad con exposiciones elevadas. Usar en embarazo solo cuando el beneficio esperado justifique el riesgo; si se usa cerca del parto, considerar monitorización neonatal por efectos de betabloqueo.",
-    "lactation": "No se sabe si bisoprolol se excreta en leche humana. Usar con cautela y monitorizar al lactante por bradicardia, hipotensión o dificultad de alimentación si se mantiene exposición.",
+    "presentations": "Comprimidos 5 y 10 mg; 1,25 y 2,5 mg en algunos mercados.",
+    "pediatricDose": "Seguridad y eficacia no establecidas. AUTOMATABLE=NO.",
+    "adverseEffects": "Fatiga, mareo, bradicardia, hipotensión, extremidades frías y trastornos GI. Graves: Bloqueo cardíaco, broncoespasmo, empeoramiento agudo de IC e isquemia por retirada brusca.",
+    "administration": "VO una vez/día; no suspender bruscamente, especialmente en coronariopatía.",
+    "preparation": "Comprimido listo; concentraciones pequeñas dependen del mercado.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Puede causar bradicardia/restricción de crecimiento fetal; usar si beneficio justifica.",
+    "lactation": "Datos limitados; preferir agente con mayor experiencia o vigilar lactante.",
     "references": [
-      "DailyMed — Bisoprolol fumarate tablets, current 2026 label: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c3ee566c-74c4-45f4-a947-526a7313e326",
-      "2022 AHA/ACC/HFSA Heart Failure Guideline: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
-      "2023 AHA/ACC Chronic Coronary Disease Guideline: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001168"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c3ee566c-74c4-45f4-a947-526a7313e326",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063"
     ]
   },
   "name": {
@@ -417,18 +223,21 @@
     "emconcor",
     "betabloqueador beta-1 seletivo (alta seletividade)"
   ],
-  "dataVersion": "clinical-data-v1-ce3a077c92ca984f",
-  "clinicalContentSha256": "ce3a077c92ca984f4b30c2e8a03536db7f2cf618f4619c16eca2f00299d136f6",
+  "dataVersion": "clinical-data-v1-4f45375767b6e870",
+  "clinicalContentSha256": "4f45375767b6e8706d5987e0984794bd1957f8a226c466b1041c31104e06bca6",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "bisoprolol.mcGoldClinicalV1",
-    "group": "GOLD_GROUP01_CARDIO_5",
-    "review": "2026-09",
+    "lote": "011",
     "requiredFields": 33,
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "7b76ae47c1977e8ef5a9181eab9814d1b9fae210d78f43b2fc0fe9534c35db7d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }
