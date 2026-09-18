@@ -3340,3 +3340,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:azul_metileno:END */
+/* GOLD33_SELECTIVE:bicarbonato_sodio:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["bicarbonato_sodio"])throw new Error("GOLD33_MISSING_CANONICAL:bicarbonato_sodio");db["bicarbonato_sodio"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "010",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f3d905f789b704e06b68dc3e394b05b58bc2a0f9b68ae6180e4ebb22ad653e12",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Bicarbonato de sódio injetável",
+    "class": "Alcalinizante sistêmico/eletrólito",
+    "pharmacologicClass": "Fornece bicarbonato, tamponando H+ e elevando pH",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Soluções IV 4,2% (0,5 mEq/mL) e 8,4% (1 mEq/mL), além de bolsas diluídas; confirmar rigorosamente.",
+    "presentations": "Soluções IV 4,2% (0,5 mEq/mL) e 8,4% (1 mEq/mL), além de bolsas diluídas; confirmar rigorosamente.",
+    "mechanism": "Fornece bicarbonato, tamponando H+ e elevando pH. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Distribui-se no espaço extracelular; bicarbonato converte-se em CO2 eliminável por ventilação; sódio é renal.",
+    "indications": "Acidose metabólica grave documentada e indicações tóxicas/específicas; não é uso rotineiro na parada cardíaca.",
+    "dose": "Dose guiada por causa, gasometria e déficit. Em situações selecionadas de ressuscitação/toxicologia, 1 mEq/kg IV pode ser dose inicial protocolar; reavaliar, não usar rotineiramente.",
+    "pediatricDose": "Neonatos/crianças: somente por protocolo e gasometria; preferir solução diluída e administração lenta. AUTOMATABLE=NO.",
+    "renalDose": "Retenção de sódio/volume e alcalose são mais prováveis; dosear por resposta, não há tabela universal.",
+    "hepaticDose": "Sem ajuste tabelado; cautela em retenção de sódio/ascite.",
+    "commonAdverseEffects": "Alcalose, hipernatremia, hipocalemia, hipocalcemia, sobrecarga de volume e irritação venosa.",
+    "dangerousAdverseEffects": "Arritmias/tetania, edema pulmonar, lesão por extravasamento, acidose intracelular/paradoxal e hemorragia intraventricular neonatal com uso rápido.",
+    "adverseEffects": "Alcalose, hipernatremia, hipocalemia, hipocalcemia, sobrecarga de volume e irritação venosa. Graves: Arritmias/tetania, edema pulmonar, lesão por extravasamento, acidose intracelular/paradoxal e hemorragia intraventricular neonatal com uso rápido.",
+    "contraindications": "Alcalose metabólica/respiratória, hipernatremia relevante e hipocalcemia não corrigida são contraindicações/fortes precauções contextuais.",
+    "interactions": "Incompatível com vários fármacos IV; alcalinização altera eliminação de salicilato/lítio e absorção de medicamentos orais.",
+    "monitoring": "Gasometria, Na/K/Ca, osmolaridade, balanço/edema, ECG e local de infusão.",
+    "administration": "IV por acesso pérvio; concentração/velocidade conforme indicação. Evitar extravasamento.",
+    "preparation": "Confirmar concentração. Incompatível com ácidos e muitos sais de cálcio; usar linha separada/compatibilidade validada.",
+    "infusionProtocol": "Administrar lentamente salvo emergência protocolada; monitorar gasometria e eletrólitos entre doses.",
+    "pregnancy": "Usar quando clinicamente indicado; monitorar estado materno e fetal.",
+    "lactation": "Compatível em doses usuais; considerar carga de sódio materna.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Arritmias/tetania, edema pulmonar, lesão por extravasamento, acidose intracelular/paradoxal e hemorragia intraventricular neonatal com uso rápido. Cálculo/preparo/infusão bloqueados sem causa, peso, gasometria, eletrólitos, ventilação, concentração e acesso.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=sodium+bicarbonate+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=sodium+bicarbonate+injection"
+  },
+  "es": {
+    "name": "Bicarbonato de sodio inyectable",
+    "class": "Alcalinizante sistémico/electrolito",
+    "pharmacologicClass": "Aporta bicarbonato, amortigua H+ y eleva pH",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Soluciones IV 4,2% (0,5 mEq/mL) y 8,4% (1 mEq/mL), además de bolsas diluidas; confirmar rigurosamente.",
+    "presentations": "Soluciones IV 4,2% (0,5 mEq/mL) y 8,4% (1 mEq/mL), además de bolsas diluidas; confirmar rigurosamente.",
+    "mechanism": "Aporta bicarbonato, amortigua H+ y eleva pH. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Distribución extracelular; bicarbonato se convierte en CO2 eliminado por ventilación; sodio renal.",
+    "indications": "Acidosis metabólica grave documentada e indicaciones tóxicas/específicas; no es uso rutinario en paro cardíaco.",
+    "dose": "Dosis guiada por causa, gasometría y déficit. En reanimación/toxicología seleccionada, 1 mEq/kg IV puede ser inicial protocolaria; reevaluar, no usar rutinariamente.",
+    "pediatricDose": "Neonatos/niños: solo por protocolo y gasometría; preferir solución diluida y administración lenta. AUTOMATABLE=NO.",
+    "renalDose": "Retención de sodio/volumen y alcalosis más probables; dosificar por respuesta, sin tabla universal.",
+    "hepaticDose": "Sin ajuste tabulado; precaución con retención de sodio/ascitis.",
+    "commonAdverseEffects": "Alcalosis, hipernatremia, hipopotasemia, hipocalcemia, sobrecarga de volumen e irritación venosa.",
+    "dangerousAdverseEffects": "Arritmias/tetania, edema pulmonar, lesión por extravasación, acidosis intracelular/paradójica y hemorragia intraventricular neonatal con uso rápido.",
+    "adverseEffects": "Alcalosis, hipernatremia, hipopotasemia, hipocalcemia, sobrecarga de volumen e irritación venosa. Graves: Arritmias/tetania, edema pulmonar, lesión por extravasación, acidosis intracelular/paradójica y hemorragia intraventricular neonatal con uso rápido.",
+    "contraindications": "Alcalosis metabólica/respiratoria, hipernatremia relevante e hipocalcemia no corregida son contraindicaciones/precauciones contextuales.",
+    "interactions": "Incompatible con varios fármacos IV; alcalinización altera eliminación de salicilato/litio y absorción oral.",
+    "monitoring": "Gasometría, Na/K/Ca, osmolaridad, balance/edema, ECG y sitio de infusión.",
+    "administration": "IV por acceso permeable; concentración/velocidad según indicación. Evitar extravasación.",
+    "preparation": "Confirmar concentración. Incompatible con ácidos y muchas sales de calcio; usar línea separada/compatibilidad validada.",
+    "infusionProtocol": "Administrar lentamente salvo emergencia protocolizada; controlar gasometría y electrolitos entre dosis.",
+    "pregnancy": "Usar cuando esté clínicamente indicado; vigilar madre y feto.",
+    "lactation": "Compatible en dosis habituales; considerar carga de sodio materna.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Arritmias/tetania, edema pulmonar, lesión por extravasación, acidosis intracelular/paradójica y hemorragia intraventricular neonatal con uso rápido. Cálculo/preparo/infusão bloqueados sem causa, peso, gasometria, eletrólitos, ventilação, concentração e acesso.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=sodium+bicarbonate+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=sodium+bicarbonate+injection"
+  }
+};})();
+/* GOLD33_SELECTIVE:bicarbonato_sodio:END */

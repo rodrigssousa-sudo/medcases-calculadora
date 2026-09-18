@@ -1559,3 +1559,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:alclometasona:END */
+/* GOLD33_SELECTIVE:bilastina:START */
+;(function(){var db=window.ALERGIA_IMUNOLOGIA_DRUGS_DB;if(!db||!db["bilastina"])throw new Error("GOLD33_MISSING_CANONICAL:bilastina");db["bilastina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "010",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f3d905f789b704e06b68dc3e394b05b58bc2a0f9b68ae6180e4ebb22ad653e12",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Bilastina",
+    "class": "Anti-histamínico H1 de segunda geração",
+    "pharmacologicClass": "Antagonista seletivo periférico H1",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimido 20 mg; formulações pediátricas 10 mg em alguns mercados.",
+    "presentations": "Comprimido 20 mg; formulações pediátricas 10 mg em alguns mercados.",
+    "mechanism": "Antagonista seletivo periférico H1. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção rápida; biodisponibilidade ~61%; substrato P-gp; pouco metabolismo; eliminação fecal/urinária inalterada; meia-vida ~14,5 h.",
+    "indications": "Rinoconjuntivite alérgica e urticária, conforme autorização local.",
+    "dose": "Adultos e adolescentes ≥12 anos: 20 mg VO uma vez/dia.",
+    "pediatricDose": "Em mercados autorizados, 6-11 anos e ≥20 kg: 10 mg uma vez/dia em formulação pediátrica. AUTOMATABLE=NO sem produto/peso.",
+    "renalDose": "Sem ajuste usual; em disfunção moderada/grave evitar combinação com inibidores P-gp conforme SmPC.",
+    "hepaticDose": "Sem ajuste usual; dados em grave limitados.",
+    "commonAdverseEffects": "Cefaleia e sonolência; tontura e fadiga menos comuns.",
+    "dangerousAdverseEffects": "Hipersensibilidade/anafilaxia e palpitações são raras.",
+    "adverseEffects": "Cefaleia e sonolência; tontura e fadiga menos comuns. Graves: Hipersensibilidade/anafilaxia e palpitações são raras.",
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "Inibidores P-gp (p.ex. cetoconazol, eritromicina, ciclosporina, ritonavir, diltiazem) elevam exposição; alimento/suco reduzem biodisponibilidade.",
+    "monitoring": "Controle dos sintomas, sonolência individual, função renal se risco e interações P-gp.",
+    "administration": "Em jejum: 1 h antes ou 2 h após alimento ou suco de frutas; água é preferida.",
+    "preparation": "Comprimido pronto; usar formulação pediátrica apropriada.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados limitados; evitar por precaução salvo benefício.",
+    "lactation": "Desconhece-se excreção humana; avaliar benefício e risco.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipersensibilidade/anafilaxia e palpitações são raras. Dose bloqueada sem idade/peso, formulação autorizada localmente, função renal e revisão de P-gp; administrar em jejum.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/product/4551/smpc",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://cima.aemps.es/cima/publico/home.html"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/4551/smpc"
+  },
+  "es": {
+    "name": "Bilastina",
+    "class": "Antihistamínico H1 de segunda generación",
+    "pharmacologicClass": "Antagonista selectivo periférico H1",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimido 20 mg; formulaciones pediátricas 10 mg en algunos mercados.",
+    "presentations": "Comprimido 20 mg; formulaciones pediátricas 10 mg en algunos mercados.",
+    "mechanism": "Antagonista selectivo periférico H1. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción rápida; biodisponibilidad ~61%; sustrato P-gp; poco metabolismo; eliminación fecal/urinaria sin cambios; semivida ~14,5 h.",
+    "indications": "Rinoconjuntivitis alérgica y urticaria, según autorización local.",
+    "dose": "Adultos y adolescentes ≥12 años: 20 mg VO una vez/día.",
+    "pediatricDose": "En mercados autorizados, 6-11 años y ≥20 kg: 10 mg una vez/día en formulación pediátrica. AUTOMATABLE=NO sin producto/peso.",
+    "renalDose": "Sin ajuste habitual; en disfunción moderada/grave evitar combinación con inhibidores P-gp según ficha.",
+    "hepaticDose": "Sin ajuste habitual; datos limitados en grave.",
+    "commonAdverseEffects": "Cefalea y somnolencia; mareo y fatiga menos comunes.",
+    "dangerousAdverseEffects": "Hipersensibilidad/anafilaxia y palpitaciones son raras.",
+    "adverseEffects": "Cefalea y somnolencia; mareo y fatiga menos comunes. Graves: Hipersensibilidad/anafilaxia y palpitaciones son raras.",
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Inhibidores P-gp (p. ej., ketoconazol, eritromicina, ciclosporina, ritonavir, diltiazem) elevan exposición; alimento/zumo reducen biodisponibilidad.",
+    "monitoring": "Control de síntomas, somnolencia individual, función renal si riesgo e interacciones P-gp.",
+    "administration": "En ayunas: 1 h antes o 2 h después de alimentos o zumo; preferir agua.",
+    "preparation": "Comprimido listo; usar formulación pediátrica apropiada.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos limitados; evitar por precaución salvo beneficio.",
+    "lactation": "Se desconoce excreción humana; evaluar beneficio y riesgo.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipersensibilidad/anafilaxia y palpitaciones son raras. Dose bloqueada sem idade/peso, formulação autorizada localmente, função renal e revisão de P-gp; administrar em jejum.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/product/4551/smpc",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://cima.aemps.es/cima/publico/home.html"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/4551/smpc"
+  }
+};})();
+/* GOLD33_SELECTIVE:bilastina:END */

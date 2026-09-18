@@ -3657,3 +3657,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:beclometasona_formoterol_glicopirronio:END */
+/* GOLD33_SELECTIVE:benralizumabe:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["benralizumabe"])throw new Error("GOLD33_MISSING_CANONICAL:benralizumabe");db["benralizumabe"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "010",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f3d905f789b704e06b68dc3e394b05b58bc2a0f9b68ae6180e4ebb22ad653e12",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Benralizumabe",
+    "class": "Anticorpo monoclonal anti-IL-5Rα",
+    "pharmacologicClass": "Liga IL-5Rα e promove depleção de eosinófilos por citotoxicidade celular",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Seringa/caneta preenchida para uso subcutâneo; apresentações variam por país e faixa etária.",
+    "presentations": "Seringa/caneta preenchida para uso subcutâneo; apresentações variam por país e faixa etária.",
+    "mechanism": "Liga IL-5Rα e promove depleção de eosinófilos por citotoxicidade celular. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade SC ~59%; meia-vida ~15,5 dias; catabolismo proteolítico, sem CYP relevante.",
+    "indications": "Tratamento adicional de manutenção da asma eosinofílica grave; não trata broncoespasmo agudo.",
+    "dose": "Adultos e ≥12 anos: 30 mg SC a cada 4 semanas nas três primeiras doses e depois a cada 8 semanas.",
+    "pediatricDose": "6-11 anos: dose depende do peso e produto autorizado (rótulo dos EUA: <35 kg, 10 mg; ≥35 kg, 30 mg), no mesmo calendário. AUTOMATABLE=NO sem peso/produto.",
+    "renalDose": "Não se espera ajuste; dados em disfunção grave são limitados.",
+    "hepaticDose": "Não se espera ajuste; não há estudo formal.",
+    "commonAdverseEffects": "Cefaleia, faringite e reação no local.",
+    "dangerousAdverseEffects": "Anafilaxia/hipersensibilidade tardia e possível alteração da resposta a helmintos.",
+    "adverseEffects": "Cefaleia, faringite e reação no local. Graves: Anafilaxia/hipersensibilidade tardia e possível alteração da resposta a helmintos.",
+    "contraindications": "Hipersensibilidade ao fármaco/excipientes.",
+    "interactions": "Interações metabólicas clinicamente relevantes não são esperadas; não interromper corticoide abruptamente. Tratar helmintíase antes.",
+    "monitoring": "Exacerbações, controle, uso de resgate, eosinófilos no contexto, hipersensibilidade e infecções helmínticas.",
+    "administration": "SC em coxa/abdome; braço por cuidador/profissional. Observar conforme risco de hipersensibilidade.",
+    "preparation": "Retirar da refrigeração conforme bula; não agitar, congelar nem expor ao calor; inspecionar solução.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados humanos insuficientes; anticorpos IgG atravessam placenta, sobretudo no 3º trimestre. Individualizar.",
+    "lactation": "Dados insuficientes; considerar benefício materno e exposição do lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia/hipersensibilidade tardia e possível alteração da resposta a helmintos. Seleção/dose bloqueadas sem idade, peso, fenótipo eosinofílico, produto local e plano para exacerbação.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=FASENRA",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/761070s021lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=FASENRA"
+  },
+  "es": {
+    "name": "Benralizumab",
+    "class": "Anticuerpo monoclonal anti-IL-5Rα",
+    "pharmacologicClass": "Se une a IL-5Rα y produce depleción de eosinófilos por citotoxicidad celular",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Jeringa/pluma precargada subcutánea; presentaciones varían por país y edad.",
+    "presentations": "Jeringa/pluma precargada subcutánea; presentaciones varían por país y edad.",
+    "mechanism": "Se une a IL-5Rα y produce depleción de eosinófilos por citotoxicidad celular. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad SC ~59%; semivida ~15,5 días; catabolismo proteolítico, sin CYP relevante.",
+    "indications": "Tratamiento adicional de mantenimiento del asma eosinofílica grave; no trata broncoespasmo agudo.",
+    "dose": "Adultos y ≥12 años: 30 mg SC cada 4 semanas las tres primeras dosis y luego cada 8 semanas.",
+    "pediatricDose": "6-11 años: dosis depende del peso y producto autorizado (ficha EE. UU.: <35 kg, 10 mg; ≥35 kg, 30 mg), mismo calendario. AUTOMATABLE=NO sin peso/producto.",
+    "renalDose": "No se espera ajuste; datos limitados en disfunción grave.",
+    "hepaticDose": "No se espera ajuste; no hay estudio formal.",
+    "commonAdverseEffects": "Cefalea, faringitis y reacción local.",
+    "dangerousAdverseEffects": "Anafilaxia/hipersensibilidad tardía y posible alteración de respuesta a helmintos.",
+    "adverseEffects": "Cefalea, faringitis y reacción local. Graves: Anafilaxia/hipersensibilidad tardía y posible alteración de respuesta a helmintos.",
+    "contraindications": "Hipersensibilidad al fármaco/excipientes.",
+    "interactions": "No se esperan interacciones metabólicas relevantes; no retirar corticoide bruscamente. Tratar helmintiasis antes.",
+    "monitoring": "Exacerbaciones, control, rescate, eosinófilos en contexto, hipersensibilidad e infecciones helmínticas.",
+    "administration": "SC en muslo/abdomen; brazo por cuidador/profesional. Observar según riesgo de hipersensibilidad.",
+    "preparation": "Retirar de refrigeración según ficha; no agitar, congelar ni exponer al calor; inspeccionar solución.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos humanos insuficientes; IgG atraviesa placenta, sobre todo en tercer trimestre. Individualizar.",
+    "lactation": "Datos insuficientes; considerar beneficio materno y exposición del lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia/hipersensibilidad tardía y posible alteración de respuesta a helmintos. Seleção/dose bloqueadas sem idade, peso, fenótipo eosinofílico, produto local e plano para exacerbação.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=FASENRA",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/761070s021lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=FASENRA"
+  }
+};})();
+/* GOLD33_SELECTIVE:benralizumabe:END */

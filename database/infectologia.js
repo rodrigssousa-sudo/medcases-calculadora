@@ -7513,3 +7513,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:atazanavir:END */
+/* GOLD33_SELECTIVE:bictegravir:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB;if(!db||!db["bictegravir"])throw new Error("GOLD33_MISSING_CANONICAL:bictegravir");db["bictegravir"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "010",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f3d905f789b704e06b68dc3e394b05b58bc2a0f9b68ae6180e4ebb22ad653e12",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Bictegravir/emtricitabina/tenofovir alafenamida",
+    "class": "Antirretroviral combinado INSTI + 2 ITRN",
+    "pharmacologicClass": "Inibição de integrase, transcriptase reversa e terminação de cadeia",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Biktarvy 50/200/25 mg e apresentação pediátrica 30/120/15 mg.",
+    "presentations": "Biktarvy 50/200/25 mg e apresentação pediátrica 30/120/15 mg.",
+    "mechanism": "Inibição de integrase, transcriptase reversa e terminação de cadeia. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Bictegravir: CYP3A/UGT1A1; FTC e tenofovir predominantemente renais; TAF é substrato P-gp.",
+    "indications": "Regime completo para HIV-1 em pacientes apropriados; bictegravir não é comercializado como monoterapia.",
+    "dose": "Adultos e ≥25 kg: 1 comprimido 50/200/25 mg VO uma vez/dia.",
+    "pediatricDose": "≥14 a <25 kg: 1 comprimido 30/120/15 mg uma vez/dia. Não recomendado <14 kg. AUTOMATABLE=NO sem peso/idade.",
+    "renalDose": "Não recomendado com ClCr 15-<30; condições especiais permitem uso em alguns adultos virologicamente suprimidos em hemodiálise, após diálise, conforme bula.",
+    "hepaticDose": "Não recomendado em insuficiência hepática grave; sem ajuste leve/moderada.",
+    "commonAdverseEffects": "Diarreia, náusea e cefaleia.",
+    "dangerousAdverseEffects": "Acidose láctica/hepatomegalia, exacerbação de HBV após suspensão, lesão renal e síndrome de reconstituição imune.",
+    "adverseEffects": "Diarreia, náusea e cefaleia. Graves: Acidose láctica/hepatomegalia, exacerbação de HBV após suspensão, lesão renal e síndrome de reconstituição imune.",
+    "contraindications": "Coadministração com dofetilida ou rifampicina; hipersensibilidade.",
+    "interactions": "Indutores fortes reduzem bictegravir/TAF. Antiácidos/suplementos polivalentes exigem separação específica; metformina e fármacos renais exigem revisão.",
+    "monitoring": "Carga viral/CD4, adesão, creatinina/eGFR, urina, fósforo quando indicado, fígado/HBV, peso e interações.",
+    "administration": "VO com ou sem alimento. Testar HBV antes; não suspender sem plano por risco de exacerbação de hepatite B.",
+    "preparation": "Comprimido pronto; pediátrico pode ser dividido conforme bula, sem guardar partes.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Registro antirretroviral disponível é tranquilizador; manter supressão com orientação especializada.",
+    "lactation": "Dados sugerem baixa exposição infantil; seguir protocolo HIV e alimentação vigente localmente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Acidose láctica/hepatomegalia, exacerbação de HBV após suspensão, lesão renal e síndrome de reconstituição imune. Regime bloqueado sem confirmar combinação completa, peso, resistência/histórico ART, HBV, renal/hepática e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=BIKTARVY",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://clinicalinfo.hiv.gov/en/drugs/bictegravir/patient"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=BIKTARVY"
+  },
+  "es": {
+    "name": "Bictegravir/emtricitabina/tenofovir alafenamida",
+    "class": "Antirretroviral combinado INSTI + 2 ITIN",
+    "pharmacologicClass": "Inhibición de integrasa, transcriptasa inversa y terminación de cadena",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Biktarvy 50/200/25 mg y presentación pediátrica 30/120/15 mg.",
+    "presentations": "Biktarvy 50/200/25 mg y presentación pediátrica 30/120/15 mg.",
+    "mechanism": "Inhibición de integrasa, transcriptasa inversa y terminación de cadena. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Bictegravir: CYP3A/UGT1A1; FTC y tenofovir principalmente renales; TAF sustrato P-gp.",
+    "indications": "Régimen completo para VIH-1 en pacientes apropiados; bictegravir no se comercializa como monoterapia.",
+    "dose": "Adultos y ≥25 kg: 1 comprimido 50/200/25 mg VO una vez/día.",
+    "pediatricDose": "≥14 a <25 kg: 1 comprimido 30/120/15 mg una vez/día. No recomendado <14 kg. AUTOMATABLE=NO sin peso/edad.",
+    "renalDose": "No recomendado con ClCr 15-<30; condiciones especiales permiten uso en algunos adultos suprimidos en hemodiálisis, después de diálisis, según ficha.",
+    "hepaticDose": "No recomendado en insuficiencia hepática grave; sin ajuste leve/moderada.",
+    "commonAdverseEffects": "Diarrea, náusea y cefalea.",
+    "dangerousAdverseEffects": "Acidosis láctica/hepatomegalia, exacerbación VHB tras suspensión, lesión renal y reconstitución inmune.",
+    "adverseEffects": "Diarrea, náusea y cefalea. Graves: Acidosis láctica/hepatomegalia, exacerbación VHB tras suspensión, lesión renal y reconstitución inmune.",
+    "contraindications": "Coadministración con dofetilida o rifampicina; hipersensibilidad.",
+    "interactions": "Inductores fuertes reducen bictegravir/TAF. Antiácidos/suplementos polivalentes exigen separación específica; metformina y fármacos renales requieren revisión.",
+    "monitoring": "Carga viral/CD4, adherencia, creatinina/eGFR, orina, fósforo cuando proceda, hígado/VHB, peso e interacciones.",
+    "administration": "VO con o sin alimentos. Analizar VHB antes; no suspender sin plan por riesgo de exacerbación de hepatitis B.",
+    "preparation": "Comprimido listo; pediátrico puede dividirse según ficha, sin guardar partes.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Registro antirretroviral disponible es tranquilizador; mantener supresión con orientación especializada.",
+    "lactation": "Datos sugieren baja exposición infantil; seguir protocolo VIH y alimentación local vigente.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Acidosis láctica/hepatomegalia, exacerbación VHB tras suspensión, lesión renal y reconstitución inmune. Regime bloqueado sem confirmar combinação completa, peso, resistência/histórico ART, HBV, renal/hepática e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=BIKTARVY",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://clinicalinfo.hiv.gov/en/drugs/bictegravir/patient"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=BIKTARVY"
+  }
+};})();
+/* GOLD33_SELECTIVE:bictegravir:END */
