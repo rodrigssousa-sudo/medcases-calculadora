@@ -65502,3 +65502,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:eptifibatide:END */
+/* GOLD33_SELECTIVE:esmolol:START */
+;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["esmolol"])throw new Error("GOLD33_MISSING_CANONICAL:esmolol");db["esmolol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "031",
+    "requiredFieldCount": 33,
+    "approvedSha256": "0cb3fbe4096704f1b123448b9ae7327900c0b44121d5b0ed2601ccb63300d66c",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Esmolol",
+    "class": "Betabloqueador beta-1 ultracurto",
+    "pharmacologicClass": "Bloqueio beta-1 rapidamente reversível",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Solução IV 10 mg/mL e concentrados conforme produto.",
+    "presentations": "Solução IV 10 mg/mL e concentrados conforme produto.",
+    "mechanism": "Bloqueio beta-1 rapidamente reversível. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Hidrólise por esterases eritrocitárias; meia-vida ~9 min.",
+    "indications": "Controle agudo de taquicardia/hipertensão perioperatória e frequência supraventricular.",
+    "dose": "Carga opcional 500 mcg/kg em 1 min, depois 50 mcg/kg/min; titular 50–200 mcg/kg/min. Perioperatório pode usar protocolos maiores específicos.",
+    "pediatricDose": "Uso especializado por peso. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste.",
+    "hepaticDose": "Sem ajuste.",
+    "commonAdverseEffects": "Hipotensão, bradicardia, náusea e reação local.",
+    "dangerousAdverseEffects": "Choque, bloqueio cardíaco, parada, broncoespasmo e necrose por extravasamento.",
+    "adverseEffects": "Hipotensão, bradicardia, náusea e reação local. Graves: Choque, bloqueio cardíaco, parada, broncoespasmo e necrose por extravasamento.",
+    "contraindications": "Bradicardia grave, bloqueio >1º grau, choque cardiogênico, IC descompensada e hipersensibilidade.",
+    "interactions": "Verapamil/diltiazem, digoxina, outros anti-hipertensivos e fármacos bradicardizantes.",
+    "monitoring": "ECG/FC, PA, perfusão, IC, broncoespasmo e glicemia em risco.",
+    "administration": "IV contínua por bomba com ECG/PA.",
+    "preparation": "Confirmar formulação, concentração e produto; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco, idade gestacional e rótulo específico.",
+    "lactation": "Avaliar exposição do lactente e alternativa terapêutica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Choque, bloqueio cardíaco, parada, broncoespasmo e necrose por extravasamento. Cálculo/bomba bloqueados sem peso, ritmo/ECG, PA, função ventricular, broncoespasmo, concentração e outros cronotrópicos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esmolol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019386s038lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esmolol"
+  },
+  "es": {
+    "name": "Esmolol",
+    "class": "Betabloqueante beta-1 ultracorto",
+    "pharmacologicClass": "Bloqueo beta-1 rápidamente reversible",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Solución IV 10 mg/mL y concentrados según producto.",
+    "presentations": "Solución IV 10 mg/mL y concentrados según producto.",
+    "mechanism": "Bloqueo beta-1 rápidamente reversible. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Hidrólisis por esterasas eritrocitarias; semivida ~9 min.",
+    "indications": "Control agudo de taquicardia/hipertensión perioperatoria y frecuencia supraventricular.",
+    "dose": "Carga opcional 500 mcg/kg en 1 min, luego 50 mcg/kg/min; titular 50–200 mcg/kg/min. Perioperatorio puede usar protocolos mayores específicos.",
+    "pediatricDose": "Uso especializado por peso. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste.",
+    "hepaticDose": "Sin ajuste.",
+    "commonAdverseEffects": "Hipotensión, bradicardia, náusea y reacción local.",
+    "dangerousAdverseEffects": "Shock, bloqueo cardíaco, paro, broncoespasmo y necrosis por extravasación.",
+    "adverseEffects": "Hipotensión, bradicardia, náusea y reacción local. Graves: Shock, bloqueo cardíaco, paro, broncoespasmo y necrosis por extravasación.",
+    "contraindications": "Bradicardia grave, bloqueo >1º grado, shock cardiogénico, IC descompensada e hipersensibilidad.",
+    "interactions": "Verapamilo/diltiazem, digoxina, otros antihipertensivos y bradicardizantes.",
+    "monitoring": "ECG/FC, PA, perfusión, IC, broncoespasmo y glucemia en riesgo.",
+    "administration": "IV continua por bomba con ECG/PA.",
+    "preparation": "Confirmar formulación, concentración y producto; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo, edad gestacional y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativa terapéutica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Shock, bloqueo cardíaco, paro, broncoespasmo y necrosis por extravasación. Cálculo/bomba bloqueados sem peso, ritmo/ECG, PA, função ventricular, broncoespasmo, concentração e outros cronotrópicos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esmolol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019386s038lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esmolol"
+  }
+};})();
+/* GOLD33_SELECTIVE:esmolol:END */

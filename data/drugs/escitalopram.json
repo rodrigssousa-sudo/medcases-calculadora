@@ -6,192 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Escitalopram",
-    "class": "Antidepressivo ISRS",
+    "class": "ISRS",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Lexapro",
-        "Exodus",
-        "Reconter",
-        "Esc"
-      ],
-      "ar": [
-        "Lexapro",
-        "Meridian",
-        "Ipran",
-        "Escitalopram Bagó"
-      ]
-    },
-    "presentation": [
-      "Comprimido 5 mg",
-      "Comprimido 10 mg",
-      "Comprimido 15 mg",
-      "Comprimido 20 mg",
-      "Solução oral 20 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Iniciar 10 mg VO 1x/dia; usual 10–20 mg/dia.",
-      "idoso": "Idosos: iniciar 5 mg/dia; dose usual 5–10 mg/dia.",
-      "maxDose": "Dose máxima usual: 20 mg/dia."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 5/10/20 mg e solução 1 mg/mL.",
+    "dose": "10 mg VO/dia; pode aumentar a 20 mg após ≥1 semana.",
     "doseKg": {
       "standard": "Não se utiliza cálculo rotineiro por kg em adultos.",
       "pediatric": "Adolescentes: uso especializado; geralmente iniciar 5–10 mg/dia conforme indicação.",
       "maxDose": "20 mg/dia"
     },
-    "indications": [
-      "Transtorno depressivo maior",
-      "Transtorno de ansiedade generalizada",
-      "Transtorno do pânico",
-      "Transtorno de ansiedade social",
-      "Transtorno obsessivo-compulsivo",
-      "Transtorno disfórico pré-menstrual"
-    ],
+    "indications": "Depressão maior e ansiedade generalizada conforme idade.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Inibe seletivamente a recaptação de serotonina, aumentando serotonina na fenda sináptica.",
+    "mechanism": "Inibe recaptação de serotonina. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Início de efeito clínico geralmente em 2–4 semanas; resposta plena pode levar 6–8 semanas.",
     "halfLife": "Vida média aproximada: 27–32 horas.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Cefaleia",
-      "Insônia",
-      "Sonolência",
-      "Boca seca",
-      "Disfunção sexual"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome serotoninérgica",
-      "Prolongamento do intervalo QT",
-      "Ideação suicida em jovens no início do tratamento",
-      "Virada maníaca/hipomaníaca",
-      "Hiponatremia/SIADH",
-      "Sangramentos com AINEs/anticoagulantes"
-    ],
+    "commonAdverseEffects": "Náusea, insônia, fadiga, sudorese e disfunção sexual.",
+    "dangerousAdverseEffects": "Suicidalidade, síndrome serotoninérgica, QT/torsades, hiponatremia e sangramento.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade ao escitalopram",
-      "Uso concomitante com IMAO",
-      "Uso com pimozida",
-      "Síndrome do QT longo congênito ou QT prolongado significativo",
-      "Transtorno bipolar sem estabilizador do humor"
-    ],
-    "interactions": [
-      "IMAO: risco de síndrome serotoninérgica",
-      "Tramadol, linezolida, triptanos, lítio: risco serotoninérgico",
-      "AINEs, AAS, anticoagulantes: maior risco de sangramento",
-      "Antiarrítmicos e outros fármacos que prolongam QT: maior risco arrítmico",
-      "Álcool e depressores do SNC: podem piorar sedação"
-    ],
-    "alerts": [
-      "Investigar história de mania/hipomania antes de iniciar.",
-      "Evitar associação com IMAO.",
-      "Cuidado com QT prolongado, hipocalemia, hipomagnesemia ou cardiopatia.",
-      "Monitorar sódio em idosos ou usuários de diuréticos.",
-      "Não suspender abruptamente; reduzir gradualmente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Escitalopram Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO nas janelas definidas; pimozida; hipersensibilidade.",
+    "interactions": "Serotonérgicos, QT, anticoagulantes/AINEs e CYP2C19.",
+    "alerts": "Suicidalidade, síndrome serotoninérgica, QT/torsades, hiponatremia e sangramento. Dose bloqueada sem indicação/idade, risco suicida/bipolar, Na, QT, fígado/rim e interações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=escitalopram",
+    "pharmacologicClass": "Inibe recaptação de serotonina",
+    "presentations": "Comprimidos 5/10/20 mg e solução 1 mg/mL.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP2C19/3A4/2D6; meia-vida 27–32 h.",
+    "pediatricDose": "Depressão ≥12 anos: 10 mg/dia, máximo 20 mg; TAG ≥7 anos: conforme rótulo. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste leve/moderado; cautela grave.",
+    "hepaticDose": "10 mg/dia recomendado em hepatopatia.",
+    "adverseEffects": "Náusea, insônia, fadiga, sudorese e disfunção sexual. Graves: Suicidalidade, síndrome serotoninérgica, QT/torsades, hiponatremia e sangramento.",
+    "monitoring": "Humor/suicídio, mania, Na, QT em risco, sangramento e retirada.",
+    "administration": "VO 1x/dia; retirada gradual.",
+    "preparation": "Confirmar formulação, concentração e produto; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco, idade gestacional e rótulo específico.",
+    "lactation": "Avaliar exposição do lactente e alternativa terapêutica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=escitalopram",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021323s058lbl.pdf"
     ]
   },
   "es": {
     "name": "Escitalopram",
-    "class": "Antidepresivo ISRS",
+    "class": "ISRS",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Lexapro",
-        "Exodus",
-        "Reconter",
-        "Esc"
-      ],
-      "ar": [
-        "Lexapro",
-        "Meridian",
-        "Ipran",
-        "Escitalopram Bagó"
-      ]
-    },
-    "presentation": [
-      "Comprimido 5 mg",
-      "Comprimido 10 mg",
-      "Comprimido 15 mg",
-      "Comprimido 20 mg",
-      "Solución oral 20 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Iniciar 10 mg VO 1 vez/día; habitual 10–20 mg/día.",
-      "idoso": "Adultos mayores: iniciar 5 mg/día; dosis habitual 5–10 mg/día.",
-      "maxDose": "Dosis máxima habitual: 20 mg/día."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 5/10/20 mg y solución 1 mg/mL.",
+    "dose": "10 mg VO/día; puede subir a 20 mg tras ≥1 semana.",
     "doseKg": {
       "standard": "No se utiliza cálculo rutinario por kg en adultos.",
       "pediatric": "Adolescentes: uso especializado; generalmente iniciar 5–10 mg/día según indicación.",
       "maxDose": "20 mg/día"
     },
-    "indications": [
-      "Trastorno depresivo mayor",
-      "Trastorno de ansiedad generalizada",
-      "Trastorno de pánico",
-      "Trastorno de ansiedad social",
-      "Trastorno obsesivo-compulsivo",
-      "Trastorno disfórico premenstrual"
-    ],
+    "indications": "Depresión mayor y ansiedad generalizada según edad.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Inhibe selectivamente la recaptación de serotonina, aumentando serotonina en la hendidura sináptica.",
+    "mechanism": "Inhibe recaptación de serotonina. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Inicio de efecto clínico generalmente en 2–4 semanas; respuesta plena puede tardar 6–8 semanas.",
     "halfLife": "Vida media aproximada: 27–32 horas.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Cefalea",
-      "Insomnio",
-      "Somnolencia",
-      "Boca seca",
-      "Disfunción sexual"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome serotoninérgico",
-      "Prolongación del intervalo QT",
-      "Ideación suicida en jóvenes al inicio del tratamiento",
-      "Viraje maníaco/hipomaníaco",
-      "Hiponatremia/SIADH",
-      "Sangrados con AINEs/anticoagulantes"
-    ],
+    "commonAdverseEffects": "Náusea, insomnio, fatiga, sudoración y disfunción sexual.",
+    "dangerousAdverseEffects": "Suicidalidad, síndrome serotoninérgico, QT/torsades, hiponatremia y sangrado.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad al escitalopram",
-      "Uso concomitante con IMAO",
-      "Uso con pimozida",
-      "Síndrome de QT largo congénito o QT prolongado significativo",
-      "Trastorno bipolar sin estabilizador del ánimo"
-    ],
-    "interactions": [
-      "IMAO: riesgo de síndrome serotoninérgico",
-      "Tramadol, linezolid, triptanes, litio: riesgo serotoninérgico",
-      "AINEs, AAS, anticoagulantes: mayor riesgo de sangrado",
-      "Antiarrítmicos y otros fármacos que prolongan QT: mayor riesgo arrítmico",
-      "Alcohol y depresores del SNC: pueden empeorar sedación"
-    ],
-    "alerts": [
-      "Investigar historia de manía/hipomanía antes de iniciar.",
-      "Evitar asociación con IMAO.",
-      "Cuidado con QT prolongado, hipopotasemia, hipomagnesemia o cardiopatía.",
-      "Monitorizar sodio en adultos mayores o usuarios de diuréticos.",
-      "No suspender abruptamente; reducir gradualmente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Escitalopram Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO en ventanas definidas; pimozida; hipersensibilidad.",
+    "interactions": "Serotoninérgicos, QT, anticoagulantes/AINE y CYP2C19.",
+    "alerts": "Suicidalidad, síndrome serotoninérgico, QT/torsades, hiponatremia y sangrado. Dose bloqueada sem indicação/idade, risco suicida/bipolar, Na, QT, fígado/rim e interações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=escitalopram",
+    "pharmacologicClass": "Inhibe recaptación de serotonina",
+    "presentations": "Comprimidos 5/10/20 mg y solución 1 mg/mL.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP2C19/3A4/2D6; semivida 27–32 h.",
+    "pediatricDose": "Depresión ≥12 años: 10 mg/día, máximo 20 mg; TAG ≥7 años: según ficha. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste leve/moderado; precaución grave.",
+    "hepaticDose": "10 mg/día recomendado en hepatopatía.",
+    "adverseEffects": "Náusea, insomnio, fatiga, sudoración y disfunción sexual. Graves: Suicidalidad, síndrome serotoninérgico, QT/torsades, hiponatremia y sangrado.",
+    "monitoring": "Ánimo/suicidio, manía, Na, QT en riesgo, sangrado y retirada.",
+    "administration": "VO 1 vez/día; retirada gradual.",
+    "preparation": "Confirmar formulación, concentración y producto; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo, edad gestacional y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativa terapéutica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=escitalopram",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021323s058lbl.pdf"
     ]
   },
   "name": {
@@ -209,9 +117,21 @@
     "escitalopram bago",
     "antidepressivo isrs"
   ],
-  "dataVersion": "clinical-data-v1-628982a257e8a599",
-  "clinicalContentSha256": "628982a257e8a59960f52bba72fe5a0557c00b4fc382ed0f14ca558c2d443ea8",
+  "dataVersion": "clinical-data-v1-0d9e4487b6a9a056",
+  "clinicalContentSha256": "0d9e4487b6a9a05605709f3248ceb82dad85b7e91ee4744dfcb27770405a18aa",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "escitalopram.mcGoldClinicalV1",
+    "lote": "031",
+    "requiredFields": 33,
+    "approvedSha256": "0cb3fbe4096704f1b123448b9ae7327900c0b44121d5b0ed2601ccb63300d66c",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

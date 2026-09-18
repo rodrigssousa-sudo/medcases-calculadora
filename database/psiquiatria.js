@@ -6497,3 +6497,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:duloxetina:END */
+/* GOLD33_SELECTIVE:escitalopram:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["escitalopram"])throw new Error("GOLD33_MISSING_CANONICAL:escitalopram");db["escitalopram"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "031",
+    "requiredFieldCount": 33,
+    "approvedSha256": "0cb3fbe4096704f1b123448b9ae7327900c0b44121d5b0ed2601ccb63300d66c",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Escitalopram",
+    "class": "ISRS",
+    "pharmacologicClass": "Inibe recaptação de serotonina",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 5/10/20 mg e solução 1 mg/mL.",
+    "presentations": "Comprimidos 5/10/20 mg e solução 1 mg/mL.",
+    "mechanism": "Inibe recaptação de serotonina. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP2C19/3A4/2D6; meia-vida 27–32 h.",
+    "indications": "Depressão maior e ansiedade generalizada conforme idade.",
+    "dose": "10 mg VO/dia; pode aumentar a 20 mg após ≥1 semana.",
+    "pediatricDose": "Depressão ≥12 anos: 10 mg/dia, máximo 20 mg; TAG ≥7 anos: conforme rótulo. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste leve/moderado; cautela grave.",
+    "hepaticDose": "10 mg/dia recomendado em hepatopatia.",
+    "commonAdverseEffects": "Náusea, insônia, fadiga, sudorese e disfunção sexual.",
+    "dangerousAdverseEffects": "Suicidalidade, síndrome serotoninérgica, QT/torsades, hiponatremia e sangramento.",
+    "adverseEffects": "Náusea, insônia, fadiga, sudorese e disfunção sexual. Graves: Suicidalidade, síndrome serotoninérgica, QT/torsades, hiponatremia e sangramento.",
+    "contraindications": "IMAO nas janelas definidas; pimozida; hipersensibilidade.",
+    "interactions": "Serotonérgicos, QT, anticoagulantes/AINEs e CYP2C19.",
+    "monitoring": "Humor/suicídio, mania, Na, QT em risco, sangramento e retirada.",
+    "administration": "VO 1x/dia; retirada gradual.",
+    "preparation": "Confirmar formulação, concentração e produto; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco, idade gestacional e rótulo específico.",
+    "lactation": "Avaliar exposição do lactente e alternativa terapêutica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Suicidalidade, síndrome serotoninérgica, QT/torsades, hiponatremia e sangramento. Dose bloqueada sem indicação/idade, risco suicida/bipolar, Na, QT, fígado/rim e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=escitalopram",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021323s058lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=escitalopram"
+  },
+  "es": {
+    "name": "Escitalopram",
+    "class": "ISRS",
+    "pharmacologicClass": "Inhibe recaptación de serotonina",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 5/10/20 mg y solución 1 mg/mL.",
+    "presentations": "Comprimidos 5/10/20 mg y solución 1 mg/mL.",
+    "mechanism": "Inhibe recaptación de serotonina. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP2C19/3A4/2D6; semivida 27–32 h.",
+    "indications": "Depresión mayor y ansiedad generalizada según edad.",
+    "dose": "10 mg VO/día; puede subir a 20 mg tras ≥1 semana.",
+    "pediatricDose": "Depresión ≥12 años: 10 mg/día, máximo 20 mg; TAG ≥7 años: según ficha. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste leve/moderado; precaución grave.",
+    "hepaticDose": "10 mg/día recomendado en hepatopatía.",
+    "commonAdverseEffects": "Náusea, insomnio, fatiga, sudoración y disfunción sexual.",
+    "dangerousAdverseEffects": "Suicidalidad, síndrome serotoninérgico, QT/torsades, hiponatremia y sangrado.",
+    "adverseEffects": "Náusea, insomnio, fatiga, sudoración y disfunción sexual. Graves: Suicidalidad, síndrome serotoninérgico, QT/torsades, hiponatremia y sangrado.",
+    "contraindications": "IMAO en ventanas definidas; pimozida; hipersensibilidad.",
+    "interactions": "Serotoninérgicos, QT, anticoagulantes/AINE y CYP2C19.",
+    "monitoring": "Ánimo/suicidio, manía, Na, QT en riesgo, sangrado y retirada.",
+    "administration": "VO 1 vez/día; retirada gradual.",
+    "preparation": "Confirmar formulación, concentración y producto; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo, edad gestacional y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativa terapéutica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Suicidalidad, síndrome serotoninérgico, QT/torsades, hiponatremia y sangrado. Dose bloqueada sem indicação/idade, risco suicida/bipolar, Na, QT, fígado/rim e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=escitalopram",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/021323s058lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=escitalopram"
+  }
+};})();
+/* GOLD33_SELECTIVE:escitalopram:END */

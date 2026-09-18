@@ -5,246 +5,80 @@
   "color": "rgba(220,38,38,0.15)",
   "colorTxt": "#7F1D1D",
   "pt": {
-    "pharmacodynamics": "Reduz frequência cardíaca, contratilidade e condução nodal AV, com redução da demanda miocárdica de oxigênio. O efeito depende da dose, seletividade do agente e tônus simpático.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fadiga",
-      "tontura",
-      "hipotensão",
-      "extremidades frias"
-    ],
-    "dangerousAdverseEffects": [
-      "bloqueio AV",
-      "broncoespasmo",
-      "bradicardia grave",
-      "choque ou piora de insuficiência cardíaca",
-      "mascaramento de hipoglicemia"
-    ],
-    "interactions": [
-      "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão",
-      "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
-      "Clonidina exige retirada planejada para evitar hipertensão rebote",
-      "Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia"
-    ],
-    "monitoring": [
-      "Frequência cardíaca",
-      "pressão arterial",
-      "ECG se houver distúrbio de condução ou arritmia",
-      "sinais de insuficiência cardíaca",
-      "broncoespasmo e glicemia em pacientes de risco"
-    ],
-    "patientEducation": [
-      "Não suspender abruptamente sem orientação",
-      "controlar pulso se orientado",
-      "procurar avaliação por síncope, nova dispneia ou piora de edema",
-      "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
-    ],
-    "pregnancy": "Usar apenas quando o benefício materno justificar o risco; próximo ao parto pode causar bradicardia, hipotensão ou hipoglicemia neonatal conforme exposição e agente.",
-    "lactation": "Individualizar conforme agente, dose e idade do lactente; observar bradicardia, letargia ou dificuldade de alimentação quando a exposição for clinicamente relevante.",
-    "safetyFlags": [
-      "BRADICARDIA",
-      "BLOQUEIO_AV",
-      "BRONCOESPASMO",
-      "RETIRADA_GRADUAL",
-      "HIPOGLICEMIA_MASCARADA"
-    ],
-    "alerts": [
-      "Evitar suspensão abrupta em doença coronariana",
-      "Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada",
-      "Usar com cautela em doença broncoespástica"
-    ],
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "commonAdverseEffects": "Hipotensão, bradicardia, náusea e reação local.",
+    "dangerousAdverseEffects": "Choque, bloqueio cardíaco, parada, broncoespasmo e necrose por extravasamento.",
+    "interactions": "Verapamil/diltiazem, digoxina, outros anti-hipertensivos e fármacos bradicardizantes.",
+    "monitoring": "ECG/FC, PA, perfusão, IC, broncoespasmo e glicemia em risco.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "pregnancy": "Avaliar benefício-risco, idade gestacional e rótulo específico.",
+    "lactation": "Avaliar exposição do lactente e alternativa terapêutica.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Choque, bloqueio cardíaco, parada, broncoespasmo e necrose por extravasamento. Cálculo/bomba bloqueados sem peso, ritmo/ECG, PA, função ventricular, broncoespasmo, concentração e outros cronotrópicos.",
     "name": "Esmolol",
-    "class": "Betabloqueador beta-1 seletivo de ação ultracurta, intravenoso",
-    "pharmacologicClass": "Antagonista beta-1 adrenérgico de meia-vida ultracurta",
-    "mechanism": "Bloqueia preferencialmente receptores beta-1 cardíacos. Seu metabolismo rápido por esterases eritrocitárias permite titulação minuto a minuto e reversão rápida após suspensão.",
-    "pharmacokinetics": "Início rápido e meia-vida de eliminação próxima de 9 minutos. Metabolizado por esterases eritrocitárias a metabólito ácido de baixa atividade; o metabólito é eliminado pelos rins.",
-    "indications": [
-      "Controle de curto prazo da frequência ventricular em taquicardia supraventricular, fibrilação atrial ou flutter",
-      "taquicardia sinusal não compensatória",
-      "taquicardia e hipertensão perioperatórias"
-    ],
-    "commercialNames": [
-      "Brevibloc"
-    ],
-    "presentation": "Solução intravenosa pronta para uso em bolsas premix.",
-    "presentations": [
-      "2500 mg/250 mL, 10 mg/mL",
-      "2000 mg/100 mL, 20 mg/mL"
-    ],
-    "dose": {
-      "svt": "Carga opcional 500 mcg/kg em 1 minuto, depois 50 mcg/kg/min por 4 minutos; titular até 200 mcg/kg/min.",
-      "perioperative": "Controle gradual: 500 mcg/kg em 1 minuto seguido de 50 mcg/kg/min; ajustar até 200 mcg/kg/min para taquicardia ou 300 mcg/kg/min para hipertensão. Controle imediato: 1 mg/kg em 30 segundos seguido de 150 mcg/kg/min."
-    },
-    "pediatricDose": "Segurança e eficácia não estabelecidas pela bula para uso pediátrico rotineiro; não extrapolar o esquema adulto sem protocolo pediátrico.",
-    "renalDose": "Esmolol é metabolizado rapidamente fora do rim, mas seu metabólito ácido acumula na insuficiência renal. Em geral não requer ajuste inicial do esmolol; monitorar em infusões prolongadas.",
-    "hepaticDose": "Não requer ajuste específico por hepatopatia isolada devido ao metabolismo por esterases eritrocitárias.",
-    "contraindications": [
-      "Bradicardia sinusal grave",
-      "bloqueio maior que primeiro grau",
-      "síndrome do nó sinusal",
-      "insuficiência cardíaca descompensada",
-      "choque cardiogênico",
-      "administração próxima a verapamil IV",
-      "hipertensão pulmonar",
-      "hipersensibilidade"
-    ],
-    "administration": "Apenas IV por bomba de infusão. Monitorar ECG, frequência e pressão durante titulação.",
-    "preparation": "Usar premix na concentração rotulada; não confundir 10 mg/mL com 20 mg/mL. Inspecionar partículas e cor.",
-    "infusionProtocol": "Carga e manutenção devem ser calculadas por peso. Reavaliar cada etapa antes de aumentar; reduzir ou suspender diante de hipotensão ou bradicardia.",
-    "specialPopulations": {
-      "renal": "Metabólito ácido acumula; cautela em infusão prolongada.",
-      "perioperative": "Permite controle rápido e reversível.",
-      "diabetes": "Pode mascarar sinais adrenérgicos de hipoglicemia."
-    },
-    "clinicalPearls": [
-      "A meia-vida próxima de 9 minutos permite teste terapêutico controlável",
-      "Não confundir a concentração de 10 mg/mL com 20 mg/mL ao programar a bomba."
-    ],
-    "guidelineRecommendations": [
-      "No controle agudo de frequência, betabloqueadores IV são opção quando a situação hemodinâmica e as comorbidades permitem."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fadiga",
-        "tontura",
-        "hipotensão",
-        "extremidades frias"
-      ],
-      "dangerous": [
-        "bloqueio AV",
-        "broncoespasmo",
-        "bradicardia grave",
-        "choque ou piora de insuficiência cardíaca",
-        "mascaramento de hipoglicemia"
-      ]
-    },
+    "class": "Betabloqueador beta-1 ultracurto",
+    "pharmacologicClass": "Bloqueio beta-1 rapidamente reversível",
+    "mechanism": "Bloqueio beta-1 rapidamente reversível. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacokinetics": "Hidrólise por esterases eritrocitárias; meia-vida ~9 min.",
+    "indications": "Controle agudo de taquicardia/hipertensão perioperatória e frequência supraventricular.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Solução IV 10 mg/mL e concentrados conforme produto.",
+    "presentations": "Solução IV 10 mg/mL e concentrados conforme produto.",
+    "dose": "Carga opcional 500 mcg/kg em 1 min, depois 50 mcg/kg/min; titular 50–200 mcg/kg/min. Perioperatório pode usar protocolos maiores específicos.",
+    "pediatricDose": "Uso especializado por peso. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste.",
+    "hepaticDose": "Sem ajuste.",
+    "contraindications": "Bradicardia grave, bloqueio >1º grau, choque cardiogênico, IC descompensada e hipersensibilidade.",
+    "administration": "IV contínua por bomba com ECG/PA.",
+    "preparation": "Confirmar formulação, concentração e produto; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "adverseEffects": "Hipotensão, bradicardia, náusea e reação local. Graves: Choque, bloqueio cardíaco, parada, broncoespasmo e necrose por extravasamento.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=01ad7942-99c3-40ee-9cfb-272fb6c44e2b",
-      "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esmolol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019386s038lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=01ad7942-99c3-40ee-9cfb-272fb6c44e2b"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esmolol"
   },
   "es": {
-    "pharmacodynamics": "Reduce la frecuencia cardíaca, la contractilidad y la conducción nodal AV, con disminución de la demanda miocárdica de oxígeno. El efecto depende de dosis, selectividad del agente y tono simpático.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fatiga",
-      "mareo",
-      "hipotensión",
-      "extremidades frías"
-    ],
-    "dangerousAdverseEffects": [
-      "bloqueo AV",
-      "broncoespasmo",
-      "bradicardia grave",
-      "shock o empeoramiento de insuficiencia cardíaca",
-      "enmascaramiento de hipoglucemia"
-    ],
-    "interactions": [
-      "Verapamilo o diltiazem aumentan bradicardia, bloqueo AV e hipotensión",
-      "Digoxina y otros cronotrópicos negativos potencian bradicardia",
-      "Clonidina requiere retirada planificada para evitar hipertensión de rebote",
-      "Insulina y secretagogos: puede atenuar síntomas adrenérgicos de hipoglucemia"
-    ],
-    "monitoring": [
-      "Frecuencia cardíaca",
-      "presión arterial",
-      "ECG si existe trastorno de conducción o arritmia",
-      "signos de insuficiencia cardíaca",
-      "broncoespasmo y glucemia en pacientes de riesgo"
-    ],
-    "patientEducation": [
-      "No suspender bruscamente sin indicación",
-      "controlar pulso si fue orientado",
-      "consultar por síncope, disnea nueva o empeoramiento de edema",
-      "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
-    ],
-    "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo; cerca del parto puede producir bradicardia, hipotensión o hipoglucemia neonatal según exposición y agente.",
-    "lactation": "Individualizar según el agente, dosis y edad del lactante; vigilar bradicardia, letargo o mala alimentación cuando la exposición sea clínicamente relevante.",
-    "safetyFlags": [
-      "BRADICARDIA",
-      "BLOQUEO_AV",
-      "BRONCOESPASMO",
-      "RETIRADA_GRADUAL",
-      "HIPOGLUCEMIA_ENMASCARADA"
-    ],
-    "alerts": [
-      "Evitar suspensión abrupta en enfermedad coronaria",
-      "No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada",
-      "Usar con cautela en enfermedad broncoespástica"
-    ],
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "commonAdverseEffects": "Hipotensión, bradicardia, náusea y reacción local.",
+    "dangerousAdverseEffects": "Shock, bloqueo cardíaco, paro, broncoespasmo y necrosis por extravasación.",
+    "interactions": "Verapamilo/diltiazem, digoxina, otros antihipertensivos y bradicardizantes.",
+    "monitoring": "ECG/FC, PA, perfusión, IC, broncoespasmo y glucemia en riesgo.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "pregnancy": "Evaluar beneficio-riesgo, edad gestacional y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativa terapéutica.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Shock, bloqueo cardíaco, paro, broncoespasmo y necrosis por extravasación. Cálculo/bomba bloqueados sem peso, ritmo/ECG, PA, função ventricular, broncoespasmo, concentração e outros cronotrópicos.",
     "name": "Esmolol",
-    "class": "Betabloqueante beta-1 selectivo de acción ultracorta, intravenoso",
-    "pharmacologicClass": "Antagonista beta-1 adrenérgico de vida media ultracorta",
-    "mechanism": "Bloquea preferentemente receptores beta-1 cardíacos. Su metabolismo rápido por esterasas de eritrocitos permite titulación minuto a minuto y reversión rápida tras suspender.",
-    "pharmacokinetics": "Inicio rápido y vida media de eliminación cercana a 9 minutos. Metabolizado por esterasas eritrocitarias a un metabolito ácido de baja actividad; el metabolito se elimina por riñón.",
-    "indications": [
-      "Control a corto plazo de frecuencia ventricular en taquicardia supraventricular, fibrilación auricular o flutter",
-      "taquicardia sinusal no compensatoria",
-      "taquicardia e hipertensión perioperatorias"
-    ],
-    "commercialNames": [
-      "Brevibloc"
-    ],
-    "presentation": "Solución intravenosa lista para usar en bolsas premix.",
-    "presentations": [
-      "2500 mg/250 mL, 10 mg/mL",
-      "2000 mg/100 mL, 20 mg/mL"
-    ],
-    "dose": {
-      "svt": "Carga opcional 500 mcg/kg en 1 minuto, luego 50 mcg/kg/min por 4 minutos; titular hasta 200 mcg/kg/min.",
-      "perioperative": "Control gradual: 500 mcg/kg en 1 minuto seguido de 50 mcg/kg/min; ajustar hasta 200 mcg/kg/min para taquicardia o 300 mcg/kg/min para hipertensión. Control inmediato: 1 mg/kg en 30 segundos seguido de 150 mcg/kg/min."
-    },
-    "pediatricDose": "Seguridad y eficacia no establecidas por la ficha para uso pediátrico rutinario; no extrapolar el esquema adulto sin protocolo pediátrico.",
-    "renalDose": "El esmolol se metaboliza rápidamente fuera del riñón, pero su metabolito ácido se acumula en insuficiencia renal. No suele requerir ajuste inicial del esmolol; vigilar en infusiones prolongadas.",
-    "hepaticDose": "No requiere ajuste específico por hepatopatía aislada debido a metabolismo por esterasas eritrocitarias.",
-    "contraindications": [
-      "Bradicardia sinusal grave",
-      "bloqueo mayor de primer grado",
-      "síndrome del nodo enfermo",
-      "insuficiencia cardíaca descompensada",
-      "shock cardiogénico",
-      "administración cercana a verapamilo IV",
-      "hipertensión pulmonar",
-      "hipersensibilidad"
-    ],
-    "administration": "Solo IV mediante bomba de infusión. Monitorizar ECG, frecuencia y presión durante titulación.",
-    "preparation": "Usar premix en concentración rotulada; no confundir 10 mg/mL con 20 mg/mL. Inspeccionar partículas y color.",
-    "infusionProtocol": "Carga y mantenimiento deben calcularse por peso. Reevaluar cada escalón antes de aumentar; reducir o suspender ante hipotensión o bradicardia.",
-    "specialPopulations": {
-      "renal": "Metabolito ácido se acumula; cautela en infusión prolongada.",
-      "perioperative": "Permite control rápido y reversible.",
-      "diabetes": "Puede enmascarar signos adrenérgicos de hipoglucemia."
-    },
-    "clinicalPearls": [
-      "La vida media cercana a 9 minutos permite un ensayo terapéutico controlable",
-      "No mezclar la concentración de 10 mg/mL con la de 20 mg/mL al programar la bomba."
-    ],
-    "guidelineRecommendations": [
-      "En control agudo de frecuencia, los betabloqueantes IV son una opción cuando la situación hemodinámica y comorbilidades lo permiten."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fatiga",
-        "mareo",
-        "hipotensión",
-        "extremidades frías"
-      ],
-      "dangerous": [
-        "bloqueo AV",
-        "broncoespasmo",
-        "bradicardia grave",
-        "shock o empeoramiento de insuficiencia cardíaca",
-        "enmascaramiento de hipoglucemia"
-      ]
-    },
+    "class": "Betabloqueante beta-1 ultracorto",
+    "pharmacologicClass": "Bloqueo beta-1 rápidamente reversible",
+    "mechanism": "Bloqueo beta-1 rápidamente reversible. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacokinetics": "Hidrólisis por esterasas eritrocitarias; semivida ~9 min.",
+    "indications": "Control agudo de taquicardia/hipertensión perioperatoria y frecuencia supraventricular.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Solución IV 10 mg/mL y concentrados según producto.",
+    "presentations": "Solución IV 10 mg/mL y concentrados según producto.",
+    "dose": "Carga opcional 500 mcg/kg en 1 min, luego 50 mcg/kg/min; titular 50–200 mcg/kg/min. Perioperatorio puede usar protocolos mayores específicos.",
+    "pediatricDose": "Uso especializado por peso. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste.",
+    "hepaticDose": "Sin ajuste.",
+    "contraindications": "Bradicardia grave, bloqueo >1º grado, shock cardiogénico, IC descompensada e hipersensibilidad.",
+    "administration": "IV continua por bomba con ECG/PA.",
+    "preparation": "Confirmar formulación, concentración y producto; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "adverseEffects": "Hipotensión, bradicardia, náusea y reacción local. Graves: Shock, bloqueo cardíaco, paro, broncoespasmo y necrosis por extravasación.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=01ad7942-99c3-40ee-9cfb-272fb6c44e2b",
-      "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esmolol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019386s038lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=01ad7942-99c3-40ee-9cfb-272fb6c44e2b"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esmolol"
   },
   "name": {
     "pt": "Esmolol",
@@ -256,8 +90,8 @@
     "esmolol generico",
     "betabloqueador beta-1 seletivo de acao ultracurta (iv)"
   ],
-  "dataVersion": "clinical-data-v1-628982a257e8a599",
-  "clinicalContentSha256": "628982a257e8a59960f52bba72fe5a0557c00b4fc382ed0f14ca558c2d443ea8",
+  "dataVersion": "clinical-data-v1-0d9e4487b6a9a056",
+  "clinicalContentSha256": "0d9e4487b6a9a05605709f3248ceb82dad85b7e91ee4744dfcb27770405a18aa",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -367,13 +201,15 @@
     ]
   },
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "esmolol.mcGoldClinicalV1",
-    "group": "GOLD_GROUP05_CARDIO_10",
-    "review": "2026-09",
+    "lote": "031",
     "requiredFields": 33,
-    "contentSha256": "ee5af9e181971c3c5260a39ff821edd3f3c009adb0cba6f5b502ff565ea6ce78",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "0cb3fbe4096704f1b123448b9ae7327900c0b44121d5b0ed2601ccb63300d66c",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

@@ -2582,3 +2582,93 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:domperidona:END */
+/* GOLD33_SELECTIVE:esomeprazol:START */
+;(function(){var db=window.GASTROENTEROLOGIA_DRUGS_DB;if(!db||!db["esomeprazol"])throw new Error("GOLD33_MISSING_CANONICAL:esomeprazol");db["esomeprazol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "031",
+    "requiredFieldCount": 33,
+    "approvedSha256": "0cb3fbe4096704f1b123448b9ae7327900c0b44121d5b0ed2601ccb63300d66c",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Esomeprazol",
+    "class": "Inibidor da bomba de prótons",
+    "pharmacologicClass": "Inibe irreversivelmente H+/K+-ATPase gástrica",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas/comprimidos 20/40 mg, grânulos e IV.",
+    "presentations": "Cápsulas/comprimidos 20/40 mg, grânulos e IV.",
+    "mechanism": "Inibe irreversivelmente H+/K+-ATPase gástrica. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP2C19/3A4; meia-vida ~1–1,5 h.",
+    "indications": "DRGE/erosões, redução de risco por AINE, H. pylori em combinação e hipersecreção conforme produto.",
+    "dose": "Usual 20–40 mg VO 1x/dia por 4–8 semanas conforme indicação; Zollinger-Ellison exige titulação.",
+    "pediatricDose": "≥1 ano: 10–40 mg/dia conforme idade/peso/indicação; lactentes têm esquema específico. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste.",
+    "hepaticDose": "Child-Pugh C: máximo 20 mg/dia em várias indicações.",
+    "commonAdverseEffects": "Cefaleia, diarreia, náusea e dor abdominal.",
+    "dangerousAdverseEffects": "Nefrite intersticial, hipomagnesemia, C. difficile, SCLE e reações graves.",
+    "adverseEffects": "Cefaleia, diarreia, náusea e dor abdominal. Graves: Nefrite intersticial, hipomagnesemia, C. difficile, SCLE e reações graves.",
+    "contraindications": "Hipersensibilidade a benzimidazóis; rilpivirina concomitante.",
+    "interactions": "CYP2C19; clopidogrel, metotrexato alto, digoxina, varfarina e fármacos dependentes de pH.",
+    "monitoring": "Resposta, Mg/B12/ferro no longo prazo, rim, C. difficile, fraturas e pólipos fúndicos.",
+    "administration": "Antes da refeição; não triturar grânulos gastrorresistentes. IV conforme rótulo.",
+    "preparation": "Confirmar formulação, concentração e produto; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco, idade gestacional e rótulo específico.",
+    "lactation": "Avaliar exposição do lactente e alternativa terapêutica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Nefrite intersticial, hipomagnesemia, C. difficile, SCLE e reações graves. Dose/duração bloqueadas sem indicação, idade/peso, H. pylori/esquema, fígado, clopidogrel/rilpivirina e riscos de longo prazo.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esomeprazole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021153s058lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esomeprazole"
+  },
+  "es": {
+    "name": "Esomeprazol",
+    "class": "Inhibidor de bomba de protones",
+    "pharmacologicClass": "Inhibe irreversiblemente H+/K+-ATPasa gástrica",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas/comprimidos 20/40 mg, gránulos e IV.",
+    "presentations": "Cápsulas/comprimidos 20/40 mg, gránulos e IV.",
+    "mechanism": "Inhibe irreversiblemente H+/K+-ATPasa gástrica. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP2C19/3A4; semivida ~1–1,5 h.",
+    "indications": "ERGE/erosiones, reducción de riesgo por AINE, H. pylori combinado e hipersecreción según producto.",
+    "dose": "Habitual 20–40 mg VO 1 vez/día por 4–8 semanas según indicación; Zollinger-Ellison exige titulación.",
+    "pediatricDose": "≥1 año: 10–40 mg/día según edad/peso/indicación; lactantes tienen pauta específica. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste.",
+    "hepaticDose": "Child-Pugh C: máximo 20 mg/día en varias indicaciones.",
+    "commonAdverseEffects": "Cefalea, diarrea, náusea y dolor abdominal.",
+    "dangerousAdverseEffects": "Nefritis intersticial, hipomagnesemia, C. difficile, lupus cutáneo y reacciones graves.",
+    "adverseEffects": "Cefalea, diarrea, náusea y dolor abdominal. Graves: Nefritis intersticial, hipomagnesemia, C. difficile, lupus cutáneo y reacciones graves.",
+    "contraindications": "Hipersensibilidad a benzimidazoles; rilpivirina concomitante.",
+    "interactions": "CYP2C19; clopidogrel, metotrexato alto, digoxina, warfarina y fármacos dependientes de pH.",
+    "monitoring": "Respuesta, Mg/B12/hierro a largo plazo, riñón, C. difficile, fracturas y pólipos fúndicos.",
+    "administration": "Antes de comida; no triturar gránulos gastrorresistentes. IV según ficha.",
+    "preparation": "Confirmar formulación, concentración y producto; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo, edad gestacional y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativa terapéutica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Nefritis intersticial, hipomagnesemia, C. difficile, lupus cutáneo y reacciones graves. Dose/duração bloqueadas sem indicação, idade/peso, H. pylori/esquema, fígado, clopidogrel/rilpivirina e riscos de longo prazo.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esomeprazole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021153s058lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=esomeprazole"
+  }
+};})();
+/* GOLD33_SELECTIVE:esomeprazol:END */
