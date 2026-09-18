@@ -7,230 +7,78 @@
   "pt": {
     "name": "Disopiramida",
     "class": "Antiarrítmico classe IA",
-    "pharmacologicClass": "Bloqueador de canais rápidos de sódio classe IA, com forte efeito anticolinérgico e inotrópico negativo.",
-    "mechanism": "Bloqueia canais rápidos de sódio, reduz velocidade de condução e prolonga refratariedade; também exerce efeito anticolinérgico e inotrópico negativo.",
-    "pharmacodynamics": [
-      "Pode prolongar PR, QRS e QT e causar proarritmia/torsades.",
-      "O efeito inotrópico negativo pode piorar IC; o efeito anticolinérgico pode causar retenção urinária e glaucoma."
-    ],
-    "pharmacokinetics": {
-      "Eliminação": "Mais de 50% é excretada inalterada na urina.",
-      "Hepática": "Insuficiência hepática prolonga meia-vida.",
-      "Formulações": "Imediata q6h; CR q12h. CR não é recomendada com ClCr ≤40 mL/min."
-    },
-    "indications": [
-      "Arritmias ventriculares documentadas potencialmente fatais quando o benefício justifica o risco.",
-      "MCH obstrutiva sintomática persistente apesar de beta-bloqueador ou verapamil/diltiazem: opção de escalada combinada a bloqueador do nó AV segundo diretriz HCM 2024."
-    ],
-    "commercialNames": [
-      "Norpace",
-      "Norpace CR",
-      "Disopiramida genérica"
-    ],
-    "presentation": "Cápsulas de liberação imediata e prolongada.",
-    "presentations": [
-      "Imediata 100 mg e 150 mg.",
-      "CR 100 mg e 150 mg conforme mercado."
-    ],
-    "dose": {
-      "Adulto usual": "400–800 mg/dia divididos; para a maioria 600 mg/dia = 150 mg q6h imediata ou 300 mg q12h CR.",
-      "Peso <50 kg": "400 mg/dia = 100 mg q6h imediata ou 200 mg q12h CR.",
-      "Cardiomiopatia/descompensação possível": "Sem ataque; iniciar 100 mg imediata q6–8h.",
-      "Controle rápido de arritmia ventricular": "Ataque 300 mg imediata (200 mg se <50 kg) em paciente monitorado."
-    },
-    "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas para uso rotineiro.",
-    "renalDose": {
-      "ClCr >40 com insuficiência moderada": "400 mg/dia.",
-      "ClCr 30–40": "Imediata 100 mg q8h.",
-      "ClCr 15–30": "Imediata 100 mg q12h.",
-      "ClCr <15": "Imediata 100 mg q24h.",
-      "ClCr ≤40": "Não usar CR."
-    },
-    "hepaticDose": {
-      "Insuficiência hepática": "Reduzir para 400 mg/dia em doses divididas e monitorar ECG."
-    },
-    "commonAdverseEffects": [
-      "Boca seca, constipação, visão borrada, dificuldade urinária, tontura e fadiga."
-    ],
-    "dangerousAdverseEffects": [
-      "QT prolongado/torsades e outras proarritmias.",
-      "IC/choque por inotropismo negativo.",
-      "Bloqueio de condução, retenção urinária aguda e glaucoma.",
-      "Hipoglicemia grave pode ocorrer."
-    ],
-    "adverseEffects": [
-      "Cardíacos: hipotensão, IC, bloqueio, QRS/QT prolongados.",
-      "Anticolinérgicos: xerostomia, constipação, retenção urinária, visão borrada/glaucoma.",
-      "Metabólicos: hipoglicemia."
-    ],
-    "contraindications": [
-      "Choque cardiogênico.",
-      "Bloqueio AV de 2º/3º grau sem marcapasso.",
-      "Hipersensibilidade.",
-      "QT prolongado, glaucoma e retenção urinária exigem cautela extrema/evitação conforme risco."
-    ],
-    "interactions": [
-      "Outros fármacos que prolongam QT aumentam torsades.",
-      "Outros antiarrítmicos/depressoras de condução aumentam bloqueio.",
-      "Inibidores CYP3A4 podem elevar exposição.",
-      "Anticolinérgicos somam toxicidade."
-    ],
-    "monitoring": [
-      "ECG com PR/QRS/QT, ritmo, potássio e magnésio.",
-      "Função renal/hepática, sinais de IC/hipotensão e sintomas anticolinérgicos."
-    ],
-    "administration": "VO em intervalos regulares; CR deve ser engolida inteira. Início/titulação em cardiopatia relevante requer ECG estreito.",
-    "preparation": "Sem preparo especial; não triturar CR.",
-    "infusionProtocol": "Não se aplica: não há formulação IV rotineira neste registro.",
-    "pregnancy": "Dados limitados; usar apenas se benefício justificar risco.",
-    "lactation": "É excretada no leite; avaliar suspensão da amamentação ou do fármaco conforme necessidade materna.",
-    "specialPopulations": {
-      "MCH obstrutiva": "Usar com bloqueador do nó AV.",
-      "DRC": "Ajustar intervalo e evitar CR se ClCr ≤40.",
-      "IC sistólica": "Pode piorar pela ação inotrópica negativa."
-    },
-    "patientEducation": [
-      "Procurar avaliação por síncope, palpitações, dispneia/edema, dificuldade urinária ou dor ocular.",
-      "Informar fármacos que prolongam QT."
-    ],
-    "clinicalPearls": [
-      "O forte inotropismo negativo explica utilidade na MCH obstrutiva e risco em IC.",
-      "Norpace CR não deve ser usada com ClCr ≤40 mL/min."
-    ],
-    "guidelineRecommendations": [
-      "HCM 2024: em MCH obstrutiva com sintomas persistentes apesar de beta-bloqueador ou verapamil/diltiazem, disopiramida com bloqueador do nó AV é opção recomendada de escalada."
-    ],
-    "safetyFlags": {
-      "qtRisk": true,
-      "torsadesRisk": true,
-      "negativeInotropy": true,
-      "anticholinergicRisk": true,
-      "renalAdjustment": true
-    },
-    "alerts": [
-      "Corrigir K/Mg antes de iniciar.",
-      "Monitorar QRS/QT e sinais de IC.",
-      "Não usar CR se ClCr ≤40 mL/min."
-    ],
+    "pharmacologicClass": "Bloqueia canais de sódio e prolonga potencial de ação/QT",
+    "mechanism": "Bloqueia canais de sódio e prolonga potencial de ação/QT. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP3A4 e excreção renal importante; meia-vida prolonga na DRC.",
+    "indications": "Arritmias ventriculares documentadas potencialmente fatais; uso hospitalar/especializado.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas IR 100/150 mg e ER 100/150 mg.",
+    "presentations": "Cápsulas IR 100/150 mg e ER 100/150 mg.",
+    "dose": "IR: 150 mg VO a cada 6 h (600 mg/dia); pacientes <50 kg podem usar 100 mg q6h. ER: 300 mg q12h. Dose menor em IC/renal/hepática.",
+    "pediatricDose": "Não estabelecido; doses pediátricas são especializadas. AUTOMATABLE=NO.",
+    "renalDose": "Reduzir dose e alongar intervalo por CrCl; evitar ER em insuficiência renal grave conforme rótulo.",
+    "hepaticDose": "Reduzir dose em hepatopatia.",
+    "commonAdverseEffects": "Boca seca, constipação, retenção urinária, visão turva e hipoglicemia.",
+    "dangerousAdverseEffects": "Torsades, pró-arritmia, bloqueio, piora grave de IC e hipoglicemia.",
+    "adverseEffects": "Boca seca, constipação, retenção urinária, visão turva e hipoglicemia. Graves: Torsades, pró-arritmia, bloqueio, piora grave de IC e hipoglicemia.",
+    "contraindications": "Choque cardiogênico, bloqueio AV 2º/3º sem marca-passo, QT longo congênito e hipersensibilidade.",
+    "interactions": "Outros QT/antiarrítmicos, CYP3A4, anticolinérgicos e fármacos que alteram eletrólitos.",
+    "monitoring": "ECG/QRS/QTc, ritmo, PA, IC, K/Mg, rim, retenção urinária, glaucoma e glicemia.",
+    "administration": "Iniciar com ECG/monitorização; engolir ER inteira.",
+    "preparation": "Não aplicável.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar apenas se indispensável.",
+    "lactation": "Dados limitados; pode reduzir produção por efeito anticolinérgico.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Torsades, pró-arritmia, bloqueio, piora grave de IC e hipoglicemia. Dose bloqueada sem arritmia documentada, ECG/QTc/QRS, FEVE/IC, CrCl, fígado, eletrólitos e revisão integral de QT/interações.",
     "references": [
-      "DailyMed NORPACE/NORPACE CR current label",
-      "2024 AHA/ACC Multisociety Hypertrophic Cardiomyopathy Guideline"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=disopyramide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/018039s025lbl.pdf"
     ],
-    "ref": "DailyMed Norpace/Norpace CR; HCM 2024."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=disopyramide"
   },
   "es": {
     "name": "Disopiramida",
     "class": "Antiarrítmico clase IA",
-    "pharmacologicClass": "Bloqueador de canales rápidos de sodio clase IA, con fuerte efecto anticolinérgico e inotrópico negativo.",
-    "mechanism": "Bloquea canales rápidos de sodio, reduce velocidad de conducción y prolonga refractariedad; también ejerce efecto anticolinérgico e inotrópico negativo.",
-    "pharmacodynamics": [
-      "Puede prolongar PR, QRS y QT y causar proarritmia/torsades.",
-      "El efecto inotrópico negativo puede empeorar IC; el anticolinérgico puede causar retención urinaria y glaucoma."
-    ],
-    "pharmacokinetics": {
-      "Eliminación": "Más del 50% se excreta sin cambios por orina.",
-      "Hepática": "Insuficiencia hepática prolonga semivida.",
-      "Formulaciones": "Inmediata q6h; CR q12h. CR no recomendada con ClCr ≤40 mL/min."
-    },
-    "indications": [
-      "Arritmias ventriculares documentadas potencialmente mortales cuando beneficio justifica riesgo.",
-      "MCH obstructiva sintomática persistente pese a betabloqueante o verapamilo/diltiazem: opción de escalada combinada con bloqueador del nodo AV según guía HCM 2024."
-    ],
-    "commercialNames": [
-      "Norpace",
-      "Norpace CR",
-      "Disopiramida genérica"
-    ],
-    "presentation": "Cápsulas de liberación inmediata y prolongada.",
-    "presentations": [
-      "Inmediata 100 mg y 150 mg.",
-      "CR 100 mg y 150 mg según mercado."
-    ],
-    "dose": {
-      "Adulto habitual": "400–800 mg/día divididos; para la mayoría 600 mg/día = 150 mg q6h inmediata o 300 mg q12h CR.",
-      "Peso <50 kg": "400 mg/día = 100 mg q6h inmediata o 200 mg q12h CR.",
-      "Cardiomiopatía/posible descompensación": "Sin carga; iniciar 100 mg inmediata q6–8h.",
-      "Control rápido de arritmia ventricular": "Carga 300 mg inmediata (200 mg si <50 kg) en paciente monitorizado."
-    },
-    "pediatricDose": "Seguridad y eficacia pediátricas no establecidas para uso rutinario.",
-    "renalDose": {
-      "ClCr >40 con insuficiencia moderada": "400 mg/día.",
-      "ClCr 30–40": "Inmediata 100 mg q8h.",
-      "ClCr 15–30": "Inmediata 100 mg q12h.",
-      "ClCr <15": "Inmediata 100 mg q24h.",
-      "ClCr ≤40": "No usar CR."
-    },
-    "hepaticDose": {
-      "Insuficiencia hepática": "Reducir a 400 mg/día en dosis divididas y monitorizar ECG."
-    },
-    "commonAdverseEffects": [
-      "Boca seca, estreñimiento, visión borrosa, dificultad urinaria, mareo y fatiga."
-    ],
-    "dangerousAdverseEffects": [
-      "QT prolongado/torsades y otras proarritmias.",
-      "IC/shock por inotropismo negativo.",
-      "Bloqueo de conducción, retención urinaria aguda y glaucoma.",
-      "Puede ocurrir hipoglucemia grave."
-    ],
-    "adverseEffects": [
-      "Cardíacos: hipotensión, IC, bloqueo, QRS/QT prolongados.",
-      "Anticolinérgicos: xerostomía, estreñimiento, retención urinaria, visión borrosa/glaucoma.",
-      "Metabólicos: hipoglucemia."
-    ],
-    "contraindications": [
-      "Shock cardiogénico.",
-      "Bloqueo AV de 2º/3º grado sin marcapasos.",
-      "Hipersensibilidad.",
-      "QT prolongado, glaucoma y retención urinaria exigen extrema cautela/evitación según riesgo."
-    ],
-    "interactions": [
-      "Otros fármacos que prolongan QT aumentan torsades.",
-      "Otros antiarrítmicos/depresores de conducción aumentan bloqueo.",
-      "Inhibidores CYP3A4 pueden elevar exposición.",
-      "Anticolinérgicos suman toxicidad."
-    ],
-    "monitoring": [
-      "ECG con PR/QRS/QT, ritmo, potasio y magnesio.",
-      "Función renal/hepática, signos de IC/hipotensión y síntomas anticolinérgicos."
-    ],
-    "administration": "VO a intervalos regulares; CR debe tragarse entera. Inicio/titulación en cardiopatía relevante requiere ECG estrecho.",
-    "preparation": "Sin preparación especial; no triturar CR.",
-    "infusionProtocol": "No aplica: no hay formulación IV rutinaria en este registro.",
-    "pregnancy": "Datos limitados; usar solo si beneficio justifica riesgo.",
-    "lactation": "Se excreta en leche; evaluar suspensión de lactancia o fármaco según necesidad materna.",
-    "specialPopulations": {
-      "MCH obstructiva": "Usar con bloqueador del nodo AV.",
-      "ERC": "Ajustar intervalo y evitar CR si ClCr ≤40.",
-      "IC sistólica": "Puede empeorar por acción inotrópica negativa."
-    },
-    "patientEducation": [
-      "Consultar por síncope, palpitaciones, disnea/edema, dificultad urinaria o dolor ocular.",
-      "Informar fármacos que prolongan QT."
-    ],
-    "clinicalPearls": [
-      "El fuerte inotropismo negativo explica utilidad en MCH obstructiva y riesgo en IC.",
-      "Norpace CR no debe usarse con ClCr ≤40 mL/min."
-    ],
-    "guidelineRecommendations": [
-      "HCM 2024: en MCH obstructiva con síntomas persistentes pese a betabloqueante o verapamilo/diltiazem, disopiramida con bloqueador del nodo AV es opción recomendada de escalada."
-    ],
-    "safetyFlags": {
-      "qtRisk": true,
-      "torsadesRisk": true,
-      "negativeInotropy": true,
-      "anticholinergicRisk": true,
-      "renalAdjustment": true
-    },
-    "alerts": [
-      "Corregir K/Mg antes de iniciar.",
-      "Monitorizar QRS/QT y signos de IC.",
-      "No usar CR si ClCr ≤40 mL/min."
-    ],
+    "pharmacologicClass": "Bloquea canales de sodio y prolonga potencial de acción/QT",
+    "mechanism": "Bloquea canales de sodio y prolonga potencial de acción/QT. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP3A4 y excreción renal importante; semivida prolongada en ERC.",
+    "indications": "Arritmias ventriculares documentadas potencialmente mortales; uso hospitalario/especializado.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas IR 100/150 mg y ER 100/150 mg.",
+    "presentations": "Cápsulas IR 100/150 mg y ER 100/150 mg.",
+    "dose": "IR: 150 mg VO cada 6 h (600 mg/día); pacientes <50 kg pueden usar 100 mg q6h. ER: 300 mg q12h. Dosis menor en IC/renal/hepática.",
+    "pediatricDose": "No establecido; dosis pediátricas son especializadas. AUTOMATABLE=NO.",
+    "renalDose": "Reducir dosis y alargar intervalo por CrCl; evitar ER en insuficiencia renal grave según ficha.",
+    "hepaticDose": "Reducir dosis en hepatopatía.",
+    "commonAdverseEffects": "Boca seca, estreñimiento, retención urinaria, visión borrosa e hipoglucemia.",
+    "dangerousAdverseEffects": "Torsades, proarritmia, bloqueo, empeoramiento grave de IC e hipoglucemia.",
+    "adverseEffects": "Boca seca, estreñimiento, retención urinaria, visión borrosa e hipoglucemia. Graves: Torsades, proarritmia, bloqueo, empeoramiento grave de IC e hipoglucemia.",
+    "contraindications": "Shock cardiogénico, bloqueo AV 2º/3º sin marcapasos, QT largo congénito e hipersensibilidad.",
+    "interactions": "Otros QT/antiarrítmicos, CYP3A4, anticolinérgicos y fármacos que alteran electrolitos.",
+    "monitoring": "ECG/QRS/QTc, ritmo, PA, IC, K/Mg, riñón, retención urinaria, glaucoma y glucemia.",
+    "administration": "Iniciar con ECG/control; tragar ER entera.",
+    "preparation": "No aplicable.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Usar solo si indispensable.",
+    "lactation": "Datos limitados; puede reducir producción por efecto anticolinérgico.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Torsades, proarritmia, bloqueo, empeoramiento grave de IC e hipoglucemia. Dose bloqueada sem arritmia documentada, ECG/QTc/QRS, FEVE/IC, CrCl, fígado, eletrólitos e revisão integral de QT/interações.",
     "references": [
-      "DailyMed NORPACE/NORPACE CR current label",
-      "2024 AHA/ACC Multisociety Hypertrophic Cardiomyopathy Guideline"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=disopyramide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/018039s025lbl.pdf"
     ],
-    "ref": "DailyMed Norpace/Norpace CR; HCM 2024."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=disopyramide"
   },
   "name": {
     "pt": "Disopiramida",
@@ -239,19 +87,21 @@
   "keywords": [
     "disopiramida"
   ],
-  "dataVersion": "clinical-data-v1-3f6ac98a5d4acf2a",
-  "clinicalContentSha256": "3f6ac98a5d4acf2a45829b7218dbcb022150bbbf10b4af3ad49ada015709d8ba",
+  "dataVersion": "clinical-data-v1-7a2b2da33f44c7d0",
+  "clinicalContentSha256": "7a2b2da33f44c7d0e2b465b60db6f154b6da14f6571bb903c0931ba42481f27a",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "disopiramida.mcGoldClinicalV1",
-    "group": "GOLD_GROUP02_CARDIO_10",
-    "review": "2026-09",
+    "lote": "026",
     "requiredFields": 33,
-    "contentSha256": "af8a2cc02e76cdc0030be62265abaf4fe7ad3fe97ea53b891bb1205046c46d28",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "a8bddf2f357b2d4d997020e9dbcb12cd6974420af31bc6f209c9ad8bec524d1a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

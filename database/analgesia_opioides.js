@@ -324,3 +324,93 @@
   }
 })();
 /* END MEDCASES_GOLD120_GROUP12_R4_analgesia_opioides_js */
+/* GOLD33_SELECTIVE:dipirona:START */
+;(function(){var db=window.ANALGESIA_OPIOIDES_DRUGS_DB;if(!db||!db["dipirona"])throw new Error("GOLD33_MISSING_CANONICAL:dipirona");db["dipirona"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "026",
+    "requiredFieldCount": 33,
+    "approvedSha256": "a8bddf2f357b2d4d997020e9dbcb12cd6974420af31bc6f209c9ad8bec524d1a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Dipirona (metamizol)",
+    "class": "Analgésico e antipirético não opioide",
+    "pharmacologicClass": "Pró-fármaco pirazolônico com efeitos analgésico, antipirético e espasmolítico",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 500 mg/1 g, gotas 500 mg/mL, solução oral e injetável 500 mg/mL conforme mercado.",
+    "presentations": "Comprimidos 500 mg/1 g, gotas 500 mg/mL, solução oral e injetável 500 mg/mL conforme mercado.",
+    "mechanism": "Pró-fármaco pirazolônico com efeitos analgésico, antipirético e espasmolítico. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Rapidamente hidrolisada a metabólitos ativos; eliminação renal de metabólitos.",
+    "indications": "Dor aguda e febre conforme autorização nacional; não aprovada nos EUA e restrições variam por país.",
+    "dose": "Adultos/≥15 anos: 500–1000 mg VO até 4x/dia; máximo usual 4 g/dia. IV/IM 1–2,5 g por dose, respeitando máximo local; confirmar bula.",
+    "pediatricDose": "Dose por peso e apresentação varia; frequentemente 8–16 mg/kg por dose, até 4x/dia. AUTOMATABLE=NO sem bula nacional, peso e concentração.",
+    "renalDose": "Reduzir/cautela em insuficiência renal grave e evitar altas doses repetidas.",
+    "hepaticDose": "Reduzir/cautela em hepatopatia e evitar altas doses repetidas.",
+    "commonAdverseEffects": "Náusea, tontura, rash e hipotensão parenteral.",
+    "dangerousAdverseEffects": "Agranulocitose, anafilaxia, choque, SCAR e lesão renal/hepática.",
+    "adverseEffects": "Náusea, tontura, rash e hipotensão parenteral. Graves: Agranulocitose, anafilaxia, choque, SCAR e lesão renal/hepática.",
+    "contraindications": "Alergia a pirazolonas, história de agranulocitose, porfiria aguda, deficiência medular; outras por bula regional.",
+    "interactions": "Metotrexato aumenta hematotoxicidade; ciclosporina pode reduzir; álcool e anti-hipertensivos somam efeitos.",
+    "monitoring": "Resposta, PA IV, sinais de infecção/agranulocitose, hemograma se sintomas/uso prolongado, rim/fígado.",
+    "administration": "VO com medida correta; IV muito lenta com PA monitorada devido a hipotensão.",
+    "preparation": "Confirmar concentração, diluição e compatibilidade do produto injetável.",
+    "infusionProtocol": "Administração IV lenta, com velocidade máxima específica da bula; não usar bolus rápido.",
+    "pregnancy": "Evitar no 3º trimestre; uso anterior depende de avaliação regional.",
+    "lactation": "Metabólitos passam ao leite; alguns rótulos recomendam evitar por 48 h após dose.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Agranulocitose, anafilaxia, choque, SCAR e lesão renal/hepática. Dose/cálculo bloqueados sem país/bula, idade/peso, concentração, via, função hepatorrenal e risco hematológico.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://consultas.anvisa.gov.br/#/bulario/",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines/human/referrals/metamizole-containing-medicinal-products"
+    ],
+    "ref": "https://consultas.anvisa.gov.br/#/bulario/"
+  },
+  "es": {
+    "name": "Metamizol (dipirona)",
+    "class": "Analgésico y antipirético no opioide",
+    "pharmacologicClass": "Profármaco pirazolónico con efectos analgésico, antipirético y espasmolítico",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 500 mg/1 g, gotas 500 mg/mL, solución oral e inyectable 500 mg/mL según mercado.",
+    "presentations": "Comprimidos 500 mg/1 g, gotas 500 mg/mL, solución oral e inyectable 500 mg/mL según mercado.",
+    "mechanism": "Profármaco pirazolónico con efectos analgésico, antipirético y espasmolítico. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Hidrolizada rápidamente a metabolitos activos; eliminación renal de metabolitos.",
+    "indications": "Dolor agudo y fiebre según autorización nacional; no aprobada en EE.UU. y restricciones varían por país.",
+    "dose": "Adultos/≥15 años: 500–1000 mg VO hasta 4 veces/día; máximo habitual 4 g/día. IV/IM 1–2,5 g por dosis, respetando máximo local; confirmar ficha.",
+    "pediatricDose": "Dosis por peso y presentación varía; frecuentemente 8–16 mg/kg por dosis, hasta 4 veces/día. AUTOMATABLE=NO sin ficha nacional, peso y concentración.",
+    "renalDose": "Reducir/precaución en insuficiencia renal grave y evitar dosis altas repetidas.",
+    "hepaticDose": "Reducir/precaución en hepatopatía y evitar dosis altas repetidas.",
+    "commonAdverseEffects": "Náusea, mareo, erupción e hipotensión parenteral.",
+    "dangerousAdverseEffects": "Agranulocitosis, anafilaxia, shock, SCAR y lesión renal/hepática.",
+    "adverseEffects": "Náusea, mareo, erupción e hipotensión parenteral. Graves: Agranulocitosis, anafilaxia, shock, SCAR y lesión renal/hepática.",
+    "contraindications": "Alergia a pirazolonas, antecedente de agranulocitosis, porfiria aguda, insuficiencia medular; otras según ficha regional.",
+    "interactions": "Metotrexato aumenta hematotoxicidad; ciclosporina puede disminuir; alcohol y antihipertensivos suman efectos.",
+    "monitoring": "Respuesta, PA IV, signos de infección/agranulocitosis, hemograma si síntomas/uso prolongado, riñón/hígado.",
+    "administration": "VO con medida correcta; IV muy lenta con PA controlada por hipotensión.",
+    "preparation": "Confirmar concentración, dilución y compatibilidad del producto inyectable.",
+    "infusionProtocol": "Administración IV lenta, con velocidad máxima específica de ficha; no usar bolo rápido.",
+    "pregnancy": "Evitar en tercer trimestre; uso previo depende de evaluación regional.",
+    "lactation": "Metabolitos pasan a leche; algunas fichas recomiendan evitar por 48 h tras dosis.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Agranulocitosis, anafilaxia, shock, SCAR y lesión renal/hepática. Dose/cálculo bloqueados sem país/bula, idade/peso, concentração, via, função hepatorrenal e risco hematológico.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://consultas.anvisa.gov.br/#/bulario/",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines/human/referrals/metamizole-containing-medicinal-products"
+    ],
+    "ref": "https://consultas.anvisa.gov.br/#/bulario/"
+  }
+};})();
+/* GOLD33_SELECTIVE:dipirona:END */

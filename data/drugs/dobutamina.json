@@ -5,21 +5,91 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Dobutamina (Cloridrato de)"
+    "name": "Dobutamina",
+    "class": "Inotrópico beta-adrenérgico",
+    "pharmacologicClass": "Agonismo beta-1 predominante aumenta contratilidade e débito",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Concentrado 12,5 mg/mL e bolsas prontas em concentrações variadas.",
+    "presentations": "Concentrado 12,5 mg/mL e bolsas prontas em concentrações variadas.",
+    "mechanism": "Agonismo beta-1 predominante aumenta contratilidade e débito. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Início em 1–2 min, meia-vida ~2 min; metabolismo por COMT e conjugação.",
+    "indications": "Suporte inotrópico de curto prazo em baixo débito/descompensação cardíaca; uso diagnóstico em estresse conforme protocolo.",
+    "dose": "Iniciar 0,5–1 mcg/kg/min IV; faixa usual 2–20 mcg/kg/min, raramente até 40 mcg/kg/min, titulada por resposta.",
+    "pediatricDose": "Uso por especialista; doses por peso semelhantes em protocolos, com grande variabilidade. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste fixo; titular por hemodinâmica.",
+    "hepaticDose": "Sem ajuste fixo; titular por resposta.",
+    "commonAdverseEffects": "Taquicardia, ectopia, hipertensão/hipotensão, cefaleia e náusea.",
+    "dangerousAdverseEffects": "Arritmias, isquemia, taquicardia grave, extravasamento e tolerância.",
+    "adverseEffects": "Taquicardia, ectopia, hipertensão/hipotensão, cefaleia e náusea. Graves: Arritmias, isquemia, taquicardia grave, extravasamento e tolerância.",
+    "contraindications": "Estenose subaórtica hipertrófica idiopática; hipersensibilidade/sulfito conforme produto.",
+    "interactions": "Beta-bloqueadores reduzem resposta; IMAO/tricíclicos e anestésicos podem aumentar arritmia; outros vasoativos.",
+    "monitoring": "ECG/FC, PA, perfusão, débito, lactato, diurese, K e local de infusão.",
+    "administration": "Infusão IV contínua por bomba; corrigir hipovolemia antes e monitorar invasivamente quando indicado.",
+    "preparation": "Diluir concentrado em solução compatível conforme rótulo; não misturar com bicarbonato/soluções alcalinas.",
+    "infusionProtocol": "Titular mcg/kg/min; evitar bolus. Trocar solução conforme estabilidade.",
+    "pregnancy": "Usar somente quando benefício materno justificar.",
+    "lactation": "Meia-vida curta e baixa exposição oral esperada; decisão em paciente crítica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Arritmias, isquemia, taquicardia grave, extravasamento e tolerância. Cálculo de bomba bloqueado sem peso, concentração, alvo hemodinâmico, volume, ECG, acesso, outros vasoativos e equipe de resgate.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dobutamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018650s029lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dobutamine"
   },
   "es": {
-    "name": "Dobutamina (Clorhidrato de)"
+    "name": "Dobutamina",
+    "class": "Inotrópico betaadrenérgico",
+    "pharmacologicClass": "Agonismo beta-1 predominante aumenta contractilidad y gasto",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Concentrado 12,5 mg/mL y bolsas listas en concentraciones variables.",
+    "presentations": "Concentrado 12,5 mg/mL y bolsas listas en concentraciones variables.",
+    "mechanism": "Agonismo beta-1 predominante aumenta contractilidad y gasto. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Inicio 1–2 min, semivida ~2 min; metabolismo por COMT y conjugación.",
+    "indications": "Soporte inotrópico corto en bajo gasto/descompensación cardíaca; uso diagnóstico en estrés según protocolo.",
+    "dose": "Iniciar 0,5–1 mcg/kg/min IV; rango habitual 2–20 mcg/kg/min, raramente hasta 40 mcg/kg/min, titulada por respuesta.",
+    "pediatricDose": "Uso por especialista; dosis por peso similares en protocolos, con gran variabilidad. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste fijo; titular por hemodinámica.",
+    "hepaticDose": "Sin ajuste fijo; titular por respuesta.",
+    "commonAdverseEffects": "Taquicardia, ectopia, hipertensión/hipotensión, cefalea y náusea.",
+    "dangerousAdverseEffects": "Arritmias, isquemia, taquicardia grave, extravasación y tolerancia.",
+    "adverseEffects": "Taquicardia, ectopia, hipertensión/hipotensión, cefalea y náusea. Graves: Arritmias, isquemia, taquicardia grave, extravasación y tolerancia.",
+    "contraindications": "Estenosis subaórtica hipertrófica idiopática; hipersensibilidad/sulfito según producto.",
+    "interactions": "Betabloqueadores reducen respuesta; IMAO/tricíclicos y anestésicos pueden aumentar arritmia; otros vasoactivos.",
+    "monitoring": "ECG/FC, PA, perfusión, gasto, lactato, diuresis, K y sitio de infusión.",
+    "administration": "Infusión IV continua por bomba; corregir hipovolemia antes y controlar invasivamente cuando corresponda.",
+    "preparation": "Diluir concentrado en solución compatible según ficha; no mezclar con bicarbonato/soluciones alcalinas.",
+    "infusionProtocol": "Titular mcg/kg/min; evitar bolo. Cambiar solución según estabilidad.",
+    "pregnancy": "Usar solo si beneficio materno justifica.",
+    "lactation": "Semivida corta y baja exposición oral esperada; decisión en paciente crítica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Arritmias, isquemia, taquicardia grave, extravasación y tolerancia. Cálculo de bomba bloqueado sem peso, concentração, alvo hemodinâmico, volume, ECG, acesso, outros vasoativos e equipe de resgate.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dobutamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018650s029lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dobutamine"
   },
   "name": {
-    "pt": "Dobutamina (Cloridrato de)",
-    "es": "Dobutamina (Clorhidrato de)"
+    "pt": "Dobutamina",
+    "es": "Dobutamina"
   },
   "keywords": [
     "dobutamina",
     "dobutamina (cloridrato de)"
   ],
-  "dataVersion": "clinical-data-v1-3f6ac98a5d4acf2a",
-  "clinicalContentSha256": "3f6ac98a5d4acf2a45829b7218dbcb022150bbbf10b4af3ad49ada015709d8ba",
+  "dataVersion": "clinical-data-v1-7a2b2da33f44c7d0",
+  "clinicalContentSha256": "7a2b2da33f44c7d0e2b465b60db6f154b6da14f6571bb903c0931ba42481f27a",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "emergencia.js",
@@ -76,5 +146,17 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/emergencia.js",
+    "sourceField": "dobutamina.mcGoldClinicalV1",
+    "lote": "026",
+    "requiredFields": 33,
+    "approvedSha256": "a8bddf2f357b2d4d997020e9dbcb12cd6974420af31bc6f209c9ad8bec524d1a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

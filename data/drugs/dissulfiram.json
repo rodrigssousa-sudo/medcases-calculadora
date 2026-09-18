@@ -6,151 +6,85 @@
   "colorTxt": null,
   "pt": {
     "name": "Dissulfiram",
-    "class": "Inibidor da Aldeído Desidrogenase — Terapia Aversiva",
+    "class": "Aversivo ao álcool",
     "category": "dependencia_alcool",
-    "commercialNames": {
-      "br": [
-        "Antabuse",
-        "Dissulfiram Genérico"
-      ],
-      "ar": [
-        "Antabuse",
-        "Disulfiram"
-      ]
-    },
-    "presentation": [
-      "Comprimido 250 mg, 500 mg"
-    ],
-    "dose": {
-      "inicial": "Dose de ataque: 500 mg VO 1×/dia por 1–2 semanas (após 12–24h de abstinência TOTAL).",
-      "manutencao": "Manutenção: 250 mg VO 1×/dia (range: 125–500 mg/dia). Dose máxima: 500 mg/dia.",
-      "duracao": "Duração: meses a anos. Monitorar enzimas hepáticas a cada 6 meses."
-    },
-    "mechanism": "Inibe irreversivelmente a aldeído desidrogenase (ALDH), bloqueando o metabolismo do etanol no nível do acetaldeído. O acúmulo de acetaldeído causa reação aversiva intensa (rubor, taquicardia, dispneia, hipotensão, vômitos) — dissuadindo o consumo de álcool. Efeito persiste 1–2 semanas após a última dose.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 250 e 500 mg.",
+    "dose": "Iniciar até 500 mg VO 1x/dia por 1–2 semanas; manutenção 250 mg/dia, faixa 125–500 mg/dia; máximo 500 mg/dia.",
+    "mechanism": "Inibe aldeído desidrogenase e eleva acetaldeído após etanol. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "halfLife": "Metabolismo lento: efeito dura 1–2 semanas após suspensão.",
-    "commonAdverseEffects": [
-      "Sonolência e fadiga no início do tratamento",
-      "Sabor metálico / alho",
-      "Cetose leve",
-      "Acne, dermatite de contato"
-    ],
-    "dangerousAdverseEffects": [
-      "REAÇÃO DISSULFIRAM-ÁLCOOL: rubor intenso, cefaleia pulsátil, vômitos, taquicardia, hipotensão grave, colapso cardiovascular. Pode ser fatal com consumo elevado de etanol.",
-      "Hepatotoxicidade (raro mas grave — monitorar TGO/TGP)",
-      "Neuropatia periférica (uso prolongado)",
-      "Psicose (raro)"
-    ],
+    "commonAdverseEffects": "Sonolência, gosto metálico, cefaleia, rash e fadiga.",
+    "dangerousAdverseEffects": "Hepatite fulminante, psicose, neuropatia e reação álcool-dissulfiram com choque/arrítmia.",
     "risksByPatient": [],
-    "contraindications": {
-      "absolute": [
-        "Uso de álcool nas últimas 12–24h",
-        "Hepatite aguda / Cirrose descompensada",
-        "Doença cardiovascular grave",
-        "Psicose ativa",
-        "Gestação",
-        "Hipersensibilidade ao dissulfiram ou tiourams"
-      ],
-      "relative": [
-        "Diabetes mellitus",
-        "Hipotireoidismo",
-        "Nefropatia moderada"
-      ]
-    },
-    "monitoring": [
-      "TGO / TGP antes e a cada 3–6 meses",
-      "Monitorar sinais de neuropatia (parestesias)",
-      "Revisar todas as medicações concomitantes (interações graves com metronidazol, isoniazida, anticoagulantes)"
-    ],
-    "safetyFlags": {
-      "bleedingRisk": false,
-      "renalHighRisk": false,
-      "hepaticCaution": true,
-      "antidoteAvailable": false,
-      "highAlertMedication": true,
-      "warning": "🚨 ALTA VIGILÂNCIA: Paciente DEVE ser informado que qualquer fonte de álcool (incluindo antissépticos, perfumes, vinagres, alguns alimentos) pode desencadear a reação. Identidade do paciente deve constar para equipes de emergência."
-    },
+    "contraindications": "Intoxicação por álcool, doença cardíaca grave, psicose, hipersensibilidade a tiuram; metronidazol e produtos com álcool.",
+    "monitoring": "Uso de álcool, adesão/supervisão, fígado, humor/psicose, neuropatia e interações.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "ANVISA — Antabuse/Dissulfiram Bula",
-      "Fuller RK et al. JAMA 1986 — Veterans Affairs Cooperative Study",
-      "Diehl A et al. Alcohol Alcohol 2010",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=disulfiram",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.samhsa.gov/substance-use/treatment/options/disulfiram"
+    ],
+    "pharmacologicClass": "Inibe aldeído desidrogenase e eleva acetaldeído após etanol",
+    "presentations": "Comprimidos 250 e 500 mg.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção oral, metabolismo hepático e efeitos enzimáticos persistentes por 1–2 semanas.",
+    "indications": "Apoio ao tratamento de transtorno por uso de álcool em paciente motivado e supervisionado; não trata abstinência aguda.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Cautela em DRC; sem tabela validada.",
+    "hepaticDose": "Evitar em hepatopatia grave; obter provas hepáticas basais e seriadas.",
+    "adverseEffects": "Sonolência, gosto metálico, cefaleia, rash e fadiga. Graves: Hepatite fulminante, psicose, neuropatia e reação álcool-dissulfiram com choque/arrítmia.",
+    "interactions": "Álcool oculto, metronidazol, varfarina, fenitoína, isoniazida e benzodiazepínicos.",
+    "administration": "Iniciar após pelo menos 12 h sem álcool e com consentimento informado; reação pode ocorrer até 14 dias após parar.",
+    "preparation": "Comprimido pode ser triturado conforme rótulo se necessário.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Evitar salvo benefício claro e alternativa inadequada.",
+    "lactation": "Evitar; dados insuficientes.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "alerts": "Hepatite fulminante, psicose, neuropatia e reação álcool-dissulfiram com choque/arrítmia. Início bloqueado sem abstinência confirmada, consentimento/supervisão, fígado, coração, psiquiatria e revisão de álcool oculto/metronidazol/interações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=disulfiram"
   },
   "es": {
     "name": "Disulfiram",
-    "class": "Inhibidor de Aldehído Deshidrogenasa — Terapia Aversiva",
+    "class": "Aversivo al alcohol",
     "category": "dependencia_alcool",
-    "commercialNames": {
-      "br": [
-        "Antabuse",
-        "Dissulfiram Genérico"
-      ],
-      "ar": [
-        "Antabuse",
-        "Disulfiram"
-      ]
-    },
-    "presentation": [
-      "Comprimido 250 mg, 500 mg"
-    ],
-    "dose": {
-      "inicial": "Dosis de ataque: 500 mg VO 1×/día por 1–2 semanas (tras 12–24h de abstinencia TOTAL).",
-      "manutencao": "Mantenimiento: 250 mg VO 1×/día (rango: 125–500 mg/día). Dosis máxima: 500 mg/día.",
-      "duracao": "Duración: meses a años. Monitorizar enzimas hepáticas cada 6 meses."
-    },
-    "mechanism": "Inhibe irreversiblemente la aldehído deshidrogenasa (ALDH), bloqueando el metabolismo del etanol a nivel del acetaldehído. La acumulación genera reacción aversiva intensa. Efecto persiste 1–2 semanas tras la última dosis.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 250 y 500 mg.",
+    "dose": "Iniciar hasta 500 mg VO 1 vez/día por 1–2 semanas; mantenimiento 250 mg/día, rango 125–500 mg/día; máximo 500 mg/día.",
+    "mechanism": "Inhibe aldehído deshidrogenasa y eleva acetaldehído tras etanol. El efecto debe interpretarse por indicación, formulación y exposición.",
     "halfLife": "Metabolismo lento: efecto dura 1–2 semanas tras suspensión.",
-    "commonAdverseEffects": [
-      "Somnolencia y fatiga al inicio",
-      "Sabor metálico / ajo",
-      "Cetosis leve",
-      "Acné, dermatitis de contacto"
-    ],
-    "dangerousAdverseEffects": [
-      "REACCIÓN DISULFIRAM-ALCOHOL: rubor intenso, cefalea pulsátil, vómitos, taquicardia, hipotensión grave. Puede ser fatal.",
-      "Hepatotoxicidad (raro pero grave)",
-      "Neuropatía periférica (uso prolongado)",
-      "Psicosis (raro)"
-    ],
+    "commonAdverseEffects": "Somnolencia, sabor metálico, cefalea, erupción y fatiga.",
+    "dangerousAdverseEffects": "Hepatitis fulminante, psicosis, neuropatía y reacción alcohol-disulfiram con shock/arritmia.",
     "risksByPatient": [],
-    "contraindications": {
-      "absolute": [
-        "Uso de alcohol en las últimas 12–24h",
-        "Hepatitis aguda / Cirrosis descompensada",
-        "Enfermedad cardiovascular grave",
-        "Psicosis activa",
-        "Gestación",
-        "Hipersensibilidad al disulfiram o tiuramos"
-      ],
-      "relative": [
-        "Diabetes mellitus",
-        "Hipotiroidismo",
-        "Nefropatía moderada"
-      ]
-    },
-    "monitoring": [
-      "TGO / TGP antes y cada 3–6 meses",
-      "Monitorizar signos de neuropatía",
-      "Revisar medicaciones concomitantes"
-    ],
-    "safetyFlags": {
-      "bleedingRisk": false,
-      "renalHighRisk": false,
-      "hepaticCaution": true,
-      "antidoteAvailable": false,
-      "highAlertMedication": true,
-      "warning": "🚨 ALTA VIGILANCIA: Paciente DEBE ser informado que cualquier fuente de alcohol puede desencadenar la reacción. Identidad del paciente debe constar para equipos de emergencia."
-    },
+    "contraindications": "Intoxicación por alcohol, cardiopatía grave, psicosis, hipersensibilidad a tiuram; metronidazol y productos con alcohol.",
+    "monitoring": "Uso de alcohol, adherencia/supervisión, hígado, ánimo/psicosis, neuropatía e interacciones.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "ANVISA — Antabuse/Dissulfiram Bula",
-      "Fuller RK et al. JAMA 1986 — Veterans Affairs Cooperative Study",
-      "Diehl A et al. Alcohol Alcohol 2010",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=disulfiram",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.samhsa.gov/substance-use/treatment/options/disulfiram"
+    ],
+    "pharmacologicClass": "Inhibe aldehído deshidrogenasa y eleva acetaldehído tras etanol",
+    "presentations": "Comprimidos 250 y 500 mg.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción oral, metabolismo hepático y efectos enzimáticos persistentes 1–2 semanas.",
+    "indications": "Apoyo al tratamiento del trastorno por uso de alcohol en paciente motivado y supervisado; no trata abstinencia aguda.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Precaución en ERC; sin tabla validada.",
+    "hepaticDose": "Evitar en hepatopatía grave; obtener pruebas hepáticas basales y seriadas.",
+    "adverseEffects": "Somnolencia, sabor metálico, cefalea, erupción y fatiga. Graves: Hepatitis fulminante, psicosis, neuropatía y reacción alcohol-disulfiram con shock/arritmia.",
+    "interactions": "Alcohol oculto, metronidazol, warfarina, fenitoína, isoniazida y benzodiazepinas.",
+    "administration": "Iniciar tras al menos 12 h sin alcohol y con consentimiento informado; reacción puede ocurrir hasta 14 días tras suspender.",
+    "preparation": "Comprimido puede triturarse según ficha si se precisa.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Evitar salvo beneficio claro y alternativa inadecuada.",
+    "lactation": "Evitar; datos insuficientes.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "alerts": "Hepatitis fulminante, psicosis, neuropatía y reacción alcohol-disulfiram con shock/arritmia. Início bloqueado sem abstinência confirmada, consentimento/supervisão, fígado, coração, psiquiatria e revisão de álcool oculto/metronidazol/interações.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=disulfiram"
   },
   "name": {
     "pt": "Dissulfiram",
@@ -163,9 +97,21 @@
     "dissulfiram generico",
     "inibidor da aldeido desidrogenase — terapia aversiva"
   ],
-  "dataVersion": "clinical-data-v1-3f6ac98a5d4acf2a",
-  "clinicalContentSha256": "3f6ac98a5d4acf2a45829b7218dbcb022150bbbf10b4af3ad49ada015709d8ba",
+  "dataVersion": "clinical-data-v1-7a2b2da33f44c7d0",
+  "clinicalContentSha256": "7a2b2da33f44c7d0e2b465b60db6f154b6da14f6571bb903c0931ba42481f27a",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "toxicologia.js"
+  "sourceModule": "toxicologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/toxicologia.js",
+    "sourceField": "dissulfiram.mcGoldClinicalV1",
+    "lote": "026",
+    "requiredFields": 33,
+    "approvedSha256": "a8bddf2f357b2d4d997020e9dbcb12cd6974420af31bc6f209c9ad8bec524d1a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }
