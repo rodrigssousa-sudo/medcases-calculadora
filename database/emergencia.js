@@ -4240,3 +4240,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:etomidato:END */
+/* GOLD33_SELECTIVE:fentanil:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["fentanil"])throw new Error("GOLD33_MISSING_CANONICAL:fentanil");db["fentanil"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "034",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b90c78c0a4b09d50bd88ab5f342b5a0439a3a5e3a3e16172327eb01d98d1297b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fentanila",
+    "class": "Opioide potente",
+    "pharmacologicClass": "Agonista opioide mu",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Injeção 50 microgramas/mL; adesivos e formas transmucosas não são intercambiáveis.",
+    "presentations": "Injeção 50 microgramas/mL; adesivos e formas transmucosas não são intercambiáveis.",
+    "mechanism": "Agonista opioide mu. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Alta lipossolubilidade, metabolismo CYP3A4 e redistribuição rápida.",
+    "indications": "Analgesia/anestesia por via parenteral; outras formulações têm indicações restritas próprias.",
+    "dose": "IV para analgesia/anestesia: doses em microgramas individualizadas; bolus frequente 25–100 microgramas, somente em ambiente monitorizado.",
+    "pediatricDose": "Dose por peso, idade e procedimento; AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste fixo; reduzir/titular em disfunção renal e fragilidade.",
+    "hepaticDose": "Reduzir/titular em hepatopatia.",
+    "commonAdverseEffects": "Náusea, vômito, constipação, prurido, sedação e bradicardia.",
+    "dangerousAdverseEffects": "Apneia/depressão fatal, rigidez torácica, hipotensão, síndrome serotoninérgica, dependência e abstinência.",
+    "adverseEffects": "Náusea, vômito, constipação, prurido, sedação e bradicardia. Graves: Apneia/depressão fatal, rigidez torácica, hipotensão, síndrome serotoninérgica, dependência e abstinência.",
+    "contraindications": "Depressão respiratória significativa sem suporte e hipersensibilidade; contraindicações variam por formulação.",
+    "interactions": "Benzodiazepínicos/álcool/sedativos, CYP3A4, serotoninérgicos e IMAO.",
+    "monitoring": "Ventilação, SpO2/ETCO2, sedação, PA/FC, dor, rigidez e dependência.",
+    "administration": "IV/IM por equipe treinada com oxigênio, ventilação e antagonista disponíveis.",
+    "preparation": "Confirmar concentração e seringa; erro micrograma-mg pode ser fatal.",
+    "infusionProtocol": "IV lenta ou infusão por bomba conforme protocolo; monitorização respiratória contínua.",
+    "pregnancy": "Uso prolongado pode causar abstinência neonatal.",
+    "lactation": "Passa ao leite; vigiar sedação e depressão respiratória.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Apneia/depressão fatal, rigidez torácica, hipotensão, síndrome serotoninérgica, dependência e abstinência. Dose, bolus e bomba bloqueados sem indicação, tolerância opioide, idade/peso, ventilação, concentração e revisão de sedativos/CYP3A4.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fentanyl+citrate+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/016619s050lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fentanyl+citrate+injection"
+  },
+  "es": {
+    "name": "Fentanilo",
+    "class": "Opioide potente",
+    "pharmacologicClass": "Agonista opioide mu",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Inyección 50 microgramos/mL; parches y formas transmucosas no intercambiables.",
+    "presentations": "Inyección 50 microgramos/mL; parches y formas transmucosas no intercambiables.",
+    "mechanism": "Agonista opioide mu. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Alta liposolubilidad, metabolismo CYP3A4 y redistribución rápida.",
+    "indications": "Analgesia/anestesia por vía parenteral; otras formulaciones tienen indicaciones restringidas propias.",
+    "dose": "IV para analgesia/anestesia: dosis en microgramos individualizadas; bolo frecuente 25–100 microgramos, solo en entorno monitorizado.",
+    "pediatricDose": "Dosis por peso, edad y procedimiento; AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste fijo; reducir/titular en disfunción renal y fragilidad.",
+    "hepaticDose": "Reducir/titular en hepatopatía.",
+    "commonAdverseEffects": "Náusea, vómito, estreñimiento, prurito, sedación y bradicardia.",
+    "dangerousAdverseEffects": "Apnea/depresión fatal, rigidez torácica, hipotensión, síndrome serotoninérgico, dependencia y abstinencia.",
+    "adverseEffects": "Náusea, vómito, estreñimiento, prurito, sedación y bradicardia. Graves: Apnea/depresión fatal, rigidez torácica, hipotensión, síndrome serotoninérgico, dependencia y abstinencia.",
+    "contraindications": "Depresión respiratoria significativa sin soporte e hipersensibilidad; contraindicaciones varían por formulación.",
+    "interactions": "Benzodiacepinas/alcohol/sedantes, CYP3A4, serotoninérgicos e IMAO.",
+    "monitoring": "Ventilación, SpO2/ETCO2, sedación, PA/FC, dolor, rigidez y dependencia.",
+    "administration": "IV/IM por equipo entrenado con oxígeno, ventilación y antagonista disponibles.",
+    "preparation": "Confirmar concentración y jeringa; error microgramo-mg puede ser fatal.",
+    "infusionProtocol": "IV lenta o infusión por bomba según protocolo; vigilancia respiratoria continua.",
+    "pregnancy": "Uso prolongado puede causar abstinencia neonatal.",
+    "lactation": "Pasa a leche; vigilar sedación y depresión respiratoria.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Apnea/depresión fatal, rigidez torácica, hipotensión, síndrome serotoninérgico, dependencia y abstinencia. Dose, bolus e bomba bloqueados sem indicação, tolerância opioide, idade/peso, ventilação, concentração e revisão de sedativos/CYP3A4.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fentanyl+citrate+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/016619s050lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fentanyl+citrate+injection"
+  }
+};})();
+/* GOLD33_SELECTIVE:fentanil:END */

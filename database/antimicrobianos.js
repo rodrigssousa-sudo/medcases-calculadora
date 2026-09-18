@@ -28571,3 +28571,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:etambutol:END */
+/* GOLD33_SELECTIVE:fidaxomicina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["fidaxomicina"])throw new Error("GOLD33_MISSING_CANONICAL:fidaxomicina");db["fidaxomicina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "034",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b90c78c0a4b09d50bd88ab5f342b5a0439a3a5e3a3e16172327eb01d98d1297b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fidaxomicina",
+    "class": "Antibacteriano macrocíclico intestinal",
+    "pharmacologicClass": "Inibidor da RNA-polimerase de C. difficile",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 200 mg e suspensão oral 40 mg/mL após reconstituição.",
+    "presentations": "Comprimidos 200 mg e suspensão oral 40 mg/mL após reconstituição.",
+    "mechanism": "Inibidor da RNA-polimerase de C. difficile. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção sistêmica mínima; alta concentração fecal.",
+    "indications": "Diarreia associada a Clostridioides difficile em adultos e crianças ≥6 meses.",
+    "dose": "200 mg VO a cada 12 h por 10 dias.",
+    "pediatricDose": "≥6 meses e ≥12,5 kg: 200 mg a cada 12 h por 10 dias; pesos menores usam suspensão por faixa de peso. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste.",
+    "hepaticDose": "Sem ajuste estabelecido; exposição sistêmica baixa.",
+    "commonAdverseEffects": "Náusea, vômito, dor abdominal, sangramento GI e anemia.",
+    "dangerousAdverseEffects": "Hipersensibilidade grave/angioedema; piora clínica exige reavaliação.",
+    "adverseEffects": "Náusea, vômito, dor abdominal, sangramento GI e anemia. Graves: Hipersensibilidade grave/angioedema; piora clínica exige reavaliação.",
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "Interações sistêmicas são limitadas; avaliar inibidores de P-gp conforme contexto.",
+    "monitoring": "Resposta/recorrência, hidratação, hipersensibilidade e confirmação de C. difficile.",
+    "administration": "VO com ou sem alimento; não usar para infecções sistêmicas.",
+    "preparation": "Reconstituir suspensão conforme fabricante, refrigerar e descartar no prazo especificado.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados insuficientes; exposição sistêmica mínima.",
+    "lactation": "Sem dados suficientes; baixa exposição sistêmica.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipersensibilidade grave/angioedema; piora clínica exige reavaliação. Dose pediátrica/suspensão bloqueadas sem idade, peso, confirmação de CDI, gravidade, concentração reconstituída e capacidade de medir volume.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fidaxomicin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/201699s018lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fidaxomicin"
+  },
+  "es": {
+    "name": "Fidaxomicina",
+    "class": "Antibacteriano macrocíclico intestinal",
+    "pharmacologicClass": "Inhibidor de RNA-polimerasa de C. difficile",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 200 mg y suspensión oral 40 mg/mL tras reconstitución.",
+    "presentations": "Comprimidos 200 mg y suspensión oral 40 mg/mL tras reconstitución.",
+    "mechanism": "Inhibidor de RNA-polimerasa de C. difficile. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción sistémica mínima; alta concentración fecal.",
+    "indications": "Diarrea asociada a Clostridioides difficile en adultos y niños ≥6 meses.",
+    "dose": "200 mg VO cada 12 h durante 10 días.",
+    "pediatricDose": "≥6 meses y ≥12,5 kg: 200 mg cada 12 h por 10 días; pesos menores usan suspensión por rango de peso. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste.",
+    "hepaticDose": "Sin ajuste establecido; exposición sistémica baja.",
+    "commonAdverseEffects": "Náusea, vómito, dolor abdominal, sangrado GI y anemia.",
+    "dangerousAdverseEffects": "Hipersensibilidad grave/angioedema; empeoramiento clínico exige reevaluación.",
+    "adverseEffects": "Náusea, vómito, dolor abdominal, sangrado GI y anemia. Graves: Hipersensibilidad grave/angioedema; empeoramiento clínico exige reevaluación.",
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Interacciones sistémicas limitadas; evaluar inhibidores de P-gp según contexto.",
+    "monitoring": "Respuesta/recurrencia, hidratación, hipersensibilidad y confirmación de C. difficile.",
+    "administration": "VO con o sin alimentos; no usar para infecciones sistémicas.",
+    "preparation": "Reconstituir suspensión según fabricante, refrigerar y desechar en plazo especificado.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos insuficientes; exposición sistémica mínima.",
+    "lactation": "Sin datos suficientes; baja exposición sistémica.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipersensibilidad grave/angioedema; empeoramiento clínico exige reevaluación. Dose pediátrica/suspensão bloqueadas sem idade, peso, confirmação de CDI, gravidade, concentração reconstituída e capacidade de medir volume.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fidaxomicin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/201699s018lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fidaxomicin"
+  }
+};})();
+/* GOLD33_SELECTIVE:fidaxomicina:END */

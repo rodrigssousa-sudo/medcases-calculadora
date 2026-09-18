@@ -6,192 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Fenobarbital",
-    "class": "Barbitúrico anticonvulsivante",
+    "class": "Barbitúrico antiepiléptico",
     "category": "anticonvulsivante",
-    "commercialNames": {
-      "br": [
-        "Gardenal",
-        "Fenobarbital"
-      ],
-      "ar": [
-        "Luminal",
-        "Fenobarbital"
-      ]
-    },
-    "presentation": [
-      "Comprimido 50 mg",
-      "Comprimido 100 mg",
-      "Solução oral/gotas 40 mg/mL",
-      "Ampola 100 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Dose de ataque: 10–20 mg/kg. Para 70 kg: 700–1400 mg.",
-      "manutencao": "Manutenção: 1–3 mg/kg/dia. Para 70 kg: 70–210 mg/dia.",
-      "alvoSerico": "Nível sérico usual: 10–40 mcg/mL.",
-      "maxDose": "Dose máxima deve ser individualizada por nível sérico, sedação e função respiratória."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 15–100 mg, elixir e injeção 65/130 mg/mL conforme produto.",
+    "dose": "Anticonvulsivante adulto: manutenção frequentemente 60–200 mg/dia; carga IV 10–20 mg/kg em emergência protocolizada.",
     "doseKg": {
       "standard": "Manutenção: 1–3 mg/kg/dia.",
       "severe": "Ataque: 10–20 mg/kg conforme protocolo.",
       "maxDose": "Individualizar por nível sérico."
     },
-    "indications": [
-      "Crises tônico-clônicas generalizadas",
-      "Crises focais",
-      "Estado de mal epiléptico como segunda/terceira linha",
-      "Convulsões neonatais",
-      "Epilepsia em contextos com baixo acesso a outros anticonvulsivantes",
-      "Sedação em contextos específicos e monitorizados"
-    ],
+    "indications": "Crises convulsivas e sedação; uso neonatal/status conforme protocolo especializado.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Potencializa GABA-A, aumentando duração de abertura do canal de cloro; em doses altas pode ativar GABA-A diretamente.",
+    "mechanism": "Potencializador GABA-A. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "EV/IM tem ação relativamente rápida; uso crônico exige dias a semanas para estabilização sérica.",
     "halfLife": "Vida média longa: aproximadamente 2–5 dias em adultos.",
-    "commonAdverseEffects": [
-      "Sonolência",
-      "Sedação",
-      "Ataxia",
-      "Tontura",
-      "Déficit cognitivo",
-      "Náuseas",
-      "Hiperatividade paradoxal em crianças"
-    ],
-    "dangerousAdverseEffects": [
-      "Depressão respiratória",
-      "Coma em intoxicação",
-      "Dependência física",
-      "Síndrome de abstinência grave",
-      "Reações cutâneas graves",
-      "Depressão ou ideação suicida",
-      "Osteopenia/osteomalácia em uso crônico"
-    ],
+    "commonAdverseEffects": "Sedação, ataxia, tontura, náusea e alteração cognitiva.",
+    "dangerousAdverseEffects": "Depressão respiratória, hipotensão, coma, dependência, SCAR e suicidabilidade.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade a barbitúricos",
-      "Porfiria aguda intermitente",
-      "Insuficiência respiratória grave sem suporte",
-      "Doença hepática grave",
-      "Intoxicação aguda por depressores do SNC"
-    ],
-    "interactions": [
-      "Álcool, opioides e benzodiazepínicos: maior depressão respiratória",
-      "Anticoncepcionais hormonais: reduz eficácia",
-      "Varfarina/DOACs: pode reduzir anticoagulação",
-      "Corticosteroides, antirretrovirais e imunossupressores: pode reduzir níveis",
-      "Valproato: pode aumentar níveis de fenobarbital",
-      "Outros anticonvulsivantes: interações por indução enzimática"
-    ],
-    "alerts": [
-      "Monitorar nível sérico, sedação e função respiratória em doses altas.",
-      "Não suspender abruptamente pelo risco de abstinência e crises.",
-      "Potente indutor enzimático: revisar interações sempre.",
-      "Evitar álcool e outros depressores do SNC.",
-      "Em uso crônico, considerar saúde óssea e vitamina D conforme risco."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Phenobarbital Prescribing Information",
-      "ILAE Epilepsy Guidelines",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Porfiria, hipersensibilidade a barbitúricos e doença respiratória grave com dispneia/obstrução.",
+    "interactions": "Indutor CYP forte; opioides/álcool/sedativos aumentam depressão respiratória; reduz contraceptivos e anticoagulantes.",
+    "alerts": "Depressão respiratória, hipotensão, coma, dependência, SCAR e suicidabilidade. Carga e via bloqueadas sem idade/peso, crise/contexto, respiração, PA, rim/fígado, interações e capacidade de ventilação.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenobarbital",
+    "pharmacologicClass": "Potencializador GABA-A",
+    "presentations": "Comprimidos 15–100 mg, elixir e injeção 65/130 mg/mL conforme produto.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Meia-vida longa, metabolismo hepático e eliminação renal parcial inalterada.",
+    "pediatricDose": "Neonatos/crianças: carga 15–20 mg/kg IV, doses adicionais e manutenção por idade/protocolo. AUTOMATABLE=NO.",
+    "renalDose": "Reduzir/alongar intervalo em insuficiência renal importante.",
+    "hepaticDose": "Reduzir em hepatopatia; evitar em comprometimento grave/porfiria.",
+    "adverseEffects": "Sedação, ataxia, tontura, náusea e alteração cognitiva. Graves: Depressão respiratória, hipotensão, coma, dependência, SCAR e suicidabilidade.",
+    "monitoring": "Respiração, consciência, PA, crises, níveis, hemograma, fígado/rim, dependência e saúde óssea.",
+    "administration": "VO ou IV lenta com suporte ventilatório; evitar extravasamento/injeção intra-arterial.",
+    "preparation": "Confirmar concentração; não misturar sem compatibilidade documentada.",
+    "infusionProtocol": "IV lenta; velocidade depende de produto, idade e contexto, com monitorização respiratória/hemodinâmica.",
+    "pregnancy": "Risco fetal e abstinência neonatal; ponderar controle das crises.",
+    "lactation": "Passa ao leite; vigiar sedação e sucção.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenobarbital",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/087947s022lbl.pdf"
     ]
   },
   "es": {
     "name": "Fenobarbital",
-    "class": "Barbitúrico anticonvulsivante",
+    "class": "Barbitúrico antiepiléptico",
     "category": "anticonvulsivante",
-    "commercialNames": {
-      "br": [
-        "Gardenal",
-        "Fenobarbital"
-      ],
-      "ar": [
-        "Luminal",
-        "Fenobarbital"
-      ]
-    },
-    "presentation": [
-      "Comprimido 50 mg",
-      "Comprimido 100 mg",
-      "Solución oral/gotas 40 mg/mL",
-      "Ampolla 100 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Dosis de carga: 10–20 mg/kg. Para 70 kg: 700–1400 mg.",
-      "manutencao": "Mantenimiento: 1–3 mg/kg/día. Para 70 kg: 70–210 mg/día.",
-      "alvoSerico": "Nivel sérico habitual: 10–40 mcg/mL.",
-      "maxDose": "La dosis máxima debe individualizarse por nivel sérico, sedación y función respiratoria."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 15–100 mg, elixir e inyección 65/130 mg/mL según producto.",
+    "dose": "Anticonvulsivante adulto: mantenimiento frecuentemente 60–200 mg/día; carga IV 10–20 mg/kg en emergencia protocolizada.",
     "doseKg": {
       "standard": "Mantenimiento: 1–3 mg/kg/día.",
       "severe": "Carga: 10–20 mg/kg según protocolo.",
       "maxDose": "Individualizar por nivel sérico."
     },
-    "indications": [
-      "Crisis tónico-clónicas generalizadas",
-      "Crisis focales",
-      "Estado epiléptico como segunda/tercera línea",
-      "Convulsiones neonatales",
-      "Epilepsia en contextos con bajo acceso a otros anticonvulsivantes",
-      "Sedación en contextos específicos y monitorizados"
-    ],
+    "indications": "Crisis convulsivas y sedación; uso neonatal/estatus según protocolo especializado.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Potencia GABA-A, aumentando duración de apertura del canal de cloro; en dosis altas puede activar GABA-A directamente.",
+    "mechanism": "Potenciador GABA-A. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "IV/IM tiene acción relativamente rápida; uso crónico requiere días a semanas para estabilización sérica.",
     "halfLife": "Vida media larga: aproximadamente 2–5 días en adultos.",
-    "commonAdverseEffects": [
-      "Somnolencia",
-      "Sedación",
-      "Ataxia",
-      "Mareos",
-      "Deterioro cognitivo",
-      "Náuseas",
-      "Hiperactividad paradójica en niños"
-    ],
-    "dangerousAdverseEffects": [
-      "Depresión respiratoria",
-      "Coma en intoxicación",
-      "Dependencia física",
-      "Síndrome de abstinencia grave",
-      "Reacciones cutáneas graves",
-      "Depresión o ideación suicida",
-      "Osteopenia/osteomalacia en uso crónico"
-    ],
+    "commonAdverseEffects": "Sedación, ataxia, mareo, náusea y alteración cognitiva.",
+    "dangerousAdverseEffects": "Depresión respiratoria, hipotensión, coma, dependencia, SCAR y suicidabilidad.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a barbitúricos",
-      "Porfiria aguda intermitente",
-      "Insuficiencia respiratoria grave sin soporte",
-      "Enfermedad hepática grave",
-      "Intoxicación aguda por depresores del SNC"
-    ],
-    "interactions": [
-      "Alcohol, opioides y benzodiacepinas: mayor depresión respiratoria",
-      "Anticonceptivos hormonales: reduce eficacia",
-      "Warfarina/DOACs: puede reducir anticoagulación",
-      "Corticoides, antirretrovirales e inmunosupresores: puede reducir niveles",
-      "Valproato: puede aumentar niveles de fenobarbital",
-      "Otros anticonvulsivantes: interacciones por inducción enzimática"
-    ],
-    "alerts": [
-      "Monitorizar nivel sérico, sedación y función respiratoria en dosis altas.",
-      "No suspender bruscamente por riesgo de abstinencia y crisis.",
-      "Potente inductor enzimático: revisar interacciones siempre.",
-      "Evitar alcohol y otros depresores del SNC.",
-      "En uso crónico, considerar salud ósea y vitamina D según riesgo."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Phenobarbital Prescribing Information",
-      "ILAE Epilepsy Guidelines",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Porfiria, hipersensibilidad a barbitúricos y enfermedad respiratoria grave con disnea/obstrucción.",
+    "interactions": "Inductor CYP fuerte; opioides/alcohol/sedantes aumentan depresión respiratoria; reduce anticonceptivos y anticoagulantes.",
+    "alerts": "Depresión respiratoria, hipotensión, coma, dependencia, SCAR y suicidabilidad. Carga e via bloqueadas sem idade/peso, crise/contexto, respiração, PA, rim/fígado, interações e capacidade de ventilação.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenobarbital",
+    "pharmacologicClass": "Potenciador GABA-A",
+    "presentations": "Comprimidos 15–100 mg, elixir e inyección 65/130 mg/mL según producto.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Semivida larga, metabolismo hepático y eliminación renal parcial sin cambios.",
+    "pediatricDose": "Neonatos/niños: carga 15–20 mg/kg IV, dosis adicionales y mantenimiento por edad/protocolo. AUTOMATABLE=NO.",
+    "renalDose": "Reducir/alargar intervalo en insuficiencia renal importante.",
+    "hepaticDose": "Reducir en hepatopatía; evitar en compromiso grave/porfiria.",
+    "adverseEffects": "Sedación, ataxia, mareo, náusea y alteración cognitiva. Graves: Depresión respiratoria, hipotensión, coma, dependencia, SCAR y suicidabilidad.",
+    "monitoring": "Respiración, conciencia, PA, crisis, niveles, hemograma, hígado/riñón, dependencia y salud ósea.",
+    "administration": "VO o IV lenta con soporte ventilatorio; evitar extravasación/inyección intraarterial.",
+    "preparation": "Confirmar concentración; no mezclar sin compatibilidad documentada.",
+    "infusionProtocol": "IV lenta; velocidad depende de producto, edad y contexto, con vigilancia respiratoria/hemodinámica.",
+    "pregnancy": "Riesgo fetal y abstinencia neonatal; ponderar control de crisis.",
+    "lactation": "Pasa a leche; vigilar sedación y succión.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenobarbital",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/087947s022lbl.pdf"
     ]
   },
   "name": {
@@ -204,8 +112,8 @@
     "luminal",
     "barbiturico anticonvulsivante"
   ],
-  "dataVersion": "clinical-data-v1-729cb8c696aed609",
-  "clinicalContentSha256": "729cb8c696aed6096f2dbb398854759841d2abf48d1267a1e1b60e0d8dc83047",
+  "dataVersion": "clinical-data-v1-0747e91418de0cc9",
+  "clinicalContentSha256": "0747e91418de0cc9ea5b45b06cf25ea3dd7beb8c54e670983e8ec9dca5e9cba0",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "neurologia.js",
@@ -260,5 +168,17 @@
         "updated": "2026-06-15"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/neurologia.js",
+    "sourceField": "fenobarbital.mcGoldClinicalV1",
+    "lote": "034",
+    "requiredFields": 33,
+    "approvedSha256": "b90c78c0a4b09d50bd88ab5f342b5a0439a3a5e3a3e16172327eb01d98d1297b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

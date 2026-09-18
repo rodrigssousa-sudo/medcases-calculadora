@@ -2459,3 +2459,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:ebastina:END */
+/* GOLD33_SELECTIVE:fexofenadina:START */
+;(function(){var db=window.ALERGIA_IMUNOLOGIA_DRUGS_DB;if(!db||!db["fexofenadina"])throw new Error("GOLD33_MISSING_CANONICAL:fexofenadina");db["fexofenadina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "034",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b90c78c0a4b09d50bd88ab5f342b5a0439a3a5e3a3e16172327eb01d98d1297b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fexofenadina",
+    "class": "Anti-histamínico H1 de 2ª geração",
+    "pharmacologicClass": "Antagonista periférico H1",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 30/60/180 mg e suspensão 30 mg/5 mL.",
+    "presentations": "Comprimidos 30/60/180 mg e suspensão 30 mg/5 mL.",
+    "mechanism": "Antagonista periférico H1. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Pouco metabolismo, substrato de transportadores; eliminação fecal e renal.",
+    "indications": "Rinite alérgica e urticária crônica idiopática conforme idade/apresentação.",
+    "dose": "Rinite: 60 mg VO 2x/dia ou 180 mg 1x/dia; urticária: 60 mg 2x/dia ou 180 mg/dia conforme rótulo.",
+    "pediatricDose": "6 meses–<2 anos para urticária: 15 mg 2x/dia; 2–11 anos: 30 mg 2x/dia; indicações/idades variam. AUTOMATABLE=NO.",
+    "renalDose": "Iniciar com dose reduzida; adulto geralmente 60 mg 1x/dia em insuficiência renal.",
+    "hepaticDose": "Sem ajuste usual.",
+    "commonAdverseEffects": "Cefaleia, tontura, náusea e sonolência ocasional.",
+    "dangerousAdverseEffects": "Hipersensibilidade/angioedema e anafilaxia raras.",
+    "adverseEffects": "Cefaleia, tontura, náusea e sonolência ocasional. Graves: Hipersensibilidade/angioedema e anafilaxia raras.",
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "Antiácidos com alumínio/magnésio reduzem absorção; sucos reduzem exposição.",
+    "monitoring": "Resposta, sonolência individual, função renal e adesão/técnica.",
+    "administration": "Com água; evitar sucos de grapefruit, laranja e maçã próximos da dose.",
+    "preparation": "Agitar suspensão; medir com dispositivo adequado.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados humanos limitados; usar se necessário.",
+    "lactation": "Baixa passagem esperada, mas observar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipersensibilidade/angioedema e anafilaxia raras. Dose pediátrica bloqueada sem idade, indicação, função renal, formulação/concentração e revisão de sucos/antiácidos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fexofenadine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2003/020625s015lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fexofenadine"
+  },
+  "es": {
+    "name": "Fexofenadina",
+    "class": "Antihistamínico H1 de 2ª generación",
+    "pharmacologicClass": "Antagonista periférico H1",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 30/60/180 mg y suspensión 30 mg/5 mL.",
+    "presentations": "Comprimidos 30/60/180 mg y suspensión 30 mg/5 mL.",
+    "mechanism": "Antagonista periférico H1. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Poco metabolismo, sustrato de transportadores; eliminación fecal y renal.",
+    "indications": "Rinitis alérgica y urticaria crónica idiopática según edad/presentación.",
+    "dose": "Rinitis: 60 mg VO 2 veces/día o 180 mg 1 vez/día; urticaria: 60 mg 2 veces/día o 180 mg/día según ficha.",
+    "pediatricDose": "6 meses–<2 años para urticaria: 15 mg 2 veces/día; 2–11 años: 30 mg 2 veces/día; indicaciones/edades varían. AUTOMATABLE=NO.",
+    "renalDose": "Iniciar con dosis reducida; adulto generalmente 60 mg 1 vez/día en insuficiencia renal.",
+    "hepaticDose": "Sin ajuste habitual.",
+    "commonAdverseEffects": "Cefalea, mareo, náusea y somnolencia ocasional.",
+    "dangerousAdverseEffects": "Hipersensibilidad/angioedema y anafilaxia raras.",
+    "adverseEffects": "Cefalea, mareo, náusea y somnolencia ocasional. Graves: Hipersensibilidad/angioedema y anafilaxia raras.",
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Antiácidos con aluminio/magnesio reducen absorción; jugos reducen exposición.",
+    "monitoring": "Respuesta, somnolencia individual, función renal y adherencia/técnica.",
+    "administration": "Con agua; evitar jugos de pomelo, naranja y manzana cerca de la dosis.",
+    "preparation": "Agitar suspensión; medir con dispositivo adecuado.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos humanos limitados; usar si es necesario.",
+    "lactation": "Bajo paso esperado, vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipersensibilidad/angioedema y anafilaxia raras. Dose pediátrica bloqueada sem idade, indicação, função renal, formulação/concentração e revisão de sucos/antiácidos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fexofenadine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2003/020625s015lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fexofenadine"
+  }
+};})();
+/* GOLD33_SELECTIVE:fexofenadina:END */

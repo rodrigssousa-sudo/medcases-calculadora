@@ -4827,3 +4827,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:erdosteina:END */
+/* GOLD33_SELECTIVE:fenoterol:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["fenoterol"])throw new Error("GOLD33_MISSING_CANONICAL:fenoterol");db["fenoterol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "034",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b90c78c0a4b09d50bd88ab5f342b5a0439a3a5e3a3e16172327eb01d98d1297b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fenoterol",
+    "class": "Broncodilatador beta-2 agonista",
+    "pharmacologicClass": "Agonista beta-2 de curta ação",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Aerossol dosimetrado 100 microgramas/dose e solução para nebulização em concentrações regionais.",
+    "presentations": "Aerossol dosimetrado 100 microgramas/dose e solução para nebulização em concentrações regionais.",
+    "mechanism": "Agonista beta-2 de curta ação. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Início rápido; metabolismo por conjugação e eliminação renal/biliar.",
+    "indications": "Broncoespasmo em asma/DPOC conforme registro nacional; não aprovado nos EUA.",
+    "dose": "Aerossol: frequentemente 1–2 inalações conforme necessidade, respeitando máximo da bula local; nebulização depende da concentração/produto.",
+    "pediatricDose": "Dose por idade e apresentação regional; AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste definido; cautela em doença grave.",
+    "hepaticDose": "Sem ajuste definido.",
+    "commonAdverseEffects": "Tremor, taquicardia, palpitação, cefaleia e nervosismo.",
+    "dangerousAdverseEffects": "Arritmia, hipocalemia, acidose láctica, isquemia e broncoespasmo paradoxal.",
+    "adverseEffects": "Tremor, taquicardia, palpitação, cefaleia e nervosismo. Graves: Arritmia, hipocalemia, acidose láctica, isquemia e broncoespasmo paradoxal.",
+    "contraindications": "Hipersensibilidade e taquiarritmia/cardiomiopatia obstrutiva conforme algumas bulas.",
+    "interactions": "Beta-bloqueadores antagonizam; IMAO/tricíclicos e simpaticomiméticos aumentam efeitos; diuréticos/xantinas/corticoides elevam hipocalemia.",
+    "monitoring": "Resposta, uso de resgate, FC/PA, tremor, K e ECG em uso intensivo.",
+    "administration": "Inalatória; técnica e espaçador quando apropriado. Uso excessivo exige reavaliação do controle da asma.",
+    "preparation": "Confirmar concentração antes de nebulizar; diluição somente conforme bula.",
+    "infusionProtocol": "Nebulizar com equipamento adequado até consumo da solução; fluxo/protocolo local.",
+    "pregnancy": "Usar menor dose eficaz quando indicado.",
+    "lactation": "Dados limitados; exposição sistêmica inalatória costuma ser baixa.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Arritmia, hipocalemia, acidose láctica, isquemia e broncoespasmo paradoxal. Dose/regime bloqueados até confirmar país, produto, concentração, idade, gravidade e plano controlador; divergência regulatória regional explícita.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://cima.aemps.es/cima/publico/home.html",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.anmat.gob.ar/Medicamentos/basedat.asp"
+    ],
+    "ref": "https://cima.aemps.es/cima/publico/home.html"
+  },
+  "es": {
+    "name": "Fenoterol",
+    "class": "Broncodilatador agonista beta-2",
+    "pharmacologicClass": "Agonista beta-2 de acción corta",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Aerosol dosificado 100 microgramos/dosis y solución para nebulización en concentraciones regionales.",
+    "presentations": "Aerosol dosificado 100 microgramos/dosis y solución para nebulización en concentraciones regionales.",
+    "mechanism": "Agonista beta-2 de acción corta. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Inicio rápido; metabolismo por conjugación y eliminación renal/biliar.",
+    "indications": "Broncoespasmo en asma/EPOC según registro nacional; no aprobado en EE. UU.",
+    "dose": "Aerosol: frecuentemente 1–2 inhalaciones según necesidad, respetando máximo de ficha local; nebulización depende de concentración/producto.",
+    "pediatricDose": "Dosis por edad y presentación regional; AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste definido; precaución en enfermedad grave.",
+    "hepaticDose": "Sin ajuste definido.",
+    "commonAdverseEffects": "Temblor, taquicardia, palpitación, cefalea y nerviosismo.",
+    "dangerousAdverseEffects": "Arritmia, hipopotasemia, acidosis láctica, isquemia y broncoespasmo paradójico.",
+    "adverseEffects": "Temblor, taquicardia, palpitación, cefalea y nerviosismo. Graves: Arritmia, hipopotasemia, acidosis láctica, isquemia y broncoespasmo paradójico.",
+    "contraindications": "Hipersensibilidad y taquiarritmia/cardiomiopatía obstructiva según algunas fichas.",
+    "interactions": "Betabloqueantes antagonizan; IMAO/tricíclicos y simpaticomiméticos aumentan efectos; diuréticos/xantinas/corticoides elevan hipopotasemia.",
+    "monitoring": "Respuesta, uso de rescate, FC/PA, temblor, K y ECG con uso intensivo.",
+    "administration": "Inhalatoria; técnica y espaciador cuando corresponda. Uso excesivo exige reevaluar control del asma.",
+    "preparation": "Confirmar concentración antes de nebulizar; dilución solo según ficha.",
+    "infusionProtocol": "Nebulizar con equipo adecuado hasta consumir solución; flujo/protocolo local.",
+    "pregnancy": "Usar mínima dosis eficaz cuando esté indicado.",
+    "lactation": "Datos limitados; exposición sistémica inhalatoria suele ser baja.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Arritmia, hipopotasemia, acidosis láctica, isquemia y broncoespasmo paradójico. Dose/regime bloqueados até confirmar país, produto, concentração, idade, gravidade e plano controlador; divergência regulatória regional explícita.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://cima.aemps.es/cima/publico/home.html",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.anmat.gob.ar/Medicamentos/basedat.asp"
+    ],
+    "ref": "https://cima.aemps.es/cima/publico/home.html"
+  }
+};})();
+/* GOLD33_SELECTIVE:fenoterol:END */
