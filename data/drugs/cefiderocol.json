@@ -6,58 +6,27 @@
   "colorTxt": "#A855F7",
   "pt": {
     "name": "Cefiderocol",
-    "class": "Cefalosporina siderófora",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Pó IV.",
-    "dose": "CrCl 60–119: 2 g q8h em 3 h. CrCl >=120: 2 g q6h.",
+    "class": "Cefalosporina de siderófora parenteral",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frasco de 1 g para infusão IV.",
+    "dose": "2 g IV a cada 8 h, infusão de 3 h, em CrCl 60-119; duração conforme foco e resposta.",
     "doseKg": {
       "adulto": "Dose fixa 2 g 8/8h (não baseado em peso em adultos)"
     },
-    "mechanism": "Capta ferro e usa transportadores TonB para entrar no periplasma; liga sobretudo PBP3.",
+    "mechanism": "Beta-lactâmico inibidor da síntese da parede bacteriana. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "EV: pico sérico ao final da infusão de 180 min.",
     "halfLife": "Meia-vida 2,6 h. Eliminação renal ~90% inalterada.",
     "therapeuticRange": "T>CIM (fT>CIM ≥ 75%) como parâmetro PK/PD — infusão prolongada de 3h é essencial.",
     "dilution": "Reconstituir 1 g em 10 mL de SF ou SG5%; diluir em 100–250 mL de SF 0,9% ou SG 5%. Proteger da luz.",
     "speed": "Infundir em 180 minutos (3 horas). NÃO reduzir tempo de infusão.",
-    "commonAdverseEffects": [
-      "Diarreia",
-      "Reação local",
-      "Constipação",
-      "Rash"
-    ],
-    "dangerousAdverseEffects": [
-      "Maior mortalidade observada em certos pacientes com Gram-negativos carbapenem-resistentes",
-      "Anafilaxia",
-      "C. difficile",
-      "Neurotoxicidade beta-lactâmica"
-    ],
-    "contraindications": "Hipersensibilidade grave a cefiderocol/cefalosporinas.",
+    "commonAdverseEffects": "Diarreia, náusea, rash e reações no local quando parenteral.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, colite por C. difficile, citopenias, convulsões por acúmulo e lesão renal/hepática rara.",
+    "contraindications": "Hipersensibilidade grave a cefalosporinas; avaliar cuidadosamente reação imediata a outros beta-lactâmicos.",
     "risksByPatient": [],
-    "alerts": [
-      "CrCl 60–119: 2 g q8h",
-      "CrCl >=120: 2 g q6h",
-      "CrCl 30–59: 1,5 g q8h",
-      "HD: após sessão",
-      "Uso guiado por AMR/AST"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
-    ],
-    "renalDose": "CrCl 30–59: 1,5 g q8h; 15–29: 1 g q8h; ESRD <15: 0,75 g q12h; HD: após sessão; ARC >=120: 2 g q6h.",
-    "safetyFlags": [
-      "Infusão 3 h",
-      "CrCl/ARC mudam dose",
-      "Adultos >=18",
-      "Alerta mortalidade CREDIBLE-CR",
-      "Reservar AMR"
-    ],
+    "alerts": "Anafilaxia, SCAR, colite por C. difficile, citopenias, convulsões por acúmulo e lesão renal/hepática rara. Uso bloqueado sem foco, cultura/MIC, alternativas, CrCl atual, diálise e confirmação de mortalidade/benefício-risco.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefiderocol",
+    "renalDose": "Ajustar em CrCl <60; em depuração aumentada ≥120 pode exigir 2 g a cada 6 h; diálise conforme rótulo.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -70,90 +39,54 @@
       ],
       "note": "Bloco revisado com cortes renais oficiais FDA (CrCl 30–59 / 15–29 / <15 / HD). Obs expandidas com alerta sobre mecanismo sideróforo em ambientes ricos em ferro. safetyFlags e auditNotes adicionados."
     },
-    "pharmacologicClass": "Cefalosporina siderófora IV",
-    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC. Ativa contra muitos Gram-negativos com carbapenemases, inclusive MBL.",
-    "pharmacokinetics": "IV; pouca metabolização e eliminação renal inalterada. ARC reduz exposição; DRC aumenta.",
-    "indications": "Adultos >=18: cUTI/pielonefrite e pneumonia hospitalar/VAP por Gram-negativos suscetíveis, com uso dirigido por resistência/AST.",
-    "presentations": [
-      "1 g por frasco"
-    ],
-    "pediatricDose": "Segurança/eficácia <18 anos não estabelecidas na bula EUA atual.",
-    "hepaticDose": "Sem ajuste esperado; metabolismo hepático não é via importante.",
-    "adverseEffects": "A bula mantém alerta de mortalidade observada em CREDIBLE-CR; causalidade incerta.",
-    "interactions": "Poucas interações metabólicas; função renal muda exposição de forma importante.",
-    "monitoring": "CrCl frequente, cultura/AST, resposta, superinfecção e estado neurológico em DRC.",
-    "administration": "IV exclusivamente.",
-    "preparation": "Reconstituir e diluir conforme bula.",
-    "infusionProtocol": "Cada dose em 3 horas; ARC >=120 exige q6h.",
-    "pregnancy": "Dados humanos insuficientes.",
-    "lactation": "Dados limitados.",
-    "specialPopulations": "Adultos apenas; ARC aumenta frequência; DRC/HD reduz dose.",
-    "patientEducation": "Explicar que é reservado para Gram-negativos resistentes e exige AST/ajuste renal.",
-    "clinicalPearls": "Usa o sistema de ferro bacteriano como cavalo de Troia; potente contra MBL/DTR, mas deve ser preservado.",
-    "guidelineRecommendations": "IDSA 2026: preferido para NDM-E e MBL-Pseudomonas; cUTI DTR entre preferidos; CRAB invasivo alternativa em combinação.",
+    "pharmacologicClass": "Beta-lactâmico inibidor da síntese da parede bacteriana",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Eliminação renal predominante inalterada; exposição acompanha função renal.",
+    "indications": "Adultos com cUTI, HABP/VABP ou infecção grave por Gram-negativos suscetíveis quando apropriado.",
+    "presentations": "Frasco de 1 g para infusão IV.",
+    "pediatricDose": "Segurança/eficácia pediátrica não estabelecidas. AUTOMATABLE=NO.",
+    "hepaticDose": "Sem ajuste específico.",
+    "adverseEffects": "Diarreia, náusea, rash e reações no local quando parenteral. Graves: Anafilaxia, SCAR, colite por C. difficile, citopenias, convulsões por acúmulo e lesão renal/hepática rara.",
+    "interactions": "Probenecida pode aumentar exposição; anticoagulantes podem exigir INR; revisar nefrotóxicos e vacinas bacterianas vivas.",
+    "monitoring": "Resposta clínica, culturas, alergia, diarreia/C. difficile, hemograma e funções renal/hepática conforme duração e gravidade.",
+    "administration": "Somente IV por 3 h.",
+    "preparation": "Reconstituir frasco e diluir em solução compatível até concentração rotulada; técnica asséptica.",
+    "infusionProtocol": "Infundir em 3 h; alinhar dose e intervalo ao CrCl atual.",
+    "pregnancy": "Usar quando indicado após avaliação de benefício-risco; dados de cefalosporinas não sugerem grande risco teratogênico.",
+    "lactation": "Em geral baixa passagem ao leite; observar diarreia, candidíase ou sensibilização no lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefiderocol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209445s002lbl.pdf",
+      "3. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/amr-guidance/"
     ]
   },
   "es": {
     "name": "Cefiderocol",
-    "class": "Cefalosporina siderófora",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Polvo IV.",
-    "dose": "ClCr 60–119: 2 g q8h en 3 h. ClCr >=120: 2 g q6h.",
+    "class": "Cefalosporina de siderófora parenteral",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Vial de 1 g para infusión IV.",
+    "dose": "2 g IV cada 8 h, infusión de 3 h, con CrCl 60-119; duración según foco y respuesta.",
     "doseKg": {
       "adulto": "Dosis fija 2 g cada 8h (no basado en peso en adultos)"
     },
-    "mechanism": "Capta hierro y usa transportadores TonB; se une sobre todo a PBP3.",
+    "mechanism": "Betalactámico inhibidor de la síntesis de pared bacteriana. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "EV: pico sérico al final de la infusión de 180 min.",
     "halfLife": "Semivida 2,6 h. Eliminación renal ~90% inalterada.",
     "therapeuticRange": "T>CIM (fT>CIM ≥ 75%) como parámetro PK/PD — infusión prolongada de 3h es esencial.",
     "dilution": "Reconstituir 1 g en 10 mL de SF o SG5%; diluir en 100–250 mL de SF 0,9% o SG 5%. Proteger de la luz.",
     "speed": "Infundir en 180 minutos (3 horas). NO reducir el tiempo de infusión.",
-    "commonAdverseEffects": [
-      "Diarrea",
-      "Reacción local",
-      "Estreñimiento",
-      "Rash"
-    ],
-    "dangerousAdverseEffects": [
-      "Mayor mortalidad observada en ciertos pacientes con Gram negativos resistentes a carbapenem",
-      "Anafilaxia",
-      "C. difficile",
-      "Neurotoxicidad beta-lactámica"
-    ],
-    "contraindications": "Hipersensibilidad grave a cefiderocol/cefalosporinas.",
+    "commonAdverseEffects": "Diarrea, náusea, erupción y reacciones locales cuando es parenteral.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, colitis por C. difficile, citopenias, convulsiones por acumulación y lesión renal/hepática rara.",
+    "contraindications": "Hipersensibilidad grave a cefalosporinas; evaluar cuidadosamente reacción inmediata a otros betalactámicos.",
     "risksByPatient": [],
-    "alerts": [
-      "ClCr 60–119: 2 g q8h",
-      "ClCr >=120: 2 g q6h",
-      "ClCr 30–59: 1,5 g q8h",
-      "HD: tras sesión",
-      "Uso por AMR/AST"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
-    ],
-    "renalDose": "ClCr 30–59: 1,5 g q8h; 15–29: 1 g q8h; ESRD <15: 0,75 g q12h; HD tras sesión; ARC >=120: 2 g q6h.",
-    "safetyFlags": [
-      "Infusión 3 h",
-      "ClCr/ARC cambian dosis",
-      "Adultos >=18",
-      "Alerta mortalidad CREDIBLE-CR",
-      "Reservar AMR"
-    ],
+    "alerts": "Anafilaxia, SCAR, colitis por C. difficile, citopenias, convulsiones por acumulación y lesión renal/hepática rara. Uso bloqueado sem foco, cultura/MIC, alternativas, CrCl atual, diálise e confirmação de mortalidade/benefício-risco.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefiderocol",
+    "renalDose": "Ajustar con CrCl <60; en depuración aumentada ≥120 puede requerir 2 g cada 6 h; diálisis según ficha.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -166,34 +99,29 @@
       ],
       "note": "Bloque revisado con cortes renales oficiales FDA (CrCl 30–59 / 15–29 / <15 / HD). Obs ampliadas con alerta sobre mecanismo sideróforo en ambientes ricos en hierro. safetyFlags y auditNotes añadidos."
     },
-    "pharmacologicClass": "Cefalosporina siderófora IV",
-    "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC. Activa frente a muchos Gram negativos con carbapenemasas, incluidas MBL.",
-    "pharmacokinetics": "IV; poco metabolismo y eliminación renal. ARC reduce exposición; ERC la aumenta.",
-    "indications": "Adultos >=18: cUTI/pielonefritis y HAP/VAP por Gram negativos susceptibles, guiado por AMR/AST.",
-    "presentations": [
-      "1 g por vial"
-    ],
-    "pediatricDose": "Seguridad/eficacia <18 años no establecidas en ficha EUA.",
-    "hepaticDose": "Sin ajuste esperado.",
-    "adverseEffects": "Ficha mantiene alerta de mortalidad observada en CREDIBLE-CR; causalidad incierta.",
-    "interactions": "Pocas interacciones metabólicas; función renal cambia exposición.",
-    "monitoring": "ClCr frecuente, cultivo/AST, respuesta y estado neurológico.",
-    "administration": "Exclusivamente IV.",
-    "preparation": "Reconstituir/diluir según ficha.",
-    "infusionProtocol": "Cada dosis en 3 horas; ARC >=120 q6h.",
-    "pregnancy": "Datos insuficientes.",
-    "lactation": "Datos limitados.",
-    "specialPopulations": "Solo adultos; ARC aumenta frecuencia; ERC/HD reduce dosis.",
-    "patientEducation": "Explicar reserva para AMR y necesidad de AST/ajuste renal.",
-    "clinicalPearls": "Usa hierro bacteriano como caballo de Troya; potente contra MBL/DTR, pero debe preservarse.",
-    "guidelineRecommendations": "IDSA 2026: preferido NDM-E/MBL-Pseudomonas; cUTI DTR preferido; CRAB invasivo alternativa combinada.",
+    "pharmacologicClass": "Betalactámico inhibidor de la síntesis de pared bacteriana",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Eliminación renal predominante sin cambios; exposición depende de función renal.",
+    "indications": "Adultos con cUTI, HABP/VABP o infección grave por gramnegativos susceptibles cuando corresponda.",
+    "presentations": "Vial de 1 g para infusión IV.",
+    "pediatricDose": "Seguridad/eficacia pediátrica no establecidas. AUTOMATABLE=NO.",
+    "hepaticDose": "Sin ajuste específico.",
+    "adverseEffects": "Diarrea, náusea, erupción y reacciones locales cuando es parenteral. Graves: Anafilaxia, SCAR, colitis por C. difficile, citopenias, convulsiones por acumulación y lesión renal/hepática rara.",
+    "interactions": "Probenecid puede aumentar exposición; anticoagulantes pueden requerir INR; revisar nefrotóxicos y vacunas bacterianas vivas.",
+    "monitoring": "Respuesta clínica, cultivos, alergia, diarrea/C. difficile, hemograma y función renal/hepática según duración y gravedad.",
+    "administration": "Solo IV durante 3 h.",
+    "preparation": "Reconstituir vial y diluir en solución compatible hasta concentración autorizada; técnica aséptica.",
+    "infusionProtocol": "Infundir en 3 h; alinear dosis e intervalo con CrCl actual.",
+    "pregnancy": "Usar cuando esté indicado tras evaluar beneficio-riesgo; los datos de cefalosporinas no sugieren gran riesgo teratógeno.",
+    "lactation": "En general bajo paso a leche; vigilar diarrea, candidiasis o sensibilización en lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/table-2.pdf",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/209445s012lbl.pdf",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=75c0c785-38e0-4049-a6fb-b77581f5b35c"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cefiderocol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/209445s002lbl.pdf",
+      "3. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/amr-guidance/"
     ]
   },
   "name": {
@@ -205,8 +133,8 @@
     "fetroja",
     "cefalosporina siderofora (nova classe — anti-bgn pan-resistentes)"
   ],
-  "dataVersion": "clinical-data-v1-8eb1be989967c23f",
-  "clinicalContentSha256": "8eb1be989967c23f1d2abc5e70aba5f5d5f550ca19c92efbafefbd48da0e66b3",
+  "dataVersion": "clinical-data-v1-1d6d6cf06c68c802",
+  "clinicalContentSha256": "1d6d6cf06c68c8024790a1bb66726b2299758d2eaf77f140d63d0e8d85638ab9",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",
@@ -272,5 +200,17 @@
         "updated": "2026-03-01"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "cefiderocol.mcGoldClinicalV1",
+    "lote": "015",
+    "requiredFields": 33,
+    "approvedSha256": "d0dcd4b7fb704db13a489b81300efec348bba18ddd17035197dd5aa5088b0f38",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

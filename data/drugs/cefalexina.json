@@ -6,12 +6,10 @@
   "colorTxt": null,
   "pt": {
     "name": "Cefalexina",
-    "class": "Antibiótico beta-lactâmico",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Cápsulas/comprimidos e suspensão oral.",
-    "dose": "Adultos/adolescentes >=15 anos: 250 mg VO a cada 6 h ou 500 mg a cada 12 h; graves podem exigir até 4 g/dia divididos.",
+    "class": "Cefalosporina de 1ª geração oral",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas/comprimidos 250/500 mg; suspensão 125 ou 250 mg/5 mL.",
+    "dose": "Adulto: 250 mg VO a cada 6 h ou 500 mg a cada 12 h; infecção grave pode exigir até 4 g/dia.",
     "doseKg": {
       "standard": "25–50 mg/kg/dia dividido 6/6h ou 8/8h",
       "severe": "75–100 mg/kg/dia em infecções mais graves, conforme protocolo",
@@ -20,77 +18,45 @@
     "therapeuticRange": "Beta-lactâmico dependente do tempo acima da MIC.",
     "dilution": "Via oral. Suspensão deve ser reconstituída conforme bula e agitada antes do uso.",
     "speed": "Administração por via oral.",
-    "commonAdverseEffects": [
-      "Diarreia",
-      "Náusea",
-      "Rash",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidade/convulsões em exposição excessiva"
-    ],
+    "commonAdverseEffects": "Diarreia, náusea, rash e reações no local quando parenteral.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, colite por C. difficile, citopenias, convulsões por acúmulo e lesão renal/hepática rara.",
     "risksByPatient": [],
-    "alerts": [
-      "Não usar para MRSA ou Pseudomonas",
-      "Ajustar na DRC",
-      "Sem recomendação rotulada de hemodiálise"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4fec8daf-6e09-4153-926f-64709dbdd26c",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
-    ],
-    "renalDose": "CrCl >60: sem ajuste; 30–59: máximo 1 g/dia; 15–29: 250 mg q8–12h; 5–14: 250 mg q24h; 1–4: 250 mg q48–60h. Dados insuficientes para esquema rotulado em hemodiálise.",
-    "pharmacologicClass": "Cefalosporina de 1ª geração oral",
-    "mechanism": "Liga-se às PBPs e inibe a transpeptidação do peptidoglicano, interrompendo a síntese da parede bacteriana.",
-    "pharmacodynamics": "Bactericida tempo-dependente; a eficácia se relaciona ao tempo da fração livre acima da MIC (fT>MIC).",
-    "pharmacokinetics": "Boa absorção oral; pouca metabolização; eliminação predominantemente renal.",
-    "indications": "Faringite estreptocócica, pele/tecidos moles, otite e infecções geniturinárias por organismos suscetíveis; terapia dirigida para MSSA/estreptococos em focos apropriados.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "750 mg em alguns fabricantes",
-      "Suspensão oral"
-    ],
-    "pediatricDose": ">1 ano: 25–50 mg/kg/dia VO divididos; graves 50–100 mg/kg/dia; otite 75–100 mg/kg/dia.",
-    "hepaticDose": "Sem ajuste hepático rotineiro específico; eliminação renal predomina.",
-    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
-    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
-    "interactions": "Revisar probenecida quando aplicável, anticoagulantes, nefrotóxicos e interações específicas do regime; não misturar soluções incompatíveis.",
-    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
-    "administration": "VO, com ou sem alimentos; manter intervalos regulares.",
-    "preparation": "Reconstituir suspensão conforme fabricante e agitar antes de cada dose.",
-    "infusionProtocol": "Não aplicável: formulação oral.",
-    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
-    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
-    "specialPopulations": "Idosos exigem revisão de função renal; não é opção para meningite ou infecção invasiva que exija terapia parenteral.",
-    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
-    "clinicalPearls": "Boa atividade contra estreptococos e MSSA suscetível; não cobre MRSA, Pseudomonas ou Enterococcus e não é confiável contra ESBL.",
-    "guidelineRecommendations": "Stewardship: preferir terapia oral estreita quando foco e suscetibilidade permitirem; não ampliar espectro sem indicação microbiológica.",
-    "safetyFlags": [
-      "Alergia beta-lactâmica",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidade por acúmulo"
-    ],
+    "alerts": "Anafilaxia, SCAR, colite por C. difficile, citopenias, convulsões por acúmulo e lesão renal/hepática rara. Dose bloqueada sem foco, gravidade, peso, função renal, alergia e duração.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cephalexin",
+    "renalDose": "Reduzir em CrCl <30; máximo diário e intervalo dependem do estágio e diálise.",
+    "pharmacologicClass": "Beta-lactâmico inibidor da síntese da parede bacteriana",
+    "mechanism": "Beta-lactâmico inibidor da síntese da parede bacteriana. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção oral alta; baixa ligação proteica; eliminação renal predominante inalterada.",
+    "indications": "Infecções suscetíveis respiratórias, otite, pele, osso e trato geniturinário.",
+    "presentations": "Cápsulas/comprimidos 250/500 mg; suspensão 125 ou 250 mg/5 mL.",
+    "pediatricDose": "≥1 ano: 25-50 mg/kg/dia em doses divididas; grave 50-100 mg/kg/dia; máximo 4 g/dia. AUTOMATABLE=NO.",
+    "hepaticDose": "Sem ajuste específico.",
+    "adverseEffects": "Diarreia, náusea, rash e reações no local quando parenteral. Graves: Anafilaxia, SCAR, colite por C. difficile, citopenias, convulsões por acúmulo e lesão renal/hepática rara.",
+    "contraindications": "Hipersensibilidade grave a cefalosporinas; avaliar cuidadosamente reação imediata a outros beta-lactâmicos.",
+    "interactions": "Probenecida pode aumentar exposição; anticoagulantes podem exigir INR; revisar nefrotóxicos e vacinas bacterianas vivas.",
+    "monitoring": "Resposta clínica, culturas, alergia, diarreia/C. difficile, hemograma e funções renal/hepática conforme duração e gravidade.",
+    "administration": "VO com ou sem alimento.",
+    "preparation": "Agitar suspensão; seguir prazo e temperatura do produto.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar quando indicado após avaliação de benefício-risco; dados de cefalosporinas não sugerem grande risco teratogênico.",
+    "lactation": "Em geral baixa passagem ao leite; observar diarreia, candidíase ou sensibilização no lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4fec8daf-6e09-4153-926f-64709dbdd26c",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cephalexin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/"
     ]
   },
   "es": {
     "name": "Cefalexina",
-    "class": "Antibiótico betalactámico",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Cápsulas/comprimidos y suspensión oral.",
-    "dose": "Adultos/adolescentes >=15 años: 250 mg VO cada 6 h o 500 mg cada 12 h; graves pueden requerir hasta 4 g/día divididos.",
+    "class": "Cefalosporina de 1ª geração oral",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas/comprimidos 250/500 mg; suspensión 125 o 250 mg/5 mL.",
+    "dose": "Adulto: 250 mg VO cada 6 h o 500 mg cada 12 h; infección grave puede requerir hasta 4 g/día.",
     "doseKg": {
       "standard": "25–50 mg/kg/día dividido cada 6h o 8h",
       "severe": "75–100 mg/kg/día en infecciones más graves, según protocolo",
@@ -99,67 +65,37 @@
     "therapeuticRange": "Beta-lactámico dependiente del tiempo sobre la MIC.",
     "dilution": "Vía oral. La suspensión debe reconstituirse según prospecto y agitarse antes del uso.",
     "speed": "Administración por vía oral.",
-    "commonAdverseEffects": [
-      "Diarrea",
-      "Náuseas",
-      "Exantema",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidad/convulsiones por exposición excesiva"
-    ],
+    "commonAdverseEffects": "Diarrea, náusea, erupción y reacciones locales cuando es parenteral.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, colitis por C. difficile, citopenias, convulsiones por acumulación y lesión renal/hepática rara.",
     "risksByPatient": [],
-    "alerts": [
-      "No usar para MRSA o Pseudomonas",
-      "Ajustar en ERC",
-      "Sin recomendación rotulada de hemodiálisis"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4fec8daf-6e09-4153-926f-64709dbdd26c",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
-    ],
-    "renalDose": "ClCr >60: sin ajuste; 30–59: máximo 1 g/día; 15–29: 250 mg q8–12h; 5–14: 250 mg q24h; 1–4: 250 mg q48–60h. Datos insuficientes para esquema rotulado en hemodiálisis.",
-    "pharmacologicClass": "Cefalosporina oral de 1ª generación",
-    "mechanism": "Se une a las PBP e inhibe la transpeptidación del peptidoglicano, interrumpiendo la síntesis de pared bacteriana.",
-    "pharmacodynamics": "Bactericida dependiente del tiempo; la eficacia se relaciona con el tiempo de fracción libre por encima de la MIC (fT>MIC).",
-    "pharmacokinetics": "Buena absorción oral; poco metabolismo; eliminación predominantemente renal.",
-    "indications": "Faringitis estreptocócica, piel/tejidos blandos, otitis e infecciones genitourinarias por organismos susceptibles; terapia dirigida para MSSA/estreptococos en focos apropiados.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "750 mg en algunos fabricantes",
-      "Suspensión oral"
-    ],
-    "pediatricDose": ">1 año: 25–50 mg/kg/día VO divididos; graves 50–100 mg/kg/día; otitis 75–100 mg/kg/día.",
-    "hepaticDose": "Sin ajuste hepático rutinario específico; predomina eliminación renal.",
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
-    "interactions": "Revisar probenecid cuando corresponda, anticoagulantes, nefrotóxicos e interacciones específicas; no mezclar soluciones incompatibles.",
-    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
-    "administration": "VO, con o sin alimentos; mantener intervalos regulares.",
-    "preparation": "Reconstituir suspensión según fabricante y agitar antes de cada dosis.",
-    "infusionProtocol": "No aplicable: formulación oral.",
-    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
-    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
-    "specialPopulations": "Ancianos requieren revisión de función renal; no es opción para meningitis ni infección invasiva que requiera terapia parenteral.",
-    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
-    "clinicalPearls": "Buena actividad frente a estreptococos y MSSA susceptible; no cubre MRSA, Pseudomonas ni Enterococcus y no es confiable frente a ESBL.",
-    "guidelineRecommendations": "Stewardship: preferir terapia oral estrecha cuando foco y susceptibilidad lo permitan; no ampliar espectro sin indicación microbiológica.",
-    "safetyFlags": [
-      "Alergia a betalactámicos",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidad por acumulación"
-    ],
+    "alerts": "Anafilaxia, SCAR, colitis por C. difficile, citopenias, convulsiones por acumulación y lesión renal/hepática rara. Dose bloqueada sem foco, gravidade, peso, função renal, alergia e duração.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cephalexin",
+    "renalDose": "Reducir con CrCl <30; máximo diario e intervalo dependen del estadio y diálisis.",
+    "pharmacologicClass": "Betalactámico inhibidor de la síntesis de pared bacteriana",
+    "mechanism": "Betalactámico inhibidor de la síntesis de pared bacteriana. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Alta absorción oral; baja unión proteica; eliminación renal predominante sin cambios.",
+    "indications": "Infecciones susceptibles respiratorias, óticas, cutáneas, óseas y genitourinarias.",
+    "presentations": "Cápsulas/comprimidos 250/500 mg; suspensión 125 o 250 mg/5 mL.",
+    "pediatricDose": "≥1 año: 25-50 mg/kg/día dividido; grave 50-100 mg/kg/día; máximo 4 g/día. AUTOMATABLE=NO.",
+    "hepaticDose": "Sin ajuste específico.",
+    "adverseEffects": "Diarrea, náusea, erupción y reacciones locales cuando es parenteral. Graves: Anafilaxia, SCAR, colitis por C. difficile, citopenias, convulsiones por acumulación y lesión renal/hepática rara.",
+    "contraindications": "Hipersensibilidad grave a cefalosporinas; evaluar cuidadosamente reacción inmediata a otros betalactámicos.",
+    "interactions": "Probenecid puede aumentar exposición; anticoagulantes pueden requerir INR; revisar nefrotóxicos y vacunas bacterianas vivas.",
+    "monitoring": "Respuesta clínica, cultivos, alergia, diarrea/C. difficile, hemograma y función renal/hepática según duración y gravedad.",
+    "administration": "VO con o sin alimentos.",
+    "preparation": "Agitar suspensión; seguir plazo y temperatura del producto.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Usar cuando esté indicado tras evaluar beneficio-riesgo; los datos de cefalosporinas no sugieren gran riesgo teratógeno.",
+    "lactation": "En general bajo paso a leche; vigilar diarrea, candidiasis o sensibilización en lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4fec8daf-6e09-4153-926f-64709dbdd26c",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cephalexin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/"
     ]
   },
   "name": {
@@ -175,9 +111,21 @@
     "cefalexina generica",
     "cefalosporina de 1ª geracao"
   ],
-  "dataVersion": "clinical-data-v1-8eb1be989967c23f",
-  "clinicalContentSha256": "8eb1be989967c23f1d2abc5e70aba5f5d5f550ca19c92efbafefbd48da0e66b3",
+  "dataVersion": "clinical-data-v1-1d6d6cf06c68c802",
+  "clinicalContentSha256": "1d6d6cf06c68c8024790a1bb66726b2299758d2eaf77f140d63d0e8d85638ab9",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "cefalexina.mcGoldClinicalV1",
+    "lote": "015",
+    "requiredFields": 33,
+    "approvedSha256": "d0dcd4b7fb704db13a489b81300efec348bba18ddd17035197dd5aa5088b0f38",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }
