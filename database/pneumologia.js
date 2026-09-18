@@ -4377,3 +4377,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:cloperastina:END */
+/* GOLD33_SELECTIVE:dextrometorfano:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["dextrometorfano"])throw new Error("GOLD33_MISSING_CANONICAL:dextrometorfano");db["dextrometorfano"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "024",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9721657a393121ed360ce59ff910deb7cbb3b0fc3421608349c6fa584237305a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Dextrometorfano",
+    "class": "Antitussígeno não opioide",
+    "pharmacologicClass": "Ação central no reflexo da tosse; antagonismo NMDA em altas exposições",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Liberação imediata 10–15 mg/5 mL e prolongada 30 mg/5 mL; muitas combinações.",
+    "presentations": "Liberação imediata 10–15 mg/5 mL e prolongada 30 mg/5 mL; muitas combinações.",
+    "mechanism": "Ação central no reflexo da tosse; antagonismo NMDA em altas exposições. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP2D6 a dextrorfano; metabolizadores pobres têm maior exposição.",
+    "indications": "Alívio temporário de tosse não produtiva; não trata a causa.",
+    "dose": "Adultos/≥12 anos: 10–20 mg a cada 4 h ou 30 mg a cada 6–8 h; máximo 120 mg/dia. ER: 60 mg a cada 12 h. Confirmar produto.",
+    "pediatricDose": "Doses dependem de idade/produto; não usar em menores conforme restrições OTC locais e não administrar <4 anos sem orientação. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste estabelecido; cautela em doença grave.",
+    "hepaticDose": "Cautela/redução em hepatopatia.",
+    "commonAdverseEffects": "Náusea, tontura, sonolência e desconforto GI.",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica, psicose/abuso, convulsão, coma e toxicidade de coingredientes.",
+    "adverseEffects": "Náusea, tontura, sonolência e desconforto GI. Graves: Síndrome serotoninérgica, psicose/abuso, convulsão, coma e toxicidade de coingredientes.",
+    "contraindications": "IMAO atual ou nos 14 dias anteriores; hipersensibilidade.",
+    "interactions": "IMAO e outros serotonérgicos; inibidores CYP2D6 elevam exposição; álcool/sedativos.",
+    "monitoring": "Duração/causa da tosse, sedação, serotonina, abuso e duplicidade em combinações.",
+    "administration": "VO; medir solução e conferir todos os ingredientes ativos.",
+    "preparation": "Agitar se indicado; não triturar formulação ER.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados limitados; uso breve somente se necessário.",
+    "lactation": "Baixa exposição esperada, mas avaliar coingredientes.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Síndrome serotoninérgica, psicose/abuso, convulsão, coma e toxicidade de coingredientes. Dose bloqueada sem idade, formulação/concentração, todos os coingredientes, causa/duração da tosse, IMAO/serotonérgicos e risco de abuso.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dextromethorphan",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://medlineplus.gov/druginfo/meds/a682492.html"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dextromethorphan"
+  },
+  "es": {
+    "name": "Dextrometorfano",
+    "class": "Antitusígeno no opioide",
+    "pharmacologicClass": "Acción central en reflejo de tos; antagonismo NMDA a altas exposiciones",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Liberación inmediata 10–15 mg/5 mL y prolongada 30 mg/5 mL; muchas combinaciones.",
+    "presentations": "Liberación inmediata 10–15 mg/5 mL y prolongada 30 mg/5 mL; muchas combinaciones.",
+    "mechanism": "Acción central en reflejo de tos; antagonismo NMDA a altas exposiciones. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP2D6 a dextrorfano; metabolizadores pobres tienen mayor exposición.",
+    "indications": "Alivio temporal de tos no productiva; no trata la causa.",
+    "dose": "Adultos/≥12 años: 10–20 mg cada 4 h o 30 mg cada 6–8 h; máximo 120 mg/día. ER: 60 mg cada 12 h. Confirmar producto.",
+    "pediatricDose": "Dosis dependen de edad/producto; no usar por debajo de restricciones OTC locales ni <4 años sin indicación. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste establecido; precaución en enfermedad grave.",
+    "hepaticDose": "Precaución/reducción en hepatopatía.",
+    "commonAdverseEffects": "Náusea, mareo, somnolencia y malestar GI.",
+    "dangerousAdverseEffects": "Síndrome serotoninérgico, psicosis/abuso, convulsión, coma y toxicidad de coingredientes.",
+    "adverseEffects": "Náusea, mareo, somnolencia y malestar GI. Graves: Síndrome serotoninérgico, psicosis/abuso, convulsión, coma y toxicidad de coingredientes.",
+    "contraindications": "IMAO actual o en 14 días previos; hipersensibilidad.",
+    "interactions": "IMAO y otros serotoninérgicos; inhibidores CYP2D6 elevan exposición; alcohol/sedantes.",
+    "monitoring": "Duración/causa de tos, sedación, serotonina, abuso y duplicidad en combinaciones.",
+    "administration": "VO; medir solución y comprobar todos los ingredientes activos.",
+    "preparation": "Agitar si se indica; no triturar formulación ER.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos limitados; uso breve solo si es necesario.",
+    "lactation": "Baja exposición esperada, pero valorar coingredientes.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Síndrome serotoninérgico, psicosis/abuso, convulsión, coma y toxicidad de coingredientes. Dose bloqueada sem idade, formulação/concentração, todos os coingredientes, causa/duração da tosse, IMAO/serotonérgicos e risco de abuso.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dextromethorphan",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://medlineplus.gov/druginfo/meds/a682492.html"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dextromethorphan"
+  }
+};})();
+/* GOLD33_SELECTIVE:dextrometorfano:END */

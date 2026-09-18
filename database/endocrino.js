@@ -1133,3 +1133,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:cabergolina:END */
+/* GOLD33_SELECTIVE:desmopressina:START */
+;(function(){var db=window.ENDOCRINO_DRUGS_DB;if(!db||!db["desmopressina"])throw new Error("GOLD33_MISSING_CANONICAL:desmopressina");db["desmopressina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "024",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9721657a393121ed360ce59ff910deb7cbb3b0fc3421608349c6fa584237305a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Desmopressina",
+    "class": "Análogo da vasopressina",
+    "pharmacologicClass": "Agonista V2 antidiurético",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 0,1/0,2 mg, spray/solução nasal, injetável e liofilizado sublingual; não intercambiáveis.",
+    "presentations": "Comprimidos 0,1/0,2 mg, spray/solução nasal, injetável e liofilizado sublingual; não intercambiáveis.",
+    "mechanism": "Agonista V2 antidiurético. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Maior seletividade V2 que vasopressina; duração e biodisponibilidade dependem da via.",
+    "indications": "Diabetes insípido central; enurese noturna primária e noctúria apenas nas formulações/idades rotuladas.",
+    "dose": "DI central oral: início usual 0,05 mg 2x/dia, individualizar; enurese: 0,2 mg ao deitar, podendo titular até 0,6 mg. Noctúria e outras vias têm doses próprias.",
+    "pediatricDose": "Indicação, idade e dose variam por produto; enurese oral geralmente ≥6 anos. AUTOMATABLE=NO.",
+    "renalDose": "Muitas formulações são contraindicadas com eGFR <50 mL/min/1,73 m²; confirmar rótulo.",
+    "hepaticDose": "Sem tabela universal; cautela e monitorização de sódio.",
+    "commonAdverseEffects": "Cefaleia, náusea, congestão nasal e edema.",
+    "dangerousAdverseEffects": "Hiponatremia, convulsão, coma e intoxicação hídrica.",
+    "adverseEffects": "Cefaleia, náusea, congestão nasal e edema. Graves: Hiponatremia, convulsão, coma e intoxicação hídrica.",
+    "contraindications": "Hiponatremia atual/prévia, polidipsia, SIADH e insuficiência renal abaixo do limite do produto; outras dependem da formulação.",
+    "interactions": "Diuréticos de alça, glicocorticoides sistêmicos e fármacos que causam hiponatremia elevam risco.",
+    "monitoring": "Sódio basal e seriado, balanço hídrico, peso, diurese e função renal.",
+    "administration": "Restringir líquidos no período indicado; administrar exatamente pela via prescrita.",
+    "preparation": "Não converter entre vias por equivalência miligrama-a-miligrama.",
+    "infusionProtocol": "Não aplicável à via oral; via IV/nasal conforme produto.",
+    "pregnancy": "Dados não sugerem grande risco fetal; usar por indicação especializada.",
+    "lactation": "Baixa transferência esperada; avaliar formulação e lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hiponatremia, convulsão, coma e intoxicação hídrica. Dose bloqueada sem indicação, formulação/via, idade, sódio, eGFR e plano de restrição hídrica.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desmopressin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-approved-new-label-changes-and-dosing-noctiva-desmopressin-acetate"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desmopressin"
+  },
+  "es": {
+    "name": "Desmopresina",
+    "class": "Análogo de vasopresina",
+    "pharmacologicClass": "Agonista V2 antidiurético",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 0,1/0,2 mg, aerosol/solución nasal, inyectable y liofilizado sublingual; no intercambiables.",
+    "presentations": "Comprimidos 0,1/0,2 mg, aerosol/solución nasal, inyectable y liofilizado sublingual; no intercambiables.",
+    "mechanism": "Agonista V2 antidiurético. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Mayor selectividad V2 que vasopresina; duración y biodisponibilidad dependen de la vía.",
+    "indications": "Diabetes insípida central; enuresis nocturna primaria y nocturia solo en formulaciones/edades autorizadas.",
+    "dose": "DI central oral: inicio habitual 0,05 mg 2 veces/día, individualizar; enuresis: 0,2 mg al acostarse, titulable hasta 0,6 mg. Nocturia y otras vías tienen dosis propias.",
+    "pediatricDose": "Indicación, edad y dosis varían por producto; enuresis oral generalmente ≥6 años. AUTOMATABLE=NO.",
+    "renalDose": "Muchas formulaciones están contraindicadas con eGFR <50 mL/min/1,73 m²; confirmar ficha.",
+    "hepaticDose": "Sin tabla universal; precaución y control de sodio.",
+    "commonAdverseEffects": "Cefalea, náusea, congestión nasal y edema.",
+    "dangerousAdverseEffects": "Hiponatremia, convulsión, coma e intoxicación hídrica.",
+    "adverseEffects": "Cefalea, náusea, congestión nasal y edema. Graves: Hiponatremia, convulsión, coma e intoxicación hídrica.",
+    "contraindications": "Hiponatremia actual/previa, polidipsia, SIADH e insuficiencia renal bajo el límite del producto; otras dependen de formulación.",
+    "interactions": "Diuréticos de asa, glucocorticoides sistémicos y fármacos que causan hiponatremia aumentan riesgo.",
+    "monitoring": "Sodio basal y seriado, balance hídrico, peso, diuresis y función renal.",
+    "administration": "Restringir líquidos durante el período indicado; administrar exactamente por la vía prescrita.",
+    "preparation": "No convertir entre vías miligramo por miligramo.",
+    "infusionProtocol": "No aplicable a vía oral; vía IV/nasal según producto.",
+    "pregnancy": "Datos no sugieren gran riesgo fetal; usar por indicación especializada.",
+    "lactation": "Baja transferencia esperada; valorar formulación y lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hiponatremia, convulsión, coma e intoxicación hídrica. Dose bloqueada sem indicação, formulação/via, idade, sódio, eGFR e plano de restrição hídrica.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desmopressin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-approved-new-label-changes-and-dosing-noctiva-desmopressin-acetate"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desmopressin"
+  }
+};})();
+/* GOLD33_SELECTIVE:desmopressina:END */

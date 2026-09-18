@@ -6137,3 +6137,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:desipramina:END */
+/* GOLD33_SELECTIVE:desvenlafaxina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["desvenlafaxina"])throw new Error("GOLD33_MISSING_CANONICAL:desvenlafaxina");db["desvenlafaxina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "024",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9721657a393121ed360ce59ff910deb7cbb3b0fc3421608349c6fa584237305a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Desvenlafaxina",
+    "class": "Antidepressivo SNRI",
+    "pharmacologicClass": "Inibe recaptação de serotonina e noradrenalina",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos de liberação prolongada 25, 50 e 100 mg.",
+    "presentations": "Comprimidos de liberação prolongada 25, 50 e 100 mg.",
+    "mechanism": "Inibe recaptação de serotonina e noradrenalina. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabólito ativo da venlafaxina; conjugação e eliminação renal importantes.",
+    "indications": "Transtorno depressivo maior em adultos.",
+    "dose": "50 mg VO 1x/dia; doses maiores não demonstraram benefício adicional consistente e aumentam eventos adversos. Desmamar gradualmente.",
+    "pediatricDose": "Eficácia não estabelecida em pediatria; alerta de suicidabilidade. AUTOMATABLE=NO.",
+    "renalDose": "Insuficiência moderada: máximo 50 mg/dia; grave/terminal: 50 mg em dias alternados; não suplementar após diálise.",
+    "hepaticDose": "Moderada/grave: máximo 100 mg/dia; escalonamento adicional não recomendado.",
+    "commonAdverseEffects": "Náusea, tontura, insônia, sudorese, constipação e disfunção sexual.",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica, hipertensão, sangramento, hiponatremia, mania e abstinência.",
+    "adverseEffects": "Náusea, tontura, insônia, sudorese, constipação e disfunção sexual. Graves: Síndrome serotoninérgica, hipertensão, sangramento, hiponatremia, mania e abstinência.",
+    "contraindications": "IMAO concomitante ou dentro das janelas de 14 dias antes/7 dias após; hipersensibilidade a venlafaxina.",
+    "interactions": "Serotonérgicos, antiagregantes/anticoagulantes, álcool e inibidores relevantes.",
+    "monitoring": "Humor/suicídio, PA, sódio, sangramento, mania e função renal.",
+    "administration": "Engolir inteiro, com ou sem alimento, no mesmo horário.",
+    "preparation": "Não esmagar, mastigar ou dissolver.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Risco neonatal tardio; pesar benefício e risco.",
+    "lactation": "Presente no leite; monitorar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Síndrome serotoninérgica, hipertensão, sangramento, hiponatremia, mania e abstinência. Início/ajuste bloqueados sem diagnóstico, risco suicida/bipolar, PA, eGFR e revisão de serotonérgicos/IMAO.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desvenlafaxine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/suicidality-children-and-adolescents-being-treated-antidepressant-medications"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desvenlafaxine"
+  },
+  "es": {
+    "name": "Desvenlafaxina",
+    "class": "Antidepresivo IRSN",
+    "pharmacologicClass": "Inhibe recaptación de serotonina y noradrenalina",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos de liberación prolongada 25, 50 y 100 mg.",
+    "presentations": "Comprimidos de liberación prolongada 25, 50 y 100 mg.",
+    "mechanism": "Inhibe recaptación de serotonina y noradrenalina. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolito activo de venlafaxina; conjugación y eliminación renal importantes.",
+    "indications": "Trastorno depresivo mayor en adultos.",
+    "dose": "50 mg VO 1 vez/día; dosis mayores no mostraron beneficio adicional consistente y aumentan eventos adversos. Retirar gradualmente.",
+    "pediatricDose": "Eficacia no establecida en pediatría; alerta de suicidabilidad. AUTOMATABLE=NO.",
+    "renalDose": "Insuficiencia moderada: máximo 50 mg/día; grave/terminal: 50 mg en días alternos; no suplementar tras diálisis.",
+    "hepaticDose": "Moderada/grave: máximo 100 mg/día; no se recomienda mayor escalada.",
+    "commonAdverseEffects": "Náusea, mareo, insomnio, sudoración, estreñimiento y disfunción sexual.",
+    "dangerousAdverseEffects": "Síndrome serotoninérgico, hipertensión, sangrado, hiponatremia, manía y retirada.",
+    "adverseEffects": "Náusea, mareo, insomnio, sudoración, estreñimiento y disfunción sexual. Graves: Síndrome serotoninérgico, hipertensión, sangrado, hiponatremia, manía y retirada.",
+    "contraindications": "IMAO concomitante o dentro de ventanas de 14 días antes/7 días después; hipersensibilidad a venlafaxina.",
+    "interactions": "Serotoninérgicos, antiagregantes/anticoagulantes, alcohol e inhibidores relevantes.",
+    "monitoring": "Ánimo/suicidio, PA, sodio, sangrado, manía y función renal.",
+    "administration": "Tragar entero, con o sin alimentos, a la misma hora.",
+    "preparation": "No triturar, masticar ni disolver.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Riesgo neonatal tardío; valorar beneficio y riesgo.",
+    "lactation": "Presente en leche; controlar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Síndrome serotoninérgico, hipertensión, sangrado, hiponatremia, manía y retirada. Início/ajuste bloqueados sem diagnóstico, risco suicida/bipolar, PA, eGFR e revisão de serotonérgicos/IMAO.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desvenlafaxine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/suicidality-children-and-adolescents-being-treated-antidepressant-medications"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=desvenlafaxine"
+  }
+};})();
+/* GOLD33_SELECTIVE:desvenlafaxina:END */

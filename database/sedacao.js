@@ -581,3 +581,93 @@
   }
 })();
 /* END MEDCASES_GOLD120_GROUP12_R4_sedacao_js */
+/* GOLD33_SELECTIVE:dexmedetomidina:START */
+;(function(){var db=window.SEDACAO_DRUGS_DB;if(!db||!db["dexmedetomidina"])throw new Error("GOLD33_MISSING_CANONICAL:dexmedetomidina");db["dexmedetomidina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "024",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9721657a393121ed360ce59ff910deb7cbb3b0fc3421608349c6fa584237305a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Dexmedetomidina",
+    "class": "Sedativo agonista alfa-2",
+    "pharmacologicClass": "Agonismo alfa-2 central reduz liberação de noradrenalina",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Concentrado/solução IV em várias concentrações e bolsas prontas.",
+    "presentations": "Concentrado/solução IV em várias concentrações e bolsas prontas.",
+    "mechanism": "Agonismo alfa-2 central reduz liberação de noradrenalina. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático; meia-vida terminal ~2 h e alta ligação proteica.",
+    "indications": "Sedação de adultos inicialmente intubados em UTI e sedação procedural; uso requer ambiente monitorado.",
+    "dose": "Carga 1 mcg/kg em 10 min quando apropriada; manutenção usual 0,2–0,7 mcg/kg/h em UTI, com faixas específicas por indicação/rótulo.",
+    "pediatricDose": "Uso pediátrico depende de jurisdição e protocolo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste específico; monitorar hemodinâmica.",
+    "hepaticDose": "Reduzir dose em insuficiência hepática conforme resposta.",
+    "commonAdverseEffects": "Hipotensão, bradicardia, náusea e boca seca.",
+    "dangerousAdverseEffects": "Bradicardia/assistolia, hipotensão grave, hipertensão transitória e abstinência.",
+    "adverseEffects": "Hipotensão, bradicardia, náusea e boca seca. Graves: Bradicardia/assistolia, hipotensão grave, hipertensão transitória e abstinência.",
+    "contraindications": "Hipersensibilidade; cautela extrema em bloqueio cardíaco avançado/instabilidade.",
+    "interactions": "Negativos cronotrópicos, vasodilatadores, anestésicos, opioides e sedativos somam efeitos.",
+    "monitoring": "ECG/FC, PA contínua, oxigenação, ventilação, sedação e abstinência.",
+    "administration": "Somente infusão IV com bomba, por profissional habilitado e monitorização contínua.",
+    "preparation": "Diluir concentrado conforme rótulo; confirmar concentração da bolsa/seringa e compatibilidade.",
+    "infusionProtocol": "Carga em 10 min; titular manutenção. Evitar bolus rápido.",
+    "pregnancy": "Dados limitados; usar apenas se benefício justificar.",
+    "lactation": "Presente no leite animal; cautela e decisão individual.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Bradicardia/assistolia, hipotensão grave, hipertensão transitória e abstinência. Carga/manutenção bloqueadas sem peso, indicação/ambiente, via aérea, hemodinâmica, fígado, concentração, bomba e equipe de resgate.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dexmedetomidine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dexmedetomidine"
+  },
+  "es": {
+    "name": "Dexmedetomidina",
+    "class": "Sedante agonista alfa-2",
+    "pharmacologicClass": "Agonismo alfa-2 central reduce liberación de noradrenalina",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Concentrado/solución IV en varias concentraciones y bolsas listas.",
+    "presentations": "Concentrado/solución IV en varias concentraciones y bolsas listas.",
+    "mechanism": "Agonismo alfa-2 central reduce liberación de noradrenalina. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático; semivida terminal ~2 h y alta unión proteica.",
+    "indications": "Sedación de adultos inicialmente intubados en UCI y sedación de procedimientos; requiere ambiente monitorizado.",
+    "dose": "Carga 1 mcg/kg en 10 min cuando proceda; mantenimiento habitual 0,2–0,7 mcg/kg/h en UCI, con rangos específicos por indicación/ficha.",
+    "pediatricDose": "Uso pediátrico depende de jurisdicción y protocolo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste específico; controlar hemodinámica.",
+    "hepaticDose": "Reducir dosis en insuficiencia hepática según respuesta.",
+    "commonAdverseEffects": "Hipotensión, bradicardia, náusea y boca seca.",
+    "dangerousAdverseEffects": "Bradicardia/asistolia, hipotensión grave, hipertensión transitoria y retirada.",
+    "adverseEffects": "Hipotensión, bradicardia, náusea y boca seca. Graves: Bradicardia/asistolia, hipotensión grave, hipertensión transitoria y retirada.",
+    "contraindications": "Hipersensibilidad; precaución extrema en bloqueo cardíaco avanzado/inestabilidad.",
+    "interactions": "Cronotrópicos negativos, vasodilatadores, anestésicos, opioides y sedantes suman efectos.",
+    "monitoring": "ECG/FC, PA continua, oxigenación, ventilación, sedación y retirada.",
+    "administration": "Solo infusión IV con bomba, por profesional capacitado y monitorización continua.",
+    "preparation": "Diluir concentrado según ficha; confirmar concentración de bolsa/jeringa y compatibilidad.",
+    "infusionProtocol": "Carga en 10 min; titular mantenimiento. Evitar bolo rápido.",
+    "pregnancy": "Datos limitados; usar solo si beneficio justifica.",
+    "lactation": "Presente en leche animal; precaución y decisión individual.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Bradicardia/asistolia, hipotensión grave, hipertensión transitoria y retirada. Carga/manutenção bloqueadas sem peso, indicação/ambiente, via aérea, hemodinâmica, fígado, concentração, bomba e equipe de resgate.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dexmedetomidine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dexmedetomidine"
+  }
+};})();
+/* GOLD33_SELECTIVE:dexmedetomidina:END */
