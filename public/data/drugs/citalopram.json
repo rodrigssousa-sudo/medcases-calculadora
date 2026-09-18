@@ -8,190 +8,98 @@
     "name": "Citalopram",
     "class": "Antidepressivo ISRS",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Cipramil",
-        "Procimax",
-        "Città",
-        "Citalor"
-      ],
-      "ar": [
-        "Cipramil",
-        "Humorap",
-        "Zentius",
-        "Citalopram Northia"
-      ]
-    },
-    "presentation": [
-      "Comprimido 10 mg",
-      "Comprimido 20 mg",
-      "Comprimido 40 mg",
-      "Solução oral 40 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Iniciar 20 mg VO 1x/dia; usual 20–40 mg/dia.",
-      "idoso": "Idosos ou hepatopatia: máximo geralmente 20 mg/dia.",
-      "maxDose": "Dose máxima usual: 40 mg/dia; máximo 20 mg/dia em idosos, hepatopatia ou risco de QT."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 10, 20 e 40 mg; solução oral conforme mercado.",
+    "dose": "20 mg VO 1x/dia; após ≥1 semana pode aumentar até 40 mg/dia. Máximo 20 mg/dia se >60 anos, hepatopatia, metabolizador lento CYP2C19 ou uso de inibidor CYP2C19.",
     "doseKg": {
       "standard": "Não se utiliza cálculo rotineiro por kg em adultos.",
       "pediatric": "Pediatria: uso não rotineiro; considerar apenas com especialista.",
       "maxDose": "40 mg/dia em adultos selecionados"
     },
-    "indications": [
-      "Transtorno depressivo maior",
-      "Transtorno de ansiedade generalizada",
-      "Transtorno do pânico",
-      "Transtorno obsessivo-compulsivo",
-      "Transtorno disfórico pré-menstrual",
-      "Sintomas depressivos associados a doenças clínicas crônicas"
-    ],
+    "indications": "Transtorno depressivo maior em adultos.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Inibe seletivamente a recaptação de serotonina, aumentando serotonina na fenda sináptica.",
+    "mechanism": "Inibidor seletivo da recaptação de serotonina. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Início de efeito clínico geralmente em 2–4 semanas; resposta plena pode levar 6–8 semanas.",
     "halfLife": "Vida média aproximada: 35 horas.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Boca seca",
-      "Sonolência",
-      "Insônia",
-      "Sudorese",
-      "Disfunção sexual"
-    ],
-    "dangerousAdverseEffects": [
-      "Prolongamento do intervalo QT",
-      "Torsades de pointes em pacientes predispostos",
-      "Síndrome serotoninérgica",
-      "Ideação suicida em jovens no início do tratamento",
-      "Virada maníaca/hipomaníaca",
-      "Hiponatremia/SIADH",
-      "Sangramentos com AINEs/anticoagulantes"
-    ],
+    "commonAdverseEffects": "Náusea, boca seca, sudorese, sonolência/insônia e disfunção sexual.",
+    "dangerousAdverseEffects": "QT/torsades, síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento e mania.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade ao citalopram",
-      "Uso concomitante com IMAO",
-      "Uso concomitante com pimozida",
-      "QT longo congênito ou QT prolongado significativo",
-      "Transtorno bipolar sem estabilizador do humor"
-    ],
-    "interactions": [
-      "IMAO: risco de síndrome serotoninérgica",
-      "Pimozida: contraindicado por risco de arritmia/QT",
-      "Antiarrítmicos, macrolídeos, quinolonas e antipsicóticos: risco de QT prolongado",
-      "Tramadol, linezolida, triptanos, lítio: risco serotoninérgico",
-      "AINEs, AAS, anticoagulantes: maior risco de sangramento"
-    ],
-    "alerts": [
-      "Evitar doses acima de 40 mg/dia pelo risco de QT prolongado.",
-      "Em idosos, hepatopatia ou risco cardíaco, geralmente não ultrapassar 20 mg/dia.",
-      "Considerar ECG em pacientes com cardiopatia, QT prolongado ou uso de fármacos que prolongam QT.",
-      "Corrigir hipocalemia e hipomagnesemia antes de usar em pacientes de risco.",
-      "Não suspender abruptamente; reduzir gradualmente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Citalopram Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO durante ou nos 14 dias anteriores/posteriores, pimozida e hipersensibilidade.",
+    "interactions": "Serotonérgicos, fármacos que prolongam QT, anticoagulantes/AINE, omeprazol e outros inibidores CYP2C19.",
+    "alerts": "QT/torsades, síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento e mania. Início/titulação bloqueados sem diagnóstico, bipolaridade, suicidabilidade, idade, fígado, QT/eletrólitos e interações.",
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=04766f1d-7a69-49ed-8fd3-1a6305505d47",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de serotonina",
+    "presentations": "Comprimidos 10, 20 e 40 mg; solução oral conforme mercado.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP2C19/3A4/2D6; meia-vida ~35 h.",
+    "pediatricDose": "Não aprovado em pediatria no rótulo FDA; suicidabilidade exige monitorização. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal leve/moderado; cautela na insuficiência grave.",
+    "hepaticDose": "Máximo 20 mg/dia.",
+    "adverseEffects": "Náusea, boca seca, sudorese, sonolência/insônia e disfunção sexual. Graves: QT/torsades, síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento e mania.",
+    "monitoring": "Humor/suicidabilidade, mania, Na, sangramento, ECG e K/Mg quando risco de QT.",
+    "administration": "VO 1x/dia, com ou sem alimento; retirada gradual.",
+    "preparation": "Comprimido/solução prontos; medir solução com dispositivo.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Avaliar risco-benefício; exposição tardia pode causar má adaptação neonatal e PPHN.",
+    "lactation": "Presente no leite; observar sedação, alimentação e ganho ponderal.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=04766f1d-7a69-49ed-8fd3-1a6305505d47",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/clarification-dosing-and-warning-recommendations-celexa"
     ]
   },
   "es": {
     "name": "Citalopram",
     "class": "Antidepresivo ISRS",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Cipramil",
-        "Procimax",
-        "Città",
-        "Citalor"
-      ],
-      "ar": [
-        "Cipramil",
-        "Humorap",
-        "Zentius",
-        "Citalopram Northia"
-      ]
-    },
-    "presentation": [
-      "Comprimido 10 mg",
-      "Comprimido 20 mg",
-      "Comprimido 40 mg",
-      "Solución oral 40 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Iniciar 20 mg VO 1 vez/día; habitual 20–40 mg/día.",
-      "idoso": "Adultos mayores o hepatopatía: máximo generalmente 20 mg/día.",
-      "maxDose": "Dosis máxima habitual: 40 mg/día; máximo 20 mg/día en adultos mayores, hepatopatía o riesgo de QT."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 10, 20 y 40 mg; solución oral según mercado.",
+    "dose": "20 mg VO 1 vez/día; tras ≥1 semana puede aumentar hasta 40 mg/día. Máximo 20 mg/día si >60 años, hepatopatía, metabolizador lento CYP2C19 o uso de inhibidor CYP2C19.",
     "doseKg": {
       "standard": "No se utiliza cálculo rutinario por kg en adultos.",
       "pediatric": "Pediatría: uso no rutinario; considerar solo con especialista.",
       "maxDose": "40 mg/día en adultos seleccionados"
     },
-    "indications": [
-      "Trastorno depresivo mayor",
-      "Trastorno de ansiedad generalizada",
-      "Trastorno de pánico",
-      "Trastorno obsesivo-compulsivo",
-      "Trastorno disfórico premenstrual",
-      "Síntomas depresivos asociados a enfermedades clínicas crónicas"
-    ],
+    "indications": "Trastorno depresivo mayor en adultos.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Inhibe selectivamente la recaptación de serotonina, aumentando serotonina en la hendidura sináptica.",
+    "mechanism": "Inhibidor selectivo de recaptación de serotonina. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Inicio de efecto clínico generalmente en 2–4 semanas; respuesta plena puede tardar 6–8 semanas.",
     "halfLife": "Vida media aproximada: 35 horas.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Boca seca",
-      "Somnolencia",
-      "Insomnio",
-      "Sudoración",
-      "Disfunción sexual"
-    ],
-    "dangerousAdverseEffects": [
-      "Prolongación del intervalo QT",
-      "Torsades de pointes en pacientes predispuestos",
-      "Síndrome serotoninérgico",
-      "Ideación suicida en jóvenes al inicio del tratamiento",
-      "Viraje maníaco/hipomaníaco",
-      "Hiponatremia/SIADH",
-      "Sangrados con AINEs/anticoagulantes"
-    ],
+    "commonAdverseEffects": "Náusea, boca seca, sudoración, somnolencia/insomnio y disfunción sexual.",
+    "dangerousAdverseEffects": "QT/torsades, síndrome serotoninérgico, suicidabilidad, hiponatremia, sangrado y manía.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad al citalopram",
-      "Uso concomitante con IMAO",
-      "Uso concomitante con pimozida",
-      "QT largo congénito o QT prolongado significativo",
-      "Trastorno bipolar sin estabilizador del ánimo"
-    ],
-    "interactions": [
-      "IMAO: riesgo de síndrome serotoninérgico",
-      "Pimozida: contraindicado por riesgo de arritmia/QT",
-      "Antiarrítmicos, macrólidos, quinolonas y antipsicóticos: riesgo de QT prolongado",
-      "Tramadol, linezolid, triptanes, litio: riesgo serotoninérgico",
-      "AINEs, AAS, anticoagulantes: mayor riesgo de sangrado"
-    ],
-    "alerts": [
-      "Evitar dosis superiores a 40 mg/día por riesgo de QT prolongado.",
-      "En adultos mayores, hepatopatía o riesgo cardíaco, generalmente no superar 20 mg/día.",
-      "Considerar ECG en pacientes con cardiopatía, QT prolongado o uso de fármacos que prolongan QT.",
-      "Corregir hipopotasemia e hipomagnesemia antes de usar en pacientes de riesgo.",
-      "No suspender abruptamente; reducir gradualmente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Citalopram Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO durante o en 14 días previos/posteriores, pimozida e hipersensibilidad.",
+    "interactions": "Serotonérgicos, fármacos que prolongan QT, anticoagulantes/AINE, omeprazol y otros inhibidores CYP2C19.",
+    "alerts": "QT/torsades, síndrome serotoninérgico, suicidabilidad, hiponatremia, sangrado y manía. Início/titulação bloqueados sem diagnóstico, bipolaridade, suicidabilidade, idade, fígado, QT/eletrólitos e interações.",
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=04766f1d-7a69-49ed-8fd3-1a6305505d47",
+    "pharmacologicClass": "Inhibidor selectivo de recaptación de serotonina",
+    "presentations": "Comprimidos 10, 20 y 40 mg; solución oral según mercado.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP2C19/3A4/2D6; semivida ~35 h.",
+    "pediatricDose": "No aprobado en pediatría en ficha FDA; suicidabilidad exige monitorización. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal leve/moderado; precaución en insuficiencia grave.",
+    "hepaticDose": "Máximo 20 mg/día.",
+    "adverseEffects": "Náusea, boca seca, sudoración, somnolencia/insomnio y disfunción sexual. Graves: QT/torsades, síndrome serotoninérgico, suicidabilidad, hiponatremia, sangrado y manía.",
+    "monitoring": "Ánimo/suicidabilidad, manía, Na, sangrado, ECG y K/Mg si riesgo de QT.",
+    "administration": "VO 1 vez/día, con o sin alimentos; retirada gradual.",
+    "preparation": "Comprimido/solución listos; medir solución con dispositivo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Valorar riesgo-beneficio; exposición tardía puede causar mala adaptación neonatal e HPPN.",
+    "lactation": "Presente en leche; vigilar sedación, alimentación y ganancia ponderal.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=04766f1d-7a69-49ed-8fd3-1a6305505d47",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/clarification-dosing-and-warning-recommendations-celexa"
     ]
   },
   "name": {
@@ -209,9 +117,21 @@
     "citalopram northia",
     "antidepressivo isrs"
   ],
-  "dataVersion": "clinical-data-v1-615eff40330210fd",
-  "clinicalContentSha256": "615eff40330210fd7f0fd2ff5d4ef9e4fb8e925c7b54a8c0c65d14621791a55c",
+  "dataVersion": "clinical-data-v1-3f302c5d852e3acd",
+  "clinicalContentSha256": "3f302c5d852e3acd51966e151d907210817a8c88b38dba1b384ef649e5491aae",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "citalopram.mcGoldClinicalV1",
+    "lote": "019",
+    "requiredFields": 33,
+    "approvedSha256": "f3daaf074fac609deb165ca960c4d9e2b0542783aa0df7b6e3a1969b29405217",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

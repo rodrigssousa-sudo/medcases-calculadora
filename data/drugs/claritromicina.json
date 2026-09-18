@@ -7,11 +7,9 @@
   "pt": {
     "name": "Claritromicina",
     "class": "Antibiótico macrolídeo",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Comprimidos e suspensão oral.",
-    "dose": "Adultos: 250–500 mg VO q12h conforme foco; CAP rotulada 250 mg q12h; H. pylori 500 mg q12h em combinação; MAC 500 mg q12h.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos IR/ER 250–500 mg e suspensão 125/250 mg por 5 mL.",
+    "dose": "250–500 mg VO a cada 12 h; ER 1 g 1x/dia em indicações selecionadas. Duração/foco orientados por cultura e guideline.",
     "doseKg": {
       "standard": "7,5 mg/kg por dose",
       "maxDose": "1 g/dia"
@@ -19,32 +17,12 @@
     "therapeuticRange": "Concentração dependente (AUC/MIC).",
     "dilution": "EV: diluir em SF 0,9% — nunca administrar em bólus.",
     "speed": "EV: infundir em 60 minutos.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Dor abdominal",
-      "Cefaleia"
-    ],
-    "dangerousAdverseEffects": [
-      "Torsades/QT prolongado",
-      "Hepatotoxicidade grave",
-      "Anafilaxia/SCAR",
-      "Toxicidade por colchicina"
-    ],
+    "commonAdverseEffects": "Náusea, diarreia, disgeusia e dor abdominal.",
+    "dangerousAdverseEffects": "QT/torsades, hepatotoxicidade, C. difficile, reação cutânea grave e miastenia agravada.",
     "risksByPatient": [],
-    "alerts": [
-      "QT/torsades",
-      "CYP3A4/P-gp",
-      "CrCl <30: reduzir 50%",
-      "Hepatotoxicidade",
-      "Interações com estatinas/colchicina"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
-    ],
-    "renalDose": "CrCl <30 mL/min: reduzir dose em 50%. Com atazanavir/ritonavir, ajustes adicionais podem ser necessários.",
+    "alerts": "QT/torsades, hepatotoxicidade, C. difficile, reação cutânea grave e miastenia agravada. Dose bloqueada sem foco/cultura, idade/peso, rim/fígado, QT e revisão completa de interações CYP3A4.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clarithromycin",
+    "renalDose": "ClCr <30: reduzir dose 50%; considerar interações e formulação.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "Sem alvo de nível sérico definido na prática clínica. Monitoração baseada em resposta clínica e ECG.",
@@ -78,49 +56,39 @@
         "Cisaprida, pimozida, terfenadina (risco de torsades de pointes fatal)"
       ]
     },
-    "pharmacologicClass": "Macrolídeo / inibidor CYP3A4 e P-gp",
-    "mechanism": "Liga-se ao 23S rRNA da subunidade 50S e inibe translocação/síntese proteica.",
-    "pharmacodynamics": "Atividade dependente de exposição; AUC/MIC contribui para eficácia. Resistência ocorre por metilação erm e efluxo mef.",
-    "pharmacokinetics": "Boa absorção oral, metabolização hepática a 14-OH-claritromicina; eliminação renal e hepática. Forte potencial de interações via CYP3A4/P-gp.",
-    "indications": "Infecções respiratórias e de pele por suscetíveis, erradicação de H. pylori em combinação e tratamento/profilaxia de MAC conforme indicação.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "Suspensão oral"
-    ],
-    "pediatricDose": "15 mg/kg/dia VO divididos q12h para várias infecções, máximo dose adulta; MAC 7,5 mg/kg q12h, máximo 500 mg/dose.",
-    "hepaticDose": "Sem ajuste em hepatopatia isolada com função renal normal; se insuficiência renal grave coexistir, reduzir/prolongar intervalo.",
-    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
-    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
-    "interactions": "Inibe CYP3A4/P-gp; revisar pimozida, simvastatina/lovastatina, ergotamínicos, colchicina e outros substratos.",
-    "monitoring": "ECG/eletrólitos em alto risco, função hepática se sintomas, função renal e interações.",
-    "administration": "VO; revisar interações antes de dosar.",
-    "preparation": "Reconstituir e agitar suspensão conforme fabricante.",
-    "infusionProtocol": "Não aplicável ao registro oral.",
-    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
-    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
-    "specialPopulations": "Idosos e pacientes com QT longo, hipocalemia/hipomagnesemia, bradicardia ou antiarrítmicos têm maior risco de torsades.",
-    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
-    "clinicalPearls": "Claritromicina gera interações importantes: simvastatina/lovastatina, colchicina em disfunção renal/hepática e múltiplos substratos CYP3A4.",
-    "guidelineRecommendations": "Em CAP usar macrolídeo apenas em cenários compatíveis com diretriz e resistência local. Para H. pylori evitar uso empírico quando resistência inviabilize o esquema.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Revisar toxicidades e interações"
-    ],
+    "pharmacologicClass": "Inibe síntese proteica bacteriana 50S",
+    "mechanism": "Inibe síntese proteica bacteriana 50S. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP3A4 a metabólito ativo; eliminação renal parcial.",
+    "indications": "Infecções por bactérias suscetíveis e esquemas para H. pylori/MAC conforme indicação.",
+    "presentations": "Comprimidos IR/ER 250–500 mg e suspensão 125/250 mg por 5 mL.",
+    "pediatricDose": "15 mg/kg/dia divididos a cada 12 h, máximo 1 g/dia, para indicações rotuladas; neonatos não estabelecidos. AUTOMATABLE=NO.",
+    "hepaticDose": "Cautela; hepatotoxicidade possível.",
+    "adverseEffects": "Náusea, diarreia, disgeusia e dor abdominal. Graves: QT/torsades, hepatotoxicidade, C. difficile, reação cutânea grave e miastenia agravada.",
+    "contraindications": "Hipersensibilidade a macrolídeos, história de icterícia/hepatite por claritromicina; múltiplas combinações CYP/QT contraindicadas.",
+    "interactions": "Forte inibidor CYP3A4: estatinas específicas, colchicina, anticoagulantes, antiarrítmicos e muitos outros; QT.",
+    "monitoring": "Resposta/culturas, fígado, rim, QT/eletrólitos, audição e interações.",
+    "administration": "IR com ou sem alimento; ER com alimento e engolir inteira.",
+    "preparation": "Reconstituir suspensão conforme fabricante; não refrigerar se rótulo assim orientar.",
+    "infusionProtocol": "Não aplicável às formas orais.",
+    "pregnancy": "Usar apenas quando benefício justificar; dados observacionais são conflitantes.",
+    "lactation": "Passa ao leite; observar efeitos GI/candidíase.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clarithromycin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-review-finds-potential-long-term-risks-antibiotic-clarithromycin-biaxin-patients-heart-disease"
     ]
   },
   "es": {
     "name": "Claritromicina",
     "class": "Antibiótico macrólido",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos y suspensión oral.",
-    "dose": "Adultos: 250–500 mg VO q12h según foco; CAP rotulada 250 mg q12h; H. pylori 500 mg q12h en combinación; MAC 500 mg q12h.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos IR/ER 250–500 mg y suspensión 125/250 mg por 5 mL.",
+    "dose": "250–500 mg VO cada 12 h; ER 1 g 1 vez/día en indicaciones seleccionadas. Duración/foco según cultivo y guía.",
     "doseKg": {
       "standard": "7,5 mg/kg por dosis",
       "maxDose": "1 g/día"
@@ -128,32 +96,12 @@
     "therapeuticRange": "Concentración dependiente (AUC/MIC).",
     "dilution": "EV: diluir en SF 0,9% — nunca administrar en bolo.",
     "speed": "EV: infundir en 60 minutos.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Dolor abdominal",
-      "Cefalea"
-    ],
-    "dangerousAdverseEffects": [
-      "Torsades/QT prolongado",
-      "Hepatotoxicidad grave",
-      "Anafilaxia/SCAR",
-      "Toxicidad por colchicina"
-    ],
+    "commonAdverseEffects": "Náusea, diarrea, disgeusia y dolor abdominal.",
+    "dangerousAdverseEffects": "QT/torsades, hepatotoxicidad, C. difficile, reacción cutánea grave y miastenia agravada.",
     "risksByPatient": [],
-    "alerts": [
-      "QT/torsades",
-      "CYP3A4/P-gp",
-      "ClCr <30: reducir 50%",
-      "Hepatotoxicidad",
-      "Interacciones con estatinas/colchicina"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
-    ],
-    "renalDose": "ClCr <30 mL/min: reducir dosis 50%. Con atazanavir/ritonavir pueden requerirse ajustes adicionales.",
+    "alerts": "QT/torsades, hepatotoxicidad, C. difficile, reacción cutánea grave y miastenia agravada. Dose bloqueada sem foco/cultura, idade/peso, rim/fígado, QT e revisão completa de interações CYP3A4.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clarithromycin",
+    "renalDose": "ClCr <30: reducir dosis 50%; considerar interacciones y formulación.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "Sin objetivo de nivel sérico definido en la práctica clínica. Monitoreo basado en respuesta clínica y ECG.",
@@ -187,39 +135,31 @@
         "Cisaprida, pimozida, terfenadina (riesgo de torsades de pointes fatal)"
       ]
     },
-    "pharmacologicClass": "Macrólido / inhibidor CYP3A4 y P-gp",
-    "mechanism": "Se une al 23S rRNA de subunidad 50S e inhibe translocación/síntesis proteica.",
-    "pharmacodynamics": "Actividad dependiente de exposición; AUC/MIC contribuye a eficacia. Resistencia por metilación erm y eflujo mef.",
-    "pharmacokinetics": "Buena absorción oral, metabolismo hepático a 14-OH-claritromicina; eliminación renal y hepática. Alto potencial de interacciones CYP3A4/P-gp.",
-    "indications": "Infecciones respiratorias y de piel por susceptibles, erradicación H. pylori en combinación y tratamiento/profilaxis MAC.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "Suspensión oral"
-    ],
-    "pediatricDose": "15 mg/kg/día VO divididos q12h, máximo dosis adulta; MAC 7,5 mg/kg q12h, máximo 500 mg/dosis.",
-    "hepaticDose": "Sin ajuste en hepatopatía aislada con función renal normal; si coexiste insuficiencia renal grave, reducir/prolongar intervalo.",
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
-    "interactions": "Inhibe CYP3A4/P-gp; revisar pimozida, simvastatina/lovastatina, ergotamínicos, colchicina y otros sustratos.",
-    "monitoring": "ECG/electrolitos en alto riesgo, función hepática si síntomas, función renal e interacciones.",
-    "administration": "VO; revisar interacciones antes de dosificar.",
-    "preparation": "Reconstituir y agitar suspensión según fabricante.",
-    "infusionProtocol": "No aplicable al registro oral.",
-    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
-    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
-    "specialPopulations": "Ancianos y pacientes con QT largo, hipoK/hipoMg, bradicardia o antiarrítmicos tienen mayor riesgo de torsades.",
-    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
-    "clinicalPearls": "Claritromicina genera interacciones importantes: simvastatina/lovastatina, colchicina con disfunción renal/hepática y múltiples sustratos CYP3A4.",
-    "guidelineRecommendations": "En CAP usar macrólido solo en escenarios compatibles con guía y resistencia local. Para H. pylori evitar uso empírico cuando la resistencia invalide el esquema.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Revisar toxicidades e interacciones"
-    ],
+    "pharmacologicClass": "Inhibe síntesis proteica bacteriana 50S",
+    "mechanism": "Inhibe síntesis proteica bacteriana 50S. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP3A4 a metabolito activo; eliminación renal parcial.",
+    "indications": "Infecciones por bacterias sensibles y esquemas para H. pylori/MAC según indicación.",
+    "presentations": "Comprimidos IR/ER 250–500 mg y suspensión 125/250 mg por 5 mL.",
+    "pediatricDose": "15 mg/kg/día divididos cada 12 h, máximo 1 g/día, para indicaciones autorizadas; neonatos no establecidos. AUTOMATABLE=NO.",
+    "hepaticDose": "Precaución; posible hepatotoxicidad.",
+    "adverseEffects": "Náusea, diarrea, disgeusia y dolor abdominal. Graves: QT/torsades, hepatotoxicidad, C. difficile, reacción cutánea grave y miastenia agravada.",
+    "contraindications": "Hipersensibilidad a macrólidos, antecedente de ictericia/hepatitis por claritromicina; múltiples combinaciones CYP/QT contraindicadas.",
+    "interactions": "Inhibidor fuerte CYP3A4: estatinas específicas, colchicina, anticoagulantes, antiarrítmicos y muchos otros; QT.",
+    "monitoring": "Respuesta/cultivos, hígado, riñón, QT/electrolitos, audición e interacciones.",
+    "administration": "IR con o sin alimentos; ER con alimento y tragar entera.",
+    "preparation": "Reconstituir suspensión según fabricante; no refrigerar si así indica la ficha.",
+    "infusionProtocol": "No aplicable a formas orales.",
+    "pregnancy": "Usar solo si beneficio justifica; datos observacionales conflictivos.",
+    "lactation": "Pasa a la leche; vigilar efectos GI/candidiasis.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de33ba3a-9df1-4076-8d5f-b603d2698096",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.cdc.gov/std/treatment-guidelines/default.htm"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clarithromycin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-review-finds-potential-long-term-risks-antibiotic-clarithromycin-biaxin-patients-heart-disease"
     ]
   },
   "name": {
@@ -235,9 +175,21 @@
     "claritromicina richet",
     "macrolideo"
   ],
-  "dataVersion": "clinical-data-v1-615eff40330210fd",
-  "clinicalContentSha256": "615eff40330210fd7f0fd2ff5d4ef9e4fb8e925c7b54a8c0c65d14621791a55c",
+  "dataVersion": "clinical-data-v1-3f302c5d852e3acd",
+  "clinicalContentSha256": "3f302c5d852e3acd51966e151d907210817a8c88b38dba1b384ef649e5491aae",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "claritromicina.mcGoldClinicalV1",
+    "lote": "019",
+    "requiredFields": 33,
+    "approvedSha256": "f3daaf074fac609deb165ca960c4d9e2b0542783aa0df7b6e3a1969b29405217",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

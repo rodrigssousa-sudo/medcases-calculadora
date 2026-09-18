@@ -6,12 +6,10 @@
   "colorTxt": null,
   "pt": {
     "name": "Clindamicina",
-    "class": "Lincosamida",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Cápsulas, solução oral e formulações IM/IV.",
-    "dose": "Adulto IV: 600–1200 mg/dia em 2–4 doses para infecções sérias; 1200–2700 mg/dia em 2–4 doses para mais graves; situações de ameaça à vida podem usar doses maiores sob supervisão. VO frequentemente 150–450 mg q6h conforme gravidade.",
+    "class": "Antibiótico lincosamida",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 75/150/300 mg; solução oral 75 mg/5 mL; injetável 150 mg/mL.",
+    "dose": "VO 150–450 mg a cada 6 h; IV/IM 600–2700 mg/dia divididos, podendo até 4800 mg/dia em infecções críticas selecionadas.",
     "doseKg": {
       "standard": "20–30 mg/kg/dia",
       "severe": "30–40 mg/kg/dia",
@@ -20,85 +18,45 @@
     "therapeuticRange": "Faixa habitual: 20–40 mg/kg/dia.",
     "dilution": "Diluir em SF 0,9% ou SG5% conforme protocolo institucional.",
     "speed": "Infundir em 30–60 minutos.",
-    "commonAdverseEffects": [
-      "Diarreia",
-      "Náusea",
-      "Dor abdominal",
-      "Rash"
-    ],
-    "dangerousAdverseEffects": [
-      "C. difficile/colite potencialmente fatal",
-      "Anafilaxia",
-      "SCAR",
-      "Hepatotoxicidade",
-      "Neutropenia"
-    ],
+    "commonAdverseEffects": "Diarreia, náusea, rash e flebite.",
+    "dangerousAdverseEffects": "Colite por C. difficile potencialmente fatal, anafilaxia, SCAR e hepatotoxicidade.",
     "risksByPatient": [],
-    "alerts": [
-      "IV adulto 600–1200 ou 1200–2700 mg/dia",
-      "Pediatria 20–40 mg/kg/dia",
-      "Neonato 15–20 mg/kg/dia",
-      "Concentração <=18 mg/mL",
-      "Velocidade <=30 mg/min"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
-      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
-      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
-    ],
-    "renalDose": "Geralmente não requer ajuste em insuficiência renal ou hemodiálise; monitorar cursos prolongados.",
-    "pharmacologicClass": "Lincosamida inibidora da subunidade ribossomal 50S",
-    "mechanism": "Liga-se à subunidade 50S e inibe elongação da síntese proteica; pode reduzir produção de toxinas em estreptococos/estafilococos.",
-    "pharmacodynamics": "Predominantemente bacteriostática; AUC/MIC relaciona-se à atividade. Resistência MLSB induzível deve ser pesquisada quando relevante.",
-    "pharmacokinetics": "Boa absorção oral e ampla distribuição tecidual, inclusive osso; metabolismo hepático e excreção biliar/renal.",
-    "indications": "Infecções graves por Gram-positivos e anaeróbios suscetíveis; uso oral/IV depende do foco. Importante como adjuvante antitoxina em síndromes estreptocócicas graves.",
-    "presentations": [
-      "150 mg/300 mg cápsulas conforme produto",
-      "solução oral",
-      "300/600/900 mg IV premix conforme produto"
-    ],
-    "pediatricDose": "Neonatos <1 mês: 15–20 mg/kg/dia em 3–4 doses. 1 mês–16 anos IV/IM: 20–40 mg/kg/dia em 3–4 doses; usar maior faixa em infecção mais grave.",
-    "hepaticDose": "Hepatopatia grave pode prolongar meia-vida; não há redução automática, mas monitorar enzimas e considerar alongar intervalo conforme resposta.",
-    "adverseEffects": "Clindamicina é um dos antibióticos mais associados a C. difficile; diarreia pode surgir durante ou após o tratamento.",
-    "contraindications": "Hipersensibilidade a clindamicina ou lincomicina.",
-    "interactions": "Antagonismo potencial com macrolídeos no sítio 50S; potencializa bloqueio neuromuscular.",
-    "monitoring": "Diarreia/C. difficile, função hepática/renal e hemograma em terapia prolongada; cultura e D-test para resistência MLSB quando aplicável.",
-    "administration": "VO ou IM/IV. Não administrar IV em bolus rápido.",
-    "preparation": "Diluir IV para concentração apropriada; formulações premix devem respeitar dose disponível.",
-    "infusionProtocol": "Concentração IV não deve exceder 18 mg/mL e velocidade não deve exceder 30 mg/min.",
-    "pregnancy": "Uso pode ser considerado quando claramente indicado; experiência clínica é ampla.",
-    "lactation": "Passa ao leite; observar diarreia, candidíase ou sangue nas fezes do lactente.",
-    "specialPopulations": "Dose pediátrica deve usar peso corporal total mesmo em obesidade segundo rótulos parenterais.",
-    "patientEducation": "Relatar diarreia aquosa/sanguinolenta mesmo semanas após terminar; não usar antidiarreicos por conta própria se suspeita de colite.",
-    "clinicalPearls": "Clindamicina combina cobertura anaeróbia/Gram-positiva com efeito antitoxina, mas o preço é um risco particularmente alto de C. difficile.",
-    "guidelineRecommendations": "Usar conforme foco e suscetibilidade; em infecção invasiva por estreptococo produtor de toxina, costuma ser adjuvante à terapia beta-lactâmica, não substituto isolado.",
-    "safetyFlags": [
-      "C. difficile alto risco",
-      "Antitoxina",
-      "IV máx 30 mg/min",
-      "Pediatria 20–40 mg/kg/dia",
-      "D-test MLSB"
-    ],
+    "alerts": "Colite por C. difficile potencialmente fatal, anafilaxia, SCAR e hepatotoxicidade. Dose/preparo bloqueados sem foco, cultura, idade/peso, via, concentração, fígado e risco de C. difficile.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clindamycin",
+    "renalDose": "Sem ajuste usual.",
+    "pharmacologicClass": "Inibe síntese proteica bacteriana 50S",
+    "mechanism": "Inibe síntese proteica bacteriana 50S. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Boa distribuição; metabolismo hepático; eliminação biliar/renal.",
+    "indications": "Infecções graves por bactérias anaeróbias e gram-positivas suscetíveis; formas tópicas/vaginais têm indicações próprias.",
+    "presentations": "Cápsulas 75/150/300 mg; solução oral 75 mg/5 mL; injetável 150 mg/mL.",
+    "pediatricDose": "VO 8–25 mg/kg/dia divididos; parenteral 20–40 mg/kg/dia conforme gravidade; neonatos exigem esquema próprio. AUTOMATABLE=NO.",
+    "hepaticDose": "Cautela e monitorização em doença grave; pode exigir redução.",
+    "adverseEffects": "Diarreia, náusea, rash e flebite. Graves: Colite por C. difficile potencialmente fatal, anafilaxia, SCAR e hepatotoxicidade.",
+    "contraindications": "Hipersensibilidade a clindamicina/lincomicina.",
+    "interactions": "Bloqueadores neuromusculares podem ser potencializados; eritromicina é antagonista in vitro.",
+    "monitoring": "Resposta/cultura, diarreia/C. difficile, hemograma, rim/fígado em uso prolongado.",
+    "administration": "Cápsulas com copo cheio de água; IV nunca em bolus.",
+    "preparation": "Diluir IV a concentração ≤18 mg/mL conforme rótulo.",
+    "infusionProtocol": "Não exceder 30 mg/min; 600 mg ≥20 min, 900 mg ≥30 min, 1200 mg ≥40 min.",
+    "pregnancy": "Usar quando indicada.",
+    "lactation": "Compatível em geral; observar diarreia/candidíase.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
-      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
-      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clindamycin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda-documents-regulatory-information"
     ]
   },
   "es": {
     "name": "Clindamicina",
-    "class": "Lincosamida",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Cápsulas, solución oral y formulaciones IM/IV.",
-    "dose": "Adulto IV: 600–1200 mg/día en 2–4 dosis; más grave 1200–2700 mg/día. VO frecuentemente 150–450 mg q6h según gravedad.",
+    "class": "Antibiótico lincosamida",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 75/150/300 mg; solución oral 75 mg/5 mL; inyectable 150 mg/mL.",
+    "dose": "VO 150–450 mg cada 6 h; IV/IM 600–2700 mg/día divididos, hasta 4800 mg/día en infecciones críticas seleccionadas.",
     "doseKg": {
       "standard": "20–30 mg/kg/día",
       "severe": "30–40 mg/kg/día",
@@ -107,75 +65,37 @@
     "therapeuticRange": "Rango habitual: 20–40 mg/kg/día.",
     "dilution": "Diluir en SF 0,9% o SG5% según protocolo institucional.",
     "speed": "Infundir en 30–60 minutos.",
-    "commonAdverseEffects": [
-      "Diarrea",
-      "Náuseas",
-      "Dolor abdominal",
-      "Rash"
-    ],
-    "dangerousAdverseEffects": [
-      "C. difficile/colitis potencialmente fatal",
-      "Anafilaxia",
-      "SCAR",
-      "Hepatotoxicidad",
-      "Neutropenia"
-    ],
+    "commonAdverseEffects": "Diarrea, náusea, erupción y flebitis.",
+    "dangerousAdverseEffects": "Colitis por C. difficile potencialmente fatal, anafilaxia, SCAR y hepatotoxicidad.",
     "risksByPatient": [],
-    "alerts": [
-      "IV adulto 600–1200 o 1200–2700 mg/día",
-      "Pediatría 20–40 mg/kg/día",
-      "Neonato 15–20 mg/kg/día",
-      "Concentración <=18 mg/mL",
-      "Velocidad <=30 mg/min"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
-      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
-      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
-    ],
-    "renalDose": "Generalmente sin ajuste en ERC/HD.",
-    "pharmacologicClass": "Lincosamida inhibidora de la subunidad 50S",
-    "mechanism": "Se une a 50S e inhibe elongación proteica; puede reducir producción de toxinas estreptocócicas/estafilocócicas.",
-    "pharmacodynamics": "Principalmente bacteriostática; AUC/MIC. Buscar resistencia MLSB inducible cuando corresponda.",
-    "pharmacokinetics": "Buena absorción oral, amplia distribución incluida ósea; metabolismo hepático y excreción biliar/renal.",
-    "indications": "Infecciones graves por Gram positivos/anaerobios susceptibles; papel adyuvante antitoxina en síndromes estreptocócicos graves.",
-    "presentations": [
-      "150/300 mg cápsulas",
-      "solución oral",
-      "300/600/900 mg IV según producto"
-    ],
-    "pediatricDose": "Neonatos <1 mes: 15–20 mg/kg/día en 3–4 dosis. 1 mes–16 años: 20–40 mg/kg/día en 3–4 dosis.",
-    "hepaticDose": "Hepatopatía grave puede prolongar semivida; monitorizar y ajustar intervalo clínicamente.",
-    "adverseEffects": "Es uno de los antibióticos más asociados a C. difficile.",
+    "alerts": "Colitis por C. difficile potencialmente fatal, anafilaxia, SCAR y hepatotoxicidad. Dose/preparo bloqueados sem foco, cultura, idade/peso, via, concentração, fígado e risco de C. difficile.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clindamycin",
+    "renalDose": "Sin ajuste usual.",
+    "pharmacologicClass": "Inhibe síntesis proteica bacteriana 50S",
+    "mechanism": "Inhibe síntesis proteica bacteriana 50S. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Buena distribución; metabolismo hepático; eliminación biliar/renal.",
+    "indications": "Infecciones graves por anaerobios y grampositivos sensibles; formas tópicas/vaginales tienen indicaciones propias.",
+    "presentations": "Cápsulas 75/150/300 mg; solución oral 75 mg/5 mL; inyectable 150 mg/mL.",
+    "pediatricDose": "VO 8–25 mg/kg/día divididos; parenteral 20–40 mg/kg/día según gravedad; neonatos requieren esquema propio. AUTOMATABLE=NO.",
+    "hepaticDose": "Precaución y control en enfermedad grave; puede requerir reducción.",
+    "adverseEffects": "Diarrea, náusea, erupción y flebitis. Graves: Colitis por C. difficile potencialmente fatal, anafilaxia, SCAR y hepatotoxicidad.",
     "contraindications": "Hipersensibilidad a clindamicina/lincomicina.",
-    "interactions": "Posible antagonismo con macrólidos y potenciación de bloqueo neuromuscular.",
-    "monitoring": "Diarrea/C. difficile, función hepática/renal, hemograma y D-test MLSB cuando aplique.",
-    "administration": "VO o IM/IV; no bolo IV rápido.",
-    "preparation": "Diluir IV apropiadamente.",
-    "infusionProtocol": "Concentración <=18 mg/mL y velocidad <=30 mg/min.",
-    "pregnancy": "Puede usarse si está claramente indicada.",
-    "lactation": "Pasa a leche; vigilar diarrea/candidiasis/sangre en heces.",
-    "specialPopulations": "Pediatría parenteral usa peso corporal total incluso en obesidad.",
-    "patientEducation": "Informar diarrea acuosa/sanguinolenta incluso semanas después.",
-    "clinicalPearls": "Aporta cobertura anaerobia/Gram positiva y efecto antitoxina, pero con riesgo especialmente alto de C. difficile.",
-    "guidelineRecommendations": "Usar según foco/susceptibilidad; en infección invasiva estreptocócica con toxina suele acompañar al beta-lactámico, no reemplazarlo.",
-    "safetyFlags": [
-      "C. difficile alto riesgo",
-      "Antitoxina",
-      "IV máx 30 mg/min",
-      "Pediatría 20–40 mg/kg/día",
-      "D-test MLSB"
-    ],
+    "interactions": "Bloqueantes neuromusculares pueden potenciarse; eritromicina es antagonista in vitro.",
+    "monitoring": "Respuesta/cultivo, diarrea/C. difficile, hemograma, riñón/hígado en uso prolongado.",
+    "administration": "Cápsulas con vaso lleno de agua; IV nunca en bolo.",
+    "preparation": "Diluir IV a concentración ≤18 mg/mL según ficha.",
+    "infusionProtocol": "No superar 30 mg/min; 600 mg ≥20 min, 900 mg ≥30 min, 1200 mg ≥40 min.",
+    "pregnancy": "Usar cuando esté indicada.",
+    "lactation": "Compatible en general; vigilar diarrea/candidiasis.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44fa506b-90ac-42de-831b-5f3f1a500fc0",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d",
-      "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections/",
-      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=clindamycin"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clindamycin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda-documents-regulatory-information"
     ]
   },
   "name": {
@@ -191,8 +111,8 @@
     "clindamicina richet",
     "lincosamida"
   ],
-  "dataVersion": "clinical-data-v1-615eff40330210fd",
-  "clinicalContentSha256": "615eff40330210fd7f0fd2ff5d4ef9e4fb8e925c7b54a8c0c65d14621791a55c",
+  "dataVersion": "clinical-data-v1-3f302c5d852e3acd",
+  "clinicalContentSha256": "3f302c5d852e3acd51966e151d907210817a8c88b38dba1b384ef649e5491aae",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",
@@ -461,5 +381,17 @@
         "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/050162s098s099lbl.pdf"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "clindamicina.mcGoldClinicalV1",
+    "lote": "019",
+    "requiredFields": 33,
+    "approvedSha256": "f3daaf074fac609deb165ca960c4d9e2b0542783aa0df7b6e3a1969b29405217",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

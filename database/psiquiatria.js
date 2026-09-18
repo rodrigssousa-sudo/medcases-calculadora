@@ -5687,3 +5687,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:buspirona:END */
+/* GOLD33_SELECTIVE:citalopram:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["citalopram"])throw new Error("GOLD33_MISSING_CANONICAL:citalopram");db["citalopram"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "019",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f3daaf074fac609deb165ca960c4d9e2b0542783aa0df7b6e3a1969b29405217",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Citalopram",
+    "class": "Antidepressivo ISRS",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de serotonina",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 10, 20 e 40 mg; solução oral conforme mercado.",
+    "presentations": "Comprimidos 10, 20 e 40 mg; solução oral conforme mercado.",
+    "mechanism": "Inibidor seletivo da recaptação de serotonina. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP2C19/3A4/2D6; meia-vida ~35 h.",
+    "indications": "Transtorno depressivo maior em adultos.",
+    "dose": "20 mg VO 1x/dia; após ≥1 semana pode aumentar até 40 mg/dia. Máximo 20 mg/dia se >60 anos, hepatopatia, metabolizador lento CYP2C19 ou uso de inibidor CYP2C19.",
+    "pediatricDose": "Não aprovado em pediatria no rótulo FDA; suicidabilidade exige monitorização. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal leve/moderado; cautela na insuficiência grave.",
+    "hepaticDose": "Máximo 20 mg/dia.",
+    "commonAdverseEffects": "Náusea, boca seca, sudorese, sonolência/insônia e disfunção sexual.",
+    "dangerousAdverseEffects": "QT/torsades, síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento e mania.",
+    "adverseEffects": "Náusea, boca seca, sudorese, sonolência/insônia e disfunção sexual. Graves: QT/torsades, síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento e mania.",
+    "contraindications": "IMAO durante ou nos 14 dias anteriores/posteriores, pimozida e hipersensibilidade.",
+    "interactions": "Serotonérgicos, fármacos que prolongam QT, anticoagulantes/AINE, omeprazol e outros inibidores CYP2C19.",
+    "monitoring": "Humor/suicidabilidade, mania, Na, sangramento, ECG e K/Mg quando risco de QT.",
+    "administration": "VO 1x/dia, com ou sem alimento; retirada gradual.",
+    "preparation": "Comprimido/solução prontos; medir solução com dispositivo.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Avaliar risco-benefício; exposição tardia pode causar má adaptação neonatal e PPHN.",
+    "lactation": "Presente no leite; observar sedação, alimentação e ganho ponderal.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "QT/torsades, síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento e mania. Início/titulação bloqueados sem diagnóstico, bipolaridade, suicidabilidade, idade, fígado, QT/eletrólitos e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=04766f1d-7a69-49ed-8fd3-1a6305505d47",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/clarification-dosing-and-warning-recommendations-celexa"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=04766f1d-7a69-49ed-8fd3-1a6305505d47"
+  },
+  "es": {
+    "name": "Citalopram",
+    "class": "Antidepresivo ISRS",
+    "pharmacologicClass": "Inhibidor selectivo de recaptación de serotonina",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 10, 20 y 40 mg; solución oral según mercado.",
+    "presentations": "Comprimidos 10, 20 y 40 mg; solución oral según mercado.",
+    "mechanism": "Inhibidor selectivo de recaptación de serotonina. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP2C19/3A4/2D6; semivida ~35 h.",
+    "indications": "Trastorno depresivo mayor en adultos.",
+    "dose": "20 mg VO 1 vez/día; tras ≥1 semana puede aumentar hasta 40 mg/día. Máximo 20 mg/día si >60 años, hepatopatía, metabolizador lento CYP2C19 o uso de inhibidor CYP2C19.",
+    "pediatricDose": "No aprobado en pediatría en ficha FDA; suicidabilidad exige monitorización. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal leve/moderado; precaución en insuficiencia grave.",
+    "hepaticDose": "Máximo 20 mg/día.",
+    "commonAdverseEffects": "Náusea, boca seca, sudoración, somnolencia/insomnio y disfunción sexual.",
+    "dangerousAdverseEffects": "QT/torsades, síndrome serotoninérgico, suicidabilidad, hiponatremia, sangrado y manía.",
+    "adverseEffects": "Náusea, boca seca, sudoración, somnolencia/insomnio y disfunción sexual. Graves: QT/torsades, síndrome serotoninérgico, suicidabilidad, hiponatremia, sangrado y manía.",
+    "contraindications": "IMAO durante o en 14 días previos/posteriores, pimozida e hipersensibilidad.",
+    "interactions": "Serotonérgicos, fármacos que prolongan QT, anticoagulantes/AINE, omeprazol y otros inhibidores CYP2C19.",
+    "monitoring": "Ánimo/suicidabilidad, manía, Na, sangrado, ECG y K/Mg si riesgo de QT.",
+    "administration": "VO 1 vez/día, con o sin alimentos; retirada gradual.",
+    "preparation": "Comprimido/solución listos; medir solución con dispositivo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Valorar riesgo-beneficio; exposición tardía puede causar mala adaptación neonatal e HPPN.",
+    "lactation": "Presente en leche; vigilar sedación, alimentación y ganancia ponderal.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "QT/torsades, síndrome serotoninérgico, suicidabilidad, hiponatremia, sangrado y manía. Início/titulação bloqueados sem diagnóstico, bipolaridade, suicidabilidade, idade, fígado, QT/eletrólitos e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=04766f1d-7a69-49ed-8fd3-1a6305505d47",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/clarification-dosing-and-warning-recommendations-celexa"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=04766f1d-7a69-49ed-8fd3-1a6305505d47"
+  }
+};})();
+/* GOLD33_SELECTIVE:citalopram:END */
