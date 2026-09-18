@@ -5,138 +5,92 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Buprenorfina/Naloxona (Suboxone®)",
-    "class": "Agonista Parcial μ + Antagonista κ / Antagonista Opioides (Naloxona) — Terapia de Manutenção",
+    "name": "Buprenorfina + naloxona",
+    "class": "Tratamento de TUO",
     "category": "dependencia_opioide",
-    "commercialNames": {
-      "br": [
-        "Suboxone (buprenorfina 8mg + naloxona 2mg SL)"
-      ],
-      "ar": [
-        "Suboxone",
-        "Buprenorfina/Naloxona Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimido/filme sublingual: Buprenorfina 2 mg + Naloxona 0,5 mg",
-      "Comprimido/filme sublingual: Buprenorfina 8 mg + Naloxona 2 mg"
-    ],
-    "dose": {
-      "inducao": "INDUÇÃO: Iniciar APENAS quando COWS ≥ 8–12 (sintomas de abstinência moderados). Dose inicial: 2–4 mg SL. Reavaliar em 1h — se sem sintomas de abstinência precipitada: adicionar 2–4 mg. D1 máximo: 8 mg. D2: titular até 8–16 mg.",
-      "manutencao": "MANUTENÇÃO: 16–24 mg SL 1×/dia (dose habitual). Range: 4–32 mg/dia. A naloxona sublingual tem baixa biodisponibilidade — presente apenas para dissuadir uso IV.",
-      "buprenorfina_mono": null
-    },
-    "mechanism": "Buprenorfina: agonista parcial μ (alta afinidade, dissociação lenta — bloqueia outros opioides) + antagonista κ (antidepressivo-like). Efeito \"teto\" para depressão respiratória — mais seguro que metadona em overdose. Naloxona: antagonista puro — ativa se injetada IV, precipitando abstinência aguda (dissuasão ao uso injetável).",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Filmes/comprimidos SL/bucais em proporção 4:1, p.ex. 2/0,5; 4/1; 8/2; 12/3 mg.",
+    "dose": "Indução após sinais objetivos de abstinência; titular para suprimir abstinência/craving. Manutenção comum 16/4 mg/dia; faixa e máximo dependem do produto.",
+    "mechanism": "Agonista parcial μ com antagonista opioide de baixa biodisponibilidade sublingual. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "halfLife": "Buprenorfina: meia-vida 24–60h (dose única). Permite administração 1×/dia ou a cada 48h.",
     "hepaticAdjustment": "Hepatopatia leve: sem ajuste necessário.",
     "risksByPatient": [],
-    "dangerousAdverseEffects": [
-      "ABSTINÊNCIA PRECIPITADA: iniciar antes de COWS ≥ 8 causa abstinência aguda grave (agitação, vômitos, cólicas, diaforese severa)",
-      "Depressão respiratória (raro — efeito teto, mas possível com BZD + álcool)",
-      "Hepatotoxicidade (monitorar TGO/TGP)"
-    ],
-    "contraindications": {
-      "absolute": [
-        "Hipersensibilidade à buprenorfina ou naloxona"
-      ],
-      "relative": [
-        "Gestação (usar monofármaco)",
-        "Hepatopatia grave (Child-Pugh C)",
-        "Uso concomitante de BZD ou álcool (risco de depressão respiratória)"
-      ]
-    },
-    "monitoring": [
-      "COWS antes de cada dose nas primeiras 48–72h",
-      "TGO/TGP — basal, 1 mês, 3 meses, depois semestralmente",
-      "Urinálise toxicológica mensal",
-      "Avaliação de saúde mental e risco de recaída"
-    ],
-    "safetyFlags": {
-      "bleedingRisk": false,
-      "renalHighRisk": false,
-      "hepaticCaution": true,
-      "antidoteAvailable": true,
-      "highAlertMedication": true,
-      "antidote": "Naloxona 0,4–2 mg IV/IM (repetir a cada 2–3 min). Altas doses podem ser necessárias dada a alta afinidade da buprenorfina ao receptor μ.",
-      "warning": "⚠️ NUNCA INICIAR SE COWS < 8: O erro clínico mais grave é induzir antes dos sintomas de abstinência — causa abstinência precipitada grave e destrói o vínculo terapêutico. Confirmar sempre última dose de opioide e tempo de abstinência."
-    },
+    "dangerousAdverseEffects": "Abstinência precipitada, depressão respiratória, hepatotoxicidade, dependência e exposição acidental.",
+    "contraindications": "Hipersensibilidade; cautela/contraindicações de opioide e insuficiência hepática conforme produto.",
+    "monitoring": "Abstinência, craving/uso, respiração/sedação, fígado, adesão/desvio, saúde oral e constipação.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "references": [
-      "SAMHSA 2021 — Medications for Opioid Use Disorder (TIP 63)",
-      "Wesson DR & Ling W. J Psychoactive Drugs 2003 — COWS scale",
-      "Mattick RP et al. Cochrane 2014 — Buprenorphine maintenance vs placebo",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buprenorphine+naloxone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.samhsa.gov/substance-use/treatment/options/medications-opioid-use-disorder"
+    ],
+    "pharmacologicClass": "Agonista parcial μ com antagonista opioide de baixa biodisponibilidade sublingual",
+    "presentations": "Filmes/comprimidos SL/bucais em proporção 4:1, p.ex. 2/0,5; 4/1; 8/2; 12/3 mg.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Buprenorfina tem meia-vida longa; naloxona SL tem baixa biodisponibilidade e maior impacto se injetada.",
+    "indications": "Tratamento do transtorno por uso de opioides como parte de plano completo.",
+    "pediatricDose": "Segurança/formulação dependem da idade; manejo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste usual; cautela em grave.",
+    "hepaticDose": "Evitar em insuficiência grave e pode não ser apropriada em moderada por maior exposição à naloxona.",
+    "commonAdverseEffects": "Cefaleia, náusea, constipação, sudorese, insônia e sintomas de abstinência.",
+    "adverseEffects": "Cefaleia, náusea, constipação, sudorese, insônia e sintomas de abstinência. Graves: Abstinência precipitada, depressão respiratória, hepatotoxicidade, dependência e exposição acidental.",
+    "interactions": "Benzodiazepínicos, álcool e outros depressores aumentam risco fatal; CYP3A4 e outros opioides exigem revisão.",
+    "administration": "SL/bucal conforme marca; não comer/beber até dissolver. Indução exige COWS/abstinência e tipo de opioide.",
+    "preparation": "Não cortar além do permitido; não engolir, mastigar ou injetar.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Buprenorfina isolada é frequentemente preferida na indução gestacional; decisão especializada.",
+    "lactation": "Buprenorfina geralmente compatível; monitorar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "alerts": "Abstinência precipitada, depressão respiratória, hepatotoxicidade, dependência e exposição acidental. Indução/manutenção bloqueadas sem tipo/último uso de opioide, abstinência objetiva, fígado, respiração e depressores SNC.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buprenorphine+naloxone"
   },
   "es": {
-    "name": "Buprenorfina/Naloxona (Suboxone®)",
-    "class": "Agonista Parcial μ + Antagonista κ / Antagonista Opioides (Naloxona) — Terapia de Mantenimiento",
+    "name": "Buprenorfina + naloxona",
+    "class": "Tratamiento de TUO",
     "category": "dependencia_opioide",
-    "commercialNames": {
-      "br": [
-        "Suboxone (buprenorfina 8mg + naloxona 2mg SL)"
-      ],
-      "ar": [
-        "Suboxone",
-        "Buprenorfina/Naloxona Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimido/film sublingual: Buprenorfina 2 mg + Naloxona 0,5 mg",
-      "Comprimido/film sublingual: Buprenorfina 8 mg + Naloxona 2 mg"
-    ],
-    "dose": {
-      "inducao": "INDUCCIÓN: Iniciar SOLO cuando COWS ≥ 8–12. Dosis inicial: 2–4 mg SL. Reevaluar en 1h. Día 1 máximo: 8 mg. Día 2: titular hasta 8–16 mg.",
-      "manutencao": "MANTENIMIENTO: 16–24 mg SL 1×/día (dosis habitual). Rango: 4–32 mg/día. Naloxona sublingual tiene baja biodisponibilidad — presente solo para disuadir uso IV.",
-      "buprenorfina_mono": null
-    },
-    "mechanism": "Buprenorfina: agonista parcial μ (alta afinidad, disociación lenta — bloquea otros opioides) + antagonista κ. Efecto \"techo\" para depresión respiratoria. Naloxona: antagonista puro — activa si inyectada IV, precipitando abstinencia aguda.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Películas/comprimidos SL/bucales en proporción 4:1, p. ej. 2/0,5; 4/1; 8/2; 12/3 mg.",
+    "dose": "Inducción tras signos objetivos de abstinencia; titular para suprimir abstinencia/craving. Mantenimiento común 16/4 mg/día; rango y máximo dependen del producto.",
+    "mechanism": "Agonista parcial μ con antagonista opioide de baja biodisponibilidad sublingual. El efecto debe interpretarse por indicación, formulación y exposición.",
     "halfLife": "Buprenorfina: vida media 24–60h (dosis única). Permite administración 1×/día o cada 48h.",
     "hepaticAdjustment": "Hepatopatía leve: sin ajuste necesario.",
     "risksByPatient": [],
-    "dangerousAdverseEffects": [
-      "ABSTINENCIA PRECIPITADA: iniciar antes de COWS ≥ 8 causa abstinencia aguda grave",
-      "Depresión respiratoria (raro — efecto techo, pero posible con BZD + alcohol)",
-      "Hepatotoxicidad (monitorizar TGO/TGP)"
-    ],
-    "contraindications": {
-      "absolute": [
-        "Hipersensibilidad a buprenorfina o naloxona"
-      ],
-      "relative": [
-        "Gestación (usar monofármaco)",
-        "Hepatopatía grave (Child-Pugh C)",
-        "Uso concomitante de BZD o alcohol"
-      ]
-    },
-    "monitoring": [
-      "COWS antes de cada dosis primeras 48–72h",
-      "TGO/TGP — basal, 1 mes, 3 meses, luego semestral",
-      "Urianálisis toxicológico mensual",
-      "Evaluación de salud mental y riesgo de recaída"
-    ],
-    "safetyFlags": {
-      "bleedingRisk": false,
-      "renalHighRisk": false,
-      "hepaticCaution": true,
-      "antidoteAvailable": true,
-      "highAlertMedication": true,
-      "antidote": "Naloxona 0,4–2 mg IV/IM (repetir cada 2–3 min). Altas dosis pueden necesitarse por la alta afinidad de buprenorfina al receptor μ.",
-      "warning": "⚠️ NUNCA INICIAR SI COWS < 8: El error clínico más grave es inducir antes de los síntomas de abstinencia — causa abstinencia precipitada grave."
-    },
+    "dangerousAdverseEffects": "Abstinencia precipitada, depresión respiratoria, hepatotoxicidad, dependencia y exposición accidental.",
+    "contraindications": "Hipersensibilidad; precauciones/contraindicaciones de opioide e insuficiencia hepática según producto.",
+    "monitoring": "Abstinencia, craving/uso, respiración/sedación, hígado, adherencia/desvío, salud oral y estreñimiento.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "references": [
-      "SAMHSA 2021 — Medications for Opioid Use Disorder (TIP 63)",
-      "Wesson DR & Ling W. J Psychoactive Drugs 2003 — COWS scale",
-      "Mattick RP et al. Cochrane 2014 — Buprenorphine maintenance vs placebo",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buprenorphine+naloxone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.samhsa.gov/substance-use/treatment/options/medications-opioid-use-disorder"
+    ],
+    "pharmacologicClass": "Agonista parcial μ con antagonista opioide de baja biodisponibilidad sublingual",
+    "presentations": "Películas/comprimidos SL/bucales en proporción 4:1, p. ej. 2/0,5; 4/1; 8/2; 12/3 mg.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Buprenorfina tiene semivida larga; naloxona SL baja biodisponibilidad y mayor impacto si se inyecta.",
+    "indications": "Tratamiento del trastorno por uso de opioides como parte de plan completo.",
+    "pediatricDose": "Seguridad/formulación dependen de edad; manejo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste habitual; precaución en grave.",
+    "hepaticDose": "Evitar en insuficiencia grave y puede no ser apropiada en moderada por mayor exposición a naloxona.",
+    "commonAdverseEffects": "Cefalea, náusea, estreñimiento, sudoración, insomnio y síntomas de abstinencia.",
+    "adverseEffects": "Cefalea, náusea, estreñimiento, sudoración, insomnio y síntomas de abstinencia. Graves: Abstinencia precipitada, depresión respiratoria, hepatotoxicidad, dependencia y exposición accidental.",
+    "interactions": "Benzodiacepinas, alcohol y otros depresores aumentan riesgo fatal; CYP3A4 y otros opioides requieren revisión.",
+    "administration": "SL/bucal según marca; no comer/beber hasta disolver. Inducción exige COWS/abstinencia y tipo de opioide.",
+    "preparation": "No cortar salvo permiso; no tragar, masticar ni inyectar.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Buprenorfina sola suele preferirse en inducción gestacional; decisión especializada.",
+    "lactation": "Buprenorfina generalmente compatible; vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "alerts": "Abstinencia precipitada, depresión respiratoria, hepatotoxicidad, dependencia y exposición accidental. Indução/manutenção bloqueadas sem tipo/último uso de opioide, abstinência objetiva, fígado, respiração e depressores SNC.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buprenorphine+naloxone"
   },
   "name": {
-    "pt": "Buprenorfina + Naloxona",
-    "es": "Buprenorfina + Naloxona"
+    "pt": "Buprenorfina + naloxona",
+    "es": "Buprenorfina + naloxona"
   },
   "keywords": [
     "buprenorfina_naloxona",
@@ -146,9 +100,21 @@
     "buprenorfina/naloxona generico",
     "agonista parcial μ + antagonista κ / antagonista opioides (naloxona) — terapia de manutencao"
   ],
-  "dataVersion": "clinical-data-v1-4f45375767b6e870",
-  "clinicalContentSha256": "4f45375767b6e8706d5987e0984794bd1957f8a226c466b1041c31104e06bca6",
+  "dataVersion": "clinical-data-v1-ab157ac020897e83",
+  "clinicalContentSha256": "ab157ac020897e833430cf9aaabf7dbaf2662ca80b6a384cf72f6ef33ddac4d0",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "toxicologia.js"
+  "sourceModule": "toxicologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/toxicologia.js",
+    "sourceField": "buprenorfina_naloxona.mcGoldClinicalV1",
+    "lote": "012",
+    "requiredFields": 33,
+    "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

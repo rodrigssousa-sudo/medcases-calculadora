@@ -953,3 +953,93 @@
   }); /* fim Object.assign ENDOCRINO_DRUGS_DB — BUILD 316 Lote 1+2+3+4+5 (Insulinas + NPH/Incretinas/Glucagon + Antidiabéticos Orais + Tireoide + Hipófise) */
 
 })();
+/* GOLD33_SELECTIVE:bromocriptina:START */
+;(function(){var db=window.ENDOCRINO_DRUGS_DB;if(!db||!db["bromocriptina"])throw new Error("GOLD33_MISSING_CANONICAL:bromocriptina");db["bromocriptina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "012",
+    "requiredFieldCount": 33,
+    "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Bromocriptina",
+    "class": "Agonista dopaminérgico",
+    "pharmacologicClass": "Agonista D2 derivado do ergot",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos/cápsulas 2,5/5 mg; formulação de liberação rápida para diabetes é distinta.",
+    "presentations": "Comprimidos/cápsulas 2,5/5 mg; formulação de liberação rápida para diabetes é distinta.",
+    "mechanism": "Agonista D2 derivado do ergot. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção oral baixa por primeira passagem; CYP3A4; meia-vida terminal ~15 h; eliminação fecal.",
+    "indications": "Hiperprolactinemia, acromegalia e doença de Parkinson; indicação/formulação varia.",
+    "dose": "Hiperprolactinemia: iniciar 1,25-2,5 mg/dia com alimento e titular; faixa usual 2,5-15 mg/dia. Acromegalia/Parkinson usam esquemas próprios.",
+    "pediatricDose": "Segurança depende da indicação; não automatizar dose pediátrica.",
+    "renalDose": "Sem ajuste tabelado; cautela em doença grave.",
+    "hepaticDose": "Metabolismo hepático; usar cautela e titular lentamente.",
+    "commonAdverseEffects": "Náusea, cefaleia, tontura, constipação e hipotensão ortostática.",
+    "dangerousAdverseEffects": "Síncope, psicose, impulsividade, vasoespasmo, fibrose e eventos cardiovasculares raros.",
+    "adverseEffects": "Náusea, cefaleia, tontura, constipação e hipotensão ortostática. Graves: Síncope, psicose, impulsividade, vasoespasmo, fibrose e eventos cardiovasculares raros.",
+    "contraindications": "Hipersensibilidade a ergot, hipertensão não controlada e, em algumas indicações, doença cardiovascular grave.",
+    "interactions": "Inibidores CYP3A4 elevam exposição; anti-hipertensivos, antagonistas dopaminérgicos e outros ergotamínicos exigem revisão.",
+    "monitoring": "Prolactina/objetivo clínico, PA ortostática, sintomas psiquiátricos, fibrose/valvulopatia em uso prolongado e fígado.",
+    "administration": "VO com alimento; iniciar à noite pode reduzir náusea/hipotensão.",
+    "preparation": "Comprimido pronto; não intercambiar formulações.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Pode restaurar fertilidade; uso gestacional exige indicação especializada.",
+    "lactation": "Suprime lactação; geralmente incompatível com objetivo de amamentar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Síncope, psicose, impulsividade, vasoespasmo, fibrose e eventos cardiovasculares raros. Dose bloqueada sem indicação, formulação, PA, gravidez/puerpério, fígado, psiquiatria e interações CYP3A4.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bromocriptine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/product/1202/smpc"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bromocriptine"
+  },
+  "es": {
+    "name": "Bromocriptina",
+    "class": "Agonista dopaminérgico",
+    "pharmacologicClass": "Agonista D2 derivado del ergot",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos/cápsulas 2,5/5 mg; formulación de liberación rápida para diabetes es distinta.",
+    "presentations": "Comprimidos/cápsulas 2,5/5 mg; formulación de liberación rápida para diabetes es distinta.",
+    "mechanism": "Agonista D2 derivado del ergot. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción oral baja por primer paso; CYP3A4; semivida terminal ~15 h; eliminación fecal.",
+    "indications": "Hiperprolactinemia, acromegalia y Parkinson; indicación/formulación variable.",
+    "dose": "Hiperprolactinemia: iniciar 1,25-2,5 mg/día con alimentos y titular; habitual 2,5-15 mg/día. Acromegalia/Parkinson usan esquemas propios.",
+    "pediatricDose": "Seguridad depende de indicación; no automatizar dosis pediátrica.",
+    "renalDose": "Sin ajuste tabulado; precaución en enfermedad grave.",
+    "hepaticDose": "Metabolismo hepático; usar precaución y titular lentamente.",
+    "commonAdverseEffects": "Náusea, cefalea, mareo, estreñimiento e hipotensión ortostática.",
+    "dangerousAdverseEffects": "Síncope, psicosis, impulsividad, vasoespasmo, fibrosis y eventos cardiovasculares raros.",
+    "adverseEffects": "Náusea, cefalea, mareo, estreñimiento e hipotensión ortostática. Graves: Síncope, psicosis, impulsividad, vasoespasmo, fibrosis y eventos cardiovasculares raros.",
+    "contraindications": "Hipersensibilidad a ergot, hipertensión no controlada y, en algunas indicaciones, enfermedad cardiovascular grave.",
+    "interactions": "Inhibidores CYP3A4 elevan exposición; antihipertensivos, antagonistas dopaminérgicos y otros ergotamínicos requieren revisión.",
+    "monitoring": "Prolactina/objetivo clínico, PA ortostática, síntomas psiquiátricos, fibrosis/valvulopatía en uso prolongado e hígado.",
+    "administration": "VO con alimentos; iniciar de noche puede reducir náusea/hipotensión.",
+    "preparation": "Comprimido listo; no intercambiar formulaciones.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Puede restaurar fertilidad; uso gestacional requiere indicación especializada.",
+    "lactation": "Suprime lactancia; generalmente incompatible con objetivo de amamantar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Síncope, psicosis, impulsividad, vasoespasmo, fibrosis y eventos cardiovasculares raros. Dose bloqueada sem indicação, formulação, PA, gravidez/puerpério, fígado, psiquiatria e interações CYP3A4.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bromocriptine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/product/1202/smpc"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bromocriptine"
+  }
+};})();
+/* GOLD33_SELECTIVE:bromocriptina:END */

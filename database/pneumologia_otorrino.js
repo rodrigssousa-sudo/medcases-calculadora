@@ -219,3 +219,93 @@
          Total: 5 fármacos */
 
 })();
+/* GOLD33_SELECTIVE:budesonida_formoterol:START */
+;(function(){var db=window.PNEUMOLOGIA_OTORRINO_DRUGS_DB;if(!db||!db["budesonida_formoterol"])throw new Error("GOLD33_MISSING_CANONICAL:budesonida_formoterol");db["budesonida_formoterol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "012",
+    "requiredFieldCount": 33,
+    "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Budesonida + formoterol",
+    "class": "ICS/LABA inalatório",
+    "pharmacologicClass": "Glicocorticoide + agonista beta-2 de longa ação",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "pMDI 80/4,5 ou 160/4,5 mcg; DPI com forças equivalentes de dose medida/liberada conforme mercado.",
+    "presentations": "pMDI 80/4,5 ou 160/4,5 mcg; DPI com forças equivalentes de dose medida/liberada conforme mercado.",
+    "mechanism": "Glicocorticoide + agonista beta-2 de longa ação. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Budesonida por CYP3A4; formoterol absorção rápida e meia-vida terminal ~10 h.",
+    "indications": "Manutenção da asma e DPOC; alguns produtos/jurisdições permitem manutenção e alívio (MART).",
+    "dose": "Symbicort pMDI: 2 inalações 2x/dia; força conforme idade/gravidade. DPOC: 160/4,5, 2 inalações 2x/dia. MART segue rótulo/protocolo local.",
+    "pediatricDose": "Asma ≥6 anos em algumas formulações; força e máximo por idade/produto. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal; experiência limitada em grave.",
+    "hepaticDose": "Cautela em doença grave.",
+    "commonAdverseEffects": "Candidíase, disfonia, tremor, palpitações e cefaleia.",
+    "dangerousAdverseEffects": "Broncoespasmo paradoxal, arritmia/hipocalemia, supressão adrenal e pneumonia.",
+    "adverseEffects": "Candidíase, disfonia, tremor, palpitações e cefaleia. Graves: Broncoespasmo paradoxal, arritmia/hipocalemia, supressão adrenal e pneumonia.",
+    "contraindications": "Hipersensibilidade; não iniciar como único tratamento de crise grave.",
+    "interactions": "Beta-bloqueadores, simpaticomiméticos, QT-prolongadores, diuréticos/xantinas e CYP3A4 fortes.",
+    "monitoring": "Controle, uso de resgate, técnica, FC/PA, K/glicose se risco, candidíase, crescimento e pneumonia na DPOC.",
+    "administration": "Inalar conforme dispositivo; enxaguar boca; pMDI pode usar espaçador quando autorizado.",
+    "preparation": "Agitar/cebar pMDI; DPI deve permanecer seco. Não converter doses entre dispositivos.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Manter controle da asma com menor dose eficaz.",
+    "lactation": "Exposição baixa; geralmente compatível.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Broncoespasmo paradoxal, arritmia/hipocalemia, supressão adrenal e pneumonia. Regime MART/manutenção bloqueado sem diagnóstico, idade, força, dispositivo, máximo local e plano de ação.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=SYMBICORT",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://ginasthma.org/strategy-report/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=SYMBICORT"
+  },
+  "es": {
+    "name": "Budesonida + formoterol",
+    "class": "ICS/LABA inhalado",
+    "pharmacologicClass": "Glucocorticoide + agonista beta-2 de larga acción",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "pMDI 80/4,5 o 160/4,5 mcg; DPI con fuerzas equivalentes de dosis medida/liberada según mercado.",
+    "presentations": "pMDI 80/4,5 o 160/4,5 mcg; DPI con fuerzas equivalentes de dosis medida/liberada según mercado.",
+    "mechanism": "Glucocorticoide + agonista beta-2 de larga acción. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Budesonida por CYP3A4; formoterol absorción rápida y semivida terminal ~10 h.",
+    "indications": "Mantenimiento de asma y EPOC; algunos productos/jurisdicciones permiten mantenimiento y alivio (MART).",
+    "dose": "Symbicort pMDI: 2 inhalaciones 2 veces/día; fuerza según edad/gravedad. EPOC: 160/4,5, 2 inhalaciones 2 veces/día. MART según ficha/protocolo local.",
+    "pediatricDose": "Asma ≥6 años en algunas formulaciones; fuerza y máximo por edad/producto. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal; experiencia limitada en grave.",
+    "hepaticDose": "Precaución en enfermedad grave.",
+    "commonAdverseEffects": "Candidiasis, disfonía, temblor, palpitaciones y cefalea.",
+    "dangerousAdverseEffects": "Broncoespasmo paradójico, arritmia/hipopotasemia, supresión suprarrenal y neumonía.",
+    "adverseEffects": "Candidiasis, disfonía, temblor, palpitaciones y cefalea. Graves: Broncoespasmo paradójico, arritmia/hipopotasemia, supresión suprarrenal y neumonía.",
+    "contraindications": "Hipersensibilidad; no iniciar como único tratamiento de crisis grave.",
+    "interactions": "Betabloqueantes, simpaticomiméticos, prolongadores QT, diuréticos/xantinas y CYP3A4 fuertes.",
+    "monitoring": "Control, rescate, técnica, FC/PA, K/glucosa si riesgo, candidiasis, crecimiento y neumonía en EPOC.",
+    "administration": "Inhalar según dispositivo; enjuagar boca; pMDI puede usar cámara cuando esté autorizada.",
+    "preparation": "Agitar/cebar pMDI; DPI debe mantenerse seco. No convertir dosis entre dispositivos.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Mantener control del asma con mínima dosis eficaz.",
+    "lactation": "Exposición baja; generalmente compatible.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Broncoespasmo paradójico, arritmia/hipopotasemia, supresión suprarrenal y neumonía. Regime MART/manutenção bloqueado sem diagnóstico, idade, força, dispositivo, máximo local e plano de ação.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=SYMBICORT",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://ginasthma.org/strategy-report/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=SYMBICORT"
+  }
+};})();
+/* GOLD33_SELECTIVE:budesonida_formoterol:END */

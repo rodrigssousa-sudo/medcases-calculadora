@@ -618,3 +618,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:acamprosato:END */
+/* GOLD33_SELECTIVE:buprenorfina_naloxona:START */
+;(function(){var db=window.TOXICOLOGIA_DRUGS_DB;if(!db||!db["buprenorfina_naloxona"])throw new Error("GOLD33_MISSING_CANONICAL:buprenorfina_naloxona");db["buprenorfina_naloxona"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "012",
+    "requiredFieldCount": 33,
+    "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Buprenorfina + naloxona",
+    "class": "Tratamento de TUO",
+    "pharmacologicClass": "Agonista parcial μ com antagonista opioide de baixa biodisponibilidade sublingual",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Filmes/comprimidos SL/bucais em proporção 4:1, p.ex. 2/0,5; 4/1; 8/2; 12/3 mg.",
+    "presentations": "Filmes/comprimidos SL/bucais em proporção 4:1, p.ex. 2/0,5; 4/1; 8/2; 12/3 mg.",
+    "mechanism": "Agonista parcial μ com antagonista opioide de baixa biodisponibilidade sublingual. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Buprenorfina tem meia-vida longa; naloxona SL tem baixa biodisponibilidade e maior impacto se injetada.",
+    "indications": "Tratamento do transtorno por uso de opioides como parte de plano completo.",
+    "dose": "Indução após sinais objetivos de abstinência; titular para suprimir abstinência/craving. Manutenção comum 16/4 mg/dia; faixa e máximo dependem do produto.",
+    "pediatricDose": "Segurança/formulação dependem da idade; manejo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste usual; cautela em grave.",
+    "hepaticDose": "Evitar em insuficiência grave e pode não ser apropriada em moderada por maior exposição à naloxona.",
+    "commonAdverseEffects": "Cefaleia, náusea, constipação, sudorese, insônia e sintomas de abstinência.",
+    "dangerousAdverseEffects": "Abstinência precipitada, depressão respiratória, hepatotoxicidade, dependência e exposição acidental.",
+    "adverseEffects": "Cefaleia, náusea, constipação, sudorese, insônia e sintomas de abstinência. Graves: Abstinência precipitada, depressão respiratória, hepatotoxicidade, dependência e exposição acidental.",
+    "contraindications": "Hipersensibilidade; cautela/contraindicações de opioide e insuficiência hepática conforme produto.",
+    "interactions": "Benzodiazepínicos, álcool e outros depressores aumentam risco fatal; CYP3A4 e outros opioides exigem revisão.",
+    "monitoring": "Abstinência, craving/uso, respiração/sedação, fígado, adesão/desvio, saúde oral e constipação.",
+    "administration": "SL/bucal conforme marca; não comer/beber até dissolver. Indução exige COWS/abstinência e tipo de opioide.",
+    "preparation": "Não cortar além do permitido; não engolir, mastigar ou injetar.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Buprenorfina isolada é frequentemente preferida na indução gestacional; decisão especializada.",
+    "lactation": "Buprenorfina geralmente compatível; monitorar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Abstinência precipitada, depressão respiratória, hepatotoxicidade, dependência e exposição acidental. Indução/manutenção bloqueadas sem tipo/último uso de opioide, abstinência objetiva, fígado, respiração e depressores SNC.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buprenorphine+naloxone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.samhsa.gov/substance-use/treatment/options/medications-opioid-use-disorder"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buprenorphine+naloxone"
+  },
+  "es": {
+    "name": "Buprenorfina + naloxona",
+    "class": "Tratamiento de TUO",
+    "pharmacologicClass": "Agonista parcial μ con antagonista opioide de baja biodisponibilidad sublingual",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Películas/comprimidos SL/bucales en proporción 4:1, p. ej. 2/0,5; 4/1; 8/2; 12/3 mg.",
+    "presentations": "Películas/comprimidos SL/bucales en proporción 4:1, p. ej. 2/0,5; 4/1; 8/2; 12/3 mg.",
+    "mechanism": "Agonista parcial μ con antagonista opioide de baja biodisponibilidad sublingual. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Buprenorfina tiene semivida larga; naloxona SL baja biodisponibilidad y mayor impacto si se inyecta.",
+    "indications": "Tratamiento del trastorno por uso de opioides como parte de plan completo.",
+    "dose": "Inducción tras signos objetivos de abstinencia; titular para suprimir abstinencia/craving. Mantenimiento común 16/4 mg/día; rango y máximo dependen del producto.",
+    "pediatricDose": "Seguridad/formulación dependen de edad; manejo especializado. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste habitual; precaución en grave.",
+    "hepaticDose": "Evitar en insuficiencia grave y puede no ser apropiada en moderada por mayor exposición a naloxona.",
+    "commonAdverseEffects": "Cefalea, náusea, estreñimiento, sudoración, insomnio y síntomas de abstinencia.",
+    "dangerousAdverseEffects": "Abstinencia precipitada, depresión respiratoria, hepatotoxicidad, dependencia y exposición accidental.",
+    "adverseEffects": "Cefalea, náusea, estreñimiento, sudoración, insomnio y síntomas de abstinencia. Graves: Abstinencia precipitada, depresión respiratoria, hepatotoxicidad, dependencia y exposición accidental.",
+    "contraindications": "Hipersensibilidad; precauciones/contraindicaciones de opioide e insuficiencia hepática según producto.",
+    "interactions": "Benzodiacepinas, alcohol y otros depresores aumentan riesgo fatal; CYP3A4 y otros opioides requieren revisión.",
+    "monitoring": "Abstinencia, craving/uso, respiración/sedación, hígado, adherencia/desvío, salud oral y estreñimiento.",
+    "administration": "SL/bucal según marca; no comer/beber hasta disolver. Inducción exige COWS/abstinencia y tipo de opioide.",
+    "preparation": "No cortar salvo permiso; no tragar, masticar ni inyectar.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Buprenorfina sola suele preferirse en inducción gestacional; decisión especializada.",
+    "lactation": "Buprenorfina generalmente compatible; vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Abstinencia precipitada, depresión respiratoria, hepatotoxicidad, dependencia y exposición accidental. Indução/manutenção bloqueadas sem tipo/último uso de opioide, abstinência objetiva, fígado, respiração e depressores SNC.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buprenorphine+naloxone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.samhsa.gov/substance-use/treatment/options/medications-opioid-use-disorder"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buprenorphine+naloxone"
+  }
+};})();
+/* GOLD33_SELECTIVE:buprenorfina_naloxona:END */

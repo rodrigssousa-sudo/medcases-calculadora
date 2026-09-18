@@ -6,277 +6,79 @@
   "colorTxt": "#1E3A5F",
   "pt": {
     "name": "Bumetanida",
-    "class": "Diurético de alça — Inibidor do cotransportador Na+/K+/2Cl- (NKCC2) · Alternativa à furosemida",
-    "pharmacologicClass": "Diurético de alça; inibidor do cotransportador Na-K-2Cl no ramo ascendente espesso.",
-    "mechanism": "Bloqueia NKCC2, aumentando excreção de sódio, cloro e água e promovendo perda de potássio, magnésio e cálcio.",
-    "pharmacodynamics": [
-      "Diurese rápida e potente com redução do volume intravascular.",
-      "Excesso de dose pode causar hipovolemia, hipotensão e distúrbios eletrolíticos."
-    ],
-    "pharmacokinetics": {
-      "Início": "VO 30–60 min; IV em minutos.",
-      "Duração": "Curta, cerca de 4–6 h.",
-      "Equivalência aproximada": "1 mg bumetanida ≈ 40 mg furosemida VO."
-    },
-    "indications": [
-      "Edema associado a insuficiência cardíaca, doença hepática ou renal, incluindo síndrome nefrótica, quando diurese é indicada."
-    ],
-    "commercialNames": {
-      "ar": [
-        "Bumetanida genérica"
-      ],
-      "br": [
-        "Burinax",
-        "Bumetanida genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 1 mg",
-      "Ampolas IV/IM 0,5 mg/mL"
-    ],
-    "presentations": [
-      "Comprimidos 0,5 mg, 1 mg e 2 mg.",
-      "Solução injetável IV/IM conforme fabricante."
-    ],
-    "dose": {
-      "VO": "0,5–2 mg como dose inicial usual; pode repetir em intervalos de 4–5 h até máximo 10 mg/dia.",
-      "IV/IM": "0,5–1 mg inicialmente; repetir conforme resposta/produto com monitorização."
-    },
-    "pediatricDose": "Segurança e eficácia em <18 anos não estabelecidas na bula.",
-    "renalDose": {
-      "Anúria": "Contraindicada.",
-      "DRC com diurese residual": "Sem tabela fixa de redução; titular por resposta, volume, eletrólitos e função renal."
-    },
-    "hepaticDose": {
-      "Cirrose/ascite": "Usar a menor dose necessária e titular com cautela.",
-      "Coma hepático": "Evitar/contraindicada conforme quadro e bula."
-    },
-    "commonAdverseEffects": [
-      "Poliúria",
-      "Tontura",
-      "Hipotensão",
-      "Hipocalemia",
-      "Hipomagnesemia",
-      "Hiponatremia",
-      "Aumento de creatinina",
-      "Cãibras musculares"
-    ],
-    "dangerousAdverseEffects": [
-      "Desidratação grave",
-      "Lesão renal aguda",
-      "Hipocalemia grave com arritmias",
-      "Hiponatremia grave",
-      "Ototoxicidade (rara — doses altas IV)",
-      "Alcalose metabólica",
-      "Encefalopatia hepática em cirrose vulnerável"
-    ],
-    "adverseEffects": [
-      "Hipocalemia, hiponatremia, hipomagnesemia, alcalose e desidratação.",
-      "Hipotensão, azotemia, hiperuricemia.",
-      "Ototoxicidade, sobretudo com doses parenterais altas/rápidas ou outros ototóxicos."
-    ],
-    "contraindications": [
-      "Anúria.",
-      "Coma hepático/depleção eletrolítica grave até correção.",
-      "Hipersensibilidade."
-    ],
-    "interactions": [
-      "Aminoglicosídeos/outros ototóxicos aumentam ototoxicidade.",
-      "Lítio pode acumular.",
-      "AINEs podem reduzir resposta e agravar função renal.",
-      "Hipocalemia aumenta risco com digoxina."
-    ],
-    "monitoring": [
-      "Peso, balanço hídrico e diurese.",
-      "PA, sódio, potássio, magnésio, bicarbonato, ureia/creatinina.",
-      "Audição se altas doses IV/ototóxicos."
-    ],
-    "administration": "VO ou IV/IM; retornar à via oral quando possível. Evitar horários que aumentem noctúria.",
-    "preparation": "Na forma injetável, seguir concentração/compatibilidade do produto e técnica asséptica.",
-    "infusionProtocol": "Não há infusão contínua padrão de bula; se IV, administrar conforme produto/protocolo e evitar velocidade excessiva.",
-    "pregnancy": "Usar apenas se benefício justificar risco; não tratar edema fisiológico da gestação.",
-    "lactation": "Dados limitados; diurese intensa pode reduzir produção láctea. Avaliar risco-benefício.",
-    "specialPopulations": {
-      "Idosos": "Maior risco de hipovolemia/eletrolitos.",
-      "Cirrose": "Titulação muito cautelosa.",
-      "DRC": "Não usar em anúria."
-    },
-    "patientEducation": [
-      "Monitorar peso quando orientado.",
-      "Procurar avaliação por síncope, câimbras, palpitações ou redução importante de urina."
-    ],
-    "clinicalPearls": [
-      "Dose deve ser guiada por congestão e resposta, não por faixa artificial de TFG.",
-      "Ototoxicidade é relevante na via parenteral."
-    ],
-    "guidelineRecommendations": [
-      "Diretrizes de IC recomendam diuréticos para aliviar congestão; não são terapia isolada de redução de mortalidade."
-    ],
-    "safetyFlags": {
-      "avBlockRisk": false,
-      "bradycardiaRisk": false,
-      "electrolyteRisk": true,
-      "hepatotoxicityRisk": false,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "hypotensionRisk": true,
-      "neurotoxicityRisk": false,
-      "ototoxicityRisk": true,
-      "pregnancyCaution": true,
-      "qtRisk": false,
-      "renalHighRisk": true,
-      "requiresCultureGuidance": false,
-      "warning": "Bumetanida é diurético de alça potente (1 mg ≈ 40 mg furosemida). Atenção a hipovolemia, lesão renal aguda, hipocalemia, hiponatremia e conversão correta de dose ao substituir furosemida."
-    },
-    "alerts": [
-      "Equivalência: 1 mg bumetanida ≈ 40 mg furosemida VO/IV — atenção ao converter doses.",
-      "Interações graves: digoxina (hipocalemia amplifica toxicidade); aminoglicosídeos (ototoxicidade/hipocalemia); lítio (toxicidade).",
-      "AINEs reduzem efeito diurético e aumentam risco de lesão renal — evitar associação.",
-      "Cirrose: cautela — risco de hipovolemia, encefalopatia hepática e síndrome hepatorrenal."
-    ],
+    "class": "Diurético de alça",
+    "pharmacologicClass": "Inibe cotransportador Na-K-2Cl na alça ascendente",
+    "mechanism": "Inibe cotransportador Na-K-2Cl na alça ascendente. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade 80-100%; início IV minutos/VO 30-60 min; meia-vida ~1-1,5 h; eliminação renal.",
+    "indications": "Edema associado a insuficiência cardíaca, doença hepática ou renal.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 0,5/1/2 mg; injeção 0,25 mg/mL.",
+    "presentations": "Comprimidos 0,5/1/2 mg; injeção 0,25 mg/mL.",
+    "dose": "VO: 0,5-2 mg uma vez, podendo repetir em 4-5 h; máximo 10 mg/dia. IV/IM: 0,5-1 mg, repetir em 2-3 h se necessário; máximo 10 mg/dia.",
+    "pediatricDose": "Dados limitados; doses por peso são especializadas. AUTOMATABLE=NO.",
+    "renalDose": "Pode ser usada em disfunção renal, mas anúria é contraindicação; resposta e toxicidade orientam dose.",
+    "hepaticDose": "Cautela em cirrose/ascite; corrigir eletrólitos lentamente.",
+    "commonAdverseEffects": "Poliúria, hipotensão, hipocalemia, hiponatremia, hiperuricemia e câimbras.",
+    "dangerousAdverseEffects": "Desidratação, arritmia, lesão renal, encefalopatia hepática, ototoxicidade e discrasias.",
+    "adverseEffects": "Poliúria, hipotensão, hipocalemia, hiponatremia, hiperuricemia e câimbras. Graves: Desidratação, arritmia, lesão renal, encefalopatia hepática, ototoxicidade e discrasias.",
+    "contraindications": "Anúria, coma hepático e depleção eletrolítica grave até correção.",
+    "interactions": "Aminoglicosídeos e outros ototóxicos, lítio, digoxina, AINE, anti-hipertensivos e fármacos que alteram K.",
+    "monitoring": "Peso, balanço, PA, Na/K/Mg, creatinina, ácido úrico, glicose e audição se altas doses.",
+    "administration": "VO pela manhã; IV lenta. Monitorar balanço e peso.",
+    "preparation": "Injeção pronta; confirmar concentração e compatibilidade.",
+    "infusionProtocol": "IV em 1-2 min conforme produto; evitar administração rápida.",
+    "pregnancy": "Usar se necessário; pode reduzir crescimento fetal por hipovolemia.",
+    "lactation": "Passa ao leite e pode reduzir lactação; monitorar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Desidratação, arritmia, lesão renal, encefalopatia hepática, ototoxicidade e discrasias. Dose bloqueada sem indicação, peso/balanço, PA, eletrólitos, função renal/hepática, via e ototóxicos.",
     "references": [
-      "DailyMed Bumetanide tablets 2026",
-      "DailyMed Bumetanide injection 2026",
-      "2022 AHA/ACC/HFSA Heart Failure Guideline"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bumetanide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/018225s024lbl.pdf"
     ],
-    "ref": "DailyMed bumetanide 2026; AHA/ACC/HFSA 2022."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bumetanide"
   },
   "es": {
     "name": "Bumetanida",
-    "class": "Diurético de asa — Inhibidor del cotransportador Na+/K+/2Cl- (NKCC2) · Alternativa a furosemida",
-    "pharmacologicClass": "Diurético de asa; inhibidor del cotransportador Na-K-2Cl en rama ascendente gruesa.",
-    "mechanism": "Bloquea NKCC2, aumentando excreción de sodio, cloro y agua y promoviendo pérdida de potasio, magnesio y calcio.",
-    "pharmacodynamics": [
-      "Diuresis rápida y potente con reducción del volumen intravascular.",
-      "Exceso de dosis puede causar hipovolemia, hipotensión y trastornos electrolíticos."
-    ],
-    "pharmacokinetics": {
-      "Inicio": "VO 30–60 min; IV en minutos.",
-      "Duración": "Corta, cerca de 4–6 h.",
-      "Equivalencia aproximada": "1 mg bumetanida ≈ 40 mg furosemida VO."
-    },
-    "indications": [
-      "Edema asociado a insuficiencia cardíaca, enfermedad hepática o renal, incluido síndrome nefrótico, cuando se indica diuresis."
-    ],
-    "commercialNames": {
-      "ar": [
-        "Bumetanida genérica"
-      ],
-      "br": [
-        "Burinax",
-        "Bumetanida genérica"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 1 mg",
-      "Ampollas IV/IM 0,5 mg/mL"
-    ],
-    "presentations": [
-      "Comprimidos 0,5 mg, 1 mg y 2 mg.",
-      "Solución inyectable IV/IM según fabricante."
-    ],
-    "dose": {
-      "VO": "0,5–2 mg como dosis inicial habitual; puede repetirse cada 4–5 h hasta máximo 10 mg/día.",
-      "IV/IM": "0,5–1 mg inicialmente; repetir según respuesta/producto con monitorización."
-    },
-    "pediatricDose": "Seguridad y eficacia en <18 años no establecidas en ficha.",
-    "renalDose": {
-      "Anuria": "Contraindicada.",
-      "ERC con diuresis residual": "Sin tabla fija de reducción; titular por respuesta, volumen, electrolitos y función renal."
-    },
-    "hepaticDose": {
-      "Cirrosis/ascitis": "Usar la menor dosis necesaria y titular con cautela.",
-      "Coma hepático": "Evitar/contraindicada según cuadro y ficha."
-    },
-    "commonAdverseEffects": [
-      "Poliuria",
-      "Mareos",
-      "Hipotensión",
-      "Hipocalemia",
-      "Hipomagnesemia",
-      "Hiponatremia",
-      "Aumento de creatinina",
-      "Calambres musculares"
-    ],
-    "dangerousAdverseEffects": [
-      "Deshidratación grave",
-      "Lesión renal aguda",
-      "Hipocalemia grave con arritmias",
-      "Hiponatremia grave",
-      "Ototoxicidad (rara — dosis altas IV)",
-      "Alcalosis metabólica",
-      "Encefalopatía hepática en cirrosis vulnerable"
-    ],
-    "adverseEffects": [
-      "Hipopotasemia, hiponatremia, hipomagnesemia, alcalosis y deshidratación.",
-      "Hipotensión, azotemia, hiperuricemia.",
-      "Ototoxicidad, sobre todo con dosis parenterales altas/rápidas u otros ototóxicos."
-    ],
-    "contraindications": [
-      "Anuria.",
-      "Coma hepático/depleción electrolítica grave hasta corrección.",
-      "Hipersensibilidad."
-    ],
-    "interactions": [
-      "Aminoglucósidos/otros ototóxicos aumentan ototoxicidad.",
-      "Litio puede acumular.",
-      "AINE pueden reducir respuesta y agravar función renal.",
-      "Hipopotasemia aumenta riesgo con digoxina."
-    ],
-    "monitoring": [
-      "Peso, balance hídrico y diuresis.",
-      "PA, sodio, potasio, magnesio, bicarbonato, urea/creatinina.",
-      "Audición con altas dosis IV/ototóxicos."
-    ],
-    "administration": "VO o IV/IM; volver a vía oral cuando sea posible. Evitar horarios que aumenten nocturia.",
-    "preparation": "En inyectable, seguir concentración/compatibilidad del producto y técnica aséptica.",
-    "infusionProtocol": "No existe infusión continua estándar de ficha; si IV, administrar según producto/protocolo y evitar velocidad excesiva.",
-    "pregnancy": "Usar solo si beneficio justifica riesgo; no tratar edema fisiológico del embarazo.",
-    "lactation": "Datos limitados; diuresis intensa puede reducir producción láctea. Evaluar riesgo-beneficio.",
-    "specialPopulations": {
-      "Adultos mayores": "Mayor riesgo de hipovolemia/electrolitos.",
-      "Cirrosis": "Titulación muy cautelosa.",
-      "ERC": "No usar en anuria."
-    },
-    "patientEducation": [
-      "Controlar peso cuando se indique.",
-      "Consultar por síncope, calambres, palpitaciones o reducción importante de orina."
-    ],
-    "clinicalPearls": [
-      "Dosis guiada por congestión y respuesta, no por banda artificial de TFG.",
-      "Ototoxicidad es relevante por vía parenteral."
-    ],
-    "guidelineRecommendations": [
-      "Guías de IC recomiendan diuréticos para aliviar congestión; no son terapia aislada de reducción de mortalidad."
-    ],
-    "safetyFlags": {
-      "avBlockRisk": false,
-      "bradycardiaRisk": false,
-      "electrolyteRisk": true,
-      "hepatotoxicityRisk": false,
-      "hypokalemiaRisk": true,
-      "hyponatremiaRisk": true,
-      "hypotensionRisk": true,
-      "neurotoxicityRisk": false,
-      "ototoxicityRisk": true,
-      "pregnancyCaution": true,
-      "qtRisk": false,
-      "renalHighRisk": true,
-      "requiresCultureGuidance": false,
-      "warning": "Bumetanida es diurético de asa potente (1 mg ≈ 40 mg furosemida). Atención a hipovolemia, lesión renal aguda, hipocalemia, hiponatremia y conversión correcta de dosis al sustituir furosemida."
-    },
-    "alerts": [
-      "Equivalencia: 1 mg bumetanida ≈ 40 mg furosemida VO/IV — atención al convertir dosis.",
-      "Interacciones graves: digoxina (hipocalemia amplifica toxicidad); aminoglucósidos (ototoxicidad/hipocalemia); litio (toxicidad).",
-      "AINEs reducen efecto diurético y aumentan riesgo de lesión renal — evitar asociación.",
-      "Cirrosis: precaución — riesgo de hipovolemia, encefalopatía hepática y síndrome hepatorrenal."
-    ],
+    "class": "Diurético de asa",
+    "pharmacologicClass": "Inhibe cotransportador Na-K-2Cl en asa ascendente",
+    "mechanism": "Inhibe cotransportador Na-K-2Cl en asa ascendente. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad 80-100%; inicio IV minutos/VO 30-60 min; semivida ~1-1,5 h; eliminación renal.",
+    "indications": "Edema asociado a insuficiencia cardíaca, enfermedad hepática o renal.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 0,5/1/2 mg; inyección 0,25 mg/mL.",
+    "presentations": "Comprimidos 0,5/1/2 mg; inyección 0,25 mg/mL.",
+    "dose": "VO: 0,5-2 mg una vez, puede repetirse en 4-5 h; máximo 10 mg/día. IV/IM: 0,5-1 mg, repetir en 2-3 h si precisa; máximo 10 mg/día.",
+    "pediatricDose": "Datos limitados; dosis por peso son especializadas. AUTOMATABLE=NO.",
+    "renalDose": "Puede usarse en disfunción renal, pero anuria es contraindicación; respuesta y toxicidad orientan dosis.",
+    "hepaticDose": "Precaución en cirrosis/ascitis; corregir electrolitos lentamente.",
+    "commonAdverseEffects": "Poliuria, hipotensión, hipopotasemia, hiponatremia, hiperuricemia y calambres.",
+    "dangerousAdverseEffects": "Deshidratación, arritmia, lesión renal, encefalopatía hepática, ototoxicidad y discrasias.",
+    "adverseEffects": "Poliuria, hipotensión, hipopotasemia, hiponatremia, hiperuricemia y calambres. Graves: Deshidratación, arritmia, lesión renal, encefalopatía hepática, ototoxicidad y discrasias.",
+    "contraindications": "Anuria, coma hepático y depleción electrolítica grave hasta corregir.",
+    "interactions": "Aminoglucósidos y otros ototóxicos, litio, digoxina, AINE, antihipertensivos y fármacos que alteran K.",
+    "monitoring": "Peso, balance, PA, Na/K/Mg, creatinina, ácido úrico, glucosa y audición si dosis altas.",
+    "administration": "VO por la mañana; IV lenta. Vigilar balance y peso.",
+    "preparation": "Inyección lista; confirmar concentración y compatibilidad.",
+    "infusionProtocol": "IV en 1-2 min según producto; evitar administración rápida.",
+    "pregnancy": "Usar si es necesario; puede reducir crecimiento fetal por hipovolemia.",
+    "lactation": "Pasa a leche y puede reducir lactancia; vigilar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Deshidratación, arritmia, lesión renal, encefalopatía hepática, ototoxicidad y discrasias. Dose bloqueada sem indicação, peso/balanço, PA, eletrólitos, função renal/hepática, via e ototóxicos.",
     "references": [
-      "DailyMed Bumetanide tablets 2026",
-      "DailyMed Bumetanide injection 2026",
-      "2022 AHA/ACC/HFSA Heart Failure Guideline"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bumetanide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/018225s024lbl.pdf"
     ],
-    "ref": "DailyMed bumetanide 2026; AHA/ACC/HFSA 2022."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bumetanide"
   },
   "name": {
     "pt": "Bumetanida",
@@ -288,19 +90,21 @@
     "bumetanida generica",
     "diuretico de alca — inibidor do cotransportador na+/k+/2cl- (nkcc2) · alternativa a furosemida"
   ],
-  "dataVersion": "clinical-data-v1-4f45375767b6e870",
-  "clinicalContentSha256": "4f45375767b6e8706d5987e0984794bd1957f8a226c466b1041c31104e06bca6",
+  "dataVersion": "clinical-data-v1-ab157ac020897e83",
+  "clinicalContentSha256": "ab157ac020897e833430cf9aaabf7dbaf2662ca80b6a384cf72f6ef33ddac4d0",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "bumetanida.mcGoldClinicalV1",
-    "group": "GOLD_GROUP02_CARDIO_10",
-    "review": "2026-09",
+    "lote": "012",
     "requiredFields": 33,
-    "contentSha256": "0a8a5c442374146611da335f52f7b9037b6dc27132a6bb2594ac4275e6f86bbf",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

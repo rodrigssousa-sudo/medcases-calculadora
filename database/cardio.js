@@ -62890,3 +62890,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:bosentana:END */
+/* GOLD33_SELECTIVE:bumetanida:START */
+;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["bumetanida"])throw new Error("GOLD33_MISSING_CANONICAL:bumetanida");db["bumetanida"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "012",
+    "requiredFieldCount": 33,
+    "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Bumetanida",
+    "class": "Diurético de alça",
+    "pharmacologicClass": "Inibe cotransportador Na-K-2Cl na alça ascendente",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 0,5/1/2 mg; injeção 0,25 mg/mL.",
+    "presentations": "Comprimidos 0,5/1/2 mg; injeção 0,25 mg/mL.",
+    "mechanism": "Inibe cotransportador Na-K-2Cl na alça ascendente. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade 80-100%; início IV minutos/VO 30-60 min; meia-vida ~1-1,5 h; eliminação renal.",
+    "indications": "Edema associado a insuficiência cardíaca, doença hepática ou renal.",
+    "dose": "VO: 0,5-2 mg uma vez, podendo repetir em 4-5 h; máximo 10 mg/dia. IV/IM: 0,5-1 mg, repetir em 2-3 h se necessário; máximo 10 mg/dia.",
+    "pediatricDose": "Dados limitados; doses por peso são especializadas. AUTOMATABLE=NO.",
+    "renalDose": "Pode ser usada em disfunção renal, mas anúria é contraindicação; resposta e toxicidade orientam dose.",
+    "hepaticDose": "Cautela em cirrose/ascite; corrigir eletrólitos lentamente.",
+    "commonAdverseEffects": "Poliúria, hipotensão, hipocalemia, hiponatremia, hiperuricemia e câimbras.",
+    "dangerousAdverseEffects": "Desidratação, arritmia, lesão renal, encefalopatia hepática, ototoxicidade e discrasias.",
+    "adverseEffects": "Poliúria, hipotensão, hipocalemia, hiponatremia, hiperuricemia e câimbras. Graves: Desidratação, arritmia, lesão renal, encefalopatia hepática, ototoxicidade e discrasias.",
+    "contraindications": "Anúria, coma hepático e depleção eletrolítica grave até correção.",
+    "interactions": "Aminoglicosídeos e outros ototóxicos, lítio, digoxina, AINE, anti-hipertensivos e fármacos que alteram K.",
+    "monitoring": "Peso, balanço, PA, Na/K/Mg, creatinina, ácido úrico, glicose e audição se altas doses.",
+    "administration": "VO pela manhã; IV lenta. Monitorar balanço e peso.",
+    "preparation": "Injeção pronta; confirmar concentração e compatibilidade.",
+    "infusionProtocol": "IV em 1-2 min conforme produto; evitar administração rápida.",
+    "pregnancy": "Usar se necessário; pode reduzir crescimento fetal por hipovolemia.",
+    "lactation": "Passa ao leite e pode reduzir lactação; monitorar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Desidratação, arritmia, lesão renal, encefalopatia hepática, ototoxicidade e discrasias. Dose bloqueada sem indicação, peso/balanço, PA, eletrólitos, função renal/hepática, via e ototóxicos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bumetanide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/018225s024lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bumetanide"
+  },
+  "es": {
+    "name": "Bumetanida",
+    "class": "Diurético de asa",
+    "pharmacologicClass": "Inhibe cotransportador Na-K-2Cl en asa ascendente",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 0,5/1/2 mg; inyección 0,25 mg/mL.",
+    "presentations": "Comprimidos 0,5/1/2 mg; inyección 0,25 mg/mL.",
+    "mechanism": "Inhibe cotransportador Na-K-2Cl en asa ascendente. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad 80-100%; inicio IV minutos/VO 30-60 min; semivida ~1-1,5 h; eliminación renal.",
+    "indications": "Edema asociado a insuficiencia cardíaca, enfermedad hepática o renal.",
+    "dose": "VO: 0,5-2 mg una vez, puede repetirse en 4-5 h; máximo 10 mg/día. IV/IM: 0,5-1 mg, repetir en 2-3 h si precisa; máximo 10 mg/día.",
+    "pediatricDose": "Datos limitados; dosis por peso son especializadas. AUTOMATABLE=NO.",
+    "renalDose": "Puede usarse en disfunción renal, pero anuria es contraindicación; respuesta y toxicidad orientan dosis.",
+    "hepaticDose": "Precaución en cirrosis/ascitis; corregir electrolitos lentamente.",
+    "commonAdverseEffects": "Poliuria, hipotensión, hipopotasemia, hiponatremia, hiperuricemia y calambres.",
+    "dangerousAdverseEffects": "Deshidratación, arritmia, lesión renal, encefalopatía hepática, ototoxicidad y discrasias.",
+    "adverseEffects": "Poliuria, hipotensión, hipopotasemia, hiponatremia, hiperuricemia y calambres. Graves: Deshidratación, arritmia, lesión renal, encefalopatía hepática, ototoxicidad y discrasias.",
+    "contraindications": "Anuria, coma hepático y depleción electrolítica grave hasta corregir.",
+    "interactions": "Aminoglucósidos y otros ototóxicos, litio, digoxina, AINE, antihipertensivos y fármacos que alteran K.",
+    "monitoring": "Peso, balance, PA, Na/K/Mg, creatinina, ácido úrico, glucosa y audición si dosis altas.",
+    "administration": "VO por la mañana; IV lenta. Vigilar balance y peso.",
+    "preparation": "Inyección lista; confirmar concentración y compatibilidad.",
+    "infusionProtocol": "IV en 1-2 min según producto; evitar administración rápida.",
+    "pregnancy": "Usar si es necesario; puede reducir crecimiento fetal por hipovolemia.",
+    "lactation": "Pasa a leche y puede reducir lactancia; vigilar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Deshidratación, arritmia, lesión renal, encefalopatía hepática, ototoxicidad y discrasias. Dose bloqueada sem indicação, peso/balanço, PA, eletrólitos, função renal/hepática, via e ototóxicos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bumetanide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/018225s024lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=bumetanide"
+  }
+};})();
+/* GOLD33_SELECTIVE:bumetanida:END */

@@ -5,188 +5,106 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Bupropiona",
-    "class": "Antidepressivo NDRI",
+    "name": "Bupropiona XL",
+    "class": "Antidepressivo aminocetona",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Wellbutrin XL",
-        "Zyban",
-        "Bup XL"
-      ],
-      "ar": [
-        "Wellbutrin XL",
-        "Odranal",
-        "Bupropión Gador"
-      ]
-    },
-    "presentation": [
-      "Comprimido SR 150 mg",
-      "Comprimido XL 150 mg",
-      "Comprimido XL 300 mg"
-    ],
-    "dose": {
-      "adulto": "Iniciar 150 mg/dia; após alguns dias aumentar para 300 mg/dia.",
-      "tabagismo": "Cessação tabágica: 150 mg/dia por 3 dias; depois 150 mg 12/12h.",
-      "maxDose": "Dose máxima usual: 450 mg/dia."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "XL 150/300 mg; SR e IR existem e não são intercambiáveis por frequência.",
+    "dose": "XL: iniciar 150 mg pela manhã; após 4 dias pode aumentar a 300 mg/dia. SAD: aumento após 7 dias.",
     "doseKg": {
       "standard": "Não se utiliza cálculo por kg em adultos.",
       "pediatric": "Uso pediátrico especializado.",
       "maxDose": "450 mg/dia"
     },
-    "indications": [
-      "Transtorno depressivo maior",
-      "Cessação do tabagismo",
-      "Depressão com fadiga",
-      "Depressão com hipersonia",
-      "Disfunção sexual induzida por ISRS",
-      "TDAH (off-label)",
-      "Transtorno afetivo sazonal",
-      "Depressão com ganho de peso"
-    ],
+    "indications": "Transtorno depressivo maior e prevenção de transtorno afetivo sazonal; cessação tabágica usa produto/regime distinto.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Inibe recaptação de dopamina e noradrenalina sem ação serotoninérgica significativa.",
+    "mechanism": "Inibe recaptação de noradrenalina/dopamina. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Efeito antidepressivo geralmente em 2–4 semanas.",
     "halfLife": "Vida média aproximada: 21 horas.",
-    "commonAdverseEffects": [
-      "Insônia",
-      "Ansiedade",
-      "Tremor",
-      "Boca seca",
-      "Cefaleia",
-      "Náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "Convulsões dose-dependentes",
-      "Hipertensão arterial",
-      "Virada maníaca",
-      "Ideação suicida"
-    ],
+    "commonAdverseEffects": "Boca seca, náusea, insônia, ansiedade, tremor, sudorese e palpitação.",
+    "dangerousAdverseEffects": "Convulsão dose-dependente, suicidabilidade, hipertensão, mania, psicose, glaucoma angular e SCAR.",
     "risksByPatient": [],
-    "contraindications": [
-      "Epilepsia",
-      "Bulimia nervosa",
-      "Anorexia nervosa",
-      "Uso concomitante com IMAO",
-      "Abstinência aguda de álcool ou benzodiazepínicos"
-    ],
-    "interactions": [
-      "IMAO",
-      "Antipsicóticos",
-      "Teofilina",
-      "Tramadol",
-      "Nicotina"
-    ],
-    "alerts": [
-      "Menor risco de disfunção sexual.",
-      "Pode auxiliar na perda de peso.",
-      "Evitar em pacientes com risco de convulsão.",
-      "Não utilizar em bulimia ou anorexia."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Bupropion Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Transtorno convulsivo, bulimia/anorexia, retirada abrupta de álcool/benzodiazepínicos/barbitúricos/antiepilépticos, IMAO em 14 dias e outro produto com bupropiona.",
+    "interactions": "Inibe CYP2D6; CYP2B6 altera exposição; fármacos que reduzem limiar convulsivo e dopaminérgicos aumentam toxicidade.",
+    "alerts": "Convulsão dose-dependente, suicidabilidade, hipertensão, mania, psicose, glaucoma angular e SCAR. Dose bloqueada sem formulação, diagnóstico, risco convulsivo/alimentar, retirada de sedativos/álcool, PA, rim/fígado e CYP2D6.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a435da9d-f6e8-4ddc-897d-8cd2bf777b21",
+    "pharmacologicClass": "Inibe recaptação de noradrenalina/dopamina",
+    "presentations": "XL 150/300 mg; SR e IR existem e não são intercambiáveis por frequência.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP2B6 a hidroxibupropiona ativa; meia-vida ~21 h, metabólitos mais longos.",
+    "pediatricDose": "Segurança/eficácia antidepressiva pediátrica não estabelecida; alerta de suicidabilidade. AUTOMATABLE=NO.",
+    "renalDose": "eGFR <90: considerar reduzir dose/frequência e monitorar acúmulo.",
+    "hepaticDose": "Child-Pugh 7-15: máximo XL 150 mg em dias alternados; leve: considerar redução.",
+    "adverseEffects": "Boca seca, náusea, insônia, ansiedade, tremor, sudorese e palpitação. Graves: Convulsão dose-dependente, suicidabilidade, hipertensão, mania, psicose, glaucoma angular e SCAR.",
+    "monitoring": "Humor/suicidabilidade, PA, sono, peso, mania, convulsões e função renal/hepática.",
+    "administration": "VO pela manhã; engolir XL inteira; não duplicar dose esquecida.",
+    "preparation": "Não triturar, dividir ou mastigar XL.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados não mostram grande aumento consistente de malformações; individualizar.",
+    "lactation": "Passa ao leite; observar irritabilidade, sono e eventos neurológicos.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a435da9d-f6e8-4ddc-897d-8cd2bf777b21",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/018644s064lbl.pdf"
     ]
   },
   "es": {
-    "name": "Bupropión",
-    "class": "Antidepresivo NDRI",
+    "name": "Bupropión XL",
+    "class": "Antidepresivo aminocetona",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Wellbutrin XL",
-        "Zyban",
-        "Bup XL"
-      ],
-      "ar": [
-        "Wellbutrin XL",
-        "Odranal",
-        "Bupropión Gador"
-      ]
-    },
-    "presentation": [
-      "Comprimido SR 150 mg",
-      "Comprimido XL 150 mg",
-      "Comprimido XL 300 mg"
-    ],
-    "dose": {
-      "adulto": "Iniciar 150 mg/día; tras algunos días aumentar a 300 mg/día.",
-      "tabagismo": "Cesación tabáquica: 150 mg/día por 3 días; luego 150 mg cada 12 h.",
-      "maxDose": "Dosis máxima habitual: 450 mg/día."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "XL 150/300 mg; SR e IR existen y no son intercambiables por frecuencia.",
+    "dose": "XL: iniciar 150 mg por la mañana; tras 4 días puede aumentar a 300 mg/día. TAE: aumento tras 7 días.",
     "doseKg": {
       "standard": "No se utiliza cálculo por kg en adultos.",
       "pediatric": "Uso pediátrico especializado.",
       "maxDose": "450 mg/día"
     },
-    "indications": [
-      "Trastorno depresivo mayor",
-      "Cesación tabáquica",
-      "Depresión con fatiga",
-      "Depresión con hipersomnia",
-      "Disfunción sexual inducida por ISRS",
-      "TDAH (off-label)",
-      "Trastorno afectivo estacional",
-      "Depresión con aumento de peso"
-    ],
+    "indications": "Trastorno depresivo mayor y prevención de trastorno afectivo estacional; cesación tabáquica usa producto/régimen distinto.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Inhibe la recaptación de dopamina y noradrenalina sin acción serotoninérgica significativa.",
+    "mechanism": "Inhibe recaptación de noradrenalina/dopamina. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Efecto antidepresivo generalmente en 2–4 semanas.",
     "halfLife": "Vida media aproximada: 21 horas.",
-    "commonAdverseEffects": [
-      "Insomnio",
-      "Ansiedad",
-      "Temblor",
-      "Boca seca",
-      "Cefalea",
-      "Náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "Convulsiones dosis dependientes",
-      "Hipertensión arterial",
-      "Viraje maníaco",
-      "Ideación suicida"
-    ],
+    "commonAdverseEffects": "Boca seca, náusea, insomnio, ansiedad, temblor, sudoración y palpitación.",
+    "dangerousAdverseEffects": "Convulsión dosis-dependiente, suicidabilidad, hipertensión, manía, psicosis, glaucoma angular y SCAR.",
     "risksByPatient": [],
-    "contraindications": [
-      "Epilepsia",
-      "Bulimia nerviosa",
-      "Anorexia nerviosa",
-      "Uso concomitante con IMAO",
-      "Abstinencia aguda de alcohol o benzodiazepinas"
-    ],
-    "interactions": [
-      "IMAO",
-      "Antipsicóticos",
-      "Teofilina",
-      "Tramadol",
-      "Nicotina"
-    ],
-    "alerts": [
-      "Menor riesgo de disfunción sexual.",
-      "Puede ayudar en la pérdida de peso.",
-      "Evitar en pacientes con riesgo de convulsiones.",
-      "No utilizar en bulimia o anorexia."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Bupropion Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Trastorno convulsivo, bulimia/anorexia, retirada brusca de alcohol/benzodiacepinas/barbitúricos/antiepilépticos, IMAO en 14 días y otro producto con bupropión.",
+    "interactions": "Inhibe CYP2D6; CYP2B6 altera exposición; fármacos que bajan umbral convulsivo y dopaminérgicos aumentan toxicidad.",
+    "alerts": "Convulsión dosis-dependiente, suicidabilidad, hipertensión, manía, psicosis, glaucoma angular y SCAR. Dose bloqueada sem formulação, diagnóstico, risco convulsivo/alimentar, retirada de sedativos/álcool, PA, rim/fígado e CYP2D6.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a435da9d-f6e8-4ddc-897d-8cd2bf777b21",
+    "pharmacologicClass": "Inhibe recaptación de noradrenalina/dopamina",
+    "presentations": "XL 150/300 mg; SR e IR existen y no son intercambiables por frecuencia.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP2B6 a hidroxibupropión activo; semivida ~21 h, metabolitos más largos.",
+    "pediatricDose": "Seguridad/eficacia antidepresiva pediátrica no establecida; alerta de suicidabilidad. AUTOMATABLE=NO.",
+    "renalDose": "eGFR <90: considerar reducir dosis/frecuencia y vigilar acumulación.",
+    "hepaticDose": "Child-Pugh 7-15: máximo XL 150 mg en días alternos; leve: considerar reducción.",
+    "adverseEffects": "Boca seca, náusea, insomnio, ansiedad, temblor, sudoración y palpitación. Graves: Convulsión dosis-dependiente, suicidabilidad, hipertensión, manía, psicosis, glaucoma angular y SCAR.",
+    "monitoring": "Ánimo/suicidabilidad, PA, sueño, peso, manía, convulsiones y función renal/hepática.",
+    "administration": "VO por la mañana; tragar XL entera; no duplicar dosis olvidada.",
+    "preparation": "No triturar, dividir ni masticar XL.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos no muestran gran aumento consistente de malformaciones; individualizar.",
+    "lactation": "Pasa a leche; vigilar irritabilidad, sueño y eventos neurológicos.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a435da9d-f6e8-4ddc-897d-8cd2bf777b21",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/018644s064lbl.pdf"
     ]
   },
   "name": {
-    "pt": "Bupropiona",
-    "es": "Bupropión"
+    "pt": "Bupropiona XL",
+    "es": "Bupropión XL"
   },
   "keywords": [
     "bupropiona",
@@ -198,9 +116,21 @@
     "bupropion gador",
     "antidepressivo ndri"
   ],
-  "dataVersion": "clinical-data-v1-4f45375767b6e870",
-  "clinicalContentSha256": "4f45375767b6e8706d5987e0984794bd1957f8a226c466b1041c31104e06bca6",
+  "dataVersion": "clinical-data-v1-ab157ac020897e83",
+  "clinicalContentSha256": "ab157ac020897e833430cf9aaabf7dbaf2662ca80b6a384cf72f6ef33ddac4d0",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "bupropiona.mcGoldClinicalV1",
+    "lote": "012",
+    "requiredFields": 33,
+    "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }
