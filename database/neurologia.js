@@ -11818,3 +11818,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:etossuximida:END */
+/* GOLD33_SELECTIVE:felbamato:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["felbamato"])throw new Error("GOLD33_MISSING_CANONICAL:felbamato");db["felbamato"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "033",
+    "requiredFieldCount": 33,
+    "approvedSha256": "2acfdef995a909e916ea91d994b7b20e7dcbe8969b789b3749b57c0f035b63e9",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Felbamato",
+    "class": "Antiepiléptico",
+    "pharmacologicClass": "Modulação GABA e antagonismo NMDA",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 400/600 mg e suspensão 600 mg/5 mL.",
+    "presentations": "Comprimidos 400/600 mg e suspensão 600 mg/5 mL.",
+    "mechanism": "Modulação GABA e antagonismo NMDA. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático e eliminação renal; meia-vida ~20 h.",
+    "indications": "Epilepsia grave refratária; monoterapia/adjunto em adultos e Lennox-Gastaut pediátrico quando risco justifica.",
+    "dose": "Adultos: iniciar 1200 mg/dia em 3–4 doses; titular até 3600 mg/dia conforme resposta e redução de anticonvulsivantes concomitantes.",
+    "pediatricDose": "Lennox-Gastaut 2–14 anos: iniciar 15 mg/kg/dia, titular até 45 mg/kg/dia, máximo 3600 mg/dia. AUTOMATABLE=NO.",
+    "renalDose": "Reduzir dose na insuficiência renal.",
+    "hepaticDose": "Contraindicado em história de disfunção hepática; interromper diante de lesão.",
+    "commonAdverseEffects": "Náusea, insônia, cefaleia, anorexia, tontura e vômito.",
+    "dangerousAdverseEffects": "Anemia aplástica, insuficiência hepática, suicidabilidade e SCAR.",
+    "adverseEffects": "Náusea, insônia, cefaleia, anorexia, tontura e vômito. Graves: Anemia aplástica, insuficiência hepática, suicidabilidade e SCAR.",
+    "contraindications": "História de discrasia sanguínea ou disfunção hepática; hipersensibilidade a carbamatos.",
+    "interactions": "Fenitoína, valproato, carbamazepina e fenobarbital exigem ajustes/níveis.",
+    "monitoring": "Hemograma/reticulócitos, função hepática frequente, crises, suicidabilidade e níveis/interações.",
+    "administration": "VO com ou sem alimento; retirada gradual salvo emergência.",
+    "preparation": "Confirmar produto, força, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anemia aplástica, insuficiência hepática, suicidabilidade e SCAR. Uso bloqueado sem epilepsia refratária documentada, consentimento de risco, hemograma/fígado basais, função renal e plano de interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=felbamate",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/020189s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=felbamate"
+  },
+  "es": {
+    "name": "Felbamato",
+    "class": "Antiepiléptico",
+    "pharmacologicClass": "Modulación GABA y antagonismo NMDA",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 400/600 mg y suspensión 600 mg/5 mL.",
+    "presentations": "Comprimidos 400/600 mg y suspensión 600 mg/5 mL.",
+    "mechanism": "Modulación GABA y antagonismo NMDA. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático y eliminación renal; semivida ~20 h.",
+    "indications": "Epilepsia grave refractaria; monoterapia/adyuvante en adultos y Lennox-Gastaut pediátrico cuando el riesgo lo justifica.",
+    "dose": "Adultos: iniciar 1200 mg/día en 3–4 dosis; titular hasta 3600 mg/día según respuesta y reducción de antiepilépticos concomitantes.",
+    "pediatricDose": "Lennox-Gastaut 2–14 años: iniciar 15 mg/kg/día, titular hasta 45 mg/kg/día, máximo 3600 mg/día. AUTOMATABLE=NO.",
+    "renalDose": "Reducir dosis en insuficiencia renal.",
+    "hepaticDose": "Contraindicado con antecedente de disfunción hepática; suspender ante lesión.",
+    "commonAdverseEffects": "Náusea, insomnio, cefalea, anorexia, mareo y vómito.",
+    "dangerousAdverseEffects": "Anemia aplásica, insuficiencia hepática, suicidabilidad y SCAR.",
+    "adverseEffects": "Náusea, insomnio, cefalea, anorexia, mareo y vómito. Graves: Anemia aplásica, insuficiencia hepática, suicidabilidad y SCAR.",
+    "contraindications": "Antecedente de discrasia sanguínea o disfunción hepática; hipersensibilidad a carbamatos.",
+    "interactions": "Fenitoína, valproato, carbamazepina y fenobarbital requieren ajustes/niveles.",
+    "monitoring": "Hemograma/reticulocitos, función hepática frecuente, crisis, suicidabilidad y niveles/interacciones.",
+    "administration": "VO con o sin alimentos; retirada gradual salvo emergencia.",
+    "preparation": "Confirmar producto, dosis, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anemia aplásica, insuficiencia hepática, suicidabilidad y SCAR. Uso bloqueado sem epilepsia refratária documentada, consentimento de risco, hemograma/fígado basais, função renal e plano de interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=felbamate",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/020189s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=felbamate"
+  }
+};})();
+/* GOLD33_SELECTIVE:felbamato:END */

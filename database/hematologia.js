@@ -1304,3 +1304,93 @@ Object.assign(window.HEMATOLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:emicizumabe:END */
+/* GOLD33_SELECTIVE:fator_viia:START */
+;(function(){var db=window.HEMATOLOGIA_DRUGS_DB;if(!db||!db["fator_viia"])throw new Error("GOLD33_MISSING_CANONICAL:fator_viia");db["fator_viia"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "033",
+    "requiredFieldCount": 33,
+    "approvedSha256": "2acfdef995a909e916ea91d994b7b20e7dcbe8969b789b3749b57c0f035b63e9",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fator VIIa recombinante",
+    "class": "Agente hemostático",
+    "pharmacologicClass": "Ativa fator X na superfície plaquetária",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Pó liofilizado IV em frascos de múltiplas potências; confirmar produto e unidades.",
+    "presentations": "Pó liofilizado IV em frascos de múltiplas potências; confirmar produto e unidades.",
+    "mechanism": "Ativa fator X na superfície plaquetária. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Meia-vida curta e depuração variável com idade e sangramento.",
+    "indications": "Episódios hemorrágicos e perioperatório em hemofilia com inibidores, deficiência congênita de FVII e indicações específicas do produto.",
+    "dose": "Hemofilia com inibidor: 90 microgramas/kg IV a cada 2 h até hemostasia, depois espaçar conforme resposta; outras indicações usam regimes distintos.",
+    "pediatricDose": "Dose por kg e indicação especializada; AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste definido.",
+    "hepaticDose": "Sem ajuste definido.",
+    "commonAdverseEffects": "Febre, cefaleia, reação local, náusea e alteração pressórica.",
+    "dangerousAdverseEffects": "Trombose arterial/venosa, IAM, AVC, embolia pulmonar e anafilaxia.",
+    "adverseEffects": "Febre, cefaleia, reação local, náusea e alteração pressórica. Graves: Trombose arterial/venosa, IAM, AVC, embolia pulmonar e anafilaxia.",
+    "contraindications": "Hipersensibilidade ao produto/componentes; contraindicações específicas variam.",
+    "interactions": "Concentrados de complexo protrombínico e outros pró-coagulantes podem elevar risco trombótico.",
+    "monitoring": "Hemostasia clínica, sangramento, trombose, parâmetros laboratoriais orientadores e consumo.",
+    "administration": "Reconstituir e administrar IV em bolus lento, conforme produto; equipe especializada.",
+    "preparation": "Confirmar produto, força, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Trombose arterial/venosa, IAM, AVC, embolia pulmonar e anafilaxia. Dose e repetição bloqueadas sem produto, indicação, peso, local/gravidade do sangramento, inibidores e risco trombótico.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=coagulation+factor+viia+recombinant",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/103404s013lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=coagulation+factor+viia+recombinant"
+  },
+  "es": {
+    "name": "Factor VIIa recombinante",
+    "class": "Agente hemostático",
+    "pharmacologicClass": "Activa factor X en superficie plaquetaria",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Polvo liofilizado IV en viales de múltiples potencias; confirmar producto y unidades.",
+    "presentations": "Polvo liofilizado IV en viales de múltiples potencias; confirmar producto y unidades.",
+    "mechanism": "Activa factor X en superficie plaquetaria. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Semivida corta y depuración variable con edad y sangrado.",
+    "indications": "Episodios hemorrágicos y perioperatorio en hemofilia con inhibidores, deficiencia congénita de FVII e indicaciones específicas del producto.",
+    "dose": "Hemofilia con inhibidor: 90 microgramos/kg IV cada 2 h hasta hemostasia, luego espaciar según respuesta; otras indicaciones usan pautas distintas.",
+    "pediatricDose": "Dosis por kg e indicación especializada; AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste definido.",
+    "hepaticDose": "Sin ajuste definido.",
+    "commonAdverseEffects": "Fiebre, cefalea, reacción local, náusea y cambio de presión.",
+    "dangerousAdverseEffects": "Trombosis arterial/venosa, IAM, ictus, embolia pulmonar y anafilaxia.",
+    "adverseEffects": "Fiebre, cefalea, reacción local, náusea y cambio de presión. Graves: Trombosis arterial/venosa, IAM, ictus, embolia pulmonar y anafilaxia.",
+    "contraindications": "Hipersensibilidad al producto/componentes; contraindicaciones específicas varían.",
+    "interactions": "Complejos protrombínicos y otros procoagulantes pueden aumentar riesgo trombótico.",
+    "monitoring": "Hemostasia clínica, sangrado, trombosis, parámetros de laboratorio orientativos y consumo.",
+    "administration": "Reconstituir y administrar IV en bolo lento, según producto; equipo especializado.",
+    "preparation": "Confirmar producto, dosis, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Trombosis arterial/venosa, IAM, ictus, embolia pulmonar y anafilaxia. Dose e repetição bloqueadas sem produto, indicação, peso, local/gravidade do sangramento, inibidores e risco trombótico.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=coagulation+factor+viia+recombinant",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/103404s013lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=coagulation+factor+viia+recombinant"
+  }
+};})();
+/* GOLD33_SELECTIVE:fator_viia:END */

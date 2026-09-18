@@ -5868,3 +5868,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:etoricoxibe:END */
+/* GOLD33_SELECTIVE:febuxostate:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["febuxostate"])throw new Error("GOLD33_MISSING_CANONICAL:febuxostate");db["febuxostate"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "033",
+    "requiredFieldCount": 33,
+    "approvedSha256": "2acfdef995a909e916ea91d994b7b20e7dcbe8969b789b3749b57c0f035b63e9",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Febuxostate",
+    "class": "Redutor de urato",
+    "pharmacologicClass": "Inibidor de xantina oxidase",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 40/80 mg.",
+    "presentations": "Comprimidos 40/80 mg.",
+    "mechanism": "Inibidor de xantina oxidase. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo por UGT/CYP; eliminação renal e fecal de metabólitos.",
+    "indications": "Tratamento crônico da hiperuricemia da gota quando alopurinol é inadequado, conforme rótulo regional.",
+    "dose": "Iniciar 40 mg VO/dia; aumentar a 80 mg/dia se ácido úrico permanecer ≥6 mg/dL após 2 semanas.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Disfunção renal grave: limitar a 40 mg/dia no rótulo FDA.",
+    "hepaticDose": "Leve/moderada: sem ajuste; grave: cautela/dados insuficientes.",
+    "commonAdverseEffects": "Alteração hepática, náusea, artralgia, rash e crises de gota.",
+    "dangerousAdverseEffects": "Morte cardiovascular, hepatotoxicidade, SCAR e anafilaxia.",
+    "adverseEffects": "Alteração hepática, náusea, artralgia, rash e crises de gota. Graves: Morte cardiovascular, hepatotoxicidade, SCAR e anafilaxia.",
+    "contraindications": "Uso concomitante de azatioprina ou mercaptopurina.",
+    "interactions": "Azatioprina/mercaptopurina contraindicadas; teofilina e fármacos de xantina oxidase exigem cautela.",
+    "monitoring": "Ácido úrico, crises, fígado, rim e eventos cardiovasculares.",
+    "administration": "VO 1x/dia com ou sem alimento; usar profilaxia de crise no início conforme plano.",
+    "preparation": "Confirmar produto, força, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Morte cardiovascular, hepatotoxicidade, SCAR e anafilaxia. Início bloqueado sem falha/intolerância a alopurinol, risco CV, urato, fígado/rim e revisão de azatioprina/mercaptopurina.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=febuxostat",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021856s013lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=febuxostat"
+  },
+  "es": {
+    "name": "Febuxostat",
+    "class": "Reductor de urato",
+    "pharmacologicClass": "Inhibidor de xantina oxidasa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 40/80 mg.",
+    "presentations": "Comprimidos 40/80 mg.",
+    "mechanism": "Inhibidor de xantina oxidasa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo por UGT/CYP; eliminación renal y fecal de metabolitos.",
+    "indications": "Tratamiento crónico de hiperuricemia por gota cuando alopurinol no es adecuado, según ficha regional.",
+    "dose": "Iniciar 40 mg VO/día; aumentar a 80 mg/día si ácido úrico permanece ≥6 mg/dL tras 2 semanas.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Insuficiencia renal grave: limitar a 40 mg/día en ficha FDA.",
+    "hepaticDose": "Leve/moderada: sin ajuste; grave: precaución/datos insuficientes.",
+    "commonAdverseEffects": "Alteración hepática, náusea, artralgia, erupción y crisis de gota.",
+    "dangerousAdverseEffects": "Muerte cardiovascular, hepatotoxicidad, SCAR y anafilaxia.",
+    "adverseEffects": "Alteración hepática, náusea, artralgia, erupción y crisis de gota. Graves: Muerte cardiovascular, hepatotoxicidad, SCAR y anafilaxia.",
+    "contraindications": "Uso concomitante de azatioprina o mercaptopurina.",
+    "interactions": "Azatioprina/mercaptopurina contraindicadas; teofilina y fármacos de xantina oxidasa requieren precaución.",
+    "monitoring": "Ácido úrico, crisis, hígado, riñón y eventos cardiovasculares.",
+    "administration": "VO 1 vez/día con o sin alimentos; usar profilaxis de crisis al inicio según plan.",
+    "preparation": "Confirmar producto, dosis, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Muerte cardiovascular, hepatotoxicidad, SCAR y anafilaxia. Início bloqueado sem falha/intolerância a alopurinol, risco CV, urato, fígado/rim e revisão de azatioprina/mercaptopurina.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=febuxostat",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021856s013lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=febuxostat"
+  }
+};})();
+/* GOLD33_SELECTIVE:febuxostate:END */

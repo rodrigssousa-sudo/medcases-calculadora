@@ -1476,3 +1476,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:doxazosina_lp:END */
+/* GOLD33_SELECTIVE:felodipina:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB;if(!db||!db["felodipina"])throw new Error("GOLD33_MISSING_CANONICAL:felodipina");db["felodipina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "033",
+    "requiredFieldCount": 33,
+    "approvedSha256": "2acfdef995a909e916ea91d994b7b20e7dcbe8969b789b3749b57c0f035b63e9",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Felodipina",
+    "class": "Anti-hipertensivo",
+    "pharmacologicClass": "Bloqueador de canal de cálcio diidropiridínico",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos de liberação prolongada 2,5/5/10 mg.",
+    "presentations": "Comprimidos de liberação prolongada 2,5/5/10 mg.",
+    "mechanism": "Bloqueador de canal de cálcio diidropiridínico. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo extenso CYP3A4; meia-vida ~25 h.",
+    "indications": "Hipertensão arterial.",
+    "dose": "Iniciar 5 mg VO 1x/dia; faixa 2,5–10 mg/dia, ajustar em intervalos ≥2 semanas.",
+    "pediatricDose": "Não estabelecido no rótulo adulto consultado. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste usual.",
+    "hepaticDose": "Iniciar 2,5 mg/dia e titular com cautela em hepatopatia.",
+    "commonAdverseEffects": "Edema periférico, cefaleia, rubor, tontura e palpitação.",
+    "dangerousAdverseEffects": "Hipotensão, síncope, piora de angina/taquicardia e reação hepática rara.",
+    "adverseEffects": "Edema periférico, cefaleia, rubor, tontura e palpitação. Graves: Hipotensão, síncope, piora de angina/taquicardia e reação hepática rara.",
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "Inibidores/indutores CYP3A4 e grapefruit; outros anti-hipertensivos aumentam hipotensão.",
+    "monitoring": "PA, edema, frequência cardíaca, sintomas de angina e hiperplasia gengival.",
+    "administration": "Engolir inteira; em jejum ou com refeição leve e consistente; não triturar.",
+    "preparation": "Confirmar produto, força, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipotensão, síncope, piora de angina/taquicardia e reação hepática rara. Titulação bloqueada sem PA, fígado, idade, sintomas coronarianos, edema e revisão CYP3A4/grapefruit.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=felodipine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/019834s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=felodipine"
+  },
+  "es": {
+    "name": "Felodipino",
+    "class": "Antihipertensivo",
+    "pharmacologicClass": "Bloqueador de canales de calcio dihidropiridínico",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos de liberación prolongada 2,5/5/10 mg.",
+    "presentations": "Comprimidos de liberación prolongada 2,5/5/10 mg.",
+    "mechanism": "Bloqueador de canales de calcio dihidropiridínico. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo extenso CYP3A4; semivida ~25 h.",
+    "indications": "Hipertensión arterial.",
+    "dose": "Iniciar 5 mg VO 1 vez/día; rango 2,5–10 mg/día, ajustar en intervalos ≥2 semanas.",
+    "pediatricDose": "No establecido en la ficha adulta consultada. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste habitual.",
+    "hepaticDose": "Iniciar 2,5 mg/día y titular con precaución en hepatopatía.",
+    "commonAdverseEffects": "Edema periférico, cefalea, rubor, mareo y palpitación.",
+    "dangerousAdverseEffects": "Hipotensión, síncope, empeoramiento de angina/taquicardia y reacción hepática rara.",
+    "adverseEffects": "Edema periférico, cefalea, rubor, mareo y palpitación. Graves: Hipotensión, síncope, empeoramiento de angina/taquicardia y reacción hepática rara.",
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Inhibidores/inductores CYP3A4 y pomelo; otros antihipertensivos aumentan hipotensión.",
+    "monitoring": "PA, edema, frecuencia cardíaca, síntomas de angina e hiperplasia gingival.",
+    "administration": "Tragar entero; en ayunas o con comida ligera y consistente; no triturar.",
+    "preparation": "Confirmar producto, dosis, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipotensión, síncope, empeoramiento de angina/taquicardia y reacción hepática rara. Titulação bloqueada sem PA, fígado, idade, sintomas coronarianos, edema e revisão CYP3A4/grapefruit.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=felodipine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/019834s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=felodipine"
+  }
+};})();
+/* GOLD33_SELECTIVE:felodipina:END */

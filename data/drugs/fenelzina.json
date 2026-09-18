@@ -6,148 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Fenelzina",
-    "class": "IMAO irreversível não seletivo",
+    "class": "Antidepressivo IMAO",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Nardil"
-      ],
-      "ar": [
-        "Nardil"
-      ]
-    },
-    "presentation": [
-      "Comprimido 15 mg"
-    ],
-    "dose": {
-      "adulto": "15 mg VO 3x/dia; titular conforme resposta.",
-      "maxDose": "Dose máxima: 90 mg/dia."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 15 mg.",
+    "dose": "Iniciar 15 mg VO 3x/dia; aumentar conforme resposta, usualmente até 60 mg/dia e ocasionalmente 90 mg/dia sob supervisão.",
     "doseKg": {
       "standard": "Não se utiliza cálculo por kg.",
       "pediatric": "Uso pediátrico contraindicado.",
       "maxDose": "90 mg/dia"
     },
-    "indications": [
-      "Depressão resistente",
-      "Depressão atípica",
-      "Transtorno do pânico",
-      "Fobia social",
-      "Ansiedade resistente",
-      "TEPT refratário"
-    ],
+    "indications": "Depressão atípica/refratária em adultos quando alternativas são inadequadas.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Inibição irreversível da MAO-A e MAO-B aumentando serotonina, noradrenalina e dopamina.",
+    "mechanism": "Inibidor irreversível não seletivo da monoaminoxidase. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Efeito antidepressivo geralmente em 2–4 semanas.",
     "halfLife": "Vida média curta, porém efeito enzimático dura 2–3 semanas.",
-    "commonAdverseEffects": [
-      "Hipotensão ortostática",
-      "Ganho de peso",
-      "Insônia",
-      "Edema"
-    ],
-    "dangerousAdverseEffects": [
-      "Crise hipertensiva por tiramina",
-      "Síndrome serotoninérgica",
-      "Hepatotoxicidade"
-    ],
+    "commonAdverseEffects": "Hipotensão ortostática, tontura, boca seca, constipação, edema e disfunção sexual.",
+    "dangerousAdverseEffects": "Crise hipertensiva, síndrome serotoninérgica, hepatotoxicidade, mania e suicidabilidade.",
     "risksByPatient": [],
-    "contraindications": [
-      "Uso concomitante com ISRS/ISRN",
-      "Feocromocitoma",
-      "Insuficiência hepática"
-    ],
-    "interactions": [
-      "Tiramina alimentar",
-      "ISRS",
-      "Tramadol",
-      "Linezolida",
-      "Descongestionantes"
-    ],
-    "alerts": [
-      "Necessita dieta restrita em tiramina.",
-      "Respeitar washout de 14 dias ao trocar antidepressivos."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Feocromocitoma, insuficiência cardíaca, hepatopatia e uso concomitante/recente de fármacos serotoninérgicos, simpaticomiméticos ou outros IMAO.",
+    "interactions": "SSRIs/SNRIs/TCAs, meperidina, tramadol, dextrometorfano, linezolida, azul de metileno, simpaticomiméticos e alimentos ricos em tiramina.",
+    "alerts": "Crise hipertensiva, síndrome serotoninérgica, hepatotoxicidade, mania e suicidabilidade. Início e troca bloqueados sem lista completa de fármacos, washout, dieta, PA, fígado, bipolaridade e risco suicida.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenelzine",
+    "pharmacologicClass": "Inibidor irreversível não seletivo da monoaminoxidase",
+    "presentations": "Comprimidos 15 mg.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático; efeito persiste após eliminação pela inibição irreversível da MAO.",
+    "pediatricDose": "Não estabelecido; evitar em pediatria. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste definido; cautela.",
+    "hepaticDose": "Contraindicado em doença hepática ou testes hepáticos anormais relevantes.",
+    "adverseEffects": "Hipotensão ortostática, tontura, boca seca, constipação, edema e disfunção sexual. Graves: Crise hipertensiva, síndrome serotoninérgica, hepatotoxicidade, mania e suicidabilidade.",
+    "monitoring": "PA, hipotensão ortostática, humor/suicidabilidade, fígado e adesão à dieta/interações.",
+    "administration": "VO; dieta pobre em tiramina durante tratamento e por 2 semanas após; respeitar washout de interações.",
+    "preparation": "Confirmar produto, força, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenelzine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/011974s030lbl.pdf"
     ]
   },
   "es": {
     "name": "Fenelzina",
-    "class": "IMAO irreversible no selectivo",
+    "class": "Antidepresivo IMAO",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Nardil"
-      ],
-      "ar": [
-        "Nardil"
-      ]
-    },
-    "presentation": [
-      "Comprimido 15 mg"
-    ],
-    "dose": {
-      "adulto": "15 mg VO 3 veces/día; titular según respuesta.",
-      "maxDose": "Dosis máxima: 90 mg/día."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 15 mg.",
+    "dose": "Iniciar 15 mg VO 3 veces/día; aumentar según respuesta, usualmente hasta 60 mg/día y ocasionalmente 90 mg/día bajo supervisión.",
     "doseKg": {
       "standard": "No se utiliza cálculo por kg.",
       "pediatric": "Uso pediátrico contraindicado.",
       "maxDose": "90 mg/día"
     },
-    "indications": [
-      "Depresión resistente",
-      "Depresión atípica",
-      "Trastorno de pánico",
-      "Fobia social",
-      "Ansiedad resistente",
-      "TEPT refractario"
-    ],
+    "indications": "Depresión atípica/refractaria en adultos cuando alternativas son inadecuadas.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Inhibición irreversible de MAO-A y MAO-B aumentando serotonina, noradrenalina y dopamina.",
+    "mechanism": "Inhibidor irreversible no selectivo de monoaminooxidasa. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Efecto antidepresivo generalmente en 2–4 semanas.",
     "halfLife": "Vida media corta, pero el efecto enzimático dura 2–3 semanas.",
-    "commonAdverseEffects": [
-      "Hipotensión ortostática",
-      "Aumento de peso",
-      "Insomnio",
-      "Edema"
-    ],
-    "dangerousAdverseEffects": [
-      "Crisis hipertensiva por tiramina",
-      "Síndrome serotoninérgico",
-      "Hepatotoxicidad"
-    ],
+    "commonAdverseEffects": "Hipotensión ortostática, mareo, boca seca, estreñimiento, edema y disfunción sexual.",
+    "dangerousAdverseEffects": "Crisis hipertensiva, síndrome serotoninérgico, hepatotoxicidad, manía y suicidabilidad.",
     "risksByPatient": [],
-    "contraindications": [
-      "Uso concomitante con ISRS/IRSN",
-      "Feocromocitoma",
-      "Insuficiencia hepática"
-    ],
-    "interactions": [
-      "Tiramina alimentaria",
-      "ISRS",
-      "Tramadol",
-      "Linezolid",
-      "Descongestionantes"
-    ],
-    "alerts": [
-      "Requiere dieta restringida en tiramina.",
-      "Respetar washout de 14 días al cambiar antidepresivos."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Feocromocitoma, insuficiencia cardíaca, hepatopatía y uso concomitante/reciente de serotoninérgicos, simpaticomiméticos u otros IMAO.",
+    "interactions": "ISRS/IRSN/tricíclicos, meperidina, tramadol, dextrometorfano, linezolid, azul de metileno, simpaticomiméticos y alimentos ricos en tiramina.",
+    "alerts": "Crisis hipertensiva, síndrome serotoninérgico, hepatotoxicidad, manía y suicidabilidad. Início e troca bloqueados sem lista completa de fármacos, washout, dieta, PA, fígado, bipolaridade e risco suicida.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenelzine",
+    "pharmacologicClass": "Inhibidor irreversible no selectivo de monoaminooxidasa",
+    "presentations": "Comprimidos 15 mg.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático; efecto persiste tras eliminación por inhibición irreversible de MAO.",
+    "pediatricDose": "No establecido; evitar en pediatría. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste definido; precaución.",
+    "hepaticDose": "Contraindicado en hepatopatía o pruebas hepáticas anormales relevantes.",
+    "adverseEffects": "Hipotensión ortostática, mareo, boca seca, estreñimiento, edema y disfunción sexual. Graves: Crisis hipertensiva, síndrome serotoninérgico, hepatotoxicidad, manía y suicidabilidad.",
+    "monitoring": "PA, hipotensión ortostática, ánimo/suicidabilidad, hígado y adherencia a dieta/interacciones.",
+    "administration": "VO; dieta baja en tiramina durante tratamiento y 2 semanas después; respetar lavados de interacciones.",
+    "preparation": "Confirmar producto, dosis, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenelzine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/011974s030lbl.pdf"
     ]
   },
   "name": {
@@ -159,9 +111,21 @@
     "nardil",
     "imao irreversivel nao seletivo"
   ],
-  "dataVersion": "clinical-data-v1-3bc15e3d5a421487",
-  "clinicalContentSha256": "3bc15e3d5a4214878818e7e287c10f0857e3ba2c7285b73f209e9633b5060171",
+  "dataVersion": "clinical-data-v1-729cb8c696aed609",
+  "clinicalContentSha256": "729cb8c696aed6096f2dbb398854759841d2abf48d1267a1e1b60e0d8dc83047",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "fenelzina.mcGoldClinicalV1",
+    "lote": "033",
+    "requiredFields": 33,
+    "approvedSha256": "2acfdef995a909e916ea91d994b7b20e7dcbe8969b789b3749b57c0f035b63e9",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

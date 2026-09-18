@@ -6677,3 +6677,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:eszopiclona:END */
+/* GOLD33_SELECTIVE:fenelzina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB;if(!db||!db["fenelzina"])throw new Error("GOLD33_MISSING_CANONICAL:fenelzina");db["fenelzina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "033",
+    "requiredFieldCount": 33,
+    "approvedSha256": "2acfdef995a909e916ea91d994b7b20e7dcbe8969b789b3749b57c0f035b63e9",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fenelzina",
+    "class": "Antidepressivo IMAO",
+    "pharmacologicClass": "Inibidor irreversível não seletivo da monoaminoxidase",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 15 mg.",
+    "presentations": "Comprimidos 15 mg.",
+    "mechanism": "Inibidor irreversível não seletivo da monoaminoxidase. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático; efeito persiste após eliminação pela inibição irreversível da MAO.",
+    "indications": "Depressão atípica/refratária em adultos quando alternativas são inadequadas.",
+    "dose": "Iniciar 15 mg VO 3x/dia; aumentar conforme resposta, usualmente até 60 mg/dia e ocasionalmente 90 mg/dia sob supervisão.",
+    "pediatricDose": "Não estabelecido; evitar em pediatria. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste definido; cautela.",
+    "hepaticDose": "Contraindicado em doença hepática ou testes hepáticos anormais relevantes.",
+    "commonAdverseEffects": "Hipotensão ortostática, tontura, boca seca, constipação, edema e disfunção sexual.",
+    "dangerousAdverseEffects": "Crise hipertensiva, síndrome serotoninérgica, hepatotoxicidade, mania e suicidabilidade.",
+    "adverseEffects": "Hipotensão ortostática, tontura, boca seca, constipação, edema e disfunção sexual. Graves: Crise hipertensiva, síndrome serotoninérgica, hepatotoxicidade, mania e suicidabilidade.",
+    "contraindications": "Feocromocitoma, insuficiência cardíaca, hepatopatia e uso concomitante/recente de fármacos serotoninérgicos, simpaticomiméticos ou outros IMAO.",
+    "interactions": "SSRIs/SNRIs/TCAs, meperidina, tramadol, dextrometorfano, linezolida, azul de metileno, simpaticomiméticos e alimentos ricos em tiramina.",
+    "monitoring": "PA, hipotensão ortostática, humor/suicidabilidade, fígado e adesão à dieta/interações.",
+    "administration": "VO; dieta pobre em tiramina durante tratamento e por 2 semanas após; respeitar washout de interações.",
+    "preparation": "Confirmar produto, força, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Crise hipertensiva, síndrome serotoninérgica, hepatotoxicidade, mania e suicidabilidade. Início e troca bloqueados sem lista completa de fármacos, washout, dieta, PA, fígado, bipolaridade e risco suicida.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenelzine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/011974s030lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenelzine"
+  },
+  "es": {
+    "name": "Fenelzina",
+    "class": "Antidepresivo IMAO",
+    "pharmacologicClass": "Inhibidor irreversible no selectivo de monoaminooxidasa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 15 mg.",
+    "presentations": "Comprimidos 15 mg.",
+    "mechanism": "Inhibidor irreversible no selectivo de monoaminooxidasa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático; efecto persiste tras eliminación por inhibición irreversible de MAO.",
+    "indications": "Depresión atípica/refractaria en adultos cuando alternativas son inadecuadas.",
+    "dose": "Iniciar 15 mg VO 3 veces/día; aumentar según respuesta, usualmente hasta 60 mg/día y ocasionalmente 90 mg/día bajo supervisión.",
+    "pediatricDose": "No establecido; evitar en pediatría. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste definido; precaución.",
+    "hepaticDose": "Contraindicado en hepatopatía o pruebas hepáticas anormales relevantes.",
+    "commonAdverseEffects": "Hipotensión ortostática, mareo, boca seca, estreñimiento, edema y disfunción sexual.",
+    "dangerousAdverseEffects": "Crisis hipertensiva, síndrome serotoninérgico, hepatotoxicidad, manía y suicidabilidad.",
+    "adverseEffects": "Hipotensión ortostática, mareo, boca seca, estreñimiento, edema y disfunción sexual. Graves: Crisis hipertensiva, síndrome serotoninérgico, hepatotoxicidad, manía y suicidabilidad.",
+    "contraindications": "Feocromocitoma, insuficiencia cardíaca, hepatopatía y uso concomitante/reciente de serotoninérgicos, simpaticomiméticos u otros IMAO.",
+    "interactions": "ISRS/IRSN/tricíclicos, meperidina, tramadol, dextrometorfano, linezolid, azul de metileno, simpaticomiméticos y alimentos ricos en tiramina.",
+    "monitoring": "PA, hipotensión ortostática, ánimo/suicidabilidad, hígado y adherencia a dieta/interacciones.",
+    "administration": "VO; dieta baja en tiramina durante tratamiento y 2 semanas después; respetar lavados de interacciones.",
+    "preparation": "Confirmar producto, dosis, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Crisis hipertensiva, síndrome serotoninérgico, hepatotoxicidad, manía y suicidabilidad. Início e troca bloqueados sem lista completa de fármacos, washout, dieta, PA, fígado, bipolaridade e risco suicida.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenelzine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/011974s030lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenelzine"
+  }
+};})();
+/* GOLD33_SELECTIVE:fenelzina:END */

@@ -6,35 +6,12 @@
   "colorTxt": "#065F46",
   "pt": {
     "name": "Fenilefrina",
-    "class": "Vasopressor alfa-1 agonista seletivo puro — sem efeito beta",
-    "commercialNames": {
-      "br": [
-        "Fenilefrina",
-        "Neo-Synephrine"
-      ],
-      "ar": [
-        "Fenilefrina",
-        "Neo-Synephrine"
-      ]
-    },
-    "presentation": [
-      "Solução injetável IV conforme disponibilidade",
-      "Bolus IV 50–200 mcg",
-      "Infusão contínua em bomba"
-    ],
-    "mechanism": "Estimula receptores alfa-1 periféricos produzindo vasoconstrição arterial e venosa, elevação da RVS e da PA, sem atividade beta significativa. Pode causar bradicardia reflexa por ativação barorreceptora.",
-    "pharmacokinetics": {
-      "onset": "Segundos a poucos minutos por via IV",
-      "halfLife": "Muito curta — bolus se dissipa em minutos",
-      "duration": "Curta; infusão contínua necessária para suporte prolongado"
-    },
-    "dose": {
-      "adultoPadrao": "Bolus: 50–200 mcg IV lento conforme protocolo. Infusão: 0,1–0,5 mcg/kg/min IV contínuo.",
-      "adultoGrave": "Manutenção: 0,2–3 mcg/kg/min. Doses altas aumentam risco de isquemia e queda do débito cardíaco.",
-      "pediatricaPadrao": "Dose por peso conforme protocolo pediátrico e contexto anestésico/UTI.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
+    "class": "Agonista alfa-1 adrenérgico",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Injeção concentrada 10 mg/mL e apresentações prontas diluídas; confirmar produto.",
+    "mechanism": "Vasoconstritor simpaticomimético. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacokinetics": "Metabolismo por MAO; início rápido e duração curta IV.",
+    "dose": "Bolus IV 40–100 microgramas a cada 1–2 min conforme resposta ou infusão 10–35 microgramas/min; limites e diluição dependem do rótulo/protocolo.",
     "doseKg": {
       "padrao": "0,1–0,5 mcg/kg/min IV — infusão inicial",
       "grave": "0,2–3 mcg/kg/min IV — titular conforme PAM",
@@ -50,22 +27,8 @@
     ],
     "dilution": "Infusão contínua em bomba. Acesso central preferido em uso prolongado ou doses altas. Bolus periférico em ambiente monitorizado. Concentração padrão: 10 mg/100 mL SF → 100 mcg/mL.",
     "speed": "Bolus: 50–200 mcg IV lento. Infusão: iniciar 0,1–0,2 mcg/kg/min e titular a cada 5 min.",
-    "commonAdverseEffects": [
-      "Hipertensão",
-      "Bradicardia reflexa",
-      "Cefaleia",
-      "Palidez",
-      "Ansiedade",
-      "Náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "Isquemia periférica e mesentérica",
-      "Redução do débito cardíaco por aumento de pós-carga",
-      "Hipertensão grave",
-      "Bradicardia sintomática",
-      "Necrose por extravasamento",
-      "IAM por aumento de pós-carga e vasoconstrição coronária"
-    ],
+    "commonAdverseEffects": "Náusea, cefaleia, nervosismo, bradicardia reflexa e hipertensão.",
+    "dangerousAdverseEffects": "Hipertensão grave, arritmia, isquemia, necrose por extravasamento e edema pulmonar.",
     "extravasationProtocol": [
       "Suspender infusão imediatamente.",
       "Não remover inicialmente o cateter.",
@@ -77,99 +40,47 @@
       "Gestação (anestesia obstétrica): usada para hipotensão selecionada — monitorar PA materna e perfusão uteroplacentária.",
       "Idosos: maior risco de bradicardia excessiva, isquemia e queda de débito cardíaco."
     ],
-    "contraindications": {
-      "absolutas": [
-        "Hipersensibilidade à fenilefrina"
-      ],
-      "relativas": [
-        "Hipertensão grave",
-        "Bradicardia importante (FC < 50 bpm)",
-        "Choque cardiogênico com baixo débito",
-        "Doença vascular periférica grave",
-        "Isquemia mesentérica ou periférica ativa",
-        "Hipovolemia não corrigida"
-      ]
-    },
-    "interactions": [
-      "IMAO: resposta pressora exagerada — risco de crise hipertensiva.",
-      "Antidepressivos tricíclicos: aumento da resposta alfa-adrenérgica.",
-      "Betabloqueadores: podem intensificar bradicardia reflexa.",
-      "Outros vasopressores: hipertensão e isquemia aditivas.",
-      "Oxitocina (obstetrícia): pode aumentar resposta pressora."
-    ],
+    "contraindications": "Hipersensibilidade; contraindicações podem variar por apresentação.",
+    "interactions": "IMAO, tricíclicos, simpaticomiméticos, ocitócicos e anestésicos podem potencializar resposta/arrítmia.",
     "renalAdjustment": "Sem ajuste renal específico.",
     "hepaticAdjustment": "Sem ajuste hepático específico.",
-    "monitoring": {
-      "baseline": [
-        "PAM / PA",
-        "FC",
-        "ECG contínuo",
-        "Perfusão periférica",
-        "Sinais de baixo débito"
-      ],
-      "followUp": [
-        "PAM contínua ou frequente",
-        "Bradicardia reflexa",
-        "Sinais de isquemia",
-        "Sítio de infusão (extravasamento)"
-      ]
-    },
-    "safetyFlags": {
-      "highAlertMedication": true,
-      "vasopressor": true,
-      "pureAlphaAgonist": true,
-      "bradycardiaRisk": true,
-      "ischemiaRisk": true,
-      "lowCardiacOutputRisk": true,
-      "extravasationRisk": true,
-      "requiresTelemetry": true,
-      "requiresInfusionPump": true,
-      "hospitalUseOnly": true,
-      "warning": "Fenilefrina é alfa-1 pura: útil quando taquiarritmia limita beta-agonistas, mas pode causar bradicardia reflexa e queda do débito cardíaco."
-    },
+    "monitoring": "PA contínua/frequente, ECG, perfusão, débito urinário e extravasamento.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "auditNotes": {
       "status": "vasopressor_phenylephrine_master_template"
     },
-    "ref": [
-      "SCCM Vasopressor Guidelines",
-      "AHA/ACC Shock References",
-      "Anesthesia Hemodynamic Management Guidelines",
-      "Goodman & Gilman",
-      "Lexicomp 2026",
-      "FDA/EMA label"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenylephrine+hydrochloride+injection",
+    "pharmacologicClass": "Vasoconstritor simpaticomimético",
+    "presentations": "Injeção concentrada 10 mg/mL e apresentações prontas diluídas; confirmar produto.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "indications": "Tratamento de hipotensão clinicamente importante por vasodilatação no contexto anestésico; outras formas têm indicações próprias.",
+    "pediatricDose": "Dose por peso e contexto anestésico especializado; AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste definido; titular ao efeito.",
+    "hepaticDose": "Sem ajuste definido; titular ao efeito.",
+    "adverseEffects": "Náusea, cefaleia, nervosismo, bradicardia reflexa e hipertensão. Graves: Hipertensão grave, arritmia, isquemia, necrose por extravasamento e edema pulmonar.",
+    "administration": "IV por profissional com monitorização contínua; solução 10 mg/mL deve ser diluída antes de bolus/infusão.",
+    "preparation": "Confirmar produto, força, concentração e apresentação; seguir rótulo oficial.",
+    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo específico.",
+    "pregnancy": "Avaliar benefício-risco e rotulagem específica.",
+    "lactation": "Avaliar exposição do lactente e alternativas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "alerts": "Hipertensão grave, arritmia, isquemia, necrose por extravasamento e edema pulmonar. Bolus, infusão e diluição bloqueados sem produto/concentração, peso, alvo hemodinâmico, acesso e monitorização contínua.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenylephrine+hydrochloride+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/203826s000lbl.pdf"
     ]
   },
   "es": {
     "name": "Fenilefrina",
-    "class": "Vasopresor agonista alfa-1 selectivo puro — sin efecto beta",
-    "commercialNames": {
-      "br": [
-        "Fenilefrina",
-        "Neo-Synephrine"
-      ],
-      "ar": [
-        "Fenilefrina",
-        "Neo-Synephrine"
-      ]
-    },
-    "presentation": [
-      "Solución inyectable IV según disponibilidad",
-      "Bolo IV 50–200 mcg",
-      "Infusión continua en bomba"
-    ],
-    "mechanism": "Estimula receptores alfa-1 periféricos produciendo vasoconstricción arterial y venosa, elevación de la RVS y la PA, sin actividad beta significativa. Puede causar bradicardia refleja por activación barorreceptora.",
-    "pharmacokinetics": {
-      "onset": "Segundos a pocos minutos por vía IV",
-      "halfLife": "Muy corta — bolo se disipa en minutos",
-      "duration": "Corta; infusión continua necesaria para soporte prolongado"
-    },
-    "dose": {
-      "adultoPadrao": "Bolo: 50–200 mcg IV lento según protocolo. Infusión: 0,1–0,5 mcg/kg/min IV continuo.",
-      "adultoGrave": "Mantenimiento: 0,2–3 mcg/kg/min. Dosis altas aumentan riesgo de isquemia y caída del gasto cardíaco.",
-      "pediatricaPadrao": "Dosis por peso según protocolo pediátrico y contexto anestésico/UCI.",
-      "pediatricaGrave": null,
-      "pediatricaMeningite": null
-    },
+    "class": "Agonista alfa-1 adrenérgico",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Inyección concentrada 10 mg/mL y presentaciones prediluidas; confirmar producto.",
+    "mechanism": "Vasoconstrictor simpaticomimético. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacokinetics": "Metabolismo por MAO; inicio rápido y duración corta IV.",
+    "dose": "Bolo IV 40–100 microgramos cada 1–2 min según respuesta o infusión 10–35 microgramos/min; límites y dilución dependen de ficha/protocolo.",
     "doseKg": {
       "padrao": "0,1–0,5 mcg/kg/min IV — infusión inicial",
       "grave": "0,2–3 mcg/kg/min IV — titular según PAM",
@@ -185,22 +96,8 @@
     ],
     "dilution": "Infusión continua en bomba. Acceso central preferido en uso prolongado o dosis altas. Bolo periférico en ambiente monitorizado. Concentración estándar: 10 mg/100 mL SF → 100 mcg/mL.",
     "speed": "Bolo: 50–200 mcg IV lento. Infusión: iniciar 0,1–0,2 mcg/kg/min y titular cada 5 min.",
-    "commonAdverseEffects": [
-      "Hipertensión",
-      "Bradicardia refleja",
-      "Cefalea",
-      "Palidez",
-      "Ansiedad",
-      "Náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "Isquemia periférica y mesentérica",
-      "Reducción del gasto cardíaco por aumento de poscarga",
-      "Hipertensión grave",
-      "Bradicardia sintomática",
-      "Necrosis por extravasación",
-      "IAM por aumento de poscarga y vasoconstricción coronaria"
-    ],
+    "commonAdverseEffects": "Náusea, cefalea, nerviosismo, bradicardia refleja e hipertensión.",
+    "dangerousAdverseEffects": "Hipertensión grave, arritmia, isquemia, necrosis por extravasación y edema pulmonar.",
     "extravasationProtocol": [
       "Suspender infusión inmediatamente.",
       "No retirar inicialmente el catéter.",
@@ -212,66 +109,37 @@
       "Embarazo (anestesia obstétrica): usada para hipotensión seleccionada — monitorizar PA materna y perfusión uteroplacentaria.",
       "Ancianos: mayor riesgo de bradicardia excesiva, isquemia y caída de gasto cardíaco."
     ],
-    "contraindications": {
-      "absolutas": [
-        "Hipersensibilidad a fenilefrina"
-      ],
-      "relativas": [
-        "Hipertensión grave",
-        "Bradicardia importante (FC < 50 lpm)",
-        "Shock cardiogénico con bajo gasto",
-        "Enfermedad vascular periférica grave",
-        "Isquemia mesentérica o periférica activa",
-        "Hipovolemia no corregida"
-      ]
-    },
-    "interactions": [
-      "IMAO: respuesta presora exagerada — riesgo de crisis hipertensiva.",
-      "Antidepresivos tricíclicos: aumento de respuesta alfa-adrenérgica.",
-      "Betabloqueantes: pueden intensificar bradicardia refleja.",
-      "Otros vasopresores: hipertensión e isquemia aditivas.",
-      "Oxitocina (obstetricia): puede aumentar respuesta presora."
-    ],
+    "contraindications": "Hipersensibilidad; contraindicaciones pueden variar por presentación.",
+    "interactions": "IMAO, tricíclicos, simpaticomiméticos, oxitócicos y anestésicos pueden potenciar respuesta/arritmia.",
     "renalAdjustment": "Sin ajuste renal específico.",
     "hepaticAdjustment": "Sin ajuste hepático específico.",
-    "monitoring": {
-      "baseline": [
-        "PAM / PA",
-        "FC",
-        "ECG continuo",
-        "Perfusión periférica",
-        "Signos de bajo gasto"
-      ],
-      "followUp": [
-        "PAM continua o frecuente",
-        "Bradicardia refleja",
-        "Signos de isquemia",
-        "Sitio de infusión (extravasación)"
-      ]
-    },
-    "safetyFlags": {
-      "highAlertMedication": true,
-      "vasopressor": true,
-      "pureAlphaAgonist": true,
-      "bradycardiaRisk": true,
-      "ischemiaRisk": true,
-      "lowCardiacOutputRisk": true,
-      "extravasationRisk": true,
-      "requiresTelemetry": true,
-      "requiresInfusionPump": true,
-      "hospitalUseOnly": true,
-      "warning": "Fenilefrina es alfa-1 pura: útil cuando taquiarritmia limita beta-agonistas, pero puede causar bradicardia refleja y caída del gasto cardíaco."
-    },
+    "monitoring": "PA continua/frecuente, ECG, perfusión, diuresis y extravasación.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "auditNotes": {
       "status": "vasopressor_phenylephrine_master_template"
     },
-    "ref": [
-      "SCCM Vasopressor Guidelines",
-      "AHA/ACC Shock References",
-      "Anesthesia Hemodynamic Management Guidelines",
-      "Goodman & Gilman",
-      "Lexicomp 2026",
-      "FDA/EMA label"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenylephrine+hydrochloride+injection",
+    "pharmacologicClass": "Vasoconstrictor simpaticomimético",
+    "presentations": "Inyección concentrada 10 mg/mL y presentaciones prediluidas; confirmar producto.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "indications": "Tratamiento de hipotensión clínicamente importante por vasodilatación en anestesia; otras formas tienen indicaciones propias.",
+    "pediatricDose": "Dosis por peso y contexto anestésico especializado; AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste definido; titular al efecto.",
+    "hepaticDose": "Sin ajuste definido; titular al efecto.",
+    "adverseEffects": "Náusea, cefalea, nerviosismo, bradicardia refleja e hipertensión. Graves: Hipertensión grave, arritmia, isquemia, necrosis por extravasación y edema pulmonar.",
+    "administration": "IV por profesional con vigilancia continua; solución 10 mg/mL debe diluirse antes de bolo/infusión.",
+    "preparation": "Confirmar producto, dosis, concentración y presentación; seguir ficha oficial.",
+    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo específico.",
+    "pregnancy": "Evaluar beneficio-riesgo y ficha específica.",
+    "lactation": "Evaluar exposición del lactante y alternativas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "alerts": "Hipertensión grave, arritmia, isquemia, necrosis por extravasación y edema pulmonar. Bolus, infusão e diluição bloqueados sem produto/concentração, peso, alvo hemodinâmico, acesso e monitorização contínua.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=phenylephrine+hydrochloride+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/203826s000lbl.pdf"
     ]
   },
   "name": {
@@ -283,8 +151,8 @@
     "neo-synephrine",
     "vasopressor alfa-1 agonista seletivo puro — sem efeito beta"
   ],
-  "dataVersion": "clinical-data-v1-3bc15e3d5a421487",
-  "clinicalContentSha256": "3bc15e3d5a4214878818e7e287c10f0857e3ba2c7285b73f209e9633b5060171",
+  "dataVersion": "clinical-data-v1-729cb8c696aed609",
+  "clinicalContentSha256": "729cb8c696aed6096f2dbb398854759841d2abf48d1267a1e1b60e0d8dc83047",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -349,5 +217,17 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "fenilefrina.mcGoldClinicalV1",
+    "lote": "033",
+    "requiredFields": 33,
+    "approvedSha256": "2acfdef995a909e916ea91d994b7b20e7dcbe8969b789b3749b57c0f035b63e9",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }
