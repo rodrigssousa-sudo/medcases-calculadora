@@ -45,11 +45,22 @@ const executableOwner = (restriction, sourceRel) => {
 
 if (!zip.endsWith('.zip') || !fs.existsSync(zip)) die('GOLD33_ZIP_REQUIRED');
 execFileSync(process.execPath, [path.join(root,'scripts/gold33-package-gate.mjs'), zip], { cwd:root, stdio:'pipe' });
-const data = JSON.parse(readZip('01_DADOS_HOMOLOGADOS.json'));
-const opinion = JSON.parse(readZip('04_PARECER_CLINICO.json'));
-const restrictions = JSON.parse(readZip('05_RESTRICOES_E_PENDENCIAS.json'));
-if (restrictions.global?.INTEGRACAO_TECNICA !== 'LIBERADA' && !ownerAuthorized) die(`INTEGRATION_NOT_RELEASED:${restrictions.global?.INTEGRACAO_TECNICA}`);
-const restrictionById = new Map(restrictions.items.map((item) => [item.id,item]));
+const dataDocument = JSON.parse(readZip('01_DADOS_HOMOLOGADOS.json'));
+const opinionDocument = JSON.parse(readZip('04_PARECER_CLINICO.json'));
+const restrictionsDocument = JSON.parse(readZip('05_RESTRICOES_E_PENDENCIAS.json'));
+const v4 = dataDocument?.schema === 'MEDCASES_GOLD33_HOMOLOGATED_V4';
+const data = v4 ? dataDocument.medications : dataDocument;
+const restrictionItems = v4 ? restrictionsDocument.medications : restrictionsDocument.items;
+const opinion = v4 ? {
+  lote: dataDocument.lot,
+  scope: { ids: data.map((row) => row.ID) },
+  final_consolidation: { final_sha256: dataDocument.clinical_content_sha256 },
+} : opinionDocument;
+const integrationReleased = v4
+  ? restrictionItems.every((item) => item.states?.INTEGRACAO_TECNICA === 'LIBERADA')
+  : restrictionsDocument.global?.INTEGRACAO_TECNICA === 'LIBERADA';
+if (!integrationReleased && !ownerAuthorized) die('INTEGRATION_NOT_RELEASED');
+const restrictionById = new Map(restrictionItems.map((item) => [item.id,item]));
 const allow = JSON.parse(fs.readFileSync(safe('gateway/data/free60_allowlist.v2.json'),'utf8'));
 const free = new Set(allow.ids);
 if (free.size !== 60) die('FREE60_COUNT_INVALID');

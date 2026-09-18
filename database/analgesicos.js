@@ -4430,3 +4430,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:adalimumabe:END */
+/* GOLD33_SELECTIVE:alopurinol:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["alopurinol"])throw new Error("GOLD33_MISSING_CANONICAL:alopurinol");db["alopurinol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "004",
+    "requiredFieldCount": 33,
+    "approvedSha256": "8aa3e3985bbc49b45a3503ad7aead54a277b148173b757887198e5b9536709c3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Alopurinol",
+    "class": "Inibidor da xantina oxidase",
+    "pharmacologicClass": "Redutor da síntese de ácido úrico",
+    "commercialNames": "Nomes regulatórios usados como evidência: os produtos citados nas referências; marcas AR/BR não presumidas.",
+    "presentation": "Comprimidos de 100 mg e 300 mg.",
+    "presentations": "Comprimidos de 100 mg e 300 mg.",
+    "mechanism": "Redutor da síntese de ácido úrico. O efeito clínico decorre do mecanismo descrito na bula primária e deve ser interpretado segundo formulação e indicação.",
+    "pharmacodynamics": "Efeito farmacodinâmico coerente com redutor da síntese de ácido úrico; resposta e toxicidade são dependentes de exposição, população e via.",
+    "pharmacokinetics": "Absorção oral ~90%; alopurinol é convertido em oxipurinol. Meia-vida do alopurinol ~1–2 h e do oxipurinol ~15 h; eliminação principalmente renal.",
+    "indications": "Gota com hiperuricemia, hiperuricemia associada à terapia antineoplásica e cálculos recorrentes de oxalato de cálcio com hiperuricosúria, conforme bula. Não indicado para hiperuricemia assintomática isolada.",
+    "dose": "Gota: iniciar 100 mg VO/dia e aumentar 100 mg semanalmente até urato ≤6 mg/dL; usual 200–300 mg/dia em doença leve e 400–600 mg/dia em gota tofácea moderada/grave; máximo 800 mg/dia; dividir doses >300 mg.",
+    "pediatricDose": "Hiperuricemia por terapia antineoplásica: 100 mg/m² VO a cada 8–12 h (10 mg/kg/dia), máximo 800 mg/dia; iniciar 24–48 h antes e suspender 2–3 dias após início da quimioterapia quando risco cessar. AUTOMATABLE=YES com indicação, peso/SC e função renal confirmados.",
+    "renalDose": "Gota: eGFR >60 sem ajuste; >30–60: 50 mg/dia; >15–30: 50 mg em dias alternados; 5–15: 50 mg 2 vezes/semana; <5: 50 mg 1 vez/semana; titular em incrementos de 50 mg/dia a cada 2–4 semanas.",
+    "hepaticDose": "Sem tabela de ajuste; monitorar enzimas hepáticas e interromper diante de hepatotoxicidade relevante.",
+    "commonAdverseEffects": "Crises de gota no início, náusea, diarreia e alterações hepáticas.",
+    "dangerousAdverseEffects": "SCAR/DRESS, síndrome de Stevens-Johnson/NET, hepatotoxicidade, nefrotoxicidade e mielossupressão.",
+    "adverseEffects": "Crises de gota no início, náusea, diarreia e alterações hepáticas. Eventos graves: SCAR/DRESS, síndrome de Stevens-Johnson/NET, hepatotoxicidade, nefrotoxicidade e mielossupressão.",
+    "contraindications": "Hipersensibilidade prévia ao alopurinol; não reiniciar após reação grave.",
+    "interactions": "Reduzir azatioprina/mercaptopurina de forma substancial conforme bula especializada; risco com didanosina, varfarina, teofilina, amoxicilina/ampicilina e diuréticos tiazídicos.",
+    "monitoring": "Urato sérico, função renal, hemograma e testes hepáticos; rash e sinais sistêmicos. Considerar HLA-B*58:01 em populações de alto risco.",
+    "administration": "Via oral, preferencialmente após refeições; hidratação adequada; profilaxia de crise de gota ao iniciar conforme protocolo.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "Não aplicável à apresentação oral avaliada.",
+    "pregnancy": "Dados humanos limitados; usar somente quando o benefício justificar risco potencial.",
+    "lactation": "Alopurinol e oxipurinol passam ao leite; avaliar risco-benefício e monitorar o lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos. Individualizar em fragilidade, multimorbidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, técnica correta, sinais de alarme e quando procurar atendimento. Não alterar dose nem interromper tratamento crítico sem orientação.",
+    "clinicalPearls": "Confirmar sempre produto, concentração, via, indicação e população antes de calcular ou administrar.",
+    "guidelineRecommendations": "Esta ficha é ancorada em informação regulatória primária; diretrizes clínicas locais podem restringir seleção e sequência terapêutica.",
+    "safetyFlags": "NÃO HOMOLOGADO. Revisar contraindicações, alertas, cálculos e diferenças de jurisdição antes de integração.",
+    "alerts": "SCAR/DRESS, síndrome de Stevens-Johnson/NET, hepatotoxicidade, nefrotoxicidade e mielossupressão. Dose pediátrica em eGFR <20 mL/min ou diálise: bloqueada por dados insuficientes.",
+    "references": [
+      "1. Fonte regulatória oficial consultada em 2026-09-17: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=19a138b8-d225-03e6-f762-abe71560204b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=19a138b8-d225-03e6-f762-abe71560204b"
+  },
+  "es": {
+    "name": "Alopurinol",
+    "class": "Inhibidor de xantina oxidasa",
+    "pharmacologicClass": "Reductor de la síntesis de ácido úrico",
+    "commercialNames": "Nombres regulatorios usados como evidencia: productos citados en referencias; no se presumen marcas AR/BR.",
+    "presentation": "Comprimidos de 100 mg y 300 mg.",
+    "presentations": "Comprimidos de 100 mg y 300 mg.",
+    "mechanism": "Reductor de la síntesis de ácido úrico. El efecto clínico deriva del mecanismo descrito en la ficha primaria y debe interpretarse según formulación e indicación.",
+    "pharmacodynamics": "Efecto farmacodinámico coherente con reductor de la síntesis de ácido úrico; respuesta y toxicidad dependen de exposición, población y vía.",
+    "pharmacokinetics": "Absorción oral ~90%; alopurinol se convierte en oxipurinol. Semivida de alopurinol ~1–2 h y oxipurinol ~15 h; eliminación principalmente renal.",
+    "indications": "Gota con hiperuricemia, hiperuricemia asociada a terapia antineoplásica y cálculos recurrentes de oxalato de calcio con hiperuricosuria, según ficha. No indicado para hiperuricemia asintomática aislada.",
+    "dose": "Gota: iniciar 100 mg VO/día y aumentar 100 mg semanalmente hasta urato ≤6 mg/dL; usual 200–300 mg/día en enfermedad leve y 400–600 mg/día en gota tofácea moderada/grave; máximo 800 mg/día; dividir dosis >300 mg.",
+    "pediatricDose": "Hiperuricemia por terapia antineoplásica: 100 mg/m² VO cada 8–12 h (10 mg/kg/día), máximo 800 mg/día; iniciar 24–48 h antes y suspender 2–3 días tras iniciar quimioterapia cuando cese el riesgo. AUTOMATABLE=YES con indicación, peso/SC y función renal confirmados.",
+    "renalDose": "Gota: eGFR >60 sin ajuste; >30–60: 50 mg/día; >15–30: 50 mg días alternos; 5–15: 50 mg 2 veces/semana; <5: 50 mg 1 vez/semana; titular en incrementos de 50 mg/día cada 2–4 semanas.",
+    "hepaticDose": "Sin tabla de ajuste; controlar enzimas hepáticas y suspender ante hepatotoxicidad relevante.",
+    "commonAdverseEffects": "Crisis de gota al inicio, náusea, diarrea y alteraciones hepáticas.",
+    "dangerousAdverseEffects": "SCAR/DRESS, síndrome de Stevens-Johnson/NET, hepatotoxicidad, nefrotoxicidad y mielosupresión.",
+    "adverseEffects": "Crisis de gota al inicio, náusea, diarrea y alteraciones hepáticas. Eventos graves: SCAR/DRESS, síndrome de Stevens-Johnson/NET, hepatotoxicidad, nefrotoxicidad y mielosupresión.",
+    "contraindications": "Hipersensibilidad previa a alopurinol; no reiniciar tras reacción grave.",
+    "interactions": "Reducir azatioprina/mercaptopurina de forma sustancial según ficha especializada; riesgo con didanosina, warfarina, teofilina, amoxicilina/ampicilina y tiazidas.",
+    "monitoring": "Urato sérico, función renal, hemograma y pruebas hepáticas; erupción y signos sistémicos. Considerar HLA-B*58:01 en poblaciones de alto riesgo.",
+    "administration": "Vía oral, preferentemente después de comidas; hidratación adecuada; profilaxis de crisis de gota al iniciar según protocolo.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "No aplicable a la presentación oral evaluada.",
+    "pregnancy": "Datos humanos limitados; usar solo cuando el beneficio justifique el riesgo potencial.",
+    "lactation": "Alopurinol y oxipurinol pasan a la leche; evaluar riesgo-beneficio y vigilar al lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos. Individualizar en fragilidad, multimorbilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, técnica correcta, signos de alarma y cuándo consultar. No cambiar dosis ni suspender tratamiento crítico sin indicación.",
+    "clinicalPearls": "Confirmar siempre producto, concentración, vía, indicación y población antes de calcular o administrar.",
+    "guidelineRecommendations": "Esta ficha se basa en información regulatoria primaria; guías clínicas locales pueden restringir selección y secuencia terapéutica.",
+    "safetyFlags": "NO HOMOLOGADO. Revisar contraindicaciones, alertas, cálculos y diferencias jurisdiccionales antes de integrar.",
+    "alerts": "SCAR/DRESS, síndrome de Stevens-Johnson/NET, hepatotoxicidad, nefrotoxicidad y mielosupresión. Dose pediátrica em eGFR <20 mL/min ou diálise: bloqueada por dados insuficientes.",
+    "references": [
+      "1. Fonte regulatória oficial consultada em 2026-09-17: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=19a138b8-d225-03e6-f762-abe71560204b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=19a138b8-d225-03e6-f762-abe71560204b"
+  }
+};})();
+/* GOLD33_SELECTIVE:alopurinol:END */

@@ -8,168 +8,96 @@
     "name": "Alprazolam",
     "class": "Benzodiazepínico",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Frontal",
-        "Apraz",
-        "Alprazolam EMS"
-      ],
-      "ar": [
-        "Alplax",
-        "Trankimazin",
-        "Alprazolam Bagó"
-      ]
-    },
-    "presentation": [
-      "Comprimido 0,25 mg",
-      "Comprimido 0,5 mg",
-      "Comprimido 1 mg",
-      "Comprimido 2 mg"
-    ],
-    "dose": {
-      "adulto": "0,25–0,5 mg VO 2–3x/dia; titular conforme necessidade.",
-      "panico": "Dose usual: 1–6 mg/dia.",
-      "maxDose": "Dose máxima usual: 10 mg/dia."
-    },
+    "commercialNames": "Nomes regulatórios usados como evidência: os produtos citados nas referências; marcas AR/BR não presumidas.",
+    "presentation": "Comprimidos de 0,25 mg, 0,5 mg, 1 mg e 2 mg.",
+    "dose": "TAG: iniciar 0,25–0,5 mg VO 3 vezes/dia; ajustar a cada 3–4 dias; máximo 4 mg/dia. Pânico: iniciar 0,5 mg 3 vezes/dia; aumentar em ≤1 mg/dia a cada 3–4 dias; estudos usaram 1–10 mg/dia, com reavaliação frequente acima de 4 mg/dia.",
     "doseKg": {
       "standard": "Não se utiliza cálculo rotineiro por kg em adultos.",
       "pediatric": "Uso pediátrico especializado.",
       "maxDose": "10 mg/dia"
     },
-    "indications": [
-      "Transtorno do pânico",
-      "Transtorno de ansiedade generalizada",
-      "Crises de ansiedade aguda",
-      "Ansiedade associada à depressão",
-      "Fobia social",
-      "Insônia relacionada à ansiedade",
-      "Ansiedade pré-operatória"
-    ],
+    "indications": "Tratamento agudo do transtorno de ansiedade generalizada e tratamento do transtorno de pânico, com ou sem agorafobia, em adultos.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Potencializa a neurotransmissão GABAérgica através do receptor GABA-A.",
+    "mechanism": "Modulador alostérico positivo do receptor GABA-A. O efeito clínico decorre do mecanismo descrito na bula primária e deve ser interpretado segundo formulação e indicação.",
     "onset": "Início de ação em 20–60 minutos.",
     "halfLife": "Vida média aproximada: 10–15 horas.",
-    "commonAdverseEffects": [
-      "Sonolência",
-      "Tontura",
-      "Fadiga",
-      "Déficit de memória",
-      "Redução da atenção"
-    ],
-    "dangerousAdverseEffects": [
-      "Dependência intensa",
-      "Abstinência grave",
-      "Depressão respiratória",
-      "Convulsões na retirada abrupta"
-    ],
+    "commonAdverseEffects": "Sonolência, tontura, prejuízo de coordenação, disartria, fadiga e problemas de memória.",
+    "dangerousAdverseEffects": "Depressão respiratória e morte com opioides/depressores, abuso e dependência, abstinência grave incluindo convulsões, reações paradoxais e risco suicida.",
     "risksByPatient": [],
-    "contraindications": [
-      "Miastenia gravis",
-      "Apneia do sono grave",
-      "Insuficiência respiratória grave"
-    ],
-    "interactions": [
-      "Álcool",
-      "Opioides",
-      "Cetoconazol",
-      "Claritromicina"
-    ],
-    "alerts": [
-      "Alto potencial de dependência.",
-      "Não suspender abruptamente.",
-      "Maior risco de abstinência devido à meia-vida curta."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidade a benzodiazepínicos; uso concomitante com inibidores fortes de CYP3A especificamente contraindicados na bula (por exemplo, cetoconazol/itraconazol).",
+    "interactions": "Opioides, álcool e outros depressores do SNC aumentam sedação, depressão respiratória, coma e morte; inibidores CYP3A aumentam exposição e indutores a reduzem.",
+    "alerts": "Depressão respiratória e morte com opioides/depressores, abuso e dependência, abstinência grave incluindo convulsões, reações paradoxais e risco suicida. Pediatria e conversão automática de desmame: bloqueadas.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a23063c0-099a-4256-b95f-3a857bbf704b",
+    "pharmacologicClass": "Modulador alostérico positivo do receptor GABA-A",
+    "presentations": "Comprimidos de 0,25 mg, 0,5 mg, 1 mg e 2 mg.",
+    "pharmacodynamics": "Efeito farmacodinâmico coerente com modulador alostérico positivo do receptor gaba-a; resposta e toxicidade são dependentes de exposição, população e via.",
+    "pharmacokinetics": "Tmax 1–2 h; ligação proteica ~80%; metabolismo principalmente CYP3A4; meia-vida média ~11,2 h, prolongada em idosos e doença hepática; excreção urinária de metabólitos.",
+    "pediatricDose": "Segurança e eficácia não estabelecidas <18 anos. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste numérico específico; usar cautela em insuficiência renal e titular à resposta/sedação.",
+    "hepaticDose": "Insuficiência hepática: iniciar 0,25 mg VO 2–3 vezes/dia; aumentar gradualmente se necessário e tolerado.",
+    "adverseEffects": "Sonolência, tontura, prejuízo de coordenação, disartria, fadiga e problemas de memória. Eventos graves: Depressão respiratória e morte com opioides/depressores, abuso e dependência, abstinência grave incluindo convulsões, reações paradoxais e risco suicida.",
+    "monitoring": "Sedação, respiração, quedas, cognição, uso indevido/dependência, depressão/suicidalidade e sintomas de abstinência.",
+    "administration": "Via oral. Usar menor dose eficaz; não interromper abruptamente. Reduzir em no máximo 0,5 mg a cada 3 dias; alguns pacientes precisam de redução mais lenta.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Exposição tardia pode causar sedação e síndrome de abstinência neonatal; usar somente após avaliação rigorosa do benefício-risco.",
+    "lactation": "Alprazolam está presente no leite; a bula recomenda não amamentar durante o tratamento.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos. Individualizar em fragilidade, multimorbidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, técnica correta, sinais de alarme e quando procurar atendimento. Não alterar dose nem interromper tratamento crítico sem orientação.",
+    "clinicalPearls": "Confirmar sempre produto, concentração, via, indicação e população antes de calcular ou administrar.",
+    "guidelineRecommendations": "Esta ficha é ancorada em informação regulatória primária; diretrizes clínicas locais podem restringir seleção e sequência terapêutica.",
+    "safetyFlags": "NÃO HOMOLOGADO. Revisar contraindicações, alertas, cálculos e diferenças de jurisdição antes de integração.",
+    "references": [
+      "1. Fonte regulatória oficial consultada em 2026-09-17: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a23063c0-099a-4256-b95f-3a857bbf704b"
     ]
   },
   "es": {
     "name": "Alprazolam",
-    "class": "Benzodiacepina",
+    "class": "Benzodiazepina",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Frontal",
-        "Apraz",
-        "Alprazolam EMS"
-      ],
-      "ar": [
-        "Alplax",
-        "Trankimazin",
-        "Alprazolam Bagó"
-      ]
-    },
-    "presentation": [
-      "Comprimido 0,25 mg",
-      "Comprimido 0,5 mg",
-      "Comprimido 1 mg",
-      "Comprimido 2 mg"
-    ],
-    "dose": {
-      "adulto": "0,25–0,5 mg VO 2–3 veces/día; titular según necesidad.",
-      "panico": "Dosis habitual: 1–6 mg/día.",
-      "maxDose": "Dosis máxima habitual: 10 mg/día."
-    },
+    "commercialNames": "Nombres regulatorios usados como evidencia: productos citados en referencias; no se presumen marcas AR/BR.",
+    "presentation": "Comprimidos de 0,25 mg, 0,5 mg, 1 mg y 2 mg.",
+    "dose": "TAG: iniciar 0,25–0,5 mg VO 3 veces/día; ajustar cada 3–4 días; máximo 4 mg/día. Pánico: iniciar 0,5 mg 3 veces/día; aumentar en ≤1 mg/día cada 3–4 días; estudios usaron 1–10 mg/día, con reevaluación frecuente por encima de 4 mg/día.",
     "doseKg": {
       "standard": "No se utiliza cálculo rutinario por kg en adultos.",
       "pediatric": "Uso pediátrico especializado.",
       "maxDose": "10 mg/día"
     },
-    "indications": [
-      "Trastorno de pánico",
-      "Trastorno de ansiedad generalizada",
-      "Crisis de ansiedad aguda",
-      "Ansiedad asociada a depresión",
-      "Fobia social",
-      "Insomnio relacionado con ansiedad",
-      "Ansiedad preoperatoria"
-    ],
+    "indications": "Tratamiento agudo del trastorno de ansiedad generalizada y tratamiento del trastorno de pánico, con o sin agorafobia, en adultos.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Potencia la neurotransmisión GABAérgica a través del receptor GABA-A.",
+    "mechanism": "Modulador alostérico positivo del receptor GABA-A. El efecto clínico deriva del mecanismo descrito en la ficha primaria y debe interpretarse según formulación e indicación.",
     "onset": "Inicio de acción en 20–60 minutos.",
     "halfLife": "Vida media aproximada: 10–15 horas.",
-    "commonAdverseEffects": [
-      "Somnolencia",
-      "Mareos",
-      "Fatiga",
-      "Déficit de memoria",
-      "Disminución de la atención"
-    ],
-    "dangerousAdverseEffects": [
-      "Dependencia intensa",
-      "Abstinencia grave",
-      "Depresión respiratoria",
-      "Convulsiones en retirada brusca"
-    ],
+    "commonAdverseEffects": "Somnolencia, mareo, alteración de coordinación, disartria, fatiga y problemas de memoria.",
+    "dangerousAdverseEffects": "Depresión respiratoria y muerte con opioides/depresores, abuso y dependencia, abstinencia grave incluidas convulsiones, reacciones paradójicas y riesgo suicida.",
     "risksByPatient": [],
-    "contraindications": [
-      "Miastenia gravis",
-      "Apnea del sueño grave",
-      "Insuficiencia respiratoria grave"
-    ],
-    "interactions": [
-      "Alcohol",
-      "Opioides",
-      "Ketoconazol",
-      "Claritromicina"
-    ],
-    "alerts": [
-      "Alto potencial de dependencia.",
-      "No suspender abruptamente.",
-      "Mayor riesgo de abstinencia debido a la vida media corta."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidad a benzodiazepinas; uso concomitante con inhibidores potentes de CYP3A específicamente contraindicados en la ficha (por ejemplo, ketoconazol/itraconazol).",
+    "interactions": "Opioides, alcohol y otros depresores del SNC aumentan sedación, depresión respiratoria, coma y muerte; inhibidores CYP3A aumentan exposición e inductores la reducen.",
+    "alerts": "Depresión respiratoria y muerte con opioides/depresores, abuso y dependencia, abstinencia grave incluidas convulsiones, reacciones paradójicas y riesgo suicida. Pediatria e conversão automática de desmame: bloqueadas.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a23063c0-099a-4256-b95f-3a857bbf704b",
+    "pharmacologicClass": "Modulador alostérico positivo del receptor GABA-A",
+    "presentations": "Comprimidos de 0,25 mg, 0,5 mg, 1 mg y 2 mg.",
+    "pharmacodynamics": "Efecto farmacodinámico coherente con modulador alostérico positivo del receptor gaba-a; respuesta y toxicidad dependen de exposición, población y vía.",
+    "pharmacokinetics": "Tmax 1–2 h; unión proteica ~80%; metabolismo principalmente CYP3A4; semivida media ~11,2 h, prolongada en ancianos y enfermedad hepática; excreción urinaria de metabolitos.",
+    "pediatricDose": "Seguridad y eficacia no establecidas <18 años. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste numérico específico; usar precaución en insuficiencia renal y titular según respuesta/sedación.",
+    "hepaticDose": "Insuficiencia hepática: iniciar 0,25 mg VO 2–3 veces/día; aumentar gradualmente si es necesario y tolerado.",
+    "adverseEffects": "Somnolencia, mareo, alteración de coordinación, disartria, fatiga y problemas de memoria. Eventos graves: Depresión respiratoria y muerte con opioides/depresores, abuso y dependencia, abstinencia grave incluidas convulsiones, reacciones paradójicas y riesgo suicida.",
+    "monitoring": "Sedación, respiración, caídas, cognición, uso indebido/dependencia, depresión/suicidalidad y síntomas de abstinencia.",
+    "administration": "Vía oral. Usar la menor dosis eficaz; no suspender bruscamente. Reducir como máximo 0,5 mg cada 3 días; algunos pacientes necesitan reducción más lenta.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "La exposición tardía puede causar sedación y síndrome de abstinencia neonatal; usar solo tras evaluación rigurosa de beneficio-riesgo.",
+    "lactation": "Alprazolam está presente en leche; la ficha recomienda no amamantar durante el tratamiento.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos. Individualizar en fragilidad, multimorbilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, técnica correcta, signos de alarma y cuándo consultar. No cambiar dosis ni suspender tratamiento crítico sin indicación.",
+    "clinicalPearls": "Confirmar siempre producto, concentración, vía, indicación y población antes de calcular o administrar.",
+    "guidelineRecommendations": "Esta ficha se basa en información regulatoria primaria; guías clínicas locales pueden restringir selección y secuencia terapéutica.",
+    "safetyFlags": "NO HOMOLOGADO. Revisar contraindicaciones, alertas, cálculos y diferencias jurisdiccionales antes de integrar.",
+    "references": [
+      "1. Fonte regulatória oficial consultada em 2026-09-17: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a23063c0-099a-4256-b95f-3a857bbf704b"
     ]
   },
   "name": {
@@ -186,9 +114,21 @@
     "alprazolam bago",
     "benzodiazepinico"
   ],
-  "dataVersion": "clinical-data-v1-bc2d1be79bbca035",
-  "clinicalContentSha256": "bc2d1be79bbca0353f1e5c2c753633dcaf3f852ec5f1b4da7732d019cc4a19c3",
+  "dataVersion": "clinical-data-v1-1cac4b67956c5c6c",
+  "clinicalContentSha256": "1cac4b67956c5c6c05986aab0fbb87654cdbe4126bd865f82f084986ed2dfcd6",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "alprazolam.mcGoldClinicalV1",
+    "lote": "004",
+    "requiredFields": 33,
+    "approvedSha256": "8aa3e3985bbc49b45a3503ad7aead54a277b148173b757887198e5b9536709c3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }
