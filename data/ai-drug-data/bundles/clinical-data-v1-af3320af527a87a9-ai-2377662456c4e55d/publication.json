@@ -1,0 +1,3384 @@
+{
+  "schemaVersion": "medcases-ai-drug-data-publication-v2",
+  "bundleId": "clinical-data-v1-af3320af527a87a9-ai-2377662456c4e55d",
+  "bundleVersion": "clinical-data-v1-af3320af527a87a9-ai-2377662456c4e55d",
+  "bundleSha256": "2377662456c4e55d963a31c8939d3ee6dd8bbbb7b2045864c68bcc6189677581",
+  "sourceBundleVersion": "clinical-data-v1-af3320af527a87a9",
+  "sourceBundleSha256": "af3320af527a87a9a85874973d6c92d34d13c21e20aa53e6d8de48e2da52dcb6",
+  "projectionIdentitySchema": "medcases-ai-drug-data-projection-identity-v1",
+  "generatedManifestSha256": "f5b22c9c433a93c715ab9828005c1b476e2a496685f631e5e310ce07ddad3409",
+  "generatedIndexSha256": "a11a4a18916b2e8613899c86adaef7019ddeff533e62e53c44730a3383ca731a",
+  "drugCount": 838,
+  "typedRegimenCount": 0,
+  "deterministicDosingPublishableCount": 0,
+  "textToRegimenInferenceUsed": false,
+  "immutableBundle": true,
+  "generatedAtUtc": "2026-09-18T11:36:14.812Z",
+  "paths": {
+    "manifest": "manifest.json",
+    "index": "index.json",
+    "drugTemplate": "drugs/{id}.json"
+  },
+  "files": {
+    "manifest.json": {
+      "bytes": 198891,
+      "sha256": "f5b22c9c433a93c715ab9828005c1b476e2a496685f631e5e310ce07ddad3409"
+    },
+    "index.json": {
+      "bytes": 577980,
+      "sha256": "a11a4a18916b2e8613899c86adaef7019ddeff533e62e53c44730a3383ca731a"
+    },
+    "drugs/aas_antiagregante.json": {
+      "bytes": 11896,
+      "sha256": "75b9fe6008ededb0c8bef0cd241987e99e98dfe910c5d499c0856260aef91273"
+    },
+    "drugs/abacavir.json": {
+      "bytes": 10865,
+      "sha256": "0b656f91a6311edb66bcda9789c7173441e6d7030d05e3fe474da28e203b1778"
+    },
+    "drugs/abatacepte.json": {
+      "bytes": 9301,
+      "sha256": "04749806dbfb2550fda065377d78e1549c877530d6ee50222ee690b41ca0fe19"
+    },
+    "drugs/abciximabe.json": {
+      "bytes": 9465,
+      "sha256": "a7b3a874b214c9add95072b79c9646174e7207ec0c75c0322752ffaf2c051565"
+    },
+    "drugs/acamprosato.json": {
+      "bytes": 9221,
+      "sha256": "31e0427847f7579c30efd8080d303f2d39151ce8076b95167fa6ef003018e5b6"
+    },
+    "drugs/aceclofenaco.json": {
+      "bytes": 9134,
+      "sha256": "c681186eb2cb710a2fa38232965fc01c5a0995066b88a007b4a729eb1a86be69"
+    },
+    "drugs/acenocumarol.json": {
+      "bytes": 10334,
+      "sha256": "f5f9442689072c6eb4d4ca404e1e3e92da1ff59f0d364ac7dfcdfa013e7e9481"
+    },
+    "drugs/acetato_de_calcio.json": {
+      "bytes": 8804,
+      "sha256": "0dbff7e83a2820f45e63724824976703902d89919cd0e53c515452bb13022037"
+    },
+    "drugs/acetazolamida.json": {
+      "bytes": 12155,
+      "sha256": "b7fd523335de06055ca7c78a8c39a49428f469ad3ef4ff73359bc5fc88b69734"
+    },
+    "drugs/acetilcisteina.json": {
+      "bytes": 11763,
+      "sha256": "35b8214839caaee3dfd4d0baa8f91a9b8dde3d77fadb9690685364cff43e40fc"
+    },
+    "drugs/aciclovir.json": {
+      "bytes": 13950,
+      "sha256": "31b0cd02351199f52fc2d4547b9bf26db983f0900b4245ffea1cff8f10d1e6c2"
+    },
+    "drugs/acido_bempedoico.json": {
+      "bytes": 12620,
+      "sha256": "fc7a97c5c12610e648af531c09e5b838f5dd52878a254b9a10aedf91f5308194"
+    },
+    "drugs/acido_folico.json": {
+      "bytes": 13612,
+      "sha256": "05a4045d9912fba4d1265f423375cc3e20bf6ce7a4eaaf6482f11f4c65dce3ea"
+    },
+    "drugs/acido_obeticolico.json": {
+      "bytes": 11814,
+      "sha256": "47b6bf8a816175fff76f83a38fd2eac05146801ba2e362a702b2c1f2fb68b84c"
+    },
+    "drugs/acido_tioctico.json": {
+      "bytes": 12133,
+      "sha256": "9cfc5cce4c8a715811dfc64740816b0772a4293d19ac4d57350bfe6283babc2f"
+    },
+    "drugs/acido_tranexamico.json": {
+      "bytes": 10966,
+      "sha256": "d61a6fb96f1e27e90ee09f9c5e1fed101b07f973049a675fae5a7d8c5707d07d"
+    },
+    "drugs/acido_ursodesoxicolico.json": {
+      "bytes": 11467,
+      "sha256": "8379449fe7cfc13c179ba41ed12175e5cbcf95f337da533b0ecba15949a7c67b"
+    },
+    "drugs/acido_valproico.json": {
+      "bytes": 17890,
+      "sha256": "1134be78e170309fd796a83b14c6eef0989f3c94683685d40d97aa85d1a57088"
+    },
+    "drugs/acidoaminocaproico.json": {
+      "bytes": 13204,
+      "sha256": "c391a72d0c352ed8af9fb0ef2c574cbc7c540b1cdfbe37f881a1c768d1054915"
+    },
+    "drugs/acidotranexamico.json": {
+      "bytes": 1899,
+      "sha256": "2bbf21ec5417776721361087903f0d91ec7d39f283d10848e52e4443c9de1262"
+    },
+    "drugs/aclidinio.json": {
+      "bytes": 16086,
+      "sha256": "2bec007a2632ab4e8ce0caedb34b7cc3cedfdb97c3a99712c1de538edc5fe02c"
+    },
+    "drugs/acoramidis.json": {
+      "bytes": 15851,
+      "sha256": "891fe3bdcba3424680e6e9f49f090605b2e9d9499827b39ec8c445e40349e563"
+    },
+    "drugs/adalimumabe.json": {
+      "bytes": 13821,
+      "sha256": "115a02f815f98e28f214d5ae651a155ee500426e416b652df225fcebaf6d583a"
+    },
+    "drugs/adapaleno.json": {
+      "bytes": 12453,
+      "sha256": "5f7301bc6345e888b557efde64f1feb9692bc14d7acc642b5c9357ffc26e6b80"
+    },
+    "drugs/adenosina.json": {
+      "bytes": 23780,
+      "sha256": "84240088a4dae425b9bc763c49db97855cfb34161f00d8ac2a52334e2dbffa6f"
+    },
+    "drugs/adrenalina.json": {
+      "bytes": 16152,
+      "sha256": "1bb30cf1a884be9dfa8c74b1e480547327382ed1da830f9fc5bd67ed93d89205"
+    },
+    "drugs/aficamten.json": {
+      "bytes": 12733,
+      "sha256": "2a80eda324f4598f8744d23de60d2f82778906d806ac37fc51b176f2c8d2183d"
+    },
+    "drugs/aflibercepte.json": {
+      "bytes": 12741,
+      "sha256": "4358d37d590cc13d1b7ec6ca762819895f9002a415a053aced29dfa4929902af"
+    },
+    "drugs/agomelatina.json": {
+      "bytes": 13390,
+      "sha256": "cbcb6a18f73ecc6c2758bb9424e70ab99d0ef572d60302c4d1649947361f506f"
+    },
+    "drugs/albendazol.json": {
+      "bytes": 12835,
+      "sha256": "1797cc59034522386070ced4b38620b15866e0908dc99e19a1eed4cd21467878"
+    },
+    "drugs/alclometasona.json": {
+      "bytes": 12700,
+      "sha256": "2d126bfb245e3e3a68b5171d898a29eb7da8ad7069ef491d18ffd9016fa35507"
+    },
+    "drugs/alemtuzumabe.json": {
+      "bytes": 15011,
+      "sha256": "8b6f01b97b0ba32298f382df9236d0b4f38abfa64be457691d6ba149deb88b31"
+    },
+    "drugs/alfacalcidol.json": {
+      "bytes": 13780,
+      "sha256": "6247baf8dc9ccbded5e9d026da2b6fd3c924ccc2901d53d0c73c54cddb00a7c5"
+    },
+    "drugs/alginato_de_sodio.json": {
+      "bytes": 13150,
+      "sha256": "e2d414ac05036389f203ded4e86a5abf0748b6d3b81f871578d9b58464cf5816"
+    },
+    "drugs/alirocumab.json": {
+      "bytes": 12553,
+      "sha256": "bf0a190013d94c0beb226956e558f2472031ae4c7d22ba2132fc7b1728d91c37"
+    },
+    "drugs/alisquireno.json": {
+      "bytes": 12641,
+      "sha256": "8519fdfe3338aed7f33d528a8eabb5ff4869c40062de87b22ac9714dbf31ebf4"
+    },
+    "drugs/almotriptana.json": {
+      "bytes": 11819,
+      "sha256": "ebe039a9ed99833453e063a2c371af05d537b827d452dcfdace8ddf54cbc7425"
+    },
+    "drugs/alopurinol.json": {
+      "bytes": 12568,
+      "sha256": "f198be5346308628bc15320256b95c5a3409d830c4757a1d4cbf68aef9df5921"
+    },
+    "drugs/alprazolam.json": {
+      "bytes": 14090,
+      "sha256": "d34a9e6618496fb84956a8c9f114152a54bcbe96126ffbce5f9ef8eb859b17cd"
+    },
+    "drugs/alprostadil.json": {
+      "bytes": 15461,
+      "sha256": "8d5d0d6babc9a62a1e260fadbad5968b4861449d232b71d5f3e77d6e5ecd23f5"
+    },
+    "drugs/alteplase.json": {
+      "bytes": 17302,
+      "sha256": "121373bbe2b6bb807195138f9822a350df503855a37a5ae0f58f0dc8363ee2cd"
+    },
+    "drugs/amantadina.json": {
+      "bytes": 13834,
+      "sha256": "d8d0fafd1ebe21e6b1357799084a9de031e88b729996a349d3fa801b7039b0a3"
+    },
+    "drugs/ambrisentana.json": {
+      "bytes": 11072,
+      "sha256": "f14165aa463208f6a93419db317da45831b86efbdc290c8151b9fcfe66bedb95"
+    },
+    "drugs/ambroxol.json": {
+      "bytes": 11777,
+      "sha256": "31e420cac24649f2773cdf656f28c4e8d6159efc0cbb10553d6a72e66e04d9f5"
+    },
+    "drugs/amicacina.json": {
+      "bytes": 23587,
+      "sha256": "29a3886d6e15e2f761cf6be2b00dea51c26dd705dea05b67b2b7217bd062ec48"
+    },
+    "drugs/amilorida.json": {
+      "bytes": 10922,
+      "sha256": "6d9caa220621088b4d61942e495219b42427106d5cc2869cc9d4e2b086634b03"
+    },
+    "drugs/aminofilina.json": {
+      "bytes": 20910,
+      "sha256": "bd355140a5c016b6510ef58bbea1372b6c0f001fefc61bcb4feedbfce8fc5bad"
+    },
+    "drugs/amiodarona.json": {
+      "bytes": 22356,
+      "sha256": "8d9f20b42a39d3b2b9c8eeb57ae2619a23577154c47509bb54011196b19928b4"
+    },
+    "drugs/amisulprida.json": {
+      "bytes": 13175,
+      "sha256": "b5d08eb7bdfbb889c7e9a512c8ae2ac738e9189ecdc369aa72df04b1091fc23b"
+    },
+    "drugs/amitriptilina.json": {
+      "bytes": 14047,
+      "sha256": "a8ff1e366cfe4fc38c83da463665863f784c4bf2b12d0d5b5ba036b43f346124"
+    },
+    "drugs/amlodipino_losartana.json": {
+      "bytes": 11902,
+      "sha256": "132b3cd0531f20f5b09c99c0cec13a85fcb7b4a0541912e40f88ea2fdd9a34a3"
+    },
+    "drugs/amlodipino_valsartana.json": {
+      "bytes": 11156,
+      "sha256": "9968cca0ae79965db46f465c19661c7281282498956520f2550634440a9edffe"
+    },
+    "drugs/amoxicilina.json": {
+      "bytes": 13527,
+      "sha256": "93a19fb15bf22551d5952981827cb07d56da194a6c8f351975e7b96fc8f01cb1"
+    },
+    "drugs/amoxicilina_clavulanato.json": {
+      "bytes": 31181,
+      "sha256": "91f888a75a7fe3a1a568737c52c011eb83462db89198ee7ca70aceff8ca104cf"
+    },
+    "drugs/ampicilina.json": {
+      "bytes": 14236,
+      "sha256": "ed258a4eb0e071da49c18273ed4428cedea99bebdc7c3078f81c1b7c241f79da"
+    },
+    "drugs/ampicilina_sulbactam.json": {
+      "bytes": 13951,
+      "sha256": "08fc2126020fbee3b2a38ce218d558668023196b73eae37d1ae2d8b36de12472"
+    },
+    "drugs/andexanetalfa.json": {
+      "bytes": 11770,
+      "sha256": "309c548fd9bc2f636f73618482b95dfea99405cccabae3d407d4f705628e6529"
+    },
+    "drugs/anfotericina_b.json": {
+      "bytes": 12704,
+      "sha256": "113e5298918eae5ee684a38de11c5a050e81e0fcc179468dfc435e63f2cd59ea"
+    },
+    "drugs/anfotericina_desoxicolato.json": {
+      "bytes": 12004,
+      "sha256": "e5a08e9edc40c20c36928012722f96852dc36f59e733eac9bb582cc7476a04c9"
+    },
+    "drugs/anfotericina_lipossomal.json": {
+      "bytes": 12143,
+      "sha256": "b113c20d912976efc8311bb76efe0ed1d847b8f331ea35af99b76477865c261b"
+    },
+    "drugs/angiotensinaii.json": {
+      "bytes": 14120,
+      "sha256": "8e63dac0f99b625274a3ae384914aee984cb55b5ecd41446e3d221d14e8694bb"
+    },
+    "drugs/anidulafungina.json": {
+      "bytes": 11232,
+      "sha256": "752d102ca1724e8820374e95a7f38429bea172e5f07c149f74f3b5f894c02456"
+    },
+    "drugs/anlodipino.json": {
+      "bytes": 25990,
+      "sha256": "36402856ff92699d63b2d422e52184f4721e251378c2a5835e56107c947c3e1a"
+    },
+    "drugs/apixabana.json": {
+      "bytes": 15716,
+      "sha256": "33acc9fc6fb0eb3a50c4c8dcef8d0e66b3e69e60fcf38abdb7ff9f315f16e4be"
+    },
+    "drugs/apomorfina.json": {
+      "bytes": 12668,
+      "sha256": "74a89956ac0e74ca27fbc272324480f09b30f3a2b252a0b7ccad560dca4473a5"
+    },
+    "drugs/argatroban.json": {
+      "bytes": 10949,
+      "sha256": "b155088e42c1775b33d4fbbeb526a049c877c1b1ad6c647ce7115cf04c99f9d5"
+    },
+    "drugs/aripiprazol.json": {
+      "bytes": 13132,
+      "sha256": "f153f77a38e2abb8643f89d0f89081b1f711af246d3ae167c8a96f9a18aab3fa"
+    },
+    "drugs/aripiprazol_lai.json": {
+      "bytes": 13198,
+      "sha256": "ba5d1555a8de9212ab11695a68c6134f458dfa2c719f152d437c6bd1bf282539"
+    },
+    "drugs/armodafinila.json": {
+      "bytes": 10997,
+      "sha256": "9a3b9eea14764cb76e53b39b0e70f96d36940f294fba705cf46fc9c2908d9586"
+    },
+    "drugs/artesunato.json": {
+      "bytes": 11568,
+      "sha256": "2818498b539d809b8ce3925cef490f6d272a09f8031aa37c97c59c2c1510709f"
+    },
+    "drugs/asenapina.json": {
+      "bytes": 12889,
+      "sha256": "2e0b63bc79eb291d5babc3615126b1dc7e503db7ce6db11038ecd048ff9f4e9b"
+    },
+    "drugs/atazanavir.json": {
+      "bytes": 12312,
+      "sha256": "04f1da4a96f5361a4d0bd9e8361fc8d81ad50e5d2a938647bd957065cf0a50d4"
+    },
+    "drugs/atenolol.json": {
+      "bytes": 19780,
+      "sha256": "b715180f4ba78c670af2240c8accda6dbd929e16c4975f2d74c85f3fc52e6419"
+    },
+    "drugs/atogepanta.json": {
+      "bytes": 10375,
+      "sha256": "dafc2b29ab09fea28c93c03f75d0256bdc2a852d5d491a2f0d73df5691bae8b6"
+    },
+    "drugs/atomoxetina.json": {
+      "bytes": 11223,
+      "sha256": "5b8dbbc761911d0abe3933e52b2e059c28e35e98489fabbbb9d17a5c02b8b55b"
+    },
+    "drugs/atorvastatina.json": {
+      "bytes": 11035,
+      "sha256": "485b20bdc5af78dac37242681c2b92f49f8c31a0e8950841ec25db1c96a10ea9"
+    },
+    "drugs/atosibana.json": {
+      "bytes": 11606,
+      "sha256": "48ad27bbc184c1e823e79d09e1e6798bc9a36d83c40ec03226f8bad1dec5d10d"
+    },
+    "drugs/atracurio.json": {
+      "bytes": 19591,
+      "sha256": "7723002bdd2519819dfbdc570ba991c751dc276e14dbfb7fbc55ab517f12e1ff"
+    },
+    "drugs/atropina.json": {
+      "bytes": 15149,
+      "sha256": "dfa772535f93f101112f6bba8f01e89a2ee3bd1b80a8a01a47efafbf68b21e95"
+    },
+    "drugs/avanafila.json": {
+      "bytes": 10573,
+      "sha256": "d2b344659b9a3fd216fe9e63155810bc17126e4356ad7d8ea426aae94a4a6c8f"
+    },
+    "drugs/azatioprina.json": {
+      "bytes": 12416,
+      "sha256": "06f5ebd5c44a8cbd6a71b53cbcecb0076879be583bad18e14b19add6ba5b5151"
+    },
+    "drugs/azilsartana.json": {
+      "bytes": 10779,
+      "sha256": "de9ae1ce3c037aa72cd16e3f4305281f8abea8a9395000b39d7f6742c0da2d90"
+    },
+    "drugs/azitromicina.json": {
+      "bytes": 16861,
+      "sha256": "4ee499503636080df151c97014285cdabe96cfd41c5f5e524b73d93138ef4383"
+    },
+    "drugs/aztreonam.json": {
+      "bytes": 12678,
+      "sha256": "c11deb062190d8de0a84a46ba808ae9b2c54d3296432b9b9fb1a69f4d13f29e3"
+    },
+    "drugs/aztreonam_avibactam.json": {
+      "bytes": 13465,
+      "sha256": "0c0135f85c1f94366bbb7c6b07b80de02be8c7224d34a2ece5fad9f6982dc28c"
+    },
+    "drugs/azul_metileno.json": {
+      "bytes": 12000,
+      "sha256": "e8f64d9337a4bf24e9a51c4f998265509951540ac6c3b24745478f9809e2431a"
+    },
+    "drugs/baclofeno.json": {
+      "bytes": 11112,
+      "sha256": "e25aca0b7c6db93620ea8d986dbe758ae261925de04e5791e4fa77d6aebf771d"
+    },
+    "drugs/beclometasona.json": {
+      "bytes": 17184,
+      "sha256": "53d766d578c843cfb971e50c5d56ccb7bc750a372e5c3b119e3dbb068e414c9e"
+    },
+    "drugs/beclometasona_formoterol.json": {
+      "bytes": 11706,
+      "sha256": "55b029b9786c7628d6eaece7d2db98d23f3ca40ca67d2f01d9fdfa9ebb590853"
+    },
+    "drugs/beclometasona_formoterol_glicopirronio.json": {
+      "bytes": 11504,
+      "sha256": "240bdeadfc8c384172de0b16fa2ae54ac75bc654596977678df966e187393c44"
+    },
+    "drugs/bedaquilina.json": {
+      "bytes": 14205,
+      "sha256": "7dd02c71cbd878bd01df72988870f1fa6f8ec7a944acf39eaa00cd471ed8e096"
+    },
+    "drugs/benralizumabe.json": {
+      "bytes": 10956,
+      "sha256": "f54f5166dd03e8c98c6fcb628868b132f771aeb97f4d98b23e7e449b14eba7fd"
+    },
+    "drugs/benzbromarona.json": {
+      "bytes": 11076,
+      "sha256": "04d7c14b88376e745dbe869f329562156cb81c4e1be3fb760ed8273d6014e63d"
+    },
+    "drugs/benztropina.json": {
+      "bytes": 11234,
+      "sha256": "4ed112721068885f0c6c61350af10a6cf7894dc8280f3110be4731f24e4d8ec9"
+    },
+    "drugs/betaistina.json": {
+      "bytes": 10140,
+      "sha256": "d154d29deb498484a814a461661f3fe91bb399e9e4b2a36d743d00676f5ecb6d"
+    },
+    "drugs/betametasona.json": {
+      "bytes": 12194,
+      "sha256": "338e266f12ffa5470aeabaa0d62c5f0352e19e911cc6727d28abdfb12ac116d6"
+    },
+    "drugs/betrixabana.json": {
+      "bytes": 12461,
+      "sha256": "771ed3d3656d4c33a3f58dd55fd5230d48430d511d6e833f24daf1bb4ef70b21"
+    },
+    "drugs/bezafibrato.json": {
+      "bytes": 10628,
+      "sha256": "8754f5db3a97b157d2c53001e86f3f69bbb6f3ee6c2340ebc79737635fe3f74d"
+    },
+    "drugs/bicarbonato_sodio.json": {
+      "bytes": 12434,
+      "sha256": "2aae82e59ace7c902d4944f9497660a8b90aa3d381609cc59e738007ec117dcb"
+    },
+    "drugs/bictegravir.json": {
+      "bytes": 11340,
+      "sha256": "decfa7a7810f8545f8b25bbd6490bd82768d532b373541f129b1f54ff0f5ec5a"
+    },
+    "drugs/bilastina.json": {
+      "bytes": 16011,
+      "sha256": "ca421df31be943b03d1a132eb5a57344893e1386342b0e2c9cbc51e56de06a8d"
+    },
+    "drugs/biperideno.json": {
+      "bytes": 12925,
+      "sha256": "84c9c284ec0be8ebb4100435d62dabdf298d509ec57465639ae1f4d5fe517aca"
+    },
+    "drugs/bisacodil.json": {
+      "bytes": 10848,
+      "sha256": "dac60397b9cd89c49a92d3f698638e8cedf09485f80fe5602ea8adb8bf4bd297"
+    },
+    "drugs/bisoprolol.json": {
+      "bytes": 20208,
+      "sha256": "2ea9d121e091406130f5131e960a633ca55c94ce44f7e31cff0f9bc624311d44"
+    },
+    "drugs/bivalirudina.json": {
+      "bytes": 10881,
+      "sha256": "bee011d75e7ad1f4826e80efdecfa2d48a51f584da618a6535ccb5ee34ed6adc"
+    },
+    "drugs/bosentana.json": {
+      "bytes": 10944,
+      "sha256": "0f6a8504735a9714b051a911c12083da2b7f9185ec259a8fc5c55148e07728ec"
+    },
+    "drugs/brexpiprazol.json": {
+      "bytes": 13037,
+      "sha256": "63f513fbf5c95cbdde496b7faa7c81a1eaab9c9d6a1bb517fbe1e6ff55ba06db"
+    },
+    "drugs/brimonidina.json": {
+      "bytes": 10814,
+      "sha256": "a4102cc8b2c902d002cb54c34064aeaa7560d091fa025473199897bf26825cca"
+    },
+    "drugs/brivaracetam.json": {
+      "bytes": 14977,
+      "sha256": "dc0d47eeacc996f796edf5014e5104dba4f23ebeb5c40c7c572c365a96002779"
+    },
+    "drugs/bromazepam.json": {
+      "bytes": 12963,
+      "sha256": "751e077674e4d4c8c5c4c0b10a1bcb61055c82f7e37331ff46596e1c9f10da11"
+    },
+    "drugs/bromexina.json": {
+      "bytes": 11382,
+      "sha256": "07147969e003970334313f2e531a0bd7cf49e17888d45c58c85a72c883c4875f"
+    },
+    "drugs/bromocriptina.json": {
+      "bytes": 10794,
+      "sha256": "05404c8d9d0602e7285219bcb0aab52b21e93b3f361bb6253a33a76683238846"
+    },
+    "drugs/budesonida.json": {
+      "bytes": 17854,
+      "sha256": "458107309f50429ad186272cb7efd0d5b43d55e0180b3026dbb7799eb9fe0114"
+    },
+    "drugs/budesonida_formoterol.json": {
+      "bytes": 10790,
+      "sha256": "e94813d44f4f79ad59ca95a42eb0830d745ca28d0090166b3466925af6d855f0"
+    },
+    "drugs/budesonida_glicopirronio_formoterol.json": {
+      "bytes": 11032,
+      "sha256": "d5fa46e8387be066b3376cf0c7186d27777af29decbe5dd37ffdc5aeecc3880c"
+    },
+    "drugs/bumetanida.json": {
+      "bytes": 10963,
+      "sha256": "965a9f529c9ad9ea5696495098a57d85788c83a78f550d1226ec81dd03dcaadb"
+    },
+    "drugs/bupivacaina.json": {
+      "bytes": 11764,
+      "sha256": "b50a06a0ff2f17f6133349b22fad8cafbf5b28779d7feb7c914f02143aec0c6b"
+    },
+    "drugs/buprenorfina.json": {
+      "bytes": 11759,
+      "sha256": "5598bc6f0fb37f1d953f6129812209994b75205b0fffb849dabb043bdf3ed018"
+    },
+    "drugs/buprenorfina_naloxona.json": {
+      "bytes": 12599,
+      "sha256": "596547d47c87bdae0b6b35c756a05c9949bbf679e08b19bd7fa77c2759257a15"
+    },
+    "drugs/bupropiona.json": {
+      "bytes": 12352,
+      "sha256": "5db45fcb2650d67e54f25b27b44f709be6a8724b82746b8beb37306667d275fc"
+    },
+    "drugs/buspirona.json": {
+      "bytes": 11767,
+      "sha256": "2b8b64c3eadaed62323d50801e83a666c5f6557f525f3724a928293fc52a4bbc"
+    },
+    "drugs/butamirato.json": {
+      "bytes": 10886,
+      "sha256": "1c13008fc3c9ac9a83061a733585cb5a61867d72d2c5f9b686d20570409d1c0e"
+    },
+    "drugs/cabergolina.json": {
+      "bytes": 11054,
+      "sha256": "74de4ed612cf20f863363833d987878d8b64e00d5bc4754ee5a8f4a5bb61cb52"
+    },
+    "drugs/calcitriol.json": {
+      "bytes": 11598,
+      "sha256": "3221423024ce17c348b791b06e4a54bdac62fdb7996efa8f03580a069b0e5a83"
+    },
+    "drugs/canabidiol.json": {
+      "bytes": 11451,
+      "sha256": "882ec558a80cbf2b3e6707fc89283399c277f1a4b310fc132dc7c8e3cdde43a3"
+    },
+    "drugs/canagliflozina.json": {
+      "bytes": 13545,
+      "sha256": "34bd45faef52aca99664edaefe9bb1767b7d6e38fa227bcf94cc9e2030b334bb"
+    },
+    "drugs/candesartana.json": {
+      "bytes": 11119,
+      "sha256": "1d2c72b881076c7ebb973e432c278a6f07e13fd28bdbee1cb8068484ef3657b6"
+    },
+    "drugs/cangrelor.json": {
+      "bytes": 22774,
+      "sha256": "55076bebbf02e8d96bf8ddec3fbab7b771aa7d2ec098bcae0599f03061f5fa72"
+    },
+    "drugs/capsaicina.json": {
+      "bytes": 11195,
+      "sha256": "8a8999339ff87f89c66171445055d75ef69b271f176db094986b32ac17250813"
+    },
+    "drugs/carbamazepina.json": {
+      "bytes": 21087,
+      "sha256": "6e79ca2d4748832426c25751b6d39acbe3142b60273c72d5a5011403e5380cd6"
+    },
+    "drugs/carbetocina.json": {
+      "bytes": 11189,
+      "sha256": "1095f3b3eef22a6da623ee411941cbee3d663181f7ea628f1c4833a080879e20"
+    },
+    "drugs/carbocisteina.json": {
+      "bytes": 10490,
+      "sha256": "bce3fc85a3f8488a9d979bf8a69a17a761db6b772ad208adaff0b25a42ee86d7"
+    },
+    "drugs/carbonato_de_calcio.json": {
+      "bytes": 11155,
+      "sha256": "8619f3ab2a3bc84dc78caff2c76ab9729305d4485fd31ca2104d9889e5d8effa"
+    },
+    "drugs/carbonato_de_lantanio.json": {
+      "bytes": 10407,
+      "sha256": "00fd9d5ff7174a93943494a2cb49b9bbbd86e77fd798264556ffdfa799da914c"
+    },
+    "drugs/carboximaltose_ferrica.json": {
+      "bytes": 11478,
+      "sha256": "4dbf83d297ada1ffe034dfee838545f597ccd5f2bdab61e506be63cf948803d6"
+    },
+    "drugs/cariprazina.json": {
+      "bytes": 12096,
+      "sha256": "b882d280cf5d3e86e4b52c8649595cf2ce050941b713a34be449814f9f38293c"
+    },
+    "drugs/carisoprodol.json": {
+      "bytes": 10008,
+      "sha256": "b926d572c4052ceb123e61e26bb1dc47dad9b10ef91fbe38ca4b7e348c966a40"
+    },
+    "drugs/carvao_ativado.json": {
+      "bytes": 13748,
+      "sha256": "04f55aad5f61c11a14122959e016f793f787a01a8e056b36293887dd1cd6cff2"
+    },
+    "drugs/carvedilol.json": {
+      "bytes": 21520,
+      "sha256": "f0c516d62abaf6c59a659a67f7681bf1282a0e1f920ab5b7b129aa3cf8e18ed7"
+    },
+    "drugs/caspofungina.json": {
+      "bytes": 10708,
+      "sha256": "2e22f1d5cbf81ee6c144e5d8701268f1af56c8a20ce24c03de2f968ccca2e726"
+    },
+    "drugs/cefaclor.json": {
+      "bytes": 12289,
+      "sha256": "4d6625936b4b654c2d05bb75958e98da1bfed71181d5fc4096389972f5a9122c"
+    },
+    "drugs/cefadroxila.json": {
+      "bytes": 12648,
+      "sha256": "9d29975f7affd699c77cf512ec160f84047c4ccda67dcca43c3bd1e2524b4ab9"
+    },
+    "drugs/cefalexina.json": {
+      "bytes": 12132,
+      "sha256": "28c955f5c004a6bc7b851f08849a47a4574c83cdbbbad21ffdb37b32cce34d18"
+    },
+    "drugs/cefazolina.json": {
+      "bytes": 12797,
+      "sha256": "aa6a2b03be3a3f8cfe39e0feebc6ec9e9b4c0fa39343d870900ef6717515d25b"
+    },
+    "drugs/cefdinir.json": {
+      "bytes": 12394,
+      "sha256": "8ccc7767fd1a07d55a4cdce9f45eef557e9f8d84a758ee2f26a0167aa144f991"
+    },
+    "drugs/cefepime.json": {
+      "bytes": 19296,
+      "sha256": "5f1fe8c7be15ccffdeac05cd6af00ed74b84ab2498f1f53b292a9985698f9ff4"
+    },
+    "drugs/cefiderocol.json": {
+      "bytes": 16719,
+      "sha256": "6dee664847c1ce5296a4b7f9657d075f8b77243db891797cc7c506c6599be2ff"
+    },
+    "drugs/cefixima.json": {
+      "bytes": 12010,
+      "sha256": "bed0040a2c7839b52356ffac5bb83651d9ea760df60c6015cadd414e5e23b55a"
+    },
+    "drugs/cefmetazol.json": {
+      "bytes": 12530,
+      "sha256": "e439d4896a25ae3300bc57fc842f0ffcffe2a871301a5fe560923eb74ee301bf"
+    },
+    "drugs/cefoperazona_sulbactam.json": {
+      "bytes": 16438,
+      "sha256": "13019f86ae566f3fb89a3738dba3edbc09e0c536a33bf6d5ea3ec4d50cf0584e"
+    },
+    "drugs/cefotaxima.json": {
+      "bytes": 15213,
+      "sha256": "ad4cac2448d98f9115c626c56292a619ff5be9a3107ecc512a0c0b89efd324b7"
+    },
+    "drugs/cefoxitina.json": {
+      "bytes": 11971,
+      "sha256": "931d79132da18e5e4ebe891cba3bbd7a0e895d954ca5b27dd0ee677d5f744a49"
+    },
+    "drugs/cefpiroma.json": {
+      "bytes": 14213,
+      "sha256": "be95f470dd56cb28d1594ef5e269a86ecdc4cb0f79b8691c462b3be3c8ea9c98"
+    },
+    "drugs/cefpodoxima.json": {
+      "bytes": 11924,
+      "sha256": "67c8958ba7e18ee5665cd8ecd5f35c20938dae1a76dbabd322d3ea47b87fc428"
+    },
+    "drugs/ceftarolina.json": {
+      "bytes": 14827,
+      "sha256": "c72e44c4dda3e8ee7a219b5d3a2ea865c70266deafe1078449ba825c41435928"
+    },
+    "drugs/ceftazidima.json": {
+      "bytes": 11803,
+      "sha256": "b3499306dd43a8f9bef5b45384bbb6a4d0a64c166e609c5eea553be052db5cab"
+    },
+    "drugs/ceftazidima_avibactam.json": {
+      "bytes": 17427,
+      "sha256": "ceb4da3d7e226ff6338bd0402f99b44776d24e9d8d02bd95f475d746914b7386"
+    },
+    "drugs/ceftobiprole.json": {
+      "bytes": 10969,
+      "sha256": "79a79311ee3a68ab02ac037be6874d269a7a3afd126ef73d59d874e68906df03"
+    },
+    "drugs/ceftolozano_tazobactam.json": {
+      "bytes": 14677,
+      "sha256": "1a27291c20e5b964486d2168447066be8df4c7fd3b338d47dcb8142d2114e9e9"
+    },
+    "drugs/ceftriaxona.json": {
+      "bytes": 30125,
+      "sha256": "5e8c4f1b2cdae83c746f9fc5cec1d6dcb213c948ddfd35ee5dddc3bdce86df60"
+    },
+    "drugs/cefuroxima.json": {
+      "bytes": 12626,
+      "sha256": "bc4277f594d7ea88a394d2851ab5955bd8fa322e6b9cab0a052f16d03dd2a962"
+    },
+    "drugs/celecoxibe.json": {
+      "bytes": 19897,
+      "sha256": "10780c9afd97a185ddcd5a08cfa7145ea7ec7944887246badc08ae1c0f891e84"
+    },
+    "drugs/cenobamato.json": {
+      "bytes": 10154,
+      "sha256": "96646679569f68bb6dba061e49c5646f5b0d4f54a8fdbb44c2fc5f95b9a5b4e4"
+    },
+    "drugs/certolizumabe_pegol.json": {
+      "bytes": 10497,
+      "sha256": "786e194639bef2c1b9ed42c864f006f5981886f3e608f1b1042d7016cecc5adb"
+    },
+    "drugs/cetamina.json": {
+      "bytes": 20646,
+      "sha256": "d8ced22751c36decb00cfbe9f8652eacc44c6ff992c49c6c64a40f142c9891a1"
+    },
+    "drugs/cetirizina.json": {
+      "bytes": 17981,
+      "sha256": "79b43233ed3ad271eea6bc5db1a05a5a3f8bc7bb4c8b4b51ff91f51f6fa669d1"
+    },
+    "drugs/cetoconazol_oral.json": {
+      "bytes": 10648,
+      "sha256": "8ce77725b39b7b78bb7c4666ea26dd097a441ca2eb555fe3ca136e525ddddc5a"
+    },
+    "drugs/cetoprofeno.json": {
+      "bytes": 20882,
+      "sha256": "98a920821e4e7ffd2c2e3b010f7b65e619f3f1f56e99b35ae360b7d59b4e9d61"
+    },
+    "drugs/cetorolaco.json": {
+      "bytes": 22498,
+      "sha256": "74930e6493fdac0cb3a9d1ccf8c66f0171a8bf606b906d93aabed713243e3658"
+    },
+    "drugs/ciclesonida.json": {
+      "bytes": 10500,
+      "sha256": "9e88c715b05bc6289592d2ee898525a702bf2a3c9bbcb8f67fc63e98b9d58e80"
+    },
+    "drugs/ciclobenzaprina.json": {
+      "bytes": 10692,
+      "sha256": "52d7cde3eeb192a3cf6e09ef39efe2d32feaa8cd1719c86503a0124b5adc5f51"
+    },
+    "drugs/ciclofosfamida.json": {
+      "bytes": 24778,
+      "sha256": "5858c2feececdaa6906fa4a471e619c2206b3374e42267bff8b419784e153bcc"
+    },
+    "drugs/ciclosporina.json": {
+      "bytes": 10860,
+      "sha256": "41ac8fce558f8e64af349639c2eeb931105e58be06e514385ae4b97437267a37"
+    },
+    "drugs/ciclossilicato_de_zirconio_sodico.json": {
+      "bytes": 10191,
+      "sha256": "1caa1a450cf3333cb7b45c5c0ac7fb9701cc92768fcdd436ac7607d60680f8be"
+    },
+    "drugs/cilostazol.json": {
+      "bytes": 9635,
+      "sha256": "040738aed679262c134e7c720125825622369f980b57a1651432fc88fe35abdc"
+    },
+    "drugs/cimetidina.json": {
+      "bytes": 10257,
+      "sha256": "4937a5bd2bcda8da869d6abae1dbcecf85f60e233eb92bacd1cfcbf710b05eac"
+    },
+    "drugs/cinacalcete.json": {
+      "bytes": 10199,
+      "sha256": "83e76cf5a839869b43fcfcd59003b915f003f198c278b434ecc32bcbc4c81940"
+    },
+    "drugs/ciprofibrato.json": {
+      "bytes": 9609,
+      "sha256": "8f089548a89cceabfa1c30453ae81b494278a13987100fcb753059bf78cc03b8"
+    },
+    "drugs/ciprofloxacino.json": {
+      "bytes": 21323,
+      "sha256": "93b465dc4da51e7d3d56e51cc94474f0d8820b8d231117a10a332ee9470a9e6d"
+    },
+    "drugs/cisatracurio.json": {
+      "bytes": 18455,
+      "sha256": "af61c78339777eccdf01a94efd0a7f63f2a5a5b0b785a10c54e4acbc63dd7fef"
+    },
+    "drugs/cisteamina.json": {
+      "bytes": 11239,
+      "sha256": "9f3215369aaec92ad143a19a8ab191f385d6ebf755646e5bb07d8690b3abdfe9"
+    },
+    "drugs/citalopram.json": {
+      "bytes": 12306,
+      "sha256": "aed5e00ecf6899abb5aab9cc93ac6debc779f7166eef5b7579cf6cef439f81e1"
+    },
+    "drugs/citrato_de_potassio.json": {
+      "bytes": 10498,
+      "sha256": "2670548b617ba46d4048e7035e25d78691ace72d8497526176e6e5a78b88fbd3"
+    },
+    "drugs/citrato_ferrico.json": {
+      "bytes": 10165,
+      "sha256": "98d79c0debf97de3d9c8292ed08766f656325d920f425eafd5ea238663a05434"
+    },
+    "drugs/citrato_sodio_acido_citrico.json": {
+      "bytes": 10785,
+      "sha256": "0a37ec5038d4d6762afcef1eacaf5538dc2dd098113b148e0cb8011085df4902"
+    },
+    "drugs/cladribina.json": {
+      "bytes": 11063,
+      "sha256": "d081a9b66bf6a08ff2cda566eb9b9d75858f608695a8d7f7cbcf2642629ad7cd"
+    },
+    "drugs/claritromicina.json": {
+      "bytes": 16703,
+      "sha256": "7215cf7a0903a7068cd180dd50bdbfd11d8f0d077370b345e6a5c2ba250fa2d3"
+    },
+    "drugs/clevidipina.json": {
+      "bytes": 10156,
+      "sha256": "e153f89cbe52e4611a6c747a16fe6f182e61439756c52ebe195d64b0a59989e5"
+    },
+    "drugs/clindamicina.json": {
+      "bytes": 26392,
+      "sha256": "ffc2c8ab9aaad8a13439cacda41cf7712235e9f8be3fbd6878cb37f294a80d8e"
+    },
+    "drugs/clobazam.json": {
+      "bytes": 10579,
+      "sha256": "a187133cdbdb8bb79bacc4d8b86c34d442bf9bc8003bee29501809cd65bda3ad"
+    },
+    "drugs/clobetasol.json": {
+      "bytes": 11024,
+      "sha256": "52aecd533c772c4f4343290b8dd55c15e8cc00182513b1df25e37df39b551b35"
+    },
+    "drugs/clomifeno.json": {
+      "bytes": 10805,
+      "sha256": "858573e3197f28f99cebc61c7ef18e30bdc48bb226757eca1bdb988bbbd9b1c6"
+    },
+    "drugs/clomipramina.json": {
+      "bytes": 12201,
+      "sha256": "977b1dd802adb70bd42c57d329758e9ee41f0b7f78eb46c9b9ae7df6678b12a2"
+    },
+    "drugs/clonazepam.json": {
+      "bytes": 12040,
+      "sha256": "2184d2059498a9e738eabd7d339d69a41d5c636f6d7eceee4c0d21245ea0e4db"
+    },
+    "drugs/clonidina.json": {
+      "bytes": 10578,
+      "sha256": "f45e53f1d399106dac665a4e7355f3ab6882456f5d446de644ef80eeb355e1f5"
+    },
+    "drugs/cloperastina.json": {
+      "bytes": 10182,
+      "sha256": "b4f84b3607391cd6afc883adea3439681f8074a257daf168b0239b9799ab3dd5"
+    },
+    "drugs/clopidogrel.json": {
+      "bytes": 18342,
+      "sha256": "25e9485eab34711661eb64893d50c4856e233b8ef240febf4c06bca5c8fd383e"
+    },
+    "drugs/cloranfenicol.json": {
+      "bytes": 15697,
+      "sha256": "bc59bfc875d6743103dc99cb83baf65b8c555657eaa55915f122230562ac73ac"
+    },
+    "drugs/clordiazepoxido.json": {
+      "bytes": 11849,
+      "sha256": "e16c068a59b8fb91efe80f8cfea8965beb192ea1c95ea8f395ae0aff3db46b50"
+    },
+    "drugs/cloreto_calcio.json": {
+      "bytes": 10832,
+      "sha256": "1d076f44aaebea63c272565bf40e71728b9c04d20b1651fe7f8ec61347e7115e"
+    },
+    "drugs/cloreto_de_sodio_09.json": {
+      "bytes": 11087,
+      "sha256": "c4283d21383be72216b7ca89d41cd6b863e7b30bc103d8b4146694b80b8eac20"
+    },
+    "drugs/cloreto_potassio.json": {
+      "bytes": 11192,
+      "sha256": "51395ce4966c56c4d686a71b6660a6a9282356d6b87afd76f0f5b2fc63baafaa"
+    },
+    "drugs/clorfeniramina.json": {
+      "bytes": 16560,
+      "sha256": "ce72346ba73a50168d0c77abb6f1181b1b8d2e9ce0e1758e2844d351515ab241"
+    },
+    "drugs/clorpromazina.json": {
+      "bytes": 12275,
+      "sha256": "bc5e0249bd09c399bd896b79fc10bbd69c8e14244cb3dd6e9b339c711a21e0b7"
+    },
+    "drugs/clortalidona.json": {
+      "bytes": 10211,
+      "sha256": "2e5a81a556c82ee13839c04d8872393d6454ad9af52d82b58b889071f5941a7f"
+    },
+    "drugs/clorzoxazona.json": {
+      "bytes": 9478,
+      "sha256": "2cee2ede261f578b97d06eabf92c9744c23d63a109edf1250a93b24fe486d047"
+    },
+    "drugs/cloxacilina.json": {
+      "bytes": 10943,
+      "sha256": "63147098655e90b31da79e32d2ddc5ad4aa93d4f7e094a053d073685f19f7c68"
+    },
+    "drugs/clozapina.json": {
+      "bytes": 11754,
+      "sha256": "62e87c4c920826859a8daf524b07495ff6aca71e3f143d508a47dcd5138330e7"
+    },
+    "drugs/codeina.json": {
+      "bytes": 10791,
+      "sha256": "12d15e7004ac9607edcf74f2282c4d6ddf982f72b7793be75e34401f7e9eef43"
+    },
+    "drugs/colchicina.json": {
+      "bytes": 10466,
+      "sha256": "7839641a997c3cfdbf8344a8afa91a780c7196f29d1db72f0456026c71ced41a"
+    },
+    "drugs/colecalciferol.json": {
+      "bytes": 11172,
+      "sha256": "7717aaa3f2277d3506b4af9bc31c5497aeb13ddffaab9dd3dd6256525ae14810"
+    },
+    "drugs/colesevelam.json": {
+      "bytes": 10626,
+      "sha256": "779cb036e2fadbd499d4bc655858ca9373bc6529d4df033e691b6fb39cad4ddf"
+    },
+    "drugs/colestipol.json": {
+      "bytes": 10063,
+      "sha256": "bf38283efa129ab3bef6e73c39b88c334dd4cd3b3b4afab6d7af392c3472ea08"
+    },
+    "drugs/colestiramina.json": {
+      "bytes": 10052,
+      "sha256": "b37209d8876afff8800240f53e770f104944361030020b4690917234e9ad1449"
+    },
+    "drugs/colistina.json": {
+      "bytes": 12804,
+      "sha256": "3cf951d7a57ac21b3f9263523ecc3a398070cf961646c3176414e2dbebeb6ee3"
+    },
+    "drugs/conivaptana.json": {
+      "bytes": 10307,
+      "sha256": "d2e6cd04e9809f6758c3a8455ada712f9751324985564c8a148366933704cb25"
+    },
+    "drugs/dabigatrana.json": {
+      "bytes": 12585,
+      "sha256": "e14b0f33413a1f15052ea3bdb6176c707367ea1f00148becbac31c5a7cc9ff47"
+    },
+    "drugs/daclatasvir.json": {
+      "bytes": 10655,
+      "sha256": "cb621cbb621188e12fe0976f92611a6d7f18eeaaa2ca245a6a7a3a43d2557d2a"
+    },
+    "drugs/dalbavancina.json": {
+      "bytes": 29762,
+      "sha256": "9eb531ad3b1390342d05e64ba7b227ce898465b81bc3e544f5fc6cf0a0f7ca83"
+    },
+    "drugs/dalteparina.json": {
+      "bytes": 12252,
+      "sha256": "efd30538e86eafb1d5c54db76c56bb16057aa22582879e7b6c68e48fda269d4c"
+    },
+    "drugs/dapagliflozina.json": {
+      "bytes": 10790,
+      "sha256": "cd0b28709c769ac3f670a8cf94f6fb11aad9f99c06c6baec6b3f6d9c6ba2904d"
+    },
+    "drugs/daptomicina.json": {
+      "bytes": 14705,
+      "sha256": "e9f5ee63568e46b97c386d1ae63718d54a1628ad4d65190e10dd01d0486bc0bd"
+    },
+    "drugs/darbepoetina_alfa.json": {
+      "bytes": 1902,
+      "sha256": "bf82693eeff550c38435c480b13cbe092839c90032e93b28c5daa49eda67e366"
+    },
+    "drugs/darunavir.json": {
+      "bytes": 1869,
+      "sha256": "269ea643dbfcbf34634ef30b86a0afd6244e6978669d8d2418ea6784be1d850f"
+    },
+    "drugs/deferoxamina.json": {
+      "bytes": 1801,
+      "sha256": "7255d474e5220a967c776ede6aecced75383bf531dca78d4bf0645779c297391"
+    },
+    "drugs/deflazacorte.json": {
+      "bytes": 1828,
+      "sha256": "3d726da9f3d3c8c4591cb63857dfd2edb1c14a19002aeb2aa6f006c7ad7a6bfc"
+    },
+    "drugs/delafloxacino.json": {
+      "bytes": 14216,
+      "sha256": "06d9ce96182811cbe835586d6a03c3e0ac685d81bea0beeba2be07516449887b"
+    },
+    "drugs/delamanida.json": {
+      "bytes": 18211,
+      "sha256": "7ed526778c982dfea286a6643780802c0f224f62863ead6dd91a3b0e6e8b37c7"
+    },
+    "drugs/derisomaltose_ferrica.json": {
+      "bytes": 1958,
+      "sha256": "5ef96674b1b4ce0a4991fd22ad143c62b2538de2db606d92945ba88d4021df92"
+    },
+    "drugs/desipramina.json": {
+      "bytes": 9075,
+      "sha256": "8c9bdc21b0554349272350d41a62af88e3b9a04152e9558c7d158efb5289e4c1"
+    },
+    "drugs/desloratadina.json": {
+      "bytes": 8222,
+      "sha256": "9d20d45c80aafc1a0c9a6aa3db4d68cd1fe50f0302f530bb40212d97e6e65ef1"
+    },
+    "drugs/desmopressina.json": {
+      "bytes": 1915,
+      "sha256": "4c69bd2c947886867e0febc05a8fd12e99783fc96fe46ccb043993d79858c334"
+    },
+    "drugs/desonida.json": {
+      "bytes": 1789,
+      "sha256": "9864ac96d119f43536b959105048f225dde30e12fef94145a3316770f9427801"
+    },
+    "drugs/desvenlafaxina.json": {
+      "bytes": 11430,
+      "sha256": "eaa1495ed23d888fd7cde0d5ab0660f1ffc57ec8dea6b0e48393c602b0336959"
+    },
+    "drugs/deutetrabenazina.json": {
+      "bytes": 1851,
+      "sha256": "f9b91fe0b20e6868fd26c8fb72437b74bfaa760390da6a7a674fa98d9965e16d"
+    },
+    "drugs/dexametasona.json": {
+      "bytes": 9798,
+      "sha256": "9020a468da7ae39f84654860c8096b04498a2f3ee6e99ce20c76b364b4110f44"
+    },
+    "drugs/dexclorfeniramina.json": {
+      "bytes": 2051,
+      "sha256": "789bc88aa0224ade741256531ba0ef7e3b226ef21efd88f4b3a8f34be3992db2"
+    },
+    "drugs/dexlansoprazol.json": {
+      "bytes": 1856,
+      "sha256": "176858e0b63d13ea618f08fa6de22d77d339f59401c47509eb5fe070e1bfd1c0"
+    },
+    "drugs/dexmedetomidina.json": {
+      "bytes": 10814,
+      "sha256": "ccff3f5fa5099eaf750296ad49706dc0b4d4243932edd0453896875ba2be4a8c"
+    },
+    "drugs/dextrana_ferrica.json": {
+      "bytes": 2037,
+      "sha256": "12915c6663d50d97134752440867fadedf45893b9ee45dfbca1649283072ba59"
+    },
+    "drugs/dextrometorfano.json": {
+      "bytes": 1836,
+      "sha256": "e8ab12f232de7990c651200117831e03bd03388d336259ed099ee517d122bf45"
+    },
+    "drugs/di_hidroergotamina.json": {
+      "bytes": 2028,
+      "sha256": "8f99ebc3c7cd9b49eb91dfc0bc8353dc125c3b59a1467c32027412fe7436994e"
+    },
+    "drugs/diazepam.json": {
+      "bytes": 9506,
+      "sha256": "902293291a7d1186cf73a7b54ce009a89adf4a1e98e163790f40da521687dd1d"
+    },
+    "drugs/diclofenaco.json": {
+      "bytes": 21191,
+      "sha256": "a5fce4787a36eea7fe5fe816e2d76c3fe49c47424d49d26be6bf2824c491eaaf"
+    },
+    "drugs/dicloxacilina.json": {
+      "bytes": 13157,
+      "sha256": "bd9816ef9c7a5dca4da1033d1666f59ad4e082a22b54126f47bb8e21c0b4eaaf"
+    },
+    "drugs/difenidramina.json": {
+      "bytes": 8704,
+      "sha256": "865987eef095343c094baaa45a34d11242f3a4774771058a255700fa6639ac94"
+    },
+    "drugs/diflucortolona.json": {
+      "bytes": 2011,
+      "sha256": "5bee4811f4a5bcc8cffc8688b5c054c5bfe1ae722bc8eb39d28bdf6f92b4b30c"
+    },
+    "drugs/digoxin_immune_fab.json": {
+      "bytes": 1942,
+      "sha256": "2693b7290a7dbe8860efac49f4c04f1d622704b3103dc0b80608f365780ce1b6"
+    },
+    "drugs/digoxina.json": {
+      "bytes": 20044,
+      "sha256": "7d84e8a2d789ea8f026b32c0924a49d80e12e2c2f5c8e878365b068b65b31083"
+    },
+    "drugs/diltiazem.json": {
+      "bytes": 36210,
+      "sha256": "2f5173b51e0063cde33688738316fd1b2ec9ba7eb4720c7835631e692a2974bd"
+    },
+    "drugs/dimetilfumarato.json": {
+      "bytes": 1831,
+      "sha256": "55b3b09f45618a585a1742e31b54ace70b9d8e792c951aa1079d2807798a1905"
+    },
+    "drugs/dinitratoisossorbida.json": {
+      "bytes": 1952,
+      "sha256": "4254d031628f3f78726b01c4e873af9d1fcf5f2ce1d7ce5d27de2348251a000a"
+    },
+    "drugs/dipirona.json": {
+      "bytes": 22334,
+      "sha256": "023c77b559df1bf77fd09c2c90664ab16e33a0c890fbe725c719bc6c0f2031af"
+    },
+    "drugs/diroximel_fumarato.json": {
+      "bytes": 1919,
+      "sha256": "42763522952767fecbb61003058fd3384c61563809d45145a8f05490a552843d"
+    },
+    "drugs/disopiramida.json": {
+      "bytes": 15152,
+      "sha256": "288525685c340a2ca302680ca1988807ee2825419b94f3cd28bb49815751a06d"
+    },
+    "drugs/dissulfiram.json": {
+      "bytes": 9212,
+      "sha256": "d922eff25e4fa332d7372e52c1fa73c8ceb31d10142bd7d13f4c15dea907ed74"
+    },
+    "drugs/dobutamina.json": {
+      "bytes": 4575,
+      "sha256": "4fab702620220a5082b663a0e669f3abd7a5eed9f33f7d8618b11e0976410a51"
+    },
+    "drugs/docusato_de_sodio.json": {
+      "bytes": 1947,
+      "sha256": "752a24316ad20dd9a060e71a73e347be1d15d0831d1cc8476a9a55dffc2b3c0d"
+    },
+    "drugs/dofetilida.json": {
+      "bytes": 13892,
+      "sha256": "417fbe62b8fdf2420fa7c756df07391279025536b827bb5ac4bebdfdd6c8d069"
+    },
+    "drugs/dolutegravir.json": {
+      "bytes": 1969,
+      "sha256": "a27a89cc2529dd6dbb4fa856d1a6973ef0df50d1bd7f926a379a500ee6399e3e"
+    },
+    "drugs/domperidona.json": {
+      "bytes": 9166,
+      "sha256": "9b5a210bd85e6982e111ba7a0a38b05194d6e64981a0b44157a3b7c8decd5749"
+    },
+    "drugs/donanemabe.json": {
+      "bytes": 1778,
+      "sha256": "b0e969ed953b6f70751493a462cd81dcec4ad1715489563ef0efed04a39be2bf"
+    },
+    "drugs/donepezila.json": {
+      "bytes": 1954,
+      "sha256": "04eb3093a479cb8a42d11f10ec0b830625531c49e3dc774065b393390b97868c"
+    },
+    "drugs/dopamina.json": {
+      "bytes": 4782,
+      "sha256": "af5fa21caa0d86047b55ac196152d7e1fed91c74fcbf7ec911214f59321e048f"
+    },
+    "drugs/dornase_alfa.json": {
+      "bytes": 2002,
+      "sha256": "8ebad79f760816a0c2f90351282e114cead868badea7c90964092eef4185604f"
+    },
+    "drugs/doxazosina.json": {
+      "bytes": 1761,
+      "sha256": "e0c4ebdd56d871c70c7e82dc9b546004243210d2391c9f4a6bbc998ed77268be"
+    },
+    "drugs/doxazosina_lp.json": {
+      "bytes": 2048,
+      "sha256": "2b81700a938ee9de6d1de97e2bc56c3534129062b64b0400d97cdf56cd3352fb"
+    },
+    "drugs/doxepina.json": {
+      "bytes": 9110,
+      "sha256": "65636cb0d0438896ed6e666393724d454fcfce7940a5d29cd8bf7816acacaa46"
+    },
+    "drugs/doxiciclina.json": {
+      "bytes": 11621,
+      "sha256": "ebb20b7a0a17f94ce48699abfaef234699d5018a05443164f5dc1848c313b3a2"
+    },
+    "drugs/dronedarona.json": {
+      "bytes": 17473,
+      "sha256": "e5cef544c02320b81ac95c16d16238a8a7e09d22669b70673e2de9a3aef7b6d0"
+    },
+    "drugs/dropropizina.json": {
+      "bytes": 1806,
+      "sha256": "565975d61363a893833c72f7227f13cb058d8c0349a56b5481f139a06b8a0561"
+    },
+    "drugs/drospirenona.json": {
+      "bytes": 1806,
+      "sha256": "006bb864a739f8b2b68adb2fbde762c81bca830e7c50e615ecb826992be69d8c"
+    },
+    "drugs/droxidopa.json": {
+      "bytes": 1751,
+      "sha256": "a8b6eba008ad5b3d96633067807aad1b258da9a9e289add952a592d786f0c1c7"
+    },
+    "drugs/dulaglutida.json": {
+      "bytes": 1786,
+      "sha256": "50c7967f3256e09836e1f0a801d4e04ab2cdc9c8f4ca991b28ef079aa0e9ae88"
+    },
+    "drugs/duloxetina.json": {
+      "bytes": 11521,
+      "sha256": "f8663169a5676fb0884c516cfff8fc720f1f75f30e3a33f87fb24415dcc4f7a5"
+    },
+    "drugs/dupilumabe.json": {
+      "bytes": 1783,
+      "sha256": "710a51fb091fc214491320c48f67a020995329e6149757e91d3408f331296c1a"
+    },
+    "drugs/ebastina.json": {
+      "bytes": 1801,
+      "sha256": "c2b64ee5cfc0df9501eff9a6ad6f0b7db18df86e69dd48003f0b1b9d70085f47"
+    },
+    "drugs/edaravona.json": {
+      "bytes": 1781,
+      "sha256": "dc89468ac08868958bed8172315e696e4affd0719f17e371a7fc021757ca9b0d"
+    },
+    "drugs/edoxabana.json": {
+      "bytes": 3428,
+      "sha256": "edd4d55f2b7ea7bc4061e3a1a00b7e60f8770c17ad2cfdd3db5a956e098cc75e"
+    },
+    "drugs/efavirenz.json": {
+      "bytes": 1869,
+      "sha256": "158f55d9ab91ae3874ee93afd9274b9a04145a3309c56bf620c9bd3cf984bcd8"
+    },
+    "drugs/efedrina.json": {
+      "bytes": 18325,
+      "sha256": "1b9ded4e52bb86a02d8cd8740519e822094df4d7dc5f872dbed0e865f17593a8"
+    },
+    "drugs/efgartigimode_alfa.json": {
+      "bytes": 1940,
+      "sha256": "ec6fc67509b03830925738cb50b9cd992e05befcc343c3496623c47c1679b747"
+    },
+    "drugs/eletriptana.json": {
+      "bytes": 1990,
+      "sha256": "84b8f9c03ed351889197c1f352a25e2a0941a1d4e855a0d7ea7cb46966a0414a"
+    },
+    "drugs/eltrombopague.json": {
+      "bytes": 1922,
+      "sha256": "7280097b243c869cd979baa0bbdb82ad2c18fa328ef570a08cd33ed1e5b1c855"
+    },
+    "drugs/emicizumabe.json": {
+      "bytes": 1793,
+      "sha256": "3d34c2a4b1b64a76a53abcc8e945b82f7035ac5732c41ac0fddf04b8f08c9ec3"
+    },
+    "drugs/empagliflozina.json": {
+      "bytes": 25126,
+      "sha256": "3fb773426733efbbc479359ba1762fe6c42071c5a4559868e4cbcae1fd49399d"
+    },
+    "drugs/emtricitabina.json": {
+      "bytes": 1917,
+      "sha256": "81185fc6dde4e9b5fb625b689c6264735d755ecccd5e26f8e56833d3c95c66d7"
+    },
+    "drugs/enalapril.json": {
+      "bytes": 19864,
+      "sha256": "e7f41efbaea20d041d0f24be8aead7b2ae05202150c0f8a9429dec1c51edcc01"
+    },
+    "drugs/enalaprilato.json": {
+      "bytes": 1873,
+      "sha256": "bd23e8f31436b338f4a5df35bb6c0f40224a8e17b4aad1bdb0bf686651e233d2"
+    },
+    "drugs/enoxaparina.json": {
+      "bytes": 6543,
+      "sha256": "f6b9038650622da54c23414fd1fce4f53b6f785a7348ec187eac23f0f4f24285"
+    },
+    "drugs/entacapona.json": {
+      "bytes": 10049,
+      "sha256": "24c1f6f526d1284984f769b22d0001b68b6a56354dcdabaa9823b7ff734e41e6"
+    },
+    "drugs/entecavir.json": {
+      "bytes": 1781,
+      "sha256": "36ac12d4fffc927ccf1386387a8c544619296770a2cc04d4de955b481025efc9"
+    },
+    "drugs/eplerenona.json": {
+      "bytes": 14090,
+      "sha256": "b69d2f8fac44c6691aad754b7cd832d85d89f9b0eed5a63b53e899d31e34f93a"
+    },
+    "drugs/epoetina_alfa.json": {
+      "bytes": 2197,
+      "sha256": "8ae67fd4239eb8d3261c96f689c54d8a1095dc92d5990de46018311a0fd37fd4"
+    },
+    "drugs/epoetina_beta.json": {
+      "bytes": 1854,
+      "sha256": "cec16af1a0e8caa77f92afc43c73806c059f620fa6d92878f78fa589b60e70ed"
+    },
+    "drugs/epoprostenol.json": {
+      "bytes": 1781,
+      "sha256": "bf0682f824f422d084759765955e1f89c2138ad3eaca7366ef8a45184b13e9fe"
+    },
+    "drugs/eprosartana.json": {
+      "bytes": 12890,
+      "sha256": "bdbbf7e40d5ebb1a95e0889454760d985bc50169316841e167e76bb07e442d54"
+    },
+    "drugs/eptifibatide.json": {
+      "bytes": 1781,
+      "sha256": "026798ec05ac5525aeb66f49330486cd62f93aa7da9068de46c50d0ac92beeec"
+    },
+    "drugs/eptinezumabe.json": {
+      "bytes": 1798,
+      "sha256": "cce83de854603ded5408a27a62dbb974dc0d809bdf2ef27ac00387caa64bed26"
+    },
+    "drugs/eravaciclina.json": {
+      "bytes": 13352,
+      "sha256": "1fd242aae6ae51e14985aefc07dc34110e7d39b9e8a9ebf7a310f252f263c365"
+    },
+    "drugs/erdosteina.json": {
+      "bytes": 1836,
+      "sha256": "3a39336aa5d6c43709c2ac7c20dd1971ac1c0b8eca81e3b3d668bc354b3655ed"
+    },
+    "drugs/erenumabe.json": {
+      "bytes": 1768,
+      "sha256": "7ac2cad4781dc005732cf4a9cb6fe84e96d7a1a6d1e27f39b63f56416a5966fd"
+    },
+    "drugs/ergotamina.json": {
+      "bytes": 1940,
+      "sha256": "aeaa0f98421e38f53971b6e13aa09db1edd0683bd509f19ee3e77cc5273186b1"
+    },
+    "drugs/eritromicina.json": {
+      "bytes": 17734,
+      "sha256": "f52d18129fd7b9505edaebfd76f7e62cf353ce18d0ae47b771e26092ab874138"
+    },
+    "drugs/ertapenem.json": {
+      "bytes": 12621,
+      "sha256": "5b517a1587f79c1585174fc0468cc39fcf366f733ac595a62e50cc982e27b2bc"
+    },
+    "drugs/escitalopram.json": {
+      "bytes": 9966,
+      "sha256": "02621bb776c8887ba1e3b379af57a30417b487812abd512038431de7360894c3"
+    },
+    "drugs/eslicarbazepina.json": {
+      "bytes": 1997,
+      "sha256": "3f7c8ad096f0b00a1c130fbb688e4a6a64f48872e553190ab1d58dea78c41626"
+    },
+    "drugs/esmolol.json": {
+      "bytes": 21580,
+      "sha256": "5ccb961c3d1541d9e099dcae3b55f8240a5cc63baf67f85d880aaefb615303fd"
+    },
+    "drugs/esomeprazol.json": {
+      "bytes": 1958,
+      "sha256": "4ad840402f26f90c7c59857db9bf9f18fcee067af78ced077a15eb9da64551c6"
+    },
+    "drugs/espectinomicina.json": {
+      "bytes": 12557,
+      "sha256": "809e214559d36159431d6a6c5047113cf92b9fb827dd33cd75c052e7402e778f"
+    },
+    "drugs/espiramicina.json": {
+      "bytes": 17136,
+      "sha256": "5a70095a96eb3b3e4b23dbf4fcbe193e61764ea96b8197318a7fd033b81d5ee4"
+    },
+    "drugs/espironolactona.json": {
+      "bytes": 17900,
+      "sha256": "f0de1aa59d25b8d57f84e20517871710e73e42f67dfb69eda43b9439d67198f4"
+    },
+    "drugs/estiripentol.json": {
+      "bytes": 1811,
+      "sha256": "bd766ac11868aae7f0aa63b39e7354c508516f3e4614a715108b4dc4bbffc586"
+    },
+    "drugs/eszopiclona.json": {
+      "bytes": 9351,
+      "sha256": "8fde01d0c20de58f9b5b321a42cf99a46d6b47a1ec8a30231d00bedeece73aa7"
+    },
+    "drugs/etambutol.json": {
+      "bytes": 12776,
+      "sha256": "92f79106bd23c96c067b710d41acfc1aaf28d38260a20ea594f7b95d92944e8f"
+    },
+    "drugs/etanercepte.json": {
+      "bytes": 1785,
+      "sha256": "6e5202e15984ec76df637431d3c407ff53615a364d2847337bb2d8775126ab55"
+    },
+    "drugs/etelcalcetida.json": {
+      "bytes": 1806,
+      "sha256": "4009be6b78b5c8e46cc9976fe3a0400fc97623ccc14958b9b604a681783e9b27"
+    },
+    "drugs/etinilestradiol_levonorgestrel.json": {
+      "bytes": 2084,
+      "sha256": "b13857c59fc221ca8e98e48598caa4cfdd20c48adc7a6ad805e78a25910cb619"
+    },
+    "drugs/etomidato.json": {
+      "bytes": 9873,
+      "sha256": "f1957daf749fb87b1368a4875f7c889bb515d2c78a6dbf85295f62973ca44808"
+    },
+    "drugs/etoricoxibe.json": {
+      "bytes": 1789,
+      "sha256": "6884608396f1b941301590e0d6ef95f984b3b4de609d900aeb8936759be4f8a3"
+    },
+    "drugs/etossuximida.json": {
+      "bytes": 10037,
+      "sha256": "10385936eda42d0f4c91bbb90f4537bd4efcd5fcac9dad6e9a58cfe3522f9485"
+    },
+    "drugs/evinacumab.json": {
+      "bytes": 1808,
+      "sha256": "f4944101eec55c6539638532bc3bca962ee3072a4bc698925458bd0cfca80112"
+    },
+    "drugs/evolocumab.json": {
+      "bytes": 1808,
+      "sha256": "6e59f60d28a370cdbe85aff92b9cc73f9a78a9e3bb75f2e35065bc1f0957f542"
+    },
+    "drugs/ezetimiba.json": {
+      "bytes": 1751,
+      "sha256": "2788fceddaaba33faf8495f5141cca003c17af0f3ed8b699208488ec85c7827a"
+    },
+    "drugs/famotidina.json": {
+      "bytes": 1816,
+      "sha256": "4b6169685d752454124ff57e75c29734741453c08e86b789254b20213afbb441"
+    },
+    "drugs/fator_viia.json": {
+      "bytes": 2065,
+      "sha256": "0c1a5b93c32456ce730d2333138b37413c9a42a7a8fc9fbb19948980020d4bed"
+    },
+    "drugs/febuxostate.json": {
+      "bytes": 1785,
+      "sha256": "678879697eb4817d3f3256d9ab4bfecf2fb0b83d802bf8bfc510bbe616d7a259"
+    },
+    "drugs/felbamato.json": {
+      "bytes": 1781,
+      "sha256": "94e94d326cb0b566bfec8aa8fe94d8e5485990feadc6c3fbf1a43febfb51c0f6"
+    },
+    "drugs/felodipina.json": {
+      "bytes": 26619,
+      "sha256": "bdf1683fba6918fbc896dadc4179eb15591c3c0d7e5cd46b6cbbb3b0d577477a"
+    },
+    "drugs/fenelzina.json": {
+      "bytes": 6733,
+      "sha256": "784576a2c3f6ee1dc7f64e610cabacbbb5aa4af7e067cafd8cc543a327de6904"
+    },
+    "drugs/fenilefrina.json": {
+      "bytes": 17818,
+      "sha256": "353600b07f4ad75a102efc8f30064243d0ef2fa83a698557d2030fdd7013de3b"
+    },
+    "drugs/fenitoina.json": {
+      "bytes": 15080,
+      "sha256": "71922baa752962d13da238e388715d1fde3a9a9af4eca08bcfc330f2404e4a1c"
+    },
+    "drugs/fenobarbital.json": {
+      "bytes": 13553,
+      "sha256": "7f70bb0b4f371987ccaee0900f72be03b2d144913a90a4a82868985929c3b4a5"
+    },
+    "drugs/fenofibrato.json": {
+      "bytes": 1771,
+      "sha256": "f602de7639dc2233965c5e65b587e7a63e220a7549536e6ee876bbc8c8f2e226"
+    },
+    "drugs/fenoterol.json": {
+      "bytes": 1776,
+      "sha256": "486d1fd9d5fe5232c1121c1706c5536b7f236f6023d82f58f19896306e9b7c10"
+    },
+    "drugs/fentanil.json": {
+      "bytes": 18975,
+      "sha256": "21d2388fdc8d7802c17280a082056d0431e5a08695261883ba97d280da1b999c"
+    },
+    "drugs/ferro_polimaltosado.json": {
+      "bytes": 2334,
+      "sha256": "a7b3770fa94c46ab2fc9584dd90cfa8288a9bb589567590f51fb34ed646e2088"
+    },
+    "drugs/ferro_sacarato.json": {
+      "bytes": 2149,
+      "sha256": "c14da9c15244f3bdef69a3a152825620e83dce7cde84c2e7b0b24cd6ce69a142"
+    },
+    "drugs/fexofenadina.json": {
+      "bytes": 8110,
+      "sha256": "8691251b38467b9755cfd62d6c71f249892141c809f05161461edacf8a4bf0ea"
+    },
+    "drugs/fidaxomicina.json": {
+      "bytes": 13379,
+      "sha256": "619f78b43a1cede62fa171cc6894940f97599b9726d4f1c8c85a2fcf13d3a23c"
+    },
+    "drugs/filgotinibe.json": {
+      "bytes": 1823,
+      "sha256": "c4c58ad9aa196d7971f37407cc08917cc3a38a9d0bba02b41804bde19afb5d0a"
+    },
+    "drugs/filgrastim.json": {
+      "bytes": 1996,
+      "sha256": "4db66dab7111f339a518aeb5550e26e56d0f1e6c66690bd7f462781c8fb35684"
+    },
+    "drugs/finasterida_urologia.json": {
+      "bytes": 2043,
+      "sha256": "3e1008fd577594e988ded9676926a6481e024c44cc2ed5cacf534e9e06ffc559"
+    },
+    "drugs/finerenona.json": {
+      "bytes": 1776,
+      "sha256": "8f9c455ef703b7f9b2d61a71685f9f8a34db57d5ec8c646ca8a6df91b0312acc"
+    },
+    "drugs/fingolimode.json": {
+      "bytes": 1788,
+      "sha256": "9ec1db1ab3d5785cbda285efbcf5917c14292e03ba472dce8eb364fe84b697e9"
+    },
+    "drugs/flecainida.json": {
+      "bytes": 15271,
+      "sha256": "e62d19a37f7e460ee48771516a149afff036ee29c3a6ebc1127c8c0486ea4548"
+    },
+    "drugs/flucloxacilina.json": {
+      "bytes": 12681,
+      "sha256": "668d3bfdd76ecacd66ef5bb7f1efb863b9a51d601cf815d795fa86a6afb9b2cf"
+    },
+    "drugs/fluconazol.json": {
+      "bytes": 12022,
+      "sha256": "afca709ec880f47a45b1301b51b58c5d9ee7bc24f5301e7b98d51ce6e279f6ca"
+    },
+    "drugs/fludrocortisona.json": {
+      "bytes": 1967,
+      "sha256": "1264056ca72136f5a114f99c3ccaa36be9f59a89f3a1ad173abbee3d85a4ddf4"
+    },
+    "drugs/flufenazina.json": {
+      "bytes": 12864,
+      "sha256": "4932b366f9bbdc851d5dc101bfe153f98ad3bd4ac2f77039144e3c60a86e9b07"
+    },
+    "drugs/flumazenil.json": {
+      "bytes": 9458,
+      "sha256": "8d8da28eecb35d52003a48445318912c63a2f48dd6b4c2e65ea2062a86067c09"
+    },
+    "drugs/fluocinolona.json": {
+      "bytes": 1955,
+      "sha256": "4fd8aa339545aec66e6f42ab737035961283319fb2addf56c9c0e05ac3bf16a3"
+    },
+    "drugs/fluoxetina.json": {
+      "bytes": 9536,
+      "sha256": "5ce7dcbf4302845d595ffeaef06cc85d8f5c2b208a5f0ac68f344c32847da014"
+    },
+    "drugs/flurazepam.json": {
+      "bytes": 9110,
+      "sha256": "c77b1148a76d93911eba6db1fa651399bd4a7a80ba116a280073d39b21b04b6b"
+    },
+    "drugs/fluticasona.json": {
+      "bytes": 8418,
+      "sha256": "db48f20c52f7338b78d03d9f2860655fef509ab36c252f4a3b5f13018b0d053d"
+    },
+    "drugs/fluticasona_salmeterol.json": {
+      "bytes": 1988,
+      "sha256": "a4154861b993e4f1ce3e9e5d4a05d741f4b2dd6a53050df7d79de6339ff1eef7"
+    },
+    "drugs/fluticasona_umeclidinio_vilanterol.json": {
+      "bytes": 2153,
+      "sha256": "29655d4559f1b2d65597e4d0cc255df51560b54ef5f6ea07aebbfa4e050175eb"
+    },
+    "drugs/fluticasona_vilanterol.json": {
+      "bytes": 2068,
+      "sha256": "145e5fa3a83c4993aebb880e620964194ec526ccb37ec163be5b44336e5c0836"
+    },
+    "drugs/fluvastatina.json": {
+      "bytes": 1781,
+      "sha256": "f3e077e0348f7560a93d59289c1cac8b8651b4e437786cc090d69869a99772e5"
+    },
+    "drugs/fluvoxamina.json": {
+      "bytes": 10557,
+      "sha256": "3c414f7bbcfcd69c0764346548fd520387cb06e5e5860b9de7122b8890418ac3"
+    },
+    "drugs/fomepizol.json": {
+      "bytes": 4070,
+      "sha256": "558e43c558354081f8de0717b87b360ab2e126379c6fdf327c0111f2bdcba03f"
+    },
+    "drugs/fondaparinux.json": {
+      "bytes": 3407,
+      "sha256": "e59574ac208e58376b004797d35301d3326dce27408bc71ec8ce06fef1b6f5b6"
+    },
+    "drugs/formoterol.json": {
+      "bytes": 9172,
+      "sha256": "0adedd6cb84e1ce017f95d69b3fa5dd01af5fd5e871cba7976055936d4eb9419"
+    },
+    "drugs/fosfato_de_potassio.json": {
+      "bytes": 1930,
+      "sha256": "32e05ece71b4c35af2961d26edc2c6399cac0b69585f5ef8c3a6bd2cccf23209"
+    },
+    "drugs/fosfato_de_sodio.json": {
+      "bytes": 1897,
+      "sha256": "a6ec57371f9c0906e7bbb0c344140cb845bd86da02c9a694453c7c03fa20f43a"
+    },
+    "drugs/fosfenitoina.json": {
+      "bytes": 1945,
+      "sha256": "9ecd86738e663583e44247f473cfeada4b1f1b34a0f39f5fa89018881e9460d8"
+    },
+    "drugs/fosfomicina.json": {
+      "bytes": 15500,
+      "sha256": "3ade3bdecf3111b6711ec9a480d6e5ffccf6afc7d6db853d8968aa3bdde64086"
+    },
+    "drugs/fremanezumabe.json": {
+      "bytes": 1808,
+      "sha256": "660b8a54cddcf55fe2fdd2731301f7cf9edbf285c41acf58455db49d1a66de70"
+    },
+    "drugs/frovatriptana.json": {
+      "bytes": 1811,
+      "sha256": "78085e9066b8793f51167860aa3e6a4e9a7a482022ca2e651efd14089d0d9d20"
+    },
+    "drugs/fumarato_ferroso.json": {
+      "bytes": 1892,
+      "sha256": "e666472964eba3de61fe4bedead95bdf06d7815cf7ded163212bcd4aeea51cd4"
+    },
+    "drugs/furosemida.json": {
+      "bytes": 20347,
+      "sha256": "5ed7eb8b94dec72bcee6a338cfb2df752dde4970f3df6436ba076a6ffa2abccb"
+    },
+    "drugs/furosemida_iv.json": {
+      "bytes": 1864,
+      "sha256": "347b00e00e952887e233c26986dd79c0c53e0aa0de23f3a9503c0192833eac7d"
+    },
+    "drugs/gabapentina.json": {
+      "bytes": 10227,
+      "sha256": "fd7611d4f0198d4e4733afc4e2463116f46bb20174035ce52fce6bf989ad19eb"
+    },
+    "drugs/galantamina.json": {
+      "bytes": 1966,
+      "sha256": "2b0cc98c3769f656110dcae0aa30056303fbeae70e8c9f0b0724729b6244a08c"
+    },
+    "drugs/galcanezumabe.json": {
+      "bytes": 1808,
+      "sha256": "1f7c5a7464af3378ff2e3c303802a59c8146261fa113cc385e6de314dc489d7e"
+    },
+    "drugs/ganciclovir.json": {
+      "bytes": 14915,
+      "sha256": "225c083866afdb83a11651b2f6eb144e2732179d1af3c0c75c840f99541481b7"
+    },
+    "drugs/gemfibrozil.json": {
+      "bytes": 1774,
+      "sha256": "a4b49d929a30829d8b23a9c08c8090b7c173eb8aeb9ee1055e0dde733d355b4c"
+    },
+    "drugs/gentamicina.json": {
+      "bytes": 21442,
+      "sha256": "def5ee8085c16637570d73c889aad4680335bf2954dab4c13786f9ab3bed4a53"
+    },
+    "drugs/glatiramer.json": {
+      "bytes": 5076,
+      "sha256": "4e191a8d466f467e6be5c7dcf75e16f5c083562b848b4bc60af0f3cc30002c4e"
+    },
+    "drugs/glecaprevir_pibrentasvir.json": {
+      "bytes": 2017,
+      "sha256": "1acd86d08e7ce96d68cd5b9b89c688c804abf3274bc209012c068fffe6bd8fbc"
+    },
+    "drugs/gliclazida.json": {
+      "bytes": 1776,
+      "sha256": "252103bb97b030b2aac811559c7975803b1485ada2335cad3fd3645133f64f38"
+    },
+    "drugs/glicopirronio.json": {
+      "bytes": 1973,
+      "sha256": "08e03dbfa4308630845c765edc695893dff8eb7f79f3baa44625436bf3fe7604"
+    },
+    "drugs/glicopirronio_indacaterol.json": {
+      "bytes": 2029,
+      "sha256": "142b71953ca449aa95839e9d5d47fcdc674ca17391f65cc1845a037b232e2052"
+    },
+    "drugs/glicose_hipertonica.json": {
+      "bytes": 1971,
+      "sha256": "c89503fe76d40ce4c949fe9c6cf6685c2256bfce51cc0858c2ddd1f854d5cf23"
+    },
+    "drugs/glimepirida.json": {
+      "bytes": 1786,
+      "sha256": "3fec6dc7db0d491a78abb84598a985f771284ba6db184f190ea59aa03ca97e8b"
+    },
+    "drugs/glucagon.json": {
+      "bytes": 4377,
+      "sha256": "f6ea6688b224bb75a6c835e60e97e31a9cb9739801e07296f66d6afaa9ca860c"
+    },
+    "drugs/gluconato_calcio.json": {
+      "bytes": 1924,
+      "sha256": "782df5acc075adeca3a5ee7b5b4de291b1292e8041c7eacd99f3925ac342f563"
+    },
+    "drugs/gluconato_ferrico.json": {
+      "bytes": 1977,
+      "sha256": "296a8898ada54050a2cbef9ed5f3a81914c9b0b4a510f8e4d0d2cea96b680087"
+    },
+    "drugs/gluconato_ferroso.json": {
+      "bytes": 1904,
+      "sha256": "fd1dec439fe85710f70abf20e979b440065d1a5de8ea6ba00904cc65d54f1186"
+    },
+    "drugs/golimumabe.json": {
+      "bytes": 1813,
+      "sha256": "2720a74c6ed5a93d8625dc96b5dc04ed4fa8d17d9403ae18ca4055ab23d3f262"
+    },
+    "drugs/guanfacina.json": {
+      "bytes": 1793,
+      "sha256": "198b88d25ee4f68540ff75074879e5261d722ff0e7e2e8b3ee0002fc71434ff6"
+    },
+    "drugs/haloperidol.json": {
+      "bytes": 11378,
+      "sha256": "b3a45191844f64e0a5cce2daa7d9e4b5950e9c864f11597b83f3e87e8070cf19"
+    },
+    "drugs/heparina_hnf.json": {
+      "bytes": 6566,
+      "sha256": "10b63bd47c4b1bec67cb105717b1dfe4bce43c1f0116fec6ab0c7dc0a41b2e28"
+    },
+    "drugs/hidralazina.json": {
+      "bytes": 27729,
+      "sha256": "3545c6b0059f1fbb8330f2406181367084718ef4ce896984bec52dad1f8b5fce"
+    },
+    "drugs/hidralazina_iv.json": {
+      "bytes": 1876,
+      "sha256": "f2fc9ded728b995f54ad5769fc0c2faa16fcf063eceb9a304b5e7b4b1c799e51"
+    },
+    "drugs/hidroclorotiazida.json": {
+      "bytes": 14678,
+      "sha256": "1eb8479b82bb4c9901270cf70c67d2b6dd5037c5dd540207816b74be650a6248"
+    },
+    "drugs/hidrocortisona.json": {
+      "bytes": 5421,
+      "sha256": "38d59ac8adc53d69f3bca145e1b1eb22b1851089f2e3978df8d33ec603b73093"
+    },
+    "drugs/hidromorfona.json": {
+      "bytes": 8685,
+      "sha256": "ba40f3d03901dd06fe28362b36a2e0e78d08833c4d9d7cf339202c2b1bfcef44"
+    },
+    "drugs/hidroxicloroquina.json": {
+      "bytes": 13683,
+      "sha256": "5b60b36b4cc0c3e0c0cc99be193e328cff1d5bed74ada9af3608b9a9f6476790"
+    },
+    "drugs/hidroxizina.json": {
+      "bytes": 10257,
+      "sha256": "26141800c3b5b512ecfd492ec377e0defc42c52992d83442eb0cad3f3281d1bf"
+    },
+    "drugs/hidroxocobalamina.json": {
+      "bytes": 2040,
+      "sha256": "cf28ef096c7e714797657e257fd1411d95bb48d6a0fa2157df448c860f14e9d2"
+    },
+    "drugs/ibuprofeno.json": {
+      "bytes": 23032,
+      "sha256": "955399491f03fbe2be1de3707b1efa00f33d6c87aea48f2ba6abfe49ba3c4548"
+    },
+    "drugs/ibutilida.json": {
+      "bytes": 13677,
+      "sha256": "01ae37a7e23db81823e088ab6a50b6d62c41cc0fc0ea663dec5cb723eb12b583"
+    },
+    "drugs/icosapento_etilo.json": {
+      "bytes": 1899,
+      "sha256": "35a920f197f8bd4274164583b98190a3ae1891567e073b930679c0757ab205d1"
+    },
+    "drugs/idarucizumabe.json": {
+      "bytes": 1788,
+      "sha256": "b5ab21a596854d26fe45e56cf57ebb4193ce3dd6c4105401cd80edaf4267a4c9"
+    },
+    "drugs/iloprosta.json": {
+      "bytes": 13398,
+      "sha256": "5df8f7deda3efba3b4d4158b217e9799761178ec4013f539e3e8da9a511dd150"
+    },
+    "drugs/imipenem_cilastatina.json": {
+      "bytes": 21798,
+      "sha256": "db6dbfb98d8c928e6b66a98a63b3e28edac4dabaeda9750ba6560dbebe62edba"
+    },
+    "drugs/imipenem_cilastatina_relebactam.json": {
+      "bytes": 15801,
+      "sha256": "ca89fb46b078a34a560c6cd87c6aa77dda31511ea96f89072e3bda5821b1593b"
+    },
+    "drugs/imipramina.json": {
+      "bytes": 9737,
+      "sha256": "0dd6d78c6c4b396cbd70a2faa33a68330257c62b30acaa313ed3d722cda850e1"
+    },
+    "drugs/inclisiran.json": {
+      "bytes": 1811,
+      "sha256": "44e5b6400d1b2ce5b2ba84fc42a2a8d202f2b1bbf4970629be642b40dc6bc1e2"
+    },
+    "drugs/indacaterol.json": {
+      "bytes": 1796,
+      "sha256": "0a5fedcfabccef77280628a18c48c5a4c5fd2eac1de5839da6c379f13c25a65c"
+    },
+    "drugs/indapamida.json": {
+      "bytes": 13981,
+      "sha256": "be65a7ff68b0008290c9200540526a6c56330acd71eb17845ec80bc25ea636d4"
+    },
+    "drugs/indometacina.json": {
+      "bytes": 1802,
+      "sha256": "7705d6145127563a283304513937098faef0c9857d99e11754f1e5ed1c4dfe82"
+    },
+    "drugs/infliximabe.json": {
+      "bytes": 1823,
+      "sha256": "98eab3381a4bf84e33ea5f7ca821ad18b9428c716fa1828f2c0c5df90fd1e4d8"
+    },
+    "drugs/inotersen.json": {
+      "bytes": 1796,
+      "sha256": "a67d503f9cadac6cbc8a09098b1792fe5bfa5bf38db37c055ad80e74cbd48370"
+    },
+    "drugs/insulina_asparte.json": {
+      "bytes": 4996,
+      "sha256": "6ba5382374e61122f30cf665ef78449c286841ac4b0c30f065f00124dc94d2d4"
+    },
+    "drugs/insulina_degludeca.json": {
+      "bytes": 1911,
+      "sha256": "1f15f03729de4ab310d42b980e33ec65c8a26fd2f4a290a5762c1bd697a47dda"
+    },
+    "drugs/insulina_detemir.json": {
+      "bytes": 1890,
+      "sha256": "988cb1b83ed5185c7007e9c37acee0f1037a5f1813eab0e7dac2cea791043739"
+    },
+    "drugs/insulina_glargina.json": {
+      "bytes": 4732,
+      "sha256": "5792d3977671dc28e7b8ca8f95879723b2c064bd8acb5e61edda4032932b6eb7"
+    },
+    "drugs/insulina_glulisina.json": {
+      "bytes": 1914,
+      "sha256": "d9abcc675c26e8d158451940d314abf4bc80db6634fb91b7b664e84191f2b7f5"
+    },
+    "drugs/insulina_lispro.json": {
+      "bytes": 1878,
+      "sha256": "c5db2621807487131c45328811918c8cb68eac42ee379a0bc178dd7f9689f185"
+    },
+    "drugs/insulina_nph.json": {
+      "bytes": 4760,
+      "sha256": "462e2c9900f3a609fc5cf8329befdd59a0e74ad54b53dc359895525532bc51f3"
+    },
+    "drugs/interferon_beta_1a.json": {
+      "bytes": 6100,
+      "sha256": "6ad43612b76f1a70e556cbcfddab8fa8122657f480eca09783601786c9e62d99"
+    },
+    "drugs/interferon_beta_1b.json": {
+      "bytes": 5039,
+      "sha256": "a959ccc47dd4736b225e306b3a71a699525858600f2be7ff19e365601c60d2e1"
+    },
+    "drugs/ipratropio.json": {
+      "bytes": 8994,
+      "sha256": "123bff79d9dd9c3875aa5a54817d5c221e6509f802eebeebdc4a69371a5d5f92"
+    },
+    "drugs/irbesartana.json": {
+      "bytes": 14886,
+      "sha256": "df9c85e2eafc3544e2519c807ee73ff85709b6c1c586ddb1f482d6ff11c30181"
+    },
+    "drugs/isavuconazol.json": {
+      "bytes": 12076,
+      "sha256": "5a308ffd0b9a21f2b10eaa81e546780714dcdee386133337e662c5cb4b4a6b87"
+    },
+    "drugs/isoflurano.json": {
+      "bytes": 4857,
+      "sha256": "9022722c3454cf46f708c2dcec21923368b5403992bda8bb6ad2f7f9323fc476"
+    },
+    "drugs/isoniazida.json": {
+      "bytes": 14202,
+      "sha256": "99c07be521590edaff052b72b89899c0c63192c5bd079caa8d94be6281cf411f"
+    },
+    "drugs/isoproterenol.json": {
+      "bytes": 1984,
+      "sha256": "a2dc646fd657562a41141a980becb08e982286f01f2ae0a35290e62810b85512"
+    },
+    "drugs/isotretinoina.json": {
+      "bytes": 2034,
+      "sha256": "898530442a538231e52683fd41890c185f430023876744b9ff809097d8105c80"
+    },
+    "drugs/itoprida.json": {
+      "bytes": 1965,
+      "sha256": "a280a16d7396127b0f380bd8b64c78880e632ffa5613752e6d14415e6d5dac95"
+    },
+    "drugs/itraconazol.json": {
+      "bytes": 1801,
+      "sha256": "94eb954834174eb089d8a60dc28d9759b7fbb71836b119ef5431ad2da56bfc27"
+    },
+    "drugs/ivabradina.json": {
+      "bytes": 16208,
+      "sha256": "8d0b729cf85176f3bec9b9ee4759cb5afcb66f46c218cc8b98c90ff359ddd17f"
+    },
+    "drugs/ketamina.json": {
+      "bytes": 11532,
+      "sha256": "7dad24cc3dbec0435cb364703a6da732e5efc51889f57395c28111ae894055fd"
+    },
+    "drugs/labetalol.json": {
+      "bytes": 20277,
+      "sha256": "ddab019361f8d5a1e007f57c356b9a2da65fed3ef8f5b0b5ee1deabe2384c515"
+    },
+    "drugs/lacosamida.json": {
+      "bytes": 13120,
+      "sha256": "c33589daf5f48c353bd1ecfbbcdd50ff8e19b4894b0227a59ca282e8b83c5b89"
+    },
+    "drugs/lactulose.json": {
+      "bytes": 4997,
+      "sha256": "d37796a3aeba500db1f67eed730396b691e68f2640436ce190c31ba9828cdc7f"
+    },
+    "drugs/lamivudina.json": {
+      "bytes": 1881,
+      "sha256": "b93c3be22a9181ef2f62691bedd491bd0872c3561da2b2ea1d52898d97939014"
+    },
+    "drugs/lamotrigina.json": {
+      "bytes": 14728,
+      "sha256": "0a52154b4ab985fcfdbce8962caa1cbba3539c523af6cc847acd55c04a3f414c"
+    },
+    "drugs/lansoprazol.json": {
+      "bytes": 1826,
+      "sha256": "396ca47c7de1d36d2d5e0ce10304857b1bd84930954e7e9bedf5e8dae90ce6cf"
+    },
+    "drugs/lasmiditana.json": {
+      "bytes": 3987,
+      "sha256": "5f1d6ef20549d646778d070b3705a4c737cad936399e42f7b400df78cfa08314"
+    },
+    "drugs/latanoprosta.json": {
+      "bytes": 1808,
+      "sha256": "53420c4fdd0236e77a1c3cf16dad4bf0904d1b258336f85cf8cdf96bc147d284"
+    },
+    "drugs/lecanemabe.json": {
+      "bytes": 4993,
+      "sha256": "53acf9350f28cf012959f917d3c39cd20a44bbaa75d57211c305e1576f074cdc"
+    },
+    "drugs/ledipasvir_sofosbuvir.json": {
+      "bytes": 1981,
+      "sha256": "d20543847101bd43ca2947d52fcef4df1341a3bee2dae4be58beb3df5bea250e"
+    },
+    "drugs/lefamulina.json": {
+      "bytes": 11473,
+      "sha256": "c1ada0a8bc9e6d7a4f56b13be09521cee559a6d7f6ef43b08ecb06d1728a71e4"
+    },
+    "drugs/leflunomida.json": {
+      "bytes": 1788,
+      "sha256": "c749fcf296a81325fdc641a4608e9dcf79362b05ba8d6d5238d0196864559475"
+    },
+    "drugs/lercanidipina.json": {
+      "bytes": 27911,
+      "sha256": "a130bfe43b95a6eda588d1ec634f6fe4f9870b6a8a2db0025da6576e7f1a7605"
+    },
+    "drugs/letrozol_ginecologia.json": {
+      "bytes": 2033,
+      "sha256": "377bf103afdc792b2238c8a75358210a3179b1024f52dbdedda877a3299f1a8c"
+    },
+    "drugs/levetiracetam.json": {
+      "bytes": 12909,
+      "sha256": "66fa4293b4716d4cbf9b3195b8e986133695f7b13bc40dec5b0c9cb1e3257a45"
+    },
+    "drugs/levocetirizina.json": {
+      "bytes": 9846,
+      "sha256": "4873cccf9537cdd3621d866e42cd274a96b2ba5f24f9799be42d07dc2342c076"
+    },
+    "drugs/levodopa_benserazida.json": {
+      "bytes": 11586,
+      "sha256": "99926a338a74d326c68262aac7cb8e8b2cef684b27e0f93fafaba07b10c7865c"
+    },
+    "drugs/levodopa_carbidopa.json": {
+      "bytes": 15247,
+      "sha256": "4472d7bd50eef3c3853aa9123546c61755d91bdcae1fe23ac4989e9efde11ed2"
+    },
+    "drugs/levodropropizina.json": {
+      "bytes": 1846,
+      "sha256": "b98d20997355478374e6c2c09d24b077b70ca53789682bc42bab47dfc7691278"
+    },
+    "drugs/levofloxacino.json": {
+      "bytes": 19630,
+      "sha256": "dec49a7eae0a7e00ce3b225d875a588b6215f55428f5b6eab4b0b2961c71dc9e"
+    },
+    "drugs/levomepromazina.json": {
+      "bytes": 12739,
+      "sha256": "b5524af75468beadae5d6e615afc1f212eb1e5189cfc20b4dd78d062fa73f5bd"
+    },
+    "drugs/levomilnaciprano.json": {
+      "bytes": 11434,
+      "sha256": "f21fd71c987eeb2e841e6035bdb3b4d391f3486215f5362f4cbc815bbf0aad2f"
+    },
+    "drugs/levotiroxina.json": {
+      "bytes": 1906,
+      "sha256": "0f9436940867a83ac78a23cd49a61f2675e987f4f4eb68b2e5b23ee6056a73ce"
+    },
+    "drugs/lidocaina.json": {
+      "bytes": 21413,
+      "sha256": "b344da42eb425f75ae821426bcfc4a55aeb12b25e9ff57c1335abeb74d77bafe"
+    },
+    "drugs/lidocaina_iv.json": {
+      "bytes": 10631,
+      "sha256": "63d9724d3d4f2e1c61c0f1856fa897af8af19e54850178b58da1ca0041d9bec3"
+    },
+    "drugs/linaclotida.json": {
+      "bytes": 1826,
+      "sha256": "695885c58f2af7ee5246fbc764d526447d49ffd0a1d28456223040577419f301"
+    },
+    "drugs/linagliptina.json": {
+      "bytes": 1796,
+      "sha256": "64ec318b6592f9028e922e919149f9bc30683c1c9d6125403cbe956adc41bb89"
+    },
+    "drugs/linezolida.json": {
+      "bytes": 16629,
+      "sha256": "e4887aa61e2a205def1129821bbfb169b206c54fe8148ec58ab179a334315557"
+    },
+    "drugs/liraglutida.json": {
+      "bytes": 4900,
+      "sha256": "3b2303c6f900d3e4712e63504a637f173bc0b4514f94ed7537d58f8820a53303"
+    },
+    "drugs/lisdexanfetamina.json": {
+      "bytes": 2035,
+      "sha256": "fe81f21d9ccf9c52d59dc8527900a211e112879abc3c867efd144ed663a9f141"
+    },
+    "drugs/lisinopril.json": {
+      "bytes": 17707,
+      "sha256": "6ba16dd873d656865d629d14d8e440645f7bbdae646b7bca98722b4929f234dd"
+    },
+    "drugs/litio.json": {
+      "bytes": 12052,
+      "sha256": "773544475f108a1190c199e19d126c7ffdd6d167eff6ebe916d782e26c22285c"
+    },
+    "drugs/lomitapida.json": {
+      "bytes": 1761,
+      "sha256": "870f0875fd152ab49142c0f5dd6bbcb607263e1548f33abaf61f71eb34b8a521"
+    },
+    "drugs/lopinavir_ritonavir.json": {
+      "bytes": 2021,
+      "sha256": "cf3dcf3f759f971bbdecd16a4e3bc1aee88b10b364a19665a6f38df61ded6139"
+    },
+    "drugs/loratadina.json": {
+      "bytes": 7821,
+      "sha256": "2483c70f7334264a18b7ce2626723e196bd1792fe7daa8fd20ab5ab032bb5e7c"
+    },
+    "drugs/lorazepam.json": {
+      "bytes": 10081,
+      "sha256": "cfb2ac20477be4b93189db0267594d6bdbe403c82d23db29a0b8cbb7fd27fd52"
+    },
+    "drugs/losartana.json": {
+      "bytes": 18331,
+      "sha256": "e997dc753029ea4e7785fe38392fa3f873574aa74bfd7cea02cc179dabf666e3"
+    },
+    "drugs/lovastatina.json": {
+      "bytes": 1771,
+      "sha256": "ff6b2542ad1af0afe223d1afef50e405868157569d2573eafc1be60012421e1e"
+    },
+    "drugs/lubiprostona.json": {
+      "bytes": 1836,
+      "sha256": "37e6bb9b0cb51ae29f116e22116635239c287b981f09407de9a07d9b7d90edf0"
+    },
+    "drugs/lurasidona.json": {
+      "bytes": 11783,
+      "sha256": "20043111991bf1806bbe501eab009457355139c069d6f17a1b81920484c4c897"
+    },
+    "drugs/macitentana.json": {
+      "bytes": 12147,
+      "sha256": "0a24b18e812ec454dc6cbb7752c0c9ba9050b633c0f9f2372b20821c2a55e84f"
+    },
+    "drugs/macrogol.json": {
+      "bytes": 2079,
+      "sha256": "2a5308e16de2e3b16b57746a0999a8f71193e779539c9aca5dcc99273b7c6007"
+    },
+    "drugs/maltol_ferrico.json": {
+      "bytes": 1876,
+      "sha256": "ba33b37e0bf3c5f944e7304fc1214a1d379f6488310c0efb443cbba66b77f986"
+    },
+    "drugs/manidipina.json": {
+      "bytes": 27190,
+      "sha256": "08170e31756f5548600d8a17511cee99e9e36e454a5b566c6654fd006a900034"
+    },
+    "drugs/manitol.json": {
+      "bytes": 18642,
+      "sha256": "d78bc7c21e92665da16d5beea095131ec1771361c14db2b930fb10951dbc124c"
+    },
+    "drugs/maraviroque.json": {
+      "bytes": 1795,
+      "sha256": "46d909beb5487781614e55020363d2a1d35b2064370e3cd80cd4614b6d8fa1e8"
+    },
+    "drugs/mavacamten.json": {
+      "bytes": 1761,
+      "sha256": "4633248f22e0f65cc9bc0c9bdb32b6d7f358d3d1bcf7fbb66af5b03749be3c2b"
+    },
+    "drugs/mebendazol.json": {
+      "bytes": 11386,
+      "sha256": "ed53c5889c0d422b62d4819402893d0595a6856a38f4768a69f39f6e95bd0c16"
+    },
+    "drugs/meclizina.json": {
+      "bytes": 8099,
+      "sha256": "987dcdfd04d91f23498dedac4d6036695371ab42fcfb6c8ebbe721557abef281"
+    },
+    "drugs/meloxicam.json": {
+      "bytes": 1772,
+      "sha256": "13b8544a68aaa24517665b8a6cf4f5a35ae0505a86930451a11eda3e94c42506"
+    },
+    "drugs/memantina.json": {
+      "bytes": 1942,
+      "sha256": "f7f49cb8be7852cde4f87ddbaf68f1b3863b928907c30e3b839b487f676dd808"
+    },
+    "drugs/mepolizumabe.json": {
+      "bytes": 1803,
+      "sha256": "c22f6808fd846feeea580a8919c6af91332935b343e53c3d38af3c01e6692ef3"
+    },
+    "drugs/meropenem.json": {
+      "bytes": 29991,
+      "sha256": "de219af9b6ba272cc9188445265024e2819c6dff36e4e16bb5ebab700d0d41ba"
+    },
+    "drugs/meropenem_vaborbactam.json": {
+      "bytes": 17293,
+      "sha256": "60d2c7f5426b1ce62b4d4944c1e27f83f00b996d84958e22aacb72432d6709a8"
+    },
+    "drugs/mesalazina.json": {
+      "bytes": 1885,
+      "sha256": "a834e87663e24016db63edcb046dd5335ca71ada3fb6ec999d736cde2500b6d8"
+    },
+    "drugs/metadona.json": {
+      "bytes": 10105,
+      "sha256": "c4250eb06152408d4d4e87b0860610d2f8b6a7c96d052a4ba6784491307d2479"
+    },
+    "drugs/metadona_cronico.json": {
+      "bytes": 10481,
+      "sha256": "5c5a177cf94980d1aac72c9e887c413a375fe4f170ef1852ed3933e0503f8153"
+    },
+    "drugs/metamizol.json": {
+      "bytes": 12301,
+      "sha256": "fc30717a078fb20f12dff2dbe8272694f9155bc0f54e7e47e2ba9d5867cd2850"
+    },
+    "drugs/metaraminol.json": {
+      "bytes": 19721,
+      "sha256": "dce744f918dffda5c4e07eebb90fb6d0b6adb3b2d088285e4b0e87dec88af14c"
+    },
+    "drugs/metformina.json": {
+      "bytes": 1776,
+      "sha256": "71947ff84fbba90c24ff7271ccfe3e7ededa71f0732d4a34d3e5e696a087760a"
+    },
+    "drugs/metildopa.json": {
+      "bytes": 30820,
+      "sha256": "656cb711e18410633f7c53a8f6219f276683ca866eef91f4e9f70baeb1c53060"
+    },
+    "drugs/metilergometrina.json": {
+      "bytes": 2024,
+      "sha256": "17ba557080b63dbb4d1afec40979e31d5ff0f4436bb0b9aa7f4c1dac7a128df0"
+    },
+    "drugs/metilfenidato.json": {
+      "bytes": 2002,
+      "sha256": "c8d0b71148b86e8bf33d1ec070d2bb0dce1dfd1c1e9bac125a79397c12b1a7e8"
+    },
+    "drugs/metilprednisolona.json": {
+      "bytes": 5018,
+      "sha256": "e549a59689260efc391bc186ecd23c9701a60470f6770d66a97a17c9efb647b4"
+    },
+    "drugs/metimazol.json": {
+      "bytes": 1894,
+      "sha256": "6deb8b4bf56f848d41f922cf1dcb37f1ecef1f0ad6412ee6cd481fe0832b7aeb"
+    },
+    "drugs/metocarbamol.json": {
+      "bytes": 1811,
+      "sha256": "afd439af95c2a441e8665e34e1b51a04e803ffb94743f7ea152a52db347b0d15"
+    },
+    "drugs/metoclopramida.json": {
+      "bytes": 9344,
+      "sha256": "4bf44a2c1b42153b20e1de79257316b5b70a91bdd1de42392e7d25d1b28127ba"
+    },
+    "drugs/metolazona.json": {
+      "bytes": 14071,
+      "sha256": "f5f4aad8ec5688412fac9fe3ecebd7d6fd8fead929680c256a624bc3f93a7bc2"
+    },
+    "drugs/metoprolol.json": {
+      "bytes": 22313,
+      "sha256": "41071f7a5fc0a897dd74874b1a54d709e5739a90561b0dada604b332174c157d"
+    },
+    "drugs/metoprolol_iv.json": {
+      "bytes": 1864,
+      "sha256": "12841384b31f4a3d95935430765f36128ae25f61422baecc747712ebdb9dc073"
+    },
+    "drugs/metotrexato.json": {
+      "bytes": 1880,
+      "sha256": "bd8008c2e9d9d434b2690800da1048d5f4efa93f07b61ce172b547ac92e4b2e9"
+    },
+    "drugs/metronidazol.json": {
+      "bytes": 17485,
+      "sha256": "a7295ebb1bcdfd324bca0f46a52c3daf71f76e90005eb76c24fb090eeb4ab2db"
+    },
+    "drugs/mexiletina.json": {
+      "bytes": 20363,
+      "sha256": "538a33477b00b8c10f7b91da331e0ddb5d07d3301196109abde2bc1bc89140cc"
+    },
+    "drugs/micafungina.json": {
+      "bytes": 11713,
+      "sha256": "1a6698fd64ac5275cb23c138cd278cd6754f475f6a437a713375c570deccf2e6"
+    },
+    "drugs/micofenolato_mofetila.json": {
+      "bytes": 1976,
+      "sha256": "2b073c8fa22e061ce9ebbe52e89e719bca8d775828c7226338cb88654762b98f"
+    },
+    "drugs/midazolam.json": {
+      "bytes": 31971,
+      "sha256": "ba24c6779304ac6bda7c24b7f8e316ce63b48e91b12977f48d7829dcc57c93e5"
+    },
+    "drugs/midodrina.json": {
+      "bytes": 1751,
+      "sha256": "a6e54e85f65ffc197048bedd4dee12c58205627155c4b3e51cad65c72e9bc7be"
+    },
+    "drugs/milnaciprano.json": {
+      "bytes": 11237,
+      "sha256": "bf6987b9992920095bc73e4b754bc64ee94a6a4bccd64f43f1ed9b9e429b2746"
+    },
+    "drugs/minociclina.json": {
+      "bytes": 18203,
+      "sha256": "de22e6d2ab241605307cf229f24defedd13e3381403c78e1083cd070dc83217a"
+    },
+    "drugs/minoxidil.json": {
+      "bytes": 27318,
+      "sha256": "7ea9b5b6febe5d59b1e96df952a729bea0c56a1f50bbf4b46a373a7c18c00eb5"
+    },
+    "drugs/mipomersen.json": {
+      "bytes": 1764,
+      "sha256": "ed58fd5322a4931aaaf57fab7becb1ef0809c69e153cf37102787f4527f9f788"
+    },
+    "drugs/mirabegrona.json": {
+      "bytes": 1816,
+      "sha256": "410ded9dc4024dc82c435b78089484667f058bb7c4f000b02a67bf6cbee39cb5"
+    },
+    "drugs/mircera.json": {
+      "bytes": 2075,
+      "sha256": "ddb04b5cddbf782aece0f73f5b689d7ca6cda194dec442fb0bdd38fccef28a2a"
+    },
+    "drugs/miriquizumabe.json": {
+      "bytes": 1840,
+      "sha256": "a508764f3b8bb2b05a841d27257cba950ce887c58a0f40298fde8772520eb065"
+    },
+    "drugs/mirtazapina.json": {
+      "bytes": 8523,
+      "sha256": "fb608a13329a2637b5994183de59082ab3da5ea2be369bf2e28b8d127834e1e0"
+    },
+    "drugs/misoprostol.json": {
+      "bytes": 1816,
+      "sha256": "fb151a1d285a89fec1007df67aceafa263857bf49f4fe959fbd1f61bebaa9836"
+    },
+    "drugs/moclobemida.json": {
+      "bytes": 6679,
+      "sha256": "eb34c382996dc026ad186e9a51d50a69063cbc3c5332040c02808f80704c6fee"
+    },
+    "drugs/modafinila.json": {
+      "bytes": 1793,
+      "sha256": "0573d3479066bbaaf0be4edd15439b17554d06598bedc5786120d27749e7d748"
+    },
+    "drugs/mometasona.json": {
+      "bytes": 1932,
+      "sha256": "2c8c0742b4fa65491b06133d912cd5ee077e995e4a987993fd05ad84d4fdbb8c"
+    },
+    "drugs/mononitratoisossorbida.json": {
+      "bytes": 1976,
+      "sha256": "e6dab9851019f00496a8bc8fe9e0f2c3f1dbe3c8d130eb07f5072a0ec8e8be31"
+    },
+    "drugs/montelucaste.json": {
+      "bytes": 9794,
+      "sha256": "dd73c1a339c9824dd4fd59235ba110c3bb09f516fd321e550d1509ed46a415f1"
+    },
+    "drugs/morfina.json": {
+      "bytes": 18246,
+      "sha256": "91ef854c47a649b503f03b846d120eb4bccf683a47450a38fea2a83fc6d32ad5"
+    },
+    "drugs/mosaprida.json": {
+      "bytes": 1950,
+      "sha256": "0d74f72fdec2dc9a3ce76b3695e73df22821a9c547431526ac0e3ee3587e0aff"
+    },
+    "drugs/moxifloxacino.json": {
+      "bytes": 15583,
+      "sha256": "56ce83c63df0dfbab54f6a8d3e5b0b3ba85b5d2ee94b6642e39d2f76bc1c40bc"
+    },
+    "drugs/moxonidina.json": {
+      "bytes": 1761,
+      "sha256": "75c5b57f54a1f64957790e1fa43f606d52c9886bff10f3f2354d3c22a64d5824"
+    },
+    "drugs/nadolol.json": {
+      "bytes": 16886,
+      "sha256": "125e14af32cd8aa27b70cf4c726b5c30fc81230cb8a5662e26b2c6e7227564b5"
+    },
+    "drugs/nafazolina.json": {
+      "bytes": 1980,
+      "sha256": "8157e94215ce295ef98ee73cc75742306ba4309ff8196391931c8e500a3f20dd"
+    },
+    "drugs/nalbufina.json": {
+      "bytes": 1772,
+      "sha256": "4e05a9e60f427f55621031bdd13344a1ceb921ffb1a11b6c577c812ab3edbc7e"
+    },
+    "drugs/nalmefeno.json": {
+      "bytes": 1772,
+      "sha256": "70798bf6aa6e80b1c40848f4614cbf818dc2dab4a097d7e7a6bd7817e2b59439"
+    },
+    "drugs/naloxona.json": {
+      "bytes": 8952,
+      "sha256": "d4bae9729a2bf2846127d0015ded382845f613e9e597cdccc085f8fba0a52eac"
+    },
+    "drugs/naltrexona.json": {
+      "bytes": 1782,
+      "sha256": "e972f7266ca5134401f185ac11c5830f9b16ba1b432d5f5f31a579477a1dea2a"
+    },
+    "drugs/naproxeno.json": {
+      "bytes": 10820,
+      "sha256": "4059f2d719abe42a59aef8397aa0c56b5a77bba11574d8fb846096ac16fda63e"
+    },
+    "drugs/naratriptana.json": {
+      "bytes": 2002,
+      "sha256": "6e383fa04a3d5e233f33b916b7d063ac429f2bf33df77b45102461755ebe1cbd"
+    },
+    "drugs/natalizumabe.json": {
+      "bytes": 1798,
+      "sha256": "0b5c649256d62111b7ea82f2ca8296c0b743665c5e3de4c2d5f527a53f6db391"
+    },
+    "drugs/nebivolol.json": {
+      "bytes": 15652,
+      "sha256": "dd676e291a99f84d7c9f9c6916bc3090372bf70b4adc7517784b39958f964719"
+    },
+    "drugs/neostigmina.json": {
+      "bytes": 1791,
+      "sha256": "197e84e66083189615c0c9b2d8e24f9b953197e63f4880ee414a2c4ee010bce1"
+    },
+    "drugs/nicardipina.json": {
+      "bytes": 1771,
+      "sha256": "20f8a3125bc7136dc8204ce4f9d676ab74841c2a7a011c540cc476c9d069ada0"
+    },
+    "drugs/nicorandil.json": {
+      "bytes": 15712,
+      "sha256": "7c2fd3101417e739368184566f724c611a2cb6aabab4662d104974b54661eea0"
+    },
+    "drugs/nicotina_terapia.json": {
+      "bytes": 8980,
+      "sha256": "882209df3f7f39f55c879d773ca93589db55addd29f26f1553a36d99a5e8ca67"
+    },
+    "drugs/nifedipina.json": {
+      "bytes": 28271,
+      "sha256": "940841eecb17bee78cfbacf330f16b85dea10cae976e530ddb315c0af6831d54"
+    },
+    "drugs/nimesulida.json": {
+      "bytes": 1782,
+      "sha256": "97ff4b1121f7c53e2a442df0c8b67c86552d6a672e1a35d3e5aa9943c5130f53"
+    },
+    "drugs/nintedanibe.json": {
+      "bytes": 1793,
+      "sha256": "cdd28c745a65fc553f224d059aaed4703cc8d60b1d3dc5e71415dd4c746d432d"
+    },
+    "drugs/nistatina.json": {
+      "bytes": 1781,
+      "sha256": "59b3099849a745b9536d4d228eb834c7420aa8e5c63896cb9bd4aa3719144639"
+    },
+    "drugs/nitazoxanida.json": {
+      "bytes": 11444,
+      "sha256": "31243bef652e919c627abce25da73f18aeba8361f9936a58c21db70acc303f6b"
+    },
+    "drugs/nitrazepam.json": {
+      "bytes": 8848,
+      "sha256": "9bb897998bcb4eb795aec6a2508e073fa088fc841794ab2430def230ac4adfa0"
+    },
+    "drugs/nitrofurantoina.json": {
+      "bytes": 14540,
+      "sha256": "adf8aa5e13d5efc8f2742939e88480cfdf646f860669ee509ca0e42ec8fd6ab6"
+    },
+    "drugs/nitroglicerina.json": {
+      "bytes": 5093,
+      "sha256": "a64b29c77f0cddd6b07de49d50509e8815cbeaebfdf3763005ce1c6245e170b9"
+    },
+    "drugs/nitroglicerinaiv.json": {
+      "bytes": 1883,
+      "sha256": "eae988cd2413de8dda92e6715434e540a294f0f7b2c6a75e29e6f2cae5b678cf"
+    },
+    "drugs/nitroglicerinasl.json": {
+      "bytes": 1947,
+      "sha256": "ca1215cc04cc28fc43b5c29bcc16cb37879a243cd10f6532fe49f8d99d972b59"
+    },
+    "drugs/nitroprussiato_sodio.json": {
+      "bytes": 5043,
+      "sha256": "fe93ab489f656591a7e690bdc67e1f6328160c2d8892fb99e6ef1c3194e1744f"
+    },
+    "drugs/nitroprussiatosodio.json": {
+      "bytes": 1945,
+      "sha256": "75bf16e449e26ac7fe03dfbf44625925252ae1eba20f06adc2f79b998531767e"
+    },
+    "drugs/noradrenalina.json": {
+      "bytes": 5083,
+      "sha256": "d0fc8a01697c471ead6829898e003b628ea3fe8c410870a61cd37af7ab4309e8"
+    },
+    "drugs/norfloxacino.json": {
+      "bytes": 13470,
+      "sha256": "871ce0aca0aa4c61b04d55ea35a9f52415bf2ca9e768b5c7970603298c67da8f"
+    },
+    "drugs/nortriptilina.json": {
+      "bytes": 12571,
+      "sha256": "b408654fdc124327c300a505ecc98d5512024d07fe19147347ecf7ee13a9630f"
+    },
+    "drugs/ocitocina.json": {
+      "bytes": 1796,
+      "sha256": "f8098e125953e294f3c7a5ce321f5114ab918be4269a2488192f3cd38acdda6f"
+    },
+    "drugs/ocrelizumabe.json": {
+      "bytes": 1822,
+      "sha256": "bf00f500bb67c56a45b9dc8d6b327cbf86e1618a4ecc7b5efc0d9e7414617ad6"
+    },
+    "drugs/octreotide.json": {
+      "bytes": 1784,
+      "sha256": "4a79d1c62ba13615769b6683408e47dae9270a2f98b6d98a2853532a4b844315"
+    },
+    "drugs/ofatumumabe.json": {
+      "bytes": 1812,
+      "sha256": "8c3940d634069f110fb5a44c5ed23769c607e9a9743a3535f2707ee6a306b21c"
+    },
+    "drugs/ofloxacino.json": {
+      "bytes": 13222,
+      "sha256": "6f15d9de41b1675fcb79a739601e37459bc1467c07868eb052b6ee0bc75872ae"
+    },
+    "drugs/olanzapina.json": {
+      "bytes": 9800,
+      "sha256": "2158108aa34170f39c20d170421d479b59b0d0590b1af16343d8a43ff22ecfce"
+    },
+    "drugs/olanzapina_lai.json": {
+      "bytes": 13290,
+      "sha256": "f3c925c04705aeb168a8f45989f1d04041844464475f942eb38477fd40d20bb5"
+    },
+    "drugs/olmesartana.json": {
+      "bytes": 15636,
+      "sha256": "38d32f99bb6a881f1cb491ac66193749f0cdc6da57e18a486145c525b324965f"
+    },
+    "drugs/olodaterol.json": {
+      "bytes": 1786,
+      "sha256": "5783aad8592f468db30e9e9c98dc508c280f22adb0c07df5b031919910528455"
+    },
+    "drugs/omadaciclina.json": {
+      "bytes": 13929,
+      "sha256": "b5b3e678ab27d585af24db210c8c9ebd494ee0f7ffb9b01d58fac0fbba633abe"
+    },
+    "drugs/omalizumabe.json": {
+      "bytes": 1793,
+      "sha256": "5eb5e39c8dd2fb2da44c921be0e9d1c99897149f20116c50caf4ad1aaf9cc67b"
+    },
+    "drugs/omecamtiv_mecarbil.json": {
+      "bytes": 1899,
+      "sha256": "c39a091fd68564be929c7a7c8c48b185c7472900f7c1e6e7bd2a571f42c3be33"
+    },
+    "drugs/omega_3.json": {
+      "bytes": 2057,
+      "sha256": "c446a27991b0bac3f89db62fa03be7b00c9e4d84eb3ffe7eac8a5555f10fe398"
+    },
+    "drugs/omeprazol.json": {
+      "bytes": 1937,
+      "sha256": "bb2e4389ff39183f347b4c040dfc16b85054a867e1ea590454c3c34494120241"
+    },
+    "drugs/omeprazol_iv.json": {
+      "bytes": 1851,
+      "sha256": "bee7c09147289be60120a584d778f79b3e81100013789c140332f05a1b342c53"
+    },
+    "drugs/ondansetrona.json": {
+      "bytes": 8428,
+      "sha256": "7a83aed63aa50be998f93ecbf4d973c3ea85c7584243c39643655052c82992ee"
+    },
+    "drugs/opicapona.json": {
+      "bytes": 1781,
+      "sha256": "d0751a582c597183752831ad90aa65b97c18d7635a613f50fa4ecf244d81ef99"
+    },
+    "drugs/orfenadrina.json": {
+      "bytes": 1801,
+      "sha256": "8f19a58031a7fc788cf79eff723e3be1a631166bfecb5f01bd02d32962977d3e"
+    },
+    "drugs/oritavancina.json": {
+      "bytes": 12330,
+      "sha256": "32111592ad57800c948bd0fe8d306b16697b4136e2555d455e8aa1d229978c78"
+    },
+    "drugs/oseltamivir.json": {
+      "bytes": 12008,
+      "sha256": "9e0c40455d69df6af2d2c2604aa9f65f3ee7bdac3ce6318ca091f80b5e097d9f"
+    },
+    "drugs/oxacilina.json": {
+      "bytes": 12623,
+      "sha256": "4382c187ad4a2f323c23ae9db67cb56a24066ec4b257db09a16c6916e21655d9"
+    },
+    "drugs/oxazepam.json": {
+      "bytes": 8543,
+      "sha256": "6f689ea908753419d7e1f56e716eb9d93b43c3913c8df7acf264ccb0cd4230b4"
+    },
+    "drugs/oxcarbazepina.json": {
+      "bytes": 10451,
+      "sha256": "522058b8d192433f6cfbde69e6b2b857b363d4c4bf391a278df4356464122937"
+    },
+    "drugs/oxibutinina.json": {
+      "bytes": 1991,
+      "sha256": "302a2443cad54ae99d39a4029965d1c8ef97ef227a7df3da02ab7048301e7880"
+    },
+    "drugs/oxicodona.json": {
+      "bytes": 1772,
+      "sha256": "a902d7c79a5dabcaa8c0e62a94515d6f6ae680a352d5f748b5e84ecdc432717c"
+    },
+    "drugs/oxido_de_magnesio.json": {
+      "bytes": 1915,
+      "sha256": "3180c1dfda8090637fe2e3e0130f3dda3912b4408ec599f9e7d45dbe6dfcbcc6"
+    },
+    "drugs/oxihidroxido_sucroferrico.json": {
+      "bytes": 2014,
+      "sha256": "625a065b14edf9cf53986c2221358c2a76953507fd2f5bd9bab154888c1428d4"
+    },
+    "drugs/oximetazolina.json": {
+      "bytes": 1837,
+      "sha256": "c205749d47a1d6f541d6f637b93ea1f08545b1d6cf880c37b44c6ade3dbcfdc4"
+    },
+    "drugs/ozanimode.json": {
+      "bytes": 1768,
+      "sha256": "e8a919986e976d6b5a8c04aaf502371c094175bc1902c13a78cbbe39d1bf2324"
+    },
+    "drugs/paliperidona.json": {
+      "bytes": 12451,
+      "sha256": "78d0bf50923d2b3047d4d0897b638bdc0fc02efbf87f4b044f9433264555343b"
+    },
+    "drugs/paliperidona_mensal.json": {
+      "bytes": 12793,
+      "sha256": "511358da6237a5f6110792eeef76e9e0899d66703a29a7b6545cbf15388b0b7b"
+    },
+    "drugs/paliperidona_trimestral.json": {
+      "bytes": 13272,
+      "sha256": "00a9ff1d1a392ad5fe3f699a49fb6a3c202a1b068add5fa3ac9f078ffafb0466"
+    },
+    "drugs/pancuronio.json": {
+      "bytes": 1828,
+      "sha256": "6d3d2c4cd49085f01d11a4ab6165482316687cd93f8fd9fbcef79b69888bbdf4"
+    },
+    "drugs/pantoprazol.json": {
+      "bytes": 1961,
+      "sha256": "c892e81ed68938e539837a9d1b52897c587f6db5f1df6eb905c11ef916d18bf5"
+    },
+    "drugs/pantoprazol_iv.json": {
+      "bytes": 1851,
+      "sha256": "575c5d927d5d9cb124e6b40b43538004c3d68011411efb87c84b3d954fdfad1a"
+    },
+    "drugs/paracetamol.json": {
+      "bytes": 22220,
+      "sha256": "68e464a5b48523bc80ca8efacc4192191e4f450ca5369f0259d2f97e90a278ae"
+    },
+    "drugs/paricalcitol.json": {
+      "bytes": 1796,
+      "sha256": "b0f48fb8ac90a61c8f27438e0e7c5666d64287034c7d9e647a3362d7225cebb1"
+    },
+    "drugs/paroxetina.json": {
+      "bytes": 10879,
+      "sha256": "ff3a71605c43cc48fdc7f556c36c1319e51100561553b9e150b7cf6883964908"
+    },
+    "drugs/patiromer.json": {
+      "bytes": 1906,
+      "sha256": "5929bd85f06381059cdaf8348dd35703256e3673e42a59365da8654d74075932"
+    },
+    "drugs/patisiran.json": {
+      "bytes": 1799,
+      "sha256": "456284468d9cf8d02760cdafac7fd4a3fda0dc80fa783859d35faf5d41478d80"
+    },
+    "drugs/paxlovid.json": {
+      "bytes": 2025,
+      "sha256": "ff22be6b5248291103d072f09884e265fe9ae6a6ac6e2aa3684a2d8281af0176"
+    },
+    "drugs/pcc4f.json": {
+      "bytes": 2042,
+      "sha256": "97d6fd04c7c399ca4d47e2210aa03ec309b3095ad8b4c0671f56eb36982012c0"
+    },
+    "drugs/pegfilgrastim.json": {
+      "bytes": 1816,
+      "sha256": "e7367f5d5d4ff817d12e2568f96ffcb9df5f985e76d5a3878a2f111a4e5a0958"
+    },
+    "drugs/pegloticase.json": {
+      "bytes": 1788,
+      "sha256": "84375afac4d26b3baf4e2b67b4af32d38d62b0bf7b532c56b1ca7f25d3f6e0bb"
+    },
+    "drugs/penicilina_benzatina.json": {
+      "bytes": 12624,
+      "sha256": "34ba2c1fc9b3a8e5dd394c53f90042124b3215f77adff01540a0f84506a2c5c2"
+    },
+    "drugs/penicilina_g.json": {
+      "bytes": 15805,
+      "sha256": "ae83aa7491f18ad05d61e3390dbbff3b34d19791636be7055718039a3f9d6cd5"
+    },
+    "drugs/penicilina_procaina.json": {
+      "bytes": 17740,
+      "sha256": "382bb4fc91279910c065d9e07092fae84e3e72c28ab1e889d3473dc1ce09782e"
+    },
+    "drugs/penicilina_v.json": {
+      "bytes": 14869,
+      "sha256": "0fab3f99269bb1661334072d71bbe60b493ee8596c76164fbc7ae2ba89c64cb7"
+    },
+    "drugs/pentoxifilina.json": {
+      "bytes": 1791,
+      "sha256": "984c67fcb3e4ee8aa9070892015688a80fbbef1e5b4a9c1a38687abea0a9f44d"
+    },
+    "drugs/perampanel.json": {
+      "bytes": 1791,
+      "sha256": "c2ceafe294e1322ffb2a8b599e11498483ae4217b06b4803c3ec45c671dd0e63"
+    },
+    "drugs/perhexilina.json": {
+      "bytes": 1944,
+      "sha256": "aa22d45a8e8aa72c25a7fc7518eceedc1dcf016d06b1dfd9432c05bc94198dce"
+    },
+    "drugs/periciazina.json": {
+      "bytes": 12012,
+      "sha256": "1b9561b77995fc078658cdd525fffdd70160ff976eadabc9eaff5cdc660e1bcb"
+    },
+    "drugs/perindopril_amlodipino.json": {
+      "bytes": 1988,
+      "sha256": "6d11ac972d6864e9394c7b0a19c67d25ca9a4ed28d7d029725702a98f686b04a"
+    },
+    "drugs/perindopril_indapamida.json": {
+      "bytes": 1988,
+      "sha256": "817908c16650d8684f5262c0acb2564b2c827a0ba37f117b9b098a9fc70f23f2"
+    },
+    "drugs/peroxido_de_benzoila.json": {
+      "bytes": 1987,
+      "sha256": "52eda0c296cbf55e291ed71c9764028973e498eef1bf875fd3f3fe9bcecdf82d"
+    },
+    "drugs/picossulfato_de_sodio.json": {
+      "bytes": 1992,
+      "sha256": "06fa131e4b0bd0268f140302119e5a7c33892e60d4374e0b20efbc8b55eb06bd"
+    },
+    "drugs/pimavanserina.json": {
+      "bytes": 1821,
+      "sha256": "45a70eacf9f4e9d01f1c9d6f1d3aeeaae9f0e63279bd0020e9d80c9f623a192f"
+    },
+    "drugs/pimozida.json": {
+      "bytes": 12989,
+      "sha256": "370446b9334580de8dd4eacb320fc2d50ee1feb7c1bdff606dcbf6010215402b"
+    },
+    "drugs/pioglitazona.json": {
+      "bytes": 1796,
+      "sha256": "423d45b4dfa03756816e834b5de2e8e2f1e3e17d36a85cec2aee5491f4a464c2"
+    },
+    "drugs/piperacilina_tazobactam.json": {
+      "bytes": 30336,
+      "sha256": "e31829ec4d9f5d32b6e0c2c40d6f92c33c65c356580a6329d39004a8df8cf939"
+    },
+    "drugs/pirazinamida.json": {
+      "bytes": 12204,
+      "sha256": "d8f62d1494276a126ad88eea5d20f6709db0f374a6c86ff71ccd5a70cf662302"
+    },
+    "drugs/pirfenidona.json": {
+      "bytes": 1796,
+      "sha256": "f270e8caf4c84d96b344f3397dd2ae20216ac9ab41b60774dc503559792170aa"
+    },
+    "drugs/piridostigmina.json": {
+      "bytes": 1999,
+      "sha256": "f5369e0476983015a05f6d3fcb1070537c50cf613a485a858331e42b537deb30"
+    },
+    "drugs/piroxicam.json": {
+      "bytes": 1772,
+      "sha256": "8960ed8eed72710aae123a963a2fdb5f013e7831f17c95c99e44ab57e33dca14"
+    },
+    "drugs/pitavastatina.json": {
+      "bytes": 1791,
+      "sha256": "3c2c8f11cd25b924f41d09f0c439bff8deeaeafc6736fe49b531aec2671d5772"
+    },
+    "drugs/pitolisanto.json": {
+      "bytes": 1800,
+      "sha256": "cf83f8a4897cfe5c10b45752a4131a2cc96cfea0fbd78fd6e02f55f9e7ce57db"
+    },
+    "drugs/plasma_lyte.json": {
+      "bytes": 2016,
+      "sha256": "ab88de2b0ac920dfffb333871a01081b9bf796eb47cf441424312262f2107419"
+    },
+    "drugs/plazomicina.json": {
+      "bytes": 16240,
+      "sha256": "3126eb9ed4becd1741e7dd809555c3cbc2a89920c234610cf4bab208d428fd43"
+    },
+    "drugs/plecanatida.json": {
+      "bytes": 1826,
+      "sha256": "c165d4456ab01078805485e637c1e38adced59b6e08850020ddef15379bfa127"
+    },
+    "drugs/poliestirenossulfonato.json": {
+      "bytes": 2019,
+      "sha256": "64207fc1ebb26ea8cdda126598c3ded7b5b41ab4efdb21a777d5ab3a1259ff08"
+    },
+    "drugs/poliestirenossulfonato_de_calcio.json": {
+      "bytes": 2084,
+      "sha256": "9809637509b0748ed67f2f2d47a5022533478e2f9fef8181ef53649fe94d0bbb"
+    },
+    "drugs/poliestirenossulfonato_de_sodio.json": {
+      "bytes": 2055,
+      "sha256": "69a5d6d789efd3609cc9be7cc92828d1a30cd92229c67be9a2bbfd0beaa3650c"
+    },
+    "drugs/polimixina_b.json": {
+      "bytes": 16987,
+      "sha256": "5ae177327d5c1ed464ba2230d2a093fb305d1c4cba77e2675d3b837464095635"
+    },
+    "drugs/ponesimode.json": {
+      "bytes": 1778,
+      "sha256": "410a2beab40f52543507d82249c940e7f3757787677c734cfca68304acb5f6b6"
+    },
+    "drugs/posaconazol.json": {
+      "bytes": 12274,
+      "sha256": "ad4a213a6fdeb226aa3e0bf547ee2065e0deb8350a21ace0045e0e300777db94"
+    },
+    "drugs/pralidoxima.json": {
+      "bytes": 1791,
+      "sha256": "456bb3e2159c333f393508008deece50b42b046e8d88c797ef3e381865e9fb83"
+    },
+    "drugs/pramipexol.json": {
+      "bytes": 12838,
+      "sha256": "35d64ef474c79da8e8aa78e0b49c9a18ba11d8acce2fd3c3fa30fe80cb63f317"
+    },
+    "drugs/prasugrel.json": {
+      "bytes": 20681,
+      "sha256": "054b82c090d08fbfd54af3e21d4f11f713a349694da17172e1eb035e8307b5ad"
+    },
+    "drugs/pravastatina.json": {
+      "bytes": 1781,
+      "sha256": "3e57a6a598e230833d00be7f5ae3f0fbb1f57454ee65aaf7dbe8a5fc0f0abca8"
+    },
+    "drugs/praziquantel.json": {
+      "bytes": 11886,
+      "sha256": "6b324b20f27f18834f620f86329d8367b3c746ff124b43d6608be27a3aaa08ec"
+    },
+    "drugs/prazosina.json": {
+      "bytes": 1751,
+      "sha256": "9d1ff90876a703e0ccf7acee68c8fd3522bdd2ff8a8713a79822eeadf886e4ee"
+    },
+    "drugs/prednisolona.json": {
+      "bytes": 1831,
+      "sha256": "e6a8e684691a2d08172fa97471cebc921c5d49f6d5e66ab8c4b417555548738f"
+    },
+    "drugs/prednisona.json": {
+      "bytes": 1811,
+      "sha256": "e99ac851a4b099b0bbda22c8d05f15bea45341dfdd6361fa00c2fb80ad95b114"
+    },
+    "drugs/pregabalina.json": {
+      "bytes": 10233,
+      "sha256": "838d54823511035a54f6dd42159578b8d8100cf05d755ef7424770c94d2696e0"
+    },
+    "drugs/pretomanida.json": {
+      "bytes": 18356,
+      "sha256": "1baecd114763079cc86cf728a46f16ae553da6808d92fe3543bc4d7c3a7368b7"
+    },
+    "drugs/primidona.json": {
+      "bytes": 10023,
+      "sha256": "34a8331d64276342612e2b60464f9cfb2ed2a45ea8ff3151fc8eac9bdf519206"
+    },
+    "drugs/probenecida.json": {
+      "bytes": 1788,
+      "sha256": "98ee94ac519b390440207be4b3b40331839312a05f919d4e2beb0fc4b66f9a00"
+    },
+    "drugs/procainamida.json": {
+      "bytes": 28446,
+      "sha256": "1535486877fef8b6f804bf937e237dbbcf868a20f86dc92cfad88f6b0c8f289c"
+    },
+    "drugs/proclorperazina.json": {
+      "bytes": 8682,
+      "sha256": "1c5df2b2809437ecc728646028105d72d50a9b22327f96b004ebdca71deeeb36"
+    },
+    "drugs/progesterona_micronizada.json": {
+      "bytes": 1996,
+      "sha256": "cebcaa33b31bde8d24ea62797b14149535f33a591cef461b4c650aec51f2be18"
+    },
+    "drugs/prometazina.json": {
+      "bytes": 9042,
+      "sha256": "93ab1bf2c0414f27e1f345b716e22ca5afc1ae9bf562bd478afc9e259465b66c"
+    },
+    "drugs/propafenona.json": {
+      "bytes": 14617,
+      "sha256": "ec3ab17ef30e7970e1778a28fc4a54284359e16cf35a5819e658bf060687d297"
+    },
+    "drugs/propiltiouracil.json": {
+      "bytes": 1929,
+      "sha256": "dd69cf9c2bcad366dac3f7a4cf47280ea85ec6b8dab2ff151659e1e480a2c714"
+    },
+    "drugs/propofol.json": {
+      "bytes": 9837,
+      "sha256": "2143bc16b30314cd74baa96085cdccbf083aa3d3e21e4a771429e00ff2458aa0"
+    },
+    "drugs/propranolol.json": {
+      "bytes": 20268,
+      "sha256": "68b421572bbc6f42e7455e3aecfabd42ddca5c1f4c78c1d1be05e21198db58cb"
+    },
+    "drugs/protamina.json": {
+      "bytes": 1751,
+      "sha256": "246be34e6b81b908b4925f60e8cee0ef9975504a3f0966360831a2cb2d680ec0"
+    },
+    "drugs/prucaloprida.json": {
+      "bytes": 2002,
+      "sha256": "5e97a7e15701a7060a19b495dc9c3efad70cf963f1a17c035b2eacf34a3297e3"
+    },
+    "drugs/pseudoefedrina.json": {
+      "bytes": 1853,
+      "sha256": "b6ffafe71daca601a166e1b882eaf7b87a3fef46fb0363d7cd3c0e278fd44a57"
+    },
+    "drugs/quetiapina.json": {
+      "bytes": 14795,
+      "sha256": "f98afd42054da56fa623ec3d16ef0d5da1a68bae3fe53bc311b46d288a175d48"
+    },
+    "drugs/quinidina.json": {
+      "bytes": 15087,
+      "sha256": "0bb4eb036e2d6efc0c3e77fa8366147b15390363bbff8b2976500c78d07d779d"
+    },
+    "drugs/rabeprazol.json": {
+      "bytes": 1922,
+      "sha256": "1f107f9daecdbd932f295d544bc464786db6b65bd23f7597151ec7e7db3399ef"
+    },
+    "drugs/racecadotril.json": {
+      "bytes": 1784,
+      "sha256": "1f2089cf3524e3d8d1993e2d18ce042b3990063ffa580c65191a90aff0439eae"
+    },
+    "drugs/raltegravir.json": {
+      "bytes": 1978,
+      "sha256": "013bc8f5bff1db6270be8edad8929ece02d6b1696955f6b1437f7965c512342d"
+    },
+    "drugs/ramipril.json": {
+      "bytes": 17340,
+      "sha256": "5bf6964766a0186534fbdbf61431c748fd9cd4254da49d550c577f611c4772f1"
+    },
+    "drugs/ranolazina.json": {
+      "bytes": 17529,
+      "sha256": "be95dff868fe30eab1df99967e4ec11551529ac8a4c0b56d0f2a2b21ed8981dd"
+    },
+    "drugs/rasagilina.json": {
+      "bytes": 9715,
+      "sha256": "cd6596d37404a0983c81006eaa59e2454fc164c2cc4adcf8d5f43b84eb6ddbda"
+    },
+    "drugs/reboxetina.json": {
+      "bytes": 6579,
+      "sha256": "83d9587848ba76821d038afccaed8d00c7e6b9e2a3c599b59951f45df61cb746"
+    },
+    "drugs/remdesivir.json": {
+      "bytes": 12424,
+      "sha256": "78b614575d3b3d170a4e2d3ec9893745f6229681c636d308b8b9e9b087db63b6"
+    },
+    "drugs/remifentanil.json": {
+      "bytes": 9945,
+      "sha256": "a0131d78d9f9798a8aaa896576e07f9750884ef756424ae8270c1501d67b978d"
+    },
+    "drugs/reslizumabe.json": {
+      "bytes": 1793,
+      "sha256": "313491eb9e611edaf5348c75e712e62c68b9b8ba3d47b44ba1f9abcd6cdad421"
+    },
+    "drugs/retatrutida.json": {
+      "bytes": 3214,
+      "sha256": "9d4c97cc27e250ba5a21ddc862b9cfebf149c1e0bb58c8c53d83bd81e084ebdf"
+    },
+    "drugs/reteplase.json": {
+      "bytes": 1751,
+      "sha256": "cdaa820208251ab666780772cb2f09bd99549906dbe2ab28f0ebf04c03ebf1f6"
+    },
+    "drugs/rifabutina.json": {
+      "bytes": 17941,
+      "sha256": "a695c392d33b590db5cd9ca614f13a859b49edbb5ba76ee1fca3fc82b1c6f643"
+    },
+    "drugs/rifampicina.json": {
+      "bytes": 14344,
+      "sha256": "36827ccd2ae344dbb933d3e1cf073a8c435e331572708cdb8a6f6b91174768bd"
+    },
+    "drugs/rifapentina.json": {
+      "bytes": 11491,
+      "sha256": "192a4904b00150ac27ab009c450f37c14ab4ab89f976916d24b2d59b2644a9ab"
+    },
+    "drugs/rifaximina.json": {
+      "bytes": 1761,
+      "sha256": "b0f0e0bb3f95995c1055977cca897de0d09ee513d11d87a573305d4bddb2102c"
+    },
+    "drugs/rilpivirina.json": {
+      "bytes": 1893,
+      "sha256": "d2dc911a6c91688086e6b20c6804d233a4ddef6d18cfa6ca62c0951e01592cf4"
+    },
+    "drugs/riluzol.json": {
+      "bytes": 1761,
+      "sha256": "c05644fb7bab9577c743f81d41207e336dce0ff78ed4e6890348f2b2eb06f335"
+    },
+    "drugs/rimegepanta.json": {
+      "bytes": 1788,
+      "sha256": "fc9360967a5a54b7a4b8d2a975c61144c8f2921dc88edcbe3cdae99ac4da7523"
+    },
+    "drugs/ringer_lactato.json": {
+      "bytes": 2060,
+      "sha256": "99834b73264b832beaa6477b2de376297d34c03f799d4948a8befe12e34bafe4"
+    },
+    "drugs/riociguate.json": {
+      "bytes": 13059,
+      "sha256": "fc300895966c07e0295866daf7127a9ffee295291adeadcc61333af0e71b0abc"
+    },
+    "drugs/risanquizumabe.json": {
+      "bytes": 1850,
+      "sha256": "537eb29619400baf98bba8be47993b2864dc560e48e97656404e45de91c06b56"
+    },
+    "drugs/risperidona.json": {
+      "bytes": 21305,
+      "sha256": "e7d77e5871c0c5527e531ba8bf3fffe77709474e95c785bedc07ac53df1499ff"
+    },
+    "drugs/risperidona_lai.json": {
+      "bytes": 12370,
+      "sha256": "687679ce047b6955c5c4b7b569b65df253a6e53ddd452fad1646454f4b999fed"
+    },
+    "drugs/ritonavir.json": {
+      "bytes": 1869,
+      "sha256": "28e269a0183a6c0119dd706cdeedafb20f46195501ccfd4ef5a62f61cb33ab8f"
+    },
+    "drugs/rituximabe.json": {
+      "bytes": 1788,
+      "sha256": "700eb1d648c89234444a611dd5fc3a9f2ab56ef53ca12bb05d62723f7facc87a"
+    },
+    "drugs/rivaroxabana.json": {
+      "bytes": 6545,
+      "sha256": "ced14c83921fe38e0fdae9d35d0d5b785ff53f972cf7f92d91db461cc41c915f"
+    },
+    "drugs/rivastigmina.json": {
+      "bytes": 1801,
+      "sha256": "bb90ab7e4fac45fcb31cb7eb63aafd519854368989e5460b9f52d8532a057d21"
+    },
+    "drugs/rizatriptana.json": {
+      "bytes": 1983,
+      "sha256": "db1ea7d14e0ce3a4ba32be75bac8d49ea64510cb7a02fc2332d31bb6b2383830"
+    },
+    "drugs/rocuronio.json": {
+      "bytes": 10581,
+      "sha256": "d5754e596d3301a1d5752fd2b6fbbe07308524eea408d1fb29c1395c0eae32aa"
+    },
+    "drugs/roflumilaste.json": {
+      "bytes": 1803,
+      "sha256": "d9a0e9ede288baf75fb3dff7261656be060907c7ec69feb2103e853c8079e778"
+    },
+    "drugs/romiplostim.json": {
+      "bytes": 1796,
+      "sha256": "feae5bd755fa412a029c95ed1ff523667cd1373a017619889d806ea9c220a2d4"
+    },
+    "drugs/ropinirol.json": {
+      "bytes": 9880,
+      "sha256": "aee3e3db51d32eba24364097b97b00f76954fb8a729ff83b15d01aed4ea27e23"
+    },
+    "drugs/ropivacaina.json": {
+      "bytes": 1844,
+      "sha256": "a642326558f01ed6277455cafad559086b5ef3021a2cf37a82e3d8c94257c4ec"
+    },
+    "drugs/rosuvastatina.json": {
+      "bytes": 1791,
+      "sha256": "aeb3231bd3694d4fbdb935b8a649e9fafb548b553b18a757c2c31e40ebc3ad32"
+    },
+    "drugs/rotigotina.json": {
+      "bytes": 9856,
+      "sha256": "f1054c39526b73c1d7935ddac370824fc2ac950b49101869aa129d596b508050"
+    },
+    "drugs/roxitromicina.json": {
+      "bytes": 12737,
+      "sha256": "036ee8761a7e2ac475c0022cce0e9b77842d432de0da927a759069798b4b5a9f"
+    },
+    "drugs/rozanolixizumabe.json": {
+      "bytes": 1862,
+      "sha256": "8442e1fa50c114789a6796b15a2cec78757f44e03a8c4f2842c1328d2b76101a"
+    },
+    "drugs/rufinamida.json": {
+      "bytes": 10264,
+      "sha256": "8b0fb60227b229cda70ae936482f38198ccb46091bc81e4ca5bb00a6b22531e4"
+    },
+    "drugs/rupatadina.json": {
+      "bytes": 1821,
+      "sha256": "f849b07ad9eda48d60ceb3131b971c77aa2c6620c70d46e3c6e2a31fb45b572d"
+    },
+    "drugs/sacarato_hidroxido_ferrico.json": {
+      "bytes": 2197,
+      "sha256": "d43b206ff14347d496920305f57a331625709934d6788e91862d096b6d07a74c"
+    },
+    "drugs/sacubitrilvalsartana.json": {
+      "bytes": 20007,
+      "sha256": "e1b57bce6c525ce5290155205a14d5887187b263ff92a75b83a29b238b2f610d"
+    },
+    "drugs/safinamida.json": {
+      "bytes": 2001,
+      "sha256": "4ab4e9aa9fc3218fffbc9b981ac5ff1c5c2dced9f91d5152ae8e42d9fdfec8e8"
+    },
+    "drugs/salbutamol.json": {
+      "bytes": 9475,
+      "sha256": "6ae5f4d90c08c4dc183680ace3a4a8bfc5f7f9695f2c68f9fa646ed4ad7d7116"
+    },
+    "drugs/salmeterol.json": {
+      "bytes": 7948,
+      "sha256": "6b0b3cbdd4036f3850dae40b802589fd7e47e11440bd1dd561fd5bf10d53c2b0"
+    },
+    "drugs/secnidazol.json": {
+      "bytes": 10260,
+      "sha256": "9953554c87266cf971de69c9ba8880eba332259cff7f4663c6ad06174791ed81"
+    },
+    "drugs/selegilina.json": {
+      "bytes": 9900,
+      "sha256": "0dfd427e8be0d9bb21f6ee6f26d25110f22d75e79b0b10cac3ef2004b9f249ea"
+    },
+    "drugs/selexipague.json": {
+      "bytes": 14176,
+      "sha256": "bbe80c1deff758356a2348f738eac8cc7fe8df2a1d6a1699405a154e6220ea87"
+    },
+    "drugs/semaglutida.json": {
+      "bytes": 1801,
+      "sha256": "92aed0a7e38aad6066a09dd86ea486003e4432a8fb07dfd48e7a1b0f91d5d3c1"
+    },
+    "drugs/semaglutida_obesidade.json": {
+      "bytes": 2019,
+      "sha256": "1c9aca2eeaeb73bf2b4375d3e9a46130d52bd2fd22045edcc91b09e6e413054c"
+    },
+    "drugs/sene.json": {
+      "bytes": 2060,
+      "sha256": "374e5ff40915d3a6d095d30d0f60252a83261a4cbd0314ab66fad2e433a2ec05"
+    },
+    "drugs/sertralina.json": {
+      "bytes": 9291,
+      "sha256": "afc99d308480c6607ffd24534a2fa56e8bb017b951879e46cdf9c7150e6aaef7"
+    },
+    "drugs/sevelamer.json": {
+      "bytes": 1901,
+      "sha256": "f00a07a372282e5f849dce99b40838cdde7804ebaec0f6d57ccf89200577e981"
+    },
+    "drugs/sildenafila.json": {
+      "bytes": 1919,
+      "sha256": "2c02e5998774f76f088986dfe9fad5977cf09d9e1673e10b643a322063892e25"
+    },
+    "drugs/sildenafilahap.json": {
+      "bytes": 1872,
+      "sha256": "68bde2807c31e545922bdf97ad83b751025ef013048c0181bc940f8a0de54314"
+    },
+    "drugs/simeticona.json": {
+      "bytes": 1962,
+      "sha256": "976c5370e0e8d3a3a27771ab8866c096c9c54fd7a60390f021a8d49ab3949338"
+    },
+    "drugs/sinvastatina.json": {
+      "bytes": 1781,
+      "sha256": "8add1f6bab4f2317ff4e11df08429637396b2fbf991d0217f3aa85d412cb7b1a"
+    },
+    "drugs/siponimode.json": {
+      "bytes": 1778,
+      "sha256": "560a23d9372e872ff013b1095b561087e0ce905273b55874f80550214c888cc8"
+    },
+    "drugs/sitagliptina.json": {
+      "bytes": 1796,
+      "sha256": "306cc102257d1524287ce0c68d616ebefb999a5746e36daa44be8be5ee1df19d"
+    },
+    "drugs/sodio_hipertonico.json": {
+      "bytes": 2294,
+      "sha256": "1b276802964792d5736d174ecd2b9c35e3e4f4f5cd1286374d82bebfbda78e4b"
+    },
+    "drugs/sofosbuvir.json": {
+      "bytes": 1791,
+      "sha256": "afe4eed0f5de507dc79881d94f6998aad3dcda9fe7033970d319a687d6d870ca"
+    },
+    "drugs/solitromicina.json": {
+      "bytes": 14980,
+      "sha256": "a6d4a90e149051b18e95c053a4ae5e070dbc08e61607c2c78ada3535a7557c47"
+    },
+    "drugs/solriamfetol.json": {
+      "bytes": 1813,
+      "sha256": "a39d8517d52ed012b66607868f900917bd7229c4f82d9cdf9b0e8ba118284d56"
+    },
+    "drugs/somatostatina.json": {
+      "bytes": 1791,
+      "sha256": "b85f93c120959f8815dee83cd8dfe04e2e28175e7295c26be7df070ea080d673"
+    },
+    "drugs/sotagliflozina.json": {
+      "bytes": 1801,
+      "sha256": "7796d0413832cc180ae4747ee6e5f62089b7d7c3a59601756feaede1acc686c9"
+    },
+    "drugs/sotalol.json": {
+      "bytes": 17391,
+      "sha256": "72ae1cd8835b15a1ed71235b76d2c142b5f49f56167d3299192ce852b6ecd45f"
+    },
+    "drugs/sparsentana.json": {
+      "bytes": 1786,
+      "sha256": "1f29793c01b89fc33d4c39fb774b403253a7f0a0c8f044daa014ddaf38b0e91d"
+    },
+    "drugs/subcitrato_de_bismuto.json": {
+      "bytes": 2062,
+      "sha256": "8fa00e304180276f1a8cc973fbcf58412c681abfd2a433be458d3d5ef784ab5e"
+    },
+    "drugs/subsalicilato_de_bismuto.json": {
+      "bytes": 2026,
+      "sha256": "9fb489f4493f44ab294ea0b2b6991351289d746e2a94244ab01fa328434503bd"
+    },
+    "drugs/succinilcolina.json": {
+      "bytes": 12595,
+      "sha256": "11593ed9ee0bb74b113701e093bcb7b786401e0bea14db0b7766849996742ac3"
+    },
+    "drugs/sucralfato.json": {
+      "bytes": 1816,
+      "sha256": "d0d5614f034e77fb1cfa3d2f6231ee6fbf9252ef820714491c7df05427cb7b3d"
+    },
+    "drugs/sufentanil.json": {
+      "bytes": 10101,
+      "sha256": "e6af21be5bf778f83313e9fa33040183f86bf1795cd0c28e1a281973cef6ea38"
+    },
+    "drugs/sugamadex.json": {
+      "bytes": 1774,
+      "sha256": "e9f07352a2065063198d09bb88b1b868a2d7b86b276da40a6d6d4510eaa42d55"
+    },
+    "drugs/sulbactam_durlobactam.json": {
+      "bytes": 14889,
+      "sha256": "59f138c94ecb3309e09ad95c51d1b3912029e71eb30d0cc9dc351f3e5b390802"
+    },
+    "drugs/sulfametoxazol_trimetoprim.json": {
+      "bytes": 17099,
+      "sha256": "91f779e0320488195caa461ca68350dfaa66d2b9de1c3713a576a19b1314a3b0"
+    },
+    "drugs/sulfassalazina.json": {
+      "bytes": 1815,
+      "sha256": "b55b4fcc91c441cab7276ed7bf9a85ac325270d654ec5f35bf3e8e889a7ac0a1"
+    },
+    "drugs/sulfato_ferroso.json": {
+      "bytes": 1880,
+      "sha256": "65cd42a4aa56b8aa5b0c8f97b19f322e10d06aca4e4caf420634d8dfcabcb25f"
+    },
+    "drugs/sulfato_magnesio.json": {
+      "bytes": 4694,
+      "sha256": "e6518c2e5427f0c7c5b5b869a79a24a6b32733f992ffff7762d66d464f926095"
+    },
+    "drugs/sulpirida.json": {
+      "bytes": 12712,
+      "sha256": "699de83da46aeff49e908e77039799dd53f84c5c7d287a3c1ec65f8cbbcad5d3"
+    },
+    "drugs/sumatriptana.json": {
+      "bytes": 1825,
+      "sha256": "d190a716c992128c27173e8fab8759cca0a5f60da5a412407d7eb22a242a6192"
+    },
+    "drugs/tacrolimo.json": {
+      "bytes": 1771,
+      "sha256": "3f6b4b3d5daab937d1042ecfe463ad183bcd0ca645ba10e0a3d4f581db6eeac9"
+    },
+    "drugs/tadalafila.json": {
+      "bytes": 1761,
+      "sha256": "0249bc1796196d97f1a4a6ea0579714ad0bcc37d33bb42cbf6ba583474f25f69"
+    },
+    "drugs/tadalafilahap.json": {
+      "bytes": 1863,
+      "sha256": "1ee59a505dce09f1c4a2d15aaeeeb6447d6f84fb03ac0a0cbe61d5c173602587"
+    },
+    "drugs/tafamidis.json": {
+      "bytes": 1751,
+      "sha256": "2d4d455ee6d0193cd916b2de2b26a1dd79f6159cff3c23809b9f474fda0fe972"
+    },
+    "drugs/tamsulosina.json": {
+      "bytes": 1991,
+      "sha256": "a69d60f2610bec23ae4efe7438847eca2a026cf28516bab907beab5d6abeeb81"
+    },
+    "drugs/tedizolida.json": {
+      "bytes": 16285,
+      "sha256": "06961c153fe0bb52a5946613c22ad90d98b801f4e573c8993c4dcd8b3dff5037"
+    },
+    "drugs/teicoplanina.json": {
+      "bytes": 36100,
+      "sha256": "b286ab3fc450f895401d5d67a5657d2ff299a88d9bad8ca163233024df1891aa"
+    },
+    "drugs/telavancina.json": {
+      "bytes": 14755,
+      "sha256": "5bbaf0ef9e37cca38f7dfe9b2112e089684082f396ae8cadf24fa995a934f464"
+    },
+    "drugs/telmisartana.json": {
+      "bytes": 15537,
+      "sha256": "f32192d4cee97ae07208ea44b01586b6cf95141bf066fc3a085ddb250174a754"
+    },
+    "drugs/temazepam.json": {
+      "bytes": 8789,
+      "sha256": "6cf4d1d87c1e0dafaed8c3670fcee087109a4af712c95a43b01db3a7180638de"
+    },
+    "drugs/temocilina.json": {
+      "bytes": 16575,
+      "sha256": "71d0e69890e0349661fbb69a2677257268390fa561cc670486b3cfae346345d5"
+    },
+    "drugs/tenecteplase.json": {
+      "bytes": 18413,
+      "sha256": "d2d97364a0924ce6cbb5338bc940c690b48eea5fdf917b222620cba14065265b"
+    },
+    "drugs/tenofovir_alafenamida.json": {
+      "bytes": 2125,
+      "sha256": "f99c938c9b7f7ac63d7138d7b1eb0775d4ea2e64e649cc2aa15b11645a35b63a"
+    },
+    "drugs/tenofovir_desoproxila.json": {
+      "bytes": 2125,
+      "sha256": "61011a411ae0d27883c078f45656b2a6d9dd80645e0ba186f7936b90acd199ab"
+    },
+    "drugs/teofilina.json": {
+      "bytes": 9649,
+      "sha256": "1f87777cb39c0fa48f2495fdc39c5d365939bbce23de90c1d67d82ade527792d"
+    },
+    "drugs/terazosina.json": {
+      "bytes": 1761,
+      "sha256": "3046acbf9469039b97aebc93840ed68669c4e149a3ce659efd0d4e70744b7479"
+    },
+    "drugs/terbutalina.json": {
+      "bytes": 1796,
+      "sha256": "a34655251cdc43686cdb5cad45b618f1bfc14e7a08a1dbd3b15476ee112de52f"
+    },
+    "drugs/teriflunomida.json": {
+      "bytes": 1811,
+      "sha256": "0a5f4750a61e7f045dd594c1a7ddb98daebd434e99c1183656cd55f8ed284020"
+    },
+    "drugs/terlipressina.json": {
+      "bytes": 1811,
+      "sha256": "dfc709b02781531b8ef3b71f7e5d7e02180736afebbc3884a02c21c3600c3e70"
+    },
+    "drugs/tetrabenazina.json": {
+      "bytes": 1821,
+      "sha256": "1649ebc8624ede62b78d6e18ad582fec5f05212fdde88a18872ca30c9a6f6a50"
+    },
+    "drugs/tezepelumabe.json": {
+      "bytes": 1803,
+      "sha256": "c48a1ec455abc9c9ba478b5ec27a6149b4d86c50a99a82f2347c14209417d057"
+    },
+    "drugs/tiagabina.json": {
+      "bytes": 1781,
+      "sha256": "8ec916ba00f1735c2326711c3dc49f240e71e7e998d0dec442fb71f9c3ba2cf9"
+    },
+    "drugs/tiamina.json": {
+      "bytes": 1899,
+      "sha256": "2a87db3bc3695423e819c2a68fb8608c089280b3e135697691526ed7649eaa49"
+    },
+    "drugs/ticagrelor.json": {
+      "bytes": 23877,
+      "sha256": "e231d18bd3149d119bf6e760d1b723a9ae5440307ee4544eb28a62b8aab9c875"
+    },
+    "drugs/tigeciclina.json": {
+      "bytes": 12241,
+      "sha256": "63d0e40f33cb30ff62c0bfd44839bec0a1858ec241134e2dd2c68041ccaad92d"
+    },
+    "drugs/timolol_colirio.json": {
+      "bytes": 2002,
+      "sha256": "23a982d280cefcb082effea68143039cdc2f44d2f7a64ce4c71e1674164138fe"
+    },
+    "drugs/tinidazol.json": {
+      "bytes": 12906,
+      "sha256": "109daa69c72394515704e66bf565d49be8dd0c4953c9569bf6df16839a9c578e"
+    },
+    "drugs/tiopental.json": {
+      "bytes": 1875,
+      "sha256": "728fcd96b70f6fd4b70cc48acb6476676d62c6ed00aee507cf2d51aea64ba316"
+    },
+    "drugs/tiotixeno.json": {
+      "bytes": 11675,
+      "sha256": "b4fe719b2429e3390488d33c472e79fbc8fffdf20658ab0cc12e49da47b3c4fe"
+    },
+    "drugs/tiotropio.json": {
+      "bytes": 8381,
+      "sha256": "0fd374349afbe92c0d1a1646dc54a0b11feb4f9e29fcb1b7ba627964e908cb9f"
+    },
+    "drugs/tiotropio_olodaterol.json": {
+      "bytes": 1969,
+      "sha256": "56b146e12ffd0ad6c84647f62aa764341da58d51918516abe26ac846f4273d45"
+    },
+    "drugs/tirofibana.json": {
+      "bytes": 1761,
+      "sha256": "70b1ed8fe432a8c03120b3e004a1ba41f1431c9fb647380f49e594596cee9d7b"
+    },
+    "drugs/tirzepatida.json": {
+      "bytes": 1801,
+      "sha256": "b2a2880e04221422e009089f2fcfc650390d4ac60882f907b9502b1f21749809"
+    },
+    "drugs/tirzepatida_obesidade.json": {
+      "bytes": 2019,
+      "sha256": "50b1d9a326a69f56b2bf12c0e6f00871f7a42034e8fa595adb124b2ae199d0eb"
+    },
+    "drugs/tizanidina.json": {
+      "bytes": 1805,
+      "sha256": "939b0d5a5e9d66baefa54d7db3367cee6f98d1c957e10fe18cb6a1d842e04bb7"
+    },
+    "drugs/tobramicina.json": {
+      "bytes": 19849,
+      "sha256": "3334b273bdf47d66bdfe755359aa028127c27a773cced1690511fe0f4296ca15"
+    },
+    "drugs/tocilizumabe.json": {
+      "bytes": 1808,
+      "sha256": "4a25d2bf50ed300a5448491e9ad5d1be160c37a407ee539fbd2cb56a098ec697"
+    },
+    "drugs/tofacitinibe.json": {
+      "bytes": 1983,
+      "sha256": "b8de395aaef6babc8a49c481f86d29e462716df7b93cea5ea41b509c70ae32ba"
+    },
+    "drugs/tolcapona.json": {
+      "bytes": 1781,
+      "sha256": "ce3d529e564395423148bee8fee203270d226c0f29949588b9229f18b9425741"
+    },
+    "drugs/tolvaptana.json": {
+      "bytes": 1756,
+      "sha256": "4577b2b8fc1426385f4840151b284321e4e9f611df623faef297c92abf731202"
+    },
+    "drugs/topiramato.json": {
+      "bytes": 11686,
+      "sha256": "d78faa6b6b088f0251bdd4929f3a951f207ac89f1fd751da1991606bd7473b01"
+    },
+    "drugs/torsemida.json": {
+      "bytes": 16350,
+      "sha256": "234b7af8133b07daf7f57b6faa85b058a0035dd3e0688285c463b73d9724567b"
+    },
+    "drugs/tramadol.json": {
+      "bytes": 18313,
+      "sha256": "a90e273e2330b42c6faed191b13967a80de1d679a85525835ed3ddead0eda78b"
+    },
+    "drugs/trandolapril.json": {
+      "bytes": 1806,
+      "sha256": "cc4264040586fe0b48e1cda1018d4062660d7a76fd166efa957a57b6a01d3a67"
+    },
+    "drugs/tranilcipromina.json": {
+      "bytes": 6522,
+      "sha256": "aefdb1f14aa640de0d1f6206e483130c5f03dc243209bb0300061e9e13648175"
+    },
+    "drugs/trazodona.json": {
+      "bytes": 8393,
+      "sha256": "9f628caa5d39952dbe3a997ff08c6ddccd2c181e5600b550e7520e0707e2225e"
+    },
+    "drugs/treprostinil.json": {
+      "bytes": 14098,
+      "sha256": "bfc93b4c7917feb578baa40bc24a6130f778c2a9348112fddd6a640492d70848"
+    },
+    "drugs/tretinoina.json": {
+      "bytes": 2011,
+      "sha256": "5c28cda14fa4c6ce5b08aff19e230feab49641f7a2f27bdf9981a078df29ee15"
+    },
+    "drugs/triancinolona_topica.json": {
+      "bytes": 2107,
+      "sha256": "e2fd0c629f0550b115184332b851c97eedef77b337466b4b8a5ab3bffd0eb4a0"
+    },
+    "drugs/triazolam.json": {
+      "bytes": 9086,
+      "sha256": "8073c7004ca2e41d1d82fe422a1c9e73f3cb70a9c43f045c21e82d2e8a6260ed"
+    },
+    "drugs/triexifenidil.json": {
+      "bytes": 2006,
+      "sha256": "c51055e24f53b8bf40dde79d0611657c507c397fc8e2e6495294ce98add93a4d"
+    },
+    "drugs/trimebutina.json": {
+      "bytes": 1826,
+      "sha256": "b452082af2b03555f9a3ea0b9c63d4297dfad5c9e556037afca721e47c830852"
+    },
+    "drugs/trimetazidina.json": {
+      "bytes": 15310,
+      "sha256": "900ae0c81a7273509e468e62cd4d6bdcccebf73318d1752c74a0e94ad6e6649e"
+    },
+    "drugs/trimipramina.json": {
+      "bytes": 8102,
+      "sha256": "d7585284ce46de29e3f8e2e1d79c4a2b3d1dc2621206939f88d87d0e943d45d9"
+    },
+    "drugs/ubrogepanta.json": {
+      "bytes": 1788,
+      "sha256": "7e6712a07e7f5a4a48e3df23bd4dd9f0d5d1ddaca9de31a5bdc8b33af6e55707"
+    },
+    "drugs/umeclidinio.json": {
+      "bytes": 1845,
+      "sha256": "f6334af96e6e1d8fd2d1442e7d6dfeec6bbb3844d1586a61e49887d821a99988"
+    },
+    "drugs/umeclidinio_vilanterol.json": {
+      "bytes": 1993,
+      "sha256": "7eceecd73685fd1af0410f402e9a982acfa9257928fda2b84e766cb87004017b"
+    },
+    "drugs/upadacitinibe.json": {
+      "bytes": 2003,
+      "sha256": "415a12c4d070903dfded54cfec0b7c957249037b3e008f3e15db0894953693e9"
+    },
+    "drugs/urapidil.json": {
+      "bytes": 1741,
+      "sha256": "c8053451d21f90ebbbe3a0e0a5261b5c5a63d46f3adb280c48506e277f80c8b2"
+    },
+    "drugs/ustekinumabe.json": {
+      "bytes": 1833,
+      "sha256": "ea0284f3b1b3fb501818e4f0b6674c7c0d40594d80e175b30f1447e83a691494"
+    },
+    "drugs/valaciclovir.json": {
+      "bytes": 11422,
+      "sha256": "3491d06e7c6baa97ff8c925d5b68146603eac9ca60cf50d5c886ecbb80f86602"
+    },
+    "drugs/valbenazina.json": {
+      "bytes": 1801,
+      "sha256": "480dd326c2e8c43b22059510e7a39d07cba6a19a2371e10ec1d18f6436f38a35"
+    },
+    "drugs/valganciclovir.json": {
+      "bytes": 16341,
+      "sha256": "b086d53fb7d9129ce6261891cbc2b363d7190f0d8ab115637fa6b8da7b5d4701"
+    },
+    "drugs/valproato_de_sodio.json": {
+      "bytes": 12131,
+      "sha256": "dbfe0f35729fa44473b1e9fc610ac75722f9bc3d5f4daf18a92c840f938fcc05"
+    },
+    "drugs/valsartana.json": {
+      "bytes": 17387,
+      "sha256": "7a8e7ab29e9fae7509e7bae5fd1257448ee55b161daf253d0cf1f116bc63be31"
+    },
+    "drugs/vancomicina.json": {
+      "bytes": 39006,
+      "sha256": "5de0e18549ce7f1038057aa76e02d907d775b13247c3d56d9107e549b80405c3"
+    },
+    "drugs/vareniclina.json": {
+      "bytes": 9349,
+      "sha256": "8714d8643bbfdd034ef584d383f0efe8b302ecf4f657404e5907c41515ad9ad1"
+    },
+    "drugs/varfarina.json": {
+      "bytes": 3286,
+      "sha256": "3e75bec428540663dbe00796af3ced7db8043fda8021e7493b6ffc34bdb52eca"
+    },
+    "drugs/vasopressina.json": {
+      "bytes": 2142,
+      "sha256": "6db386e19d184258b509cf75fdab65a940f8606b4359efd825af902cfdf5d68d"
+    },
+    "drugs/vecuronio.json": {
+      "bytes": 9777,
+      "sha256": "667a07bb57432242528b5c6cbd0bb18461d4808e14a36e18d2f164ed36ea7db8"
+    },
+    "drugs/vedolizumabe.json": {
+      "bytes": 1833,
+      "sha256": "983453c85fa20f7a82be08645135c83c902cf72d4a9dd980c5f6899937143f3a"
+    },
+    "drugs/velpatasvir_sofosbuvir.json": {
+      "bytes": 1993,
+      "sha256": "e41a65c18fbbe1ddc8ad34d3a138fa08b95d4c369b715aa80c13d1498e64f07c"
+    },
+    "drugs/venlafaxina.json": {
+      "bytes": 11677,
+      "sha256": "6671d34a94ced359f8047a9492a9f730dcb4c9bd3491ab830c1b3357a5568202"
+    },
+    "drugs/verapamil.json": {
+      "bytes": 37447,
+      "sha256": "bba7a6cd174c7720510dc6e944bb9a886db1ab5a0edcf8bbbf5263473a59b9a3"
+    },
+    "drugs/verapamil_iv.json": {
+      "bytes": 1855,
+      "sha256": "e04ed2ee4c545231a219d79af65af71092f9e0f049c19c06452c2e1fb1d911ec"
+    },
+    "drugs/vericiguat.json": {
+      "bytes": 1761,
+      "sha256": "668038a2498bac80ea5ce169c5cf30e0aa63e8d2ea35299c91107179095475e9"
+    },
+    "drugs/vernacalanto.json": {
+      "bytes": 15892,
+      "sha256": "76a7845fa38240a9bb5ba923ff22e8fc24af1a3a431d6e1e2f83285322802cec"
+    },
+    "drugs/vigabatrina.json": {
+      "bytes": 10754,
+      "sha256": "fe16c2af2ad997e87510ce34e2a0accbacea9c0a0fa5e6e6f535950019d13031"
+    },
+    "drugs/vilanterol.json": {
+      "bytes": 1786,
+      "sha256": "e27a162d3beed5c834a3fa31a431e325e26354e51d4e3335e30af1762c947f2e"
+    },
+    "drugs/vilazodona.json": {
+      "bytes": 6853,
+      "sha256": "de106e76915595027c9c928b2707fc36f978a70e13c65940b8ae0a67c875d3d3"
+    },
+    "drugs/vildagliptina.json": {
+      "bytes": 1806,
+      "sha256": "489859b5e7102ad675c9a8576caf827d7d8e0a54b56594578e496b3010924496"
+    },
+    "drugs/vitamina_b12.json": {
+      "bytes": 2156,
+      "sha256": "6baa3e3421454322508e3c2fa461722100b1883b0bc28b83dc9a506941d6f3d0"
+    },
+    "drugs/vitamina_k.json": {
+      "bytes": 1964,
+      "sha256": "08c892e0dd3dbf993924363a74dc2ee83c40ef8b3311dbe827bf83fa2424e01b"
+    },
+    "drugs/vitaminak.json": {
+      "bytes": 1927,
+      "sha256": "36f9e918535b524be3bc2be805e7dfb8739689114a5c84086aff2c577269864d"
+    },
+    "drugs/voclosporina.json": {
+      "bytes": 1796,
+      "sha256": "c65c0bae08ca012e99aa3a374ff440617b554f2fb9cd69dbd03addf4633989dc"
+    },
+    "drugs/vorapaxar.json": {
+      "bytes": 1751,
+      "sha256": "a184569fa70427bfb781690afbdc95140c3c466038a9b0f8f37865b8d8eafc79"
+    },
+    "drugs/voriconazol.json": {
+      "bytes": 12164,
+      "sha256": "22e06618a513c165527d0e120ca0c4724fc94f1008f4e362965cc710e6d363cd"
+    },
+    "drugs/vortioxetina.json": {
+      "bytes": 7484,
+      "sha256": "2a98f0831b9eea68b5df689cf0d73a37a69edcbd1e81bdad1a287eddb9d35b6b"
+    },
+    "drugs/vutrisiran.json": {
+      "bytes": 1811,
+      "sha256": "e61aa9d31902205940fbe6e1021aba6b447899572b7ac618dc63d202235b2a3a"
+    },
+    "drugs/xilometazolina.json": {
+      "bytes": 1847,
+      "sha256": "aeddd0ba0efb503fbc4f6c84fc5fb474c5b9ce395d6f136d32cab3e2753b8a98"
+    },
+    "drugs/zafirlucaste.json": {
+      "bytes": 1803,
+      "sha256": "aca48ad18abd1d79f49cf25f76f29cc88ef40afb7a345e8119524eba57533575"
+    },
+    "drugs/zavegepanta.json": {
+      "bytes": 1788,
+      "sha256": "e1f58560493486f13780b0b2449891967eb057f0b218660a40d07eadf5c0e757"
+    },
+    "drugs/zidovudina.json": {
+      "bytes": 1881,
+      "sha256": "bc795d5cbea7ca96b9bcf12b59c6d032662106baf401f3ca2bd92b9a9f7493db"
+    },
+    "drugs/ziprasidona.json": {
+      "bytes": 12773,
+      "sha256": "baa83d828c1ff1def3ccaf439f40586237ac1852e5a9f808d86df96917444f37"
+    },
+    "drugs/zolmitriptana.json": {
+      "bytes": 1835,
+      "sha256": "3e18d1f98042b40785f05dd8267026845b195cd5075b21ec74baf6f97f7d9842"
+    },
+    "drugs/zolpidem.json": {
+      "bytes": 10404,
+      "sha256": "5977edfa210f745fce0e85cab14345d7d7e8accd10578178c66ee5a19801102a"
+    },
+    "drugs/zonisamida.json": {
+      "bytes": 1791,
+      "sha256": "ecafa2a1e8f73c4d46c58dc8c0f89fb4fb7deb41087728d58be06b0402897516"
+    },
+    "drugs/zopiclona.json": {
+      "bytes": 9049,
+      "sha256": "51fc1a19bb57a4171dafde75eecd21428d030831d02dcc0637523177727f887a"
+    },
+    "drugs/zuclopentixol.json": {
+      "bytes": 12536,
+      "sha256": "50b1174c79ddcd3fc250bf68de80c9f1b6a1e35736cc139e1a2322e044608c33"
+    }
+  }
+}

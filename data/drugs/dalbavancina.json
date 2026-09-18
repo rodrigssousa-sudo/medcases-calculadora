@@ -6,131 +6,79 @@
   "colorTxt": null,
   "pt": {
     "name": "Dalbavancina",
-    "class": "Antibiótico lipoglicopeptídeo",
-    "pharmacologicClass": "Lipoglicopeptídeo de longa ação anti-Gram-positivo",
-    "mechanism": "Liga-se a D-Ala-D-Ala e inibe síntese da parede; porção lipofílica aumenta ancoragem à membrana.",
-    "pharmacodynamics": "Bactericida contra Gram-positivos; AUC/MIC sustenta efeito prolongado por meia-vida muito longa.",
-    "pharmacokinetics": "Somente IV; meia-vida terminal de vários dias, alta ligação proteica e eliminação renal/não renal.",
-    "indications": "ABSSSI por Gram-positivos suscetíveis incluindo MRSA.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Pó para solução IV.",
-    "presentations": [
-      "500 mg por frasco"
-    ],
-    "dose": "Adultos CrCl >=30 ou HD regular: 1.500 mg IV dose única em 30 min.",
-    "pediatricDose": "CrCl/eGFR >=30: nascimento–<6a 22,5 mg/kg dose única; 6–<18a 18 mg/kg dose única; máximo 1.500 mg.",
-    "renalDose": "CrCl <30 sem HD regular: 1.125 mg dose única. Sem ajuste em HD regular; ajuste pediátrico <30 não estudado.",
-    "hepaticDose": "Sem ajuste em Child-Pugh A; cautela em B/C por dados limitados.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Cefaleia",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "Toxicidade órgão-específica conforme o agente"
-    ],
-    "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
-    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
-    "interactions": "Revisar interações específicas e medicamentos que aumentem toxicidade do agente.",
-    "monitoring": "Resposta clínica/microbiológica e monitorização específica do agente, função renal/hepática e hemograma quando pertinentes.",
-    "administration": "Infusão IV de 30 min.",
-    "preparation": "Reconstituir e diluir conforme fabricante; respeitar diluente e estabilidade.",
-    "infusionProtocol": "Dose única de ação prolongada; evitar infusão rápida.",
-    "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
-    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
-    "specialPopulations": "A meia-vida muito longa limita reversibilidade; confirmar foco e necessidade de controle cirúrgico antes da dose.",
-    "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
-    "clinicalPearls": "A dose única pode facilitar tratamento de ABSSSI por MRSA, mas não deve ser extrapolada automaticamente para bacteremia, endocardite ou osteomielite.",
-    "guidelineRecommendations": "Stewardship: confirmar foco apropriado para terapia de longa ação e microbiologia compatível; evitar uso quando provável necessidade de troca rápida de antibiótico.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorização de toxicidade"
-    ],
-    "alerts": [
-      "Meia-vida muito longa",
-      "ABSSSI é indicação rotulada",
-      "CrCl <30 sem HD: reduzir",
-      "Não extrapolar a infecção profunda"
-    ],
+    "class": "Lipoglicopeptídeo antibacteriano",
+    "pharmacologicClass": "Inibe síntese de parede de Gram-positivos",
+    "mechanism": "Inibe síntese de parede de Gram-positivos. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Meia-vida terminal ~346 h; eliminação renal e não renal.",
+    "indications": "Infecção bacteriana aguda de pele/estruturas por Gram-positivos suscetíveis.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frasco 500 mg pó para solução IV.",
+    "presentations": "Frasco 500 mg pó para solução IV.",
+    "dose": "Adulto: 1500 mg IV dose única OU 1000 mg e 500 mg uma semana depois.",
+    "pediatricDose": "Nascimento a <18 anos: dose única por idade/peso conforme rótulo; máximo 1500 mg. Prematuros e função renal exigem avaliação. AUTOMATABLE=NO.",
+    "renalDose": "CrCl <30 mL/min sem hemodiálise: reduzir dose adulta; sem ajuste em hemodiálise.",
+    "hepaticDose": "Cautela em Child-Pugh B/C.",
+    "commonAdverseEffects": "Náusea, cefaleia, diarreia.",
+    "dangerousAdverseEffects": "Anafilaxia, reação de infusão, hepatotoxicidade e C. difficile.",
+    "adverseEffects": "Náusea, cefaleia, diarreia. Graves: Anafilaxia, reação de infusão, hepatotoxicidade e C. difficile.",
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "Poucas interações CYP; cautela com outros fármacos hepatotóxicos.",
+    "monitoring": "Cultura, resposta, alergia, rim, fígado, reação de infusão e C. difficile.",
+    "administration": "IV em 30 min.",
+    "preparation": "Reconstituir e diluir somente em glicose 5%; soluções salinas podem precipitar.",
+    "infusionProtocol": "Infundir em 30 min; não misturar com outros fármacos.",
+    "pregnancy": "Dados limitados; usar se benefício justificar.",
+    "lactation": "Dados insuficientes; decisão individual.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, reação de infusão, hepatotoxicidade e C. difficile. Dose/preparo bloqueados sem idade/peso, CrCl/hemodiálise, foco, cultura, alergia e produto exato.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4c0bd0f-03c2-4ce5-bcc2-b58f21ce75c1",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b4674d8-4d1e-4728-8465-d42ada33fa5c",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dalbavancin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4c0bd0f-03c2-4ce5-bcc2-b58f21ce75c1",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b4674d8-4d1e-4728-8465-d42ada33fa5c",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dalbavancin"
   },
   "es": {
     "name": "Dalbavancina",
-    "class": "Antibiótico lipoglicopéptido",
-    "pharmacologicClass": "Lipoglicopéptido de acción prolongada anti-Gram positivo",
-    "mechanism": "Se une a D-Ala-D-Ala e inhibe síntesis de pared; porción lipofílica aumenta anclaje a membrana.",
-    "pharmacodynamics": "Bactericida frente a Gram positivos; AUC/MIC sostiene efecto prolongado por semivida muy larga.",
-    "pharmacokinetics": "Solo IV; semivida terminal de varios días, alta unión proteica y eliminación renal/no renal.",
-    "indications": "ABSSSI por Gram positivos susceptibles incluido MRSA.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Polvo para solución IV.",
-    "presentations": [
-      "500 mg por vial"
-    ],
-    "dose": "Adultos ClCr >=30 o HD regular: 1.500 mg IV dosis única en 30 min.",
-    "pediatricDose": "ClCr/eGFR >=30: nacimiento–<6a 22,5 mg/kg dosis única; 6–<18a 18 mg/kg; máximo 1.500 mg.",
-    "renalDose": "ClCr <30 sin HD regular: 1.125 mg dosis única. Sin ajuste en HD regular; ajuste pediátrico <30 no estudiado.",
-    "hepaticDose": "Sin ajuste en Child-Pugh A; precaución en B/C por datos limitados.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Cefalea",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "Toxicidad órgano-específica según el agente"
-    ],
-    "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
-    "interactions": "Revisar interacciones específicas y fármacos que aumenten toxicidad del agente.",
-    "monitoring": "Respuesta clínica/microbiológica y monitorización específica, función renal/hepática y hemograma cuando correspondan.",
-    "administration": "Infusión IV de 30 min.",
-    "preparation": "Reconstituir y diluir según fabricante; respetar diluyente y estabilidad.",
-    "infusionProtocol": "Dosis única de acción prolongada; evitar infusión rápida.",
-    "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
-    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
-    "specialPopulations": "La semivida muy larga limita reversibilidad; confirmar foco y necesidad de control quirúrgico antes de la dosis.",
-    "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
-    "clinicalPearls": "La dosis única puede facilitar ABSSSI por MRSA, pero no debe extrapolarse automáticamente a bacteriemia, endocarditis u osteomielitis.",
-    "guidelineRecommendations": "Stewardship: confirmar foco apropiado para terapia de larga acción y microbiología compatible; evitar uso si probablemente habrá que cambiar rápidamente el antibiótico.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorización de toxicidad"
-    ],
-    "alerts": [
-      "Semivida muy larga",
-      "ABSSSI es indicación rotulada",
-      "ClCr <30 sin HD: reducir",
-      "No extrapolar a infección profunda"
-    ],
+    "class": "Lipoglucopéptido antibacteriano",
+    "pharmacologicClass": "Inhibe síntesis de pared de grampositivos",
+    "mechanism": "Inhibe síntesis de pared de grampositivos. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Semivida terminal ~346 h; eliminación renal y no renal.",
+    "indications": "Infección bacteriana aguda de piel/estructuras por grampositivos sensibles.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Vial 500 mg polvo para solución IV.",
+    "presentations": "Vial 500 mg polvo para solución IV.",
+    "dose": "Adulto: 1500 mg IV dosis única O 1000 mg y 500 mg una semana después.",
+    "pediatricDose": "Nacimiento a <18 años: dosis única por edad/peso según ficha; máximo 1500 mg. Prematuros y función renal requieren evaluación. AUTOMATABLE=NO.",
+    "renalDose": "CrCl <30 mL/min sin hemodiálisis: reducir dosis adulta; sin ajuste en hemodiálisis.",
+    "hepaticDose": "Precaución en Child-Pugh B/C.",
+    "commonAdverseEffects": "Náusea, cefalea, diarrea.",
+    "dangerousAdverseEffects": "Anafilaxia, reacción de infusión, hepatotoxicidad y C. difficile.",
+    "adverseEffects": "Náusea, cefalea, diarrea. Graves: Anafilaxia, reacción de infusión, hepatotoxicidad y C. difficile.",
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Pocas interacciones CYP; precaución con otros hepatotóxicos.",
+    "monitoring": "Cultivo, respuesta, alergia, riñón, hígado, reacción de infusión y C. difficile.",
+    "administration": "IV en 30 min.",
+    "preparation": "Reconstituir y diluir solo en glucosa 5%; soluciones salinas pueden precipitar.",
+    "infusionProtocol": "Infundir en 30 min; no mezclar con otros fármacos.",
+    "pregnancy": "Datos limitados; usar si beneficio justifica.",
+    "lactation": "Datos insuficientes; decisión individual.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, reacción de infusión, hepatotoxicidad y C. difficile. Dose/preparo bloqueados sem idade/peso, CrCl/hemodiálise, foco, cultura, alergia e produto exato.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4c0bd0f-03c2-4ce5-bcc2-b58f21ce75c1",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b4674d8-4d1e-4728-8465-d42ada33fa5c",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dalbavancin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4c0bd0f-03c2-4ce5-bcc2-b58f21ce75c1",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b4674d8-4d1e-4728-8465-d42ada33fa5c",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dalbavancin"
   },
   "name": {
     "pt": "Dalbavancina",
@@ -139,8 +87,8 @@
   "keywords": [
     "dalbavancina"
   ],
-  "dataVersion": "clinical-data-v1-3c7311e6c3eae708",
-  "clinicalContentSha256": "3c7311e6c3eae708cbeb2ebc10611e3a08e97f0e7d337319fdd010cc63cdea05",
+  "dataVersion": "clinical-data-v1-af3320af527a87a9",
+  "clinicalContentSha256": "af3320af527a87a9a85874973d6c92d34d13c21e20aa53e6d8de48e2da52dcb6",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js",
@@ -555,5 +503,17 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "dalbavancina.mcGoldClinicalV1",
+    "lote": "022",
+    "requiredFields": 33,
+    "approvedSha256": "6c426b6f4a3ebfeacd7800ca53e10da08300dfe1ba800847fc98d0b4ef5e01d3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

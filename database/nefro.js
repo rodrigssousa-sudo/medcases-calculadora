@@ -3490,3 +3490,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:colecalciferol:END */
+/* GOLD33_SELECTIVE:conivaptana:START */
+;(function(){var db=window.NEFRO_DRUGS_DB;if(!db||!db["conivaptana"])throw new Error("GOLD33_MISSING_CANONICAL:conivaptana");db["conivaptana"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "022",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6c426b6f4a3ebfeacd7800ca53e10da08300dfe1ba800847fc98d0b4ef5e01d3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Conivaptana",
+    "class": "Antagonista V1A/V2 da vasopressina",
+    "pharmacologicClass": "Promove aquarese ao bloquear receptores V2 e V1A",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Bolsa/frascos IV prontos ou concentrado conforme produto.",
+    "presentations": "Bolsa/frascos IV prontos ou concentrado conforme produto.",
+    "mechanism": "Promove aquarese ao bloquear receptores V2 e V1A. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP3A4; meia-vida terminal de algumas horas.",
+    "indications": "Hiponatremia euvolêmica ou hipervolêmica hospitalar selecionada.",
+    "dose": "Ataque 20 mg IV em 30 min; depois 20 mg/24 h em infusão contínua por 2–4 dias; pode aumentar a 40 mg/24 h.",
+    "pediatricDose": "Não estabelecida. AUTOMATABLE=NO.",
+    "renalDose": "Não recomendada em insuficiência renal grave; monitorar volume e função renal.",
+    "hepaticDose": "Evitar em hepatopatia grave; exposição aumenta.",
+    "commonAdverseEffects": "Reação no local, sede, cefaleia, hipotensão.",
+    "dangerousAdverseEffects": "Correção excessiva com desmielinização osmótica, desidratação e lesão renal.",
+    "adverseEffects": "Reação no local, sede, cefaleia, hipotensão. Graves: Correção excessiva com desmielinização osmótica, desidratação e lesão renal.",
+    "contraindications": "Hiponatremia hipovolêmica; uso com inibidores fortes CYP3A4; anúria.",
+    "interactions": "Inibidores/indutores CYP3A4; digoxina e fármacos que alteram sódio/volume.",
+    "monitoring": "Na a cada 4–6 h no início, estado neurológico, volume, PA, rim, local de infusão.",
+    "administration": "Somente IV hospitalar em veia de grande calibre; alternar local.",
+    "preparation": "Não misturar com soluções incompatíveis; usar produto e diluição rotulados.",
+    "infusionProtocol": "Ataque 30 min, seguida de infusão contínua; máximo 4 dias.",
+    "pregnancy": "Dados insuficientes; usar apenas se essencial.",
+    "lactation": "Interromper amamentação ou escolher alternativa.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Correção excessiva com desmielinização osmótica, desidratação e lesão renal. Infusão bloqueada sem tipo/cronicidade de hiponatremia, sintomas, Na seriado, volume, rim/fígado, CYP3A4 e protocolo contra sobrecorreção.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=conivaptan",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021697s019lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=conivaptan"
+  },
+  "es": {
+    "name": "Conivaptán",
+    "class": "Antagonista V1A/V2 de vasopresina",
+    "pharmacologicClass": "Promueve acuaresis al bloquear receptores V2 y V1A",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Bolsa/viales IV listos o concentrado según producto.",
+    "presentations": "Bolsa/viales IV listos o concentrado según producto.",
+    "mechanism": "Promueve acuaresis al bloquear receptores V2 y V1A. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP3A4; semivida terminal de varias horas.",
+    "indications": "Hiponatremia euvolémica o hipervolémica hospitalaria seleccionada.",
+    "dose": "Carga 20 mg IV en 30 min; luego 20 mg/24 h en infusión continua por 2–4 días; puede aumentar a 40 mg/24 h.",
+    "pediatricDose": "No establecida. AUTOMATABLE=NO.",
+    "renalDose": "No recomendada en insuficiencia renal grave; controlar volumen y función renal.",
+    "hepaticDose": "Evitar en hepatopatía grave; aumenta exposición.",
+    "commonAdverseEffects": "Reacción local, sed, cefalea, hipotensión.",
+    "dangerousAdverseEffects": "Corrección excesiva con desmielinización osmótica, deshidratación y lesión renal.",
+    "adverseEffects": "Reacción local, sed, cefalea, hipotensión. Graves: Corrección excesiva con desmielinización osmótica, deshidratación y lesión renal.",
+    "contraindications": "Hiponatremia hipovolémica; uso con inhibidores fuertes CYP3A4; anuria.",
+    "interactions": "Inhibidores/inductores CYP3A4; digoxina y fármacos que alteran sodio/volumen.",
+    "monitoring": "Na cada 4–6 h al inicio, estado neurológico, volumen, PA, riñón, sitio de infusión.",
+    "administration": "Solo IV hospitalaria en vena de gran calibre; alternar sitio.",
+    "preparation": "No mezclar con soluciones incompatibles; usar producto y dilución de ficha.",
+    "infusionProtocol": "Carga 30 min, seguida de infusión continua; máximo 4 días.",
+    "pregnancy": "Datos insuficientes; usar solo si esencial.",
+    "lactation": "Interrumpir lactancia o elegir alternativa.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Corrección excesiva con desmielinización osmótica, deshidratación y lesión renal. Infusão bloqueada sem tipo/cronicidade de hiponatremia, sintomas, Na seriado, volume, rim/fígado, CYP3A4 e protocolo contra sobrecorreção.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=conivaptan",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021697s019lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=conivaptan"
+  }
+};})();
+/* GOLD33_SELECTIVE:conivaptana:END */

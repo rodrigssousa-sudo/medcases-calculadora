@@ -5,21 +5,91 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Dalteparina Sódica"
+    "name": "Dalteparina",
+    "class": "Heparina de baixo peso molecular",
+    "pharmacologicClass": "Potencializa antitrombina, predominando anti-Xa",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Seringas e frascos multidose em UI anti-Xa; concentrações variam.",
+    "presentations": "Seringas e frascos multidose em UI anti-Xa; concentrações variam.",
+    "mechanism": "Potencializa antitrombina, predominando anti-Xa. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade SC alta; eliminação predominantemente renal.",
+    "indications": "Profilaxia de TEV, síndrome coronariana e tratamento prolongado de TEV associado ao câncer; pediatria ≥1 mês no rótulo EUA.",
+    "dose": "Regime depende da indicação: profilaxia usual 2500–5000 UI SC/dia; câncer com TEV: 200 UI/kg SC/dia no 1º mês (máx. 18.000 UI), depois ~150 UI/kg/dia meses 2–6.",
+    "pediatricDose": "TEV sintomático ≥1 mês: 100 UI/kg SC 2x/dia, ajustar por anti-Xa e faixa etária conforme rótulo. AUTOMATABLE=NO.",
+    "renalDose": "Acúmulo em insuficiência grave; considerar anti-Xa/alternativa.",
+    "hepaticDose": "Sem ajuste definido; cautela em coagulopatia hepática.",
+    "commonAdverseEffects": "Sangramento, hematoma e reação no local.",
+    "dangerousAdverseEffects": "Hemorragia fatal, HIT, hematoma espinal/epidural e osteoporose prolongada.",
+    "adverseEffects": "Sangramento, hematoma e reação no local. Graves: Hemorragia fatal, HIT, hematoma espinal/epidural e osteoporose prolongada.",
+    "contraindications": "Sangramento ativo maior; história de HIT; hipersensibilidade a heparinas/produtos suínos.",
+    "interactions": "Antiagregantes, AINE, trombolíticos e outros anticoagulantes.",
+    "monitoring": "Hemograma/plaquetas, sangramento, rim, peso; anti-Xa em pediatria, gestação ou extremos selecionados.",
+    "administration": "SC no abdome; não IM. Técnica e seringa corretas.",
+    "preparation": "Frasco multidose contém álcool benzílico; evitar em neonatos e conferir concentração.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "HBPM amplamente usada; individualizar e monitorar.",
+    "lactation": "Compatível em geral; baixa transferência.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hemorragia fatal, HIT, hematoma espinal/epidural e osteoporose prolongada. Dose bloqueada sem indicação, peso, idade, rim, plaquetas/HIT, sangramento, neuroeixo, concentração e plano anti-Xa quando aplicável.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dalteparin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/information-heparin"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dalteparin"
   },
   "es": {
-    "name": "Dalteparina Sódica"
+    "name": "Dalteparina",
+    "class": "Heparina de bajo peso molecular",
+    "pharmacologicClass": "Potencia antitrombina, predominio anti-Xa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Jeringas y viales multidosis en UI anti-Xa; concentraciones variables.",
+    "presentations": "Jeringas y viales multidosis en UI anti-Xa; concentraciones variables.",
+    "mechanism": "Potencia antitrombina, predominio anti-Xa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad SC alta; eliminación predominantemente renal.",
+    "indications": "Profilaxis de TEV, síndrome coronaria y tratamiento prolongado de TEV asociado a cáncer; pediatría ≥1 mes en ficha EE.UU.",
+    "dose": "Régimen depende de indicación: profilaxis usual 2500–5000 UI SC/día; cáncer con TEV: 200 UI/kg SC/día primer mes (máx. 18.000 UI), luego ~150 UI/kg/día meses 2–6.",
+    "pediatricDose": "TEV sintomático ≥1 mes: 100 UI/kg SC 2 veces/día, ajustar por anti-Xa y edad según ficha. AUTOMATABLE=NO.",
+    "renalDose": "Acumulación en insuficiencia grave; considerar anti-Xa/alternativa.",
+    "hepaticDose": "Sin ajuste definido; precaución en coagulopatía hepática.",
+    "commonAdverseEffects": "Sangrado, hematoma y reacción local.",
+    "dangerousAdverseEffects": "Hemorragia fatal, HIT, hematoma espinal/epidural y osteoporosis prolongada.",
+    "adverseEffects": "Sangrado, hematoma y reacción local. Graves: Hemorragia fatal, HIT, hematoma espinal/epidural y osteoporosis prolongada.",
+    "contraindications": "Sangrado mayor activo; antecedente de HIT; hipersensibilidad a heparinas/productos porcinos.",
+    "interactions": "Antiagregantes, AINE, trombolíticos y otros anticoagulantes.",
+    "monitoring": "Hemograma/plaquetas, sangrado, riñón, peso; anti-Xa en pediatría, embarazo o extremos seleccionados.",
+    "administration": "SC en abdomen; no IM. Técnica y jeringa correctas.",
+    "preparation": "Vial multidosis contiene alcohol bencílico; evitar en neonatos y confirmar concentración.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "HBPM ampliamente usada; individualizar y controlar.",
+    "lactation": "Compatible en general; baja transferencia.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hemorragia fatal, HIT, hematoma espinal/epidural y osteoporosis prolongada. Dose bloqueada sem indicação, peso, idade, rim, plaquetas/HIT, sangramento, neuroeixo, concentração e plano anti-Xa quando aplicável.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dalteparin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/information-heparin"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dalteparin"
   },
   "name": {
-    "pt": "Dalteparina Sódica",
-    "es": "Dalteparina Sódica"
+    "pt": "Dalteparina",
+    "es": "Dalteparina"
   },
   "keywords": [
     "dalteparina",
     "dalteparina sódica"
   ],
-  "dataVersion": "clinical-data-v1-3c7311e6c3eae708",
-  "clinicalContentSha256": "3c7311e6c3eae708cbeb2ebc10611e3a08e97f0e7d337319fdd010cc63cdea05",
+  "dataVersion": "clinical-data-v1-af3320af527a87a9",
+  "clinicalContentSha256": "af3320af527a87a9a85874973d6c92d34d13c21e20aa53e6d8de48e2da52dcb6",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "anticoag.js",
@@ -64,5 +134,17 @@
         "sourceModule": "hematologia.js"
       }
     }
-  ]
+  ],
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/anticoag.js",
+    "sourceField": "dalteparina.mcGoldClinicalV1",
+    "lote": "022",
+    "requiredFields": 33,
+    "approvedSha256": "6c426b6f4a3ebfeacd7800ca53e10da08300dfe1ba800847fc98d0b4ef5e01d3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

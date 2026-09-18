@@ -27491,3 +27491,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:cloxacilina:END */
+/* GOLD33_SELECTIVE:colistina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["colistina"])throw new Error("GOLD33_MISSING_CANONICAL:colistina");db["colistina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "022",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6c426b6f4a3ebfeacd7800ca53e10da08300dfe1ba800847fc98d0b4ef5e01d3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Colistina (colistimetato de sódio)",
+    "class": "Polimixina antibacteriana",
+    "pharmacologicClass": "Desorganiza membrana externa de bacilos Gram-negativos",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frascos de colistimetato; rotulagem pode usar mg de CBA ou milhões de UI, não intercambiáveis sem conversão validada.",
+    "presentations": "Frascos de colistimetato; rotulagem pode usar mg de CBA ou milhões de UI, não intercambiáveis sem conversão validada.",
+    "mechanism": "Desorganiza membrana externa de bacilos Gram-negativos. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Pró-fármaco CMS convertido a colistina ativa; eliminação renal do CMS.",
+    "indications": "Infecções graves por Gram-negativos multirresistentes suscetíveis; uso orientado por infectologia e microbiologia.",
+    "dose": "Regime IV exige dose de ataque e manutenção por peso/função renal conforme produto e protocolo; não fornecer conversão automática entre CBA, CMS e UI.",
+    "pediatricDose": "Neonatos/crianças: regimes por peso e unidade do produto; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Ajuste obrigatório por ClCr e diálise; TDM quando disponível.",
+    "hepaticDose": "Sem ajuste específico bem estabelecido; monitorar.",
+    "commonAdverseEffects": "Parestesia, tontura, náusea e reação local.",
+    "dangerousAdverseEffects": "Nefrotoxicidade, neurotoxicidade, apneia/bloqueio neuromuscular.",
+    "adverseEffects": "Parestesia, tontura, náusea e reação local. Graves: Nefrotoxicidade, neurotoxicidade, apneia/bloqueio neuromuscular.",
+    "contraindications": "Hipersensibilidade; cautela em miastenia e bloqueio neuromuscular.",
+    "interactions": "Outros nefro/neurotóxicos e bloqueadores neuromusculares.",
+    "monitoring": "Cultura/MIC, resposta, creatinina diária, diurese, neurotoxicidade e eletrólitos.",
+    "administration": "IV por bomba após reconstituição; via inalatória é formulação/protocolo específico.",
+    "preparation": "Seguir exatamente bula do produto; solução recém-preparada e estabilidade limitada.",
+    "infusionProtocol": "Tempo/concentração conforme produto e protocolo; evitar bolus não autorizado.",
+    "pregnancy": "Usar apenas em infecção grave com benefício claro.",
+    "lactation": "Dados limitados; decisão especializada.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Nefrotoxicidade, neurotoxicidade, apneia/bloqueio neuromuscular. Cálculo e infusão bloqueados sem unidade exata do rótulo, peso, ClCr/diálise, foco, MIC, produto e protocolo institucional.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=colistimethate",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=colistimethate"
+  },
+  "es": {
+    "name": "Colistina (colistimetato de sodio)",
+    "class": "Polimixina antibacteriana",
+    "pharmacologicClass": "Desorganiza membrana externa de bacilos gramnegativos",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Viales de colistimetato; rotulado puede usar mg de CBA o millones de UI, no intercambiables sin conversión validada.",
+    "presentations": "Viales de colistimetato; rotulado puede usar mg de CBA o millones de UI, no intercambiables sin conversión validada.",
+    "mechanism": "Desorganiza membrana externa de bacilos gramnegativos. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Profármaco CMS convertido en colistina activa; eliminación renal de CMS.",
+    "indications": "Infecciones graves por gramnegativos multirresistentes sensibles; uso guiado por infectología y microbiología.",
+    "dose": "Régimen IV exige carga y mantenimiento por peso/función renal según producto y protocolo; no convertir automáticamente entre CBA, CMS y UI.",
+    "pediatricDose": "Neonatos/niños: regímenes por peso y unidad del producto; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Ajuste obligatorio por ClCr y diálisis; TDM cuando disponible.",
+    "hepaticDose": "Sin ajuste específico bien establecido; controlar.",
+    "commonAdverseEffects": "Parestesia, mareo, náusea y reacción local.",
+    "dangerousAdverseEffects": "Nefrotoxicidad, neurotoxicidad, apnea/bloqueo neuromuscular.",
+    "adverseEffects": "Parestesia, mareo, náusea y reacción local. Graves: Nefrotoxicidad, neurotoxicidad, apnea/bloqueo neuromuscular.",
+    "contraindications": "Hipersensibilidad; precaución en miastenia y bloqueo neuromuscular.",
+    "interactions": "Otros nefro/neurotóxicos y bloqueantes neuromusculares.",
+    "monitoring": "Cultivo/MIC, respuesta, creatinina diaria, diuresis, neurotoxicidad y electrolitos.",
+    "administration": "IV por bomba tras reconstitución; vía inhalada es formulación/protocolo específico.",
+    "preparation": "Seguir exactamente ficha del producto; solución recién preparada y estabilidad limitada.",
+    "infusionProtocol": "Tiempo/concentración según producto y protocolo; evitar bolo no autorizado.",
+    "pregnancy": "Usar solo en infección grave con beneficio claro.",
+    "lactation": "Datos limitados; decisión especializada.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Nefrotoxicidad, neurotoxicidad, apnea/bloqueo neuromuscular. Cálculo e infusão bloqueados sem unidade exata do rótulo, peso, ClCr/diálise, foco, MIC, produto e protocolo institucional.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=colistimethate",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=colistimethate"
+  }
+};})();
+/* GOLD33_SELECTIVE:colistina:END */
