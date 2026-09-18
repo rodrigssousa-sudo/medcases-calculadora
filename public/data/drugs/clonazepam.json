@@ -8,182 +8,98 @@
     "name": "Clonazepam",
     "class": "Benzodiazepínico",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Rivotril",
-        "Clonazepam EMS",
-        "Medley",
-        "Neo Química"
-      ],
-      "ar": [
-        "Rivotril",
-        "Clonagin",
-        "Neuryl",
-        "Clonazepam Bagó"
-      ]
-    },
-    "presentation": [
-      "Comprimido 0,25 mg",
-      "Comprimido 0,5 mg",
-      "Comprimido 2 mg",
-      "Gotas 2,5 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Ansiedade/pânico: iniciar 0,25–0,5 mg VO 1–2x/dia; titular conforme resposta.",
-      "panico": "Dose usual: 1–2 mg/dia divididos em 1–2 tomadas.",
-      "maxDose": "Dose máxima usual: 4 mg/dia."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 0,5, 1 e 2 mg; ODT conforme produto.",
+    "dose": "Pânico: 0,25 mg VO 2x/dia, alvo 1 mg/dia; máximo 4 mg/dia. Convulsões: iniciar até 1,5 mg/dia divididos, aumentar 0,5–1 mg a cada 3 dias; máximo 20 mg/dia.",
     "doseKg": {
       "standard": "Não se utiliza cálculo rotineiro por kg em adultos.",
       "pediatric": "Epilepsia pediátrica: 0,01–0,05 mg/kg/dia divididos em 2–3 tomadas.",
       "maxDose": "4 mg/dia (adultos)"
     },
-    "indications": [
-      "Transtorno do pânico",
-      "Transtorno de ansiedade generalizada",
-      "Crises de ansiedade aguda",
-      "Epilepsia",
-      "Mioclonias",
-      "Síndrome das pernas inquietas",
-      "Acatisia induzida por antipsicóticos",
-      "Insônia associada à ansiedade"
-    ],
+    "indications": "Transtornos convulsivos selecionados e transtorno do pânico em adultos.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Potencializa a ação do GABA através do receptor GABA-A, aumentando a entrada de cloro e reduzindo a excitabilidade neuronal.",
+    "mechanism": "Modulador alostérico positivo GABA-A. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Início de ação em 30–60 minutos.",
     "halfLife": "Vida média aproximada: 18–50 horas.",
-    "commonAdverseEffects": [
-      "Sonolência",
-      "Tontura",
-      "Fadiga",
-      "Déficit de memória",
-      "Ataxia",
-      "Redução da concentração"
-    ],
-    "dangerousAdverseEffects": [
-      "Dependência física",
-      "Síndrome de abstinência",
-      "Depressão respiratória",
-      "Quedas",
-      "Coma em associação com depressores do SNC"
-    ],
+    "commonAdverseEffects": "Sonolência, ataxia, alteração cognitiva e tontura.",
+    "dangerousAdverseEffects": "Depressão respiratória, dependência/abstinência, status epilepticus na retirada, suicidabilidade e quedas.",
     "risksByPatient": [],
-    "contraindications": [
-      "Miastenia gravis",
-      "Insuficiência respiratória grave",
-      "Apneia do sono grave",
-      "Hipersensibilidade a benzodiazepínicos"
-    ],
-    "interactions": [
-      "Álcool",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos",
-      "Anti-histamínicos sedativos"
-    ],
-    "alerts": [
-      "Não suspender abruptamente.",
-      "Risco elevado de dependência em uso prolongado.",
-      "Evitar associação com álcool."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidade, doença hepática significativa e glaucoma agudo de ângulo fechado.",
+    "interactions": "Opioides, álcool e depressores SNC causam sedação/depressão respiratória; CYP3A.",
+    "alerts": "Depressão respiratória, dependência/abstinência, status epilepticus na retirada, suicidabilidade e quedas. Dose bloqueada sem indicação, idade/peso, fígado, opioides/depressores, risco respiratório e plano de retirada.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonazepam",
+    "pharmacologicClass": "Modulador alostérico positivo GABA-A",
+    "presentations": "Comprimidos 0,5, 1 e 2 mg; ODT conforme produto.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP3A; meia-vida ~30–40 h.",
+    "pediatricDose": "Convulsões: iniciar 0,01–0,03 mg/kg/dia divididos, máximo inicial 0,05 mg/kg/dia; titular cuidadosamente. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal; cautela com sedação.",
+    "hepaticDose": "Contraindicado em doença hepática significativa conforme rótulo.",
+    "adverseEffects": "Sonolência, ataxia, alteração cognitiva e tontura. Graves: Depressão respiratória, dependência/abstinência, status epilepticus na retirada, suicidabilidade e quedas.",
+    "monitoring": "Crises/pânico, sedação, respiração, quedas, suicidabilidade, abuso/dependência e retirada.",
+    "administration": "VO; não interromper abruptamente.",
+    "preparation": "ODT manusear com mãos secas; confirmar concentração se solução local.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Risco fetal/neonatal; usar apenas se benefício justificar.",
+    "lactation": "Passa ao leite; risco de sedação e baixa sucção.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonazepam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class"
     ]
   },
   "es": {
     "name": "Clonazepam",
     "class": "Benzodiacepina",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Rivotril",
-        "Clonazepam EMS",
-        "Medley",
-        "Neo Química"
-      ],
-      "ar": [
-        "Rivotril",
-        "Clonagin",
-        "Neuryl",
-        "Clonazepam Bagó"
-      ]
-    },
-    "presentation": [
-      "Comprimido 0,25 mg",
-      "Comprimido 0,5 mg",
-      "Comprimido 2 mg",
-      "Gotas 2,5 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Ansiedad/pánico: iniciar 0,25–0,5 mg VO 1–2 veces/día; titular según respuesta.",
-      "panico": "Dosis habitual: 1–2 mg/día divididos en 1–2 tomas.",
-      "maxDose": "Dosis máxima habitual: 4 mg/día."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 0,5, 1 y 2 mg; ODT según producto.",
+    "dose": "Pánico: 0,25 mg VO 2 veces/día, objetivo 1 mg/día; máximo 4 mg/día. Crisis: iniciar hasta 1,5 mg/día divididos, aumentar 0,5–1 mg cada 3 días; máximo 20 mg/día.",
     "doseKg": {
       "standard": "No se utiliza cálculo rutinario por kg en adultos.",
       "pediatric": "Epilepsia pediátrica: 0,01–0,05 mg/kg/día divididos en 2–3 tomas.",
       "maxDose": "4 mg/día (adultos)"
     },
-    "indications": [
-      "Trastorno de pánico",
-      "Trastorno de ansiedad generalizada",
-      "Crisis de ansiedad aguda",
-      "Epilepsia",
-      "Mioclonías",
-      "Síndrome de piernas inquietas",
-      "Acatisia inducida por antipsicóticos",
-      "Insomnio asociado a ansiedad"
-    ],
+    "indications": "Trastornos convulsivos seleccionados y trastorno de pánico en adultos.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Potencia la acción del GABA a través del receptor GABA-A, aumentando la entrada de cloro y reduciendo la excitabilidad neuronal.",
+    "mechanism": "Modulador alostérico positivo GABA-A. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Inicio de acción en 30–60 minutos.",
     "halfLife": "Vida media aproximada: 18–50 horas.",
-    "commonAdverseEffects": [
-      "Somnolencia",
-      "Mareos",
-      "Fatiga",
-      "Déficit de memoria",
-      "Ataxia",
-      "Disminución de la concentración"
-    ],
-    "dangerousAdverseEffects": [
-      "Dependencia física",
-      "Síndrome de abstinencia",
-      "Depresión respiratoria",
-      "Caídas",
-      "Coma en asociación con depresores del SNC"
-    ],
+    "commonAdverseEffects": "Somnolencia, ataxia, alteración cognitiva y mareo.",
+    "dangerousAdverseEffects": "Depresión respiratoria, dependencia/abstinencia, estado epiléptico en retirada, suicidabilidad y caídas.",
     "risksByPatient": [],
-    "contraindications": [
-      "Miastenia gravis",
-      "Insuficiencia respiratoria grave",
-      "Apnea del sueño grave",
-      "Hipersensibilidad a benzodiacepinas"
-    ],
-    "interactions": [
-      "Alcohol",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos",
-      "Antihistamínicos sedantes"
-    ],
-    "alerts": [
-      "No suspender abruptamente.",
-      "Riesgo elevado de dependencia en uso prolongado.",
-      "Evitar asociación con alcohol."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidad, hepatopatía significativa y glaucoma agudo de ángulo cerrado.",
+    "interactions": "Opioides, alcohol y depresores SNC causan sedación/depresión respiratoria; CYP3A.",
+    "alerts": "Depresión respiratoria, dependencia/abstinencia, estado epiléptico en retirada, suicidabilidad y caídas. Dose bloqueada sem indicação, idade/peso, fígado, opioides/depressores, risco respiratório e plano de retirada.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonazepam",
+    "pharmacologicClass": "Modulador alostérico positivo GABA-A",
+    "presentations": "Comprimidos 0,5, 1 y 2 mg; ODT según producto.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP3A; semivida ~30–40 h.",
+    "pediatricDose": "Crisis: iniciar 0,01–0,03 mg/kg/día divididos, máximo inicial 0,05 mg/kg/día; titular cuidadosamente. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal; precaución con sedación.",
+    "hepaticDose": "Contraindicado en hepatopatía significativa según ficha.",
+    "adverseEffects": "Somnolencia, ataxia, alteración cognitiva y mareo. Graves: Depresión respiratoria, dependencia/abstinencia, estado epiléptico en retirada, suicidabilidad y caídas.",
+    "monitoring": "Crisis/pánico, sedación, respiración, caídas, suicidabilidad, abuso/dependencia y retirada.",
+    "administration": "VO; no suspender bruscamente.",
+    "preparation": "ODT manipular con manos secas; confirmar concentración si solución local.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Riesgo fetal/neonatal; usar solo si beneficio justifica.",
+    "lactation": "Pasa a leche; riesgo de sedación y mala succión.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonazepam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class"
     ]
   },
   "name": {
@@ -201,9 +117,21 @@
     "clonazepam bago",
     "benzodiazepinico"
   ],
-  "dataVersion": "clinical-data-v1-3f302c5d852e3acd",
-  "clinicalContentSha256": "3f302c5d852e3acd51966e151d907210817a8c88b38dba1b384ef649e5491aae",
+  "dataVersion": "clinical-data-v1-9909972ffc54da1b",
+  "clinicalContentSha256": "9909972ffc54da1b019a793937d0c33b271e107180c178c5379c8c85cd49ba60",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "clonazepam.mcGoldClinicalV1",
+    "lote": "020",
+    "requiredFields": 33,
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

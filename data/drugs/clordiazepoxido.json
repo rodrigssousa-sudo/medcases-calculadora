@@ -6,180 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Clordiazepóxido",
-    "class": "Benzodiazepínico de longa ação",
+    "class": "Benzodiazepínico",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Librium",
-        "Psicosedin"
-      ],
-      "ar": [
-        "Librium",
-        "Clordiazepóxido"
-      ]
-    },
-    "presentation": [
-      "Cápsula/comprimido 5 mg",
-      "Cápsula/comprimido 10 mg",
-      "Cápsula/comprimido 25 mg"
-    ],
-    "dose": {
-      "adulto": "Ansiedade: 5–25 mg VO 3–4x/dia.",
-      "abstinencia": "Abstinência alcoólica: 25–100 mg VO conforme protocolo, com redução gradual.",
-      "maxDose": "Dose máxima usual: 100 mg/dia para ansiedade; protocolos de abstinência podem usar doses maiores sob monitorização."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 5, 10 e 25 mg.",
+    "dose": "Ansiedade: 5–10 mg VO 3–4x/dia, grave 20–25 mg 3–4x/dia. Abstinência: 50–100 mg inicialmente, repetir até controle, máximo 300 mg/dia sob supervisão.",
     "doseKg": {
       "standard": "Não se utiliza cálculo por kg em adultos.",
       "pediatric": "Uso pediátrico não rotineiro.",
       "maxDose": "Individualizar conforme indicação."
     },
-    "indications": [
-      "Abstinência alcoólica",
-      "Transtorno de ansiedade generalizada",
-      "Crises de ansiedade",
-      "Agitação associada à abstinência",
-      "Tremores por abstinência alcoólica",
-      "Sedação pré-operatória",
-      "Ansiedade somatizada"
-    ],
+    "indications": "Transtornos de ansiedade e abstinência alcoólica; alívio pré-operatório conforme rótulo.",
     "renalAdjustment": "Sem ajuste renal habitual, mas monitorar sedação em pacientes frágeis.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Potencializa a ação do GABA no receptor GABA-A, produzindo ansiólise, sedação, anticonvulsão e relaxamento muscular.",
+    "mechanism": "Modulador alostérico positivo GABA-A. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Início de ação geralmente em 30–60 minutos por via oral.",
     "halfLife": "Vida média prolongada; possui metabólitos ativos com meia-vida longa, podendo acumular.",
-    "commonAdverseEffects": [
-      "Sonolência",
-      "Tontura",
-      "Ataxia",
-      "Fadiga",
-      "Confusão",
-      "Lentificação psicomotora"
-    ],
-    "dangerousAdverseEffects": [
-      "Depressão respiratória",
-      "Dependência física",
-      "Síndrome de abstinência",
-      "Sedação prolongada por acúmulo",
-      "Quedas e fraturas em idosos",
-      "Coma em associação com depressores do SNC"
-    ],
+    "commonAdverseEffects": "Sonolência, ataxia, confusão e tontura.",
+    "dangerousAdverseEffects": "Depressão respiratória, delirium, dependência/abstinência, quedas e encefalopatia.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade a benzodiazepínicos",
-      "Insuficiência respiratória grave",
-      "Apneia do sono grave",
-      "Miastenia gravis",
-      "Insuficiência hepática grave"
-    ],
-    "interactions": [
-      "Álcool",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos sedativos",
-      "Anti-histamínicos sedativos",
-      "Outros depressores do SNC"
-    ],
-    "alerts": [
-      "Muito usado em abstinência alcoólica, exceto quando há hepatopatia importante.",
-      "Evitar em idosos frágeis pelo risco de acúmulo.",
-      "Não suspender abruptamente após uso prolongado.",
-      "Evitar associação com álcool e opioides."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidade; glaucoma agudo de ângulo fechado.",
+    "interactions": "Opioides, álcool e depressores SNC aumentam depressão respiratória; inibidores CYP aumentam sedação.",
+    "alerts": "Depressão respiratória, delirium, dependência/abstinência, quedas e encefalopatia. Uso bloqueado sem indicação, gravidade/CIWA-Ar, idade, fígado, opioides/álcool, monitorização respiratória e plano de retirada.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chlordiazepoxide",
+    "pharmacologicClass": "Modulador alostérico positivo GABA-A",
+    "presentations": "Cápsulas 5, 10 e 25 mg.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático a metabólitos ativos de meia-vida longa.",
+    "pediatricDose": "≥6 anos: 5 mg 2–4x/dia, podendo 10 mg 2–3x/dia em casos selecionados. AUTOMATABLE=NO.",
+    "renalDose": "Cautela; metabólitos ativos podem acumular.",
+    "hepaticDose": "Reduzir/evitar em hepatopatia; risco de encefalopatia.",
+    "adverseEffects": "Sonolência, ataxia, confusão e tontura. Graves: Depressão respiratória, delirium, dependência/abstinência, quedas e encefalopatia.",
+    "monitoring": "Sintomas/CIWA-Ar quando abstinência, sedação, respiração, quedas, fígado, abuso e retirada.",
+    "administration": "VO; menor dose e duração; retirada gradual.",
+    "preparation": "Cápsula pronta.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Risco fetal/neonatal; evitar quando possível.",
+    "lactation": "Passa ao leite; evitar uso prolongado e observar sedação.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chlordiazepoxide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class"
     ]
   },
   "es": {
     "name": "Clordiazepóxido",
-    "class": "Benzodiacepina de larga duración",
+    "class": "Benzodiacepina",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Librium",
-        "Psicosedin"
-      ],
-      "ar": [
-        "Librium",
-        "Clordiazepóxido"
-      ]
-    },
-    "presentation": [
-      "Cápsula/comprimido 5 mg",
-      "Cápsula/comprimido 10 mg",
-      "Cápsula/comprimido 25 mg"
-    ],
-    "dose": {
-      "adulto": "Ansiedad: 5–25 mg VO 3–4 veces/día.",
-      "abstinencia": "Abstinencia alcohólica: 25–100 mg VO según protocolo, con reducción gradual.",
-      "maxDose": "Dosis máxima habitual: 100 mg/día para ansiedad; protocolos de abstinencia pueden usar dosis mayores bajo monitorización."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 5, 10 y 25 mg.",
+    "dose": "Ansiedad: 5–10 mg VO 3–4 veces/día, grave 20–25 mg 3–4 veces/día. Abstinencia: 50–100 mg inicialmente, repetir hasta control, máximo 300 mg/día bajo supervisión.",
     "doseKg": {
       "standard": "No se utiliza cálculo por kg en adultos.",
       "pediatric": "Uso pediátrico no rutinario.",
       "maxDose": "Individualizar según indicación."
     },
-    "indications": [
-      "Abstinencia alcohólica",
-      "Trastorno de ansiedad generalizada",
-      "Crisis de ansiedad",
-      "Agitación asociada a abstinencia",
-      "Temblores por abstinencia alcohólica",
-      "Sedación preoperatoria",
-      "Ansiedad somatizada"
-    ],
+    "indications": "Trastornos de ansiedad y abstinencia alcohólica; alivio preoperatorio según ficha.",
     "renalAdjustment": "Sin ajuste renal habitual, pero monitorizar sedación en pacientes frágiles.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Potencia la acción del GABA en el receptor GABA-A, produciendo ansiólisis, sedación, anticonvulsión y relajación muscular.",
+    "mechanism": "Modulador alostérico positivo GABA-A. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Inicio de acción generalmente en 30–60 minutos por vía oral.",
     "halfLife": "Vida media prolongada; posee metabolitos activos con vida media larga, pudiendo acumularse.",
-    "commonAdverseEffects": [
-      "Somnolencia",
-      "Mareos",
-      "Ataxia",
-      "Fatiga",
-      "Confusión",
-      "Enlentecimiento psicomotor"
-    ],
-    "dangerousAdverseEffects": [
-      "Depresión respiratoria",
-      "Dependencia física",
-      "Síndrome de abstinencia",
-      "Sedación prolongada por acumulación",
-      "Caídas y fracturas en adultos mayores",
-      "Coma en asociación con depresores del SNC"
-    ],
+    "commonAdverseEffects": "Somnolencia, ataxia, confusión y mareo.",
+    "dangerousAdverseEffects": "Depresión respiratoria, delirium, dependencia/abstinencia, caídas y encefalopatía.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a benzodiacepinas",
-      "Insuficiencia respiratoria grave",
-      "Apnea del sueño grave",
-      "Miastenia gravis",
-      "Insuficiencia hepática grave"
-    ],
-    "interactions": [
-      "Alcohol",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos sedativos",
-      "Antihistamínicos sedantes",
-      "Otros depresores del SNC"
-    ],
-    "alerts": [
-      "Muy usado en abstinencia alcohólica, excepto cuando hay hepatopatía importante.",
-      "Evitar en adultos mayores frágiles por riesgo de acumulación.",
-      "No suspender abruptamente tras uso prolongado.",
-      "Evitar asociación con alcohol y opioides."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidad; glaucoma agudo de ángulo cerrado.",
+    "interactions": "Opioides, alcohol y depresores SNC aumentan depresión respiratoria; inhibidores CYP aumentan sedación.",
+    "alerts": "Depresión respiratoria, delirium, dependencia/abstinencia, caídas y encefalopatía. Uso bloqueado sem indicação, gravidade/CIWA-Ar, idade, fígado, opioides/álcool, monitorização respiratória e plano de retirada.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chlordiazepoxide",
+    "pharmacologicClass": "Modulador alostérico positivo GABA-A",
+    "presentations": "Cápsulas 5, 10 y 25 mg.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático a metabolitos activos de semivida larga.",
+    "pediatricDose": "≥6 años: 5 mg 2–4 veces/día, pudiendo 10 mg 2–3 veces/día en casos seleccionados. AUTOMATABLE=NO.",
+    "renalDose": "Precaución; metabolitos activos pueden acumular.",
+    "hepaticDose": "Reducir/evitar en hepatopatía; riesgo de encefalopatía.",
+    "adverseEffects": "Somnolencia, ataxia, confusión y mareo. Graves: Depresión respiratoria, delirium, dependencia/abstinencia, caídas y encefalopatía.",
+    "monitoring": "Síntomas/CIWA-Ar en abstinencia, sedación, respiración, caídas, hígado, abuso y retirada.",
+    "administration": "VO; menor dosis y duración; retirada gradual.",
+    "preparation": "Cápsula lista.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Riesgo fetal/neonatal; evitar si es posible.",
+    "lactation": "Pasa a leche; evitar uso prolongado y vigilar sedación.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chlordiazepoxide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class"
     ]
   },
   "name": {
@@ -193,9 +113,21 @@
     "psicosedin",
     "benzodiazepinico de longa acao"
   ],
-  "dataVersion": "clinical-data-v1-3f302c5d852e3acd",
-  "clinicalContentSha256": "3f302c5d852e3acd51966e151d907210817a8c88b38dba1b384ef649e5491aae",
+  "dataVersion": "clinical-data-v1-9909972ffc54da1b",
+  "clinicalContentSha256": "9909972ffc54da1b019a793937d0c33b271e107180c178c5379c8c85cd49ba60",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "clordiazepoxido.mcGoldClinicalV1",
+    "lote": "020",
+    "requiredFields": 33,
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

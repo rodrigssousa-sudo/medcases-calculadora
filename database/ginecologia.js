@@ -237,3 +237,93 @@
   }); /* fim Object.assign GINECOLOGIA_DRUGS_DB — BUILD 458-GINE | 5 drogas: etinilestradiol_levonorgestrel, drospirenona, progesterona_micronizada, clomifeno, letrozol_ginecologia */
 
 })();
+/* GOLD33_SELECTIVE:clomifeno:START */
+;(function(){var db=window.GINECOLOGIA_DRUGS_DB;if(!db||!db["clomifeno"])throw new Error("GOLD33_MISSING_CANONICAL:clomifeno");db["clomifeno"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "020",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Clomifeno",
+    "class": "Modulador seletivo do receptor de estrogênio",
+    "pharmacologicClass": "Antagonismo estrogênico hipotalâmico aumenta FSH/LH",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 50 mg.",
+    "presentations": "Comprimidos 50 mg.",
+    "mechanism": "Antagonismo estrogênico hipotalâmico aumenta FSH/LH. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Mistura de isômeros com eliminação lenta; zuclomifeno pode persistir semanas.",
+    "indications": "Indução de ovulação em mulheres com disfunção ovulatória que desejam gravidez e tenham avaliação adequada.",
+    "dose": "50 mg VO 1x/dia por 5 dias, iniciando aproximadamente no 5º dia do ciclo; se não houver ovulação, curso de 100 mg/dia por 5 dias. Não exceder 100 mg/dia ou 3 cursos sem reavaliação.",
+    "pediatricDose": "Não indicado. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste estabelecido.",
+    "hepaticDose": "Contraindicado em doença hepática ou história de disfunção hepática.",
+    "commonAdverseEffects": "Fogachos, distensão/dor pélvica, náusea, cefaleia e sintomas visuais.",
+    "dangerousAdverseEffects": "Síndrome de hiperestimulação ovariana, gravidez múltipla, alteração visual persistente e aumento ovariano.",
+    "adverseEffects": "Fogachos, distensão/dor pélvica, náusea, cefaleia e sintomas visuais. Graves: Síndrome de hiperestimulação ovariana, gravidez múltipla, alteração visual persistente e aumento ovariano.",
+    "contraindications": "Gestação, doença hepática, sangramento uterino não diagnosticado, cisto ovariano não relacionado a SOP, disfunção tireoidiana/adrenal não controlada e lesão intracraniana orgânica.",
+    "interactions": "Interações clinicamente relevantes não bem definidas; revisar terapias hormonais.",
+    "monitoring": "Ovulação, ultrassom/ovários, gravidez, visão e sinais de hiperestimulação.",
+    "administration": "VO sob supervisão ginecológica; excluir gestação antes de cada ciclo.",
+    "preparation": "Comprimido pronto.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Contraindicado.",
+    "lactation": "Não indicado durante amamentação; pode reduzir lactação.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Síndrome de hiperestimulação ovariana, gravidez múltipla, alteração visual persistente e aumento ovariano. Uso bloqueado sem avaliação de infertilidade, exclusão de gestação, fígado, tireoide/adrenal, sangramento/cisto e monitorização ovariana.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clomiphene",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.asrm.org/topics/topics-index/ovulation-induction/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clomiphene"
+  },
+  "es": {
+    "name": "Clomifeno",
+    "class": "Modulador selectivo del receptor de estrógeno",
+    "pharmacologicClass": "Antagonismo estrogénico hipotalámico aumenta FSH/LH",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 50 mg.",
+    "presentations": "Comprimidos 50 mg.",
+    "mechanism": "Antagonismo estrogénico hipotalámico aumenta FSH/LH. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Mezcla de isómeros con eliminación lenta; zuclomifeno puede persistir semanas.",
+    "indications": "Inducción de ovulación en mujeres con disfunción ovulatoria que desean embarazo y evaluación adecuada.",
+    "dose": "50 mg VO 1 vez/día por 5 días, iniciando aproximadamente el día 5 del ciclo; si no hay ovulación, curso de 100 mg/día por 5 días. No superar 100 mg/día ni 3 cursos sin reevaluación.",
+    "pediatricDose": "No indicado. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste establecido.",
+    "hepaticDose": "Contraindicado en enfermedad hepática o antecedente de disfunción hepática.",
+    "commonAdverseEffects": "Sofocos, distensión/dolor pélvico, náusea, cefalea y síntomas visuales.",
+    "dangerousAdverseEffects": "Síndrome de hiperestimulación ovárica, embarazo múltiple, alteración visual persistente y aumento ovárico.",
+    "adverseEffects": "Sofocos, distensión/dolor pélvico, náusea, cefalea y síntomas visuales. Graves: Síndrome de hiperestimulación ovárica, embarazo múltiple, alteración visual persistente y aumento ovárico.",
+    "contraindications": "Embarazo, hepatopatía, sangrado uterino no diagnosticado, quiste ovárico no relacionado con SOP, disfunción tiroidea/suprarrenal no controlada y lesión intracraneal orgánica.",
+    "interactions": "Interacciones clínicamente relevantes no bien definidas; revisar terapias hormonales.",
+    "monitoring": "Ovulación, ecografía/ovarios, embarazo, visión y signos de hiperestimulación.",
+    "administration": "VO bajo supervisión ginecológica; excluir embarazo antes de cada ciclo.",
+    "preparation": "Comprimido listo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Contraindicado.",
+    "lactation": "No indicado durante lactancia; puede reducir producción.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Síndrome de hiperestimulación ovárica, embarazo múltiple, alteración visual persistente y aumento ovárico. Uso bloqueado sem avaliação de infertilidade, exclusão de gestação, fígado, tireoide/adrenal, sangramento/cisto e monitorização ovariana.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clomiphene",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.asrm.org/topics/topics-index/ovulation-induction/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clomiphene"
+  }
+};})();
+/* GOLD33_SELECTIVE:clomifeno:END */

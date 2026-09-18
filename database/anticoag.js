@@ -1036,3 +1036,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:cangrelor:END */
+/* GOLD33_SELECTIVE:clopidogrel:START */
+;(function(){var db=window.ANTICOAG_DRUGS_DB;if(!db||!db["clopidogrel"])throw new Error("GOLD33_MISSING_CANONICAL:clopidogrel");db["clopidogrel"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "020",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Clopidogrel",
+    "class": "Antiagregante P2Y12",
+    "pharmacologicClass": "Metabólito ativo bloqueia irreversivelmente receptor P2Y12",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 75 e 300 mg.",
+    "presentations": "Comprimidos 75 e 300 mg.",
+    "mechanism": "Metabólito ativo bloqueia irreversivelmente receptor P2Y12. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Pró-fármaco CYP2C19; efeito plaquetário dura 7–10 dias.",
+    "indications": "Síndrome coronariana aguda, IAM/AVC recentes e doença arterial periférica; conforme estratégia antitrombótica.",
+    "dose": "Manutenção usual 75 mg VO/dia. SCA: carga 300 mg seguida de 75 mg/dia com AAS; estratégias PCI podem usar 600 mg conforme guideline/protocolo.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste usual; experiência limitada em grave.",
+    "hepaticDose": "Evitar em hepatopatia grave com diátese hemorrágica.",
+    "commonAdverseEffects": "Equimose, epistaxe, diarreia e sangramento.",
+    "dangerousAdverseEffects": "Hemorragia maior/intracraniana, TTP e neutropenia rara.",
+    "adverseEffects": "Equimose, epistaxe, diarreia e sangramento. Graves: Hemorragia maior/intracraniana, TTP e neutropenia rara.",
+    "contraindications": "Sangramento patológico ativo e hipersensibilidade.",
+    "interactions": "Omeprazol/esomeprazol reduzem ativação CYP2C19; anticoagulantes, AINE e outros antiagregantes aumentam sangramento.",
+    "monitoring": "Sangramento, hemograma, adesão, eventos isquêmicos e TTP.",
+    "administration": "VO com ou sem alimento; cirurgia eletiva pode exigir suspensão planejada.",
+    "preparation": "Comprimido pronto.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar se claramente indicado; dados disponíveis não mostram grande sinal teratogênico.",
+    "lactation": "Dados insuficientes; decidir entre tratamento e amamentação.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hemorragia maior/intracraniana, TTP e neutropenia rara. Uso bloqueado sem indicação/estratégia, carga planejada, risco de sangramento, cirurgia, genótipo/interações CYP2C19 e antiagregantes concomitantes.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clopidogrel",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-drug-safety-communication-reduced-effectiveness-plavix-clopidogrel-patients-who-are-poor"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clopidogrel"
+  },
+  "es": {
+    "name": "Clopidogrel",
+    "class": "Antiagregante P2Y12",
+    "pharmacologicClass": "Metabolito activo bloquea irreversiblemente receptor P2Y12",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 75 y 300 mg.",
+    "presentations": "Comprimidos 75 y 300 mg.",
+    "mechanism": "Metabolito activo bloquea irreversiblemente receptor P2Y12. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Profármaco CYP2C19; efecto plaquetario dura 7–10 días.",
+    "indications": "Síndrome coronario agudo, IAM/ACV recientes y enfermedad arterial periférica; según estrategia antitrombótica.",
+    "dose": "Mantenimiento usual 75 mg VO/día. SCA: carga 300 mg seguida de 75 mg/día con AAS; estrategias PCI pueden usar 600 mg según guía/protocolo.",
+    "pediatricDose": "Seguridad/eficacia no establecidas. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste usual; experiencia limitada en grave.",
+    "hepaticDose": "Evitar en hepatopatía grave con diátesis hemorrágica.",
+    "commonAdverseEffects": "Equimosis, epistaxis, diarrea y sangrado.",
+    "dangerousAdverseEffects": "Hemorragia mayor/intracraneal, PTT y neutropenia rara.",
+    "adverseEffects": "Equimosis, epistaxis, diarrea y sangrado. Graves: Hemorragia mayor/intracraneal, PTT y neutropenia rara.",
+    "contraindications": "Sangrado patológico activo e hipersensibilidad.",
+    "interactions": "Omeprazol/esomeprazol reducen activación CYP2C19; anticoagulantes, AINE y otros antiagregantes aumentan sangrado.",
+    "monitoring": "Sangrado, hemograma, adherencia, eventos isquémicos y PTT.",
+    "administration": "VO con o sin alimentos; cirugía electiva puede requerir suspensión planificada.",
+    "preparation": "Comprimido listo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Usar si está claramente indicado; datos disponibles no muestran gran señal teratógena.",
+    "lactation": "Datos insuficientes; decidir entre tratamiento y lactancia.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hemorragia mayor/intracraneal, PTT y neutropenia rara. Uso bloqueado sem indicação/estratégia, carga planejada, risco de sangramento, cirurgia, genótipo/interações CYP2C19 e antiagregantes concomitantes.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clopidogrel",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-drug-safety-communication-reduced-effectiveness-plavix-clopidogrel-patients-who-are-poor"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clopidogrel"
+  }
+};})();
+/* GOLD33_SELECTIVE:clopidogrel:END */

@@ -27311,3 +27311,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:clindamicina:END */
+/* GOLD33_SELECTIVE:cloranfenicol:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["cloranfenicol"])throw new Error("GOLD33_MISSING_CANONICAL:cloranfenicol");db["cloranfenicol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "020",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cloranfenicol",
+    "class": "Antibiótico amfenicol",
+    "pharmacologicClass": "Inibe síntese proteica bacteriana 50S",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas/injetável ou colírio conforme país; confirmar produto.",
+    "presentations": "Cápsulas/injetável ou colírio conforme país; confirmar produto.",
+    "mechanism": "Inibe síntese proteica bacteriana 50S. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo por glucuronidação hepática; neonatos têm depuração muito reduzida.",
+    "indications": "Uso sistêmico reservado a infecções graves quando alternativas menos tóxicas são ineficazes/contraindicadas; formas oftálmicas variam por país.",
+    "dose": "Sistêmico: geralmente 50 mg/kg/dia divididos a cada 6 h; até 100 mg/kg/dia apenas em infecção grave com redução precoce e níveis.",
+    "pediatricDose": "Neonatos: dose/intervalo estritamente por idade gestacional/pós-natal; crianças frequentemente 50 mg/kg/dia. AUTOMATABLE=NO.",
+    "renalDose": "Pode acumular metabólitos; monitorar e considerar níveis.",
+    "hepaticDose": "Reduzir/evitar em hepatopatia; monitorar níveis.",
+    "commonAdverseEffects": "Náusea, diarreia, cefaleia e alteração hematológica reversível.",
+    "dangerousAdverseEffects": "Anemia aplástica idiossincrática fatal, supressão medular dose-dependente, neurite óptica e síndrome cinzenta neonatal.",
+    "adverseEffects": "Náusea, diarreia, cefaleia e alteração hematológica reversível. Graves: Anemia aplástica idiossincrática fatal, supressão medular dose-dependente, neurite óptica e síndrome cinzenta neonatal.",
+    "contraindications": "Hipersensibilidade; não usar para infecções triviais ou profilaxia.",
+    "interactions": "Inibe enzimas hepáticas: varfarina, fenitoína e sulfonilureias; mielotóxicos aumentam risco.",
+    "monitoring": "Hemograma frequente, níveis, fígado/rim, resposta/cultura e toxicidade neonatal.",
+    "administration": "Uso sistêmico somente com especialista e monitorização hematológica/níveis.",
+    "preparation": "Produto/formulação específicos; não extrapolar entre sistêmico e oftálmico.",
+    "infusionProtocol": "IV conforme produto, nunca usar solução oftálmica sistemicamente.",
+    "pregnancy": "Evitar próximo ao parto; usar somente sem alternativa.",
+    "lactation": "Evitar sistêmico; risco de supressão medular no lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anemia aplástica idiossincrática fatal, supressão medular dose-dependente, neurite óptica e síndrome cinzenta neonatal. Uso sistêmico bloqueado sem cultura, ausência de alternativa, idade gestacional/pós-natal, peso, fígado/rim, hemograma e níveis.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chloramphenicol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ncbi.nlm.nih.gov/books/NBK501494/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chloramphenicol"
+  },
+  "es": {
+    "name": "Cloranfenicol",
+    "class": "Antibiótico amfenicol",
+    "pharmacologicClass": "Inhibe síntesis proteica bacteriana 50S",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas/inyectable o colirio según país; confirmar producto.",
+    "presentations": "Cápsulas/inyectable o colirio según país; confirmar producto.",
+    "mechanism": "Inhibe síntesis proteica bacteriana 50S. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo por glucuronidación hepática; neonatos tienen depuración muy reducida.",
+    "indications": "Uso sistémico reservado a infecciones graves cuando alternativas menos tóxicas son ineficaces/contraindicadas; formas oftálmicas varían por país.",
+    "dose": "Sistémico: generalmente 50 mg/kg/día divididos cada 6 h; hasta 100 mg/kg/día solo en infección grave con reducción temprana y niveles.",
+    "pediatricDose": "Neonatos: dosis/intervalo estrictamente por edad gestacional/posnatal; niños frecuentemente 50 mg/kg/día. AUTOMATABLE=NO.",
+    "renalDose": "Puede acumular metabolitos; monitorizar y considerar niveles.",
+    "hepaticDose": "Reducir/evitar en hepatopatía; controlar niveles.",
+    "commonAdverseEffects": "Náusea, diarrea, cefalea y alteración hematológica reversible.",
+    "dangerousAdverseEffects": "Anemia aplásica idiosincrática fatal, supresión medular dosis-dependiente, neuritis óptica y síndrome gris neonatal.",
+    "adverseEffects": "Náusea, diarrea, cefalea y alteración hematológica reversible. Graves: Anemia aplásica idiosincrática fatal, supresión medular dosis-dependiente, neuritis óptica y síndrome gris neonatal.",
+    "contraindications": "Hipersensibilidad; no usar para infecciones triviales o profilaxis.",
+    "interactions": "Inhibe enzimas hepáticas: warfarina, fenitoína y sulfonilureas; mielotóxicos aumentan riesgo.",
+    "monitoring": "Hemograma frecuente, niveles, hígado/riñón, respuesta/cultivo y toxicidad neonatal.",
+    "administration": "Uso sistémico solo con especialista y control hematológico/niveles.",
+    "preparation": "Producto/formulación específicos; no extrapolar entre sistémico y oftálmico.",
+    "infusionProtocol": "IV según producto, nunca usar solución oftálmica sistémicamente.",
+    "pregnancy": "Evitar cerca del parto; usar solo sin alternativa.",
+    "lactation": "Evitar sistémico; riesgo de supresión medular en lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anemia aplásica idiosincrática fatal, supresión medular dosis-dependiente, neuritis óptica y síndrome gris neonatal. Uso sistêmico bloqueado sem cultura, ausência de alternativa, idade gestacional/pós-natal, peso, fígado/rim, hemograma e níveis.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chloramphenicol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ncbi.nlm.nih.gov/books/NBK501494/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chloramphenicol"
+  }
+};})();
+/* GOLD33_SELECTIVE:cloranfenicol:END */

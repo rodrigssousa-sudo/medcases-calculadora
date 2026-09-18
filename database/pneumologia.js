@@ -4287,3 +4287,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:ciclesonida:END */
+/* GOLD33_SELECTIVE:cloperastina:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["cloperastina"])throw new Error("GOLD33_MISSING_CANONICAL:cloperastina");db["cloperastina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "020",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cloperastina",
+    "class": "Antitussígeno não opioide",
+    "pharmacologicClass": "Ação central/periférica proposta; mecanismo não completamente definido",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Xarope, gotas ou comprimidos em concentrações regionais variáveis.",
+    "presentations": "Xarope, gotas ou comprimidos em concentrações regionais variáveis.",
+    "mechanism": "Ação central/periférica proposta; mecanismo não completamente definido. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Dados farmacocinéticos variam por sal e formulação.",
+    "indications": "Tratamento sintomático de tosse seca; disponibilidade e indicação variam por país.",
+    "dose": "Regimes adultos variam conforme sal e produto nacional; não converter mg entre cloperastina fendizoato e cloperastina HCl sem bula específica.",
+    "pediatricDose": "Doses variam por idade, sal e concentração; não usar em crianças pequenas sem bula local. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste validado; cautela.",
+    "hepaticDose": "Sem ajuste validado; cautela.",
+    "commonAdverseEffects": "Sonolência, boca seca, náusea e desconforto GI.",
+    "dangerousAdverseEffects": "Hipersensibilidade e depressão SNC importante em overdose; evidência limitada.",
+    "adverseEffects": "Sonolência, boca seca, náusea e desconforto GI. Graves: Hipersensibilidade e depressão SNC importante em overdose; evidência limitada.",
+    "contraindications": "Hipersensibilidade; contraindicações pediátricas/gestacionais dependem da bula local.",
+    "interactions": "Álcool e depressores SNC podem aumentar sedação; dados limitados.",
+    "monitoring": "Resposta, sedação, duração da tosse, dispneia, febre/hemoptise e causa subjacente.",
+    "administration": "VO apenas conforme produto registrado; investigar causa da tosse.",
+    "preparation": "Medir líquidos com dispositivo; confirmar sal e mg/mL.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados insuficientes; evitar sem necessidade clara.",
+    "lactation": "Dados insuficientes; evitar ou decidir individualmente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipersensibilidade e depressão SNC importante em overdose; evidência limitada. Prescrição e cálculo bloqueados até confirmar país, produto, sal, concentração, idade e bula regulatória executável.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.aemps.gob.es/cima/publico/home.html",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines"
+    ],
+    "ref": "https://www.aemps.gob.es/cima/publico/home.html"
+  },
+  "es": {
+    "name": "Cloperastina",
+    "class": "Antitusivo no opioide",
+    "pharmacologicClass": "Acción central/periférica propuesta; mecanismo no totalmente definido",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Jarabe, gotas o comprimidos en concentraciones regionales variables.",
+    "presentations": "Jarabe, gotas o comprimidos en concentraciones regionales variables.",
+    "mechanism": "Acción central/periférica propuesta; mecanismo no totalmente definido. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Datos farmacocinéticos varían por sal y formulación.",
+    "indications": "Tratamiento sintomático de tos seca; disponibilidad e indicación varían por país.",
+    "dose": "Regímenes adultos varían según sal y producto nacional; no convertir mg entre fendizoato de cloperastina y cloperastina HCl sin ficha específica.",
+    "pediatricDose": "Dosis varían por edad, sal y concentración; no usar en niños pequeños sin ficha local. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste validado; precaución.",
+    "hepaticDose": "Sin ajuste validado; precaución.",
+    "commonAdverseEffects": "Somnolencia, boca seca, náusea y malestar GI.",
+    "dangerousAdverseEffects": "Hipersensibilidad y depresión SNC importante en sobredosis; evidencia limitada.",
+    "adverseEffects": "Somnolencia, boca seca, náusea y malestar GI. Graves: Hipersensibilidad y depresión SNC importante en sobredosis; evidencia limitada.",
+    "contraindications": "Hipersensibilidad; contraindicaciones pediátricas/gestacionales dependen de ficha local.",
+    "interactions": "Alcohol y depresores SNC pueden aumentar sedación; datos limitados.",
+    "monitoring": "Respuesta, sedación, duración de tos, disnea, fiebre/hemoptisis y causa subyacente.",
+    "administration": "VO solo según producto registrado; investigar causa de tos.",
+    "preparation": "Medir líquidos con dispositivo; confirmar sal y mg/mL.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos insuficientes; evitar sin necesidad clara.",
+    "lactation": "Datos insuficientes; evitar o decidir individualmente.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipersensibilidad y depresión SNC importante en sobredosis; evidencia limitada. Prescrição e cálculo bloqueados até confirmar país, produto, sal, concentração, idade e bula regulatória executável.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.aemps.gob.es/cima/publico/home.html",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines"
+    ],
+    "ref": "https://www.aemps.gob.es/cima/publico/home.html"
+  }
+};})();
+/* GOLD33_SELECTIVE:cloperastina:END */

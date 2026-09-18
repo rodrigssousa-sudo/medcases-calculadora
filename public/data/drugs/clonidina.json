@@ -6,355 +6,79 @@
   "colorTxt": "#1D4ED8",
   "pt": {
     "name": "Clonidina",
-    "class": "Agonista alfa-2 adrenérgico central",
-    "pharmacologicClass": "Anti-hipertensivo de ação central / simpaticolítico",
-    "mechanism": "Estimula receptores alfa-2 pré-sinápticos no tronco encefálico, reduzindo descarga simpática central, liberação de noradrenalina, resistência vascular periférica, frequência cardíaca e pressão arterial. Também possui ação em receptores imidazolina, contribuindo para efeito anti-hipertensivo.",
-    "pharmacodynamics": "Reduz tônus simpático sistêmico e pode causar sedação, boca seca, bradicardia e hipotensão. A retirada abrupta pode gerar hiperatividade simpática com hipertensão rebote potencialmente grave.",
-    "pharmacokinetics": {
-      "absorption": "Absorção oral rápida e boa biodisponibilidade.",
-      "bioavailability": "≈70–80%",
-      "proteinBinding": "≈20–40%",
-      "vd": "~2,1 L/kg (ampla distribuição tecidual, incluindo SNC)",
-      "metabolism": "Metabolismo hepático parcial (~50%); ~50% excretado inalterado na urina.",
-      "halfLife": "≈12–16 horas; pode prolongar na insuficiência renal.",
-      "elimination": "Eliminação renal importante, parte como fármaco inalterado (~40–60% urinário inalterado).",
-      "dialysability": "Moderadamente dialisável (~20–40%); monitorar efeito rebote pós-diálise."
-    },
-    "indications": {
-      "approved": [
-        "Hipertensão arterial",
-        "Hipertensão resistente como adjuvante"
-      ],
-      "offLabel": [
-        "Crise hipertensiva sem lesão aguda de órgão-alvo em cenários selecionados",
-        "Síndrome de abstinência de opioides",
-        "Abstinência alcoólica como adjuvante",
-        "TDAH em alguns protocolos",
-        "Fogachos/ondas de calor",
-        "Dor neuropática como adjuvante em contextos selecionados"
-      ]
-    },
-    "commercialNames": {
-      "br": [
-        "Atensina",
-        "Clonidina"
-      ],
-      "ar": [
-        "Catapresan",
-        "Clonidina"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 0,1 mg",
-      "Comprimidos 0,15 mg conforme disponibilidade",
-      "Comprimidos 0,2 mg conforme disponibilidade",
-      "Adesivo transdérmico semanal conforme disponibilidade"
-    ],
-    "presentations": [
-      "Comprimidos 0,1 mg, 0,2 mg e 0,3 mg conforme fabricante."
-    ],
-    "dose": {
-      "Inicial": "0,1 mg VO 2x/dia.",
-      "Titulação": "Aumentar 0,1 mg/dia em intervalos semanais.",
-      "Faixa habitual": "0,2–0,6 mg/dia divididos.",
-      "Máximo efetivo descrito": "2,4 mg/dia, raramente necessário."
-    },
-    "pediatricDose": "Segurança/eficácia da liberação imediata para hipertensão não estabelecidas em estudos adequados; não extrapolar outras formulações/indicações.",
-    "renalDose": {
-      "Disfunção renal": "Pode necessitar dose inicial menor; titular pela resposta pressórica e monitorar cuidadosamente PA, FC e função renal.",
-      "Hemodiálise": "Apenas quantidade mínima de clonidina é removida durante hemodiálise rotineira; não é necessária dose suplementar após a diálise."
-    },
-    "hepaticDose": {
-      "required": false,
-      "message": "Não há ajuste hepático formal; parte do metabolismo é hepático, mas a cautela principal é renal e hemodinâmica."
-    },
-    "commonAdverseEffects": [
-      "Boca seca",
-      "Sonolência",
-      "Sedação",
-      "Tontura",
-      "Constipação",
-      "Fadiga",
-      "Bradicardia",
-      "Hipotensão ortostática"
-    ],
-    "dangerousAdverseEffects": [
-      "Hipertensão rebote por suspensão abrupta",
-      "Bradicardia grave",
-      "Bloqueio AV",
-      "Síncope",
-      "Depressão do SNC em intoxicação",
-      "Hipotensão importante"
-    ],
-    "adverseEffects": [
-      "Boca seca, sonolência, sedação, tontura e constipação.",
-      "Bradicardia/hipotensão podem ocorrer; retirada abrupta pode causar hipertensão rebote grave."
-    ],
-    "contraindications": {
-      "absolute": [
-        "Hipersensibilidade à clonidina",
-        "Bradicardia sintomática grave",
-        "Bloqueio AV avançado sem marcapasso"
-      ],
-      "relative": [
-        "Idoso frágil com risco de quedas",
-        "Depressão maior ou sedação importante",
-        "Doença do nó sinusal",
-        "Uso concomitante de betabloqueador",
-        "Insuficiência renal avançada"
-      ]
-    },
-    "interactions": [
-      "Álcool, barbitúricos e outros sedativos podem potencializar depressão do SNC e sedação.",
-      "Antidepressivos tricíclicos podem reduzir o efeito anti-hipertensivo da clonidina.",
-      "Neurolépticos podem agravar hipotensão ortostática, tontura e fadiga.",
-      "Digital, betabloqueadores e bloqueadores de canais de cálcio que afetam nó sinusal/condução AV, como verapamil e diltiazem, podem aumentar bradicardia ou distúrbios de condução; monitorar frequência cardíaca.",
-      "Se clonidina e betabloqueador precisarem ser suspensos, retirar o betabloqueador vários dias antes e depois reduzir a clonidina gradualmente para reduzir risco de hipertensão rebote."
-    ],
-    "monitoring": {
-      "baseline": [
-        "Pressão arterial",
-        "Frequência cardíaca",
-        "ECG se bradicardia ou bloqueio",
-        "Função renal",
-        "Risco de quedas/sedação",
-        "Medicamentos sedativos ou betabloqueadores concomitantes"
-      ],
-      "followUp": [
-        "PA sentada e em pé (hipotensão ortostática)",
-        "FC",
-        "Nível de sedação",
-        "Boca seca e constipação (adesão)",
-        "Sintomas de hipertensão rebote na retirada",
-        "Estado mental em idosos"
-      ]
-    },
-    "administration": "VO em doses divididas; porção maior à noite pode reduzir efeitos diurnos. Nunca interromper abruptamente.",
-    "preparation": "Comprimidos; sem preparo especial.",
-    "infusionProtocol": "Não se aplica à formulação oral.",
-    "pregnancy": "Atravessa a placenta; usar apenas se claramente necessário.",
-    "lactation": "É excretada no leite; usar com cautela e monitorar lactente.",
-    "specialPopulations": {
-      "Idosos": "Considerar dose inicial menor.",
-      "DRC": "Dose inicial menor e monitorização.",
-      "Hemodiálise": "Remove quantidade mínima; sem dose suplementar pós-diálise.",
-      "Betabloqueador": "Retirada combinada exige planejamento para evitar rebote/bradicardia."
-    },
-    "patientEducation": [
-      "Não interromper abruptamente.",
-      "Pode causar sonolência e boca seca.",
-      "Levantar lentamente para evitar tontura ou desmaio.",
-      "Avisar batimentos muito lentos, desmaio, confusão ou sedação intensa."
-    ],
-    "clinicalPearls": [
-      "O principal perigo da clonidina é a retirada abrupta, não apenas a hipotensão.",
-      "É útil como adjuvante em hipertensão resistente, mas pouco elegante para uso crônico em idosos frágeis.",
-      "Boca seca e sedação são muito frequentes e limitam adesão.",
-      "Na intoxicação pode causar miose, bradicardia, hipotensão e depressão do SNC, simulando opioides."
-    ],
-    "guidelineRecommendations": [
-      "Não é anti-hipertensivo de primeira linha; reservar para casos selecionados, hipertensão resistente ou contextos específicos.",
-      "Em idosos, diretrizes de segurança medicamentosa (AGS Critérios de Beers) recomendam cautela pelo risco de sedação, hipotensão ortostática e eventos adversos centrais."
-    ],
-    "safetyFlags": {
-      "centralAlpha2Agonist": true,
-      "antihypertensive": true,
-      "sedationRisk": true,
-      "dryMouthRisk": true,
-      "bradycardiaRisk": true,
-      "hypotensionRisk": true,
-      "orthostaticRisk": true,
-      "reboundHypertensionRisk": true,
-      "renalCaution": true,
-      "elderlyHighRisk": true,
-      "warning": "Clonidina exige cuidado extremo com suspensão abrupta: pode causar hipertensão rebote grave. Em idosos, aumenta sedação, hipotensão ortostática, bradicardia e quedas."
-    },
-    "alerts": [
-      "NUNCA suspender abruptamente: risco de hipertensão rebote, taquicardia, cefaleia, agitação, tremor e eventos cardiovasculares.",
-      "Se usada com betabloqueador, retirar primeiro o betabloqueador e depois reduzir clonidina gradualmente para evitar rebote alfa-adrenérgico.",
-      "Evitar em idosos frágeis quando possível devido a sedação, hipotensão ortostática e risco de quedas.",
-      "Pode causar sonolência importante; orientar cautela ao dirigir ou operar máquinas."
-    ],
+    "class": "Agonista alfa-2 central",
+    "pharmacologicClass": "Reduz descarga simpática central",
+    "mechanism": "Reduz descarga simpática central. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade alta; eliminação renal parcial; meia-vida 12–16 h, maior na DRC.",
+    "indications": "Hipertensão; formulação ER para TDAH em 6–17 anos. Usos off-label exigem protocolo.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos IR 0,1/0,2/0,3 mg; ER 0,1 mg; adesivo transdérmico semanal.",
+    "presentations": "Comprimidos IR 0,1/0,2/0,3 mg; ER 0,1 mg; adesivo transdérmico semanal.",
+    "dose": "Hipertensão IR: iniciar 0,1 mg VO 2x/dia e titular; faixa usual 0,2–0,6 mg/dia. Não intercambiar IR, ER e adesivo mg por mg.",
+    "pediatricDose": "TDAH ER 6–17 anos: iniciar 0,1 mg ao deitar, aumentar 0,1 mg/semana até máximo 0,4 mg/dia dividido. AUTOMATABLE=NO.",
+    "renalDose": "Iniciar menor e titular; eliminação renal prolongada.",
+    "hepaticDose": "Sem ajuste formal.",
+    "commonAdverseEffects": "Boca seca, sonolência, tontura, constipação e bradicardia.",
+    "dangerousAdverseEffects": "Hipotensão/bradicardia, bloqueio AV, depressão SNC e hipertensão rebound na retirada.",
+    "adverseEffects": "Boca seca, sonolência, tontura, constipação e bradicardia. Graves: Hipotensão/bradicardia, bloqueio AV, depressão SNC e hipertensão rebound na retirada.",
+    "contraindications": "Hipersensibilidade; adesivo contraindicado se reação de contato grave ao produto.",
+    "interactions": "Depressores SNC, beta-bloqueadores, fármacos bradicardizantes e tricíclicos; retirada com beta-bloqueio exige planejamento.",
+    "monitoring": "PA, FC, sedação, adesão e rebound; rim.",
+    "administration": "VO conforme formulação; adesivo trocar a cada 7 dias; retirar gradualmente.",
+    "preparation": "Não esmagar ER; aplicar adesivo em pele íntegra e alternar local.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar somente se necessário; atravessa placenta.",
+    "lactation": "Passa ao leite e pode reduzir produção; observar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipotensão/bradicardia, bloqueio AV, depressão SNC e hipertensão rebound na retirada. Uso bloqueado sem indicação/formulação, PA/FC, rim, fármacos bradicardizantes e plano de retirada gradual.",
     "references": [
-      "DailyMed Clonidine HCl tablets 2026"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonidine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/017407s034lbl.pdf"
     ],
-    "ref": "DailyMed clonidine HCl 2026."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonidine"
   },
   "es": {
     "name": "Clonidina",
-    "class": "Agonista alfa-2 adrenérgico central",
-    "pharmacologicClass": "Antihipertensivo de acción central / simpaticolítico",
-    "mechanism": "Estimula receptores alfa-2 presinápticos en el tronco encefálico, reduciendo descarga simpática central, liberación de noradrenalina, resistencia vascular periférica, frecuencia cardíaca y presión arterial. También actúa sobre receptores imidazolina, contribuyendo al efecto antihipertensivo.",
-    "pharmacodynamics": "Reduce el tono simpático sistémico y puede causar sedación, boca seca, bradicardia e hipotensión. La retirada brusca puede generar hiperactividad simpática con hipertensión de rebote potencialmente grave.",
-    "pharmacokinetics": {
-      "absorption": "Absorción oral rápida y buena biodisponibilidad.",
-      "bioavailability": "≈70–80%",
-      "proteinBinding": "≈20–40%",
-      "vd": "~2,1 L/kg (amplia distribución tisular, incluyendo SNC)",
-      "metabolism": "Metabolismo hepático parcial (~50%); ~50% excretado sin cambios en orina.",
-      "halfLife": "≈12–16 horas; puede prolongarse en insuficiencia renal.",
-      "elimination": "Eliminación renal importante, parte como fármaco sin cambios (~40–60% urinario sin cambios).",
-      "dialysability": "Moderadamente dializable (~20–40%); monitorizar efecto rebote postdiálisis."
-    },
-    "indications": {
-      "approved": [
-        "Hipertensión arterial",
-        "Hipertensión resistente como adyuvante"
-      ],
-      "offLabel": [
-        "Crisis hipertensiva sin lesión aguda de órgano blanco en escenarios seleccionados",
-        "Síndrome de abstinencia de opioides",
-        "Abstinencia alcohólica como adyuvante",
-        "TDAH en algunos protocolos",
-        "Sofocos/oleadas de calor",
-        "Dolor neuropático como adyuvante en contextos seleccionados"
-      ]
-    },
-    "commercialNames": {
-      "br": [
-        "Atensina",
-        "Clonidina"
-      ],
-      "ar": [
-        "Catapresan",
-        "Clonidina"
-      ]
-    },
-    "presentation": [
-      "Comprimidos 0,1 mg",
-      "Comprimidos 0,15 mg según disponibilidad",
-      "Comprimidos 0,2 mg según disponibilidad",
-      "Parche transdérmico semanal según disponibilidad"
-    ],
-    "presentations": [
-      "Comprimidos 0,1 mg, 0,2 mg y 0,3 mg según fabricante."
-    ],
-    "dose": {
-      "Inicial": "0,1 mg VO 2 veces/día.",
-      "Titulación": "Aumentar 0,1 mg/día a intervalos semanales.",
-      "Rango habitual": "0,2–0,6 mg/día divididos.",
-      "Máximo efectivo descrito": "2,4 mg/día, raramente necesario."
-    },
-    "pediatricDose": "Seguridad/eficacia de liberación inmediata para hipertensión no establecidas en estudios adecuados; no extrapolar otras formulaciones/indicaciones.",
-    "renalDose": {
-      "Disfunción renal": "Puede requerir dosis inicial menor; titular según respuesta de presión y monitorizar cuidadosamente PA, FC y función renal.",
-      "Hemodiálisis": "Solo una cantidad mínima de clonidina se elimina durante hemodiálisis rutinaria; no se requiere dosis suplementaria después de diálisis."
-    },
-    "hepaticDose": {
-      "required": false,
-      "message": "No hay ajuste hepático formal; parte del metabolismo es hepático, pero la precaución principal es renal y hemodinámica."
-    },
-    "commonAdverseEffects": [
-      "Boca seca",
-      "Somnolencia",
-      "Sedación",
-      "Mareos",
-      "Constipación",
-      "Fatiga",
-      "Bradicardia",
-      "Hipotensión ortostática"
-    ],
-    "dangerousAdverseEffects": [
-      "Hipertensión de rebote por suspensión brusca",
-      "Bradicardia grave",
-      "Bloqueo AV",
-      "Síncope",
-      "Depresión del SNC en intoxicación",
-      "Hipotensión importante"
-    ],
-    "adverseEffects": [
-      "Boca seca, somnolencia, sedación, mareo y estreñimiento.",
-      "Bradicardia/hipotensión pueden ocurrir; retirada brusca puede causar hipertensión rebote grave."
-    ],
-    "contraindications": {
-      "absolute": [
-        "Hipersensibilidad a clonidina",
-        "Bradicardia sintomática grave",
-        "Bloqueo AV avanzado sin marcapasos"
-      ],
-      "relative": [
-        "Adulto mayor frágil con riesgo de caídas",
-        "Depresión mayor o sedación importante",
-        "Enfermedad del nodo sinusal",
-        "Uso concomitante de betabloqueante",
-        "Insuficiencia renal avanzada"
-      ]
-    },
-    "interactions": [
-      "Alcohol, barbitúricos y otros sedantes pueden potenciar depresión del SNC y sedación.",
-      "Antidepresivos tricíclicos pueden reducir el efecto antihipertensivo de clonidina.",
-      "Neurolépticos pueden agravar hipotensión ortostática, mareo y fatiga.",
-      "Digital, betabloqueantes y bloqueadores de canales de calcio que afectan nodo sinusal/conducción AV, como verapamilo y diltiazem, pueden aumentar bradicardia o trastornos de conducción; monitorizar frecuencia cardíaca.",
-      "Si clonidina y un betabloqueante deben suspenderse, retirar el betabloqueante varios días antes y luego reducir clonidina gradualmente para disminuir riesgo de hipertensión rebote."
-    ],
-    "monitoring": {
-      "baseline": [
-        "Presión arterial",
-        "Frecuencia cardíaca",
-        "ECG si bradicardia o bloqueo",
-        "Función renal",
-        "Riesgo de caídas/sedación",
-        "Medicamentos sedantes o betabloqueantes concomitantes"
-      ],
-      "followUp": [
-        "PA sentada y de pie (hipotensión ortostática)",
-        "FC",
-        "Nivel de sedación",
-        "Boca seca y constipación (adherencia)",
-        "Síntomas de hipertensión de rebote en retirada",
-        "Estado mental en ancianos"
-      ]
-    },
-    "administration": "VO en dosis divididas; porción mayor por la noche puede reducir efectos diurnos. Nunca interrumpir bruscamente.",
-    "preparation": "Comprimidos; sin preparación especial.",
-    "infusionProtocol": "No aplica a formulación oral.",
-    "pregnancy": "Atraviesa placenta; usar solo si es claramente necesario.",
-    "lactation": "Se excreta en leche; usar con cautela y monitorizar lactante.",
-    "specialPopulations": {
-      "Adultos mayores": "Considerar dosis inicial menor.",
-      "ERC": "Dosis inicial menor y monitorización.",
-      "Hemodiálisis": "Elimina cantidad mínima; sin dosis suplementaria posdiálisis.",
-      "Betabloqueante": "Retirada combinada exige planificación para evitar rebote/bradicardia."
-    },
-    "patientEducation": [
-      "No suspender bruscamente.",
-      "Puede causar somnolencia y boca seca.",
-      "Levantarse lentamente para evitar mareo o desmayo.",
-      "Avisar latidos muy lentos, desmayo, confusión o sedación intensa."
-    ],
-    "clinicalPearls": [
-      "El principal peligro de clonidina es la retirada brusca, no solo la hipotensión.",
-      "Es útil como adyuvante en hipertensión resistente, pero poco elegante para uso crónico en adultos mayores frágiles.",
-      "Boca seca y sedación son muy frecuentes y limitan adherencia.",
-      "En intoxicación puede causar miosis, bradicardia, hipotensión y depresión del SNC, simulando opioides."
-    ],
-    "guidelineRecommendations": [
-      "No es antihipertensivo de primera línea; reservar para casos seleccionados, hipertensión resistente o contextos específicos.",
-      "En adultos mayores, guías de seguridad farmacológica (AGS Criterios de Beers) recomiendan precaución por riesgo de sedación, hipotensión ortostática y eventos adversos centrales."
-    ],
-    "safetyFlags": {
-      "centralAlpha2Agonist": true,
-      "antihypertensive": true,
-      "sedationRisk": true,
-      "dryMouthRisk": true,
-      "bradycardiaRisk": true,
-      "hypotensionRisk": true,
-      "orthostaticRisk": true,
-      "reboundHypertensionRisk": true,
-      "renalCaution": true,
-      "elderlyHighRisk": true,
-      "warning": "Clonidina exige cuidado extremo con suspensión brusca: puede causar hipertensión de rebote grave. En adultos mayores aumenta sedación, hipotensión ortostática, bradicardia y caídas."
-    },
-    "alerts": [
-      "NUNCA suspender bruscamente: riesgo de hipertensión de rebote, taquicardia, cefalea, agitación, temblor y eventos cardiovasculares.",
-      "Si se usa con betabloqueante, retirar primero el betabloqueante y luego reducir clonidina gradualmente para evitar rebote alfa-adrenérgico.",
-      "Evitar en adultos mayores frágiles cuando sea posible debido a sedación, hipotensión ortostática y riesgo de caídas.",
-      "Puede causar somnolencia importante; orientar precaución al conducir u operar máquinas."
-    ],
+    "class": "Agonista alfa-2 central",
+    "pharmacologicClass": "Reduce descarga simpática central",
+    "mechanism": "Reduce descarga simpática central. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad alta; eliminación renal parcial; semivida 12–16 h, mayor en ERC.",
+    "indications": "Hipertensión; formulación ER para TDAH en 6–17 años. Usos off-label requieren protocolo.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos IR 0,1/0,2/0,3 mg; ER 0,1 mg; parche transdérmico semanal.",
+    "presentations": "Comprimidos IR 0,1/0,2/0,3 mg; ER 0,1 mg; parche transdérmico semanal.",
+    "dose": "Hipertensión IR: iniciar 0,1 mg VO 2 veces/día y titular; rango usual 0,2–0,6 mg/día. No intercambiar IR, ER y parche mg por mg.",
+    "pediatricDose": "TDAH ER 6–17 años: iniciar 0,1 mg al acostarse, aumentar 0,1 mg/semana hasta máximo 0,4 mg/día dividido. AUTOMATABLE=NO.",
+    "renalDose": "Iniciar menor y titular; eliminación renal prolongada.",
+    "hepaticDose": "Sin ajuste formal.",
+    "commonAdverseEffects": "Boca seca, somnolencia, mareo, estreñimiento y bradicardia.",
+    "dangerousAdverseEffects": "Hipotensión/bradicardia, bloqueo AV, depresión SNC e hipertensión rebote en retirada.",
+    "adverseEffects": "Boca seca, somnolencia, mareo, estreñimiento y bradicardia. Graves: Hipotensión/bradicardia, bloqueo AV, depresión SNC e hipertensión rebote en retirada.",
+    "contraindications": "Hipersensibilidad; parche contraindicado si reacción de contacto grave al producto.",
+    "interactions": "Depresores SNC, betabloqueantes, fármacos bradicardizantes y tricíclicos; retirada con betabloqueo exige planificación.",
+    "monitoring": "PA, FC, sedación, adherencia y rebote; riñón.",
+    "administration": "VO según formulación; parche cambiar cada 7 días; retirar gradualmente.",
+    "preparation": "No triturar ER; aplicar parche en piel íntegra y alternar sitio.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Usar solo si es necesario; atraviesa placenta.",
+    "lactation": "Pasa a leche y puede reducir producción; vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipotensión/bradicardia, bloqueo AV, depresión SNC e hipertensión rebote en retirada. Uso bloqueado sem indicação/formulação, PA/FC, rim, fármacos bradicardizantes e plano de retirada gradual.",
     "references": [
-      "DailyMed Clonidine HCl tablets 2026"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonidine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/017407s034lbl.pdf"
     ],
-    "ref": "DailyMed clonidine HCl 2026."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonidine"
   },
   "name": {
     "pt": "Clonidina",
@@ -366,19 +90,21 @@
     "catapresan",
     "agonista alfa-2 adrenergico central"
   ],
-  "dataVersion": "clinical-data-v1-3f302c5d852e3acd",
-  "clinicalContentSha256": "3f302c5d852e3acd51966e151d907210817a8c88b38dba1b384ef649e5491aae",
+  "dataVersion": "clinical-data-v1-9909972ffc54da1b",
+  "clinicalContentSha256": "9909972ffc54da1b019a793937d0c33b271e107180c178c5379c8c85cd49ba60",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "clonidina.mcGoldClinicalV1",
-    "group": "GOLD_GROUP02_CARDIO_10",
-    "review": "2026-09",
+    "lote": "020",
     "requiredFields": 33,
-    "contentSha256": "4933f37d436397334097d7f2abc2a93f7dd879e628b9a6d644abe76eb4463bf4",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }

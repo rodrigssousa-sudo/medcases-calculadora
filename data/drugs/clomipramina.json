@@ -8,190 +8,98 @@
     "name": "Clomipramina",
     "class": "Antidepressivo tricíclico",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Anafranil",
-        "Clomipramina EMS",
-        "Clomipramina Medley"
-      ],
-      "ar": [
-        "Anafranil",
-        "Clomipramina Northia",
-        "Clomipramina Klonal"
-      ]
-    },
-    "presentation": [
-      "Comprimido 10 mg",
-      "Comprimido 25 mg",
-      "Comprimido 75 mg LP",
-      "Ampola 25 mg/2 mL"
-    ],
-    "dose": {
-      "adulto": "TOC: iniciar 25 mg/dia; aumentar gradualmente até 100–250 mg/dia.",
-      "depressao": "Depressão: geralmente 75–150 mg/dia.",
-      "maxDose": "Dose máxima usual: 250 mg/dia."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 25, 50 e 75 mg.",
+    "dose": "Iniciar 25 mg/dia VO; titular gradualmente até cerca de 100 mg/dia nas primeiras 2 semanas; máximo 250 mg/dia em adultos. Após titulação pode administrar ao deitar.",
     "doseKg": {
       "standard": "Não se utiliza cálculo rotineiro por kg em adultos.",
       "pediatric": "TOC pediátrico: aproximadamente 1–3 mg/kg/dia conforme protocolo.",
       "maxDose": "250 mg/dia"
     },
-    "indications": [
-      "Transtorno obsessivo-compulsivo (TOC)",
-      "Transtorno depressivo maior",
-      "Transtorno do pânico",
-      "Transtorno de ansiedade generalizada",
-      "Cataplexia na narcolepsia",
-      "Dor neuropática",
-      "Síndrome dolorosa crônica",
-      "Tricotilomania e transtornos obsessivos relacionados (off-label)"
-    ],
+    "indications": "Transtorno obsessivo-compulsivo.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Potente inibidor da recaptação de serotonina entre os tricíclicos, além de bloquear receptores muscarínicos, H1 e alfa-1.",
+    "mechanism": "Inibe recaptação de serotonina e noradrenalina. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "TOC pode exigir 8–12 semanas para resposta adequada; depressão geralmente melhora em 2–4 semanas.",
     "halfLife": "Vida média aproximada: 19–37 horas.",
-    "commonAdverseEffects": [
-      "Boca seca",
-      "Constipação",
-      "Sonolência",
-      "Sudorese",
-      "Tremor",
-      "Disfunção sexual",
-      "Ganho de peso"
-    ],
-    "dangerousAdverseEffects": [
-      "Convulsões",
-      "Arritmias cardíacas",
-      "Cardiotoxicidade em superdose",
-      "Síndrome serotoninérgica",
-      "Virada maníaca",
-      "Delirium anticolinérgico"
-    ],
+    "commonAdverseEffects": "Sonolência, boca seca, constipação, tontura, tremor, sudorese e disfunção sexual.",
+    "dangerousAdverseEffects": "Arritmia, convulsão, síndrome serotoninérgica, suicidabilidade, íleo/retenção e toxicidade grave em overdose.",
     "risksByPatient": [],
-    "contraindications": [
-      "Uso concomitante com IMAO",
-      "Infarto agudo recente",
-      "Arritmias significativas",
-      "Glaucoma de ângulo fechado",
-      "Epilepsia não controlada"
-    ],
-    "interactions": [
-      "IMAO: síndrome serotoninérgica e crise hipertensiva",
-      "ISRS: risco serotoninérgico aumentado",
-      "Tramadol: risco serotoninérgico",
-      "Lítio: risco serotoninérgico",
-      "Antiarrítmicos: risco de arritmia",
-      "Álcool: maior sedação e depressão do SNC"
-    ],
-    "alerts": [
-      "Fármaco tricíclico mais eficaz para TOC.",
-      "Maior risco de convulsões em doses elevadas.",
-      "Considerar ECG antes do tratamento.",
-      "Não suspender abruptamente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Clomipramine Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO durante ou nos 14 dias anteriores/posteriores; hipersensibilidade a tricíclicos; fase aguda pós-IAM.",
+    "interactions": "Serotonérgicos, CYP2D6/1A2, antiarrítmicos/QT, anticolinérgicos, depressores SNC e fármacos que reduzem limiar convulsivo.",
+    "alerts": "Arritmia, convulsão, síndrome serotoninérgica, suicidabilidade, íleo/retenção e toxicidade grave em overdose. Titulação bloqueada sem diagnóstico, idade/peso, bipolaridade/suicidabilidade, ECG, convulsões, interações e plano de retirada.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clomipramine",
+    "pharmacologicClass": "Inibe recaptação de serotonina e noradrenalina",
+    "presentations": "Cápsulas 25, 50 e 75 mg.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático CYP; metabólito ativo; meia-vida longa e variável.",
+    "pediatricDose": "10–17 anos: iniciar 25 mg/dia; máximo 3 mg/kg/dia ou 200 mg/dia, o menor. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal; cautela e dose menor.",
+    "hepaticDose": "Cautela; metabolismo hepático e dados limitados.",
+    "adverseEffects": "Sonolência, boca seca, constipação, tontura, tremor, sudorese e disfunção sexual. Graves: Arritmia, convulsão, síndrome serotoninérgica, suicidabilidade, íleo/retenção e toxicidade grave em overdose.",
+    "monitoring": "TOC, suicidabilidade, ECG/PA, convulsões, anticolinérgicos, peso e Na.",
+    "administration": "VO com alimento durante titulação; retirada gradual.",
+    "preparation": "Cápsula pronta.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Avaliar risco-benefício; possível adaptação neonatal.",
+    "lactation": "Passa ao leite; decisão individual e vigilância.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clomipramine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/019906s039lbl.pdf"
     ]
   },
   "es": {
     "name": "Clomipramina",
     "class": "Antidepresivo tricíclico",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Anafranil",
-        "Clomipramina EMS",
-        "Clomipramina Medley"
-      ],
-      "ar": [
-        "Anafranil",
-        "Clomipramina Northia",
-        "Clomipramina Klonal"
-      ]
-    },
-    "presentation": [
-      "Comprimido 10 mg",
-      "Comprimido 25 mg",
-      "Comprimido 75 mg LP",
-      "Ampolla 25 mg/2 mL"
-    ],
-    "dose": {
-      "adulto": "TOC: iniciar 25 mg/día; aumentar gradualmente hasta 100–250 mg/día.",
-      "depressao": "Depresión: generalmente 75–150 mg/día.",
-      "maxDose": "Dosis máxima habitual: 250 mg/día."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 25, 50 y 75 mg.",
+    "dose": "Iniciar 25 mg/día VO; titular gradualmente hasta unos 100 mg/día en primeras 2 semanas; máximo 250 mg/día en adultos. Tras titulación puede administrarse al acostarse.",
     "doseKg": {
       "standard": "No se utiliza cálculo rutinario por kg en adultos.",
       "pediatric": "TOC pediátrico: aproximadamente 1–3 mg/kg/día según protocolo.",
       "maxDose": "250 mg/día"
     },
-    "indications": [
-      "Trastorno obsesivo-compulsivo (TOC)",
-      "Trastorno depresivo mayor",
-      "Trastorno de pánico",
-      "Trastorno de ansiedad generalizada",
-      "Cataplejía en narcolepsia",
-      "Dolor neuropático",
-      "Síndrome doloroso crónico",
-      "Tricotilomanía y trastornos obsesivos relacionados (off-label)"
-    ],
+    "indications": "Trastorno obsesivo-compulsivo.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Potente inhibidor de la recaptación de serotonina entre los tricíclicos, además de bloquear receptores muscarínicos, H1 y alfa-1.",
+    "mechanism": "Inhibe recaptación de serotonina y noradrenalina. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "El TOC puede requerir 8–12 semanas para una respuesta adecuada; la depresión generalmente mejora en 2–4 semanas.",
     "halfLife": "Vida media aproximada: 19–37 horas.",
-    "commonAdverseEffects": [
-      "Boca seca",
-      "Estreñimiento",
-      "Somnolencia",
-      "Sudoración",
-      "Temblor",
-      "Disfunción sexual",
-      "Aumento de peso"
-    ],
-    "dangerousAdverseEffects": [
-      "Convulsiones",
-      "Arritmias cardíacas",
-      "Cardiotoxicidad en sobredosis",
-      "Síndrome serotoninérgico",
-      "Viraje maníaco",
-      "Delirium anticolinérgico"
-    ],
+    "commonAdverseEffects": "Somnolencia, boca seca, estreñimiento, mareo, temblor, sudoración y disfunción sexual.",
+    "dangerousAdverseEffects": "Arritmia, convulsión, síndrome serotoninérgico, suicidabilidad, íleo/retención y toxicidad grave en sobredosis.",
     "risksByPatient": [],
-    "contraindications": [
-      "Uso concomitante con IMAO",
-      "Infarto agudo reciente",
-      "Arritmias significativas",
-      "Glaucoma de ángulo cerrado",
-      "Epilepsia no controlada"
-    ],
-    "interactions": [
-      "IMAO: síndrome serotoninérgico y crisis hipertensiva",
-      "ISRS: riesgo serotoninérgico aumentado",
-      "Tramadol: riesgo serotoninérgico",
-      "Litio: riesgo serotoninérgico",
-      "Antiarrítmicos: riesgo de arritmia",
-      "Alcohol: mayor sedación y depresión del SNC"
-    ],
-    "alerts": [
-      "Fármaco tricíclico más eficaz para TOC.",
-      "Mayor riesgo de convulsiones en dosis elevadas.",
-      "Considerar ECG antes del tratamiento.",
-      "No suspender abruptamente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Clomipramine Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO durante o en 14 días previos/posteriores; hipersensibilidad a tricíclicos; fase aguda pos-IAM.",
+    "interactions": "Serotonérgicos, CYP2D6/1A2, antiarrítmicos/QT, anticolinérgicos, depresores SNC y fármacos que reducen umbral convulsivo.",
+    "alerts": "Arritmia, convulsión, síndrome serotoninérgico, suicidabilidad, íleo/retención y toxicidad grave en sobredosis. Titulação bloqueada sem diagnóstico, idade/peso, bipolaridade/suicidabilidade, ECG, convulsões, interações e plano de retirada.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clomipramine",
+    "pharmacologicClass": "Inhibe recaptación de serotonina y noradrenalina",
+    "presentations": "Cápsulas 25, 50 y 75 mg.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático CYP; metabolito activo; semivida larga y variable.",
+    "pediatricDose": "10–17 años: iniciar 25 mg/día; máximo 3 mg/kg/día o 200 mg/día, lo menor. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal; precaución y dosis menor.",
+    "hepaticDose": "Precaución; metabolismo hepático y datos limitados.",
+    "adverseEffects": "Somnolencia, boca seca, estreñimiento, mareo, temblor, sudoración y disfunción sexual. Graves: Arritmia, convulsión, síndrome serotoninérgico, suicidabilidad, íleo/retención y toxicidad grave en sobredosis.",
+    "monitoring": "TOC, suicidabilidad, ECG/PA, convulsiones, anticolinérgicos, peso y Na.",
+    "administration": "VO con alimentos durante titulación; retirada gradual.",
+    "preparation": "Cápsula lista.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Valorar riesgo-beneficio; posible adaptación neonatal.",
+    "lactation": "Pasa a leche; decisión individual y vigilancia.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clomipramine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/019906s039lbl.pdf"
     ]
   },
   "name": {
@@ -207,9 +115,21 @@
     "clomipramina klonal",
     "antidepressivo triciclico"
   ],
-  "dataVersion": "clinical-data-v1-3f302c5d852e3acd",
-  "clinicalContentSha256": "3f302c5d852e3acd51966e151d907210817a8c88b38dba1b384ef649e5491aae",
+  "dataVersion": "clinical-data-v1-9909972ffc54da1b",
+  "clinicalContentSha256": "9909972ffc54da1b019a793937d0c33b271e107180c178c5379c8c85cd49ba60",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "clomipramina.mcGoldClinicalV1",
+    "lote": "020",
+    "requiredFields": 33,
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  }
 }

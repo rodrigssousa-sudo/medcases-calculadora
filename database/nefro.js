@@ -3310,3 +3310,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:citrato_sodio_acido_citrico:END */
+/* GOLD33_SELECTIVE:cloreto_de_sodio_09:START */
+;(function(){var db=window.NEFRO_DRUGS_DB;if(!db||!db["cloreto_de_sodio_09"])throw new Error("GOLD33_MISSING_CANONICAL:cloreto_de_sodio_09");db["cloreto_de_sodio_09"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "020",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cloreto de sódio 0,9%",
+    "class": "Cristaloide isotônico",
+    "pharmacologicClass": "Expande volume extracelular e fornece Na/Cl",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Bolsas/frascos de múltiplos volumes; 154 mEq/L de Na e Cl.",
+    "presentations": "Bolsas/frascos de múltiplos volumes; 154 mEq/L de Na e Cl.",
+    "mechanism": "Expande volume extracelular e fornece Na/Cl. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Distribuição extracelular; Na e Cl regulados pelos rins.",
+    "indications": "Reposição volêmica, hidratação, veículo/diluente e manutenção em contextos selecionados.",
+    "dose": "Volume e velocidade dependem de indicação, perdas, hemodinâmica, eletrólitos e comorbidades; bolus de 250–1000 mL são contextuais e exigem reavaliação.",
+    "pediatricDose": "Bolus de ressuscitação frequentemente 10–20 mL/kg conforme cenário e guideline; manutenção requer fórmula e balanço. AUTOMATABLE=NO.",
+    "renalDose": "Cautela/reduzir volume em DRC, oligúria e risco de sobrecarga.",
+    "hepaticDose": "Cautela em cirrose/ascite e edema.",
+    "commonAdverseEffects": "Edema, flebite e desconforto local.",
+    "dangerousAdverseEffects": "Sobrecarga/edema pulmonar, acidose metabólica hiperclorêmica, hipernatremia e distúrbios osmóticos.",
+    "adverseEffects": "Edema, flebite e desconforto local. Graves: Sobrecarga/edema pulmonar, acidose metabólica hiperclorêmica, hipernatremia e distúrbios osmóticos.",
+    "contraindications": "Hipernatremia/hipercloremia e sobrecarga volêmica relevantes; contraindicações dependem do contexto.",
+    "interactions": "Corticosteroides e fármacos que retêm sódio; incompatibilidades de aditivos.",
+    "monitoring": "PA/perfusão, diurese, balanço, peso, Na/Cl, acidose, pulmões e edema.",
+    "administration": "IV com técnica asséptica; reavaliar após cada bolus.",
+    "preparation": "Verificar integridade, limpidez, volume e compatibilidade de aditivos.",
+    "infusionProtocol": "Taxa por bomba/gravitacional conforme urgência; evitar excesso cumulativo.",
+    "pregnancy": "Pode ser usada quando indicada; considerar volume e eletrólitos.",
+    "lactation": "Compatível; considerar balanço materno.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Sobrecarga/edema pulmonar, acidose metabólica hiperclorêmica, hipernatremia e distúrbios osmóticos. Volume/taxa bloqueados sem indicação, peso, hemodinâmica, eletrólitos, função renal/cardiopulmonar, perdas e plano de reavaliação.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=sodium+chloride+0.9%25+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda-documents-regulatory-information"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=sodium+chloride+0.9%25+injection"
+  },
+  "es": {
+    "name": "Cloruro de sodio 0,9%",
+    "class": "Cristaloide isotónico",
+    "pharmacologicClass": "Expande volumen extracelular y aporta Na/Cl",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Bolsas/frascos de múltiples volúmenes; 154 mEq/L de Na y Cl.",
+    "presentations": "Bolsas/frascos de múltiples volúmenes; 154 mEq/L de Na y Cl.",
+    "mechanism": "Expande volumen extracelular y aporta Na/Cl. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Distribución extracelular; Na y Cl regulados por riñones.",
+    "indications": "Reposición de volumen, hidratación, vehículo/diluyente y mantenimiento en contextos seleccionados.",
+    "dose": "Volumen y velocidad dependen de indicación, pérdidas, hemodinámica, electrolitos y comorbilidades; bolos de 250–1000 mL son contextuales y exigen reevaluación.",
+    "pediatricDose": "Bolo de reanimación frecuentemente 10–20 mL/kg según escenario y guía; mantenimiento requiere fórmula y balance. AUTOMATABLE=NO.",
+    "renalDose": "Precaución/reducir volumen en ERC, oliguria y riesgo de sobrecarga.",
+    "hepaticDose": "Precaución en cirrosis/ascitis y edema.",
+    "commonAdverseEffects": "Edema, flebitis y malestar local.",
+    "dangerousAdverseEffects": "Sobrecarga/edema pulmonar, acidosis metabólica hiperclorémica, hipernatremia y trastornos osmóticos.",
+    "adverseEffects": "Edema, flebitis y malestar local. Graves: Sobrecarga/edema pulmonar, acidosis metabólica hiperclorémica, hipernatremia y trastornos osmóticos.",
+    "contraindications": "Hipernatremia/hipercloremia y sobrecarga de volumen relevantes; contraindicaciones dependen del contexto.",
+    "interactions": "Corticoides y fármacos que retienen sodio; incompatibilidades de aditivos.",
+    "monitoring": "PA/perfusión, diuresis, balance, peso, Na/Cl, acidosis, pulmones y edema.",
+    "administration": "IV con técnica aséptica; reevaluar tras cada bolo.",
+    "preparation": "Verificar integridad, claridad, volumen y compatibilidad de aditivos.",
+    "infusionProtocol": "Velocidad por bomba/gravedad según urgencia; evitar exceso acumulado.",
+    "pregnancy": "Puede usarse cuando está indicada; considerar volumen y electrolitos.",
+    "lactation": "Compatible; considerar balance materno.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Sobrecarga/edema pulmonar, acidosis metabólica hiperclorémica, hipernatremia y trastornos osmóticos. Volume/taxa bloqueados sem indicação, peso, hemodinâmica, eletrólitos, função renal/cardiopulmonar, perdas e plano de reavaliação.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=sodium+chloride+0.9%25+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda-documents-regulatory-information"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=sodium+chloride+0.9%25+injection"
+  }
+};})();
+/* GOLD33_SELECTIVE:cloreto_de_sodio_09:END */

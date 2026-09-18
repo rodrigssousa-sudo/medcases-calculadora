@@ -63520,3 +63520,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:clevidipina:END */
+/* GOLD33_SELECTIVE:clonidina:START */
+;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["clonidina"])throw new Error("GOLD33_MISSING_CANONICAL:clonidina");db["clonidina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "020",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d818f92af45c524613c0db49682058ae944b29dd0ac8e473c944895c1d18c004",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Clonidina",
+    "class": "Agonista alfa-2 central",
+    "pharmacologicClass": "Reduz descarga simpática central",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos IR 0,1/0,2/0,3 mg; ER 0,1 mg; adesivo transdérmico semanal.",
+    "presentations": "Comprimidos IR 0,1/0,2/0,3 mg; ER 0,1 mg; adesivo transdérmico semanal.",
+    "mechanism": "Reduz descarga simpática central. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade alta; eliminação renal parcial; meia-vida 12–16 h, maior na DRC.",
+    "indications": "Hipertensão; formulação ER para TDAH em 6–17 anos. Usos off-label exigem protocolo.",
+    "dose": "Hipertensão IR: iniciar 0,1 mg VO 2x/dia e titular; faixa usual 0,2–0,6 mg/dia. Não intercambiar IR, ER e adesivo mg por mg.",
+    "pediatricDose": "TDAH ER 6–17 anos: iniciar 0,1 mg ao deitar, aumentar 0,1 mg/semana até máximo 0,4 mg/dia dividido. AUTOMATABLE=NO.",
+    "renalDose": "Iniciar menor e titular; eliminação renal prolongada.",
+    "hepaticDose": "Sem ajuste formal.",
+    "commonAdverseEffects": "Boca seca, sonolência, tontura, constipação e bradicardia.",
+    "dangerousAdverseEffects": "Hipotensão/bradicardia, bloqueio AV, depressão SNC e hipertensão rebound na retirada.",
+    "adverseEffects": "Boca seca, sonolência, tontura, constipação e bradicardia. Graves: Hipotensão/bradicardia, bloqueio AV, depressão SNC e hipertensão rebound na retirada.",
+    "contraindications": "Hipersensibilidade; adesivo contraindicado se reação de contato grave ao produto.",
+    "interactions": "Depressores SNC, beta-bloqueadores, fármacos bradicardizantes e tricíclicos; retirada com beta-bloqueio exige planejamento.",
+    "monitoring": "PA, FC, sedação, adesão e rebound; rim.",
+    "administration": "VO conforme formulação; adesivo trocar a cada 7 dias; retirar gradualmente.",
+    "preparation": "Não esmagar ER; aplicar adesivo em pele íntegra e alternar local.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar somente se necessário; atravessa placenta.",
+    "lactation": "Passa ao leite e pode reduzir produção; observar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipotensão/bradicardia, bloqueio AV, depressão SNC e hipertensão rebound na retirada. Uso bloqueado sem indicação/formulação, PA/FC, rim, fármacos bradicardizantes e plano de retirada gradual.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonidine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/017407s034lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonidine"
+  },
+  "es": {
+    "name": "Clonidina",
+    "class": "Agonista alfa-2 central",
+    "pharmacologicClass": "Reduce descarga simpática central",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos IR 0,1/0,2/0,3 mg; ER 0,1 mg; parche transdérmico semanal.",
+    "presentations": "Comprimidos IR 0,1/0,2/0,3 mg; ER 0,1 mg; parche transdérmico semanal.",
+    "mechanism": "Reduce descarga simpática central. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad alta; eliminación renal parcial; semivida 12–16 h, mayor en ERC.",
+    "indications": "Hipertensión; formulación ER para TDAH en 6–17 años. Usos off-label requieren protocolo.",
+    "dose": "Hipertensión IR: iniciar 0,1 mg VO 2 veces/día y titular; rango usual 0,2–0,6 mg/día. No intercambiar IR, ER y parche mg por mg.",
+    "pediatricDose": "TDAH ER 6–17 años: iniciar 0,1 mg al acostarse, aumentar 0,1 mg/semana hasta máximo 0,4 mg/día dividido. AUTOMATABLE=NO.",
+    "renalDose": "Iniciar menor y titular; eliminación renal prolongada.",
+    "hepaticDose": "Sin ajuste formal.",
+    "commonAdverseEffects": "Boca seca, somnolencia, mareo, estreñimiento y bradicardia.",
+    "dangerousAdverseEffects": "Hipotensión/bradicardia, bloqueo AV, depresión SNC e hipertensión rebote en retirada.",
+    "adverseEffects": "Boca seca, somnolencia, mareo, estreñimiento y bradicardia. Graves: Hipotensión/bradicardia, bloqueo AV, depresión SNC e hipertensión rebote en retirada.",
+    "contraindications": "Hipersensibilidad; parche contraindicado si reacción de contacto grave al producto.",
+    "interactions": "Depresores SNC, betabloqueantes, fármacos bradicardizantes y tricíclicos; retirada con betabloqueo exige planificación.",
+    "monitoring": "PA, FC, sedación, adherencia y rebote; riñón.",
+    "administration": "VO según formulación; parche cambiar cada 7 días; retirar gradualmente.",
+    "preparation": "No triturar ER; aplicar parche en piel íntegra y alternar sitio.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Usar solo si es necesario; atraviesa placenta.",
+    "lactation": "Pasa a leche y puede reducir producción; vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipotensión/bradicardia, bloqueo AV, depresión SNC e hipertensión rebote en retirada. Uso bloqueado sem indicação/formulação, PA/FC, rim, fármacos bradicardizantes e plano de retirada gradual.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonidine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/017407s034lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=clonidine"
+  }
+};})();
+/* GOLD33_SELECTIVE:clonidina:END */
