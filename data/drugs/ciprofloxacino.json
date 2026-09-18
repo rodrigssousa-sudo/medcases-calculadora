@@ -6,12 +6,10 @@
   "colorTxt": null,
   "pt": {
     "name": "Ciprofloxacino",
-    "class": "Antibiótico fluoroquinolona",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Comprimidos orais; formulação IV existe.",
-    "dose": "250–750 mg VO q12h conforme foco; cUTI/pyelonefrite/Pseudomonas exigem esquema específico.",
+    "class": "Fluoroquinolona",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos/suspensão oral; solução IV; formas oftálmica/ótica não equivalentes.",
+    "dose": "VO/IV tipicamente 250–750 mg a cada 12 h ou 400 mg IV a cada 8–12 h conforme foco e gravidade.",
     "doseKg": {
       "standard": "10–15 mg/kg por dose 12/12h",
       "severe": "15–20 mg/kg por dose",
@@ -20,36 +18,12 @@
     "therapeuticRange": "Faixa habitual: 10–20 mg/kg por dose.",
     "dilution": "Bolsa pronta para infusão.",
     "speed": "Infundir em 60 minutos.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Dor abdominal",
-      "Cefaleia"
-    ],
-    "dangerousAdverseEffects": [
-      "Ruptura de tendão",
-      "Neuropatia potencialmente irreversível",
-      "Efeitos SNC/convulsões",
-      "Aneurisma/dissecção de aorta",
-      "Torsades/QT"
-    ],
+    "commonAdverseEffects": "Náusea, diarreia, cefaleia, rash e reação à infusão.",
+    "dangerousAdverseEffects": "Tendinite/ruptura, neuropatia, efeitos SNC, disglucemia, QT, aorta, hepatotoxicidade e C. difficile.",
     "risksByPatient": [],
-    "alerts": [
-      "Tendinite/ruptura de tendão",
-      "Neuropatia periférica",
-      "Efeitos SNC",
-      "Miastenia gravis",
-      "Aneurisma/dissecção de aorta",
-      "Disglicemia",
-      "CYP1A2/tizanidina contraindicada",
-      "Pseudomonas pode adquirir resistência"
-    ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
-    ],
-    "renalDose": "CrCl >50 usual; 30–50: 250–500 mg q12h; 5–29: 250–500 mg q18h; HD/PD: 250–500 mg q24h após diálise.",
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, disglucemia, QT, aorta, hepatotoxicidade e C. difficile. Dose bloqueada sem foco, cultura, gravidade, idade/peso, função renal, QT, interações e alternativa antibiótica.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ciprofloxacin",
+    "renalDose": "Ajustar intervalo/dose conforme ClCr; dose após hemodiálise.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "AUC/MIC ≥ 125 para infecções por gram-negativos (parâmetro PK-PD concentração-dependente). Pico sérico ≥ 10× MIC desejável.",
@@ -82,10 +56,7 @@
         "Hipocalemia ou hipomagnesemia não corrigidas"
       ]
     },
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Revisar toxicidades e interações"
-    ],
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -99,45 +70,38 @@
       ],
       "note": "Bloco mesclado e melhorado: ev.intervalo corrigido para '8/8h–12/12h', doseMaxima padronizada em mg. Texto de debug removido do fg10a30.obs. Obs enriquecidas: cortes FDA label (CrCl 30–50 e 5–29), fgMaior50 com EV 8/8h para Pseudomonas, fg10a30 com convulsões/cristalúria/hidratação, fgMenor10 com avaliação de alternativa e vo corrigida para 250–500 mg, HD com remoção ~30% e distúrbios eletrolíticos. safetyFlags adicionados (tendinite Black Box + miastenia gravis + cristalúria). auditNotes criado com 7 fontes."
     },
-    "pharmacologicClass": "Fluoroquinolona sistêmica",
-    "mechanism": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
-    "pharmacodynamics": "Bactericida concentração-dependente; AUC/MIC e Cmax/MIC correlacionam-se com eficácia.",
-    "pharmacokinetics": "Alta biodisponibilidade oral e ampla penetração tecidual; eliminação renal varia por agente.",
-    "indications": "cUTI/pyelonefrite, prostatite e Gram-negativos suscetíveis incluindo Pseudomonas.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "750 mg conforme agente"
-    ],
-    "pediatricDose": "cUTI/pyelonefrite 1–17a: 10–20 mg/kg q12h, máx 750 mg/dose.",
-    "hepaticDose": "Sem ajuste hepático rotineiro em hepatopatia estável.",
-    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
-    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
-    "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes e interações específicas.",
-    "monitoring": "Sintomas tendíneos/neurológicos, glicemia, ECG/eletrólitos quando QT relevante e função renal.",
-    "administration": "VO com ou sem alimento; separar de antiácidos/cátions. IV conforme formulação.",
-    "preparation": "Comprimidos sem preparo; IV conforme fabricante.",
-    "infusionProtocol": "Quando IV, respeitar tempo mínimo de infusão do produto.",
-    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
-    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
-    "specialPopulations": "Idosos, transplantados, usuários de corticoide e pacientes com aneurisma/aortopatia têm maior risco.",
-    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
-    "clinicalPearls": "Boa atividade antipseudomonas se suscetível; forte inibidor CYP1A2 e tizanidina é contraindicada.",
-    "guidelineRecommendations": "Usar apenas quando benefício supera os riscos da classe e AST/epidemiologia justificam.",
+    "pharmacologicClass": "Inibe DNA-girase e topoisomerase IV bacterianas",
+    "mechanism": "Inibe DNA-girase e topoisomerase IV bacterianas. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Boa biodisponibilidade; eliminação renal predominante; inibe CYP1A2.",
+    "indications": "Infecções por bactérias suscetíveis; reservar para situações apropriadas devido a eventos graves e resistência.",
+    "presentations": "Comprimidos/suspensão oral; solução IV; formas oftálmica/ótica não equivalentes.",
+    "pediatricDose": "Indicações selecionadas: 10–20 mg/kg/dose a cada 12 h, com máximos por indicação; especialista. AUTOMATABLE=NO.",
+    "hepaticDose": "Sem ajuste usual.",
+    "adverseEffects": "Náusea, diarreia, cefaleia, rash e reação à infusão. Graves: Tendinite/ruptura, neuropatia, efeitos SNC, disglucemia, QT, aorta, hepatotoxicidade e C. difficile.",
+    "contraindications": "Hipersensibilidade a quinolonas; uso concomitante de tizanidina.",
+    "interactions": "Cátions reduzem absorção; varfarina, antidiabéticos, teofilina, QT, corticosteroides e CYP1A2.",
+    "monitoring": "Resposta/culturas, rim, QT, glicemia, tendões, neuropatia, SNC e C. difficile.",
+    "administration": "VO separar de cátions; hidratar. IV em pelo menos 60 min.",
+    "preparation": "Não esmagar formulação XR; suspensão não por sonda com alimentação sem protocolo.",
+    "infusionProtocol": "IV 60 min; linha compatível e vigilância local.",
+    "pregnancy": "Usar somente quando benefício superar risco e não houver alternativa adequada.",
+    "lactation": "Baixos níveis no leite; avaliar alternativa e observar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ciprofloxacin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due"
     ]
   },
   "es": {
     "name": "Ciprofloxacino",
-    "class": "Antibiótico fluoroquinolona",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos orales; existe formulación IV.",
-    "dose": "250–750 mg VO q12h según foco; cUTI/pielonefritis/Pseudomonas requieren esquema específico.",
+    "class": "Fluoroquinolona",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos/suspensión oral; solución IV; formas oftálmica/ótica no equivalentes.",
+    "dose": "VO/IV típicamente 250–750 mg cada 12 h o 400 mg IV cada 8–12 h según foco y gravedad.",
     "doseKg": {
       "standard": "10–15 mg/kg por dosis cada 12h",
       "severe": "15–20 mg/kg por dosis",
@@ -146,36 +110,12 @@
     "therapeuticRange": "Rango habitual: 10–20 mg/kg por dosis.",
     "dilution": "Bolsa lista para infusión.",
     "speed": "Infundir en 60 minutos.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Dolor abdominal",
-      "Cefalea"
-    ],
-    "dangerousAdverseEffects": [
-      "Rotura tendinosa",
-      "Neuropatía potencialmente irreversible",
-      "Efectos SNC/convulsiones",
-      "Aneurisma/disección aórtica",
-      "Torsades/QT"
-    ],
+    "commonAdverseEffects": "Náusea, diarrea, cefalea, erupción y reacción a infusión.",
+    "dangerousAdverseEffects": "Tendinitis/rotura, neuropatía, efectos SNC, disglucemia, QT, aorta, hepatotoxicidad y C. difficile.",
     "risksByPatient": [],
-    "alerts": [
-      "Tendinitis/rotura tendinosa",
-      "Neuropatía periférica",
-      "Efectos SNC",
-      "Miastenia gravis",
-      "Aneurisma/disección aórtica",
-      "Disglucemia",
-      "CYP1A2/tizanidina contraindicada",
-      "Pseudomonas puede adquirir resistencia"
-    ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
-    ],
-    "renalDose": "ClCr >50 usual; 30–50: 250–500 mg q12h; 5–29: 250–500 mg q18h; HD/PD: 250–500 mg q24h tras diálisis.",
+    "alerts": "Tendinitis/rotura, neuropatía, efectos SNC, disglucemia, QT, aorta, hepatotoxicidad y C. difficile. Dose bloqueada sem foco, cultura, gravidade, idade/peso, função renal, QT, interações e alternativa antibiótica.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ciprofloxacin",
+    "renalDose": "Ajustar intervalo/dosis según ClCr; dosis después de hemodiálisis.",
     "therapeuticMonitoring": {
       "required": false,
       "target": "AUC/MIC ≥ 125 para infecciones por gramnegativos (parámetro PK-PD concentración-dependiente). Pico sérico ≥ 10× MIC deseable.",
@@ -208,10 +148,7 @@
         "Hipocalemia o hipomagnesemia no corregidas"
       ]
     },
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Revisar toxicidades e interacciones"
-    ],
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -225,35 +162,30 @@
       ],
       "note": "Bloque fusionado y mejorado: ev.intervalo corregido a '8/8h–12/12h', doseMaxima estandarizada en mg. Texto de depuración eliminado de fg10a30.obs. Obs enriquecidas: cortes FDA label (CrCl 30–50 y 5–29), fgMaior50 con IV 8/8h para Pseudomonas, fg10a30 con convulsiones/cristaluria/hidratación, fgMenor10 con evaluación de alternativa y vo corregida a 250–500 mg, HD con remoción ~30% y trastornos electrolíticos. safetyFlags añadidos (tendinitis Black Box + miastenia gravis + cristaluria). auditNotes creado con 7 fuentes."
     },
-    "pharmacologicClass": "Fluoroquinolona sistémica",
-    "mechanism": "Inhibe DNA girasa y topoisomerasa IV, bloqueando replicación/reparación del DNA bacteriano.",
-    "pharmacodynamics": "Bactericida dependiente de concentración; AUC/MIC y Cmax/MIC se correlacionan con eficacia.",
-    "pharmacokinetics": "Alta biodisponibilidad oral y amplia penetración tisular; eliminación renal varía según agente.",
-    "indications": "cUTI/pielonefritis, prostatitis y Gram negativos susceptibles incluido Pseudomonas.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "750 mg según agente"
-    ],
-    "pediatricDose": "cUTI/pielonefritis 1–17a: 10–20 mg/kg q12h, máx 750 mg/dosis.",
-    "hepaticDose": "Sin ajuste hepático rutinario en hepatopatía estable.",
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
-    "interactions": "Cationes reducen absorción; revisar antiarrítmicos/QT, fármacos glucémicos e interacciones específicas.",
-    "monitoring": "Síntomas tendinosos/neurológicos, glucemia, ECG/electrolitos cuando QT sea relevante y función renal.",
-    "administration": "VO con o sin alimentos; separar de antiácidos/cationes. IV según formulación.",
-    "preparation": "Comprimidos sin preparación; IV según fabricante.",
-    "infusionProtocol": "Cuando IV, respetar tiempo mínimo de infusión.",
-    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
-    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
-    "specialPopulations": "Ancianos, trasplantados, usuarios de corticoide y pacientes con aneurisma/aortopatía tienen mayor riesgo.",
-    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
-    "clinicalPearls": "Buena actividad antipseudomónica si susceptible; fuerte inhibidor CYP1A2 y tizanidina está contraindicada.",
-    "guidelineRecommendations": "Usar solo cuando beneficio supere riesgos de clase y AST/epidemiología lo justifiquen.",
+    "pharmacologicClass": "Inhibe ADN-girasa y topoisomerasa IV bacterianas",
+    "mechanism": "Inhibe ADN-girasa y topoisomerasa IV bacterianas. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Buena biodisponibilidad; eliminación renal predominante; inhibe CYP1A2.",
+    "indications": "Infecciones por bacterias sensibles; reservar para situaciones apropiadas por eventos graves y resistencia.",
+    "presentations": "Comprimidos/suspensión oral; solución IV; formas oftálmica/ótica no equivalentes.",
+    "pediatricDose": "Indicaciones seleccionadas: 10–20 mg/kg/dosis cada 12 h, con máximos por indicación; especialista. AUTOMATABLE=NO.",
+    "hepaticDose": "Sin ajuste usual.",
+    "adverseEffects": "Náusea, diarrea, cefalea, erupción y reacción a infusión. Graves: Tendinitis/rotura, neuropatía, efectos SNC, disglucemia, QT, aorta, hepatotoxicidad y C. difficile.",
+    "contraindications": "Hipersensibilidad a quinolonas; uso concomitante de tizanidina.",
+    "interactions": "Cationes reducen absorción; warfarina, antidiabéticos, teofilina, QT, corticoides y CYP1A2.",
+    "monitoring": "Respuesta/cultivos, riñón, QT, glucemia, tendones, neuropatía, SNC y C. difficile.",
+    "administration": "VO separar de cationes; hidratar. IV en al menos 60 min.",
+    "preparation": "No triturar formulación XR; suspensión no por sonda con nutrición sin protocolo.",
+    "infusionProtocol": "IV 60 min; línea compatible y vigilancia local.",
+    "pregnancy": "Usar solo cuando beneficio supere riesgo y no haya alternativa adecuada.",
+    "lactation": "Bajos niveles en leche; valorar alternativa y observar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ciprofloxacin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due"
     ]
   },
   "name": {
@@ -270,8 +202,8 @@
     "ciprofloxacino generico",
     "fluoroquinolona"
   ],
-  "dataVersion": "clinical-data-v1-e4f50d7a68a49013",
-  "clinicalContentSha256": "e4f50d7a68a49013282fbab33822f9480f845c172f076e91326d7e2f1ab28ebb",
+  "dataVersion": "clinical-data-v1-615eff40330210fd",
+  "clinicalContentSha256": "615eff40330210fd7f0fd2ff5d4ef9e4fb8e925c7b54a8c0c65d14621791a55c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",
@@ -336,5 +268,17 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "ciprofloxacino.mcGoldClinicalV1",
+    "lote": "018",
+    "requiredFields": 33,
+    "approvedSha256": "31fb9de00b183f1c9c0f87ffcfa644831dc43e95772cf9bf5fc41412ff987535",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
   }
 }
