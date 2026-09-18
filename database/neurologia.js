@@ -10288,3 +10288,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:clobazam:END */
+/* GOLD33_SELECTIVE:clorzoxazona:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["clorzoxazona"])throw new Error("GOLD33_MISSING_CANONICAL:clorzoxazona");db["clorzoxazona"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "021",
+    "requiredFieldCount": 33,
+    "approvedSha256": "34cfc05136412956523762939213a67b7f790f954e78d1ece1868008562d515a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Clorzoxazona",
+    "class": "Relaxante muscular central",
+    "pharmacologicClass": "Depressão polissináptica central; mecanismo incompleto",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 250, 375, 500 ou 750 mg conforme produto.",
+    "presentations": "Comprimidos 250, 375, 500 ou 750 mg conforme produto.",
+    "mechanism": "Depressão polissináptica central; mecanismo incompleto. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático CYP2E1; eliminação urinária de conjugados.",
+    "indications": "Adjuvante em condições musculoesqueléticas dolorosas agudas.",
+    "dose": "250–750 mg VO 3–4x/dia conforme formulação; usar menor dose e duração.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste formal; cautela.",
+    "hepaticDose": "Evitar em hepatopatia; hepatotoxicidade idiossincrática pode ser fatal.",
+    "commonAdverseEffects": "Sonolência, tontura, mal-estar e alteração da cor da urina.",
+    "dangerousAdverseEffects": "Hepatotoxicidade grave/fatal e depressão SNC.",
+    "adverseEffects": "Sonolência, tontura, mal-estar e alteração da cor da urina. Graves: Hepatotoxicidade grave/fatal e depressão SNC.",
+    "contraindications": "Hipersensibilidade; cautela/evitar em doença hepática.",
+    "interactions": "Álcool e depressores SNC aumentam sedação.",
+    "monitoring": "Dor/espasmo, sedação, função hepática e sinais de hepatite.",
+    "administration": "VO; evitar álcool, direção e uso prolongado.",
+    "preparation": "Confirmar força da formulação.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados insuficientes; usar somente se necessário.",
+    "lactation": "Dados insuficientes; cautela.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hepatotoxicidade grave/fatal e depressão SNC. Uso bloqueado sem duração, fígado basal/sintomas, álcool/sedativos e confirmação da força do produto.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chlorzoxazone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda-documents-regulatory-information"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chlorzoxazone"
+  },
+  "es": {
+    "name": "Clorzoxazona",
+    "class": "Relajante muscular central",
+    "pharmacologicClass": "Depresión polisináptica central; mecanismo incompleto",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 250, 375, 500 o 750 mg según producto.",
+    "presentations": "Comprimidos 250, 375, 500 o 750 mg según producto.",
+    "mechanism": "Depresión polisináptica central; mecanismo incompleto. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático CYP2E1; eliminación urinaria de conjugados.",
+    "indications": "Coadyuvante en condiciones musculoesqueléticas dolorosas agudas.",
+    "dose": "250–750 mg VO 3–4 veces/día según formulación; usar menor dosis y duración.",
+    "pediatricDose": "Seguridad/eficacia no establecidas. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste formal; precaución.",
+    "hepaticDose": "Evitar en hepatopatía; hepatotoxicidad idiosincrática puede ser fatal.",
+    "commonAdverseEffects": "Somnolencia, mareo, malestar y cambio de color de orina.",
+    "dangerousAdverseEffects": "Hepatotoxicidad grave/fatal y depresión SNC.",
+    "adverseEffects": "Somnolencia, mareo, malestar y cambio de color de orina. Graves: Hepatotoxicidad grave/fatal y depresión SNC.",
+    "contraindications": "Hipersensibilidad; precaución/evitar en hepatopatía.",
+    "interactions": "Alcohol y depresores SNC aumentan sedación.",
+    "monitoring": "Dolor/espasmo, sedación, función hepática y signos de hepatitis.",
+    "administration": "VO; evitar alcohol, conducción y uso prolongado.",
+    "preparation": "Confirmar concentración de formulación.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos insuficientes; usar solo si es necesario.",
+    "lactation": "Datos insuficientes; precaución.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hepatotoxicidad grave/fatal y depresión SNC. Uso bloqueado sem duração, fígado basal/sintomas, álcool/sedativos e confirmação da força do produto.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chlorzoxazone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda-documents-regulatory-information"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=chlorzoxazone"
+  }
+};})();
+/* GOLD33_SELECTIVE:clorzoxazona:END */

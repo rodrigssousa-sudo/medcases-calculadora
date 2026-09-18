@@ -27401,3 +27401,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:cloranfenicol:END */
+/* GOLD33_SELECTIVE:cloxacilina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["cloxacilina"])throw new Error("GOLD33_MISSING_CANONICAL:cloxacilina");db["cloxacilina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "021",
+    "requiredFieldCount": 33,
+    "approvedSha256": "34cfc05136412956523762939213a67b7f790f954e78d1ece1868008562d515a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Cloxacilina",
+    "class": "Penicilina resistente a penicilinase",
+    "pharmacologicClass": "Inibe síntese de parede bacteriana; ativa contra MSSA",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas/suspensão e injetável conforme país.",
+    "presentations": "Cápsulas/suspensão e injetável conforme país.",
+    "mechanism": "Inibe síntese de parede bacteriana; ativa contra MSSA. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção oral reduzida por alimento; eliminação renal e biliar.",
+    "indications": "Infecções por estafilococos suscetíveis; disponibilidade e formulação variam regionalmente.",
+    "dose": "VO frequentemente 250–500 mg a cada 6 h em jejum; infecção grave requer via IV e protocolo local.",
+    "pediatricDose": "Dose por peso e gravidade; neonatos exigem intervalo por idade gestacional/pós-natal. AUTOMATABLE=NO.",
+    "renalDose": "Ajuste depende de produto/protocolo; monitorar em DRC grave.",
+    "hepaticDose": "Cautela e monitorização; pode causar hepatite colestática.",
+    "commonAdverseEffects": "Náusea, diarreia, rash e flebite.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, hepatite/colestase, neutropenia e C. difficile.",
+    "adverseEffects": "Náusea, diarreia, rash e flebite. Graves: Anafilaxia, SCAR, hepatite/colestase, neutropenia e C. difficile.",
+    "contraindications": "Hipersensibilidade grave a beta-lactâmicos.",
+    "interactions": "Probenecida aumenta níveis; anticoagulantes e metotrexato exigem cautela.",
+    "monitoring": "Cultura/resposta, alergia, hemograma, rim, fígado e C. difficile.",
+    "administration": "VO em jejum; IV conforme produto.",
+    "preparation": "Reconstituir/diluir apenas pela bula local e estabilidade do produto.",
+    "infusionProtocol": "Taxa IV conforme bula; não extrapolar de flucloxacilina/oxacilina.",
+    "pregnancy": "Usar quando indicada.",
+    "lactation": "Compatível em geral; observar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, SCAR, hepatite/colestase, neutropenia e C. difficile. Dose/preparo bloqueados sem país/produto, cultura, foco, gravidade, idade/peso, rim/fígado e via.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.aemps.gob.es/cima/publico/home.html"
+    ],
+    "ref": "https://www.ema.europa.eu/en/medicines"
+  },
+  "es": {
+    "name": "Cloxacilina",
+    "class": "Penicilina resistente a penicilinasa",
+    "pharmacologicClass": "Inhibe síntesis de pared bacteriana; activa contra MSSA",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas/suspensión e inyectable según país.",
+    "presentations": "Cápsulas/suspensión e inyectable según país.",
+    "mechanism": "Inhibe síntesis de pared bacteriana; activa contra MSSA. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción oral reducida por alimentos; eliminación renal y biliar.",
+    "indications": "Infecciones por estafilococos sensibles; disponibilidad y formulación varían regionalmente.",
+    "dose": "VO frecuentemente 250–500 mg cada 6 h en ayunas; infección grave requiere IV y protocolo local.",
+    "pediatricDose": "Dosis por peso y gravedad; neonatos requieren intervalo por edad gestacional/posnatal. AUTOMATABLE=NO.",
+    "renalDose": "Ajuste depende de producto/protocolo; monitorizar en ERC grave.",
+    "hepaticDose": "Precaución y control; puede causar hepatitis colestásica.",
+    "commonAdverseEffects": "Náusea, diarrea, erupción y flebitis.",
+    "dangerousAdverseEffects": "Anafilaxia, SCAR, hepatitis/colestasis, neutropenia y C. difficile.",
+    "adverseEffects": "Náusea, diarrea, erupción y flebitis. Graves: Anafilaxia, SCAR, hepatitis/colestasis, neutropenia y C. difficile.",
+    "contraindications": "Hipersensibilidad grave a betalactámicos.",
+    "interactions": "Probenecid aumenta niveles; anticoagulantes y metotrexato requieren precaución.",
+    "monitoring": "Cultivo/respuesta, alergia, hemograma, riñón, hígado y C. difficile.",
+    "administration": "VO en ayunas; IV según producto.",
+    "preparation": "Reconstituir/diluir solo según ficha local y estabilidad del producto.",
+    "infusionProtocol": "Velocidad IV según ficha; no extrapolar de flucloxacilina/oxacilina.",
+    "pregnancy": "Usar cuando esté indicada.",
+    "lactation": "Compatible en general; vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, SCAR, hepatitis/colestasis, neutropenia y C. difficile. Dose/preparo bloqueados sem país/produto, cultura, foco, gravidade, idade/peso, rim/fígado e via.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.aemps.gob.es/cima/publico/home.html"
+    ],
+    "ref": "https://www.ema.europa.eu/en/medicines"
+  }
+};})();
+/* GOLD33_SELECTIVE:cloxacilina:END */

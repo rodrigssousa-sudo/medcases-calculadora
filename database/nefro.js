@@ -3400,3 +3400,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:cloreto_de_sodio_09:END */
+/* GOLD33_SELECTIVE:colecalciferol:START */
+;(function(){var db=window.NEFRO_DRUGS_DB;if(!db||!db["colecalciferol"])throw new Error("GOLD33_MISSING_CANONICAL:colecalciferol");db["colecalciferol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "021",
+    "requiredFieldCount": 33,
+    "approvedSha256": "34cfc05136412956523762939213a67b7f790f954e78d1ece1868008562d515a",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+  },
+  "pt": {
+    "name": "Colecalciferol (vitamina D3)",
+    "class": "Vitamina lipossolúvel",
+    "pharmacologicClass": "Pró-hormônio convertido em calcitriol, aumenta absorção de Ca/P",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Gotas, cápsulas e comprimidos de 400 UI a 50.000 UI; concentrações variam amplamente.",
+    "presentations": "Gotas, cápsulas e comprimidos de 400 UI a 50.000 UI; concentrações variam amplamente.",
+    "mechanism": "Pró-hormônio convertido em calcitriol, aumenta absorção de Ca/P. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Hidroxilação hepática a 25-OH-D e renal a calcitriol; armazenamento adiposo.",
+    "indications": "Prevenção/tratamento de deficiência de vitamina D; doses dependem de idade, nível e condição.",
+    "dose": "Manutenção adulta frequentemente 600–2000 UI/dia; deficiência pode exigir 6000 UI/dia ou 50.000 UI/semana por 8 semanas em protocolos, seguida de manutenção. Confirmar guideline e nível basal.",
+    "pediatricDose": "Prevenção usual 400 UI/dia no lactente e 600–1000 UI/dia em crianças conforme idade/risco; tratamento por protocolo e nível. AUTOMATABLE=NO.",
+    "renalDose": "DRC avançada pode exigir forma ativa e avaliação mineral óssea; evitar automação.",
+    "hepaticDose": "Colestase/má absorção altera resposta; individualizar.",
+    "commonAdverseEffects": "Geralmente bem tolerada; constipação/náusea se hipercalcemia.",
+    "dangerousAdverseEffects": "Hipercalcemia, nefrocalcinose, arritmia, confusão e lesão renal por toxicidade.",
+    "adverseEffects": "Geralmente bem tolerada; constipação/náusea se hipercalcemia. Graves: Hipercalcemia, nefrocalcinose, arritmia, confusão e lesão renal por toxicidade.",
+    "contraindications": "Hipercalcemia, hipervitaminose D e hipersensibilidade.",
+    "interactions": "Tiazídicos, digoxina, cálcio e outros produtos de vitamina D aumentam risco; anticonvulsivantes reduzem níveis.",
+    "monitoring": "25-OH-D, Ca, P, creatinina e PTH conforme contexto; sinais de toxicidade.",
+    "administration": "VO com refeição contendo gordura; confirmar UI por gota/mL.",
+    "preparation": "Não confundir UI com microgramas; dupla checagem em gotas e megadoses.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Necessidades aumentam; evitar megadose sem indicação.",
+    "lactation": "Compatível em doses adequadas; monitorar altas doses.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipercalcemia, nefrocalcinose, arritmia, confusão e lesão renal por toxicidade. Dose bloqueada sem idade, 25-OH-D, Ca, rim/fígado/má absorção, produto e UI por unidade.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cholecalciferol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cholecalciferol"
+  },
+  "es": {
+    "name": "Colecalciferol (vitamina D3)",
+    "class": "Vitamina liposoluble",
+    "pharmacologicClass": "Prohormona convertida en calcitriol, aumenta absorción de Ca/P",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Gotas, cápsulas y comprimidos de 400 UI a 50.000 UI; concentraciones muy variables.",
+    "presentations": "Gotas, cápsulas y comprimidos de 400 UI a 50.000 UI; concentraciones muy variables.",
+    "mechanism": "Prohormona convertida en calcitriol, aumenta absorción de Ca/P. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Hidroxilación hepática a 25-OH-D y renal a calcitriol; almacenamiento adiposo.",
+    "indications": "Prevención/tratamiento de deficiencia de vitamina D; dosis dependen de edad, nivel y condición.",
+    "dose": "Mantenimiento adulto frecuentemente 600–2000 UI/día; deficiencia puede requerir 6000 UI/día o 50.000 UI/semana por 8 semanas en protocolos, seguida de mantenimiento. Confirmar guía y nivel basal.",
+    "pediatricDose": "Prevención usual 400 UI/día en lactante y 600–1000 UI/día en niños según edad/riesgo; tratamiento por protocolo y nivel. AUTOMATABLE=NO.",
+    "renalDose": "ERC avanzada puede requerir forma activa y evaluación mineral ósea; evitar automatización.",
+    "hepaticDose": "Colestasis/malabsorción altera respuesta; individualizar.",
+    "commonAdverseEffects": "Generalmente bien tolerada; estreñimiento/náusea si hipercalcemia.",
+    "dangerousAdverseEffects": "Hipercalcemia, nefrocalcinosis, arritmia, confusión y lesión renal por toxicidad.",
+    "adverseEffects": "Generalmente bien tolerada; estreñimiento/náusea si hipercalcemia. Graves: Hipercalcemia, nefrocalcinosis, arritmia, confusión y lesión renal por toxicidad.",
+    "contraindications": "Hipercalcemia, hipervitaminosis D e hipersensibilidad.",
+    "interactions": "Tiazidas, digoxina, calcio y otros productos de vitamina D aumentan riesgo; anticonvulsivos reducen niveles.",
+    "monitoring": "25-OH-D, Ca, P, creatinina y PTH según contexto; signos de toxicidad.",
+    "administration": "VO con comida con grasa; confirmar UI por gota/mL.",
+    "preparation": "No confundir UI con microgramos; doble verificación en gotas y megadosis.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Aumentan necesidades; evitar megadosis sin indicación.",
+    "lactation": "Compatible en dosis adecuadas; controlar dosis altas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipercalcemia, nefrocalcinosis, arritmia, confusión y lesión renal por toxicidad. Dose bloqueada sem idade, 25-OH-D, Ca, rim/fígado/má absorção, produto e UI por unidade.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cholecalciferol",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=cholecalciferol"
+  }
+};})();
+/* GOLD33_SELECTIVE:colecalciferol:END */
