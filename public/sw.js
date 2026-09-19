@@ -40,7 +40,7 @@ self.addEventListener('activate', (event) => {
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-r34-free60-webpaywall-r4-20260917';
+const CACHE_VERSION   = 'medcases-r35-home-a11y-cache-r1-20260919';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 
 /* ── Lista canônica de assets pré-cacheados no install ──────
@@ -58,13 +58,14 @@ const ASSETS_TO_CACHE = [
   /* ── CSS (BUILD 484-CSS-CONSOLIDATION: 14 arquivos → 1 fonte unificada) ── */
   './css/medcases-core-legacy.css?v=484',
 
-  './css/medcases-webview-home-v1.css?v=517-gpb-focus-suppression',
+  './css/medcases-webview-home-v1.css?v=647-home-public-audit-r1',
+  './css/medcases-home-premium-r2.css?v=647-home-public-audit-r1',
   /* ── JS (10 arquivos — stack completa BUILD 477) ── */
   './js/medcases-ux-v2.js?v=484',
   './js/hub-accordion.js?v=484',
   './js/medcases-router.js?v=484',
   './js/build240b-accordion-fix.js?v=484',
-  './js/calculator-overlay.js?v=484',
+  './js/calculator-overlay.js?v=647-home-public-audit-r1',
   './js/category-pills.js?v=484',
   './js/elec-calc.js?v=484',
   './js/deeplink-router.js?v=484',

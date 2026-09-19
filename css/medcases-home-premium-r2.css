@@ -8,6 +8,7 @@ html body:not(.calc-overlay-open) #page-home {
   --mc-home-r2-text: #f4f4f4;
   --mc-home-r2-muted: #a3a3a3;
   --mc-home-r2-icon: #d4d4d4;
+  --mc-home-r2-badge: #b8b8b8;
   --mc-home-r2-line: rgba(255, 255, 255, .075);
   --mc-home-r2-shadow: none;
   box-sizing: border-box !important;
@@ -33,6 +34,7 @@ html body.theme-light:not(.calc-overlay-open) #page-home {
   --mc-home-r2-text: #202020;
   --mc-home-r2-muted: #686868;
   --mc-home-r2-icon: #454545;
+  --mc-home-r2-badge: #595959;
   --mc-home-r2-line: rgba(20, 20, 20, .08);
   --mc-home-r2-shadow: none;
 }
@@ -216,11 +218,11 @@ html body:not(.calc-overlay-open) #page-home .hub-soon-badge {
   padding: 0 !important;
   border: 0 !important;
   background: transparent !important;
-  color: var(--mc-home-r2-muted) !important;
+  color: var(--mc-home-r2-badge) !important;
   font-size: 10px !important;
   font-weight: 550 !important;
   line-height: 1 !important;
-  opacity: .78 !important;
+  opacity: 1 !important;
 }
 
 html body:not(.calc-overlay-open) #page-home #hub-card-clcr .clcr-live-dashboard {
@@ -463,5 +465,24 @@ html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accord
   html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
   #hub-l2-grid#hub-l2-grid > .hub-card:not(#hub-card-interacoes) > button.hub-card-trigger {
     min-height: 64px !important;
+  }
+}
+
+/* HOME-PUBLIC-AUDIT-R1: preserve the approved card geometry while making the
+   native trigger own the complete visible mobile surface. */
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+.hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card)
+> button.hub-card-trigger {
+  height: 100% !important;
+  align-self: stretch !important;
+}
+
+@media (max-width: 560px) {
+  html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+  #hub-l2-grid#hub-l2-grid > .hub-card:not(#hub-card-interacoes):not(.is-open):not(.mc-overlay-projected-card)
+  > button.hub-card-trigger {
+    height: 100% !important;
+    min-height: inherit !important;
+    align-self: stretch !important;
   }
 }

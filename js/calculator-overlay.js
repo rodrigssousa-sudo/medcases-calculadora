@@ -21,6 +21,8 @@
   var pendingOpenTimer = 0;
   var measureRaf = 0;
   var focusScrollTimer = 0;
+  var initialFocusRaf = 0;
+  var returnFocusEl = null;
 
   function byId(id) {
     return document.getElementById(id);
@@ -38,6 +40,80 @@
     if (!pendingOpenTimer) return;
     clearTimeout(pendingOpenTimer);
     pendingOpenTimer = 0;
+  }
+
+  function rememberActivator(id) {
+    var active = document.activeElement;
+    var trigger = card(id) && card(id).querySelector(':scope > .hub-card-trigger');
+
+    if (
+      active &&
+      active !== document.body &&
+      active !== document.documentElement &&
+      !active.closest('#calculator-overlay-container')
+    ) {
+      returnFocusEl = active;
+      return;
+    }
+
+    if (trigger) returnFocusEl = trigger;
+  }
+
+  function isVisibleFocusable(el) {
+    if (!el || el.disabled || el.getAttribute('aria-hidden') === 'true') return false;
+    var style = window.getComputedStyle(el);
+    return style.display !== 'none' && style.visibility !== 'hidden' && el.getClientRects().length > 0;
+  }
+
+  function overlayFocusables() {
+    var items = [];
+    var close = byId('calculator-overlay-close');
+    var c = card(currentId);
+    var selector = [
+      'a[href]',
+      'button:not([disabled])',
+      'input:not([disabled]):not([type="hidden"])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])'
+    ].join(',');
+
+    if (close) items.push(close);
+    if (c) items = items.concat(Array.prototype.slice.call(c.querySelectorAll(selector)));
+    return items.filter(function (el, index, all) {
+      return all.indexOf(el) === index && isVisibleFocusable(el);
+    });
+  }
+
+  function nestedModalOwnsFocus() {
+    return Array.prototype.some.call(
+      document.querySelectorAll('[role="dialog"][aria-modal="true"]'),
+      function (dialog) {
+        return dialog.id !== 'calculator-overlay-container' && isVisibleFocusable(dialog);
+      }
+    );
+  }
+
+  function focusOverlayStart(id) {
+    if (initialFocusRaf) cancelAnimationFrame(initialFocusRaf);
+    initialFocusRaf = requestAnimationFrame(function () {
+      initialFocusRaf = 0;
+      if (currentId !== id) return;
+      var close = byId('calculator-overlay-close');
+      if (!close) return;
+      try { close.focus({ preventScroll: true }); }
+      catch (_) { close.focus(); }
+    });
+  }
+
+  function restoreActivatorFocus() {
+    var target = returnFocusEl;
+    returnFocusEl = null;
+    if (!target || !target.isConnected) return;
+    requestAnimationFrame(function () {
+      try { target.focus({ preventScroll: true }); }
+      catch (_) { target.focus(); }
+    });
   }
 
   function getTitle(id) {
@@ -239,6 +315,8 @@
       ov.className = 'mc-screen-shell';
       ov.setAttribute('role', 'dialog');
       ov.setAttribute('aria-modal', 'true');
+      ov.setAttribute('aria-labelledby', 'calculator-overlay-title');
+      ov.setAttribute('aria-hidden', 'true');
       ov.setAttribute('data-mc-owner', 'NO_REPARENT_PROJECTION_V1');
       ov.innerHTML =
         '<header id="calculator-overlay-header" class="mc-screen-header">' +
@@ -267,6 +345,9 @@
         }, true);
       }
     }
+
+    ov.setAttribute('aria-labelledby', 'calculator-overlay-title');
+    ov.setAttribute('aria-hidden', ov.classList.contains('is-active') ? 'false' : 'true');
 
     return ov;
   }
@@ -341,7 +422,10 @@
     transitionId = null;
 
     var ov = overlay();
-    if (ov) ov.classList.remove('is-active');
+    if (ov) {
+      ov.classList.remove('is-active');
+      ov.setAttribute('aria-hidden', 'true');
+    }
 
     document.documentElement.classList.remove('mc-overlay-projection-open');
     document.body.classList.remove('calc-overlay-open');
@@ -387,6 +471,7 @@
     var ov = ensureOverlay();
     if (!ov) return false;
 
+    rememberActivator(id);
     transitionId = id || null;
 
     var title = byId('calculator-overlay-title');
@@ -395,6 +480,7 @@
     document.documentElement.classList.add('mc-overlay-projection-open');
     document.body.classList.add('calc-overlay-open');
     ov.classList.add('is-active');
+    ov.setAttribute('aria-hidden', 'false');
 
     return true;
   }
@@ -433,6 +519,7 @@
     if (inner) inner.classList.add('mc-screen-content');
 
     scheduleMeasure();
+    focusOverlayStart(id);
 
     window.__MC_OVERLAY_PROJECTION_V1.lastOpen = {
       id: id,
@@ -450,6 +537,7 @@
 
     if (closingId) forceHubClosed(closingId);
     deactivateVisual();
+    restoreActivatorFocus();
 
     window.__MC_OVERLAY_PROJECTION_V1.lastClose = {
       id: closingId || null,
@@ -557,7 +645,28 @@
     exposeApi();
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && (currentId || transitionId)) closeOverlay();
+      if (e.key === 'Tab' && (currentId || transitionId) && !nestedModalOwnsFocus()) {
+        var focusables = overlayFocusables();
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        var active = document.activeElement;
+        var index = focusables.indexOf(active);
+        var next = index === -1
+          ? (e.shiftKey ? last : first)
+          : focusables[
+              (index + (e.shiftKey ? -1 : 1) + focusables.length) % focusables.length
+            ];
+
+        e.preventDefault();
+        next.focus();
+        return;
+      }
+
+      if (e.key === 'Escape' && (currentId || transitionId)) {
+        e.preventDefault();
+        closeOverlay();
+      }
     });
 
     document.addEventListener('focusin', keepFocusedControlVisible, true);

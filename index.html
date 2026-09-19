@@ -26876,7 +26876,7 @@ window.MedCasesBridge = {
 (() => {
   'use strict';
 
-  const EXPECTED_VERSION = 'medcases-v517-gpb-focus-suppression';
+  const EXPECTED_VERSION = 'medcases-r35-home-a11y-cache-r1-20260919';
   const CACHE_PREFIX = 'medcases-calc-';
   const LAST_VERSION_KEY = 'medcases-cache-version';
   let updateInFlight = null;
@@ -26911,20 +26911,8 @@ window.MedCasesBridge = {
     );
   };
 
-  // MC-CALC-CACHE-ACTIVE-SESSION-NO-URL-MUTATION-FINAL-V1-B-R0
-  let userSessionInteracted = false;
-
-  const markInteractiveSession = () => {
-    userSessionInteracted = true;
-  };
-
-  ['pointerdown', 'touchstart', 'keydown'].forEach(type => {
-    document.addEventListener(
-      type,
-      markInteractiveSession,
-      { capture: true, passive: true }
-    );
-  });
+  // MC-CALC-CACHE-SAFE-AUTOMATIC-RELOAD-V1
+  let deferredReloadTimer = 0;
 
   const hasInteractiveSurface = () => {
     const body = document.body;
@@ -26934,7 +26922,6 @@ window.MedCasesBridge = {
       document.querySelector('#calculator-overlay-container.is-active');
 
     return (
-      userSessionInteracted ||
       !!projected ||
       !!activeOverlay ||
       !!(body && body.classList.contains('calc-overlay-open'))
@@ -26953,19 +26940,37 @@ window.MedCasesBridge = {
       reason: 'interactive-session-no-url-mutation',
       timestamp: Date.now()
     };
+
+    if (deferredReloadTimer) return;
+
+    const retryWhenSafe = () => {
+      deferredReloadTimer = 0;
+      const deferred = window.__MC_CACHE_RELOAD_DEFERRED;
+      if (!deferred) return;
+
+      if (hasInteractiveSurface()) {
+        deferredReloadTimer = window.setTimeout(retryWhenSafe, 500);
+        return;
+      }
+
+      window.__MC_CACHE_RELOAD_DEFERRED = null;
+      reloadForVersionOnce(deferred.version);
+    };
+
+    deferredReloadTimer = window.setTimeout(retryWhenSafe, 500);
   };
 
   const reloadForVersionOnce = remoteVersion => {
     const guardKey = 'medcases-cache-reload-' + remoteVersion;
 
     if (sessionStorage.getItem(guardKey) === '1') return;
-    sessionStorage.setItem(guardKey, '1');
 
     if (hasInteractiveSurface()) {
       deferReloadForInteractiveSession(remoteVersion);
       return;
     }
 
+    sessionStorage.setItem(guardKey, '1');
     const url = cacheVersionUrl(remoteVersion);
     window.location.replace(url.toString());
   };
@@ -27799,7 +27804,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   <link
     id="medcases-webview-home-v1-css"
     rel="stylesheet"
-  data-medcases-path="/css/medcases-webview-home-v1.css?v=646-osmolality-ui-review"
+  data-medcases-path="/css/medcases-webview-home-v1.css?v=647-home-public-audit-r1"
   >
   <script id="medcases-webview-home-v1-runtime-origin-r1">
   (() => {
@@ -41719,12 +41724,12 @@ ul:not(.fd-clean-list) > li::marker{
 }
 </style>
 
-<script id="medcases-calc-esc-application-shell-firewall-v1-b-r0"
-        data-build="MEDCASES-CALC-FARMACOS-ESC-SHELL-GUARD-BULLET-CANONICAL-MACROBUILD-V1-B-R1">
+<script id="medcases-calc-esc-application-shell-close-v1"
+        data-build="MEDCASES-CALC-FARMACOS-ESC-ACCESSIBLE-CLOSE-V1">
 (function(){
   "use strict";
 
-  var BUILD="MEDCASES-CALC-FARMACOS-ESC-SHELL-GUARD-BULLET-CANONICAL-MACROBUILD-V1-B-R1";
+  var BUILD="MEDCASES-CALC-FARMACOS-ESC-ACCESSIBLE-CLOSE-V1";
 
   function calculatorShellIsOpen(){
     var body=document.body;
@@ -41737,40 +41742,34 @@ ul:not(.fd-clean-list) > li::marker{
     return !!projected;
   }
 
-  /*
-    Application-shell keyboard firewall.
-
-    Registered on WINDOW/CAPTURE before the external calculator-overlay owner.
-    Escape therefore cannot reach a later shell-close keyboard handler while
-    the projected Farmacos surface owns the calculator screen.
-
-    Explicit close controls (X/buttons/click handlers) remain untouched.
-  */
+  /* Registered before the deferred overlay owner. Escape closes the same
+     application shell as the visible X; if the owner is not ready yet, the
+     event remains available to later handlers. */
   window.addEventListener("keydown",function(event){
     var key=event.key || event.code || "";
 
     if(key!=="Escape" && key!=="Esc") return;
     if(!calculatorShellIsOpen()) return;
 
+    if(!window.CalcOverlay || typeof window.CalcOverlay.close!=="function") return;
+
     event.preventDefault();
     event.stopImmediatePropagation();
-
-    try{
-      console.info("["+BUILD+"] ESC_CONSUMED_APPLICATION_SHELL_PRESERVED");
-    }catch(_){}
+    window.CalcOverlay.close();
   },true);
 
   window.__MC_CALC_ESC_APPLICATION_SHELL_FIREWALL_V1_B_R0={
     build:BUILD,
-    phase:"pre-owner-window-capture",
+    phase:"pre-owner-window-capture-accessible-close",
     owner:"js/calculator-overlay.js",
-    active:true
+    active:true,
+    escapeCloses:true
   };
 })();
 </script>
 <!-- MEDCASES-CALC-FARMACOS-ESC-SHELL-GUARD-BULLET-CANONICAL-MACROBUILD-V1-B-R1 END -->
 
-<script src="/js/calculator-overlay.js?v=496-module-surface-gutter-4px-v1-b-r0" defer></script>
+<script src="/js/calculator-overlay.js?v=647-home-public-audit-r1" defer></script>
 <!-- CALC-HOME-MEDCASES-V1-B-R0 START -->
 <style id="calc-home-medcases-v1-b-r0" media="not all">
 /*
@@ -68754,8 +68753,8 @@ console.info('['+BUILD+'] MOUNTED',{
 })();
 </script>
 <!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V2 END -->
-<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=646-osmolality-ui-review" />
-<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=632-farmacos-atomic-first-key" />
+<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=647-home-public-audit-r1" />
+<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=647-home-public-audit-r1" />
 
 </body>
 </html>
