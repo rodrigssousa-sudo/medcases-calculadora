@@ -1,0 +1,438 @@
+/* HOME-PREMIUM-COMPOSITION-R2 START
+   Home-only visual composition. Functional DOM, ids and module order remain
+   untouched; calculator overlays are explicitly outside this scope. */
+html body:not(.calc-overlay-open) #page-home {
+  --mc-home-r2-bg: #171717;
+  --mc-home-r2-card: #202020;
+  --mc-home-r2-card-hover: #242424;
+  --mc-home-r2-text: #f4f4f4;
+  --mc-home-r2-muted: #a3a3a3;
+  --mc-home-r2-icon: #d4d4d4;
+  --mc-home-r2-line: rgba(255, 255, 255, .075);
+  --mc-home-r2-shadow: 0 12px 32px rgba(0, 0, 0, .16);
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-height: 100% !important;
+  padding: clamp(18px, 3vw, 34px) clamp(14px, 2vw, 24px) 30px !important;
+  background: var(--mc-home-r2-bg) !important;
+  color: var(--mc-home-r2-text) !important;
+}
+
+html[data-theme="light"] body:not(.calc-overlay-open) #page-home,
+html body[data-theme="light"]:not(.calc-overlay-open) #page-home,
+html body.light-mode:not(.calc-overlay-open) #page-home,
+html body.theme-light:not(.calc-overlay-open) #page-home {
+  --mc-home-r2-bg: #f3f3f1;
+  --mc-home-r2-card: #ffffff;
+  --mc-home-r2-card-hover: #fafaf8;
+  --mc-home-r2-text: #202020;
+  --mc-home-r2-muted: #686868;
+  --mc-home-r2-icon: #454545;
+  --mc-home-r2-line: rgba(20, 20, 20, .08);
+  --mc-home-r2-shadow: 0 10px 28px rgba(20, 20, 20, .055);
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-accordion {
+  box-sizing: border-box !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 21fr) minmax(0, 32fr) !important;
+  grid-template-areas:
+    "primary tools"
+    "future future" !important;
+  align-items: start !important;
+  gap: 16px !important;
+  width: min(100%, 1180px) !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-accordion > .hub-section {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-accordion > .hub-section:nth-child(1) { grid-area: primary !important; }
+html body:not(.calc-overlay-open) #page-home #hub-accordion > .hub-section:nth-child(3) { grid-area: tools !important; }
+html body:not(.calc-overlay-open) #page-home #hub-accordion > .hub-section:nth-child(5) { grid-area: future !important; }
+
+html body:not(.calc-overlay-open) #page-home #hub-accordion > .hub-divider {
+  display: none !important;
+}
+
+html body:not(.calc-overlay-open) #page-home :is(.hub-l1-section,.hub-l2-grid,.hub-l3-row) {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-l1-section {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 14px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-l2-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-areas:
+    "interacoes interacoes"
+    "eletrolitos infusao"
+    "fluidos hemodinamica" !important;
+  gap: 14px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-card-interacoes { grid-area: interacoes !important; }
+html body:not(.calc-overlay-open) #page-home #hub-card-eletrolitos { grid-area: eletrolitos !important; }
+html body:not(.calc-overlay-open) #page-home #hub-card-infusao { grid-area: infusao !important; }
+html body:not(.calc-overlay-open) #page-home #hub-card-fluidos { grid-area: fluidos !important; }
+html body:not(.calc-overlay-open) #page-home #hub-card-hemodinamica { grid-area: hemodinamica !important; }
+
+html body:not(.calc-overlay-open) #page-home .hub-l3-row {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.mc-overlay-projected-card),
+html body:not(.calc-overlay-open) #page-home #hub-card-clcr.hub-card--static {
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  border: 1px solid var(--mc-home-r2-line) !important;
+  border-radius: 16px !important;
+  outline: 0 !important;
+  overflow: hidden !important;
+  background: var(--mc-home-r2-card) !important;
+  background-image: none !important;
+  box-shadow: var(--mc-home-r2-shadow) !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open):not(.hub-card--static) > .hub-card-trigger {
+  box-sizing: border-box !important;
+  display: grid !important;
+  grid-template-columns: 24px minmax(0, 1fr) 16px !important;
+  align-items: center !important;
+  column-gap: 14px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 76px !important;
+  margin: 0 !important;
+  padding: 15px 18px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-home-r2-text) !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-l2-grid > .hub-card:not(#hub-card-interacoes) > .hub-card-trigger {
+  min-height: 92px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card[data-level="3"]:not(.is-open) > .hub-card-trigger {
+  grid-template-columns: 24px minmax(0, 1fr) auto 16px !important;
+  min-height: 76px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger:is(:hover,:active) {
+  background: var(--mc-home-r2-card-hover) !important;
+  filter: none !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--mc-home-r2-text) 70%, transparent) !important;
+  outline-offset: -4px !important;
+  border-radius: 14px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-ico {
+  display: grid !important;
+  place-items: center !important;
+  width: 24px !important;
+  min-width: 24px !important;
+  max-width: 24px !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  max-height: 24px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--mc-home-r2-icon) !important;
+  font-size: 18px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-meta {
+  display: grid !important;
+  align-content: center !important;
+  gap: 3px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-name,
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-name * {
+  color: var(--mc-home-r2-text) !important;
+  font-size: 15px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -.01em !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-desc,
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-desc * {
+  color: var(--mc-home-r2-muted) !important;
+  font-size: 12px !important;
+  font-weight: 450 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-chevron {
+  justify-self: end !important;
+  color: var(--mc-home-r2-muted) !important;
+  font-size: 11px !important;
+  opacity: .5 !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-soon-badge {
+  white-space: nowrap !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--mc-home-r2-muted) !important;
+  font-size: 10px !important;
+  font-weight: 550 !important;
+  line-height: 1 !important;
+  opacity: .78 !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-card-clcr .clcr-live-dashboard {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  width: 100% !important;
+  min-height: 96px !important;
+  margin: 0 !important;
+  padding: 12px 6px !important;
+  background: transparent !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-card-clcr .grid-card-clcr {
+  display: grid !important;
+  place-content: center !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+  min-height: 70px !important;
+  margin: 0 !important;
+  padding: 8px 10px !important;
+  border: 0 !important;
+  border-right: 1px solid var(--mc-home-r2-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-align: center !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-card-clcr .grid-card-clcr:last-child {
+  border-right: 0 !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-card-clcr .grid-card-title {
+  color: var(--mc-home-r2-muted) !important;
+  font-size: 9px !important;
+  font-weight: 650 !important;
+  line-height: 1.25 !important;
+  letter-spacing: .075em !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-card-clcr .grid-card-value {
+  color: var(--mc-home-r2-text) !important;
+  font-size: 18px !important;
+  font-weight: 650 !important;
+  line-height: 1 !important;
+  letter-spacing: .01em !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-version-footer {
+  box-sizing: border-box !important;
+  width: min(100%, 1180px) !important;
+  margin: 20px auto 0 !important;
+  padding: 0 2px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--mc-home-r2-muted) !important;
+  font-size: 9px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  letter-spacing: .16em !important;
+  text-align: right !important;
+  opacity: .62 !important;
+}
+
+@media (max-width: 900px) {
+  html body:not(.calc-overlay-open) #page-home {
+    padding: 16px 14px 24px !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-accordion {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas:
+      "primary"
+      "tools"
+      "future" !important;
+    gap: 12px !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home :is(.hub-l1-section,#hub-l2-grid,.hub-l3-row) {
+    gap: 10px !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-l2-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  html body:not(.calc-overlay-open) #page-home .hub-card:not(.mc-overlay-projected-card),
+  html body:not(.calc-overlay-open) #page-home #hub-card-clcr.hub-card--static {
+    border-radius: 14px !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-l2-grid,
+  html body:not(.calc-overlay-open) #page-home .hub-l3-row {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-l2-grid {
+    grid-template-areas:
+      "interacoes"
+      "eletrolitos"
+      "infusao"
+      "fluidos"
+      "hemodinamica" !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open):not(.hub-card--static) > .hub-card-trigger,
+  html body:not(.calc-overlay-open) #page-home #hub-l2-grid > .hub-card:not(#hub-card-interacoes) > .hub-card-trigger {
+    min-height: 68px !important;
+    padding: 13px 15px !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-card-clcr .clcr-live-dashboard {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    min-height: 120px !important;
+    padding: 6px !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-card-clcr .grid-card-clcr {
+    min-height: 58px !important;
+    gap: 6px !important;
+    padding: 7px 8px !important;
+    border-right: 1px solid var(--mc-home-r2-line) !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-card-clcr .grid-card-clcr:nth-child(2n) {
+    border-right: 0 !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-card-clcr .grid-card-clcr:nth-child(-n+2) {
+    border-bottom: 1px solid var(--mc-home-r2-line) !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-card-clcr .grid-card-value {
+    font-size: 17px !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home #hub-version-footer {
+    margin-top: 16px !important;
+    text-align: center !important;
+  }
+}
+/* HOME-PREMIUM-COMPOSITION-R2 END */
+
+/* HOME-PREMIUM-COMPOSITION-R2 specificity lock: runtime legacy owners load
+   after first paint, so the final Home geometry must remain authoritative. */
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin-inline: auto !important;
+}
+
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+.hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > button.hub-card-trigger {
+  grid-template-columns: 24px minmax(0, 1fr) 16px !important;
+  column-gap: 14px !important;
+  min-height: 76px !important;
+  padding: 15px 18px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+.hub-card[data-level="3"]:not(.is-open):not(.mc-overlay-projected-card) > button.hub-card-trigger {
+  grid-template-columns: 24px minmax(0, 1fr) auto 16px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+.hub-card:not(.is-open) > button.hub-card-trigger > .hub-card-ico {
+  width: 24px !important;
+  min-width: 24px !important;
+  max-width: 24px !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  max-height: 24px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+.hub-card:not(.is-open) > button.hub-card-trigger > .hub-card-meta {
+  width: 100% !important;
+  justify-content: start !important;
+  justify-items: start !important;
+  text-align: left !important;
+}
+
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+.hub-card[data-level="1"]:not(.is-open) > button.hub-card-trigger > .hub-card-chevron,
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+.hub-card[data-level="2"]:not(.is-open) > button.hub-card-trigger > .hub-card-chevron {
+  grid-column: 3 !important;
+}
+
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+.hub-card[data-level="3"]:not(.is-open) > button.hub-card-trigger > .hub-soon-badge {
+  grid-column: 3 !important;
+}
+
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+.hub-card[data-level="3"]:not(.is-open) > button.hub-card-trigger > .hub-card-chevron {
+  grid-column: 4 !important;
+}
+
+html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+#hub-l2-grid#hub-l2-grid > .hub-card:not(#hub-card-interacoes) > button.hub-card-trigger {
+  min-height: 92px !important;
+}
+
+@media (max-width: 560px) {
+  html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+  .hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > button.hub-card-trigger {
+    min-height: 68px !important;
+    padding: 13px 15px !important;
+  }
+
+  html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+  #hub-l2-grid#hub-l2-grid > .hub-card:not(#hub-card-interacoes) > button.hub-card-trigger {
+    min-height: 68px !important;
+  }
+}
