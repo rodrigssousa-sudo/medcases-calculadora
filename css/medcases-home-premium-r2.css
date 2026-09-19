@@ -381,6 +381,17 @@ html body:not(.calc-overlay-open) #page-home #hub-version-footer {
   > .hub-section:nth-child(3) > #hub-l2-grid {
     height: 100% !important;
   }
+
+  /* HOME-DESKTOP-ROW-GAP-TRACK-FILL-V1
+     The right column is stretched to the renal column height. Its legacy
+     align-items:start left each card shorter than the stretched grid track,
+     so the visible distance became ~4px although row-gap was already 2px.
+     Stretching the grid items makes the declared 2px row gap the real card
+     edge-to-edge gap, without per-card offsets or any mobile change. */
+  html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion
+  > .hub-section:nth-child(3) > #hub-l2-grid#hub-l2-grid {
+    align-items: stretch !important;
+  }
 }
 
 html body:not(.calc-overlay-open) #page-home#page-home #hub-accordion#hub-accordion {

@@ -26859,7 +26859,7 @@ window.MedCasesBridge = {
 <!-- LEGACY category-pills.js detached by Farmacos Single Owner Phase1A -->
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=610-potassium-fixed-protocol-review"></script>
+<script defer src="js/elec-calc.js?v=646-osmolality-ui-review"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
 <script defer src="js/medcases-router.js?v=562-session-boundary-final"></script>
@@ -27799,7 +27799,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   <link
     id="medcases-webview-home-v1-css"
     rel="stylesheet"
-  data-medcases-path="/css/medcases-webview-home-v1.css?v=622-home-premium-r2"
+  data-medcases-path="/css/medcases-webview-home-v1.css?v=646-osmolality-ui-review"
   >
   <script id="medcases-webview-home-v1-runtime-origin-r1">
   (() => {
@@ -29987,6 +29987,46 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     setNativeResultsVisibility(mountedElements, currentMode === "az");
   }
 
+  /* CALC-FARMACOS-CLEAN-REOPEN-V1
+     A module close is a navigation boundary: no query, tab or subpage state
+     may leak into the next Fármacos session. Reuse the canonical owners and
+     renderer already held by this lifecycle instead of introducing a second
+     search/navigation engine. */
+  function resetFarmacosRoot(reason) {
+    var existing = document.getElementById("farmacos-v2-shell");
+    var elements = mountedElements;
+    if (!existing || !elements || !elements.input) return false;
+
+    existing.removeAttribute("data-mc-fnav-results-active");
+    existing.removeAttribute("data-mc-app-subpage");
+    existing.removeAttribute("data-mc-group-search-query");
+    existing.removeAttribute("data-mc-group-search-visible");
+    var results = existing.querySelector(".mc-fnav-results");
+    if (results) results.removeAttribute("data-source-mode");
+    if (typeof window.__MC_FARMACOS_APP_SUBPAGE_EXIT === "function") {
+      window.__MC_FARMACOS_APP_SUBPAGE_EXIT(existing);
+    }
+
+    elements.input.value = "";
+    try { elements.input.blur(); } catch (error) {}
+    activeContext = "";
+    setMode("az", elements, existing);
+    renderCanonicalAz(existing, elements, false);
+    if (typeof window.hmFilterDrugs === "function") window.hmFilterDrugs("");
+
+    var clear = document.getElementById("hm-search-clear");
+    if (clear) clear.style.setProperty("display", "none");
+
+    existing.setAttribute("data-mc-clean-reopen", "CALC-FARMACOS-CLEAN-REOPEN-V1");
+    if (window.__MC_FARMACOS_CLEAN_REOPEN_V1) {
+      window.__MC_FARMACOS_CLEAN_REOPEN_V1.lastReset = {
+        reason: reason || "unspecified",
+        timestamp: Date.now()
+      };
+    }
+    return true;
+  }
+
   function installMaintenance() {
     if (maintenanceTimer) {
       window.clearInterval(maintenanceTimer);
@@ -30039,6 +30079,8 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
 
         if (id !== "farmacos") return;
 
+        resetFarmacosRoot("farmacos-open");
+
         var existing = document.getElementById("farmacos-v2-shell");
 
         if (existing && existing.isConnected && mountedElements) {
@@ -30049,6 +30091,35 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
         mountVisibleSurface("hub-open-event");
       });
     }
+
+    if (!window.__MC_FARMACOS_CLEAN_REOPEN_CLOSE_BOUND) {
+      var close = document.getElementById("calculator-overlay-close");
+      if (close) {
+        window.__MC_FARMACOS_CLEAN_REOPEN_CLOSE_BOUND = true;
+        var resetOnFarmacosClose = function () {
+          var card = document.getElementById("hub-card-farmacos");
+          if (
+            card &&
+            (
+              card.classList.contains("is-open") ||
+              card.classList.contains("mc-overlay-projected-card")
+            )
+          ) {
+            resetFarmacosRoot("farmacos-close");
+          }
+        };
+        close.addEventListener("pointerdown", resetOnFarmacosClose, true);
+        close.addEventListener("click", resetOnFarmacosClose, true);
+      }
+    }
+
+    window.__MC_FARMACOS_CLEAN_REOPEN_V1 = {
+      build: "CALC-FARMACOS-CLEAN-REOPEN-V1",
+      reset: resetFarmacosRoot,
+      lastReset: window.__MC_FARMACOS_CLEAN_REOPEN_V1
+        ? window.__MC_FARMACOS_CLEAN_REOPEN_V1.lastReset
+        : null
+    };
 
     window.__MC_FARMACOS_FREEZE_V1_B_R3 = {
       build: "MEDCASES-MODULE-SURFACE-SINGLE-OWNER-V1-B-R0-R1",
@@ -32814,6 +32885,26 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     return Boolean(r && r.querySelector('.elec2-elec-btn[data-elec="k"].elec2-elec-btn--active'));
   }
 
+  function isOsmolalityScreen() { return state().electrolyte === 'osm'; }
+
+  function isAnionGapScreen() { return state().electrolyte === 'ag'; }
+
+  function isAlbuminScreen() { return state().electrolyte === 'albumina'; }
+
+  function isGlucoseScreen() { return state().electrolyte === 'glicose'; }
+
+  function isBicarbonateScreen() { return state().electrolyte === 'hco3'; }
+
+  function isPhosphorusScreen() { return state().electrolyte === 'p'; }
+
+  function isCalciumScreen() { return state().electrolyte === 'ca'; }
+
+  function isMagnesiumScreen() { return state().electrolyte === 'mg'; }
+
+  function isChlorideScreen() {
+    return state().electrolyte === 'cl';
+  }
+
   function parseNumber(raw) {
     if (raw == null) return null;
     const cleaned = String(raw)
@@ -32970,7 +33061,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
   }
 
   function splitKnown(line) {
-    const labels = isPotassiumScreen() ? POTASSIUM_RESULT_LABELS : FIELD_LABELS;
+    const labels = isOsmolalityScreen() ? ['Osm Calculada', 'Componentes', 'Fórmula', ...FIELD_LABELS] : isAnionGapScreen() ? ['AG (Ânion Gap)', 'AG Corrigido (albumina)', 'Delta/Delta', 'Fórmula', ...FIELD_LABELS] : isAlbuminScreen() ? ['Ca²⁺ Corrigido', 'AG Corrigido (albumina)', ...FIELD_LABELS] : isCalciumScreen() ? ['Ca²⁺ Corrigido', ...FIELD_LABELS] : (isPotassiumScreen() ? POTASSIUM_RESULT_LABELS : FIELD_LABELS);
     for (const label of labels) {
       const lineKey=line.toLowerCase();
       const labelKey=label.toLowerCase();
@@ -32997,11 +33088,60 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
 
   function standaloneKnownLabel(line) {
     const lineKey = cleanLine(line).toLowerCase();
-    const labels = isPotassiumScreen() ? POTASSIUM_RESULT_LABELS : FIELD_LABELS;
+    const labels = isOsmolalityScreen() ? ['Osm Calculada', 'Componentes', 'Fórmula', ...FIELD_LABELS] : isAnionGapScreen() ? ['AG (Ânion Gap)', 'AG Corrigido (albumina)', 'Delta/Delta', 'Fórmula', ...FIELD_LABELS] : isAlbuminScreen() ? ['Ca²⁺ Corrigido', 'AG Corrigido (albumina)', ...FIELD_LABELS] : isCalciumScreen() ? ['Ca²⁺ Corrigido', ...FIELD_LABELS] : (isPotassiumScreen() ? POTASSIUM_RESULT_LABELS : FIELD_LABELS);
     return labels.find(label => label.toLowerCase() === lineKey) || null;
   }
 
   function severityFrom(stateObj, interpretation, rawText) {
+    if (isOsmolalityScreen()) {
+      const card=root().querySelector('[data-osm-tone]');
+      const tone=card ? card.dataset.osmTone : '';
+      return {tone,label:({baixo:lang()==='es'?'Bajo':'Baixo',alto:'Alto',normal:'Normal'})[tone] || TEXT[lang()].unclassified};
+    }
+    if (isAnionGapScreen()) {
+      const card=root().querySelector('[data-ag-tone]');
+      const tone=card ? card.dataset.agTone : '';
+      return {tone,label:({baixo:lang()==='es'?'Bajo':'Baixo',alto:'Alto',normal:'Normal'})[tone] || TEXT[lang()].unclassified};
+    }
+    if (isAlbuminScreen()) {
+      const card=root().querySelector('[data-albumina-tone]');
+      const tone=card ? card.dataset.albuminaTone : '';
+      return {tone,label:({baixo:lang()==='es'?'Bajo':'Baixo',alto:'Alto',normal:'Normal'})[tone] || TEXT[lang()].unclassified};
+    }
+    if (isGlucoseScreen()) {
+      const card=root().querySelector('[data-glicose-tone]');
+      const tone=card ? card.dataset.glicoseTone : '';
+      const L=TEXT[lang()];
+      return {tone,label:({grave:L.severe,leve:L.mild,alto:'Alto',normal:'Normal'})[tone] || L.unclassified};
+    }
+    if (isBicarbonateScreen()) {
+      const card=root().querySelector('[data-hco3-tone]');
+      const tone=card ? card.dataset.hco3Tone : '';
+      const L=TEXT[lang()];
+      return {tone,label:({grave:L.severe,moderado:L.moderate,alto:'Alto',normal:'Normal'})[tone] || L.unclassified};
+    }
+    if (isPhosphorusScreen()) {
+      const card=root().querySelector('[data-p-tone]');
+      const tone=card ? card.dataset.pTone : '';
+      const L=TEXT[lang()];
+      return {tone,label:({grave:L.severe,moderado:L.moderate,leve:L.mild,alto:'Alto',normal:'Normal'})[tone] || L.unclassified};
+    }
+    if (isCalciumScreen()) {
+      const card=root().querySelector('[data-ca-tone]');
+      const kind=card ? card.dataset.caTone : '';
+      const labels={grave:'Grave','leve-moderado':lang()==='es'?'Leve / Moderada':'Leve / Moderada',alto:'Alto',normal:'Normal'};
+      return {tone:kind==='leve-moderado'?'leve':kind, label:labels[kind] || TEXT[lang()].unclassified};
+    }
+    if (isMagnesiumScreen()) {
+      const card=root().querySelector('[data-mg-tone]');
+      const tone=card ? card.dataset.mgTone : 'normal';
+      const L=TEXT[lang()];
+      return {tone, label:({grave:L.severe,moderado:L.moderate,leve:L.mild,normal:'Normal',alto:'Alto'})[tone] || L.unclassified};
+    }
+    if (isChlorideScreen()) {
+      const level=stateObj.nivel;
+      return {tone:level==='normal'?'normal':'alto', label:level==='baixo'?(lang()==='es'?'Bajo':'Baixo'):level==='alto'?'Alto':'Normal'};
+    }
     const all = (interpretation + ' ' + rawText).toLowerCase();
 
     let tone = stateObj.gravidade || '';
@@ -33108,7 +33248,10 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
 
     const stateChipTexts=Array.from(
       conduct.querySelectorAll('.elec2-chips .elec2-chip')
-    ).map(chip=>cleanLine(chip.textContent)).filter(Boolean);
+    ).map(chip=>{
+      const text=cleanLine(chip.textContent);
+      return isMagnesiumScreen() && /^(Leve|Moderado|Grave)$/.test(text) ? 'Ajuste manual: '+text : text;
+    }).filter(Boolean);
     const stateChipSignature=stateChipTexts.join('').replace(/\s/g,'');
 
     const originalText = cleanLine(conduct.innerText || conduct.textContent || '');
@@ -33188,7 +33331,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
 
     const kicker = doc.createElement('div');
     kicker.className = 'm4c-kicker';
-    kicker.textContent = L.severity;
+    kicker.textContent = (isChlorideScreen() || (isMagnesiumScreen() && st.nivel !== 'baixo') || (isCalciumScreen() && st.nivel !== 'baixo') || (isPhosphorusScreen() && st.nivel !== 'baixo') || (isBicarbonateScreen() && st.nivel !== 'baixo') || (isGlucoseScreen() && st.nivel !== 'baixo') || isAlbuminScreen() || isAnionGapScreen() || isOsmolalityScreen()) ? (lang()==='es'?'Nivel sérico':'Nível sérico') : L.severity;
 
     const sevValue = doc.createElement('div');
     sevValue.className = 'm4c-severity-value';
@@ -33250,7 +33393,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     const r=root();
     if (!r) return;
 
-    const screen=isSodiumScreen() ? 'na' : (isPotassiumScreen() ? 'k' : '');
+    const screen=isSodiumScreen() ? 'na' : (isPotassiumScreen() ? 'k' : (isChlorideScreen() ? 'cl' : (isMagnesiumScreen() ? 'mg' : (isCalciumScreen() ? 'ca' : (isPhosphorusScreen() ? 'p' : (isBicarbonateScreen() ? 'hco3' : (isGlucoseScreen() ? 'glicose' : (isAlbuminScreen() ? 'albumina' : (isAnionGapScreen() ? 'ag' : (isOsmolalityScreen() ? 'osm' : ''))))))))));
     if (!screen) {
       r.removeAttribute('data-m4c-screen');
       return;
@@ -33285,7 +33428,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
   document.addEventListener('click', event => {
     const calc = event.target.closest &&
       event.target.closest('#elec2-calc .elec2-calc-btn');
-    if (calc) deriveLevel();
+    if (calc && !isChlorideScreen() && !isMagnesiumScreen() && !isCalciumScreen() && !isPhosphorusScreen() && !isBicarbonateScreen() && !isGlucoseScreen() && !isAlbuminScreen() && !isAnionGapScreen() && !isOsmolalityScreen()) deriveLevel();
     if (event.target.closest && event.target.closest('#elec2-calc button')) schedule();
   }, true);
 
@@ -33323,7 +33466,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
         )
       : null;
     if (next) applySodiumStateButton(next);
-    if (event.target && event.target.id === 'elec2-in-valor' && !isPotassiumScreen()) {
+    if (event.target && event.target.id === 'elec2-in-valor' && !isPotassiumScreen() && !isChlorideScreen() && !isMagnesiumScreen() && !isCalciumScreen() && !isPhosphorusScreen() && !isBicarbonateScreen() && !isGlucoseScreen() && !isAlbuminScreen() && !isAnionGapScreen() && !isOsmolalityScreen()) {
       deriveLevel();
     }
   }, true);
@@ -33379,7 +33522,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
   }
 
   function setToggleText(btn, expanded) {
-    const isK=btn.closest('#elec2-calc').querySelector('.elec2-elec-btn[data-elec="k"].elec2-elec-btn--active');
+    const isK=btn.closest('#elec2-calc').querySelector('.elec2-elec-btn[data-elec="k"].elec2-elec-btn--active,.elec2-elec-btn[data-elec="mg"].elec2-elec-btn--active,.elec2-elec-btn[data-elec="ca"].elec2-elec-btn--active,.elec2-elec-btn[data-elec="p"].elec2-elec-btn--active,.elec2-elec-btn[data-elec="hco3"].elec2-elec-btn--active,.elec2-elec-btn[data-elec="glicose"].elec2-elec-btn--active');
     const L=isK ? (lang()==='es' ? {open:'Ajustar gravedad clínica',close:'Ocultar ajuste de gravedad'} : {open:'Ajustar gravidade clínica',close:'Ocultar ajuste de gravidade'}) : TEXT[lang()];
     const label=btn.querySelector('.m4d-toggle-label');
     if (label && (!isK || label.textContent!==(expanded ? L.close : L.open))) label.textContent=expanded ? L.close : L.open;
@@ -33392,15 +33535,28 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
 
     const step=root.querySelector('#elec2-step3');
     if (!step) return;
+    if (root.querySelector('.elec2-elec-btn[data-elec="cl"].elec2-elec-btn--active')) {
+      const label=step.querySelector('.elec2-step-label');
+      if (label && label.textContent!=='Protocolo de cloro') label.textContent='Protocolo de cloro';
+      return;
+    }
 
-    const potassium = root.querySelector('.elec2-elec-btn[data-elec="k"].elec2-elec-btn--active');
+    const magnesium = root.querySelector('.elec2-elec-btn[data-elec="mg"].elec2-elec-btn--active');
+    const calcium = root.querySelector('.elec2-elec-btn[data-elec="ca"].elec2-elec-btn--active');
+    const phosphorus = root.querySelector('.elec2-elec-btn[data-elec="p"].elec2-elec-btn--active');
+    const bicarbonate = root.querySelector('.elec2-elec-btn[data-elec="hco3"].elec2-elec-btn--active');
+    const glucose = root.querySelector('.elec2-elec-btn[data-elec="glicose"].elec2-elec-btn--active');
+    const albumin = root.querySelector('.elec2-elec-btn[data-elec="albumina"].elec2-elec-btn--active');
+    const anionGap = root.querySelector('.elec2-elec-btn[data-elec="ag"].elec2-elec-btn--active');
+    const osmolality = root.querySelector('.elec2-elec-btn[data-elec="osm"].elec2-elec-btn--active');
+    const potassium = osmolality || anionGap || albumin || glucose || bicarbonate || phosphorus || calcium || magnesium || root.querySelector('.elec2-elec-btn[data-elec="k"].elec2-elec-btn--active');
     const L=potassium ? (lang()==='es' ? {
-      title:'Protocolo de potasio',
-      helper:'Las prescripciones siguen los protocolos fijos existentes. Formulación, dosis, volumen, tiempo y equipo no admiten ajuste manual.',
+      title:osmolality ? 'Cálculo de osmolaridad' : anionGap ? 'Cálculo del anión gap' : albumin ? 'Protocolo de albúmina' : glucose ? 'Protocolo de glucosa' : bicarbonate ? 'Protocolo de bicarbonato' : phosphorus ? 'Protocolo de fósforo' : calcium ? 'Protocolo de calcio' : (magnesium ? 'Protocolo de magnesio' : 'Protocolo de potasio'),
+      helper:(anionGap || osmolality) ? 'Cálculo a partir de los valores informados, sin parámetros de infusión.' : 'Las prescripciones siguen los protocolos fijos existentes. Formulación, dosis, volumen, tiempo y equipo no admiten ajuste manual.',
       open:'Ajustar gravedad clínica', close:'Ocultar ajuste de gravedad'
     } : {
-      title:'Protocolo de potássio',
-      helper:'As prescrições seguem os protocolos fixos existentes. Formulação, dose, volume, tempo e equipo não têm ajuste manual.',
+      title:osmolality ? 'Cálculo de osmolaridade' : anionGap ? 'Cálculo do ânion gap' : albumin ? 'Protocolo de albumina' : glucose ? 'Protocolo de glicose' : bicarbonate ? 'Protocolo de bicarbonato' : phosphorus ? 'Protocolo de fósforo' : calcium ? 'Protocolo de cálcio' : (magnesium ? 'Protocolo de magnésio' : 'Protocolo de potássio'),
+      helper:(anionGap || osmolality) ? 'Cálculo a partir dos valores informados, sem parâmetros de infusão.' : 'As prescrições seguem os protocolos fixos existentes. Formulação, dose, volume, tempo e equipo não têm ajuste manual.',
       open:'Ajustar gravidade clínica', close:'Ocultar ajuste de gravidade'
     }) : TEXT[lang()];
     const title=step.querySelector(
@@ -33419,7 +33575,14 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
       if (title) title.insertAdjacentElement('afterend',helper);
       else step.prepend(helper);
     }
-    if (!root.matches('[data-m4c-screen="k"]') || helper.textContent!==L.helper) helper.textContent=L.helper;
+    if (!root.matches('[data-m4c-screen="k"],[data-m4c-screen="mg"],[data-m4c-screen="ca"],[data-m4c-screen="p"],[data-m4c-screen="hco3"],[data-m4c-screen="glicose"],[data-m4c-screen="albumina"],[data-m4c-screen="ag"],[data-m4c-screen="osm"]') || helper.textContent!==L.helper) helper.textContent=L.helper;
+
+    if (albumin || anionGap || osmolality) {
+      const previousToggle=step.querySelector(':scope > .m4d-advanced-toggle');
+      if (previousToggle) previousToggle.remove();
+      step.classList.remove('m4d-collapsed');
+      return;
+    }
 
     let toggle=step.querySelector(':scope > .m4d-advanced-toggle');
     if (!toggle) {
@@ -33539,9 +33702,9 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
           '.elec2-state-lbl,.elec2-semantic-label,.elec2-group-label'
         );
         const helper=existing.querySelector('.m4e-gravity-helper');
-        const L=TEXT[lang()];
-        if (label && (!root.matches('[data-m4c-screen="k"]') || label.textContent!==L.label)) label.textContent=L.label;
-        if (helper && (!root.matches('[data-m4c-screen="k"]') || helper.textContent!==L.helper)) helper.textContent=L.helper;
+        const L=root.matches('[data-m4c-screen="mg"]') ? {...TEXT[lang()],helper:lang()==='es'?'La gravedad seleccionada ajusta el protocolo de hipomagnesemia; el resultado prioriza la indicación emitida.':'A gravidade selecionada ajusta o protocolo de hipomagnesemia; o resultado prioriza a indicação emitida.'} : TEXT[lang()];
+        if (label && (!root.matches('[data-m4c-screen="k"],[data-m4c-screen="mg"],[data-m4c-screen="ca"],[data-m4c-screen="p"],[data-m4c-screen="hco3"],[data-m4c-screen="glicose"],[data-m4c-screen="albumina"],[data-m4c-screen="ag"],[data-m4c-screen="osm"]') || label.textContent!==L.label)) label.textContent=L.label;
+        if (helper && (!root.matches('[data-m4c-screen="k"],[data-m4c-screen="mg"],[data-m4c-screen="ca"],[data-m4c-screen="p"],[data-m4c-screen="hco3"],[data-m4c-screen="glicose"],[data-m4c-screen="albumina"],[data-m4c-screen="ag"],[data-m4c-screen="osm"]') || helper.textContent!==L.helper)) helper.textContent=L.helper;
       }
       return;
     }
@@ -33559,7 +33722,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
       label=null;
     }
 
-    const L=TEXT[lang()];
+    const L=root.matches('[data-m4c-screen="mg"]') ? {...TEXT[lang()],helper:lang()==='es'?'La gravedad seleccionada ajusta el protocolo de hipomagnesemia; el resultado prioriza la indicación emitida.':'A gravidade selecionada ajusta o protocolo de hipomagnesemia; o resultado prioriza a indicação emitida.'} : TEXT[lang()];
     const wrap=document.createElement('div');
     wrap.className='m4e-gravity-override m4d-advanced-content';
     wrap.setAttribute('data-m4e-gravity-override','true');
@@ -33576,7 +33739,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
 
     const helper=document.createElement('div');
     helper.className='m4e-gravity-helper';
-    if (!root.matches('[data-m4c-screen="k"]') || helper.textContent!==L.helper) helper.textContent=L.helper;
+    if (!root.matches('[data-m4c-screen="k"],[data-m4c-screen="mg"],[data-m4c-screen="ca"],[data-m4c-screen="p"],[data-m4c-screen="hco3"],[data-m4c-screen="glicose"],[data-m4c-screen="albumina"],[data-m4c-screen="ag"],[data-m4c-screen="osm"]') || helper.textContent!==L.helper) helper.textContent=L.helper;
     wrap.appendChild(helper);
     wrap.appendChild(row);
 
@@ -33994,6 +34157,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     const value=severity && severity.querySelector('.m4c-severity-value');
     const note=severity && severity.querySelector('.m4c-severity-note');
     if (!severity || !value || !note) return;
+    if (result.closest('#elec2-calc[data-m4c-screen="cl"],#elec2-calc[data-m4c-screen="mg"],#elec2-calc[data-m4c-screen="ca"],#elec2-calc[data-m4c-screen="p"],[data-m4c-screen="hco3"],[data-m4c-screen="glicose"],[data-m4c-screen="albumina"],[data-m4c-screen="ag"],[data-m4c-screen="osm"]')) return;
 
     const raw=clean(note.textContent);
     const m=raw.match(/^(grave|moderad[oa]?|leve|normal)\s*[—–-]\s*(.+)$/i);
@@ -34383,6 +34547,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     const note=severity && severity.querySelector('.m4c-severity-note');
 
     if (!severity || !value || !note) return;
+    if (result.closest('#elec2-calc[data-m4c-screen="cl"],#elec2-calc[data-m4c-screen="mg"],#elec2-calc[data-m4c-screen="ca"],#elec2-calc[data-m4c-screen="p"],[data-m4c-screen="hco3"],[data-m4c-screen="glicose"],[data-m4c-screen="albumina"],[data-m4c-screen="ag"],[data-m4c-screen="osm"]')) return;
 
     const source=clean(note.textContent);
     /* Prioridade exclusivamente visual de um alerta emitido pelo protocolo de K. */
@@ -68443,12 +68608,12 @@ console.info('['+BUILD+'] MOUNTED',{
   else start();
 })();
 </script>
-<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V1 BEGIN -->
-<script id="medcases-farmacos-nav-single-panel-v1">
+<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V2 BEGIN -->
+<script id="medcases-farmacos-nav-single-panel-v2">
 (() => {
   'use strict';
-  const BUILD='CALC-FARMACOS-NAV-SINGLE-PANEL-V1';
-  if (window.__mcFarmacosNavSinglePanelV1) return;
+  const BUILD='CALC-FARMACOS-NAV-SINGLE-PANEL-V2';
+  if (window.__mcFarmacosNavSinglePanelV2) return;
 
   let scheduled=0;
   const microtask=callback => window.queueMicrotask
@@ -68463,17 +68628,35 @@ console.info('['+BUILD+'] MOUNTED',{
     sh?.querySelector('[data-farmacos-mode].is-active,[data-farmacos-mode][aria-selected="true"]')
   ) || 'az';
 
+  const lockVisiblePanel=(sh,mode) => {
+    const runtime=sh.querySelector(':scope > #mc-pharm-runtime-panel');
+    const canonical=[...sh.querySelectorAll(':scope > [data-farmacos-panel]')];
+    canonical.forEach(panel => {
+      const active=mode!=='groups' && panel.getAttribute('data-farmacos-panel')===mode;
+      panel.classList.toggle('is-active',active);
+      panel.style.setProperty('display',active?'block':'none','important');
+      panel.setAttribute('aria-hidden',active?'false':'true');
+    });
+    if (runtime) {
+      const active=mode==='groups';
+      runtime.classList.toggle('is-active',active);
+      runtime.style.setProperty('display',active?'block':'none','important');
+      runtime.setAttribute('aria-hidden',active?'false':'true');
+    }
+  };
+
   const normalize=mode => {
     const sh=shell();
     if (!sh) return false;
     if (!['contexts','groups','az'].includes(mode)) mode='az';
 
     const owner=window.__mcFarmacosGlobalSearchInstantInputMobileV1BR0;
-    const runtime=sh.querySelector(':scope > #mc-pharm-runtime-panel');
-    const canonical=[...sh.querySelectorAll(':scope > [data-farmacos-panel]')];
+    lockVisiblePanel(sh,mode);
 
     if (mode==='groups') owner?.activateGroups?.();
     else owner?.deactivateGroups?.();
+
+    lockVisiblePanel(sh,mode);
 
     sh.dataset.mcFarmNavMode=mode;
     [...sh.querySelectorAll('[data-farmacos-mode]')].forEach(tab => {
@@ -68484,15 +68667,6 @@ console.info('['+BUILD+'] MOUNTED',{
       tab.tabIndex=selected?0:-1;
     });
 
-    canonical.forEach(panel => {
-      panel.style.removeProperty('display');
-      panel.classList.toggle(
-        'is-active',
-        mode!=='groups' && panel.getAttribute('data-farmacos-panel')===mode
-      );
-    });
-
-    if (runtime) runtime.classList.toggle('is-active',mode==='groups');
     return true;
   };
 
@@ -68526,7 +68700,9 @@ console.info('['+BUILD+'] MOUNTED',{
     ) {
       const sh=shell();
       if (sh && currentMode(sh)!=='az') {
+        normalize('az');
         sh.querySelector('[data-farmacos-mode="az"]')?.click();
+        normalize('az');
         schedule('az');
         try { search.focus({preventScroll:true}); }
         catch (_) { search.focus(); }
@@ -68555,7 +68731,9 @@ console.info('['+BUILD+'] MOUNTED',{
     if (!sh || currentMode(sh)==='az') return;
     const az=sh.querySelector('[data-farmacos-mode="az"]');
     if (!az) return;
+    normalize('az');
     az.click();
+    normalize('az');
     schedule('az');
     try { input.focus({preventScroll:true}); }
     catch (_) { input.focus(); }
@@ -68568,16 +68746,16 @@ console.info('['+BUILD+'] MOUNTED',{
     return normalize(currentMode(sh));
   };
 
-  window.__mcFarmacosNavSinglePanelV1=Object.freeze({build:BUILD,normalize,schedule});
+  window.__mcFarmacosNavSinglePanelV2=Object.freeze({build:BUILD,normalize,schedule});
   microtask(boot);
   nextFrame(() => nextFrame(boot));
   window.setTimeout(boot,250);
   window.setTimeout(boot,800);
 })();
 </script>
-<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V1 END -->
-<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=630-desktop-grid-aligned" />
-<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=630-desktop-grid-aligned" />
+<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V2 END -->
+<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=646-osmolality-ui-review" />
+<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=632-farmacos-atomic-first-key" />
 
 </body>
 </html>

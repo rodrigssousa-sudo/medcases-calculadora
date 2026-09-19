@@ -109,11 +109,11 @@
         pt: ['⚠️ Monitorar reflexos patelares, FR e PA durante infusão',
              '⚠️ Antídoto da toxicidade: gluconato de cálcio 10% 1 g IV lento',
              'Toxicidade: hiporreflexia, depressão respiratória, bloqueio cardíaco',
-             'Reduzir dose em ClCr <30 mL/min'],
+             'Insuficiência renal: individualizar a prescrição e monitorar magnesemia, diurese e sinais clínicos'],
         es: ['⚠️ Monitorear reflejos patelares, FR y PA durante infusión',
              '⚠️ Antídoto de toxicidad: gluconato de calcio 10% 1 g IV lento',
              'Toxicidad: hiporreflexia, depresión respiratoria, bloqueo cardíaco',
-             'Reducir dosis con ClCr <30 mL/min']
+             'Insuficiencia renal: individualizar la prescripción y monitorizar magnesemia, diuresis y signos clínicos']
       }
     },
     'bicarb84': {
@@ -643,9 +643,16 @@
       /* ── Clínico: Magnésio ── */
       hip_mg: 'Hipomagnesemia',
       hip_mg_grave_alerta: '🚨 Hipomagnesemia grave — risco de arritmias e convulsões',
-      hip_mg_torsades: 'Torsades / Eclâmpsia — dose de ataque',
-      hip_mg_torsades2: '⚠️ Monitorar PA, FR, reflexos patelares · Antídoto: gluconato de Ca 10% 1 g IV',
-      hip_mg_clcr: '⚠️ ClCr <30: reduzir dose em 50% — acúmulo e risco de toxicidade aumentados',
+      hip_mg_torsades: 'Torsades de Pointes associada a QT longo',
+      hip_mg_torsades2: '⚠️ Protocolo próprio de emergência. Não compartilhar preparo, volume ou velocidade com eclâmpsia.',
+      hip_mg_eclampsia: 'Pré-eclâmpsia/eclâmpsia',
+      hip_mg_eclampsia_renal: 'Pré-eclâmpsia/eclâmpsia · insuficiência renal grave/oligúria',
+      hip_mg_eclampsia_dose: 'Carga 4–6 g IV → manutenção 1–2 g/h',
+      hip_mg_eclampsia_renal_dose: 'Carga 4 g IV → manutenção 1 g/h',
+      hip_mg_eclampsia_tempo: 'Carga em 15 min; depois infusão contínua',
+      hip_mg_eclampsia_alert: 'Monitorar PA, FR, reflexos patelares, diurese e magnesemia. Em recorrência de eclâmpsia, considerar 2 g IV adicionais.',
+      hip_mg_eclampsia_renal_alert: '⚠️ Máximo de 20 g em 48 h. Se diurese <100 mL/4 h, especialmente com creatinina crescente, interromper a infusão para evitar toxicidade.',
+      hip_mg_clcr: '⚠️ ClCr <30: insuficiência renal aumenta o risco de toxicidade. Não aplicar redução percentual automática; individualizar e monitorar magnesemia, diurese e sinais clínicos.',
       hiper_mg: 'Hipermagnesemia',
       hiper_mg_suspender: '⚠️ Suspender toda fonte de magnésio',
       hiper_mg_antidoto: 'Antagoniza efeitos cardíacos do Mg²⁺ — efeito imediato porém temporário',
@@ -665,9 +672,15 @@
       hip_ca_veia: '⚠️ Veia calibrosa — risco de flebite/necrose. Preferir central se disponível',
       hip_ca_manut_monitor: 'Central ou veia de grosso calibre — monitorar Ca²⁺ a cada 4–6h',
       hiper_ca: 'Hipercalcemia',
-      hiper_ca_hidrat: 'Hipercalcemia — hidratação vigorosa',
-      hiper_ca_bal: 'Monitorar balanço hídrico e eletrólitos',
-      hiper_ca_furo: 'Furosemida apenas após hidratação adequada',
+      hiper_ca_hidrat: 'Hipercalcemia aguda grave/sintomática com hipovolemia',
+      hiper_ca_taxa: 'Taxa inicial; reavaliar e titular',
+      hiper_ca_volume: '≈3–4 L em 24–48h, individualizado',
+      hiper_ca_bal: 'Objetivo: restaurar euvolemia. Titular conforme estado volêmico, PA, função renal e balanço hídrico; alvo de diurese 100–150 mL/h.',
+      hiper_ca_risco_volume: '⚠️ IC, DRC/IRA, idosos ou sinais de congestão: individualizar volume e velocidade com monitorização estreita.',
+      hiper_ca_sem_urgencia: 'Hipercalcemia sem critério automático de tratamento urgente',
+      hiper_ca_sem_urgencia_conduta: 'Investigar a causa; avaliar sintomas, velocidade de elevação, volemia e confirmar cálcio corrigido/ionizado conforme o contexto.',
+      hiper_ca_intermediaria: 'Ca 12–14 mg/dL sem sintomas agudos: a conduta depende da velocidade de elevação e do estado volêmico; reavaliar clinicamente.',
+      hiper_ca_furo: 'Diurético de alça não deve ser usado rotineiramente para forçar calciurese; considerar apenas se houver sobrecarga volêmica.',
       hiper_ca_bifosf: 'Considerar bifosfonatos, calcitonina, diálise se grave',
       /* ── Clínico: Fósforo ── */
       hip_p: 'Hipofosfatemia',
@@ -887,9 +900,16 @@
       /* ── Clínico: Magnésio ── */
       hip_mg: 'Hipomagnesemia',
       hip_mg_grave_alerta: '🚨 Hipomagnesemia grave — riesgo de arritmias y convulsiones',
-      hip_mg_torsades: 'Torsades / Eclampsia — dosis de ataque',
-      hip_mg_torsades2: '⚠️ Monitorear PA, FR, reflejos patelares · Antídoto: gluconato de Ca 10% 1 g IV',
-      hip_mg_clcr: '⚠️ ClCr <30: reducir dosis en 50% — acúmulo y riesgo de toxicidad aumentados',
+      hip_mg_torsades: 'Torsades de Pointes asociada a QT largo',
+      hip_mg_torsades2: '⚠️ Protocolo propio de emergencia. No compartir preparación, volumen ni velocidad con eclampsia.',
+      hip_mg_eclampsia: 'Preeclampsia/eclampsia',
+      hip_mg_eclampsia_renal: 'Preeclampsia/eclampsia · insuficiencia renal grave/oliguria',
+      hip_mg_eclampsia_dose: 'Carga 4–6 g IV → mantenimiento 1–2 g/h',
+      hip_mg_eclampsia_renal_dose: 'Carga 4 g IV → mantenimiento 1 g/h',
+      hip_mg_eclampsia_tempo: 'Carga en 15 min; después infusión continua',
+      hip_mg_eclampsia_alert: 'Monitorizar PA, FR, reflejos patelares, diuresis y magnesemia. En recurrencia de eclampsia, considerar 2 g IV adicionales.',
+      hip_mg_eclampsia_renal_alert: '⚠️ Máximo de 20 g en 48 h. Si la diuresis es <100 mL/4 h, especialmente con creatinina creciente, interrumpir la infusión para evitar toxicidad.',
+      hip_mg_clcr: '⚠️ ClCr <30: la insuficiencia renal aumenta el riesgo de toxicidad. No aplicar una reducción porcentual automática; individualizar y monitorizar magnesemia, diuresis y signos clínicos.',
       hiper_mg: 'Hipermagnesemia',
       hiper_mg_suspender: '⚠️ Suspender toda fuente de magnesio',
       hiper_mg_antidoto: 'Antagoniza efectos cardíacos del Mg²⁺ — efecto inmediato pero temporal',
@@ -909,9 +929,15 @@
       hip_ca_veia: '⚠️ Vena calibrosa — riesgo de flebitis/necrosis. Preferir central si disponible',
       hip_ca_manut_monitor: 'Central o vena de grueso calibre — monitorear Ca²⁺ cada 4–6h',
       hiper_ca: 'Hipercalcemia',
-      hiper_ca_hidrat: 'Hipercalcemia — hidratación vigorosa',
-      hiper_ca_bal: 'Monitorear balance hídrico y electrolitos',
-      hiper_ca_furo: 'Furosemida solo tras hidratación adecuada',
+      hiper_ca_hidrat: 'Hipercalcemia aguda grave/sintomática con hipovolemia',
+      hiper_ca_taxa: 'Tasa inicial; reevaluar y titular',
+      hiper_ca_volume: '≈3–4 L en 24–48h, individualizado',
+      hiper_ca_bal: 'Objetivo: restaurar euvolemia. Titular según estado volémico, PA, función renal y balance hídrico; objetivo de diuresis 100–150 mL/h.',
+      hiper_ca_risco_volume: '⚠️ IC, ERC/LRA, ancianos o signos de congestión: individualizar volumen y velocidad con monitorización estrecha.',
+      hiper_ca_sem_urgencia: 'Hipercalcemia sin criterio automático de tratamiento urgente',
+      hiper_ca_sem_urgencia_conduta: 'Investigar la causa; evaluar síntomas, velocidad de elevación, volemia y confirmar calcio corregido/ionizado según el contexto.',
+      hiper_ca_intermediaria: 'Ca 12–14 mg/dL sin síntomas agudos: la conducta depende de la velocidad de elevación y del estado volémico; reevaluar clínicamente.',
+      hiper_ca_furo: 'El diurético de asa no debe usarse rutinariamente para forzar calciuresis; considerar solo si existe sobrecarga de volumen.',
       hiper_ca_bifosf: 'Considerar bifosfonatos, calcitonina, diálisis si grave',
       /* ── Clínico: Fósforo ── */
       hip_p: 'Hipofosfatemia',
@@ -1321,21 +1347,38 @@
             asp: '8–16 mL de MgSO₄ 50%',
             dilui: 'SF 0,9% 250–500 mL',
             volfinal: '250–500 mL',
-            tempo: isReduced ? '12–24h (ClCr <30)' : '12–24h',
-            mlh: isReduced ? '10–20' : '20–40',
+            tempo: '12–24h',
+            mlh: '20–40',
             gtas: '—', micro: '—',
             alerta_acesso: t.mg_central
           };
           out.op2 = {
             indicacao: t.hip_mg_torsades,
-            dose: '2 g em 10–20 min',
-            form: 'MgSO₄ 50%',
-            asp: '4 mL de MgSO₄ 50%',
-            dilui: 'SF 0,9% 50–100 mL',
-            volfinal: '50–100 mL',
-            tempo: '10–20 min',
-            mlh: 300, gtas: Math.round(100*20/15), micro: Math.round(100*60/15),
+            dose: '2 g IV',
+            form: 'MgSO₄',
+            asp: '—',
+            dilui: '—',
+            volfinal: '—',
+            tempo: 'Conforme protocolo de emergência',
+            mlh: '—', gtas: '—', micro: '—',
             alerta_acesso: t.hip_mg_torsades2
+          };
+          out.op3 = isReduced ? {
+            indicacao: t.hip_mg_eclampsia_renal,
+            dose: t.hip_mg_eclampsia_renal_dose,
+            form: 'MgSO₄',
+            asp: '—', dilui: '—', volfinal: '—',
+            tempo: t.hip_mg_eclampsia_tempo,
+            mlh: '—', gtas: '—', micro: '—',
+            alerta_acesso: t.hip_mg_eclampsia_renal_alert
+          } : {
+            indicacao: t.hip_mg_eclampsia,
+            dose: t.hip_mg_eclampsia_dose,
+            form: 'MgSO₄',
+            asp: '—', dilui: '—', volfinal: '—',
+            tempo: t.hip_mg_eclampsia_tempo,
+            mlh: '—', gtas: '—', micro: '—',
+            alerta_acesso: t.hip_mg_eclampsia_alert
           };
         } else if (s.gravidade === 'moderado') {
           out.op1 = {
@@ -1345,9 +1388,9 @@
             asp: '4 mL de MgSO₄ 50%',
             dilui: 'SF 0,9% 100 mL',
             volfinal: '100 mL',
-            tempo: isReduced ? '2h (ClCr <30)' : '1–2h',
-            mlh: isReduced ? 50 : 100,
-            gtas: Math.round(100*20/120), micro: Math.round(100*60/60),
+            tempo: '1h',
+            mlh: 100,
+            gtas: Math.round(100*20/60), micro: Math.round(100*60/60),
             alerta_acesso: t.mg_periph_ok
           };
         } else {
@@ -1358,8 +1401,8 @@
             asp: '4 mL de MgSO₄ 50%',
             dilui: 'SF 0,9% 250 mL',
             volfinal: '250 mL',
-            tempo: isReduced ? '4h (ClCr <30)' : '2h',
-            mlh: isReduced ? 63 : 125,
+            tempo: '2h',
+            mlh: 125,
             gtas: '—', micro: '—',
             alerta_acesso: 'Periférico — OK'
           };
@@ -1441,16 +1484,30 @@
         }
       } else if (s.nivel === 'alto' || (v != null && v > 10.5)) {
         out.interpretacao = t.hiper_ca + ' — Ca ' + (v ? Math.round(v*10)/10 : '?') + ' mg/dL';
-        out.op1 = {
-          indicacao: t.hiper_ca_hidrat,
-          dose: 'SF 0,9% 200–300 mL/h',
-          form: 'SF 0,9%', asp: '—', dilui: '—',
-          volfinal: '2–4 L/24h', tempo: '24h',
-          mlh: '200–300', gtas: '—', micro: '—',
-          alerta_acesso: t.hiper_ca_bal
-        };
-        out.alertas.push(t.hiper_ca_furo);
-        out.alertas.push(t.hiper_ca_bifosf);
+        var acuteHypercalcemia = v != null && (v > 14 || (v > 12 && s.sintomas === 'sintomat'));
+        if (acuteHypercalcemia) {
+          out.op1 = {
+            indicacao: t.hiper_ca_hidrat,
+            dose: 'NaCl 0,9% IV',
+            form: 'NaCl 0,9%', asp: '—', dilui: '—',
+            volfinal: t.hiper_ca_volume,
+            tempo: t.hiper_ca_taxa,
+            mlh: 'Inicial: 200–300', gtas: '—', micro: '—',
+            alerta_acesso: t.hiper_ca_bal
+          };
+          out.alertas.push(t.hiper_ca_risco_volume);
+          out.alertas.push(t.hiper_ca_furo);
+          out.alertas.push(t.hiper_ca_bifosf);
+        } else {
+          out.recontrole = '';
+          out.op1 = {
+            indicacao: t.hiper_ca_sem_urgencia,
+            dose: '—', form: '—', asp: '—', dilui: '—',
+            volfinal: '—', tempo: '—', mlh: '—', gtas: '—', micro: '—',
+            alerta_acesso: t.hiper_ca_sem_urgencia_conduta
+          };
+          if (v != null && v > 12) out.alertas.push(t.hiper_ca_intermediaria);
+        }
       } else {
         out.interpretacao = t.lbl_normal + ' — Ca²⁺ ' + (v ? Math.round(v*10)/10 : '?') + ' mg/dL';
       }
@@ -1675,6 +1732,8 @@
       var alb = s.albumina;
 
       var ag = Formulas.calcAG(na, cl, hco3);
+      /* Evita mudar a classificação por ruído binário no limiar exato. */
+      if (ag != null) ag = Number(ag.toFixed(10));
       var agCorr = (ag != null && alb != null) ? Formulas.calcAGCorrigido(ag, alb) : null;
 
       out.estado.ag = ag != null ? Math.round(ag * 10) / 10 + ' mEq/L' : '—';
@@ -1728,6 +1787,8 @@
       var glicose = s.glicose;
       var ureia = s.ureia;
       var osm = Formulas.calcOsmolaridade(na, glicose, ureia);
+      /* Estabilidade decimal nos limites, sem mudar a fórmula compartilhada. */
+      if (osm != null) osm = Number(osm.toFixed(10));
 
       out.estado.osmCalculada = osm != null ? Math.round(osm) + ' mOsm/L' : '—';
       out.estado.formula = 'Osm = 2×Na + Glicose/18 + Ureia/2,8';
@@ -1886,6 +1947,8 @@
 
       var out = logic(s, t);
 
+
+
       var html = '';
 
       /* BLOCO 1: Estado */
@@ -1991,12 +2054,21 @@
       if (!elecKey) return '';
       var t = I18N[lang] || I18N.pt;
       var elec = ELECTROLYTES[elecKey];
-      var states = elec ? elec.states : ['nivel'];
+      var states = elecKey === 'osm' ? [] : elecKey === 'ag' ? [] : elecKey === 'albumina' ? [] : elecKey === 'glicose' ? ['gravidade', 'sintomas'] : elecKey === 'hco3' ? ['gravidade'] : elecKey === 'p' ? ['gravidade'] : elecKey === 'ca' ? ['gravidade', 'sintomas', 'ecg'] : elecKey === 'cl' ? [] : (elecKey === 'mg' ? ['gravidade', 'acesso'] : (elec ? elec.states : ['nivel']));
       var html = '<div class="elec2-step" id="elec2-step2">';
       html += '<div class="elec2-step-hd"><span class="elec2-step-num">2</span>' + t.step2_title + '</div>';
 
       /* Campos numéricos do eletrólito selecionado */
       html += ElecUI._renderNumericFields(lang, elecKey, s, t);
+      if (elecKey === 'p') html += '<p class="elec2-protocol-note">' + (lang === 'es' ? 'Sin peso informado, el cálculo existente usa 70 kg. ClCr es opcional.' : 'Sem peso informado, o cálculo existente usa 70 kg. ClCr é opcional.') + '</p>';
+
+      if (elecKey === 'hco3') html += '<p class="elec2-protocol-note">' + (lang === 'es' ? 'Sin peso informado, el cálculo existente usa 70 kg. pH y pCO₂ son datos de contexto: no participan en el cálculo ni validan la indicación de bicarbonato.' : 'Sem peso informado, o cálculo existente usa 70 kg. pH e pCO₂ são dados de contexto: não participam do cálculo nem validam a indicação de bicarbonato.') + '</p>';
+
+      if (elecKey === 'albumina') html += '<p class="elec2-protocol-note">' + (lang === 'es' ? 'Calcio opcional para la corrección por albúmina. Para el AG corregido, complete Na⁺, Cl⁻ y HCO₃⁻; los tres pueden quedar vacíos.' : 'Cálcio opcional para a correção por albumina. Para o AG corrigido, preencha Na⁺, Cl⁻ e HCO₃⁻; os três podem ficar vazios.') + '</p>';
+
+      if (elecKey === 'ag') html += '<p class="elec2-protocol-note">' + (lang === 'es' ? 'Na⁺, Cl⁻ y HCO₃⁻ son obligatorios. Albúmina opcional para el AG corregido. La clasificación usa el AG sin corrección (referencia 8–12 mEq/L); el corregido se muestra por separado.' : 'Na⁺, Cl⁻ e HCO₃⁻ são obrigatórios. Albumina opcional para o AG corrigido. A classificação usa o AG sem correção (referência 8–12 mEq/L); o corrigido é mostrado separadamente.') + '</p>';
+
+      if (elecKey === 'osm') html += '<p class="elec2-protocol-note">' + (lang === 'es' ? 'Complete Na⁺, glucosa y urea en las unidades indicadas. Los tres campos son obligatorios.' : 'Preencha Na⁺, glicose e ureia nas unidades indicadas. Os três campos são obrigatórios.') + '</p>';
 
       /* Grupos de botões de estado */
       states.forEach(function (stateType) {
@@ -2010,7 +2082,7 @@
     /* ── Campos numéricos — BUILD 242: inputs com oninput puro (sem render) ── */
     _renderNumericFields: function (lang, elecKey, s, t) {
       var elec = ELECTROLYTES[elecKey];
-      var fields = elec ? elec.fields : [];
+      var fields = elecKey === 'albumina' ? ['valor', 'ca', 'na', 'cl', 'hco3'] : elecKey === 'glicose' ? ['valor'] : elecKey === 'hco3' ? ['valor', 'peso', 'ph', 'pco2'] : elecKey === 'ca' ? ['valor', 'albumina'] : elecKey === 'cl' ? ['valor'] : (elecKey === 'mg' ? ['valor', 'clcr'] : (elec ? elec.fields : []));
       if (!fields.length) return '';
 
       var html = '<div class="elec2-fields-grid">';
@@ -2018,15 +2090,17 @@
         var lbl, id, ph;
         switch (f) {
           case 'valor':   lbl = t.lbl_valor + ' (' + elec.unit + ')'; id = 'elec2-in-valor';   ph = elec.refLow + '–' + elec.refHigh; break;
+          case 'ph': lbl = 'pH · ' + (lang === 'es' ? 'contexto' : 'contexto'); id = 'elec2-in-ph'; ph = '7,40'; break;
+          case 'pco2': lbl = 'pCO₂ (mmHg) · contexto'; id = 'elec2-in-pco2'; ph = '40'; break;
           case 'peso':    lbl = t.lbl_peso;    id = 'elec2-in-peso';    ph = '70';  break;
           case 'glicose': lbl = t.lbl_glicose; id = 'elec2-in-glicose'; ph = '100'; break;
-          case 'albumina':lbl = t.lbl_albumina;id = 'elec2-in-albumina';ph = '4.0'; break;
+          case 'albumina':lbl = t.lbl_albumina + (elecKey === 'ca' ? ' · opcional' : '');id = 'elec2-in-albumina';ph = '4.0'; break;
           case 'na':      lbl = t.lbl_na;      id = 'elec2-in-na';      ph = '140'; break;
           case 'cl':      lbl = t.lbl_cl;      id = 'elec2-in-cl';      ph = '102'; break;
           case 'hco3':    lbl = t.lbl_hco3;    id = 'elec2-in-hco3';    ph = '24';  break;
           case 'ureia':   lbl = t.lbl_ureia;   id = 'elec2-in-ureia';   ph = '40';  break;
           case 'ca':      lbl = t.lbl_ca_input;id = 'elec2-in-ca';      ph = '9.0'; break;
-          case 'clcr':    lbl = 'ClCr (mL/min)';id='elec2-in-clcr';     ph = '90';  break;
+          case 'clcr':    lbl = 'ClCr (mL/min)' + (elecKey === 'mg' ? ' · opcional' : '');id='elec2-in-clcr';     ph = '90';  break;
           default: lbl = f; id = 'elec2-in-' + f; ph = '';
         }
         /* BUILD 242 — valor inicial: usa _rawFields se disponível (preserva digitação
@@ -2052,7 +2126,7 @@
       });
 
       /* Sexo/Idade se peso estiver nos campos */
-      if (fields.indexOf('peso') >= 0) {
+      if (fields.indexOf('peso') >= 0 && elecKey !== 'p' && elecKey !== 'hco3' && elecKey !== 'glicose' && elecKey !== 'albumina' && elecKey !== 'ag' && elecKey !== 'osm') {
         html += '<div class="elec2-field elec2-field--full">' +
           '<label class="elec2-field-lbl">' + t.lbl_sexo + '</label>' +
           '<div class="elec2-btn-row">' +
@@ -2145,10 +2219,22 @@
       var t = I18N[lang] || I18N.pt;
       var elec = ELECTROLYTES[elecKey];
       var html = '<div class="elec2-step" id="elec2-step3">';
+      if (elecKey === 'cl') {
+        var es = lang === 'es';
+        return html + '<div class="elec2-step-hd"><span class="elec2-step-num">3</span>' +
+          (es ? 'Protocolo de cloro' : 'Protocolo de cloro') + '</div>' +
+          '<p class="elec2-protocol-note">' + (es
+            ? 'La clasificación usa el cloro sérico. Las conductas siguen los protocolos fijos existentes; sodio, bicarbonato y ajustes de infusión no intervienen en este cálculo.'
+            : 'A classificação usa o cloro sérico. As condutas seguem os protocolos fixos existentes; sódio, bicarbonato e ajustes de infusão não entram neste cálculo.') + '</p>' +
+          '<div class="elec2-form-actions"><button class="elec2-action-btn elec2-action-btn--secondary" onclick="ElecCalc.reset()">' +
+          '<i class="fa-solid fa-rotate-left"></i> ' + t.limpar + '</button>' +
+          '<button class="elec2-calc-btn" onclick="ElecCalc.calculate()"><i class="fa-solid fa-flask-vial"></i> ' + t.calcular + '</button></div></div>';
+      }
+
       html += '<div class="elec2-step-hd"><span class="elec2-step-num">3</span>' + t.step4_title + '</div>';
 
       /* Potássio usa protocolos fixos: não oferecer presets ignorados pela lógica. */
-      if (elecKey !== 'k') {
+      if (elecKey !== 'k' && elecKey !== 'mg' && elecKey !== 'ca' && elecKey !== 'p' && elecKey !== 'hco3' && elecKey !== 'glicose' && elecKey !== 'albumina' && elecKey !== 'ag' && elecKey !== 'osm') {
       /* Formulação */
       var forms = elec ? elec.defaultFormulations : [];
       if (forms.length) {
@@ -2229,14 +2315,14 @@
       }
 
       /* Ações principais: um único owner de limpeza + cálculo. */
-      if (elecKey === 'k') html += '<div class="elec2-form-actions">';
+      if (elecKey === 'k' || elecKey === 'mg' || elecKey === 'ca' || elecKey === 'p' || elecKey === 'hco3' || elecKey === 'glicose' || elecKey === 'albumina' || elecKey === 'ag' || elecKey === 'osm') html += '<div class="elec2-form-actions">';
       html += '<button class="elec2-action-btn elec2-action-btn--secondary" onclick="ElecCalc.reset()">' +
         '<i class="fa-solid fa-rotate-left"></i> ' + t.limpar + '</button>';
 
       /* Botão calcular */
       html += '<button class="elec2-calc-btn" onclick="ElecCalc.calculate()">' +
         '<i class="fa-solid fa-flask-vial"></i> ' + t.calcular + '</button>';
-      if (elecKey === 'k') html += '</div>';
+      if (elecKey === 'k' || elecKey === 'mg' || elecKey === 'ca' || elecKey === 'p' || elecKey === 'hco3' || elecKey === 'glicose' || elecKey === 'albumina' || elecKey === 'ag' || elecKey === 'osm') html += '</div>';
 
       html += '</div>';
       return html;
@@ -2292,13 +2378,48 @@
       if (!logic) return '<div class="univ-result-card is-visible"><div class="univ-result-card-inner"><div class="univ-result-sub">Módulo em desenvolvimento</div></div></div>';
       var t = I18N[lang] || I18N.pt;
       var out = logic(s, t);
+      if (elecKey === 'osm') {
+        var preciseOsm = Number(Formulas.calcOsmolaridade(s.na, s.glicose, s.ureia).toFixed(10));
+        out.estado.osmCalculada = preciseOsm + ' mOsm/L';
+        out.estado.componentes = '2×' + s.na + ' + ' + s.glicose + '/18 + ' + s.ureia + '/2,8 = ' + preciseOsm + ' mOsm/L';
+        out.op1 = null;
+        out.alertas.push(t.osm_correlacionar);
+      }
+      if (elecKey === 'ag') {
+        var preciseAG = Number(Formulas.calcAG(s.na, s.cl, s.hco3).toFixed(10));
+        var preciseCorrectedAG = s.albumina == null ? null : Number(Formulas.calcAGCorrigido(preciseAG, s.albumina).toFixed(10));
+        out.estado.ag = preciseAG + ' mEq/L';
+        out.estado.agCorrigido = preciseCorrectedAG == null ? '—' : preciseCorrectedAG + ' mEq/L';
+        out.estado.formula = 'AG = ' + s.na + ' – (' + s.cl + ' + ' + s.hco3 + ') = ' + preciseAG + ' mEq/L';
+        /* Este bloco é cálculo, não uma prescrição com dose/volume. */
+        out.op1 = null;
+      }
+      /* Não interpretar uma razão fora do domínio usado pelo delta/delta.
+         ClinicalLogic permanece preservada para a revisão clínica separada. */
+      if (elecKey === 'ag' && out.estado.deltaDelta != null &&
+          (24 - s.hco3 <= 0 || !Number.isFinite(out.estado.deltaDelta))) {
+        out.estado = Object.assign({}, out.estado);
+        delete out.estado.deltaDelta;
+        out.alertas = out.alertas.filter(function (text) {
+          return [t.ag_delta_menor1, t.ag_delta_maior2, t.ag_delta_ok].indexOf(text) < 0;
+        });
+        out.alertas.push(lang === 'es' ? 'Delta/delta no aplicable: HCO₃⁻ ≥24 mEq/L o razón no finita.' : 'Delta/delta não aplicável: HCO₃⁻ ≥24 mEq/L ou razão não finita.');
+      }
       var elecName = typeof elec.name === 'object' ? (elec.name[lang] || elec.name.pt) : elec.name;
       var numberVal = (s.valor !== null && s.valor !== undefined) ? s.valor : '—';
+      if (elecKey === 'ag') numberVal = preciseAG;
+      if (elecKey === 'osm') numberVal = preciseOsm;
       var unitTxt = elec.unit || '';
 
       /* Conteúdo detalhado — estado + opções terapêuticas + alertas + recontrole */
+      var displayState = out.estado;
+      if (elecKey === 'ca' && s.albumina != null) {
+        displayState = Object.assign({}, out.estado, {
+          caCorrigido: Number(Formulas.calcCaCorrigido(s.valor, s.albumina).toFixed(10)) + ' mg/dL'
+        });
+      }
       var detailHtml = '';
-      detailHtml += ElecRender._bloco(t.blk_estado, elec.color, ElecRender._estadoBloco(out.estado, elec, t, lang), 'fa-chart-line');
+      detailHtml += ElecRender._bloco(t.blk_estado, elec.color, ElecRender._estadoBloco(displayState, elec, t, lang), 'fa-chart-line');
       if (out.op1) detailHtml += ElecRender._opCard(t.blk_op1, out.op1, t, elec.color);
       if (out.op2) detailHtml += ElecRender._opCard(t.blk_op2, out.op2, t, elec.color);
       if (out.op3) detailHtml += ElecRender._opCard(t.blk_op3, out.op3, t, elec.color);
@@ -2313,12 +2434,67 @@
         detailHtml += ElecRender._bloco(t.blk_recontrole, '#34D399', '<div class="elec2-recontrole">' + out.recontrole + '</div>', 'fa-clock-rotate-left');
       }
 
-      return '<div class="univ-result-card is-visible">' +
+      /* Magnésio: a apresentação segue a indicação realmente emitida, sem
+         criar limiares ou alterar o protocolo. Alertas gerais não graduam o caso. */
+      var mgTone = '';
+      var interpretation = out.interpretacao;
+      if (elecKey === 'mg') {
+        var indication = out.op1 ? out.op1.indicacao || '' : '';
+        mgTone = s.nivel === 'baixo'
+          ? (indication.indexOf(t.lbl_grave) === 0 ? 'grave' : (indication.indexOf(t.lbl_moderado) === 0 ? 'moderado' : 'leve'))
+          : s.nivel;
+        if (s.nivel === 'baixo') interpretation = t.hip_mg + ' — Mg²⁺ ' + s.valor + ' mg/dL';
+      }
+      /* Cálcio tem indicação combinada Leve/Moderado. A apresentação deriva
+         do resultado de cálcio, sem graduar por avisos gerais ou outro analito. */
+      var caTone = '';
+      if (elecKey === 'ca') {
+        var caIndication = out.op1 ? out.op1.indicacao : '';
+        caTone = caIndication === t.hip_ca_grave_ind ? 'grave'
+          : caIndication === t.lbl_leve + '/' + t.lbl_moderado + t.hip_ca_leve ? 'leve-moderado'
+          : s.nivel === 'alto' ? 'alto' : 'normal';
+        var caDisplay = s.albumina == null ? s.valor : Formulas.calcCaCorrigido(s.valor, s.albumina);
+        var caLabel = s.albumina == null ? 'Ca²⁺' : 'Ca corr.';
+        var caDiagnosis = caTone === 'grave' || caTone === 'leve-moderado' ? t.hip_ca : (caTone === 'alto' ? t.hiper_ca : t.lbl_normal);
+        interpretation = caDiagnosis + ' — ' + caLabel + ' ' + Number(caDisplay.toFixed(10)) + ' mg/dL';
+      }
+      var osmolalityTone = '';
+      if (elecKey === 'osm') {
+        osmolalityTone = s.nivel;
+        interpretation = (lang === 'es' ? 'Osmolaridad calculada' : 'Osmolaridade calculada') + ' — ' + numberVal + ' mOsm/L';
+      }
+      var anionGapTone = '';
+      if (elecKey === 'ag') {
+        anionGapTone = s.nivel;
+        interpretation = (lang === 'es' ? 'AG sin corrección' : 'AG sem correção') + ' — ' + numberVal + ' mEq/L';
+      }
+      var albuminTone = '';
+      if (elecKey === 'albumina') {
+        albuminTone = s.nivel;
+        interpretation = elecName + ' — ' + s.valor + ' g/dL';
+      }
+      var glucoseTone = '';
+      if (elecKey === 'glicose') {
+        glucoseTone = s.nivel === 'baixo' ? (out.op1 && out.op1.indicacao === t.hipoglicemia_grave ? 'grave' : 'leve') : s.nivel;
+      }
+      var bicarbonateTone = '';
+      if (elecKey === 'hco3') {
+        bicarbonateTone = s.nivel === 'baixo' ? (out.op1 && out.op1.indicacao === t.acid_grave_ind ? 'grave' : 'moderado') : s.nivel;
+      }
+      var phosphorusTone = '';
+      if (elecKey === 'p') {
+        var phosphorusIndication = out.op1 ? out.op1.indicacao : '';
+        phosphorusTone = phosphorusIndication === t.hip_p_grave_ind ? 'grave'
+          : phosphorusIndication === t.hip_p_mod ? 'moderado'
+          : phosphorusIndication === t.hip_p_leve ? 'leve' : s.nivel;
+        interpretation = (s.nivel === 'baixo' ? t.hip_p : (s.nivel === 'alto' ? t.hiper_p : t.lbl_normal)) + ' — P ' + s.valor + ' mg/dL';
+      }
+      return '<div class="univ-result-card is-visible"' + (mgTone ? ' data-mg-tone="' + mgTone + '"' : '') + (caTone ? ' data-ca-tone="' + caTone + '"' : '') + (phosphorusTone ? ' data-p-tone="' + phosphorusTone + '"' : '') + (bicarbonateTone ? ' data-hco3-tone="' + bicarbonateTone + '"' : '') + (glucoseTone ? ' data-glicose-tone="' + glucoseTone + '"' : '') + (albuminTone ? ' data-albumina-tone="' + albuminTone + '"' : '') + (anionGapTone ? ' data-ag-tone="' + anionGapTone + '"' : '') + (osmolalityTone ? ' data-osm-tone="' + osmolalityTone + '"' : '') + '>' +
         '<div class="univ-result-card-inner">' +
           '<div class="univ-result-header"><i class="fa-solid ' + elec.icon + '"></i> ' + elecName + '</div>' +
           '<div class="univ-result-number">' + numberVal +
             '<span style="font-size:15px;font-weight:700;opacity:0.65;margin-left:5px;letter-spacing:0">' + unitTxt + '</span></div>' +
-          (out.interpretacao ? '<div class="univ-result-sub">' + out.interpretacao + '</div>' : '') +
+          (interpretation ? '<div class="univ-result-sub">' + interpretation + '</div>' : '') +
           '<div class="univ-result-conduct">' + detailHtml + '</div>' +
           '<div class="elec2-result-actions" style="margin-top:12px">' +
             '<button class="elec2-action-btn" onclick="ElecCalc.copyResult(this)">' +
@@ -2467,7 +2643,7 @@
     _state.electrolyte = key;
     _state._calculated = false;
     _rawFields = {}; /* limpa buffers de digitação ao trocar eletrólito */
-    if (key === 'k' && electrolyteChanged) {
+    if ((key === 'k' || key === 'cl' || key === 'mg') && electrolyteChanged) {
       /* Potássio começa com estado clínico local limpo. Dados do paciente
          (peso, sexo e ClCr) permanecem disponíveis e são resincronizados. */
       _state.valor = null;
@@ -2483,6 +2659,38 @@
       _state.volume = null;
       _state.tempo = null;
       _state.equipo = 'bomba';
+    }
+    if (key === 'osm' && electrolyteChanged) {
+      _state.valor = null; _state.nivel = null;
+      _state.na = null; _state.glicose = null; _state.ureia = null;
+    }
+    if (key === 'ag' && electrolyteChanged) {
+      _state.valor = null; _state.nivel = null; _state.albumina = null;
+      _state.na = null; _state.cl = null; _state.hco3 = null;
+    }
+    if (key === 'albumina' && electrolyteChanged) {
+      _state.valor = null; _state.nivel = null; _state.ca = null;
+      _state.na = null; _state.cl = null; _state.hco3 = null;
+    }
+    if (key === 'glicose' && electrolyteChanged) {
+      _state.valor = null; _state.nivel = null; _state.gravidade = null; _state.sintomas = null;
+    }
+    if (key === 'hco3' && electrolyteChanged) {
+      _state.valor = null; _state.nivel = null; _state.gravidade = null;
+      _state.ph = null; _state.pco2 = null;
+    }
+    if (key === 'p' && electrolyteChanged) {
+      _state.valor = null;
+      _state.nivel = null;
+      _state.gravidade = null;
+    }
+    if (key === 'ca' && electrolyteChanged) {
+      _state.valor = null;
+      _state.albumina = null;
+      _state.nivel = null;
+      _state.gravidade = null;
+      _state.sintomas = null;
+      _state.ecg = null;
     }
     _syncPatientData();
     _renderShell(true); /* reconstrução explícita ao trocar eletrólito */
@@ -2548,6 +2756,106 @@
     return Number.isFinite(value) ? value : NaN;
   }
 
+  /* Entrada de cálcio: número completo; albumina vazia permanece opcional. */
+  function _parseOsmolalityNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  function _osmolalityInputError (key, raw, value) {
+    if (!Number.isFinite(value)) return _sodiumValidationMessage(raw ? 'invalid' : 'empty');
+    if (key === 'na' && value <= 0) return _state.lang === 'es' ? 'Informe un sodio mayor que cero.' : 'Informe um sódio maior que zero.';
+    return '';
+  }
+
+  function _parseAnionGapNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  function _anionGapInputError (key, raw, value) {
+    if (raw === '' && key === 'albumina') return '';
+    if (!Number.isFinite(value)) return _sodiumValidationMessage(raw ? 'invalid' : 'empty');
+    if (key === 'na' && value <= 0) return _state.lang === 'es' ? 'Informe un sodio mayor que cero.' : 'Informe um sódio maior que zero.';
+    return '';
+  }
+
+  function _parseAlbuminNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  function _albuminInputError (key, raw, value) {
+    if (raw === '' && key !== 'valor') return '';
+    if (!Number.isFinite(value)) return _sodiumValidationMessage(raw ? 'invalid' : 'empty');
+    return '';
+  }
+
+  function _parseGlucoseNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  function _glucoseInputError (key, raw, value) {
+    if (!Number.isFinite(value)) return _sodiumValidationMessage(raw ? 'invalid' : 'empty');
+    return '';
+  }
+
+  function _parseBicarbonateNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  function _bicarbonateInputError (key, raw, value) {
+    if (raw === '' && key !== 'valor') return '';
+    if (!Number.isFinite(value)) return _sodiumValidationMessage(raw ? 'invalid' : 'empty');
+    if (key === 'peso' && value <= 0) return _state.lang === 'es' ? 'Informe un peso mayor que cero.' : 'Informe um peso maior que zero.';
+    return '';
+  }
+
+  function _parsePhosphorusNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  function _phosphorusInputError (key, raw, value) {
+    if (raw === '' && key !== 'valor') return '';
+    if (!Number.isFinite(value)) return _sodiumValidationMessage(raw ? 'invalid' : 'empty');
+    if (key === 'peso' && value <= 0) return _state.lang === 'es' ? 'Informe un peso mayor que cero.' : 'Informe um peso maior que zero.';
+    return '';
+  }
+
+  function _parseCalciumNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  function _parseChlorideNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  function _invalidateChlorideResult () {
+    _state._calculated = false;
+    _updateResult();
+  }
+
   function _sodiumValidationMessage (kind) {
     var es = String(_state.lang || '').toLowerCase().startsWith('es');
     if (kind === 'empty') {
@@ -2569,7 +2877,7 @@
   }
 
   function _setFieldValidation (key, inputEl, message) {
-    if (_state.electrolyte !== 'na' && _state.electrolyte !== 'k') return;
+    if (_state.electrolyte !== 'na' && _state.electrolyte !== 'k' && _state.electrolyte !== 'cl' && _state.electrolyte !== 'mg' && _state.electrolyte !== 'ca' && _state.electrolyte !== 'p' && _state.electrolyte !== 'hco3' && _state.electrolyte !== 'glicose' && _state.electrolyte !== 'albumina' && _state.electrolyte !== 'ag' && _state.electrolyte !== 'osm') return;
     var input = inputEl || document.getElementById('elec2-in-' + key);
     if (!input) return;
     var field = input.closest ? input.closest('.elec2-field') : null;
@@ -2647,6 +2955,59 @@
   function _setField (key, value) {
     /* Armazena bruto — preserva "1,", "3.", "-", "" exatamente como está */
     _rawFields[key] = value;
+    if (_state.electrolyte === 'osm') {
+      _setFieldValidation(key, null, '');
+      _state._calculated = false;
+      _updateResult();
+      return;
+    }
+    if (_state.electrolyte === 'ag') {
+      _setFieldValidation(key, null, '');
+      _state._calculated = false;
+      _updateResult();
+      return;
+    }
+    if (_state.electrolyte === 'albumina') {
+      _setFieldValidation(key, null, '');
+      _state._calculated = false;
+      _updateResult();
+      return;
+    }
+    if (_state.electrolyte === 'glicose') {
+      _setFieldValidation(key, null, '');
+      _state._calculated = false;
+      _updateResult();
+      return;
+    }
+    if (_state.electrolyte === 'hco3') {
+      _setFieldValidation(key, null, '');
+      _state._calculated = false;
+      _updateResult();
+      return;
+    }
+    if (_state.electrolyte === 'p') {
+      _setFieldValidation(key, null, '');
+      _state._calculated = false;
+      _updateResult();
+      return;
+    }
+    if (_state.electrolyte === 'ca') {
+      _setFieldValidation(key, null, '');
+      _state._calculated = false;
+      _updateResult();
+      return;
+    }
+    if (_state.electrolyte === 'mg') {
+      _setFieldValidation(key, null, '');
+      _state._calculated = false;
+      _updateResult();
+      return;
+    }
+    if (_state.electrolyte === 'cl') {
+      _setFieldValidation(key, null, '');
+      _invalidateChlorideResult();
+      return;
+    }
     if (_state.electrolyte === 'na') {
       _setFieldValidation(key, null, '');
       if (_state._calculated) _invalidateSodiumResult();
@@ -2672,6 +3033,77 @@
   function _normalizeField (key, inputEl, nextTarget) {
     var raw = inputEl ? inputEl.value : String(_rawFields[key] || '');
     var trimmed = raw.trim();
+    if (_state.electrolyte === 'osm') {
+      var osmolalityValue = _parseOsmolalityNumber(trimmed);
+      var osmolalityError = _osmolalityInputError(key, trimmed, osmolalityValue);
+      _state[key] = !osmolalityError && Number.isFinite(osmolalityValue) ? osmolalityValue : null;
+      _rawFields[key] = trimmed;
+      _setFieldValidation(key, inputEl, osmolalityError);
+      return;
+    }
+    if (_state.electrolyte === 'ag') {
+      var anionGapValue = _parseAnionGapNumber(trimmed);
+      var anionGapError = _anionGapInputError(key, trimmed, anionGapValue);
+      _state[key] = !anionGapError && Number.isFinite(anionGapValue) ? anionGapValue : null;
+      _rawFields[key] = trimmed;
+      _setFieldValidation(key, inputEl, anionGapError);
+      return;
+    }
+    if (_state.electrolyte === 'albumina') {
+      var albuminValue = _parseAlbuminNumber(trimmed);
+      var albuminError = _albuminInputError(key, trimmed, albuminValue);
+      _state[key] = !albuminError && Number.isFinite(albuminValue) ? albuminValue : null;
+      _rawFields[key] = trimmed;
+      _setFieldValidation(key, inputEl, albuminError);
+      return;
+    }
+    if (_state.electrolyte === 'glicose') {
+      var glucoseValue = _parseGlucoseNumber(trimmed);
+      var glucoseError = _glucoseInputError(key, trimmed, glucoseValue);
+      _state[key] = !glucoseError && Number.isFinite(glucoseValue) ? glucoseValue : null;
+      _rawFields[key] = trimmed;
+      _setFieldValidation(key, inputEl, glucoseError);
+      return;
+    }
+    if (_state.electrolyte === 'hco3') {
+      var bicarbonateValue = _parseBicarbonateNumber(trimmed);
+      var bicarbonateError = _bicarbonateInputError(key, trimmed, bicarbonateValue);
+      _state[key] = !bicarbonateError && Number.isFinite(bicarbonateValue) ? bicarbonateValue : null;
+      _rawFields[key] = trimmed;
+      _setFieldValidation(key, inputEl, bicarbonateError);
+      return;
+    }
+    if (_state.electrolyte === 'p') {
+      var phosphorusValue = _parsePhosphorusNumber(trimmed);
+      var phosphorusError = _phosphorusInputError(key, trimmed, phosphorusValue);
+      _state[key] = !phosphorusError && Number.isFinite(phosphorusValue) ? phosphorusValue : null;
+      _rawFields[key] = trimmed;
+      _setFieldValidation(key, inputEl, phosphorusError);
+      return;
+    }
+    if (_state.electrolyte === 'ca') {
+      var calciumValue = _parseCalciumNumber(trimmed);
+      _state[key] = Number.isFinite(calciumValue) ? calciumValue : null;
+      _rawFields[key] = trimmed;
+      var calciumInvalid = (trimmed !== '' || key === 'valor') && !Number.isFinite(calciumValue);
+      _setFieldValidation(key, inputEl, calciumInvalid ? _sodiumValidationMessage(trimmed ? 'invalid' : 'empty') : '');
+      return;
+    }
+    if (_state.electrolyte === 'mg') {
+      var magnesiumValue = _parseChlorideNumber(trimmed);
+      _state[key] = Number.isFinite(magnesiumValue) ? magnesiumValue : null;
+      _rawFields[key] = trimmed;
+      var magnesiumInvalid = (trimmed !== '' || key === 'valor') && !Number.isFinite(magnesiumValue);
+      _setFieldValidation(key, inputEl, magnesiumInvalid ? _sodiumValidationMessage(trimmed ? 'invalid' : 'empty') : '');
+      return;
+    }
+    if (_state.electrolyte === 'cl') {
+      var chlorideValue = _parseChlorideNumber(trimmed);
+      _state[key] = Number.isFinite(chlorideValue) ? chlorideValue : null;
+      _rawFields[key] = trimmed;
+      _setFieldValidation(key, inputEl, Number.isFinite(chlorideValue) ? '' : _sodiumValidationMessage(trimmed ? 'invalid' : 'empty'));
+      return;
+    }
 
     /* Caso 1: campo vazio */
     if (trimmed === '' || trimmed === '-') {
@@ -2729,6 +3161,211 @@
   ──────────────────────────────────────────────────────────────── */
   function _calculate () {
     if (!_state.electrolyte) return;
+    if (_state.electrolyte === 'osm') {
+      var osmolalityInvalid = false;
+      ['na', 'glicose', 'ureia'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? input.value.trim() : '';
+        var value = _parseOsmolalityNumber(raw);
+        var error = _osmolalityInputError(key, raw, value);
+        _rawFields[key] = raw;
+        _state[key] = !error && Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, error);
+        osmolalityInvalid = osmolalityInvalid || Boolean(error);
+      });
+      if (osmolalityInvalid) {
+        _state.nivel = null;
+        _state._calculated = false;
+        _updateResult();
+        return;
+      }
+      var osmolalityValue = Number(Formulas.calcOsmolaridade(_state.na, _state.glicose, _state.ureia).toFixed(10));
+      if (!Number.isFinite(osmolalityValue)) {
+        _state.nivel = null;
+        _state._calculated = false;
+        ['na', 'glicose', 'ureia'].forEach(function (key) {
+          _setFieldValidation(key, document.getElementById('elec2-in-' + key), _state.lang === 'es' ? 'Los valores exceden la capacidad numérica del cálculo.' : 'Os valores excedem a capacidade numérica do cálculo.');
+        });
+        _updateResult();
+        return;
+      }
+      _state.nivel = osmolalityValue < ELECTROLYTES.osm.refLow ? 'baixo' : (osmolalityValue > ELECTROLYTES.osm.refHigh ? 'alto' : 'normal');
+    }
+    if (_state.electrolyte === 'ag') {
+      var anionGapInvalid = false;
+      ['na', 'cl', 'hco3', 'albumina'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? input.value.trim() : '';
+        var value = _parseAnionGapNumber(raw);
+        var error = _anionGapInputError(key, raw, value);
+        _rawFields[key] = raw;
+        _state[key] = !error && Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, error);
+        anionGapInvalid = anionGapInvalid || Boolean(error);
+      });
+      if (anionGapInvalid) {
+        _state.nivel = null;
+        _state._calculated = false;
+        _updateResult();
+        return;
+      }
+      var anionGapValue = Number(Formulas.calcAG(_state.na, _state.cl, _state.hco3).toFixed(10));
+      _state.nivel = anionGapValue < ELECTROLYTES.ag.refLow ? 'baixo' : (anionGapValue > ELECTROLYTES.ag.refHigh ? 'alto' : 'normal');
+    }
+    if (_state.electrolyte === 'albumina') {
+      var albuminInvalid = false;
+      ['valor', 'ca', 'na', 'cl', 'hco3'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? input.value.trim() : '';
+        var value = _parseAlbuminNumber(raw);
+        var error = _albuminInputError(key, raw, value);
+        _rawFields[key] = raw;
+        _state[key] = !error && Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, error);
+        albuminInvalid = albuminInvalid || Boolean(error);
+      });
+      var agKeys = ['na', 'cl', 'hco3'];
+      var agStarted = agKeys.some(function (key) { return _rawFields[key] !== ''; });
+      if (agStarted) agKeys.forEach(function (key) {
+        if (_rawFields[key] === '') {
+          albuminInvalid = true;
+          _setFieldValidation(key, document.getElementById('elec2-in-' + key), _sodiumValidationMessage('empty'));
+        }
+      });
+      if (albuminInvalid) {
+        _state.nivel = null;
+        _state._calculated = false;
+        _updateResult();
+        return;
+      }
+      _state.nivel = _state.valor < ELECTROLYTES.albumina.refLow ? 'baixo' : (_state.valor > ELECTROLYTES.albumina.refHigh ? 'alto' : 'normal');
+    }
+    if (_state.electrolyte === 'glicose') {
+      var glucoseInvalid = false;
+      ['valor'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? input.value.trim() : '';
+        var value = _parseGlucoseNumber(raw);
+        var error = _glucoseInputError(key, raw, value);
+        _rawFields[key] = raw;
+        _state[key] = !error && Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, error);
+        glucoseInvalid = glucoseInvalid || Boolean(error);
+      });
+      if (glucoseInvalid) {
+        _state.nivel = null;
+        _state._calculated = false;
+        _updateResult();
+        return;
+      }
+      _state.nivel = _state.valor < ELECTROLYTES.glicose.refLow ? 'baixo' : (_state.valor > ELECTROLYTES.glicose.refHigh ? 'alto' : 'normal');
+    }
+    if (_state.electrolyte === 'hco3') {
+      var bicarbonateInvalid = false;
+      ['valor', 'peso', 'ph', 'pco2'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? input.value.trim() : '';
+        var value = _parseBicarbonateNumber(raw);
+        var error = _bicarbonateInputError(key, raw, value);
+        _rawFields[key] = raw;
+        _state[key] = !error && Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, error);
+        bicarbonateInvalid = bicarbonateInvalid || Boolean(error);
+      });
+      if (bicarbonateInvalid) {
+        _state.nivel = null;
+        _state._calculated = false;
+        _updateResult();
+        return;
+      }
+      _state.nivel = _state.valor < ELECTROLYTES.hco3.refLow ? 'baixo' : (_state.valor > ELECTROLYTES.hco3.refHigh ? 'alto' : 'normal');
+    }
+    if (_state.electrolyte === 'p') {
+      var phosphorusInvalid = false;
+      ['valor', 'peso', 'clcr'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? input.value.trim() : '';
+        var value = _parsePhosphorusNumber(raw);
+        var error = _phosphorusInputError(key, raw, value);
+        _rawFields[key] = raw;
+        _state[key] = !error && Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, error);
+        phosphorusInvalid = phosphorusInvalid || Boolean(error);
+      });
+      _state.clcrFiltro = _state.clcr == null ? null : (_state.clcr < 30 ? 'lt30' : 'gte30');
+      if (phosphorusInvalid) {
+        _state.nivel = null;
+        _state._calculated = false;
+        _updateResult();
+        return;
+      }
+      _state.nivel = _state.valor < ELECTROLYTES.p.refLow ? 'baixo' : (_state.valor > ELECTROLYTES.p.refHigh ? 'alto' : 'normal');
+    }
+    if (_state.electrolyte === 'ca') {
+      var calciumInvalid = false;
+      ['valor', 'albumina'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? input.value.trim() : '';
+        var value = _parseCalciumNumber(raw);
+        var invalid = (raw !== '' || key === 'valor') && !Number.isFinite(value);
+        _rawFields[key] = raw;
+        _state[key] = Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, invalid ? _sodiumValidationMessage(raw ? 'invalid' : 'empty') : '');
+        calciumInvalid = calciumInvalid || invalid;
+      });
+      if (calciumInvalid) {
+        _state.nivel = null;
+        _state._calculated = false;
+        _updateResult();
+        return;
+      }
+      /* Mesmo valor e fórmula usados em ClinicalLogic.ca, antes de classificar.
+         Evita que um nível derivado do valor bruto sobreponha a correção. */
+      var calciumForLevel = _state.albumina == null ? _state.valor : Formulas.calcCaCorrigido(_state.valor, _state.albumina);
+      if (!Number.isFinite(calciumForLevel)) {
+        _state.nivel = null;
+        _state._calculated = false;
+        _setFieldValidation('valor', null, _sodiumValidationMessage('invalid'));
+        _updateResult();
+        return;
+      }
+      _state.nivel = calciumForLevel < ELECTROLYTES.ca.refLow ? 'baixo' : (calciumForLevel > ELECTROLYTES.ca.refHigh ? 'alto' : 'normal');
+    }
+    if (_state.electrolyte === 'mg') {
+      var magnesiumInvalid = false;
+      ['valor', 'clcr'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? input.value.trim() : '';
+        var value = _parseChlorideNumber(raw);
+        var invalid = (raw !== '' || key === 'valor') && !Number.isFinite(value);
+        _rawFields[key] = raw;
+        _state[key] = Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, invalid ? _sodiumValidationMessage(raw ? 'invalid' : 'empty') : '');
+        magnesiumInvalid = magnesiumInvalid || invalid;
+      });
+      _state.nivel = _state.valor == null ? null : (_state.valor < ELECTROLYTES.mg.refLow ? 'baixo' : (_state.valor > ELECTROLYTES.mg.refHigh ? 'alto' : 'normal'));
+      _state.clcrFiltro = _state.clcr == null ? null : (_state.clcr < 30 ? 'lt30' : 'gte30');
+      if (magnesiumInvalid) {
+        _state._calculated = false;
+        _updateResult();
+        return;
+      }
+    }
+    if (_state.electrolyte === 'cl') {
+      var chlorideInput = document.getElementById('elec2-in-valor');
+      var chlorideRaw = chlorideInput ? chlorideInput.value.trim() : '';
+      var chlorideValue = _parseChlorideNumber(chlorideRaw);
+      _rawFields.valor = chlorideRaw;
+      _state.valor = Number.isFinite(chlorideValue) ? chlorideValue : null;
+      _setFieldValidation('valor', chlorideInput, Number.isFinite(chlorideValue) ? '' : _sodiumValidationMessage(chlorideRaw ? 'invalid' : 'empty'));
+      if (!Number.isFinite(chlorideValue)) {
+        _state.nivel = null;
+        _invalidateChlorideResult();
+        return;
+      }
+      _state.nivel = chlorideValue < ELECTROLYTES.cl.refLow ? 'baixo'
+        : (chlorideValue > ELECTROLYTES.cl.refHigh ? 'alto' : 'normal');
+    }
 
     /* Leia os inputs atuais antes de calcular: blur não é requisito de validade.
        Campos auxiliares vazios são opcionais; texto inválido nunca é reutilizado. */
@@ -2827,7 +3464,7 @@
     setTimeout(function () {
       var res = document.getElementById('elec2-result-area');
       if (res && res.style.display !== 'none') {
-        res.scrollIntoView({ behavior: _state.electrolyte === 'k' ? 'instant' : 'smooth', block: 'start' });
+        res.scrollIntoView({ behavior: (_state.electrolyte === 'k' || _state.electrolyte === 'cl' || _state.electrolyte === 'mg' || _state.electrolyte === 'ca' || _state.electrolyte === 'p' || _state.electrolyte === 'hco3' || _state.electrolyte === 'glicose' || _state.electrolyte === 'albumina' || _state.electrolyte === 'ag' || _state.electrolyte === 'osm') ? 'instant' : 'smooth', block: 'start' });
       }
     }, 80);
   }
