@@ -454,7 +454,7 @@ window.IMUNO_CORTICOIDE_DRUGS_DB = [
 
 ]; /* fim window.IMUNO_CORTICOIDE_DRUGS_DB — BUILD 427 */
 /* GOLD33_SELECTIVE:betametasona:START */
-;(function(){var db=window.IMUNO_CORTICOIDE_DRUGS_DB;if(!db||!db["betametasona"])throw new Error("GOLD33_MISSING_CANONICAL:betametasona");db["betametasona"].mcGoldClinicalV1={
+;(function(){var db=window.IMUNO_CORTICOIDE_DRUGS_DB;var drug=Array.isArray(db)?db.find(function(item){return item&&item.id==="betametasona";}):db&&db["betametasona"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:betametasona");drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "010",
@@ -544,7 +544,7 @@ window.IMUNO_CORTICOIDE_DRUGS_DB = [
 };})();
 /* GOLD33_SELECTIVE:betametasona:END */
 /* GOLD33_SELECTIVE:deflazacorte:START */
-;(function(){var db=window.IMUNO_CORTICOIDE_DRUGS_DB;if(!db||!db["deflazacorte"])throw new Error("GOLD33_MISSING_CANONICAL:deflazacorte");db["deflazacorte"].mcGoldClinicalV1={
+;(function(){var db=window.IMUNO_CORTICOIDE_DRUGS_DB;var drug=Array.isArray(db)?db.find(function(item){return item&&item.id==="deflazacorte";}):db&&db["deflazacorte"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:deflazacorte");drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "023",
@@ -634,7 +634,7 @@ window.IMUNO_CORTICOIDE_DRUGS_DB = [
 };})();
 /* GOLD33_SELECTIVE:deflazacorte:END */
 /* GOLD33_SELECTIVE:dexametasona:START */
-;(function(){var db=window.IMUNO_CORTICOIDE_DRUGS_DB;if(!db||!db["dexametasona"])throw new Error("GOLD33_MISSING_CANONICAL:dexametasona");db["dexametasona"].mcGoldClinicalV1={
+;(function(){var db=window.IMUNO_CORTICOIDE_DRUGS_DB;var drug=Array.isArray(db)?db.find(function(item){return item&&item.id==="dexametasona";}):db&&db["dexametasona"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:dexametasona");drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "024",

@@ -2047,7 +2047,7 @@
           ' id="' + id + '" data-field="' + f + '"' +
           ' placeholder="' + ph + '" value="' + valStr + '"' +
           ' oninput="ElecCalc.setField(\'' + f + '\', this.value)"' +
-          ' onblur="ElecCalc.normalizeField(\'' + f + '\', this)"/>' +
+          ' onblur="ElecCalc.normalizeField(\'' + f + '\', this, event.relatedTarget)"/>' +
           '</div>';
       });
 
@@ -2147,6 +2147,8 @@
       var html = '<div class="elec2-step" id="elec2-step3">';
       html += '<div class="elec2-step-hd"><span class="elec2-step-num">3</span>' + t.step4_title + '</div>';
 
+      /* Potássio usa protocolos fixos: não oferecer presets ignorados pela lógica. */
+      if (elecKey !== 'k') {
       /* Formulação */
       var forms = elec ? elec.defaultFormulations : [];
       if (forms.length) {
@@ -2224,9 +2226,17 @@
       });
       html += '</div></div>';
 
+      }
+
+      /* Ações principais: um único owner de limpeza + cálculo. */
+      if (elecKey === 'k') html += '<div class="elec2-form-actions">';
+      html += '<button class="elec2-action-btn elec2-action-btn--secondary" onclick="ElecCalc.reset()">' +
+        '<i class="fa-solid fa-rotate-left"></i> ' + t.limpar + '</button>';
+
       /* Botão calcular */
       html += '<button class="elec2-calc-btn" onclick="ElecCalc.calculate()">' +
         '<i class="fa-solid fa-flask-vial"></i> ' + t.calcular + '</button>';
+      if (elecKey === 'k') html += '</div>';
 
       html += '</div>';
       return html;
@@ -2240,7 +2250,7 @@
       var t = I18N[lang] || I18N.pt;
       return '<div id="elec2-result-area" class="elec2-result">' +
         '<div class="elec2-result-actions">' +
-        '<button class="elec2-action-btn" onclick="ElecCalc.copyResult()">' +
+        '<button class="elec2-action-btn" onclick="ElecCalc.copyResult(this)">' +
         '<i class="fa-solid fa-copy"></i> ' + t.copy_result + '</button>' +
         '<button class="elec2-action-btn elec2-action-btn--secondary" onclick="ElecCalc.reset()">' +
         '<i class="fa-solid fa-rotate-left"></i> ' + t.limpar + '</button>' +
@@ -2311,7 +2321,7 @@
           (out.interpretacao ? '<div class="univ-result-sub">' + out.interpretacao + '</div>' : '') +
           '<div class="univ-result-conduct">' + detailHtml + '</div>' +
           '<div class="elec2-result-actions" style="margin-top:12px">' +
-            '<button class="elec2-action-btn" onclick="ElecCalc.copyResult()">' +
+            '<button class="elec2-action-btn" onclick="ElecCalc.copyResult(this)">' +
             '<i class="fa-solid fa-copy"></i> ' + t.copy_result + '</button>' +
             '<button class="elec2-action-btn elec2-action-btn--secondary" onclick="ElecCalc.reset()">' +
             '<i class="fa-solid fa-rotate-left"></i> ' + t.limpar + '</button>' +
@@ -2352,6 +2362,9 @@
      Separado do _state para não contaminar os cálculos com strings
      como "1," ou "3.". _state recebe apenas números válidos. */
   var _rawFields = {};
+  /* Preserva a escolha explícita de perfil no Sódio contra uma
+     sincronização tardia de patientData durante a abertura da tela. */
+  var _sodiumProfileOverride = null;
 
   /* ────────────────────────────────────────────────────────────────
      BUILD 242 — _renderShell()
@@ -2359,11 +2372,18 @@
      Chamado apenas quando o eletrólito muda ou no reset.
      NUNCA chamado durante digitação.
   ──────────────────────────────────────────────────────────────── */
-  function _renderShell () {
+  function _renderShell (force) {
     var slot = document.getElementById('hub-elec-slot');
     if (!slot) return;
+    var existing = slot.querySelector('#elec2-calc');
+    var active = document.activeElement;
+    if (
+      !force && _state.electrolyte === 'k' && existing && active &&
+      existing.contains(active) && /^(INPUT|BUTTON)$/.test(active.tagName)
+    ) return;
     _state.lang = _getGlobalLang();
     slot.innerHTML = ElecUI.renderMain();
+    var renderedRoot = slot.querySelector('#elec2-calc');
   }
 
   /* ────────────────────────────────────────────────────────────────
@@ -2430,6 +2450,9 @@
           _state.clcrFiltro = _state.clcr < 30 ? 'lt30' : 'gte30';
         }
       }
+      if (_state.electrolyte === 'na' && _sodiumProfileOverride != null) {
+        _state.sexo = _sodiumProfileOverride;
+      }
     } catch (e) {}
   }
 
@@ -2440,15 +2463,35 @@
   ──────────────────────────────────────────────────────────────── */
   function _selectElectrolyte (key) {
     if (!ELECTROLYTES[key]) return;
+    var electrolyteChanged = _state.electrolyte !== key;
     _state.electrolyte = key;
     _state._calculated = false;
     _rawFields = {}; /* limpa buffers de digitação ao trocar eletrólito */
+    if (key === 'k' && electrolyteChanged) {
+      /* Potássio começa com estado clínico local limpo. Dados do paciente
+         (peso, sexo e ClCr) permanecem disponíveis e são resincronizados. */
+      _state.valor = null;
+      _state.nivel = null;
+      _state.gravidade = null;
+      _state.sintomas = null;
+      _state.ecg = null;
+      _state.acesso = 'periph';
+      _state.acidbase = null;
+      _state.protocolo = null;
+      _state.dose = null;
+      _state.formulacao = null;
+      _state.volume = null;
+      _state.tempo = null;
+      _state.equipo = 'bomba';
+    }
     _syncPatientData();
-    _renderShell(); /* ÚNICA chamada legítima de reconstrução do DOM */
+    _renderShell(true); /* reconstrução explícita ao trocar eletrólito */
     _updateButtonStates('electrolyte', key);
     setTimeout(function () {
       var step2 = document.getElementById('elec2-step2');
-      if (step2) step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (step2 && key !== 'na') {
+        step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }, 80);
   }
 
@@ -2464,6 +2507,9 @@
     var numKeys = ['dose', 'volume', 'tempo'];
     if (numKeys.indexOf(key) >= 0 && value !== '' && value !== null) {
       value = parseFloat(value);
+    }
+    if (_state.electrolyte === 'na' && key === 'sexo') {
+      _sodiumProfileOverride = value;
     }
     _state[key] = value;
     _updateButtonStates(key, value);
@@ -2485,6 +2531,106 @@
     return parseFloat(cleaned);
   }
 
+  /* Sódio exige um número completo, sem aproveitar prefixos de texto inválido. */
+  function _parseSodiumNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  /* Potássio também exige entrada numérica completa: prefixos como
+     "3abc" e valores ainda parciais como "3." nunca viram resultado. */
+  function _parsePotassiumNumber (raw) {
+    var text = String(raw == null ? '' : raw).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/.test(text)) return NaN;
+    var value = Number(text.replace(',', '.'));
+    return Number.isFinite(value) ? value : NaN;
+  }
+
+  function _sodiumValidationMessage (kind) {
+    var es = String(_state.lang || '').toLowerCase().startsWith('es');
+    if (kind === 'empty') {
+      return es ? 'Informe un valor válido.' : 'Informe um valor válido.';
+    }
+    return es
+      ? 'Use solo números, con coma o punto.'
+      : 'Use apenas números, com vírgula ou ponto.';
+  }
+
+  function _potassiumValidationMessage (kind) {
+    var es = String(_state.lang || '').toLowerCase().startsWith('es');
+    if (kind === 'empty') {
+      return es ? 'Informe un valor válido.' : 'Informe um valor válido.';
+    }
+    return es
+      ? 'Use solo números, con coma o punto.'
+      : 'Use apenas números, com vírgula ou ponto.';
+  }
+
+  function _setFieldValidation (key, inputEl, message) {
+    if (_state.electrolyte !== 'na' && _state.electrolyte !== 'k') return;
+    var input = inputEl || document.getElementById('elec2-in-' + key);
+    if (!input) return;
+    var field = input.closest ? input.closest('.elec2-field') : null;
+    if (!field) return;
+    var error = field.querySelector('.elec2-field-error');
+    if (!message) {
+      input.removeAttribute('aria-invalid');
+      input.removeAttribute('aria-describedby');
+      field.classList.remove('elec2-field--invalid');
+      if (error) error.remove();
+      return;
+    }
+    if (!error) {
+      error = document.createElement('div');
+      error.className = 'elec2-field-error';
+      error.id = input.id + '-error';
+      error.setAttribute('role', 'alert');
+      field.appendChild(error);
+    }
+    error.textContent = message;
+    input.setAttribute('aria-invalid', 'true');
+    input.setAttribute('aria-describedby', error.id);
+    field.classList.add('elec2-field--invalid');
+  }
+
+  function _invalidateSodiumResult () {
+    if (_state.electrolyte !== 'na') return;
+    _state._calculated = false;
+    _updateResult();
+  }
+
+  function _invalidatePotassiumResult () {
+    if (_state.electrolyte !== 'k') return;
+    _state._calculated = false;
+    _updateResult();
+  }
+
+  function _syncPotassiumDerivedState () {
+    if (_state.electrolyte !== 'k') return;
+
+    var value = Number(_state.valor);
+    if (Number.isFinite(value)) {
+      _state.nivel = value < ELECTROLYTES.k.refLow
+        ? 'baixo'
+        : (value > ELECTROLYTES.k.refHigh ? 'alto' : 'normal');
+      _updateButtonStates('nivel', _state.nivel);
+    } else {
+      _state.nivel = null;
+      _updateButtonStates('nivel', null);
+    }
+
+    var clcr = Number(_state.clcr);
+    if (_state.clcr != null && Number.isFinite(clcr)) {
+      _state.clcrFiltro = clcr < 30 ? 'lt30' : 'gte30';
+      _updateButtonStates('clcrFiltro', _state.clcrFiltro);
+    } else {
+      _state.clcrFiltro = null;
+      _updateButtonStates('clcrFiltro', null);
+    }
+  }
+
   /* ────────────────────────────────────────────────────────────────
      BUILD 242 — _setField(key, value)
      PILAR 1 + 3: "O texto do input é sagrado"
@@ -2501,6 +2647,13 @@
   function _setField (key, value) {
     /* Armazena bruto — preserva "1,", "3.", "-", "" exatamente como está */
     _rawFields[key] = value;
+    if (_state.electrolyte === 'na') {
+      _setFieldValidation(key, null, '');
+      if (_state._calculated) _invalidateSodiumResult();
+    } else if (_state.electrolyte === 'k') {
+      _setFieldValidation(key, null, '');
+      if (_state._calculated) _invalidatePotassiumResult();
+    }
     /* NÃO FAZ MAIS NADA — o input DOM não é tocado */
   }
 
@@ -2516,7 +2669,7 @@
        3. Valor válido → atualiza _state com float, normaliza display
           vírgula→ponto, atualiza resultado (sem destruir inputs)
   ──────────────────────────────────────────────────────────────── */
-  function _normalizeField (key, inputEl) {
+  function _normalizeField (key, inputEl, nextTarget) {
     var raw = inputEl ? inputEl.value : String(_rawFields[key] || '');
     var trimmed = raw.trim();
 
@@ -2525,22 +2678,41 @@
       _state[key] = null;
       _rawFields[key] = '';
       if (inputEl) inputEl.value = '';
-      if (_state._calculated) _updateResult();
+      if (_state.electrolyte === 'na') {
+        _invalidateSodiumResult();
+        _setFieldValidation(key, inputEl, key === 'valor' ? _sodiumValidationMessage('empty') : '');
+      } else if (_state.electrolyte === 'k') {
+        _invalidatePotassiumResult();
+        _setFieldValidation(key, inputEl, key === 'valor' ? _potassiumValidationMessage('empty') : '');
+      } else if (_state._calculated) {
+        _updateResult();
+      }
       return;
     }
 
-    var n = _parseLocaleNumber(trimmed);
+    var n = _state.electrolyte === 'na'
+      ? _parseSodiumNumber(trimmed)
+      : (_state.electrolyte === 'k' ? _parsePotassiumNumber(trimmed) : _parseLocaleNumber(trimmed));
 
     /* Caso 2: NaN — valor ainda incompleto ou inválido. NÃO apaga. */
     if (isNaN(n)) {
       /* Mantém exatamente o que o usuário digitou — sem tocar input.value */
+      if (_state.electrolyte === 'na') {
+        _state[key] = null;
+        _invalidateSodiumResult();
+        _setFieldValidation(key, inputEl, _sodiumValidationMessage('invalid'));
+      } else if (_state.electrolyte === 'k') {
+        _state[key] = null;
+        _invalidatePotassiumResult();
+        _setFieldValidation(key, inputEl, _potassiumValidationMessage('invalid'));
+      }
       return;
     }
 
     /* Caso 3: número válido */
     _rawFields[key] = String(n);
     _state[key] = n;
-
+    _setFieldValidation(key, inputEl, '');
     /* Normaliza vírgula→ponto no display do campo (apenas visual) */
     if (inputEl && trimmed.indexOf(',') !== -1) {
       inputEl.value = String(n);
@@ -2558,6 +2730,45 @@
   function _calculate () {
     if (!_state.electrolyte) return;
 
+    /* Leia os inputs atuais antes de calcular: blur não é requisito de validade.
+       Campos auxiliares vazios são opcionais; texto inválido nunca é reutilizado. */
+    if (_state.electrolyte === 'na') {
+      var sodiumInvalid = false;
+      ['valor', 'peso', 'glicose', 'ureia'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? String(input.value).trim() : '';
+        var value = _parseSodiumNumber(raw);
+        var invalid = (raw !== '' || key === 'valor') && !Number.isFinite(value);
+        _rawFields[key] = raw;
+        _state[key] = Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, invalid ? _sodiumValidationMessage(raw ? 'invalid' : 'empty') : '');
+        sodiumInvalid = sodiumInvalid || invalid;
+      });
+      if (sodiumInvalid) {
+        _invalidateSodiumResult();
+        return;
+      }
+    }
+
+    if (_state.electrolyte === 'k') {
+      var potassiumInvalid = false;
+      ['valor', 'peso', 'clcr'].forEach(function (key) {
+        var input = document.getElementById('elec2-in-' + key);
+        var raw = input ? String(input.value).trim() : '';
+        var value = _parsePotassiumNumber(raw);
+        var invalid = (raw !== '' || key === 'valor') && !Number.isFinite(value);
+        _rawFields[key] = raw;
+        _state[key] = Number.isFinite(value) ? value : null;
+        _setFieldValidation(key, input, invalid ? _potassiumValidationMessage(raw ? 'invalid' : 'empty') : '');
+        potassiumInvalid = potassiumInvalid || invalid;
+      });
+      if (potassiumInvalid) {
+        _invalidatePotassiumResult();
+        return;
+      }
+      _syncPotassiumDerivedState();
+    }
+
     /* Flush de todos os _rawFields pendentes para _state */
     var numFieldKeys = ['valor', 'peso', 'glicose', 'albumina', 'na', 'cl', 'hco3', 'ureia', 'ca', 'clcr'];
     numFieldKeys.forEach(function (k) {
@@ -2570,9 +2781,45 @@
           if (inputEl && String(_rawFields[k]).indexOf(',') !== -1) {
             inputEl.value = String(n);
           }
+        } else if (_state.electrolyte === 'na') {
+          _state[k] = null;
         }
       }
     });
+
+    /* HOME PREMIUM QA: nunca produzir resultado clínico com entrada vazia,
+       parcial ou inválida. Albumina permanece opcional no AG corrigido; os
+       demais analitos abaixo são matematicamente indispensáveis. */
+    var requiredByElectrolyte = {
+      ag: ['na', 'cl', 'hco3'],
+      osm: ['na', 'glicose', 'ureia']
+    };
+    var required = requiredByElectrolyte[_state.electrolyte] || ['valor'];
+    var invalid = required.some(function (key) {
+      var value = _state[key];
+      return value === null || value === undefined || !Number.isFinite(Number(value));
+    });
+    if (invalid) {
+      _state._calculated = false;
+      _updateResult();
+      if (_state.electrolyte === 'na') {
+        required.forEach(function (key) {
+          var input = document.getElementById('elec2-in-' + key);
+          var raw = input ? String(input.value || '').trim() : '';
+          var kind = raw ? 'invalid' : 'empty';
+          if (_state[key] === null || _state[key] === undefined || !Number.isFinite(Number(_state[key]))) {
+            _setFieldValidation(key, input, _sodiumValidationMessage(kind));
+          }
+        });
+      }
+      return;
+    }
+
+    if (_state.electrolyte === 'na') {
+      required.forEach(function (key) { _setFieldValidation(key, null, ''); });
+    } else if (_state.electrolyte === 'k') {
+      required.forEach(function (key) { _setFieldValidation(key, null, ''); });
+    }
 
     _state._calculated = true;
     _updateResult();
@@ -2580,7 +2827,7 @@
     setTimeout(function () {
       var res = document.getElementById('elec2-result-area');
       if (res && res.style.display !== 'none') {
-        res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        res.scrollIntoView({ behavior: _state.electrolyte === 'k' ? 'instant' : 'smooth', block: 'start' });
       }
     }, 80);
   }
@@ -2592,6 +2839,7 @@
   function _reset () {
     var lang = _state.lang;
     _rawFields = {};
+    _sodiumProfileOverride = null;
     _state = {
       step: 1, electrolyte: null,
       valor: null, peso: null, sexo: 'M', clcr: null,
@@ -2603,7 +2851,7 @@
       dose: null, formulacao: null, volume: null, tempo: null, equipo: 'bomba',
       lang: lang, _calculated: false
     };
-    _renderShell(); /* necessário para zerar os input.value e recriar o DOM */
+    _renderShell(true); /* necessário para zerar os input.value e recriar o DOM */
   }
 
   /* ────────────────────────────────────────────────────────────────
@@ -2624,39 +2872,53 @@
       return;
     }
     /* Primeira montagem */
-    _renderShell();
+    _renderShell(true);
   }
 
   /* ────────────────────────────────────────────────────────────────
      BUILD 242 — _copyResult()
   ──────────────────────────────────────────────────────────────── */
-  function _copyResult () {
+  function _copyResult (btn) {
     var area = document.getElementById('elec2-result-area');
     if (!area) return;
     var text = area.innerText || area.textContent;
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () { _showCopied(); });
+      navigator.clipboard.writeText(text).then(function () {
+        _showCopied(btn);
+      }).catch(function () {
+        _copyResultFallback(text, btn);
+      });
     } else {
-      var ta = document.createElement('textarea');
-      ta.value = text;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-      _showCopied();
+      _copyResultFallback(text, btn);
     }
   }
 
-  function _showCopied () {
-    var btn = document.querySelector('.elec2-action-btn');
-    if (!btn) return;
+  function _copyResultFallback (text, btn) {
+    var ta = document.createElement('textarea');
+    var copied = false;
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      copied = document.execCommand('copy');
+    } catch (err) {
+      copied = false;
+    }
+    document.body.removeChild(ta);
+    if (copied) _showCopied(btn);
+  }
+
+  function _showCopied (btn) {
+    if (!btn || !btn.classList || !btn.classList.contains('elec2-action-btn')) return;
     var t = I18N[_state.lang] || I18N.pt;
-    var orig = btn.innerHTML;
+    if (!btn._elecCopyOriginalHTML) btn._elecCopyOriginalHTML = btn.innerHTML;
+    if (btn._elecCopyTimer) clearTimeout(btn._elecCopyTimer);
     btn.innerHTML = '<i class="fa-solid fa-check"></i> ' + t.copied;
     btn.classList.add('elec2-action-btn--copied');
-    setTimeout(function () {
-      btn.innerHTML = orig;
+    btn._elecCopyTimer = setTimeout(function () {
+      btn.innerHTML = btn._elecCopyOriginalHTML;
       btn.classList.remove('elec2-action-btn--copied');
+      btn._elecCopyTimer = null;
     }, 2000);
   }
 
@@ -2668,6 +2930,14 @@
     var newLang = _getGlobalLang();
     if (newLang !== _state.lang) {
       _state.lang = newLang;
+      /* Em Sódio/Potássio abertos, o evento langChange já é o responsável
+         pela troca explícita de idioma. Evita que o watcher de fallback
+         substitua o botão focado exatamente no blur do último campo. */
+      var stableRoot = document.querySelector(
+        '#elec2-calc .elec2-elec-btn[data-elec="na"].elec2-elec-btn--active,' +
+        '#elec2-calc .elec2-elec-btn[data-elec="k"].elec2-elec-btn--active'
+      );
+      if ((_state.electrolyte === 'na' || _state.electrolyte === 'k') && stableRoot) return;
       /* Mudança de idioma: reconstrói shell (labels dos campos mudam) */
       _renderShell();
     }
@@ -2688,7 +2958,21 @@
 
     document.addEventListener('langChange', function (e) {
       var l = (e && e.detail) ? String(e.detail).toLowerCase() : _getGlobalLang();
-      _state.lang = l.startsWith('es') ? 'es' : 'pt';
+      var nextLang = l.startsWith('es') ? 'es' : 'pt';
+      var potassiumRoot = document.querySelector(
+        '#elec2-calc .elec2-elec-btn[data-elec="k"].elec2-elec-btn--active'
+      );
+      if (_state.electrolyte === 'k' && potassiumRoot) {
+        _state.lang = nextLang;
+        return;
+      }
+      /* Eventos redundantes do mesmo idioma não devem reconstruir Sódio ou
+         Potássio: isso pode remover o botão entre o blur e o click. */
+      if (
+        (_state.electrolyte === 'na' || _state.electrolyte === 'k') &&
+        _state.lang === nextLang
+      ) return;
+      _state.lang = nextLang;
       /* Mudança de idioma: reconstrói shell */
       _renderShell();
     });

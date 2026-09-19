@@ -149,7 +149,9 @@
   <!-- BUILD 484-CSS-CONSOLIDATION: 14 arquivos CSS fragmentados (10.693 linhas) → 1 fonte unificada (943 linhas).
        Expurgo de código morto, declarações duplicadas e cadeias !important entre builds.
        Path absoluto — resolve race condition iOS WebKit (host vazio antes de JS executar). -->
-  <link rel="stylesheet" href="https://medcasescalcu.com/css/medcases-core-legacy.css?v=484" />
+  <!-- Same-origin by design: local QA and production now resolve the exact same
+       worktree/deploy asset instead of mixing local Home CSS with a remote core. -->
+  <link rel="stylesheet" href="/css/medcases-core-legacy.css?v=520-home-premium-v1" />
 
   <style>
     /* ============================================================ RESET */
@@ -8859,7 +8861,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
 }
 </style>
 
-<style id="medcases-home-layout-r1b-structural-section-grid">
+<style id="medcases-home-layout-r1b-structural-section-grid" media="not all">
 /* MEDCASES_CALCULADORA_HOME_LAYOUT_R1C3R4_FINAL_THREE_SECTION_COMPACT_GRID
    SCOPE: visual/structural geometry of #page-home only.
    CONTRACT: keep the three real DOM sections; no flattening; no desktop row-sync. */
@@ -9423,7 +9425,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
                 <div class="hm-search-wrap">
                   <i class="fa-solid fa-magnifying-glass hm-search-icon"></i>
                   <input class="hm-search" id="hm-drug-search" type="text"
-                    placeholder="🔍 Buscar fármaco..."
+                    placeholder="Buscar fármaco..."
                     oninput="hmFilterDrugs(this.value)"
                     inputmode="search" enterkeyhint="search"
                     autocomplete="off" autocorrect="off" autocapitalize="none"
@@ -20634,6 +20636,24 @@ function _fluidHighlightField(el) {
     }
   }
 
+  /* O overlay pode reter foco em WebViews e impedir que o onchange inline
+     seja confirmado ao fechar o teclado. Mantém o mesmo owner canônico e
+     apenas garante a aplicação em change/Enter, sem duplicar estado clínico. */
+  (function bindFluidWeightFallback() {
+    var input = document.getElementById('fluid-weight-fallback-input');
+    if (!input || input.__mcFluidFallbackBound) return;
+    input.__mcFluidFallbackBound = true;
+    input.addEventListener('change', function () {
+      fluidApplyWeightFallback(input);
+    });
+    input.addEventListener('keydown', function (event) {
+      if (event.key !== 'Enter') return;
+      event.preventDefault();
+      fluidApplyWeightFallback(input);
+      input.blur();
+    });
+  })();
+
 function _fluidUpdateChip(peso) {
     _fluidSyncWeightFallbackUI(peso);
   const chip = document.getElementById('fluid-patient-chip');
@@ -25132,6 +25152,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ── BUILD 306: Reseta Live Dashboard para "---" ── */
     _updateHomeLiveDash();
+
+    /* HOME PREMIUM V1: o Limpar da Função Renal é o owner canônico
+       dos dados do paciente. Garante que aliases, storage e campos espelho
+       também sejam zerados, inclusive peso e idade. */
+    if (window.MedCasesPatientSession &&
+        typeof window.MedCasesPatientSession.clear === 'function') {
+      window.MedCasesPatientSession.clear('renal-clear');
+    }
+
+    /* Alguns adaptadores reativos ainda finalizam no mesmo frame do clique.
+       Reaplica o estado neutro apó esses callbacks para impedir que peso/idade
+       reapareçam depois do Limpar renal. */
+    const hardClearRenalFields = () => {
+      ['hm-weight','hm-age','hm-height','hm-clcr','hm-creatinina',
+       'hm-urine24','hm-urine-creat','qe-weight','qe-age','qe-height','qe-creatinine']
+        .forEach(id => {
+          const field = document.getElementById(id);
+          if (!field) return;
+          field.value = '';
+          try { field.dispatchEvent(new Event('input', { bubbles:true })); } catch (_) {}
+          try { field.dispatchEvent(new Event('change', { bubbles:true })); } catch (_) {}
+        });
+      window.hmPatientState = {};
+      window.patientData = { age:null, sex:null, weight:null, height:null,
+        creatinine:null, bsa:null, clcr:null, imc:null, pesoIdeal:null,
+        tfg:null, pregnant:false, hemodialysis:false };
+      try { localStorage.removeItem('medcases_hm_patient_v1'); } catch (_) {}
+      try { localStorage.removeItem('pacienteAtual'); } catch (_) {}
+    };
+    hardClearRenalFields();
+    requestAnimationFrame(() => requestAnimationFrame(hardClearRenalFields));
+    let renalClearPasses = 0;
+    const renalClearSettle = setInterval(() => {
+      hardClearRenalFields();
+      renalClearPasses += 1;
+      if (renalClearPasses >= 8) clearInterval(renalClearSettle);
+    }, 100);
   };
 
   /* ─────────────────────────────────────────────
@@ -25183,7 +25240,31 @@ document.addEventListener('DOMContentLoaded', () => {
        ativo (com fallback .pt embutido na construção do índice) — não
        há OR cego entre pt+es que causaria resultados no idioma errado.
        Resultado idêntico ao scan direto anterior, apenas mais rápido. */
-    const results = _searchIndexFilter(q).slice(0, 40); /* Limite de performance */
+    /* Prioriza correspondências clínicas úteis e remove duplicatas do índice.
+       Alguns módulos publicam o mesmo ID em mais de uma fonte; além disso,
+       uma busca como "diaz" também encontra toda a classe benzodiazepínica.
+       O nome/ID exato e o prefixo devem aparecer antes dos matches de classe,
+       sem perder busca por marca, alias ou princípio ativo. */
+    const uniqueResults = new Map();
+    _searchIndexFilter(q).forEach(d => {
+      const key = String(d?.id || _fNorm(_fdResolveName(d)) || '').toLowerCase();
+      if (key && !uniqueResults.has(key)) uniqueResults.set(key, d);
+    });
+
+    const searchRank = d => {
+      const name = _fNorm(_fdResolveName(d));
+      const id = _fNorm(d?.id || '');
+      if (name === q || id === q) return 0;
+      if (name.startsWith(q) || id.startsWith(q)) return 1;
+      if (name.split(' ').some(word => word.startsWith(q))) return 2;
+      if (name.includes(q) || id.includes(q)) return 3;
+      return 4;
+    };
+
+    const results = Array.from(uniqueResults.values())
+      .sort((a, b) => searchRank(a) - searchRank(b) ||
+        _fdResolveName(a).localeCompare(_fdResolveName(b), currentLang || 'pt', { sensitivity:'base' }))
+      .slice(0, 40); /* Limite de performance */
 
     /* FIX BUILD 248: atualiza SEMPRE o contador com a contagem REAL da
        busca (nunca com o total da base) — antes o contador ficava
@@ -26722,7 +26803,7 @@ window.MedCasesBridge = {
 
   function _doLoad() {
     _loadScript('database/psicofarmacos.js?v=r30-free60-security-20260916', 'psico');
-    _loadScript('database/cardio.js?v=484',        'cardio');
+    _loadScript('database/cardio.js?v=562-canonical-r1',        'cardio');
     _loadScript('database/interacoes.js?v=484',   'interacoes');
   }
 
@@ -26736,7 +26817,7 @@ window.MedCasesBridge = {
 <script src="database/endocrino.js?v=484"></script>
 <script src="database/gastro.js?v=484"></script>
 <script src="database/gastro_imuno.js?v=484"></script>
-<script src="database/imuno_corticoide.js?v=484"></script>
+<script src="database/imuno_corticoide.js?v=562-canonical-r1"></script>
 <script src="database/endocrino_glp1.js?v=484"></script>
 <script src="database/infusoes.js?v=484"></script>
 <script src="database/emergencia.js?v=484"></script>
@@ -26746,7 +26827,7 @@ window.MedCasesBridge = {
 <script src="database/hematologia.js?v=484"></script>
 <script src="database/pneumologia.js?v=484"></script>
 <script src="database/gastroenterologia.js?v=484"></script>
-<script src="database/cardiologia.js?v=484"></script>
+<script src="database/cardiologia.js?v=562-canonical-r1"></script>
 <script src="database/analgesia_opioides.js?v=484"></script>
 <script src="database/alergia_imunologia.js?v=484" defer></script>
 <script src="database/pneumologia_otorrino.js?v=484" defer></script>
@@ -26778,10 +26859,10 @@ window.MedCasesBridge = {
 <!-- LEGACY category-pills.js detached by Farmacos Single Owner Phase1A -->
 
 <!-- Calculadora de Eletrólitos v3.0 — Engine clínica button-driven -->
-<script defer src="js/elec-calc.js?v=484"></script>
+<script defer src="js/elec-calc.js?v=610-potassium-fixed-protocol-review"></script>
 
 <!-- MedCases Deep Link Router v2.0 — Roteamento por query params (?lang=pt|es&tab=&q=&drug1=&drug2=) -->
-<script defer src="js/medcases-router.js?v=485-no-clinical-defaults-r1"></script>
+<script defer src="js/medcases-router.js?v=562-session-boundary-final"></script>
     <script defer src="js/deeplink-router.js?v=scoreless-r3k-20260914"></script>
 
 <!-- BUILD 272: Reactive Engine (Pilar 2 — fim dos botões "Calcular") + Live Dashboard ClCr (Pilar 3) -->
@@ -27718,7 +27799,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   <link
     id="medcases-webview-home-v1-css"
     rel="stylesheet"
-    data-medcases-path="/css/medcases-webview-home-v1.css?v=519-patient-hd-r2-final"
+  data-medcases-path="/css/medcases-webview-home-v1.css?v=622-home-premium-r2"
   >
   <script id="medcases-webview-home-v1-runtime-origin-r1">
   (() => {
@@ -27814,6 +27895,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     if (!target) return;
     window.hmInvalidatePatientResults();
   }, true);
+
 })();
 </script>
 <!-- MEDCASES PATIENT HOME V1-C-R1 END -->
@@ -28768,7 +28850,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     input.setAttribute("data-farmacos-v2-search-input", "true");
     input.style.setProperty("box-sizing", "border-box", "important");
     input.style.setProperty("padding-left", "52px", "important");
-    input.style.setProperty("padding-right", "18px", "important");
+    input.style.setProperty("padding-right", "48px", "important");
     input.style.setProperty("line-height", "normal", "important");
     input.style.setProperty("text-indent", "0", "important");
     input.style.setProperty("background-position", "18px 50%", "important");
@@ -28792,6 +28874,8 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     candidates.forEach(function (node) {
       if (
         node === input ||
+        node.id === "hm-search-clear" ||
+        node.classList.contains("hm-search-clear") ||
         node.contains(input) ||
         input.contains(node) ||
         node.closest("#farmacos-v2-shell")
@@ -32684,6 +32768,15 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     'AG corregido','Albumina','Albúmina','Glicose','Glucosa','Ureia','Urea'
   ].sort((a,b) => b.length - a.length);
 
+  const POTASSIUM_FIELD_LABELS = [
+    'Volume a Aspirar','Volumen a Aspirar',
+    'Concentração na Solução','Concentración en Solución',
+    'Concentración en la Solución'
+  ];
+  const POTASSIUM_RESULT_LABELS = FIELD_LABELS
+    .concat(POTASSIUM_FIELD_LABELS)
+    .sort((a,b) => b.length - a.length);
+
   function lang() {
     const raw =
       (typeof window.currentLang !== 'undefined' && window.currentLang) ||
@@ -32705,6 +32798,20 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     } catch (_) {
       return {};
     }
+  }
+
+  function isSodiumScreen() {
+    const s=state();
+    if (s && s.electrolyte==='na') return true;
+    const r=root();
+    return Boolean(r && r.querySelector('.elec2-elec-btn[data-elec="na"].elec2-elec-btn--active'));
+  }
+
+  function isPotassiumScreen() {
+    const s=state();
+    if (s && s.electrolyte==='k') return true;
+    const r=root();
+    return Boolean(r && r.querySelector('.elec2-elec-btn[data-elec="k"].elec2-elec-btn--active'));
   }
 
   function parseNumber(raw) {
@@ -32798,6 +32905,31 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     }
   }
 
+  function hideRedundantClcrSelector() {
+    const r = root();
+    if (!r || !isPotassiumScreen() || !r.querySelector('#elec2-in-clcr')) return;
+
+    const btn = r.querySelector('[data-state-key="clcrFiltro"]');
+    if (!btn) return;
+    const row = btn.closest('.elec2-btn-row');
+    if (!row) return;
+    const group = row.closest('.m4g-group');
+    const label = row.previousElementSibling && row.previousElementSibling.matches(
+      '.elec2-state-lbl,.elec2-semantic-label,.elec2-preset-lbl,.elec2-group-label'
+    ) ? row.previousElementSibling : null;
+
+    row.classList.add('m4c-hidden-redundant');
+    row.setAttribute('aria-hidden','true');
+    if (label) {
+      label.classList.add('m4c-hidden-redundant');
+      label.setAttribute('aria-hidden','true');
+    }
+    if (group) {
+      group.classList.add('m4c-hidden-redundant');
+      group.setAttribute('aria-hidden','true');
+    }
+  }
+
   function cleanLine(v) {
     return String(v || '')
       .replace(/\u00a0/g,' ')
@@ -32838,8 +32970,15 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
   }
 
   function splitKnown(line) {
-    for (const label of FIELD_LABELS) {
-      if (line.toLowerCase().startsWith(label.toLowerCase())) {
+    const labels = isPotassiumScreen() ? POTASSIUM_RESULT_LABELS : FIELD_LABELS;
+    for (const label of labels) {
+      const lineKey=line.toLowerCase();
+      const labelKey=label.toLowerCase();
+      if (
+        isSodiumScreen() && lineKey===labelKey &&
+        (lineKey==='osmolaridade' || lineKey==='osmolaridad')
+      ) return null;
+      if (lineKey.startsWith(labelKey)) {
         const value = cleanLine(line.slice(label.length));
         if (value) return { label, value };
       }
@@ -32854,6 +32993,12 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     }
 
     return null;
+  }
+
+  function standaloneKnownLabel(line) {
+    const lineKey = cleanLine(line).toLowerCase();
+    const labels = isPotassiumScreen() ? POTASSIUM_RESULT_LABELS : FIELD_LABELS;
+    return labels.find(label => label.toLowerCase() === lineKey) || null;
   }
 
   function severityFrom(stateObj, interpretation, rawText) {
@@ -32874,6 +33019,9 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     }
 
     const L = TEXT[lang()];
+    if (isSodiumScreen() && !stateObj.gravidade && stateObj.nivel === 'alto') {
+      return { tone:'alto', label:'Alto' };
+    }
     const labels = {
       grave: L.severe,
       moderado: L.moderate,
@@ -32916,6 +33064,17 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     for (const item of items) {
       if (item.type === 'row') {
         sec.appendChild(makeRow(doc,item.label,item.value));
+      } else if (item.type === 'chips') {
+        const group = doc.createElement('div');
+        group.className = 'm4c-result-chips';
+        group.setAttribute('aria-label','Estado clínico');
+        item.values.forEach(value=>{
+          const chip = doc.createElement('span');
+          chip.className = 'm4c-result-chip';
+          chip.textContent = value;
+          group.appendChild(chip);
+        });
+        sec.appendChild(group);
       } else if (item.type === 'alert') {
         const p = doc.createElement('div');
         p.className =
@@ -32947,6 +33106,11 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     const conduct = area.querySelector('.univ-result-conduct');
     if (!conduct) return;
 
+    const stateChipTexts=Array.from(
+      conduct.querySelectorAll('.elec2-chips .elec2-chip')
+    ).map(chip=>cleanLine(chip.textContent)).filter(Boolean);
+    const stateChipSignature=stateChipTexts.join('').replace(/\s/g,'');
+
     const originalText = cleanLine(conduct.innerText || conduct.textContent || '');
     if (!originalText) return;
 
@@ -32966,14 +33130,36 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
 
     let current = 'summary';
 
-    for (const line of lines) {
+    if (stateChipTexts.length) {
+      buckets.summary.push({type:'chips', values:stateChipTexts});
+    }
+
+    for (let lineIndex = 0; lineIndex < lines.length; lineIndex += 1) {
+      const line = lines[lineIndex];
       const kind = sectionKind(line);
       if (kind) {
         current = kind;
         continue;
       }
 
-      if (current === 'summary' && isStateChipConcat(line)) continue;
+      if (
+        current === 'summary' &&
+        (isStateChipConcat(line) ||
+          (stateChipSignature && line.replace(/\s/g,'') === stateChipSignature))
+      ) continue;
+
+      const standaloneLabel = standaloneKnownLabel(line);
+      const nextLine = lines[lineIndex + 1];
+      if (
+        standaloneLabel && nextLine &&
+        !sectionKind(nextLine) &&
+        !standaloneKnownLabel(nextLine) &&
+        !/^[⚠️🚨❗]/u.test(nextLine)
+      ) {
+        buckets[current].push({type:'row', label:standaloneLabel, value:nextLine});
+        lineIndex += 1;
+        continue;
+      }
 
       const pair = splitKnown(line);
       if (pair) {
@@ -33050,6 +33236,8 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     }
 
     const actions = area.querySelector('.elec2-result-actions');
+    const redundantReset = actions && actions.querySelector('.elec2-action-btn--secondary');
+    if (redundantReset) redundantReset.remove();
     if (actions) actions.remove();
 
     area.replaceChildren(shell);
@@ -33058,9 +33246,29 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     area.setAttribute('data-m4c-result','true');
   }
 
+  function decorateElectrolyteControls() {
+    const r=root();
+    if (!r) return;
+
+    const screen=isSodiumScreen() ? 'na' : (isPotassiumScreen() ? 'k' : '');
+    if (!screen) {
+      r.removeAttribute('data-m4c-screen');
+      return;
+    }
+
+    r.setAttribute('data-m4c-screen',screen);
+    r.querySelectorAll('.elec2-state-btn[data-state-key],.elec2-preset-btn[data-state-key],.elec2-elec-btn[data-elec]').forEach(button=>{
+      const selected=button.classList.contains('active') ||
+        button.classList.contains('elec2-elec-btn--active');
+      button.setAttribute('aria-pressed',selected ? 'true' : 'false');
+    });
+  }
+
   function decorate() {
     hideDuplicateSexInput();
     hideRedundantLevelSelector();
+    hideRedundantClcrSelector();
+    decorateElectrolyteControls();
     organizeResult();
   }
 
@@ -33078,10 +33286,44 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     const calc = event.target.closest &&
       event.target.closest('#elec2-calc .elec2-calc-btn');
     if (calc) deriveLevel();
+    if (event.target.closest && event.target.closest('#elec2-calc button')) schedule();
   }, true);
 
+  /* O blur do último input pode coincidir com uma reconstrução tardia do
+     shell. Registra a intenção antes do click para o primeiro toque não se
+     perder quando o botão é substituído entre pointerdown e pointerup. */
+  function applySodiumStateButton(button) {
+    const calc=button && button.closest('#elec2-calc');
+    const stableScreen=calc && calc.querySelector(
+      '.elec2-elec-btn[data-elec="na"].elec2-elec-btn--active'
+    );
+    if (!button || !stableScreen) return;
+    if (!window.ElecCalc || typeof window.ElecCalc.setState !== 'function') return;
+    const key=button.getAttribute('data-state-key');
+    const value=button.getAttribute('data-state-val');
+    window.ElecCalc.setState(key,value);
+  }
+
+  function captureSodiumStateIntent(event) {
+    const button=event.target.closest && event.target.closest(
+      '#elec2-calc .elec2-state-btn[data-state-key][data-state-val],' +
+      '#elec2-calc .elec2-preset-btn[data-state-key][data-state-val]'
+    );
+    applySodiumStateButton(button);
+  }
+  document.addEventListener('pointerdown',captureSodiumStateIntent,true);
+  document.addEventListener('mousedown',captureSodiumStateIntent,true);
+  document.addEventListener('touchstart',captureSodiumStateIntent,{capture:true,passive:true});
+
   document.addEventListener('blur', event => {
-    if (event.target && event.target.id === 'elec2-in-valor') {
+    const next=event.relatedTarget && event.relatedTarget.closest
+      ? event.relatedTarget.closest(
+          '#elec2-calc .elec2-state-btn[data-state-key][data-state-val],' +
+          '#elec2-calc .elec2-preset-btn[data-state-key][data-state-val]'
+        )
+      : null;
+    if (next) applySodiumStateButton(next);
+    if (event.target && event.target.id === 'elec2-in-valor' && !isPotassiumScreen()) {
       deriveLevel();
     }
   }, true);
@@ -33137,9 +33379,10 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
   }
 
   function setToggleText(btn, expanded) {
-    const L=TEXT[lang()];
+    const isK=btn.closest('#elec2-calc').querySelector('.elec2-elec-btn[data-elec="k"].elec2-elec-btn--active');
+    const L=isK ? (lang()==='es' ? {open:'Ajustar gravedad clínica',close:'Ocultar ajuste de gravedad'} : {open:'Ajustar gravidade clínica',close:'Ocultar ajuste de gravidade'}) : TEXT[lang()];
     const label=btn.querySelector('.m4d-toggle-label');
-    if (label) label.textContent=expanded ? L.close : L.open;
+    if (label && (!isK || label.textContent!==(expanded ? L.close : L.open))) label.textContent=expanded ? L.close : L.open;
     btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
   }
 
@@ -33150,7 +33393,16 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     const step=root.querySelector('#elec2-step3');
     if (!step) return;
 
-    const L=TEXT[lang()];
+    const potassium = root.querySelector('.elec2-elec-btn[data-elec="k"].elec2-elec-btn--active');
+    const L=potassium ? (lang()==='es' ? {
+      title:'Protocolo de potasio',
+      helper:'Las prescripciones siguen los protocolos fijos existentes. Formulación, dosis, volumen, tiempo y equipo no admiten ajuste manual.',
+      open:'Ajustar gravedad clínica', close:'Ocultar ajuste de gravedad'
+    } : {
+      title:'Protocolo de potássio',
+      helper:'As prescrições seguem os protocolos fixos existentes. Formulação, dose, volume, tempo e equipo não têm ajuste manual.',
+      open:'Ajustar gravidade clínica', close:'Ocultar ajuste de gravidade'
+    }) : TEXT[lang()];
     const title=step.querySelector(
       ':scope > .elec2-step-title,:scope > .elec2-section-title,:scope > .elec2-title'
     );
@@ -33167,7 +33419,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
       if (title) title.insertAdjacentElement('afterend',helper);
       else step.prepend(helper);
     }
-    helper.textContent=L.helper;
+    if (!root.matches('[data-m4c-screen="k"]') || helper.textContent!==L.helper) helper.textContent=L.helper;
 
     let toggle=step.querySelector(':scope > .m4d-advanced-toggle');
     if (!toggle) {
@@ -33288,8 +33540,8 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
         );
         const helper=existing.querySelector('.m4e-gravity-helper');
         const L=TEXT[lang()];
-        if (label) label.textContent=L.label;
-        if (helper) helper.textContent=L.helper;
+        if (label && (!root.matches('[data-m4c-screen="k"]') || label.textContent!==L.label)) label.textContent=L.label;
+        if (helper && (!root.matches('[data-m4c-screen="k"]') || helper.textContent!==L.helper)) helper.textContent=L.helper;
       }
       return;
     }
@@ -33324,7 +33576,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
 
     const helper=document.createElement('div');
     helper.className='m4e-gravity-helper';
-    helper.textContent=L.helper;
+    if (!root.matches('[data-m4c-screen="k"]') || helper.textContent!==L.helper) helper.textContent=L.helper;
     wrap.appendChild(helper);
     wrap.appendChild(row);
 
@@ -33846,6 +34098,65 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     });
   }
 
+  const PAIR_LABELS=new Set([
+    'valor serico','valor sérico','sodio corrigido','sódio corrigido',
+    'osmolaridade calculada','indicacao','indicação','dose','formulacao',
+    'formulação','volume a aspirar','concentracao na solucao',
+    'concentração na solução','concentración en la solución','diluir em',
+    'diluir en','volume final','volumen final','tempo','tiempo',
+    'velocidade de infusao','velocidade de infusão','velocidad de infusión',
+    'resultado','classificacao','classificação','interpretacao','interpretação'
+  ]);
+
+  const SODIUM_PAIR_LABELS=new Set([
+    'na⁺ corrigido','na+ corrigido','na corrigido',
+    'act (água corporal total)','act (agua corporal total)',
+    'déficit na⁺','déficit na+','déficit de na⁺','déficit de na+',
+    'déficit água livre','déficit de água livre','déficit de agua libre',
+    'osmolaridade','osmolaridad'
+  ]);
+
+  function pairLabelValueParagraphs(result){
+    result.querySelectorAll('.m4c-section').forEach(section=>{
+      const children=Array.from(section.children);
+      for (let i=0;i<children.length-1;i+=1) {
+        const labelNode=children[i];
+        const valueNode=children[i+1];
+        if (!labelNode.classList.contains('m4c-paragraph')) continue;
+        if (!valueNode.classList.contains('m4c-paragraph')) continue;
+
+        const label=clean(labelNode.textContent);
+        const labelKey=label.toLowerCase();
+        const sodium=Boolean(document.querySelector('#elec2-calc[data-m4c-screen="na"]'));
+        if (!PAIR_LABELS.has(labelKey) && !(sodium && SODIUM_PAIR_LABELS.has(labelKey))) continue;
+
+        const value=clean(valueNode.textContent);
+        if (!value) continue;
+
+        labelNode.replaceWith(makeRow(labelNode.ownerDocument,label,value));
+        valueNode.remove();
+        i+=1;
+      }
+    });
+  }
+
+  function mergeTrailingRowValues(result){
+    result.querySelectorAll('.m4c-row').forEach(row=>{
+      const value=row.querySelector('.m4c-row-value');
+      const next=row.nextElementSibling;
+      if (!value || !next || !next.classList.contains('m4c-paragraph')) return;
+
+      const current=clean(value.textContent);
+      const trailing=clean(next.textContent);
+      if (!trailing) return;
+
+      if (!current || /^\([^)]*\)$/.test(current)) {
+        value.textContent=trailing;
+        next.remove();
+      }
+    });
+  }
+
   function normalizeExistingRows(result){
     result.querySelectorAll('.m4c-row').forEach(row=>{
       const label=row.querySelector('.m4c-row-label');
@@ -33893,7 +34204,9 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     normalizeSeverity(result);
     removeConcatenatedStateSummary(result);
     normalizeConductParagraphs(result);
+    pairLabelValueParagraphs(result);
     normalizeExistingRows(result);
+    mergeTrailingRowValues(result);
     relocateDeficit(result);
 
     result.setAttribute('data-m4i-normalized','true');
@@ -34072,17 +34385,29 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     if (!severity || !value || !note) return;
 
     const source=clean(note.textContent);
+    /* Prioridade exclusivamente visual de um alerta emitido pelo protocolo de K. */
+    const potassium=result.closest('#elec2-calc[data-m4c-screen="k"]');
+    const alerts=result.querySelector('[data-section="alerts"]');
+    if (potassium && alerts && /🚨\s*EMERG[ÊE]NCIA/i.test(alerts.textContent)) {
+      const emergency=/EMERGENCIA/.test(alerts.textContent) ? 'Emergencia' : 'Emergência';
+      if (value.textContent!==emergency) value.textContent=emergency;
+      severity.setAttribute('data-tone','grave');
+      severity.setAttribute('data-m4k-severity-source','existing-potassium-emergency-alert');
+      const emergencyNote=emergency+' — '+source.replace(/^[^—]*—\s*/, '');
+      if (note.textContent!==emergencyNote) note.textContent=emergencyNote;
+      return;
+    }
     const found=explicitSeverity(source);
     if (!found) return;
 
-    value.textContent=found.label;
+    if (!potassium || value.textContent!==found.label) value.textContent=found.label;
     severity.setAttribute('data-tone',found.tone);
     severity.setAttribute('data-m4k-severity-source','descriptor-text');
 
     /* Em classificação leve/moderada, remove apenas ícone visual de urgência
        herdado do texto; a frase clínica permanece integral. */
     if (found.tone==='leve' || found.tone==='moderado') {
-      note.textContent=stripLeadingIcons(source);
+      if (!potassium || note.textContent!==stripLeadingIcons(source)) note.textContent=stripLeadingIcons(source);
     }
   }
 
@@ -34140,7 +34465,9 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
       placeholder:'Buscar fármaco…',
       add:'+ Adicionar fármaco',
       reset:'Limpar',
-      empty:'Nenhum fármaco encontrado'
+      empty:'Nenhum fármaco encontrado',
+      refine:'Mais resultados disponíveis. Continue digitando para refinar.',
+      showAll:'Ver todos os resultados'
     },
     es:{
       title:'Seleccionar fármacos',
@@ -34151,7 +34478,9 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
       placeholder:'Buscar fármaco…',
       add:'+ Agregar fármaco',
       reset:'Limpiar',
-      empty:'Ningún fármaco encontrado'
+      empty:'Ningún fármaco encontrado',
+      refine:'Hay más resultados. Continúe escribiendo para refinar.',
+      showAll:'Ver todos los resultados'
     }
   };
 
@@ -34317,7 +34646,21 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
       if (excluded.has(key)) return false;
       if (!q) return true;
       return row.search.includes(q) || norm(row.display).includes(q);
-    }).slice(0,10);
+    }).map((row,index) => {
+      const display=norm(row.display);
+      const search=norm(row.search);
+      let relevance=5;
+      if (display===q || norm(row.canonical)===q || norm(row.nomePt)===q) relevance=0;
+      else if (display.startsWith(q)) relevance=1;
+      else if (display.split(/\s+/).some(term => term.startsWith(q))) relevance=2;
+      else if (search.startsWith(q)) relevance=3;
+      else if (display.includes(q)) relevance=4;
+      return {row,relevance,index};
+    }).sort((a,b) => a.relevance-b.relevance || a.index-b.index)
+      .map(entry => entry.row);
+
+    const total=rows.length;
+    if (!slot.showAll) rows=rows.slice(0,10);
 
     if (!rows.length) {
       slot.dropdown.innerHTML=
@@ -34327,11 +34670,29 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     }
 
     slot.dropdown.innerHTML='';
+    const appendHighlighted=(button,label) => {
+      if (!q) {
+        button.textContent=label;
+        return;
+      }
+      const normalizedLabel=norm(label);
+      const start=normalizedLabel.indexOf(q);
+      if (start<0) {
+        button.textContent=label;
+        return;
+      }
+      button.append(document.createTextNode(label.slice(0,start)));
+      const mark=document.createElement('mark');
+      mark.className='mc-intx-m1-match';
+      mark.textContent=label.slice(start,start+q.length);
+      button.append(mark,document.createTextNode(label.slice(start+q.length)));
+    };
+
     rows.forEach(row => {
       const button=document.createElement('button');
       button.type='button';
       button.className='mc-intx-m1-suggestion';
-      button.textContent=row.display;
+      appendHighlighted(button,row.display);
       button.setAttribute('role','option');
       button.addEventListener('mousedown',e => {
         e.preventDefault();
@@ -34343,6 +34704,26 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
       });
       slot.dropdown.appendChild(button);
     });
+
+    if (!slot.showAll && total>10) {
+      const footer=document.createElement('div');
+      footer.className='mc-intx-m1-more';
+      const hint=document.createElement('span');
+      hint.textContent=T.refine;
+      const showAll=document.createElement('button');
+      showAll.type='button';
+      showAll.className='mc-intx-m1-show-all';
+      showAll.textContent=T.showAll;
+      showAll.addEventListener('mousedown',e => e.preventDefault());
+      showAll.addEventListener('click',e => {
+        e.preventDefault();
+        slot.showAll=true;
+        renderSuggestions(slot,query);
+        slot.dropdown.querySelector('.mc-intx-m1-suggestion')?.focus({preventScroll:true});
+      });
+      footer.append(hint,showAll);
+      slot.dropdown.appendChild(footer);
+    }
     slot.dropdown.dataset.open='true';
   }
 
@@ -34414,7 +34795,8 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
       input,
       clear,
       dropdown,
-      nomePt:''
+      nomePt:'',
+      showAll:false
     };
 
     input.addEventListener('focus',() => {
@@ -34423,6 +34805,7 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
     });
 
     input.addEventListener('input',() => {
+      slot.showAll=false;
       if (slot.nomePt) {
         engineRemove(slot.nomePt);
         slot.nomePt='';
@@ -34437,6 +34820,12 @@ body.mc-intx-final-active [data-mc-intx-conduct-flat="true"] *::after{
       if (e.key==='Escape') {
         dropdown.dataset.open='false';
         input.blur();
+      } else if (e.key==='ArrowDown') {
+        const first=dropdown.querySelector('.mc-intx-m1-suggestion');
+        if (first) {
+          e.preventDefault();
+          first.focus({preventScroll:true});
+        }
       } else if (e.key==='Enter') {
         const first=dropdown.querySelector('.mc-intx-m1-suggestion');
         if (first) {
@@ -41218,7 +41607,7 @@ ul:not(.fd-clean-list) > li::marker{
 
 <script src="/js/calculator-overlay.js?v=496-module-surface-gutter-4px-v1-b-r0" defer></script>
 <!-- CALC-HOME-MEDCASES-V1-B-R0 START -->
-<style id="calc-home-medcases-v1-b-r0">
+<style id="calc-home-medcases-v1-b-r0" media="not all">
 /*
  * MedCases Home V2 -> Calculadora Home
  * VISUAL OWNER ONLY.
@@ -43731,6 +44120,27 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
     right: 46px;
     z-index: 8;
   }
+
+  .mc-module-action-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .mc-module-action-group > .mc-module-clear-action {
+    flex: 0 0 auto !important;
+    min-width: 72px !important;
+    min-height: 44px !important;
+    height: 44px !important;
+    margin: 0 !important;
+    order: 0 !important;
+  }
+
+  .mc-module-action-group > :is(.hm-btn--primary,.elec2-calc-btn,.mcd-calc-btn,.calculate-dose-btn,[data-action="calculate"]) {
+    flex: 1 1 auto !important;
+    order: 1 !important;
+    margin: 0 !important;
+  }
 </style>
 <script id="medcases-module-clear-open-surface-only-v1-b-r2">
 (() => {
@@ -43934,6 +44344,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   const isNativeClearButton=el => {
     if (!el || !el.matches?.('button,[role="button"],a')) return false;
     if (el.classList.contains('mc-module-clear-action')) return false;
+    if (el.closest('#elec2-result-area')) return false;
 
     const d=clearDescriptor(el);
     const t=norm(el.textContent);
@@ -43950,6 +44361,28 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 
   const nativeClearButton=root =>
     [...root.querySelectorAll('button,[role="button"],a')].find(isNativeClearButton) || null;
+
+  const calculateButton=root => [...root.querySelectorAll('button,[role="button"],a')].find(el => {
+    if (!visible(el) || isNativeClearButton(el)) return false;
+    const d=norm([
+      el.id,el.className,el.getAttribute('aria-label'),el.getAttribute('title'),
+      el.getAttribute('data-action'),el.textContent
+    ].filter(Boolean).join(' '));
+    return /(^|\b)(calcular|calcular fixar|calcular fijar|calculate|verificar interacoes)(\b|$)/.test(d) ||
+      el.matches('.elec2-calc-btn,.mcd-calc-btn,.hm-btn--primary,.calculate-dose-btn,[data-action="calculate"]');
+  }) || null;
+
+  const placeClearWithCalculate=(root,button) => {
+    const calculate=calculateButton(root);
+    if (!calculate || !calculate.parentElement) return false;
+    const host=calculate.parentElement;
+    host.classList.add('mc-module-action-group');
+    button.classList.remove('mc-module-clear-floating');
+    if (button.parentElement!==host || button.nextElementSibling!==calculate) {
+      host.insertBefore(button,calculate);
+    }
+    return true;
+  };
 
   const resetLooseControl=el => {
     const tag=el.tagName;
@@ -44048,6 +44481,15 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   };
 
   const bindNativeClear=root => {
+    const bound=root.querySelector(
+      '.mc-module-clear-native[data-mc-native-clear-bound="'+BUILD+'"]'
+    );
+    if (bound && bound.isConnected) {
+      root.querySelectorAll('.mc-module-clear-action[data-owner]').forEach(button => button.remove());
+      placeClearWithCalculate(root,bound);
+      return true;
+    }
+
     const native=nativeClearButton(root);
     if (!native) return false;
 
@@ -44066,6 +44508,9 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
         });
       });
     }
+
+    native.classList.add('mc-module-clear-action','mc-module-clear-native');
+    placeClearWithCalculate(root,native);
 
     console.info('['+BUILD+'] NATIVE_CLEAR_OWNER',{
       moduleId:root.id || surfaceTitle(root),
@@ -44121,11 +44566,12 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
       clearModule(root);
     });
 
-    const host=headerHost(root);
-    if (host) {
+    const placedWithCalculate=placeClearWithCalculate(root,button);
+    const host=placedWithCalculate ? button.parentElement : headerHost(root);
+    if (!placedWithCalculate && host) {
       host.classList.add('mc-module-clear-host');
       host.appendChild(button);
-    } else {
+    } else if (!placedWithCalculate) {
       const cs=getComputedStyle(root);
       if (cs.position==='static') root.style.position='relative';
       button.classList.add('mc-module-clear-floating');
@@ -44134,7 +44580,8 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 
     console.info('['+BUILD+'] FALLBACK_CLEAR_INJECTED',{
       moduleId:root.id || surfaceTitle(root),
-      host:host ? host.className : 'floating'
+      host:host ? host.className : 'floating',
+      groupedWithCalculate:placedWithCalculate
     });
 
     return true;
@@ -67938,9 +68385,199 @@ console.info('['+BUILD+'] MOUNTED',{
 </script>
 <!-- MEDCASES_PREMIUM_R8_2_FREE60_LOCK_NATIVE_PAYWALL_V1_B_R0:end -->
 
+<!-- Final cascade authority for internal screens. Reuses the canonical file;
+     the Home rules are identical and internal primitives are strictly scoped. -->
+<script>
+(function () {
+  'use strict';
+  if (window.__MC_DOSE_EMPHASIS_V1) return;
+  window.__MC_DOSE_EMPHASIS_V1 = true;
 
+  var dosePattern = /(?:[<>≤≥]\s*)?\d+(?:[.,]\d+)?(?:\s*[–—-]\s*\d+(?:[.,]\d+)?)?\s*(?:mg\/dL|g\/dL|mcg|µg|mg|mEq|mmol|mol|kg|mL|UI|g|L|U)(?:\s*\/(?:kg|m²|m2|dia|día|dose|dosis|h|min|mL|L|dL))*(?:\s+(?:VO|IV|EV|IM|SC|SL|IN))?(?:\s+(?:(?:a\s+cada|cada)\s+\d+(?:[.,]\d+)?\s*(?:h|horas?|min)|\d+x\/dia))?/giu;
 
+  function emphasize(root) {
+    var scope = root && root.matches && root.matches('.mcd-sec[data-mc-block="3"] .mcd-body')
+      ? root
+      : (root || document).querySelector?.('.mcd-sec[data-mc-block="3"] .mcd-body');
+    if (!scope) return;
 
-<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=622-home-premium-r2" />
+    var walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        if (!node.nodeValue || !dosePattern.test(node.nodeValue)) {
+          dosePattern.lastIndex = 0;
+          return NodeFilter.FILTER_REJECT;
+        }
+        dosePattern.lastIndex = 0;
+        return node.parentElement && !node.parentElement.closest('.mc-dose-emphasis,script,style')
+          ? NodeFilter.FILTER_ACCEPT
+          : NodeFilter.FILTER_REJECT;
+      }
+    });
+
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (node) {
+      var text = node.nodeValue;
+      var frag = document.createDocumentFragment();
+      var last = 0;
+      text.replace(dosePattern, function (match, offset) {
+        if (offset > last) frag.appendChild(document.createTextNode(text.slice(last, offset)));
+        var strong = document.createElement('strong');
+        strong.className = 'mc-dose-emphasis';
+        strong.textContent = match;
+        frag.appendChild(strong);
+        last = offset + match.length;
+        return match;
+      });
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
+  var observer = new MutationObserver(function () { emphasize(document); });
+  function start() {
+    emphasize(document);
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
+  else start();
+})();
+</script>
+<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V1 BEGIN -->
+<script id="medcases-farmacos-nav-single-panel-v1">
+(() => {
+  'use strict';
+  const BUILD='CALC-FARMACOS-NAV-SINGLE-PANEL-V1';
+  if (window.__mcFarmacosNavSinglePanelV1) return;
+
+  let scheduled=0;
+  const microtask=callback => window.queueMicrotask
+    ? window.queueMicrotask(callback)
+    : Promise.resolve().then(callback);
+  const nextFrame=callback => window.requestAnimationFrame
+    ? window.requestAnimationFrame(callback)
+    : window.setTimeout(callback,0);
+  const shell=() => document.getElementById('farmacos-v2-shell');
+  const modeOf=tab => tab?.getAttribute('data-farmacos-mode') || '';
+  const currentMode=sh => modeOf(
+    sh?.querySelector('[data-farmacos-mode].is-active,[data-farmacos-mode][aria-selected="true"]')
+  ) || 'az';
+
+  const normalize=mode => {
+    const sh=shell();
+    if (!sh) return false;
+    if (!['contexts','groups','az'].includes(mode)) mode='az';
+
+    const owner=window.__mcFarmacosGlobalSearchInstantInputMobileV1BR0;
+    const runtime=sh.querySelector(':scope > #mc-pharm-runtime-panel');
+    const canonical=[...sh.querySelectorAll(':scope > [data-farmacos-panel]')];
+
+    if (mode==='groups') owner?.activateGroups?.();
+    else owner?.deactivateGroups?.();
+
+    sh.dataset.mcFarmNavMode=mode;
+    [...sh.querySelectorAll('[data-farmacos-mode]')].forEach(tab => {
+      const selected=modeOf(tab)===mode;
+      tab.classList.toggle('is-active',selected);
+      tab.setAttribute('role','tab');
+      tab.setAttribute('aria-selected',selected?'true':'false');
+      tab.tabIndex=selected?0:-1;
+    });
+
+    canonical.forEach(panel => {
+      panel.style.removeProperty('display');
+      panel.classList.toggle(
+        'is-active',
+        mode!=='groups' && panel.getAttribute('data-farmacos-panel')===mode
+      );
+    });
+
+    if (runtime) runtime.classList.toggle('is-active',mode==='groups');
+    return true;
+  };
+
+  const schedule=mode => {
+    window.clearTimeout(scheduled);
+    microtask(() => normalize(mode));
+    nextFrame(() => nextFrame(() => normalize(mode)));
+    scheduled=window.setTimeout(() => normalize(mode),110);
+  };
+
+  document.addEventListener('click',event => {
+    const tab=event.target.closest?.('#farmacos-v2-shell [data-farmacos-mode]');
+    if (tab) {
+      const mode=modeOf(tab);
+      schedule(mode);
+      return;
+    }
+
+    const trigger=event.target.closest?.('[data-hub-target="farmacos"],#hub-trigger-farmacos');
+    if (trigger) window.setTimeout(() => {
+      const sh=shell();
+      schedule(currentMode(sh));
+    },0);
+  },false);
+
+  document.addEventListener('keydown',event => {
+    const search=event.target;
+    if (
+      search?.matches?.('#hm-drug-search,input[placeholder*="Busque por nome"],input[placeholder*="Busca por nombre"]') &&
+      event.key.length===1 && !event.metaKey && !event.ctrlKey && !event.altKey
+    ) {
+      const sh=shell();
+      if (sh && currentMode(sh)!=='az') {
+        sh.querySelector('[data-farmacos-mode="az"]')?.click();
+        schedule('az');
+        try { search.focus({preventScroll:true}); }
+        catch (_) { search.focus(); }
+      }
+      return;
+    }
+
+    const tab=event.target.closest?.('#farmacos-v2-shell [data-farmacos-mode]');
+    if (!tab || !['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+    const tabs=[...tab.parentElement.querySelectorAll('[data-farmacos-mode]')];
+    const index=tabs.indexOf(tab);
+    if (index<0) return;
+    event.preventDefault();
+    const next=event.key==='Home' ? tabs[0]
+      : event.key==='End' ? tabs[tabs.length-1]
+      : tabs[(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];
+    next.focus();
+    next.click();
+  },false);
+
+  document.addEventListener('input',event => {
+    const input=event.target;
+    if (!input?.matches?.('#hm-drug-search,input[placeholder*="Busque por nome"],input[placeholder*="Busca por nombre"]')) return;
+    if (!String(input.value || '').trim()) return;
+    const sh=shell();
+    if (!sh || currentMode(sh)==='az') return;
+    const az=sh.querySelector('[data-farmacos-mode="az"]');
+    if (!az) return;
+    az.click();
+    schedule('az');
+    try { input.focus({preventScroll:true}); }
+    catch (_) { input.focus(); }
+  },false);
+
+  const boot=() => {
+    const sh=shell();
+    if (!sh) return false;
+    sh.querySelector('.farmacos-v2-tabs')?.setAttribute('role','tablist');
+    return normalize(currentMode(sh));
+  };
+
+  window.__mcFarmacosNavSinglePanelV1=Object.freeze({build:BUILD,normalize,schedule});
+  microtask(boot);
+  nextFrame(() => nextFrame(boot));
+  window.setTimeout(boot,250);
+  window.setTimeout(boot,800);
+})();
+</script>
+<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V1 END -->
+<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=630-desktop-grid-aligned" />
+<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=630-desktop-grid-aligned" />
+
 </body>
 </html>

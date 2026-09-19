@@ -61463,7 +61463,7 @@
 };})();
 /* GOLD33_SELECTIVE:alirocumab:END */
 /* GOLD33_SELECTIVE:alisquireno:START */
-;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["alisquireno"])throw new Error("GOLD33_MISSING_CANONICAL:alisquireno");db["alisquireno"].mcGoldClinicalV1={
+;(function(){var attach=function(db){if(!db||!db["alisquireno"])return false;db["alisquireno"].mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "004",
@@ -61548,7 +61548,7 @@
     ],
     "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f3fd2503-25ef-4660-a29a-f62c491e28fb"
   }
-};})();
+};return true;};if(!attach(window.CARDIOLOGIA_DRUGS_DB))window.__MC_GOLD33_PENDING_ALISQUIRENO__=attach;})();
 /* GOLD33_SELECTIVE:alisquireno:END */
 /* GOLD33_SELECTIVE:alprostadil:START */
 ;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["alprostadil"])throw new Error("GOLD33_MISSING_CANONICAL:alprostadil");db["alprostadil"].mcGoldClinicalV1={
@@ -61907,7 +61907,7 @@
 };})();
 /* GOLD33_SELECTIVE:amilorida:END */
 /* GOLD33_SELECTIVE:andexanetalfa:START */
-;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["andexanetalfa"])throw new Error("GOLD33_MISSING_CANONICAL:andexanetalfa");db["andexanetalfa"].mcGoldClinicalV1={
+;(function(){var db=window.CARDIO_DRUGS_DB;var drug=db&&db["andexanetAlfa"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:andexanetalfa");drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "006",
@@ -61995,7 +61995,7 @@
 };})();
 /* GOLD33_SELECTIVE:andexanetalfa:END */
 /* GOLD33_SELECTIVE:angiotensinaii:START */
-;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["angiotensinaii"])throw new Error("GOLD33_MISSING_CANONICAL:angiotensinaii");db["angiotensinaii"].mcGoldClinicalV1={
+;(function(){var db=window.CARDIO_DRUGS_DB;var drug=db&&db["angiotensinaII"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:angiotensinaii");drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "006",
@@ -64333,7 +64333,7 @@
 };})();
 /* GOLD33_SELECTIVE:digoxina:END */
 /* GOLD33_SELECTIVE:dinitratoisossorbida:START */
-;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["dinitratoisossorbida"])throw new Error("GOLD33_MISSING_CANONICAL:dinitratoisossorbida");db["dinitratoisossorbida"].mcGoldClinicalV1={
+;(function(){var db=window.CARDIO_DRUGS_DB;var drug=db&&db["dinitratoIsossorbida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:dinitratoisossorbida");drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "026",

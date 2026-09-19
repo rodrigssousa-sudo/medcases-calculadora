@@ -748,6 +748,13 @@
          Bloco: IECAs lipofílicos, Modulador Metabólico CPT-1, Inibidor Direto da Renina,
          Combos anti-hipertensivos BCC+BRA e BCC+AT1 */
 
+  if (typeof window.__MC_GOLD33_PENDING_ALISQUIRENO__ === 'function') {
+    if (!window.__MC_GOLD33_PENDING_ALISQUIRENO__(window.CARDIOLOGIA_DRUGS_DB)) {
+      throw new Error('GOLD33_MISSING_CANONICAL:alisquireno');
+    }
+    delete window.__MC_GOLD33_PENDING_ALISQUIRENO__;
+  }
+
   /* ── BUILD 440 guard ─────────────────────────────────────────────── */
   if (typeof window.CARDIOLOGIA_DRUGS_DB !== 'object' || window.CARDIOLOGIA_DRUGS_DB === null) return;
   Object.assign(window.CARDIOLOGIA_DRUGS_DB, {

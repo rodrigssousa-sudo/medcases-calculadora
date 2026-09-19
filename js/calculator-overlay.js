@@ -20,6 +20,7 @@
   var transitionId = null;
   var pendingOpenTimer = 0;
   var measureRaf = 0;
+  var focusScrollTimer = 0;
 
   function byId(id) {
     return document.getElementById(id);
@@ -235,15 +236,16 @@
     if (!ov) {
       ov = document.createElement('div');
       ov.id = 'calculator-overlay-container';
+      ov.className = 'mc-screen-shell';
       ov.setAttribute('role', 'dialog');
       ov.setAttribute('aria-modal', 'true');
       ov.setAttribute('data-mc-owner', 'NO_REPARENT_PROJECTION_V1');
       ov.innerHTML =
-        '<header id="calculator-overlay-header">' +
-          '<button type="button" id="calculator-overlay-close" aria-label="Fechar calculadora">' +
+        '<header id="calculator-overlay-header" class="mc-screen-header">' +
+          '<button type="button" id="calculator-overlay-close" class="mc-close-button" aria-label="Fechar calculadora">' +
             '<i class="fa-solid fa-xmark"></i>' +
           '</button>' +
-          '<div id="calculator-overlay-title">Calculadora</div>' +
+          '<div id="calculator-overlay-title" class="mc-screen-title">Calculadora</div>' +
           '<span class="calc-overlay-spacer" aria-hidden="true"></span>' +
         '</header>' +
         '<div id="calculator-overlay-body" aria-hidden="true"></div>';
@@ -295,10 +297,39 @@
     measureRaf = requestAnimationFrame(measureProjectionTop);
   }
 
+  function syncVisualViewport() {
+    var vv = window.visualViewport;
+    var root = document.documentElement;
+    var top = vv ? Math.max(0, Number(vv.offsetTop) || 0) : 0;
+    var left = vv ? Math.max(0, Number(vv.offsetLeft) || 0) : 0;
+    var width = vv ? Math.max(1, Number(vv.width) || window.innerWidth) : window.innerWidth;
+    var height = vv ? Math.max(1, Number(vv.height) || window.innerHeight) : window.innerHeight;
+
+    root.style.setProperty('--mc-visual-viewport-top', top + 'px');
+    root.style.setProperty('--mc-visual-viewport-left', left + 'px');
+    root.style.setProperty('--mc-visual-viewport-width', width + 'px');
+    root.style.setProperty('--mc-visual-viewport-height', height + 'px');
+    scheduleMeasure();
+  }
+
+  function keepFocusedControlVisible(e) {
+    var target = e && e.target;
+    if (!target || !target.matches('input,textarea,select,[contenteditable="true"]')) return;
+    if (!target.closest('.mc-overlay-projected-card')) return;
+
+    clearTimeout(focusScrollTimer);
+    focusScrollTimer = setTimeout(function () {
+      if (document.activeElement !== target) return;
+      target.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'smooth' });
+    }, 260);
+  }
+
   function clearProjectedClass(id) {
     var c = card(id);
     if (!c) return;
     c.classList.remove('mc-overlay-projected-card');
+    var inner = c.querySelector('.hub-card-inner');
+    if (inner) inner.classList.remove('mc-screen-content');
     c.style.removeProperty('--mc-overlay-projection-top');
   }
 
@@ -398,6 +429,8 @@
     transitionId = null;
 
     c.classList.add('mc-overlay-projected-card');
+    var inner = c.querySelector('.hub-card-inner');
+    if (inner) inner.classList.add('mc-screen-content');
 
     scheduleMeasure();
 
@@ -526,6 +559,15 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && (currentId || transitionId)) closeOverlay();
     });
+
+    document.addEventListener('focusin', keepFocusedControlVisible, true);
+
+    syncVisualViewport();
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', syncVisualViewport, { passive: true });
+      window.visualViewport.addEventListener('scroll', syncVisualViewport, { passive: true });
+    }
+    window.addEventListener('resize', syncVisualViewport, { passive: true });
 
     window.addEventListener('orientationchange', scheduleMeasure, { passive: true });
 

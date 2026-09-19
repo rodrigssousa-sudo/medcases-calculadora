@@ -34,9 +34,12 @@
        - NUNCA persiste identificadores pessoais. */
   (function _installMedCasesPatientSession() {
     if (window.MedCasesPatientSession &&
-        window.MedCasesPatientSession.version === 'V1-B-R0-R2') return;
+        window.MedCasesPatientSession.version === 'V1-B-R0-R3') return;
 
     var STORAGE_KEYS = ['medcases_hm_patient_v1', 'pacienteAtual'];
+    var SESSION_MARKER_KEY = 'mc_calc_session_active_v1';
+    var LAST_AWAY_KEY = 'mc_calc_last_away_at_v1';
+    var SESSION_TTL_MS = 30000;
 
     var ALIASES = {
       age:'idade', edad:'idade',
@@ -308,14 +311,64 @@
     }
 
     window.MedCasesPatientSession = {
-      version:'V1-B-R0-R2',
+      version:'V1-B-R0-R3',
       clear:clear,
       hydrate:hydrate,
       hydrateFromUrl:hydrateFromUrl,
       normalize:_normalize
     };
 
-    clear('document-start');
+    function _numberFromStorage(storage, key) {
+      try {
+        var raw = storage.getItem(key);
+        if (!raw) return null;
+        var value = Number(raw);
+        return Number.isFinite(value) ? value : null;
+      } catch (_) { return null; }
+    }
+
+    function _markAway() {
+      try { localStorage.setItem(LAST_AWAY_KEY, String(Date.now())); } catch (_) {}
+    }
+
+    function _consumeAwayTimestamp() {
+      var value = _numberFromStorage(localStorage, LAST_AWAY_KEY);
+      try { localStorage.removeItem(LAST_AWAY_KEY); } catch (_) {}
+      return value;
+    }
+
+    function _isSessionContinuation() {
+      try { return sessionStorage.getItem(SESSION_MARKER_KEY) === '1'; }
+      catch (_) { return false; }
+    }
+
+    function _activateSession() {
+      try { sessionStorage.setItem(SESSION_MARKER_KEY, '1'); } catch (_) {}
+    }
+
+    function _expireIfAwayTooLong(reason, reloadAfterClear) {
+      var awayAt = _consumeAwayTimestamp();
+      if (awayAt === null || Date.now() - awayAt < SESSION_TTL_MS) return false;
+      clear(reason || 'away-30s');
+      try {
+        window.dispatchEvent(new CustomEvent('medcases:session-expired', {
+          detail:{ awayMs:Date.now() - awayAt, ttlMs:SESSION_TTL_MS }
+        }));
+      } catch (_) {}
+      if (reloadAfterClear) {
+        setTimeout(function() { window.location.reload(); }, 0);
+      }
+      return true;
+    }
+
+    var continuingSession = _isSessionContinuation();
+    if (!continuingSession) {
+      clear('cold-start');
+      try { localStorage.removeItem(LAST_AWAY_KEY); } catch (_) {}
+    } else {
+      _expireIfAwayTooLong('document-start-away-30s', false);
+    }
+    _activateSession();
     setTimeout(function(){ hydrateFromUrl('document-start-url'); }, 0);
 
     if (document.readyState === 'loading') {
@@ -331,11 +384,21 @@
     }, { once:true });
 
     window.addEventListener('pageshow', function() {
+      if (_expireIfAwayTooLong('pageshow-away-30s', true)) return;
       hydrateFromUrl('pageshow');
     });
 
     window.addEventListener('pagehide', function() {
-      clear('pagehide');
+      _markAway();
+    });
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        _markAway();
+        return;
+      }
+      if (_expireIfAwayTooLong('visibility-away-30s', true)) return;
+      hydrateFromUrl('visibility-return');
     });
   })();
 

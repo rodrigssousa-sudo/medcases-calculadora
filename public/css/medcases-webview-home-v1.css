@@ -439,3 +439,4372 @@ html[data-theme="light"] body #page-home #hub-card-patient .hm-hd-toggle:has(inp
   :is(#hub-hemo-slot,#subview-hemo) #hemo-result > .card > .results-grid + div > div:last-child { font-size: var(--mc-font-clinical-body) !important; line-height: 1.45 !important; }
 }
 /* CALC-GLOBAL-MOBILE-BASELINE-V1-B MODULES END */
+
+/* ============================================================================
+   HOME PREMIUM V1 — canonical visual authority
+   ----------------------------------------------------------------------------
+   Scope: the closed Home composition only. Module internals and projected
+   calculator overlays keep their existing owners. A few declarations remain
+   !important solely to retire older ID-scoped rules from the legacy core.
+   Tokens always come from medcases-core-legacy.css (--mc-*).
+============================================================================ */
+
+#page-home {
+  background: var(--mc-bg-body);
+  color: var(--mc-text-primary);
+  font-family: var(--mc-font-family);
+}
+
+#page-home #hub-accordion {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: var(--mc-space-3) !important;
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+#page-home #hub-accordion > .hub-divider {
+  display: none;
+}
+
+#page-home #hub-accordion > .hub-section,
+#page-home .hub-l1-section,
+#page-home .hub-l1-row,
+#page-home .hub-l2-grid,
+#page-home .hub-l3-row {
+  min-width: 0;
+  width: 100%;
+}
+
+#page-home .hub-l1-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--mc-space-2);
+}
+
+#page-home .hub-l2-grid,
+#page-home .hub-l3-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: var(--mc-space-2) !important;
+}
+
+/* Closed-card shell. Open content is projected into the existing fullscreen
+   calculator overlay and is deliberately excluded from this authority. */
+#page-home .hub-card:not(.is-open):not(.mc-overlay-projected-card),
+#page-home #hub-card-clcr.hub-card--static {
+  min-width: 0;
+  height: auto !important;
+  min-height: 0 !important;
+  background: var(--mc-bg-surface) !important;
+  border-width: var(--mc-border-width) !important;
+  border-color: transparent !important;
+  border-radius: var(--mc-radius-md) !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+#page-home .hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card)
+  > .hub-card-body {
+  display: none !important;
+}
+
+#page-home .hub-card:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card)
+  > .hub-card-trigger {
+  display: grid !important;
+  grid-template-columns: var(--mc-ico-size-l2) minmax(0, 1fr) 18px !important;
+  align-items: center;
+  width: 100%;
+  height: auto !important;
+  min-height: var(--mc-trigger-h-l2) !important;
+  padding: 0 var(--mc-space-4) !important;
+  gap: var(--mc-space-3) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: inherit;
+  color: var(--mc-text-primary) !important;
+  font-family: var(--mc-font-family) !important;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color var(--mc-dur-normal) var(--mc-ease-out),
+    border-color var(--mc-dur-normal) var(--mc-ease-out),
+    opacity var(--mc-dur-fast) var(--mc-ease-out) !important;
+}
+
+#page-home .hub-card[data-level="1"]:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > .hub-card-trigger {
+  grid-template-columns: var(--mc-ico-size-l1) minmax(0, 1fr) 18px !important;
+  min-height: var(--mc-trigger-h-l1) !important;
+  padding-inline: var(--mc-space-5) !important;
+  gap: var(--mc-space-4) !important;
+}
+
+#page-home .hub-card[data-level="3"]:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > .hub-card-trigger {
+  grid-template-columns: var(--mc-ico-size-l3) minmax(0, 1fr) 64px 18px !important;
+  min-height: var(--mc-trigger-h-l3) !important;
+  padding-inline: var(--mc-space-3) !important;
+  gap: var(--mc-space-2) !important;
+}
+
+#page-home .hub-card:not(.is-open) > .hub-card-trigger:hover {
+  background: color-mix(in srgb, var(--mc-bg-surface2) 72%, transparent) !important;
+}
+
+#page-home .hub-card:not(.is-open) > .hub-card-trigger:active {
+  background: var(--mc-bg-surface2) !important;
+  opacity: 0.9 !important;
+  transform: none !important;
+}
+
+#page-home .hub-card:not(.is-open) > .hub-card-trigger:focus-visible {
+  outline: 2px solid var(--mc-accent) !important;
+  outline-offset: -3px;
+}
+
+#page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-ico {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1;
+  width: var(--mc-ico-size-l2) !important;
+  height: var(--mc-ico-size-l2) !important;
+  min-width: var(--mc-ico-size-l2) !important;
+  border-radius: var(--mc-ico-radius-l2) !important;
+  font-size: var(--mc-ico-font-l2) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Local semantic bridge: the core already owns the palette values; this
+   Home-only token lets the icon and its glyph share that existing accent. */
+#page-home #hub-card-patient { --mc-home-module-accent: var(--mc-l1-accent-patient); }
+#page-home #hub-card-farmacos { --mc-home-module-accent: var(--mc-l1-accent-drugs); }
+#page-home #hub-card-interacoes { --mc-home-module-accent: var(--mc-l2-accent-inter); }
+#page-home #hub-card-eletrolitos { --mc-home-module-accent: var(--mc-l2-accent-elec); }
+#page-home #hub-card-infusao { --mc-home-module-accent: var(--mc-l2-accent-infusao); }
+#page-home #hub-card-fluidos { --mc-home-module-accent: var(--mc-l2-accent-fluidos); }
+#page-home #hub-card-hemodinamica { --mc-home-module-accent: var(--mc-l2-accent-hemo); }
+#page-home #hub-card-pediatria { --mc-home-module-accent: var(--mc-l3-accent-ped); }
+#page-home #hub-card-gestante { --mc-home-module-accent: var(--mc-l3-accent-gest); }
+
+#page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-ico,
+#page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-ico i {
+  color: var(--mc-home-module-accent, var(--mc-accent)) !important;
+  -webkit-text-fill-color: var(--mc-home-module-accent, var(--mc-accent)) !important;
+}
+
+#page-home .hub-card[data-level="1"]:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > .hub-card-trigger > .hub-card-ico {
+  width: var(--mc-ico-size-l1) !important;
+  height: var(--mc-ico-size-l1) !important;
+  min-width: var(--mc-ico-size-l1) !important;
+  border-radius: var(--mc-ico-radius-l1) !important;
+  font-size: var(--mc-ico-font-l1) !important;
+}
+
+#page-home .hub-card[data-level="3"]:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card) > .hub-card-trigger > .hub-card-ico {
+  width: var(--mc-ico-size-l3) !important;
+  height: var(--mc-ico-size-l3) !important;
+  min-width: var(--mc-ico-size-l3) !important;
+  border-radius: var(--mc-ico-radius-l3) !important;
+  font-size: var(--mc-ico-font-l3) !important;
+}
+
+body.light-mode #page-home .hub-card:not(.is-open) .hub-card-ico i,
+body.theme-light #page-home .hub-card:not(.is-open) .hub-card-ico i,
+body[data-theme="light"] #page-home .hub-card:not(.is-open) .hub-card-ico i {
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
+  opacity: 1 !important;
+}
+
+#page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-meta {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  gap: 2px;
+}
+
+#page-home .hub-card:not(.is-open) .hub-card-name,
+#page-home .hub-card:not(.is-open) .hub-card-name * {
+  margin: 0 !important;
+  color: var(--mc-text-primary) !important;
+  -webkit-text-fill-color: var(--mc-text-primary) !important;
+  font-family: var(--mc-font-family) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+}
+
+#page-home .hub-card[data-level="1"]:not(.is-open) .hub-card-name,
+#page-home .hub-card[data-level="1"]:not(.is-open) .hub-card-name * {
+  font-size: var(--mc-card-name-l1) !important;
+  font-weight: 750 !important;
+}
+
+#page-home .hub-card[data-level="2"]:not(.is-open) .hub-card-name,
+#page-home .hub-card[data-level="2"]:not(.is-open) .hub-card-name * {
+  font-size: var(--mc-card-name-l2) !important;
+  font-weight: 700 !important;
+}
+
+#page-home .hub-card[data-level="3"]:not(.is-open) .hub-card-name,
+#page-home .hub-card[data-level="3"]:not(.is-open) .hub-card-name * {
+  font-size: var(--mc-card-name-l3) !important;
+  font-weight: 650 !important;
+}
+
+/* Semantic color authority fixes the former dark ID colors leaking into Light. */
+#page-home .hub-card:not(.is-open) .hub-card-desc,
+#page-home .hub-card:not(.is-open) .hub-card-desc * {
+  margin: 0 !important;
+  color: var(--mc-text-secondary) !important;
+  -webkit-text-fill-color: var(--mc-text-secondary) !important;
+  font-family: var(--mc-font-family) !important;
+  font-size: max(var(--mc-card-desc-size), 12px) !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+  white-space: normal;
+  overflow-wrap: normal;
+}
+
+#page-home .hub-card:not(.is-open) .hub-card-chevron {
+  grid-column: -1;
+  position: static !important;
+  margin: 0 !important;
+  transform: none !important;
+  color: var(--mc-text-muted) !important;
+  -webkit-text-fill-color: var(--mc-text-muted) !important;
+  opacity: 0.9 !important;
+}
+
+/* L3: the compact status badge owns one non-wrapping slot. */
+#page-home #hub-card-pediatria:not(.is-open) .hub-soon-badge,
+#page-home #hub-card-gestante:not(.is-open) .hub-soon-badge {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  grid-column: 3;
+  grid-row: 1;
+  width: auto !important;
+  min-width: max-content !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 3px 7px !important;
+  border-radius: var(--mc-radius-xs) !important;
+  color: var(--mc-text-muted) !important;
+  font-family: var(--mc-font-family) !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  color: var(--mc-text-muted) !important;
+  -webkit-text-fill-color: var(--mc-text-muted) !important;
+  background: var(--mc-bg-surface2) !important;
+  border-color: var(--mc-border) !important;
+}
+
+#page-home #hub-card-pediatria:not(.is-open) .hub-card-chevron,
+#page-home #hub-card-gestante:not(.is-open) .hub-card-chevron {
+  grid-column: 4;
+}
+
+/* Renal summary: one surface with internal dividers, never four nested cards. */
+#page-home #hub-card-clcr.hub-card--static {
+  padding: var(--mc-space-2) var(--mc-space-3);
+  border-color: var(--mc-l1-border-clcr) !important;
+}
+
+#page-home #hub-card-clcr .clcr-live-dashboard {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  width: 100%;
+  min-height: 80px;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+#page-home #hub-card-clcr .grid-card-clcr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 64px;
+  padding: var(--mc-space-2) var(--mc-space-1) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-left: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#page-home #hub-card-clcr .grid-card-clcr:first-child {
+  border-left: 0 !important;
+}
+
+#page-home #hub-card-clcr .grid-card-title {
+  color: var(--mc-text-muted) !important;
+  -webkit-text-fill-color: var(--mc-text-muted) !important;
+  font-family: var(--mc-font-family) !important;
+  font-size: 10px !important;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: 0.035em;
+  text-align: center;
+}
+
+#page-home #hub-card-clcr .grid-card-value {
+  margin-top: var(--mc-space-1);
+  color: var(--mc-text-primary) !important;
+  -webkit-text-fill-color: var(--mc-text-primary) !important;
+  font-family: var(--mc-font-family) !important;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+/* Footer is part of the composition instead of an orphaned final label. */
+#page-home #hub-version-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1320px;
+  margin: var(--mc-space-3) auto 0 !important;
+  padding: var(--mc-space-3) var(--mc-space-1) calc(var(--mc-space-3) + env(safe-area-inset-bottom, 0px)) !important;
+  border-top: var(--mc-border-width) solid var(--mc-border);
+  color: var(--mc-text-muted) !important;
+  font-family: var(--mc-font-family);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.09em;
+}
+
+/* Mobile/WebView: dense single-column rhythm with full-size touch targets. */
+@media (max-width: 767px) {
+  #page-home #hub-accordion {
+    gap: var(--mc-space-2) !important;
+  }
+
+  #page-home .hub-l1-section,
+  #page-home .hub-l2-grid,
+  #page-home .hub-l3-row {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 6px !important;
+  }
+
+  #page-home .hub-card[data-level="2"]:not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger,
+  #page-home .hub-card[data-level="3"]:not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger {
+    min-height: 56px !important;
+  }
+
+  #page-home .hub-card[data-level="2"]:not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger {
+    padding-inline: var(--mc-space-3) !important;
+    gap: var(--mc-space-2) !important;
+  }
+
+  #page-home .hub-card:not(.is-open) .hub-card-chevron {
+    font-size: 12px !important;
+    opacity: 0.62 !important;
+  }
+
+  #page-home #hub-card-clcr .clcr-live-dashboard {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    min-height: 112px;
+  }
+
+  #page-home #hub-card-clcr.hub-card--static {
+    padding-block: 6px;
+  }
+
+  #page-home #hub-card-clcr .grid-card-clcr {
+    min-height: 56px;
+    padding-block: var(--mc-space-1) !important;
+  }
+
+  #page-home #hub-card-clcr .grid-card-clcr:nth-child(odd) {
+    border-left: 0 !important;
+  }
+
+  #page-home #hub-card-clcr .grid-card-clcr:nth-child(n + 3) {
+    border-top: var(--mc-border-width) solid var(--mc-border) !important;
+  }
+}
+
+/* Primary mobile composition: the clinical sequence remains unchanged while
+   secondary modules form a compact 1 + 2 + 2 matrix. The narrower 360px
+   fallback intentionally stays single-column for text legibility. */
+@media (min-width: 390px) and (max-width: 767px) {
+  #page-home .hub-l2-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: stretch;
+  }
+
+  #page-home #hub-card-interacoes {
+    grid-column: 1 / -1 !important;
+  }
+
+  #page-home .hub-l2-grid > .hub-card:not(.is-open):not(.mc-overlay-projected-card),
+  #page-home .hub-l2-grid > .hub-card:not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger {
+    min-height: 78px !important;
+  }
+
+  #page-home #hub-card-interacoes:not(.is-open):not(.mc-overlay-projected-card),
+  #page-home #hub-card-interacoes:not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger {
+    min-height: 58px !important;
+  }
+
+  #page-home .hub-l2-grid .hub-card:not(.is-open) > .hub-card-trigger {
+    grid-template-columns: var(--mc-ico-size-l2) minmax(0, 1fr) 14px !important;
+    padding-inline: 10px !important;
+    gap: 8px !important;
+  }
+
+  #page-home .hub-l2-grid .hub-card:not(.is-open) .hub-card-desc,
+  #page-home .hub-l2-grid .hub-card:not(.is-open) .hub-card-desc * {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+  }
+}
+
+/* Tablet: predictable two-column matrices. Interactions is the intentional
+   primary L2 span; the remaining four calculators form a balanced 2x2. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #page-home #hub-accordion {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: var(--mc-space-3) !important;
+  }
+
+  #page-home .hub-l1-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #page-home .hub-l2-grid,
+  #page-home .hub-l3-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #page-home #hub-card-interacoes {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+/* Desktop: two intentional, balanced clinical columns; L3 remains a quiet
+   full-width institutional row below them. */
+@media (min-width: 1024px) {
+  #page-home #hub-accordion {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
+    align-items: start;
+    gap: var(--mc-space-3) !important;
+    width: min(calc(100% - 48px), 1320px);
+  }
+
+  #page-home #hub-accordion > .hub-section:has(.hub-l1-section) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #page-home #hub-accordion > .hub-section:has(.hub-l2-section) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #page-home #hub-accordion > .hub-section:has(.hub-l3-section) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  #page-home .hub-l2-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #page-home #hub-card-interacoes {
+    grid-column: 1 / -1 !important;
+  }
+
+  #page-home .hub-l2-grid > .hub-card:not(.is-open):not(.mc-overlay-projected-card),
+  #page-home .hub-l2-grid > .hub-card:not(.is-open):not(.mc-overlay-projected-card) > .hub-card-trigger {
+    min-height: 76px !important;
+  }
+
+  #page-home .hub-l3-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* ============================================================================
+   GLOBAL PREMIUM UI V1 — internal-screen canonical authority
+   ----------------------------------------------------------------------------
+   The approved Home is explicitly excluded. This block consolidates visual
+   primitives for projected modules and legacy routed screens without changing
+   clinical DOM, values, handlers, routing, entitlement or calculations.
+============================================================================ */
+
+/* Reusable primitives. Existing owners are mapped to these contracts below. */
+.mc-screen-shell {
+  --mc-screen-content-max: 760px;
+  background: var(--mc-bg-body);
+  color: var(--mc-text-primary);
+  font-family: var(--mc-font-family);
+}
+
+.mc-screen-header {
+  min-height: 56px;
+  background: color-mix(in srgb, var(--mc-bg-body) 94%, transparent);
+  border-bottom: var(--mc-border-width) solid var(--mc-border);
+}
+
+.mc-screen-title {
+  color: var(--mc-text-primary);
+  font-size: var(--mc-font-internal-title);
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+.mc-close-button,
+.mc-button-primary,
+.mc-button-secondary,
+.mc-button-danger {
+  min-height: 44px;
+  border-radius: var(--mc-radius-sm);
+  font-family: var(--mc-font-family);
+  font-size: var(--mc-font-section);
+  font-weight: 700;
+}
+
+.mc-form-section,
+.mc-result,
+.mc-alert,
+.mc-empty-state {
+  border: var(--mc-border-width) solid var(--mc-border);
+  border-radius: var(--mc-radius-md);
+  background: var(--mc-bg-surface);
+}
+
+.mc-field,
+.mc-input,
+.mc-select {
+  min-height: 44px;
+  border: var(--mc-border-width) solid var(--mc-border);
+  border-radius: var(--mc-radius-sm);
+  background: var(--mc-bg-input);
+  color: var(--mc-text-primary);
+  font-family: var(--mc-font-family);
+  font-size: 16px;
+}
+
+.mc-label {
+  color: var(--mc-text-secondary);
+  font-size: var(--mc-font-section);
+  font-weight: 650;
+}
+
+.mc-segmented,
+.mc-toggle {
+  min-height: 44px;
+  border: var(--mc-border-width) solid var(--mc-border);
+  border-radius: var(--mc-radius-sm);
+  background: var(--mc-bg-surface2);
+}
+
+/* Shared projected shell. The specificity is intentional: the historical
+   runtime projection owns fixed positioning, while this layer owns appearance. */
+body.calc-overlay-open #calculator-overlay-container.mc-screen-shell #calculator-overlay-header.mc-screen-header {
+  min-height: 56px !important;
+  height: 56px !important;
+  padding: env(safe-area-inset-top, 0px) 12px 0 !important;
+  background: color-mix(in srgb, var(--mc-bg-body) 94%, transparent) !important;
+  border-bottom: var(--mc-border-width) solid var(--mc-border) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(14px);
+}
+
+body.calc-overlay-open #calculator-overlay-container .mc-close-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: var(--mc-radius-sm) !important;
+  background: var(--mc-bg-surface) !important;
+  color: var(--mc-text-secondary) !important;
+  font-size: 18px !important;
+}
+
+body.calc-overlay-open #calculator-overlay-container .mc-close-button:hover,
+body.calc-overlay-open #calculator-overlay-container .mc-close-button:active {
+  background: var(--mc-bg-surface2) !important;
+  color: var(--mc-text-primary) !important;
+  transform: none !important;
+}
+
+body.calc-overlay-open #calculator-overlay-container .mc-close-button:focus-visible {
+  outline: 2px solid var(--mc-accent) !important;
+  outline-offset: 2px;
+}
+
+body.calc-overlay-open #calculator-overlay-container .mc-screen-title {
+  color: var(--mc-text-primary) !important;
+  font-family: var(--mc-font-family) !important;
+  font-size: var(--mc-font-internal-title) !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.01em !important;
+}
+
+body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card {
+  background: var(--mc-bg-body) !important;
+  color: var(--mc-text-primary) !important;
+}
+
+body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card .hub-card-inner.mc-screen-content {
+  width: min(100%, var(--mc-screen-content-max, 760px)) !important;
+  max-width: var(--mc-screen-content-max, 760px) !important;
+  min-height: 0 !important;
+  margin: 0 auto !important;
+  padding: 20px 16px calc(32px + env(safe-area-inset-bottom, 0px)) !important;
+  color: var(--mc-text-primary) !important;
+  font-family: var(--mc-font-family) !important;
+}
+
+/* Form primitives mapped to current functional classes. */
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .hm-input,.hm-search,.mc-intx-m1-input,.elec2-field-input,
+  .infusion-input,.inf-free-drug-input,.inf-autocomplete-input,
+  .infusion-unit-select,.fluid-weight-fallback-input,.input-field
+) {
+  min-height: 44px !important;
+  height: 44px !important;
+  box-sizing: border-box !important;
+  padding-inline: 13px !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: var(--mc-radius-sm) !important;
+  background: var(--mc-bg-input) !important;
+  color: var(--mc-text-primary) !important;
+  font-family: var(--mc-font-family) !important;
+  font-size: 16px !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .hm-input,.hm-search,.mc-intx-m1-input,.elec2-field-input,
+  .infusion-input,.inf-free-drug-input,.inf-autocomplete-input,
+  .fluid-weight-fallback-input,.input-field
+)::placeholder {
+  color: var(--mc-text-muted) !important;
+  opacity: 0.82 !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(input,select,textarea):focus {
+  border-color: var(--mc-accent) !important;
+  outline: 2px solid color-mix(in srgb, var(--mc-accent) 28%, transparent) !important;
+  outline-offset: 1px;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .input-label,.hm-input-label,.infusion-field-label,.inf-free-drug-label,
+  .fluid-weight-fallback-label,.infusion-sec-label
+) {
+  color: var(--mc-text-secondary) !important;
+  font-family: var(--mc-font-family) !important;
+  font-size: var(--mc-font-section) !important;
+  font-weight: 650 !important;
+  letter-spacing: 0 !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .hm-btn,.hm-sex-btn,.hm-urine-header,.mc-intx-m1-add,.mc-intx-m3-r3-clear,
+  #btn-verificar-interacoes,.infusion-mode-btn,.mc-module-clear-action,
+  .fd-btn-close,.fd-btn-copy
+) {
+  min-height: 44px !important;
+  box-sizing: border-box !important;
+  border-radius: var(--mc-radius-sm) !important;
+  font-family: var(--mc-font-family) !important;
+  font-size: var(--mc-font-section) !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card button:disabled {
+  opacity: 0.46 !important;
+  cursor: not-allowed !important;
+  filter: saturate(0.55) !important;
+}
+
+/* Renal: compact clinical form, consistent segmentation and actions. */
+body.calc-overlay-open #hub-card-patient .hm-fields-grid {
+  gap: 12px !important;
+}
+
+body.calc-overlay-open #hub-card-patient .hm-sex-btn {
+  min-height: 44px !important;
+  border-color: var(--mc-border) !important;
+  background: var(--mc-bg-surface2) !important;
+}
+
+body.calc-overlay-open #hub-card-patient .hm-sex-btn.is-active,
+body.calc-overlay-open #hub-card-patient .hm-sex-btn.active {
+  border-color: var(--mc-l1-accent-patient) !important;
+  background: color-mix(in srgb, var(--mc-l1-accent-patient) 14%, var(--mc-bg-surface)) !important;
+}
+
+body.calc-overlay-open #hub-card-patient .hm-urine-header {
+  width: 100% !important;
+  padding-inline: 12px !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  background: var(--mc-bg-surface2) !important;
+}
+
+/* Interactions: lean flow with visible hierarchy and no artificial canvas. */
+body.calc-overlay-open #hub-card-interacoes .hub-card-inner.mc-screen-content {
+  max-width: 680px !important;
+}
+
+body.calc-overlay-open #hub-card-interacoes :is(.mc-intx-m1-add,.mc-intx-m3-r3-clear) {
+  padding-inline: 14px !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  background: var(--mc-bg-surface2) !important;
+  color: var(--mc-text-secondary) !important;
+}
+
+body.calc-overlay-open #hub-card-interacoes #btn-verificar-interacoes {
+  min-height: 48px !important;
+  border: 0 !important;
+  background: var(--mc-l2-accent-inter) !important;
+  color: #fff !important;
+}
+
+/* Electrolytes: rebuild presentation only; engine DOM and handlers stay intact. */
+body.calc-overlay-open #hub-card-eletrolitos .elec2-step-hd {
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  min-height: 34px !important;
+  margin-bottom: 12px !important;
+  color: var(--mc-text-primary) !important;
+  font-size: var(--mc-font-internal-title) !important;
+  font-weight: 750 !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos .elec2-step-num {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 28px !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: color-mix(in srgb, var(--mc-l2-accent-elec) 16%, var(--mc-bg-surface)) !important;
+  color: var(--mc-l2-accent-elec) !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos .elec2-elec-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos .elec2-elec-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 10px !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: var(--mc-radius-sm) !important;
+  background: var(--mc-bg-surface2) !important;
+  color: var(--mc-text-secondary) !important;
+  font-family: var(--mc-font-family) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos .elec2-elec-btn:is(.active,.is-active,[aria-pressed="true"]) {
+  border-color: var(--mc-l2-accent-elec) !important;
+  background: color-mix(in srgb, var(--mc-l2-accent-elec) 15%, var(--mc-bg-surface)) !important;
+  color: var(--mc-l2-accent-elec) !important;
+}
+
+/* Infusion: consistent segmented control, fields, result and educational alert. */
+body.calc-overlay-open #hub-card-infusao .infusion-mode-bar {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 4px !important;
+  min-height: 48px !important;
+  padding: 4px !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: var(--mc-radius-md) !important;
+  background: var(--mc-bg-surface2) !important;
+}
+
+body.calc-overlay-open #hub-card-infusao .infusion-mode-btn {
+  min-height: 40px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--mc-text-secondary) !important;
+}
+
+body.calc-overlay-open #hub-card-infusao .infusion-mode-btn.active {
+  background: var(--mc-bg-surface) !important;
+  color: var(--mc-l2-accent-infusao) !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,.12) !important;
+}
+
+body.calc-overlay-open #hub-card-infusao :is(.infusion-result-area,.infusion-secondary-card,.infusion-reverse-card) {
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: var(--mc-radius-md) !important;
+  background: var(--mc-bg-surface) !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-infusao :is(.infusion-disclaimer,.drug-alert) {
+  border-radius: var(--mc-radius-sm) !important;
+  background: color-mix(in srgb, var(--mc-l2-accent-infusao) 8%, var(--mc-bg-surface)) !important;
+  color: var(--mc-text-secondary) !important;
+}
+
+/* Fluids: locale-safe label and a compact, single-surface form. */
+html:not(:lang(es)) body.calc-overlay-open #hub-card-fluidos .fluid-weight-fallback-es,
+html:lang(pt) body.calc-overlay-open #hub-card-fluidos .fluid-weight-fallback-es,
+body[data-lang^="pt"].calc-overlay-open #hub-card-fluidos .fluid-weight-fallback-es {
+  display: none !important;
+}
+
+html:lang(es) body.calc-overlay-open #hub-card-fluidos .fluid-weight-fallback-pt,
+body[data-lang^="es"].calc-overlay-open #hub-card-fluidos .fluid-weight-fallback-pt {
+  display: none !important;
+}
+
+body.calc-overlay-open #hub-card-fluidos :is(.card,.hm-card) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-fluidos .fluid-weight-fallback {
+  padding: 12px !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: var(--mc-radius-md) !important;
+  background: var(--mc-bg-surface) !important;
+}
+
+body.calc-overlay-open #hub-card-fluidos .mc-module-clear-action,
+body.calc-overlay-open #hub-card-hemodinamica .mc-module-clear-action {
+  min-width: 76px !important;
+  min-height: 44px !important;
+  padding-inline: 14px !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  background: transparent !important;
+  color: var(--mc-text-secondary) !important;
+}
+
+/* Hemodynamics: critical semantics remain an accent, never the whole surface. */
+body.calc-overlay-open #hub-card-hemodinamica :is(.card,.hm-card) {
+  border-color: color-mix(in srgb, var(--mc-l2-accent-hemo) 24%, var(--mc-border)) !important;
+  background: var(--mc-bg-surface) !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica :is(.result-card,.drug-alert,.score-result) {
+  border-radius: var(--mc-radius-md) !important;
+  box-shadow: none !important;
+}
+
+/* Farmacos is already mature: preserve density and normalize only primitives. */
+body.calc-overlay-open #hub-card-farmacos #hm-drug-search {
+  min-height: 44px !important;
+  height: 44px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+body.calc-overlay-open #hub-card-farmacos [data-farmacos-v2-search-wrapper] {
+  position: relative !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: var(--mc-radius-sm) !important;
+  background: var(--mc-bg-input) !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-farmacos .hm-search-icon {
+  left: 16px !important;
+  right: auto !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+
+body.calc-overlay-open #hub-card-farmacos #hm-search-clear {
+  position: absolute !important;
+  left: auto !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 28px !important;
+  min-width: 28px !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  margin: 0 !important;
+  z-index: 3 !important;
+}
+
+/* Electrolytes: one shared layout authority for every selected calculation. */
+body.calc-overlay-open #hub-card-eletrolitos #elec2-calc {
+  display: grid !important;
+  gap: 18px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos :is(#elec2-step2,#elec2-step3) {
+  display: grid !important;
+  gap: 16px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 18px 0 0 !important;
+  border: 0 !important;
+  border-top: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos :is(#elec2-step2,#elec2-step3) .elec2-step-hd {
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  color: var(--mc-text-primary) !important;
+  font-size: var(--mc-font-internal-title) !important;
+  font-weight: 650 !important;
+  line-height: 1.3 !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos .elec2-fields-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-field,.elec2-state-group) {
+  display: grid !important;
+  align-content: start !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos .elec2-field--full {
+  grid-column: 1 / -1 !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-field-lbl,.elec2-state-lbl) {
+  margin: 0 !important;
+  color: var(--mc-text-secondary) !important;
+  font-size: var(--mc-font-section) !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos .elec2-field-input {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: var(--mc-radius-sm) !important;
+  background: var(--mc-bg-input) !important;
+  color: var(--mc-text-primary) !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos .elec2-btn-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important;
+  gap: 8px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn,.elec2-preset-btn) {
+  flex: 1 1 96px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 8px 12px !important;
+  border: var(--mc-border-width) solid var(--mc-border) !important;
+  border-radius: var(--mc-radius-sm) !important;
+  background: var(--mc-bg-surface2) !important;
+  color: var(--mc-text-secondary) !important;
+  line-height: 1.25 !important;
+  white-space: normal !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn,.elec2-preset-btn).active {
+  border-color: var(--mc-l2-accent-elec) !important;
+  background: color-mix(in srgb, var(--mc-l2-accent-elec) 14%, var(--mc-bg-surface2)) !important;
+  color: var(--mc-text-primary) !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos .elec2-calc-btn {
+  width: 100% !important;
+  min-height: 48px !important;
+  margin: 2px 0 0 !important;
+  border: 0 !important;
+  border-radius: var(--mc-radius-sm) !important;
+}
+
+body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area {
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+/* Hemodynamics: flatten the legacy inner card into the main screen surface. */
+body.calc-overlay-open #hub-card-hemodinamica #subview-hemo > .card {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica #hub-hemo-slot > .card {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica #subview-hemo > .card > .card-title {
+  margin: 0 0 16px !important;
+  padding: 0 0 12px !important;
+  border-bottom: var(--mc-border-width) solid var(--mc-border) !important;
+  color: var(--mc-text-primary) !important;
+  font-size: var(--mc-font-internal-title) !important;
+  font-weight: 650 !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica #hub-hemo-slot > .card > .card-title {
+  margin: 0 0 16px !important;
+  padding: 0 0 12px !important;
+  border-bottom: var(--mc-border-width) solid var(--mc-border) !important;
+  color: var(--mc-text-primary) !important;
+  font-size: var(--mc-font-internal-title) !important;
+  font-weight: 650 !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica #subview-hemo .input-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin: 0 !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica #hub-hemo-slot .input-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin: 0 !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica #subview-hemo .input-group {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica #hub-hemo-slot .input-group {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica #subview-hemo .input-field {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.calc-overlay-open #hub-card-hemodinamica #hub-hemo-slot .input-field {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+@media (max-width: 520px) {
+  body.calc-overlay-open #hub-card-eletrolitos .elec2-fields-grid,
+  body.calc-overlay-open #hub-card-hemodinamica #subview-hemo .input-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body.calc-overlay-open #hub-card-hemodinamica #hub-hemo-slot .input-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+/* Build 557 — shared form hierarchy, derived from the approved Interactions surface. */
+html body.calc-overlay-open #page-home :is(
+  #hub-card-fluidos,#hub-card-infusao,#hub-card-clcr,#hub-card-eletrolitos,#hub-card-hemodinamica
+).mc-overlay-projected-card :is(
+  .input-field,input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),select,textarea
+) {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  border: 1px solid var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-fluidos.mc-overlay-projected-card #subview-fluids > .card {
+  display: grid !important;
+  gap: 8px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: var(--mc-mono-bg) !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-fluidos.mc-overlay-projected-card #subview-fluids > .card > :is(
+  .card-title,.patient-banner,.fluid-weight-fallback,.input-group,#fluid-deficit-panel,#fluid-insens-panel
+) {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 12px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-fluidos.mc-overlay-projected-card #fluid-result {
+  display: grid !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+  margin-top: 8px !important;
+  background: transparent !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-fluidos.mc-overlay-projected-card #fluid-result > * {
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  overflow-wrap: anywhere !important;
+}
+
+html body.calc-overlay-open #page-home :is(
+  #hub-card-fluidos,#hub-card-infusao,#hub-card-clcr,#hub-card-eletrolitos,#hub-card-hemodinamica
+).mc-overlay-projected-card :is(.mc-module-action-group,.hm-card-footer,.elec2-result-actions) {
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  gap: 8px !important;
+}
+
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card :is(
+  .hm-btn--primary,.elec2-calc-btn,.mcd-calc-btn,.calculate-dose-btn,[data-action="calculate"]
+) {
+  min-height: 44px !important;
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  box-shadow: none !important;
+}
+
+html body #hub-card-interacoes .mc-intx-m1-suggestion mark.mc-intx-m1-match {
+  padding: 0 !important;
+  border-radius: 2px !important;
+  background: color-mix(in srgb, var(--mc-action-primary) 22%, transparent) !important;
+  color: inherit !important;
+  font-weight: 760 !important;
+}
+
+html body #hub-card-interacoes .mc-intx-m1-more {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  padding: 8px 10px !important;
+  border-top: 1px solid var(--mc-mono-separator) !important;
+  background: var(--mc-mono-elevated) !important;
+  color: var(--mc-mono-muted) !important;
+  font-size: 11px !important;
+}
+
+html body #hub-card-interacoes .mc-intx-m1-show-all {
+  flex: 0 0 auto !important;
+  min-height: 32px !important;
+  padding: 0 9px !important;
+  border: 1px solid var(--mc-mono-separator) !important;
+  border-radius: 7px !important;
+  background: var(--mc-mono-surface) !important;
+  color: var(--mc-mono-text) !important;
+  font-size: 11px !important;
+  font-weight: 650 !important;
+}
+
+@media (max-width: 430px) {
+  html body #hub-card-interacoes .mc-intx-m1-more {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+}
+
+/* Build 559 — Electrolytes: labels live on the structural surface; only real controls are elevated. */
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card :is(
+  #elec2-step2,#elec2-step3,.elec2-step,.elec2-fields-grid,.elec2-field,
+  .elec2-state-group,.elec2-btn-row,.elec2-step-hd,.elec2-field-lbl,.elec2-state-lbl
+) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card :is(
+  #elec2-step2,#elec2-step3
+) {
+  display: grid !important;
+  gap: 16px !important;
+  padding-top: 14px !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .elec2-fields-grid,.elec2-state-group
+) {
+  gap: 10px !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .elec2-step-hd,.elec2-field-lbl,.elec2-state-lbl,.elec2-field-unit
+) {
+  width: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mc-mono-muted) !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card .elec2-step-hd {
+  color: var(--mc-mono-text) !important;
+  font-weight: 680 !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .elec2-field-input,input:not([type="checkbox"]):not([type="radio"]),select,textarea,
+  .elec2-state-btn,.elec2-preset-btn,.m4d-advanced-toggle
+) {
+  border: 1px solid var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card #elec2-result-area,
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .univ-result-card,.univ-result-card-inner,.univ-result-conduct
+) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card .univ-result-card-inner {
+  display: grid !important;
+  gap: 10px !important;
+  padding: 0 !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .univ-result-header,.univ-result-number,.univ-result-sub,.elec2-bloco
+) {
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 12px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card .univ-result-conduct {
+  display: grid !important;
+  gap: 8px !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .elec2-bloco-hd,.elec2-bloco-bd,.elec2-row
+) {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card .elec2-row {
+  display: grid !important;
+  grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr) !important;
+  gap: 10px !important;
+  padding: 7px 0 !important;
+  border-bottom: 1px solid var(--mc-mono-separator) !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .elec2-alert,.elec2-acesso-alert,.elec2-recontrole
+) {
+  margin-top: 8px !important;
+  padding: 10px 12px !important;
+  border-radius: 0 !important;
+}
+
+@media (max-width: 430px) {
+  html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card .elec2-row {
+    grid-template-columns: minmax(0,1fr) !important;
+    gap: 3px !important;
+  }
+}
+
+/* Canonical Home parity: neutralize every structural surface in routed modules. */
+html body {
+  --mc-bg-body: var(--mc-mono-bg) !important;
+  --mc-bg-surface: var(--mc-mono-surface) !important;
+  --mc-bg-surface2: var(--mc-mono-elevated) !important;
+  --mc-bg-input: var(--mc-mono-input) !important;
+  --mc-border: var(--mc-mono-separator) !important;
+  --mc-text-primary: var(--mc-mono-text) !important;
+  --mc-text-secondary: var(--mc-mono-muted) !important;
+  --mc-text-muted: var(--mc-mono-muted) !important;
+  --theme-bg: var(--mc-mono-surface) !important;
+  --theme-accent: var(--mc-mono-icon) !important;
+  --theme-accent-rgb: 208, 208, 208 !important;
+}
+
+html body.calc-overlay-open #calculator-overlay-container,
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card,
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card .hub-card-inner.mc-screen-content,
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card .hub-card-body {
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(
+  [class*="card"],
+  [class*="panel"],
+  [class*="surface"],
+  [class*="section"],
+  [class*="step"],
+  [class*="group"],
+  [class*="tile"],
+  [class*="item"],
+  [class*="row"],
+  [class*="header"],
+  [class*="toolbar"],
+  [class*="tabs"],
+  [class*="tab-content"],
+  [class*="result"]
+):not(.drug-alert):not(.elec2-alert):not(.alert):not(.alert-danger):not(.alert-warning):not(.clinical-warning):not(.clinical-error):not(.critical-alert):not([class*="danger"]):not([class*="critical"]):not([class*="warning"]):not([data-severity]) {
+  border-color: var(--mc-mono-separator) !important;
+  background-color: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(
+  [class*="icon"], [class*="ico"]
+) {
+  border-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-icon) !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(
+  input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),
+  textarea, select, [contenteditable="true"]
+) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(
+  button,[role="button"]
+):not(.mc-button-primary):not(.elec2-calc-btn):not(.mcd-calc-btn):not(.hm-btn-primary):not(#btn-verificar-interacoes):not(.calculate-dose-btn):not([data-action="calculate"]):not(.danger):not(.error):not(.critical):not(.warning):not([class*="danger"]):not([class*="critical"]):not([class*="warn"]) {
+  border-color: var(--mc-mono-separator) !important;
+  background-color: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-text) !important;
+}
+
+/* Close actions are isolated white glyphs, never decorative tiles. */
+html body :is(
+  #calculator-overlay-close,
+  #mc-drug-detail-page-v21 .mcd-close,
+  .rx-modal-close,
+  #rx-modal-close-btn,
+  #fd-floating-close,
+  .fd-close,
+  .qe-close,
+  .hm-inline-close,
+  #mc-cdd-preview-close
+) {
+  min-width: 44px !important;
+  width: 44px !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html body :is(
+  .mc-button-primary,
+  .hm-btn--primary,
+  .elec2-calc-btn,
+  .mcd-calc-btn,
+  #fd-btn-calc-label,
+  #btn-verificar-interacoes,
+  .calculate-dose-btn,
+  [data-action="calculate"]
+) {
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-action-on-primary) !important;
+  -webkit-text-fill-color: var(--mc-action-on-primary) !important;
+}
+
+html body :is(
+  .mc-button-primary,
+  .hm-btn--primary,
+  .elec2-calc-btn,
+  .mcd-calc-btn,
+  #fd-btn-calc-label,
+  #btn-verificar-interacoes,
+  .calculate-dose-btn,
+  [data-action="calculate"]
+):is(:hover,:active) {
+  border-color: var(--mc-action-primary-hover) !important;
+  background: var(--mc-action-primary-hover) !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(
+  .hm-btn--primary,
+  .elec2-calc-btn,
+  .mcd-calc-btn,
+  #fd-btn-calc-label,
+  #btn-verificar-interacoes,
+  .calculate-dose-btn,
+  [data-action="calculate"]
+) {
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  color: var(--mc-action-on-primary) !important;
+  -webkit-text-fill-color: var(--mc-action-on-primary) !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(i,[class*="badge"],[class*="track"]) {
+  border-color: var(--mc-mono-separator) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(
+  .infusion-bidir-unit-badge,
+  .hm-inline-patient-bar,
+  .hm-profile-card,
+  .hm-patient-summary
+) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Final close-control authority for the canonical drug detail. */
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 .mcd-id > .mcd-name-row > .mcd-id-close,
+html body:has(> #mc-drug-detail-page-v21[data-open="true"]) button#fd-floating-close,
+html body:has(> #mc-drug-detail-page-v21[data-open="true"]) button#calculator-overlay-close {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Build 545 — terminal cascade authority. */
+html body {
+  --mc-bg-body: var(--mc-mono-bg) !important;
+  --mc-bg-surface: var(--mc-mono-surface) !important;
+  --mc-bg-surface2: var(--mc-mono-elevated) !important;
+  --mc-bg-input: var(--mc-mono-input) !important;
+  --mc-border: var(--mc-mono-separator) !important;
+  --mc-text-primary: var(--mc-mono-text) !important;
+  --mc-text-secondary: var(--mc-mono-muted) !important;
+  --mc-text-muted: var(--mc-mono-muted) !important;
+  --theme-bg: var(--mc-mono-surface) !important;
+  --theme-accent: var(--mc-mono-icon) !important;
+  --theme-accent-rgb: 208, 208, 208 !important;
+}
+
+html body.calc-overlay-open #calculator-overlay-container,
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card,
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card :is(.hub-card-inner.mc-screen-content,.hub-card-body) {
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is([class*="card"],[class*="panel"],[class*="surface"],[class*="section"],[class*="step"],[class*="group"],[class*="tile"],[class*="item"],[class*="row"],[class*="header"],[class*="toolbar"],[class*="tabs"],[class*="tab-content"],[class*="result"],[class*="badge"],[class*="track"]):not(.drug-alert):not(.elec2-alert):not(.alert):not(.alert-danger):not(.alert-warning):not(.clinical-warning):not(.clinical-error):not(.critical-alert):not([class*="danger"]):not([class*="critical"]):not([class*="warning"]):not([data-severity]) {
+  border-color: var(--mc-mono-separator) !important;
+  background-color: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(i,[class*="icon"],[class*="ico"]) {
+  border-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-icon) !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),textarea,select,[contenteditable="true"]) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(button,[role="button"]):not(.hm-btn--primary):not(.elec2-calc-btn):not(.mcd-calc-btn):not(#fd-btn-calc-label):not(#btn-verificar-interacoes):not(.calculate-dose-btn):not([data-action="calculate"]):not(.danger):not(.error):not(.critical):not(.warning):not([class*="danger"]):not([class*="critical"]):not([class*="warn"]) {
+  border-color: var(--mc-mono-separator) !important;
+  background-color: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-text) !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(.hm-btn--primary,.elec2-calc-btn,.mcd-calc-btn,#fd-btn-calc-label,#btn-verificar-interacoes,.calculate-dose-btn,[data-action="calculate"]),
+html body > #mc-drug-detail-page-v21 .mcd-calc-btn {
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html body > #mc-drug-detail-page-v21,
+html body > #mc-drug-detail-page-v21 :is(.mcd-scroll,.mcd-shell,.mcd-content,.mcd-sections,.mcd-id,.mcd-patient,.mcd-sec,.mcd-sub,.mcd-object-item,.mcd-card,.mcd-panel,details) {
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-sec) {
+  box-sizing: border-box !important;
+  padding: 12px 16px !important;
+}
+
+html body :is(#calculator-overlay-close,#mc-drug-detail-page-v21 .mcd-close,.rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,.hm-inline-close,#mc-cdd-preview-close) {
+  min-width: 44px !important;
+  width: 44px !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+@media (max-width: 520px) {
+  html body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-sec) {
+    padding: 11px calc(16px + env(safe-area-inset-right, 0px)) 11px calc(16px + env(safe-area-inset-left, 0px)) !important;
+  }
+}
+
+/* CALC-ELETROLITOS-V1-INDEPENDENT-AUDIT-R2-FINAL-CASCADE DISABLED */
+@media not all {
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn) {
+  border: 1px solid var(--mc-mono-separator, rgba(148,163,184,.28)) !important;
+  background: var(--mc-mono-input, var(--mc-bg-surface2, #111827)) !important;
+  color: var(--mc-mono-muted, var(--mc-text-secondary, #cbd5e1)) !important;
+  font-weight: 560 !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  border-color: var(--mc-l2-accent-elec, #8b5cf6) !important;
+  background: color-mix(in srgb, var(--mc-l2-accent-elec, #8b5cf6) 24%, var(--mc-mono-input, #111827)) !important;
+  color: var(--mc-mono-text, #fff) !important;
+  font-weight: 720 !important;
+  box-shadow: inset 0 0 0 1px var(--mc-l2-accent-elec, #8b5cf6),0 0 0 2px color-mix(in srgb, var(--mc-l2-accent-elec, #8b5cf6) 12%, transparent) !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc :is(.elec2-state-group.m4c-hidden-redundant,.elec2-btn-row.m4c-hidden-redundant,.elec2-state-lbl.m4c-hidden-redundant) {
+  display: none !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-result {
+  gap: 16px !important;
+  padding-block: 4px 20px !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border: 1px solid var(--mc-mono-separator, rgba(148,163,184,.24)) !important;
+  border-radius: 12px !important;
+  background: var(--mc-mono-elevated, var(--mc-bg-surface2, #171717)) !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,.16),0 8px 22px rgba(0,0,0,.08) !important;
+}
+body.light-mode.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]),
+body.theme-light.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  background: color-mix(in srgb, var(--mc-l2-accent-elec, #8b5cf6) 18%, #fff) !important;
+  color: #312e81 !important;
+}
+body.light-mode.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section),
+body.theme-light.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  background: #fff !important;
+  box-shadow: 0 1px 2px rgba(15,23,42,.07),0 8px 24px rgba(15,23,42,.055) !important;
+}
+
+}
+/* CALC-ELETROLITOS-V1-INDEPENDENT-AUDIT-R2 START DISABLED
+   Contratos finais: seleção inequívoca e blocos clínicos independentes. */
+@media not all {
+html body.calc-overlay-open #hub-card-eletrolitos {
+  --mc-elec-selection: var(--mc-l2-accent-elec, #8b5cf6);
+  --mc-elec-selection-bg: color-mix(in srgb, var(--mc-elec-selection) 24%, var(--mc-mono-input, #111827));
+  --mc-elec-hover-bg: color-mix(in srgb, var(--mc-elec-selection) 10%, var(--mc-mono-input, #111827));
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn) {
+  position: relative !important;
+  border: 1px solid var(--mc-mono-separator, rgba(148,163,184,.28)) !important;
+  background: var(--mc-mono-input, var(--mc-bg-surface2, #111827)) !important;
+  color: var(--mc-mono-muted, var(--mc-text-secondary, #cbd5e1)) !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-weight: 560 !important;
+  opacity: 1 !important;
+  transition: background-color .14s ease,border-color .14s ease,color .14s ease,box-shadow .14s ease,transform .08s ease !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):not(:disabled):not(.active):not(.elec2-elec-btn--active):hover {
+  border-color: color-mix(in srgb, var(--mc-elec-selection) 48%, var(--mc-mono-separator, transparent)) !important;
+  background: var(--mc-elec-hover-bg) !important;
+  color: var(--mc-mono-text, var(--mc-text-primary, #f8fafc)) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.active,.elec2-elec-btn.is-active,.elec2-elec-btn.elec2-elec-btn--active,.elec2-state-btn[aria-pressed="true"],.elec2-preset-btn[aria-pressed="true"],.elec2-elec-btn[aria-pressed="true"]) {
+  border-color: var(--mc-elec-selection) !important;
+  background: var(--mc-elec-selection-bg) !important;
+  color: var(--mc-mono-text, var(--mc-text-primary, #fff)) !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-weight: 720 !important;
+  box-shadow: inset 0 0 0 1px var(--mc-elec-selection),0 0 0 2px color-mix(in srgb, var(--mc-elec-selection) 12%, transparent) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,.elec2-state-btn[aria-pressed="true"],.elec2-preset-btn[aria-pressed="true"],.elec2-elec-btn[aria-pressed="true"])::after {
+  content: "✓" !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-left: 7px !important;
+  border-radius: 999px !important;
+  background: var(--mc-elec-selection) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  vertical-align: 1px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):not(:disabled):active {
+  transform: scale(.975) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--mc-elec-selection) 42%, transparent) !important;
+  outline-offset: 2px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):disabled,
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn)[aria-disabled="true"] {
+  border-style: dashed !important;
+  background: transparent !important;
+  color: var(--mc-mono-muted, #94a3b8) !important;
+  box-shadow: none !important;
+  opacity: .46 !important;
+  cursor: not-allowed !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc :is(.elec2-state-group.m4c-hidden-redundant,.elec2-btn-row.m4c-hidden-redundant,.elec2-state-lbl.m4c-hidden-redundant) {
+  display: none !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-result {
+  gap: 16px !important;
+  padding-block: 4px 20px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  position: relative !important;
+  margin: 0 !important;
+  border: 1px solid var(--mc-mono-separator, rgba(148,163,184,.24)) !important;
+  border-radius: 12px !important;
+  background: var(--mc-mono-elevated, var(--mc-bg-surface2, #171717)) !important;
+  background-image: none !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,.16),0 8px 22px rgba(0,0,0,.08) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-severity { padding: 15px 16px !important; }
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-summary-head { padding: 14px 16px !important; }
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-section { padding: 16px !important; }
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .elec2-result-actions {
+  display: flex !important;
+  gap: 10px !important;
+  margin-top: 2px !important;
+  padding: 14px 0 0 !important;
+  border-top: 1px solid var(--mc-mono-separator, rgba(148,163,184,.22)) !important;
+}
+
+body.light-mode.calc-overlay-open #hub-card-eletrolitos,
+body.theme-light.calc-overlay-open #hub-card-eletrolitos,
+body[data-theme="light"].calc-overlay-open #hub-card-eletrolitos,
+html[data-theme="light"] body.calc-overlay-open #hub-card-eletrolitos {
+  --mc-elec-selection-bg: color-mix(in srgb, var(--mc-elec-selection) 18%, #fff);
+  --mc-elec-hover-bg: color-mix(in srgb, var(--mc-elec-selection) 8%, #fff);
+}
+
+body.light-mode.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section),
+body.theme-light.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section),
+body[data-theme="light"].calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section),
+html[data-theme="light"] body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border-color: rgba(100,116,139,.20) !important;
+  background: #fff !important;
+  box-shadow: 0 1px 2px rgba(15,23,42,.07),0 8px 24px rgba(15,23,42,.055) !important;
+}
+
+@media (max-width: 430px) {
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-result { gap: 13px !important; }
+}
+}
+
+/* CALC-ELETROLITOS-V1-INDEPENDENT-AUDIT-R2 END */
+
+/* CALC-ELETROLITOS-V1-P0-RESULT-STATE-R1 START
+   Owner visual do estado pós-cálculo. O conteúdo clínico permanece no engine;
+   estas regras restauram somente estrutura, hierarquia e hit testing. */
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card {
+  pointer-events: auto !important;
+  touch-action: pan-y !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos :is(
+  button,.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn,
+  .m4d-advanced-toggle,.elec2-calc-btn,.elec2-action-btn
+) {
+  position: relative !important;
+  z-index: 2 !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos .elec2-btn-row {
+  position: relative !important;
+  isolation: isolate !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area {
+  display: grid;
+  gap: 12px;
+  box-sizing: border-box !important;
+  padding: 0 0 18px !important;
+  overflow: visible !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-result {
+  display: grid !important;
+  gap: 12px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4i-hidden,.m4j-concatenated-state,.m4c-hidden-redundant) {
+  display: none !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  border: 1px solid var(--mc-mono-separator, rgba(148,163,184,.22)) !important;
+  border-radius: 12px !important;
+  background: var(--mc-mono-surface, var(--mc-bg-surface, #111827)) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-severity {
+  display: grid !important;
+  gap: 4px !important;
+  padding: 14px 16px !important;
+  border-left: 4px solid var(--mc-l2-accent-elec, #8b5cf6) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-severity[data-tone="grave"] {
+  border-left-color: #ef4444 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-severity[data-tone="moderado"] {
+  border-left-color: #f59e0b !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-severity[data-tone="leve"] {
+  border-left-color: #eab308 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-severity[data-tone="normal"] {
+  border-left-color: #10b981 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-kicker {
+  margin: 0 !important;
+  color: var(--mc-mono-muted, var(--mc-text-secondary, #94a3b8)) !important;
+  font-size: 11px !important;
+  font-weight: 650 !important;
+  letter-spacing: .055em !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-severity-value {
+  color: var(--mc-mono-text, var(--mc-text-primary, #f8fafc)) !important;
+  font-size: 19px !important;
+  font-weight: 720 !important;
+  line-height: 1.25 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-severity-note {
+  margin-top: 2px !important;
+  color: var(--mc-mono-muted, var(--mc-text-secondary, #cbd5e1)) !important;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-summary-head {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) auto !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 13px 16px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-summary-name {
+  min-width: 0 !important;
+  color: var(--mc-mono-text, var(--mc-text-primary, #f8fafc)) !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  line-height: 1.35 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-summary-number {
+  color: var(--mc-l2-accent-elec, #a78bfa) !important;
+  font-size: 18px !important;
+  font-weight: 740 !important;
+  line-height: 1.2 !important;
+  text-align: right !important;
+  white-space: nowrap !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-section {
+  display: block !important;
+  padding: 14px 16px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-section-title {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  color: var(--mc-mono-text, var(--mc-text-primary, #f8fafc)) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .045em !important;
+  line-height: 1.35 !important;
+  text-transform: uppercase !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-result-chips {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 7px !important;
+  width: 100% !important;
+  margin: 0 0 4px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-result-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 28px !important;
+  padding: 5px 9px !important;
+  border: 1px solid color-mix(in srgb, var(--mc-l2-accent-elec, #8b5cf6) 34%, transparent) !important;
+  border-radius: 999px !important;
+  background: color-mix(in srgb, var(--mc-l2-accent-elec, #8b5cf6) 10%, transparent) !important;
+  color: var(--mc-mono-text, var(--mc-text-primary, #f8fafc)) !important;
+  font-size: 11.5px !important;
+  font-weight: 620 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-row,.m4i-row) {
+  display: grid !important;
+  grid-template-columns: minmax(104px,.78fr) minmax(0,1.22fr) !important;
+  align-items: start !important;
+  gap: 12px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 9px 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mc-mono-separator, rgba(148,163,184,.16)) !important;
+  background: transparent !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-row,.m4i-row):last-child {
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-row-label,.m4i-row-label) {
+  min-width: 0 !important;
+  color: var(--mc-mono-muted, var(--mc-text-secondary, #94a3b8)) !important;
+  font-size: 12px !important;
+  font-weight: 560 !important;
+  line-height: 1.4 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-row-value,.m4i-row-value) {
+  min-width: 0 !important;
+  color: var(--mc-mono-text, var(--mc-text-primary, #f8fafc)) !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  line-height: 1.45 !important;
+  overflow-wrap: anywhere !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-paragraph {
+  margin: 0 !important;
+  padding: 7px 0 !important;
+  color: var(--mc-mono-text, var(--mc-text-primary, #e5e7eb)) !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  overflow-wrap: anywhere !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-alert {
+  margin: 8px 0 0 !important;
+  padding: 10px 12px !important;
+  border: 1px solid color-mix(in srgb, #f59e0b 32%, transparent) !important;
+  border-radius: 9px !important;
+  background: color-mix(in srgb, #f59e0b 9%, transparent) !important;
+  color: var(--mc-mono-text, var(--mc-text-primary, #f8fafc)) !important;
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  overflow-wrap: anywhere !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-alert--critical {
+  border-color: color-mix(in srgb, #ef4444 38%, transparent) !important;
+  background: color-mix(in srgb, #ef4444 9%, transparent) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .elec2-result-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .elec2-result-actions .elec2-action-btn {
+  flex: 1 1 140px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 430px) {
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+    border-radius: 10px !important;
+  }
+
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-section) {
+    padding: 13px 14px !important;
+  }
+
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-summary-head {
+    padding: 12px 14px !important;
+  }
+
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-row,.m4i-row) {
+    grid-template-columns: minmax(92px,.72fr) minmax(0,1.28fr) !important;
+    gap: 10px !important;
+  }
+}
+/* CALC-ELETROLITOS-V1-P0-RESULT-STATE-R1 END */
+
+/* Build 560 — absolute EOF authority: internal labels and close controls. */
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card :is(
+  .infusion-sec-label,.inf-free-drug-label,.infusion-field-label,.bic-preset-header,
+  .bic-preset-header-label,.bic-ctx-header,.bic-ctx-title,.input-label,.card-title,
+  .hm-field-label,.hm-label,.elec2-step-hd,.elec2-field-lbl,.elec2-state-lbl,
+  .mc-intx-m1-title,.mc-intx-m1-subtitle,.mc-intx-m1-slot-label
+) {
+  width: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-infusao.mc-overlay-projected-card :is(
+  .infusion-field,.infusion-bidir-field,.inf-free-drug-wrap,.infusion-drug-panel,
+  .bic-preset-section,.infusion-unit-row,.infusion-bidir-row
+) {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-infusao.mc-overlay-projected-card :is(
+  input:not([type="checkbox"]):not([type="radio"]),select,textarea,
+  .infusion-mode-btn,.bic-preset-chip
+) {
+  border: 1px solid var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #calculator-overlay-container[data-mc-owner="NO_REPARENT_PROJECTION_V1"] #calculator-overlay-header.mc-screen-header,
+html body.calc-overlay-open #calculator-overlay-container #calculator-overlay-header,
+html body > #mc-drug-detail-page-v21 :is(.mcd-head,.mcd-id,.mcd-name-row) {
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body #calculator-overlay-close#calculator-overlay-close,
+html body #calculator-overlay-container #calculator-overlay-close#calculator-overlay-close,
+html body #mc-drug-detail-page-v21 button.mcd-close.mcd-close,
+html body :is(.rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,.hm-inline-close,#mc-cdd-preview-close) {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 44px !important;
+  width: 44px !important;
+  max-width: 44px !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  max-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html body #calculator-overlay-close#calculator-overlay-close:is(:hover,:active,:focus),
+html body #mc-drug-detail-page-v21 button.mcd-close.mcd-close:is(:hover,:active,:focus),
+html body :is(.rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,.hm-inline-close,#mc-cdd-preview-close):is(:hover,:active,:focus) {
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body #calculator-overlay-close#calculator-overlay-close::before,
+html body #calculator-overlay-close#calculator-overlay-close::after,
+html body #mc-drug-detail-page-v21 button.mcd-close.mcd-close::before,
+html body #mc-drug-detail-page-v21 button.mcd-close.mcd-close::after,
+html body :is(.rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,.hm-inline-close,#mc-cdd-preview-close)::before,
+html body :is(.rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,.hm-inline-close,#mc-cdd-preview-close)::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html body #calculator-overlay-close#calculator-overlay-close:focus-visible,
+html body #mc-drug-detail-page-v21 button.mcd-close.mcd-close:focus-visible,
+html body :is(.rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,.hm-inline-close,#mc-cdd-preview-close):focus-visible {
+  outline: 2px solid rgba(255,255,255,.9) !important;
+  outline-offset: -5px !important;
+}
+
+/* Build 561 — sole final authority for the Fármacos list geometry/search. */
+html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card .hub-card-inner.mc-screen-content {
+  box-sizing: border-box !important;
+  padding-left: calc(16px + env(safe-area-inset-left, 0px)) !important;
+  padding-right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+  background: var(--mc-mono-bg) !important;
+  overflow-x: hidden !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card #farmacos-v2-shell {
+  box-sizing: border-box !important;
+  display: grid !important;
+  gap: 8px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card :is(
+  [data-farmacos-v2-search-wrapper],.farmacos-search-wrapper,.hm-drug-search-wrapper
+) {
+  position: relative !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid var(--mc-mono-separator) !important;
+  border-radius: 9px !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card :is(
+  #hm-drug-search,#farmacos-search-input,[data-farmacos-v2-search-input]
+) {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 44px !important;
+  margin: 0 !important;
+  padding: 0 44px 0 44px !important;
+  border: 0 !important;
+  border-radius: inherit !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card :is(
+  [data-farmacos-v2-search-wrapper],.farmacos-search-wrapper,.hm-drug-search-wrapper
+):focus-within {
+  border-color: color-mix(in srgb, var(--mc-mono-text) 42%, var(--mc-mono-separator)) !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card :is(
+  .farmacos-v2-context-list,.farmacos-v2-group-list,.farmacos-v2-modules,
+  .hm-drug-list,.mc-fnav-list
+) {
+  box-sizing: border-box !important;
+  display: grid !important;
+  gap: 8px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* Keep the canonical navigation phases mutually exclusive.  The runtime
+   owns which phase is active; list geometry must not force hidden panels
+   back into the document flow. */
+html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card
+#farmacos-v2-shell .farmacos-v2-panel {
+  display: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card
+#farmacos-v2-shell .farmacos-v2-panel.is-active {
+  display: block !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card :is(
+  .hm-drug-item,.mc-fnav-drug-row,.farmacos-v2-module-row,button[id^="hm-di-"]
+) {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 11px 12px !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  overflow-wrap: anywhere !important;
+}
+
+html body > #mc-drug-detail-page-v21 .mcd-content {
+  box-sizing: border-box !important;
+  padding-left: calc(16px + env(safe-area-inset-left, 0px)) !important;
+  padding-right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+  background: var(--mc-mono-elevated) !important;
+}
+
+/* Build 545 — final cascade authority: Home-neutral system everywhere. */
+html body {
+  --mc-bg-body: var(--mc-mono-bg) !important;
+  --mc-bg-surface: var(--mc-mono-surface) !important;
+  --mc-bg-surface2: var(--mc-mono-elevated) !important;
+  --mc-bg-input: var(--mc-mono-input) !important;
+  --mc-border: var(--mc-mono-separator) !important;
+  --mc-text-primary: var(--mc-mono-text) !important;
+  --mc-text-secondary: var(--mc-mono-muted) !important;
+  --mc-text-muted: var(--mc-mono-muted) !important;
+  --theme-bg: var(--mc-mono-surface) !important;
+  --theme-accent: var(--mc-mono-icon) !important;
+  --theme-accent-rgb: 208, 208, 208 !important;
+}
+
+html body.calc-overlay-open #calculator-overlay-container,
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card,
+html body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card :is(.hub-card-inner.mc-screen-content,.hub-card-body) {
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(
+  [class*="card"],[class*="panel"],[class*="surface"],[class*="section"],
+  [class*="step"],[class*="group"],[class*="tile"],[class*="item"],
+  [class*="row"],[class*="header"],[class*="toolbar"],[class*="tabs"],
+  [class*="tab-content"],[class*="result"],[class*="badge"],[class*="track"]
+):not(.drug-alert):not(.elec2-alert):not(.alert):not(.alert-danger):not(.alert-warning):not(.clinical-warning):not(.clinical-error):not(.critical-alert):not([class*="danger"]):not([class*="critical"]):not([class*="warning"]):not([data-severity]) {
+  border-color: var(--mc-mono-separator) !important;
+  background-color: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(i,[class*="icon"],[class*="ico"]) {
+  border-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-icon) !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),textarea,select,[contenteditable="true"]) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(button,[role="button"]):not(.hm-btn--primary):not(.elec2-calc-btn):not(.mcd-calc-btn):not(#fd-btn-calc-label):not(#btn-verificar-interacoes):not(.calculate-dose-btn):not([data-action="calculate"]):not(.danger):not(.error):not(.critical):not(.warning):not([class*="danger"]):not([class*="critical"]):not([class*="warn"]) {
+  border-color: var(--mc-mono-separator) !important;
+  background-color: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-text) !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(.hm-btn--primary,.elec2-calc-btn,.mcd-calc-btn,#fd-btn-calc-label,#btn-verificar-interacoes,.calculate-dose-btn,[data-action="calculate"]),
+html body > #mc-drug-detail-page-v21 .mcd-calc-btn {
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html body > #mc-drug-detail-page-v21,
+html body > #mc-drug-detail-page-v21 :is(.mcd-scroll,.mcd-shell,.mcd-content,.mcd-sections,.mcd-id,.mcd-patient,.mcd-sec,.mcd-sub,.mcd-object-item,.mcd-card,.mcd-panel,details) {
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-sec) {
+  box-sizing: border-box !important;
+  padding: 12px 16px !important;
+}
+
+html body :is(#calculator-overlay-close,#mc-drug-detail-page-v21 .mcd-close,.rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,.hm-inline-close,#mc-cdd-preview-close) {
+  min-width: 44px !important;
+  width: 44px !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+@media (max-width: 520px) {
+  html body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-sec) {
+    padding: 11px calc(16px + env(safe-area-inset-right, 0px)) 11px calc(16px + env(safe-area-inset-left, 0px)) !important;
+  }
+}
+
+/* Drug details: one edge-to-edge elevated neutral surface with protected copy. */
+html body > #mc-drug-detail-page-v21,
+html body > #mc-drug-detail-page-v21 .mcd-scroll,
+html body > #mc-drug-detail-page-v21 .mcd-shell,
+html body > #mc-drug-detail-page-v21 .mcd-content,
+html body > #mc-drug-detail-page-v21 .mcd-sections {
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body > #mc-drug-detail-page-v21 :is(
+  .mcd-id,
+  .mcd-patient,
+  .mcd-sec,
+  .mcd-sub,
+  .mcd-object-item,
+  .mcd-card,
+  .mcd-panel,
+  details
+) {
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-sec) {
+  box-sizing: border-box !important;
+  padding: 12px 16px !important;
+}
+
+html body > #mc-drug-detail-page-v21 .mcd-top {
+  padding-left: calc(16px + env(safe-area-inset-left, 0px)) !important;
+  padding-right: calc(8px + env(safe-area-inset-right, 0px)) !important;
+}
+
+@media (max-width: 520px) {
+  html body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-sec) {
+    padding-left: calc(16px + env(safe-area-inset-left, 0px)) !important;
+    padding-right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+  }
+}
+
+/* ================================================================
+   HOME MONOCHROME TWO-SURFACE SYSTEM — owner-approved final direction
+   Surfaces use exactly two neutral tones per theme. Module screens remain
+   outside this scope and retain their clinical semantics.
+================================================================ */
+html body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"])
+  #page-home {
+  --mc-home-mono-bg: #171717;
+  --mc-home-mono-card: #212121;
+  --mc-home-mono-text: #f2f2f2;
+  --mc-home-mono-muted: #a6a6a6;
+  --mc-home-mono-icon: #d0d0d0;
+  background: var(--mc-home-mono-bg) !important;
+  color: var(--mc-home-mono-text) !important;
+}
+
+body.light-mode #page-home,
+body.theme-light #page-home,
+body[data-theme="light"] #page-home,
+body[data-current-theme="light"] #page-home,
+html[data-theme="light"] body #page-home {
+  --mc-home-mono-bg: #f2f2f2;
+  --mc-home-mono-card: #ffffff;
+  --mc-home-mono-text: #202020;
+  --mc-home-mono-muted: #6b6b6b;
+  --mc-home-mono-icon: #4a4a4a;
+  background: var(--mc-home-mono-bg) !important;
+  color: var(--mc-home-mono-text) !important;
+}
+
+body:not(.calc-overlay-open) #page-home,
+body:not(.calc-overlay-open) #page-home #hub-accordion,
+body:not(.calc-overlay-open) #page-home #hub-accordion > .hub-section,
+body:not(.calc-overlay-open) #page-home :is(.hub-l1-section,.hub-l1-row,.hub-l2-section,.hub-l2-grid,.hub-l3-section,.hub-l3-row) {
+  background: var(--mc-home-mono-bg) !important;
+}
+
+body:not(.calc-overlay-open) #page-home #hub-accordion,
+body:not(.calc-overlay-open) #page-home #hub-accordion > .hub-section,
+body:not(.calc-overlay-open) #page-home :is(.hub-l1-section,.hub-l1-row,.hub-l2-section,.hub-l2-grid,.hub-l3-section,.hub-l3-row) {
+  gap: 1px !important;
+  row-gap: 1px !important;
+  column-gap: 1px !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.mc-overlay-projected-card),
+body:not(.calc-overlay-open) #page-home #hub-card-clcr.hub-card--static {
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: var(--mc-home-mono-card) !important;
+  box-shadow: none !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open):not(.hub-card--static) > .hub-card-trigger {
+  grid-template-columns: 20px minmax(0, 1fr) 18px !important;
+  column-gap: 16px !important;
+  row-gap: 0 !important;
+  padding-inline: 16px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--mc-home-mono-card) !important;
+  box-shadow: none !important;
+  color: var(--mc-home-mono-text) !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card[data-level="1"]:not(.is-open):not(.hub-card--static) > .hub-card-trigger {
+  grid-template-columns: 20px minmax(0, 1fr) 18px !important;
+  column-gap: 16px !important;
+  padding-inline: 16px !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card[data-level="3"]:not(.is-open):not(.hub-card--static) > .hub-card-trigger {
+  grid-template-columns: 20px minmax(0, 1fr) auto 18px !important;
+  column-gap: 16px !important;
+  padding-inline: 16px !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-ico {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  grid-column: 1 !important;
+  width: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  max-height: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-home-mono-icon) !important;
+  font-size: 17px !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-ico::before,
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-ico::after {
+  content: none !important;
+  display: none !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-ico i,
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-ico svg {
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mc-home-mono-icon) !important;
+  fill: currentColor !important;
+  -webkit-text-fill-color: currentColor !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger > .hub-card-meta {
+  align-self: center !important;
+  gap: 2px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-name,
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-name * {
+  color: var(--mc-home-mono-text) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-desc,
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-desc * {
+  color: var(--mc-home-mono-muted) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) .hub-card-chevron {
+  color: var(--mc-home-mono-muted) !important;
+  -webkit-text-fill-color: currentColor !important;
+  opacity: .72 !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-badge,
+body:not(.calc-overlay-open) #page-home :is(.hub-card-badge,.coming-soon-badge,.badge-soon) {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--mc-home-mono-muted) !important;
+}
+
+body:not(.calc-overlay-open) #page-home #hub-card-clcr,
+body:not(.calc-overlay-open) #page-home #hub-card-clcr * {
+  border-color: color-mix(in srgb, var(--mc-home-mono-bg) 72%, transparent) !important;
+  color: var(--mc-home-mono-muted) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body:not(.calc-overlay-open) #page-home #hub-card-clcr :is(.hm-pill-val,.hub-clcr-value,[class*="value"]) {
+  color: var(--mc-home-mono-text) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger:hover,
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger:active {
+  background: var(--mc-home-mono-card) !important;
+  box-shadow: none !important;
+  filter: brightness(.97) !important;
+}
+
+body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open) > .hub-card-trigger:focus-visible {
+  outline: 2px solid var(--mc-home-mono-text) !important;
+  outline-offset: -3px !important;
+}
+
+body:not(.calc-overlay-open) #page-home :is(.home-footer,.hub-footer),
+body:not(.calc-overlay-open) #page-home + :is(.home-footer,.hub-footer) {
+  border: 0 !important;
+  background: var(--mc-home-mono-bg) !important;
+  box-shadow: none !important;
+  color: var(--mc-home-mono-muted) !important;
+}
+
+/* Canonical drug-detail close: exactly one visible, accessible owner. */
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-open="true"]
+  > .mcd-top > button.mcd-close {
+  display: grid !important;
+  place-items: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 3 !important;
+}
+
+/* Close remaining legacy specificity gaps in the monochrome Home. */
+html body:not(.calc-overlay-open) #page-home .hub-card[data-level]
+  > .hub-card-trigger > .hub-card-ico {
+  width: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  max-height: 20px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html body:not(.calc-overlay-open) #page-home
+  .hub-card[data-level]:not(.is-open):not(.hub-card--static):not(.mc-overlay-projected-card)
+  > .hub-card-trigger > .hub-card-ico {
+  width: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  max-height: 20px !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-soon-badge {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--mc-home-mono-muted) !important;
+}
+
+html body:not(.calc-overlay-open) #page-home .hub-soon-badge * {
+  color: var(--mc-home-mono-muted) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+/* ================================================================
+   GLOBAL TWO-SURFACE MONOCHROME SYSTEM
+   Decorative structure is neutral. Clinical warning/error/critical
+   components are intentionally excluded and retain semantic color.
+================================================================ */
+:root {
+  --mc-mono-bg: #171717;
+  --mc-mono-surface: #212121;
+  --mc-mono-elevated: #292929;
+  --mc-mono-text: #f2f2f2;
+  --mc-mono-muted: #a6a6a6;
+  --mc-mono-icon: #d0d0d0;
+  --mc-mono-separator: #171717;
+}
+
+body.light-mode,
+body.theme-light,
+body[data-theme="light"],
+body[data-current-theme="light"],
+html[data-theme="light"] body {
+  --mc-mono-bg: #f2f2f2;
+  --mc-mono-surface: #fafafa;
+  --mc-mono-elevated: #ffffff;
+  --mc-mono-text: #202020;
+  --mc-mono-muted: #6b6b6b;
+  --mc-mono-icon: #4a4a4a;
+  --mc-mono-separator: #f2f2f2;
+}
+
+html,
+body,
+#app,
+#scroll-content,
+.section-page,
+#calculator-overlay-container[data-mc-owner="NO_REPARENT_PROJECTION_V1"],
+body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card,
+body > #mc-drug-detail-page-v21,
+body > #mc-drug-detail-page-v21 .mcd-scroll {
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open #calculator-overlay-container #calculator-overlay-header,
+body > #mc-drug-detail-page-v21 .mcd-top,
+.section-page:not(#page-home).active .section-back-bar {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .card,.hm-card,.panel,.surface,.module-card,.result-card,.score-result,
+  .infusion-secondary-card,.infusion-reverse-card,.infusion-result-area,
+  .elec2-step,.elec2-field,.elec2-state-group,.univ-result-card,
+  .fluid-weight-fallback,.mc-intx-m1-slot,.mc-intx-m1-field,
+  .farmacos-v2-context-row,.farmacos-v2-group-row,.farmacos-v2-module-row
+):not(.drug-alert):not(.elec2-alert):not(.alert):not(.error):not(.critical),
+body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-field,.mcd-result,.mcd-sec,.mcd-sub,.mcd-object-item) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .card,.hm-card,.panel,.surface,.module-card,
+  .infusion-secondary-card,.infusion-reverse-card,
+  .elec2-step,.elec2-field,.elec2-state-group,
+  .fluid-weight-fallback,.mc-intx-m1-slot,.mc-intx-m1-field
+)::before,
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .card,.hm-card,.panel,.surface,.module-card,
+  .infusion-secondary-card,.infusion-reverse-card,
+  .elec2-step,.elec2-field,.elec2-state-group,
+  .fluid-weight-fallback,.mc-intx-m1-slot,.mc-intx-m1-field
+)::after {
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  input:not([type="checkbox"]):not([type="radio"]),select,textarea,
+  .hm-input,.input-field,.elec2-field-input,.mc-intx-m1-input,
+  #hm-drug-search
+),
+body > #mc-drug-detail-page-v21 .mcd-field input {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  input:not([type="checkbox"]):not([type="radio"]),select,textarea,
+  .hm-input,.input-field,.elec2-field-input,.mc-intx-m1-input,
+  #hm-drug-search
+)::placeholder {
+  color: var(--mc-mono-muted) !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .hub-card-ico,.card-icon,.module-icon,.section-icon,.farmacos-v2-icon,
+  .mc-intx-m1-search-icon,[data-farmacos-v2-search-icon]
+) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-icon) !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .hub-card-ico,.card-icon,.module-icon,.section-icon,.farmacos-v2-icon,
+  .mc-intx-m1-search-icon,[data-farmacos-v2-search-icon]
+) :is(i,svg),
+body.calc-overlay-open #calculator-overlay-header :is(i,svg),
+body > #mc-drug-detail-page-v21 .mcd-top :is(i,svg) {
+  color: var(--mc-mono-icon) !important;
+  fill: currentColor !important;
+  -webkit-text-fill-color: currentColor !important;
+  filter: none !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  button,.mc-button-primary,.mc-button-secondary,.elec2-state-btn,
+  .elec2-preset-btn,.elec2-calc-btn,.elec2-action-btn,.infusion-mode-btn,
+  .farmacos-v2-tab,.farmacos-v2-chip
+):not(.danger):not(.error):not(.critical):not(.warning):not([class*="danger"]):not([class*="critical"]):not([class*="warn"]) {
+  border-color: var(--mc-mono-separator) !important;
+  background-color: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-text) !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .farmacos-v2-tabs,.farmacos-v2-context-list,.farmacos-v2-group-list,
+  .elec2-fields-grid,.elec2-btn-row,.input-grid,.hm-fields-grid
+) {
+  gap: 1px !important;
+  border-color: var(--mc-mono-separator) !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  h1,h2,h3,h4,.title,.section-title,.card-title,.elec2-step-hd,
+  .farmacos-v2-row-title,.mc-intx-m1-title
+) {
+  color: var(--mc-mono-text) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body.calc-overlay-open .mc-overlay-projected-card :is(
+  .subtitle,.description,.help,.muted,.input-label,.elec2-field-lbl,
+  .elec2-state-lbl,.farmacos-v2-row-subtitle,.mc-intx-m1-subtitle
+) {
+  color: var(--mc-mono-muted) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body > #mc-drug-detail-page-v21 .mcd-shell,
+body > #mc-drug-detail-page-v21 .mcd-sections,
+body > #mc-drug-detail-page-v21 .mcd-body,
+body > #mc-drug-detail-page-v21 .mcd-sub,
+body > #mc-drug-detail-page-v21 .mcd-object-item {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-sec) {
+  border-width: 0 0 1px !important;
+  border-style: solid !important;
+  border-color: var(--mc-mono-separator) !important;
+  border-radius: 0 !important;
+}
+
+body > #mc-drug-detail-page-v21 :is(.mcd-name,.mcd-head,.mcd-title,.mcd-result-text) {
+  color: var(--mc-mono-text) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body > #mc-drug-detail-page-v21 :is(.mcd-class,.mcd-body,.mcd-lab,.mcd-subhead) {
+  color: var(--mc-mono-muted) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body > #mc-drug-detail-page-v21 :is(.mcd-back,.mcd-close,.mcd-id-close,.mcd-calc-btn) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-text) !important;
+}
+
+/* Clinical semantic exceptions: retain warning/error/critical meaning. */
+body :is(
+  .drug-alert,.elec2-alert,.alert-danger,.alert-warning,.clinical-warning,
+  .clinical-error,.critical-alert,.elec2-alert--critical,.elec2-alert--warn,
+  [data-severity="critical"],[data-severity="warning"],[aria-invalid="true"]
+) {
+  /* Deliberately no monochrome override. */
+}
+
+/* Renal live results: a subtle neutral luminance lift, never a color accent. */
+html body:not(.calc-overlay-open) #page-home #hub-card-clcr .grid-card-clcr {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body:not(.calc-overlay-open) #page-home #hub-card-clcr .clcr-live-dashboard {
+  gap: 1px !important;
+  background: var(--mc-mono-separator) !important;
+}
+
+/* Functional affordance layer: neutral inputs + green primary actions. */
+:root {
+  --mc-mono-input: #2b2b2b;
+  --mc-mono-input-focus: #343434;
+  --mc-action-primary: #168a5b;
+  --mc-action-primary-hover: #13754d;
+  --mc-action-on-primary: #ffffff;
+}
+
+body.light-mode,
+body.theme-light,
+body[data-theme="light"],
+body[data-current-theme="light"],
+html[data-theme="light"] body {
+  --mc-mono-input: #ffffff;
+  --mc-mono-input-focus: #f4f4f4;
+  --mc-action-primary: #117a50;
+  --mc-action-primary-hover: #0d6843;
+  --mc-action-on-primary: #ffffff;
+}
+
+html body :is(
+  input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),
+  textarea,select,.hm-input,.input-field,.elec2-field-input,.mc-intx-m1-input
+) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body :is(
+  input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),
+  textarea,select,.hm-input,.input-field,.elec2-field-input,.mc-intx-m1-input
+):focus {
+  border-color: var(--mc-mono-muted) !important;
+  background: var(--mc-mono-input-focus) !important;
+  outline: 2px solid color-mix(in srgb, var(--mc-mono-text) 38%, transparent) !important;
+  outline-offset: 1px !important;
+}
+
+html body :is(input,textarea)::placeholder {
+  color: var(--mc-mono-muted) !important;
+  opacity: .82 !important;
+}
+
+html body :is(input,textarea,select):disabled {
+  opacity: .48 !important;
+  cursor: not-allowed !important;
+}
+
+html body :is(input,textarea,select)[aria-invalid="true"] {
+  border-color: var(--danger, #dc2626) !important;
+  outline-color: color-mix(in srgb, var(--danger, #dc2626) 45%, transparent) !important;
+}
+
+html body :is(
+  .mc-button-primary,.elec2-calc-btn,.mcd-calc-btn,.hm-btn-primary,
+  #btn-verificar-interacoes,.calculate-dose-btn,[data-action="calculate"]
+) {
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  color: var(--mc-action-on-primary) !important;
+  box-shadow: none !important;
+}
+
+html body :is(
+  .mc-button-primary,.elec2-calc-btn,.mcd-calc-btn,.hm-btn-primary,
+  #btn-verificar-interacoes,.calculate-dose-btn,[data-action="calculate"]
+):is(:hover,:active) {
+  border-color: var(--mc-action-primary-hover) !important;
+  background: var(--mc-action-primary-hover) !important;
+  color: var(--mc-action-on-primary) !important;
+}
+
+html body :is(
+  .mc-button-primary,.elec2-calc-btn,.mcd-calc-btn,.hm-btn-primary,
+  #btn-verificar-interacoes,.calculate-dose-btn,[data-action="calculate"]
+):focus-visible {
+  outline: 2px solid var(--mc-action-primary) !important;
+  outline-offset: 2px !important;
+}
+
+html body :is(
+  .mc-button-primary,.elec2-calc-btn,.mcd-calc-btn,.hm-btn-primary,
+  #btn-verificar-interacoes,.calculate-dose-btn,[data-action="calculate"]
+):disabled {
+  background: var(--mc-mono-muted) !important;
+  border-color: var(--mc-mono-muted) !important;
+  color: var(--mc-mono-surface) !important;
+  opacity: .55 !important;
+}
+
+html body > #mc-drug-detail-page-v21 .mc-dose-emphasis {
+  display: inline !important;
+  font-size: calc(1em + 2px) !important;
+  font-weight: 800 !important;
+  line-height: inherit !important;
+  white-space: nowrap !important;
+  color: var(--mc-text-primary, currentColor) !important;
+}
+
+/* A drug detail owns exactly one close action: the canonical top-bar X. */
+html body > #mc-drug-detail-page-v21 .mcd-id-close,
+html body:has(> #mc-drug-detail-page-v21[data-open="true"]) #fd-floating-close,
+html body:has(> #mc-drug-detail-page-v21[data-open="true"]) #calculator-overlay-close {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Mobile visual viewport: keep the active field inside the keyboard-safe area. */
+@media (max-width: 768px) {
+  body.calc-overlay-open #calculator-overlay-container[data-mc-owner="NO_REPARENT_PROJECTION_V1"] {
+    inset: auto !important;
+    top: var(--mc-visual-viewport-top, 0px) !important;
+    left: var(--mc-visual-viewport-left, 0px) !important;
+    width: var(--mc-visual-viewport-width, 100vw) !important;
+    height: var(--mc-visual-viewport-height, 100dvh) !important;
+    max-height: var(--mc-visual-viewport-height, 100dvh) !important;
+  }
+
+  body.calc-overlay-open #calculator-overlay-container[data-mc-owner="NO_REPARENT_PROJECTION_V1"] #calculator-overlay-header {
+    top: var(--mc-visual-viewport-top, 0px) !important;
+    left: var(--mc-visual-viewport-left, 0px) !important;
+    width: var(--mc-visual-viewport-width, 100vw) !important;
+  }
+
+  body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card {
+    bottom: auto !important;
+    height: calc(var(--mc-visual-viewport-height, 100dvh) - 56px) !important;
+    max-height: calc(var(--mc-visual-viewport-height, 100dvh) - 56px) !important;
+    scroll-padding-top: 20px !important;
+    scroll-padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  body.calc-overlay-open .mc-overlay-projected-card :is(input,textarea,select,[contenteditable="true"]) {
+    scroll-margin-top: 76px !important;
+    scroll-margin-bottom: calc(36px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  body.calc-overlay-open #hub-card-farmacos .hub-card-inner.mc-screen-content {
+    padding-left: calc(16px + env(safe-area-inset-left, 0px)) !important;
+    padding-right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+  }
+}
+
+body.calc-overlay-open #hub-card-farmacos .farmacos-v2-tab {
+  min-height: 44px !important;
+  border-radius: var(--mc-radius-xs) !important;
+}
+
+body.calc-overlay-open #hub-card-farmacos :is(.farmacos-v2-group-row,.hm-drug-item) {
+  min-height: 56px !important;
+  border-color: var(--mc-border) !important;
+  background: transparent !important;
+}
+
+/* Future modules: purposeful empty state without invented clinical content. */
+body.calc-overlay-open :is(#hub-card-pediatria,#hub-card-gestante) .hub-card-inner.mc-screen-content {
+  display: grid !important;
+  place-content: center !important;
+  min-height: min(420px, calc(100dvh - 120px)) !important;
+  max-width: 520px !important;
+  padding: 40px 24px !important;
+  text-align: center !important;
+  color: var(--mc-text-secondary) !important;
+}
+
+/* Routed legacy screens remain available but now share the same product shell. */
+.section-page:not(#page-home).active {
+  width: min(100%, 960px) !important;
+  min-height: 0 !important;
+  margin: 0 auto !important;
+  padding: 16px 16px calc(32px + env(safe-area-inset-bottom, 0px)) !important;
+  background: var(--mc-bg-body) !important;
+  color: var(--mc-text-primary) !important;
+  font-family: var(--mc-font-family) !important;
+}
+
+.section-page:not(#page-home).active .section-back-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: 56px !important;
+  margin: -16px -16px 16px !important;
+  padding: 6px 12px !important;
+  border-bottom: var(--mc-border-width) solid var(--mc-border) !important;
+  background: color-mix(in srgb, var(--mc-bg-body) 94%, transparent) !important;
+  backdrop-filter: blur(14px);
+}
+
+.section-page:not(#page-home).active :is(input,select,textarea) {
+  min-height: 44px;
+  border-radius: var(--mc-radius-sm);
+  border-color: var(--mc-border);
+  background: var(--mc-bg-input);
+  color: var(--mc-text-primary);
+}
+
+.section-page:not(#page-home).active :is(button,[role="button"]) {
+  min-height: 44px;
+}
+
+/* Final touch-target normalization for every projected calculator screen. */
+body.calc-overlay-open .hub-card.mc-overlay-projected-card .mc-screen-content
+  :is(button,[role="button"],input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]),select,textarea) {
+  min-height: 44px !important;
+}
+
+body.calc-overlay-open #hm-urine-toggle-btn,
+body.calc-overlay-open #hub-card-interacoes .mc-intx-m1-input,
+body.calc-overlay-open #hub-card-infusao .infusion-mode-btn {
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: none !important;
+}
+
+body.calc-overlay-open button.hm-urine-header,
+body.calc-overlay-open input.mc-intx-m1-input {
+  box-sizing: border-box !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+}
+
+@media (max-width: 430px) {
+  body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card .hub-card-inner.mc-screen-content {
+    padding: 16px 12px calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  body.calc-overlay-open #hub-card-eletrolitos .elec2-elec-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card .hub-card-inner.mc-screen-content {
+    padding-inline: 24px !important;
+  }
+}
+
+/* Owner-review final overrides: remain last in the cascade by design. */
+html body:not(.calc-overlay-open) #page-home #hub-card-clcr.hub-card--static,
+html body:not(.calc-overlay-open) #page-home .hub-card:not(.is-open):not(.mc-overlay-projected-card) {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  html body.calc-overlay-open #page-home #hub-card-farmacos.mc-overlay-projected-card .hub-card-inner.mc-screen-content {
+    padding-left: calc(16px + env(safe-area-inset-left, 0px)) !important;
+    padding-right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+  }
+}
+
+/* Drug detail: compact title-to-content rhythm without collapsing sections. */
+html body > #mc-drug-detail-page-v21 .mcd-head {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+html body > #mc-drug-detail-page-v21 :is(
+  .mcd-subhead,
+  .mcd-r5-clinical-heading,
+  .mcd-r5-clinical-route-title,
+  .mcd-r10-native-band-title,
+  .mcd-r10-native-route-title,
+  .mcd-r9-section-label,
+  .mcd-r9-subtitle,
+  .mcd-r9-indication-title,
+  .mcd-r10-group-title,
+  .mcd-renal-group-title
+) {
+  margin-top: 0 !important;
+  margin-bottom: 6px !important;
+}
+
+html body > #mc-drug-detail-page-v21 .mcd-body > :first-child,
+html body > #mc-drug-detail-page-v21 .mcd-sub > :first-child {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 520px) {
+  html body > #mc-drug-detail-page-v21 .mcd-head {
+    margin-bottom: 7px !important;
+  }
+
+  html body > #mc-drug-detail-page-v21 :is(
+    .mcd-subhead,
+    .mcd-r5-clinical-heading,
+    .mcd-r5-clinical-route-title,
+    .mcd-r10-native-band-title,
+    .mcd-r10-native-route-title,
+    .mcd-r9-section-label,
+    .mcd-r9-subtitle,
+    .mcd-r9-indication-title,
+    .mcd-r10-group-title,
+    .mcd-renal-group-title
+  ) {
+    margin-bottom: 5px !important;
+  }
+}
+
+/* Final close-control authority for the canonical drug detail. */
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21 .mcd-id > .mcd-name-row > .mcd-id-close,
+html body:has(> #mc-drug-detail-page-v21[data-open="true"]) button#fd-floating-close,
+html body:has(> #mc-drug-detail-page-v21[data-open="true"]) button#calculator-overlay-close {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Build 545 — absolute final overrides (must remain EOF). */
+html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .elec2-calc,.elec2-step,.elec2-fields-grid,.elec2-state-group,.elec2-btn-row
+) {
+  min-width: 0 !important;
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .elec2-field,.elec2-state-group,.elec2-result,.elec2-result-card,.elec2-prescription
+) {
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card :is(
+  input:not([type="checkbox"]):not([type="radio"]),select,textarea,.elec2-field-input
+) {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card :is(
+  .elec2-field-lbl,.elec2-field-unit,.elec2-state-lbl,.elec2-step-hd
+) {
+  min-width: 0 !important;
+  color: var(--mc-mono-muted) !important;
+  background: transparent !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card .elec2-calc-btn {
+  min-height: 44px !important;
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card :is(.elec2-result,.elec2-result-card,.elec2-prescription) {
+  contain: layout paint !important;
+  overflow-wrap: anywhere !important;
+}
+
+@media (max-width: 430px) {
+  html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card .elec2-fields-grid {
+    grid-template-columns: minmax(0,1fr) !important;
+  }
+}
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  .hm-drug-item,
+  .mc-fnav-drug-row,
+  .farmacos-v2-module-row,
+  button[id^="hm-di-"]
+) {
+  overflow: hidden !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--mc-mono-separator) !important;
+  border-radius: 0 !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  .hm-drug-item,
+  .mc-fnav-drug-row,
+  .farmacos-v2-module-row,
+  button[id^="hm-di-"]
+) * {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+html body.calc-overlay-open #page-home #hub-card-clcr#hub-card-clcr.mc-overlay-projected-card :is(
+  .hub-card-inner.mc-screen-content,.hm-card,.hm-card--patient,.hm-fields-grid,.hm-card-footer
+) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-clcr#hub-card-clcr.mc-overlay-projected-card :is(.hm-field,.hm-input-wrap,.hm-sex-row,.hm-urine-section) {
+  border-color: var(--mc-mono-separator) !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-clcr#hub-card-clcr.mc-overlay-projected-card :is(input.hm-input,.hm-field input,input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"])) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-clcr#hub-card-clcr.mc-overlay-projected-card .hm-card-footer {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1px !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-clcr#hub-card-clcr.mc-overlay-projected-card .hm-btn--ghost {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-clcr#hub-card-clcr #hm-fix-btn#hm-fix-btn {
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  box-shadow: none !important;
+}
+html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card .elec2-elec-grid {
+  gap: 1px !important;
+  border: 0 !important;
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card .elec2-elec-btn {
+  min-height: 56px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-text) !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-eletrolitos#hub-card-eletrolitos.mc-overlay-projected-card :is(.elec2-step,.elec2-fields-grid,.elec2-state-group) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-infusao#hub-card-infusao.mc-overlay-projected-card .infusion-module {
+  display: grid !important;
+  gap: 1px !important;
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-infusao#hub-card-infusao.mc-overlay-projected-card :is(
+  .infusion-mode-bar,.inf-free-drug-wrap,.infusion-drug-panel,.bic-preset-section,
+  .bic-context-card,.infusion-dilution-box,.home-data-chip,.infusion-weight-inline,
+  .infusion-unit-row,.infusion-bidir-row,.infusion-result-area,.infusion-result-main,
+  .infusion-secondary-card,.infusion-reverse-card,.infusion-empty-hint
+) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-fluidos#hub-card-fluidos.mc-overlay-projected-card :is(#subview-fluids,#hub-fluidos-inner) {
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-fluidos#hub-card-fluidos.mc-overlay-projected-card :is(
+  #subview-fluids > .card,.input-group,#fluid-deficit-panel,#fluid-insens-panel,
+  .fluid-weight-fallback,#fluid-result > .card,.fluid-result-card,.drug-result-item
+) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-fluidos#hub-card-fluidos.mc-overlay-projected-card #subview-fluids > .card {
+  display: grid !important;
+  gap: 1px !important;
+  padding: 0 !important;
+  background: var(--mc-mono-bg) !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-fluidos#hub-card-fluidos.mc-overlay-projected-card :is(.input-group,#fluid-deficit-panel,#fluid-insens-panel,.fluid-weight-fallback) {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 12px !important;
+}
+
+/* Hemodynamics has no decorative red band; red remains reserved for real alerts. */
+html body.calc-overlay-open #page-home #hub-card-hemodinamica#hub-card-hemodinamica.mc-overlay-projected-card :is(#hub-hemo-slot .card-title,#hub-body-hemodinamica .card-title,#subview-hemo .card-title) {
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-text) !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-hemodinamica#hub-card-hemodinamica.mc-overlay-projected-card :is(#hub-hemo-slot .card,#hub-body-hemodinamica .card,#subview-hemo .card,#hub-hemo-slot .results-grid) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-surface) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+html body.calc-overlay-open #page-home #hub-card-interacoes#hub-card-interacoes.mc-overlay-projected-card :is(
+  .mc-intx-m1-slot,
+  .mc-intx-m1-field,
+  .mc-intx-m1-drug,
+  .mc-intx-m1-drug-slot,
+  .mc-intx-m1-input-wrap
+) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-bg) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-interacoes#hub-card-interacoes.mc-overlay-projected-card :is(
+  input.mc-intx-m1-input,
+  .mc-intx-m1-field input,
+  .mc-intx-m1-slot input,
+  select
+) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-input) !important;
+  background-image: none !important;
+  color: var(--mc-mono-text) !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-interacoes#hub-card-interacoes.mc-overlay-projected-card :is(
+  .mc-intx-m1-suggestions,
+  .mc-intx-m1-suggestion-list,
+  [role="listbox"]
+) {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+html body :is(
+  button[aria-label="Fechar"],
+  button[aria-label^="Fechar "],
+  button[aria-label="Cerrar"],
+  button[aria-label^="Cerrar "],
+  #calculator-overlay-close,
+  #mc-drug-detail-page-v21 .mcd-close,
+  .rx-modal-close,
+  #rx-modal-close-btn,
+  #fd-floating-close,
+  .fd-close,
+  .qe-close,
+  .hm-inline-close,
+  #mc-cdd-preview-close
+) {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  min-width: 44px !important;
+  width: 44px !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  filter: none !important;
+}
+
+html body :is(
+  button[aria-label="Fechar"],button[aria-label^="Fechar "],
+  button[aria-label="Cerrar"],button[aria-label^="Cerrar "],
+  #calculator-overlay-close,#mc-drug-detail-page-v21 .mcd-close,
+  .rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,
+  .hm-inline-close,#mc-cdd-preview-close
+)::before,
+html body :is(
+  button[aria-label="Fechar"],button[aria-label^="Fechar "],
+  button[aria-label="Cerrar"],button[aria-label^="Cerrar "],
+  #calculator-overlay-close,#mc-drug-detail-page-v21 .mcd-close,
+  .rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,
+  .hm-inline-close,#mc-cdd-preview-close
+)::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html body :is(
+  button[aria-label="Fechar"],button[aria-label^="Fechar "],
+  button[aria-label="Cerrar"],button[aria-label^="Cerrar "],
+  #calculator-overlay-close,#mc-drug-detail-page-v21 .mcd-close,
+  .rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,
+  .hm-inline-close,#mc-cdd-preview-close
+):focus-visible {
+  outline: 2px solid rgba(255,255,255,.9) !important;
+  outline-offset: -5px !important;
+}
+
+html body :is(
+  button[aria-label="Fechar"],button[aria-label^="Fechar "],
+  button[aria-label="Cerrar"],button[aria-label^="Cerrar "],
+  #calculator-overlay-close,#mc-drug-detail-page-v21 .mcd-close,
+  .rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,
+  .hm-inline-close,#mc-cdd-preview-close
+):is(:hover,:active) {
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: .78 !important;
+}
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card,
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card .hub-card-inner.mc-screen-content,
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card #farmacos-v2-shell {
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  #farmacos-v2-shell,
+  [data-farmacos-v2-search-wrapper],
+  .farmacos-v2-tabs,
+  .farmacos-v2-panel,
+  .farmacos-v2-context-list,
+  .farmacos-v2-group-list,
+  .farmacos-v2-modules,
+  .farmacos-v2-context-row,
+  .farmacos-v2-group-row,
+  .farmacos-v2-module-row,
+  .mc-fnav-drug-row
+) {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  [data-farmacos-v2-search-wrapper],
+  #farmacos-v2-shell
+) {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  .farmacos-v2-context-row,
+  .farmacos-v2-group-row,
+  .farmacos-v2-module-row,
+  .mc-fnav-drug-row
+) {
+  width: 100% !important;
+  margin-inline: 0 !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card .hub-card-inner.mc-screen-content {
+  box-sizing: border-box !important;
+  padding-left: calc(16px + env(safe-area-inset-left, 0px)) !important;
+  padding-right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(#farmacos-v2-shell,.farmacos-v2-panel,.farmacos-v2-context-list,.farmacos-v2-group-list,.farmacos-v2-modules) {
+  border-color: var(--mc-mono-separator) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-clcr.mc-overlay-projected-card #hm-fix-btn.hm-btn--primary,
+html body.calc-overlay-open #page-home #hub-card-interacoes.mc-overlay-projected-card #btn-verificar-interacoes,
+html body.calc-overlay-open #page-home #hub-card-eletrolitos.mc-overlay-projected-card .elec2-calc-btn {
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-clcr#hub-card-clcr #hm-fix-btn#hm-fix-btn {
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html body.calc-overlay-open #page-home #hub-card-clcr.mc-overlay-projected-card .hm-hd-track {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-clcr#hub-card-clcr .hm-hd-track.hm-hd-track {
+  border-color: var(--mc-mono-separator) !important;
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(i,[class*="icon"],[class*="ico"],[class*="badge"],[class*="track"]) {
+  border-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-icon) !important;
+}
+
+html body.calc-overlay-open .hub-card.mc-overlay-projected-card :is(.hm-btn--primary,.elec2-calc-btn,.mcd-calc-btn,#fd-btn-calc-label,#btn-verificar-interacoes,.calculate-dose-btn,[data-action="calculate"]),
+html body > #mc-drug-detail-page-v21 .mcd-calc-btn {
+  border-color: var(--mc-action-primary) !important;
+  background: var(--mc-action-primary) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html body > #mc-drug-detail-page-v21,
+html body > #mc-drug-detail-page-v21 :is(.mcd-scroll,.mcd-shell,.mcd-content,.mcd-sections,.mcd-id,.mcd-patient,.mcd-sec,.mcd-sub,.mcd-object-item,.mcd-card,.mcd-panel,details) {
+  background: var(--mc-mono-elevated) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-sec) {
+  box-sizing: border-box !important;
+  padding: 12px 16px !important;
+}
+
+html body :is(#calculator-overlay-close,#mc-drug-detail-page-v21 .mcd-close,.rx-modal-close,#rx-modal-close-btn,#fd-floating-close,.fd-close,.qe-close,.hm-inline-close,#mc-cdd-preview-close) {
+  min-width: 44px !important;
+  width: 44px !important;
+  min-height: 44px !important;
+  height: 44px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+@media (max-width: 520px) {
+  html body > #mc-drug-detail-page-v21 :is(.mcd-id,.mcd-patient,.mcd-sec) {
+    padding: 11px calc(16px + env(safe-area-inset-right, 0px)) 11px calc(16px + env(safe-area-inset-left, 0px)) !important;
+  }
+}
+
+/* CALC-ELETROLITOS-SODIO-C1-INTERACTION-RESULT START */
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] {
+  --mc-na-accent: #38bdf8;
+  --mc-na-selected-bg: color-mix(in srgb, var(--mc-na-accent) 25%, var(--mc-mono-input, #111827));
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn) {
+  position: relative !important;
+  border: 1px solid var(--mc-mono-separator, rgba(148,163,184,.28)) !important;
+  background: var(--mc-mono-input, var(--mc-bg-surface2, #111827)) !important;
+  color: var(--mc-mono-muted, var(--mc-text-secondary, #cbd5e1)) !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-weight: 560 !important;
+  opacity: 1 !important;
+  transition: background-color .14s ease,border-color .14s ease,color .14s ease,box-shadow .14s ease,transform .08s ease !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):not(:disabled):not(.active):not(.elec2-elec-btn--active):hover {
+  border-color: color-mix(in srgb, var(--mc-na-accent) 52%, var(--mc-mono-separator, transparent)) !important;
+  background: color-mix(in srgb, var(--mc-na-accent) 10%, var(--mc-mono-input, #111827)) !important;
+  color: var(--mc-mono-text, var(--mc-text-primary, #f8fafc)) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  border-color: var(--mc-na-accent) !important;
+  background: var(--mc-na-selected-bg) !important;
+  color: var(--mc-mono-text, #fff) !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-weight: 740 !important;
+  box-shadow: inset 0 0 0 1px var(--mc-na-accent),0 0 0 2px color-mix(in srgb, var(--mc-na-accent) 15%, transparent) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"])::after {
+  content: "✓" !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-left: 7px !important;
+  border-radius: 999px !important;
+  background: var(--mc-na-accent) !important;
+  color: #082f49 !important;
+  -webkit-text-fill-color: #082f49 !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  vertical-align: 1px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):not(:disabled):active {
+  transform: scale(.975) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--mc-na-accent) 42%, transparent) !important;
+  outline-offset: 2px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):disabled {
+  border-style: dashed !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: .46 !important;
+  cursor: not-allowed !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-state-group.m4c-hidden-redundant,.elec2-btn-row.m4c-hidden-redundant,.elec2-state-lbl.m4c-hidden-redundant) {
+  display: none !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area .m4c-result {
+  gap: 18px !important;
+  padding-block: 5px 22px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border: 1px solid color-mix(in srgb, var(--mc-mono-separator, #64748b) 88%, transparent) !important;
+  border-radius: 12px !important;
+  background: var(--mc-mono-elevated, var(--mc-bg-surface2, #171717)) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,.18),0 10px 26px rgba(0,0,0,.10) !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-row,.m4i-row) {
+  grid-template-columns: minmax(124px,.86fr) minmax(0,1.14fr) !important;
+  gap: 12px !important;
+}
+
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-row-label,.m4i-row-label) {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+body.light-mode.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"],
+body.theme-light.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] {
+  --mc-na-selected-bg: color-mix(in srgb, var(--mc-na-accent) 20%, #fff);
+}
+
+body.light-mode.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]),
+body.theme-light.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  color: #0c4a6e !important;
+}
+
+body.light-mode.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section),
+body.theme-light.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border-color: rgba(14,116,144,.22) !important;
+  background: #fff !important;
+  box-shadow: 0 2px 4px rgba(15,23,42,.08),0 10px 26px rgba(15,23,42,.07) !important;
+}
+
+@media (max-width: 430px) {
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area .m4c-result { gap: 14px !important; }
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-row,.m4i-row) {
+    grid-template-columns: minmax(116px,.84fr) minmax(0,1.16fr) !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 340px) {
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-row,.m4i-row) {
+    grid-template-columns: minmax(108px,.82fr) minmax(0,1.18fr) !important;
+    gap: 8px !important;
+  }
+}
+/* CALC-ELETROLITOS-SODIO-C1-INTERACTION-RESULT END */
+/* CALC-ELETROLITOS-SODIO-C1-SPECIFICITY-LOCK */
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn) {
+  border-color: var(--mc-mono-separator, rgba(148,163,184,.28)) !important;
+  background-color: var(--mc-mono-input, #111827) !important;
+  color: var(--mc-mono-muted, #cbd5e1) !important;
+  font-weight: 560 !important;
+  box-shadow: none !important;
+}
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] .m4c-hidden-redundant {
+  display: none !important;
+}
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  border-color: #38bdf8 !important;
+  background-color: color-mix(in srgb, #38bdf8 27%, var(--mc-mono-input, #111827)) !important;
+  color: var(--mc-mono-text, #fff) !important;
+  font-weight: 740 !important;
+  box-shadow: inset 0 0 0 1px #38bdf8,0 0 0 2px rgba(56,189,248,.15) !important;
+}
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area .m4c-result {
+  gap: 18px !important;
+}
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border-color: rgba(100,116,139,.34) !important;
+  background-color: var(--mc-mono-elevated, #242424) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,.20),0 10px 26px rgba(0,0,0,.13) !important;
+}
+body.light-mode.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]),
+body.theme-light.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  background-color: #dff6fd !important;
+  color: #0c4a6e !important;
+}
+body.light-mode.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section),
+body.theme-light.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border-color: rgba(14,116,144,.26) !important;
+  background-color: #fff !important;
+  box-shadow: 0 2px 4px rgba(15,23,42,.08),0 10px 26px rgba(15,23,42,.07) !important;
+}
+/* CALC-ELETROLITOS-V1-INDEPENDENT-AUDIT-R2-CASCADE-TERMINAL DISABLED */
+@media not all {
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn) {
+  border: 1px solid var(--mc-mono-separator, rgba(148,163,184,.28)) !important;
+  background: var(--mc-mono-input, var(--mc-bg-surface2, #111827)) !important;
+  color: var(--mc-mono-muted, var(--mc-text-secondary, #cbd5e1)) !important;
+  font-weight: 560 !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  border-color: var(--mc-l2-accent-elec, #8b5cf6) !important;
+  background: color-mix(in srgb, var(--mc-l2-accent-elec, #8b5cf6) 26%, var(--mc-mono-input, #111827)) !important;
+  color: var(--mc-mono-text, #fff) !important;
+  font-weight: 720 !important;
+  box-shadow: inset 0 0 0 1px var(--mc-l2-accent-elec, #8b5cf6),0 0 0 2px color-mix(in srgb, var(--mc-l2-accent-elec, #8b5cf6) 14%, transparent) !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-calc :is(.elec2-state-group.m4c-hidden-redundant,.elec2-btn-row.m4c-hidden-redundant,.elec2-state-lbl.m4c-hidden-redundant) {
+  display: none !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-result {
+  gap: 18px !important;
+  padding-block: 5px 22px !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border: 1px solid color-mix(in srgb, var(--mc-mono-separator, #64748b) 88%, transparent) !important;
+  border-radius: 12px !important;
+  background: var(--mc-mono-elevated, var(--mc-bg-surface2, #171717)) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,.18),0 10px 26px rgba(0,0,0,.10) !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-row,.m4i-row) {
+  grid-template-columns: minmax(112px,.82fr) minmax(0,1.18fr) !important;
+}
+html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-row-label,.m4i-row-label) {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+body.light-mode.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]),
+body.theme-light.calc-overlay-open #hub-card-eletrolitos :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  background: color-mix(in srgb, var(--mc-l2-accent-elec, #8b5cf6) 20%, #fff) !important;
+  color: #312e81 !important;
+}
+body.light-mode.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section),
+body.theme-light.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border-color: rgba(100,116,139,.24) !important;
+  background: #fff !important;
+  box-shadow: 0 2px 4px rgba(15,23,42,.08),0 10px 26px rgba(15,23,42,.07) !important;
+}
+@media (max-width: 360px) {
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area .m4c-result { gap: 14px !important; }
+  html body.calc-overlay-open #hub-card-eletrolitos #elec2-result-area :is(.m4c-row,.m4i-row) {
+    grid-template-columns: minmax(106px,.8fr) minmax(0,1.2fr) !important;
+    gap: 9px !important;
+  }
+}
+}
+
+/* CALC-ELETROLITOS-SODIO-C2-FLAT-LABEL-SURFACES START
+   Títulos, rótulos e textos auxiliares vivem diretamente na superfície
+   estrutural. Somente campos e controles editáveis permanecem elevados. */
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] :is(
+  .elec2-step,
+  .elec2-fields-grid,
+  .elec2-field,
+  .elec2-state-group,
+  .elec2-btn-row,
+  .elec2-step-hd,
+  .elec2-step-label,
+  .elec2-field-lbl,
+  .elec2-field-unit,
+  .elec2-state-lbl,
+  .elec2-semantic-label,
+  .elec2-preset-lbl,
+  .elec2-group-label,
+  .m4g-group,
+  .m4g-group-title,
+  .m4g-group-helper,
+  .m4d-advanced-helper,
+  .m4e-gravity-helper
+) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+/* CALC-ELETROLITOS-SODIO-C2-FLAT-LABEL-SURFACES END */
+
+/* CALC-ELETROLITOS-SODIO-C3-RESULT-VALIDITY START */
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] #elec2-result-area :is(
+  .m4c-section-title,
+  .m4c-result-chips,
+  .m4c-row,
+  .m4c-row-label,
+  .m4c-row-value,
+  .m4i-row,
+  .m4i-row-label,
+  .m4i-row-value,
+  .m4c-paragraph
+) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] .elec2-field-error {
+  margin: -1px 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: #fca5a5 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] .elec2-field-input[aria-invalid="true"] {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 2px rgba(239,68,68,.16) !important;
+}
+
+body.light-mode.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] .elec2-field-error,
+body.theme-light.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="na"] .elec2-field-error {
+  color: #b91c1c !important;
+}
+/* CALC-ELETROLITOS-SODIO-C3-RESULT-VALIDITY END */
+
+/* CALC-ELETROLITOS-POTASSIO-C1-COMPLETE-SCREEN START */
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] {
+  --mc-k-accent: #a78bfa;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] :is(
+  .elec2-step,
+  .elec2-fields-grid,
+  .elec2-field,
+  .elec2-state-group,
+  .elec2-btn-row,
+  .elec2-step-hd,
+  .elec2-step-label,
+  .elec2-field-lbl,
+  .elec2-field-unit,
+  .elec2-state-lbl,
+  .elec2-semantic-label,
+  .elec2-preset-lbl,
+  .elec2-group-label,
+  .m4g-group,
+  .m4g-group-title,
+  .m4g-group-helper,
+  .m4d-advanced-helper,
+  .m4e-gravity-helper
+) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .m4c-hidden-redundant {
+  display: none !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn) {
+  position: relative !important;
+  border-color: var(--mc-mono-separator, rgba(148,163,184,.28)) !important;
+  background: var(--mc-mono-input, var(--mc-bg-input, #212121)) !important;
+  color: var(--mc-mono-muted, var(--mc-text-secondary, #cbd5e1)) !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-weight: 590 !important;
+  transition: background-color .14s ease,border-color .14s ease,color .14s ease,box-shadow .14s ease,transform .08s ease !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  border-color: var(--mc-k-accent) !important;
+  background: color-mix(in srgb, var(--mc-k-accent) 25%, var(--mc-mono-input, #212121)) !important;
+  color: var(--mc-mono-text, #fff) !important;
+  -webkit-text-fill-color: currentColor !important;
+  font-weight: 740 !important;
+  box-shadow: inset 0 0 0 1px var(--mc-k-accent),0 0 0 2px color-mix(in srgb, var(--mc-k-accent) 13%, transparent) !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"])::after {
+  content: "✓" !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-left: 7px !important;
+  border-radius: 999px !important;
+  background: var(--mc-k-accent) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):active {
+  transform: scale(.975) !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] :is(.elec2-elec-btn,.elec2-state-btn,.elec2-preset-btn):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--mc-k-accent) 42%, transparent) !important;
+  outline-offset: 2px !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .elec2-form-actions {
+  display: grid !important;
+  grid-template-columns: minmax(104px,.34fr) minmax(180px,1fr) !important;
+  gap: 10px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin-top: 2px !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .elec2-form-actions :is(.elec2-action-btn,.elec2-calc-btn) {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 48px !important;
+  margin: 0 !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .elec2-form-actions .elec2-action-btn {
+  border: 1px solid var(--mc-mono-separator, rgba(148,163,184,.28)) !important;
+  background: transparent !important;
+  color: var(--mc-mono-muted, var(--mc-text-secondary, #cbd5e1)) !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .elec2-form-actions .elec2-calc-btn {
+  border: 0 !important;
+  background: #168a5b !important;
+  color: #fff !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] #elec2-result-area .m4c-result {
+  gap: 16px !important;
+  padding-block: 4px 20px !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border-color: color-mix(in srgb, var(--mc-k-accent) 22%, var(--mc-mono-separator, #64748b)) !important;
+  background: var(--mc-mono-elevated, var(--mc-bg-surface2, #171717)) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,.16),0 10px 26px rgba(0,0,0,.09) !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] #elec2-result-area :is(
+  .m4c-section-title,.m4c-result-chips,.m4c-row,.m4c-row-label,.m4c-row-value,
+  .m4i-row,.m4i-row-label,.m4i-row-value,.m4c-paragraph
+) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .elec2-field-error {
+  margin: -1px 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: #fca5a5 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+}
+
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .elec2-field-input[aria-invalid="true"] {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 2px rgba(239,68,68,.16) !important;
+}
+
+body.light-mode.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]),
+body.theme-light.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] :is(.elec2-state-btn.active,.elec2-preset-btn.active,.elec2-elec-btn.elec2-elec-btn--active,[aria-pressed="true"]) {
+  background: color-mix(in srgb, var(--mc-k-accent) 20%, #fff) !important;
+  color: #4c1d95 !important;
+}
+
+body.light-mode.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section),
+body.theme-light.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] #elec2-result-area :is(.m4c-severity,.m4c-summary-head,.m4c-section) {
+  border-color: rgba(124,58,237,.22) !important;
+  background: #fff !important;
+  box-shadow: 0 2px 4px rgba(15,23,42,.08),0 10px 26px rgba(15,23,42,.07) !important;
+}
+
+body.light-mode.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .elec2-field-error,
+body.theme-light.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .elec2-field-error {
+  color: #b91c1c !important;
+}
+
+@media (max-width: 430px) {
+  html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] .elec2-form-actions {
+    grid-template-columns: minmax(96px,.38fr) minmax(0,1fr) !important;
+    gap: 8px !important;
+  }
+}
+/* CALC-ELETROLITOS-POTASSIO-C1-COMPLETE-SCREEN END */
+
+/* Potássio: o botão de ajuste opcional controla apenas a gravidade. */
+html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="k"] #elec2-step3.m4d-collapsed .m4e-gravity-override { display: none !important; }
+
+/* FARMACOS-PREMIUM-DETAIL-SINGLE-CLOSE-V1 START */
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-open="true"]
+  > .mcd-top > :is(.mcd-back, .mcd-close) {
+  display: none !important;
+}
+
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-open="true"]
+  .mcd-id > .mcd-name-row {
+  grid-template-columns: minmax(0, 1fr) 44px !important;
+  gap: 12px !important;
+}
+
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-open="true"]
+  .mcd-id > .mcd-name-row > button.mcd-id-close {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  display: grid !important;
+  place-items: center !important;
+  justify-self: end !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: var(--mc-mono-muted, #c7cdd4) !important;
+  -webkit-text-fill-color: currentColor !important;
+  font: 400 26px/1 system-ui, sans-serif !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+}
+
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-open="true"]
+  .mcd-id > .mcd-name-row > button.mcd-id-close:is(:hover,:active,:focus-visible) {
+  background: transparent !important;
+  color: var(--mc-mono-text, #f3f4f6) !important;
+}
+/* FARMACOS-PREMIUM-DETAIL-SINGLE-CLOSE-V1 END */
+
+/* FARMACOS-PREMIUM-KV-RHYTHM-V2 START
+   One-column label/value rhythm aligned with every canonical drug section. */
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-open="true"] .mcd-kv {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  align-items: start !important;
+  column-gap: 0 !important;
+  row-gap: 5px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 8px 0 !important;
+  box-sizing: border-box !important;
+}
+
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-open="true"] .mcd-kv + .mcd-kv {
+  margin-top: 4px !important;
+}
+
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-open="true"] .mcd-kv > .mcd-kv-label {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mc-mono-muted) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  letter-spacing: .045em !important;
+  overflow-wrap: normal !important;
+}
+
+html body > #mc-drug-detail-page-v21#mc-drug-detail-page-v21#mc-drug-detail-page-v21[data-open="true"] .mcd-kv > .mcd-kv-value {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--mc-mono-text) !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+  overflow-wrap: anywhere !important;
+}
+/* FARMACOS-PREMIUM-KV-RHYTHM-V2 END */
+
+/* FARMACOS-PREMIUM-DARK-SURFACE-V1 START
+   Dark-mode list uses one continuous premium canvas; search is the sole
+   elevated surface. Kept strictly inside Fármacos and the dark theme. */
+html[data-theme="dark"] body.calc-overlay-open #page-home
+#hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card,
+html[data-theme="dark"] body.calc-overlay-open #page-home
+#hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  .hub-card-body,
+  .hub-card-inner.mc-screen-content,
+  #farmacos-v2-shell,
+  .farmacos-v2-tabs,
+  .farmacos-v2-panel,
+  .farmacos-v2-context-list,
+  .farmacos-v2-group-list,
+  .farmacos-v2-modules,
+  .hm-drug-list,
+  .mc-fnav-list,
+  .farmacos-v2-context-row,
+  .farmacos-v2-group-row,
+  .farmacos-v2-module-row,
+  .hm-drug-item,
+  .mc-fnav-drug-row,
+  button[id^="hm-di-"]
+) {
+  background: var(--mc-mono-bg) !important;
+  background-color: var(--mc-mono-bg) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] body.calc-overlay-open #page-home
+#hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  .farmacos-v2-tab,
+  .farmacos-v2-chip
+) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] body.calc-overlay-open #page-home
+#hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card
+#farmacos-v2-shell * {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] body.calc-overlay-open #page-home
+#hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  [data-farmacos-v2-search-wrapper],
+  .farmacos-search-wrapper,
+  .hm-drug-search-wrapper,
+  .hm-search-wrap
+) {
+  border-color: color-mix(in srgb, var(--mc-mono-text) 10%, var(--mc-mono-input)) !important;
+  background: var(--mc-mono-input) !important;
+  background-color: var(--mc-mono-input) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+/* FARMACOS-PREMIUM-DARK-SURFACE-V1 END */
+
+/* FARMACOS-PREMIUM-DARK-CANVAS-V2 START
+   Keep the complete content area on the app's darkest canvas. The search
+   field remains the only elevated/light surface in the Fármacos screen. */
+html[data-theme="dark"] body.calc-overlay-open #page-home
+#hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card {
+  --mc-pharm-dark-canvas: #0b0f17;
+  background: var(--mc-pharm-dark-canvas) !important;
+  background-color: var(--mc-pharm-dark-canvas) !important;
+}
+
+html[data-theme="dark"] body.calc-overlay-open #page-home
+#hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  .hub-card-body,
+  .hub-card-inner.mc-screen-content,
+  #farmacos-v2-shell,
+  .farmacos-v2-tabs,
+  .farmacos-v2-panel,
+  .farmacos-v2-context-list,
+  .farmacos-v2-group-list,
+  .farmacos-v2-modules,
+  .hm-drug-list,
+  .mc-fnav-list,
+  .farmacos-v2-context-row,
+  .farmacos-v2-group-row,
+  .farmacos-v2-module-row,
+  .hm-drug-item,
+  .mc-fnav-drug-row,
+  button[id^="hm-di-"]
+) {
+  background: var(--mc-pharm-dark-canvas) !important;
+  background-color: var(--mc-pharm-dark-canvas) !important;
+  background-image: none !important;
+}
+
+html[data-theme="dark"] body.calc-overlay-open #page-home
+#hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+  [data-farmacos-v2-search-wrapper],
+  .farmacos-search-wrapper,
+  .hm-drug-search-wrapper,
+  .hm-search-wrap
+) {
+  background: var(--mc-mono-input, #2b2b2b) !important;
+  background-color: var(--mc-mono-input, #2b2b2b) !important;
+}
+/* FARMACOS-PREMIUM-DARK-CANVAS-V2 END */
