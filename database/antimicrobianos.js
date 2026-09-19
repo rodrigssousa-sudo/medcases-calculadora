@@ -28751,3 +28751,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:flucloxacilina:END */
+/* GOLD33_SELECTIVE:fosfomicina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["fosfomicina"])throw new Error("GOLD33_MISSING_CANONICAL:fosfomicina");db["fosfomicina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "037",
+    "requiredFieldCount": 33,
+    "approvedSha256": "a53427094bad82f1f3c53a7e3d1b8ceb4d3852297b69defd8d47d1edb290443f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fosfomicina",
+    "class": "Antibacteriano fosfônico",
+    "pharmacologicClass": "Inibe etapa inicial da síntese da parede bacteriana",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Sachê oral de 3 g; fosfomicina dissódica IV em mercados específicos, não intercambiável.",
+    "presentations": "Sachê oral de 3 g; fosfomicina dissódica IV em mercados específicos, não intercambiável.",
+    "mechanism": "Inibe etapa inicial da síntese da parede bacteriana. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Alta concentração urinária; eliminação renal inalterada.",
+    "indications": "Fosfomicina trometamol oral: cistite aguda não complicada em mulheres por agentes suscetíveis; formulação IV possui uso regional distinto.",
+    "dose": "Cistite não complicada: 3 g VO em dose única. Não repetir diariamente nem usar para pielonefrite/bacteremia.",
+    "pediatricDose": "Segurança/eficácia do sachê não estabelecidas <12 anos no rótulo consultado. AUTOMATABLE=NO.",
+    "renalDose": "Sachê oral: cautela em insuficiência grave; hemodiálise remove o fármaco. Formulação IV tem ajustes próprios.",
+    "hepaticDose": "Sem ajuste específico.",
+    "commonAdverseEffects": "Diarreia, cefaleia, vaginite, náusea e dor abdominal.",
+    "dangerousAdverseEffects": "Anafilaxia, colite por C. difficile e falha terapêutica em infecção complicada.",
+    "adverseEffects": "Diarreia, cefaleia, vaginite, náusea e dor abdominal. Graves: Anafilaxia, colite por C. difficile e falha terapêutica em infecção complicada.",
+    "contraindications": "Hipersensibilidade; restrições adicionais por produto/país.",
+    "interactions": "Metoclopramida reduz exposição; considerar efeito de alimentos e outros procinéticos.",
+    "monitoring": "Sintomas, cultura quando indicada, sinais de pielonefrite, diarreia/C. difficile e alergia.",
+    "administration": "Dissolver todo sachê em 90-120 mL de água fria e ingerir imediatamente; não tomar o pó seco.",
+    "preparation": "Solução oral após dissolução; não usar água quente.",
+    "infusionProtocol": "Não aplicável ao sachê oral.",
+    "pregnancy": "Dados disponíveis não sugerem teratogenicidade; usar quando indicado.",
+    "lactation": "Baixas concentrações esperadas; observar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, colite por C. difficile e falha terapêutica em infecção complicada. Uso bloqueado sem sexo/idade, sintomas, gravidez, cultura/epidemiologia, exclusão de pielonefrite/infecção complicada e confirmação da formulação.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fosfomycin+tromethamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/050717s007lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fosfomycin+tromethamine"
+  },
+  "es": {
+    "name": "Fosfomicina",
+    "class": "Antibacteriano fosfónico",
+    "pharmacologicClass": "Inhibe etapa inicial de síntesis de pared bacteriana",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Sobre oral de 3 g; fosfomicina disódica IV en mercados específicos, no intercambiable.",
+    "presentations": "Sobre oral de 3 g; fosfomicina disódica IV en mercados específicos, no intercambiable.",
+    "mechanism": "Inhibe etapa inicial de síntesis de pared bacteriana. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Alta concentración urinaria; eliminación renal sin cambios.",
+    "indications": "Fosfomicina trometamol oral: cistitis aguda no complicada en mujeres por agentes sensibles; formulación IV tiene uso regional distinto.",
+    "dose": "Cistitis no complicada: 3 g VO dosis única. No repetir diariamente ni usar para pielonefritis/bacteriemia.",
+    "pediatricDose": "Seguridad/eficacia del sobre no establecidas <12 años en ficha consultada. AUTOMATABLE=NO.",
+    "renalDose": "Sobre oral: precaución en insuficiencia grave; hemodiálisis elimina fármaco. Formulación IV tiene ajustes propios.",
+    "hepaticDose": "Sin ajuste específico.",
+    "commonAdverseEffects": "Diarrea, cefalea, vaginitis, náusea y dolor abdominal.",
+    "dangerousAdverseEffects": "Anafilaxia, colitis por C. difficile y fracaso terapéutico en infección complicada.",
+    "adverseEffects": "Diarrea, cefalea, vaginitis, náusea y dolor abdominal. Graves: Anafilaxia, colitis por C. difficile y fracaso terapéutico en infección complicada.",
+    "contraindications": "Hipersensibilidad; restricciones adicionales por producto/país.",
+    "interactions": "Metoclopramida reduce exposición; considerar alimentos y otros procinéticos.",
+    "monitoring": "Síntomas, cultivo cuando se indique, signos de pielonefritis, diarrea/C. difficile y alergia.",
+    "administration": "Disolver todo el sobre en 90-120 mL de agua fría e ingerir de inmediato; no tomar polvo seco.",
+    "preparation": "Solución oral tras disolución; no usar agua caliente.",
+    "infusionProtocol": "No aplicable al sobre oral.",
+    "pregnancy": "Datos disponibles no sugieren teratogenicidad; usar cuando esté indicado.",
+    "lactation": "Bajas concentraciones esperadas; vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, colitis por C. difficile y fracaso terapéutico en infección complicada. Uso bloqueado sem sexo/idade, sintomas, gravidez, cultura/epidemiologia, exclusão de pielonefrite/infecção complicada e confirmação da formulação.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fosfomycin+tromethamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/050717s007lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fosfomycin+tromethamine"
+  }
+};})();
+/* GOLD33_SELECTIVE:fosfomicina:END */

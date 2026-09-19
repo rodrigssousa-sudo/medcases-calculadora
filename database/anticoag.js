@@ -1486,3 +1486,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:enoxaparina:END */
+/* GOLD33_SELECTIVE:fondaparinux:START */
+;(function(){var db=window.ANTICOAG_DRUGS_DB;if(!db||!db["fondaparinux"])throw new Error("GOLD33_MISSING_CANONICAL:fondaparinux");db["fondaparinux"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "037",
+    "requiredFieldCount": 33,
+    "approvedSha256": "a53427094bad82f1f3c53a7e3d1b8ceb4d3852297b69defd8d47d1edb290443f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fondaparinux",
+    "class": "Anticoagulante seletivo anti-Xa",
+    "pharmacologicClass": "Pentasacarídeo sintético; potencializa antitrombina contra fator Xa",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Seringas preenchidas SC de 2,5; 5; 7,5 e 10 mg/0,5-0,8 mL, conforme produto.",
+    "presentations": "Seringas preenchidas SC de 2,5; 5; 7,5 e 10 mg/0,5-0,8 mL, conforme produto.",
+    "mechanism": "Pentasacarídeo sintético; potencializa antitrombina contra fator Xa. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade SC ~100%; eliminação renal inalterada; meia-vida 17-21 h.",
+    "indications": "Profilaxia e tratamento de tromboembolismo venoso; usos em síndrome coronariana dependem do protocolo/região.",
+    "dose": "Profilaxia cirúrgica: 2,5 mg SC 1x/dia, primeira dose após hemostasia e ≥6-8 h da cirurgia. Tratamento VTE: <50 kg 5 mg; 50-100 kg 7,5 mg; >100 kg 10 mg SC 1x/dia.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas; uso especializado. AUTOMATABLE=NO.",
+    "renalDose": "Contraindicado se CrCl <30 mL/min; cautela 30-50 mL/min e idosos/baixo peso.",
+    "hepaticDose": "Sem ajuste específico; cautela em hepatopatia grave/coagulopatia.",
+    "commonAdverseEffects": "Sangramento, anemia, reação local, edema e náusea.",
+    "dangerousAdverseEffects": "Hemorragia maior, hematoma espinal/epidural, trombocitopenia e reação alérgica grave.",
+    "adverseEffects": "Sangramento, anemia, reação local, edema e náusea. Graves: Hemorragia maior, hematoma espinal/epidural, trombocitopenia e reação alérgica grave.",
+    "contraindications": "Sangramento ativo importante, endocardite bacteriana, CrCl <30 e hipersensibilidade; profilaxia contraindicada se peso <50 kg.",
+    "interactions": "Outros anticoagulantes, antiagregantes, AINEs e trombolíticos aumentam sangramento.",
+    "monitoring": "Hemograma/plaquetas, creatinina, sangramento, peso e sinais neurológicos após punção neuraxial.",
+    "administration": "SC profunda no abdome, alternando lados; não expulsar bolha da seringa.",
+    "preparation": "Seringa pronta; não administrar IM.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar apenas se benefício justificar; dados limitados.",
+    "lactation": "Dados insuficientes; avaliar alternativa.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hemorragia maior, hematoma espinal/epidural, trombocitopenia e reação alérgica grave. Indicação, dose e duração bloqueadas sem peso, CrCl, risco hemorrágico, procedimento/diagnóstico, horário cirúrgico e plano neuraxial.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fondaparinux",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/021345s035lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fondaparinux"
+  },
+  "es": {
+    "name": "Fondaparinux",
+    "class": "Anticoagulante selectivo anti-Xa",
+    "pharmacologicClass": "Pentasacárido sintético; potencia antitrombina contra factor Xa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Jeringas precargadas SC de 2,5; 5; 7,5 y 10 mg/0,5-0,8 mL, según producto.",
+    "presentations": "Jeringas precargadas SC de 2,5; 5; 7,5 y 10 mg/0,5-0,8 mL, según producto.",
+    "mechanism": "Pentasacárido sintético; potencia antitrombina contra factor Xa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad SC ~100%; eliminación renal sin cambios; semivida 17-21 h.",
+    "indications": "Profilaxis y tratamiento del tromboembolismo venoso; usos en síndrome coronaria dependen del protocolo/región.",
+    "dose": "Profilaxis quirúrgica: 2,5 mg SC 1 vez/día, primera dosis tras hemostasia y ≥6-8 h de cirugía. Tratamiento VTE: <50 kg 5 mg; 50-100 kg 7,5 mg; >100 kg 10 mg SC 1 vez/día.",
+    "pediatricDose": "Seguridad/eficacia no establecidas; uso especializado. AUTOMATABLE=NO.",
+    "renalDose": "Contraindicado si CrCl <30 mL/min; precaución 30-50 mL/min y ancianos/bajo peso.",
+    "hepaticDose": "Sin ajuste específico; precaución en hepatopatía grave/coagulopatía.",
+    "commonAdverseEffects": "Sangrado, anemia, reacción local, edema y náusea.",
+    "dangerousAdverseEffects": "Hemorragia mayor, hematoma espinal/epidural, trombocitopenia y reacción alérgica grave.",
+    "adverseEffects": "Sangrado, anemia, reacción local, edema y náusea. Graves: Hemorragia mayor, hematoma espinal/epidural, trombocitopenia y reacción alérgica grave.",
+    "contraindications": "Sangrado activo importante, endocarditis bacteriana, CrCl <30 e hipersensibilidad; profilaxis contraindicada si peso <50 kg.",
+    "interactions": "Otros anticoagulantes, antiagregantes, AINE y trombolíticos aumentan sangrado.",
+    "monitoring": "Hemograma/plaquetas, creatinina, sangrado, peso y signos neurológicos tras punción neuroaxial.",
+    "administration": "SC profunda en abdomen, alternando lados; no expulsar burbuja de jeringa.",
+    "preparation": "Jeringa lista; no administrar IM.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Usar solo si beneficio justifica; datos limitados.",
+    "lactation": "Datos insuficientes; evaluar alternativa.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hemorragia mayor, hematoma espinal/epidural, trombocitopenia y reacción alérgica grave. Indicação, dose e duração bloqueadas sem peso, CrCl, risco hemorrágico, procedimento/diagnóstico, horário cirúrgico e plano neuraxial.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fondaparinux",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/021345s035lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fondaparinux"
+  }
+};})();
+/* GOLD33_SELECTIVE:fondaparinux:END */

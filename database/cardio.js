@@ -66312,3 +66312,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:fludrocortisona:END */
+/* GOLD33_SELECTIVE:furosemida:START */
+;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["furosemida"])throw new Error("GOLD33_MISSING_CANONICAL:furosemida");db["furosemida"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "037",
+    "requiredFieldCount": 33,
+    "approvedSha256": "a53427094bad82f1f3c53a7e3d1b8ceb4d3852297b69defd8d47d1edb290443f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Furosemida oral",
+    "class": "Diurético de alça",
+    "pharmacologicClass": "Inibe cotransportador Na-K-2Cl na alça de Henle",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 20, 40 e 80 mg; solução oral 10 mg/mL em alguns produtos.",
+    "presentations": "Comprimidos 20, 40 e 80 mg; solução oral 10 mg/mL em alguns produtos.",
+    "mechanism": "Inibe cotransportador Na-K-2Cl na alça de Henle. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Biodisponibilidade oral variável; alta ligação proteica; secreção tubular e eliminação renal.",
+    "indications": "Edema por insuficiência cardíaca, cirrose ou doença renal e tratamento da hipertensão; esta ficha trata a via oral.",
+    "dose": "Edema: iniciar 20-80 mg VO, podendo repetir/aumentar após 6-8 h e individualizar. Hipertensão: 40 mg VO 2x/dia no rótulo, ajustando à resposta.",
+    "pediatricDose": "Edema: iniciar 2 mg/kg VO; se necessário aumentar em 1-2 mg/kg após 6-8 h; doses >6 mg/kg não recomendadas. AUTOMATABLE=NO.",
+    "renalDose": "Resposta pode exigir doses maiores em DRC, mas risco aumenta; individualizar por volume/eletrólitos.",
+    "hepaticDose": "Cautela em cirrose; iniciar sob monitorização por risco de encefalopatia e alterações eletrolíticas.",
+    "commonAdverseEffects": "Poliúria, hipotensão, tontura, hipocalemia, hiponatremia e hiperuricemia.",
+    "dangerousAdverseEffects": "Depleção volêmica, insuficiência renal, arritmia eletrolítica, ototoxicidade e SCAR.",
+    "adverseEffects": "Poliúria, hipotensão, tontura, hipocalemia, hiponatremia e hiperuricemia. Graves: Depleção volêmica, insuficiência renal, arritmia eletrolítica, ototoxicidade e SCAR.",
+    "contraindications": "Anúria e hipersensibilidade.",
+    "interactions": "Aminoglicosídeos, lítio, digoxina, AINEs, anti-hipertensivos e outros diuréticos.",
+    "monitoring": "Peso/balanço, PA, Na/K/Mg, ureia/creatinina, volume, glicose, ácido úrico e audição em risco.",
+    "administration": "VO pela manhã; segunda dose no início da tarde; medir solução corretamente.",
+    "preparation": "Comprimido/solução prontos; não confundir concentração.",
+    "infusionProtocol": "Não aplicável à ficha oral.",
+    "pregnancy": "Atravessa placenta; usar apenas se benefício justificar e monitorar crescimento.",
+    "lactation": "Pode reduzir lactação; monitorar lactente e produção.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Depleção volêmica, insuficiência renal, arritmia eletrolítica, ototoxicidade e SCAR. Dose/titulação bloqueadas sem indicação, idade/peso, volume, PA, eletrólitos, função renal/hepática, concentração oral e medicamentos concomitantes.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+tablet",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/016273s068lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+tablet"
+  },
+  "es": {
+    "name": "Furosemida oral",
+    "class": "Diurético de asa",
+    "pharmacologicClass": "Inhibe cotransportador Na-K-2Cl en asa de Henle",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 20, 40 y 80 mg; solución oral 10 mg/mL en algunos productos.",
+    "presentations": "Comprimidos 20, 40 y 80 mg; solución oral 10 mg/mL en algunos productos.",
+    "mechanism": "Inhibe cotransportador Na-K-2Cl en asa de Henle. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Biodisponibilidad oral variable; alta unión proteica; secreción tubular y eliminación renal.",
+    "indications": "Edema por insuficiencia cardíaca, cirrosis o enfermedad renal y tratamiento de hipertensión; esta ficha trata vía oral.",
+    "dose": "Edema: iniciar 20-80 mg VO, pudiendo repetir/aumentar tras 6-8 h e individualizar. Hipertensión: 40 mg VO 2 veces/día en ficha, ajustar a respuesta.",
+    "pediatricDose": "Edema: iniciar 2 mg/kg VO; si necesario aumentar 1-2 mg/kg tras 6-8 h; dosis >6 mg/kg no recomendadas. AUTOMATABLE=NO.",
+    "renalDose": "Respuesta puede requerir dosis mayores en ERC, con mayor riesgo; individualizar por volumen/electrolitos.",
+    "hepaticDose": "Precaución en cirrosis; iniciar con vigilancia por encefalopatía y alteraciones electrolíticas.",
+    "commonAdverseEffects": "Poliuria, hipotensión, mareo, hipopotasemia, hiponatremia e hiperuricemia.",
+    "dangerousAdverseEffects": "Depleción de volumen, insuficiencia renal, arritmia electrolítica, ototoxicidad y SCAR.",
+    "adverseEffects": "Poliuria, hipotensión, mareo, hipopotasemia, hiponatremia e hiperuricemia. Graves: Depleción de volumen, insuficiencia renal, arritmia electrolítica, ototoxicidad y SCAR.",
+    "contraindications": "Anuria e hipersensibilidad.",
+    "interactions": "Aminoglucósidos, litio, digoxina, AINE, antihipertensivos y otros diuréticos.",
+    "monitoring": "Peso/balance, PA, Na/K/Mg, urea/creatinina, volumen, glucosa, ácido úrico y audición en riesgo.",
+    "administration": "VO por la mañana; segunda dosis al inicio de la tarde; medir solución correctamente.",
+    "preparation": "Comprimido/solución listos; no confundir concentración.",
+    "infusionProtocol": "No aplicable a ficha oral.",
+    "pregnancy": "Cruza placenta; usar solo si beneficio justifica y vigilar crecimiento.",
+    "lactation": "Puede reducir lactancia; vigilar lactante y producción.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Depleción de volumen, insuficiencia renal, arritmia electrolítica, ototoxicidad y SCAR. Dose/titulação bloqueadas sem indicação, idade/peso, volume, PA, eletrólitos, função renal/hepática, concentração oral e medicamentos concomitantes.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+tablet",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/016273s068lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+tablet"
+  }
+};})();
+/* GOLD33_SELECTIVE:furosemida:END */

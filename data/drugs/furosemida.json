@@ -5,248 +5,84 @@
   "color": "rgba(59,130,246,0.13)",
   "colorTxt": "#1E3A5F",
   "pt": {
-    "pharmacologicClass": "Diurético de alça; inibidor do cotransportador NKCC2",
-    "mechanism": "Inibe o cotransportador Na-K-2Cl no ramo ascendente espesso da alça de Henle, aumentando excreção de sódio, cloro e água e favorecendo perdas de potássio, cálcio e magnésio.",
-    "pharmacodynamics": "Produz natriurese e diurese, reduz congestão e pressões de enchimento. A resposta depende da dose, perfusão renal, absorção oral e grau de resistência diurética.",
-    "commonAdverseEffects": [
-      "poliúria",
-      "tontura",
-      "hipotensão",
-      "hipocalemia",
-      "hiponatremia",
-      "hipomagnesemia"
-    ],
-    "dangerousAdverseEffects": [
-      "depleção volêmica profunda",
-      "lesão renal aguda",
-      "distúrbios eletrolíticos graves",
-      "ototoxicidade",
-      "reações cutâneas graves raras"
-    ],
-    "contraindications": [
-      "Anúria",
-      "hipersensibilidade ao fármaco"
-    ],
-    "interactions": [
-      "AINEs podem reduzir resposta diurética e aumentar risco renal",
-      "Aminoglicosídeos ou outros ototóxicos podem aumentar ototoxicidade",
-      "Lítio pode acumular",
-      "Digoxina: hipocalemia aumenta toxicidade",
-      "Outros anti-hipertensivos aumentam hipotensão"
-    ],
-    "monitoring": [
-      "Peso e balanço hídrico",
-      "pressão arterial",
-      "creatinina/eTFG",
-      "sódio, potássio e magnésio",
-      "sinais de desidratação",
-      "audição em doses IV altas ou fatores de risco"
-    ],
-    "pregnancy": "Usar na gestação apenas se clinicamente necessário; monitorar crescimento fetal e perfusão materna quando houver necessidade de diurese sustentada.",
-    "lactation": "Individualizar; doses altas ou diurese intensa podem reduzir produção de leite. Observar hidratação e peso do lactente.",
-    "patientEducation": [
-      "Tomar preferencialmente cedo para reduzir noctúria",
-      "controlar peso se orientado",
-      "procurar avaliação por tontura intensa, cãibras, pouca urina ou sede importante",
-      "não usar AINE cronicamente sem orientação"
-    ],
-    "clinicalPearls": [
-      "A resposta é avaliada por diurese, peso e descongestão, não apenas pela dose nominal",
-      "Resistência diurética pode exigir aumento de dose ou combinação de estratégias sob monitorização."
-    ],
-    "guidelineRecommendations": [
-      "AHA/ACC/HFSA: diuréticos são recomendados em pacientes com insuficiência cardíaca e retenção de líquidos para aliviar congestão e sintomas."
-    ],
-    "safetyFlags": [
-      "VOLEMIA",
-      "ELETROLITOS",
-      "FUNCAO_RENAL",
-      "OTOTOXICIDADE"
-    ],
-    "alerts": [
-      "Evitar diurese excessivamente rápida sem indicação",
-      "Corrigir distúrbios eletrolíticos relevantes",
-      "Ajustar conforme resposta clínica e função renal."
-    ],
-    "name": "Furosemida",
-    "class": "Diurético de alça de alta potência",
-    "pharmacokinetics": "Biodisponibilidade oral variável. Início IV rápido. Liga-se extensamente a proteínas e é secretada no túbulo proximal para alcançar NKCC2; a eliminação combina via renal e metabolismo.",
-    "indications": [
-      "Edema associado a insuficiência cardíaca, cirrose ou doença renal",
-      "edema pulmonar agudo como tratamento adjuvante por via IV",
-      "hipertensão por via oral em pacientes selecionados"
-    ],
-    "commercialNames": [
-      "Lasix"
-    ],
-    "presentation": "Comprimidos orais e solução injetável IV/IM.",
-    "presentations": [
-      "Comprimidos 20, 40 e 80 mg conforme produto",
-      "Injeção 10 mg/mL em múltiplos tamanhos de frasco/seringa"
-    ],
-    "dose": {
-      "oralEdema": "20-80 mg como dose inicial única; individualizar e repetir ou aumentar conforme resposta.",
-      "IVEdema": "20-40 mg IV ou IM; administrar IV lentamente em 1-2 minutos. Pode repetir uma segunda dose após 2 h se necessário.",
-      "acutePulmonaryEdema": "40 mg IV lentamente em 1-2 minutos; se resposta insuficiente, pode administrar 80 mg lentamente conforme bula e contexto clínico."
-    },
-    "pediatricDose": "IV/IM: dose inicial 1 mg/kg uma vez lentamente; se necessário aumentar 1 mg/kg não antes de 2 h; doses >6 mg/kg não recomendadas. Oral: usar esquema pediátrico específico por peso da bula e resposta.",
-    "renalDose": "Não há redução automática por eTFG; na doença renal frequentemente é necessária dose maior para alcançar o túbulo. Titular por diurese, congestão, pressão, creatinina e eletrólitos; evitar sobrediurese.",
-    "hepaticDose": "Na cirrose iniciar com cautela, habitualmente junto de estratégia antialdosterônica conforme indicação, monitorando encefalopatia, sódio, potássio, função renal e volemia.",
-    "administration": "Oral preferencialmente pela manhã. IV deve ser administrada lentamente; velocidades excessivas aumentam risco de ototoxicidade.",
-    "preparation": "Inspecionar solução IV. Não misturar com soluções muito ácidas que possam precipitar o fármaco; seguir compatibilidade institucional.",
-    "infusionProtocol": "Para doses IV habituais da bula administrar lentamente. Em doses altas ou infusão contínua usar bomba e protocolo institucional com limite de velocidade e monitorização de eletrólitos.",
-    "specialPopulations": {
-      "renal": "Pode exigir dose maior para obter resposta, mas com monitorização estreita.",
-      "cirrhosis": "Alto risco de alterações de volemia/eletrólitos e encefalopatia.",
-      "elderly": "Maior risco de hipovolemia e lesão renal."
-    },
-    "adverseEffects": {
-      "common": [
-        "poliúria",
-        "tontura",
-        "hipotensão",
-        "hipocalemia",
-        "hiponatremia",
-        "hipomagnesemia"
-      ],
-      "dangerous": [
-        "depleção volêmica profunda",
-        "lesão renal aguda",
-        "distúrbios eletrolíticos graves",
-        "ototoxicidade",
-        "reações cutâneas graves raras"
-      ]
-    },
+    "pharmacologicClass": "Inibe cotransportador Na-K-2Cl na alça de Henle",
+    "mechanism": "Inibe cotransportador Na-K-2Cl na alça de Henle. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "commonAdverseEffects": "Poliúria, hipotensão, tontura, hipocalemia, hiponatremia e hiperuricemia.",
+    "dangerousAdverseEffects": "Depleção volêmica, insuficiência renal, arritmia eletrolítica, ototoxicidade e SCAR.",
+    "contraindications": "Anúria e hipersensibilidade.",
+    "interactions": "Aminoglicosídeos, lítio, digoxina, AINEs, anti-hipertensivos e outros diuréticos.",
+    "monitoring": "Peso/balanço, PA, Na/K/Mg, ureia/creatinina, volume, glicose, ácido úrico e audição em risco.",
+    "pregnancy": "Atravessa placenta; usar apenas se benefício justificar e monitorar crescimento.",
+    "lactation": "Pode reduzir lactação; monitorar lactente e produção.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Depleção volêmica, insuficiência renal, arritmia eletrolítica, ototoxicidade e SCAR. Dose/titulação bloqueadas sem indicação, idade/peso, volume, PA, eletrólitos, função renal/hepática, concentração oral e medicamentos concomitantes.",
+    "name": "Furosemida oral",
+    "class": "Diurético de alça",
+    "pharmacokinetics": "Biodisponibilidade oral variável; alta ligação proteica; secreção tubular e eliminação renal.",
+    "indications": "Edema por insuficiência cardíaca, cirrose ou doença renal e tratamento da hipertensão; esta ficha trata a via oral.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 20, 40 e 80 mg; solução oral 10 mg/mL em alguns produtos.",
+    "presentations": "Comprimidos 20, 40 e 80 mg; solução oral 10 mg/mL em alguns produtos.",
+    "dose": "Edema: iniciar 20-80 mg VO, podendo repetir/aumentar após 6-8 h e individualizar. Hipertensão: 40 mg VO 2x/dia no rótulo, ajustando à resposta.",
+    "pediatricDose": "Edema: iniciar 2 mg/kg VO; se necessário aumentar em 1-2 mg/kg após 6-8 h; doses >6 mg/kg não recomendadas. AUTOMATABLE=NO.",
+    "renalDose": "Resposta pode exigir doses maiores em DRC, mas risco aumenta; individualizar por volume/eletrólitos.",
+    "hepaticDose": "Cautela em cirrose; iniciar sob monitorização por risco de encefalopatia e alterações eletrolíticas.",
+    "administration": "VO pela manhã; segunda dose no início da tarde; medir solução corretamente.",
+    "preparation": "Comprimido/solução prontos; não confundir concentração.",
+    "infusionProtocol": "Não aplicável à ficha oral.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "adverseEffects": "Poliúria, hipotensão, tontura, hipocalemia, hiponatremia e hiperuricemia. Graves: Depleção volêmica, insuficiência renal, arritmia eletrolítica, ototoxicidade e SCAR.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=aaced7a8-c3d7-4d66-8c07-aa407b8b3f35",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2a5bcf50-6d63-463a-915e-a72ea2e5f131",
-      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+tablet",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/016273s068lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=aaced7a8-c3d7-4d66-8c07-aa407b8b3f35"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+tablet"
   },
   "es": {
-    "pharmacologicClass": "Diurético de asa; inhibidor del cotransportador NKCC2",
-    "mechanism": "Inhibe el cotransportador Na-K-2Cl en la rama ascendente gruesa del asa de Henle, aumentando excreción de sodio, cloro y agua y favoreciendo pérdidas de potasio, calcio y magnesio.",
-    "pharmacodynamics": "Produce natriuresis y diuresis, reduce congestión y presión de llenado. La respuesta depende de dosis, perfusión renal, absorción oral y grado de resistencia diurética.",
-    "commonAdverseEffects": [
-      "poliuria",
-      "mareo",
-      "hipotensión",
-      "hipopotasemia",
-      "hiponatremia",
-      "hipomagnesemia"
-    ],
-    "dangerousAdverseEffects": [
-      "depleción profunda de volumen",
-      "lesión renal aguda",
-      "alteraciones electrolíticas graves",
-      "ototoxicidad",
-      "reacciones cutáneas graves raras"
-    ],
-    "contraindications": [
-      "Anuria",
-      "hipersensibilidad al fármaco"
-    ],
-    "interactions": [
-      "AINE pueden reducir respuesta diurética y aumentar riesgo renal",
-      "Aminoglucósidos u otros ototóxicos pueden aumentar ototoxicidad",
-      "Litio puede acumularse",
-      "Digoxina: hipopotasemia aumenta toxicidad",
-      "Otros antihipertensivos aumentan hipotensión"
-    ],
-    "monitoring": [
-      "Peso y balance hídrico",
-      "presión arterial",
-      "creatinina/eGFR",
-      "sodio, potasio y magnesio",
-      "signos de deshidratación",
-      "audición si dosis IV altas o factores de riesgo"
-    ],
-    "pregnancy": "Usar durante embarazo solo si es clínicamente necesario; monitorizar crecimiento fetal y perfusión materna cuando se requiera diuresis sostenida.",
-    "lactation": "Individualizar; dosis altas o diuresis intensa pueden reducir producción de leche. Vigilar hidratación y peso del lactante.",
-    "patientEducation": [
-      "Tomar preferentemente temprano para reducir nocturia",
-      "controlar peso si fue indicado",
-      "consultar por mareo intenso, calambres, poca orina o sed marcada",
-      "no usar AINE de forma crónica sin consultar"
-    ],
-    "clinicalPearls": [
-      "La respuesta se evalúa por diuresis, peso y descongestión, no solo por dosis nominal",
-      "La resistencia diurética puede requerir aumentar dosis o combinar estrategias bajo monitorización."
-    ],
-    "guidelineRecommendations": [
-      "AHA/ACC/HFSA: los diuréticos se recomiendan en pacientes con insuficiencia cardíaca y retención de líquidos para aliviar congestión y síntomas."
-    ],
-    "safetyFlags": [
-      "VOLUMEN",
-      "ELECTROLITOS",
-      "FUNCION_RENAL",
-      "OTOTOXICIDAD"
-    ],
-    "alerts": [
-      "Evitar diuresis excesivamente rápida sin indicación",
-      "Corregir alteraciones electrolíticas relevantes",
-      "Ajustar según respuesta clínica y función renal."
-    ],
-    "name": "Furosemida",
-    "class": "Diurético de asa de alta potencia",
-    "pharmacokinetics": "Biodisponibilidad oral variable. Inicio IV rápido. Se une extensamente a proteínas y se secreta en túbulo proximal para alcanzar NKCC2; la eliminación combina vía renal y metabolismo.",
-    "indications": [
-      "Edema asociado a insuficiencia cardíaca, cirrosis o enfermedad renal",
-      "edema pulmonar agudo como tratamiento adyuvante por vía IV",
-      "hipertensión por vía oral en pacientes seleccionados"
-    ],
-    "commercialNames": [
-      "Lasix"
-    ],
-    "presentation": "Tabletas orales y solución inyectable IV/IM.",
-    "presentations": [
-      "Tabletas 20, 40 y 80 mg según producto",
-      "Inyección 10 mg/mL en múltiples tamaños de vial/jeringa"
-    ],
-    "dose": {
-      "oralEdema": "20-80 mg como dosis inicial única; individualizar y repetir o aumentar según respuesta.",
-      "IVEdema": "20-40 mg IV o IM; administrar IV lentamente en 1-2 minutos. Puede repetirse una segunda dosis después de 2 h si es necesario.",
-      "acutePulmonaryEdema": "40 mg IV lentamente en 1-2 minutos; si respuesta insuficiente, puede administrarse 80 mg lentamente según ficha y contexto clínico."
-    },
-    "pediatricDose": "IV/IM: dosis inicial 1 mg/kg una vez lentamente; si es necesario aumentar 1 mg/kg no antes de 2 h; dosis >6 mg/kg no recomendadas. Oral: usar esquema pediátrico específico por peso de la ficha y respuesta.",
-    "renalDose": "No existe reducción automática por eGFR; en enfermedad renal suele requerirse una dosis mayor para alcanzar el túbulo. Titular por diuresis, congestión, presión, creatinina y electrolitos; evitar sobre-diuresis.",
-    "hepaticDose": "En cirrosis iniciar con cautela, habitualmente junto con estrategia antialdosterónica según indicación, vigilando encefalopatía, sodio, potasio, función renal y volumen.",
-    "administration": "Oral preferentemente por la mañana. IV debe administrarse lentamente; velocidades excesivas aumentan riesgo de ototoxicidad.",
-    "preparation": "Inspeccionar solución IV. No mezclar con soluciones muy ácidas que puedan precipitar el fármaco; seguir compatibilidad institucional.",
-    "infusionProtocol": "Para dosis IV habituales de la ficha administrar lentamente. En dosis altas o infusión continua usar bomba y protocolo institucional con límite de velocidad y monitorización de electrolitos.",
-    "specialPopulations": {
-      "renal": "Puede requerir mayor dosis para obtener respuesta, pero con vigilancia estrecha.",
-      "cirrhosis": "Alto riesgo de alteraciones de volumen/electrolitos y encefalopatía.",
-      "elderly": "Mayor riesgo de hipovolemia y lesión renal."
-    },
-    "adverseEffects": {
-      "common": [
-        "poliuria",
-        "mareo",
-        "hipotensión",
-        "hipopotasemia",
-        "hiponatremia",
-        "hipomagnesemia"
-      ],
-      "dangerous": [
-        "depleción profunda de volumen",
-        "lesión renal aguda",
-        "alteraciones electrolíticas graves",
-        "ototoxicidad",
-        "reacciones cutáneas graves raras"
-      ]
-    },
+    "pharmacologicClass": "Inhibe cotransportador Na-K-2Cl en asa de Henle",
+    "mechanism": "Inhibe cotransportador Na-K-2Cl en asa de Henle. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "commonAdverseEffects": "Poliuria, hipotensión, mareo, hipopotasemia, hiponatremia e hiperuricemia.",
+    "dangerousAdverseEffects": "Depleción de volumen, insuficiencia renal, arritmia electrolítica, ototoxicidad y SCAR.",
+    "contraindications": "Anuria e hipersensibilidad.",
+    "interactions": "Aminoglucósidos, litio, digoxina, AINE, antihipertensivos y otros diuréticos.",
+    "monitoring": "Peso/balance, PA, Na/K/Mg, urea/creatinina, volumen, glucosa, ácido úrico y audición en riesgo.",
+    "pregnancy": "Cruza placenta; usar solo si beneficio justifica y vigilar crecimiento.",
+    "lactation": "Puede reducir lactancia; vigilar lactante y producción.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Depleción de volumen, insuficiencia renal, arritmia electrolítica, ototoxicidad y SCAR. Dose/titulação bloqueadas sem indicação, idade/peso, volume, PA, eletrólitos, função renal/hepática, concentração oral e medicamentos concomitantes.",
+    "name": "Furosemida oral",
+    "class": "Diurético de asa",
+    "pharmacokinetics": "Biodisponibilidad oral variable; alta unión proteica; secreción tubular y eliminación renal.",
+    "indications": "Edema por insuficiencia cardíaca, cirrosis o enfermedad renal y tratamiento de hipertensión; esta ficha trata vía oral.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 20, 40 y 80 mg; solución oral 10 mg/mL en algunos productos.",
+    "presentations": "Comprimidos 20, 40 y 80 mg; solución oral 10 mg/mL en algunos productos.",
+    "dose": "Edema: iniciar 20-80 mg VO, pudiendo repetir/aumentar tras 6-8 h e individualizar. Hipertensión: 40 mg VO 2 veces/día en ficha, ajustar a respuesta.",
+    "pediatricDose": "Edema: iniciar 2 mg/kg VO; si necesario aumentar 1-2 mg/kg tras 6-8 h; dosis >6 mg/kg no recomendadas. AUTOMATABLE=NO.",
+    "renalDose": "Respuesta puede requerir dosis mayores en ERC, con mayor riesgo; individualizar por volumen/electrolitos.",
+    "hepaticDose": "Precaución en cirrosis; iniciar con vigilancia por encefalopatía y alteraciones electrolíticas.",
+    "administration": "VO por la mañana; segunda dosis al inicio de la tarde; medir solución correctamente.",
+    "preparation": "Comprimido/solución listos; no confundir concentración.",
+    "infusionProtocol": "No aplicable a ficha oral.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "adverseEffects": "Poliuria, hipotensión, mareo, hipopotasemia, hiponatremia e hiperuricemia. Graves: Depleción de volumen, insuficiencia renal, arritmia electrolítica, ototoxicidad y SCAR.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=aaced7a8-c3d7-4d66-8c07-aa407b8b3f35",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2a5bcf50-6d63-463a-915e-a72ea2e5f131",
-      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+tablet",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/016273s068lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=aaced7a8-c3d7-4d66-8c07-aa407b8b3f35"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+tablet"
   },
   "name": {
-    "pt": "Furosemida",
-    "es": "Furosemida"
+    "pt": "Furosemida oral",
+    "es": "Furosemida oral"
   },
   "keywords": [
     "furosemida",
@@ -254,8 +90,8 @@
     "furosemida generica",
     "diuretico de alca — inibidor do cotransportador na+/k+/2cl- (nkcc2)"
   ],
-  "dataVersion": "clinical-data-v1-55b02c8f3820436e",
-  "clinicalContentSha256": "55b02c8f3820436eb5a7dc1415946ef29be89db3f0b1f96ad64b738fb8e52cc2",
+  "dataVersion": "clinical-data-v1-e007aa49293251a5",
+  "clinicalContentSha256": "e007aa49293251a51680c142a134b3eff329d6e9a1d39a4fbb76b7322a0b7534",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -323,13 +159,15 @@
     ]
   },
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "furosemida.mcGoldClinicalV1",
-    "group": "GOLD_GROUP05_CARDIO_10",
-    "review": "2026-09",
+    "lote": "037",
     "requiredFields": 33,
-    "contentSha256": "237031b84259cfa614024ede0277387c81c05ebf18e445b20f7df5b31a78dcaf",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "a53427094bad82f1f3c53a7e3d1b8ceb4d3852297b69defd8d47d1edb290443f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }
