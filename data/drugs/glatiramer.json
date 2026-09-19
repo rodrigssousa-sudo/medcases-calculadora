@@ -5,21 +5,91 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Acetato de Glatirâmer"
+    "name": "Acetato de glatirâmer",
+    "class": "Imunomodulador",
+    "pharmacologicClass": "Polipeptídeos sintéticos que modulam resposta imune",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Seringas SC 20 mg/mL e 40 mg/mL.",
+    "presentations": "Seringas SC 20 mg/mL e 40 mg/mL.",
+    "mechanism": "Polipeptídeos sintéticos que modulam resposta imune. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Polipeptídeo degradado localmente; farmacocinética sistêmica não bem definida.",
+    "indications": "Formas recorrentes de esclerose múltipla e síndrome clinicamente isolada conforme rótulo.",
+    "dose": "20 mg SC uma vez/dia ou 40 mg SC três vezes/semana com ≥48 h entre doses; não intercambiar regimes.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste definido.",
+    "hepaticDose": "Sem ajuste definido.",
+    "commonAdverseEffects": "Dor, eritema, prurido e reação imediata pós-injeção.",
+    "dangerousAdverseEffects": "Anafilaxia, necrose/lipoatrofia, lesão hepática e reação sistêmica intensa.",
+    "adverseEffects": "Dor, eritema, prurido e reação imediata pós-injeção. Graves: Anafilaxia, necrose/lipoatrofia, lesão hepática e reação sistêmica intensa.",
+    "contraindications": "Hipersensibilidade ao glatirâmer ou manitol.",
+    "interactions": "Interações relevantes pouco definidas.",
+    "monitoring": "Atividade da EM, reação local, lipoatrofia/necrose, reação pós-injeção, dor torácica e fígado.",
+    "administration": "SC em abdome, braços, quadris ou coxas, rotacionando locais.",
+    "preparation": "Seringa pronta; deixar aquecer e não reutilizar.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados observacionais geralmente tranquilizadores; individualizar.",
+    "lactation": "Provável baixa exposição oral do lactente; avaliar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, necrose/lipoatrofia, lesão hepática e reação sistêmica intensa. Regime bloqueado sem diagnóstico, força da seringa, cronograma, treinamento de injeção, alergia/manitol e avaliação hepática.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=glatiramer+acetate",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/020622s112lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=glatiramer+acetate"
   },
   "es": {
-    "name": "Acetato de Glatirámero"
+    "name": "Acetato de glatirámero",
+    "class": "Inmunomodulador",
+    "pharmacologicClass": "Polipéptidos sintéticos que modulan respuesta inmune",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Jeringas SC 20 mg/mL y 40 mg/mL.",
+    "presentations": "Jeringas SC 20 mg/mL y 40 mg/mL.",
+    "mechanism": "Polipéptidos sintéticos que modulan respuesta inmune. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Polipéptido degradado localmente; farmacocinética sistémica poco definida.",
+    "indications": "Formas recurrentes de esclerosis múltiple y síndrome clínicamente aislado según ficha.",
+    "dose": "20 mg SC una vez/día o 40 mg SC tres veces/semana con ≥48 h entre dosis; no intercambiar pautas.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste definido.",
+    "hepaticDose": "Sin ajuste definido.",
+    "commonAdverseEffects": "Dolor, eritema, prurito y reacción inmediata posinyección.",
+    "dangerousAdverseEffects": "Anafilaxia, necrosis/lipoatrofia, lesión hepática y reacción sistémica intensa.",
+    "adverseEffects": "Dolor, eritema, prurito y reacción inmediata posinyección. Graves: Anafilaxia, necrosis/lipoatrofia, lesión hepática y reacción sistémica intensa.",
+    "contraindications": "Hipersensibilidad a glatirámero o manitol.",
+    "interactions": "Interacciones relevantes poco definidas.",
+    "monitoring": "Actividad de EM, reacción local, lipoatrofia/necrosis, reacción posinyección, dolor torácico e hígado.",
+    "administration": "SC en abdomen, brazos, caderas o muslos, rotando sitios.",
+    "preparation": "Jeringa lista; dejar templar y no reutilizar.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos observacionales generalmente tranquilizadores; individualizar.",
+    "lactation": "Probable baja exposición oral del lactante; evaluar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, necrosis/lipoatrofia, lesión hepática y reacción sistémica intensa. Regime bloqueado sem diagnóstico, força da seringa, cronograma, treinamento de injeção, alergia/manitol e avaliação hepática.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=glatiramer+acetate",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/020622s112lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=glatiramer+acetate"
   },
   "name": {
-    "pt": "Acetato de Glatirâmer",
-    "es": "Acetato de Glatirámero"
+    "pt": "Acetato de glatirâmer",
+    "es": "Acetato de glatirámero"
   },
   "keywords": [
     "glatiramer",
     "acetato de glatirâmer"
   ],
-  "dataVersion": "clinical-data-v1-e007aa49293251a5",
-  "clinicalContentSha256": "e007aa49293251a51680c142a134b3eff329d6e9a1d39a4fbb76b7322a0b7534",
+  "dataVersion": "clinical-data-v1-a12ed02d7156d8ed",
+  "clinicalContentSha256": "a12ed02d7156d8ed773be848425e9f4b8cfeb19c1b3a77d5cb03d938004e69c1",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "neurologia.js",
@@ -84,5 +154,17 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/neurologia.js",
+    "sourceField": "glatiramer.mcGoldClinicalV1",
+    "lote": "038",
+    "requiredFields": 33,
+    "approvedSha256": "ad9a95080c0e044c8ec533188195d104f46324587195ff6f80e28911f7c2dc5f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

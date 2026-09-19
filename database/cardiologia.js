@@ -1566,3 +1566,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:felodipina:END */
+/* GOLD33_SELECTIVE:furosemida_iv:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB;if(!db||!db["furosemida_iv"])throw new Error("GOLD33_MISSING_CANONICAL:furosemida_iv");db["furosemida_iv"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "038",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ad9a95080c0e044c8ec533188195d104f46324587195ff6f80e28911f7c2dc5f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Furosemida IV",
+    "class": "Diurético de alça intravenoso",
+    "pharmacologicClass": "Inibe Na-K-2Cl na alça de Henle",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Injeção 10 mg/mL em ampolas/frascos; apresentações variam.",
+    "presentations": "Injeção 10 mg/mL em ampolas/frascos; apresentações variam.",
+    "mechanism": "Inibe Na-K-2Cl na alça de Henle. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Alta ligação proteica; secreção tubular; efeito IV em minutos.",
+    "indications": "Edema agudo quando necessária diurese parenteral; adjuvante no edema pulmonar agudo.",
+    "dose": "Edema: 20-40 mg IV lenta; pode aumentar 20 mg após ≥2 h conforme resposta. Edema pulmonar: 40 mg IV lenta, podendo usar 80 mg após 1 h se resposta insuficiente.",
+    "pediatricDose": "1 mg/kg IV/IM inicial; pode aumentar 1 mg/kg após ≥2 h; doses >6 mg/kg não recomendadas. AUTOMATABLE=NO.",
+    "renalDose": "Individualizar; DRC pode exigir maior dose, com monitorização intensiva.",
+    "hepaticDose": "Cautela em cirrose/ascite; corrigir eletrólitos e evitar mudança rápida de volume.",
+    "commonAdverseEffects": "Poliúria, hipotensão e distúrbios eletrolíticos.",
+    "dangerousAdverseEffects": "Ototoxicidade, arritmia, choque hipovolêmico, lesão renal e SCAR.",
+    "adverseEffects": "Poliúria, hipotensão e distúrbios eletrolíticos. Graves: Ototoxicidade, arritmia, choque hipovolêmico, lesão renal e SCAR.",
+    "contraindications": "Anúria e hipersensibilidade.",
+    "interactions": "Aminoglicosídeos, lítio, digoxina, AINEs, anti-hipertensivos e cisplatina.",
+    "monitoring": "PA, diurese, peso, Na/K/Mg, creatinina, ácido úrico e audição.",
+    "administration": "IV lenta; evitar extravasamento e monitorar PA/diurese.",
+    "preparation": "Pode diluir conforme produto e pH; usar solução compatível.",
+    "infusionProtocol": "Não exceder 4 mg/min em adultos para reduzir ototoxicidade; doses altas exigem taxa menor conforme protocolo.",
+    "pregnancy": "Usar se benefício justificar.",
+    "lactation": "Pode reduzir produção de leite; monitorar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Ototoxicidade, arritmia, choque hipovolêmico, lesão renal e SCAR. Dose e bomba bloqueadas sem indicação, peso, volume, PA, eletrólitos, rim/fígado, concentração, acesso e fármacos ototóxicos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/016273s068lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+injection"
+  },
+  "es": {
+    "name": "Furosemida IV",
+    "class": "Diurético de asa intravenoso",
+    "pharmacologicClass": "Inhibe Na-K-2Cl en asa de Henle",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Inyección 10 mg/mL en ampollas/viales; presentaciones variables.",
+    "presentations": "Inyección 10 mg/mL en ampollas/viales; presentaciones variables.",
+    "mechanism": "Inhibe Na-K-2Cl en asa de Henle. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Alta unión proteica; secreción tubular; efecto IV en minutos.",
+    "indications": "Edema agudo cuando se requiere diuresis parenteral; adyuvante en edema pulmonar agudo.",
+    "dose": "Edema: 20-40 mg IV lenta; puede aumentar 20 mg tras ≥2 h según respuesta. Edema pulmonar: 40 mg IV lenta, pudiendo usar 80 mg tras 1 h si respuesta insuficiente.",
+    "pediatricDose": "1 mg/kg IV/IM inicial; puede aumentar 1 mg/kg tras ≥2 h; dosis >6 mg/kg no recomendadas. AUTOMATABLE=NO.",
+    "renalDose": "Individualizar; ERC puede requerir mayor dosis, con vigilancia intensiva.",
+    "hepaticDose": "Precaución en cirrosis/ascitis; corregir electrolitos y evitar cambios rápidos de volumen.",
+    "commonAdverseEffects": "Poliuria, hipotensión y trastornos electrolíticos.",
+    "dangerousAdverseEffects": "Ototoxicidad, arritmia, shock hipovolémico, lesión renal y SCAR.",
+    "adverseEffects": "Poliuria, hipotensión y trastornos electrolíticos. Graves: Ototoxicidad, arritmia, shock hipovolémico, lesión renal y SCAR.",
+    "contraindications": "Anuria e hipersensibilidad.",
+    "interactions": "Aminoglucósidos, litio, digoxina, AINE, antihipertensivos y cisplatino.",
+    "monitoring": "PA, diuresis, peso, Na/K/Mg, creatinina, ácido úrico y audición.",
+    "administration": "IV lenta; evitar extravasación y vigilar PA/diuresis.",
+    "preparation": "Puede diluirse según producto y pH; usar solución compatible.",
+    "infusionProtocol": "No superar 4 mg/min en adultos para reducir ototoxicidad; dosis altas requieren menor velocidad según protocolo.",
+    "pregnancy": "Usar si beneficio justifica.",
+    "lactation": "Puede reducir producción de leche; vigilar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Ototoxicidad, arritmia, shock hipovolémico, lesión renal y SCAR. Dose e bomba bloqueadas sem indicação, peso, volume, PA, eletrólitos, rim/fígado, concentração, acesso e fármacos ototóxicos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/016273s068lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=furosemide+injection"
+  }
+};})();
+/* GOLD33_SELECTIVE:furosemida_iv:END */

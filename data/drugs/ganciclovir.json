@@ -7,154 +7,78 @@
   "pt": {
     "name": "Ganciclovir",
     "class": "Antiviral anti-CMV",
-    "pharmacologicClass": "Análogo de guanosina; inibidor da DNA-polimerase viral",
-    "mechanism": "Fosforilado por quinase viral UL97 no CMV e depois a trifosfato, que inibe DNA-polimerase viral e síntese de DNA.",
-    "pharmacodynamics": "Virustático contra CMV; exposição adequada reduz replicação, mas resistência pode surgir por mutações UL97/UL54.",
-    "pharmacokinetics": "IV, distribuição ampla e eliminação predominantemente renal inalterada; hemodiálise reduz níveis em cerca de 50%.",
-    "indications": "Tratamento de retinite por CMV em imunocomprometidos e prevenção de doença CMV em receptores de transplante de alto risco conforme bula/protocolo.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Pó para injeção IV ou solução IV pronta conforme produto.",
-    "presentations": [
-      "500 mg frasco",
-      "2 mg/mL bolsa em alguns produtos"
-    ],
-    "dose": "Adulto com CrCl >=70: indução 5 mg/kg IV q12h por 14–21 dias; manutenção 5 mg/kg IV q24h ou 6 mg/kg/dia 5 dias/semana conforme indicação.",
-    "pediatricDose": "Não há dose pediátrica rotulada ou estabelecida para ganciclovir IV. A segurança e a eficácia em pacientes pediátricos não foram estabelecidas pela bula. Estudos farmacocinéticos incluíram neonatos e crianças, porém as exposições estudadas não constituem esquema de dose recomendado. Se houver uso excepcional/off-label por CMV grave, congênito ou em contexto de transplante, utilizar protocolo pediátrico especializado de infectologia, transplante ou neonatologia, com individualização pela função renal e monitorização hematológica rigorosa devido a neutropenia, anemia e trombocitopenia. Não extrapolar automaticamente a dose adulta. Quando profilaxia oral pós-transplante for apropriada, valganciclovir possui esquemas pediátricos rotulados para indicações e faixas etárias específicas; não converter automaticamente entre ganciclovir IV e valganciclovir oral.",
-    "renalDose": "Ajuste obrigatório. CrCl 50–69: indução 2,5 mg/kg q12h; 25–49: 2,5 mg/kg q24h; 10–24: 1,25 mg/kg q24h; <10/HD: 1,25 mg/kg 3 vezes/semana após HD.",
-    "hepaticDose": "Sem ajuste hepático rotineiro específico; função renal é determinante principal da exposição.",
-    "commonAdverseEffects": [
-      "Neutropenia",
-      "Anemia",
-      "Trombocitopenia",
-      "Febre",
-      "Diarreia"
-    ],
-    "dangerousAdverseEffects": [
-      "Mielossupressão grave",
-      "Infertilidade potencial",
-      "Toxicidade fetal",
-      "Mutagenicidade/carcinogenicidade potencial",
-      "IRA"
-    ],
-    "adverseEffects": "Neutropenia, anemia, trombocitopenia e pancitopenia podem ser graves; risco aumenta com DRC e outros mielossupressores.",
-    "contraindications": "Hipersensibilidade importante ao ganciclovir, valganciclovir ou componentes.",
-    "interactions": "Outros mielossupressores/nefrótoxicos aumentam toxicidade; imipenem-cilastatina pode aumentar risco de convulsões; revisar didanosina e imunossupressores.",
-    "monitoring": "Hemograma com diferencial/plaquetas frequente e função renal antes/durante; ajustar dose com qualquer mudança de CrCl.",
-    "administration": "IV por infusão controlada; nunca bolus ou IM/SC devido à toxicidade e pH.",
-    "preparation": "Reconstituir/diluir conforme fabricante; manusear como fármaco potencialmente mutagênico/carcinogênico.",
-    "infusionProtocol": "Infundir cada dose IV em pelo menos 1 hora, com concentração e acesso adequados.",
-    "pregnancy": "Pode causar toxicidade fetal. Mulheres com potencial reprodutivo devem usar contracepção eficaz durante e por pelo menos 30 dias após; homens, método de barreira durante e por pelo menos 90 dias após.",
-    "lactation": "Devido a potencial toxicidade grave, amamentação geralmente não é recomendada durante terapia; seguir bula e contexto clínico.",
-    "specialPopulations": "Evitar se ANC <500 células/µL, Hb <8 g/dL ou plaquetas <25.000/µL conforme bula; DRC exige grande redução de dose.",
-    "patientEducation": "Relatar febre, sangramento, fadiga intensa, infecção, redução de urina; discutir contracepção e fertilidade.",
-    "clinicalPearls": "Ganciclovir é fármaco de janela estreita: CrCl e hemograma precisam andar junto com a dose. Mielotoxicidade e toxicidade reprodutiva são centrais.",
-    "guidelineRecommendations": "Em doença CMV grave, ganciclovir IV é opção principal; transição para valganciclovir pode ocorrer após melhora quando absorção oral é confiável e a espécie clínica permite.",
-    "safetyFlags": [
-      "Mielossupressão",
-      "Ajuste renal obrigatório",
-      "Contracepção",
-      "Mutagênico/carcinogênico potencial",
-      "Infusão >=1 h"
-    ],
-    "alerts": [
-      "CrCl >=70: 5 mg/kg q12h indução",
-      "HD: após sessão",
-      "ANC <500: evitar",
-      "Hb <8: evitar",
-      "Plaquetas <25.000: evitar"
-    ],
+    "pharmacologicClass": "Análogo nucleosídico inibidor da DNA-polimerase viral",
+    "mechanism": "Análogo nucleosídico inibidor da DNA-polimerase viral. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Ativação intracelular; eliminação renal predominante.",
+    "indications": "Tratamento de retinite por CMV e prevenção de doença CMV em transplantados de alto risco; protocolos variam.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frasco IV liofilizado 500 mg.",
+    "presentations": "Frasco IV liofilizado 500 mg.",
+    "dose": "Indução habitual: 5 mg/kg IV a cada 12 h por 14-21 dias; manutenção 5 mg/kg/dia. Ajustar rigorosamente por CrCl e indicação.",
+    "pediatricDose": "Dose por peso/SC e CrCl em centros especializados. AUTOMATABLE=NO.",
+    "renalDose": "Ajuste obrigatório por CrCl; hemodiálise exige regime próprio e dose pós-sessão.",
+    "hepaticDose": "Sem ajuste específico; monitorar hepatotoxicidade.",
+    "commonAdverseEffects": "Neutropenia, anemia, trombocitopenia, diarreia e febre.",
+    "dangerousAdverseEffects": "Mielossupressão grave, lesão renal, convulsão, teratogenicidade, carcinogenicidade e infertilidade.",
+    "adverseEffects": "Neutropenia, anemia, trombocitopenia, diarreia e febre. Graves: Mielossupressão grave, lesão renal, convulsão, teratogenicidade, carcinogenicidade e infertilidade.",
+    "contraindications": "Neutrófilos <500/µL, plaquetas <25.000/µL ou Hb <8 g/dL; hipersensibilidade.",
+    "interactions": "Outros mielossupressores/nefrotóxicos, imipenem-cilastatina, zidovudina e probenecida.",
+    "monitoring": "Hemograma, CrCl, carga viral/CMV, visão, fígado e neurotoxicidade.",
+    "administration": "IV somente; hidratação adequada e manipulação como potencial carcinógeno/teratógeno.",
+    "preparation": "Reconstituir conforme fabricante e diluir em solução compatível; não usar bacteriostático com parabenos.",
+    "infusionProtocol": "Infundir em ≥1 h; nunca bolus/IM/SC.",
+    "pregnancy": "Pode causar dano fetal; contracepção durante e após conforme rótulo.",
+    "lactation": "Não recomendado.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Mielossupressão grave, lesão renal, convulsão, teratogenicidade, carcinogenicidade e infertilidade. Cálculo bloqueado sem indicação, peso, CrCl/diálise, hemograma, carga viral, transplante/imunidade, concentração e acesso.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f8219ca-6780-4131-8962-9c3fdd0a84dd",
-      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/cytomegalovirus",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26361de8-39b5-4266-90f6-2b307940135d",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb100366-2a64-4742-af11-6177a8a494c8",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd293b9d-b573-4656-8574-19d7db870a9b"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ganciclovir",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/019661s038lbl.pdf"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f8219ca-6780-4131-8962-9c3fdd0a84dd",
-      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/cytomegalovirus",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26361de8-39b5-4266-90f6-2b307940135d",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb100366-2a64-4742-af11-6177a8a494c8",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd293b9d-b573-4656-8574-19d7db870a9b"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ganciclovir"
   },
   "es": {
     "name": "Ganciclovir",
     "class": "Antiviral anti-CMV",
-    "pharmacologicClass": "Análogo de guanosina; inhibidor de DNA-polimerasa viral",
-    "mechanism": "Fosforilado por quinasa viral UL97 en CMV y luego a trifosfato, inhibe DNA-polimerasa viral y síntesis de DNA.",
-    "pharmacodynamics": "Virustático frente a CMV; exposición adecuada reduce replicación, pero resistencia puede surgir por UL97/UL54.",
-    "pharmacokinetics": "IV, amplia distribución y eliminación predominantemente renal sin cambios; hemodiálisis reduce niveles ~50%.",
-    "indications": "Tratamiento de retinitis CMV en inmunocomprometidos y prevención de enfermedad CMV en trasplantes de alto riesgo según ficha/protocolo.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Polvo IV o solución IV preparada según producto.",
-    "presentations": [
-      "500 mg vial",
-      "2 mg/mL bolsa en algunos productos"
-    ],
-    "dose": "Adulto con ClCr >=70: inducción 5 mg/kg IV q12h por 14–21 días; mantenimiento 5 mg/kg IV q24h o 6 mg/kg/día 5 días/semana según indicación.",
-    "pediatricDose": "No existe una dosis pediátrica autorizada ni establecida para ganciclovir IV. La seguridad y la eficacia en pacientes pediátricos no han sido establecidas por el prospecto. Los estudios farmacocinéticos incluyeron neonatos y niños, pero las exposiciones estudiadas no constituyen un esquema de dosis recomendado. Si se considera un uso excepcional/off-label por CMV grave, congénito o en contexto de trasplante, utilizar un protocolo pediátrico especializado de infectología, trasplante o neonatología, con individualización según la función renal y monitorización hematológica rigurosa por riesgo de neutropenia, anemia y trombocitopenia. No extrapolar automáticamente la dosis del adulto. Cuando la profilaxis oral postrasplante sea apropiada, valganciclovir dispone de esquemas pediátricos autorizados para indicaciones y grupos etarios específicos; no convertir automáticamente entre ganciclovir IV y valganciclovir oral.",
-    "renalDose": "Ajuste obligatorio. ClCr 50–69: inducción 2,5 mg/kg q12h; 25–49: 2,5 mg/kg q24h; 10–24: 1,25 mg/kg q24h; <10/HD: 1,25 mg/kg 3 veces/semana tras HD.",
-    "hepaticDose": "Sin ajuste hepático rutinario específico; función renal determina exposición.",
-    "commonAdverseEffects": [
-      "Neutropenia",
-      "Anemia",
-      "Trombocitopenia",
-      "Fiebre",
-      "Diarrea"
-    ],
-    "dangerousAdverseEffects": [
-      "Mielosupresión grave",
-      "Infertilidad potencial",
-      "Toxicidad fetal",
-      "Mutagenicidad/carcinogenicidad potencial",
-      "IRA"
-    ],
-    "adverseEffects": "Neutropenia, anemia, trombocitopenia y pancitopenia pueden ser graves; riesgo aumenta con ERC y otros mielosupresores.",
-    "contraindications": "Hipersensibilidad importante a ganciclovir, valganciclovir o componentes.",
-    "interactions": "Otros mielosupresores/nefrotóxicos aumentan toxicidad; imipenem-cilastatina puede aumentar convulsiones; revisar didanosina e inmunosupresores.",
-    "monitoring": "Hemograma con diferencial/plaquetas frecuente y función renal antes/durante; ajustar ante cambios de ClCr.",
-    "administration": "IV por infusión controlada; nunca bolo ni IM/SC.",
-    "preparation": "Reconstituir/diluir según fabricante; manipular como fármaco potencialmente mutagénico/carcinogénico.",
-    "infusionProtocol": "Infundir cada dosis IV en al menos 1 hora.",
-    "pregnancy": "Puede causar toxicidad fetal. Mujeres con potencial reproductivo: anticoncepción eficaz durante y al menos 30 días después; hombres: barrera durante y al menos 90 días después.",
-    "lactation": "Por toxicidad potencial grave, generalmente no se recomienda lactancia durante terapia; seguir ficha/contexto.",
-    "specialPopulations": "Evitar si ANC <500 células/µL, Hb <8 g/dL o plaquetas <25.000/µL según ficha; ERC exige gran reducción.",
-    "patientEducation": "Informar fiebre, sangrado, fatiga intensa, infección, menor diuresis; discutir anticoncepción y fertilidad.",
-    "clinicalPearls": "Ganciclovir tiene ventana estrecha: ClCr y hemograma deben guiar la dosis. Mielotoxicidad y toxicidad reproductiva son centrales.",
-    "guidelineRecommendations": "En CMV grave, ganciclovir IV es opción principal; transición a valganciclovir puede hacerse tras mejoría si absorción oral es fiable.",
-    "safetyFlags": [
-      "Mielosupresión",
-      "Ajuste renal obligatorio",
-      "Anticoncepción",
-      "Mutagénico/carcinogénico potencial",
-      "Infusión >=1 h"
-    ],
-    "alerts": [
-      "ClCr >=70: 5 mg/kg q12h inducción",
-      "HD: tras sesión",
-      "ANC <500: evitar",
-      "Hb <8: evitar",
-      "Plaquetas <25.000: evitar"
-    ],
+    "pharmacologicClass": "Análogo nucleósido inhibidor de ADN-polimerasa viral",
+    "mechanism": "Análogo nucleósido inhibidor de ADN-polimerasa viral. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Activación intracelular; eliminación renal predominante.",
+    "indications": "Tratamiento de retinitis por CMV y prevención de enfermedad CMV en trasplantados de alto riesgo; protocolos varían.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Vial IV liofilizado 500 mg.",
+    "presentations": "Vial IV liofilizado 500 mg.",
+    "dose": "Inducción habitual: 5 mg/kg IV cada 12 h por 14-21 días; mantenimiento 5 mg/kg/día. Ajustar rigurosamente por CrCl e indicación.",
+    "pediatricDose": "Dosis por peso/SC y CrCl en centros especializados. AUTOMATABLE=NO.",
+    "renalDose": "Ajuste obligatorio por CrCl; hemodiálisis requiere pauta propia y dosis postsesión.",
+    "hepaticDose": "Sin ajuste específico; vigilar hepatotoxicidad.",
+    "commonAdverseEffects": "Neutropenia, anemia, trombocitopenia, diarrea y fiebre.",
+    "dangerousAdverseEffects": "Mielosupresión grave, lesión renal, convulsión, teratogenicidad, carcinogenicidad e infertilidad.",
+    "adverseEffects": "Neutropenia, anemia, trombocitopenia, diarrea y fiebre. Graves: Mielosupresión grave, lesión renal, convulsión, teratogenicidad, carcinogenicidad e infertilidad.",
+    "contraindications": "Neutrófilos <500/µL, plaquetas <25.000/µL o Hb <8 g/dL; hipersensibilidad.",
+    "interactions": "Otros mielosupresores/nefrotóxicos, imipenem-cilastatina, zidovudina y probenecid.",
+    "monitoring": "Hemograma, CrCl, carga viral/CMV, visión, hígado y neurotoxicidad.",
+    "administration": "Solo IV; hidratación adecuada y manipulación como potencial carcinógeno/teratógeno.",
+    "preparation": "Reconstituir según fabricante y diluir en solución compatible; no usar bacteriostático con parabenos.",
+    "infusionProtocol": "Infundir en ≥1 h; nunca bolo/IM/SC.",
+    "pregnancy": "Puede causar daño fetal; anticoncepción durante y después según ficha.",
+    "lactation": "No recomendado.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Mielosupresión grave, lesión renal, convulsión, teratogenicidad, carcinogenicidad e infertilidad. Cálculo bloqueado sem indicação, peso, CrCl/diálise, hemograma, carga viral, transplante/imunidade, concentração e acesso.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f8219ca-6780-4131-8962-9c3fdd0a84dd",
-      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/cytomegalovirus",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26361de8-39b5-4266-90f6-2b307940135d",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb100366-2a64-4742-af11-6177a8a494c8",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd293b9d-b573-4656-8574-19d7db870a9b"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ganciclovir",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/019661s038lbl.pdf"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f8219ca-6780-4131-8962-9c3fdd0a84dd",
-      "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/cytomegalovirus",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26361de8-39b5-4266-90f6-2b307940135d",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb100366-2a64-4742-af11-6177a8a494c8",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd293b9d-b573-4656-8574-19d7db870a9b"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ganciclovir"
   },
   "name": {
     "pt": "Ganciclovir",
@@ -163,9 +87,21 @@
   "keywords": [
     "ganciclovir"
   ],
-  "dataVersion": "clinical-data-v1-e007aa49293251a5",
-  "clinicalContentSha256": "e007aa49293251a51680c142a134b3eff329d6e9a1d39a4fbb76b7322a0b7534",
+  "dataVersion": "clinical-data-v1-a12ed02d7156d8ed",
+  "clinicalContentSha256": "a12ed02d7156d8ed773be848425e9f4b8cfeb19c1b3a77d5cb03d938004e69c1",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "infectologia.js"
+  "sourceModule": "infectologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "ganciclovir.mcGoldClinicalV1",
+    "lote": "038",
+    "requiredFields": 33,
+    "approvedSha256": "ad9a95080c0e044c8ec533188195d104f46324587195ff6f80e28911f7c2dc5f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

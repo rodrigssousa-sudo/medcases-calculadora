@@ -1313,3 +1313,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:dulaglutida:END */
+/* GOLD33_SELECTIVE:gliclazida:START */
+;(function(){var db=window.ENDOCRINO_DRUGS_DB;if(!db||!db["gliclazida"])throw new Error("GOLD33_MISSING_CANONICAL:gliclazida");db["gliclazida"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "038",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ad9a95080c0e044c8ec533188195d104f46324587195ff6f80e28911f7c2dc5f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Gliclazida",
+    "class": "Sulfonilureia",
+    "pharmacologicClass": "Estimula secreção pancreática de insulina",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Liberação imediata 80 mg e modificada 30/60 mg, conforme país; não intercambiáveis mg a mg sem bula.",
+    "presentations": "Liberação imediata 80 mg e modificada 30/60 mg, conforme país; não intercambiáveis mg a mg sem bula.",
+    "mechanism": "Estimula secreção pancreática de insulina. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático, principalmente CYP2C9; eliminação urinária de metabólitos.",
+    "indications": "Diabetes tipo 2 quando dieta/exercício não bastam; não aprovada nos EUA, seguir registro regional.",
+    "dose": "MR: iniciar 30 mg 1x/dia no desjejum, titular; máximo 120 mg/dia. IR: regimes regionais geralmente 40-320 mg/dia divididos.",
+    "pediatricDose": "Não recomendada em pediatria. AUTOMATABLE=NO.",
+    "renalDose": "Cautela/redução em doença renal; evitar hipoglicemia e considerar alternativas na doença grave.",
+    "hepaticDose": "Evitar em insuficiência hepática grave.",
+    "commonAdverseEffects": "Hipoglicemia, ganho de peso, náusea e rash.",
+    "dangerousAdverseEffects": "Hipoglicemia grave/prolongada, discrasias, hepatotoxicidade e SCAR.",
+    "adverseEffects": "Hipoglicemia, ganho de peso, náusea e rash. Graves: Hipoglicemia grave/prolongada, discrasias, hepatotoxicidade e SCAR.",
+    "contraindications": "DM1, cetoacidose, insuficiência renal/hepática grave, miconazol sistêmico e hipersensibilidade a sulfonilureias.",
+    "interactions": "Miconazol, álcool, insulina/outros antidiabéticos, beta-bloqueadores, fluconazol e corticosteroides.",
+    "monitoring": "Glicemia/HbA1c, hipoglicemia, rim/fígado, peso e alimentação.",
+    "administration": "MR com desjejum, engolir inteira; não pular refeição.",
+    "preparation": "Não esmagar MR; confirmar formulação.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Preferir insulina quando tratamento necessário na gestação.",
+    "lactation": "Evitar por risco de hipoglicemia neonatal.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipoglicemia grave/prolongada, discrasias, hepatotoxicidade e SCAR. Seleção/titulação bloqueadas sem país/produto, formulação IR/MR, HbA1c, função renal/hepática, padrão alimentar e risco de hipoglicemia/interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=gliclazide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/documents/referral/diamicron-30-article-30-referral-annex-iii_en.pdf"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=gliclazide"
+  },
+  "es": {
+    "name": "Gliclazida",
+    "class": "Sulfonilurea",
+    "pharmacologicClass": "Estimula secreción pancreática de insulina",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Liberación inmediata 80 mg y modificada 30/60 mg, según país; no intercambiables mg a mg sin ficha.",
+    "presentations": "Liberación inmediata 80 mg y modificada 30/60 mg, según país; no intercambiables mg a mg sin ficha.",
+    "mechanism": "Estimula secreción pancreática de insulina. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático, principalmente CYP2C9; eliminación urinaria de metabolitos.",
+    "indications": "Diabetes tipo 2 cuando dieta/ejercicio no bastan; no aprobada en EE. UU., seguir registro regional.",
+    "dose": "MR: iniciar 30 mg 1 vez/día en desayuno, titular; máximo 120 mg/día. IR: pautas regionales generalmente 40-320 mg/día divididas.",
+    "pediatricDose": "No recomendada en pediatría. AUTOMATABLE=NO.",
+    "renalDose": "Precaución/reducción en enfermedad renal; evitar hipoglucemia y considerar alternativas en enfermedad grave.",
+    "hepaticDose": "Evitar en insuficiencia hepática grave.",
+    "commonAdverseEffects": "Hipoglucemia, aumento de peso, náusea y erupción.",
+    "dangerousAdverseEffects": "Hipoglucemia grave/prolongada, discrasias, hepatotoxicidad y SCAR.",
+    "adverseEffects": "Hipoglucemia, aumento de peso, náusea y erupción. Graves: Hipoglucemia grave/prolongada, discrasias, hepatotoxicidad y SCAR.",
+    "contraindications": "DM1, cetoacidosis, insuficiencia renal/hepática grave, miconazol sistémico e hipersensibilidad a sulfonilureas.",
+    "interactions": "Miconazol, alcohol, insulina/otros antidiabéticos, betabloqueantes, fluconazol y corticoides.",
+    "monitoring": "Glucemia/HbA1c, hipoglucemia, riñón/hígado, peso y alimentación.",
+    "administration": "MR con desayuno, tragar entera; no omitir comida.",
+    "preparation": "No triturar MR; confirmar formulación.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Preferir insulina cuando se requiere tratamiento en embarazo.",
+    "lactation": "Evitar por riesgo de hipoglucemia neonatal.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hipoglucemia grave/prolongada, discrasias, hepatotoxicidad y SCAR. Seleção/titulação bloqueadas sem país/produto, formulação IR/MR, HbA1c, função renal/hepática, padrão alimentar e risco de hipoglicemia/interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=gliclazide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/documents/referral/diamicron-30-article-30-referral-annex-iii_en.pdf"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=gliclazide"
+  }
+};})();
+/* GOLD33_SELECTIVE:gliclazida:END */

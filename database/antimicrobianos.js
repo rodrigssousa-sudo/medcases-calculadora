@@ -28841,3 +28841,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:fosfomicina:END */
+/* GOLD33_SELECTIVE:gentamicina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["gentamicina"])throw new Error("GOLD33_MISSING_CANONICAL:gentamicina");db["gentamicina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "038",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ad9a95080c0e044c8ec533188195d104f46324587195ff6f80e28911f7c2dc5f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Gentamicina",
+    "class": "Aminoglicosídeo",
+    "pharmacologicClass": "Inibe síntese proteica bacteriana 30S",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Injeção em várias concentrações, frequentemente 10 ou 40 mg/mL.",
+    "presentations": "Injeção em várias concentrações, frequentemente 10 ou 40 mg/mL.",
+    "mechanism": "Inibe síntese proteica bacteriana 30S. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Distribuição extracelular e eliminação renal inalterada.",
+    "indications": "Infecções graves por bacilos Gram-negativos suscetíveis e sinergia selecionada; sempre guiada por foco/cultura/protocolo.",
+    "dose": "Regime tradicional 1-1,7 mg/kg IV/IM a cada 8 h; dose estendida frequentemente 5-7 mg/kg conforme protocolo. Não intercambiar estratégias.",
+    "pediatricDose": "Dose por idade gestacional/pós-natal, peso e níveis; neonatos exigem intervalos próprios. AUTOMATABLE=NO.",
+    "renalDose": "Ajuste obrigatório por CrCl e níveis; diálise exige regime específico.",
+    "hepaticDose": "Sem ajuste específico; cautela por toxicidade sistêmica.",
+    "commonAdverseEffects": "Náusea, elevação de creatinina e reação local.",
+    "dangerousAdverseEffects": "Nefrotoxicidade, ototoxicidade irreversível, bloqueio neuromuscular e toxicidade fetal.",
+    "adverseEffects": "Náusea, elevação de creatinina e reação local. Graves: Nefrotoxicidade, ototoxicidade irreversível, bloqueio neuromuscular e toxicidade fetal.",
+    "contraindications": "Hipersensibilidade a aminoglicosídeos.",
+    "interactions": "Outros nefro/ototóxicos, bloqueadores neuromusculares, diuréticos de alça e vancomicina.",
+    "monitoring": "Culturas, níveis pico/vale ou nomograma, creatinina/diurese, audição/vestibular e bloqueio neuromuscular.",
+    "administration": "IV ou IM; colher culturas e usar peso apropriado para cálculo.",
+    "preparation": "Diluir conforme produto/protocolo; checar concentração.",
+    "infusionProtocol": "Infusão IV usual 30-120 min conforme estratégia; monitorar níveis.",
+    "pregnancy": "Pode causar dano fetal; usar apenas quando necessário.",
+    "lactation": "Baixa passagem; monitorar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Nefrotoxicidade, ototoxicidade irreversível, bloqueio neuromuscular e toxicidade fetal. Cálculo bloqueado sem foco/cultura, idade/peso e tipo de peso, CrCl/diálise, estratégia, níveis, concentração e nefro/ototóxicos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=gentamicin+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/062366s034lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=gentamicin+injection"
+  },
+  "es": {
+    "name": "Gentamicina",
+    "class": "Aminoglucósido",
+    "pharmacologicClass": "Inhibe síntesis proteica bacteriana 30S",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Inyección en varias concentraciones, frecuentemente 10 o 40 mg/mL.",
+    "presentations": "Inyección en varias concentraciones, frecuentemente 10 o 40 mg/mL.",
+    "mechanism": "Inhibe síntesis proteica bacteriana 30S. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Distribución extracelular y eliminación renal sin cambios.",
+    "indications": "Infecciones graves por bacilos Gram negativos sensibles y sinergia seleccionada; guiada por foco/cultivo/protocolo.",
+    "dose": "Régimen tradicional 1-1,7 mg/kg IV/IM cada 8 h; dosis extendida frecuentemente 5-7 mg/kg según protocolo. No intercambiar estrategias.",
+    "pediatricDose": "Dosis por edad gestacional/posnatal, peso y niveles; neonatos requieren intervalos propios. AUTOMATABLE=NO.",
+    "renalDose": "Ajuste obligatorio por CrCl y niveles; diálisis requiere pauta específica.",
+    "hepaticDose": "Sin ajuste específico; precaución por toxicidad sistémica.",
+    "commonAdverseEffects": "Náusea, aumento de creatinina y reacción local.",
+    "dangerousAdverseEffects": "Nefrotoxicidad, ototoxicidad irreversible, bloqueo neuromuscular y toxicidad fetal.",
+    "adverseEffects": "Náusea, aumento de creatinina y reacción local. Graves: Nefrotoxicidad, ototoxicidad irreversible, bloqueo neuromuscular y toxicidad fetal.",
+    "contraindications": "Hipersensibilidad a aminoglucósidos.",
+    "interactions": "Otros nefro/ototóxicos, bloqueantes neuromusculares, diuréticos de asa y vancomicina.",
+    "monitoring": "Cultivos, niveles pico/valle o nomograma, creatinina/diuresis, audición/vestibular y bloqueo neuromuscular.",
+    "administration": "IV o IM; obtener cultivos y usar peso apropiado para cálculo.",
+    "preparation": "Diluir según producto/protocolo; verificar concentración.",
+    "infusionProtocol": "Infusión IV habitual 30-120 min según estrategia; vigilar niveles.",
+    "pregnancy": "Puede causar daño fetal; usar solo cuando sea necesario.",
+    "lactation": "Bajo paso; vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Nefrotoxicidad, ototoxicidad irreversible, bloqueo neuromuscular y toxicidad fetal. Cálculo bloqueado sem foco/cultura, idade/peso e tipo de peso, CrCl/diálise, estratégia, níveis, concentração e nefro/ototóxicos.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=gentamicin+injection",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/062366s034lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=gentamicin+injection"
+  }
+};})();
+/* GOLD33_SELECTIVE:gentamicina:END */
