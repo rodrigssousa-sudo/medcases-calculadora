@@ -28661,3 +28661,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:fidaxomicina:END */
+/* GOLD33_SELECTIVE:flucloxacilina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["flucloxacilina"])throw new Error("GOLD33_MISSING_CANONICAL:flucloxacilina");db["flucloxacilina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "035",
+    "requiredFieldCount": 33,
+    "approvedSha256": "fd6321700fc0486f65ffd87ea383edb96dd6acd7fbededd8d8d99bf146822690",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Flucloxacilina",
+    "class": "Penicilina antiestafilocócica",
+    "pharmacologicClass": "Inibidor da síntese de parede resistente a penicilinase",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 250/500 mg, suspensão e injeção em apresentações regionais.",
+    "presentations": "Cápsulas 250/500 mg, suspensão e injeção em apresentações regionais.",
+    "mechanism": "Inibidor da síntese de parede resistente a penicilinase. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Eliminação renal e biliar; alta ligação proteica.",
+    "indications": "Infecções por estafilococos sensíveis, sobretudo pele/tecidos e osteoarticulares, conforme registro regional; não aprovada nos EUA.",
+    "dose": "Adultos: frequentemente 250–500 mg VO 4x/dia; infecções graves usam doses maiores/IV conforme bula e protocolo local.",
+    "pediatricDose": "Dose por peso, idade, foco e gravidade; AUTOMATABLE=NO.",
+    "renalDose": "Reduzir/alongar intervalo em insuficiência renal grave; doses altas exigem cautela.",
+    "hepaticDose": "Evitar em história de hepatite/icterícia por flucloxacilina; monitorar cursos prolongados.",
+    "commonAdverseEffects": "Náusea, diarreia, rash e dor abdominal.",
+    "dangerousAdverseEffects": "Anafilaxia, hepatite/colestase tardia, SCAR, neutropenia e acidose metabólica de alto ânion gap.",
+    "adverseEffects": "Náusea, diarreia, rash e dor abdominal. Graves: Anafilaxia, hepatite/colestase tardia, SCAR, neutropenia e acidose metabólica de alto ânion gap.",
+    "contraindications": "Hipersensibilidade a beta-lactâmicos e história de disfunção hepática associada.",
+    "interactions": "Probenecida, varfarina, metotrexato e risco de acidose com paracetamol em grupos suscetíveis.",
+    "monitoring": "Resposta/culturas, alergia, fígado, rim, hemograma e C. difficile.",
+    "administration": "VO em jejum, 30–60 min antes da refeição; completar curso indicado.",
+    "preparation": "Suspensão/reconstituição e injetável conforme produto regional.",
+    "infusionProtocol": "IV lenta/infusão conforme bula; verificar sódio e estabilidade.",
+    "pregnancy": "Uso aceitável quando indicado; vigiar fígado.",
+    "lactation": "Baixa passagem; observar sensibilização/diarreia.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, hepatite/colestase tardia, SCAR, neutropenia e acidose metabólica de alto ânion gap. Dose bloqueada sem país/produto, foco/cultura, idade/peso, via, rim/fígado e histórico de icterícia; divergência regulatória regional explícita.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=flucloxacillin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.tga.gov.au/resources/artg"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=flucloxacillin"
+  },
+  "es": {
+    "name": "Flucloxacilina",
+    "class": "Penicilina antiestafilocócica",
+    "pharmacologicClass": "Inhibidor de pared resistente a penicilinasa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 250/500 mg, suspensión e inyección en presentaciones regionales.",
+    "presentations": "Cápsulas 250/500 mg, suspensión e inyección en presentaciones regionales.",
+    "mechanism": "Inhibidor de pared resistente a penicilinasa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Eliminación renal y biliar; alta unión proteica.",
+    "indications": "Infecciones por estafilococos sensibles, sobre todo piel/tejidos y osteoarticulares, según registro regional; no aprobada en EE. UU.",
+    "dose": "Adultos: frecuentemente 250–500 mg VO 4 veces/día; infecciones graves usan dosis mayores/IV según ficha y protocolo local.",
+    "pediatricDose": "Dosis por peso, edad, foco y gravedad; AUTOMATABLE=NO.",
+    "renalDose": "Reducir/alargar intervalo en insuficiencia renal grave; dosis altas exigen precaución.",
+    "hepaticDose": "Evitar con antecedente de hepatitis/ictericia por flucloxacilina; controlar cursos prolongados.",
+    "commonAdverseEffects": "Náusea, diarrea, erupción y dolor abdominal.",
+    "dangerousAdverseEffects": "Anafilaxia, hepatitis/colestasis tardía, SCAR, neutropenia y acidosis metabólica con anión gap alto.",
+    "adverseEffects": "Náusea, diarrea, erupción y dolor abdominal. Graves: Anafilaxia, hepatitis/colestasis tardía, SCAR, neutropenia y acidosis metabólica con anión gap alto.",
+    "contraindications": "Hipersensibilidad a betalactámicos y antecedente de disfunción hepática asociada.",
+    "interactions": "Probenecid, warfarina, metotrexato y riesgo de acidosis con paracetamol en susceptibles.",
+    "monitoring": "Respuesta/cultivos, alergia, hígado, riñón, hemograma y C. difficile.",
+    "administration": "VO en ayunas, 30–60 min antes de comida; completar curso indicado.",
+    "preparation": "Suspensión/reconstitución e inyectable según producto regional.",
+    "infusionProtocol": "IV lenta/infusión según ficha; verificar sodio y estabilidad.",
+    "pregnancy": "Uso aceptable cuando esté indicado; vigilar hígado.",
+    "lactation": "Bajo paso; vigilar sensibilización/diarrea.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, hepatitis/colestasis tardía, SCAR, neutropenia y acidosis metabólica con anión gap alto. Dose bloqueada sem país/produto, foco/cultura, idade/peso, via, rim/fígado e histórico de icterícia; divergência regulatória regional explícita.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.medicines.org.uk/emc/search?q=flucloxacillin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.tga.gov.au/resources/artg"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=flucloxacillin"
+  }
+};})();
+/* GOLD33_SELECTIVE:flucloxacilina:END */

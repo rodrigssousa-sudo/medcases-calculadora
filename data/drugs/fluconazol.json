@@ -6,135 +6,79 @@
   "colorTxt": null,
   "pt": {
     "name": "Fluconazol",
-    "class": "Antifúngico azólico",
-    "pharmacologicClass": "Triazol com boa biodisponibilidade e penetração em LCR/urina",
-    "mechanism": "Inibe a 14-alfa-desmetilase fúngica dependente de CYP51, reduzindo ergosterol e desorganizando a membrana.",
-    "pharmacodynamics": "Atividade depende de exposição; AUC/MIC é índice PK/PD relevante para vários fungos e azóis.",
-    "pharmacokinetics": "Biodisponibilidade oral alta, baixa ligação proteica, excelente penetração urinária/LCR e eliminação principalmente renal inalterada.",
-    "indications": "Candidíase mucosa/invasiva por espécies suscetíveis, criptococose e outras micoses selecionadas. Não cobre adequadamente Aspergillus.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Formulações oral e/ou IV conforme agente.",
-    "presentations": [
-      "Comprimidos/cápsulas conforme agente",
-      "IV conforme agente"
-    ],
-    "dose": "Candidemia em adulto estável por isolado suscetível: 800 mg (12 mg/kg) de carga, depois 400 mg (6 mg/kg) uma vez ao dia; outras indicações usam esquemas próprios.",
-    "pediatricDose": "Candidíase invasiva/criptococose pediátrica usa esquemas por peso e indicação; por exemplo criptococose: 12 mg/kg no dia 1, depois 6 mg/kg/dia conforme bula.",
-    "renalDose": "Múltiplas doses: dar carga usual; CrCl >50 = 100%; <=50 sem diálise = 50% da dose de manutenção; hemodiálise = 100% após cada sessão e dose reduzida em dias sem HD.",
-    "hepaticDose": "Sem ajuste numérico padronizado, mas usar cautela e monitorar fígado; suspender se hepatotoxicidade clinicamente significativa.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Cefaleia",
-      "Elevação de transaminases"
-    ],
-    "dangerousAdverseEffects": [
-      "Hepatotoxicidade grave",
-      "Interações medicamentosas graves",
-      "Arritmia relacionada a QT conforme agente"
-    ],
-    "adverseEffects": "Azóis podem causar hepatotoxicidade e interações CYP; o perfil de QT e toxicidades específicas varia entre agentes.",
-    "contraindications": "Hipersensibilidade e combinações formalmente contraindicadas por interações/QT conforme bula.",
-    "interactions": "Inibe CYP2C9/CYP2C19 e moderadamente CYP3A4; revisar warfarina, fenitoína, sulfonilureias, tacrolimo, fármacos de QT e muitas outras combinações.",
-    "monitoring": "Função renal para dose, AST/ALT, eletrólitos/ECG se risco de QT e interações com níveis/INR quando aplicável.",
-    "administration": "VO/IV conforme formulação; revisar alimentação, pH gástrico e interações específicas antes da administração.",
-    "preparation": "VO não requer preparo; IV conforme bolsa/concentração do fabricante.",
-    "infusionProtocol": "IV em velocidade conforme fabricante; transição para VO quando clinicamente apropriada.",
-    "pregnancy": "Azóis sistêmicos exigem avaliação individual de risco reprodutivo; evitar exposição desnecessária e seguir bula específica.",
-    "lactation": "Avaliar agente, dose e duração; consultar bula específica e risco do lactente.",
-    "specialPopulations": "Insuficiência renal requer ajuste de manutenção. Resistência de Candida krusei e susceptibilidade reduzida de C. glabrata exigem identificação/AST.",
-    "patientEducation": "Informar icterícia, urina escura, palpitações, síncope, rash grave ou alterações visuais/neurológicas específicas.",
-    "clinicalPearls": "A função renal muda a manutenção, não a dose de ataque. A alta biodisponibilidade permite transição IV-VO quase 1:1 quando absorção é confiável.",
-    "guidelineRecommendations": "IDSA usa fluconazol para Candida suscetível em pacientes selecionados e como step-down após estabilidade/clearance de hemoculturas; equinocandina é preferida em muitos pacientes críticos.",
-    "safetyFlags": [
-      "Hepatotoxicidade",
-      "Interações CYP",
-      "Revisar QT e formulação"
-    ],
-    "alerts": [
-      "CrCl <=50: 50% manutenção",
-      "HD: 100% pós-sessão",
-      "QT prolongado/torsades",
-      "CYP2C9/2C19 e CYP3A4",
-      "Hepatotoxicidade"
-    ],
+    "class": "Antifúngico triazólico",
+    "pharmacologicClass": "Inibidor da 14-alfa-desmetilase fúngica",
+    "mechanism": "Inibidor da 14-alfa-desmetilase fúngica. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Alta biodisponibilidade, baixa ligação, eliminação renal e meia-vida ~30 h.",
+    "indications": "Candidíase e criptococose; indicação, carga, duração e susceptibilidade determinam o regime.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 50/100/150/200 mg, suspensão 10/40 mg/mL e injeção 2 mg/mL.",
+    "presentations": "Comprimidos 50/100/150/200 mg, suspensão 10/40 mg/mL e injeção 2 mg/mL.",
+    "dose": "Varia por foco: candidemia frequentemente carga 800 mg e 400 mg/dia; candidíase vaginal não complicada 150 mg dose única; confirmar diretriz e espécie.",
+    "pediatricDose": "Dose por peso/foco, frequentemente carga 12 mg/kg e manutenção 6–12 mg/kg/dia, com máximos adultos. AUTOMATABLE=NO.",
+    "renalDose": "Após carga, reduzir 50% se CrCl ≤50; diálise exige dose pós-sessão.",
+    "hepaticDose": "Sem ajuste tabelado; cautela e monitorização por hepatotoxicidade.",
+    "commonAdverseEffects": "Náusea, dor abdominal, diarreia, cefaleia e rash.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, QT/torsades, SCAR, anafilaxia e toxicidade fetal em exposição alta/prolongada.",
+    "adverseEffects": "Náusea, dor abdominal, diarreia, cefaleia e rash. Graves: Hepatotoxicidade, QT/torsades, SCAR, anafilaxia e toxicidade fetal em exposição alta/prolongada.",
+    "contraindications": "Hipersensibilidade a azóis; combinações específicas que prolongam QT são contraindicadas.",
+    "interactions": "CYP2C9/2C19/3A4: varfarina, fenitoína, sulfonilureias, tacrolimo, rifampicina e muitos fármacos QT.",
+    "monitoring": "Resposta/culturas, fígado, rim, K/Mg, ECG se risco e interações.",
+    "administration": "VO ou IV; biodisponibilidade alta permite conversão 1:1 em mg.",
+    "preparation": "Reconstituir suspensão conforme produto; agitar.",
+    "infusionProtocol": "IV em taxa máxima usual 200 mg/h, conforme produto.",
+    "pregnancy": "Evitar altas doses/prolongado; dose única vaginal tem avaliação de risco distinta.",
+    "lactation": "Presente no leite; geralmente compatível em doses usuais, individualizar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hepatotoxicidade, QT/torsades, SCAR, anafilaxia e toxicidade fetal em exposição alta/prolongada. Regime bloqueado sem foco/espécie/susceptibilidade, idade/peso, CrCl/diálise, fígado, QT/eletrólitos, gestação e interações.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485f0414-036f-4f42-87ee-a89543ac94c1",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluconazole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/019949s070lbl.pdf"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485f0414-036f-4f42-87ee-a89543ac94c1",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://www.idsociety.org/practice-guideline/aspergillosis/"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluconazole"
   },
   "es": {
     "name": "Fluconazol",
-    "class": "Antifúngico azólico",
-    "pharmacologicClass": "Triazol con alta biodisponibilidad y penetración en LCR/orina",
-    "mechanism": "Inhibe la 14-alfa-desmetilasa fúngica dependiente de CYP51, reduce ergosterol y altera la membrana.",
-    "pharmacodynamics": "Actividad dependiente de exposición; AUC/MIC es un índice PK/PD relevante para varios hongos y azoles.",
-    "pharmacokinetics": "Alta biodisponibilidad oral, baja unión proteica, excelente penetración urinaria/LCR y eliminación principalmente renal sin cambios.",
-    "indications": "Candidiasis mucosa/invasiva por especies susceptibles, criptococosis y otras micosis seleccionadas. No cubre adecuadamente Aspergillus.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Formulaciones oral y/o IV según agente.",
-    "presentations": [
-      "Comprimidos/cápsulas según agente",
-      "IV según agente"
-    ],
-    "dose": "Candidemia en adulto estable por aislado susceptible: carga 800 mg (12 mg/kg), luego 400 mg (6 mg/kg) una vez al día; otras indicaciones tienen esquemas propios.",
-    "pediatricDose": "Candidiasis invasiva/criptococosis pediátrica usa esquemas por peso e indicación; por ejemplo criptococosis: 12 mg/kg día 1, luego 6 mg/kg/día según ficha.",
-    "renalDose": "Múltiples dosis: carga usual; ClCr >50 = 100%; <=50 sin diálisis = 50% de mantenimiento; hemodiálisis = 100% tras cada sesión y dosis reducida días sin HD.",
-    "hepaticDose": "Sin ajuste numérico estándar, pero precaución y monitorización hepática; suspender si hepatotoxicidad clínicamente significativa.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Cefalea",
-      "Elevación de transaminasas"
-    ],
-    "dangerousAdverseEffects": [
-      "Hepatotoxicidad grave",
-      "Interacciones medicamentosas graves",
-      "Arritmia relacionada con QT según agente"
-    ],
-    "adverseEffects": "Los azoles pueden causar hepatotoxicidad e interacciones CYP; el perfil de QT y toxicidades específicas varía entre agentes.",
-    "contraindications": "Hipersensibilidad y combinaciones formalmente contraindicadas por interacciones/QT según ficha.",
-    "interactions": "Inhibe CYP2C9/CYP2C19 y moderadamente CYP3A4; revisar warfarina, fenitoína, sulfonilureas, tacrolimus, fármacos QT y muchas combinaciones.",
-    "monitoring": "Función renal para dosis, AST/ALT, electrolitos/ECG si riesgo QT e interacciones con niveles/INR.",
-    "administration": "VO/IV según formulación; revisar alimentos, pH gástrico e interacciones específicas.",
-    "preparation": "VO no requiere preparación; IV según bolsa/concentración del fabricante.",
-    "infusionProtocol": "IV a velocidad según fabricante; transición a VO cuando sea apropiada.",
-    "pregnancy": "Los azoles sistémicos requieren valoración individual del riesgo reproductivo; evitar exposición innecesaria y seguir ficha.",
-    "lactation": "Valorar agente, dosis y duración; consultar ficha específica y riesgo del lactante.",
-    "specialPopulations": "Insuficiencia renal requiere ajuste de mantenimiento. C. krusei y C. glabrata requieren identificación/AST por resistencia o susceptibilidad reducida.",
-    "patientEducation": "Informar ictericia, orina oscura, palpitaciones, síncope, rash grave o alteraciones visuales/neurológicas específicas.",
-    "clinicalPearls": "La función renal cambia mantenimiento, no carga. Alta biodisponibilidad facilita transición IV-VO casi 1:1 cuando absorción es fiable.",
-    "guidelineRecommendations": "IDSA usa fluconazol para Candida susceptible en pacientes seleccionados y como step-down tras estabilidad/clearance; equinocandina es preferida en muchos críticos.",
-    "safetyFlags": [
-      "Hepatotoxicidad",
-      "Interacciones CYP",
-      "Revisar QT y formulación"
-    ],
-    "alerts": [
-      "ClCr <=50: 50% mantenimiento",
-      "HD: 100% pos-sesión",
-      "QT prolongado/torsades",
-      "CYP2C9/2C19 y CYP3A4",
-      "Hepatotoxicidad"
-    ],
+    "class": "Antifúngico triazólico",
+    "pharmacologicClass": "Inhibidor de 14-alfa-desmetilasa fúngica",
+    "mechanism": "Inhibidor de 14-alfa-desmetilasa fúngica. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Alta biodisponibilidad, baja unión, eliminación renal y semivida ~30 h.",
+    "indications": "Candidiasis y criptococosis; indicación, carga, duración y susceptibilidad determinan pauta.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 50/100/150/200 mg, suspensión 10/40 mg/mL e inyección 2 mg/mL.",
+    "presentations": "Comprimidos 50/100/150/200 mg, suspensión 10/40 mg/mL e inyección 2 mg/mL.",
+    "dose": "Varía por foco: candidemia frecuentemente carga 800 mg y 400 mg/día; candidiasis vaginal no complicada 150 mg dosis única; confirmar guía y especie.",
+    "pediatricDose": "Dosis por peso/foco, frecuentemente carga 12 mg/kg y mantenimiento 6–12 mg/kg/día, con máximos adultos. AUTOMATABLE=NO.",
+    "renalDose": "Tras carga, reducir 50% si CrCl ≤50; diálisis requiere dosis postsesión.",
+    "hepaticDose": "Sin ajuste tabulado; precaución y vigilancia por hepatotoxicidad.",
+    "commonAdverseEffects": "Náusea, dolor abdominal, diarrea, cefalea y erupción.",
+    "dangerousAdverseEffects": "Hepatotoxicidad, QT/torsades, SCAR, anafilaxia y toxicidad fetal con exposición alta/prolongada.",
+    "adverseEffects": "Náusea, dolor abdominal, diarrea, cefalea y erupción. Graves: Hepatotoxicidad, QT/torsades, SCAR, anafilaxia y toxicidad fetal con exposición alta/prolongada.",
+    "contraindications": "Hipersensibilidad a azoles; combinaciones específicas que prolongan QT están contraindicadas.",
+    "interactions": "CYP2C9/2C19/3A4: warfarina, fenitoína, sulfonilureas, tacrolimus, rifampicina y muchos fármacos QT.",
+    "monitoring": "Respuesta/cultivos, hígado, riñón, K/Mg, ECG si riesgo e interacciones.",
+    "administration": "VO o IV; alta biodisponibilidad permite conversión 1:1 en mg.",
+    "preparation": "Reconstituir suspensión según producto; agitar.",
+    "infusionProtocol": "IV a velocidad máxima habitual 200 mg/h, según producto.",
+    "pregnancy": "Evitar dosis altas/prolongadas; dosis única vaginal tiene evaluación distinta.",
+    "lactation": "Presente en leche; generalmente compatible a dosis habituales, individualizar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hepatotoxicidad, QT/torsades, SCAR, anafilaxia y toxicidad fetal con exposición alta/prolongada. Regime bloqueado sem foco/espécie/susceptibilidade, idade/peso, CrCl/diálise, fígado, QT/eletrólitos, gestação e interações.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485f0414-036f-4f42-87ee-a89543ac94c1",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://www.idsociety.org/practice-guideline/aspergillosis/"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluconazole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/019949s070lbl.pdf"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485f0414-036f-4f42-87ee-a89543ac94c1",
-      "https://www.idsociety.org/practice-guideline/candidiasis/",
-      "https://www.idsociety.org/practice-guideline/aspergillosis/"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluconazole"
   },
   "name": {
     "pt": "Fluconazol",
@@ -143,9 +87,21 @@
   "keywords": [
     "fluconazol"
   ],
-  "dataVersion": "clinical-data-v1-0747e91418de0cc9",
-  "clinicalContentSha256": "0747e91418de0cc9ea5b45b06cf25ea3dd7beb8c54e670983e8ec9dca5e9cba0",
+  "dataVersion": "clinical-data-v1-55b02c8f3820436e",
+  "clinicalContentSha256": "55b02c8f3820436eb5a7dc1415946ef29be89db3f0b1f96ad64b738fb8e52cc2",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "infectologia.js"
+  "sourceModule": "infectologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "fluconazol.mcGoldClinicalV1",
+    "lote": "035",
+    "requiredFields": 33,
+    "approvedSha256": "fd6321700fc0486f65ffd87ea383edb96dd6acd7fbededd8d8d99bf146822690",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

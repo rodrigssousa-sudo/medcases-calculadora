@@ -3636,3 +3636,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:clozapina:END */
+/* GOLD33_SELECTIVE:flufenazina:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB;if(!db||!db["flufenazina"])throw new Error("GOLD33_MISSING_CANONICAL:flufenazina");db["flufenazina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "035",
+    "requiredFieldCount": 33,
+    "approvedSha256": "fd6321700fc0486f65ffd87ea383edb96dd6acd7fbededd8d8d99bf146822690",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Flufenazina",
+    "class": "Antipsicótico típico de alta potência",
+    "pharmacologicClass": "Antagonista dopaminérgico D2",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos/elixir 1–10 mg e decanoato 25 mg/mL IM/SC conforme produto.",
+    "presentations": "Comprimidos/elixir 1–10 mg e decanoato 25 mg/mL IM/SC conforme produto.",
+    "mechanism": "Antagonista dopaminérgico D2. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático, meia-vida longa no decanoato.",
+    "indications": "Transtornos psicóticos; formulação decanoato para manutenção em pacientes selecionados.",
+    "dose": "Oral: iniciar frequentemente 2,5–10 mg/dia divididos; decanoato: 12,5–25 mg IM/SC inicialmente, individualizar intervalo. Não converter automaticamente.",
+    "pediatricDose": "Segurança/eficácia não estabelecidas <12 anos; dose especializada. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste fixo; cautela.",
+    "hepaticDose": "Evitar em lesão hepática significativa; monitorar.",
+    "commonAdverseEffects": "Parkinsonismo, acatisia, distonia, sedação, boca seca e hipotensão.",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose e maior mortalidade em demência.",
+    "adverseEffects": "Parkinsonismo, acatisia, distonia, sedação, boca seca e hipotensão. Graves: Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose e maior mortalidade em demência.",
+    "contraindications": "Coma/depressão grave do SNC, discrasia sanguínea, lesão hepática e hipersensibilidade a fenotiazinas.",
+    "interactions": "Levodopa, sedativos/álcool/opioides, anticolinérgicos, anti-hipertensivos e fármacos QT.",
+    "monitoring": "Sintomas psicóticos, AIMS/EPS, prolactina, peso/metabólico, PA, ECG se risco, hemograma/fígado.",
+    "administration": "VO conforme produto; decanoato somente IM profunda ou SC conforme rótulo, nunca IV.",
+    "preparation": "Confirmar sal/formulação; não converter oral-decanoato por regra fixa.",
+    "infusionProtocol": "Decanoato em aplicação lenta; observar reação e técnica.",
+    "pregnancy": "Usar somente se benefício justificar; risco neonatal no terceiro trimestre.",
+    "lactation": "Pode causar sedação/EPS no lactente; avaliar alternativa.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose e maior mortalidade em demência. Seleção/conversão bloqueadas sem formulação/sal, exposição oral prévia, diagnóstico, EPS/AIMS, QT, fígado/hemograma e risco de demência.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluphenazine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/071413s021lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluphenazine"
+  },
+  "es": {
+    "name": "Flufenazina",
+    "class": "Antipsicótico típico de alta potencia",
+    "pharmacologicClass": "Antagonista dopaminérgico D2",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos/elixir 1–10 mg y decanoato 25 mg/mL IM/SC según producto.",
+    "presentations": "Comprimidos/elixir 1–10 mg y decanoato 25 mg/mL IM/SC según producto.",
+    "mechanism": "Antagonista dopaminérgico D2. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático, semivida larga con decanoato.",
+    "indications": "Trastornos psicóticos; formulación decanoato para mantenimiento en pacientes seleccionados.",
+    "dose": "Oral: iniciar frecuentemente 2,5–10 mg/día divididos; decanoato: 12,5–25 mg IM/SC inicialmente, individualizar intervalo. No convertir automáticamente.",
+    "pediatricDose": "Seguridad/eficacia no establecidas <12 años; dosis especializada. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste fijo; precaución.",
+    "hepaticDose": "Evitar en lesión hepática significativa; vigilar.",
+    "commonAdverseEffects": "Parkinsonismo, acatisia, distonía, sedación, boca seca e hipotensión.",
+    "dangerousAdverseEffects": "Síndrome neuroléptico maligno, discinesia tardía, QT/arritmia, agranulocitosis y mayor mortalidad en demencia.",
+    "adverseEffects": "Parkinsonismo, acatisia, distonía, sedación, boca seca e hipotensión. Graves: Síndrome neuroléptico maligno, discinesia tardía, QT/arritmia, agranulocitosis y mayor mortalidad en demencia.",
+    "contraindications": "Coma/depresión grave del SNC, discrasia sanguínea, lesión hepática e hipersensibilidad a fenotiazinas.",
+    "interactions": "Levodopa, sedantes/alcohol/opioides, anticolinérgicos, antihipertensivos y fármacos QT.",
+    "monitoring": "Síntomas psicóticos, AIMS/EPS, prolactina, peso/metabólico, PA, ECG si riesgo, hemograma/hígado.",
+    "administration": "VO según producto; decanoato solo IM profunda o SC según ficha, nunca IV.",
+    "preparation": "Confirmar sal/formulación; no convertir oral-decanoato por regla fija.",
+    "infusionProtocol": "Decanoato en aplicación lenta; vigilar reacción y técnica.",
+    "pregnancy": "Usar solo si beneficio justifica; riesgo neonatal en tercer trimestre.",
+    "lactation": "Puede causar sedación/EPS en lactante; evaluar alternativa.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Síndrome neuroléptico maligno, discinesia tardía, QT/arritmia, agranulocitosis y mayor mortalidad en demencia. Seleção/conversão bloqueadas sem formulação/sal, exposição oral prévia, diagnóstico, EPS/AIMS, QT, fígado/hemograma e risco de demência.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluphenazine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/071413s021lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluphenazine"
+  }
+};})();
+/* GOLD33_SELECTIVE:flufenazina:END */

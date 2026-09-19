@@ -6,209 +6,91 @@
   "colorTxt": null,
   "pt": {
     "name": "Flufenazina",
-    "class": "Antipsicótico típico de alta potência — fenotiazina",
+    "class": "Antipsicótico típico de alta potência",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Anatensol",
-        "Flufenan",
-        "Flufenazina"
-      ],
-      "ar": [
-        "Modecate",
-        "Flufenazina"
-      ]
-    },
-    "presentation": [
-      "Comprimido 1 mg",
-      "Comprimido 5 mg",
-      "Solução oral/gotas",
-      "Decanoato 25 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Psicose: iniciar 1–2,5 mg VO 2–3x/dia; titular conforme resposta.",
-      "depot": "Decanoato injetável 25 mg/mL da bula FDA citada: dose inicial de 12,5–25 mg IM ou SC; intervalo de manutenção individualizado pela resposta. Não converter VO↔depot automaticamente nem extrapolar a outro produto.",
-      "maxDose": "Dose máxima depende da indicação; evitar doses altas sem monitorização de EPS e ECG."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Psicose crônica",
-      "Manutenção antipsicótica com formulação depot",
-      "Prevenção de recaídas psicóticas",
-      "Transtorno esquizoafetivo em casos selecionados",
-      "Agitação psicótica em contexto selecionado"
-    ],
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos/elixir 1–10 mg e decanoato 25 mg/mL IM/SC conforme produto.",
+    "dose": "Oral: iniciar frequentemente 2,5–10 mg/dia divididos; decanoato: 12,5–25 mg IM/SC inicialmente, individualizar intervalo. Não converter automaticamente.",
+    "indications": "Transtornos psicóticos; formulação decanoato para manutenção em pacientes selecionados.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Antagonista potente dos receptores D2; alta potência antipsicótica com maior risco de sintomas extrapiramidais.",
+    "mechanism": "Antagonista dopaminérgico D2. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "VO: efeito inicial em dias; depot: liberação prolongada com efeito por semanas.",
     "halfLife": "Vida média variável; decanoato possui duração prolongada por 2–4 semanas.",
-    "commonAdverseEffects": [
-      "Acatisia",
-      "Distonia aguda",
-      "Parkinsonismo medicamentoso",
-      "Hiperprolactinemia",
-      "Insônia ou inquietação",
-      "Boca seca"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptica maligna",
-      "Discinesia tardia",
-      "Prolongamento QT e arritmias",
-      "Distonia laríngea rara",
-      "Convulsões em predispostos"
-    ],
+    "commonAdverseEffects": "Parkinsonismo, acatisia, distonia, sedação, boca seca e hipotensão.",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose e maior mortalidade em demência.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade às fenotiazinas",
-      "Depressão grave do SNC ou coma",
-      "Doença de Parkinson grave",
-      "Demência com corpos de Lewy, salvo extrema necessidade",
-      "QT prolongado significativo"
-    ],
-    "interactions": [
-      "Levodopa e agonistas dopaminérgicos",
-      "Fármacos que prolongam QT",
-      "Lítio: risco de neurotoxicidade",
-      "Álcool e depressores do SNC",
-      "Anticolinérgicos usados para EPS: maior risco de delirium/constipação"
-    ],
-    "alerts": [
-      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
-      "Flufenazina VO não é intercambiável automaticamente com decanoato depot; confirmar produto, veículo, via e intervalo conforme bula local antes de qualquer conversão. Não extrapolar doses adultas para pediatria.",
-      "Flufenazina oral e decanoato são formulações diferentes; a bula do decanoato em óleo 25 mg/mL admite IM ou SC apenas para o produto citado. Confirmar excipientes, via e apresentação local.",
-      "Alto risco extrapiramidal; monitorar acatisia, distonia e parkinsonismo.",
-      "Formulação depot é útil para baixa adesão, mas exige tolerância prévia ao fármaco oral.",
-      "Considerar ECG se risco de QT.",
-      "Monitorar prolactina se sintomas clínicos."
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3832d3d3-15ce-4d41-8431-11e9bd04cf4d",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Fluphenazine Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
-      "doseAuto": false,
-      "indication": null,
-      "sourceUrls": [],
-      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
-      "clinicalReferenceR27": {
-        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
-        "doseAuto": false,
-        "medicalSafetyReviewRequired": true,
-        "unverifiedDoseValues": 0,
-        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
-        "source": []
-      }
-    }
+    "contraindications": "Coma/depressão grave do SNC, discrasia sanguínea, lesão hepática e hipersensibilidade a fenotiazinas.",
+    "interactions": "Levodopa, sedativos/álcool/opioides, anticolinérgicos, anti-hipertensivos e fármacos QT.",
+    "alerts": "Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose e maior mortalidade em demência. Seleção/conversão bloqueadas sem formulação/sal, exposição oral prévia, diagnóstico, EPS/AIMS, QT, fígado/hemograma e risco de demência.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluphenazine",
+    "pediatricDose": "Segurança/eficácia não estabelecidas <12 anos; dose especializada. AUTOMATABLE=NO.",
+    "pharmacologicClass": "Antagonista dopaminérgico D2",
+    "presentations": "Comprimidos/elixir 1–10 mg e decanoato 25 mg/mL IM/SC conforme produto.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático, meia-vida longa no decanoato.",
+    "renalDose": "Sem ajuste fixo; cautela.",
+    "hepaticDose": "Evitar em lesão hepática significativa; monitorar.",
+    "adverseEffects": "Parkinsonismo, acatisia, distonia, sedação, boca seca e hipotensão. Graves: Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose e maior mortalidade em demência.",
+    "monitoring": "Sintomas psicóticos, AIMS/EPS, prolactina, peso/metabólico, PA, ECG se risco, hemograma/fígado.",
+    "administration": "VO conforme produto; decanoato somente IM profunda ou SC conforme rótulo, nunca IV.",
+    "preparation": "Confirmar sal/formulação; não converter oral-decanoato por regra fixa.",
+    "infusionProtocol": "Decanoato em aplicação lenta; observar reação e técnica.",
+    "pregnancy": "Usar somente se benefício justificar; risco neonatal no terceiro trimestre.",
+    "lactation": "Pode causar sedação/EPS no lactente; avaliar alternativa.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluphenazine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/071413s021lbl.pdf"
+    ]
   },
   "es": {
     "name": "Flufenazina",
-    "class": "Antipsicótico típico de alta potencia — fenotiazina",
+    "class": "Antipsicótico típico de alta potencia",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Anatensol",
-        "Flufenan",
-        "Flufenazina"
-      ],
-      "ar": [
-        "Modecate",
-        "Flufenazina"
-      ]
-    },
-    "presentation": [
-      "Comprimido 1 mg",
-      "Comprimido 5 mg",
-      "Solución oral/gotas",
-      "Decanoato 25 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Psicosis: iniciar 1–2,5 mg VO 2–3 veces/día; titular según respuesta.",
-      "depot": "Decanoato inyectable 25 mg/mL de la ficha FDA citada: dosis inicial 12,5–25 mg IM o SC; intervalo de mantenimiento individualizado según respuesta. No convertir VO↔depot automáticamente ni extrapolar a otro producto.",
-      "maxDose": "La dosis máxima depende de indicación; evitar dosis altas sin monitorización de EPS y ECG."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Psicosis crónica",
-      "Mantenimiento antipsicótico con formulación depot",
-      "Prevención de recaídas psicóticas",
-      "Trastorno esquizoafectivo en casos seleccionados",
-      "Agitación psicótica en contexto seleccionado"
-    ],
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos/elixir 1–10 mg y decanoato 25 mg/mL IM/SC según producto.",
+    "dose": "Oral: iniciar frecuentemente 2,5–10 mg/día divididos; decanoato: 12,5–25 mg IM/SC inicialmente, individualizar intervalo. No convertir automáticamente.",
+    "indications": "Trastornos psicóticos; formulación decanoato para mantenimiento en pacientes seleccionados.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Antagonista potente de receptores D2; alta potencia antipsicótica con mayor riesgo de síntomas extrapiramidales.",
+    "mechanism": "Antagonista dopaminérgico D2. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "VO: efecto inicial en días; depot: liberación prolongada con efecto por semanas.",
     "halfLife": "Vida media variable; decanoato posee duración prolongada por 2–4 semanas.",
-    "commonAdverseEffects": [
-      "Acatisia",
-      "Distonía aguda",
-      "Parkinsonismo medicamentoso",
-      "Hiperprolactinemia",
-      "Insomnio o inquietud",
-      "Boca seca"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptico maligno",
-      "Discinesia tardía",
-      "Prolongación QT y arritmias",
-      "Distonía laríngea rara",
-      "Convulsiones en predispuestos"
-    ],
+    "commonAdverseEffects": "Parkinsonismo, acatisia, distonía, sedación, boca seca e hipotensión.",
+    "dangerousAdverseEffects": "Síndrome neuroléptico maligno, discinesia tardía, QT/arritmia, agranulocitosis y mayor mortalidad en demencia.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a fenotiazinas",
-      "Depresión grave del SNC o coma",
-      "Enfermedad de Parkinson grave",
-      "Demencia con cuerpos de Lewy, salvo extrema necesidad",
-      "QT prolongado significativo"
-    ],
-    "interactions": [
-      "Levodopa y agonistas dopaminérgicos",
-      "Fármacos que prolongan QT",
-      "Litio: riesgo de neurotoxicidad",
-      "Alcohol y depresores del SNC",
-      "Anticolinérgicos usados para EPS: mayor riesgo de delirium/estreñimiento"
-    ],
-    "alerts": [
-      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
-      "Flufenazina oral no es automáticamente intercambiable con decanoato depot; confirmar producto, vehículo, vía e intervalo según prospecto local antes de convertir. No extrapolar dosis adultas a pediatría.",
-      "Flufenazina oral y decanoato son formulaciones distintas; ficha de decanoato en aceite 25 mg/mL admite IM o SC solo para el producto citado. Confirmar excipientes, vía y presentación local.",
-      "Alto riesgo extrapiramidal; monitorizar acatisia, distonía y parkinsonismo.",
-      "La formulación depot es útil para baja adherencia, pero exige tolerancia previa al fármaco oral.",
-      "Considerar ECG si hay riesgo de QT.",
-      "Monitorizar prolactina si hay síntomas clínicos."
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3832d3d3-15ce-4d41-8431-11e9bd04cf4d",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Fluphenazine Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
-      "doseAuto": false,
-      "indication": null,
-      "sourceUrls": [],
-      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
-      "clinicalReferenceR27": {
-        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
-        "doseAuto": false,
-        "medicalSafetyReviewRequired": true,
-        "unverifiedDoseValues": 0,
-        "risk": "PRODUCT_ROUTE_INDICATION_AGE_RENAL_HEPATIC_REVIEW_REQUIRED",
-        "source": []
-      }
-    }
+    "contraindications": "Coma/depresión grave del SNC, discrasia sanguínea, lesión hepática e hipersensibilidad a fenotiazinas.",
+    "interactions": "Levodopa, sedantes/alcohol/opioides, anticolinérgicos, antihipertensivos y fármacos QT.",
+    "alerts": "Síndrome neuroléptico maligno, discinesia tardía, QT/arritmia, agranulocitosis y mayor mortalidad en demencia. Seleção/conversão bloqueadas sem formulação/sal, exposição oral prévia, diagnóstico, EPS/AIMS, QT, fígado/hemograma e risco de demência.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluphenazine",
+    "pediatricDose": "Seguridad/eficacia no establecidas <12 años; dosis especializada. AUTOMATABLE=NO.",
+    "pharmacologicClass": "Antagonista dopaminérgico D2",
+    "presentations": "Comprimidos/elixir 1–10 mg y decanoato 25 mg/mL IM/SC según producto.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático, semivida larga con decanoato.",
+    "renalDose": "Sin ajuste fijo; precaución.",
+    "hepaticDose": "Evitar en lesión hepática significativa; vigilar.",
+    "adverseEffects": "Parkinsonismo, acatisia, distonía, sedación, boca seca e hipotensión. Graves: Síndrome neuroléptico maligno, discinesia tardía, QT/arritmia, agranulocitosis y mayor mortalidad en demencia.",
+    "monitoring": "Síntomas psicóticos, AIMS/EPS, prolactina, peso/metabólico, PA, ECG si riesgo, hemograma/hígado.",
+    "administration": "VO según producto; decanoato solo IM profunda o SC según ficha, nunca IV.",
+    "preparation": "Confirmar sal/formulación; no convertir oral-decanoato por regla fija.",
+    "infusionProtocol": "Decanoato en aplicación lenta; vigilar reacción y técnica.",
+    "pregnancy": "Usar solo si beneficio justifica; riesgo neonatal en tercer trimestre.",
+    "lactation": "Puede causar sedación/EPS en lactante; evaluar alternativa.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluphenazine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/071413s021lbl.pdf"
+    ]
   },
   "name": {
     "pt": "Flufenazina",
@@ -221,9 +103,21 @@
     "modecate",
     "antipsicotico tipico de alta potencia — fenotiazina"
   ],
-  "dataVersion": "clinical-data-v1-0747e91418de0cc9",
-  "clinicalContentSha256": "0747e91418de0cc9ea5b45b06cf25ea3dd7beb8c54e670983e8ec9dca5e9cba0",
+  "dataVersion": "clinical-data-v1-55b02c8f3820436e",
+  "clinicalContentSha256": "55b02c8f3820436eb5a7dc1415946ef29be89db3f0b1f96ad64b738fb8e52cc2",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psicofarmacos.js"
+  "sourceModule": "psicofarmacos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psicofarmacos.js",
+    "sourceField": "flufenazina.mcGoldClinicalV1",
+    "lote": "035",
+    "requiredFields": 33,
+    "approvedSha256": "fd6321700fc0486f65ffd87ea383edb96dd6acd7fbededd8d8d99bf146822690",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

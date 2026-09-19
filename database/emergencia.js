@@ -4330,3 +4330,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:fentanil:END */
+/* GOLD33_SELECTIVE:flumazenil:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["flumazenil"])throw new Error("GOLD33_MISSING_CANONICAL:flumazenil");db["flumazenil"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "035",
+    "requiredFieldCount": 33,
+    "approvedSha256": "fd6321700fc0486f65ffd87ea383edb96dd6acd7fbededd8d8d99bf146822690",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Flumazenil",
+    "class": "Antagonista de benzodiazepínicos",
+    "pharmacologicClass": "Antagonista competitivo no sítio benzodiazepínico GABA-A",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Injeção 0,1 mg/mL em frascos/seringas.",
+    "presentations": "Injeção 0,1 mg/mL em frascos/seringas.",
+    "mechanism": "Antagonista competitivo no sítio benzodiazepínico GABA-A. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático rápido; meia-vida ~40–80 min, menor que muitos benzodiazepínicos.",
+    "indications": "Reversão de sedação por benzodiazepínicos e manejo selecionado de overdose sob monitorização.",
+    "dose": "Reversão de sedação: 0,2 mg IV em 15 s, repetir 0,2 mg a cada minuto até máximo 1 mg; overdose: 0,2 mg, depois 0,3 mg e 0,5 mg a cada minuto até máximo 3 mg, conforme rótulo.",
+    "pediatricDose": "≥1 ano para reversão de sedação: 0,01 mg/kg IV, máximo 0,2 mg por dose; repetir até máximo total 0,05 mg/kg ou 1 mg. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste fixo.",
+    "hepaticDose": "Depuração reduzida; titular e observar ress sedação.",
+    "commonAdverseEffects": "Náusea, vômito, tontura, agitação e dor no local.",
+    "dangerousAdverseEffects": "Convulsões, arritmia, abstinência aguda, pânico e ress sedação com depressão respiratória.",
+    "adverseEffects": "Náusea, vômito, tontura, agitação e dor no local. Graves: Convulsões, arritmia, abstinência aguda, pânico e ress sedação com depressão respiratória.",
+    "contraindications": "Uso de benzodiazepínico para condição potencialmente fatal, hipersensibilidade e sinais de overdose cíclica grave.",
+    "interactions": "Antidepressivos cíclicos e outros pró-convulsivantes aumentam convulsão; pode precipitar abstinência em dependentes.",
+    "monitoring": "Consciência, ventilação, SpO2/ETCO2, ECG, convulsões, abstinência e ress sedação.",
+    "administration": "IV por equipe com via aérea, ventilação e tratamento de convulsões disponíveis.",
+    "preparation": "Não misturar sem compatibilidade; confirmar 0,1 mg/mL.",
+    "infusionProtocol": "Bolus IV lento e titulado; observar por ress sedação e convulsões.",
+    "pregnancy": "Usar se claramente necessário.",
+    "lactation": "Dados insuficientes; uso agudo geralmente permite decisão individual.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Convulsões, arritmia, abstinência aguda, pânico e ress sedação com depressão respiratória. Administração bloqueada sem benzodiazepínico/dose/tempo, dependência, coingestões cíclicas/pró-convulsivantes, indicação, peso pediátrico e capacidade de ventilação/controle de crises.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flumazenil",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/020073s016lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flumazenil"
+  },
+  "es": {
+    "name": "Flumazenil",
+    "class": "Antagonista de benzodiacepinas",
+    "pharmacologicClass": "Antagonista competitivo en sitio benzodiacepínico GABA-A",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Inyección 0,1 mg/mL en viales/jeringas.",
+    "presentations": "Inyección 0,1 mg/mL en viales/jeringas.",
+    "mechanism": "Antagonista competitivo en sitio benzodiacepínico GABA-A. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático rápido; semivida ~40–80 min, menor que muchos benzodiacepinas.",
+    "indications": "Reversión de sedación por benzodiacepinas y manejo seleccionado de sobredosis bajo vigilancia.",
+    "dose": "Reversión de sedación: 0,2 mg IV en 15 s, repetir 0,2 mg cada minuto hasta máximo 1 mg; sobredosis: 0,2 mg, luego 0,3 mg y 0,5 mg cada minuto hasta máximo 3 mg, según ficha.",
+    "pediatricDose": "≥1 año para reversión de sedación: 0,01 mg/kg IV, máximo 0,2 mg por dosis; repetir hasta máximo total 0,05 mg/kg o 1 mg. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste fijo.",
+    "hepaticDose": "Depuración reducida; titular y vigilar resedación.",
+    "commonAdverseEffects": "Náusea, vómito, mareo, agitación y dolor local.",
+    "dangerousAdverseEffects": "Convulsiones, arritmia, abstinencia aguda, pánico y resedación con depresión respiratoria.",
+    "adverseEffects": "Náusea, vómito, mareo, agitación y dolor local. Graves: Convulsiones, arritmia, abstinencia aguda, pánico y resedación con depresión respiratoria.",
+    "contraindications": "Uso de benzodiacepina para condición potencialmente mortal, hipersensibilidad y signos de sobredosis tricíclica grave.",
+    "interactions": "Antidepresivos cíclicos y otros proconvulsivantes aumentan convulsión; puede precipitar abstinencia en dependientes.",
+    "monitoring": "Conciencia, ventilación, SpO2/ETCO2, ECG, convulsiones, abstinencia y resedación.",
+    "administration": "IV por equipo con vía aérea, ventilación y tratamiento de convulsiones disponibles.",
+    "preparation": "No mezclar sin compatibilidad; confirmar 0,1 mg/mL.",
+    "infusionProtocol": "Bolo IV lento y titulado; vigilar resedación y convulsiones.",
+    "pregnancy": "Usar si es claramente necesario.",
+    "lactation": "Datos insuficientes; uso agudo permite decisión individual.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Convulsiones, arritmia, abstinencia aguda, pánico y resedación con depresión respiratoria. Administração bloqueada sem benzodiazepínico/dose/tempo, dependência, coingestões cíclicas/pró-convulsivantes, indicação, peso pediátrico e capacidade de ventilação/controle de crises.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flumazenil",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/020073s016lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flumazenil"
+  }
+};})();
+/* GOLD33_SELECTIVE:flumazenil:END */

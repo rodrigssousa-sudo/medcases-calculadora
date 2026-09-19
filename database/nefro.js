@@ -4300,3 +4300,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:ferro_sacarato:END */
+/* GOLD33_SELECTIVE:finerenona:START */
+;(function(){var db=window.NEFRO_DRUGS_DB;if(!db||!db["finerenona"])throw new Error("GOLD33_MISSING_CANONICAL:finerenona");db["finerenona"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "035",
+    "requiredFieldCount": 33,
+    "approvedSha256": "fd6321700fc0486f65ffd87ea383edb96dd6acd7fbededd8d8d99bf146822690",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Finerenona",
+    "class": "Antagonista não esteroidal do receptor mineralocorticoide",
+    "pharmacologicClass": "Antagonista seletivo do receptor mineralocorticoide",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 10 e 20 mg.",
+    "presentations": "Comprimidos 10 e 20 mg.",
+    "mechanism": "Antagonista seletivo do receptor mineralocorticoide. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP3A4; meia-vida 2–3 h.",
+    "indications": "Redução de risco renal e cardiovascular em adultos com DRC associada a diabetes tipo 2; algumas jurisdições ampliaram indicação cardiovascular.",
+    "dose": "eGFR ≥60: 20 mg/dia; eGFR 25–<60: 10 mg/dia; não iniciar se eGFR <25 ou K >5,0 mEq/L. Titular por K/eGFR.",
+    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
+    "renalDose": "Dose inicial e seguimento definidos por eGFR e potássio.",
+    "hepaticDose": "Evitar em Child-Pugh C; sem ajuste em A/B, com monitorização.",
+    "commonAdverseEffects": "Hipercalemia, hipotensão e hiponatremia.",
+    "dangerousAdverseEffects": "Hipercalemia grave/arrítmia e deterioração renal.",
+    "adverseEffects": "Hipercalemia, hipotensão e hiponatremia. Graves: Hipercalemia grave/arrítmia e deterioração renal.",
+    "contraindications": "Inibidores fortes de CYP3A4 e insuficiência adrenal.",
+    "interactions": "CYP3A4 fortes/moderados, indutores, suplementos de K, poupadores de K e outros antagonistas mineralocorticoides.",
+    "monitoring": "K, eGFR/creatinina, PA e interações 4 semanas após mudanças.",
+    "administration": "VO 1x/dia com ou sem alimento; medir K 4 semanas após início/ajuste.",
+    "preparation": "Pode triturar conforme bula e misturar com alimento líquido/macio.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Pode causar dano fetal em animais; discutir contracepção/risco.",
+    "lactation": "Não recomendado durante tratamento e por 1 dia após.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hipercalemia grave/arrítmia e deterioração renal. Início/titulação bloqueados sem eGFR, K, PA, diabetes/DRC confirmadas e revisão completa de CYP3A4 e fármacos que elevam K.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=finerenone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215341s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=finerenone"
+  },
+  "es": {
+    "name": "Finerenona",
+    "class": "Antagonista no esteroideo del receptor mineralocorticoide",
+    "pharmacologicClass": "Antagonista selectivo del receptor mineralocorticoide",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 10 y 20 mg.",
+    "presentations": "Comprimidos 10 y 20 mg.",
+    "mechanism": "Antagonista selectivo del receptor mineralocorticoide. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP3A4; semivida 2–3 h.",
+    "indications": "Reducción de riesgo renal y cardiovascular en adultos con ERC asociada a diabetes tipo 2; algunas jurisdicciones ampliaron indicación cardiovascular.",
+    "dose": "eGFR ≥60: 20 mg/día; eGFR 25–<60: 10 mg/día; no iniciar si eGFR <25 o K >5,0 mEq/L. Titular por K/eGFR.",
+    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
+    "renalDose": "Dosis inicial y seguimiento definidos por eGFR y potasio.",
+    "hepaticDose": "Evitar en Child-Pugh C; sin ajuste en A/B, con vigilancia.",
+    "commonAdverseEffects": "Hiperpotasemia, hipotensión e hiponatremia.",
+    "dangerousAdverseEffects": "Hiperpotasemia grave/arritmia y deterioro renal.",
+    "adverseEffects": "Hiperpotasemia, hipotensión e hiponatremia. Graves: Hiperpotasemia grave/arritmia y deterioro renal.",
+    "contraindications": "Inhibidores potentes de CYP3A4 e insuficiencia suprarrenal.",
+    "interactions": "CYP3A4 potentes/moderados, inductores, suplementos de K, ahorradores de K y otros antagonistas mineralocorticoides.",
+    "monitoring": "K, eGFR/creatinina, PA e interacciones 4 semanas tras cambios.",
+    "administration": "VO 1 vez/día con o sin alimentos; medir K 4 semanas tras inicio/ajuste.",
+    "preparation": "Puede triturarse según ficha y mezclar con alimento líquido/blando.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Puede causar daño fetal en animales; discutir anticoncepción/riesgo.",
+    "lactation": "No recomendado durante tratamiento y 1 día después.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hiperpotasemia grave/arritmia y deterioro renal. Início/titulação bloqueados sem eGFR, K, PA, diabetes/DRC confirmadas e revisão completa de CYP3A4 e fármacos que elevam K.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=finerenone",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215341s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=finerenone"
+  }
+};})();
+/* GOLD33_SELECTIVE:finerenona:END */

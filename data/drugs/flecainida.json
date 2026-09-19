@@ -5,238 +5,80 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "commonAdverseEffects": [
-      "tontura",
-      "alterações visuais",
-      "cefaleia",
-      "náuseas",
-      "dispneia"
-    ],
-    "monitoring": [
-      "ECG de 12 derivações",
-      "frequência cardíaca",
-      "pressão arterial",
-      "função renal e eletrólitos quando aplicável",
-      "sintomas de pró-arritmia"
-    ],
-    "preparation": "Confirmar formulação e concentração antes de administrar.",
-    "patientEducation": [
-      "Não duplicar doses esquecidas",
-      "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
-      "informar todos os fármacos pelo risco de interações e pró-arritmia"
-    ],
+    "commonAdverseEffects": "Tontura, distúrbio visual, dispneia, cefaleia e náusea.",
+    "monitoring": "ECG/QRS/PR/QTc, ritmo, nível plasmático, rim/fígado, K/Mg e sinais de IC.",
+    "preparation": "Comprimido pronto.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
     "name": "Flecainida",
-    "class": "Antiarrítmico classe IC",
-    "pharmacologicClass": "Bloqueador potente de canais rápidos de sódio com cinética lenta",
-    "mechanism": "Bloqueia canais rápidos de sódio e desacelera de forma importante a condução em His-Purkinje e miocárdio, alargando PR e QRS.",
-    "pharmacodynamics": "Suprime arritmias supraventriculares e ventriculares, mas pode produzir pró-arritmia, condução 1:1 de flutter e piorar IC em cardiopatia estrutural.",
-    "pharmacokinetics": "Biodisponibilidade oral alta; metabolismo hepático e eliminação renal parcial inalterada. A meia-vida prolonga na insuficiência renal e em alguns metabolizadores lentos.",
-    "indications": [
-      "TPSV em pacientes sem cardiopatia estrutural",
-      "FA paroxística sintomática em pacientes selecionados",
-      "taquicardia ventricular sustentada documentada potencialmente fatal"
-    ],
-    "commercialNames": [
-      "Tambocor"
-    ],
-    "presentation": "Comprimidos orais.",
-    "presentations": [
-      "50 mg",
-      "100 mg",
-      "150 mg"
-    ],
-    "dose": {
-      "PSVT_PAF": "50 mg a cada 12 h; aumentar 50 mg BID a cada 4 dias conforme resposta; máximo 300 mg/dia.",
-      "sustainedVT": "100 mg a cada 12 h; aumentar 50 mg BID a cada 4 dias; máximo 400 mg/dia.",
-      "pillInPocket": "200-300 mg dose única em pacientes previamente selecionados, junto com bloqueador nodal AV e primeira dose testada sob monitorização."
-    },
-    "pediatricDose": "<6 meses: início aproximado 50 mg/m2/dia dividido em 2-3 doses; >6 meses: pode iniciar 100 mg/m2/dia; máximo 200 mg/m2/dia, sob cardiologista pediátrico e níveis/ECG.",
-    "renalDose": "ClCr <=35 mL/min/1,73 m2: iniciar 100 mg uma vez ao dia ou 50 mg BID, com níveis plasmáticos frequentes. Disfunção menor: 100 mg a cada 12 h pode ser usada com vigilância.",
-    "hepaticDose": "Na hepatopatia significativa a eliminação pode reduzir; usar doses menores, ECG e níveis plasmáticos quando possível.",
-    "dangerousAdverseEffects": [
-      "pró-arritmia ventricular",
-      "alargamento importante do QRS",
-      "bloqueio AV",
-      "insuficiência cardíaca",
-      "aumento de mortalidade pós-IAM com cardiopatia estrutural"
-    ],
-    "contraindications": [
-      "Bloqueio AV de segundo/terceiro grau sem marcapasso",
-      "bloqueio bifascicular sem marcapasso",
-      "choque cardiogênico",
-      "evitar em IAM prévio ou cardiopatia estrutural significativa para controle de ritmo da FA"
-    ],
-    "interactions": [
-      "Amiodarona pode aumentar níveis e geralmente exige redução da flecainida",
-      "Digoxina pode aumentar levemente",
-      "Outros bloqueadores de condução podem potencializar bradicardia ou bloqueio",
-      "Usar bloqueador nodal AV concomitante para reduzir flutter 1:1 na estratégia de FA"
-    ],
-    "administration": "Via oral em intervalos regulares; aumentos usuais são feitos a cada 4 dias para permitir estado de equilíbrio.",
-    "infusionProtocol": "Não se aplica à formulação oral citada.",
-    "pregnancy": "Usar se o benefício justificar o risco; atravessa a placenta.",
-    "lactation": "É excretada no leite; individualizar e observar o lactente se a amamentação for mantida.",
-    "specialPopulations": {
-      "structuralHeartDisease": "Não usar para manutenção de ritmo da FA com IAM prévio ou cardiopatia estrutural significativa.",
-      "renal": "Ajuste e níveis em ClCr <=35.",
-      "pediatrics": "Exige cardiologista pediátrico e monitorização de níveis/ECG."
-    },
-    "clinicalPearls": [
-      "O QRS é marcador prático de efeito e toxicidade",
-      "Para pill-in-the-pocket usar 200-300 mg apenas após seleção e teste inicial monitorado, com bloqueio nodal AV."
-    ],
-    "guidelineRecommendations": [
-      "Diretriz FA 2023: flecainida é razoável para manutenção do ritmo apenas se não houver IAM prévio, cardiopatia estrutural significativa nem cicatriz/fibrose ventricular."
-    ],
-    "safetyFlags": [
-      "QRS",
-      "PROARRITMIA",
-      "CARDIOPATIA_ESTRUTURAL",
-      "BLOQUEIO_NODAL_AV",
-      "FUNCAO_RENAL"
-    ],
-    "alerts": [
-      "Não usar na FA com cardiopatia estrutural significativa",
-      "Ajustar lentamente e controlar ECG."
-    ],
-    "adverseEffects": {
-      "common": [
-        "tontura",
-        "alterações visuais",
-        "cefaleia",
-        "náuseas",
-        "dispneia"
-      ],
-      "dangerous": [
-        "pró-arritmia ventricular",
-        "alargamento importante do QRS",
-        "bloqueio AV",
-        "insuficiência cardíaca",
-        "aumento de mortalidade pós-IAM com cardiopatia estrutural"
-      ]
-    },
+    "class": "Antiarrítmico classe Ic",
+    "pharmacologicClass": "Bloqueador potente de canais de sódio",
+    "mechanism": "Bloqueador potente de canais de sódio. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP2D6 e eliminação renal; meia-vida ~12–27 h.",
+    "indications": "Arritmias supraventriculares selecionadas e taquicardia ventricular sustentada em pacientes cuidadosamente avaliados.",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 50/100/150 mg.",
+    "presentations": "Comprimidos 50/100/150 mg.",
+    "dose": "FA/PSVT: iniciar 50 mg VO a cada 12 h; titular em incrementos de 50 mg 2x/dia, usual máximo 300 mg/dia. TV: pode iniciar 100 mg a cada 12 h, máximo 400 mg/dia.",
+    "pediatricDose": "Dose por idade/superfície e níveis, sob cardiologia. AUTOMATABLE=NO.",
+    "renalDose": "CrCl ≤35: iniciar 100 mg/dia ou 50 mg 2x/dia; titular lentamente com níveis.",
+    "hepaticDose": "Hepatopatia importante: usar apenas se benefício superar risco, com níveis.",
+    "dangerousAdverseEffects": "Proarritmia, morte em cardiopatia estrutural/pós-IAM, bloqueio, IC e toxicidade neurológica.",
+    "contraindications": "Bloqueio AV de 2º/3º grau ou bloqueio bifascicular sem marca-passo e choque cardiogênico.",
+    "interactions": "Amiodarona, digoxina, betabloqueadores, CYP2D6, outros antiarrítmicos e fármacos que alteram condução.",
+    "administration": "VO a cada 12 h; ECG e eletrólitos antes e durante titulação.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados limitados; usar somente se necessário.",
+    "lactation": "Passa ao leite; avaliar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Proarritmia, morte em cardiopatia estrutural/pós-IAM, bloqueio, IC e toxicidade neurológica. Uso/titulação bloqueados sem diagnóstico eletrofisiológico, ECG, exclusão de cardiopatia estrutural/isquêmica, CrCl, fígado, K/Mg e interações.",
+    "adverseEffects": "Tontura, distúrbio visual, dispneia, cefaleia e náusea. Graves: Proarritmia, morte em cardiopatia estrutural/pós-IAM, bloqueio, IC e toxicidade neurológica.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a30103c5-a261-49a5-a7b3-f43eb77e87b7&version=2",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flecainide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/018830s029lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a30103c5-a261-49a5-a7b3-f43eb77e87b7&version=2"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flecainide"
   },
   "es": {
-    "commonAdverseEffects": [
-      "mareo",
-      "alteraciones visuales",
-      "cefalea",
-      "náuseas",
-      "disnea"
-    ],
-    "monitoring": [
-      "ECG de 12 derivaciones",
-      "frecuencia cardíaca",
-      "presión arterial",
-      "función renal y electrolitos cuando corresponda",
-      "síntomas de proarritmia"
-    ],
-    "preparation": "Verificar formulación y concentración antes de administrar.",
-    "patientEducation": [
-      "No duplicar dosis omitidas",
-      "consultar por síncope, palpitaciones sostenidas o disnea nueva",
-      "informar todos los fármacos por riesgo de interacciones y proarritmia"
-    ],
+    "commonAdverseEffects": "Mareo, trastorno visual, disnea, cefalea y náusea.",
+    "monitoring": "ECG/QRS/PR/QTc, ritmo, nivel plasmático, riñón/hígado, K/Mg y signos de IC.",
+    "preparation": "Comprimido listo.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
     "name": "Flecainida",
-    "class": "Antiarrítmico clase IC",
-    "pharmacologicClass": "Bloqueador potente de canales rápidos de sodio con cinética lenta",
-    "mechanism": "Bloquea canales rápidos de sodio y enlentece marcadamente la conducción en His-Purkinje y miocardio, ensanchando PR y QRS.",
-    "pharmacodynamics": "Suprime arritmias supraventriculares y ventriculares, pero puede producir proarritmia, conducción 1:1 de flutter y empeorar HF en cardiopatía estructural.",
-    "pharmacokinetics": "Biodisponibilidad oral alta; metabolismo hepático y eliminación renal parcial sin cambios. Vida media se prolonga con insuficiencia renal y en algunos metabolizadores lentos.",
-    "indications": [
-      "PSVT en pacientes sin cardiopatía estructural",
-      "FA paroxística sintomática en pacientes seleccionados",
-      "taquicardia ventricular sostenida documentada potencialmente mortal"
-    ],
-    "commercialNames": [
-      "Tambocor"
-    ],
-    "presentation": "Tabletas orales.",
-    "presentations": [
-      "50 mg",
-      "100 mg",
-      "150 mg"
-    ],
-    "dose": {
-      "PSVT_PAF": "50 mg cada 12 h; aumentar 50 mg BID cada 4 días según respuesta; máximo 300 mg/día.",
-      "sustainedVT": "100 mg cada 12 h; aumentar 50 mg BID cada 4 días; máximo 400 mg/día.",
-      "pillInPocket": "200-300 mg dosis única en pacientes previamente seleccionados, junto con bloqueador nodal AV y primera dosis probada bajo monitorización."
-    },
-    "pediatricDose": "<6 meses: inicio aproximado 50 mg/m2/día dividido en 2-3 dosis; >6 meses: puede iniciarse 100 mg/m2/día; máximo 200 mg/m2/día, bajo cardiólogo pediátrico y niveles/ECG.",
-    "renalDose": "CrCl <=35 mL/min/1.73 m2: iniciar 100 mg una vez al día o 50 mg BID, con niveles plasmáticos frecuentes. Menor deterioro: 100 mg cada 12 h puede usarse con vigilancia.",
-    "hepaticDose": "En hepatopatía significativa la eliminación puede reducirse; usar dosis menores, ECG y niveles plasmáticos cuando sea posible.",
-    "dangerousAdverseEffects": [
-      "proarritmia ventricular",
-      "ensanchamiento marcado de QRS",
-      "bloqueo AV",
-      "insuficiencia cardíaca",
-      "aumento de mortalidad post-IAM con cardiopatía estructural"
-    ],
-    "contraindications": [
-      "Bloqueo AV de segundo/tercer grado sin marcapasos",
-      "bloqueo bifascicular sin marcapasos",
-      "shock cardiogénico",
-      "evitar en IAM previo o cardiopatía estructural significativa para control de ritmo de FA"
-    ],
-    "interactions": [
-      "Amiodarona puede aumentar niveles y suele requerir reducción de flecainida",
-      "Digoxina puede aumentar levemente",
-      "Otros bloqueadores de conducción pueden potenciar bradicardia o bloqueo",
-      "Usar bloqueador nodal AV concomitante para reducir flutter 1:1 en estrategia de FA"
-    ],
-    "administration": "Vía oral a intervalos regulares; los aumentos usuales se hacen cada 4 días para permitir estado estable.",
-    "infusionProtocol": "No aplica a la formulación oral citada.",
-    "pregnancy": "Usar si el beneficio justifica el riesgo; atraviesa placenta.",
-    "lactation": "Se excreta en leche; individualizar y vigilar al lactante si se mantiene lactancia.",
-    "specialPopulations": {
-      "structuralHeartDisease": "No usar para mantenimiento de ritmo de FA con IAM previo o cardiopatía estructural significativa.",
-      "renal": "Ajuste y niveles en CrCl <=35.",
-      "pediatrics": "Requiere cardiólogo pediátrico y monitorización de niveles/ECG."
-    },
-    "clinicalPearls": [
-      "El QRS es un marcador práctico de efecto y toxicidad",
-      "Para pill-in-the-pocket usar 200-300 mg solo tras selección y prueba inicial monitorizada, con bloqueo nodal AV."
-    ],
-    "guidelineRecommendations": [
-      "Guía AF 2023: flecainida es razonable para mantenimiento de ritmo solo si no hay IAM previo, cardiopatía estructural significativa ni cicatriz/fibrosis ventricular."
-    ],
-    "safetyFlags": [
-      "QRS",
-      "PROARRITMIA",
-      "CARDIOPATIA_ESTRUCTURAL",
-      "BLOQUEO_NODAL_AV",
-      "FUNCION_RENAL"
-    ],
-    "alerts": [
-      "No usar en FA con cardiopatía estructural significativa",
-      "Ajustar lentamente y controlar ECG."
-    ],
-    "adverseEffects": {
-      "common": [
-        "mareo",
-        "alteraciones visuales",
-        "cefalea",
-        "náuseas",
-        "disnea"
-      ],
-      "dangerous": [
-        "proarritmia ventricular",
-        "ensanchamiento marcado de QRS",
-        "bloqueo AV",
-        "insuficiencia cardíaca",
-        "aumento de mortalidad post-IAM con cardiopatía estructural"
-      ]
-    },
+    "class": "Antiarrítmico clase Ic",
+    "pharmacologicClass": "Bloqueador potente de canales de sodio",
+    "mechanism": "Bloqueador potente de canales de sodio. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP2D6 y eliminación renal; semivida ~12–27 h.",
+    "indications": "Arritmias supraventriculares seleccionadas y taquicardia ventricular sostenida en pacientes cuidadosamente evaluados.",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 50/100/150 mg.",
+    "presentations": "Comprimidos 50/100/150 mg.",
+    "dose": "FA/PSVT: iniciar 50 mg VO cada 12 h; titular en incrementos de 50 mg 2 veces/día, máximo usual 300 mg/día. TV: puede iniciar 100 mg cada 12 h, máximo 400 mg/día.",
+    "pediatricDose": "Dosis por edad/superficie y niveles, bajo cardiología. AUTOMATABLE=NO.",
+    "renalDose": "CrCl ≤35: iniciar 100 mg/día o 50 mg 2 veces/día; titular lentamente con niveles.",
+    "hepaticDose": "Hepatopatía importante: usar solo si beneficio supera riesgo, con niveles.",
+    "dangerousAdverseEffects": "Proarritmia, muerte en cardiopatía estructural/pos-IAM, bloqueo, IC y toxicidad neurológica.",
+    "contraindications": "Bloqueo AV de 2º/3º grado o bifascicular sin marcapasos y shock cardiogénico.",
+    "interactions": "Amiodarona, digoxina, betabloqueantes, CYP2D6, otros antiarrítmicos y fármacos que alteran conducción.",
+    "administration": "VO cada 12 h; ECG y electrolitos antes y durante titulación.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos limitados; usar solo si es necesario.",
+    "lactation": "Pasa a leche; evaluar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Proarritmia, muerte en cardiopatía estructural/pos-IAM, bloqueo, IC y toxicidad neurológica. Uso/titulação bloqueados sem diagnóstico eletrofisiológico, ECG, exclusão de cardiopatia estrutural/isquêmica, CrCl, fígado, K/Mg e interações.",
+    "adverseEffects": "Mareo, trastorno visual, disnea, cefalea y náusea. Graves: Proarritmia, muerte en cardiopatía estructural/pos-IAM, bloqueo, IC y toxicidad neurológica.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a30103c5-a261-49a5-a7b3-f43eb77e87b7&version=2",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flecainide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/018830s029lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a30103c5-a261-49a5-a7b3-f43eb77e87b7&version=2"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flecainide"
   },
   "name": {
     "pt": "Flecainida",
@@ -245,19 +87,21 @@
   "keywords": [
     "flecainida"
   ],
-  "dataVersion": "clinical-data-v1-0747e91418de0cc9",
-  "clinicalContentSha256": "0747e91418de0cc9ea5b45b06cf25ea3dd7beb8c54e670983e8ec9dca5e9cba0",
+  "dataVersion": "clinical-data-v1-55b02c8f3820436e",
+  "clinicalContentSha256": "55b02c8f3820436eb5a7dc1415946ef29be89db3f0b1f96ad64b738fb8e52cc2",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "flecainida.mcGoldClinicalV1",
-    "group": "GOLD_GROUP07_CARDIO_10",
-    "review": "2026-09",
+    "lote": "035",
     "requiredFields": 33,
-    "contentSha256": "35d3ecca97eb7028086f7adf7cdcc69ac366bc6b80eaf8e410720c10d4749df3",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "fd6321700fc0486f65ffd87ea383edb96dd6acd7fbededd8d8d99bf146822690",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

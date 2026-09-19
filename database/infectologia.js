@@ -8595,3 +8595,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:entecavir:END */
+/* GOLD33_SELECTIVE:fluconazol:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB;if(!db||!db["fluconazol"])throw new Error("GOLD33_MISSING_CANONICAL:fluconazol");db["fluconazol"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "035",
+    "requiredFieldCount": 33,
+    "approvedSha256": "fd6321700fc0486f65ffd87ea383edb96dd6acd7fbededd8d8d99bf146822690",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fluconazol",
+    "class": "Antifúngico triazólico",
+    "pharmacologicClass": "Inibidor da 14-alfa-desmetilase fúngica",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 50/100/150/200 mg, suspensão 10/40 mg/mL e injeção 2 mg/mL.",
+    "presentations": "Comprimidos 50/100/150/200 mg, suspensão 10/40 mg/mL e injeção 2 mg/mL.",
+    "mechanism": "Inibidor da 14-alfa-desmetilase fúngica. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Alta biodisponibilidade, baixa ligação, eliminação renal e meia-vida ~30 h.",
+    "indications": "Candidíase e criptococose; indicação, carga, duração e susceptibilidade determinam o regime.",
+    "dose": "Varia por foco: candidemia frequentemente carga 800 mg e 400 mg/dia; candidíase vaginal não complicada 150 mg dose única; confirmar diretriz e espécie.",
+    "pediatricDose": "Dose por peso/foco, frequentemente carga 12 mg/kg e manutenção 6–12 mg/kg/dia, com máximos adultos. AUTOMATABLE=NO.",
+    "renalDose": "Após carga, reduzir 50% se CrCl ≤50; diálise exige dose pós-sessão.",
+    "hepaticDose": "Sem ajuste tabelado; cautela e monitorização por hepatotoxicidade.",
+    "commonAdverseEffects": "Náusea, dor abdominal, diarreia, cefaleia e rash.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, QT/torsades, SCAR, anafilaxia e toxicidade fetal em exposição alta/prolongada.",
+    "adverseEffects": "Náusea, dor abdominal, diarreia, cefaleia e rash. Graves: Hepatotoxicidade, QT/torsades, SCAR, anafilaxia e toxicidade fetal em exposição alta/prolongada.",
+    "contraindications": "Hipersensibilidade a azóis; combinações específicas que prolongam QT são contraindicadas.",
+    "interactions": "CYP2C9/2C19/3A4: varfarina, fenitoína, sulfonilureias, tacrolimo, rifampicina e muitos fármacos QT.",
+    "monitoring": "Resposta/culturas, fígado, rim, K/Mg, ECG se risco e interações.",
+    "administration": "VO ou IV; biodisponibilidade alta permite conversão 1:1 em mg.",
+    "preparation": "Reconstituir suspensão conforme produto; agitar.",
+    "infusionProtocol": "IV em taxa máxima usual 200 mg/h, conforme produto.",
+    "pregnancy": "Evitar altas doses/prolongado; dose única vaginal tem avaliação de risco distinta.",
+    "lactation": "Presente no leite; geralmente compatível em doses usuais, individualizar.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Hepatotoxicidade, QT/torsades, SCAR, anafilaxia e toxicidade fetal em exposição alta/prolongada. Regime bloqueado sem foco/espécie/susceptibilidade, idade/peso, CrCl/diálise, fígado, QT/eletrólitos, gestação e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluconazole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/019949s070lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluconazole"
+  },
+  "es": {
+    "name": "Fluconazol",
+    "class": "Antifúngico triazólico",
+    "pharmacologicClass": "Inhibidor de 14-alfa-desmetilasa fúngica",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 50/100/150/200 mg, suspensión 10/40 mg/mL e inyección 2 mg/mL.",
+    "presentations": "Comprimidos 50/100/150/200 mg, suspensión 10/40 mg/mL e inyección 2 mg/mL.",
+    "mechanism": "Inhibidor de 14-alfa-desmetilasa fúngica. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Alta biodisponibilidad, baja unión, eliminación renal y semivida ~30 h.",
+    "indications": "Candidiasis y criptococosis; indicación, carga, duración y susceptibilidad determinan pauta.",
+    "dose": "Varía por foco: candidemia frecuentemente carga 800 mg y 400 mg/día; candidiasis vaginal no complicada 150 mg dosis única; confirmar guía y especie.",
+    "pediatricDose": "Dosis por peso/foco, frecuentemente carga 12 mg/kg y mantenimiento 6–12 mg/kg/día, con máximos adultos. AUTOMATABLE=NO.",
+    "renalDose": "Tras carga, reducir 50% si CrCl ≤50; diálisis requiere dosis postsesión.",
+    "hepaticDose": "Sin ajuste tabulado; precaución y vigilancia por hepatotoxicidad.",
+    "commonAdverseEffects": "Náusea, dolor abdominal, diarrea, cefalea y erupción.",
+    "dangerousAdverseEffects": "Hepatotoxicidad, QT/torsades, SCAR, anafilaxia y toxicidad fetal con exposición alta/prolongada.",
+    "adverseEffects": "Náusea, dolor abdominal, diarrea, cefalea y erupción. Graves: Hepatotoxicidad, QT/torsades, SCAR, anafilaxia y toxicidad fetal con exposición alta/prolongada.",
+    "contraindications": "Hipersensibilidad a azoles; combinaciones específicas que prolongan QT están contraindicadas.",
+    "interactions": "CYP2C9/2C19/3A4: warfarina, fenitoína, sulfonilureas, tacrolimus, rifampicina y muchos fármacos QT.",
+    "monitoring": "Respuesta/cultivos, hígado, riñón, K/Mg, ECG si riesgo e interacciones.",
+    "administration": "VO o IV; alta biodisponibilidad permite conversión 1:1 en mg.",
+    "preparation": "Reconstituir suspensión según producto; agitar.",
+    "infusionProtocol": "IV a velocidad máxima habitual 200 mg/h, según producto.",
+    "pregnancy": "Evitar dosis altas/prolongadas; dosis única vaginal tiene evaluación distinta.",
+    "lactation": "Presente en leche; generalmente compatible a dosis habituales, individualizar.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Hepatotoxicidad, QT/torsades, SCAR, anafilaxia y toxicidad fetal con exposición alta/prolongada. Regime bloqueado sem foco/espécie/susceptibilidade, idade/peso, CrCl/diálise, fígado, QT/eletrólitos, gestação e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluconazole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/019949s070lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluconazole"
+  }
+};})();
+/* GOLD33_SELECTIVE:fluconazol:END */

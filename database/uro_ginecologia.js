@@ -907,3 +907,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:carbetocina:END */
+/* GOLD33_SELECTIVE:finasterida_urologia:START */
+;(function(){var db=window.URO_GINECOLOGIA_DRUGS_DB;if(!db||!db["finasterida_urologia"])throw new Error("GOLD33_MISSING_CANONICAL:finasterida_urologia");db["finasterida_urologia"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "035",
+    "requiredFieldCount": 33,
+    "approvedSha256": "fd6321700fc0486f65ffd87ea383edb96dd6acd7fbededd8d8d99bf146822690",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Finasterida - urologia",
+    "class": "Inibidor da 5-alfa-redutase",
+    "pharmacologicClass": "Reduz conversão de testosterona em DHT",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 5 mg para HPB; apresentação 1 mg tem indicação diferente.",
+    "presentations": "Comprimidos 5 mg para HPB; apresentação 1 mg tem indicação diferente.",
+    "mechanism": "Reduz conversão de testosterona em DHT. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP3A4; meia-vida ~6 h, maior em idosos.",
+    "indications": "Tratamento da hiperplasia prostática benigna sintomática e redução de progressão urológica em homens com próstata aumentada.",
+    "dose": "5 mg VO uma vez ao dia, isolada ou com alfa-bloqueador conforme avaliação.",
+    "pediatricDose": "Não indicada em pediatria. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste.",
+    "hepaticDose": "Cautela em hepatopatia.",
+    "commonAdverseEffects": "Redução de libido, disfunção erétil, alteração ejaculatória e redução do volume seminal.",
+    "dangerousAdverseEffects": "Depressão/ideação suicida relatada, infertilidade, reação mamária e hipersensibilidade.",
+    "adverseEffects": "Redução de libido, disfunção erétil, alteração ejaculatória e redução do volume seminal. Graves: Depressão/ideação suicida relatada, infertilidade, reação mamária e hipersensibilidade.",
+    "contraindications": "Gestação e hipersensibilidade; não indicada para mulheres/crianças.",
+    "interactions": "Poucas interações clinicamente relevantes; avaliar terapia urológica associada.",
+    "monitoring": "Sintomas/fluxo, volume prostático, PSA basal e seriado, função sexual e humor.",
+    "administration": "VO com ou sem alimento; benefício pode exigir ≥6 meses.",
+    "preparation": "Comprimido pronto; gestantes não devem manipular comprimidos quebrados/esmagados.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Contraindicada; risco ao feto masculino.",
+    "lactation": "Não indicada.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Depressão/ideação suicida relatada, infertilidade, reação mamária e hipersensibilidade. Início bloqueado sem sintomas/volume prostático, PSA interpretável, exclusão de câncer/obstrução e diferenciação explícita da apresentação 1 mg.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=finasteride+5+mg",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/020180s044lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=finasteride+5+mg"
+  },
+  "es": {
+    "name": "Finasterida - urología",
+    "class": "Inhibidor de 5-alfa reductasa",
+    "pharmacologicClass": "Reduce conversión de testosterona en DHT",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 5 mg para HPB; presentación 1 mg tiene indicación diferente.",
+    "presentations": "Comprimidos 5 mg para HPB; presentación 1 mg tiene indicación diferente.",
+    "mechanism": "Reduce conversión de testosterona en DHT. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP3A4; semivida ~6 h, mayor en ancianos.",
+    "indications": "Tratamiento de hiperplasia prostática benigna sintomática y reducción de progresión urológica en varones con próstata aumentada.",
+    "dose": "5 mg VO una vez al día, sola o con alfabloqueante según evaluación.",
+    "pediatricDose": "No indicada en pediatría. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste.",
+    "hepaticDose": "Precaución en hepatopatía.",
+    "commonAdverseEffects": "Disminución de libido, disfunción eréctil, alteración eyaculatoria y menor volumen seminal.",
+    "dangerousAdverseEffects": "Depresión/ideación suicida informada, infertilidad, reacción mamaria e hipersensibilidad.",
+    "adverseEffects": "Disminución de libido, disfunción eréctil, alteración eyaculatoria y menor volumen seminal. Graves: Depresión/ideación suicida informada, infertilidad, reacción mamaria e hipersensibilidad.",
+    "contraindications": "Embarazo e hipersensibilidad; no indicada para mujeres/niños.",
+    "interactions": "Pocas interacciones clínicamente relevantes; evaluar terapia urológica asociada.",
+    "monitoring": "Síntomas/flujo, volumen prostático, PSA basal y seriado, función sexual y ánimo.",
+    "administration": "VO con o sin alimentos; beneficio puede requerir ≥6 meses.",
+    "preparation": "Comprimido listo; embarazadas no deben manipular comprimidos rotos/triturados.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Contraindicada; riesgo para feto masculino.",
+    "lactation": "No indicada.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Depresión/ideación suicida informada, infertilidad, reacción mamaria e hipersensibilidad. Início bloqueado sem sintomas/volume prostático, PSA interpretável, exclusão de câncer/obstrução e diferenciação explícita da apresentação 1 mg.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=finasteride+5+mg",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/020180s044lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=finasteride+5+mg"
+  }
+};})();
+/* GOLD33_SELECTIVE:finasterida_urologia:END */
