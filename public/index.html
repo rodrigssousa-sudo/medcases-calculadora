@@ -29987,6 +29987,46 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     setNativeResultsVisibility(mountedElements, currentMode === "az");
   }
 
+  /* CALC-FARMACOS-CLEAN-REOPEN-V1
+     A module close is a navigation boundary: no query, tab or subpage state
+     may leak into the next Fármacos session. Reuse the canonical owners and
+     renderer already held by this lifecycle instead of introducing a second
+     search/navigation engine. */
+  function resetFarmacosRoot(reason) {
+    var existing = document.getElementById("farmacos-v2-shell");
+    var elements = mountedElements;
+    if (!existing || !elements || !elements.input) return false;
+
+    existing.removeAttribute("data-mc-fnav-results-active");
+    existing.removeAttribute("data-mc-app-subpage");
+    existing.removeAttribute("data-mc-group-search-query");
+    existing.removeAttribute("data-mc-group-search-visible");
+    var results = existing.querySelector(".mc-fnav-results");
+    if (results) results.removeAttribute("data-source-mode");
+    if (typeof window.__MC_FARMACOS_APP_SUBPAGE_EXIT === "function") {
+      window.__MC_FARMACOS_APP_SUBPAGE_EXIT(existing);
+    }
+
+    elements.input.value = "";
+    try { elements.input.blur(); } catch (error) {}
+    activeContext = "";
+    setMode("az", elements, existing);
+    renderCanonicalAz(existing, elements, false);
+    if (typeof window.hmFilterDrugs === "function") window.hmFilterDrugs("");
+
+    var clear = document.getElementById("hm-search-clear");
+    if (clear) clear.style.setProperty("display", "none");
+
+    existing.setAttribute("data-mc-clean-reopen", "CALC-FARMACOS-CLEAN-REOPEN-V1");
+    if (window.__MC_FARMACOS_CLEAN_REOPEN_V1) {
+      window.__MC_FARMACOS_CLEAN_REOPEN_V1.lastReset = {
+        reason: reason || "unspecified",
+        timestamp: Date.now()
+      };
+    }
+    return true;
+  }
+
   function installMaintenance() {
     if (maintenanceTimer) {
       window.clearInterval(maintenanceTimer);
@@ -30039,6 +30079,8 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
 
         if (id !== "farmacos") return;
 
+        resetFarmacosRoot("farmacos-open");
+
         var existing = document.getElementById("farmacos-v2-shell");
 
         if (existing && existing.isConnected && mountedElements) {
@@ -30049,6 +30091,35 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
         mountVisibleSurface("hub-open-event");
       });
     }
+
+    if (!window.__MC_FARMACOS_CLEAN_REOPEN_CLOSE_BOUND) {
+      var close = document.getElementById("calculator-overlay-close");
+      if (close) {
+        window.__MC_FARMACOS_CLEAN_REOPEN_CLOSE_BOUND = true;
+        var resetOnFarmacosClose = function () {
+          var card = document.getElementById("hub-card-farmacos");
+          if (
+            card &&
+            (
+              card.classList.contains("is-open") ||
+              card.classList.contains("mc-overlay-projected-card")
+            )
+          ) {
+            resetFarmacosRoot("farmacos-close");
+          }
+        };
+        close.addEventListener("pointerdown", resetOnFarmacosClose, true);
+        close.addEventListener("click", resetOnFarmacosClose, true);
+      }
+    }
+
+    window.__MC_FARMACOS_CLEAN_REOPEN_V1 = {
+      build: "CALC-FARMACOS-CLEAN-REOPEN-V1",
+      reset: resetFarmacosRoot,
+      lastReset: window.__MC_FARMACOS_CLEAN_REOPEN_V1
+        ? window.__MC_FARMACOS_CLEAN_REOPEN_V1.lastReset
+        : null
+    };
 
     window.__MC_FARMACOS_FREEZE_V1_B_R3 = {
       build: "MEDCASES-MODULE-SURFACE-SINGLE-OWNER-V1-B-R0-R1",
@@ -68576,8 +68647,8 @@ console.info('['+BUILD+'] MOUNTED',{
 })();
 </script>
 <!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V1 END -->
-<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=630-desktop-grid-aligned" />
-<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=630-desktop-grid-aligned" />
+<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=631-home-grid-farmacos-clean-reopen" />
+<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=631-home-grid-farmacos-clean-reopen" />
 
 </body>
 </html>
