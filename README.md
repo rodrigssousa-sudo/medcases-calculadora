@@ -4,6 +4,10 @@ Aplicativo web de referência clínica para prescrição, cálculo de doses, sco
 de gravidade, eletrólitos, fluidoterapia e função renal — voltado a
 médicos/estudantes de medicina, em PT-BR e ES.
 
+**Eletrólitos — revisão 646 (19/09/2026):** consulte os
+[estados de homologação e pendências clínicas](docs/ELECTROLYTES_VALIDATION.md).
+PASS técnico não equivale a homologação clínica.
+
 **Versão atual: BUILD 273 — UX Polish (Refatoração Nativa)**
 
 ## ⚙️ BUILD 273 — UX POLISH (Refatoração Nativa)
