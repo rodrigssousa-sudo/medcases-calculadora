@@ -68514,12 +68514,12 @@ console.info('['+BUILD+'] MOUNTED',{
   else start();
 })();
 </script>
-<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V1 BEGIN -->
-<script id="medcases-farmacos-nav-single-panel-v1">
+<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V2 BEGIN -->
+<script id="medcases-farmacos-nav-single-panel-v2">
 (() => {
   'use strict';
-  const BUILD='CALC-FARMACOS-NAV-SINGLE-PANEL-V1';
-  if (window.__mcFarmacosNavSinglePanelV1) return;
+  const BUILD='CALC-FARMACOS-NAV-SINGLE-PANEL-V2';
+  if (window.__mcFarmacosNavSinglePanelV2) return;
 
   let scheduled=0;
   const microtask=callback => window.queueMicrotask
@@ -68534,17 +68534,35 @@ console.info('['+BUILD+'] MOUNTED',{
     sh?.querySelector('[data-farmacos-mode].is-active,[data-farmacos-mode][aria-selected="true"]')
   ) || 'az';
 
+  const lockVisiblePanel=(sh,mode) => {
+    const runtime=sh.querySelector(':scope > #mc-pharm-runtime-panel');
+    const canonical=[...sh.querySelectorAll(':scope > [data-farmacos-panel]')];
+    canonical.forEach(panel => {
+      const active=mode!=='groups' && panel.getAttribute('data-farmacos-panel')===mode;
+      panel.classList.toggle('is-active',active);
+      panel.style.setProperty('display',active?'block':'none','important');
+      panel.setAttribute('aria-hidden',active?'false':'true');
+    });
+    if (runtime) {
+      const active=mode==='groups';
+      runtime.classList.toggle('is-active',active);
+      runtime.style.setProperty('display',active?'block':'none','important');
+      runtime.setAttribute('aria-hidden',active?'false':'true');
+    }
+  };
+
   const normalize=mode => {
     const sh=shell();
     if (!sh) return false;
     if (!['contexts','groups','az'].includes(mode)) mode='az';
 
     const owner=window.__mcFarmacosGlobalSearchInstantInputMobileV1BR0;
-    const runtime=sh.querySelector(':scope > #mc-pharm-runtime-panel');
-    const canonical=[...sh.querySelectorAll(':scope > [data-farmacos-panel]')];
+    lockVisiblePanel(sh,mode);
 
     if (mode==='groups') owner?.activateGroups?.();
     else owner?.deactivateGroups?.();
+
+    lockVisiblePanel(sh,mode);
 
     sh.dataset.mcFarmNavMode=mode;
     [...sh.querySelectorAll('[data-farmacos-mode]')].forEach(tab => {
@@ -68555,15 +68573,6 @@ console.info('['+BUILD+'] MOUNTED',{
       tab.tabIndex=selected?0:-1;
     });
 
-    canonical.forEach(panel => {
-      panel.style.removeProperty('display');
-      panel.classList.toggle(
-        'is-active',
-        mode!=='groups' && panel.getAttribute('data-farmacos-panel')===mode
-      );
-    });
-
-    if (runtime) runtime.classList.toggle('is-active',mode==='groups');
     return true;
   };
 
@@ -68597,7 +68606,9 @@ console.info('['+BUILD+'] MOUNTED',{
     ) {
       const sh=shell();
       if (sh && currentMode(sh)!=='az') {
+        normalize('az');
         sh.querySelector('[data-farmacos-mode="az"]')?.click();
+        normalize('az');
         schedule('az');
         try { search.focus({preventScroll:true}); }
         catch (_) { search.focus(); }
@@ -68626,7 +68637,9 @@ console.info('['+BUILD+'] MOUNTED',{
     if (!sh || currentMode(sh)==='az') return;
     const az=sh.querySelector('[data-farmacos-mode="az"]');
     if (!az) return;
+    normalize('az');
     az.click();
+    normalize('az');
     schedule('az');
     try { input.focus({preventScroll:true}); }
     catch (_) { input.focus(); }
@@ -68639,16 +68652,16 @@ console.info('['+BUILD+'] MOUNTED',{
     return normalize(currentMode(sh));
   };
 
-  window.__mcFarmacosNavSinglePanelV1=Object.freeze({build:BUILD,normalize,schedule});
+  window.__mcFarmacosNavSinglePanelV2=Object.freeze({build:BUILD,normalize,schedule});
   microtask(boot);
   nextFrame(() => nextFrame(boot));
   window.setTimeout(boot,250);
   window.setTimeout(boot,800);
 })();
 </script>
-<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V1 END -->
-<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=631-home-grid-farmacos-clean-reopen" />
-<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=631-home-grid-farmacos-clean-reopen" />
+<!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V2 END -->
+<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=632-farmacos-atomic-first-key" />
+<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=632-farmacos-atomic-first-key" />
 
 </body>
 </html>
