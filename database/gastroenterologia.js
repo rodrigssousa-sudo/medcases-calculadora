@@ -5184,3 +5184,93 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:ustekinumabe:END */
+/* GOLD33_SELECTIVE:vedolizumabe:START */
+;(function(){var db=window.GASTROENTEROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="vedolizumabe";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vedolizumabe:"+matches.length);drug=matches[0];}else{drug=db&&db["vedolizumabe"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="vedolizumabe";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vedolizumabe:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:vedolizumabe");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "081",
+    "requiredFieldCount": 33,
+    "approvedSha256": "609af1549489db1824524932b04a395c69577c07bdea7bb509e0d0a82b8d99cb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Vedolizumabe",
+    "class": "Anticorpo monoclonal anti-integrina alfa4beta7",
+    "pharmacologicClass": "Anticorpo monoclonal anti-integrina alfa4beta7",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frascos IV e canetas/seringas SC em forças específicas.",
+    "presentations": "Frascos IV e canetas/seringas SC em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Colite ulcerativa e doença de Crohn moderadas a graves em pacientes elegíveis.",
+    "dose": "Indução e manutenção IV ou SC conforme produto e indicação. Avaliar infecção, fígado, vacinação e resposta antes de continuar.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Nasofaringite, cefaleia, artralgia e náusea.",
+    "dangerousAdverseEffects": "Infecção grave, reação à infusão/anafilaxia, hepatotoxicidade e risco teórico de PML.",
+    "adverseEffects": "Nasofaringite, cefaleia, artralgia e náusea.; Infecção grave, reação à infusão/anafilaxia, hepatotoxicidade e risco teórico de PML.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Infecção grave, reação à infusão/anafilaxia, hepatotoxicidade e risco teórico de PML.",
+    "alerts": "Infecção grave, reação à infusão/anafilaxia, hepatotoxicidade e risco teórico de PML.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vedolizumabe",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vedolizumabe"
+  },
+  "es": {
+    "name": "Vedolizumabe",
+    "class": "Anticorpo monoclonal anti-integrina alfa4beta7",
+    "pharmacologicClass": "Anticorpo monoclonal anti-integrina alfa4beta7",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frascos IV y canetas/seringas SC em forças específicas.",
+    "presentations": "Frascos IV y canetas/seringas SC em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Colite ulcerativa y doença de Crohn moderadas a graves em pacientes elegíveis.",
+    "dose": "Indução y manutenção IV ou SC conforme produto y indicação. Avaliar infecção, fígado, vacinação y resposta antes de continuar.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Nasofaringite, cefaleia, artralgia y náusea.",
+    "dangerousAdverseEffects": "Infecção grave, reação à infusão/anafilaxia, hepatotoxicidade y risco teórico de PML.",
+    "adverseEffects": "Nasofaringite, cefaleia, artralgia y náusea.; Infecção grave, reação à infusão/anafilaxia, hepatotoxicidade y risco teórico de PML.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Infecção grave, reação à infusão/anafilaxia, hepatotoxicidade y risco teórico de PML.",
+    "alerts": "Infecção grave, reação à infusão/anafilaxia, hepatotoxicidade y risco teórico de PML.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vedolizumabe",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vedolizumabe"
+  }
+};})();
+/* GOLD33_SELECTIVE:vedolizumabe:END */

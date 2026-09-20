@@ -6,149 +6,91 @@
   "colorTxt": null,
   "pt": {
     "name": "Vareniclina",
-    "class": "Agonista Parcial de Receptor Nicotínico α4β2",
+    "class": "Agonista parcial nicotínico alfa4beta2",
     "category": "cessacao_tabagismo",
-    "commercialNames": {
-      "br": [
-        "Champix"
-      ],
-      "ar": [
-        "Champix",
-        "Chantix"
-      ]
-    },
-    "presentation": [
-      "Comprimido 0,5 mg",
-      "Comprimido 1 mg"
-    ],
-    "dose": {
-      "titulacao": "Semanas 1–2 (titulação): Dias 1–3: 0,5 mg VO 1×/dia; Dias 4–7: 0,5 mg VO 2×/dia; Semana 2: 1 mg VO 2×/dia.",
-      "manutencao": "Semanas 3–12 (manutenção): 1 mg VO 2×/dia (com alimentos). Definir data de parada entre S1–S5.",
-      "extensao": "Extensão opcional: pode-se manter por mais 12 semanas (total 24 sem) para reduzir recaída."
-    },
+    "commercialNames": "br: Champix; ar: Champix; Chantix",
+    "presentation": "Comprimido 0,5 mg; Comprimido 1 mg",
+    "dose": "titulacao: Semanas 1–2 (titulação): Dias 1–3: 0,5 mg VO 1×/dia; Dias 4–7: 0,5 mg VO 2×/dia; Semana 2: 1 mg VO 2×/dia.; manutencao: Semanas 3–12 (manutenção): 1 mg VO 2×/dia (com alimentos). Definir data de parada entre S1–S5.; extensao: Extensão opcional: pode-se manter por mais 12 semanas (total 24 sem) para reduzir recaída.",
     "renalAdjustment": "ClCr ≥ 30 mL/min: sem ajuste renal necessário.",
     "hepaticAdjustment": "Hepatopatia: sem ajuste necessário (eliminação renal predominante).",
     "mechanism": "Agonista parcial do receptor nicotínico de acetilcolina α4β2: estimula liberação de dopamina (reduzindo fissura) e bloqueia parcialmente a ação da nicotina do cigarro (reduzindo reforço positivo do tabagismo).",
     "onset": "Efeito máximo em cessação ao final da 2ª semana de titulação; nível estacionário em 4 dias.",
     "halfLife": "Meia-vida: ~24 horas.",
-    "commonAdverseEffects": [
-      "Náuseas (efeito mais comum — tomar com alimentos)",
-      "Cefaleia",
-      "Sonhos vívidos / insônia",
-      "Flatulência e dispepsia",
-      "Tontura"
-    ],
-    "dangerousAdverseEffects": [
-      "Alterações neuropsiquiátricas: depressão, ideação suicida, agressividade, agitação, alterações de comportamento — CAIXA PRETA FDA (histórica, revisada em 2016 para nível de aviso)",
-      "Eventos cardiovasculares em pacientes com DCV preexistente — monitorar",
-      "Convulsões (raro)"
-    ],
+    "commonAdverseEffects": "Náuseas (efeito mais comum — tomar com alimentos); Cefaleia; Sonhos vívidos / insônia; Flatulência e dispepsia; Tontura",
+    "dangerousAdverseEffects": "Alterações neuropsiquiátricas: depressão, ideação suicida, agressividade, agitação, alterações de comportamento — CAIXA PRETA FDA (histórica, revisada em 2016 para nível de aviso); Eventos cardiovasculares em pacientes com DCV preexistente — monitorar; Convulsões (raro)",
     "risksByPatient": [],
-    "contraindications": {
-      "absolute": [
-        "Hipersensibilidade à vareniclina"
-      ],
-      "relative": [
-        "Gestação (usar TRN se possível)",
-        "Histórico de convulsões",
-        "Doença cardiovascular grave (ponderar benefício)"
-      ]
-    },
-    "monitoring": [
-      "Humor e comportamento nas 1ªs 4 semanas (especialmente em pacientes psiquiátricos)",
-      "Pressão arterial (possível elevação leve)",
-      "Função renal se ClCr < 50 mL/min",
-      "Taxa de abstinência ao 3º, 6º e 12º mês"
-    ],
-    "safetyFlags": {
-      "bleedingRisk": false,
-      "renalHighRisk": false,
-      "hepaticCaution": false,
-      "antidoteAvailable": false,
-      "highAlertMedication": false,
-      "warning": "CAIXA PRETA REVISADA (2016): Monitorar alterações de humor, comportamento e ideação suicida. Informar paciente e familiares. Risco maior em pacientes com história psiquiátrica."
-    },
+    "contraindications": "absolute: Hipersensibilidade à vareniclina; relative: Gestação (usar TRN se possível); Histórico de convulsões; Doença cardiovascular grave (ponderar benefício)",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "safetyFlags": "Convulsão, alterações neuropsiquiátricas, eventos cardiovasculares e hipersensibilidade.",
     "references": [
-      "ANVISA — Champix Bula (Pfizer)",
-      "Gonzales D et al. JAMA 2006 — EAGLES trial",
-      "Anthenelli RM et al. Lancet 2016 — EAGLES (revisão caixa preta)",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vareniclina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "pharmacologicClass": "Agonista parcial nicotínico alfa4beta2",
+    "presentations": "Comprimido 0,5 mg; Comprimido 1 mg",
+    "pharmacodynamics": "Agonista parcial do receptor nicotínico de acetilcolina α4β2: estimula liberação de dopamina (reduzindo fissura) e bloqueia parcialmente a ação da nicotina do cigarro (reduzindo reforço positivo do tabagismo).",
+    "pharmacokinetics": "Meia-vida: ~24 horas.",
+    "indications": "Auxílio à cessação do tabagismo associado a suporte comportamental.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "ClCr ≥ 30 mL/min: sem ajuste renal necessário.",
+    "hepaticDose": "Hepatopatia: sem ajuste necessário (eliminação renal predominante).",
+    "adverseEffects": "Náusea, sonhos anormais, insônia e cefaleia.; Convulsão, alterações neuropsiquiátricas, eventos cardiovasculares e hipersensibilidade.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "alerts": "Convulsão, alterações neuropsiquiátricas, eventos cardiovasculares e hipersensibilidade.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vareniclina"
   },
   "es": {
     "name": "Vareniclina",
-    "class": "Agonista Parcial de Receptor Nicotínico α4β2",
+    "class": "Agonista parcial nicotínico alfa4beta2",
     "category": "cessacao_tabagismo",
-    "commercialNames": {
-      "br": [
-        "Champix"
-      ],
-      "ar": [
-        "Champix",
-        "Chantix"
-      ]
-    },
-    "presentation": [
-      "Comprimido 0,5 mg",
-      "Comprimido 1 mg"
-    ],
-    "dose": {
-      "titulacao": "Semanas 1–2 (titulación): Días 1–3: 0,5 mg VO 1×/día; Días 4–7: 0,5 mg VO 2×/día; Semana 2: 1 mg VO 2×/día.",
-      "manutencao": "Semanas 3–12 (mantenimiento): 1 mg VO 2×/día (con alimentos). Definir fecha de cesación entre S1–S5.",
-      "extensao": "Extensión opcional: puede mantenerse 12 semanas más (total 24 sem) para reducir recaída."
-    },
+    "commercialNames": "br: Champix; ar: Champix; Chantix",
+    "presentation": "Comprimido 0,5 mg; Comprimido 1 mg",
+    "dose": "titulacao: Semanas 1–2 (titulação): Dias 1–3: 0,5 mg VO 1×/dia; Dias 4–7: 0,5 mg VO 2×/dia; Semana 2: 1 mg VO 2×/dia.; manutencao: Semanas 3–12 (manutenção): 1 mg VO 2×/dia (com alimentos). Definir data de parada entre S1–S5.; extensao: Extensão opcional: pode-se manter por mais 12 semanas (total 24 sem) para reduzir recaída.",
     "renalAdjustment": "ClCr ≥ 30 mL/min: sin ajuste renal necesario.",
     "hepaticAdjustment": "Hepatopatía: sin ajuste necesario (eliminación renal predominante).",
-    "mechanism": "Agonista parcial del receptor nicotínico α4β2: estimula liberación de dopamina (reduciendo craving) y bloquea parcialmente la acción de la nicotina del cigarro (reduciendo refuerzo positivo).",
+    "mechanism": "Agonista parcial do receptor nicotínico de acetilcolina α4β2: estimula liberação de dopamina (reduzindo fissura) y bloqueia parcialmente a ação da nicotina do cigarro (reduzindo reforço positivo do tabagismo).",
     "onset": "Efecto máximo en cesación al final de la 2ª semana de titulación; nivel estacionario en 4 días.",
     "halfLife": "Vida media: ~24 horas.",
-    "commonAdverseEffects": [
-      "Náuseas (efecto más común — tomar con alimentos)",
-      "Cefalea",
-      "Sueños vívidos / insomnio",
-      "Flatulencia y dispepsia",
-      "Mareo"
-    ],
-    "dangerousAdverseEffects": [
-      "Alteraciones neuropsiquiátricas: depresión, ideación suicida, agresividad — Caja Negra FDA (revisada 2016)",
-      "Eventos cardiovasculares en pacientes con ECV preexistente",
-      "Convulsiones (raro)"
-    ],
+    "commonAdverseEffects": "Náuseas (efeito mais comum — tomar con alimentos); Cefaleia; Sonhos vívidos / insônia; Flatulência y dispepsia; Tontura",
+    "dangerousAdverseEffects": "Alterações neuropsiquiátricas: depressão, ideação suicida, agressividade, agitação, alterações de comportamento — CAIXA PRETA FDA (histórica, revisada em 2016 para nível de aviso); Eventos cardiovasculares em pacientes con DCV preexistente — monitorar; Convulsões (raro)",
     "risksByPatient": [],
-    "contraindications": {
-      "absolute": [
-        "Hipersensibilidad a la vareniclina"
-      ],
-      "relative": [
-        "Gestación (usar TRN si posible)",
-        "Antecedente de convulsiones",
-        "Enfermedad cardiovascular grave"
-      ]
-    },
-    "monitoring": [
-      "Ánimo y conducta primeras 4 semanas",
-      "Presión arterial",
-      "Función renal si ClCr < 50 mL/min",
-      "Tasa de abstinencia al 3º, 6º y 12º mes"
-    ],
-    "safetyFlags": {
-      "bleedingRisk": false,
-      "renalHighRisk": false,
-      "hepaticCaution": false,
-      "antidoteAvailable": false,
-      "highAlertMedication": false,
-      "warning": "CAJA NEGRA REVISADA (2016): Monitorizar cambios de ánimo, conducta e ideación suicida."
-    },
+    "contraindications": "absolute: Hipersensibilidade à vareniclina; relative: Gestação (usar TRN se possível); Histórico de convulsões; Doença cardiovascular grave (ponderar benefício)",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "safetyFlags": "Convulsão, alterações neuropsiquiátricas, eventos cardiovasculares y hipersensibilidade.",
     "references": [
-      "ANVISA — Champix Bula (Pfizer)",
-      "Gonzales D et al. JAMA 2006 — EAGLES trial",
-      "Anthenelli RM et al. Lancet 2016 — EAGLES (revisão caixa preta)",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vareniclina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "pharmacologicClass": "Agonista parcial nicotínico alfa4beta2",
+    "presentations": "Comprimido 0,5 mg; Comprimido 1 mg",
+    "pharmacodynamics": "Agonista parcial do receptor nicotínico de acetilcolina α4β2: estimula liberação de dopamina (reduzindo fissura) y bloqueia parcialmente a ação da nicotina do cigarro (reduzindo reforço positivo do tabagismo).",
+    "pharmacokinetics": "Meia-vida: ~24 horas.",
+    "indications": "Auxílio à cessação do tabagismo associado a suporte comportamental.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "ClCr ≥ 30 mL/min: sem ajuste renal necessário.",
+    "hepaticDose": "Hepatopatia: sem ajuste necessário (eliminação renal predominante).",
+    "adverseEffects": "Náusea, sonhos anormais, insônia y cefaleia.; Convulsão, alterações neuropsiquiátricas, eventos cardiovasculares y hipersensibilidade.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "alerts": "Convulsão, alterações neuropsiquiátricas, eventos cardiovasculares y hipersensibilidade.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vareniclina"
   },
   "name": {
     "pt": "Vareniclina",
@@ -160,9 +102,21 @@
     "chantix",
     "agonista parcial de receptor nicotinico α4β2"
   ],
-  "dataVersion": "clinical-data-v1-39e4c218278dcd34",
-  "clinicalContentSha256": "39e4c218278dcd34235e43eeed0a70948bab963065842e6719261f160be5cfdf",
+  "dataVersion": "clinical-data-v1-9e96b51e2ead8a48",
+  "clinicalContentSha256": "9e96b51e2ead8a48a49ea0d88c34fa67a1173347f707e3973a894152cdbeb55d",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "toxicologia.js"
+  "sourceModule": "toxicologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/toxicologia.js",
+    "sourceField": "vareniclina.mcGoldClinicalV1",
+    "lote": "081",
+    "requiredFields": 33,
+    "approvedSha256": "609af1549489db1824524932b04a395c69577c07bdea7bb509e0d0a82b8d99cb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

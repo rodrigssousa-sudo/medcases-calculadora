@@ -17560,3 +17560,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:valbenazina:END */
+/* GOLD33_SELECTIVE:valproato_de_sodio:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="valproato_de_sodio";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:valproato_de_sodio:"+matches.length);drug=matches[0];}else{drug=db&&db["valproato_de_sodio"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="valproato_de_sodio";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:valproato_de_sodio:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:valproato_de_sodio");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "081",
+    "requiredFieldCount": 33,
+    "approvedSha256": "609af1549489db1824524932b04a395c69577c07bdea7bb509e0d0a82b8d99cb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Valproato de sódio/ácido valproico",
+    "class": "Antiepiléptico e estabilizador do humor",
+    "pharmacologicClass": "Antiepiléptico e estabilizador do humor",
+    "commercialNames": "br: Depakene; Valpakine; Valproato de Sódio; ar: Depakene; Valcote; Valproato de Sodio",
+    "presentation": "Comprimido/cápsula 250 mg; Comprimido 500 mg; Solução/xarope 250 mg/5 mL; Frasco-ampola EV 500 mg",
+    "presentations": "Comprimido/cápsula 250 mg; Comprimido 500 mg; Solução/xarope 250 mg/5 mL; Frasco-ampola EV 500 mg",
+    "mechanism": "Aumenta a neurotransmissão GABAérgica, bloqueia canais de sódio e modula canais de cálcio, reduzindo excitabilidade neuronal.",
+    "pharmacodynamics": "Aumenta a neurotransmissão GABAérgica, bloqueia canais de sódio e modula canais de cálcio, reduzindo excitabilidade neuronal.",
+    "pharmacokinetics": "Vida média aproximada: 9–16 horas em adultos.",
+    "indications": "Transtorno bipolar — mania aguda; Episódios mistos do transtorno bipolar; Manutenção do transtorno bipolar em casos selecionados; Epilepsia generalizada; Epilepsia focal; Estado de mal epiléptico em formulação EV; Profilaxia de enxaqueca; Impulsividade/agressividade associada a transtornos do humor em casos selecionados",
+    "dose": "adulto: Iniciar 10–15 mg/kg/dia. Para 70 kg: 700–1050 mg/dia.; manutencao: Dose usual: 750–2000 mg/dia, ajustada por resposta, tolerabilidade e nível sérico.; alvoSerico: Nível sérico usual: 50–100 mcg/mL; em mania pode-se usar 50–125 mcg/mL conforme protocolo.; maxDose: Dose máxima usual: 60 mg/kg/dia com monitorização especializada.",
+    "pediatricDose": "standard: 10–15 mg/kg/dia inicialmente.; severe: Titular até 20–60 mg/kg/dia conforme indicação e nível sérico.; maxDose: 60 mg/kg/dia",
+    "renalDose": "Sem ajuste renal habitual, mas interpretar nível sérico com cautela em uremia ou hipoalbuminemia.",
+    "hepaticDose": "Monitorar função hepática antes e durante o tratamento.",
+    "commonAdverseEffects": "Náuseas; Sonolência; Tremor; Ganho de peso; Queda de cabelo; Diarreia; Aumento de transaminases",
+    "dangerousAdverseEffects": "Hepatotoxicidade grave; Pancreatite; Teratogenicidade importante; Trombocitopenia; Hiperamonemia/encefalopatia; Reação cutânea grave rara; Síndrome dos ovários policísticos/alterações endócrinas",
+    "adverseEffects": "Náusea, tremor, sonolência, ganho de peso e alopecia.; Hepatotoxicidade fatal, pancreatite, hiperamonemia, trombocitopenia e malformações/neurodesenvolvimento fetal.",
+    "contraindications": "Doença hepática significativa; Distúrbio do ciclo da ureia; Gestação para transtorno bipolar/enxaqueca quando houver alternativa; Doença mitocondrial por mutação POLG; Pancreatite prévia associada ao fármaco; Hipersensibilidade ao valproato",
+    "interactions": "Lamotrigina: aumenta níveis e risco de rash grave; Carbapenêmicos: reduzem drasticamente níveis de valproato; AAS: pode aumentar fração livre de valproato; Varfarina/anticoagulantes: maior risco de sangramento; Fenitoína/fenobarbital/carbamazepina: interações bidirecionais relevantes; Álcool e sedativos: maior depressão do SNC",
+    "monitoring": "Evitar em mulheres com potencial gestacional sem planejamento e consentimento claro.; Solicitar TGO/TGP, bilirrubina, hemograma/plaquetas e peso antes e durante o tratamento.; Monitorar nível sérico após início/ajustes e se suspeita de toxicidade.; Investigar dor abdominal intensa, vômitos persistentes ou letargia por risco de pancreatite/hiperamonemia.; Não associar com carbapenêmicos se possível.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade fatal, pancreatite, hiperamonemia, trombocitopenia e malformações/neurodesenvolvimento fetal.",
+    "alerts": "Hepatotoxicidade fatal, pancreatite, hiperamonemia, trombocitopenia e malformações/neurodesenvolvimento fetal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valproato+de+sodio",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valproato+de+sodio"
+  },
+  "es": {
+    "name": "Valproato de sódio/ácido valproico",
+    "class": "Antiepiléptico y estabilizador do humor",
+    "pharmacologicClass": "Antiepiléptico y estabilizador do humor",
+    "commercialNames": "br: Depakene; Valpakine; Valproato de Sódio; ar: Depakene; Valcote; Valproato de Sodio",
+    "presentation": "Comprimido/cápsula 250 mg; Comprimido 500 mg; Solução/xarope 250 mg/5 mL; Frasco-ampola EV 500 mg",
+    "presentations": "Comprimido/cápsula 250 mg; Comprimido 500 mg; Solução/xarope 250 mg/5 mL; Frasco-ampola EV 500 mg",
+    "mechanism": "Aumenta a neurotransmissão GABAérgica, bloqueia canais de sódio y modula canais de cálcio, reduzindo excitabilidade neuronal.",
+    "pharmacodynamics": "Aumenta a neurotransmissão GABAérgica, bloqueia canais de sódio y modula canais de cálcio, reduzindo excitabilidade neuronal.",
+    "pharmacokinetics": "Vida média aproximada: 9–16 horas em adultos.",
+    "indications": "Transtorno bipolar — mania aguda; Episódios mistos do transtorno bipolar; Manutenção do transtorno bipolar em casos selecionados; Epilepsia generalizada; Epilepsia focal; Estado de mal epiléptico em formulação EV; Profilaxia de enxaqueca; Impulsividade/agressividade associada a transtornos do humor em casos selecionados",
+    "dose": "adulto: Iniciar 10–15 mg/kg/dia. Para 70 kg: 700–1050 mg/dia.; manutencao: Dose usual: 750–2000 mg/dia, ajustada por resposta, tolerabilidade y nível sérico.; alvoSerico: Nível sérico usual: 50–100 mcg/mL; em mania pode-se usar 50–125 mcg/mL conforme protocolo.; maxDose: Dose máxima usual: 60 mg/kg/dia con monitorização especializada.",
+    "pediatricDose": "standard: 10–15 mg/kg/dia inicialmente.; severe: Titular até 20–60 mg/kg/dia conforme indicação y nível sérico.; maxDose: 60 mg/kg/dia",
+    "renalDose": "Sem ajuste renal habitual, mas interpretar nível sérico con cautela em uremia ou hipoalbuminemia.",
+    "hepaticDose": "Monitorar función hepática antes y durante o tratamento.",
+    "commonAdverseEffects": "Náuseas; Sonolência; Tremor; Ganho de peso; Queda de cabelo; Diarreia; Aumento de transaminases",
+    "dangerousAdverseEffects": "Hepatotoxicidade grave; Pancreatite; Teratogenicidade importante; Trombocitopenia; Hiperamonemia/encefalopatia; Reação cutânea grave rara; Síndrome dos ovários policísticos/alterações endócrinas",
+    "adverseEffects": "Náusea, tremor, sonolência, ganho de peso y alopecia.; Hepatotoxicidade fatal, pancreatite, hiperamonemia, trombocitopenia y malformações/neurodesenvolvimento fetal.",
+    "contraindications": "Doença hepática significativa; Distúrbio do ciclo da ureia; Gestação para transtorno bipolar/enxaqueca quando houver alternativa; Doença mitocondrial por mutação POLG; Pancreatite prévia associada ao fármaco; Hipersensibilidade ao valproato",
+    "interactions": "Lamotrigina: aumenta níveis y risco de rash grave; Carbapenêmicos: reduzem drasticamente níveis de valproato; AAS: pode aumentar fração livre de valproato; Varfarina/anticoagulantes: maior risco de sangramento; Fenitoína/fenobarbital/carbamazepina: interações bidirecionais relevantes; Álcool y sedativos: maior depressão do SNC",
+    "monitoring": "Evitar em mulheres con potencial gestacional sem planejamento y consentimento claro.; Solicitar TGO/TGP, bilirrubina, hemograma/plaquetas y peso antes y durante o tratamento.; Monitorar nível sérico após início/ajustes y se suspeita de toxicidade.; Investigar dor abdominal intensa, vômitos persistentes ou letargia por risco de pancreatite/hiperamonemia.; No associar con carbapenêmicos se possível.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade fatal, pancreatite, hiperamonemia, trombocitopenia y malformações/neurodesenvolvimento fetal.",
+    "alerts": "Hepatotoxicidade fatal, pancreatite, hiperamonemia, trombocitopenia y malformações/neurodesenvolvimento fetal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valproato+de+sodio",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valproato+de+sodio"
+  }
+};})();
+/* GOLD33_SELECTIVE:valproato_de_sodio:END */

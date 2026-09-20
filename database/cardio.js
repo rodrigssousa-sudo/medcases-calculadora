@@ -73050,3 +73050,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:urapidil:END */
+/* GOLD33_SELECTIVE:valsartana:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="valsartana";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:valsartana:"+matches.length);drug=matches[0];}else{drug=db&&db["valsartana"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="valsartana";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:valsartana:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:valsartana");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "081",
+    "requiredFieldCount": 33,
+    "approvedSha256": "609af1549489db1824524932b04a395c69577c07bdea7bb509e0d0a82b8d99cb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Valsartana",
+    "class": "Antagonista do receptor de angiotensina II",
+    "pharmacologicClass": "Antagonista do receptor de angiotensina II",
+    "commercialNames": "Diovan",
+    "presentation": "Comprimidos orais; suspensão oral em produtos específicos.",
+    "presentations": "Comprimidos orais; suspensão oral em produtos específicos.",
+    "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Hipertensão em adultos e crianças 1-16 anos conforme bula; insuficiência cardíaca em adultos; pós-IAM em adultos clinicamente estáveis com disfunção ou insuficiência ventricular esquerda",
+    "dose": "hypertension: 80-160 mg uma vez ao dia; faixa 80-320 mg uma vez ao dia.; heartFailure: 40 mg duas vezes ao dia; titular para 80-160 mg duas vezes ao dia, máximo 320 mg/dia.; postMI: 20 mg duas vezes ao dia, podendo iniciar a partir de 12 h após IAM em paciente estável; titular até 160 mg duas vezes ao dia conforme tolerância.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "tontura; hipotensão; hipercalemia; aumento de creatinina; fadiga",
+    "dangerousAdverseEffects": "lesão renal aguda; hipercalemia grave; hipotensão sintomática; angioedema raro; toxicidade fetal",
+    "adverseEffects": "Tontura, hipotensão, aumento de potássio e creatinina.; Toxicidade fetal, insuficiência renal, hiperpotassemia e angioedema raro.",
+    "contraindications": "Gestação: suspender quando detectada; uso concomitante de alisquireno em pacientes com diabetes; hipersensibilidade ao fármaco",
+    "interactions": "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia; AINEs podem reduzir efeito e aumentar risco renal; Lítio pode acumular; Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
+    "monitoring": "Corrigir depleção de volume quando possível antes de iniciar; Reavaliar função renal e potássio após titulação; Não associar rotineiramente a IECA ou alisquireno",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Toxicidade fetal, insuficiência renal, hiperpotassemia e angioedema raro.",
+    "alerts": "Toxicidade fetal, insuficiência renal, hiperpotassemia e angioedema raro.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valsartana",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valsartana"
+  },
+  "es": {
+    "name": "Valsartana",
+    "class": "Antagonista do receptor de angiotensina II",
+    "pharmacologicClass": "Antagonista do receptor de angiotensina II",
+    "commercialNames": "Diovan",
+    "presentation": "Comprimidos orais; suspensão oral em produtos específicos.",
+    "presentations": "Comprimidos orais; suspensão oral em produtos específicos.",
+    "mechanism": "Bloqueia seletivamente o receptor AT1 y impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona y retenção de sódio. No inibe ECA nem aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Bloqueia seletivamente o receptor AT1 y impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona y retenção de sódio. No inibe ECA nem aumenta bradicinina de forma relevante.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Hipertensão em adultos y niños 1-16 anos conforme bula; insuficiência cardíaca em adultos; pós-IAM em adultos clinicamente estáveis con disfunción ou insuficiência ventricular esquerda",
+    "dose": "hypertension: 80-160 mg uma vez ao dia; faixa 80-320 mg uma vez ao dia.; heartFailure: 40 mg duas vezes ao dia; titular para 80-160 mg duas vezes ao dia, máximo 320 mg/dia.; postMI: 20 mg duas vezes ao dia, podendo iniciar a partir de 12 h após IAM em paciente estável; titular até 160 mg duas vezes ao dia conforme tolerância.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "tontura; hipotensão; hipercalemia; aumento de creatinina; fadiga",
+    "dangerousAdverseEffects": "lesão renal aguda; hipercalemia grave; hipotensão sintomática; angioedema raro; toxicidade fetal",
+    "adverseEffects": "Tontura, hipotensão, aumento de potássio y creatinina.; Toxicidade fetal, insuficiência renal, hiperpotassemia y angioedema raro.",
+    "contraindications": "Gestação: suspender quando detectada; uso concomitante de alisquireno em pacientes con diabetes; hipersensibilidade ao fármaco",
+    "interactions": "Potássio, substitutos de sal y diuréticos poupadores de potássio aumentam hipercalemia; AINEs podem reduzir efeito y aumentar risco renal; Lítio pode acumular; Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia y lesão renal",
+    "monitoring": "Corrigir depleção de volume quando possível antes de iniciar; Reavaliar función renal y potássio após titulação; No associar rotineiramente a IECA ou alisquireno",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Toxicidade fetal, insuficiência renal, hiperpotassemia y angioedema raro.",
+    "alerts": "Toxicidade fetal, insuficiência renal, hiperpotassemia y angioedema raro.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valsartana",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valsartana"
+  }
+};})();
+/* GOLD33_SELECTIVE:valsartana:END */

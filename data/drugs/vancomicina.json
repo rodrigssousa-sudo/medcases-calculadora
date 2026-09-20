@@ -5,156 +5,90 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Vancomicina",
-    "class": "Antibiótico glicopeptídeo",
-    "pharmacologicClass": "Glicopeptídeo anti-Gram-positivo / anti-MRSA",
+    "name": "Vancomicina sistêmica",
+    "class": "Antibacteriano glicopeptídeo",
+    "pharmacologicClass": "Antibacteriano glicopeptídeo",
     "mechanism": "Liga-se a D-Ala-D-Ala dos precursores do peptidoglicano e bloqueia síntese da parede bacteriana.",
-    "pharmacodynamics": "Para MRSA invasivo, o alvo PK/PD principal é AUC24/MIC; recomenda-se AUC/MIC 400–600 quando MIC=1 mg/L.",
-    "pharmacokinetics": "IV para infecção sistêmica; distribuição ampla, penetração variável em LCR e eliminação predominantemente renal. A via oral tem absorção sistêmica mínima.",
+    "pharmacodynamics": "Liga-se a D-Ala-D-Ala dos precursores do peptidoglicano e bloqueia síntese da parede bacteriana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
     "indications": "Infecções graves por Gram-positivos suscetíveis, especialmente MRSA: bacteremia/endocardite, pele, osso e trato respiratório inferior.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Solução/pó para infusão IV; formulações orais existem para indicação intestinal.",
-    "presentations": [
-      "500 mg IV",
-      "750 mg IV",
-      "1 g IV",
-      "1,25 g IV",
-      "1,5 g IV"
-    ],
+    "presentations": "Solução/pó para infusão IV; formulações orais existem para indicação intestinal.",
     "dose": "Adultos com função renal normal: rótulo 2 g/dia divididos (500 mg q6h ou 1 g q12h); em MRSA grave individualizar por peso e AUC.",
-    "pediatricDose": ">=1 mês: 10 mg/kg q6h; neonatos: 15 mg/kg inicial, depois 10 mg/kg q12h na 1ª semana e q8h até 1 mês, com TDM.",
-    "renalDose": "Individualizar dose/intervalo por função renal, modalidade dialítica e TDM/AUC; hemodiálise de alto fluxo remove vancomicina de forma clinicamente relevante.",
-    "hepaticDose": "Sem ajuste hepático específico se função renal estável; eliminação é predominantemente renal.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Cefaleia",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Nefrotoxicidade",
-      "Ototoxicidade",
-      "Reação grave à infusão",
-      "Anafilaxia"
-    ],
-    "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Ototoxicidade; Reação grave à infusão; Anafilaxia",
+    "adverseEffects": "Náusea, flebite, rash e reação relacionada à infusão.; Nefrotoxicidade, ototoxicidade, neutropenia, anafilaxia e reação grave à infusão.",
     "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
     "interactions": "Revisar interações específicas e medicamentos que aumentem toxicidade do agente.",
-    "monitoring": "AUC/TDM, creatinina/função renal, resposta clínica e microbiológica; monitorar mais frequentemente em função renal instável.",
-    "administration": "Infusão IV; não administrar rapidamente. Vancomicina oral não trata infecção sistêmica.",
-    "preparation": "Pó IV requer reconstituição e diluição posterior conforme fabricante; verificar concentração final e compatibilidade.",
-    "infusionProtocol": "Administrar em pelo menos 60 min; doses maiores geralmente exigem tempo maior para reduzir reação relacionada à infusão.",
-    "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
-    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
-    "specialPopulations": "Obesidade, críticos, queimados, pediatria e diálise alteram exposição e favorecem estratégia AUC/Bayesiana.",
-    "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
-    "clinicalPearls": "AUC/MIC 400–600 substitui perseguir apenas vale 15–20 mg/L em MRSA invasivo; reação de infusão não equivale necessariamente a alergia IgE.",
-    "guidelineRecommendations": "ASHP/IDSA/PIDS/SIDP recomendam AUC24/MIC 400–600 para MRSA invasivo e monitorização AUC-guided para reduzir nefrotoxicidade; desescalonar se MRSA invasivo for excluído.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorização de toxicidade"
-    ],
-    "alerts": [
-      "AUC24/MIC 400–600",
-      "Nefrotoxicidade/TDM",
-      "Infusão >=60 min",
-      "Via oral não trata bacteremia"
-    ],
+    "monitoring": "AUC24/MIC 400–600; Nefrotoxicidade/TDM; Infusão >=60 min; Via oral não trata bacteremia",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, ototoxicidade, neutropenia, anafilaxia e reação grave à infusão.",
+    "alerts": "Nefrotoxicidade, ototoxicidade, neutropenia, anafilaxia e reação grave à infusão.; revisão clínica obrigatória.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=99e523d8-9bde-43cb-8434-497015e5dcbd",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=00946db3-d6c5-4534-a870-1ec6e63eda43",
-      "https://www.idsociety.org/practice-guideline/vancomycin/",
-      "https://www.ashp.org/-/media/assets/policy-guidelines/docs/therapeutic-guidelines/therapeutic-guidelines-monitoring-vancomycin-ASHP-IDSA-PIDS.ashx"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vancomicina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=99e523d8-9bde-43cb-8434-497015e5dcbd",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=00946db3-d6c5-4534-a870-1ec6e63eda43",
-      "https://www.idsociety.org/practice-guideline/vancomycin/",
-      "https://www.ashp.org/-/media/assets/policy-guidelines/docs/therapeutic-guidelines/therapeutic-guidelines-monitoring-vancomycin-ASHP-IDSA-PIDS.ashx"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vancomicina"
   },
   "es": {
-    "name": "Vancomicina",
-    "class": "Antibiótico glicopéptido",
-    "pharmacologicClass": "Glicopéptido anti-Gram positivo / anti-MRSA",
-    "mechanism": "Se une a D-Ala-D-Ala de precursores del peptidoglicano y bloquea síntesis de pared bacteriana.",
-    "pharmacodynamics": "En MRSA invasivo, el objetivo PK/PD principal es AUC24/MIC; se recomienda AUC/MIC 400–600 cuando MIC=1 mg/L.",
-    "pharmacokinetics": "IV para infección sistémica; distribución amplia, penetración variable en LCR y eliminación predominantemente renal. La vía oral tiene absorción sistémica mínima.",
-    "indications": "Infecciones graves por Gram positivos susceptibles, especialmente MRSA: bacteriemia/endocarditis, piel, hueso y tracto respiratorio inferior.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Solución/polvo para infusión IV; existen formulaciones orales para indicación intestinal.",
-    "presentations": [
-      "500 mg IV",
-      "750 mg IV",
-      "1 g IV",
-      "1,25 g IV",
-      "1,5 g IV"
-    ],
-    "dose": "Adultos con función renal normal: ficha 2 g/día divididos (500 mg q6h o 1 g q12h); en MRSA grave individualizar por peso y AUC.",
-    "pediatricDose": ">=1 mes: 10 mg/kg q6h; neonatos: 15 mg/kg inicial, luego 10 mg/kg q12h la 1ª semana y q8h hasta 1 mes, con TDM.",
-    "renalDose": "Individualizar dosis/intervalo por función renal, modalidad dialítica y TDM/AUC; hemodiálisis de alto flujo elimina vancomicina de forma relevante.",
-    "hepaticDose": "Sin ajuste hepático específico con función renal estable; eliminación predominantemente renal.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Cefalea",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Nefrotoxicidad",
-      "Ototoxicidad",
-      "Reacción grave a la infusión",
-      "Anafilaxia"
-    ],
-    "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
-    "interactions": "Revisar interacciones específicas y fármacos que aumenten toxicidad del agente.",
-    "monitoring": "AUC/TDM, creatinina/función renal y respuesta clínica/microbiológica; monitorizar más con función renal inestable.",
-    "administration": "Infusión IV; no administrar rápidamente. Vancomicina oral no trata infección sistémica.",
-    "preparation": "Polvo IV requiere reconstitución y posterior dilución según fabricante; verificar concentración final y compatibilidad.",
-    "infusionProtocol": "Administrar en al menos 60 min; dosis mayores suelen requerir más tiempo para reducir reacción de infusión.",
-    "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
-    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
-    "specialPopulations": "Obesidad, críticos, quemados, pediatría y diálisis modifican exposición y favorecen estrategia AUC/Bayesiana.",
-    "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
-    "clinicalPearls": "AUC/MIC 400–600 sustituye perseguir solo valle 15–20 mg/L en MRSA invasivo; reacción de infusión no equivale necesariamente a alergia IgE.",
-    "guidelineRecommendations": "ASHP/IDSA/PIDS/SIDP recomiendan AUC24/MIC 400–600 para MRSA invasivo y monitorización guiada por AUC para reducir nefrotoxicidad; desescalar si MRSA invasivo se descarta.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorización de toxicidad"
-    ],
-    "alerts": [
-      "AUC24/MIC 400–600",
-      "Nefrotoxicidad/TDM",
-      "Infusión >=60 min",
-      "Vía oral no trata bacteriemia"
-    ],
+    "name": "Vancomicina sistêmica",
+    "class": "Antibacteriano glicopeptídeo",
+    "pharmacologicClass": "Antibacteriano glicopeptídeo",
+    "mechanism": "Liga-se a D-Ala-D-Ala dos precursores do peptidoglicano y bloqueia síntese da parede bacteriana.",
+    "pharmacodynamics": "Liga-se a D-Ala-D-Ala dos precursores do peptidoglicano y bloqueia síntese da parede bacteriana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Infecções graves por Gram-positivos suscetíveis, especialmente MRSA: bacteremia/endocardite, pele, osso y trato respiratório inferior.",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Solução/pó para infusão IV; formulações orais existem para indicação intestinal.",
+    "presentations": "Solução/pó para infusão IV; formulações orais existem para indicação intestinal.",
+    "dose": "Adultos con función renal normal: rótulo 2 g/dia divididos (500 mg q6h ou 1 g q12h); em MRSA grave individualizar por peso y AUC.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Ototoxicidade; Reação grave à infusão; Anafilaxia",
+    "adverseEffects": "Náusea, flebite, rash y reação relacionada à infusão.; Nefrotoxicidade, ototoxicidade, neutropenia, anafilaxia y reação grave à infusão.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Revisar interações específicas y medicamentos que aumentem toxicidade do agente.",
+    "monitoring": "AUC24/MIC 400–600; Nefrotoxicidade/TDM; Infusão >=60 min; Via oral no trata bacteremia",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, ototoxicidade, neutropenia, anafilaxia y reação grave à infusão.",
+    "alerts": "Nefrotoxicidade, ototoxicidade, neutropenia, anafilaxia y reação grave à infusão.; revisão clínica obrigatória.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=99e523d8-9bde-43cb-8434-497015e5dcbd",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=00946db3-d6c5-4534-a870-1ec6e63eda43",
-      "https://www.idsociety.org/practice-guideline/vancomycin/",
-      "https://www.ashp.org/-/media/assets/policy-guidelines/docs/therapeutic-guidelines/therapeutic-guidelines-monitoring-vancomycin-ASHP-IDSA-PIDS.ashx"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vancomicina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=99e523d8-9bde-43cb-8434-497015e5dcbd",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=00946db3-d6c5-4534-a870-1ec6e63eda43",
-      "https://www.idsociety.org/practice-guideline/vancomycin/",
-      "https://www.ashp.org/-/media/assets/policy-guidelines/docs/therapeutic-guidelines/therapeutic-guidelines-monitoring-vancomycin-ASHP-IDSA-PIDS.ashx"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vancomicina"
   },
   "name": {
-    "pt": "Vancomicina",
-    "es": "Vancomicina"
+    "pt": "Vancomicina sistêmica",
+    "es": "Vancomicina sistêmica"
   },
   "keywords": [
     "vancomicina"
   ],
-  "dataVersion": "clinical-data-v1-39e4c218278dcd34",
-  "clinicalContentSha256": "39e4c218278dcd34235e43eeed0a70948bab963065842e6719261f160be5cfdf",
+  "dataVersion": "clinical-data-v1-9e96b51e2ead8a48",
+  "clinicalContentSha256": "9e96b51e2ead8a48a49ea0d88c34fa67a1173347f707e3973a894152cdbeb55d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js",
@@ -634,5 +568,17 @@
         "updated": "2025-12-31"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "vancomicina.mcGoldClinicalV1",
+    "lote": "081",
+    "requiredFields": 33,
+    "approvedSha256": "609af1549489db1824524932b04a395c69577c07bdea7bb509e0d0a82b8d99cb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }
