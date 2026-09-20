@@ -215,3 +215,93 @@ window.GASTRO_IMUNO_DRUGS_DB = [
      Corticoide Alta Potência — Pulsoterapia autoimune · Transplante
   ══════════════════════════════════════════════════════════════ */
 ]; /* fim window.GASTRO_IMUNO_DRUGS_DB */
+/* GOLD33_SELECTIVE:mesalazina:START */
+;(function(){var db=window.GASTRO_IMUNO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="mesalazina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:mesalazina:"+matches.length);drug=matches[0];}else{drug=db&&db["mesalazina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:mesalazina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "049",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b8967508605bdc40fd2c87b15e7061b2af75f812dd0994ff79fade8e4ef57e46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Mesalazina",
+    "class": "Aminossalicilato anti-inflamatório intestinal",
+    "pharmacologicClass": "Aminossalicilato anti-inflamatório intestinal",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos/cápsulas/grânulos orais e formulações retais em diversas forças.",
+    "presentations": "Comprimidos/cápsulas/grânulos orais e formulações retais em diversas forças.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Indução e manutenção de remissão na colite ulcerativa; algumas formulações têm indicação para proctite.",
+    "dose": "A dose é estritamente dependente da formulação e local da doença: comprimidos/cápsulas de liberação modificada, grânulos, supositórios e enemas não são intercambiáveis mg por mg. Automação global bloqueada; usar rótulo do produto específico.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Cefaleia, dor abdominal, náusea, diarreia e flatulência.",
+    "dangerousAdverseEffects": "Nefrite intersticial/insuficiência renal, miocardite/pericardite, pancreatite, hepatotoxicidade e reação de intolerância aguda.",
+    "adverseEffects": "Cefaleia, dor abdominal, náusea, diarreia e flatulência.; Nefrite intersticial/insuficiência renal, miocardite/pericardite, pancreatite, hepatotoxicidade e reação de intolerância aguda.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Nefrite intersticial/insuficiência renal, miocardite/pericardite, pancreatite, hepatotoxicidade e reação de intolerância aguda.",
+    "alerts": "Nefrite intersticial/insuficiência renal, miocardite/pericardite, pancreatite, hepatotoxicidade e reação de intolerância aguda.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mesalamine",
+      "Fonte primária/oficial - https://gastro.org/clinical-guidance/management-of-mild-to-moderate-ulcerative-colitis/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mesalamine"
+  },
+  "es": {
+    "name": "Mesalazina",
+    "class": "Aminossalicilato anti-inflamatório intestinal",
+    "pharmacologicClass": "Aminossalicilato anti-inflamatório intestinal",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos/cápsulas/grânulos orais y formulações retais em diversas forças.",
+    "presentations": "Comprimidos/cápsulas/grânulos orais y formulações retais em diversas forças.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Indução y manutenção de remissão na colite ulcerativa; algumas formulações têm indicação para proctite.",
+    "dose": "A dosis é estritamente dependente da formulação y local da doença: comprimidos/cápsulas de liberação modificada, grânulos, supositórios y enemas no são intercambiáveis mg por mg. Automação global bloqueada; usar rótulo do produto específico.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Cefaleia, dor abdominal, náusea, diarreia y flatulência.",
+    "dangerousAdverseEffects": "Nefrite intersticial/insuficiência renal, miocardite/pericardite, pancreatite, hepatotoxicidade y reação de intolerância aguda.",
+    "adverseEffects": "Cefaleia, dor abdominal, náusea, diarreia y flatulência.; Nefrite intersticial/insuficiência renal, miocardite/pericardite, pancreatite, hepatotoxicidade y reação de intolerância aguda.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Nefrite intersticial/insuficiência renal, miocardite/pericardite, pancreatite, hepatotoxicidade y reação de intolerância aguda.",
+    "alerts": "Nefrite intersticial/insuficiência renal, miocardite/pericardite, pancreatite, hepatotoxicidade y reação de intolerância aguda.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mesalamine",
+      "Fonte primária/oficial - https://gastro.org/clinical-guidance/management-of-mild-to-moderate-ulcerative-colitis/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mesalamine"
+  }
+};})();
+/* GOLD33_SELECTIVE:mesalazina:END */

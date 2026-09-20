@@ -68190,3 +68190,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:manitol:END */
+/* GOLD33_SELECTIVE:mavacamten:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="mavacamten";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:mavacamten:"+matches.length);drug=matches[0];}else{drug=db&&db["mavacamten"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:mavacamten");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "049",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b8967508605bdc40fd2c87b15e7061b2af75f812dd0994ff79fade8e4ef57e46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Mavacamten",
+    "class": "Inibidor seletivo da miosina cardíaca",
+    "pharmacologicClass": "Inibidor seletivo da miosina cardíaca",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas 2,5; 5; 10 e 15 mg.",
+    "presentations": "Cápsulas 2,5; 5; 10 e 15 mg.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Cardiomiopatia hipertrófica obstrutiva sintomática em adultos elegíveis conforme rótulo.",
+    "dose": "Iniciar geralmente 5 mg VO uma vez/dia; ajustes para 2,5-15 mg dependem de ecocardiograma, gradiente, fração de ejeção e interações. Não titular sem protocolo específico.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Tontura e síncope.",
+    "dangerousAdverseEffects": "Disfunção sistólica/insuficiência cardíaca; interações CYP2C19/CYP3A4 podem causar toxicidade ou perda de eficácia.",
+    "adverseEffects": "Tontura e síncope.; Disfunção sistólica/insuficiência cardíaca; interações CYP2C19/CYP3A4 podem causar toxicidade ou perda de eficácia.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Disfunção sistólica/insuficiência cardíaca; interações CYP2C19/CYP3A4 podem causar toxicidade ou perda de eficácia.",
+    "alerts": "Disfunção sistólica/insuficiência cardíaca; interações CYP2C19/CYP3A4 podem causar toxicidade ou perda de eficácia.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mavacamten",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/214998s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mavacamten"
+  },
+  "es": {
+    "name": "Mavacamten",
+    "class": "Inibidor seletivo da miosina cardíaca",
+    "pharmacologicClass": "Inibidor seletivo da miosina cardíaca",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas 2,5; 5; 10 y 15 mg.",
+    "presentations": "Cápsulas 2,5; 5; 10 y 15 mg.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Cardiomiopatia hipertrófica obstrutiva sintomática em adultos elegíveis conforme rótulo.",
+    "dose": "Iniciar geralmente 5 mg VO uma vez/dia; ajustes para 2,5-15 mg dependem de ecocardiograma, gradiente, fração de ejeção y interações. No titular sem protocolo específico.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Tontura y síncope.",
+    "dangerousAdverseEffects": "Disfunción sistólica/insuficiência cardíaca; interações CYP2C19/CYP3A4 podem causar toxicidade ou perda de eficácia.",
+    "adverseEffects": "Tontura y síncope.; Disfunción sistólica/insuficiência cardíaca; interações CYP2C19/CYP3A4 podem causar toxicidade ou perda de eficácia.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Disfunción sistólica/insuficiência cardíaca; interações CYP2C19/CYP3A4 podem causar toxicidade ou perda de eficácia.",
+    "alerts": "Disfunción sistólica/insuficiência cardíaca; interações CYP2C19/CYP3A4 podem causar toxicidade ou perda de eficácia.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mavacamten",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/214998s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mavacamten"
+  }
+};})();
+/* GOLD33_SELECTIVE:mavacamten:END */

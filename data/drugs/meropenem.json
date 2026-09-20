@@ -6,141 +6,79 @@
   "colorTxt": null,
   "pt": {
     "name": "Meropenem",
-    "class": "Antibiótico beta-lactâmico de amplo espectro",
-    "pharmacologicClass": "Carbapenêmico",
+    "class": "Antibacteriano carbapenêmico",
+    "pharmacologicClass": "Antibacteriano carbapenêmico",
     "mechanism": "Liga PBPs e inibe síntese da parede; estável frente a muitas ESBL/AmpC, mas pode ser hidrolisado por carbapenemases.",
-    "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC é alvo central e infusão prolongada pode aumentar atingimento em críticos.",
-    "pharmacokinetics": "IV; baixa ligação proteica, ampla distribuição e eliminação renal; penetra LCR.",
+    "pharmacodynamics": "Liga PBPs e inibe síntese da parede; estável frente a muitas ESBL/AmpC, mas pode ser hidrolisado por carbapenemases.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
     "indications": "Infecções graves por Gram-negativos/anaeróbios suscetíveis, incluindo intra-abdominal, pele e meningite; importante para ESBL em focos graves.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Frascos IV.",
-    "presentations": [
-      "500 mg",
-      "1 g"
-    ],
+    "presentations": "Frascos IV.",
     "dose": "Adultos: 500 mg q8h para cSSSI; 1 g q8h para intra-abdominal e Pseudomonas em cSSSI; meningite/infecção grave usa maior exposição conforme protocolo.",
-    "pediatricDose": ">=3 meses: dose por foco; meningite 40 mg/kg q8h, máximo 2 g q8h. Sem experiência suficiente em pediatria com insuficiência renal.",
-    "renalDose": "CrCl >50: dose recomendada q8h; 26–50: mesma dose q12h; 10–25: metade q12h; <10: metade q24h. Dados insuficientes para HD/PD no rótulo citado.",
-    "hepaticDose": "Sem ajuste hepático rotineiro.",
-    "commonAdverseEffects": [
-      "Diarreia",
-      "Náusea",
-      "Rash",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidade/convulsões em exposição excessiva"
-    ],
-    "adverseEffects": "Eventos gastrointestinais, cutâneos e locais são comuns; hipersensibilidade, C. difficile, alterações hematológicas e neurotoxicidade podem ocorrer.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Diarreia; Náusea; Rash; Reação no local de administração",
+    "dangerousAdverseEffects": "Anafilaxia; SCAR/SJS-TEN; C. difficile; Citopenias; Neurotoxicidade/convulsões em exposição excessiva",
+    "adverseEffects": "Cefaleia, náusea, diarreia, rash e flebite.; Anafilaxia, convulsões, C. difficile, citopenias e reações cutâneas graves.",
     "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
     "interactions": "Valproato/divalproato pode cair rapidamente a níveis subterapêuticos; evitar combinação se possível. Probenecida aumenta exposição. Rever outros nefrotóxicos e compatibilidades.",
-    "monitoring": "Culturas/suscetibilidade quando indicadas, resposta clínica, função renal, hemograma e função hepática em cursos prolongados; vigiar alergia, C. difficile e neurotoxicidade.",
-    "administration": "IV; infusão 15–30 min ou bolus para doses selecionadas conforme rótulo.",
-    "preparation": "Reconstituir/diluir conforme fabricante; respeitar estabilidade limitada.",
-    "infusionProtocol": "Em críticos/Pseudomonas/MIC alta, protocolos podem usar infusão prolongada de 3 h para otimizar fT>MIC.",
-    "pregnancy": "Usar quando claramente indicado após avaliação risco-benefício; experiência clínica varia por agente.",
-    "lactation": "Geralmente compatível ou de baixo risco quando indicado; monitorar lactente para diarreia, candidíase ou rash.",
-    "specialPopulations": "DRC aumenta risco de neurotoxicidade; carbapenêmicos podem reduzir acentuadamente níveis de valproato.",
-    "patientEducation": "Completar o tratamento, não reutilizar antibiótico sem indicação e procurar atendimento por alergia grave, diarreia intensa ou sintomas neurológicos.",
-    "clinicalPearls": "Cobre ESBL e Pseudomonas suscetível, além de anaeróbios; não cobre MRSA/Enterococcus faecium e não deve ser presumido ativo contra CRE.",
-    "guidelineRecommendations": "IDSA 2026 favorece carbapenêmicos para ESBL grave/extraurinária quando apropriado; para Pseudomonas suscetível a beta-lactâmico tradicional, preservar carbapenêmico quando possível.",
-    "safetyFlags": [
-      "Alergia beta-lactâmica",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidade por acúmulo"
-    ],
-    "alerts": [
-      "Interação grave com valproato",
-      "Ajustar na DRC",
-      "Não assumir atividade contra CRE",
-      "Infusão prolongada pode otimizar exposição"
-    ],
+    "monitoring": "Interação grave com valproato; Ajustar na DRC; Não assumir atividade contra CRE; Infusão prolongada pode otimizar exposição",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Anafilaxia, convulsões, C. difficile, citopenias e reações cutâneas graves.",
+    "alerts": "Anafilaxia, convulsões, C. difficile, citopenias e reações cutâneas graves.; Interação grave com valproato; Ajustar na DRC; Não assumir atividade contra CRE; Infusão prolongada pode otimizar exposição",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8848f4a-bca9-4978-b0a1-38483fd4d639",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=meropenem",
+      "Fonte primária/oficial - https://www.idsociety.org/practice-guideline/amr-guidance/"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8848f4a-bca9-4978-b0a1-38483fd4d639",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=meropenem"
   },
   "es": {
     "name": "Meropenem",
-    "class": "Antibiótico betalactámico de amplio espectro",
-    "pharmacologicClass": "Carbapenémico",
-    "mechanism": "Se une a PBP e inhibe síntesis de pared; estable frente a muchas ESBL/AmpC, pero puede ser hidrolizado por carbapenemasas.",
-    "pharmacodynamics": "Bactericida dependiente del tiempo; fT>MIC es objetivo central y la infusión prolongada puede aumentar logro en críticos.",
-    "pharmacokinetics": "IV; baja unión proteica, amplia distribución y eliminación renal; penetra LCR.",
-    "indications": "Infecciones graves por Gram negativos/anaerobios susceptibles, incluida intraabdominal, piel y meningitis; importante para ESBL en focos graves.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Viales IV.",
-    "presentations": [
-      "500 mg",
-      "1 g"
-    ],
-    "dose": "Adultos: 500 mg q8h para cSSSI; 1 g q8h para intraabdominal y Pseudomonas en cSSSI; meningitis/infección grave usa mayor exposición según protocolo.",
-    "pediatricDose": ">=3 meses: dosis según foco; meningitis 40 mg/kg q8h, máximo 2 g q8h. Sin experiencia suficiente en pediatría con insuficiencia renal.",
-    "renalDose": "ClCr >50: dosis recomendada q8h; 26–50: misma dosis q12h; 10–25: mitad q12h; <10: mitad q24h. Datos insuficientes para HD/PD en ficha citada.",
-    "hepaticDose": "Sin ajuste hepático rutinario.",
-    "commonAdverseEffects": [
-      "Diarrea",
-      "Náuseas",
-      "Exantema",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "SCAR/SJS-TEN",
-      "C. difficile",
-      "Citopenias",
-      "Neurotoxicidad/convulsiones por exposición excesiva"
-    ],
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales, cutáneos y locales; pueden ocurrir hipersensibilidad, C. difficile, alteraciones hematológicas y neurotoxicidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco o a la clase betalactámica relacionada; valorar reacción inmediata previa a penicilinas/cefalosporinas/carbapenémicos.",
-    "interactions": "Valproato/divalproato puede caer rápidamente a niveles subterapéuticos; evitar combinación si es posible. Probenecid aumenta exposición. Revisar nefrotóxicos y compatibilidades.",
-    "monitoring": "Cultivos/susceptibilidad cuando correspondan, respuesta clínica, función renal, hemograma y función hepática en cursos prolongados; vigilar alergia, C. difficile y neurotoxicidad.",
-    "administration": "IV; infusión 15–30 min o bolus para dosis seleccionadas según ficha.",
-    "preparation": "Reconstituir/diluir según fabricante; respetar estabilidad limitada.",
-    "infusionProtocol": "En críticos/Pseudomonas/MIC alta, protocolos pueden usar infusión prolongada de 3 h para optimizar fT>MIC.",
-    "pregnancy": "Usar cuando esté claramente indicado tras valorar riesgo-beneficio; la experiencia clínica varía por agente.",
-    "lactation": "Generalmente compatible o de bajo riesgo cuando está indicado; vigilar diarrea, candidiasis o exantema en lactante.",
-    "specialPopulations": "ERC aumenta neurotoxicidad; carbapenémicos pueden reducir marcadamente niveles de valproato.",
-    "patientEducation": "Completar el tratamiento, no reutilizar antibióticos sin indicación y consultar por alergia grave, diarrea intensa o síntomas neurológicos.",
-    "clinicalPearls": "Cubre ESBL y Pseudomonas susceptible, además de anaerobios; no cubre MRSA/Enterococcus faecium y no debe asumirse activo frente a CRE.",
-    "guidelineRecommendations": "IDSA 2026 favorece carbapenémicos para ESBL grave/extraurinaria cuando corresponde; para Pseudomonas susceptible a betalactámico tradicional, preservar carbapenémico cuando sea posible.",
-    "safetyFlags": [
-      "Alergia a betalactámicos",
-      "C. difficile",
-      "Ajuste renal",
-      "Neurotoxicidad por acumulación"
-    ],
-    "alerts": [
-      "Interacción grave con valproato",
-      "Ajustar en ERC",
-      "No asumir actividad frente a CRE",
-      "Infusión prolongada puede optimizar exposición"
-    ],
+    "class": "Antibacteriano carbapenêmico",
+    "pharmacologicClass": "Antibacteriano carbapenêmico",
+    "mechanism": "Liga PBPs y inibe síntese da parede; estável frente a muitas ESBL/AmpC, mas pode ser hidrolisado por carbapenemases.",
+    "pharmacodynamics": "Liga PBPs y inibe síntese da parede; estável frente a muitas ESBL/AmpC, mas pode ser hidrolisado por carbapenemases.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Infecções graves por Gram-negativos/anaeróbios suscetíveis, incluindo intra-abdominal, pele y meningite; importante para ESBL em focos graves.",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Frascos IV.",
+    "presentations": "Frascos IV.",
+    "dose": "Adultos: 500 mg q8h para cSSSI; 1 g q8h para intra-abdominal y Pseudomonas em cSSSI; meningite/infecção grave usa maior exposição conforme protocolo.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Diarreia; Náusea; Rash; Reação no local de administração",
+    "dangerousAdverseEffects": "Anafilaxia; SCAR/SJS-TEN; C. difficile; Citopenias; Neurotoxicidade/convulsões em exposição excessiva",
+    "adverseEffects": "Cefaleia, náusea, diarreia, rash y flebite.; Anafilaxia, convulsões, C. difficile, citopenias y reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou à classe beta-lactâmica relacionada; avaliar reação imediata prévia a penicilinas/cefalosporinas/carbapenêmicos.",
+    "interactions": "Valproato/divalproato pode cair rapidamente a níveis subterapêuticos; evitar combinação se possível. Probenecida aumenta exposição. Rever outros nefrotóxicos y compatibilidades.",
+    "monitoring": "Interação grave con valproato; Ajustar na DRC; No assumir atividade contra CRE; Infusão prolongada pode otimizar exposição",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Anafilaxia, convulsões, C. difficile, citopenias y reações cutâneas graves.",
+    "alerts": "Anafilaxia, convulsões, C. difficile, citopenias y reações cutâneas graves.; Interação grave con valproato; Ajustar na DRC; No assumir atividade contra CRE; Infusão prolongada pode otimizar exposição",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8848f4a-bca9-4978-b0a1-38483fd4d639",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=meropenem",
+      "Fonte primária/oficial - https://www.idsociety.org/practice-guideline/amr-guidance/"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8848f4a-bca9-4978-b0a1-38483fd4d639",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.idsociety.org/practice-guideline/beta-lactam-antibiotic-dose-individualization-in-acutely-ill-patients/"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=meropenem"
   },
   "name": {
     "pt": "Meropenem",
@@ -149,8 +87,8 @@
   "keywords": [
     "meropenem"
   ],
-  "dataVersion": "clinical-data-v1-b0eccfe89fec0297",
-  "clinicalContentSha256": "b0eccfe89fec02970e407a79de0f711481c0c95cf2287afd86febf6f6e4d2bc5",
+  "dataVersion": "clinical-data-v1-10e5393dafeee5ce",
+  "clinicalContentSha256": "10e5393dafeee5ce43d219659b0ecf20d5aa2e6be9f3f74c7fe4a3c6c622496e",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "infectologia.js",
@@ -569,5 +507,17 @@
         "updated": "2025-07-31"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "meropenem.mcGoldClinicalV1",
+    "lote": "049",
+    "requiredFields": 33,
+    "approvedSha256": "b8967508605bdc40fd2c87b15e7061b2af75f812dd0994ff79fade8e4ef57e46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

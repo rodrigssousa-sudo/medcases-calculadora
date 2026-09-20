@@ -7,140 +7,78 @@
   "pt": {
     "name": "Mebendazol",
     "class": "Anti-helmíntico benzimidazólico",
-    "pharmacologicClass": "Benzimidazol; inibidor de microtúbulos",
+    "pharmacologicClass": "Anti-helmíntico benzimidazólico",
     "mechanism": "Liga-se à beta-tubulina parasitária, bloqueia microtúbulos e utilização de glicose, levando à imobilização e morte do helminto.",
-    "pharmacodynamics": "Atua principalmente no lúmen intestinal, com baixa absorção sistêmica nas doses usuais.",
-    "pharmacokinetics": "Absorção oral baixa; metabolismo hepático extenso e eliminação principalmente fecal, com pequena fração urinária.",
+    "pharmacodynamics": "Liga-se à beta-tubulina parasitária, bloqueia microtúbulos e utilização de glicose, levando à imobilização e morte do helminto.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
     "indications": "Enterobíase, tricuríase, ascaridíase e ancilostomíase em pacientes >=2 anos conforme bula.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Comprimido mastigável.",
-    "presentations": [
-      "100 mg mastigável"
-    ],
+    "presentations": "Comprimido mastigável.",
     "dose": "Enterobíase: 100 mg VO dose única. Tricuríase, ascaridíase ou ancilostomíase: 100 mg VO pela manhã e à noite por 3 dias.",
-    "pediatricDose": "Mesma posologia de adultos para pacientes >=2 anos. Em <1 ano houve relatos de convulsões; uso abaixo da idade aprovada exige especialista.",
-    "renalDose": "Não há ajuste renal padronizado; absorção sistêmica é baixa nas doses intestinais usuais.",
-    "hepaticDose": "Sem ajuste numérico padronizado. Em uso prolongado/altas doses foram relatadas elevações hepáticas e hepatite; monitorar se exposição prolongada.",
-    "commonAdverseEffects": [
-      "Dor abdominal",
-      "Diarreia",
-      "Flatulência",
-      "Náusea"
-    ],
-    "dangerousAdverseEffects": [
-      "Neutropenia/agranulocitose em altas doses",
-      "SJS/TEN com metronidazol",
-      "Convulsões em lactentes",
-      "Hepatite em uso prolongado"
-    ],
-    "adverseEffects": "Nas doses usuais intestinais, eventos GI predominam; altas doses ou uso prolongado aumentam risco hematológico e hepático.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Dor abdominal; Diarreia; Flatulência; Náusea",
+    "dangerousAdverseEffects": "Neutropenia/agranulocitose em altas doses; SJS/TEN com metronidazol; Convulsões em lactentes; Hepatite em uso prolongado",
+    "adverseEffects": "Dor abdominal, diarreia, náusea e flatulência.; Neutropenia/agranulocitose, hepatite, convulsões e reações cutâneas graves raras.",
     "contraindications": "Hipersensibilidade ao mebendazol/excipientes.",
     "interactions": "Evitar concomitância com metronidazol por relatos de SJS/TEN. Cimetidina pode aumentar exposição em uso prolongado.",
-    "monitoring": "Sem rotina laboratorial em curso curto usual; em doses altas/prolongadas monitorar hemograma e função hepática.",
-    "administration": "Comprimido pode ser mastigado, engolido ou triturado e misturado com alimento; não é necessário jejum ou purgante.",
-    "preparation": "Pode ser triturado/misturado a alimento para quem não consegue mastigar.",
-    "infusionProtocol": "Não aplicável; formulação oral.",
-    "pregnancy": "Dados humanos são limitados; usar apenas quando o benefício antiparasitário justificar exposição e conforme diretriz local.",
-    "lactation": "Exposição sistêmica materna é baixa nas doses usuais, mas avaliar risco-benefício e idade do lactente.",
-    "specialPopulations": "<2 anos não fazem parte da indicação rotulada; <1 ano há relatos de convulsões. Altas doses prolongadas exigem vigilância hematológica/hepática.",
-    "patientEducation": "Higiene doméstica é essencial na enterobíase para reduzir reinfecção; procurar atendimento se rash grave ou febre persistente.",
-    "clinicalPearls": "Para enterobíase é 100 mg dose única; para Ascaris/Trichuris/ancilostomídeos, 100 mg BID por 3 dias. Evitar metronidazol.",
-    "guidelineRecommendations": "Tratar o helminto identificado com o esquema específico e reforçar medidas de prevenção/reinfecção.",
-    "safetyFlags": [
-      ">=2 anos",
-      "Metronidazol: evitar",
-      "Altas doses: hemograma/fígado",
-      "Convulsões em lactentes",
-      "Curso curto intestinal"
-    ],
-    "alerts": [
-      "Enterobíase: 100 mg única",
-      "Ascaris/Trichuris/ancilostomídeos: 100 mg BID x3d",
-      "Evitar metronidazol",
-      "<1a: convulsões relatadas",
-      "Repetir curso se não curado conforme protocolo"
-    ],
+    "monitoring": "Enterobíase: 100 mg única; Ascaris/Trichuris/ancilostomídeos: 100 mg BID x3d; Evitar metronidazol; <1a: convulsões relatadas; Repetir curso se não curado conforme protocolo",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Neutropenia/agranulocitose, hepatite, convulsões e reações cutâneas graves raras.",
+    "alerts": "Neutropenia/agranulocitose, hepatite, convulsões e reações cutâneas graves raras.; Enterobíase: 100 mg única; Ascaris/Trichuris/ancilostomídeos: 100 mg BID x3d; Evitar metronidazol; <1a: convulsões relatadas; Repetir curso se não curado conforme protocolo",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8c46363-f739-4f6e-bca8-1ce5e8d3f78d",
-      "https://www.cdc.gov/soil-transmitted-helminths/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/pinworm/hcp/clinical-overview/index.html"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mebendazole",
+      "Fonte primária/oficial - https://www.who.int/publications/i/item/9789241550116"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8c46363-f739-4f6e-bca8-1ce5e8d3f78d",
-      "https://www.cdc.gov/soil-transmitted-helminths/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/pinworm/hcp/clinical-overview/index.html"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mebendazole"
   },
   "es": {
     "name": "Mebendazol",
-    "class": "Antihelmíntico benzimidazólico",
-    "pharmacologicClass": "Benzimidazol; inhibidor de microtúbulos",
-    "mechanism": "Se une a beta-tubulina parasitaria, bloquea microtúbulos/utilización de glucosa y causa inmovilización/muerte del helminto.",
-    "pharmacodynamics": "Actúa principalmente en lumen intestinal, con baja absorción sistémica a dosis usuales.",
-    "pharmacokinetics": "Baja absorción oral; metabolismo hepático extenso y eliminación principalmente fecal, con pequeña fracción urinaria.",
-    "indications": "Enterobiasis, tricuriasis, ascariasis y anquilostomiasis en pacientes >=2 años según ficha.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimido masticable.",
-    "presentations": [
-      "100 mg masticable"
-    ],
-    "dose": "Enterobiasis: 100 mg VO dosis única. Tricuriasis, ascariasis o anquilostomiasis: 100 mg VO mañana y noche por 3 días.",
-    "pediatricDose": "Misma posología que adultos en >=2 años. En <1 año se han comunicado convulsiones; uso por debajo de edad aprobada requiere especialista.",
-    "renalDose": "Sin ajuste renal estandarizado; absorción sistémica baja en dosis intestinales habituales.",
-    "hepaticDose": "Sin ajuste numérico estándar. Con altas dosis/uso prolongado se han comunicado alteraciones hepáticas/hepatitis; monitorizar si exposición prolongada.",
-    "commonAdverseEffects": [
-      "Dolor abdominal",
-      "Diarrea",
-      "Flatulencia",
-      "Náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "Neutropenia/agranulocitosis en altas dosis",
-      "SJS/TEN con metronidazol",
-      "Convulsiones en lactantes",
-      "Hepatitis en uso prolongado"
-    ],
-    "adverseEffects": "En dosis intestinales usuales predominan eventos GI; altas dosis/uso prolongado aumentan riesgo hematológico/hepático.",
-    "contraindications": "Hipersensibilidad a mebendazol/excipientes.",
-    "interactions": "Evitar metronidazol por SJS/TEN. Cimetidina puede aumentar exposición en uso prolongado.",
-    "monitoring": "Sin laboratorio rutinario en curso corto; en altas dosis/prolongado monitorizar hemograma y función hepática.",
-    "administration": "Puede masticarse, tragarse o triturarse y mezclarse con alimentos; no requiere ayuno ni purgante.",
-    "preparation": "Puede triturarse y mezclarse con alimento.",
-    "infusionProtocol": "No aplicable; formulación oral.",
-    "pregnancy": "Datos humanos limitados; usar cuando beneficio antiparasitario justifique exposición según guía local.",
-    "lactation": "Exposición sistémica baja en dosis usuales, pero valorar riesgo-beneficio y edad del lactante.",
-    "specialPopulations": "<2 años fuera de indicación rotulada; <1 año con convulsiones comunicadas. Altas dosis prolongadas exigen vigilancia.",
-    "patientEducation": "Higiene doméstica es esencial en enterobiasis para reducir reinfección; consultar ante rash grave o fiebre persistente.",
-    "clinicalPearls": "Enterobiasis: 100 mg única; Ascaris/Trichuris/anquilostomas: 100 mg BID x3 días. Evitar metronidazol.",
-    "guidelineRecommendations": "Tratar helminto identificado con esquema específico y reforzar prevención de reinfección.",
-    "safetyFlags": [
-      ">=2 años",
-      "Metronidazol: evitar",
-      "Altas dosis: hemograma/hígado",
-      "Convulsiones en lactantes",
-      "Curso corto intestinal"
-    ],
-    "alerts": [
-      "Enterobiasis: 100 mg única",
-      "Ascaris/Trichuris/anquilostomas: 100 mg BID x3d",
-      "Evitar metronidazol",
-      "<1a: convulsiones comunicadas",
-      "Repetir curso si no curado según protocolo"
-    ],
+    "class": "Anti-helmíntico benzimidazólico",
+    "pharmacologicClass": "Anti-helmíntico benzimidazólico",
+    "mechanism": "Liga-se à beta-tubulina parasitária, bloqueia microtúbulos y utilização de glicose, levando à imobilização y morte do helminto.",
+    "pharmacodynamics": "Liga-se à beta-tubulina parasitária, bloqueia microtúbulos y utilização de glicose, levando à imobilização y morte do helminto.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Enterobíase, tricuríase, ascaridíase y ancilostomíase em pacientes >=2 anos conforme bula.",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimido mastigável.",
+    "presentations": "Comprimido mastigável.",
+    "dose": "Enterobíase: 100 mg VO dosis única. Tricuríase, ascaridíase ou ancilostomíase: 100 mg VO pela manhã y à noite por 3 dias.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Dor abdominal; Diarreia; Flatulência; Náusea",
+    "dangerousAdverseEffects": "Neutropenia/agranulocitose em altas dosiss; SJS/TEN con metronidazol; Convulsões em lactentes; Hepatite em uso prolongado",
+    "adverseEffects": "Dor abdominal, diarreia, náusea y flatulência.; Neutropenia/agranulocitose, hepatite, convulsões y reações cutâneas graves raras.",
+    "contraindications": "Hipersensibilidade ao mebendazol/excipientes.",
+    "interactions": "Evitar concomitância con metronidazol por relatos de SJS/TEN. Cimetidina pode aumentar exposição em uso prolongado.",
+    "monitoring": "Enterobíase: 100 mg única; Ascaris/Trichuris/ancilostomídeos: 100 mg BID x3d; Evitar metronidazol; <1a: convulsões relatadas; Repetir curso se no curado conforme protocolo",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Neutropenia/agranulocitose, hepatite, convulsões y reações cutâneas graves raras.",
+    "alerts": "Neutropenia/agranulocitose, hepatite, convulsões y reações cutâneas graves raras.; Enterobíase: 100 mg única; Ascaris/Trichuris/ancilostomídeos: 100 mg BID x3d; Evitar metronidazol; <1a: convulsões relatadas; Repetir curso se no curado conforme protocolo",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8c46363-f739-4f6e-bca8-1ce5e8d3f78d",
-      "https://www.cdc.gov/soil-transmitted-helminths/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/pinworm/hcp/clinical-overview/index.html"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mebendazole",
+      "Fonte primária/oficial - https://www.who.int/publications/i/item/9789241550116"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8c46363-f739-4f6e-bca8-1ce5e8d3f78d",
-      "https://www.cdc.gov/soil-transmitted-helminths/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/pinworm/hcp/clinical-overview/index.html"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mebendazole"
   },
   "name": {
     "pt": "Mebendazol",
@@ -149,9 +87,21 @@
   "keywords": [
     "mebendazol"
   ],
-  "dataVersion": "clinical-data-v1-b0eccfe89fec0297",
-  "clinicalContentSha256": "b0eccfe89fec02970e407a79de0f711481c0c95cf2287afd86febf6f6e4d2bc5",
+  "dataVersion": "clinical-data-v1-10e5393dafeee5ce",
+  "clinicalContentSha256": "10e5393dafeee5ce43d219659b0ecf20d5aa2e6be9f3f74c7fe4a3c6c622496e",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "infectologia.js"
+  "sourceModule": "infectologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "mebendazol.mcGoldClinicalV1",
+    "lote": "049",
+    "requiredFields": 33,
+    "approvedSha256": "b8967508605bdc40fd2c87b15e7061b2af75f812dd0994ff79fade8e4ef57e46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

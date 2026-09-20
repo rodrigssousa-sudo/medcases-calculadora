@@ -29465,3 +29465,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:linezolida:END */
+/* GOLD33_SELECTIVE:meropenem_vaborbactam:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="meropenem_vaborbactam";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:meropenem_vaborbactam:"+matches.length);drug=matches[0];}else{drug=db&&db["meropenem_vaborbactam"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:meropenem_vaborbactam");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "049",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b8967508605bdc40fd2c87b15e7061b2af75f812dd0994ff79fade8e4ef57e46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Meropenem/vaborbactam",
+    "class": "Carbapenêmico com inibidor de beta-lactamase",
+    "pharmacologicClass": "Carbapenêmico com inibidor de beta-lactamase",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Pó para infusão IV.",
+    "presentations": "Pó para infusão IV.",
+    "mechanism": "Meropenem inibe PBPs; vaborbactam inibe principalmente beta-lactamases classe A, incluindo KPC, protegendo meropenem da hidrólise.",
+    "pharmacodynamics": "Meropenem inibe PBPs; vaborbactam inibe principalmente beta-lactamases classe A, incluindo KPC, protegendo meropenem da hidrólise.",
+    "pharmacokinetics": "Meia-vida 1,2 h (meropenem); 1,7 h (vaborbactam). Eliminação renal >90%.",
+    "indications": "Bula EUA: adultos >=18 anos com cUTI incluindo pielonefrite por bactérias suscetíveis; uso AMR fora dessa indicação depende de diretriz/AST.",
+    "dose": "Adulto >=18 com eGFR >=50: 4 g IV q8h, cada dose em infusão de 3 h, por até 14 dias.",
+    "pediatricDose": "adulto: Dose fixa 4 g 8/8h (não baseado em peso em adultos)",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Cefaleia; Flebite/reação local; Diarreia; Náusea",
+    "dangerousAdverseEffects": "Convulsões; Anafilaxia; Rabdomiólise; C. difficile; Redução de valproato",
+    "adverseEffects": "Cefaleia, flebite/reação no local e diarreia.; Hipersensibilidade, convulsões, C. difficile e seleção de resistência.",
+    "contraindications": "Hipersensibilidade grave a componentes ou beta-lactâmicos relacionados.",
+    "interactions": "Evitar valproato/divalproato. A bula 2026 também alerta possível redução de eficácia de contraceptivos hormonais; orientar método adicional/não hormonal.",
+    "monitoring": "4 g q8h; Infusão 3 h; eGFR 30–49: 2 g q8h; eGFR 15–29: 2 g q12h; HD: administrar após sessão",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipersensibilidade, convulsões, C. difficile e seleção de resistência.",
+    "alerts": "Hipersensibilidade, convulsões, C. difficile e seleção de resistência.; 4 g q8h; Infusão 3 h; eGFR 30–49: 2 g q8h; eGFR 15–29: 2 g q12h; HD: administrar após sessão",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=meropenem%20vaborbactam",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/209776lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=meropenem%20vaborbactam"
+  },
+  "es": {
+    "name": "Meropenem/vaborbactam",
+    "class": "Carbapenêmico con inibidor de beta-lactamase",
+    "pharmacologicClass": "Carbapenêmico con inibidor de beta-lactamase",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Pó para infusão IV.",
+    "presentations": "Pó para infusão IV.",
+    "mechanism": "Meropenem inibe PBPs; vaborbactam inibe principalmente beta-lactamases classe A, incluindo KPC, protegendo meropenem da hidrólise.",
+    "pharmacodynamics": "Meropenem inibe PBPs; vaborbactam inibe principalmente beta-lactamases classe A, incluindo KPC, protegendo meropenem da hidrólise.",
+    "pharmacokinetics": "Meia-vida 1,2 h (meropenem); 1,7 h (vaborbactam). Eliminação renal >90%.",
+    "indications": "Bula EUA: adultos >=18 anos con cUTI incluindo pielonefrite por bactérias suscetíveis; uso AMR fora dessa indicação depende de diretriz/AST.",
+    "dose": "Adulto >=18 con eGFR >=50: 4 g IV q8h, cada dosis em infusão de 3 h, por até 14 dias.",
+    "pediatricDose": "adulto: Dose fixa 4 g 8/8h (no baseado em peso em adultos)",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Cefaleia; Flebite/reação local; Diarreia; Náusea",
+    "dangerousAdverseEffects": "Convulsões; Anafilaxia; Rabdomiólise; C. difficile; Redução de valproato",
+    "adverseEffects": "Cefaleia, flebite/reação no local y diarreia.; Hipersensibilidade, convulsões, C. difficile y seleção de resistência.",
+    "contraindications": "Hipersensibilidade grave a componentes ou beta-lactâmicos relacionados.",
+    "interactions": "Evitar valproato/divalproato. A bula 2026 também alerta possível redução de eficácia de contraceptivos hormonais; orientar método adicional/no hormonal.",
+    "monitoring": "4 g q8h; Infusão 3 h; eGFR 30–49: 2 g q8h; eGFR 15–29: 2 g q12h; HD: administrar após sessão",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipersensibilidade, convulsões, C. difficile y seleção de resistência.",
+    "alerts": "Hipersensibilidade, convulsões, C. difficile y seleção de resistência.; 4 g q8h; Infusão 3 h; eGFR 30–49: 2 g q8h; eGFR 15–29: 2 g q12h; HD: administrar após sessão",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=meropenem%20vaborbactam",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/209776lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=meropenem%20vaborbactam"
+  }
+};})();
+/* GOLD33_SELECTIVE:meropenem_vaborbactam:END */
