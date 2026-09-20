@@ -5273,3 +5273,95 @@
   }
 };})();
 /* GOLD33_SELECTIVE:indacaterol:END */
+/* GOLD33_SELECTIVE:ipratropio:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB;if(!db||!db["ipratropio"])throw new Error("GOLD33_MISSING_CANONICAL:ipratropio");db["ipratropio"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "043",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6aa150d0e0594cadfb5028a6cadd7836618b672ad0e07215793b4b78fc9cec5",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Brometo de ipratrópio",
+    "class": "Broncodilatador antimuscarínico de curta ação (SAMA)",
+    "pharmacologicClass": "Antagonista muscarínico inalatório",
+    "commercialNames": "Atrovent; genéricos.",
+    "presentation": "Solução para inalação por nebulização 0,02%.",
+    "presentations": "0,5 mg em 2,5 mL por frasco-dose, conforme bula consultada.",
+    "mechanism": "Bloqueia competitivamente receptores muscarínicos nas vias aéreas, reduzindo broncoconstrição vagal.",
+    "pharmacodynamics": "Broncodilatação predominantemente local, com pouco efeito sistêmico nas doses inaladas.",
+    "pharmacokinetics": "Baixa absorção sistêmica por inalação; fração absorvida é eliminada principalmente por via renal; início em minutos e duração de algumas horas.",
+    "indications": "Manutenção do broncoespasmo associado à DPOC; uso adjuvante em exacerbações agudas conforme diretriz e formulação.",
+    "dose": "Adultos e >=12 anos: 0,5 mg por nebulização 3 a 4 vezes ao dia, com 6 a 8 horas entre doses; não exceder frequência rotulada sem avaliação.",
+    "pediatricDose": "A bula da solução não estabelece segurança/eficácia abaixo de 12 anos. CÁLCULO PEDIÁTRICO <12 ANOS BLOQUEADO.",
+    "renalDose": "Não há ajuste numérico rotulado; baixa absorção sistêmica, mas usar com cautela conforme condição clínica.",
+    "hepaticDose": "Não há ajuste numérico rotulado; usar com cautela.",
+    "commonAdverseEffects": "Boca seca, tosse, cefaleia, náusea.",
+    "dangerousAdverseEffects": "Broncoespasmo paradoxal, anafilaxia, glaucoma agudo por contato ocular, retenção urinária.",
+    "adverseEffects": "Tontura, irritação faríngea, palpitações e constipação.",
+    "contraindications": "Hipersensibilidade ao ipratrópio, atropina/derivados ou componentes.",
+    "interactions": "Efeito anticolinérgico aditivo com outros antimuscarínicos; cautela com fármacos que favoreçam retenção urinária/glaucoma.",
+    "monitoring": "Resposta respiratória, frequência de resgate, broncoespasmo paradoxal; sintomas oculares e urinários.",
+    "administration": "Nebulizar por via oral com equipamento adequado; evitar contato da névoa com os olhos.",
+    "preparation": "Usar conteúdo do frasco-dose conforme dispositivo; compatibilidade de mistura deve seguir informação específica, não presumir.",
+    "infusionProtocol": "Nebulização até esvaziamento do reservatório conforme equipamento; não é infusão IV.",
+    "pregnancy": "Dados humanos limitados; usar se benefício justificar risco.",
+    "lactation": "Não há dados adequados sobre excreção; cautela e avaliação individual.",
+    "specialPopulations": "Cautela em glaucoma de ângulo estreito, hiperplasia prostática ou obstrução vesical.",
+    "patientEducation": "Não engolir nem injetar; evitar olhos; procurar ajuda se piora súbita da respiração, dor ocular ou retenção urinária.",
+    "clinicalPearls": "Não é fármaco de resgate único de ação rápida para crise grave; em exacerbação, integra protocolo com beta2-agonista conforme contexto.",
+    "guidelineRecommendations": "GOLD utiliza broncodilatadores de curta ação em exacerbações de DPOC; GINA reserva antimuscarínico como adjuvante em asma aguda grave.",
+    "safetyFlags": "Broncoespasmo paradoxal; risco ocular; retenção urinária; via inalatória exclusiva.",
+    "alerts": "Solução 0,5 mg/2,5 mL; >=12 anos; evitar olhos; pediatria menor bloqueada.",
+    "references": [
+      "DailyMed/autoridade ou diretriz oficial - https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b",
+      "DailyMed/autoridade ou diretriz oficial - https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+      "DailyMed/autoridade ou diretriz oficial - https://ginasthma.org/2026-gina-strategy-report/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+  },
+  "es": {
+    "name": "Bromuro de ipratropio",
+    "class": "Broncodilatador antimuscarínico de curta ação (SAMA)",
+    "pharmacologicClass": "Antagonista muscarínico inalatório",
+    "commercialNames": "Atrovent; genéricos.",
+    "presentation": "Solução para inalação por nebulização 0,02%.",
+    "presentations": "0,5 mg em 2,5 mL por frasco-dosis, según bula consultada.",
+    "mechanism": "Bloqueia competitivamente receptores muscarínicos nas vías aéreas, reduzindo broncoconstrição vagal.",
+    "pharmacodynamics": "Broncodilatação predominantemente sitio, con pouco efeito sistêmico nas dosis inaladas.",
+    "pharmacokinetics": "Baixa absorção sistêmica por inalação; fração absorvida é eliminada principalmente por vía renal; inicio em minutos y duración de algumas horas.",
+    "indications": "Manutenção do broncoespasmo associado à DPOC; uso adjuvante em exacerbações agudas según diretriz y formulación.",
+    "dose": "Adultos y >=12 anos: 0,5 mg por nebulização 3 a 4 veces al día, con 6 a 8 horas entre dosis; no exceder frecuencia rotulada sin evaluación.",
+    "pediatricDose": "A bula da solución no estabelece seguridad/eficacia abaixo de 12 anos. CÁLCULO PEDIÁTRICO <12 ANOS BLOQUEADO.",
+    "renalDose": "No hay ajuste numérico rotulado; baixa absorção sistêmica, mas usar con precaución según condição clínica.",
+    "hepaticDose": "No hay ajuste numérico rotulado; usar con precaución.",
+    "commonAdverseEffects": "Boca seca, tosse, cefaleia, náusea.",
+    "dangerousAdverseEffects": "Broncoespasmo paradoxal, anafilaxia, glaucoma agudo por contato ocular, retenção urinária.",
+    "adverseEffects": "Tontura, irritação faríngea, palpitações y constipação.",
+    "contraindications": "Hipersensibilidade ao ipratrópio, atropina/derivados ou componentes.",
+    "interactions": "Efeito anticolinérgico aditivo con outros antimuscarínicos; precaución con fármacos que favoreçam retenção urinária/glaucoma.",
+    "monitoring": "Resposta respiratoria, frecuencia de resgate, broncoespasmo paradoxal; sintomas oculares y urinários.",
+    "administration": "Nebulizar por vía oral con equipamento adequado; evitar contato da névoa con os ojos.",
+    "preparation": "Usar conteúdo do frasco-dosis según dispositivo; compatibilidade de mistura deve seguir informação específica, no presumir.",
+    "infusionProtocol": "Nebulização até esvaziamento do reservatório según equipamento; no é infusão IV.",
+    "pregnancy": "Dados humanos limitados; usar se benefício justificar riesgo.",
+    "lactation": "No hay datos adequados sobre excreção; precaución y evaluación individual.",
+    "specialPopulations": "Cautela em glaucoma de ângulo estreito, hiperplasia prostática ou obstrução vesical.",
+    "patientEducation": "No tragar nem injetar; evitar ojos; buscar atención se empeoramiento súbita da respiração, dor ocular ou retenção urinária.",
+    "clinicalPearls": "No é fármaco de resgate único de ação rápida para crise grave; em exacerbação, integra protocolo con beta2-agonista según contexto.",
+    "guidelineRecommendations": "GOLD utiliza broncodilatadores de curta ação em exacerbações de DPOC; GINA reserva antimuscarínico como adjuvante em asma aguda grave.",
+    "safetyFlags": "Broncoespasmo paradoxal; riesgo ocular; retenção urinária; vía inalatória exclusiva.",
+    "alerts": "Solução 0,5 mg/2,5 mL; >=12 anos; evitar ojos; pediatría menor bloqueada.",
+    "references": [
+      "DailyMed/autoridade ou diretriz oficial - https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b",
+      "DailyMed/autoridade ou diretriz oficial - https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+      "DailyMed/autoridade ou diretriz oficial - https://ginasthma.org/2026-gina-strategy-report/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+  }
+};})();
+/* GOLD33_SELECTIVE:ipratropio:END */

@@ -29107,3 +29107,95 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:imipenem_cilastatina_relebactam:END */
+/* GOLD33_SELECTIVE:isoniazida:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["isoniazida"])throw new Error("GOLD33_MISSING_CANONICAL:isoniazida");db["isoniazida"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "043",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6aa150d0e0594cadfb5028a6cadd7836618b672ad0e07215793b4b78fc9cec5",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Isoniazida",
+    "class": "Antimicobacteriano",
+    "pharmacologicClass": "Hidrazida do ácido isonicotínico; inibidor da síntese de ácido micólico",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos e solução oral/injetável em alguns mercados.",
+    "presentations": "100 mg; 300 mg; Solução oral conforme produto",
+    "mechanism": "Pró-fármaco ativado pela catalase-peroxidase KatG do M. tuberculosis; inibe síntese de ácido micólico via alvos como InhA.",
+    "pharmacodynamics": "Bactericida contra bacilos em rápida replicação e bacteriostática contra populações menos ativas; resistência por katG/inhA e outros mecanismos.",
+    "pharmacokinetics": "Excelente absorção oral e penetração tecidual/LCR; acetilação hepática por NAT2 gera grande variabilidade; metabólitos eliminados pelos rins.",
+    "indications": "Tratamento de tuberculose ativa sempre em combinação e tratamento preventivo de infecção latente em regimes apropriados.",
+    "dose": "TB ativa em adulto: 5 mg/kg VO uma vez ao dia, máximo 300 mg/dia, sempre em combinação. Regimes intermitentes 15 mg/kg até 900 mg 2–3 vezes/semana existem sob programas específicos.",
+    "pediatricDose": "Crianças: 10–15 mg/kg VO uma vez ao dia, máximo 300 mg/dia; regimes intermitentes 20–40 mg/kg até 900 mg 2–3 vezes/semana conforme diretriz/programa.",
+    "renalDose": "Geralmente sem ajuste em insuficiência renal, inclusive hemodiálise; administrar após HD quando possível. Monitorar neurotoxicidade em DRC.",
+    "hepaticDose": "Sem tabela simples de ajuste; hepatopatia ativa/elevação importante exige cautela, monitorização intensa e reconsideração do regime. Boxed warning para hepatite grave/fatal.",
+    "commonAdverseEffects": "Elevação de transaminases; Náusea; Neuropatia periférica; Rash",
+    "dangerousAdverseEffects": "Hepatite grave/fatal; Neuropatia periférica; Convulsões; Psicose; Anemia sideroblástica",
+    "adverseEffects": "Hepatotoxicidade pode ocorrer mesmo após meses e risco aumenta com idade, álcool e doença hepática. Neuropatia relaciona-se à deficiência funcional de piridoxina.",
+    "contraindications": "Hepatite aguda importante, história de reação hepática grave à isoniazida ou hipersensibilidade clinicamente significativa.",
+    "interactions": "Inibe enzimas como CYP2C19/CYP3A em graus relevantes e pode aumentar níveis de fenitoína/carbamazepina; álcool e outros hepatotóxicos aumentam risco.",
+    "monitoring": "Avaliar sintomas de hepatite mensalmente; AST/ALT/bilirrubina em pacientes de risco/baseline alterado. Monitorar neuropatia e adesão.",
+    "administration": "VO preferencialmente em jejum, 1 h antes ou 2 h após alimento; alimento pode reduzir absorção.",
+    "preparation": "Comprimidos/solução conforme produto; piridoxina deve ser prescrita separadamente quando indicada.",
+    "infusionProtocol": "Não aplicável à rotina oral; formulações parenterais são reservadas a situações específicas.",
+    "pregnancy": "Pode ser usada em regimes de TB quando indicada; gestação aumenta indicação de piridoxina profilática em pessoas de risco.",
+    "lactation": "Compatível em muitos regimes de TB; a quantidade no leite não substitui profilaxia/tratamento do lactente. Considerar piridoxina para mãe/lactente quando indicada.",
+    "specialPopulations": "Dar piridoxina 25–50 mg/dia a pessoas com risco de neuropatia, incluindo gestantes, lactentes amamentados, HIV, diabetes, alcoolismo, desnutrição, DRC ou idade avançada.",
+    "patientEducation": "Suspender e procurar avaliação se anorexia persistente, náusea/vômito, fadiga intensa, urina escura ou icterícia; relatar parestesias.",
+    "clinicalPearls": "B6 não é opcional em grupos de risco: piridoxina 25–50 mg/dia reduz neuropatia. TB ativa nunca deve receber isoniazida isolada.",
+    "guidelineRecommendations": "Diretrizes atuais mantêm isoniazida como componente central de vários regimes para TB suscetível e de alguns regimes para infecção latente; sempre considerar resistência, adesão e hepatotoxicidade.",
+    "safetyFlags": "Boxed warning hepatite; TB ativa sempre em combinação; Piridoxina em grupos de risco; Neuropatia; NAT2/variabilidade",
+    "alerts": "5 mg/kg/dia adulto, máx 300 mg; Criança 10–15 mg/kg/dia, máx 300 mg; B6 25–50 mg/dia em risco; Monitorar hepatite; Álcool aumenta risco",
+    "references": [
+      "DailyMed/autoridade ou diretriz oficial - https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+      "DailyMed/autoridade ou diretriz oficial - https://www.cdc.gov/tb/treatment/index.html",
+      "DailyMed/autoridade ou diretriz oficial - https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+  },
+  "es": {
+    "name": "Isoniazida",
+    "class": "Antimicobacteriano",
+    "pharmacologicClass": "Hidrazida del ácido isonicotínico; inhibidor de síntesis de ácido micólico",
+    "commercialNames": "Genérico; las marcas varían según el país",
+    "presentation": "Comprimidos y solución oral/inyectable en algunos mercados.",
+    "presentations": "100 mg; 300 mg; Solución oral según producto",
+    "mechanism": "Profármaco activado por catalasa-peroxidasa KatG de M. tuberculosis; inhibe síntesis de ácido micólico a través de blancos como InhA.",
+    "pharmacodynamics": "Bactericida contra bacilos en replicación rápida y bacteriostática en poblaciones menos activas; resistencia por katG/inhA y otros.",
+    "pharmacokinetics": "Excelente absorción oral y penetración tisular/LCR; acetilación hepática NAT2 con gran variabilidad; metabolitos renales.",
+    "indications": "Tratamiento de TB activa siempre en combinación y tratamiento preventivo de infección latente en regímenes apropiados.",
+    "dose": "TB activa adulto: 5 mg/kg VO una vez al día, máximo 300 mg/día, siempre combinada. Regímenes intermitentes 15 mg/kg hasta 900 mg 2–3 veces/semana existen bajo programas específicos.",
+    "pediatricDose": "Niños: 10–15 mg/kg VO una vez al día, máximo 300 mg/día; intermitente 20–40 mg/kg hasta 900 mg 2–3 veces/semana según guía/programa.",
+    "renalDose": "Generalmente sin ajuste en insuficiencia renal incluida hemodiálisis; administrar después de HD cuando sea posible. Vigilar neurotoxicidad en ERC.",
+    "hepaticDose": "Sin tabla simple de ajuste; hepatopatía activa/elevación importante exige precaución, monitorización intensa y reconsiderar régimen. Boxed warning por hepatitis grave/fatal.",
+    "commonAdverseEffects": "Elevación de transaminasas; Náuseas; Neuropatía periférica; Rash",
+    "dangerousAdverseEffects": "Hepatitis grave/fatal; Neuropatía periférica; Convulsiones; Psicosis; Anemia sideroblástica",
+    "adverseEffects": "Hepatotoxicidad puede ocurrir tras meses y riesgo aumenta con edad, alcohol y hepatopatía. Neuropatía se relaciona con déficit funcional de piridoxina.",
+    "contraindications": "Hepatitis aguda importante, antecedente de reacción hepática grave por isoniazida o hipersensibilidad significativa.",
+    "interactions": "Inhibe enzimas como CYP2C19/CYP3A y puede elevar fenitoína/carbamazepina; alcohol y otros hepatotóxicos aumentan riesgo.",
+    "monitoring": "Evaluar síntomas de hepatitis mensualmente; AST/ALT/bilirrubina en pacientes de riesgo/baseline alterado. Vigilar neuropatía y adherencia.",
+    "administration": "VO preferentemente en ayunas, 1 h antes o 2 h después de alimentos; alimentos reducen absorción.",
+    "preparation": "Comprimidos/solución según producto; piridoxina se prescribe por separado cuando está indicada.",
+    "infusionProtocol": "No aplicable a rutina oral; formulaciones parenterales para situaciones específicas.",
+    "pregnancy": "Puede usarse en regímenes de TB cuando corresponde; gestación refuerza indicación de piridoxina profiláctica.",
+    "lactation": "Compatible en muchos regímenes de TB; cantidad en leche no sustituye profilaxis/tratamiento del lactante. Considerar piridoxina.",
+    "specialPopulations": "Dar piridoxina 25–50 mg/día a personas con riesgo de neuropatía: gestantes, lactantes amamantados, HIV, diabetes, alcoholismo, malnutrición, ERC o edad avanzada.",
+    "patientEducation": "Suspender y consultar ante anorexia persistente, náuseas/vómitos, fatiga intensa, orina oscura o ictericia; informar parestesias.",
+    "clinicalPearls": "B6 no es opcional en grupos de riesgo: piridoxina 25–50 mg/día reduce neuropatía. TB activa nunca debe tratarse con isoniazida sola.",
+    "guidelineRecommendations": "Guías actuales mantienen isoniazida como componente central de varios regímenes para TB susceptible y algunos regímenes de infección latente; considerar resistencia, adherencia y hepatotoxicidad.",
+    "safetyFlags": "Boxed warning hepatitis; TB activa siempre combinada; Piridoxina en grupos de riesgo; Neuropatía; NAT2/variabilidad",
+    "alerts": "5 mg/kg/día adulto, máx 300 mg; Niño 10–15 mg/kg/día, máx 300 mg; B6 25–50 mg/día en riesgo; Monitorizar hepatitis; Alcohol aumenta riesgo",
+    "references": [
+      "DailyMed/autoridade ou diretriz oficial - https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+      "DailyMed/autoridade ou diretriz oficial - https://www.cdc.gov/tb/treatment/index.html",
+      "DailyMed/autoridade ou diretriz oficial - https://www.cdc.gov/tb/hcp/treatment/adverse-events.html"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+  }
+};})();
+/* GOLD33_SELECTIVE:isoniazida:END */

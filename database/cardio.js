@@ -67290,3 +67290,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:inotersen:END */
+/* GOLD33_SELECTIVE:irbesartana:START */
+;(function(){var db=window.CARDIO_DRUGS_DB;if(!db||!db["irbesartana"])throw new Error("GOLD33_MISSING_CANONICAL:irbesartana");db["irbesartana"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "043",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6aa150d0e0594cadfb5028a6cadd7836618b672ad0e07215793b4b78fc9cec5",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Irbesartana",
+    "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
+    "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+    "commercialNames": "Avapro",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos 75, 150 e 300 mg",
+    "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
+    "pharmacokinetics": "Biodisponibilidade oral cerca de 60-80%, pico em 1,5-2 h e meia-vida terminal aproximadamente 11-15 h. Metabolização por glucuronidação e CYP2C9; não é removida por hemodiálise.",
+    "indications": "Hipertensão; nefropatia diabética em pacientes hipertensos com diabetes tipo 2, creatinina elevada e proteinúria",
+    "dose": "{'hypertension': '150 mg uma vez ao dia; pode aumentar para 300 mg uma vez ao dia.', 'diabeticNephropathy': '300 mg uma vez ao dia.'}",
+    "pediatricDose": "Segurança e eficácia não estabelecidas para indicação pediátrica rotineira.",
+    "renalDose": "Não requer ajuste de dose na insuficiência renal leve a grave ou hemodiálise, exceto que depleção volêmica aumenta risco de hipotensão e exige correção/individualização.",
+    "hepaticDose": "Sem ajuste necessário em insuficiência hepática leve a moderada segundo farmacocinética da bula; dados limitados em hepatopatia grave.",
+    "commonAdverseEffects": "tontura; hipotensão; hipercalemia; aumento de creatinina; fadiga",
+    "dangerousAdverseEffects": "lesão renal aguda; hipercalemia grave; hipotensão sintomática; angioedema raro; toxicidade fetal",
+    "adverseEffects": "{'common': ['tontura', 'hipotensão', 'hipercalemia', 'aumento de creatinina', 'fadiga'], 'dangerous': ['lesão renal aguda', 'hipercalemia grave', 'hipotensão sintomática', 'angioedema raro', 'toxicidade fetal']}",
+    "contraindications": "Gestação: suspender quando detectada; uso concomitante de alisquireno em pacientes com diabetes; hipersensibilidade ao fármaco",
+    "interactions": "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia; AINEs podem reduzir efeito e aumentar risco renal; Lítio pode acumular; Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
+    "monitoring": "Pressão arterial; creatinina/eTFG e potássio antes de iniciar e após mudanças de dose; estado volêmico; gestação quando aplicável",
+    "administration": "Administrar uma vez ao dia, com ou sem alimentos.",
+    "preparation": "Comprimidos não exigem preparo.",
+    "infusionProtocol": "Não se aplica: irbesartana é oral.",
+    "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
+    "lactation": "Dados humanos insuficientes; considerar alternativa com maior experiência, principalmente em lactente jovem.",
+    "specialPopulations": "{'elderly': 'Não ajustar apenas pela idade; titular por resposta e tolerância.', 'renalArteryStenosis': 'Maior risco de deterioração renal; monitorar.', 'volumeDepletion': 'Maior risco de hipotensão inicial.', 'diabeticNephropathy': 'Possui indicação específica em nefropatia diabética com hipertensão, T2D e proteinúria.'}",
+    "patientEducation": "Evitar gestação durante o tratamento; não usar suplementos de potássio ou substitutos de sal sem orientação; manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados; levantar lentamente se houver tontura",
+    "clinicalPearls": "Não é removida por hemodiálise; Dose de 300 mg/dia é a dose alvo da indicação de nefropatia diabética.",
+    "guidelineRecommendations": "AHA/ACC 2025: BRA é classe de primeira linha para hipertensão quando indicado; KDIGO 2024: bloquear SRAA com IECA ou BRA em DRC albuminúrica e titular à maior dose tolerada.",
+    "safetyFlags": "TOXICIDADE_FETAL; HIPERCALEMIA; FUNCAO_RENAL; HIPOTENSAO; DUPLO_BLOQUEIO_SRAA",
+    "alerts": "Corrigir depleção de volume quando possível antes de iniciar; Reavaliar função renal e potássio após titulação; Não associar rotineiramente a IECA ou alisquireno",
+    "references": [
+      "DailyMed/autoridade ou diretriz oficial - https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8635a1c-ae06-4e23-99f7-e704f91d6f43",
+      "DailyMed/autoridade ou diretriz oficial - https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8635a1c-ae06-4e23-99f7-e704f91d6f43"
+  },
+  "es": {
+    "name": "Irbesartán",
+    "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
+    "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
+    "commercialNames": "Avapro",
+    "presentation": "Tabletas orales.",
+    "presentations": "Tabletas 75, 150 y 300 mg",
+    "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
+    "pharmacokinetics": "Biodisponibilidad oral de aproximadamente 60-80%, pico a 1.5-2 h y vida media terminal de 11-15 h. Metabolismo por glucuronidación y CYP2C9; no se elimina por hemodiálisis.",
+    "indications": "Hipertensión; nefropatía diabética en pacientes hipertensos con diabetes tipo 2, creatinina elevada y proteinuria",
+    "dose": "{'hypertension': '150 mg una vez al día; puede aumentarse a 300 mg una vez al día.', 'diabeticNephropathy': '300 mg una vez al día.'}",
+    "pediatricDose": "Seguridad y eficacia no establecidas para indicación pediátrica rutinaria.",
+    "renalDose": "No requiere ajuste de dosis en insuficiencia renal leve a grave ni hemodiálisis, excepto que la depleción de volumen aumenta riesgo de hipotensión y exige corrección/individualización.",
+    "hepaticDose": "Sin ajuste necesario en insuficiencia hepática leve a moderada según farmacocinética de ficha; datos limitados en hepatopatía grave.",
+    "commonAdverseEffects": "mareo; hipotensión; hiperpotasemia; aumento de creatinina; fatiga",
+    "dangerousAdverseEffects": "lesión renal aguda; hiperpotasemia grave; hipotensión sintomática; angioedema raro; toxicidad fetal",
+    "adverseEffects": "{'common': ['mareo', 'hipotensión', 'hiperpotasemia', 'aumento de creatinina', 'fatiga'], 'dangerous': ['lesión renal aguda', 'hiperpotasemia grave', 'hipotensión sintomática', 'angioedema raro', 'toxicidad fetal']}",
+    "contraindications": "Embarazo: suspender cuando se detecte; uso concomitante de aliskireno en pacientes con diabetes; hipersensibilidad al fármaco",
+    "interactions": "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia; AINE pueden reducir efecto y aumentar riesgo renal; Litio puede acumularse; Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal",
+    "monitoring": "Presión arterial; creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis; estado de volumen; embarazo cuando corresponda",
+    "administration": "Administrar una vez al día, con o sin alimentos.",
+    "preparation": "Las tabletas no requieren preparación.",
+    "infusionProtocol": "No aplica: irbesartán es oral.",
+    "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
+    "lactation": "Datos humanos insuficientes; considerar alternativa con mayor experiencia, principalmente en lactante pequeño.",
+    "specialPopulations": "{'elderly': 'No ajustar solo por edad; titular por respuesta y tolerancia.', 'renalArteryStenosis': 'Mayor riesgo de deterioro renal; monitorizar.', 'volumeDepletion': 'Mayor riesgo de hipotensión inicial.', 'diabeticNephropathy': 'Tiene indicación específica en nefropatía diabética con hipertensión, T2D y proteinuria.'}",
+    "patientEducation": "Evitar embarazo durante el tratamiento; no usar suplementos de potasio o sustitutos de sal sin indicación; mantener hidratación y consultar si hay vómitos o diarrea prolongados; levantarse lentamente si hay mareo",
+    "clinicalPearls": "No se elimina por hemodiálisis; 300 mg/día es la dosis objetivo de la indicación de nefropatía diabética.",
+    "guidelineRecommendations": "AHA/ACC 2025: ARA-II es clase de primera línea para hipertensión cuando está indicado; KDIGO 2024: bloquear SRAA con IECA o ARA-II en ERC albuminúrica y titular a máxima dosis tolerada.",
+    "safetyFlags": "TOXICIDAD_FETAL; HIPERPOTASEMIA; FUNCION_RENAL; HIPOTENSION; DOBLE_BLOQUEO_SRAA",
+    "alerts": "Corregir depleción de volumen si es posible antes de iniciar; Reevaluar función renal y potasio tras titulación; No asociar de rutina con IECA o aliskireno",
+    "references": [
+      "DailyMed/autoridade ou diretriz oficial - https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8635a1c-ae06-4e23-99f7-e704f91d6f43",
+      "DailyMed/autoridade ou diretriz oficial - https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8635a1c-ae06-4e23-99f7-e704f91d6f43"
+  }
+};})();
+/* GOLD33_SELECTIVE:irbesartana:END */

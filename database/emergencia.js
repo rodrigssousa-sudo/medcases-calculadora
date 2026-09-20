@@ -4596,3 +4596,91 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:gluconato_calcio:END */
+/* GOLD33_SELECTIVE:isoflurano:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB;if(!db||!db["isoflurano"])throw new Error("GOLD33_MISSING_CANONICAL:isoflurano");db["isoflurano"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "043",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b6aa150d0e0594cadfb5028a6cadd7836618b672ad0e07215793b4b78fc9cec5",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Isoflurano",
+    "class": "Anestésico geral inalatório",
+    "pharmacologicClass": "Éter halogenado volátil",
+    "commercialNames": "Forane; genéricos.",
+    "presentation": "Líquido volátil para inalação em vaporizador específico.",
+    "presentations": "Frascos de líquido para vaporização; concentração administrada em porcentagem inspirada, não injeção.",
+    "mechanism": "Potencializa transmissão inibitória e reduz excitabilidade neuronal por múltiplos alvos; mecanismo completo não definido.",
+    "pharmacodynamics": "Produz anestesia dependente da concentração, com depressão respiratória e redução da pressão arterial; MAC varia com idade e concomitantes.",
+    "pharmacokinetics": "Baixa metabolização; eliminação predominantemente pulmonar inalterada; rápida titulação pela ventilação e concentração inspirada.",
+    "indications": "Indução e manutenção da anestesia geral.",
+    "dose": "Individualizar por idade/estado. Indução geralmente 1,3-3% após concentração inicial gradual; manutenção cirúrgica usual 1-2,5% com O2/N2O ou 1,5-3,5% com O2 isolado, conforme resposta e bula.",
+    "pediatricDose": "Pode ser usado em pediatria por anestesista; MAC é idade-dependente. Não há algoritmo simples por peso; automação fora de vaporizador/monitorização é BLOQUEADA.",
+    "renalDose": "Não há ajuste numérico renal; monitorar perfusão e função conforme cirurgia.",
+    "hepaticDose": "Relatos de disfunção/hepatite; evitar em história de hepatite inexplicada após anestésico halogenado e monitorar.",
+    "commonAdverseEffects": "Agitação, tosse, apneia/prender respiração, náusea, vômito, calafrios.",
+    "dangerousAdverseEffects": "Hipertermia maligna, hipercalemia/arrítmias, depressão cardiorrespiratória, hepatotoxicidade e prolongamento de QT.",
+    "adverseEffects": "Laringoespasmo, delirium, hipotensão e elevação de enzimas hepáticas.",
+    "contraindications": "Suscetibilidade genética conhecida/suspeita à hipertermia maligna; hipersensibilidade a anestésicos halogenados; história de hepatite/disfunção inexplicada após exposição.",
+    "interactions": "Potencializa bloqueadores neuromusculares; opioides e N2O reduzem MAC; cautela com adrenalina, betabloqueadores, antagonistas de cálcio e IMAO.",
+    "monitoring": "Concentrações inspirada/expirada, ventilação, oxigenação, ECG, pressão arterial, temperatura e bloqueio neuromuscular.",
+    "administration": "Somente por profissional treinado, com via aérea, ventilação, oxigênio e ressuscitação disponíveis; vaporizador calibrado específico.",
+    "preparation": "Verificar circuito e absorvente de CO2 não dessecado; não diluir nem injetar.",
+    "infusionProtocol": "Administração contínua por vaporizador no circuito anestésico, titulada por concentração e monitorização; não expressar como mL/h IV.",
+    "pregnancy": "Pode relaxar útero; dados obstétricos limitados. Exposição repetida/prolongada em desenvolvimento exige avaliação de risco-benefício.",
+    "lactation": "Considerar necessidade materna e possível interrupção temporária conforme exposição/recuperação; dados são limitados.",
+    "specialPopulations": "Crianças <3 anos: ponderar procedimentos eletivos prolongados/repetidos; idosos exigem concentrações menores; risco neuromuscular/hipercalemia.",
+    "patientEducation": "Não dirigir/operar máquinas após anestesia até recuperação; informar antecedente pessoal/familiar de hipertermia maligna ou reação hepática.",
+    "clinicalPearls": "MAC diminui com idade; concentração não equivale a dose fixa. Absorvente de CO2 dessecado pode gerar monóxido de carbono.",
+    "guidelineRecommendations": "Uso restrito à anestesia geral por equipe treinada e monitorização contínua.",
+    "safetyFlags": "Hipertermia maligna; via aérea; QT; absorvente CO2; neurotoxicidade pediátrica potencial.",
+    "alerts": "Somente vaporizador específico; individualizar; automação por peso bloqueada.",
+    "references": [
+      "DailyMed/autoridade ou diretriz oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=525a2467-548d-4b10-b181-91b90e99ae1b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=525a2467-548d-4b10-b181-91b90e99ae1b"
+  },
+  "es": {
+    "name": "Isoflurano",
+    "class": "Anestésico geral inalatório",
+    "pharmacologicClass": "Éter halogenado volátil",
+    "commercialNames": "Forane; genéricos.",
+    "presentation": "Líquido volátil para inalação em vaporizador específico.",
+    "presentations": "Frascos de líquido para vaporização; concentração administrada em porcentagem inspirada, no inyección.",
+    "mechanism": "Potencializa transmissão inibitória y reduz excitabilidade neuronal por múltiplos objetivos; mecanismo completo no definido.",
+    "pharmacodynamics": "Produz anestesia dependente da concentração, con depressão respiratoria y reducción da presión arterial; MAC varia con idade y concomitantes.",
+    "pharmacokinetics": "Baixa metabolização; eliminação predominantemente pulmonar inalterada; rápida titulação pela ventilação y concentração inspirada.",
+    "indications": "Indução y mantenimiento da anestesia geral.",
+    "dose": "Individualizar por idade/estado. Indução geralmente 1,3-3% após concentração inicial gradual; mantenimiento cirúrgica usual 1-2,5% con O2/N2O ou 1,5-3,5% con O2 isolado, según resposta y bula.",
+    "pediatricDose": "Pode ser usado em pediatría por anestesista; MAC é idade-dependente. No hay algoritmo simples por peso; automação fora de vaporizador/monitorización é BLOQUEADA.",
+    "renalDose": "No hay ajuste numérico renal; monitorizar perfusão y función según cirurgia.",
+    "hepaticDose": "Relatos de disfunción/hepatite; evitar em antecedente de hepatite inexplicada após anestésico halogenado y monitorizar.",
+    "commonAdverseEffects": "Agitação, tosse, apneia/prender respiração, náusea, vômito, calafrios.",
+    "dangerousAdverseEffects": "Hipertermia maligna, hipercalemia/arrítmias, depressão cardiorrespiratoria, hepatotoxicidade y prolongamento de QT.",
+    "adverseEffects": "Laringoespasmo, delirium, hipotensão y elevação de enzimas hepáticas.",
+    "contraindications": "Suscetibilidade genética conhecida/suspeita à hipertermia maligna; hipersensibilidad a anestésicos halogenados; antecedente de hepatite/disfunción inexplicada após exposição.",
+    "interactions": "Potencializa bloqueadores neuromusculares; opioides y N2O reduzem MAC; precaución con adrenalina, betabloqueadores, antagonistas de cálcio y IMAO.",
+    "monitoring": "Concentrações inspirada/expirada, ventilação, oxigenação, ECG, presión arterial, temperatura y bloqueio neuromuscular.",
+    "administration": "Solo por profesional treinado, con vía aérea, ventilação, oxigênio y ressuscitação disponíveis; vaporizador calibrado específico.",
+    "preparation": "Verificar circuito y absorvente de CO2 no dessecado; no diluir nem injetar.",
+    "infusionProtocol": "Administração contínua por vaporizador no circuito anestésico, titulada por concentração y monitorización; no expressar como mL/h IV.",
+    "pregnancy": "Pode relaxar útero; datos obstétricos limitados. Exposição repetida/prolongada em desenvolvimento exige evaluación de riesgo-benefício.",
+    "lactation": "Considerar necesidad materna y possível interrupción temporária según exposição/recuperação; datos são limitados.",
+    "specialPopulations": "Crianças <3 anos: ponderar procedimentos eletivos prolongados/repetidos; idosos exigem concentrações menores; riesgo neuromuscular/hipercalemia.",
+    "patientEducation": "No dirigir/operar máquinas após anestesia até recuperação; informar antecedente pessoal/familiar de hipertermia maligna ou reacción hepática.",
+    "clinicalPearls": "MAC diminui con idade; concentração no equivale a dosis fixa. Absorvente de CO2 dessecado pode gerar monóxido de carbono.",
+    "guidelineRecommendations": "Uso restrito à anestesia geral por equipe entrenada y monitorización contínua.",
+    "safetyFlags": "Hipertermia maligna; vía aérea; QT; absorvente CO2; neurotoxicidade pediátrica potencial.",
+    "alerts": "Solo vaporizador específico; individualizar; automação por peso bloqueada.",
+    "references": [
+      "DailyMed/autoridade ou diretriz oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=525a2467-548d-4b10-b181-91b90e99ae1b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=525a2467-548d-4b10-b181-91b90e99ae1b"
+  }
+};})();
+/* GOLD33_SELECTIVE:isoflurano:END */
