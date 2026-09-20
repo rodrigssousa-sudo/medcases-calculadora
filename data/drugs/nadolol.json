@@ -5,238 +5,80 @@
   "color": "rgba(239,68,68,0.13)",
   "colorTxt": "#7C2D12",
   "pt": {
-    "pharmacodynamics": "Reduz frequência cardíaca, contratilidade e condução nodal AV, com redução da demanda miocárdica de oxigênio. O efeito depende da dose, seletividade do agente e tônus simpático.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fadiga",
-      "tontura",
-      "hipotensão",
-      "extremidades frias"
-    ],
-    "dangerousAdverseEffects": [
-      "bloqueio AV",
-      "broncoespasmo",
-      "bradicardia grave",
-      "choque ou piora de insuficiência cardíaca",
-      "mascaramento de hipoglicemia"
-    ],
-    "interactions": [
-      "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão",
-      "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
-      "Clonidina exige retirada planejada para evitar hipertensão rebote",
-      "Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia"
-    ],
-    "monitoring": [
-      "Frequência cardíaca",
-      "pressão arterial",
-      "ECG se houver distúrbio de condução ou arritmia",
-      "sinais de insuficiência cardíaca",
-      "broncoespasmo e glicemia em pacientes de risco"
-    ],
-    "patientEducation": [
-      "Não suspender abruptamente sem orientação",
-      "controlar pulso se orientado",
-      "procurar avaliação por síncope, nova dispneia ou piora de edema",
-      "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
-    ],
-    "pregnancy": "Usar apenas quando o benefício materno justificar o risco; próximo ao parto pode causar bradicardia, hipotensão ou hipoglicemia neonatal conforme exposição e agente.",
-    "lactation": "Individualizar conforme agente, dose e idade do lactente; observar bradicardia, letargia ou dificuldade de alimentação quando a exposição for clinicamente relevante.",
-    "safetyFlags": [
-      "BRADICARDIA",
-      "BLOQUEIO_AV",
-      "BRONCOESPASMO",
-      "RETIRADA_GRADUAL",
-      "HIPOGLICEMIA_MASCARADA"
-    ],
-    "alerts": [
-      "Evitar suspensão abrupta em doença coronariana",
-      "Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada",
-      "Usar com cautela em doença broncoespástica"
-    ],
+    "pharmacodynamics": "Bloqueia receptores beta-1 e beta-2, reduzindo frequência, contratilidade e liberação de renina.",
+    "commonAdverseEffects": "bradicardia; fadiga; tontura; hipotensão; extremidades frias",
+    "dangerousAdverseEffects": "bloqueio AV; broncoespasmo; bradicardia grave; choque ou piora de insuficiência cardíaca; mascaramento de hipoglicemia",
+    "interactions": "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão; Digoxina e outros cronotrópicos negativos potencializam bradicardia; Clonidina exige retirada planejada para evitar hipertensão rebote; Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia",
+    "monitoring": "Evitar suspensão abrupta em doença coronariana; Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar com cautela em doença broncoespástica",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "safetyFlags": "Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada e isquemia por retirada abrupta.",
+    "alerts": "Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada e isquemia por retirada abrupta.; Evitar suspensão abrupta em doença coronariana; Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar com cautela em doença broncoespástica",
     "name": "Nadolol",
-    "class": "Betabloqueador não seletivo de longa duração",
-    "pharmacologicClass": "Antagonista beta-1 e beta-2 adrenérgico não seletivo",
+    "class": "Betabloqueador não seletivo de longa ação",
+    "pharmacologicClass": "Betabloqueador não seletivo de longa ação",
     "mechanism": "Bloqueia receptores beta-1 e beta-2, reduzindo frequência, contratilidade e liberação de renina.",
-    "pharmacokinetics": "Não sofre metabolismo significativo e é excretado principalmente inalterado pelos rins. Meia-vida longa permite uma tomada diária; a meia-vida aumenta muito na insuficiência renal.",
-    "indications": [
-      "Hipertensão",
-      "angina crônica estável"
-    ],
-    "commercialNames": [
-      "Corgard"
-    ],
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Hipertensão; angina crônica estável",
+    "commercialNames": "Corgard",
     "presentation": "Comprimidos orais.",
-    "presentations": [
-      "Comprimidos 20, 40 e 80 mg"
-    ],
-    "dose": {
-      "hypertension": "Início 40 mg uma vez ao dia; manutenção habitual 40-80 mg/dia; podem ser necessários até 240-320 mg/dia.",
-      "angina": "Início 40 mg uma vez ao dia; manutenção habitual 40-80 mg/dia; até 160-240 mg/dia em alguns pacientes."
-    },
-    "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro na bula atual.",
-    "renalDose": "Ajustar intervalo: ClCr >50, a cada 24 h; 31-50, a cada 24-36 h; 10-30, a cada 24-48 h; <10 mL/min/1,73 m2, a cada 40-60 h.",
-    "hepaticDose": "Não requer ajuste específico por hepatopatia isolada porque o metabolismo hepático é mínimo; ajustar por resposta e função renal.",
-    "contraindications": [
-      "Asma brônquica",
-      "bradicardia sinusal",
-      "bloqueio maior que primeiro grau",
-      "choque cardiogênico",
-      "insuficiência cardíaca manifesta não controlada",
-      "hipersensibilidade"
-    ],
-    "administration": "Administrar uma vez ao dia, com ou sem alimentos. Se suspenso após uso crônico, reduzir gradualmente por 1-2 semanas.",
-    "preparation": "Não requer preparo.",
-    "infusionProtocol": "Não se aplica: nadolol é oral.",
-    "specialPopulations": {
-      "renal": "A função renal determina o intervalo entre doses.",
-      "asthma": "Contraindicado na asma brônquica.",
-      "elderly": "Revisar função renal antes de titular."
-    },
-    "clinicalPearls": [
-      "A meia-vida longa permite uma tomada diária",
-      "Na insuficiência renal o ajuste principal é prolongar o intervalo, não apenas reduzir miligramas."
-    ],
-    "guidelineRecommendations": [
-      "Na hipertensão não complicada, a diretriz AHA/ACC 2025 prioriza outras classes salvo indicação concomitante para betabloqueio."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fadiga",
-        "tontura",
-        "hipotensão",
-        "extremidades frias"
-      ],
-      "dangerous": [
-        "bloqueio AV",
-        "broncoespasmo",
-        "bradicardia grave",
-        "choque ou piora de insuficiência cardíaca",
-        "mascaramento de hipoglicemia"
-      ]
-    },
+    "presentations": "Comprimidos orais.",
+    "dose": "hypertension: Início 40 mg uma vez ao dia; manutenção habitual 40-80 mg/dia; podem ser necessários até 240-320 mg/dia.; angina: Início 40 mg uma vez ao dia; manutenção habitual 40-80 mg/dia; até 160-240 mg/dia em alguns pacientes.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "contraindications": "Asma brônquica; bradicardia sinusal; bloqueio maior que primeiro grau; choque cardiogênico; insuficiência cardíaca manifesta não controlada; hipersensibilidade",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "adverseEffects": "Bradicardia, fadiga, tontura, náusea e extremidades frias.; Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada e isquemia por retirada abrupta.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=64a788d0-b7f0-4f39-8adb-ab68870ecfa5",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nadolol",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/018063s064lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=64a788d0-b7f0-4f39-8adb-ab68870ecfa5"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nadolol"
   },
   "es": {
-    "pharmacodynamics": "Reduce la frecuencia cardíaca, la contractilidad y la conducción nodal AV, con disminución de la demanda miocárdica de oxígeno. El efecto depende de dosis, selectividad del agente y tono simpático.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fatiga",
-      "mareo",
-      "hipotensión",
-      "extremidades frías"
-    ],
-    "dangerousAdverseEffects": [
-      "bloqueo AV",
-      "broncoespasmo",
-      "bradicardia grave",
-      "shock o empeoramiento de insuficiencia cardíaca",
-      "enmascaramiento de hipoglucemia"
-    ],
-    "interactions": [
-      "Verapamilo o diltiazem aumentan bradicardia, bloqueo AV e hipotensión",
-      "Digoxina y otros cronotrópicos negativos potencian bradicardia",
-      "Clonidina requiere retirada planificada para evitar hipertensión de rebote",
-      "Insulina y secretagogos: puede atenuar síntomas adrenérgicos de hipoglucemia"
-    ],
-    "monitoring": [
-      "Frecuencia cardíaca",
-      "presión arterial",
-      "ECG si existe trastorno de conducción o arritmia",
-      "signos de insuficiencia cardíaca",
-      "broncoespasmo y glucemia en pacientes de riesgo"
-    ],
-    "patientEducation": [
-      "No suspender bruscamente sin indicación",
-      "controlar pulso si fue orientado",
-      "consultar por síncope, disnea nueva o empeoramiento de edema",
-      "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
-    ],
-    "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo; cerca del parto puede producir bradicardia, hipotensión o hipoglucemia neonatal según exposición y agente.",
-    "lactation": "Individualizar según el agente, dosis y edad del lactante; vigilar bradicardia, letargo o mala alimentación cuando la exposición sea clínicamente relevante.",
-    "safetyFlags": [
-      "BRADICARDIA",
-      "BLOQUEO_AV",
-      "BRONCOESPASMO",
-      "RETIRADA_GRADUAL",
-      "HIPOGLUCEMIA_ENMASCARADA"
-    ],
-    "alerts": [
-      "Evitar suspensión abrupta en enfermedad coronaria",
-      "No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada",
-      "Usar con cautela en enfermedad broncoespástica"
-    ],
+    "pharmacodynamics": "Bloqueia receptores beta-1 y beta-2, reduzindo frequência, contratilidade y liberação de renina.",
+    "commonAdverseEffects": "bradicardia; fadiga; tontura; hipotensão; extremidades frias",
+    "dangerousAdverseEffects": "bloqueio AV; broncoespasmo; bradicardia grave; choque ou piora de insuficiência cardíaca; mascaramento de hipoglicemia",
+    "interactions": "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV y hipotensão; Digoxina y outros cronotrópicos negativos potencializam bradicardia; Clonidina exige retirada planejada para evitar hipertensão rebote; Insulina y secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia",
+    "monitoring": "Evitar suspensão abrupta em doença coronariana; No iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar con cautela em doença broncoespástica",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "safetyFlags": "Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada y isquemia por retirada abrupta.",
+    "alerts": "Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada y isquemia por retirada abrupta.; Evitar suspensão abrupta em doença coronariana; No iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar con cautela em doença broncoespástica",
     "name": "Nadolol",
-    "class": "Betabloqueante no selectivo de larga duración",
-    "pharmacologicClass": "Antagonista beta-1 y beta-2 adrenérgico no selectivo",
-    "mechanism": "Bloquea receptores beta-1 y beta-2, reduciendo frecuencia, contractilidad y liberación de renina.",
-    "pharmacokinetics": "No se metaboliza de forma significativa y se excreta principalmente sin cambios por riñón. Vida media larga que permite una toma diaria; la semivida aumenta mucho con insuficiencia renal.",
-    "indications": [
-      "Hipertensión",
-      "angina de pecho crónica estable"
-    ],
-    "commercialNames": [
-      "Corgard"
-    ],
-    "presentation": "Tabletas orales.",
-    "presentations": [
-      "Tabletas 20, 40 y 80 mg"
-    ],
-    "dose": {
-      "hypertension": "Inicio 40 mg una vez al día; mantenimiento habitual 40-80 mg/día; pueden requerirse hasta 240-320 mg/día.",
-      "angina": "Inicio 40 mg una vez al día; mantenimiento habitual 40-80 mg/día; hasta 160-240 mg/día en algunos pacientes."
-    },
-    "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario en la ficha actual.",
-    "renalDose": "Ajustar intervalo: CrCl >50, cada 24 h; 31-50, cada 24-36 h; 10-30, cada 24-48 h; <10 mL/min/1.73 m2, cada 40-60 h.",
-    "hepaticDose": "No requiere ajuste específico por hepatopatía aislada porque el metabolismo hepático es mínimo; ajustar por respuesta y función renal.",
-    "contraindications": [
-      "Asma bronquial",
-      "bradicardia sinusal",
-      "bloqueo mayor de primer grado",
-      "shock cardiogénico",
-      "insuficiencia cardíaca manifiesta no controlada",
-      "hipersensibilidad"
-    ],
-    "administration": "Administrar una vez al día, con o sin alimentos. Si se suspende tras uso crónico, reducir gradualmente durante 1-2 semanas.",
-    "preparation": "No requiere preparación.",
-    "infusionProtocol": "No aplica: nadolol es oral.",
-    "specialPopulations": {
-      "renal": "La función renal determina el intervalo de dosis.",
-      "asthma": "Contraindicado en asma bronquial.",
-      "elderly": "Revisar función renal antes de titular."
-    },
-    "clinicalPearls": [
-      "La vida media larga permite una toma diaria",
-      "En insuficiencia renal el ajuste principal es prolongar el intervalo, no solo reducir miligramos."
-    ],
-    "guidelineRecommendations": [
-      "En hipertensión no complicada, la guía AHA/ACC 2025 prioriza otras clases salvo indicación concomitante para betabloqueo."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fatiga",
-        "mareo",
-        "hipotensión",
-        "extremidades frías"
-      ],
-      "dangerous": [
-        "bloqueo AV",
-        "broncoespasmo",
-        "bradicardia grave",
-        "shock o empeoramiento de insuficiencia cardíaca",
-        "enmascaramiento de hipoglucemia"
-      ]
-    },
+    "class": "Betabloqueador no seletivo de longa ação",
+    "pharmacologicClass": "Betabloqueador no seletivo de longa ação",
+    "mechanism": "Bloqueia receptores beta-1 y beta-2, reduzindo frequência, contratilidade y liberação de renina.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Hipertensão; angina crônica estável",
+    "commercialNames": "Corgard",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "dose": "hypertension: Início 40 mg uma vez ao dia; manutenção habitual 40-80 mg/dia; podem ser necessários até 240-320 mg/dia.; angina: Início 40 mg uma vez ao dia; manutenção habitual 40-80 mg/dia; até 160-240 mg/dia em alguns pacientes.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "contraindications": "Asma brônquica; bradicardia sinusal; bloqueio maior que primeiro grau; choque cardiogênico; insuficiência cardíaca manifesta no controlada; hipersensibilidade",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "adverseEffects": "Bradicardia, fadiga, tontura, náusea y extremidades frias.; Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada y isquemia por retirada abrupta.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=64a788d0-b7f0-4f39-8adb-ab68870ecfa5",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nadolol",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/018063s064lbl.pdf"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=64a788d0-b7f0-4f39-8adb-ab68870ecfa5"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nadolol"
   },
   "name": {
     "pt": "Nadolol",
@@ -248,8 +90,8 @@
     "nadolol generico",
     "betabloqueador nao seletivo de longa duracao"
   ],
-  "dataVersion": "clinical-data-v1-e6a2eda5d984042a",
-  "clinicalContentSha256": "e6a2eda5d984042a2f13efc0094dc50101aac35ba6aa226239773d5f27d26389",
+  "dataVersion": "clinical-data-v1-1bfef8756aff8c12",
+  "clinicalContentSha256": "1bfef8756aff8c12c46d8d25b83c727ec7c937fd1add14bf90af97d58168d63b",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -308,13 +150,15 @@
     ]
   },
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "nadolol.mcGoldClinicalV1",
-    "group": "GOLD_GROUP05_CARDIO_10",
-    "review": "2026-09",
+    "lote": "053",
     "requiredFields": 33,
-    "contentSha256": "e0105edb1f61a85e02257d8f949e124aca44528d40a76f2f6e71c42191f9b4c4",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "74d1644dae5d55433a28e669a25bb51f5d95ca84d2e052ad6d5a8de9ed17f751",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

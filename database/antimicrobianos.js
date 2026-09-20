@@ -29735,3 +29735,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:minociclina:END */
+/* GOLD33_SELECTIVE:moxifloxacino:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="moxifloxacino";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:moxifloxacino:"+matches.length);drug=matches[0];}else{drug=db&&db["moxifloxacino"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:moxifloxacino");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "053",
+    "requiredFieldCount": 33,
+    "approvedSha256": "74d1644dae5d55433a28e669a25bb51f5d95ca84d2e052ad6d5a8de9ed17f751",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Moxifloxacino",
+    "class": "Fluoroquinolona antibacteriana",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "presentations": "Comprimidos orais; formulação IV existe.",
+    "mechanism": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacodynamics": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacokinetics": "Meia-vida 11–15 h (dose única diária).",
+    "indications": "CAP, infecções intra-abdominais e outras respiratórias/pele; não é escolha para UTI e não é antipseudomonas confiável.",
+    "dose": "400 mg VO/IV q24h; CAP 7–14 d, cIAI 5–14 d conforme foco.",
+    "pediatricDose": "standard: Dose fixa 400 mg/dia (não baseado em peso)",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "Ruptura de tendão; Neuropatia potencialmente irreversível; Efeitos SNC/convulsões; Aneurisma/dissecção de aorta; Torsades/QT",
+    "adverseEffects": "Náusea, diarreia, cefaleia, tontura e elevação de transaminases.; Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia e C. difficile.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+    "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes e interações específicas.",
+    "monitoring": "Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT/torsades proeminente; Não usar para UTI de rotina; Não é antipseudomonas confiável",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia e C. difficile.",
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia e C. difficile.; Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT/torsades proeminente; Não usar para UTI de rotina; Não é antipseudomonas confiável",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=moxifloxacin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021085s063lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=moxifloxacin"
+  },
+  "es": {
+    "name": "Moxifloxacino",
+    "class": "Fluoroquinolona antibacteriana",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "presentations": "Comprimidos orais; formulação IV existe.",
+    "mechanism": "Inibe DNA-girase y topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacodynamics": "Inibe DNA-girase y topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacokinetics": "Meia-vida 11–15 h (dosis única diária).",
+    "indications": "CAP, infecções intra-abdominais y outras respiratórias/pele; no é escolha para UTI y no é antipseudomonas confiável.",
+    "dose": "400 mg VO/IV q24h; CAP 7–14 d, cIAI 5–14 d conforme foco.",
+    "pediatricDose": "standard: Dose fixa 400 mg/dia (no baseado em peso)",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "Ruptura de tendão; Neuropatia potencialmente irreversível; Efeitos SNC/convulsões; Aneurisma/dissecção de aorta; Torsades/QT",
+    "adverseEffects": "Náusea, diarreia, cefaleia, tontura y elevação de transaminases.; Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia y C. difficile.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas y interações absolutas.",
+    "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes y interações específicas.",
+    "monitoring": "Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT/torsades proeminente; No usar para UTI de rotina; No é antipseudomonas confiável",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia y C. difficile.",
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia y C. difficile.; Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT/torsades proeminente; No usar para UTI de rotina; No é antipseudomonas confiável",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=moxifloxacin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021085s063lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=moxifloxacin"
+  }
+};})();
+/* GOLD33_SELECTIVE:moxifloxacino:END */

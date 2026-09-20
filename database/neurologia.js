@@ -14050,3 +14050,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:metocarbamol:END */
+/* GOLD33_SELECTIVE:modafinila:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="modafinila";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:modafinila:"+matches.length);drug=matches[0];}else{drug=db&&db["modafinila"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:modafinila");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "053",
+    "requiredFieldCount": 33,
+    "approvedSha256": "74d1644dae5d55433a28e669a25bb51f5d95ca84d2e052ad6d5a8de9ed17f751",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Modafinila",
+    "class": "Promotor de vigília",
+    "pharmacologicClass": "Promotor de vigília",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 100 e 200 mg.",
+    "presentations": "Comprimidos 100 e 200 mg.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Sonolência excessiva associada a narcolepsia, apneia obstrutiva do sono e transtorno do trabalho em turnos.",
+    "dose": "Narcolepsia/OSA: 200 mg VO pela manhã. Trabalho em turnos: 200 mg aproximadamente 1 hora antes do turno. Doses até 400 mg foram toleradas, sem benefício adicional consistente.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Cefaleia, náusea, nervosismo, rinite, diarreia e dor lombar.",
+    "dangerousAdverseEffects": "Reações cutâneas graves, angioedema, anafilaxia, sintomas psiquiátricos e eventos cardiovasculares.",
+    "adverseEffects": "Cefaleia, náusea, nervosismo, rinite, diarreia e dor lombar.; Reações cutâneas graves, angioedema, anafilaxia, sintomas psiquiátricos e eventos cardiovasculares.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Reações cutâneas graves, angioedema, anafilaxia, sintomas psiquiátricos e eventos cardiovasculares.",
+    "alerts": "Reações cutâneas graves, angioedema, anafilaxia, sintomas psiquiátricos e eventos cardiovasculares.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=modafinil",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/020717s037s038lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=modafinil"
+  },
+  "es": {
+    "name": "Modafinila",
+    "class": "Promotor de vigília",
+    "pharmacologicClass": "Promotor de vigília",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 100 y 200 mg.",
+    "presentations": "Comprimidos 100 y 200 mg.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Sonolência excessiva associada a narcolepsia, apneia obstrutiva do sono y transtorno do trabalho em turnos.",
+    "dose": "Narcolepsia/OSA: 200 mg VO pela manhã. Trabalho em turnos: 200 mg aproximadamente 1 hora antes do turno. Doses até 400 mg foram toleradas, sem benefício adicional consistente.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Cefaleia, náusea, nervosismo, rinite, diarreia y dor lombar.",
+    "dangerousAdverseEffects": "Reações cutâneas graves, angioedema, anafilaxia, sintomas psiquiátricos y eventos cardiovasculares.",
+    "adverseEffects": "Cefaleia, náusea, nervosismo, rinite, diarreia y dor lombar.; Reações cutâneas graves, angioedema, anafilaxia, sintomas psiquiátricos y eventos cardiovasculares.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Reações cutâneas graves, angioedema, anafilaxia, sintomas psiquiátricos y eventos cardiovasculares.",
+    "alerts": "Reações cutâneas graves, angioedema, anafilaxia, sintomas psiquiátricos y eventos cardiovasculares.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=modafinil",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/020717s037s038lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=modafinil"
+  }
+};})();
+/* GOLD33_SELECTIVE:modafinila:END */

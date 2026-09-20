@@ -6,10 +6,8 @@
   "colorTxt": "#FB923C",
   "pt": {
     "name": "Moxifloxacino",
-    "class": "Antibiótico fluoroquinolona",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "class": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Comprimidos orais; formulação IV existe.",
     "dose": "400 mg VO/IV q24h; CAP 7–14 d, cIAI 5–14 d conforme foco.",
     "doseKg": {
@@ -21,151 +19,83 @@
     "therapeuticRange": "Concentração-dependente. AUC/CIM ≥ 30–50 para otimizar eficácia.",
     "dilution": "EV: pronto para infusão (400 mg/250 mL). Não diluir adicionalmente.",
     "speed": "Infundir em 60 minutos. Não infundir em menos de 60 min.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Dor abdominal",
-      "Cefaleia"
-    ],
-    "dangerousAdverseEffects": [
-      "Ruptura de tendão",
-      "Neuropatia potencialmente irreversível",
-      "Efeitos SNC/convulsões",
-      "Aneurisma/dissecção de aorta",
-      "Torsades/QT"
-    ],
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "Ruptura de tendão; Neuropatia potencialmente irreversível; Efeitos SNC/convulsões; Aneurisma/dissecção de aorta; Torsades/QT",
     "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
     "risksByPatient": [],
-    "alerts": [
-      "Tendinite/ruptura de tendão",
-      "Neuropatia periférica",
-      "Efeitos SNC",
-      "Miastenia gravis",
-      "Aneurisma/dissecção de aorta",
-      "Disglicemia",
-      "QT/torsades proeminente",
-      "Não usar para UTI de rotina",
-      "Não é antipseudomonas confiável"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
-    ],
-    "renalDose": "Sem ajuste em qualquer grau de insuficiência renal, inclusive HD/CAPD.",
-    "pharmacologicClass": "Fluoroquinolona sistêmica",
-    "pharmacodynamics": "Bactericida concentração-dependente; AUC/MIC e Cmax/MIC correlacionam-se com eficácia.",
-    "pharmacokinetics": "Alta biodisponibilidade oral e ampla penetração tecidual; eliminação renal varia por agente.",
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia e C. difficile.; Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT/torsades proeminente; Não usar para UTI de rotina; Não é antipseudomonas confiável",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=moxifloxacin",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
+    "pharmacodynamics": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacokinetics": "Meia-vida 11–15 h (dose única diária).",
     "indications": "CAP, infecções intra-abdominais e outras respiratórias/pele; não é escolha para UTI e não é antipseudomonas confiável.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "750 mg conforme agente"
-    ],
-    "pediatricDose": "Segurança/eficácia pediátrica não estabelecida para uso rotineiro.",
-    "hepaticDose": "Sem ajuste rotineiro, mas cirrose pode aumentar risco de QT; monitorar ECG se hepatopatia relevante.",
-    "adverseEffects": "Eventos gastrointestinais são comuns; revisar toxicidades específicas e reações de hipersensibilidade.",
+    "presentations": "Comprimidos orais; formulação IV existe.",
+    "pediatricDose": "standard: Dose fixa 400 mg/dia (não baseado em peso)",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "adverseEffects": "Náusea, diarreia, cefaleia, tontura e elevação de transaminases.; Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia e C. difficile.",
     "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes e interações específicas.",
-    "monitoring": "Sintomas tendíneos/neurológicos, glicemia, ECG/eletrólitos quando QT relevante e função renal.",
-    "administration": "VO com ou sem alimento; separar de antiácidos/cátions. IV conforme formulação.",
-    "preparation": "Comprimidos sem preparo; IV conforme fabricante.",
-    "infusionProtocol": "Quando IV, respeitar tempo mínimo de infusão do produto.",
-    "pregnancy": "Usar somente quando benefício esperado justificar o risco; considerar alternativas mais bem estabelecidas.",
-    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
-    "specialPopulations": "Idosos, transplantados, usuários de corticoide e pacientes com aneurisma/aortopatia têm maior risco.",
-    "patientEducation": "Completar o esquema; não reutilizar antibiótico sem indicação e procurar atendimento diante de reação grave.",
-    "clinicalPearls": "Maior preocupação de QT entre o trio; não usar para UTI ou Pseudomonas quando cobertura dirigida é necessária.",
-    "guidelineRecommendations": "Usar apenas quando benefício supera os riscos da classe e AST/epidemiologia justificam.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Revisar toxicidades e interações"
-    ],
+    "monitoring": "Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT/torsades proeminente; Não usar para UTI de rotina; Não é antipseudomonas confiável",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia e C. difficile.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=moxifloxacin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021085s063lbl.pdf"
     ]
   },
   "es": {
     "name": "Moxifloxacino",
-    "class": "Antibiótico fluoroquinolona",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos orales; existe formulación IV.",
-    "dose": "400 mg VO/IV q24h; CAP 7–14 d, cIAI 5–14 d según foco.",
+    "class": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "dose": "400 mg VO/IV q24h; CAP 7–14 d, cIAI 5–14 d conforme foco.",
     "doseKg": {
       "standard": "Dosis fija 400 mg/día (no basado en peso)"
     },
-    "mechanism": "Inhibe DNA girasa y topoisomerasa IV, bloqueando replicación/reparación del DNA bacteriano.",
+    "mechanism": "Inibe DNA-girase y topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
     "onset": "Absorción oral rápida — Tmáx 1–3 h; biodisponibilidad ~90%.",
     "halfLife": "Semivida 11–15 h (dosis única diaria).",
     "therapeuticRange": "Concentración-dependiente. AUC/CIM ≥ 30–50 para optimizar eficacia.",
     "dilution": "EV: listo para infusión (400 mg/250 mL). No diluir adicionalmente.",
     "speed": "Infundir en 60 minutos. No infundir en menos de 60 min.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Dolor abdominal",
-      "Cefalea"
-    ],
-    "dangerousAdverseEffects": [
-      "Rotura tendinosa",
-      "Neuropatía potencialmente irreversible",
-      "Efectos SNC/convulsiones",
-      "Aneurisma/disección aórtica",
-      "Torsades/QT"
-    ],
-    "contraindications": "Hipersensibilidad grave al fármaco/clase; respetar contraindicaciones específicas e interacciones absolutas.",
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "Ruptura de tendão; Neuropatia potencialmente irreversível; Efeitos SNC/convulsões; Aneurisma/dissecção de aorta; Torsades/QT",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas y interações absolutas.",
     "risksByPatient": [],
-    "alerts": [
-      "Tendinitis/rotura tendinosa",
-      "Neuropatía periférica",
-      "Efectos SNC",
-      "Miastenia gravis",
-      "Aneurisma/disección aórtica",
-      "Disglucemia",
-      "QT/torsades prominente",
-      "No usar para UTI de rutina",
-      "No es antipseudomónica confiable"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
-    ],
-    "renalDose": "Sin ajuste en cualquier grado de insuficiencia renal, incluso HD/CAPD.",
-    "pharmacologicClass": "Fluoroquinolona sistémica",
-    "pharmacodynamics": "Bactericida dependiente de concentración; AUC/MIC y Cmax/MIC se correlacionan con eficacia.",
-    "pharmacokinetics": "Alta biodisponibilidad oral y amplia penetración tisular; eliminación renal varía según agente.",
-    "indications": "CAP, intraabdominal y otras respiratorias/piel; no es elección para UTI ni antipseudomónica confiable.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "750 mg según agente"
-    ],
-    "pediatricDose": "Seguridad/eficacia pediátrica no establecida para uso rutinario.",
-    "hepaticDose": "Sin ajuste rutinario, pero cirrosis puede aumentar riesgo QT; monitorizar ECG si hepatopatía relevante.",
-    "adverseEffects": "Son frecuentes los eventos gastrointestinales; revisar toxicidades específicas y reacciones de hipersensibilidad.",
-    "interactions": "Cationes reducen absorción; revisar antiarrítmicos/QT, fármacos glucémicos e interacciones específicas.",
-    "monitoring": "Síntomas tendinosos/neurológicos, glucemia, ECG/electrolitos cuando QT sea relevante y función renal.",
-    "administration": "VO con o sin alimentos; separar de antiácidos/cationes. IV según formulación.",
-    "preparation": "Comprimidos sin preparación; IV según fabricante.",
-    "infusionProtocol": "Cuando IV, respetar tiempo mínimo de infusión.",
-    "pregnancy": "Usar solo cuando el beneficio esperado justifique el riesgo; considerar alternativas mejor establecidas.",
-    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
-    "specialPopulations": "Ancianos, trasplantados, usuarios de corticoide y pacientes con aneurisma/aortopatía tienen mayor riesgo.",
-    "patientEducation": "Completar el esquema; no reutilizar antibióticos sin indicación y consultar ante reacción grave.",
-    "clinicalPearls": "Mayor preocupación de QT del grupo; no usar para UTI ni Pseudomonas cuando se requiere cobertura dirigida.",
-    "guidelineRecommendations": "Usar solo cuando beneficio supere riesgos de clase y AST/epidemiología lo justifiquen.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Revisar toxicidades e interacciones"
-    ],
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia y C. difficile.; Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT/torsades proeminente; No usar para UTI de rotina; No é antipseudomonas confiável",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=moxifloxacin",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
+    "pharmacodynamics": "Inibe DNA-girase y topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacokinetics": "Meia-vida 11–15 h (dosis única diária).",
+    "indications": "CAP, infecções intra-abdominais y outras respiratórias/pele; no é escolha para UTI y no é antipseudomonas confiável.",
+    "presentations": "Comprimidos orais; formulação IV existe.",
+    "pediatricDose": "standard: Dose fixa 400 mg/dia (no baseado em peso)",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "adverseEffects": "Náusea, diarreia, cefaleia, tontura y elevação de transaminases.; Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia y C. difficile.",
+    "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes y interações específicas.",
+    "monitoring": "Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT/torsades proeminente; No usar para UTI de rotina; No é antipseudomonas confiável",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT/torsades, aneurisma/dissecção aórtica, hipoglicemia y C. difficile.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=182ecd0f-714f-42f0-9b16-fb604cf15786",
-      "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults/",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics-certain"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=moxifloxacin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021085s063lbl.pdf"
     ]
   },
   "name": {
@@ -178,8 +108,8 @@
     "moxifloxacino generico",
     "fluoroquinolona de 4ª geracao"
   ],
-  "dataVersion": "clinical-data-v1-e6a2eda5d984042a",
-  "clinicalContentSha256": "e6a2eda5d984042a2f13efc0094dc50101aac35ba6aa226239773d5f27d26389",
+  "dataVersion": "clinical-data-v1-1bfef8756aff8c12",
+  "clinicalContentSha256": "1bfef8756aff8c12c46d8d25b83c727ec7c937fd1add14bf90af97d58168d63b",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",
@@ -245,5 +175,17 @@
         "updated": "2026-03-16"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "moxifloxacino.mcGoldClinicalV1",
+    "lote": "053",
+    "requiredFields": 33,
+    "approvedSha256": "74d1644dae5d55433a28e669a25bb51f5d95ca84d2e052ad6d5a8de9ed17f751",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

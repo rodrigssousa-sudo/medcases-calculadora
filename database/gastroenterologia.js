@@ -3564,3 +3564,93 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:miriquizumabe:END */
+/* GOLD33_SELECTIVE:mosaprida:START */
+;(function(){var db=window.GASTROENTEROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="mosaprida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:mosaprida:"+matches.length);drug=matches[0];}else{drug=db&&db["mosaprida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:mosaprida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "053",
+    "requiredFieldCount": 33,
+    "approvedSha256": "74d1644dae5d55433a28e669a25bb51f5d95ca84d2e052ad6d5a8de9ed17f751",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Mosaprida",
+    "class": "Agonista seletivo 5-HT4; procinético",
+    "pharmacologicClass": "Agonista seletivo 5-HT4; procinético",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 5 mg e outras apresentações conforme mercado.",
+    "presentations": "Comprimidos 5 mg e outras apresentações conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Sintomas gastrointestinais relacionados à dismotilidade conforme indicação e aprovação local.",
+    "dose": "Adultos: 5 mg VO três vezes/dia, antes ou depois das refeições, nos rótulos que aprovam o produto. Reavaliar se não houver resposta; disponibilidade e indicação variam por país.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Diarreia, dor abdominal, boca seca, tontura e cefaleia.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, arritmia/QT em suscetíveis e reações de hipersensibilidade.",
+    "adverseEffects": "Diarreia, dor abdominal, boca seca, tontura e cefaleia.; Hepatotoxicidade, arritmia/QT em suscetíveis e reações de hipersensibilidade.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, arritmia/QT em suscetíveis e reações de hipersensibilidade.",
+    "alerts": "Hepatotoxicidade, arritmia/QT em suscetíveis e reações de hipersensibilidade.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://www.pmda.go.jp/PmdaSearch/iyakuSearch/",
+      "Fonte primária/oficial - https://www.pmda.go.jp/english/review-services/reviews/approved-information/drugs/0002.html"
+    ],
+    "ref": "https://www.pmda.go.jp/PmdaSearch/iyakuSearch/"
+  },
+  "es": {
+    "name": "Mosaprida",
+    "class": "Agonista seletivo 5-HT4; procinético",
+    "pharmacologicClass": "Agonista seletivo 5-HT4; procinético",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 5 mg y outras apresentações conforme mercado.",
+    "presentations": "Comprimidos 5 mg y outras apresentações conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Sintomas gastrointestinais relacionados à dismotilidade conforme indicação y aprovação local.",
+    "dose": "Adultos: 5 mg VO três vezes/dia, antes ou depois das refeições, nos rótulos que aprovam o produto. Reavaliar se no houver resposta; disponibilidade y indicação variam por país.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Diarreia, dor abdominal, boca seca, tontura y cefaleia.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, arritmia/QT em suscetíveis y reações de hipersensibilidade.",
+    "adverseEffects": "Diarreia, dor abdominal, boca seca, tontura y cefaleia.; Hepatotoxicidade, arritmia/QT em suscetíveis y reações de hipersensibilidade.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, arritmia/QT em suscetíveis y reações de hipersensibilidade.",
+    "alerts": "Hepatotoxicidade, arritmia/QT em suscetíveis y reações de hipersensibilidade.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://www.pmda.go.jp/PmdaSearch/iyakuSearch/",
+      "Fonte primária/oficial - https://www.pmda.go.jp/english/review-services/reviews/approved-information/drugs/0002.html"
+    ],
+    "ref": "https://www.pmda.go.jp/PmdaSearch/iyakuSearch/"
+  }
+};})();
+/* GOLD33_SELECTIVE:mosaprida:END */

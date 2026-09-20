@@ -4774,3 +4774,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:ketamina:END */
+/* GOLD33_SELECTIVE:morfina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="morfina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:morfina:"+matches.length);drug=matches[0];}else{drug=db&&db["morfina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:morfina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "053",
+    "requiredFieldCount": 33,
+    "approvedSha256": "74d1644dae5d55433a28e669a25bb51f5d95ca84d2e052ad6d5a8de9ed17f751",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Morfina",
+    "class": "Agonista opioide mu",
+    "pharmacologicClass": "Agonista opioide mu",
+    "commercialNames": "Morfina e marcas locais.",
+    "presentation": "Solução injetável IV em múltiplas concentrações; também formas orais.",
+    "presentations": "Solução injetável IV em múltiplas concentrações; também formas orais.",
+    "mechanism": "Agonismo principalmente μ no SNC e tecidos periféricos, reduzindo transmissão nociceptiva.",
+    "pharmacodynamics": "Agonismo principalmente μ no SNC e tecidos periféricos, reduzindo transmissão nociceptiva.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Dor intensa que exige opioide e não é adequadamente tratada por alternativas.",
+    "dose": "IV direta adulto: 0,1–0,2 mg/kg q4h se necessário, lentamente; titular ao efeito.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea, vômitos, constipação, sonolência, tontura, prurido e retenção urinária.",
+    "dangerousAdverseEffects": "Depressão respiratória potencialmente fatal, sedação profunda/coma, hipotensão, dependência e abstinência.",
+    "adverseEffects": "Constipação, náusea, vômito, prurido, sonolência e retenção urinária.; Depressão respiratória, hipotensão, íleo, dependência, overdose e síndrome serotoninérgica.",
+    "contraindications": "Depressão respiratória significativa, asma aguda/grave em ambiente não monitorado, obstrução GI conhecida/suspeita, hipersensibilidade e contraindicações específicas.",
+    "interactions": "Benzodiazepínicos e outros depressores SNC aumentam sedação/depressão respiratória; avaliar interações metabólicas e serotoninérgicas específicas.",
+    "monitoring": "Garantir monitorização e ressuscitação em uso parenteral/sedação; reavaliar antes de escalada.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Depressão respiratória, hipotensão, íleo, dependência, overdose e síndrome serotoninérgica.",
+    "alerts": "Depressão respiratória, hipotensão, íleo, dependência, overdose e síndrome serotoninérgica.; Garantir monitorização e ressuscitação em uso parenteral/sedação; reavaliar antes de escalada.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=morphine+sulfate",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022195s013lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=morphine+sulfate"
+  },
+  "es": {
+    "name": "Morfina",
+    "class": "Agonista opioide mu",
+    "pharmacologicClass": "Agonista opioide mu",
+    "commercialNames": "Morfina y marcas locais.",
+    "presentation": "Solução injetável IV em múltiplas concentrações; também formas orais.",
+    "presentations": "Solução injetável IV em múltiplas concentrações; também formas orais.",
+    "mechanism": "Agonismo principalmente μ no SNC y tecidos periféricos, reduzindo transmissão nociceptiva.",
+    "pharmacodynamics": "Agonismo principalmente μ no SNC y tecidos periféricos, reduzindo transmissão nociceptiva.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Dor intensa que exige opioide y no é adequadamente tratada por alternativas.",
+    "dose": "IV direta adulto: 0,1–0,2 mg/kg q4h se necessário, lentamente; titular ao efeito.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea, vômitos, constipação, sonolência, tontura, prurido y retenção urinária.",
+    "dangerousAdverseEffects": "Depressão respiratória potencialmente fatal, sedação profunda/coma, hipotensão, dependência y abstinência.",
+    "adverseEffects": "Constipação, náusea, vômito, prurido, sonolência y retenção urinária.; Depressão respiratória, hipotensão, íleo, dependência, overdosis y síndrome serotoninérgica.",
+    "contraindications": "Depressão respiratória significativa, asma aguda/grave em ambiente no monitorado, obstrução GI conhecida/suspeita, hipersensibilidade y contraindicações específicas.",
+    "interactions": "Benzodiazepínicos y outros depressores SNC aumentam sedação/depressão respiratória; avaliar interações metabólicas y serotoninérgicas específicas.",
+    "monitoring": "Garantir monitorização y ressuscitação em uso parenteral/sedação; reavaliar antes de escalada.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Depressão respiratória, hipotensão, íleo, dependência, overdosis y síndrome serotoninérgica.",
+    "alerts": "Depressão respiratória, hipotensão, íleo, dependência, overdosis y síndrome serotoninérgica.; Garantir monitorização y ressuscitação em uso parenteral/sedação; reavaliar antes de escalada.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=morphine+sulfate",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/022195s013lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=morphine+sulfate"
+  }
+};})();
+/* GOLD33_SELECTIVE:morfina:END */

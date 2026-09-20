@@ -7391,3 +7391,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:mirtazapina:END */
+/* GOLD33_SELECTIVE:moclobemida:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="moclobemida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:moclobemida:"+matches.length);drug=matches[0];}else{drug=db&&db["moclobemida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:moclobemida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "053",
+    "requiredFieldCount": 33,
+    "approvedSha256": "74d1644dae5d55433a28e669a25bb51f5d95ca84d2e052ad6d5a8de9ed17f751",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Moclobemida",
+    "class": "Inibidor reversível seletivo da monoaminoxidase A",
+    "pharmacologicClass": "Inibidor reversível seletivo da monoaminoxidase A",
+    "commercialNames": "br: Aurorix; ar: Aurorix; Moclobemida",
+    "presentation": "Comprimido 150 mg; Comprimido 300 mg",
+    "presentations": "Comprimido 150 mg; Comprimido 300 mg",
+    "mechanism": "Inibidor reversível e seletivo da MAO-A.",
+    "pharmacodynamics": "Inibidor reversível e seletivo da MAO-A.",
+    "pharmacokinetics": "Vida média aproximada: 1–2 horas.",
+    "indications": "Transtorno depressivo maior; Depressão atípica; Fobia social; Transtorno do pânico; Ansiedade generalizada; Depressão resistente",
+    "dose": "adulto: 300 mg/dia dividido em 2 tomadas; pode aumentar para 600 mg/dia.; maxDose: Dose máxima: 600 mg/dia.",
+    "pediatricDose": "standard: Não se utiliza cálculo por kg.; pediatric: Uso pediátrico especializado.; maxDose: 600 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Insônia; Tontura; Náuseas; Cefaleia",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica; Crise hipertensiva (menos comum); Virada maníaca",
+    "adverseEffects": "Insônia, tontura, náusea, cefaleia, agitação e boca seca.; Síndrome serotoninérgica, crise hipertensiva, suicidabilidade, mania e convulsões.",
+    "contraindications": "Uso concomitante com ISRS; Feocromocitoma",
+    "interactions": "ISRS; Tramadol; Linezolida; Dextrometorfano",
+    "monitoring": "Menor restrição alimentar que IMAOs irreversíveis.; Menor risco de crise hipertensiva comparado à fenelzina e tranilcipromina.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, crise hipertensiva, suicidabilidade, mania e convulsões.",
+    "alerts": "Síndrome serotoninérgica, crise hipertensiva, suicidabilidade, mania e convulsões.; Menor restrição alimentar que IMAOs irreversíveis.; Menor risco de crise hipertensiva comparado à fenelzina e tranilcipromina.",
+    "references": [
+      "Fonte primária/oficial - https://www.medicines.org.uk/emc/search?q=moclobemide",
+      "Fonte primária/oficial - https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=moclobemide"
+  },
+  "es": {
+    "name": "Moclobemida",
+    "class": "Inibidor reversível seletivo da monoaminoxidase A",
+    "pharmacologicClass": "Inibidor reversível seletivo da monoaminoxidase A",
+    "commercialNames": "br: Aurorix; ar: Aurorix; Moclobemida",
+    "presentation": "Comprimido 150 mg; Comprimido 300 mg",
+    "presentations": "Comprimido 150 mg; Comprimido 300 mg",
+    "mechanism": "Inibidor reversível y seletivo da MAO-A.",
+    "pharmacodynamics": "Inibidor reversível y seletivo da MAO-A.",
+    "pharmacokinetics": "Vida média aproximada: 1–2 horas.",
+    "indications": "Transtorno depressivo maior; Depressão atípica; Fobia social; Transtorno do pânico; Ansiedade generalizada; Depressão resistente",
+    "dose": "adulto: 300 mg/dia dividido em 2 tomadas; pode aumentar para 600 mg/dia.; maxDose: Dose máxima: 600 mg/dia.",
+    "pediatricDose": "standard: No se utiliza cálculo por kg.; pediatric: Uso pediátrico especializado.; maxDose: 600 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Insônia; Tontura; Náuseas; Cefaleia",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica; Crise hipertensiva (menos comum); Virada maníaca",
+    "adverseEffects": "Insônia, tontura, náusea, cefaleia, agitação y boca seca.; Síndrome serotoninérgica, crise hipertensiva, suicidabilidade, mania y convulsões.",
+    "contraindications": "Uso concomitante con ISRS; Feocromocitoma",
+    "interactions": "ISRS; Tramadol; Linezolida; Dextrometorfano",
+    "monitoring": "Menor restrição alimentar que IMAOs irreversíveis.; Menor riesgo de crise hipertensiva comparado à fenelzina y tranilcipromina.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, crise hipertensiva, suicidabilidade, mania y convulsões.",
+    "alerts": "Síndrome serotoninérgica, crise hipertensiva, suicidabilidade, mania y convulsões.; Menor restrição alimentar que IMAOs irreversíveis.; Menor riesgo de crise hipertensiva comparado à fenelzina y tranilcipromina.",
+    "references": [
+      "Fonte primária/oficial - https://www.medicines.org.uk/emc/search?q=moclobemide",
+      "Fonte primária/oficial - https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database.html"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=moclobemide"
+  }
+};})();
+/* GOLD33_SELECTIVE:moclobemida:END */
