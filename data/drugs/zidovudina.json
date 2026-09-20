@@ -5,22 +5,119 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Zidovudina (AZT)"
+    "name": "Zidovudina",
+    "class": "Antirretroviral",
+    "pharmacologicClass": "Inibidor nucleosidico da transcriptase reversa (NRTI)",
+    "commercialNames": "Nome comercial nao revisado nesta ficha",
+    "presentation": "Capsula oral",
+    "presentations": "Capsula 100 mg; produto EUA. Outras formas exigem fonte propria.",
+    "mechanism": "Analogo de timidina que, apos fosforilacao intracelular, inibe a transcriptase reversa e encerra a cadeia de DNA viral.",
+    "pharmacodynamics": "Reduz replicacao do HIV-1 em terapia combinada; nao usar como monoterapia.",
+    "pharmacokinetics": "Metabolizacao hepatica por glucuronidacao e eliminacao renal de metabolito; revisar rotulo para detalhes por formulacao.",
+    "indications": "Tratamento da infeccao HIV-1 com outros antirretrovirais; prevencao da transmissao materno-fetal no esquema rotulado.",
+    "dose": "Adulto para HIV-1: 300 mg VO a cada 12 h, sempre com outros antirretrovirais. Esquemas materno-infantis devem seguir a secao 2.3 da bula e protocolo vigente, nao ser inferidos de dose adulta.",
+    "pediatricDose": "4 semanas a <18 anos: dose por peso, sem exceder dose adulta; confirmar tabela vigente da bula antes de calcular.",
+    "renalDose": "CrCl <15 mL/min ou dialise: 100 mg VO a cada 6-8 h conforme bula; confirmar indicacao e tolerancia hematologica.",
+    "hepaticDose": "Nao ha esquema universal nesta ficha; acompanhar toxicidade e considerar interrupcao em hepatotoxicidade/lactato elevado.",
+    "commonAdverseEffects": "Cefaleia, mal-estar, nausea, anorexia e vomito.",
+    "dangerousAdverseEffects": "Anemia grave, neutropenia, miopatia, acidose latica e hepatomegalia grave com esteatose.",
+    "adverseEffects": "Lipoatrofia e sindrome de reconstituicao imune foram relatadas em terapia combinada.",
+    "contraindications": "Hipersensibilidade a zidovudina/componentes, incluindo anafilaxia ou sindrome de Stevens-Johnson.",
+    "interactions": "Evitar estavudina e doxorrubicina; agentes mielossupressores/citotoxicos aumentam toxicidade hematologica; evitar associacao com ribavirina.",
+    "monitoring": "Hemograma basal e seriado, sinais de anemia/neutropenia, sintomas de miopatia, lactato e funcao hepatica se clinicamente indicados.",
+    "administration": "VO; usar apenas como componente de esquema antirretroviral completo.",
+    "preparation": "Nao aplicavel a esta apresentacao oral; nao inferir preparo parenteral.",
+    "infusionProtocol": "Nao aplicavel a esta apresentacao; nao converter para esquema de infusao.",
+    "pregnancy": "A bula inclui prevencao da transmissao materno-fetal; a decisao deve seguir equipe de HIV/obstetricia e diretriz vigente.",
+    "lactation": "A bula orienta pessoas com HIV a nao amamentar devido ao potencial de transmissao do HIV.",
+    "specialPopulations": "Neonatos e criancas requerem tabela e seguimento especificos; anemia/neutropenia podem exigir interrupcao.",
+    "patientEducation": "Nao interromper nem usar isoladamente; procurar equipe para fadiga intensa, palidez, dispneia, dor muscular ou sintomas de acidose.",
+    "clinicalPearls": "Prevenir transmissao vertical nao equivale a aplicar uma dose unica: requer protocolo materno-infantil e status virologico atual.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO HEMATOLOGICO: verificar hemograma e interacoes mielossupressoras; sem monoterapia.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "references": [
+      "DailyMed (EUA): zidovudine capsules 100 mg, atualizada em 10 fev 2025. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9907acb2-e4a0-46f9-93c0-a8d7b7ce98cf"
+    ],
+    "ref": "DailyMed (EUA): zidovudine capsules 100 mg, atualizada em 10 fev 2025. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9907acb2-e4a0-46f9-93c0-a8d7b7ce98cf"
   },
   "es": {
-    "name": "Zidovudina (AZT)"
+    "name": "Zidovudina",
+    "class": "Antirretroviral",
+    "pharmacologicClass": "Inhibidor nucleosidico de la transcriptasa reversa (NRTI)",
+    "commercialNames": "Nombre comercial no revisado en esta ficha",
+    "presentation": "Capsula oral",
+    "presentations": "Capsula 100 mg; producto EUA. Otras formas requieren fuente propia.",
+    "mechanism": "Analogo de timidina que, tras fosforilacion intracelular, inhibe la transcriptasa reversa y termina la cadena de ADN viral.",
+    "pharmacodynamics": "Reduce la replicacion del VIH-1 en terapia combinada; no usar como monoterapia.",
+    "pharmacokinetics": "Metabolizacion hepatica por glucuronidacion y eliminacion renal de metabolito; revisar rotulo para detalles por formulacion.",
+    "indications": "Tratamiento de la infeccion VIH-1 con otros antirretrovirales; prevencion de la transmision materno-fetal en el esquema rotulado.",
+    "dose": "Adulto para VIH-1: 300 mg VO cada 12 h, siempre con otros antirretrovirales. Esquemas materno-infantiles deben seguir la seccion 2.3 del rotulo y protocolo vigente, no inferirse de dosis adulta.",
+    "pediatricDose": "4 semanas a <18 anos: dosis por peso, sin exceder la dosis adulta; confirmar tabla vigente del rotulo antes de calcular.",
+    "renalDose": "CrCl <15 mL/min o dialisis: 100 mg VO cada 6-8 h conforme al rotulo; confirmar indicacion y tolerancia hematologica.",
+    "hepaticDose": "No hay esquema universal en esta ficha; vigilar toxicidad y considerar interrupcion en hepatotoxicidad/lactato elevado.",
+    "commonAdverseEffects": "Cefalea, malestar, nauseas, anorexia y vomitos.",
+    "dangerousAdverseEffects": "Anemia grave, neutropenia, miopatia, acidosis lactica y hepatomegalia grave con esteatosis.",
+    "adverseEffects": "Lipoatrofia y sindrome de reconstitucion inmune fueron reportadas en terapia combinada.",
+    "contraindications": "Hipersensibilidad a zidovudina/componentes, incluida anafilaxia o sindrome de Stevens-Johnson.",
+    "interactions": "Evitar estavudina y doxorrubicina; agentes mielosupresores/citotoxicos aumentan toxicidad hematologica; evitar asociacion con ribavirina.",
+    "monitoring": "Hemograma basal y seriado, signos de anemia/neutropenia, sintomas de miopatia, lactato y funcion hepatica si esta clinicamente indicado.",
+    "administration": "VO; usar solo como componente de esquema antirretroviral completo.",
+    "preparation": "No aplicable a esta presentacion oral; no inferir preparacion parenteral.",
+    "infusionProtocol": "No aplicable a esta presentacion; no convertir a esquema de infusion.",
+    "pregnancy": "El rotulo incluye prevencion de transmision materno-fetal; la decision debe seguir equipo de VIH/obstetricia y guia vigente.",
+    "lactation": "El rotulo indica que las personas con VIH no amamanten por el potencial de transmision del VIH.",
+    "specialPopulations": "Neonatos y ninos requieren tabla y seguimiento especificos; anemia/neutropenia pueden requerir interrupcion.",
+    "patientEducation": "No interrumpir ni usar aislada; consultar al equipo por fatiga intensa, palidez, disnea, dolor muscular o sintomas de acidosis.",
+    "clinicalPearls": "Prevenir transmision vertical no equivale a aplicar una dosis unica: requiere protocolo materno-infantil y estado virologico actual.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO HEMATOLOGICO: verificar hemograma e interacciones mielosupresoras; sin monoterapia.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "references": [
+      "DailyMed (EUA): zidovudine capsules 100 mg, atualizada em 10 fev 2025. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9907acb2-e4a0-46f9-93c0-a8d7b7ce98cf"
+    ],
+    "ref": "DailyMed (EUA): zidovudine capsules 100 mg, atualizada em 10 fev 2025. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9907acb2-e4a0-46f9-93c0-a8d7b7ce98cf"
   },
   "name": {
-    "pt": "Zidovudina (AZT)",
-    "es": "Zidovudina (AZT)"
+    "pt": "Zidovudina",
+    "es": "Zidovudina"
   },
   "keywords": [
     "zidovudina",
     "zidovudina (azt)"
   ],
-  "dataVersion": "clinical-data-v1-cddc3eb2787d630b",
-  "clinicalContentSha256": "cddc3eb2787d630bfba0664119826e0d46af0d39b528035d541af5bf01cca86c",
+  "dataVersion": "clinical-data-v1-3cdfc00d12759dc3",
+  "clinicalContentSha256": "3cdfc00d12759dc3a4831a49f3552a7eae2013bb4df40f99e34aa78074c5584f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "infectologia.js"
+  "sourceModule": "infectologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "zidovudina.mcGoldClinicalV1",
+    "lote": "090",
+    "requiredFields": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  }
 }

@@ -73770,3 +73770,108 @@
   }
 };})();
 /* GOLD33_SELECTIVE:fluvastatina:END */
+/* GOLD33_SELECTIVE:acidoaminocaproico:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="acidoaminocaproico";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:acidoaminocaproico:"+matches.length);drug=matches[0];}else{drug=db&&db["acidoaminocaproico"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="acidoaminocaproico";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:acidoaminocaproico:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:acidoaminocaproico");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "090",
+    "requiredFieldCount": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  },
+  "pt": {
+    "name": "Acido aminocaproico",
+    "class": "Hemostatico antifibrinolitico",
+    "pharmacologicClass": "Analogo da lisina; inibidor da fibrinolise",
+    "commercialNames": "Nome comercial nao revisado; usar somente o generico desta bula",
+    "presentation": "Solucao oral e solucao injetavel IV",
+    "presentations": "Oral: 0,25 g/mL. IV: 250 mg/mL, frasco 5 g/20 mL. Produtos EUA; nao inferir disponibilidade AR/BR.",
+    "mechanism": "Inibe principalmente ativadores do plasminogenio e, em menor grau, a atividade da plasmina.",
+    "pharmacodynamics": "Reduz fibrinolise e pode favorecer hemostasia quando hipofibrinogenese/fibrinolise contribui para sangramento.",
+    "pharmacokinetics": "Excrecao renal predominante; meia-vida terminal aproximada de 2 h.",
+    "indications": "Sangramento no qual a fibrinolise contribui; confirmar diagnostico/laboratorio antes do uso.",
+    "dose": "ORAL (rotulo EUA): 5 g na primeira hora, depois 1,25 g/h por cerca de 8 h ou ate controle. IV (rotulo EUA): 4-5 g durante a primeira hora, depois 1 g/h; nao combinar ou converter sem prescricao e rotulo local.",
+    "pediatricDose": "Seguranca e eficacia pediatrica nao estabelecidas na bula revisada.",
+    "renalDose": "Eliminacao renal predominante; o rotulo alerta maior exposicao na insuficiencia renal grave, sem esquema universal de ajuste nesta ficha.",
+    "hepaticDose": "Nao ha esquema especifico confirmado nesta fonte; revisar contexto clinico e causa do sangramento.",
+    "commonAdverseEffects": "Nausea, vomito, diarreia, dor abdominal, cefaleia, mal-estar, tontura.",
+    "dangerousAdverseEffects": "Trombose/embolia, rabdomiolise e insuficiencia renal, miopatia, anafilaxia, convulsoes, hipotensao.",
+    "adverseEffects": "Edema, bradicardia, isquemia periferica, alteracoes hematologicas, rash e alteracoes visuais relatados.",
+    "contraindications": "Processo ativo de coagulacao intravascular; CID sem heparina concomitante; hipersensibilidade.",
+    "interactions": "Evitar associacao com concentrado de fator IX complexo ou concentrado anti-inibidor pelo risco trombotico.",
+    "monitoring": "Confirmar hiperfibrinolise; acompanhar sangramento/trombose, funcao renal e CPK em tratamento prolongado.",
+    "administration": "VO conforme solucao especifica; IV somente para produto injetavel, nao por bolus improvisado.",
+    "preparation": "IV: a bula do produto especifica diluicao em 250 mL de diluente compativel para dose de ataque; confirmar texto vigente do produto antes do preparo. A solucao oral nao requer preparo parenteral.",
+    "infusionProtocol": "IV: administrar dose de ataque ao longo de 1 h e manutencao por infusao conforme rotulo; nao usar a concentracao oral como base de calculo IV.",
+    "pregnancy": "Usar apenas se claramente necessario; a fonte nao demonstra seguranca reprodutiva suficiente.",
+    "lactation": "Excrecao no leite humano desconhecida na fonte; cautela.",
+    "specialPopulations": "Evitar/ponderar cuidadosamente em hematuria de trato urinario superior e em alto risco trombotico.",
+    "patientEducation": "Nao usar para sangramento sem diagnostico; procurar atendimento para dor toracica, dispneia, edema doloroso, fraqueza muscular ou urina escura.",
+    "clinicalPearls": "A formulacao oral e a IV sao produtos distintos; conversao de volume e diluicao exige a bula especifica.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO: diferenciar fibrinolise primaria de CID; nao transpor esquema entre vias.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "references": [
+      "DailyMed (EUA): aminocaproic acid oral solution, 0,25 g/mL, atualizada em 01 nov 2023; e aminocaproic acid injection 250 mg/mL, atualizada em 30 abr 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9"
+    ],
+    "ref": "DailyMed (EUA): aminocaproic acid oral solution, 0,25 g/mL, atualizada em 01 nov 2023; e aminocaproic acid injection 250 mg/mL, atualizada em 30 abr 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9"
+  },
+  "es": {
+    "name": "Acido aminocaproico",
+    "class": "Hemostatico antifibrinolitico",
+    "pharmacologicClass": "Analogo de lisina; inhibidor de la fibrinolisis",
+    "commercialNames": "Nombre comercial no revisado; usar solo el generico de este rotulo",
+    "presentation": "Solucion oral y solucion inyectable IV",
+    "presentations": "Oral: 0,25 g/mL. IV: 250 mg/mL, vial 5 g/20 mL. Productos EUA; no inferir disponibilidad AR/BR.",
+    "mechanism": "Inhibe principalmente activadores del plasminogeno y, en menor grado, la actividad de la plasmina.",
+    "pharmacodynamics": "Reduce la fibrinolisis y puede favorecer la hemostasia cuando la fibrinolisis contribuye al sangrado.",
+    "pharmacokinetics": "Excrecion renal predominante; vida media terminal aproximada de 2 h.",
+    "indications": "Sangrado en el cual la fibrinolisis contribuye; confirmar diagnostico/laboratorio antes del uso.",
+    "dose": "ORAL (rotulo EUA): 5 g en la primera hora, luego 1,25 g/h por cerca de 8 h o hasta control. IV (rotulo EUA): 4-5 g durante la primera hora, luego 1 g/h; no combinar ni convertir sin prescripcion y rotulo local.",
+    "pediatricDose": "La seguridad y eficacia pediatrica no estan establecidas en el rotulo revisado.",
+    "renalDose": "Eliminacion renal predominante; el rotulo advierte mayor exposicion en insuficiencia renal grave, sin esquema universal de ajuste en esta ficha.",
+    "hepaticDose": "No hay esquema especifico confirmado en esta fuente; revisar contexto clinico y causa del sangrado.",
+    "commonAdverseEffects": "Nauseas, vomitos, diarrea, dolor abdominal, cefalea, malestar, mareo.",
+    "dangerousAdverseEffects": "Trombosis/embolia, rabdomiolisis e insuficiencia renal, miopatia, anafilaxia, convulsiones, hipotension.",
+    "adverseEffects": "Edema, bradicardia, isquemia periferica, alteraciones hematologicas, erupcion y alteraciones visuales reportadas.",
+    "contraindications": "Proceso activo de coagulacion intravascular; CID sin heparina concomitante; hipersensibilidad.",
+    "interactions": "Evitar asociacion con concentrado de factor IX complejo o concentrado anti-inhibidor por riesgo trombotico.",
+    "monitoring": "Confirmar hiperfibrinolisis; vigilar sangrado/trombosis, funcion renal y CPK en tratamiento prolongado.",
+    "administration": "VO conforme solucion especifica; IV solo para producto inyectable, no por bolo improvisado.",
+    "preparation": "IV: el rotulo del producto especifica dilucion en 250 mL de diluyente compatible para dosis de carga; confirmar texto vigente antes de preparar. La solucion oral no requiere preparacion parenteral.",
+    "infusionProtocol": "IV: administrar dosis de carga durante 1 h y mantenimiento por infusion conforme al rotulo; no usar la concentracion oral como base de calculo IV.",
+    "pregnancy": "Usar solo si es claramente necesario; la fuente no demuestra seguridad reproductiva suficiente.",
+    "lactation": "Excrecion en leche humana desconocida en la fuente; precaucion.",
+    "specialPopulations": "Evitar/ponderar cuidadosamente en hematuria de vias urinarias superiores y alto riesgo trombotico.",
+    "patientEducation": "No usar para sangrado sin diagnostico; buscar atencion por dolor toracico, disnea, edema doloroso, debilidad muscular u orina oscura.",
+    "clinicalPearls": "La formulacion oral y la IV son productos distintos; conversion de volumen y dilucion exige el rotulo especifico.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO: diferenciar fibrinolisis primaria de CID; no trasladar esquema entre vias.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "references": [
+      "DailyMed (EUA): aminocaproic acid oral solution, 0,25 g/mL, atualizada em 01 nov 2023; e aminocaproic acid injection 250 mg/mL, atualizada em 30 abr 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9"
+    ],
+    "ref": "DailyMed (EUA): aminocaproic acid oral solution, 0,25 g/mL, atualizada em 01 nov 2023; e aminocaproic acid injection 250 mg/mL, atualizada em 30 abr 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9"
+  }
+};})();
+/* GOLD33_SELECTIVE:acidoaminocaproico:END */

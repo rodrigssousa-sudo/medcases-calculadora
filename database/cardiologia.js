@@ -2473,3 +2473,108 @@
   }
 };})();
 /* GOLD33_SELECTIVE:trandolapril:END */
+/* GOLD33_SELECTIVE:adenosina:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="adenosina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:adenosina:"+matches.length);drug=matches[0];}else{drug=db&&db["adenosina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="adenosina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:adenosina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:adenosina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "090",
+    "requiredFieldCount": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  },
+  "pt": {
+    "name": "Adenosina",
+    "class": "Antiarrtimico de acao ultracurta",
+    "pharmacologicClass": "Nucleosideo endogeno",
+    "commercialNames": "Nome comercial nao revisado nesta ficha",
+    "presentation": "Solucao injetavel para bolus IV rapido",
+    "presentations": "3 mg/mL em agua para injecao com cloreto de sodio; produto EUA.",
+    "mechanism": "Retarda conducao no no AV e interrompe circuitos de reentrada dependentes do no AV.",
+    "pharmacodynamics": "Pode restaurar ritmo sinusal em TSV paroxistica; nao converte FA, flutter atrial ou TV.",
+    "pharmacokinetics": "Captacao celular e metabolismo muito rapidos; meia-vida no sangue total inferior a 10 s.",
+    "indications": "Conversao de TSV paroxistica, incluindo associada a vias acessorias; tentar manobras vagais apropriadas antes quando indicado.",
+    "dose": "Adulto: 6 mg em bolus IV rapido, seguido de flush; se necessario, 12 mg apos 1-2 min, podendo repetir 12 mg uma vez conforme rotulo.",
+    "pediatricDose": "A fonte revisada deve ser confrontada com protocolo pediatrico local; nao incluir calculo mg/kg neste candidato sem validacao pediatrica especifica.",
+    "renalDose": "Nao requer ajuste previsto pela farmacocinetica do rotulo.",
+    "hepaticDose": "Nao requer ajuste previsto pela farmacocinetica do rotulo.",
+    "commonAdverseEffects": "Rubor, dispneia/desconforto toracico, cefaleia, tontura, nausea e sensacao de pressao.",
+    "dangerousAdverseEffects": "Broncoespasmo, bloqueio AV prolongado, assistolia, arritmias, hipotensao importante e fibrilacao atrial.",
+    "adverseEffects": "Palpitacoes, dor cervical/mandibular, parestesias e ansiedade podem ocorrer transitoriamente.",
+    "contraindications": "Bloqueio AV de segundo/terceiro grau ou disfuncao do no sinusal sem marcapasso; hipersensibilidade; asma/broncoespasmo conforme rotulo.",
+    "interactions": "Metilxantinas (cafeina/teofilina) antagonizam; dipiridamol potencializa; carbamazepina pode aumentar bloqueio AV.",
+    "monitoring": "Monitorizacao ECG continua e capacidade de reanimacao durante uso; confirmar o ritmo e a via IV.",
+    "administration": "Bolus IV muito rapido em veia ou acesso proximal, seguido imediatamente de flush salino.",
+    "preparation": "Nao reconstituir; usar somente solucao injetavel 3 mg/mL e verificar integridade/validade.",
+    "infusionProtocol": "NAO APLICAVEL: este escopo e bolus IV rapido; nao administrar por infusao continua.",
+    "pregnancy": "Dados limitados na fonte; avaliar beneficio-risco e protocolo obstetrico.",
+    "lactation": "Revisar fonte de lactacao e risco clinico; nao foi validado neste candidato.",
+    "specialPopulations": "Cautela em transplante cardiaco e uso de dipiridamol; reduzir dose inicial pode ser necessario conforme rotulo.",
+    "patientEducation": "Explicar que sintomas intensos e breves podem ocorrer; equipe deve ser avisada imediatamente de falta de ar ou dor intensa.",
+    "clinicalPearls": "Nao usar a resposta a adenosina para rotular automaticamente a arritmia; o ECG continua decisivo.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "EMERGENCIA: confirmar TSV regular de complexo estreito e recursos de reanimacao; evitar uso em ritmo irregular de complexo largo.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "references": [
+      "DailyMed (EUA): adenosine injection 3 mg/mL, rapid bolus IV, atualizada em 06 abr 2022. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1c149fe-9095-4b2a-a21f-7af3212e0254"
+    ],
+    "ref": "DailyMed (EUA): adenosine injection 3 mg/mL, rapid bolus IV, atualizada em 06 abr 2022. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1c149fe-9095-4b2a-a21f-7af3212e0254"
+  },
+  "es": {
+    "name": "Adenosina",
+    "class": "Antiarrtmico de accion ultracorta",
+    "pharmacologicClass": "Nucleosido endogeno",
+    "commercialNames": "Nombre comercial no revisado en esta ficha",
+    "presentation": "Solucion inyectable para bolo IV rapido",
+    "presentations": "3 mg/mL en agua para inyeccion con cloruro de sodio; producto EUA.",
+    "mechanism": "Retrasa la conduccion en el nodo AV e interrumpe circuitos de reentrada dependientes del nodo AV.",
+    "pharmacodynamics": "Puede restaurar ritmo sinusal en TSV paroxistica; no convierte FA, aleteo auricular ni TV.",
+    "pharmacokinetics": "Captacion celular y metabolismo muy rapidos; vida media en sangre total inferior a 10 s.",
+    "indications": "Conversion de TSV paroxistica, incluida la asociada a vias accesorias; intentar maniobras vagales apropiadas antes cuando corresponda.",
+    "dose": "Adulto: 6 mg en bolo IV rapido, seguido de flush; si es necesario, 12 mg despues de 1-2 min, pudiendo repetir 12 mg una vez conforme al rotulo.",
+    "pediatricDose": "La fuente revisada debe confrontarse con protocolo pediatrico local; no incluir calculo mg/kg en este candidato sin validacion pediatrica especifica.",
+    "renalDose": "No se espera ajuste por la farmacocinetica del rotulo.",
+    "hepaticDose": "No se espera ajuste por la farmacocinetica del rotulo.",
+    "commonAdverseEffects": "Rubor, disnea/malestar toracico, cefalea, mareo, nauseas y sensacion de presion.",
+    "dangerousAdverseEffects": "Broncoespasmo, bloqueo AV prolongado, asistolia, arritmias, hipotension importante y fibrilacion auricular.",
+    "adverseEffects": "Palpitaciones, dolor cervical/mandibular, parestesias y ansiedad pueden ocurrir transitoriamente.",
+    "contraindications": "Bloqueo AV de segundo/tercer grado o disfuncion del nodo sinusal sin marcapasos; hipersensibilidad; asma/broncoespasmo conforme al rotulo.",
+    "interactions": "Metilxantinas (cafeina/teofilina) antagonizan; dipiridamol potencia; carbamazepina puede aumentar bloqueo AV.",
+    "monitoring": "Monitorizacion ECG continua y capacidad de reanimacion durante el uso; confirmar el ritmo y la via IV.",
+    "administration": "Bolo IV muy rapido en vena o acceso proximal, seguido inmediatamente de flush salino.",
+    "preparation": "No reconstituir; usar solo solucion inyectable 3 mg/mL y verificar integridad/vencimiento.",
+    "infusionProtocol": "NO APLICABLE: este alcance es bolo IV rapido; no administrar por infusion continua.",
+    "pregnancy": "Datos limitados en la fuente; evaluar beneficio-riesgo y protocolo obstetrico.",
+    "lactation": "Revisar fuente de lactancia y riesgo clinico; no fue validado en este candidato.",
+    "specialPopulations": "Precaucion en trasplante cardiaco y uso de dipiridamol; puede requerirse reducir la dosis inicial conforme al rotulo.",
+    "patientEducation": "Explicar que pueden ocurrir sintomas intensos y breves; avisar de inmediato al equipo si hay falta de aire o dolor intenso.",
+    "clinicalPearls": "No usar la respuesta a adenosina para etiquetar automaticamente la arritmia; el ECG sigue siendo decisivo.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "EMERGENCIA: confirmar TSV regular de complejo estrecho y recursos de reanimacion; evitar uso en ritmo irregular de complejo ancho.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "references": [
+      "DailyMed (EUA): adenosine injection 3 mg/mL, rapid bolus IV, atualizada em 06 abr 2022. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1c149fe-9095-4b2a-a21f-7af3212e0254"
+    ],
+    "ref": "DailyMed (EUA): adenosine injection 3 mg/mL, rapid bolus IV, atualizada em 06 abr 2022. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1c149fe-9095-4b2a-a21f-7af3212e0254"
+  }
+};})();
+/* GOLD33_SELECTIVE:adenosina:END */

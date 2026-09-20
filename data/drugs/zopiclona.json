@@ -6,184 +6,98 @@
   "colorTxt": null,
   "pt": {
     "name": "Zopiclona",
-    "class": "Hipnótico não benzodiazepínico — droga Z",
+    "class": "Hipnotico",
     "category": "hipnotico",
-    "commercialNames": {
-      "br": [
-        "Imovane",
-        "Zopix",
-        "Zopiclona"
-      ],
-      "ar": [
-        "Imovane",
-        "Zopiclona Bagó",
-        "Zopiclona Gador"
-      ]
-    },
-    "presentation": [
-      "Comprimido 3,75 mg",
-      "Comprimido 7,5 mg"
-    ],
-    "dose": {
-      "adulto": "Insônia: 7,5 mg VO imediatamente antes de deitar.",
-      "idoso": "Idosos, frágeis ou hepatopatia: iniciar 3,75 mg ao deitar.",
-      "maxDose": "Dose máxima usual: 7,5 mg/noite."
-    },
+    "commercialNames": "Zopiclone 7,5 mg film-coated tablets (produto-fonte UK)",
+    "presentation": "Comprimido revestido oral",
+    "dose": "Adulto: 7,5 mg VO imediatamente antes de deitar. Idoso, insuficiencia hepatica, renal ou respiratoria cronica: iniciar 3,75 mg. Curso maximo usual: 4 semanas, incluindo retirada gradual.",
     "doseKg": {
       "standard": "Não se utiliza cálculo por kg em adultos.",
       "pediatric": "Não recomendado em pediatria.",
       "maxDose": "7,5 mg/noite"
     },
-    "indications": [
-      "Insônia de início do sono",
-      "Insônia de manutenção do sono",
-      "Insônia de curta duração",
-      "Insônia transitória",
-      "Insônia situacional por estresse",
-      "Insônia associada à ansiedade leve"
-    ],
+    "indications": "Tratamento de curto prazo da insonia em adultos.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Modulador positivo do receptor GABA-A no sítio benzodiazepínico, promovendo efeito hipnótico.",
+    "mechanism": "Modulador do complexo receptor GABA-A com efeito sedativo-hipnotico.",
     "onset": "Início de ação geralmente em 30 minutos.",
     "halfLife": "Vida média aproximada: 5 horas; pode prolongar em idosos e hepatopatia.",
-    "commonAdverseEffects": [
-      "Gosto metálico ou amargo",
-      "Sonolência",
-      "Boca seca",
-      "Tontura",
-      "Cefaleia",
-      "Sonolência residual"
-    ],
-    "dangerousAdverseEffects": [
-      "Comportamentos complexos do sono",
-      "Dependência e abuso",
-      "Depressão respiratória com depressores do SNC",
-      "Quedas e fraturas",
-      "Confusão ou delirium em idosos",
-      "Reações paradoxais com agitação"
-    ],
+    "commonAdverseEffects": "Disgeusia amarga, sonolencia residual, boca seca, tontura, cefaleia, nausea e fadiga.",
+    "dangerousAdverseEffects": "Depressao respiratoria, comportamento complexo do sono, dependencia/abstinencia, amnesia, anafilaxia, queda e overdose com opioides.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade à zopiclona",
-      "Insuficiência respiratória grave",
-      "Apneia do sono grave",
-      "Miastenia gravis",
-      "Insuficiência hepática grave",
-      "História de comportamentos complexos do sono com hipnóticos"
-    ],
-    "interactions": [
-      "Álcool",
-      "Opioides",
-      "Benzodiazepínicos",
-      "Antipsicóticos sedativos",
-      "Antidepressivos sedativos",
-      "Inibidores de CYP3A4"
-    ],
-    "alerts": [
-      "Tomar imediatamente antes de deitar.",
-      "Usar somente se houver tempo adequado para dormir.",
-      "Pode causar gosto metálico/amargo característico.",
-      "Evitar álcool, opioides e outros sedativos.",
-      "Usar pelo menor tempo possível."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Miastenia gravis, insuficiencia respiratoria, apneia grave do sono, insuficiencia hepatica grave, hipersensibilidade e comportamento complexo do sono previo.",
+    "interactions": "Alcool, opioides e outros depressores SNC aumentam risco; CYP3A4 inibidores (p.ex., macrolideos/azois) aumentam exposicao e indutores a reduzem.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "ref": "electronic Medicines Compendium / SmPC (Reino Unido): Zopiclone 7,5 mg film-coated tablets, atualizado em 15 abr 2026. https://www.medicines.org.uk/emc/product/10590/smpc",
+    "pharmacologicClass": "Ciclopirrolona; hipnotico nao benzodiazepinico",
+    "presentations": "7,5 mg; comprimido divisivel; produto Reino Unido.",
+    "pharmacodynamics": "Induz sono, mas tambem pode causar amnesia, depressao respiratoria e comprometimento psicomotor.",
+    "pharmacokinetics": "Metabolizada principalmente por CYP3A4; inibidores aumentam e indutores reduzem exposicao.",
+    "pediatricDose": "Contraindicada/nao recomendada abaixo de 18 anos; seguranca e eficacia nao estabelecidas.",
+    "renalDose": "Em insuficiencia renal, iniciar 3,75 mg conforme SmPC, embora nao haja acumulacao demonstrada.",
+    "hepaticDose": "Insuficiencia hepatica: 3,75 mg noturno; contraindicada em insuficiencia hepatica grave.",
+    "adverseEffects": "Agitacao, pesadelos, confusao, alucinacoes, alteracoes comportamentais, ataxia e diplopia.",
+    "monitoring": "Reavaliar necessidade com frequencia, sinais de dependencia/abstinencia, sedacao, respiracao e queda.",
+    "administration": "Dose unica imediatamente antes de deitar; nao readministrar na mesma noite.",
+    "preparation": "Nao aplicavel a esta apresentacao oral; nao inferir preparo parenteral.",
+    "infusionProtocol": "Nao aplicavel a esta apresentacao; nao converter para esquema de infusao.",
+    "pregnancy": "Nao recomendada; atravessa placenta e uso tardio pode deprimir RN ou causar abstinencia.",
+    "lactation": "Excretada no leite; SmPC recomenda evitar durante amamentacao.",
+    "specialPopulations": "Idosos e pacientes com insuficiencia respiratoria necessitam dose menor; evitar em apneia grave.",
+    "patientEducation": "Nao consumir alcool; nao dirigir por pelo menos 12 h apos dose; nao interromper abruptamente apos uso prolongado.",
+    "clinicalPearls": "Planejar retirada antes de iniciar e tratar causas da insonia; nao perpetuar hipnotico sem reavaliacao.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO DE DEPENDENCIA/DEPRESSAO SNC: duracao curta, dose menor efetiva, evitar opioides e alcool.",
+    "references": [
+      "electronic Medicines Compendium / SmPC (Reino Unido): Zopiclone 7,5 mg film-coated tablets, atualizado em 15 abr 2026. https://www.medicines.org.uk/emc/product/10590/smpc"
     ]
   },
   "es": {
     "name": "Zopiclona",
-    "class": "Hipnótico no benzodiacepínico — droga Z",
+    "class": "Hipnotico",
     "category": "hipnotico",
-    "commercialNames": {
-      "br": [
-        "Imovane",
-        "Zopix",
-        "Zopiclona"
-      ],
-      "ar": [
-        "Imovane",
-        "Zopiclona Bagó",
-        "Zopiclona Gador"
-      ]
-    },
-    "presentation": [
-      "Comprimido 3,75 mg",
-      "Comprimido 7,5 mg"
-    ],
-    "dose": {
-      "adulto": "Insomnio: 7,5 mg VO inmediatamente antes de acostarse.",
-      "idoso": "Adultos mayores, frágiles o hepatopatía: iniciar 3,75 mg al acostarse.",
-      "maxDose": "Dosis máxima habitual: 7,5 mg/noche."
-    },
+    "commercialNames": "Zopiclone 7,5 mg film-coated tablets (producto-fuente UK)",
+    "presentation": "Comprimido recubierto oral",
+    "dose": "Adulto: 7,5 mg VO inmediatamente antes de acostarse. Anciano, insuficiencia hepatica, renal o respiratoria cronica: iniciar 3,75 mg. Curso maximo habitual: 4 semanas, incluida retirada gradual.",
     "doseKg": {
       "standard": "No se utiliza cálculo por kg en adultos.",
       "pediatric": "No recomendado en pediatría.",
       "maxDose": "7,5 mg/noche"
     },
-    "indications": [
-      "Insomnio de conciliación",
-      "Insomnio de mantenimiento del sueño",
-      "Insomnio de corta duración",
-      "Insomnio transitorio",
-      "Insomnio situacional por estrés",
-      "Insomnio asociado a ansiedad leve"
-    ],
+    "indications": "Tratamiento de corto plazo del insomnio en adultos.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Modulador positivo del receptor GABA-A en el sitio benzodiacepínico, promoviendo efecto hipnótico.",
+    "mechanism": "Modulador del complejo receptor GABA-A con efecto sedante-hipnotico.",
     "onset": "Inicio de acción generalmente en 30 minutos.",
     "halfLife": "Vida media aproximada: 5 horas; puede prolongarse en adultos mayores y hepatopatía.",
-    "commonAdverseEffects": [
-      "Sabor metálico o amargo",
-      "Somnolencia",
-      "Boca seca",
-      "Mareos",
-      "Cefalea",
-      "Somnolencia residual"
-    ],
-    "dangerousAdverseEffects": [
-      "Conductas complejas del sueño",
-      "Dependencia y abuso",
-      "Depresión respiratoria con depresores del SNC",
-      "Caídas y fracturas",
-      "Confusión o delirium en adultos mayores",
-      "Reacciones paradójicas con agitación"
-    ],
+    "commonAdverseEffects": "Disgeusia amarga, somnolencia residual, boca seca, mareo, cefalea, nauseas y fatiga.",
+    "dangerousAdverseEffects": "Depresion respiratoria, conducta compleja del sueno, dependencia/abstinencia, amnesia, anafilaxia, caidas y sobredosis con opioides.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a zopiclona",
-      "Insuficiencia respiratoria grave",
-      "Apnea del sueño grave",
-      "Miastenia gravis",
-      "Insuficiencia hepática grave",
-      "Historia de conductas complejas del sueño con hipnóticos"
-    ],
-    "interactions": [
-      "Alcohol",
-      "Opioides",
-      "Benzodiacepinas",
-      "Antipsicóticos sedativos",
-      "Antidepresivos sedativos",
-      "Inhibidores de CYP3A4"
-    ],
-    "alerts": [
-      "Tomar inmediatamente antes de acostarse.",
-      "Usar solo si hay tiempo adecuado para dormir.",
-      "Puede causar sabor metálico/amargo característico.",
-      "Evitar alcohol, opioides y otros sedantes.",
-      "Usar durante el menor tiempo posible."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Miastenia gravis, insuficiencia respiratoria, apnea grave del sueno, insuficiencia hepatica grave, hipersensibilidad y conducta compleja del sueno previa.",
+    "interactions": "Alcohol, opioides y otros depresores del SNC aumentan riesgo; inhibidores CYP3A4 (p.ej., macrolidos/azoles) aumentan exposicion e inductores la reducen.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "ref": "electronic Medicines Compendium / SmPC (Reino Unido): Zopiclone 7,5 mg film-coated tablets, atualizado em 15 abr 2026. https://www.medicines.org.uk/emc/product/10590/smpc",
+    "pharmacologicClass": "Ciclopirrolona; hipnotico no benzodiazepinico",
+    "presentations": "7,5 mg; comprimido divisible; producto Reino Unido.",
+    "pharmacodynamics": "Induce el sueno, pero tambien puede causar amnesia, depresion respiratoria y deterioro psicomotor.",
+    "pharmacokinetics": "Metabolizada principalmente por CYP3A4; inhibidores aumentan e inductores reducen la exposicion.",
+    "pediatricDose": "Contraindicada/no recomendada por debajo de 18 anos; seguridad y eficacia no establecidas.",
+    "renalDose": "En insuficiencia renal, iniciar 3,75 mg conforme SmPC, aunque no se demostro acumulacion.",
+    "hepaticDose": "Insuficiencia hepatica: 3,75 mg nocturnos; contraindicada en insuficiencia hepatica grave.",
+    "adverseEffects": "Agitacion, pesadillas, confusion, alucinaciones, alteraciones conductuales, ataxia y diplopia.",
+    "monitoring": "Reevaluar la necesidad con frecuencia, signos de dependencia/abstinencia, sedacion, respiracion y caidas.",
+    "administration": "Dosis unica inmediatamente antes de acostarse; no readministrar la misma noche.",
+    "preparation": "No aplicable a esta presentacion oral; no inferir preparacion parenteral.",
+    "infusionProtocol": "No aplicable a esta presentacion; no convertir a esquema de infusion.",
+    "pregnancy": "No recomendada; atraviesa la placenta y el uso tardio puede deprimir al RN o causar abstinencia.",
+    "lactation": "Excretada en leche; el SmPC recomienda evitar durante la lactancia.",
+    "specialPopulations": "Ancianos y pacientes con insuficiencia respiratoria requieren dosis menor; evitar en apnea grave.",
+    "patientEducation": "No consumir alcohol; no conducir durante al menos 12 h despues de la dosis; no suspender abruptamente tras uso prolongado.",
+    "clinicalPearls": "Planificar la retirada antes de iniciar y tratar causas del insomnio; no perpetuar hipnotico sin reevaluacion.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO DE DEPENDENCIA/DEPRESION SNC: duracion corta, dosis menor efectiva, evitar opioides y alcohol.",
+    "references": [
+      "electronic Medicines Compendium / SmPC (Reino Unido): Zopiclone 7,5 mg film-coated tablets, atualizado em 15 abr 2026. https://www.medicines.org.uk/emc/product/10590/smpc"
     ]
   },
   "name": {
@@ -198,9 +112,38 @@
     "zopiclona gador",
     "hipnotico nao benzodiazepinico — droga z"
   ],
-  "dataVersion": "clinical-data-v1-cddc3eb2787d630b",
-  "clinicalContentSha256": "cddc3eb2787d630bfba0664119826e0d46af0d39b528035d541af5bf01cca86c",
+  "dataVersion": "clinical-data-v1-3cdfc00d12759dc3",
+  "clinicalContentSha256": "3cdfc00d12759dc3a4831a49f3552a7eae2013bb4df40f99e34aa78074c5584f",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "zopiclona.mcGoldClinicalV1",
+    "lote": "090",
+    "requiredFields": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  }
 }

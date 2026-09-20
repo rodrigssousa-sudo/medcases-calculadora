@@ -5,172 +5,119 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Ácido aminocaproico",
-    "class": "Antifibrinolítico — NÃO antimicrobiano",
-    "pharmacologicClass": "Análogo da lisina inibidor da fibrinólise",
-    "mechanism": "Inibe competitivamente ativadores do plasminogênio e, em concentrações maiores, a atividade da plasmina, reduzindo fibrinólise.",
-    "pharmacodynamics": "Reduz degradação do coágulo quando há hiperfibrinólise; não possui atividade antibacteriana e não pertence às tetraciclinas.",
-    "pharmacokinetics": "Boa absorção oral; cerca de 65% é excretado inalterado na urina. A depuração renal acompanha aproximadamente a depuração de creatinina e cai muito na insuficiência renal grave.",
-    "indications": "Sangramento agudo associado a atividade fibrinolítica excessiva/hiperfibrinólise, quando o diagnóstico é sustentado clinicamente e/ou laboratorialmente.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
-    "presentation": "Comprimidos e solução oral; formulação IV também existe conforme produto.",
-    "presentations": [
-      "500 mg comprimido",
-      "1.000 mg comprimido",
-      "0,25 g/mL solução oral",
-      "250 mg/mL injetável conforme produto"
-    ],
-    "dose": "Síndrome hemorrágica aguda por hiperfibrinólise: 5 g VO na primeira hora, depois 1,25 g por hora, usualmente por cerca de 8 h ou até controlar o sangramento.",
-    "pediatricDose": "Segurança e eficácia pediátrica não estão estabelecidas na bula; usos pediátricos especializados não devem ser convertidos em dose universal.",
-    "renalDose": "Depuração cai marcadamente na insuficiência renal grave; não há tabela universal rotulada de ajuste. Hemodiálise pode remover o fármaco.",
-    "hepaticDose": "Sem ajuste hepático numérico rotineiro; decisão é guiada principalmente por função renal e risco trombótico.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Hipotensão",
-      "Mialgia"
-    ],
-    "dangerousAdverseEffects": [
-      "Trombose/embolia",
-      "Rabdomiólise/miopatia",
-      "Insuficiência renal",
-      "Obstrução intrarrenal por coágulos"
-    ],
-    "adverseEffects": "Uso prolongado pode causar miopatia e rabdomiólise; trombose pode ocorrer quando a indicação é inadequada ou há coagulação intravascular ativa.",
-    "contraindications": "Coagulação intravascular ativa. Em DIC, só considerar em contexto especializado e com anticoagulação apropriada; evitar em sangramento do trato urinário superior quando risco de obstrução por coágulos for relevante.",
-    "interactions": "O risco trombótico pode aumentar com outros pró-coagulantes; revisar terapias hemostáticas concomitantes.",
-    "monitoring": "Confirmar hiperfibrinólise, acompanhar sangramento, creatinina e, em uso prolongado, CPK; vigiar sinais de trombose.",
-    "administration": "VO conforme esquema ou IV conforme produto/protocolo; evitar infusão IV rápida por hipotensão/bradicardia.",
-    "preparation": "Solução oral é pronta; formulação IV deve ser diluída/administrada segundo bula.",
-    "infusionProtocol": "Quando IV, administrar lentamente conforme rótulo/protocolo; não usar bolus rápido.",
-    "pregnancy": "Dados são limitados; usar somente se necessidade hemostática superar riscos.",
-    "lactation": "Dados limitados; avaliar risco-benefício.",
-    "specialPopulations": "DRC pode causar acúmulo. Hemodiálise remove ácido aminocaproico. Não há regime pediátrico universal aprovado.",
-    "patientEducation": "Este fármaco NÃO é antibiótico; relatar dor muscular intensa, redução da urina, dor torácica ou edema unilateral.",
-    "clinicalPearls": "A presença de ácido aminocaproico neste inventário antimicrobiano é erro taxonômico: farmacologicamente é antifibrinolítico e deve ser removido da categoria tetraciclina em limpeza estrutural futura.",
-    "guidelineRecommendations": "Usar apenas quando houver evidência de hiperfibrinólise; não utilizar como antimicrobiano e corrigir a taxonomia do inventário em etapa estrutural separada, sem alterar este lote transacional.",
-    "safetyFlags": [
-      "NÃO ANTIMICROBIANO",
-      "Antifibrinolítico",
-      "Trombose",
-      "CPK em uso prolongado",
-      "DRC acumula/HD remove"
-    ],
-    "alerts": [
-      "5 g primeira hora",
-      "Depois 1,25 g/h",
-      "~8 h ou até controle",
-      "Não usar em coagulação intravascular ativa",
-      "Corrigir taxonomia futura"
-    ],
+    "name": "Acido aminocaproico",
+    "class": "Hemostatico antifibrinolitico",
+    "pharmacologicClass": "Analogo da lisina; inibidor da fibrinolise",
+    "mechanism": "Inibe principalmente ativadores do plasminogenio e, em menor grau, a atividade da plasmina.",
+    "pharmacodynamics": "Reduz fibrinolise e pode favorecer hemostasia quando hipofibrinogenese/fibrinolise contribui para sangramento.",
+    "pharmacokinetics": "Excrecao renal predominante; meia-vida terminal aproximada de 2 h.",
+    "indications": "Sangramento no qual a fibrinolise contribui; confirmar diagnostico/laboratorio antes do uso.",
+    "commercialNames": "Nome comercial nao revisado; usar somente o generico desta bula",
+    "presentation": "Solucao oral e solucao injetavel IV",
+    "presentations": "Oral: 0,25 g/mL. IV: 250 mg/mL, frasco 5 g/20 mL. Produtos EUA; nao inferir disponibilidade AR/BR.",
+    "dose": "ORAL (rotulo EUA): 5 g na primeira hora, depois 1,25 g/h por cerca de 8 h ou ate controle. IV (rotulo EUA): 4-5 g durante a primeira hora, depois 1 g/h; nao combinar ou converter sem prescricao e rotulo local.",
+    "pediatricDose": "Seguranca e eficacia pediatrica nao estabelecidas na bula revisada.",
+    "renalDose": "Eliminacao renal predominante; o rotulo alerta maior exposicao na insuficiencia renal grave, sem esquema universal de ajuste nesta ficha.",
+    "hepaticDose": "Nao ha esquema especifico confirmado nesta fonte; revisar contexto clinico e causa do sangramento.",
+    "commonAdverseEffects": "Nausea, vomito, diarreia, dor abdominal, cefaleia, mal-estar, tontura.",
+    "dangerousAdverseEffects": "Trombose/embolia, rabdomiolise e insuficiencia renal, miopatia, anafilaxia, convulsoes, hipotensao.",
+    "adverseEffects": "Edema, bradicardia, isquemia periferica, alteracoes hematologicas, rash e alteracoes visuais relatados.",
+    "contraindications": "Processo ativo de coagulacao intravascular; CID sem heparina concomitante; hipersensibilidade.",
+    "interactions": "Evitar associacao com concentrado de fator IX complexo ou concentrado anti-inibidor pelo risco trombotico.",
+    "monitoring": "Confirmar hiperfibrinolise; acompanhar sangramento/trombose, funcao renal e CPK em tratamento prolongado.",
+    "administration": "VO conforme solucao especifica; IV somente para produto injetavel, nao por bolus improvisado.",
+    "preparation": "IV: a bula do produto especifica diluicao em 250 mL de diluente compativel para dose de ataque; confirmar texto vigente do produto antes do preparo. A solucao oral nao requer preparo parenteral.",
+    "infusionProtocol": "IV: administrar dose de ataque ao longo de 1 h e manutencao por infusao conforme rotulo; nao usar a concentracao oral como base de calculo IV.",
+    "pregnancy": "Usar apenas se claramente necessario; a fonte nao demonstra seguranca reprodutiva suficiente.",
+    "lactation": "Excrecao no leite humano desconhecida na fonte; cautela.",
+    "specialPopulations": "Evitar/ponderar cuidadosamente em hematuria de trato urinario superior e em alto risco trombotico.",
+    "patientEducation": "Nao usar para sangramento sem diagnostico; procurar atendimento para dor toracica, dispneia, edema doloroso, fraqueza muscular ou urina escura.",
+    "clinicalPearls": "A formulacao oral e a IV sao produtos distintos; conversao de volume e diluicao exige a bula especifica.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO: diferenciar fibrinolise primaria de CID; nao transpor esquema entre vias.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2238c70f-b0b5-4755-896b-45b28777b217",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=afffd309-3819-07c6-e053-2995a90a948b",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.ncbi.nlm.nih.gov/books/NBK554475/",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=aminocaproic+acid"
+      "DailyMed (EUA): aminocaproic acid oral solution, 0,25 g/mL, atualizada em 01 nov 2023; e aminocaproic acid injection 250 mg/mL, atualizada em 30 abr 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2238c70f-b0b5-4755-896b-45b28777b217",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=afffd309-3819-07c6-e053-2995a90a948b",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.ncbi.nlm.nih.gov/books/NBK554475/",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=aminocaproic+acid"
-    ]
+    "ref": "DailyMed (EUA): aminocaproic acid oral solution, 0,25 g/mL, atualizada em 01 nov 2023; e aminocaproic acid injection 250 mg/mL, atualizada em 30 abr 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9"
   },
   "es": {
-    "name": "Ácido aminocaproico",
-    "class": "Antifibrinolítico — NO antimicrobiano",
-    "pharmacologicClass": "Análogo de lisina inhibidor de fibrinólisis",
-    "mechanism": "Inhibe competitivamente activadores de plasminógeno y, a concentraciones mayores, plasmina, reduciendo fibrinólisis.",
-    "pharmacodynamics": "Reduce degradación del coágulo en hiperfibrinólisis; no tiene actividad antibacteriana y no es tetraciclina.",
-    "pharmacokinetics": "Buena absorción oral; ~65% se excreta sin cambios en orina. Aclaramiento cae mucho en insuficiencia renal grave.",
-    "indications": "Sangrado agudo asociado a hiperfibrinólisis demostrada o fuertemente sospechada.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos, solución oral y formulación IV según producto.",
-    "presentations": [
-      "500 mg comprimido",
-      "1.000 mg comprimido",
-      "0,25 g/mL solución oral",
-      "250 mg/mL inyectable según producto"
-    ],
-    "dose": "Hiperfibrinólisis aguda: 5 g VO durante primera hora, luego 1,25 g por hora, habitualmente ~8 h o hasta control del sangrado.",
-    "pediatricDose": "Seguridad/eficacia pediátrica no establecidas en ficha; no convertir usos especializados en dosis universal.",
-    "renalDose": "Aclaramiento disminuye marcadamente en insuficiencia renal grave; sin tabla universal rotulada. Hemodiálisis puede eliminar el fármaco.",
-    "hepaticDose": "Sin ajuste hepático numérico rutinario; decisión depende sobre todo de riñón/riesgo trombótico.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Hipotensión",
-      "Mialgia"
-    ],
-    "dangerousAdverseEffects": [
-      "Trombosis/embolia",
-      "Rabdomiólisis/miopatía",
-      "Insuficiencia renal",
-      "Obstrucción intrarrenal por coágulos"
-    ],
-    "adverseEffects": "Uso prolongado puede causar miopatía/rabdomiólisis; trombosis puede aparecer si la indicación es inadecuada.",
-    "contraindications": "Coagulación intravascular activa; DIC solo en manejo especializado. Evitar en hemorragia urinaria alta con riesgo de obstrucción por coágulos.",
-    "interactions": "Riesgo trombótico puede aumentar con otros procoagulantes.",
-    "monitoring": "Confirmar hiperfibrinólisis, sangrado, creatinina y CPK si uso prolongado; vigilar trombosis.",
-    "administration": "VO o IV según producto; evitar IV rápida por hipotensión/bradicardia.",
-    "preparation": "Solución oral lista; IV según ficha.",
-    "infusionProtocol": "IV lenta según rótulo/protocolo; no bolo rápido.",
-    "pregnancy": "Datos limitados; usar si necesidad hemostática supera riesgos.",
-    "lactation": "Datos limitados.",
-    "specialPopulations": "ERC puede causar acumulación; HD elimina. Sin régimen pediátrico universal aprobado.",
-    "patientEducation": "NO es antibiótico; informar mialgia intensa, menor diuresis, dolor torácico o edema unilateral.",
-    "clinicalPearls": "Su presencia en inventario antimicrobiano es un error taxonómico: es antifibrinolítico y debe salir de tetraciclinas en una limpieza estructural futura.",
-    "guidelineRecommendations": "Usar únicamente ante hiperfibrinólisis; no usar como antimicrobiano y corregir la taxonomía del inventario en una etapa estructural separada.",
-    "safetyFlags": [
-      "NO ANTIMICROBIANO",
-      "Antifibrinolítico",
-      "Trombosis",
-      "CPK en uso prolongado",
-      "ERC acumula/HD elimina"
-    ],
-    "alerts": [
-      "5 g primera hora",
-      "Luego 1,25 g/h",
-      "~8 h o control",
-      "No en coagulación intravascular activa",
-      "Corregir taxonomía futura"
-    ],
+    "name": "Acido aminocaproico",
+    "class": "Hemostatico antifibrinolitico",
+    "pharmacologicClass": "Analogo de lisina; inhibidor de la fibrinolisis",
+    "mechanism": "Inhibe principalmente activadores del plasminogeno y, en menor grado, la actividad de la plasmina.",
+    "pharmacodynamics": "Reduce la fibrinolisis y puede favorecer la hemostasia cuando la fibrinolisis contribuye al sangrado.",
+    "pharmacokinetics": "Excrecion renal predominante; vida media terminal aproximada de 2 h.",
+    "indications": "Sangrado en el cual la fibrinolisis contribuye; confirmar diagnostico/laboratorio antes del uso.",
+    "commercialNames": "Nombre comercial no revisado; usar solo el generico de este rotulo",
+    "presentation": "Solucion oral y solucion inyectable IV",
+    "presentations": "Oral: 0,25 g/mL. IV: 250 mg/mL, vial 5 g/20 mL. Productos EUA; no inferir disponibilidad AR/BR.",
+    "dose": "ORAL (rotulo EUA): 5 g en la primera hora, luego 1,25 g/h por cerca de 8 h o hasta control. IV (rotulo EUA): 4-5 g durante la primera hora, luego 1 g/h; no combinar ni convertir sin prescripcion y rotulo local.",
+    "pediatricDose": "La seguridad y eficacia pediatrica no estan establecidas en el rotulo revisado.",
+    "renalDose": "Eliminacion renal predominante; el rotulo advierte mayor exposicion en insuficiencia renal grave, sin esquema universal de ajuste en esta ficha.",
+    "hepaticDose": "No hay esquema especifico confirmado en esta fuente; revisar contexto clinico y causa del sangrado.",
+    "commonAdverseEffects": "Nauseas, vomitos, diarrea, dolor abdominal, cefalea, malestar, mareo.",
+    "dangerousAdverseEffects": "Trombosis/embolia, rabdomiolisis e insuficiencia renal, miopatia, anafilaxia, convulsiones, hipotension.",
+    "adverseEffects": "Edema, bradicardia, isquemia periferica, alteraciones hematologicas, erupcion y alteraciones visuales reportadas.",
+    "contraindications": "Proceso activo de coagulacion intravascular; CID sin heparina concomitante; hipersensibilidad.",
+    "interactions": "Evitar asociacion con concentrado de factor IX complejo o concentrado anti-inhibidor por riesgo trombotico.",
+    "monitoring": "Confirmar hiperfibrinolisis; vigilar sangrado/trombosis, funcion renal y CPK en tratamiento prolongado.",
+    "administration": "VO conforme solucion especifica; IV solo para producto inyectable, no por bolo improvisado.",
+    "preparation": "IV: el rotulo del producto especifica dilucion en 250 mL de diluyente compatible para dosis de carga; confirmar texto vigente antes de preparar. La solucion oral no requiere preparacion parenteral.",
+    "infusionProtocol": "IV: administrar dosis de carga durante 1 h y mantenimiento por infusion conforme al rotulo; no usar la concentracion oral como base de calculo IV.",
+    "pregnancy": "Usar solo si es claramente necesario; la fuente no demuestra seguridad reproductiva suficiente.",
+    "lactation": "Excrecion en leche humana desconocida en la fuente; precaucion.",
+    "specialPopulations": "Evitar/ponderar cuidadosamente en hematuria de vias urinarias superiores y alto riesgo trombotico.",
+    "patientEducation": "No usar para sangrado sin diagnostico; buscar atencion por dolor toracico, disnea, edema doloroso, debilidad muscular u orina oscura.",
+    "clinicalPearls": "La formulacion oral y la IV son productos distintos; conversion de volumen y dilucion exige el rotulo especifico.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO: diferenciar fibrinolisis primaria de CID; no trasladar esquema entre vias.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2238c70f-b0b5-4755-896b-45b28777b217",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=afffd309-3819-07c6-e053-2995a90a948b",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.ncbi.nlm.nih.gov/books/NBK554475/",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=aminocaproic+acid"
+      "DailyMed (EUA): aminocaproic acid oral solution, 0,25 g/mL, atualizada em 01 nov 2023; e aminocaproic acid injection 250 mg/mL, atualizada em 30 abr 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2238c70f-b0b5-4755-896b-45b28777b217",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=afffd309-3819-07c6-e053-2995a90a948b",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.ncbi.nlm.nih.gov/books/NBK554475/",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=aminocaproic+acid"
-    ]
+    "ref": "DailyMed (EUA): aminocaproic acid oral solution, 0,25 g/mL, atualizada em 01 nov 2023; e aminocaproic acid injection 250 mg/mL, atualizada em 30 abr 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65efb08a-c1ae-4bb7-a8a2-b7ae26485567 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9"
   },
   "name": {
-    "pt": "Ácido aminocaproico",
-    "es": "Ácido aminocaproico"
+    "pt": "Acido aminocaproico",
+    "es": "Acido aminocaproico"
   },
   "keywords": [
     "acidoaminocaproico",
     "ácido aminocaproico"
   ],
-  "dataVersion": "clinical-data-v1-cddc3eb2787d630b",
-  "clinicalContentSha256": "cddc3eb2787d630bfba0664119826e0d46af0d39b528035d541af5bf01cca86c",
+  "dataVersion": "clinical-data-v1-3cdfc00d12759dc3",
+  "clinicalContentSha256": "3cdfc00d12759dc3a4831a49f3552a7eae2013bb4df40f99e34aa78074c5584f",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "cardio.js"
+  "sourceModule": "cardio.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/cardio.js",
+    "sourceField": "acidoaminocaproico.mcGoldClinicalV1",
+    "lote": "090",
+    "requiredFields": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  }
 }

@@ -50,9 +50,10 @@ const opinionDocument = JSON.parse(readZip('04_PARECER_CLINICO.json'));
 const restrictionsDocument = JSON.parse(readZip('05_RESTRICOES_E_PENDENCIAS.json'));
 const v4 = dataDocument?.schema === 'MEDCASES_GOLD33_HOMOLOGATED_V4';
 const data = v4 ? dataDocument.medications : dataDocument;
-const restrictionItems = v4 ? (restrictionsDocument.medications || restrictionsDocument.items) : restrictionsDocument.items;
+const reviewed = !v4 && Array.isArray(opinionDocument.ids_efetivamente_revisados);
+const restrictionItems = reviewed ? data.map((row) => ({id: row.ID, ...row.METADADOS_HANDOFF})) : v4 ? (restrictionsDocument.medications || restrictionsDocument.items) : restrictionsDocument.items;
 if (!Array.isArray(restrictionItems)) die('RESTRICTIONS_ITEMS_REQUIRED');
-const opinion = v4 ? {
+const opinion = reviewed ? {lote: opinionDocument.lote, scope: {ids: opinionDocument.ids_efetivamente_revisados}, final_consolidation: {final_sha256: sha(readZip('01_DADOS_HOMOLOGADOS.json'))}} : v4 ? {
   lote: dataDocument.lot,
   scope: { ids: data.map((row) => row.ID) },
   final_consolidation: { final_sha256: dataDocument.clinical_content_sha256 },
@@ -74,6 +75,7 @@ for (const row of data) {
   const id = row.ID, restriction = restrictionById.get(id);
   if (!restriction || !opinion.scope.ids.includes(id)) die(`UNAUTHORIZED_ID:${id}`);
   if (Object.keys(row.CAMPOS_33||{}).length !== 33 || required.some((field)=>!Object.hasOwn(row.CAMPOS_33,field))) die(`FIELD_SCOPE_INVALID:${id}`);
+  if (reviewed && (restriction.derived_private_json !== `data/drugs/${id}.json` || restriction.classification_free_premium !== (free.has(id) ? 'FREE60' : 'PREMIUM') || restriction.states?.AUTORIZACAO_CALCULO !== 'NAO_AUTORIZADA')) die(`REVIEWED_MAPPING_INVALID:${id}`);
   const sourceRel = restriction.source_executavel;
   const owner = executableOwner(restriction, sourceRel);
   const sourcePath = safe(sourceRel);
@@ -83,12 +85,14 @@ for (const row of data) {
   const pt={},es={}; for (const field of required) { const value=row.CAMPOS_33[field]; pt[field]=field==='references'?value:value.pt; es[field]=field==='references'?value:value.es; }
   const publicationAuthorized = restriction.states.PUBLICACAO === 'LIBERADA' || ownerAuthorized;
   const payload = { meta:{schema:'mc-gold-clinical-v1',lote:opinion.lote,requiredFieldCount:33,approvedSha256:opinion.final_consolidation.final_sha256,calculationAuthorized:false,publicationAuthorized,clinicalPackagePublicationState:restriction.states.PUBLICACAO,ownerPublicationAuthorization:ownerAuthorized?ownerAuthorization:null}, pt, es };
+  if (reviewed) payload.meta.packageRestrictions = restrictionsDocument;
   const block = `${start}\n;(function(){var db=window.${owner},drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id===${JSON.stringify(id)};});if(matches.length!==1)throw new Error(${JSON.stringify(`GOLD33_CANONICAL_CARDINALITY:${id}:`)}+matches.length);drug=matches[0];}else{drug=db&&db[${JSON.stringify(id)}];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()===${JSON.stringify(id)};});if(keys.length>1)throw new Error(${JSON.stringify(`GOLD33_CANONICAL_CARDINALITY:${id}:`)}+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error(${JSON.stringify(`GOLD33_MISSING_CANONICAL:${id}`)});}drug.mcGoldClinicalV1=${JSON.stringify(payload,null,2)};})();\n${end}\n`;
   outputs.set(sourcePath, Buffer.from(source.replace(re,'').replace(/\s*$/,'\n') + block));
 
   const derivedPath=safe(restriction.derived_private_json), derived=JSON.parse(fs.readFileSync(derivedPath,'utf8'));
   derived.pt={...(derived.pt||{}),...pt}; derived.es={...(derived.es||{}),...es}; derived.name={pt:pt.name,es:es.name};
   derived.mc_gold_standard_v1={status:'PASS_CLINICAL_HOMOLOGATION',sourceOwner:sourceRel,sourceField:`${id}.mcGoldClinicalV1`,lote:opinion.lote,requiredFields:33,approvedSha256:opinion.final_consolidation.final_sha256,calculationAuthorized:false,publicationAuthorized,clinicalPackagePublicationState:restriction.states.PUBLICACAO,ownerPublicationAuthorization:ownerAuthorized?ownerAuthorization:null};
+  if (reviewed) derived.mc_gold_standard_v1.packageRestrictions = restrictionsDocument;
   const bytes=Buffer.from(JSON.stringify(derived,null,2)+'\n'); outputs.set(derivedPath,bytes);
   const shouldPublic=free.has(id)&&publicationAuthorized;
   if (shouldPublic) outputs.set(safe(`public/data/drugs/${id}.json`),bytes);

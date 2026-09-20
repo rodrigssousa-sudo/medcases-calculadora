@@ -6,213 +6,89 @@
   "colorTxt": null,
   "pt": {
     "name": "Zuclopentixol",
-    "class": "Antipsicótico típico — tioxanteno",
+    "class": "Antipsicotico tipico",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Clopixol"
-      ],
-      "ar": [
-        "Clopixol",
-        "Zuclopentixol"
-      ]
-    },
-    "presentation": [
-      "Comprimido 10 mg",
-      "Comprimido 25 mg",
-      "Acetato IM 50 mg/mL",
-      "Decanoato IM 200 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Psicose: iniciar 10–25 mg/dia VO; titular conforme resposta.",
-      "agitacao": "Acetato IM: usado em agitação/psicose aguda conforme protocolo institucional.",
-      "depot": "Decanoato IM: manutenção a cada 2–4 semanas conforme resposta e tolerabilidade.",
-      "maxDose": "Dose máxima depende da formulação e indicação; requer monitorização de sedação, EPS e sinais vitais."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Psicose aguda",
-      "Psicose crônica",
-      "Agitação psicomotora grave",
-      "Mania aguda como adjuvante",
-      "Manutenção antipsicótica com depot",
-      "Prevenção de recaídas psicóticas"
-    ],
+    "commercialNames": "Clopixol, Clopixol Acuphase e Clopixol Depot (produtos-fonte UK)",
+    "presentation": "Comprimidos orais; solucao IM de acetato; solucao IM depot de decanoato",
+    "dose": "NAO UNIFICAR. Comprimidos, acetato IM e decanoato IM exigem seus proprios esquemas e titulação no SmPC; este PDF nao autoriza conversao entre produtos.",
+    "indications": "Comprimidos: psicoses/esquizofrenia conforme SmPC. Acetato IM: fase aguda de agitacao psicotica. Decanoato: manutencao. Confirmar indicacao e rotulo local.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Antagonista dopaminérgico D2 e D1, com ação antipsicótica, sedativa e antiagitação.",
+    "mechanism": "Antagonismo D2, com atividade em receptores serotoninergicos, alfa-adrenergicos e histaminicos; produz efeito antipsicotico/sedativo.",
     "onset": "Acetato IM tem início em horas; decanoato possui efeito prolongado por semanas.",
     "halfLife": "Vida média depende da formulação; decanoato mantém efeito por 2–4 semanas.",
-    "commonAdverseEffects": [
-      "Sonolência",
-      "Acatisia",
-      "Parkinsonismo medicamentoso",
-      "Boca seca",
-      "Hipotensão ortostática",
-      "Hiperprolactinemia"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptica maligna",
-      "Discinesia tardia",
-      "Prolongamento QT e arritmias",
-      "Depressão do SNC quando associado a sedativos",
-      "Convulsões em predispostos"
-    ],
+    "commonAdverseEffects": "Sedacao, boca seca, constipacao, tontura, acatisia, parkinsonismo, tremor e hipotensao ortostatica.",
+    "dangerousAdverseEffects": "SNM, discinesia tardia, QT/arritmias, convulsoes, tromboembolismo venoso, agranulocitose e AVC/mortalidade em demencia.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade ao zuclopentixol ou tioxantenos",
-      "Depressão grave do SNC ou coma",
-      "Intoxicação aguda por álcool, opioides ou sedativos",
-      "Doença de Parkinson grave",
-      "QT prolongado significativo"
-    ],
-    "interactions": [
-      "Álcool e depressores do SNC",
-      "Opioides e benzodiazepínicos",
-      "Levodopa e agonistas dopaminérgicos",
-      "Fármacos que prolongam QT",
-      "Anti-hipertensivos: maior hipotensão"
-    ],
-    "alerts": [
-      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
-      "Zuclopentixol VO di-hidroclorido, acetato IM de curta ação e decanoato depot não são intercambiáveis; verificar sal, concentração, via, intervalo e bula da apresentação BR/AR antes de qualquer conversão.",
-      "Separar di-hidroclorido VO, acetato de ação curta e decanoato depot: são produtos diferentes. Não transferir concentração, via ou intervalo entre eles.",
-      "Formulação acetato IM não é equivalente ao decanoato de manutenção.",
-      "Monitorar sedação, pressão arterial e sintomas extrapiramidais.",
-      "Decanoato exige avaliação de tolerância e plano de seguimento.",
-      "Evitar associação com álcool e outros sedativos.",
-      "Considerar ECG em pacientes com risco cardiovascular ou QT."
-    ],
-    "ref": [
-      "https://www.medicines.org.uk/emc/product/994/smpc",
-      "https://www.medicines.org.uk/emc/product/993/smpc",
-      "https://www.medicines.org.uk/emc/product/6414/smpc",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
-      "doseAuto": false,
-      "indication": null,
-      "sourceUrls": [],
-      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
-      "clinicalReferenceR27": {
-        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
-        "doseAuto": false,
-        "medicalSafetyReviewRequired": true,
-        "unverifiedDoseValues": 0,
-        "risk": "ORAL_ACETATE_DECANOATE_NOT_INTERCHANGEABLE",
-        "source": []
-      }
-    }
+    "contraindications": "Coma, depressao aguda por alcool/barbituricos/opioides, colapso circulatorio, discrasias sanguineas e hipersensibilidade; confirmar cada SmPC.",
+    "interactions": "Alcool e depressores SNC aumentam sedacao; fármacos QT, levodopa/agonistas dopaminergicos, anti-hipertensivos e medicamentos que alteram eletrolitos exigem revisao.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "ref": "electronic Medicines Compendium / SmPC (Reino Unido): Clopixol tablets 2 mg; Clopixol Acuphase (zuclopenthixol acetate) injection; Clopixol Depot (zuclopenthixol decanoate) 200 mg/mL. https://www.medicines.org.uk/emc/product/994/smpc | https://www.medicines.org.uk/emc/product/993/smpc | https://www.medicines.org.uk/emc/product/6414/smpc",
+    "pediatricDose": "Nao recomendada para menores; seguranca/eficacia pediatrica nao estabelecida nos SmPCs citados.",
+    "pharmacologicClass": "Tioxanteno; antagonista dopaminergico D2",
+    "presentations": "Comprimido 2 mg (fonte citada); acetato IM e decanoato IM 200 mg/mL sao formulacoes distintas.",
+    "pharmacodynamics": "Controla sintomas psicoticos; pode causar sintomas extrapiramidais, sedacao e hipotensao.",
+    "pharmacokinetics": "Acetato IM e curta acao; decanoato IM e deposito de acao prolongada. A farmacocinetica determina intervalos distintos e impede conversao direta.",
+    "renalDose": "Nao ha esquema universal de ajuste confirmado nesta sintese; usar avaliacao clinica e SmPC especifico.",
+    "hepaticDose": "Usar cautela e menor dose inicial/titulacao lenta em hepatopatia; confirmar produto e gravidade.",
+    "adverseEffects": "Hiperprolactinemia, disfuncao sexual, aumento de peso, alteracoes termorregulatorias e fotossensibilidade.",
+    "monitoring": "Estado mental, sintomas extrapiramidais, PA, ECG/riscos QT, eletrolitos, peso/metabolismo e hemograma quando indicado.",
+    "administration": "Comprimido por VO; acetato e decanoato exclusivamente IM profunda, cada um com produto e tecnica propria.",
+    "preparation": "Confirmar no SmPC a concentracao e tecnica do produto IM; nao misturar, diluir ou usar via IV.",
+    "infusionProtocol": "NAO APLICAVEL: produtos IM, nao por infusao IV.",
+    "pregnancy": "Uso no fim da gestacao pode causar sintomas extrapiramidais/abstinencia no RN; avaliar risco-beneficio.",
+    "lactation": "Pode ser excretado no leite; exigir avaliacao especializada e fonte regional.",
+    "specialPopulations": "Idosos com demencia nao devem receber como uso rotineiro; cautela em doenca cardiovascular, Parkinson e epilepsia.",
+    "patientEducation": "Evitar alcool e dirigir ate conhecer efeito; buscar ajuda por febre/rigidez, desmaio, movimentos involuntarios ou dispneia/dor de perna.",
+    "clinicalPearls": "O erro critico e confundir acetato IM de crise com decanoato depot. A troca exige plano especializado, nao conversao automatica.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO DE FORMULACAO: bloquear qualquer conversao oral-IM, acetato-decanoato ou IM-IV sem prescricao e SmPC do produto.",
+    "references": [
+      "electronic Medicines Compendium / SmPC (Reino Unido): Clopixol tablets 2 mg; Clopixol Acuphase (zuclopenthixol acetate) injection; Clopixol Depot (zuclopenthixol decanoate) 200 mg/mL. https://www.medicines.org.uk/emc/product/994/smpc | https://www.medicines.org.uk/emc/product/993/smpc | https://www.medicines.org.uk/emc/product/6414/smpc"
+    ]
   },
   "es": {
     "name": "Zuclopentixol",
-    "class": "Antipsicótico típico — tioxanteno",
+    "class": "Antipsicotico tipico",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Clopixol"
-      ],
-      "ar": [
-        "Clopixol",
-        "Zuclopentixol"
-      ]
-    },
-    "presentation": [
-      "Comprimido 10 mg",
-      "Comprimido 25 mg",
-      "Acetato IM 50 mg/mL",
-      "Decanoato IM 200 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Psicosis: iniciar 10–25 mg/día VO; titular según respuesta.",
-      "agitacao": "Acetato IM: usado en agitación/psicosis aguda según protocolo institucional.",
-      "depot": "Decanoato IM: mantenimiento cada 2–4 semanas según respuesta y tolerabilidad.",
-      "maxDose": "La dosis máxima depende de la formulación e indicación; requiere monitorización de sedación, EPS y signos vitales."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Psicosis aguda",
-      "Psicosis crónica",
-      "Agitación psicomotora grave",
-      "Manía aguda como coadyuvante",
-      "Mantenimiento antipsicótico con depot",
-      "Prevención de recaídas psicóticas"
-    ],
+    "commercialNames": "Clopixol, Clopixol Acuphase y Clopixol Depot (productos-fuente UK)",
+    "presentation": "Comprimidos orales; solucion IM de acetato; solucion IM depot de decanoato",
+    "dose": "NO UNIFICAR. Comprimidos, acetato IM y decanoato IM exigen sus propios esquemas y titulacion en el SmPC; este PDF no autoriza conversion entre productos.",
+    "indications": "Comprimidos: psicosis/esquizofrenia conforme SmPC. Acetato IM: fase aguda de agitacion psicotica. Decanoato: mantenimiento. Confirmar indicacion y rotulo local.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Antagonista dopaminérgico D2 y D1, con acción antipsicótica, sedativa y antiagitación.",
+    "mechanism": "Antagonismo D2, con actividad en receptores serotoninergicos, alfa-adrenergicos e histaminicos; produce efecto antipsicotico/sedante.",
     "onset": "Acetato IM tiene inicio en horas; decanoato posee efecto prolongado por semanas.",
     "halfLife": "Vida media depende de la formulación; decanoato mantiene efecto por 2–4 semanas.",
-    "commonAdverseEffects": [
-      "Somnolencia",
-      "Acatisia",
-      "Parkinsonismo medicamentoso",
-      "Boca seca",
-      "Hipotensión ortostática",
-      "Hiperprolactinemia"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptico maligno",
-      "Discinesia tardía",
-      "Prolongación QT y arritmias",
-      "Depresión del SNC cuando se asocia a sedantes",
-      "Convulsiones en predispuestos"
-    ],
+    "commonAdverseEffects": "Sedacion, boca seca, constipacion, mareo, acatisia, parkinsonismo, temblor e hipotension ortostatica.",
+    "dangerousAdverseEffects": "SNM, discinesia tardia, QT/arritmias, convulsiones, tromboembolismo venoso, agranulocitosis y ACV/mortalidad en demencia.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad al zuclopentixol o tioxantenos",
-      "Depresión grave del SNC o coma",
-      "Intoxicación aguda por alcohol, opioides o sedantes",
-      "Enfermedad de Parkinson grave",
-      "QT prolongado significativo"
-    ],
-    "interactions": [
-      "Alcohol y depresores del SNC",
-      "Opioides y benzodiacepinas",
-      "Levodopa y agonistas dopaminérgicos",
-      "Fármacos que prolongan QT",
-      "Antihipertensivos: mayor hipotensión"
-    ],
-    "alerts": [
-      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
-      "Zuclopentixol oral diclorhidrato, acetato IM de acción corta y decanoato depot no son intercambiables; verificar sal, concentración, vía, intervalo y prospecto BR/AR antes de convertir.",
-      "Separar diclorhidrato oral, acetato de acción corta y decanoato depot: productos diferentes. No trasladar concentración, vía ni intervalo entre ellos.",
-      "La formulación acetato IM no es equivalente al decanoato de mantenimiento.",
-      "Monitorizar sedación, presión arterial y síntomas extrapiramidales.",
-      "El decanoato exige evaluación de tolerancia y plan de seguimiento.",
-      "Evitar asociación con alcohol y otros sedantes.",
-      "Considerar ECG en pacientes con riesgo cardiovascular o QT."
-    ],
-    "ref": [
-      "https://www.medicines.org.uk/emc/product/994/smpc",
-      "https://www.medicines.org.uk/emc/product/993/smpc",
-      "https://www.medicines.org.uk/emc/product/6414/smpc",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
-      "doseAuto": false,
-      "indication": null,
-      "sourceUrls": [],
-      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
-      "clinicalReferenceR27": {
-        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
-        "doseAuto": false,
-        "medicalSafetyReviewRequired": true,
-        "unverifiedDoseValues": 0,
-        "risk": "ORAL_ACETATE_DECANOATE_NOT_INTERCHANGEABLE",
-        "source": []
-      }
-    }
+    "contraindications": "Coma, depresion aguda por alcohol/barbituricos/opioides, colapso circulatorio, discrasias sanguineas e hipersensibilidad; confirmar cada SmPC.",
+    "interactions": "Alcohol y depresores del SNC aumentan sedacion; farmacos QT, levodopa/agonistas dopaminergicos, antihipertensivos y medicamentos que alteran electrolitos exigen revision.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "ref": "electronic Medicines Compendium / SmPC (Reino Unido): Clopixol tablets 2 mg; Clopixol Acuphase (zuclopenthixol acetate) injection; Clopixol Depot (zuclopenthixol decanoate) 200 mg/mL. https://www.medicines.org.uk/emc/product/994/smpc | https://www.medicines.org.uk/emc/product/993/smpc | https://www.medicines.org.uk/emc/product/6414/smpc",
+    "pediatricDose": "No recomendada para menores; seguridad/eficacia pediatrica no establecida en los SmPC citados.",
+    "pharmacologicClass": "Tioxanteno; antagonista dopaminergico D2",
+    "presentations": "Comprimido 2 mg (fuente citada); acetato IM y decanoato IM 200 mg/mL son formulaciones distintas.",
+    "pharmacodynamics": "Controla sintomas psicoticos; puede causar sintomas extrapiramidales, sedacion e hipotension.",
+    "pharmacokinetics": "El acetato IM es de accion corta; el decanoato IM es deposito de accion prolongada. La farmacocinetica determina intervalos distintos e impide conversion directa.",
+    "renalDose": "No hay esquema universal de ajuste confirmado en esta sintesis; usar evaluacion clinica y SmPC especifico.",
+    "hepaticDose": "Usar precaucion y menor dosis inicial/titulacion lenta en hepatopatia; confirmar producto y gravedad.",
+    "adverseEffects": "Hiperprolactinemia, disfuncion sexual, aumento de peso, alteraciones termorregulatorias y fotosensibilidad.",
+    "monitoring": "Estado mental, sintomas extrapiramidales, PA, ECG/riesgos QT, electrolitos, peso/metabolismo y hemograma cuando corresponde.",
+    "administration": "Comprimido por VO; acetato y decanoato exclusivamente IM profunda, cada uno con producto y tecnica propia.",
+    "preparation": "Confirmar en el SmPC la concentracion y tecnica del producto IM; no mezclar, diluir ni usar via IV.",
+    "infusionProtocol": "NO APLICABLE: productos IM, no por infusion IV.",
+    "pregnancy": "El uso al final del embarazo puede causar sintomas extrapiramidales/abstinencia en el RN; evaluar riesgo-beneficio.",
+    "lactation": "Puede excretarse en leche; exigir evaluacion especializada y fuente regional.",
+    "specialPopulations": "Ancianos con demencia no deben recibirlo como uso rutinario; precaucion en enfermedad cardiovascular, Parkinson y epilepsia.",
+    "patientEducation": "Evitar alcohol y conducir hasta conocer el efecto; buscar ayuda por fiebre/rigidez, sincope, movimientos involuntarios o disnea/dolor de pierna.",
+    "clinicalPearls": "El error critico es confundir acetato IM de crisis con decanoato deposito. El cambio exige plan especializado, no conversion automatica.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO DE FORMULACION: bloquear toda conversion oral-IM, acetato-decanoato o IM-IV sin prescripcion y SmPC del producto.",
+    "references": [
+      "electronic Medicines Compendium / SmPC (Reino Unido): Clopixol tablets 2 mg; Clopixol Acuphase (zuclopenthixol acetate) injection; Clopixol Depot (zuclopenthixol decanoate) 200 mg/mL. https://www.medicines.org.uk/emc/product/994/smpc | https://www.medicines.org.uk/emc/product/993/smpc | https://www.medicines.org.uk/emc/product/6414/smpc"
+    ]
   },
   "name": {
     "pt": "Zuclopentixol",
@@ -223,9 +99,38 @@
     "clopixol",
     "antipsicotico tipico — tioxanteno"
   ],
-  "dataVersion": "clinical-data-v1-cddc3eb2787d630b",
-  "clinicalContentSha256": "cddc3eb2787d630bfba0664119826e0d46af0d39b528035d541af5bf01cca86c",
+  "dataVersion": "clinical-data-v1-3cdfc00d12759dc3",
+  "clinicalContentSha256": "3cdfc00d12759dc3a4831a49f3552a7eae2013bb4df40f99e34aa78074c5584f",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psicofarmacos.js"
+  "sourceModule": "psicofarmacos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psicofarmacos.js",
+    "sourceField": "zuclopentixol.mcGoldClinicalV1",
+    "lote": "090",
+    "requiredFields": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  }
 }

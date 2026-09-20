@@ -5078,3 +5078,213 @@
   }
 };})();
 /* GOLD33_SELECTIVE:tiotixeno:END */
+/* GOLD33_SELECTIVE:ziprasidona:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="ziprasidona";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:ziprasidona:"+matches.length);drug=matches[0];}else{drug=db&&db["ziprasidona"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="ziprasidona";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:ziprasidona:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:ziprasidona");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "090",
+    "requiredFieldCount": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  },
+  "pt": {
+    "name": "Ziprasidona",
+    "class": "Antipsicotico atipico",
+    "pharmacologicClass": "Antagonista dopaminergico/serotoninergico",
+    "commercialNames": "Nome comercial nao revisado; escopo e capsula oral generica",
+    "presentation": "Capsulas orais",
+    "presentations": "20, 40, 60 e 80 mg; produto EUA. IM excluida desta ficha.",
+    "mechanism": "Antagonismo de receptores D2 e 5-HT2A, com outras afinidades receptoras descritas em bula.",
+    "pharmacodynamics": "Efeito antipsicotico; pode prolongar QT/QTc. Absorcao aumenta ate duas vezes com alimento.",
+    "pharmacokinetics": "Administrar com alimento para exposicao adequada; metabolizacao inclui CYP3A4, conforme bula.",
+    "indications": "Esquizofrenia; episodios maniacos/mistos agudos do transtorno bipolar I; manutencao bipolar I como adjuvante a litio ou valproato.",
+    "dose": "Esquizofrenia: iniciar 20 mg VO 2x/dia com alimento; ajustar ate 80 mg 2x/dia. Mania/misto bipolar I: 40 mg 2x/dia, podendo 60-80 mg 2x/dia no dia 2 conforme tolerancia.",
+    "pediatricDose": "Seguranca e eficacia pediatrica nao estabelecidas na bula revisada.",
+    "renalDose": "Sem ajuste oral especifico nesta fonte; avaliar comorbidades e medicacao concomitante.",
+    "hepaticDose": "Exposicao pode aumentar em disfuncao hepatica; requer avaliacao clinica individual, sem percentual universal nesta ficha.",
+    "commonAdverseEffects": "Sonolencia, tontura, acatisia, sintomas extrapiramidais, astenia, vomito e alteracao visual.",
+    "dangerousAdverseEffects": "Prolongamento QT/arrtmia, SNM, DRESS/SCAR, discinesia tardia, hiperglicemia e AVC/mortalidade em idosos com psicose relacionada a demencia.",
+    "adverseEffects": "Hipotensao ortostatica, quedas, leucopenia/neutropenia, convulsoes, disfagia, priapismo e hiperprolactinemia.",
+    "contraindications": "QT prolongado conhecido, IAM agudo recente, insuficiencia cardiaca descompensada, fármacos que prolongam QT e hipersensibilidade.",
+    "interactions": "Nao associar a outros fármacos com QT prolongado; revisar inibidores/indutores e depressores SNC.",
+    "monitoring": "Risco QT (historia, eletrolitos, ECG quando indicado), peso, glicemia, lipidos, sintomas extrapiramidais e hemograma em pacientes de risco.",
+    "administration": "VO com alimento; nao substituir por IM nem omitir a condicao alimentar.",
+    "preparation": "Nao aplicavel a esta apresentacao oral; nao inferir preparo parenteral.",
+    "infusionProtocol": "Nao aplicavel a esta apresentacao; nao converter para esquema de infusao.",
+    "pregnancy": "Exposicao no terceiro trimestre pode causar sintomas extrapiramidais/abstinencia neonatal; avaliar beneficio-risco.",
+    "lactation": "Requer avaliacao especializada; nao foi validada recomendacao de uso nesta ficha.",
+    "specialPopulations": "Nao aprovada para psicose relacionada a demencia; maior cautela cardiovascular e em predisposicao a QT.",
+    "patientEducation": "Tomar com alimento; nao dirigir ate conhecer o efeito; procurar atendimento por sincope, palpitacao, febre/rigidez ou rash.",
+    "clinicalPearls": "A obrigatoriedade de alimento e o risco QT sao elementos centrais; o esquema oral nao valida ziprasidona IM.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO CARDIACO: revisar QT, eletrolitos e co-medicacoes antes de prescrever.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "references": [
+      "DailyMed (EUA): ziprasidone hydrochloride capsules 20, 40, 60 e 80 mg, pagina atualizada em 12 jan 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c227a618-1274-2b4d-e053-2a95a90a74fb"
+    ],
+    "ref": "DailyMed (EUA): ziprasidone hydrochloride capsules 20, 40, 60 e 80 mg, pagina atualizada em 12 jan 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c227a618-1274-2b4d-e053-2a95a90a74fb"
+  },
+  "es": {
+    "name": "Ziprasidona",
+    "class": "Antipsicotico atipico",
+    "pharmacologicClass": "Antagonista dopaminergico/serotoninergico",
+    "commercialNames": "Nombre comercial no revisado; el alcance es capsula oral generica",
+    "presentation": "Capsulas orales",
+    "presentations": "20, 40, 60 y 80 mg; producto EUA. IM excluida de esta ficha.",
+    "mechanism": "Antagonismo de receptores D2 y 5-HT2A, con otras afinidades receptoras descritas en el rotulo.",
+    "pharmacodynamics": "Efecto antipsicotico; puede prolongar QT/QTc. La absorcion aumenta hasta dos veces con alimento.",
+    "pharmacokinetics": "Administrar con alimento para exposicion adecuada; el metabolismo incluye CYP3A4, conforme al rotulo.",
+    "indications": "Esquizofrenia; episodios maniacos/mixtos agudos del trastorno bipolar I; mantenimiento bipolar I como adyuvante de litio o valproato.",
+    "dose": "Esquizofrenia: iniciar 20 mg VO 2 veces/dia con alimentos; ajustar hasta 80 mg 2 veces/dia. Mania/mixto bipolar I: 40 mg 2 veces/dia, pudiendo 60-80 mg 2 veces/dia el dia 2 segun tolerancia.",
+    "pediatricDose": "La seguridad y eficacia pediatrica no estan establecidas en el rotulo revisado.",
+    "renalDose": "Sin ajuste oral especifico en esta fuente; evaluar comorbilidades y medicacion concomitante.",
+    "hepaticDose": "La exposicion puede aumentar en disfuncion hepatica; requiere evaluacion clinica individual, sin porcentaje universal en esta ficha.",
+    "commonAdverseEffects": "Somnolencia, mareo, acatisia, sintomas extrapiramidales, astenia, vomitos y alteracion visual.",
+    "dangerousAdverseEffects": "Prolongacion QT/arritmia, SNM, DRESS/SCAR, discinesia tardia, hiperglucemia y ACV/mortalidad en ancianos con psicosis relacionada con demencia.",
+    "adverseEffects": "Hipotension ortostatica, caidas, leucopenia/neutropenia, convulsiones, disfagia, priapismo e hiperprolactinemia.",
+    "contraindications": "QT prolongado conocido, IAM agudo reciente, insuficiencia cardiaca descompensada, farmacos que prolongan QT e hipersensibilidad.",
+    "interactions": "No asociar con otros farmacos con QT prolongado; revisar inhibidores/inductores y depresores del SNC.",
+    "monitoring": "Riesgo QT (historia, electrolitos, ECG cuando corresponde), peso, glucemia, lipidos, sintomas extrapiramidales y hemograma en pacientes de riesgo.",
+    "administration": "VO con alimentos; no sustituir por IM ni omitir la condicion alimentaria.",
+    "preparation": "No aplicable a esta presentacion oral; no inferir preparacion parenteral.",
+    "infusionProtocol": "No aplicable a esta presentacion; no convertir a esquema de infusion.",
+    "pregnancy": "La exposicion en el tercer trimestre puede causar sintomas extrapiramidales/abstinencia neonatal; evaluar beneficio-riesgo.",
+    "lactation": "Requiere evaluacion especializada; no se valido recomendacion de uso en esta ficha.",
+    "specialPopulations": "No aprobada para psicosis relacionada con demencia; mayor precaucion cardiovascular y ante predisposicion a QT.",
+    "patientEducation": "Tomar con alimentos; no conducir hasta conocer el efecto; buscar atencion por sincope, palpitaciones, fiebre/rigidez o erupcion.",
+    "clinicalPearls": "La obligacion de alimento y el riesgo QT son elementos centrales; el esquema oral no valida ziprasidona IM.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO CARDIACO: revisar QT, electrolitos y comedicaciones antes de prescribir.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "references": [
+      "DailyMed (EUA): ziprasidone hydrochloride capsules 20, 40, 60 e 80 mg, pagina atualizada em 12 jan 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c227a618-1274-2b4d-e053-2a95a90a74fb"
+    ],
+    "ref": "DailyMed (EUA): ziprasidone hydrochloride capsules 20, 40, 60 e 80 mg, pagina atualizada em 12 jan 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c227a618-1274-2b4d-e053-2a95a90a74fb"
+  }
+};})();
+/* GOLD33_SELECTIVE:ziprasidona:END */
+/* GOLD33_SELECTIVE:zuclopentixol:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="zuclopentixol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zuclopentixol:"+matches.length);drug=matches[0];}else{drug=db&&db["zuclopentixol"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="zuclopentixol";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zuclopentixol:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:zuclopentixol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "090",
+    "requiredFieldCount": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  },
+  "pt": {
+    "name": "Zuclopentixol",
+    "class": "Antipsicotico tipico",
+    "pharmacologicClass": "Tioxanteno; antagonista dopaminergico D2",
+    "commercialNames": "Clopixol, Clopixol Acuphase e Clopixol Depot (produtos-fonte UK)",
+    "presentation": "Comprimidos orais; solucao IM de acetato; solucao IM depot de decanoato",
+    "presentations": "Comprimido 2 mg (fonte citada); acetato IM e decanoato IM 200 mg/mL sao formulacoes distintas.",
+    "mechanism": "Antagonismo D2, com atividade em receptores serotoninergicos, alfa-adrenergicos e histaminicos; produz efeito antipsicotico/sedativo.",
+    "pharmacodynamics": "Controla sintomas psicoticos; pode causar sintomas extrapiramidais, sedacao e hipotensao.",
+    "pharmacokinetics": "Acetato IM e curta acao; decanoato IM e deposito de acao prolongada. A farmacocinetica determina intervalos distintos e impede conversao direta.",
+    "indications": "Comprimidos: psicoses/esquizofrenia conforme SmPC. Acetato IM: fase aguda de agitacao psicotica. Decanoato: manutencao. Confirmar indicacao e rotulo local.",
+    "dose": "NAO UNIFICAR. Comprimidos, acetato IM e decanoato IM exigem seus proprios esquemas e titulação no SmPC; este PDF nao autoriza conversao entre produtos.",
+    "pediatricDose": "Nao recomendada para menores; seguranca/eficacia pediatrica nao estabelecida nos SmPCs citados.",
+    "renalDose": "Nao ha esquema universal de ajuste confirmado nesta sintese; usar avaliacao clinica e SmPC especifico.",
+    "hepaticDose": "Usar cautela e menor dose inicial/titulacao lenta em hepatopatia; confirmar produto e gravidade.",
+    "commonAdverseEffects": "Sedacao, boca seca, constipacao, tontura, acatisia, parkinsonismo, tremor e hipotensao ortostatica.",
+    "dangerousAdverseEffects": "SNM, discinesia tardia, QT/arritmias, convulsoes, tromboembolismo venoso, agranulocitose e AVC/mortalidade em demencia.",
+    "adverseEffects": "Hiperprolactinemia, disfuncao sexual, aumento de peso, alteracoes termorregulatorias e fotossensibilidade.",
+    "contraindications": "Coma, depressao aguda por alcool/barbituricos/opioides, colapso circulatorio, discrasias sanguineas e hipersensibilidade; confirmar cada SmPC.",
+    "interactions": "Alcool e depressores SNC aumentam sedacao; fármacos QT, levodopa/agonistas dopaminergicos, anti-hipertensivos e medicamentos que alteram eletrolitos exigem revisao.",
+    "monitoring": "Estado mental, sintomas extrapiramidais, PA, ECG/riscos QT, eletrolitos, peso/metabolismo e hemograma quando indicado.",
+    "administration": "Comprimido por VO; acetato e decanoato exclusivamente IM profunda, cada um com produto e tecnica propria.",
+    "preparation": "Confirmar no SmPC a concentracao e tecnica do produto IM; nao misturar, diluir ou usar via IV.",
+    "infusionProtocol": "NAO APLICAVEL: produtos IM, nao por infusao IV.",
+    "pregnancy": "Uso no fim da gestacao pode causar sintomas extrapiramidais/abstinencia no RN; avaliar risco-beneficio.",
+    "lactation": "Pode ser excretado no leite; exigir avaliacao especializada e fonte regional.",
+    "specialPopulations": "Idosos com demencia nao devem receber como uso rotineiro; cautela em doenca cardiovascular, Parkinson e epilepsia.",
+    "patientEducation": "Evitar alcool e dirigir ate conhecer efeito; buscar ajuda por febre/rigidez, desmaio, movimentos involuntarios ou dispneia/dor de perna.",
+    "clinicalPearls": "O erro critico e confundir acetato IM de crise com decanoato depot. A troca exige plano especializado, nao conversao automatica.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO DE FORMULACAO: bloquear qualquer conversao oral-IM, acetato-decanoato ou IM-IV sem prescricao e SmPC do produto.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "references": [
+      "electronic Medicines Compendium / SmPC (Reino Unido): Clopixol tablets 2 mg; Clopixol Acuphase (zuclopenthixol acetate) injection; Clopixol Depot (zuclopenthixol decanoate) 200 mg/mL. https://www.medicines.org.uk/emc/product/994/smpc | https://www.medicines.org.uk/emc/product/993/smpc | https://www.medicines.org.uk/emc/product/6414/smpc"
+    ],
+    "ref": "electronic Medicines Compendium / SmPC (Reino Unido): Clopixol tablets 2 mg; Clopixol Acuphase (zuclopenthixol acetate) injection; Clopixol Depot (zuclopenthixol decanoate) 200 mg/mL. https://www.medicines.org.uk/emc/product/994/smpc | https://www.medicines.org.uk/emc/product/993/smpc | https://www.medicines.org.uk/emc/product/6414/smpc"
+  },
+  "es": {
+    "name": "Zuclopentixol",
+    "class": "Antipsicotico tipico",
+    "pharmacologicClass": "Tioxanteno; antagonista dopaminergico D2",
+    "commercialNames": "Clopixol, Clopixol Acuphase y Clopixol Depot (productos-fuente UK)",
+    "presentation": "Comprimidos orales; solucion IM de acetato; solucion IM depot de decanoato",
+    "presentations": "Comprimido 2 mg (fuente citada); acetato IM y decanoato IM 200 mg/mL son formulaciones distintas.",
+    "mechanism": "Antagonismo D2, con actividad en receptores serotoninergicos, alfa-adrenergicos e histaminicos; produce efecto antipsicotico/sedante.",
+    "pharmacodynamics": "Controla sintomas psicoticos; puede causar sintomas extrapiramidales, sedacion e hipotension.",
+    "pharmacokinetics": "El acetato IM es de accion corta; el decanoato IM es deposito de accion prolongada. La farmacocinetica determina intervalos distintos e impide conversion directa.",
+    "indications": "Comprimidos: psicosis/esquizofrenia conforme SmPC. Acetato IM: fase aguda de agitacion psicotica. Decanoato: mantenimiento. Confirmar indicacion y rotulo local.",
+    "dose": "NO UNIFICAR. Comprimidos, acetato IM y decanoato IM exigen sus propios esquemas y titulacion en el SmPC; este PDF no autoriza conversion entre productos.",
+    "pediatricDose": "No recomendada para menores; seguridad/eficacia pediatrica no establecida en los SmPC citados.",
+    "renalDose": "No hay esquema universal de ajuste confirmado en esta sintesis; usar evaluacion clinica y SmPC especifico.",
+    "hepaticDose": "Usar precaucion y menor dosis inicial/titulacion lenta en hepatopatia; confirmar producto y gravedad.",
+    "commonAdverseEffects": "Sedacion, boca seca, constipacion, mareo, acatisia, parkinsonismo, temblor e hipotension ortostatica.",
+    "dangerousAdverseEffects": "SNM, discinesia tardia, QT/arritmias, convulsiones, tromboembolismo venoso, agranulocitosis y ACV/mortalidad en demencia.",
+    "adverseEffects": "Hiperprolactinemia, disfuncion sexual, aumento de peso, alteraciones termorregulatorias y fotosensibilidad.",
+    "contraindications": "Coma, depresion aguda por alcohol/barbituricos/opioides, colapso circulatorio, discrasias sanguineas e hipersensibilidad; confirmar cada SmPC.",
+    "interactions": "Alcohol y depresores del SNC aumentan sedacion; farmacos QT, levodopa/agonistas dopaminergicos, antihipertensivos y medicamentos que alteran electrolitos exigen revision.",
+    "monitoring": "Estado mental, sintomas extrapiramidales, PA, ECG/riesgos QT, electrolitos, peso/metabolismo y hemograma cuando corresponde.",
+    "administration": "Comprimido por VO; acetato y decanoato exclusivamente IM profunda, cada uno con producto y tecnica propia.",
+    "preparation": "Confirmar en el SmPC la concentracion y tecnica del producto IM; no mezclar, diluir ni usar via IV.",
+    "infusionProtocol": "NO APLICABLE: productos IM, no por infusion IV.",
+    "pregnancy": "El uso al final del embarazo puede causar sintomas extrapiramidales/abstinencia en el RN; evaluar riesgo-beneficio.",
+    "lactation": "Puede excretarse en leche; exigir evaluacion especializada y fuente regional.",
+    "specialPopulations": "Ancianos con demencia no deben recibirlo como uso rutinario; precaucion en enfermedad cardiovascular, Parkinson y epilepsia.",
+    "patientEducation": "Evitar alcohol y conducir hasta conocer el efecto; buscar ayuda por fiebre/rigidez, sincope, movimientos involuntarios o disnea/dolor de pierna.",
+    "clinicalPearls": "El error critico es confundir acetato IM de crisis con decanoato deposito. El cambio exige plan especializado, no conversion automatica.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO DE FORMULACION: bloquear toda conversion oral-IM, acetato-decanoato o IM-IV sin prescripcion y SmPC del producto.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "references": [
+      "electronic Medicines Compendium / SmPC (Reino Unido): Clopixol tablets 2 mg; Clopixol Acuphase (zuclopenthixol acetate) injection; Clopixol Depot (zuclopenthixol decanoate) 200 mg/mL. https://www.medicines.org.uk/emc/product/994/smpc | https://www.medicines.org.uk/emc/product/993/smpc | https://www.medicines.org.uk/emc/product/6414/smpc"
+    ],
+    "ref": "electronic Medicines Compendium / SmPC (Reino Unido): Clopixol tablets 2 mg; Clopixol Acuphase (zuclopenthixol acetate) injection; Clopixol Depot (zuclopenthixol decanoate) 200 mg/mL. https://www.medicines.org.uk/emc/product/994/smpc | https://www.medicines.org.uk/emc/product/993/smpc | https://www.medicines.org.uk/emc/product/6414/smpc"
+  }
+};})();
+/* GOLD33_SELECTIVE:zuclopentixol:END */

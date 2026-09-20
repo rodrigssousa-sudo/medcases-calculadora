@@ -17830,3 +17830,213 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:zavegepanta:END */
+/* GOLD33_SELECTIVE:zolmitriptana:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="zolmitriptana";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zolmitriptana:"+matches.length);drug=matches[0];}else{drug=db&&db["zolmitriptana"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="zolmitriptana";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zolmitriptana:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:zolmitriptana");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "090",
+    "requiredFieldCount": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  },
+  "pt": {
+    "name": "Zolmitriptana",
+    "class": "Antienxaquecoso",
+    "pharmacologicClass": "Agonista 5-HT1B/1D (triptano)",
+    "commercialNames": "Nome comercial nao revisado nesta ficha",
+    "presentation": "Comprimidos orais revestidos",
+    "presentations": "2,5 mg sulcado e 5 mg nao sulcado; produto EUA.",
+    "mechanism": "Agonista serotoninergico 5-HT1B/1D que promove vasoconstricao craniana e modula vias trigeminais.",
+    "pharmacodynamics": "Triptano para abortar crise; nao e profilaxia.",
+    "pharmacokinetics": "Metabolismo hepatico; reduzir exposicao em disfuncao hepatica moderada/grave conforme rotulo.",
+    "indications": "Tratamento agudo de enxaqueca com ou sem aura em adultos, apos diagnostico claro.",
+    "dose": "Dose inicial 1,25 ou 2,5 mg VO; maximo por dose 5 mg; pode repetir apos 2 h; maximo 10 mg/24 h.",
+    "pediatricDose": "Nao estabelecida para esta apresentacao/indicacao no rotulo revisado.",
+    "renalDose": "Sem ajuste especifico confirmado nesta ficha; avaliar individualmente.",
+    "hepaticDose": "Disfuncao hepatica moderada/grave: 1,25 mg recomendado na bula; revisar tambem limite diario e interacoes antes de uso.",
+    "commonAdverseEffects": "Pressao/dor em pescoco-garganta-mandibula, tontura, parestesia, astenia, sonolencia, nausea e boca seca.",
+    "dangerousAdverseEffects": "Isquemia/infarto, arritmias, AVC/hemorragia cerebral, isquemia intestinal/periferica e sindrome serotoninergica.",
+    "adverseEffects": "Cefaleia por uso excessivo de medicacao e elevacao pressorica podem ocorrer.",
+    "contraindications": "DAC/vasoespasmo, WPW/sindromes de via acessoria, AVC/AIT, enxaqueca hemiplegica/basilar, doenca vascular periferica/isquemia intestinal, HAS nao controlada, uso recente de triptano/ergot ou IMAO-A.",
+    "interactions": "Nao usar em 24 h de outro triptano ou ergot; IMAO-A e cimetidina exigem revisao; cautela com fármacos serotoninergicos.",
+    "monitoring": "Reavaliar diagnostico, fatores cardiovasculares, PA, sintomas isquemicos e frequencia de uso.",
+    "administration": "VO no inicio da crise; nao usar para profilaxia.",
+    "preparation": "Nao aplicavel a esta apresentacao oral; nao inferir preparo parenteral.",
+    "infusionProtocol": "Nao aplicavel a esta apresentacao; nao converter para esquema de infusao.",
+    "pregnancy": "Dados humanos insuficientes; a fonte menciona potencial dano fetal com base em animais.",
+    "lactation": "Nao validado neste pacote; requer consulta de fonte de lactacao atual.",
+    "specialPopulations": "Avaliar cardiovasculares de alto risco antes da primeira dose; nao indicado para cefaleia em salvas.",
+    "patientEducation": "Nao exceder limite diario; procurar urgencia para dor toracica, deficit neurologico, dor abdominal intensa ou falta de ar.",
+    "clinicalPearls": "Confirmar fenotipo de enxaqueca antes do triptano e diferenciar sensacao toracica benigna de possivel isquemia.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO VASCULAR: verificar contraindicacoes cardiovasculares e janela de 24 h com triptanos/ergots.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "references": [
+      "DailyMed (EUA): zolmitriptan oral tablets 2,5 e 5 mg, atualizada em 29 jan 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=333caafc-2e63-49f8-a0c6-534e528d228d"
+    ],
+    "ref": "DailyMed (EUA): zolmitriptan oral tablets 2,5 e 5 mg, atualizada em 29 jan 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=333caafc-2e63-49f8-a0c6-534e528d228d"
+  },
+  "es": {
+    "name": "Zolmitriptan",
+    "class": "Antimigranoso",
+    "pharmacologicClass": "Agonista 5-HT1B/1D (triptan)",
+    "commercialNames": "Nombre comercial no revisado en esta ficha",
+    "presentation": "Comprimidos orales recubiertos",
+    "presentations": "2,5 mg ranurado y 5 mg no ranurado; producto EUA.",
+    "mechanism": "Agonista serotoninergico 5-HT1B/1D que promueve vasoconstriccion craneal y modula vias trigeminales.",
+    "pharmacodynamics": "Triptan para abortar la crisis; no es profilaxis.",
+    "pharmacokinetics": "Metabolismo hepatico; reducir la exposicion en disfuncion hepatica moderada/grave conforme al rotulo.",
+    "indications": "Tratamiento agudo de migrana con o sin aura en adultos, tras diagnostico claro.",
+    "dose": "Dosis inicial 1,25 o 2,5 mg VO; maximo por dosis 5 mg; puede repetirse tras 2 h; maximo 10 mg/24 h.",
+    "pediatricDose": "No establecida para esta presentacion/indicacion en el rotulo revisado.",
+    "renalDose": "Sin ajuste especifico confirmado en esta ficha; evaluar individualmente.",
+    "hepaticDose": "Disfuncion hepatica moderada/grave: 1,25 mg recomendado en el rotulo; revisar tambien limite diario e interacciones antes de uso.",
+    "commonAdverseEffects": "Presion/dolor en cuello-garganta-mandibula, mareo, parestesia, astenia, somnolencia, nauseas y boca seca.",
+    "dangerousAdverseEffects": "Isquemia/infarto, arritmias, ACV/hemorragia cerebral, isquemia intestinal/periferica y sindrome serotoninergico.",
+    "adverseEffects": "Cefalea por uso excesivo de medicacion y elevacion de la presion arterial pueden ocurrir.",
+    "contraindications": "DAC/vasoespasmo, WPW/sindromes de via accesoria, ACV/AIT, migrana hemiplejica/basilar, enfermedad vascular periferica/isquemia intestinal, HTA no controlada, uso reciente de triptan/ergot o IMAO-A.",
+    "interactions": "No usar dentro de 24 h de otro triptan o ergot; IMAO-A y cimetidina exigen revision; precaucion con farmacos serotoninergicos.",
+    "monitoring": "Reevaluar diagnostico, factores cardiovasculares, PA, sintomas isquemicos y frecuencia de uso.",
+    "administration": "VO al inicio de la crisis; no usar para profilaxis.",
+    "preparation": "No aplicable a esta presentacion oral; no inferir preparacion parenteral.",
+    "infusionProtocol": "No aplicable a esta presentacion; no convertir a esquema de infusion.",
+    "pregnancy": "Datos humanos insuficientes; la fuente menciona potencial dano fetal con base en animales.",
+    "lactation": "No validado en este paquete; requiere consulta de fuente de lactancia actual.",
+    "specialPopulations": "Evaluar riesgo cardiovascular alto antes de la primera dosis; no indicado para cefalea en racimos.",
+    "patientEducation": "No exceder el limite diario; buscar urgencias por dolor toracico, deficit neurologico, dolor abdominal intenso o falta de aire.",
+    "clinicalPearls": "Confirmar fenotipo de migrana antes del triptan y diferenciar sensacion toracica benigna de posible isquemia.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO VASCULAR: verificar contraindicaciones cardiovasculares y ventana de 24 h con triptanes/ergots.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "references": [
+      "DailyMed (EUA): zolmitriptan oral tablets 2,5 e 5 mg, atualizada em 29 jan 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=333caafc-2e63-49f8-a0c6-534e528d228d"
+    ],
+    "ref": "DailyMed (EUA): zolmitriptan oral tablets 2,5 e 5 mg, atualizada em 29 jan 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=333caafc-2e63-49f8-a0c6-534e528d228d"
+  }
+};})();
+/* GOLD33_SELECTIVE:zolmitriptana:END */
+/* GOLD33_SELECTIVE:zonisamida:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="zonisamida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zonisamida:"+matches.length);drug=matches[0];}else{drug=db&&db["zonisamida"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="zonisamida";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zonisamida:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:zonisamida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "090",
+    "requiredFieldCount": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  },
+  "pt": {
+    "name": "Zonisamida",
+    "class": "Antiepileptico",
+    "pharmacologicClass": "Sulfonamida; antiepiléptico de amplo mecanismo",
+    "commercialNames": "ZONISADE (produto-fonte EUA)",
+    "presentation": "Suspensao oral",
+    "presentations": "100 mg/5 mL; produto EUA.",
+    "mechanism": "Mecanismo multifatorial; bloqueia canais de sodio e calcio tipo T e apresenta atividade inibidora fraca da anidrase carbonica.",
+    "pharmacodynamics": "Reduz excitabilidade neuronal; pode causar acidose metabolica e reduzir sudorese.",
+    "pharmacokinetics": "Meia-vida longa; metabolismo hepatico e eliminacao renal.",
+    "indications": "Terapia adjuvante de crises de inicio parcial em adultos e pacientes pediatricos a partir de 16 anos, conforme rotulo.",
+    "dose": "Iniciar 100 mg/dia; apos 2 semanas, 200 mg/dia; apos mais 2 semanas, 300-400 mg/dia conforme resposta/tolerancia. Confirmar calendario no rotulo atual.",
+    "pediatricDose": "Somente >=16 anos no escopo desta suspensao; nao calcular dose para menores sem fonte especifica.",
+    "renalDose": "Evitar em eGFR <50 mL/min devido a experiencia insuficiente; suspender se lesao renal aguda/elevação importante de creatinina.",
+    "hepaticDose": "Usar com cautela; nao ha esquema percentual universal confirmado nesta ficha.",
+    "commonAdverseEffects": "Sonolencia, tontura, anorexia, ataxia, cefaleia, nausea, dificuldade de concentracao/memoria e perda de peso.",
+    "dangerousAdverseEffects": "DRESS/SCAR, acidose metabolica, calculo renal, oligohidrose/hipertermia, ideacao suicida, depressao SNC e defeitos do tubo neural.",
+    "adverseEffects": "Alteracoes psiquiatricas/cognitivas, diplopia, fadiga e hipersensibilidade a sulfonamidas.",
+    "contraindications": "Hipersensibilidade a zonisamida ou sulfonamidas, conforme rotulo.",
+    "interactions": "Inibidores/indutores CYP3A podem alterar exposicao; outros inibidores de anidrase carbonica aumentam risco de acidose/calculos.",
+    "monitoring": "Bicarbonato basal e periodico, funcao renal, peso, hidratacao, temperatura/sudorese, humor/cognicao e rash.",
+    "administration": "Agitar bem a suspensao e medir com dispositivo calibrado; nao converter mL sem concentracao confirmada.",
+    "preparation": "Nao aplicavel a esta apresentacao oral; nao inferir preparo parenteral.",
+    "infusionProtocol": "Nao aplicavel a esta apresentacao; nao converter para esquema de infusao.",
+    "pregnancy": "Pode causar dano fetal; discutir contracepcao e registro de exposicao conforme jurisdicao.",
+    "lactation": "Passa ao leite; requer avaliacao especializada.",
+    "specialPopulations": "Risco maior de oligohidrose/hipertermia em jovens; idosos e pacientes com doenca renal exigem cautela.",
+    "patientEducation": "Manter hidratacao; buscar atendimento por rash, febre, pouca sudorese, dor lombar/hematúria, confusao ou respiracao rapida.",
+    "clinicalPearls": "A acidose metabolica pode ocorrer em qualquer momento; bicarbonato nao e opcional em revisao de seguranca.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO METABOLICO/DERMATOLOGICO: verificar bicarbonato, rim, hidratacao e alergia a sulfonamida.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "references": [
+      "DailyMed (EUA): ZONISADE zonisamide oral suspension 100 mg/5 mL. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ac16fa15-32e9-4f92-8bc6-d8d41ae002c6"
+    ],
+    "ref": "DailyMed (EUA): ZONISADE zonisamide oral suspension 100 mg/5 mL. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ac16fa15-32e9-4f92-8bc6-d8d41ae002c6"
+  },
+  "es": {
+    "name": "Zonisamida",
+    "class": "Antiepileptico",
+    "pharmacologicClass": "Sulfonamida; antiepileptico de mecanismo amplio",
+    "commercialNames": "ZONISADE (producto-fuente EUA)",
+    "presentation": "Suspension oral",
+    "presentations": "100 mg/5 mL; producto EUA.",
+    "mechanism": "Mecanismo multifactorial; bloquea canales de sodio y calcio tipo T y presenta actividad inhibidora debil de la anhidrasa carbonica.",
+    "pharmacodynamics": "Reduce la excitabilidad neuronal; puede causar acidosis metabolica y reducir la sudoracion.",
+    "pharmacokinetics": "Vida media larga; metabolismo hepatico y eliminacion renal.",
+    "indications": "Terapia adyuvante de crisis de inicio focal en adultos y pacientes pediatricos a partir de 16 anos, conforme al rotulo.",
+    "dose": "Iniciar 100 mg/dia; tras 2 semanas, 200 mg/dia; tras otras 2 semanas, 300-400 mg/dia segun respuesta/tolerancia. Confirmar calendario en el rotulo actual.",
+    "pediatricDose": "Solo >=16 anos en el alcance de esta suspension; no calcular dosis para menores sin fuente especifica.",
+    "renalDose": "Evitar con eGFR <50 mL/min por experiencia insuficiente; suspender si hay lesion renal aguda/elevacion importante de creatinina.",
+    "hepaticDose": "Usar con precaucion; no hay esquema porcentual universal confirmado en esta ficha.",
+    "commonAdverseEffects": "Somnolencia, mareo, anorexia, ataxia, cefalea, nauseas, dificultad de concentracion/memoria y perdida de peso.",
+    "dangerousAdverseEffects": "DRESS/SCAR, acidosis metabolica, calculo renal, oligohidrosis/hipertermia, ideacion suicida, depresion del SNC y defectos del tubo neural.",
+    "adverseEffects": "Alteraciones psiquiatricas/cognitivas, diplopia, fatiga e hipersensibilidad a sulfonamidas.",
+    "contraindications": "Hipersensibilidad a zonisamida o sulfonamidas, conforme al rotulo.",
+    "interactions": "Inhibidores/inductores CYP3A pueden alterar la exposicion; otros inhibidores de anhidrasa carbonica aumentan riesgo de acidosis/calculos.",
+    "monitoring": "Bicarbonato basal y periodico, funcion renal, peso, hidratacion, temperatura/sudoracion, animo/cognicion y erupcion.",
+    "administration": "Agitar bien la suspension y medir con dispositivo calibrado; no convertir mL sin concentracion confirmada.",
+    "preparation": "No aplicable a esta presentacion oral; no inferir preparacion parenteral.",
+    "infusionProtocol": "No aplicable a esta presentacion; no convertir a esquema de infusion.",
+    "pregnancy": "Puede causar dano fetal; discutir anticoncepcion y registro de exposicion conforme jurisdiccion.",
+    "lactation": "Pasa a la leche; requiere evaluacion especializada.",
+    "specialPopulations": "Mayor riesgo de oligohidrosis/hipertermia en jovenes; ancianos y pacientes con enfermedad renal requieren precaucion.",
+    "patientEducation": "Mantener hidratacion; buscar atencion por erupcion, fiebre, poca sudoracion, dolor lumbar/hematuria, confusion o respiracion rapida.",
+    "clinicalPearls": "La acidosis metabolica puede ocurrir en cualquier momento; bicarbonato no es opcional en la revision de seguridad.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO METABOLICO/DERMATOLOGICO: verificar bicarbonato, rinon, hidratacion y alergia a sulfonamida.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "references": [
+      "DailyMed (EUA): ZONISADE zonisamide oral suspension 100 mg/5 mL. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ac16fa15-32e9-4f92-8bc6-d8d41ae002c6"
+    ],
+    "ref": "DailyMed (EUA): ZONISADE zonisamide oral suspension 100 mg/5 mL. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ac16fa15-32e9-4f92-8bc6-d8d41ae002c6"
+  }
+};})();
+/* GOLD33_SELECTIVE:zonisamida:END */

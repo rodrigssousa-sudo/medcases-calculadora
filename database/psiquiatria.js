@@ -9011,3 +9011,213 @@
   }
 };})();
 /* GOLD33_SELECTIVE:fluvoxamina:END */
+/* GOLD33_SELECTIVE:zolpidem:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="zolpidem";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zolpidem:"+matches.length);drug=matches[0];}else{drug=db&&db["zolpidem"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="zolpidem";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zolpidem:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:zolpidem");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "090",
+    "requiredFieldCount": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  },
+  "pt": {
+    "name": "Zolpidem",
+    "class": "Hipnotico sedativo",
+    "pharmacologicClass": "Imidazopiridina; modulador positivo GABA-A",
+    "commercialNames": "AMBIEN (produto-fonte EUA)",
+    "presentation": "Comprimidos orais de liberacao imediata",
+    "presentations": "5 mg e 10 mg; somente liberacao imediata.",
+    "mechanism": "Liga-se preferencialmente ao subtipo BZ1 do receptor GABA-A e produz efeito sedativo-hipnotico.",
+    "pharmacodynamics": "Induz sono; depressao do SNC e comprometimento psicomotor podem persistir no dia seguinte.",
+    "pharmacokinetics": "Absorcao rapida; metabolizacao hepatica e exposicao maior em mulheres, idosos e insuficiencia hepatica.",
+    "indications": "Tratamento de curto prazo da insonia caracterizada por dificuldade para iniciar o sono.",
+    "dose": "Adultos: 5 ou 10 mg uma vez ao deitar, somente quando houver 7-8 h disponiveis para sono. Mulheres e idosos: iniciar 5 mg. Nao repetir na mesma noite.",
+    "pediatricDose": "Nao indicada; seguranca e eficacia abaixo de 18 anos nao estabelecidas para esta ficha.",
+    "renalDose": "Sem ajuste rotineiro estabelecido; avaliar clinicamente.",
+    "hepaticDose": "Insuficiencia hepatica leve-moderada: 5 mg; evitar em insuficiencia hepatica grave por risco de encefalopatia.",
+    "commonAdverseEffects": "Sonolencia, tontura, cefaleia, diarreia, sonolencia diurna e fadiga.",
+    "dangerousAdverseEffects": "Comportamentos complexos do sono, depressao respiratoria, anafilaxia/angioedema, queda, ideacao suicida e comprometimento no dia seguinte.",
+    "adverseEffects": "Amnesia, confusao, alteracoes perceptivas, dependencia, abstinencia e piora de depressao podem ocorrer.",
+    "contraindications": "Hipersensibilidade; historia de comportamento complexo do sono apos zolpidem.",
+    "interactions": "Alcool, opioides e outros depressores SNC aumentam sedacao/depressao respiratoria; inibidores/indutores CYP3A modificam exposicao.",
+    "monitoring": "Reavaliar insonia se persistir, sonolencia residual, comportamento complexo, uso concomitante de depressor SNC e risco de queda.",
+    "administration": "Tomar imediatamente antes de deitar; garantir 7-8 h de sono; nao tomar com ou logo apos refeicao.",
+    "preparation": "Nao aplicavel a esta apresentacao oral; nao inferir preparo parenteral.",
+    "infusionProtocol": "Nao aplicavel a esta apresentacao; nao converter para esquema de infusao.",
+    "pregnancy": "Uso apenas se beneficio superar risco; exposicao tardia pode causar sedacao/depressao respiratoria neonatal.",
+    "lactation": "Passa ao leite; avaliar risco-beneficio e fonte atual de lactacao.",
+    "specialPopulations": "Idosos, debilitados, apneia do sono, DPOC e uso de opioides requerem maior cautela.",
+    "patientEducation": "Nunca combinar com alcool; nao dirigir no dia seguinte se houver sonolencia; suspender e comunicar comportamento de sono incomum.",
+    "clinicalPearls": "A formulacao e a duracao importam: dados de AMBIEN IR nao devem ser usados para ER ou sublingual.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO DE QUEDA/COMPORTAMENTO COMPLEXO: dose unica noturna, sem redose e sem alcool/opioide.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "references": [
+      "DailyMed (EUA): AMBIEN zolpidem tartrate immediate-release film-coated tablets. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452"
+    ],
+    "ref": "DailyMed (EUA): AMBIEN zolpidem tartrate immediate-release film-coated tablets. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452"
+  },
+  "es": {
+    "name": "Zolpidem",
+    "class": "Hipnotico sedante",
+    "pharmacologicClass": "Imidazopiridina; modulador positivo GABA-A",
+    "commercialNames": "AMBIEN (producto-fuente EUA)",
+    "presentation": "Comprimidos orales de liberacion inmediata",
+    "presentations": "5 mg y 10 mg; solo liberacion inmediata.",
+    "mechanism": "Se une preferentemente al subtipo BZ1 del receptor GABA-A y produce efecto sedante-hipnotico.",
+    "pharmacodynamics": "Induce el sueno; la depresion del SNC y el deterioro psicomotor pueden persistir al dia siguiente.",
+    "pharmacokinetics": "Absorcion rapida; metabolismo hepatico y mayor exposicion en mujeres, ancianos e insuficiencia hepatica.",
+    "indications": "Tratamiento de corto plazo del insomnio caracterizado por dificultad para iniciar el sueno.",
+    "dose": "Adultos: 5 o 10 mg una vez al acostarse, solo cuando haya 7-8 h disponibles para dormir. Mujeres y ancianos: iniciar 5 mg. No repetir la misma noche.",
+    "pediatricDose": "No indicada; la seguridad y eficacia por debajo de 18 anos no estan establecidas para esta ficha.",
+    "renalDose": "Sin ajuste rutinario establecido; evaluar clinicamente.",
+    "hepaticDose": "Insuficiencia hepatica leve-moderada: 5 mg; evitar en insuficiencia hepatica grave por riesgo de encefalopatia.",
+    "commonAdverseEffects": "Somnolencia, mareo, cefalea, diarrea, somnolencia diurna y fatiga.",
+    "dangerousAdverseEffects": "Conductas complejas del sueno, depresion respiratoria, anafilaxia/angioedema, caidas, ideacion suicida y deterioro al dia siguiente.",
+    "adverseEffects": "Amnesia, confusion, alteraciones perceptivas, dependencia, abstinencia y empeoramiento de depresion pueden ocurrir.",
+    "contraindications": "Hipersensibilidad; antecedente de conducta compleja del sueno tras zolpidem.",
+    "interactions": "Alcohol, opioides y otros depresores del SNC aumentan sedacion/depresion respiratoria; inhibidores/inductores CYP3A modifican la exposicion.",
+    "monitoring": "Reevaluar insomnio si persiste, somnolencia residual, conducta compleja, uso concomitante de depresor SNC y riesgo de caida.",
+    "administration": "Tomar inmediatamente antes de acostarse; asegurar 7-8 h de sueno; no tomar con o justo despues de comida.",
+    "preparation": "No aplicable a esta presentacion oral; no inferir preparacion parenteral.",
+    "infusionProtocol": "No aplicable a esta presentacion; no convertir a esquema de infusion.",
+    "pregnancy": "Uso solo si el beneficio supera el riesgo; la exposicion tardia puede causar sedacion/depresion respiratoria neonatal.",
+    "lactation": "Pasa a la leche; evaluar riesgo-beneficio y fuente actual de lactancia.",
+    "specialPopulations": "Ancianos, debilitados, apnea del sueno, EPOC y uso de opioides requieren mayor precaucion.",
+    "patientEducation": "Nunca combinar con alcohol; no conducir al dia siguiente si hay somnolencia; suspender y comunicar conducta de sueno inusual.",
+    "clinicalPearls": "La formulacion y la duracion importan: datos de AMBIEN IR no deben usarse para ER o sublingual.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO DE CAIDA/CONDUCTA COMPLEJA: dosis unica nocturna, sin redosis y sin alcohol/opioide.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "references": [
+      "DailyMed (EUA): AMBIEN zolpidem tartrate immediate-release film-coated tablets. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452"
+    ],
+    "ref": "DailyMed (EUA): AMBIEN zolpidem tartrate immediate-release film-coated tablets. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c36cadf4-65a4-4466-b409-c82020b42452"
+  }
+};})();
+/* GOLD33_SELECTIVE:zolpidem:END */
+/* GOLD33_SELECTIVE:zopiclona:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="zopiclona";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zopiclona:"+matches.length);drug=matches[0];}else{drug=db&&db["zopiclona"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="zopiclona";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:zopiclona:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:zopiclona");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "090",
+    "requiredFieldCount": 33,
+    "approvedSha256": "866ce87ad26117645b0eb2df7da1d6ac28cde2b4f89b6efdc9f70789277e5033",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "packageRestrictions": {
+      "clinical_exceptions_from_reviewer": [],
+      "restricoes_granulares_preservadas": [
+        "Fontes EUA/Reino Unido nao comprovam registro, disponibilidade ou equivalencia Brasil/Argentina.",
+        "Nao converter doses entre apresentacoes, vias, concentracoes, acetato/depot, liberacao imediata/prolongada ou jurisdicoes.",
+        "Dose pediatrica, calculo em mL/gotas e ajustes nao expressamente documentados continuam bloqueados conforme cada ficha.",
+        "Zuclopentixol: bloquear conversao automatica entre comprimido, acetato IM e decanoato IM.",
+        "Adenosina: escopo e bolus IV rapido para TSV; nao e protocolo de infusao.",
+        "Ziprasidona: escopo oral; IM exige fonte e esquema proprios."
+      ],
+      "technical_pending": [
+        "INTEGRACAO_TECNICA=NAO_INICIADA",
+        "PUBLICACAO=BLOQUEADA",
+        "SAFE_SYNC_MECHANISM=PENDENTE_DE_IMPLEMENTACAO",
+        "Nenhum commit, push, merge, deploy ou alteracao de repositorio foi realizado."
+      ]
+    }
+  },
+  "pt": {
+    "name": "Zopiclona",
+    "class": "Hipnotico",
+    "pharmacologicClass": "Ciclopirrolona; hipnotico nao benzodiazepinico",
+    "commercialNames": "Zopiclone 7,5 mg film-coated tablets (produto-fonte UK)",
+    "presentation": "Comprimido revestido oral",
+    "presentations": "7,5 mg; comprimido divisivel; produto Reino Unido.",
+    "mechanism": "Modulador do complexo receptor GABA-A com efeito sedativo-hipnotico.",
+    "pharmacodynamics": "Induz sono, mas tambem pode causar amnesia, depressao respiratoria e comprometimento psicomotor.",
+    "pharmacokinetics": "Metabolizada principalmente por CYP3A4; inibidores aumentam e indutores reduzem exposicao.",
+    "indications": "Tratamento de curto prazo da insonia em adultos.",
+    "dose": "Adulto: 7,5 mg VO imediatamente antes de deitar. Idoso, insuficiencia hepatica, renal ou respiratoria cronica: iniciar 3,75 mg. Curso maximo usual: 4 semanas, incluindo retirada gradual.",
+    "pediatricDose": "Contraindicada/nao recomendada abaixo de 18 anos; seguranca e eficacia nao estabelecidas.",
+    "renalDose": "Em insuficiencia renal, iniciar 3,75 mg conforme SmPC, embora nao haja acumulacao demonstrada.",
+    "hepaticDose": "Insuficiencia hepatica: 3,75 mg noturno; contraindicada em insuficiencia hepatica grave.",
+    "commonAdverseEffects": "Disgeusia amarga, sonolencia residual, boca seca, tontura, cefaleia, nausea e fadiga.",
+    "dangerousAdverseEffects": "Depressao respiratoria, comportamento complexo do sono, dependencia/abstinencia, amnesia, anafilaxia, queda e overdose com opioides.",
+    "adverseEffects": "Agitacao, pesadelos, confusao, alucinacoes, alteracoes comportamentais, ataxia e diplopia.",
+    "contraindications": "Miastenia gravis, insuficiencia respiratoria, apneia grave do sono, insuficiencia hepatica grave, hipersensibilidade e comportamento complexo do sono previo.",
+    "interactions": "Alcool, opioides e outros depressores SNC aumentam risco; CYP3A4 inibidores (p.ex., macrolideos/azois) aumentam exposicao e indutores a reduzem.",
+    "monitoring": "Reavaliar necessidade com frequencia, sinais de dependencia/abstinencia, sedacao, respiracao e queda.",
+    "administration": "Dose unica imediatamente antes de deitar; nao readministrar na mesma noite.",
+    "preparation": "Nao aplicavel a esta apresentacao oral; nao inferir preparo parenteral.",
+    "infusionProtocol": "Nao aplicavel a esta apresentacao; nao converter para esquema de infusao.",
+    "pregnancy": "Nao recomendada; atravessa placenta e uso tardio pode deprimir RN ou causar abstinencia.",
+    "lactation": "Excretada no leite; SmPC recomenda evitar durante amamentacao.",
+    "specialPopulations": "Idosos e pacientes com insuficiencia respiratoria necessitam dose menor; evitar em apneia grave.",
+    "patientEducation": "Nao consumir alcool; nao dirigir por pelo menos 12 h apos dose; nao interromper abruptamente apos uso prolongado.",
+    "clinicalPearls": "Planejar retirada antes de iniciar e tratar causas da insonia; nao perpetuar hipnotico sem reavaliacao.",
+    "guidelineRecommendations": "Nenhuma diretriz terapeutica adicional foi validada neste pacote. O revisor deve confrontar com protocolo local e diretriz vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RISCO DE DEPENDENCIA/DEPRESSAO SNC: duracao curta, dose menor efetiva, evitar opioides e alcool.",
+    "alerts": "Candidato documental para revisao humana. Fonte estrangeira nao comprova registro, disponibilidade ou equivalencia no Brasil ou Argentina.",
+    "references": [
+      "electronic Medicines Compendium / SmPC (Reino Unido): Zopiclone 7,5 mg film-coated tablets, atualizado em 15 abr 2026. https://www.medicines.org.uk/emc/product/10590/smpc"
+    ],
+    "ref": "electronic Medicines Compendium / SmPC (Reino Unido): Zopiclone 7,5 mg film-coated tablets, atualizado em 15 abr 2026. https://www.medicines.org.uk/emc/product/10590/smpc"
+  },
+  "es": {
+    "name": "Zopiclona",
+    "class": "Hipnotico",
+    "pharmacologicClass": "Ciclopirrolona; hipnotico no benzodiazepinico",
+    "commercialNames": "Zopiclone 7,5 mg film-coated tablets (producto-fuente UK)",
+    "presentation": "Comprimido recubierto oral",
+    "presentations": "7,5 mg; comprimido divisible; producto Reino Unido.",
+    "mechanism": "Modulador del complejo receptor GABA-A con efecto sedante-hipnotico.",
+    "pharmacodynamics": "Induce el sueno, pero tambien puede causar amnesia, depresion respiratoria y deterioro psicomotor.",
+    "pharmacokinetics": "Metabolizada principalmente por CYP3A4; inhibidores aumentan e inductores reducen la exposicion.",
+    "indications": "Tratamiento de corto plazo del insomnio en adultos.",
+    "dose": "Adulto: 7,5 mg VO inmediatamente antes de acostarse. Anciano, insuficiencia hepatica, renal o respiratoria cronica: iniciar 3,75 mg. Curso maximo habitual: 4 semanas, incluida retirada gradual.",
+    "pediatricDose": "Contraindicada/no recomendada por debajo de 18 anos; seguridad y eficacia no establecidas.",
+    "renalDose": "En insuficiencia renal, iniciar 3,75 mg conforme SmPC, aunque no se demostro acumulacion.",
+    "hepaticDose": "Insuficiencia hepatica: 3,75 mg nocturnos; contraindicada en insuficiencia hepatica grave.",
+    "commonAdverseEffects": "Disgeusia amarga, somnolencia residual, boca seca, mareo, cefalea, nauseas y fatiga.",
+    "dangerousAdverseEffects": "Depresion respiratoria, conducta compleja del sueno, dependencia/abstinencia, amnesia, anafilaxia, caidas y sobredosis con opioides.",
+    "adverseEffects": "Agitacion, pesadillas, confusion, alucinaciones, alteraciones conductuales, ataxia y diplopia.",
+    "contraindications": "Miastenia gravis, insuficiencia respiratoria, apnea grave del sueno, insuficiencia hepatica grave, hipersensibilidad y conducta compleja del sueno previa.",
+    "interactions": "Alcohol, opioides y otros depresores del SNC aumentan riesgo; inhibidores CYP3A4 (p.ej., macrolidos/azoles) aumentan exposicion e inductores la reducen.",
+    "monitoring": "Reevaluar la necesidad con frecuencia, signos de dependencia/abstinencia, sedacion, respiracion y caidas.",
+    "administration": "Dosis unica inmediatamente antes de acostarse; no readministrar la misma noche.",
+    "preparation": "No aplicable a esta presentacion oral; no inferir preparacion parenteral.",
+    "infusionProtocol": "No aplicable a esta presentacion; no convertir a esquema de infusion.",
+    "pregnancy": "No recomendada; atraviesa la placenta y el uso tardio puede deprimir al RN o causar abstinencia.",
+    "lactation": "Excretada en leche; el SmPC recomienda evitar durante la lactancia.",
+    "specialPopulations": "Ancianos y pacientes con insuficiencia respiratoria requieren dosis menor; evitar en apnea grave.",
+    "patientEducation": "No consumir alcohol; no conducir durante al menos 12 h despues de la dosis; no suspender abruptamente tras uso prolongado.",
+    "clinicalPearls": "Planificar la retirada antes de iniciar y tratar causas del insomnio; no perpetuar hipnotico sin reevaluacion.",
+    "guidelineRecommendations": "No se valido una guia terapeutica adicional en este paquete. El revisor debe confrontar con protocolo local y guia vigente antes de uso clinico.",
+    "safetyFlags": "ALTO RIESGO DE DEPENDENCIA/DEPRESION SNC: duracion corta, dosis menor efectiva, evitar opioides y alcohol.",
+    "alerts": "Candidato documental para revision humana. La fuente extranjera no prueba registro, disponibilidad ni equivalencia en Brasil o Argentina.",
+    "references": [
+      "electronic Medicines Compendium / SmPC (Reino Unido): Zopiclone 7,5 mg film-coated tablets, atualizado em 15 abr 2026. https://www.medicines.org.uk/emc/product/10590/smpc"
+    ],
+    "ref": "electronic Medicines Compendium / SmPC (Reino Unido): Zopiclone 7,5 mg film-coated tablets, atualizado em 15 abr 2026. https://www.medicines.org.uk/emc/product/10590/smpc"
+  }
+};})();
+/* GOLD33_SELECTIVE:zopiclona:END */
