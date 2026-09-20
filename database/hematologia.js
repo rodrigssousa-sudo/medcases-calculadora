@@ -1484,3 +1484,91 @@ Object.assign(window.HEMATOLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:filgrastim:END */
+/* GOLD33_SELECTIVE:hidroxocobalamina:START */
+;(function(){var db=window.HEMATOLOGIA_DRUGS_DB;if(!db||!db["hidroxocobalamina"])throw new Error("GOLD33_MISSING_CANONICAL:hidroxocobalamina");db["hidroxocobalamina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "040",
+    "requiredFieldCount": 33,
+    "approvedSha256": "461b5b71a16a2584ab55b1880ab4907b74bc2aba957e3419c18eab849cdac855",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Hidroxocobalamina",
+    "class": "Antídoto para cianeto/vitamina B12",
+    "pharmacologicClass": "Liga cianeto formando cianocobalamina",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Kit antídoto 5 g IV liofilizado; confirmar produto.",
+    "presentations": "Kit antídoto 5 g IV liofilizado; confirmar produto.",
+    "mechanism": "Liga cianeto formando cianocobalamina. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Forma complexo estável excretado na urina; coloração pode persistir dias.",
+    "indications": "Intoxicação conhecida ou suspeita por cianeto; formulações de B12 para deficiência não são intercambiáveis.",
+    "dose": "Adultos: 5 g IV em 15 min; pode repetir 5 g conforme gravidade/resposta, total 10 g.",
+    "pediatricDose": "70 mg/kg IV, máximo 5 g; pode repetir conforme gravidade e protocolo. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste específico na emergência.",
+    "hepaticDose": "Sem ajuste específico na emergência.",
+    "commonAdverseEffects": "Eritema, cromatúria, hipertensão, náusea e cefaleia.",
+    "dangerousAdverseEffects": "Anafilaxia, hipertensão grave e interferência laboratorial/diálise por coloração.",
+    "adverseEffects": "Eritema, cromatúria, hipertensão, náusea e cefaleia. Graves: Anafilaxia, hipertensão grave e interferência laboratorial/diálise por coloração.",
+    "contraindications": "Nenhuma contraindicação formal em emergência; hipersensibilidade requer manejo.",
+    "interactions": "Incompatível na mesma linha com tiossulfato e vários fármacos; separar linhas.",
+    "monitoring": "Resposta clínica, PA, lactato, acidose, consciência, queimaduras/CO e reação alérgica.",
+    "administration": "IV por acesso dedicado quando possível; não atrasar por teste confirmatório em suspeita forte.",
+    "preparation": "Reconstituir 5 g com 200 mL de NaCl 0,9% ou diluente permitido; inverter, não agitar vigorosamente.",
+    "infusionProtocol": "Infundir 5 g em 15 min; segunda dose pode ser administrada em 15 min a 2 h conforme estado.",
+    "pregnancy": "Usar se intoxicação suspeita; benefício supera risco.",
+    "lactation": "Dados limitados; emergência materna prevalece.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "HOMOLOGADO CLINICAMENTE por Dr Guilherme em 19-09-2026, aprovação integral sem exceções. Integração técnica liberada com preservação obrigatória das restrições granulares.",
+    "alerts": "Anafilaxia, hipertensão grave e interferência laboratorial/diálise por coloração. Cálculo, reconstituição e infusão bloqueados sem peso pediátrico, produto 5 g, diluente, acesso, diagnóstico, lactato e compatibilidades.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxocobalamin+injection"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxocobalamin+injection"
+  },
+  "es": {
+    "name": "Hidroxocobalamina",
+    "class": "Antídoto para cianuro/vitamina B12",
+    "pharmacologicClass": "Une cianuro formando cianocobalamina",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Kit antídoto 5 g IV liofilizado; confirmar producto.",
+    "presentations": "Kit antídoto 5 g IV liofilizado; confirmar producto.",
+    "mechanism": "Une cianuro formando cianocobalamina. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Forma complejo estable excretado en orina; coloración puede persistir días.",
+    "indications": "Intoxicación conocida o sospechada por cianuro; formulaciones de B12 para deficiencia no son intercambiables.",
+    "dose": "Adultos: 5 g IV en 15 min; puede repetirse 5 g según gravedad/respuesta, total 10 g.",
+    "pediatricDose": "70 mg/kg IV, máximo 5 g; puede repetirse según gravedad y protocolo. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste específico en emergencia.",
+    "hepaticDose": "Sin ajuste específico en emergencia.",
+    "commonAdverseEffects": "Eritema, cromaturia, hipertensión, náusea y cefalea.",
+    "dangerousAdverseEffects": "Anafilaxia, hipertensión grave e interferencia de laboratorio/diálisis por coloración.",
+    "adverseEffects": "Eritema, cromaturia, hipertensión, náusea y cefalea. Graves: Anafilaxia, hipertensión grave e interferencia de laboratorio/diálisis por coloración.",
+    "contraindications": "Sin contraindicación formal en emergencia; hipersensibilidad requiere manejo.",
+    "interactions": "Incompatible en misma línea con tiosulfato y varios fármacos; separar líneas.",
+    "monitoring": "Respuesta clínica, PA, lactato, acidosis, conciencia, quemaduras/CO y reacción alérgica.",
+    "administration": "IV por acceso dedicado cuando sea posible; no retrasar por prueba confirmatoria en sospecha fuerte.",
+    "preparation": "Reconstituir 5 g con 200 ml de NaCl 0,9% o diluyente permitido; invertir, no agitar vigorosamente.",
+    "infusionProtocol": "Infundir 5 g en 15 min; segunda dosis puede darse en 15 min a 2 h según estado.",
+    "pregnancy": "Usar si se sospecha intoxicación; beneficio supera riesgo.",
+    "lactation": "Datos limitados; prevalece emergencia materna.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "HOMOLOGADO CLÍNICAMENTE por Dr Guilherme el 19-09-2026, aprobación integral sin excepciones. Integración técnica habilitada con preservación obligatoria de las restricciones granulares.",
+    "alerts": "Anafilaxia, hipertensión grave e interferencia de laboratorio/diálisis por coloración. Cálculo, reconstituição e infusão bloqueados sem peso pediátrico, produto 5 g, diluente, acesso, diagnóstico, lactato e compatibilidades.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxocobalamin+injection"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxocobalamin+injection"
+  }
+};})();
+/* GOLD33_SELECTIVE:hidroxocobalamina:END */

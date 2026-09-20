@@ -5,21 +5,89 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Hidrocortisona (Succinato Sódico de)"
+    "name": "Hidrocortisona sistêmica",
+    "class": "Corticosteroide",
+    "pharmacologicClass": "Agonista do receptor glicocorticoide com atividade mineralocorticoide",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 5-20 mg; pó injetável 100 mg e outras forças.",
+    "presentations": "Comprimidos 5-20 mg; pó injetável 100 mg e outras forças.",
+    "mechanism": "Agonista do receptor glicocorticoide com atividade mineralocorticoide. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Meia-vida plasmática curta, efeito biológico 8-12 h; metabolismo hepático.",
+    "indications": "Reposição na insuficiência adrenal e tratamento anti-inflamatório/imunossupressor; emergência conforme formulação IV.",
+    "dose": "Crise adrenal: 100 mg IV imediato, depois 200 mg/24 h ou 50 mg a cada 6 h, com fluidos. Outras indicações exigem regime específico.",
+    "pediatricDose": "Crise adrenal: 50-100 mg/m² IV inicial conforme idade/protocolo; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste fixo; monitorar retenção e eletrólitos.",
+    "hepaticDose": "Cautela; exposição pode aumentar.",
+    "commonAdverseEffects": "Hiperglicemia, retenção, dispepsia, insônia e alteração de humor.",
+    "dangerousAdverseEffects": "Infecção grave, sangramento GI, psicose, crise adrenal na retirada e osteonecrose.",
+    "adverseEffects": "Hiperglicemia, retenção, dispepsia, insônia e alteração de humor. Graves: Infecção grave, sangramento GI, psicose, crise adrenal na retirada e osteonecrose.",
+    "contraindications": "Hipersensibilidade; infecção fúngica sistêmica para uso imunossupressor.",
+    "interactions": "CYP3A4, vacinas vivas, AINE, anticoagulantes, diuréticos e antidiabéticos.",
+    "monitoring": "PA, glicose, eletrólitos, infecção, peso, osso/olhos e eixo adrenal.",
+    "administration": "VO com alimento; IV/IM apenas formulação apropriada; não suspender cronicamente de forma abrupta.",
+    "preparation": "Reconstituir injetável conforme fabricante.",
+    "infusionProtocol": "IV lenta ou infusão conforme emergência e produto.",
+    "pregnancy": "Pode ser usada quando indicada; monitorar exposição prolongada.",
+    "lactation": "Compatível em doses usuais; observar lactente em doses altas.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "HOMOLOGADO CLINICAMENTE por Dr Guilherme em 19-09-2026, aprovação integral sem exceções. Integração técnica liberada com preservação obrigatória das restrições granulares.",
+    "alerts": "Infecção grave, sangramento GI, psicose, crise adrenal na retirada e osteonecrose. Regime bloqueado sem indicação, formulação, idade/SC/peso, gravidade, infecção, glicemia, eletrólitos e plano de desmame.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydrocortisone+sodium+succinate"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydrocortisone+sodium+succinate"
   },
   "es": {
-    "name": "Hidrocortisona (Succinato Sódico de)"
+    "name": "Hidrocortisona sistémica",
+    "class": "Corticoide",
+    "pharmacologicClass": "Agonista del receptor glucocorticoide con actividad mineralocorticoide",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 5-20 mg; polvo inyectable 100 mg y otras dosis.",
+    "presentations": "Comprimidos 5-20 mg; polvo inyectable 100 mg y otras dosis.",
+    "mechanism": "Agonista del receptor glucocorticoide con actividad mineralocorticoide. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Semivida plasmática corta, efecto biológico 8-12 h; metabolismo hepático.",
+    "indications": "Reposición en insuficiencia suprarrenal y tratamiento antiinflamatorio/inmunosupresor; emergencia según formulación IV.",
+    "dose": "Crisis suprarrenal: 100 mg IV inmediata, luego 200 mg/24 h o 50 mg cada 6 h, con fluidos. Otras indicaciones requieren pauta específica.",
+    "pediatricDose": "Crisis suprarrenal: 50-100 mg/m² IV inicial según edad/protocolo; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste fijo; vigilar retención y electrolitos.",
+    "hepaticDose": "Precaución; exposición puede aumentar.",
+    "commonAdverseEffects": "Hiperglucemia, retención, dispepsia, insomnio y cambio de ánimo.",
+    "dangerousAdverseEffects": "Infección grave, sangrado GI, psicosis, crisis suprarrenal por retirada y osteonecrosis.",
+    "adverseEffects": "Hiperglucemia, retención, dispepsia, insomnio y cambio de ánimo. Graves: Infección grave, sangrado GI, psicosis, crisis suprarrenal por retirada y osteonecrosis.",
+    "contraindications": "Hipersensibilidad; infección fúngica sistémica para uso inmunosupresor.",
+    "interactions": "CYP3A4, vacunas vivas, AINE, anticoagulantes, diuréticos y antidiabéticos.",
+    "monitoring": "PA, glucosa, electrolitos, infección, peso, hueso/ojos y eje suprarrenal.",
+    "administration": "VO con alimento; IV/IM solo formulación apropiada; no suspender crónicamente de forma brusca.",
+    "preparation": "Reconstituir inyectable según fabricante.",
+    "infusionProtocol": "IV lenta o infusión según emergencia y producto.",
+    "pregnancy": "Puede usarse cuando está indicada; vigilar exposición prolongada.",
+    "lactation": "Compatible en dosis habituales; observar lactante con dosis altas.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "HOMOLOGADO CLÍNICAMENTE por Dr Guilherme el 19-09-2026, aprobación integral sin excepciones. Integración técnica habilitada con preservación obligatoria de las restricciones granulares.",
+    "alerts": "Infección grave, sangrado GI, psicosis, crisis suprarrenal por retirada y osteonecrosis. Regime bloqueado sem indicação, formulação, idade/SC/peso, gravidade, infecção, glicemia, eletrólitos e plano de desmame.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydrocortisone+sodium+succinate"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydrocortisone+sodium+succinate"
   },
   "name": {
-    "pt": "Hidrocortisona (Succinato Sódico de)",
-    "es": "Hidrocortisona (Succinato Sódico de)"
+    "pt": "Hidrocortisona sistêmica",
+    "es": "Hidrocortisona sistémica"
   },
   "keywords": [
     "hidrocortisona",
     "hidrocortisona (succinato sódico de)"
   ],
-  "dataVersion": "clinical-data-v1-57642bf3e26f61b2",
-  "clinicalContentSha256": "57642bf3e26f61b2aee6f6a7c8e8cb9884f4fb093771f3a08f485adb54cae7c9",
+  "dataVersion": "clinical-data-v1-183741eac3e0b572",
+  "clinicalContentSha256": "183741eac3e0b572ed49663ca79bc163282414319bf1f189caca3598a46a8e81",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "imuno_corticoide.js",
@@ -84,5 +152,17 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/imuno_corticoide.js",
+    "sourceField": "hidrocortisona.mcGoldClinicalV1",
+    "lote": "040",
+    "requiredFields": 33,
+    "approvedSha256": "461b5b71a16a2584ab55b1880ab4907b74bc2aba957e3419c18eab849cdac855",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

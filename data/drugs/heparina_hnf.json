@@ -5,21 +5,89 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Heparina Não Fracionada (HNF Sódica)"
+    "name": "Heparina não fracionada",
+    "class": "Anticoagulante",
+    "pharmacologicClass": "Potencializa antitrombina e inibe IIa/Xa",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Injeção 1.000 a 20.000 UI/mL e bolsas prontas; confirmar produto.",
+    "presentations": "Injeção 1.000 a 20.000 UI/mL e bolsas prontas; confirmar produto.",
+    "mechanism": "Potencializa antitrombina e inibe IIa/Xa. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Não absorvida VO; efeito IV imediato; depuração saturável e renal.",
+    "indications": "Profilaxia e tratamento de tromboembolismo; anticoagulação em cenários selecionados.",
+    "dose": "Tratamento IV frequentemente bolus 80 UI/kg seguido 18 UI/kg/h, ajustado por aPTT ou anti-Xa; protocolos e indicações variam. Profilaxia 5.000 UI SC a cada 8-12 h.",
+    "pediatricDose": "Protocolos por idade/peso e anti-Xa/aPTT; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste fixo, mas risco hemorrágico aumenta na DRC.",
+    "hepaticDose": "Sem ajuste fixo; coagulopatia hepática eleva risco.",
+    "commonAdverseEffects": "Sangramento, trombocitopenia e reação local.",
+    "dangerousAdverseEffects": "Hemorragia fatal, HIT com trombose, hipercalemia e osteoporose prolongada.",
+    "adverseEffects": "Sangramento, trombocitopenia e reação local. Graves: Hemorragia fatal, HIT com trombose, hipercalemia e osteoporose prolongada.",
+    "contraindications": "Sangramento ativo importante; história de HIT; impossibilidade de monitorar em dose plena.",
+    "interactions": "Antiagregantes, anticoagulantes, trombolíticos e AINE aumentam sangramento.",
+    "monitoring": "Hemograma/plaquetas, aPTT ou anti-Xa, sangramento, K e HIT.",
+    "administration": "IV contínua ou SC; nunca IM. Confirmar concentração por bolsa/seringa.",
+    "preparation": "Diluir somente conforme produto/protocolo e usar bomba inteligente.",
+    "infusionProtocol": "Titular por nomograma validado; protamina para reversão conforme dose recente.",
+    "pregnancy": "Não atravessa placenta; anticoagulante preferido em cenários selecionados.",
+    "lactation": "Compatível; não se espera passagem relevante ao leite.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "HOMOLOGADO CLINICAMENTE por Dr Guilherme em 19-09-2026, aprovação integral sem exceções. Integração técnica liberada com preservação obrigatória das restrições granulares.",
+    "alerts": "Hemorragia fatal, HIT com trombose, hipercalemia e osteoporose prolongada. Cálculo e bomba bloqueados sem indicação, peso, concentração, bolus, alvo aPTT/anti-Xa, plaquetas, sangramento e protocolo institucional.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=heparin+sodium+injection"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=heparin+sodium+injection"
   },
   "es": {
-    "name": "Heparina No Fraccionada (HNF Sódica)"
+    "name": "Heparina no fraccionada",
+    "class": "Anticoagulante",
+    "pharmacologicClass": "Potencia antitrombina e inhibe IIa/Xa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Inyección 1.000 a 20.000 UI/ml y bolsas listas; confirmar producto.",
+    "presentations": "Inyección 1.000 a 20.000 UI/ml y bolsas listas; confirmar producto.",
+    "mechanism": "Potencia antitrombina e inhibe IIa/Xa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "No absorbida VO; efecto IV inmediato; depuración saturable y renal.",
+    "indications": "Profilaxis y tratamiento de tromboembolismo; anticoagulación en escenarios seleccionados.",
+    "dose": "Tratamiento IV frecuentemente bolo 80 UI/kg seguido 18 UI/kg/h, ajustado por aPTT o anti-Xa; protocolos e indicaciones varían. Profilaxis 5.000 UI SC cada 8-12 h.",
+    "pediatricDose": "Protocolos por edad/peso y anti-Xa/aPTT; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste fijo, pero aumenta riesgo hemorrágico en ERC.",
+    "hepaticDose": "Sin ajuste fijo; coagulopatía hepática aumenta riesgo.",
+    "commonAdverseEffects": "Sangrado, trombocitopenia y reacción local.",
+    "dangerousAdverseEffects": "Hemorragia fatal, HIT con trombosis, hiperpotasemia y osteoporosis prolongada.",
+    "adverseEffects": "Sangrado, trombocitopenia y reacción local. Graves: Hemorragia fatal, HIT con trombosis, hiperpotasemia y osteoporosis prolongada.",
+    "contraindications": "Sangrado activo importante; antecedente de HIT; imposibilidad de monitorizar dosis plena.",
+    "interactions": "Antiagregantes, anticoagulantes, trombolíticos y AINE aumentan sangrado.",
+    "monitoring": "Hemograma/plaquetas, aPTT o anti-Xa, sangrado, K y HIT.",
+    "administration": "IV continua o SC; nunca IM. Confirmar concentración por bolsa/jeringa.",
+    "preparation": "Diluir solo según producto/protocolo y usar bomba inteligente.",
+    "infusionProtocol": "Titular por nomograma validado; protamina para reversión según dosis reciente.",
+    "pregnancy": "No cruza placenta; anticoagulante preferido en escenarios seleccionados.",
+    "lactation": "Compatible; no se espera paso relevante a leche.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "HOMOLOGADO CLÍNICAMENTE por Dr Guilherme el 19-09-2026, aprobación integral sin excepciones. Integración técnica habilitada con preservación obligatoria de las restricciones granulares.",
+    "alerts": "Hemorragia fatal, HIT con trombosis, hiperpotasemia y osteoporosis prolongada. Cálculo e bomba bloqueados sem indicação, peso, concentração, bolus, alvo aPTT/anti-Xa, plaquetas, sangramento e protocolo institucional.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=heparin+sodium+injection"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=heparin+sodium+injection"
   },
   "name": {
-    "pt": "Heparina Não Fracionada (HNF Sódica)",
-    "es": "Heparina No Fraccionada (HNF Sódica)"
+    "pt": "Heparina não fracionada",
+    "es": "Heparina no fraccionada"
   },
   "keywords": [
     "heparina_hnf",
     "heparina não fracionada (hnf sódica)"
   ],
-  "dataVersion": "clinical-data-v1-57642bf3e26f61b2",
-  "clinicalContentSha256": "57642bf3e26f61b2aee6f6a7c8e8cb9884f4fb093771f3a08f485adb54cae7c9",
+  "dataVersion": "clinical-data-v1-183741eac3e0b572",
+  "clinicalContentSha256": "183741eac3e0b572ed49663ca79bc163282414319bf1f189caca3598a46a8e81",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "anticoag.js",
@@ -127,5 +195,17 @@
         "updated": "2026-06-25"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/anticoag.js",
+    "sourceField": "heparina_hnf.mcGoldClinicalV1",
+    "lote": "040",
+    "requiredFields": 33,
+    "approvedSha256": "461b5b71a16a2584ab55b1880ab4907b74bc2aba957e3419c18eab849cdac855",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }
