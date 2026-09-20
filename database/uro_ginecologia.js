@@ -1267,3 +1267,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:misoprostol:END */
+/* GOLD33_SELECTIVE:ocitocina:START */
+;(function(){var db=window.URO_GINECOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="ocitocina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:ocitocina:"+matches.length);drug=matches[0];}else{drug=db&&db["ocitocina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:ocitocina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "056",
+    "requiredFieldCount": 33,
+    "approvedSha256": "498cafa4e0fbd5a28b86b77472df89a94eaa0fa96bde0eb3b706fdf18d0e7236",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ocitocina",
+    "class": "Hormônio uterotônico",
+    "pharmacologicClass": "Hormônio uterotônico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável 10 unidades/mL e bolsas diluídas conforme protocolo.",
+    "presentations": "Solução injetável 10 unidades/mL e bolsas diluídas conforme protocolo.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Indução ou estimulação do trabalho de parto e controle de sangramento pós-parto conforme indicação obstétrica.",
+    "dose": "Indução: iniciar 0,5-1 miliunidade/min IV e aumentar 1-2 miliunidades/min em intervalos de 30-60 minutos conforme resposta e protocolo. Pós-parto usa bolus/infusão diferentes. Exige bomba e monitorização materno-fetal.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea, vômito, cefaleia, taquicardia e dor uterina.",
+    "dangerousAdverseEffects": "Taquissistolia, sofrimento fetal, ruptura uterina, intoxicação hídrica, hiponatremia e arritmia.",
+    "adverseEffects": "Náusea, vômito, cefaleia, taquicardia e dor uterina.; Taquissistolia, sofrimento fetal, ruptura uterina, intoxicação hídrica, hiponatremia e arritmia.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Taquissistolia, sofrimento fetal, ruptura uterina, intoxicação hídrica, hiponatremia e arritmia.",
+    "alerts": "Taquissistolia, sofrimento fetal, ruptura uterina, intoxicação hídrica, hiponatremia e arritmia.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxytocin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/018248s039lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxytocin"
+  },
+  "es": {
+    "name": "Ocitocina",
+    "class": "Hormônio uterotônico",
+    "pharmacologicClass": "Hormônio uterotônico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável 10 unidades/mL y bolsas diluídas conforme protocolo.",
+    "presentations": "Solução injetável 10 unidades/mL y bolsas diluídas conforme protocolo.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Indução ou estimulação do trabalho de parto y controle de sangramento pós-parto conforme indicação obstétrica.",
+    "dose": "Indução: iniciar 0,5-1 miliunidade/min IV y aumentar 1-2 miliunidades/min em intervalos de 30-60 minutos conforme resposta y protocolo. Pós-parto usa bolus/infusão diferentes. Exige bomba y monitorização materno-fetal.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea, vômito, cefaleia, taquicardia y dor uterina.",
+    "dangerousAdverseEffects": "Taquissistolia, sofrimento fetal, ruptura uterina, intoxicação hídrica, hiponatremia y arritmia.",
+    "adverseEffects": "Náusea, vômito, cefaleia, taquicardia y dor uterina.; Taquissistolia, sofrimento fetal, ruptura uterina, intoxicação hídrica, hiponatremia y arritmia.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Taquissistolia, sofrimento fetal, ruptura uterina, intoxicação hídrica, hiponatremia y arritmia.",
+    "alerts": "Taquissistolia, sofrimento fetal, ruptura uterina, intoxicação hídrica, hiponatremia y arritmia.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxytocin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/018248s039lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxytocin"
+  }
+};})();
+/* GOLD33_SELECTIVE:ocitocina:END */

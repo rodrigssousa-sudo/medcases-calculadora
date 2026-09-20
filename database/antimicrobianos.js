@@ -29915,3 +29915,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:nitrofurantoina:END */
+/* GOLD33_SELECTIVE:norfloxacino:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="norfloxacino";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:norfloxacino:"+matches.length);drug=matches[0];}else{drug=db&&db["norfloxacino"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:norfloxacino");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "056",
+    "requiredFieldCount": 33,
+    "approvedSha256": "498cafa4e0fbd5a28b86b77472df89a94eaa0fa96bde0eb3b706fdf18d0e7236",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Norfloxacino",
+    "class": "Fluoroquinolona antibacteriana",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "mechanism": "Inibe DNA girase e topoisomerase IV bacterianas.",
+    "pharmacodynamics": "Inibe DNA girase e topoisomerase IV bacterianas.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Indicações históricas incluem UTI por organismos suscetíveis; disponibilidade e aprovação variam por país e o uso atual é limitado.",
+    "dose": "Adulto com função renal normal: 400 mg VO q12h em indicações urinárias históricas; duração depende do foco e diretriz local.",
+    "pediatricDose": "standard: 400 mg 12/12h VO (não baseado em peso); maxDose: 800 mg/dia",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Cefaleia; Tontura; Diarreia",
+    "dangerousAdverseEffects": "Tendinite/ruptura tendínea; Neuropatia periférica; Efeitos SNC; QT prolongado; Aneurisma/dissecção aórtica",
+    "adverseEffects": "Náusea, diarreia, cefaleia, tontura e rash.; Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia e C. difficile.",
+    "contraindications": "Hipersensibilidade a quinolonas e história de tendinite/ruptura associada a quinolona conforme rotulagem local.",
+    "interactions": "Cátions, sucralfato, ferro e zinco reduzem absorção; teofilina, cafeína, ciclosporina e anticoagulantes podem exigir vigilância.",
+    "monitoring": "400 mg q12h histórico; CrCl <=30: 400 mg q24h; 1 h antes ou 2 h após alimento; Separar cátions; Uso atual limitado",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia e C. difficile.",
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia e C. difficile.; 400 mg q12h histórico; CrCl <=30: 400 mg q24h; 1 h antes ou 2 h após alimento; Separar cátions; Uso atual limitado",
+    "references": [
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/medicines/human/referrals/quinolones-fluoroquinolones-article-31-referral",
+      "Fonte primária/oficial - https://www.tga.gov.au/resources/artg/9747"
+    ],
+    "ref": "https://www.ema.europa.eu/en/medicines/human/referrals/quinolones-fluoroquinolones-article-31-referral"
+  },
+  "es": {
+    "name": "Norfloxacino",
+    "class": "Fluoroquinolona antibacteriana",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "mechanism": "Inibe DNA girase y topoisomerase IV bacterianas.",
+    "pharmacodynamics": "Inibe DNA girase y topoisomerase IV bacterianas.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Indicações históricas incluem UTI por organismos suscetíveis; disponibilidade y aprovação variam por país y o uso atual é limitado.",
+    "dose": "Adulto con función renal normal: 400 mg VO q12h em indicações urinárias históricas; duração depende do foco y diretriz local.",
+    "pediatricDose": "standard: 400 mg 12/12h VO (no baseado em peso); maxDose: 800 mg/dia",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Cefaleia; Tontura; Diarreia",
+    "dangerousAdverseEffects": "Tendinite/ruptura tendínea; Neuropatia periférica; Efeitos SNC; QT prolongado; Aneurisma/dissecção aórtica",
+    "adverseEffects": "Náusea, diarreia, cefaleia, tontura y rash.; Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia y C. difficile.",
+    "contraindications": "Hipersensibilidade a quinolonas y história de tendinite/ruptura associada a quinolona conforme rotulagem local.",
+    "interactions": "Cátions, sucralfato, ferro y zinco reduzem absorção; teofilina, cafeína, ciclosporina y anticoagulantes podem exigir vigilância.",
+    "monitoring": "400 mg q12h histórico; CrCl <=30: 400 mg q24h; 1 h antes ou 2 h após alimento; Separar cátions; Uso atual limitado",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia y C. difficile.",
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia y C. difficile.; 400 mg q12h histórico; CrCl <=30: 400 mg q24h; 1 h antes ou 2 h após alimento; Separar cátions; Uso atual limitado",
+    "references": [
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/medicines/human/referrals/quinolones-fluoroquinolones-article-31-referral",
+      "Fonte primária/oficial - https://www.tga.gov.au/resources/artg/9747"
+    ],
+    "ref": "https://www.ema.europa.eu/en/medicines/human/referrals/quinolones-fluoroquinolones-article-31-referral"
+  }
+};})();
+/* GOLD33_SELECTIVE:norfloxacino:END */

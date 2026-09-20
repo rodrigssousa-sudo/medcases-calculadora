@@ -5,21 +5,91 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Nitroprussiato de Sódio"
+    "name": "Nitroprussiato de sódio",
+    "class": "Vasodilatador arterial e venoso de ação ultracurta",
+    "pharmacologicClass": "Vasodilatador arterial e venoso de ação ultracurta",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frasco para diluição ou solução pronta; proteger da luz e usar bomba.",
+    "presentations": "Frasco para diluição ou solução pronta; proteger da luz e usar bomba.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Crises hipertensivas e redução controlada da pressão em ambiente intensivo.",
+    "dose": "Iniciar 0,3 micrograma/kg/min IV e titular continuamente. Faixa usual até 10 microgramas/kg/min; manter o máximo apenas pelo menor tempo possível, nunca além de 10 minutos sem estratégia alternativa.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Hipotensão, náusea, cefaleia, sudorese e palpitações.",
+    "dangerousAdverseEffects": "Toxicidade por cianeto/tiocianato, acidose, metemoglobinemia, aumento da pressão intracraniana e hipotensão fatal.",
+    "adverseEffects": "Hipotensão, náusea, cefaleia, sudorese e palpitações.; Toxicidade por cianeto/tiocianato, acidose, metemoglobinemia, aumento da pressão intracraniana e hipotensão fatal.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Toxicidade por cianeto/tiocianato, acidose, metemoglobinemia, aumento da pressão intracraniana e hipotensão fatal.",
+    "alerts": "Toxicidade por cianeto/tiocianato, acidose, metemoglobinemia, aumento da pressão intracraniana e hipotensão fatal.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sodium+nitroprusside",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/019319s028lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sodium+nitroprusside"
   },
   "es": {
-    "name": "Nitroprusiato de Sodio"
+    "name": "Nitroprussiato de sódio",
+    "class": "Vasodilatador arterial y venoso de ação ultracurta",
+    "pharmacologicClass": "Vasodilatador arterial y venoso de ação ultracurta",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frasco para diluição ou solución pronta; proteger da luz y usar bomba.",
+    "presentations": "Frasco para diluição ou solución pronta; proteger da luz y usar bomba.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Crises hipertensivas y redução controlada da pressão em ambiente intensivo.",
+    "dose": "Iniciar 0,3 micrograma/kg/min IV y titular continuamente. Faixa usual até 10 microgramas/kg/min; manter o máximo apenas pelo menor tempo possível, nunca além de 10 minutos sem estratégia alternativa.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Hipotensão, náusea, cefaleia, sudorese y palpitações.",
+    "dangerousAdverseEffects": "Toxicidade por cianeto/tiocianato, acidosis, metemoglobinemia, aumento da pressão intracraniana y hipotensão fatal.",
+    "adverseEffects": "Hipotensão, náusea, cefaleia, sudorese y palpitações.; Toxicidade por cianeto/tiocianato, acidosis, metemoglobinemia, aumento da pressão intracraniana y hipotensão fatal.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Toxicidade por cianeto/tiocianato, acidosis, metemoglobinemia, aumento da pressão intracraniana y hipotensão fatal.",
+    "alerts": "Toxicidade por cianeto/tiocianato, acidosis, metemoglobinemia, aumento da pressão intracraniana y hipotensão fatal.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sodium+nitroprusside",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/019319s028lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sodium+nitroprusside"
   },
   "name": {
-    "pt": "Nitroprussiato de Sódio",
-    "es": "Nitroprusiato de Sodio"
+    "pt": "Nitroprussiato de sódio",
+    "es": "Nitroprussiato de sódio"
   },
   "keywords": [
     "nitroprussiato_sodio",
     "nitroprussiato de sódio"
   ],
-  "dataVersion": "clinical-data-v1-372cc19daa00dc60",
-  "clinicalContentSha256": "372cc19daa00dc603cb9e5922228440aeca0bf11db0fb63fae9083630298b3a0",
+  "dataVersion": "clinical-data-v1-32e3693dc1666019",
+  "clinicalContentSha256": "32e3693dc1666019a6be743b0ac4eb70c4b8a3317bd7a5e4e525a97c26d497b2",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardiologia.js",
@@ -84,5 +154,17 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/cardiologia.js",
+    "sourceField": "nitroprussiato_sodio.mcGoldClinicalV1",
+    "lote": "056",
+    "requiredFields": 33,
+    "approvedSha256": "498cafa4e0fbd5a28b86b77472df89a94eaa0fa96bde0eb3b706fdf18d0e7236",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

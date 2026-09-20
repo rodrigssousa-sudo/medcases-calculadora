@@ -4954,3 +4954,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:neostigmina:END */
+/* GOLD33_SELECTIVE:noradrenalina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="noradrenalina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:noradrenalina:"+matches.length);drug=matches[0];}else{drug=db&&db["noradrenalina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:noradrenalina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "056",
+    "requiredFieldCount": 33,
+    "approvedSha256": "498cafa4e0fbd5a28b86b77472df89a94eaa0fa96bde0eb3b706fdf18d0e7236",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Noradrenalina",
+    "class": "Vasopressor agonista alfa-adrenérgico predominante",
+    "pharmacologicClass": "Vasopressor agonista alfa-adrenérgico predominante",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Concentrados e bolsas prontas em concentrações diversas; não inferir equivalência.",
+    "presentations": "Concentrados e bolsas prontas em concentrações diversas; não inferir equivalência.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Restauração da pressão arterial em hipotensão aguda grave após correção adequada da hipovolemia.",
+    "dose": "Infusão IV titulada à meta hemodinâmica. Rótulos históricos iniciam 8-12 microgramas/min e mantêm 2-4 microgramas/min, mas protocolos por peso e concentrações variam; exigir concentração, acesso, bomba e monitorização explícitos.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Isquemia periférica, ansiedade, cefaleia, dispneia e bradicardia reflexa.",
+    "dangerousAdverseEffects": "Arritmias, isquemia/necrose, extravasamento, hipertensão grave e redução de perfusão de órgãos.",
+    "adverseEffects": "Isquemia periférica, ansiedade, cefaleia, dispneia e bradicardia reflexa.; Arritmias, isquemia/necrose, extravasamento, hipertensão grave e redução de perfusão de órgãos.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Arritmias, isquemia/necrose, extravasamento, hipertensão grave e redução de perfusão de órgãos.",
+    "alerts": "Arritmias, isquemia/necrose, extravasamento, hipertensão grave e redução de perfusão de órgãos.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=norepinephrine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/007513s038lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=norepinephrine"
+  },
+  "es": {
+    "name": "Noradrenalina",
+    "class": "Vasopressor agonista alfa-adrenérgico predominante",
+    "pharmacologicClass": "Vasopressor agonista alfa-adrenérgico predominante",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Concentrados y bolsas prontas em concentrações diversas; no inferir equivalência.",
+    "presentations": "Concentrados y bolsas prontas em concentrações diversas; no inferir equivalência.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Restauração da pressão arterial em hipotensão aguda grave após correção adequada da hipovolemia.",
+    "dose": "Infusão IV titulada à meta hemodinâmica. Rótulos históricos iniciam 8-12 microgramas/min y mantêm 2-4 microgramas/min, mas protocolos por peso y concentrações variam; exigir concentração, acesso, bomba y monitorização explícitos.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Isquemia periférica, ansiedade, cefaleia, dispneia y bradicardia reflexa.",
+    "dangerousAdverseEffects": "Arritmias, isquemia/necrose, extravasamento, hipertensão grave y redução de perfusão de órgãos.",
+    "adverseEffects": "Isquemia periférica, ansiedade, cefaleia, dispneia y bradicardia reflexa.; Arritmias, isquemia/necrose, extravasamento, hipertensão grave y redução de perfusão de órgãos.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Arritmias, isquemia/necrose, extravasamento, hipertensão grave y redução de perfusão de órgãos.",
+    "alerts": "Arritmias, isquemia/necrose, extravasamento, hipertensão grave y redução de perfusão de órgãos.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=norepinephrine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/007513s038lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=norepinephrine"
+  }
+};})();
+/* GOLD33_SELECTIVE:noradrenalina:END */

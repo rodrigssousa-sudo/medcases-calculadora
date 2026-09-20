@@ -6,10 +6,8 @@
   "colorTxt": null,
   "pt": {
     "name": "Norfloxacino",
-    "class": "Fluoroquinolona",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "class": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Comprimidos orais.",
     "dose": "Adulto com função renal normal: 400 mg VO q12h em indicações urinárias históricas; duração depende do foco e diretriz local.",
     "doseKg": {
@@ -19,83 +17,45 @@
     "therapeuticRange": "Concentração-dependente. Distribuição urinária predominante — uso restrito a ITU não complicada e prostatite. NÃO atingir níveis sistêmicos adequados.",
     "dilution": "Uso exclusivamente oral.",
     "speed": "Não aplicável (uso oral).",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Cefaleia",
-      "Tontura",
-      "Diarreia"
-    ],
-    "dangerousAdverseEffects": [
-      "Tendinite/ruptura tendínea",
-      "Neuropatia periférica",
-      "Efeitos SNC",
-      "QT prolongado",
-      "Aneurisma/dissecção aórtica"
-    ],
+    "commonAdverseEffects": "Náusea; Cefaleia; Tontura; Diarreia",
+    "dangerousAdverseEffects": "Tendinite/ruptura tendínea; Neuropatia periférica; Efeitos SNC; QT prolongado; Aneurisma/dissecção aórtica",
     "risksByPatient": [],
-    "alerts": [
-      "400 mg q12h histórico",
-      "CrCl <=30: 400 mg q24h",
-      "1 h antes ou 2 h após alimento",
-      "Separar cátions",
-      "Uso atual limitado"
-    ],
-    "ref": [
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019384s066lbl.pdf",
-      "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019384",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=norfloxacin"
-    ],
-    "renalDose": "CrCl >30 mL/min: regime usual. CrCl <=30 mL/min/1,73m²: 400 mg VO uma vez ao dia segundo rótulo NOROXIN histórico.",
-    "pharmacologicClass": "Fluoroquinolona predominantemente urinária, inibidora de DNA girase/topoisomerase IV",
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia e C. difficile.; 400 mg q12h histórico; CrCl <=30: 400 mg q24h; 1 h antes ou 2 h após alimento; Separar cátions; Uso atual limitado",
+    "ref": "https://www.ema.europa.eu/en/medicines/human/referrals/quinolones-fluoroquinolones-article-31-referral",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
     "mechanism": "Inibe DNA girase e topoisomerase IV bacterianas.",
-    "pharmacodynamics": "Bactericida; eficácia depende de exposição/MIC. Resistência urinária elevada em muitos locais limita uso empírico.",
-    "pharmacokinetics": "Biodisponibilidade oral limitada; altas concentrações urinárias. Eliminação renal relevante.",
+    "pharmacodynamics": "Inibe DNA girase e topoisomerase IV bacterianas.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
     "indications": "Indicações históricas incluem UTI por organismos suscetíveis; disponibilidade e aprovação variam por país e o uso atual é limitado.",
-    "presentations": [
-      "400 mg comprimido conforme produto histórico/local"
-    ],
-    "pediatricDose": "Segurança e eficácia pediátrica não estabelecidas para uso rotineiro; não há regime pediátrico aprovado universal.",
-    "hepaticDose": "Sem tabela universal de ajuste; usar cautela em hepatopatia importante.",
-    "adverseEffects": "A segurança segue os alertas de classe das fluoroquinolonas; uso deve ser restrito a situações apropriadas.",
+    "presentations": "Comprimidos orais.",
+    "pediatricDose": "standard: 400 mg 12/12h VO (não baseado em peso); maxDose: 800 mg/dia",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "adverseEffects": "Náusea, diarreia, cefaleia, tontura e rash.; Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia e C. difficile.",
     "contraindications": "Hipersensibilidade a quinolonas e história de tendinite/ruptura associada a quinolona conforme rotulagem local.",
     "interactions": "Cátions, sucralfato, ferro e zinco reduzem absorção; teofilina, cafeína, ciclosporina e anticoagulantes podem exigir vigilância.",
-    "monitoring": "CrCl, sintomas de tendão/neuropatia/SNC, QT quando houver fatores de risco e resposta microbiológica.",
-    "administration": "Tomar em jejum: pelo menos 1 h antes ou 2 h após alimento/leite; separar cátions/minerais.",
-    "preparation": "Comprimido pronto para uso.",
-    "infusionProtocol": "Não aplicável; formulação oral.",
-    "pregnancy": "Evitar quando houver alternativas mais estabelecidas.",
-    "lactation": "Dados limitados; avaliar alternativa mais segura quando possível.",
-    "specialPopulations": "Idosos e DRC aumentam exposição/risco. Disponibilidade comercial varia substancialmente entre países.",
-    "patientEducation": "Não usar como opção urinária automática; parar por dor tendínea, neuropatia ou sintomas neurológicos.",
-    "clinicalPearls": "Norfloxacino concentra-se na urina, mas a resistência e os alertas de classe reduziram muito seu papel; CrCl <=30 muda o intervalo para 400 mg q24h.",
-    "guidelineRecommendations": "Não é escolha empírica preferencial para cistite em muitos cenários atuais; usar apenas se disponível, indicado e sustentado por suscetibilidade/local stewardship.",
-    "safetyFlags": [
-      "Fluoroquinolona antiga",
-      "UTI histórica",
-      "CrCl <=30: 400 mg q24h",
-      "Jejum",
-      "Tendão/neuropatia/SNC/aorta"
-    ],
+    "monitoring": "400 mg q12h histórico; CrCl <=30: 400 mg q24h; 1 h antes ou 2 h após alimento; Separar cátions; Uso atual limitado",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia e C. difficile.",
     "references": [
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019384s066lbl.pdf",
-      "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019384",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=norfloxacin"
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/medicines/human/referrals/quinolones-fluoroquinolones-article-31-referral",
+      "Fonte primária/oficial - https://www.tga.gov.au/resources/artg/9747"
     ]
   },
   "es": {
     "name": "Norfloxacino",
-    "class": "Fluoroquinolona",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos orales.",
-    "dose": "Adulto con función renal normal: 400 mg VO q12h para indicaciones urinarias históricas; duración según foco/guía local.",
+    "class": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais.",
+    "dose": "Adulto con función renal normal: 400 mg VO q12h em indicações urinárias históricas; duração depende do foco y diretriz local.",
     "doseKg": {
       "standard": "400 mg cada 12h VO (no basado en peso)",
       "maxDose": "800 mg/día"
@@ -103,73 +63,37 @@
     "therapeuticRange": "Concentración-dependiente. Distribución urinaria predominante — uso restringido a ITU no complicada y prostatitis. NO alcanza niveles sistémicos adecuados.",
     "dilution": "Uso exclusivamente oral.",
     "speed": "No aplicable (uso oral).",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Cefalea",
-      "Mareo",
-      "Diarrea"
-    ],
-    "dangerousAdverseEffects": [
-      "Tendinitis/rotura tendón",
-      "Neuropatía",
-      "Efectos SNC",
-      "QT prolongado",
-      "Aneurisma/disección aórtica"
-    ],
+    "commonAdverseEffects": "Náusea; Cefaleia; Tontura; Diarreia",
+    "dangerousAdverseEffects": "Tendinite/ruptura tendínea; Neuropatia periférica; Efeitos SNC; QT prolongado; Aneurisma/dissecção aórtica",
     "risksByPatient": [],
-    "alerts": [
-      "400 mg q12h histórico",
-      "ClCr <=30: 400 mg q24h",
-      "1 h antes o 2 h después",
-      "Separar cationes",
-      "Uso actual limitado"
-    ],
-    "ref": [
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019384s066lbl.pdf",
-      "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019384",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=norfloxacin"
-    ],
-    "renalDose": "ClCr >30: régimen usual. ClCr <=30 mL/min/1,73m²: 400 mg VO una vez al día según ficha histórica NOROXIN.",
-    "pharmacologicClass": "Fluoroquinolona de predominio urinario, inhibidora de ADN girasa/topoisomerasa IV",
-    "mechanism": "Inhibe ADN girasa y topoisomerasa IV.",
-    "pharmacodynamics": "Bactericida; eficacia depende de exposición/MIC. Alta resistencia urinaria local puede limitar uso empírico.",
-    "pharmacokinetics": "Biodisponibilidad oral limitada; altas concentraciones urinarias y eliminación renal relevante.",
-    "indications": "Indicaciones históricas incluyen UTI por organismos susceptibles; disponibilidad/aprobación varía y su uso actual es limitado.",
-    "presentations": [
-      "400 mg comprimido según producto histórico/local"
-    ],
-    "pediatricDose": "Seguridad/eficacia pediátrica no establecidas para uso rutinario.",
-    "hepaticDose": "Sin tabla universal de ajuste; cautela en hepatopatía importante.",
-    "adverseEffects": "Comparte advertencias graves de clase de fluoroquinolonas.",
-    "contraindications": "Hipersensibilidad a quinolonas y antecedentes de tendinopatía por quinolona según ficha local.",
-    "interactions": "Cationes, sucralfato, hierro y zinc reducen absorción; revisar teofilina, cafeína, ciclosporina y anticoagulantes.",
-    "monitoring": "ClCr, tendón/neuropatía/SNC, QT si riesgo y respuesta microbiológica.",
-    "administration": "En ayunas: >=1 h antes o 2 h después de comida/leche; separar cationes.",
-    "preparation": "Comprimido listo.",
-    "infusionProtocol": "No aplicable.",
-    "pregnancy": "Evitar si existen alternativas más establecidas.",
-    "lactation": "Datos limitados.",
-    "specialPopulations": "Ancianos/ERC aumentan exposición; disponibilidad comercial varía por país.",
-    "patientEducation": "No usar como opción urinaria automática; suspender por dolor tendinoso, neuropatía o síntomas SNC.",
-    "clinicalPearls": "Su papel actual es limitado; el dato práctico clásico es ClCr <=30: 400 mg q24h y administración en ayunas.",
-    "guidelineRecommendations": "No es opción empírica preferida para cistitis en muchos escenarios actuales; usar solo con disponibilidad, indicación y susceptibilidad apropiadas.",
-    "safetyFlags": [
-      "Fluoroquinolona antigua",
-      "UTI histórica",
-      "ClCr <=30: 400 mg q24h",
-      "Ayunas",
-      "Tendón/neuropatía/SNC/aorta"
-    ],
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia y C. difficile.; 400 mg q12h histórico; CrCl <=30: 400 mg q24h; 1 h antes ou 2 h após alimento; Separar cátions; Uso atual limitado",
+    "ref": "https://www.ema.europa.eu/en/medicines/human/referrals/quinolones-fluoroquinolones-article-31-referral",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
+    "mechanism": "Inibe DNA girase y topoisomerase IV bacterianas.",
+    "pharmacodynamics": "Inibe DNA girase y topoisomerase IV bacterianas.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Indicações históricas incluem UTI por organismos suscetíveis; disponibilidade y aprovação variam por país y o uso atual é limitado.",
+    "presentations": "Comprimidos orais.",
+    "pediatricDose": "standard: 400 mg 12/12h VO (no baseado em peso); maxDose: 800 mg/dia",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "adverseEffects": "Náusea, diarreia, cefaleia, tontura y rash.; Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia y C. difficile.",
+    "contraindications": "Hipersensibilidade a quinolonas y história de tendinite/ruptura associada a quinolona conforme rotulagem local.",
+    "interactions": "Cátions, sucralfato, ferro y zinco reduzem absorção; teofilina, cafeína, ciclosporina y anticoagulantes podem exigir vigilância.",
+    "monitoring": "400 mg q12h histórico; CrCl <=30: 400 mg q24h; 1 h antes ou 2 h após alimento; Separar cátions; Uso atual limitado",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, aneurisma/dissecção aórtica, disglicemia y C. difficile.",
     "references": [
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019384s066lbl.pdf",
-      "https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019384",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-updates-warnings-oral-and-injectable-fluoroquinolone-antibiotics-due-disabling-side-effects",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-warns-about-increased-risk-ruptures-or-tears-aorta-blood-vessel-fluoroquinolone-antibiotics",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=norfloxacin"
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/medicines/human/referrals/quinolones-fluoroquinolones-article-31-referral",
+      "Fonte primária/oficial - https://www.tga.gov.au/resources/artg/9747"
     ]
   },
   "name": {
@@ -183,9 +107,21 @@
     "noroxin",
     "fluoroquinolona de 2ª geracao (uso oral exclusivo)"
   ],
-  "dataVersion": "clinical-data-v1-372cc19daa00dc60",
-  "clinicalContentSha256": "372cc19daa00dc603cb9e5922228440aeca0bf11db0fb63fae9083630298b3a0",
+  "dataVersion": "clinical-data-v1-32e3693dc1666019",
+  "clinicalContentSha256": "32e3693dc1666019a6be743b0ac4eb70c4b8a3317bd7a5e4e525a97c26d497b2",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "norfloxacino.mcGoldClinicalV1",
+    "lote": "056",
+    "requiredFields": 33,
+    "approvedSha256": "498cafa4e0fbd5a28b86b77472df89a94eaa0fa96bde0eb3b706fdf18d0e7236",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

@@ -7571,3 +7571,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:nitrazepam:END */
+/* GOLD33_SELECTIVE:nortriptilina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nortriptilina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nortriptilina:"+matches.length);drug=matches[0];}else{drug=db&&db["nortriptilina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nortriptilina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "056",
+    "requiredFieldCount": 33,
+    "approvedSha256": "498cafa4e0fbd5a28b86b77472df89a94eaa0fa96bde0eb3b706fdf18d0e7236",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Nortriptilina",
+    "class": "Antidepressivo tricíclico",
+    "pharmacologicClass": "Antidepressivo tricíclico",
+    "commercialNames": "br: Pamelor; Nortriptilina EMS; Nortriptilina Eurofarma; ar: Nortriptilina; Nortriptilina Northia; Nortriptilina Klonal",
+    "presentation": "Cápsula 10 mg; Cápsula 25 mg; Cápsula 50 mg; Cápsula 75 mg; Solução oral 10 mg/5 mL",
+    "presentations": "Cápsula 10 mg; Cápsula 25 mg; Cápsula 50 mg; Cápsula 75 mg; Solução oral 10 mg/5 mL",
+    "mechanism": "Inibe principalmente a recaptação de noradrenalina e também serotonina; possui menor efeito anticolinérgico e sedativo que amitriptilina, mas mantém risco cardiovascular dos tricíclicos.",
+    "pharmacodynamics": "Inibe principalmente a recaptação de noradrenalina e também serotonina; possui menor efeito anticolinérgico e sedativo que amitriptilina, mas mantém risco cardiovascular dos tricíclicos.",
+    "pharmacokinetics": "Vida média aproximada: 18–44 horas.",
+    "indications": "Transtorno depressivo maior; Dor neuropática; Profilaxia de enxaqueca; Fibromialgia; Cefaleia tensional crônica; Insônia associada a depressão ou dor crônica; Síndrome do intestino irritável com dor; Alternativa à amitriptilina quando se busca menor sedação/efeito anticolinérgico",
+    "dose": "adulto: Depressão: iniciar 25 mg VO à noite ou 25 mg 2–3x/dia; usual 50–100 mg/dia.; dorNeuropaticaProfilaxia: Dor neuropática/enxaqueca: iniciar 10–25 mg VO à noite; titular lentamente.; maxDose: Dose máxima usual: 150 mg/dia; monitorar níveis plasmáticos se >100 mg/dia.",
+    "pediatricDose": "standard: Não se utiliza cálculo rotineiro por kg em adultos.; pediatric: Adolescentes: uso especializado; geralmente 30–50 mg/dia em doses divididas ou dose única, conforme indicação.; maxDose: 150 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Boca seca; Constipação; Sonolência; Tontura; Visão turva; Ganho de peso; Hipotensão ortostática; Retenção urinária",
+    "dangerousAdverseEffects": "Cardiotoxicidade em superdose; Alargamento do QRS e prolongamento do QT; Arritmias ventriculares; Convulsões; Delirium anticolinérgico; Síndrome serotoninérgica quando associada a serotoninérgicos; Virada maníaca/hipomaníaca; Ideação suicida em jovens no início do tratamento",
+    "adverseEffects": "Boca seca, constipação, visão turva, sonolência e hipotensão ortostática.; Suicidabilidade, arritmias/QRS largo, convulsões, síndrome serotoninérgica e toxicidade fatal em overdose.",
+    "contraindications": "Hipersensibilidade à nortriptilina ou a tricíclicos; Uso concomitante com IMAO; Fase aguda de recuperação pós-infarto do miocárdio; Arritmias graves ou bloqueios de condução significativos; Glaucoma de ângulo fechado não controlado; Retenção urinária importante ou hiperplasia prostática grave; Transtorno bipolar sem estabilizador do humor",
+    "interactions": "IMAO: contraindicado pelo risco de síndrome serotoninérgica; ISRS/ISRN, tramadol, linezolida, triptanos, lítio: risco serotoninérgico; Álcool, benzodiazepínicos e opioides: maior sedação e depressão do SNC; Antiarrítmicos e fármacos que prolongam QT: maior risco de arritmia; Anticolinérgicos: maior risco de constipação, retenção urinária e delirium; Inibidores de CYP2D6: podem aumentar níveis de nortriptilina",
+    "monitoring": "Monitorar níveis plasmáticos quando dose >100 mg/dia; faixa terapêutica usual 50–150 ng/mL.; Alto risco em superdose: evitar grandes quantidades em pacientes com risco suicida.; Considerar ECG antes de iniciar em cardiopatas, idosos ou doses altas.; Tem menor sedação que amitriptilina, mas ainda exige cautela cardiovascular.; Não suspender abruptamente; reduzir gradualmente.; Investigar história de mania/hipomania antes de iniciar.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Suicidabilidade, arritmias/QRS largo, convulsões, síndrome serotoninérgica e toxicidade fatal em overdose.",
+    "alerts": "Suicidabilidade, arritmias/QRS largo, convulsões, síndrome serotoninérgica e toxicidade fatal em overdose.; Monitorar níveis plasmáticos quando dose >100 mg/dia; faixa terapêutica usual 50–150 ng/mL.; Alto risco em superdose: evitar grandes quantidades em pacientes com risco suicida.; Considerar ECG antes de iniciar em cardiopatas, idosos ou doses altas.; Tem menor sedação que amitriptilina, mas ainda exige cautela cardiovascular.; Não suspender abruptamente; reduzir gradualmente.; Investigar história de mania/hipomania antes de iniciar.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nortriptyline",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/018012s029lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nortriptyline"
+  },
+  "es": {
+    "name": "Nortriptilina",
+    "class": "Antidepressivo tricíclico",
+    "pharmacologicClass": "Antidepressivo tricíclico",
+    "commercialNames": "br: Pamelor; Nortriptilina EMS; Nortriptilina Eurofarma; ar: Nortriptilina; Nortriptilina Northia; Nortriptilina Klonal",
+    "presentation": "Cápsula 10 mg; Cápsula 25 mg; Cápsula 50 mg; Cápsula 75 mg; Solução oral 10 mg/5 mL",
+    "presentations": "Cápsula 10 mg; Cápsula 25 mg; Cápsula 50 mg; Cápsula 75 mg; Solução oral 10 mg/5 mL",
+    "mechanism": "Inibe principalmente a recaptação de noradrenalina y também serotonina; possui menor efeito anticolinérgico y sedativo que amitriptilina, mas mantém riesgo cardiovascular dos tricíclicos.",
+    "pharmacodynamics": "Inibe principalmente a recaptação de noradrenalina y também serotonina; possui menor efeito anticolinérgico y sedativo que amitriptilina, mas mantém riesgo cardiovascular dos tricíclicos.",
+    "pharmacokinetics": "Vida média aproximada: 18–44 horas.",
+    "indications": "Transtorno depressivo maior; Dor neuropática; Profilaxia de enxaqueca; Fibromialgia; Cefaleia tensional crônica; Insônia associada a depressão ou dor crônica; Síndrome do intestino irritável con dor; Alternativa à amitriptilina quando se busca menor sedação/efeito anticolinérgico",
+    "dose": "adulto: Depressão: iniciar 25 mg VO à noite ou 25 mg 2–3x/dia; usual 50–100 mg/dia.; dorNeuropaticaProfilaxia: Dor neuropática/enxaqueca: iniciar 10–25 mg VO à noite; titular lentamente.; maxDose: Dose máxima usual: 150 mg/dia; monitorizar níveis plasmáticos se >100 mg/dia.",
+    "pediatricDose": "standard: No se utiliza cálculo rotineiro por kg em adultos.; pediatric: Adolescentes: uso especializado; geralmente 30–50 mg/dia em dosiss divididas ou dosis única, conforme indicação.; maxDose: 150 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Boca seca; Constipação; Sonolência; Tontura; Visão turva; Ganho de peso; Hipotensão ortostática; Retenção urinária",
+    "dangerousAdverseEffects": "Cardiotoxicidade em superdosis; Alargamento do QRS y prolongamento do QT; Arritmias ventriculares; Convulsões; Delirium anticolinérgico; Síndrome serotoninérgica quando associada a serotoninérgicos; Virada maníaca/hipomaníaca; Ideação suicida em jovens no início do tratamento",
+    "adverseEffects": "Boca seca, constipação, visão turva, sonolência y hipotensão ortostática.; Suicidabilidade, arritmias/QRS largo, convulsões, síndrome serotoninérgica y toxicidade fatal em overdosis.",
+    "contraindications": "Hipersensibilidade à nortriptilina ou a tricíclicos; Uso concomitante con IMAO; Fase aguda de recuperação pós-infarto do miocárdio; Arritmias graves ou bloqueios de condução significativos; Glaucoma de ângulo fechado no controlado; Retenção urinária importante ou hiperplasia prostática grave; Transtorno bipolar sem estabilizador do humor",
+    "interactions": "IMAO: contraindicado pelo riesgo de síndrome serotoninérgica; ISRS/ISRN, tramadol, linezolida, triptanos, lítio: riesgo serotoninérgico; Álcool, benzodiazepínicos y opioides: maior sedação y depressão do SNC; Antiarrítmicos y fármacos que prolongam QT: maior riesgo de arritmia; Anticolinérgicos: maior riesgo de constipação, retenção urinária y delirium; Inibidores de CYP2D6: podem aumentar níveis de nortriptilina",
+    "monitoring": "Monitorar níveis plasmáticos quando dosis >100 mg/dia; faixa terapêutica usual 50–150 ng/mL.; Alto riesgo em superdosis: evitar grandes quantidades em pacientes con riesgo suicida.; Considerar ECG antes de iniciar em cardiopatas, idosos ou dosiss altas.; Tem menor sedação que amitriptilina, mas ainda exige cautela cardiovascular.; No suspender abruptamente; reduzir gradualmente.; Investigar história de mania/hipomania antes de iniciar.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Suicidabilidade, arritmias/QRS largo, convulsões, síndrome serotoninérgica y toxicidade fatal em overdosis.",
+    "alerts": "Suicidabilidade, arritmias/QRS largo, convulsões, síndrome serotoninérgica y toxicidade fatal em overdosis.; Monitorar níveis plasmáticos quando dosis >100 mg/dia; faixa terapêutica usual 50–150 ng/mL.; Alto riesgo em superdosis: evitar grandes quantidades em pacientes con riesgo suicida.; Considerar ECG antes de iniciar em cardiopatas, idosos ou dosiss altas.; Tem menor sedação que amitriptilina, mas ainda exige cautela cardiovascular.; No suspender abruptamente; reduzir gradualmente.; Investigar história de mania/hipomania antes de iniciar.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nortriptyline",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/018012s029lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nortriptyline"
+  }
+};})();
+/* GOLD33_SELECTIVE:nortriptilina:END */
