@@ -26844,7 +26844,7 @@ window.MedCasesBridge = {
 <script src="database/prescricoes.js?v=484" onerror="console.error('[MedCases] ERRO: database/prescricoes.js não carregou (404?). Verifique o deploy.')"></script>
 
 <!-- MedCases UX v2 — Formulações comerciais + Copiar Rx (Diretrizes 3 e 6) -->
-<script defer src="js/medcases-ux-v2.js?v=484"></script>
+<script defer src="js/medcases-ux-v2.js?v=667-pull-refresh-40pct-r1"></script>
 
 <!-- MedCases Hub Accordion v2.0 — Cards expansíveis na Home -->
 <script defer src="js/hub-accordion.js?v=scoreless-r3k-20260914"></script>
@@ -26876,7 +26876,7 @@ window.MedCasesBridge = {
 (() => {
   'use strict';
 
-  const EXPECTED_VERSION = 'medcases-r65-final-calculated-dose-r1-20260919';
+  const EXPECTED_VERSION = 'medcases-r67-farmacos-nav-pull-refresh-r1-20260920';
   const CACHE_PREFIX = 'medcases-calc-';
   const LAST_VERSION_KEY = 'medcases-cache-version';
   let updateInFlight = null;
@@ -69022,6 +69022,19 @@ console.info('['+BUILD+'] MOUNTED',{
 })();
 </script>
 <!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V2 BEGIN -->
+<style id="medcases-farmacos-nav-results-priority-r66">
+/*
+  A subtela de um contexto/grupo deve prevalecer sobre o painel raiz.
+  A classe is-active é adicionada novamente pelo renderer legado em runtime;
+  esta especificidade impede que ele cubra a lista que acabou de ser aberta.
+*/
+#farmacos-v2-shell[data-mc-fnav-results-active="true"]
+> [data-farmacos-panel].is-active,
+#farmacos-v2-shell[data-mc-fnav-results-active="true"]
+> #mc-pharm-runtime-panel.is-active{
+  display:none!important;
+}
+</style>
 <script id="medcases-farmacos-nav-single-panel-v2">
 (() => {
   'use strict';
@@ -69044,24 +69057,37 @@ console.info('['+BUILD+'] MOUNTED',{
   const lockVisiblePanel=(sh,mode) => {
     const runtime=sh.querySelector(':scope > #mc-pharm-runtime-panel');
     const canonical=[...sh.querySelectorAll(':scope > [data-farmacos-panel]')];
+    const resultsActive=sh.getAttribute('data-mc-fnav-results-active')==='true';
     canonical.forEach(panel => {
-      const active=mode!=='groups' && panel.getAttribute('data-farmacos-panel')===mode;
+      const active=!resultsActive && mode!=='groups' && panel.getAttribute('data-farmacos-panel')===mode;
       panel.classList.toggle('is-active',active);
       panel.style.setProperty('display',active?'block':'none','important');
       panel.setAttribute('aria-hidden',active?'false':'true');
     });
     if (runtime) {
-      const active=mode==='groups';
+      const active=!resultsActive && mode==='groups';
       runtime.classList.toggle('is-active',active);
       runtime.style.setProperty('display',active?'block':'none','important');
       runtime.setAttribute('aria-hidden',active?'false':'true');
     }
   };
 
+  const observeResults=sh => {
+    if (sh.__mcFarmacosNavResultsObserver) return;
+    sh.__mcFarmacosNavResultsObserver=new MutationObserver(() => {
+      schedule(currentMode(sh));
+    });
+    sh.__mcFarmacosNavResultsObserver.observe(sh,{
+      attributes:true,
+      attributeFilter:['data-mc-fnav-results-active']
+    });
+  };
+
   const normalize=mode => {
     const sh=shell();
     if (!sh) return false;
     if (!['contexts','groups','az'].includes(mode)) mode='az';
+    observeResults(sh);
 
     const owner=window.__mcFarmacosGlobalSearchInstantInputMobileV1BR0;
     lockVisiblePanel(sh,mode);

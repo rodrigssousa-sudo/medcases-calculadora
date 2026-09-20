@@ -40,7 +40,7 @@ self.addEventListener('activate', (event) => {
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-r65-final-calculated-dose-r1-20260919';
+const CACHE_VERSION   = 'medcases-r67-farmacos-nav-pull-refresh-r1-20260920';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 const MIGRATION_POLL_MS = 750;
 const LEGACY_MIGRATION_FALLBACK_MS = 20000;
@@ -152,7 +152,7 @@ const ASSETS_TO_CACHE = [
   './css/medcases-webview-home-v1.css?v=661-controlled-cache-migration-r15',
   './css/medcases-home-premium-r2.css?v=661-controlled-cache-migration-r15',
   /* ── JS (10 arquivos — stack completa BUILD 477) ── */
-  './js/medcases-ux-v2.js?v=484',
+  './js/medcases-ux-v2.js?v=667-pull-refresh-40pct-r1',
   './js/hub-accordion.js?v=484',
   './js/medcases-router.js?v=484',
   './js/build240b-accordion-fix.js?v=484',

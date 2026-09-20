@@ -593,13 +593,13 @@
   /* ============================================================
      §J — PULL-TO-REFRESH (gestos touch)
      Detecta arrastar para baixo no topo do scroll-content e
-     executa window.location.reload() após threshold de 80px.
-     Um indicador visual sobe do topo durante o gesto.
+     executa window.location.reload() somente após um gesto
+     deliberado de pelo menos 40% da altura visível.
   ============================================================ */
   function _initPullToRefresh() {
     /* REQ-6: Pull-to-Refresh SILENCIOSO — sem banner "Atualizando..."
        O indicador visual foi removido. O reload ocorre em segundo plano
-       após threshold de 80px de arraste, com haptic feedback mantido. */
+       após 40% da viewport de arraste, com haptic feedback mantido. */
     const scrollEl = document.getElementById('scroll-content') || document.body;
 
     /* Elemento PTR mínimo (invisível — só para manter estrutura) */
@@ -608,10 +608,19 @@
     ptr.style.cssText = 'display:none!important;height:0!important;overflow:hidden!important;pointer-events:none!important;';
     document.body.appendChild(ptr);
 
-    const THRESHOLD = 80;
+    const VIEWPORT_RATIO = 0.40;
     let _startY    = 0;
+    let _startX    = 0;
+    let _lastDy    = 0;
+    let _threshold = 0;
     let _pulling   = false;
     let _triggered = false;
+
+    function _refreshThreshold() {
+      const viewportHeight = (window.visualViewport && window.visualViewport.height) ||
+        window.innerHeight || document.documentElement.clientHeight || 0;
+      return Math.max(120, Math.ceil(viewportHeight * VIEWPORT_RATIO));
+    }
 
     function _isAtTop() {
       if (scrollEl === document.body) {
@@ -621,18 +630,31 @@
     }
 
     scrollEl.addEventListener('touchstart', function(e) {
-      if (!_isAtTop()) return;
+      if (!_isAtTop() || e.touches.length !== 1) return;
       _startY    = e.touches[0].clientY;
+      _startX    = e.touches[0].clientX;
+      _lastDy    = 0;
+      _threshold = _refreshThreshold();
       _pulling   = true;
       _triggered = false;
     }, { passive: true });
 
     scrollEl.addEventListener('touchmove', function(e) {
       if (!_pulling) return;
+      if (e.touches.length !== 1) {
+        _pulling = false;
+        _triggered = false;
+        _lastDy = 0;
+        return;
+      }
       const dy = e.touches[0].clientY - _startY;
+      const dx = Math.abs(e.touches[0].clientX - _startX);
       if (dy <= 0) { _pulling = false; return; }
+      if (dx > dy) { _pulling = false; return; }
 
-      if (dy >= THRESHOLD && !_triggered) {
+      _lastDy = dy;
+
+      if (dy >= _threshold && !_triggered) {
         _triggered = true;
         if (navigator.vibrate) navigator.vibrate(30); /* haptic silencioso */
       }
@@ -641,15 +663,18 @@
     scrollEl.addEventListener('touchend', function() {
       if (!_pulling) return;
       _pulling = false;
-      if (_triggered) {
+      if (_triggered && _lastDy >= _threshold) {
         /* Reload imediato e silencioso */
         setTimeout(function() { window.location.reload(); }, 80);
       }
+      _lastDy = 0;
+      _triggered = false;
     }, { passive: true });
 
     scrollEl.addEventListener('touchcancel', function() {
       _pulling   = false;
       _triggered = false;
+      _lastDy    = 0;
     }, { passive: true });
   }
 
