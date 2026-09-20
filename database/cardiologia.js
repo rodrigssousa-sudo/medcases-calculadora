@@ -2113,3 +2113,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:nitroprussiato_sodio:END */
+/* GOLD33_SELECTIVE:perhexilina:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="perhexilina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:perhexilina:"+matches.length);drug=matches[0];}else{drug=db&&db["perhexilina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:perhexilina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "061",
+    "requiredFieldCount": 33,
+    "approvedSha256": "21d5764126222a27dd58e4de5b088bbd5ba7f893ec49f94e5861cb58d2022403",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Perhexilina",
+    "class": "Modulador metabólico antianginoso",
+    "pharmacologicClass": "Modulador metabólico antianginoso",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas em forças dependentes do país; monitorização terapêutica obrigatória.",
+    "presentations": "Cápsulas em forças dependentes do país; monitorização terapêutica obrigatória.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Angina refratária em países onde aprovada, sob monitorização especializada.",
+    "dose": "Dose individualizada por concentração plasmática e fenótipo/metabolismo CYP2D6. Não usar dose fixa automatizada; disponibilidade regulatória é limitada.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, tontura, cefaleia e elevação de enzimas hepáticas.",
+    "dangerousAdverseEffects": "Neuropatia periférica, hepatotoxicidade grave, hipoglicemia e toxicidade por acúmulo.",
+    "adverseEffects": "Náusea, tontura, cefaleia e elevação de enzimas hepáticas.; Neuropatia periférica, hepatotoxicidade grave, hipoglicemia e toxicidade por acúmulo.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Neuropatia periférica, hepatotoxicidade grave, hipoglicemia e toxicidade por acúmulo.",
+    "alerts": "Neuropatia periférica, hepatotoxicidade grave, hipoglicemia e toxicidade por acúmulo.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=perhexilina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=perhexilina"
+  },
+  "es": {
+    "name": "Perhexilina",
+    "class": "Modulador metabólico antianginoso",
+    "pharmacologicClass": "Modulador metabólico antianginoso",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas em forças dependentes do país; monitorização terapêutica obrigatória.",
+    "presentations": "Cápsulas em forças dependentes do país; monitorização terapêutica obrigatória.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Angina refratária em países onde aprovada, sob monitorização especializada.",
+    "dose": "Dose individualizada por concentração plasmática y fenótipo/metabolismo CYP2D6. No usar dosis fixa automatizada; disponibilidade regulatória é limitada.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, tontura, cefaleia y elevação de enzimas hepáticas.",
+    "dangerousAdverseEffects": "Neuropatia periférica, hepatotoxicidade grave, hipoglicemia y toxicidade por acúmulo.",
+    "adverseEffects": "Náusea, tontura, cefaleia y elevação de enzimas hepáticas.; Neuropatia periférica, hepatotoxicidade grave, hipoglicemia y toxicidade por acúmulo.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Neuropatia periférica, hepatotoxicidade grave, hipoglicemia y toxicidade por acúmulo.",
+    "alerts": "Neuropatia periférica, hepatotoxicidade grave, hipoglicemia y toxicidade por acúmulo.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=perhexilina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=perhexilina"
+  }
+};})();
+/* GOLD33_SELECTIVE:perhexilina:END */

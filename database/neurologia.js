@@ -14860,3 +14860,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:ozanimode:END */
+/* GOLD33_SELECTIVE:perampanel:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="perampanel";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:perampanel:"+matches.length);drug=matches[0];}else{drug=db&&db["perampanel"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:perampanel");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "061",
+    "requiredFieldCount": 33,
+    "approvedSha256": "21d5764126222a27dd58e4de5b088bbd5ba7f893ec49f94e5861cb58d2022403",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Perampanel",
+    "class": "Antagonista não competitivo do receptor AMPA",
+    "pharmacologicClass": "Antagonista não competitivo do receptor AMPA",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos e suspensão oral; substância controlada em algumas jurisdições.",
+    "presentations": "Comprimidos e suspensão oral; substância controlada em algumas jurisdições.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Tratamento adjuvante de crises focais e crises tônico-clônicas generalizadas primárias conforme idade.",
+    "dose": "Iniciar geralmente 2 mg VO ao deitar e titular lentamente; dose depende de indutores enzimáticos, tolerância e indicação.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura, sonolência, fadiga, irritabilidade e quedas.",
+    "dangerousAdverseEffects": "Agressividade, hostilidade, ideação homicida/suicida, psicose e depressão do SNC.",
+    "adverseEffects": "Tontura, sonolência, fadiga, irritabilidade e quedas.; Agressividade, hostilidade, ideação homicida/suicida, psicose e depressão do SNC.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Agressividade, hostilidade, ideação homicida/suicida, psicose e depressão do SNC.",
+    "alerts": "Agressividade, hostilidade, ideação homicida/suicida, psicose e depressão do SNC.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=perampanel",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=perampanel"
+  },
+  "es": {
+    "name": "Perampanel",
+    "class": "Antagonista no competitivo do receptor AMPA",
+    "pharmacologicClass": "Antagonista no competitivo do receptor AMPA",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos y suspensão oral; substância controlada em algumas jurisdições.",
+    "presentations": "Comprimidos y suspensão oral; substância controlada em algumas jurisdições.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Tratamento adjuvante de crises focais y crises tônico-clônicas generalizadas primárias conforme idade.",
+    "dose": "Iniciar geralmente 2 mg VO ao deitar y titular lentamente; dosis depende de indutores enzimáticos, tolerância y indicação.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura, sonolência, fadiga, irritabilidade y quedas.",
+    "dangerousAdverseEffects": "Agressividade, hostilidade, ideação homicida/suicida, psicose y depressão do SNC.",
+    "adverseEffects": "Tontura, sonolência, fadiga, irritabilidade y quedas.; Agressividade, hostilidade, ideação homicida/suicida, psicose y depressão do SNC.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Agressividade, hostilidade, ideação homicida/suicida, psicose y depressão do SNC.",
+    "alerts": "Agressividade, hostilidade, ideação homicida/suicida, psicose y depressão do SNC.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=perampanel",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=perampanel"
+  }
+};})();
+/* GOLD33_SELECTIVE:perampanel:END */

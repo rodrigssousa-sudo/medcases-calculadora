@@ -5,11 +5,9 @@
   "color": "rgba(34,197,94,0.15)",
   "colorTxt": "#22C55E",
   "pt": {
-    "name": "Penicilina V potássica",
+    "name": "Penicilina V",
     "class": "Penicilina natural oral",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Comprimidos e solução oral.",
     "dose": "GAS adulto/adolescente: 500 mg BID ou 250 mg QID por 10 dias; outras indicações 250–500 mg q6–8h.",
     "doseKg": {
@@ -21,174 +19,88 @@
     "therapeuticRange": "Tempo acima da CIM (T>CIM). Tomar em jejum ou com pouco alimento.",
     "dilution": "Uso oral exclusivo.",
     "speed": "Não aplicável (uso oral).",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Rash",
-      "Vômito"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "SCAR",
-      "Nefrite intersticial rara"
-    ],
+    "commonAdverseEffects": "Náusea; Diarreia; Rash; Vômito",
+    "dangerousAdverseEffects": "Anafilaxia; C. difficile; SCAR; Nefrite intersticial rara",
     "contraindications": "Hipersensibilidade grave a penicilinas.",
     "risksByPatient": [],
-    "alerts": [
-      "Adulto GAS 500 mg BID ou 250 mg QID",
-      "Criança GAS 250 mg BID/TID",
-      "10 dias",
-      "Solução refrigerada",
-      "DRC: revisar K"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0744674-ddf7-4022-be2f-2a22bef0d379",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b8f797fb-979c-4eab-a3a6-ad4edcb9ff07",
-      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fba1ffe5-809a-495b-bf3e-f2099ac459f6",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8f9fa2c8-4d25-48a8-9257-43c33d08e83a&version=1",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0fb8ab8a-5aa7-e6f4-e063-6294a90a1af6",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=64ac283c-fe6a-49f0-ae85-90ab98e38272",
-      "https://www.medicines.org.uk/emc/product/15480/smpc"
-    ],
-    "renalDose": "Penicilina V potássica por via oral: a bula norte-americana atual informa que a excreção fica consideravelmente retardada em pacientes com função renal comprometida, mas não fornece tabela específica por CrCl/TFG. O SmPC oficial de fenoximetilpenicilina recomenda, na insuficiência renal, ajustar o intervalo para cada 8–12 horas conforme a gravidade. Assim, manter a dose indicada para a infecção e espaçar o intervalo dentro de q8–12h conforme a intensidade da disfunção renal e a resposta clínica; na DRC mais grave, usar o extremo mais longo do intervalo, sem inventar cutoff de CrCl que não está definido nessas bulas. Monitorar creatinina/TFG em DRC avançada, função renal instável ou tratamento prolongado. Os rótulos oficiais citados não estabelecem dose suplementar específica após hemodiálise. Como o produto é o sal potássico da penicilina V, revisar potássio sérico e outras fontes de potássio em pacientes com DRC avançada, hipercalemia ou uso concomitante de fármacos que elevem K+. Individualizar em insuficiência renal grave ou diálise com infectologia/farmácia clínica.",
-    "pharmacologicClass": "Fenoximetilpenicilina oral sensível a penicilinase",
-    "pharmacodynamics": "Bactericida tempo-dependente; não cobre produtores de penicilinase.",
-    "pharmacokinetics": "Ácido-estável; níveis maiores em jejum; eliminação renal relativamente rápida.",
+    "alerts": "Anafilaxia, C. difficile, reações cutâneas graves e citopenias raras.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=penicilina+v",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "pharmacologicClass": "Penicilina natural oral",
+    "pharmacodynamics": "Liga PBPs e inibe peptidoglicano.",
+    "pharmacokinetics": "Meia-vida 30–60 min. Eliminação renal ~25–35% inalterada.",
     "indications": "Faringite GAS e outras infecções leves/moderadas por organismos muito suscetíveis.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "125 mg/5 mL",
-      "250 mg/5 mL"
-    ],
-    "pediatricDose": "GAS criança: 250 mg BID ou TID por 10 dias.",
-    "hepaticDose": "Sem ajuste hepático rotineiro.",
-    "adverseEffects": "Hipersensibilidade e diarreia são os principais eventos.",
+    "presentations": "Comprimidos e solução oral.",
+    "pediatricDose": "pediatrica: 25–50 mg/kg/dia dividido 6/6h–8/8h (máx 500 mg/dose)",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "adverseEffects": "Náusea, vômito, diarreia e rash.; Anafilaxia, C. difficile, reações cutâneas graves e citopenias raras.",
     "interactions": "Probenecida prolonga níveis; metotrexato pode ter depuração reduzida. Formulação 500 mg pode conter ~1,43 mEq K.",
-    "monitoring": "Resposta; função renal e potássio em DRC importante.",
-    "administration": "Pode ser com alimento, mas níveis são maiores em jejum; GAS exige 10 dias.",
-    "preparation": "Solução reconstituída refrigerada; descartar após 14 dias.",
-    "infusionProtocol": "Não aplicável; oral.",
-    "pregnancy": "Usar quando indicada.",
-    "lactation": "Geralmente compatível.",
-    "specialPopulations": "DRC/restrição de potássio exigem atenção à sal potássica.",
-    "patientEducation": "Completar 10 dias no GAS.",
-    "clinicalPearls": "Excelente para GAS suscetível por via oral, mas não substitui terapia parenteral em doença grave.",
-    "guidelineRecommendations": "CDC mantém penicilina V como terapia de primeira linha para faringite por GAS, com tratamento completo por 10 dias e doses definidas por faixa etária.",
-    "safetyFlags": [
-      "Oral",
-      "GAS 10 dias",
-      "Potássio",
-      "Não cobre penicilinase",
-      "Jejum aumenta níveis"
-    ],
+    "monitoring": "Adulto GAS 500 mg BID ou 250 mg QID; Criança GAS 250 mg BID/TID; 10 dias; Solução refrigerada; DRC: revisar K",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Anafilaxia, C. difficile, reações cutâneas graves e citopenias raras.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0744674-ddf7-4022-be2f-2a22bef0d379",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b8f797fb-979c-4eab-a3a6-ad4edcb9ff07",
-      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fba1ffe5-809a-495b-bf3e-f2099ac459f6",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8f9fa2c8-4d25-48a8-9257-43c33d08e83a&version=1",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0fb8ab8a-5aa7-e6f4-e063-6294a90a1af6",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=64ac283c-fe6a-49f0-ae85-90ab98e38272",
-      "https://www.medicines.org.uk/emc/product/15480/smpc"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=penicilina+v",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "es": {
-    "name": "Penicilina V potásica",
+    "name": "Penicilina V",
     "class": "Penicilina natural oral",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Comprimidos y solución oral.",
-    "dose": "GAS adulto/adolescente: 500 mg BID o 250 mg QID x10 días; otras 250–500 mg q6–8h.",
+    "dose": "GAS adulto/adolescente: 500 mg BID ou 250 mg QID por 10 dias; outras indicações 250–500 mg q6–8h.",
     "doseKg": {
       "pediatrica": "25–50 mg/kg/día dividido cada 6h–8h (máx 500 mg/dosis)"
     },
-    "mechanism": "Se une a PBPs e inhibe peptidoglicano.",
+    "mechanism": "Liga PBPs y inibe peptidoglicano.",
     "onset": "Absorción oral adecuada en ayunas — biodisponibilidad ~60%; Tmáx 30–60 min.",
     "halfLife": "Semivida 30–60 min. Eliminación renal ~25–35% inalterada.",
     "therapeuticRange": "Tiempo sobre la CIM (T>CIM). Tomar en ayunas o con poca comida.",
     "dilution": "Uso oral exclusivo.",
     "speed": "No aplicable (uso oral).",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Rash",
-      "Vómitos"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "SCAR",
-      "Nefritis intersticial rara"
-    ],
-    "contraindications": "Hipersensibilidad grave a penicilinas.",
+    "commonAdverseEffects": "Náusea; Diarreia; Rash; Vômito",
+    "dangerousAdverseEffects": "Anafilaxia; C. difficile; SCAR; Nefrite intersticial rara",
+    "contraindications": "Hipersensibilidade grave a penicilinas.",
     "risksByPatient": [],
-    "alerts": [
-      "Adulto GAS 500 mg BID o 250 mg QID",
-      "Niño 250 mg BID/TID",
-      "10 días",
-      "Solución refrigerada",
-      "ERC: revisar K"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0744674-ddf7-4022-be2f-2a22bef0d379",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b8f797fb-979c-4eab-a3a6-ad4edcb9ff07",
-      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fba1ffe5-809a-495b-bf3e-f2099ac459f6",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8f9fa2c8-4d25-48a8-9257-43c33d08e83a&version=1",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0fb8ab8a-5aa7-e6f4-e063-6294a90a1af6",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=64ac283c-fe6a-49f0-ae85-90ab98e38272",
-      "https://www.medicines.org.uk/emc/product/15480/smpc"
-    ],
-    "renalDose": "Penicilina V potásica por vía oral: el prospecto estadounidense actual informa que la excreción se retrasa considerablemente en pacientes con función renal deteriorada, pero no proporciona una tabla específica por CrCl/TFG. El SmPC oficial de fenoximetilpenicilina recomienda, en insuficiencia renal, ajustar el intervalo a cada 8–12 horas según la gravedad. Por lo tanto, mantener la dosis indicada para la infección y espaciar el intervalo dentro de q8–12h según la intensidad de la disfunción renal y la respuesta clínica; en ERC más grave, utilizar el extremo más largo del intervalo, sin inventar un punto de corte de CrCl que no está definido en estos prospectos. Monitorizar creatinina/TFG en ERC avanzada, función renal inestable o tratamiento prolongado. Los prospectos oficiales citados no establecen una dosis suplementaria específica después de hemodiálisis. Como el producto es la sal potásica de penicilina V, revisar potasio sérico y otras fuentes de potasio en pacientes con ERC avanzada, hiperpotasemia o fármacos concomitantes que aumenten K+. Individualizar en insuficiencia renal grave o diálisis con infectología/farmacia clínica.",
-    "pharmacologicClass": "Fenoximetilpenicilina oral sensible a penicilinasa",
-    "pharmacodynamics": "Bactericida dependiente de tiempo; no cubre productores de penicilinasa.",
-    "pharmacokinetics": "Ácido-estable; niveles mayores en ayunas; eliminación renal.",
-    "indications": "Faringitis GAS y otras infecciones leves/moderadas susceptibles.",
-    "presentations": [
-      "250 mg",
-      "500 mg",
-      "125 mg/5 mL",
-      "250 mg/5 mL"
-    ],
-    "pediatricDose": "GAS niño: 250 mg BID o TID x10 días.",
-    "hepaticDose": "Sin ajuste hepático.",
-    "adverseEffects": "Hipersensibilidad y diarrea predominan.",
-    "interactions": "Probenecid prolonga niveles; metotrexato puede reducir depuración. 500 mg puede aportar ~1,43 mEq K.",
-    "monitoring": "Respuesta; función renal/potasio en ERC.",
-    "administration": "Puede darse con comida, pero niveles mayores en ayunas; GAS 10 días.",
-    "preparation": "Solución refrigerada; desechar tras 14 días.",
-    "infusionProtocol": "No aplicable; oral.",
-    "pregnancy": "Usar cuando indicada.",
-    "lactation": "Generalmente compatible.",
-    "specialPopulations": "ERC/restricción de K requieren atención.",
-    "patientEducation": "Completar 10 días en GAS.",
-    "clinicalPearls": "Excelente para GAS susceptible oral; no sustituye parenteral en grave.",
-    "guidelineRecommendations": "CDC mantiene penicilina V como tratamiento de primera línea para faringitis por GAS, con 10 días completos de terapia y dosis definidas por edad.",
-    "safetyFlags": [
-      "Oral",
-      "GAS 10 días",
-      "Potasio",
-      "No cubre penicilinasa",
-      "Ayunas aumenta niveles"
-    ],
+    "alerts": "Anafilaxia, C. difficile, reações cutâneas graves y citopenias raras.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=penicilina+v",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "pharmacologicClass": "Penicilina natural oral",
+    "pharmacodynamics": "Liga PBPs y inibe peptidoglicano.",
+    "pharmacokinetics": "Meia-vida 30–60 min. Eliminação renal ~25–35% inalterada.",
+    "indications": "Faringite GAS y outras infecções leves/moderadas por organismos muito suscetíveis.",
+    "presentations": "Comprimidos y solución oral.",
+    "pediatricDose": "pediatrica: 25–50 mg/kg/dia dividido 6/6h–8/8h (máx 500 mg/dosis)",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "adverseEffects": "Náusea, vômito, diarreia y rash.; Anafilaxia, C. difficile, reações cutâneas graves y citopenias raras.",
+    "interactions": "Probenecida prolonga níveis; metotrexato pode ter depuração reduzida. Formulação 500 mg pode conter ~1,43 mEq K.",
+    "monitoring": "Adulto GAS 500 mg BID ou 250 mg QID; Criança GAS 250 mg BID/TID; 10 dias; Solução refrigerada; DRC: revisar K",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Anafilaxia, C. difficile, reações cutâneas graves y citopenias raras.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0744674-ddf7-4022-be2f-2a22bef0d379",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b8f797fb-979c-4eab-a3a6-ad4edcb9ff07",
-      "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fba1ffe5-809a-495b-bf3e-f2099ac459f6",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8f9fa2c8-4d25-48a8-9257-43c33d08e83a&version=1",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0fb8ab8a-5aa7-e6f4-e063-6294a90a1af6",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=64ac283c-fe6a-49f0-ae85-90ab98e38272",
-      "https://www.medicines.org.uk/emc/product/15480/smpc"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=penicilina+v",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "name": {
-    "pt": "Penicilina V potássica",
-    "es": "Penicilina V potásica"
+    "pt": "Penicilina V",
+    "es": "Penicilina V"
   },
   "keywords": [
     "penicilina_v",
@@ -199,9 +111,21 @@
     "pen-ve-k",
     "penicilina de espectro estreito (oral)"
   ],
-  "dataVersion": "clinical-data-v1-9eace0dfa6b22217",
-  "clinicalContentSha256": "9eace0dfa6b22217faa5342f1b53adaae30482768380729e2eff7f09a60b2260",
+  "dataVersion": "clinical-data-v1-d6bb77f35486ab1f",
+  "clinicalContentSha256": "d6bb77f35486ab1fff54436156b34f40965be9f758cf669ab1c56ca3bad1388a",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "penicilina_v.mcGoldClinicalV1",
+    "lote": "061",
+    "requiredFields": 33,
+    "approvedSha256": "21d5764126222a27dd58e4de5b088bbd5ba7f893ec49f94e5861cb58d2022403",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

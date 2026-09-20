@@ -1572,3 +1572,93 @@ Object.assign(window.HEMATOLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:hidroxocobalamina:END */
+/* GOLD33_SELECTIVE:pegfilgrastim:START */
+;(function(){var db=window.HEMATOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="pegfilgrastim";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:pegfilgrastim:"+matches.length);drug=matches[0];}else{drug=db&&db["pegfilgrastim"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:pegfilgrastim");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "061",
+    "requiredFieldCount": 33,
+    "approvedSha256": "21d5764126222a27dd58e4de5b088bbd5ba7f893ec49f94e5861cb58d2022403",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Pegfilgrastim",
+    "class": "Fator estimulador de colônias de granulócitos peguilado",
+    "pharmacologicClass": "Fator estimulador de colônias de granulócitos peguilado",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Seringa preenchida 6 mg/0,6 mL e dispositivo on-body conforme mercado.",
+    "presentations": "Seringa preenchida 6 mg/0,6 mL e dispositivo on-body conforme mercado.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Redução da incidência de neutropenia febril em esquemas mielossupressores elegíveis; outras indicações dependem do produto.",
+    "dose": "Adultos e pacientes elegíveis: 6 mg SC uma vez por ciclo, não administrar dentro das janelas proibidas em relação à quimioterapia. Pediatria exige peso e produto.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Dor óssea, dor em extremidades e leucocitose.",
+    "dangerousAdverseEffects": "Ruptura esplênica, SDRA, anafilaxia, crise falciforme, glomerulonefrite e síndrome de extravasamento capilar.",
+    "adverseEffects": "Dor óssea, dor em extremidades e leucocitose.; Ruptura esplênica, SDRA, anafilaxia, crise falciforme, glomerulonefrite e síndrome de extravasamento capilar.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Ruptura esplênica, SDRA, anafilaxia, crise falciforme, glomerulonefrite e síndrome de extravasamento capilar.",
+    "alerts": "Ruptura esplênica, SDRA, anafilaxia, crise falciforme, glomerulonefrite e síndrome de extravasamento capilar.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pegfilgrastim",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pegfilgrastim"
+  },
+  "es": {
+    "name": "Pegfilgrastim",
+    "class": "Fator estimulador de colônias de granulócitos peguilado",
+    "pharmacologicClass": "Fator estimulador de colônias de granulócitos peguilado",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Seringa preenchida 6 mg/0,6 mL y dispositivo on-body conforme mercado.",
+    "presentations": "Seringa preenchida 6 mg/0,6 mL y dispositivo on-body conforme mercado.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Redução da incidência de neutropenia febril em esquemas mielossupressores elegíveis; outras indicações dependem do produto.",
+    "dose": "Adultos y pacientes elegíveis: 6 mg SC uma vez por ciclo, no administrar dentro das janelas proibidas em relação à quimioterapia. Pediatria exige peso y produto.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Dor óssea, dor em extremidades y leucocitose.",
+    "dangerousAdverseEffects": "Ruptura esplênica, SDRA, anafilaxia, crise falciforme, glomerulonefrite y síndrome de extravasamento capilar.",
+    "adverseEffects": "Dor óssea, dor em extremidades y leucocitose.; Ruptura esplênica, SDRA, anafilaxia, crise falciforme, glomerulonefrite y síndrome de extravasamento capilar.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Ruptura esplênica, SDRA, anafilaxia, crise falciforme, glomerulonefrite y síndrome de extravasamento capilar.",
+    "alerts": "Ruptura esplênica, SDRA, anafilaxia, crise falciforme, glomerulonefrite y síndrome de extravasamento capilar.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pegfilgrastim",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pegfilgrastim"
+  }
+};})();
+/* GOLD33_SELECTIVE:pegfilgrastim:END */

@@ -4448,3 +4448,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:paliperidona_trimestral:END */
+/* GOLD33_SELECTIVE:periciazina:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="periciazina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:periciazina:"+matches.length);drug=matches[0];}else{drug=db&&db["periciazina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:periciazina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "061",
+    "requiredFieldCount": 33,
+    "approvedSha256": "21d5764126222a27dd58e4de5b088bbd5ba7f893ec49f94e5861cb58d2022403",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Periciazina",
+    "class": "Antipsicótico fenotiazínico",
+    "pharmacologicClass": "Antipsicótico fenotiazínico",
+    "commercialNames": "br: Neuleptil; Periciazina; ar: Neuleptil; Periciazina",
+    "presentation": "Comprimido 10 mg; Comprimido 25 mg; Gotas 10 mg/mL; Gotas 40 mg/mL",
+    "presentations": "Comprimido 10 mg; Comprimido 25 mg; Gotas 10 mg/mL; Gotas 40 mg/mL",
+    "mechanism": "Antagonista dopaminérgico D2 com ação sedativa, antiadrenérgica e anticolinérgica moderada.",
+    "pharmacodynamics": "Antagonista dopaminérgico D2 com ação sedativa, antiadrenérgica e anticolinérgica moderada.",
+    "pharmacokinetics": "Vida média variável; efeito clínico pode persistir por várias horas.",
+    "indications": "Esquizofrenia; Psicose crônica; Agitação psicomotora; Agressividade e impulsividade em casos selecionados; Distúrbios graves de comportamento; Irritabilidade intensa em contexto psiquiátrico; Mania aguda como adjuvante",
+    "dose": "adulto: Psicose/agitação: iniciar 5–10 mg/dia VO; titular gradualmente conforme resposta.; comportamento: Distúrbios de comportamento: doses baixas divididas em 1–3 tomadas/dia conforme tolerabilidade.; maxDose: Dose máxima depende da indicação; titular com cautela por sedação, hipotensão e efeitos extrapiramidais.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Hipotensão ortostática; Boca seca; Constipação; Ganho de peso; Sintomas extrapiramidais",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT e arritmias; Delirium anticolinérgico; Convulsões em predispostos",
+    "adverseEffects": "Sedação, boca seca, constipação, hipotensão e sintomas extrapiramidais.; QT/torsades, síndrome neuroléptica maligna, discinesia tardia, agranulocitose e depressão respiratória.",
+    "contraindications": "Hipersensibilidade às fenotiazinas; Depressão grave do SNC ou coma; Doença de Parkinson ou demência com corpos de Lewy, salvo extrema necessidade; QT prolongado significativo; Insuficiência hepática grave",
+    "interactions": "Álcool e depressores do SNC; Opioides e benzodiazepínicos; Fármacos que prolongam QT; Anticolinérgicos; Anti-hipertensivos; Levodopa e agonistas dopaminérgicos",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.; Periciazina: bula de xarope 10 mg/5 mL NÃO valida gotas ou comprimidos. Para criança, confirmar indicação, idade, peso e concentração exata da apresentação local antes de calcular dose.; A bula Pericyazine xarope 10 mg/5 mL refere-se somente a esse produto; doses pediátricas dependem de peso, indicação e idade. Não converter para gotas ou comprimidos sem bula própria.; Monitorar sedação, pressão arterial e sintomas extrapiramidais.; Evitar em idosos frágeis quando possível.; Considerar ECG em pacientes com risco de QT.; Evitar associação com álcool e outros sedativos.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "QT/torsades, síndrome neuroléptica maligna, discinesia tardia, agranulocitose e depressão respiratória.",
+    "alerts": "QT/torsades, síndrome neuroléptica maligna, discinesia tardia, agranulocitose e depressão respiratória.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=periciazina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=periciazina"
+  },
+  "es": {
+    "name": "Periciazina",
+    "class": "Antipsicótico fenotiazínico",
+    "pharmacologicClass": "Antipsicótico fenotiazínico",
+    "commercialNames": "br: Neuleptil; Periciazina; ar: Neuleptil; Periciazina",
+    "presentation": "Comprimido 10 mg; Comprimido 25 mg; Gotas 10 mg/mL; Gotas 40 mg/mL",
+    "presentations": "Comprimido 10 mg; Comprimido 25 mg; Gotas 10 mg/mL; Gotas 40 mg/mL",
+    "mechanism": "Antagonista dopaminérgico D2 con ação sedativa, antiadrenérgica y anticolinérgica moderada.",
+    "pharmacodynamics": "Antagonista dopaminérgico D2 con ação sedativa, antiadrenérgica y anticolinérgica moderada.",
+    "pharmacokinetics": "Vida média variável; efeito clínico pode persistir por várias horas.",
+    "indications": "Esquizofrenia; Psicose crônica; Agitação psicomotora; Agressividade y impulsividade em casos selecionados; Distúrbios graves de comportamento; Irritabilidade intensa em contexto psiquiátrico; Mania aguda como adjuvante",
+    "dose": "adulto: Psicose/agitação: iniciar 5–10 mg/dia VO; titular gradualmente conforme resposta.; comportamento: Distúrbios de comportamento: dosiss baixas divididas em 1–3 tomadas/dia conforme tolerabilidade.; maxDose: Dose máxima depende da indicação; titular con cautela por sedação, hipotensão y efeitos extrapiramidais.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Hipotensão ortostática; Boca seca; Constipação; Ganho de peso; Sintomas extrapiramidais",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT y arritmias; Delirium anticolinérgico; Convulsões em predispostos",
+    "adverseEffects": "Sedação, boca seca, constipação, hipotensão y sintomas extrapiramidais.; QT/torsades, síndrome neuroléptica maligna, discinesia tardia, agranulocitose y depressão respiratória.",
+    "contraindications": "Hipersensibilidade às fenotiazinas; Depressão grave do SNC ou coma; Doença de Parkinson ou demência con corpos de Lewy, salvo extrema necessidade; QT prolongado significativo; Insuficiência hepática grave",
+    "interactions": "Álcool y depressores do SNC; Opioides y benzodiazepínicos; Fármacos que prolongam QT; Anticolinérgicos; Anti-hipertensivos; Levodopa y agonistas dopaminérgicos",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda no possui dosis pediátrica estruturada y validada para produto y indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica y avaliação especializada.; Periciazina: bula de xarope 10 mg/5 mL NÃO valida gotas ou comprimidos. Para criança, confirmar indicação, idade, peso y concentração exata da apresentação local antes de calcular dosis.; A bula Pericyazine xarope 10 mg/5 mL refere-se somente a esse produto; dosiss pediátricas dependem de peso, indicação y idade. No converter para gotas ou comprimidos sem bula própria.; Monitorar sedação, pressão arterial y sintomas extrapiramidais.; Evitar em idosos frágeis quando possível.; Considerar ECG em pacientes con risco de QT.; Evitar associação con álcool y outros sedativos.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "QT/torsades, síndrome neuroléptica maligna, discinesia tardia, agranulocitose y depressão respiratória.",
+    "alerts": "QT/torsades, síndrome neuroléptica maligna, discinesia tardia, agranulocitose y depressão respiratória.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=periciazina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=periciazina"
+  }
+};})();
+/* GOLD33_SELECTIVE:periciazina:END */
