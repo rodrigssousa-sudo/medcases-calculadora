@@ -1056,3 +1056,93 @@ window.GASTRO_DRUGS_DB = [
   }
 };})();
 /* GOLD33_SELECTIVE:metoclopramida:END */
+/* GOLD33_SELECTIVE:octreotide:START */
+;(function(){var db=window.GASTRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="octreotide";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:octreotide:"+matches.length);drug=matches[0];}else{drug=db&&db["octreotide"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:octreotide");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "057",
+    "requiredFieldCount": 33,
+    "approvedSha256": "10e4153c730685e713321ea7b52895190ead372a4456ac2d3d58ef2b2e090bf2",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Octreotida",
+    "class": "Análogo da somatostatina",
+    "pharmacologicClass": "Análogo da somatostatina",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável de ação imediata e microesferas de depósito IM em forças específicas.",
+    "presentations": "Solução injetável de ação imediata e microesferas de depósito IM em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Acromegalia e controle sintomático de tumores carcinoides/VIPomas conforme formulação.",
+    "dose": "Formulação imediata SC/IV e depósito IM possuem esquemas distintos. Na acromegalia, iniciar frequentemente 50 microgramas SC três vezes/dia e titular; LAR somente após tolerabilidade e conforme rótulo.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Diarreia, dor abdominal, náusea, flatulência e reação no local.",
+    "dangerousAdverseEffects": "Bradicardia, alterações de glicemia, colelitíase, pancreatite e distúrbios de condução.",
+    "adverseEffects": "Diarreia, dor abdominal, náusea, flatulência e reação no local.; Bradicardia, alterações de glicemia, colelitíase, pancreatite e distúrbios de condução.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Bradicardia, alterações de glicemia, colelitíase, pancreatite e distúrbios de condução.",
+    "alerts": "Bradicardia, alterações de glicemia, colelitíase, pancreatite e distúrbios de condução.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=octreotide",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=octreotide"
+  },
+  "es": {
+    "name": "Octreotida",
+    "class": "Análogo da somatostatina",
+    "pharmacologicClass": "Análogo da somatostatina",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável de ação imediata y microesferas de depósito IM em forças específicas.",
+    "presentations": "Solução injetável de ação imediata y microesferas de depósito IM em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Acromegalia y controle sintomático de tumores carcinoides/VIPomas conforme formulação.",
+    "dose": "Formulação imediata SC/IV y depósito IM possuem esquemas distintos. Na acromegalia, iniciar frequentemente 50 microgramas SC três vezes/dia y titular; LAR somente após tolerabilidade y conforme rótulo.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Diarreia, dor abdominal, náusea, flatulência y reação no local.",
+    "dangerousAdverseEffects": "Bradicardia, alterações de glicemia, colelitíase, pancreatite y distúrbios de condução.",
+    "adverseEffects": "Diarreia, dor abdominal, náusea, flatulência y reação no local.; Bradicardia, alterações de glicemia, colelitíase, pancreatite y distúrbios de condução.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Bradicardia, alterações de glicemia, colelitíase, pancreatite y distúrbios de condução.",
+    "alerts": "Bradicardia, alterações de glicemia, colelitíase, pancreatite y distúrbios de condução.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=octreotide",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=octreotide"
+  }
+};})();
+/* GOLD33_SELECTIVE:octreotide:END */

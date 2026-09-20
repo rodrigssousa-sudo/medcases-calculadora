@@ -54,7 +54,8 @@ for (const row of data) {
     if (field === 'references' ? !Array.isArray(value) : (!value || !Object.hasOwn(value, 'pt') || !Object.hasOwn(value, 'es'))) throw new Error(`GOLD33_PT_ES_INVALID:${row.ID}:${field}`);
   }
 }
-const restrictedIds = new Set((v4 ? restrictions.medications : restrictions.items || []).map((item) => item.id));
+const restrictionItems = v4 ? (restrictions.medications || restrictions.items || []) : (restrictions.items || []);
+const restrictedIds = new Set(restrictionItems.map((item) => item.id));
 if (ids.some((id) => !restrictedIds.has(id))) throw new Error('GOLD33_RESTRICTIONS_INCOMPLETE');
 console.log(JSON.stringify({
   result: 'PASS',

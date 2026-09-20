@@ -50,7 +50,8 @@ const opinionDocument = JSON.parse(readZip('04_PARECER_CLINICO.json'));
 const restrictionsDocument = JSON.parse(readZip('05_RESTRICOES_E_PENDENCIAS.json'));
 const v4 = dataDocument?.schema === 'MEDCASES_GOLD33_HOMOLOGATED_V4';
 const data = v4 ? dataDocument.medications : dataDocument;
-const restrictionItems = v4 ? restrictionsDocument.medications : restrictionsDocument.items;
+const restrictionItems = v4 ? (restrictionsDocument.medications || restrictionsDocument.items) : restrictionsDocument.items;
+if (!Array.isArray(restrictionItems)) die('RESTRICTIONS_ITEMS_REQUIRED');
 const opinion = v4 ? {
   lote: dataDocument.lot,
   scope: { ids: data.map((row) => row.ID) },

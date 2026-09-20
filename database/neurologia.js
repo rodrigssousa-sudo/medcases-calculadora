@@ -14410,3 +14410,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:ocrelizumabe:END */
+/* GOLD33_SELECTIVE:ofatumumabe:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="ofatumumabe";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:ofatumumabe:"+matches.length);drug=matches[0];}else{drug=db&&db["ofatumumabe"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:ofatumumabe");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "057",
+    "requiredFieldCount": 33,
+    "approvedSha256": "10e4153c730685e713321ea7b52895190ead372a4456ac2d3d58ef2b2e090bf2",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ofatumumabe",
+    "class": "Anticorpo monoclonal anti-CD20",
+    "pharmacologicClass": "Anticorpo monoclonal anti-CD20",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Caneta ou seringa preenchida 20 mg/0,4 mL para uso SC; formulações IV históricas são distintas.",
+    "presentations": "Caneta ou seringa preenchida 20 mg/0,4 mL para uso SC; formulações IV históricas são distintas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Formas recorrentes de esclerose múltipla na apresentação SC; apresentações oncológicas possuem escopo distinto.",
+    "dose": "Para esclerose múltipla: 20 mg SC nas semanas 0, 1 e 2; depois 20 mg mensal a partir da semana 4. Não intercambiar com formulação/regime oncológico.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Infecção respiratória, cefaleia e reações relacionadas à injeção.",
+    "dangerousAdverseEffects": "Infecção grave, reativação de hepatite B, hipogamaglobulinemia e possível PML.",
+    "adverseEffects": "Infecção respiratória, cefaleia e reações relacionadas à injeção.; Infecção grave, reativação de hepatite B, hipogamaglobulinemia e possível PML.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Infecção grave, reativação de hepatite B, hipogamaglobulinemia e possível PML.",
+    "alerts": "Infecção grave, reativação de hepatite B, hipogamaglobulinemia e possível PML.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ofatumumabe",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ofatumumabe"
+  },
+  "es": {
+    "name": "Ofatumumabe",
+    "class": "Anticorpo monoclonal anti-CD20",
+    "pharmacologicClass": "Anticorpo monoclonal anti-CD20",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Caneta ou seringa preenchida 20 mg/0,4 mL para uso SC; formulações IV históricas são distintas.",
+    "presentations": "Caneta ou seringa preenchida 20 mg/0,4 mL para uso SC; formulações IV históricas são distintas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Formas recorrentes de esclerose múltipla na apresentação SC; apresentações oncológicas possuem escopo distinto.",
+    "dose": "Para esclerose múltipla: 20 mg SC nas semanas 0, 1 y 2; depois 20 mg mensal a partir da semana 4. No intercambiar con formulação/regime oncológico.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Infecção respiratória, cefaleia y reações relacionadas à injeção.",
+    "dangerousAdverseEffects": "Infecção grave, reativação de hepatite B, hipogamaglobulinemia y possível PML.",
+    "adverseEffects": "Infecção respiratória, cefaleia y reações relacionadas à injeção.; Infecção grave, reativação de hepatite B, hipogamaglobulinemia y possível PML.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Infecção grave, reativação de hepatite B, hipogamaglobulinemia y possível PML.",
+    "alerts": "Infecção grave, reativação de hepatite B, hipogamaglobulinemia y possível PML.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ofatumumabe",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ofatumumabe"
+  }
+};})();
+/* GOLD33_SELECTIVE:ofatumumabe:END */
