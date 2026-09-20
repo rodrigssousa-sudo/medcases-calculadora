@@ -1,7 +1,7 @@
 /* MEDCASES_PREMIUM_R9B_PURGE_SW_CACHE_CLOSURE_V1_B_R0:start */
 // Security closure: old static Premium drug payloads must not survive in CacheStorage.
 self.addEventListener('install', (event) => {
-  self.skipWaiting();
+  event.waitUntil(self.skipWaiting());
 });
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
@@ -40,11 +40,13 @@ self.addEventListener('activate', (event) => {
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-r36-home-a11y-legacy-migration-r2-20260919';
+const CACHE_VERSION   = 'medcases-r65-final-calculated-dose-r1-20260919';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 const MIGRATION_POLL_MS = 750;
 const LEGACY_MIGRATION_FALLBACK_MS = 20000;
 const clientMigrationStates = new Map();
+const legacyMigrationAttempts = new Set();
+let clientMigrationRun = null;
 
 function migrationDelay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -78,9 +80,21 @@ async function migrateClientToActiveVersion(client) {
     await migrationDelay(MIGRATION_POLL_MS);
 
     const state = clientMigrationStates.get(client.id || requestId);
+    if (state && state.requestId === requestId && state.canSelfMigrate) {
+      clientMigrationStates.delete(client.id || requestId);
+      try {
+        client.postMessage({
+          type: 'MEDCASES_CACHE_MIGRATION_REQUIRED',
+          version: CACHE_VERSION
+        });
+      } catch (_) {}
+      return;
+    }
+
     if (state && state.requestId === requestId && state.overlayOpen === false) {
       target.searchParams.set('_mc_cache', CACHE_VERSION);
       clientMigrationStates.delete(client.id || requestId);
+      legacyMigrationAttempts.add(client.id || requestId);
       try { await client.navigate(target.toString()); } catch (_) {}
       return;
     }
@@ -89,16 +103,35 @@ async function migrateClientToActiveVersion(client) {
   const finalState = clientMigrationStates.get(client.id || requestId);
   clientMigrationStates.delete(client.id || requestId);
 
-  /* A current document that explicitly reports an open overlay keeps control;
-     its page-level safe-retry owner resumes after close. A legacy document
-     cannot answer this protocol, so a single bounded fallback navigation is
-     required to avoid the historical permanent-update deadlock. */
+  /* A protocol-aware document owns its bounded snapshot/reload/restore cycle.
+     An older document that reports an open overlay keeps its historical safe
+     retry; a truly silent legacy client receives one bounded navigation. */
   if (finalState && finalState.requestId === requestId && finalState.overlayOpen === true) {
     return;
   }
 
+  const clientKey = client.id || requestId;
+  if (legacyMigrationAttempts.has(clientKey)) return;
+  legacyMigrationAttempts.add(clientKey);
   target.searchParams.set('_mc_cache', CACHE_VERSION);
   try { await client.navigate(target.toString()); } catch (_) {}
+}
+
+function startClientMigration() {
+  if (clientMigrationRun) return clientMigrationRun;
+
+  clientMigrationRun = (async () => {
+    const clients = await self.clients.matchAll({
+      type: 'window',
+      includeUncontrolled: true
+    });
+
+    await Promise.all(clients.map(migrateClientToActiveVersion));
+  })().finally(() => {
+    clientMigrationRun = null;
+  });
+
+  return clientMigrationRun;
 }
 
 /* ── Lista canônica de assets pré-cacheados no install ──────
@@ -116,14 +149,14 @@ const ASSETS_TO_CACHE = [
   /* ── CSS (BUILD 484-CSS-CONSOLIDATION: 14 arquivos → 1 fonte unificada) ── */
   './css/medcases-core-legacy.css?v=484',
 
-  './css/medcases-webview-home-v1.css?v=648-home-public-audit-cache-r2',
-  './css/medcases-home-premium-r2.css?v=648-home-public-audit-cache-r2',
+  './css/medcases-webview-home-v1.css?v=661-controlled-cache-migration-r15',
+  './css/medcases-home-premium-r2.css?v=661-controlled-cache-migration-r15',
   /* ── JS (10 arquivos — stack completa BUILD 477) ── */
   './js/medcases-ux-v2.js?v=484',
   './js/hub-accordion.js?v=484',
   './js/medcases-router.js?v=484',
   './js/build240b-accordion-fix.js?v=484',
-  './js/calculator-overlay.js?v=648-home-public-audit-cache-r2',
+  './js/calculator-overlay.js?v=661-controlled-cache-migration-r15',
   './js/category-pills.js?v=484',
   './js/elec-calc.js?v=484',
   './js/deeplink-router.js?v=484',
@@ -177,10 +210,10 @@ const CRITICAL_ASSETS = ASSETS_TO_CACHE.slice(0, 5);
    estado 'waiting' por tabs abertas.
 ============================================================ */
 self.addEventListener('install', (event) => {
-  self.skipWaiting();
-
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    Promise.all([
+      self.skipWaiting(),
+      caches.open(CACHE_NAME)
       .then((cache) =>
         Promise.allSettled(
           CRITICAL_ASSETS.map(async (asset) => {
@@ -194,6 +227,7 @@ self.addEventListener('install', (event) => {
           })
         )
       )
+    ])
   );
 });
 /* ============================================================
@@ -213,26 +247,22 @@ self.addEventListener('activate', (event) => {
     await pruneOldCaches();
     await self.clients.claim();
 
-    // MC-CALC-SW-SAFE-LEGACY-MIGRATION-V2
-    // Claim open tabs, then negotiate a safe refresh with current clients.
-    // Legacy clients that cannot answer receive one bounded fallback navigation.
+    // MC-CALC-SW-SAFE-LEGACY-MIGRATION-V3
+    // Activation only claims and announces. Client migration starts from a
+    // post-controllerchange message, when this worker is fully active.
     const clients = await self.clients.matchAll({
       type: 'window',
       includeUncontrolled: true
     });
 
-    await Promise.all(
-      clients.map(async (client) => {
-        try {
-          client.postMessage({
-            type: 'MEDCASES_CACHE_VERSION_ACTIVE',
-            version: CACHE_VERSION
-          });
-        } catch (_) {}
-
-        await migrateClientToActiveVersion(client);
-      })
-    );
+    clients.forEach((client) => {
+      try {
+        client.postMessage({
+          type: 'MEDCASES_CACHE_VERSION_ACTIVE',
+          version: CACHE_VERSION
+        });
+      } catch (_) {}
+    });
   })());
 });
 async function pruneOldCaches() {
@@ -258,9 +288,16 @@ self.addEventListener('message', (event) => {
       clientMigrationStates.set(sourceId, {
         requestId,
         overlayOpen: event.data.overlayOpen === true,
+        canSelfMigrate: event.data.canSelfMigrate === true,
         reportedAt: Date.now()
       });
     }
+    return;
+  }
+
+  if (type === 'MEDCASES_START_CLIENT_MIGRATION') {
+    if (event.data.version !== CACHE_VERSION) return;
+    event.waitUntil(startClientMigration());
     return;
   }
 

@@ -8118,8 +8118,8 @@ body.calc-overlay-open .grid-card-clcr {
   --mc-farm-text:#F8FAFC;
   --mc-farm-muted:#A8B0BD;
   --mc-farm-border:#374151;
-  --mc-farm-soft:#2D3340;
-  --mc-farm-search-bg:#1A1D23;
+  --mc-farm-soft:#292929;
+  --mc-farm-search-bg:#212121;
 }
 
 body.light-mode #hub-card-farmacos.mc-overlay-projected-card,
@@ -26876,7 +26876,7 @@ window.MedCasesBridge = {
 (() => {
   'use strict';
 
-  const EXPECTED_VERSION = 'medcases-r36-home-a11y-legacy-migration-r2-20260919';
+  const EXPECTED_VERSION = 'medcases-r65-final-calculated-dose-r1-20260919';
   const CACHE_PREFIX = 'medcases-calc-';
   const LAST_VERSION_KEY = 'medcases-cache-version';
   let updateInFlight = null;
@@ -26911,8 +26911,15 @@ window.MedCasesBridge = {
     );
   };
 
-  // MC-CALC-CACHE-SAFE-AUTOMATIC-RELOAD-V1
-  let deferredReloadTimer = 0;
+  // MC-CALC-CACHE-CONTROLLED-MIGRATION-V2
+  const migrationStateKey = version =>
+    'medcases-cache-session-' + version;
+  const MIGRATION_QUIET_MS = 900;
+  const MIGRATION_MAX_WAIT_MS = 6000;
+  let controlledMigrationTimer = 0;
+  let controlledMigrationStartedAt = 0;
+  let controlledMigrationVersion = null;
+  let lastInteractionAt = Date.now();
 
   const hasInteractiveSurface = () => {
     const body = document.body;
@@ -26934,49 +26941,374 @@ window.MedCasesBridge = {
     return url;
   };
 
-  const deferReloadForInteractiveSession = remoteVersion => {
-    window.__MC_CACHE_RELOAD_DEFERRED = {
-      version: remoteVersion,
-      reason: 'interactive-session-no-url-mutation',
-      timestamp: Date.now()
+  const controlSnapshot = () =>
+    Array.from(document.querySelectorAll('input, select, textarea'))
+      .map((control, index, controls) => {
+        const detailRoot = control.closest('#mc-drug-detail-page-v21');
+        const overlayRoot = control.closest('.mc-overlay-projected-card');
+        const scopeRoot = detailRoot || overlayRoot || document;
+        const scopedControls = Array.from(
+          scopeRoot.querySelectorAll('input, select, textarea')
+        );
+        const sameName = control.name
+          ? scopedControls.filter(item => item.name === control.name)
+          : [];
+
+        return {
+          index,
+          scope: detailRoot ? 'drugDetail' : overlayRoot ? 'overlay' : 'document',
+          scopeIndex: scopedControls.indexOf(control),
+          id: control.id || null,
+          name: control.name || null,
+          nameIndex: control.name ? sameName.indexOf(control) : -1,
+          value: control.value,
+          checked: 'checked' in control ? !!control.checked : null,
+          selected: control.tagName === 'SELECT'
+            ? Array.from(control.options)
+                .filter(option => option.selected)
+                .map(option => option.value)
+            : null
+        };
+      });
+
+  const describeControl = control => {
+    if (!control) return null;
+    const selector = 'input, select, textarea, button, [tabindex]';
+    const detailRoot = control.closest
+      ? control.closest('#mc-drug-detail-page-v21')
+      : null;
+    const overlayRoot = control.closest
+      ? control.closest('.mc-overlay-projected-card')
+      : null;
+    const scopeRoot = detailRoot || overlayRoot || document;
+    const controls = Array.from(scopeRoot.querySelectorAll(selector));
+    return {
+      id: control.id || null,
+      index: controls.indexOf(control),
+      scope: detailRoot ? 'drugDetail' : overlayRoot ? 'overlay' : 'document',
+      scopeIndex: controls.indexOf(control),
+      drugId: control.dataset
+        ? control.dataset.mcFarmCanonicalDrug || null
+        : null
     };
-
-    if (deferredReloadTimer) return;
-
-    const retryWhenSafe = () => {
-      deferredReloadTimer = 0;
-      const deferred = window.__MC_CACHE_RELOAD_DEFERRED;
-      if (!deferred) return;
-
-      if (hasInteractiveSurface()) {
-        deferredReloadTimer = window.setTimeout(retryWhenSafe, 500);
-        return;
-      }
-
-      window.__MC_CACHE_RELOAD_DEFERRED = null;
-      reloadForVersionOnce(deferred.version);
-    };
-
-    deferredReloadTimer = window.setTimeout(retryWhenSafe, 500);
   };
 
-  const reloadForVersionOnce = remoteVersion => {
-    const guardKey = 'medcases-cache-reload-' + remoteVersion;
+  const captureMigrationState = remoteVersion => {
+    const detailCandidate = document.querySelector('#mc-drug-detail-page-v21');
+    const detailIsOpen = !!(detailCandidate && (
+      detailCandidate.dataset.open === 'true' ||
+      getComputedStyle(detailCandidate).display !== 'none'
+    ));
+    const detail = detailIsOpen ? detailCandidate : null;
+    const bodyHasOverlay = !!(
+      document.body && document.body.classList.contains('calc-overlay-open')
+    );
+    const projected =
+      document.querySelector('.mc-overlay-projected-card') ||
+      document.querySelector('#page-home .hub-card.is-open') ||
+      ((detail || bodyHasOverlay)
+        ? document.getElementById('hub-card-farmacos')
+        : null);
+    const activeMode = document.querySelector(
+      '#farmacos-v2-shell .farmacos-v2-tab.is-active[data-farmacos-mode]'
+    );
 
-    if (sessionStorage.getItem(guardKey) === '1') return;
+    return {
+      version: remoteVersion,
+      capturedAt: Date.now(),
+      overlayCardId: projected ? projected.id : null,
+      farmacosMode: activeMode
+        ? activeMode.getAttribute('data-farmacos-mode')
+        : null,
+      drugId: detailCandidate
+        ? detailCandidate.dataset.mcDrugId ||
+          (document.activeElement.dataset
+            ? document.activeElement.dataset.mcFarmCanonicalDrug || null
+            : null)
+        : null,
+      controls: controlSnapshot(),
+      focus: describeControl(document.activeElement),
+      scroll: {
+        windowX: window.scrollX,
+        windowY: window.scrollY,
+        projected: projected ? projected.scrollTop : 0,
+        detail: detail ? detail.scrollTop : 0,
+        detailScroll: detail && detail.querySelector('.mcd-scroll')
+          ? detail.querySelector('.mcd-scroll').scrollTop
+          : 0
+      }
+    };
+  };
 
-    if (hasInteractiveSurface()) {
-      deferReloadForInteractiveSession(remoteVersion);
+  const findSnapshotControl = (saved, selector) => {
+    if (saved.id) {
+      const byId = document.getElementById(saved.id);
+      if (byId) return byId;
+    }
+
+    if (saved.name) {
+      const scopeRoot = saved.scope === 'drugDetail'
+        ? document.querySelector('#mc-drug-detail-page-v21')
+        : saved.scope === 'overlay'
+          ? document.querySelector('.mc-overlay-projected-card')
+          : document;
+      const named = Array.from((scopeRoot || document).querySelectorAll(selector))
+        .filter(control => control.name === saved.name);
+      if (named[saved.nameIndex]) return named[saved.nameIndex];
+    }
+
+    if (Number.isInteger(saved.scopeIndex)) {
+      const scopeRoot = saved.scope === 'drugDetail'
+        ? document.querySelector('#mc-drug-detail-page-v21')
+        : saved.scope === 'overlay'
+          ? document.querySelector('.mc-overlay-projected-card')
+          : document;
+      const scoped = (scopeRoot || document).querySelectorAll(selector);
+      if (scoped[saved.scopeIndex]) return scoped[saved.scopeIndex];
+    }
+
+    return document.querySelectorAll(selector)[saved.index] || null;
+  };
+
+  const restoreControls = savedControls => {
+    let restored = 0;
+    (savedControls || []).forEach(saved => {
+      const control = findSnapshotControl(
+        saved,
+        'input, select, textarea'
+      );
+      if (!control) return;
+
+      let changed = false;
+      if (control.tagName === 'SELECT' && saved.selected) {
+        Array.from(control.options).forEach(option => {
+          const selected = saved.selected.includes(option.value);
+          if (option.selected !== selected) changed = true;
+          option.selected = selected;
+        });
+      } else if (control.value !== saved.value) {
+        control.value = saved.value;
+        changed = true;
+      }
+
+      if (saved.checked !== null && control.checked !== saved.checked) {
+        control.checked = saved.checked;
+        changed = true;
+      }
+
+      if (changed) {
+        control.dispatchEvent(new Event('input', { bubbles: true }));
+        control.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      restored += 1;
+    });
+    return restored;
+  };
+
+  const restoreMigratedSession = () => {
+    let saved;
+    try {
+      saved = JSON.parse(
+        sessionStorage.getItem(migrationStateKey(EXPECTED_VERSION))
+      );
+    } catch (_) {
+      sessionStorage.removeItem(migrationStateKey(EXPECTED_VERSION));
       return;
     }
 
-    sessionStorage.setItem(guardKey, '1');
-    const url = cacheVersionUrl(remoteVersion);
-    window.location.replace(url.toString());
+    if (
+      !saved ||
+      saved.version !== EXPECTED_VERSION ||
+      Date.now() - saved.capturedAt > 5 * 60 * 1000
+    ) {
+      sessionStorage.removeItem(migrationStateKey(EXPECTED_VERSION));
+      return;
+    }
+
+    document.documentElement.dataset.mcCacheRestoreOverlay =
+      saved.overlayCardId || 'none';
+    document.documentElement.dataset.mcCacheRestoreDrug =
+      saved.drugId || 'none';
+
+    let attempts = 0;
+    let triggerFallbackUsed = false;
+    let lastDrugAttempt = 0;
+    let detailReadyAt = 0;
+    const apply = () => {
+      attempts += 1;
+
+      if (
+        saved.overlayCardId &&
+        !document.querySelector('.mc-overlay-projected-card')
+      ) {
+        if (
+          window.CalcOverlay &&
+          typeof window.CalcOverlay.open === 'function'
+        ) {
+          window.CalcOverlay.open(saved.overlayCardId);
+        }
+        if (!triggerFallbackUsed && attempts >= 8) {
+          const trigger = document.querySelector(
+            '#' + saved.overlayCardId + ' .hub-card-trigger'
+          );
+          if (trigger) {
+            triggerFallbackUsed = true;
+            trigger.click();
+          }
+        }
+      }
+
+      if (saved.farmacosMode) {
+        const mode = document.querySelector(
+          '[data-farmacos-mode="' + saved.farmacosMode + '"]'
+        );
+        if (mode && !mode.classList.contains('is-active')) mode.click();
+      }
+
+      if (
+        saved.drugId &&
+        (!saved.overlayCardId ||
+          !!document.querySelector('.mc-overlay-projected-card')) &&
+        !document.querySelector('#mc-drug-detail-page-v21[data-open="true"]') &&
+        attempts - lastDrugAttempt >= 4
+      ) {
+        const drugSelector =
+          '[data-mc-farm-canonical-drug="' + saved.drugId + '"]';
+        const drug = document.querySelector(
+          '.mc-overlay-projected-card ' + drugSelector
+        ) || document.querySelector(drugSelector);
+        if (typeof window.hmOpenDrug === 'function') {
+          lastDrugAttempt = attempts;
+          window.hmOpenDrug(saved.drugId);
+        } else if (typeof window.openFarmacoDetail === 'function') {
+          lastDrugAttempt = attempts;
+          window.openFarmacoDetail(saved.drugId);
+        } else if (drug) {
+          lastDrugAttempt = attempts;
+          drug.click();
+        }
+      }
+
+      const restored = restoreControls(saved.controls);
+      const projected = document.querySelector('.mc-overlay-projected-card');
+      const detail = document.querySelector(
+        '#mc-drug-detail-page-v21[data-open="true"]'
+      );
+      if (saved.drugId && detail && !detailReadyAt) {
+        detailReadyAt = attempts;
+      }
+      const detailScroll = detail && detail.querySelector('.mcd-scroll');
+
+      window.scrollTo(saved.scroll.windowX || 0, saved.scroll.windowY || 0);
+      if (projected) projected.scrollTop = saved.scroll.projected || 0;
+      if (detail) detail.scrollTop = saved.scroll.detail || 0;
+      if (detailScroll) detailScroll.scrollTop = saved.scroll.detailScroll || 0;
+
+      const overlayReady = !saved.overlayCardId || !!projected;
+      const drugReady = !saved.drugId || (
+        !!detail && detailReadyAt > 0 && attempts - detailReadyAt >= 4
+      );
+      const controlsReady = restored >= (saved.controls || []).length;
+
+      if (overlayReady && drugReady && controlsReady) {
+        const focus = saved.focus
+          ? findSnapshotControl(
+              saved.focus,
+              'input, select, textarea, button, [tabindex]'
+            )
+          : null;
+        if (focus && typeof focus.focus === 'function') {
+          try { focus.focus({ preventScroll: true }); }
+          catch (_) { focus.focus(); }
+        }
+        sessionStorage.removeItem(migrationStateKey(EXPECTED_VERSION));
+        window.__MC_CACHE_SESSION_RESTORED = EXPECTED_VERSION;
+        return;
+      }
+
+      if (attempts < 40) {
+        window.setTimeout(apply, 150);
+      } else {
+        window.__MC_CACHE_SESSION_RESTORE_INCOMPLETE = {
+          version: EXPECTED_VERSION,
+          overlayReady,
+          drugReady,
+          controlsReady
+        };
+      }
+    };
+
+    const start = () => window.setTimeout(apply, 0);
+    if (document.readyState === 'complete') start();
+    else window.addEventListener('load', start, { once: true });
+  };
+
+  const migrateForVersionOnce = remoteVersion => {
+    const guardKey = 'medcases-cache-reload-' + remoteVersion;
+    const currentVersion = new URL(window.location.href)
+      .searchParams.get('_mc_cache');
+
+    if (currentVersion === remoteVersion) return;
+    if (sessionStorage.getItem(guardKey) === '1') return;
+
+    if (controlledMigrationVersion !== remoteVersion) {
+      controlledMigrationVersion = remoteVersion;
+      controlledMigrationStartedAt = Date.now();
+    }
+
+    if (controlledMigrationTimer) return;
+
+    const attempt = () => {
+      controlledMigrationTimer = 0;
+      const quiet = Date.now() - lastInteractionAt >= MIGRATION_QUIET_MS;
+      const expired =
+        Date.now() - controlledMigrationStartedAt >= MIGRATION_MAX_WAIT_MS;
+
+      if (hasInteractiveSurface() && !quiet && !expired) {
+        controlledMigrationTimer = window.setTimeout(attempt, 250);
+        return;
+      }
+
+      try {
+        sessionStorage.setItem(
+          migrationStateKey(remoteVersion),
+          JSON.stringify(captureMigrationState(remoteVersion))
+        );
+      } catch (_) {}
+
+      sessionStorage.setItem(guardKey, '1');
+      const url = cacheVersionUrl(remoteVersion);
+      window.location.replace(url.toString());
+    };
+
+    controlledMigrationTimer = window.setTimeout(attempt, 250);
+  };
+
+  ['input', 'change', 'keydown', 'pointerdown', 'touchstart'].forEach(type => {
+    document.addEventListener(type, () => {
+      lastInteractionAt = Date.now();
+    }, true);
+  });
+
+  const startClientMigration = worker => {
+    if (!worker || typeof worker.postMessage !== 'function') return;
+    worker.postMessage({
+      type: 'MEDCASES_START_CLIENT_MIGRATION',
+      version: EXPECTED_VERSION
+    });
   };
 
   navigator.serviceWorker.addEventListener('message', event => {
     const data = event.data || {};
+    if (
+      data.type === 'MEDCASES_CACHE_VERSION_ACTIVE' ||
+      data.type === 'MEDCASES_CACHE_MIGRATION_REQUIRED'
+    ) {
+      startClientMigration(event.source || navigator.serviceWorker.controller);
+      migrateForVersionOnce(data.version || EXPECTED_VERSION);
+      return;
+    }
+
     if (data.type !== 'MEDCASES_CACHE_MIGRATION_STATE_REQUEST') return;
 
     const worker = event.source || navigator.serviceWorker.controller;
@@ -26986,7 +27318,8 @@ window.MedCasesBridge = {
       type: 'MEDCASES_CACHE_MIGRATION_STATE',
       version: data.version,
       requestId: data.requestId,
-      overlayOpen: hasInteractiveSurface()
+      overlayOpen: hasInteractiveSurface(),
+      canSelfMigrate: true
     });
   });
 
@@ -27042,7 +27375,7 @@ window.MedCasesBridge = {
           requestSkipWaiting(registration);
 
           setTimeout(
-            () => reloadForVersionOnce(remoteVersion),
+            () => migrateForVersionOnce(remoteVersion),
             180
           );
           return;
@@ -27070,10 +27403,12 @@ window.MedCasesBridge = {
   navigator.serviceWorker.addEventListener(
     'controllerchange',
     () => {
+      startClientMigration(navigator.serviceWorker.controller);
+
       const version =
         localStorage.getItem(LAST_VERSION_KEY);
 
-      if (version) reloadForVersionOnce(version);
+      if (version) migrateForVersionOnce(version);
     }
   );
 
@@ -27104,7 +27439,16 @@ window.MedCasesBridge = {
     runWhenStable();
   };
 
+  restoreMigratedSession();
   schedulePostBootUpdateCheck();
+
+  navigator.serviceWorker.ready
+    .then(registration => {
+      startClientMigration(
+        registration.active || navigator.serviceWorker.controller
+      );
+    })
+    .catch(() => {});
 
   window.addEventListener(
     'pageshow',
@@ -27119,6 +27463,13 @@ window.MedCasesBridge = {
       }
     }
   );
+
+  /* A tab may remain foregrounded throughout a deploy and therefore never
+     emit visibilitychange. A low-frequency probe prevents that current client
+     from staying on an old version indefinitely. */
+  window.setInterval(() => {
+    if (document.visibilityState === 'visible') checkAndRefresh();
+  }, 30000);
 })();
 </script>
 <!-- MEDCASES SILENT CACHE SELF-HEAL V511 END -->
@@ -27819,7 +28170,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   <link
     id="medcases-webview-home-v1-css"
     rel="stylesheet"
-  data-medcases-path="/css/medcases-webview-home-v1.css?v=648-home-public-audit-cache-r2"
+  data-medcases-path="/css/medcases-webview-home-v1.css?v=664-final-calculated-dose-r1"
   >
   <script id="medcases-webview-home-v1-runtime-origin-r1">
   (() => {
@@ -28385,7 +28736,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
   var lastMountSignature = "";
   var visibleOverlayRoot = null;
   var FARMACOS_RUNTIME_STYLE_ID = "medcases-farmacos-v2-runtime-style-v1-r9";
-  var FARMACOS_RUNTIME_STYLE_TEXT = "#farmacos-v2-shell{\n  --farm-v2-surface:transparent;\n  --farm-v2-surface-soft:#2D3340;\n  --farm-v2-border:#374151;\n  --farm-v2-text:#F8FAFC;\n  --farm-v2-muted:#A8B0BD;\n  --farm-v2-selected:#6B7280;\n  width:100%;\n  margin:8px 0 0;\n  color:var(--farm-v2-text);\n  background:var(--farm-v2-surface);\n  display:block !important;\n  visibility:visible !important;\n  opacity:1 !important;\n  min-height:120px;\n  overflow:visible;\n}\nbody.light-mode #farmacos-v2-shell{\n  --farm-v2-surface:transparent;\n  --farm-v2-surface-soft:#F5F7F9;\n  --farm-v2-border:#D8E0E7;\n  --farm-v2-text:#0F172A;\n  --farm-v2-muted:#667085;\n  --farm-v2-selected:#475467;\n}\n#farmacos-v2-shell,\n#farmacos-v2-shell *{\n  box-sizing:border-box;\n}\n#farmacos-v2-shell .farmacos-v2-tabs{\n  display:flex;\n  gap:20px;\n  overflow-x:auto;\n  padding:0 2px;\n  border-bottom:1px solid var(--farm-v2-border);\n  scrollbar-width:none;\n}\n#farmacos-v2-shell .farmacos-v2-tabs::-webkit-scrollbar{\n  display:none;\n}\n#farmacos-v2-shell .farmacos-v2-tab{\n  position:relative;\n  flex:0 0 auto;\n  border:0;\n  background:transparent;\n  color:var(--farm-v2-muted);\n  padding:12px 0 13px;\n  font:600 13px/1.2 -apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;\n  cursor:pointer;\n}\n#farmacos-v2-shell .farmacos-v2-tab.is-active{\n  color:var(--farm-v2-text);\n}\n#farmacos-v2-shell .farmacos-v2-tab.is-active::after{\n  content:\"\";\n  position:absolute;\n  left:0;\n  right:0;\n  bottom:-1px;\n  height:2px;\n  border-radius:2px;\n  background:var(--farm-v2-selected);\n}\n#farmacos-v2-shell .farmacos-v2-panel{\n  display:none;\n}\n#farmacos-v2-shell .farmacos-v2-panel.is-active{\n  display:block;\n}\n#farmacos-v2-shell .farmacos-v2-section-head{\n  display:flex;\n  align-items:flex-end;\n  justify-content:space-between;\n  gap:12px;\n  padding:15px 2px 8px;\n}\n#farmacos-v2-shell .farmacos-v2-section-title{\n  color:var(--farm-v2-text);\n  font-size:13px;\n  font-weight:700;\n  line-height:1.25;\n  letter-spacing:.01em;\n}\n#farmacos-v2-shell .farmacos-v2-section-help{\n  color:var(--farm-v2-muted);\n  font-size:11px;\n  line-height:1.25;\n  text-align:right;\n}\n#farmacos-v2-shell .farmacos-v2-quick-label{\n  color:var(--farm-v2-muted);\n  font-size:10px;\n  font-weight:650;\n  line-height:1.2;\n  margin:1px 2px 7px;\n  text-transform:uppercase;\n  letter-spacing:.04em;\n}\n#farmacos-v2-shell .farmacos-v2-quick{\n  display:flex;\n  gap:7px;\n  overflow-x:auto;\n  padding:0 2px 13px;\n  scrollbar-width:none;\n}\n#farmacos-v2-shell .farmacos-v2-quick::-webkit-scrollbar{\n  display:none;\n}\n#farmacos-v2-shell .farmacos-v2-chip{\n  flex:0 0 auto;\n  border:1px solid var(--farm-v2-border);\n  border-radius:999px;\n  background:transparent;\n  color:var(--farm-v2-muted);\n  padding:7px 10px;\n  font-size:11px;\n  font-weight:600;\n  line-height:1.2;\n  white-space:nowrap;\n  cursor:pointer;\n}\n#farmacos-v2-shell .farmacos-v2-chip.is-active{\n  background:var(--farm-v2-surface-soft);\n  color:var(--farm-v2-text);\n}\n#farmacos-v2-shell .farmacos-v2-context-list,\n#farmacos-v2-shell .farmacos-v2-group-list{\n  border-top:1px solid var(--farm-v2-border);\n}\n#farmacos-v2-shell .farmacos-v2-context-row,\n#farmacos-v2-shell .farmacos-v2-module-row,\n#farmacos-v2-shell .farmacos-v2-group-row{\n  width:100%;\n  min-height:58px;\n  display:flex;\n  align-items:center;\n  gap:11px;\n  border:0;\n  border-bottom:1px solid var(--farm-v2-border);\n  background:transparent;\n  color:var(--farm-v2-text);\n  padding:12px 2px;\n  text-align:left;\n  cursor:pointer;\n}\n#farmacos-v2-shell .farmacos-v2-module-row{\n  min-height:52px;\n  padding-left:20px;\n  padding-right:2px;\n}\n#farmacos-v2-shell .farmacos-v2-context-row:hover,\n#farmacos-v2-shell .farmacos-v2-module-row:hover,\n#farmacos-v2-shell .farmacos-v2-group-row:hover{\n  background:var(--farm-v2-surface-soft);\n}\n#farmacos-v2-shell .farmacos-v2-row-main{\n  min-width:0;\n  flex:1;\n  display:block;\n}\n#farmacos-v2-shell .farmacos-v2-row-title{\n  display:block;\n  color:var(--farm-v2-text);\n  font-size:14px;\n  font-weight:650;\n  line-height:1.25;\n}\n#farmacos-v2-shell .farmacos-v2-row-subtitle{\n  display:block;\n  color:var(--farm-v2-muted);\n  font-size:11px;\n  line-height:1.3;\n  margin-top:4px;\n}\n#farmacos-v2-shell .farmacos-v2-row-count{\n  flex:0 0 auto;\n  color:var(--farm-v2-muted);\n  font-size:11px;\n  line-height:1;\n  font-variant-numeric:tabular-nums;\n}\n#farmacos-v2-shell .farmacos-v2-chevron{\n  flex:0 0 auto;\n  color:var(--farm-v2-muted);\n  font-size:18px;\n  line-height:1;\n  transition:transform .18s ease;\n}\n#farmacos-v2-shell .farmacos-v2-context.is-open > .farmacos-v2-context-row .farmacos-v2-chevron{\n  transform:rotate(90deg);\n}\n#farmacos-v2-shell .farmacos-v2-modules{\n  display:none;\n  background:var(--farm-v2-surface-soft);\n}\n#farmacos-v2-shell .farmacos-v2-context.is-open > .farmacos-v2-modules{\n  display:block;\n}\n#farmacos-v2-shell .farmacos-v2-empty{\n  color:var(--farm-v2-muted);\n  padding:32px 14px;\n  text-align:center;\n  font-size:12px;\n  line-height:1.45;\n  border-bottom:1px solid var(--farm-v2-border);\n}\n@media (max-width:520px){\n  #farmacos-v2-shell .farmacos-v2-tabs{\n    gap:17px;\n  }\n  #farmacos-v2-shell .farmacos-v2-section-head{\n    padding-top:13px;\n  }\n  #farmacos-v2-shell .farmacos-v2-row-title{\n    font-size:13.5px;\n  }\n}\n#farmacos-v2-shell ~ [data-farmacos-v2-legacy-control],\n[data-farmacos-v2-legacy-control][style*=\"display: none\"]{\n  display:none !important;\n}\n#farmacos-v2-shell{\n  position:relative;\n  z-index:1;\n}\n[data-farmacos-v2-legacy-control]{\n  display:none !important;\n}\n#farmacos-v2-shell[data-farmacos-owner=\"drug-visible-surface\"]{\n  margin-top:12px;\n}\n#farmacos-v2-shell[data-farmacos-mount-strategy=\"stable-after-search\"]{\n  display:block !important;\n  position:relative;\n  width:100%;\n  max-width:none;\n}\n#farmacos-v2-shell[data-farmacos-mount-strategy=\"visible-overlay-after-search\"]{\n  display:block !important;\n  position:relative !important;\n  width:100% !important;\n  min-width:0 !important;\n  max-width:none !important;\n  height:auto !important;\n  min-height:120px !important;\n  visibility:visible !important;\n  opacity:1 !important;\n  transform:none !important;\n  margin:12px 0 0 !important;\n}\n#farmacos-v2-shell[data-farmacos-mount-strategy=\"visible-overlay-after-search\"] .farmacos-v2-tabs{\n  width:100%;\n}";
+  var FARMACOS_RUNTIME_STYLE_TEXT = "#farmacos-v2-shell{\n  --farm-v2-surface:transparent;\n  --farm-v2-surface-soft:#292929;\n  --farm-v2-border:#374151;\n  --farm-v2-text:#F8FAFC;\n  --farm-v2-muted:#A8B0BD;\n  --farm-v2-selected:#6B7280;\n  width:100%;\n  margin:8px 0 0;\n  color:var(--farm-v2-text);\n  background:var(--farm-v2-surface);\n  display:block !important;\n  visibility:visible !important;\n  opacity:1 !important;\n  min-height:120px;\n  overflow:visible;\n}\nbody.light-mode #farmacos-v2-shell{\n  --farm-v2-surface:transparent;\n  --farm-v2-surface-soft:#F5F7F9;\n  --farm-v2-border:#D8E0E7;\n  --farm-v2-text:#0F172A;\n  --farm-v2-muted:#667085;\n  --farm-v2-selected:#475467;\n}\n#farmacos-v2-shell,\n#farmacos-v2-shell *{\n  box-sizing:border-box;\n}\n#farmacos-v2-shell .farmacos-v2-tabs{\n  display:flex;\n  gap:20px;\n  overflow-x:auto;\n  padding:0 2px;\n  border-bottom:1px solid var(--farm-v2-border);\n  scrollbar-width:none;\n}\n#farmacos-v2-shell .farmacos-v2-tabs::-webkit-scrollbar{\n  display:none;\n}\n#farmacos-v2-shell .farmacos-v2-tab{\n  position:relative;\n  flex:0 0 auto;\n  border:0;\n  background:transparent;\n  color:var(--farm-v2-muted);\n  padding:12px 0 13px;\n  font:600 13px/1.2 -apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;\n  cursor:pointer;\n}\n#farmacos-v2-shell .farmacos-v2-tab.is-active{\n  color:var(--farm-v2-text);\n}\n#farmacos-v2-shell .farmacos-v2-tab.is-active::after{\n  content:\"\";\n  position:absolute;\n  left:0;\n  right:0;\n  bottom:-1px;\n  height:2px;\n  border-radius:2px;\n  background:var(--farm-v2-selected);\n}\n#farmacos-v2-shell .farmacos-v2-panel{\n  display:none;\n}\n#farmacos-v2-shell .farmacos-v2-panel.is-active{\n  display:block;\n}\n#farmacos-v2-shell .farmacos-v2-section-head{\n  display:flex;\n  align-items:flex-end;\n  justify-content:space-between;\n  gap:12px;\n  padding:15px 2px 8px;\n}\n#farmacos-v2-shell .farmacos-v2-section-title{\n  color:var(--farm-v2-text);\n  font-size:13px;\n  font-weight:700;\n  line-height:1.25;\n  letter-spacing:.01em;\n}\n#farmacos-v2-shell .farmacos-v2-section-help{\n  color:var(--farm-v2-muted);\n  font-size:11px;\n  line-height:1.25;\n  text-align:right;\n}\n#farmacos-v2-shell .farmacos-v2-quick-label{\n  color:var(--farm-v2-muted);\n  font-size:10px;\n  font-weight:650;\n  line-height:1.2;\n  margin:1px 2px 7px;\n  text-transform:uppercase;\n  letter-spacing:.04em;\n}\n#farmacos-v2-shell .farmacos-v2-quick{\n  display:flex;\n  gap:7px;\n  overflow-x:auto;\n  padding:0 2px 13px;\n  scrollbar-width:none;\n}\n#farmacos-v2-shell .farmacos-v2-quick::-webkit-scrollbar{\n  display:none;\n}\n#farmacos-v2-shell .farmacos-v2-chip{\n  flex:0 0 auto;\n  border:1px solid var(--farm-v2-border);\n  border-radius:999px;\n  background:transparent;\n  color:var(--farm-v2-muted);\n  padding:7px 10px;\n  font-size:11px;\n  font-weight:600;\n  line-height:1.2;\n  white-space:nowrap;\n  cursor:pointer;\n}\n#farmacos-v2-shell .farmacos-v2-chip.is-active{\n  background:var(--farm-v2-surface-soft);\n  color:var(--farm-v2-text);\n}\n#farmacos-v2-shell .farmacos-v2-context-list,\n#farmacos-v2-shell .farmacos-v2-group-list{\n  border-top:1px solid var(--farm-v2-border);\n}\n#farmacos-v2-shell .farmacos-v2-context-row,\n#farmacos-v2-shell .farmacos-v2-module-row,\n#farmacos-v2-shell .farmacos-v2-group-row{\n  width:100%;\n  min-height:58px;\n  display:flex;\n  align-items:center;\n  gap:11px;\n  border:0;\n  border-bottom:1px solid var(--farm-v2-border);\n  background:transparent;\n  color:var(--farm-v2-text);\n  padding:12px 2px;\n  text-align:left;\n  cursor:pointer;\n}\n#farmacos-v2-shell .farmacos-v2-module-row{\n  min-height:52px;\n  padding-left:20px;\n  padding-right:2px;\n}\n#farmacos-v2-shell .farmacos-v2-context-row:hover,\n#farmacos-v2-shell .farmacos-v2-module-row:hover,\n#farmacos-v2-shell .farmacos-v2-group-row:hover{\n  background:var(--farm-v2-surface-soft);\n}\n#farmacos-v2-shell .farmacos-v2-row-main{\n  min-width:0;\n  flex:1;\n  display:block;\n}\n#farmacos-v2-shell .farmacos-v2-row-title{\n  display:block;\n  color:var(--farm-v2-text);\n  font-size:14px;\n  font-weight:650;\n  line-height:1.25;\n}\n#farmacos-v2-shell .farmacos-v2-row-subtitle{\n  display:block;\n  color:var(--farm-v2-muted);\n  font-size:11px;\n  line-height:1.3;\n  margin-top:4px;\n}\n#farmacos-v2-shell .farmacos-v2-row-count{\n  flex:0 0 auto;\n  color:var(--farm-v2-muted);\n  font-size:11px;\n  line-height:1;\n  font-variant-numeric:tabular-nums;\n}\n#farmacos-v2-shell .farmacos-v2-chevron{\n  flex:0 0 auto;\n  color:var(--farm-v2-muted);\n  font-size:18px;\n  line-height:1;\n  transition:transform .18s ease;\n}\n#farmacos-v2-shell .farmacos-v2-context.is-open > .farmacos-v2-context-row .farmacos-v2-chevron{\n  transform:rotate(90deg);\n}\n#farmacos-v2-shell .farmacos-v2-modules{\n  display:none;\n  background:var(--farm-v2-surface-soft);\n}\n#farmacos-v2-shell .farmacos-v2-context.is-open > .farmacos-v2-modules{\n  display:block;\n}\n#farmacos-v2-shell .farmacos-v2-empty{\n  color:var(--farm-v2-muted);\n  padding:32px 14px;\n  text-align:center;\n  font-size:12px;\n  line-height:1.45;\n  border-bottom:1px solid var(--farm-v2-border);\n}\n@media (max-width:520px){\n  #farmacos-v2-shell .farmacos-v2-tabs{\n    gap:17px;\n  }\n  #farmacos-v2-shell .farmacos-v2-section-head{\n    padding-top:13px;\n  }\n  #farmacos-v2-shell .farmacos-v2-row-title{\n    font-size:13.5px;\n  }\n}\n#farmacos-v2-shell ~ [data-farmacos-v2-legacy-control],\n[data-farmacos-v2-legacy-control][style*=\"display: none\"]{\n  display:none !important;\n}\n#farmacos-v2-shell{\n  position:relative;\n  z-index:1;\n}\n[data-farmacos-v2-legacy-control]{\n  display:none !important;\n}\n#farmacos-v2-shell[data-farmacos-owner=\"drug-visible-surface\"]{\n  margin-top:12px;\n}\n#farmacos-v2-shell[data-farmacos-mount-strategy=\"stable-after-search\"]{\n  display:block !important;\n  position:relative;\n  width:100%;\n  max-width:none;\n}\n#farmacos-v2-shell[data-farmacos-mount-strategy=\"visible-overlay-after-search\"]{\n  display:block !important;\n  position:relative !important;\n  width:100% !important;\n  min-width:0 !important;\n  max-width:none !important;\n  height:auto !important;\n  min-height:120px !important;\n  visibility:visible !important;\n  opacity:1 !important;\n  transform:none !important;\n  margin:12px 0 0 !important;\n}\n#farmacos-v2-shell[data-farmacos-mount-strategy=\"visible-overlay-after-search\"] .farmacos-v2-tabs{\n  width:100%;\n}";
 
   function ensureFarmacosRuntimeStyle() {
     var host = document.head || document.documentElement;
@@ -38814,7 +39165,7 @@ window.__MC_FARMACOS_GROUPS_PHASE1_RENDER_ONLY=true;
 }
 
 #farmacos-v2-shell .mc-fnav-drug-row:active{
-  background:var(--farm-v2-surface-soft,#2D3340);
+  background:var(--farm-v2-surface-soft,#292929);
 }
 
 #farmacos-v2-shell .mc-fnav-drug-main{
@@ -41784,7 +42135,7 @@ ul:not(.fd-clean-list) > li::marker{
 </script>
 <!-- MEDCASES-CALC-FARMACOS-ESC-SHELL-GUARD-BULLET-CANONICAL-MACROBUILD-V1-B-R1 END -->
 
-<script src="/js/calculator-overlay.js?v=648-home-public-audit-cache-r2" defer></script>
+<script src="/js/calculator-overlay.js?v=664-final-calculated-dose-r1" defer></script>
 <!-- CALC-HOME-MEDCASES-V1-B-R0 START -->
 <style id="calc-home-medcases-v1-b-r0" media="not all">
 /*
@@ -68574,7 +68925,55 @@ console.info('['+BUILD+'] MOUNTED',{
 
   var dosePattern = /(?:[<>≤≥]\s*)?\d+(?:[.,]\d+)?(?:\s*[–—-]\s*\d+(?:[.,]\d+)?)?\s*(?:mg\/dL|g\/dL|mcg|µg|mg|mEq|mmol|mol|kg|mL|UI|g|L|U)(?:\s*\/(?:kg|m²|m2|dia|día|dose|dosis|h|min|mL|L|dL))*(?:\s+(?:VO|IV|EV|IM|SC|SL|IN))?(?:\s+(?:(?:a\s+cada|cada)\s+\d+(?:[.,]\d+)?\s*(?:h|horas?|min)|\d+x\/dia))?/giu;
 
+  function emphasizeCalculatedResult(root) {
+    var owner = root || document;
+    var rows = [];
+    if (owner.matches && owner.matches(
+      '#mc-drug-detail-page-v21 .mcd-result-text.mcd-r8-visible-bridge .mcd-r8-row'
+    )) rows.push(owner);
+    if (owner.querySelectorAll) {
+      rows.push.apply(rows, owner.querySelectorAll(
+        '#mc-drug-detail-page-v21 .mcd-result-text.mcd-r8-visible-bridge .mcd-r8-row'
+      ));
+    }
+
+    rows.forEach(function (row) {
+      var walker = document.createTreeWalker(row, NodeFilter.SHOW_TEXT, {
+        acceptNode: function (node) {
+          if (!node.nodeValue || !dosePattern.test(node.nodeValue)) {
+            dosePattern.lastIndex = 0;
+            return NodeFilter.FILTER_REJECT;
+          }
+          dosePattern.lastIndex = 0;
+          return node.parentElement &&
+            !node.parentElement.closest('.mc-calculated-dose-emphasis,script,style')
+            ? NodeFilter.FILTER_ACCEPT
+            : NodeFilter.FILTER_REJECT;
+        }
+      });
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (node) {
+        var text = node.nodeValue;
+        var frag = document.createDocumentFragment();
+        var last = 0;
+        text.replace(dosePattern, function (match, offset) {
+          if (offset > last) frag.appendChild(document.createTextNode(text.slice(last, offset)));
+          var strong = document.createElement('strong');
+          strong.className = 'mc-calculated-dose-emphasis';
+          strong.textContent = match;
+          frag.appendChild(strong);
+          last = offset + match.length;
+          return match;
+        });
+        if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+        node.parentNode.replaceChild(frag, node);
+      });
+    });
+  }
+
   function emphasize(root) {
+    emphasizeCalculatedResult(root);
     var scope = root && root.matches && root.matches('.mcd-sec[data-mc-block="3"] .mcd-body')
       ? root
       : (root || document).querySelector?.('.mcd-sec[data-mc-block="3"] .mcd-body');
@@ -68768,8 +69167,8 @@ console.info('['+BUILD+'] MOUNTED',{
 })();
 </script>
 <!-- CALC-FARMACOS-NAV-SINGLE-PANEL-V2 END -->
-<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=648-home-public-audit-cache-r2" />
-<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=648-home-public-audit-cache-r2" />
+<link id="medcases-global-premium-ui-v1-css" rel="stylesheet" href="/css/medcases-webview-home-v1.css?v=664-final-calculated-dose-r1" />
+<link id="medcases-home-premium-r2-css" rel="stylesheet" href="/css/medcases-home-premium-r2.css?v=664-final-calculated-dose-r1" />
 
 </body>
 </html>

@@ -6362,3 +6362,76 @@ body.theme-light.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hu
 /* CALC-ELETROLITOS-OSMOLARIDADE-C1-COMPLETE-SCREEN END */
 html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="osm"] #elec2-step3.m4d-collapsed .m4e-gravity-override { display:none !important; }
 html body.calc-overlay-open #page-home#page-home #hub-card-eletrolitos#hub-card-eletrolitos #elec2-calc[data-m4c-screen="osm"] .elec2-protocol-note { background:transparent !important; color:var(--mc-mono-muted,#8b8b8b) !important; font-size:13px; line-height:1.5; }
+
+/* FARMACOS-NEUTRAL-DARK-SURFACES-R1
+   Only the Fármacos application is neutralized. Home and light mode stay intact. */
+body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"])
+  #calculator-overlay-container:has(#hub-card-farmacos.mc-overlay-projected-card),
+body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"])
+  #calculator-overlay-container.mc-farmacos-app-subpage-active,
+body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"])
+  #hub-card-farmacos.mc-overlay-projected-card {
+  background: var(--mc-mono-bg, #171717) !important;
+  background-image: none !important;
+}
+
+body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"])
+  #hub-card-farmacos.mc-overlay-projected-card {
+  --mc-farm-soft: var(--mc-mono-elevated, #292929);
+  --mc-farm-search-bg: var(--mc-mono-surface, #212121);
+}
+
+body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-current-theme="light"])
+  #hub-card-farmacos.mc-overlay-projected-card #farmacos-v2-shell {
+  --farm-v2-surface: transparent;
+  --farm-v2-surface-soft: var(--mc-mono-elevated, #292929);
+  background: transparent !important;
+}
+
+/* The older DARK-CANVAS-V2 block has duplicated IDs and therefore wins over
+   the generic neutral rules above. Match that scope so the surface actually
+   shown to the user is neutral, while leaving Home and light mode untouched. */
+html[data-theme="dark"] body.calc-overlay-open #page-home#page-home
+  #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card {
+  --mc-pharm-dark-canvas: var(--mc-mono-bg, #171717);
+  background: var(--mc-mono-bg, #171717) !important;
+  background-color: var(--mc-mono-bg, #171717) !important;
+  background-image: none !important;
+}
+
+html[data-theme="dark"] body.calc-overlay-open #page-home#page-home
+  #hub-card-farmacos#hub-card-farmacos.mc-overlay-projected-card :is(
+    .hub-card-body,
+    .hub-card-inner.mc-screen-content,
+    #farmacos-v2-shell,
+    .farmacos-v2-tabs,
+    .farmacos-v2-panel,
+    .farmacos-v2-context-list,
+    .farmacos-v2-group-list,
+    .farmacos-v2-modules,
+    .hm-drug-list,
+    .mc-fnav-list,
+    .farmacos-v2-context-row,
+    .farmacos-v2-group-row,
+    .farmacos-v2-module-row,
+    .hm-drug-item,
+    .mc-fnav-drug-row,
+    button[id^="hm-di-"]
+  ) {
+  background: var(--mc-mono-bg, #171717) !important;
+  background-color: var(--mc-mono-bg, #171717) !important;
+  background-image: none !important;
+}
+
+/* FARMACOS-CALCULATED-DOSE-EMPHASIS-R1
+   The numeric dose and its unit are exactly 5px larger than the surrounding
+   result sentence. Clinical values and rendering logic remain untouched. */
+html body > #mc-drug-detail-page-v21 .mcd-r7-dose > .mcd-r7-strong,
+html body > #mc-drug-detail-page-v21 .mcd-result-dose > .mcd-result-strong,
+html body > #mc-drug-detail-page-v21 .mcd-result-text.mcd-r8-visible-bridge .mcd-r8-row > .mc-calculated-dose-emphasis,
+html body .mc-cdd-result-value > .mc-cdd-result-dose-token {
+  font-size: calc(1em + 5px) !important;
+  font-weight: 800 !important;
+  line-height: inherit !important;
+  white-space: nowrap !important;
+}
