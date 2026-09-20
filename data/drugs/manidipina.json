@@ -5,232 +5,90 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico de ação vascular",
+    "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico",
     "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica e pressão arterial.",
-    "pharmacodynamics": "Produz vasodilatação arterial com pouco efeito direto sobre condução AV em doses terapêuticas. Pode causar cefaleia, rubor, palpitações, hipotensão e edema periférico.",
-    "commonAdverseEffects": [
-      "cefaleia",
-      "rubor",
-      "edema periférico",
-      "tontura",
-      "palpitações"
-    ],
-    "dangerousAdverseEffects": [
-      "hipotensão sintomática",
-      "piora de angina em pacientes suscetíveis",
-      "reação de hipersensibilidade rara"
-    ],
-    "interactions": [
-      "Inibidores de CYP3A4 podem aumentar exposição",
-      "Indutores de CYP3A4 podem reduzir exposição",
-      "Outros anti-hipertensivos aumentam hipotensão",
-      "Grapefruit pode aumentar exposição em di-hidropiridinas sensíveis a CYP3A4"
-    ],
-    "monitoring": [
-      "Pressão arterial",
-      "edema periférico",
-      "frequência cardíaca",
-      "sintomas de angina ou hipotensão",
-      "função renal e hepática quando houver comorbidades"
-    ],
-    "preparation": "Comprimidos não exigem reconstituição.",
-    "infusionProtocol": "Não se aplica: formulação oral.",
-    "patientEducation": [
-      "Tomar exatamente conforme horário e relação com alimentos indicada para o produto",
-      "procurar avaliação por síncope, edema importante ou piora de angina",
-      "evitar grapefruit quando a bula indicar"
-    ],
-    "safetyFlags": [
-      "HIPOTENSAO",
-      "EDEMA_PERIFERICO",
-      "CYP3A4"
-    ],
+    "pharmacodynamics": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica e pressão arterial.",
+    "commonAdverseEffects": "cefaleia; rubor; edema periférico; tontura; palpitações",
+    "dangerousAdverseEffects": "hipotensão sintomática; piora de angina em pacientes suscetíveis; reação de hipersensibilidade rara",
+    "interactions": "Inibidores de CYP3A4 podem aumentar exposição; Indutores de CYP3A4 podem reduzir exposição; Outros anti-hipertensivos aumentam hipotensão; Grapefruit pode aumentar exposição em di-hidropiridinas sensíveis a CYP3A4",
+    "monitoring": "Não ultrapassar 10 mg/dia em hepatopatia leve; Não usar com ClCr <10 mL/min nem em hepatopatia moderada-grave.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "safetyFlags": "Hipotensão importante, angina paradoxal e eventos por interação com inibidores de CYP3A4.",
     "name": "Manidipina",
-    "class": "Bloqueador de canais de cálcio di-hidropiridínico de ação vascular",
-    "pharmacokinetics": "Alta lipofilicidade e metabolismo hepático extenso; absorção aumenta com alimentos. A farmacocinética muda pouco na insuficiência renal leve-moderada, mas disfunção grave é contraindicada.",
-    "indications": [
-      "Hipertensão essencial leve a moderada em adultos"
-    ],
-    "commercialNames": [
-      "Iperten"
-    ],
+    "class": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Hipertensão essencial leve a moderada em adultos",
+    "commercialNames": "Iperten",
     "presentation": "Comprimidos de 10 e 20 mg.",
-    "presentations": [
-      "10 mg",
-      "20 mg"
-    ],
-    "dose": {
-      "hypertension": "10 mg uma vez ao dia; se após 2-4 semanas o efeito for insuficiente, aumentar para 20 mg uma vez ao dia."
-    },
-    "pediatricDose": "Contraindicado em crianças conforme ficha técnica citada.",
-    "renalDose": "Insuficiência leve-moderada: cautela ao aumentar de 10 para 20 mg/dia. Contraindicado se ClCr <10 mL/min.",
-    "hepaticDose": "Insuficiência hepática leve: não ultrapassar 10 mg/dia. Contraindicado na insuficiência hepática moderada-grave.",
-    "contraindications": [
-      "Crianças",
-      "angina instável ou primeiras 4 semanas pós-IAM",
-      "insuficiência cardíaca congestiva não tratada",
-      "ClCr <10 mL/min",
-      "insuficiência hepática moderada-grave",
-      "hipersensibilidade a di-hidropiridinas"
-    ],
-    "administration": "Tomar pela manhã após o café da manhã, com líquido e sem mastigar. Evitar suco de grapefruit.",
-    "pregnancy": "Não administrar durante a gestação pela ausência de dados adequados e risco potencial de classe.",
-    "lactation": "Evitar durante a amamentação; se o tratamento for necessário, interromper amamentação conforme bula.",
-    "specialPopulations": {
-      "elderly": "Dose recomendada 10 mg/dia; avaliar cuidadosamente qualquer aumento.",
-      "peritonealDialysis": "Pode produzir efluente peritoneal turvo por aumento de triglicérides.",
-      "hepatic": "Leve: máximo 10 mg/dia."
-    },
-    "clinicalPearls": [
-      "Em idosos a dose de 10 mg/dia costuma ser suficiente",
-      "Efluente turvo na diálise peritoneal pode ser confundido com peritonite infecciosa."
-    ],
-    "guidelineRecommendations": [
-      "Como di-hidropiridínico de longa ação, alinha-se à classe usada para hipertensão; seu uso específico depende da autorização regional."
-    ],
-    "alerts": [
-      "Não ultrapassar 10 mg/dia em hepatopatia leve",
-      "Não usar com ClCr <10 mL/min nem em hepatopatia moderada-grave."
-    ],
-    "adverseEffects": {
-      "common": [
-        "cefaleia",
-        "rubor",
-        "edema periférico",
-        "tontura",
-        "palpitações"
-      ],
-      "dangerous": [
-        "hipotensão sintomática",
-        "piora de angina em pacientes suscetíveis",
-        "reação de hipersensibilidade rara"
-      ]
-    },
+    "presentations": "Comprimidos de 10 e 20 mg.",
+    "dose": "hypertension: 10 mg uma vez ao dia; se após 2-4 semanas o efeito for insuficiente, aumentar para 20 mg uma vez ao dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "contraindications": "Crianças; angina instável ou primeiras 4 semanas pós-IAM; insuficiência cardíaca congestiva não tratada; ClCr <10 mL/min; insuficiência hepática moderada-grave; hipersensibilidade a di-hidropiridinas",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "alerts": "Hipotensão importante, angina paradoxal e eventos por interação com inibidores de CYP3A4.; Não ultrapassar 10 mg/dia em hepatopatia leve; Não usar com ClCr <10 mL/min nem em hepatopatia moderada-grave.",
+    "adverseEffects": "Cefaleia, edema periférico, rubor, palpitação e tontura.; Hipotensão importante, angina paradoxal e eventos por interação com inibidores de CYP3A4.",
     "references": [
-      "https://cima.aemps.es/cima/dochtml/ft/72458/FT_72458.html",
-      "https://base-donnees-publique.medicaments.gouv.fr/medicament/67699283/extrait",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+      "Fonte primária/oficial - https://cima.aemps.es/cima/publico/lista.html",
+      "Fonte primária/oficial - https://www.aifa.gov.it/trova-farmaco"
     ],
-    "ref": "https://cima.aemps.es/cima/dochtml/ft/72458/FT_72458.html"
+    "ref": "https://cima.aemps.es/cima/publico/lista.html"
   },
   "es": {
-    "pharmacologicClass": "Bloqueante de canales de calcio dihidropiridínico de acción vascular",
-    "mechanism": "Bloquea canales de calcio tipo L en músculo liso arterial, reduciendo entrada de calcio, resistencia vascular sistémica y presión arterial.",
-    "pharmacodynamics": "Produce vasodilatación arterial con escaso efecto directo sobre conducción AV a dosis terapéuticas. Puede causar cefalea, rubor, palpitaciones, hipotensión y edema periférico.",
-    "commonAdverseEffects": [
-      "cefalea",
-      "rubor",
-      "edema periférico",
-      "mareo",
-      "palpitaciones"
-    ],
-    "dangerousAdverseEffects": [
-      "hipotensión sintomática",
-      "empeoramiento de angina en pacientes susceptibles",
-      "reacción de hipersensibilidad rara"
-    ],
-    "interactions": [
-      "Inhibidores CYP3A4 pueden aumentar exposición",
-      "Inductores CYP3A4 pueden reducir exposición",
-      "Otros antihipertensivos aumentan hipotensión",
-      "Pomelo puede aumentar exposición en dihidropiridinas sensibles a CYP3A4"
-    ],
-    "monitoring": [
-      "Presión arterial",
-      "edema periférico",
-      "frecuencia cardíaca",
-      "síntomas de angina o hipotensión",
-      "función renal y hepática cuando existan comorbilidades"
-    ],
-    "preparation": "Tabletas no requieren reconstitución.",
-    "infusionProtocol": "No aplica: formulación oral.",
-    "patientEducation": [
-      "Tomar exactamente según horario y relación con alimentos indicada para el producto",
-      "consultar por síncope, edema marcado o empeoramiento de angina",
-      "evitar pomelo cuando la ficha lo indique"
-    ],
-    "safetyFlags": [
-      "HIPOTENSION",
-      "EDEMA_PERIFERICO",
-      "CYP3A4"
-    ],
-    "name": "Manidipino",
-    "class": "Bloqueante de canales de calcio dihidropiridínico de acción vascular",
-    "pharmacokinetics": "Alta lipofilia y metabolismo hepático extenso; absorción aumenta con alimentos. La farmacocinética cambia poco en insuficiencia renal leve-moderada, pero el deterioro grave está contraindicado.",
-    "indications": [
-      "Hipertensión esencial leve a moderada en adultos"
-    ],
-    "commercialNames": [
-      "Iperten"
-    ],
-    "presentation": "Tabletas de 10 y 20 mg.",
-    "presentations": [
-      "10 mg",
-      "20 mg"
-    ],
-    "dose": {
-      "hypertension": "10 mg una vez al día; si tras 2-4 semanas el efecto es insuficiente, aumentar a 20 mg una vez al día."
-    },
-    "pediatricDose": "Contraindicado en niños según ficha técnica citada.",
-    "renalDose": "Insuficiencia leve-moderada: precaución al aumentar de 10 a 20 mg/día. Contraindicado si CrCl <10 mL/min.",
-    "hepaticDose": "Insuficiencia hepática leve: no superar 10 mg/día. Contraindicado en insuficiencia hepática moderada-grave.",
-    "contraindications": [
-      "Niños",
-      "angina inestable o primeras 4 semanas post-IAM",
-      "insuficiencia cardíaca congestiva no tratada",
-      "CrCl <10 mL/min",
-      "insuficiencia hepática moderada-grave",
-      "hipersensibilidad a dihidropiridinas"
-    ],
-    "administration": "Tomar por la mañana después del desayuno, con líquido y sin masticar. Evitar zumo de pomelo.",
-    "pregnancy": "No administrar durante embarazo por ausencia de datos adecuados y riesgo potencial de clase.",
-    "lactation": "Evitar durante lactancia; si el tratamiento es necesario, interrumpir lactancia según ficha.",
-    "specialPopulations": {
-      "elderly": "Dosis recomendada 10 mg/día; valorar cuidadosamente cualquier aumento.",
-      "peritonealDialysis": "Puede producir efluente peritoneal turbio por aumento de triglicéridos.",
-      "hepatic": "Leve: máximo 10 mg/día."
-    },
-    "clinicalPearls": [
-      "En ancianos la dosis de 10 mg/día suele ser suficiente",
-      "El efluente turbio en diálisis peritoneal puede confundirse con peritonitis infecciosa."
-    ],
-    "guidelineRecommendations": [
-      "Como dihidropiridínico de acción prolongada, se alinea con la clase usada para hipertensión; su uso específico depende de autorización regional."
-    ],
-    "alerts": [
-      "No superar 10 mg/día en hepatopatía leve",
-      "No usar con CrCl <10 mL/min ni en hepatopatía moderada-grave."
-    ],
-    "adverseEffects": {
-      "common": [
-        "cefalea",
-        "rubor",
-        "edema periférico",
-        "mareo",
-        "palpitaciones"
-      ],
-      "dangerous": [
-        "hipotensión sintomática",
-        "empeoramiento de angina en pacientes susceptibles",
-        "reacción de hipersensibilidad rara"
-      ]
-    },
+    "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica y pressão arterial.",
+    "pharmacodynamics": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica y pressão arterial.",
+    "commonAdverseEffects": "cefaleia; rubor; edema periférico; tontura; palpitações",
+    "dangerousAdverseEffects": "hipotensão sintomática; piora de angina em pacientes suscetíveis; reação de hipersensibilidade rara",
+    "interactions": "Inibidores de CYP3A4 podem aumentar exposição; Indutores de CYP3A4 podem reduzir exposição; Outros anti-hipertensivos aumentam hipotensão; Grapefruit pode aumentar exposição em di-hidropiridinas sensíveis a CYP3A4",
+    "monitoring": "No ultrapassar 10 mg/dia em hepatopatia leve; No usar con ClCr <10 mL/min nem em hepatopatia moderada-grave.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "safetyFlags": "Hipotensão importante, angina paradoxal y eventos por interação con inibidores de CYP3A4.",
+    "name": "Manidipina",
+    "class": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Hipertensão essencial leve a moderada em adultos",
+    "commercialNames": "Iperten",
+    "presentation": "Comprimidos de 10 y 20 mg.",
+    "presentations": "Comprimidos de 10 y 20 mg.",
+    "dose": "hypertension: 10 mg uma vez ao dia; se após 2-4 semanas o efeito for insuficiente, aumentar para 20 mg uma vez ao dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "contraindications": "Crianças; angina instável ou primeiras 4 semanas pós-IAM; insuficiência cardíaca congestiva no tratada; ClCr <10 mL/min; insuficiência hepática moderada-grave; hipersensibilidade a di-hidropiridinas",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "alerts": "Hipotensão importante, angina paradoxal y eventos por interação con inibidores de CYP3A4.; No ultrapassar 10 mg/dia em hepatopatia leve; No usar con ClCr <10 mL/min nem em hepatopatia moderada-grave.",
+    "adverseEffects": "Cefaleia, edema periférico, rubor, palpitação y tontura.; Hipotensão importante, angina paradoxal y eventos por interação con inibidores de CYP3A4.",
     "references": [
-      "https://cima.aemps.es/cima/dochtml/ft/72458/FT_72458.html",
-      "https://base-donnees-publique.medicaments.gouv.fr/medicament/67699283/extrait",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+      "Fonte primária/oficial - https://cima.aemps.es/cima/publico/lista.html",
+      "Fonte primária/oficial - https://www.aifa.gov.it/trova-farmaco"
     ],
-    "ref": "https://cima.aemps.es/cima/dochtml/ft/72458/FT_72458.html"
+    "ref": "https://cima.aemps.es/cima/publico/lista.html"
   },
   "name": {
     "pt": "Manidipina",
-    "es": "Manidipino"
+    "es": "Manidipina"
   },
   "keywords": [
     "manidipina"
   ],
-  "dataVersion": "clinical-data-v1-c9c998d7fc35d23b",
-  "clinicalContentSha256": "c9c998d7fc35d23bfe957caf7575c5d3e38d2bac790fd06dd6ec8a88fd4b3214",
+  "dataVersion": "clinical-data-v1-b0eccfe89fec0297",
+  "clinicalContentSha256": "b0eccfe89fec02970e407a79de0f711481c0c95cf2287afd86febf6f6e4d2bc5",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardiologia.js",
@@ -537,13 +395,15 @@
     }
   ],
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
-    "sourceOwner": "database/cardio.js",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/cardiologia.js",
     "sourceField": "manidipina.mcGoldClinicalV1",
-    "group": "GOLD_GROUP07_CARDIO_10",
-    "review": "2026-09",
+    "lote": "048",
     "requiredFields": 33,
-    "contentSha256": "3d06630488826fd10188a7257337d5bb1c5924211457dc819f77d6886def6676",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "31106a5e151f08bd2d807a5d1d0d90483780bc660c307b2c8833463be27e37b7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

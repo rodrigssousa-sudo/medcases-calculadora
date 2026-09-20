@@ -6,235 +6,79 @@
   "colorTxt": null,
   "pt": {
     "name": "Manitol",
-    "class": "Diurético osmótico intravenoso",
-    "pharmacologicClass": "Agente osmótico filtrável que aumenta osmolaridade tubular e plasmática",
+    "class": "Diurético osmótico",
+    "pharmacologicClass": "Diurético osmótico",
     "mechanism": "Aumenta osmolaridade plasmática e tubular, mobiliza água dos tecidos para o compartimento intravascular e reduz reabsorção tubular de água.",
-    "pharmacodynamics": "Produz diurese osmótica e reduz pressão intracraniana e intraocular. Pode expandir transitoriamente o volume intravascular antes da diurese e piorar congestão pulmonar.",
-    "pharmacokinetics": "Distribui-se principalmente no espaço extracelular, sofre pouco metabolismo e é eliminado por filtração glomerular. O acúmulo aumenta na insuficiência renal.",
-    "indications": [
-      "Redução da pressão intracraniana e tratamento do edema cerebral",
-      "redução da pressão intraocular elevada"
-    ],
-    "commercialNames": [
-      "Mannitol Injection"
-    ],
+    "pharmacodynamics": "Aumenta osmolaridade plasmática e tubular, mobiliza água dos tecidos para o compartimento intravascular e reduz reabsorção tubular de água.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Redução da pressão intracraniana e tratamento do edema cerebral; redução da pressão intraocular elevada",
+    "commercialNames": "Mannitol Injection",
     "presentation": "Solução para infusão intravenosa.",
-    "presentations": [
-      "20%: 0,2 g/mL em bolsas de 250 ou 500 mL",
-      "25%: 0,25 g/mL em frasco conforme produto"
-    ],
-    "dose": {
-      "intracranialPressure": "0,25 g/kg IV a cada 6-8 h, infundido durante pelo menos 30 minutos, conforme a bula 20% atual.",
-      "intraocularPressure": "1,5-2 g/kg IV como dose única durante pelo menos 30 minutos; se pré-operatório, administrar 60-90 minutos antes."
-    },
-    "pediatricDose": "A dose depende do produto e da indicação; bulas específicas descrevem 1-2 g/kg ou 30-60 g/m2 em 30-60 min para redução da pressão intracraniana/intraocular. Usar protocolo pediátrico e monitorização intensiva.",
-    "renalDose": "Não usar em anúria. Avaliar função renal antes de iniciar; suspender se houver piora da função renal ou oligúria progressiva. O acúmulo aumenta risco de hiperosmolaridade e sobrecarga.",
-    "hepaticDose": "Não há ajuste específico por hepatopatia isolada; a decisão depende principalmente de volemia, rim, coração, pulmão e osmolaridade.",
-    "commonAdverseEffects": [
-      "poliúria",
-      "sede",
-      "cefaleia",
-      "náuseas",
-      "alterações de sódio"
-    ],
-    "dangerousAdverseEffects": [
-      "lesão renal osmótica",
-      "edema pulmonar",
-      "descompensação cardíaca",
-      "hiperosmolaridade",
-      "hiponatremia ou hipernatremia grave",
-      "toxicidade neurológica"
-    ],
-    "contraindications": [
-      "Anúria",
-      "hipovolemia grave",
-      "congestão vascular pulmonar grave ou edema pulmonar preexistente",
-      "hemorragia intracraniana ativa exceto durante craniotomia",
-      "hipersensibilidade"
-    ],
-    "interactions": [
-      "Outros nefrotóxicos aumentam risco renal",
-      "Outros diuréticos podem potencializar alterações de volemia e eletrólitos",
-      "Não administrar simultaneamente com sangue pelo mesmo equipo sem seguir instruções específicas de compatibilidade."
-    ],
-    "monitoring": [
-      "Osmolaridade sérica",
-      "sódio e outros eletrólitos",
-      "diurese",
-      "creatinina",
-      "estado cardíaco e pulmonar",
-      "pressão intracraniana ou intraocular conforme indicação"
-    ],
-    "administration": "Apenas IV; preferencialmente por veia central ou de grande calibre. Usar equipo com filtro para evitar infusão de cristais.",
-    "preparation": "Inspecionar cristais antes do uso; se presentes, seguir instruções do fabricante para resolubilização. Não transferir para bolsas de PVC quando a bula contraindicar.",
-    "infusionProtocol": "Para redução da PIC: 0,25 g/kg em pelo menos 30 min, repetível a cada 6-8 h se ainda indicado, com reavaliação renal, cardíaca, pulmonar, osmolar e eletrolítica antes de repetir.",
-    "pregnancy": "Usar apenas se a indicação materna justificar o risco; dados humanos são limitados.",
-    "lactation": "Dados clínicos limitados; individualizar conforme necessidade materna e exposição prevista.",
-    "specialPopulations": {
-      "renal": "Contraindicado em anúria e alto risco se a função renal piorar.",
-      "heartFailure": "A expansão intravascular inicial pode precipitar congestão.",
-      "brainInjury": "A indicação exige reavaliação clínica e osmolar seriada."
-    },
-    "patientEducation": [
-      "Uso hospitalar IV com monitorização",
-      "informar dispneia, dor torácica ou redução importante da urina se estiver consciente."
-    ],
-    "clinicalPearls": [
-      "Não é diurético para edema periférico rotineiro",
-      "A resposta e a segurança dependem de osmolaridade, rim e estado cardiopulmonar, não apenas da dose."
-    ],
-    "guidelineRecommendations": [
-      "A bula atual prioriza 0,25 g/kg para redução da pressão intracraniana; repetir apenas com reavaliação clínica e laboratorial."
-    ],
-    "safetyFlags": [
-      "ANURIA",
-      "OSMOLARIDADE",
-      "FUNCAO_RENAL",
-      "EDEMA_PULMONAR",
-      "ELETROLITOS"
-    ],
-    "alerts": [
-      "Não administrar se houver anúria, hipovolemia grave ou edema pulmonar preexistente grave",
-      "Suspender se houver piora do estado renal, cardíaco ou pulmonar."
-    ],
-    "adverseEffects": {
-      "common": [
-        "poliúria",
-        "sede",
-        "cefaleia",
-        "náuseas",
-        "alterações de sódio"
-      ],
-      "dangerous": [
-        "lesão renal osmótica",
-        "edema pulmonar",
-        "descompensação cardíaca",
-        "hiperosmolaridade",
-        "hiponatremia ou hipernatremia grave",
-        "toxicidade neurológica"
-      ]
-    },
+    "presentations": "Solução para infusão intravenosa.",
+    "dose": "intracranialPressure: 0,25 g/kg IV a cada 6-8 h, infundido durante pelo menos 30 minutos, conforme a bula 20% atual.; intraocularPressure: 1,5-2 g/kg IV como dose única durante pelo menos 30 minutos; se pré-operatório, administrar 60-90 minutos antes.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "poliúria; sede; cefaleia; náuseas; alterações de sódio",
+    "dangerousAdverseEffects": "lesão renal osmótica; edema pulmonar; descompensação cardíaca; hiperosmolaridade; hiponatremia ou hipernatremia grave; toxicidade neurológica",
+    "contraindications": "Anúria; hipovolemia grave; congestão vascular pulmonar grave ou edema pulmonar preexistente; hemorragia intracraniana ativa exceto durante craniotomia; hipersensibilidade",
+    "interactions": "Outros nefrotóxicos aumentam risco renal; Outros diuréticos podem potencializar alterações de volemia e eletrólitos; Não administrar simultaneamente com sangue pelo mesmo equipo sem seguir instruções específicas de compatibilidade.",
+    "monitoring": "Não administrar se houver anúria, hipovolemia grave ou edema pulmonar preexistente grave; Suspender se houver piora do estado renal, cardíaco ou pulmonar.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipervolemia/edema pulmonar, desidratação, insuficiência renal, hiponatremia/hipernatremia e reação à infusão.",
+    "alerts": "Hipervolemia/edema pulmonar, desidratação, insuficiência renal, hiponatremia/hipernatremia e reação à infusão.; Não administrar se houver anúria, hipovolemia grave ou edema pulmonar preexistente grave; Suspender se houver piora do estado renal, cardíaco ou pulmonar.",
+    "adverseEffects": "Desequilíbrio hidroeletrolítico, sede, náusea, cefaleia e diurese.; Hipervolemia/edema pulmonar, desidratação, insuficiência renal, hiponatremia/hipernatremia e reação à infusão.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ba7bf864-8a4d-4262-8fd1-00174fa2f9d1"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mannitol%20injection",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/016269s055lbl.pdf"
     ],
-    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mannitol%20injection"
   },
   "es": {
     "name": "Manitol",
-    "class": "Diurético osmótico intravenoso",
-    "pharmacologicClass": "Agente osmótico filtrable que aumenta osmolaridad tubular y plasmática",
-    "mechanism": "Aumenta osmolaridad plasmática y tubular, moviliza agua desde tejidos hacia el compartimento intravascular y reduce reabsorción tubular de agua.",
-    "pharmacodynamics": "Produce diuresis osmótica y reduce presión intracraneal e intraocular. Puede expandir transitoriamente volumen intravascular antes de la diuresis y empeorar congestión pulmonar.",
-    "pharmacokinetics": "Se distribuye principalmente en espacio extracelular, se metaboliza mínimamente y se elimina por filtración glomerular. La acumulación aumenta con insuficiencia renal.",
-    "indications": [
-      "Reducción de presión intracraneal y tratamiento de edema cerebral",
-      "reducción de presión intraocular elevada"
-    ],
-    "commercialNames": [
-      "Mannitol Injection"
-    ],
-    "presentation": "Solución para infusión intravenosa.",
-    "presentations": [
-      "20%: 0.2 g/mL en bolsas de 250 o 500 mL",
-      "25%: 0.25 g/mL en vial según producto"
-    ],
-    "dose": {
-      "intracranialPressure": "0.25 g/kg IV cada 6-8 h, infundido durante al menos 30 minutos, según la ficha 20% actual.",
-      "intraocularPressure": "1.5-2 g/kg IV como dosis única durante al menos 30 minutos; si es preoperatorio, administrar 60-90 minutos antes."
-    },
-    "pediatricDose": "La dosificación depende del producto y la indicación; fichas específicas describen 1-2 g/kg o 30-60 g/m2 en 30-60 min para reducción de presión intracraneal/intraocular. Usar protocolo pediátrico y monitorización intensiva.",
-    "renalDose": "No usar en anuria. Evaluar función renal antes de iniciar; suspender si empeora función renal o aparece oliguria progresiva. La acumulación aumenta riesgo de hiperosmolaridad y sobrecarga.",
-    "hepaticDose": "No existe ajuste específico por hepatopatía aislada; la decisión depende principalmente de volumen, riñón, corazón, pulmón y osmolaridad.",
-    "commonAdverseEffects": [
-      "poliuria",
-      "sed",
-      "cefalea",
-      "náuseas",
-      "alteraciones de sodio"
-    ],
-    "dangerousAdverseEffects": [
-      "lesión renal osmótica",
-      "edema pulmonar",
-      "descompensación cardíaca",
-      "hiperosmolaridad",
-      "hiponatremia o hipernatremia grave",
-      "toxicidad neurológica"
-    ],
-    "contraindications": [
-      "Anuria",
-      "hipovolemia grave",
-      "congestión vascular pulmonar grave o edema pulmonar preexistente",
-      "hemorragia intracraneal activa excepto durante craneotomía",
-      "hipersensibilidad"
-    ],
-    "interactions": [
-      "Otros nefrotóxicos aumentan riesgo renal",
-      "Otros diuréticos pueden potenciar alteraciones de volumen y electrolitos",
-      "No administrar simultáneamente con sangre por el mismo equipo sin seguir instrucciones específicas de compatibilidad."
-    ],
-    "monitoring": [
-      "Osmolaridad sérica",
-      "sodio y otros electrolitos",
-      "diuresis",
-      "creatinina",
-      "estado cardíaco y pulmonar",
-      "presión intracraneal o intraocular según indicación"
-    ],
-    "administration": "Solo IV; preferentemente por vena central o de gran calibre. Usar equipo con filtro para evitar infusión de cristales.",
-    "preparation": "Inspeccionar cristales antes de usar; si aparecen, seguir instrucciones del fabricante para resolubilización. No transferir a bolsas PVC cuando la ficha lo contraindique.",
-    "infusionProtocol": "Para reducción de PIC: 0.25 g/kg en al menos 30 min, repetible cada 6-8 h si sigue indicado, con reevaluación renal, cardíaca, pulmonar, osmolar y electrolítica antes de repetir.",
-    "pregnancy": "Usar solo si la indicación materna justifica el riesgo; datos humanos son limitados.",
-    "lactation": "Datos clínicos limitados; individualizar según necesidad materna y exposición prevista.",
-    "specialPopulations": {
-      "renal": "Contraindicado en anuria y alto riesgo si función renal empeora.",
-      "heartFailure": "La expansión intravascular inicial puede precipitar congestión.",
-      "brainInjury": "La indicación requiere reevaluación clínica y osmolar seriada."
-    },
-    "patientEducation": [
-      "Uso hospitalario IV con monitorización",
-      "informar disnea, dolor torácico o disminución marcada de orina si está consciente."
-    ],
-    "clinicalPearls": [
-      "No es un diurético para edema periférico rutinario",
-      "La respuesta y seguridad dependen de osmolaridad, riñón y estado cardiopulmonar, no solo de la dosis."
-    ],
-    "guidelineRecommendations": [
-      "La ficha actual prioriza 0.25 g/kg para reducción de presión intracraneal; repetir solo con reevaluación clínica y laboratorial."
-    ],
-    "safetyFlags": [
-      "ANURIA",
-      "OSMOLARIDAD",
-      "FUNCION_RENAL",
-      "EDEMA_PULMONAR",
-      "ELECTROLITOS"
-    ],
-    "alerts": [
-      "No administrar si existe anuria, hipovolemia grave o edema pulmonar preexistente grave",
-      "Suspender si empeora estado renal, cardíaco o pulmonar."
-    ],
-    "adverseEffects": {
-      "common": [
-        "poliuria",
-        "sed",
-        "cefalea",
-        "náuseas",
-        "alteraciones de sodio"
-      ],
-      "dangerous": [
-        "lesión renal osmótica",
-        "edema pulmonar",
-        "descompensación cardíaca",
-        "hiperosmolaridad",
-        "hiponatremia o hipernatremia grave",
-        "toxicidad neurológica"
-      ]
-    },
+    "class": "Diurético osmótico",
+    "pharmacologicClass": "Diurético osmótico",
+    "mechanism": "Aumenta osmolaridade plasmática y tubular, mobiliza água dos tecidos para o compartimento intravascular y reduz reabsorção tubular de água.",
+    "pharmacodynamics": "Aumenta osmolaridade plasmática y tubular, mobiliza água dos tecidos para o compartimento intravascular y reduz reabsorção tubular de água.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Redução da pressão intracraniana y tratamento do edema cerebral; redução da pressão intraocular elevada",
+    "commercialNames": "Mannitol Injection",
+    "presentation": "Solução para infusão intravenosa.",
+    "presentations": "Solução para infusão intravenosa.",
+    "dose": "intracranialPressure: 0,25 g/kg IV a cada 6-8 h, infundido durante pelo menos 30 minutos, conforme a bula 20% atual.; intraocularPressure: 1,5-2 g/kg IV como dosis única durante pelo menos 30 minutos; se pré-operatório, administrar 60-90 minutos antes.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "poliúria; sede; cefaleia; náuseas; alterações de sódio",
+    "dangerousAdverseEffects": "lesão renal osmótica; edema pulmonar; descompensação cardíaca; hiperosmolaridade; hiponatremia ou hipernatremia grave; toxicidade neurológica",
+    "contraindications": "Anúria; hipovolemia grave; congestão vascular pulmonar grave ou edema pulmonar preexistente; hemorragia intracraniana ativa exceto durante craniotomia; hipersensibilidade",
+    "interactions": "Outros nefrotóxicos aumentam riesgo renal; Outros diuréticos podem potencializar alterações de volemia y eletrólitos; No administrar simultaneamente con sangue pelo mesmo equipo sem seguir instruções específicas de compatibilidade.",
+    "monitoring": "No administrar se houver anúria, hipovolemia grave ou edema pulmonar preexistente grave; Suspender se houver piora do estado renal, cardíaco ou pulmonar.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipervolemia/edema pulmonar, desidratação, insuficiência renal, hiponatremia/hipernatremia y reação à infusão.",
+    "alerts": "Hipervolemia/edema pulmonar, desidratação, insuficiência renal, hiponatremia/hipernatremia y reação à infusão.; No administrar se houver anúria, hipovolemia grave ou edema pulmonar preexistente grave; Suspender se houver piora do estado renal, cardíaco ou pulmonar.",
+    "adverseEffects": "Desequilíbrio hidroeletrolítico, sede, náusea, cefaleia y diurese.; Hipervolemia/edema pulmonar, desidratação, insuficiência renal, hiponatremia/hipernatremia y reação à infusão.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=ba7bf864-8a4d-4262-8fd1-00174fa2f9d1"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mannitol%20injection",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/016269s055lbl.pdf"
     ],
-    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ad3145e-00e7-4412-b9a5-06f00f264f30"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mannitol%20injection"
   },
   "name": {
     "pt": "Manitol",
@@ -244,8 +88,8 @@
     "manitol",
     "diuretico osmotico"
   ],
-  "dataVersion": "clinical-data-v1-c9c998d7fc35d23b",
-  "clinicalContentSha256": "c9c998d7fc35d23bfe957caf7575c5d3e38d2bac790fd06dd6ec8a88fd4b3214",
+  "dataVersion": "clinical-data-v1-b0eccfe89fec0297",
+  "clinicalContentSha256": "b0eccfe89fec02970e407a79de0f711481c0c95cf2287afd86febf6f6e4d2bc5",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -312,13 +156,15 @@
     ]
   },
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "manitol.mcGoldClinicalV1",
-    "group": "GOLD_GROUP06_CARDIO_10",
-    "review": "2026-09",
+    "lote": "048",
     "requiredFields": 33,
-    "contentSha256": "887ce465a938d14a6959b5d37953d3a57075afd036926e0bd4ceb4bbe5619325",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "31106a5e151f08bd2d807a5d1d0d90483780bc660c307b2c8833463be27e37b7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

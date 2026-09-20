@@ -3908,3 +3908,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:levomepromazina:END */
+/* GOLD33_SELECTIVE:lurasidona:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="lurasidona";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:lurasidona:"+matches.length);drug=matches[0];}else{drug=db&&db["lurasidona"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:lurasidona");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "048",
+    "requiredFieldCount": 33,
+    "approvedSha256": "31106a5e151f08bd2d807a5d1d0d90483780bc660c307b2c8833463be27e37b7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Lurasidona",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Antipsicótico atípico",
+    "commercialNames": "br: Latuda; Lurasidona; ar: Latuda; Lurasidona",
+    "presentation": "Comprimido 20 mg; Comprimido 40 mg; Comprimido 60 mg; Comprimido 80 mg; Comprimido 120 mg",
+    "presentations": "Comprimido 20 mg; Comprimido 40 mg; Comprimido 60 mg; Comprimido 80 mg; Comprimido 120 mg",
+    "mechanism": "Antagonista D2 e 5HT2A, antagonista 5HT7 e agonista parcial 5HT1A; perfil metabólico relativamente favorável.",
+    "pharmacodynamics": "Antagonista D2 e 5HT2A, antagonista 5HT7 e agonista parcial 5HT1A; perfil metabólico relativamente favorável.",
+    "pharmacokinetics": "Vida média aproximada: 18 horas.",
+    "indications": "Esquizofrenia; Depressão bipolar tipo I; Depressão bipolar em monoterapia; Depressão bipolar como adjuvante a lítio ou valproato; Psicose com preocupação metabólica; Transtorno esquizoafetivo em casos selecionados",
+    "dose": "adulto: Esquizofrenia: iniciar 40 mg VO 1x/dia com alimento.; depressaoBipolar: Depressão bipolar: iniciar 20 mg VO 1x/dia com alimento; usual 20–120 mg/dia.; maxDose: Dose máxima usual: 160 mg/dia em esquizofrenia; 120 mg/dia em depressão bipolar.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "LATUDA oral (bula FDA): ClCr 30–<50 ou <30 mL/min: iniciar 20 mg/dia; máximo 80 mg/dia. Conferir indicação, idade e interações CYP3A4 antes de selecionar dose.",
+    "hepaticDose": "LATUDA oral (bula FDA): Child-Pugh 7–9 iniciar 20 mg/dia, máximo 80 mg/dia; Child-Pugh 10–15 iniciar 20 mg/dia, máximo 40 mg/dia. Não inferir gravidade a partir do booleano hepatopatia.",
+    "commonAdverseEffects": "Náuseas; Sonolência; Acatisia; Parkinsonismo; Tontura; Insônia",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT em predispostos; Reação extrapiramidal intensa; Hiperglicemia/dislipidemia, embora menos frequente que olanzapina",
+    "adverseEffects": "Acatisia, sintomas extrapiramidais, sonolência e náusea.; Síndrome neuroléptica maligna, discinesia tardia, alterações metabólicas, leucopenia e ideação suicida em jovens.",
+    "contraindications": "Hipersensibilidade à lurasidona; Uso com inibidores fortes de CYP3A4; Uso com indutores fortes de CYP3A4; Demência com psicose sem avaliação especializada",
+    "interactions": "Cetoconazol, claritromicina, ritonavir: contraindicado/aumenta níveis; Carbamazepina, rifampicina, fenitoína: contraindicado/reduz níveis; Suco de toranja/grapefruit: pode aumentar níveis; Álcool e depressores do SNC; Levodopa e agonistas dopaminérgicos; Fármacos que prolongam QT",
+    "monitoring": "LATUDA VO: administrar com alimento de pelo menos 350 kcal. Dose máxima depende de indicação, idade, função renal/hepática e interações CYP3A4; sem cálculo universal.; Administrar sempre com alimento para absorção adequada.; Evitar grapefruit/toranja.; Contraindicada com inibidores ou indutores fortes de CYP3A4.; Monitorar acatisia e sintomas extrapiramidais.; Perfil metabólico mais favorável, mas ainda requer controle de peso, glicemia e lipídios.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Síndrome neuroléptica maligna, discinesia tardia, alterações metabólicas, leucopenia e ideação suicida em jovens.",
+    "alerts": "Síndrome neuroléptica maligna, discinesia tardia, alterações metabólicas, leucopenia e ideação suicida em jovens.; LATUDA VO: administrar com alimento de pelo menos 350 kcal. Dose máxima depende de indicação, idade, função renal/hepática e interações CYP3A4; sem cálculo universal.; Administrar sempre com alimento para absorção adequada.; Evitar grapefruit/toranja.; Contraindicada com inibidores ou indutores fortes de CYP3A4.; Monitorar acatisia e sintomas extrapiramidais.; Perfil metabólico mais favorável, mas ainda requer controle de peso, glicemia e lipídios.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lurasidone",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/200603s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lurasidone"
+  },
+  "es": {
+    "name": "Lurasidona",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Antipsicótico atípico",
+    "commercialNames": "br: Latuda; Lurasidona; ar: Latuda; Lurasidona",
+    "presentation": "Comprimido 20 mg; Comprimido 40 mg; Comprimido 60 mg; Comprimido 80 mg; Comprimido 120 mg",
+    "presentations": "Comprimido 20 mg; Comprimido 40 mg; Comprimido 60 mg; Comprimido 80 mg; Comprimido 120 mg",
+    "mechanism": "Antagonista D2 y 5HT2A, antagonista 5HT7 y agonista parcial 5HT1A; perfil metabólico relativamente favorável.",
+    "pharmacodynamics": "Antagonista D2 y 5HT2A, antagonista 5HT7 y agonista parcial 5HT1A; perfil metabólico relativamente favorável.",
+    "pharmacokinetics": "Vida média aproximada: 18 horas.",
+    "indications": "Esquizofrenia; Depressão bipolar tipo I; Depressão bipolar em monoterapia; Depressão bipolar como adjuvante a lítio ou valproato; Psicose con preocupação metabólica; Transtorno esquizoafetivo em casos selecionados",
+    "dose": "adulto: Esquizofrenia: iniciar 40 mg VO 1x/dia con alimento.; depressaoBipolar: Depressão bipolar: iniciar 20 mg VO 1x/dia con alimento; usual 20–120 mg/dia.; maxDose: Dose máxima usual: 160 mg/dia em esquizofrenia; 120 mg/dia em depressão bipolar.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "LATUDA oral (bula FDA): ClCr 30–<50 ou <30 mL/min: iniciar 20 mg/dia; máximo 80 mg/dia. Conferir indicação, idade y interações CYP3A4 antes de selecionar dosis.",
+    "hepaticDose": "LATUDA oral (bula FDA): Child-Pugh 7–9 iniciar 20 mg/dia, máximo 80 mg/dia; Child-Pugh 10–15 iniciar 20 mg/dia, máximo 40 mg/dia. No inferir gravidade a partir do booleano hepatopatia.",
+    "commonAdverseEffects": "Náuseas; Sonolência; Acatisia; Parkinsonismo; Tontura; Insônia",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT em predispostos; Reação extrapiramidal intensa; Hiperglicemia/dislipidemia, embora menos frequente que olanzapina",
+    "adverseEffects": "Acatisia, sintomas extrapiramidais, sonolência y náusea.; Síndrome neuroléptica maligna, discinesia tardia, alterações metabólicas, leucopenia y ideação suicida em jovens.",
+    "contraindications": "Hipersensibilidade à lurasidona; Uso con inibidores fortes de CYP3A4; Uso con indutores fortes de CYP3A4; Demência con psicose sem avaliação especializada",
+    "interactions": "Cetoconazol, claritromicina, ritonavir: contraindicado/aumenta níveis; Carbamazepina, rifampicina, fenitoína: contraindicado/reduz níveis; Suco de toranja/grapefruit: pode aumentar níveis; Álcool y depressores do SNC; Levodopa y agonistas dopaminérgicos; Fármacos que prolongam QT",
+    "monitoring": "LATUDA VO: administrar con alimento de pelo menos 350 kcal. Dose máxima depende de indicação, idade, función renal/hepática y interações CYP3A4; sem cálculo universal.; Administrar sempre con alimento para absorção adequada.; Evitar grapefruit/toranja.; Contraindicada con inibidores ou indutores fortes de CYP3A4.; Monitorar acatisia y sintomas extrapiramidais.; Perfil metabólico mais favorável, mas ainda requer controle de peso, glicemia y lipídios.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Síndrome neuroléptica maligna, discinesia tardia, alterações metabólicas, leucopenia y ideação suicida em jovens.",
+    "alerts": "Síndrome neuroléptica maligna, discinesia tardia, alterações metabólicas, leucopenia y ideação suicida em jovens.; LATUDA VO: administrar con alimento de pelo menos 350 kcal. Dose máxima depende de indicação, idade, función renal/hepática y interações CYP3A4; sem cálculo universal.; Administrar sempre con alimento para absorção adequada.; Evitar grapefruit/toranja.; Contraindicada con inibidores ou indutores fortes de CYP3A4.; Monitorar acatisia y sintomas extrapiramidais.; Perfil metabólico mais favorável, mas ainda requer controle de peso, glicemia y lipídios.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lurasidone",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/200603s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lurasidone"
+  }
+};})();
+/* GOLD33_SELECTIVE:lurasidona:END */

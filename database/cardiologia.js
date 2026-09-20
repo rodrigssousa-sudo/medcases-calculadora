@@ -1753,3 +1753,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:lidocaina_iv:END */
+/* GOLD33_SELECTIVE:manidipina:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="manidipina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:manidipina:"+matches.length);drug=matches[0];}else{drug=db&&db["manidipina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:manidipina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "048",
+    "requiredFieldCount": 33,
+    "approvedSha256": "31106a5e151f08bd2d807a5d1d0d90483780bc660c307b2c8833463be27e37b7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Manidipina",
+    "class": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "commercialNames": "Iperten",
+    "presentation": "Comprimidos de 10 e 20 mg.",
+    "presentations": "Comprimidos de 10 e 20 mg.",
+    "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica e pressão arterial.",
+    "pharmacodynamics": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica e pressão arterial.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Hipertensão essencial leve a moderada em adultos",
+    "dose": "hypertension: 10 mg uma vez ao dia; se após 2-4 semanas o efeito for insuficiente, aumentar para 20 mg uma vez ao dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "cefaleia; rubor; edema periférico; tontura; palpitações",
+    "dangerousAdverseEffects": "hipotensão sintomática; piora de angina em pacientes suscetíveis; reação de hipersensibilidade rara",
+    "adverseEffects": "Cefaleia, edema periférico, rubor, palpitação e tontura.; Hipotensão importante, angina paradoxal e eventos por interação com inibidores de CYP3A4.",
+    "contraindications": "Crianças; angina instável ou primeiras 4 semanas pós-IAM; insuficiência cardíaca congestiva não tratada; ClCr <10 mL/min; insuficiência hepática moderada-grave; hipersensibilidade a di-hidropiridinas",
+    "interactions": "Inibidores de CYP3A4 podem aumentar exposição; Indutores de CYP3A4 podem reduzir exposição; Outros anti-hipertensivos aumentam hipotensão; Grapefruit pode aumentar exposição em di-hidropiridinas sensíveis a CYP3A4",
+    "monitoring": "Não ultrapassar 10 mg/dia em hepatopatia leve; Não usar com ClCr <10 mL/min nem em hepatopatia moderada-grave.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipotensão importante, angina paradoxal e eventos por interação com inibidores de CYP3A4.",
+    "alerts": "Hipotensão importante, angina paradoxal e eventos por interação com inibidores de CYP3A4.; Não ultrapassar 10 mg/dia em hepatopatia leve; Não usar com ClCr <10 mL/min nem em hepatopatia moderada-grave.",
+    "references": [
+      "Fonte primária/oficial - https://cima.aemps.es/cima/publico/lista.html",
+      "Fonte primária/oficial - https://www.aifa.gov.it/trova-farmaco"
+    ],
+    "ref": "https://cima.aemps.es/cima/publico/lista.html"
+  },
+  "es": {
+    "name": "Manidipina",
+    "class": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "commercialNames": "Iperten",
+    "presentation": "Comprimidos de 10 y 20 mg.",
+    "presentations": "Comprimidos de 10 y 20 mg.",
+    "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica y pressão arterial.",
+    "pharmacodynamics": "Bloqueia canais de cálcio tipo L no músculo liso arterial, reduzindo entrada de cálcio, resistência vascular sistêmica y pressão arterial.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Hipertensão essencial leve a moderada em adultos",
+    "dose": "hypertension: 10 mg uma vez ao dia; se após 2-4 semanas o efeito for insuficiente, aumentar para 20 mg uma vez ao dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "cefaleia; rubor; edema periférico; tontura; palpitações",
+    "dangerousAdverseEffects": "hipotensão sintomática; piora de angina em pacientes suscetíveis; reação de hipersensibilidade rara",
+    "adverseEffects": "Cefaleia, edema periférico, rubor, palpitação y tontura.; Hipotensão importante, angina paradoxal y eventos por interação con inibidores de CYP3A4.",
+    "contraindications": "Crianças; angina instável ou primeiras 4 semanas pós-IAM; insuficiência cardíaca congestiva no tratada; ClCr <10 mL/min; insuficiência hepática moderada-grave; hipersensibilidade a di-hidropiridinas",
+    "interactions": "Inibidores de CYP3A4 podem aumentar exposição; Indutores de CYP3A4 podem reduzir exposição; Outros anti-hipertensivos aumentam hipotensão; Grapefruit pode aumentar exposição em di-hidropiridinas sensíveis a CYP3A4",
+    "monitoring": "No ultrapassar 10 mg/dia em hepatopatia leve; No usar con ClCr <10 mL/min nem em hepatopatia moderada-grave.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipotensão importante, angina paradoxal y eventos por interação con inibidores de CYP3A4.",
+    "alerts": "Hipotensão importante, angina paradoxal y eventos por interação con inibidores de CYP3A4.; No ultrapassar 10 mg/dia em hepatopatia leve; No usar con ClCr <10 mL/min nem em hepatopatia moderada-grave.",
+    "references": [
+      "Fonte primária/oficial - https://cima.aemps.es/cima/publico/lista.html",
+      "Fonte primária/oficial - https://www.aifa.gov.it/trova-farmaco"
+    ],
+    "ref": "https://cima.aemps.es/cima/publico/lista.html"
+  }
+};})();
+/* GOLD33_SELECTIVE:manidipina:END */

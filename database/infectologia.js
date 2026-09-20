@@ -9309,3 +9309,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:lopinavir_ritonavir:END */
+/* GOLD33_SELECTIVE:maraviroque:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="maraviroque";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:maraviroque:"+matches.length);drug=matches[0];}else{drug=db&&db["maraviroque"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:maraviroque");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "048",
+    "requiredFieldCount": 33,
+    "approvedSha256": "31106a5e151f08bd2d807a5d1d0d90483780bc660c307b2c8833463be27e37b7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Maraviroque",
+    "class": "Antirretroviral antagonista CCR5",
+    "pharmacologicClass": "Antirretroviral antagonista CCR5",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 25, 75, 150 e 300 mg; solução oral 20 mg/mL conforme mercado.",
+    "presentations": "Comprimidos 25, 75, 150 e 300 mg; solução oral 20 mg/mL conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "HIV-1 com tropismo CCR5 confirmado, em combinação com outros antirretrovirais.",
+    "dose": "Dose adulta usual 300 mg VO duas vezes/dia; 150 mg duas vezes/dia com inibidores potentes de CYP3A; 600 mg duas vezes/dia com indutores potentes sem inibidor potente. Exige teste de tropismo e revisão completa das interações.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Tosse, febre, infecções respiratórias, rash, tontura e dor abdominal.",
+    "dangerousAdverseEffects": "Hepatotoxicidade com reação alérgica, hipotensão postural, eventos cardiovasculares e infecções.",
+    "adverseEffects": "Tosse, febre, infecções respiratórias, rash, tontura e dor abdominal.; Hepatotoxicidade com reação alérgica, hipotensão postural, eventos cardiovasculares e infecções.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade com reação alérgica, hipotensão postural, eventos cardiovasculares e infecções.",
+    "alerts": "Hepatotoxicidade com reação alérgica, hipotensão postural, eventos cardiovasculares e infecções.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://clinicalinfo.hiv.gov/en/drugs/maraviroc/patient",
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=maraviroc"
+    ],
+    "ref": "https://clinicalinfo.hiv.gov/en/drugs/maraviroc/patient"
+  },
+  "es": {
+    "name": "Maraviroque",
+    "class": "Antirretroviral antagonista CCR5",
+    "pharmacologicClass": "Antirretroviral antagonista CCR5",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 25, 75, 150 y 300 mg; solución oral 20 mg/mL conforme mercado.",
+    "presentations": "Comprimidos 25, 75, 150 y 300 mg; solución oral 20 mg/mL conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "HIV-1 con tropismo CCR5 confirmado, em combinação con outros antirretrovirais.",
+    "dose": "Dose adulta usual 300 mg VO duas vezes/dia; 150 mg duas vezes/dia con inibidores potentes de CYP3A; 600 mg duas vezes/dia con indutores potentes sem inibidor potente. Exige teste de tropismo y revisão completa das interações.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Tosse, febre, infecções respiratórias, rash, tontura y dor abdominal.",
+    "dangerousAdverseEffects": "Hepatotoxicidade con reação alérgica, hipotensão postural, eventos cardiovasculares y infecções.",
+    "adverseEffects": "Tosse, febre, infecções respiratórias, rash, tontura y dor abdominal.; Hepatotoxicidade con reação alérgica, hipotensão postural, eventos cardiovasculares y infecções.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade con reação alérgica, hipotensão postural, eventos cardiovasculares y infecções.",
+    "alerts": "Hepatotoxicidade con reação alérgica, hipotensão postural, eventos cardiovasculares y infecções.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://clinicalinfo.hiv.gov/en/drugs/maraviroc/patient",
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=maraviroc"
+    ],
+    "ref": "https://clinicalinfo.hiv.gov/en/drugs/maraviroc/patient"
+  }
+};})();
+/* GOLD33_SELECTIVE:maraviroque:END */

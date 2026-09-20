@@ -4836,3 +4836,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:gluconato_ferroso:END */
+/* GOLD33_SELECTIVE:maltol_ferrico:START */
+;(function(){var db=window.NEFRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="maltol_ferrico";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:maltol_ferrico:"+matches.length);drug=matches[0];}else{drug=db&&db["maltol_ferrico"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:maltol_ferrico");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "048",
+    "requiredFieldCount": 33,
+    "approvedSha256": "31106a5e151f08bd2d807a5d1d0d90483780bc660c307b2c8833463be27e37b7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Maltol férrico",
+    "class": "Reposição oral de ferro",
+    "pharmacologicClass": "Reposição oral de ferro",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsula contendo 30 mg de ferro como maltol férrico.",
+    "presentations": "Cápsula contendo 30 mg de ferro como maltol férrico.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Tratamento de deficiência de ferro em adultos.",
+    "dose": "30 mg de ferro VO duas vezes/dia, em jejum, pelo menos 1 h antes ou 2 h após refeições. Duração orientada pela correção da deficiência e estoques.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Flatulência, diarreia, constipação, desconforto abdominal e náusea.",
+    "dangerousAdverseEffects": "Sobrecarga de ferro, exacerbação de doença inflamatória intestinal e intoxicação acidental pediátrica.",
+    "adverseEffects": "Flatulência, diarreia, constipação, desconforto abdominal e náusea.; Sobrecarga de ferro, exacerbação de doença inflamatória intestinal e intoxicação acidental pediátrica.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Sobrecarga de ferro, exacerbação de doença inflamatória intestinal e intoxicação acidental pediátrica.",
+    "alerts": "Sobrecarga de ferro, exacerbação de doença inflamatória intestinal e intoxicação acidental pediátrica.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ferric%20maltol",
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/medicines/human/EPAR/feraccru"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ferric%20maltol"
+  },
+  "es": {
+    "name": "Maltol férrico",
+    "class": "Reposição oral de ferro",
+    "pharmacologicClass": "Reposição oral de ferro",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsula contendo 30 mg de ferro como maltol férrico.",
+    "presentations": "Cápsula contendo 30 mg de ferro como maltol férrico.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Tratamento de deficiência de ferro em adultos.",
+    "dose": "30 mg de ferro VO duas vezes/dia, em jejum, pelo menos 1 h antes ou 2 h após refeições. Duração orientada pela correção da deficiência y estoques.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Flatulência, diarreia, constipação, desconforto abdominal y náusea.",
+    "dangerousAdverseEffects": "Sobrecarga de ferro, exacerbação de doença inflamatória intestinal y intoxicação acidental pediátrica.",
+    "adverseEffects": "Flatulência, diarreia, constipação, desconforto abdominal y náusea.; Sobrecarga de ferro, exacerbação de doença inflamatória intestinal y intoxicação acidental pediátrica.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Sobrecarga de ferro, exacerbação de doença inflamatória intestinal y intoxicação acidental pediátrica.",
+    "alerts": "Sobrecarga de ferro, exacerbação de doença inflamatória intestinal y intoxicação acidental pediátrica.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ferric%20maltol",
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/medicines/human/EPAR/feraccru"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ferric%20maltol"
+  }
+};})();
+/* GOLD33_SELECTIVE:maltol_ferrico:END */
