@@ -5916,3 +5916,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:sacarato_hidroxido_ferrico:END */
+/* GOLD33_SELECTIVE:sevelamer:START */
+;(function(){var db=window.NEFRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sevelamer";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sevelamer:"+matches.length);drug=matches[0];}else{drug=db&&db["sevelamer"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sevelamer");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "072",
+    "requiredFieldCount": 33,
+    "approvedSha256": "362a6b25ebe46297a638eea35ce1674a5b66bc62b45db9d1b599c5f1b9560b5b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Sevelâmer",
+    "class": "Quelante de fosfato não absorvível",
+    "pharmacologicClass": "Quelante de fosfato não absorvível",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos e pó para suspensão oral em forças específicas.",
+    "presentations": "Comprimidos e pó para suspensão oral em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Controle da hiperfosfatemia em pacientes com doença renal crônica conforme estágio e rótulo.",
+    "dose": "Administrar com refeições e titular pelo fósforo sérico. Confirmar sal e apresentação; separar medicamentos com interação de absorção conforme bula.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, vômito, diarreia, dispepsia e constipação.",
+    "dangerousAdverseEffects": "Obstrução ou perfuração gastrointestinal, disfagia e hipofosfatemia.",
+    "adverseEffects": "Náusea, vômito, diarreia, dispepsia e constipação.; Obstrução ou perfuração gastrointestinal, disfagia e hipofosfatemia.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Obstrução ou perfuração gastrointestinal, disfagia e hipofosfatemia.",
+    "alerts": "Obstrução ou perfuração gastrointestinal, disfagia e hipofosfatemia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sevelamer",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sevelamer"
+  },
+  "es": {
+    "name": "Sevelâmer",
+    "class": "Quelante de fosfato no absorvível",
+    "pharmacologicClass": "Quelante de fosfato no absorvível",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos y pó para suspensão oral em forças específicas.",
+    "presentations": "Comprimidos y pó para suspensão oral em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Controle da hiperfosfatemia em pacientes con doença renal crônica conforme estágio y rótulo.",
+    "dose": "Administrar con refeições y titular pelo fósforo sérico. Confirmar sal y apresentação; separar medicamentos con interação de absorção conforme bula.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, vômito, diarreia, dispepsia y constipação.",
+    "dangerousAdverseEffects": "Obstrução ou perfuração gastrointestinal, disfagia y hipofosfatemia.",
+    "adverseEffects": "Náusea, vômito, diarreia, dispepsia y constipação.; Obstrução ou perfuração gastrointestinal, disfagia y hipofosfatemia.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Obstrução ou perfuração gastrointestinal, disfagia y hipofosfatemia.",
+    "alerts": "Obstrução ou perfuração gastrointestinal, disfagia y hipofosfatemia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sevelamer",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sevelamer"
+  }
+};})();
+/* GOLD33_SELECTIVE:sevelamer:END */

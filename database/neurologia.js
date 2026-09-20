@@ -16480,3 +16480,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:selegilina:END */
+/* GOLD33_SELECTIVE:siponimode:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="siponimode";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:siponimode:"+matches.length);drug=matches[0];}else{drug=db&&db["siponimode"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:siponimode");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "072",
+    "requiredFieldCount": 33,
+    "approvedSha256": "362a6b25ebe46297a638eea35ce1674a5b66bc62b45db9d1b599c5f1b9560b5b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Siponimode",
+    "class": "Modulador dos receptores de esfingosina-1-fosfato",
+    "pharmacologicClass": "Modulador dos receptores de esfingosina-1-fosfato",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em forças para titulação e manutenção.",
+    "presentations": "Comprimidos em forças para titulação e manutenção.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Formas recorrentes de esclerose múltipla, incluindo doença secundariamente progressiva ativa, conforme rótulo.",
+    "dose": "Exige genotipagem CYP2C9 antes do início, titulação e avaliações cardíaca, oftalmológica, hepática e infecciosa. Dose depende do genótipo e interações.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, hipertensão, elevação de transaminases e quedas.",
+    "dangerousAdverseEffects": "Bradicardia/bloqueio cardíaco, edema macular, infecção grave, lesão hepática e PML.",
+    "adverseEffects": "Cefaleia, hipertensão, elevação de transaminases e quedas.; Bradicardia/bloqueio cardíaco, edema macular, infecção grave, lesão hepática e PML.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Bradicardia/bloqueio cardíaco, edema macular, infecção grave, lesão hepática e PML.",
+    "alerts": "Bradicardia/bloqueio cardíaco, edema macular, infecção grave, lesão hepática e PML.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=siponimode",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=siponimode"
+  },
+  "es": {
+    "name": "Siponimode",
+    "class": "Modulador dos receptores de esfingosina-1-fosfato",
+    "pharmacologicClass": "Modulador dos receptores de esfingosina-1-fosfato",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em forças para titulação y manutenção.",
+    "presentations": "Comprimidos em forças para titulação y manutenção.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Formas recorrentes de esclerose múltipla, incluindo doença secundariamente progressiva ativa, conforme rótulo.",
+    "dose": "Exige genotipagem CYP2C9 antes do início, titulação y avaliações cardíaca, oftalmológica, hepática y infecciosa. Dose depende do genótipo y interações.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, hipertensão, elevação de transaminases y quedas.",
+    "dangerousAdverseEffects": "Bradicardia/bloqueio cardíaco, edema macular, infecção grave, lesão hepática y PML.",
+    "adverseEffects": "Cefaleia, hipertensão, elevação de transaminases y quedas.; Bradicardia/bloqueio cardíaco, edema macular, infecção grave, lesão hepática y PML.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Bradicardia/bloqueio cardíaco, edema macular, infecção grave, lesão hepática y PML.",
+    "alerts": "Bradicardia/bloqueio cardíaco, edema macular, infecção grave, lesão hepática y PML.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=siponimode",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=siponimode"
+  }
+};})();
+/* GOLD33_SELECTIVE:siponimode:END */
