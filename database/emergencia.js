@@ -5224,3 +5224,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:pralidoxima:END */
+/* GOLD33_SELECTIVE:prometazina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="prometazina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:prometazina:"+matches.length);drug=matches[0];}else{drug=db&&db["prometazina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:prometazina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "065",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1a25d20852a2d1e893c3971303607ecf012af067ce4a1d044946ceb4d3ccbc93",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Prometazina",
+    "class": "Anti-histamínico H1 fenotiazínico",
+    "pharmacologicClass": "Anti-histamínico H1 fenotiazínico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, solução oral, supositório e injetável em concentrações específicas.",
+    "presentations": "Comprimidos, solução oral, supositório e injetável em concentrações específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Condições alérgicas, cinetose, náuseas e sedação em contextos específicos conforme rótulo.",
+    "dose": "Dose depende da indicação, idade e via. Contraindicada em crianças menores de 2 anos; injetável exige extremo cuidado pelo risco de lesão tecidual.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sonolência, boca seca, visão turva, tontura e constipação.",
+    "dangerousAdverseEffects": "Depressão respiratória fatal pediátrica, lesão tecidual/gangrena, delirium, hipotensão e distonia.",
+    "adverseEffects": "Sonolência, boca seca, visão turva, tontura e constipação.; Depressão respiratória fatal pediátrica, lesão tecidual/gangrena, delirium, hipotensão e distonia.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Depressão respiratória fatal pediátrica, lesão tecidual/gangrena, delirium, hipotensão e distonia.",
+    "alerts": "Depressão respiratória fatal pediátrica, lesão tecidual/gangrena, delirium, hipotensão e distonia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prometazina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prometazina"
+  },
+  "es": {
+    "name": "Prometazina",
+    "class": "Anti-histamínico H1 fenotiazínico",
+    "pharmacologicClass": "Anti-histamínico H1 fenotiazínico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, solución oral, supositório y injetável em concentrações específicas.",
+    "presentations": "Comprimidos, solución oral, supositório y injetável em concentrações específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Condições alérgicas, cinetose, náuseas y sedação em contextos específicos conforme rótulo.",
+    "dose": "Dose depende da indicação, idade y via. Contraindicada em niños menores de 2 anos; injetável exige extremo cuidado pelo risco de lesão tecidual.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sonolência, boca seca, visão turva, tontura y constipação.",
+    "dangerousAdverseEffects": "Depressão respiratória fatal pediátrica, lesão tecidual/gangrena, delirium, hipotensão y distonia.",
+    "adverseEffects": "Sonolência, boca seca, visão turva, tontura y constipação.; Depressão respiratória fatal pediátrica, lesão tecidual/gangrena, delirium, hipotensão y distonia.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Depressão respiratória fatal pediátrica, lesão tecidual/gangrena, delirium, hipotensão y distonia.",
+    "alerts": "Depressão respiratória fatal pediátrica, lesão tecidual/gangrena, delirium, hipotensão y distonia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prometazina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prometazina"
+  }
+};})();
+/* GOLD33_SELECTIVE:prometazina:END */

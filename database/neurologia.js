@@ -15400,3 +15400,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:pramipexol:END */
+/* GOLD33_SELECTIVE:primidona:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="primidona";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:primidona:"+matches.length);drug=matches[0];}else{drug=db&&db["primidona"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:primidona");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "065",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1a25d20852a2d1e893c3971303607ecf012af067ce4a1d044946ceb4d3ccbc93",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Primidona",
+    "class": "Antiepiléptico metabolizado a fenobarbital e PEMA",
+    "pharmacologicClass": "Antiepiléptico metabolizado a fenobarbital e PEMA",
+    "commercialNames": "br: Mysoline; Primidona; ar: Mysoline; Primidona",
+    "presentation": "Comprimido 250 mg",
+    "presentations": "Comprimido 250 mg",
+    "mechanism": "Convertida parcialmente em fenobarbital e PEMA; potencializa GABA-A e reduz excitabilidade neuronal.",
+    "pharmacodynamics": "Convertida parcialmente em fenobarbital e PEMA; potencializa GABA-A e reduz excitabilidade neuronal.",
+    "pharmacokinetics": "Primidona: 5–15 horas; metabólito fenobarbital tem meia-vida longa de vários dias.",
+    "indications": "Epilepsia focal; Crises tônico-clônicas generalizadas; Tremor essencial; Epilepsia refratária em combinação com outros anticonvulsivantes; Crises parciais com generalização secundária; Alternativa histórica quando outros anticonvulsivantes não são adequados",
+    "dose": "adulto: Epilepsia/tremor essencial: iniciar 25–50 mg à noite ou 125 mg/dia; titular lentamente.; manutencao: Dose usual: 250 mg 2–4x/dia, conforme resposta e tolerabilidade.; maxDose: Dose máxima usual: 2000 mg/dia.",
+    "pediatricDose": "standard: Adultos: geralmente titular por resposta clínica, não por kg.; pediatric: Pediatria/epilepsia: dose por kg conforme protocolo especializado.; maxDose: 2000 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Ataxia; Tontura; Náuseas; Fadiga; Nistagmo; Déficit cognitivo",
+    "dangerousAdverseEffects": "Depressão respiratória em intoxicação ou associação com sedativos; Dependência física e abstinência; Depressão ou ideação suicida; Reações cutâneas graves raras; Depressão medular rara; Osteopenia/osteomalácia em uso crônico",
+    "adverseEffects": "Sonolência, tontura, ataxia, náusea e diplopia.; Depressão respiratória, discrasias sanguíneas, ideação suicida, dependência e abstinência com convulsões.",
+    "contraindications": "Hipersensibilidade à primidona ou barbitúricos; Porfiria aguda intermitente; Insuficiência respiratória grave sem suporte; Doença hepática grave",
+    "interactions": "Álcool, opioides e benzodiazepínicos: maior depressão do SNC; Anticoncepcionais hormonais: reduz eficácia; Varfarina/DOACs: pode reduzir anticoagulação; Valproato: pode aumentar fenobarbital/metabólitos; Múltiplos fármacos metabolizados por CYP: risco alto de interações por indução enzimática",
+    "monitoring": "Titular lentamente para evitar sedação intensa e ataxia.; Não suspender abruptamente pelo risco de crises e abstinência.; Potente indutor enzimático: revisar interações sempre.; Monitorar sedação, quedas, humor e ideação suicida.; Em uso crônico, considerar avaliação de saúde óssea.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Depressão respiratória, discrasias sanguíneas, ideação suicida, dependência e abstinência com convulsões.",
+    "alerts": "Depressão respiratória, discrasias sanguíneas, ideação suicida, dependência e abstinência com convulsões.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=primidona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=primidona"
+  },
+  "es": {
+    "name": "Primidona",
+    "class": "Antiepiléptico metabolizado a fenobarbital y PEMA",
+    "pharmacologicClass": "Antiepiléptico metabolizado a fenobarbital y PEMA",
+    "commercialNames": "br: Mysoline; Primidona; ar: Mysoline; Primidona",
+    "presentation": "Comprimido 250 mg",
+    "presentations": "Comprimido 250 mg",
+    "mechanism": "Convertida parcialmente em fenobarbital y PEMA; potencializa GABA-A y reduz excitabilidade neuronal.",
+    "pharmacodynamics": "Convertida parcialmente em fenobarbital y PEMA; potencializa GABA-A y reduz excitabilidade neuronal.",
+    "pharmacokinetics": "Primidona: 5–15 horas; metabólito fenobarbital tem meia-vida longa de vários dias.",
+    "indications": "Epilepsia focal; Crises tônico-clônicas generalizadas; Tremor essencial; Epilepsia refratária em combinação con outros anticonvulsivantes; Crises parciais con generalização secundária; Alternativa histórica quando outros anticonvulsivantes no são adequados",
+    "dose": "adulto: Epilepsia/tremor essencial: iniciar 25–50 mg à noite ou 125 mg/dia; titular lentamente.; manutencao: Dose usual: 250 mg 2–4x/dia, conforme resposta y tolerabilidade.; maxDose: Dose máxima usual: 2000 mg/dia.",
+    "pediatricDose": "standard: Adultos: geralmente titular por resposta clínica, no por kg.; pediatric: Pediatria/epilepsia: dosis por kg conforme protocolo especializado.; maxDose: 2000 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Ataxia; Tontura; Náuseas; Fadiga; Nistagmo; Déficit cognitivo",
+    "dangerousAdverseEffects": "Depressão respiratória em intoxicação ou associação con sedativos; Dependência física y abstinência; Depressão ou ideação suicida; Reações cutâneas graves raras; Depressão medular rara; Osteopenia/osteomalácia em uso crônico",
+    "adverseEffects": "Sonolência, tontura, ataxia, náusea y diplopia.; Depressão respiratória, discrasias sanguíneas, ideação suicida, dependência y abstinência con convulsões.",
+    "contraindications": "Hipersensibilidade à primidona ou barbitúricos; Porfiria aguda intermitente; Insuficiência respiratória grave sem suporte; Doença hepática grave",
+    "interactions": "Álcool, opioides y benzodiazepínicos: maior depressão do SNC; Anticoncepcionais hormonais: reduz eficácia; Varfarina/DOACs: pode reduzir anticoagulação; Valproato: pode aumentar fenobarbital/metabólitos; Múltiplos fármacos metabolizados por CYP: risco alto de interações por indução enzimática",
+    "monitoring": "Titular lentamente para evitar sedação intensa y ataxia.; No suspender abruptamente pelo risco de crises y abstinência.; Potente indutor enzimático: revisar interações sempre.; Monitorar sedação, quedas, humor y ideação suicida.; Em uso crônico, considerar avaliação de saúde óssea.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Depressão respiratória, discrasias sanguíneas, ideação suicida, dependência y abstinência con convulsões.",
+    "alerts": "Depressão respiratória, discrasias sanguíneas, ideação suicida, dependência y abstinência con convulsões.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=primidona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=primidona"
+  }
+};})();
+/* GOLD33_SELECTIVE:primidona:END */

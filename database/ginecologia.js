@@ -595,3 +595,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:letrozol_ginecologia:END */
+/* GOLD33_SELECTIVE:progesterona_micronizada:START */
+;(function(){var db=window.GINECOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="progesterona_micronizada";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:progesterona_micronizada:"+matches.length);drug=matches[0];}else{drug=db&&db["progesterona_micronizada"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:progesterona_micronizada");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "065",
+    "requiredFieldCount": 33,
+    "approvedSha256": "1a25d20852a2d1e893c3971303607ecf012af067ce4a1d044946ceb4d3ccbc93",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Progesterona micronizada",
+    "class": "Progestagênio",
+    "pharmacologicClass": "Progestagênio",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas micronizadas orais/vaginais e outras formulações conforme mercado.",
+    "presentations": "Cápsulas micronizadas orais/vaginais e outras formulações conforme mercado.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Indicações ginecológicas e reprodutivas conforme via, formulação e jurisdição.",
+    "dose": "Regime depende da indicação e da via oral ou vaginal. Cápsulas não devem ser tratadas como automaticamente intercambiáveis entre vias; confirmar excipientes, duração e protocolo.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sonolência, tontura, cefaleia, distensão e sangramento irregular.",
+    "dangerousAdverseEffects": "Tromboembolismo, reação alérgica, doença hepática e atraso no diagnóstico de sangramento anormal.",
+    "adverseEffects": "Sonolência, tontura, cefaleia, distensão e sangramento irregular.; Tromboembolismo, reação alérgica, doença hepática e atraso no diagnóstico de sangramento anormal.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Tromboembolismo, reação alérgica, doença hepática e atraso no diagnóstico de sangramento anormal.",
+    "alerts": "Tromboembolismo, reação alérgica, doença hepática e atraso no diagnóstico de sangramento anormal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=progesterona+micronizada",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=progesterona+micronizada"
+  },
+  "es": {
+    "name": "Progesterona micronizada",
+    "class": "Progestagênio",
+    "pharmacologicClass": "Progestagênio",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas micronizadas orais/vaginais y outras formulações conforme mercado.",
+    "presentations": "Cápsulas micronizadas orais/vaginais y outras formulações conforme mercado.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Indicações ginecológicas y reprodutivas conforme via, formulação y jurisdição.",
+    "dose": "Regime depende da indicação y da via oral ou vaginal. Cápsulas no devem ser tratadas como automaticamente intercambiáveis entre vias; confirmar excipientes, duração y protocolo.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sonolência, tontura, cefaleia, distensão y sangramento irregular.",
+    "dangerousAdverseEffects": "Tromboembolismo, reação alérgica, doença hepática y atraso no diagnóstico de sangramento anormal.",
+    "adverseEffects": "Sonolência, tontura, cefaleia, distensão y sangramento irregular.; Tromboembolismo, reação alérgica, doença hepática y atraso no diagnóstico de sangramento anormal.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Tromboembolismo, reação alérgica, doença hepática y atraso no diagnóstico de sangramento anormal.",
+    "alerts": "Tromboembolismo, reação alérgica, doença hepática y atraso no diagnóstico de sangramento anormal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=progesterona+micronizada",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=progesterona+micronizada"
+  }
+};})();
+/* GOLD33_SELECTIVE:progesterona_micronizada:END */

@@ -5,246 +5,80 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "commonAdverseEffects": [
-      "sabor metálico",
-      "tontura",
-      "constipação",
-      "náuseas",
-      "fadiga"
-    ],
-    "monitoring": [
-      "ECG de 12 derivações",
-      "frequência cardíaca",
-      "pressão arterial",
-      "função renal e eletrólitos quando aplicável",
-      "sintomas de pró-arritmia"
-    ],
-    "preparation": "Confirmar formulação e concentração antes de administrar.",
-    "patientEducation": [
-      "Não duplicar doses esquecidas",
-      "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
-      "informar todos os fármacos pelo risco de interações e pró-arritmia"
-    ],
+    "commonAdverseEffects": "sabor metálico; tontura; constipação; náuseas; fadiga",
+    "monitoring": "Não usar em cardiopatia estrutural significativa para controle de ritmo da FA; Reduzir se QRS alargar de forma importante ou surgir bloqueio.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
     "name": "Propafenona",
-    "class": "Antiarrítmico classe IC com atividade betabloqueadora fraca",
-    "pharmacologicClass": "Bloqueador de canais de sódio classe IC; substrato CYP2D6/CYP3A4",
+    "class": "Antiarrítmico classe IC",
+    "pharmacologicClass": "Antiarrítmico classe IC",
     "mechanism": "Bloqueia canais rápidos de sódio e desacelera condução; também possui atividade beta-adrenérgica fraca.",
-    "pharmacodynamics": "Prolonga PR e QRS e pode suprimir FA e outras taquiarritmias; risco de pró-arritmia, flutter 1:1 e piora de IC.",
-    "pharmacokinetics": "Metabolismo hepático intenso e saturável, principalmente CYP2D6 e CYP3A4; exposição varia muito conforme fenótipo CYP2D6 e inibidores concomitantes.",
-    "indications": [
-      "Prolongar tempo até recorrência de FA paroxística ou TPSV sintomática em pacientes sem cardiopatia estrutural",
-      "arritmias ventriculares documentadas potencialmente fatais"
-    ],
-    "commercialNames": [
-      "Rythmol"
-    ],
+    "pharmacodynamics": "Bloqueia canais rápidos de sódio e desacelera condução; também possui atividade beta-adrenérgica fraca.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Prolongar tempo até recorrência de FA paroxística ou TPSV sintomática em pacientes sem cardiopatia estrutural; arritmias ventriculares documentadas potencialmente fatais",
+    "commercialNames": "Rythmol",
     "presentation": "Comprimidos orais de liberação imediata.",
-    "presentations": [
-      "150 mg",
-      "225 mg",
-      "300 mg"
-    ],
-    "dose": {
-      "maintenance": "150 mg a cada 8 h; aumentar após pelo menos 3-4 dias para 225 mg a cada 8 h e, se necessário, 300 mg a cada 8 h; máximo 900 mg/dia.",
-      "pillInPocket": "450-600 mg dose única em pacientes selecionados, com bloqueador nodal AV e teste inicial monitorado."
-    },
-    "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
-    "renalDose": "Não há ajuste fixo bem estabelecido; metabólitos são eliminados pelos rins e deve-se monitorar toxicidade na disfunção renal.",
-    "hepaticDose": "A exposição aumenta na hepatopatia; considerar redução da dose e titulação lenta com ECG.",
-    "dangerousAdverseEffects": [
-      "pró-arritmia ventricular",
-      "alargamento do QRS",
-      "bloqueio AV",
-      "insuficiência cardíaca",
-      "síndrome de Brugada desmascarada",
-      "agranulocitose rara"
-    ],
-    "contraindications": [
-      "Insuficiência cardíaca",
-      "choque cardiogênico",
-      "distúrbios significativos de condução sem marcapasso",
-      "bradicardia importante",
-      "hipotensão importante",
-      "distúrbio broncoespástico grave",
-      "alterações eletrolíticas importantes",
-      "síndrome de Brugada"
-    ],
-    "interactions": [
-      "Evitar combinação simultânea de inibidor CYP2D6 mais inibidor CYP3A4 pelo aumento da exposição",
-      "Digoxina e varfarina podem ter concentrações aumentadas",
-      "Outros depressores nodais aumentam bradicardia ou bloqueio",
-      "Usar bloqueador nodal AV na estratégia de FA para reduzir flutter 1:1"
-    ],
-    "administration": "Administrar a cada 8 h; titular não mais rápido que a cada 3-4 dias.",
-    "infusionProtocol": "Não se aplica à formulação oral citada.",
-    "pregnancy": "Usar apenas se o benefício justificar o risco; dados humanos limitados.",
-    "lactation": "Foram detectadas pequenas quantidades no leite; individualizar e observar o lactente se usada.",
-    "specialPopulations": {
-      "structuralHeartDisease": "Não usar para manutenção de ritmo da FA com IAM prévio ou cardiopatia estrutural significativa.",
-      "hepatic": "Reduzir/titular lentamente.",
-      "CYP2D6": "Variabilidade genética e interações modificam muito a exposição."
-    },
-    "clinicalPearls": [
-      "A combinação de inibição de CYP2D6 e CYP3A4 deve ser evitada",
-      "Pill-in-the-pocket usa 450-600 mg com bloqueio nodal AV apenas após teste supervisionado."
-    ],
-    "guidelineRecommendations": [
-      "Diretriz FA 2023: propafenona é razoável para manutenção do ritmo apenas sem IAM prévio nem cardiopatia estrutural significativa."
-    ],
-    "safetyFlags": [
-      "PROARRITMIA",
-      "QRS",
-      "CARDIOPATIA_ESTRUTURAL",
-      "CYP2D6_CYP3A4",
-      "BRUGADA"
-    ],
-    "alerts": [
-      "Não usar em cardiopatia estrutural significativa para controle de ritmo da FA",
-      "Reduzir se QRS alargar de forma importante ou surgir bloqueio."
-    ],
-    "adverseEffects": {
-      "common": [
-        "sabor metálico",
-        "tontura",
-        "constipação",
-        "náuseas",
-        "fadiga"
-      ],
-      "dangerous": [
-        "pró-arritmia ventricular",
-        "alargamento do QRS",
-        "bloqueio AV",
-        "insuficiência cardíaca",
-        "síndrome de Brugada desmascarada",
-        "agranulocitose rara"
-      ]
-    },
+    "presentations": "Comprimidos orais de liberação imediata.",
+    "dose": "maintenance: 150 mg a cada 8 h; aumentar após pelo menos 3-4 dias para 225 mg a cada 8 h e, se necessário, 300 mg a cada 8 h; máximo 900 mg/dia.; pillInPocket: 450-600 mg dose única em pacientes selecionados, com bloqueador nodal AV e teste inicial monitorado.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "dangerousAdverseEffects": "pró-arritmia ventricular; alargamento do QRS; bloqueio AV; insuficiência cardíaca; síndrome de Brugada desmascarada; agranulocitose rara",
+    "contraindications": "Insuficiência cardíaca; choque cardiogênico; distúrbios significativos de condução sem marcapasso; bradicardia importante; hipotensão importante; distúrbio broncoespástico grave; alterações eletrolíticas importantes; síndrome de Brugada",
+    "interactions": "Evitar combinação simultânea de inibidor CYP2D6 mais inibidor CYP3A4 pelo aumento da exposição; Digoxina e varfarina podem ter concentrações aumentadas; Outros depressores nodais aumentam bradicardia ou bloqueio; Usar bloqueador nodal AV na estratégia de FA para reduzir flutter 1:1",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Pró-arritmia, bloqueio, insuficiência cardíaca, agranulocitose e broncoespasmo.",
+    "alerts": "Pró-arritmia, bloqueio, insuficiência cardíaca, agranulocitose e broncoespasmo.; revisão clínica obrigatória.",
+    "adverseEffects": "Tontura, alteração do paladar, náusea, constipação e visão turva.; Pró-arritmia, bloqueio, insuficiência cardíaca, agranulocitose e broncoespasmo.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c8ad1f0f-0e95-4868-a2af-e193c1833841",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propafenona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c8ad1f0f-0e95-4868-a2af-e193c1833841"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propafenona"
   },
   "es": {
-    "commonAdverseEffects": [
-      "sabor metálico",
-      "mareo",
-      "estreñimiento",
-      "náuseas",
-      "fatiga"
-    ],
-    "monitoring": [
-      "ECG de 12 derivaciones",
-      "frecuencia cardíaca",
-      "presión arterial",
-      "función renal y electrolitos cuando corresponda",
-      "síntomas de proarritmia"
-    ],
-    "preparation": "Verificar formulación y concentración antes de administrar.",
-    "patientEducation": [
-      "No duplicar dosis omitidas",
-      "consultar por síncope, palpitaciones sostenidas o disnea nueva",
-      "informar todos los fármacos por riesgo de interacciones y proarritmia"
-    ],
+    "commonAdverseEffects": "sabor metálico; tontura; constipação; náuseas; fadiga",
+    "monitoring": "No usar em cardiopatia estrutural significativa para controle de ritmo da FA; Reduzir se QRS alargar de forma importante ou surgir bloqueio.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
     "name": "Propafenona",
-    "class": "Antiarrítmico clase IC con actividad betabloqueante débil",
-    "pharmacologicClass": "Bloqueador de canales de sodio clase IC; sustrato CYP2D6/CYP3A4",
-    "mechanism": "Bloquea canales rápidos de sodio y enlentece conducción; además posee actividad beta-adrenérgica débil.",
-    "pharmacodynamics": "Prolonga PR y QRS y puede suprimir FA y otras taquiarritmias; riesgo de proarritmia, flutter 1:1 y empeoramiento de HF.",
-    "pharmacokinetics": "Metabolismo hepático intenso y saturable, principalmente CYP2D6 y CYP3A4; exposición varía mucho según fenotipo CYP2D6 e inhibidores concomitantes.",
-    "indications": [
-      "Prolongar tiempo hasta recurrencia de FA paroxística o PSVT sintomática en pacientes sin cardiopatía estructural",
-      "arritmias ventriculares documentadas potencialmente mortales"
-    ],
-    "commercialNames": [
-      "Rythmol"
-    ],
-    "presentation": "Tabletas orales de liberación inmediata.",
-    "presentations": [
-      "150 mg",
-      "225 mg",
-      "300 mg"
-    ],
-    "dose": {
-      "maintenance": "150 mg cada 8 h; aumentar después de al menos 3-4 días a 225 mg cada 8 h y, si es necesario, 300 mg cada 8 h; máximo 900 mg/día.",
-      "pillInPocket": "450-600 mg dosis única en pacientes seleccionados, con bloqueador nodal AV y prueba inicial monitorizada."
-    },
-    "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
-    "renalDose": "No existe ajuste fijo bien establecido; los metabolitos se eliminan por riñón y debe vigilarse toxicidad en disfunción renal.",
-    "hepaticDose": "La exposición aumenta en hepatopatía; considerar reducción de dosis y titulación lenta con ECG.",
-    "dangerousAdverseEffects": [
-      "proarritmia ventricular",
-      "ensanchamiento de QRS",
-      "bloqueo AV",
-      "insuficiencia cardíaca",
-      "síndrome de Brugada desenmascarado",
-      "agranulocitosis rara"
-    ],
-    "contraindications": [
-      "Insuficiencia cardíaca",
-      "shock cardiogénico",
-      "trastornos significativos de conducción sin marcapasos",
-      "bradicardia marcada",
-      "hipotensión marcada",
-      "trastorno broncoespástico grave",
-      "alteraciones electrolíticas marcadas",
-      "síndrome de Brugada"
-    ],
-    "interactions": [
-      "Evitar combinación simultánea de inhibidor CYP2D6 más inhibidor CYP3A4 por aumento de exposición",
-      "Digoxina y warfarina pueden aumentar concentraciones",
-      "Otros depresores nodales aumentan bradicardia o bloqueo",
-      "Usar bloqueador nodal AV en estrategia de FA para reducir flutter 1:1"
-    ],
-    "administration": "Administrar cada 8 h; titular no más rápido que cada 3-4 días.",
-    "infusionProtocol": "No aplica a la formulación oral citada.",
-    "pregnancy": "Usar solo si el beneficio justifica el riesgo; datos humanos limitados.",
-    "lactation": "Se han detectado cantidades bajas en leche; individualizar y vigilar al lactante si se usa.",
-    "specialPopulations": {
-      "structuralHeartDisease": "No usar para mantenimiento de ritmo de FA con IAM previo o cardiopatía estructural significativa.",
-      "hepatic": "Reducir/titular lentamente.",
-      "CYP2D6": "Variabilidad genética e interacciones modifican mucho exposición."
-    },
-    "clinicalPearls": [
-      "La combinación de inhibición CYP2D6 y CYP3A4 debe evitarse",
-      "Pill-in-the-pocket usa 450-600 mg con bloqueo nodal AV solo tras prueba supervisada."
-    ],
-    "guidelineRecommendations": [
-      "Guía AF 2023: propafenona es razonable para mantenimiento de ritmo solo sin IAM previo ni cardiopatía estructural significativa."
-    ],
-    "safetyFlags": [
-      "PROARRITMIA",
-      "QRS",
-      "CARDIOPATIA_ESTRUCTURAL",
-      "CYP2D6_CYP3A4",
-      "BRUGADA"
-    ],
-    "alerts": [
-      "No usar en cardiopatía estructural significativa para control de ritmo de FA",
-      "Reducir si QRS se ensancha de forma importante o aparece bloqueo."
-    ],
-    "adverseEffects": {
-      "common": [
-        "sabor metálico",
-        "mareo",
-        "estreñimiento",
-        "náuseas",
-        "fatiga"
-      ],
-      "dangerous": [
-        "proarritmia ventricular",
-        "ensanchamiento de QRS",
-        "bloqueo AV",
-        "insuficiencia cardíaca",
-        "síndrome de Brugada desenmascarado",
-        "agranulocitosis rara"
-      ]
-    },
+    "class": "Antiarrítmico classe IC",
+    "pharmacologicClass": "Antiarrítmico classe IC",
+    "mechanism": "Bloqueia canais rápidos de sódio y desacelera condução; também possui atividade beta-adrenérgica fraca.",
+    "pharmacodynamics": "Bloqueia canais rápidos de sódio y desacelera condução; também possui atividade beta-adrenérgica fraca.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Prolongar tempo até recorrência de FA paroxística ou TPSV sintomática em pacientes sem cardiopatia estrutural; arritmias ventriculares documentadas potencialmente fatais",
+    "commercialNames": "Rythmol",
+    "presentation": "Comprimidos orais de liberação imediata.",
+    "presentations": "Comprimidos orais de liberação imediata.",
+    "dose": "maintenance: 150 mg a cada 8 h; aumentar após pelo menos 3-4 dias para 225 mg a cada 8 h e, se necessário, 300 mg a cada 8 h; máximo 900 mg/dia.; pillInPocket: 450-600 mg dosis única em pacientes selecionados, con bloqueador nodal AV y teste inicial monitorado.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "dangerousAdverseEffects": "pró-arritmia ventricular; alargamento do QRS; bloqueio AV; insuficiência cardíaca; síndrome de Brugada desmascarada; agranulocitose rara",
+    "contraindications": "Insuficiência cardíaca; choque cardiogênico; distúrbios significativos de condução sem marcapasso; bradicardia importante; hipotensão importante; distúrbio broncoespástico grave; alterações eletrolíticas importantes; síndrome de Brugada",
+    "interactions": "Evitar combinação simultânea de inibidor CYP2D6 mais inibidor CYP3A4 pelo aumento da exposição; Digoxina y varfarina podem ter concentrações aumentadas; Outros depressores nodais aumentam bradicardia ou bloqueio; Usar bloqueador nodal AV na estratégia de FA para reduzir flutter 1:1",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Pró-arritmia, bloqueio, insuficiência cardíaca, agranulocitose y broncoespasmo.",
+    "alerts": "Pró-arritmia, bloqueio, insuficiência cardíaca, agranulocitose y broncoespasmo.; revisão clínica obrigatória.",
+    "adverseEffects": "Tontura, alteração do paladar, náusea, constipação y visão turva.; Pró-arritmia, bloqueio, insuficiência cardíaca, agranulocitose y broncoespasmo.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c8ad1f0f-0e95-4868-a2af-e193c1833841",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propafenona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c8ad1f0f-0e95-4868-a2af-e193c1833841"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propafenona"
   },
   "name": {
     "pt": "Propafenona",
@@ -253,19 +87,21 @@
   "keywords": [
     "propafenona"
   ],
-  "dataVersion": "clinical-data-v1-3dde6cf72b4b0f59",
-  "clinicalContentSha256": "3dde6cf72b4b0f590a2b084728cc66a5dbbadb593e7088d8b4ca5c1a1234fc0c",
+  "dataVersion": "clinical-data-v1-1eadf70ba04333d3",
+  "clinicalContentSha256": "1eadf70ba04333d33fb1a2ff07b587f8531bdc7400086faec527b6cf89206586",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "propafenona.mcGoldClinicalV1",
-    "group": "GOLD_GROUP07_CARDIO_10",
-    "review": "2026-09",
+    "lote": "065",
     "requiredFields": 33,
-    "contentSha256": "085621d7aaca909ac6fecd3a974adaf8221f57df0a6603d3ba855845e4fbdf75",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "1a25d20852a2d1e893c3971303607ecf012af067ce4a1d044946ceb4d3ccbc93",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }
