@@ -798,3 +798,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:dissulfiram:END */
+/* GOLD33_SELECTIVE:metadona_cronico:START */
+;(function(){var db=window.TOXICOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="metadona_cronico";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:metadona_cronico:"+matches.length);drug=matches[0];}else{drug=db&&db["metadona_cronico"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:metadona_cronico");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "050",
+    "requiredFieldCount": 33,
+    "approvedSha256": "05f711b06c165ab09da3326a0a672735b3efd2c46bd3e881bcfe3ec6606ae4a0",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Metadona - dor crônica",
+    "class": "Agonista opioide de ação prolongada",
+    "pharmacologicClass": "Agonista opioide de ação prolongada",
+    "commercialNames": "br: Metadona HCl (Genérico — dispensação exclusiva em CAPS-AD); ar: Metadona HCl (dispensación exclusiva en centros autorizados)",
+    "presentation": "Solução oral 1 mg/mL, 2 mg/mL, 5 mg/mL (frasco para dispensação diária supervisionada); Comprimido 5 mg, 10 mg (em alguns países)",
+    "presentations": "Solução oral 1 mg/mL, 2 mg/mL, 5 mg/mL (frasco para dispensação diária supervisionada); Comprimido 5 mg, 10 mg (em alguns países)",
+    "mechanism": "Agonista pleno de receptores μ-opioides (ação longa, suprime sintomas de abstinência e craving) + antagonista de receptores NMDA (reduz tolerância e hiperalgesia). Metabolismo hepático extenso (CYP3A4, CYP2D6, CYP2B6) com variabilidade genética significativa.",
+    "pharmacodynamics": "Agonista pleno de receptores μ-opioides (ação longa, suprime sintomas de abstinência e craving) + antagonista de receptores NMDA (reduz tolerância e hiperalgesia). Metabolismo hepático extenso (CYP3A4, CYP2D6, CYP2B6) com variabilidade genética significativa.",
+    "pharmacokinetics": "Meia-vida longa e variável: 8–59 horas (média 24–36h). Acúmulo em doses iniciais — risco de overdose nos primeiros 5 dias.",
+    "indications": "Dor crônica intensa quando alternativas são inadequadas, em pacientes selecionados e sob monitorização especializada.",
+    "dose": "indução: INDUÇÃO (apenas em centro autorizado): Dose inicial: 20–30 mg VO no 1º dia (máx 30 mg/dose única inicial). Titular por observação de 3–4h. Se sintomas de abstinência persistirem: adicionar 5–10 mg (máx 40 mg total no D1).; manutencao: MANUTENÇÃO: Dose usual de manutenção: 60–120 mg/dia VO 1×/dia. Doses > 100 mg/dia conferem maior retenção no programa. Revisar dose a cada 1–3 meses.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "ClCr ≥ 30: sem ajuste renal obrigatório.",
+    "hepaticDose": "Hepatopatia leve: sem ajuste necessário.",
+    "commonAdverseEffects": "Constipação, náusea, sudorese, sonolência e tontura.",
+    "dangerousAdverseEffects": "🚨 OVERDOSE / DEPRESSÃO RESPIRATÓRIA — risco aumentado nos primeiros 5 dias de indução e em ajustes de dose; 🚨 PROLONGAMENTO DO INTERVALO QTc — Torsades de Pointes (dose-dependente); Sedação excessiva (acúmulo); Hipogonadismo com uso crônico",
+    "adverseEffects": "Constipação, náusea, sudorese, sonolência e tontura.; Depressão respiratória tardia/prolongada, QT/torsades, overdose, dependência e síndrome serotoninérgica.",
+    "contraindications": "absolute: Uso sem prescrição/supervisão de centro especializado; relative: QTc > 500 ms; Asma grave não controlada",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Depressão respiratória tardia/prolongada, QT/torsades, overdose, dependência e síndrome serotoninérgica.",
+    "alerts": "Depressão respiratória tardia/prolongada, QT/torsades, overdose, dependência e síndrome serotoninérgica.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methadone",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/methadone-hydrochloride-marketed-dolophine-information"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methadone"
+  },
+  "es": {
+    "name": "Metadona - dor crônica",
+    "class": "Agonista opioide de ação prolongada",
+    "pharmacologicClass": "Agonista opioide de ação prolongada",
+    "commercialNames": "br: Metadona HCl (Genérico — dispensação exclusiva em CAPS-AD); ar: Metadona HCl (dispensación exclusiva en centros autorizados)",
+    "presentation": "Solução oral 1 mg/mL, 2 mg/mL, 5 mg/mL (frasco para dispensação diária supervisionada); Comprimido 5 mg, 10 mg (em alguns países)",
+    "presentations": "Solução oral 1 mg/mL, 2 mg/mL, 5 mg/mL (frasco para dispensação diária supervisionada); Comprimido 5 mg, 10 mg (em alguns países)",
+    "mechanism": "Agonista pleno de receptores μ-opioides (ação longa, suprime sintomas de abstinência y craving) + antagonista de receptores NMDA (reduz tolerância y hiperalgesia). Metabolismo hepático extenso (CYP3A4, CYP2D6, CYP2B6) con variabilidade genética significativa.",
+    "pharmacodynamics": "Agonista pleno de receptores μ-opioides (ação longa, suprime sintomas de abstinência y craving) + antagonista de receptores NMDA (reduz tolerância y hiperalgesia). Metabolismo hepático extenso (CYP3A4, CYP2D6, CYP2B6) con variabilidade genética significativa.",
+    "pharmacokinetics": "Meia-vida longa y variável: 8–59 horas (média 24–36h). Acúmulo em dosiss iniciais — riesgo de overdosis nos primeiros 5 dias.",
+    "indications": "Dor crônica intensa quando alternativas são inadequadas, em pacientes selecionados y sob monitorização especializada.",
+    "dose": "indução: INDUÇÃO (apenas em centro autorizado): Dose inicial: 20–30 mg VO no 1º dia (máx 30 mg/dosis única inicial). Titular por observação de 3–4h. Se sintomas de abstinência persistirem: adicionar 5–10 mg (máx 40 mg total no D1).; manutencao: MANUTENÇÃO: Dose usual de manutenção: 60–120 mg/dia VO 1×/dia. Doses > 100 mg/dia conferem maior retenção no programa. Revisar dosis a cada 1–3 meses.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "ClCr ≥ 30: sem ajuste renal obrigatório.",
+    "hepaticDose": "Hepatopatia leve: sem ajuste necessário.",
+    "commonAdverseEffects": "Constipação, náusea, sudorese, sonolência y tontura.",
+    "dangerousAdverseEffects": "🚨 OVERDOSE / DEPRESSÃO RESPIRATÓRIA — riesgo aumentado nos primeiros 5 dias de indução y em ajustes de dosis; 🚨 PROLONGAMENTO DO INTERVALO QTc — Torsades de Pointes (dosis-dependente); Sedação excessiva (acúmulo); Hipogonadismo con uso crônico",
+    "adverseEffects": "Constipação, náusea, sudorese, sonolência y tontura.; Depressão respiratória tardia/prolongada, QT/torsades, overdosis, dependência y síndrome serotoninérgica.",
+    "contraindications": "absolute: Uso sem prescrição/supervisão de centro especializado; relative: QTc > 500 ms; Asma grave no controlada",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Depressão respiratória tardia/prolongada, QT/torsades, overdosis, dependência y síndrome serotoninérgica.",
+    "alerts": "Depressão respiratória tardia/prolongada, QT/torsades, overdosis, dependência y síndrome serotoninérgica.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methadone",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/methadone-hydrochloride-marketed-dolophine-information"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methadone"
+  }
+};})();
+/* GOLD33_SELECTIVE:metadona_cronico:END */

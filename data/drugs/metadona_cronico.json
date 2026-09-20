@@ -5,136 +5,94 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Metadona — Programa de Manutenção (PMM)",
-    "class": "Opioide Agonista Pleno μ + Antagonista NMDA — Terapia de Manutenção",
+    "name": "Metadona - dor crônica",
+    "class": "Agonista opioide de ação prolongada",
     "category": "dependencia_opioide",
-    "commercialNames": {
-      "br": [
-        "Metadona HCl (Genérico — dispensação exclusiva em CAPS-AD)"
-      ],
-      "ar": [
-        "Metadona HCl (dispensación exclusiva en centros autorizados)"
-      ]
-    },
-    "presentation": [
-      "Solução oral 1 mg/mL, 2 mg/mL, 5 mg/mL (frasco para dispensação diária supervisionada)",
-      "Comprimido 5 mg, 10 mg (em alguns países)"
-    ],
-    "dose": {
-      "indução": "INDUÇÃO (apenas em centro autorizado): Dose inicial: 20–30 mg VO no 1º dia (máx 30 mg/dose única inicial). Titular por observação de 3–4h. Se sintomas de abstinência persistirem: adicionar 5–10 mg (máx 40 mg total no D1).",
-      "manutencao": "MANUTENÇÃO: Dose usual de manutenção: 60–120 mg/dia VO 1×/dia. Doses > 100 mg/dia conferem maior retenção no programa. Revisar dose a cada 1–3 meses."
-    },
+    "commercialNames": "br: Metadona HCl (Genérico — dispensação exclusiva em CAPS-AD); ar: Metadona HCl (dispensación exclusiva en centros autorizados)",
+    "presentation": "Solução oral 1 mg/mL, 2 mg/mL, 5 mg/mL (frasco para dispensação diária supervisionada); Comprimido 5 mg, 10 mg (em alguns países)",
+    "dose": "indução: INDUÇÃO (apenas em centro autorizado): Dose inicial: 20–30 mg VO no 1º dia (máx 30 mg/dose única inicial). Titular por observação de 3–4h. Se sintomas de abstinência persistirem: adicionar 5–10 mg (máx 40 mg total no D1).; manutencao: MANUTENÇÃO: Dose usual de manutenção: 60–120 mg/dia VO 1×/dia. Doses > 100 mg/dia conferem maior retenção no programa. Revisar dose a cada 1–3 meses.",
     "mechanism": "Agonista pleno de receptores μ-opioides (ação longa, suprime sintomas de abstinência e craving) + antagonista de receptores NMDA (reduz tolerância e hiperalgesia). Metabolismo hepático extenso (CYP3A4, CYP2D6, CYP2B6) com variabilidade genética significativa.",
     "halfLife": "Meia-vida longa e variável: 8–59 horas (média 24–36h). Acúmulo em doses iniciais — risco de overdose nos primeiros 5 dias.",
     "renalAdjustment": "ClCr ≥ 30: sem ajuste renal obrigatório.",
     "hepaticAdjustment": "Hepatopatia leve: sem ajuste necessário.",
     "risksByPatient": [],
-    "dangerousAdverseEffects": [
-      "🚨 OVERDOSE / DEPRESSÃO RESPIRATÓRIA — risco aumentado nos primeiros 5 dias de indução e em ajustes de dose",
-      "🚨 PROLONGAMENTO DO INTERVALO QTc — Torsades de Pointes (dose-dependente)",
-      "Sedação excessiva (acúmulo)",
-      "Hipogonadismo com uso crônico"
-    ],
-    "contraindications": {
-      "absolute": [
-        "Uso sem prescrição/supervisão de centro especializado"
-      ],
-      "relative": [
-        "QTc > 500 ms",
-        "Asma grave não controlada"
-      ]
-    },
-    "monitoring": [
-      "ECG (QTc) — basal, 30–40 mg/dia, 100 mg/dia",
-      "Nível sérico se resposta inadequada ou suspeita de acúmulo",
-      "Urinálise toxicológica mensal (programa)",
-      "Hormônios sexuais (semestral no uso crônico)"
-    ],
-    "safetyFlags": {
-      "bleedingRisk": false,
-      "renalHighRisk": false,
-      "hepaticCaution": true,
-      "antidoteAvailable": true,
-      "highAlertMedication": true,
-      "antidote": "Naloxona IV/IM/SC/intranasal — repetir a cada 2–3 min se necessário (meia-vida da naloxona < metadona — monitorar por 12–24h).",
-      "warning": "🚨 MEDICAMENTO DE ALTA VIGILÂNCIA: Dispensação exclusiva em CAPS-AD/centros autorizados. Doses de indução > 40 mg/dia requerem observação direta. Risco de acúmulo e overdose letal nas primeiras doses."
-    },
+    "dangerousAdverseEffects": "🚨 OVERDOSE / DEPRESSÃO RESPIRATÓRIA — risco aumentado nos primeiros 5 dias de indução e em ajustes de dose; 🚨 PROLONGAMENTO DO INTERVALO QTc — Torsades de Pointes (dose-dependente); Sedação excessiva (acúmulo); Hipogonadismo com uso crônico",
+    "contraindications": "absolute: Uso sem prescrição/supervisão de centro especializado; relative: QTc > 500 ms; Asma grave não controlada",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "safetyFlags": "Depressão respiratória tardia/prolongada, QT/torsades, overdose, dependência e síndrome serotoninérgica.",
     "references": [
-      "Portaria SVS/MS nº 344/1998 (Brasil) — Controle de Metadona",
-      "SAMHSA 2021 — Medications for Opioid Use Disorder",
-      "Mattick RP et al. Cochrane 2014 — Methadone maintenance therapy vs no opioid replacement",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methadone",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/methadone-hydrochloride-marketed-dolophine-information"
+    ],
+    "pharmacologicClass": "Agonista opioide de ação prolongada",
+    "presentations": "Solução oral 1 mg/mL, 2 mg/mL, 5 mg/mL (frasco para dispensação diária supervisionada); Comprimido 5 mg, 10 mg (em alguns países)",
+    "pharmacodynamics": "Agonista pleno de receptores μ-opioides (ação longa, suprime sintomas de abstinência e craving) + antagonista de receptores NMDA (reduz tolerância e hiperalgesia). Metabolismo hepático extenso (CYP3A4, CYP2D6, CYP2B6) com variabilidade genética significativa.",
+    "pharmacokinetics": "Meia-vida longa e variável: 8–59 horas (média 24–36h). Acúmulo em doses iniciais — risco de overdose nos primeiros 5 dias.",
+    "indications": "Dor crônica intensa quando alternativas são inadequadas, em pacientes selecionados e sob monitorização especializada.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "ClCr ≥ 30: sem ajuste renal obrigatório.",
+    "hepaticDose": "Hepatopatia leve: sem ajuste necessário.",
+    "commonAdverseEffects": "Constipação, náusea, sudorese, sonolência e tontura.",
+    "adverseEffects": "Constipação, náusea, sudorese, sonolência e tontura.; Depressão respiratória tardia/prolongada, QT/torsades, overdose, dependência e síndrome serotoninérgica.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "alerts": "Depressão respiratória tardia/prolongada, QT/torsades, overdose, dependência e síndrome serotoninérgica.; monitorização obrigatória",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methadone"
   },
   "es": {
-    "name": "Metadona — Programa de Mantenimiento (PMM)",
-    "class": "Opioide Agonista Pleno μ + Antagonista NMDA — Terapia de Mantenimiento",
+    "name": "Metadona - dor crônica",
+    "class": "Agonista opioide de ação prolongada",
     "category": "dependencia_opioide",
-    "commercialNames": {
-      "br": [
-        "Metadona HCl (Genérico — dispensação exclusiva em CAPS-AD)"
-      ],
-      "ar": [
-        "Metadona HCl (dispensación exclusiva en centros autorizados)"
-      ]
-    },
-    "presentation": [
-      "Solución oral 1 mg/mL, 2 mg/mL, 5 mg/mL",
-      "Comprimido 5 mg, 10 mg"
-    ],
-    "dose": {
-      "indução": "INDUCCIÓN (solo en centro autorizado): Dosis inicial: 20–30 mg VO día 1 (máx 30 mg/dosis inicial única). Titular 3–4h. Si abstinencia persiste: agregar 5–10 mg (máx 40 mg total D1).",
-      "manutencao": "MANTENIMIENTO: Dosis habitual: 60–120 mg/día VO 1×/día. Dosis > 100 mg/día confieren mayor retención. Revisar dosis cada 1–3 meses."
-    },
-    "mechanism": "Agonista pleno de receptores μ-opioides (acción larga, suprime abstinencia y craving) + antagonista NMDA. Metabolismo hepático extenso (CYP3A4, 2D6, 2B6) con variabilidad genética significativa.",
+    "commercialNames": "br: Metadona HCl (Genérico — dispensação exclusiva em CAPS-AD); ar: Metadona HCl (dispensación exclusiva en centros autorizados)",
+    "presentation": "Solução oral 1 mg/mL, 2 mg/mL, 5 mg/mL (frasco para dispensação diária supervisionada); Comprimido 5 mg, 10 mg (em alguns países)",
+    "dose": "indução: INDUÇÃO (apenas em centro autorizado): Dose inicial: 20–30 mg VO no 1º dia (máx 30 mg/dosis única inicial). Titular por observação de 3–4h. Se sintomas de abstinência persistirem: adicionar 5–10 mg (máx 40 mg total no D1).; manutencao: MANUTENÇÃO: Dose usual de manutenção: 60–120 mg/dia VO 1×/dia. Doses > 100 mg/dia conferem maior retenção no programa. Revisar dosis a cada 1–3 meses.",
+    "mechanism": "Agonista pleno de receptores μ-opioides (ação longa, suprime sintomas de abstinência y craving) + antagonista de receptores NMDA (reduz tolerância y hiperalgesia). Metabolismo hepático extenso (CYP3A4, CYP2D6, CYP2B6) con variabilidade genética significativa.",
     "halfLife": "Vida media larga y variable: 8–59 horas (media 24–36h). Acumulación en dosis iniciales — riesgo de sobredosis primeros 5 días.",
     "renalAdjustment": "ClCr ≥ 30: sin ajuste renal obligatorio.",
     "hepaticAdjustment": "Hepatopatía leve: sin ajuste necesario.",
     "risksByPatient": [],
-    "dangerousAdverseEffects": [
-      "🚨 SOBREDOSIS / DEPRESIÓN RESPIRATORIA — riesgo aumentado primeros 5 días",
-      "🚨 PROLONGACIÓN QTc — Torsades de Pointes (dosis-dependiente)",
-      "Sedación excesiva (acumulación)",
-      "Hipogonadismo con uso crónico"
-    ],
-    "contraindications": {
-      "absolute": [
-        "Uso sin prescripción/supervisión de centro especializado"
-      ],
-      "relative": [
-        "QTc > 500 ms",
-        "Asma grave no controlada"
-      ]
-    },
-    "monitoring": [
-      "ECG (QTc) — basal, 30–40 mg/día, 100 mg/día",
-      "Nivel sérico si respuesta inadecuada o sospecha de acumulación",
-      "Urianálisis toxicológico mensual",
-      "Hormonas sexuales (semestral en uso crónico)"
-    ],
-    "safetyFlags": {
-      "bleedingRisk": false,
-      "renalHighRisk": false,
-      "hepaticCaution": true,
-      "antidoteAvailable": true,
-      "highAlertMedication": true,
-      "antidote": "Naloxona IV/IM/SC/intranasal — repetir cada 2–3 min si necesario (vida media naloxona < metadona — monitorizar 12–24h).",
-      "warning": "🚨 MEDICAMENTO DE ALTA VIGILANCIA: Dispensación exclusiva en centros autorizados. Riesgo de acumulación y sobredosis letal en primeras dosis."
-    },
+    "dangerousAdverseEffects": "🚨 OVERDOSE / DEPRESSÃO RESPIRATÓRIA — riesgo aumentado nos primeiros 5 dias de indução y em ajustes de dosis; 🚨 PROLONGAMENTO DO INTERVALO QTc — Torsades de Pointes (dosis-dependente); Sedação excessiva (acúmulo); Hipogonadismo con uso crônico",
+    "contraindications": "absolute: Uso sem prescrição/supervisão de centro especializado; relative: QTc > 500 ms; Asma grave no controlada",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "safetyFlags": "Depressão respiratória tardia/prolongada, QT/torsades, overdosis, dependência y síndrome serotoninérgica.",
     "references": [
-      "Portaria SVS/MS nº 344/1998 (Brasil) — Controle de Metadona",
-      "SAMHSA 2021 — Medications for Opioid Use Disorder",
-      "Mattick RP et al. Cochrane 2014 — Methadone maintenance therapy vs no opioid replacement",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ]
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methadone",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/methadone-hydrochloride-marketed-dolophine-information"
+    ],
+    "pharmacologicClass": "Agonista opioide de ação prolongada",
+    "presentations": "Solução oral 1 mg/mL, 2 mg/mL, 5 mg/mL (frasco para dispensação diária supervisionada); Comprimido 5 mg, 10 mg (em alguns países)",
+    "pharmacodynamics": "Agonista pleno de receptores μ-opioides (ação longa, suprime sintomas de abstinência y craving) + antagonista de receptores NMDA (reduz tolerância y hiperalgesia). Metabolismo hepático extenso (CYP3A4, CYP2D6, CYP2B6) con variabilidade genética significativa.",
+    "pharmacokinetics": "Meia-vida longa y variável: 8–59 horas (média 24–36h). Acúmulo em dosiss iniciais — riesgo de overdosis nos primeiros 5 dias.",
+    "indications": "Dor crônica intensa quando alternativas são inadequadas, em pacientes selecionados y sob monitorização especializada.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "ClCr ≥ 30: sem ajuste renal obrigatório.",
+    "hepaticDose": "Hepatopatia leve: sem ajuste necessário.",
+    "commonAdverseEffects": "Constipação, náusea, sudorese, sonolência y tontura.",
+    "adverseEffects": "Constipação, náusea, sudorese, sonolência y tontura.; Depressão respiratória tardia/prolongada, QT/torsades, overdosis, dependência y síndrome serotoninérgica.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "alerts": "Depressão respiratória tardia/prolongada, QT/torsades, overdosis, dependência y síndrome serotoninérgica.; monitorização obrigatória",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methadone"
   },
   "name": {
-    "pt": "Metadona (Tratamento Crônico de Dependência)",
-    "es": "Metadona (Tratamiento Crónico de Dependencia)"
+    "pt": "Metadona - dor crônica",
+    "es": "Metadona - dor crônica"
   },
   "keywords": [
     "metadona_cronico",
@@ -144,9 +102,21 @@
     "metadona hcl (dispensacion exclusiva en centros autorizados)",
     "opioide agonista pleno μ + antagonista nmda — terapia de manutencao"
   ],
-  "dataVersion": "clinical-data-v1-10e5393dafeee5ce",
-  "clinicalContentSha256": "10e5393dafeee5ce43d219659b0ecf20d5aa2e6be9f3f74c7fe4a3c6c622496e",
+  "dataVersion": "clinical-data-v1-e849da652cf15b12",
+  "clinicalContentSha256": "e849da652cf15b12d8357ed02ed37dd147806229614941c92ec674e25a70fcbf",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "toxicologia.js"
+  "sourceModule": "toxicologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/toxicologia.js",
+    "sourceField": "metadona_cronico.mcGoldClinicalV1",
+    "lote": "050",
+    "requiredFields": 33,
+    "approvedSha256": "05f711b06c165ab09da3326a0a672735b3efd2c46bd3e881bcfe3ec6606ae4a0",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

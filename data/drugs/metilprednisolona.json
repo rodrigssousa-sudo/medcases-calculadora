@@ -5,21 +5,91 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Metilprednisolona (Succinato Sódico de)"
+    "name": "Metilprednisolona",
+    "class": "Corticosteroide glicocorticoide",
+    "pharmacologicClass": "Corticosteroide glicocorticoide",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos; succinato sódico IV/IM; acetato depot IM/intra-articular, com forças diversas.",
+    "presentations": "Comprimidos; succinato sódico IV/IM; acetato depot IM/intra-articular, com forças diversas.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Doenças inflamatórias, alérgicas, autoimunes e outras indicações conforme via e protocolo.",
+    "dose": "Dose varia amplamente por indicação, gravidade, via e duração. Pulsoterapia IV, doses orais e formulações depot não são intercambiáveis; automação global bloqueada.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Hiperglicemia, insônia, dispepsia, alteração de humor e retenção hídrica.",
+    "dangerousAdverseEffects": "Infecção grave, supressão adrenal, psicose, sangramento GI, osteonecrose e reações anafiláticas.",
+    "adverseEffects": "Hiperglicemia, insônia, dispepsia, alteração de humor e retenção hídrica.; Infecção grave, supressão adrenal, psicose, sangramento GI, osteonecrose e reações anafiláticas.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Infecção grave, supressão adrenal, psicose, sangramento GI, osteonecrose e reações anafiláticas.",
+    "alerts": "Infecção grave, supressão adrenal, psicose, sangramento GI, osteonecrose e reações anafiláticas.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methylprednisolone",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/011856s110lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methylprednisolone"
   },
   "es": {
-    "name": "Metilprednisolona (Succinato Sódico de)"
+    "name": "Metilprednisolona",
+    "class": "Corticosteroide glicocorticoide",
+    "pharmacologicClass": "Corticosteroide glicocorticoide",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos; succinato sódico IV/IM; acetato depot IM/intra-articular, con forças diversas.",
+    "presentations": "Comprimidos; succinato sódico IV/IM; acetato depot IM/intra-articular, con forças diversas.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Doenças inflamatórias, alérgicas, autoimunes y outras indicações conforme via y protocolo.",
+    "dose": "Dose varia amplamente por indicação, gravidade, via y duração. Pulsoterapia IV, dosiss orais y formulações depot no são intercambiáveis; automação global bloqueada.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Hiperglicemia, insônia, dispepsia, alteração de humor y retenção hídrica.",
+    "dangerousAdverseEffects": "Infecção grave, supressão adrenal, psicose, sangramento GI, osteonecrose y reações anafiláticas.",
+    "adverseEffects": "Hiperglicemia, insônia, dispepsia, alteração de humor y retenção hídrica.; Infecção grave, supressão adrenal, psicose, sangramento GI, osteonecrose y reações anafiláticas.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Infecção grave, supressão adrenal, psicose, sangramento GI, osteonecrose y reações anafiláticas.",
+    "alerts": "Infecção grave, supressão adrenal, psicose, sangramento GI, osteonecrose y reações anafiláticas.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methylprednisolone",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/011856s110lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methylprednisolone"
   },
   "name": {
-    "pt": "Metilprednisolona (Succinato Sódico de)",
-    "es": "Metilprednisolona (Succinato Sódico de)"
+    "pt": "Metilprednisolona",
+    "es": "Metilprednisolona"
   },
   "keywords": [
     "metilprednisolona",
     "metilprednisolona (succinato sódico de)"
   ],
-  "dataVersion": "clinical-data-v1-10e5393dafeee5ce",
-  "clinicalContentSha256": "10e5393dafeee5ce43d219659b0ecf20d5aa2e6be9f3f74c7fe4a3c6c622496e",
+  "dataVersion": "clinical-data-v1-e849da652cf15b12",
+  "clinicalContentSha256": "e849da652cf15b12d8357ed02ed37dd147806229614941c92ec674e25a70fcbf",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "imuno_corticoide.js",
@@ -85,5 +155,17 @@
         "updated": "2026-06-12"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/imuno_corticoide.js",
+    "sourceField": "metilprednisolona.mcGoldClinicalV1",
+    "lote": "050",
+    "requiredFields": 33,
+    "approvedSha256": "05f711b06c165ab09da3326a0a672735b3efd2c46bd3e881bcfe3ec6606ae4a0",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

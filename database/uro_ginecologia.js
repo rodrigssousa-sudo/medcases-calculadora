@@ -997,3 +997,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:finasterida_urologia:END */
+/* GOLD33_SELECTIVE:metilergometrina:START */
+;(function(){var db=window.URO_GINECOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="metilergometrina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:metilergometrina:"+matches.length);drug=matches[0];}else{drug=db&&db["metilergometrina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:metilergometrina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "050",
+    "requiredFieldCount": 33,
+    "approvedSha256": "05f711b06c165ab09da3326a0a672735b3efd2c46bd3e881bcfe3ec6606ae4a0",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Metilergometrina/metilergonovina",
+    "class": "Alcaloide do ergot uterotônico",
+    "pharmacologicClass": "Alcaloide do ergot uterotônico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável 0,2 mg/mL e comprimido 0,2 mg conforme mercado.",
+    "presentations": "Solução injetável 0,2 mg/mL e comprimido 0,2 mg conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Prevenção e tratamento de hemorragia pós-parto por atonia uterina, conforme protocolo.",
+    "dose": "0,2 mg IM após o parto; pode repetir a cada 2-4 h conforme necessidade. Via IV somente em emergência, lentamente e com monitorização. Regime oral pós-parto é curto e específico do rótulo.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea, vômito, cefaleia e hipertensão.",
+    "dangerousAdverseEffects": "Crise hipertensiva, AVC, vasoespasmo coronariano, infarto e convulsão.",
+    "adverseEffects": "Náusea, vômito, cefaleia e hipertensão.; Crise hipertensiva, AVC, vasoespasmo coronariano, infarto e convulsão.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Crise hipertensiva, AVC, vasoespasmo coronariano, infarto e convulsão.",
+    "alerts": "Crise hipertensiva, AVC, vasoespasmo coronariano, infarto e convulsão.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methylergonovine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/006035s078lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methylergonovine"
+  },
+  "es": {
+    "name": "Metilergometrina/metilergonovina",
+    "class": "Alcaloide do ergot uterotônico",
+    "pharmacologicClass": "Alcaloide do ergot uterotônico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável 0,2 mg/mL y comprimido 0,2 mg conforme mercado.",
+    "presentations": "Solução injetável 0,2 mg/mL y comprimido 0,2 mg conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Prevenção y tratamento de hemorragia pós-parto por atonia uterina, conforme protocolo.",
+    "dose": "0,2 mg IM após o parto; pode repetir a cada 2-4 h conforme necessidade. Via IV somente em emergência, lentamente y con monitorização. Regime oral pós-parto é curto y específico do rótulo.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea, vômito, cefaleia y hipertensão.",
+    "dangerousAdverseEffects": "Crise hipertensiva, AVC, vasoespasmo coronariano, infarto y convulsão.",
+    "adverseEffects": "Náusea, vômito, cefaleia y hipertensão.; Crise hipertensiva, AVC, vasoespasmo coronariano, infarto y convulsão.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Crise hipertensiva, AVC, vasoespasmo coronariano, infarto y convulsão.",
+    "alerts": "Crise hipertensiva, AVC, vasoespasmo coronariano, infarto y convulsão.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methylergonovine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/006035s078lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=methylergonovine"
+  }
+};})();
+/* GOLD33_SELECTIVE:metilergometrina:END */
