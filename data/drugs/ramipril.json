@@ -5,250 +5,80 @@
   "color": "rgba(59,130,246,0.13)",
   "colorTxt": "#1D4ED8",
   "pt": {
-    "class": "Inibidor da enzima conversora de angiotensina (IECA)",
-    "pharmacologicClass": "Modulador do sistema renina-angiotensina; inibidor da ECA",
+    "class": "Inibidor da enzima conversora de angiotensina",
+    "pharmacologicClass": "Inibidor da enzima conversora de angiotensina",
     "mechanism": "Inibe a ECA, reduz a formação de angiotensina II e a secreção de aldosterona e aumenta bradicinina. O resultado é vasodilatação e redução de pós-carga e pré-carga.",
-    "pharmacodynamics": "Reduz pressão arterial e resistência vascular sistêmica sem taquicardia reflexa importante. Na insuficiência cardíaca reduz pós-carga; pode elevar potássio e creatinina pelo bloqueio do SRAA.",
-    "commonAdverseEffects": [
-      "tosse seca",
-      "tontura",
-      "hipotensão",
-      "hipercalemia",
-      "aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "angioedema",
-      "lesão renal aguda",
-      "hipercalemia grave",
-      "hipotensão sintomática",
-      "toxicidade fetal"
-    ],
-    "contraindications": [
-      "História de angioedema relacionado a IECA",
-      "angioedema hereditário ou idiopático",
-      "uso concomitante de alisquireno em diabetes",
-      "uso dentro de 36 h de sacubitril/valsartana",
-      "hipersensibilidade ao fármaco"
-    ],
-    "interactions": [
-      "Suplementos de potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
-      "AINEs podem reduzir efeito anti-hipertensivo e aumentar lesão renal",
-      "Lítio pode acumular",
-      "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
-      "Sacubitril/valsartana exige intervalo de 36 h"
-    ],
-    "monitoring": [
-      "Pressão arterial",
-      "creatinina/eTFG e potássio antes de iniciar e após titulação",
-      "sintomas de hipotensão",
-      "angioedema",
-      "gestação quando aplicável"
-    ],
-    "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
-    "patientEducation": [
-      "Evitar gestação durante o tratamento",
-      "procurar urgência diante de edema de face, lábios ou língua",
-      "não usar suplementos de potássio ou sal com potássio sem orientação",
-      "levantar lentamente se houver tontura"
-    ],
-    "clinicalPearls": [
-      "Elevação de creatinina exige avaliar volume, AINE, estenose de artéria renal e outros fatores; KDIGO orienta revisar se o aumento superar 30% em até 4 semanas",
-      "A tosse é mediada em parte por bradicinina e costuma resolver com troca para BRA"
-    ],
-    "guidelineRecommendations": [
-      "Diretriz AHA/ACC 2025: IECAs são uma das classes de primeira linha para hipertensão quando indicados",
-      "KDIGO 2024: IECA ou BRA são priorizados na DRC com albuminúria e titulados à maior dose tolerada",
-      "AHA/ACC/HFSA: em HFrEF usa-se IECA quando ARNI não é viável"
-    ],
-    "safetyFlags": [
-      "TOXICIDADE_FETAL",
-      "ANGIOEDEMA",
-      "HIPERCALEMIA",
-      "FUNCAO_RENAL",
-      "INTERVALO_ARNI_36H"
-    ],
-    "alerts": [
-      "Não combinar rotineiramente IECA e BRA",
-      "Corrigir depleção de volume quando possível antes de iniciar",
-      "Suspender e tratar imediatamente se ocorrer angioedema"
-    ],
-    "specialPopulations": {
-      "elderly": "Titular conforme pressão, função renal e estado volêmico.",
-      "renalArteryStenosis": "Maior risco de deterioração renal; monitorar de perto.",
-      "blackPatients": "A resposta anti-hipertensiva em monoterapia pode ser menor; o risco de angioedema é maior."
-    },
+    "pharmacodynamics": "Inibe a ECA, reduz a formação de angiotensina II e a secreção de aldosterona e aumenta bradicinina. O resultado é vasodilatação e redução de pós-carga e pré-carga.",
+    "commonAdverseEffects": "tosse seca; tontura; hipotensão; hipercalemia; aumento de creatinina",
+    "dangerousAdverseEffects": "angioedema; lesão renal aguda; hipercalemia grave; hipotensão sintomática; toxicidade fetal",
+    "contraindications": "História de angioedema relacionado a IECA; angioedema hereditário ou idiopático; uso concomitante de alisquireno em diabetes; uso dentro de 36 h de sacubitril/valsartana; hipersensibilidade ao fármaco",
+    "interactions": "Suplementos de potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia; AINEs podem reduzir efeito anti-hipertensivo e aumentar lesão renal; Lítio pode acumular; Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal; Sacubitril/valsartana exige intervalo de 36 h",
+    "monitoring": "Não combinar rotineiramente IECA e BRA; Corrigir depleção de volume quando possível antes de iniciar; Suspender e tratar imediatamente se ocorrer angioedema",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Angioedema, insuficiência renal, hiperpotassemia, neutropenia rara e toxicidade fetal.",
+    "alerts": "Angioedema, insuficiência renal, hiperpotassemia, neutropenia rara e toxicidade fetal.; revisão clínica obrigatória.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
     "name": "Ramipril",
-    "pharmacokinetics": "Pró-fármaco convertido por esterases em ramiprilato ativo. Metabolismo hepático e eliminação renal/biliar; a exposição ao ramiprilato aumenta na insuficiência renal.",
-    "indications": [
-      "Hipertensão",
-      "redução de risco de IAM, AVC e morte cardiovascular em adultos de alto risco selecionados",
-      "insuficiência cardíaca após IAM com sinais clínicos de congestão"
-    ],
-    "commercialNames": [
-      "Altace"
-    ],
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Hipertensão; redução de risco de IAM, AVC e morte cardiovascular em adultos de alto risco selecionados; insuficiência cardíaca após IAM com sinais clínicos de congestão",
+    "commercialNames": "Altace",
     "presentation": "Cápsulas orais.",
-    "presentations": [
-      "Cápsulas 1,25, 2,5, 5 e 10 mg"
-    ],
-    "dose": {
-      "hypertension": "2,5 mg uma vez ao dia; manutenção 2,5-20 mg/dia em 1-2 tomadas.",
-      "cvRiskReduction": "2,5 mg/dia por 1 semana, 5 mg/dia nas 3 semanas seguintes e então 10 mg/dia se tolerado.",
-      "postMIHF": "2,5 mg duas vezes ao dia; se hipotensão, 1,25 mg duas vezes ao dia; titular em direção a 5 mg duas vezes ao dia."
-    },
-    "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
-    "renalDose": "ClCr >40 mL/min: esquema usual. Disfunção renal mais importante: hipertensão iniciar 1,25 mg/dia, máximo 5 mg/dia; IC pós-IAM iniciar 1,25 mg/dia e titular até 2,5 mg duas vezes ao dia.",
-    "hepaticDose": "Usar com cautela e titular lentamente; a conversão para ramiprilato pode ser alterada na doença hepática. Não há algoritmo universal de dose apenas por Child-Pugh.",
-    "administration": "Engolir a cápsula inteira; em produtos cuja bula permita, o conteúdo pode ser misturado em pequena quantidade de alimento ou líquido e consumido integralmente.",
-    "preparation": "Não requer reconstituição para cápsulas. Se abrir cápsula conforme bula do produto, manter toda a dose e respeitar condições de armazenamento descritas.",
-    "infusionProtocol": "Não se aplica: ramipril é administrado por via oral.",
-    "lactation": "A evidência em lactação é limitada; avaliar necessidade materna e considerar alternativa com maior experiência, especialmente em recém-nascidos ou prematuros.",
-    "adverseEffects": {
-      "common": [
-        "tosse seca",
-        "tontura",
-        "hipotensão",
-        "hipercalemia",
-        "aumento de creatinina"
-      ],
-      "dangerous": [
-        "angioedema",
-        "lesão renal aguda",
-        "hipercalemia grave",
-        "hipotensão sintomática",
-        "toxicidade fetal"
-      ]
-    },
+    "presentations": "Cápsulas orais.",
+    "dose": "hypertension: 2,5 mg uma vez ao dia; manutenção 2,5-20 mg/dia em 1-2 tomadas.; cvRiskReduction: 2,5 mg/dia por 1 semana, 5 mg/dia nas 3 semanas seguintes e então 10 mg/dia se tolerado.; postMIHF: 2,5 mg duas vezes ao dia; se hipotensão, 1,25 mg duas vezes ao dia; titular em direção a 5 mg duas vezes ao dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "adverseEffects": "Tontura, tosse, fadiga e hipotensão.; Angioedema, insuficiência renal, hiperpotassemia, neutropenia rara e toxicidade fetal.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
-      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
-      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ramipril",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ramipril"
   },
   "es": {
-    "class": "Inhibidor de la enzima convertidora de angiotensina (IECA)",
-    "pharmacologicClass": "Modulador del sistema renina-angiotensina; inhibidor de la ECA",
-    "mechanism": "Inhibe la ECA, reduce la formación de angiotensina II y la secreción de aldosterona, y aumenta bradicinina. El resultado es vasodilatación y menor poscarga y precarga.",
-    "pharmacodynamics": "Reduce la presión arterial y la resistencia vascular sistémica sin taquicardia refleja importante. En insuficiencia cardíaca reduce poscarga; puede aumentar potasio y creatinina por bloqueo del SRAA.",
-    "commonAdverseEffects": [
-      "tos seca",
-      "mareo",
-      "hipotensión",
-      "hiperpotasemia",
-      "aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "angioedema",
-      "lesión renal aguda",
-      "hiperpotasemia grave",
-      "hipotensión sintomática",
-      "toxicidad fetal"
-    ],
-    "contraindications": [
-      "Antecedente de angioedema relacionado con IECA",
-      "angioedema hereditario o idiopático",
-      "uso concomitante de aliskireno en diabetes",
-      "uso dentro de las 36 h de sacubitrilo/valsartán",
-      "hipersensibilidad al fármaco"
-    ],
-    "interactions": [
-      "Suplementos de potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
-      "AINE pueden reducir efecto antihipertensivo y aumentar lesión renal",
-      "Litio puede acumularse",
-      "Doble bloqueo SRAA aumenta hipotensión, hiperpotasemia y lesión renal",
-      "Sacubitrilo/valsartán requiere separación de 36 h"
-    ],
-    "monitoring": [
-      "Presión arterial",
-      "creatinina/eGFR y potasio antes de iniciar y tras titulación",
-      "síntomas de hipotensión",
-      "angioedema",
-      "embarazo cuando corresponda"
-    ],
-    "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
-    "patientEducation": [
-      "Evitar embarazo durante el tratamiento",
-      "consultar de urgencia ante edema de cara, labios o lengua",
-      "no usar suplementos de potasio o sal con potasio sin indicación",
-      "levantarse lentamente si hay mareo"
-    ],
-    "clinicalPearls": [
-      "Una elevación de creatinina obliga a evaluar volumen, AINE, estenosis de arteria renal y otros factores; KDIGO aconseja revisar si el aumento supera 30% dentro de 4 semanas",
-      "La tos es mediada en parte por bradicinina y suele resolverse al cambiar a un ARA-II"
-    ],
-    "guidelineRecommendations": [
-      "Guía AHA/ACC 2025: IECA son una de las clases de primera línea para hipertensión cuando están indicados",
-      "KDIGO 2024: IECA o ARA-II se priorizan en ERC con albuminuria y se titulan a dosis máxima tolerada",
-      "AHA/ACC/HFSA: en HFrEF se usa IECA cuando ARNI no es factible"
-    ],
-    "safetyFlags": [
-      "TOXICIDAD_FETAL",
-      "ANGIOEDEMA",
-      "HIPERPOTASEMIA",
-      "FUNCION_RENAL",
-      "INTERVALO_ARNI_36H"
-    ],
-    "alerts": [
-      "No combinar rutinariamente IECA y ARA-II",
-      "Corregir depleción de volumen si es posible antes de iniciar",
-      "Suspender y tratar de inmediato si aparece angioedema"
-    ],
-    "specialPopulations": {
-      "elderly": "Titular según presión, función renal y volumen.",
-      "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar estrechamente.",
-      "blackPatients": "La respuesta antihipertensiva como monoterapia puede ser menor; el riesgo de angioedema es mayor."
-    },
+    "class": "Inibidor da enzima conversora de angiotensina",
+    "pharmacologicClass": "Inibidor da enzima conversora de angiotensina",
+    "mechanism": "Inibe a ECA, reduz a formação de angiotensina II y a secreção de aldosterona y aumenta bradicinina. O resultado é vasodilatação y redução de pós-carga y pré-carga.",
+    "pharmacodynamics": "Inibe a ECA, reduz a formação de angiotensina II y a secreção de aldosterona y aumenta bradicinina. O resultado é vasodilatação y redução de pós-carga y pré-carga.",
+    "commonAdverseEffects": "tosse seca; tontura; hipotensão; hipercalemia; aumento de creatinina",
+    "dangerousAdverseEffects": "angioedema; lesão renal aguda; hipercalemia grave; hipotensão sintomática; toxicidade fetal",
+    "contraindications": "História de angioedema relacionado a IECA; angioedema hereditário ou idiopático; uso concomitante de alisquireno em diabetes; uso dentro de 36 h de sacubitril/valsartana; hipersensibilidade ao fármaco",
+    "interactions": "Suplementos de potássio, substitutos de sal y diuréticos poupadores de potássio aumentam hipercalemia; AINEs podem reduzir efeito anti-hipertensivo y aumentar lesão renal; Lítio pode acumular; Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia y lesão renal; Sacubitril/valsartana exige intervalo de 36 h",
+    "monitoring": "No combinar rotineiramente IECA y BRA; Corrigir depleção de volume quando possível antes de iniciar; Suspender y tratar imediatamente se ocorrer angioedema",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Angioedema, insuficiência renal, hiperpotassemia, neutropenia rara y toxicidade fetal.",
+    "alerts": "Angioedema, insuficiência renal, hiperpotassemia, neutropenia rara y toxicidade fetal.; revisão clínica obrigatória.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
     "name": "Ramipril",
-    "pharmacokinetics": "Profármaco convertido por esterasas a ramiprilato activo. Metabolismo hepático y eliminación renal/biliar; la exposición a ramiprilato aumenta en insuficiencia renal.",
-    "indications": [
-      "Hipertensión",
-      "reducción de riesgo de IAM, ACV y muerte cardiovascular en adultos de alto riesgo seleccionados",
-      "insuficiencia cardíaca post-IAM con signos clínicos de congestión"
-    ],
-    "commercialNames": [
-      "Altace"
-    ],
-    "presentation": "Cápsulas orales.",
-    "presentations": [
-      "Cápsulas 1.25, 2.5, 5 y 10 mg"
-    ],
-    "dose": {
-      "hypertension": "2.5 mg una vez al día; mantenimiento 2.5-20 mg/día en 1-2 tomas.",
-      "cvRiskReduction": "2.5 mg/día por 1 semana, 5 mg/día durante las 3 semanas siguientes y luego 10 mg/día si se tolera.",
-      "postMIHF": "2.5 mg dos veces al día; si hipotensión, 1.25 mg dos veces al día; titular hacia 5 mg dos veces al día."
-    },
-    "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
-    "renalDose": "ClCr >40 mL/min: esquema habitual. Disfunción renal mayor: hipertensión iniciar 1.25 mg/día, máximo 5 mg/día; IC post-IAM iniciar 1.25 mg/día y titular hasta 2.5 mg dos veces al día.",
-    "hepaticDose": "Usar con cautela y titular lentamente; la conversión a ramiprilato puede alterarse en enfermedad hepática. No existe un algoritmo universal de dosis solo por Child-Pugh.",
-    "administration": "Tragar la cápsula entera; en productos cuya ficha lo permita, el contenido puede mezclarse con pequeña cantidad de alimento o líquido y consumirse por completo.",
-    "preparation": "No requiere reconstitución para cápsulas. Si se abre la cápsula según ficha del producto, conservar toda la dosis y respetar las condiciones de almacenamiento descritas.",
-    "infusionProtocol": "No aplica: ramipril se administra por vía oral.",
-    "lactation": "La evidencia en lactancia es limitada; valorar necesidad materna y considerar alternativa con mayor experiencia, especialmente en recién nacidos o prematuros.",
-    "adverseEffects": {
-      "common": [
-        "tos seca",
-        "mareo",
-        "hipotensión",
-        "hiperpotasemia",
-        "aumento de creatinina"
-      ],
-      "dangerous": [
-        "angioedema",
-        "lesión renal aguda",
-        "hiperpotasemia grave",
-        "hipotensión sintomática",
-        "toxicidad fetal"
-      ]
-    },
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Hipertensão; redução de risco de IAM, AVC y morte cardiovascular em adultos de alto risco selecionados; insuficiência cardíaca após IAM con sinais clínicos de congestão",
+    "commercialNames": "Altace",
+    "presentation": "Cápsulas orais.",
+    "presentations": "Cápsulas orais.",
+    "dose": "hypertension: 2,5 mg uma vez ao dia; manutenção 2,5-20 mg/dia em 1-2 tomadas.; cvRiskReduction: 2,5 mg/dia por 1 semana, 5 mg/dia nas 3 semanas seguintes y então 10 mg/dia se tolerado.; postMIHF: 2,5 mg duas vezes ao dia; se hipotensão, 1,25 mg duas vezes ao dia; titular em direção a 5 mg duas vezes ao dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "adverseEffects": "Tontura, tosse, fadiga y hipotensão.; Angioedema, insuficiência renal, hiperpotassemia, neutropenia rara y toxicidade fetal.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
-      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
-      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ramipril",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8cdec12-81d1-4ef4-82c0-d05d93c37a07"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ramipril"
   },
   "name": {
     "pt": "Ramipril",
@@ -261,19 +91,21 @@
     "ramipril generico",
     "inibidor da enzima conversora de angiotensina (ieca) — pro-farmaco (ramiprilat ativo)"
   ],
-  "dataVersion": "clinical-data-v1-46f96c386aa3f9f8",
-  "clinicalContentSha256": "46f96c386aa3f9f8129cab3cb3833e39c334b04bef046036af1bfd47e3ecb013",
+  "dataVersion": "clinical-data-v1-106294d61d614ad1",
+  "clinicalContentSha256": "106294d61d614ad11482285c9ccd9b0cab1b08f0ffb02be63f80c36036d1415d",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "ramipril.mcGoldClinicalV1",
-    "group": "GOLD_GROUP04_CARDIO_10",
-    "review": "2026-09",
+    "lote": "067",
     "requiredFields": 33,
-    "contentSha256": "88af5827773aea2f5198f2725e9082ee5e5f472dd6d709895987b9b73e943d74",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "9b7d995499d2a9e7cc44d2816aa8ae5da5adb9fafece229fed33fb923698faaa",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

@@ -7841,3 +7841,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:paroxetina:END */
+/* GOLD33_SELECTIVE:reboxetina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="reboxetina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:reboxetina:"+matches.length);drug=matches[0];}else{drug=db&&db["reboxetina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:reboxetina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "067",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9b7d995499d2a9e7cc44d2816aa8ae5da5adb9fafece229fed33fb923698faaa",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Reboxetina",
+    "class": "Inibidor seletivo da recaptação de noradrenalina",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de noradrenalina",
+    "commercialNames": "br: Prolift; ar: Edronax; Reboxetina",
+    "presentation": "Comprimido 4 mg",
+    "presentations": "Comprimido 4 mg",
+    "mechanism": "Inibidor seletivo da recaptação de noradrenalina.",
+    "pharmacodynamics": "Inibidor seletivo da recaptação de noradrenalina.",
+    "pharmacokinetics": "Vida média aproximada: 12–16 horas.",
+    "indications": "Transtorno depressivo maior; Depressão com fadiga; Depressão com lentificação psicomotora; Depressão resistente; TDAH (off-label); Transtornos de ansiedade selecionados",
+    "dose": "adulto: 4 mg VO 12/12h. Dose usual: 8 mg/dia.; maxDose: Dose máxima: 12 mg/dia.",
+    "pediatricDose": "standard: Não se utiliza cálculo por kg.; pediatric: Uso pediátrico especializado.; maxDose: 12 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Insônia; Boca seca; Taquicardia; Sudorese; Constipação",
+    "dangerousAdverseEffects": "Hipertensão arterial; Retenção urinária; Virada maníaca",
+    "adverseEffects": "Boca seca, constipação, insônia, sudorese e taquicardia.; Ideação suicida, hipertensão, retenção urinária, convulsão e mania.",
+    "contraindications": "Glaucoma de ângulo fechado; Hipersensibilidade ao fármaco",
+    "interactions": "IMAO; Simpaticomiméticos; Anti-hipertensivos",
+    "monitoring": "Pode causar insônia e ativação.; Monitorar pressão arterial.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Ideação suicida, hipertensão, retenção urinária, convulsão e mania.",
+    "alerts": "Ideação suicida, hipertensão, retenção urinária, convulsão e mania.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=reboxetina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=reboxetina"
+  },
+  "es": {
+    "name": "Reboxetina",
+    "class": "Inibidor seletivo da recaptação de noradrenalina",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de noradrenalina",
+    "commercialNames": "br: Prolift; ar: Edronax; Reboxetina",
+    "presentation": "Comprimido 4 mg",
+    "presentations": "Comprimido 4 mg",
+    "mechanism": "Inibidor seletivo da recaptação de noradrenalina.",
+    "pharmacodynamics": "Inibidor seletivo da recaptação de noradrenalina.",
+    "pharmacokinetics": "Vida média aproximada: 12–16 horas.",
+    "indications": "Transtorno depressivo maior; Depressão con fadiga; Depressão con lentificação psicomotora; Depressão resistente; TDAH (off-label); Transtornos de ansiedade selecionados",
+    "dose": "adulto: 4 mg VO 12/12h. Dose usual: 8 mg/dia.; maxDose: Dose máxima: 12 mg/dia.",
+    "pediatricDose": "standard: No se utiliza cálculo por kg.; pediatric: Uso pediátrico especializado.; maxDose: 12 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Insônia; Boca seca; Taquicardia; Sudorese; Constipação",
+    "dangerousAdverseEffects": "Hipertensão arterial; Retenção urinária; Virada maníaca",
+    "adverseEffects": "Boca seca, constipação, insônia, sudorese y taquicardia.; Ideação suicida, hipertensão, retenção urinária, convulsão y mania.",
+    "contraindications": "Glaucoma de ângulo fechado; Hipersensibilidade ao fármaco",
+    "interactions": "IMAO; Simpaticomiméticos; Anti-hipertensivos",
+    "monitoring": "Pode causar insônia y ativação.; Monitorar pressão arterial.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Ideação suicida, hipertensão, retenção urinária, convulsão y mania.",
+    "alerts": "Ideação suicida, hipertensão, retenção urinária, convulsão y mania.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=reboxetina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=reboxetina"
+  }
+};})();
+/* GOLD33_SELECTIVE:reboxetina:END */

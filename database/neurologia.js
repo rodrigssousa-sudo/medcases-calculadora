@@ -15490,3 +15490,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:primidona:END */
+/* GOLD33_SELECTIVE:rasagilina:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="rasagilina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:rasagilina:"+matches.length);drug=matches[0];}else{drug=db&&db["rasagilina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:rasagilina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "067",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9b7d995499d2a9e7cc44d2816aa8ae5da5adb9fafece229fed33fb923698faaa",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Rasagilina",
+    "class": "Inibidor seletivo da monoaminoxidase B",
+    "pharmacologicClass": "Inibidor seletivo da monoaminoxidase B",
+    "commercialNames": "br: Azilect; Rasagilina; ar: Azilect; Rasagilina",
+    "presentation": "Comprimido 0,5 mg; Comprimido 1 mg",
+    "presentations": "Comprimido 0,5 mg; Comprimido 1 mg",
+    "mechanism": "Inibe irreversivelmente MAO-B, reduzindo degradação de dopamina no estriado e aumentando disponibilidade dopaminérgica.",
+    "pharmacodynamics": "Inibe irreversivelmente MAO-B, reduzindo degradação de dopamina no estriado e aumentando disponibilidade dopaminérgica.",
+    "pharmacokinetics": "Vida média plasmática aproximada: 3 horas, mas a inibição da MAO-B é prolongada.",
+    "indications": "Doença de Parkinson inicial em monoterapia; Adjuvante à levodopa; Wearing-off; Flutuações motoras leves a moderadas; Sintomas motores leves em Parkinson; Redução do tempo OFF em pacientes com levodopa",
+    "dose": "adulto: Parkinson: 1 mg VO 1x/dia em monoterapia ou adjuvante.; ajuste: Com inibidores de CYP1A2 ou risco de interação: considerar 0,5 mg/dia conforme protocolo.; maxDose: Dose máxima usual: 1 mg/dia.",
+    "pediatricDose": "standard: Não se utiliza cálculo por kg.; severe: Dose fixa diária.; maxDose: 1 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Cefaleia; Náuseas; Dor articular; Tontura; Insônia; Hipotensão ortostática; Discinesia quando associada à levodopa",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica em associações de risco; Crise hipertensiva se interações ou perda de seletividade; Alucinações ou confusão; Hipotensão sintomática; Discinesias importantes com levodopa",
+    "adverseEffects": "Cefaleia, artralgia, dispepsia e sintomas gripais.; Síndrome serotoninérgica, hipertensão, alucinações, discinesia e sono súbito.",
+    "contraindications": "Hipersensibilidade à rasagilina; Uso concomitante com meperidina; Uso com tramadol, metadona, propoxifeno ou outros opioides serotoninérgicos de risco; Uso concomitante com IMAO ou linezolida sem manejo especializado; Hepatopatia moderada ou grave",
+    "interactions": "Meperidina: contraindicado por risco serotoninérgico grave; ISRS/ISRN/tricíclicos: risco de síndrome serotoninérgica; Tramadol e metadona: risco serotoninérgico; Ciprofloxacino e inibidores CYP1A2: aumentam níveis; Levodopa: pode aumentar discinesias; Simpaticomiméticos/descongestionantes: risco pressórico",
+    "monitoring": "Revisar antidepressivos, opioides e linezolida antes de prescrever.; Evitar em hepatopatia moderada/grave.; Monitorar discinesias se associada à levodopa.; Orientar sinais de síndrome serotoninérgica.; Cuidado com ciprofloxacino e outros inibidores CYP1A2.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, hipertensão, alucinações, discinesia e sono súbito.",
+    "alerts": "Síndrome serotoninérgica, hipertensão, alucinações, discinesia e sono súbito.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rasagilina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rasagilina"
+  },
+  "es": {
+    "name": "Rasagilina",
+    "class": "Inibidor seletivo da monoaminoxidase B",
+    "pharmacologicClass": "Inibidor seletivo da monoaminoxidase B",
+    "commercialNames": "br: Azilect; Rasagilina; ar: Azilect; Rasagilina",
+    "presentation": "Comprimido 0,5 mg; Comprimido 1 mg",
+    "presentations": "Comprimido 0,5 mg; Comprimido 1 mg",
+    "mechanism": "Inibe irreversivelmente MAO-B, reduzindo degradação de dopamina no estriado y aumentando disponibilidade dopaminérgica.",
+    "pharmacodynamics": "Inibe irreversivelmente MAO-B, reduzindo degradação de dopamina no estriado y aumentando disponibilidade dopaminérgica.",
+    "pharmacokinetics": "Vida média plasmática aproximada: 3 horas, mas a inibição da MAO-B é prolongada.",
+    "indications": "Doença de Parkinson inicial em monoterapia; Adjuvante à levodopa; Wearing-off; Flutuações motoras leves a moderadas; Sintomas motores leves em Parkinson; Redução do tempo OFF em pacientes con levodopa",
+    "dose": "adulto: Parkinson: 1 mg VO 1x/dia em monoterapia ou adjuvante.; ajuste: Com inibidores de CYP1A2 ou risco de interação: considerar 0,5 mg/dia conforme protocolo.; maxDose: Dose máxima usual: 1 mg/dia.",
+    "pediatricDose": "standard: No se utiliza cálculo por kg.; severe: Dose fixa diária.; maxDose: 1 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Cefaleia; Náuseas; Dor articular; Tontura; Insônia; Hipotensão ortostática; Discinesia quando associada à levodopa",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica em associações de risco; Crise hipertensiva se interações ou perda de seletividade; Alucinações ou confusão; Hipotensão sintomática; Discinesias importantes con levodopa",
+    "adverseEffects": "Cefaleia, artralgia, dispepsia y sintomas gripais.; Síndrome serotoninérgica, hipertensão, alucinações, discinesia y sono súbito.",
+    "contraindications": "Hipersensibilidade à rasagilina; Uso concomitante con meperidina; Uso con tramadol, metadona, propoxifeno ou outros opioides serotoninérgicos de risco; Uso concomitante con IMAO ou linezolida sem manejo especializado; Hepatopatia moderada ou grave",
+    "interactions": "Meperidina: contraindicado por risco serotoninérgico grave; ISRS/ISRN/tricíclicos: risco de síndrome serotoninérgica; Tramadol y metadona: risco serotoninérgico; Ciprofloxacino y inibidores CYP1A2: aumentam níveis; Levodopa: pode aumentar discinesias; Simpaticomiméticos/descongestionantes: risco pressórico",
+    "monitoring": "Revisar antidepressivos, opioides y linezolida antes de prescrever.; Evitar em hepatopatia moderada/grave.; Monitorar discinesias se associada à levodopa.; Orientar sinais de síndrome serotoninérgica.; Cuidado con ciprofloxacino y outros inibidores CYP1A2.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, hipertensão, alucinações, discinesia y sono súbito.",
+    "alerts": "Síndrome serotoninérgica, hipertensão, alucinações, discinesia y sono súbito.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rasagilina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rasagilina"
+  }
+};})();
+/* GOLD33_SELECTIVE:rasagilina:END */

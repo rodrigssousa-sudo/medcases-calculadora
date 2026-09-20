@@ -345,3 +345,93 @@
 
   }); /* fim Object.assign OBESIDADE_DRUGS_DB — BUILD 453 (semaglutida_obesidade + tirzepatida_obesidade + retatrutida — Peptídeos Incretínicos GLP-1/GIP/Glucagon para Obesidade) */
 })();
+/* GOLD33_SELECTIVE:retatrutida:START */
+;(function(){var db=window.OBESIDADE_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="retatrutida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:retatrutida:"+matches.length);drug=matches[0];}else{drug=db&&db["retatrutida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:retatrutida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "067",
+    "requiredFieldCount": 33,
+    "approvedSha256": "9b7d995499d2a9e7cc44d2816aa8ae5da5adb9fafece229fed33fb923698faaa",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Retatrutida",
+    "class": "Agonista triplo de receptores GIP/GLP-1/glucagon em investigação",
+    "pharmacologicClass": "Agonista triplo de receptores GIP/GLP-1/glucagon em investigação",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Produto investigacional, sem apresentação comercial validada.",
+    "presentations": "Produto investigacional, sem apresentação comercial validada.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Medicamento investigacional; nenhuma indicação assistencial deve ser declarada sem aprovação regulatória aplicável.",
+    "dose": "Não preencher posologia clínica nem habilitar cálculo. Qualquer dose pertence a protocolo de pesquisa e não deve ser convertida em recomendação assistencial.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Eventos adversos devem permanecer vinculados ao protocolo de estudo.",
+    "dangerousAdverseEffects": "Segurança e eficácia não estabelecidas para uso clínico rotineiro; risco de uso de produto não aprovado.",
+    "adverseEffects": "Eventos adversos devem permanecer vinculados ao protocolo de estudo.; Segurança e eficácia não estabelecidas para uso clínico rotineiro; risco de uso de produto não aprovado.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Segurança e eficácia não estabelecidas para uso clínico rotineiro; risco de uso de produto não aprovado.",
+    "alerts": "Segurança e eficácia não estabelecidas para uso clínico rotineiro; risco de uso de produto não aprovado.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=retatrutida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=retatrutida"
+  },
+  "es": {
+    "name": "Retatrutida",
+    "class": "Agonista triplo de receptores GIP/GLP-1/glucagon em investigação",
+    "pharmacologicClass": "Agonista triplo de receptores GIP/GLP-1/glucagon em investigação",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Produto investigacional, sem apresentação comercial validada.",
+    "presentations": "Produto investigacional, sem apresentação comercial validada.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Medicamento investigacional; nenhuma indicação assistencial deve ser declarada sem aprovação regulatória aplicável.",
+    "dose": "No preencher posologia clínica nem habilitar cálculo. Qualquer dosis pertence a protocolo de pesquisa y no deve ser convertida em recomendação assistencial.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Eventos adversos devem permanecer vinculados ao protocolo de estudo.",
+    "dangerousAdverseEffects": "Segurança y eficácia no estabelecidas para uso clínico rotineiro; risco de uso de produto no aprovado.",
+    "adverseEffects": "Eventos adversos devem permanecer vinculados ao protocolo de estudo.; Segurança y eficácia no estabelecidas para uso clínico rotineiro; risco de uso de produto no aprovado.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Segurança y eficácia no estabelecidas para uso clínico rotineiro; risco de uso de produto no aprovado.",
+    "alerts": "Segurança y eficácia no estabelecidas para uso clínico rotineiro; risco de uso de produto no aprovado.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=retatrutida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=retatrutida"
+  }
+};})();
+/* GOLD33_SELECTIVE:retatrutida:END */
