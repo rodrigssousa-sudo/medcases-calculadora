@@ -5,490 +5,96 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Risperidona",
+    "name": "Risperidona oral",
     "class": "Antipsicótico atípico",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Risperdal",
-        "Riss",
-        "Risperidon",
-        "Risperidona EMS"
-      ],
-      "ar": [
-        "Risperdal",
-        "Risperin",
-        "Risperidona Bagó",
-        "Risperidona Gador"
-      ]
-    },
-    "presentation": [
-      "Comprimido 1 mg",
-      "Comprimido 2 mg",
-      "Comprimido 3 mg",
-      "Solução oral 1 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Esquizofrenia: iniciar 1–2 mg/dia VO; usual 2–6 mg/dia.",
-      "mania": "Mania aguda: 1–2 mg/dia; titular conforme resposta.",
-      "maxDose": "Dose máxima usual: 6 mg/dia; doses maiores aumentam EPS e raramente agregam benefício."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Transtorno bipolar — mania aguda",
-      "Manutenção no transtorno bipolar",
-      "Irritabilidade associada ao transtorno do espectro autista",
-      "Agitação psicótica",
-      "Transtorno esquizoafetivo",
-      "Agressividade grave em casos selecionados"
-    ],
+    "commercialNames": "br: Risperdal; Riss; Risperidon; Risperidona EMS; ar: Risperdal; Risperin; Risperidona Bagó; Risperidona Gador",
+    "presentation": "Comprimido 1 mg; Comprimido 2 mg; Comprimido 3 mg; Solução oral 1 mg/mL",
+    "dose": "adulto: Esquizofrenia: iniciar 1–2 mg/dia VO; usual 2–6 mg/dia.; mania: Mania aguda: 1–2 mg/dia; titular conforme resposta.; maxDose: Dose máxima usual: 6 mg/dia; doses maiores aumentam EPS e raramente agregam benefício.",
+    "indications": "Esquizofrenia; Transtorno bipolar — mania aguda; Manutenção no transtorno bipolar; Irritabilidade associada ao transtorno do espectro autista; Agitação psicótica; Transtorno esquizoafetivo; Agressividade grave em casos selecionados",
     "renalAdjustment": "RISPERIDONA comprimidos VO (bula FDA): se ClCr <30 mL/min em adultos, iniciar 0,5 mg VO a cada 12 h; aumentar com cautela conforme bula e tolerabilidade. Não aplicar este esquema a LAI.",
     "hepaticAdjustment": "RISPERIDONA comprimidos VO (bula FDA): insuficiência hepática grave, Child-Pugh 10–15, em adultos: iniciar 0,5 mg a cada 12 h e titular conforme bula. Um indicador booleano de hepatopatia não determina Child-Pugh.",
     "mechanism": "Antagonista serotoninérgico 5HT2A e dopaminérgico D2; em doses maiores aumenta bloqueio D2 e risco extrapiramidal.",
     "onset": "Redução de agitação pode ocorrer em dias; efeito antipsicótico pleno geralmente em 2–6 semanas.",
     "halfLife": "Vida média aproximada: risperidona 3–20 h; metabólito ativo 9-hidroxirisperidona 20–24 h.",
-    "commonAdverseEffects": [
-      "Sonolência",
-      "Ganho de peso",
-      "Hiperprolactinemia",
-      "Acatisia",
-      "Parkinsonismo em doses maiores",
-      "Tontura",
-      "Disfunção sexual"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptica maligna",
-      "Discinesia tardia",
-      "Prolongamento QT em pacientes predispostos",
-      "Hiperglicemia e dislipidemia",
-      "Eventos cerebrovasculares em idosos com demência",
-      "Convulsões em predispostos"
-    ],
+    "commonAdverseEffects": "Sonolência; Ganho de peso; Hiperprolactinemia; Acatisia; Parkinsonismo em doses maiores; Tontura; Disfunção sexual",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT em pacientes predispostos; Hiperglicemia e dislipidemia; Eventos cerebrovasculares em idosos com demência; Convulsões em predispostos",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade à risperidona ou paliperidona",
-      "Demência com corpos de Lewy ou Parkinson grave, salvo extrema necessidade",
-      "Histórico de síndrome neuroléptica maligna relacionada ao fármaco"
-    ],
-    "interactions": [
-      "Levodopa e agonistas dopaminérgicos: antagonismo",
-      "Fluoxetina/paroxetina: podem aumentar níveis por CYP2D6",
-      "Carbamazepina: pode reduzir níveis",
-      "Anti-hipertensivos: maior hipotensão",
-      "Álcool e depressores do SNC",
-      "Fármacos que prolongam QT"
-    ],
-    "alerts": [
-      "Bula risperidona VO: dose e faixa etária variam por esquizofrenia, mania e irritabilidade associada ao autismo; disfunção renal/hepática grave exige início específico. Não transferir pauta VO para LAI.",
-      "Monitorar peso, glicemia, lipídios e pressão arterial.",
-      "Monitorar prolactina se galactorreia, amenorreia, infertilidade ou disfunção sexual.",
-      "EPS aumentam com doses maiores.",
-      "Evitar uso rotineiro em psicose associada à demência.",
-      "Considerar ECG se risco cardiovascular ou associação com fármacos que prolongam QT."
-    ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a6347895-5f16-43b4-92a0-b9904ac81937",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Risperidone Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "LABEL_POSOLOGY_INITIAL_ONLY",
-      "doseAuto": true,
-      "indication": "autism_irritability",
-      "sourceUrls": [
-        "https://boletin.anmat.gob.ar/mayo_2019/Dispo_MSYDS_4586-19.pdf",
-        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3"
-      ],
-      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
-      "jurisdiction": "AR",
-      "product": "RISPERDAL",
-      "formulation": "oral_solution_1mg_ml",
-      "minAge": 5,
-      "maxAge": 17,
-      "minWeightKg": 15,
-      "calculationStatus": "INITIAL_DAYS_1_TO_4_ONLY",
-      "titrationAutomatic": false,
-      "maintenanceAutomatic": false,
-      "independentlyClinicallySignedOff": false,
-      "unit": "mg/day",
-      "initialByWeightKg": [
-        {
-          "minInclusiveKg": 15,
-          "maxExclusiveKg": 20,
-          "initialMgPerDay": 0.25,
-          "concentrationMgPerMl": 1,
-          "initialMlPerDay": 0.25
-        },
-        {
-          "minInclusiveKg": 20,
-          "maxExclusiveKg": null,
-          "initialMgPerDay": 0.5,
-          "concentrationMgPerMl": 1,
-          "initialMlPerDay": 0.5
-        }
-      ],
-      "clinicalReferenceR27": {
-        "status": "LABEL_POSOLOGY_REFERENCE_NOT_CLINICALLY_SIGNED",
-        "product": "RISPERDAL",
-        "jurisdiction": "AR",
-        "formulation": "oral_solution_1mg_ml",
-        "concentrationMgPerMl": 1,
-        "indication": "autism_irritability",
-        "minAgeYears": 5,
-        "maxAgeYears": 17,
-        "minWeightKg": 15,
-        "route": "oral",
-        "unit": "mg/day",
-        "frequency": "once_daily_or_two_divided_doses",
-        "initiation": [
-          {
-            "minKg": 15,
-            "maxKgExclusive": 20,
-            "mgDay": 0.25
-          },
-          {
-            "minKg": 20,
-            "maxKgExclusive": null,
-            "mgDay": 0.5
-          }
-        ],
-        "day5OrLaterAfterClinicalAuthorization": [
-          {
-            "minKg": 15,
-            "maxKgExclusive": 20,
-            "mgDay": 0.5
-          },
-          {
-            "minKg": 20,
-            "maxKgExclusive": null,
-            "mgDay": 1
-          }
-        ],
-        "earliestFirstIncreaseDay": 5,
-        "minimumDaysAtRecommendedDose": 14,
-        "subsequentTitration": {
-          "minimumIntervalDays": 14,
-          "incrementMgDayBelow20Kg": 0.25,
-          "incrementMgDayAtLeast20Kg": 0.5,
-          "requiresClinicianDecision": true
-        },
-        "effectiveRangeMgDay": [
-          0.5,
-          3
-        ],
-        "maxEffectiveLabelMgDay": 3,
-        "maintenance": "individualized lowest effective dose; regular reassessment; not auto-calculated",
-        "additionalIndicationsReferenceOnly": [
-          {
-            "indication": "schizophrenia",
-            "agesYears": [
-              13,
-              17
-            ],
-            "initialMgDay": 0.5,
-            "desirableMgDay": 3,
-            "studiedEffectiveRangeMgDay": [
-              1,
-              6
-            ],
-            "incrementMgDay": [
-              0.5,
-              1
-            ],
-            "minTitrationHours": 24,
-            "maxStudiedMgDay": 6
-          },
-          {
-            "indication": "bipolar_i_mania",
-            "agesYears": [
-              10,
-              17
-            ],
-            "initialMgDay": 0.5,
-            "desiredRangeMgDay": [
-              1,
-              2.5
-            ],
-            "studiedRangeMgDay": [
-              0.5,
-              6
-            ],
-            "incrementMgDay": [
-              0.5,
-              1
-            ],
-            "minTitrationHours": 24,
-            "above2point5NoAddedEfficacyInStudies": true,
-            "maxStudiedMgDay": 6
-          }
-        ],
-        "source": [
-          {
-            "url": "https://boletin.anmat.gob.ar/mayo_2019/Dispo_MSYDS_4586-19.pdf",
-            "regulator": "ANMAT",
-            "disposition": "4586/2019",
-            "pageNumbers": [
-              14,
-              15,
-              16,
-              17
-            ],
-            "accessed": "2026-09-16"
-          }
-        ],
-        "marketAvailability2026": "NOT_VERIFIED",
-        "independentlyClinicallySignedOff": false
-      }
-    }
+    "contraindications": "Hipersensibilidade à risperidona ou paliperidona; Demência com corpos de Lewy ou Parkinson grave, salvo extrema necessidade; Histórico de síndrome neuroléptica maligna relacionada ao fármaco",
+    "interactions": "Levodopa e agonistas dopaminérgicos: antagonismo; Fluoxetina/paroxetina: podem aumentar níveis por CYP2D6; Carbamazepina: pode reduzir níveis; Anti-hipertensivos: maior hipotensão; Álcool e depressores do SNC; Fármacos que prolongam QT",
+    "alerts": "SNM, discinesia tardia, síndrome metabólica, QT e maior mortalidade na demência.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=risperidona",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "pharmacologicClass": "Antipsicótico atípico",
+    "presentations": "Comprimido 1 mg; Comprimido 2 mg; Comprimido 3 mg; Solução oral 1 mg/mL",
+    "pharmacodynamics": "Antagonista serotoninérgico 5HT2A e dopaminérgico D2; em doses maiores aumenta bloqueio D2 e risco extrapiramidal.",
+    "pharmacokinetics": "Vida média aproximada: risperidona 3–20 h; metabólito ativo 9-hidroxirisperidona 20–24 h.",
+    "renalDose": "RISPERIDONA comprimidos VO (bula FDA): se ClCr <30 mL/min em adultos, iniciar 0,5 mg VO a cada 12 h; aumentar com cautela conforme bula e tolerabilidade. Não aplicar este esquema a LAI.",
+    "hepaticDose": "RISPERIDONA comprimidos VO (bula FDA): insuficiência hepática grave, Child-Pugh 10–15, em adultos: iniciar 0,5 mg a cada 12 h e titular conforme bula. Um indicador booleano de hepatopatia não determina Child-Pugh.",
+    "adverseEffects": "Sonolência, sintomas extrapiramidais, hiperprolactinemia e ganho de peso.; SNM, discinesia tardia, síndrome metabólica, QT e maior mortalidade na demência.",
+    "monitoring": "Bula risperidona VO: dose e faixa etária variam por esquizofrenia, mania e irritabilidade associada ao autismo; disfunção renal/hepática grave exige início específico. Não transferir pauta VO para LAI.; Monitorar peso, glicemia, lipídios e pressão arterial.; Monitorar prolactina se galactorreia, amenorreia, infertilidade ou disfunção sexual.; EPS aumentam com doses maiores.; Evitar uso rotineiro em psicose associada à demência.; Considerar ECG se risco cardiovascular ou associação com fármacos que prolongam QT.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "SNM, discinesia tardia, síndrome metabólica, QT e maior mortalidade na demência.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=risperidona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "es": {
-    "name": "Risperidona",
+    "name": "Risperidona oral",
     "class": "Antipsicótico atípico",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Risperdal",
-        "Riss",
-        "Risperidon",
-        "Risperidona EMS"
-      ],
-      "ar": [
-        "Risperdal",
-        "Risperin",
-        "Risperidona Bagó",
-        "Risperidona Gador"
-      ]
-    },
-    "presentation": [
-      "Comprimido 1 mg",
-      "Comprimido 2 mg",
-      "Comprimido 3 mg",
-      "Solución oral 1 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Esquizofrenia: iniciar 1–2 mg/día VO; habitual 2–6 mg/día.",
-      "mania": "Manía aguda: 1–2 mg/día; titular según respuesta.",
-      "maxDose": "Dosis máxima habitual: 6 mg/día; dosis mayores aumentan EPS y rara vez agregan beneficio."
-    },
-    "indications": [
-      "Esquizofrenia",
-      "Trastorno bipolar — manía aguda",
-      "Mantenimiento en trastorno bipolar",
-      "Irritabilidad asociada al trastorno del espectro autista",
-      "Agitación psicótica",
-      "Trastorno esquizoafectivo",
-      "Agresividad grave en casos seleccionados"
-    ],
+    "commercialNames": "br: Risperdal; Riss; Risperidon; Risperidona EMS; ar: Risperdal; Risperin; Risperidona Bagó; Risperidona Gador",
+    "presentation": "Comprimido 1 mg; Comprimido 2 mg; Comprimido 3 mg; Solução oral 1 mg/mL",
+    "dose": "adulto: Esquizofrenia: iniciar 1–2 mg/dia VO; usual 2–6 mg/dia.; mania: Mania aguda: 1–2 mg/dia; titular conforme resposta.; maxDose: Dose máxima usual: 6 mg/dia; dosiss maiores aumentam EPS y raramente agregam benefício.",
+    "indications": "Esquizofrenia; Transtorno bipolar — mania aguda; Manutenção no transtorno bipolar; Irritabilidade associada ao transtorno do espectro autista; Agitação psicótica; Transtorno esquizoafetivo; Agressividade grave em casos selecionados",
     "renalAdjustment": "RISPERIDONA comprimidos VO (ficha FDA): si ClCr <30 mL/min en adultos, iniciar 0,5 mg VO cada 12 h; aumentar con precaución según ficha y tolerancia. No aplicar este esquema a LAI.",
     "hepaticAdjustment": "RISPERIDONA comprimidos VO (ficha FDA): insuficiencia hepática grave, Child-Pugh 10–15, en adultos: iniciar 0,5 mg cada 12 h y titular según ficha. Un indicador booleano de hepatopatía no determina Child-Pugh.",
-    "mechanism": "Antagonista serotoninérgico 5HT2A y dopaminérgico D2; en dosis mayores aumenta bloqueo D2 y riesgo extrapiramidal.",
+    "mechanism": "Antagonista serotoninérgico 5HT2A y dopaminérgico D2; em dosiss maiores aumenta bloqueio D2 y risco extrapiramidal.",
     "onset": "Reducción de agitación puede ocurrir en días; efecto antipsicótico pleno generalmente en 2–6 semanas.",
     "halfLife": "Vida media aproximada: risperidona 3–20 h; metabolito activo 9-hidroxirisperidona 20–24 h.",
-    "commonAdverseEffects": [
-      "Somnolencia",
-      "Aumento de peso",
-      "Hiperprolactinemia",
-      "Acatisia",
-      "Parkinsonismo en dosis mayores",
-      "Mareos",
-      "Disfunción sexual"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptico maligno",
-      "Discinesia tardía",
-      "Prolongación QT en pacientes predispuestos",
-      "Hiperglucemia y dislipidemia",
-      "Eventos cerebrovasculares en adultos mayores con demencia",
-      "Convulsiones en predispuestos"
-    ],
+    "commonAdverseEffects": "Sonolência; Ganho de peso; Hiperprolactinemia; Acatisia; Parkinsonismo em dosiss maiores; Tontura; Disfunción sexual",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT em pacientes predispostos; Hiperglicemia y dislipidemia; Eventos cerebrovasculares em idosos con demência; Convulsões em predispostos",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a risperidona o paliperidona",
-      "Demencia con cuerpos de Lewy o Parkinson grave, salvo extrema necesidad",
-      "Antecedente de síndrome neuroléptico maligno relacionada al fármaco"
-    ],
-    "interactions": [
-      "Levodopa y agonistas dopaminérgicos: antagonismo",
-      "Fluoxetina/paroxetina: pueden aumentar niveles por CYP2D6",
-      "Carbamazepina: puede reducir niveles",
-      "Antihipertensivos: mayor hipotensión",
-      "Alcohol y depresores del SNC",
-      "Fármacos que prolongan QT"
-    ],
-    "alerts": [
-      "Ficha risperidona oral: dosis y edad varían por esquizofrenia, manía e irritabilidad ligada a autismo; deterioro renal/hepático grave exige inicio específico. No transferir pauta oral a LAI.",
-      "Monitorizar peso, glucemia, lípidos y presión arterial.",
-      "Monitorizar prolactina si galactorrea, amenorrea, infertilidad o disfunción sexual.",
-      "Los EPS aumentan con dosis mayores.",
-      "Evitar uso rutinario en psicosis asociada a demencia.",
-      "Considerar ECG si hay riesgo cardiovascular o asociación con fármacos que prolongan QT."
-    ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a6347895-5f16-43b4-92a0-b9904ac81937",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Risperidone Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "LABEL_POSOLOGY_INITIAL_ONLY",
-      "doseAuto": true,
-      "indication": "autism_irritability",
-      "sourceUrls": [
-        "https://boletin.anmat.gob.ar/mayo_2019/Dispo_MSYDS_4586-19.pdf",
-        "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3"
-      ],
-      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
-      "jurisdiction": "AR",
-      "product": "RISPERDAL",
-      "formulation": "oral_solution_1mg_ml",
-      "minAge": 5,
-      "maxAge": 17,
-      "minWeightKg": 15,
-      "calculationStatus": "INITIAL_DAYS_1_TO_4_ONLY",
-      "titrationAutomatic": false,
-      "maintenanceAutomatic": false,
-      "independentlyClinicallySignedOff": false,
-      "unit": "mg/day",
-      "initialByWeightKg": [
-        {
-          "minInclusiveKg": 15,
-          "maxExclusiveKg": 20,
-          "initialMgPerDay": 0.25,
-          "concentrationMgPerMl": 1,
-          "initialMlPerDay": 0.25
-        },
-        {
-          "minInclusiveKg": 20,
-          "maxExclusiveKg": null,
-          "initialMgPerDay": 0.5,
-          "concentrationMgPerMl": 1,
-          "initialMlPerDay": 0.5
-        }
-      ],
-      "clinicalReferenceR27": {
-        "status": "LABEL_POSOLOGY_REFERENCE_NOT_CLINICALLY_SIGNED",
-        "product": "RISPERDAL",
-        "jurisdiction": "AR",
-        "formulation": "oral_solution_1mg_ml",
-        "concentrationMgPerMl": 1,
-        "indication": "autism_irritability",
-        "minAgeYears": 5,
-        "maxAgeYears": 17,
-        "minWeightKg": 15,
-        "route": "oral",
-        "unit": "mg/day",
-        "frequency": "once_daily_or_two_divided_doses",
-        "initiation": [
-          {
-            "minKg": 15,
-            "maxKgExclusive": 20,
-            "mgDay": 0.25
-          },
-          {
-            "minKg": 20,
-            "maxKgExclusive": null,
-            "mgDay": 0.5
-          }
-        ],
-        "day5OrLaterAfterClinicalAuthorization": [
-          {
-            "minKg": 15,
-            "maxKgExclusive": 20,
-            "mgDay": 0.5
-          },
-          {
-            "minKg": 20,
-            "maxKgExclusive": null,
-            "mgDay": 1
-          }
-        ],
-        "earliestFirstIncreaseDay": 5,
-        "minimumDaysAtRecommendedDose": 14,
-        "subsequentTitration": {
-          "minimumIntervalDays": 14,
-          "incrementMgDayBelow20Kg": 0.25,
-          "incrementMgDayAtLeast20Kg": 0.5,
-          "requiresClinicianDecision": true
-        },
-        "effectiveRangeMgDay": [
-          0.5,
-          3
-        ],
-        "maxEffectiveLabelMgDay": 3,
-        "maintenance": "individualized lowest effective dose; regular reassessment; not auto-calculated",
-        "additionalIndicationsReferenceOnly": [
-          {
-            "indication": "schizophrenia",
-            "agesYears": [
-              13,
-              17
-            ],
-            "initialMgDay": 0.5,
-            "desirableMgDay": 3,
-            "studiedEffectiveRangeMgDay": [
-              1,
-              6
-            ],
-            "incrementMgDay": [
-              0.5,
-              1
-            ],
-            "minTitrationHours": 24,
-            "maxStudiedMgDay": 6
-          },
-          {
-            "indication": "bipolar_i_mania",
-            "agesYears": [
-              10,
-              17
-            ],
-            "initialMgDay": 0.5,
-            "desiredRangeMgDay": [
-              1,
-              2.5
-            ],
-            "studiedRangeMgDay": [
-              0.5,
-              6
-            ],
-            "incrementMgDay": [
-              0.5,
-              1
-            ],
-            "minTitrationHours": 24,
-            "above2point5NoAddedEfficacyInStudies": true,
-            "maxStudiedMgDay": 6
-          }
-        ],
-        "source": [
-          {
-            "url": "https://boletin.anmat.gob.ar/mayo_2019/Dispo_MSYDS_4586-19.pdf",
-            "regulator": "ANMAT",
-            "disposition": "4586/2019",
-            "pageNumbers": [
-              14,
-              15,
-              16,
-              17
-            ],
-            "accessed": "2026-09-16"
-          }
-        ],
-        "marketAvailability2026": "NOT_VERIFIED",
-        "independentlyClinicallySignedOff": false
-      }
-    }
+    "contraindications": "Hipersensibilidade à risperidona ou paliperidona; Demência con corpos de Lewy ou Parkinson grave, salvo extrema necessidade; Histórico de síndrome neuroléptica maligna relacionada ao fármaco",
+    "interactions": "Levodopa y agonistas dopaminérgicos: antagonismo; Fluoxetina/paroxetina: podem aumentar níveis por CYP2D6; Carbamazepina: pode reduzir níveis; Anti-hipertensivos: maior hipotensão; Álcool y depressores do SNC; Fármacos que prolongam QT",
+    "alerts": "SNM, discinesia tardia, síndrome metabólica, QT y maior mortalidade na demência.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=risperidona",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "pharmacologicClass": "Antipsicótico atípico",
+    "presentations": "Comprimido 1 mg; Comprimido 2 mg; Comprimido 3 mg; Solução oral 1 mg/mL",
+    "pharmacodynamics": "Antagonista serotoninérgico 5HT2A y dopaminérgico D2; em dosiss maiores aumenta bloqueio D2 y risco extrapiramidal.",
+    "pharmacokinetics": "Vida média aproximada: risperidona 3–20 h; metabólito ativo 9-hidroxirisperidona 20–24 h.",
+    "renalDose": "RISPERIDONA comprimidos VO (bula FDA): se ClCr <30 mL/min em adultos, iniciar 0,5 mg VO a cada 12 h; aumentar con cautela conforme bula y tolerabilidade. No aplicar este esquema a LAI.",
+    "hepaticDose": "RISPERIDONA comprimidos VO (bula FDA): insuficiência hepática grave, Child-Pugh 10–15, em adultos: iniciar 0,5 mg a cada 12 h y titular conforme bula. Um indicador booleano de hepatopatia no determina Child-Pugh.",
+    "adverseEffects": "Sonolência, sintomas extrapiramidais, hiperprolactinemia y ganho de peso.; SNM, discinesia tardia, síndrome metabólica, QT y maior mortalidade na demência.",
+    "monitoring": "Bula risperidona VO: dosis y faixa etária variam por esquizofrenia, mania y irritabilidade associada ao autismo; disfunción renal/hepática grave exige início específico. No transferir pauta VO para LAI.; Monitorar peso, glicemia, lipídios y pressão arterial.; Monitorar prolactina se galactorreia, amenorreia, infertilidade ou disfunción sexual.; EPS aumentam con dosiss maiores.; Evitar uso rotineiro em psicose associada à demência.; Considerar ECG se risco cardiovascular ou associação con fármacos que prolongam QT.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "SNM, discinesia tardia, síndrome metabólica, QT y maior mortalidade na demência.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=risperidona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "name": {
-    "pt": "Risperidona",
-    "es": "Risperidona"
+    "pt": "Risperidona oral",
+    "es": "Risperidona oral"
   },
   "keywords": [
     "risperidona",
@@ -501,9 +107,21 @@
     "risperidona gador",
     "antipsicotico atipico"
   ],
-  "dataVersion": "clinical-data-v1-81243285072add83",
-  "clinicalContentSha256": "81243285072add831f20f682f13f0354cdefe2558245c5f7cfce3dd47b916ce3",
+  "dataVersion": "clinical-data-v1-7464b2dbe2ca40f8",
+  "clinicalContentSha256": "7464b2dbe2ca40f86d4fdccb4f8c9d4eaf37d4e9f018e131bef8053751d74b93",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psicofarmacos.js"
+  "sourceModule": "psicofarmacos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psicofarmacos.js",
+    "sourceField": "risperidona.mcGoldClinicalV1",
+    "lote": "069",
+    "requiredFields": 33,
+    "approvedSha256": "5ca57bc9e149b3613d10e8c8deca51d2bf54f6a6f9e42b6dd145cae4f9dd11b2",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

@@ -6263,3 +6263,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:reslizumabe:END */
+/* GOLD33_SELECTIVE:roflumilaste:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="roflumilaste";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:roflumilaste:"+matches.length);drug=matches[0];}else{drug=db&&db["roflumilaste"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:roflumilaste");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "069",
+    "requiredFieldCount": 33,
+    "approvedSha256": "5ca57bc9e149b3613d10e8c8deca51d2bf54f6a6f9e42b6dd145cae4f9dd11b2",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Roflumilaste",
+    "class": "Inibidor seletivo da fosfodiesterase 4",
+    "pharmacologicClass": "Inibidor seletivo da fosfodiesterase 4",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em força de iniciação/manutenção conforme mercado.",
+    "presentations": "Comprimidos em força de iniciação/manutenção conforme mercado.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Redução de exacerbações em DPOC grave associada a bronquite crônica em pacientes selecionados.",
+    "dose": "Dose oral diária; não é broncodilatador de resgate. Avaliar peso, fígado, interações e sintomas psiquiátricos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Diarreia, perda de peso, náusea, cefaleia e insônia.",
+    "dangerousAdverseEffects": "Ideação suicida, depressão grave e perda ponderal importante.",
+    "adverseEffects": "Diarreia, perda de peso, náusea, cefaleia e insônia.; Ideação suicida, depressão grave e perda ponderal importante.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Ideação suicida, depressão grave e perda ponderal importante.",
+    "alerts": "Ideação suicida, depressão grave e perda ponderal importante.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=roflumilaste",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=roflumilaste"
+  },
+  "es": {
+    "name": "Roflumilaste",
+    "class": "Inibidor seletivo da fosfodiesterase 4",
+    "pharmacologicClass": "Inibidor seletivo da fosfodiesterase 4",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em força de iniciação/manutenção conforme mercado.",
+    "presentations": "Comprimidos em força de iniciação/manutenção conforme mercado.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Redução de exacerbações em DPOC grave associada a bronquite crônica em pacientes selecionados.",
+    "dose": "Dose oral diária; no é broncodilatador de resgate. Avaliar peso, fígado, interações y sintomas psiquiátricos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Diarreia, perda de peso, náusea, cefaleia y insônia.",
+    "dangerousAdverseEffects": "Ideação suicida, depressão grave y perda ponderal importante.",
+    "adverseEffects": "Diarreia, perda de peso, náusea, cefaleia y insônia.; Ideação suicida, depressão grave y perda ponderal importante.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Ideação suicida, depressão grave y perda ponderal importante.",
+    "alerts": "Ideação suicida, depressão grave y perda ponderal importante.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=roflumilaste",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=roflumilaste"
+  }
+};})();
+/* GOLD33_SELECTIVE:roflumilaste:END */

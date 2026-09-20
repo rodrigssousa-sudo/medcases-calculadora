@@ -5,206 +5,96 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Risperidona LAI",
-    "class": "Antipsicótico atípico injetável de longa ação",
+    "name": "Risperidona injetável de longa ação",
+    "class": "Antipsicótico atípico de depósito",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Risperdal Consta"
-      ],
-      "ar": [
-        "Risperdal Consta"
-      ]
-    },
-    "presentation": [
-      "Frasco/seringa 25 mg",
-      "Frasco/seringa 37,5 mg",
-      "Frasco/seringa 50 mg"
-    ],
-    "dose": {
-      "adulto": "Dose inicial usual: 25 mg IM profunda a cada 2 semanas.",
-      "suplementacao": "Manter antipsicótico oral por cerca de 3 semanas após a primeira aplicação.",
-      "maxDose": "Dose máxima usual: 50 mg IM a cada 2 semanas."
-    },
-    "indications": [
-      "Esquizofrenia em manutenção",
-      "Transtorno bipolar em manutenção em alguns protocolos",
-      "Prevenção de recaídas psicóticas",
-      "Baixa adesão ao tratamento oral",
-      "Psicose crônica com necessidade de LAI",
-      "Transtorno esquizoafetivo em casos selecionados"
-    ],
+    "commercialNames": "br: Risperdal Consta; ar: Risperdal Consta",
+    "presentation": "Frasco/seringa 25 mg; Frasco/seringa 37,5 mg; Frasco/seringa 50 mg",
+    "dose": "adulto: Dose inicial usual: 25 mg IM profunda a cada 2 semanas.; suplementacao: Manter antipsicótico oral por cerca de 3 semanas após a primeira aplicação.; maxDose: Dose máxima usual: 50 mg IM a cada 2 semanas.",
+    "indications": "Esquizofrenia em manutenção; Transtorno bipolar em manutenção em alguns protocolos; Prevenção de recaídas psicóticas; Baixa adesão ao tratamento oral; Psicose crônica com necessidade de LAI; Transtorno esquizoafetivo em casos selecionados",
     "renalAdjustment": "ClCr informado ≥60 mL/min: confirmar tolerância oral e fatores individuais antes de iniciar CONSTA.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Antagonista D2 e 5HT2A em formulação depot de microesferas, com liberação prolongada.",
     "onset": "Liberação clínica relevante é retardada; por isso exige cobertura oral inicial por aproximadamente 3 semanas.",
     "halfLife": "Liberação prolongada por semanas; administração habitual a cada 14 dias.",
-    "commonAdverseEffects": [
-      "Dor no local da injeção",
-      "Hiperprolactinemia",
-      "Ganho de peso",
-      "Acatisia",
-      "Parkinsonismo",
-      "Sonolência"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptica maligna",
-      "Discinesia tardia",
-      "Prolongamento QT em predispostos",
-      "Hiperglicemia e dislipidemia",
-      "Eventos cerebrovasculares em idosos com demência",
-      "Efeito adverso persistente pela formulação depot"
-    ],
+    "commonAdverseEffects": "Dor no local da injeção; Hiperprolactinemia; Ganho de peso; Acatisia; Parkinsonismo; Sonolência",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT em predispostos; Hiperglicemia e dislipidemia; Eventos cerebrovasculares em idosos com demência; Efeito adverso persistente pela formulação depot",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade à risperidona ou paliperidona",
-      "Ausência de tolerância prévia à risperidona/paliperidona",
-      "Demência com psicose sem avaliação especializada"
-    ],
-    "interactions": [
-      "Fluoxetina/paroxetina: podem aumentar níveis por CYP2D6",
-      "Carbamazepina: pode reduzir níveis",
-      "Levodopa e agonistas dopaminérgicos",
-      "Fármacos que prolongam QT",
-      "Álcool e depressores do SNC"
-    ],
-    "alerts": [
-      "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.",
-      "RISPERDAL CONSTA (microesferas): cobertura oral por 3 semanas após 1ª aplicação; disfunção renal/hepática requer titulação VO prévia. ClCr não informado deve aparecer como desconhecido, não como 100 mL/min. Não aplicar regras de outros LAI de risperidona.",
-      "RISPERDAL CONSTA (microesferas): tolerância oral prévia e cobertura oral por 3 semanas após início, conforme bula desse produto. Não transferir a regra para outros LAI de risperidona.",
-      "Confirmar tolerância oral antes de iniciar LAI.",
-      "Manter cobertura oral por aproximadamente 3 semanas após primeira aplicação.",
-      "Aplicação IM profunda a cada 2 semanas.",
-      "Monitorar prolactina, EPS, peso, glicemia e lipídios.",
-      "Registrar data de aplicação para evitar falhas no intervalo."
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bb34ee82-d2c2-43b8-ba21-2825c0954691",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Risperidone LAI Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
-      "doseAuto": false,
-      "indication": null,
-      "sourceUrls": [],
-      "note": "Dados pediátricos separados do cálculo adulto. Não extrapolar outras indicações.",
-      "clinicalReferenceR27": {
-        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
-        "doseAuto": false,
-        "medicalSafetyReviewRequired": true,
-        "unverifiedDoseValues": 0,
-        "risk": "LAI_BRAND_SPECIFIC_ORAL_OVERLAP",
-        "source": []
-      }
-    }
+    "contraindications": "Hipersensibilidade à risperidona ou paliperidona; Ausência de tolerância prévia à risperidona/paliperidona; Demência com psicose sem avaliação especializada",
+    "interactions": "Fluoxetina/paroxetina: podem aumentar níveis por CYP2D6; Carbamazepina: pode reduzir níveis; Levodopa e agonistas dopaminérgicos; Fármacos que prolongam QT; Álcool e depressores do SNC",
+    "alerts": "SNM, discinesia tardia, síndrome metabólica, QT e erro de intervalo/via.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=risperidona+lai",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "pharmacologicClass": "Antipsicótico atípico de depósito",
+    "presentations": "Frasco/seringa 25 mg; Frasco/seringa 37,5 mg; Frasco/seringa 50 mg",
+    "pharmacodynamics": "Antagonista D2 e 5HT2A em formulação depot de microesferas, com liberação prolongada.",
+    "pharmacokinetics": "Liberação prolongada por semanas; administração habitual a cada 14 dias.",
+    "renalDose": "ClCr informado ≥60 mL/min: confirmar tolerância oral e fatores individuais antes de iniciar CONSTA.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "adverseEffects": "Reação no local, acatisia, ganho de peso e hiperprolactinemia.; SNM, discinesia tardia, síndrome metabólica, QT e erro de intervalo/via.",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.; RISPERDAL CONSTA (microesferas): cobertura oral por 3 semanas após 1ª aplicação; disfunção renal/hepática requer titulação VO prévia. ClCr não informado deve aparecer como desconhecido, não como 100 mL/min. Não aplicar regras de outros LAI de risperidona.; RISPERDAL CONSTA (microesferas): tolerância oral prévia e cobertura oral por 3 semanas após início, conforme bula desse produto. Não transferir a regra para outros LAI de risperidona.; Confirmar tolerância oral antes de iniciar LAI.; Manter cobertura oral por aproximadamente 3 semanas após primeira aplicação.; Aplicação IM profunda a cada 2 semanas.; Monitorar prolactina, EPS, peso, glicemia e lipídios.; Registrar data de aplicação para evitar falhas no intervalo.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "SNM, discinesia tardia, síndrome metabólica, QT e erro de intervalo/via.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=risperidona+lai",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "es": {
-    "name": "Risperidona LAI",
-    "class": "Antipsicótico atípico inyectable de larga acción",
+    "name": "Risperidona injetável de longa ação",
+    "class": "Antipsicótico atípico de depósito",
     "category": "antipsicotico",
-    "commercialNames": {
-      "br": [
-        "Risperdal Consta"
-      ],
-      "ar": [
-        "Risperdal Consta"
-      ]
-    },
-    "presentation": [
-      "Frasco/jeringa 25 mg",
-      "Frasco/jeringa 37,5 mg",
-      "Frasco/jeringa 50 mg"
-    ],
-    "dose": {
-      "adulto": "Dosis inicial habitual: 25 mg IM profunda cada 2 semanas.",
-      "suplementacao": "Mantener antipsicótico oral durante cerca de 3 semanas tras la primera aplicación.",
-      "maxDose": "Dosis máxima habitual: 50 mg IM cada 2 semanas."
-    },
-    "indications": [
-      "Esquizofrenia en mantenimiento",
-      "Trastorno bipolar en mantenimiento en algunos protocolos",
-      "Prevención de recaídas psicóticas",
-      "Baja adherencia al tratamiento oral",
-      "Psicosis crónica con necesidad de LAI",
-      "Trastorno esquizoafectivo en casos seleccionados"
-    ],
+    "commercialNames": "br: Risperdal Consta; ar: Risperdal Consta",
+    "presentation": "Frasco/seringa 25 mg; Frasco/seringa 37,5 mg; Frasco/seringa 50 mg",
+    "dose": "adulto: Dose inicial usual: 25 mg IM profunda a cada 2 semanas.; suplementacao: Manter antipsicótico oral por cerca de 3 semanas após a primeira aplicação.; maxDose: Dose máxima usual: 50 mg IM a cada 2 semanas.",
+    "indications": "Esquizofrenia em manutenção; Transtorno bipolar em manutenção em alguns protocolos; Prevenção de recaídas psicóticas; Baixa adesão ao tratamento oral; Psicose crônica con necessidade de LAI; Transtorno esquizoafetivo em casos selecionados",
     "renalAdjustment": "ClCr informado ≥60 mL/min: confirmar tolerancia oral y factores individuales antes de iniciar CONSTA.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Antagonista D2 y 5HT2A en formulación depot de microesferas, con liberación prolongada.",
+    "mechanism": "Antagonista D2 y 5HT2A em formulação depot de microesferas, con liberação prolongada.",
     "onset": "La liberación clínica relevante es retardada; por eso requiere cobertura oral inicial durante aproximadamente 3 semanas.",
     "halfLife": "Liberación prolongada por semanas; administración habitual cada 14 días.",
-    "commonAdverseEffects": [
-      "Dolor en el sitio de inyección",
-      "Hiperprolactinemia",
-      "Aumento de peso",
-      "Acatisia",
-      "Parkinsonismo",
-      "Somnolencia"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome neuroléptico maligno",
-      "Discinesia tardía",
-      "Prolongación QT en predispuestos",
-      "Hiperglucemia y dislipidemia",
-      "Eventos cerebrovasculares en adultos mayores con demencia",
-      "Efecto adverso persistente por la formulación depot"
-    ],
+    "commonAdverseEffects": "Dor no local da injeção; Hiperprolactinemia; Ganho de peso; Acatisia; Parkinsonismo; Sonolência",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT em predispostos; Hiperglicemia y dislipidemia; Eventos cerebrovasculares em idosos con demência; Efeito adverso persistente pela formulação depot",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a risperidona o paliperidona",
-      "Ausencia de tolerancia previa a risperidona/paliperidona",
-      "Demencia con psicosis sin evaluación especializada"
-    ],
-    "interactions": [
-      "Fluoxetina/paroxetina: pueden aumentar niveles por CYP2D6",
-      "Carbamazepina: puede reducir niveles",
-      "Levodopa y agonistas dopaminérgicos",
-      "Fármacos que prolongan QT",
-      "Alcohol y depresores del SNC"
-    ],
-    "alerts": [
-      "SEGURIDAD PEDIÁTRICA: esta ficha aún no tiene dosis pediátrica estructurada y validada para producto e indicación. Nunca extrapolar la pauta adulta a menores de 18 años; verificar prospecto específico y evaluación especializada.",
-      "RISPERDAL CONSTA (microesferas): cobertura oral 3 semanas después de la 1.ª dosis; daño renal/hepático requiere titulación oral previa. ClCr sin dato debe mostrarse desconocido, no como 100 mL/min. No aplicar pautas de otros LAI de risperidona.",
-      "RISPERDAL CONSTA (microesferas): tolerancia oral previa y cobertura oral durante 3 semanas después del inicio, según ficha de ese producto. No transferir regla a otros LAI de risperidona.",
-      "Confirmar tolerancia oral antes de iniciar LAI.",
-      "Mantener cobertura oral aproximadamente 3 semanas tras primera aplicación.",
-      "Aplicación IM profunda cada 2 semanas.",
-      "Monitorizar prolactina, EPS, peso, glucemia y lípidos.",
-      "Registrar fecha de aplicación para evitar fallas en el intervalo."
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bb34ee82-d2c2-43b8-ba21-2825c0954691",
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Risperidone LAI Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
-    ],
-    "pediatricDose": {
-      "status": "PENDING_PRODUCT_INDICATION_REVIEW",
-      "doseAuto": false,
-      "indication": null,
-      "sourceUrls": [],
-      "note": "Datos pediátricos separados del cálculo adulto. No extrapolar otras indicaciones.",
-      "clinicalReferenceR27": {
-        "status": "DOSE_NOT_VALIDATED_FOR_PRODUCT_INDICATION",
-        "doseAuto": false,
-        "medicalSafetyReviewRequired": true,
-        "unverifiedDoseValues": 0,
-        "risk": "LAI_BRAND_SPECIFIC_ORAL_OVERLAP",
-        "source": []
-      }
-    }
+    "contraindications": "Hipersensibilidade à risperidona ou paliperidona; Ausência de tolerância prévia à risperidona/paliperidona; Demência con psicose sem avaliação especializada",
+    "interactions": "Fluoxetina/paroxetina: podem aumentar níveis por CYP2D6; Carbamazepina: pode reduzir níveis; Levodopa y agonistas dopaminérgicos; Fármacos que prolongam QT; Álcool y depressores do SNC",
+    "alerts": "SNM, discinesia tardia, síndrome metabólica, QT y erro de intervalo/via.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=risperidona+lai",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "pharmacologicClass": "Antipsicótico atípico de depósito",
+    "presentations": "Frasco/seringa 25 mg; Frasco/seringa 37,5 mg; Frasco/seringa 50 mg",
+    "pharmacodynamics": "Antagonista D2 y 5HT2A em formulação depot de microesferas, con liberação prolongada.",
+    "pharmacokinetics": "Liberação prolongada por semanas; administração habitual a cada 14 dias.",
+    "renalDose": "ClCr informado ≥60 mL/min: confirmar tolerância oral y fatores individuais antes de iniciar CONSTA.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "adverseEffects": "Reação no local, acatisia, ganho de peso y hiperprolactinemia.; SNM, discinesia tardia, síndrome metabólica, QT y erro de intervalo/via.",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda no possui dosis pediátrica estruturada y validada para produto y indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica y avaliação especializada.; RISPERDAL CONSTA (microesferas): cobertura oral por 3 semanas após 1ª aplicação; disfunción renal/hepática requer titulação VO prévia. ClCr no informado deve aparecer como desconhecido, no como 100 mL/min. No aplicar regras de outros LAI de risperidona.; RISPERDAL CONSTA (microesferas): tolerância oral prévia y cobertura oral por 3 semanas após início, conforme bula desse produto. No transferir a regra para outros LAI de risperidona.; Confirmar tolerância oral antes de iniciar LAI.; Manter cobertura oral por aproximadamente 3 semanas após primeira aplicação.; Aplicação IM profunda a cada 2 semanas.; Monitorar prolactina, EPS, peso, glicemia y lipídios.; Registrar data de aplicação para evitar falhas no intervalo.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "SNM, discinesia tardia, síndrome metabólica, QT y erro de intervalo/via.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=risperidona+lai",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "name": {
-    "pt": "Risperidona LAI",
-    "es": "Risperidona LAI"
+    "pt": "Risperidona injetável de longa ação",
+    "es": "Risperidona injetável de longa ação"
   },
   "keywords": [
     "risperidona_lai",
@@ -212,9 +102,21 @@
     "risperdal consta",
     "antipsicotico atipico injetavel de longa acao"
   ],
-  "dataVersion": "clinical-data-v1-81243285072add83",
-  "clinicalContentSha256": "81243285072add831f20f682f13f0354cdefe2558245c5f7cfce3dd47b916ce3",
+  "dataVersion": "clinical-data-v1-7464b2dbe2ca40f8",
+  "clinicalContentSha256": "7464b2dbe2ca40f86d4fdccb4f8c9d4eaf37d4e9f018e131bef8053751d74b93",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psicofarmacos.js"
+  "sourceModule": "psicofarmacos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psicofarmacos.js",
+    "sourceField": "risperidona_lai.mcGoldClinicalV1",
+    "lote": "069",
+    "requiredFields": 33,
+    "approvedSha256": "5ca57bc9e149b3613d10e8c8deca51d2bf54f6a6f9e42b6dd145cae4f9dd11b2",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

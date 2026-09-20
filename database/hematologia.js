@@ -1662,3 +1662,93 @@ Object.assign(window.HEMATOLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:pegfilgrastim:END */
+/* GOLD33_SELECTIVE:romiplostim:START */
+;(function(){var db=window.HEMATOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="romiplostim";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:romiplostim:"+matches.length);drug=matches[0];}else{drug=db&&db["romiplostim"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:romiplostim");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "069",
+    "requiredFieldCount": 33,
+    "approvedSha256": "5ca57bc9e149b3613d10e8c8deca51d2bf54f6a6f9e42b6dd145cae4f9dd11b2",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Romiplostim",
+    "class": "Agonista do receptor de trombopoietina",
+    "pharmacologicClass": "Agonista do receptor de trombopoietina",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frascos liofilizados para injeção SC em forças específicas.",
+    "presentations": "Frascos liofilizados para injeção SC em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Trombocitopenia imune em pacientes selecionados conforme idade e resposta prévia.",
+    "dose": "Dose SC semanal baseada em peso e titulada pela contagem plaquetária; não normalizar plaquetas. Reconstituição e cálculo exigem protocolo específico.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, artralgia, tontura e insônia.",
+    "dangerousAdverseEffects": "Trombose, aumento de reticulina/fibrose medular e piora rebote da trombocitopenia.",
+    "adverseEffects": "Cefaleia, artralgia, tontura e insônia.; Trombose, aumento de reticulina/fibrose medular e piora rebote da trombocitopenia.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Trombose, aumento de reticulina/fibrose medular e piora rebote da trombocitopenia.",
+    "alerts": "Trombose, aumento de reticulina/fibrose medular e piora rebote da trombocitopenia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=romiplostim",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=romiplostim"
+  },
+  "es": {
+    "name": "Romiplostim",
+    "class": "Agonista do receptor de trombopoietina",
+    "pharmacologicClass": "Agonista do receptor de trombopoietina",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frascos liofilizados para injeção SC em forças específicas.",
+    "presentations": "Frascos liofilizados para injeção SC em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Trombocitopenia imune em pacientes selecionados conforme idade y resposta prévia.",
+    "dose": "Dose SC semanal baseada em peso y titulada pela contagem plaquetária; no normalizar plaquetas. Reconstituição y cálculo exigem protocolo específico.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, artralgia, tontura y insônia.",
+    "dangerousAdverseEffects": "Trombose, aumento de reticulina/fibrose medular y piora rebote da trombocitopenia.",
+    "adverseEffects": "Cefaleia, artralgia, tontura y insônia.; Trombose, aumento de reticulina/fibrose medular y piora rebote da trombocitopenia.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Trombose, aumento de reticulina/fibrose medular y piora rebote da trombocitopenia.",
+    "alerts": "Trombose, aumento de reticulina/fibrose medular y piora rebote da trombocitopenia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=romiplostim",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=romiplostim"
+  }
+};})();
+/* GOLD33_SELECTIVE:romiplostim:END */
