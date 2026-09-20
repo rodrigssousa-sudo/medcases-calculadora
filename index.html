@@ -4515,7 +4515,7 @@
       box-shadow: 0 0 0 3px rgba(56,189,248,0.12);
     }
 
-    /* Botão Copiar como Prescrição */
+    /* Botão Copiar cálculo */
     .inf-copy-rx-btn {
       width: 100%; margin-top: 16px;
       display: flex; align-items: center; justify-content: center; gap: 9px;
@@ -10900,7 +10900,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
               aria-label="Buscar droga de infusão"
               aria-autocomplete="list" aria-expanded="false" />
             <button class="inf-autocomplete-clear" id="inf-drug-clear"
-              onclick="bicClearDrug()" tabindex="-1" aria-label="Limpar">
+              onclick="bicClearDrug()" aria-label="Limpar seleção">
               <i class="fa-solid fa-xmark"></i>
             </button>
             <!-- Lista suspensa -->
@@ -10916,8 +10916,8 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
           <div class="bic-preset-header">
             <span class="bic-preset-header-label">
               <i class="fa-solid fa-flask-vial"></i>
-              <span class="lang-pt">Diluição Padrão-Ouro</span>
-              <span class="lang-es">Dilución Estándar-Oro</span>
+              <span class="lang-pt">Preparo de referência</span>
+              <span class="lang-es">Preparación de referencia</span>
             </span>
             <span class="bic-preset-applied-badge" id="bic-preset-badge">
               <i class="fa-solid fa-circle-check"></i>
@@ -10940,6 +10940,14 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
           <!-- Preenchida por JS -->
         </div>
 
+        <div id="inf-review-controls" class="infusion-dilution-box" style="display:none">
+          <label><input id="inf-adult-confirm" type="checkbox" onchange="calculateInfusion()"> <span class="lang-pt">Paciente adulto confirmado (≥18 anos)</span><span class="lang-es">Paciente adulto confirmado (≥18 años)</span></label>
+          <div id="inf-potassium-wrap" style="display:none"><label for="inf-potassium">K+ (mEq/L)</label><input id="inf-potassium" class="infusion-input" inputmode="decimal" oninput="calculateInfusion()" aria-label="Potássio atual"></div>
+          <div id="inf-duration-wrap" style="display:none"><label for="inf-duration-hours"><span class="lang-pt">Duração total planejada, incluindo tempo já infundido (h)</span><span class="lang-es">Duración total prevista, incluido tiempo ya infundido (h)</span></label><input id="inf-duration-hours" class="infusion-input" inputmode="decimal" oninput="calculateInfusion()" aria-label="Duração total em horas"></div>
+          <div id="inf-rescue-wrap" style="display:none"><label><input id="inf-rescue-confirm" type="checkbox" onchange="calculateInfusion()"> <span class="lang-pt">Resgate off-label explicitamente prescrito (até 0,06 UI/min)</span><span class="lang-es">Rescate fuera de indicación explícitamente prescrito (hasta 0,06 UI/min)</span></label></div>
+          <div id="inf-vanco-wrap" style="display:none"><label><input id="inf-vanco-confirm" type="checkbox" onchange="calculateInfusion()"> <span class="lang-pt">Infusão contínua e protocolo de monitorização confirmados</span><span class="lang-es">Infusión continua y protocolo de monitorización confirmados</span></label></div>
+        </div>
+        <div id="inf-clinical-alerts" class="infusion-clinical-alerts" role="status" aria-live="polite" style="display:none"></div>
         <!-- ── Campos de entrada ── -->
         <!-- Peso — lido da Home (read-only, não pode ser editado aqui) -->
         <div id="inf-weight-chip" class="home-data-chip" style="display:none">
@@ -10952,24 +10960,27 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
         <div id="inf-weight-missing" class="infusion-weight-inline" style="display:none">
           <span class="infusion-weight-inline-icon">⚖️</span>
           <div class="infusion-weight-inline-text">
-            <div class="infusion-weight-inline-title" data-i18n="guard_weight_title">Peso do Paciente (Obrigatório)</div>
-            <div class="infusion-weight-inline-desc" data-i18n="guard_weight_desc">Necessário para doses peso-dependentes (mcg/kg/min, mg/kg/h).</div>
+            <div class="infusion-weight-inline-title" >Peso para dosagem (kg)</div>
+            <div class="infusion-weight-inline-desc" >Informe o peso prescrito e confirme saindo do campo.</div>
           </div>
           <!-- BUILD 407-UX PASSO 1: oninput persiste no estado global + localStorage
                e auto-dismiss o banner quando o peso for confirmado (≥1 kg). -->
           <input type="text" class="infusion-weight-inline-input" id="inf-weight-inline-input"
             inputmode="decimal" pattern="[0-9.,]*" placeholder="Ex: 70"
             autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
-            oninput="_infWeightInlineUpdate(this.value)" />
+            onchange="_infWeightInlineUpdate(this.value)" aria-label="Peso (kg)" />
         </div>
         <!-- campo oculto mantido para compatibilidade interna do JS -->
         <input type="hidden" id="inf-weight" />
 
         <div class="infusion-field-label">
           <i class="fa-solid fa-vial"></i>
-          <span data-i18n="infusion_label_amp">Concentração da Ampola (mg)</span>
+          <span id="inf-amount-label" data-i18n="infusion_label_amp">Quantidade total do fármaco</span>
         </div>
-        <input type="text" class="infusion-input" id="inf-amp-mg"
+        <select id="inf-amount-unit" class="infusion-unit-select" aria-label="Unidade da quantidade total" onchange="_infAmountUnitChange()">
+          <option value="mg">mg</option><option value="UI">UI</option>
+        </select>
+        <input type="text" class="infusion-input" id="inf-amp-mg" aria-label="Quantidade total"
           inputmode="decimal" pattern="[0-9.,]*"
           autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
           placeholder="Ex: 4"
@@ -10977,9 +10988,9 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
 
         <div class="infusion-field-label">
           <i class="fa-solid fa-flask"></i>
-          <span data-i18n="infusion_label_vol">Volume do Diluente (mL)</span>
+          <span data-i18n="infusion_label_vol">Volume final da solução (mL)</span>
         </div>
-        <input type="text" class="infusion-input" id="inf-vol-ml"
+        <input type="text" class="infusion-input" id="inf-vol-ml" aria-label="Volume final (mL)"
           inputmode="decimal" pattern="[0-9.,]*"
           autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
           placeholder="Ex: 250"
@@ -10994,17 +11005,21 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
 
         <!-- Linha 1: Dose + select de unidade (inalterada internamente) -->
         <div class="infusion-unit-row">
-          <input type="text" class="infusion-input" id="inf-dose"
+          <input type="text" class="infusion-input" id="inf-dose" aria-label="Dose prescrita"
             inputmode="decimal" pattern="[0-9.,]*"
             autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
             placeholder="Ex: 0.1"
             oninput="_infBidir('dose')" />
           <select class="infusion-unit-select" id="inf-dose-unit"
             onchange="_infBidir('unit')" aria-label="Unidade da dose">
-            <option value="mcg/kg/min" data-i18n="infusion_unit_mcgkgmin">mcg/kg/min</option>
-            <option value="mcg/min"    data-i18n="infusion_unit_mcgmin">mcg/min</option>
-            <option value="mg/kg/h"    data-i18n="infusion_unit_mgkgh">mg/kg/h</option>
-            <option value="ml/h"       data-i18n="infusion_unit_mlh">mL/h (direto)</option>
+            <option value="mcg/kg/min">mcg/kg/min</option>
+            <option value="mcg/min">mcg/min</option>
+            <option value="mcg/kg/h">mcg/kg/h</option>
+            <option value="mcg/h">mcg/h</option>
+            <option value="mg/kg/h">mg/kg/h</option>
+            <option value="mg/h">mg/h</option>
+            <option value="mg/min">mg/min</option>
+            <option value="ml/h">mL/h</option>
           </select>
         </div>
 
@@ -11017,7 +11032,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
               <span data-i18n="infusion_label_rate_short">Vazão da Bomba</span>
               <span class="infusion-bidir-unit-badge">mL/h</span>
             </div>
-            <input type="text" class="infusion-input" id="inf-current-rate"
+            <input type="text" class="infusion-input" id="inf-current-rate" aria-label="Vazão (mL/h)"
               inputmode="decimal" pattern="[0-9.,]*"
               autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
               placeholder="Ex: 12.5"
@@ -11038,6 +11053,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
             <div class="infusion-result-value" id="inf-rate-result">--</div>
             <div class="infusion-result-unit">mL/h</div>
             <div class="infusion-result-conc" id="inf-conc-inline"></div>
+            <div class="infusion-result-conc" id="inf-bag-duration"></div>
             <div class="infusion-weight-note" id="inf-weight-note">
               <i class="fa-solid fa-circle-exclamation"></i>
               <span data-i18n="infusion_weight_req">Informe o peso para doses peso-dependentes.</span>
@@ -11049,7 +11065,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
             <div class="infusion-secondary-card">
               <div class="infusion-secondary-card-label" data-i18n="infusion_conc_label">Concentração Final</div>
               <div class="infusion-secondary-card-val" id="inf-conc-result">--</div>
-              <div class="infusion-secondary-card-unit">mcg/mL</div>
+              <div class="infusion-secondary-card-unit" id="inf-conc-unit">mcg/mL</div>
             </div>
             <div class="infusion-secondary-card">
               <div class="infusion-secondary-card-label" id="inf-dose-label-sec">Dose / min</div>
@@ -11076,13 +11092,13 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
           <p data-i18n="infusion_hint">Preencha os parâmetros acima para calcular a vazão da bomba.</p>
         </div>
 
-        <!-- ── Botão Copiar como Prescrição ── -->
+        <!-- ── Botão Copiar cálculo ── -->
         <button class="inf-copy-rx-btn" id="inf-copy-rx-btn"
           onclick="infCopyPrescription()"
           style="display:none"
           aria-label="Copiar resultado como prescrição">
           <i class="fa-solid fa-file-prescription"></i>
-          <span data-i18n="infusion_copy_rx">Copiar como Prescrição</span>
+          <span data-i18n="infusion_copy_rx">Copiar cálculo</span>
         </button>
 
         <!-- Aviso educacional -->
@@ -11907,8 +11923,8 @@ const i18n = {
     infusion_drug_search_ph:'Buscar droga...',
     infusion_sec_params:'Parâmetros de Infusão',
     infusion_label_weight:'Peso do Paciente (kg)',
-    infusion_label_amp:'Concentração da Ampola (mg)',
-    infusion_label_vol:'Volume do Diluente (mL)',
+    infusion_label_amp:'Quantidade total do fármaco',
+    infusion_label_vol:'Volume final da solução (mL)',
     infusion_label_dose:'Dose Desejada',
     infusion_sec_reverse:'Conversor Reverso (mL/h → Dose)',
     infusion_label_rate:'Vazão atual da bomba (mL/h)',
@@ -11928,7 +11944,7 @@ const i18n = {
     infusion_reverse_chip:'DOSE ATUAL',
     infusion_free_drug_label:'Droga',
     infusion_free_drug_optional:'opcional',
-    infusion_copy_rx:'Copiar como Prescrição',
+    infusion_copy_rx:'Copiar cálculo',
 
     /* ── Calculadora de Eletrólitos ── */
     elec_page_title:'Eletrólitos',
@@ -12299,8 +12315,8 @@ const i18n = {
     infusion_drug_search_ph:'Buscar droga...',
     infusion_sec_params:'Parámetros de Infusión',
     infusion_label_weight:'Peso del Paciente (kg)',
-    infusion_label_amp:'Concentración de la Ampolla (mg)',
-    infusion_label_vol:'Volumen del Diluyente (mL)',
+    infusion_label_amp:'Cantidad total del fármaco',
+    infusion_label_vol:'Volumen final de la solución (mL)',
     infusion_label_dose:'Dosis Deseada',
     infusion_sec_reverse:'Conversor Inverso (mL/h → Dosis)',
     infusion_label_rate:'Caudal actual de la bomba (mL/h)',
@@ -12320,7 +12336,7 @@ const i18n = {
     infusion_reverse_chip:'DOSIS ACTUAL',
     infusion_free_drug_label:'Fármaco',
     infusion_free_drug_optional:'opcional',
-    infusion_copy_rx:'Copiar como Prescripción',
+    infusion_copy_rx:'Copiar cálculo',
 
     /* ── Calculadora de Electrólitos ── */
     elec_page_title:'Electrólitos',
@@ -26876,7 +26892,7 @@ window.MedCasesBridge = {
 (() => {
   'use strict';
 
-  const EXPECTED_VERSION = 'medcases-r67-farmacos-nav-pull-refresh-r1-20260920';
+  const EXPECTED_VERSION = 'medcases-r69-infusion-reviewed-r1-20260920';
   const CACHE_PREFIX = 'medcases-calc-';
   const LAST_VERSION_KEY = 'medcases-cache-version';
   let updateInFlight = null;

@@ -40,7 +40,7 @@ self.addEventListener('activate', (event) => {
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-r67-farmacos-nav-pull-refresh-r1-20260920';
+const CACHE_VERSION   = 'medcases-r69-infusion-reviewed-r1-20260920';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 const MIGRATION_POLL_MS = 750;
 const LEGACY_MIGRATION_FALLBACK_MS = 20000;

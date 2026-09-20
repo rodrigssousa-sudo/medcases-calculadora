@@ -6435,3 +6435,85 @@ html body .mc-cdd-result-value > .mc-cdd-result-dose-token {
   line-height: inherit !important;
   white-space: nowrap !important;
 }
+
+/* Infusion: scoped controls and a legible result inside projected overlays. */
+html body #page-home #hub-card-infusao#hub-card-infusao.mc-overlay-projected-card .infusion-module,
+html body #page-infusion .infusion-module {
+  display:flex !important; flex-direction:column !important; gap:0 !important;
+  padding:4px 0 20px !important; min-width:0;
+}
+html body #hub-card-infusao#hub-card-infusao .infusion-module *,
+html body #page-infusion .infusion-module * { box-sizing:border-box; }
+html body #hub-card-infusao#hub-card-infusao .infusion-mode-bar,
+html body #page-infusion .infusion-mode-bar { display:flex !important; gap:6px; padding:5px; margin-bottom:18px; border-radius:14px; }
+html body #hub-card-infusao#hub-card-infusao .infusion-mode-btn,
+html body #page-infusion .infusion-mode-btn { min-height:46px; padding:10px 12px !important; font-size:14px !important; }
+html body #hub-card-infusao#hub-card-infusao .infusion-mode-btn.active,
+html body #page-infusion .infusion-mode-btn.active { background:#d8b76c !important; color:#171a20 !important; border-color:#d8b76c !important; font-weight:750 !important; }
+html body #hub-card-infusao#hub-card-infusao :is(.infusion-input,.infusion-unit-select,.inf-autocomplete-input),
+html body #page-infusion :is(.infusion-input,.infusion-unit-select,.inf-autocomplete-input) {
+  min-height:48px !important; font-size:16px !important; line-height:1.4 !important; min-width:0; padding:11px 12px !important;
+  border:1px solid var(--mc-mono-separator,#46505b) !important; border-radius:12px !important;
+}
+html body #hub-card-infusao#hub-card-infusao .inf-autocomplete-input,
+html body #page-infusion .inf-autocomplete-input { padding-left:40px !important; padding-right:50px !important; }
+html body #hub-card-infusao#hub-card-infusao .inf-autocomplete-wrap,
+html body #page-infusion .inf-autocomplete-wrap { position:relative; }
+html body #hub-card-infusao#hub-card-infusao .inf-autocomplete-icon,
+html body #page-infusion .inf-autocomplete-icon { position:absolute; left:14px; top:24px; transform:translateY(-50%); pointer-events:none; }
+html body #hub-card-infusao#hub-card-infusao .inf-autocomplete-clear,
+html body #page-infusion .inf-autocomplete-clear { width:42px; height:42px; right:3px; top:3px; transform:none; }
+html body #hub-card-infusao#hub-card-infusao .infusion-field-label,
+html body #page-infusion .infusion-field-label { margin:17px 0 7px !important; font-size:13px !important; font-weight:650; }
+html body #hub-card-infusao#hub-card-infusao #inf-amount-unit,
+html body #page-infusion #inf-amount-unit { align-self:flex-end; margin:-3px 0 7px; min-width:86px; }
+html body #hub-card-infusao#hub-card-infusao .infusion-unit-row,
+html body #page-infusion .infusion-unit-row { display:grid !important; grid-template-columns:minmax(0,1fr) minmax(125px,auto); gap:8px; background:transparent !important; }
+html body #hub-card-infusao#hub-card-infusao .infusion-bidir-row,
+html body #page-infusion .infusion-bidir-row { display:flex !important; padding:12px; margin-top:14px; border-radius:14px; }
+html body #hub-card-infusao#hub-card-infusao .infusion-bidir-field,
+html body #page-infusion .infusion-bidir-field { min-width:0; }
+html body #hub-card-infusao#hub-card-infusao .infusion-result-area,
+html body #page-infusion .infusion-result-area { margin-top:20px; background:transparent !important; }
+html body #hub-card-infusao#hub-card-infusao .infusion-result-main,
+html body #page-infusion .infusion-result-main {
+  display:flex !important; flex-direction:column; align-items:center; gap:6px;
+  min-height:0 !important; padding:25px 18px !important; border:1px solid #a58c57 !important;
+  border-radius:18px !important; background:#1b222b !important; color:#f5f7fa !important;
+}
+html body #hub-card-infusao#hub-card-infusao .infusion-result-main > :not(.infusion-weight-note),
+html body #page-infusion .infusion-result-main > :not(.infusion-weight-note) {
+  position:static !important; opacity:1 !important; visibility:visible !important; transform:none !important;
+  -webkit-text-fill-color:currentColor !important; background:none !important;
+}
+html body #hub-card-infusao#hub-card-infusao #inf-rate-result,
+html body #page-infusion #inf-rate-result { display:block !important; height:auto !important; color:#f3d38d !important; font-size:44px !important; line-height:1.15 !important; font-weight:750; font-variant-numeric:tabular-nums; }
+html body #hub-card-infusao#hub-card-infusao :is(.infusion-result-label,.infusion-result-unit,.infusion-result-conc),
+html body #page-infusion :is(.infusion-result-label,.infusion-result-unit,.infusion-result-conc) { color:#d7dee7 !important; font-size:13px !important; line-height:1.5 !important; text-align:center; }
+html body #hub-card-infusao#hub-card-infusao .infusion-result-glow,
+html body #page-infusion .infusion-result-glow { display:none !important; }
+html body #hub-card-infusao#hub-card-infusao .infusion-secondary-row,
+html body #page-infusion .infusion-secondary-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:10px; }
+html body #hub-card-infusao#hub-card-infusao .infusion-secondary-card,
+html body #page-infusion .infusion-secondary-card { padding:14px !important; border-radius:14px; min-width:0; }
+html body #hub-card-infusao#hub-card-infusao .infusion-empty-hint,
+html body #page-infusion .infusion-empty-hint { margin-top:18px; padding:18px; border-radius:14px; min-height:0; text-align:left; color:var(--text-primary); }
+html body #hub-card-infusao#hub-card-infusao .infusion-weight-inline,
+html body #page-infusion .infusion-weight-inline { flex-wrap:wrap; gap:10px; padding:14px; border-radius:14px; }
+html body #hub-card-infusao#hub-card-infusao .infusion-weight-inline-input,
+html body #page-infusion .infusion-weight-inline-input { min-width:100px; min-height:46px; font-size:16px !important; }
+html body #hub-card-infusao#hub-card-infusao .inf-copy-rx-btn,
+html body #page-infusion .inf-copy-rx-btn { min-height:48px; margin-top:14px; background:#d8b76c !important; color:#171a20 !important; border-radius:12px; }
+html body #hub-card-infusao#hub-card-infusao .inf-dropdown-list,
+html body #page-infusion .inf-dropdown-list { max-height:260px; overflow-y:auto; z-index:20; }
+html body #hub-card-infusao#hub-card-infusao .inf-dropdown-item,
+html body #page-infusion .inf-dropdown-item { min-height:48px; padding:12px; }
+
+/* Reviewed infusion protocol: compact disclosure, explicit clinical guards. */
+.inf-reviewed-text { white-space:pre-wrap; font-size:13px; line-height:1.6; margin-top:12px; }
+#bic-context-card summary { cursor:pointer; min-height:44px; display:flex; align-items:center; font-weight:650; }
+#inf-review-controls > div { margin-top:12px; }
+#inf-review-controls label { display:block; line-height:1.6; }
+#inf-review-controls input[type="checkbox"] { width:18px; height:18px; vertical-align:middle; margin-right:7px; }
+.infusion-clinical-alerts { border-left:3px solid #d8b76c; padding:10px 14px; margin:10px 0; background:rgba(216,183,108,.08); border-radius:8px; }
+.infusion-clinical-alerts p { margin:6px 0; font-size:13px; line-height:1.5; }

@@ -1,0 +1,190 @@
+{
+  "schema": "medcases-infusion-review-v1",
+  "reviewer": "Dra Eugenia Marques",
+  "reviewDate": "2026-09-20",
+  "reportedResult": "Aprovado integralmente",
+  "approvalProvenance": "Informado pelo usuário nesta tarefa; não é assinatura digital nem validação de identidade profissional.",
+  "sourceSha256": "fe0393c636b87f8afaf465f5efcf3225e4684d10c6f128cfe831ce91e42e2a9a",
+  "sectionMapping": "O original não tem títulos de fármacos. Mapeamento por indicação, preparo e unidade, na ordem original.",
+  "records": [
+    {
+      "drug": "Vasopressina",
+      "sourceSection": 1,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        0.01,
+        0.04
+      ],
+      "text": "- Indicação e População: Choque vasodilatador/séptico refratário a catecolaminas. Adultos.\n- Preparo: 20 UI em Volume Final de 100 mL. (Concentração: 0,2 UI/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,01 a 0,04 UI/min. Máxima: 0,04 UI/min (0,06 UI/min em resgate off-label). Sem dose de ataque.\n- Ajustes: Não utiliza peso. Sem ajuste para disfunção renal/hepática.\n- Cálculos:\n  - Dose → mL/h: (Dose [UI/min] × 60) / 0,2\n  - mL/h → Dose: (mL/h × 0,2) / 60\n- Alerta: Alta prioridade por utilizar Unidades Internacionais. Extravasamento causa necrose isquêmica severa (preferir acesso central)."
+    },
+    {
+      "drug": "Heparina",
+      "sourceSection": 2,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": null,
+      "text": "- Indicação e População: Anticoagulação plena contínua (SCA, TEP, TVP). Adultos.\n- Preparo: 25.000 UI em Volume Final de 250 mL. (Concentração: 100 UI/mL).\n- Doses: Bolus de ataque em linha separada (~80 UI/kg). Infusão inicial: Preenchimento obrigatório (geralmente 18 UI/kg/h). Titulação guiada por TTPA.\n- Ajustes: Utiliza peso atual. Em obesos extremos, limitar dose máxima do bolus e da infusão. Em disfunção renal, exige controle rigoroso de TTPA.\n- Cálculos:\n  - Dose → mL/h: (Dose [UI/kg/h] × Peso) / 100\n  - mL/h → Dose: (mL/h × 100) / Peso\n- Alerta: Alta prioridade. Risco de sangramento e Trombocitopenia Induzida por Heparina (HIT)."
+    },
+    {
+      "drug": "Insulina Regular",
+      "sourceSection": 3,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": null,
+      "text": "- Indicação e População: Controle glicêmico no paciente crítico (CAD, EHH, pós-operatório). Adultos.\n- Preparo: 100 UI em Volume Final de 100 mL. (Concentração: 1 UI/mL). Solução 1:1. Purgação do equipo mandatória.\n- Doses: Inicial: Preenchimento obrigatório (ex: 0,1 UI/kg/h, mas inserida como UI/h fixa). Titulação guiada por HGT horário. Sem ataque em CAD convencional.\n- Ajustes: Não utiliza peso no cálculo da bomba. Ajuste rigoroso para insuficiência renal (risco de hipoglicemia prolongada).\n- Cálculos:\n  - Dose → mL/h: Dose [UI/h] / 1 (1 mL/h = 1 UI/h)\n  - mL/h → Dose: mL/h × 1\n- Alerta: Alta prioridade. Bloqueio sistêmico: Exigir potássio sérico (K+) > 3,3 mEq/L antes do início da infusão."
+    },
+    {
+      "drug": "Amiodarona",
+      "sourceSection": 4,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": null,
+      "text": "- Indicação e População: Reversão/controle de taquiarritmias supraventriculares e ventriculares. Adultos.\n- Preparo: 150 mg em Volume Final de 100 mL SG5%. (Concentração: 1,5 mg/mL). Evitar diluição em Soro Fisiológico (precipitação).\n- Doses: Inicial: Preenchimento obrigatório.\n- Ajustes: Não utiliza peso. Sem ajuste de dose renal.\n- Cálculos:\n  - Dose → mL/h: (Dose [mg/min] × 60) / 1,5\n  - mL/h → Dose: (mL/h × 1,5) / 60\n- Alerta: Este preparo (150mg/100mL) esgota em ~1-2 horas sob taxa de 1 mg/min. É ideal para Ataque. O sistema deve sugerir um segundo preparo padronizado (ex: 900mg/500mL) para a manutenção de 24h."
+    },
+    {
+      "drug": "Morfina",
+      "sourceSection": 5,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        2,
+        10
+      ],
+      "text": "- Indicação e População: Analgesia de resgate contínua, sedoanalgesia em VM, paliação. Adultos.\n- Preparo: 10 mg em Volume Final de 100 mL. (Concentração: 0,1 mg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Faixa típica: 2 a 10 mg/h.\n- Ajustes: Não utiliza peso no cálculo da bomba. Ajuste renal: Exige redução de dose ou aumento de intervalo em DRC devido ao acúmulo de metabólitos ativos (neurotoxicidade/depressão respiratória).\n- Cálculos:\n  - Dose → mL/h: Dose [mg/h] / 0,1\n  - mL/h → Dose: mL/h × 0,1\n- Alerta: Preparo muito diluído para infusão contínua rotineira (ex: dose de 5 mg/h exige fluxo de 50 mL/h, encharcando o paciente). Avaliar com farmácia criação de preparo 50mg/100mL."
+    },
+    {
+      "drug": "Fentanil",
+      "sourceSection": 6,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        0.5,
+        3
+      ],
+      "text": "- Indicação e População: Analgesia profunda contínua em UTI. Adultos.\n- Preparo: 0,5 mg (500 mcg) em Volume Final de 100 mL. (Concentração: 5 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,5 a 3 mcg/kg/h.\n- Ajustes: Utiliza peso. Sem ajuste renal específico. Em obesos ou uso prolongado, o fármaco acumula (alta lipofilicidade), prolongando o despertar.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/h] × Peso) / 5\n  - mL/h → Dose: (mL/h × 5) / Peso"
+    },
+    {
+      "drug": "Nitroprussiato",
+      "sourceSection": 7,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": null,
+      "text": "- Indicação e População: Emergência hipertensiva. Adultos.\n- Preparo: 50 mg em Volume Final de 250 mL SG5%. (Concentração: 200 mcg/mL). Equipo/bolsa obrigatoriamente fotoprotetores.\n- Doses: Inicial: Preenchimento obrigatório (ex: 0,3 a 0,5 mcg/kg/min). Máxima: 10 mcg/kg/min.\n- Ajustes: Utiliza peso. Cautela em disfunção renal/hepática.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 200\n  - mL/h → Dose: (mL/h × 200) / (Peso × 60)\n- Alerta: Duração máxima. Emitir alerta de toxicidade (cianeto/tiocianato) em infusões > 2 mcg/kg/min que ultrapassem 48-72h."
+    },
+    {
+      "drug": "Vancomicina",
+      "sourceSection": 8,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": null,
+      "text": "- Indicação e População: Infecções graves por Gram-positivos (SARM). Adultos.\n- Preparo: 500 mg em Volume Final de 100 mL. (Concentração: 5 mg/mL). Concentração máxima permitida em acesso periférico para evitar flebite química.\n- Doses: Para infusão contínua: Dose em mg/dia dividida por 24h = mg/h. Preenchimento obrigatório.\n- Ajustes: Utiliza peso corporal (real) para cálculo da dose total. Ajuste renal obrigatório (fármaco nefrotóxico).\n- Cálculos:\n  - Dose → mL/h: Dose [mg/h] / 5\n  - mL/h → Dose: mL/h × 5\n- Alerta: Como infusão contínua, uma bolsa de 500 mg acaba rápido. Validar se este preparo não pertence ao uso intermitente (onde correr 500mg em 1h significa bomba a 100 mL/h) e exigir protocolo de Vancocinemia."
+    },
+    {
+      "drug": "Noradrenalina",
+      "sourceSection": 9,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        0.01,
+        1.5
+      ],
+      "text": "- Indicação e População: Choque com hipotensão severa (vasopressor de 1ª linha). Adultos.\n- Preparo: 4 mg em Volume Final de 250 mL SG5% ou SF. (Concentração: 16 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,01 a 1,5 mcg/kg/min. (Bloqueio rígido do sistema sugerido em > 2,0 a 3,0 mcg/kg/min).\n- Ajustes: Utiliza peso (real ou ideal, a depender da política local). Sem ajuste renal/hepático.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 16\n  - mL/h → Dose: (mL/h × 16) / (Peso × 60)"
+    },
+    {
+      "drug": "Adrenalina",
+      "sourceSection": 10,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        0.01,
+        1
+      ],
+      "text": "- Indicação e População: Choque cardiogênico, anafilaxia, PCR. Adultos.\n- Preparo: 1 mg em Volume Final de 250 mL. (Concentração: 4 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,01 a 1,0 mcg/kg/min.\n- Ajustes: Utiliza peso. Sem ajuste renal/hepático.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 4\n  - mL/h → Dose: (mL/h × 4) / (Peso × 60)"
+    },
+    {
+      "drug": "Dobutamina",
+      "sourceSection": 11,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        2,
+        20
+      ],
+      "text": "- Indicação e População: Choque cardiogênico, baixo débito cardíaco. Adultos.\n- Preparo: 250 mg em Volume Final de 250 mL. (Concentração: 1.000 mcg/mL ou 1 mg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Faixa de titulação: 2 a 20 mcg/kg/min.\n- Ajustes: Utiliza peso. Sem ajuste renal/hepático estrito.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 1000\n  - mL/h → Dose: (mL/h × 1000) / (Peso × 60)"
+    },
+    {
+      "drug": "Dopamina",
+      "sourceSection": 12,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        2,
+        20
+      ],
+      "text": "- Indicação e População: Hipotensão sintomática, bradicardia refratária. Adultos.\n- Preparo: 200 mg em Volume Final de 250 mL. (Concentração: 800 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Faixa de titulação: 2 a 20 mcg/kg/min.\n- Ajustes: Utiliza peso.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 800\n  - mL/h → Dose: (mL/h × 800) / (Peso × 60)"
+    },
+    {
+      "drug": "Milrinona",
+      "sourceSection": 13,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        0.375,
+        0.75
+      ],
+      "text": "- Indicação e População: Insuficiência cardíaca descompensada (inodilatador). Adultos.\n- Preparo: 10 mg em Volume Final de 100 mL. (Concentração: 100 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,375 a 0,75 mcg/kg/min. Ataque (bolus) é opcional e perigoso em hipotensos crônicos.\n- Ajustes: Utiliza peso. Ajuste renal obrigatório (reduzir dose e omitir bolus em ClCr < 50 mL/min).\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 100\n  - mL/h → Dose: (mL/h × 100) / (Peso × 60)"
+    },
+    {
+      "drug": "Nitroglicerina",
+      "sourceSection": 14,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": null,
+      "text": "- Indicação e População: Edema Agudo de Pulmão (EAP), Síndrome Coronariana Aguda. Adultos.\n- Preparo: 50 mg em Volume Final de 250 mL. (Concentração: 200 mcg/mL). Exige frasco de vidro e equipo de polietileno/sem PVC (fármaco adsorve no plástico comum).\n- Doses: Inicial: Preenchimento obrigatório (ex: 5-10 mcg/min). Máxima: 200 mcg/min. Titular a cada 3-5 minutos.\n- Ajustes: Não utiliza peso. Sem ajuste renal/hepático.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/min] × 60) / 200\n  - mL/h → Dose: (mL/h × 200) / 60"
+    },
+    {
+      "drug": "Propofol",
+      "sourceSection": 15,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        0.3,
+        4
+      ],
+      "text": "- Indicação e População: Sedação profunda em VM. Adultos.\n- Preparo: 200 mg em Volume Final de 20 mL. (Concentração: 10 mg/mL). Solução lipídica.\n- Doses: Inicial: Preenchimento obrigatório. Manutenção típica VM: 0,3 a 4,0 mg/kg/h.\n- Ajustes: Utiliza peso. Em obesos, considerar uso do peso ideal (evita sobredosagem).\n- Cálculos:\n  - Dose → mL/h: (Dose [mg/kg/h] × Peso) / 10\n  - mL/h → Dose: (mL/h × 10) / Peso\n- Alerta: Risco da Síndrome de Infusão do Propofol (PRIS). Sistema deve alertar doses sustentadas > 4 mg/kg/h por mais de 48h. Seringas devem ser trocadas a cada 12h devido ao risco de contaminação."
+    },
+    {
+      "drug": "Midazolam",
+      "sourceSection": 16,
+      "population": "adult",
+      "initialDose": null,
+      "doseRange": [
+        0.02,
+        0.2
+      ],
+      "text": "- Indicação e População: Sedação contínua em UTI, controle de estado de mal epiléptico. Adultos.\n- Preparo: 15 mg em Volume Final de 100 mL. (Concentração: 0,15 mg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,02 a 0,2 mg/kg/h.\n- Ajustes: Utiliza peso. Exige cautela/redução em idosos e insuficiência hepática/renal severa (acúmulo do metabólito ativo 1-hidroximidazolam prolonga o coma).\n- Cálculos:\n  - Dose → mL/h: (Dose [mg/kg/h] × Peso) / 0,15\n  - mL/h → Dose: (mL/h × 0,15) / Peso\n- Alerta: Concentração do preparo está excessivamente diluída (uma pessoa de 70kg recebendo 0,1 mg/kg/h demandaria fluxo de 46,6 mL/h). Validar com a farmácia se este não é um equívoco de cadastro (o preparo habitual em UTI costuma ser mais concentrado, como 150 mg / 100 mL = 1,5 mg/mL)."
+    }
+  ],
+  "addenda": [
+    {
+      "topic": "insulinPotassium",
+      "original": ">3.3 mEq/L",
+      "implemented": ">3.5 mEq/L",
+      "authorization": "Usuário: Adotar K+ > 3,5 e registrar a atualização",
+      "reference": "https://doi.org/10.2337/dci24-0032"
+    },
+    {
+      "topic": "nitroprussideMaximumRateDuration",
+      "implemented": "10 mcg/kg/min limitado a 10 minutos; toxicidade acima de 2 mcg/kg/min sinalizada desde o início",
+      "origin": "Complemento técnico de segurança baseado em bula; não atribuído como texto original da revisora",
+      "reference": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=820eadcb-1230-4b17-a652-e69b52b3c12f"
+    },
+    {
+      "topic": "amiodaroneBagTime",
+      "original": "~1-2 h a 1 mg/min",
+      "implemented": "150 mg / (1 mg/min) = 150 minutos = 2.5 h",
+      "origin": "Correção aritmética explícita"
+    }
+  ]
+}
