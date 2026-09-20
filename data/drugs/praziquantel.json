@@ -6,143 +6,79 @@
   "colorTxt": null,
   "pt": {
     "name": "Praziquantel",
-    "class": "Anti-helmíntico trematodicida",
-    "pharmacologicClass": "Isoquinolina-pirazina com ação sobre tegumento/cálcio parasitário",
+    "class": "Anti-helmíntico",
+    "pharmacologicClass": "Anti-helmíntico",
     "mechanism": "Aumenta permeabilidade da membrana do helminto ao cálcio, produz contração rápida, vacuolização e dano do tegumento.",
-    "pharmacodynamics": "Ativo contra Schistosoma e trematódeos hepáticos suscetíveis; não atua adequadamente em formas migratórias muito precoces.",
-    "pharmacokinetics": "Absorção oral ~80%, intenso metabolismo hepático de primeira passagem por CYP3A e eliminação renal quase toda como metabólitos.",
+    "pharmacodynamics": "Aumenta permeabilidade da membrana do helminto ao cálcio, produz contração rápida, vacuolização e dano do tegumento.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
     "indications": "Esquistossomose por espécies de Schistosoma e clonorchíase/opistorquíase em pacientes >=1 ano conforme bula.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Comprimidos revestidos fracionáveis.",
-    "presentations": [
-      "600 mg"
-    ],
+    "presentations": "Comprimidos revestidos fracionáveis.",
     "dose": "Esquistossomose: 20 mg/kg VO 3 vezes no mesmo dia, intervalos de 4–6 h. Clonorchis/Opisthorchis: 25 mg/kg VO 3 vezes no mesmo dia, intervalos 4–6 h.",
-    "pediatricDose": "Mesmos esquemas por peso em pacientes de 1–17 anos; segurança <1 ano não estabelecida.",
-    "renalDose": "Sem ajuste necessário em insuficiência renal; acúmulo relevante de fármaco inalterado não é esperado.",
-    "hepaticDose": "Child-Pugh B/C aumenta marcadamente exposição; usar dose recomendada com monitorização de eventos adversos e cautela.",
-    "commonAdverseEffects": [
-      "Tontura",
-      "Cefaleia",
-      "Dor abdominal",
-      "Náusea",
-      "Sonolência"
-    ],
-    "dangerousAdverseEffects": [
-      "Arritmias raras",
-      "Convulsões/reação neurológica",
-      "Deterioração inflamatória aguda em esquistossomose",
-      "Hipersensibilidade"
-    ],
-    "adverseEffects": "Sintomas podem refletir tanto o fármaco quanto resposta inflamatória à morte parasitária; tontura/sonolência são frequentes.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura; Cefaleia; Dor abdominal; Náusea; Sonolência",
+    "dangerousAdverseEffects": "Arritmias raras; Convulsões/reação neurológica; Deterioração inflamatória aguda em esquistossomose; Hipersensibilidade",
+    "adverseEffects": "Tontura, cefaleia, náusea, dor abdominal e sonolência.; Reação inflamatória neurológica, arritmia, convulsão e hepatotoxicidade; cautela em neurocisticercose ocular.",
     "contraindications": "Hipersensibilidade e uso concomitante com fortes indutores CYP3A, especialmente rifampicina.",
     "interactions": "Rifampicina é contraindicada. Efavirenz e outros indutores CYP3A reduzem exposição; inibidores CYP3A e grapefruit podem aumentá-la.",
-    "monitoring": "Resposta clínica/parasitológica; eventos neurológicos em neurocisticercose concomitante; vigiar mais em Child-Pugh B/C.",
-    "administration": "Tomar com água durante refeições. Não mastigar/segurar segmentos na boca pelo sabor amargo; <6 anos pode triturar/desintegrar e misturar a alimento/líquido.",
-    "preparation": "Comprimido fracionável; em crianças pequenas pode ser triturado/desintegrado conforme bula.",
-    "infusionProtocol": "Não aplicável; formulação oral.",
-    "pregnancy": "Estudos publicados não mostraram associação clara com malformações, aborto ou desfechos adversos importantes; usar quando indicado.",
-    "lactation": "Avaliar risco-benefício e recomendação local; exposição pelo leite é limitada e o tratamento pode ser clinicamente necessário.",
-    "specialPopulations": "Child-Pugh B/C aumenta AUC de forma acentuada; não exige ajuste renal. Avaliar sintomas neurológicos se houver neurocisticercose.",
-    "patientEducation": "Pode causar tontura/sonolência; evitar dirigir no dia do tratamento e no dia seguinte conforme bula. Informar rifampicina/efavirenz.",
-    "clinicalPearls": "Rifampicina + praziquantel é combinação proibida: a indução CYP3A pode tornar níveis terapêuticos inalcançáveis.",
-    "guidelineRecommendations": "Usar esquema por espécie: 20 mg/kg TID para Schistosoma e 25 mg/kg TID para Clonorchis/Opisthorchis, ambos por 1 dia.",
-    "safetyFlags": [
-      "Rifampicina contraindicada",
-      "Sem ajuste renal",
-      "Child-Pugh B/C aumenta exposição",
-      ">=1 ano",
-      "Tontura/sonolência"
-    ],
-    "alerts": [
-      "Schistosoma: 20 mg/kg TID x1d",
-      "Clonorchis/Opisthorchis: 25 mg/kg TID x1d",
-      "Intervalo 4–6 h",
-      "Rifampicina proibida",
-      "Child-Pugh B/C: monitorar"
-    ],
+    "monitoring": "Schistosoma: 20 mg/kg TID x1d; Clonorchis/Opisthorchis: 25 mg/kg TID x1d; Intervalo 4–6 h; Rifampicina proibida; Child-Pugh B/C: monitorar",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Reação inflamatória neurológica, arritmia, convulsão e hepatotoxicidade; cautela em neurocisticercose ocular.",
+    "alerts": "Reação inflamatória neurológica, arritmia, convulsão e hepatotoxicidade; cautela em neurocisticercose ocular.; revisão clínica obrigatória.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16f2b9c4-a260-4a31-bd52-e5945913246c",
-      "https://www.cdc.gov/schistosomiasis/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/liver-flukes/hcp/clinical-overview/index.html"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=praziquantel",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16f2b9c4-a260-4a31-bd52-e5945913246c",
-      "https://www.cdc.gov/schistosomiasis/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/liver-flukes/hcp/clinical-overview/index.html"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=praziquantel"
   },
   "es": {
     "name": "Praziquantel",
-    "class": "Antihelmíntico trematodicida",
-    "pharmacologicClass": "Isoquinolina-pirazina con acción sobre tegumento/calcio parasitario",
-    "mechanism": "Aumenta permeabilidad de membrana del helminto al calcio, produce contracción rápida, vacuolización y daño del tegumento.",
-    "pharmacodynamics": "Activo frente a Schistosoma y trematodos hepáticos susceptibles; no actúa bien sobre formas migratorias muy precoces.",
-    "pharmacokinetics": "Absorción oral ~80%, intenso metabolismo hepático de primer paso CYP3A y eliminación renal casi toda como metabolitos.",
-    "indications": "Esquistosomiasis por especies de Schistosoma y clonorchiasis/opistorquiasis en pacientes >=1 año según ficha.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos recubiertos fraccionables.",
-    "presentations": [
-      "600 mg"
-    ],
-    "dose": "Esquistosomiasis: 20 mg/kg VO 3 veces el mismo día, intervalos 4–6 h. Clonorchis/Opisthorchis: 25 mg/kg VO 3 veces el mismo día, intervalos 4–6 h.",
-    "pediatricDose": "Mismos esquemas por peso en pacientes 1–17 años; seguridad <1 año no establecida.",
-    "renalDose": "Sin ajuste necesario en insuficiencia renal; no se espera acumulación relevante del fármaco sin cambios.",
-    "hepaticDose": "Child-Pugh B/C aumenta marcadamente exposición; usar dosis recomendada con vigilancia de eventos adversos.",
-    "commonAdverseEffects": [
-      "Mareo",
-      "Cefalea",
-      "Dolor abdominal",
-      "Náuseas",
-      "Somnolencia"
-    ],
-    "dangerousAdverseEffects": [
-      "Arritmias raras",
-      "Convulsiones/reacción neurológica",
-      "Deterioro inflamatorio agudo en esquistosomiasis",
-      "Hipersensibilidad"
-    ],
-    "adverseEffects": "Síntomas pueden reflejar fármaco o respuesta inflamatoria a muerte parasitaria; mareo/somnolencia son frecuentes.",
-    "contraindications": "Hipersensibilidad y uso concomitante con inductores fuertes CYP3A, especialmente rifampicina.",
-    "interactions": "Rifampicina contraindicada. Efavirenz/otros inductores reducen exposición; inhibidores CYP3A y pomelo pueden aumentarla.",
-    "monitoring": "Respuesta clínica/parasitológica; eventos neurológicos si neurocisticercosis concomitante; mayor vigilancia Child-Pugh B/C.",
-    "administration": "Tomar con agua durante comidas. No masticar/retener segmentos por sabor amargo; <6 años puede triturarse/desintegrarse y mezclarse.",
-    "preparation": "Comprimido fraccionable; en niños pequeños puede triturarse/desintegrarse según ficha.",
-    "infusionProtocol": "No aplicable; formulación oral.",
-    "pregnancy": "Estudios publicados no muestran asociación clara con malformaciones, aborto o desenlaces adversos importantes; usar cuando está indicado.",
-    "lactation": "Valorar riesgo-beneficio y guía local; exposición láctea es limitada y el tratamiento puede ser necesario.",
-    "specialPopulations": "Child-Pugh B/C aumenta mucho AUC; no requiere ajuste renal. Evaluar síntomas neurológicos si neurocisticercosis.",
-    "patientEducation": "Puede causar mareo/somnolencia; evitar conducir el día del tratamiento y el siguiente según ficha. Informar rifampicina/efavirenz.",
-    "clinicalPearls": "Rifampicina + praziquantel está contraindicado: la inducción CYP3A puede hacer inalcanzables niveles terapéuticos.",
-    "guidelineRecommendations": "Esquema por especie: 20 mg/kg TID para Schistosoma y 25 mg/kg TID para Clonorchis/Opisthorchis, ambos 1 día.",
-    "safetyFlags": [
-      "Rifampicina contraindicada",
-      "Sin ajuste renal",
-      "Child-Pugh B/C aumenta exposición",
-      ">=1 año",
-      "Mareo/somnolencia"
-    ],
-    "alerts": [
-      "Schistosoma: 20 mg/kg TID x1d",
-      "Clonorchis/Opisthorchis: 25 mg/kg TID x1d",
-      "Intervalo 4–6 h",
-      "Rifampicina prohibida",
-      "Child-Pugh B/C: monitorizar"
-    ],
+    "class": "Anti-helmíntico",
+    "pharmacologicClass": "Anti-helmíntico",
+    "mechanism": "Aumenta permeabilidade da membrana do helminto ao cálcio, produz contração rápida, vacuolização y dano do tegumento.",
+    "pharmacodynamics": "Aumenta permeabilidade da membrana do helminto ao cálcio, produz contração rápida, vacuolização y dano do tegumento.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Esquistossomose por espécies de Schistosoma y clonorchíase/opistorquíase em pacientes >=1 ano conforme bula.",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos revestidos fracionáveis.",
+    "presentations": "Comprimidos revestidos fracionáveis.",
+    "dose": "Esquistossomose: 20 mg/kg VO 3 vezes no mesmo dia, intervalos de 4–6 h. Clonorchis/Opisthorchis: 25 mg/kg VO 3 vezes no mesmo dia, intervalos 4–6 h.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura; Cefaleia; Dor abdominal; Náusea; Sonolência",
+    "dangerousAdverseEffects": "Arritmias raras; Convulsões/reação neurológica; Deterioração inflamatória aguda em esquistossomose; Hipersensibilidade",
+    "adverseEffects": "Tontura, cefaleia, náusea, dor abdominal y sonolência.; Reação inflamatória neurológica, arritmia, convulsão y hepatotoxicidade; cautela em neurocisticercose ocular.",
+    "contraindications": "Hipersensibilidade y uso concomitante con fortes indutores CYP3A, especialmente rifampicina.",
+    "interactions": "Rifampicina é contraindicada. Efavirenz y outros indutores CYP3A reduzem exposição; inibidores CYP3A y grapefruit podem aumentá-la.",
+    "monitoring": "Schistosoma: 20 mg/kg TID x1d; Clonorchis/Opisthorchis: 25 mg/kg TID x1d; Intervalo 4–6 h; Rifampicina proibida; Child-Pugh B/C: monitorar",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Reação inflamatória neurológica, arritmia, convulsão y hepatotoxicidade; cautela em neurocisticercose ocular.",
+    "alerts": "Reação inflamatória neurológica, arritmia, convulsão y hepatotoxicidade; cautela em neurocisticercose ocular.; revisão clínica obrigatória.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16f2b9c4-a260-4a31-bd52-e5945913246c",
-      "https://www.cdc.gov/schistosomiasis/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/liver-flukes/hcp/clinical-overview/index.html"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=praziquantel",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16f2b9c4-a260-4a31-bd52-e5945913246c",
-      "https://www.cdc.gov/schistosomiasis/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/liver-flukes/hcp/clinical-overview/index.html"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=praziquantel"
   },
   "name": {
     "pt": "Praziquantel",
@@ -151,9 +87,21 @@
   "keywords": [
     "praziquantel"
   ],
-  "dataVersion": "clinical-data-v1-2dffd3f537d3ed8b",
-  "clinicalContentSha256": "2dffd3f537d3ed8b4d7a585ebee7511c6828268bacd924e82fad35950f119996",
+  "dataVersion": "clinical-data-v1-3dde6cf72b4b0f59",
+  "clinicalContentSha256": "3dde6cf72b4b0f590a2b084728cc66a5dbbadb593e7088d8b4ca5c1a1234fc0c",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "infectologia.js"
+  "sourceModule": "infectologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "praziquantel.mcGoldClinicalV1",
+    "lote": "064",
+    "requiredFields": 33,
+    "approvedSha256": "21c1e99276216e72bd2a7201eddd567a0335bd6346374d413459182168e7cdea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

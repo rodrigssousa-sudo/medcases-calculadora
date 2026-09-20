@@ -1664,3 +1664,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:heparina_hnf:END */
+/* GOLD33_SELECTIVE:prasugrel:START */
+;(function(){var db=window.ANTICOAG_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="prasugrel";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:prasugrel:"+matches.length);drug=matches[0];}else{drug=db&&db["prasugrel"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:prasugrel");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "064",
+    "requiredFieldCount": 33,
+    "approvedSha256": "21c1e99276216e72bd2a7201eddd567a0335bd6346374d413459182168e7cdea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Prasugrel",
+    "class": "Antiagregante plaquetário inibidor irreversível de P2Y12",
+    "pharmacologicClass": "Antiagregante plaquetário inibidor irreversível de P2Y12",
+    "commercialNames": "Effient; Prasugrel genérico",
+    "presentation": "Comprimidos revestidos para uso oral.",
+    "presentations": "Comprimidos revestidos para uso oral.",
+    "mechanism": "É convertido a metabólito ativo que se liga irreversivelmente ao receptor P2Y12, bloqueando ativação e agregação plaquetária mediadas por ADP.",
+    "pharmacodynamics": "É convertido a metabólito ativo que se liga irreversivelmente ao receptor P2Y12, bloqueando ativação e agregação plaquetária mediadas por ADP.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Redução de eventos trombóticos em pacientes com SCA submetidos a PCI, em associação com aspirina",
+    "dose": "Ataque: 60 mg VO uma vez; Manutenção: 10 mg VO uma vez ao dia; Peso menor que 60 kg: Considerar 5 mg VO uma vez ao dia; Associação: Usar com aspirina conforme protocolo",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Equimoses; Epistaxe; Sangramento gastrointestinal; Anemia",
+    "dangerousAdverseEffects": "Hemorragia fatal; Hemorragia intracraniana; Sangramento perioperatório importante; TTP rara",
+    "adverseEffects": "Sangramento, equimoses, epistaxe e anemia.; Hemorragia fatal, inclusive intracraniana; contraindicado em AVC/AIT prévios e geralmente desfavorável em idosos selecionados.",
+    "contraindications": "Sangramento patológico ativo; História de AVC ou AIT; Hipersensibilidade ao prasugrel",
+    "interactions": "Anticoagulantes, AINEs e outros antiagregantes aumentam risco de sangramento; Não administrar dose de carga antes de anatomia coronária estar definida em cenários em que cirurgia urgente é provável, conforme estratégia de SCA",
+    "monitoring": "Evitar iniciar em paciente com alta probabilidade de CABG urgente; Quando possível, suspender pelo menos 7 dias antes de cirurgia segundo a bula",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hemorragia fatal, inclusive intracraniana; contraindicado em AVC/AIT prévios e geralmente desfavorável em idosos selecionados.",
+    "alerts": "Hemorragia fatal, inclusive intracraniana; contraindicado em AVC/AIT prévios e geralmente desfavorável em idosos selecionados.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prasugrel",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prasugrel"
+  },
+  "es": {
+    "name": "Prasugrel",
+    "class": "Antiagregante plaquetário inibidor irreversível de P2Y12",
+    "pharmacologicClass": "Antiagregante plaquetário inibidor irreversível de P2Y12",
+    "commercialNames": "Effient; Prasugrel genérico",
+    "presentation": "Comprimidos revestidos para uso oral.",
+    "presentations": "Comprimidos revestidos para uso oral.",
+    "mechanism": "É convertido a metabólito ativo que se liga irreversivelmente ao receptor P2Y12, bloqueando ativação y agregação plaquetária mediadas por ADP.",
+    "pharmacodynamics": "É convertido a metabólito ativo que se liga irreversivelmente ao receptor P2Y12, bloqueando ativação y agregação plaquetária mediadas por ADP.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Redução de eventos trombóticos em pacientes con SCA submetidos a PCI, em associação con aspirina",
+    "dose": "Ataque: 60 mg VO uma vez; Manutenção: 10 mg VO uma vez ao dia; Peso menor que 60 kg: Considerar 5 mg VO uma vez ao dia; Associação: Usar con aspirina conforme protocolo",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Equimoses; Epistaxe; Sangramento gastrointestinal; Anemia",
+    "dangerousAdverseEffects": "Hemorragia fatal; Hemorragia intracraniana; Sangramento perioperatório importante; TTP rara",
+    "adverseEffects": "Sangramento, equimoses, epistaxe y anemia.; Hemorragia fatal, inclusive intracraniana; contraindicado em AVC/AIT prévios y geralmente desfavorável em idosos selecionados.",
+    "contraindications": "Sangramento patológico ativo; História de AVC ou AIT; Hipersensibilidade ao prasugrel",
+    "interactions": "Anticoagulantes, AINEs y outros antiagregantes aumentam risco de sangramento; No administrar dosis de carga antes de anatomia coronária estar definida em cenários em que cirurgia urgente é provável, conforme estratégia de SCA",
+    "monitoring": "Evitar iniciar em paciente con alta probabilidade de CABG urgente; Quando possível, suspender pelo menos 7 dias antes de cirurgia segundo a bula",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hemorragia fatal, inclusive intracraniana; contraindicado em AVC/AIT prévios y geralmente desfavorável em idosos selecionados.",
+    "alerts": "Hemorragia fatal, inclusive intracraniana; contraindicado em AVC/AIT prévios y geralmente desfavorável em idosos selecionados.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prasugrel",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prasugrel"
+  }
+};})();
+/* GOLD33_SELECTIVE:prasugrel:END */

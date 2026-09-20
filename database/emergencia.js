@@ -5134,3 +5134,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:pancuronio:END */
+/* GOLD33_SELECTIVE:pralidoxima:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="pralidoxima";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:pralidoxima:"+matches.length);drug=matches[0];}else{drug=db&&db["pralidoxima"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:pralidoxima");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "064",
+    "requiredFieldCount": 33,
+    "approvedSha256": "21c1e99276216e72bd2a7201eddd567a0335bd6346374d413459182168e7cdea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Pralidoxima",
+    "class": "Reativador da acetilcolinesterase; oxima",
+    "pharmacologicClass": "Reativador da acetilcolinesterase; oxima",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frascos para injeção e autoinjetores em forças específicas.",
+    "presentations": "Frascos para injeção e autoinjetores em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Adjuvante da atropina em intoxicação por organofosforados com manifestações nicotínicas, conforme protocolo.",
+    "dose": "Dose e repetição dependem de gravidade, peso, resposta e protocolo toxicológico. Administrar com atropina e suporte; infusão rápida pode causar efeitos graves. Automação bloqueada sem contexto completo.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura, visão turva, náusea e taquicardia.",
+    "dangerousAdverseEffects": "Hipertensão, laringoespasmo, rigidez, bloqueio neuromuscular e parada respiratória com administração inadequada.",
+    "adverseEffects": "Tontura, visão turva, náusea e taquicardia.; Hipertensão, laringoespasmo, rigidez, bloqueio neuromuscular e parada respiratória com administração inadequada.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipertensão, laringoespasmo, rigidez, bloqueio neuromuscular e parada respiratória com administração inadequada.",
+    "alerts": "Hipertensão, laringoespasmo, rigidez, bloqueio neuromuscular e parada respiratória com administração inadequada.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pralidoxima",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pralidoxima"
+  },
+  "es": {
+    "name": "Pralidoxima",
+    "class": "Reativador da acetilcolinesterase; oxima",
+    "pharmacologicClass": "Reativador da acetilcolinesterase; oxima",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frascos para injeção y autoinjetores em forças específicas.",
+    "presentations": "Frascos para injeção y autoinjetores em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Adjuvante da atropina em intoxicação por organofosforados con manifestações nicotínicas, conforme protocolo.",
+    "dose": "Dose y repetição dependem de gravidade, peso, resposta y protocolo toxicológico. Administrar con atropina y suporte; infusão rápida pode causar efeitos graves. Automação bloqueada sem contexto completo.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura, visão turva, náusea y taquicardia.",
+    "dangerousAdverseEffects": "Hipertensão, laringoespasmo, rigidez, bloqueio neuromuscular y parada respiratória con administração inadequada.",
+    "adverseEffects": "Tontura, visão turva, náusea y taquicardia.; Hipertensão, laringoespasmo, rigidez, bloqueio neuromuscular y parada respiratória con administração inadequada.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipertensão, laringoespasmo, rigidez, bloqueio neuromuscular y parada respiratória con administração inadequada.",
+    "alerts": "Hipertensão, laringoespasmo, rigidez, bloqueio neuromuscular y parada respiratória con administração inadequada.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pralidoxima",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pralidoxima"
+  }
+};})();
+/* GOLD33_SELECTIVE:pralidoxima:END */

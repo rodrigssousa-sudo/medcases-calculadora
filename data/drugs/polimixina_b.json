@@ -6,10 +6,8 @@
   "colorTxt": null,
   "pt": {
     "name": "Polimixina B",
-    "class": "Antibacteriano polimixina",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "class": "Antibacteriano polipeptídico",
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Pó injetável em unidades.",
     "dose": "Bula IV: adultos e crianças com função renal normal, 15.000–25.000 unidades/kg/dia; pode dividir q12h; máximo 25.000 unidades/kg/dia.",
     "doseKg": {
@@ -19,82 +17,51 @@
     "therapeuticRange": "Bactericida. Gram-negativos MDR: KPC, NDM, Acinetobacter. Dosagem NÃO guiada pela função renal (diferente da colistina).",
     "dilution": "EV: diluir em SG 5% 100–500 mL. NÃO usar SF (incompatível).",
     "speed": "EV: infundir em 60–120 minutos.",
-    "commonAdverseEffects": [
-      "Parestesias",
-      "Tontura",
-      "Dor no local",
-      "Aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "Nefrotoxicidade",
-      "Neurotoxicidade",
-      "Apneia/bloqueio neuromuscular",
-      "Distúrbios eletrolíticos"
-    ],
+    "commonAdverseEffects": "Parestesias; Tontura; Dor no local; Aumento de creatinina",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Neurotoxicidade; Apneia/bloqueio neuromuscular; Distúrbios eletrolíticos",
     "risksByPatient": [],
-    "alerts": [
-      "15.000–25.000 U/kg/dia IV",
-      "Máx 25.000 U/kg/dia",
-      "Bula reduz na insuficiência renal",
-      "Evitar aminoglicosídeos/neurotóxicos",
-      "Monitorar respiração"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
-    ],
-    "renalDose": "A bula orienta reduzir abaixo de 15.000 unidades/kg/dia em comprometimento renal. Consensos PK modernos diferem quanto à estratégia; usar protocolo institucional e TDM quando disponível.",
+    "alerts": "Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia e erro de unidade.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=polimixina+b",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
     "therapeuticMonitoring": {
       "required": true,
       "target": "Monitorização intensiva da função renal.",
       "monitoring": "Creatinina, ureia, eletrólitos e sintomas neurológicos.",
       "notes": "Menor dependência da função renal para dosagem que a colistina, porém toxicidade permanece elevada."
     },
-    "pharmacologicClass": "Polimixina catiônica ativa",
+    "pharmacologicClass": "Antibacteriano polipeptídico",
     "mechanism": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes e rompe a integridade da membrana.",
-    "pharmacodynamics": "Bactericida concentração-dependente com janela terapêutica estreita; resistência pode ocorrer por modificação do LPS.",
-    "pharmacokinetics": "Administrada como fármaco ativo, diferentemente do colistimetato. Eliminação renal não explica toda a variabilidade; concentrações sistêmicas podem ser mais previsíveis que colistina.",
+    "pharmacodynamics": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes e rompe a integridade da membrana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
     "indications": "Infecções graves por Gram-negativos multirresistentes suscetíveis quando opções mais seguras/preferidas não são adequadas.",
-    "presentations": [
-      "500.000 unidades por frasco em apresentações usuais"
-    ],
-    "pediatricDose": "Bula IV: crianças 15.000–25.000 unidades/kg/dia com função renal normal; lactentes podem receber até 40.000 unidades/kg/dia segundo a bula, sempre com monitorização especializada.",
-    "hepaticDose": "Sem ajuste hepático específico estabelecido; toxicidade renal/neurológica é o principal limitante.",
-    "adverseEffects": "Pode causar albuminúria, cilindrúria, azotemia, parestesias, ataxia, sonolência e apneia, especialmente com outros neurotóxicos/bloqueadores.",
+    "presentations": "Pó injetável em unidades.",
+    "pediatricDose": "standard: 1,25–1,5 mg/kg 12/12h EV (após ataque de 2–2,5 mg/kg); maxDose: 3 mg/kg/dia",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "adverseEffects": "Parestesia, tontura, febre e reação no local.; Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia e erro de unidade.",
     "contraindications": "Hipersensibilidade às polimixinas; evitar associação desnecessária com outros nefro/neurotóxicos.",
     "interactions": "Aminoglicosídeos, colistina, outros nefrotóxicos e bloqueadores neuromusculares podem aumentar nefrotoxicidade, neurotoxicidade e apneia.",
-    "monitoring": "Função renal frequente, eletrólitos, sintomas neurológicos e força/respiração. Confirmar unidades/kg e dose total diária.",
-    "administration": "IV é via sistêmica preferida quando indicada; IM é dolorosa e não recomendada rotineiramente.",
-    "preparation": "Bula IV descreve 500.000 unidades diluídas em 300–500 mL de dextrose 5% para infusão contínua; seguir produto/protocolo local.",
-    "infusionProtocol": "A bula permite infusões a cada 12 h ou contínuas; não exceder 25.000 unidades/kg/dia na via IV rotulada.",
-    "pregnancy": "Dados limitados; usar apenas quando benefício superar risco e não houver alternativa adequada.",
-    "lactation": "Dados limitados sobre excreção; avaliar risco-benefício e observar o lactente.",
-    "specialPopulations": "Disfunção renal e exposição simultânea a nefro/neurotóxicos aumentam risco. Diferenças entre bula histórica e consenso PK moderno exigem protocolo local.",
-    "patientEducation": "Relatar parestesias, tontura, fraqueza, dificuldade respiratória ou queda da diurese imediatamente.",
-    "clinicalPearls": "Não confundir polimixina B com colistimetato: são produtos, unidades e farmacocinéticas diferentes. Prescrever em unidades e explicitar via/protocolo.",
-    "guidelineRecommendations": "Diretrizes de resistência atuais procuram evitar polimixinas quando existem agentes mais ativos e seguros. Se usadas, basear em AST, foco, função renal e protocolo especializado.",
-    "safetyFlags": [
-      "Dose em unidades/kg",
-      "Nefrotoxicidade",
-      "Neurotoxicidade",
-      "Apneia",
-      "Não confundir com colistina"
-    ],
+    "monitoring": "15.000–25.000 U/kg/dia IV; Máx 25.000 U/kg/dia; Bula reduz na insuficiência renal; Evitar aminoglicosídeos/neurotóxicos; Monitorar respiração",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia e erro de unidade.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=polimixina+b",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "es": {
     "name": "Polimixina B",
-    "class": "Antibacteriano polimixina",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Polvo inyectable en unidades.",
-    "dose": "Ficha IV: adultos y niños con función renal normal, 15.000–25.000 unidades/kg/día; puede dividirse q12h; máximo 25.000 unidades/kg/día.",
+    "class": "Antibacteriano polipeptídico",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Pó injetável em unidades.",
+    "dose": "Bula IV: adultos y niños con función renal normal, 15.000–25.000 unidades/kg/dia; pode dividir q12h; máximo 25.000 unidades/kg/dia.",
     "doseKg": {
       "standard": "1,25–1,5 mg/kg cada 12h EV (tras carga de 2–2,5 mg/kg)",
       "maxDose": "3 mg/kg/día"
@@ -102,72 +69,43 @@
     "therapeuticRange": "Bactericida. Gram-negativos MDR: KPC, NDM, Acinetobacter. Dosificación NO guiada por la función renal (diferente de colistina).",
     "dilution": "EV: diluir en SG 5% 100–500 mL. NO usar SF (incompatible).",
     "speed": "EV: infundir en 60–120 minutos.",
-    "commonAdverseEffects": [
-      "Parestesias",
-      "Mareo",
-      "Dolor local",
-      "Aumento de creatinina"
-    ],
-    "dangerousAdverseEffects": [
-      "Nefrotoxicidad",
-      "Neurotoxicidad",
-      "Apnea/bloqueo neuromuscular",
-      "Alteraciones electrolíticas"
-    ],
+    "commonAdverseEffects": "Parestesias; Tontura; Dor no local; Aumento de creatinina",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Neurotoxicidade; Apneia/bloqueio neuromuscular; Distúrbios eletrolíticos",
     "risksByPatient": [],
-    "alerts": [
-      "15.000–25.000 U/kg/día IV",
-      "Máx 25.000 U/kg/día",
-      "Ficha reduce en insuficiencia renal",
-      "Evitar aminoglucósidos/neurotóxicos",
-      "Monitorizar respiración"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
-    ],
-    "renalDose": "La ficha orienta reducir por debajo de 15.000 unidades/kg/día en deterioro renal. Consensos PK modernos difieren; usar protocolo institucional y TDM si disponible.",
+    "alerts": "Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia y erro de unidade.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=polimixina+b",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
     "therapeuticMonitoring": {
       "required": true,
       "target": "Monitorización intensiva de la función renal.",
       "monitoring": "Creatinina, urea, electrolitos y síntomas neurológicos.",
       "notes": "Menor dependencia de la función renal para dosificación que la colistina, pero la toxicidad sigue siendo elevada."
     },
-    "pharmacologicClass": "Polimixina catiónica activa",
-    "mechanism": "Se une al LPS de membrana externa de Gram negativos, desplaza cationes divalentes y rompe integridad de membrana.",
-    "pharmacodynamics": "Bactericida dependiente de concentración con ventana terapéutica estrecha; resistencia puede surgir por modificación de LPS.",
-    "pharmacokinetics": "Se administra como fármaco activo, a diferencia de colistimetato. Eliminación renal no explica toda la variabilidad; exposición sistémica puede ser más predecible.",
-    "indications": "Infecciones graves por Gram negativos multirresistentes susceptibles cuando opciones más seguras/preferidas no son adecuadas.",
-    "presentations": [
-      "500.000 unidades por vial en presentaciones usuales"
-    ],
-    "pediatricDose": "Ficha IV: niños 15.000–25.000 unidades/kg/día con función renal normal; lactantes hasta 40.000 unidades/kg/día según ficha, con monitorización experta.",
-    "hepaticDose": "Sin ajuste hepático específico; toxicidad renal/neurológica es el principal limitante.",
-    "adverseEffects": "Puede causar albuminuria, cilindruria, azotemia, parestesias, ataxia, somnolencia y apnea, sobre todo con otros neurotóxicos/bloqueantes.",
-    "contraindications": "Hipersensibilidad a polimixinas; evitar asociación innecesaria con otros nefro/neurotóxicos.",
-    "interactions": "Aminoglucósidos, colistina, otros nefrotóxicos y bloqueantes neuromusculares aumentan nefrotoxicidad, neurotoxicidad y apnea.",
-    "monitoring": "Función renal frecuente, electrolitos, síntomas neurológicos y fuerza/respiración. Confirmar unidades/kg y dosis total.",
-    "administration": "IV es vía sistémica preferida cuando está indicada; IM es dolorosa y no se recomienda rutinariamente.",
-    "preparation": "Ficha IV describe 500.000 unidades diluidas en 300–500 mL de dextrosa 5% para goteo continuo; seguir producto/protocolo local.",
-    "infusionProtocol": "Ficha permite infusiones q12h o continuas; no exceder 25.000 unidades/kg/día por vía IV rotulada.",
-    "pregnancy": "Datos limitados; usar solo si beneficio supera riesgo y no hay alternativa adecuada.",
-    "lactation": "Datos limitados sobre excreción; valorar riesgo-beneficio y observar lactante.",
-    "specialPopulations": "Disfunción renal y nefro/neurotóxicos concomitantes aumentan riesgo. Diferencias entre ficha histórica y consenso PK moderno requieren protocolo local.",
-    "patientEducation": "Informar parestesias, mareo, debilidad, dificultad respiratoria o caída de diuresis inmediatamente.",
-    "clinicalPearls": "No confundir polimixina B con colistimetato: son productos, unidades y PK diferentes. Prescribir en unidades y explicitar vía/protocolo.",
-    "guidelineRecommendations": "Guías actuales de resistencia intentan evitar polimixinas si existen agentes más activos y seguros. Si se usan, basar en AST, foco, función renal y protocolo experto.",
-    "safetyFlags": [
-      "Dosis en unidades/kg",
-      "Nefrotoxicidad",
-      "Neurotoxicidad",
-      "Apnea",
-      "No confundir con colistina"
-    ],
+    "pharmacologicClass": "Antibacteriano polipeptídico",
+    "mechanism": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes y rompe a integridade da membrana.",
+    "pharmacodynamics": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes y rompe a integridade da membrana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Infecções graves por Gram-negativos multirresistentes suscetíveis quando opções mais seguras/preferidas no são adequadas.",
+    "presentations": "Pó injetável em unidades.",
+    "pediatricDose": "standard: 1,25–1,5 mg/kg 12/12h EV (após ataque de 2–2,5 mg/kg); maxDose: 3 mg/kg/dia",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "adverseEffects": "Parestesia, tontura, febre y reação no local.; Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia y erro de unidade.",
+    "contraindications": "Hipersensibilidade às polimixinas; evitar associação desnecessária con outros nefro/neurotóxicos.",
+    "interactions": "Aminoglicosídeos, colistina, outros nefrotóxicos y bloqueadores neuromusculares podem aumentar nefrotoxicidade, neurotoxicidade y apneia.",
+    "monitoring": "15.000–25.000 U/kg/dia IV; Máx 25.000 U/kg/dia; Bula reduz na insuficiência renal; Evitar aminoglicosídeos/neurotóxicos; Monitorar respiração",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia y erro de unidade.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b56f18c0-ef5e-4ed9-a5af-f79f3cd189b6",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7437259/"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=polimixina+b",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "name": {
@@ -181,8 +119,8 @@
     "aerosporin",
     "polimixina (lipopeptideo policationico)"
   ],
-  "dataVersion": "clinical-data-v1-2dffd3f537d3ed8b",
-  "clinicalContentSha256": "2dffd3f537d3ed8b4d7a585ebee7511c6828268bacd924e82fad35950f119996",
+  "dataVersion": "clinical-data-v1-3dde6cf72b4b0f59",
+  "clinicalContentSha256": "3dde6cf72b4b0f590a2b084728cc66a5dbbadb593e7088d8b4ca5c1a1234fc0c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",
@@ -248,5 +186,17 @@
         "updated": "2026-06-22"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "polimixina_b.mcGoldClinicalV1",
+    "lote": "064",
+    "requiredFields": 33,
+    "approvedSha256": "21c1e99276216e72bd2a7201eddd567a0335bd6346374d413459182168e7cdea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

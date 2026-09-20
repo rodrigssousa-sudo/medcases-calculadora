@@ -30905,3 +30905,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:plazomicina:END */
+/* GOLD33_SELECTIVE:polimixina_b:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="polimixina_b";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:polimixina_b:"+matches.length);drug=matches[0];}else{drug=db&&db["polimixina_b"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:polimixina_b");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "064",
+    "requiredFieldCount": 33,
+    "approvedSha256": "21c1e99276216e72bd2a7201eddd567a0335bd6346374d413459182168e7cdea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Polimixina B",
+    "class": "Antibacteriano polipeptídico",
+    "pharmacologicClass": "Antibacteriano polipeptídico",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Pó injetável em unidades.",
+    "presentations": "Pó injetável em unidades.",
+    "mechanism": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes e rompe a integridade da membrana.",
+    "pharmacodynamics": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes e rompe a integridade da membrana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Infecções graves por Gram-negativos multirresistentes suscetíveis quando opções mais seguras/preferidas não são adequadas.",
+    "dose": "Bula IV: adultos e crianças com função renal normal, 15.000–25.000 unidades/kg/dia; pode dividir q12h; máximo 25.000 unidades/kg/dia.",
+    "pediatricDose": "standard: 1,25–1,5 mg/kg 12/12h EV (após ataque de 2–2,5 mg/kg); maxDose: 3 mg/kg/dia",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Parestesias; Tontura; Dor no local; Aumento de creatinina",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Neurotoxicidade; Apneia/bloqueio neuromuscular; Distúrbios eletrolíticos",
+    "adverseEffects": "Parestesia, tontura, febre e reação no local.; Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia e erro de unidade.",
+    "contraindications": "Hipersensibilidade às polimixinas; evitar associação desnecessária com outros nefro/neurotóxicos.",
+    "interactions": "Aminoglicosídeos, colistina, outros nefrotóxicos e bloqueadores neuromusculares podem aumentar nefrotoxicidade, neurotoxicidade e apneia.",
+    "monitoring": "15.000–25.000 U/kg/dia IV; Máx 25.000 U/kg/dia; Bula reduz na insuficiência renal; Evitar aminoglicosídeos/neurotóxicos; Monitorar respiração",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia e erro de unidade.",
+    "alerts": "Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia e erro de unidade.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=polimixina+b",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=polimixina+b"
+  },
+  "es": {
+    "name": "Polimixina B",
+    "class": "Antibacteriano polipeptídico",
+    "pharmacologicClass": "Antibacteriano polipeptídico",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Pó injetável em unidades.",
+    "presentations": "Pó injetável em unidades.",
+    "mechanism": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes y rompe a integridade da membrana.",
+    "pharmacodynamics": "Liga-se ao LPS da membrana externa de Gram-negativos, desloca cátions divalentes y rompe a integridade da membrana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Infecções graves por Gram-negativos multirresistentes suscetíveis quando opções mais seguras/preferidas no são adequadas.",
+    "dose": "Bula IV: adultos y niños con función renal normal, 15.000–25.000 unidades/kg/dia; pode dividir q12h; máximo 25.000 unidades/kg/dia.",
+    "pediatricDose": "standard: 1,25–1,5 mg/kg 12/12h EV (após ataque de 2–2,5 mg/kg); maxDose: 3 mg/kg/dia",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Parestesias; Tontura; Dor no local; Aumento de creatinina",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Neurotoxicidade; Apneia/bloqueio neuromuscular; Distúrbios eletrolíticos",
+    "adverseEffects": "Parestesia, tontura, febre y reação no local.; Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia y erro de unidade.",
+    "contraindications": "Hipersensibilidade às polimixinas; evitar associação desnecessária con outros nefro/neurotóxicos.",
+    "interactions": "Aminoglicosídeos, colistina, outros nefrotóxicos y bloqueadores neuromusculares podem aumentar nefrotoxicidade, neurotoxicidade y apneia.",
+    "monitoring": "15.000–25.000 U/kg/dia IV; Máx 25.000 U/kg/dia; Bula reduz na insuficiência renal; Evitar aminoglicosídeos/neurotóxicos; Monitorar respiração",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia y erro de unidade.",
+    "alerts": "Nefrotoxicidade, neurotoxicidade, bloqueio neuromuscular, apneia y erro de unidade.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=polimixina+b",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=polimixina+b"
+  }
+};})();
+/* GOLD33_SELECTIVE:polimixina_b:END */

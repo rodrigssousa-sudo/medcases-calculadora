@@ -901,3 +901,93 @@ window.IMUNO_CORTICOIDE_DRUGS_DB = [
   }
 };})();
 /* GOLD33_SELECTIVE:metilprednisolona:END */
+/* GOLD33_SELECTIVE:prednisolona:START */
+;(function(){var db=window.IMUNO_CORTICOIDE_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="prednisolona";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:prednisolona:"+matches.length);drug=matches[0];}else{drug=db&&db["prednisolona"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:prednisolona");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "064",
+    "requiredFieldCount": 33,
+    "approvedSha256": "21c1e99276216e72bd2a7201eddd567a0335bd6346374d413459182168e7cdea",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Prednisolona",
+    "class": "Glicocorticoide sistêmico",
+    "pharmacologicClass": "Glicocorticoide sistêmico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, soluções orais e formulações oftálmicas/injetáveis com sais e concentrações distintas.",
+    "presentations": "Comprimidos, soluções orais e formulações oftálmicas/injetáveis com sais e concentrações distintas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Condições inflamatórias, alérgicas, autoimunes e outras indicações conforme via e protocolo.",
+    "dose": "Dose, via e duração variam amplamente por doença e gravidade. Distinguir base, fosfato e acetato, concentração da solução e necessidade de desmame; cálculo automático global bloqueado.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Aumento do apetite, dispepsia, insônia, alteração de humor e hiperglicemia.",
+    "dangerousAdverseEffects": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose e toxicidade ocular.",
+    "adverseEffects": "Aumento do apetite, dispepsia, insônia, alteração de humor e hiperglicemia.; Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose e toxicidade ocular.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose e toxicidade ocular.",
+    "alerts": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose e toxicidade ocular.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prednisolona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prednisolona"
+  },
+  "es": {
+    "name": "Prednisolona",
+    "class": "Glicocorticoide sistêmico",
+    "pharmacologicClass": "Glicocorticoide sistêmico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, soluções orais y formulações oftálmicas/injetáveis con sais y concentrações distintas.",
+    "presentations": "Comprimidos, soluções orais y formulações oftálmicas/injetáveis con sais y concentrações distintas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Condições inflamatórias, alérgicas, autoimunes y outras indicações conforme via y protocolo.",
+    "dose": "Dose, via y duração variam amplamente por doença y gravidade. Distinguir base, fosfato y acetato, concentração da solución y necessidade de desmame; cálculo automático global bloqueado.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Aumento do apetite, dispepsia, insônia, alteração de humor y hiperglicemia.",
+    "dangerousAdverseEffects": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose y toxicidade ocular.",
+    "adverseEffects": "Aumento do apetite, dispepsia, insônia, alteração de humor y hiperglicemia.; Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose y toxicidade ocular.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose y toxicidade ocular.",
+    "alerts": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose y toxicidade ocular.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prednisolona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prednisolona"
+  }
+};})();
+/* GOLD33_SELECTIVE:prednisolona:END */
