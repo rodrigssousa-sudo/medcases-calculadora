@@ -6083,3 +6083,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:omalizumabe:END */
+/* GOLD33_SELECTIVE:pirfenidona:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="pirfenidona";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:pirfenidona:"+matches.length);drug=matches[0];}else{drug=db&&db["pirfenidona"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:pirfenidona");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "062",
+    "requiredFieldCount": 33,
+    "approvedSha256": "370ce1bd176a8195540294ce684462cfa5ab46161e640a53e008c75ab3b56496",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Pirfenidona",
+    "class": "Antifibrótico",
+    "pharmacologicClass": "Antifibrótico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas/comprimidos em forças específicas; regime depende da apresentação.",
+    "presentations": "Cápsulas/comprimidos em forças específicas; regime depende da apresentação.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Tratamento da fibrose pulmonar idiopática em adultos.",
+    "dose": "Titulação gradual por 14 dias até manutenção conforme formulação; tomar com alimentos. Ajustar/interromper por hepatotoxicidade, fotossensibilidade ou interações.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, rash, dor abdominal, dispepsia e fadiga.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, fotossensibilidade grave, angioedema e reações cutâneas importantes.",
+    "adverseEffects": "Náusea, rash, dor abdominal, dispepsia e fadiga.; Hepatotoxicidade, fotossensibilidade grave, angioedema e reações cutâneas importantes.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, fotossensibilidade grave, angioedema e reações cutâneas importantes.",
+    "alerts": "Hepatotoxicidade, fotossensibilidade grave, angioedema e reações cutâneas importantes.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pirfenidona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pirfenidona"
+  },
+  "es": {
+    "name": "Pirfenidona",
+    "class": "Antifibrótico",
+    "pharmacologicClass": "Antifibrótico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas/comprimidos em forças específicas; regime depende da apresentação.",
+    "presentations": "Cápsulas/comprimidos em forças específicas; regime depende da apresentação.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Tratamento da fibrose pulmonar idiopática em adultos.",
+    "dose": "Titulação gradual por 14 dias até manutenção conforme formulação; tomar con alimentos. Ajustar/interromper por hepatotoxicidade, fotossensibilidade ou interações.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, rash, dor abdominal, dispepsia y fadiga.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, fotossensibilidade grave, angioedema y reações cutâneas importantes.",
+    "adverseEffects": "Náusea, rash, dor abdominal, dispepsia y fadiga.; Hepatotoxicidade, fotossensibilidade grave, angioedema y reações cutâneas importantes.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, fotossensibilidade grave, angioedema y reações cutâneas importantes.",
+    "alerts": "Hepatotoxicidade, fotossensibilidade grave, angioedema y reações cutâneas importantes.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pirfenidona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pirfenidona"
+  }
+};})();
+/* GOLD33_SELECTIVE:pirfenidona:END */

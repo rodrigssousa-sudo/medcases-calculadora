@@ -4538,3 +4538,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:periciazina:END */
+/* GOLD33_SELECTIVE:pimozida:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="pimozida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:pimozida:"+matches.length);drug=matches[0];}else{drug=db&&db["pimozida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:pimozida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "062",
+    "requiredFieldCount": 33,
+    "approvedSha256": "370ce1bd176a8195540294ce684462cfa5ab46161e640a53e008c75ab3b56496",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Pimozida",
+    "class": "Antipsicótico difenilbutilpiperidínico",
+    "pharmacologicClass": "Antipsicótico difenilbutilpiperidínico",
+    "commercialNames": "br: Orap; Pimozida; ar: Orap; Pimozida",
+    "presentation": "Comprimido 1 mg; Comprimido 2 mg; Comprimido 4 mg",
+    "presentations": "Comprimido 1 mg; Comprimido 2 mg; Comprimido 4 mg",
+    "mechanism": "Antagonista dopaminérgico D2 potente; reduz tiques e sintomas psicóticos, mas tem risco relevante de QT prolongado.",
+    "pharmacodynamics": "Antagonista dopaminérgico D2 potente; reduz tiques e sintomas psicóticos, mas tem risco relevante de QT prolongado.",
+    "pharmacokinetics": "Vida média aproximada: 55 horas.",
+    "indications": "Síndrome de Tourette; Tiques motores crônicos; Tiques vocais crônicos; Transtorno delirante em casos selecionados; Psicose crônica em pacientes previamente respondedores; Coreia ou movimentos hipercinéticos selecionados sob especialista",
+    "dose": "adulto: Tourette/tics: iniciar 1–2 mg/dia VO; titular lentamente conforme resposta e ECG.; manutencao: Manutenção: menor dose efetiva, geralmente 2–10 mg/dia.; maxDose: Dose máxima usual: 10 mg/dia ou conforme limite regulatório local; exige monitorização de QT.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Sem ajuste renal habitual, mas usar cautela em pacientes frágeis.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Acatisia; Parkinsonismo medicamentoso; Rigidez; Boca seca; Hiperprolactinemia",
+    "dangerousAdverseEffects": "Prolongamento QT; Torsades de pointes; Morte súbita cardíaca em pacientes predispostos; Síndrome neuroléptica maligna; Discinesia tardia; Convulsões em predispostos",
+    "adverseEffects": "Sonolência, sintomas extrapiramidais, boca seca e constipação.; QT/torsades, morte súbita, síndrome neuroléptica maligna e discinesia tardia.",
+    "contraindications": "QT longo congênito ou QT prolongado significativo; História de arritmia ventricular grave; Hipocalemia ou hipomagnesemia não corrigidas; Uso concomitante com fármacos que prolongam QT; Uso com inibidores fortes de CYP3A4 ou CYP2D6; Uso com ISRS como fluoxetina, paroxetina, sertralina ou escitalopram/citalopram conforme risco de QT/interação",
+    "interactions": "Macrolídeos, quinolonas e antiarrítmicos: risco de QT; Azólicos, ritonavir e outros inibidores fortes de CYP3A4; Fluoxetina, paroxetina e outros inibidores de CYP2D6; Citalopram/escitalopram: risco adicional de QT; Levodopa e agonistas dopaminérgicos; Álcool e depressores do SNC",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.; Pimozida: antes de usar, revisar ECG/QT, potássio/magnésio e lista de interações CYP/QT da bula; indicação e dose para tiques não devem ser transpostas a outras condições. Sem cálculo pediátrico automático.; Bula FDA para tiques de Tourette após resposta inadequada a tratamento padrão: riscos de QT e interações contraindicam combinações específicas (inclusive vários inibidores CYP). Conferir ECG, eletrólitos e lista completa antes de prescrever.; Obrigatório avaliar risco de QT antes de iniciar.; Realizar ECG basal e durante titulação em pacientes de risco.; Corrigir potássio e magnésio antes de usar.; Evitar combinação com fármacos que prolongam QT.; Reservar para indicações específicas, especialmente Tourette/tics refratários.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "QT/torsades, morte súbita, síndrome neuroléptica maligna e discinesia tardia.",
+    "alerts": "QT/torsades, morte súbita, síndrome neuroléptica maligna e discinesia tardia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pimozida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pimozida"
+  },
+  "es": {
+    "name": "Pimozida",
+    "class": "Antipsicótico difenilbutilpiperidínico",
+    "pharmacologicClass": "Antipsicótico difenilbutilpiperidínico",
+    "commercialNames": "br: Orap; Pimozida; ar: Orap; Pimozida",
+    "presentation": "Comprimido 1 mg; Comprimido 2 mg; Comprimido 4 mg",
+    "presentations": "Comprimido 1 mg; Comprimido 2 mg; Comprimido 4 mg",
+    "mechanism": "Antagonista dopaminérgico D2 potente; reduz tiques y sintomas psicóticos, mas tem risco relevante de QT prolongado.",
+    "pharmacodynamics": "Antagonista dopaminérgico D2 potente; reduz tiques y sintomas psicóticos, mas tem risco relevante de QT prolongado.",
+    "pharmacokinetics": "Vida média aproximada: 55 horas.",
+    "indications": "Síndrome de Tourette; Tiques motores crônicos; Tiques vocais crônicos; Transtorno delirante em casos selecionados; Psicose crônica em pacientes previamente respondedores; Coreia ou movimentos hipercinéticos selecionados sob especialista",
+    "dose": "adulto: Tourette/tics: iniciar 1–2 mg/dia VO; titular lentamente conforme resposta y ECG.; manutencao: Manutenção: menor dosis efetiva, geralmente 2–10 mg/dia.; maxDose: Dose máxima usual: 10 mg/dia ou conforme limite regulatório local; exige monitorização de QT.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "Sem ajuste renal habitual, mas usar cautela em pacientes frágeis.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Acatisia; Parkinsonismo medicamentoso; Rigidez; Boca seca; Hiperprolactinemia",
+    "dangerousAdverseEffects": "Prolongamento QT; Torsades de pointes; Morte súbita cardíaca em pacientes predispostos; Síndrome neuroléptica maligna; Discinesia tardia; Convulsões em predispostos",
+    "adverseEffects": "Sonolência, sintomas extrapiramidais, boca seca y constipação.; QT/torsades, morte súbita, síndrome neuroléptica maligna y discinesia tardia.",
+    "contraindications": "QT longo congênito ou QT prolongado significativo; História de arritmia ventricular grave; Hipocalemia ou hipomagnesemia no corrigidas; Uso concomitante con fármacos que prolongam QT; Uso con inibidores fortes de CYP3A4 ou CYP2D6; Uso con ISRS como fluoxetina, paroxetina, sertralina ou escitalopram/citalopram conforme risco de QT/interação",
+    "interactions": "Macrolídeos, quinolonas y antiarrítmicos: risco de QT; Azólicos, ritonavir y outros inibidores fortes de CYP3A4; Fluoxetina, paroxetina y outros inibidores de CYP2D6; Citalopram/escitalopram: risco adicional de QT; Levodopa y agonistas dopaminérgicos; Álcool y depressores do SNC",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda no possui dosis pediátrica estruturada y validada para produto y indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica y avaliação especializada.; Pimozida: antes de usar, revisar ECG/QT, potássio/magnésio y lista de interações CYP/QT da bula; indicação y dosis para tiques no devem ser transpostas a outras condições. Sem cálculo pediátrico automático.; Bula FDA para tiques de Tourette após resposta inadequada a tratamento padrão: riscos de QT y interações contraindicam combinações específicas (inclusive vários inibidores CYP). Conferir ECG, eletrólitos y lista completa antes de prescrever.; Obrigatório avaliar risco de QT antes de iniciar.; Realizar ECG basal y durante titulação em pacientes de risco.; Corrigir potássio y magnésio antes de usar.; Evitar combinação con fármacos que prolongam QT.; Reservar para indicações específicas, especialmente Tourette/tics refratários.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "QT/torsades, morte súbita, síndrome neuroléptica maligna y discinesia tardia.",
+    "alerts": "QT/torsades, morte súbita, síndrome neuroléptica maligna y discinesia tardia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pimozida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pimozida"
+  }
+};})();
+/* GOLD33_SELECTIVE:pimozida:END */

@@ -30725,3 +30725,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:penicilina_v:END */
+/* GOLD33_SELECTIVE:pirazinamida:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="pirazinamida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:pirazinamida:"+matches.length);drug=matches[0];}else{drug=db&&db["pirazinamida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:pirazinamida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "062",
+    "requiredFieldCount": 33,
+    "approvedSha256": "370ce1bd176a8195540294ce684462cfa5ab46161e640a53e008c75ab3b56496",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Pirazinamida",
+    "class": "Antimicobacteriano",
+    "pharmacologicClass": "Antimicobacteriano",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "mechanism": "Pró-fármaco convertido pela pirazinamidase micobacteriana em ácido pirazinoico; afeta metabolismo energético e membrana em bacilos sob condições ácidas.",
+    "pharmacodynamics": "Pró-fármaco convertido pela pirazinamidase micobacteriana em ácido pirazinoico; afeta metabolismo energético e membrana em bacilos sob condições ácidas.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Componente de esquemas combinados para tuberculose ativa suscetível e regimes selecionados de TB resistente.",
+    "dose": "Adultos: aproximadamente 20–30 mg/kg VO uma vez ao dia; muitas diretrizes usam alvo ~25 mg/kg, máximo usual 2 g/dia em regime diário.",
+    "pediatricDose": "standard: 20–25 mg/kg/dia VO (adulto); maxDose: 2 g/dia",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Artralgia; Hiperuricemia; Náusea; Anorexia",
+    "dangerousAdverseEffects": "Hepatite medicamentosa; Falência hepática; Gota aguda; Trombocitopenia rara",
+    "adverseEffects": "Náusea, artralgia, hiperuricemia e rash.; Hepatotoxicidade grave, gota, trombocitopenia e hipersensibilidade.",
+    "contraindications": "Dano hepático grave, hipersensibilidade e gota aguda.",
+    "interactions": "Outros hepatotóxicos aumentam risco. Pode interferir com testes urinários ACETEST/KETOSTIX.",
+    "monitoring": "Adulto ~25 mg/kg/dia; Criança WHO 35 mg/kg/dia; Máx usual 2 g/dia; Contraindicado dano hepático grave; Gota aguda: contraindicação",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade grave, gota, trombocitopenia e hipersensibilidade.",
+    "alerts": "Hepatotoxicidade grave, gota, trombocitopenia e hipersensibilidade.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pirazinamida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pirazinamida"
+  },
+  "es": {
+    "name": "Pirazinamida",
+    "class": "Antimicobacteriano",
+    "pharmacologicClass": "Antimicobacteriano",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "mechanism": "Pró-fármaco convertido pela pirazinamidase micobacteriana em ácido pirazinoico; afeta metabolismo energético y membrana em bacilos sob condições ácidas.",
+    "pharmacodynamics": "Pró-fármaco convertido pela pirazinamidase micobacteriana em ácido pirazinoico; afeta metabolismo energético y membrana em bacilos sob condições ácidas.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Componente de esquemas combinados para tuberculose ativa suscetível y regimes selecionados de TB resistente.",
+    "dose": "Adultos: aproximadamente 20–30 mg/kg VO uma vez ao dia; muitas diretrizes usam alvo ~25 mg/kg, máximo usual 2 g/dia em regime diário.",
+    "pediatricDose": "standard: 20–25 mg/kg/dia VO (adulto); maxDose: 2 g/dia",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Artralgia; Hiperuricemia; Náusea; Anorexia",
+    "dangerousAdverseEffects": "Hepatite medicamentosa; Falência hepática; Gota aguda; Trombocitopenia rara",
+    "adverseEffects": "Náusea, artralgia, hiperuricemia y rash.; Hepatotoxicidade grave, gota, trombocitopenia y hipersensibilidade.",
+    "contraindications": "Dano hepático grave, hipersensibilidade y gota aguda.",
+    "interactions": "Outros hepatotóxicos aumentam risco. Pode interferir con testes urinários ACETEST/KETOSTIX.",
+    "monitoring": "Adulto ~25 mg/kg/dia; Criança WHO 35 mg/kg/dia; Máx usual 2 g/dia; Contraindicado dano hepático grave; Gota aguda: contraindicação",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade grave, gota, trombocitopenia y hipersensibilidade.",
+    "alerts": "Hepatotoxicidade grave, gota, trombocitopenia y hipersensibilidade.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pirazinamida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pirazinamida"
+  }
+};})();
+/* GOLD33_SELECTIVE:pirazinamida:END */

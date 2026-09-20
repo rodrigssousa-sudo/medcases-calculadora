@@ -14950,3 +14950,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:perampanel:END */
+/* GOLD33_SELECTIVE:pimavanserina:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="pimavanserina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:pimavanserina:"+matches.length);drug=matches[0];}else{drug=db&&db["pimavanserina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:pimavanserina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "062",
+    "requiredFieldCount": 33,
+    "approvedSha256": "370ce1bd176a8195540294ce684462cfa5ab46161e640a53e008c75ab3b56496",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Pimavanserina",
+    "class": "Agonista inverso/antagonista 5-HT2A",
+    "pharmacologicClass": "Agonista inverso/antagonista 5-HT2A",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos/cápsulas totalizando 34 mg.",
+    "presentations": "Comprimidos/cápsulas totalizando 34 mg.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Alucinações e delírios associados à psicose da doença de Parkinson em adultos.",
+    "dose": "34 mg VO uma vez/dia, com ou sem alimentos. Ajustar/evitar com moduladores fortes de CYP3A4 conforme rótulo.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Edema periférico, náusea e estado confusional.",
+    "dangerousAdverseEffects": "Prolongamento de QT e maior mortalidade em idosos com psicose relacionada à demência fora da indicação aprovada.",
+    "adverseEffects": "Edema periférico, náusea e estado confusional.; Prolongamento de QT e maior mortalidade em idosos com psicose relacionada à demência fora da indicação aprovada.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Prolongamento de QT e maior mortalidade em idosos com psicose relacionada à demência fora da indicação aprovada.",
+    "alerts": "Prolongamento de QT e maior mortalidade em idosos com psicose relacionada à demência fora da indicação aprovada.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pimavanserina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pimavanserina"
+  },
+  "es": {
+    "name": "Pimavanserina",
+    "class": "Agonista inverso/antagonista 5-HT2A",
+    "pharmacologicClass": "Agonista inverso/antagonista 5-HT2A",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos/cápsulas totalizando 34 mg.",
+    "presentations": "Comprimidos/cápsulas totalizando 34 mg.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Alucinações y delírios associados à psicose da doença de Parkinson em adultos.",
+    "dose": "34 mg VO uma vez/dia, con ou sem alimentos. Ajustar/evitar con moduladores fortes de CYP3A4 conforme rótulo.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Edema periférico, náusea y estado confusional.",
+    "dangerousAdverseEffects": "Prolongamento de QT y maior mortalidade em idosos con psicose relacionada à demência fora da indicação aprovada.",
+    "adverseEffects": "Edema periférico, náusea y estado confusional.; Prolongamento de QT y maior mortalidade em idosos con psicose relacionada à demência fora da indicação aprovada.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Prolongamento de QT y maior mortalidade em idosos con psicose relacionada à demência fora da indicação aprovada.",
+    "alerts": "Prolongamento de QT y maior mortalidade em idosos con psicose relacionada à demência fora da indicação aprovada.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pimavanserina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pimavanserina"
+  }
+};})();
+/* GOLD33_SELECTIVE:pimavanserina:END */

@@ -10029,3 +10029,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:paxlovid:END */
+/* GOLD33_SELECTIVE:piperacilina_tazobactam:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="piperacilina_tazobactam";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:piperacilina_tazobactam:"+matches.length);drug=matches[0];}else{drug=db&&db["piperacilina_tazobactam"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:piperacilina_tazobactam");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "062",
+    "requiredFieldCount": 33,
+    "approvedSha256": "370ce1bd176a8195540294ce684462cfa5ab46161e640a53e008c75ab3b56496",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Piperacilina/tazobactam",
+    "class": "Penicilina antipseudomonas com inibidor de beta-lactamase",
+    "pharmacologicClass": "Penicilina antipseudomonas com inibidor de beta-lactamase",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Frascos/bolsas IV.",
+    "presentations": "Frascos/bolsas IV.",
+    "mechanism": "Piperacilina inibe PBPs; tazobactam inibe diversas beta-lactamases de serina.",
+    "pharmacodynamics": "Piperacilina inibe PBPs; tazobactam inibe diversas beta-lactamases de serina.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Infecções graves polimicrobianas, intra-abdominais, pneumonia hospitalar e outras por suscetíveis incluindo Pseudomonas.",
+    "dose": "Adultos: maioria 3,375 g IV q6h; pneumonia nosocomial 4,5 g q6h. Protocolos prolongados podem usar esquemas distintos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Diarreia; Rash",
+    "dangerousAdverseEffects": "Anafilaxia; C. difficile; Lesão renal aguda; Citopenias; Convulsões/encefalopatia por acúmulo",
+    "adverseEffects": "Diarreia, náusea, cefaleia, rash e flebite.; Anafilaxia, nefrotoxicidade, citopenias, convulsões, C. difficile e carga de sódio.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato e compatibilidades IV conforme contexto clínico.",
+    "monitoring": "Não assumir cobertura confiável de ESBL fora dos cenários recomendados; Ajustar rigorosamente na DRC/diálise",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Anafilaxia, nefrotoxicidade, citopenias, convulsões, C. difficile e carga de sódio.",
+    "alerts": "Anafilaxia, nefrotoxicidade, citopenias, convulsões, C. difficile e carga de sódio.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=piperacilina+tazobactam",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=piperacilina+tazobactam"
+  },
+  "es": {
+    "name": "Piperacilina/tazobactam",
+    "class": "Penicilina antipseudomonas con inibidor de beta-lactamase",
+    "pharmacologicClass": "Penicilina antipseudomonas con inibidor de beta-lactamase",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Frascos/bolsas IV.",
+    "presentations": "Frascos/bolsas IV.",
+    "mechanism": "Piperacilina inibe PBPs; tazobactam inibe diversas beta-lactamases de serina.",
+    "pharmacodynamics": "Piperacilina inibe PBPs; tazobactam inibe diversas beta-lactamases de serina.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Infecções graves polimicrobianas, intra-abdominais, pneumonia hospitalar y outras por suscetíveis incluindo Pseudomonas.",
+    "dose": "Adultos: maioria 3,375 g IV q6h; pneumonia nosocomial 4,5 g q6h. Protocolos prolongados podem usar esquemas distintos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Diarreia; Rash",
+    "dangerousAdverseEffects": "Anafilaxia; C. difficile; Lesão renal aguda; Citopenias; Convulsões/encefalopatia por acúmulo",
+    "adverseEffects": "Diarreia, náusea, cefaleia, rash y flebite.; Anafilaxia, nefrotoxicidade, citopenias, convulsões, C. difficile y carga de sódio.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou a beta-lactâmicos relacionados.",
+    "interactions": "Probenecida pode aumentar exposição; revisar anticoagulantes, metotrexato y compatibilidades IV conforme contexto clínico.",
+    "monitoring": "No assumir cobertura confiável de ESBL fora dos cenários recomendados; Ajustar rigorosamente na DRC/diálise",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Anafilaxia, nefrotoxicidade, citopenias, convulsões, C. difficile y carga de sódio.",
+    "alerts": "Anafilaxia, nefrotoxicidade, citopenias, convulsões, C. difficile y carga de sódio.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=piperacilina+tazobactam",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=piperacilina+tazobactam"
+  }
+};})();
+/* GOLD33_SELECTIVE:piperacilina_tazobactam:END */
