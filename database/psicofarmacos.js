@@ -4988,3 +4988,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:sulpirida:END */
+/* GOLD33_SELECTIVE:tiotixeno:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="tiotixeno";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tiotixeno:"+matches.length);drug=matches[0];}else{drug=db&&db["tiotixeno"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="tiotixeno";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tiotixeno:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:tiotixeno");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "077",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ce11000d7409bd2f6564d0db46214d97e19a6b5303cba03406aa668caf890a5b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Tiotixeno",
+    "class": "Antipsicótico típico tioxanteno",
+    "pharmacologicClass": "Antipsicótico típico tioxanteno",
+    "commercialNames": "br: Navane; Tiotixeno; ar: Navane; Tiotixeno",
+    "presentation": "Cápsula 1 mg; Cápsula 2 mg; Cápsula 5 mg; Cápsula 10 mg",
+    "presentations": "Cápsula 1 mg; Cápsula 2 mg; Cápsula 5 mg; Cápsula 10 mg",
+    "mechanism": "Antagonista dopaminérgico D2, reduzindo sintomas psicóticos positivos; possui risco extrapiramidal relevante.",
+    "pharmacodynamics": "Antagonista dopaminérgico D2, reduzindo sintomas psicóticos positivos; possui risco extrapiramidal relevante.",
+    "pharmacokinetics": "Vida média aproximada: 20–40 horas.",
+    "indications": "Esquizofrenia; Psicose crônica; Psicose aguda em casos selecionados; Agitação psicótica; Transtorno esquizoafetivo em casos selecionados; Manutenção antipsicótica em pacientes previamente respondedores",
+    "dose": "adulto: Esquizofrenia: iniciar 2 mg VO 3x/dia ou 5 mg VO 2x/dia; titular conforme resposta.; manutencao: Manutenção: geralmente 15–30 mg/dia em doses divididas.; maxDose: Dose máxima usual: 60 mg/dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Acatisia; Parkinsonismo medicamentoso; Distonia aguda; Sonolência; Boca seca; Hipotensão ortostática",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT e arritmias; Convulsões em predispostos; Depressão importante do SNC se associado a sedativos",
+    "adverseEffects": "Sonolência, boca seca, constipação, acatisia e parkinsonismo.; Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose e maior mortalidade em idosos com psicose da demência.",
+    "contraindications": "Hipersensibilidade ao tiotixeno ou tioxantenos; Depressão grave do SNC ou coma; Doença de Parkinson grave; Demência com corpos de Lewy, salvo extrema necessidade; QT prolongado significativo",
+    "interactions": "Álcool e depressores do SNC; Opioides e benzodiazepínicos; Fármacos que prolongam QT; Levodopa e agonistas dopaminérgicos; Anti-hipertensivos: maior hipotensão",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.; Tiotixeno cápsulas: bula citada não recomenda uso em menores de 12 anos pela falta de segurança estabelecida. Confirmar apresentação e idade; não gerar esquema pediátrico a partir da dose adulta.; Bula Thiothixene cápsulas: uso em menores de 12 anos não recomendado por segurança não estabelecida. Não inferir dose pediátrica a partir da adulta.; Monitorar sintomas extrapiramidais desde o início.; Considerar ECG em pacientes com risco cardiovascular ou QT.; Evitar em idosos com demência quando possível.; Evitar associação com álcool e outros sedativos.; Reduzir gradualmente se uso prolongado.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose e maior mortalidade em idosos com psicose da demência.",
+    "alerts": "Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose e maior mortalidade em idosos com psicose da demência.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tiotixeno",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tiotixeno"
+  },
+  "es": {
+    "name": "Tiotixeno",
+    "class": "Antipsicótico típico tioxanteno",
+    "pharmacologicClass": "Antipsicótico típico tioxanteno",
+    "commercialNames": "br: Navane; Tiotixeno; ar: Navane; Tiotixeno",
+    "presentation": "Cápsula 1 mg; Cápsula 2 mg; Cápsula 5 mg; Cápsula 10 mg",
+    "presentations": "Cápsula 1 mg; Cápsula 2 mg; Cápsula 5 mg; Cápsula 10 mg",
+    "mechanism": "Antagonista dopaminérgico D2, reduzindo sintomas psicóticos positivos; possui risco extrapiramidal relevante.",
+    "pharmacodynamics": "Antagonista dopaminérgico D2, reduzindo sintomas psicóticos positivos; possui risco extrapiramidal relevante.",
+    "pharmacokinetics": "Vida média aproximada: 20–40 horas.",
+    "indications": "Esquizofrenia; Psicose crônica; Psicose aguda em casos selecionados; Agitação psicótica; Transtorno esquizoafetivo em casos selecionados; Manutenção antipsicótica em pacientes previamente respondedores",
+    "dose": "adulto: Esquizofrenia: iniciar 2 mg VO 3x/dia ou 5 mg VO 2x/dia; titular conforme resposta.; manutencao: Manutenção: geralmente 15–30 mg/dia em dosiss divididas.; maxDose: Dose máxima usual: 60 mg/dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Acatisia; Parkinsonismo medicamentoso; Distonia aguda; Sonolência; Boca seca; Hipotensão ortostática",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Discinesia tardia; Prolongamento QT y arritmias; Convulsões em predispostos; Depressão importante do SNC se associado a sedativos",
+    "adverseEffects": "Sonolência, boca seca, constipação, acatisia y parkinsonismo.; Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose y maior mortalidade em idosos con psicose da demência.",
+    "contraindications": "Hipersensibilidade ao tiotixeno ou tioxantenos; Depressão grave do SNC ou coma; Doença de Parkinson grave; Demência con corpos de Lewy, salvo extrema necessidade; QT prolongado significativo",
+    "interactions": "Álcool y depressores do SNC; Opioides y benzodiazepínicos; Fármacos que prolongam QT; Levodopa y agonistas dopaminérgicos; Anti-hipertensivos: maior hipotensão",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda no possui dosis pediátrica estruturada y validada para produto y indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica y avaliação especializada.; Tiotixeno cápsulas: bula citada no recomenda uso em menores de 12 anos pela falta de seguridad estabelecida. Confirmar apresentação y idade; no gerar esquema pediátrico a partir da dosis adulta.; Bula Thiothixene cápsulas: uso em menores de 12 anos no recomendado por seguridad no estabelecida. No inferir dosis pediátrica a partir da adulta.; Monitorar sintomas extrapiramidais desde o início.; Considerar ECG em pacientes con risco cardiovascular ou QT.; Evitar em idosos con demência quando possível.; Evitar associação con álcool y outros sedativos.; Reduzir gradualmente se uso prolongado.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose y maior mortalidade em idosos con psicose da demência.",
+    "alerts": "Síndrome neuroléptica maligna, discinesia tardia, QT/arrítmia, agranulocitose y maior mortalidade em idosos con psicose da demência.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tiotixeno",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tiotixeno"
+  }
+};})();
+/* GOLD33_SELECTIVE:tiotixeno:END */

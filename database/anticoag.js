@@ -1844,3 +1844,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:rivaroxabana:END */
+/* GOLD33_SELECTIVE:ticagrelor:START */
+;(function(){var db=window.ANTICOAG_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="ticagrelor";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:ticagrelor:"+matches.length);drug=matches[0];}else{drug=db&&db["ticagrelor"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="ticagrelor";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:ticagrelor:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:ticagrelor");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "077",
+    "requiredFieldCount": 33,
+    "approvedSha256": "ce11000d7409bd2f6564d0db46214d97e19a6b5303cba03406aa668caf890a5b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ticagrelor",
+    "class": "Inibidor reversível do receptor plaquetário P2Y12",
+    "pharmacologicClass": "Inibidor reversível do receptor plaquetário P2Y12",
+    "commercialNames": "Brilinta; Brilique; Ticagrelor genérico",
+    "presentation": "Comprimidos revestidos para uso oral.",
+    "presentations": "Comprimidos revestidos para uso oral.",
+    "mechanism": "Liga-se de forma reversível a sítio alostérico do receptor P2Y12, impedindo sinalização mediada por ADP sem necessidade de bioativação.",
+    "pharmacodynamics": "Liga-se de forma reversível a sítio alostérico do receptor P2Y12, impedindo sinalização mediada por ADP sem necessidade de bioativação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "SCA e prevenção de eventos após IAM; Doença coronariana selecionada de alto risco; AVC isquêmico leve ou AIT de alto risco em esquema de curta duração com aspirina",
+    "dose": "SCA ou IAM: Ataque 180 mg VO; depois 90 mg VO duas vezes ao dia durante o primeiro ano; após 1 ano, 60 mg duas vezes ao dia; DAC sem IAM ou AVC prévios em indicação selecionada: 60 mg VO duas vezes ao dia; AVC isquêmico leve ou AIT de alto risco: Ataque 180 mg, depois 90 mg duas vezes ao dia por até 30 dias; Aspirina: Manutenção usual 75 a 100 mg/dia quando combinada",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sangramento; Dispneia; Equimoses; Epistaxe; Aumento de ácido úrico",
+    "dangerousAdverseEffects": "Hemorragia intracraniana; Sangramento fatal; Bradiarritmia clinicamente significativa; Pausa ventricular; Reação de hipersensibilidade",
+    "adverseEffects": "Sangramento, dispneia, náusea e bradicardia.; Hemorragia fatal ou intracraniana, pausas ventriculares, hiperuricemia e púrpura trombótica trombocitopênica rara.",
+    "contraindications": "História de hemorragia intracraniana; Sangramento patológico ativo; Hipersensibilidade ao ticagrelor",
+    "interactions": "Evitar inibidores fortes de CYP3A; Evitar indutores fortes de CYP3A; Monitorar digoxina ao iniciar ou modificar ticagrelor; Evitar doses de manutenção de aspirina acima do recomendado; Não associar a outro P2Y12 oral",
+    "monitoring": "Evitar aspirina de manutenção acima de 100 mg/dia salvo indicação excepcional; Não administrar com outro inibidor oral P2Y12",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hemorragia fatal ou intracraniana, pausas ventriculares, hiperuricemia e púrpura trombótica trombocitopênica rara.",
+    "alerts": "Hemorragia fatal ou intracraniana, pausas ventriculares, hiperuricemia e púrpura trombótica trombocitopênica rara.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ticagrelor",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ticagrelor"
+  },
+  "es": {
+    "name": "Ticagrelor",
+    "class": "Inibidor reversível do receptor plaquetário P2Y12",
+    "pharmacologicClass": "Inibidor reversível do receptor plaquetário P2Y12",
+    "commercialNames": "Brilinta; Brilique; Ticagrelor genérico",
+    "presentation": "Comprimidos revestidos para uso oral.",
+    "presentations": "Comprimidos revestidos para uso oral.",
+    "mechanism": "Liga-se de forma reversível a sítio alostérico do receptor P2Y12, impedindo sinalização mediada por ADP sem necessidade de bioativação.",
+    "pharmacodynamics": "Liga-se de forma reversível a sítio alostérico do receptor P2Y12, impedindo sinalização mediada por ADP sem necessidade de bioativação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "SCA y prevenção de eventos após IAM; Doença coronariana selecionada de alto risco; AVC isquêmico leve ou AIT de alto risco em esquema de curta duração con aspirina",
+    "dose": "SCA ou IAM: Ataque 180 mg VO; depois 90 mg VO duas vezes ao dia durante o primeiro ano; após 1 ano, 60 mg duas vezes ao dia; DAC sem IAM ou AVC prévios em indicação selecionada: 60 mg VO duas vezes ao dia; AVC isquêmico leve ou AIT de alto risco: Ataque 180 mg, depois 90 mg duas vezes ao dia por até 30 dias; Aspirina: Manutenção usual 75 a 100 mg/dia quando combinada",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sangramento; Dispneia; Equimoses; Epistaxe; Aumento de ácido úrico",
+    "dangerousAdverseEffects": "Hemorragia intracraniana; Sangramento fatal; Bradiarritmia clinicamente significativa; Pausa ventricular; Reação de hipersensibilidade",
+    "adverseEffects": "Sangramento, dispneia, náusea y bradicardia.; Hemorragia fatal ou intracraniana, pausas ventriculares, hiperuricemia y púrpura trombótica trombocitopênica rara.",
+    "contraindications": "História de hemorragia intracraniana; Sangramento patológico ativo; Hipersensibilidade ao ticagrelor",
+    "interactions": "Evitar inibidores fortes de CYP3A; Evitar indutores fortes de CYP3A; Monitorar digoxina ao iniciar ou modificar ticagrelor; Evitar dosiss de manutenção de aspirina acima do recomendado; No associar a outro P2Y12 oral",
+    "monitoring": "Evitar aspirina de manutenção acima de 100 mg/dia salvo indicação excepcional; No administrar con outro inibidor oral P2Y12",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hemorragia fatal ou intracraniana, pausas ventriculares, hiperuricemia y púrpura trombótica trombocitopênica rara.",
+    "alerts": "Hemorragia fatal ou intracraniana, pausas ventriculares, hiperuricemia y púrpura trombótica trombocitopênica rara.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ticagrelor",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ticagrelor"
+  }
+};})();
+/* GOLD33_SELECTIVE:ticagrelor:END */
