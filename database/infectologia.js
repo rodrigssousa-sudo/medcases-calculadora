@@ -9939,3 +9939,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:oseltamivir:END */
+/* GOLD33_SELECTIVE:paxlovid:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="paxlovid";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:paxlovid:"+matches.length);drug=matches[0];}else{drug=db&&db["paxlovid"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:paxlovid");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "060",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6777d951b60768ad775b47ac152241bd9b37057d90fcf3c5784894d7c4d507e4",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Nirmatrelvir/ritonavir",
+    "class": "Antiviral inibidor de protease com potenciador farmacocinético",
+    "pharmacologicClass": "Antiviral inibidor de protease com potenciador farmacocinético",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cartelas combinadas de comprimidos; embalagem renal possui composição própria.",
+    "presentations": "Cartelas combinadas de comprimidos; embalagem renal possui composição própria.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Tratamento de COVID-19 leve a moderada em pacientes elegíveis com risco de progressão, iniciado precocemente.",
+    "dose": "Regime padrão adulto: nirmatrelvir 300 mg + ritonavir 100 mg VO duas vezes/dia por 5 dias; ajustar em insuficiência renal conforme rótulo. Revisão completa de interações é obrigatória.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Disgeusia, diarreia, hipertensão e mialgia.",
+    "dangerousAdverseEffects": "Interações CYP3A graves/fatais, hepatotoxicidade, hipersensibilidade e resistência em HIV não controlado.",
+    "adverseEffects": "Disgeusia, diarreia, hipertensão e mialgia.; Interações CYP3A graves/fatais, hepatotoxicidade, hipersensibilidade e resistência em HIV não controlado.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Interações CYP3A graves/fatais, hepatotoxicidade, hipersensibilidade e resistência em HIV não controlado.",
+    "alerts": "Interações CYP3A graves/fatais, hepatotoxicidade, hipersensibilidade e resistência em HIV não controlado.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paxlovid",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paxlovid"
+  },
+  "es": {
+    "name": "Nirmatrelvir/ritonavir",
+    "class": "Antiviral inibidor de protease con potenciador farmacocinético",
+    "pharmacologicClass": "Antiviral inibidor de protease con potenciador farmacocinético",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cartelas combinadas de comprimidos; embalagem renal possui composição própria.",
+    "presentations": "Cartelas combinadas de comprimidos; embalagem renal possui composição própria.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Tratamento de COVID-19 leve a moderada em pacientes elegíveis con risco de progressão, iniciado precocemente.",
+    "dose": "Regime padrão adulto: nirmatrelvir 300 mg + ritonavir 100 mg VO duas vezes/dia por 5 dias; ajustar em insuficiência renal conforme rótulo. Revisão completa de interações é obrigatória.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Disgeusia, diarreia, hipertensão y mialgia.",
+    "dangerousAdverseEffects": "Interações CYP3A graves/fatais, hepatotoxicidade, hipersensibilidade y resistência em HIV no controlado.",
+    "adverseEffects": "Disgeusia, diarreia, hipertensão y mialgia.; Interações CYP3A graves/fatais, hepatotoxicidade, hipersensibilidade y resistência em HIV no controlado.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Interações CYP3A graves/fatais, hepatotoxicidade, hipersensibilidade y resistência em HIV no controlado.",
+    "alerts": "Interações CYP3A graves/fatais, hepatotoxicidade, hipersensibilidade y resistência em HIV no controlado.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paxlovid",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paxlovid"
+  }
+};})();
+/* GOLD33_SELECTIVE:paxlovid:END */

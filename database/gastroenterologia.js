@@ -3744,3 +3744,93 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:omeprazol:END */
+/* GOLD33_SELECTIVE:pantoprazol:START */
+;(function(){var db=window.GASTROENTEROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="pantoprazol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:pantoprazol:"+matches.length);drug=matches[0];}else{drug=db&&db["pantoprazol"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:pantoprazol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "060",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6777d951b60768ad775b47ac152241bd9b37057d90fcf3c5784894d7c4d507e4",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Pantoprazol oral",
+    "class": "Inibidor da bomba de prótons",
+    "pharmacologicClass": "Inibidor da bomba de prótons",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos gastrorresistentes 20/40 mg e grânulos para suspensão.",
+    "presentations": "Comprimidos gastrorresistentes 20/40 mg e grânulos para suspensão.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "DRGE, esofagite erosiva e condições hipersecretoras conforme produto.",
+    "dose": "Adultos: frequentemente 40 mg VO uma vez/dia; dose e duração variam por indicação. Comprimido gastrorresistente deve ser engolido inteiro.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, diarreia, náusea, dor abdominal e flatulência.",
+    "dangerousAdverseEffects": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas e reações cutâneas graves.",
+    "adverseEffects": "Cefaleia, diarreia, náusea, dor abdominal e flatulência.; C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas e reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas e reações cutâneas graves.",
+    "alerts": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas e reações cutâneas graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pantoprazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pantoprazol"
+  },
+  "es": {
+    "name": "Pantoprazol oral",
+    "class": "Inibidor da bomba de prótons",
+    "pharmacologicClass": "Inibidor da bomba de prótons",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos gastrorresistentes 20/40 mg y grânulos para suspensão.",
+    "presentations": "Comprimidos gastrorresistentes 20/40 mg y grânulos para suspensão.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "DRGE, esofagite erosiva y condições hipersecretoras conforme produto.",
+    "dose": "Adultos: frequentemente 40 mg VO uma vez/dia; dosis y duração variam por indicação. Comprimido gastrorresistente deve ser engolido inteiro.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, diarreia, náusea, dor abdominal y flatulência.",
+    "dangerousAdverseEffects": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas y reações cutâneas graves.",
+    "adverseEffects": "Cefaleia, diarreia, náusea, dor abdominal y flatulência.; C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas y reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas y reações cutâneas graves.",
+    "alerts": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas y reações cutâneas graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pantoprazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pantoprazol"
+  }
+};})();
+/* GOLD33_SELECTIVE:pantoprazol:END */

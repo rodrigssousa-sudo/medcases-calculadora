@@ -7751,3 +7751,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:oxazepam:END */
+/* GOLD33_SELECTIVE:paroxetina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="paroxetina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:paroxetina:"+matches.length);drug=matches[0];}else{drug=db&&db["paroxetina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:paroxetina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "060",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6777d951b60768ad775b47ac152241bd9b37057d90fcf3c5784894d7c4d507e4",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Paroxetina",
+    "class": "ISRS antidepressivo",
+    "pharmacologicClass": "ISRS antidepressivo",
+    "commercialNames": "br: Aropax; Pondera; Cebrilin; Parox; ar: Aropax; Paxil; Paroxetina Bagó; Paroxetina Northia",
+    "presentation": "Comprimido 10 mg; Comprimido 20 mg; Comprimido 30 mg; Comprimido de liberação controlada 12,5 mg; Comprimido de liberação controlada 25 mg",
+    "presentations": "Comprimido 10 mg; Comprimido 20 mg; Comprimido 30 mg; Comprimido de liberação controlada 12,5 mg; Comprimido de liberação controlada 25 mg",
+    "mechanism": "Inibe seletivamente a recaptação de serotonina; possui também efeito anticolinérgico leve em comparação com outros ISRS.",
+    "pharmacodynamics": "Inibe seletivamente a recaptação de serotonina; possui também efeito anticolinérgico leve em comparação com outros ISRS.",
+    "pharmacokinetics": "Vida média aproximada: 21 horas.",
+    "indications": "Transtorno depressivo maior; Transtorno de ansiedade generalizada; Transtorno do pânico; Transtorno de ansiedade social; Transtorno obsessivo-compulsivo; Transtorno de estresse pós-traumático; Transtorno disfórico pré-menstrual",
+    "dose": "adulto: Depressão: iniciar 20 mg VO 1x/dia; usual 20–50 mg/dia.; ansiedadePanico: Ansiedade/pânico: iniciar 10 mg/dia; aumentar gradualmente conforme resposta.; maxDose: Dose máxima usual: 50 mg/dia; em alguns transtornos pode chegar a 60 mg/dia conforme formulação e indicação.",
+    "pediatricDose": "standard: Não se utiliza cálculo rotineiro por kg em adultos.; pediatric: Pediatria: geralmente não é primeira escolha; uso apenas com especialista.; maxDose: 50–60 mg/dia conforme indicação",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Náuseas; Sonolência; Boca seca; Constipação; Sudorese; Ganho de peso; Disfunção sexual",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica; Síndrome de descontinuação importante se suspensão abrupta; Ideação suicida em jovens no início do tratamento; Virada maníaca/hipomaníaca; Hiponatremia/SIADH; Sangramentos com AINEs/anticoagulantes",
+    "adverseEffects": "Náusea, sonolência, disfunção sexual, sudorese e boca seca.; Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania e síndrome de descontinuação.",
+    "contraindications": "Hipersensibilidade à paroxetina; Uso concomitante com IMAO; Uso concomitante com tioridazina ou pimozida; Transtorno bipolar sem estabilizador do humor",
+    "interactions": "IMAO: risco de síndrome serotoninérgica; Tramadol, linezolida, triptanos, lítio: risco serotoninérgico; AINEs, AAS, anticoagulantes: maior risco de sangramento; Inibidor forte de CYP2D6: aumenta níveis de tricíclicos, antipsicóticos e betabloqueadores; Tamoxifeno: pode reduzir ativação metabólica e eficácia",
+    "monitoring": "Maior risco de síndrome de retirada entre os ISRS; reduzir gradualmente.; Evitar em gestação quando houver alternativa mais segura.; Investigar história de mania/hipomania antes de iniciar.; Cuidado em idosos pelo perfil anticolinérgico e risco de quedas.; Evitar associação com IMAO.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania e síndrome de descontinuação.",
+    "alerts": "Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania e síndrome de descontinuação.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paroxetina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paroxetina"
+  },
+  "es": {
+    "name": "Paroxetina",
+    "class": "ISRS antidepressivo",
+    "pharmacologicClass": "ISRS antidepressivo",
+    "commercialNames": "br: Aropax; Pondera; Cebrilin; Parox; ar: Aropax; Paxil; Paroxetina Bagó; Paroxetina Northia",
+    "presentation": "Comprimido 10 mg; Comprimido 20 mg; Comprimido 30 mg; Comprimido de liberação controlada 12,5 mg; Comprimido de liberação controlada 25 mg",
+    "presentations": "Comprimido 10 mg; Comprimido 20 mg; Comprimido 30 mg; Comprimido de liberação controlada 12,5 mg; Comprimido de liberação controlada 25 mg",
+    "mechanism": "Inibe seletivamente a recaptação de serotonina; possui também efeito anticolinérgico leve em comparação con outros ISRS.",
+    "pharmacodynamics": "Inibe seletivamente a recaptação de serotonina; possui também efeito anticolinérgico leve em comparação con outros ISRS.",
+    "pharmacokinetics": "Vida média aproximada: 21 horas.",
+    "indications": "Transtorno depressivo maior; Transtorno de ansiedade generalizada; Transtorno do pânico; Transtorno de ansiedade social; Transtorno obsessivo-compulsivo; Transtorno de estresse pós-traumático; Transtorno disfórico pré-menstrual",
+    "dose": "adulto: Depressão: iniciar 20 mg VO 1x/dia; usual 20–50 mg/dia.; ansiedadePanico: Ansiedade/pânico: iniciar 10 mg/dia; aumentar gradualmente conforme resposta.; maxDose: Dose máxima usual: 50 mg/dia; em alguns transtornos pode chegar a 60 mg/dia conforme formulação y indicação.",
+    "pediatricDose": "standard: No se utiliza cálculo rotineiro por kg em adultos.; pediatric: Pediatria: geralmente no é primeira escolha; uso apenas con especialista.; maxDose: 50–60 mg/dia conforme indicação",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Náuseas; Sonolência; Boca seca; Constipação; Sudorese; Ganho de peso; Disfunción sexual",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica; Síndrome de descontinuação importante se suspensão abrupta; Ideação suicida em jovens no início do tratamento; Virada maníaca/hipomaníaca; Hiponatremia/SIADH; Sangramentos con AINEs/anticoagulantes",
+    "adverseEffects": "Náusea, sonolência, disfunción sexual, sudorese y boca seca.; Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania y síndrome de descontinuação.",
+    "contraindications": "Hipersensibilidade à paroxetina; Uso concomitante con IMAO; Uso concomitante con tioridazina ou pimozida; Transtorno bipolar sem estabilizador do humor",
+    "interactions": "IMAO: risco de síndrome serotoninérgica; Tramadol, linezolida, triptanos, lítio: risco serotoninérgico; AINEs, AAS, anticoagulantes: maior risco de sangramento; Inibidor forte de CYP2D6: aumenta níveis de tricíclicos, antipsicóticos y betabloqueadores; Tamoxifeno: pode reduzir ativação metabólica y eficácia",
+    "monitoring": "Maior risco de síndrome de retirada entre os ISRS; reduzir gradualmente.; Evitar em gestação quando houver alternativa mais segura.; Investigar história de mania/hipomania antes de iniciar.; Cuidado em idosos pelo perfil anticolinérgico y risco de quedas.; Evitar associação con IMAO.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania y síndrome de descontinuação.",
+    "alerts": "Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania y síndrome de descontinuação.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paroxetina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paroxetina"
+  }
+};})();
+/* GOLD33_SELECTIVE:paroxetina:END */

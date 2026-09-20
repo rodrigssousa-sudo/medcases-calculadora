@@ -8014,3 +8014,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:oxicodona:END */
+/* GOLD33_SELECTIVE:paracetamol:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="paracetamol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:paracetamol:"+matches.length);drug=matches[0];}else{drug=db&&db["paracetamol"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:paracetamol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "060",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6777d951b60768ad775b47ac152241bd9b37057d90fcf3c5784894d7c4d507e4",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Paracetamol (acetaminofeno)",
+    "class": "Analgésico e antipirético",
+    "pharmacologicClass": "Analgésico e antipirético",
+    "commercialNames": "Paracetamol, acetaminofeno e marcas locais.",
+    "presentation": "Comprimidos/cápsulas, solução oral, supositórios e solução IV; concentrações variam.",
+    "presentations": "Comprimidos/cápsulas, solução oral, supositórios e solução IV; concentrações variam.",
+    "mechanism": "Provável inibição central da síntese de prostaglandinas e modulação de vias descendentes; pouco efeito anti-inflamatório periférico.",
+    "pharmacodynamics": "Provável inibição central da síntese de prostaglandinas e modulação de vias descendentes; pouco efeito anti-inflamatório periférico.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Dor leve a moderada, adjuvante em dor moderada-intensa e febre.",
+    "dose": "IV ≥50 kg: 1.000 mg q6h ou 650 mg q4h, máximo 4.000 mg/dia somando todas as vias. <50 kg: 15 mg/kg q6h ou 12,5 mg/kg q4h; máximo 75 mg/kg/dia até 3.750 mg.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, vômitos, cefaleia e reações no local de infusão; geralmente bem tolerado em dose terapêutica.",
+    "dangerousAdverseEffects": "Hepatotoxicidade e insuficiência hepática aguda por superdose/soma inadvertida; raras anafilaxia e reações cutâneas graves.",
+    "adverseEffects": "Náusea, rash e elevação de transaminases.; Hepatotoxicidade/insuficiência hepática, anafilaxia e reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade; insuficiência hepática grave/doença hepática ativa grave conforme formulação.",
+    "interactions": "Uso crônico com varfarina pode aumentar INR; álcool crônico/indutores podem aumentar risco hepático; evitar duplicação de produtos.",
+    "monitoring": "Superdose pode ser inicialmente pouco sintomática; suspeita exige avaliação urgente e consideração de N-acetilcisteína.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade/insuficiência hepática, anafilaxia e reações cutâneas graves.",
+    "alerts": "Hepatotoxicidade/insuficiência hepática, anafilaxia e reações cutâneas graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paracetamol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paracetamol"
+  },
+  "es": {
+    "name": "Paracetamol (acetaminofeno)",
+    "class": "Analgésico y antipirético",
+    "pharmacologicClass": "Analgésico y antipirético",
+    "commercialNames": "Paracetamol, acetaminofeno y marcas locais.",
+    "presentation": "Comprimidos/cápsulas, solución oral, supositórios y solución IV; concentrações variam.",
+    "presentations": "Comprimidos/cápsulas, solución oral, supositórios y solución IV; concentrações variam.",
+    "mechanism": "Provável inibição central da síntese de prostaglandinas y modulação de vias descendentes; pouco efeito anti-inflamatório periférico.",
+    "pharmacodynamics": "Provável inibição central da síntese de prostaglandinas y modulação de vias descendentes; pouco efeito anti-inflamatório periférico.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Dor leve a moderada, adjuvante em dor moderada-intensa y febre.",
+    "dose": "IV ≥50 kg: 1.000 mg q6h ou 650 mg q4h, máximo 4.000 mg/dia somando todas as vias. <50 kg: 15 mg/kg q6h ou 12,5 mg/kg q4h; máximo 75 mg/kg/dia até 3.750 mg.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, vômitos, cefaleia y reações no local de infusão; geralmente bem tolerado em dosis terapêutica.",
+    "dangerousAdverseEffects": "Hepatotoxicidade y insuficiência hepática aguda por superdosis/soma inadvertida; raras anafilaxia y reações cutâneas graves.",
+    "adverseEffects": "Náusea, rash y elevação de transaminases.; Hepatotoxicidade/insuficiência hepática, anafilaxia y reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade; insuficiência hepática grave/doença hepática ativa grave conforme formulação.",
+    "interactions": "Uso crônico con varfarina pode aumentar INR; álcool crônico/indutores podem aumentar risco hepático; evitar duplicação de produtos.",
+    "monitoring": "Superdosis pode ser inicialmente pouco sintomática; suspeita exige avaliação urgente y consideração de N-acetilcisteína.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade/insuficiência hepática, anafilaxia y reações cutâneas graves.",
+    "alerts": "Hepatotoxicidade/insuficiência hepática, anafilaxia y reações cutâneas graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paracetamol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=paracetamol"
+  }
+};})();
+/* GOLD33_SELECTIVE:paracetamol:END */
