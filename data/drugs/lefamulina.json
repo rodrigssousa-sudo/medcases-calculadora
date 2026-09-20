@@ -6,245 +6,85 @@
   "colorTxt": "#065F46",
   "pt": {
     "name": "Lefamulina",
-    "class": "Pleuromutilin semi-sintético (primeiro da classe aprovado para uso sistêmico)",
-    "commercialNames": {
-      "br": [
-        "Xenleta (acesso limitado no Brasil)"
-      ],
-      "ar": [
-        "Xenleta"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 600 mg",
-      "Solução para infusão EV: 150 mg/15 mL (10 mg/mL)"
-    ],
-    "dose": {
-      "adultoVO": "600 mg VO 12/12h × 5 dias",
-      "adultoEV": "150 mg EV 12/12h × 5–7 dias (infusão em 60 min)"
-    },
+    "class": "Antibacteriano pleuromutilina",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimido 600 mg; solução IV 150 mg/15 mL para diluição.",
+    "dose": "150 mg IV a cada 12 h por 5-7 dias ou 600 mg VO a cada 12 h por 5 dias; pode converter IV-VO conforme resposta.",
     "doseKg": null,
     "indication": "Pneumonia adquirida na comunidade (PAC) em adultos, incluindo formas causadas por patógenos atípicos (Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila) e S. pneumoniae.",
     "spectrum": "Streptococcus pneumoniae (incluindo cepas resistentes às quinolonas e macrolídeos), Staphylococcus aureus (MSSA, MRSA), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Haemophilus influenzae. Sem atividade contra Gram-negativos entéricos ou anaeróbios.",
-    "contraindications": [
-      "Hipersensibilidade às pleuromutilinas",
-      "Prolongamento congênito do intervalo QT",
-      "Uso concomitante de fármacos que prolongam QT e são substratos de CYP3A4"
-    ],
+    "contraindications": "Hipersensibilidade e contraindicações específicas da formulação/indicação conforme bula.",
     "risksByPatient": [],
-    "alerts": [
-      "Novo mecanismo de ação (inibição do peptidil transferase do ribossomo 50S) — sem resistência cruzada com macrolídeos, quinolonas ou tetraciclinas.",
-      "Prolongamento do QT — monitorar ECG em pacientes de risco.",
-      "Substrato e inibidor de CYP3A4 — múltiplas interações medicamentosas.",
-      "Não necessita ajuste renal."
-    ],
-    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CAP Guidelines 2019 / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Indicada para pneumonia adquirida na comunidade."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Monitorar prolongamento de QT e hepatotoxicidade."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Não requer suplementação pós-HD."
-      }
-    }
+    "alerts": "ECG/eletrólitos se risco, função hepática e resposta infecciosa.; Prolongamento de QT, arritmia, hepatotoxicidade e risco de C. difficile.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb972ea8-7502-422e-84bb-66cb8e93ca06",
+    "renalDose": "Revisar função renal e tabela específica; não inferir ajuste numérico ausente.",
+    "pharmacologicClass": "Antibacteriano pleuromutilina",
+    "presentations": "Comprimido 600 mg; solução IV 150 mg/15 mL para diluição.",
+    "mechanism": "Liga-se ao centro peptidil-transferase da subunidade 50S e inibe síntese proteica bacteriana.",
+    "pharmacodynamics": "Liga-se ao centro peptidil-transferase da subunidade 50S e inibe síntese proteica bacteriana.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida e eliminação na fonte primária aplicável.",
+    "indications": "Pneumonia bacteriana adquirida na comunidade em adultos por patógenos suscetíveis.",
+    "pediatricDose": "Segurança pediátrica não estabelecida; bloqueado.",
+    "hepaticDose": "Revisar gravidade hepática e bula; não inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Diarreia, náusea, reação no local, elevação de enzimas hepáticas.",
+    "dangerousAdverseEffects": "Prolongamento de QT, arritmia, hepatotoxicidade e risco de C. difficile.",
+    "adverseEffects": "Diarreia, náusea, reação no local, elevação de enzimas hepáticas.; Prolongamento de QT, arritmia, hepatotoxicidade e risco de C. difficile.",
+    "interactions": "Interações CYP3A4/P-gp; evitar outros prolongadores de QT e fortes indutores.",
+    "monitoring": "ECG/eletrólitos se risco, função hepática e resposta infecciosa.",
+    "administration": "Administrar somente pela via e formulação rotuladas, respeitando relação com alimentos e técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; não inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro e velocidade da bula; caso contrário, não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula; não usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, risco do lactente e necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunção renal/hepática, comorbidades e polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações e quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população e jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável e dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Prolongamento de QT, arritmia, hepatotoxicidade e risco de C. difficile.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb972ea8-7502-422e-84bb-66cb8e93ca06"
+    ]
   },
   "es": {
     "name": "Lefamulina",
-    "class": "Pleuromutilin semisintético (primero de la clase aprobado para uso sistémico)",
-    "commercialNames": {
-      "br": [
-        "Xenleta (acesso limitado no Brasil)"
-      ],
-      "ar": [
-        "Xenleta"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 600 mg",
-      "Solución para infusión EV: 150 mg/15 mL (10 mg/mL)"
-    ],
-    "dose": {
-      "adultoVO": "600 mg VO 12/12h × 5 días",
-      "adultoEV": "150 mg EV 12/12h × 5–7 días (infusión en 60 min)"
-    },
+    "class": "Antibacteriano pleuromutilina",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimido 600 mg; solución IV 150 mg/15 mL para diluição.",
+    "dose": "150 mg IV a cada 12 h por 5-7 dias ou 600 mg VO a cada 12 h por 5 dias; pode converter IV-VO conforme resposta.",
     "doseKg": null,
     "indication": "Neumonía adquirida en la comunidad (NAC) en adultos, incluidas formas causadas por patógenos atípicos (Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila) y S. pneumoniae.",
     "spectrum": "Streptococcus pneumoniae (incluidas cepas resistentes a quinolonas y macrólidos), Staphylococcus aureus (MSSA, MRSA), Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila, Haemophilus influenzae. Sin actividad frente a Gramnegativos entéricos ni anaerobios.",
-    "contraindications": [
-      "Hipersensibilidad a las pleuromutilinas",
-      "Prolongación congénita del intervalo QT",
-      "Uso concomitante de fármacos que prolongan QT y son sustratos de CYP3A4"
-    ],
+    "contraindications": "Hipersensibilidade y contraindicações específicas da formulação/indicação conforme bula.",
     "risksByPatient": [],
-    "alerts": [
-      "Nuevo mecanismo de acción (inhibición del peptidil transferasa del ribosoma 50S) — sin resistencia cruzada con macrólidos, quinolonas ni tetraciclinas.",
-      "Prolongación del QT — monitorizar ECG en pacientes de riesgo.",
-      "Sustrato e inhibidor de CYP3A4 — múltiples interacciones medicamentosas.",
-      "No requiere ajuste renal."
-    ],
-    "ref": "Sanford Guide 2025 / FDA Prescribing Information / IDSA CAP Guidelines 2019 / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Indicada para neumonía adquirida en la comunidad."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "Monitorizar prolongación del QT y hepatotoxicidad."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "600 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "1200 mg/dia",
-          "unidade": "mg"
-        },
-        "ev": {
-          "dose": "150 mg",
-          "intervalo": "12/12h",
-          "doseMaxima": "300 mg/dia",
-          "unidade": "mg"
-        },
-        "pediatrica": null,
-        "obs": "No requiere suplementación post-HD."
-      }
-    }
+    "alerts": "ECG/eletrólitos se riesgo, función hepática y resposta infecciosa.; Prolongamento de QT, arritmia, hepatotoxicidade y riesgo de C. difficile.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb972ea8-7502-422e-84bb-66cb8e93ca06",
+    "renalDose": "Revisar función renal y tabela específica; no inferir ajuste numérico ausente.",
+    "pharmacologicClass": "Antibacteriano pleuromutilina",
+    "presentations": "Comprimido 600 mg; solución IV 150 mg/15 mL para diluição.",
+    "mechanism": "Liga-se ao centro peptidil-transferase da subunidade 50S y inibe síntese proteica bacteriana.",
+    "pharmacodynamics": "Liga-se ao centro peptidil-transferase da subunidade 50S y inibe síntese proteica bacteriana.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida y eliminação na fonte primária aplicável.",
+    "indications": "Pneumonia bacteriana adquirida na comunidade em adultos por patógenos suscetíveis.",
+    "pediatricDose": "Segurança pediátrica no establecida; bloqueado.",
+    "hepaticDose": "Revisar gravidade hepática y bula; no inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Diarreia, náusea, reação no local, elevação de enzimas hepáticas.",
+    "dangerousAdverseEffects": "Prolongamento de QT, arritmia, hepatotoxicidade y riesgo de C. difficile.",
+    "adverseEffects": "Diarreia, náusea, reação no local, elevação de enzimas hepáticas.; Prolongamento de QT, arritmia, hepatotoxicidade y riesgo de C. difficile.",
+    "interactions": "Interações CYP3A4/P-gp; evitar outros prolongadores de QT y fortes indutores.",
+    "monitoring": "ECG/eletrólitos se riesgo, función hepática y resposta infecciosa.",
+    "administration": "Administrar somente pela via y formulação rotuladas, respeitando relação con alimentos y técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; no inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro y velocidade da bula; caso contrário, no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula; no usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, riesgo do lactente y necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunción renal/hepática, comorbidades y polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações y quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população y jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável y dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Prolongamento de QT, arritmia, hepatotoxicidade y riesgo de C. difficile.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb972ea8-7502-422e-84bb-66cb8e93ca06"
+    ]
   },
   "name": {
     "pt": "Lefamulina",
@@ -256,9 +96,21 @@
     "xenleta",
     "pleuromutilin semi-sintetico (primeiro da classe aprovado para uso sistemico)"
   ],
-  "dataVersion": "clinical-data-v1-90e2040f4c24f2f1",
-  "clinicalContentSha256": "90e2040f4c24f2f1f8573b266154a737b76c5a66e8b9314a5fe49bd2aa351536",
+  "dataVersion": "clinical-data-v1-0a6ad1f1373ff724",
+  "clinicalContentSha256": "0a6ad1f1373ff7242f371724e37ec2dc8d3f98195d5408ee75cb0bcb0c131c53",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "lefamulina.mcGoldClinicalV1",
+    "lote": "045",
+    "requiredFields": 33,
+    "approvedSha256": "781a871456c31ff4490148a0c60331863631938e1e5bb371917a96e84ff71b14",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

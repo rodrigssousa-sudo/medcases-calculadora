@@ -507,3 +507,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:etinilestradiol_levonorgestrel:END */
+/* GOLD33_SELECTIVE:letrozol_ginecologia:START */
+;(function(){var db=window.GINECOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="letrozol_ginecologia";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:letrozol_ginecologia:"+matches.length);drug=matches[0];}else{drug=db&&db["letrozol_ginecologia"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:letrozol_ginecologia");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "045",
+    "requiredFieldCount": 33,
+    "approvedSha256": "781a871456c31ff4490148a0c60331863631938e1e5bb371917a96e84ff71b14",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Letrozol",
+    "class": "Inibidor não esteroidal da aromatase",
+    "pharmacologicClass": "Inibidor não esteroidal da aromatase",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimido 2,5 mg.",
+    "presentations": "Comprimido 2,5 mg.",
+    "mechanism": "Ação farmacológica específica da classe, conforme fonte primária; efeito depende da exposição, via e população.",
+    "pharmacodynamics": "Ação farmacológica específica da classe, conforme fonte primária; efeito depende da exposição, via e população.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida e eliminação na fonte primária aplicável.",
+    "indications": "Câncer de mama hormônio-positivo em mulheres pós-menopáusicas; indução de ovulação é uso off-label guiado por protocolo.",
+    "dose": "Oncologia: 2,5 mg VO uma vez ao dia. Indução de ovulação: protocolos frequentemente usam 2,5-5 mg/dia por 5 dias, mas exige decisão especializada e não é indicação FDA.",
+    "pediatricDose": "Não aplicável à pediatria; uso reprodutivo exige protocolo.",
+    "renalDose": "Revisar função renal e tabela específica; não inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática e bula; não inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Fogachos, artralgia, fadiga, náusea e hipercolesterolemia.",
+    "dangerousAdverseEffects": "Perda óssea/fraturas, eventos cardiovasculares e toxicidade embriofetal.",
+    "adverseEffects": "Fogachos, artralgia, fadiga, náusea e hipercolesterolemia.; Perda óssea/fraturas, eventos cardiovasculares e toxicidade embriofetal.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Indutores/inibidores CYP podem alterar exposição; tamoxifeno reduz concentração de letrozol.",
+    "monitoring": "Densidade óssea, lipídios, sintomas musculoesqueléticos; excluir gravidez antes de uso reprodutivo.",
+    "administration": "Administrar somente pela via e formulação rotuladas, respeitando relação com alimentos e técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; não inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro e velocidade da bula; caso contrário, não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula; não usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, risco do lactente e necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunção renal/hepática, comorbidades e polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações e quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população e jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável e dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Perda óssea/fraturas, eventos cardiovasculares e toxicidade embriofetal.",
+    "alerts": "Densidade óssea, lipídios, sintomas musculoesqueléticos; excluir gravidez antes de uso reprodutivo.; Perda óssea/fraturas, eventos cardiovasculares e toxicidade embriofetal.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3cc750a5-cc88-4b42-b4ab-a87e760f291d"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3cc750a5-cc88-4b42-b4ab-a87e760f291d"
+  },
+  "es": {
+    "name": "Letrozol",
+    "class": "Inibidor no esteroidal da aromatase",
+    "pharmacologicClass": "Inibidor no esteroidal da aromatase",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimido 2,5 mg.",
+    "presentations": "Comprimido 2,5 mg.",
+    "mechanism": "Ação farmacológica específica da classe, conforme fonte primária; efeito depende da exposição, via y população.",
+    "pharmacodynamics": "Ação farmacológica específica da classe, conforme fonte primária; efeito depende da exposição, via y população.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida y eliminação na fonte primária aplicável.",
+    "indications": "Câncer de mama hormônio-positivo em mulheres pós-menopáusicas; indução de ovulação é uso off-label guiado por protocolo.",
+    "dose": "Oncologia: 2,5 mg VO una vez al día. Indução de ovulação: protocolos frequentemente usam 2,5-5 mg/dia por 5 dias, mas exige decisão especializada y no é indicação FDA.",
+    "pediatricDose": "No aplicável à pediatria; uso reprodutivo exige protocolo.",
+    "renalDose": "Revisar función renal y tabela específica; no inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática y bula; no inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Fogachos, artralgia, fadiga, náusea y hipercolesterolemia.",
+    "dangerousAdverseEffects": "Perda óssea/fraturas, eventos cardiovasculares y toxicidade embriofetal.",
+    "adverseEffects": "Fogachos, artralgia, fadiga, náusea y hipercolesterolemia.; Perda óssea/fraturas, eventos cardiovasculares y toxicidade embriofetal.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Indutores/inibidores CYP podem alterar exposição; tamoxifeno reduz concentração de letrozol.",
+    "monitoring": "Densidade óssea, lipídios, sintomas musculoesqueléticos; excluir embarazo antes de uso reprodutivo.",
+    "administration": "Administrar somente pela via y formulação rotuladas, respeitando relação con alimentos y técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; no inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro y velocidade da bula; caso contrário, no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula; no usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, riesgo do lactente y necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunción renal/hepática, comorbidades y polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações y quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população y jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável y dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Perda óssea/fraturas, eventos cardiovasculares y toxicidade embriofetal.",
+    "alerts": "Densidade óssea, lipídios, sintomas musculoesqueléticos; excluir embarazo antes de uso reprodutivo.; Perda óssea/fraturas, eventos cardiovasculares y toxicidade embriofetal.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3cc750a5-cc88-4b42-b4ab-a87e760f291d"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3cc750a5-cc88-4b42-b4ab-a87e760f291d"
+  }
+};})();
+/* GOLD33_SELECTIVE:letrozol_ginecologia:END */

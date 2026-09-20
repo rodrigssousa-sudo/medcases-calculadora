@@ -29199,3 +29199,91 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:isoniazida:END */
+/* GOLD33_SELECTIVE:lefamulina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="lefamulina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:lefamulina:"+matches.length);drug=matches[0];}else{drug=db&&db["lefamulina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:lefamulina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "045",
+    "requiredFieldCount": 33,
+    "approvedSha256": "781a871456c31ff4490148a0c60331863631938e1e5bb371917a96e84ff71b14",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Lefamulina",
+    "class": "Antibacteriano pleuromutilina",
+    "pharmacologicClass": "Antibacteriano pleuromutilina",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimido 600 mg; solução IV 150 mg/15 mL para diluição.",
+    "presentations": "Comprimido 600 mg; solução IV 150 mg/15 mL para diluição.",
+    "mechanism": "Liga-se ao centro peptidil-transferase da subunidade 50S e inibe síntese proteica bacteriana.",
+    "pharmacodynamics": "Liga-se ao centro peptidil-transferase da subunidade 50S e inibe síntese proteica bacteriana.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida e eliminação na fonte primária aplicável.",
+    "indications": "Pneumonia bacteriana adquirida na comunidade em adultos por patógenos suscetíveis.",
+    "dose": "150 mg IV a cada 12 h por 5-7 dias ou 600 mg VO a cada 12 h por 5 dias; pode converter IV-VO conforme resposta.",
+    "pediatricDose": "Segurança pediátrica não estabelecida; bloqueado.",
+    "renalDose": "Revisar função renal e tabela específica; não inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática e bula; não inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Diarreia, náusea, reação no local, elevação de enzimas hepáticas.",
+    "dangerousAdverseEffects": "Prolongamento de QT, arritmia, hepatotoxicidade e risco de C. difficile.",
+    "adverseEffects": "Diarreia, náusea, reação no local, elevação de enzimas hepáticas.; Prolongamento de QT, arritmia, hepatotoxicidade e risco de C. difficile.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Interações CYP3A4/P-gp; evitar outros prolongadores de QT e fortes indutores.",
+    "monitoring": "ECG/eletrólitos se risco, função hepática e resposta infecciosa.",
+    "administration": "Administrar somente pela via e formulação rotuladas, respeitando relação com alimentos e técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; não inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro e velocidade da bula; caso contrário, não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula; não usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, risco do lactente e necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunção renal/hepática, comorbidades e polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações e quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população e jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável e dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Prolongamento de QT, arritmia, hepatotoxicidade e risco de C. difficile.",
+    "alerts": "ECG/eletrólitos se risco, função hepática e resposta infecciosa.; Prolongamento de QT, arritmia, hepatotoxicidade e risco de C. difficile.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb972ea8-7502-422e-84bb-66cb8e93ca06"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb972ea8-7502-422e-84bb-66cb8e93ca06"
+  },
+  "es": {
+    "name": "Lefamulina",
+    "class": "Antibacteriano pleuromutilina",
+    "pharmacologicClass": "Antibacteriano pleuromutilina",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimido 600 mg; solución IV 150 mg/15 mL para diluição.",
+    "presentations": "Comprimido 600 mg; solución IV 150 mg/15 mL para diluição.",
+    "mechanism": "Liga-se ao centro peptidil-transferase da subunidade 50S y inibe síntese proteica bacteriana.",
+    "pharmacodynamics": "Liga-se ao centro peptidil-transferase da subunidade 50S y inibe síntese proteica bacteriana.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida y eliminação na fonte primária aplicável.",
+    "indications": "Pneumonia bacteriana adquirida na comunidade em adultos por patógenos suscetíveis.",
+    "dose": "150 mg IV a cada 12 h por 5-7 dias ou 600 mg VO a cada 12 h por 5 dias; pode converter IV-VO conforme resposta.",
+    "pediatricDose": "Segurança pediátrica no establecida; bloqueado.",
+    "renalDose": "Revisar función renal y tabela específica; no inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática y bula; no inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Diarreia, náusea, reação no local, elevação de enzimas hepáticas.",
+    "dangerousAdverseEffects": "Prolongamento de QT, arritmia, hepatotoxicidade y riesgo de C. difficile.",
+    "adverseEffects": "Diarreia, náusea, reação no local, elevação de enzimas hepáticas.; Prolongamento de QT, arritmia, hepatotoxicidade y riesgo de C. difficile.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Interações CYP3A4/P-gp; evitar outros prolongadores de QT y fortes indutores.",
+    "monitoring": "ECG/eletrólitos se riesgo, función hepática y resposta infecciosa.",
+    "administration": "Administrar somente pela via y formulação rotuladas, respeitando relação con alimentos y técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; no inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro y velocidade da bula; caso contrário, no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula; no usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, riesgo do lactente y necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunción renal/hepática, comorbidades y polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações y quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população y jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável y dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Prolongamento de QT, arritmia, hepatotoxicidade y riesgo de C. difficile.",
+    "alerts": "ECG/eletrólitos se riesgo, función hepática y resposta infecciosa.; Prolongamento de QT, arritmia, hepatotoxicidade y riesgo de C. difficile.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb972ea8-7502-422e-84bb-66cb8e93ca06"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb972ea8-7502-422e-84bb-66cb8e93ca06"
+  }
+};})();
+/* GOLD33_SELECTIVE:lefamulina:END */

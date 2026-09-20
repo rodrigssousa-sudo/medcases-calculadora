@@ -67560,3 +67560,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:labetalol:END */
+/* GOLD33_SELECTIVE:lercanidipina:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="lercanidipina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:lercanidipina:"+matches.length);drug=matches[0];}else{drug=db&&db["lercanidipina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:lercanidipina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "045",
+    "requiredFieldCount": 33,
+    "approvedSha256": "781a871456c31ff4490148a0c60331863631938e1e5bb371917a96e84ff71b14",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Lercanidipina",
+    "class": "Bloqueador de canal de cálcio di-hidropiridínico",
+    "pharmacologicClass": "Bloqueador de canal de cálcio di-hidropiridínico",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimidos 10/20 mg.",
+    "presentations": "Comprimidos 10/20 mg.",
+    "mechanism": "Ação farmacológica específica da classe, conforme fonte primária; efeito depende da exposição, via e população.",
+    "pharmacodynamics": "Ação farmacológica específica da classe, conforme fonte primária; efeito depende da exposição, via e população.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida e eliminação na fonte primária aplicável.",
+    "indications": "Hipertensão essencial em adultos.",
+    "dose": "10 mg VO uma vez ao dia pelo menos 15 min antes da refeição; pode aumentar para 20 mg/dia após avaliação.",
+    "pediatricDose": "Não recomendada em menores de 18 anos; bloqueado.",
+    "renalDose": "Revisar função renal e tabela específica; não inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática e bula; não inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Edema periférico, cefaleia, rubor e palpitações.",
+    "dangerousAdverseEffects": "Hipotensão, angina e taquicardia; interações metabólicas relevantes.",
+    "adverseEffects": "Edema periférico, cefaleia, rubor e palpitações.; Hipotensão, angina e taquicardia; interações metabólicas relevantes.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Contraindicada com fortes inibidores CYP3A4, ciclosporina e grapefruit; cautela com indutores.",
+    "monitoring": "Pressão, frequência, edema, angina e interações.",
+    "administration": "Administrar somente pela via e formulação rotuladas, respeitando relação com alimentos e técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; não inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro e velocidade da bula; caso contrário, não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula; não usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, risco do lactente e necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunção renal/hepática, comorbidades e polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações e quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população e jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável e dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Hipotensão, angina e taquicardia; interações metabólicas relevantes.",
+    "alerts": "Pressão, frequência, edema, angina e interações.; Hipotensão, angina e taquicardia; interações metabólicas relevantes.",
+    "references": [
+      "Fonte primária/oficial - https://www.medicines.org.uk/emc/product/102168/smpc",
+      "Fonte primária/oficial - https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/102168/smpc"
+  },
+  "es": {
+    "name": "Lercanidipina",
+    "class": "Bloqueador de canal de cálcio di-hidropiridínico",
+    "pharmacologicClass": "Bloqueador de canal de cálcio di-hidropiridínico",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimidos 10/20 mg.",
+    "presentations": "Comprimidos 10/20 mg.",
+    "mechanism": "Ação farmacológica específica da classe, conforme fonte primária; efeito depende da exposição, via y população.",
+    "pharmacodynamics": "Ação farmacológica específica da classe, conforme fonte primária; efeito depende da exposição, via y população.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida y eliminação na fonte primária aplicável.",
+    "indications": "Hipertensão essencial em adultos.",
+    "dose": "10 mg VO una vez al día pelo menos 15 min antes da refeição; pode aumentar para 20 mg/dia após avaliação.",
+    "pediatricDose": "No recomendada em menores de 18 anos; bloqueado.",
+    "renalDose": "Revisar función renal y tabela específica; no inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática y bula; no inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Edema periférico, cefaleia, rubor y palpitações.",
+    "dangerousAdverseEffects": "Hipotensão, angina y taquicardia; interações metabólicas relevantes.",
+    "adverseEffects": "Edema periférico, cefaleia, rubor y palpitações.; Hipotensão, angina y taquicardia; interações metabólicas relevantes.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Contraindicada con fortes inibidores CYP3A4, ciclosporina y grapefruit; cautela con indutores.",
+    "monitoring": "Pressão, frequência, edema, angina y interações.",
+    "administration": "Administrar somente pela via y formulação rotuladas, respeitando relação con alimentos y técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; no inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro y velocidade da bula; caso contrário, no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula; no usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, riesgo do lactente y necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunción renal/hepática, comorbidades y polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações y quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população y jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável y dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Hipotensão, angina y taquicardia; interações metabólicas relevantes.",
+    "alerts": "Pressão, frequência, edema, angina y interações.; Hipotensão, angina y taquicardia; interações metabólicas relevantes.",
+    "references": [
+      "Fonte primária/oficial - https://www.medicines.org.uk/emc/product/102168/smpc",
+      "Fonte primária/oficial - https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/102168/smpc"
+  }
+};})();
+/* GOLD33_SELECTIVE:lercanidipina:END */

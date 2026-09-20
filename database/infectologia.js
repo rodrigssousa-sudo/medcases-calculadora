@@ -9131,3 +9131,91 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:lamivudina:END */
+/* GOLD33_SELECTIVE:ledipasvir_sofosbuvir:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="ledipasvir_sofosbuvir";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:ledipasvir_sofosbuvir:"+matches.length);drug=matches[0];}else{drug=db&&db["ledipasvir_sofosbuvir"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:ledipasvir_sofosbuvir");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "045",
+    "requiredFieldCount": 33,
+    "approvedSha256": "781a871456c31ff4490148a0c60331863631938e1e5bb371917a96e84ff71b14",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ledipasvir/sofosbuvir",
+    "class": "Antiviral de ação direta contra HCV",
+    "pharmacologicClass": "Antiviral de ação direta contra HCV",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimido 90/400 mg e apresentações pediátricas/grânulos conforme produto.",
+    "presentations": "Comprimido 90/400 mg e apresentações pediátricas/grânulos conforme produto.",
+    "mechanism": "Ledipasvir inibe NS5A; sofosbuvir, após ativação, inibe a polimerase NS5B do HCV.",
+    "pharmacodynamics": "Ledipasvir inibe NS5A; sofosbuvir, após ativação, inibe a polimerase NS5B do HCV.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida e eliminação na fonte primária aplicável.",
+    "indications": "Tratamento de hepatite C crônica em genótipos/populações definidos pela bula.",
+    "dose": "Adulto: 90/400 mg VO uma vez ao dia; duração 8, 12 ou 24 semanas conforme genótipo, cirrose, tratamento prévio e carga viral.",
+    "pediatricDose": ">=3 anos possui esquema por peso/formulação; automação bloqueada até tabela integral.",
+    "renalDose": "Revisar função renal e tabela específica; não inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática e bula; não inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Fadiga, cefaleia, náusea.",
+    "dangerousAdverseEffects": "Reativação de HBV; bradicardia grave com amiodarona.",
+    "adverseEffects": "Fadiga, cefaleia, náusea.; Reativação de HBV; bradicardia grave com amiodarona.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Evitar amiodarona quando possível; antiácidos e redutores de acidez afetam ledipasvir; revisar P-gp/indutores.",
+    "monitoring": "HBV antes de iniciar, HCV RNA, função hepática/renal e interações.",
+    "administration": "Administrar somente pela via e formulação rotuladas, respeitando relação com alimentos e técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; não inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro e velocidade da bula; caso contrário, não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula; não usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, risco do lactente e necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunção renal/hepática, comorbidades e polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações e quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população e jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável e dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Reativação de HBV; bradicardia grave com amiodarona.",
+    "alerts": "HBV antes de iniciar, HCV RNA, função hepática/renal e interações.; Reativação de HBV; bradicardia grave com amiodarona.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a1c555d-2fdf-4150-8ace-dbc770c226bf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a1c555d-2fdf-4150-8ace-dbc770c226bf"
+  },
+  "es": {
+    "name": "Ledipasvir/sofosbuvir",
+    "class": "Antiviral de ação direta contra HCV",
+    "pharmacologicClass": "Antiviral de ação direta contra HCV",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Comprimido 90/400 mg y apresentações pediátricas/grânulos conforme produto.",
+    "presentations": "Comprimido 90/400 mg y apresentações pediátricas/grânulos conforme produto.",
+    "mechanism": "Ledipasvir inibe NS5A; sofosbuvir, após ativação, inibe a polimerase NS5B do HCV.",
+    "pharmacodynamics": "Ledipasvir inibe NS5A; sofosbuvir, após ativação, inibe a polimerase NS5B do HCV.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida y eliminação na fonte primária aplicável.",
+    "indications": "Tratamento de hepatite C crônica em genótipos/populações definidos pela bula.",
+    "dose": "Adulto: 90/400 mg VO una vez al día; duração 8, 12 ou 24 semanas conforme genótipo, cirrose, tratamiento prévio y carga viral.",
+    "pediatricDose": ">=3 anos possui esquema por peso/formulação; automação bloqueada até tabela integral.",
+    "renalDose": "Revisar función renal y tabela específica; no inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática y bula; no inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Fadiga, cefaleia, náusea.",
+    "dangerousAdverseEffects": "Reativação de HBV; bradicardia grave con amiodarona.",
+    "adverseEffects": "Fadiga, cefaleia, náusea.; Reativação de HBV; bradicardia grave con amiodarona.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Evitar amiodarona quando possível; antiácidos y redutores de acidez afetam ledipasvir; revisar P-gp/indutores.",
+    "monitoring": "HBV antes de iniciar, HCV RNA, función hepática/renal y interações.",
+    "administration": "Administrar somente pela via y formulação rotuladas, respeitando relação con alimentos y técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; no inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro y velocidade da bula; caso contrário, no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula; no usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, riesgo do lactente y necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunción renal/hepática, comorbidades y polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações y quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população y jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável y dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Reativação de HBV; bradicardia grave con amiodarona.",
+    "alerts": "HBV antes de iniciar, HCV RNA, función hepática/renal y interações.; Reativação de HBV; bradicardia grave con amiodarona.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a1c555d-2fdf-4150-8ace-dbc770c226bf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a1c555d-2fdf-4150-8ace-dbc770c226bf"
+  }
+};})();
+/* GOLD33_SELECTIVE:ledipasvir_sofosbuvir:END */

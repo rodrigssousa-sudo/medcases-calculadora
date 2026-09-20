@@ -386,3 +386,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:brimonidina:END */
+/* GOLD33_SELECTIVE:latanoprosta:START */
+;(function(){var db=window.OFTALMOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="latanoprosta";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:latanoprosta:"+matches.length);drug=matches[0];}else{drug=db&&db["latanoprosta"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:latanoprosta");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "045",
+    "requiredFieldCount": 33,
+    "approvedSha256": "781a871456c31ff4490148a0c60331863631938e1e5bb371917a96e84ff71b14",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Latanoprosta",
+    "class": "Análogo de prostaglandina F2alfa oftálmico",
+    "pharmacologicClass": "Análogo de prostaglandina F2alfa oftálmico",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Colírio 0,005% (50 mcg/mL).",
+    "presentations": "Colírio 0,005% (50 mcg/mL).",
+    "mechanism": "Aumenta o escoamento uveoescleral do humor aquoso por agonismo do receptor FP.",
+    "pharmacodynamics": "Aumenta o escoamento uveoescleral do humor aquoso por agonismo do receptor FP.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida e eliminação na fonte primária aplicável.",
+    "indications": "Redução da pressão intraocular em glaucoma de ângulo aberto e hipertensão ocular.",
+    "dose": "Solução 0,005%: 1 gota no(s) olho(s) afetado(s) uma vez ao dia à noite; doses mais frequentes podem reduzir o efeito.",
+    "pediatricDose": "Segurança pediátrica depende da bula/jurisdição; cálculo automatizado bloqueado.",
+    "renalDose": "Revisar função renal e tabela específica; não inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática e bula; não inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Hiperemia, ardor, pigmentação da íris, crescimento de cílios.",
+    "dangerousAdverseEffects": "Edema macular, uveíte, ceratite herpética reativada e alteração permanente da cor da íris.",
+    "adverseEffects": "Hiperemia, ardor, pigmentação da íris, crescimento de cílios.; Edema macular, uveíte, ceratite herpética reativada e alteração permanente da cor da íris.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Separar de outros colírios por pelo menos 5 min; remover lentes antes e recolocar após 15 min.",
+    "monitoring": "Monitorar PIO, inflamação, córnea, mácula em pacientes de risco e pigmentação.",
+    "administration": "Administrar somente pela via e formulação rotuladas, respeitando relação com alimentos e técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; não inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro e velocidade da bula; caso contrário, não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula; não usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, risco do lactente e necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunção renal/hepática, comorbidades e polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações e quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população e jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável e dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Edema macular, uveíte, ceratite herpética reativada e alteração permanente da cor da íris.",
+    "alerts": "Monitorar PIO, inflamação, córnea, mácula em pacientes de risco e pigmentação.; Edema macular, uveíte, ceratite herpética reativada e alteração permanente da cor da íris.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2c87e99e-33d4-4060-8876-ff05557c05eb"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2c87e99e-33d4-4060-8876-ff05557c05eb"
+  },
+  "es": {
+    "name": "Latanoprosta",
+    "class": "Análogo de prostaglandina F2alfa oftálmico",
+    "pharmacologicClass": "Análogo de prostaglandina F2alfa oftálmico",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Colírio 0,005% (50 mcg/mL).",
+    "presentations": "Colírio 0,005% (50 mcg/mL).",
+    "mechanism": "Aumenta o escoamento uveoescleral do humor aquoso por agonismo do receptor FP.",
+    "pharmacodynamics": "Aumenta o escoamento uveoescleral do humor aquoso por agonismo do receptor FP.",
+    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida y eliminação na fonte primária aplicável.",
+    "indications": "Redução da pressão intraocular em glaucoma de ângulo aberto y hipertensão ocular.",
+    "dose": "Solução 0,005%: 1 gota no(s) olho(s) afetado(s) una vez al día à noite; dosiss mais frequentes podem reduzir o efeito.",
+    "pediatricDose": "Segurança pediátrica depende da bula/jurisdição; cálculo automatizado bloqueado.",
+    "renalDose": "Revisar función renal y tabela específica; no inferir ajuste numérico ausente.",
+    "hepaticDose": "Revisar gravidade hepática y bula; no inferir ajuste numérico ausente.",
+    "commonAdverseEffects": "Hiperemia, ardor, pigmentação da íris, crescimento de cílios.",
+    "dangerousAdverseEffects": "Edema macular, uveíte, ceratite herpética reativada y alteração permanente da cor da íris.",
+    "adverseEffects": "Hiperemia, ardor, pigmentação da íris, crescimento de cílios.; Edema macular, uveíte, ceratite herpética reativada y alteração permanente da cor da íris.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da formulação/indicação conforme bula.",
+    "interactions": "Separar de outros colírios por pelo menos 5 min; remover lentes antes y recolocar após 15 min.",
+    "monitoring": "Monitorar PIO, inflamação, córnea, mácula em pacientes de riesgo y pigmentação.",
+    "administration": "Administrar somente pela via y formulação rotuladas, respeitando relação con alimentos y técnica quando aplicável.",
+    "preparation": "Seguir instruções específicas do produto; no inferir diluição, estabilidade ou concentração.",
+    "infusionProtocol": "Quando IV, seguir diluição, filtro y velocidade da bula; caso contrário, no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula; no usar automaticamente em gestação.",
+    "lactation": "Avaliar excreção, riesgo do lactente y necessidade materna.",
+    "specialPopulations": "Individualizar em idosos, disfunción renal/hepática, comorbidades y polifarmácia.",
+    "patientEducation": "Orientar adesão, sinais de alarme, interações y quando procurar atendimento.",
+    "clinicalPearls": "Confirmar indicação, formulação, via, população y jurisdição antes de calcular ou substituir.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável y dentro do escopo regulatório ou off-label claramente identificado.",
+    "safetyFlags": "Edema macular, uveíte, ceratite herpética reativada y alteração permanente da cor da íris.",
+    "alerts": "Monitorar PIO, inflamação, córnea, mácula em pacientes de riesgo y pigmentação.; Edema macular, uveíte, ceratite herpética reativada y alteração permanente da cor da íris.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2c87e99e-33d4-4060-8876-ff05557c05eb"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2c87e99e-33d4-4060-8876-ff05557c05eb"
+  }
+};})();
+/* GOLD33_SELECTIVE:latanoprosta:END */
