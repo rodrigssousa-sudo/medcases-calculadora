@@ -6666,3 +6666,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:leflunomida:END */
+/* GOLD33_SELECTIVE:lidocaina:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="lidocaina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:lidocaina:"+matches.length);drug=matches[0];}else{drug=db&&db["lidocaina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:lidocaina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "046",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b01bced97714803d025e288b269c2a23ae3562608450a3618c1ccb6e9db46467",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Lidocaína",
+    "class": "Anestésico local amida",
+    "pharmacologicClass": "Anestésico local amida",
+    "commercialNames": "Xylocaína; Lidocaína genérica",
+    "presentation": "Solução injetável para bolus IV e soluções prontas para infusão; concentrações dependem do fabricante.",
+    "presentations": "Solução injetável para bolus IV e soluções prontas para infusão; concentrações dependem do fabricante.",
+    "mechanism": "Bloqueia canais de sódio voltagem-dependentes, com maior afinidade por canais abertos ou inativados. No miocárdio ventricular e fibras de Purkinje reduz a automaticidade e encurta o potencial de ação.",
+    "pharmacodynamics": "Bloqueia canais de sódio voltagem-dependentes, com maior afinidade por canais abertos ou inativados. No miocárdio ventricular e fibras de Purkinje reduz a automaticidade e encurta o potencial de ação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "FV/TV sem pulso refratária à desfibrilação como opção antiarrítmica; Arritmias ventriculares agudas e recorrentes; Recorrência de TV polimórfica sem QT prolongado, conforme contexto clínico",
+    "dose": "PCR FV/TVsp: 1 a 1,5 mg/kg IV/IO; segunda dose 0,5 a 0,75 mg/kg conforme algoritmo AHA; Arritmia ventricular com pulso: Bolus 1 a 1,5 mg/kg IV a 25 a 50 mg/min; repetir conforme resposta dentro do limite recomendado; Infusão: 1 a 4 mg/min após controle inicial; individualizar por resposta e depuração",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Parestesia perioral; Tontura; Sonolência; Náusea; Hipotensão; Bradicardia",
+    "dangerousAdverseEffects": "Convulsões; Depressão respiratória; Bloqueio cardíaco; Arritmias graves; Colapso cardiovascular; Parada cardíaca",
+    "adverseEffects": "Parestesia, tontura e reação local.; Toxicidade sistêmica: convulsão, coma, hipotensão, bloqueio e parada cardíaca.",
+    "contraindications": "Hipersensibilidade à lidocaína ou anestésicos locais do tipo amida; Bloqueio sinoatrial, atrioventricular ou intraventricular grave sem marcapasso, conforme formulação e contexto",
+    "interactions": "Betabloqueadores e fármacos que reduzem fluxo hepático podem diminuir depuração; Cimetidina pode elevar concentrações; Outros antiarrítmicos e depressores de condução somam efeitos eletrofisiológicos; Amiodarona pode aumentar exposição e toxicidade",
+    "monitoring": "Não confundir doses antiarrítmicas com doses de anestesia local; Interromper ou reduzir diante de toxicidade neurológica ou cardiovascular progressiva",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Toxicidade sistêmica: convulsão, coma, hipotensão, bloqueio e parada cardíaca.",
+    "alerts": "Toxicidade sistêmica: convulsão, coma, hipotensão, bloqueio e parada cardíaca.; Não confundir doses antiarrítmicas com doses de anestesia local; Interromper ou reduzir diante de toxicidade neurológica ou cardiovascular progressiva",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0"
+  },
+  "es": {
+    "name": "Lidocaína",
+    "class": "Anestésico local amida",
+    "pharmacologicClass": "Anestésico local amida",
+    "commercialNames": "Xylocaína; Lidocaína genérica",
+    "presentation": "Solução injetável para bolus IV y soluções prontas para infusão; concentrações dependem do fabricante.",
+    "presentations": "Solução injetável para bolus IV y soluções prontas para infusão; concentrações dependem do fabricante.",
+    "mechanism": "Bloqueia canais de sódio voltagem-dependentes, con maior afinidade por canais abertos ou inativados. No miocárdio ventricular y fibras de Purkinje reduz a automaticidade y encurta o potencial de ação.",
+    "pharmacodynamics": "Bloqueia canais de sódio voltagem-dependentes, con maior afinidade por canais abertos ou inativados. No miocárdio ventricular y fibras de Purkinje reduz a automaticidade y encurta o potencial de ação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "FV/TV sem pulso refratária à desfibrilação como opção antiarrítmica; Arritmias ventriculares agudas y recorrentes; Recorrência de TV polimórfica sem QT prolongado, conforme contexto clínico",
+    "dose": "PCR FV/TVsp: 1 a 1,5 mg/kg IV/IO; segunda dosis 0,5 a 0,75 mg/kg conforme algoritmo AHA; Arritmia ventricular con pulso: Bolus 1 a 1,5 mg/kg IV a 25 a 50 mg/min; repetir conforme resposta dentro do limite recomendado; Infusão: 1 a 4 mg/min após controle inicial; individualizar por resposta y depuração",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Parestesia perioral; Tontura; Sonolência; Náusea; Hipotensão; Bradicardia",
+    "dangerousAdverseEffects": "Convulsões; Depressão respiratória; Bloqueio cardíaco; Arritmias graves; Colapso cardiovascular; Parada cardíaca",
+    "adverseEffects": "Parestesia, tontura y reação local.; Toxicidade sistêmica: convulsão, coma, hipotensão, bloqueio y parada cardíaca.",
+    "contraindications": "Hipersensibilidade à lidocaína ou anestésicos locais do tipo amida; Bloqueio sinoatrial, atrioventricular ou intraventricular grave sem marcapasso, conforme formulação y contexto",
+    "interactions": "Betabloqueadores y fármacos que reduzem fluxo hepático podem diminuir depuração; Cimetidina pode elevar concentrações; Outros antiarrítmicos y depressores de condução somam efeitos eletrofisiológicos; Amiodarona pode aumentar exposição y toxicidade",
+    "monitoring": "No confundir dosiss antiarrítmicas con dosiss de anestesia local; Interromper ou reduzir diante de toxicidade neurológica ou cardiovascular progressiva",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Toxicidade sistêmica: convulsão, coma, hipotensão, bloqueio y parada cardíaca.",
+    "alerts": "Toxicidade sistêmica: convulsão, coma, hipotensão, bloqueio y parada cardíaca.; No confundir dosiss antiarrítmicas con dosiss de anestesia local; Interromper ou reduzir diante de toxicidade neurológica ou cardiovascular progressiva",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0"
+  }
+};})();
+/* GOLD33_SELECTIVE:lidocaina:END */

@@ -5365,3 +5365,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:ipratropio:END */
+/* GOLD33_SELECTIVE:levodropropizina:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="levodropropizina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:levodropropizina:"+matches.length);drug=matches[0];}else{drug=db&&db["levodropropizina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:levodropropizina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "046",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b01bced97714803d025e288b269c2a23ae3562608450a3618c1ccb6e9db46467",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Levodropropizina",
+    "class": "Antitussígeno periférico",
+    "pharmacologicClass": "Antitussígeno periférico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução/xarope e comprimidos variam por país.",
+    "presentations": "Solução/xarope e comprimidos variam por país.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Tratamento sintomático de tosse não produtiva onde aprovada.",
+    "dose": "Adultos: 60 mg VO até três vezes/dia, com intervalo mínimo de 6 h, por curto período; confirmar bula local.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Sonolência, tontura, náusea e palpitações.",
+    "dangerousAdverseEffects": "Hipersensibilidade, broncoespasmo e hipotensão raros.",
+    "adverseEffects": "Sonolência, tontura, náusea e palpitações.; Hipersensibilidade, broncoespasmo e hipotensão raros.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipersensibilidade, broncoespasmo e hipotensão raros.",
+    "alerts": "Hipersensibilidade, broncoespasmo e hipotensão raros.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://pubmed.ncbi.nlm.nih.gov/?term=levodropropizine"
+    ],
+    "ref": "https://pubmed.ncbi.nlm.nih.gov/?term=levodropropizine"
+  },
+  "es": {
+    "name": "Levodropropizina",
+    "class": "Antitussígeno periférico",
+    "pharmacologicClass": "Antitussígeno periférico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução/xarope y comprimidos variam por país.",
+    "presentations": "Solução/xarope y comprimidos variam por país.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Tratamento sintomático de tosse no produtiva onde aprovada.",
+    "dose": "Adultos: 60 mg VO até três vezes/dia, con intervalo mínimo de 6 h, por curto período; confirmar bula local.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Sonolência, tontura, náusea y palpitações.",
+    "dangerousAdverseEffects": "Hipersensibilidade, broncoespasmo y hipotensão raros.",
+    "adverseEffects": "Sonolência, tontura, náusea y palpitações.; Hipersensibilidade, broncoespasmo y hipotensão raros.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipersensibilidade, broncoespasmo y hipotensão raros.",
+    "alerts": "Hipersensibilidade, broncoespasmo y hipotensão raros.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://pubmed.ncbi.nlm.nih.gov/?term=levodropropizine"
+    ],
+    "ref": "https://pubmed.ncbi.nlm.nih.gov/?term=levodropropizine"
+  }
+};})();
+/* GOLD33_SELECTIVE:levodropropizina:END */

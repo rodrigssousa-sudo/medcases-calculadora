@@ -3820,3 +3820,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:haloperidol:END */
+/* GOLD33_SELECTIVE:levomepromazina:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="levomepromazina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:levomepromazina:"+matches.length);drug=matches[0];}else{drug=db&&db["levomepromazina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:levomepromazina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "046",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b01bced97714803d025e288b269c2a23ae3562608450a3618c1ccb6e9db46467",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Levomepromazina",
+    "class": "Antipsicótico fenotiazínico sedativo",
+    "pharmacologicClass": "Antipsicótico fenotiazínico sedativo",
+    "commercialNames": "br: Neozine; Levomepromazina Cristália; ar: Nozinan; Levomepromazina Northia",
+    "presentation": "Comprimido 25 mg; Comprimido 100 mg; Gotas 40 mg/mL; Ampola 25 mg/mL",
+    "presentations": "Comprimido 25 mg; Comprimido 100 mg; Gotas 40 mg/mL; Ampola 25 mg/mL",
+    "mechanism": "Antagonista D2 com forte bloqueio H1, alfa-1, muscarínico e serotoninérgico; perfil muito sedativo e hipotensor.",
+    "pharmacodynamics": "Antagonista D2 com forte bloqueio H1, alfa-1, muscarínico e serotoninérgico; perfil muito sedativo e hipotensor.",
+    "pharmacokinetics": "Vida média aproximada: 15–30 horas.",
+    "indications": "Agitação psicomotora; Psicose aguda com insônia/agitação; Esquizofrenia; Mania aguda; Insônia grave em contexto psiquiátrico selecionado; Náuseas e vômitos refratários; Sedação e controle de sintomas em cuidados paliativos",
+    "dose": "adulto: Agitação/psicose: iniciar 25–50 mg VO à noite ou 2–3x/dia, conforme sedação e resposta.; paliativo: Cuidados paliativos/náuseas/agitação: doses baixas individualizadas conforme protocolo.; maxDose: Dose máxima depende da indicação; titular com cautela pelo alto risco de sedação e hipotensão.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência intensa; Hipotensão ortostática; Boca seca; Constipação; Tontura; Ganho de peso; Visão turva",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Depressão respiratória quando associada a sedativos; Prolongamento QT e arritmias; Delirium anticolinérgico; Discinesia tardia; Convulsões em predispostos",
+    "adverseEffects": "Sedação, hipotensão ortostática, boca seca e constipação.; QT/arrítmia, síndrome neuroléptica maligna, agranulocitose e depressão respiratória.",
+    "contraindications": "Hipersensibilidade às fenotiazinas; Depressão grave do SNC ou coma; Hipotensão grave; Insuficiência respiratória grave sem suporte; Doença de Parkinson ou demência com corpos de Lewy, salvo extrema necessidade",
+    "interactions": "Álcool; Opioides e benzodiazepínicos: maior depressão do SNC; Anti-hipertensivos: maior hipotensão; Anticolinérgicos: maior risco de retenção urinária, constipação e delirium; Fármacos que prolongam QT",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.; NOZINAN maleato oral e cloridrato injetável diferem em sal, concentração e via; confirmar bula e apresentação do país. Não usar dose oral como referência direta para injetável ou pediatria.; Nozinan oral (maleato) e injetável (cloridrato) têm sais, vias e bulas distintas; não converter doses/formulações automaticamente. Confirmar apresentação local.; Antipsicótico muito sedativo; titular lentamente.; Monitorar pressão arterial e risco de quedas.; Cuidado em combinação com opioides, benzodiazepínicos ou álcool.; Evitar em idosos frágeis quando possível.; Considerar ECG em pacientes com risco de QT.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "QT/arrítmia, síndrome neuroléptica maligna, agranulocitose e depressão respiratória.",
+    "alerts": "QT/arrítmia, síndrome neuroléptica maligna, agranulocitose e depressão respiratória.; SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.; NOZINAN maleato oral e cloridrato injetável diferem em sal, concentração e via; confirmar bula e apresentação do país. Não usar dose oral como referência direta para injetável ou pediatria.; Nozinan oral (maleato) e injetável (cloridrato) têm sais, vias e bulas distintas; não converter doses/formulações automaticamente. Confirmar apresentação local.; Antipsicótico muito sedativo; titular lentamente.; Monitorar pressão arterial e risco de quedas.; Cuidado em combinação com opioides, benzodiazepínicos ou álcool.; Evitar em idosos frágeis quando possível.; Considerar ECG em pacientes com risco de QT.",
+    "references": [
+      "Fonte primária/oficial - https://www.medicines.org.uk/emc/product/1428/smpc"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/1428/smpc"
+  },
+  "es": {
+    "name": "Levomepromazina",
+    "class": "Antipsicótico fenotiazínico sedativo",
+    "pharmacologicClass": "Antipsicótico fenotiazínico sedativo",
+    "commercialNames": "br: Neozine; Levomepromazina Cristália; ar: Nozinan; Levomepromazina Northia",
+    "presentation": "Comprimido 25 mg; Comprimido 100 mg; Gotas 40 mg/mL; Ampola 25 mg/mL",
+    "presentations": "Comprimido 25 mg; Comprimido 100 mg; Gotas 40 mg/mL; Ampola 25 mg/mL",
+    "mechanism": "Antagonista D2 con forte bloqueio H1, alfa-1, muscarínico y serotoninérgico; perfil muito sedativo y hipotensor.",
+    "pharmacodynamics": "Antagonista D2 con forte bloqueio H1, alfa-1, muscarínico y serotoninérgico; perfil muito sedativo y hipotensor.",
+    "pharmacokinetics": "Vida média aproximada: 15–30 horas.",
+    "indications": "Agitação psicomotora; Psicose aguda con insônia/agitação; Esquizofrenia; Mania aguda; Insônia grave em contexto psiquiátrico selecionado; Náuseas y vômitos refratários; Sedação y controle de sintomas em cuidados paliativos",
+    "dose": "adulto: Agitação/psicose: iniciar 25–50 mg VO à noite ou 2–3x/dia, conforme sedação y resposta.; paliativo: Cuidados paliativos/náuseas/agitação: dosiss baixas individualizadas conforme protocolo.; maxDose: Dose máxima depende da indicação; titular con cautela pelo alto riesgo de sedação y hipotensão.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência intensa; Hipotensão ortostática; Boca seca; Constipação; Tontura; Ganho de peso; Visão turva",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Depressão respiratória quando associada a sedativos; Prolongamento QT y arritmias; Delirium anticolinérgico; Discinesia tardia; Convulsões em predispostos",
+    "adverseEffects": "Sedação, hipotensão ortostática, boca seca y constipação.; QT/arrítmia, síndrome neuroléptica maligna, agranulocitose y depressão respiratória.",
+    "contraindications": "Hipersensibilidade às fenotiazinas; Depressão grave do SNC ou coma; Hipotensão grave; Insuficiência respiratória grave sem suporte; Doença de Parkinson ou demência con corpos de Lewy, salvo extrema necessidade",
+    "interactions": "Álcool; Opioides y benzodiazepínicos: maior depressão do SNC; Anti-hipertensivos: maior hipotensão; Anticolinérgicos: maior riesgo de retenção urinária, constipação y delirium; Fármacos que prolongam QT",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda no possui dosis pediátrica estruturada y validada para produto y indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica y avaliação especializada.; NOZINAN maleato oral y cloridrato injetável diferem em sal, concentração y via; confirmar bula y apresentação do país. No usar dosis oral como referência direta para injetável ou pediatria.; Nozinan oral (maleato) y injetável (cloridrato) têm sais, vias y bulas distintas; no converter dosiss/formulações automaticamente. Confirmar apresentação local.; Antipsicótico muito sedativo; titular lentamente.; Monitorar pressão arterial y riesgo de quedas.; Cuidado em combinação con opioides, benzodiazepínicos ou álcool.; Evitar em idosos frágeis quando possível.; Considerar ECG em pacientes con riesgo de QT.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "QT/arrítmia, síndrome neuroléptica maligna, agranulocitose y depressão respiratória.",
+    "alerts": "QT/arrítmia, síndrome neuroléptica maligna, agranulocitose y depressão respiratória.; SEGURANÇA PEDIÁTRICA: esta ficha ainda no possui dosis pediátrica estruturada y validada para produto y indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica y avaliação especializada.; NOZINAN maleato oral y cloridrato injetável diferem em sal, concentração y via; confirmar bula y apresentação do país. No usar dosis oral como referência direta para injetável ou pediatria.; Nozinan oral (maleato) y injetável (cloridrato) têm sais, vias y bulas distintas; no converter dosiss/formulações automaticamente. Confirmar apresentação local.; Antipsicótico muito sedativo; titular lentamente.; Monitorar pressão arterial y riesgo de quedas.; Cuidado em combinação con opioides, benzodiazepínicos ou álcool.; Evitar em idosos frágeis quando possível.; Considerar ECG em pacientes con riesgo de QT.",
+    "references": [
+      "Fonte primária/oficial - https://www.medicines.org.uk/emc/product/1428/smpc"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/1428/smpc"
+  }
+};})();
+/* GOLD33_SELECTIVE:levomepromazina:END */

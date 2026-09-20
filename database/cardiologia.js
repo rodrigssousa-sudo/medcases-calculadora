@@ -1663,3 +1663,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:furosemida_iv:END */
+/* GOLD33_SELECTIVE:lidocaina_iv:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="lidocaina_iv";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:lidocaina_iv:"+matches.length);drug=matches[0];}else{drug=db&&db["lidocaina_iv"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:lidocaina_iv");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "046",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b01bced97714803d025e288b269c2a23ae3562608450a3618c1ccb6e9db46467",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Lidocaína IV",
+    "class": "Antiarrítmico classe Ib",
+    "pharmacologicClass": "Antiarrítmico classe Ib",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução IV; concentração deve ser confirmada antes do cálculo.",
+    "presentations": "Solução IV; concentração deve ser confirmada antes do cálculo.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "FV/TV sem pulso refratária e arritmias ventriculares selecionadas.",
+    "dose": "PCR adulto: 1-1,5 mg/kg IV/IO; repetir 0,5-0,75 mg/kg a cada 5-10 min, máximo total 3 mg/kg. Infusão pós-ROSC: 1-4 mg/min conforme protocolo.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Parestesia, sonolência, náusea e confusão.",
+    "dangerousAdverseEffects": "Convulsões, bloqueio, bradicardia, hipotensão e parada.",
+    "adverseEffects": "Parestesia, sonolência, náusea e confusão.; Convulsões, bloqueio, bradicardia, hipotensão e parada.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Convulsões, bloqueio, bradicardia, hipotensão e parada.",
+    "alerts": "Convulsões, bloqueio, bradicardia, hipotensão e parada.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0"
+    ],
+    "ref": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+  },
+  "es": {
+    "name": "Lidocaína IV",
+    "class": "Antiarrítmico classe Ib",
+    "pharmacologicClass": "Antiarrítmico classe Ib",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução IV; concentração deve ser confirmada antes do cálculo.",
+    "presentations": "Solução IV; concentração deve ser confirmada antes do cálculo.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "FV/TV sem pulso refratária y arritmias ventriculares selecionadas.",
+    "dose": "PCR adulto: 1-1,5 mg/kg IV/IO; repetir 0,5-0,75 mg/kg a cada 5-10 min, máximo total 3 mg/kg. Infusão pós-ROSC: 1-4 mg/min conforme protocolo.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Parestesia, sonolência, náusea y confusão.",
+    "dangerousAdverseEffects": "Convulsões, bloqueio, bradicardia, hipotensão y parada.",
+    "adverseEffects": "Parestesia, sonolência, náusea y confusão.; Convulsões, bloqueio, bradicardia, hipotensão y parada.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Convulsões, bloqueio, bradicardia, hipotensão y parada.",
+    "alerts": "Convulsões, bloqueio, bradicardia, hipotensão y parada.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=f21512ea-c7c3-4766-b976-b2c0b5616bf0"
+    ],
+    "ref": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+  }
+};})();
+/* GOLD33_SELECTIVE:lidocaina_iv:END */

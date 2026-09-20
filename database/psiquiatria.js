@@ -6943,3 +6943,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:imipramina:END */
+/* GOLD33_SELECTIVE:levomilnaciprano:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="levomilnaciprano";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:levomilnaciprano:"+matches.length);drug=matches[0];}else{drug=db&&db["levomilnaciprano"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:levomilnaciprano");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "046",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b01bced97714803d025e288b269c2a23ae3562608450a3618c1ccb6e9db46467",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Levomilnaciprano",
+    "class": "Antidepressivo SNRI",
+    "pharmacologicClass": "Antidepressivo SNRI",
+    "commercialNames": "br: Fetzima; Levomilnaciprano; ar: Fetzima; Levomilnaciprán",
+    "presentation": "Cápsula de liberação prolongada 20 mg; Cápsula de liberação prolongada 40 mg; Cápsula de liberação prolongada 80 mg; Cápsula de liberação prolongada 120 mg",
+    "presentations": "Cápsula de liberação prolongada 20 mg; Cápsula de liberação prolongada 40 mg; Cápsula de liberação prolongada 80 mg; Cápsula de liberação prolongada 120 mg",
+    "mechanism": "Enantiômero ativo do milnaciprano; inibe recaptação de serotonina e noradrenalina, com efeito noradrenérgico relativamente predominante.",
+    "pharmacodynamics": "Enantiômero ativo do milnaciprano; inibe recaptação de serotonina e noradrenalina, com efeito noradrenérgico relativamente predominante.",
+    "pharmacokinetics": "Vida média aproximada: 12 horas.",
+    "indications": "Transtorno depressivo maior; Depressão com fadiga, apatia ou baixa energia; Depressão com lentificação psicomotora; Depressão com prejuízo funcional importante; Depressão com sintomas cognitivos subjetivos; Alternativa em resposta insuficiente ou intolerância a ISRS; Alternativa em depressão com sintomas dolorosos selecionados",
+    "dose": "adulto: Depressão: iniciar 20 mg VO 1x/dia por 2 dias; depois 40 mg VO 1x/dia.; titulacao: Pode aumentar em 40 mg a cada 2 ou mais dias, conforme resposta e tolerabilidade.; maxDose: Dose máxima usual: 120 mg/dia.",
+    "pediatricDose": "standard: Não se utiliza cálculo rotineiro por kg em adultos.; pediatric: Pediatria: não recomendado como uso rotineiro; considerar apenas com especialista.; maxDose: 120 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Náuseas; Constipação; Sudorese; Aumento da frequência cardíaca; Aumento da pressão arterial; Boca seca; Disfunção sexual; Insônia",
+    "dangerousAdverseEffects": "Hipertensão arterial; Taquicardia; Síndrome serotoninérgica; Síndrome de descontinuação se suspensão abrupta; Ideação suicida em jovens no início do tratamento; Virada maníaca/hipomaníaca; Hiponatremia/SIADH; Retenção urinária em predispostos",
+    "adverseEffects": "Náusea, constipação, hiperidrose, taquicardia e disfunção sexual.; Síndrome serotoninérgica, hipertensão, sangramento, mania, hiponatremia e ideação suicida.",
+    "contraindications": "Hipersensibilidade ao levomilnaciprano; Uso concomitante com IMAO; Hipertensão arterial não controlada; Doença renal terminal; Glaucoma de ângulo fechado não controlado; Transtorno bipolar sem estabilizador do humor",
+    "interactions": "IMAO: risco de síndrome serotoninérgica; Tramadol, linezolida, triptanos, lítio: risco serotoninérgico; AINEs, AAS, anticoagulantes: maior risco de sangramento; Inibidores fortes de CYP3A4: podem aumentar níveis de levomilnaciprano; Fármacos que aumentam pressão arterial ou frequência cardíaca: maior risco cardiovascular; Álcool e depressores do SNC: podem piorar tontura e prejuízo psicomotor",
+    "monitoring": "Monitorar pressão arterial e frequência cardíaca antes e durante o tratamento.; Ajustar dose em insuficiência renal moderada ou grave.; Não partir, mastigar ou triturar cápsulas de liberação prolongada.; Reduzir gradualmente para evitar sintomas de retirada.; Investigar história de mania/hipomania antes de iniciar.; Usar cautela em retenção urinária, glaucoma de ângulo fechado e doença cardiovascular.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, hipertensão, sangramento, mania, hiponatremia e ideação suicida.",
+    "alerts": "Síndrome serotoninérgica, hipertensão, sangramento, mania, hiponatremia e ideação suicida.; Monitorar pressão arterial e frequência cardíaca antes e durante o tratamento.; Ajustar dose em insuficiência renal moderada ou grave.; Não partir, mastigar ou triturar cápsulas de liberação prolongada.; Reduzir gradualmente para evitar sintomas de retirada.; Investigar história de mania/hipomania antes de iniciar.; Usar cautela em retenção urinária, glaucoma de ângulo fechado e doença cardiovascular.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=levomilnacipran"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=levomilnacipran"
+  },
+  "es": {
+    "name": "Levomilnaciprano",
+    "class": "Antidepressivo SNRI",
+    "pharmacologicClass": "Antidepressivo SNRI",
+    "commercialNames": "br: Fetzima; Levomilnaciprano; ar: Fetzima; Levomilnaciprán",
+    "presentation": "Cápsula de liberação prolongada 20 mg; Cápsula de liberação prolongada 40 mg; Cápsula de liberação prolongada 80 mg; Cápsula de liberação prolongada 120 mg",
+    "presentations": "Cápsula de liberação prolongada 20 mg; Cápsula de liberação prolongada 40 mg; Cápsula de liberação prolongada 80 mg; Cápsula de liberação prolongada 120 mg",
+    "mechanism": "Enantiômero ativo do milnaciprano; inibe recaptação de serotonina y noradrenalina, con efeito noradrenérgico relativamente predominante.",
+    "pharmacodynamics": "Enantiômero ativo do milnaciprano; inibe recaptação de serotonina y noradrenalina, con efeito noradrenérgico relativamente predominante.",
+    "pharmacokinetics": "Vida média aproximada: 12 horas.",
+    "indications": "Transtorno depressivo maior; Depressão con fadiga, apatia ou baixa energia; Depressão con lentificação psicomotora; Depressão con prejuízo funcional importante; Depressão con sintomas cognitivos subjetivos; Alternativa em resposta insuficiente ou intolerância a ISRS; Alternativa em depressão con sintomas dolorosos selecionados",
+    "dose": "adulto: Depressão: iniciar 20 mg VO 1x/dia por 2 dias; depois 40 mg VO 1x/dia.; titulacao: Pode aumentar em 40 mg a cada 2 ou mais dias, conforme resposta y tolerabilidade.; maxDose: Dose máxima usual: 120 mg/dia.",
+    "pediatricDose": "standard: No se utiliza cálculo rotineiro por kg em adultos.; pediatric: Pediatria: no recomendado como uso rotineiro; considerar apenas con especialista.; maxDose: 120 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Náuseas; Constipação; Sudorese; Aumento da frequência cardíaca; Aumento da pressão arterial; Boca seca; Disfunción sexual; Insônia",
+    "dangerousAdverseEffects": "Hipertensão arterial; Taquicardia; Síndrome serotoninérgica; Síndrome de descontinuação se suspensão abrupta; Ideação suicida em jovens no início do tratamento; Virada maníaca/hipomaníaca; Hiponatremia/SIADH; Retenção urinária em predispostos",
+    "adverseEffects": "Náusea, constipação, hiperidrose, taquicardia y disfunción sexual.; Síndrome serotoninérgica, hipertensão, sangramento, mania, hiponatremia y ideação suicida.",
+    "contraindications": "Hipersensibilidade ao levomilnaciprano; Uso concomitante con IMAO; Hipertensão arterial no controlada; Doença renal terminal; Glaucoma de ângulo fechado no controlado; Transtorno bipolar sem estabilizador do humor",
+    "interactions": "IMAO: riesgo de síndrome serotoninérgica; Tramadol, linezolida, triptanos, lítio: riesgo serotoninérgico; AINEs, AAS, anticoagulantes: maior riesgo de sangramento; Inibidores fortes de CYP3A4: podem aumentar níveis de levomilnaciprano; Fármacos que aumentam pressão arterial ou frequência cardíaca: maior riesgo cardiovascular; Álcool y depressores do SNC: podem piorar tontura y prejuízo psicomotor",
+    "monitoring": "Monitorar pressão arterial y frequência cardíaca antes y durante o tratamento.; Ajustar dosis em insuficiência renal moderada ou grave.; No partir, mastigar ou triturar cápsulas de liberação prolongada.; Reduzir gradualmente para evitar sintomas de retirada.; Investigar história de mania/hipomania antes de iniciar.; Usar cautela em retenção urinária, glaucoma de ângulo fechado y doença cardiovascular.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, hipertensão, sangramento, mania, hiponatremia y ideação suicida.",
+    "alerts": "Síndrome serotoninérgica, hipertensão, sangramento, mania, hiponatremia y ideação suicida.; Monitorar pressão arterial y frequência cardíaca antes y durante o tratamento.; Ajustar dosis em insuficiência renal moderada ou grave.; No partir, mastigar ou triturar cápsulas de liberação prolongada.; Reduzir gradualmente para evitar sintomas de retirada.; Investigar história de mania/hipomania antes de iniciar.; Usar cautela em retenção urinária, glaucoma de ângulo fechado y doença cardiovascular.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=levomilnacipran"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=levomilnacipran"
+  }
+};})();
+/* GOLD33_SELECTIVE:levomilnaciprano:END */

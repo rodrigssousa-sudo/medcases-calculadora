@@ -29287,3 +29287,91 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:lefamulina:END */
+/* GOLD33_SELECTIVE:levofloxacino:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="levofloxacino";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:levofloxacino:"+matches.length);drug=matches[0];}else{drug=db&&db["levofloxacino"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:levofloxacino");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "046",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b01bced97714803d025e288b269c2a23ae3562608450a3618c1ccb6e9db46467",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Levofloxacino",
+    "class": "Fluoroquinolona antibacteriana",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "presentations": "Comprimidos orais; formulação IV existe.",
+    "mechanism": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacodynamics": "Inibe DNA-girase e topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "CAP, pneumonia nosocomial, cUTI/pyelonefrite, prostatite e outras infecções por suscetíveis.",
+    "dose": "CrCl >=50: 250, 500 ou 750 mg VO/IV q24h conforme foco; CAP 500 mg q24h 7–14 d ou 750 mg q24h 5 d conforme rótulo.",
+    "pediatricDose": "standard: Não utilizada rotineiramente em adultos.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "Ruptura de tendão; Neuropatia potencialmente irreversível; Efeitos SNC/convulsões; Aneurisma/dissecção de aorta; Torsades/QT",
+    "adverseEffects": "Náusea, diarreia, cefaleia e insônia.; Tendinite/ruptura, neuropatia, efeitos SNC, QT, dissecção aórtica, hipoglicemia e C. difficile.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+    "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes e interações específicas.",
+    "monitoring": "Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT prolongado; Hepatotoxicidade",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, dissecção aórtica, hipoglicemia e C. difficile.",
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, dissecção aórtica, hipoglicemia e C. difficile.; Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT prolongado; Hepatotoxicidade",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f944b63-9b60-437a-ba57-d14d7976bc32"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f944b63-9b60-437a-ba57-d14d7976bc32"
+  },
+  "es": {
+    "name": "Levofloxacino",
+    "class": "Fluoroquinolona antibacteriana",
+    "pharmacologicClass": "Fluoroquinolona antibacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "presentations": "Comprimidos orais; formulação IV existe.",
+    "mechanism": "Inibe DNA-girase y topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacodynamics": "Inibe DNA-girase y topoisomerase IV, bloqueando replicação/reparo do DNA bacteriano.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "CAP, pneumonia nosocomial, cUTI/pyelonefrite, prostatite y outras infecções por suscetíveis.",
+    "dose": "CrCl >=50: 250, 500 ou 750 mg VO/IV q24h conforme foco; CAP 500 mg q24h 7–14 d ou 750 mg q24h 5 d conforme rótulo.",
+    "pediatricDose": "standard: No utilizada rotineiramente em adultos.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "Ruptura de tendão; Neuropatia potencialmente irreversível; Efeitos SNC/convulsões; Aneurisma/dissecção de aorta; Torsades/QT",
+    "adverseEffects": "Náusea, diarreia, cefaleia y insônia.; Tendinite/ruptura, neuropatia, efeitos SNC, QT, dissecção aórtica, hipoglicemia y C. difficile.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas y interações absolutas.",
+    "interactions": "Cátions reduzem absorção; revisar antiarrítmicos/QT, glicemiantes y interações específicas.",
+    "monitoring": "Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT prolongado; Hepatotoxicidade",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, dissecção aórtica, hipoglicemia y C. difficile.",
+    "alerts": "Tendinite/ruptura, neuropatia, efeitos SNC, QT, dissecção aórtica, hipoglicemia y C. difficile.; Tendinite/ruptura de tendão; Neuropatia periférica; Efeitos SNC; Miastenia gravis; Aneurisma/dissecção de aorta; Disglicemia; QT prolongado; Hepatotoxicidade",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f944b63-9b60-437a-ba57-d14d7976bc32"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f944b63-9b60-437a-ba57-d14d7976bc32"
+  }
+};})();
+/* GOLD33_SELECTIVE:levofloxacino:END */

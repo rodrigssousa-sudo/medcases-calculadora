@@ -2195,3 +2195,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:insulina_nph:END */
+/* GOLD33_SELECTIVE:levotiroxina:START */
+;(function(){var db=window.ENDOCRINO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="levotiroxina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:levotiroxina:"+matches.length);drug=matches[0];}else{drug=db&&db["levotiroxina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:levotiroxina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "046",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b01bced97714803d025e288b269c2a23ae3562608450a3618c1ccb6e9db46467",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Levotiroxina",
+    "class": "Hormônio tireoidiano T4",
+    "pharmacologicClass": "Hormônio tireoidiano T4",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em múltiplas forças; margem terapêutica estreita.",
+    "presentations": "Comprimidos em múltiplas forças; margem terapêutica estreita.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Hipotireoidismo e supressão de TSH em contextos selecionados.",
+    "dose": "Dose individualizada por idade, peso, cardiopatia, gestação e TSH; adulto saudável frequentemente ~1,6 mcg/kg/dia, mas idosos/cardiopatas iniciam menor.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Palpitação, tremor, insônia e perda de peso por excesso.",
+    "dangerousAdverseEffects": "Arritmia, angina, perda óssea e crise tireotóxica por sobredose.",
+    "adverseEffects": "Palpitação, tremor, insônia e perda de peso por excesso.; Arritmia, angina, perda óssea e crise tireotóxica por sobredose.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Arritmia, angina, perda óssea e crise tireotóxica por sobredose.",
+    "alerts": "Arritmia, angina, perda óssea e crise tireotóxica por sobredose.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=levothyroxine"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=levothyroxine"
+  },
+  "es": {
+    "name": "Levotiroxina",
+    "class": "Hormônio tireoidiano T4",
+    "pharmacologicClass": "Hormônio tireoidiano T4",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em múltiplas forças; margem terapêutica estreita.",
+    "presentations": "Comprimidos em múltiplas forças; margem terapêutica estreita.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Hipotireoidismo y supressão de TSH em contextos selecionados.",
+    "dose": "Dose individualizada por idade, peso, cardiopatia, gestação y TSH; adulto saudável frequentemente ~1,6 mcg/kg/dia, mas idosos/cardiopatas iniciam menor.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Palpitação, tremor, insônia y perda de peso por excesso.",
+    "dangerousAdverseEffects": "Arritmia, angina, perda óssea y crise tireotóxica por sobredosis.",
+    "adverseEffects": "Palpitação, tremor, insônia y perda de peso por excesso.; Arritmia, angina, perda óssea y crise tireotóxica por sobredosis.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Arritmia, angina, perda óssea y crise tireotóxica por sobredosis.",
+    "alerts": "Arritmia, angina, perda óssea y crise tireotóxica por sobredosis.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=levothyroxine"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=levothyroxine"
+  }
+};})();
+/* GOLD33_SELECTIVE:levotiroxina:END */
