@@ -11019,3 +11019,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:tenofovir_desoproxila:END */
+/* GOLD33_SELECTIVE:valaciclovir:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="valaciclovir";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:valaciclovir:"+matches.length);drug=matches[0];}else{drug=db&&db["valaciclovir"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="valaciclovir";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:valaciclovir:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:valaciclovir");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "080",
+    "requiredFieldCount": 33,
+    "approvedSha256": "643f72271736a174835d1af1735db1daa57bdee524910c9fc9299b7ef770c2f1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Valaciclovir",
+    "class": "Pró-fármaco antiviral de aciclovir",
+    "pharmacologicClass": "Pró-fármaco antiviral de aciclovir",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "mechanism": "É rapidamente convertido a aciclovir, cujo trifosfato inibe DNA-polimerase viral após ativação por timidina-quinase viral.",
+    "pharmacodynamics": "É rapidamente convertido a aciclovir, cujo trifosfato inibe DNA-polimerase viral após ativação por timidina-quinase viral.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Herpes labial, herpes genital inicial/recorrente/supressão e herpes-zóster; varicela pediátrica em faixa etária aprovada.",
+    "dose": "Adultos: herpes-zóster 1 g VO q8h por 7 dias; herpes genital inicial 1 g q12h por 10 dias; recorrência 500 mg q12h por 3 dias; herpes labial 2 g q12h por 1 dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia; Náusea; Dor abdominal; Tontura",
+    "dangerousAdverseEffects": "IRA; Neurotoxicidade/encefalopatia; TTP/HUS em imunocomprometidos; SCAR",
+    "adverseEffects": "Cefaleia, náusea, dor abdominal e tontura.; Lesão renal aguda, neurotoxicidade, microangiopatia trombótica em imunocomprometidos e reação cutânea grave.",
+    "contraindications": "Hipersensibilidade clinicamente significativa ao valaciclovir, aciclovir ou componentes.",
+    "interactions": "Nefrotóxicos e fármacos que competem por secreção tubular podem aumentar exposição/risco; garantir hidratação.",
+    "monitoring": "Herpes-zóster 1 g q8h se CrCl >=50; CrCl 30–49: zóster q12h; HD: administrar após sessão; Pediatria varicela 20 mg/kg TID; Monitorar SNC",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Lesão renal aguda, neurotoxicidade, microangiopatia trombótica em imunocomprometidos e reação cutânea grave.",
+    "alerts": "Lesão renal aguda, neurotoxicidade, microangiopatia trombótica em imunocomprometidos e reação cutânea grave.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valaciclovir",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valaciclovir"
+  },
+  "es": {
+    "name": "Valaciclovir",
+    "class": "Pró-fármaco antiviral de aciclovir",
+    "pharmacologicClass": "Pró-fármaco antiviral de aciclovir",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "mechanism": "É rapidamente convertido a aciclovir, cujo trifosfato inibe DNA-polimerase viral após ativação por timidina-quinase viral.",
+    "pharmacodynamics": "É rapidamente convertido a aciclovir, cujo trifosfato inibe DNA-polimerase viral após ativação por timidina-quinase viral.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Herpes labial, herpes genital inicial/recorrente/supressão y herpes-zóster; varicela pediátrica em faixa etária aprovada.",
+    "dose": "Adultos: herpes-zóster 1 g VO q8h por 7 dias; herpes genital inicial 1 g q12h por 10 dias; recorrência 500 mg q12h por 3 dias; herpes labial 2 g q12h por 1 dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia; Náusea; Dor abdominal; Tontura",
+    "dangerousAdverseEffects": "IRA; Neurotoxicidade/encefalopatia; TTP/HUS em imunocomprometidos; SCAR",
+    "adverseEffects": "Cefaleia, náusea, dor abdominal y tontura.; Lesão renal aguda, neurotoxicidade, microangiopatia trombótica em imunocomprometidos y reação cutânea grave.",
+    "contraindications": "Hipersensibilidade clinicamente significativa ao valaciclovir, aciclovir ou componentes.",
+    "interactions": "Nefrotóxicos y fármacos que competem por secreção tubular podem aumentar exposição/risco; garantir hidratação.",
+    "monitoring": "Herpes-zóster 1 g q8h se CrCl >=50; CrCl 30–49: zóster q12h; HD: administrar após sessão; Pediatria varicela 20 mg/kg TID; Monitorar SNC",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Lesão renal aguda, neurotoxicidade, microangiopatia trombótica em imunocomprometidos y reação cutânea grave.",
+    "alerts": "Lesão renal aguda, neurotoxicidade, microangiopatia trombótica em imunocomprometidos y reação cutânea grave.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valaciclovir",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=valaciclovir"
+  }
+};})();
+/* GOLD33_SELECTIVE:valaciclovir:END */

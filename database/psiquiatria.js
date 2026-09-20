@@ -8381,3 +8381,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:triazolam:END */
+/* GOLD33_SELECTIVE:trimipramina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="trimipramina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:trimipramina:"+matches.length);drug=matches[0];}else{drug=db&&db["trimipramina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="trimipramina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:trimipramina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:trimipramina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "080",
+    "requiredFieldCount": 33,
+    "approvedSha256": "643f72271736a174835d1af1735db1daa57bdee524910c9fc9299b7ef770c2f1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Trimipramina",
+    "class": "Antidepressivo tricíclico",
+    "pharmacologicClass": "Antidepressivo tricíclico",
+    "commercialNames": "br: Surmontil; Trimipramina; ar: Surmontil; Trimipramina Northia; Trimipramina Klonal",
+    "presentation": "Comprimido 25 mg; Comprimido 50 mg; Gotas orais",
+    "presentations": "Comprimido 25 mg; Comprimido 50 mg; Gotas orais",
+    "mechanism": "Antidepressivo tricíclico com potente ação anti-histamínica e sedativa.",
+    "pharmacodynamics": "Antidepressivo tricíclico com potente ação anti-histamínica e sedativa.",
+    "pharmacokinetics": "Vida média aproximada: 12–24 horas.",
+    "indications": "Transtorno depressivo maior; Insônia crônica; Transtornos de ansiedade; Depressão com agitação; Depressão associada a distúrbios do sono; Dor crônica; Fibromialgia",
+    "dose": "adulto: Depressão: iniciar 25–50 mg VO à noite; dose usual 75–150 mg/dia.; insoniaAnsiedade: Insônia/ansiedade: 25–100 mg VO à noite.; maxDose: Dose máxima usual: 300 mg/dia.",
+    "pediatricDose": "standard: Não se utiliza cálculo por kg em adultos.; pediatric: Uso pediátrico incomum e especializado.; maxDose: 300 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Boca seca; Constipação; Hipotensão ortostática; Ganho de peso; Tontura",
+    "dangerousAdverseEffects": "Arritmias cardíacas; Cardiotoxicidade em superdose; Convulsões; Delirium anticolinérgico; Virada maníaca",
+    "adverseEffects": "Sonolência, boca seca, constipação, visão turva e ganho de peso.; Arritmia, convulsões, síndrome serotoninérgica, suicidabilidade, retenção urinária e toxicidade fatal em overdose.",
+    "contraindications": "Uso concomitante com IMAO; Infarto recente; Glaucoma de ângulo fechado",
+    "interactions": "IMAO; Álcool; Benzodiazepínicos; Opioides",
+    "monitoring": "Um dos tricíclicos mais sedativos.; Preferir administração noturna.; Monitorar ECG em pacientes de risco.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Arritmia, convulsões, síndrome serotoninérgica, suicidabilidade, retenção urinária e toxicidade fatal em overdose.",
+    "alerts": "Arritmia, convulsões, síndrome serotoninérgica, suicidabilidade, retenção urinária e toxicidade fatal em overdose.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trimipramina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trimipramina"
+  },
+  "es": {
+    "name": "Trimipramina",
+    "class": "Antidepressivo tricíclico",
+    "pharmacologicClass": "Antidepressivo tricíclico",
+    "commercialNames": "br: Surmontil; Trimipramina; ar: Surmontil; Trimipramina Northia; Trimipramina Klonal",
+    "presentation": "Comprimido 25 mg; Comprimido 50 mg; Gotas orais",
+    "presentations": "Comprimido 25 mg; Comprimido 50 mg; Gotas orais",
+    "mechanism": "Antidepressivo tricíclico con potente ação anti-histamínica y sedativa.",
+    "pharmacodynamics": "Antidepressivo tricíclico con potente ação anti-histamínica y sedativa.",
+    "pharmacokinetics": "Vida média aproximada: 12–24 horas.",
+    "indications": "Transtorno depressivo maior; Insônia crônica; Transtornos de ansiedade; Depressão con agitação; Depressão associada a distúrbios do sono; Dor crônica; Fibromialgia",
+    "dose": "adulto: Depressão: iniciar 25–50 mg VO à noite; dosis usual 75–150 mg/dia.; insoniaAnsiedade: Insônia/ansiedade: 25–100 mg VO à noite.; maxDose: Dose máxima usual: 300 mg/dia.",
+    "pediatricDose": "standard: No se utiliza cálculo por kg em adultos.; pediatric: Uso pediátrico incomum y especializado.; maxDose: 300 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Boca seca; Constipação; Hipotensão ortostática; Ganho de peso; Tontura",
+    "dangerousAdverseEffects": "Arritmias cardíacas; Cardiotoxicidade em superdosis; Convulsões; Delirium anticolinérgico; Virada maníaca",
+    "adverseEffects": "Sonolência, boca seca, constipação, visão turva y ganho de peso.; Arritmia, convulsões, síndrome serotoninérgica, suicidabilidade, retenção urinária y toxicidade fatal em overdosis.",
+    "contraindications": "Uso concomitante con IMAO; Infarto recente; Glaucoma de ângulo fechado",
+    "interactions": "IMAO; Álcool; Benzodiazepínicos; Opioides",
+    "monitoring": "Um dos tricíclicos mais sedativos.; Preferir administração noturna.; Monitorar ECG em pacientes de risco.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Arritmia, convulsões, síndrome serotoninérgica, suicidabilidade, retenção urinária y toxicidade fatal em overdosis.",
+    "alerts": "Arritmia, convulsões, síndrome serotoninérgica, suicidabilidade, retenção urinária y toxicidade fatal em overdosis.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trimipramina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trimipramina"
+  }
+};})();
+/* GOLD33_SELECTIVE:trimipramina:END */
