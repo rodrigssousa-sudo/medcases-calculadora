@@ -5584,3 +5584,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:sodio_hipertonico:END */
+/* GOLD33_SELECTIVE:succinilcolina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="succinilcolina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:succinilcolina:"+matches.length);drug=matches[0];}else{drug=db&&db["succinilcolina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:succinilcolina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "073",
+    "requiredFieldCount": 33,
+    "approvedSha256": "83cceddf3e8d81ef2cedf16f072feaba3de2b34348dee7c5839dcc4d80297ea8",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Succinilcolina",
+    "class": "Bloqueador neuromuscular despolarizante",
+    "pharmacologicClass": "Bloqueador neuromuscular despolarizante",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável em concentrações específicas; armazenamento depende do produto.",
+    "presentations": "Solução injetável em concentrações específicas; armazenamento depende do produto.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Facilitação de intubação e relaxamento muscular em procedimentos sob ventilação controlada.",
+    "dose": "Dose IV ou IM baseada em peso e contexto, administrada por profissional treinado com ventilação e monitorização. Não produz sedação nem analgesia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Fasciculações, mialgia, bradicardia e aumento transitório de potássio.",
+    "dangerousAdverseEffects": "Hipertermia maligna, hipercalemia fatal, rabdomiólise, apneia prolongada e parada cardíaca.",
+    "adverseEffects": "Fasciculações, mialgia, bradicardia e aumento transitório de potássio.; Hipertermia maligna, hipercalemia fatal, rabdomiólise, apneia prolongada e parada cardíaca.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipertermia maligna, hipercalemia fatal, rabdomiólise, apneia prolongada e parada cardíaca.",
+    "alerts": "Hipertermia maligna, hipercalemia fatal, rabdomiólise, apneia prolongada e parada cardíaca.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=succinilcolina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=succinilcolina"
+  },
+  "es": {
+    "name": "Succinilcolina",
+    "class": "Bloqueador neuromuscular despolarizante",
+    "pharmacologicClass": "Bloqueador neuromuscular despolarizante",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável em concentrações específicas; armazenamento depende do produto.",
+    "presentations": "Solução injetável em concentrações específicas; armazenamento depende do produto.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Facilitação de intubação y relaxamento muscular em procedimentos sob ventilação controlada.",
+    "dose": "Dose IV ou IM baseada em peso y contexto, administrada por profissional treinado con ventilação y monitorização. No produz sedação nem analgesia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Fasciculações, mialgia, bradicardia y aumento transitório de potássio.",
+    "dangerousAdverseEffects": "Hipertermia maligna, hipercalemia fatal, rabdomiólise, apneia prolongada y parada cardíaca.",
+    "adverseEffects": "Fasciculações, mialgia, bradicardia y aumento transitório de potássio.; Hipertermia maligna, hipercalemia fatal, rabdomiólise, apneia prolongada y parada cardíaca.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipertermia maligna, hipercalemia fatal, rabdomiólise, apneia prolongada y parada cardíaca.",
+    "alerts": "Hipertermia maligna, hipercalemia fatal, rabdomiólise, apneia prolongada y parada cardíaca.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=succinilcolina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=succinilcolina"
+  }
+};})();
+/* GOLD33_SELECTIVE:succinilcolina:END */

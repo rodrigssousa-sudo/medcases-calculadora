@@ -6,251 +6,79 @@
   "colorTxt": "#78350F",
   "pt": {
     "name": "Sotalol",
-    "class": "Antiarrítmico classe III com atividade betabloqueadora não seletiva",
-    "pharmacologicClass": "Betabloqueador não seletivo e bloqueador de corrente de potássio com prolongamento da repolarização",
+    "class": "Bloqueador beta-adrenérgico com atividade antiarrítmica classe III",
+    "pharmacologicClass": "Bloqueador beta-adrenérgico com atividade antiarrítmica classe III",
     "mechanism": "Combina bloqueio beta não seletivo com prolongamento do potencial de ação e do período refratário por bloqueio de correntes de potássio, aumentando QT.",
-    "pharmacodynamics": "Reduz frequência e condução AV e prolonga QT de forma dose-dependente. O risco de torsades aumenta com dose, bradicardia, sexo feminino, distúrbios eletrolíticos e redução da depuração renal.",
-    "pharmacokinetics": "Biodisponibilidade oral alta, metabolismo mínimo e eliminação principalmente renal inalterada. Meia-vida próxima de 12 h com função renal normal e muito mais prolongada na insuficiência renal.",
-    "indications": [
-      "Arritmias ventriculares documentadas potencialmente fatais",
-      "manutenção do ritmo sinusal em fibrilação atrial ou flutter sintomáticos selecionados"
-    ],
-    "commercialNames": [
-      "Betapace",
-      "Betapace AF",
-      "Sorine"
-    ],
+    "pharmacodynamics": "Combina bloqueio beta não seletivo com prolongamento do potencial de ação e do período refratário por bloqueio de correntes de potássio, aumentando QT.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Arritmias ventriculares documentadas potencialmente fatais; manutenção do ritmo sinusal em fibrilação atrial ou flutter sintomáticos selecionados",
+    "commercialNames": "Betapace; Betapace AF; Sorine",
     "presentation": "Comprimidos orais.",
-    "presentations": [
-      "Comprimidos 80, 120, 160 e 240 mg conforme produto"
-    ],
-    "dose": {
-      "ventricularArrhythmia": "Início 80 mg duas vezes ao dia com intervalo ajustado à função renal; aumentar 80 mg/dia a cada 3 dias se QTc <500 ms. Resposta habitual 160-320 mg/dia.",
-      "AF": "Início 80 mg duas vezes ao dia se ClCr >60 mL/min; pode aumentar a cada 3 dias com monitorização; muitos pacientes respondem a 120 mg duas vezes ao dia."
-    },
-    "pediatricDose": "Existe posologia pediátrica específica por superfície corporal e idade na bula; não extrapolar dose de adulto. Exige ECG, QT e ajuste renal especializado.",
-    "renalDose": "Arritmia ventricular: ClCr >60 a cada 12 h; 30-59 a cada 24 h; 10-29 a cada 36-48 h; <10 individualizar. FA/flutter: >60 a cada 12 h; 40-59 a cada 24 h; <40 mL/min contraindicado.",
-    "hepaticDose": "Não requer ajuste específico por insuficiência hepática isolada; a eliminação é principalmente renal.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fadiga",
-      "tontura",
-      "dispneia",
-      "náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "torsades de pointes",
-      "taquicardia ventricular",
-      "prolongamento importante de QT",
-      "bradicardia grave",
-      "descompensação de insuficiência cardíaca",
-      "broncoespasmo"
-    ],
-    "contraindications": [
-      "QT longo congênito ou adquirido",
-      "bradicardia ou bloqueio AV avançado sem marcapasso",
-      "choque cardiogênico ou insuficiência cardíaca descompensada",
-      "potássio sérico <4 mEq/L",
-      "asma ou broncoespasmo",
-      "para FA/flutter: QT basal >450 ms ou ClCr <40 mL/min"
-    ],
-    "interactions": [
-      "Outros fármacos que prolongam QT aumentam risco de torsades",
-      "Diuréticos que causam hipocalemia ou hipomagnesemia aumentam pró-arritmia",
-      "Digoxina, verapamil e diltiazem aumentam bradicardia ou bloqueio",
-      "Outros betabloqueadores somam efeitos cronotrópicos negativos"
-    ],
-    "monitoring": [
-      "ECG contínuo ao iniciar ou reiniciar",
-      "QTc 2-4 h após cada dose durante titulação",
-      "creatinina e ClCr",
-      "potássio e magnésio",
-      "frequência cardíaca",
-      "sinais de insuficiência cardíaca"
-    ],
-    "administration": "Iniciar ou reiniciar em unidade com ressuscitação e monitorização ECG contínua. Manter intervalos conforme função renal.",
-    "preparation": "Comprimidos não exigem preparo. Confirmar que o paciente não esteja recebendo outra formulação com sotalol duplicada.",
-    "infusionProtocol": "Não se aplica a esta ficha oral; não converter para formulação IV sem protocolo específico.",
-    "pregnancy": "Usar quando o benefício justificar o risco; atravessa placenta e pode causar bradicardia fetal/neonatal.",
-    "lactation": "É excretado no leite em quantidades clinicamente relevantes; individualizar e observar bradicardia do lactente se usado.",
-    "specialPopulations": {
-      "renal": "A função renal determina o intervalo.",
-      "electrolytes": "Corrigir hipocalemia e hipomagnesemia antes de iniciar.",
-      "HFrEF": "Em geral evitar para manutenção de ritmo por tolerabilidade e pró-arritmia salvo seleção especializada."
-    },
-    "patientEducation": [
-      "Não modificar nem omitir doses sem orientação",
-      "procurar avaliação por síncope, palpitações ou tontura intensa",
-      "evitar novos fármacos que prolonguem QT sem revisão",
-      "manter hidratação e informar diarreia prolongada"
-    ],
-    "clinicalPearls": [
-      "QT >=500 ms exige reduzir dose, prolongar intervalo ou suspender",
-      "Para FA/flutter, ClCr <40 mL/min é contraindicação para início",
-      "O risco de torsades aumenta quando se combinam insuficiência renal, bradicardia e distúrbios eletrolíticos."
-    ],
-    "guidelineRecommendations": [
-      "Diretriz FA 2023: sotalol pode ser considerado para manutenção do ritmo em pacientes selecionados sem QT prolongado, hipocalemia, hipomagnesemia ou bradicardia, com ajuste renal e monitorização estreita."
-    ],
-    "safetyFlags": [
-      "QT",
-      "TORSADES",
-      "INICIO_MONITORIZADO",
-      "FUNCAO_RENAL",
-      "ELETROLITOS",
-      "BRADICARDIA"
-    ],
-    "alerts": [
-      "Se QT atingir 500 ms ou mais, reduzir dose, prolongar intervalo ou suspender",
-      "Corrigir potássio e magnésio antes de iniciar",
-      "Evitar associação com outros prolongadores de QT quando possível."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fadiga",
-        "tontura",
-        "dispneia",
-        "náuseas"
-      ],
-      "dangerous": [
-        "torsades de pointes",
-        "taquicardia ventricular",
-        "prolongamento importante de QT",
-        "bradicardia grave",
-        "descompensação de insuficiência cardíaca",
-        "broncoespasmo"
-      ]
-    },
+    "presentations": "Comprimidos orais.",
+    "dose": "ventricularArrhythmia: Início 80 mg duas vezes ao dia com intervalo ajustado à função renal; aumentar 80 mg/dia a cada 3 dias se QTc <500 ms. Resposta habitual 160-320 mg/dia.; AF: Início 80 mg duas vezes ao dia se ClCr >60 mL/min; pode aumentar a cada 3 dias com monitorização; muitos pacientes respondem a 120 mg duas vezes ao dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "bradicardia; fadiga; tontura; dispneia; náuseas",
+    "dangerousAdverseEffects": "torsades de pointes; taquicardia ventricular; prolongamento importante de QT; bradicardia grave; descompensação de insuficiência cardíaca; broncoespasmo",
+    "contraindications": "QT longo congênito ou adquirido; bradicardia ou bloqueio AV avançado sem marcapasso; choque cardiogênico ou insuficiência cardíaca descompensada; potássio sérico <4 mEq/L; asma ou broncoespasmo; para FA/flutter: QT basal >450 ms ou ClCr <40 mL/min",
+    "interactions": "Outros fármacos que prolongam QT aumentam risco de torsades; Diuréticos que causam hipocalemia ou hipomagnesemia aumentam pró-arritmia; Digoxina, verapamil e diltiazem aumentam bradicardia ou bloqueio; Outros betabloqueadores somam efeitos cronotrópicos negativos",
+    "monitoring": "Se QT atingir 500 ms ou mais, reduzir dose, prolongar intervalo ou suspender; Corrigir potássio e magnésio antes de iniciar; Evitar associação com outros prolongadores de QT quando possível.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Torsades de pointes, QT prolongado, bloqueio cardíaco, broncoespasmo e piora de insuficiência cardíaca.",
+    "alerts": "Torsades de pointes, QT prolongado, bloqueio cardíaco, broncoespasmo e piora de insuficiência cardíaca.; revisão clínica obrigatória.",
+    "adverseEffects": "Bradicardia, fadiga, tontura e dispneia.; Torsades de pointes, QT prolongado, bloqueio cardíaco, broncoespasmo e piora de insuficiência cardíaca.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bcbc1624-283e-732f-e053-2995a90a8f11",
-      "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sotalol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bcbc1624-283e-732f-e053-2995a90a8f11"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sotalol"
   },
   "es": {
     "name": "Sotalol",
-    "class": "Antiarrítmico clase III con actividad betabloqueante no selectiva",
-    "pharmacologicClass": "Bloqueador beta no selectivo y bloqueador de corriente de potasio con prolongación de repolarización",
-    "mechanism": "Combina bloqueo beta no selectivo con prolongación del potencial de acción y del período refractario por bloqueo de corrientes de potasio, aumentando QT.",
-    "pharmacodynamics": "Reduce frecuencia y conducción AV y prolonga QT de forma dosis-dependiente. El riesgo de torsades aumenta con dosis, bradicardia, sexo femenino, alteraciones electrolíticas y reducción del aclaramiento renal.",
-    "pharmacokinetics": "Biodisponibilidad oral alta, metabolismo mínimo y eliminación principalmente renal sin cambios. Vida media cerca de 12 h con función renal normal y mucho más prolongada en insuficiencia renal.",
-    "indications": [
-      "Arritmias ventriculares documentadas potencialmente mortales",
-      "mantenimiento del ritmo sinusal en fibrilación auricular o flutter sintomáticos seleccionados"
-    ],
-    "commercialNames": [
-      "Betapace",
-      "Betapace AF",
-      "Sorine"
-    ],
-    "presentation": "Tabletas orales.",
-    "presentations": [
-      "Tabletas 80, 120, 160 y 240 mg según producto"
-    ],
-    "dose": {
-      "ventricularArrhythmia": "Inicio 80 mg dos veces al día con intervalo ajustado a función renal; aumentar 80 mg/día cada 3 días si QTc <500 ms. Respuesta habitual 160-320 mg/día.",
-      "AF": "Inicio 80 mg dos veces al día si CrCl >60 mL/min; puede aumentar cada 3 días con monitorización; muchos pacientes responden a 120 mg dos veces al día."
-    },
-    "pediatricDose": "Existe dosificación pediátrica específica por superficie corporal y edad en la ficha; no extrapolar dosis de adulto. Requiere ECG, QT y ajuste renal especializado.",
-    "renalDose": "Arritmia ventricular: CrCl >60 cada 12 h; 30-59 cada 24 h; 10-29 cada 36-48 h; <10 individualizar. FA/flutter: >60 cada 12 h; 40-59 cada 24 h; <40 mL/min contraindicado.",
-    "hepaticDose": "No requiere ajuste específico por insuficiencia hepática aislada; la eliminación es principalmente renal.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fatiga",
-      "mareo",
-      "disnea",
-      "náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "torsades de pointes",
-      "taquicardia ventricular",
-      "prolongación marcada de QT",
-      "bradicardia grave",
-      "descompensación de insuficiencia cardíaca",
-      "broncoespasmo"
-    ],
-    "contraindications": [
-      "QT largo congénito o adquirido",
-      "bradicardia o bloqueo AV avanzado sin marcapasos",
-      "shock cardiogénico o insuficiencia cardíaca descompensada",
-      "potasio sérico <4 mEq/L",
-      "asma o broncoespasmo",
-      "para FA/flutter: QT basal >450 ms o CrCl <40 mL/min"
-    ],
-    "interactions": [
-      "Otros fármacos que prolongan QT aumentan riesgo de torsades",
-      "Diuréticos que causan hipopotasemia o hipomagnesemia aumentan proarritmia",
-      "Digoxina, verapamilo y diltiazem aumentan bradicardia o bloqueo",
-      "Otros betabloqueantes suman efectos cronotrópicos negativos"
-    ],
-    "monitoring": [
-      "ECG continuo al iniciar o reiniciar",
-      "QTc 2-4 h después de cada dosis durante titulación",
-      "creatinina y CrCl",
-      "potasio y magnesio",
-      "frecuencia cardíaca",
-      "signos de insuficiencia cardíaca"
-    ],
-    "administration": "Iniciar o reiniciar en una instalación con reanimación y monitorización ECG continua. Mantener intervalos según función renal.",
-    "preparation": "Tabletas no requieren preparación. Verificar que el paciente no reciba otra formulación con sotalol duplicada.",
-    "infusionProtocol": "No aplica a esta ficha oral; no convertir a formulación IV sin protocolo específico.",
-    "pregnancy": "Usar cuando el beneficio justifique el riesgo; atraviesa placenta y puede causar bradicardia fetal/neonatal.",
-    "lactation": "Se excreta en leche en cantidades clínicamente relevantes; individualizar y vigilar bradicardia del lactante si se usa.",
-    "specialPopulations": {
-      "renal": "La función renal determina el intervalo.",
-      "electrolytes": "Corregir hipopotasemia e hipomagnesemia antes de iniciar.",
-      "HFrEF": "Evitar de forma general para mantenimiento de ritmo por tolerabilidad y proarritmia salvo selección especializada."
-    },
-    "patientEducation": [
-      "No modificar ni omitir dosis sin indicación",
-      "consultar por síncope, palpitaciones o mareo intenso",
-      "evitar fármacos nuevos que prolonguen QT sin revisión",
-      "mantener hidratación y comunicar diarrea prolongada"
-    ],
-    "clinicalPearls": [
-      "QT >=500 ms obliga a reducir dosis, prolongar intervalo o suspender",
-      "Para FA/flutter, CrCl <40 mL/min es contraindicación de inicio",
-      "El riesgo de torsades aumenta cuando se combinan insuficiencia renal, bradicardia y alteraciones electrolíticas."
-    ],
-    "guidelineRecommendations": [
-      "Guía AF 2023: sotalol puede considerarse para mantenimiento de ritmo en pacientes seleccionados sin QT prolongado, hipopotasemia, hipomagnesemia o bradicardia, con ajuste renal y monitorización estrecha."
-    ],
-    "safetyFlags": [
-      "QT",
-      "TORSADES",
-      "INICIO_MONITORIZADO",
-      "FUNCION_RENAL",
-      "ELECTROLITOS",
-      "BRADICARDIA"
-    ],
-    "alerts": [
-      "Si QT alcanza 500 ms o más, reducir dosis, prolongar intervalo o suspender",
-      "Corregir potasio y magnesio antes de iniciar",
-      "Evitar asociación con otros prolongadores de QT cuando sea posible."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fatiga",
-        "mareo",
-        "disnea",
-        "náuseas"
-      ],
-      "dangerous": [
-        "torsades de pointes",
-        "taquicardia ventricular",
-        "prolongación marcada de QT",
-        "bradicardia grave",
-        "descompensación de insuficiencia cardíaca",
-        "broncoespasmo"
-      ]
-    },
+    "class": "Bloqueador beta-adrenérgico con atividade antiarrítmica classe III",
+    "pharmacologicClass": "Bloqueador beta-adrenérgico con atividade antiarrítmica classe III",
+    "mechanism": "Combina bloqueio beta no seletivo con prolongamento do potencial de ação y do período refratário por bloqueio de correntes de potássio, aumentando QT.",
+    "pharmacodynamics": "Combina bloqueio beta no seletivo con prolongamento do potencial de ação y do período refratário por bloqueio de correntes de potássio, aumentando QT.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Arritmias ventriculares documentadas potencialmente fatais; manutenção do ritmo sinusal em fibrilação atrial ou flutter sintomáticos selecionados",
+    "commercialNames": "Betapace; Betapace AF; Sorine",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "dose": "ventricularArrhythmia: Início 80 mg duas vezes ao dia con intervalo ajustado à función renal; aumentar 80 mg/dia a cada 3 dias se QTc <500 ms. Resposta habitual 160-320 mg/dia.; AF: Início 80 mg duas vezes ao dia se ClCr >60 mL/min; pode aumentar a cada 3 dias con monitorização; muitos pacientes respondem a 120 mg duas vezes ao dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "bradicardia; fadiga; tontura; dispneia; náuseas",
+    "dangerousAdverseEffects": "torsades de pointes; taquicardia ventricular; prolongamento importante de QT; bradicardia grave; descompensação de insuficiência cardíaca; broncoespasmo",
+    "contraindications": "QT longo congênito ou adquirido; bradicardia ou bloqueio AV avançado sem marcapasso; choque cardiogênico ou insuficiência cardíaca descompensada; potássio sérico <4 mEq/L; asma ou broncoespasmo; para FA/flutter: QT basal >450 ms ou ClCr <40 mL/min",
+    "interactions": "Outros fármacos que prolongam QT aumentam risco de torsades; Diuréticos que causam hipocalemia ou hipomagnesemia aumentam pró-arritmia; Digoxina, verapamil y diltiazem aumentam bradicardia ou bloqueio; Outros betabloqueadores somam efeitos cronotrópicos negativos",
+    "monitoring": "Se QT atingir 500 ms ou mais, reduzir dosis, prolongar intervalo ou suspender; Corrigir potássio y magnésio antes de iniciar; Evitar associação con outros prolongadores de QT quando possível.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Torsades de pointes, QT prolongado, bloqueio cardíaco, broncoespasmo y piora de insuficiência cardíaca.",
+    "alerts": "Torsades de pointes, QT prolongado, bloqueio cardíaco, broncoespasmo y piora de insuficiência cardíaca.; revisão clínica obrigatória.",
+    "adverseEffects": "Bradicardia, fadiga, tontura y dispneia.; Torsades de pointes, QT prolongado, bloqueio cardíaco, broncoespasmo y piora de insuficiência cardíaca.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bcbc1624-283e-732f-e053-2995a90a8f11",
-      "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sotalol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bcbc1624-283e-732f-e053-2995a90a8f11"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sotalol"
   },
   "name": {
     "pt": "Sotalol",
@@ -262,19 +90,21 @@
     "sotacor",
     "antiarritmico classe iii com atividade betabloqueadora nao seletiva"
   ],
-  "dataVersion": "clinical-data-v1-7bd0822a94de6e6a",
-  "clinicalContentSha256": "7bd0822a94de6e6a94505ccaec1582dfcf897ed11997540b03249c0a5c3a1e43",
+  "dataVersion": "clinical-data-v1-ac0461a128a57416",
+  "clinicalContentSha256": "ac0461a128a574163f16aa79f0d07fe6bfa3a2c27d86f3d04ccb74592aa8ca0e",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "sotalol.mcGoldClinicalV1",
-    "group": "GOLD_GROUP05_CARDIO_10",
-    "review": "2026-09",
+    "lote": "073",
     "requiredFields": 33,
-    "contentSha256": "1ab655b8c5342059b7e92d70acb6a151949ea1d7e347150d75f9f2658346d68c",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "83cceddf3e8d81ef2cedf16f072feaba3de2b34348dee7c5839dcc4d80297ea8",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

@@ -1596,3 +1596,93 @@ window.GASTRO_DRUGS_DB = [
   }
 };})();
 /* GOLD33_SELECTIVE:rifaximina:END */
+/* GOLD33_SELECTIVE:somatostatina:START */
+;(function(){var db=window.GASTRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="somatostatina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:somatostatina:"+matches.length);drug=matches[0];}else{drug=db&&db["somatostatina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:somatostatina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "073",
+    "requiredFieldCount": 33,
+    "approvedSha256": "83cceddf3e8d81ef2cedf16f072feaba3de2b34348dee7c5839dcc4d80297ea8",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Somatostatina",
+    "class": "Hormônio peptídico inibidor",
+    "pharmacologicClass": "Hormônio peptídico inibidor",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Pó ou solução para infusão IV em apresentações específicas.",
+    "presentations": "Pó ou solução para infusão IV em apresentações específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Uso hospitalar em indicações específicas, como controle de sangramento digestivo, conforme produto e protocolo local.",
+    "dose": "Infusão IV e eventual dose de ataque dependem da indicação e do produto. Exige monitorização glicêmica, cardiovascular e protocolo institucional; não confundir com análogos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, dor abdominal, alterações de glicemia e rubor.",
+    "dangerousAdverseEffects": "Bradicardia, arritmia, hipo/hiperglicemia e distúrbios gastrointestinais graves.",
+    "adverseEffects": "Náusea, dor abdominal, alterações de glicemia e rubor.; Bradicardia, arritmia, hipo/hiperglicemia e distúrbios gastrointestinais graves.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Bradicardia, arritmia, hipo/hiperglicemia e distúrbios gastrointestinais graves.",
+    "alerts": "Bradicardia, arritmia, hipo/hiperglicemia e distúrbios gastrointestinais graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=somatostatina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=somatostatina"
+  },
+  "es": {
+    "name": "Somatostatina",
+    "class": "Hormônio peptídico inibidor",
+    "pharmacologicClass": "Hormônio peptídico inibidor",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Pó ou solución para infusão IV em apresentações específicas.",
+    "presentations": "Pó ou solución para infusão IV em apresentações específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Uso hospitalar em indicações específicas, como controle de sangramento digestivo, conforme produto y protocolo local.",
+    "dose": "Infusão IV y eventual dosis de ataque dependem da indicação y do produto. Exige monitorização glicêmica, cardiovascular y protocolo institucional; no confundir con análogos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, dor abdominal, alterações de glicemia y rubor.",
+    "dangerousAdverseEffects": "Bradicardia, arritmia, hipo/hiperglicemia y distúrbios gastrointestinais graves.",
+    "adverseEffects": "Náusea, dor abdominal, alterações de glicemia y rubor.; Bradicardia, arritmia, hipo/hiperglicemia y distúrbios gastrointestinais graves.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Bradicardia, arritmia, hipo/hiperglicemia y distúrbios gastrointestinais graves.",
+    "alerts": "Bradicardia, arritmia, hipo/hiperglicemia y distúrbios gastrointestinais graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=somatostatina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=somatostatina"
+  }
+};})();
+/* GOLD33_SELECTIVE:somatostatina:END */
