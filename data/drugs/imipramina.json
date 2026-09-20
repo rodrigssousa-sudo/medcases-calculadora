@@ -8,186 +8,96 @@
     "name": "Imipramina",
     "class": "Antidepressivo tricíclico",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Tofranil",
-        "Imipra",
-        "Imipramina EMS"
-      ],
-      "ar": [
-        "Tofranil",
-        "Imipramina Northia",
-        "Imipramina Klonal"
-      ]
-    },
-    "presentation": [
-      "Comprimido 10 mg",
-      "Comprimido 25 mg",
-      "Comprimido 50 mg",
-      "Drágea 75 mg"
-    ],
-    "dose": {
-      "adulto": "Depressão: iniciar 25–50 mg/dia; titular gradualmente. Dose usual 75–150 mg/dia.",
-      "enurese": "Enurese noturna: 10–75 mg VO ao deitar, conforme idade e resposta.",
-      "maxDose": "Dose máxima usual: 200 mg/dia ambulatorial; até 300 mg/dia em pacientes hospitalizados."
-    },
+    "commercialNames": "{'br': ['Tofranil', 'Imipra', 'Imipramina EMS'], 'ar': ['Tofranil', 'Imipramina Northia', 'Imipramina Klonal']}",
+    "presentation": "['Comprimido 10 mg', 'Comprimido 25 mg', 'Comprimido 50 mg', 'Drágea 75 mg']",
+    "dose": "{'adulto': 'Depressão: iniciar 25–50 mg/dia; titular gradualmente. Dose usual 75–150 mg/dia.', 'enurese': 'Enurese noturna: 10–75 mg VO ao deitar, conforme idade e resposta.', 'maxDose': 'Dose máxima usual: 200 mg/dia ambulatorial; até 300 mg/dia em pacientes hospitalizados.'}",
     "doseKg": {
       "standard": "Não se utiliza cálculo rotineiro por kg em adultos.",
       "pediatric": "Enurese pediátrica: aproximadamente 1–2,5 mg/kg/dia conforme protocolo.",
       "maxDose": "200–300 mg/dia"
     },
-    "indications": [
-      "Transtorno depressivo maior",
-      "Transtorno do pânico",
-      "Transtorno de ansiedade generalizada",
-      "Enurese noturna",
-      "Dor neuropática",
-      "Síndrome do intestino irritável com dor",
-      "Depressão resistente em casos selecionados"
-    ],
+    "indications": "['Transtorno depressivo maior', 'Transtorno do pânico', 'Transtorno de ansiedade generalizada', 'Enurese noturna', 'Dor neuropática', 'Síndrome do intestino irritável com dor', 'Depressão resistente em casos selecionados']",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Inibe a recaptação de serotonina e noradrenalina, além de bloquear receptores muscarínicos, H1 e alfa-1.",
     "onset": "Efeito antidepressivo geralmente em 2–4 semanas; resposta plena em 6–8 semanas.",
     "halfLife": "Vida média aproximada: 8–20 horas; metabólito ativo desipramina.",
-    "commonAdverseEffects": [
-      "Sonolência",
-      "Boca seca",
-      "Constipação",
-      "Visão turva",
-      "Sudorese",
-      "Hipotensão ortostática",
-      "Ganho de peso"
-    ],
-    "dangerousAdverseEffects": [
-      "Arritmias cardíacas",
-      "Alargamento do QRS e QT",
-      "Cardiotoxicidade em superdose",
-      "Convulsões",
-      "Delirium anticolinérgico",
-      "Virada maníaca",
-      "Síndrome serotoninérgica"
-    ],
+    "commonAdverseEffects": "['Sonolência', 'Boca seca', 'Constipação', 'Visão turva', 'Sudorese', 'Hipotensão ortostática', 'Ganho de peso']",
+    "dangerousAdverseEffects": "['Arritmias cardíacas', 'Alargamento do QRS e QT', 'Cardiotoxicidade em superdose', 'Convulsões', 'Delirium anticolinérgico', 'Virada maníaca', 'Síndrome serotoninérgica']",
     "risksByPatient": [],
-    "contraindications": [
-      "Uso concomitante com IMAO",
-      "Infarto agudo recente",
-      "Arritmias graves",
-      "Glaucoma de ângulo fechado",
-      "Retenção urinária importante"
-    ],
-    "interactions": [
-      "IMAO: síndrome serotoninérgica e crise hipertensiva",
-      "ISRS: risco serotoninérgico",
-      "Álcool: maior sedação",
-      "Antiarrítmicos: risco de arritmia",
-      "Anticolinérgicos: risco de retenção urinária e delirium"
-    ],
-    "alerts": [
-      "Alto risco em superdose.",
-      "Considerar ECG antes do início em pacientes de risco.",
-      "Evitar em idosos quando possível.",
-      "Não suspender abruptamente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "['Uso concomitante com IMAO', 'Infarto agudo recente', 'Arritmias graves', 'Glaucoma de ângulo fechado', 'Retenção urinária importante']",
+    "interactions": "['IMAO: síndrome serotoninérgica e crise hipertensiva', 'ISRS: risco serotoninérgico', 'Álcool: maior sedação', 'Antiarrítmicos: risco de arritmia', 'Anticolinérgicos: risco de retenção urinária e delirium']",
+    "alerts": "['Alto risco em superdose.', 'Considerar ECG antes do início em pacientes de risco.', 'Evitar em idosos quando possível.', 'Não suspender abruptamente.']",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=imipramine%20hydrochloride",
+    "pharmacologicClass": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "presentations": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "pharmacodynamics": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "pharmacokinetics": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "pediatricDose": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "renalDose": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "hepaticDose": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "adverseEffects": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "monitoring": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "administration": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "preparation": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "infusionProtocol": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "pregnancy": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "lactation": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "specialPopulations": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "patientEducation": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "clinicalPearls": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "guidelineRecommendations": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "safetyFlags": "Não documentado de forma suficiente na fonte primária consultada; manter bloqueado até revisão.",
+    "references": [
+      "DailyMed/FDA - imipramine hydrochloride tablets official labels: https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=imipramine%20hydrochloride"
     ]
   },
   "es": {
     "name": "Imipramina",
     "class": "Antidepresivo tricíclico",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Tofranil",
-        "Imipra",
-        "Imipramina EMS"
-      ],
-      "ar": [
-        "Tofranil",
-        "Imipramina Northia",
-        "Imipramina Klonal"
-      ]
-    },
-    "presentation": [
-      "Comprimido 10 mg",
-      "Comprimido 25 mg",
-      "Comprimido 50 mg",
-      "Gragea 75 mg"
-    ],
-    "dose": {
-      "adulto": "Depresión: iniciar 25–50 mg/día; titular gradualmente. Dosis habitual 75–150 mg/día.",
-      "enurese": "Enuresis nocturna: 10–75 mg VO al acostarse, según edad y respuesta.",
-      "maxDose": "Dosis máxima habitual: 200 mg/día ambulatoria; hasta 300 mg/día en pacientes hospitalizados."
-    },
+    "commercialNames": "{'br': ['Tofranil', 'Imipra', 'Imipramina EMS'], 'ar': ['Tofranil', 'Imipramina Northia', 'Imipramina Klonal']}",
+    "presentation": "['Comprimido 10 mg', 'Comprimido 25 mg', 'Comprimido 50 mg', 'Gragea 75 mg']",
+    "dose": "{'adulto': 'Depresión: iniciar 25–50 mg/día; titular gradualmente. Dosis habitual 75–150 mg/día.', 'enurese': 'Enuresis nocturna: 10–75 mg VO al acostarse, según edad y respuesta.', 'maxDose': 'Dosis máxima habitual: 200 mg/día ambulatoria; hasta 300 mg/día en pacientes hospitalizados.'}",
     "doseKg": {
       "standard": "No se utiliza cálculo rutinario por kg en adultos.",
       "pediatric": "Enuresis pediátrica: aproximadamente 1–2,5 mg/kg/día según protocolo.",
       "maxDose": "200–300 mg/día"
     },
-    "indications": [
-      "Trastorno depresivo mayor",
-      "Trastorno de pánico",
-      "Trastorno de ansiedad generalizada",
-      "Enuresis nocturna",
-      "Dolor neuropático",
-      "Síndrome de intestino irritable con dolor",
-      "Depresión resistente en casos seleccionados"
-    ],
+    "indications": "['Trastorno depresivo mayor', 'Trastorno de pánico', 'Trastorno de ansiedad generalizada', 'Enuresis nocturna', 'Dolor neuropático', 'Síndrome de intestino irritable con dolor', 'Depresión resistente en casos seleccionados']",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
     "mechanism": "Inhibe la recaptación de serotonina y noradrenalina, además de bloquear receptores muscarínicos, H1 y alfa-1.",
     "onset": "Efecto antidepresivo generalmente en 2–4 semanas; respuesta plena en 6–8 semanas.",
     "halfLife": "Vida media aproximada: 8–20 horas; metabolito activo desipramina.",
-    "commonAdverseEffects": [
-      "Somnolencia",
-      "Boca seca",
-      "Estreñimiento",
-      "Visión borrosa",
-      "Sudoración",
-      "Hipotensión ortostática",
-      "Aumento de peso"
-    ],
-    "dangerousAdverseEffects": [
-      "Arritmias cardíacas",
-      "Ensanchamiento del QRS y QT",
-      "Cardiotoxicidad en sobredosis",
-      "Convulsiones",
-      "Delirium anticolinérgico",
-      "Viraje maníaco",
-      "Síndrome serotoninérgico"
-    ],
+    "commonAdverseEffects": "['Somnolencia', 'Boca seca', 'Estreñimiento', 'Visión borrosa', 'Sudoración', 'Hipotensión ortostática', 'Aumento de peso']",
+    "dangerousAdverseEffects": "['Arritmias cardíacas', 'Ensanchamiento del QRS y QT', 'Cardiotoxicidad en sobredosis', 'Convulsiones', 'Delirium anticolinérgico', 'Viraje maníaco', 'Síndrome serotoninérgico']",
     "risksByPatient": [],
-    "contraindications": [
-      "Uso concomitante con IMAO",
-      "Infarto agudo reciente",
-      "Arritmias graves",
-      "Glaucoma de ángulo cerrado",
-      "Retención urinaria importante"
-    ],
-    "interactions": [
-      "IMAO: síndrome serotoninérgico y crisis hipertensiva",
-      "ISRS: riesgo serotoninérgico",
-      "Alcohol: mayor sedación",
-      "Antiarrítmicos: riesgo de arritmia",
-      "Anticolinérgicos: riesgo de retención urinaria y delirium"
-    ],
-    "alerts": [
-      "Alto riesgo en sobredosis.",
-      "Considerar ECG antes del inicio en pacientes de riesgo.",
-      "Evitar en adultos mayores cuando sea posible.",
-      "No suspender abruptamente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "['Uso concomitante con IMAO', 'Infarto agudo reciente', 'Arritmias graves', 'Glaucoma de ángulo cerrado', 'Retención urinaria importante']",
+    "interactions": "['IMAO: síndrome serotoninérgico y crisis hipertensiva', 'ISRS: riesgo serotoninérgico', 'Alcohol: mayor sedación', 'Antiarrítmicos: riesgo de arritmia', 'Anticolinérgicos: riesgo de retención urinaria y delirium']",
+    "alerts": "['Alto riesgo en sobredosis.', 'Considerar ECG antes del inicio en pacientes de riesgo.', 'Evitar en adultos mayores cuando sea posible.', 'No suspender abruptamente.']",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=imipramine%20hydrochloride",
+    "pharmacologicClass": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "presentations": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "pharmacodynamics": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "pharmacokinetics": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "pediatricDose": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "renalDose": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "hepaticDose": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "adverseEffects": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "monitoring": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "administration": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "preparation": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "infusionProtocol": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "pregnancy": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "lactation": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "specialPopulations": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "patientEducation": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "clinicalPearls": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "guidelineRecommendations": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "safetyFlags": "No documentado de forma suficiente en la fuente primaria consultada; mantener bloqueado hasta revisión.",
+    "references": [
+      "DailyMed/FDA - imipramine hydrochloride tablets official labels: https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=imipramine%20hydrochloride"
     ]
   },
   "name": {
@@ -203,9 +113,21 @@
     "imipramina klonal",
     "antidepressivo triciclico"
   ],
-  "dataVersion": "clinical-data-v1-183741eac3e0b572",
-  "clinicalContentSha256": "183741eac3e0b572ed49663ca79bc163282414319bf1f189caca3598a46a8e81",
+  "dataVersion": "clinical-data-v1-2531c8b0cfbc53e5",
+  "clinicalContentSha256": "2531c8b0cfbc53e53f9ce2f4af5b573417624c2344d0713ce9f23bd24c4b91f2",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "imipramina.mcGoldClinicalV1",
+    "lote": "041",
+    "requiredFields": 33,
+    "approvedSha256": "fadb9514b3f6f966bf91d94abcad4b74bc40f729c9030650dcf67f4db90a6f50",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

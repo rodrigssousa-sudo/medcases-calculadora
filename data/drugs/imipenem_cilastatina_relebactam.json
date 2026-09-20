@@ -7,39 +7,18 @@
   "pt": {
     "name": "Imipenem + cilastatina + relebactam",
     "class": "Carbapenêmico + inibidor de DHP-I + inibidor de beta-lactamase",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "commercialNames": "['Genérico; marcas variam por país']",
     "presentation": "Frasco de combinação fixa IV.",
-    "dose": "Adulto CrCl >=90: 1,25 g IV q6h, infusão 30 min, por 4–14 dias conforme foco.",
+    "dose": "Adultos com ClCr ≥90 mL/min: 1,25 g IV (500/500/250 mg) a cada 6 h, infusão em 30 min, por 4-14 dias.",
     "doseKg": null,
     "indication": "Infecções por Pseudomonas aeruginosa e Enterobacterales resistentes a carbapenêmicos (KPC), pneumonia hospitalar/VAP, infecções intra-abdominais complicadas, ITU complicada. Não cobre NDM e OXA-48.",
     "spectrum": "Pseudomonas aeruginosa (incluindo cepas imipenem-resistentes com mecanismo KPC ou AmpC), Klebsiella pneumoniae (KPC+), outros Enterobacterales. O relebactam inibe beta-lactamases Classe A (KPC) e Classe C (AmpC). NÃO cobre metalo-beta-lactamases (NDM, VIM, IMP) nem OXA-48 isolado.",
     "contraindications": "Hipersensibilidade grave ao produto/beta-lactâmicos.",
     "risksByPatient": [],
-    "alerts": [
-      "Adulto 1,25 g q6h",
-      "Infusão 30 min",
-      "Pediatria 37,5 mg/kg",
-      "CrCl 30–59: 0,75 g q6h",
-      "<15 sem HD: não recomendado"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.fda.gov/news-events/press-announcements/fda-approves-antibiotic-treat-hospital-acquired-bacterial-pneumonia-and-ventilator-associated",
-      "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
-    ],
-    "renalDose": "CrCl 60–89: 1 g q6h; 30–59: 0,75 g q6h; 15–29: 0,5 g q6h; HD: 0,5 g q6h após sessão. <15 sem HD: não recomendado.",
-    "safetyFlags": [
-      "CrCl <90: ajustar",
-      "Valproato evitar",
-      "Ganciclovir evitar",
-      "Convulsões",
-      "Não cobre MBL"
-    ],
+    "alerts": "['Adulto 1,25 g q6h', 'Infusão 30 min', 'Pediatria 37,5 mg/kg', 'CrCl 30–59: 0,75 g q6h', '<15 sem HD: não recomendado']",
+    "ref": "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf",
+    "renalDose": "Adulto/≥30 kg: ClCr/eGFR 60-89: 1 g q6h; 30-59: 0,75 g q6h; 15-29: 0,5 g q6h; hemodiálise: 0,5 g q6h após HD; <15 sem HD: não recomendado. <30 kg com disfunção renal: sem dose recomendada.",
+    "safetyFlags": "['CrCl <90: ajustar', 'Valproato evitar', 'Ganciclovir evitar', 'Convulsões', 'Não cobre MBL']",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -59,29 +38,17 @@
     "pharmacodynamics": "Bactericida tempo-dependente; fT>MIC para imipenem e AUC/MIC para relebactam. Não cobre metalo-beta-lactamases.",
     "pharmacokinetics": "Somente IV; componentes dependem fortemente da eliminação renal e são removidos por hemodiálise.",
     "indications": "HABP/VABP, cUTI/pielonefrite e cIAI por Gram-negativos suscetíveis em adultos e populações pediátricas aprovadas.",
-    "presentations": [
-      "1,25 g = imipenem 500 mg + cilastatina 500 mg + relebactam 250 mg"
-    ],
-    "pediatricDose": ">=37 semanas pós-menstrual e 2 kg a <3 meses: 37,5 mg/kg q8h em 60 min. 3 meses–<18 anos <30 kg: 37,5 mg/kg q6h em 60 min; >=30 kg: 1,25 g q6h em 30 min.",
+    "presentations": "['1,25 g = imipenem 500 mg + cilastatina 500 mg + relebactam 250 mg']",
+    "pediatricDose": "Bula 12/2025: ≥37 semanas pós-menstruais até <3 meses e ≥2 kg: 37,5 mg/kg IV q8h em 60 min; 3 meses-<18 anos e <30 kg: 37,5 mg/kg IV q6h em 60 min; 30 kg ou mais: 1,25 g IV q6h em 30 min. Cada 37,5 mg/kg fornece 15/15/7,5 mg/kg. Não recomendado <37 semanas pós-menstruais.",
     "hepaticDose": "Sem ajuste hepático rotineiro esperado; eliminação renal é predominante.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Elevação de transaminases",
-      "Reação infusional"
-    ],
-    "dangerousAdverseEffects": [
-      "Convulsões/CNS",
-      "Anafilaxia",
-      "C. difficile",
-      "Redução de níveis de valproato"
-    ],
+    "commonAdverseEffects": "['Náusea', 'Diarreia', 'Elevação de transaminases', 'Reação infusional']",
+    "dangerousAdverseEffects": "['Convulsões/CNS', 'Anafilaxia', 'C. difficile', 'Redução de níveis de valproato']",
     "adverseEffects": "Carbapenêmicos podem reduzir níveis de ácido valproico e precipitar convulsões; risco neurológico aumenta com DRC.",
     "interactions": "Evitar ganciclovir quando possível e evitar ácido valproico/divalproato por risco de convulsões e queda de níveis.",
     "monitoring": "CrCl frequente, estado neurológico, culturas/AST e resposta.",
     "administration": "IV exclusivamente.",
     "preparation": "Constituir o pó e diluir para volume final conforme bula; doses renais são preparadas retirando volume do saco padrão.",
-    "infusionProtocol": "Adultos e >=30 kg: 30 min; menores de 30 kg: 60 min conforme idade/peso.",
+    "infusionProtocol": "Infusão IV: 30 min para adultos/≥30 kg; 60 min para <30 kg.",
     "pregnancy": "Dados humanos limitados; usar se benefício justificar.",
     "lactation": "Dados limitados para combinação completa; avaliar risco-benefício.",
     "specialPopulations": "Não recomendado <37 semanas pós-menstrual. Pediatria <30 kg com insuficiência renal não tem recomendação suficiente.",
@@ -89,50 +56,24 @@
     "clinicalPearls": "Relebactam amplia imipenem contra KPC/AmpC selecionadas, mas não resolve MBL; a dose precisa acompanhar CrCl e o valproato é uma interação crítica.",
     "guidelineRecommendations": "IDSA 2026 inclui imipenem-relebactam entre opções preferidas para KPC-CRE e DTR Pseudomonas suscetíveis em cenários apropriados, guiado por AST.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.fda.gov/news-events/press-announcements/fda-approves-antibiotic-treat-hospital-acquired-bacterial-pneumonia-and-ventilator-associated",
-      "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
+      "Merck/FDA - RECARBRIO prescribing information, revised 12/2025: https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
     ]
   },
   "es": {
     "name": "Imipenem + cilastatina + relebactam",
     "class": "Carbapenémico + inhibidor DHP-I + inhibidor beta-lactamasa",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
+    "commercialNames": "['Genérico; las marcas varían según el país']",
     "presentation": "Vial combinación fija IV.",
-    "dose": "Adulto ClCr >=90: 1,25 g IV q6h en 30 min por 4–14 días.",
+    "dose": "Adultos con ClCr ≥90 mL/min: 1,25 g IV (500/500/250 mg) cada 6 h, infusión en 30 min, durante 4-14 días.",
     "doseKg": null,
     "indication": "Infecciones por Pseudomonas aeruginosa y Enterobacterales resistentes a carbapenémicos (KPC), neumonía hospitalaria/VAP, infecciones intraabdominales complicadas, ITU complicada. No cubre NDM ni OXA-48.",
     "spectrum": "Pseudomonas aeruginosa (incluidas cepas imipenem-resistentes con mecanismo KPC o AmpC), Klebsiella pneumoniae (KPC+), otros Enterobacterales. El relebactam inhibe betalactamasas Clase A (KPC) y Clase C (AmpC). NO cubre metalo-betalactamasas (NDM, VIM, IMP) ni OXA-48 aislado.",
     "contraindications": "Hipersensibilidad grave al producto/beta-lactámicos.",
     "risksByPatient": [],
-    "alerts": [
-      "Adulto 1,25 g q6h",
-      "Infusión 30 min",
-      "Pediatría 37,5 mg/kg",
-      "ClCr 30–59: 0,75 g q6h",
-      "<15 sin HD: no recomendado"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.fda.gov/news-events/press-announcements/fda-approves-antibiotic-treat-hospital-acquired-bacterial-pneumonia-and-ventilator-associated",
-      "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
-    ],
-    "renalDose": "ClCr 60–89: 1 g q6h; 30–59: 0,75 g q6h; 15–29: 0,5 g q6h; HD: 0,5 g q6h tras sesión. <15 sin HD: no recomendado.",
-    "safetyFlags": [
-      "ClCr <90: ajustar",
-      "Valproato evitar",
-      "Ganciclovir evitar",
-      "Convulsiones",
-      "No cubre MBL"
-    ],
+    "alerts": "['Adulto 1,25 g q6h', 'Infusión 30 min', 'Pediatría 37,5 mg/kg', 'ClCr 30–59: 0,75 g q6h', '<15 sin HD: no recomendado']",
+    "ref": "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf",
+    "renalDose": "Adulto/≥30 kg: ClCr/eGFR 60-89: 1 g c/6 h; 30-59: 0,75 g c/6 h; 15-29: 0,5 g c/6 h; hemodiálisis: 0,5 g c/6 h después de HD; <15 sin HD: no recomendado. <30 kg con disfunción renal: sin dosis recomendada.",
+    "safetyFlags": "['ClCr <90: ajustar', 'Valproato evitar', 'Ganciclovir evitar', 'Convulsiones', 'No cubre MBL']",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -152,29 +93,17 @@
     "pharmacodynamics": "Bactericida dependiente de tiempo; fT>MIC para imipenem y AUC/MIC para relebactam. No cubre MBL.",
     "pharmacokinetics": "Solo IV; componentes dependen de eliminación renal y se eliminan por HD.",
     "indications": "HABP/VABP, cUTI/pielonefritis y cIAI por Gram negativos susceptibles en adultos y pediatría aprobada.",
-    "presentations": [
-      "1,25 g = imipenem 500 mg + cilastatina 500 mg + relebactam 250 mg"
-    ],
-    "pediatricDose": ">=37 semanas postmenstrual y 2 kg a <3 meses: 37,5 mg/kg q8h en 60 min. 3 meses–<18 años <30 kg: 37,5 mg/kg q6h; >=30 kg: 1,25 g q6h.",
+    "presentations": "['1,25 g = imipenem 500 mg + cilastatina 500 mg + relebactam 250 mg']",
+    "pediatricDose": "Ficha 12/2025: ≥37 semanas posmenstruales hasta <3 meses y ≥2 kg: 37,5 mg/kg IV c/8 h en 60 min; 3 meses-<18 años y <30 kg: 37,5 mg/kg IV c/6 h en 60 min; ≥30 kg: 1,25 g IV c/6 h en 30 min. Cada 37,5 mg/kg aporta 15/15/7,5 mg/kg. No recomendado <37 semanas posmenstruales.",
     "hepaticDose": "Sin ajuste hepático rutinario esperado.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Elevación de transaminasas",
-      "Reacción infusional"
-    ],
-    "dangerousAdverseEffects": [
-      "Convulsiones/CNS",
-      "Anafilaxia",
-      "C. difficile",
-      "Reducción de valproato"
-    ],
+    "commonAdverseEffects": "['Náuseas', 'Diarrea', 'Elevación de transaminasas', 'Reacción infusional']",
+    "dangerousAdverseEffects": "['Convulsiones/CNS', 'Anafilaxia', 'C. difficile', 'Reducción de valproato']",
     "adverseEffects": "Carbapenémicos pueden reducir valproato y precipitar convulsiones; riesgo CNS aumenta en ERC.",
     "interactions": "Evitar ganciclovir cuando sea posible y ácido valproico/divalproato.",
     "monitoring": "ClCr frecuente, estado neurológico, cultivos/AST y respuesta.",
     "administration": "Exclusivamente IV.",
     "preparation": "Constituir/diluir; dosis renales se preparan desde solución estándar según ficha.",
-    "infusionProtocol": "Adultos y >=30 kg 30 min; <30 kg 60 min.",
+    "infusionProtocol": "Infusión IV: 30 min para adultos/≥30 kg; 60 min para <30 kg.",
     "pregnancy": "Datos humanos limitados.",
     "lactation": "Datos limitados para combinación completa.",
     "specialPopulations": "No recomendado <37 semanas postmenstrual. Pediatría <30 kg con ERC sin recomendación suficiente.",
@@ -182,12 +111,7 @@
     "clinicalPearls": "Relebactam amplía imipenem frente a KPC/AmpC selectas, no MBL; dosis sigue ClCr y valproato es interacción crítica.",
     "guidelineRecommendations": "IDSA 2026 incluye imipenem-relebactam entre opciones preferidas para KPC-CRE y DTR Pseudomonas susceptibles en escenarios apropiados, guiado por AST.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=be32f468-738b-40df-a425-591e12f65159",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.fda.gov/news-events/press-announcements/fda-approves-antibiotic-treat-hospital-acquired-bacterial-pneumonia-and-ventilator-associated",
-      "https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
+      "Merck/FDA - RECARBRIO prescribing information, revised 12/2025: https://www.merck.com/product/usa/pi_circulars/r/recarbrio/recarbrio_pi.pdf"
     ]
   },
   "name": {
@@ -201,9 +125,21 @@
     "recarbrio",
     "carbapenemico + inibidor de dhp + inibidor de beta-lactamase (anti-kpc/mbl tipo a e c)"
   ],
-  "dataVersion": "clinical-data-v1-183741eac3e0b572",
-  "clinicalContentSha256": "183741eac3e0b572ed49663ca79bc163282414319bf1f189caca3598a46a8e81",
+  "dataVersion": "clinical-data-v1-2531c8b0cfbc53e5",
+  "clinicalContentSha256": "2531c8b0cfbc53e53f9ce2f4af5b573417624c2344d0713ce9f23bd24c4b91f2",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "imipenem_cilastatina_relebactam.mcGoldClinicalV1",
+    "lote": "041",
+    "requiredFields": 33,
+    "approvedSha256": "fadb9514b3f6f966bf91d94abcad4b74bc40f729c9030650dcf67f4db90a6f50",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

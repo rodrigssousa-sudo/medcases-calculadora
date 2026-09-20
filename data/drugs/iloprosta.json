@@ -37,11 +37,10 @@
     "safetyFlags": "PAS abaixo de 85 mmHg; síncope; broncoespasmo; sangramento; edema pulmonar/PVOD; administração exclusivamente inalatória para Ventavis.",
     "alerts": "Não misturar no nebulizador. Se ocorrer edema pulmonar, interromper e investigar hipertensão venosa pulmonar/PVOD.",
     "references": [
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021779s021lbl.pdf",
-      "https://www.ema.europa.eu/en/medicines/human/EPAR/ventavis",
-      "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+      "DailyMed/FDA - VENTAVIS (iloprost) inhalation solution: https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=VENTAVIS",
+      "EMA - Iloprost/marketed product information search: https://www.ema.europa.eu/en/search?search_api_fulltext=iloprost"
     ],
-    "ref": "FDA Ventavis prescribing information 03/2022, vigente na fonte consultada; EMA Ventavis; ESC/ERS Pulmonary Hypertension Guidelines."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=VENTAVIS"
   },
   "es": {
     "name": "Iloprost",
@@ -76,11 +75,10 @@
     "safetyFlags": "PAS menor de 85 mmHg; síncope; broncoespasmo; sangrado; edema pulmonar/PVOD; administración exclusivamente inhalada para Ventavis.",
     "alerts": "No mezclar en el nebulizador. Si aparece edema pulmonar, suspender e investigar hipertensión venosa pulmonar/PVOD.",
     "references": [
-      "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021779s021lbl.pdf",
-      "https://www.ema.europa.eu/en/medicines/human/EPAR/ventavis",
-      "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/Pulmonary-Hypertension-Guidelines-on-Diagnosis-and-Treatment-of"
+      "DailyMed/FDA - VENTAVIS (iloprost) inhalation solution: https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=VENTAVIS",
+      "EMA - Iloprost/marketed product information search: https://www.ema.europa.eu/en/search?search_api_fulltext=iloprost"
     ],
-    "ref": "FDA Ventavis prescribing information 03/2022, vigente en la fuente consultada; EMA Ventavis; ESC/ERS Pulmonary Hypertension Guidelines."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=VENTAVIS"
   },
   "name": {
     "pt": "Iloprosta",
@@ -89,19 +87,21 @@
   "keywords": [
     "iloprosta"
   ],
-  "dataVersion": "clinical-data-v1-183741eac3e0b572",
-  "clinicalContentSha256": "183741eac3e0b572ed49663ca79bc163282414319bf1f189caca3598a46a8e81",
+  "dataVersion": "clinical-data-v1-2531c8b0cfbc53e5",
+  "clinicalContentSha256": "2531c8b0cfbc53e53f9ce2f4af5b573417624c2344d0713ce9f23bd24c4b91f2",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "iloprosta.mcGoldClinicalV1",
-    "group": "GOLD_GROUP08_FINAL5",
-    "review": "2026-09",
+    "lote": "041",
     "requiredFields": 33,
-    "contentSha256": "6f0b220c762f353459b00c634803a47c1002d7f4b6bfb41077636686b850d420",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "fadb9514b3f6f966bf91d94abcad4b74bc40f729c9030650dcf67f4db90a6f50",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

@@ -6312,3 +6312,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:hidroxicloroquina:END */
+/* GOLD33_SELECTIVE:ibuprofeno:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["ibuprofeno"])throw new Error("GOLD33_MISSING_CANONICAL:ibuprofeno");db["ibuprofeno"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "041",
+    "requiredFieldCount": 33,
+    "approvedSha256": "fadb9514b3f6f966bf91d94abcad4b74bc40f729c9030650dcf67f4db90a6f50",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ibuprofeno",
+    "class": "Analgésico anti-inflamatório não esteroide (AINE).",
+    "pharmacologicClass": "Inibidor da ciclo-oxigenase com ação analgésica, antipirética e anti-inflamatória.",
+    "commercialNames": "Ibuprofeno e marcas locais.",
+    "presentation": "Oral em várias concentrações; IV CALDOLOR 100 mg/mL para diluição ou bolsa 4 mg/mL pronta.",
+    "presentations": "Oral em várias concentrações; IV CALDOLOR 100 mg/mL para diluição ou bolsa 4 mg/mL pronta.",
+    "mechanism": "Inibição reversível de COX-1/COX-2, reduzindo prostaglandinas.",
+    "pharmacodynamics": "Reduz prostaglandinas; o mesmo mecanismo explica analgesia e parte dos riscos GI, renal, cardiovascular e hemostático.",
+    "pharmacokinetics": "Alta ligação proteica; metabolismo hepático e eliminação renal de metabólitos.",
+    "indications": "Dor leve/moderada, dor pós-operatória, adjuvante de opioide e febre; IV indicada a partir de 3 meses.",
+    "dose": "IV adulto: 400–800 mg q6h se necessário, em pelo menos 30 min; máximo 3.200 mg/dia.",
+    "pediatricDose": "12–17 anos: 400 mg IV q4–6h. 6 meses–<12 anos: 10 mg/kg IV q4–6h, máx 400 mg/dose; máximo 40 mg/kg ou 2.400 mg/dia. 3–<6 meses: dose única 10 mg/kg, máx 100 mg. <3 meses não estabelecido.",
+    "renalDose": "Evitar doença renal avançada salvo benefício justificar; corrigir desidratação/hipovolemia e monitorar função renal.",
+    "hepaticDose": "Sem tabela universal de redução; usar menor dose eficaz e monitorar em hepatopatia.",
+    "commonAdverseEffects": "Náusea, dispepsia, dor abdominal, cefaleia, tontura, edema e elevação da pressão arterial.",
+    "dangerousAdverseEffects": "Sangramento/ulceração/perfuração GI, lesão renal aguda, eventos trombóticos cardiovasculares, anafilaxia/broncoespasmo e reações cutâneas graves.",
+    "adverseEffects": "Risco depende de dose, duração e perfil basal; usar a menor dose eficaz pelo menor tempo.",
+    "contraindications": "Hipersensibilidade ao AINE, reação a aspirina/AINE e contexto de CABG; respeitar contraindicações renais, hemorrágicas e específicas da formulação.",
+    "interactions": "Anticoagulantes/antiagregantes/ISRS aumentam sangramento; diuréticos + IECA/ARA-II aumentam risco renal; evitar outro AINE concomitante; atenção a lítio e metotrexato.",
+    "monitoring": "Dor/febre, pressão arterial, sinais de sangramento GI, função renal e volemia em risco; função hepática conforme o fármaco/duração.",
+    "administration": "IV conforme bula, com hidratação adequada; via oral conforme apresentação.",
+    "preparation": "CALDOLOR 100 mg/mL deve ser diluído a ≤4 mg/mL; bolsa 4 mg/mL é pronta.",
+    "infusionProtocol": "IV adulto mínimo 30 min; pediatria mínimo 10 min.",
+    "pregnancy": "Evitar AINE a partir de 20 semanas salvo necessidade específica e pelo menor tempo; evitar a partir de ~30 semanas pelo risco de fechamento ductal.",
+    "lactation": "Avaliar formulação, dose e duração; consultar informação específica do produto e exposição do lactente.",
+    "specialPopulations": "Idosos, doença renal/cardiovascular/GI, desidratação e anticoagulação aumentam toxicidade.",
+    "patientEducation": "Não associar por conta própria a outro AINE; procurar atendimento com melena, hematêmese, dor torácica, dispneia, oligúria ou reação alérgica.",
+    "clinicalPearls": "A formulação IV tem posologia pediátrica própria; não extrapolar doses entre apresentações.",
+    "guidelineRecommendations": "Menor dose eficaz pelo menor tempo; integrar analgesia multimodal e reavaliar continuidade.",
+    "safetyFlags": "AINE: risco GI, renal e cardiovascular; atenção a gestação e duplicação de AINE.",
+    "alerts": "Confirmar apresentação, dose máxima e contraindicações; corrigir hipovolemia quando aplicável.",
+    "references": [
+      "DailyMed/FDA - CALDOLOR (ibuprofen) injection, official label: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684",
+      "FDA - NSAIDs in pregnancy at 20 weeks or later: https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684"
+  },
+  "es": {
+    "name": "Ibuprofeno",
+    "class": "Analgésico antiinflamatorio no esteroideo (AINE).",
+    "pharmacologicClass": "Inhibidor de ciclooxigenasa con acción analgésica, antipirética y antiinflamatoria.",
+    "commercialNames": "Ibuprofeno y marcas locales.",
+    "presentation": "Oral en varias concentraciones; IV CALDOLOR 100 mg/mL para diluir o bolsa 4 mg/mL lista.",
+    "presentations": "Oral en varias concentraciones; IV CALDOLOR 100 mg/mL para diluir o bolsa 4 mg/mL lista.",
+    "mechanism": "Inhibición reversible de COX-1/COX-2, reduciendo prostaglandinas.",
+    "pharmacodynamics": "Reduce prostaglandinas; el mismo mecanismo explica analgesia y parte de los riesgos GI, renal, cardiovascular y hemostático.",
+    "pharmacokinetics": "Alta unión a proteínas; metabolismo hepático y eliminación renal de metabolitos.",
+    "indications": "Dolor leve/moderado, posoperatorio, coadyuvante de opioide y fiebre; IV indicada desde 3 meses.",
+    "dose": "IV adulto: 400–800 mg q6h según necesidad, en al menos 30 min; máximo 3.200 mg/día.",
+    "pediatricDose": "12–17 años: 400 mg IV q4–6h. 6 meses–<12 años: 10 mg/kg IV q4–6h, máx 400 mg/dosis; máximo 40 mg/kg o 2.400 mg/día. 3–<6 meses: dosis única 10 mg/kg, máx 100 mg. <3 meses no establecido.",
+    "renalDose": "Evitar enfermedad renal avanzada salvo beneficio claro; corregir deshidratación/hipovolemia y monitorizar función renal.",
+    "hepaticDose": "Sin tabla universal de reducción; usar menor dosis eficaz y monitorizar en hepatopatía.",
+    "commonAdverseEffects": "Náuseas, dispepsia, dolor abdominal, cefalea, mareos, edema y elevación de la presión arterial.",
+    "dangerousAdverseEffects": "Sangrado/ulceración/perforación GI, lesión renal aguda, eventos trombóticos cardiovasculares, anafilaxia/broncoespasmo y reacciones cutáneas graves.",
+    "adverseEffects": "El riesgo depende de dosis, duración y perfil basal; usar la menor dosis eficaz durante el menor tiempo.",
+    "contraindications": "Hipersensibilidad al AINE, reacción a aspirina/AINE y contexto de CABG; respetar contraindicaciones renales, hemorrágicas y de formulación.",
+    "interactions": "Anticoagulantes/antiagregantes/ISRS aumentan sangrado; diuréticos + IECA/ARA-II aumentan riesgo renal; evitar otro AINE concomitante; atención a litio y metotrexato.",
+    "monitoring": "Dolor/fiebre, presión arterial, signos de sangrado GI, función renal y volemia en riesgo; función hepática según fármaco/duración.",
+    "administration": "IV según ficha, con hidratación adecuada; vía oral según presentación.",
+    "preparation": "CALDOLOR 100 mg/mL debe diluirse a ≤4 mg/mL; bolsa 4 mg/mL está lista.",
+    "infusionProtocol": "IV adulto mínimo 30 min; pediatría mínimo 10 min.",
+    "pregnancy": "Evitar AINE desde 20 semanas salvo necesidad específica y por el menor tiempo; evitar desde ~30 semanas por cierre ductal.",
+    "lactation": "Valorar formulación, dosis y duración; consultar información específica del producto y exposición del lactante.",
+    "specialPopulations": "Adultos mayores, enfermedad renal/cardiovascular/GI, deshidratación y anticoagulación aumentan toxicidad.",
+    "patientEducation": "No asociar por cuenta propia otro AINE; consultar ante melena, hematemesis, dolor torácico, disnea, oliguria o reacción alérgica.",
+    "clinicalPearls": "La formulación IV tiene posología pediátrica propia; no extrapolar dosis entre presentaciones.",
+    "guidelineRecommendations": "Menor dosis eficaz durante el menor tiempo; integrar analgesia multimodal y reevaluar continuidad.",
+    "safetyFlags": "AINE: riesgo GI, renal y cardiovascular; atención a embarazo y duplicación de AINE.",
+    "alerts": "Confirmar presentación, dosis máxima y contraindicaciones; corregir hipovolemia cuando corresponda.",
+    "references": [
+      "DailyMed/FDA - CALDOLOR (ibuprofen) injection, official label: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684",
+      "FDA - NSAIDs in pregnancy at 20 weeks or later: https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684"
+  }
+};})();
+/* GOLD33_SELECTIVE:ibuprofeno:END */

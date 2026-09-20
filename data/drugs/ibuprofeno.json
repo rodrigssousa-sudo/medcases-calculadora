@@ -35,13 +35,12 @@
     "infusionProtocol": "IV adulto mínimo 30 min; pediatria mínimo 10 min.",
     "clinicalPearls": "A formulação IV tem posologia pediátrica própria; não extrapolar doses entre apresentações.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684",
-      "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-drug-safety-communication-fda-strengthens-warning-non-aspirin-nonsteroidal-anti-inflammatory",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid"
+      "DailyMed/FDA - CALDOLOR (ibuprofen) injection, official label: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684",
+      "FDA - NSAIDs in pregnancy at 20 weeks or later: https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid"
     ],
     "commercialNames": "Ibuprofeno e marcas locais.",
     "presentations": "Oral em várias concentrações; IV CALDOLOR 100 mg/mL para diluição ou bolsa 4 mg/mL pronta.",
-    "ref": "Fontes regulatórias e bula oficial revisadas para o ciclo Gold120 (2026)."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684"
   },
   "es": {
     "name": "Ibuprofeno",
@@ -74,13 +73,12 @@
     "infusionProtocol": "IV adulto mínimo 30 min; pediatría mínimo 10 min.",
     "clinicalPearls": "La formulación IV tiene posología pediátrica propia; no extrapolar dosis entre presentaciones.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684",
-      "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-drug-safety-communication-fda-strengthens-warning-non-aspirin-nonsteroidal-anti-inflammatory",
-      "https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid"
+      "DailyMed/FDA - CALDOLOR (ibuprofen) injection, official label: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684",
+      "FDA - NSAIDs in pregnancy at 20 weeks or later: https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid"
     ],
     "commercialNames": "Ibuprofeno y marcas locales.",
     "presentations": "Oral en varias concentraciones; IV CALDOLOR 100 mg/mL para diluir o bolsa 4 mg/mL lista.",
-    "ref": "Fuentes regulatorias y ficha oficial revisadas para el ciclo Gold120 (2026)."
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684"
   },
   "name": {
     "pt": "Ibuprofeno",
@@ -89,8 +87,8 @@
   "keywords": [
     "ibuprofeno"
   ],
-  "dataVersion": "clinical-data-v1-183741eac3e0b572",
-  "clinicalContentSha256": "183741eac3e0b572ed49663ca79bc163282414319bf1f189caca3598a46a8e81",
+  "dataVersion": "clinical-data-v1-2531c8b0cfbc53e5",
+  "clinicalContentSha256": "2531c8b0cfbc53e53f9ce2f4af5b573417624c2344d0713ce9f23bd24c4b91f2",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "analgesicos.js",
@@ -359,5 +357,17 @@
         "reviewed_at": "2026-09-05"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/analgesicos.js",
+    "sourceField": "ibuprofeno.mcGoldClinicalV1",
+    "lote": "041",
+    "requiredFields": 33,
+    "approvedSha256": "fadb9514b3f6f966bf91d94abcad4b74bc40f729c9030650dcf67f4db90a6f50",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }
