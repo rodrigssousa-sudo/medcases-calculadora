@@ -12718,3 +12718,91 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:glatiramer:END */
+/* GOLD33_SELECTIVE:guanfacina:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["guanfacina"])throw new Error("GOLD33_MISSING_CANONICAL:guanfacina");db["guanfacina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "039",
+    "requiredFieldCount": 33,
+    "approvedSha256": "72a167888bdcc091cdbc40db2f06d309c0b3210c89d1ba428d1e7253777d5c65",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Guanfacina",
+    "class": "Agonista alfa2A central",
+    "pharmacologicClass": "Reduz descarga simpática central",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos IR 1-2 mg e ER 1-4 mg; não intercambiáveis mg a mg.",
+    "presentations": "Comprimidos IR 1-2 mg e ER 1-4 mg; não intercambiáveis mg a mg.",
+    "mechanism": "Reduz descarga simpática central. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo CYP3A4; eliminação renal parcial.",
+    "indications": "IR: hipertensão; ER: TDAH, conforme produto e jurisdição.",
+    "dose": "ER TDAH: iniciar 1 mg 1x/dia, aumentar ≤1 mg/semana; faixa alvo por peso, máximo rotulado conforme idade. IR hipertensão: iniciar 1 mg à noite.",
+    "pediatricDose": "ER ≥6 anos: titular por peso e tolerância; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Pode ser necessário reduzir em comprometimento renal.",
+    "hepaticDose": "Pode ser necessário reduzir em comprometimento hepático.",
+    "commonAdverseEffects": "Sonolência, fadiga, hipotensão, tontura e boca seca.",
+    "dangerousAdverseEffects": "Bradicardia/síncope, hipotensão grave e hipertensão rebote após retirada abrupta.",
+    "adverseEffects": "Sonolência, fadiga, hipotensão, tontura e boca seca. Graves: Bradicardia/síncope, hipotensão grave e hipertensão rebote após retirada abrupta.",
+    "contraindications": "Hipersensibilidade.",
+    "interactions": "CYP3A4 inibidores/indutores, anti-hipertensivos e depressores SNC.",
+    "monitoring": "PA, FC, sedação, peso, sintomas de TDAH e adesão; vigiar rebote.",
+    "administration": "VO no mesmo horário; não triturar ER; descontinuar gradualmente.",
+    "preparation": "ER inteira; evitar refeição rica em gordura conforme rótulo.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Dados insuficientes.",
+    "lactation": "Dados insuficientes; monitorar lactente se usada.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Bradicardia/síncope, hipotensão grave e hipertensão rebote após retirada abrupta. Titulação bloqueada sem formulação IR/ER, indicação, idade/peso, PA/FC, rim/fígado, CYP3A4 e plano de retirada.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=guanfacine"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=guanfacine"
+  },
+  "es": {
+    "name": "Guanfacina",
+    "class": "Agonista alfa2A central",
+    "pharmacologicClass": "Reduce descarga simpática central",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos IR 1-2 mg y ER 1-4 mg; no intercambiables mg a mg.",
+    "presentations": "Comprimidos IR 1-2 mg y ER 1-4 mg; no intercambiables mg a mg.",
+    "mechanism": "Reduce descarga simpática central. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo CYP3A4; eliminación renal parcial.",
+    "indications": "IR: hipertensión; ER: TDAH, según producto y jurisdicción.",
+    "dose": "ER TDAH: iniciar 1 mg una vez/día, aumentar ≤1 mg/semana; objetivo por peso, máximo según edad. IR hipertensión: iniciar 1 mg nocturno.",
+    "pediatricDose": "ER ≥6 años: titular por peso y tolerancia; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Puede requerir reducción en insuficiencia renal.",
+    "hepaticDose": "Puede requerir reducción en insuficiencia hepática.",
+    "commonAdverseEffects": "Somnolencia, fatiga, hipotensión, mareo y boca seca.",
+    "dangerousAdverseEffects": "Bradicardia/síncope, hipotensión grave e hipertensión rebote tras retirada brusca.",
+    "adverseEffects": "Somnolencia, fatiga, hipotensión, mareo y boca seca. Graves: Bradicardia/síncope, hipotensión grave e hipertensión rebote tras retirada brusca.",
+    "contraindications": "Hipersensibilidad.",
+    "interactions": "Inhibidores/inductores CYP3A4, antihipertensivos y depresores SNC.",
+    "monitoring": "PA, FC, sedación, peso, síntomas de TDAH y adherencia; vigilar rebote.",
+    "administration": "VO a la misma hora; no triturar ER; retirar gradualmente.",
+    "preparation": "ER entera; evitar comida rica en grasa según ficha.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Datos insuficientes.",
+    "lactation": "Datos insuficientes; vigilar lactante si se usa.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Bradicardia/síncope, hipotensión grave e hipertensión rebote tras retirada brusca. Titulação bloqueada sem formulação IR/ER, indicação, idade/peso, PA/FC, rim/fígado, CYP3A4 e plano de retirada.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=guanfacine"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=guanfacine"
+  }
+};})();
+/* GOLD33_SELECTIVE:guanfacina:END */
