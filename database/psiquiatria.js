@@ -8651,3 +8651,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:vilazodona:END */
+/* GOLD33_SELECTIVE:vortioxetina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="vortioxetina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vortioxetina:"+matches.length);drug=matches[0];}else{drug=db&&db["vortioxetina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="vortioxetina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vortioxetina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:vortioxetina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "083",
+    "requiredFieldCount": 33,
+    "approvedSha256": "0316ab38ba2be15000dda4927df8f00e6d8925a88d95ac7c1e69822aea511bfa",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Vortioxetina",
+    "class": "Antidepressivo multimodal serotoninérgico",
+    "pharmacologicClass": "Antidepressivo multimodal serotoninérgico",
+    "commercialNames": "br: Brintellix; ar: Brintellix; Vortioxetina Bagó",
+    "presentation": "Comprimido 5 mg; Comprimido 10 mg; Comprimido 15 mg; Comprimido 20 mg",
+    "presentations": "Comprimido 5 mg; Comprimido 10 mg; Comprimido 15 mg; Comprimido 20 mg",
+    "mechanism": "Inibe recaptação de serotonina e modula múltiplos receptores serotoninérgicos (5HT1A, 5HT1B, 5HT3, 5HT7).",
+    "pharmacodynamics": "Inibe recaptação de serotonina e modula múltiplos receptores serotoninérgicos (5HT1A, 5HT1B, 5HT3, 5HT7).",
+    "pharmacokinetics": "Vida média aproximada: 66 horas.",
+    "indications": "Transtorno depressivo maior; Depressão com prejuízo cognitivo; Depressão resistente; Transtorno de ansiedade generalizada; Depressão em idosos; Depressão com baixa tolerância sexual aos ISRS; Depressão com sintomas cognitivos persistentes",
+    "dose": "adulto: 10 mg VO 1x/dia; ajustar entre 5–20 mg/dia.; maxDose: Dose máxima: 20 mg/dia.",
+    "pediatricDose": "standard: Não se utiliza cálculo por kg.; pediatric: Uso pediátrico especializado.; maxDose: 20 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Náuseas; Constipação; Tontura; Cefaleia; Diarreia",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica; Hiponatremia; Virada maníaca; Ideação suicida",
+    "adverseEffects": "Náusea, constipação, vômito e disfunção sexual.; Síndrome serotoninérgica, suicidabilidade, sangramento, hiponatremia e mania.",
+    "contraindications": "Uso concomitante com IMAO; Hipersensibilidade ao medicamento",
+    "interactions": "IMAO; ISRS/ISRN; Tramadol; Linezolida; Lítio",
+    "monitoring": "Melhor evidência para sintomas cognitivos da depressão.; Baixo impacto na função sexual.; Baixo risco de ganho de peso.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, suicidabilidade, sangramento, hiponatremia e mania.",
+    "alerts": "Síndrome serotoninérgica, suicidabilidade, sangramento, hiponatremia e mania.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vortioxetina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vortioxetina"
+  },
+  "es": {
+    "name": "Vortioxetina",
+    "class": "Antidepressivo multimodal serotoninérgico",
+    "pharmacologicClass": "Antidepressivo multimodal serotoninérgico",
+    "commercialNames": "br: Brintellix; ar: Brintellix; Vortioxetina Bagó",
+    "presentation": "Comprimido 5 mg; Comprimido 10 mg; Comprimido 15 mg; Comprimido 20 mg",
+    "presentations": "Comprimido 5 mg; Comprimido 10 mg; Comprimido 15 mg; Comprimido 20 mg",
+    "mechanism": "Inibe recaptação de serotonina y modula múltiplos receptores serotoninérgicos (5HT1A, 5HT1B, 5HT3, 5HT7).",
+    "pharmacodynamics": "Inibe recaptação de serotonina y modula múltiplos receptores serotoninérgicos (5HT1A, 5HT1B, 5HT3, 5HT7).",
+    "pharmacokinetics": "Vida média aproximada: 66 horas.",
+    "indications": "Transtorno depressivo maior; Depressão con prejuízo cognitivo; Depressão resistente; Transtorno de ansiedade generalizada; Depressão em idosos; Depressão con baixa tolerância sexual aos ISRS; Depressão con sintomas cognitivos persistentes",
+    "dose": "adulto: 10 mg VO 1x/dia; ajustar entre 5–20 mg/dia.; maxDose: Dose máxima: 20 mg/dia.",
+    "pediatricDose": "standard: No se utiliza cálculo por kg.; pediatric: Uso pediátrico especializado.; maxDose: 20 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Náuseas; Constipação; Tontura; Cefaleia; Diarreia",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica; Hiponatremia; Virada maníaca; Ideação suicida",
+    "adverseEffects": "Náusea, constipação, vômito y disfunción sexual.; Síndrome serotoninérgica, suicidabilidade, sangramento, hiponatremia y mania.",
+    "contraindications": "Uso concomitante con IMAO; Hipersensibilidade ao medicamento",
+    "interactions": "IMAO; ISRS/ISRN; Tramadol; Linezolida; Lítio",
+    "monitoring": "Melhor evidência para sintomas cognitivos da depressão.; Baixo impacto na función sexual.; Baixo risco de ganho de peso.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, suicidabilidade, sangramento, hiponatremia y mania.",
+    "alerts": "Síndrome serotoninérgica, suicidabilidade, sangramento, hiponatremia y mania.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vortioxetina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vortioxetina"
+  }
+};})();
+/* GOLD33_SELECTIVE:vortioxetina:END */

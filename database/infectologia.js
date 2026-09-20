@@ -11379,3 +11379,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:velpatasvir_sofosbuvir:END */
+/* GOLD33_SELECTIVE:voriconazol:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="voriconazol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:voriconazol:"+matches.length);drug=matches[0];}else{drug=db&&db["voriconazol"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="voriconazol";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:voriconazol:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:voriconazol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "083",
+    "requiredFieldCount": 33,
+    "approvedSha256": "0316ab38ba2be15000dda4927df8f00e6d8925a88d95ac7c1e69822aea511bfa",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Voriconazol",
+    "class": "Antifúngico triazólico",
+    "pharmacologicClass": "Antifúngico triazólico",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Formulações oral e/ou IV conforme agente.",
+    "presentations": "Formulações oral e/ou IV conforme agente.",
+    "mechanism": "Inibe a 14-alfa-desmetilase fúngica dependente de CYP51, reduzindo ergosterol e desorganizando a membrana.",
+    "pharmacodynamics": "Inibe a 14-alfa-desmetilase fúngica dependente de CYP51, reduzindo ergosterol e desorganizando a membrana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Primeira linha para aspergilose invasiva em muitos cenários; candidíase invasiva selecionada e outras micoses por suscetíveis.",
+    "dose": "Aspergilose invasiva em adulto: IV 6 mg/kg q12h por 2 doses, depois 4 mg/kg q12h; via oral usa esquema de manutenção por peso/formulação conforme bula.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Cefaleia; Elevação de transaminases",
+    "dangerousAdverseEffects": "Hepatotoxicidade grave; Interações medicamentosas graves; Arritmia relacionada a QT conforme agente",
+    "adverseEffects": "Alterações visuais, febre, rash, náusea e aumento de transaminases.; Hepatotoxicidade, QT/arrítmia, fototoxicidade/câncer cutâneo, neurotoxicidade e interações graves.",
+    "contraindications": "Hipersensibilidade e combinações formalmente contraindicadas por interações/QT conforme bula.",
+    "interactions": "Inibe e é metabolizado por CYP2C19/2C9/3A4; há múltiplas contraindicações. Revisar rifampicina, carbamazepina, sirolimo, estatinas, tacrolimo e fármacos de QT.",
+    "monitoring": "CrCl <50: preferir VO ao IV/SBECD; QT prolongado; TDM útil; Alterações visuais/alucinações; Fototoxicidade/SCC; Hepatotoxicidade",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, QT/arrítmia, fototoxicidade/câncer cutâneo, neurotoxicidade e interações graves.",
+    "alerts": "Hepatotoxicidade, QT/arrítmia, fototoxicidade/câncer cutâneo, neurotoxicidade e interações graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=voriconazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=voriconazol"
+  },
+  "es": {
+    "name": "Voriconazol",
+    "class": "Antifúngico triazólico",
+    "pharmacologicClass": "Antifúngico triazólico",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Formulações oral e/ou IV conforme agente.",
+    "presentations": "Formulações oral e/ou IV conforme agente.",
+    "mechanism": "Inibe a 14-alfa-desmetilase fúngica dependente de CYP51, reduzindo ergosterol y desorganizando a membrana.",
+    "pharmacodynamics": "Inibe a 14-alfa-desmetilase fúngica dependente de CYP51, reduzindo ergosterol y desorganizando a membrana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Primeira linha para aspergilose invasiva em muitos cenários; candidíase invasiva selecionada y outras micoses por suscetíveis.",
+    "dose": "Aspergilose invasiva em adulto: IV 6 mg/kg q12h por 2 dosiss, depois 4 mg/kg q12h; via oral usa esquema de manutenção por peso/formulação conforme bula.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Cefaleia; Elevação de transaminases",
+    "dangerousAdverseEffects": "Hepatotoxicidade grave; Interações medicamentosas graves; Arritmia relacionada a QT conforme agente",
+    "adverseEffects": "Alterações visuais, febre, rash, náusea y aumento de transaminases.; Hepatotoxicidade, QT/arrítmia, fototoxicidade/câncer cutâneo, neurotoxicidade y interações graves.",
+    "contraindications": "Hipersensibilidade y combinações formalmente contraindicadas por interações/QT conforme bula.",
+    "interactions": "Inibe y é metabolizado por CYP2C19/2C9/3A4; há múltiplas contraindicações. Revisar rifampicina, carbamazepina, sirolimo, estatinas, tacrolimo y fármacos de QT.",
+    "monitoring": "CrCl <50: preferir VO ao IV/SBECD; QT prolongado; TDM útil; Alterações visuais/alucinações; Fototoxicidade/SCC; Hepatotoxicidade",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, QT/arrítmia, fototoxicidade/câncer cutâneo, neurotoxicidade y interações graves.",
+    "alerts": "Hepatotoxicidade, QT/arrítmia, fototoxicidade/câncer cutâneo, neurotoxicidade y interações graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=voriconazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=voriconazol"
+  }
+};})();
+/* GOLD33_SELECTIVE:voriconazol:END */

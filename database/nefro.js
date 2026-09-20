@@ -6276,3 +6276,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:tolvaptana:END */
+/* GOLD33_SELECTIVE:voclosporina:START */
+;(function(){var db=window.NEFRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="voclosporina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:voclosporina:"+matches.length);drug=matches[0];}else{drug=db&&db["voclosporina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="voclosporina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:voclosporina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:voclosporina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "083",
+    "requiredFieldCount": 33,
+    "approvedSha256": "0316ab38ba2be15000dda4927df8f00e6d8925a88d95ac7c1e69822aea511bfa",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Voclosporina",
+    "class": "Inibidor da calcineurina imunossupressor",
+    "pharmacologicClass": "Inibidor da calcineurina imunossupressor",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas em força específica.",
+    "presentations": "Cápsulas em força específica.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Nefrite lúpica ativa em adultos, em combinação com terapia de base conforme rótulo.",
+    "dose": "Dose oral em combinação, com avaliação de eGFR, pressão, potássio e interações CYP3A4. Não requer nível de vale rotineiro, mas exige critérios de redução/interrupção renal.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Redução de eGFR, hipertensão, diarreia, cefaleia e tosse.",
+    "dangerousAdverseEffects": "Nefrotoxicidade, infecção grave, malignidade, neurotoxicidade e hiperpotassemia.",
+    "adverseEffects": "Redução de eGFR, hipertensão, diarreia, cefaleia e tosse.; Nefrotoxicidade, infecção grave, malignidade, neurotoxicidade e hiperpotassemia.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, infecção grave, malignidade, neurotoxicidade e hiperpotassemia.",
+    "alerts": "Nefrotoxicidade, infecção grave, malignidade, neurotoxicidade e hiperpotassemia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=voclosporina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=voclosporina"
+  },
+  "es": {
+    "name": "Voclosporina",
+    "class": "Inibidor da calcineurina imunossupressor",
+    "pharmacologicClass": "Inibidor da calcineurina imunossupressor",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas em força específica.",
+    "presentations": "Cápsulas em força específica.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Nefrite lúpica ativa em adultos, em combinação con terapia de base conforme rótulo.",
+    "dose": "Dose oral em combinação, con avaliação de eGFR, pressão, potássio y interações CYP3A4. No requer nível de vale rotineiro, mas exige critérios de redução/interrupção renal.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Redução de eGFR, hipertensão, diarreia, cefaleia y tosse.",
+    "dangerousAdverseEffects": "Nefrotoxicidade, infecção grave, malignidade, neurotoxicidade y hiperpotassemia.",
+    "adverseEffects": "Redução de eGFR, hipertensão, diarreia, cefaleia y tosse.; Nefrotoxicidade, infecção grave, malignidade, neurotoxicidade y hiperpotassemia.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, infecção grave, malignidade, neurotoxicidade y hiperpotassemia.",
+    "alerts": "Nefrotoxicidade, infecção grave, malignidade, neurotoxicidade y hiperpotassemia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=voclosporina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=voclosporina"
+  }
+};})();
+/* GOLD33_SELECTIVE:voclosporina:END */
