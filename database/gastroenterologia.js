@@ -3654,3 +3654,93 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:mosaprida:END */
+/* GOLD33_SELECTIVE:omeprazol:START */
+;(function(){var db=window.GASTROENTEROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="omeprazol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:omeprazol:"+matches.length);drug=matches[0];}else{drug=db&&db["omeprazol"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:omeprazol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "058",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6e58c284fb1c35a866278fa4a287e2b803d49457886bb22f4efbdb5f2ee41410",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Omeprazol oral",
+    "class": "Inibidor da bomba de prótons",
+    "pharmacologicClass": "Inibidor da bomba de prótons",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas/comprimidos de liberação retardada e suspensão em forças diversas.",
+    "presentations": "Cápsulas/comprimidos de liberação retardada e suspensão em forças diversas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "DRGE, esofagite erosiva, úlceras e erradicação de H. pylori em combinações específicas.",
+    "dose": "Adultos: frequentemente 20 mg VO uma vez/dia antes da refeição; dose e duração variam por indicação. H. pylori exige combinação e esquema próprio. Não transpor para via IV.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, dor abdominal, náusea, diarreia e flatulência.",
+    "dangerousAdverseEffects": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas e reações cutâneas graves.",
+    "adverseEffects": "Cefaleia, dor abdominal, náusea, diarreia e flatulência.; C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas e reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas e reações cutâneas graves.",
+    "alerts": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas e reações cutâneas graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=omeprazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=omeprazol"
+  },
+  "es": {
+    "name": "Omeprazol oral",
+    "class": "Inibidor da bomba de prótons",
+    "pharmacologicClass": "Inibidor da bomba de prótons",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas/comprimidos de liberação retardada y suspensão em forças diversas.",
+    "presentations": "Cápsulas/comprimidos de liberação retardada y suspensão em forças diversas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "DRGE, esofagite erosiva, úlceras y erradicação de H. pylori em combinações específicas.",
+    "dose": "Adultos: frequentemente 20 mg VO uma vez/dia antes da refeição; dosis y duração variam por indicação. H. pylori exige combinação y esquema próprio. No transpor para via IV.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, dor abdominal, náusea, diarreia y flatulência.",
+    "dangerousAdverseEffects": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas y reações cutâneas graves.",
+    "adverseEffects": "Cefaleia, dor abdominal, náusea, diarreia y flatulência.; C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas y reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas y reações cutâneas graves.",
+    "alerts": "C. difficile, nefrite intersticial, hipomagnesemia, deficiência de B12, fraturas y reações cutâneas graves.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=omeprazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=omeprazol"
+  }
+};})();
+/* GOLD33_SELECTIVE:omeprazol:END */

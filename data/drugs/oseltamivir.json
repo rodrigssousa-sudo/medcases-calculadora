@@ -6,147 +6,79 @@
   "colorTxt": null,
   "pt": {
     "name": "Oseltamivir",
-    "class": "Antiviral contra influenza",
-    "pharmacologicClass": "Pró-fármaco inibidor de neuraminidase",
+    "class": "Antiviral inibidor da neuraminidase",
+    "pharmacologicClass": "Antiviral inibidor da neuraminidase",
     "mechanism": "Convertido a oseltamivir carboxilato, que inibe neuraminidase de influenza A e B e reduz liberação de vírions.",
-    "pharmacodynamics": "Atividade depende da exposição ao metabólito ativo; maior benefício quando iniciado precocemente, mas doença grave/hospitalizada deve ser tratada mesmo após 48 h conforme diretriz.",
-    "pharmacokinetics": "Pró-fármaco oral rapidamente convertido no fígado; metabólito ativo é eliminado predominantemente pelos rins.",
+    "pharmacodynamics": "Convertido a oseltamivir carboxilato, que inibe neuraminidase de influenza A e B e reduz liberação de vírions.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
     "indications": "Tratamento de influenza A/B em pacientes >=2 semanas; profilaxia pós-exposição/epidêmica em faixas etárias aprovadas.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Cápsulas e suspensão oral.",
-    "presentations": [
-      "30 mg",
-      "45 mg",
-      "75 mg",
-      "6 mg/mL suspensão"
-    ],
+    "presentations": "Cápsulas e suspensão oral.",
     "dose": "Adultos/adolescentes >=13 anos: tratamento 75 mg VO BID por 5 dias; profilaxia 75 mg uma vez ao dia conforme duração/risco.",
-    "pediatricDose": "Tratamento >=1 ano é por peso: <=15 kg 30 mg BID; >15–23 kg 45 mg BID; >23–40 kg 60 mg BID; >40 kg 75 mg BID por 5 dias. Lactentes 2 semanas–<1 ano usam dose mg/kg conforme bula.",
-    "renalDose": "Adulto: CrCl >60–90: 75 mg BID; >30–60: 30 mg BID; >10–30: 30 mg uma vez ao dia por 5 dias. ESRD em HD: 30 mg imediatamente e 30 mg após cada ciclo de HD, sem exceder 5 dias.",
-    "hepaticDose": "Sem ajuste em disfunção hepática leve/moderada; dados limitados em grave.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Vômito",
-      "Cefaleia",
-      "Dor abdominal"
-    ],
-    "dangerousAdverseEffects": [
-      "SCAR",
-      "Anafilaxia",
-      "Eventos neuropsiquiátricos raros",
-      "Resistência viral"
-    ],
-    "adverseEffects": "Náusea/vômito são mais comuns no início; eventos neuropsiquiátricos foram relatados, sobretudo em crianças/adolescentes, embora influenza também possa causá-los.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Vômito; Cefaleia; Dor abdominal",
+    "dangerousAdverseEffects": "SCAR; Anafilaxia; Eventos neuropsiquiátricos raros; Resistência viral",
+    "adverseEffects": "Náusea, vômito, cefaleia e dor.; Reações cutâneas graves, anafilaxia e eventos neuropsiquiátricos.",
     "contraindications": "Hipersensibilidade grave ao oseltamivir ou componentes.",
     "interactions": "Vacina influenza viva intranasal pode ter eficácia reduzida se administrada próxima ao antiviral; revisar janela de administração.",
-    "monitoring": "Resposta clínica, função renal para ajuste e estado neuropsiquiátrico em pacientes com sintomas incomuns.",
-    "administration": "VO com ou sem alimento; alimento pode melhorar tolerância gastrointestinal.",
-    "preparation": "Suspensão comercial preferida quando disponível; preparação extemporânea somente conforme bula/farmacotécnica validada.",
-    "infusionProtocol": "Não aplicável; oseltamivir é oral.",
-    "pregnancy": "Tratamento de influenza na gestação é recomendado quando indicado; oseltamivir é amplamente utilizado por experiência acumulada.",
-    "lactation": "Exposição pelo leite é baixa; geralmente compatível quando clinicamente indicado.",
-    "specialPopulations": "Iniciar o mais cedo possível. Hospitalizados, doença grave/progressiva e alto risco devem receber antiviral mesmo se >48 h do início dos sintomas.",
-    "patientEducation": "Iniciar rapidamente, completar 5 dias quando tratamento padrão e relatar rash grave ou alteração comportamental importante.",
-    "clinicalPearls": "A regra de 48 h é para máximo benefício em doença não complicada; não deve atrasar/impedir tratamento de hospitalizados ou doença grave.",
-    "guidelineRecommendations": "CDC recomenda tratamento precoce para hospitalizados, doença grave/progressiva e grupos de alto risco; oseltamivir oral é opção preferida em muitos desses cenários.",
-    "safetyFlags": [
-      "Início precoce",
-      "Ajuste renal",
-      "Influenza A/B",
-      "Neuropsiquiátrico raro",
-      "Interação com vacina viva"
-    ],
-    "alerts": [
-      "75 mg BID x5 dias adulto",
-      "CrCl >30–60: 30 mg BID",
-      "CrCl >10–30: 30 mg/dia",
-      "Hospitalizado: tratar mesmo >48 h",
-      "Pediatria por peso"
-    ],
+    "monitoring": "75 mg BID x5 dias adulto; CrCl >30–60: 30 mg BID; CrCl >10–30: 30 mg/dia; Hospitalizado: tratar mesmo >48 h; Pediatria por peso",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Reações cutâneas graves, anafilaxia e eventos neuropsiquiátricos.",
+    "alerts": "Reações cutâneas graves, anafilaxia e eventos neuropsiquiátricos.; revisão clínica obrigatória.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=379f59fe-22d9-4bac-b9b5-31fdaebbd923",
-      "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html",
-      "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8ca926e0-4c3c-473f-9cd0-ff38032d6963&version=6"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oseltamivir",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=379f59fe-22d9-4bac-b9b5-31fdaebbd923",
-      "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html",
-      "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8ca926e0-4c3c-473f-9cd0-ff38032d6963&version=6"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oseltamivir"
   },
   "es": {
     "name": "Oseltamivir",
-    "class": "Antiviral contra influenza",
-    "pharmacologicClass": "Profármaco inhibidor de neuraminidasa",
-    "mechanism": "Se convierte en oseltamivir carboxilato, inhibe neuraminidasa de influenza A/B y reduce liberación de viriones.",
-    "pharmacodynamics": "Actividad depende de exposición al metabolito activo; mayor beneficio con inicio precoz, pero enfermedad grave/hospitalizada debe tratarse incluso después de 48 h según guía.",
-    "pharmacokinetics": "Profármaco oral convertido en hígado; metabolito activo se elimina predominantemente por riñón.",
-    "indications": "Tratamiento de influenza A/B en pacientes >=2 semanas; profilaxis pos-exposición/epidémica en edades aprobadas.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Cápsulas y suspensión oral.",
-    "presentations": [
-      "30 mg",
-      "45 mg",
-      "75 mg",
-      "6 mg/mL suspensión"
-    ],
-    "dose": "Adultos/adolescentes >=13 años: tratamiento 75 mg VO BID por 5 días; profilaxis 75 mg una vez al día según duración/riesgo.",
-    "pediatricDose": "Tratamiento >=1 año por peso: <=15 kg 30 mg BID; >15–23 kg 45 mg BID; >23–40 kg 60 mg BID; >40 kg 75 mg BID x5 días. Lactantes 2 semanas–<1 año usan mg/kg según ficha.",
-    "renalDose": "Adulto: ClCr >60–90: 75 mg BID; >30–60: 30 mg BID; >10–30: 30 mg una vez al día por 5 días. ESRD en HD: 30 mg inmediatamente y 30 mg tras cada ciclo, máximo 5 días.",
-    "hepaticDose": "Sin ajuste en disfunción hepática leve/moderada; datos limitados en grave.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Vómitos",
-      "Cefalea",
-      "Dolor abdominal"
-    ],
-    "dangerousAdverseEffects": [
-      "SCAR",
-      "Anafilaxia",
-      "Eventos neuropsiquiátricos raros",
-      "Resistencia viral"
-    ],
-    "adverseEffects": "Náuseas/vómitos son más comunes al inicio; eventos neuropsiquiátricos se han comunicado, sobre todo en niños/adolescentes, aunque influenza también puede causarlos.",
-    "contraindications": "Hipersensibilidad grave a oseltamivir o componentes.",
-    "interactions": "Vacuna influenza viva intranasal puede perder eficacia si se administra cerca del antiviral; revisar ventana.",
-    "monitoring": "Respuesta clínica, función renal para ajuste y estado neuropsiquiátrico si aparecen síntomas.",
-    "administration": "VO con o sin alimentos; alimentos pueden mejorar tolerancia GI.",
-    "preparation": "Suspensión comercial preferida; preparación extemporánea solo según ficha/farmacotecnia validada.",
-    "infusionProtocol": "No aplicable; oseltamivir es oral.",
-    "pregnancy": "Tratamiento de influenza en gestación está recomendado cuando corresponde; amplia experiencia con oseltamivir.",
-    "lactation": "Exposición por leche es baja; generalmente compatible cuando está indicado.",
-    "specialPopulations": "Iniciar precozmente. Hospitalizados, enfermedad grave/progresiva y alto riesgo deben recibir antiviral incluso >48 h desde inicio.",
-    "patientEducation": "Iniciar rápido, completar 5 días en esquema estándar e informar rash grave o cambios conductuales importantes.",
-    "clinicalPearls": "La regla de 48 h maximiza beneficio en enfermedad no complicada; no debe impedir tratamiento de hospitalizados o enfermedad grave.",
-    "guidelineRecommendations": "CDC recomienda tratamiento precoz para hospitalizados, enfermedad grave/progresiva y alto riesgo; oseltamivir oral es opción preferida en muchos escenarios.",
-    "safetyFlags": [
-      "Inicio precoz",
-      "Ajuste renal",
-      "Influenza A/B",
-      "Neuropsiquiátrico raro",
-      "Interacción vacuna viva"
-    ],
-    "alerts": [
-      "75 mg BID x5 días adulto",
-      "ClCr >30–60: 30 mg BID",
-      "ClCr >10–30: 30 mg/día",
-      "Hospitalizado: tratar incluso >48 h",
-      "Pediatría por peso"
-    ],
+    "class": "Antiviral inibidor da neuraminidase",
+    "pharmacologicClass": "Antiviral inibidor da neuraminidase",
+    "mechanism": "Convertido a oseltamivir carboxilato, que inibe neuraminidase de influenza A y B y reduz liberação de vírions.",
+    "pharmacodynamics": "Convertido a oseltamivir carboxilato, que inibe neuraminidase de influenza A y B y reduz liberação de vírions.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Tratamento de influenza A/B em pacientes >=2 semanas; profilaxia pós-exposição/epidêmica em faixas etárias aprovadas.",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Cápsulas y suspensão oral.",
+    "presentations": "Cápsulas y suspensão oral.",
+    "dose": "Adultos/adolescentes >=13 anos: tratamento 75 mg VO BID por 5 dias; profilaxia 75 mg uma vez ao dia conforme duração/risco.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Vômito; Cefaleia; Dor abdominal",
+    "dangerousAdverseEffects": "SCAR; Anafilaxia; Eventos neuropsiquiátricos raros; Resistência viral",
+    "adverseEffects": "Náusea, vômito, cefaleia y dor.; Reações cutâneas graves, anafilaxia y eventos neuropsiquiátricos.",
+    "contraindications": "Hipersensibilidade grave ao oseltamivir ou componentes.",
+    "interactions": "Vacina influenza viva intranasal pode ter eficácia reduzida se administrada próxima ao antiviral; revisar janela de administração.",
+    "monitoring": "75 mg BID x5 dias adulto; CrCl >30–60: 30 mg BID; CrCl >10–30: 30 mg/dia; Hospitalizado: tratar mesmo >48 h; Pediatria por peso",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Reações cutâneas graves, anafilaxia y eventos neuropsiquiátricos.",
+    "alerts": "Reações cutâneas graves, anafilaxia y eventos neuropsiquiátricos.; revisão clínica obrigatória.",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=379f59fe-22d9-4bac-b9b5-31fdaebbd923",
-      "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html",
-      "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8ca926e0-4c3c-473f-9cd0-ff38032d6963&version=6"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oseltamivir",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=379f59fe-22d9-4bac-b9b5-31fdaebbd923",
-      "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html",
-      "https://www.dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=8ca926e0-4c3c-473f-9cd0-ff38032d6963&version=6"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oseltamivir"
   },
   "name": {
     "pt": "Oseltamivir",
@@ -155,9 +87,21 @@
   "keywords": [
     "oseltamivir"
   ],
-  "dataVersion": "clinical-data-v1-24fdc652c1d45933",
-  "clinicalContentSha256": "24fdc652c1d459336acc7ac58f4484d3c2b1a1c75d6814f228eb36039fa878f3",
+  "dataVersion": "clinical-data-v1-fde1724bb2deb277",
+  "clinicalContentSha256": "fde1724bb2deb277d0913ad55360b14da0b8ecbb297ab35213b485fc61d7cca9",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "infectologia.js"
+  "sourceModule": "infectologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "oseltamivir.mcGoldClinicalV1",
+    "lote": "058",
+    "requiredFields": 33,
+    "approvedSha256": "6e58c284fb1c35a866278fa4a287e2b803d49457886bb22f4efbdb5f2ee41410",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

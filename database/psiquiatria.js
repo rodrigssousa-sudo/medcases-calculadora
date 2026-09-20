@@ -7661,3 +7661,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:nortriptilina:END */
+/* GOLD33_SELECTIVE:oxazepam:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="oxazepam";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:oxazepam:"+matches.length);drug=matches[0];}else{drug=db&&db["oxazepam"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:oxazepam");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "058",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6e58c284fb1c35a866278fa4a287e2b803d49457886bb22f4efbdb5f2ee41410",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Oxazepam",
+    "class": "Benzodiazepínico",
+    "pharmacologicClass": "Benzodiazepínico",
+    "commercialNames": "br: Oxazepam; Serax; ar: Oxazepam; Serax",
+    "presentation": "Comprimido 10 mg; Comprimido 15 mg; Comprimido 30 mg",
+    "presentations": "Comprimido 10 mg; Comprimido 15 mg; Comprimido 30 mg",
+    "mechanism": "Potencializa a ação do GABA no receptor GABA-A, promovendo ansiólise, sedação e relaxamento muscular.",
+    "pharmacodynamics": "Potencializa a ação do GABA no receptor GABA-A, promovendo ansiólise, sedação e relaxamento muscular.",
+    "pharmacokinetics": "Vida média aproximada: 5–15 horas.",
+    "indications": "Transtorno de ansiedade generalizada; Crises de ansiedade aguda; Insônia associada à ansiedade; Abstinência alcoólica; Agitação leve a moderada; Ansiedade em idosos quando benzodiazepínico é inevitável; Ansiedade em hepatopatia quando benzodiazepínico é necessário",
+    "dose": "adulto: Ansiedade: 10–30 mg VO 3–4x/dia.; abstinencia: Abstinência alcoólica: 15–30 mg VO 3–4x/dia, conforme protocolo.; maxDose: Dose máxima usual: 120 mg/dia.",
+    "pediatricDose": "standard: Não se utiliza cálculo rotineiro por kg.; pediatric: Uso pediátrico não rotineiro.; maxDose: 120 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Tontura; Fadiga; Ataxia; Lentificação psicomotora; Déficit de memória",
+    "dangerousAdverseEffects": "Dependência física; Síndrome de abstinência; Depressão respiratória; Quedas e fraturas em idosos; Reação paradoxal com agitação",
+    "adverseEffects": "Sonolência, tontura, fraqueza, ataxia e amnésia.; Depressão respiratória, dependência/abstinência, quedas e sedação profunda com opioides.",
+    "contraindications": "Hipersensibilidade a benzodiazepínicos; Miastenia gravis; Insuficiência respiratória grave; Apneia do sono grave; Intoxicação aguda por álcool ou depressores do SNC",
+    "interactions": "Álcool; Opioides; Barbitúricos; Antipsicóticos sedativos; Anti-histamínicos sedativos",
+    "monitoring": "Usar pelo menor tempo possível.; Não suspender abruptamente após uso prolongado.; Menor dependência de metabolismo hepático oxidativo.; Evitar associação com álcool e opioides.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Depressão respiratória, dependência/abstinência, quedas e sedação profunda com opioides.",
+    "alerts": "Depressão respiratória, dependência/abstinência, quedas e sedação profunda com opioides.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxazepam",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxazepam"
+  },
+  "es": {
+    "name": "Oxazepam",
+    "class": "Benzodiazepínico",
+    "pharmacologicClass": "Benzodiazepínico",
+    "commercialNames": "br: Oxazepam; Serax; ar: Oxazepam; Serax",
+    "presentation": "Comprimido 10 mg; Comprimido 15 mg; Comprimido 30 mg",
+    "presentations": "Comprimido 10 mg; Comprimido 15 mg; Comprimido 30 mg",
+    "mechanism": "Potencializa a ação do GABA no receptor GABA-A, promovendo ansiólise, sedação y relaxamento muscular.",
+    "pharmacodynamics": "Potencializa a ação do GABA no receptor GABA-A, promovendo ansiólise, sedação y relaxamento muscular.",
+    "pharmacokinetics": "Vida média aproximada: 5–15 horas.",
+    "indications": "Transtorno de ansiedade generalizada; Crises de ansiedade aguda; Insônia associada à ansiedade; Abstinência alcoólica; Agitação leve a moderada; Ansiedade em idosos quando benzodiazepínico é inevitável; Ansiedade em hepatopatia quando benzodiazepínico é necessário",
+    "dose": "adulto: Ansiedade: 10–30 mg VO 3–4x/dia.; abstinencia: Abstinência alcoólica: 15–30 mg VO 3–4x/dia, conforme protocolo.; maxDose: Dose máxima usual: 120 mg/dia.",
+    "pediatricDose": "standard: No se utiliza cálculo rotineiro por kg.; pediatric: Uso pediátrico no rotineiro.; maxDose: 120 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Tontura; Fadiga; Ataxia; Lentificação psicomotora; Déficit de memória",
+    "dangerousAdverseEffects": "Dependência física; Síndrome de abstinência; Depressão respiratória; Quedas y fraturas em idosos; Reação paradoxal con agitação",
+    "adverseEffects": "Sonolência, tontura, fraqueza, ataxia y amnésia.; Depressão respiratória, dependência/abstinência, quedas y sedação profunda con opioides.",
+    "contraindications": "Hipersensibilidade a benzodiazepínicos; Miastenia gravis; Insuficiência respiratória grave; Apneia do sono grave; Intoxicação aguda por álcool ou depressores do SNC",
+    "interactions": "Álcool; Opioides; Barbitúricos; Antipsicóticos sedativos; Anti-histamínicos sedativos",
+    "monitoring": "Usar pelo menor tempo possível.; No suspender abruptamente após uso prolongado.; Menor dependência de metabolismo hepático oxidativo.; Evitar associação con álcool y opioides.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Depressão respiratória, dependência/abstinência, quedas y sedação profunda con opioides.",
+    "alerts": "Depressão respiratória, dependência/abstinência, quedas y sedação profunda con opioides.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxazepam",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxazepam"
+  }
+};})();
+/* GOLD33_SELECTIVE:oxazepam:END */

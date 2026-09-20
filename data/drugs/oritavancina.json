@@ -6,10 +6,8 @@
   "colorTxt": "#6D28D9",
   "pt": {
     "name": "Oritavancina",
-    "class": "Antibiótico lipoglicopeptídeo",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "class": "Antibacteriano lipoglicopeptídeo",
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Pó liofilizado IV; ORBACTIV e KIMYRSA têm preparo e infusão diferentes.",
     "dose": "Adultos: 1.200 mg IV dose única; tempo e diluente dependem da formulação específica.",
     "doseKg": null,
@@ -17,129 +15,77 @@
     "spectrum": "Staphylococcus aureus (MSSA, MRSA, hVISA, VISA), Streptococcus spp., Enterococcus faecalis (VSE), Enterococcus faecium (VSE). Atividade contra VRE é variável. Sem atividade contra Gram-negativos ou anaeróbios.",
     "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
     "risksByPatient": [],
-    "alerts": [
-      "Heparina IV contraindicada 120 h",
-      "aPTT falso elevado até 120 h",
-      "Formulações têm preparo diferente",
-      "Meia-vida ~245 h"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff09a726-9f9b-4e30-b509-396781293220",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5e755c40-6e73-4572-b474-4d8a131693d1",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
-    ],
-    "renalDose": "Sem ajuste em insuficiência renal leve/moderada; dados limitados em CrCl <30/ESRD.",
-    "pharmacologicClass": "Lipoglicopeptídeo de longa ação anti-Gram-positivo",
+    "alerts": "Hipersensibilidade, reação relacionada à infusão, C. difficile, osteomielite e interferência prolongada em testes de coagulação.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oritavancina",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "pharmacologicClass": "Antibacteriano lipoglicopeptídeo",
     "mechanism": "Inibe síntese da parede e perturba membrana bacteriana; ativa contra Gram-positivos suscetíveis incluindo MRSA.",
-    "pharmacodynamics": "Bactericida com exposição prolongada; AUC/MIC contribui para atividade sustentada.",
-    "pharmacokinetics": "IV, meia-vida terminal muito longa de aproximadamente 245 h e ampla distribuição.",
+    "pharmacodynamics": "Inibe síntese da parede e perturba membrana bacteriana; ativa contra Gram-positivos suscetíveis incluindo MRSA.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
     "indications": "ABSSSI por Gram-positivos suscetíveis incluindo MRSA em adultos.",
-    "presentations": [
-      "400 mg ORBACTIV",
-      "1.200 mg KIMYRSA"
-    ],
-    "pediatricDose": "Segurança/eficácia pediátrica não estabelecida para formulações usuais; não extrapolar dose adulta.",
-    "hepaticDose": "Sem ajuste em Child-Pugh A/B; não adequadamente estudada em Child-Pugh C.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Cefaleia",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "Toxicidade órgão-específica conforme o agente"
-    ],
-    "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+    "presentations": "Pó liofilizado IV; ORBACTIV e KIMYRSA têm preparo e infusão diferentes.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Anafilaxia; C. difficile; Toxicidade órgão-específica conforme o agente",
+    "adverseEffects": "Cefaleia, náusea, vômito, diarreia e reação à infusão.; Hipersensibilidade, reação relacionada à infusão, C. difficile, osteomielite e interferência prolongada em testes de coagulação.",
     "interactions": "Pode interferir com anticoagulantes e enzimas CYP; warfarina exige vigilância clínica e testes de coagulação podem ser artificialmente alterados.",
-    "monitoring": "Reação de infusão, sinais de hipersensibilidade e planejamento de testes de coagulação/anticoagulação após a dose.",
-    "administration": "IV em dose única; seguir tempo e diluente específicos da formulação.",
-    "preparation": "ORBACTIV e KIMYRSA não são intercambiáveis quanto a reconstituição/diluente/tempo de infusão.",
-    "infusionProtocol": "Dose única; monitorar reação de infusão e respeitar protocolo da formulação.",
-    "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
-    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
-    "specialPopulations": "Interfere artificialmente em testes de coagulação sem causar anticoagulação real; planejar monitorização antes da dose.",
-    "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
-    "clinicalPearls": "aPTT pode ficar falsamente elevado até 120 h e PT/INR temporariamente; heparina não fracionada IV é contraindicada por 120 h após dose.",
-    "guidelineRecommendations": "Reservar terapia de longa ação para ABSSSI apropriada. Se anticoagulação for necessária no período de interferência, usar estratégia/teste não dependente de aPTT conforme rótulo.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorização de toxicidade"
-    ],
+    "monitoring": "Heparina IV contraindicada 120 h; aPTT falso elevado até 120 h; Formulações têm preparo diferente; Meia-vida ~245 h",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipersensibilidade, reação relacionada à infusão, C. difficile, osteomielite e interferência prolongada em testes de coagulação.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff09a726-9f9b-4e30-b509-396781293220",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5e755c40-6e73-4572-b474-4d8a131693d1",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oritavancina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "es": {
     "name": "Oritavancina",
-    "class": "Antibiótico lipoglicopéptido",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Polvo liofilizado IV; ORBACTIV y KIMYRSA tienen preparación e infusión diferentes.",
-    "dose": "Adultos: 1.200 mg IV dosis única; tiempo y diluyente dependen de formulación específica.",
+    "class": "Antibacteriano lipoglicopeptídeo",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Pó liofilizado IV; ORBACTIV y KIMYRSA têm preparo y infusão diferentes.",
+    "dose": "Adultos: 1.200 mg IV dosis única; tempo y diluente dependem da formulação específica.",
     "doseKg": null,
     "indication": "Infecciones agudas de piel y partes blandas (ABSSSI) por Grampositivos, incluidos Staphylococcus aureus (MSSA y MRSA), Streptococcus pyogenes, Streptococcus agalactiae, Enterococcus faecalis (vancomicina-sensible).",
     "spectrum": "Staphylococcus aureus (MSSA, MRSA, hVISA, VISA), Streptococcus spp., Enterococcus faecalis (VSE), Enterococcus faecium (VSE). Actividad frente a VRE es variable. Sin actividad frente a Gramnegativos ni anaerobios.",
-    "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
     "risksByPatient": [],
-    "alerts": [
-      "Heparina IV contraindicada 120 h",
-      "aPTT falso elevado hasta 120 h",
-      "Formulaciones con preparación diferente",
-      "Semivida ~245 h"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff09a726-9f9b-4e30-b509-396781293220",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5e755c40-6e73-4572-b474-4d8a131693d1",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
-    ],
-    "renalDose": "Sin ajuste en insuficiencia renal leve/moderada; datos limitados en ClCr <30/ESRD.",
-    "pharmacologicClass": "Lipoglicopéptido de acción prolongada anti-Gram positivo",
-    "mechanism": "Inhibe síntesis de pared y altera membrana bacteriana; activa frente a Gram positivos susceptibles incluido MRSA.",
-    "pharmacodynamics": "Bactericida con exposición prolongada; AUC/MIC contribuye a actividad sostenida.",
-    "pharmacokinetics": "IV, semivida terminal muy larga de aproximadamente 245 h y amplia distribución.",
-    "indications": "ABSSSI por Gram positivos susceptibles incluido MRSA en adultos.",
-    "presentations": [
-      "400 mg ORBACTIV",
-      "1.200 mg KIMYRSA"
-    ],
-    "pediatricDose": "Seguridad/eficacia pediátrica no establecida para formulaciones habituales; no extrapolar dosis adulta.",
-    "hepaticDose": "Sin ajuste en Child-Pugh A/B; no adecuadamente estudiada en Child-Pugh C.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Cefalea",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Anafilaxia",
-      "C. difficile",
-      "Toxicidad órgano-específica según el agente"
-    ],
-    "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
-    "interactions": "Puede interferir con anticoagulantes y enzimas CYP; warfarina exige vigilancia y pruebas de coagulación pueden alterarse artificialmente.",
-    "monitoring": "Reacción de infusión, hipersensibilidad y planificación de pruebas de coagulación/anticoagulación tras la dosis.",
-    "administration": "IV en dosis única; seguir tiempo y diluyente específicos de formulación.",
-    "preparation": "ORBACTIV y KIMYRSA no son intercambiables en reconstitución/diluyente/tiempo de infusión.",
-    "infusionProtocol": "Dosis única; monitorizar reacción de infusión y respetar protocolo de formulación.",
-    "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
-    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
-    "specialPopulations": "Interfiere artificialmente con pruebas de coagulación sin causar anticoagulación real; planificar monitorización antes de la dosis.",
-    "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
-    "clinicalPearls": "aPTT puede quedar falsamente elevado hasta 120 h y PT/INR temporalmente; heparina no fraccionada IV está contraindicada 120 h tras dosis.",
-    "guidelineRecommendations": "Reservar terapia de larga acción para ABSSSI apropiada. Si se necesita anticoagulación durante interferencia, usar estrategia/prueba no dependiente de aPTT.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorización de toxicidad"
-    ],
+    "alerts": "Hipersensibilidade, reação relacionada à infusão, C. difficile, osteomielite y interferência prolongada em testes de coagulação.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oritavancina",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "pharmacologicClass": "Antibacteriano lipoglicopeptídeo",
+    "mechanism": "Inibe síntese da parede y perturba membrana bacteriana; ativa contra Gram-positivos suscetíveis incluindo MRSA.",
+    "pharmacodynamics": "Inibe síntese da parede y perturba membrana bacteriana; ativa contra Gram-positivos suscetíveis incluindo MRSA.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "ABSSSI por Gram-positivos suscetíveis incluindo MRSA em adultos.",
+    "presentations": "Pó liofilizado IV; ORBACTIV y KIMYRSA têm preparo y infusão diferentes.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Anafilaxia; C. difficile; Toxicidade órgão-específica conforme o agente",
+    "adverseEffects": "Cefaleia, náusea, vômito, diarreia y reação à infusão.; Hipersensibilidade, reação relacionada à infusão, C. difficile, osteomielite y interferência prolongada em testes de coagulação.",
+    "interactions": "Pode interferir con anticoagulantes y enzimas CYP; warfarina exige vigilância clínica y testes de coagulação podem ser artificialmente alterados.",
+    "monitoring": "Heparina IV contraindicada 120 h; aPTT falso elevado até 120 h; Formulações têm preparo diferente; Meia-vida ~245 h",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipersensibilidade, reação relacionada à infusão, C. difficile, osteomielite y interferência prolongada em testes de coagulação.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff09a726-9f9b-4e30-b509-396781293220",
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5e755c40-6e73-4572-b474-4d8a131693d1",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oritavancina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "name": {
@@ -152,9 +98,21 @@
     "orbactiv",
     "glicopeptideo lipofilico de dose unica (longa meia-vida ~245h)"
   ],
-  "dataVersion": "clinical-data-v1-24fdc652c1d45933",
-  "clinicalContentSha256": "24fdc652c1d459336acc7ac58f4484d3c2b1a1c75d6814f228eb36039fa878f3",
+  "dataVersion": "clinical-data-v1-fde1724bb2deb277",
+  "clinicalContentSha256": "fde1724bb2deb277d0913ad55360b14da0b8ecbb297ab35213b485fc61d7cca9",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "oritavancina.mcGoldClinicalV1",
+    "lote": "058",
+    "requiredFields": 33,
+    "approvedSha256": "6e58c284fb1c35a866278fa4a287e2b803d49457886bb22f4efbdb5f2ee41410",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }
