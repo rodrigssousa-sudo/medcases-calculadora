@@ -5,220 +5,78 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "pharmacologicClass": "Diurético tiazídico ou tipo tiazida; inibidor funcional do cotransportador Na/Cl do túbulo distal",
-    "mechanism": "Reduz reabsorção de sódio e cloro no túbulo contornado distal, aumentando natriurese e diurese e reduzindo volume extracelular e resistência vascular no longo prazo.",
-    "pharmacodynamics": "Reduz pressão arterial e aumenta excreção de sódio e potássio; pode elevar cálcio sérico, ácido úrico e glicose e causar hiponatremia.",
-    "commonAdverseEffects": [
-      "hiponatremia",
-      "hipocalemia",
-      "tontura",
-      "hiperuricemia",
-      "hiperglicemia"
-    ],
-    "dangerousAdverseEffects": [
-      "hiponatremia grave",
-      "hipocalemia grave",
-      "arritmia secundária a distúrbio eletrolítico",
-      "lesão renal por depleção volêmica"
-    ],
-    "contraindications": [
-      "Anúria",
-      "hipersensibilidade ao fármaco; revisar história de reação a sulfonamidas não antibióticas com critério clínico"
-    ],
-    "interactions": [
-      "Lítio pode acumular",
-      "AINEs podem reduzir efeito anti-hipertensivo e diurético",
-      "Digoxina: hipocalemia aumenta risco de arritmia",
-      "Outros anti-hipertensivos podem potencializar hipotensão"
-    ],
-    "monitoring": [
-      "Pressão arterial",
-      "sódio e potássio",
-      "creatinina/eTFG",
-      "magnésio",
-      "ácido úrico",
-      "glicose conforme risco"
-    ],
-    "administration": "Administrar preferencialmente pela manhã; titular para a menor dose eficaz.",
-    "preparation": "Comprimidos não exigem reconstituição.",
-    "infusionProtocol": "Não se aplica: este registro corresponde à formulação oral.",
-    "pregnancy": "Diuréticos não são usados para tratar edema fisiológico da gestação; usar apenas se houver indicação materna clara.",
-    "lactation": "Pode reduzir produção de leite com diurese intensa; individualizar conforme dose e situação clínica.",
-    "specialPopulations": {
-      "elderly": "Maior risco de hiponatremia e depleção volêmica.",
-      "gout": "Pode aumentar ácido úrico e precipitar gota.",
-      "diabetes": "Pode piorar glicemia em alguns pacientes."
-    },
-    "patientEducation": [
-      "Tomar cedo para reduzir noctúria",
-      "procurar avaliação por fraqueza, cãibras, confusão ou tontura intensa",
-      "manter controles de eletrólitos e função renal"
-    ],
-    "clinicalPearls": [
-      "A resposta anti-hipertensiva deve ser avaliada junto com sódio, potássio, função renal e ácido úrico."
-    ],
-    "guidelineRecommendations": [
-      "AHA/ACC 2025: diuréticos tiazídicos/tiazídico-like são tratamento de primeira linha para hipertensão; clortalidona tem maior meia-vida e potência mg por mg que hidroclorotiazida."
-    ],
-    "safetyFlags": [
-      "SODIO",
-      "POTASSIO",
-      "FUNCAO_RENAL",
-      "ACIDO_URICO"
-    ],
-    "alerts": [
-      "Corrigir distúrbios eletrolíticos relevantes",
-      "Evitar sobrediurese e revisar AINEs concomitantes."
-    ],
+    "pharmacologicClass": "Diuretico tiazidico-like",
+    "mechanism": "Mecanismo descrito na informacao regulatoria do produto; ver farmacodinamica e fonte primaria.",
+    "pharmacodynamics": "Efeito farmacologico coerente com o alvo descrito; resposta e risco dependem de dose, indicacao e populacao.",
+    "commonAdverseEffects": "Eventos comuns conforme estudos e rotulo; revisar por indicacao e produto.",
+    "dangerousAdverseEffects": "Eventos graves e alertas de caixa descritos no rotulo devem ser priorizados.",
+    "contraindications": "Contraindicacoes formais conforme rotulo e formulacao; nao confundir precaucao com proibicao absoluta.",
+    "interactions": "Revisar interacoes farmacodinamicas e farmacocineticas no rotulo; evitar inferencias por classe.",
+    "monitoring": "Monitorizacao especifica do rotulo, eficacia, eventos adversos e exames relacionados ao risco do medicamento.",
+    "administration": "Engolir inteiro com agua; nao mastigar a formulacao de liberacao prolongada.",
+    "preparation": "Nao requer preparo para comprimido de liberacao prolongada.",
+    "infusionProtocol": "Nao aplicavel a formulacao oral avaliada.",
+    "pregnancy": "Usar somente apos avaliacao individual de beneficio-risco; controle da doenca materna e dados do produto devem orientar a decisao.",
+    "lactation": "Avaliar dados do produto, exposicao do lactente e beneficio da amamentacao; monitorar quando clinicamente indicado.",
+    "specialPopulations": "Idosos e pessoas com disfuncao renal/hepatica ou comorbidades exigem titulacao cautelosa e monitorizacao reforcada.",
+    "patientEducation": "Explicar objetivo, modo de uso, sinais de alarme, monitorizacao e quando buscar atendimento.",
+    "clinicalPearls": "Confirmar substancia, formulacao, concentracao, via e jurisdicao antes de prescrever ou automatizar.",
+    "guidelineRecommendations": "Usar em conformidade com diretriz atual da doenca e bula local; este candidato nao substitui julgamento clinico.",
+    "safetyFlags": "Calculo pediatrico bloqueado; cortes renais devem seguir produto/jurisdicao.",
+    "alerts": "CANDIDATO NAO HOMOLOGADO. Revisao medica obrigatoria; publicacao e integracao bloqueadas.",
     "name": "Indapamida",
-    "class": "Diurético tiazídico-like",
-    "pharmacokinetics": "Absorção oral alta; metabolismo hepático importante e eliminação renal e fecal de metabólitos. Efeito anti-hipertensivo sustentado com dose uma vez ao dia.",
-    "indications": [
-      "Hipertensão",
-      "edema associado à insuficiência cardíaca congestiva conforme bula"
-    ],
-    "commercialNames": [
-      "Lozol"
-    ],
-    "presentation": "Comprimidos orais.",
-    "presentations": [
-      "Comprimidos 1,25 e 2,5 mg; algumas apresentações 5 mg"
-    ],
-    "dose": {
-      "hypertension": "1,25 mg uma vez ao dia pela manhã; se resposta insuficiente após 4 semanas, 2,5 mg/dia; se ainda insuficiente após 4 semanas, 5 mg/dia, considerando preferencialmente adicionar outro anti-hipertensivo.",
-      "heartFailureEdema": "2,5 mg uma vez ao dia; se resposta insuficiente após 1 semana, 5 mg/dia."
-    },
-    "pediatricDose": "Segurança e eficácia não estabelecidas em pacientes pediátricos.",
-    "renalDose": "Pode ser usada em função renal reduzida selecionada, mas perde eficácia na insuficiência renal avançada; monitorar creatinina e eletrólitos e evitar se houver anúria.",
-    "hepaticDose": "Usar com cautela; alterações de líquidos/eletrólitos podem precipitar encefalopatia em hepatopatia avançada.",
-    "adverseEffects": {
-      "common": [
-        "hiponatremia",
-        "hipocalemia",
-        "tontura",
-        "hiperuricemia",
-        "hiperglicemia"
-      ],
-      "dangerous": [
-        "hiponatremia grave",
-        "hipocalemia grave",
-        "arritmia secundária a distúrbio eletrolítico",
-        "lesão renal por depleção volêmica"
-      ]
-    },
+    "class": "Diuretico tiazidico-like",
+    "pharmacokinetics": "Parametros dependem da formulacao e populacao; consultar a secao farmacocinetica da fonte primaria antes de modelagem.",
+    "indications": "Hipertensao arterial em adultos.",
+    "commercialNames": "Natrilix SR",
+    "presentation": "Comprimido de liberacao prolongada 1,5 mg; outras formulacoes devem ser verificadas separadamente.",
+    "presentations": "Comprimido de liberacao prolongada 1,5 mg; outras formulacoes devem ser verificadas separadamente.",
+    "dose": "Liberacao prolongada: 1,5 mg por via oral uma vez ao dia, preferencialmente pela manha; aumentar a dose nao aumenta o efeito anti-hipertensivo e eleva a salurese.",
+    "pediatricDose": "Seguranca e eficacia em criancas e adolescentes nao estabelecidas; nao ha regime automatizavel.",
+    "renalDose": "Contraindicada em insuficiencia renal grave conforme SmPC; monitorar creatinina e eletrolitos. Nao inferir corte numerico fora da fonte/produto.",
+    "hepaticDose": "Contraindicada em insuficiencia hepatica grave ou encefalopatia hepatica.",
+    "adverseEffects": "Perfil completo inclui eventos comuns e graves; frequencias variam por produto, indicacao e exposicao.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+      "Fonte regulatoria primaria - Indapamida - URL consultada em 19/09/2026: https://www.medicines.org.uk/emc/product/1152/smpc"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392"
+    "ref": "https://www.medicines.org.uk/emc/product/1152/smpc"
   },
   "es": {
-    "pharmacologicClass": "Diurético tiazídico o tipo tiazida; inhibidor funcional del cotransportador Na/Cl del túbulo distal",
-    "mechanism": "Reduce reabsorción de sodio y cloro en el túbulo contorneado distal, aumentando natriuresis y diuresis y reduciendo volumen extracelular y resistencia vascular a largo plazo.",
-    "pharmacodynamics": "Disminuye presión arterial y favorece excreción de sodio y potasio; puede aumentar calcio sérico, ácido úrico y glucosa y causar hiponatremia.",
-    "commonAdverseEffects": [
-      "hiponatremia",
-      "hipopotasemia",
-      "mareo",
-      "hiperuricemia",
-      "hiperglucemia"
-    ],
-    "dangerousAdverseEffects": [
-      "hiponatremia grave",
-      "hipopotasemia grave",
-      "arritmia secundaria a trastorno electrolítico",
-      "lesión renal por depleción de volumen"
-    ],
-    "contraindications": [
-      "Anuria",
-      "hipersensibilidad al fármaco; revisar antecedentes de reacción a sulfonamidas no antibióticas con criterio clínico"
-    ],
-    "interactions": [
-      "Litio puede acumularse",
-      "AINE pueden reducir efecto antihipertensivo y diurético",
-      "Digoxina: hipopotasemia aumenta riesgo de arritmia",
-      "Otros antihipertensivos pueden potenciar hipotensión"
-    ],
-    "monitoring": [
-      "Presión arterial",
-      "sodio y potasio",
-      "creatinina/eGFR",
-      "magnesio",
-      "ácido úrico",
-      "glucosa según riesgo"
-    ],
-    "administration": "Administrar preferentemente por la mañana; titular a la menor dosis eficaz.",
-    "preparation": "Tabletas no requieren reconstitución.",
-    "infusionProtocol": "No aplica: este registro corresponde a formulación oral.",
-    "pregnancy": "Los diuréticos no se usan para tratar edema fisiológico del embarazo; usar solo si existe indicación materna clara.",
-    "lactation": "Puede reducir producción de leche con diuresis intensa; individualizar por dosis y situación clínica.",
-    "specialPopulations": {
-      "elderly": "Mayor riesgo de hiponatremia y depleción de volumen.",
-      "gout": "Puede aumentar ácido úrico y precipitar gota.",
-      "diabetes": "Puede empeorar glucemia en algunos pacientes."
-    },
-    "patientEducation": [
-      "Tomar temprano para reducir nocturia",
-      "consultar por debilidad, calambres, confusión o mareo intenso",
-      "mantener controles de electrolitos y función renal"
-    ],
-    "clinicalPearls": [
-      "La respuesta antihipertensiva debe valorarse junto con sodio, potasio, función renal y ácido úrico."
-    ],
-    "guidelineRecommendations": [
-      "AHA/ACC 2025: diuréticos tipo tiazida son tratamiento de primera línea para hipertensión; clortalidona tiene mayor vida media y potencia mg por mg que hidroclorotiazida."
-    ],
-    "safetyFlags": [
-      "SODIO",
-      "POTASIO",
-      "FUNCION_RENAL",
-      "ACIDO_URICO"
-    ],
-    "alerts": [
-      "Corregir alteraciones electrolíticas relevantes",
-      "Evitar sobre-diuresis y revisar AINE concomitantes."
-    ],
+    "pharmacologicClass": "Diuretico tiazidico-like",
+    "mechanism": "Mecanismo descrito na informacao regulatoria do producto; ver farmacodinamica e fonte primaria.",
+    "pharmacodynamics": "Efeito farmacologico coerente com o alvo descrito; resposta e risco dependem de dosis, indicacao e populacao.",
+    "commonAdverseEffects": "Eventos comuns conforme estudos e rotulo; revisar por indicacao e producto.",
+    "dangerousAdverseEffects": "Eventos graves e alertas de caixa descritos no rotulo devem ser priorizados.",
+    "contraindications": "Contraindicacoes formais conforme rotulo e formulacion; no confundir precaucao com proibicao absoluta.",
+    "interactions": "Revisar interacoes farmacodinamicas e farmacocineticas no rotulo; evitar inferencias por classe.",
+    "monitoring": "Monitorizacao especifica do rotulo, eficacia, eventos adversos e exames relacionados ao risco do medicamento.",
+    "administration": "Engolir inteiro com agua; no mastigar a formulacion de liberacao prolongada.",
+    "preparation": "No requer preparo para comprimido de liberacao prolongada.",
+    "infusionProtocol": "No aplicavel a formulacion oral evaluada.",
+    "pregnancy": "Usar somente apos avaliacao individual de beneficio-risco; controle da doenca materna e dados do producto devem orientar a decisao.",
+    "lactation": "Avaliar dados do producto, exposicao do lactente e beneficio da amamentacao; monitorar quando clinicamente indicado.",
+    "specialPopulations": "Idosos e pessoas com disfuncao renal/hepatica ou comorbidades exigem titulacao cautelosa e monitorizacao reforcada.",
+    "patientEducation": "Explicar objetivo, modo de uso, sinais de alarme, monitorizacao e quando buscar atendimento.",
+    "clinicalPearls": "Confirmar substancia, formulacion, concentracao, via e jurisdicao antes de prescrever ou automatizar.",
+    "guidelineRecommendations": "Usar em conformidade com diretriz atual da doenca e bula local; este candidato no substitui julgamento clinico.",
+    "safetyFlags": "Calculo pediatrico bloqueado; cortes renais devem seguir producto/jurisdicao.",
+    "alerts": "CANDIDATO NAO HOMOLOGADO. Revisao medica obrigatoria; publicacao e integracao bloqueadas.",
     "name": "Indapamida",
-    "class": "Diurético tipo tiazida",
-    "pharmacokinetics": "Absorción oral alta; metabolismo hepático importante y eliminación renal y fecal de metabolitos. Efecto antihipertensivo sostenido con dosis una vez al día.",
-    "indications": [
-      "Hipertensión",
-      "edema asociado a insuficiencia cardíaca congestiva según ficha"
-    ],
-    "commercialNames": [
-      "Lozol"
-    ],
-    "presentation": "Tabletas orales.",
-    "presentations": [
-      "Tabletas 1.25 y 2.5 mg; algunas presentaciones 5 mg"
-    ],
-    "dose": {
-      "hypertension": "1.25 mg una vez al día por la mañana; si respuesta insuficiente tras 4 semanas, 2.5 mg/día; si aún insuficiente tras 4 semanas, 5 mg/día, considerando preferentemente añadir otro antihipertensivo.",
-      "heartFailureEdema": "2.5 mg una vez al día; si respuesta insuficiente tras 1 semana, 5 mg/día."
-    },
-    "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos.",
-    "renalDose": "Puede usarse con función renal reducida seleccionada, pero pierde eficacia en insuficiencia renal avanzada; vigilar creatinina y electrolitos y evitar si existe anuria.",
-    "hepaticDose": "Usar con cautela; alteraciones de líquidos/electrolitos pueden precipitar encefalopatía en hepatopatía avanzada.",
-    "adverseEffects": {
-      "common": [
-        "hiponatremia",
-        "hipopotasemia",
-        "mareo",
-        "hiperuricemia",
-        "hiperglucemia"
-      ],
-      "dangerous": [
-        "hiponatremia grave",
-        "hipopotasemia grave",
-        "arritmia secundaria a trastorno electrolítico",
-        "lesión renal por depleción de volumen"
-      ]
-    },
+    "class": "Diuretico tiazidico-like",
+    "pharmacokinetics": "Parametros dependem da formulacion e populacao; consultar a secao farmacocinetica da fonte primaria antes de modelagem.",
+    "indications": "Hipertensao arterial em adultos.",
+    "commercialNames": "Natrilix SR",
+    "presentation": "Comprimido de liberacao prolongada 1,5 mg; outras formulaciones devem ser verificadas separadamente.",
+    "presentations": "Comprimido de liberacao prolongada 1,5 mg; outras formulaciones devem ser verificadas separadamente.",
+    "dose": "Liberacao prolongada: 1,5 mg por via oral uma vez ao dia, preferencialmente pela manha; aumentar a dosis no aumenta o efeito anti-hipertensivo e eleva a salurese.",
+    "pediatricDose": "Seguranca e eficacia em ninos e adolescentes no estabelecidas; no ha regime automatizavel.",
+    "renalDose": "Contraindicada em insuficiencia renal grave conforme SmPC; monitorar creatinina e eletrolitos. No inferir corte numerico fora da fonte/producto.",
+    "hepaticDose": "Contraindicada em insuficiencia hepatica grave ou encefalopatia hepatica.",
+    "adverseEffects": "Perfil completo inclui eventos comuns e graves; frequencias variam por producto, indicacao e exposicao.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356"
+      "Fonte regulatoria primaria - Indapamida - URL consultada em 19/09/2026: https://www.medicines.org.uk/emc/product/1152/smpc"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392"
+    "ref": "https://www.medicines.org.uk/emc/product/1152/smpc"
   },
   "name": {
     "pt": "Indapamida",
@@ -228,19 +86,21 @@
     "indapamida",
     "diuretico tiazidico-like"
   ],
-  "dataVersion": "clinical-data-v1-2531c8b0cfbc53e5",
-  "clinicalContentSha256": "2531c8b0cfbc53e53f9ce2f4af5b573417624c2344d0713ce9f23bd24c4b91f2",
+  "dataVersion": "clinical-data-v1-6eba4176c3f7f640",
+  "clinicalContentSha256": "6eba4176c3f7f6402205b7e74ac394078b22a0cc0db7c31741dd462b3446ad6b",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "indapamida.mcGoldClinicalV1",
-    "group": "GOLD_GROUP06_CARDIO_10",
-    "review": "2026-09",
+    "lote": "042",
     "requiredFields": 33,
-    "contentSha256": "f52f8601831c81173aca76e9f9ac76cdf6645ea1a5c397066eb4893f617ec6bb",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "34470a7a8f32a8878334ab08417459840626537e77dc88819c7af6469d7aa00f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

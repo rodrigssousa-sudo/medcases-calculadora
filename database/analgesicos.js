@@ -6402,3 +6402,91 @@
   }
 };})();
 /* GOLD33_SELECTIVE:ibuprofeno:END */
+/* GOLD33_SELECTIVE:indometacina:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["indometacina"])throw new Error("GOLD33_MISSING_CANONICAL:indometacina");db["indometacina"].mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "042",
+    "requiredFieldCount": 33,
+    "approvedSha256": "34470a7a8f32a8878334ab08417459840626537e77dc88819c7af6469d7aa00f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Indometacina",
+    "class": "AINE; derivado do acido indolacetico",
+    "pharmacologicClass": "AINE; derivado do acido indolacetico",
+    "commercialNames": "Indocin",
+    "presentation": "Capsulas de liberacao imediata e prolongada, supositorios e suspensao existem conforme produto; nao intercambiar esquemas entre formulacoes.",
+    "presentations": "Capsulas de liberacao imediata e prolongada, supositorios e suspensao existem conforme produto; nao intercambiar esquemas entre formulacoes.",
+    "mechanism": "Mecanismo descrito na informacao regulatoria do produto; ver farmacodinamica e fonte primaria.",
+    "pharmacodynamics": "Efeito farmacologico coerente com o alvo descrito; resposta e risco dependem de dose, indicacao e populacao.",
+    "pharmacokinetics": "Parametros dependem da formulacao e populacao; consultar a secao farmacocinetica da fonte primaria antes de modelagem.",
+    "indications": "Dor e inflamacao em artrites, espondilite anquilosante, bursite/tendinite e gota aguda, conforme rotulo do produto.",
+    "dose": "Individualizar na menor dose eficaz pelo menor tempo. Capsulas usuais: 25 mg duas ou tres vezes ao dia; titulacao e maximo dependem da indicacao e formulacao. Liberacao prolongada nao e bioequivalente dose a dose sem conferir rotulo.",
+    "pediatricDose": "Uso pediatrico rotineiro nao estabelecido para as formulacoes orais avaliadas; uso neonatal IV para fechamento de canal arterial pertence a produto e bula distintos e nao foi transportado.",
+    "renalDose": "Evitar em doenca renal avancada salvo se beneficio superar risco; monitorar funcao renal. Contraindicada em dor perioperatoria de CABG.",
+    "hepaticDose": "Pode elevar transaminases e causar hepatotoxicidade; monitorar e suspender se sinais clinicos. Nao ha reducao numerica universal no rotulo consultado.",
+    "commonAdverseEffects": "Eventos comuns conforme estudos e rotulo; revisar por indicacao e produto.",
+    "dangerousAdverseEffects": "Eventos graves e alertas de caixa descritos no rotulo devem ser priorizados.",
+    "adverseEffects": "Perfil completo inclui eventos comuns e graves; frequencias variam por produto, indicacao e exposicao.",
+    "contraindications": "Contraindicacoes formais conforme rotulo e formulacao; nao confundir precaucao com proibicao absoluta.",
+    "interactions": "Revisar interacoes farmacodinamicas e farmacocineticas no rotulo; evitar inferencias por classe.",
+    "monitoring": "Monitorizacao especifica do rotulo, eficacia, eventos adversos e exames relacionados ao risco do medicamento.",
+    "administration": "Administrar por via oral com alimento ou apos refeicao para reduzir desconforto gastrointestinal, sem eliminar risco GI.",
+    "preparation": "Nao requer preparo para capsulas; suspensao deve seguir bula especifica.",
+    "infusionProtocol": "Nao aplicavel as formulacoes orais avaliadas.",
+    "pregnancy": "Usar somente apos avaliacao individual de beneficio-risco; controle da doenca materna e dados do produto devem orientar a decisao.",
+    "lactation": "Avaliar dados do produto, exposicao do lactente e beneficio da amamentacao; monitorar quando clinicamente indicado.",
+    "specialPopulations": "Idosos e pessoas com disfuncao renal/hepatica ou comorbidades exigem titulacao cautelosa e monitorizacao reforcada.",
+    "patientEducation": "Explicar objetivo, modo de uso, sinais de alarme, monitorizacao e quando buscar atendimento.",
+    "clinicalPearls": "Confirmar substancia, formulacao, concentracao, via e jurisdicao antes de prescrever ou automatizar.",
+    "guidelineRecommendations": "Usar em conformidade com diretriz atual da doenca e bula local; este candidato nao substitui julgamento clinico.",
+    "safetyFlags": "Dose neonatal IV e conversoes entre formulacoes bloqueadas neste candidato.",
+    "alerts": "CANDIDATO NAO HOMOLOGADO. Revisao medica obrigatoria; publicacao e integracao bloqueadas.",
+    "references": [
+      "Fonte regulatoria primaria - Indometacina - URL consultada em 19/09/2026: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=12821a3a-b5f2-4415-84c9-0a30a4725f1e"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=12821a3a-b5f2-4415-84c9-0a30a4725f1e"
+  },
+  "es": {
+    "name": "Indometacina",
+    "class": "AINE; derivado do acido indolacetico",
+    "pharmacologicClass": "AINE; derivado do acido indolacetico",
+    "commercialNames": "Indocin",
+    "presentation": "Capsulas de liberacao imediata e prolongada, supositorios e suspensao existem conforme producto; no intercambiar esquemas entre formulaciones.",
+    "presentations": "Capsulas de liberacao imediata e prolongada, supositorios e suspensao existem conforme producto; no intercambiar esquemas entre formulaciones.",
+    "mechanism": "Mecanismo descrito na informacao regulatoria do producto; ver farmacodinamica e fonte primaria.",
+    "pharmacodynamics": "Efeito farmacologico coerente com o alvo descrito; resposta e risco dependem de dosis, indicacao e populacao.",
+    "pharmacokinetics": "Parametros dependem da formulacion e populacao; consultar a secao farmacocinetica da fonte primaria antes de modelagem.",
+    "indications": "Dor e inflamacao em artrites, espondilite anquilosante, bursite/tendinite e gota aguda, conforme rotulo do producto.",
+    "dose": "Individualizar na menor dosis eficaz pelo menor tempo. Capsulas usuais: 25 mg duas ou tres vezes ao dia; titulacao e maximo dependem da indicacao e formulacion. Liberacao prolongada no e bioequivalente dosis a dosis sem conferir rotulo.",
+    "pediatricDose": "Uso pediatrico rotineiro no estabelecido para as formulaciones orais evaluadas; uso neonatal IV para fechamento de canal arterial pertence a producto e bula distintos e no foi transportado.",
+    "renalDose": "Evitar em doenca renal avancada salvo se beneficio superar risco; monitorar funcao renal. Contraindicada em dor perioperatoria de CABG.",
+    "hepaticDose": "Pode elevar transaminases e causar hepatotoxicidade; monitorar e suspender se sinais clinicos. No ha reducao numerica universal no rotulo consultado.",
+    "commonAdverseEffects": "Eventos comuns conforme estudos e rotulo; revisar por indicacao e producto.",
+    "dangerousAdverseEffects": "Eventos graves e alertas de caixa descritos no rotulo devem ser priorizados.",
+    "adverseEffects": "Perfil completo inclui eventos comuns e graves; frequencias variam por producto, indicacao e exposicao.",
+    "contraindications": "Contraindicacoes formais conforme rotulo e formulacion; no confundir precaucao com proibicao absoluta.",
+    "interactions": "Revisar interacoes farmacodinamicas e farmacocineticas no rotulo; evitar inferencias por classe.",
+    "monitoring": "Monitorizacao especifica do rotulo, eficacia, eventos adversos e exames relacionados ao risco do medicamento.",
+    "administration": "Administrar por via oral com alimento ou apos refeicao para reduzir desconforto gastrointestinal, sem eliminar risco GI.",
+    "preparation": "No requer preparo para capsulas; suspensao deve seguir bula especifica.",
+    "infusionProtocol": "No aplicavel as formulaciones orais evaluadas.",
+    "pregnancy": "Usar somente apos avaliacao individual de beneficio-risco; controle da doenca materna e dados do producto devem orientar a decisao.",
+    "lactation": "Avaliar dados do producto, exposicao do lactente e beneficio da amamentacao; monitorar quando clinicamente indicado.",
+    "specialPopulations": "Idosos e pessoas com disfuncao renal/hepatica ou comorbidades exigem titulacao cautelosa e monitorizacao reforcada.",
+    "patientEducation": "Explicar objetivo, modo de uso, sinais de alarme, monitorizacao e quando buscar atendimento.",
+    "clinicalPearls": "Confirmar substancia, formulacion, concentracao, via e jurisdicao antes de prescrever ou automatizar.",
+    "guidelineRecommendations": "Usar em conformidade com diretriz atual da doenca e bula local; este candidato no substitui julgamento clinico.",
+    "safetyFlags": "Dose neonatal IV e conversoes entre formulaciones bloqueadas neste candidato.",
+    "alerts": "CANDIDATO NAO HOMOLOGADO. Revisao medica obrigatoria; publicacao e integracao bloqueadas.",
+    "references": [
+      "Fonte regulatoria primaria - Indometacina - URL consultada em 19/09/2026: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=12821a3a-b5f2-4415-84c9-0a30a4725f1e"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=12821a3a-b5f2-4415-84c9-0a30a4725f1e"
+  }
+};})();
+/* GOLD33_SELECTIVE:indometacina:END */

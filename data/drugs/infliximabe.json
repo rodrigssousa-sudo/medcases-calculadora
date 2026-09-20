@@ -5,21 +5,101 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Infliximabe"
+    "name": "Infliximabe",
+    "class": "Anticorpo monoclonal anti-TNF-alfa",
+    "pharmacologicClass": "Anticorpo monoclonal anti-TNF-alfa",
+    "commercialNames": "Renflexis/Remicade",
+    "presentation": "Frasco-ampola com po liofilizado 100 mg para reconstituicao e infusao intravenosa; biossimilares possuem rotulos proprios.",
+    "presentations": "Frasco-ampola com po liofilizado 100 mg para reconstituicao e infusao intravenosa; biossimilares possuem rotulos proprios.",
+    "mechanism": "Mecanismo descrito na informacao regulatoria do produto; ver farmacodinamica e fonte primaria.",
+    "pharmacodynamics": "Efeito farmacologico coerente com o alvo descrito; resposta e risco dependem de dose, indicacao e populacao.",
+    "pharmacokinetics": "Parametros dependem da formulacao e populacao; consultar a secao farmacocinetica da fonte primaria antes de modelagem.",
+    "indications": "Artrite reumatoide, doenca de Crohn adulta e pediatrica, colite ulcerativa adulta e pediatrica, espondilite anquilosante, artrite psoriasica e psoriase em placas, conforme produto.",
+    "dose": "Regimes IV por indicacao: frequentemente 3 ou 5 mg/kg nas semanas 0, 2 e 6, seguidos de manutencao a cada 6 ou 8 semanas. Artrite reumatoide requer metotrexato. Confirmar indicacao e produto antes de calcular.",
+    "pediatricDose": "Crohn e colite ulcerativa: 5 mg/kg IV nas semanas 0, 2 e 6 e depois a cada 8 semanas em pacientes pediatricos elegiveis conforme rotulo. Outras indicacoes pediatricas nao devem ser inferidas.",
+    "renalDose": "Nao ha recomendacao numerica especifica de ajuste renal no rotulo; avaliar individualmente.",
+    "hepaticDose": "Nao ha recomendacao numerica especifica; risco de hepatotoxicidade e reativacao de HBV exige vigilancia.",
+    "commonAdverseEffects": "Eventos comuns conforme estudos e rotulo; revisar por indicacao e produto.",
+    "dangerousAdverseEffects": "Infeccoes graves, tuberculose, reativacao de HBV, insuficiencia cardiaca, neoplasias e reacoes infusionais.",
+    "adverseEffects": "Perfil completo inclui eventos comuns e graves; frequencias variam por produto, indicacao e exposicao.",
+    "contraindications": "Contraindicacoes formais conforme rotulo e formulacao; nao confundir precaucao com proibicao absoluta.",
+    "interactions": "Revisar interacoes farmacodinamicas e farmacocineticas no rotulo; evitar inferencias por classe.",
+    "monitoring": "Monitorizacao especifica do rotulo, eficacia, eventos adversos e exames relacionados ao risco do medicamento.",
+    "administration": "Infusao IV por pelo menos 2 horas com filtro em linha esteril, nao pirogenico e de baixa ligacao proteica; observar reacoes.",
+    "preparation": "Reconstituir cada frasco de 100 mg com 10 mL de agua esteril para injecao e diluir em cloreto de sodio 0,9% conforme rotulo; nao agitar.",
+    "infusionProtocol": "Administrar exclusivamente IV conforme bula; nao em bolus. Disponibilizar manejo de hipersensibilidade e monitorar durante e apos.",
+    "pregnancy": "Usar somente apos avaliacao individual de beneficio-risco; controle da doenca materna e dados do produto devem orientar a decisao.",
+    "lactation": "Avaliar dados do produto, exposicao do lactente e beneficio da amamentacao; monitorar quando clinicamente indicado.",
+    "specialPopulations": "Idosos e pessoas com disfuncao renal/hepatica ou comorbidades exigem titulacao cautelosa e monitorizacao reforcada.",
+    "patientEducation": "Explicar objetivo, modo de uso, sinais de alarme, monitorizacao e quando buscar atendimento.",
+    "clinicalPearls": "Confirmar substancia, formulacao, concentracao, via e jurisdicao antes de prescrever ou automatizar.",
+    "guidelineRecommendations": "Usar em conformidade com diretriz atual da doenca e bula local; este candidato nao substitui julgamento clinico.",
+    "safetyFlags": "Qualquer calculadora deve vincular indicacao, peso, semanas e produto; escalonamentos fora do rotulo ficam bloqueados.",
+    "alerts": "CANDIDATO NAO HOMOLOGADO. Revisao medica obrigatoria; publicacao e integracao bloqueadas.",
+    "references": [
+      "Fonte regulatoria primaria - Infliximabe - URL consultada em 19/09/2026: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dbf738c4-3fac-4422-a9d8-51d9c83a8789"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dbf738c4-3fac-4422-a9d8-51d9c83a8789"
   },
   "es": {
-    "name": "Infliximab"
+    "name": "Infliximabe",
+    "class": "Anticorpo monoclonal anti-TNF-alfa",
+    "pharmacologicClass": "Anticorpo monoclonal anti-TNF-alfa",
+    "commercialNames": "Renflexis/Remicade",
+    "presentation": "Frasco-ampola com po liofilizado 100 mg para reconstituicao e infusao intravenosa; biossimilares possuem rotulos proprios.",
+    "presentations": "Frasco-ampola com po liofilizado 100 mg para reconstituicao e infusao intravenosa; biossimilares possuem rotulos proprios.",
+    "mechanism": "Mecanismo descrito na informacao regulatoria do producto; ver farmacodinamica e fonte primaria.",
+    "pharmacodynamics": "Efeito farmacologico coerente com o alvo descrito; resposta e risco dependem de dosis, indicacao e populacao.",
+    "pharmacokinetics": "Parametros dependem da formulacion e populacao; consultar a secao farmacocinetica da fonte primaria antes de modelagem.",
+    "indications": "Artrite reumatoide, doenca de Crohn adulta e pediatrica, colite ulcerativa adulta e pediatrica, espondilite anquilosante, artrite psoriasica e psoriase em placas, conforme producto.",
+    "dose": "Regimes IV por indicacao: frequentemente 3 ou 5 mg/kg nas semanas 0, 2 e 6, seguidos de manutencao a cada 6 ou 8 semanas. Artrite reumatoide requer metotrexato. Confirmar indicacao e producto antes de calcular.",
+    "pediatricDose": "Crohn e colite ulcerativa: 5 mg/kg IV nas semanas 0, 2 e 6 e depois a cada 8 semanas em pacientes pediatricos elegiveis conforme rotulo. Outras indicacoes pediatricas no devem ser inferidas.",
+    "renalDose": "No ha recomendacao numerica especifica de ajuste renal no rotulo; avaliar individualmente.",
+    "hepaticDose": "No ha recomendacao numerica especifica; risco de hepatotoxicidade e reativacao de HBV exige vigilancia.",
+    "commonAdverseEffects": "Eventos comuns conforme estudos e rotulo; revisar por indicacao e producto.",
+    "dangerousAdverseEffects": "Infeccoes graves, tuberculose, reativacao de HBV, insuficiencia cardiaca, neoplasias e reacoes infusionais.",
+    "adverseEffects": "Perfil completo inclui eventos comuns e graves; frequencias variam por producto, indicacao e exposicao.",
+    "contraindications": "Contraindicacoes formais conforme rotulo e formulacion; no confundir precaucao com proibicao absoluta.",
+    "interactions": "Revisar interacoes farmacodinamicas e farmacocineticas no rotulo; evitar inferencias por classe.",
+    "monitoring": "Monitorizacao especifica do rotulo, eficacia, eventos adversos e exames relacionados ao risco do medicamento.",
+    "administration": "Infusao IV por pelo menos 2 horas com filtro em linha esteril, no pirogenico e de baixa ligacao proteica; observar reacoes.",
+    "preparation": "Reconstituir cada frasco de 100 mg com 10 mL de agua esteril para injecao e diluir em cloreto de sodio 0,9% conforme rotulo; no agitar.",
+    "infusionProtocol": "Administrar exclusivamente IV conforme bula; no em bolus. Disponibilizar manejo de hipersensibilidade e monitorar durante e apos.",
+    "pregnancy": "Usar somente apos avaliacao individual de beneficio-risco; controle da doenca materna e dados do producto devem orientar a decisao.",
+    "lactation": "Avaliar dados do producto, exposicao do lactente e beneficio da amamentacao; monitorar quando clinicamente indicado.",
+    "specialPopulations": "Idosos e pessoas com disfuncao renal/hepatica ou comorbidades exigem titulacao cautelosa e monitorizacao reforcada.",
+    "patientEducation": "Explicar objetivo, modo de uso, sinais de alarme, monitorizacao e quando buscar atendimento.",
+    "clinicalPearls": "Confirmar substancia, formulacion, concentracao, via e jurisdicao antes de prescrever ou automatizar.",
+    "guidelineRecommendations": "Usar em conformidade com diretriz atual da doenca e bula local; este candidato no substitui julgamento clinico.",
+    "safetyFlags": "Qualquer calculadora deve vincular indicacao, peso, semanas e producto; escalonamentos fora do rotulo ficam bloqueados.",
+    "alerts": "CANDIDATO NAO HOMOLOGADO. Revisao medica obrigatoria; publicacao e integracao bloqueadas.",
+    "references": [
+      "Fonte regulatoria primaria - Infliximabe - URL consultada em 19/09/2026: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dbf738c4-3fac-4422-a9d8-51d9c83a8789"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dbf738c4-3fac-4422-a9d8-51d9c83a8789"
   },
   "name": {
     "pt": "Infliximabe",
-    "es": "Infliximab"
+    "es": "Infliximabe"
   },
   "keywords": [
     "infliximabe"
   ],
-  "dataVersion": "clinical-data-v1-2531c8b0cfbc53e5",
-  "clinicalContentSha256": "2531c8b0cfbc53e53f9ce2f4af5b573417624c2344d0713ce9f23bd24c4b91f2",
+  "dataVersion": "clinical-data-v1-6eba4176c3f7f640",
+  "clinicalContentSha256": "6eba4176c3f7f6402205b7e74ac394078b22a0cc0db7c31741dd462b3446ad6b",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "gastroenterologia.js"
+  "sourceModule": "gastroenterologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gastroenterologia.js",
+    "sourceField": "infliximabe.mcGoldClinicalV1",
+    "lote": "042",
+    "requiredFields": 33,
+    "approvedSha256": "34470a7a8f32a8878334ab08417459840626537e77dc88819c7af6469d7aa00f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }
