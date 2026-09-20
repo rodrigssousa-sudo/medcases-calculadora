@@ -4926,3 +4926,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:maltol_ferrico:END */
+/* GOLD33_SELECTIVE:mircera:START */
+;(function(){var db=window.NEFRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="mircera";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:mircera:"+matches.length);drug=matches[0];}else{drug=db&&db["mircera"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:mircera");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "052",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6d2b196fca8928f9ce98d9cc29c3c5817f36b0205f5e78b4346fcb54a7e4cd30",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Metoxi-polietilenoglicol epoetina beta (Mircera)",
+    "class": "Agente estimulador da eritropoiese de ação prolongada",
+    "pharmacologicClass": "Agente estimulador da eritropoiese de ação prolongada",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Seringas preenchidas em múltiplas forças em microgramas/0,3 mL.",
+    "presentations": "Seringas preenchidas em múltiplas forças em microgramas/0,3 mL.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Anemia por doença renal crônica em pacientes adultos e pediátricos elegíveis conforme rótulo.",
+    "dose": "Dose IV ou SC é individualizada por hemoglobina, peso, diálise e exposição prévia a ESA. Conversões e pediatria exigem tabelas oficiais; não usar cálculo genérico nem substituir ESA unidade por unidade.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Hipertensão, diarreia, nasofaringite e cefaleia.",
+    "dangerousAdverseEffects": "Morte, infarto, AVC, tromboembolismo, acesso vascular trombosado, convulsões e aplasia eritroide pura.",
+    "adverseEffects": "Hipertensão, diarreia, nasofaringite e cefaleia.; Morte, infarto, AVC, tromboembolismo, acesso vascular trombosado, convulsões e aplasia eritroide pura.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Morte, infarto, AVC, tromboembolismo, acesso vascular trombosado, convulsões e aplasia eritroide pura.",
+    "alerts": "Morte, infarto, AVC, tromboembolismo, acesso vascular trombosado, convulsões e aplasia eritroide pura.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Mircera",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/125164s078lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Mircera"
+  },
+  "es": {
+    "name": "Metoxi-polietilenoglicol epoetina beta (Mircera)",
+    "class": "Agente estimulador da eritropoiese de ação prolongada",
+    "pharmacologicClass": "Agente estimulador da eritropoiese de ação prolongada",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Seringas preenchidas em múltiplas forças em microgramas/0,3 mL.",
+    "presentations": "Seringas preenchidas em múltiplas forças em microgramas/0,3 mL.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Anemia por doença renal crônica em pacientes adultos y pediátricos elegíveis conforme rótulo.",
+    "dose": "Dose IV ou SC é individualizada por hemoglobina, peso, diálise y exposição prévia a ESA. Conversões y pediatria exigem tabelas oficiais; no usar cálculo genérico nem substituir ESA unidade por unidade.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Hipertensão, diarreia, nasofaringite y cefaleia.",
+    "dangerousAdverseEffects": "Morte, infarto, AVC, tromboembolismo, acesso vascular trombosado, convulsões y aplasia eritroide pura.",
+    "adverseEffects": "Hipertensão, diarreia, nasofaringite y cefaleia.; Morte, infarto, AVC, tromboembolismo, acesso vascular trombosado, convulsões y aplasia eritroide pura.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Morte, infarto, AVC, tromboembolismo, acesso vascular trombosado, convulsões y aplasia eritroide pura.",
+    "alerts": "Morte, infarto, AVC, tromboembolismo, acesso vascular trombosado, convulsões y aplasia eritroide pura.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Mircera",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/125164s078lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Mircera"
+  }
+};})();
+/* GOLD33_SELECTIVE:mircera:END */

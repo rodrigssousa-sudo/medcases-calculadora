@@ -3474,3 +3474,93 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:macrogol:END */
+/* GOLD33_SELECTIVE:miriquizumabe:START */
+;(function(){var db=window.GASTROENTEROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="miriquizumabe";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:miriquizumabe:"+matches.length);drug=matches[0];}else{drug=db&&db["miriquizumabe"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:miriquizumabe");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "052",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6d2b196fca8928f9ce98d9cc29c3c5817f36b0205f5e78b4346fcb54a7e4cd30",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Mirikizumabe",
+    "class": "Anticorpo monoclonal anti-IL-23p19",
+    "pharmacologicClass": "Anticorpo monoclonal anti-IL-23p19",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frasco IV 300 mg/15 mL; canetas/seringas SC de 100 mg/mL para dose total de 200 mg.",
+    "presentations": "Frasco IV 300 mg/15 mL; canetas/seringas SC de 100 mg/mL para dose total de 200 mg.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Colite ulcerativa ativa moderada a grave em adultos; outras indicações dependem do rótulo vigente.",
+    "dose": "Colite ulcerativa: indução 300 mg IV nas semanas 0, 4 e 8; manutenção 200 mg SC a cada 4 semanas, iniciando na semana 12. Falha de resposta e outras indicações seguem algoritmos próprios do rótulo.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Infecção respiratória alta, reação no local, artralgia, cefaleia e rash.",
+    "dangerousAdverseEffects": "Infecção grave, hipersensibilidade e hepatotoxicidade.",
+    "adverseEffects": "Infecção respiratória alta, reação no local, artralgia, cefaleia e rash.; Infecção grave, hipersensibilidade e hepatotoxicidade.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Infecção grave, hipersensibilidade e hepatotoxicidade.",
+    "alerts": "Infecção grave, hipersensibilidade e hepatotoxicidade.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mirikizumab",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/761279s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mirikizumab"
+  },
+  "es": {
+    "name": "Mirikizumabe",
+    "class": "Anticorpo monoclonal anti-IL-23p19",
+    "pharmacologicClass": "Anticorpo monoclonal anti-IL-23p19",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frasco IV 300 mg/15 mL; canetas/seringas SC de 100 mg/mL para dosis total de 200 mg.",
+    "presentations": "Frasco IV 300 mg/15 mL; canetas/seringas SC de 100 mg/mL para dosis total de 200 mg.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Colite ulcerativa ativa moderada a grave em adultos; outras indicações dependem do rótulo vigente.",
+    "dose": "Colite ulcerativa: indução 300 mg IV nas semanas 0, 4 y 8; manutenção 200 mg SC a cada 4 semanas, iniciando na semana 12. Falha de resposta y outras indicações seguem algoritmos próprios do rótulo.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Infecção respiratória alta, reação no local, artralgia, cefaleia y rash.",
+    "dangerousAdverseEffects": "Infecção grave, hipersensibilidade y hepatotoxicidade.",
+    "adverseEffects": "Infecção respiratória alta, reação no local, artralgia, cefaleia y rash.; Infecção grave, hipersensibilidade y hepatotoxicidade.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Infecção grave, hipersensibilidade y hepatotoxicidade.",
+    "alerts": "Infecção grave, hipersensibilidade y hepatotoxicidade.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mirikizumab",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/761279s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=mirikizumab"
+  }
+};})();
+/* GOLD33_SELECTIVE:miriquizumabe:END */

@@ -29645,3 +29645,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:metronidazol:END */
+/* GOLD33_SELECTIVE:minociclina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="minociclina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:minociclina:"+matches.length);drug=matches[0];}else{drug=db&&db["minociclina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:minociclina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "052",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6d2b196fca8928f9ce98d9cc29c3c5817f36b0205f5e78b4346fcb54a7e4cd30",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Minociclina",
+    "class": "Antibacteriano tetraciclina",
+    "pharmacologicClass": "Antibacteriano tetraciclina",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Cápsulas/comprimidos orais.",
+    "presentations": "Cápsulas/comprimidos orais.",
+    "mechanism": "Liga-se à subunidade 30S e inibe incorporação de aminoacil-tRNA.",
+    "pharmacodynamics": "Liga-se à subunidade 30S e inibe incorporação de aminoacil-tRNA.",
+    "pharmacokinetics": "Meia-vida 11–26 h (eliminação principalmente hepática — NÃO renal).",
+    "indications": "Infecções por suscetíveis; pode integrar combinações alternativas para CRAB ou S. maltophilia segundo AST/diretriz.",
+    "dose": "Adultos: 200 mg inicial, depois 100 mg q12h. IDSA 2026 usa minociclina 200 mg q12h como componente alternativo para CRAB/S. maltophilia.",
+    "pediatricDose": "pediatrica: 2 mg/kg/dose 12/12h (ataque: 4 mg/kg)",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "DRESS; Hepatite autoimune; Lúpus induzido; Hipertensão intracraniana; Anafilaxia/SCAR",
+    "adverseEffects": "Náusea, tontura, vertigem, pigmentação e candidíase.; Hepatotoxicidade, hipertensão intracraniana, reação medicamentosa com eosinofilia, lúpus, anafilaxia e dano fetal/dentário.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+    "interactions": "Cátions/antiácidos/ferro reduzem absorção; retinoides sistêmicos aumentam risco de hipertensão intracraniana.",
+    "monitoring": "Vertigem/vestibular; Pigmentação; Hepatite autoimune/lúpus; Hipertensão intracraniana; Quelantes",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, hipertensão intracraniana, reação medicamentosa com eosinofilia, lúpus, anafilaxia e dano fetal/dentário.",
+    "alerts": "Hepatotoxicidade, hipertensão intracraniana, reação medicamentosa com eosinofilia, lúpus, anafilaxia e dano fetal/dentário.; Vertigem/vestibular; Pigmentação; Hepatite autoimune/lúpus; Hipertensão intracraniana; Quelantes",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=minocycline",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/050649s021lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=minocycline"
+  },
+  "es": {
+    "name": "Minociclina",
+    "class": "Antibacteriano tetraciclina",
+    "pharmacologicClass": "Antibacteriano tetraciclina",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Cápsulas/comprimidos orais.",
+    "presentations": "Cápsulas/comprimidos orais.",
+    "mechanism": "Liga-se à subunidade 30S y inibe incorporação de aminoacil-tRNA.",
+    "pharmacodynamics": "Liga-se à subunidade 30S y inibe incorporação de aminoacil-tRNA.",
+    "pharmacokinetics": "Meia-vida 11–26 h (eliminação principalmente hepática — NÃO renal).",
+    "indications": "Infecções por suscetíveis; pode integrar combinações alternativas para CRAB ou S. maltophilia segundo AST/diretriz.",
+    "dose": "Adultos: 200 mg inicial, depois 100 mg q12h. IDSA 2026 usa minociclina 200 mg q12h como componente alternativo para CRAB/S. maltophilia.",
+    "pediatricDose": "pediatrica: 2 mg/kg/dosis 12/12h (ataque: 4 mg/kg)",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "DRESS; Hepatite autoimune; Lúpus induzido; Hipertensão intracraniana; Anafilaxia/SCAR",
+    "adverseEffects": "Náusea, tontura, vertigem, pigmentação y candidíase.; Hepatotoxicidade, hipertensão intracraniana, reação medicamentosa con eosinofilia, lúpus, anafilaxia y dano fetal/dentário.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas y interações absolutas.",
+    "interactions": "Cátions/antiácidos/ferro reduzem absorção; retinoides sistêmicos aumentam riesgo de hipertensão intracraniana.",
+    "monitoring": "Vertigem/vestibular; Pigmentação; Hepatite autoimune/lúpus; Hipertensão intracraniana; Quelantes",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, hipertensão intracraniana, reação medicamentosa con eosinofilia, lúpus, anafilaxia y dano fetal/dentário.",
+    "alerts": "Hepatotoxicidade, hipertensão intracraniana, reação medicamentosa con eosinofilia, lúpus, anafilaxia y dano fetal/dentário.; Vertigem/vestibular; Pigmentação; Hepatite autoimune/lúpus; Hipertensão intracraniana; Quelantes",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=minocycline",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/050649s021lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=minocycline"
+  }
+};})();
+/* GOLD33_SELECTIVE:minociclina:END */
