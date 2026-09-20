@@ -32255,3 +32255,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:tinidazol:END */
+/* GOLD33_SELECTIVE:tobramicina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="tobramicina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tobramicina:"+matches.length);drug=matches[0];}else{drug=db&&db["tobramicina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="tobramicina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tobramicina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:tobramicina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "078",
+    "requiredFieldCount": 33,
+    "approvedSha256": "c74f4659aceb61827e4dc144af9f32d11d494f3956ebab31e00a0a7398e3d84c",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Tobramicina",
+    "class": "Antibacteriano aminoglicosídeo",
+    "pharmacologicClass": "Antibacteriano aminoglicosídeo",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Solução injetável IV/IM.",
+    "presentations": "Solução injetável IV/IM.",
+    "mechanism": "Liga-se irreversivelmente à subunidade 30S, causa leitura incorreta do mRNA e inibe síntese proteica.",
+    "pharmacodynamics": "Liga-se irreversivelmente à subunidade 30S, causa leitura incorreta do mRNA e inibe síntese proteica.",
+    "pharmacokinetics": "Meia-vida 2–3 h (função renal normal). Prolongada em insuficiência renal.",
+    "indications": "Infecções graves por Gram-negativos suscetíveis, especialmente Pseudomonas; formulações inalatórias têm indicações próprias.",
+    "dose": "Adultos: 3 mg/kg/dia divididos q8h; ameaça à vida até 5 mg/kg/dia inicialmente.",
+    "pediatricDose": "adultoEstendida: 5–7 mg/kg/dia EV (dose única estendida 24h); pediatrica: 2–2,5 mg/kg/dose EV 8/8h",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Ototoxicidade irreversível; Bloqueio neuromuscular",
+    "adverseEffects": "Náusea, cefaleia e reação local conforme via.; Nefrotoxicidade, ototoxicidade, bloqueio neuromuscular e toxicidade fetal.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Evitar associação desnecessária com outros nefro/ototóxicos e diuréticos de alça; separar fisicamente de beta-lactâmicos.",
+    "monitoring": "Nefrotoxicidade; Ototoxicidade; Bloqueio neuromuscular; TDM; Ajuste renal",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, ototoxicidade, bloqueio neuromuscular e toxicidade fetal.",
+    "alerts": "Nefrotoxicidade, ototoxicidade, bloqueio neuromuscular e toxicidade fetal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tobramicina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tobramicina"
+  },
+  "es": {
+    "name": "Tobramicina",
+    "class": "Antibacteriano aminoglicosídeo",
+    "pharmacologicClass": "Antibacteriano aminoglicosídeo",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Solução injetável IV/IM.",
+    "presentations": "Solução injetável IV/IM.",
+    "mechanism": "Liga-se irreversivelmente à subunidade 30S, causa leitura incorreta do mRNA y inibe síntese proteica.",
+    "pharmacodynamics": "Liga-se irreversivelmente à subunidade 30S, causa leitura incorreta do mRNA y inibe síntese proteica.",
+    "pharmacokinetics": "Meia-vida 2–3 h (función renal normal). Prolongada em insuficiência renal.",
+    "indications": "Infecções graves por Gram-negativos suscetíveis, especialmente Pseudomonas; formulações inalatórias têm indicações próprias.",
+    "dose": "Adultos: 3 mg/kg/dia divididos q8h; ameaça à vida até 5 mg/kg/dia inicialmente.",
+    "pediatricDose": "adultoEstendida: 5–7 mg/kg/dia EV (dosis única estendida 24h); pediatrica: 2–2,5 mg/kg/dosis EV 8/8h",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Ototoxicidade irreversível; Bloqueio neuromuscular",
+    "adverseEffects": "Náusea, cefaleia y reação local conforme via.; Nefrotoxicidade, ototoxicidade, bloqueio neuromuscular y toxicidade fetal.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Evitar associação desnecessária con outros nefro/ototóxicos y diuréticos de alça; separar fisicamente de beta-lactâmicos.",
+    "monitoring": "Nefrotoxicidade; Ototoxicidade; Bloqueio neuromuscular; TDM; Ajuste renal",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Nefrotoxicidade, ototoxicidade, bloqueio neuromuscular y toxicidade fetal.",
+    "alerts": "Nefrotoxicidade, ototoxicidade, bloqueio neuromuscular y toxicidade fetal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tobramicina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tobramicina"
+  }
+};})();
+/* GOLD33_SELECTIVE:tobramicina:END */

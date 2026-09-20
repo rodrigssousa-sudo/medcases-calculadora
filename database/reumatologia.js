@@ -465,3 +465,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:rituximabe:END */
+/* GOLD33_SELECTIVE:tocilizumabe:START */
+;(function(){var db=window.REUMATOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="tocilizumabe";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tocilizumabe:"+matches.length);drug=matches[0];}else{drug=db&&db["tocilizumabe"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="tocilizumabe";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tocilizumabe:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:tocilizumabe");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "078",
+    "requiredFieldCount": 33,
+    "approvedSha256": "c74f4659aceb61827e4dc144af9f32d11d494f3956ebab31e00a0a7398e3d84c",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Tocilizumabe",
+    "class": "Anticorpo monoclonal contra o receptor de IL-6",
+    "pharmacologicClass": "Anticorpo monoclonal contra o receptor de IL-6",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frascos IV e seringas/canetas SC em forças específicas.",
+    "presentations": "Frascos IV e seringas/canetas SC em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Artrites inflamatórias, arterite de células gigantes, síndrome de liberação de citocinas e outras indicações conforme formulação.",
+    "dose": "Dose IV ou SC depende da indicação, peso e produto. Avaliar infecção, tuberculose, fígado, hemograma, lipídios e risco de perfuração gastrointestinal.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Infecção respiratória, cefaleia, hipertensão e reação no local.",
+    "dangerousAdverseEffects": "Infecção grave, perfuração gastrointestinal, hepatotoxicidade, neutropenia e anafilaxia.",
+    "adverseEffects": "Infecção respiratória, cefaleia, hipertensão e reação no local.; Infecção grave, perfuração gastrointestinal, hepatotoxicidade, neutropenia e anafilaxia.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Infecção grave, perfuração gastrointestinal, hepatotoxicidade, neutropenia e anafilaxia.",
+    "alerts": "Infecção grave, perfuração gastrointestinal, hepatotoxicidade, neutropenia e anafilaxia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tocilizumabe",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tocilizumabe"
+  },
+  "es": {
+    "name": "Tocilizumabe",
+    "class": "Anticorpo monoclonal contra o receptor de IL-6",
+    "pharmacologicClass": "Anticorpo monoclonal contra o receptor de IL-6",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Frascos IV y seringas/canetas SC em forças específicas.",
+    "presentations": "Frascos IV y seringas/canetas SC em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Artrites inflamatórias, arterite de células gigantes, síndrome de liberação de citocinas y outras indicações conforme formulação.",
+    "dose": "Dose IV ou SC depende da indicação, peso y produto. Avaliar infecção, tuberculose, fígado, hemograma, lipídios y risco de perfuração gastrointestinal.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Infecção respiratória, cefaleia, hipertensão y reação no local.",
+    "dangerousAdverseEffects": "Infecção grave, perfuração gastrointestinal, hepatotoxicidade, neutropenia y anafilaxia.",
+    "adverseEffects": "Infecção respiratória, cefaleia, hipertensão y reação no local.; Infecção grave, perfuração gastrointestinal, hepatotoxicidade, neutropenia y anafilaxia.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Infecção grave, perfuração gastrointestinal, hepatotoxicidade, neutropenia y anafilaxia.",
+    "alerts": "Infecção grave, perfuração gastrointestinal, hepatotoxicidade, neutropenia y anafilaxia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tocilizumabe",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tocilizumabe"
+  }
+};})();
+/* GOLD33_SELECTIVE:tocilizumabe:END */

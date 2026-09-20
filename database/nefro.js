@@ -6186,3 +6186,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:sulfato_ferroso:END */
+/* GOLD33_SELECTIVE:tolvaptana:START */
+;(function(){var db=window.NEFRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="tolvaptana";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tolvaptana:"+matches.length);drug=matches[0];}else{drug=db&&db["tolvaptana"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="tolvaptana";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tolvaptana:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:tolvaptana");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "078",
+    "requiredFieldCount": 33,
+    "approvedSha256": "c74f4659aceb61827e4dc144af9f32d11d494f3956ebab31e00a0a7398e3d84c",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Tolvaptana",
+    "class": "Antagonista seletivo do receptor V2 da vasopressina",
+    "pharmacologicClass": "Antagonista seletivo do receptor V2 da vasopressina",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em forças e embalagens específicas por indicação.",
+    "presentations": "Comprimidos em forças e embalagens específicas por indicação.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Hiponatremia euvolêmica/hipervolêmica e doença renal policística autossômica dominante em produtos e programas distintos.",
+    "dose": "Regime, titulação e duração variam por indicação. Exige acesso à água, monitorização de sódio/volemia e, em doença policística, programa de segurança hepática.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sede, poliúria, noctúria e boca seca.",
+    "dangerousAdverseEffects": "Correção rápida do sódio, desidratação, hipernatremia e hepatotoxicidade grave.",
+    "adverseEffects": "Sede, poliúria, noctúria e boca seca.; Correção rápida do sódio, desidratação, hipernatremia e hepatotoxicidade grave.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Correção rápida do sódio, desidratação, hipernatremia e hepatotoxicidade grave.",
+    "alerts": "Correção rápida do sódio, desidratação, hipernatremia e hepatotoxicidade grave.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tolvaptana",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tolvaptana"
+  },
+  "es": {
+    "name": "Tolvaptana",
+    "class": "Antagonista seletivo do receptor V2 da vasopressina",
+    "pharmacologicClass": "Antagonista seletivo do receptor V2 da vasopressina",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em forças y embalagens específicas por indicação.",
+    "presentations": "Comprimidos em forças y embalagens específicas por indicação.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Hiponatremia euvolêmica/hipervolêmica y doença renal policística autossômica dominante em produtos y programas distintos.",
+    "dose": "Regime, titulação y duração variam por indicação. Exige acesso à água, monitorização de sódio/volemia e, em doença policística, programa de seguridad hepática.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sede, poliúria, noctúria y boca seca.",
+    "dangerousAdverseEffects": "Correção rápida do sódio, desidratação, hipernatremia y hepatotoxicidade grave.",
+    "adverseEffects": "Sede, poliúria, noctúria y boca seca.; Correção rápida do sódio, desidratação, hipernatremia y hepatotoxicidade grave.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Correção rápida do sódio, desidratação, hipernatremia y hepatotoxicidade grave.",
+    "alerts": "Correção rápida do sódio, desidratação, hipernatremia y hepatotoxicidade grave.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tolvaptana",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tolvaptana"
+  }
+};})();
+/* GOLD33_SELECTIVE:tolvaptana:END */

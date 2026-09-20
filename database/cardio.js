@@ -72690,3 +72690,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:tirofibana:END */
+/* GOLD33_SELECTIVE:torsemida:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="torsemida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:torsemida:"+matches.length);drug=matches[0];}else{drug=db&&db["torsemida"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="torsemida";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:torsemida:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:torsemida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "078",
+    "requiredFieldCount": 33,
+    "approvedSha256": "c74f4659aceb61827e4dc144af9f32d11d494f3956ebab31e00a0a7398e3d84c",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Torsemida",
+    "class": "Diurético de alça",
+    "pharmacologicClass": "Diurético de alça",
+    "commercialNames": "Demadex",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "mechanism": "Inibe o cotransportador Na-K-2Cl no ramo ascendente espesso da alça de Henle, aumentando excreção de sódio, cloro e água e favorecendo perdas de potássio, cálcio e magnésio.",
+    "pharmacodynamics": "Inibe o cotransportador Na-K-2Cl no ramo ascendente espesso da alça de Henle, aumentando excreção de sódio, cloro e água e favorecendo perdas de potássio, cálcio e magnésio.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Edema associado à insuficiência cardíaca; edema associado à doença renal; edema associado à doença hepática; hipertensão",
+    "dose": "heartFailureEdema: 10 ou 20 mg uma vez ao dia; dobrar conforme resposta; doses >200 mg não estudadas.; renalEdema: 20 mg uma vez ao dia; dobrar conforme resposta; doses >200 mg não estudadas.; cirrhosisEdema: 5 ou 10 mg uma vez ao dia; titular dobrando; doses >40 mg não estudadas.; hypertension: 5 mg uma vez ao dia; se necessário após 4-6 semanas aumentar para 10 mg uma vez ao dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "poliúria; tontura; hipotensão; hipocalemia; hiponatremia; hipomagnesemia",
+    "dangerousAdverseEffects": "depleção volêmica profunda; lesão renal aguda; distúrbios eletrolíticos graves; ototoxicidade; reações cutâneas graves raras",
+    "adverseEffects": "Poliúria, tontura, hipotensão e alterações eletrolíticas.; Desidratação, insuficiência renal, hipocalemia, hiponatremia, ototoxicidade e hiperuricemia.",
+    "contraindications": "Anúria; hipersensibilidade ao fármaco",
+    "interactions": "AINEs podem reduzir resposta diurética e aumentar risco renal; Aminoglicosídeos ou outros ototóxicos podem aumentar ototoxicidade; Lítio pode acumular; Digoxina: hipocalemia aumenta toxicidade; Outros anti-hipertensivos aumentam hipotensão",
+    "monitoring": "Evitar diurese excessivamente rápida sem indicação; Corrigir distúrbios eletrolíticos relevantes; Ajustar conforme resposta clínica e função renal.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Desidratação, insuficiência renal, hipocalemia, hiponatremia, ototoxicidade e hiperuricemia.",
+    "alerts": "Desidratação, insuficiência renal, hipocalemia, hiponatremia, ototoxicidade e hiperuricemia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=torsemida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=torsemida"
+  },
+  "es": {
+    "name": "Torsemida",
+    "class": "Diurético de alça",
+    "pharmacologicClass": "Diurético de alça",
+    "commercialNames": "Demadex",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "mechanism": "Inibe o cotransportador Na-K-2Cl no ramo ascendente espesso da alça de Henle, aumentando excreção de sódio, cloro y água y favorecendo perdas de potássio, cálcio y magnésio.",
+    "pharmacodynamics": "Inibe o cotransportador Na-K-2Cl no ramo ascendente espesso da alça de Henle, aumentando excreção de sódio, cloro y água y favorecendo perdas de potássio, cálcio y magnésio.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Edema associado à insuficiência cardíaca; edema associado à doença renal; edema associado à doença hepática; hipertensão",
+    "dose": "heartFailureEdema: 10 ou 20 mg uma vez ao dia; dobrar conforme resposta; dosiss >200 mg no estudadas.; renalEdema: 20 mg uma vez ao dia; dobrar conforme resposta; dosiss >200 mg no estudadas.; cirrhosisEdema: 5 ou 10 mg uma vez ao dia; titular dobrando; dosiss >40 mg no estudadas.; hypertension: 5 mg uma vez ao dia; se necessário após 4-6 semanas aumentar para 10 mg uma vez ao dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "poliúria; tontura; hipotensão; hipocalemia; hiponatremia; hipomagnesemia",
+    "dangerousAdverseEffects": "depleção volêmica profunda; lesão renal aguda; distúrbios eletrolíticos graves; ototoxicidade; reações cutâneas graves raras",
+    "adverseEffects": "Poliúria, tontura, hipotensão y alterações eletrolíticas.; Desidratação, insuficiência renal, hipocalemia, hiponatremia, ototoxicidade y hiperuricemia.",
+    "contraindications": "Anúria; hipersensibilidade ao fármaco",
+    "interactions": "AINEs podem reduzir resposta diurética y aumentar risco renal; Aminoglicosídeos ou outros ototóxicos podem aumentar ototoxicidade; Lítio pode acumular; Digoxina: hipocalemia aumenta toxicidade; Outros anti-hipertensivos aumentam hipotensão",
+    "monitoring": "Evitar diurese excessivamente rápida sem indicação; Corrigir distúrbios eletrolíticos relevantes; Ajustar conforme resposta clínica y función renal.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Desidratação, insuficiência renal, hipocalemia, hiponatremia, ototoxicidade y hiperuricemia.",
+    "alerts": "Desidratação, insuficiência renal, hipocalemia, hiponatremia, ototoxicidade y hiperuricemia.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=torsemida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=torsemida"
+  }
+};})();
+/* GOLD33_SELECTIVE:torsemida:END */
