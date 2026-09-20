@@ -69180,3 +69180,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:nadolol:END */
+/* GOLD33_SELECTIVE:nebivolol:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nebivolol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nebivolol:"+matches.length);drug=matches[0];}else{drug=db&&db["nebivolol"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nebivolol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "054",
+    "requiredFieldCount": 33,
+    "approvedSha256": "4df0f0bf8fa44d7a9a387901758d44ecdd53255d99e0cb0bf3dd84ce84989117",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Nebivolol",
+    "class": "Betabloqueador seletivo beta-1 com atividade vasodilatadora",
+    "pharmacologicClass": "Betabloqueador seletivo beta-1 com atividade vasodilatadora",
+    "commercialNames": "Bystolic",
+    "presentation": "Comprimidos para uso oral.",
+    "presentations": "Comprimidos para uso oral.",
+    "mechanism": "Bloqueio beta-1 seletivo em doses terapêuticas e aumento da vasodilatação endotelial mediada por óxido nítrico; reduz frequência, contratilidade e renina.",
+    "pharmacodynamics": "Bloqueio beta-1 seletivo em doses terapêuticas e aumento da vasodilatação endotelial mediada por óxido nítrico; reduz frequência, contratilidade e renina.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Hipertensão arterial em adultos",
+    "dose": "hypertension: Início habitual 5 mg uma vez ao dia, com ou sem alimentos. Se necessário, aumentar em intervalos de pelo menos 2 semanas até 40 mg uma vez ao dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "bradicardia; fadiga; tontura; hipotensão; extremidades frias",
+    "dangerousAdverseEffects": "bloqueio AV; descompensação de insuficiência cardíaca; broncoespasmo; bradicardia grave; mascaramento de hipoglicemia",
+    "adverseEffects": "Cefaleia, fadiga, tontura, náusea e bradicardia.; Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada e isquemia por retirada abrupta.",
+    "contraindications": "Bradicardia grave; bloqueio cardíaco maior que primeiro grau; choque cardiogênico; insuficiência cardíaca descompensada; síndrome do nó sinusal sem marcapasso; insuficiência hepática grave; hipersensibilidade",
+    "interactions": "Verapamil ou diltiazem aumentam risco de bradicardia, bloqueio AV e hipotensão; Digoxina e outros cronotrópicos negativos potencializam bradicardia; Inibidores de CYP2D6 podem elevar exposição de alguns betabloqueadores; Retirada de clonidina exige planejamento para evitar rebote hipertensivo; Insulina e secretagogos: pode mascarar sintomas adrenérgicos de hipoglicemia",
+    "monitoring": "Evitar suspensão abrupta em doença coronariana; Não iniciar ou titular agressivamente durante insuficiência cardíaca descompensada; Usar com cautela em doença broncoespástica",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada e isquemia por retirada abrupta.",
+    "alerts": "Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada e isquemia por retirada abrupta.; Evitar suspensão abrupta em doença coronariana; Não iniciar ou titular agressivamente durante insuficiência cardíaca descompensada; Usar com cautela em doença broncoespástica",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nebivolol",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/021742s013lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nebivolol"
+  },
+  "es": {
+    "name": "Nebivolol",
+    "class": "Betabloqueador seletivo beta-1 con atividade vasodilatadora",
+    "pharmacologicClass": "Betabloqueador seletivo beta-1 con atividade vasodilatadora",
+    "commercialNames": "Bystolic",
+    "presentation": "Comprimidos para uso oral.",
+    "presentations": "Comprimidos para uso oral.",
+    "mechanism": "Bloqueio beta-1 seletivo em dosiss terapêuticas y aumento da vasodilatação endotelial mediada por óxido nítrico; reduz frequência, contratilidade y renina.",
+    "pharmacodynamics": "Bloqueio beta-1 seletivo em dosiss terapêuticas y aumento da vasodilatação endotelial mediada por óxido nítrico; reduz frequência, contratilidade y renina.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Hipertensão arterial em adultos",
+    "dose": "hypertension: Início habitual 5 mg uma vez ao dia, con ou sem alimentos. Se necessário, aumentar em intervalos de pelo menos 2 semanas até 40 mg uma vez ao dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "bradicardia; fadiga; tontura; hipotensão; extremidades frias",
+    "dangerousAdverseEffects": "bloqueio AV; descompensação de insuficiência cardíaca; broncoespasmo; bradicardia grave; mascaramento de hipoglicemia",
+    "adverseEffects": "Cefaleia, fadiga, tontura, náusea y bradicardia.; Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada y isquemia por retirada abrupta.",
+    "contraindications": "Bradicardia grave; bloqueio cardíaco maior que primeiro grau; choque cardiogênico; insuficiência cardíaca descompensada; síndrome do nó sinusal sem marcapasso; insuficiência hepática grave; hipersensibilidade",
+    "interactions": "Verapamil ou diltiazem aumentam riesgo de bradicardia, bloqueio AV y hipotensão; Digoxina y outros cronotrópicos negativos potencializam bradicardia; Inibidores de CYP2D6 podem elevar exposição de alguns betabloqueadores; Retirada de clonidina exige planejamento para evitar rebote hipertensivo; Insulina y secretagogos: pode mascarar sintomas adrenérgicos de hipoglicemia",
+    "monitoring": "Evitar suspensão abrupta em doença coronariana; No iniciar ou titular agressivamente durante insuficiência cardíaca descompensada; Usar con cautela em doença broncoespástica",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada y isquemia por retirada abrupta.",
+    "alerts": "Bloqueio AV, insuficiência cardíaca, broncoespasmo, hipoglicemia mascarada y isquemia por retirada abrupta.; Evitar suspensão abrupta em doença coronariana; No iniciar ou titular agressivamente durante insuficiência cardíaca descompensada; Usar con cautela em doença broncoespástica",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nebivolol",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2011/021742s013lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nebivolol"
+  }
+};})();
+/* GOLD33_SELECTIVE:nebivolol:END */

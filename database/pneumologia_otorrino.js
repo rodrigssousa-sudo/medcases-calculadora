@@ -309,3 +309,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:budesonida_formoterol:END */
+/* GOLD33_SELECTIVE:nafazolina:START */
+;(function(){var db=window.PNEUMOLOGIA_OTORRINO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nafazolina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nafazolina:"+matches.length);drug=matches[0];}else{drug=db&&db["nafazolina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nafazolina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "054",
+    "requiredFieldCount": 33,
+    "approvedSha256": "4df0f0bf8fa44d7a9a387901758d44ecdd53255d99e0cb0bf3dd84ce84989117",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Nafazolina",
+    "class": "Agonista alfa-adrenérgico vasoconstritor tópico",
+    "pharmacologicClass": "Agonista alfa-adrenérgico vasoconstritor tópico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Soluções oftálmicas e nasais em concentrações distintas; confirmar produto.",
+    "presentations": "Soluções oftálmicas e nasais em concentrações distintas; confirmar produto.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Alívio temporário de hiperemia ocular ou congestão nasal conforme formulação e jurisdição.",
+    "dose": "Posologia depende da via e concentração. Uso ocular em produtos específicos: 1-2 gotas no olho afetado até quatro vezes/dia. Uso nasal não é intercambiável; limitar a poucos dias para evitar congestão rebote.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Ardor, irritação, visão turva, ressecamento e espirros.",
+    "dangerousAdverseEffects": "Hipertensão, arritmia, depressão do SNC em crianças, glaucoma e congestão medicamentosa.",
+    "adverseEffects": "Ardor, irritação, visão turva, ressecamento e espirros.; Hipertensão, arritmia, depressão do SNC em crianças, glaucoma e congestão medicamentosa.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipertensão, arritmia, depressão do SNC em crianças, glaucoma e congestão medicamentosa.",
+    "alerts": "Hipertensão, arritmia, depressão do SNC em crianças, glaucoma e congestão medicamentosa.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=naphazoline",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/208151s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=naphazoline"
+  },
+  "es": {
+    "name": "Nafazolina",
+    "class": "Agonista alfa-adrenérgico vasoconstritor tópico",
+    "pharmacologicClass": "Agonista alfa-adrenérgico vasoconstritor tópico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Soluções oftálmicas y nasais em concentrações distintas; confirmar produto.",
+    "presentations": "Soluções oftálmicas y nasais em concentrações distintas; confirmar produto.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Alívio temporário de hiperemia ocular ou congestão nasal conforme formulação y jurisdição.",
+    "dose": "Posologia depende da via y concentração. Uso ocular em produtos específicos: 1-2 gotas no olho afetado até quatro vezes/dia. Uso nasal no é intercambiável; limitar a poucos dias para evitar congestão rebote.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Ardor, irritação, visão turva, ressecamento y espirros.",
+    "dangerousAdverseEffects": "Hipertensão, arritmia, depressão do SNC em niños, glaucoma y congestão medicamentosa.",
+    "adverseEffects": "Ardor, irritação, visão turva, ressecamento y espirros.; Hipertensão, arritmia, depressão do SNC em niños, glaucoma y congestão medicamentosa.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipertensão, arritmia, depressão do SNC em niños, glaucoma y congestão medicamentosa.",
+    "alerts": "Hipertensão, arritmia, depressão do SNC em niños, glaucoma y congestão medicamentosa.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=naphazoline",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/208151s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=naphazoline"
+  }
+};})();
+/* GOLD33_SELECTIVE:nafazolina:END */

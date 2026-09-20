@@ -4864,3 +4864,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:morfina:END */
+/* GOLD33_SELECTIVE:neostigmina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="neostigmina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:neostigmina:"+matches.length);drug=matches[0];}else{drug=db&&db["neostigmina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:neostigmina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "054",
+    "requiredFieldCount": 33,
+    "approvedSha256": "4df0f0bf8fa44d7a9a387901758d44ecdd53255d99e0cb0bf3dd84ce84989117",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Neostigmina",
+    "class": "Inibidor reversível da acetilcolinesterase",
+    "pharmacologicClass": "Inibidor reversível da acetilcolinesterase",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável 0,5 ou 1 mg/mL conforme produto; confirmar concentração.",
+    "presentations": "Solução injetável 0,5 ou 1 mg/mL conforme produto; confirmar concentração.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Reversão de bloqueio neuromuscular não despolarizante após cirurgia; outras indicações dependem da formulação.",
+    "dose": "Reversão: 0,03-0,07 mg/kg IV, máximo total 5 mg, apenas após recuperação espontânea adequada e junto a antimuscarínico. Dose depende do bloqueador, profundidade e monitorização neuromuscular.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Bradicardia, náusea, vômito, aumento de secreções e cólicas.",
+    "dangerousAdverseEffects": "Bradicardia grave, broncoespasmo, crise colinérgica, bloqueio cardíaco e fraqueza residual.",
+    "adverseEffects": "Bradicardia, náusea, vômito, aumento de secreções e cólicas.; Bradicardia grave, broncoespasmo, crise colinérgica, bloqueio cardíaco e fraqueza residual.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Bradicardia grave, broncoespasmo, crise colinérgica, bloqueio cardíaco e fraqueza residual.",
+    "alerts": "Bradicardia grave, broncoespasmo, crise colinérgica, bloqueio cardíaco e fraqueza residual.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=neostigmine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/204078s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=neostigmine"
+  },
+  "es": {
+    "name": "Neostigmina",
+    "class": "Inibidor reversível da acetilcolinesterase",
+    "pharmacologicClass": "Inibidor reversível da acetilcolinesterase",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução injetável 0,5 ou 1 mg/mL conforme produto; confirmar concentração.",
+    "presentations": "Solução injetável 0,5 ou 1 mg/mL conforme produto; confirmar concentração.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Reversão de bloqueio neuromuscular no despolarizante após cirurgia; outras indicações dependem da formulação.",
+    "dose": "Reversão: 0,03-0,07 mg/kg IV, máximo total 5 mg, apenas após recuperação espontânea adequada y junto a antimuscarínico. Dose depende do bloqueador, profundidade y monitorização neuromuscular.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Bradicardia, náusea, vômito, aumento de secreções y cólicas.",
+    "dangerousAdverseEffects": "Bradicardia grave, broncoespasmo, crise colinérgica, bloqueio cardíaco y fraqueza residual.",
+    "adverseEffects": "Bradicardia, náusea, vômito, aumento de secreções y cólicas.; Bradicardia grave, broncoespasmo, crise colinérgica, bloqueio cardíaco y fraqueza residual.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Bradicardia grave, broncoespasmo, crise colinérgica, bloqueio cardíaco y fraqueza residual.",
+    "alerts": "Bradicardia grave, broncoespasmo, crise colinérgica, bloqueio cardíaco y fraqueza residual.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=neostigmine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/204078s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=neostigmine"
+  }
+};})();
+/* GOLD33_SELECTIVE:neostigmina:END */
