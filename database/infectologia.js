@@ -9579,3 +9579,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:meropenem:END */
+/* GOLD33_SELECTIVE:micafungina:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="micafungina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:micafungina:"+matches.length);drug=matches[0];}else{drug=db&&db["micafungina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:micafungina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "051",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e8a21d5e56a67f4cd6ffebc889de4b4f030ae14b8459ad80ac2ba035cf141544",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Micafungina",
+    "class": "Antifúngico equinocandina",
+    "pharmacologicClass": "Antifúngico equinocandina",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Pó liofilizado para infusão IV.",
+    "presentations": "Pó liofilizado para infusão IV.",
+    "mechanism": "Inibe a síntese de beta-1,3-D-glucano da parede fúngica, comprometendo integridade e crescimento do fungo.",
+    "pharmacodynamics": "Inibe a síntese de beta-1,3-D-glucano da parede fúngica, comprometendo integridade e crescimento do fungo.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Candidemia e candidíase invasiva, candidíase esofágica e profilaxia de Candida em receptores de transplante de células-tronco hematopoéticas.",
+    "dose": "Adultos: candidemia/candidíase invasiva 100 mg IV uma vez ao dia; esofágica 150 mg/dia; profilaxia em HSCT 50 mg/dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Flebite; Náusea; Febre; Elevação de transaminases",
+    "dangerousAdverseEffects": "Anafilaxia; Reação histaminérgica; Hepatotoxicidade; Hemólise rara",
+    "adverseEffects": "Febre, náusea, vômito, diarreia, cefaleia e flebite.; Anafilaxia, hemólise, disfunção hepática e renal e reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade à micafungina, outras equinocandinas ou componentes.",
+    "interactions": "Interações CYP são limitadas; monitorar sirolimo, nifedipino e itraconazol quando coadministrados conforme bula.",
+    "monitoring": "100 mg/dia candidemia adulto; 150 mg/dia esofágica; 50 mg/dia profilaxia HSCT; <4 meses: 4 mg/kg/dia sem SNC/ocular; Monitorar fígado",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Anafilaxia, hemólise, disfunção hepática e renal e reações cutâneas graves.",
+    "alerts": "Anafilaxia, hemólise, disfunção hepática e renal e reações cutâneas graves.; 100 mg/dia candidemia adulto; 150 mg/dia esofágica; 50 mg/dia profilaxia HSCT; <4 meses: 4 mg/kg/dia sem SNC/ocular; Monitorar fígado",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=micafungin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/021506s017lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=micafungin"
+  },
+  "es": {
+    "name": "Micafungina",
+    "class": "Antifúngico equinocandina",
+    "pharmacologicClass": "Antifúngico equinocandina",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Pó liofilizado para infusão IV.",
+    "presentations": "Pó liofilizado para infusão IV.",
+    "mechanism": "Inibe a síntese de beta-1,3-D-glucano da parede fúngica, comprometendo integridade y crescimento do fungo.",
+    "pharmacodynamics": "Inibe a síntese de beta-1,3-D-glucano da parede fúngica, comprometendo integridade y crescimento do fungo.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Candidemia y candidíase invasiva, candidíase esofágica y profilaxia de Candida em receptores de transplante de células-tronco hematopoéticas.",
+    "dose": "Adultos: candidemia/candidíase invasiva 100 mg IV uma vez ao dia; esofágica 150 mg/dia; profilaxia em HSCT 50 mg/dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Flebite; Náusea; Febre; Elevação de transaminases",
+    "dangerousAdverseEffects": "Anafilaxia; Reação histaminérgica; Hepatotoxicidade; Hemólise rara",
+    "adverseEffects": "Febre, náusea, vômito, diarreia, cefaleia y flebite.; Anafilaxia, hemólise, disfunción hepática y renal y reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade à micafungina, outras equinocandinas ou componentes.",
+    "interactions": "Interações CYP são limitadas; monitorizar sirolimo, nifedipino y itraconazol quando coadministrados conforme bula.",
+    "monitoring": "100 mg/dia candidemia adulto; 150 mg/dia esofágica; 50 mg/dia profilaxia HSCT; <4 meses: 4 mg/kg/dia sem SNC/ocular; Monitorar fígado",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Anafilaxia, hemólise, disfunción hepática y renal y reações cutâneas graves.",
+    "alerts": "Anafilaxia, hemólise, disfunción hepática y renal y reações cutâneas graves.; 100 mg/dia candidemia adulto; 150 mg/dia esofágica; 50 mg/dia profilaxia HSCT; <4 meses: 4 mg/kg/dia sem SNC/ocular; Monitorar fígado",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=micafungin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/021506s017lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=micafungin"
+  }
+};})();
+/* GOLD33_SELECTIVE:micafungina:END */

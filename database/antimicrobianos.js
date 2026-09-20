@@ -29555,3 +29555,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:meropenem_vaborbactam:END */
+/* GOLD33_SELECTIVE:metronidazol:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="metronidazol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:metronidazol:"+matches.length);drug=matches[0];}else{drug=db&&db["metronidazol"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:metronidazol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "051",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e8a21d5e56a67f4cd6ffebc889de4b4f030ae14b8459ad80ac2ba035cf141544",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Metronidazol",
+    "class": "Nitroimidazólico antibacteriano e antiprotozoário",
+    "pharmacologicClass": "Nitroimidazólico antibacteriano e antiprotozoário",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "presentations": "Comprimidos orais; formulação IV existe.",
+    "mechanism": "Em anaeróbios/protozoários, o grupo nitro é reduzido a intermediários reativos que lesam DNA.",
+    "pharmacodynamics": "Em anaeróbios/protozoários, o grupo nitro é reduzido a intermediários reativos que lesam DNA.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Infecções anaeróbias, tricomoníase, vaginose bacteriana e outras protozoárias conforme indicação.",
+    "dose": "Infecção anaeróbia grave: 7,5 mg/kg VO q6h, aproximadamente 500 mg q6h em adulto de 70 kg; máximo 4 g/dia.",
+    "pediatricDose": "standard: 20–30 mg/kg/dia; severe: 30–40 mg/kg/dia; maxDose: 4 g/dia",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "Neuropatia periférica; Encefalopatia/convulsões; Leucopenia; Reação álcool/disulfiram-like",
+    "adverseEffects": "Náusea, gosto metálico, cefaleia, diarreia e dor abdominal.; Neuropatia, encefalopatia, convulsões, reação com álcool, leucopenia e reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas e interações absolutas.",
+    "interactions": "Álcool/propilenoglicol, disulfiram, warfarina e lítio exigem atenção; pode aumentar INR.",
+    "monitoring": "Álcool/propilenoglicol: evitar +3 dias; Neuropatia periférica; Encefalopatia/convulsões; Child-Pugh C: reduzir 50%; Warfarina/disulfiram",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Neuropatia, encefalopatia, convulsões, reação com álcool, leucopenia e reações cutâneas graves.",
+    "alerts": "Neuropatia, encefalopatia, convulsões, reação com álcool, leucopenia e reações cutâneas graves.; Álcool/propilenoglicol: evitar +3 dias; Neuropatia periférica; Encefalopatia/convulsões; Child-Pugh C: reduzir 50%; Warfarina/disulfiram",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metronidazole",
+      "Fonte primária/oficial - https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metronidazole"
+  },
+  "es": {
+    "name": "Metronidazol",
+    "class": "Nitroimidazólico antibacteriano y antiprotozoário",
+    "pharmacologicClass": "Nitroimidazólico antibacteriano y antiprotozoário",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos orais; formulação IV existe.",
+    "presentations": "Comprimidos orais; formulação IV existe.",
+    "mechanism": "Em anaeróbios/protozoários, o grupo nitro é reduzido a intermediários reativos que lesam DNA.",
+    "pharmacodynamics": "Em anaeróbios/protozoários, o grupo nitro é reduzido a intermediários reativos que lesam DNA.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Infecções anaeróbias, tricomoníase, vaginose bacteriana y outras protozoárias conforme indicação.",
+    "dose": "Infecção anaeróbia grave: 7,5 mg/kg VO q6h, aproximadamente 500 mg q6h em adulto de 70 kg; máximo 4 g/dia.",
+    "pediatricDose": "standard: 20–30 mg/kg/dia; severe: 30–40 mg/kg/dia; maxDose: 4 g/dia",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Dor abdominal; Cefaleia",
+    "dangerousAdverseEffects": "Neuropatia periférica; Encefalopatia/convulsões; Leucopenia; Reação álcool/disulfiram-like",
+    "adverseEffects": "Náusea, gosto metálico, cefaleia, diarreia y dor abdominal.; Neuropatia, encefalopatia, convulsões, reação con álcool, leucopenia y reações cutâneas graves.",
+    "contraindications": "Hipersensibilidade grave ao fármaco/classe; respeitar contraindicações específicas y interações absolutas.",
+    "interactions": "Álcool/propilenoglicol, disulfiram, warfarina y lítio exigem atenção; pode aumentar INR.",
+    "monitoring": "Álcool/propilenoglicol: evitar +3 dias; Neuropatia periférica; Encefalopatia/convulsões; Child-Pugh C: reduzir 50%; Warfarina/disulfiram",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Neuropatia, encefalopatia, convulsões, reação con álcool, leucopenia y reações cutâneas graves.",
+    "alerts": "Neuropatia, encefalopatia, convulsões, reação con álcool, leucopenia y reações cutâneas graves.; Álcool/propilenoglicol: evitar +3 dias; Neuropatia periférica; Encefalopatia/convulsões; Child-Pugh C: reduzir 50%; Warfarina/disulfiram",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metronidazole",
+      "Fonte primária/oficial - https://www.cdc.gov/std/treatment-guidelines/trichomoniasis.htm"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metronidazole"
+  }
+};})();
+/* GOLD33_SELECTIVE:metronidazol:END */

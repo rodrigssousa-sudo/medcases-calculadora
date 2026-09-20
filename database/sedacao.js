@@ -671,3 +671,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:dexmedetomidina:END */
+/* GOLD33_SELECTIVE:midazolam:START */
+;(function(){var db=window.SEDACAO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="midazolam";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:midazolam:"+matches.length);drug=matches[0];}else{drug=db&&db["midazolam"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:midazolam");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "051",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e8a21d5e56a67f4cd6ffebc889de4b4f030ae14b8459ad80ac2ba035cf141544",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Midazolam",
+    "class": "Benzodiazepínico sedativo de curta ação",
+    "pharmacologicClass": "Benzodiazepínico sedativo de curta ação",
+    "commercialNames": "Midazolam, Versed e marcas locais.",
+    "presentation": "Solução injetável 1 mg/mL ou 5 mg/mL; confirmar concentração.",
+    "presentations": "Solução injetável 1 mg/mL ou 5 mg/mL; confirmar concentração.",
+    "mechanism": "Aumenta ação inibitória do GABA em GABA-A, produzindo sedação, ansiólise, amnésia e efeito anticonvulsivante.",
+    "pharmacodynamics": "Aumenta ação inibitória do GABA em GABA-A, produzindo sedação, ansiólise, amnésia e efeito anticonvulsivante.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Sedação, ansiólise e amnésia em procedimentos, premedicação anestésica e outras indicações conforme apresentação.",
+    "dose": "Sedação IV adulto saudável: inicial pode ser 1 mg e não deve exceder 2,5 mg; titular lentamente. Doses menores em >60 anos, debilitados ou com opioides.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Sonolência, amnésia, tontura, soluços, náusea e dor no local de administração.",
+    "dangerousAdverseEffects": "Depressão respiratória, apneia, parada respiratória/cardiaca, hipotensão e sedação profunda, especialmente com opioides.",
+    "adverseEffects": "Sonolência, amnésia, soluços, náusea e dor no local.; Depressão respiratória, apneia, hipotensão, parada cardiorrespiratória e agitação paradoxal.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação; avaliar glaucoma agudo de ângulo fechado conforme formulação/contexto.",
+    "interactions": "Opioides e outros depressores SNC aumentam depressão respiratória; inibidores CYP3A reduzem depuração e prolongam efeito.",
+    "monitoring": "Em <6 meses não intubados, recomendações de dose são incertas e risco de obstrução/hipoventilação é maior.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Depressão respiratória, apneia, hipotensão, parada cardiorrespiratória e agitação paradoxal.",
+    "alerts": "Depressão respiratória, apneia, hipotensão, parada cardiorrespiratória e agitação paradoxal.; Em <6 meses não intubados, recomendações de dose são incertas e risco de obstrução/hipoventilação é maior.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=midazolam",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018654s086lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=midazolam"
+  },
+  "es": {
+    "name": "Midazolam",
+    "class": "Benzodiazepínico sedativo de curta ação",
+    "pharmacologicClass": "Benzodiazepínico sedativo de curta ação",
+    "commercialNames": "Midazolam, Versed y marcas locais.",
+    "presentation": "Solução injetável 1 mg/mL ou 5 mg/mL; confirmar concentração.",
+    "presentations": "Solução injetável 1 mg/mL ou 5 mg/mL; confirmar concentração.",
+    "mechanism": "Aumenta ação inibitória do GABA em GABA-A, produzindo sedação, ansiólise, amnésia y efeito anticonvulsivante.",
+    "pharmacodynamics": "Aumenta ação inibitória do GABA em GABA-A, produzindo sedação, ansiólise, amnésia y efeito anticonvulsivante.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Sedação, ansiólise y amnésia em procedimentos, premedicação anestésica y outras indicações conforme apresentação.",
+    "dose": "Sedação IV adulto saudável: inicial pode ser 1 mg y no deve exceder 2,5 mg; titular lentamente. Doses menores em >60 anos, debilitados ou con opioides.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Sonolência, amnésia, tontura, soluços, náusea y dor no local de administração.",
+    "dangerousAdverseEffects": "Depressão respiratória, apneia, parada respiratória/cardiaca, hipotensão y sedação profunda, especialmente con opioides.",
+    "adverseEffects": "Sonolência, amnésia, soluços, náusea y dor no local.; Depressão respiratória, apneia, hipotensão, parada cardiorrespiratória y agitação paradoxal.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação; avaliar glaucoma agudo de ângulo fechado conforme formulação/contexto.",
+    "interactions": "Opioides y outros depressores SNC aumentam depressão respiratória; inibidores CYP3A reduzem depuração y prolongam efeito.",
+    "monitoring": "Em <6 meses no intubados, recomendações de dosis são incertas y riesgo de obstrução/hipoventilação é maior.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Depressão respiratória, apneia, hipotensão, parada cardiorrespiratória y agitação paradoxal.",
+    "alerts": "Depressão respiratória, apneia, hipotensão, parada cardiorrespiratória y agitação paradoxal.; Em <6 meses no intubados, recomendações de dosis são incertas y riesgo de obstrução/hipoventilação é maior.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=midazolam",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018654s086lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=midazolam"
+  }
+};})();
+/* GOLD33_SELECTIVE:midazolam:END */

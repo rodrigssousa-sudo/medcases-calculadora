@@ -966,3 +966,93 @@ window.GASTRO_DRUGS_DB = [
   }
 };})();
 /* GOLD33_SELECTIVE:lactulose:END */
+/* GOLD33_SELECTIVE:metoclopramida:START */
+;(function(){var db=window.GASTRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="metoclopramida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:metoclopramida:"+matches.length);drug=matches[0];}else{drug=db&&db["metoclopramida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:metoclopramida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "051",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e8a21d5e56a67f4cd6ffebc889de4b4f030ae14b8459ad80ac2ba035cf141544",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Metoclopramida",
+    "class": "Antagonista dopaminérgico D2; procinético e antiemético",
+    "pharmacologicClass": "Antagonista dopaminérgico D2; procinético e antiemético",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 5 e 10 mg; solução oral e injetável em concentrações específicas.",
+    "presentations": "Comprimidos 5 e 10 mg; solução oral e injetável em concentrações específicas.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Gastroparesia diabética e refluxo gastroesofágico refratário conforme produto; usos antieméticos dependem da formulação e jurisdição.",
+    "dose": "Gastroparesia adulta: 10 mg VO 30 minutos antes das refeições e ao deitar por 2-8 semanas; reduzir em insuficiência renal. Evitar tratamento além de 12 semanas salvo situação rara justificada.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Sonolência, fadiga, inquietação e diarreia.",
+    "dangerousAdverseEffects": "Discinesia tardia, distonia, parkinsonismo, síndrome neuroléptica maligna, depressão e metemoglobinemia.",
+    "adverseEffects": "Sonolência, fadiga, inquietação e diarreia.; Discinesia tardia, distonia, parkinsonismo, síndrome neuroléptica maligna, depressão e metemoglobinemia.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Discinesia tardia, distonia, parkinsonismo, síndrome neuroléptica maligna, depressão e metemoglobinemia.",
+    "alerts": "Discinesia tardia, distonia, parkinsonismo, síndrome neuroléptica maligna, depressão e metemoglobinemia.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metoclopramide",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/017854s062lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metoclopramide"
+  },
+  "es": {
+    "name": "Metoclopramida",
+    "class": "Antagonista dopaminérgico D2; procinético y antiemético",
+    "pharmacologicClass": "Antagonista dopaminérgico D2; procinético y antiemético",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 5 y 10 mg; solución oral y injetável em concentrações específicas.",
+    "presentations": "Comprimidos 5 y 10 mg; solución oral y injetável em concentrações específicas.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Gastroparesia diabética y refluxo gastroesofágico refratário conforme produto; usos antieméticos dependem da formulação y jurisdição.",
+    "dose": "Gastroparesia adulta: 10 mg VO 30 minutos antes das refeições y ao deitar por 2-8 semanas; reduzir em insuficiência renal. Evitar tratamento além de 12 semanas salvo situação rara justificada.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Sonolência, fadiga, inquietação y diarreia.",
+    "dangerousAdverseEffects": "Discinesia tardia, distonia, parkinsonismo, síndrome neuroléptica maligna, depressão y metemoglobinemia.",
+    "adverseEffects": "Sonolência, fadiga, inquietação y diarreia.; Discinesia tardia, distonia, parkinsonismo, síndrome neuroléptica maligna, depressão y metemoglobinemia.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Discinesia tardia, distonia, parkinsonismo, síndrome neuroléptica maligna, depressão y metemoglobinemia.",
+    "alerts": "Discinesia tardia, distonia, parkinsonismo, síndrome neuroléptica maligna, depressão y metemoglobinemia.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metoclopramide",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/017854s062lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=metoclopramide"
+  }
+};})();
+/* GOLD33_SELECTIVE:metoclopramida:END */
