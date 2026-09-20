@@ -4898,3 +4898,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:risperidona_lai:END */
+/* GOLD33_SELECTIVE:sulpirida:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sulpirida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sulpirida:"+matches.length);drug=matches[0];}else{drug=db&&db["sulpirida"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="sulpirida";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sulpirida:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sulpirida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "074",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e9b3ea066f53ad90d7ad404876665df335ef2228c99da56d6c095db44a62ce95",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Sulpirida",
+    "class": "Antipsicótico benzamídico antagonista dopaminérgico",
+    "pharmacologicClass": "Antipsicótico benzamídico antagonista dopaminérgico",
+    "commercialNames": "br: Dogmatil; Equilid; Sulpirida; ar: Dogmatil; Sulpirida; Sulpirida Gador",
+    "presentation": "Cápsula/comprimido 50 mg; Comprimido 200 mg; Solução oral/gotas; Ampola 100 mg/2 mL",
+    "presentations": "Cápsula/comprimido 50 mg; Comprimido 200 mg; Solução oral/gotas; Ampola 100 mg/2 mL",
+    "mechanism": "Antagonista seletivo dopaminérgico D2/D3, com ação antipsicótica em doses altas e efeitos dopaminérgicos diferenciados em doses baixas.",
+    "pharmacodynamics": "Antagonista seletivo dopaminérgico D2/D3, com ação antipsicótica em doses altas e efeitos dopaminérgicos diferenciados em doses baixas.",
+    "pharmacokinetics": "Vida média aproximada: 6–9 horas; eliminação principalmente renal.",
+    "indications": "Esquizofrenia; Psicose aguda; Psicose crônica; Sintomas negativos em esquizofrenia em casos selecionados; Ansiedade somatizada em doses baixas; Vertigem/labirintopatias em alguns protocolos; Dispepsia funcional ou sintomas gastrointestinais funcionais em alguns países",
+    "dose": "adulto: Psicose/esquizofrenia: 400–800 mg/dia VO em doses divididas; titular conforme resposta.; doseBaixa: Sintomas ansiosos/somatização/vertigem: doses baixas, geralmente 50–150 mg/dia conforme indicação local.; maxDose: Dose máxima usual em psicose: até 1200 mg/dia em casos selecionados.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "ClCr informado ≥60 mL/min: verificar produto, idade e indicação antes da seleção da dose.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Hiperprolactinemia; Galactorreia; Amenorreia; Disfunção sexual; Sintomas extrapiramidais; Ganho de peso",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Prolongamento QT e arritmias; Discinesia tardia; Convulsões em predispostos; Acúmulo e toxicidade em insuficiência renal",
+    "adverseEffects": "Sonolência, hiperprolactinemia, sintomas extrapiramidais e ganho de peso.; QT/torsades, síndrome neuroléptica maligna, discinesia tardia e agranulocitose.",
+    "contraindications": "Hipersensibilidade à sulpirida ou benzamidas; Feocromocitoma; Tumores prolactino-dependentes; Doença de Parkinson grave, salvo indicação especializada; QT prolongado significativo ou arritmias graves",
+    "interactions": "Levodopa e agonistas dopaminérgicos: antagonismo; Fármacos que prolongam QT; Álcool e depressores do SNC; Anti-hipertensivos: maior hipotensão; Lítio: possível neurotoxicidade com antipsicóticos",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda não possui dose pediátrica estruturada e validada para produto e indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica e avaliação especializada.; Sulpirida comprimidos 200 mg: sem ClCr válido não afirmar função renal normal. Ajustes dependem de função renal, idade e apresentação; não extrapolar a solução nem usar dose adulta como dose pediátrica.; SmPC 200 mg comprimidos: experiência insuficiente em menores de 14 anos; idosos com disfunção renal requerem redução individualizada. Não extrapolar outras indicações ou solução a este produto.; Ajustar dose pela função renal.; Monitorar prolactina se galactorreia, amenorreia, infertilidade ou disfunção sexual.; Considerar ECG em pacientes com risco de QT.; Evitar em tumores prolactino-dependentes.; Monitorar sintomas extrapiramidais.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "QT/torsades, síndrome neuroléptica maligna, discinesia tardia e agranulocitose.",
+    "alerts": "QT/torsades, síndrome neuroléptica maligna, discinesia tardia e agranulocitose.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sulpirida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sulpirida"
+  },
+  "es": {
+    "name": "Sulpirida",
+    "class": "Antipsicótico benzamídico antagonista dopaminérgico",
+    "pharmacologicClass": "Antipsicótico benzamídico antagonista dopaminérgico",
+    "commercialNames": "br: Dogmatil; Equilid; Sulpirida; ar: Dogmatil; Sulpirida; Sulpirida Gador",
+    "presentation": "Cápsula/comprimido 50 mg; Comprimido 200 mg; Solução oral/gotas; Ampola 100 mg/2 mL",
+    "presentations": "Cápsula/comprimido 50 mg; Comprimido 200 mg; Solução oral/gotas; Ampola 100 mg/2 mL",
+    "mechanism": "Antagonista seletivo dopaminérgico D2/D3, con ação antipsicótica em dosiss altas y efeitos dopaminérgicos diferenciados em dosiss baixas.",
+    "pharmacodynamics": "Antagonista seletivo dopaminérgico D2/D3, con ação antipsicótica em dosiss altas y efeitos dopaminérgicos diferenciados em dosiss baixas.",
+    "pharmacokinetics": "Vida média aproximada: 6–9 horas; eliminação principalmente renal.",
+    "indications": "Esquizofrenia; Psicose aguda; Psicose crônica; Sintomas negativos em esquizofrenia em casos selecionados; Ansiedade somatizada em dosiss baixas; Vertigem/labirintopatias em alguns protocolos; Dispepsia funcional ou sintomas gastrointestinais funcionais em alguns países",
+    "dose": "adulto: Psicose/esquizofrenia: 400–800 mg/dia VO em dosiss divididas; titular conforme resposta.; dosisBaixa: Sintomas ansiosos/somatização/vertigem: dosiss baixas, geralmente 50–150 mg/dia conforme indicação local.; maxDose: Dose máxima usual em psicose: até 1200 mg/dia em casos selecionados.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "ClCr informado ≥60 mL/min: verificar produto, idade y indicação antes da seleção da dosis.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Hiperprolactinemia; Galactorreia; Amenorreia; Disfunción sexual; Sintomas extrapiramidais; Ganho de peso",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Prolongamento QT y arritmias; Discinesia tardia; Convulsões em predispostos; Acúmulo y toxicidade em insuficiência renal",
+    "adverseEffects": "Sonolência, hiperprolactinemia, sintomas extrapiramidais y ganho de peso.; QT/torsades, síndrome neuroléptica maligna, discinesia tardia y agranulocitose.",
+    "contraindications": "Hipersensibilidade à sulpirida ou benzamidas; Feocromocitoma; Tumores prolactino-dependentes; Doença de Parkinson grave, salvo indicação especializada; QT prolongado significativo ou arritmias graves",
+    "interactions": "Levodopa y agonistas dopaminérgicos: antagonismo; Fármacos que prolongam QT; Álcool y depressores do SNC; Anti-hipertensivos: maior hipotensão; Lítio: possível neurotoxicidade con antipsicóticos",
+    "monitoring": "SEGURANÇA PEDIÁTRICA: esta ficha ainda no possui dosis pediátrica estruturada y validada para produto y indicação. Nunca extrapolar a posologia adulta para menores de 18 anos; confirmar bula específica y avaliação especializada.; Sulpirida comprimidos 200 mg: sem ClCr válido no afirmar función renal normal. Ajustes dependem de función renal, idade y apresentação; no extrapolar a solución nem usar dosis adulta como dosis pediátrica.; SmPC 200 mg comprimidos: experiência insuficiente em menores de 14 anos; idosos con disfunción renal requerem redução individualizada. No extrapolar outras indicações ou solución a este produto.; Ajustar dosis pela función renal.; Monitorar prolactina se galactorreia, amenorreia, infertilidade ou disfunción sexual.; Considerar ECG em pacientes con risco de QT.; Evitar em tumores prolactino-dependentes.; Monitorar sintomas extrapiramidais.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "QT/torsades, síndrome neuroléptica maligna, discinesia tardia y agranulocitose.",
+    "alerts": "QT/torsades, síndrome neuroléptica maligna, discinesia tardia y agranulocitose.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sulpirida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sulpirida"
+  }
+};})();
+/* GOLD33_SELECTIVE:sulpirida:END */

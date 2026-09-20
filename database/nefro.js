@@ -2141,8 +2141,8 @@
 
 /* ── BUILD 456-NEFRO: Aliases de resolução de chave ── */
 Object.assign(window.NEFRO_DRUGS_DB, {
-    "ferro_sacarato": window.NEFRO_DRUGS_DB["sacarato_hidroxido_ferrico"],
-    "poliestirenossulfonato": window.NEFRO_DRUGS_DB["poliestirenossulfonato_de_sodio"]
+    "ferro_sacarato": Object.assign({}, window.NEFRO_DRUGS_DB["sacarato_hidroxido_ferrico"]),
+    "poliestirenossulfonato": Object.assign({}, window.NEFRO_DRUGS_DB["poliestirenossulfonato_de_sodio"])
 }); /* fim aliases BUILD 456-NEFRO */
 
 })();
@@ -6096,3 +6096,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:sparsentana:END */
+/* GOLD33_SELECTIVE:sulfato_ferroso:START */
+;(function(){var db=window.NEFRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sulfato_ferroso";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sulfato_ferroso:"+matches.length);drug=matches[0];}else{drug=db&&db["sulfato_ferroso"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="sulfato_ferroso";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sulfato_ferroso:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sulfato_ferroso");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "074",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e9b3ea066f53ad90d7ad404876665df335ef2228c99da56d6c095db44a62ce95",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Sulfato ferroso",
+    "class": "Suplemento oral de ferro",
+    "pharmacologicClass": "Suplemento oral de ferro",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, gotas e soluções com diferentes quantidades de ferro elementar.",
+    "presentations": "Comprimidos, gotas e soluções com diferentes quantidades de ferro elementar.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Prevenção e tratamento da deficiência de ferro conforme avaliação clínica e laboratorial.",
+    "dose": "Dose deve ser calculada em ferro elementar, não apenas pelo peso do sal. Frequência e duração dependem da indicação, idade, tolerância e resposta.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, dor abdominal, constipação e fezes escuras.",
+    "dangerousAdverseEffects": "Intoxicação aguda, especialmente em crianças, lesão gastrointestinal e sobrecarga de ferro.",
+    "adverseEffects": "Náusea, dor abdominal, constipação e fezes escuras.; Intoxicação aguda, especialmente em crianças, lesão gastrointestinal e sobrecarga de ferro.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Intoxicação aguda, especialmente em crianças, lesão gastrointestinal e sobrecarga de ferro.",
+    "alerts": "Intoxicação aguda, especialmente em crianças, lesão gastrointestinal e sobrecarga de ferro.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sulfato+ferroso",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sulfato+ferroso"
+  },
+  "es": {
+    "name": "Sulfato ferroso",
+    "class": "Suplemento oral de ferro",
+    "pharmacologicClass": "Suplemento oral de ferro",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, gotas y soluções con diferentes quantidades de ferro elementar.",
+    "presentations": "Comprimidos, gotas y soluções con diferentes quantidades de ferro elementar.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Prevenção y tratamento da deficiência de ferro conforme avaliação clínica y laboratorial.",
+    "dose": "Dose deve ser calculada em ferro elementar, no apenas pelo peso do sal. Frequência y duração dependem da indicação, idade, tolerância y resposta.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, dor abdominal, constipação y fezes escuras.",
+    "dangerousAdverseEffects": "Intoxicação aguda, especialmente em niños, lesão gastrointestinal y sobrecarga de ferro.",
+    "adverseEffects": "Náusea, dor abdominal, constipação y fezes escuras.; Intoxicação aguda, especialmente em niños, lesão gastrointestinal y sobrecarga de ferro.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Intoxicação aguda, especialmente em niños, lesão gastrointestinal y sobrecarga de ferro.",
+    "alerts": "Intoxicação aguda, especialmente em niños, lesão gastrointestinal y sobrecarga de ferro.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sulfato+ferroso",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sulfato+ferroso"
+  }
+};})();
+/* GOLD33_SELECTIVE:sulfato_ferroso:END */

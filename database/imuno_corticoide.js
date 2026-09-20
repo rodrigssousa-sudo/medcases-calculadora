@@ -724,7 +724,7 @@ window.IMUNO_CORTICOIDE_DRUGS_DB = [
 };})();
 /* GOLD33_SELECTIVE:dexametasona:END */
 /* GOLD33_SELECTIVE:hidrocortisona:START */
-;(function(){var db=window.IMUNO_CORTICOIDE_DRUGS_DB;if(!db||!db["hidrocortisona"])throw new Error("GOLD33_MISSING_CANONICAL:hidrocortisona");db["hidrocortisona"].mcGoldClinicalV1={
+;(function(){var db=window.IMUNO_CORTICOIDE_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="hidrocortisona";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:hidrocortisona:"+matches.length);drug=matches[0];}else{drug=db&&db["hidrocortisona"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:hidrocortisona");}drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "040",

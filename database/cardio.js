@@ -68911,7 +68911,7 @@
 };})();
 /* GOLD33_SELECTIVE:mipomersen:END */
 /* GOLD33_SELECTIVE:mononitratoisossorbida:START */
-;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="mononitratoisossorbida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:mononitratoisossorbida:"+matches.length);drug=matches[0];}else{drug=db&&db["mononitratoisossorbida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:mononitratoisossorbida");}drug.mcGoldClinicalV1={
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="mononitratoisossorbida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:mononitratoisossorbida:"+matches.length);drug=matches[0];}else{drug=db&&(db["mononitratoisossorbida"]||db["mononitratoIsossorbida"]);if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:mononitratoisossorbida");}drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "053",
@@ -69451,7 +69451,7 @@
 };})();
 /* GOLD33_SELECTIVE:nicorandil:END */
 /* GOLD33_SELECTIVE:nitroglicerinaiv:START */
-;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nitroglicerinaiv";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nitroglicerinaiv:"+matches.length);drug=matches[0];}else{drug=db&&db["nitroglicerinaiv"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nitroglicerinaiv");}drug.mcGoldClinicalV1={
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nitroglicerinaiv";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nitroglicerinaiv:"+matches.length);drug=matches[0];}else{drug=db&&(db["nitroglicerinaiv"]||db["nitroglicerinaIV"]);if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nitroglicerinaiv");}drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "056",
@@ -69541,7 +69541,7 @@
 };})();
 /* GOLD33_SELECTIVE:nitroglicerinaiv:END */
 /* GOLD33_SELECTIVE:nitroglicerinasl:START */
-;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nitroglicerinasl";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nitroglicerinasl:"+matches.length);drug=matches[0];}else{drug=db&&db["nitroglicerinasl"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nitroglicerinasl");}drug.mcGoldClinicalV1={
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nitroglicerinasl";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nitroglicerinasl:"+matches.length);drug=matches[0];}else{drug=db&&(db["nitroglicerinasl"]||db["nitroglicerinaSL"]);if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nitroglicerinasl");}drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "056",
@@ -69631,7 +69631,7 @@
 };})();
 /* GOLD33_SELECTIVE:nitroglicerinasl:END */
 /* GOLD33_SELECTIVE:nitroprussiatosodio:START */
-;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nitroprussiatosodio";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nitroprussiatosodio:"+matches.length);drug=matches[0];}else{drug=db&&db["nitroprussiatosodio"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nitroprussiatosodio");}drug.mcGoldClinicalV1={
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nitroprussiatosodio";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nitroprussiatosodio:"+matches.length);drug=matches[0];}else{drug=db&&(db["nitroprussiatosodio"]||db["nitroprussiatoSodio"]);if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nitroprussiatosodio");}drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "056",
@@ -71431,7 +71431,7 @@
 };})();
 /* GOLD33_SELECTIVE:rosuvastatina:END */
 /* GOLD33_SELECTIVE:sacubitrilvalsartana:START */
-;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sacubitrilvalsartana";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sacubitrilvalsartana:"+matches.length);drug=matches[0];}else{drug=db&&db["sacubitrilvalsartana"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sacubitrilvalsartana");}drug.mcGoldClinicalV1={
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sacubitrilvalsartana";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sacubitrilvalsartana:"+matches.length);drug=matches[0];}else{drug=db&&(db["sacubitrilvalsartana"]||db["sacubitrilValsartana"]);if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sacubitrilvalsartana");}drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "070",
@@ -71701,7 +71701,7 @@
 };})();
 /* GOLD33_SELECTIVE:sildenafila:END */
 /* GOLD33_SELECTIVE:sildenafilahap:START */
-;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sildenafilahap";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sildenafilahap:"+matches.length);drug=matches[0];}else{drug=db&&db["sildenafilahap"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sildenafilahap");}drug.mcGoldClinicalV1={
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sildenafilahap";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sildenafilahap:"+matches.length);drug=matches[0];}else{drug=db&&(db["sildenafilahap"]||db["sildenafilaHAP"]);if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sildenafilahap");}drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
     "lote": "072",
@@ -72060,3 +72060,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:sotalol:END */
+/* GOLD33_SELECTIVE:tadalafila:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="tadalafila";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tadalafila:"+matches.length);drug=matches[0];}else{drug=db&&db["tadalafila"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="tadalafila";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tadalafila:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:tadalafila");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "074",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e9b3ea066f53ad90d7ad404876665df335ef2228c99da56d6c095db44a62ce95",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Tadalafila para disfunção erétil/hiperplasia prostática",
+    "class": "Inibidor da fosfodiesterase tipo 5",
+    "pharmacologicClass": "Inibidor da fosfodiesterase tipo 5",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em múltiplas forças; regimes não são intercambiáveis com HAP.",
+    "presentations": "Comprimidos em múltiplas forças; regimes não são intercambiáveis com HAP.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Disfunção erétil e sintomas de hiperplasia prostática benigna conforme regime; separar de uso para HAP.",
+    "dose": "Uso sob demanda ou diário conforme indicação e rótulo. Ajustar por função renal/hepática e interações; contraindicado com nitratos e estimuladores de guanilato ciclase.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, dispepsia, dor lombar, mialgia e rubor.",
+    "dangerousAdverseEffects": "Hipotensão grave, priapismo, perda visual ou auditiva súbita e eventos cardiovasculares.",
+    "adverseEffects": "Cefaleia, dispepsia, dor lombar, mialgia e rubor.; Hipotensão grave, priapismo, perda visual ou auditiva súbita e eventos cardiovasculares.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipotensão grave, priapismo, perda visual ou auditiva súbita e eventos cardiovasculares.",
+    "alerts": "Hipotensão grave, priapismo, perda visual ou auditiva súbita e eventos cardiovasculares.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tadalafila",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tadalafila"
+  },
+  "es": {
+    "name": "Tadalafila para disfunción erétil/hiperplasia prostática",
+    "class": "Inibidor da fosfodiesterase tipo 5",
+    "pharmacologicClass": "Inibidor da fosfodiesterase tipo 5",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em múltiplas forças; regimes no são intercambiáveis con HAP.",
+    "presentations": "Comprimidos em múltiplas forças; regimes no são intercambiáveis con HAP.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Disfunción erétil y sintomas de hiperplasia prostática benigna conforme regime; separar de uso para HAP.",
+    "dose": "Uso sob demanda ou diário conforme indicação y rótulo. Ajustar por función renal/hepática y interações; contraindicado con nitratos y estimuladores de guanilato ciclase.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, dispepsia, dor lombar, mialgia y rubor.",
+    "dangerousAdverseEffects": "Hipotensão grave, priapismo, perda visual ou auditiva súbita y eventos cardiovasculares.",
+    "adverseEffects": "Cefaleia, dispepsia, dor lombar, mialgia y rubor.; Hipotensão grave, priapismo, perda visual ou auditiva súbita y eventos cardiovasculares.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipotensão grave, priapismo, perda visual ou auditiva súbita y eventos cardiovasculares.",
+    "alerts": "Hipotensão grave, priapismo, perda visual ou auditiva súbita y eventos cardiovasculares.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tadalafila",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tadalafila"
+  }
+};})();
+/* GOLD33_SELECTIVE:tadalafila:END */

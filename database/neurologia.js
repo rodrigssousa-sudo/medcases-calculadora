@@ -16660,3 +16660,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:solriamfetol:END */
+/* GOLD33_SELECTIVE:sumatriptana:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sumatriptana";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sumatriptana:"+matches.length);drug=matches[0];}else{drug=db&&db["sumatriptana"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="sumatriptana";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sumatriptana:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sumatriptana");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "074",
+    "requiredFieldCount": 33,
+    "approvedSha256": "e9b3ea066f53ad90d7ad404876665df335ef2228c99da56d6c095db44a62ce95",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Sumatriptana",
+    "class": "Agonista seletivo dos receptores 5-HT1B/1D",
+    "pharmacologicClass": "Agonista seletivo dos receptores 5-HT1B/1D",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, spray nasal e injeção subcutânea em forças específicas.",
+    "presentations": "Comprimidos, spray nasal e injeção subcutânea em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Tratamento agudo de enxaqueca e cefaleia em salvas conforme formulação; não é profilaxia.",
+    "dose": "Dose e repetição dependem da via. Confirmar diagnóstico, risco cardiovascular, função hepática e intervalo com outros triptanos/ergotamínicos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Parestesia, tontura, sensação de pressão, rubor e náusea.",
+    "dangerousAdverseEffects": "Isquemia coronária ou cerebral, vasoespasmo, hipertensão grave e síndrome serotoninérgica.",
+    "adverseEffects": "Parestesia, tontura, sensação de pressão, rubor e náusea.; Isquemia coronária ou cerebral, vasoespasmo, hipertensão grave e síndrome serotoninérgica.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Isquemia coronária ou cerebral, vasoespasmo, hipertensão grave e síndrome serotoninérgica.",
+    "alerts": "Isquemia coronária ou cerebral, vasoespasmo, hipertensão grave e síndrome serotoninérgica.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptana",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptana"
+  },
+  "es": {
+    "name": "Sumatriptana",
+    "class": "Agonista seletivo dos receptores 5-HT1B/1D",
+    "pharmacologicClass": "Agonista seletivo dos receptores 5-HT1B/1D",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, spray nasal y injeção subcutânea em forças específicas.",
+    "presentations": "Comprimidos, spray nasal y injeção subcutânea em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Tratamento agudo de enxaqueca y cefaleia em salvas conforme formulação; no é profilaxia.",
+    "dose": "Dose y repetição dependem da via. Confirmar diagnóstico, risco cardiovascular, función hepática y intervalo con outros triptanos/ergotamínicos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Parestesia, tontura, sensação de pressão, rubor y náusea.",
+    "dangerousAdverseEffects": "Isquemia coronária ou cerebral, vasoespasmo, hipertensão grave y síndrome serotoninérgica.",
+    "adverseEffects": "Parestesia, tontura, sensação de pressão, rubor y náusea.; Isquemia coronária ou cerebral, vasoespasmo, hipertensão grave y síndrome serotoninérgica.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Isquemia coronária ou cerebral, vasoespasmo, hipertensão grave y síndrome serotoninérgica.",
+    "alerts": "Isquemia coronária ou cerebral, vasoespasmo, hipertensão grave y síndrome serotoninérgica.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptana",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sumatriptana"
+  }
+};})();
+/* GOLD33_SELECTIVE:sumatriptana:END */
