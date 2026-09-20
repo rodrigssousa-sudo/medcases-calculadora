@@ -8464,3 +8464,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:probenecida:END */
+/* GOLD33_SELECTIVE:ropivacaina:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="ropivacaina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:ropivacaina:"+matches.length);drug=matches[0];}else{drug=db&&db["ropivacaina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:ropivacaina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "070",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d75536a21e68d0ab64cc54b31bec09d561d4987c025b71baf2acbc841851a7ab",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ropivacaína",
+    "class": "Anestésico local do tipo amida",
+    "pharmacologicClass": "Anestésico local do tipo amida",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Soluções injetáveis em múltiplas concentrações.",
+    "presentations": "Soluções injetáveis em múltiplas concentrações.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Anestesia regional e analgesia por técnicas específicas.",
+    "dose": "Concentração, volume, dose total e velocidade dependem do bloqueio, idade e contexto. Exige profissional treinado, monitorização e resgate para toxicidade sistêmica.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Hipotensão, náusea, bradicardia e parestesia.",
+    "dangerousAdverseEffects": "Convulsão, arritmia, parada cardíaca e toxicidade sistêmica por anestésico local.",
+    "adverseEffects": "Hipotensão, náusea, bradicardia e parestesia.; Convulsão, arritmia, parada cardíaca e toxicidade sistêmica por anestésico local.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Convulsão, arritmia, parada cardíaca e toxicidade sistêmica por anestésico local.",
+    "alerts": "Convulsão, arritmia, parada cardíaca e toxicidade sistêmica por anestésico local.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ropivacaina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ropivacaina"
+  },
+  "es": {
+    "name": "Ropivacaína",
+    "class": "Anestésico local do tipo amida",
+    "pharmacologicClass": "Anestésico local do tipo amida",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Soluções injetáveis em múltiplas concentrações.",
+    "presentations": "Soluções injetáveis em múltiplas concentrações.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Anestesia regional y analgesia por técnicas específicas.",
+    "dose": "Concentração, volume, dosis total y velocidade dependem do bloqueio, idade y contexto. Exige profissional treinado, monitorização y resgate para toxicidade sistêmica.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Hipotensão, náusea, bradicardia y parestesia.",
+    "dangerousAdverseEffects": "Convulsão, arritmia, parada cardíaca y toxicidade sistêmica por anestésico local.",
+    "adverseEffects": "Hipotensão, náusea, bradicardia y parestesia.; Convulsão, arritmia, parada cardíaca y toxicidade sistêmica por anestésico local.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Convulsão, arritmia, parada cardíaca y toxicidade sistêmica por anestésico local.",
+    "alerts": "Convulsão, arritmia, parada cardíaca y toxicidade sistêmica por anestésico local.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ropivacaina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=ropivacaina"
+  }
+};})();
+/* GOLD33_SELECTIVE:ropivacaina:END */

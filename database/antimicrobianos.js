@@ -31355,3 +31355,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:rifapentina:END */
+/* GOLD33_SELECTIVE:roxitromicina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="roxitromicina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:roxitromicina:"+matches.length);drug=matches[0];}else{drug=db&&db["roxitromicina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:roxitromicina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "070",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d75536a21e68d0ab64cc54b31bec09d561d4987c025b71baf2acbc841851a7ab",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Roxitromicina",
+    "class": "Antibacteriano macrolídeo",
+    "pharmacologicClass": "Antibacteriano macrolídeo",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos revestidos.",
+    "presentations": "Comprimidos revestidos.",
+    "mechanism": "Liga-se à subunidade 50S e inibe síntese proteica por bloqueio da translocação.",
+    "pharmacodynamics": "Liga-se à subunidade 50S e inibe síntese proteica por bloqueio da translocação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Infecções leves/moderadas de vias respiratórias, odontogênicas, pele e uretrite não gonocócica por organismos suscetíveis, conforme bula local.",
+    "dose": "Adulto: 300 mg/dia, como 300 mg uma vez ao dia ou 150 mg BID. Curso usual 5–10 dias; faringite estreptocócica deve completar 10 dias.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Dor abdominal; Diarreia; Cefaleia",
+    "dangerousAdverseEffects": "QT prolongado/Torsades; Anafilaxia; Hepatotoxicidade; Neutropenia pediátrica; C. difficile",
+    "adverseEffects": "Náusea, diarreia, dor abdominal e cefaleia.; QT/torsades, hepatotoxicidade, hipersensibilidade e C. difficile.",
+    "contraindications": "Hipersensibilidade a macrolídeos e uso concomitante de alcaloides ergotamínicos vasoconstritores.",
+    "interactions": "Ergotamina/dihidroergotamina são contraindicadas; revisar fármacos que prolongam QT. Anticoagulantes cumarínicos exigem controle de INR.",
+    "monitoring": "300 mg QD ou 150 mg BID; Pediatria 5–8 mg/kg/dia BID; Hepática grave 150 mg QD; Jejum; GAS 10 dias",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "QT/torsades, hepatotoxicidade, hipersensibilidade e C. difficile.",
+    "alerts": "QT/torsades, hepatotoxicidade, hipersensibilidade e C. difficile.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=roxitromicina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=roxitromicina"
+  },
+  "es": {
+    "name": "Roxitromicina",
+    "class": "Antibacteriano macrolídeo",
+    "pharmacologicClass": "Antibacteriano macrolídeo",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos revestidos.",
+    "presentations": "Comprimidos revestidos.",
+    "mechanism": "Liga-se à subunidade 50S y inibe síntese proteica por bloqueio da translocação.",
+    "pharmacodynamics": "Liga-se à subunidade 50S y inibe síntese proteica por bloqueio da translocação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Infecções leves/moderadas de vias respiratórias, odontogênicas, pele y uretrite no gonocócica por organismos suscetíveis, conforme bula local.",
+    "dose": "Adulto: 300 mg/dia, como 300 mg uma vez ao dia ou 150 mg BID. Curso usual 5–10 dias; faringite estreptocócica deve completar 10 dias.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea; Dor abdominal; Diarreia; Cefaleia",
+    "dangerousAdverseEffects": "QT prolongado/Torsades; Anafilaxia; Hepatotoxicidade; Neutropenia pediátrica; C. difficile",
+    "adverseEffects": "Náusea, diarreia, dor abdominal y cefaleia.; QT/torsades, hepatotoxicidade, hipersensibilidade y C. difficile.",
+    "contraindications": "Hipersensibilidade a macrolídeos y uso concomitante de alcaloides ergotamínicos vasoconstritores.",
+    "interactions": "Ergotamina/dihidroergotamina são contraindicadas; revisar fármacos que prolongam QT. Anticoagulantes cumarínicos exigem controle de INR.",
+    "monitoring": "300 mg QD ou 150 mg BID; Pediatria 5–8 mg/kg/dia BID; Hepática grave 150 mg QD; Jejum; GAS 10 dias",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "QT/torsades, hepatotoxicidade, hipersensibilidade y C. difficile.",
+    "alerts": "QT/torsades, hepatotoxicidade, hipersensibilidade y C. difficile.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=roxitromicina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=roxitromicina"
+  }
+};})();
+/* GOLD33_SELECTIVE:roxitromicina:END */

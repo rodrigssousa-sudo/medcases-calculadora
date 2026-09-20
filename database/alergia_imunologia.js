@@ -2817,3 +2817,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:peroxido_de_benzoila:END */
+/* GOLD33_SELECTIVE:rupatadina:START */
+;(function(){var db=window.ALERGIA_IMUNOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="rupatadina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:rupatadina:"+matches.length);drug=matches[0];}else{drug=db&&db["rupatadina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:rupatadina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "070",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d75536a21e68d0ab64cc54b31bec09d561d4987c025b71baf2acbc841851a7ab",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Rupatadina",
+    "class": "Anti-histamínico H1 de segunda geração",
+    "pharmacologicClass": "Anti-histamínico H1 de segunda geração",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos e solução oral.",
+    "presentations": "Comprimidos e solução oral.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Rinite alérgica e urticária onde aprovada, conforme idade e formulação.",
+    "dose": "Dose depende de idade e formulação. Revisar CYP3A4, função hepática/renal e risco de sedação; disponibilidade varia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sonolência, cefaleia, fadiga e boca seca.",
+    "dangerousAdverseEffects": "Hipersensibilidade, taquicardia e potencial interação que aumenta exposição.",
+    "adverseEffects": "Sonolência, cefaleia, fadiga e boca seca.; Hipersensibilidade, taquicardia e potencial interação que aumenta exposição.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipersensibilidade, taquicardia e potencial interação que aumenta exposição.",
+    "alerts": "Hipersensibilidade, taquicardia e potencial interação que aumenta exposição.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rupatadina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rupatadina"
+  },
+  "es": {
+    "name": "Rupatadina",
+    "class": "Anti-histamínico H1 de segunda geração",
+    "pharmacologicClass": "Anti-histamínico H1 de segunda geração",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos y solución oral.",
+    "presentations": "Comprimidos y solución oral.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Rinite alérgica y urticária onde aprovada, conforme idade y formulação.",
+    "dose": "Dose depende de idade y formulação. Revisar CYP3A4, función hepática/renal y risco de sedação; disponibilidade varia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Sonolência, cefaleia, fadiga y boca seca.",
+    "dangerousAdverseEffects": "Hipersensibilidade, taquicardia y potencial interação que aumenta exposição.",
+    "adverseEffects": "Sonolência, cefaleia, fadiga y boca seca.; Hipersensibilidade, taquicardia y potencial interação que aumenta exposição.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipersensibilidade, taquicardia y potencial interação que aumenta exposição.",
+    "alerts": "Hipersensibilidade, taquicardia y potencial interação que aumenta exposição.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rupatadina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rupatadina"
+  }
+};})();
+/* GOLD33_SELECTIVE:rupatadina:END */

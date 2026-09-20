@@ -5826,3 +5826,93 @@ Object.assign(window.NEFRO_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:ringer_lactato:END */
+/* GOLD33_SELECTIVE:sacarato_hidroxido_ferrico:START */
+;(function(){var db=window.NEFRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sacarato_hidroxido_ferrico";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sacarato_hidroxido_ferrico:"+matches.length);drug=matches[0];}else{drug=db&&db["sacarato_hidroxido_ferrico"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sacarato_hidroxido_ferrico");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "070",
+    "requiredFieldCount": 33,
+    "approvedSha256": "d75536a21e68d0ab64cc54b31bec09d561d4987c025b71baf2acbc841851a7ab",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Sacarato de hidróxido férrico",
+    "class": "Complexo de ferro intravenoso",
+    "pharmacologicClass": "Complexo de ferro intravenoso",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução IV em ampolas/frascos com ferro elementar definido.",
+    "presentations": "Solução IV em ampolas/frascos com ferro elementar definido.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Tratamento da deficiência de ferro quando ferro oral é inadequado, inclusive em doença renal, conforme protocolo.",
+    "dose": "Dose cumulativa e cada aplicação dependem do déficit, peso, hemoglobina e contexto. Diluição, velocidade e limites por sessão devem seguir o produto.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, hipotensão, cefaleia e reação no local.",
+    "dangerousAdverseEffects": "Anafilaxia, hipotensão grave, sobrecarga de ferro e extravasamento com pigmentação.",
+    "adverseEffects": "Náusea, hipotensão, cefaleia e reação no local.; Anafilaxia, hipotensão grave, sobrecarga de ferro e extravasamento com pigmentação.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Anafilaxia, hipotensão grave, sobrecarga de ferro e extravasamento com pigmentação.",
+    "alerts": "Anafilaxia, hipotensão grave, sobrecarga de ferro e extravasamento com pigmentação.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sacarato+hidroxido+ferrico",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sacarato+hidroxido+ferrico"
+  },
+  "es": {
+    "name": "Sacarato de hidróxido férrico",
+    "class": "Complexo de ferro intravenoso",
+    "pharmacologicClass": "Complexo de ferro intravenoso",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Solução IV em ampolas/frascos con ferro elementar definido.",
+    "presentations": "Solução IV em ampolas/frascos con ferro elementar definido.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Tratamento da deficiência de ferro quando ferro oral é inadequado, inclusive em doença renal, conforme protocolo.",
+    "dose": "Dose cumulativa y cada aplicação dependem do déficit, peso, hemoglobina y contexto. Diluição, velocidade y limites por sessão devem seguir o produto.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, hipotensão, cefaleia y reação no local.",
+    "dangerousAdverseEffects": "Anafilaxia, hipotensão grave, sobrecarga de ferro y extravasamento con pigmentação.",
+    "adverseEffects": "Náusea, hipotensão, cefaleia y reação no local.; Anafilaxia, hipotensão grave, sobrecarga de ferro y extravasamento con pigmentação.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Anafilaxia, hipotensão grave, sobrecarga de ferro y extravasamento con pigmentação.",
+    "alerts": "Anafilaxia, hipotensão grave, sobrecarga de ferro y extravasamento con pigmentação.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sacarato+hidroxido+ferrico",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sacarato+hidroxido+ferrico"
+  }
+};})();
+/* GOLD33_SELECTIVE:sacarato_hidroxido_ferrico:END */
