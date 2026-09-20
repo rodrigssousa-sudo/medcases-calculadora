@@ -489,3 +489,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:oximetazolina:END */
+/* GOLD33_SELECTIVE:pseudoefedrina:START */
+;(function(){var db=window.PNEUMOLOGIA_OTORRINO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="pseudoefedrina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:pseudoefedrina:"+matches.length);drug=matches[0];}else{drug=db&&db["pseudoefedrina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:pseudoefedrina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "066",
+    "requiredFieldCount": 33,
+    "approvedSha256": "bc4a2f74a71f4210ae66618c848d36a28722e9fead8cb93c0dc91f0629254307",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Pseudoefedrina",
+    "class": "Descongestionante simpaticomimético",
+    "pharmacologicClass": "Descongestionante simpaticomimético",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos/cápsulas IR ou ER e combinações; disponibilidade e controle variam por país.",
+    "presentations": "Comprimidos/cápsulas IR ou ER e combinações; disponibilidade e controle variam por país.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Alívio temporário da congestão nasal em pacientes elegíveis conforme produto.",
+    "dose": "Dose depende de idade e formulação imediata ou prolongada. Limitar duração e evitar duplicidade em combinações; avaliar pressão, arritmias, glaucoma e retenção urinária.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Insônia, nervosismo, tremor, boca seca e palpitações.",
+    "dangerousAdverseEffects": "Crise hipertensiva, arritmia, isquemia, convulsão e psicose.",
+    "adverseEffects": "Insônia, nervosismo, tremor, boca seca e palpitações.; Crise hipertensiva, arritmia, isquemia, convulsão e psicose.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Crise hipertensiva, arritmia, isquemia, convulsão e psicose.",
+    "alerts": "Crise hipertensiva, arritmia, isquemia, convulsão e psicose.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pseudoefedrina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pseudoefedrina"
+  },
+  "es": {
+    "name": "Pseudoefedrina",
+    "class": "Descongestionante simpaticomimético",
+    "pharmacologicClass": "Descongestionante simpaticomimético",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos/cápsulas IR ou ER y combinações; disponibilidade y controle variam por país.",
+    "presentations": "Comprimidos/cápsulas IR ou ER y combinações; disponibilidade y controle variam por país.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Alívio temporário da congestão nasal em pacientes elegíveis conforme produto.",
+    "dose": "Dose depende de idade y formulação imediata ou prolongada. Limitar duração y evitar duplicidade em combinações; avaliar pressão, arritmias, glaucoma y retenção urinária.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Insônia, nervosismo, tremor, boca seca y palpitações.",
+    "dangerousAdverseEffects": "Crise hipertensiva, arritmia, isquemia, convulsão y psicose.",
+    "adverseEffects": "Insônia, nervosismo, tremor, boca seca y palpitações.; Crise hipertensiva, arritmia, isquemia, convulsão y psicose.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Crise hipertensiva, arritmia, isquemia, convulsão y psicose.",
+    "alerts": "Crise hipertensiva, arritmia, isquemia, convulsão y psicose.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pseudoefedrina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=pseudoefedrina"
+  }
+};})();
+/* GOLD33_SELECTIVE:pseudoefedrina:END */

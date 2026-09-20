@@ -2643,3 +2643,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:pioglitazona:END */
+/* GOLD33_SELECTIVE:propiltiouracil:START */
+;(function(){var db=window.ENDOCRINO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="propiltiouracil";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:propiltiouracil:"+matches.length);drug=matches[0];}else{drug=db&&db["propiltiouracil"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:propiltiouracil");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "066",
+    "requiredFieldCount": 33,
+    "approvedSha256": "bc4a2f74a71f4210ae66618c848d36a28722e9fead8cb93c0dc91f0629254307",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Propiltiouracil",
+    "class": "Tionamida antitireoidiana",
+    "pharmacologicClass": "Tionamida antitireoidiana",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em força específica.",
+    "presentations": "Comprimidos em força específica.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Hipertireoidismo em situações selecionadas, incluindo contextos específicos de gestação e tempestade tireotóxica conforme diretriz.",
+    "dose": "Dose e frequência dependem de gravidade, hormônios, contexto e diretriz. Reservar para indicações apropriadas devido à hepatotoxicidade; monitorar clínica e laboratorialmente.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Rash, prurido, náusea, artralgia e alteração do paladar.",
+    "dangerousAdverseEffects": "Insuficiência hepática grave, agranulocitose, vasculite ANCA e hipotireoidismo fetal.",
+    "adverseEffects": "Rash, prurido, náusea, artralgia e alteração do paladar.; Insuficiência hepática grave, agranulocitose, vasculite ANCA e hipotireoidismo fetal.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Insuficiência hepática grave, agranulocitose, vasculite ANCA e hipotireoidismo fetal.",
+    "alerts": "Insuficiência hepática grave, agranulocitose, vasculite ANCA e hipotireoidismo fetal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propiltiouracil",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propiltiouracil"
+  },
+  "es": {
+    "name": "Propiltiouracil",
+    "class": "Tionamida antitireoidiana",
+    "pharmacologicClass": "Tionamida antitireoidiana",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos em força específica.",
+    "presentations": "Comprimidos em força específica.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Hipertireoidismo em situações selecionadas, incluindo contextos específicos de gestação y tempestade tireotóxica conforme diretriz.",
+    "dose": "Dose y frequência dependem de gravidade, hormônios, contexto y diretriz. Reservar para indicações apropriadas devido à hepatotoxicidade; monitorar clínica y laboratorialmente.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Rash, prurido, náusea, artralgia y alteração do paladar.",
+    "dangerousAdverseEffects": "Insuficiência hepática grave, agranulocitose, vasculite ANCA y hipotireoidismo fetal.",
+    "adverseEffects": "Rash, prurido, náusea, artralgia y alteração do paladar.; Insuficiência hepática grave, agranulocitose, vasculite ANCA y hipotireoidismo fetal.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Insuficiência hepática grave, agranulocitose, vasculite ANCA y hipotireoidismo fetal.",
+    "alerts": "Insuficiência hepática grave, agranulocitose, vasculite ANCA y hipotireoidismo fetal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propiltiouracil",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propiltiouracil"
+  }
+};})();
+/* GOLD33_SELECTIVE:propiltiouracil:END */

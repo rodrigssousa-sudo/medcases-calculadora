@@ -5,238 +5,80 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "commonAdverseEffects": [
-      "diarreia",
-      "náuseas",
-      "tontura",
-      "cefaleia",
-      "cinchonismo com tinnitus ou alterações visuais"
-    ],
-    "monitoring": [
-      "ECG de 12 derivações",
-      "frequência cardíaca",
-      "pressão arterial",
-      "função renal e eletrólitos quando aplicável",
-      "sintomas de pró-arritmia"
-    ],
-    "preparation": "Confirmar formulação e concentração antes de administrar.",
-    "patientEducation": [
-      "Não duplicar doses esquecidas",
-      "procurar avaliação por síncope, palpitações sustentadas ou nova dispneia",
-      "informar todos os fármacos pelo risco de interações e pró-arritmia"
-    ],
+    "commonAdverseEffects": "diarreia; náuseas; tontura; cefaleia; cinchonismo com tinnitus ou alterações visuais",
+    "monitoring": "Corrigir K e Mg antes de iniciar; Suspender e avaliar diante de síncope, púrpura ou cinchonismo importante.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
     "name": "Quinidina",
     "class": "Antiarrítmico classe IA",
-    "pharmacologicClass": "Bloqueador de canais de sódio classe IA com prolongamento da repolarização e QT",
+    "pharmacologicClass": "Antiarrítmico classe IA",
     "mechanism": "Bloqueia canais de sódio e várias correntes de potássio, desacelera condução e prolonga repolarização e QT.",
-    "pharmacodynamics": "Pode suprimir FA/flutter e arritmias ventriculares, mas tem margem de segurança estreita, prolonga QT e pode causar torsades.",
-    "pharmacokinetics": "Boa absorção oral, metabolismo hepático e eliminação renal parcial. Inibe P-gp e CYP2D6 e pode aumentar níveis de digoxina.",
-    "indications": [
-      "Conversão de FA/flutter sintomáticos quando o controle de frequência é insuficiente e outras estratégias não são adequadas",
-      "redução da recorrência de FA/flutter muito sintomáticos selecionados",
-      "supressão de arritmias ventriculares documentadas potencialmente fatais"
-    ],
-    "commercialNames": [
-      "Quinidine Gluconate ER"
-    ],
+    "pharmacodynamics": "Bloqueia canais de sódio e várias correntes de potássio, desacelera condução e prolonga repolarização e QT.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Conversão de FA/flutter sintomáticos quando o controle de frequência é insuficiente e outras estratégias não são adequadas; redução da recorrência de FA/flutter muito sintomáticos selecionados; supressão de arritmias ventriculares documentadas potencialmente fatais",
+    "commercialNames": "Quinidine Gluconate ER",
     "presentation": "Comprimido de gluconato de quinidina de liberação prolongada.",
-    "presentations": [
-      "324 mg de gluconato de quinidina, equivalente a 202 mg de quinidina base"
-    ],
-    "dose": {
-      "AFprophylaxis": "324 mg a cada 8 ou 12 h; aumentar com muita cautela se necessário.",
-      "AFconversionLegacy": "Um regime descrito usa 648 mg a cada 8 h, com reavaliação após 3-4 doses; não é esquema moderno de primeira escolha."
-    },
-    "pediatricDose": "Não há esquema pediátrico moderno universal para uso antiarrítmico rotineiro; exige eletrofisiologia pediátrica especializada.",
-    "renalDose": "A insuficiência renal pode aumentar exposição e toxicidade; não há algoritmo simples. Usar ECG, QT, função renal e níveis quando disponíveis para individualizar.",
-    "hepaticDose": "A hepatopatia pode reduzir eliminação; usar doses menores e individualizar pelo QT, clínica e níveis quando disponíveis.",
-    "dangerousAdverseEffects": [
-      "torsades de pointes",
-      "taquicardia ventricular",
-      "trombocitopenia imune",
-      "hemólise",
-      "hepatite",
-      "aumento de mortalidade com uso antiarrítmico crônico em populações estudadas"
-    ],
-    "contraindications": [
-      "QT longo ou história de torsades",
-      "bloqueio AV completo sem marcapasso",
-      "miastenia gravis",
-      "trombocitopenia ou reação imune prévia por quinidina/quinina",
-      "hipersensibilidade"
-    ],
-    "interactions": [
-      "Aumenta níveis de digoxina pela inibição de P-gp",
-      "Outros fármacos que prolongam QT aumentam torsades",
-      "Inibição de CYP2D6 pode elevar substratos",
-      "Hipocalemia e hipomagnesemia aumentam pró-arritmia"
-    ],
-    "administration": "ER: não triturar nem mastigar; pode ser dividida conforme a bula específica sem perder toda a liberação prolongada, mas seguir instruções do produto.",
-    "infusionProtocol": "Não se aplica à formulação ER oral citada.",
-    "pregnancy": "Atravessa placenta; usar apenas se o benefício justificar claramente o risco e com vigilância materno-fetal.",
-    "lactation": "É excretada no leite; individualizar e observar o lactente ou considerar alternativa.",
-    "specialPopulations": {
-      "QT": "A duração do QTc é o principal marcador prático de risco de torsades.",
-      "electrolytes": "Corrigir K e Mg antes e durante o tratamento.",
-      "AF": "O benefício sintomático deve superar o risco de pró-arritmia e mortalidade."
-    },
-    "clinicalPearls": [
-      "A própria bula alerta para aumento de mortalidade e exige considerar alternativas",
-      "QTc prediz melhor o risco de torsades do que um nível sérico isolado."
-    ],
-    "guidelineRecommendations": [
-      "A diretriz contemporânea de FA prioriza outros antiarrítmicos para manutenção do ritmo; quinidina não é opção rotineira e deve ficar restrita a casos selecionados por especialista."
-    ],
-    "safetyFlags": [
-      "QT",
-      "TORSADES",
-      "MORTALIDADE",
-      "TROMBOCITOPENIA",
-      "DIGOXINA"
-    ],
-    "alerts": [
-      "Corrigir K e Mg antes de iniciar",
-      "Suspender e avaliar diante de síncope, púrpura ou cinchonismo importante."
-    ],
-    "adverseEffects": {
-      "common": [
-        "diarreia",
-        "náuseas",
-        "tontura",
-        "cefaleia",
-        "cinchonismo com tinnitus ou alterações visuais"
-      ],
-      "dangerous": [
-        "torsades de pointes",
-        "taquicardia ventricular",
-        "trombocitopenia imune",
-        "hemólise",
-        "hepatite",
-        "aumento de mortalidade com uso antiarrítmico crônico em populações estudadas"
-      ]
-    },
+    "presentations": "Comprimido de gluconato de quinidina de liberação prolongada.",
+    "dose": "AFprophylaxis: 324 mg a cada 8 ou 12 h; aumentar com muita cautela se necessário.; AFconversionLegacy: Um regime descrito usa 648 mg a cada 8 h, com reavaliação após 3-4 doses; não é esquema moderno de primeira escolha.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "dangerousAdverseEffects": "torsades de pointes; taquicardia ventricular; trombocitopenia imune; hemólise; hepatite; aumento de mortalidade com uso antiarrítmico crônico em populações estudadas",
+    "contraindications": "QT longo ou história de torsades; bloqueio AV completo sem marcapasso; miastenia gravis; trombocitopenia ou reação imune prévia por quinidina/quinina; hipersensibilidade",
+    "interactions": "Aumenta níveis de digoxina pela inibição de P-gp; Outros fármacos que prolongam QT aumentam torsades; Inibição de CYP2D6 pode elevar substratos; Hipocalemia e hipomagnesemia aumentam pró-arritmia",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Torsades, bloqueio, trombocitopenia imune, hepatotoxicidade e aumento de mortalidade pró-arrítmica.",
+    "alerts": "Torsades, bloqueio, trombocitopenia imune, hepatotoxicidade e aumento de mortalidade pró-arrítmica.; revisão clínica obrigatória.",
+    "adverseEffects": "Diarreia, náusea, cinchonismo e tontura.; Torsades, bloqueio, trombocitopenia imune, hepatotoxicidade e aumento de mortalidade pró-arrítmica.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ad2ad985-cca2-25b5-e053-2995a90a402f",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=quinidina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ad2ad985-cca2-25b5-e053-2995a90a402f"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=quinidina"
   },
   "es": {
-    "commonAdverseEffects": [
-      "diarrea",
-      "náuseas",
-      "mareo",
-      "cefalea",
-      "cinchonismo con tinnitus o alteraciones visuales"
-    ],
-    "monitoring": [
-      "ECG de 12 derivaciones",
-      "frecuencia cardíaca",
-      "presión arterial",
-      "función renal y electrolitos cuando corresponda",
-      "síntomas de proarritmia"
-    ],
-    "preparation": "Verificar formulación y concentración antes de administrar.",
-    "patientEducation": [
-      "No duplicar dosis omitidas",
-      "consultar por síncope, palpitaciones sostenidas o disnea nueva",
-      "informar todos los fármacos por riesgo de interacciones y proarritmia"
-    ],
+    "commonAdverseEffects": "diarreia; náuseas; tontura; cefaleia; cinchonismo con tinnitus ou alterações visuais",
+    "monitoring": "Corrigir K y Mg antes de iniciar; Suspender y avaliar diante de síncope, púrpura ou cinchonismo importante.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
     "name": "Quinidina",
-    "class": "Antiarrítmico clase IA",
-    "pharmacologicClass": "Bloqueador de canales de sodio clase IA con prolongación de repolarización y QT",
-    "mechanism": "Bloquea canales de sodio y varias corrientes de potasio, enlentece conducción y prolonga repolarización y QT.",
-    "pharmacodynamics": "Puede suprimir FA/flutter y arritmias ventriculares, pero tiene estrecho margen de seguridad, prolonga QT y puede causar torsades.",
-    "pharmacokinetics": "Buena absorción oral, metabolismo hepático y eliminación renal parcial. Inhibe P-gp y CYP2D6 y puede aumentar niveles de digoxina.",
-    "indications": [
-      "Conversión de FA/flutter sintomáticos cuando el control de frecuencia es insuficiente y otras estrategias no son adecuadas",
-      "reducción de recurrencia de FA/flutter muy sintomáticos seleccionados",
-      "supresión de arritmias ventriculares documentadas potencialmente mortales"
-    ],
-    "commercialNames": [
-      "Quinidine Gluconate ER"
-    ],
-    "presentation": "Tableta de quinidina gluconato de liberación prolongada.",
-    "presentations": [
-      "324 mg de quinidina gluconato, equivalente a 202 mg de quinidina base"
-    ],
-    "dose": {
-      "AFprophylaxis": "324 mg cada 8 o 12 h; aumentar con mucha cautela si es necesario.",
-      "AFconversionLegacy": "Un régimen descrito usa 648 mg cada 8 h, con reevaluación tras 3-4 dosis; no es un esquema moderno de primera elección."
-    },
-    "pediatricDose": "No existe un esquema pediátrico moderno universal para uso antiarrítmico de rutina; requiere electrofisiología pediátrica especializada.",
-    "renalDose": "La insuficiencia renal puede aumentar exposición y toxicidad; no hay algoritmo simple. Usar ECG, QT, función renal y niveles cuando disponibles para individualizar.",
-    "hepaticDose": "La hepatopatía puede reducir eliminación; usar dosis menores e individualizar mediante QT, clínica y niveles cuando estén disponibles.",
-    "dangerousAdverseEffects": [
-      "torsades de pointes",
-      "taquicardia ventricular",
-      "trombocitopenia inmunitaria",
-      "hemólisis",
-      "hepatitis",
-      "aumento de mortalidad con uso antiarrítmico crónico en poblaciones estudiadas"
-    ],
-    "contraindications": [
-      "QT largo o antecedente de torsades",
-      "bloqueo AV completo sin marcapasos",
-      "miastenia gravis",
-      "trombocitopenia o reacción inmunitaria previa por quinidina/quinina",
-      "hipersensibilidad"
-    ],
-    "interactions": [
-      "Aumenta niveles de digoxina por inhibición de P-gp",
-      "Otros fármacos que prolongan QT aumentan torsades",
-      "Inhibición CYP2D6 puede elevar sustratos",
-      "Hipopotasemia e hipomagnesemia aumentan proarritmia"
-    ],
-    "administration": "ER: no triturar ni masticar; puede partirse según la ficha específica sin perder toda la liberación prolongada, pero seguir instrucciones del producto.",
-    "infusionProtocol": "No aplica a la formulación ER oral citada.",
-    "pregnancy": "Cruza placenta; usar solo si el beneficio justifica claramente el riesgo y con vigilancia materno-fetal.",
-    "lactation": "Se excreta en leche; individualizar y vigilar al lactante o considerar alternativa.",
-    "specialPopulations": {
-      "QT": "La duración de QTc es el principal marcador práctico de riesgo de torsades.",
-      "electrolytes": "Corregir K y Mg antes y durante tratamiento.",
-      "AF": "El beneficio sintomático debe superar el riesgo de proarritmia y mortalidad."
-    },
-    "clinicalPearls": [
-      "La propia ficha advierte aumento de mortalidad y exige considerar alternativas",
-      "QTc predice mejor el riesgo de torsades que un nivel sérico aislado."
-    ],
-    "guidelineRecommendations": [
-      "La guía AF contemporánea prioriza otros antiarrítmicos para mantenimiento de ritmo; quinidina no es una opción rutinaria y debe reservarse a casos seleccionados por especialista."
-    ],
-    "safetyFlags": [
-      "QT",
-      "TORSADES",
-      "MORTALIDAD",
-      "TROMBOCITOPENIA",
-      "DIGOXINA"
-    ],
-    "alerts": [
-      "Corregir K y Mg antes de iniciar",
-      "Suspender y evaluar ante síncope, púrpura o cinchonismo significativo."
-    ],
-    "adverseEffects": {
-      "common": [
-        "diarrea",
-        "náuseas",
-        "mareo",
-        "cefalea",
-        "cinchonismo con tinnitus o alteraciones visuales"
-      ],
-      "dangerous": [
-        "torsades de pointes",
-        "taquicardia ventricular",
-        "trombocitopenia inmunitaria",
-        "hemólisis",
-        "hepatitis",
-        "aumento de mortalidad con uso antiarrítmico crónico en poblaciones estudiadas"
-      ]
-    },
+    "class": "Antiarrítmico classe IA",
+    "pharmacologicClass": "Antiarrítmico classe IA",
+    "mechanism": "Bloqueia canais de sódio y várias correntes de potássio, desacelera condução y prolonga repolarização y QT.",
+    "pharmacodynamics": "Bloqueia canais de sódio y várias correntes de potássio, desacelera condução y prolonga repolarização y QT.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Conversão de FA/flutter sintomáticos quando o controle de frequência é insuficiente y outras estratégias no são adequadas; redução da recorrência de FA/flutter muito sintomáticos selecionados; supressão de arritmias ventriculares documentadas potencialmente fatais",
+    "commercialNames": "Quinidine Gluconate ER",
+    "presentation": "Comprimido de gluconato de quinidina de liberação prolongada.",
+    "presentations": "Comprimido de gluconato de quinidina de liberação prolongada.",
+    "dose": "AFprophylaxis: 324 mg a cada 8 ou 12 h; aumentar con muita cautela se necessário.; AFconversionLegacy: Um regime descrito usa 648 mg a cada 8 h, con reavaliação após 3-4 dosiss; no é esquema moderno de primeira escolha.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "dangerousAdverseEffects": "torsades de pointes; taquicardia ventricular; trombocitopenia imune; hemólise; hepatite; aumento de mortalidade con uso antiarrítmico crônico em populações estudadas",
+    "contraindications": "QT longo ou história de torsades; bloqueio AV completo sem marcapasso; miastenia gravis; trombocitopenia ou reação imune prévia por quinidina/quinina; hipersensibilidade",
+    "interactions": "Aumenta níveis de digoxina pela inibição de P-gp; Outros fármacos que prolongam QT aumentam torsades; Inibição de CYP2D6 pode elevar substratos; Hipocalemia y hipomagnesemia aumentam pró-arritmia",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Torsades, bloqueio, trombocitopenia imune, hepatotoxicidade y aumento de mortalidade pró-arrítmica.",
+    "alerts": "Torsades, bloqueio, trombocitopenia imune, hepatotoxicidade y aumento de mortalidade pró-arrítmica.; revisão clínica obrigatória.",
+    "adverseEffects": "Diarreia, náusea, cinchonismo y tontura.; Torsades, bloqueio, trombocitopenia imune, hepatotoxicidade y aumento de mortalidade pró-arrítmica.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ad2ad985-cca2-25b5-e053-2995a90a402f",
-      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=quinidina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ad2ad985-cca2-25b5-e053-2995a90a402f"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=quinidina"
   },
   "name": {
     "pt": "Quinidina",
@@ -245,19 +87,21 @@
   "keywords": [
     "quinidina"
   ],
-  "dataVersion": "clinical-data-v1-1eadf70ba04333d3",
-  "clinicalContentSha256": "1eadf70ba04333d33fb1a2ff07b587f8531bdc7400086faec527b6cf89206586",
+  "dataVersion": "clinical-data-v1-46f96c386aa3f9f8",
+  "clinicalContentSha256": "46f96c386aa3f9f8129cab3cb3833e39c334b04bef046036af1bfd47e3ecb013",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "quinidina.mcGoldClinicalV1",
-    "group": "GOLD_GROUP07_CARDIO_10",
-    "review": "2026-09",
+    "lote": "066",
     "requiredFields": 33,
-    "contentSha256": "2d2d694fbeabbf12809286131b4430f205dc8e6652274c8b4d647757a2435f60",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "bc4a2f74a71f4210ae66618c848d36a28722e9fead8cb93c0dc91f0629254307",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

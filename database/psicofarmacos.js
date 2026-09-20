@@ -4628,3 +4628,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:pimozida:END */
+/* GOLD33_SELECTIVE:quetiapina:START */
+;(function(){var db=window.PSICOFARMACOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="quetiapina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:quetiapina:"+matches.length);drug=matches[0];}else{drug=db&&db["quetiapina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:quetiapina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "066",
+    "requiredFieldCount": 33,
+    "approvedSha256": "bc4a2f74a71f4210ae66618c848d36a28722e9fead8cb93c0dc91f0629254307",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Quetiapina",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Antipsicótico atípico",
+    "commercialNames": "br: Seroquel; Quetros; Quetipin; Quetiapina EMS; ar: Seroquel; Quetiapina Bagó; Quetiapina Gador; Quetiapina Richmond",
+    "presentation": "Comprimido 25 mg; Comprimido 100 mg; Comprimido 200 mg; Comprimido 300 mg; Comprimido XR 50 mg; Comprimido XR 200 mg; Comprimido XR 300 mg",
+    "presentations": "Comprimido 25 mg; Comprimido 100 mg; Comprimido 200 mg; Comprimido 300 mg; Comprimido XR 50 mg; Comprimido XR 200 mg; Comprimido XR 300 mg",
+    "mechanism": "Antagonista 5HT2A e D2, com forte bloqueio H1 e alfa-1; metabólito norquetiapina contribui para efeito antidepressivo.",
+    "pharmacodynamics": "Antagonista 5HT2A e D2, com forte bloqueio H1 e alfa-1; metabólito norquetiapina contribui para efeito antidepressivo.",
+    "pharmacokinetics": "Vida média aproximada: quetiapina 6 horas; norquetiapina cerca de 12 horas.",
+    "indications": "Esquizofrenia; Transtorno bipolar — mania aguda; Transtorno bipolar — depressão bipolar; Manutenção no transtorno bipolar; Adjuvante no transtorno depressivo maior; Insônia em contexto psiquiátrico selecionado off-label; Agitação psicótica com necessidade de perfil menos extrapiramidal",
+    "dose": "adulto: Esquizofrenia: titular gradualmente até 300–800 mg/dia.; bipolar: Depressão bipolar: geralmente 300 mg VO à noite após titulação.; insoniaOffLabel: Insônia off-label: doses baixas são usadas, mas não é primeira escolha pelo risco metabólico e sedativo.; maxDose: Dose máxima usual: 800 mg/dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "QUETIAPINA comprimidos de liberação imediata (bula FDA): em insuficiência hepática, iniciar 25 mg VO/dia e titular em incrementos de 25–50 mg/dia conforme resposta/tolerabilidade. Não extrapolar a XR.",
+    "commonAdverseEffects": "Sonolência; Tontura; Boca seca; Hipotensão ortostática; Ganho de peso; Constipação; Dislipidemia",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Hiperglicemia e síndrome metabólica; Prolongamento QT em predispostos; Quedas por hipotensão/sedação; Discinesia tardia; Neutropenia rara",
+    "adverseEffects": "Sonolência, tontura, boca seca, constipação e ganho de peso.; Síndrome metabólica, hipotensão, QT, síndrome neuroléptica maligna, discinesia tardia e maior mortalidade em idosos com psicose da demência.",
+    "contraindications": "Hipersensibilidade à quetiapina; Uso com inibidores fortes de CYP3A4 sem ajuste/avaliação; Demência com corpos de Lewy ou Parkinson grave, salvo extrema necessidade",
+    "interactions": "Inibidores fortes de CYP3A4 como cetoconazol, claritromicina e ritonavir: aumentam níveis; Indutores CYP3A4 como carbamazepina, fenitoína e rifampicina: reduzem níveis; Álcool e depressores do SNC: maior sedação; Anti-hipertensivos: maior hipotensão; Fármacos que prolongam QT; Levodopa e agonistas dopaminérgicos: antagonismo",
+    "monitoring": "Comprimidos de liberação imediata e SEROQUEL XR têm bulas e esquemas distintos. Não reutilizar automaticamente titulação IR em XR ou tratar uso para insônia off-label como indicação aprovada.; Risco importante de sedação e hipotensão ortostática no início.; Monitorar peso, glicemia/HbA1c, lipídios e pressão arterial.; Não usar apenas como hipnótico de rotina sem avaliar risco-benefício.; Titular lentamente, especialmente em idosos e hepatopatas.; Cuidado com interações por CYP3A4.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Síndrome metabólica, hipotensão, QT, síndrome neuroléptica maligna, discinesia tardia e maior mortalidade em idosos com psicose da demência.",
+    "alerts": "Síndrome metabólica, hipotensão, QT, síndrome neuroléptica maligna, discinesia tardia e maior mortalidade em idosos com psicose da demência.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=quetiapina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=quetiapina"
+  },
+  "es": {
+    "name": "Quetiapina",
+    "class": "Antipsicótico atípico",
+    "pharmacologicClass": "Antipsicótico atípico",
+    "commercialNames": "br: Seroquel; Quetros; Quetipin; Quetiapina EMS; ar: Seroquel; Quetiapina Bagó; Quetiapina Gador; Quetiapina Richmond",
+    "presentation": "Comprimido 25 mg; Comprimido 100 mg; Comprimido 200 mg; Comprimido 300 mg; Comprimido XR 50 mg; Comprimido XR 200 mg; Comprimido XR 300 mg",
+    "presentations": "Comprimido 25 mg; Comprimido 100 mg; Comprimido 200 mg; Comprimido 300 mg; Comprimido XR 50 mg; Comprimido XR 200 mg; Comprimido XR 300 mg",
+    "mechanism": "Antagonista 5HT2A y D2, con forte bloqueio H1 y alfa-1; metabólito norquetiapina contribui para efeito antidepressivo.",
+    "pharmacodynamics": "Antagonista 5HT2A y D2, con forte bloqueio H1 y alfa-1; metabólito norquetiapina contribui para efeito antidepressivo.",
+    "pharmacokinetics": "Vida média aproximada: quetiapina 6 horas; norquetiapina cerca de 12 horas.",
+    "indications": "Esquizofrenia; Transtorno bipolar — mania aguda; Transtorno bipolar — depressão bipolar; Manutenção no transtorno bipolar; Adjuvante no transtorno depressivo maior; Insônia em contexto psiquiátrico selecionado off-label; Agitação psicótica con necessidade de perfil menos extrapiramidal",
+    "dose": "adulto: Esquizofrenia: titular gradualmente até 300–800 mg/dia.; bipolar: Depressão bipolar: geralmente 300 mg VO à noite após titulação.; insoniaOffLabel: Insônia off-label: dosiss baixas são usadas, mas no é primeira escolha pelo risco metabólico y sedativo.; maxDose: Dose máxima usual: 800 mg/dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "QUETIAPINA comprimidos de liberação imediata (bula FDA): em insuficiência hepática, iniciar 25 mg VO/dia y titular em incrementos de 25–50 mg/dia conforme resposta/tolerabilidade. No extrapolar a XR.",
+    "commonAdverseEffects": "Sonolência; Tontura; Boca seca; Hipotensão ortostática; Ganho de peso; Constipação; Dislipidemia",
+    "dangerousAdverseEffects": "Síndrome neuroléptica maligna; Hiperglicemia y síndrome metabólica; Prolongamento QT em predispostos; Quedas por hipotensão/sedação; Discinesia tardia; Neutropenia rara",
+    "adverseEffects": "Sonolência, tontura, boca seca, constipação y ganho de peso.; Síndrome metabólica, hipotensão, QT, síndrome neuroléptica maligna, discinesia tardia y maior mortalidade em idosos con psicose da demência.",
+    "contraindications": "Hipersensibilidade à quetiapina; Uso con inibidores fortes de CYP3A4 sem ajuste/avaliação; Demência con corpos de Lewy ou Parkinson grave, salvo extrema necessidade",
+    "interactions": "Inibidores fortes de CYP3A4 como cetoconazol, claritromicina y ritonavir: aumentam níveis; Indutores CYP3A4 como carbamazepina, fenitoína y rifampicina: reduzem níveis; Álcool y depressores do SNC: maior sedação; Anti-hipertensivos: maior hipotensão; Fármacos que prolongam QT; Levodopa y agonistas dopaminérgicos: antagonismo",
+    "monitoring": "Comprimidos de liberação imediata y SEROQUEL XR têm bulas y esquemas distintos. No reutilizar automaticamente titulação IR em XR ou tratar uso para insônia off-label como indicação aprovada.; Risco importante de sedação y hipotensão ortostática no início.; Monitorar peso, glicemia/HbA1c, lipídios y pressão arterial.; No usar apenas como hipnótico de rotina sem avaliar risco-benefício.; Titular lentamente, especialmente em idosos y hepatopatas.; Cuidado con interações por CYP3A4.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Síndrome metabólica, hipotensão, QT, síndrome neuroléptica maligna, discinesia tardia y maior mortalidade em idosos con psicose da demência.",
+    "alerts": "Síndrome metabólica, hipotensão, QT, síndrome neuroléptica maligna, discinesia tardia y maior mortalidade em idosos con psicose da demência.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=quetiapina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=quetiapina"
+  }
+};})();
+/* GOLD33_SELECTIVE:quetiapina:END */

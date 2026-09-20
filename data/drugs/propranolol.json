@@ -5,260 +5,80 @@
   "color": "rgba(239,68,68,0.13)",
   "colorTxt": "#991B1B",
   "pt": {
-    "pharmacodynamics": "Reduz frequência cardíaca, contratilidade e condução nodal AV, com redução da demanda miocárdica de oxigênio. O efeito depende da dose, seletividade do agente e tônus simpático.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fadiga",
-      "tontura",
-      "hipotensão",
-      "extremidades frias"
-    ],
-    "dangerousAdverseEffects": [
-      "bloqueio AV",
-      "broncoespasmo",
-      "bradicardia grave",
-      "choque ou piora de insuficiência cardíaca",
-      "mascaramento de hipoglicemia"
-    ],
-    "interactions": [
-      "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão",
-      "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
-      "Clonidina exige retirada planejada para evitar hipertensão rebote",
-      "Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia"
-    ],
-    "monitoring": [
-      "Frequência cardíaca",
-      "pressão arterial",
-      "ECG se houver distúrbio de condução ou arritmia",
-      "sinais de insuficiência cardíaca",
-      "broncoespasmo e glicemia em pacientes de risco"
-    ],
-    "patientEducation": [
-      "Não suspender abruptamente sem orientação",
-      "controlar pulso se orientado",
-      "procurar avaliação por síncope, nova dispneia ou piora de edema",
-      "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
-    ],
-    "pregnancy": "Usar apenas quando o benefício materno justificar o risco; próximo ao parto pode causar bradicardia, hipotensão ou hipoglicemia neonatal conforme exposição e agente.",
-    "lactation": "Individualizar conforme agente, dose e idade do lactente; observar bradicardia, letargia ou dificuldade de alimentação quando a exposição for clinicamente relevante.",
-    "safetyFlags": [
-      "BRADICARDIA",
-      "BLOQUEIO_AV",
-      "BRONCOESPASMO",
-      "RETIRADA_GRADUAL",
-      "HIPOGLICEMIA_MASCARADA"
-    ],
-    "alerts": [
-      "Evitar suspensão abrupta em doença coronariana",
-      "Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada",
-      "Usar com cautela em doença broncoespástica"
-    ],
+    "pharmacodynamics": "Bloqueia receptores beta-1 e beta-2, reduzindo frequência, contratilidade, condução AV e liberação de renina; também reduz manifestações adrenérgicas periféricas como tremor.",
+    "commonAdverseEffects": "bradicardia; fadiga; tontura; hipotensão; extremidades frias",
+    "dangerousAdverseEffects": "bloqueio AV; broncoespasmo; bradicardia grave; choque ou piora de insuficiência cardíaca; mascaramento de hipoglicemia",
+    "interactions": "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão; Digoxina e outros cronotrópicos negativos potencializam bradicardia; Clonidina exige retirada planejada para evitar hipertensão rebote; Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia",
+    "monitoring": "Evitar suspensão abrupta em doença coronariana; Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar com cautela em doença broncoespástica",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "safetyFlags": "Broncoespasmo, bloqueio cardíaco, insuficiência cardíaca, hipoglicemia mascarada e rebote por suspensão abrupta.",
+    "alerts": "Broncoespasmo, bloqueio cardíaco, insuficiência cardíaca, hipoglicemia mascarada e rebote por suspensão abrupta.; revisão clínica obrigatória.",
     "name": "Propranolol",
     "class": "Betabloqueador não seletivo",
-    "pharmacologicClass": "Antagonista competitivo beta-1 e beta-2 adrenérgico",
+    "pharmacologicClass": "Betabloqueador não seletivo",
     "mechanism": "Bloqueia receptores beta-1 e beta-2, reduzindo frequência, contratilidade, condução AV e liberação de renina; também reduz manifestações adrenérgicas periféricas como tremor.",
-    "pharmacokinetics": "Alta extração hepática e metabolismo de primeira passagem; metabolismo por CYP2D6, CYP1A2 e CYP2C19. A exposição pode aumentar na hepatopatia.",
-    "indications": [
-      "Hipertensão",
-      "angina",
-      "controle da frequência ventricular na fibrilação atrial",
-      "pós-infarto em paciente estável",
-      "profilaxia de migrânea",
-      "tremor essencial",
-      "miocardiopatia hipertrófica obstrutiva sintomática",
-      "feocromocitoma apenas após bloqueio alfa adequado"
-    ],
-    "commercialNames": [
-      "Inderal"
-    ],
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Hipertensão; angina; controle da frequência ventricular na fibrilação atrial; pós-infarto em paciente estável; profilaxia de migrânea; tremor essencial; miocardiopatia hipertrófica obstrutiva sintomática; feocromocitoma apenas após bloqueio alfa adequado",
+    "commercialNames": "Inderal",
     "presentation": "Comprimidos orais de liberação imediata em múltiplas concentrações.",
-    "presentations": [
-      "Comprimidos 10, 20, 40, 60 e 80 mg"
-    ],
-    "dose": {
-      "hypertension": "40 mg duas vezes ao dia; manutenção habitual 120-240 mg/dia, individualizada.",
-      "angina": "80-320 mg/dia divididos em 2-4 tomadas.",
-      "atrialFibrillation": "10-30 mg três ou quatro vezes ao dia.",
-      "postMI": "180-240 mg/dia em doses divididas.",
-      "migraine": "Início 80 mg/dia dividido; faixa efetiva habitual 160-240 mg/dia."
-    },
-    "pediatricDose": "A bula adulta não estabelece esquema pediátrico universal para estas indicações. Não extrapolar dose de adulto; usar protocolo pediátrico específico por indicação e peso quando aplicável.",
-    "renalDose": "Não há ajuste fixo validado por função renal isolada; individualizar conforme resposta, frequência cardíaca e comorbidades.",
-    "hepaticDose": "Na hepatopatia a exposição pode aumentar por menor metabolismo de primeira passagem; iniciar baixo e titular com monitorização estreita.",
-    "contraindications": [
-      "Choque cardiogênico",
-      "bradicardia sinusal",
-      "bloqueio maior que primeiro grau",
-      "asma brônquica",
-      "hipersensibilidade"
-    ],
-    "administration": "Administrar de forma consistente em relação às refeições. Não suspender abruptamente, especialmente em doença coronariana.",
-    "preparation": "Comprimidos não exigem preparo. Confirmar formulação antes de converter a partir de apresentações de liberação prolongada.",
-    "infusionProtocol": "Este registro se concentra na formulação oral; não extrapolar para propranolol IV.",
-    "specialPopulations": {
-      "asthma": "Contraindicado na asma brônquica por bloqueio beta-2.",
-      "hepatic": "Pode haver maior exposição; titular lentamente.",
-      "diabetes": "Pode mascarar taquicardia da hipoglicemia."
-    },
-    "clinicalPearls": [
-      "No feocromocitoma nunca usar betabloqueio antes de bloqueio alfa adequado",
-      "Retirada abrupta pode exacerbar angina ou precipitar infarto",
-      "Na FA serve para controle de frequência, não para anticoagulação nem redução de risco embólico."
-    ],
-    "guidelineRecommendations": [
-      "Diretriz FA 2023: betabloqueadores são recomendados para controle de frequência de longo prazo conforme substrato e comorbidades.",
-      "Diretriz AHA/ACC 2025: betabloqueadores não são primeira linha para hipertensão não complicada sem indicação concomitante."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fadiga",
-        "tontura",
-        "hipotensão",
-        "extremidades frias"
-      ],
-      "dangerous": [
-        "bloqueio AV",
-        "broncoespasmo",
-        "bradicardia grave",
-        "choque ou piora de insuficiência cardíaca",
-        "mascaramento de hipoglicemia"
-      ]
-    },
+    "presentations": "Comprimidos orais de liberação imediata em múltiplas concentrações.",
+    "dose": "hypertension: 40 mg duas vezes ao dia; manutenção habitual 120-240 mg/dia, individualizada.; angina: 80-320 mg/dia divididos em 2-4 tomadas.; atrialFibrillation: 10-30 mg três ou quatro vezes ao dia.; postMI: 180-240 mg/dia em doses divididas.; migraine: Início 80 mg/dia dividido; faixa efetiva habitual 160-240 mg/dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "contraindications": "Choque cardiogênico; bradicardia sinusal; bloqueio maior que primeiro grau; asma brônquica; hipersensibilidade",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "adverseEffects": "Bradicardia, fadiga, tontura, náusea e extremidades frias.; Broncoespasmo, bloqueio cardíaco, insuficiência cardíaca, hipoglicemia mascarada e rebote por suspensão abrupta.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d027f39e-7648-44c8-a8dc-b26b4cdd81be",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
-      "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propranolol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d027f39e-7648-44c8-a8dc-b26b4cdd81be"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propranolol"
   },
   "es": {
-    "pharmacodynamics": "Reduce la frecuencia cardíaca, la contractilidad y la conducción nodal AV, con disminución de la demanda miocárdica de oxígeno. El efecto depende de dosis, selectividad del agente y tono simpático.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fatiga",
-      "mareo",
-      "hipotensión",
-      "extremidades frías"
-    ],
-    "dangerousAdverseEffects": [
-      "bloqueo AV",
-      "broncoespasmo",
-      "bradicardia grave",
-      "shock o empeoramiento de insuficiencia cardíaca",
-      "enmascaramiento de hipoglucemia"
-    ],
-    "interactions": [
-      "Verapamilo o diltiazem aumentan bradicardia, bloqueo AV e hipotensión",
-      "Digoxina y otros cronotrópicos negativos potencian bradicardia",
-      "Clonidina requiere retirada planificada para evitar hipertensión de rebote",
-      "Insulina y secretagogos: puede atenuar síntomas adrenérgicos de hipoglucemia"
-    ],
-    "monitoring": [
-      "Frecuencia cardíaca",
-      "presión arterial",
-      "ECG si existe trastorno de conducción o arritmia",
-      "signos de insuficiencia cardíaca",
-      "broncoespasmo y glucemia en pacientes de riesgo"
-    ],
-    "patientEducation": [
-      "No suspender bruscamente sin indicación",
-      "controlar pulso si fue orientado",
-      "consultar por síncope, disnea nueva o empeoramiento de edema",
-      "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
-    ],
-    "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo; cerca del parto puede producir bradicardia, hipotensión o hipoglucemia neonatal según exposición y agente.",
-    "lactation": "Individualizar según el agente, dosis y edad del lactante; vigilar bradicardia, letargo o mala alimentación cuando la exposición sea clínicamente relevante.",
-    "safetyFlags": [
-      "BRADICARDIA",
-      "BLOQUEO_AV",
-      "BRONCOESPASMO",
-      "RETIRADA_GRADUAL",
-      "HIPOGLUCEMIA_ENMASCARADA"
-    ],
-    "alerts": [
-      "Evitar suspensión abrupta en enfermedad coronaria",
-      "No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada",
-      "Usar con cautela en enfermedad broncoespástica"
-    ],
+    "pharmacodynamics": "Bloqueia receptores beta-1 y beta-2, reduzindo frequência, contratilidade, condução AV y liberação de renina; também reduz manifestações adrenérgicas periféricas como tremor.",
+    "commonAdverseEffects": "bradicardia; fadiga; tontura; hipotensão; extremidades frias",
+    "dangerousAdverseEffects": "bloqueio AV; broncoespasmo; bradicardia grave; choque ou piora de insuficiência cardíaca; mascaramento de hipoglicemia",
+    "interactions": "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV y hipotensão; Digoxina y outros cronotrópicos negativos potencializam bradicardia; Clonidina exige retirada planejada para evitar hipertensão rebote; Insulina y secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia",
+    "monitoring": "Evitar suspensão abrupta em doença coronariana; No iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar con cautela em doença broncoespástica",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "safetyFlags": "Broncoespasmo, bloqueio cardíaco, insuficiência cardíaca, hipoglicemia mascarada y rebote por suspensão abrupta.",
+    "alerts": "Broncoespasmo, bloqueio cardíaco, insuficiência cardíaca, hipoglicemia mascarada y rebote por suspensão abrupta.; revisão clínica obrigatória.",
     "name": "Propranolol",
-    "class": "Betabloqueante no selectivo",
-    "pharmacologicClass": "Antagonista competitivo beta-1 y beta-2 adrenérgico",
-    "mechanism": "Bloquea receptores beta-1 y beta-2, reduciendo frecuencia, contractilidad, conducción AV y liberación de renina; también reduce manifestaciones periféricas adrenérgicas como temblor.",
-    "pharmacokinetics": "Alta extracción hepática y metabolismo de primer paso; metabolismo por CYP2D6, CYP1A2 y CYP2C19. La exposición puede aumentar con hepatopatía.",
-    "indications": [
-      "Hipertensión",
-      "angina de pecho",
-      "control de frecuencia ventricular en fibrilación auricular",
-      "post-infarto en paciente estable",
-      "profilaxis de migraña",
-      "temblor esencial",
-      "miocardiopatía hipertrófica obstructiva sintomática",
-      "feocromocitoma solo después de bloqueo alfa adecuado"
-    ],
-    "commercialNames": [
-      "Inderal"
-    ],
-    "presentation": "Tabletas orales de liberación inmediata en múltiples concentraciones.",
-    "presentations": [
-      "Tabletas 10, 20, 40, 60 y 80 mg"
-    ],
-    "dose": {
-      "hypertension": "40 mg dos veces al día; mantenimiento habitual 120-240 mg/día, individualizado.",
-      "angina": "80-320 mg/día divididos en 2-4 tomas.",
-      "atrialFibrillation": "10-30 mg tres o cuatro veces al día.",
-      "postMI": "180-240 mg/día en dosis divididas.",
-      "migraine": "Inicio 80 mg/día dividido; rango efectivo habitual 160-240 mg/día."
-    },
-    "pediatricDose": "La ficha adulta no establece un esquema pediátrico universal para estas indicaciones. No extrapolar dosis de adulto; usar protocolo pediátrico específico por indicación y peso cuando corresponda.",
-    "renalDose": "No existe ajuste fijo validado por función renal aislada; individualizar según respuesta, frecuencia cardíaca y comorbilidades.",
-    "hepaticDose": "En hepatopatía puede aumentar la exposición por menor metabolismo de primer paso; iniciar bajo y titular con monitorización estrecha.",
-    "contraindications": [
-      "Shock cardiogénico",
-      "bradicardia sinusal",
-      "bloqueo mayor de primer grado",
-      "asma bronquial",
-      "hipersensibilidad"
-    ],
-    "administration": "Administrar de forma consistente respecto de comidas. No suspender abruptamente, especialmente en enfermedad coronaria.",
-    "preparation": "Tabletas no requieren preparación. Confirmar formulación antes de convertir desde presentaciones de liberación prolongada.",
-    "infusionProtocol": "Este registro se centra en formulación oral; no extrapolar a propranolol IV.",
-    "specialPopulations": {
-      "asthma": "Contraindicado en asma bronquial por bloqueo beta-2.",
-      "hepatic": "Mayor exposición posible; titular lentamente.",
-      "diabetes": "Puede enmascarar taquicardia de hipoglucemia."
-    },
-    "clinicalPearls": [
-      "En feocromocitoma nunca usar beta-bloqueo antes de un bloqueo alfa adecuado",
-      "La retirada abrupta puede exacerbar angina o precipitar infarto",
-      "En AF sirve para control de frecuencia, no para anticoagulación ni reducción de riesgo embólico."
-    ],
-    "guidelineRecommendations": [
-      "Guía AF 2023: los betabloqueantes son recomendados para control de frecuencia a largo plazo según sustrato y comorbilidades.",
-      "Guía AHA/ACC 2025: los betabloqueantes no son primera línea para hipertensión no complicada sin indicación concomitante."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fatiga",
-        "mareo",
-        "hipotensión",
-        "extremidades frías"
-      ],
-      "dangerous": [
-        "bloqueo AV",
-        "broncoespasmo",
-        "bradicardia grave",
-        "shock o empeoramiento de insuficiencia cardíaca",
-        "enmascaramiento de hipoglucemia"
-      ]
-    },
+    "class": "Betabloqueador no seletivo",
+    "pharmacologicClass": "Betabloqueador no seletivo",
+    "mechanism": "Bloqueia receptores beta-1 y beta-2, reduzindo frequência, contratilidade, condução AV y liberação de renina; também reduz manifestações adrenérgicas periféricas como tremor.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Hipertensão; angina; controle da frequência ventricular na fibrilação atrial; pós-infarto em paciente estável; profilaxia de migrânea; tremor essencial; miocardiopatia hipertrófica obstrutiva sintomática; feocromocitoma apenas após bloqueio alfa adequado",
+    "commercialNames": "Inderal",
+    "presentation": "Comprimidos orais de liberação imediata em múltiplas concentrações.",
+    "presentations": "Comprimidos orais de liberação imediata em múltiplas concentrações.",
+    "dose": "hypertension: 40 mg duas vezes ao dia; manutenção habitual 120-240 mg/dia, individualizada.; angina: 80-320 mg/dia divididos em 2-4 tomadas.; atrialFibrillation: 10-30 mg três ou quatro vezes ao dia.; postMI: 180-240 mg/dia em dosiss divididas.; migraine: Início 80 mg/dia dividido; faixa efetiva habitual 160-240 mg/dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "contraindications": "Choque cardiogênico; bradicardia sinusal; bloqueio maior que primeiro grau; asma brônquica; hipersensibilidade",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "adverseEffects": "Bradicardia, fadiga, tontura, náusea y extremidades frias.; Broncoespasmo, bloqueio cardíaco, insuficiência cardíaca, hipoglicemia mascarada y rebote por suspensão abrupta.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d027f39e-7648-44c8-a8dc-b26b4cdd81be",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
-      "https://professional.heart.org/-/media/Files/Professional/Quality-Improvement/Get-With-the-Guidelines/Get-With-The-Guidelines-AFIB/AFib-Month/joglaretal20232023accahaaccphrsguidelineforthediagnosisandmanagementofatrialfibrillation.pdf"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propranolol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d027f39e-7648-44c8-a8dc-b26b4cdd81be"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=propranolol"
   },
   "name": {
     "pt": "Propranolol",
@@ -271,8 +91,8 @@
     "propranolol generico",
     "betabloqueador nao seletivo"
   ],
-  "dataVersion": "clinical-data-v1-1eadf70ba04333d3",
-  "clinicalContentSha256": "1eadf70ba04333d33fb1a2ff07b587f8531bdc7400086faec527b6cf89206586",
+  "dataVersion": "clinical-data-v1-46f96c386aa3f9f8",
+  "clinicalContentSha256": "46f96c386aa3f9f8129cab3cb3833e39c334b04bef046036af1bfd47e3ecb013",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -339,13 +159,15 @@
     ]
   },
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "propranolol.mcGoldClinicalV1",
-    "group": "GOLD_GROUP05_CARDIO_10",
-    "review": "2026-09",
+    "lote": "066",
     "requiredFields": 33,
-    "contentSha256": "b8d21cef42db1ded402a0b1827fac7e6a3ce96d9bddf04fdc957607272629ee9",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "bc4a2f74a71f4210ae66618c848d36a28722e9fead8cb93c0dc91f0629254307",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }
