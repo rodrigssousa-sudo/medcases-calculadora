@@ -13600,3 +13600,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:levodopa_carbidopa:END */
+/* GOLD33_SELECTIVE:lisdexanfetamina:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="lisdexanfetamina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:lisdexanfetamina:"+matches.length);drug=matches[0];}else{drug=db&&db["lisdexanfetamina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:lisdexanfetamina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "047",
+    "requiredFieldCount": 33,
+    "approvedSha256": "465e927ea8677a0af62a52f24a5c1389bb2f9094f9224f1b32c175740f74b49d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Lisdexanfetamina",
+    "class": "Estimulante do SNC; pró-fármaco de dextroanfetamina",
+    "pharmacologicClass": "Estimulante do SNC; pró-fármaco de dextroanfetamina",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas 10-70 mg e comprimidos mastigáveis 10-60 mg conforme mercado.",
+    "presentations": "Cápsulas 10-70 mg e comprimidos mastigáveis 10-60 mg conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "TDAH em pacientes >=6 anos e transtorno de compulsão alimentar periódica moderado a grave em adultos.",
+    "dose": "TDAH: iniciar 30 mg VO pela manhã; ajustar 10-20 mg semanalmente; máximo 70 mg/dia. Compulsão alimentar adulta: iniciar 30 mg/dia, titular a 50-70 mg/dia; máximo 70 mg/dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Insônia, redução do apetite, boca seca, irritabilidade, perda de peso e taquicardia.",
+    "dangerousAdverseEffects": "Abuso/dependência, eventos cardiovasculares, psicose/mania, síndrome serotoninérgica e vasculopatia periférica.",
+    "adverseEffects": "Insônia, redução do apetite, boca seca, irritabilidade, perda de peso e taquicardia.; Abuso/dependência, eventos cardiovasculares, psicose/mania, síndrome serotoninérgica e vasculopatia periférica.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Abuso/dependência, eventos cardiovasculares, psicose/mania, síndrome serotoninérgica e vasculopatia periférica.",
+    "alerts": "Abuso/dependência, eventos cardiovasculares, psicose/mania, síndrome serotoninérgica e vasculopatia periférica.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lisdexamfetamine",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-safety-and-availability/fda-requires-expanded-labeling-about-weight-loss-risk-patients-younger-6-years-taking-extended-release"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lisdexamfetamine"
+  },
+  "es": {
+    "name": "Lisdexanfetamina",
+    "class": "Estimulante do SNC; pró-fármaco de dextroanfetamina",
+    "pharmacologicClass": "Estimulante do SNC; pró-fármaco de dextroanfetamina",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas 10-70 mg y comprimidos mastigáveis 10-60 mg conforme mercado.",
+    "presentations": "Cápsulas 10-70 mg y comprimidos mastigáveis 10-60 mg conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "TDAH em pacientes >=6 anos y transtorno de compulsão alimentar periódica moderado a grave em adultos.",
+    "dose": "TDAH: iniciar 30 mg VO pela manhã; ajustar 10-20 mg semanalmente; máximo 70 mg/dia. Compulsão alimentar adulta: iniciar 30 mg/dia, titular a 50-70 mg/dia; máximo 70 mg/dia.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Insônia, redução do apetite, boca seca, irritabilidade, perda de peso y taquicardia.",
+    "dangerousAdverseEffects": "Abuso/dependência, eventos cardiovasculares, psicose/mania, síndrome serotoninérgica y vasculopatia periférica.",
+    "adverseEffects": "Insônia, redução do apetite, boca seca, irritabilidade, perda de peso y taquicardia.; Abuso/dependência, eventos cardiovasculares, psicose/mania, síndrome serotoninérgica y vasculopatia periférica.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Abuso/dependência, eventos cardiovasculares, psicose/mania, síndrome serotoninérgica y vasculopatia periférica.",
+    "alerts": "Abuso/dependência, eventos cardiovasculares, psicose/mania, síndrome serotoninérgica y vasculopatia periférica.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lisdexamfetamine",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-safety-and-availability/fda-requires-expanded-labeling-about-weight-loss-risk-patients-younger-6-years-taking-extended-release"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lisdexamfetamine"
+  }
+};})();
+/* GOLD33_SELECTIVE:lisdexanfetamina:END */

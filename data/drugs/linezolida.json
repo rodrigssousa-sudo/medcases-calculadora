@@ -6,10 +6,8 @@
   "colorTxt": null,
   "pt": {
     "name": "Linezolida",
-    "class": "Antibiótico oxazolidinona",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "class": "Antibacteriano oxazolidinona",
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Comprimidos, suspensão oral e solução IV.",
     "dose": "Adultos/adolescentes: 600 mg IV ou VO q12h para a maioria das indicações graves.",
     "doseKg": {
@@ -19,36 +17,13 @@
     "therapeuticRange": "Bacteriostático para Enterococcus; bactericida para Staphylococcus. MRSA, VRE, PRSP.",
     "dilution": "EV: solução pronta 2 mg/mL — infundir sem diluição adicional.",
     "speed": "EV: infundir em 30–120 minutos.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Diarreia",
-      "Cefaleia",
-      "Reação no local de administração"
-    ],
-    "dangerousAdverseEffects": [
-      "Mielossupressão/trombocitopenia",
-      "Síndrome serotoninérgica",
-      "Neuropatia óptica/periférica",
-      "Acidose láctica"
-    ],
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Mielossupressão/trombocitopenia; Síndrome serotoninérgica; Neuropatia óptica/periférica; Acidose láctica",
     "risksByPatient": [],
-    "alerts": [
-      "Síndrome serotoninérgica/MAO",
-      "Hemograma semanal",
-      "Neuropatia óptica/periférica",
-      "Acidose láctica",
-      "Sem cobertura Gram-negativa"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
-    ],
-    "renalDose": "Sem ajuste padrão, mas metabólitos acumulam na DRC; em HD administrar após sessão. Risco de trombocitopenia pode ser maior em insuficiência renal.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorização de toxicidade"
-    ],
+    "alerts": "Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidose láctica e hipoglicemia.; Síndrome serotoninérgica/MAO; Hemograma semanal; Neuropatia óptica/periférica; Acidose láctica; Sem cobertura Gram-negativa",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "safetyFlags": "Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidose láctica e hipoglicemia.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -63,45 +38,38 @@
       ],
       "note": "Bloco mesclado e melhorado: message expandida com vigilância hematológica; doseMaxima pediátrica corrigida para 600 mg/dose; fg10a30.obs com threshold >7–14 dias; fgMenor10.obs com mielossupressão; hemodialise.obs com remoção parcial por HD; safetyFlags e auditNotes adicionados."
     },
-    "pharmacologicClass": "Oxazolidinona anti-MRSA/VRE",
+    "pharmacologicClass": "Antibacteriano oxazolidinona",
     "mechanism": "Liga-se ao 23S rRNA da subunidade 50S e impede formação do complexo de iniciação 70S.",
-    "pharmacodynamics": "A eficácia se relaciona à exposição AUC/MIC e tempo acima da MIC; geralmente bacteriostática contra estafilococos e enterococos.",
-    "pharmacokinetics": "Biodisponibilidade oral ~100%, conversão IV-VO 1:1; boa distribuição e metabolismo não enzimático.",
+    "pharmacodynamics": "Liga-se ao 23S rRNA da subunidade 50S e impede formação do complexo de iniciação 70S.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
     "indications": "Pneumonia e infecções de pele por Gram-positivos suscetíveis; VRE incluindo E. faecium. Não cobre Gram-negativos.",
-    "presentations": [
-      "600 mg comprimido",
-      "100 mg/5 mL suspensão",
-      "2 mg/mL IV"
-    ],
-    "pediatricDose": "<12 anos: frequentemente 10 mg/kg q8h conforme indicação; neonatos muito jovens podem iniciar q12h. >=12 anos: 600 mg q12h.",
-    "hepaticDose": "Sem ajuste em hepatopatia leve/moderada; dados limitados em grave.",
-    "adverseEffects": "O perfil de eventos adversos depende do agente; monitorar toxicidades específicas e hipersensibilidade.",
+    "presentations": "Comprimidos, suspensão oral e solução IV.",
+    "pediatricDose": "standard: 10 mg/kg/dose 8/8h–12/12h (pediátrico); maxDose: 1,2 g/dia",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "adverseEffects": "Diarreia, náusea, cefaleia e alteração de enzimas hepáticas.; Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidose láctica e hipoglicemia.",
     "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
     "interactions": "Fármacos serotonérgicos, opioides, antidepressivos, simpaticomiméticos e alimentos ricos em tiramina exigem revisão por efeito MAOI.",
-    "monitoring": "Hemograma semanal; sintomas visuais/neuropáticos em uso prolongado; lactato se acidose; vigiar síndrome serotoninérgica.",
-    "administration": "IV ou VO; VO tem biodisponibilidade quase completa.",
-    "preparation": "Solução IV pronta não deve receber aditivos incompatíveis; suspensão oral conforme fabricante.",
-    "infusionProtocol": "Infundir IV em 30–120 min; conversão IV-VO geralmente sem mudança de dose.",
-    "pregnancy": "Usar quando o benefício justificar o risco; considerar gravidade da infecção e alternativas.",
-    "lactation": "Avaliar risco-benefício e monitorar o lactente quando aplicável.",
-    "specialPopulations": "Cursos >2 semanas aumentam mielossupressão; uso prolongado associa neuropatia óptica/periférica e acidose láctica.",
-    "patientEducation": "Completar o tratamento e procurar atendimento por reação grave ou sinais de toxicidade.",
-    "clinicalPearls": "É inibidor reversível não seletivo da MAO: risco de síndrome serotoninérgica com serotonérgicos e resposta pressórica com tiramina/simpaticomiméticos.",
-    "guidelineRecommendations": "Usar para Gram-positivos resistentes quando apropriado e desescalonar com microbiologia. Monitorar hemograma semanal, especialmente >2 semanas ou em DRC.",
+    "monitoring": "Síndrome serotoninérgica/MAO; Hemograma semanal; Neuropatia óptica/periférica; Acidose láctica; Sem cobertura Gram-negativa",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+      "Fonte primária/oficial - https://www.idsociety.org/practice-guideline/amr-guidance/"
     ]
   },
   "es": {
     "name": "Linezolida",
-    "class": "Antibiótico oxazolidinona",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos, suspensión oral y solución IV.",
-    "dose": "Adultos/adolescentes: 600 mg IV o VO q12h para la mayoría de indicaciones graves.",
+    "class": "Antibacteriano oxazolidinona",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos, suspensão oral y solución IV.",
+    "dose": "Adultos/adolescentes: 600 mg IV ou VO q12h para a maioria das indicações graves.",
     "doseKg": {
       "standard": "10 mg/kg/dosis cada 8h–12h (pediátrico)",
       "maxDose": "1,2 g/día"
@@ -109,36 +77,13 @@
     "therapeuticRange": "Bacteriostático para Enterococcus; bactericida para Staphylococcus. MRSA, VRE, PRSP.",
     "dilution": "EV: solución lista 2 mg/mL — infundir sin dilución adicional.",
     "speed": "EV: infundir en 30–120 minutos.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Diarrea",
-      "Cefalea",
-      "Reacción en el sitio de administración"
-    ],
-    "dangerousAdverseEffects": [
-      "Mielosupresión/trombocitopenia",
-      "Síndrome serotoninérgico",
-      "Neuropatía óptica/periférica",
-      "Acidosis láctica"
-    ],
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Mielossupressão/trombocitopenia; Síndrome serotoninérgica; Neuropatia óptica/periférica; Acidosis láctica",
     "risksByPatient": [],
-    "alerts": [
-      "Síndrome serotoninérgico/MAO",
-      "Hemograma semanal",
-      "Neuropatía óptica/periférica",
-      "Acidosis láctica",
-      "Sin cobertura Gram negativa"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
-    ],
-    "renalDose": "Sin ajuste estándar, pero metabolitos se acumulan en ERC; en HD administrar después de sesión. Puede aumentar trombocitopenia en insuficiencia renal.",
-    "safetyFlags": [
-      "Stewardship antimicrobiano",
-      "Monitorización de toxicidad"
-    ],
+    "alerts": "Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidosis láctica y hipoglicemia.; Síndrome serotoninérgica/MAO; Hemograma semanal; Neuropatia óptica/periférica; Acidosis láctica; Sem cobertura Gram-negativa",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "safetyFlags": "Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidosis láctica y hipoglicemia.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -153,35 +98,30 @@
       ],
       "note": "Bloque fusionado y mejorado: message ampliada con vigilancia hematológica; doseMaxima pediátrica corregida a 600 mg/dosis; fg10a30.obs con umbral >7–14 días; fgMenor10.obs con mielosupresión; hemodialise.obs con remoción parcial por HD; safetyFlags y auditNotes añadidos."
     },
-    "pharmacologicClass": "Oxazolidinona anti-MRSA/VRE",
-    "mechanism": "Se une al 23S rRNA de la subunidad 50S e impide formar el complejo de iniciación 70S.",
-    "pharmacodynamics": "La eficacia se relaciona con AUC/MIC y tiempo sobre MIC; suele ser bacteriostática frente a estafilococos y enterococos.",
-    "pharmacokinetics": "Biodisponibilidad oral ~100%, conversión IV-VO 1:1; buena distribución y metabolismo no enzimático.",
-    "indications": "Neumonía e infecciones de piel por Gram positivos susceptibles; VRE incluido E. faecium. No cubre Gram negativos.",
-    "presentations": [
-      "600 mg comprimido",
-      "100 mg/5 mL suspensión",
-      "2 mg/mL IV"
-    ],
-    "pediatricDose": "<12 años: con frecuencia 10 mg/kg q8h según indicación; neonatos muy jóvenes pueden iniciar q12h. >=12 años: 600 mg q12h.",
-    "hepaticDose": "Sin ajuste en hepatopatía leve/moderada; datos limitados en grave.",
-    "adverseEffects": "El perfil de eventos adversos depende del agente; monitorizar toxicidades específicas e hipersensibilidad.",
-    "contraindications": "Hipersensibilidad grave al fármaco o componentes; respetar contraindicaciones específicas.",
-    "interactions": "Fármacos serotoninérgicos, opioides, antidepresivos, simpaticomiméticos y alimentos ricos en tiramina requieren revisión por efecto IMAO.",
-    "monitoring": "Hemograma semanal; síntomas visuales/neuropáticos en uso prolongado; lactato si acidosis; vigilar síndrome serotoninérgico.",
-    "administration": "IV o VO; VO tiene biodisponibilidad casi completa.",
-    "preparation": "Solución IV lista no debe recibir aditivos incompatibles; suspensión oral según fabricante.",
-    "infusionProtocol": "Infundir IV en 30–120 min; conversión IV-VO generalmente sin cambio de dosis.",
-    "pregnancy": "Usar cuando el beneficio justifique el riesgo; considerar gravedad de la infección y alternativas.",
-    "lactation": "Valorar riesgo-beneficio y monitorizar al lactante cuando corresponda.",
-    "specialPopulations": "Tratamientos >2 semanas aumentan mielosupresión; uso prolongado se asocia a neuropatía óptica/periférica y acidosis láctica.",
-    "patientEducation": "Completar el tratamiento y consultar ante reacción grave o signos de toxicidad.",
-    "clinicalPearls": "Es inhibidor reversible no selectivo de MAO: riesgo de síndrome serotoninérgico con serotoninérgicos y respuesta presora con tiramina/simpaticomiméticos.",
-    "guidelineRecommendations": "Usar para Gram positivos resistentes cuando corresponda y desescalar con microbiología. Controlar hemograma semanal, especialmente >2 semanas o en ERC.",
+    "pharmacologicClass": "Antibacteriano oxazolidinona",
+    "mechanism": "Liga-se ao 23S rRNA da subunidade 50S y impede formação do complexo de iniciação 70S.",
+    "pharmacodynamics": "Liga-se ao 23S rRNA da subunidade 50S y impede formação do complexo de iniciação 70S.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Pneumonia y infecções de pele por Gram-positivos suscetíveis; VRE incluindo E. faecium. No cobre Gram-negativos.",
+    "presentations": "Comprimidos, suspensão oral y solución IV.",
+    "pediatricDose": "standard: 10 mg/kg/dosis 8/8h–12/12h (pediátrico); maxDose: 1,2 g/dia",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "adverseEffects": "Diarreia, náusea, cefaleia y alteração de enzimas hepáticas.; Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidosis láctica y hipoglicemia.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Fármacos serotonérgicos, opioides, antidepressivos, simpaticomiméticos y alimentos ricos em tiramina exigem revisão por efeito MAOI.",
+    "monitoring": "Síndrome serotoninérgica/MAO; Hemograma semanal; Neuropatia óptica/periférica; Acidosis láctica; Sem cobertura Gram-negativa",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16007ca5-7956-4414-af38-406a6623400e&version=17",
-      "https://www.idsociety.org/practice-guideline/amr-guidance/"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+      "Fonte primária/oficial - https://www.idsociety.org/practice-guideline/amr-guidance/"
     ]
   },
   "name": {
@@ -194,8 +134,8 @@
     "linezolida generica",
     "oxazolidinona"
   ],
-  "dataVersion": "clinical-data-v1-989b44b91a0909f0",
-  "clinicalContentSha256": "989b44b91a0909f0453ca7256dfa4302ce79942dc2e4cd0e8c4972c16cf08407",
+  "dataVersion": "clinical-data-v1-c9c998d7fc35d23b",
+  "clinicalContentSha256": "c9c998d7fc35d23bfe957caf7575c5d3e38d2bac790fd06dd6ec8a88fd4b3214",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "antimicrobianos.js",
@@ -260,5 +200,17 @@
         "reviewed_at": "2026-08-24"
       }
     ]
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "linezolida.mcGoldClinicalV1",
+    "lote": "047",
+    "requiredFields": 33,
+    "approvedSha256": "465e927ea8677a0af62a52f24a5c1389bb2f9094f9224f1b32c175740f74b49d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

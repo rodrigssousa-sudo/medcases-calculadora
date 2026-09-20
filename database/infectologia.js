@@ -9219,3 +9219,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:ledipasvir_sofosbuvir:END */
+/* GOLD33_SELECTIVE:lopinavir_ritonavir:START */
+;(function(){var db=window.INFECTOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="lopinavir_ritonavir";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:lopinavir_ritonavir:"+matches.length);drug=matches[0];}else{drug=db&&db["lopinavir_ritonavir"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:lopinavir_ritonavir");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "047",
+    "requiredFieldCount": 33,
+    "approvedSha256": "465e927ea8677a0af62a52f24a5c1389bb2f9094f9224f1b32c175740f74b49d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Lopinavir/ritonavir",
+    "class": "Antirretroviral; inibidores de protease",
+    "pharmacologicClass": "Antirretroviral; inibidores de protease",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 200/50 mg e 100/25 mg; solução oral 80/20 mg por mL.",
+    "presentations": "Comprimidos 200/50 mg e 100/25 mg; solução oral 80/20 mg por mL.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Tratamento do HIV-1 em combinação com outros antirretrovirais.",
+    "dose": "Adultos: 400/100 mg VO duas vezes/dia; 800/200 mg uma vez/dia apenas em pacientes selecionados sem substituições de resistência relevantes. Esquema uma vez/dia não usar em gestação.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Diarreia, náusea, vômito, hipertrigliceridemia e hipercolesterolemia.",
+    "dangerousAdverseEffects": "Pancreatite, hepatotoxicidade, prolongamento PR/QT, hiperglicemia e interações potencialmente fatais.",
+    "adverseEffects": "Diarreia, náusea, vômito, hipertrigliceridemia e hipercolesterolemia.; Pancreatite, hepatotoxicidade, prolongamento PR/QT, hiperglicemia e interações potencialmente fatais.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Pancreatite, hepatotoxicidade, prolongamento PR/QT, hiperglicemia e interações potencialmente fatais.",
+    "alerts": "Pancreatite, hepatotoxicidade, prolongamento PR/QT, hiperglicemia e interações potencialmente fatais.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://clinicalinfo.hiv.gov/en/drugs/lopinavir-ritonavir/patient",
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lopinavir%20ritonavir"
+    ],
+    "ref": "https://clinicalinfo.hiv.gov/en/drugs/lopinavir-ritonavir/patient"
+  },
+  "es": {
+    "name": "Lopinavir/ritonavir",
+    "class": "Antirretroviral; inibidores de protease",
+    "pharmacologicClass": "Antirretroviral; inibidores de protease",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos 200/50 mg y 100/25 mg; solución oral 80/20 mg por mL.",
+    "presentations": "Comprimidos 200/50 mg y 100/25 mg; solución oral 80/20 mg por mL.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Tratamento do HIV-1 em combinação con outros antirretrovirais.",
+    "dose": "Adultos: 400/100 mg VO duas vezes/dia; 800/200 mg uma vez/dia apenas em pacientes selecionados sem substituições de resistência relevantes. Esquema uma vez/dia no usar em gestação.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Diarreia, náusea, vômito, hipertrigliceridemia y hipercolesterolemia.",
+    "dangerousAdverseEffects": "Pancreatite, hepatotoxicidade, prolongamento PR/QT, hiperglicemia y interações potencialmente fatais.",
+    "adverseEffects": "Diarreia, náusea, vômito, hipertrigliceridemia y hipercolesterolemia.; Pancreatite, hepatotoxicidade, prolongamento PR/QT, hiperglicemia y interações potencialmente fatais.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Pancreatite, hepatotoxicidade, prolongamento PR/QT, hiperglicemia y interações potencialmente fatais.",
+    "alerts": "Pancreatite, hepatotoxicidade, prolongamento PR/QT, hiperglicemia y interações potencialmente fatais.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://clinicalinfo.hiv.gov/en/drugs/lopinavir-ritonavir/patient",
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=lopinavir%20ritonavir"
+    ],
+    "ref": "https://clinicalinfo.hiv.gov/en/drugs/lopinavir-ritonavir/patient"
+  }
+};})();
+/* GOLD33_SELECTIVE:lopinavir_ritonavir:END */

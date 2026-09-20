@@ -5453,3 +5453,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:levodropropizina:END */
+/* GOLD33_SELECTIVE:loratadina:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="loratadina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:loratadina:"+matches.length);drug=matches[0];}else{drug=db&&db["loratadina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:loratadina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "047",
+    "requiredFieldCount": 33,
+    "approvedSha256": "465e927ea8677a0af62a52f24a5c1389bb2f9094f9224f1b32c175740f74b49d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Loratadina",
+    "class": "Anti-histamínico H1 de segunda geração",
+    "pharmacologicClass": "Anti-histamínico H1 de segunda geração",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimido 10 mg; solução/xarope 1 mg/mL; comprimido dispersível conforme mercado.",
+    "presentations": "Comprimido 10 mg; solução/xarope 1 mg/mL; comprimido dispersível conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Rinite alérgica e urticária crônica idiopática.",
+    "dose": "Adultos e >=6 anos: 10 mg VO uma vez/dia. Crianças 2-5 anos: 5 mg VO uma vez/dia. Ajustar intervalo em doença hepática ou renal grave conforme bula.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Cefaleia, sonolência, fadiga e boca seca.",
+    "dangerousAdverseEffects": "Anafilaxia/hipersensibilidade rara, palpitação e taquicardia raras.",
+    "adverseEffects": "Cefaleia, sonolência, fadiga e boca seca.; Anafilaxia/hipersensibilidade rara, palpitação e taquicardia raras.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Anafilaxia/hipersensibilidade rara, palpitação e taquicardia raras.",
+    "alerts": "Anafilaxia/hipersensibilidade rara, palpitação e taquicardia raras.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=loratadine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2000/20641s7lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=loratadine"
+  },
+  "es": {
+    "name": "Loratadina",
+    "class": "Anti-histamínico H1 de segunda geração",
+    "pharmacologicClass": "Anti-histamínico H1 de segunda geração",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimido 10 mg; solución/xarope 1 mg/mL; comprimido dispersível conforme mercado.",
+    "presentations": "Comprimido 10 mg; solución/xarope 1 mg/mL; comprimido dispersível conforme mercado.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Rinite alérgica y urticária crônica idiopática.",
+    "dose": "Adultos y >=6 anos: 10 mg VO uma vez/dia. Crianças 2-5 anos: 5 mg VO uma vez/dia. Ajustar intervalo em doença hepática ou renal grave conforme bula.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Cefaleia, sonolência, fadiga y boca seca.",
+    "dangerousAdverseEffects": "Anafilaxia/hipersensibilidade rara, palpitação y taquicardia raras.",
+    "adverseEffects": "Cefaleia, sonolência, fadiga y boca seca.; Anafilaxia/hipersensibilidade rara, palpitação y taquicardia raras.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Anafilaxia/hipersensibilidade rara, palpitação y taquicardia raras.",
+    "alerts": "Anafilaxia/hipersensibilidade rara, palpitação y taquicardia raras.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=loratadine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2000/20641s7lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=loratadine"
+  }
+};})();
+/* GOLD33_SELECTIVE:loratadina:END */

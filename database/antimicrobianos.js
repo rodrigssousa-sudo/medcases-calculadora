@@ -29375,3 +29375,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:levofloxacino:END */
+/* GOLD33_SELECTIVE:linezolida:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="linezolida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:linezolida:"+matches.length);drug=matches[0];}else{drug=db&&db["linezolida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:linezolida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "047",
+    "requiredFieldCount": 33,
+    "approvedSha256": "465e927ea8677a0af62a52f24a5c1389bb2f9094f9224f1b32c175740f74b49d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Linezolida",
+    "class": "Antibacteriano oxazolidinona",
+    "pharmacologicClass": "Antibacteriano oxazolidinona",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos, suspensão oral e solução IV.",
+    "presentations": "Comprimidos, suspensão oral e solução IV.",
+    "mechanism": "Liga-se ao 23S rRNA da subunidade 50S e impede formação do complexo de iniciação 70S.",
+    "pharmacodynamics": "Liga-se ao 23S rRNA da subunidade 50S e impede formação do complexo de iniciação 70S.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Pneumonia e infecções de pele por Gram-positivos suscetíveis; VRE incluindo E. faecium. Não cobre Gram-negativos.",
+    "dose": "Adultos/adolescentes: 600 mg IV ou VO q12h para a maioria das indicações graves.",
+    "pediatricDose": "standard: 10 mg/kg/dose 8/8h–12/12h (pediátrico); maxDose: 1,2 g/dia",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Mielossupressão/trombocitopenia; Síndrome serotoninérgica; Neuropatia óptica/periférica; Acidose láctica",
+    "adverseEffects": "Diarreia, náusea, cefaleia e alteração de enzimas hepáticas.; Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidose láctica e hipoglicemia.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Fármacos serotonérgicos, opioides, antidepressivos, simpaticomiméticos e alimentos ricos em tiramina exigem revisão por efeito MAOI.",
+    "monitoring": "Síndrome serotoninérgica/MAO; Hemograma semanal; Neuropatia óptica/periférica; Acidose láctica; Sem cobertura Gram-negativa",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidose láctica e hipoglicemia.",
+    "alerts": "Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidose láctica e hipoglicemia.; Síndrome serotoninérgica/MAO; Hemograma semanal; Neuropatia óptica/periférica; Acidose láctica; Sem cobertura Gram-negativa",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+      "Fonte primária/oficial - https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c"
+  },
+  "es": {
+    "name": "Linezolida",
+    "class": "Antibacteriano oxazolidinona",
+    "pharmacologicClass": "Antibacteriano oxazolidinona",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos, suspensão oral y solución IV.",
+    "presentations": "Comprimidos, suspensão oral y solución IV.",
+    "mechanism": "Liga-se ao 23S rRNA da subunidade 50S y impede formação do complexo de iniciação 70S.",
+    "pharmacodynamics": "Liga-se ao 23S rRNA da subunidade 50S y impede formação do complexo de iniciação 70S.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Pneumonia y infecções de pele por Gram-positivos suscetíveis; VRE incluindo E. faecium. No cobre Gram-negativos.",
+    "dose": "Adultos/adolescentes: 600 mg IV ou VO q12h para a maioria das indicações graves.",
+    "pediatricDose": "standard: 10 mg/kg/dosis 8/8h–12/12h (pediátrico); maxDose: 1,2 g/dia",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Diarreia; Cefaleia; Reação no local de administração",
+    "dangerousAdverseEffects": "Mielossupressão/trombocitopenia; Síndrome serotoninérgica; Neuropatia óptica/periférica; Acidosis láctica",
+    "adverseEffects": "Diarreia, náusea, cefaleia y alteração de enzimas hepáticas.; Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidosis láctica y hipoglicemia.",
+    "contraindications": "Hipersensibilidade grave ao fármaco ou componentes da formulação; respeitar contraindicações específicas.",
+    "interactions": "Fármacos serotonérgicos, opioides, antidepressivos, simpaticomiméticos y alimentos ricos em tiramina exigem revisão por efeito MAOI.",
+    "monitoring": "Síndrome serotoninérgica/MAO; Hemograma semanal; Neuropatia óptica/periférica; Acidosis láctica; Sem cobertura Gram-negativa",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidosis láctica y hipoglicemia.",
+    "alerts": "Mielossupressão, síndrome serotoninérgica, neuropatia óptica/periférica, acidosis láctica y hipoglicemia.; Síndrome serotoninérgica/MAO; Hemograma semanal; Neuropatia óptica/periférica; Acidosis láctica; Sem cobertura Gram-negativa",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c",
+      "Fonte primária/oficial - https://www.idsociety.org/practice-guideline/amr-guidance/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=374af2a7-d994-40bd-a86a-cd9038d0b72c"
+  }
+};})();
+/* GOLD33_SELECTIVE:linezolida:END */

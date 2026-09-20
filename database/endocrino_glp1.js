@@ -184,3 +184,93 @@ window.ENDOCRINO_GLP1_DRUGS_DB = [
   }
 
 ]; /* fim window.ENDOCRINO_GLP1_DRUGS_DB */
+/* GOLD33_SELECTIVE:liraglutida:START */
+;(function(){var db=window.ENDOCRINO_GLP1_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="liraglutida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:liraglutida:"+matches.length);drug=matches[0];}else{drug=db&&db["liraglutida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:liraglutida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "047",
+    "requiredFieldCount": 33,
+    "approvedSha256": "465e927ea8677a0af62a52f24a5c1389bb2f9094f9224f1b32c175740f74b49d",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Liraglutida",
+    "class": "Agonista do receptor GLP-1",
+    "pharmacologicClass": "Agonista do receptor GLP-1",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Canetas multidose 6 mg/mL; apresentações e doses-alvo dependem da marca/indicação.",
+    "presentations": "Canetas multidose 6 mg/mL; apresentações e doses-alvo dependem da marca/indicação.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Diabetes tipo 2 e redução de risco cardiovascular com formulação indicada; controle crônico de peso com produto específico.",
+    "dose": "DM2: 0,6 mg SC/dia por 1 semana, depois 1,2 mg/dia; pode aumentar a 1,8 mg/dia. Obesidade: titular semanalmente 0,6; 1,2; 1,8; 2,4 até 3 mg SC/dia. Não intercambiar indicações/produtos.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea, vômito, diarreia, constipação e redução do apetite.",
+    "dangerousAdverseEffects": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia com secretagogos/insulina e risco de tumor de células C.",
+    "adverseEffects": "Náusea, vômito, diarreia, constipação e redução do apetite.; Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia com secretagogos/insulina e risco de tumor de células C.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia com secretagogos/insulina e risco de tumor de células C.",
+    "alerts": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia com secretagogos/insulina e risco de tumor de células C.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=liraglutide",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/206321s016lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=liraglutide"
+  },
+  "es": {
+    "name": "Liraglutida",
+    "class": "Agonista do receptor GLP-1",
+    "pharmacologicClass": "Agonista do receptor GLP-1",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Canetas multidosis 6 mg/mL; apresentações y dosiss-alvo dependem da marca/indicação.",
+    "presentations": "Canetas multidosis 6 mg/mL; apresentações y dosiss-alvo dependem da marca/indicação.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Diabetes tipo 2 y redução de riesgo cardiovascular con formulação indicada; controle crônico de peso con produto específico.",
+    "dose": "DM2: 0,6 mg SC/dia por 1 semana, depois 1,2 mg/dia; pode aumentar a 1,8 mg/dia. Obesidade: titular semanalmente 0,6; 1,2; 1,8; 2,4 até 3 mg SC/dia. No intercambiar indicações/produtos.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea, vômito, diarreia, constipação y redução do apetite.",
+    "dangerousAdverseEffects": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia con secretagogos/insulina y riesgo de tumor de células C.",
+    "adverseEffects": "Náusea, vômito, diarreia, constipação y redução do apetite.; Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia con secretagogos/insulina y riesgo de tumor de células C.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia con secretagogos/insulina y riesgo de tumor de células C.",
+    "alerts": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia con secretagogos/insulina y riesgo de tumor de células C.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=liraglutide",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/206321s016lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=liraglutide"
+  }
+};})();
+/* GOLD33_SELECTIVE:liraglutida:END */
