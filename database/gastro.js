@@ -878,3 +878,91 @@ window.GASTRO_DRUGS_DB = [
   }
 
 ]; /* fim window.GASTRO_DRUGS_DB */
+/* GOLD33_SELECTIVE:lactulose:START */
+;(function(){var db=window.GASTRO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="lactulose";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:lactulose:"+matches.length);drug=matches[0];}else{drug=db&&db["lactulose"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:lactulose");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "044",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6d95f5fc4782c229c9c433e337fe9613e8ff98ebb066423dc2da4d1f2057e546",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Lactulose",
+    "class": "Laxativo osmótico; redutor de amônia",
+    "pharmacologicClass": "Dissacarídeo sintético não absorvível",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Solução oral geralmente 10 g/15 mL; concentração deve ser confirmada no produto.",
+    "presentations": "Solução oral geralmente 10 g/15 mL; concentração deve ser confirmada no produto.",
+    "mechanism": "É fermentada no cólon, acidifica o conteúdo, retém água e converte amônia em amônio menos absorvível; o efeito laxativo surge em 24-48 h.",
+    "pharmacodynamics": "É fermentada no cólon, acidifica o conteúdo, retém água e converte amônia em amônio menos absorvível; o efeito laxativo surge em 24-48 h.",
+    "pharmacokinetics": "Absorção sistêmica mínima; metabolizada por bactérias colônicas e eliminada nas fezes.",
+    "indications": "Constipação; prevenção/tratamento de encefalopatia portossistêmica conforme produto.",
+    "dose": "Constipação adulta: 15-30 mL/dia, ajustar. Encefalopatia: 30-45 mL 3-4 vezes/dia, titular para 2-3 evacuações amolecidas/dia; na fase aguda podem ser usados regimes intensivos sob monitorização.",
+    "pediatricDose": "Regimes variam por idade/indicação; sem tabela completa e formulação local confirmada, automação pediátrica permanece BLOQUEADA.",
+    "renalDose": "Sem ajuste específico; monitorar eletrólitos e hidratação.",
+    "hepaticDose": "Sem ajuste específico; na encefalopatia titular pelo efeito clínico e evacuações.",
+    "commonAdverseEffects": "Flatulência, distensão, cólica, diarreia e náusea.",
+    "dangerousAdverseEffects": "Desidratação, hipernatremia/hipocalemia e aspiração em administração inadequada.",
+    "adverseEffects": "Flatulência, distensão, cólica, diarreia e náusea.; Desidratação, hipernatremia/hipocalemia e aspiração em administração inadequada.",
+    "contraindications": "Hipersensibilidade; dieta estrita sem galactose; cautela/evitar em obstrução GI.",
+    "interactions": "Outros laxativos aumentam diarreia; antiácidos podem alterar acidificação colônica; monitorar fármacos sensíveis a eletrólitos.",
+    "monitoring": "Frequência/consistência das fezes, estado mental na encefalopatia, hidratação e eletrólitos em uso intenso.",
+    "administration": "VO; pode misturar com água, suco ou leite. Via retal somente por protocolo/formulação apropriada.",
+    "preparation": "Medir com dispositivo; confirmar concentração. Enema exige protocolo institucional e não deve ser inferido da solução oral.",
+    "infusionProtocol": "Não é infusão IV. Administração enteral/retal conforme indicação.",
+    "pregnancy": "Absorção mínima; geralmente aceitável quando indicada.",
+    "lactation": "Absorção mínima; geralmente compatível, com avaliação clínica.",
+    "specialPopulations": "Diabetes: pequena carga de açúcares; idosos e debilitados: maior risco hidroeletrolítico.",
+    "patientEducation": "Titular para efeito, não para diarreia; manter hidratação e relatar dor intensa/vômitos.",
+    "clinicalPearls": "Na encefalopatia, alvo é 2-3 evacuações amolecidas/dia; excesso causa desidratação e pode piorar estado clínico.",
+    "guidelineRecommendations": "Diretrizes de encefalopatia hepática usam lactulose como terapia central para episódios manifestos e prevenção secundária.",
+    "safetyFlags": "Eletrólitos; desidratação; concentração; risco de aspiração.",
+    "alerts": "Titular por evacuações; confirmar 10 g/15 mL; pediatria bloqueada.",
+    "references": [
+      "Fonte oficial/primária - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8af7389-3699-4873-b05a-509af7e8eaab"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8af7389-3699-4873-b05a-509af7e8eaab"
+  },
+  "es": {
+    "name": "Lactulosa",
+    "class": "Laxativo osmótico; redutor de amônia",
+    "pharmacologicClass": "Dissacarídeo sintético no absorvível",
+    "commercialNames": "Marcas variam por país; confirmar registro local.",
+    "presentation": "Solução oral geralmente 10 g/15 mL; concentração deve ser confirmada no produto.",
+    "presentations": "Solução oral geralmente 10 g/15 mL; concentração deve ser confirmada no produto.",
+    "mechanism": "É fermentada no cólon, acidifica o conteúdo, retém água y converte amônia em amônio menos absorvível; o efeito laxativo surge em 24-48 h.",
+    "pharmacodynamics": "É fermentada no cólon, acidifica o conteúdo, retém água y converte amônia em amônio menos absorvível; o efeito laxativo surge em 24-48 h.",
+    "pharmacokinetics": "Absorção sistêmica mínima; metabolizada por bactérias colônicas y eliminada nas fezes.",
+    "indications": "Constipação; prevenção/tratamiento de encefalopatia portossistêmica según produto.",
+    "dose": "Constipação adulta: 15-30 mL/dia, ajustar. Encefalopatia: 30-45 mL 3-4 vezes/dia, titular para 2-3 evacuações amolecidas/dia; na fase aguda podem ser usados regimes intensivos sob monitorización.",
+    "pediatricDose": "Regimes variam por idade/indicación; sin tabela completa y formulación local confirmada, automação pediátrica permanece BLOQUEADA.",
+    "renalDose": "Sem ajuste específico; monitorar eletrólitos y hidratação.",
+    "hepaticDose": "Sem ajuste específico; na encefalopatia titular pelo efeito clínico y evacuações.",
+    "commonAdverseEffects": "Flatulência, distensão, cólica, diarreia y náusea.",
+    "dangerousAdverseEffects": "Desidratação, hipernatremia/hipocalemia y aspiração em administración inadequada.",
+    "adverseEffects": "Flatulência, distensão, cólica, diarreia y náusea.; Desidratação, hipernatremia/hipocalemia y aspiração em administración inadequada.",
+    "contraindications": "Hipersensibilidade; dieta estrita sin galactose; cautela/evitar em obstrução GI.",
+    "interactions": "Outros laxativos aumentam diarreia; antiácidos podem alterar acidificação colônica; monitorar fármacos sensíveis a eletrólitos.",
+    "monitoring": "Frequência/consistência das fezes, estado mental na encefalopatia, hidratação y eletrólitos em uso intenso.",
+    "administration": "VO; pode misturar con água, suco ou leite. Via retal somente por protocolo/formulación apropriada.",
+    "preparation": "Medir con dispositivo; confirmar concentração. Enema exige protocolo institucional y no deve ser inferido da solución oral.",
+    "infusionProtocol": "No é infusão IV. Administração enteral/retal según indicación.",
+    "pregnancy": "Absorção mínima; geralmente aceitável quando indicada.",
+    "lactation": "Absorção mínima; geralmente compatível, con evaluación clínica.",
+    "specialPopulations": "Diabetes: pequena carga de açúcares; idosos y debilitados: maior riesgo hidroeletrolítico.",
+    "patientEducation": "Titular para efeito, no para diarreia; manter hidratação y relatar dor intensa/vômitos.",
+    "clinicalPearls": "Na encefalopatia, alvo é 2-3 evacuações amolecidas/dia; excesso causa desidratação y pode piorar estado clínico.",
+    "guidelineRecommendations": "Diretrizes de encefalopatia hepática usam lactulose como terapia central para episódios manifestos y prevenção secundária.",
+    "safetyFlags": "Eletrólitos; desidratação; concentração; riesgo de aspiração.",
+    "alerts": "Titular por evacuações; confirmar 10 g/15 mL; pediatría bloqueada.",
+    "references": [
+      "Fonte oficial/primária - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8af7389-3699-4873-b05a-509af7e8eaab"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a8af7389-3699-4873-b05a-509af7e8eaab"
+  }
+};})();
+/* GOLD33_SELECTIVE:lactulose:END */

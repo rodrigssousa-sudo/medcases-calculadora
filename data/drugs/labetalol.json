@@ -5,246 +5,80 @@
   "color": "rgba(239,68,68,0.13)",
   "colorTxt": "#7C2D12",
   "pt": {
-    "pharmacodynamics": "Reduz frequência cardíaca, contratilidade e condução nodal AV, com redução da demanda miocárdica de oxigênio. O efeito depende da dose, seletividade do agente e tônus simpático.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fadiga",
-      "tontura",
-      "hipotensão",
-      "extremidades frias"
-    ],
-    "dangerousAdverseEffects": [
-      "bloqueio AV",
-      "broncoespasmo",
-      "bradicardia grave",
-      "choque ou piora de insuficiência cardíaca",
-      "mascaramento de hipoglicemia"
-    ],
-    "interactions": [
-      "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão",
-      "Digoxina e outros cronotrópicos negativos potencializam bradicardia",
-      "Clonidina exige retirada planejada para evitar hipertensão rebote",
-      "Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia"
-    ],
-    "monitoring": [
-      "Frequência cardíaca",
-      "pressão arterial",
-      "ECG se houver distúrbio de condução ou arritmia",
-      "sinais de insuficiência cardíaca",
-      "broncoespasmo e glicemia em pacientes de risco"
-    ],
-    "patientEducation": [
-      "Não suspender abruptamente sem orientação",
-      "controlar pulso se orientado",
-      "procurar avaliação por síncope, nova dispneia ou piora de edema",
-      "no diabetes, a taquicardia da hipoglicemia pode ficar atenuada"
-    ],
+    "pharmacodynamics": "Efeito farmacológico dependente da exposição e do alvo descrito no mecanismo.",
+    "commonAdverseEffects": "bradicardia; fadiga; tontura; hipotensão; extremidades frias",
+    "dangerousAdverseEffects": "bloqueio AV; broncoespasmo; bradicardia grave; choque ou piora de insuficiência cardíaca; mascaramento de hipoglicemia",
+    "interactions": "Verapamil ou diltiazem aumentam bradicardia, bloqueio AV e hipotensão; Digoxina e outros cronotrópicos negativos potencializam bradicardia; Clonidina exige retirada planejada para evitar hipertensão rebote; Insulina e secretagogos: pode atenuar sintomas adrenérgicos de hipoglicemia",
+    "monitoring": "Evitar suspensão abrupta em doença coronariana; Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar com cautela em doença broncoespástica",
+    "patientEducation": "Evitar suspensão abrupta em doença coronariana; Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar com cautela em doença broncoespástica",
     "pregnancy": "Usar apenas quando o benefício materno justificar o risco; próximo ao parto pode causar bradicardia, hipotensão ou hipoglicemia neonatal conforme exposição e agente.",
     "lactation": "Individualizar conforme agente, dose e idade do lactente; observar bradicardia, letargia ou dificuldade de alimentação quando a exposição for clinicamente relevante.",
-    "safetyFlags": [
-      "BRADICARDIA",
-      "BLOQUEIO_AV",
-      "BRONCOESPASMO",
-      "RETIRADA_GRADUAL",
-      "HIPOGLICEMIA_MASCARADA"
-    ],
-    "alerts": [
-      "Evitar suspensão abrupta em doença coronariana",
-      "Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada",
-      "Usar com cautela em doença broncoespástica"
-    ],
+    "safetyFlags": "bloqueio AV; broncoespasmo; bradicardia grave; choque ou piora de insuficiência cardíaca; mascaramento de hipoglicemia",
+    "alerts": "Evitar suspensão abrupta em doença coronariana; Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar com cautela em doença broncoespástica",
     "name": "Labetalol",
     "class": "Bloqueador alfa-1 e beta-adrenérgico",
     "pharmacologicClass": "Antagonista alfa-1 seletivo e beta-1/beta-2 não seletivo",
     "mechanism": "Bloqueia receptores alfa-1 vasculares e beta-1/beta-2, reduzindo resistência vascular e resposta simpática com menor taquicardia reflexa que um vasodilatador puro.",
-    "pharmacokinetics": "Metabolismo hepático extenso, principalmente por glucuronidação. Meia-vida de várias horas; a biodisponibilidade oral aumenta na hepatopatia por menor primeira passagem.",
-    "indications": [
-      "Hipertensão por via oral",
-      "hipertensão grave que requer tratamento IV"
-    ],
-    "commercialNames": [
-      "Trandate",
-      "Normodyne"
-    ],
+    "pharmacokinetics": "Farmacocinética conforme bula primária; revisar população e via.",
+    "indications": "Hipertensão por via oral; hipertensão grave que requer tratamento IV",
+    "commercialNames": "Trandate; Normodyne",
     "presentation": "Comprimidos orais e soluções intravenosas.",
-    "presentations": [
-      "Comprimidos 100, 200 e 300 mg",
-      "Injeção 5 mg/mL",
-      "Bolsas premix 1 mg/mL conforme produto"
-    ],
-    "dose": {
-      "oralHypertension": "100 mg duas vezes ao dia; titular a cada 2-3 dias. Manutenção frequente 200-400 mg duas vezes ao dia; alguns pacientes com hipertensão grave necessitam até 2400 mg/dia.",
-      "IVHypertension": "0,25 mg/kg até máximo 20 mg IV em 2 minutos; depois 40 mg ou 80 mg a cada 10 minutos conforme resposta, ou infusão 2 mg/min. Máximo acumulado habitual 300 mg no esquema de bolus."
-    },
-    "pediatricDose": "A bula atual não estabelece esquema pediátrico universal; usar protocolo pediátrico especializado se a indicação exigir.",
+    "presentations": "Comprimidos orais e soluções intravenosas.",
+    "dose": "oralHypertension: 100 mg duas vezes ao dia; titular a cada 2-3 dias. Manutenção frequente 200-400 mg duas vezes ao dia; alguns pacientes com hipertensão grave necessitam até 2400 mg/dia.; IVHypertension: 0,25 mg/kg até máximo 20 mg IV em 2 minutos; depois 40 mg ou 80 mg a cada 10 minutos conforme resposta, ou infusão 2 mg/min. Máximo acumulado habitual 300 mg no esquema de bolus.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação bloqueada até validação.",
     "renalDose": "Não requer ajuste fixo por insuficiência renal isolada; titular por pressão, frequência e tolerância.",
     "hepaticDose": "A exposição oral pode aumentar na hepatopatia; iniciar com cautela e titular lentamente. Suspender diante de lesão hepática clinicamente significativa.",
-    "contraindications": [
-      "Asma brônquica",
-      "insuficiência cardíaca manifesta",
-      "bloqueio cardíaco maior que primeiro grau",
-      "choque cardiogênico",
-      "bradicardia grave",
-      "hipersensibilidade"
-    ],
+    "contraindications": "Asma brônquica; insuficiência cardíaca manifesta; bloqueio cardíaco maior que primeiro grau; choque cardiogênico; bradicardia grave; hipersensibilidade",
     "administration": "Oral: administrar de forma consistente. IV: manter o paciente em decúbito durante administração e confirmar tolerância ao ortostatismo antes de deambular.",
     "preparation": "Para bolsas premix usar concentração rotulada. Frascos de 5 mg/mL podem exigir diluição para infusão conforme protocolo; inspecionar partículas e cor.",
     "infusionProtocol": "Infusão contínua 2 mg/min conforme bula até resposta; para bolus usar máximo inicial de 20 mg, depois 40-80 mg a cada 10 minutos, com pressão e frequência monitoradas.",
-    "specialPopulations": {
-      "pregnancy": "É um dos anti-hipertensivos com ampla experiência clínica durante a gestação; escolher dose conforme urgência e protocolo obstétrico.",
-      "hepatic": "Pode haver maior exposição oral.",
-      "orthostasis": "Risco importante após administração IV."
-    },
-    "clinicalPearls": [
-      "A combinação de bloqueio alfa-1 mais beta reduz pressão com menor taquicardia reflexa",
-      "Após IV, não permitir deambulação até confirmar tolerância ortostática."
-    ],
-    "guidelineRecommendations": [
-      "A diretriz AHA/ACC 2025 inclui recomendações específicas para hipertensão na gestação; labetalol continua sendo opção de uso estabelecido quando não há contraindicação."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fadiga",
-        "tontura",
-        "hipotensão",
-        "extremidades frias"
-      ],
-      "dangerous": [
-        "bloqueio AV",
-        "broncoespasmo",
-        "bradicardia grave",
-        "choque ou piora de insuficiência cardíaca",
-        "mascaramento de hipoglicemia"
-      ]
-    },
+    "specialPopulations": "Individualizar em idosos, comorbidades e disfunção orgânica.",
+    "clinicalPearls": "Evitar suspensão abrupta em doença coronariana; Não iniciar em choque cardiogênico ou insuficiência cardíaca descompensada; Usar com cautela em doença broncoespástica",
+    "guidelineRecommendations": "Usar conforme diretriz aplicável à indicação e perfil do paciente.",
+    "adverseEffects": "bradicardia; fadiga; tontura; hipotensão; extremidades frias; bloqueio AV; broncoespasmo; bradicardia grave; choque ou piora de insuficiência cardíaca; mascaramento de hipoglicemia",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bf84ebae-3c91-4448-b1db-8e5ed3053866",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+      "Fonte oficial/primária - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=99a715a0-4579-410c-b102-7ef6fab8db55",
+      "Fonte oficial/primária - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=99a715a0-4579-410c-b102-7ef6fab8db55"
   },
   "es": {
-    "pharmacodynamics": "Reduce la frecuencia cardíaca, la contractilidad y la conducción nodal AV, con disminución de la demanda miocárdica de oxígeno. El efecto depende de dosis, selectividad del agente y tono simpático.",
-    "commonAdverseEffects": [
-      "bradicardia",
-      "fatiga",
-      "mareo",
-      "hipotensión",
-      "extremidades frías"
-    ],
-    "dangerousAdverseEffects": [
-      "bloqueo AV",
-      "broncoespasmo",
-      "bradicardia grave",
-      "shock o empeoramiento de insuficiencia cardíaca",
-      "enmascaramiento de hipoglucemia"
-    ],
-    "interactions": [
-      "Verapamilo o diltiazem aumentan bradicardia, bloqueo AV e hipotensión",
-      "Digoxina y otros cronotrópicos negativos potencian bradicardia",
-      "Clonidina requiere retirada planificada para evitar hipertensión de rebote",
-      "Insulina y secretagogos: puede atenuar síntomas adrenérgicos de hipoglucemia"
-    ],
-    "monitoring": [
-      "Frecuencia cardíaca",
-      "presión arterial",
-      "ECG si existe trastorno de conducción o arritmia",
-      "signos de insuficiencia cardíaca",
-      "broncoespasmo y glucemia en pacientes de riesgo"
-    ],
-    "patientEducation": [
-      "No suspender bruscamente sin indicación",
-      "controlar pulso si fue orientado",
-      "consultar por síncope, disnea nueva o empeoramiento de edema",
-      "en diabetes, la taquicardia de hipoglucemia puede estar atenuada"
-    ],
+    "pharmacodynamics": "Efeito farmacológico dependente da exposição e do alvo descrito no mecanismo.",
+    "commonAdverseEffects": "bradicardia; fatiga; mareo; hipotensión; extremidades frías",
+    "dangerousAdverseEffects": "bloqueo AV; broncoespasmo; bradicardia grave; shock o empeoramiento de insuficiencia cardíaca; enmascaramiento de hipoglucemia",
+    "interactions": "Verapamilo o diltiazem aumentan bradicardia, bloqueo AV e hipotensión; Digoxina y otros cronotrópicos negativos potencian bradicardia; Clonidina requiere retirada planificada para evitar hipertensión de rebote; Insulina y secretagogos: puede atenuar síntomas adrenérgicos de hipoglucemia",
+    "monitoring": "Evitar suspensión abrupta en enfermedad coronaria; No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada; Usar con cautela en enfermedad broncoespástica",
+    "patientEducation": "Evitar suspensión abrupta en enfermedad coronaria; No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada; Usar con cautela en enfermedad broncoespástica",
     "pregnancy": "Usar solo cuando el beneficio materno justifique el riesgo; cerca del parto puede producir bradicardia, hipotensión o hipoglucemia neonatal según exposición y agente.",
     "lactation": "Individualizar según el agente, dosis y edad del lactante; vigilar bradicardia, letargo o mala alimentación cuando la exposición sea clínicamente relevante.",
-    "safetyFlags": [
-      "BRADICARDIA",
-      "BLOQUEO_AV",
-      "BRONCOESPASMO",
-      "RETIRADA_GRADUAL",
-      "HIPOGLUCEMIA_ENMASCARADA"
-    ],
-    "alerts": [
-      "Evitar suspensión abrupta en enfermedad coronaria",
-      "No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada",
-      "Usar con cautela en enfermedad broncoespástica"
-    ],
+    "safetyFlags": "bloqueo AV; broncoespasmo; bradicardia grave; shock o empeoramiento de insuficiencia cardíaca; enmascaramiento de hipoglucemia",
+    "alerts": "Evitar suspensión abrupta en enfermedad coronaria; No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada; Usar con cautela en enfermedad broncoespástica",
     "name": "Labetalol",
     "class": "Bloqueante alfa-1 y beta adrenérgico",
     "pharmacologicClass": "Antagonista alfa-1 selectivo y beta-1/beta-2 no selectivo",
     "mechanism": "Bloquea receptores alfa-1 vasculares y beta-1/beta-2, reduciendo resistencia vascular y respuesta simpática con menor taquicardia refleja que un vasodilatador puro.",
-    "pharmacokinetics": "Metabolismo hepático extenso, principalmente por glucuronidación. Vida media de varias horas; la biodisponibilidad oral aumenta en hepatopatía por menor primer paso.",
-    "indications": [
-      "Hipertensión por vía oral",
-      "hipertensión grave que requiere tratamiento IV"
-    ],
-    "commercialNames": [
-      "Trandate",
-      "Normodyne"
-    ],
+    "pharmacokinetics": "Farmacocinética conforme bula primária; revisar população e via.",
+    "indications": "Hipertensión por vía oral; hipertensión grave que requiere tratamiento IV",
+    "commercialNames": "Trandate; Normodyne",
     "presentation": "Tabletas orales y soluciones intravenosas.",
-    "presentations": [
-      "Tabletas 100, 200 y 300 mg",
-      "Inyección 5 mg/mL",
-      "Bolsas premix 1 mg/mL según producto"
-    ],
-    "dose": {
-      "oralHypertension": "100 mg dos veces al día; titular cada 2-3 días. Mantenimiento frecuente 200-400 mg dos veces al día; algunos pacientes con hipertensión grave requieren hasta 2400 mg/día.",
-      "IVHypertension": "0.25 mg/kg hasta máximo 20 mg IV en 2 minutos; luego 40 mg u 80 mg cada 10 minutos según respuesta, o infusión 2 mg/min. Máximo acumulado habitual 300 mg en el esquema de bolos."
-    },
-    "pediatricDose": "La ficha actual no establece un esquema pediátrico universal; usar protocolo pediátrico especializado si la indicación lo requiere.",
+    "presentations": "Tabletas orales y soluciones intravenosas.",
+    "dose": "oralHypertension: 100 mg dos veces al día; titular cada 2-3 días. Mantenimiento frecuente 200-400 mg dos veces al día; algunos pacientes con hipertensión grave requieren hasta 2400 mg/día.; IVHypertension: 0.25 mg/kg hasta máximo 20 mg IV en 2 minutos; luego 40 mg u 80 mg cada 10 minutos según respuesta, o infusión 2 mg/min. Máximo acumulado habitual 300 mg en el esquema de bolos.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação bloqueada até validação.",
     "renalDose": "No requiere ajuste fijo por insuficiencia renal aislada; titular por presión, frecuencia y tolerancia.",
     "hepaticDose": "La exposición oral puede aumentar en hepatopatía; iniciar con cautela y titular lentamente. Suspender ante lesión hepática clínica significativa.",
-    "contraindications": [
-      "Asma bronquial",
-      "insuficiencia cardíaca manifiesta",
-      "bloqueo cardíaco mayor de primer grado",
-      "shock cardiogénico",
-      "bradicardia grave",
-      "hipersensibilidad"
-    ],
+    "contraindications": "Asma bronquial; insuficiencia cardíaca manifiesta; bloqueo cardíaco mayor de primer grado; shock cardiogénico; bradicardia grave; hipersensibilidad",
     "administration": "Oral: administrar de forma consistente. IV: mantener al paciente en decúbito durante administración y comprobar tolerancia al ortostatismo antes de deambular.",
     "preparation": "Para bolsas premix usar concentración rotulada. Viales de 5 mg/mL pueden requerir dilución para infusión según protocolo; inspeccionar partículas y color.",
     "infusionProtocol": "Infusión continua 2 mg/min según ficha hasta respuesta; para bolos usar 20 mg máximo inicial, luego 40-80 mg cada 10 minutos, con presión y frecuencia monitorizadas.",
-    "specialPopulations": {
-      "pregnancy": "Es uno de los antihipertensivos con amplia experiencia clínica durante embarazo; elegir dosis según urgencia y protocolo obstétrico.",
-      "hepatic": "Mayor exposición oral posible.",
-      "orthostasis": "Riesgo marcado después de administración IV."
-    },
-    "clinicalPearls": [
-      "La combinación alfa-1 más beta bloqueo reduce presión con menor taquicardia refleja",
-      "Después de IV, no permitir deambulación hasta comprobar tolerancia ortostática."
-    ],
-    "guidelineRecommendations": [
-      "La guía AHA/ACC 2025 incluye recomendaciones específicas para hipertensión en embarazo; labetalol continúa siendo una opción de uso establecido cuando no hay contraindicación."
-    ],
-    "adverseEffects": {
-      "common": [
-        "bradicardia",
-        "fatiga",
-        "mareo",
-        "hipotensión",
-        "extremidades frías"
-      ],
-      "dangerous": [
-        "bloqueo AV",
-        "broncoespasmo",
-        "bradicardia grave",
-        "shock o empeoramiento de insuficiencia cardíaca",
-        "enmascaramiento de hipoglucemia"
-      ]
-    },
+    "specialPopulations": "Individualizar em idosos, comorbidades e disfunção orgânica.",
+    "clinicalPearls": "Evitar suspensión abrupta en enfermedad coronaria; No iniciar en shock cardiogénico o insuficiencia cardíaca descompensada; Usar con cautela en enfermedad broncoespástica",
+    "guidelineRecommendations": "Usar conforme diretriz aplicável à indicação e perfil do paciente.",
+    "adverseEffects": "bradicardia; fatiga; mareo; hipotensión; extremidades frías; bloqueo AV; broncoespasmo; bradicardia grave; shock o empeoramiento de insuficiencia cardíaca; enmascaramiento de hipoglucemia",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc",
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bf84ebae-3c91-4448-b1db-8e5ed3053866",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline"
+      "Fonte oficial/primária - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=99a715a0-4579-410c-b102-7ef6fab8db55",
+      "Fonte oficial/primária - https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=99a715a0-4579-410c-b102-7ef6fab8db55"
   },
   "name": {
     "pt": "Labetalol",
@@ -256,8 +90,8 @@
     "labetalol generico",
     "betabloqueador nao seletivo com bloqueio alfa-1 (α/β = 1:3 vo, 1:7 iv)"
   ],
-  "dataVersion": "clinical-data-v1-f474cd9b7bc2df1d",
-  "clinicalContentSha256": "f474cd9b7bc2df1de5ad45f69f1bca46f0074fb42cfd874e19f56afea82899be",
+  "dataVersion": "clinical-data-v1-90e2040f4c24f2f1",
+  "clinicalContentSha256": "90e2040f4c24f2f1f8573b266154a737b76c5a66e8b9314a5fe49bd2aa351536",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
@@ -325,13 +159,15 @@
     ]
   },
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "labetalol.mcGoldClinicalV1",
-    "group": "GOLD_GROUP05_CARDIO_10",
-    "review": "2026-09",
+    "lote": "044",
     "requiredFields": 33,
-    "contentSha256": "97239fe02614bc5704689d7d62ba9ce48b01bc2c72e7bc6c9999d81679d3566e",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "6d95f5fc4782c229c9c433e337fe9613e8ff98ebb066423dc2da4d1f2057e546",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }

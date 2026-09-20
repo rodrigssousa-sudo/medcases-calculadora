@@ -4684,3 +4684,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:isoflurano:END */
+/* GOLD33_SELECTIVE:ketamina:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="ketamina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:ketamina:"+matches.length);drug=matches[0];}else{drug=db&&db["ketamina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:ketamina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "044",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6d95f5fc4782c229c9c433e337fe9613e8ff98ebb066423dc2da4d1f2057e546",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Ketamina",
+    "class": "Anestésico dissociativo; antagonista não competitivo de receptores NMDA",
+    "pharmacologicClass": "Anestésico dissociativo; antagonista não competitivo de receptores NMDA",
+    "commercialNames": "Informação não automatizável; revisar fonte primária e escopo clínico.",
+    "presentation": "Solução injetável IV/IM; concentrações de 10, 50 e 100 mg/mL podem existir conforme fabricante/mercado",
+    "presentations": "Solução injetável IV/IM; concentrações de 10, 50 e 100 mg/mL podem existir conforme fabricante/mercado",
+    "mechanism": "Antagoniza receptores NMDA e produz anestesia dissociativa com analgesia e amnésia. Em muitos pacientes aumenta pressão arterial e frequência cardíaca por estimulação simpática, mas hipotensão e bradicardia também podem ocorrer, especialmente em depleção de catecolaminas.",
+    "pharmacodynamics": "Antagoniza receptores NMDA e produz anestesia dissociativa com analgesia e amnésia. Em muitos pacientes aumenta pressão arterial e frequência cardíaca por estimulação simpática, mas hipotensão e bradicardia também podem ocorrer, especialmente em depleção de catecolaminas.",
+    "pharmacokinetics": "Farmacocinética conforme bula primária; revisar população e via.",
+    "indications": "Indução de anestesia geral; Anestesia como agente único em procedimentos que não exigem relaxamento muscular; Suplemento a outros agentes anestésicos; Sedação procedural pediátrica em emergência — uso fora da rotulagem dos EUA, conforme protocolo institucional",
+    "dose": "Indução: 1–4,5 mg/kg IV lentamente em 60 s; alternativa 1–2 mg/kg a 0,5 mg/kg/min. IM: 6,5–13 mg/kg. Titular ao efeito e ao contexto anestésico.",
+    "pediatricDose": "Rotulagem dos EUA: segurança/eficácia <16 anos não estabelecidas. Em sedação procedural pediátrica por protocolo: 1–1,5 mg/kg IV, com incrementos de 0,25–0,5 mg/kg; IM 4 mg/kg, podendo repetir 2 mg/kg após 10 min (máx. 6 mg/kg).",
+    "renalDose": "A rotulagem não estabelece ajuste renal fixo para indução; titular clinicamente.",
+    "hepaticDose": "Não há ajuste único definido para dose de indução. Uso recorrente foi associado a lesão hepática; considerar função hepática basal e periódica quando houver plano de administrações repetidas.",
+    "commonAdverseEffects": "Informação não automatizável; revisar fonte primária e escopo clínico.",
+    "dangerousAdverseEffects": "Depressão respiratória/apneia, sobretudo com administração rápida ou dose excessiva; Laringoespasmo; Instabilidade hemodinâmica; Lesão hepática com uso recorrente",
+    "adverseEffects": "; ",
+    "contraindications": "Hipersensibilidade à cetamina ou excipientes; Situação em que elevação importante da pressão arterial represente risco grave",
+    "interactions": "Informação não automatizável; revisar fonte primária e escopo clínico.",
+    "monitoring": "A preservação de reflexos de via aérea não elimina risco de obstrução, laringoespasmo ou apneia. Benzodiazepínico não é obrigatório de rotina; pode ser usado quando clinicamente indicado para manifestações de emergência.",
+    "administration": "Administrar IV lentamente; a injeção rápida aumenta risco de depressão respiratória e resposta pressora. A concentração de 100 mg/mL é concentrada e deve ser diluída antes do uso IV conforme a rotulagem do produto. Monitorização cardiorrespiratória e capacidade imediata de manejo de via aérea são obrigatórias durante sedação/anestesia.",
+    "preparation": "Administrar IV lentamente; a injeção rápida aumenta risco de depressão respiratória e resposta pressora. A concentração de 100 mg/mL é concentrada e deve ser diluída antes do uso IV conforme a rotulagem do produto. Monitorização cardiorrespiratória e capacidade imediata de manejo de via aérea são obrigatórias durante sedação/anestesia.",
+    "infusionProtocol": "Administrar IV lentamente; a injeção rápida aumenta risco de depressão respiratória e resposta pressora. A concentração de 100 mg/mL é concentrada e deve ser diluída antes do uso IV conforme a rotulagem do produto. Monitorização cardiorrespiratória e capacidade imediata de manejo de via aérea são obrigatórias durante sedação/anestesia.",
+    "pregnancy": "Avaliar benefício-risco e bula específica.",
+    "lactation": "Avaliar benefício-risco e bula específica.",
+    "specialPopulations": "Individualizar em idosos, comorbidades e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper sem supervisão.",
+    "clinicalPearls": "Confirmar formulação, via e indicação antes do cálculo.",
+    "guidelineRecommendations": "Usar conforme diretriz aplicável à indicação e perfil do paciente.",
+    "safetyFlags": "Revisar alertas graves da bula.",
+    "alerts": "A preservação de reflexos de via aérea não elimina risco de obstrução, laringoespasmo ou apneia. Benzodiazepínico não é obrigatório de rotina; pode ser usado quando clinicamente indicado para manifestações de emergência.",
+    "references": [
+      "Fonte oficial/primária - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b96a0a23-3ca0-4a92-bd8b-1e9921931772",
+      "Fonte oficial/primária - https://www.rch.org.au/clinicalguide/guideline_index/Ketamine_use_for_procedural_sedation/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b96a0a23-3ca0-4a92-bd8b-1e9921931772"
+  },
+  "es": {
+    "name": "Ketamina",
+    "class": "Anestésico disociativo; antagonista no competitivo de receptores NMDA",
+    "pharmacologicClass": "Anestésico disociativo; antagonista no competitivo de receptores NMDA",
+    "commercialNames": "Información no automatizable; revisar fuente primaria y alcance clínico.",
+    "presentation": "Solución inyectable IV/IM; pueden existir concentraciones de 10, 50 y 100 mg/mL según fabricante/mercado",
+    "presentations": "Solución inyectable IV/IM; pueden existir concentraciones de 10, 50 y 100 mg/mL según fabricante/mercado",
+    "mechanism": "Antagoniza receptores NMDA y produce anestesia disociativa con analgesia y amnesia. En muchos pacientes aumenta la presión arterial y la frecuencia cardíaca por estimulación simpática, pero también pueden ocurrir hipotensión y bradicardia, especialmente con depleción de catecolaminas.",
+    "pharmacodynamics": "Antagoniza receptores NMDA y produce anestesia disociativa con analgesia y amnesia. En muchos pacientes aumenta la presión arterial y la frecuencia cardíaca por estimulación simpática, pero también pueden ocurrir hipotensión y bradicardia, especialmente con depleción de catecolaminas.",
+    "pharmacokinetics": "Farmacocinética conforme bula primária; revisar população e via.",
+    "indications": "Inducción de anestesia general; Anestesia como agente único en procedimientos que no requieren relajación muscular; Suplemento de otros agentes anestésicos; Sedación procedimental pediátrica en urgencias — uso fuera del rotulado de EE. UU., según protocolo institucional",
+    "dose": "Inducción: 1–4,5 mg/kg IV lentamente en 60 s; alternativa 1–2 mg/kg a 0,5 mg/kg/min. IM: 6,5–13 mg/kg. Titular al efecto y al contexto anestésico.",
+    "pediatricDose": "",
+    "renalDose": "El rotulado no establece un ajuste renal fijo para inducción; titular clínicamente.",
+    "hepaticDose": "No hay un ajuste único definido para la dosis de inducción. El uso repetido se ha asociado a lesión hepática; considerar función hepática basal y periódica cuando se planifiquen administraciones repetidas.",
+    "commonAdverseEffects": "Información no automatizable; revisar fuente primaria y alcance clínico.",
+    "dangerousAdverseEffects": "Depresión respiratoria/apnea, sobre todo con administración rápida o dosis excesiva; Laringoespasmo; Inestabilidad hemodinámica; Lesión hepática con uso repetido",
+    "adverseEffects": "; ",
+    "contraindications": "Hipersensibilidad a ketamina o excipientes; Situación en la que una elevación importante de la presión arterial represente un riesgo grave",
+    "interactions": "Información no automatizable; revisar fuente primaria y alcance clínico.",
+    "monitoring": "La preservación de reflejos de la vía aérea no elimina el riesgo de obstrucción, laringoespasmo o apnea. Una benzodiazepina no es obligatoria de rutina; puede usarse cuando esté clínicamente indicada para manifestaciones de emergencia.",
+    "administration": "Administrar IV lentamente; la inyección rápida aumenta el riesgo de depresión respiratoria y respuesta presora. La concentración de 100 mg/mL es concentrada y debe diluirse antes del uso IV según el rotulado del producto. Se requiere monitorización cardiorrespiratoria y capacidad inmediata para manejo de la vía aérea durante sedación/anestesia.",
+    "preparation": "Administrar IV lentamente; la inyección rápida aumenta el riesgo de depresión respiratoria y respuesta presora. La concentración de 100 mg/mL es concentrada y debe diluirse antes del uso IV según el rotulado del producto. Se requiere monitorización cardiorrespiratoria y capacidad inmediata para manejo de la vía aérea durante sedación/anestesia.",
+    "infusionProtocol": "Administrar IV lentamente; la inyección rápida aumenta el riesgo de depresión respiratoria y respuesta presora. La concentración de 100 mg/mL es concentrada y debe diluirse antes del uso IV según el rotulado del producto. Se requiere monitorización cardiorrespiratoria y capacidad inmediata para manejo de la vía aérea durante sedación/anestesia.",
+    "pregnancy": "Avaliar benefício-risco e bula específica.",
+    "lactation": "Avaliar benefício-risco e bula específica.",
+    "specialPopulations": "Individualizar em idosos, comorbidades e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper sem supervisão.",
+    "clinicalPearls": "Confirmar formulação, via e indicação antes do cálculo.",
+    "guidelineRecommendations": "Usar conforme diretriz aplicável à indicação e perfil do paciente.",
+    "safetyFlags": "Revisar alertas graves da bula.",
+    "alerts": "La preservación de reflejos de la vía aérea no elimina el riesgo de obstrucción, laringoespasmo o apnea. Una benzodiazepina no es obligatoria de rutina; puede usarse cuando esté clínicamente indicada para manifestaciones de emergencia.",
+    "references": [
+      "Fonte oficial/primária - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b96a0a23-3ca0-4a92-bd8b-1e9921931772",
+      "Fonte oficial/primária - https://www.rch.org.au/clinicalguide/guideline_index/Ketamine_use_for_procedural_sedation/"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b96a0a23-3ca0-4a92-bd8b-1e9921931772"
+  }
+};})();
+/* GOLD33_SELECTIVE:ketamina:END */
