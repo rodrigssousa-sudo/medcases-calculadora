@@ -29825,3 +29825,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:moxifloxacino:END */
+/* GOLD33_SELECTIVE:nitrofurantoina:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nitrofurantoina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nitrofurantoina:"+matches.length);drug=matches[0];}else{drug=db&&db["nitrofurantoina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nitrofurantoina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "055",
+    "requiredFieldCount": 33,
+    "approvedSha256": "66de27fa500997712b3fa75feb4f7118d6d192d9a26ed1116f35481851314f46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Nitrofurantoína",
+    "class": "Antibacteriano urinário nitrofurano",
+    "pharmacologicClass": "Antibacteriano urinário nitrofurano",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Cápsulas monoidratadas/macrocristais e macrocristais.",
+    "presentations": "Cápsulas monoidratadas/macrocristais e macrocristais.",
+    "mechanism": "Após redução por flavoproteínas bacterianas, gera intermediários reativos que lesionam DNA, ribossomos e outras macromoléculas.",
+    "pharmacodynamics": "Após redução por flavoproteínas bacterianas, gera intermediários reativos que lesionam DNA, ribossomos e outras macromoléculas.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Cistite aguda não complicada por uropatógenos suscetíveis. Não usar para pielonefrite, abscesso perinéfrico, prostatite ou bacteremia.",
+    "dose": "Cistite não complicada: 100 mg VO q12h; duração depende de formulação/diretriz, frequentemente 5 dias em diretrizes modernas. Seguir bula local.",
+    "pediatricDose": "standard: 1,25–1,75 mg/kg por dose 6/6h; profilaxia: 1–2 mg/kg/dia ao deitar; maxDose: 7 mg/kg/dia",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Cefaleia; Urina escura; Dor abdominal",
+    "dangerousAdverseEffects": "Pneumonite aguda; Fibrose pulmonar em uso prolongado; Hepatite/necrose hepática; Neuropatia periférica; Anemia hemolítica",
+    "adverseEffects": "Náusea, cefaleia, flatulência e alteração da cor da urina.; Toxicidade pulmonar aguda/crônica, hepatotoxicidade, neuropatia, hemólise em G6PD e C. difficile.",
+    "contraindications": "Anúria/oligúria ou comprometimento renal significativo conforme bula; termo gestacional 38–42 semanas/trabalho de parto; neonato <1 mês; hepatotoxicidade prévia por nitrofurantoína.",
+    "interactions": "Antiácidos com magnésio podem reduzir absorção; probenecida/sulfinpirazona podem reduzir secreção renal e aumentar toxicidade.",
+    "monitoring": "NÃO usar para pielonefrite; Pulmonar aguda/crônica; CrCl: seguir bula/protocolo; Contraindicada no termo gestacional; Neonato <1 mês",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Toxicidade pulmonar aguda/crônica, hepatotoxicidade, neuropatia, hemólise em G6PD e C. difficile.",
+    "alerts": "Toxicidade pulmonar aguda/crônica, hepatotoxicidade, neuropatia, hemólise em G6PD e C. difficile.; NÃO usar para pielonefrite; Pulmonar aguda/crônica; CrCl: seguir bula/protocolo; Contraindicada no termo gestacional; Neonato <1 mês",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nitrofurantoin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/020064s019lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nitrofurantoin"
+  },
+  "es": {
+    "name": "Nitrofurantoína",
+    "class": "Antibacteriano urinário nitrofurano",
+    "pharmacologicClass": "Antibacteriano urinário nitrofurano",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Cápsulas monoidratadas/macrocristais y macrocristais.",
+    "presentations": "Cápsulas monoidratadas/macrocristais y macrocristais.",
+    "mechanism": "Após redução por flavoproteínas bacterianas, gera intermediários reativos que lesionam DNA, ribossomos y outras macromoléculas.",
+    "pharmacodynamics": "Após redução por flavoproteínas bacterianas, gera intermediários reativos que lesionam DNA, ribossomos y outras macromoléculas.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Cistite aguda no complicada por uropatógenos suscetíveis. No usar para pielonefrite, abscesso perinéfrico, prostatite ou bacteremia.",
+    "dose": "Cistite no complicada: 100 mg VO q12h; duração depende de formulação/diretriz, frequentemente 5 dias em diretrizes modernas. Seguir bula local.",
+    "pediatricDose": "standard: 1,25–1,75 mg/kg por dosis 6/6h; profilaxia: 1–2 mg/kg/dia ao deitar; maxDose: 7 mg/kg/dia",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea; Cefaleia; Urina escura; Dor abdominal",
+    "dangerousAdverseEffects": "Pneumonite aguda; Fibrose pulmonar em uso prolongado; Hepatite/necrose hepática; Neuropatia periférica; Anemia hemolítica",
+    "adverseEffects": "Náusea, cefaleia, flatulência y alteração da cor da urina.; Toxicidade pulmonar aguda/crônica, hepatotoxicidade, neuropatia, hemólise em G6PD y C. difficile.",
+    "contraindications": "Anúria/oligúria ou comprometimento renal significativo conforme bula; termo gestacional 38–42 semanas/trabalho de parto; neonato <1 mês; hepatotoxicidade prévia por nitrofurantoína.",
+    "interactions": "Antiácidos con magnésio podem reduzir absorção; probenecida/sulfinpirazona podem reduzir secreção renal y aumentar toxicidade.",
+    "monitoring": "NÃO usar para pielonefrite; Pulmonar aguda/crônica; CrCl: seguir bula/protocolo; Contraindicada no termo gestacional; Neonato <1 mês",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Toxicidade pulmonar aguda/crônica, hepatotoxicidade, neuropatia, hemólise em G6PD y C. difficile.",
+    "alerts": "Toxicidade pulmonar aguda/crônica, hepatotoxicidade, neuropatia, hemólise em G6PD y C. difficile.; NÃO usar para pielonefrite; Pulmonar aguda/crônica; CrCl: seguir bula/protocolo; Contraindicada no termo gestacional; Neonato <1 mês",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nitrofurantoin",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/020064s019lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nitrofurantoin"
+  }
+};})();
+/* GOLD33_SELECTIVE:nitrofurantoina:END */

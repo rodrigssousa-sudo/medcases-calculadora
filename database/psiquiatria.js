@@ -7481,3 +7481,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:moclobemida:END */
+/* GOLD33_SELECTIVE:nitrazepam:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nitrazepam";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nitrazepam:"+matches.length);drug=matches[0];}else{drug=db&&db["nitrazepam"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nitrazepam");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "055",
+    "requiredFieldCount": 33,
+    "approvedSha256": "66de27fa500997712b3fa75feb4f7118d6d192d9a26ed1116f35481851314f46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Nitrazepam",
+    "class": "Benzodiazepínico hipnótico de longa ação",
+    "pharmacologicClass": "Benzodiazepínico hipnótico de longa ação",
+    "commercialNames": "br: Sonebon; Nitrazepam; ar: Mogadon; Nitrazepam",
+    "presentation": "Comprimido 5 mg; Comprimido 10 mg",
+    "presentations": "Comprimido 5 mg; Comprimido 10 mg",
+    "mechanism": "Potencializa o GABA no receptor GABA-A, produzindo efeito hipnótico, ansiolítico, anticonvulsivante e relaxante muscular.",
+    "pharmacodynamics": "Potencializa o GABA no receptor GABA-A, produzindo efeito hipnótico, ansiolítico, anticonvulsivante e relaxante muscular.",
+    "pharmacokinetics": "Vida média aproximada: 16–38 horas, com risco de sedação residual.",
+    "indications": "Insônia de curta duração; Insônia de manutenção do sono; Insônia associada à ansiedade; Despertares noturnos frequentes; Mioclonias epilépticas em casos selecionados; Síndrome de West ou epilepsias específicas sob especialista",
+    "dose": "adulto: Insônia: 5 mg VO ao deitar.; casosSelecionados: Pode-se usar 10 mg ao deitar em casos selecionados, por curto prazo.; maxDose: Dose máxima usual: 10 mg/noite.",
+    "pediatricDose": "standard: Não se utiliza cálculo por kg em adultos.; pediatric: Epilepsia pediátrica: uso especializado conforme protocolo.; maxDose: 10 mg/noite em adultos",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência diurna; Tontura; Ataxia; Fadiga; Confusão; Déficit de memória",
+    "dangerousAdverseEffects": "Depressão respiratória; Dependência física; Síndrome de abstinência; Quedas e fraturas em idosos; Sedação residual importante; Reação paradoxal com agitação",
+    "adverseEffects": "Sonolência residual, ataxia, tontura, confusão e fraqueza muscular.; Depressão respiratória, quedas, amnésia, reações paradoxais, dependência e abstinência.",
+    "contraindications": "Hipersensibilidade a benzodiazepínicos; Insuficiência respiratória grave; Apneia do sono grave; Miastenia gravis; Insuficiência hepática grave",
+    "interactions": "Álcool; Opioides; Barbitúricos; Antipsicóticos sedativos; Antidepressivos sedativos; Anti-histamínicos sedativos",
+    "monitoring": "Risco importante de sonolência no dia seguinte.; Evitar em idosos frágeis quando possível.; Usar apenas por curto prazo no tratamento da insônia.; Evitar associação com álcool e opioides.; Não suspender abruptamente após uso prolongado.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Depressão respiratória, quedas, amnésia, reações paradoxais, dependência e abstinência.",
+    "alerts": "Depressão respiratória, quedas, amnésia, reações paradoxais, dependência e abstinência.; Risco importante de sonolência no dia seguinte.; Evitar em idosos frágeis quando possível.; Usar apenas por curto prazo no tratamento da insônia.; Evitar associação com álcool e opioides.; Não suspender abruptamente após uso prolongado.",
+    "references": [
+      "Fonte primária/oficial - https://www.medicines.org.uk/emc/search?q=nitrazepam",
+      "Fonte primária/oficial - https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=nitrazepam"
+  },
+  "es": {
+    "name": "Nitrazepam",
+    "class": "Benzodiazepínico hipnótico de longa ação",
+    "pharmacologicClass": "Benzodiazepínico hipnótico de longa ação",
+    "commercialNames": "br: Sonebon; Nitrazepam; ar: Mogadon; Nitrazepam",
+    "presentation": "Comprimido 5 mg; Comprimido 10 mg",
+    "presentations": "Comprimido 5 mg; Comprimido 10 mg",
+    "mechanism": "Potencializa o GABA no receptor GABA-A, produzindo efeito hipnótico, ansiolítico, anticonvulsivante y relaxante muscular.",
+    "pharmacodynamics": "Potencializa o GABA no receptor GABA-A, produzindo efeito hipnótico, ansiolítico, anticonvulsivante y relaxante muscular.",
+    "pharmacokinetics": "Vida média aproximada: 16–38 horas, con riesgo de sedação residual.",
+    "indications": "Insônia de curta duração; Insônia de manutenção do sono; Insônia associada à ansiedade; Despertares noturnos frequentes; Mioclonias epilépticas em casos selecionados; Síndrome de West ou epilepsias específicas sob especialista",
+    "dose": "adulto: Insônia: 5 mg VO ao deitar.; casosSelecionados: Pode-se usar 10 mg ao deitar em casos selecionados, por curto prazo.; maxDose: Dose máxima usual: 10 mg/noite.",
+    "pediatricDose": "standard: No se utiliza cálculo por kg em adultos.; pediatric: Epilepsia pediátrica: uso especializado conforme protocolo.; maxDose: 10 mg/noite em adultos",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência diurna; Tontura; Ataxia; Fadiga; Confusão; Déficit de memória",
+    "dangerousAdverseEffects": "Depressão respiratória; Dependência física; Síndrome de abstinência; Quedas y fraturas em idosos; Sedação residual importante; Reação paradoxal con agitação",
+    "adverseEffects": "Sonolência residual, ataxia, tontura, confusão y fraqueza muscular.; Depressão respiratória, quedas, amnésia, reações paradoxais, dependência y abstinência.",
+    "contraindications": "Hipersensibilidade a benzodiazepínicos; Insuficiência respiratória grave; Apneia do sono grave; Miastenia gravis; Insuficiência hepática grave",
+    "interactions": "Álcool; Opioides; Barbitúricos; Antipsicóticos sedativos; Antidepressivos sedativos; Anti-histamínicos sedativos",
+    "monitoring": "Risco importante de sonolência no dia seguinte.; Evitar em idosos frágeis quando possível.; Usar apenas por curto prazo no tratamento da insônia.; Evitar associação con álcool y opioides.; No suspender abruptamente após uso prolongado.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Depressão respiratória, quedas, amnésia, reações paradoxais, dependência y abstinência.",
+    "alerts": "Depressão respiratória, quedas, amnésia, reações paradoxais, dependência y abstinência.; Risco importante de sonolência no dia seguinte.; Evitar em idosos frágeis quando possível.; Usar apenas por curto prazo no tratamento da insônia.; Evitar associação con álcool y opioides.; No suspender abruptamente após uso prolongado.",
+    "references": [
+      "Fonte primária/oficial - https://www.medicines.org.uk/emc/search?q=nitrazepam",
+      "Fonte primária/oficial - https://www.hpra.ie/find-a-medicine/for-human-use/authorised-medicines"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/search?q=nitrazepam"
+  }
+};})();
+/* GOLD33_SELECTIVE:nitrazepam:END */

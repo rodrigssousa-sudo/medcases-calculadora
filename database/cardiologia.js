@@ -1843,3 +1843,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:manidipina:END */
+/* GOLD33_SELECTIVE:nifedipina:START */
+;(function(){var db=window.CARDIOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nifedipina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nifedipina:"+matches.length);drug=matches[0];}else{drug=db&&db["nifedipina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nifedipina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "055",
+    "requiredFieldCount": 33,
+    "approvedSha256": "66de27fa500997712b3fa75feb4f7118d6d192d9a26ed1116f35481851314f46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Nifedipina",
+    "class": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "commercialNames": "Procardia XL; Adalat CC",
+    "presentation": "Comprimidos de liberação prolongada.",
+    "presentations": "Comprimidos de liberação prolongada.",
+    "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, produzindo vasodilatação e redução da resistência vascular sistêmica.",
+    "pharmacodynamics": "Bloqueia canais de cálcio tipo L no músculo liso arterial, produzindo vasodilatação e redução da resistência vascular sistêmica.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Hipertensão; angina crônica estável ou vasoespástica conforme produto de liberação prolongada",
+    "dose": "hypertensionER: 30 mg uma vez ao dia em jejum; titular conforme eficácia e segurança ao longo de 7-14 dias; manutenção 30-60 mg/dia; não se recomenda titular acima de 90 mg/dia na bula citada.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "edema periférico; cefaleia; rubor; tontura; palpitações",
+    "dangerousAdverseEffects": "hipotensão sintomática; piora de angina no início ou aumento de dose em doença coronariana grave; reação de hipersensibilidade rara",
+    "adverseEffects": "Edema periférico, cefaleia, rubor, tontura e náusea.; Hipotensão, piora de angina/infarto, insuficiência cardíaca e obstrução GI com formulação não deformável.",
+    "contraindications": "Hipersensibilidade ao fármaco; avaliar hipotensão grave individualmente",
+    "interactions": "Outros anti-hipertensivos aumentam hipotensão; Inibidores de CYP3A4 podem aumentar exposição; Indutores de CYP3A4 podem reduzir exposição; Grapefruit é clinicamente relevante especialmente para nifedipino e felodipino",
+    "monitoring": "Evitar trocas não equivalentes entre formulações de liberação imediata e prolongada; Titular lentamente em hepatopatia importante.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipotensão, piora de angina/infarto, insuficiência cardíaca e obstrução GI com formulação não deformável.",
+    "alerts": "Hipotensão, piora de angina/infarto, insuficiência cardíaca e obstrução GI com formulação não deformável.; Evitar trocas não equivalentes entre formulações de liberação imediata e prolongada; Titular lentamente em hepatopatia importante.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nifedipine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019684s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nifedipine"
+  },
+  "es": {
+    "name": "Nifedipina",
+    "class": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "pharmacologicClass": "Bloqueador de canais de cálcio di-hidropiridínico",
+    "commercialNames": "Procardia XL; Adalat CC",
+    "presentation": "Comprimidos de liberação prolongada.",
+    "presentations": "Comprimidos de liberação prolongada.",
+    "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso arterial, produzindo vasodilatação y redução da resistência vascular sistêmica.",
+    "pharmacodynamics": "Bloqueia canais de cálcio tipo L no músculo liso arterial, produzindo vasodilatação y redução da resistência vascular sistêmica.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Hipertensão; angina crônica estável ou vasoespástica conforme produto de liberação prolongada",
+    "dose": "hypertensionER: 30 mg uma vez ao dia em jejum; titular conforme eficácia y seguridad ao longo de 7-14 dias; manutenção 30-60 mg/dia; no se recomenda titular acima de 90 mg/dia na bula citada.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "edema periférico; cefaleia; rubor; tontura; palpitações",
+    "dangerousAdverseEffects": "hipotensão sintomática; piora de angina no início ou aumento de dosis em doença coronariana grave; reação de hipersensibilidade rara",
+    "adverseEffects": "Edema periférico, cefaleia, rubor, tontura y náusea.; Hipotensão, piora de angina/infarto, insuficiência cardíaca y obstrução GI con formulação no deformável.",
+    "contraindications": "Hipersensibilidade ao fármaco; avaliar hipotensão grave individualmente",
+    "interactions": "Outros anti-hipertensivos aumentam hipotensão; Inibidores de CYP3A4 podem aumentar exposição; Indutores de CYP3A4 podem reduzir exposição; Grapefruit é clinicamente relevante especialmente para nifedipino y felodipino",
+    "monitoring": "Evitar trocas no equivalentes entre formulações de liberação imediata y prolongada; Titular lentamente em hepatopatia importante.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipotensão, piora de angina/infarto, insuficiência cardíaca y obstrução GI con formulação no deformável.",
+    "alerts": "Hipotensão, piora de angina/infarto, insuficiência cardíaca y obstrução GI con formulação no deformável.; Evitar trocas no equivalentes entre formulações de liberação imediata y prolongada; Titular lentamente em hepatopatia importante.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nifedipine",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/019684s026lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nifedipine"
+  }
+};})();
+/* GOLD33_SELECTIVE:nifedipina:END */

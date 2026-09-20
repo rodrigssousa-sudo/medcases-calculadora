@@ -6,141 +6,79 @@
   "colorTxt": null,
   "pt": {
     "name": "Nitazoxanida",
-    "class": "Antiprotozoário",
-    "pharmacologicClass": "Tiazolida; inibidor de vias enzimáticas dependentes de PFOR",
+    "class": "Antiprotozoário tiazolídeo",
+    "pharmacologicClass": "Antiprotozoário tiazolídeo",
     "mechanism": "Seu metabólito ativo tizoxanida interfere com a reação de transferência de elétrons dependente de piruvato:ferredoxina oxidorredutase em anaeróbios/protozoários suscetíveis.",
-    "pharmacodynamics": "Ativa contra Giardia lamblia e Cryptosporidium parvum em hospedeiros imunocompetentes; resposta em imunodeficiência por Cryptosporidium é limitada.",
-    "pharmacokinetics": "Convertida rapidamente em tizoxanida; alta ligação proteica >99,9%, metabolismo por conjugação e eliminação biliar/urinária de metabólitos.",
+    "pharmacodynamics": "Seu metabólito ativo tizoxanida interfere com a reação de transferência de elétrons dependente de piruvato:ferredoxina oxidorredutase em anaeróbios/protozoários suscetíveis.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
     "indications": "Diarreia por Giardia lamblia ou Cryptosporidium parvum em pacientes imunocompetentes nas faixas etárias aprovadas.",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Comprimidos e suspensão oral.",
-    "presentations": [
-      "500 mg comprimido",
-      "100 mg/5 mL suspensão"
-    ],
+    "presentations": "Comprimidos e suspensão oral.",
     "dose": ">=12 anos: 500 mg VO q12h com alimento por 3 dias.",
-    "pediatricDose": "1–3 anos: 100 mg q12h por 3 dias; 4–11 anos: 200 mg q12h por 3 dias; >=12 anos: 500 mg q12h por 3 dias. Sempre com alimento.",
-    "renalDose": "Farmacocinética não foi estudada em comprometimento renal; não existe ajuste validado. Tizoxanida é >99,9% ligada a proteínas e diálise provavelmente não reduz exposição de forma relevante.",
-    "hepaticDose": "Farmacocinética não foi estudada em comprometimento hepático; usar com cautela por ausência de dados.",
-    "commonAdverseEffects": [
-      "Dor abdominal",
-      "Cefaleia",
-      "Cromatúria",
-      "Náusea"
-    ],
-    "dangerousAdverseEffects": [
-      "Hipersensibilidade grave",
-      "Reação cutânea grave rara",
-      "Falha terapêutica em criptosporidiose de imunodeprimidos"
-    ],
-    "adverseEffects": "Em geral bem tolerada; dor abdominal, cefaleia, cromatúria e náusea são os eventos mais frequentes.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Dor abdominal; Cefaleia; Cromatúria; Náusea",
+    "dangerousAdverseEffects": "Hipersensibilidade grave; Reação cutânea grave rara; Falha terapêutica em criptosporidiose de imunodeprimidos",
+    "adverseEffects": "Dor abdominal, cefaleia, náusea e alteração da cor da urina.; Hipersensibilidade e possível toxicidade hepática; dados limitados em imunodeprimidos.",
     "contraindications": "Hipersensibilidade à nitazoxanida ou componentes.",
     "interactions": "Tizoxanida é altamente ligada a proteínas; monitorar fármacos também altamente ligados e de índice terapêutico estreito, como warfarina.",
-    "monitoring": "Resposta clínica/hidratação; INR se anticoagulado; considerar investigação de imunodeficiência em Cryptosporidium refratário.",
-    "administration": "VO com alimento para aumentar exposição.",
-    "preparation": "Suspensão deve ser reconstituída conforme fabricante e agitada antes de cada dose.",
-    "infusionProtocol": "Não aplicável; formulação oral.",
-    "pregnancy": "Sem dados humanos adequados para estimar risco; estudos animais não demonstraram teratogenicidade nas exposições avaliadas.",
-    "lactation": "Não há dados adequados sobre presença no leite; avaliar benefício da amamentação e necessidade materna.",
-    "specialPopulations": "Não demonstrou superioridade ao placebo para diarreia por C. parvum em pacientes HIV/imunodeficientes. Suspensão é necessária para <=11 anos.",
-    "patientEducation": "Tomar com alimento e completar 3 dias; mudança de cor da urina pode ocorrer.",
-    "clinicalPearls": "Não confundir formulações: comprimido 500 mg não deve ser usado em <=11 anos; a suspensão permite 100 mg e 200 mg por dose pediátrica.",
-    "guidelineRecommendations": "Usar para Giardia/Cryptosporidium nas populações e faixas etárias sustentadas pela bula; em imunodeficientes, tratar também a causa da imunossupressão e suporte.",
-    "safetyFlags": [
-      "Com alimento",
-      "Pediatria por suspensão",
-      "Renal/hepático não estudados",
-      "Alta ligação proteica",
-      "Eficácia limitada em Cryptosporidium imunodeficiente"
-    ],
-    "alerts": [
-      "1–3a: 100 mg q12h x3d",
-      "4–11a: 200 mg q12h x3d",
-      ">=12a: 500 mg q12h x3d",
-      "Comprimido não para <=11a",
-      "PK renal/hepática não estudada"
-    ],
+    "monitoring": "1–3a: 100 mg q12h x3d; 4–11a: 200 mg q12h x3d; >=12a: 500 mg q12h x3d; Comprimido não para <=11a; PK renal/hepática não estudada",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipersensibilidade e possível toxicidade hepática; dados limitados em imunodeprimidos.",
+    "alerts": "Hipersensibilidade e possível toxicidade hepática; dados limitados em imunodeprimidos.; 1–3a: 100 mg q12h x3d; 4–11a: 200 mg q12h x3d; >=12a: 500 mg q12h x3d; Comprimido não para <=11a; PK renal/hepática não estudada",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40a7cc30-76cd-49fe-965a-7823c4140d0f",
-      "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/cryptosporidium/hcp/clinical-care/index.html"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nitazoxanide",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021818s010,021497s013lbl.pdf"
     ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40a7cc30-76cd-49fe-965a-7823c4140d0f",
-      "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/cryptosporidium/hcp/clinical-care/index.html"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nitazoxanide"
   },
   "es": {
     "name": "Nitazoxanida",
-    "class": "Antiprotozoario",
-    "pharmacologicClass": "Tiazólida; inhibidor de vías enzimáticas dependientes de PFOR",
-    "mechanism": "Su metabolito activo tizoxanida interfiere con transferencia electrónica dependiente de piruvato:ferredoxina oxidorreductasa en anaerobios/protozoos susceptibles.",
-    "pharmacodynamics": "Activa frente a Giardia lamblia y Cryptosporidium parvum en inmunocompetentes; respuesta frente a Cryptosporidium en inmunodeficiencia es limitada.",
-    "pharmacokinetics": "Conversión rápida a tizoxanida; unión proteica >99,9%, metabolismo por conjugación y eliminación biliar/urinaria de metabolitos.",
-    "indications": "Diarrea por Giardia lamblia o Cryptosporidium parvum en pacientes inmunocompetentes en edades aprobadas.",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Comprimidos y suspensión oral.",
-    "presentations": [
-      "500 mg comprimido",
-      "100 mg/5 mL suspensión"
-    ],
-    "dose": ">=12 años: 500 mg VO q12h con alimentos por 3 días.",
-    "pediatricDose": "1–3 años: 100 mg q12h x3 días; 4–11 años: 200 mg q12h x3 días; >=12 años: 500 mg q12h x3 días. Siempre con alimentos.",
-    "renalDose": "Farmacocinética no estudiada en insuficiencia renal; no existe ajuste validado. Tizoxanida >99,9% unida a proteínas y diálisis probablemente no reduce exposición de forma relevante.",
-    "hepaticDose": "Farmacocinética no estudiada en insuficiencia hepática; usar con cautela por falta de datos.",
-    "commonAdverseEffects": [
-      "Dolor abdominal",
-      "Cefalea",
-      "Cromaturia",
-      "Náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "Hipersensibilidad grave",
-      "Reacción cutánea grave rara",
-      "Fracaso terapéutico en criptosporidiosis de inmunodeprimidos"
-    ],
-    "adverseEffects": "Generalmente bien tolerada; dolor abdominal, cefalea, cromaturia y náuseas son los eventos más frecuentes.",
-    "contraindications": "Hipersensibilidad a nitazoxanida o componentes.",
-    "interactions": "Tizoxanida está altamente ligada a proteínas; monitorizar fármacos también muy ligados e índice estrecho, como warfarina.",
-    "monitoring": "Respuesta clínica/hidratación; INR si anticoagulado; investigar inmunodeficiencia en Cryptosporidium refractario.",
-    "administration": "VO con alimentos para aumentar exposición.",
-    "preparation": "Suspensión reconstituida según fabricante y agitar antes de cada dosis.",
-    "infusionProtocol": "No aplicable; formulación oral.",
-    "pregnancy": "Sin datos humanos adecuados; estudios animales no mostraron teratogenicidad a exposiciones estudiadas.",
-    "lactation": "Sin datos adecuados en leche; valorar beneficios de lactancia y necesidad materna.",
-    "specialPopulations": "No mostró superioridad a placebo para C. parvum en pacientes HIV/inmunodeficientes. Suspensión necesaria para <=11 años.",
-    "patientEducation": "Tomar con alimentos y completar 3 días; puede cambiar el color de la orina.",
-    "clinicalPearls": "No confundir formulaciones: comprimido 500 mg no debe usarse en <=11 años; suspensión permite dosis 100/200 mg.",
-    "guidelineRecommendations": "Usar para Giardia/Cryptosporidium en poblaciones/edades sustentadas por ficha; en inmunodeficientes abordar causa de inmunosupresión y soporte.",
-    "safetyFlags": [
-      "Con alimentos",
-      "Pediatría por suspensión",
-      "Renal/hepático no estudiados",
-      "Alta unión proteica",
-      "Eficacia limitada en Cryptosporidium inmunodeficiente"
-    ],
-    "alerts": [
-      "1–3a: 100 mg q12h x3d",
-      "4–11a: 200 mg q12h x3d",
-      ">=12a: 500 mg q12h x3d",
-      "Comprimido no para <=11a",
-      "PK renal/hepática no estudiada"
-    ],
+    "class": "Antiprotozoário tiazolídeo",
+    "pharmacologicClass": "Antiprotozoário tiazolídeo",
+    "mechanism": "Seu metabólito ativo tizoxanida interfere con a reação de transferência de elétrons dependente de piruvato:ferredoxina oxidorredutase em anaeróbios/protozoários suscetíveis.",
+    "pharmacodynamics": "Seu metabólito ativo tizoxanida interfere con a reação de transferência de elétrons dependente de piruvato:ferredoxina oxidorredutase em anaeróbios/protozoários suscetíveis.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Diarreia por Giardia lamblia ou Cryptosporidium parvum em pacientes imunocompetentes nas faixas etárias aprovadas.",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Comprimidos y suspensão oral.",
+    "presentations": "Comprimidos y suspensão oral.",
+    "dose": ">=12 anos: 500 mg VO q12h con alimento por 3 dias.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Dor abdominal; Cefaleia; Cromatúria; Náusea",
+    "dangerousAdverseEffects": "Hipersensibilidade grave; Reação cutânea grave rara; Falha terapêutica em criptosporidiose de imunodeprimidos",
+    "adverseEffects": "Dor abdominal, cefaleia, náusea y alteração da cor da urina.; Hipersensibilidade y possível toxicidade hepática; dados limitados em imunodeprimidos.",
+    "contraindications": "Hipersensibilidade à nitazoxanida ou componentes.",
+    "interactions": "Tizoxanida é altamente ligada a proteínas; monitorizar fármacos também altamente ligados y de índice terapêutico estreito, como warfarina.",
+    "monitoring": "1–3a: 100 mg q12h x3d; 4–11a: 200 mg q12h x3d; >=12a: 500 mg q12h x3d; Comprimido no para <=11a; PK renal/hepática no estudada",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipersensibilidade y possível toxicidade hepática; dados limitados em imunodeprimidos.",
+    "alerts": "Hipersensibilidade y possível toxicidade hepática; dados limitados em imunodeprimidos.; 1–3a: 100 mg q12h x3d; 4–11a: 200 mg q12h x3d; >=12a: 500 mg q12h x3d; Comprimido no para <=11a; PK renal/hepática no estudada",
     "references": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40a7cc30-76cd-49fe-965a-7823c4140d0f",
-      "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/cryptosporidium/hcp/clinical-care/index.html"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nitazoxanide",
+      "Fonte primária/oficial - https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021818s010,021497s013lbl.pdf"
     ],
-    "ref": [
-      "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40a7cc30-76cd-49fe-965a-7823c4140d0f",
-      "https://www.cdc.gov/giardia/hcp/clinical-care/index.html",
-      "https://www.cdc.gov/cryptosporidium/hcp/clinical-care/index.html"
-    ]
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nitazoxanide"
   },
   "name": {
     "pt": "Nitazoxanida",
@@ -149,9 +87,21 @@
   "keywords": [
     "nitazoxanida"
   ],
-  "dataVersion": "clinical-data-v1-840b735ceb0e9d00",
-  "clinicalContentSha256": "840b735ceb0e9d009fac9fbd6cc2cf01ef41d1579093d9180047eef788fc534f",
+  "dataVersion": "clinical-data-v1-372cc19daa00dc60",
+  "clinicalContentSha256": "372cc19daa00dc603cb9e5922228440aeca0bf11db0fb63fae9083630298b3a0",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
-  "sourceModule": "infectologia.js"
+  "sourceModule": "infectologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/infectologia.js",
+    "sourceField": "nitazoxanida.mcGoldClinicalV1",
+    "lote": "055",
+    "requiredFields": 33,
+    "approvedSha256": "66de27fa500997712b3fa75feb4f7118d6d192d9a26ed1116f35481851314f46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

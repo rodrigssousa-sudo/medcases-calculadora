@@ -888,3 +888,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:metadona_cronico:END */
+/* GOLD33_SELECTIVE:nicotina_terapia:START */
+;(function(){var db=window.TOXICOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nicotina_terapia";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nicotina_terapia:"+matches.length);drug=matches[0];}else{drug=db&&db["nicotina_terapia"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nicotina_terapia");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "055",
+    "requiredFieldCount": 33,
+    "approvedSha256": "66de27fa500997712b3fa75feb4f7118d6d192d9a26ed1116f35481851314f46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Nicotina para reposição",
+    "class": "Agonista nicotínico usado em terapia de reposição",
+    "pharmacologicClass": "Agonista nicotínico usado em terapia de reposição",
+    "commercialNames": "br: Nicorette (goma/adesivo/pastilha); Niquitin (adesivo); Nicotinell (adesivo/goma); ar: Nicorette; Niquitin; Nicotinell",
+    "presentation": "Adesivo transdérmico 7 mg, 14 mg, 21 mg/24h; Goma de mascar 2 mg, 4 mg; Pastilha 2 mg, 4 mg; Spray nasal 0,5 mg/dose; Inalador bucal 10 mg/cartucho",
+    "presentations": "Adesivo transdérmico 7 mg, 14 mg, 21 mg/24h; Goma de mascar 2 mg, 4 mg; Pastilha 2 mg, 4 mg; Spray nasal 0,5 mg/dose; Inalador bucal 10 mg/cartucho",
+    "mechanism": "Repõe nicotina de forma controlada (sem os 4.000+ compostos tóxicos do cigarro), reduzindo sintomas de abstinência e fissura enquanto o paciente adapta comportamento.",
+    "pharmacodynamics": "Repõe nicotina de forma controlada (sem os 4.000+ compostos tóxicos do cigarro), reduzindo sintomas de abstinência e fissura enquanto o paciente adapta comportamento.",
+    "pharmacokinetics": "Meia-vida nicotina: ~2 horas (metabolismo hepático; cotinina meia-vida ~16h).",
+    "indications": "Auxílio à cessação do tabagismo com suporte comportamental.",
+    "dose": "adesivo: ≥20 cig/dia: Semanas 1–6: 21 mg/24h; Sem 7–8: 14 mg/24h; Sem 9–12: 7 mg/24h (retirada gradual).; goma: Goma 4 mg (fumante ≥20 cig/dia ou 1º cigarro ≤30 min após acordar); 2 mg para demais. Mascar lentamente (1 goma/1–2h; máx 24 gomas/dia).; combinada: TRN COMBINADA (maior eficácia): Adesivo (dose baseada em cigarros/dia) + Goma/Pastilha de resgate conforme fissura.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Adesivo: eritema local, prurido, insônia (remover à noite); Goma: dor mandibular, soluço, náusea (mascar incorretamente); Spray nasal: irritação nasal e ocular, rinorreia",
+    "dangerousAdverseEffects": "Doença cardiovascular ativa: risco de vasoconstrição — usar com cautela e monitorar",
+    "adverseEffects": "Náusea, soluços, irritação local, insônia, sonhos vívidos e palpitações.; Toxicidade nicotínica, arritmia, hipertensão e risco de envenenamento infantil.",
+    "contraindications": "absolute: IAM recente (<2 semanas); relative: Angina instável; Arritmia grave",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Toxicidade nicotínica, arritmia, hipertensão e risco de envenenamento infantil.",
+    "alerts": "Toxicidade nicotínica, arritmia, hipertensão e risco de envenenamento infantil.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nicotine+replacement",
+      "Fonte primária/oficial - https://www.cdc.gov/tobacco/campaign/tips/quit-smoking/quit-smoking-medications/index.html"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nicotine+replacement"
+  },
+  "es": {
+    "name": "Nicotina para reposição",
+    "class": "Agonista nicotínico usado em terapia de reposição",
+    "pharmacologicClass": "Agonista nicotínico usado em terapia de reposição",
+    "commercialNames": "br: Nicorette (goma/adesivo/pastilha); Niquitin (adesivo); Nicotinell (adesivo/goma); ar: Nicorette; Niquitin; Nicotinell",
+    "presentation": "Adesivo transdérmico 7 mg, 14 mg, 21 mg/24h; Goma de mascar 2 mg, 4 mg; Pastilha 2 mg, 4 mg; Spray nasal 0,5 mg/dosis; Inalador bucal 10 mg/cartucho",
+    "presentations": "Adesivo transdérmico 7 mg, 14 mg, 21 mg/24h; Goma de mascar 2 mg, 4 mg; Pastilha 2 mg, 4 mg; Spray nasal 0,5 mg/dosis; Inalador bucal 10 mg/cartucho",
+    "mechanism": "Repõe nicotina de forma controlada (sem os 4.000+ compostos tóxicos do cigarro), reduzindo sintomas de abstinência y fissura enquanto o paciente adapta comportamento.",
+    "pharmacodynamics": "Repõe nicotina de forma controlada (sem os 4.000+ compostos tóxicos do cigarro), reduzindo sintomas de abstinência y fissura enquanto o paciente adapta comportamento.",
+    "pharmacokinetics": "Meia-vida nicotina: ~2 horas (metabolismo hepático; cotinina meia-vida ~16h).",
+    "indications": "Auxílio à cessação do tabagismo con suporte comportamental.",
+    "dose": "adesivo: ≥20 cig/dia: Semanas 1–6: 21 mg/24h; Sem 7–8: 14 mg/24h; Sem 9–12: 7 mg/24h (retirada gradual).; goma: Goma 4 mg (fumante ≥20 cig/dia ou 1º cigarro ≤30 min após acordar); 2 mg para demais. Mascar lentamente (1 goma/1–2h; máx 24 gomas/dia).; combinada: TRN COMBINADA (maior eficácia): Adesivo (dosis baseada em cigarros/dia) + Goma/Pastilha de resgate conforme fissura.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Adesivo: eritema local, prurido, insônia (remover à noite); Goma: dor mandibular, soluço, náusea (mascar incorretamente); Spray nasal: irritação nasal y ocular, rinorreia",
+    "dangerousAdverseEffects": "Doença cardiovascular ativa: riesgo de vasoconstrição — usar con cautela y monitorizar",
+    "adverseEffects": "Náusea, soluços, irritação local, insônia, sonhos vívidos y palpitações.; Toxicidade nicotínica, arritmia, hipertensão y riesgo de envenenamento infantil.",
+    "contraindications": "absolute: IAM recente (<2 semanas); relative: Angina instável; Arritmia grave",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Toxicidade nicotínica, arritmia, hipertensão y riesgo de envenenamento infantil.",
+    "alerts": "Toxicidade nicotínica, arritmia, hipertensão y riesgo de envenenamento infantil.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nicotine+replacement",
+      "Fonte primária/oficial - https://www.cdc.gov/tobacco/campaign/tips/quit-smoking/quit-smoking-medications/index.html"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=nicotine+replacement"
+  }
+};})();
+/* GOLD33_SELECTIVE:nicotina_terapia:END */

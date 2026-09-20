@@ -7834,3 +7834,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:naproxeno:END */
+/* GOLD33_SELECTIVE:nimesulida:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="nimesulida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:nimesulida:"+matches.length);drug=matches[0];}else{drug=db&&db["nimesulida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:nimesulida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "055",
+    "requiredFieldCount": 33,
+    "approvedSha256": "66de27fa500997712b3fa75feb4f7118d6d192d9a26ed1116f35481851314f46",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Nimesulida",
+    "class": "Anti-inflamatório não esteroide seletivo preferencial de COX-2",
+    "pharmacologicClass": "Anti-inflamatório não esteroide seletivo preferencial de COX-2",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos ou grânulos 100 mg conforme país; disponibilidade regulatória varia.",
+    "presentations": "Comprimidos ou grânulos 100 mg conforme país; disponibilidade regulatória varia.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
+    "indications": "Dor aguda e dismenorreia primária onde aprovada, como segunda linha e pelo menor tempo possível.",
+    "dose": "Adultos: 100 mg VO duas vezes/dia após refeições; duração máxima 15 dias segundo restrições europeias. Uso pediátrico e em hepatopatia é contraindicado/restrito conforme rótulo.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
+    "commonAdverseEffects": "Náusea, diarreia, dispepsia, tontura e edema.",
+    "dangerousAdverseEffects": "Hepatotoxicidade grave, sangramento/perfuração GI, lesão renal, reações cutâneas e eventos cardiovasculares.",
+    "adverseEffects": "Náusea, diarreia, dispepsia, tontura e edema.; Hepatotoxicidade grave, sangramento/perfuração GI, lesão renal, reações cutâneas e eventos cardiovasculares.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
+    "preparation": "Confirmar concentração, diluição e estabilidade no produto; não inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
+    "pregnancy": "Avaliar risco fetal, indicação e bula.",
+    "lactation": "Avaliar excreção e risco-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade grave, sangramento/perfuração GI, lesão renal, reações cutâneas e eventos cardiovasculares.",
+    "alerts": "Hepatotoxicidade grave, sangramento/perfuração GI, lesão renal, reações cutâneas e eventos cardiovasculares.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/medicines/human/referrals/nimesulide",
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/documents/referral/nimesulide-article-31-referral-annex-iii_en.pdf"
+    ],
+    "ref": "https://www.ema.europa.eu/en/medicines/human/referrals/nimesulide"
+  },
+  "es": {
+    "name": "Nimesulida",
+    "class": "Anti-inflamatório no esteroide seletivo preferencial de COX-2",
+    "pharmacologicClass": "Anti-inflamatório no esteroide seletivo preferencial de COX-2",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos ou grânulos 100 mg conforme país; disponibilidade regulatória varia.",
+    "presentations": "Comprimidos ou grânulos 100 mg conforme país; disponibilidade regulatória varia.",
+    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
+    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
+    "indications": "Dor aguda y dismenorreia primária onde aprovada, como segunda linha y pelo menor tempo possível.",
+    "dose": "Adultos: 100 mg VO duas vezes/dia após refeições; duração máxima 15 dias segundo restrições europeias. Uso pediátrico y em hepatopatia é contraindicado/restrito conforme rótulo.",
+    "pediatricDose": "Requer tabela completa por idade/peso; automação pediátrica bloqueada.",
+    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
+    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
+    "commonAdverseEffects": "Náusea, diarreia, dispepsia, tontura y edema.",
+    "dangerousAdverseEffects": "Hepatotoxicidade grave, sangramento/perfuração GI, lesão renal, reações cutâneas y eventos cardiovasculares.",
+    "adverseEffects": "Náusea, diarreia, dispepsia, tontura y edema.; Hepatotoxicidade grave, sangramento/perfuração GI, lesão renal, reações cutâneas y eventos cardiovasculares.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
+    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
+    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
+    "preparation": "Confirmar concentração, diluição y estabilidade no produto; no inferir.",
+    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
+    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
+    "lactation": "Avaliar excreção y riesgo-benefício.",
+    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
+    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
+    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade grave, sangramento/perfuração GI, lesão renal, reações cutâneas y eventos cardiovasculares.",
+    "alerts": "Hepatotoxicidade grave, sangramento/perfuração GI, lesão renal, reações cutâneas y eventos cardiovasculares.; monitorização obrigatória",
+    "references": [
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/medicines/human/referrals/nimesulide",
+      "Fonte primária/oficial - https://www.ema.europa.eu/en/documents/referral/nimesulide-article-31-referral-annex-iii_en.pdf"
+    ],
+    "ref": "https://www.ema.europa.eu/en/medicines/human/referrals/nimesulide"
+  }
+};})();
+/* GOLD33_SELECTIVE:nimesulida:END */
