@@ -6,178 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Trazodona",
-    "class": "Antidepressivo SARI",
+    "class": "Antidepressivo antagonista/recaptador de serotonina",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Donaren",
-        "Trazorel",
-        "Trazodona EMS"
-      ],
-      "ar": [
-        "Trazodona Bagó",
-        "Trazodona Gador",
-        "Deprax"
-      ]
-    },
-    "presentation": [
-      "Comprimido 50 mg",
-      "Comprimido 100 mg",
-      "Comprimido LP 150 mg",
-      "Comprimido LP 300 mg"
-    ],
-    "dose": {
-      "adulto": "Depressão: iniciar 50–100 mg/dia; dose usual 150–300 mg/dia.",
-      "insonia": "Insônia: 25–100 mg VO ao deitar.",
-      "maxDose": "Dose máxima: 400 mg/dia ambulatorial; até 600 mg/dia hospitalar."
-    },
+    "commercialNames": "br: Donaren; Trazorel; Trazodona EMS; ar: Trazodona Bagó; Trazodona Gador; Deprax",
+    "presentation": "Comprimido 50 mg; Comprimido 100 mg; Comprimido LP 150 mg; Comprimido LP 300 mg",
+    "dose": "adulto: Depressão: iniciar 50–100 mg/dia; dose usual 150–300 mg/dia.; insonia: Insônia: 25–100 mg VO ao deitar.; maxDose: Dose máxima: 400 mg/dia ambulatorial; até 600 mg/dia hospitalar.",
     "doseKg": {
       "standard": "Não se utiliza cálculo por kg.",
       "pediatric": "Uso pediátrico especializado.",
       "maxDose": "600 mg/dia"
     },
-    "indications": [
-      "Transtorno depressivo maior",
-      "Insônia crônica",
-      "Depressão com insônia",
-      "Transtorno de ansiedade generalizada",
-      "Transtorno do pânico",
-      "TEPT",
-      "Fibromialgia",
-      "Distúrbios do sono em idosos"
-    ],
+    "indications": "Transtorno depressivo maior; Insônia crônica; Depressão com insônia; Transtorno de ansiedade generalizada; Transtorno do pânico; TEPT; Fibromialgia; Distúrbios do sono em idosos",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Inibe recaptação de serotonina e antagoniza receptores 5HT2A/5HT2C, com forte efeito sedativo.",
     "onset": "Melhora do sono em poucos dias; efeito antidepressivo em 2–4 semanas.",
     "halfLife": "Vida média aproximada: 5–13 horas.",
-    "commonAdverseEffects": [
-      "Sonolência",
-      "Tontura",
-      "Boca seca",
-      "Cefaleia",
-      "Hipotensão ortostática",
-      "Náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "Priapismo",
-      "Arritmias cardíacas",
-      "Prolongamento QT",
-      "Síndrome serotoninérgica",
-      "Virada maníaca"
-    ],
+    "commonAdverseEffects": "Sonolência; Tontura; Boca seca; Cefaleia; Hipotensão ortostática; Náuseas",
+    "dangerousAdverseEffects": "Priapismo; Arritmias cardíacas; Prolongamento QT; Síndrome serotoninérgica; Virada maníaca",
     "risksByPatient": [],
-    "contraindications": [
-      "Uso concomitante com IMAO",
-      "Hipersensibilidade ao medicamento"
-    ],
-    "interactions": [
-      "IMAO",
-      "Álcool",
-      "Benzodiazepínicos",
-      "ISRS/ISRN",
-      "Antiarrítmicos"
-    ],
-    "alerts": [
-      "Priapismo é raro, mas constitui emergência médica.",
-      "Muito utilizada para insônia em baixas doses.",
-      "Monitorar risco de quedas em idosos."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA Trazodone",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Uso concomitante com IMAO; Hipersensibilidade ao medicamento",
+    "interactions": "IMAO; Álcool; Benzodiazepínicos; ISRS/ISRN; Antiarrítmicos",
+    "alerts": "Priapismo, síndrome serotoninérgica, QT/arrítmia, suicidabilidade, hiponatremia e sangramento.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trazodona",
+    "pharmacologicClass": "Antidepressivo antagonista/recaptador de serotonina",
+    "presentations": "Comprimido 50 mg; Comprimido 100 mg; Comprimido LP 150 mg; Comprimido LP 300 mg",
+    "pharmacodynamics": "Inibe recaptação de serotonina e antagoniza receptores 5HT2A/5HT2C, com forte efeito sedativo.",
+    "pharmacokinetics": "Vida média aproximada: 5–13 horas.",
+    "pediatricDose": "standard: Não se utiliza cálculo por kg.; pediatric: Uso pediátrico especializado.; maxDose: 600 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "adverseEffects": "Sonolência, tontura, boca seca, náusea e hipotensão.; Priapismo, síndrome serotoninérgica, QT/arrítmia, suicidabilidade, hiponatremia e sangramento.",
+    "monitoring": "Priapismo é raro, mas constitui emergência médica.; Muito utilizada para insônia em baixas doses.; Monitorar risco de quedas em idosos.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Priapismo, síndrome serotoninérgica, QT/arrítmia, suicidabilidade, hiponatremia e sangramento.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trazodona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "es": {
     "name": "Trazodona",
-    "class": "Antidepresivo SARI",
+    "class": "Antidepressivo antagonista/recaptador de serotonina",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Donaren",
-        "Trazorel",
-        "Trazodona EMS"
-      ],
-      "ar": [
-        "Trazodona Bagó",
-        "Trazodona Gador",
-        "Deprax"
-      ]
-    },
-    "presentation": [
-      "Comprimido 50 mg",
-      "Comprimido 100 mg",
-      "Comprimido LP 150 mg",
-      "Comprimido LP 300 mg"
-    ],
-    "dose": {
-      "adulto": "Depresión: iniciar 50–100 mg/día; dosis habitual 150–300 mg/día.",
-      "insonia": "Insomnio: 25–100 mg VO al acostarse.",
-      "maxDose": "Dosis máxima: 400 mg/día ambulatoria; hasta 600 mg/día hospitalaria."
-    },
+    "commercialNames": "br: Donaren; Trazorel; Trazodona EMS; ar: Trazodona Bagó; Trazodona Gador; Deprax",
+    "presentation": "Comprimido 50 mg; Comprimido 100 mg; Comprimido LP 150 mg; Comprimido LP 300 mg",
+    "dose": "adulto: Depressão: iniciar 50–100 mg/dia; dosis usual 150–300 mg/dia.; insonia: Insônia: 25–100 mg VO ao deitar.; maxDose: Dose máxima: 400 mg/dia ambulatorial; até 600 mg/dia hospitalar.",
     "doseKg": {
       "standard": "No se utiliza cálculo por kg.",
       "pediatric": "Uso pediátrico especializado.",
       "maxDose": "600 mg/día"
     },
-    "indications": [
-      "Trastorno depresivo mayor",
-      "Insomnio crónico",
-      "Depresión con insomnio",
-      "Trastorno de ansiedad generalizada",
-      "Trastorno de pánico",
-      "TEPT",
-      "Fibromialgia",
-      "Trastornos del sueño en adultos mayores"
-    ],
+    "indications": "Transtorno depressivo maior; Insônia crônica; Depressão con insônia; Transtorno de ansiedade generalizada; Transtorno do pânico; TEPT; Fibromialgia; Distúrbios do sono em idosos",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Inhibe recaptación de serotonina y antagoniza receptores 5HT2A/5HT2C, con fuerte efecto sedativo.",
+    "mechanism": "Inibe recaptação de serotonina y antagoniza receptores 5HT2A/5HT2C, con forte efeito sedativo.",
     "onset": "Mejoría del sueño en pocos días; efecto antidepresivo en 2–4 semanas.",
     "halfLife": "Vida media aproximada: 5–13 horas.",
-    "commonAdverseEffects": [
-      "Somnolencia",
-      "Mareos",
-      "Boca seca",
-      "Cefalea",
-      "Hipotensión ortostática",
-      "Náuseas"
-    ],
-    "dangerousAdverseEffects": [
-      "Priapismo",
-      "Arritmias cardíacas",
-      "Prolongación QT",
-      "Síndrome serotoninérgico",
-      "Viraje maníaco"
-    ],
+    "commonAdverseEffects": "Sonolência; Tontura; Boca seca; Cefaleia; Hipotensão ortostática; Náuseas",
+    "dangerousAdverseEffects": "Priapismo; Arritmias cardíacas; Prolongamento QT; Síndrome serotoninérgica; Virada maníaca",
     "risksByPatient": [],
-    "contraindications": [
-      "Uso concomitante con IMAO",
-      "Hipersensibilidad al medicamento"
-    ],
-    "interactions": [
-      "IMAO",
-      "Alcohol",
-      "Benzodiazepinas",
-      "ISRS/IRSN",
-      "Antiarrítmicos"
-    ],
-    "alerts": [
-      "El priapismo es raro, pero constituye una emergencia médica.",
-      "Muy utilizada para insomnio en dosis bajas.",
-      "Monitorizar riesgo de caídas en adultos mayores."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA Trazodone",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Uso concomitante con IMAO; Hipersensibilidade ao medicamento",
+    "interactions": "IMAO; Álcool; Benzodiazepínicos; ISRS/ISRN; Antiarrítmicos",
+    "alerts": "Priapismo, síndrome serotoninérgica, QT/arrítmia, suicidabilidade, hiponatremia y sangramento.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trazodona",
+    "pharmacologicClass": "Antidepressivo antagonista/recaptador de serotonina",
+    "presentations": "Comprimido 50 mg; Comprimido 100 mg; Comprimido LP 150 mg; Comprimido LP 300 mg",
+    "pharmacodynamics": "Inibe recaptação de serotonina y antagoniza receptores 5HT2A/5HT2C, con forte efeito sedativo.",
+    "pharmacokinetics": "Vida média aproximada: 5–13 horas.",
+    "pediatricDose": "standard: No se utiliza cálculo por kg.; pediatric: Uso pediátrico especializado.; maxDose: 600 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "adverseEffects": "Sonolência, tontura, boca seca, náusea y hipotensão.; Priapismo, síndrome serotoninérgica, QT/arrítmia, suicidabilidade, hiponatremia y sangramento.",
+    "monitoring": "Priapismo é raro, mas constitui emergência médica.; Muito utilizada para insônia em baixas dosiss.; Monitorar risco de quedas em idosos.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Priapismo, síndrome serotoninérgica, QT/arrítmia, suicidabilidade, hiponatremia y sangramento.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trazodona",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "name": {
@@ -194,9 +116,21 @@
     "deprax",
     "antidepressivo sari"
   ],
-  "dataVersion": "clinical-data-v1-34025c39cd85ad08",
-  "clinicalContentSha256": "34025c39cd85ad085ebd489cc23e51270ae600de48f7e8226fff633d0f55de9a",
+  "dataVersion": "clinical-data-v1-39f63c56d9b803a5",
+  "clinicalContentSha256": "39f63c56d9b803a5aa41bfa09349e96a9489d9ca5f91dabf4b788f838551cc44",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "trazodona.mcGoldClinicalV1",
+    "lote": "079",
+    "requiredFields": 33,
+    "approvedSha256": "93d982fa330e017ae144b7449e7c25c94c7c1d86a3f0c1d8812549812e6fc9c1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

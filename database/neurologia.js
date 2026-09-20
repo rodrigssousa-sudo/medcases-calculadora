@@ -17290,3 +17290,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:topiramato:END */
+/* GOLD33_SELECTIVE:triexifenidil:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="triexifenidil";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:triexifenidil:"+matches.length);drug=matches[0];}else{drug=db&&db["triexifenidil"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="triexifenidil";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:triexifenidil:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:triexifenidil");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "079",
+    "requiredFieldCount": 33,
+    "approvedSha256": "93d982fa330e017ae144b7449e7c25c94c7c1d86a3f0c1d8812549812e6fc9c1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Triexifenidil",
+    "class": "Antimuscarínico antiparkinsoniano",
+    "pharmacologicClass": "Antimuscarínico antiparkinsoniano",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos e solução oral em forças específicas.",
+    "presentations": "Comprimidos e solução oral em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Doença de Parkinson e sintomas extrapiramidais induzidos por medicamentos em pacientes selecionados.",
+    "dose": "Iniciar baixo e titular; cautela em idosos, glaucoma, retenção urinária e comprometimento cognitivo. Retirar gradualmente.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Boca seca, visão turva, constipação, náusea e tontura.",
+    "dangerousAdverseEffects": "Delírio, hipertermia, glaucoma agudo, retenção urinária e abuso/dependência.",
+    "adverseEffects": "Boca seca, visão turva, constipação, náusea e tontura.; Delírio, hipertermia, glaucoma agudo, retenção urinária e abuso/dependência.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Delírio, hipertermia, glaucoma agudo, retenção urinária e abuso/dependência.",
+    "alerts": "Delírio, hipertermia, glaucoma agudo, retenção urinária e abuso/dependência.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=triexifenidil",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=triexifenidil"
+  },
+  "es": {
+    "name": "Triexifenidil",
+    "class": "Antimuscarínico antiparkinsoniano",
+    "pharmacologicClass": "Antimuscarínico antiparkinsoniano",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos y solución oral em forças específicas.",
+    "presentations": "Comprimidos y solución oral em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Doença de Parkinson y sintomas extrapiramidais induzidos por medicamentos em pacientes selecionados.",
+    "dose": "Iniciar baixo y titular; cautela em idosos, glaucoma, retenção urinária y comprometimento cognitivo. Retirar gradualmente.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Boca seca, visão turva, constipação, náusea y tontura.",
+    "dangerousAdverseEffects": "Delírio, hipertermia, glaucoma agudo, retenção urinária y abuso/dependência.",
+    "adverseEffects": "Boca seca, visão turva, constipação, náusea y tontura.; Delírio, hipertermia, glaucoma agudo, retenção urinária y abuso/dependência.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Delírio, hipertermia, glaucoma agudo, retenção urinária y abuso/dependência.",
+    "alerts": "Delírio, hipertermia, glaucoma agudo, retenção urinária y abuso/dependência.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=triexifenidil",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=triexifenidil"
+  }
+};})();
+/* GOLD33_SELECTIVE:triexifenidil:END */

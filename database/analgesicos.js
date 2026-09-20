@@ -8734,3 +8734,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:tacrolimo:END */
+/* GOLD33_SELECTIVE:tramadol:START */
+;(function(){var db=window.ANALGESICOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="tramadol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tramadol:"+matches.length);drug=matches[0];}else{drug=db&&db["tramadol"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="tramadol";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tramadol:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:tramadol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "079",
+    "requiredFieldCount": 33,
+    "approvedSha256": "93d982fa330e017ae144b7449e7c25c94c7c1d86a3f0c1d8812549812e6fc9c1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Tramadol",
+    "class": "Analgésico opioide com atividade monoaminérgica",
+    "pharmacologicClass": "Analgésico opioide com atividade monoaminérgica",
+    "commercialNames": "Tramadol e marcas locais.",
+    "presentation": "Comprimido IR 50 mg e formulações ER; confirmar produto.",
+    "presentations": "Comprimido IR 50 mg e formulações ER; confirmar produto.",
+    "mechanism": "Tramadol e metabólito M1 atuam em receptor μ; o fármaco também reduz recaptação de serotonina e noradrenalina.",
+    "pharmacodynamics": "Tramadol e metabólito M1 atuam em receptor μ; o fármaco também reduz recaptação de serotonina e noradrenalina.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Dor intensa que exige opioide quando alternativas são inadequadas.",
+    "dose": "IR adulto: 50–100 mg q4–6h se necessário; máximo 400 mg/dia. Se não houver necessidade de início rápido, pode-se titular desde 25 mg/dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, vômitos, constipação, sonolência, tontura, prurido e retenção urinária.",
+    "dangerousAdverseEffects": "Depressão respiratória potencialmente fatal, sedação profunda/coma, hipotensão, dependência e abstinência.",
+    "adverseEffects": "Náusea, tontura, constipação, sonolência e cefaleia.; Depressão respiratória, síndrome serotoninérgica, convulsões, dependência, hipoglicemia e morte.",
+    "contraindications": "Depressão respiratória significativa, asma aguda/grave em ambiente não monitorado, obstrução GI conhecida/suspeita, hipersensibilidade e contraindicações específicas.",
+    "interactions": "Além de depressores SNC, ISRS/ISRN/triptanos/IMAO aumentam síndrome serotoninérgica; CYP2D6/3A4 altera exposição a tramadol/M1.",
+    "monitoring": "Não usar com IMAO em 14 dias; atenção a hiponatremia, hipoglicemia e serotoninérgicos.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Depressão respiratória, síndrome serotoninérgica, convulsões, dependência, hipoglicemia e morte.",
+    "alerts": "Depressão respiratória, síndrome serotoninérgica, convulsões, dependência, hipoglicemia e morte.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tramadol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tramadol"
+  },
+  "es": {
+    "name": "Tramadol",
+    "class": "Analgésico opioide con atividade monoaminérgica",
+    "pharmacologicClass": "Analgésico opioide con atividade monoaminérgica",
+    "commercialNames": "Tramadol y marcas locais.",
+    "presentation": "Comprimido IR 50 mg y formulações ER; confirmar produto.",
+    "presentations": "Comprimido IR 50 mg y formulações ER; confirmar produto.",
+    "mechanism": "Tramadol y metabólito M1 atuam em receptor μ; o fármaco também reduz recaptação de serotonina y noradrenalina.",
+    "pharmacodynamics": "Tramadol y metabólito M1 atuam em receptor μ; o fármaco também reduz recaptação de serotonina y noradrenalina.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Dor intensa que exige opioide quando alternativas são inadequadas.",
+    "dose": "IR adulto: 50–100 mg q4–6h se necessário; máximo 400 mg/dia. Se no houver necessidade de início rápido, pode-se titular desde 25 mg/dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, vômitos, constipação, sonolência, tontura, prurido y retenção urinária.",
+    "dangerousAdverseEffects": "Depressão respiratória potencialmente fatal, sedação profunda/coma, hipotensão, dependência y abstinência.",
+    "adverseEffects": "Náusea, tontura, constipação, sonolência y cefaleia.; Depressão respiratória, síndrome serotoninérgica, convulsões, dependência, hipoglicemia y morte.",
+    "contraindications": "Depressão respiratória significativa, asma aguda/grave em ambiente no monitorado, obstrução GI conhecida/suspeita, hipersensibilidade y contraindicações específicas.",
+    "interactions": "Além de depressores SNC, ISRS/ISRN/triptanos/IMAO aumentam síndrome serotoninérgica; CYP2D6/3A4 altera exposição a tramadol/M1.",
+    "monitoring": "No usar con IMAO em 14 dias; atenção a hiponatremia, hipoglicemia y serotoninérgicos.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Depressão respiratória, síndrome serotoninérgica, convulsões, dependência, hipoglicemia y morte.",
+    "alerts": "Depressão respiratória, síndrome serotoninérgica, convulsões, dependência, hipoglicemia y morte.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tramadol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tramadol"
+  }
+};})();
+/* GOLD33_SELECTIVE:tramadol:END */

@@ -72780,3 +72780,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:torsemida:END */
+/* GOLD33_SELECTIVE:treprostinil:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="treprostinil";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:treprostinil:"+matches.length);drug=matches[0];}else{drug=db&&db["treprostinil"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="treprostinil";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:treprostinil:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:treprostinil");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "079",
+    "requiredFieldCount": 33,
+    "approvedSha256": "93d982fa330e017ae144b7449e7c25c94c7c1d86a3f0c1d8812549812e6fc9c1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Treprostinil",
+    "class": "Análogo da prostaciclina",
+    "pharmacologicClass": "Análogo da prostaciclina",
+    "commercialNames": "Remodulin; treprostinil injetável.",
+    "presentation": "Solução injetável em frascos de 20 mL com 0,1; 0,2; 0,4; 1; 2,5; 5; 10 ou 20 mg/mL.",
+    "presentations": "Solução injetável em frascos de 20 mL com 0,1; 0,2; 0,4; 1; 2,5; 5; 10 ou 20 mg/mL.",
+    "mechanism": "Análogo estável da prostaciclina que promove vasodilatação pulmonar e sistêmica e inibe agregação plaquetária.",
+    "pharmacodynamics": "Análogo estável da prostaciclina que promove vasodilatação pulmonar e sistêmica e inibe agregação plaquetária.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "HAP WHO Grupo 1 por infusão contínua SC ou IV para reduzir sintomas associados ao exercício; também pode ser usada em transição selecionada de epoprostenol.",
+    "dose": "Paciente sem prostaciclina: iniciar 1,25 ng/kg/min em infusão contínua SC ou IV; se efeitos sistêmicos limitantes, 0,625 ng/kg/min. Aumentar 1,25 ng/kg/min por semana nas primeiras 4 semanas e depois 2,5 ng/kg/min por semana conforme resposta e tolerância.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Dor e reação no sítio SC, cefaleia, diarreia, náusea, dor mandibular, vasodilatação, edema e hipotensão.",
+    "dangerousAdverseEffects": "Piora abrupta da HAP por interrupção ou grande redução de dose, hipotensão sintomática, sangramento e infecção/sepse relacionada a cateter IV.",
+    "adverseEffects": "Cefaleia, rubor, diarreia, dor mandibular e reação no local.; Hipotensão, sangramento, infecção do cateter e rebote de hipertensão pulmonar por interrupção.",
+    "contraindications": "A bula de Remodulin não lista contraindicações formais; riscos da via, hipotensão, sangramento e hipersensibilidade exigem avaliação individual.",
+    "interactions": "Inibidores ou indutores de CYP2C8 podem alterar exposição e exigir ajuste; anticoagulantes e antiagregantes podem aumentar risco de sangramento.",
+    "monitoring": "Qualquer interrupção da infusão deve ser corrigida prontamente por equipe treinada; revisar bomba, acesso, concentração e taxa.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipotensão, sangramento, infecção do cateter e rebote de hipertensão pulmonar por interrupção.",
+    "alerts": "Hipotensão, sangramento, infecção do cateter e rebote de hipertensão pulmonar por interrupção.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=treprostinil",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=treprostinil"
+  },
+  "es": {
+    "name": "Treprostinil",
+    "class": "Análogo da prostaciclina",
+    "pharmacologicClass": "Análogo da prostaciclina",
+    "commercialNames": "Remodulin; treprostinil injetável.",
+    "presentation": "Solução injetável em frascos de 20 mL con 0,1; 0,2; 0,4; 1; 2,5; 5; 10 ou 20 mg/mL.",
+    "presentations": "Solução injetável em frascos de 20 mL con 0,1; 0,2; 0,4; 1; 2,5; 5; 10 ou 20 mg/mL.",
+    "mechanism": "Análogo estável da prostaciclina que promove vasodilatação pulmonar y sistêmica y inibe agregação plaquetária.",
+    "pharmacodynamics": "Análogo estável da prostaciclina que promove vasodilatação pulmonar y sistêmica y inibe agregação plaquetária.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "HAP WHO Grupo 1 por infusão contínua SC ou IV para reduzir sintomas associados ao exercício; também pode ser usada em transição selecionada de epoprostenol.",
+    "dose": "Paciente sem prostaciclina: iniciar 1,25 ng/kg/min em infusão contínua SC ou IV; se efeitos sistêmicos limitantes, 0,625 ng/kg/min. Aumentar 1,25 ng/kg/min por semana nas primeiras 4 semanas y depois 2,5 ng/kg/min por semana conforme resposta y tolerância.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Dor y reação no sítio SC, cefaleia, diarreia, náusea, dor mandibular, vasodilatação, edema y hipotensão.",
+    "dangerousAdverseEffects": "Piora abrupta da HAP por interrupção ou grande redução de dosis, hipotensão sintomática, sangramento y infecção/sepse relacionada a cateter IV.",
+    "adverseEffects": "Cefaleia, rubor, diarreia, dor mandibular y reação no local.; Hipotensão, sangramento, infecção do cateter y rebote de hipertensão pulmonar por interrupção.",
+    "contraindications": "A bula de Remodulin no lista contraindicações formais; riscos da via, hipotensão, sangramento y hipersensibilidade exigem avaliação individual.",
+    "interactions": "Inibidores ou indutores de CYP2C8 podem alterar exposição y exigir ajuste; anticoagulantes y antiagregantes podem aumentar risco de sangramento.",
+    "monitoring": "Qualquer interrupção da infusão deve ser corrigida prontamente por equipe treinada; revisar bomba, acesso, concentração y taxa.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipotensão, sangramento, infecção do cateter y rebote de hipertensão pulmonar por interrupção.",
+    "alerts": "Hipotensão, sangramento, infecção do cateter y rebote de hipertensão pulmonar por interrupção.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=treprostinil",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=treprostinil"
+  }
+};})();
+/* GOLD33_SELECTIVE:treprostinil:END */

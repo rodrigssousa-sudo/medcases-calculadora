@@ -4914,3 +4914,93 @@ Object.assign(window.GASTROENTEROLOGIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:tofacitinibe:END */
+/* GOLD33_SELECTIVE:trimebutina:START */
+;(function(){var db=window.GASTROENTEROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="trimebutina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:trimebutina:"+matches.length);drug=matches[0];}else{drug=db&&db["trimebutina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="trimebutina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:trimebutina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:trimebutina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "079",
+    "requiredFieldCount": 33,
+    "approvedSha256": "93d982fa330e017ae144b7449e7c25c94c7c1d86a3f0c1d8812549812e6fc9c1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Trimebutina",
+    "class": "Modulador periférico da motilidade gastrointestinal",
+    "pharmacologicClass": "Modulador periférico da motilidade gastrointestinal",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, cápsulas e suspensão oral em concentrações específicas.",
+    "presentations": "Comprimidos, cápsulas e suspensão oral em concentrações específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Distúrbios funcionais gastrointestinais onde aprovada, conforme sintomas e jurisdição.",
+    "dose": "Dose e duração dependem da formulação, idade e rótulo local. Confirmar concentração pediátrica e excluir sinais de alarme antes do tratamento sintomático.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Boca seca, náusea, constipação, diarreia e tontura.",
+    "dangerousAdverseEffects": "Hipersensibilidade, hipotensão e reações cutâneas graves raras.",
+    "adverseEffects": "Boca seca, náusea, constipação, diarreia e tontura.; Hipersensibilidade, hipotensão e reações cutâneas graves raras.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipersensibilidade, hipotensão e reações cutâneas graves raras.",
+    "alerts": "Hipersensibilidade, hipotensão e reações cutâneas graves raras.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trimebutina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trimebutina"
+  },
+  "es": {
+    "name": "Trimebutina",
+    "class": "Modulador periférico da motilidade gastrointestinal",
+    "pharmacologicClass": "Modulador periférico da motilidade gastrointestinal",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos, cápsulas y suspensão oral em concentrações específicas.",
+    "presentations": "Comprimidos, cápsulas y suspensão oral em concentrações específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Distúrbios funcionais gastrointestinais onde aprovada, conforme sintomas y jurisdição.",
+    "dose": "Dose y duração dependem da formulação, idade y rótulo local. Confirmar concentração pediátrica y excluir sinais de alarme antes do tratamento sintomático.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Boca seca, náusea, constipação, diarreia y tontura.",
+    "dangerousAdverseEffects": "Hipersensibilidade, hipotensão y reações cutâneas graves raras.",
+    "adverseEffects": "Boca seca, náusea, constipação, diarreia y tontura.; Hipersensibilidade, hipotensão y reações cutâneas graves raras.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipersensibilidade, hipotensão y reações cutâneas graves raras.",
+    "alerts": "Hipersensibilidade, hipotensão y reações cutâneas graves raras.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trimebutina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=trimebutina"
+  }
+};})();
+/* GOLD33_SELECTIVE:trimebutina:END */
