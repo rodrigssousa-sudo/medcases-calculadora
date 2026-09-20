@@ -71250,3 +71250,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:reteplase:END */
+/* GOLD33_SELECTIVE:riociguate:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="riociguate";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:riociguate:"+matches.length);drug=matches[0];}else{drug=db&&db["riociguate"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:riociguate");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "068",
+    "requiredFieldCount": 33,
+    "approvedSha256": "7c3b2d3928792c6b8b17e56777218cc4e0927bcc162bbd5a90b8f36ec6eafb17",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Riociguate",
+    "class": "Estimulador da guanilato ciclase solúvel",
+    "pharmacologicClass": "Estimulador da guanilato ciclase solúvel",
+    "commercialNames": "Adempas.",
+    "presentation": "Comprimidos revestidos de 0,5 mg, 1 mg, 1,5 mg, 2 mg e 2,5 mg.",
+    "presentations": "Comprimidos revestidos de 0,5 mg, 1 mg, 1,5 mg, 2 mg e 2,5 mg.",
+    "mechanism": "Sensibiliza a guanilato ciclase solúvel ao óxido nítrico endógeno e também estimula diretamente a sGC, aumentando GMPc.",
+    "pharmacodynamics": "Sensibiliza a guanilato ciclase solúvel ao óxido nítrico endógeno e também estimula diretamente a sGC, aumentando GMPc.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Adultos com HPTEC inoperável ou persistente/recorrente após tratamento cirúrgico e adultos com HAP WHO Grupo 1 para melhorar capacidade de exercício e desfechos clínicos.",
+    "dose": "Iniciar geralmente 1 mg VO três vezes ao dia, com intervalo aproximado de 6-8 h; considerar 0,5 mg três vezes ao dia se risco de hipotensão. Titular em passos de 0,5 mg a cada 2 semanas até 2,5 mg três vezes ao dia conforme PA e tolerância.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, dispepsia/gastrite, tontura, náusea, diarreia, hipotensão, vômitos, anemia e refluxo.",
+    "dangerousAdverseEffects": "Toxicidade embriofetal, hipotensão sintomática, hemoptise e hemorragia pulmonar grave.",
+    "adverseEffects": "Cefaleia, tontura, dispepsia, edema e hipotensão.; Hipotensão grave, sangramento, hemoptise e toxicidade embriofetal.",
+    "contraindications": "Gravidez; nitratos ou doadores de óxido nítrico; inibidores PDE5 ou PDE inespecíficos; outros estimuladores de sGC; hipertensão pulmonar associada a pneumonias intersticiais idiopáticas.",
+    "interactions": "Nitratos e PDE5 são contraindicados. Separar antiácidos contendo alumínio/magnésio por pelo menos 1 h; tabagismo reduz exposição. Inibidores potentes de múltiplas vias CYP/P-gp/BCRP podem elevar exposição.",
+    "monitoring": "Não administrar junto com PDE5. Respeitar intervalo de transição e interromper/ajustar se hipotensão sintomática.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipotensão grave, sangramento, hemoptise e toxicidade embriofetal.",
+    "alerts": "Hipotensão grave, sangramento, hemoptise e toxicidade embriofetal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=riociguate",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=riociguate"
+  },
+  "es": {
+    "name": "Riociguate",
+    "class": "Estimulador da guanilato ciclase solúvel",
+    "pharmacologicClass": "Estimulador da guanilato ciclase solúvel",
+    "commercialNames": "Adempas.",
+    "presentation": "Comprimidos revestidos de 0,5 mg, 1 mg, 1,5 mg, 2 mg y 2,5 mg.",
+    "presentations": "Comprimidos revestidos de 0,5 mg, 1 mg, 1,5 mg, 2 mg y 2,5 mg.",
+    "mechanism": "Sensibiliza a guanilato ciclase solúvel ao óxido nítrico endógeno y também estimula diretamente a sGC, aumentando GMPc.",
+    "pharmacodynamics": "Sensibiliza a guanilato ciclase solúvel ao óxido nítrico endógeno y também estimula diretamente a sGC, aumentando GMPc.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Adultos con HPTEC inoperável ou persistente/recorrente após tratamento cirúrgico y adultos con HAP WHO Grupo 1 para melhorar capacidade de exercício y desfechos clínicos.",
+    "dose": "Iniciar geralmente 1 mg VO três vezes ao dia, con intervalo aproximado de 6-8 h; considerar 0,5 mg três vezes ao dia se risco de hipotensão. Titular em passos de 0,5 mg a cada 2 semanas até 2,5 mg três vezes ao dia conforme PA y tolerância.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, dispepsia/gastrite, tontura, náusea, diarreia, hipotensão, vômitos, anemia y refluxo.",
+    "dangerousAdverseEffects": "Toxicidade embriofetal, hipotensão sintomática, hemoptise y hemorragia pulmonar grave.",
+    "adverseEffects": "Cefaleia, tontura, dispepsia, edema y hipotensão.; Hipotensão grave, sangramento, hemoptise y toxicidade embriofetal.",
+    "contraindications": "Gravidez; nitratos ou doadores de óxido nítrico; inibidores PDE5 ou PDE inespecíficos; outros estimuladores de sGC; hipertensão pulmonar associada a pneumonias intersticiais idiopáticas.",
+    "interactions": "Nitratos y PDE5 são contraindicados. Separar antiácidos contendo alumínio/magnésio por pelo menos 1 h; tabagismo reduz exposição. Inibidores potentes de múltiplas vias CYP/P-gp/BCRP podem elevar exposição.",
+    "monitoring": "No administrar junto con PDE5. Respeitar intervalo de transição y interromper/ajustar se hipotensão sintomática.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipotensão grave, sangramento, hemoptise y toxicidade embriofetal.",
+    "alerts": "Hipotensão grave, sangramento, hemoptise y toxicidade embriofetal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=riociguate",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=riociguate"
+  }
+};})();
+/* GOLD33_SELECTIVE:riociguate:END */

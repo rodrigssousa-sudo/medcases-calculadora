@@ -6,10 +6,8 @@
   "colorTxt": null,
   "pt": {
     "name": "Rifampicina",
-    "class": "Antimicobacteriano rifamicina",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "class": "Rifamicina antimicobacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Cápsulas 150 e 300 mg; formulação IV em alguns mercados.",
     "dose": "Tuberculose em adultos: 10 mg/kg VO uma vez ao dia, máximo 600 mg/dia, sempre como parte de esquema combinado adequado.",
     "doseKg": {
@@ -19,79 +17,45 @@
     "therapeuticRange": "Concentração dependente. Indutor potente de CYP450 — múltiplas interações.",
     "dilution": "EV: reconstituir e diluir conforme protocolo institucional.",
     "speed": "EV: infundir em 30–180 minutos.",
-    "commonAdverseEffects": [
-      "Náusea",
-      "Dor abdominal",
-      "Coloração laranja-avermelhada de urina/lágrimas",
-      "Rash"
-    ],
-    "dangerousAdverseEffects": [
-      "Hepatite/falência hepática",
-      "Trombocitopenia",
-      "Hemólise",
-      "Insuficiência renal aguda",
-      "Reação de hipersensibilidade"
-    ],
+    "commonAdverseEffects": "Náusea; Dor abdominal; Coloração laranja-avermelhada de urina/lágrimas; Rash",
+    "dangerousAdverseEffects": "Hepatite/falência hepática; Trombocitopenia; Hemólise; Insuficiência renal aguda; Reação de hipersensibilidade",
     "risksByPatient": [],
-    "alerts": [
-      "TB sempre em combinação",
-      "Indução enzimática maciça",
-      "Monitorar fígado",
-      "Interações com azóis/ARV/anticoagulantes",
-      "Fluidos laranja-avermelhados"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cb75e95-d165-4580-9340-42d7a9fd546e",
-      "https://www.idsociety.org/practice-guideline/treatment-of-drug-susceptible-tb/treatment-of-drug-resistant-and-drug-susceptible-tb-2025-update/",
-      "https://www.cdc.gov/tb/hcp/treatment/tuberculosis-disease.html"
-    ],
-    "renalDose": "Em geral não requer redução da dose diária usual até 600 mg em insuficiência renal; confirmar bula/protocolo em disfunção renal grave ou diálise.",
-    "pharmacologicClass": "Rifamicina; potente indutor enzimático e de transportadores",
+    "alerts": "Hepatotoxicidade, trombocitopenia, hemólise, insuficiência renal e interações graves.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rifampicina",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "pharmacologicClass": "Rifamicina antimicobacteriana",
     "mechanism": "Liga-se à subunidade beta da RNA-polimerase DNA-dependente bacteriana e inibe síntese de RNA.",
-    "pharmacodynamics": "Bactericida concentração-dependente contra micobactérias suscetíveis; resistência emerge rapidamente em monoterapia na doença tuberculosa ativa.",
-    "pharmacokinetics": "Boa absorção oral; ampla distribuição; metabolismo hepático com autoindução. Excreção predominantemente biliar/fecal e parte renal.",
+    "pharmacodynamics": "Liga-se à subunidade beta da RNA-polimerase DNA-dependente bacteriana e inibe síntese de RNA.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
     "indications": "Tuberculose em combinação, hanseníase em esquemas combinados, profilaxia de meningococo/H. influenzae e usos selecionados contra biofilme por Gram-positivos conforme protocolo.",
-    "presentations": [
-      "150 mg",
-      "300 mg",
-      "IV conforme produto"
-    ],
-    "pediatricDose": "Tuberculose pediátrica: 10–20 mg/kg VO uma vez ao dia, máximo 600 mg/dia, em esquema combinado conforme diretriz.",
-    "hepaticDose": "Hepatopatia exige uso apenas quando necessário, supervisão estrita e função hepática basal e a cada 2–4 semanas conforme bula.",
-    "adverseEffects": "Hepatotoxicidade pode ser hepatocelular, colestática ou mista e raramente fulminante; esquemas intermitentes/reinício aumentam reações imunológicas.",
+    "presentations": "Cápsulas 150 e 300 mg; formulação IV em alguns mercados.",
+    "pediatricDose": "standard: 10–20 mg/kg/dia; maxDose: 600 mg/dia",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "adverseEffects": "Coloração de secreções, náusea, rash e elevação de transaminases.; Hepatotoxicidade, trombocitopenia, hemólise, insuficiência renal e interações graves.",
     "contraindications": "Hipersensibilidade às rifamicinas e combinações medicamentosas formalmente contraindicadas pela bula devido a indução enzimática relevante.",
     "interactions": "Potente indutor de CYP3A4, CYP2C9, CYP2C19, UGT e P-gp; pode reduzir exposição de anticoagulantes, antirretrovirais, azóis, anticoncepcionais, imunossupressores e muitos outros.",
-    "monitoring": "AST/ALT, bilirrubina e sintomas hepáticos; hemograma quando indicado; revisar interações na introdução e na retirada.",
-    "administration": "VO em jejum, idealmente 1 h antes ou 2 h após alimento, com água; IV usa a mesma dose quando indicada.",
-    "preparation": "Cápsulas não exigem preparo. Suspensão extemporânea/IV somente conforme formulação validada.",
-    "infusionProtocol": "Se IV, reconstituir e infundir conforme bula específica; preferir VO quando absorção é adequada.",
-    "pregnancy": "Pode ser usada quando necessária em esquemas de TB, com avaliação obstétrica e do risco hemorrágico periparto conforme contexto.",
-    "lactation": "Compatibilidade depende do contexto terapêutico; pequena quantidade pode passar ao leite. Seguir diretriz de TB e monitorar lactente.",
-    "specialPopulations": "Hepatopatia, consumo de álcool e uso concomitante de hepatotóxicos elevam risco. Reinício após interrupção requer atenção a reações imunológicas.",
-    "patientEducation": "Urina, suor, saliva e lágrimas podem ficar laranja-avermelhados; lentes de contato podem manchar. Usar contracepção alternativa se interação reduzir eficácia hormonal.",
-    "clinicalPearls": "Nunca usar rifampicina isoladamente para TB ativa. A indução enzimática começa após introdução e persiste algum tempo após suspensão, exigindo revisão ativa de interações.",
-    "guidelineRecommendations": "Diretrizes atuais de TB mantêm rifamicinas como eixo de esquemas combinados para doença suscetível; escolher regime e duração conforme diretriz, resistência e interações.",
-    "safetyFlags": [
-      "Potente indutor CYP/P-gp",
-      "Hepatotoxicidade",
-      "Não monoterapia para TB ativa",
-      "Trombocitopenia",
-      "Coloração de fluidos"
-    ],
+    "monitoring": "TB sempre em combinação; Indução enzimática maciça; Monitorar fígado; Interações com azóis/ARV/anticoagulantes; Fluidos laranja-avermelhados",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, trombocitopenia, hemólise, insuficiência renal e interações graves.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cb75e95-d165-4580-9340-42d7a9fd546e",
-      "https://www.idsociety.org/practice-guideline/treatment-of-drug-susceptible-tb/treatment-of-drug-resistant-and-drug-susceptible-tb-2025-update/",
-      "https://www.cdc.gov/tb/hcp/treatment/tuberculosis-disease.html"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rifampicina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "es": {
     "name": "Rifampicina",
-    "class": "Antimicobacteriano rifamicina",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Cápsulas de 150 y 300 mg; formulación IV en algunos mercados.",
-    "dose": "Tuberculosis en adultos: 10 mg/kg VO una vez al día, máximo 600 mg/día, siempre dentro de un esquema combinado adecuado.",
+    "class": "Rifamicina antimicobacteriana",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Cápsulas 150 y 300 mg; formulação IV em alguns mercados.",
+    "dose": "Tuberculose em adultos: 10 mg/kg VO uma vez ao dia, máximo 600 mg/dia, sempre como parte de esquema combinado adequado.",
     "doseKg": {
       "standard": "10–20 mg/kg/día",
       "maxDose": "600 mg/día"
@@ -99,69 +63,37 @@
     "therapeuticRange": "Concentración dependiente. Inductor potente de CYP450 — múltiples interacciones.",
     "dilution": "EV: reconstituir y diluir según protocolo institucional.",
     "speed": "EV: infundir en 30–180 minutos.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Dolor abdominal",
-      "Color naranja-rojizo de orina/lágrimas",
-      "Rash"
-    ],
-    "dangerousAdverseEffects": [
-      "Hepatitis/fallo hepático",
-      "Trombocitopenia",
-      "Hemólisis",
-      "Insuficiencia renal aguda",
-      "Hipersensibilidad"
-    ],
+    "commonAdverseEffects": "Náusea; Dor abdominal; Coloração laranja-avermelhada de urina/lágrimas; Rash",
+    "dangerousAdverseEffects": "Hepatite/falência hepática; Trombocitopenia; Hemólise; Insuficiência renal aguda; Reação de hipersensibilidade",
     "risksByPatient": [],
-    "alerts": [
-      "TB siempre combinada",
-      "Inducción enzimática masiva",
-      "Monitorizar hígado",
-      "Interacciones con azoles/ARV/anticoagulantes",
-      "Fluidos naranja-rojizos"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cb75e95-d165-4580-9340-42d7a9fd546e",
-      "https://www.idsociety.org/practice-guideline/treatment-of-drug-susceptible-tb/treatment-of-drug-resistant-and-drug-susceptible-tb-2025-update/",
-      "https://www.cdc.gov/tb/hcp/treatment/tuberculosis-disease.html"
-    ],
-    "renalDose": "En general no requiere reducir la dosis diaria usual hasta 600 mg en insuficiencia renal; confirmar ficha/protocolo en enfermedad renal grave o diálisis.",
-    "pharmacologicClass": "Rifamicina; potente inductor enzimático y de transportadores",
-    "mechanism": "Se une a la subunidad beta de RNA-polimerasa DNA-dependiente bacteriana e inhibe síntesis de RNA.",
-    "pharmacodynamics": "Bactericida concentración-dependiente frente a micobacterias susceptibles; la resistencia aparece rápidamente con monoterapia de TB activa.",
-    "pharmacokinetics": "Buena absorción oral; amplia distribución; metabolismo hepático con autoinducción. Excreción principalmente biliar/fecal y parcialmente renal.",
-    "indications": "Tuberculosis en combinación, lepra en esquemas combinados, profilaxis meningocócica/H. influenzae y usos selectos contra biofilm según protocolo.",
-    "presentations": [
-      "150 mg",
-      "300 mg",
-      "IV según producto"
-    ],
-    "pediatricDose": "Tuberculosis pediátrica: 10–20 mg/kg VO una vez al día, máximo 600 mg/día, en esquema combinado según guía.",
-    "hepaticDose": "Hepatopatía exige uso solo si es necesario, supervisión estricta y función hepática basal y cada 2–4 semanas según ficha.",
-    "adverseEffects": "La hepatotoxicidad puede ser hepatocelular, colestásica o mixta y raramente fulminante; esquemas intermitentes/reinicio aumentan reacciones inmunológicas.",
-    "contraindications": "Hipersensibilidad a rifamicinas y combinaciones formalmente contraindicadas por la ficha debido a inducción enzimática relevante.",
-    "interactions": "Potente inductor de CYP3A4, CYP2C9, CYP2C19, UGT y P-gp; reduce exposición de anticoagulantes, antirretrovirales, azoles, anticonceptivos, inmunosupresores y muchos otros.",
-    "monitoring": "AST/ALT, bilirrubina y síntomas hepáticos; hemograma cuando corresponda; revisar interacciones al iniciar y suspender.",
-    "administration": "VO en ayunas, idealmente 1 h antes o 2 h después de alimentos, con agua; IV usa la misma dosis cuando está indicada.",
-    "preparation": "Cápsulas no requieren preparación. Suspensión extemporánea/IV solo según formulación validada.",
-    "infusionProtocol": "Si IV, reconstituir e infundir según ficha específica; preferir VO cuando la absorción es adecuada.",
-    "pregnancy": "Puede usarse cuando sea necesaria en esquemas de TB, con evaluación obstétrica y del riesgo hemorrágico periparto.",
-    "lactation": "La compatibilidad depende del contexto; pequeñas cantidades pasan a leche. Seguir guía de TB y monitorizar lactante.",
-    "specialPopulations": "Hepatopatía, alcohol y otros hepatotóxicos elevan riesgo. Reinicio tras interrupción requiere atención a reacciones inmunológicas.",
-    "patientEducation": "Orina, sudor, saliva y lágrimas pueden tornarse naranja-rojizos; puede teñir lentes de contacto. Usar anticoncepción alternativa si disminuye eficacia hormonal.",
-    "clinicalPearls": "Nunca usar rifampicina sola para TB activa. La inducción enzimática comienza tras introducirla y persiste después de suspenderla, por lo que las interacciones deben revisarse activamente.",
-    "guidelineRecommendations": "Guías actuales de TB mantienen rifamicinas como eje de esquemas combinados para enfermedad susceptible; seleccionar régimen y duración según guía, resistencia e interacciones.",
-    "safetyFlags": [
-      "Potente inductor CYP/P-gp",
-      "Hepatotoxicidad",
-      "No monoterapia en TB activa",
-      "Trombocitopenia",
-      "Coloración de fluidos"
-    ],
+    "alerts": "Hepatotoxicidade, trombocitopenia, hemólise, insuficiência renal y interações graves.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rifampicina",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "pharmacologicClass": "Rifamicina antimicobacteriana",
+    "mechanism": "Liga-se à subunidade beta da RNA-polimerase DNA-dependente bacteriana y inibe síntese de RNA.",
+    "pharmacodynamics": "Liga-se à subunidade beta da RNA-polimerase DNA-dependente bacteriana y inibe síntese de RNA.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Tuberculose em combinação, hanseníase em esquemas combinados, profilaxia de meningococo/H. influenzae y usos selecionados contra biofilme por Gram-positivos conforme protocolo.",
+    "presentations": "Cápsulas 150 y 300 mg; formulação IV em alguns mercados.",
+    "pediatricDose": "standard: 10–20 mg/kg/dia; maxDose: 600 mg/dia",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "adverseEffects": "Coloração de secreções, náusea, rash y elevação de transaminases.; Hepatotoxicidade, trombocitopenia, hemólise, insuficiência renal y interações graves.",
+    "contraindications": "Hipersensibilidade às rifamicinas y combinações medicamentosas formalmente contraindicadas pela bula devido a indução enzimática relevante.",
+    "interactions": "Potente indutor de CYP3A4, CYP2C9, CYP2C19, UGT y P-gp; pode reduzir exposição de anticoagulantes, antirretrovirais, azóis, anticoncepcionais, imunossupressores y muitos outros.",
+    "monitoring": "TB sempre em combinação; Indução enzimática maciça; Monitorar fígado; Interações con azóis/ARV/anticoagulantes; Fluidos laranja-avermelhados",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, trombocitopenia, hemólise, insuficiência renal y interações graves.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cb75e95-d165-4580-9340-42d7a9fd546e",
-      "https://www.idsociety.org/practice-guideline/treatment-of-drug-susceptible-tb/treatment-of-drug-resistant-and-drug-susceptible-tb-2025-update/",
-      "https://www.cdc.gov/tb/hcp/treatment/tuberculosis-disease.html"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=rifampicina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "name": {
@@ -176,9 +108,21 @@
     "rifampicina richet",
     "rifamicina (antituberculoso / anti-estafilococico adjuvante)"
   ],
-  "dataVersion": "clinical-data-v1-106294d61d614ad1",
-  "clinicalContentSha256": "106294d61d614ad11482285c9ccd9b0cab1b08f0ffb02be63f80c36036d1415d",
+  "dataVersion": "clinical-data-v1-81243285072add83",
+  "clinicalContentSha256": "81243285072add831f20f682f13f0354cdefe2558245c5f7cfce3dd47b916ce3",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "rifampicina.mcGoldClinicalV1",
+    "lote": "068",
+    "requiredFields": 33,
+    "approvedSha256": "7c3b2d3928792c6b8b17e56777218cc4e0927bcc162bbd5a90b8f36ec6eafb17",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }
