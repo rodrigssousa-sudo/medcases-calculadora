@@ -73680,3 +73680,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:vutrisiran:END */
+/* GOLD33_SELECTIVE:fluvastatina:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="fluvastatina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:fluvastatina:"+matches.length);drug=matches[0];}else{drug=db&&db["fluvastatina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="fluvastatina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:fluvastatina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:fluvastatina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "036",
+    "requiredFieldCount": 33,
+    "approvedSha256": "c6145d4887f3525a184934302d2876e8e6a0206672c691f4b48588959dc5a435",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fluvastatina",
+    "class": "Estatina",
+    "pharmacologicClass": "Inibidor da HMG-CoA redutase",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 20/40 mg e comprimido de liberação prolongada 80 mg.",
+    "presentations": "Cápsulas 20/40 mg e comprimido de liberação prolongada 80 mg.",
+    "mechanism": "Inibidor da HMG-CoA redutase. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo principal CYP2C9; meia-vida curta, efeito lipídico prolongado.",
+    "indications": "Redução de LDL e risco cardiovascular em pacientes selecionados; dislipidemias específicas.",
+    "dose": "20–40 mg VO uma ou duas vezes/dia; liberação prolongada 80 mg 1x/dia. Máximo 80 mg/dia.",
+    "pediatricDose": "Hipercolesterolemia familiar heterozigótica ≥10 anos: 20–80 mg/dia conforme resposta. AUTOMATABLE=NO.",
+    "renalDose": "Cautela em insuficiência renal grave; doses >40 mg pouco estudadas.",
+    "hepaticDose": "Contraindicada em doença hepática ativa/descompensada; monitorar clinicamente.",
+    "commonAdverseEffects": "Dispepsia, dor abdominal, cefaleia e mialgia.",
+    "dangerousAdverseEffects": "Miopatia/rabdomiólise, hepatotoxicidade e hiperglicemia.",
+    "adverseEffects": "Dispepsia, dor abdominal, cefaleia e mialgia. Graves: Miopatia/rabdomiólise, hepatotoxicidade e hiperglicemia.",
+    "contraindications": "Doença hepática ativa/descompensada e hipersensibilidade.",
+    "interactions": "Ciclosporina, fluconazol/CYP2C9, fibratos, niacina, colchicina e varfarina.",
+    "monitoring": "Lipídios 4–12 semanas após mudança, sintomas musculares, fígado quando indicado e glicemia.",
+    "administration": "VO com ou sem alimento; engolir liberação prolongada inteira.",
+    "preparation": "Comprimido/cápsula pronta.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Interromper na maioria das gestantes; decisão excepcional individual.",
+    "lactation": "Não recomendada durante amamentação.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Miopatia/rabdomiólise, hepatotoxicidade e hiperglicemia. Seleção/intensidade bloqueadas sem risco CV, LDL, fígado, função renal, sintomas musculares e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluvastatin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/020261s040lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluvastatin"
+  },
+  "es": {
+    "name": "Fluvastatina",
+    "class": "Estatina",
+    "pharmacologicClass": "Inhibidor de HMG-CoA reductasa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 20/40 mg y comprimido de liberación prolongada 80 mg.",
+    "presentations": "Cápsulas 20/40 mg y comprimido de liberación prolongada 80 mg.",
+    "mechanism": "Inhibidor de HMG-CoA reductasa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo principal CYP2C9; semivida corta, efecto lipídico prolongado.",
+    "indications": "Reducción de LDL y riesgo cardiovascular en pacientes seleccionados; dislipidemias específicas.",
+    "dose": "20–40 mg VO una o dos veces/día; liberación prolongada 80 mg 1 vez/día. Máximo 80 mg/día.",
+    "pediatricDose": "Hipercolesterolemia familiar heterocigota ≥10 años: 20–80 mg/día según respuesta. AUTOMATABLE=NO.",
+    "renalDose": "Precaución en insuficiencia renal grave; dosis >40 mg poco estudiadas.",
+    "hepaticDose": "Contraindicada en enfermedad hepática activa/descompensada; vigilancia clínica.",
+    "commonAdverseEffects": "Dispepsia, dolor abdominal, cefalea y mialgia.",
+    "dangerousAdverseEffects": "Miopatía/rabdomiólisis, hepatotoxicidad e hiperglucemia.",
+    "adverseEffects": "Dispepsia, dolor abdominal, cefalea y mialgia. Graves: Miopatía/rabdomiólisis, hepatotoxicidad e hiperglucemia.",
+    "contraindications": "Enfermedad hepática activa/descompensada e hipersensibilidad.",
+    "interactions": "Ciclosporina, fluconazol/CYP2C9, fibratos, niacina, colchicina y warfarina.",
+    "monitoring": "Lípidos 4–12 semanas tras cambio, síntomas musculares, hígado cuando se indique y glucemia.",
+    "administration": "VO con o sin alimentos; tragar liberación prolongada entera.",
+    "preparation": "Comprimido/cápsula lista.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Suspender en la mayoría de embarazadas; decisión excepcional individual.",
+    "lactation": "No recomendada durante lactancia.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Miopatía/rabdomiólisis, hepatotoxicidad e hiperglucemia. Seleção/intensidade bloqueadas sem risco CV, LDL, fígado, função renal, sintomas musculares e interações.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluvastatin",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/020261s040lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluvastatin"
+  }
+};})();
+/* GOLD33_SELECTIVE:fluvastatina:END */

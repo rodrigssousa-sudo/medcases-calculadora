@@ -3087,3 +3087,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:triancinolona_topica:END */
+/* GOLD33_SELECTIVE:fluocinolona:START */
+;(function(){var db=window.ALERGIA_IMUNOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="fluocinolona";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:fluocinolona:"+matches.length);drug=matches[0];}else{drug=db&&db["fluocinolona"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="fluocinolona";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:fluocinolona:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:fluocinolona");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "036",
+    "requiredFieldCount": 33,
+    "approvedSha256": "c6145d4887f3525a184934302d2876e8e6a0206672c691f4b48588959dc5a435",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fluocinolona acetonida",
+    "class": "Corticosteroide tópico",
+    "pharmacologicClass": "Agonista do receptor glicocorticoide",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Creme/unguento/solução 0,01% ou 0,025%, óleo capilar/corporal 0,01% e solução ótica 0,01%, conforme produto.",
+    "presentations": "Creme/unguento/solução 0,01% ou 0,025%, óleo capilar/corporal 0,01% e solução ótica 0,01%, conforme produto.",
+    "mechanism": "Agonista do receptor glicocorticoide. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Absorção percutânea depende da barreira; metabolização hepática após absorção.",
+    "indications": "Dermatoses inflamatórias responsivas; formulações ótica, capilar e outras têm indicações próprias.",
+    "dose": "Aplicar camada fina 2–4 vezes/dia nas formas cutâneas usuais; frequência e duração dependem de local, potência e produto.",
+    "pediatricDose": "Uso, idade mínima e duração variam por formulação; evitar área extensa/oclusão sem especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste sistêmico; absorção aumenta em pele lesada, área extensa e oclusão.",
+    "hepaticDose": "Sem ajuste tabelado; cautela se exposição sistêmica relevante.",
+    "commonAdverseEffects": "Ardor, prurido, irritação, secura e foliculite.",
+    "dangerousAdverseEffects": "Atrofia, estrias, infecção, glaucoma/catarata e supressão adrenal.",
+    "adverseEffects": "Ardor, prurido, irritação, secura e foliculite. Graves: Atrofia, estrias, infecção, glaucoma/catarata e supressão adrenal.",
+    "contraindications": "Hipersensibilidade; contraindicações adicionais variam por produto e infecção não tratada.",
+    "interactions": "Poucas interações tópicas; outros corticosteroides aumentam exposição sistêmica.",
+    "monitoring": "Resposta local, atrofia, infecção, crescimento infantil e sinais de supressão HPA em uso extenso.",
+    "administration": "Uso exclusivamente na via e área indicadas; evitar olhos, face, virilha e axila salvo orientação.",
+    "preparation": "Produto pronto; não intercambiar creme, óleo, solução ótica ou implante.",
+    "infusionProtocol": "Não aplicável às formas tópicas.",
+    "pregnancy": "Usar menor potência/área/duração necessárias.",
+    "lactation": "Evitar aplicação no mamilo antes da mamada; limitar exposição.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Atrofia, estrias, infecção, glaucoma/catarata e supressão adrenal. Seleção e duração bloqueadas sem formulação, concentração, local, extensão, idade e presença de infecção.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluocinolone+acetonide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/208251s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluocinolone+acetonide"
+  },
+  "es": {
+    "name": "Fluocinolona acetónido",
+    "class": "Corticosteroide tópico",
+    "pharmacologicClass": "Agonista del receptor glucocorticoide",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Crema/ungüento/solución 0,01% o 0,025%, aceite capilar/corporal 0,01% y solución ótica 0,01%, según producto.",
+    "presentations": "Crema/ungüento/solución 0,01% o 0,025%, aceite capilar/corporal 0,01% y solución ótica 0,01%, según producto.",
+    "mechanism": "Agonista del receptor glucocorticoide. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Absorción percutánea depende de barrera; metabolismo hepático tras absorción.",
+    "indications": "Dermatosis inflamatorias sensibles; formulaciones ótica, capilar y otras tienen indicaciones propias.",
+    "dose": "Aplicar capa fina 2–4 veces/día en formas cutáneas habituales; frecuencia y duración dependen de zona, potencia y producto.",
+    "pediatricDose": "Uso, edad mínima y duración varían por formulación; evitar área extensa/oclusión sin especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste sistémico; absorción aumenta en piel lesionada, área extensa y oclusión.",
+    "hepaticDose": "Sin ajuste tabulado; precaución si exposición sistémica relevante.",
+    "commonAdverseEffects": "Ardor, prurito, irritación, sequedad y foliculitis.",
+    "dangerousAdverseEffects": "Atrofia, estrías, infección, glaucoma/catarata y supresión suprarrenal.",
+    "adverseEffects": "Ardor, prurito, irritación, sequedad y foliculitis. Graves: Atrofia, estrías, infección, glaucoma/catarata y supresión suprarrenal.",
+    "contraindications": "Hipersensibilidad; contraindicaciones adicionales varían por producto e infección no tratada.",
+    "interactions": "Pocas interacciones tópicas; otros corticoides aumentan exposición sistémica.",
+    "monitoring": "Respuesta local, atrofia, infección, crecimiento infantil y signos de supresión HPA en uso extenso.",
+    "administration": "Uso solo por vía y zona indicadas; evitar ojos, cara, ingle y axila salvo indicación.",
+    "preparation": "Producto listo; no intercambiar crema, aceite, solución ótica o implante.",
+    "infusionProtocol": "No aplicable a formas tópicas.",
+    "pregnancy": "Usar menor potencia/área/duración necesarias.",
+    "lactation": "Evitar aplicación en pezón antes de amamantar; limitar exposición.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Atrofia, estrías, infección, glaucoma/catarata y supresión suprarrenal. Seleção e duração bloqueadas sem formulação, concentração, local, extensão, idade e presença de infecção.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluocinolone+acetonide",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/208251s000lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluocinolone+acetonide"
+  }
+};})();
+/* GOLD33_SELECTIVE:fluocinolona:END */

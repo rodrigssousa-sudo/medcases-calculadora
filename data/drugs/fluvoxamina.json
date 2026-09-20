@@ -6,194 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Fluvoxamina",
-    "class": "Antidepressivo ISRS",
+    "class": "ISRS",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Luvox",
-        "Revoc",
-        "Fluvoxamina Maleato"
-      ],
-      "ar": [
-        "Luvox",
-        "Dumirox",
-        "Fluvoxamina Gador",
-        "Fluvoxamina Northia"
-      ]
-    },
-    "presentation": [
-      "Comprimido 50 mg",
-      "Comprimido 100 mg",
-      "Comprimido de liberação prolongada 100 mg",
-      "Comprimido de liberação prolongada 150 mg"
-    ],
-    "dose": {
-      "adulto": "TOC/depressão: iniciar 50 mg VO à noite; titular gradualmente.",
-      "toc": "TOC: usual 100–300 mg/dia; doses acima de 100 mg podem ser divididas.",
-      "maxDose": "Dose máxima usual: 300 mg/dia."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Comprimidos 25, 50 e 100 mg; liberação prolongada em alguns mercados.",
+    "dose": "Iniciar 50 mg ao deitar; aumentar 50 mg a cada 4–7 dias; máximo 300 mg/dia; dividir doses >100 mg.",
     "doseKg": {
       "standard": "Não se utiliza cálculo rotineiro por kg em adultos.",
       "pediatric": "Pediatria/TOC: uso especializado; iniciar geralmente 25 mg à noite e titular lentamente.",
       "maxDose": "300 mg/dia"
     },
-    "indications": [
-      "Transtorno obsessivo-compulsivo",
-      "Transtorno depressivo maior",
-      "Transtorno de ansiedade social",
-      "Transtorno do pânico",
-      "Transtorno de ansiedade generalizada",
-      "Transtorno de estresse pós-traumático",
-      "Sintomas obsessivos em transtornos do espectro ansioso"
-    ],
+    "indications": "Transtorno obsessivo-compulsivo; indicações adicionais variam por país/formulação.",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Inibe seletivamente a recaptação de serotonina; possui forte efeito inibitório sobre CYP1A2 e CYP2C19.",
+    "mechanism": "Inibidor seletivo da recaptação de serotonina. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Início de efeito clínico geralmente em 2–4 semanas; em TOC a resposta pode demorar 8–12 semanas.",
     "halfLife": "Vida média aproximada: 15–22 horas.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Sonolência",
-      "Insônia",
-      "Cefaleia",
-      "Boca seca",
-      "Sudorese",
-      "Disfunção sexual"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome serotoninérgica",
-      "Interações medicamentosas graves por inibição enzimática",
-      "Ideação suicida em jovens no início do tratamento",
-      "Virada maníaca/hipomaníaca",
-      "Hiponatremia/SIADH",
-      "Sangramentos com AINEs/anticoagulantes"
-    ],
+    "commonAdverseEffects": "Náusea, sonolência, insônia, nervosismo, astenia e disfunção sexual.",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica, suicidabilidade, mania, hiponatremia, sangramento e convulsões.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade à fluvoxamina",
-      "Uso concomitante com IMAO",
-      "Uso concomitante com tizanidina",
-      "Uso concomitante com alosetrona",
-      "Transtorno bipolar sem estabilizador do humor"
-    ],
-    "interactions": [
-      "IMAO: risco de síndrome serotoninérgica",
-      "Clozapina: pode aumentar níveis séricos e toxicidade",
-      "Benzodiazepínicos metabolizados por oxidação: pode aumentar sedação",
-      "Teofilina e cafeína: pode aumentar níveis por inibição de CYP1A2",
-      "Warfarina/AINEs/AAS: maior risco de sangramento",
-      "Tramadol, linezolida, triptanos, lítio: risco serotoninérgico"
-    ],
-    "alerts": [
-      "Alto potencial de interações medicamentosas por CYP1A2, CYP2C19 e CYP3A4.",
-      "Muito usada em TOC; resposta pode exigir doses maiores e mais tempo.",
-      "Evitar associação com IMAO.",
-      "Investigar história de mania/hipomania antes de iniciar.",
-      "Não suspender abruptamente; reduzir gradualmente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Fluvoxamine Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO, tizanidina, alosetrona, pimozida e ramelteona conforme rótulo.",
+    "interactions": "Forte CYP1A2/2C19: teofilina, cafeína, clozapina, benzodiazepínicos, varfarina; serotonérgicos.",
+    "alerts": "Síndrome serotoninérgica, suicidabilidade, mania, hiponatremia, sangramento e convulsões. Início/titulação bloqueados sem diagnóstico, idade, bipolaridade/suicidalidade, hepatopatia e revisão ampla de interações CYP/IMAO.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluvoxamine",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de serotonina",
+    "presentations": "Comprimidos 25, 50 e 100 mg; liberação prolongada em alguns mercados.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabolismo hepático; inibe CYP1A2, 2C19 e outros; meia-vida ~15 h.",
+    "pediatricDose": "8–17 anos com TOC: iniciar 25 mg ao deitar; máximo 200 mg/dia em 8–11 e 300 mg/dia em 12–17, com titulação cautelosa. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste específico; cautela.",
+    "hepaticDose": "Titular mais lentamente em hepatopatia.",
+    "adverseEffects": "Náusea, sonolência, insônia, nervosismo, astenia e disfunção sexual. Graves: Síndrome serotoninérgica, suicidabilidade, mania, hiponatremia, sangramento e convulsões.",
+    "monitoring": "Suicidalidade, mania, Na, sangramento, interações, sono e resposta TOC.",
+    "administration": "VO, geralmente ao deitar; dividir doses altas; retirada gradual.",
+    "preparation": "Comprimido pronto.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Avaliar risco-benefício e adaptação neonatal.",
+    "lactation": "Passa ao leite; monitorar lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluvoxamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021519s003lbl.pdf"
     ]
   },
   "es": {
     "name": "Fluvoxamina",
-    "class": "Antidepresivo ISRS",
+    "class": "ISRS",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Luvox",
-        "Revoc",
-        "Fluvoxamina Maleato"
-      ],
-      "ar": [
-        "Luvox",
-        "Dumirox",
-        "Fluvoxamina Gador",
-        "Fluvoxamina Northia"
-      ]
-    },
-    "presentation": [
-      "Comprimido 50 mg",
-      "Comprimido 100 mg",
-      "Comprimido de liberación prolongada 100 mg",
-      "Comprimido de liberación prolongada 150 mg"
-    ],
-    "dose": {
-      "adulto": "TOC/depresión: iniciar 50 mg VO por la noche; titular gradualmente.",
-      "toc": "TOC: habitual 100–300 mg/día; dosis superiores a 100 mg pueden dividirse.",
-      "maxDose": "Dosis máxima habitual: 300 mg/día."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Comprimidos 25, 50 y 100 mg; liberación prolongada en algunos mercados.",
+    "dose": "Iniciar 50 mg al acostarse; aumentar 50 mg cada 4–7 días; máximo 300 mg/día; dividir dosis >100 mg.",
     "doseKg": {
       "standard": "No se utiliza cálculo rutinario por kg en adultos.",
       "pediatric": "Pediatría/TOC: uso especializado; iniciar generalmente 25 mg por la noche y titular lentamente.",
       "maxDose": "300 mg/día"
     },
-    "indications": [
-      "Trastorno obsesivo-compulsivo",
-      "Trastorno depresivo mayor",
-      "Trastorno de ansiedad social",
-      "Trastorno de pánico",
-      "Trastorno de ansiedad generalizada",
-      "Trastorno de estrés postraumático",
-      "Síntomas obsesivos en trastornos del espectro ansioso"
-    ],
+    "indications": "Trastorno obsesivo-compulsivo; indicaciones adicionales varían por país/formulación.",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Inhibe selectivamente la recaptación de serotonina; posee fuerte efecto inhibidor sobre CYP1A2 y CYP2C19.",
+    "mechanism": "Inhibidor selectivo de recaptación de serotonina. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Inicio de efecto clínico generalmente en 2–4 semanas; en TOC la respuesta puede tardar 8–12 semanas.",
     "halfLife": "Vida media aproximada: 15–22 horas.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Somnolencia",
-      "Insomnio",
-      "Cefalea",
-      "Boca seca",
-      "Sudoración",
-      "Disfunción sexual"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome serotoninérgico",
-      "Interacciones medicamentosas graves por inhibición enzimática",
-      "Ideación suicida en jóvenes al inicio del tratamiento",
-      "Viraje maníaco/hipomaníaco",
-      "Hiponatremia/SIADH",
-      "Sangrados con AINEs/anticoagulantes"
-    ],
+    "commonAdverseEffects": "Náusea, somnolencia, insomnio, nerviosismo, astenia y disfunción sexual.",
+    "dangerousAdverseEffects": "Síndrome serotoninérgico, suicidio, manía, hiponatremia, sangrado y convulsiones.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a fluvoxamina",
-      "Uso concomitante con IMAO",
-      "Uso concomitante con tizanidina",
-      "Uso concomitante con alosetrón",
-      "Trastorno bipolar sin estabilizador del ánimo"
-    ],
-    "interactions": [
-      "IMAO: riesgo de síndrome serotoninérgico",
-      "Clozapina: puede aumentar niveles séricos y toxicidad",
-      "Benzodiazepinas metabolizadas por oxidación: puede aumentar sedación",
-      "Teofilina y cafeína: puede aumentar niveles por inhibición de CYP1A2",
-      "Warfarina/AINEs/AAS: mayor riesgo de sangrado",
-      "Tramadol, linezolid, triptanes, litio: riesgo serotoninérgico"
-    ],
-    "alerts": [
-      "Alto potencial de interacciones medicamentosas por CYP1A2, CYP2C19 y CYP3A4.",
-      "Muy usada en TOC; la respuesta puede requerir dosis mayores y más tiempo.",
-      "Evitar asociación con IMAO.",
-      "Investigar historia de manía/hipomanía antes de iniciar.",
-      "No suspender abruptamente; reducir gradualmente."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Fluvoxamine Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO, tizanidina, alosetrón, pimozida y ramelteón según ficha.",
+    "interactions": "Potente CYP1A2/2C19: teofilina, cafeína, clozapina, benzodiazepinas, warfarina; serotoninérgicos.",
+    "alerts": "Síndrome serotoninérgico, suicidio, manía, hiponatremia, sangrado y convulsiones. Início/titulação bloqueados sem diagnóstico, idade, bipolaridade/suicidalidade, hepatopatia e revisão ampla de interações CYP/IMAO.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluvoxamine",
+    "pharmacologicClass": "Inhibidor selectivo de recaptación de serotonina",
+    "presentations": "Comprimidos 25, 50 y 100 mg; liberación prolongada en algunos mercados.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolismo hepático; inhibe CYP1A2, 2C19 y otros; semivida ~15 h.",
+    "pediatricDose": "8–17 años con TOC: iniciar 25 mg al acostarse; máximo 200 mg/día en 8–11 y 300 mg/día en 12–17, con titulación cautelosa. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste específico; precaución.",
+    "hepaticDose": "Titular más lentamente en hepatopatía.",
+    "adverseEffects": "Náusea, somnolencia, insomnio, nerviosismo, astenia y disfunción sexual. Graves: Síndrome serotoninérgico, suicidio, manía, hiponatremia, sangrado y convulsiones.",
+    "monitoring": "Suicidio, manía, Na, sangrado, interacciones, sueño y respuesta TOC.",
+    "administration": "VO, generalmente al acostarse; dividir dosis altas; retirada gradual.",
+    "preparation": "Comprimido listo.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Evaluar riesgo-beneficio y adaptación neonatal.",
+    "lactation": "Pasa a leche; vigilar lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluvoxamine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021519s003lbl.pdf"
     ]
   },
   "name": {
@@ -210,9 +116,21 @@
     "fluvoxamina northia",
     "antidepressivo isrs"
   ],
-  "dataVersion": "clinical-data-v1-64101d8a25ae616c",
-  "clinicalContentSha256": "64101d8a25ae616cdd4940be5946a3225a2dc5811196d954222d9f10f1b9d50b",
+  "dataVersion": "clinical-data-v1-cddc3eb2787d630b",
+  "clinicalContentSha256": "cddc3eb2787d630bfba0664119826e0d46af0d39b528035d541af5bf01cca86c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "fluvoxamina.mcGoldClinicalV1",
+    "lote": "036",
+    "requiredFields": 33,
+    "approvedSha256": "c6145d4887f3525a184934302d2876e8e6a0206672c691f4b48588959dc5a435",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

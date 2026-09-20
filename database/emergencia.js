@@ -6214,3 +6214,93 @@ Object.assign(window.EMERGENCIA_DRUGS_DB, {
   }
 };})();
 /* GOLD33_SELECTIVE:vecuronio:END */
+/* GOLD33_SELECTIVE:fomepizol:START */
+;(function(){var db=window.EMERGENCIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="fomepizol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:fomepizol:"+matches.length);drug=matches[0];}else{drug=db&&db["fomepizol"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="fomepizol";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:fomepizol:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:fomepizol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "036",
+    "requiredFieldCount": 33,
+    "approvedSha256": "c6145d4887f3525a184934302d2876e8e6a0206672c691f4b48588959dc5a435",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Fomepizol",
+    "class": "Antídoto",
+    "pharmacologicClass": "Inibidor da álcool-desidrogenase",
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Frasco 1,5 g/1,5 mL (1 g/mL), concentrado para diluição.",
+    "presentations": "Frasco 1,5 g/1,5 mL (1 g/mL), concentrado para diluição.",
+    "mechanism": "Inibidor da álcool-desidrogenase. O efeito deve ser interpretado por indicação, formulação e exposição.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Cinética saturável; metabolizado hepaticamente e eliminado na urina; é dialisável.",
+    "indications": "Intoxicação por etilenoglicol ou metanol, isoladamente ou com hemodiálise.",
+    "dose": "Carga 15 mg/kg IV; depois 10 mg/kg a cada 12 h por 4 doses; então 15 mg/kg a cada 12 h até critérios de suspensão.",
+    "pediatricDose": "Experiência pediátrica limitada; regimes por kg usados em toxicologia especializada. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste padrão; durante hemodiálise administrar a cada 4 h e coordenar doses pré/pós-diálise.",
+    "hepaticDose": "Sem ajuste validado; monitorar.",
+    "commonAdverseEffects": "Cefaleia, náusea, tontura e reação no local.",
+    "dangerousAdverseEffects": "Anafilaxia, convulsão e complicações graves da intoxicação se tratamento/diálise inadequados.",
+    "adverseEffects": "Cefaleia, náusea, tontura e reação no local. Graves: Anafilaxia, convulsão e complicações graves da intoxicação se tratamento/diálise inadequados.",
+    "contraindications": "Hipersensibilidade ao fomepizol ou outros pirazóis.",
+    "interactions": "Etanol altera metabolismo; indutores/inibidores enzimáticos têm relevância incerta.",
+    "monitoring": "Metanol/etilenoglicol seriados, pH/gases, ânion/osmol gap, eletrólitos, rim, visão e critérios de diálise.",
+    "administration": "IV somente após diluição; iniciar imediatamente quando suspeita clínica/laboratorial justificar.",
+    "preparation": "Diluir em pelo menos 100 mL de NaCl 0,9% ou glicose 5%.",
+    "infusionProtocol": "Infundir em 30 minutos; em hemodiálise encurtar intervalo para 4 h.",
+    "pregnancy": "Dados insuficientes; tratar intoxicação materna quando indicado.",
+    "lactation": "Dados insuficientes; decisão toxicológica urgente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "alerts": "Anafilaxia, convulsão e complicações graves da intoxicação se tratamento/diálise inadequados. Cálculo, duração e diálise bloqueados sem peso, agente/tempo, níveis, pH, gaps, função renal, visão e toxicologista/nefrologia.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fomepizole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2007/020696s005lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fomepizole"
+  },
+  "es": {
+    "name": "Fomepizol",
+    "class": "Antídoto",
+    "pharmacologicClass": "Inhibidor de alcohol-deshidrogenasa",
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Vial 1,5 g/1,5 mL (1 g/mL), concentrado para dilución.",
+    "presentations": "Vial 1,5 g/1,5 mL (1 g/mL), concentrado para dilución.",
+    "mechanism": "Inhibidor de alcohol-deshidrogenasa. El efecto debe interpretarse por indicación, formulación y exposición.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Cinética saturable; metabolismo hepático y eliminación urinaria; es dializable.",
+    "indications": "Intoxicación por etilenglicol o metanol, solo o con hemodiálisis.",
+    "dose": "Carga 15 mg/kg IV; luego 10 mg/kg cada 12 h por 4 dosis; después 15 mg/kg cada 12 h hasta criterios de suspensión.",
+    "pediatricDose": "Experiencia pediátrica limitada; pautas por kg usadas en toxicología especializada. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste estándar; durante hemodiálisis administrar cada 4 h y coordinar dosis pre/postdiálisis.",
+    "hepaticDose": "Sin ajuste validado; vigilar.",
+    "commonAdverseEffects": "Cefalea, náusea, mareo y reacción local.",
+    "dangerousAdverseEffects": "Anafilaxia, convulsión y complicaciones graves de intoxicación si tratamiento/diálisis inadecuados.",
+    "adverseEffects": "Cefalea, náusea, mareo y reacción local. Graves: Anafilaxia, convulsión y complicaciones graves de intoxicación si tratamiento/diálisis inadecuados.",
+    "contraindications": "Hipersensibilidad a fomepizol u otros pirazoles.",
+    "interactions": "Etanol altera metabolismo; inductores/inhibidores enzimáticos tienen relevancia incierta.",
+    "monitoring": "Metanol/etilenglicol seriados, pH/gases, anión/osmol gap, electrolitos, riñón, visión y criterios de diálisis.",
+    "administration": "Solo IV tras dilución; iniciar de inmediato cuando sospecha clínica/laboratorial lo justifique.",
+    "preparation": "Diluir en al menos 100 mL de NaCl 0,9% o glucosa 5%.",
+    "infusionProtocol": "Infundir en 30 minutos; en hemodiálisis acortar intervalo a 4 h.",
+    "pregnancy": "Datos insuficientes; tratar intoxicación materna cuando esté indicado.",
+    "lactation": "Datos insuficientes; decisión toxicológica urgente.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "alerts": "Anafilaxia, convulsión y complicaciones graves de intoxicación si tratamiento/diálisis inadecuados. Cálculo, duração e diálise bloqueados sem peso, agente/tempo, níveis, pH, gaps, função renal, visão e toxicologista/nefrologia.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fomepizole",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2007/020696s005lbl.pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fomepizole"
+  }
+};})();
+/* GOLD33_SELECTIVE:fomepizol:END */

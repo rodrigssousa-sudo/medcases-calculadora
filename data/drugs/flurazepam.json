@@ -6,182 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Flurazepam",
-    "class": "Benzodiazepínico hipnótico de longa ação",
+    "class": "Benzodiazepínico hipnótico",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Dalmadorm",
-        "Dalmane",
-        "Flurazepam"
-      ],
-      "ar": [
-        "Dalmane",
-        "Flurazepam"
-      ]
-    },
-    "presentation": [
-      "Cápsula 15 mg",
-      "Cápsula 30 mg"
-    ],
-    "dose": {
-      "adulto": "Insônia: 15 mg VO ao deitar.",
-      "casosSelecionados": "Pode-se usar 30 mg ao deitar em casos selecionados, por curto prazo.",
-      "maxDose": "Dose máxima usual: 30 mg/noite."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas 15 e 30 mg.",
+    "dose": "15 ou 30 mg VO ao deitar; usar a menor dose e pelo menor tempo.",
     "doseKg": {
       "standard": "Não se utiliza cálculo por kg em adultos.",
       "pediatric": "Não recomendado como uso pediátrico rotineiro.",
       "maxDose": "30 mg/noite"
     },
-    "indications": [
-      "Insônia de curta duração",
-      "Insônia de manutenção do sono",
-      "Despertares noturnos frequentes",
-      "Insônia associada à ansiedade",
-      "Insônia transitória por estresse",
-      "Sedação noturna em casos selecionados"
-    ],
+    "indications": "Tratamento de curto prazo da insônia caracterizada por dificuldade de iniciar ou manter o sono.",
     "renalAdjustment": "Sem ajuste renal habitual, mas monitorar sedação em pacientes frágeis.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Potencializa o GABA no receptor GABA-A, promovendo efeito hipnótico, ansiolítico e relaxante muscular.",
+    "mechanism": "Modulador alostérico positivo GABA-A. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Início de ação geralmente em 30–60 minutos.",
     "halfLife": "Vida média do fármaco é curta, mas metabólitos ativos têm meia-vida muito longa, podendo causar sedação residual.",
-    "commonAdverseEffects": [
-      "Sonolência diurna",
-      "Sedação residual",
-      "Tontura",
-      "Ataxia",
-      "Confusão",
-      "Déficit de memória"
-    ],
-    "dangerousAdverseEffects": [
-      "Depressão respiratória",
-      "Dependência física",
-      "Síndrome de abstinência",
-      "Sedação prolongada por acúmulo",
-      "Quedas e fraturas em idosos",
-      "Comportamentos complexos do sono"
-    ],
+    "commonAdverseEffects": "Sonolência, tontura, ataxia e prejuízo cognitivo.",
+    "dangerousAdverseEffects": "Depressão respiratória, coma, quedas, comportamento complexo do sono, dependência e abstinência.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade a benzodiazepínicos",
-      "Insuficiência respiratória grave",
-      "Apneia do sono grave",
-      "Miastenia gravis",
-      "Insuficiência hepática grave"
-    ],
-    "interactions": [
-      "Álcool",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos sedativos",
-      "Antidepressivos sedativos",
-      "Anti-histamínicos sedativos"
-    ],
-    "alerts": [
-      "Alto risco de ressaca medicamentosa no dia seguinte.",
-      "Evitar em idosos frágeis.",
-      "Usar apenas por curto prazo para insônia.",
-      "Evitar associação com álcool e opioides.",
-      "Não suspender abruptamente após uso prolongado."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Flurazepam Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidade a benzodiazepínicos e gestação conforme bula; cautela extrema em insuficiência respiratória.",
+    "interactions": "Opioides, álcool e depressores SNC aumentam sedação e depressão respiratória.",
+    "alerts": "Depressão respiratória, coma, quedas, comportamento complexo do sono, dependência e abstinência. Prescrição bloqueada sem avaliação da causa da insônia, idade, risco respiratório/quedas, opioides/álcool e histórico de uso de substâncias.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flurazepam",
+    "pharmacologicClass": "Modulador alostérico positivo GABA-A",
+    "presentations": "Cápsulas 15 e 30 mg.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "Metabólitos ativos de meia-vida muito longa; acúmulo com doses repetidas.",
+    "pediatricDose": "Não estabelecido em pediatria. AUTOMATABLE=NO.",
+    "renalDose": "Sem tabela robusta; evitar/cautela em insuficiência relevante por metabólitos longos.",
+    "hepaticDose": "Evitar ou reduzir em hepatopatia; risco de acúmulo.",
+    "adverseEffects": "Sonolência, tontura, ataxia e prejuízo cognitivo. Graves: Depressão respiratória, coma, quedas, comportamento complexo do sono, dependência e abstinência.",
+    "monitoring": "Sedação diurna, quedas, respiração, comportamento complexo, abuso, dependência e retirada.",
+    "administration": "Tomar imediatamente antes de dormir quando houver 7–8 h disponíveis; não dirigir.",
+    "preparation": "Cápsula pronta.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Evitar; risco fetal/neonatal.",
+    "lactation": "Não recomendado; sedação no lactente.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flurazepam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/016721s079lbl.pdf"
     ]
   },
   "es": {
     "name": "Flurazepam",
-    "class": "Benzodiacepina hipnótica de larga duración",
+    "class": "Benzodiazepina hipnótica",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Dalmadorm",
-        "Dalmane",
-        "Flurazepam"
-      ],
-      "ar": [
-        "Dalmane",
-        "Flurazepam"
-      ]
-    },
-    "presentation": [
-      "Cápsula 15 mg",
-      "Cápsula 30 mg"
-    ],
-    "dose": {
-      "adulto": "Insomnio: 15 mg VO al acostarse.",
-      "casosSelecionados": "Puede usarse 30 mg al acostarse en casos seleccionados, por corto plazo.",
-      "maxDose": "Dosis máxima habitual: 30 mg/noche."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas 15 y 30 mg.",
+    "dose": "15 o 30 mg VO al acostarse; usar la menor dosis y el menor tiempo.",
     "doseKg": {
       "standard": "No se utiliza cálculo por kg en adultos.",
       "pediatric": "No recomendado como uso pediátrico rutinario.",
       "maxDose": "30 mg/noche"
     },
-    "indications": [
-      "Insomnio de corta duración",
-      "Insomnio de mantenimiento del sueño",
-      "Despertares nocturnos frecuentes",
-      "Insomnio asociado a ansiedad",
-      "Insomnio transitorio por estrés",
-      "Sedación nocturna en casos seleccionados"
-    ],
+    "indications": "Tratamiento corto del insomnio con dificultad para iniciar o mantener el sueño.",
     "renalAdjustment": "Sin ajuste renal habitual, pero monitorizar sedación en pacientes frágiles.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Potencia el GABA en el receptor GABA-A, promoviendo efecto hipnótico, ansiolítico y relajante muscular.",
+    "mechanism": "Modulador alostérico positivo GABA-A. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Inicio de acción generalmente en 30–60 minutos.",
     "halfLife": "La vida media del fármaco es corta, pero sus metabolitos activos tienen vida media muy larga, pudiendo causar sedación residual.",
-    "commonAdverseEffects": [
-      "Somnolencia diurna",
-      "Sedación residual",
-      "Mareos",
-      "Ataxia",
-      "Confusión",
-      "Déficit de memoria"
-    ],
-    "dangerousAdverseEffects": [
-      "Depresión respiratoria",
-      "Dependencia física",
-      "Síndrome de abstinencia",
-      "Sedación prolongada por acumulación",
-      "Caídas y fracturas en adultos mayores",
-      "Conductas complejas del sueño"
-    ],
+    "commonAdverseEffects": "Somnolencia, mareo, ataxia y deterioro cognitivo.",
+    "dangerousAdverseEffects": "Depresión respiratoria, coma, caídas, conducta compleja del sueño, dependencia y abstinencia.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a benzodiacepinas",
-      "Insuficiencia respiratoria grave",
-      "Apnea del sueño grave",
-      "Miastenia gravis",
-      "Insuficiencia hepática grave"
-    ],
-    "interactions": [
-      "Alcohol",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos sedativos",
-      "Antidepresivos sedativos",
-      "Antihistamínicos sedantes"
-    ],
-    "alerts": [
-      "Alto riesgo de resaca medicamentosa al día siguiente.",
-      "Evitar en adultos mayores frágiles.",
-      "Usar solo por corto plazo para insomnio.",
-      "Evitar asociación con alcohol y opioides.",
-      "No suspender abruptamente tras uso prolongado."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Flurazepam Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidad a benzodiazepinas y embarazo según ficha; extrema precaución en insuficiencia respiratoria.",
+    "interactions": "Opioides, alcohol y depresores SNC aumentan sedación y depresión respiratoria.",
+    "alerts": "Depresión respiratoria, coma, caídas, conducta compleja del sueño, dependencia y abstinencia. Prescrição bloqueada sem avaliação da causa da insônia, idade, risco respiratório/quedas, opioides/álcool e histórico de uso de substâncias.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flurazepam",
+    "pharmacologicClass": "Modulador alostérico positivo GABA-A",
+    "presentations": "Cápsulas 15 y 30 mg.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "Metabolitos activos de semivida muy larga; acumulación con dosis repetidas.",
+    "pediatricDose": "No establecido en pediatría. AUTOMATABLE=NO.",
+    "renalDose": "Sin tabla robusta; evitar/precaución en insuficiencia relevante por metabolitos largos.",
+    "hepaticDose": "Evitar o reducir en hepatopatía; riesgo de acumulación.",
+    "adverseEffects": "Somnolencia, mareo, ataxia y deterioro cognitivo. Graves: Depresión respiratoria, coma, caídas, conducta compleja del sueño, dependencia y abstinencia.",
+    "monitoring": "Sedación diurna, caídas, respiración, conducta compleja, abuso, dependencia y retirada.",
+    "administration": "Tomar justo antes de dormir cuando haya 7–8 h disponibles; no conducir.",
+    "preparation": "Cápsula lista.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Evitar; riesgo fetal/neonatal.",
+    "lactation": "No recomendado; sedación en lactante.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=flurazepam",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/016721s079lbl.pdf"
     ]
   },
   "name": {
@@ -194,9 +112,21 @@
     "dalmane",
     "benzodiazepinico hipnotico de longa acao"
   ],
-  "dataVersion": "clinical-data-v1-64101d8a25ae616c",
-  "clinicalContentSha256": "64101d8a25ae616cdd4940be5946a3225a2dc5811196d954222d9f10f1b9d50b",
+  "dataVersion": "clinical-data-v1-cddc3eb2787d630b",
+  "clinicalContentSha256": "cddc3eb2787d630bfba0664119826e0d46af0d39b528035d541af5bf01cca86c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "flurazepam.mcGoldClinicalV1",
+    "lote": "036",
+    "requiredFields": 33,
+    "approvedSha256": "c6145d4887f3525a184934302d2876e8e6a0206672c691f4b48588959dc5a435",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

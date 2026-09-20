@@ -6,33 +6,11 @@
   "colorTxt": null,
   "pt": {
     "name": "Fluoxetina",
-    "class": "Antidepressivo ISRS",
+    "class": "ISRS",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Prozac",
-        "Daforin",
-        "Fluxene",
-        "Verotina"
-      ],
-      "ar": [
-        "Prozac",
-        "Foxetin",
-        "Fluoxetina Lazar",
-        "Fluoxetina Northia"
-      ]
-    },
-    "presentation": [
-      "Cápsula/comprimido 20 mg",
-      "Comprimido 10 mg",
-      "Solução oral 20 mg/5 mL"
-    ],
-    "dose": {
-      "adulto": "Depressão: iniciar 20 mg VO pela manhã; usual 20–60 mg/dia.",
-      "ansiedadeTocPanico": "TOC/pânico/ansiedade: iniciar 10–20 mg/dia; titular conforme resposta.",
-      "bulimia": "Bulimia nervosa: 60 mg VO 1x/dia.",
-      "maxDose": "Dose máxima usual: 80 mg/dia."
-    },
+    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
+    "presentation": "Cápsulas/comprimidos 10, 20 e 40 mg; solução 20 mg/5 mL; formulação semanal em alguns mercados.",
+    "dose": "Depressão/TOC: iniciar 20 mg VO pela manhã; pânico pode iniciar 10 mg/dia; bulimia: 60 mg/dia. Individualizar titulação.",
     "doseKg": {
       "standard": "Não se utiliza cálculo rotineiro por kg em adultos.",
       "pediatric": "Pediatria: uso especializado; iniciar geralmente 5–10 mg/dia conforme indicação.",
@@ -40,82 +18,48 @@
     },
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Inibe seletivamente a recaptação de serotonina, aumentando serotonina na fenda sináptica.",
+    "mechanism": "Inibidor seletivo da recaptação de serotonina. O efeito deve ser interpretado por indicação, formulação e exposição.",
     "onset": "Início de efeito clínico geralmente em 2–4 semanas; resposta plena pode levar 6–8 semanas.",
     "halfLife": "Vida média longa: fluoxetina 4–6 dias; norfluoxetina 4–16 dias.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Insônia",
-      "Cefaleia",
-      "Diarreia",
-      "Disfunção sexual",
-      "Ansiedade inicial/agitação"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome serotoninérgica",
-      "Ideação suicida em jovens no início do tratamento",
-      "Virada maníaca/hipomaníaca",
-      "Hiponatremia/SIADH",
-      "Sangramentos, especialmente com AINEs/anticoagulantes"
-    ],
+    "commonAdverseEffects": "Náusea, insônia, ansiedade, cefaleia, diarreia e disfunção sexual.",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica, suicidabilidade, mania, hiponatremia, sangramento, convulsão e QT.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade à fluoxetina",
-      "Uso concomitante com IMAO",
-      "Uso com pimozida ou tioridazina",
-      "Transtorno bipolar sem estabilizador do humor"
-    ],
-    "interactions": [
-      "IMAO: risco de síndrome serotoninérgica",
-      "Tramadol, linezolida, triptanos, lítio: risco serotoninérgico",
-      "AINEs, AAS, anticoagulantes: maior risco de sangramento",
-      "Inibe CYP2D6: pode aumentar níveis de antipsicóticos, tricíclicos e betabloqueadores"
-    ],
-    "alerts": [
-      "Não suspender abruptamente, embora tenha menor risco de retirada pela meia-vida longa.",
-      "Investigar história de mania/hipomania antes de iniciar.",
-      "Evitar associação com IMAO.",
-      "Monitorar sódio em idosos ou pacientes com diuréticos."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Fluoxetine Prescribing Information",
-      "AEMPS CIMA Fluoxetina Ficha Técnica",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO concomitante; iniciar fluoxetina ≥14 dias após IMAO e aguardar ≥5 semanas após fluoxetina antes de IMAO; tioridazina e pimozida.",
+    "interactions": "Serotonérgicos, anticoagulantes/AINE, CYP2D6, lítio, QT e álcool/sedativos.",
+    "alerts": "Síndrome serotoninérgica, suicidabilidade, mania, hiponatremia, sangramento, convulsão e QT. Início/troca bloqueados sem diagnóstico, idade, bipolaridade/suicidalidade, Na, QT, hepatopatia e revisão de IMAO/serotonérgicos.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluoxetine",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de serotonina",
+    "presentations": "Cápsulas/comprimidos 10, 20 e 40 mg; solução 20 mg/5 mL; formulação semanal em alguns mercados.",
+    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+    "pharmacokinetics": "CYP2D6; norfluoxetina ativa; meias-vidas longas e acúmulo.",
+    "indications": "Depressão maior, TOC, bulimia nervosa e transtorno do pânico; outras indicações dependem do produto.",
+    "pediatricDose": "Depressão ≥8 anos e TOC ≥7 anos têm esquemas específicos, usualmente início 10–20 mg/dia; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sem ajuste inicial usual; cautela em doença grave.",
+    "hepaticDose": "Considerar dose menor ou menos frequente em cirrose.",
+    "adverseEffects": "Náusea, insônia, ansiedade, cefaleia, diarreia e disfunção sexual. Graves: Síndrome serotoninérgica, suicidabilidade, mania, hiponatremia, sangramento, convulsão e QT.",
+    "monitoring": "Humor/suicidalidade, mania, Na, sangramento, peso, sono e interações.",
+    "administration": "VO 1x/dia; doses maiores podem ser divididas; não suspender abruptamente sem plano.",
+    "preparation": "Solução pronta; medir com dispositivo apropriado.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Avaliar risco-benefício e adaptação neonatal.",
+    "lactation": "Passa ao leite; monitorar lactente ou considerar alternativa.",
+    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
+    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluoxetine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018936s108lbl.pdf"
     ]
   },
   "es": {
     "name": "Fluoxetina",
-    "class": "Antidepresivo ISRS",
+    "class": "ISRS",
     "category": "antidepressivo",
-    "commercialNames": {
-      "br": [
-        "Prozac",
-        "Daforin",
-        "Fluxene",
-        "Verotina"
-      ],
-      "ar": [
-        "Prozac",
-        "Foxetin",
-        "Fluoxetina Lazar",
-        "Fluoxetina Northia"
-      ]
-    },
-    "presentation": [
-      "Cápsula/comprimido 20 mg",
-      "Comprimido 10 mg",
-      "Solución oral 20 mg/5 mL"
-    ],
-    "dose": {
-      "adulto": "Depresión: iniciar 20 mg VO por la mañana; habitual 20–60 mg/día.",
-      "ansiedadeTocPanico": "TOC/pánico/ansiedad: iniciar 10–20 mg/día; titular según respuesta.",
-      "bulimia": "Bulimia nerviosa: 60 mg VO 1 vez/día.",
-      "maxDose": "Dosis máxima habitual: 80 mg/día."
-    },
+    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
+    "presentation": "Cápsulas/comprimidos 10, 20 y 40 mg; solución 20 mg/5 mL; formulación semanal en algunos mercados.",
+    "dose": "Depresión/TOC: iniciar 20 mg VO por la mañana; pánico puede iniciar 10 mg/día; bulimia: 60 mg/día. Individualizar titulación.",
     "doseKg": {
       "standard": "No se utiliza cálculo rutinario por kg en adultos.",
       "pediatric": "Pediatría: uso especializado; iniciar generalmente 5–10 mg/día según indicación.",
@@ -123,51 +67,39 @@
     },
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Inhibe selectivamente la recaptación de serotonina, aumentando serotonina en la hendidura sináptica.",
+    "mechanism": "Inhibidor selectivo de recaptación de serotonina. El efecto debe interpretarse por indicación, formulación y exposición.",
     "onset": "Inicio de efecto clínico generalmente en 2–4 semanas; respuesta plena puede tardar 6–8 semanas.",
     "halfLife": "Vida media larga: fluoxetina 4–6 días; norfluoxetina 4–16 días.",
-    "commonAdverseEffects": [
-      "Náuseas",
-      "Insomnio",
-      "Cefalea",
-      "Diarrea",
-      "Disfunción sexual",
-      "Ansiedad inicial/agitación"
-    ],
-    "dangerousAdverseEffects": [
-      "Síndrome serotoninérgico",
-      "Ideación suicida en jóvenes al inicio del tratamiento",
-      "Viraje maníaco/hipomaníaco",
-      "Hiponatremia/SIADH",
-      "Sangrados, especialmente con AINEs/anticoagulantes"
-    ],
+    "commonAdverseEffects": "Náusea, insomnio, ansiedad, cefalea, diarrea y disfunción sexual.",
+    "dangerousAdverseEffects": "Síndrome serotoninérgico, suicidio, manía, hiponatremia, sangrado, convulsión y QT.",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a fluoxetina",
-      "Uso concomitante con IMAO",
-      "Uso con pimozida o tioridazina",
-      "Trastorno bipolar sin estabilizador del ánimo"
-    ],
-    "interactions": [
-      "IMAO: riesgo de síndrome serotoninérgico",
-      "Tramadol, linezolid, triptanes, litio: riesgo serotoninérgico",
-      "AINEs, AAS, anticoagulantes: mayor riesgo de sangrado",
-      "Inhibe CYP2D6: puede aumentar niveles de antipsicóticos, tricíclicos y betabloqueantes"
-    ],
-    "alerts": [
-      "No suspender abruptamente, aunque tiene menor riesgo de retirada por su vida media larga.",
-      "Investigar historia de manía/hipomanía antes de iniciar.",
-      "Evitar asociación con IMAO.",
-      "Monitorizar sodio en adultos mayores o pacientes con diuréticos."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Fluoxetine Prescribing Information",
-      "AEMPS CIMA Fluoxetina Ficha Técnica",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "IMAO concomitante; iniciar fluoxetina ≥14 días tras IMAO y esperar ≥5 semanas tras fluoxetina antes de IMAO; tioridazina y pimozida.",
+    "interactions": "Serotonérgicos, anticoagulantes/AINE, CYP2D6, litio, QT y alcohol/sedantes.",
+    "alerts": "Síndrome serotoninérgico, suicidio, manía, hiponatremia, sangrado, convulsión y QT. Início/troca bloqueados sem diagnóstico, idade, bipolaridade/suicidalidade, Na, QT, hepatopatia e revisão de IMAO/serotonérgicos.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluoxetine",
+    "pharmacologicClass": "Inhibidor selectivo de recaptación de serotonina",
+    "presentations": "Cápsulas/comprimidos 10, 20 y 40 mg; solución 20 mg/5 mL; formulación semanal en algunos mercados.",
+    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
+    "pharmacokinetics": "CYP2D6; norfluoxetina activa; semividas largas y acumulación.",
+    "indications": "Depresión mayor, TOC, bulimia nerviosa y trastorno de pánico; otras indicaciones dependen del producto.",
+    "pediatricDose": "Depresión ≥8 años y TOC ≥7 años tienen pautas específicas, usualmente inicio 10–20 mg/día; especialista. AUTOMATABLE=NO.",
+    "renalDose": "Sin ajuste inicial habitual; precaución en enfermedad grave.",
+    "hepaticDose": "Considerar dosis menor o menos frecuente en cirrosis.",
+    "adverseEffects": "Náusea, insomnio, ansiedad, cefalea, diarrea y disfunción sexual. Graves: Síndrome serotoninérgico, suicidio, manía, hiponatremia, sangrado, convulsión y QT.",
+    "monitoring": "Ánimo/suicidio, manía, Na, sangrado, peso, sueño e interacciones.",
+    "administration": "VO 1 vez/día; dosis mayores pueden dividirse; no suspender bruscamente sin plan.",
+    "preparation": "Solución lista; medir con dispositivo apropiado.",
+    "infusionProtocol": "No aplicable.",
+    "pregnancy": "Evaluar riesgo-beneficio y adaptación neonatal.",
+    "lactation": "Pasa a leche; vigilar lactante o considerar alternativa.",
+    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
+    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
+    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
+    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
+    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "references": [
+      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=fluoxetine",
+      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018936s108lbl.pdf"
     ]
   },
   "name": {
@@ -185,9 +117,21 @@
     "fluoxetina northia",
     "antidepressivo isrs"
   ],
-  "dataVersion": "clinical-data-v1-64101d8a25ae616c",
-  "clinicalContentSha256": "64101d8a25ae616cdd4940be5946a3225a2dc5811196d954222d9f10f1b9d50b",
+  "dataVersion": "clinical-data-v1-cddc3eb2787d630b",
+  "clinicalContentSha256": "cddc3eb2787d630bfba0664119826e0d46af0d39b528035d541af5bf01cca86c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "fluoxetina.mcGoldClinicalV1",
+    "lote": "036",
+    "requiredFields": 33,
+    "approvedSha256": "c6145d4887f3525a184934302d2876e8e6a0206672c691f4b48588959dc5a435",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }
