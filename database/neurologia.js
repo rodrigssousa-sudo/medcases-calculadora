@@ -17650,3 +17650,93 @@ function _mcNeurologiaT(lang, pt, es) {
   }
 };})();
 /* GOLD33_SELECTIVE:valproato_de_sodio:END */
+/* GOLD33_SELECTIVE:vigabatrina:START */
+;(function(){var db=window.NEUROLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="vigabatrina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vigabatrina:"+matches.length);drug=matches[0];}else{drug=db&&db["vigabatrina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="vigabatrina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vigabatrina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:vigabatrina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "082",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f0e6cac4e2e07afb2a1d0abc227e1e92126392bcfd9521e42fd7299ef157b512",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Vigabatrina",
+    "class": "Antiepiléptico inibidor irreversível da GABA transaminase",
+    "pharmacologicClass": "Antiepiléptico inibidor irreversível da GABA transaminase",
+    "commercialNames": "br: Sabril; Vigabatrina; ar: Sabril; Vigabatrina",
+    "presentation": "Comprimido 500 mg; Sachê/pó para solução oral 500 mg",
+    "presentations": "Comprimido 500 mg; Sachê/pó para solução oral 500 mg",
+    "mechanism": "Inibe irreversivelmente a GABA-transaminase, aumentando níveis cerebrais de GABA e reduzindo excitabilidade neuronal.",
+    "pharmacodynamics": "Inibe irreversivelmente a GABA-transaminase, aumentando níveis cerebrais de GABA e reduzindo excitabilidade neuronal.",
+    "pharmacokinetics": "Vida média plasmática aproximada: 5–8 horas; efeito farmacodinâmico dura mais por inibição irreversível.",
+    "indications": "Espasmos infantis; Síndrome de West; Espasmos infantis associados à esclerose tuberosa; Epilepsia focal refratária como terapia adjuvante; Crises focais resistentes a múltiplos anticonvulsivantes; Epilepsia de difícil controle sob neurologia especializada",
+    "dose": "adulto: Epilepsia focal refratária: iniciar 500 mg VO 12/12h; titular conforme resposta.; manutencao: Dose usual em adultos: 1–3 g/dia divididos em 1–2 tomadas.; espasmosInfantis: Espasmos infantis: dose por peso conforme protocolo. Para 70 kg: cerca de 3500–7000 mg/dia inicialmente.; maxDose: Dose máxima usual: 3 g/dia em adultos; pediatria conforme peso e protocolo.",
+    "pediatricDose": "standard: Espasmos infantis: iniciar aproximadamente 50 mg/kg/dia.; severe: Pode titular até 100–150 mg/kg/dia conforme resposta e tolerabilidade.; maxDose: 3 g/dia em adultos",
+    "renalDose": "Sem ajuste renal se função renal normal.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Fadiga; Tontura; Ganho de peso; Irritabilidade; Tremor; Nistagmo",
+    "dangerousAdverseEffects": "Perda visual periférica irreversível; Alterações retinianas; Depressão ou ideação suicida; Psicose ou alteração comportamental; Alterações de ressonância em lactentes; Anemia ou neuropatia periférica rara",
+    "adverseEffects": "Sonolência, fadiga, ganho de peso, tremor e infecção respiratória.; Perda visual periférica permanente, alterações de ressonância em lactentes, ideação suicida e estado de mal.",
+    "contraindications": "Hipersensibilidade à vigabatrina; Perda visual significativa pré-existente quando houver alternativa; Impossibilidade de monitorização oftalmológica quando exigida",
+    "interactions": "Fenitoína: pode reduzir níveis de fenitoína; Álcool e sedativos: maior sonolência; Outros anticonvulsivantes: monitorar sedação e controle de crises",
+    "monitoring": "Risco clássico e grave: perda visual periférica irreversível.; Exige avaliação oftalmológica basal e periódica quando possível.; Usar apenas quando benefício supera claramente risco visual.; Reavaliar eficácia precocemente; suspender se não houver benefício clínico relevante.; Não suspender abruptamente em epilepsia sem plano médico.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Perda visual periférica permanente, alterações de ressonância em lactentes, ideação suicida e estado de mal.",
+    "alerts": "Perda visual periférica permanente, alterações de ressonância em lactentes, ideação suicida e estado de mal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vigabatrina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vigabatrina"
+  },
+  "es": {
+    "name": "Vigabatrina",
+    "class": "Antiepiléptico inibidor irreversível da GABA transaminase",
+    "pharmacologicClass": "Antiepiléptico inibidor irreversível da GABA transaminase",
+    "commercialNames": "br: Sabril; Vigabatrina; ar: Sabril; Vigabatrina",
+    "presentation": "Comprimido 500 mg; Sachê/pó para solución oral 500 mg",
+    "presentations": "Comprimido 500 mg; Sachê/pó para solución oral 500 mg",
+    "mechanism": "Inibe irreversivelmente a GABA-transaminase, aumentando níveis cerebrais de GABA y reduzindo excitabilidade neuronal.",
+    "pharmacodynamics": "Inibe irreversivelmente a GABA-transaminase, aumentando níveis cerebrais de GABA y reduzindo excitabilidade neuronal.",
+    "pharmacokinetics": "Vida média plasmática aproximada: 5–8 horas; efeito farmacodinâmico dura mais por inibição irreversível.",
+    "indications": "Espasmos infantis; Síndrome de West; Espasmos infantis associados à esclerose tuberosa; Epilepsia focal refratária como terapia adjuvante; Crises focais resistentes a múltiplos anticonvulsivantes; Epilepsia de difícil controle sob neurologia especializada",
+    "dose": "adulto: Epilepsia focal refratária: iniciar 500 mg VO 12/12h; titular conforme resposta.; manutencao: Dose usual em adultos: 1–3 g/dia divididos em 1–2 tomadas.; espasmosInfantis: Espasmos infantis: dosis por peso conforme protocolo. Para 70 kg: cerca de 3500–7000 mg/dia inicialmente.; maxDose: Dose máxima usual: 3 g/dia em adultos; pediatria conforme peso y protocolo.",
+    "pediatricDose": "standard: Espasmos infantis: iniciar aproximadamente 50 mg/kg/dia.; severe: Pode titular até 100–150 mg/kg/dia conforme resposta y tolerabilidade.; maxDose: 3 g/dia em adultos",
+    "renalDose": "Sem ajuste renal se función renal normal.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Sonolência; Fadiga; Tontura; Ganho de peso; Irritabilidade; Tremor; Nistagmo",
+    "dangerousAdverseEffects": "Perda visual periférica irreversível; Alterações retinianas; Depressão ou ideação suicida; Psicose ou alteração comportamental; Alterações de ressonância em lactentes; Anemia ou neuropatia periférica rara",
+    "adverseEffects": "Sonolência, fadiga, ganho de peso, tremor y infecção respiratória.; Perda visual periférica permanente, alterações de ressonância em lactentes, ideação suicida y estado de mal.",
+    "contraindications": "Hipersensibilidade à vigabatrina; Perda visual significativa pré-existente quando houver alternativa; Impossibilidade de monitorização oftalmológica quando exigida",
+    "interactions": "Fenitoína: pode reduzir níveis de fenitoína; Álcool y sedativos: maior sonolência; Outros anticonvulsivantes: monitorar sedação y controle de crises",
+    "monitoring": "Risco clássico y grave: perda visual periférica irreversível.; Exige avaliação oftalmológica basal y periódica quando possível.; Usar apenas quando benefício supera claramente risco visual.; Reavaliar eficácia precocemente; suspender se no houver benefício clínico relevante.; No suspender abruptamente em epilepsia sem plano médico.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Perda visual periférica permanente, alterações de ressonância em lactentes, ideação suicida y estado de mal.",
+    "alerts": "Perda visual periférica permanente, alterações de ressonância em lactentes, ideação suicida y estado de mal.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vigabatrina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vigabatrina"
+  }
+};})();
+/* GOLD33_SELECTIVE:vigabatrina:END */

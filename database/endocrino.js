@@ -2823,3 +2823,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:sitagliptina:END */
+/* GOLD33_SELECTIVE:vildagliptina:START */
+;(function(){var db=window.ENDOCRINO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="vildagliptina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vildagliptina:"+matches.length);drug=matches[0];}else{drug=db&&db["vildagliptina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="vildagliptina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vildagliptina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:vildagliptina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "082",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f0e6cac4e2e07afb2a1d0abc227e1e92126392bcfd9521e42fd7299ef157b512",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Vildagliptina",
+    "class": "Inibidor da dipeptidil peptidase-4",
+    "pharmacologicClass": "Inibidor da dipeptidil peptidase-4",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos e combinações fixas em forças específicas.",
+    "presentations": "Comprimidos e combinações fixas em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Diabetes mellitus tipo 2 conforme aprovação local, isolada ou em combinação.",
+    "dose": "Dose depende da combinação, função renal e rótulo local. Monitorar função hepática e ajustar risco de hipoglicemia com insulina/secretagogos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura, cefaleia, nasofaringite e edema.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, pancreatite, angioedema, dor articular grave e penfigoide bolhoso.",
+    "adverseEffects": "Tontura, cefaleia, nasofaringite e edema.; Hepatotoxicidade, pancreatite, angioedema, dor articular grave e penfigoide bolhoso.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, pancreatite, angioedema, dor articular grave e penfigoide bolhoso.",
+    "alerts": "Hepatotoxicidade, pancreatite, angioedema, dor articular grave e penfigoide bolhoso.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vildagliptina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vildagliptina"
+  },
+  "es": {
+    "name": "Vildagliptina",
+    "class": "Inibidor da dipeptidil peptidase-4",
+    "pharmacologicClass": "Inibidor da dipeptidil peptidase-4",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos y combinações fixas em forças específicas.",
+    "presentations": "Comprimidos y combinações fixas em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Diabetes mellitus tipo 2 conforme aprovação local, isolada ou em combinação.",
+    "dose": "Dose depende da combinação, función renal y rótulo local. Monitorar función hepática y ajustar risco de hipoglicemia con insulina/secretagogos.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura, cefaleia, nasofaringite y edema.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, pancreatite, angioedema, dor articular grave y penfigoide bolhoso.",
+    "adverseEffects": "Tontura, cefaleia, nasofaringite y edema.; Hepatotoxicidade, pancreatite, angioedema, dor articular grave y penfigoide bolhoso.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hepatotoxicidade, pancreatite, angioedema, dor articular grave y penfigoide bolhoso.",
+    "alerts": "Hepatotoxicidade, pancreatite, angioedema, dor articular grave y penfigoide bolhoso.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vildagliptina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vildagliptina"
+  }
+};})();
+/* GOLD33_SELECTIVE:vildagliptina:END */

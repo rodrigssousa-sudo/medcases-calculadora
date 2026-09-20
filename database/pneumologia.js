@@ -7163,3 +7163,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:umeclidinio_vilanterol:END */
+/* GOLD33_SELECTIVE:vilanterol:START */
+;(function(){var db=window.PNEUMOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="vilanterol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vilanterol:"+matches.length);drug=matches[0];}else{drug=db&&db["vilanterol"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="vilanterol";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:vilanterol:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:vilanterol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "082",
+    "requiredFieldCount": 33,
+    "approvedSha256": "f0e6cac4e2e07afb2a1d0abc227e1e92126392bcfd9521e42fd7299ef157b512",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Vilanterol",
+    "class": "Agonista beta2 de longa ação inalatório",
+    "pharmacologicClass": "Agonista beta2 de longa ação inalatório",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Somente em combinações inaladas de dose fixa.",
+    "presentations": "Somente em combinações inaladas de dose fixa.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Componente de combinações para DPOC ou asma; não deve ser usado isoladamente nem como resgate.",
+    "dose": "Disponível em combinações e dispositivos específicos. Seguir frequência do produto, não exceder nem combinar outro LABA sem avaliação.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, tremor, palpitação e nasofaringite.",
+    "dangerousAdverseEffects": "Broncoespasmo paradoxal, taquiarritmia, hipocalemia e eventos graves de asma sem corticosteroide.",
+    "adverseEffects": "Cefaleia, tremor, palpitação e nasofaringite.; Broncoespasmo paradoxal, taquiarritmia, hipocalemia e eventos graves de asma sem corticosteroide.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Broncoespasmo paradoxal, taquiarritmia, hipocalemia e eventos graves de asma sem corticosteroide.",
+    "alerts": "Broncoespasmo paradoxal, taquiarritmia, hipocalemia e eventos graves de asma sem corticosteroide.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vilanterol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vilanterol"
+  },
+  "es": {
+    "name": "Vilanterol",
+    "class": "Agonista beta2 de longa ação inalatório",
+    "pharmacologicClass": "Agonista beta2 de longa ação inalatório",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Somente em combinações inaladas de dosis fixa.",
+    "presentations": "Somente em combinações inaladas de dosis fixa.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Componente de combinações para DPOC ou asma; no deve ser usado isoladamente nem como resgate.",
+    "dose": "Disponível em combinações y dispositivos específicos. Seguir frequência do produto, no exceder nem combinar outro LABA sem avaliação.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, tremor, palpitação y nasofaringite.",
+    "dangerousAdverseEffects": "Broncoespasmo paradoxal, taquiarritmia, hipocalemia y eventos graves de asma sem corticosteroide.",
+    "adverseEffects": "Cefaleia, tremor, palpitação y nasofaringite.; Broncoespasmo paradoxal, taquiarritmia, hipocalemia y eventos graves de asma sem corticosteroide.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Broncoespasmo paradoxal, taquiarritmia, hipocalemia y eventos graves de asma sem corticosteroide.",
+    "alerts": "Broncoespasmo paradoxal, taquiarritmia, hipocalemia y eventos graves de asma sem corticosteroide.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vilanterol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=vilanterol"
+  }
+};})();
+/* GOLD33_SELECTIVE:vilanterol:END */
