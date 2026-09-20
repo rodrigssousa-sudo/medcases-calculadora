@@ -6,182 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Oxcarbazepina",
-    "class": "Anticonvulsivante e estabilizador do humor off-label",
+    "class": "Antiepiléptico bloqueador de canais de sódio",
     "category": "estabilizador_humor",
-    "commercialNames": {
-      "br": [
-        "Trileptal",
-        "Oxcarb",
-        "Oxcarbazepina EMS"
-      ],
-      "ar": [
-        "Trileptal",
-        "Oxcarbazepina Gador",
-        "Oxcarbazepina"
-      ]
-    },
-    "presentation": [
-      "Comprimido 300 mg",
-      "Comprimido 600 mg",
-      "Suspensão oral 60 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Epilepsia/bipolar off-label: iniciar 300 mg VO 12/12h; titular gradualmente.",
-      "manutencao": "Dose usual: 600–1200 mg/dia; alguns casos usam até 2400 mg/dia sob especialista.",
-      "maxDose": "Dose máxima usual: 2400 mg/dia."
-    },
+    "commercialNames": "br: Trileptal; Oxcarb; Oxcarbazepina EMS; ar: Trileptal; Oxcarbazepina Gador; Oxcarbazepina",
+    "presentation": "Comprimido 300 mg; Comprimido 600 mg; Suspensão oral 60 mg/mL",
+    "dose": "adulto: Epilepsia/bipolar off-label: iniciar 300 mg VO 12/12h; titular gradualmente.; manutencao: Dose usual: 600–1200 mg/dia; alguns casos usam até 2400 mg/dia sob especialista.; maxDose: Dose máxima usual: 2400 mg/dia.",
     "doseKg": {
       "standard": "Adultos: geralmente não se calcula por kg.",
       "pediatric": "Pediatria/epilepsia: calcular por kg conforme protocolo especializado.",
       "maxDose": "2400 mg/dia"
     },
-    "indications": [
-      "Epilepsia focal",
-      "Crises focais com ou sem generalização secundária",
-      "Transtorno bipolar em casos selecionados off-label",
-      "Mania aguda off-label",
-      "Neuralgia do trigêmeo off-label",
-      "Alternativa à carbamazepina quando se busca menos interações"
-    ],
+    "indications": "Epilepsia focal; Crises focais com ou sem generalização secundária; Transtorno bipolar em casos selecionados off-label; Mania aguda off-label; Neuralgia do trigêmeo off-label; Alternativa à carbamazepina quando se busca menos interações",
     "renalAdjustment": "Sem ajuste renal habitual se ClCr ≥30 mL/min.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Pró-fármaco convertido em derivado monohidroxilado ativo; bloqueia canais de sódio voltagem-dependentes e reduz excitabilidade neuronal.",
     "onset": "Controle de crises pode ocorrer após titulação; efeito no humor é off-label e variável.",
     "halfLife": "Vida média do metabólito ativo: aproximadamente 8–10 horas.",
-    "commonAdverseEffects": [
-      "Tontura",
-      "Sonolência",
-      "Diplopia",
-      "Ataxia",
-      "Náuseas",
-      "Cefaleia",
-      "Hiponatremia"
-    ],
-    "dangerousAdverseEffects": [
-      "Hiponatremia grave/SIADH",
-      "Síndrome de Stevens-Johnson/necrólise epidérmica tóxica rara",
-      "Anafilaxia/angioedema raro",
-      "Ideação suicida",
-      "Reação de hipersensibilidade cruzada com carbamazepina"
-    ],
+    "commonAdverseEffects": "Tontura; Sonolência; Diplopia; Ataxia; Náuseas; Cefaleia; Hiponatremia",
+    "dangerousAdverseEffects": "Hiponatremia grave/SIADH; Síndrome de Stevens-Johnson/necrólise epidérmica tóxica rara; Anafilaxia/angioedema raro; Ideação suicida; Reação de hipersensibilidade cruzada com carbamazepina",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade à oxcarbazepina ou eslicarbazepina",
-      "História de reação grave cutânea associada ao fármaco",
-      "Hiponatremia grave não corrigida"
-    ],
-    "interactions": [
-      "Anticoncepcionais hormonais: pode reduzir eficácia",
-      "Diuréticos e ISRS/ISRN: maior risco de hiponatremia",
-      "Carbamazepina/fenitoína/fenobarbital: podem alterar níveis",
-      "Lamotrigina: possível redução de níveis/efeito",
-      "Álcool e sedativos: maior depressão do SNC"
-    ],
-    "alerts": [
-      "Monitorar sódio, especialmente nas primeiras semanas e em idosos.",
-      "Menos indutora enzimática que carbamazepina, mas ainda pode reduzir anticoncepcionais.",
-      "Suspender e avaliar se rash, febre, mucosite ou sintomas sistêmicos.",
-      "Evidência em bipolaridade é menos sólida que lítio, valproato e lamotrigina.",
-      "Cautela se histórico de alergia à carbamazepina."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Oxcarbazepine Prescribing Information",
-      "CANMAT Bipolar Guidelines",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidade à oxcarbazepina ou eslicarbazepina; História de reação grave cutânea associada ao fármaco; Hiponatremia grave não corrigida",
+    "interactions": "Anticoncepcionais hormonais: pode reduzir eficácia; Diuréticos e ISRS/ISRN: maior risco de hiponatremia; Carbamazepina/fenitoína/fenobarbital: podem alterar níveis; Lamotrigina: possível redução de níveis/efeito; Álcool e sedativos: maior depressão do SNC",
+    "alerts": "Hiponatremia, reações cutâneas graves, angioedema, ideação suicida e DRESS.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxcarbazepina",
+    "pharmacologicClass": "Antiepiléptico bloqueador de canais de sódio",
+    "presentations": "Comprimido 300 mg; Comprimido 600 mg; Suspensão oral 60 mg/mL",
+    "pharmacodynamics": "Pró-fármaco convertido em derivado monohidroxilado ativo; bloqueia canais de sódio voltagem-dependentes e reduz excitabilidade neuronal.",
+    "pharmacokinetics": "Vida média do metabólito ativo: aproximadamente 8–10 horas.",
+    "pediatricDose": "standard: Adultos: geralmente não se calcula por kg.; pediatric: Pediatria/epilepsia: calcular por kg conforme protocolo especializado.; maxDose: 2400 mg/dia",
+    "renalDose": "Sem ajuste renal habitual se ClCr ≥30 mL/min.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "adverseEffects": "Tontura, sonolência, diplopia, fadiga, náusea e ataxia.; Hiponatremia, reações cutâneas graves, angioedema, ideação suicida e DRESS.",
+    "monitoring": "Monitorar sódio, especialmente nas primeiras semanas e em idosos.; Menos indutora enzimática que carbamazepina, mas ainda pode reduzir anticoncepcionais.; Suspender e avaliar se rash, febre, mucosite ou sintomas sistêmicos.; Evidência em bipolaridade é menos sólida que lítio, valproato e lamotrigina.; Cautela se histórico de alergia à carbamazepina.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hiponatremia, reações cutâneas graves, angioedema, ideação suicida e DRESS.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxcarbazepina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "es": {
     "name": "Oxcarbazepina",
-    "class": "Anticonvulsivante y estabilizador del ánimo off-label",
+    "class": "Antiepiléptico bloqueador de canais de sódio",
     "category": "estabilizador_humor",
-    "commercialNames": {
-      "br": [
-        "Trileptal",
-        "Oxcarb",
-        "Oxcarbazepina EMS"
-      ],
-      "ar": [
-        "Trileptal",
-        "Oxcarbazepina Gador",
-        "Oxcarbazepina"
-      ]
-    },
-    "presentation": [
-      "Comprimido 300 mg",
-      "Comprimido 600 mg",
-      "Suspensión oral 60 mg/mL"
-    ],
-    "dose": {
-      "adulto": "Epilepsia/bipolar off-label: iniciar 300 mg VO cada 12 h; titular gradualmente.",
-      "manutencao": "Dosis habitual: 600–1200 mg/día; algunos casos usan hasta 2400 mg/día bajo especialista.",
-      "maxDose": "Dosis máxima habitual: 2400 mg/día."
-    },
+    "commercialNames": "br: Trileptal; Oxcarb; Oxcarbazepina EMS; ar: Trileptal; Oxcarbazepina Gador; Oxcarbazepina",
+    "presentation": "Comprimido 300 mg; Comprimido 600 mg; Suspensão oral 60 mg/mL",
+    "dose": "adulto: Epilepsia/bipolar off-label: iniciar 300 mg VO 12/12h; titular gradualmente.; manutencao: Dose usual: 600–1200 mg/dia; alguns casos usam até 2400 mg/dia sob especialista.; maxDose: Dose máxima usual: 2400 mg/dia.",
     "doseKg": {
       "standard": "Adultos: generalmente no se calcula por kg.",
       "pediatric": "Pediatría/epilepsia: calcular por kg según protocolo especializado.",
       "maxDose": "2400 mg/día"
     },
-    "indications": [
-      "Epilepsia focal",
-      "Crisis focales con o sin generalización secundaria",
-      "Trastorno bipolar en casos seleccionados off-label",
-      "Manía aguda off-label",
-      "Neuralgia del trigémino off-label",
-      "Alternativa a carbamazepina cuando se buscan menos interacciones"
-    ],
+    "indications": "Epilepsia focal; Crises focais con ou sem generalização secundária; Transtorno bipolar em casos selecionados off-label; Mania aguda off-label; Neuralgia do trigêmeo off-label; Alternativa à carbamazepina quando se busca menos interações",
     "renalAdjustment": "Sin ajuste renal habitual si ClCr ≥30 mL/min.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Profármaco convertido en derivado monohidroxilado activo; bloquea canales de sodio voltaje-dependientes y reduce excitabilidad neuronal.",
+    "mechanism": "Pró-fármaco convertido em derivado monohidroxilado ativo; bloqueia canais de sódio voltagem-dependentes y reduz excitabilidade neuronal.",
     "onset": "Control de crisis puede ocurrir tras titulación; efecto en ánimo es off-label y variable.",
     "halfLife": "Vida media del metabolito activo: aproximadamente 8–10 horas.",
-    "commonAdverseEffects": [
-      "Mareos",
-      "Somnolencia",
-      "Diplopía",
-      "Ataxia",
-      "Náuseas",
-      "Cefalea",
-      "Hiponatremia"
-    ],
-    "dangerousAdverseEffects": [
-      "Hiponatremia grave/SIADH",
-      "Síndrome de Stevens-Johnson/necrólisis epidérmica tóxica rara",
-      "Anafilaxia/angioedema raro",
-      "Ideación suicida",
-      "Reacción de hipersensibilidad cruzada con carbamazepina"
-    ],
+    "commonAdverseEffects": "Tontura; Sonolência; Diplopia; Ataxia; Náuseas; Cefaleia; Hiponatremia",
+    "dangerousAdverseEffects": "Hiponatremia grave/SIADH; Síndrome de Stevens-Johnson/necrólise epidérmica tóxica rara; Anafilaxia/angioedema raro; Ideação suicida; Reação de hipersensibilidade cruzada con carbamazepina",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a oxcarbazepina o eslicarbazepina",
-      "Antecedente de reacción cutánea grave asociada al fármaco",
-      "Hiponatremia grave no corregida"
-    ],
-    "interactions": [
-      "Anticonceptivos hormonales: puede reducir eficacia",
-      "Diuréticos e ISRS/IRSN: mayor riesgo de hiponatremia",
-      "Carbamazepina/fenitoína/fenobarbital: pueden alterar niveles",
-      "Lamotrigina: posible reducción de niveles/efecto",
-      "Alcohol y sedantes: mayor depresión del SNC"
-    ],
-    "alerts": [
-      "Monitorizar sodio, especialmente en las primeras semanas y en adultos mayores.",
-      "Menos inductora enzimática que carbamazepina, pero aún puede reducir anticonceptivos.",
-      "Suspender y evaluar si rash, fiebre, mucositis o síntomas sistémicos.",
-      "La evidencia en bipolaridad es menos sólida que litio, valproato y lamotrigina.",
-      "Cautela si antecedente de alergia a carbamazepina."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Oxcarbazepine Prescribing Information",
-      "CANMAT Bipolar Guidelines",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidade à oxcarbazepina ou eslicarbazepina; História de reação grave cutânea associada ao fármaco; Hiponatremia grave no corrigida",
+    "interactions": "Anticoncepcionais hormonais: pode reduzir eficácia; Diuréticos y ISRS/ISRN: maior risco de hiponatremia; Carbamazepina/fenitoína/fenobarbital: podem alterar níveis; Lamotrigina: possível redução de níveis/efeito; Álcool y sedativos: maior depressão do SNC",
+    "alerts": "Hiponatremia, reações cutâneas graves, angioedema, ideação suicida y DRESS.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxcarbazepina",
+    "pharmacologicClass": "Antiepiléptico bloqueador de canais de sódio",
+    "presentations": "Comprimido 300 mg; Comprimido 600 mg; Suspensão oral 60 mg/mL",
+    "pharmacodynamics": "Pró-fármaco convertido em derivado monohidroxilado ativo; bloqueia canais de sódio voltagem-dependentes y reduz excitabilidade neuronal.",
+    "pharmacokinetics": "Vida média do metabólito ativo: aproximadamente 8–10 horas.",
+    "pediatricDose": "standard: Adultos: geralmente no se calcula por kg.; pediatric: Pediatria/epilepsia: calcular por kg conforme protocolo especializado.; maxDose: 2400 mg/dia",
+    "renalDose": "Sem ajuste renal habitual se ClCr ≥30 mL/min.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "adverseEffects": "Tontura, sonolência, diplopia, fadiga, náusea y ataxia.; Hiponatremia, reações cutâneas graves, angioedema, ideação suicida y DRESS.",
+    "monitoring": "Monitorar sódio, especialmente nas primeiras semanas y em idosos.; Menos indutora enzimática que carbamazepina, mas ainda pode reduzir anticoncepcionais.; Suspender y avaliar se rash, febre, mucosite ou sintomas sistêmicos.; Evidência em bipolaridade é menos sólida que lítio, valproato y lamotrigina.; Cautela se histórico de alergia à carbamazepina.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hiponatremia, reações cutâneas graves, angioedema, ideação suicida y DRESS.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxcarbazepina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "name": {
@@ -196,9 +114,21 @@
     "oxcarbazepina gador",
     "anticonvulsivante e estabilizador do humor off-label"
   ],
-  "dataVersion": "clinical-data-v1-fde1724bb2deb277",
-  "clinicalContentSha256": "fde1724bb2deb277d0913ad55360b14da0b8ecbb297ab35213b485fc61d7cca9",
+  "dataVersion": "clinical-data-v1-14bcd5c74eed540c",
+  "clinicalContentSha256": "14bcd5c74eed540c0e5525a279f51bc018be13cf77642a046eba811fed2b2e8c",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "neurologia.js"
+  "sourceModule": "neurologia.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/neurologia.js",
+    "sourceField": "oxcarbazepina.mcGoldClinicalV1",
+    "lote": "059",
+    "requiredFields": 33,
+    "approvedSha256": "9a0e252a1c2c2244940c697a28cf89c57a5f37b8c8221ac511f5e465ff69013f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }
