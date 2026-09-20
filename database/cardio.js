@@ -71520,3 +71520,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:sacubitrilvalsartana:END */
+/* GOLD33_SELECTIVE:selexipague:START */
+;(function(){var db=window.CARDIO_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="selexipague";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:selexipague:"+matches.length);drug=matches[0];}else{drug=db&&db["selexipague"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:selexipague");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "071",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b849afd77cf7c158749040cafef531ab52eee801c7628e215ab1c1f9f43270bb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Selexipague",
+    "class": "Agonista seletivo do receptor de prostaciclina IP",
+    "pharmacologicClass": "Agonista seletivo do receptor de prostaciclina IP",
+    "commercialNames": "Uptravi.",
+    "presentation": "Comprimidos de 100, 150, 200, 400, 600, 800, 1000, 1200, 1400 e 1600 mcg; frasco IV de 1800 mcg para adultos.",
+    "presentations": "Comprimidos de 100, 150, 200, 400, 600, 800, 1000, 1200, 1400 e 1600 mcg; frasco IV de 1800 mcg para adultos.",
+    "mechanism": "Selexipague e principalmente seu metabólito ativo agonizam seletivamente o receptor IP da prostaciclina, aumentando AMPc e promovendo vasodilatação e efeito antiproliferativo.",
+    "pharmacodynamics": "Selexipague e principalmente seu metabólito ativo agonizam seletivamente o receptor IP da prostaciclina, aumentando AMPc e promovendo vasodilatação e efeito antiproliferativo.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "HAP WHO Grupo 1 em adultos para retardar progressão e reduzir hospitalização; em pacientes pediátricos com 2 anos ou mais, reduz NT-proBNP e espera-se benefício sobre progressão/hospitalização.",
+    "dose": "Adultos: iniciar 200 mcg VO duas vezes ao dia; aumentar 200 mcg duas vezes ao dia, geralmente semanalmente, até a maior dose tolerada, máximo 1600 mcg duas vezes ao dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, diarreia, dor mandibular, náusea, mialgia, vômitos, dor em extremidades, flushing, artralgia, anemia, redução do apetite e rash.",
+    "dangerousAdverseEffects": "Hipotensão sintomática, edema pulmonar em PVOD e intolerância importante durante titulação; em pediatria, acompanhar crescimento.",
+    "adverseEffects": "Cefaleia, diarreia, náusea, dor mandibular e mialgia.; Hipotensão, edema pulmonar em doença veno-oclusiva e descompensação após interrupção abrupta.",
+    "contraindications": "Hipersensibilidade e uso concomitante de inibidor forte de CYP2C8, como gemfibrozila.",
+    "interactions": "Inibidor forte de CYP2C8 é contraindicado. Com inibidor moderado de CYP2C8, reduzir para uma vez ao dia. Indutor de CYP2C8 pode exigir aumento de dose sob protocolo da bula.",
+    "monitoring": "Não usar com gemfibrozila. Se edema pulmonar sugerir PVOD, investigar e suspender se confirmado. Após interrupção de 3 dias ou mais, retitular.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipotensão, edema pulmonar em doença veno-oclusiva e descompensação após interrupção abrupta.",
+    "alerts": "Hipotensão, edema pulmonar em doença veno-oclusiva e descompensação após interrupção abrupta.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=selexipague",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=selexipague"
+  },
+  "es": {
+    "name": "Selexipague",
+    "class": "Agonista seletivo do receptor de prostaciclina IP",
+    "pharmacologicClass": "Agonista seletivo do receptor de prostaciclina IP",
+    "commercialNames": "Uptravi.",
+    "presentation": "Comprimidos de 100, 150, 200, 400, 600, 800, 1000, 1200, 1400 y 1600 mcg; frasco IV de 1800 mcg para adultos.",
+    "presentations": "Comprimidos de 100, 150, 200, 400, 600, 800, 1000, 1200, 1400 y 1600 mcg; frasco IV de 1800 mcg para adultos.",
+    "mechanism": "Selexipague y principalmente seu metabólito ativo agonizam seletivamente o receptor IP da prostaciclina, aumentando AMPc y promovendo vasodilatação y efeito antiproliferativo.",
+    "pharmacodynamics": "Selexipague y principalmente seu metabólito ativo agonizam seletivamente o receptor IP da prostaciclina, aumentando AMPc y promovendo vasodilatação y efeito antiproliferativo.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "HAP WHO Grupo 1 em adultos para retardar progressão y reduzir hospitalização; em pacientes pediátricos con 2 anos ou mais, reduz NT-proBNP y espera-se benefício sobre progressão/hospitalização.",
+    "dose": "Adultos: iniciar 200 mcg VO duas vezes ao dia; aumentar 200 mcg duas vezes ao dia, geralmente semanalmente, até a maior dosis tolerada, máximo 1600 mcg duas vezes ao dia.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Cefaleia, diarreia, dor mandibular, náusea, mialgia, vômitos, dor em extremidades, flushing, artralgia, anemia, redução do apetite y rash.",
+    "dangerousAdverseEffects": "Hipotensão sintomática, edema pulmonar em PVOD y intolerância importante durante titulação; em pediatria, acompanhar crescimento.",
+    "adverseEffects": "Cefaleia, diarreia, náusea, dor mandibular y mialgia.; Hipotensão, edema pulmonar em doença veno-oclusiva y descompensação após interrupção abrupta.",
+    "contraindications": "Hipersensibilidade y uso concomitante de inibidor forte de CYP2C8, como gemfibrozila.",
+    "interactions": "Inibidor forte de CYP2C8 é contraindicado. Com inibidor moderado de CYP2C8, reduzir para uma vez ao dia. Indutor de CYP2C8 pode exigir aumento de dosis sob protocolo da bula.",
+    "monitoring": "No usar con gemfibrozila. Se edema pulmonar sugerir PVOD, investigar y suspender se confirmado. Após interrupção de 3 dias ou mais, retitular.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipotensão, edema pulmonar em doença veno-oclusiva y descompensação após interrupção abrupta.",
+    "alerts": "Hipotensão, edema pulmonar em doença veno-oclusiva y descompensação após interrupção abrupta.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=selexipague",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=selexipague"
+  }
+};})();
+/* GOLD33_SELECTIVE:selexipague:END */

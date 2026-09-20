@@ -31445,3 +31445,93 @@ Object.keys(gold).forEach(function(id){
   }
 };})();
 /* GOLD33_SELECTIVE:roxitromicina:END */
+/* GOLD33_SELECTIVE:secnidazol:START */
+;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="secnidazol";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:secnidazol:"+matches.length);drug=matches[0];}else{drug=db&&db["secnidazol"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:secnidazol");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "071",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b849afd77cf7c158749040cafef531ab52eee801c7628e215ab1c1f9f43270bb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Secnidazol",
+    "class": "Nitroimidazólico antimicrobiano",
+    "pharmacologicClass": "Nitroimidazólico antimicrobiano",
+    "commercialNames": "br: Secnidal; Secnidazol Genérico; ar: Secnidal; Secnidazol Genérico",
+    "presentation": "Comprimidos: 500 mg; Suspensão oral: 250 mg/5 mL",
+    "presentations": "Comprimidos: 500 mg; Suspensão oral: 250 mg/5 mL",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Infecções por protozoários ou vaginose bacteriana conforme produto e jurisdição.",
+    "dose": "adultoVO: 2 g VO dose única",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, gosto metálico, dor abdominal e cefaleia.",
+    "dangerousAdverseEffects": "Hipersensibilidade, leucopenia, neuropatia e reação com álcool.",
+    "adverseEffects": "Náusea, gosto metálico, dor abdominal e cefaleia.; Hipersensibilidade, leucopenia, neuropatia e reação com álcool.",
+    "contraindications": "Hipersensibilidade aos nitroimidazóis; 1º trimestre de gestação; Distúrbios neurológicos graves",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Efeito antabuse com álcool — orientar abstinência durante tratamento e 72h após.; Meia-vida muito longa (~17–29h) — dose única para a maioria das indicações.; Não necessita ajuste renal habitual.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipersensibilidade, leucopenia, neuropatia e reação com álcool.",
+    "alerts": "Hipersensibilidade, leucopenia, neuropatia e reação com álcool.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=secnidazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=secnidazol"
+  },
+  "es": {
+    "name": "Secnidazol",
+    "class": "Nitroimidazólico antimicrobiano",
+    "pharmacologicClass": "Nitroimidazólico antimicrobiano",
+    "commercialNames": "br: Secnidal; Secnidazol Genérico; ar: Secnidal; Secnidazol Genérico",
+    "presentation": "Comprimidos: 500 mg; Suspensão oral: 250 mg/5 mL",
+    "presentations": "Comprimidos: 500 mg; Suspensão oral: 250 mg/5 mL",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Infecções por protozoários ou vaginose bacteriana conforme produto y jurisdição.",
+    "dose": "adultoVO: 2 g VO dosis única",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, gosto metálico, dor abdominal y cefaleia.",
+    "dangerousAdverseEffects": "Hipersensibilidade, leucopenia, neuropatia y reação con álcool.",
+    "adverseEffects": "Náusea, gosto metálico, dor abdominal y cefaleia.; Hipersensibilidade, leucopenia, neuropatia y reação con álcool.",
+    "contraindications": "Hipersensibilidade aos nitroimidazóis; 1º trimestre de gestação; Distúrbios neurológicos graves",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Efeito antabuse con álcool — orientar abstinência durante tratamento y 72h após.; Meia-vida muito longa (~17–29h) — dosis única para a maioria das indicações.; No necessita ajuste renal habitual.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipersensibilidade, leucopenia, neuropatia y reação con álcool.",
+    "alerts": "Hipersensibilidade, leucopenia, neuropatia y reação con álcool.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=secnidazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=secnidazol"
+  }
+};})();
+/* GOLD33_SELECTIVE:secnidazol:END */

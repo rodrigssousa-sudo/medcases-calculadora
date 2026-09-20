@@ -274,3 +274,93 @@ window.ENDOCRINO_GLP1_DRUGS_DB = [
   }
 };})();
 /* GOLD33_SELECTIVE:liraglutida:END */
+/* GOLD33_SELECTIVE:semaglutida:START */
+;(function(){var db=window.ENDOCRINO_GLP1_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="semaglutida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:semaglutida:"+matches.length);drug=matches[0];}else{drug=db&&db["semaglutida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:semaglutida");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "071",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b849afd77cf7c158749040cafef531ab52eee801c7628e215ab1c1f9f43270bb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Semaglutida para diabetes",
+    "class": "Agonista do receptor GLP-1",
+    "pharmacologicClass": "Agonista do receptor GLP-1",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos orais e canetas subcutâneas em apresentações específicas.",
+    "presentations": "Comprimidos orais e canetas subcutâneas em apresentações específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Diabetes tipo 2 e redução de risco cardiovascular conforme formulação e rótulo.",
+    "dose": "Titular gradualmente. Esquemas oral e subcutâneo não são equivalentes; confirmar produto, frequência e técnica.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, vômito, diarreia, dor abdominal e constipação.",
+    "dangerousAdverseEffects": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia com secretagogos/insulina e risco de tumor de células C.",
+    "adverseEffects": "Náusea, vômito, diarreia, dor abdominal e constipação.; Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia com secretagogos/insulina e risco de tumor de células C.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia com secretagogos/insulina e risco de tumor de células C.",
+    "alerts": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia com secretagogos/insulina e risco de tumor de células C.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=semaglutida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=semaglutida"
+  },
+  "es": {
+    "name": "Semaglutida para diabetes",
+    "class": "Agonista do receptor GLP-1",
+    "pharmacologicClass": "Agonista do receptor GLP-1",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Comprimidos orais y canetas subcutâneas em apresentações específicas.",
+    "presentations": "Comprimidos orais y canetas subcutâneas em apresentações específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Diabetes tipo 2 y redução de risco cardiovascular conforme formulação y rótulo.",
+    "dose": "Titular gradualmente. Esquemas oral y subcutâneo no são equivalentes; confirmar produto, frequência y técnica.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, vômito, diarreia, dor abdominal y constipação.",
+    "dangerousAdverseEffects": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia con secretagogos/insulina y risco de tumor de células C.",
+    "adverseEffects": "Náusea, vômito, diarreia, dor abdominal y constipação.; Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia con secretagogos/insulina y risco de tumor de células C.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia con secretagogos/insulina y risco de tumor de células C.",
+    "alerts": "Pancreatite, doença biliar, lesão renal por desidratação, hipoglicemia con secretagogos/insulina y risco de tumor de células C.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=semaglutida",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=semaglutida"
+  }
+};})();
+/* GOLD33_SELECTIVE:semaglutida:END */

@@ -7931,3 +7931,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:reboxetina:END */
+/* GOLD33_SELECTIVE:sertralina:START */
+;(function(){var db=window.PSIQUIATRIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="sertralina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:sertralina:"+matches.length);drug=matches[0];}else{drug=db&&db["sertralina"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:sertralina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "071",
+    "requiredFieldCount": 33,
+    "approvedSha256": "b849afd77cf7c158749040cafef531ab52eee801c7628e215ab1c1f9f43270bb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Sertralina",
+    "class": "Inibidor seletivo da recaptação de serotonina",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de serotonina",
+    "commercialNames": "br: Zoloft; Assert; Tolrest; Serenata; ar: Zoloft; Asertral; Sertralina Bagó; Sertralina Northia",
+    "presentation": "Comprimido 25 mg; Comprimido 50 mg; Comprimido 100 mg; Solução oral 20 mg/mL",
+    "presentations": "Comprimido 25 mg; Comprimido 50 mg; Comprimido 100 mg; Solução oral 20 mg/mL",
+    "mechanism": "Inibe seletivamente a recaptação de serotonina, aumentando serotonina na fenda sináptica.",
+    "pharmacodynamics": "Inibe seletivamente a recaptação de serotonina, aumentando serotonina na fenda sináptica.",
+    "pharmacokinetics": "Vida média aproximada: 26 horas.",
+    "indications": "Depressão, TOC, transtornos de ansiedade, TEPT e outras indicações conforme idade.",
+    "dose": "adulto: Depressão/TOC: iniciar 50 mg VO 1x/dia; titular semanalmente conforme resposta.; panicoPtsdAnsiedadeSocial: Pânico/TEPT/ansiedade social: iniciar 25 mg VO 1x/dia por 1 semana; depois 50 mg/dia.; maxDose: Dose máxima usual: 200 mg/dia.",
+    "pediatricDose": "standard: Não se utiliza cálculo rotineiro por kg em adultos.; pediatric: Pediatria/TOC: uso especializado; iniciar geralmente 25–50 mg/dia conforme idade e indicação.; maxDose: 200 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Náuseas; Diarreia; Insônia ou sonolência; Tremor; Sudorese; Disfunção sexual",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica; Ideação suicida em jovens no início do tratamento; Virada maníaca/hipomaníaca; Hiponatremia/SIADH; Aumento do risco de sangramento; Convulsões em predispostos",
+    "adverseEffects": "Náusea, diarreia, insônia, sudorese e disfunção sexual.; Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania e síndrome de descontinuação.",
+    "contraindications": "Hipersensibilidade à sertralina; Uso concomitante com IMAO; Uso concomitante com pimozida; Transtorno bipolar sem estabilizador do humor",
+    "interactions": "IMAO: risco de síndrome serotoninérgica; Tramadol, linezolida, triptanos, lítio: risco serotoninérgico; AINEs, AAS, anticoagulantes: maior risco de sangramento; Álcool e depressores do SNC: podem piorar sedação e coordenação",
+    "monitoring": "Investigar transtorno bipolar antes de iniciar.; Evitar associação com IMAO.; Monitorar piora clínica e ideação suicida em jovens.; Monitorar sódio em idosos, usuários de diuréticos ou pacientes frágeis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania e síndrome de descontinuação.",
+    "alerts": "Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania e síndrome de descontinuação.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sertralina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sertralina"
+  },
+  "es": {
+    "name": "Sertralina",
+    "class": "Inibidor seletivo da recaptação de serotonina",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de serotonina",
+    "commercialNames": "br: Zoloft; Assert; Tolrest; Serenata; ar: Zoloft; Asertral; Sertralina Bagó; Sertralina Northia",
+    "presentation": "Comprimido 25 mg; Comprimido 50 mg; Comprimido 100 mg; Solução oral 20 mg/mL",
+    "presentations": "Comprimido 25 mg; Comprimido 50 mg; Comprimido 100 mg; Solução oral 20 mg/mL",
+    "mechanism": "Inibe seletivamente a recaptação de serotonina, aumentando serotonina na fenda sináptica.",
+    "pharmacodynamics": "Inibe seletivamente a recaptação de serotonina, aumentando serotonina na fenda sináptica.",
+    "pharmacokinetics": "Vida média aproximada: 26 horas.",
+    "indications": "Depressão, TOC, transtornos de ansiedade, TEPT y outras indicações conforme idade.",
+    "dose": "adulto: Depressão/TOC: iniciar 50 mg VO 1x/dia; titular semanalmente conforme resposta.; panicoPtsdAnsiedadeSocial: Pânico/TEPT/ansiedade social: iniciar 25 mg VO 1x/dia por 1 semana; depois 50 mg/dia.; maxDose: Dose máxima usual: 200 mg/dia.",
+    "pediatricDose": "standard: No se utiliza cálculo rotineiro por kg em adultos.; pediatric: Pediatria/TOC: uso especializado; iniciar geralmente 25–50 mg/dia conforme idade y indicação.; maxDose: 200 mg/dia",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "commonAdverseEffects": "Náuseas; Diarreia; Insônia ou sonolência; Tremor; Sudorese; Disfunción sexual",
+    "dangerousAdverseEffects": "Síndrome serotoninérgica; Ideação suicida em jovens no início do tratamento; Virada maníaca/hipomaníaca; Hiponatremia/SIADH; Aumento do risco de sangramento; Convulsões em predispostos",
+    "adverseEffects": "Náusea, diarreia, insônia, sudorese y disfunción sexual.; Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania y síndrome de descontinuação.",
+    "contraindications": "Hipersensibilidade à sertralina; Uso concomitante con IMAO; Uso concomitante con pimozida; Transtorno bipolar sem estabilizador do humor",
+    "interactions": "IMAO: risco de síndrome serotoninérgica; Tramadol, linezolida, triptanos, lítio: risco serotoninérgico; AINEs, AAS, anticoagulantes: maior risco de sangramento; Álcool y depressores do SNC: podem piorar sedação y coordenação",
+    "monitoring": "Investigar transtorno bipolar antes de iniciar.; Evitar associação con IMAO.; Monitorar piora clínica y ideação suicida em jovens.; Monitorar sódio em idosos, usuários de diuréticos ou pacientes frágeis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania y síndrome de descontinuação.",
+    "alerts": "Síndrome serotoninérgica, suicidabilidade, hiponatremia, sangramento, mania y síndrome de descontinuação.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sertralina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=sertralina"
+  }
+};})();
+/* GOLD33_SELECTIVE:sertralina:END */

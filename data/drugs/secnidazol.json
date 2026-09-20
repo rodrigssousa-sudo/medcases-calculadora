@@ -6,245 +6,87 @@
   "colorTxt": "#4338CA",
   "pt": {
     "name": "Secnidazol",
-    "class": "Nitroimidazol de 2ª geração (meia-vida muito longa)",
-    "commercialNames": {
-      "br": [
-        "Secnidal",
-        "Secnidazol Genérico"
-      ],
-      "ar": [
-        "Secnidal",
-        "Secnidazol Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 500 mg",
-      "Suspensão oral: 250 mg/5 mL"
-    ],
-    "dose": {
-      "adultoVO": "2 g VO dose única"
-    },
+    "class": "Nitroimidazólico antimicrobiano",
+    "commercialNames": "br: Secnidal; Secnidazol Genérico; ar: Secnidal; Secnidazol Genérico",
+    "presentation": "Comprimidos: 500 mg; Suspensão oral: 250 mg/5 mL",
+    "dose": "adultoVO: 2 g VO dose única",
     "doseKg": null,
     "indication": "Amebíase intestinal e hepática, giardíase, vaginose bacteriana, tricomoníase.",
     "spectrum": "Entamoeba histolytica, Giardia lamblia, Trichomonas vaginalis, Gardnerella vaginalis, anaeróbios (Bacteroides fragilis, Clostridium spp.). Perfil semelhante ao tinidazol com meia-vida ainda mais longa (~17–29h).",
-    "contraindications": [
-      "Hipersensibilidade aos nitroimidazóis",
-      "1º trimestre de gestação",
-      "Distúrbios neurológicos graves"
-    ],
+    "contraindications": "Hipersensibilidade aos nitroimidazóis; 1º trimestre de gestação; Distúrbios neurológicos graves",
     "risksByPatient": [],
-    "alerts": [
-      "Efeito antabuse com álcool — orientar abstinência durante tratamento e 72h após.",
-      "Meia-vida muito longa (~17–29h) — dose única para a maioria das indicações.",
-      "Não necessita ajuste renal habitual."
-    ],
-    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "Não necessita ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Utilizado para amebíase, giardíase e vaginose bacteriana."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não necessita ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorar neurotoxicidade em tratamentos repetidos."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Não requer suplementação pós-HD."
-      }
-    }
+    "alerts": "Hipersensibilidade, leucopenia, neuropatia e reação com álcool.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=secnidazol",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "pharmacologicClass": "Nitroimidazólico antimicrobiano",
+    "presentations": "Comprimidos: 500 mg; Suspensão oral: 250 mg/5 mL",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Infecções por protozoários ou vaginose bacteriana conforme produto e jurisdição.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, gosto metálico, dor abdominal e cefaleia.",
+    "dangerousAdverseEffects": "Hipersensibilidade, leucopenia, neuropatia e reação com álcool.",
+    "adverseEffects": "Náusea, gosto metálico, dor abdominal e cefaleia.; Hipersensibilidade, leucopenia, neuropatia e reação com álcool.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Efeito antabuse com álcool — orientar abstinência durante tratamento e 72h após.; Meia-vida muito longa (~17–29h) — dose única para a maioria das indicações.; Não necessita ajuste renal habitual.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipersensibilidade, leucopenia, neuropatia e reação com álcool.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=secnidazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "es": {
     "name": "Secnidazol",
-    "class": "Nitroimidazol de 2.ª generación (semivida muy larga)",
-    "commercialNames": {
-      "br": [
-        "Secnidal",
-        "Secnidazol Genérico"
-      ],
-      "ar": [
-        "Secnidal",
-        "Secnidazol Genérico"
-      ]
-    },
-    "presentation": [
-      "Comprimidos: 500 mg",
-      "Suspensión oral: 250 mg/5 mL"
-    ],
-    "dose": {
-      "adultoVO": "2 g VO dosis única"
-    },
+    "class": "Nitroimidazólico antimicrobiano",
+    "commercialNames": "br: Secnidal; Secnidazol Genérico; ar: Secnidal; Secnidazol Genérico",
+    "presentation": "Comprimidos: 500 mg; Suspensão oral: 250 mg/5 mL",
+    "dose": "adultoVO: 2 g VO dosis única",
     "doseKg": null,
     "indication": "Amebiasis intestinal y hepática, giardiasis, vaginosis bacteriana, tricomoniasis.",
     "spectrum": "Entamoeba histolytica, Giardia lamblia, Trichomonas vaginalis, Gardnerella vaginalis, anaerobios (Bacteroides fragilis, Clostridium spp.). Perfil similar al tinidazol con semivida aún más larga (~17–29h).",
-    "contraindications": [
-      "Hipersensibilidad a los nitroimidazoles",
-      "1.er trimestre de gestación",
-      "Trastornos neurológicos graves"
-    ],
+    "contraindications": "Hipersensibilidade aos nitroimidazóis; 1º trimestre de gestação; Distúrbios neurológicos graves",
     "risksByPatient": [],
-    "alerts": [
-      "Efecto antabus con alcohol — orientar abstinencia durante el tratamiento y 72h después.",
-      "Semivida muy larga (~17–29h) — dosis única para la mayoría de las indicaciones.",
-      "No requiere ajuste renal habitual."
-    ],
-    "ref": "Sanford Guide 2025 / CDC STI Guidelines 2021 / Goodman & Gilman 14ª ed.",
-    "renalDose": {
-      "version": 2,
-      "requiresAdjustment": false,
-      "message": "No requiere ajuste renal habitual.",
-      "fgMaior50": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Utilizado para amebiasis, giardiasis y vaginosis bacteriana."
-      },
-      "fg30a50": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fg10a30": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere ajuste renal."
-      },
-      "fgMenor10": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "Monitorizar neurotoxicidad en tratamientos repetidos."
-      },
-      "hemodialise": {
-        "vo": {
-          "dose": "2 g",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "g"
-        },
-        "ev": null,
-        "pediatrica": {
-          "dose": "30 mg/kg",
-          "intervalo": "Dose única",
-          "doseMaxima": "2 g",
-          "unidade": "mg/kg"
-        },
-        "obs": "No requiere suplementación post-HD."
-      }
-    }
+    "alerts": "Hipersensibilidade, leucopenia, neuropatia y reação con álcool.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=secnidazol",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "pharmacologicClass": "Nitroimidazólico antimicrobiano",
+    "presentations": "Comprimidos: 500 mg; Suspensão oral: 250 mg/5 mL",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Infecções por protozoários ou vaginose bacteriana conforme produto y jurisdição.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Náusea, gosto metálico, dor abdominal y cefaleia.",
+    "dangerousAdverseEffects": "Hipersensibilidade, leucopenia, neuropatia y reação con álcool.",
+    "adverseEffects": "Náusea, gosto metálico, dor abdominal y cefaleia.; Hipersensibilidade, leucopenia, neuropatia y reação con álcool.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Efeito antabuse con álcool — orientar abstinência durante tratamento y 72h após.; Meia-vida muito longa (~17–29h) — dosis única para a maioria das indicações.; No necessita ajuste renal habitual.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipersensibilidade, leucopenia, neuropatia y reação con álcool.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=secnidazol",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ]
   },
   "name": {
     "pt": "Secnidazol",
@@ -256,9 +98,21 @@
     "secnidazol generico",
     "nitroimidazol de 2ª geracao (meia-vida muito longa)"
   ],
-  "dataVersion": "clinical-data-v1-bb318a21449adfc4",
-  "clinicalContentSha256": "bb318a21449adfc452153ee77cd0d158c8f2e0c326f353565d4271907c3e9119",
+  "dataVersion": "clinical-data-v1-1aee3a50f2527426",
+  "clinicalContentSha256": "1aee3a50f2527426d0e14b3504666364308cde553091b0a0cea370fbc359cd96",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "secnidazol.mcGoldClinicalV1",
+    "lote": "071",
+    "requiredFields": 33,
+    "approvedSha256": "b849afd77cf7c158749040cafef531ab52eee801c7628e215ab1c1f9f43270bb",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }
