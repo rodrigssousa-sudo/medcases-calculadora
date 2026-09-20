@@ -6,180 +6,100 @@
   "colorTxt": null,
   "pt": {
     "name": "Temazepam",
-    "class": "Benzodiazepínico hipnótico de ação intermediária",
+    "class": "Benzodiazepínico hipnótico",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Restoril",
-        "Temazepam"
-      ],
-      "ar": [
-        "Restoril",
-        "Temazepam"
-      ]
-    },
-    "presentation": [
-      "Cápsula 7,5 mg",
-      "Cápsula 15 mg",
-      "Cápsula 30 mg"
-    ],
-    "dose": {
-      "adulto": "Insônia: 7,5–15 mg VO ao deitar.",
-      "casosSelecionados": "Pode-se usar 30 mg ao deitar em casos selecionados e por curto prazo.",
-      "maxDose": "Dose máxima usual: 30 mg/noite."
-    },
+    "commercialNames": "br: Restoril; Temazepam; ar: Restoril; Temazepam",
+    "presentation": "Cápsula 7,5 mg; Cápsula 15 mg; Cápsula 30 mg",
+    "dose": "adulto: Insônia: 7,5–15 mg VO ao deitar.; casosSelecionados: Pode-se usar 30 mg ao deitar em casos selecionados e por curto prazo.; maxDose: Dose máxima usual: 30 mg/noite.",
     "doseKg": {
       "standard": "Não se utiliza cálculo por kg em adultos.",
       "pediatric": "Não recomendado como uso pediátrico rotineiro.",
       "maxDose": "30 mg/noite"
     },
-    "indications": [
-      "Insônia de curta duração",
-      "Insônia de manutenção do sono",
-      "Insônia associada à ansiedade",
-      "Insônia situacional",
-      "Insônia transitória por estresse",
-      "Sedação noturna em casos selecionados"
-    ],
+    "indications": "Insônia de curta duração; Insônia de manutenção do sono; Insônia associada à ansiedade; Insônia situacional; Insônia transitória por estresse; Sedação noturna em casos selecionados",
     "renalAdjustment": "Sem ajuste renal habitual.",
     "hepaticAdjustment": "Sem ajuste hepático habitual.",
     "mechanism": "Potencializa o GABA no receptor GABA-A, promovendo sedação e indução/manutenção do sono.",
     "onset": "Início de ação geralmente em 30–60 minutos.",
     "halfLife": "Vida média aproximada: 8–20 horas.",
-    "commonAdverseEffects": [
-      "Sonolência diurna",
-      "Tontura",
-      "Fadiga",
-      "Ataxia",
-      "Déficit de memória",
-      "Lentificação psicomotora"
-    ],
-    "dangerousAdverseEffects": [
-      "Dependência física",
-      "Síndrome de abstinência",
-      "Depressão respiratória",
-      "Comportamentos complexos do sono",
-      "Quedas e fraturas em idosos"
-    ],
+    "commonAdverseEffects": "Sonolência diurna; Tontura; Fadiga; Ataxia; Déficit de memória; Lentificação psicomotora",
+    "dangerousAdverseEffects": "Dependência física; Síndrome de abstinência; Depressão respiratória; Comportamentos complexos do sono; Quedas e fraturas em idosos",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidade a benzodiazepínicos",
-      "Insuficiência respiratória grave",
-      "Apneia do sono grave",
-      "Miastenia gravis",
-      "Intoxicação aguda por álcool ou depressores do SNC"
-    ],
-    "interactions": [
-      "Álcool",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos sedativos",
-      "Antidepressivos sedativos",
-      "Anti-histamínicos sedativos"
-    ],
-    "alerts": [
-      "Indicado apenas para uso curto em insônia.",
-      "Tomar imediatamente antes de deitar.",
-      "Evitar dirigir no dia seguinte se houver sonolência residual.",
-      "Não associar com álcool ou opioides.",
-      "Não suspender abruptamente após uso prolongado."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Temazepam Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidade a benzodiazepínicos; Insuficiência respiratória grave; Apneia do sono grave; Miastenia gravis; Intoxicação aguda por álcool ou depressores do SNC",
+    "interactions": "Álcool; Opioides; Barbitúricos; Antipsicóticos sedativos; Antidepressivos sedativos; Anti-histamínicos sedativos",
+    "alerts": "Depressão respiratória, comportamentos complexos do sono, dependência, abstinência e quedas.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=temazepam",
+    "pharmacologicClass": "Benzodiazepínico hipnótico",
+    "presentations": "Cápsula 7,5 mg; Cápsula 15 mg; Cápsula 30 mg",
+    "pharmacodynamics": "Potencializa o GABA no receptor GABA-A, promovendo sedação e indução/manutenção do sono.",
+    "pharmacokinetics": "Vida média aproximada: 8–20 horas.",
+    "pediatricDose": "standard: Não se utiliza cálculo por kg em adultos.; pediatric: Não recomendado como uso pediátrico rotineiro.; maxDose: 30 mg/noite",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "adverseEffects": "Sonolência, tontura, fadiga e prejuízo de coordenação.; Depressão respiratória, comportamentos complexos do sono, dependência, abstinência e quedas.",
+    "monitoring": "Indicado apenas para uso curto em insônia.; Tomar imediatamente antes de deitar.; Evitar dirigir no dia seguinte se houver sonolência residual.; Não associar com álcool ou opioides.; Não suspender abruptamente após uso prolongado.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Depressão respiratória, comportamentos complexos do sono, dependência, abstinência e quedas.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=temazepam",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "es": {
     "name": "Temazepam",
-    "class": "Benzodiacepina hipnótica de acción intermedia",
+    "class": "Benzodiazepínico hipnótico",
     "category": "ansiolitico",
-    "commercialNames": {
-      "br": [
-        "Restoril",
-        "Temazepam"
-      ],
-      "ar": [
-        "Restoril",
-        "Temazepam"
-      ]
-    },
-    "presentation": [
-      "Cápsula 7,5 mg",
-      "Cápsula 15 mg",
-      "Cápsula 30 mg"
-    ],
-    "dose": {
-      "adulto": "Insomnio: 7,5–15 mg VO al acostarse.",
-      "casosSelecionados": "Puede usarse 30 mg al acostarse en casos seleccionados y por corto plazo.",
-      "maxDose": "Dosis máxima habitual: 30 mg/noche."
-    },
+    "commercialNames": "br: Restoril; Temazepam; ar: Restoril; Temazepam",
+    "presentation": "Cápsula 7,5 mg; Cápsula 15 mg; Cápsula 30 mg",
+    "dose": "adulto: Insônia: 7,5–15 mg VO ao deitar.; casosSelecionados: Pode-se usar 30 mg ao deitar em casos selecionados y por curto prazo.; maxDose: Dose máxima usual: 30 mg/noite.",
     "doseKg": {
       "standard": "No se utiliza cálculo por kg en adultos.",
       "pediatric": "No recomendado como uso pediátrico rutinario.",
       "maxDose": "30 mg/noche"
     },
-    "indications": [
-      "Insomnio de corta duración",
-      "Insomnio de mantenimiento del sueño",
-      "Insomnio asociado a ansiedad",
-      "Insomnio situacional",
-      "Insomnio transitorio por estrés",
-      "Sedación nocturna en casos seleccionados"
-    ],
+    "indications": "Insônia de curta duração; Insônia de manutenção do sono; Insônia associada à ansiedade; Insônia situacional; Insônia transitória por estresse; Sedação noturna em casos selecionados",
     "renalAdjustment": "Sin ajuste renal habitual.",
     "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Potencia el GABA en el receptor GABA-A, promoviendo sedación e inducción/mantenimiento del sueño.",
+    "mechanism": "Potencializa o GABA no receptor GABA-A, promovendo sedação y indução/manutenção do sono.",
     "onset": "Inicio de acción generalmente en 30–60 minutos.",
     "halfLife": "Vida media aproximada: 8–20 horas.",
-    "commonAdverseEffects": [
-      "Somnolencia diurna",
-      "Mareos",
-      "Fatiga",
-      "Ataxia",
-      "Déficit de memoria",
-      "Enlentecimiento psicomotor"
-    ],
-    "dangerousAdverseEffects": [
-      "Dependencia física",
-      "Síndrome de abstinencia",
-      "Depresión respiratoria",
-      "Conductas complejas del sueño",
-      "Caídas y fracturas en adultos mayores"
-    ],
+    "commonAdverseEffects": "Sonolência diurna; Tontura; Fadiga; Ataxia; Déficit de memória; Lentificação psicomotora",
+    "dangerousAdverseEffects": "Dependência física; Síndrome de abstinência; Depressão respiratória; Comportamentos complexos do sono; Quedas y fraturas em idosos",
     "risksByPatient": [],
-    "contraindications": [
-      "Hipersensibilidad a benzodiacepinas",
-      "Insuficiencia respiratoria grave",
-      "Apnea del sueño grave",
-      "Miastenia gravis",
-      "Intoxicación aguda por alcohol o depresores del SNC"
-    ],
-    "interactions": [
-      "Alcohol",
-      "Opioides",
-      "Barbitúricos",
-      "Antipsicóticos sedativos",
-      "Antidepresivos sedativos",
-      "Antihistamínicos sedantes"
-    ],
-    "alerts": [
-      "Indicado solo para uso corto en insomnio.",
-      "Tomar inmediatamente antes de acostarse.",
-      "Evitar conducir al día siguiente si hay somnolencia residual.",
-      "No asociar con alcohol u opioides.",
-      "No suspender abruptamente tras uso prolongado."
-    ],
-    "ref": [
-      "Goodman & Gilman 14ª Ed.",
-      "Stahl's Essential Psychopharmacology",
-      "FDA/DailyMed Temazepam Prescribing Information",
-      "Lexicomp",
-      "Micromedex",
-      "UpToDate"
+    "contraindications": "Hipersensibilidade a benzodiazepínicos; Insuficiência respiratória grave; Apneia do sono grave; Miastenia gravis; Intoxicação aguda por álcool ou depressores do SNC",
+    "interactions": "Álcool; Opioides; Barbitúricos; Antipsicóticos sedativos; Antidepressivos sedativos; Anti-histamínicos sedativos",
+    "alerts": "Depressão respiratória, comportamentos complexos do sono, dependência, abstinência y quedas.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=temazepam",
+    "pharmacologicClass": "Benzodiazepínico hipnótico",
+    "presentations": "Cápsula 7,5 mg; Cápsula 15 mg; Cápsula 30 mg",
+    "pharmacodynamics": "Potencializa o GABA no receptor GABA-A, promovendo sedação y indução/manutenção do sono.",
+    "pharmacokinetics": "Vida média aproximada: 8–20 horas.",
+    "pediatricDose": "standard: No se utiliza cálculo por kg em adultos.; pediatric: No recomendado como uso pediátrico rotineiro.; maxDose: 30 mg/noite",
+    "renalDose": "Sem ajuste renal habitual.",
+    "hepaticDose": "Sem ajuste hepático habitual.",
+    "adverseEffects": "Sonolência, tontura, fadiga y prejuízo de coordenação.; Depressão respiratória, comportamentos complexos do sono, dependência, abstinência y quedas.",
+    "monitoring": "Indicado apenas para uso curto em insônia.; Tomar imediatamente antes de deitar.; Evitar dirigir no dia seguinte se houver sonolência residual.; No associar con álcool ou opioides.; No suspender abruptamente após uso prolongado.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Depressão respiratória, comportamentos complexos do sono, dependência, abstinência y quedas.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=temazepam",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "name": {
@@ -191,9 +111,21 @@
     "restoril",
     "benzodiazepinico hipnotico de acao intermediaria"
   ],
-  "dataVersion": "clinical-data-v1-ea2c550f79368a32",
-  "clinicalContentSha256": "ea2c550f79368a32f2cedea8495b2964953c1c7450b28c7d33d1914db3674df2",
+  "dataVersion": "clinical-data-v1-898894a087211993",
+  "clinicalContentSha256": "898894a08721199332270bb809089a34d436f0f700fcbd8f0132dcfe38daee07",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "psiquiatria.js"
+  "sourceModule": "psiquiatria.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/psiquiatria.js",
+    "sourceField": "temazepam.mcGoldClinicalV1",
+    "lote": "075",
+    "requiredFields": 33,
+    "approvedSha256": "6fae3bac8b513ac00d3e979314658a8b01ee862e854afc8c3d19b426f29f58ba",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

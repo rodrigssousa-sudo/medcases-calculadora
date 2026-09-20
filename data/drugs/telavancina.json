@@ -6,10 +6,8 @@
   "colorTxt": "#92400E",
   "pt": {
     "name": "Telavancina",
-    "class": "Lipoglicopeptídeo anti-MRSA",
-    "commercialNames": [
-      "Genérico; marcas variam por país"
-    ],
+    "class": "Antibacteriano lipoglicopeptídeo",
+    "commercialNames": "Genérico; marcas variam por país",
     "presentation": "Pó para infusão IV.",
     "dose": "CrCl >50: 10 mg/kg IV q24h, cada dose em 60 min. Duração cSSSI 7–14 dias; HABP/VABP 7–21 dias.",
     "doseKg": {
@@ -19,29 +17,10 @@
     "spectrum": "Staphylococcus aureus (MSSA, MRSA, hVISA, VISA), Streptococcus spp., Enterococcus faecalis (VSE). Atividade superior à vancomicina em biofilme de MRSA. Sem atividade contra Gram-negativos ou VRE.",
     "contraindications": "Heparina não fracionada IV é contraindicada durante telavancina por interferência artificial com aPTT; hipersensibilidade grave ao fármaco.",
     "risksByPatient": [],
-    "alerts": [
-      "10 mg/kg q24h",
-      "CrCl 30–50: 7,5 mg/kg q24h",
-      "CrCl 10–<30: 10 mg/kg q48h",
-      "Infusão 60 min",
-      "Renal q48–72h"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5359b759-db7c-4672-9e8a-59c93869bd91",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9fc67b76-9ba1-45ec-9749-ca3f3a6477d9&type=display",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.idsociety.org/practice-guideline/mrsa/",
-      "https://clinicaltrials.gov/search?term=telavancin",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=telavancin"
-    ],
-    "renalDose": "CrCl 30–50: 7,5 mg/kg q24h; CrCl 10–<30: 10 mg/kg q48h. CrCl <10 ou hemodiálise: dados insuficientes para recomendar regime.",
-    "safetyFlags": [
-      "MRSA",
-      "Nefrotoxicidade",
-      "CrCl <=50 mortalidade HABP/VABP",
-      "Heparina IV contraindicada",
-      "QT/gestação"
-    ],
+    "alerts": "Nefrotoxicidade, QT prolongado, toxicidade fetal, reação à infusão e C. difficile.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=telavancina",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "safetyFlags": "Nefrotoxicidade, QT prolongado, toxicidade fetal, reação à infusão e C. difficile.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -56,90 +35,50 @@
       ],
       "note": "Bloco mesclado e melhorado: cortes renais FDA (CrCl 30–50 / 10–29 / <10 / HD) preservados. qtRisk corrigido para true (telavancina prolonga QT — risco de torsades). Warning expandido com QT, mortalidade ATTAIN em ClCr < 50 e teratogenicidade. EMA label, Johns Hopkins e UpToDate adicionados às fontes."
     },
-    "pharmacologicClass": "Lipoglicopeptídeo bactericida com ação na parede e membrana",
+    "pharmacologicClass": "Antibacteriano lipoglicopeptídeo",
     "mechanism": "Liga-se ao precursor D-Ala-D-Ala, inibe polimerização/cross-link da parede e perturba o potencial de membrana bacteriana.",
-    "pharmacodynamics": "AUC/MIC é o principal índice PK/PD. Ativa contra Gram-positivos suscetíveis, incluindo MRSA.",
-    "pharmacokinetics": "Somente IV; alta ligação proteica e eliminação predominantemente renal.",
+    "pharmacodynamics": "Liga-se ao precursor D-Ala-D-Ala, inibe polimerização/cross-link da parede e perturba o potencial de membrana bacteriana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
     "indications": "Adultos: cSSSI por Gram-positivos suscetíveis e HABP/VABP por S. aureus quando alternativas não são adequadas.",
-    "presentations": [
-      "250 mg",
-      "750 mg"
-    ],
-    "pediatricDose": "Segurança e eficácia em pacientes pediátricos não estabelecidas; não há regime pediátrico aprovado.",
-    "hepaticDose": "Sem ajuste rotineiro em comprometimento leve/moderado; dados limitados em hepatopatia grave.",
-    "commonAdverseEffects": [
-      "Alteração do paladar",
-      "Náusea",
-      "Vômito",
-      "Urina espumosa",
-      "Reação infusional"
-    ],
-    "dangerousAdverseEffects": [
-      "Nefrotoxicidade",
-      "Maior mortalidade em HABP/VABP com CrCl <=50",
-      "QT prolongado",
-      "Anafilaxia",
-      "Embriotoxicidade fetal"
-    ],
-    "adverseEffects": "Nefrotoxicidade é central e a mortalidade em pneumonia hospitalar foi maior em pacientes com CrCl basal <=50 mL/min.",
+    "presentations": "Pó para infusão IV.",
+    "pediatricDose": "adultoEV_kg: 10 mg/kg/dia (ClCr≥50); 7,5 mg/kg/dia (ClCr 30–50); 10 mg/kg/48h (ClCr 10–30)",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Alteração do paladar; Náusea; Vômito; Urina espumosa; Reação infusional",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Maior mortalidade em HABP/VABP com CrCl <=50; QT prolongado; Anafilaxia; Embriotoxicidade fetal",
+    "adverseEffects": "Alteração do paladar, náusea, vômito e urina espumosa.; Nefrotoxicidade, QT prolongado, toxicidade fetal, reação à infusão e C. difficile.",
     "interactions": "Interfere com PT/INR/aPTT e outros testes de coagulação; evitar fármacos que prolongam QT quando possível.",
-    "monitoring": "Função renal antes, a cada 48–72 h ou mais frequentemente e ao final; ECG/eletrólitos se risco de QT; programar testes de coagulação longe do pico de interferência.",
-    "administration": "IV somente, em 60 min; infusão rápida aumenta reação tipo red-man.",
-    "preparation": "Reconstituir e diluir conforme bula; não misturar com soluções incompatíveis.",
-    "infusionProtocol": "Infundir 10 ou 7,5 mg/kg durante 60 min conforme função renal.",
-    "pregnancy": "Pode causar dano fetal; verificar estado gestacional antes e usar contracepção eficaz durante e por 2 dias após o tratamento.",
-    "lactation": "Dados humanos são insuficientes; avaliar risco-benefício.",
-    "specialPopulations": "HABP/VABP com CrCl <=50 apresenta sinal de mortalidade maior; reavaliar alternativas e risco-benefício.",
-    "patientEducation": "Relatar redução da diurese, palpitações ou reação infusional; informar gestação e uso de heparina.",
-    "clinicalPearls": "Telavancina combina potência anti-MRSA com três alertas práticos: rim, QT e interferência de coagulação; heparina IV é incompatível do ponto de vista laboratorial/rotulado.",
-    "guidelineRecommendations": "Reservar HABP/VABP para situações em que alternativas não sejam adequadas e sempre ponderar o sinal de mortalidade quando CrCl basal <=50 mL/min.",
+    "monitoring": "10 mg/kg q24h; CrCl 30–50: 7,5 mg/kg q24h; CrCl 10–<30: 10 mg/kg q48h; Infusão 60 min; Renal q48–72h",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5359b759-db7c-4672-9e8a-59c93869bd91",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9fc67b76-9ba1-45ec-9749-ca3f3a6477d9&type=display",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.idsociety.org/practice-guideline/mrsa/",
-      "https://clinicaltrials.gov/search?term=telavancin",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=telavancin"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=telavancina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "es": {
     "name": "Telavancina",
-    "class": "Lipoglucopéptido anti-MRSA",
-    "commercialNames": [
-      "Genérico; las marcas varían según el país"
-    ],
-    "presentation": "Polvo IV.",
-    "dose": "ClCr >50: 10 mg/kg IV q24h en 60 min. cSSSI 7–14 días; HABP/VABP 7–21 días.",
+    "class": "Antibacteriano lipoglicopeptídeo",
+    "commercialNames": "Genérico; marcas variam por país",
+    "presentation": "Pó para infusão IV.",
+    "dose": "CrCl >50: 10 mg/kg IV q24h, cada dosis em 60 min. Duração cSSSI 7–14 dias; HABP/VABP 7–21 dias.",
     "doseKg": {
       "adultoEV_kg": "10 mg/kg/dia (ClCr≥50); 7,5 mg/kg/dia (ClCr 30–50); 10 mg/kg/48h (ClCr 10–30)"
     },
     "indication": "Infecciones de piel y partes blandas (ABSSSI) por MRSA, neumonía hospitalaria y asociada a ventilación mecánica (HAP/VAP) por S. aureus.",
     "spectrum": "Staphylococcus aureus (MSSA, MRSA, hVISA, VISA), Streptococcus spp., Enterococcus faecalis (VSE). Actividad superior a vancomicina en biofilm de MRSA. Sin actividad frente a Gramnegativos ni VRE.",
-    "contraindications": "Heparina no fraccionada IV contraindicada por interferencia con aPTT; hipersensibilidad grave.",
+    "contraindications": "Heparina no fracionada IV é contraindicada durante telavancina por interferência artificial con aPTT; hipersensibilidade grave ao fármaco.",
     "risksByPatient": [],
-    "alerts": [
-      "10 mg/kg q24h",
-      "ClCr 30–50: 7,5 mg/kg q24h",
-      "ClCr 10–<30: 10 mg/kg q48h",
-      "Infusión 60 min",
-      "Renal q48–72h"
-    ],
-    "ref": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5359b759-db7c-4672-9e8a-59c93869bd91",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9fc67b76-9ba1-45ec-9749-ca3f3a6477d9&type=display",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.idsociety.org/practice-guideline/mrsa/",
-      "https://clinicaltrials.gov/search?term=telavancin",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=telavancin"
-    ],
-    "renalDose": "ClCr 30–50: 7,5 mg/kg q24h; 10–<30: 10 mg/kg q48h. <10/HD: datos insuficientes.",
-    "safetyFlags": [
-      "MRSA",
-      "Nefrotoxicidad",
-      "ClCr <=50 mortalidad HABP/VABP",
-      "Heparina IV contraindicada",
-      "QT/embarazo"
-    ],
+    "alerts": "Nefrotoxicidade, QT prolongado, toxicidade fetal, reação à infusão y C. difficile.; revisão clínica obrigatória.",
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=telavancina",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "safetyFlags": "Nefrotoxicidade, QT prolongado, toxicidade fetal, reação à infusão y C. difficile.",
     "auditNotes": {
       "status": "excellent_after_review",
       "sourcePriority": [
@@ -154,50 +93,31 @@
       ],
       "note": "Bloque fusionado y mejorado: cortes renales FDA (CrCl 30–50 / 10–29 / <10 / HD) preservados. qtRisk corregido a true (telavancina prolonga QT — riesgo de torsades). Warning ampliado con QT, mortalidad ATTAIN en ClCr < 50 y teratogenicidad. EMA label, Johns Hopkins y UpToDate añadidos a las fuentes."
     },
-    "pharmacologicClass": "Lipoglucopéptido bactericida con acción en pared y membrana",
-    "mechanism": "Se une a D-Ala-D-Ala, inhibe pared y altera potencial de membrana.",
-    "pharmacodynamics": "AUC/MIC es índice PK/PD. Activa contra Gram positivos susceptibles incluido MRSA.",
-    "pharmacokinetics": "Solo IV; alta unión proteica y eliminación renal predominante.",
-    "indications": "Adultos: cSSSI y HABP/VABP por S. aureus susceptible cuando alternativas no son adecuadas.",
-    "presentations": [
-      "250 mg",
-      "750 mg"
-    ],
-    "pediatricDose": "Seguridad/eficacia pediátrica no establecidas; sin régimen aprobado.",
-    "hepaticDose": "Sin ajuste rutinario en hepatopatía leve/moderada; datos limitados en grave.",
-    "commonAdverseEffects": [
-      "Alteración del gusto",
-      "Náuseas",
-      "Vómitos",
-      "Orina espumosa",
-      "Reacción infusional"
-    ],
-    "dangerousAdverseEffects": [
-      "Nefrotoxicidad",
-      "Mayor mortalidad HABP/VABP con ClCr <=50",
-      "QT prolongado",
-      "Anafilaxia",
-      "Toxicidad fetal"
-    ],
-    "adverseEffects": "Nefrotoxicidad es central y se observó mayor mortalidad en neumonía hospitalaria con ClCr basal <=50.",
-    "interactions": "Interfiere PT/INR/aPTT; evitar otros fármacos que prolonguen QT cuando sea posible.",
-    "monitoring": "Función renal antes, cada 48–72 h o más, y al final; ECG/electrolitos si riesgo QT.",
-    "administration": "Solo IV en 60 min.",
-    "preparation": "Reconstituir/diluir según ficha.",
-    "infusionProtocol": "Infundir en 60 min.",
-    "pregnancy": "Puede causar daño fetal; verificar embarazo y usar anticoncepción durante y 2 días después.",
-    "lactation": "Datos insuficientes.",
-    "specialPopulations": "HABP/VABP con ClCr <=50: reevaluar alternativas por señal de mortalidad.",
-    "patientEducation": "Informar menor diuresis, palpitaciones, reacción infusional, embarazo o heparina.",
-    "clinicalPearls": "Tres alertas prácticos: riñón, QT e interferencia de coagulación; heparina IV está contraindicada durante telavancina.",
-    "guidelineRecommendations": "Reservar HABP/VABP cuando alternativas no sean adecuadas y ponderar especialmente riesgo/beneficio con ClCr basal <=50 mL/min.",
+    "pharmacologicClass": "Antibacteriano lipoglicopeptídeo",
+    "mechanism": "Liga-se ao precursor D-Ala-D-Ala, inibe polimerização/cross-link da parede y perturba o potencial de membrana bacteriana.",
+    "pharmacodynamics": "Liga-se ao precursor D-Ala-D-Ala, inibe polimerização/cross-link da parede y perturba o potencial de membrana bacteriana.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Adultos: cSSSI por Gram-positivos suscetíveis y HABP/VABP por S. aureus quando alternativas no são adequadas.",
+    "presentations": "Pó para infusão IV.",
+    "pediatricDose": "adultoEV_kg: 10 mg/kg/dia (ClCr≥50); 7,5 mg/kg/dia (ClCr 30–50); 10 mg/kg/48h (ClCr 10–30)",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Alteração do paladar; Náusea; Vômito; Urina espumosa; Reação infusional",
+    "dangerousAdverseEffects": "Nefrotoxicidade; Maior mortalidade em HABP/VABP con CrCl <=50; QT prolongado; Anafilaxia; Embriotoxicidade fetal",
+    "adverseEffects": "Alteração do paladar, náusea, vômito y urina espumosa.; Nefrotoxicidade, QT prolongado, toxicidade fetal, reação à infusão y C. difficile.",
+    "interactions": "Interfere con PT/INR/aPTT y outros testes de coagulação; evitar fármacos que prolongam QT quando possível.",
+    "monitoring": "10 mg/kg q24h; CrCl 30–50: 7,5 mg/kg q24h; CrCl 10–<30: 10 mg/kg q48h; Infusão 60 min; Renal q48–72h",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5359b759-db7c-4672-9e8a-59c93869bd91",
-      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=9fc67b76-9ba1-45ec-9749-ca3f3a6477d9&type=display",
-      "https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-      "https://www.idsociety.org/practice-guideline/mrsa/",
-      "https://clinicaltrials.gov/search?term=telavancin",
-      "https://pubmed.ncbi.nlm.nih.gov/?term=telavancin"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=telavancina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ]
   },
   "name": {
@@ -210,9 +130,21 @@
     "vibativ",
     "lipoglicopeptideo semi-sintetico (duplo mecanismo: inibicao da parede + membrana)"
   ],
-  "dataVersion": "clinical-data-v1-ea2c550f79368a32",
-  "clinicalContentSha256": "ea2c550f79368a32f2cedea8495b2964953c1c7450b28c7d33d1914db3674df2",
+  "dataVersion": "clinical-data-v1-898894a087211993",
+  "clinicalContentSha256": "898894a08721199332270bb809089a34d436f0f700fcbd8f0132dcfe38daee07",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
-  "sourceModule": "antimicrobianos.js"
+  "sourceModule": "antimicrobianos.js",
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/antimicrobianos.js",
+    "sourceField": "telavancina.mcGoldClinicalV1",
+    "lote": "075",
+    "requiredFields": 33,
+    "approvedSha256": "6fae3bac8b513ac00d3e979314658a8b01ee862e854afc8c3d19b426f29f58ba",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  }
 }

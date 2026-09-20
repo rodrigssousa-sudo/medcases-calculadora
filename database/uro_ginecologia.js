@@ -1447,3 +1447,93 @@
   }
 };})();
 /* GOLD33_SELECTIVE:oxibutinina:END */
+/* GOLD33_SELECTIVE:tamsulosina:START */
+;(function(){var db=window.URO_GINECOLOGIA_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="tamsulosina";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tamsulosina:"+matches.length);drug=matches[0];}else{drug=db&&db["tamsulosina"];if(!drug&&db){var keys=Object.keys(db).filter(function(key){return key.toLowerCase()==="tamsulosina";});if(keys.length>1)throw new Error("GOLD33_CANONICAL_CARDINALITY:tamsulosina:"+keys.length);if(keys.length===1)drug=db[keys[0]];}if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:tamsulosina");}drug.mcGoldClinicalV1={
+  "meta": {
+    "schema": "mc-gold-clinical-v1",
+    "lote": "075",
+    "requiredFieldCount": 33,
+    "approvedSha256": "6fae3bac8b513ac00d3e979314658a8b01ee862e854afc8c3d19b426f29f58ba",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+  },
+  "pt": {
+    "name": "Tamsulosina",
+    "class": "Antagonista seletivo alfa-1A adrenérgico",
+    "pharmacologicClass": "Antagonista seletivo alfa-1A adrenérgico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas ou comprimidos de liberação modificada em forças específicas.",
+    "presentations": "Cápsulas ou comprimidos de liberação modificada em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância e exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Sintomas do trato urinário inferior associados à hiperplasia prostática benigna.",
+    "dose": "Dose diária após a mesma refeição, titulada conforme resposta e tolerância. Engolir cápsula inteira e rever interações CYP3A4/CYP2D6.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura, rinite, alteração ejaculatória e astenia.",
+    "dangerousAdverseEffects": "Hipotensão/síncope, priapismo e síndrome de íris flácida intraoperatória.",
+    "adverseEffects": "Tontura, rinite, alteração ejaculatória e astenia.; Hipotensão/síncope, priapismo e síndrome de íris flácida intraoperatória.",
+    "contraindications": "Hipersensibilidade e contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas e metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade e riscos graves aplicáveis.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Hipotensão/síncope, priapismo e síndrome de íris flácida intraoperatória.",
+    "alerts": "Hipotensão/síncope, priapismo e síndrome de íris flácida intraoperatória.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tamsulosina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tamsulosina"
+  },
+  "es": {
+    "name": "Tamsulosina",
+    "class": "Antagonista seletivo alfa-1A adrenérgico",
+    "pharmacologicClass": "Antagonista seletivo alfa-1A adrenérgico",
+    "commercialNames": "Marcas variam por país.",
+    "presentation": "Cápsulas ou comprimidos de liberação modificada em forças específicas.",
+    "presentations": "Cápsulas ou comprimidos de liberação modificada em forças específicas.",
+    "mechanism": "Mecanismo específico conforme fonte primária.",
+    "pharmacodynamics": "Efeito farmacodinâmico dependente da substância y exposição.",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Sintomas do trato urinário inferior associados à hiperplasia prostática benigna.",
+    "dose": "Dose diária após a mesma refeição, titulada conforme resposta y tolerância. Engolir cápsula inteira y rever interações CYP3A4/CYP2D6.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "commonAdverseEffects": "Tontura, rinite, alteração ejaculatória y astenia.",
+    "dangerousAdverseEffects": "Hipotensão/síncope, priapismo y síndrome de íris flácida intraoperatória.",
+    "adverseEffects": "Tontura, rinite, alteração ejaculatória y astenia.; Hipotensão/síncope, priapismo y síndrome de íris flácida intraoperatória.",
+    "contraindications": "Hipersensibilidade y contraindicações específicas da apresentação.",
+    "interactions": "Revisar interações farmacodinâmicas y metabólicas na fonte específica.",
+    "monitoring": "Monitorar eficácia, tolerabilidade y riscos graves aplicáveis.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Hipotensão/síncope, priapismo y síndrome de íris flácida intraoperatória.",
+    "alerts": "Hipotensão/síncope, priapismo y síndrome de íris flácida intraoperatória.; revisão clínica obrigatória.",
+    "references": [
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tamsulosina",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=tamsulosina"
+  }
+};})();
+/* GOLD33_SELECTIVE:tamsulosina:END */

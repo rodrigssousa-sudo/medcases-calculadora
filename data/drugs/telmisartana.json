@@ -5,242 +5,84 @@
   "color": "rgba(16,185,129,0.13)",
   "colorTxt": "#166534",
   "pt": {
-    "class": "Bloqueador do receptor de angiotensina II (BRA/ARB)",
-    "pharmacologicClass": "Antagonista seletivo do receptor AT1 da angiotensina II",
+    "class": "Antagonista do receptor de angiotensina II",
+    "pharmacologicClass": "Antagonista do receptor de angiotensina II",
     "mechanism": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
-    "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pressão intraglomerular e albuminúria. Pode elevar potássio e creatinina, sobretudo em hipovolemia, estenose de artéria renal ou DRC avançada.",
-    "commonAdverseEffects": [
-      "tontura",
-      "hipotensão",
-      "hipercalemia",
-      "aumento de creatinina",
-      "fadiga"
-    ],
-    "dangerousAdverseEffects": [
-      "lesão renal aguda",
-      "hipercalemia grave",
-      "hipotensão sintomática",
-      "angioedema raro",
-      "toxicidade fetal"
-    ],
-    "contraindications": [
-      "Gestação: suspender quando detectada",
-      "uso concomitante de alisquireno em pacientes com diabetes",
-      "hipersensibilidade ao fármaco"
-    ],
-    "interactions": [
-      "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia",
-      "AINEs podem reduzir efeito e aumentar risco renal",
-      "Lítio pode acumular",
-      "Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal"
-    ],
-    "monitoring": [
-      "Pressão arterial",
-      "creatinina/eTFG e potássio antes de iniciar e após mudanças de dose",
-      "estado volêmico",
-      "gestação quando aplicável"
-    ],
-    "pregnancy": "Alerta de toxicidade fetal: suspender assim que a gestação for detectada. O bloqueio do SRAA pode causar lesão e morte fetal.",
-    "lactation": "Dados humanos insuficientes; evitar ou preferir alternativa com maior experiência em lactentes muito jovens.",
-    "patientEducation": [
-      "Evitar gestação durante o tratamento",
-      "não usar suplementos de potássio ou substitutos de sal sem orientação",
-      "manter hidratação e procurar avaliação se houver vômitos ou diarreia prolongados",
-      "levantar lentamente se houver tontura"
-    ],
-    "clinicalPearls": [
-      "Meia-vida longa favorece cobertura de 24 h",
-      "Não é removida por hemodiálise",
-      "A indicação de redução de risco CV usa 80 mg/dia na bula norte-americana."
-    ],
-    "guidelineRecommendations": [
-      "AHA/ACC 2025: BRA é classe de primeira linha para hipertensão quando indicado",
-      "KDIGO 2024: RASi em DRC albuminúrica; monitorar função renal e potássio."
-    ],
-    "safetyFlags": [
-      "TOXICIDADE_FETAL",
-      "HIPERCALEMIA",
-      "FUNCAO_RENAL",
-      "HIPOTENSAO",
-      "DUPLO_BLOQUEIO_SRAA"
-    ],
-    "alerts": [
-      "Corrigir depleção de volume quando possível antes de iniciar",
-      "Reavaliar função renal e potássio após titulação",
-      "Não associar rotineiramente a IECA ou alisquireno"
-    ],
-    "specialPopulations": {
-      "elderly": "Não ajustar apenas pela idade; titular por resposta e tolerância.",
-      "renalArteryStenosis": "Maior risco de deterioração renal; monitorar.",
-      "volumeDepletion": "Maior risco de hipotensão inicial.",
-      "biliaryDisease": "Depuração pode reduzir em obstrução biliar ou insuficiência hepática; iniciar baixo e titular lentamente."
-    },
+    "pharmacodynamics": "Bloqueia seletivamente o receptor AT1 e impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona e retenção de sódio. Não inibe ECA nem aumenta bradicinina de forma relevante.",
+    "commonAdverseEffects": "tontura; hipotensão; hipercalemia; aumento de creatinina; fadiga",
+    "dangerousAdverseEffects": "lesão renal aguda; hipercalemia grave; hipotensão sintomática; angioedema raro; toxicidade fetal",
+    "contraindications": "Gestação: suspender quando detectada; uso concomitante de alisquireno em pacientes com diabetes; hipersensibilidade ao fármaco",
+    "interactions": "Potássio, substitutos de sal e diuréticos poupadores de potássio aumentam hipercalemia; AINEs podem reduzir efeito e aumentar risco renal; Lítio pode acumular; Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia e lesão renal",
+    "monitoring": "Corrigir depleção de volume quando possível antes de iniciar; Reavaliar função renal e potássio após titulação; Não associar rotineiramente a IECA ou alisquireno",
+    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
+    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
+    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
+    "safetyFlags": "Toxicidade fetal, insuficiência renal, hiperpotassemia e angioedema raro.",
+    "alerts": "Toxicidade fetal, insuficiência renal, hiperpotassemia e angioedema raro.; revisão clínica obrigatória.",
+    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
     "name": "Telmisartana",
-    "pharmacokinetics": "Meia-vida terminal longa, cerca de 24 h. Metabolizada principalmente por conjugação a glucuronídeo inativo e eliminada quase totalmente por via biliar/fecal; não é dialisável.",
-    "indications": [
-      "Hipertensão",
-      "redução de risco cardiovascular em pacientes selecionados com alto risco que não podem usar IECA, conforme bula"
-    ],
-    "commercialNames": [
-      "Micardis"
-    ],
+    "pharmacokinetics": "Revisar absorção, metabolismo e eliminação na fonte primária.",
+    "indications": "Hipertensão; redução de risco cardiovascular em pacientes selecionados com alto risco que não podem usar IECA, conforme bula",
+    "commercialNames": "Micardis",
     "presentation": "Comprimidos orais.",
-    "presentations": [
-      "Comprimidos 20, 40 e 80 mg"
-    ],
-    "dose": {
-      "hypertension": "40 mg uma vez ao dia; resposta é dose-dependente entre 20-80 mg, com faixa usual 40-80 mg/dia.",
-      "cvRiskReduction": "80 mg uma vez ao dia na indicação de redução de risco cardiovascular da bula."
-    },
-    "pediatricDose": "Segurança e eficácia não estabelecidas para uso pediátrico rotineiro.",
-    "renalDose": "Sem ajuste inicial necessário em redução da função renal, inclusive hemodiálise; não é dialisável. Monitorar pressão, creatinina e potássio.",
-    "hepaticDose": "Eliminação biliar predominante; em hepatopatia ou obstrução biliar iniciar em dose baixa e titular lentamente. Usar cautela importante em comprometimento grave.",
-    "administration": "Uma vez ao dia, com ou sem alimentos.",
-    "preparation": "Comprimidos não exigem preparo; manter na embalagem conforme orientação do fabricante até o uso quando aplicável.",
-    "infusionProtocol": "Não se aplica: telmisartana é oral.",
-    "adverseEffects": {
-      "common": [
-        "tontura",
-        "hipotensão",
-        "hipercalemia",
-        "aumento de creatinina",
-        "fadiga"
-      ],
-      "dangerous": [
-        "lesão renal aguda",
-        "hipercalemia grave",
-        "hipotensão sintomática",
-        "angioedema raro",
-        "toxicidade fetal"
-      ]
-    },
+    "presentations": "Comprimidos orais.",
+    "dose": "hypertension: 40 mg uma vez ao dia; resposta é dose-dependente entre 20-80 mg, com faixa usual 40-80 mg/dia.; cvRiskReduction: 80 mg uma vez ao dia na indicação de redução de risco cardiovascular da bula.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação e formulação.",
+    "renalDose": "Não inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "Não inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "adverseEffects": "Tontura, hipotensão, dor lombar e aumento de potássio.; Toxicidade fetal, insuficiência renal, hiperpotassemia e angioedema raro.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
-      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=telmisartana",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=telmisartana"
   },
   "es": {
-    "class": "Bloqueante del receptor de angiotensina II (ARA-II/BRA)",
-    "pharmacologicClass": "Antagonista selectivo del receptor AT1 de angiotensina II",
-    "mechanism": "Bloquea selectivamente el receptor AT1 e impide los efectos de angiotensina II sobre vasoconstricción, aldosterona y retención de sodio. No inhibe ECA ni aumenta bradicinina de forma relevante.",
-    "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir presión intraglomerular y albuminuria. Puede aumentar potasio y creatinina, sobre todo en hipovolemia, estenosis de arteria renal o ERC avanzada.",
-    "commonAdverseEffects": [
-      "mareo",
-      "hipotensión",
-      "hiperpotasemia",
-      "aumento de creatinina",
-      "fatiga"
-    ],
-    "dangerousAdverseEffects": [
-      "lesión renal aguda",
-      "hiperpotasemia grave",
-      "hipotensión sintomática",
-      "angioedema raro",
-      "toxicidad fetal"
-    ],
-    "contraindications": [
-      "Embarazo: suspender cuando se detecte",
-      "uso concomitante de aliskireno en pacientes con diabetes",
-      "hipersensibilidad al fármaco"
-    ],
-    "interactions": [
-      "Potasio, sustitutos de sal y diuréticos ahorradores de potasio aumentan hiperpotasemia",
-      "AINE pueden reducir efecto y aumentar riesgo renal",
-      "Litio puede acumularse",
-      "Doble bloqueo del SRAA aumenta hipotensión, hiperpotasemia y lesión renal"
-    ],
-    "monitoring": [
-      "Presión arterial",
-      "creatinina/eGFR y potasio antes de iniciar y después de cambios de dosis",
-      "estado de volumen",
-      "embarazo cuando corresponda"
-    ],
-    "pregnancy": "Advertencia de toxicidad fetal: suspender tan pronto se detecte embarazo. El bloqueo del SRAA puede causar lesión y muerte fetal.",
-    "lactation": "Datos humanos insuficientes; evitar o preferir alternativa con mayor experiencia en lactantes muy pequeños.",
-    "patientEducation": [
-      "Evitar embarazo durante el tratamiento",
-      "no usar suplementos de potasio o sustitutos de sal sin indicación",
-      "mantener hidratación y consultar si hay vómitos o diarrea prolongados",
-      "levantarse lentamente si hay mareo"
-    ],
-    "clinicalPearls": [
-      "Vida media larga favorece cobertura de 24 h",
-      "No se elimina por hemodiálisis",
-      "La indicación de reducción de riesgo CV usa 80 mg/día en la ficha estadounidense."
-    ],
-    "guidelineRecommendations": [
-      "AHA/ACC 2025: ARA-II es clase de primera línea para hipertensión cuando está indicado",
-      "KDIGO 2024: RASi en ERC albuminúrica; vigilar función renal y potasio."
-    ],
-    "safetyFlags": [
-      "TOXICIDAD_FETAL",
-      "HIPERPOTASEMIA",
-      "FUNCION_RENAL",
-      "HIPOTENSION",
-      "DOBLE_BLOQUEO_SRAA"
-    ],
-    "alerts": [
-      "Corregir depleción de volumen si es posible antes de iniciar",
-      "Reevaluar función renal y potasio tras titulación",
-      "No asociar de rutina con IECA o aliskireno"
-    ],
-    "specialPopulations": {
-      "elderly": "No ajustar solo por edad; titular por respuesta y tolerancia.",
-      "renalArteryStenosis": "Mayor riesgo de deterioro renal; monitorizar.",
-      "volumeDepletion": "Mayor riesgo de hipotensión inicial.",
-      "biliaryDisease": "El aclaramiento puede disminuir en obstrucción biliar o insuficiencia hepática; iniciar bajo y titular lentamente."
-    },
-    "name": "Telmisartán",
-    "pharmacokinetics": "Vida media terminal larga, cercana a 24 h. Se metaboliza principalmente por conjugación a glucurónido inactivo y se elimina casi por completo por vía biliar/fecal; no es dializable.",
-    "indications": [
-      "Hipertensión",
-      "reducción de riesgo cardiovascular en pacientes seleccionados de alto riesgo que no pueden usar IECA, según ficha"
-    ],
-    "commercialNames": [
-      "Micardis"
-    ],
-    "presentation": "Tabletas orales.",
-    "presentations": [
-      "Tabletas 20, 40 y 80 mg"
-    ],
-    "dose": {
-      "hypertension": "40 mg una vez al día; la respuesta es dosis-dependiente entre 20-80 mg, con rango habitual 40-80 mg/día.",
-      "cvRiskReduction": "80 mg una vez al día en la indicación de reducción de riesgo cardiovascular de la ficha."
-    },
-    "pediatricDose": "Seguridad y eficacia no establecidas para uso pediátrico rutinario.",
-    "renalDose": "Sin ajuste inicial necesario en reducción de función renal, incluso hemodiálisis; no es dializable. Vigilar presión, creatinina y potasio.",
-    "hepaticDose": "Eliminación biliar predominante; en hepatopatía u obstrucción biliar iniciar con dosis baja y titular lentamente. Mucha cautela en deterioro grave.",
-    "administration": "Una vez al día, con o sin alimentos.",
-    "preparation": "Las tabletas no requieren preparación; mantener en el envase según indicación del fabricante hasta usar cuando corresponda.",
-    "infusionProtocol": "No aplica: telmisartán es oral.",
-    "adverseEffects": {
-      "common": [
-        "mareo",
-        "hipotensión",
-        "hiperpotasemia",
-        "aumento de creatinina",
-        "fatiga"
-      ],
-      "dangerous": [
-        "lesión renal aguda",
-        "hiperpotasemia grave",
-        "hipotensión sintomática",
-        "angioedema raro",
-        "toxicidad fetal"
-      ]
-    },
+    "class": "Antagonista do receptor de angiotensina II",
+    "pharmacologicClass": "Antagonista do receptor de angiotensina II",
+    "mechanism": "Bloqueia seletivamente o receptor AT1 y impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona y retenção de sódio. No inibe ECA nem aumenta bradicinina de forma relevante.",
+    "pharmacodynamics": "Bloqueia seletivamente o receptor AT1 y impede os efeitos da angiotensina II sobre vasoconstrição, aldosterona y retenção de sódio. No inibe ECA nem aumenta bradicinina de forma relevante.",
+    "commonAdverseEffects": "tontura; hipotensão; hipercalemia; aumento de creatinina; fadiga",
+    "dangerousAdverseEffects": "lesão renal aguda; hipercalemia grave; hipotensão sintomática; angioedema raro; toxicidade fetal",
+    "contraindications": "Gestação: suspender quando detectada; uso concomitante de alisquireno em pacientes con diabetes; hipersensibilidade ao fármaco",
+    "interactions": "Potássio, substitutos de sal y diuréticos poupadores de potássio aumentam hipercalemia; AINEs podem reduzir efeito y aumentar risco renal; Lítio pode acumular; Duplo bloqueio do SRAA aumenta hipotensão, hipercalemia y lesão renal",
+    "monitoring": "Corrigir depleção de volume quando possível antes de iniciar; Reavaliar función renal y potássio após titulação; No associar rotineiramente a IECA ou alisquireno",
+    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
+    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
+    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
+    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
+    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
+    "safetyFlags": "Toxicidade fetal, insuficiência renal, hiperpotassemia y angioedema raro.",
+    "alerts": "Toxicidade fetal, insuficiência renal, hiperpotassemia y angioedema raro.; revisão clínica obrigatória.",
+    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
+    "name": "Telmisartana",
+    "pharmacokinetics": "Revisar absorção, metabolismo y eliminação na fonte primária.",
+    "indications": "Hipertensão; redução de risco cardiovascular em pacientes selecionados con alto risco que no podem usar IECA, conforme bula",
+    "commercialNames": "Micardis",
+    "presentation": "Comprimidos orais.",
+    "presentations": "Comprimidos orais.",
+    "dose": "hypertension: 40 mg uma vez ao dia; resposta é dosis-dependente entre 20-80 mg, con faixa usual 40-80 mg/dia.; cvRiskReduction: 80 mg uma vez ao dia na indicação de redução de risco cardiovascular da bula.",
+    "pediatricDose": "Automação pediátrica bloqueada sem tabela completa por idade, peso, indicação y formulação.",
+    "renalDose": "No inferir ajuste; aplicar somente tabela/conduta da fonte específica.",
+    "hepaticDose": "No inferir ajuste; aplicar somente recomendação da fonte específica.",
+    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
+    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
+    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
+    "adverseEffects": "Tontura, hipotensão, dor lombar y aumento de potássio.; Toxicidade fetal, insuficiência renal, hiperpotassemia y angioedema raro.",
     "references": [
-      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31",
-      "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
-      "https://kdigo.org/wp-content/uploads/2024/07/07232024-KDIGO-CKD.pdf"
+      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=telmisartana",
+      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c6eb489d-2946-4c14-839f-d4af761ead31"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=telmisartana"
   },
   "name": {
     "pt": "Telmisartana",
-    "es": "Telmisartán"
+    "es": "Telmisartana"
   },
   "keywords": [
     "telmisartana",
@@ -250,19 +92,21 @@
     "telmisartan generico",
     "bloqueador do receptor de angiotensina ii (bra/arb) — maior meia-vida da classe (~24h)"
   ],
-  "dataVersion": "clinical-data-v1-ea2c550f79368a32",
-  "clinicalContentSha256": "ea2c550f79368a32f2cedea8495b2964953c1c7450b28c7d33d1914db3674df2",
+  "dataVersion": "clinical-data-v1-898894a087211993",
+  "clinicalContentSha256": "898894a08721199332270bb809089a34d436f0f700fcbd8f0132dcfe38daee07",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "cardio.js",
   "mc_gold_standard_v1": {
-    "status": "PASS_TECNICO_SOURCE_AUTHORITY",
+    "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/cardio.js",
     "sourceField": "telmisartana.mcGoldClinicalV1",
-    "group": "GOLD_GROUP04_CARDIO_10",
-    "review": "2026-09",
+    "lote": "075",
     "requiredFields": 33,
-    "contentSha256": "00881ef9b2dc373435148b6a9529565fd3989f7288e65a88a158a4d8abcc4361",
-    "physicalHomologation": "DEFERRED"
+    "approvedSha256": "6fae3bac8b513ac00d3e979314658a8b01ee862e854afc8c3d19b426f29f58ba",
+    "calculationAuthorized": false,
+    "publicationAuthorized": true,
+    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+    "ownerPublicationAuthorization": "lote002-owner-confirmed"
   }
 }
