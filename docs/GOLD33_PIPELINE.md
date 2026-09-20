@@ -37,9 +37,12 @@ só é atualizada quando a restrição individual contém `PUBLICACAO=LIBERADA`.
 ```sh
 GOLD33_TEST_ZIP=/caminho/lote.zip npm run test:gold33-pipeline
 npm run test:gold33-sync
+npm run test:gold33-runtime
 npm run test:gold33-staging
 node scripts/verify-public-boundary.cjs
 ```
+
+O gate `test:gold33-pipeline` também carrega os módulos reais na ordem declarada pela aplicação e compara cada payload Gold33 em runtime ao documento privado, incluindo IDs, hashes e bloqueio de cálculo. O teste `test:gold33-runtime` permite executar essa verificação isoladamente.
 
 Os dados sintéticos usam marcadores sem conteúdo clínico e são criados em pasta
 temporária. Nenhum medicamento real é alterado pelos testes.
