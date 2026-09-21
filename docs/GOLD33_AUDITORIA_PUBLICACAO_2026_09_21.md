@@ -33,4 +33,33 @@ Nenhuma dose, texto clínico ou autorização de cálculo foi inventada ou alter
 
 Testes autenticados locais usam credenciais sintéticas. Login real, renovação real de assinatura, compra e integrações externas de IA não são comprovados por esses testes. Módulos anunciados como “Em breve” não são considerados implementados. Auditoria técnica não equivale a revisão médica integral.
 
-A confirmação do commit ativo e a cobertura pós-deploy serão acrescentadas após a publicação.
+## Produção e cobertura pós-deploy
+
+Código do aplicativo publicado no commit `eb473b3ac807c6321210e2c76794005edc8d5e82` (integração inicial `553fcfc39`). Deployment `af85dd0b-feb7-4eab-a938-8aefab651f9a`: **ACTIVE, 7/7 etapas**, ambos os componentes no mesmo commit. O primeiro build foi substituído automaticamente pelo push da correção visual. O fechamento documental/testes pode produzir um commit posterior, sem alteração dos arquivos do aplicativo; a correspondência final GitHub/produção é confirmada na entrega.
+
+- Os **114 arquivos públicos** foram buscados por HTTPS e comparados byte a byte por SHA-256 com o workspace: zero diferenças ou erros HTTP.
+- `/health`: 200, `productionReady=true`, `freeDrugCount=60`.
+- Sem sessão: `/api/session`, `/api/drug-catalog`, `/api/drugs/diclofenaco_gotas` e `/api/ai-drug-data/current`: 401.
+- Caminhos públicos para ficha nova, módulo privado e manifesto de clinical-knowledge: 404.
+- Chrome, 1440×1000 e 390×844: abertura dos sete módulos implementados (renal, fármacos, interações, eletrólitos, infusão, fluidos e hemodinâmica); sem erro JS/rede ou overflow horizontal nas telas exercitadas.
+- Vetores sintéticos exercitados na UI: renal 70 kg/40 anos/170 cm/creatinina 1/sexo masculino → ClCr 97,2; infusão livre 4 mg/250 mL/70 kg/0,1 mcg/kg/min → 26,25 mL/h; manutenção hídrica 70 kg → 2.100 mL/dia; ânion gap 140−(104+24) → 12. Foram conferidas saídas técnicas existentes, sem prescrição para pacientes reais.
+- Hemodinâmica: formulário 120/80, FC 80, SpO₂ 98, FR 18, temperatura 37 exibiu resultado; não foi homologado todo o conjunto NEWS2.
+- Interações: seleção de dois fármacos, disparo e renderização do resultado funcionaram. A correção clínica de todas as interações não foi auditada.
+- HTTP local com sessão Premium sintética: **189/189 fichas** da atualização retornam o ID correto, `referenceOnly=true` e `calculationAuthorized=false`.
+- Service worker: inspeção confirmou exclusão das rotas `/api/` do cache. Não foi realizado teste prolongado de atualização de uma instalação offline antiga.
+
+Evidências: `generated/gold33-nova-lista/audit-2026-09-21/`. O teste de referência no Chrome pode ser repetido com `NODE_PATH` apontando para a instalação de Playwright e `node tests/gold33-reference-browser.test.cjs`. Nenhum token real é usado ou registrado.
+
+## Achados e pendências
+
+| Achado | Gravidade/estado | Tratamento |
+|---|---|---|
+| Fallback podia calcular a partir de texto de ficha de referência | Alta, corrigido | Bloqueio de aritmética, controles ocultos e aviso persistente; testes unitários e no navegador |
+| Novos IDs privados ausentes da descoberta na busca | Média, corrigido | Catálogo autenticado, sem exposição de fichas |
+| Painel legado sobrescrevia aviso após mudança de layout | Média, corrigido | Apresentação específica de referência independente do painel legado |
+| Tentativas de arquivo usando nome de apresentação | Baixa, corrigido | ID canônico autenticado antes de tentativas por nome |
+| Varfarina/amiodarona: cabeçalho “Contraindicada” junto de texto orientando ajuste de dose | Revisão clínica pendente; não declarado erro clínico confirmado | Conteúdo preexistente preservado; revisor deve reconciliar classificação e instruções. Funcionamento técnico não valida essa orientação |
+| Três aliases propostos do 093 | Reconciliação de escopo pendente | Não ativados como duplicatas; fichas e parecer permanecem no ZIP |
+
+Não houve exercício de login real, pagamento, renovação de assinatura, sessão Premium real em produção ou inferência externa de IA. As barreiras dessas rotas foram verificadas; os fluxos autenticados foram testados localmente com sessões sintéticas. Não se declara auditoria exaustiva de todas as combinações clínicas, dispositivos ou integrações externas.
+

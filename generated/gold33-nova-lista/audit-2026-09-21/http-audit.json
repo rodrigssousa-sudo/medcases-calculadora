@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "path": "/health",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "body": {
+        "ok": true,
+        "service": "medcases-calculator-gateway",
+        "freeDrugCount": 60,
+        "productionReady": true
+      }
+    },
+    {
+      "path": "/api/session",
+      "status": 401,
+      "expected": 401,
+      "pass": true
+    },
+    {
+      "path": "/api/drug-catalog",
+      "status": 401,
+      "expected": 401,
+      "pass": true
+    },
+    {
+      "path": "/api/drugs/diclofenaco_gotas",
+      "status": 401,
+      "expected": 401,
+      "pass": true
+    },
+    {
+      "path": "/api/ai-drug-data/current",
+      "status": 401,
+      "expected": 401,
+      "pass": true
+    },
+    {
+      "path": "/data/drugs/diclofenaco_gotas.json",
+      "status": 404,
+      "expected": 404,
+      "pass": true
+    },
+    {
+      "path": "/database/gold33_novo_093.js",
+      "status": 404,
+      "expected": 404,
+      "pass": true
+    },
+    {
+      "path": "/data/clinical-knowledge/manifest.json",
+      "status": 404,
+      "expected": 404,
+      "pass": true
+    }
+  ],
+  "assetsChecked": 114,
+  "assetFailures": []
+}
